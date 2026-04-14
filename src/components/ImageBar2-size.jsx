@@ -1,6 +1,15 @@
 import { useEffect, useRef, useState } from "react";
 import "../styles/ImageBar3.css";
 
+const getImageAltText = (slide) => {
+  if (slide?.alt && String(slide.alt).trim()) return String(slide.alt).trim();
+  if (slide?.title && String(slide.title).trim()) return String(slide.title).trim();
+  if (slide?.description && String(slide.description).trim()) {
+    return String(slide.description).replace(/\s+/g, " ").trim();
+  }
+  return "Fine art image by Wayne Heim";
+};
+
 // Glob import: grabs all carousel slide data files from both Galleries and Other
 const allCarousels = import.meta.glob([
   "../data/Galleries/**/carousel.ts",
@@ -66,17 +75,19 @@ export default function ImageBar2({ slides }) {
       <meta itemProp="creator" content="K4 Studios" />
 
       <div className="carousel-track" ref={trackRef}>
-        {displaySlides.map((s, i) => (
+        {displaySlides.map((s, i) => {
+          const imageAlt = getImageAltText(s);
+          return (
           <figure
             className="carousel-slide"
             key={`slide-${i}`}
             itemScope
             itemType="https://schema.org/ImageObject"
           >
-            <a href={s.href} title={s.alt} aria-label={s.alt}>
+            <a href={s.href} title={imageAlt} aria-label={imageAlt}>
               <img
                 src={s.srcS || s.srcM || s.srcL || s.src}
-                alt={s.alt}
+                alt={imageAlt}
                 // Use fetchpriority for first image, loading="lazy" for the rest
                 {...(typeof s.fetchpriority === "string"
                   ? { fetchpriority: s.fetchpriority }
@@ -94,7 +105,8 @@ export default function ImageBar2({ slides }) {
             </a>
             <figcaption itemProp="description">{s.description}</figcaption>
           </figure>
-        ))}
+          );
+        })}
       </div>
     </section>
   );

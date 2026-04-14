@@ -157,6 +157,28 @@ function prettyLabelFromPath(fullPath) {
   return `[${rootName}] ${segs.join(" / ")}`;
 }
 
+async function loadGalleryDataFresh(selectedPath, fallbackLoader, label = "GalleryEditorPro") {
+  const cacheBust = `_t=${Date.now()}`;
+  const freshPath = `${selectedPath}${selectedPath.includes("?") ? "&" : "?"}${cacheBust}`;
+
+  try {
+    const mod = await import(/* @vite-ignore */ freshPath);
+    if (Array.isArray(mod)) return mod;
+    if (Array.isArray(mod?.galleryData)) return mod.galleryData;
+    if (Array.isArray(mod?.default)) return mod.default;
+  } catch (error) {
+    console.warn(`[${label}] Fresh import failed for ${selectedPath}; falling back to module map.`, error);
+  }
+
+  if (typeof fallbackLoader !== "function") return [];
+
+  const mod = await fallbackLoader();
+  if (Array.isArray(mod)) return mod;
+  if (Array.isArray(mod?.galleryData)) return mod.galleryData;
+  if (Array.isArray(mod?.default)) return mod.default;
+  return [];
+}
+
 /* ---------- UI helpers ---------- */
 const btnBase = "px-3 py-1 rounded-md border inline-flex items-center transition-colors duration-150";
 const btnHover = "hover:opacity-90";
@@ -982,15 +1004,7 @@ export default function GalleryEditorPro() {
         localStorage.removeItem(keyLS("draft"));
       } catch {}
       
-      const mod = await modules[selectedPath]();
-      // Support both shapes: import option may return the value or module object
-      const allArr = Array.isArray(mod)
-        ? mod
-        : Array.isArray(mod?.galleryData)
-        ? mod.galleryData
-        : Array.isArray(mod?.default)
-        ? mod.default
-        : [];
+      const allArr = await loadGalleryDataFresh(selectedPath, modules[selectedPath], "GalleryEditorPro");
       const arr = allArr.filter(isRealItem);
       if (cancelled) return;
 

@@ -5,6 +5,9 @@ import { closingTemplates } from '../data/seo/closingTemplates.ts';
 // Map sectionKey to semantic key
 function getSemanticKey(sectionKey) {
   // Simple mapping based on keywords in sectionKey
+  if (sectionKey.includes('/Facing-History/Wild-West/Western-Narratives')) return 'westernNarratives';
+  if (sectionKey.includes('/Facing-History/Wild-West/Native-Americans')) return 'nativeAmericans';
+  if (sectionKey === '/Facing-History/Wild-West' || sectionKey.includes('/Facing-History/Wild-West/')) return 'wildWest';
   if (sectionKey.includes('Native-American')) return 'cowboyNativeAmerican';
   if (sectionKey.includes('Roaring-20s')) return 'roaring20s';
   if (sectionKey.includes('WWII/Portraits')) return 'wwiiPortraits';

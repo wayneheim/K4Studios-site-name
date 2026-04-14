@@ -484,12 +484,37 @@ glossaryWesternThemedPhotography: {
 },
 
 glossaryWildWestPhotography: {
-  path: "/Western-Wall-Art",
-  def: "Wild West photography evokes the untamed American frontier—outlaws, pioneers, and the mythology of westward expansion. Fine art Wild West imagery moves beyond nostalgic spectacle to explore character, moral complexity, and the human stories behind the legend. Explore <a href='/Western-Wall-Art'>Western Wall Art</a> | <a href='/Western-Fine-Art-Photography'>Western Fine Art Photography</a>.",
+  path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West",
+  def: "Wild West photography evokes the American frontier through legend, labor, endurance, and the human stories beneath the myth. On this site, the Wild West section opens into the broader frontier landing, then branches into Western Narratives, Western Portraits, and Native Americans as separate paths through that story. Explore <a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West'>Wild West</a> | <a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives'>Western Narratives</a> | <a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans'>Native Americans</a>.",
   landingPhrases: [
-    { phrase: "wild west photography", rating: 4, use: true, link: "/Western-Wall-Art" },
-    { phrase: "wild west art", rating: 4, use: true, link: "/Western-Wall-Art" },
-    { phrase: "old west photography", rating: 4, use: true, link: "/Western-Wall-Art" },
+    { phrase: "Wild West", rating: 5, use: true, link: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West" },
+    { phrase: "wild west photography", rating: 5, use: true, link: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West" },
+    { phrase: "wild west art", rating: 4, use: true, link: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West" },
+    { phrase: "old west photography", rating: 4, use: true, link: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West" },
+  ],
+  imagePhrases: []
+},
+
+glossaryWesternNarratives: {
+  path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives",
+  def: "Western Narratives is the story-driven branch within the Wild West section. These works emphasize implication, atmosphere, psychological weight, and the larger chapter pressing just beyond the frame rather than portraiture alone. Explore <a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives'>Western Narratives</a> | <a href='/Narrative-Western-Art'>Narrative Western Art</a>.",
+  landingPhrases: [
+    { phrase: "Western Narratives", rating: 5, use: true, link: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives" },
+    { phrase: "narrative western photography", rating: 5, use: true, link: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives" },
+    { phrase: "western storytelling photography", rating: 4, use: true, link: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives" },
+    { phrase: "cinematic western photography", rating: 4, use: true, link: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives" },
+  ],
+  imagePhrases: []
+},
+
+glossaryNativeAmericanPortraits: {
+  path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans",
+  def: "Native Americans is a dedicated Wild West section focused on painterly Native American portraiture and narrative work shaped by presence, identity, atmosphere, and memory. It is not a side note to the Western story, but one of the primary paths through this frontier structure. Explore <a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans'>Native Americans</a>.",
+  landingPhrases: [
+    { phrase: "Native Americans", rating: 5, use: true, link: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans" },
+    { phrase: "Native American portraits", rating: 5, use: true, link: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans" },
+    { phrase: "Native American fine art photography", rating: 5, use: true, link: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans" },
+    { phrase: "Indigenous portrait photography", rating: 4, use: true, link: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans" },
   ],
   imagePhrases: []
 },
@@ -519,92 +544,159 @@ glossaryContemporaryWesternArt: {
   def: "Painterly Western portraits—dust, leather, and long light—balancing grit and myth.",
 
   landingPhrases: [
-    // --- Primary (WritingBrain core; strongest SERP direction) ---
-    { phrase: "Painterly Western photography", rating: 3, use: true },  // demoted: hub owns exact phrase
     { phrase: "Western Cowboy Portraits", rating: 5, use: true },
-    { phrase: "Western themed art", rating: 5, use: true },
-    { phrase: "Western fine art photography", rating: 3, use: true },  // demoted: hub owns exact phrase
+    { phrase: "Western portrait photography", rating: 5, use: true },
+    { phrase: "cowboy portrait photography", rating: 5, use: true },
     { phrase: "painterly cowboy photography", rating: 5, use: true },
-    { phrase: "wild west painterly photography", rating: 5, use: true },
-    { phrase: "Explore Western Photography", rating: 5, use: true },
-    { phrase: "the American West", rating: 5, use: true },
-    { phrase: "American frontier", rating: 5, use: true },
-    { phrase: "frontier photography", rating: 4, use: true },
-    { phrase: "Americana photography", rating: 4, use: true },
-
-    // --- Secondary (optional WritingBrain fallback, expands 5s) ---
-    { phrase: "western painterly photography", rating: 4, use: true },
-    { phrase: "western grit", rating: 4, use: true },
-    { phrase: "cinematic stills", rating: 4, use: true },
-    { phrase: "painterly technique", rating: 4, use: true },
-    { phrase: "grit & glory of the west", rating: 4, use: true },
-    { phrase: "authentic frontier art prints", rating: 4, use: true },
-    { phrase: "western cowboy wall art for collectors", rating: 4, use: true },
-
-    // --- Long-tail / semantic enrichers (glossary, KWLinker only) ---
-    { phrase: "western art for rustic interiors", rating: 3, use: true },
-    { phrase: "wild west fine art prints", rating: 3, use: true },
-    { phrase: "wild west inspired photography", rating: 3, use: true },
-    { phrase: "old west fine art prints", rating: 3, use: true },
-    { phrase: "vintage cowboy art photography", rating: 3, use: true },
-    { phrase: "western inspired photography", rating: 3, use: true },
-    { phrase: "western photography fine art prints", rating: 3, use: true },
+    { phrase: "Western character portraits", rating: 5, use: true },
+    { phrase: "frontier portraiture", rating: 4, use: true },
+    { phrase: "historical Western portraiture", rating: 4, use: true },
+    { phrase: "Old West portrait photography", rating: 4, use: true },
+    { phrase: "Western figure studies", rating: 4, use: true },
+    { phrase: "cowboy portrait art", rating: 4, use: true },
     { phrase: "western themed portrait photography", rating: 3, use: true },
-    { phrase: "western photography prints", rating: 3, use: true },
     { phrase: "western portrait art", rating: 3, use: true },
     { phrase: "fine art cowboy photography", rating: 3, use: true },
-    { phrase: "fine art western photography", rating: 3, use: true },
     { phrase: "western portraits", rating: 3, use: true },
     { phrase: "cowboy fine art prints", rating: 3, use: true },
-    { phrase: "old west cowboy art", rating: 3, use: true },
     { phrase: "cowboy portrait", rating: 3, use: true },
-    { phrase: "wild west cowboy art", rating: 3, use: true },
-    { phrase: "photography western", rating: 3, use: true },
-    { phrase: "vintage western photography", rating: 3, use: true },
-    { phrase: "western artwork prints", rating: 3, use: true },
-    { phrase: "cowboy artwork prints", rating: 3, use: true },
-    { phrase: "western cowboy paintings art", rating: 3, use: true }
+    { phrase: "vintage cowboy art photography", rating: 3, use: true },
+    { phrase: "cowboy artwork prints", rating: 3, use: true }
   ],
 
   imagePhrases: [
-    // --- Image-level high-value triggers ---
     { phrase: "western cowboy art", rating: 5, use: true },
     { phrase: "cowboy portraits", rating: 5, use: true },
     { phrase: "cowboy art", rating: 5, use: true },
     { phrase: "frontier cowboy", rating: 5, use: true },
-    { phrase: "Western frontier", rating: 5, use: true },
     { phrase: "cowboys", rating: 5, use: true },
     { phrase: "Western cowboys", rating: 5, use: true },
     { phrase: "cowboy artwork", rating: 5, use: true },
-    { phrase: "western fine art", rating: 5, use: true },
-    { phrase: "fine art Western photography", rating: 5, use: true },
-    { phrase: "wild west photography", rating: 5, use: true },
-    { phrase: "frontier life", rating: 5, use: true },
+    { phrase: "western portrait photography", rating: 5, use: true },
+    { phrase: "cowboy portrait photography", rating: 5, use: true },
+    { phrase: "frontier portraits", rating: 5, use: true },
     { phrase: "rugged spirit", rating: 5, use: true },
 
-    // --- Secondary / contextual image hooks ---
     { phrase: "outlaw portraits", rating: 4, use: true },
     { phrase: "American frontier portraits", rating: 4, use: true },
-
-    // --- Long-tail / deeper semantic connections ---
+    { phrase: "Western character study", rating: 4, use: true },
     { phrase: "historic western prints", rating: 3, use: true },
     { phrase: "painterly cowboy portraits", rating: 3, use: true },
     { phrase: "cowboy painting art", rating: 3, use: true },
     { phrase: "western art", rating: 3, use: true },
-    { phrase: "western landscapes fine art", rating: 3, use: true },
-    // NOTE: "frederic remington" disabled - iconic artist name shouldn't appear in auto-generated titles
-    // Use manually in blog/editorial content with proper context (e.g., "in the tradition of", "a nod to")
+    { phrase: "western portrait wall art", rating: 3, use: true },
     { phrase: "frederic remington", rating: 3, use: false },
     { phrase: "powerful works of art", rating: 3, use: true },
     { phrase: "rustic charm", rating: 3, use: true },
     { phrase: "western canon", rating: 3, use: true },
-
-    // --- Links to Painterly-Western-Photography hub (craft/method page) ---
     { phrase: "painterly Western photograph", rating: 5, use: true, link: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits" },
     { phrase: "painterly Western images", rating: 5, use: true, link: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits" },
     { phrase: "Pictorialist tradition", rating: 5, use: true, link: "/Painterly-Western-Photography" },
     { phrase: "narrative Western art", rating: 5, use: true, link: "/Narrative-Western-Art" },
     { phrase: "Baltic Birch", rating: 4, use: true, link: "/Other/K4-Select-Series/Engrained" }
+  ]
+},
+
+wildWest: {
+  path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West",
+  def: "Wild West photography centered on the larger frontier story: legend, labor, endurance, and the lives that lived beneath the myth.",
+
+  landingPhrases: [
+    { phrase: "Wild West", rating: 5, use: true },
+    { phrase: "Wild West photography", rating: 5, use: true },
+    { phrase: "Wild West fine art photography", rating: 5, use: true },
+    { phrase: "American frontier photography", rating: 5, use: true },
+    { phrase: "frontier storytelling photography", rating: 5, use: true },
+    { phrase: "story driven Western art", rating: 4, use: true },
+    { phrase: "painterly frontier photography", rating: 4, use: true },
+    { phrase: "Western legends reimagined", rating: 4, use: true },
+    { phrase: "historical Western fine art", rating: 4, use: true },
+    { phrase: "frontier life photography", rating: 4, use: true },
+    { phrase: "American West storytelling", rating: 3, use: true },
+    { phrase: "contemporary Western art", rating: 3, use: true },
+    { phrase: "Western atmosphere and legend", rating: 3, use: true }
+  ],
+
+  imagePhrases: [
+    { phrase: "wild west photography", rating: 5, use: true },
+    { phrase: "American frontier", rating: 5, use: true },
+    { phrase: "frontier life", rating: 5, use: true },
+    { phrase: "Western legends", rating: 5, use: true },
+    { phrase: "frontier storytelling", rating: 4, use: true },
+    { phrase: "Western lore", rating: 4, use: true },
+    { phrase: "frontier atmosphere", rating: 4, use: true },
+    { phrase: "story pressure", rating: 4, use: true },
+    { phrase: "painterly Wild West", rating: 3, use: true },
+    { phrase: "historical frontier art", rating: 3, use: true },
+    { phrase: "American West narrative", rating: 3, use: true }
+  ]
+},
+
+westernNarratives: {
+  path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives",
+  def: "Narrative Western photography shaped by implication, atmosphere, and the pressure of a larger story just beyond the frame.",
+
+  landingPhrases: [
+    { phrase: "narrative Western photography", rating: 5, use: true },
+    { phrase: "Western narratives", rating: 5, use: true },
+    { phrase: "narrative Western art", rating: 5, use: true },
+    { phrase: "cinematic Western photography", rating: 5, use: true },
+    { phrase: "Western storytelling photography", rating: 4, use: true },
+    { phrase: "story driven Western images", rating: 4, use: true },
+    { phrase: "frontier narrative art", rating: 4, use: true },
+    { phrase: "psychological Western art", rating: 4, use: true },
+    { phrase: "painterly Western narratives", rating: 4, use: true },
+    { phrase: "One-Image Movie", rating: 3, use: true },
+    { phrase: "implied story photography", rating: 3, use: true },
+    { phrase: "atmospheric Western fine art", rating: 3, use: true }
+  ],
+
+  imagePhrases: [
+    { phrase: "narrative Western art", rating: 5, use: true },
+    { phrase: "cinematic Western photography", rating: 5, use: true },
+    { phrase: "Western storytelling", rating: 5, use: true },
+    { phrase: "frontier narrative", rating: 4, use: true },
+    { phrase: "implied story", rating: 4, use: true },
+    { phrase: "Western atmosphere", rating: 4, use: true },
+    { phrase: "psychological frontier art", rating: 4, use: true },
+    { phrase: "One-Image Movie", rating: 4, use: true },
+    { phrase: "story pressure", rating: 4, use: true },
+    { phrase: "unfinished lives of the frontier", rating: 3, use: true },
+    { phrase: "narrative fine art photography", rating: 3, use: true }
+  ]
+},
+
+nativeAmericans: {
+  path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans",
+  def: "Painterly Native American portraiture and narrative work shaped by presence, memory, identity, and lives that remain larger than the legend.",
+
+  landingPhrases: [
+    { phrase: "Native Americans", rating: 5, use: true },
+    { phrase: "Native American fine art photography", rating: 5, use: true },
+    { phrase: "Native American portraits", rating: 5, use: true },
+    { phrase: "Indigenous portrait photography", rating: 5, use: true },
+    { phrase: "painterly Native American portraits", rating: 5, use: true },
+    { phrase: "Native American narrative art", rating: 4, use: true },
+    { phrase: "Indigenous fine art photography", rating: 4, use: true },
+    { phrase: "Native American portrait photography", rating: 4, use: true },
+    { phrase: "Native American black and white photography", rating: 4, use: true },
+    { phrase: "Native American color portrait photography", rating: 4, use: true },
+    { phrase: "Indigenous heritage photography", rating: 3, use: true },
+    { phrase: "Native presence in the American West", rating: 3, use: true },
+    { phrase: "story driven Native American art", rating: 3, use: true }
+  ],
+
+  imagePhrases: [
+    { phrase: "Native American photography", rating: 5, use: true },
+    { phrase: "Native American portraits", rating: 5, use: true },
+    { phrase: "Indigenous portrait art", rating: 5, use: true },
+    { phrase: "Native American presence", rating: 4, use: true },
+    { phrase: "Native American heritage art", rating: 4, use: true },
+    { phrase: "Indigenous experience", rating: 4, use: true },
+    { phrase: "Native American narrative work", rating: 4, use: true },
+    { phrase: "painterly Native American images", rating: 3, use: true },
+    { phrase: "presence before narrative", rating: 3, use: true },
+    { phrase: "identity and atmosphere", rating: 3, use: true }
   ]
 },
 
@@ -1678,8 +1770,24 @@ universal: {
     ],
 
     "wild west photography": [
+      "wild west",
       "old west art", 
-      "painterly cowboy portraits"
+      "wild west fine art photography",
+      "american frontier photography"
+    ],
+
+    "western narratives": [
+      "western narrative photography",
+      "narrative western photography",
+      "western storytelling photography",
+      "cinematic western photography"
+    ],
+
+    "native american portraits": [
+      "native americans",
+      "native american fine art photography",
+      "native american portrait photography",
+      "indigenous portrait photography"
     ],
 
     "wild west cowboy photography prints": [

@@ -6,6 +6,15 @@ import { warmImage } from "../utils/warmImage";
 // ✅ Proxy URL helper - never expose SmugMug URLs to crawlers
 const getProxySrc = (id, size = "s") => `/img/${id}/${size}.jpg`;
 
+const getImageAltText = (slide) => {
+  if (slide?.alt && String(slide.alt).trim()) return String(slide.alt).trim();
+  if (slide?.title && String(slide.title).trim()) return String(slide.title).trim();
+  if (slide?.description && String(slide.description).trim()) {
+    return String(slide.description).replace(/\s+/g, " ").trim();
+  }
+  return "Fine art image by Wayne Heim";
+};
+
 export default function ImageBar2Home() {
   const trackRef = useRef(null);
   const [show, setShow] = useState(false);
@@ -59,6 +68,7 @@ export default function ImageBar2Home() {
       <div className="carousel-track" ref={trackRef}>
         {displaySlides.map((s, i) => {
           const isDuplicate = duplicated && i >= homeSlides.length;
+          const imageAlt = getImageAltText(s);
           return (
           <figure
             className="carousel-slide"
@@ -67,10 +77,10 @@ export default function ImageBar2Home() {
             itemType="https://schema.org/ImageObject"
             aria-hidden={isDuplicate ? "true" : undefined}
           >
-            <a href={s.href} title={isDuplicate ? undefined : s.alt} aria-label={isDuplicate ? undefined : s.alt} tabIndex={isDuplicate ? -1 : undefined}>
+            <a href={s.href} title={isDuplicate ? undefined : imageAlt} aria-label={isDuplicate ? undefined : imageAlt} tabIndex={isDuplicate ? -1 : undefined}>
               <img
                 src={s.id ? getProxySrc(s.id, 's') : (s.srcS || s.src)}
-                alt={isDuplicate ? "" : s.alt}
+                alt={isDuplicate ? "" : imageAlt}
                 itemProp="contentUrl"
                 loading={s.loading}
                 fetchpriority={s.fetchpriority}

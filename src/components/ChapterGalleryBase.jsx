@@ -1,3 +1,21 @@
+
+function getSisterGalleryPath(path) {
+  const normalizedPath = (path || '').replace(/\/+$/, '');
+  const swaps = [
+    ['/NA-Color', '/NA-Black-White'],
+    ['/NA-Black-White', '/NA-Color'],
+    ['/Color', '/Black-White'],
+    ['/Black-White', '/Color'],
+  ];
+
+  for (const [from, to] of swaps) {
+    if (normalizedPath.includes(from)) {
+      return normalizedPath.replace(from, to);
+    }
+  }
+
+  return null;
+}
 import { warmImage } from "../utils/warmImage";
 import { trackEvent, emitActionPixel, emitChapterViewPixel } from "../utils/analytics";
 import { useState, useRef, useEffect, useMemo } from "react";
@@ -581,13 +599,8 @@ export default function ChapterGalleryBase({
     // Fallback: link to sister gallery (Color <-> Black-White)
     if (!match && typeof window !== 'undefined') {
       const currentPath = window.location.pathname.replace(/\/$/, '');
-      let sisterPath = currentPath;
-      if (currentPath.includes('/Color/')) {
-        sisterPath = currentPath.replace('/Color/', '/Black-White/');
-      } else if (currentPath.includes('/Black-White/')) {
-        sisterPath = currentPath.replace('/Black-White/', '/Color/');
-      }
-      if (sisterPath !== currentPath) {
+      const sisterPath = getSisterGalleryPath(currentPath);
+      if (sisterPath && sisterPath !== currentPath) {
         match = { b: `https://www.k4studios.com${sisterPath}` };
       }
     }
@@ -1020,13 +1033,7 @@ export default function ChapterGalleryBase({
     if (typeof window === 'undefined') return;
     
     const currentPath = window.location.pathname.replace(/\/$/, '');
-    let sisterPath = null;
-    
-    if (currentPath.includes('/Color')) {
-      sisterPath = currentPath.replace('/Color', '/Black-White');
-    } else if (currentPath.includes('/Black-White')) {
-      sisterPath = currentPath.replace('/Black-White', '/Color');
-    }
+    const sisterPath = getSisterGalleryPath(currentPath);
     
     if (!sisterPath) return;
     
@@ -2022,11 +2029,7 @@ export default function ChapterGalleryBase({
                               // Fallback: Color <-> Black-White sister gallery (same image ID)
                               if (!sisterUrl && basePath) {
                                 const fullPath = `${basePath}/${currentId}`;
-                                if (basePath.includes('/Color')) {
-                                  sisterUrl = fullPath.replace('/Color', '/Black-White');
-                                } else if (basePath.includes('/Black-White')) {
-                                  sisterUrl = fullPath.replace('/Black-White', '/Color');
-                                }
+                                sisterUrl = getSisterGalleryPath(fullPath);
                               }
                               
                               if (sisterUrl) {
@@ -2135,11 +2138,7 @@ export default function ChapterGalleryBase({
                             // Fallback: link to Color <-> Black-White sister gallery
                             if (!relatedUrl && basePath) {
                               const fullPath = `${basePath}/${currentId}`;
-                              if (basePath.includes('/Color')) {
-                                relatedUrl = fullPath.replace('/Color', '/Black-White');
-                              } else if (basePath.includes('/Black-White')) {
-                                relatedUrl = fullPath.replace('/Black-White', '/Color');
-                              }
+                              relatedUrl = getSisterGalleryPath(fullPath);
                             }
                             
                             if (!relatedUrl) return null;

@@ -21,6 +21,29 @@ const shuffleArray = (arr) => {
   return shuffled;
 };
 
+const getStoryTeaser = (story, wordCount = 6) => {
+  if (!story) return "";
+
+  const words = String(story)
+    .replace(/\s+/g, " ")
+    .trim()
+    .split(" ")
+    .filter(Boolean);
+
+  if (!words.length) return "";
+  if (words.length <= wordCount) return words.join(" ");
+  return `${words.slice(0, wordCount).join(" ")}...`;
+};
+
+const getImageAltText = ({ alt, title, description }) => {
+  if (alt && String(alt).trim()) return String(alt).trim();
+  if (title && String(title).trim()) return String(title).trim();
+  if (description && String(description).trim()) {
+    return String(description).replace(/\s+/g, " ").trim();
+  }
+  return "Fine art image by Wayne Heim";
+};
+
 const trackHomeImageNavigation = (href, imageId, sourceLayer) => {
   if (typeof window === 'undefined' || typeof window.k4ShouldSuppressAnalytics === 'function' && window.k4ShouldSuppressAnalytics()) {
     return;
@@ -70,10 +93,11 @@ const handleTrackedNavigation = (event, href, tracker) => {
  * - images: Full pool of available images (pass more than needed for variety)
  * - displayCount: Number of images to actually show (default: images.length)
  * - heading: Section heading text
+ * - showTitles: Whether to display image titles/captions below thumbnails
  * 
  * On each page load, picks a random subset from the pool for display.
  */
-export default function LandingRightImages({ heading = "", images = [], displayCount, dynamicSpacing = true }) {
+export default function LandingRightImages({ heading = "", images = [], displayCount, dynamicSpacing = true, showTitles = false }) {
   // Client-side: pick random subset from pool on mount
   const [displayImages, setDisplayImages] = useState([]);
   
@@ -97,28 +121,35 @@ export default function LandingRightImages({ heading = "", images = [], displayC
         <h3 className="thumb-heading">{heading}</h3>
       </div>
 
-      {displayImages.map(({ href, id, alt, title }, index) => {
+      {displayImages.map(({ href, id, alt, title, story, description }, index) => {
         // Get ID from prop or extract from href
         const imageId = id || extractIdFromHref(href);
         const imageSrc = imageId ? getProxySrc(imageId, 's') : '';
+        const caption = title || alt || '';
+        const hoverText = showTitles ? getStoryTeaser(story) || undefined : title;
+        const imageAlt = getImageAltText({ alt, title, description });
         
         return (
           <a
             href={href}
             key={href || id}
+            className={showTitles ? "thumb-card thumb-card-with-caption" : "thumb-card"}
             data-sidebar-index={index}
             onClick={(event) => handleTrackedNavigation(event, href, () => trackHomeImageNavigation(href, imageId, 'home_sidebar_image_click'))}
             style={dynamicSpacing && index > 0 ? { visibility: 'hidden' } : undefined}
           >
             <img
               src={imageSrc}
-              alt={alt}
-              title={title}
+              alt={imageAlt}
+              title={hoverText}
               className="thumb-img"
               loading="eager"
               decoding="async"
               onLoad={(e) => e.target.classList.add('loaded')}
             />
+            {showTitles && caption && (
+              <span className="thumb-caption">{caption}</span>
+            )}
           </a>
         );
       })}
@@ -134,8 +165,8 @@ export default function LandingRightImages({ heading = "", images = [], displayC
               var sidebar = document.querySelector('[data-dynamic-sidebar]');
               if (!textCol || !sidebar) return;
               
-              var links = sidebar.querySelectorAll('a[data-sidebar-index]');
-              if (links.length <= 1) return;
+              var cards = sidebar.querySelectorAll('a[data-sidebar-index]');
+              if (cards.length <= 1) return;
               
               var imgs = sidebar.querySelectorAll('.thumb-img');
               var allLoaded = Array.from(imgs).every(function(img) { return img.complete; });
@@ -147,16 +178,16 @@ export default function LandingRightImages({ heading = "", images = [], displayC
               }
               
               var textHeight = textCol.offsetHeight;
-              var totalImgHeight = Array.from(imgs).reduce(function(sum, img) { return sum + img.offsetHeight; }, 0);
+              var totalCardHeight = Array.from(cards).reduce(function(sum, card) { return sum + card.offsetHeight; }, 0);
               var headingArea = 80;
               var firstGap = 36;
               var bottomBuffer = 750;
-              var available = textHeight - headingArea - firstGap - totalImgHeight - bottomBuffer;
-              var numGaps = links.length - 1;
+              var available = textHeight - headingArea - firstGap - totalCardHeight - bottomBuffer;
+              var numGaps = cards.length - 1;
               
               if (available > 0 && numGaps > 0) {
                 var gap = Math.max(available / numGaps, 36);
-                links.forEach(function(link, i) {
+                cards.forEach(function(link, i) {
                   if (i > 0) {
                     link.style.display = 'block';
                     link.style.marginTop = gap + 'px';
@@ -164,7 +195,7 @@ export default function LandingRightImages({ heading = "", images = [], displayC
                   }
                 });
               } else {
-                links.forEach(function(link) {
+                cards.forEach(function(link) {
                   link.style.visibility = 'visible';
                 });
               }

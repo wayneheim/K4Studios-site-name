@@ -1,4 +1,5 @@
 ---
+// @ts-nocheck
 export const prerender = true;
 import BaseLayout         from '../../../../layouts/BaseLayout.astro';
 import LandingHeader      from '../../../../components/Landing-Header.jsx';
@@ -9,10 +10,8 @@ import FAQAccordion       from '../../../../components/FAQAccordion.jsx';
 import SiteFooter         from '../../../../components/Footer.astro';
 import MobileStoryImages  from '../../../../components/MobileStoryImages-size.jsx';
 import ThemeBlock         from '../../../../components/ThemeBlock.jsx';
-import StorySlider        from '../../../../components/StorySlider.tsx';
 import { sanitizeForClient } from '../../../../components/utils/normalizeImage.ts';
 import { galleryData as cowboyColorDataFull } from '../../../../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs';
-import { storySliderImageIds } from '../../../../data/storySlider.ts';
 import { getStructuredData } from '../../../../components/utils/getStructuredData.ts';
 
 import { siteNav } from '../../../../data/siteNav.ts';
@@ -34,11 +33,6 @@ import '../../../../styles/oneupheader.css';
 // ----------------------
 
 const sectionPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits";
-
-// Filter gallery data for StorySlider (reduce payload)
-const cowboyColorData = cowboyColorDataFull
-  .filter((img: any) => storySliderImageIds.includes(img.id))
-  .map((img: any) => ({ id: img.id, title: img.title, story: img.story }));
 
 // Normalize any mojibake (UTF-8 shown as Latin-1) so titles render with proper punctuation
 function fixMojibake(str) {
@@ -198,29 +192,13 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
                   ))}
                 </ul>
               )}
-              {/* Seeing essays — editorial discovery link */}
+              {/* Seeing essays — editorial inset */}
               {index === 0 && (
-                <p class="reveal-on-scroll text-sm text-[#666] mt-6 mb-4 italic">
-                  Some viewers are drawn less to subject than to structure. The <a href="/Other/Seeing" class="text-[#8b0000] hover:underline">Seeing essays</a> explore how narrative and tension operate beneath the surface.
-                </p>
-              )}
-              {/* Insert StorySlider after section 0 (hero with One-Image Movie intro) */}
-              {index === 0 && (
-                <div class="story-slider-wrapper reveal-on-scroll mt-8">
-                  {/* Skeleton placeholder to prevent CLS */}
-                  <div class="story-slider-skeleton relative bg-[#ebe5dc] rounded-lg shadow-md px-6 py-5 max-w-2xl mx-auto border-2 border-[#d8d0c4] mb-12 h-[280px] overflow-hidden">
-                    <div class="absolute top-2.5 left-2.5 w-3.5 h-3.5 border-l-2 border-t-2 border-[#c8bfb0]"></div>
-                    <div class="absolute bottom-2.5 right-2.5 w-3.5 h-3.5 border-r-2 border-b-2 border-[#c8bfb0]"></div>
-                    <p class="text-[11px] uppercase tracking-[0.12em] text-[#8c7d6b] mb-3">One-Image Movie™ Preview</p>
-                    <div class="animate-pulse">
-                      <div class="h-5 bg-[#d8d0c4] rounded w-3/4 mb-3"></div>
-                      <div class="h-4 bg-[#d8d0c4] rounded w-full mb-2"></div>
-                      <div class="h-4 bg-[#d8d0c4] rounded w-5/6 mb-2"></div>
-                      <div class="h-4 bg-[#d8d0c4] rounded w-4/6"></div>
-                    </div>
-                  </div>
-                  <StorySlider client:only="react" stories={cowboyColorData} galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color" />
-                </div>
+                <aside class="seeing-inset reveal-on-scroll" aria-label="Seeing essays note">
+                  <p>
+                    Some viewers are drawn less to the icon than to what holds it up. The <a href="/Other/Seeing" class="seeing-inset-link">Seeing essays</a> explore how narrative and tension work beneath the surface.
+                  </p>
+                </aside>
               )}
             </article>
           ))}
@@ -239,6 +217,7 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
             heading="Featured Portraits"
             images={featheredImages}
             displayCount={5}
+            showTitles={true}
           />
         </div>
       </div>
@@ -390,9 +369,30 @@ ul li::marker {
         font-size: 0.85rem !important;
         color: #888 !important;
         line-height: 1.3;
-        margin-bottom: 1rem;
+        margin-bottom: 1.3rem;
         text-align: center;
         font-style: italic;
+      }
+
+      .seeing-inset {
+        margin: 1.2rem 0 1.7rem 0.75rem;
+        padding: 0.55rem 0 0.55rem 1rem;
+        border-left: 2px solid #cdbda9;
+        background: linear-gradient(90deg, rgba(239, 234, 226, 0.55) 0%, rgba(239, 234, 226, 0) 100%);
+      }
+
+      .seeing-inset p {
+        margin: 0;
+        font-size: 0.95rem;
+        line-height: 1.45;
+        color: #75685d;
+        font-style: italic;
+      }
+
+      .seeing-inset-link {
+        color: #8b0000;
+        text-decoration: underline;
+        text-underline-offset: 0.12em;
       }
 
       /* Mobile Themes Accordion */
@@ -497,8 +497,30 @@ ul li::marker {
     .story-block .tagline {
       font-size: 1.05rem;
       font-weight: 500;
-      margin-bottom: 1rem;
+      margin-bottom: 1.35rem;
       color: #7a6250;
+    }
+
+    .seeing-inset {
+      width: min(92%, 44rem);
+      margin: 1.35rem 0 1.9rem 1.6rem;
+      padding: 0.75rem 1rem 0.8rem 1.15rem;
+      border-left: 3px solid #c3af98;
+      background: linear-gradient(90deg, rgba(242, 237, 229, 0.9) 0%, rgba(242, 237, 229, 0.2) 72%, rgba(242, 237, 229, 0) 100%);
+    }
+
+    .seeing-inset p {
+      margin: 0;
+      font-size: 0.98rem;
+      line-height: 1.55;
+      color: #726459;
+      font-style: italic;
+    }
+
+    .seeing-inset-link {
+      color: #8b0000;
+      text-decoration: underline;
+      text-underline-offset: 0.12em;
     }
 
     .story-block p {

@@ -110,6 +110,28 @@ function prettyLabelFromPath(fullPath) {
   return `[${rootName}] ${segs.join(" / ")}`;
 }
 
+async function loadGalleryDataFresh(selectedPath, fallbackLoader, label = "GalleryOrderer") {
+  const cacheBust = `_t=${Date.now()}`;
+  const freshPath = `${selectedPath}${selectedPath.includes("?") ? "&" : "?"}${cacheBust}`;
+
+  try {
+    const mod = await import(/* @vite-ignore */ freshPath);
+    if (Array.isArray(mod)) return mod;
+    if (Array.isArray(mod?.galleryData)) return mod.galleryData;
+    if (Array.isArray(mod?.default)) return mod.default;
+  } catch (error) {
+    console.warn(`[${label}] Fresh import failed for ${selectedPath}; falling back to module map.`, error);
+  }
+
+  if (typeof fallbackLoader !== "function") return [];
+
+  const mod = await fallbackLoader();
+  if (Array.isArray(mod)) return mod;
+  if (Array.isArray(mod?.galleryData)) return mod.galleryData;
+  if (Array.isArray(mod?.default)) return mod.default;
+  return [];
+}
+
 /** Read ?dataset=... from URL (supports hash routers, too) */
 function getDatasetFromUrl() {
   try {
@@ -127,6 +149,26 @@ function getDatasetFromUrl() {
   } catch {
     return "";
   }
+}
+
+const SKIP_BACKUP_PROMPT_KEY = "k4-gallery-orderer:skipBackupPrompt";
+
+function readSkipBackupPromptPreference() {
+  try {
+    return sessionStorage.getItem(SKIP_BACKUP_PROMPT_KEY) === "1";
+  } catch {
+    return false;
+  }
+}
+
+function writeSkipBackupPromptPreference(value) {
+  try {
+    if (value) {
+      sessionStorage.setItem(SKIP_BACKUP_PROMPT_KEY, "1");
+    } else {
+      sessionStorage.removeItem(SKIP_BACKUP_PROMPT_KEY);
+    }
+  } catch {}
 }
 
 /* ========= Component (Grid-only, server save) ========= */
@@ -175,9 +217,13 @@ export default function GalleryOrderer({ datasetPath = "" }) {
 
   // context menu state
   const [contextMenu, setContextMenu] = useState({ visible: false, x: 0, y: 0, itemId: null, action: null, targetPath: '' });
+  const [pendingTransfer, setPendingTransfer] = useState(null);
   const [showBackupPrompt, setShowBackupPrompt] = useState(false);
   const [backupOptions, setBackupOptions] = useState({ source: true, target: true });
-  const [skipBackupPrompt, setSkipBackupPrompt] = useState(false);
+  const [skipBackupPrompt, setSkipBackupPrompt] = useState(() => {
+    if (typeof window === "undefined") return false;
+    return readSkipBackupPromptPreference();
+  });
 
   // --- Read ?dataset=... from URL (consistent with DataSwapper)
   const [urlDataset, setUrlDataset] = useState("");
@@ -221,19 +267,16 @@ export default function GalleryOrderer({ datasetPath = "" }) {
     }
   }, [selectedPath]);
 
+  useEffect(() => {
+    writeSkipBackupPromptPreference(skipBackupPrompt);
+  }, [skipBackupPrompt]);
+
   // load dataset
   useEffect(() => {
     let cancelled = false;
     async function load() {
       if (!selectedPath) return;
-      const mod = await modules[selectedPath]();
-      const arr = Array.isArray(mod)
-        ? mod
-        : Array.isArray(mod?.galleryData)
-        ? mod.galleryData
-        : Array.isArray(mod?.default)
-        ? mod.default
-        : [];
+      const arr = await loadGalleryDataFresh(selectedPath, modules[selectedPath], "GalleryOrderer");
       if (cancelled) return;
 
       setBackupData(arr);
@@ -255,13 +298,14 @@ export default function GalleryOrderer({ datasetPath = "" }) {
   // close context menu on outside click
   useEffect(() => {
     function handleClickOutside() {
+      if (showBackupPrompt) return;
       if (contextMenu.visible) {
         closeContextMenu();
       }
     }
     document.addEventListener('click', handleClickOutside);
     return () => document.removeEventListener('click', handleClickOutside);
-  }, [contextMenu.visible]);
+  }, [contextMenu.visible, showBackupPrompt]);
 
   function note(msg) {
     setLastAction(`${msg} — ${new Date().toLocaleTimeString()}`);
@@ -532,9 +576,69 @@ export default function GalleryOrderer({ datasetPath = "" }) {
     setContextMenu({ visible: false, x: 0, y: 0, itemId: null, action: null, targetPath: '' });
   }
 
+  function removeItems(idsToRemove) {
+    if (!Array.isArray(idsToRemove) || idsToRemove.length === 0) return;
+
+    const uniqueIds = Array.from(new Set(idsToRemove));
+    const idSet = new Set(uniqueIds);
+
+    setDeletedIds((prev) => Array.from(new Set([...prev, ...uniqueIds])));
+    setItems((currentItems) => currentItems.filter((it) => !idSet.has(it.id)));
+    setBackupData((currentData) => currentData?.filter((it) => !idSet.has(it.id)) ?? currentData);
+    setSelectedIds((currentSelected) => currentSelected.filter((id) => !idSet.has(id)));
+    setDirty(true);
+  }
+
+  function confirmAndRemove(idsToRemove) {
+    const count = idsToRemove.length;
+    const message = count === 1
+      ? 'Are you sure you want to delete this image? This action cannot be undone.'
+      : `Are you sure you want to delete these ${count} images? This action cannot be undone.`;
+
+    if (!window.confirm(message)) return;
+
+    removeItems(idsToRemove);
+    note(count === 1 ? 'Deleted image' : `Deleted ${count} selected images`);
+    closeContextMenu();
+  }
+
+  function getActionItemIds(itemId) {
+    if (!itemId) return [];
+    return selectedIds.includes(itemId) ? selectedIds : [itemId];
+  }
+
+  function startTransfer(actionType) {
+    if (!contextMenu.targetPath) return;
+
+    const transferRequest = {
+      itemId: contextMenu.itemId,
+      action: actionType,
+      targetPath: contextMenu.targetPath,
+    };
+    setPendingTransfer(transferRequest);
+
+    if (skipBackupPrompt) {
+      performAction({
+        transferRequestOverride: transferRequest,
+        actionOverride: actionType,
+        backupSelections: { source: false, target: false },
+        skipBackups: true,
+      });
+      closeContextMenu();
+      return;
+    }
+
+    setBackupOptions({ source: true, target: true });
+    setShowBackupPrompt(true);
+    closeContextMenu();
+  }
+
   // perform move or copy
-  async function performAction() {
-    const { itemId, action, targetPath } = contextMenu;
+  async function performAction(options = {}) {
+    const { actionOverride, backupSelections, skipBackups = false, transferRequestOverride } = options;
+    const transferRequest = transferRequestOverride || pendingTransfer || contextMenu;
+    const { itemId, action: contextAction, targetPath } = transferRequest;
+    const action = actionOverride || contextAction;
     if (!itemId || !action || !targetPath) return;
 
     // Warn if unsaved changes before moving
@@ -547,45 +651,49 @@ export default function GalleryOrderer({ datasetPath = "" }) {
       }
     }
 
-    const item = items.find(it => it.id === itemId);
-    if (!item) return;
+    const actionItemIds = getActionItemIds(itemId);
+    const actionItems = actionItemIds
+      .map((id) => items.find((it) => it.id === id))
+      .filter(Boolean);
+    if (actionItems.length === 0) return;
 
-    // Load target data
-    const targetMod = await modules[targetPath]();
-    let targetData = Array.isArray(targetMod)
-      ? targetMod
-      : Array.isArray(targetMod?.galleryData)
-      ? targetMod.galleryData
-      : Array.isArray(targetMod?.default)
-      ? targetMod.default
-      : [];
+    // Load target data for backup download / duplicate preview
+    const targetData = await loadGalleryDataFresh(targetPath, modules[targetPath], "GalleryOrderer:target");
+    const targetIdSet = new Set(targetData.map((it) => it.id));
+    const itemsAlreadyInTarget = actionItems.filter((it) => targetIdSet.has(it.id));
+    const itemsToAdd = actionItems.filter((it) => !targetIdSet.has(it.id));
 
-    // Check if item is already in target
-    const alreadyInTarget = targetData.some(it => it.id === itemId);
-    if (alreadyInTarget) {
+    if (itemsAlreadyInTarget.length > 0) {
       if (action === 'move') {
-        const confirmDelete = window.confirm('The image is already in the target gallery. Do you want to delete it from the source gallery?');
+        const confirmDelete = window.confirm(
+          itemsAlreadyInTarget.length === actionItems.length
+            ? 'The selected image(s) are already in the target gallery. Do you want to delete them from the source gallery?'
+            : `${itemsAlreadyInTarget.length} selected image(s) are already in the target gallery. They can be removed from the source while the remaining ${itemsToAdd.length} are added to the target. Continue?`
+        );
         if (!confirmDelete) {
           closeContextMenu();
           return;
         }
-        // Proceed to delete from source without adding to target
       } else if (action === 'copy') {
-        alert('The image is already in the target gallery. Cannot copy.');
-        closeContextMenu();
-        return;
+        if (itemsToAdd.length === 0) {
+          alert('All selected image(s) are already in the target gallery. Nothing to copy.');
+          closeContextMenu();
+          return;
+        }
       }
     }
 
     // download backups if selected and not skipping for session
-    if (!skipBackupPrompt) {
-      if (backupOptions.source) {
+    const effectiveBackupOptions = backupSelections || backupOptions;
+
+    if (!skipBackups) {
+      if (effectiveBackupOptions.source) {
         const ts = new Date().toISOString().replace(/[:.]/g, "-");
         const sourceFilename = `BACKUP-${selectedPath.split('/').pop()}-${ts}`;
         downloadText(JSON.stringify(backupData, null, 2), `${sourceFilename}.json`);
         downloadText(buildMjsJson(backupData, "galleryData"), `${sourceFilename}.mjs`);
       }
-      if (backupOptions.target) {
+      if (effectiveBackupOptions.target) {
         const ts = new Date().toISOString().replace(/[:.]/g, "-");
         const targetFilename = `BACKUP-${targetPath.split('/').pop()}-${ts}`;
         downloadText(JSON.stringify(targetData, null, 2), `${targetFilename}.json`);
@@ -594,71 +702,53 @@ export default function GalleryOrderer({ datasetPath = "" }) {
     }
 
     // prepare updated data
-    const normalizedItem = !alreadyInTarget ? normalizeItem(item) : null;
-    if (normalizedItem) {
-      normalizedItem.sortOrder = targetData.filter(isRealItem).length; // append to end
+    const normalizedItems = itemsToAdd.map((item) => normalizeItem(item));
+    const actionIdSet = new Set(actionItemIds);
+
+    try {
+      const res = await fetch("/.netlify/functions/updateGalleryOrder", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          action: "transfer",
+          mode: action,
+          sourceDatasetPath: selectedPath.replace(/^\//, ""),
+          targetDatasetPath: targetPath.replace(/^\//, ""),
+          itemIds: actionItemIds,
+        }),
+      });
+      if (!res.ok) throw new Error(await res.text());
+      await res.json();
+    } catch (err) {
+      alert(`Failed to ${action} item(s): ${err.message}`);
+      return;
     }
 
-    let updatedSource = backupData;
-    let updatedTarget = targetData;
-
-    if (action === 'move') {
-      // remove from source
-      updatedSource = backupData.filter(it => it.id !== itemId);
-      // add to target only if not already there
-      if (!alreadyInTarget) {
-        updatedTarget = targetData.concat([normalizedItem]);
-      }
-    } else if (action === 'copy') {
-      // just add to target
-      updatedTarget = targetData.concat([normalizedItem]);
-    }
-
-    // save target if changed
-    if (updatedTarget !== targetData) {
-      try {
-        const res = await fetch("/.netlify/functions/updateGalleryOrder", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            datasetPath: targetPath.replace(/^\//, ""),
-            fullArray: updatedTarget,
-          }),
-        });
-        if (!res.ok) throw new Error(await res.text());
-      } catch (err) {
-        alert("Failed to update target: " + err.message);
-        return;
-      }
-    }
-
-    // save source if moved
-    if (action === 'move') {
-      try {
-        const res = await fetch("/.netlify/functions/updateGalleryOrder", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            datasetPath: selectedPath.replace(/^\//, ""),
-            fullArray: updatedSource,
-          }),
-        });
-        if (!res.ok) throw new Error(await res.text());
-      } catch (err) {
-        alert("Failed to update source: " + err.message);
-        return;
-      }
-    }
+    setPendingTransfer(null);
 
     // update local state if current dataset affected
-    if (action === 'move' && contextMenu.targetPath !== selectedPath) {
-      // Remove from current gallery immediately
-      setItems(items => items.filter(it => it.id !== itemId));
-      setBackupData(data => data.filter(it => it.id !== itemId));
+    if (action === 'move' && targetPath !== selectedPath) {
+      setItems((currentItems) => currentItems.filter((it) => !actionIdSet.has(it.id)));
+      setBackupData((currentData) => currentData?.filter((it) => !actionIdSet.has(it.id)) ?? currentData);
+      setSelectedIds((currentSelected) => currentSelected.filter((id) => !actionIdSet.has(id)));
       setDirty(true);
     }
 
-    note(action === 'move' && alreadyInTarget ? 'Deleted item from source (already in target)' : `${action === 'move' ? 'Moved' : 'Copied'} item to ${targetPath.split('/').pop()}`);
+    const movedCount = actionItems.length;
+    const addedCount = normalizedItems.length;
+    const duplicateCount = itemsAlreadyInTarget.length;
+    if (action === 'move') {
+      if (duplicateCount > 0 && addedCount === 0) {
+        note(movedCount === 1 ? 'Deleted item from source (already in target)' : `Deleted ${movedCount} items from source (already in target)`);
+      } else if (duplicateCount > 0) {
+        note(`Moved ${addedCount} and removed ${duplicateCount} already in target`);
+      } else {
+        note(movedCount === 1 ? `Moved item to ${targetPath.split('/').pop()}` : `Moved ${movedCount} items to ${targetPath.split('/').pop()}`);
+      }
+    } else {
+      note(addedCount === 1 ? `Copied item to ${targetPath.split('/').pop()}` : `Copied ${addedCount} items to ${targetPath.split('/').pop()}`);
+    }
+    window.location.reload();
     closeContextMenu();
   }
 
@@ -799,6 +889,26 @@ export default function GalleryOrderer({ datasetPath = "" }) {
         <button onClick={undoLastMove} className="px-3 py-1 rounded-md border">
           Undo Last Move
         </button>
+
+        {selectedIds.length > 0 && (
+          <>
+            <span className="px-2 py-1 text-xs rounded-md border bg-blue-50 text-blue-700">
+              {selectedIds.length} selected
+            </span>
+            <button
+              onClick={() => confirmAndRemove(selectedIds)}
+              className="px-3 py-1 rounded-md border bg-red-50 hover:bg-red-100 text-red-700"
+            >
+              Delete Selected
+            </button>
+            <button
+              onClick={() => setSelectedIds([])}
+              className="px-3 py-1 rounded-md border"
+            >
+              Clear Selection
+            </button>
+          </>
+        )}
 
         <span className="ml-auto opacity-70">{filtered.length}/{total}</span>
 
@@ -959,24 +1069,14 @@ export default function GalleryOrderer({ datasetPath = "" }) {
           </div>
           <div className="flex gap-2">
             <button
-              onClick={() => {
-                if (!contextMenu.targetPath) return;
-                setContextMenu(prev => ({ ...prev, action: 'move' }));
-                setBackupOptions({ source: true, target: true });
-                setShowBackupPrompt(true);
-              }}
+              onClick={() => startTransfer('move')}
               className="px-3 py-1 rounded-md border bg-blue-50 hover:bg-blue-100"
               disabled={!contextMenu.targetPath}
             >
               Move
             </button>
             <button
-              onClick={() => {
-                if (!contextMenu.targetPath) return;
-                setContextMenu(prev => ({ ...prev, action: 'copy' }));
-                setBackupOptions({ source: true, target: true });
-                setShowBackupPrompt(true);
-              }}
+              onClick={() => startTransfer('copy')}
               className="px-3 py-1 rounded-md border bg-green-50 hover:bg-green-100"
               disabled={!contextMenu.targetPath}
             >
@@ -984,19 +1084,16 @@ export default function GalleryOrderer({ datasetPath = "" }) {
             </button>
             <button
               onClick={() => {
-                if (window.confirm('Are you sure you want to delete this image? This action cannot be undone.')) {
-                  // Track deleted ID for series registry cleanup on save
-                  setDeletedIds(prev => [...prev, contextMenu.itemId]);
-                  // Remove the item from items and backupData
-                  setItems(items => items.filter(it => it.id !== contextMenu.itemId));
-                  setBackupData(data => data.filter(it => it.id !== contextMenu.itemId));
-                  setDirty(true);
-                  closeContextMenu();
-                }
+                const idsToRemove = selectedIds.includes(contextMenu.itemId)
+                  ? selectedIds
+                  : [contextMenu.itemId];
+                confirmAndRemove(idsToRemove);
               }}
               className="px-3 py-1 rounded-md border bg-red-50 hover:bg-red-100 text-red-700"
             >
-              Delete Image
+              {selectedIds.includes(contextMenu.itemId) && selectedIds.length > 1
+                ? `Delete ${selectedIds.length} Selected`
+                : 'Delete Image'}
             </button>
             <button
               onClick={closeContextMenu}
@@ -1010,10 +1107,16 @@ export default function GalleryOrderer({ datasetPath = "" }) {
 
       {/* backup prompt */}
       {showBackupPrompt && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="bg-white p-6 rounded-md shadow-lg max-w-md w-full">
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <div
+            className="bg-white p-6 rounded-md shadow-lg max-w-md w-full"
+            onClick={(e) => e.stopPropagation()}
+          >
             <h3 className="text-lg font-semibold mb-4">Backup Before Proceeding</h3>
-            <p className="mb-4 text-sm">Before {contextMenu.action === 'move' ? 'moving' : 'copying'} the item, download backups of the affected files?</p>
+            <p className="mb-4 text-sm">Before {pendingTransfer?.action === 'move' ? 'moving' : 'copying'} the item, download backups of the affected files?</p>
             <div className="space-y-2 mb-4">
               <label className="flex items-center">
                 <input
@@ -1031,7 +1134,7 @@ export default function GalleryOrderer({ datasetPath = "" }) {
                   onChange={(e) => setBackupOptions(prev => ({ ...prev, target: e.target.checked }))}
                   className="mr-2"
                 />
-                Backup target file ({contextMenu.targetPath.split('/').pop()})
+                Backup target file ({pendingTransfer?.targetPath?.split('/').pop() || ''})
               </label>
               <label className="flex items-center">
                 <input
@@ -1046,8 +1149,15 @@ export default function GalleryOrderer({ datasetPath = "" }) {
             <div className="flex gap-2 justify-end">
               <button
                 onClick={() => {
+                  const backupSelections = { ...backupOptions };
+                  const skipForThisAction = skipBackupPrompt;
+                  const transferRequest = pendingTransfer;
                   setShowBackupPrompt(false);
-                  performAction();
+                  performAction({
+                    transferRequestOverride: transferRequest,
+                    backupSelections,
+                    skipBackups: skipForThisAction,
+                  });
                 }}
                 className="px-4 py-2 rounded-md border bg-blue-50 hover:bg-blue-100"
               >
@@ -1056,6 +1166,7 @@ export default function GalleryOrderer({ datasetPath = "" }) {
               <button
                 onClick={() => {
                   setShowBackupPrompt(false);
+                  setPendingTransfer(null);
                   closeContextMenu();
                 }}
                 className="px-4 py-2 rounded-md border"

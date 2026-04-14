@@ -1,0 +1,23 @@
+---
+import GalleryShellCore from '@/components/GalleryShellCore.astro';
+import ChapterViewer from '@/components/Chapter-WesternNarrativesColor.jsx';
+import { galleryData as allImages } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs';
+import { landingWestern as landingData } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/landingstones.ts';
+
+const GALLERY_PATH = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color';
+const FALLBACK_DESCRIPTION = 'Explore painterly Western narrative photography in color by Wayne Heim.';
+
+const { breadcrumb, entranceData, initialImageId } = Astro.props;
+---
+
+<GalleryShellCore
+  allImages={allImages}
+  landingData={landingData}
+  galleryPath={GALLERY_PATH}
+  baseFallbackDescription={FALLBACK_DESCRIPTION}
+  breadcrumb={breadcrumb}
+  entranceData={entranceData}
+  initialImageId={initialImageId}
+>
+  <ChapterViewer slot="chapter-viewer" client:load initialImageId={initialImageId || 'i-k4studios'} />
+</GalleryShellCore>

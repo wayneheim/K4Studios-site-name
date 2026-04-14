@@ -1,3 +1,21 @@
+
+function getSisterGalleryPath(path) {
+  const normalizedPath = (path || '').replace(/\/+$/, '');
+  const swaps = [
+    ['/NA-Color', '/NA-Black-White'],
+    ['/NA-Black-White', '/NA-Color'],
+    ['/Color', '/Black-White'],
+    ['/Black-White', '/Color'],
+  ];
+
+  for (const [from, to] of swaps) {
+    if (normalizedPath.includes(from)) {
+      return normalizedPath.replace(from, to);
+    }
+  }
+
+  return null;
+}
 import { useState, useEffect, useMemo, useCallback } from "react";
 import { motion } from "framer-motion";
 import "../styles/galleryinfo.css";
@@ -233,12 +251,7 @@ export default function GalleryInfo({
   useEffect(() => {
     if (typeof window === 'undefined' || !trimmedBase) return;
     
-    let sisterPath = null;
-    if (trimmedBase.includes('/Color')) {
-      sisterPath = trimmedBase.replace('/Color', '/Black-White');
-    } else if (trimmedBase.includes('/Black-White')) {
-      sisterPath = trimmedBase.replace('/Black-White', '/Color');
-    }
+    const sisterPath = getSisterGalleryPath(trimmedBase);
     
     if (!sisterPath) return;
     

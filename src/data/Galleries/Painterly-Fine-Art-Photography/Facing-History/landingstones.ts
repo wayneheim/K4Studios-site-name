@@ -39,8 +39,8 @@ export const landingWestern = {
       focusKey: "civilwar",
     },
     {
-      title: "Western Cowboy Portraits",
-      href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits",
+      title: "The Wild West",
+      href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West",
       imageId: "i-8BbMZjs",
       thumb: "/img/i-8BbMZjs/s.jpg",
       focusKey: "frontier",

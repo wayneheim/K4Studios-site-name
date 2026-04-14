@@ -94,6 +94,98 @@ function extractArrayFromMjs(code) {
   }
 }
 
+async function readGalleryArray(absPath) {
+  const code = await fs.readFile(absPath, "utf8");
+  const arr = extractArrayFromMjs(code);
+  return Array.isArray(arr) ? arr : [];
+}
+
+function mergePreservedFields(working, existingArr) {
+  const existingThemesById = new Map();
+  const existingNoSketchById = new Map();
+
+  for (const item of existingArr) {
+    if (!item || !item.id) continue;
+    if (item.themes && typeof item.themes === "object") {
+      existingThemesById.set(item.id, item.themes);
+    }
+    if (item.noSketch === true) {
+      existingNoSketchById.set(item.id, true);
+    }
+  }
+
+  return working.map((item) => {
+    if (!item || !item.id) return item;
+
+    const existingThemes = existingThemesById.get(item.id);
+    const incomingThemes = item.themes && typeof item.themes === "object" ? item.themes : null;
+
+    let mergedThemes = null;
+    if (existingThemes && Object.keys(existingThemes).length > 0) {
+      if (!incomingThemes || Object.keys(incomingThemes).length === 0) {
+        mergedThemes = existingThemes;
+      } else {
+        mergedThemes = { ...existingThemes, ...incomingThemes };
+        for (const key of Object.keys(mergedThemes)) {
+          if (mergedThemes[key] == null) delete mergedThemes[key];
+        }
+      }
+    } else if (incomingThemes) {
+      mergedThemes = incomingThemes;
+    }
+
+    const existingNoSketch = existingNoSketchById.get(item.id);
+    const mergedNoSketch = item.noSketch === true ? true : (existingNoSketch === true ? true : undefined);
+
+    const result = { ...item };
+    if (mergedThemes && Object.keys(mergedThemes).length > 0) {
+      result.themes = mergedThemes;
+    }
+    if (mergedNoSketch) {
+      result.noSketch = true;
+    }
+
+    return result;
+  });
+}
+
+function finalizeGalleryArray(working, orderIds) {
+  const ghosts = working.filter(isGhost);
+  let visibles = working.filter(isReal);
+
+  if (Array.isArray(orderIds) && orderIds.length) {
+    const byId = new Map(visibles.map((it) => [it.id, it]));
+    const used = new Set();
+    const ordered = [];
+    for (const id of orderIds) {
+      const it = byId.get(id);
+      if (it && !used.has(id)) {
+        ordered.push(it);
+        used.add(id);
+      }
+    }
+    for (const it of visibles) {
+      if (!used.has(it.id)) ordered.push(it);
+    }
+    visibles = ordered;
+  }
+
+  visibles.forEach((it, i) => {
+    it.sortOrder = i;
+  });
+
+  return ghosts.concat(visibles);
+}
+
+async function writeGalleryArray(absPath, working, orderIds) {
+  const existingArr = await readGalleryArray(absPath);
+  const merged = mergePreservedFields(working, existingArr);
+  const finalArr = finalizeGalleryArray(merged, orderIds);
+  const outText = buildMjsJson(finalArr, "galleryData");
+  await fs.writeFile(absPath, outText, "utf8");
+  return finalArr;
+}
+
 /* ===== handler ===== */
 exports.handler = async (event) => {
   try {
@@ -103,6 +195,74 @@ exports.handler = async (event) => {
 
     const body = JSON.parse(event.body || "{}");
     let { datasetPath, orderIds, fullArray, sourceArray } = body;
+
+    if (body.action === "transfer") {
+      const mode = body.mode === "copy" ? "copy" : "move";
+      const sourceDatasetPath = body.sourceDatasetPath;
+      const targetDatasetPath = body.targetDatasetPath;
+      const itemIds = Array.isArray(body.itemIds) ? Array.from(new Set(body.itemIds.filter(Boolean))) : [];
+
+      if (!sourceDatasetPath || !targetDatasetPath || itemIds.length === 0) {
+        return { statusCode: 400, body: "Missing sourceDatasetPath, targetDatasetPath, or itemIds" };
+      }
+
+      let sourceAbsPath;
+      let targetAbsPath;
+      try {
+        sourceAbsPath = resolveDatasetAbsolute(sourceDatasetPath);
+        targetAbsPath = resolveDatasetAbsolute(targetDatasetPath);
+      } catch (e) {
+        return { statusCode: 400, body: e.message };
+      }
+
+      const [sourceArr, targetArr] = await Promise.all([
+        readGalleryArray(sourceAbsPath),
+        readGalleryArray(targetAbsPath),
+      ]);
+
+      const sourceById = new Map(sourceArr.filter(isReal).map((item) => [item.id, item]));
+      const transferItems = itemIds.map((id) => sourceById.get(id)).filter(Boolean);
+
+      if (transferItems.length === 0) {
+        return { statusCode: 404, body: "Requested itemIds were not found in the source gallery" };
+      }
+
+      const targetIdSet = new Set(targetArr.filter(isReal).map((item) => item.id));
+      const itemsAlreadyInTarget = transferItems.filter((item) => targetIdSet.has(item.id));
+      const itemsToAdd = transferItems.filter((item) => !targetIdSet.has(item.id));
+      const transferIdSet = new Set(transferItems.map((item) => item.id));
+
+      let updatedTarget = targetArr.slice();
+      if (itemsToAdd.length > 0) {
+        updatedTarget = targetArr.concat(itemsToAdd.map((item, index) => ({
+          ...item,
+          sortOrder: targetArr.filter(isReal).length + index,
+        })));
+      }
+
+      const updatedSource = mode === "move"
+        ? sourceArr.filter((item) => !transferIdSet.has(item.id))
+        : sourceArr.slice();
+
+      const [targetFinal, sourceFinal] = await Promise.all([
+        itemsToAdd.length > 0 ? writeGalleryArray(targetAbsPath, updatedTarget) : Promise.resolve(targetArr),
+        mode === "move" ? writeGalleryArray(sourceAbsPath, updatedSource) : Promise.resolve(sourceArr),
+      ]);
+
+      return {
+        statusCode: 200,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ok: true,
+          mode,
+          transferred: transferItems.length,
+          addedToTarget: itemsToAdd.length,
+          alreadyInTarget: itemsAlreadyInTarget.length,
+          sourceItems: sourceFinal.length,
+          targetItems: targetFinal.length,
+        }),
+      };
+    }
 
     if (!datasetPath || typeof datasetPath !== "string") {
       return { statusCode: 400, body: "Missing datasetPath" };
@@ -122,36 +282,6 @@ exports.handler = async (event) => {
       return { statusCode: 404, body: `Dataset not found: ${datasetPath}` };
     }
 
-    // ========== PRESERVE THEMES AND NOSKETCH FROM EXISTING FILE ==========
-    // Read the existing file to extract current data that might not be in client state
-    // This prevents stale client data from wiping out themes, noSketch
-    // NOTE: availableSeries is stored in seriesRegistry.json, NOT in .mjs files
-    let existingThemesById = new Map();
-    let existingNoSketchById = new Map();
-    try {
-      const existingCode = await fs.readFile(absPath, "utf8");
-      // Extract the array using helper that handles both JSON and JS object literal formats
-      const existingArr = extractArrayFromMjs(existingCode);
-      if (Array.isArray(existingArr)) {
-        for (const item of existingArr) {
-          if (item && item.id) {
-            if (item.themes && typeof item.themes === "object") {
-              existingThemesById.set(item.id, item.themes);
-            }
-            if (item.noSketch === true) {
-              existingNoSketchById.set(item.id, true);
-            }
-          }
-        }
-        console.log(`Preserved data from existing file: ${existingNoSketchById.size} noSketch, ${existingThemesById.size} themes`);
-      } else {
-        console.warn("Could not parse existing gallery for data preservation");
-      }
-    } catch (readErr) {
-      console.warn("Could not read existing file for data preservation:", readErr.message);
-    }
-    // =================================================================================
-
     // Need a complete array to rebuild the file
     let working = Array.isArray(fullArray) ? fullArray.slice() : null;
     if (!working) {
@@ -161,71 +291,7 @@ exports.handler = async (event) => {
       working = sourceArray.slice();
     }
 
-    // ========== MERGE PRESERVED DATA INTO WORKING DATA ==========
-    // SMART MERGE: Preserve themes, noSketch from existing file
-    // NOTE: availableSeries is stored in seriesRegistry.json, NOT in .mjs files
-    working = working.map((item) => {
-      if (!item || !item.id) return item;
-      
-      // --- THEMES ---
-      const existingThemes = existingThemesById.get(item.id);
-      const incomingThemes = item.themes && typeof item.themes === "object" ? item.themes : null;
-      
-      let mergedThemes = null;
-      if (existingThemes && Object.keys(existingThemes).length > 0) {
-        if (!incomingThemes || Object.keys(incomingThemes).length === 0) {
-          mergedThemes = existingThemes;
-        } else {
-          mergedThemes = { ...existingThemes, ...incomingThemes };
-          for (const key of Object.keys(mergedThemes)) {
-            if (mergedThemes[key] == null) delete mergedThemes[key];
-          }
-        }
-      } else if (incomingThemes) {
-        mergedThemes = incomingThemes;
-      }
-      
-      // --- NO SKETCH ---
-      const existingNoSketch = existingNoSketchById.get(item.id);
-      const mergedNoSketch = item.noSketch === true ? true : (existingNoSketch === true ? true : undefined);
-      
-      // Build result with preserved/merged data
-      const result = { ...item };
-      if (mergedThemes && Object.keys(mergedThemes).length > 0) {
-        result.themes = mergedThemes;
-      }
-      if (mergedNoSketch) {
-        result.noSketch = true;
-      }
-      
-      return result;
-    });
-    // ==============================================================
-
-    const ghosts = working.filter(isGhost);
-    let visibles = working.filter(isReal);
-
-    if (Array.isArray(orderIds) && orderIds.length) {
-      const byId = new Map(visibles.map((it) => [it.id, it]));
-      const used = new Set();
-      const ordered = [];
-      for (const id of orderIds) {
-        const it = byId.get(id);
-        if (it && !used.has(id)) {
-          ordered.push(it);
-          used.add(id);
-        }
-      }
-      for (const it of visibles) if (!used.has(it.id)) ordered.push(it);
-      visibles = ordered;
-    }
-
-    // resequence sortOrder (0..n-1)
-    visibles.forEach((it, i) => { it.sortOrder = i; });
-
-    const finalArr = ghosts.concat(visibles);
-    const outText = buildMjsJson(finalArr, "galleryData");
-    await fs.writeFile(absPath, outText, "utf8");
+    const finalArr = await writeGalleryArray(absPath, working, orderIds);
 
     return {
       statusCode: 200,

@@ -1,23 +1,21 @@
 export const landingWestern = {
-  title: "Western Cowboy Portraits — Painterly Fine Art Photography",
-  subtitle: "Story-Driven Portraits of the American West by Wayne Heim",
+  title: "Western Portraits — Painterly Fine Art Photography",
+  subtitle: "Faces shaped by the frontier, and what they carry.",
 
   // Keywords used internally for structured data, semantic linking, and contextual SEO
   keywords: [
-    "Western cowboy portraits",
+    "Western portraits",
+    "painterly Western portraits",
     "Western fine art photography",
-    "Western themed photography",
-    "Western photography style",
+    "Western portrait photography",
     "cowboy fine art photography",
-    "painterly cowboy photography",
     "Western portrait photography",
     "black and white western art",
-    "Native American fine art portraits",
     "old west fine art prints",
-    "wild west photography",
     "frontier photography",
     "Americana photography",
-    "cowboy wall art"
+    "cowboy wall art",
+    "frontier portrait art"
   ],
 
   breadcrumb: `
@@ -35,27 +33,35 @@ export const landingWestern = {
       onmouseover="this.style.color='darkred'"
       onmouseout="this.style.color='inherit'"
     >
-      Facing History
+      F H
     </a> 
-    | Western Cowboy Portraits
+    | <a 
+      href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West"
+      style="
+        color: inherit;
+        text-decoration: none;
+        cursor: pointer;
+        pointer-events: auto;
+        position: relative;
+        z-index: 9999;
+        transition: color 0.2s ease;
+      "
+      onmouseover="this.style.color='darkred'"
+      onmouseout="this.style.color='inherit'"
+    >Wild West</a>
+    | Western Portraits
   `,
 
   tombstones: [
     {
-      title: "Painterly Cowboy Portraits — Color",
+      title: "Color Western Portraits",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
       thumb: "/images/tombstones/cowboy-c-ts.jpg",
     },
     {
-      title: "Black & White Western Cowboy Portraits",
+      title: "Black & White Western Portraits",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White",
       thumb: "/images/tombstones/cowboy-bw-ts.jpg",
-    },
-    {
-      title: "Native American Fine Art Portraits",
-      href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color",
-      imageId: "i-7hD9CCh",
-      thumb: "/img/i-7hD9CCh/s.jpg",
     },
     {
       title: "The Engrained Series — Western Art on Wood",

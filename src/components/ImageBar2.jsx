@@ -184,6 +184,7 @@ export default function ImageBar2({ slides = [], pageContext: propPageContext = 
             index: originalIndex,
             tier: 'A',
             isDecorativeDuplicate: isDuplicate,
+            fallbackTitle: s.title,
             fallbackDescription: s.description
           });
           

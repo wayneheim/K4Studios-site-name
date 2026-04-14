@@ -1,0 +1,14 @@
+---
+export const prerender = true;
+import GalleryShell from '@components/GalleryShell-NativeAmericans-Color.astro';
+import { entranceData as ColorEntranceData } from '@data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-EntranceData.ts';
+
+const match = Astro.url.pathname.match(/\/(i-[a-zA-Z0-9]+)/);
+const initialImageId = match ? match[1] : 'i-k4studios';
+---
+
+<GalleryShell
+  breadcrumb={ColorEntranceData.breadcrumb}
+  entranceData={ColorEntranceData}
+  initialImageId={initialImageId}
+/>

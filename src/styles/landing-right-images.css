@@ -38,6 +38,17 @@
   animation: sidebarShimmer 1.5s ease-in-out infinite;
 }
 
+.thumb-card {
+  display: block;
+  text-decoration: none;
+}
+
+.thumb-card-with-caption {
+  max-width: 260px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .thumb-img.loaded {
   opacity: 1;
   transform: translateY(0);
@@ -54,6 +65,22 @@
 .thumb-img:hover {
   transform: translateY(0) scale(1.025);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.24);
+}
+
+.thumb-caption {
+  display: block;
+  margin: -1.35rem auto 0;
+  padding: 0 0.25rem;
+  max-width: 240px;
+  font-family: 'Glegoo', serif;
+  font-size: 0.92rem;
+  line-height: 1.35;
+  color: #6a5949;
+  text-align: center;
+}
+
+.thumb-card:hover .thumb-caption {
+  color: #4d3c2d;
 }
 
 @media (max-width: 768px) {
@@ -73,5 +100,10 @@
 
   .thumb-img {
     display: block;
+  }
+
+  .thumb-caption {
+    margin-top: -1.2rem;
+    font-size: 0.88rem;
   }
 }

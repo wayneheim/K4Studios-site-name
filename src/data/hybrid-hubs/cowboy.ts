@@ -13,7 +13,7 @@ import { galleryData as colorGallery }
 import { galleryData as bwGallery }
   from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs';
 import { galleryData as naGallery }
-  from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color.mjs';
+  from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs';
 
 // ─── Gallery paths ───────────────────────────────────────────────────────────
 export const galleryBasePath =

@@ -1,4 +1,16 @@
-export const landingMetaDB = {
+type LandingMetaEntry = {
+  ogTitle: string;
+  ogDescription: string;
+  ogImage: string;
+  ogType?: string;
+  twitterCard?: string;
+  twitterTitle: string;
+  twitterDescription: string;
+  twitterImage: string;
+  keywords?: string;
+};
+
+export const landingMetaDB: Record<string, LandingMetaEntry> = {
   "/": {
     ogTitle: "Wayne Heim – Western & Painterly Fine Art Photography",
     ogDescription:
@@ -220,6 +232,86 @@ export const landingMetaDB = {
       "Painterly Western cowboy portraits and frontier character studies by Wayne Heim.",
     twitterImage: "https://k4studios.com/img/i-7Mzzbvp/l.jpg",
     keywords: "Western cowboy portraits, Western portrait photography, cowboy portraits, Western cowboy photography, Western fine art photography, Old West photography, Native American portraits, frontier portraits, Wayne Heim",
+  },
+
+  "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West": {
+    ogTitle:
+      "Wild West Photography – Wayne Heim",
+    ogDescription:
+      "Wild West photography by Wayne Heim: painterly frontier images of legend, labor, endurance, and the human lives beneath the myth of the American West.",
+    ogImage: "/images/cowboy.webp",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle:
+      "Wild West Photography – Wayne Heim",
+    twitterDescription:
+      "Painterly Wild West photography and frontier storytelling by Wayne Heim.",
+    twitterImage: "/images/cowboy.webp",
+    keywords: "Wild West photography, Wild West fine art photography, American frontier photography, frontier storytelling photography, story driven Western art, painterly frontier photography, Wayne Heim",
+  },
+
+  "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives": {
+    ogTitle:
+      "Western Narratives – Wayne Heim",
+    ogDescription:
+      "Narrative Western photography by Wayne Heim: cinematic frontier images built around implication, atmosphere, and the pressure of the larger story beyond the frame.",
+    ogImage: "/images/tombstones/cowboy-c-ts.jpg",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle:
+      "Western Narratives – Narrative Western Photography",
+    twitterDescription:
+      "Narrative Western art and cinematic frontier photography by Wayne Heim.",
+    twitterImage: "/images/tombstones/cowboy-c-ts.jpg",
+    keywords: "narrative Western photography, Western narratives, narrative Western art, cinematic Western photography, Western storytelling photography, frontier narrative art, Wayne Heim",
+  },
+
+  "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans": {
+    ogTitle:
+      "Native American Portraits – Wayne Heim",
+    ogDescription:
+      "Native American fine art photography by Wayne Heim: painterly portraits in color and black and white shaped by presence, heritage, identity, and lived humanity.",
+    ogImage: "/img/i-qLzRgbS/l.jpg",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle:
+      "Native American Portraits – Wayne Heim",
+    twitterDescription:
+      "Painterly Native American portraits in color and black and white by Wayne Heim.",
+    twitterImage: "/img/i-qLzRgbS/l.jpg",
+    keywords: "Native American fine art photography, Native American portraits, Indigenous portrait photography, painterly Native American portraits, Native American black and white photography, Native American color portrait photography, Indigenous fine art photography, Wayne Heim",
+  },
+
+  "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color": {
+    ogTitle:
+      "Native American Portraits - Color – Wayne Heim",
+    ogDescription:
+      "Painterly Native American color portrait photography by Wayne Heim, built around heritage, atmosphere, dignity, and human presence.",
+    ogImage: "/img/i-qLzRgbS/l.jpg",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle:
+      "Native American Portraits - Color – Wayne Heim",
+    twitterDescription:
+      "Painterly Native American color portrait photography by Wayne Heim.",
+    twitterImage: "/img/i-qLzRgbS/l.jpg",
+    keywords: "Native American color portrait photography, Native American fine art photography, painterly Native American portraits, Indigenous portrait photography, Wayne Heim",
+  },
+
+  "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White": {
+    ogTitle:
+      "Native American Portraits - Black & White – Wayne Heim",
+    ogDescription:
+      "Black and white Native American portrait photography by Wayne Heim, emphasizing tone, structure, dignity, and presence.",
+    ogImage: "/img/i-Z54nXZm/l.jpg",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle:
+      "Native American Portraits - Black & White – Wayne Heim",
+    twitterDescription:
+      "Monochrome Native American portrait photography by Wayne Heim.",
+    twitterImage: "/img/i-Z54nXZm/l.jpg",
+    keywords: "Native American black and white photography, Native American portrait photography, monochrome Indigenous portrait photography, painterly Native American portraits, Wayne Heim",
   },
 
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII": {

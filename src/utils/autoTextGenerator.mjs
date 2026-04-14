@@ -30,16 +30,21 @@ function getUniquePhrases(phrases, count = 6) {
 function detectSection(datasetPath = "") {
   const lowerPath = datasetPath.toLowerCase();
 
-  // 1️⃣ Try direct match to known semantic paths
-  for (const [key, value] of Object.entries(semantic)) {
-    if (value?.path && lowerPath.includes(value.path.toLowerCase())) {
-      return { section: key, location: "" };
-    }
+  // 1️⃣ Try direct match to known semantic paths, preferring the most specific path
+  const semanticMatches = Object.entries(semantic)
+    .filter(([, value]) => value?.path && lowerPath.includes(value.path.toLowerCase()))
+    .sort((a, b) => (b[1].path?.length || 0) - (a[1].path?.length || 0));
+
+  if (semanticMatches.length) {
+    return { section: semanticMatches[0][0], location: "" };
   }
 
   // 2️⃣ Fall back to pattern logic (existing implementation)
   const result = { section: "cowboy", location: "" };
-  if (lowerPath.includes("civil-war")) result.section = "civilwar";
+  if (lowerPath.includes("wild-west/western-narratives")) result.section = "westernNarratives";
+  else if (lowerPath.includes("wild-west/native-americans")) result.section = "nativeAmericans";
+  else if (lowerPath.includes("wild-west")) result.section = "wildWest";
+  else if (lowerPath.includes("civil-war")) result.section = "civilwar";
   else if (lowerPath.includes("roaring-20s")) result.section = "roaring20s";
   else if (lowerPath.includes("wwii") && lowerPath.includes("machines")) result.section = "wwiiMenAndMachines";
   else if (lowerPath.includes("wwii") && lowerPath.includes("portraits")) result.section = "wwiiPortraits";

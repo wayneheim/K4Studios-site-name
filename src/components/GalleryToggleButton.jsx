@@ -4,26 +4,48 @@ import "../styles/gallery-header-react.css";
 
 // Helper to normalize path
 function normalize(path) {
-  return (path || "").replace(/\/+$/, '').toLowerCase();
+  return (path || "").replace(/[?#].*$/, "").replace(/\/+$/, '').toLowerCase();
+}
+
+function isWithinGalleryPath(pathname, galleryHref) {
+  const target = normalize(pathname);
+  const gallery = normalize(galleryHref);
+  return target === gallery || target.startsWith(`${gallery}/`);
 }
 
 // Find siblings (other galleries at the same nav level as the current one)
 function findSiblingGalleries(pathname) {
-  const target = normalize(pathname);
+  function pickBetterMatch(currentBest, nextBest) {
+    if (!nextBest) return currentBest;
+    if (!currentBest) return nextBest;
+    return nextBest.matchLength > currentBest.matchLength ? nextBest : currentBest;
+  }
 
   function findInNav(items) {
+    let bestMatch = null;
+
     for (const item of items) {
-      if (item.href && normalize(item.href) === target) return null;
       if (item.children) {
-        const match = item.children.find(child => normalize(child.href) === target);
-        if (match) return item.children;
+        const galleryChildren = item.children.filter(child => child.type === "gallery-source");
+
+        for (const child of galleryChildren) {
+          if (child.href && isWithinGalleryPath(pathname, child.href)) {
+            bestMatch = pickBetterMatch(bestMatch, {
+              siblings: galleryChildren,
+              matchLength: normalize(child.href).length,
+            });
+          }
+        }
+
         const deeper = findInNav(item.children);
-        if (deeper) return deeper;
+        bestMatch = pickBetterMatch(bestMatch, deeper);
       }
     }
-    return null;
+
+    return bestMatch;
   }
-  return findInNav(siteNav);
+
+  return findInNav(siteNav)?.siblings || null;
 }
 
 export default function GalleryToggleButton({ currentPath }) {
@@ -51,7 +73,7 @@ export default function GalleryToggleButton({ currentPath }) {
   return (
     <div className="gallery-toggle">
       {siblings.map(sibling => {
-        const isActive = normalize(sibling.href) === normalize(currentPath);
+        const isActive = isWithinGalleryPath(currentPath, sibling.href);
         const labelChar = sibling.label?.[0]?.toUpperCase() ?? "?";
         return (
           <a

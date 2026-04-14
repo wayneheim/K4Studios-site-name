@@ -31,35 +31,83 @@ export const siteNav = [
             "type": "collection"
           },
 {
-  "label": "Western Cowboy Portraits",
-  "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits",
-  "children": [
-    {
-      "label": "Color",
-      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
-      "code": "P-S1-Ss2-Sss1",
-      "slug": "color",
-      "type": "gallery-source"
-    },
-    {
-      "label": "Black & White",
-      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White",
-      "code": "P-S1-Ss2-Sss2",
-      "slug": "black--white",
-      "type": "gallery-source"
-    },
-    {
-      "label": "Native American Portraits",
-      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color",
-      "code": "P-S1-Ss2-Sss3",
-      "slug": "na-color",
-      "type": "gallery-source"
-    }
-  ],
-  "code": "P-S1-Ss2",
-  "slug": "western-cowboy-portraits",
-  "type": "collection"
-},
+            "label": "Wild West",
+            "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West",
+            "children": [
+{
+                "label": "Western Narratives",
+                "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives",
+                "children": [
+{
+                    "label": "Color",
+                    "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color",
+                    "code": "P-S1-Ss5-Sss1-Ssss1",
+                    "slug": "color",
+                    "type": "gallery-source"
+                  },
+{
+                    "label": "Black & White",
+                    "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White",
+                    "code": "P-S1-Ss5-Sss1-Ssss2",
+                    "slug": "black--white",
+                    "type": "gallery-source"
+                  }
+                ],
+                "code": "P-S1-Ss5-Sss1",
+                "slug": "western-narratives",
+                "type": "collection"
+              },
+{
+                "label": "Western Portraits",
+                "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits",
+                "children": [
+{
+                    "label": "Color",
+                    "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
+                    "code": "P-S1-Ss5-Sss2-Ssss1",
+                    "slug": "color",
+                    "type": "gallery-source"
+                  },
+{
+                    "label": "Black & White",
+                    "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White",
+                    "code": "P-S1-Ss5-Sss2-Ssss2",
+                    "slug": "black--white",
+                    "type": "gallery-source"
+                  }
+                ],
+                "code": "P-S1-Ss5-Sss2",
+                "slug": "western-portraits",
+                "type": "collection"
+              },
+{
+                "label": "Native Americans",
+                "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans",
+                "children": [
+{
+                    "label": "Color",
+                    "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color",
+                    "code": "P-S1-Ss5-Sss3-Ssss1",
+                    "slug": "na-color",
+                    "type": "gallery-source"
+                  },
+{
+                    "label": "Black & White",
+                    "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White",
+                    "code": "P-S1-Ss5-Sss3-Ssss2",
+                    "slug": "na-black--white",
+                    "type": "gallery-source"
+                  }
+                ],
+                "code": "P-S1-Ss5-Sss3",
+                "slug": "native-americans",
+                "type": "collection"
+              }
+            ],
+            "code": "P-S1-Ss5",
+            "slug": "wild-west",
+            "type": "collection"
+          },
 {
             "label": "Roaring 20s Portraits",
             "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits",
