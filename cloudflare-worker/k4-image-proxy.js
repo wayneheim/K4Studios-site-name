@@ -195,6 +195,18 @@ const ALWAYS_ALLOWED = [
   "/e05ffc8ff8004372b01c0e153ba16b44.txt" // IndexNow key
 ];
 
+const LEGACY_SMART_404_GALLERY_ALIASES = new Map([
+  [
+    '/galleries/painterly-fine-art-photography/facing-history/western-cowboy-portraits/na-color',
+    '/galleries/painterly-fine-art-photography/facing-history/wild-west/native-americans/na-color'
+  ]
+]);
+
+function normalizeGalleryPathForSmart404(pathname) {
+  const lower = String(pathname || '').toLowerCase();
+  return LEGACY_SMART_404_GALLERY_ALIASES.get(lower) || lower;
+}
+
 // --------------------
 // EDGE + IN-MEM JSON CACHES
 // --------------------
@@ -1209,9 +1221,10 @@ async function handleImagePagePolicy(request, pathname, ctx, env) {
       const validPathsRaw = imageIdMap ? (imageIdMap[canonicalImageId] || imageIdMap[imageId]) : null;
       const requestedGalleryPath = getParentGallery(pathname);
       const requestedLower = String(requestedGalleryPath || '').toLowerCase();
+      const requestedLookupLower = normalizeGalleryPathForSmart404(requestedGalleryPath);
       const knownGallerySet = getKnownGallerySetFromImageIdMap(imageIdMap);
-      const isKnownGalleryExact = knownGallerySet.has(requestedLower);
-      const isKnownGalleryMissingLeaf = knownGallerySet.has(`${requestedLower}/gallery`);
+      const isKnownGalleryExact = knownGallerySet.has(requestedLookupLower);
+      const isKnownGalleryMissingLeaf = knownGallerySet.has(`${requestedLookupLower}/gallery`);
 
       if (!isKnownGalleryExact && !isKnownGalleryMissingLeaf) {
         ctx.waitUntil(logEdgeEvent(env, '404', pathname, imageId, isSearch, request));
@@ -1220,7 +1233,7 @@ async function handleImagePagePolicy(request, pathname, ctx, env) {
 
       if (validPathsRaw) {
         const validPaths = Array.isArray(validPathsRaw) ? validPathsRaw : [validPathsRaw];
-        const matchedPath = validPaths.find(p => (p || "").toLowerCase() === requestedLower);
+        const matchedPath = validPaths.find(p => (p || "").toLowerCase() === requestedLookupLower);
 
         // Wrong path entirely:
         // - If the request is structurally shallower than a canonical path for this imageId
@@ -1230,7 +1243,7 @@ async function handleImagePagePolicy(request, pathname, ctx, env) {
         if (!matchedPath) {
           const galleryLeafPath = validPaths.find(p => {
             const pl = String(p || '').toLowerCase();
-            return pl === `${requestedLower}/gallery`;
+            return pl === `${requestedLookupLower}/gallery`;
           });
 
           if (galleryLeafPath) {
@@ -1239,10 +1252,10 @@ async function handleImagePagePolicy(request, pathname, ctx, env) {
             return Response.redirect(canonicalUrl, 301);
           }
 
-          const requestedPrefixLower = `${requestedLower}/`;
+          const requestedPrefixLower = `${requestedLookupLower}/`;
           const isMissingLeafProbe = validPaths.some(p => {
             const pl = String(p || '').toLowerCase();
-            return pl.length > requestedLower.length && pl.startsWith(requestedPrefixLower);
+            return pl.length > requestedLookupLower.length && pl.startsWith(requestedPrefixLower);
           });
 
           if (isMissingLeafProbe) {

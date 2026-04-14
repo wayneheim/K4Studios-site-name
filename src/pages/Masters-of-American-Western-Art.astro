@@ -44,6 +44,7 @@ function topRatedExcludingTitles(data: any[], count: number, excludedTitles: str
 }
 
 function makeSlide(img: any, hrefBase: string, fallback: string) {
+  if (!img?.id) return null;
   return {
     id: img.id,
     title: img.title,
@@ -80,7 +81,7 @@ const slides = uniqueSlides([
     ),
     imageScale: 1.1,
   },
-  ...topRated(cowboyNA, 1, 0).map((img: any) => makeSlide(img, '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color', 'Portrait from the American West')),
+  ...topRated(cowboyNA, 1, 0).map((img: any) => makeSlide(img, '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color', 'Portrait from the American West')),
 ]);
 
 const sampleSlides = uniqueSlides([
