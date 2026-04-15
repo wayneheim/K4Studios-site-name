@@ -79,7 +79,7 @@ const structuredData = getStructuredData({
     about: [
       { "@type": "Thing", name: "Western Wall Art" },
       { "@type": "Thing", name: "Cowboy Wall Art" },
-      { "@type": "Thing", name: "Narrative Western Art" },
+      { "@type": "Thing", name: "Narrative Western Scenes" },
       { "@type": "Thing", name: "Western Fine Art Prints" },
       { "@type": "Thing", name: "Museum Quality Art" },
     ],
@@ -176,7 +176,7 @@ const explorationPaths = [
     accent: "#6d5b4a",
   },
   {
-    title: "Narrative Western Scenes",
+    title: "Narrative Western Art",
     eyebrow: "The Wild West - Reimagined",
     href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West",
     description: "Story-driven images shaped by tension, atmosphere, and implication-where each frame holds a moment from a larger, unseen narrative.",
@@ -259,8 +259,11 @@ const inRoomSlides = [engrainedSlides[4], engrainedSlides[5], engrainedSlides[7]
     </div>
 
     <div class="w-full max-w-[1200px] mx-auto px-4">
-      <div class="carousel-fade reveal-on-scroll">
-        <ImageBar2 client:load />
+      <div class="carousel-container">
+        <div class="carousel-placeholder" aria-hidden="true"></div>
+        <div class="carousel-fade reveal-on-scroll">
+          <ImageBar2 client:load />
+        </div>
       </div>
     </div>
 
@@ -800,7 +803,7 @@ const inRoomSlides = [engrainedSlides[4], engrainedSlides[5], engrainedSlides[7]
     .fade-in.is-visible { opacity: 1; transform: translateY(0); visibility: visible; }
     .page-title.fade-in { transition-delay: .2s; }
 
-    .section-heading-wrap { margin: -3.1rem 0 4.25rem; text-align: center; }
+    .section-heading-wrap { margin: -.5rem 0 4.25rem; text-align: center; }
     .section-heading .page-title { font-size: 3rem; margin-bottom: .4rem; }
     .section-heading .page-subtitle {
       font-size: 1rem;
@@ -1326,39 +1329,39 @@ const inRoomSlides = [engrainedSlides[4], engrainedSlides[5], engrainedSlides[7]
       width: 100%;
       justify-self: stretch;
     }
-    .room-strip__header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 0.75rem;
-      margin-bottom: 0.62rem;
-    }
-    .room-strip__title {
-      margin: 0;
-      font-size: 1rem;
-      color: #2f251e;
-    }
-    .room-strip__link {
-      font-size: 0.84rem;
-      font-weight: 700;
-      color: #7b4a28;
-      text-decoration: none;
-      border-bottom: 1px solid rgba(123, 74, 40, 0.35);
-      padding-bottom: 0.08rem;
-    }
-    .room-strip__link:hover {
-      color: #5f381e;
-      border-bottom-color: rgba(95, 56, 30, 0.56);
-    }
-    .room-strip__viewport {
-      position: relative;
-      width: 100%;
-      height: clamp(265px, 30vw, 345px);
-      border-radius: 14px;
-      overflow: hidden;
-      border: 1px solid rgba(121, 98, 78, 0.2);
-      background: #efe7dc;
-    }
+      .room-strip__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.75rem;
+        margin-bottom: 0.62rem;
+      }
+      .room-strip__title {
+        margin: 0;
+        font-size: 1rem;
+        color: #2f251e;
+      }
+      .room-strip__link {
+        font-size: 0.84rem;
+        font-weight: 700;
+        color: #7b4a28;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(123, 74, 40, 0.35);
+        padding-bottom: 0.08rem;
+      }
+      .room-strip__link:hover {
+        color: #5f381e;
+        border-bottom-color: rgba(95, 56, 30, 0.56);
+      }
+      .room-strip__viewport {
+        position: relative;
+        width: 100%;
+        height: clamp(265px, 30vw, 345px);
+        border-radius: 14px;
+        overflow: hidden;
+        border: 1px solid rgba(121, 98, 78, 0.2);
+        background: #efe7dc;
+      }
     .room-slide {
       position: absolute;
       inset: 0;
@@ -1366,6 +1369,7 @@ const inRoomSlides = [engrainedSlides[4], engrainedSlides[5], engrainedSlides[7]
       pointer-events: none;
       transition: opacity 0.9s ease-in-out;
       will-change: opacity;
+        z-index: 1;
     }
     .room-slide.is-active {
       opacity: 1;
@@ -1738,6 +1742,22 @@ const inRoomSlides = [engrainedSlides[4], engrainedSlides[5], engrainedSlides[7]
       transition-delay: 1s;
     }
 
+    .carousel-container {
+      position: relative;
+      width: 100%;
+      height: 410px;
+      overflow: hidden;
+    }
+
+    .carousel-placeholder {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: transparent;
+    }
+
     .carousel-fade {
       opacity: 0; transform: translateY(0px);
       transition: opacity 1.5s ease-out, transform 1.5s ease-out;
@@ -1757,6 +1777,10 @@ const inRoomSlides = [engrainedSlides[4], engrainedSlides[5], engrainedSlides[7]
 
     /* Final mobile overrides (declared last to beat desktop rules above). */
     @media (max-width: 768px) {
+      .carousel-container {
+        height: 200px;
+      }
+
       .wallart-page {
         overflow-x: hidden;
       }

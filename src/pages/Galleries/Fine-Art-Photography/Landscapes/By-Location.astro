@@ -396,7 +396,7 @@ const structuredData = getStructuredData({
       position: relative;
       width: 100%;
       height: 410px;
-      overflow: visible;
+      overflow: hidden;
     }
     .carousel-placeholder {
       position: absolute;
@@ -417,6 +417,7 @@ const structuredData = getStructuredData({
         opacity 1.5s ease-out,
         transform 1.5s ease-out;
       transition-delay: 0.0s;
+      visibility: hidden;
     }
     @media (max-width: 768px) {
       .carousel-container {

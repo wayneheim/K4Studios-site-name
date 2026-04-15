@@ -4,7 +4,7 @@ import { semantic } from "../../data/semantic/K4-Sem.ts";
 // ---- GATHER ALL DESCENDANT GALLERIES FOR SECTION/LANDING PAGE ----
 
 // Import all .mjs gallery data files (eagerly)
-const modules = import.meta.glob('../../data/galleries/**/*.mjs', { eager: true });
+const modules = import.meta.glob('../../data/Galleries/**/*.mjs', { eager: true });
 
 const galleryDataMap: Record<string, any[]> = {};
 for (const [path, mod] of Object.entries(modules)) {
