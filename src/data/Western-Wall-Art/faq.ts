@@ -14,7 +14,7 @@ export const wallArtFAQ = [
     q: "What is wild west cowboy photography?",
     a: [
       "Wild West cowboy photography explores frontier identity through historically grounded portraiture and narrative imagery, rather than staged spectacle or decorative cliché.",
-      "Wayne Heim’s wild west cowboy photography includes both contemporary Western individuals and historically researched living-history subjects, approached with accuracy, restraint, and respect. Each image is created as collectible fine art, not themed décor."
+      "Wayne Heim’s wild west cowboy photography includes both contemporary Western individuals and historically researched living-history subjects, approached with accuracy, restraint, and respect. Each image is created as collectible fine art, not themed décor. For a deeper definition and full category context, see <a href='/Western-Cowboy-Photography' style='color:#8b5a2b; text-decoration:underline;'>Western Cowboy Photography</a>."
     ],
   },
 

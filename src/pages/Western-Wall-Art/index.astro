@@ -21,6 +21,7 @@ import { semantic as k4Semantic } from '@/data/semantic/K4-Sem.ts';
 import { landingWallArt } from '@/data/Western-Wall-Art/landingstones.ts';
 import { wallArtStory } from '@/data/Western-Wall-Art/story.ts';
 import { wallArtFAQ } from '@/data/Western-Wall-Art/faq.ts';
+import { slides as engrainedSlides } from '@/data/Other/K4-Select-Series/Engrained/carousel.ts';
 
 import '@/styles/global.css';
 import '@/styles/oneupheader.css';
@@ -208,6 +209,35 @@ const quickExploreLinks = [
     href: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery",
   },
 ];
+
+const collectingLevels = [
+  {
+    marks: [{ symbol: "✽", label: "Sketch Series" }],
+    titleLead: "Entry Works",
+    titleTail: "Sketches",
+    sizingTip: "5x7 prints. Easily matted for 8x10 framing.",
+    body: "Smaller open-edition studies that let any levels of collector take home these works. All images start at this level. Designed as a first step for collectors to begin exploring each series and the stories.",
+  },
+  {
+    marks: [{ symbol: "✯", label: "Foundation Series" }],
+    titleLead: "Open Editions",
+    titleTail: "Open & Archive Prints",
+    sizingTip: "Multiple sizes available, including 8x10 and 11x14.",
+    body: "Full-scale works produced with archival materials and flexible presentation options. Built for long-term display and lasting visual presence.",
+  },
+  {
+    marks: [
+      { symbol: "⌘", label: "Chronicle Series" },
+      { symbol: "❖", label: "Legend Series" },
+    ],
+    titleLead: "Signature Works",
+    titleTail: "Limited & Signed Editions",
+    sizingTip: "Multiple sizes available, including 16x20, 20x24, 30x40, and 40x60.",
+    body: "Select images released in limited numbers, signed and authored. These represent the closest expression of the work as finished art objects.",
+  },
+];
+
+const inRoomSlides = [engrainedSlides[4], engrainedSlides[5], engrainedSlides[7]].filter(Boolean);
 ---
 
 <BaseLayout
@@ -337,6 +367,87 @@ const quickExploreLinks = [
       </div>
     </section>
 
+    <section class="collecting-section">
+      <div class="collecting-shell reveal-on-scroll">
+        <div class="collecting-heading">
+          <h2 class="collecting-title">Collecting the Work</h2>
+          <p class="collecting-intro">This page is not just about viewing the images. It is also about how collectors can enter the work at the right level, then move deeper over time.</p>
+        </div>
+
+        <div class="collecting-layout">
+          <div class="collecting-grid">
+            {collectingLevels.map((level, levelIndex) => (
+              <article class="collecting-card">
+                <h3 class="collecting-card__title">
+                  {level.marks?.length ? (
+                    <span class="collecting-card__marks" aria-label="Series ID marks">
+                      {level.marks.map((mark) => (
+                        <span
+                          class="collecting-card__mark"
+                          title={mark.label}
+                          data-tooltip={mark.label}
+                          aria-label={mark.label}
+                          tabindex="0"
+                        >{mark.symbol}</span>
+                      ))}
+                    </span>
+                  ) : null}
+                  <span
+                    class="collecting-card__title-hover"
+                    data-tooltip={level.sizingTip}
+                    aria-label={level.sizingTip}
+                    tabindex="0"
+                  >
+                    <strong>{level.titleLead}</strong>
+                    <span> - {level.titleTail}</span>
+                  </span>
+                </h3>
+                <p class="collecting-card__body">
+                  {level.body}
+                  {levelIndex === collectingLevels.length - 1 && (
+                    <>
+                      {" "}For more on series and finishing option see <a href="/Other/Series">Series Info</a>.
+                    </>
+                  )}
+                </p>
+              </article>
+            ))}
+          </div>
+
+          <div class="room-strip" aria-label="In-room presentation examples">
+            <div class="room-strip__viewport">
+              {inRoomSlides.map((slide: any, index: number) => (
+                <a
+                  href={slide.href}
+                  class:list={["room-slide", index === 0 && "is-active", index === 2 && "room-slide--third"]}
+                  data-room-slide
+                  data-slide-index={index}
+                  aria-hidden={index === 0 ? "false" : "true"}
+                >
+                  <img src={slide.src} alt={slide.alt || "In-room fine art presentation"} loading="lazy" />
+                </a>
+              ))}
+            </div>
+
+            <a href="/Other/K4-Select-Series/Engrained" class="room-strip__link room-strip__link--below">Explore Engrained Series</a>
+
+            <div class="room-strip__dots" role="tablist" aria-label="In-room slides">
+              {inRoomSlides.map((_: any, index: number) => (
+                <button
+                  type="button"
+                  class:list={["room-strip__dot", index === 0 && "is-active"]}
+                  data-room-dot
+                  data-slide-index={index}
+                  aria-label={`Show in-room image ${index + 1}`}
+                  aria-pressed={index === 0 ? "true" : "false"}
+                ></button>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="faq-section pb-10">
       <div class="faq-shell reveal-on-scroll">
         <p class="faq-kicker">Collector Questions</p>
@@ -433,6 +544,7 @@ const quickExploreLinks = [
       const faqTriggers = Array.from(document.querySelectorAll("[data-faq-trigger]"));
       const faqPanels = Array.from(document.querySelectorAll("[data-faq-panel]"));
       const faqOverlays = Array.from(document.querySelectorAll("[data-faq-overlay]"));
+      const isMobileFaq = () => window.matchMedia("(max-width: 768px)").matches;
 
       const closeAllFaqPanels = () => {
         faqTriggers.forEach((trigger) => {
@@ -451,6 +563,8 @@ const quickExploreLinks = [
           overlay.classList.remove("is-open");
           overlay.innerHTML = "";
         });
+
+        document.querySelectorAll(".faq-mobile-answer").forEach((node) => node.remove());
       };
 
       faqTriggers.forEach((trigger) => {
@@ -461,16 +575,32 @@ const quickExploreLinks = [
           const overlaySide = triggerSide === "left" ? "right" : "left";
           const overlay = document.querySelector(`[data-faq-overlay="${overlaySide}"]`);
           const isOpen = trigger.getAttribute("aria-expanded") === "true";
+          const mobileMode = isMobileFaq();
 
           closeAllFaqPanels();
 
-          if (!targetPanel || !overlay || isOpen) return;
+          if (!targetPanel || isOpen) return;
 
           trigger.setAttribute("aria-expanded", "true");
           const icon = trigger.querySelector(".faq-question__icon");
           if (icon) icon.textContent = "−";
 
           const questionText = trigger.querySelector(".faq-question__text")?.textContent || "";
+
+          if (mobileMode) {
+            const inlineAnswer = document.createElement("div");
+            inlineAnswer.className = "faq-answer faq-mobile-answer is-open";
+            inlineAnswer.innerHTML = `
+              <p class="faq-overlay__eyebrow">Answer</p>
+              <h3 class="faq-overlay__title">${questionText}</h3>
+              <div class="faq-overlay__content">${targetPanel.innerHTML}</div>
+            `;
+            trigger.insertAdjacentElement("afterend", inlineAnswer);
+            return;
+          }
+
+          if (!overlay) return;
+
           overlay.innerHTML = `
             <div class="faq-overlay__inner">
               <p class="faq-overlay__eyebrow">Answer</p>
@@ -482,6 +612,76 @@ const quickExploreLinks = [
           overlay.classList.add("is-open");
         });
       });
+
+      const roomSlides = Array.from(document.querySelectorAll("[data-room-slide]"));
+      const roomDots = Array.from(document.querySelectorAll("[data-room-dot]"));
+      const roomViewport = document.querySelector(".room-strip__viewport");
+
+      if (roomSlides.length && roomDots.length) {
+        const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        let activeRoomIndex = Math.max(0, roomSlides.findIndex((slide) => slide.classList.contains("is-active")));
+        let roomAutoplayId = null;
+
+        const setActiveRoomSlide = (nextIndex) => {
+          activeRoomIndex = ((nextIndex % roomSlides.length) + roomSlides.length) % roomSlides.length;
+
+          roomSlides.forEach((slide, index) => {
+            const active = index === activeRoomIndex;
+            slide.classList.toggle("is-active", active);
+            slide.setAttribute("aria-hidden", active ? "false" : "true");
+          });
+
+          roomDots.forEach((dot, index) => {
+            const active = index === activeRoomIndex;
+            dot.classList.toggle("is-active", active);
+            dot.setAttribute("aria-pressed", active ? "true" : "false");
+          });
+        };
+
+        const stopRoomAutoplay = () => {
+          if (!roomAutoplayId) return;
+          window.clearInterval(roomAutoplayId);
+          roomAutoplayId = null;
+        };
+
+        const startRoomAutoplay = () => {
+          if (prefersReducedMotion || roomSlides.length < 2) return;
+          stopRoomAutoplay();
+          roomAutoplayId = window.setInterval(() => {
+            setActiveRoomSlide(activeRoomIndex + 1);
+          }, 5000);
+        };
+
+        setActiveRoomSlide(activeRoomIndex);
+        startRoomAutoplay();
+
+        roomDots.forEach((dot) => {
+          dot.addEventListener("click", () => {
+            const nextIndex = Number(dot.getAttribute("data-slide-index") || "0");
+            setActiveRoomSlide(nextIndex);
+            startRoomAutoplay();
+          });
+        });
+
+        if (roomViewport) {
+          roomViewport.addEventListener("mouseenter", stopRoomAutoplay);
+          roomViewport.addEventListener("mouseleave", startRoomAutoplay);
+          roomViewport.addEventListener("focusin", stopRoomAutoplay);
+          roomViewport.addEventListener("focusout", () => {
+            window.setTimeout(() => {
+              if (!roomViewport.contains(document.activeElement)) startRoomAutoplay();
+            }, 0);
+          });
+        }
+
+        document.addEventListener("visibilitychange", () => {
+          if (document.hidden) {
+            stopRoomAutoplay();
+            return;
+          }
+          startRoomAutoplay();
+        });
+      }
     });
   </script>
 
@@ -600,8 +800,8 @@ const quickExploreLinks = [
     .fade-in.is-visible { opacity: 1; transform: translateY(0); visibility: visible; }
     .page-title.fade-in { transition-delay: .2s; }
 
-    .section-heading-wrap { margin: 0.7rem 0 1.25rem; text-align: center; }
-    .section-heading .page-title { font-size: 2rem; margin-bottom: .4rem; }
+    .section-heading-wrap { margin: -3.1rem 0 4.25rem; text-align: center; }
+    .section-heading .page-title { font-size: 3rem; margin-bottom: .4rem; }
     .section-heading .page-subtitle {
       font-size: 1rem;
       font-weight: 500;
@@ -944,6 +1144,264 @@ const quickExploreLinks = [
     .collection-footer {
       margin-top: 1.35rem;
       text-align: center;
+    }
+
+    .collecting-section {
+      max-width: 1180px;
+      margin: 0 auto 1.35rem;
+      padding: 0 1rem;
+    }
+    .collecting-shell {
+      background: rgba(255, 252, 247, 0.94);
+      border: 1px solid rgba(121, 98, 78, 0.18);
+      border-radius: 18px;
+      padding: 1.35rem 1.2rem 1.45rem;
+      box-shadow: 0 18px 26px rgba(52, 38, 26, 0.07);
+    }
+    .collecting-heading {
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto 1rem;
+    }
+    .collecting-title {
+      margin: 0 0 0.55rem;
+      font-size: 1.52rem;
+      line-height: 1.2;
+      font-weight: 700;
+      color: #241b15;
+    }
+    .collecting-intro {
+      margin: 0;
+      font-size: 0.98rem;
+      line-height: 1.62;
+      color: #463b34;
+    }
+    .collecting-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.85rem;
+      margin-bottom: 0;
+    }
+    .collecting-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 1rem;
+      align-items: start;
+    }
+    .collecting-card {
+      background: rgba(255,255,255,0.94);
+      border: 1px solid rgba(121, 98, 78, 0.16);
+      border-radius: 12px;
+      padding: 0.88rem 0.9rem;
+    }
+    .collecting-card__title {
+      margin: 0 0 0.38rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1rem;
+      line-height: 1.32;
+      color: #241b15;
+    }
+    .collecting-card__marks {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.18rem;
+      color: rgba(47, 37, 30, 0.7);
+      font-size: 0.98rem;
+      line-height: 1;
+      flex-shrink: 0;
+      cursor: default;
+    }
+    .collecting-card__mark {
+      display: inline-block;
+      position: relative;
+      cursor: default;
+      user-select: none;
+      -webkit-user-select: none;
+      line-height: 1;
+    }
+    .collecting-card__mark::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      left: 50%;
+      bottom: calc(100% + 8px);
+      transform: translateX(-50%);
+      opacity: 0;
+      pointer-events: none;
+      background: rgba(35, 27, 21, 0.96);
+      color: #fff;
+      border-radius: 6px;
+      padding: 0.24rem 0.42rem;
+      font-size: 0.8rem;
+      line-height: 1.2;
+      white-space: nowrap;
+      transition: opacity 0.16s ease;
+      z-index: 5;
+    }
+    .collecting-card__mark::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: calc(100% + 3px);
+      transform: translateX(-50%);
+      border: 5px solid transparent;
+      border-top-color: rgba(35, 27, 21, 0.96);
+      opacity: 0;
+      transition: opacity 0.16s ease;
+      z-index: 5;
+      pointer-events: none;
+    }
+    .collecting-card__mark:hover::after,
+    .collecting-card__mark:hover::before,
+    .collecting-card__mark:focus-visible::after,
+    .collecting-card__mark:focus-visible::before {
+      opacity: 1;
+    }
+    .collecting-card__mark:focus-visible {
+      outline: 1px solid rgba(121, 98, 78, 0.45);
+      outline-offset: 2px;
+    }
+    .collecting-card__title-hover {
+      position: relative;
+      cursor: default;
+      border-bottom: 1px dotted rgba(121, 98, 78, 0.42);
+      line-height: 1.3;
+    }
+    .collecting-card__title-hover::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      left: 0;
+      top: calc(100% + 8px);
+      opacity: 0;
+      pointer-events: none;
+      width: min(320px, 80vw);
+      background: rgba(35, 27, 21, 0.96);
+      color: #fff;
+      border-radius: 8px;
+      padding: 0.38rem 0.5rem;
+      font-size: 0.8rem;
+      line-height: 1.28;
+      white-space: normal;
+      transition: opacity 0.16s ease;
+      z-index: 6;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .collecting-card__title-hover::before {
+      content: "";
+      position: absolute;
+      left: 14px;
+      top: calc(100% + 2px);
+      border: 6px solid transparent;
+      border-bottom-color: rgba(35, 27, 21, 0.96);
+      opacity: 0;
+      transition: opacity 0.16s ease;
+      z-index: 6;
+      pointer-events: none;
+    }
+    .collecting-card__title-hover:hover::after,
+    .collecting-card__title-hover:hover::before,
+    .collecting-card__title-hover:focus-visible::after,
+    .collecting-card__title-hover:focus-visible::before {
+      opacity: 1;
+    }
+    .collecting-card__title-hover:focus-visible {
+      outline: 1px solid rgba(121, 98, 78, 0.45);
+      outline-offset: 2px;
+    }
+    .collecting-card__body {
+      margin: 0;
+      font-size: 0.92rem;
+      line-height: 1.52;
+      color: #4a3d34;
+    }
+    .collecting-card__body a {
+      color: #7b4a28;
+      text-decoration: underline;
+    }
+
+    .room-strip {
+      border-left: 1px solid rgba(121, 98, 78, 0.18);
+      padding-left: 1rem;
+      width: 100%;
+      justify-self: stretch;
+    }
+    .room-strip__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      margin-bottom: 0.62rem;
+    }
+    .room-strip__title {
+      margin: 0;
+      font-size: 1rem;
+      color: #2f251e;
+    }
+    .room-strip__link {
+      font-size: 0.84rem;
+      font-weight: 700;
+      color: #7b4a28;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(123, 74, 40, 0.35);
+      padding-bottom: 0.08rem;
+    }
+    .room-strip__link:hover {
+      color: #5f381e;
+      border-bottom-color: rgba(95, 56, 30, 0.56);
+    }
+    .room-strip__viewport {
+      position: relative;
+      width: 100%;
+      height: clamp(265px, 30vw, 345px);
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(121, 98, 78, 0.2);
+      background: #efe7dc;
+    }
+    .room-slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.9s ease-in-out;
+      will-change: opacity;
+    }
+    .room-slide.is-active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .room-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .room-slide--third img {
+      object-position: 48% 10%;
+    }
+    .room-strip__dots {
+      margin-top: 0.6rem;
+      display: flex;
+      justify-content: center;
+      gap: 0.4rem;
+    }
+    .room-strip__link--below {
+      display: table;
+      margin: 0.58rem auto 0;
+    }
+    .room-strip__dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      border: 0;
+      background: rgba(121, 98, 78, 0.28);
+      cursor: pointer;
+      padding: 0;
+    }
+    .room-strip__dot.is-active {
+      background: #7b4a28;
+      transform: scale(1.12);
     }
     .faq-section {
       max-width: 1180px;
@@ -1306,10 +1764,10 @@ const quickExploreLinks = [
         box-sizing: border-box;
       }
       .section-heading-wrap {
-        margin: 0.5rem 0 0.9rem;
+        margin: -4.85rem 0 3.9rem;
       }
       .section-heading .page-title {
-        font-size: 1.55rem;
+        font-size: 2.35rem;
         line-height: 1.28;
       }
       .section-heading .page-subtitle {
@@ -1322,6 +1780,7 @@ const quickExploreLinks = [
       .term-section,
       .exploration-section,
       .collection-section,
+      .collecting-section,
       .faq-section {
         padding-left: 0.75rem;
         padding-right: 0.75rem;
@@ -1435,6 +1894,48 @@ const quickExploreLinks = [
       .faq-shell {
         padding: 1rem 0.85rem 1.2rem;
       }
+
+      .collecting-shell {
+        padding: 1rem 0.85rem 1.15rem;
+      }
+      .collecting-grid {
+        grid-template-columns: 1fr;
+        gap: 0.62rem;
+      }
+      .collecting-layout {
+        grid-template-columns: 1fr;
+        gap: 0.85rem;
+      }
+      .collecting-title {
+        font-size: 1.3rem;
+      }
+      .collecting-intro {
+        font-size: 0.93rem;
+        line-height: 1.48;
+      }
+      .collecting-card__title {
+        gap: 0.42rem;
+      }
+      .collecting-card__marks {
+        font-size: 0.93rem;
+      }
+      .collecting-card__title-hover::after {
+        width: min(280px, 84vw);
+      }
+      .room-strip {
+        border-left: 0;
+        border-top: 1px solid rgba(121, 98, 78, 0.18);
+        padding-left: 0;
+        padding-top: 0.78rem;
+      }
+      .room-strip__header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.35rem;
+      }
+      .room-strip__viewport {
+        aspect-ratio: 16 / 10;
+      }
       .faq-title {
         width: auto;
         left: auto;
@@ -1459,6 +1960,10 @@ const quickExploreLinks = [
         position: static;
         width: auto;
         margin-top: 0.85rem;
+      }
+      .faq-mobile-answer {
+        margin-top: -0.3rem;
+        margin-bottom: 0.25rem;
       }
       .faq-header-logo {
         margin: 0.6rem auto 0;
