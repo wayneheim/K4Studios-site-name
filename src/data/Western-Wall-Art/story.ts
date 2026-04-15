@@ -15,7 +15,7 @@ export const wallArtStory = [
     subhead: "Fine Art Versus Decoration",
     paragraphs: [
       "The difference between decorative wall art and fine art is not price — it is purpose. Decorative art fills space. Fine art holds attention, deepening through familiarity rather than fading into the background.",
-      "Wayne Heim’s Western photography is shaped by narrative restraint and a painterly approach rooted in the Pictorialist tradition. Light is sculpted. Composition serves story. Each image functions as a fragment of a larger, implied narrative — a single frame from an unseen film."
+      "Wayne Heim’s Western photography is shaped by narrative restraint and a painterly approach rooted in the <a href='/Pictorialist-Photography' style='color:#8b5a2b; text-decoration:underline;'>Pictorialist tradition</a>. Light is sculpted. Composition serves story. Each image functions as a fragment of a larger, implied narrative — a single frame from an unseen film."
     ],
   },
 
@@ -23,7 +23,7 @@ export const wallArtStory = [
     subhead: "Archival Craft, Built to Endure",
     paragraphs: [
       "Every work is produced using archival materials — museum-grade papers, pigment inks rated for generations, and presentation options designed for long-term presence.",
-      "Whether framed traditionally, presented as canvas, or printed directly onto Baltic Birch in the Engrained Series, each piece is crafted to museum standards and intended to live with the collector over time."
+      "Whether framed traditionally, presented as canvas, or printed directly onto Baltic Birch in the <a href='/Other/K4-Select-Series/Engrained' style='color:#8b5a2b; text-decoration:underline;'>Engrained Series</a>, each piece is crafted to museum standards and intended to live with the collector over time."
     ],
   },
 

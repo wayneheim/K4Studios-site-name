@@ -49,7 +49,7 @@ export const wallArtFAQ = [
   {
     q: "What print options are available for Western wall art?",
     a: [
-      "Multiple presentation formats are available, including archival paper prints, canvas, metal, and the Engrained Series — printed directly onto Baltic Birch wood.",
+      "Multiple presentation formats are available, including archival paper prints, canvas, metal, and the <a href='/Other/K4-Select-Series/Engrained' style='color:#8b5a2b; text-decoration:underline;'>Engrained Series</a> — printed directly onto Baltic Birch wood.",
       "Each piece is produced to order, signed by the artist, and prepared with collector-grade materials. <a href='/Other/Print-Options'>Explore print options here</a>."
     ],
   },
