@@ -316,8 +316,10 @@ const quickExploreLinks = [
               <div class="wallart-grid__img-wrap">
                 <img
                   src={getProxySrc(item.id, 'm')}
+                  data-fallback-src={item.srcM || item.src || ''}
                   alt={item.alt || `Wild West wall art by Wayne Heim: ${item.title}`}
                   loading="lazy"
+                  onerror="if (this.dataset.fallbackSrc && this.src !== this.dataset.fallbackSrc) { this.src = this.dataset.fallbackSrc; }"
                   width="400"
                   height="400"
                   class="wallart-grid__img"
@@ -598,7 +600,7 @@ const quickExploreLinks = [
     .fade-in.is-visible { opacity: 1; transform: translateY(0); visibility: visible; }
     .page-title.fade-in { transition-delay: .2s; }
 
-    .section-heading-wrap { margin: -4.4rem 0 2.2rem; text-align: center; }
+    .section-heading-wrap { margin: 0.7rem 0 1.25rem; text-align: center; }
     .section-heading .page-title { font-size: 2rem; margin-bottom: .4rem; }
     .section-heading .page-subtitle {
       font-size: 1rem;
@@ -613,7 +615,7 @@ const quickExploreLinks = [
 
     .term-section {
       max-width: 1180px;
-      margin: 2.3rem auto 1.4rem;
+      margin: 0.75rem auto 1.4rem;
     }
     .term-shell {
       display: grid;
@@ -1297,8 +1299,14 @@ const quickExploreLinks = [
 
     /* Final mobile overrides (declared last to beat desktop rules above). */
     @media (max-width: 768px) {
+      .wallart-page {
+        overflow-x: hidden;
+      }
+      .wallart-page * {
+        box-sizing: border-box;
+      }
       .section-heading-wrap {
-        margin: 1rem 0 1.1rem;
+        margin: 0.5rem 0 0.9rem;
       }
       .section-heading .page-title {
         font-size: 1.55rem;
@@ -1320,7 +1328,7 @@ const quickExploreLinks = [
       }
 
       .term-section {
-        margin: 1.2rem auto 1rem;
+        margin: 0.55rem auto 1rem;
       }
       .term-shell {
         grid-template-columns: 1fr;
@@ -1333,7 +1341,17 @@ const quickExploreLinks = [
         gap: 0.55rem;
       }
       .term-header {
+        display: block;
         padding: 0 0 0.7rem;
+      }
+      .term-header::after {
+        display: none;
+      }
+      .term-header__title {
+        font-size: 1.34rem;
+        line-height: 1.24;
+        white-space: normal;
+        overflow-wrap: anywhere;
       }
       .term-block,
       .term-block--lead {
@@ -1387,6 +1405,7 @@ const quickExploreLinks = [
         transform: none;
         gap: 0.5rem;
         font-size: 1.35rem;
+        word-break: break-word;
       }
       .collection-intro {
         font-size: 0.94rem;
@@ -1422,6 +1441,7 @@ const quickExploreLinks = [
         transform: none;
         font-size: 1.28rem;
         gap: 0.5rem;
+        word-break: break-word;
       }
       .faq-columns {
         grid-template-columns: 1fr;
@@ -1454,6 +1474,16 @@ const quickExploreLinks = [
         line-height: 1.48;
         padding: 0 0.3rem;
         text-align: center;
+      }
+
+      /* Keep core content visible even if reveal JS fails on mobile browsers. */
+      .wallart-page .reveal-on-scroll,
+      .wallart-page .carousel-fade,
+      .wallart-page .sample-fade,
+      .wallart-page .fade-in {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
       }
     }
 
