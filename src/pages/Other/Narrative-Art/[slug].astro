@@ -1,0 +1,178 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import LandingHeader from "@/components/Landing-Header.jsx";
+import SiteFooter from "@/components/Footer.astro";
+import SeeingHero from "@/components/SeeingHero.astro";
+import { getStructuredData } from "@/components/utils/getStructuredData.ts";
+import { getLandingMeta } from "@/data/landingMeta.ts";
+import { essays } from "@/data/Other/Narrative-Art/essays.mjs";
+import { galleryData as narrativeImages } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs";
+import "@/styles/global.css";
+
+export function getStaticPaths() {
+  return essays.map((essay, index) => ({
+    params: { slug: essay.slug },
+    props: { essay, essayNumber: index + 1 }
+  }));
+}
+
+const essay = Astro.props.essay ?? essays.find((entry) => entry.slug === Astro.params.slug);
+if (!essay) {
+  Astro.response.status = 404;
+  throw new Error(`Narrative Art essay not found for slug: ${Astro.params.slug ?? "unknown"}`);
+}
+const essayNumber = Astro.props.essayNumber ?? essays.findIndex((entry) => entry.slug === essay.slug) + 1;
+const currentIndex = essays.findIndex((entry) => entry.slug === essay.slug);
+const { slug, title, subtitle, body, heroTitleLines, heroImageId, sections = [] } = essay;
+
+const sectionPath = `/Other/Narrative-Art/${slug}`;
+const canonicalUrl = `https://k4studios.com${sectionPath}`;
+const previewPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color";
+
+type NarrativeImage = (typeof narrativeImages)[number];
+
+const visibleNarrativeImages = narrativeImages.filter((image: NarrativeImage) => image.visibility !== "ghost");
+const heroImage = visibleNarrativeImages.find((image: NarrativeImage) => image.id === heroImageId) || visibleNarrativeImages[0];
+
+const structuredData = getStructuredData({
+  type: "Article",
+  data: {
+    headline: title,
+    description: subtitle || `A Narrative Art essay: ${title}`,
+    url: canonicalUrl,
+    copyrightNotice: "© Wayne Heim",
+    author: {
+      "@type": "Person",
+      name: "Wayne Heim"
+    },
+    articleSection: "Narrative Art"
+  },
+  defaults: {
+    copyrightNotice: "© Wayne Heim",
+    license: "https://k4studios.com/copyright",
+    creditText: "Wayne Heim",
+    creatorName: "Wayne Heim",
+    creatorUrl: "https://k4studios.com/"
+  }
+});
+
+const meta = {
+  ...getLandingMeta(sectionPath, ""),
+  ogUrl: canonicalUrl,
+  ogTitle: title,
+  ogDescription: subtitle || `A Narrative Art essay: ${title}`,
+  ogType: "article",
+  twitterUrl: canonicalUrl,
+  twitterTitle: title,
+  twitterDescription: subtitle || `A Narrative Art essay: ${title}`,
+  twitterCard: "summary"
+};
+
+const breadcrumb = `Other › <a href='/Other/Narrative-Art' style='color: inherit; text-decoration: none;' onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Narrative Art</a> › ${title}`;
+---
+
+<BaseLayout
+  title={`${title} - Narrative Art | K4 Studios`}
+  structuredDataJSON={structuredData}
+  meta={meta}
+>
+  <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
+    <div class="drawer-mode">
+      <LandingHeader client:load breadcrumb={breadcrumb} />
+    </div>
+
+    <SeeingHero
+      titleLines={heroTitleLines || [title]}
+      imageSrc={heroImage?.srcM || heroImage?.srcL || heroImage?.src}
+      imageLink={heroImage?.buyLink}
+      imageAlt={heroImage?.alt || title}
+      essayNumber={essayNumber}
+    />
+
+    <section class="max-w-3xl mx-auto px-4 pb-4 text-center">
+      <h1 class="sr-only">{title}</h1>
+      {subtitle && <p class="essay-subtitle">{subtitle}</p>}
+    </section>
+
+    <section class="story-layout" style="font-family: 'Glegoo', serif;">
+      <div class="text-column story-section" style="max-width: 760px; margin: 0 auto; padding: 0 1.5rem; line-height: 1.7;">
+        {sections.length > 0 ? sections.map((section) => (
+          <article class="story-block" style="margin-bottom: 2rem;">
+            {section.subhead && (
+              <h2 style="font-weight: 600; font-size: 1.5rem; margin-bottom: 0.75rem; margin-top: 2rem; color: #3b342e;">{section.subhead}</h2>
+            )}
+            {section.paragraphs?.map((paragraph) => (
+              <p style="line-height: 1.7; margin-bottom: 1.25rem; font-size: 1.05rem;" set:html={paragraph} />
+            ))}
+          </article>
+        )) : (
+          <div
+            class="prose prose-lg prose-gray mx-auto"
+            style="font-family: 'Glegoo', serif; line-height: 1.82;"
+            set:html={body}
+          />
+        )}
+      </div>
+    </section>
+
+    <nav style="text-align: center; padding: 3rem 1rem 2rem; font-family: 'Glegoo', serif;">
+      <div style="display: inline-flex; align-items: center; gap: 0.75rem; font-size: 2rem; font-weight: 700; letter-spacing: 0.05em;">
+        {essays.map((entry, index) => (
+          <>
+            {index > 0 && <span style="color: #ccc;">|</span>}
+            {index === currentIndex ? (
+              <span style="color: #ccc;">{index + 1}</span>
+            ) : (
+              <a
+                href={`/Other/Narrative-Art/${entry.slug}`}
+                style="color: #888; text-decoration: none; transition: color 0.2s;"
+                onmouseover="this.style.color='darkred'"
+                onmouseout="this.style.color='#888'"
+              >
+                {index + 1}
+              </a>
+            )}
+          </>
+        ))}
+      </div>
+    </nav>
+
+    <SiteFooter
+      previewImages={[]}
+      previewPath={previewPath}
+      title={`${title} - Narrative Art`}
+      label=""
+      class="pt-8 pb-12"
+    />
+  </main>
+</BaseLayout>
+
+<style>
+  .essay-subtitle {
+    font-size: 1.05rem;
+    color: #6a5c52;
+    margin: 0;
+    max-width: 34rem;
+    margin-inline: auto;
+  }
+
+  .prose p {
+    margin-bottom: 1.5rem;
+  }
+
+  .prose h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .prose a {
+    color: #8b0000;
+    text-decoration: underline;
+  }
+
+  .prose a:hover {
+    color: #5c0000;
+  }
+</style>

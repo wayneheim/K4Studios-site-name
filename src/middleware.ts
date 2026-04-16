@@ -401,6 +401,21 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
     });
   }
 
+  // Keep essay landing pages on their canonical non-file URLs in dev and prod.
+  if (/^\/Other\/Seeing(?:\/index\.html|\/)?$/i.test(pathname) && pathname !== "/Other/Seeing") {
+    return new Response(null, {
+      status: 301,
+      headers: { Location: "/Other/Seeing" },
+    });
+  }
+
+  if (/^\/Other\/Narrative-Art(?:\/index\.html|\/)?$/i.test(pathname) && pathname !== "/Other/Narrative-Art") {
+    return new Response(null, {
+      status: 301,
+      headers: { Location: "/Other/Narrative-Art" },
+    });
+  }
+
   // Universal image rematch: if a URL ends with /i-xxxx and that ID exists in the
   // manifest-derived map, 301 to the canonical gallery path.
   const imageIdMatch = pathname.match(/\/(i-[A-Za-z0-9]+)\/?$/);

@@ -21,7 +21,16 @@ export function getStaticPaths() {
 // ----------------------
 // Page Props
 // ----------------------
-const { essay } = Astro.props;
+const requestedSlug = Astro.params.slug?.replace(/^\/+|\/+$/g, "") ?? "";
+if (!requestedSlug || requestedSlug.toLowerCase() === "index.html") {
+  return Astro.redirect("/Other/Seeing", 301);
+}
+
+const essay = Astro.props.essay ?? essays.find((entry) => entry.slug === requestedSlug);
+if (!essay) {
+  Astro.response.status = 404;
+  throw new Error(`Seeing essay not found for slug: ${requestedSlug || "unknown"}`);
+}
 const { slug, title, subtitle, body } = essay;
 
 const sectionPath = `/Other/Seeing/${slug}`;

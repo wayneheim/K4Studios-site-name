@@ -1,0 +1,258 @@
+---
+export const prerender = true;
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import LandingHeader from "@/components/Landing-Header.jsx";
+import SiteFooter from "@/components/Footer.astro";
+import { getStructuredData } from "@/components/utils/getStructuredData.ts";
+import { getLandingMeta } from "@/data/landingMeta.ts";
+import { narrativeArtLanding } from "@/data/Other/Narrative-Art/story.ts";
+import { essays } from "@/data/Other/Narrative-Art/essays.mjs";
+import { galleryData as narrativeImages } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs";
+import "@/styles/global.css";
+
+const sectionPath = "/Other/Narrative-Art";
+const canonicalUrl = `https://k4studios.com${sectionPath}`;
+const previewPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color";
+
+const structuredData = getStructuredData({
+  type: "Article",
+  data: {
+    headline: narrativeArtLanding.title,
+    description: narrativeArtLanding.intro,
+    url: canonicalUrl,
+    copyrightNotice: "© Wayne Heim",
+    author: {
+      "@type": "Person",
+      name: "Wayne Heim"
+    }
+  },
+  defaults: {
+    copyrightNotice: "© Wayne Heim",
+    license: "https://k4studios.com/copyright",
+    creditText: "Wayne Heim",
+    creatorName: "Wayne Heim",
+    creatorUrl: "https://k4studios.com/"
+  }
+});
+
+const meta = getLandingMeta(sectionPath, "");
+if (!meta.ogUrl) meta.ogUrl = canonicalUrl;
+if (!meta.twitterUrl) meta.twitterUrl = canonicalUrl;
+meta.ogTitle = "Narrative Art - Essay Series";
+meta.ogDescription = narrativeArtLanding.intro;
+meta.twitterTitle = "Narrative Art - Essay Series";
+meta.twitterDescription = narrativeArtLanding.intro;
+
+const visibleNarrativeImages = narrativeImages.filter((image) => image.visibility !== "ghost");
+const fallbackImage = visibleNarrativeImages[0];
+const essayCards = essays.map((essay, index) => {
+  const image = visibleNarrativeImages.find((entry) => entry.id === essay.heroImageId) || fallbackImage;
+  return {
+    essay,
+    index,
+    image
+  };
+});
+---
+
+<BaseLayout
+  title="Narrative Art | K4 Studios"
+  structuredDataJSON={structuredData}
+  meta={meta}
+>
+  <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
+    <div class="drawer-mode">
+      <LandingHeader client:load breadcrumb="Other › Narrative Art" />
+    </div>
+
+    <section class="section-heading-wrap">
+      <div class="section-heading" style="font-family: 'Glegoo', serif;">
+        <h1 class="page-title fade-in reveal-on-scroll" style="font-family: 'Glegoo', serif;">Narrative Art</h1>
+      </div>
+    </section>
+
+    <section class="intro-text max-w-3xl mx-auto px-4 text-center mb-10">
+      <blockquote style="font-size: 1.75rem; font-style: italic; color: #3b342e; margin-bottom: 2rem; line-height: 1.4; border-left: none; padding: 0; font-weight: 500; letter-spacing: -0.01em;">
+        "{narrativeArtLanding.quote}"
+      </blockquote>
+      <p class="text-lg leading-relaxed text-gray-700">
+        {narrativeArtLanding.intro}
+      </p>
+    </section>
+
+    <section class="narrative-card-grid max-w-5xl mx-auto px-4 mb-16" aria-label="Narrative Art essay previews">
+      {essayCards.map(({ essay, index, image }) => (
+        <a href={`/Other/Narrative-Art/${essay.slug}`} class="narrative-card">
+          <div class="narrative-card-image-wrap">
+            <img
+              src={image?.srcM || image?.srcL || image?.src}
+              alt={image?.alt || essay.title}
+              class="narrative-card-image"
+              loading="lazy"
+            />
+            <span class="narrative-card-number">{index + 1}</span>
+          </div>
+          <span class="narrative-card-title">{essay.title}</span>
+          <span class="narrative-card-subtitle">{essay.subtitle}</span>
+        </a>
+      ))}
+    </section>
+
+    <section class="max-w-3xl mx-auto px-4 mb-16">
+      <ol class="space-y-5" style="list-style: none; padding-left: 0;">
+        {essays.map((essay, index) => (
+          <li class="narrative-list-item">
+            <span class="narrative-list-number">{index + 1}.</span>
+            <div class="narrative-list-copy">
+              <a href={`/Other/Narrative-Art/${essay.slug}`} class="narrative-list-link">
+                {essay.title}
+              </a>
+              <p class="narrative-list-subtitle">{essay.subtitle}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <SiteFooter
+      previewImages={[]}
+      previewPath={previewPath}
+      title="Narrative Art"
+      label=""
+      class="pt-8 pb-12"
+    />
+  </main>
+</BaseLayout>
+
+<style>
+  .narrative-card-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  .narrative-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    text-decoration: none;
+    color: #2c2c2c;
+  }
+
+  .narrative-card:hover .narrative-card-title,
+  .narrative-card:focus-visible .narrative-card-title,
+  .narrative-list-link:hover,
+  .narrative-list-link:focus-visible {
+    color: #7a1f12;
+  }
+
+  .narrative-card-image-wrap {
+    position: relative;
+    width: clamp(7.25rem, 10vw, 8.75rem);
+    aspect-ratio: 1 / 1;
+    border-radius: 999px;
+    overflow: hidden;
+    box-shadow: 0 18px 40px rgba(48, 31, 17, 0.14);
+    margin-inline: auto;
+  }
+
+  .narrative-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 35%;
+    display: block;
+    transition: transform 0.35s ease;
+  }
+
+  .narrative-card:hover .narrative-card-image,
+  .narrative-card:focus-visible .narrative-card-image {
+    transform: scale(1.04);
+  }
+
+  .narrative-card-number {
+    position: absolute;
+    left: 0.7rem;
+    bottom: 0.7rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 999px;
+    background: rgba(44, 44, 44, 0.82);
+    color: #fff8f3;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+
+  .narrative-card-title,
+  .narrative-list-link {
+    font-size: 1.04rem;
+    line-height: 1.35;
+    transition: color 0.25s ease;
+  }
+
+  .narrative-card-subtitle,
+  .narrative-list-subtitle {
+    color: #6e6259;
+    font-size: 0.95rem;
+    line-height: 1.45;
+  }
+
+  .narrative-list-item {
+    display: flex;
+    gap: 0.9rem;
+    align-items: flex-start;
+  }
+
+  .narrative-list-number {
+    min-width: 1.6rem;
+    color: #9a8d84;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .narrative-list-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .narrative-list-link {
+    text-decoration: none;
+    color: #2c2c2c;
+  }
+
+  .narrative-list-subtitle {
+    margin: 0;
+  }
+
+  @media (max-width: 1100px) {
+    .narrative-card-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 720px) {
+    .narrative-card-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .narrative-card-image-wrap {
+      width: clamp(6.5rem, 28vw, 8rem);
+    }
+  }
+
+  @media (max-width: 520px) {
+    .narrative-card-grid {
+      grid-template-columns: 1fr;
+      max-width: 18rem;
+    }
+
+    .narrative-card-image-wrap {
+      width: clamp(6.25rem, 42vw, 7.5rem);
+    }
+  }
+</style>

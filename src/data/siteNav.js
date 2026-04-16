@@ -686,9 +686,16 @@ export const siteNav = [
       },
       {
         "label": "Seeing",
-        "href": "/Other/Seeing/",
+        "href": "/Other/Seeing",
         "code": "O-S5b",
         "slug": "seeing",
+        "type": "section"
+      },
+      {
+        "label": "Narrative Art",
+        "href": "/Other/Narrative-Art",
+        "code": "O-S5c",
+        "slug": "narrative-art",
         "type": "section"
       },
       {
@@ -704,6 +711,43 @@ export const siteNav = [
         "code": "O-S6",
         "slug": "shows",
         "type": "section"
+      },
+      {
+        "label": "Interior Design Art",
+        "href": "/Western-Interior-Design-Art",
+        "code": "O-S7",
+        "slug": "interior-design-art",
+        "type": "collection",
+        "children": [
+          {
+            "label": "Western Interior Design Art",
+            "href": "/Western-Interior-Design-Art",
+            "code": "O-S7-Ss1",
+            "slug": "western-interior-design-art",
+            "type": "section"
+          },
+          {
+            "label": "Modern Western Interior Design Art",
+            "href": "/Modern-Western-Interior-Design-Art",
+            "code": "O-S7-Ss2",
+            "slug": "modern-western-interior-design-art",
+            "type": "section"
+          },
+          {
+            "label": "Rustic Western Interior Design Art",
+            "href": "/Rustic-Western-Interior-Design-Art",
+            "code": "O-S7-Ss3",
+            "slug": "rustic-western-interior-design-art",
+            "type": "section"
+          },
+          {
+            "label": "Western Wall Art for Interior Designers",
+            "href": "/Western-Wall-Art-for-Interior-Designers",
+            "code": "O-S7-Ss4",
+            "slug": "western-wall-art-for-interior-designers",
+            "type": "section"
+          }
+        ]
       },
     
   ],

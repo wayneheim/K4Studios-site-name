@@ -9,9 +9,6 @@ import { seeingLanding, essays } from "@/data/Other/Seeing/story.ts";
 import { galleryData as painterlyImages } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs";
 import "@/styles/global.css";
 
-// ----------------------
-// Dynamic Logic
-// ----------------------
 const sectionPath = "/Other/Seeing";
 
 const structuredData = getStructuredData({
@@ -36,14 +33,13 @@ const structuredData = getStructuredData({
 });
 
 const meta = getLandingMeta(sectionPath, "");
-if (!meta.ogUrl)      meta.ogUrl      = `https://k4studios.com${sectionPath}`;
+if (!meta.ogUrl) meta.ogUrl = `https://k4studios.com${sectionPath}`;
 if (!meta.twitterUrl) meta.twitterUrl = `https://k4studios.com${sectionPath}`;
 meta.ogTitle = "Seeing — Visual Literacy Essays";
 meta.ogDescription = "A small collection of essays on visual literacy — how images carry meaning, why some endure, and how to look without relying on categories or labels.";
 meta.twitterTitle = "Seeing — Visual Literacy Essays";
 meta.twitterDescription = "A small collection of essays on visual literacy — how images carry meaning, why some endure, and how to look without relying on categories or labels.";
 
-// Prepare gallery preview images
 function shuffleArray<T>(arr: T[]): T[] {
   return arr
     .map(value => ({ value, sort: Math.random() }))
@@ -75,24 +71,22 @@ const previewPath = "/Galleries";
       </div>
     </section>
 
-    <!-- Intro block -->
     <section class="intro-text max-w-2xl mx-auto px-4 text-center mb-10">
       <blockquote style="font-size: 1.75rem; font-style: italic; color: #3b342e; margin-bottom: 2rem; line-height: 1.4; border-left: none; padding: 0; font-weight: 500; letter-spacing: -0.01em;">
         "The hardest part of looking at art is<br>setting aside what we think it is."
       </blockquote>
       <p class="text-lg leading-relaxed text-gray-700">
-        Here is a small collection of essays on visual literacy — how images carry meaning, why some endure, and how to look without relying on categories or labels.
+        {seeingLanding.intro}
       </p>
     </section>
 
-    <!-- Essay list -->
     <section class="max-w-2xl mx-auto px-4 mb-16">
       <ol class="space-y-4" style="list-style: none; padding-left: 0;">
         {essays.map((essay, index) => (
           <li style="display: flex; align-items: baseline; gap: 0.75rem;">
             <span style="font-family: 'Glegoo', serif; color: #999; font-size: 1rem; min-width: 1.5rem;">{index + 1}.</span>
-            <a 
-              href={`/Other/Seeing/${essay.slug}`} 
+            <a
+              href={`/Other/Seeing/${essay.slug}`}
               class="text-lg hover:text-red-700 transition-colors"
               style="font-family: 'Glegoo', serif; text-decoration: none; color: #2c2c2c;"
               onmouseover="this.style.color='darkred'"
@@ -105,12 +99,12 @@ const previewPath = "/Galleries";
       </ol>
     </section>
 
-    <SiteFooter 
+    <SiteFooter
       previewImages={[]}
       previewPath={previewPath}
       title="Seeing — Visual Literacy Essays"
       label=""
-      class="pt-8 pb-12" 
+      class="pt-8 pb-12"
     />
   </main>
 </BaseLayout>
