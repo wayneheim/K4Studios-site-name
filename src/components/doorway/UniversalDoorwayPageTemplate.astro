@@ -1,0 +1,948 @@
+---
+/**
+ * Universal Doorway Page Template — SEO-competitive version
+ *
+ * Matches the content depth of Western Wall Art and other performing K4 landing pages:
+ *   - section-heading-wrap for H1/subtitle
+ *   - term-shell for intro content + hero images
+ *   - story sections for multi-block narrative depth
+ *   - collection grid for curated image browsing
+ *   - deep FAQ with multi-paragraph answers
+ *   - exploration-shell for related links / CTA
+ *   - reveal-on-scroll for entrance animations
+ *
+ * This template renders INSIDE the page shell ([slug].astro provides
+ * BaseLayout, LandingHeader, ImageBar2, SiteFooter).
+ */
+
+interface DoorwayFaqItem {
+  question: string;
+  answer: string;
+}
+
+interface DoorwayStorySection {
+  subhead: string;
+  paragraphs: string[];
+}
+
+interface DoorwayDeepFaqItem {
+  question: string;
+  answers: string[];
+}
+
+interface DoorwaySecondaryLink {
+  href: string;
+  label: string;
+}
+
+interface DoorwayHeroImage {
+  id: string;
+  title: string;
+  alt: string;
+  href: string;
+}
+
+interface Props {
+  keywordHeading: string;
+  introParagraph: string;
+  expansionParagraphs: string[];
+  faqItems?: DoorwayFaqItem[];
+  primaryCtaText?: string;
+  secondaryLinks?: DoorwaySecondaryLink[];
+  heroImages?: DoorwayHeroImage[];
+  wildWestHubPath: string;
+  storySections?: DoorwayStorySection[];
+  deepFaqItems?: DoorwayDeepFaqItem[];
+  gridImages?: DoorwayHeroImage[];
+}
+
+const {
+  keywordHeading,
+  introParagraph,
+  expansionParagraphs,
+  faqItems = [],
+  primaryCtaText = 'Explore the Wild West Collection',
+  secondaryLinks = [],
+  heroImages = [],
+  wildWestHubPath,
+  storySections = [],
+  deepFaqItems = [],
+  gridImages = [],
+} = Astro.props as Props;
+
+const cleanedExpansion = (expansionParagraphs || [])
+  .map((p) => p.trim())
+  .filter(Boolean)
+  .slice(0, 2);
+
+if (!keywordHeading?.trim()) {
+  throw new Error('Doorway template requires a keywordHeading value for the single h1.');
+}
+if (!introParagraph?.trim()) {
+  throw new Error('Doorway template requires an introParagraph value.');
+}
+if (cleanedExpansion.length === 0) {
+  throw new Error('Doorway template requires at least one expansion paragraph.');
+}
+
+// Deep FAQ takes precedence; fall back to legacy faqItems
+const cleanedDeepFaq = (deepFaqItems || [])
+  .filter((item) => item?.question?.trim() && item?.answers?.length > 0)
+  .slice(0, 10);
+
+const cleanedLegacyFaq = cleanedDeepFaq.length === 0
+  ? (faqItems || [])
+      .filter((item) => item?.question?.trim() && item?.answer?.trim())
+      .slice(0, 6)
+  : [];
+
+const cleanedSecondaryLinks = (secondaryLinks || [])
+  .filter((link) => link?.href?.trim() && link?.label?.trim())
+  .filter((link) => !/^\/doorway\//i.test(link.href))
+  .slice(0, 4);
+
+const cleanedHeroImages = (heroImages || [])
+  .filter((image) => image?.id?.trim() && image?.href?.trim())
+  .slice(0, 3)
+  .map((image) => ({
+    ...image,
+    src: `/img/${image.id}/l.jpg`,
+  }));
+
+const cleanedStorySections = (storySections || [])
+  .filter((section) => section?.subhead?.trim() && section?.paragraphs?.length > 0);
+
+const cleanedGridImages = (gridImages || [])
+  .filter((image) => image?.id?.trim() && image?.href?.trim())
+  .map((image) => ({
+    ...image,
+    src: `/img/${image.id}/m.jpg`,
+  }));
+---
+
+<!-- H1 + subtitle — same pattern as Western Wall Art section-heading-wrap -->
+<section class="dw-section-heading-wrap">
+  <div class="dw-section-heading">
+    <h1 class="dw-page-title fade-in reveal-on-scroll">{keywordHeading}</h1>
+    <p class="dw-page-subtitle fade-in reveal-on-scroll">{introParagraph}</p>
+  </div>
+</section>
+
+<!-- Intro content shell with hero images -->
+<section class="dw-term-section">
+  <div class="dw-term-shell reveal-on-scroll">
+    {cleanedHeroImages.length > 0 && (
+      <div class="dw-hero-strip">
+        {cleanedHeroImages.map((image, index) => (
+          <a href={image.href} class="dw-hero-strip__tile" title={image.title}>
+            <img
+              src={image.src}
+              alt={image.alt}
+              width="900"
+              height="600"
+              loading={index === 0 ? 'eager' : 'lazy'}
+              class="dw-hero-strip__img"
+            />
+            <span class="dw-hero-strip__title">{image.title}</span>
+          </a>
+        ))}
+      </div>
+    )}
+
+    {cleanedExpansion.map((paragraph) => (
+      <p class="dw-term-body">{paragraph}</p>
+    ))}
+  </div>
+</section>
+
+<!-- Story sections — multi-block narrative depth (matches Western Wall Art story blocks) -->
+{cleanedStorySections.length > 0 && (
+  <section class="dw-story-section">
+    {cleanedStorySections.map((section) => (
+      <div class="dw-story-block reveal-on-scroll">
+        <h2 class="dw-story-subhead">{section.subhead}</h2>
+        {section.paragraphs.map((p) => (
+          <p class="dw-story-body" set:html={p} />
+        ))}
+      </div>
+    ))}
+  </section>
+)}
+
+<!-- Image grid — curated collection (matches Western Wall Art wallart-grid) -->
+{cleanedGridImages.length > 0 && (
+  <section class="dw-collection-section">
+    <div class="dw-collection-shell reveal-on-scroll">
+      <p class="dw-collection-kicker">Selected Works</p>
+      <h2 class="dw-collection-title">Browse Selected {keywordHeading}</h2>
+      <div class="dw-grid">
+        {cleanedGridImages.map((image) => (
+          <a href={image.href} class="dw-grid__tile" title={image.title}>
+            <div class="dw-grid__img-wrap">
+              <img
+                src={image.src}
+                alt={image.alt}
+                loading="lazy"
+                width="400"
+                height="400"
+                class="dw-grid__img"
+              />
+              <span class="dw-grid__hover">View Image</span>
+            </div>
+            <p class="dw-grid__title">{image.title}</p>
+          </a>
+        ))}
+      </div>
+      <div class="dw-collection-footer">
+        <a href={wildWestHubPath} class="dw-collection-index-link">View the full Wild West collection</a>
+      </div>
+    </div>
+  </section>
+)}
+
+<!-- Deep FAQ — multi-paragraph answers (matches Western Wall Art faq-shell) -->
+{cleanedDeepFaq.length > 0 && (
+  <section class="dw-faq-section">
+    <div class="dw-faq-shell reveal-on-scroll">
+      <p class="dw-faq-kicker">Common Questions</p>
+      <h2 class="dw-faq-title">{keywordHeading} FAQ</h2>
+
+      <div class="dw-faq-list">
+        {cleanedDeepFaq.map((item, index) => (
+          <button
+            type="button"
+            class="dw-faq-question"
+            data-dw-faq-trigger
+            data-dw-faq-target={`dw-faq-${index}`}
+            aria-expanded="false"
+          >
+            <span class="dw-faq-question__text">{item.question}</span>
+            <span class="dw-faq-question__icon" aria-hidden="true">+</span>
+          </button>
+        ))}
+      </div>
+
+      <div class="dw-faq-answer-stack">
+        {cleanedDeepFaq.map((item, index) => (
+          <div id={`dw-faq-${index}`} class="dw-faq-answer" data-dw-faq-panel hidden>
+            {item.answers.map((a) => (
+              <p set:html={a} />
+            ))}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+)}
+
+<!-- Legacy FAQ fallback (for inactive pages without deep FAQ) -->
+{cleanedLegacyFaq.length > 0 && (
+  <section class="dw-faq-section">
+    <div class="dw-faq-shell reveal-on-scroll">
+      <p class="dw-faq-kicker">Common Questions</p>
+      <h2 class="dw-faq-title">{keywordHeading} FAQ</h2>
+
+      <div class="dw-faq-list">
+        {cleanedLegacyFaq.map((item, index) => (
+          <button
+            type="button"
+            class="dw-faq-question"
+            data-dw-faq-trigger
+            data-dw-faq-target={`dw-faq-${index}`}
+            aria-expanded="false"
+          >
+            <span class="dw-faq-question__text">{item.question}</span>
+            <span class="dw-faq-question__icon" aria-hidden="true">+</span>
+          </button>
+        ))}
+      </div>
+
+      <div class="dw-faq-answer-stack">
+        {cleanedLegacyFaq.map((item, index) => (
+          <div id={`dw-faq-${index}`} class="dw-faq-answer" data-dw-faq-panel hidden>
+            <p>{item.answer}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+)}
+
+<!-- CTA + Related — same pattern as Western Wall Art exploration-shell -->
+<section class="dw-exploration-section">
+  <div class="dw-exploration-shell reveal-on-scroll">
+    <p class="dw-exploration-intro">Explore the Collection</p>
+    <div class="dw-exploration-grid">
+      <!-- Primary CTA card (featured) -->
+      <a
+        href={wildWestHubPath}
+        class="dw-exploration-card dw-exploration-card--featured"
+      >
+        <h3 class="dw-exploration-card__title">{primaryCtaText}</h3>
+        <p class="dw-exploration-card__body">Browse the full Wild West narrative gallery — story-driven cowboy and frontier fine art photography by Wayne Heim.</p>
+        <span class="dw-exploration-card__cta">– Enter the Collection –</span>
+      </a>
+
+      <!-- Secondary link cards -->
+      {cleanedSecondaryLinks.map((link) => (
+        <a
+          href={link.href}
+          class="dw-exploration-card"
+        >
+          <h3 class="dw-exploration-card__title">{link.label}</h3>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- Reveal-on-scroll observer + FAQ toggle — matches site-wide pattern -->
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Reveal-on-scroll
+    var els = document.querySelectorAll(".reveal-on-scroll, .fade-in");
+    if ("IntersectionObserver" in window) {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      els.forEach(function (el) { observer.observe(el); });
+    } else {
+      els.forEach(function (el) { el.classList.add("is-visible"); });
+    }
+
+    // FAQ toggle (inline accordion)
+    var triggers = document.querySelectorAll("[data-dw-faq-trigger]");
+    triggers.forEach(function (trigger) {
+      trigger.addEventListener("click", function () {
+        var targetId = trigger.getAttribute("data-dw-faq-target");
+        var panel = targetId ? document.getElementById(targetId) : null;
+        var isOpen = trigger.getAttribute("aria-expanded") === "true";
+
+        // Close all
+        triggers.forEach(function (t) {
+          t.setAttribute("aria-expanded", "false");
+          var ic = t.querySelector(".dw-faq-question__icon");
+          if (ic) ic.textContent = "+";
+        });
+        document.querySelectorAll(".dw-faq-inline-answer").forEach(function (n) { n.remove(); });
+
+        if (!panel || isOpen) return;
+
+        trigger.setAttribute("aria-expanded", "true");
+        var icon = trigger.querySelector(".dw-faq-question__icon");
+        if (icon) icon.textContent = "\u2212";
+
+        // Inline below trigger
+        var answer = document.createElement("div");
+        answer.className = "dw-faq-answer dw-faq-inline-answer is-open";
+        answer.innerHTML = panel.innerHTML;
+        trigger.insertAdjacentElement("afterend", answer);
+      });
+    });
+  });
+</script>
+
+<style>
+  /* ── Section heading (matches Western Wall Art section-heading-wrap) ── */
+  .dw-section-heading-wrap {
+    margin: 1.5rem 0 2.5rem;
+    text-align: center;
+  }
+  .dw-section-heading .dw-page-title {
+    font-size: 3rem;
+    margin-bottom: 0.4rem;
+    color: #241b15;
+  }
+  .dw-section-heading .dw-page-subtitle {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #6d5b4a;
+    opacity: 0.9;
+    line-height: 1.6;
+    display: block;
+    margin: 0 auto;
+    max-width: 44rem;
+  }
+
+  /* ── Fade / reveal (matches site-wide) ── */
+  .fade-in {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(1px);
+    transition: opacity 1.75s ease, transform 1.75s ease, visibility 0.5s linear 1.75s;
+  }
+  .fade-in.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+  :global(.reveal-on-scroll) {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  :global(.reveal-on-scroll.is-visible) {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── Term section / shell (matches Western Wall Art term-shell) ── */
+  .dw-term-section {
+    max-width: 1180px;
+    margin: 0 auto 1.4rem;
+    padding: 0 1rem;
+  }
+  .dw-term-shell {
+    padding: 1.35rem 1.4rem;
+    background: rgba(255, 252, 247, 0.9);
+    border: 1px solid rgba(121, 98, 78, 0.18);
+    border-radius: 18px;
+    box-shadow: 0 18px 40px rgba(52, 38, 26, 0.07);
+    backdrop-filter: blur(3px);
+  }
+  .dw-term-body {
+    margin: 0 0 0.9rem;
+    font-size: 0.97rem;
+    line-height: 1.68;
+    color: #40352e;
+  }
+  .dw-term-body:last-child {
+    margin-bottom: 0;
+  }
+
+  /* ── Hero image strip inside term shell ── */
+  .dw-hero-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+  .dw-hero-strip__tile {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background: rgba(255,255,255,0.96);
+    border: 1px solid rgba(121, 98, 78, 0.15);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 18px rgba(41, 30, 21, 0.05);
+    transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+  }
+  .dw-hero-strip__tile:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 28px rgba(41, 30, 21, 0.1);
+    border-color: rgba(121, 98, 78, 0.26);
+  }
+  .dw-hero-strip__img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    background: #efe7dc;
+  }
+  .dw-hero-strip__title {
+    display: block;
+    padding: 0.5rem 0.55rem 0.55rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    line-height: 1.32;
+    color: #4b3f36;
+    text-align: center;
+  }
+
+  /* ── Story sections — multi-block narrative (matches Western Wall Art story blocks) ── */
+  .dw-story-section {
+    max-width: 1180px;
+    margin: 0 auto 1.4rem;
+    padding: 0 1rem;
+  }
+  .dw-story-block {
+    padding: 1.35rem 1.4rem;
+    background: rgba(255, 252, 247, 0.9);
+    border: 1px solid rgba(121, 98, 78, 0.18);
+    border-radius: 18px;
+    box-shadow: 0 18px 40px rgba(52, 38, 26, 0.07);
+    backdrop-filter: blur(3px);
+    margin-bottom: 1rem;
+  }
+  .dw-story-block:last-child {
+    margin-bottom: 0;
+  }
+  .dw-story-subhead {
+    font-size: 1.35rem;
+    line-height: 1.25;
+    margin: 0 0 0.8rem;
+    color: #3a2e25;
+    font-weight: 700;
+  }
+  .dw-story-body {
+    margin: 0 0 0.9rem;
+    font-size: 0.97rem;
+    line-height: 1.68;
+    color: #40352e;
+  }
+  .dw-story-body:last-child {
+    margin-bottom: 0;
+  }
+  :global(.dw-story-body a) {
+    color: #8b5a2b;
+    text-decoration: underline;
+  }
+  :global(.dw-story-body a:hover) {
+    color: #5a3518;
+  }
+
+  /* ── Collection / image grid (matches Western Wall Art wallart-grid) ── */
+  .dw-collection-section {
+    max-width: 1180px;
+    margin: 0 auto 1.4rem;
+    padding: 0 1rem;
+  }
+  .dw-collection-shell {
+    background: rgba(255, 252, 247, 0.9);
+    border: 1px solid rgba(121, 98, 78, 0.18);
+    border-radius: 18px;
+    padding: 1.35rem 1.4rem;
+    box-shadow: 0 18px 40px rgba(52, 38, 26, 0.07);
+    backdrop-filter: blur(3px);
+  }
+  .dw-collection-kicker {
+    margin: 0 0 0.45rem;
+    text-align: center;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: #5f3f27;
+  }
+  .dw-collection-title {
+    margin: 0 0 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.9rem;
+    width: min(1080px, calc(100vw - 5rem));
+    max-width: none;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    line-height: 1.2;
+    color: #7c6250;
+    text-align: center;
+  }
+  .dw-collection-title::before,
+  .dw-collection-title::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(121, 98, 78, 0.08), rgba(121, 98, 78, 0.35));
+  }
+  .dw-collection-title::after {
+    background: linear-gradient(90deg, rgba(121, 98, 78, 0.35), rgba(121, 98, 78, 0.08));
+  }
+  .dw-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.95rem;
+  }
+  .dw-grid__tile {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+    min-width: 0;
+    background: rgba(255,255,255,0.96);
+    border: 1px solid rgba(121, 98, 78, 0.15);
+    border-radius: 18px;
+    padding: 0.55rem 0.55rem 0.75rem;
+    box-shadow: 0 8px 18px rgba(41, 30, 21, 0.05);
+    transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+  }
+  .dw-grid__tile:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 28px rgba(41, 30, 21, 0.1);
+    border-color: rgba(121, 98, 78, 0.26);
+  }
+  .dw-grid__img-wrap {
+    position: relative;
+    overflow: hidden;
+    border-radius: 14px;
+    width: 100%;
+    padding-bottom: 125%;
+    background: #efe7dc;
+    border: 1px solid rgba(121, 98, 78, 0.12);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    transition: box-shadow 0.3s ease;
+  }
+  .dw-grid__tile:hover .dw-grid__img-wrap {
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  }
+  .dw-grid__img {
+    position: absolute;
+    inset: 0;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    object-fit: cover;
+    object-position: center;
+    background: #efe7dc;
+    transition: transform 0.6s ease;
+    display: block;
+    filter: saturate(0.94);
+  }
+  .dw-grid__tile:hover .dw-grid__img {
+    transform: scale(1.035);
+    filter: saturate(1);
+  }
+  .dw-grid__hover {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.35);
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    font-family: 'Glegoo', serif;
+    letter-spacing: 0.04em;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+  .dw-grid__tile:hover .dw-grid__hover {
+    opacity: 1;
+  }
+  .dw-grid__title {
+    font-size: 0.79rem;
+    font-weight: 700;
+    color: #2e241d;
+    margin: 0.65rem 0 0;
+    text-align: center;
+    line-height: 1.3;
+    height: 1.3em;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: 'Glegoo', serif;
+    letter-spacing: 0.01em;
+  }
+  .dw-collection-footer {
+    text-align: center;
+    margin-top: 1.1rem;
+  }
+  .dw-collection-index-link {
+    font-size: 0.88rem;
+    color: #7b4a28;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .dw-collection-index-link:hover {
+    color: #5a3518;
+  }
+
+  /* ── FAQ section (matches Western Wall Art faq-shell) ── */
+  .dw-faq-section {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 1rem 1.2rem;
+  }
+  .dw-faq-shell {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 18px;
+    padding: 1.25rem 1.2rem 1.5rem;
+  }
+  .dw-faq-kicker {
+    margin: 0 0 0.45rem;
+    text-align: center;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: #5f3f27;
+  }
+  .dw-faq-title {
+    margin: 0 0 0.95rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.9rem;
+    width: min(1080px, calc(100vw - 5rem));
+    max-width: none;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    line-height: 1.2;
+    color: #7c6250;
+    text-align: center;
+  }
+  .dw-faq-title::before,
+  .dw-faq-title::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(121, 98, 78, 0.08), rgba(121, 98, 78, 0.35));
+  }
+  .dw-faq-title::after {
+    background: linear-gradient(90deg, rgba(121, 98, 78, 0.35), rgba(121, 98, 78, 0.08));
+  }
+  .dw-faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .dw-faq-question {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.8rem;
+    border: 1px solid rgba(121, 98, 78, 0.14);
+    background: rgba(255, 255, 255, 0.82);
+    border-radius: 12px;
+    padding: 0.92rem 0.98rem;
+    text-align: left;
+    color: #31271f;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    font-family: inherit;
+    transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+    cursor: pointer;
+  }
+  .dw-faq-question:hover {
+    border-color: rgba(121, 98, 78, 0.28);
+    background: rgba(252, 248, 242, 0.96);
+    transform: translateY(-1px);
+  }
+  .dw-faq-question[aria-expanded="true"] {
+    border-color: rgba(123, 74, 40, 0.34);
+    background: rgba(255, 255, 255, 0.96);
+  }
+  .dw-faq-question__text {
+    flex: 1;
+  }
+  .dw-faq-question__icon {
+    font-size: 1.15rem;
+    line-height: 1;
+    color: #7b4a28;
+    min-width: 1rem;
+    text-align: center;
+  }
+  .dw-faq-answer-stack {
+    display: none;
+  }
+  .dw-faq-answer {
+    border: 1px solid rgba(121, 98, 78, 0.14);
+    background: linear-gradient(180deg, rgba(255,255,255,0.94), rgba(249,245,239,0.96));
+    border-radius: 14px;
+    padding: 1rem 1rem 0.2rem;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.5);
+    max-width: 760px;
+    margin: 0.5rem auto 0;
+  }
+  .dw-faq-answer.is-open {
+    animation: dwFaqFadeIn 0.2s ease;
+  }
+  .dw-faq-answer p {
+    margin: 0 0 0.85rem;
+    font-size: 0.97rem;
+    line-height: 1.68;
+    color: #433830;
+  }
+  :global(.dw-faq-answer a) {
+    color: #8b5a2b;
+    text-decoration: underline;
+  }
+  :global(.dw-faq-answer a:hover) {
+    color: #5a3518;
+  }
+  @keyframes dwFaqFadeIn {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── Exploration section / CTA cards (matches Western Wall Art) ── */
+  .dw-exploration-section {
+    max-width: 1180px;
+    margin: 0 auto 1.25rem;
+    padding: 0 1rem;
+  }
+  .dw-exploration-shell {
+    background: rgba(255, 252, 247, 0.92);
+    border: 1px solid rgba(121, 98, 78, 0.18);
+    border-radius: 18px;
+    padding: 1.35rem;
+    box-shadow: 0 20px 24px rgba(53, 40, 28, 0.07);
+    backdrop-filter: blur(3px);
+  }
+  .dw-exploration-intro {
+    max-width: none;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.9rem;
+    text-align: center;
+    font-size: 1.12rem;
+    line-height: 1.4;
+    color: #2f251e;
+    font-weight: 700;
+  }
+  .dw-exploration-intro::before,
+  .dw-exploration-intro::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(121, 98, 78, 0.08), rgba(121, 98, 78, 0.35));
+  }
+  .dw-exploration-intro::after {
+    background: linear-gradient(90deg, rgba(121, 98, 78, 0.35), rgba(121, 98, 78, 0.08));
+  }
+  .dw-exploration-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    align-items: stretch;
+  }
+  .dw-exploration-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100px;
+    padding: 1.25rem 1.2rem;
+    border-radius: 14px;
+    text-decoration: none;
+    background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(250,247,242,0.96));
+    border: 1px solid rgba(109, 91, 74, 0.16);
+    box-shadow: 0 10px 24px rgba(46, 35, 26, 0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  }
+  .dw-exploration-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 30px rgba(46, 35, 26, 0.1);
+    border-color: rgba(109, 91, 74, 0.34);
+  }
+  .dw-exploration-card--featured {
+    grid-column: 1 / -1;
+    min-height: 140px;
+    padding: 1.45rem 1.35rem 1.2rem;
+    background: linear-gradient(180deg, rgba(252,246,239,0.98), rgba(255,252,248,0.99));
+    border: 2px solid rgba(123, 74, 40, 0.32);
+    box-shadow: 0 18px 36px rgba(71, 42, 22, 0.11);
+  }
+  .dw-exploration-card__title {
+    margin: 0 0 0.4rem;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    color: #241b15;
+  }
+  .dw-exploration-card--featured .dw-exploration-card__title {
+    font-size: 1.55rem;
+  }
+  .dw-exploration-card__body {
+    margin: 0;
+    font-size: 0.96rem;
+    line-height: 1.6;
+    color: #463b34;
+  }
+  .dw-exploration-card__cta {
+    margin-top: 0.75rem;
+    font-size: 0.84rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #db2100;
+    border-bottom: 1px solid rgba(180, 74, 22, 0.38);
+    padding-bottom: 0.08rem;
+  }
+  .dw-exploration-card--featured:hover .dw-exploration-card__cta {
+    color: #3057a0;
+  }
+
+  /* ── Mobile ── */
+  @media (max-width: 768px) {
+    .dw-section-heading-wrap {
+      margin: 0.5rem 0 1.5rem;
+    }
+    .dw-section-heading .dw-page-title {
+      font-size: 1.5rem;
+      line-height: 1.3;
+    }
+    .dw-section-heading .dw-page-subtitle {
+      max-width: 42ch;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+    .dw-term-shell {
+      padding: 1rem;
+    }
+    .dw-hero-strip {
+      grid-template-columns: 1fr;
+    }
+    .dw-hero-strip__img {
+      aspect-ratio: 16 / 10;
+    }
+    .dw-story-section {
+      padding: 0 0.8rem;
+    }
+    .dw-story-block {
+      padding: 1rem;
+    }
+    .dw-story-subhead {
+      font-size: 1.15rem;
+    }
+    .dw-collection-section {
+      padding: 0 0.8rem;
+    }
+    .dw-collection-shell {
+      padding: 1rem;
+    }
+    .dw-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.5rem;
+    }
+    .dw-grid__title {
+      font-size: 0.72rem;
+    }
+    .dw-faq-shell {
+      padding: 1rem 0.9rem;
+    }
+    .dw-faq-title {
+      font-size: 1.2rem;
+    }
+    .dw-exploration-section {
+      padding: 0 0.8rem;
+    }
+    .dw-exploration-shell {
+      padding: 1rem;
+    }
+    .dw-exploration-grid {
+      grid-template-columns: 1fr;
+    }
+    .dw-exploration-card--featured {
+      grid-column: auto;
+    }
+    .dw-exploration-card__title {
+      font-size: 1.1rem;
+    }
+    .dw-exploration-card--featured .dw-exploration-card__title {
+      font-size: 1.25rem;
+    }
+  }
+
+  @media (max-width: 1100px) {
+    .dw-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+</style>

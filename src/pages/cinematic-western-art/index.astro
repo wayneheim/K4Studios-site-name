@@ -1,0 +1,196 @@
+---
+export const prerender = true;
+
+import KeywordLandingPage from '@/components/doorway/KeywordLandingPage.astro';
+
+import { galleryData as westernNarrativesColorGallery } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs';
+import { slides as wildWestSlides } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/carousel';
+
+import { storySections as cinematicStorySections, deepFaqItems as cinematicDeepFaqItems } from '@/data/doorway/cinematic-western-art';
+
+const pagePath = '/cinematic-western-art';
+const imageSectionPath = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color';
+const gridBasePath = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color';
+
+const landing = {
+  title: 'Cinematic Western Art',
+  subtitle: 'Cinematic Western art where painterly light, withheld story, and frontier pressure make a still frame keep moving.',
+  keywords: [
+    'cinematic western art',
+    'cinematic western photography',
+    'western art that feels cinematic',
+    'western storytelling photography',
+    'narrative western art',
+    'painterly western photography',
+    'one-image movie',
+    'western fine art photography',
+  ],
+  breadcrumb: `
+    <a
+      href="/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier"
+      style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;"
+      onmouseover="this.style.color='darkred'"
+      onmouseout="this.style.color='inherit'"
+    >Facing History</a>
+    |
+    <a
+      href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West"
+      style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;"
+      onmouseover="this.style.color='darkred'"
+      onmouseout="this.style.color='inherit'"
+    >Wild West</a>
+    | Cinematic Western Art
+  `,
+};
+
+const storyBlocks = [
+  {
+    title: 'Cinematic Western Art',
+    subhead: cinematicStorySections[0]?.subhead,
+    paragraphs: [
+      `Cinematic Western art is a form of narrative visual art that uses composition, light, and restraint to create the feeling of a larger story within a single frame. Rather than showing action, it implies it, allowing tension, atmosphere, and what is withheld to carry the scene.`,
+      `The moment does not resolve. Something has already happened. Something else is coming. You feel both, even in stillness.`,
+      `In Wayne Heim's Western work, that pressure is built through directional light, compositional tension, and the space between figure and environment. The image lands like a scene already in motion.`,
+      `This is the difference between cinematic styling and cinematic structure. The picture is complete, but it does not close.`,
+    ],
+  },
+  {
+    ...cinematicStorySections[1],
+    paragraphs: [
+      `In cinematic Western art, light does more than reveal form. It directs attention and defines where the story lives.`,
+      `A shoulder catches it. A face falls out of it. The ground behind the figure holds just enough information to suggest what surrounds them without explaining it.`,
+      `This painterly control is where the cinematic feeling begins. It shapes mood, creates tension, and leaves part of the story outside the frame.`,
+      `What is not shown becomes as important as what is.`,
+    ],
+  },
+  {
+    ...cinematicStorySections[2],
+    paragraphs: [
+      `Cinematic Western art is not built on action or display. It is built on restraint.`,
+      `The strongest images do not perform. They hold back, trusting distance, atmosphere, and implication to carry weight.`,
+      `A spectacle image spends itself quickly. A restrained image keeps opening.`,
+      `This approach places the work in line with a longer visual tradition, where composition, light, and narrative structure carry meaning beyond the immediate scene.`,
+      `That is what allows the image to remain active, even after the moment has passed.`,
+    ],
+  },
+];
+
+const faqItems = [
+  {
+    q: 'What is cinematic Western art?',
+    a: [
+      'Cinematic Western art is Western image-making that carries the emotional pressure of a larger scene inside a single frame. It works through implication, atmosphere, and consequence rather than overt explanation.',
+      'In Wayne Heim\'s work, cinematic force comes from painterly light, restraint, and the sense that the moment began before the viewer arrived.',
+    ],
+  },
+  ...cinematicDeepFaqItems.map((item) => ({ q: item.question, a: item.answers })),
+  {
+    q: 'Where should I start in the work?',
+    a: [
+      'Start with the Wild West images that feel suspended between decisions. If the frame keeps opening after the first look, the cinematic structure is doing its work.',
+      'From there, move into the <a href="/western-storytelling-photography">Western Storytelling Photography</a> page and the <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West">Wild West collection</a> itself.',
+    ],
+  },
+];
+
+const explorationPaths = [
+  {
+    title: 'Painterly Photography',
+    eyebrow: 'Supporting Concept',
+    hideEyebrow: true,
+    href: '/Blog/what-is-painterly-photography',
+    description: 'Follow the painterly side of the work, where tone, edge, and atmosphere do more than simply describe the subject.',
+    cta: 'Learn more -',
+    accent: '#6d5b4a',
+  },
+  {
+    title: 'Cinematic Western Art',
+    eyebrow: 'The Wild West - Reimagined',
+    href: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West',
+    description: 'Enter the Wild West landing page where cinematic Western art is carried by implication, atmosphere, and human pressure under the myth.',
+    cta: '- Explore cinematic Western art -',
+    accent: '#7b4a28',
+    featured: true,
+  },
+  {
+    title: 'Western Cowboy Portraits',
+    eyebrow: 'Companion Collection',
+    hideEyebrow: true,
+    href: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits',
+    description: 'Move into Western Cowboy Portraits where character, painterly light, and historical pressure bring the figure forward without losing atmosphere.',
+    cta: 'Explore the portraits -',
+    accent: '#4d4037',
+  },
+];
+
+const featuredReadingItems = [
+  {
+    title: 'What Makes an Image Feel Cinematic?',
+    href: '/Blog/what-makes-an-image-feel-cinematic',
+    description: 'See why cinematic force comes from implication, pacing, and restraint rather than surface treatment alone.',
+    eyebrow: 'Guide',
+  },
+  {
+    title: 'What Is Narrative Photography?',
+    href: '/Blog/what-is-narrative-photography',
+    description: 'Follow the narrative structure beneath the frame and see how a still image can carry a larger unseen chapter.',
+    eyebrow: 'Guide',
+  },
+  {
+    title: 'What Is Visual Storytelling?',
+    href: '/Blog/what-is-visual-storytelling-in-photography',
+    description: 'Look at how motive, tension, and consequence can be felt without the picture ever spelling the story out.',
+    eyebrow: 'Guide',
+  },
+  {
+    title: 'When the Medium Disappears',
+    href: '/Blog/when-the-medium-disappears',
+    description: 'See what happens when form, subject, and atmosphere disappear into a single felt moment instead of a visible photograph.',
+    eyebrow: 'Essay',
+  },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', item: 'https://www.k4studios.com/' },
+  { name: 'Facing History', item: 'https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History' },
+  { name: 'Wild West', item: 'https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West' },
+  { name: 'Cinematic Western Art', item: `https://www.k4studios.com${pagePath}` },
+];
+
+const meta = {
+  title: 'Cinematic Western Art | K4 Studios',
+  description: 'Cinematic Western art by Wayne Heim where painterly light, implication, and frontier pressure give a still image the force of a larger scene.',
+  ogDescription: 'Cinematic Western art where painterly light, withheld story, and frontier pressure make a still frame keep moving.',
+};
+---
+
+<KeywordLandingPage
+  pagePath={pagePath}
+  imageSectionPath={imageSectionPath}
+  gridBasePath={gridBasePath}
+  landing={landing}
+  breadcrumbItems={breadcrumbItems}
+  storyBlocks={storyBlocks}
+  faqItems={faqItems}
+  explorationIntro="Explore Cinematic Western Art"
+  explorationPaths={explorationPaths}
+  featuredReadingTitle="Exploring Atmosphere, Story and Tension"
+  featuredReadingIntro="Follow the ideas behind the frame a little further. These pieces move through cinematic structure, story pressure, and the visual logic that keeps a still image feeling active." 
+  featuredReadingItems={featuredReadingItems}
+  collection={{
+    kicker: 'Selected Works',
+    title: 'Selected Cinematic Western Art',
+    intro: 'Twelve images where atmosphere, implication, and withheld story carry the scene.',
+  }}
+  faqSection={{
+    kicker: 'Collector Questions',
+    title: 'Cinematic Western Art FAQ',
+  }}
+  galleryData={westernNarrativesColorGallery}
+  slides={wildWestSlides}
+  meta={meta}
+  structuredAbout={['Cinematic Western Art', 'Western Storytelling Photography', 'Painterly Western Photography', 'One-Image Movie']}
+  webPageAbout={['Cinematic Western Art', 'Narrative Western Art', 'One-Image Movie']}
+  genre="Cinematic Western Art"
+  collectionAltPrefix="Cinematic Western art"
+/>

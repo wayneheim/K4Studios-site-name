@@ -143,6 +143,11 @@ export const subCategories = {
       description: "Painterly cowboy and frontier character studies offered as collectible color Western photography prints.",
     },
     {
+      title: "Cowboy Art Prints Guide",
+      href: "/cowboy-art-prints",
+      description: "Collector-focused overview of what separates authored cowboy art prints from generic Western decor prints.",
+    },
+    {
       title: "Black and White Western Photography Prints",
       href: bwPath,
       description: "Cinematic monochrome cowboy portraits and frontier scenes with tonal depth and museum-quality print presence.",

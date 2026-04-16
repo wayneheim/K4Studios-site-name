@@ -1,7 +1,7 @@
 // Generates src/data/sitemap.ts by scanning local Astro pages AND their connected gallery data files
 // Usage: node scripts/generate-sitemap-data.mjs
 
-import { writeFile, mkdir, readdir, stat } from 'node:fs/promises';
+import { writeFile, mkdir, readdir, stat, readFile } from 'node:fs/promises';
 import { execSync } from 'node:child_process';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
@@ -13,6 +13,7 @@ const SITE_URL = 'https://www.k4studios.com';
 const PAGES_DIR = path.resolve(__dirname, '..', 'src', 'pages');
 const REPO_ROOT = path.resolve(__dirname, '..');
 const MASTER_GALLERY_DATA_FILE = path.resolve(__dirname, '..', 'src', 'data', 'galleryMaps', 'MasterGalleryData.mjs');
+const DOORWAY_REGISTRY_FILE = path.resolve(__dirname, '..', 'src', 'data', 'doorway', 'doorwayPages.ts');
 
 const GHOST_IMAGE_ID = 'i-k4studios';
 const IMAGE_ID_REGEX = /^i-[A-Za-z0-9]+$/;
@@ -204,6 +205,43 @@ async function loadDynamicRoutes() {
   return entries;
 }
 
+async function loadActiveDoorwayRoutes() {
+  const entries = [];
+
+  try {
+    const source = await readFile(DOORWAY_REGISTRY_FILE, 'utf8');
+    const fileStats = await stat(DOORWAY_REGISTRY_FILE);
+    const lastmod = getStableLastmodIso(DOORWAY_REGISTRY_FILE, fileStats.mtime.toISOString());
+
+    // Match entries where `active: true` and capture the corresponding slug.
+    const activeSlugRegex = /active:\s*true[\s\S]{0,160}?slug:\s*['\"]([^'\"]+)['\"]/g;
+    const slugs = new Set();
+    let match;
+
+    while ((match = activeSlugRegex.exec(source)) !== null) {
+      const slug = String(match[1] || '').trim();
+      if (slug) slugs.add(slug);
+    }
+
+    for (const slug of slugs) {
+      const urlPath = `/${slug}`;
+      entries.push({
+        loc: SITE_URL + urlPath,
+        lastmod,
+        changefreq: 'monthly',
+        priority: getPriority(urlPath),
+      });
+    }
+
+    console.log(`Generated ${entries.length} active doorway route entries`);
+  } catch (err) {
+    console.error('Error loading active doorway routes:', err.message);
+    console.error(err.stack);
+  }
+
+  return entries;
+}
+
 async function main() {
   console.log('Scanning pages directory:', PAGES_DIR);
   
@@ -213,12 +251,16 @@ async function main() {
   
   // Get dynamic route entries from MasterGalleryData
   const dynamicEntries = await loadDynamicRoutes();
+
+  // Get active doorway pages from the doorway registry
+  const doorwayEntries = await loadActiveDoorwayRoutes();
   
   // Combine and deduplicate
-  const allEntries = [...staticEntries, ...dynamicEntries];
+  const allEntries = [...staticEntries, ...dynamicEntries, ...doorwayEntries];
+  const dedupedEntries = Array.from(new Map(allEntries.map((entry) => [entry.loc, entry])).values());
   
   // Sort for stable output (by URL)
-  allEntries.sort((a, b) => a.loc.localeCompare(b.loc));
+  dedupedEntries.sort((a, b) => a.loc.localeCompare(b.loc));
   
   const outDir = path.resolve(__dirname, '..', 'src', 'data');
   await mkdir(outDir, { recursive: true });
@@ -236,13 +278,14 @@ export type SitemapEntry = {
   priority?: number;
 };
 
-export const sitemap: SitemapEntry[] = ${JSON.stringify(allEntries, null, 2)};
+export const sitemap: SitemapEntry[] = ${JSON.stringify(dedupedEntries, null, 2)};
 `;
 
   await writeFile(outFile, content, 'utf8');
-  console.log(`Wrote ${allEntries.length} entries to ${path.relative(path.resolve(__dirname, '..'), outFile)}`);
+  console.log(`Wrote ${dedupedEntries.length} entries to ${path.relative(path.resolve(__dirname, '..'), outFile)}`);
   console.log(`  - ${staticEntries.length} static pages`);
   console.log(`  - ${dynamicEntries.length} dynamic gallery pages`);
+  console.log(`  - ${doorwayEntries.length} active doorway pages`);
 
   // Also emit a static public/sitemap.xml so `/sitemap.xml` works even when deploying
   // prebuilt artifacts without SSR/function bundles.
@@ -253,7 +296,7 @@ export const sitemap: SitemapEntry[] = ${JSON.stringify(allEntries, null, 2)};
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&apos;');
 
-  const urlsXml = allEntries.map((entry) => {
+  const urlsXml = dedupedEntries.map((entry) => {
     const loc = `<loc>${xmlEscape(entry.loc)}</loc>`;
     const lastmod = entry.lastmod ? `<lastmod>${xmlEscape(entry.lastmod)}</lastmod>` : '';
     const changefreq = entry.changefreq ? `<changefreq>${xmlEscape(entry.changefreq)}</changefreq>` : '';
@@ -273,7 +316,7 @@ export const sitemap: SitemapEntry[] = ${JSON.stringify(allEntries, null, 2)};
 
   // ── Blog sitemap ──────────────────────────────────────────────────────
   const BLOG_PATH_RE = /^https?:\/\/www\.k4studios\.com\/Blog(?:$|\/)/i;
-  const blogEntries = allEntries.filter((e) => BLOG_PATH_RE.test(String(e.loc || '')));
+  const blogEntries = dedupedEntries.filter((e) => BLOG_PATH_RE.test(String(e.loc || '')));
 
   const blogUrlsXml = blogEntries.map((entry) => {
     const loc = `<loc>${xmlEscape(entry.loc)}</loc>`;

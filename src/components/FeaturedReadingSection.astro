@@ -1,0 +1,177 @@
+---
+interface FeaturedReadingItem {
+  title: string;
+  href: string;
+  description: string;
+  eyebrow?: string;
+}
+
+interface Props {
+  title?: string;
+  intro?: string;
+  items: FeaturedReadingItem[];
+}
+
+const {
+  title = 'Explore the Ideas',
+  intro = '',
+  items = [],
+} = Astro.props as Props;
+
+const cleanedItems = (items || []).filter((item) => item?.title?.trim() && item?.href?.trim() && item?.description?.trim()).slice(0, 4);
+---
+
+{cleanedItems.length > 0 && (
+  <section class="featured-reading-section">
+    <div class="featured-reading-shell reveal-on-scroll">
+      <p class="featured-reading-kicker"></p>
+      <h2 class="featured-reading-title">{title}</h2>
+      {intro && <p class="featured-reading-intro">{intro}</p>}
+
+      <div class="featured-reading-grid">
+        {cleanedItems.map((item) => (
+          <a href={item.href} class="featured-reading-card">
+            {item.eyebrow && <span class="featured-reading-card__eyebrow">{item.eyebrow}</span>}
+            <h3 class="featured-reading-card__title">{item.title}</h3>
+            <p class="featured-reading-card__body">{item.description}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+)}
+
+<style>
+  .featured-reading-section {
+    max-width: 1180px;
+    margin: 0 auto 1.35rem;
+    padding: 0 1rem;
+  }
+  .featured-reading-shell {
+    background: rgba(172, 161, 140, 0.15);
+    border: 2px solid rgba(118, 99, 83, 0.2);
+    border-radius: 18px;
+    position: relative;
+    padding: 1.3rem 1.2rem 1.35rem;
+    box-shadow: 0 6px 24px rgba(52, 38, 26, 0.12);
+  }
+  .featured-reading-shell::after {
+    content: "";
+    position: absolute;
+    inset: 5px;
+    border: 1px solid rgba(118, 99, 83, 0.14);
+    border-radius: 12px;
+    pointer-events: none;
+  }
+  .featured-reading-kicker {
+    margin: 0 0 0.45rem;
+    text-align: center;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: #74533c;
+  }
+  .featured-reading-title {
+    margin: 0 0 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.9rem;
+    width: min(1080px, calc(100vw - 5rem));
+    max-width: none;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    line-height: 1.2;
+    color: #342820;
+    text-align: center;
+  }
+  .featured-reading-title::before,
+  .featured-reading-title::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+     background: rgba(107, 87, 72, 0.22);
+  }
+  .featured-reading-title::after {
+    background: rgba(107, 87, 72, 0.22);
+  }
+  .featured-reading-intro {
+    margin: 0 auto 1rem;
+    max-width: 42rem;
+    text-align: center;
+    font-size: 0.98rem;
+    line-height: 1.62;
+    color: #4a3d33;
+  }
+  .featured-reading-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.95rem;
+  }
+  .featured-reading-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background:  rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(96, 79, 64, 0.2);
+    border-radius: 10px;
+    padding: 1rem 1rem 0.95rem;
+    box-shadow: 0 2px 2px rgba(41, 30, 21, 0.06);
+    transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+  }
+  .featured-reading-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 22px rgba(41, 30, 21, 0.1);
+    border-color: rgba(96, 79, 64, 0.28);
+  }
+  .featured-reading-card__eyebrow {
+    display: inline-block;
+    margin: 0 0 0.55rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #74533c;
+  }
+  .featured-reading-card__title {
+    margin: 0 0 0.45rem;
+    font-size: 1.08rem;
+    line-height: 1.28;
+    color: #2c211a;
+  }
+  .featured-reading-card__body {
+    margin: 0;
+    font-size: 0.94rem;
+    line-height: 1.58;
+    color: #4a3d33;
+  }
+
+  @media (max-width: 768px) {
+    .featured-reading-section {
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+    }
+    .featured-reading-shell {
+      padding: 1rem 0.9rem 1.05rem;
+    }
+    .featured-reading-title {
+      font-size: 1.28rem;
+      width: min(100%, calc(100vw - 3rem));
+      gap: 0.6rem;
+    }
+    .featured-reading-intro {
+      font-size: 0.94rem;
+      line-height: 1.55;
+    }
+    .featured-reading-grid {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+    }
+    .featured-reading-card {
+      padding: 0.9rem 0.9rem 0.85rem;
+    }
+  }
+</style>

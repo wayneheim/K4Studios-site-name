@@ -1,0 +1,166 @@
+---
+export const prerender = true;
+
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import LandingHeader from '@/components/Landing-Header.jsx';
+import ImageBar2 from '@/components/ImageBar2.jsx';
+import SiteFooter from '@/components/Footer.astro';
+import UniversalDoorwayPageTemplate from '@/components/doorway/UniversalDoorwayPageTemplate.astro';
+import { slides as doorwayCarouselSlides } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/carousel';
+import {
+  activeDoorwayPages,
+  WILD_WEST_HUB_PATH,
+  type DoorwayPage,
+} from '@/data/doorway/doorwayPages';
+import '@/styles/global.css';
+import '@/styles/oneupheader.css';
+
+export function getStaticPaths() {
+  return activeDoorwayPages.map((page) => ({
+    params: { slug: page.slug },
+    props: { page },
+  }));
+}
+
+const { page } = Astro.props as { page: DoorwayPage };
+
+const pageTitle = page.metaTitle || page.h1;
+const canonicalUrl = `/${page.slug}`;
+
+const escapeHtml = (value: string) => value
+  .replaceAll('&', '&amp;')
+  .replaceAll('<', '&lt;')
+  .replaceAll('>', '&gt;')
+  .replaceAll('"', '&quot;')
+  .replaceAll("'", '&#39;');
+
+const breadcrumb = `<a class="breadcrumb-link" href="/">Home</a> / <span class="breadcrumb-current">${escapeHtml(page.h1)}</span>`;
+
+// Build FAQ structured data from deep FAQ items (or fallback to legacy)
+const faqSchemaItems = (page.deepFaqItems || []).length > 0
+  ? (page.deepFaqItems || []).map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answers.join(' '),
+      },
+    }))
+  : (page.faqItems || []).map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer,
+      },
+    }));
+
+const faqSchema = faqSchemaItems.length > 0
+  ? JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqSchemaItems,
+    })
+  : null;
+
+const webPageSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: pageTitle,
+  description: page.metaDescription,
+  url: `https://www.k4studios.com${canonicalUrl}`,
+  breadcrumb: {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.k4studios.com/' },
+      { '@type': 'ListItem', position: 2, name: page.h1, item: `https://www.k4studios.com${canonicalUrl}` },
+    ],
+  },
+});
+---
+
+<BaseLayout
+  title={pageTitle}
+  meta={{
+    title: pageTitle,
+    description: page.metaDescription,
+    canonicalUrl,
+    ogTitle: pageTitle,
+    ogDescription: page.metaDescription,
+    ogUrl: canonicalUrl,
+  }}
+>
+  {faqSchema && <script type="application/ld+json" set:html={faqSchema} slot="head" />}
+  <script type="application/ld+json" set:html={webPageSchema} slot="head" />
+
+  <main class="doorway-page-shell">
+    <div class="drawer-mode">
+      <LandingHeader client:load breadcrumb={breadcrumb} />
+    </div>
+
+    <div class="mobile-breadcrumb-wrapper">
+      <div class="mobile-breadcrumb" set:html={breadcrumb} />
+    </div>
+
+    <div class="w-full max-w-[1200px] mx-auto px-4">
+      <ImageBar2 client:load slides={doorwayCarouselSlides} />
+    </div>
+
+    <UniversalDoorwayPageTemplate
+      keywordHeading={page.h1}
+      introParagraph={page.introParagraph}
+      expansionParagraphs={page.expansionParagraphs}
+      faqItems={page.faqItems}
+      primaryCtaText={page.primaryCtaText}
+      secondaryLinks={page.secondaryLinks}
+      heroImages={page.heroImages}
+      wildWestHubPath={WILD_WEST_HUB_PATH}
+      storySections={page.storySections}
+      deepFaqItems={page.deepFaqItems}
+      gridImages={page.gridImages}
+    />
+
+    <SiteFooter class="pt-8 pb-12" />
+  </main>
+</BaseLayout>
+
+<style>
+  .doorway-page-shell,
+  .doorway-page-shell :global(*) {
+    font-family: 'Glegoo', serif !important;
+  }
+  .doorway-page-shell {
+    background: #ffffff;
+    color: #2c2c2c;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  .mobile-breadcrumb-wrapper {
+    display: none;
+    max-width: 1200px;
+    margin: 0 auto 0.35rem;
+    padding: 0 1rem;
+  }
+
+  .mobile-breadcrumb {
+    color: #5f4d40;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  :global(.mobile-breadcrumb a) {
+    color: #7d4f2f;
+    text-decoration: none;
+  }
+
+  :global(.mobile-breadcrumb a:hover) {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 1024px) {
+    .mobile-breadcrumb-wrapper {
+      display: block;
+    }
+  }
+</style>

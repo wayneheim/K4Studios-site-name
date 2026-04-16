@@ -1,0 +1,244 @@
+---
+export const prerender = true;
+
+import KeywordLandingPage from '@/components/doorway/KeywordLandingPage.astro';
+
+import { galleryData as westernCowboyPortraitsColorGallery } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs';
+import { galleryData as westernCowboyPortraitsBlackWhiteGallery } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs';
+import { galleryData as westernNarrativesColorGallery } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs';
+import { slides as westernCowboyPortraitSlides } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/carousel';
+
+import { storySections as cowboyStorySections, deepFaqItems as cowboyDeepFaqItems } from '@/data/doorway/cowboy-art-prints';
+
+const pagePath = '/cowboy-art-prints';
+const imageSectionPath = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color';
+const gridBasePath = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color';
+const westernNarrativesGridBasePath = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color';
+
+const landing = {
+  title: 'Cowboy Art Prints',
+  subtitle: 'Cowboy art prints where painterly light, frontier character, and narrative pressure keep the work alive on the wall.',
+  keywords: [
+    'cowboy art prints',
+    'western cowboy art prints',
+    'cowboy photography prints',
+    'western fine art prints',
+    'western cowboy photography',
+    'cowboy wall art prints',
+    'collector cowboy prints',
+    'western art prints',
+  ],
+  breadcrumb: `
+    <a
+      href="/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier"
+      style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;"
+      onmouseover="this.style.color='darkred'"
+      onmouseout="this.style.color='inherit'"
+    >Facing History</a>
+    |
+    <a
+      href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits"
+      style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;"
+      onmouseover="this.style.color='darkred'"
+      onmouseout="this.style.color='inherit'"
+    >Western Cowboy Portraits</a>
+    | Cowboy Art Prints
+  `,
+};
+
+const storyBlocks = [
+  {
+    title: 'Cowboy Art Prints',
+    subhead: cowboyStorySections[0]?.subhead,
+    paragraphs: [
+      `Cowboy art prints are fine art photographic or painterly prints that depict Western subjects with an emphasis on narrative, atmosphere, and human presence rather than decoration alone. They are designed to hold attention over time, not simply fill space.`,
+      `A strong cowboy print does more than signal the West. It brings character, atmosphere, and enough narrative weight to stay active on the wall.`,
+      `In this work, the subject is never just costume or nostalgia. The frame is built around gesture, pressure, and the human structure beneath the mythology.`,
+      `That is what gives these prints their hold. They do not resolve quickly. They open slowly-and continue revealing themselves over time.`,
+    ],
+  },
+  {
+    ...cowboyStorySections[1],
+    paragraphs: [
+      `The real divide is not cowboy versus non-cowboy. It is decoration versus authorship.`,
+      `Decorative prints are designed to match a space. Fine art prints are built to hold presence within it.`,
+      `One fills a wall. The other stays active on it.`,
+      `In narrative Western photography, that difference comes from structure-how light, composition, and subject placement carry meaning beyond the surface image.`,
+      `That is where value shifts. Not in subject alone, but in what the image continues to ask of the viewer.`,
+    ],
+  },
+  {
+    ...cowboyStorySections[2],
+    paragraphs: [
+      `The strongest cowboy prints do not stop at likeness. They hold a moment between decisions, where something has already happened and something else is about to.`,
+      `In Wayne Heim's Western work, portraits are shaped through painterly light, cinematic framing, and historical grounding to give each figure consequence, not just presence.`,
+      `The image deepens not in iconography, but in pressure, where posture, distance, and atmosphere carry the story.`,
+      `That is what separates a figure from a character.`,
+    ],
+  },
+];
+
+const faqItems = [
+  {
+    q: 'What are cowboy art prints?',
+    a: [
+      'Cowboy art prints are Western fine art prints built around cowboy subjects, frontier atmosphere, and the visual pressure that keeps the image active after the first look.',
+      'In Wayne Heim\'s work, the point is not costume shorthand alone. The print has to hold as art, with light, gesture, and structure doing as much work as the subject itself.',
+    ],
+  },
+  ...cowboyDeepFaqItems.map((item) => ({ q: item.question, a: item.answers })),
+  {
+    q: 'Where should I start if I am choosing one?',
+    a: [
+      'Start with the image that keeps its hold after you recognize the subject. If the print still has pressure, atmosphere, and presence after the cowboy is named, it will likely live well in a room.',
+      'Then compare the work across the <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits">Western Cowboy Portraits</a> collection and the <a href="/Other/Print-Options">print options</a> page.',
+    ],
+  },
+];
+
+const explorationPaths = [
+  {
+    title: 'Western Photography Prints',
+    eyebrow: 'Supporting Guide',
+    hideEyebrow: true,
+    href: '/Western-Photography-Prints',
+    description: 'Step into the broader print guide where scale, presentation, and collecting logic shape how the work lives in a room.',
+    cta: 'See the print guide -',
+    accent: '#6d5b4a',
+  },
+  {
+    title: 'Cowboy Art Prints',
+    eyebrow: 'Primary Collection',
+    href: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits',
+    description: 'Move into the Western Cowboy Portraits collection where cowboy art prints are carried by painterly light, restraint, and character under pressure.',
+    cta: '- Explore cowboy art prints -',
+    accent: '#7b4a28',
+    featured: true,
+  },
+  {
+    title: 'Western Storytelling Photography',
+    eyebrow: 'Companion Guide',
+    hideEyebrow: true,
+    href: '/western-storytelling-photography',
+    description: 'Follow the narrative side of the work where consequence, atmosphere, and implication give a still image more than presence.',
+    cta: 'Continue into the story -',
+    accent: '#4d4037',
+  },
+];
+
+const featuredReadingItems = [
+  {
+    title: 'Print Options',
+    href: '/Other/Print-Options',
+    description: 'See how paper, canvas, metal, and presentation choices change the physical life of the image.',
+    eyebrow: 'Guide',
+  },
+  {
+    title: 'The Engrained Series',
+    href: '/Other/K4-Select-Series/Engrained',
+    description: 'Look at the Baltic Birch format where surface, warmth, and material presence become part of the work itself.',
+    eyebrow: 'Series',
+  },
+  {
+    title: 'What Is Painterly Photography?',
+    href: '/Blog/what-is-painterly-photography',
+    description: 'Follow the painterly side of the work and see why tonal control matters when a print has to keep giving back.',
+    eyebrow: 'Guide',
+  },
+  {
+    title: 'What Makes an Image Feel Cinematic?',
+    href: '/Blog/what-makes-an-image-feel-cinematic',
+    description: 'See how implication and restraint deepen a cowboy print beyond theme and help it hold on repeat viewing.',
+    eyebrow: 'Guide',
+  },
+];
+
+function selectGridImages(gallery: any[], galleryPath: string, offset: number, count: number) {
+  return (gallery || [])
+    .filter((item) => item && typeof item.id === 'string')
+    .filter((item) => item.id !== 'i-k4studios')
+    .filter((item) => item.visibility !== 'ghost' && item.visibility !== 'hidden' && item.visibility !== 'hide')
+    .sort((a, b) => (a.sortOrder ?? 0) - (b.sortOrder ?? 0))
+    .slice(offset, offset + count)
+    .map((item) => ({
+      id: item.id,
+      title: item.title || 'Featured Work',
+      alt: (item.alt || item.title || 'Cowboy art print').trim(),
+      href: `${galleryPath}/${item.id}`,
+      src: item.src,
+      srcM: item.srcM,
+    }));
+}
+
+const cowboyColorGridImages = selectGridImages(
+  westernCowboyPortraitsColorGallery,
+  '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color',
+  1,
+  4
+);
+
+const cowboyBlackWhiteGridImages = selectGridImages(
+  westernCowboyPortraitsBlackWhiteGallery,
+  '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White',
+  0,
+  4
+);
+
+const westernNarrativesGridImages = selectGridImages(
+  westernNarrativesColorGallery,
+  westernNarrativesGridBasePath,
+  15,
+  4
+);
+
+const mixedCowboyGridImages = [
+  ...cowboyColorGridImages,
+  ...westernNarrativesGridImages,
+  ...cowboyBlackWhiteGridImages,
+];
+
+const breadcrumbItems = [
+  { name: 'Home', item: 'https://www.k4studios.com/' },
+  { name: 'Facing History', item: 'https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History' },
+  { name: 'Western Cowboy Portraits', item: 'https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits' },
+  { name: 'Cowboy Art Prints', item: `https://www.k4studios.com${pagePath}` },
+];
+
+const meta = {
+  title: 'Cowboy Art Prints | K4 Studios',
+  description: 'Cowboy art prints by Wayne Heim where frontier character, painterly light, and narrative pressure keep the image active on the wall.',
+  ogDescription: 'Cowboy art prints where painterly light, frontier character, and narrative pressure keep the work alive on the wall.',
+};
+---
+
+<KeywordLandingPage
+  pagePath={pagePath}
+  imageSectionPath={imageSectionPath}
+  gridBasePath={gridBasePath}
+  landing={landing}
+  breadcrumbItems={breadcrumbItems}
+  storyBlocks={storyBlocks}
+  faqItems={faqItems}
+  explorationIntro="Explore Cowboy Art Prints"
+  explorationPaths={explorationPaths}
+  featuredReadingTitle="Exploring Prints, Presence and Materials"
+  featuredReadingIntro="Keep going past the subject itself. These pieces open out into print choices, painterly structure, and the material side of how the work lives in a room."
+  featuredReadingItems={featuredReadingItems}
+  gridImages={mixedCowboyGridImages}
+  collection={{
+    kicker: 'Selected Works',
+    title: 'Selected Cowboy Art Prints',
+    intro: 'Twelve images where character, pressure, and painterly light stay active on the wall.',
+  }}
+  faqSection={{
+    kicker: 'Collector Questions',
+    title: 'Cowboy Art Prints FAQ',
+  }}
+  galleryData={westernCowboyPortraitsColorGallery}
+  slides={westernCowboyPortraitSlides}
+  meta={meta}
+  structuredAbout={['Cowboy Art Prints', 'Western Cowboy Photography', 'Western Fine Art Prints', 'Painterly Western Photography']}
+  webPageAbout={['Cowboy Art Prints', 'Western Cowboy Portraits', 'Western Fine Art Prints']}
+  genre="Cowboy Art Prints"
+  collectionAltPrefix="Cowboy art print"
+/>
