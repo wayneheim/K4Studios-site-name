@@ -1,248 +1,64 @@
 ---
 export const prerender = true;
 
-// ─── Layout ──────────────────────────────────────────────────────────────────
-import HybridHubLayout from "@/layouts/HybridHubLayout.astro";
+import KeywordLandingPage from '@/components/doorway/KeywordLandingPage.astro';
 
-// ─── Hybrid Components ───────────────────────────────────────────────────────
-import HybridBookCarousel from "@/components/hybrid/HybridBookCarousel.jsx";
-import HybridThesis from "@/components/hybrid/HybridThesis.astro";
-import HybridDefinition from "@/components/hybrid/HybridDefinition.astro";
-import HybridFAQ from "@/components/hybrid/HybridFAQ.astro";
-import HybridCatalogTeaser from "@/components/hybrid/HybridCatalogTeaser.astro";
-import HybridCollectorClose from "@/components/hybrid/HybridCollectorClose.astro";
-
-// ─── Structured-data helpers ─────────────────────────────────────────────────
-import { getBreadcrumbList } from "@/components/utils/getStructuredData.ts";
-
-// ─── Auto keyword linker ─────────────────────────────────────────────────────
-import { autoLinkKeywordsInText } from "@/components/utils/autoLinkKeywordsInText.ts";
-import { semantic as k4Semantic } from "@/data/semantic/K4-Sem.ts";
-import { siteNav } from "@/data/siteNav.ts";
-import { getOrderedWesternGalleryPaths } from "@/data/carousel/westernRouting.ts";
-import { getFeatheredImages } from "@/components/utils/getFeatheredImages.ts";
-
-// ─── Hub data ────────────────────────────────────────────────────────────────
 import {
-  galleryBasePath,
-  carouselSlides,
-  thesis,
-  definition,
+  pagePath,
+  imageSectionPath,
+  gridBasePath,
+  landing,
+  breadcrumbItems,
+  storyBlocks,
+  explorationPaths,
+  featuredReadingTitle,
+  featuredReadingIntro,
+  featuredReadingItems,
+  collectionGroups,
+  gridImages,
+  collection,
+  faqSection,
   faqItems,
-  catalogImages,
-  collectorClose,
   pageMeta,
-  breadcrumb,
-} from "@/data/hybrid-hubs/cowboy.ts";
+  structuredAbout,
+  webPageAbout,
+  genre,
+  collectionAltPrefix,
+  hybridCarouselProps,
+} from '@/data/hybrid-hubs/western-fine-art-collection.ts';
 
-// ─── Paths ───────────────────────────────────────────────────────────────────
-const pagePath = "/western-fine-art-photography-collection";
-const canonicalUrl = `https://www.k4studios.com${pagePath}`;
-
-// ─── Auto-linker wiring ──────────────────────────────────────────────────────
-const imageSectionPath =
-  "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits";
-
-function findNavEntry(nav: any[], url: string): any | null {
-  for (const entry of nav) {
-    if (entry.href === url) return entry;
-    if (entry.children) {
-      const found = findNavEntry(entry.children, url);
-      if (found) return found;
-    }
-  }
-  return null;
-}
-
-const galleryPaths: string[] = getOrderedWesternGalleryPaths(imageSectionPath);
-
-const allGalleryData = import.meta.glob('../../data/Galleries/**/*.mjs', { eager: true }) as any;
-const galleryDatas = galleryPaths.map((path) => {
-  const filePath = "../../data/Galleries" + path.replace(/^\/Galleries/, "") + ".mjs";
-  return allGalleryData[filePath]?.galleryData || [];
-});
-
-const featheredImages = getFeatheredImages({
-  sectionPath: imageSectionPath,
-  headingCount: 6,
-  galleryDatas,
-  galleryPaths,
-  minRating: 3,
-  fallbackMin: 1,
-  poolMultiplier: 2,
-});
-
-const linkKW = (text: string) =>
-  autoLinkKeywordsInText(text, galleryDatas, featheredImages, galleryPaths, k4Semantic, pagePath);
-
-// ─── Apply auto-linker with page-level dedup ─────────────────────────────────
-// Join all prose paragraphs into one string so the linker's internal Set<string>
-// prevents the same phrase from linking more than once across the whole page.
-const SPLIT = "<!-- §SPLIT§ -->";
-const allProse = [
-  ...thesis.body,
-  ...definition.paragraphs,
-  ...collectorClose.paragraphs,
-];
-const linkedAll = linkKW(allProse.join(SPLIT)).split(SPLIT);
-
-const tLen = thesis.body.length;
-const dLen = definition.paragraphs.length;
-const linkedThesisBody          = linkedAll.slice(0, tLen);
-const linkedDefinitionParagraphs = linkedAll.slice(tLen, tLen + dLen);
-const linkedCloseParagraphs     = linkedAll.slice(tLen + dLen);
-
-// ─── Structured Data ─────────────────────────────────────────────────────────
-const stripHtml = (text: string) => text.replace(/<[^>]*>/g, "").trim();
-
-// Breadcrumbs (getBreadcrumbList already returns a JSON string)
-const breadcrumbsJSON = getBreadcrumbList([
-  { name: "Home", item: "https://www.k4studios.com/" },
-  {
-    name: "Cowboy & Frontier Fine Art Prints",
-    item: canonicalUrl,
-  },
-]);
-
-// FAQPage
-const faqStructuredData = JSON.stringify(
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "@id": `${canonicalUrl}#faq`,
-    mainEntity: faqItems.map((item: any) => ({
-      "@type": "Question",
-      name: item.q,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: stripHtml(Array.isArray(item.a) ? item.a.join(" ") : item.a),
-      },
-    })),
-  },
-  null,
-  2
-);
-
-// WebPage
-const webPageSchema = JSON.stringify(
-  {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "@id": `${canonicalUrl}#webpage`,
-    url: canonicalUrl,
-    name: pageMeta.title,
-    description: pageMeta.description,
-    inLanguage: "en",
-    isPartOf: {
-      "@type": "WebSite",
-      "@id": "https://www.k4studios.com/#website",
-      name: "K4 Studios",
-      url: "https://www.k4studios.com/",
-    },
-    about: [
-      { "@type": "Thing", name: "Cowboy Fine Art Photography" },
-      { "@type": "Thing", name: "Frontier Fine Art Prints" },
-      { "@type": "Thing", name: "Painterly Photography" },
-      { "@type": "Thing", name: "Western Art for Collectors" },
-      { "@type": "Thing", name: "Limited Edition Art Prints" },
-    ],
-    author: {
-      "@type": "Person",
-      name: "Wayne Heim",
-      url: "https://www.k4studios.com/wayne-heim-western-fine-art-photography",
-    },
-    creator: {
-      "@type": "Person",
-      name: "Wayne Heim",
-      url: "https://www.k4studios.com/wayne-heim-western-fine-art-photography",
-    },
-    copyrightHolder: {
-      "@type": "Person",
-      name: "Wayne Heim",
-      url: "https://www.k4studios.com/wayne-heim-western-fine-art-photography",
-    },
-  },
-  null,
-  2
-);
-
-// Composite structured data for BaseLayout
-const structuredDataJSON = `[${webPageSchema},${faqStructuredData}]`;
-
-// ─── OG Image ────────────────────────────────────────────────────────────────
-const ogImageUrl = `https://www.k4studios.com/img/${pageMeta.ogImage}/l.jpg`;
-
-const meta = {
-  description: pageMeta.description,
-  "og:type": "website",
-  "og:image": ogImageUrl,
-  "og:image:width": "1024",
-  "og:image:height": "683",
-  "og:url": canonicalUrl,
-  "twitter:card": "summary_large_image",
-  "twitter:image": ogImageUrl,
-};
-
-const carouselSlidesClient = carouselSlides.map((slide: any) => ({ ...slide })) as any;
-const carouselProps = {
-  slides: carouselSlidesClient,
-  galleryBasePath,
-} as any;
+import { galleryData as colorGallery }
+  from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs';
 ---
 
-<HybridHubLayout
-  title={pageMeta.title}
-  breadcrumb={breadcrumb}
-  meta={meta}
-  structuredDataJSON={structuredDataJSON}
-  breadcrumbsJSON={breadcrumbsJSON}
->
-
-  <!-- ── B: Hero Carousel ── -->
-  <HybridBookCarousel
-    slot="carousel"
-    {...carouselProps}
-    client:load
-  />
-
-  <!-- ── C: Thesis (H1) ── -->
-  <HybridThesis
-    slot="thesis"
-    heading={thesis.heading}
-    subtitle={thesis.subtitle}
-    body={linkedThesisBody}
-  />
-
-  <!-- ── D: Definition ── -->
-  <HybridDefinition
-    slot="definition"
-    heading={definition.heading}
-    paragraphs={linkedDefinitionParagraphs}
-    essayHref={definition.essayHref}
-    essayLabel={definition.essayLabel}
-  />
-
-  <!-- ── E: FAQ ── -->
-  <HybridFAQ
-    slot="faq"
-    faqItems={faqItems}
-  />
-
-  <!-- ── F: Catalog Grid ── -->
-  <HybridCatalogTeaser
-    slot="catalog"
-    images={catalogImages}
-    galleryHref={galleryBasePath}
-    subheadingHtml={'A curated selection drawn from our larger archive of limited edition works in the <a href="/Cowboy-Fine-Art-Photography">Cowboy Fine Art Photography collection</a>.'}
-  />
-
-  <!-- ── G: Collector Close ── -->
-  <HybridCollectorClose
-    slot="close"
-    heading={collectorClose.heading}
-    paragraphs={linkedCloseParagraphs}
-    ctaHref={collectorClose.ctaHref}
-    ctaLabel={collectorClose.ctaLabel}
-  />
-
-</HybridHubLayout>
+<KeywordLandingPage
+  pagePath={pagePath}
+  imageSectionPath={imageSectionPath}
+  gridBasePath={gridBasePath}
+  landing={landing}
+  breadcrumbItems={breadcrumbItems}
+  storyBlocks={storyBlocks}
+  faqItems={faqItems}
+  explorationIntro="Western Fine Art Discovery"
+  explorationPaths={explorationPaths}
+  featuredReadingTitle={featuredReadingTitle}
+  featuredReadingIntro={featuredReadingIntro}
+  featuredReadingItems={featuredReadingItems}
+  collectionGroups={collectionGroups}
+  gridImages={gridImages}
+  collection={collection}
+  faqSection={faqSection}
+  galleryData={colorGallery}
+  slides={[]}
+  meta={{
+    title: pageMeta.title,
+    description: pageMeta.description,
+    ogDescription: pageMeta.description,
+  }}
+  structuredAbout={structuredAbout}
+  webPageAbout={webPageAbout}
+  genre={genre}
+  collectionAltPrefix={collectionAltPrefix}
+  heroVisualMode="hybridCarousel"
+  hybridCarouselProps={hybridCarouselProps}
+/>

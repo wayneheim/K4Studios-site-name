@@ -7,6 +7,7 @@ import {
   pagePath,
   imageSectionPath,
   gridBasePath,
+  galleryPaths,
   landing,
   breadcrumbItems,
   storyBlocks,
@@ -25,21 +26,22 @@ import {
   genre,
   collectionAltPrefix,
   hybridCarouselProps,
-} from '@/data/hybrid-hubs/western-black-white.ts';
+} from '@/data/hybrid-hubs/western-landscape-art.ts';
 
-import { galleryData as bwGallery }
-  from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs';
+import { galleryData as mountainsGallery }
+  from '@/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/Mountains.mjs';
 ---
 
 <KeywordLandingPage
   pagePath={pagePath}
   imageSectionPath={imageSectionPath}
   gridBasePath={gridBasePath}
+  galleryPaths={galleryPaths}
   landing={landing}
   breadcrumbItems={breadcrumbItems}
   storyBlocks={storyBlocks}
   faqItems={faqItems}
-  explorationIntro="Black and White Western Discovery"
+  explorationIntro="Western Landscape Discovery"
   explorationPaths={explorationPaths}
   featuredReadingTitle={featuredReadingTitle}
   featuredReadingIntro={featuredReadingIntro}
@@ -48,7 +50,7 @@ import { galleryData as bwGallery }
   gridImages={gridImages}
   collection={collection}
   faqSection={faqSection}
-  galleryData={bwGallery}
+  galleryData={mountainsGallery}
   slides={[]}
   meta={{
     title: pageMeta.title,

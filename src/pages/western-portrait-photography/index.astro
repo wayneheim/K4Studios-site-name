@@ -1,495 +1,64 @@
 ---
 export const prerender = true;
 
-import BaseLayout from '@/layouts/BaseLayout.astro';
-import LandingHeader from '@/components/Landing-Header.jsx';
-import SiteFooter from '@/components/Footer.astro';
-import { getBreadcrumbList } from '@/components/utils/getStructuredData.ts';
-import { findWesternLandingImage } from '@/data/carousel/westernLandingContent.ts';
+import KeywordLandingPage from '@/components/doorway/KeywordLandingPage.astro';
 
-const pagePath = '/western-portrait-photography';
-const canonicalUrl = `https://www.k4studios.com${pagePath}`;
-const pageTitle = 'Western Portrait Photography | Cowboy Portraits of the American West';
-const pageDescription = 'Explore Western portrait photography featuring cowboy portraits, black and white Western images, and character-driven scenes from the American West.';
+import {
+  pagePath,
+  imageSectionPath,
+  gridBasePath,
+  landing,
+  breadcrumbItems,
+  storyBlocks,
+  explorationPaths,
+  featuredReadingTitle,
+  featuredReadingIntro,
+  featuredReadingItems,
+  collectionGroups,
+  gridImages,
+  collection,
+  faqSection,
+  faqItems,
+  pageMeta,
+  structuredAbout,
+  webPageAbout,
+  genre,
+  collectionAltPrefix,
+  hybridCarouselProps,
+} from '@/data/hybrid-hubs/western-portraits.ts';
 
-const COWBOY_COLOR_PATH = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color';
-const COWBOY_BW_PATH = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White';
-const NATIVE_AMERICANS_COLOR_PATH = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color';
-
-const breadcrumb =
-  `<a href="/" title="Home" style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;" onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Wayne Heim</a> | Western Portrait Photography`;
-
-function pickAltTemplate(img: any, category: string, baseTitle: string) {
-  const templatesByCategory: Record<string, string[]> = {
-    'Cowboy Portrait Photography': [
-      `${baseTitle} in a cowboy portrait photograph from the American West`,
-      `${baseTitle}, a Western portrait photography study shaped by character and light`,
-      `${baseTitle} in painterly cowboy portrait photography from the frontier tradition`,
-    ],
-    'Black and White Western Portrait Photography': [
-      `${baseTitle} in black and white Western photography with strong tone and atmosphere`,
-      `${baseTitle}, a monochrome Western photograph centered on character and presence`,
-      `${baseTitle} in black and white Western photography shaped by shadow and grit`,
-    ],
-    'Indigenous Western Portrait Photography': [
-      `${baseTitle} in Indigenous portrait photography connected to the American West`,
-      `${baseTitle}, a Western portrait photograph centered on presence, clothing, and setting`,
-      `${baseTitle} in painterly Indigenous portrait photography with Western context`,
-    ],
-  };
-
-  const templates = templatesByCategory[category] || [`${baseTitle} in Western photography`];
-  const hash = String(img.id || baseTitle)
-    .split('')
-    .reduce((sum, char) => sum + char.charCodeAt(0), 0);
-
-  return templates[hash % templates.length];
-}
-
-function makeTile(id: string, preferredPath: string, category: string, fallback: string) {
-  const resolved = findWesternLandingImage(id, preferredPath);
-  const img = resolved?.img;
-  if (!img?.id || !resolved?.href) return null;
-  const title = (img.title || fallback || '').trim();
-  return {
-    id: img.id,
-    title,
-    alt: pickAltTemplate(img, category, title),
-    href: resolved.href,
-    category,
-  };
-}
-
-function isTile(tile: ReturnType<typeof makeTile>): tile is NonNullable<ReturnType<typeof makeTile>> {
-  return Boolean(tile);
-}
-
-const photoTiles = [
-  makeTile('i-ncFcHDM', COWBOY_COLOR_PATH, 'Cowboy Portrait Photography', 'Western cowboy portrait'),
-  makeTile('i-c5K798H', COWBOY_COLOR_PATH, 'Cowboy Portrait Photography', 'Western cowboy portrait'),
-  makeTile('i-HfQ5NVR', COWBOY_BW_PATH, 'Black and White Western Portrait Photography', 'Black and white Western portrait'),
-  makeTile('i-qMQf7b6', COWBOY_BW_PATH, 'Black and White Western Portrait Photography', 'Black and white Western portrait'),
-  makeTile('i-SwhsL2h', COWBOY_BW_PATH, 'Black and White Western Portrait Photography', 'Black and white Western portrait'),
-  makeTile('i-W73hxx4', COWBOY_BW_PATH, 'Black and White Western Portrait Photography', 'Black and white Western portrait'),
-  makeTile('i-dLDF4Q6', COWBOY_BW_PATH, 'Black and White Western Portrait Photography', 'Black and white Western portrait'),
-  makeTile('i-FnZ68h3', COWBOY_BW_PATH, 'Black and White Western Portrait Photography', 'Black and white Western portrait'),
-  makeTile('i-7hD9CCh', NATIVE_AMERICANS_COLOR_PATH, 'Indigenous Western Portrait Photography', 'Indigenous Western portrait'),
-  makeTile('i-4Hz6D7k', NATIVE_AMERICANS_COLOR_PATH, 'Indigenous Western Portrait Photography', 'Indigenous Western portrait'),
-  makeTile('i-LmpRvHw', NATIVE_AMERICANS_COLOR_PATH, 'Indigenous Western Portrait Photography', 'Indigenous Western portrait'),
-  makeTile('i-WfRwfpM', NATIVE_AMERICANS_COLOR_PATH, 'Indigenous Western Portrait Photography', 'Indigenous Western portrait'),
-].filter(isTile);
-
-const relatedLinks = [
-  {
-    href: '/Western-Fine-Art-Photography',
-    label: 'Western Fine Art Photography Collection',
-    description: 'The primary collection hub for Western fine art photography across subjects and formats.',
-  },
-  {
-    href: '/Cowboy-Photography',
-    label: 'Cowboy Photography Gallery',
-    description: 'A broader entry point into cowboy images, portraits, and the artistic side of the subject.',
-  },
-  {
-    href: '/Western-Black-and-White-Photography',
-    label: 'Black and White Cowboy Photos',
-    description: 'Monochrome Western images built around tone, character, and restraint.',
-  },
-  {
-    href: '/Painterly-Western-Photography',
-    label: 'Painterly Western Photography',
-    description: 'The method page behind the painterly approach, atmosphere, and tonal control.',
-  },
-  {
-    href: '/Photography-in-Western-Art',
-    label: 'Photography in Western Art',
-    description: 'A deeper authority page on how photography entered the Western art tradition.',
-  },
-];
-
-const breadcrumbsJSON = getBreadcrumbList([
-  { name: 'Home', item: 'https://www.k4studios.com/' },
-  { name: 'Western Portrait Photography', item: canonicalUrl },
-]);
-
-const structuredDataJSON = JSON.stringify({
-  '@context': 'https://schema.org',
-  '@type': 'CollectionPage',
-  '@id': `${canonicalUrl}#webpage`,
-  url: canonicalUrl,
-  name: 'Western Portrait Photography',
-  description: pageDescription,
-  inLanguage: 'en',
-  isPartOf: {
-    '@type': 'WebSite',
-    '@id': 'https://www.k4studios.com/#website',
-    name: 'K4 Studios',
-    url: 'https://www.k4studios.com/',
-  },
-  about: [
-    { '@type': 'Thing', name: 'Western Portrait Photography' },
-    { '@type': 'Thing', name: 'Cowboy Portraits' },
-    { '@type': 'Thing', name: 'Black and White Western Images' },
-    { '@type': 'Thing', name: 'American West Portrait Photography' },
-  ],
-  mainEntity: {
-    '@type': 'ItemList',
-    numberOfItems: photoTiles.length,
-    itemListElement: photoTiles.map((tile, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      url: `https://www.k4studios.com${tile.href}`,
-      name: tile.title,
-    })),
-  },
-}, null, 2);
-
-const heroImage = photoTiles[0]?.id ? `https://www.k4studios.com/img/${photoTiles[0].id}/l.jpg` : '/images/show-2t.webp';
-
-const meta = {
-  title: pageTitle,
-  description: pageDescription,
-  canonicalUrl,
-  ogTitle: pageTitle,
-  ogDescription: pageDescription,
-  ogUrl: canonicalUrl,
-  ogImage: heroImage,
-  ogType: 'website',
-  twitterTitle: pageTitle,
-  twitterDescription: pageDescription,
-  twitterUrl: canonicalUrl,
-  twitterImage: heroImage,
-  twitterCard: 'summary_large_image',
-  keywords: 'western portrait photography, cowboy portraits, black and white Western images, American West portrait photography, Indigenous portraits, Wayne Heim',
-};
-
-const getProxySrc = (id: string, size: string) => `/img/${id}/${size}.jpg`;
+import { galleryData as colorGallery }
+  from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs';
 ---
 
-<BaseLayout
-  title={pageTitle}
-  meta={meta}
-  breadcrumbsJSON={breadcrumbsJSON}
-  structuredDataJSON={structuredDataJSON}
->
-  <main class="western-photos-page bg-[#ffffff] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
-    <div class="drawer-mode">
-      <LandingHeader client:load breadcrumb={breadcrumb} />
-    </div>
-
-    <section class="wp-hero">
-      <div class="wp-hero__inner">
-        <h1 class="wp-hero__title">Western Portrait Photography</h1>
-        <p class="wp-hero__subtitle">Character-driven images of the American West, focused on people, presence, and story.</p>
-        <div class="wp-hero__intro">
-          <p>
-            Western portrait photography centers on the people of the American West—cowboys, riders, workers, and individuals shaped by the landscape and life around them.
-          </p>
-          <p>
-            Often referred to as cowboy portrait photography or Western portraits, this work focuses on character, presence, and the human side of life in the American West, using light, tone, and composition to suggest story within a single frame.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="wp-grid-section" aria-label="Western portrait photography gallery">
-      <div class="wp-grid-section__inner">
-        <div class="wp-bridge-copy">
-          <h2 class="wp-section-title">Western Portrait Photography in Context</h2>
-          <p>
-            Western portrait photography includes cowboy portraits, black and white Western images, and environmental portraits that place individuals within the broader landscape of the American West.
-          </p>
-          <p>
-            These images often emphasize expression, posture, and atmosphere, capturing both the visible character of the subject and the implied story surrounding them.
-          </p>
-          <p>
-            Explore related work in <a href="/Cowboy-Photography">cowboy photography</a> and <a href="/Western-Black-and-White-Photography">black and white Western photography</a>.
-          </p>
-        </div>
-        <p class="wp-grid-context">
-          These Western portraits range from quiet, reflective studies to narrative-driven moments, capturing both the visible character of the subject and the implied story surrounding them.
-        </p>
-        <div class="wp-grid">
-          {photoTiles.map((tile) => (
-            <article class="wp-tile">
-              <a class="wp-tile__link" href={tile.href} title={tile.title}>
-                <div class="wp-tile__image-wrap">
-                  <img
-                    src={getProxySrc(tile.id, 'm')}
-                    alt={tile.alt}
-                    loading="lazy"
-                    decoding="async"
-                    class="wp-tile__image"
-                  />
-                </div>
-                <div class="wp-tile__meta">
-                  <p class="wp-tile__category">{tile.category}</p>
-                  <h3 class="wp-tile__title">{tile.title}</h3>
-                </div>
-              </a>
-            </article>
-          ))}
-        </div>
-        <p class="wp-grid-followup">
-          Explore more Western photography, including broader collections and landscapes, in the full <a href="/western-photos">Western Photos collection</a>.
-        </p>
-      </div>
-    </section>
-
-    <section class="wp-links-section">
-      <div class="wp-links-section__inner">
-        <h2 class="wp-section-title">Explore More</h2>
-        <p class="wp-links-intro">
-          Explore related areas of Western photography, from portrait-driven work to broader collections across the American West.
-        </p>
-        <div class="wp-links-grid">
-          {relatedLinks.map((link) => (
-            <a class="wp-link-card" href={link.href}>
-              <strong class="wp-link-card__title">{link.label}</strong>
-              <span class="wp-link-card__desc">{link.description}</span>
-            </a>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <SiteFooter class="pt-8 pb-12" />
-  </main>
-
-  <style>
-    .western-photos-page {
-      font-family: 'Glegoo', serif;
-    }
-
-    .wp-hero {
-      padding: 2rem 1rem 1.5rem;
-    }
-
-    .wp-hero__inner,
-    .wp-grid-section__inner,
-    .wp-links-section__inner {
-      max-width: 1180px;
-      margin: 0 auto;
-    }
-
-    .wp-hero__inner {
-      text-align: center;
-    }
-
-    .wp-hero__title {
-      margin: 0;
-      font-size: clamp(2.25rem, 5vw, 3.4rem);
-      line-height: 1.02;
-      color: #2f241b;
-      text-align: center;
-    }
-
-    .wp-hero__subtitle {
-      margin: 0.9rem 0 0;
-      font-size: 1.12rem;
-      line-height: 1.6;
-      color: #5a4a3b;
-      max-width: 1100px;
-      text-align: center;
-    }
-
-    .wp-hero__intro {
-      margin-top: 1.35rem;
-      max-width: 1100px;
-      display: grid;
-      gap: 0.85rem;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: left;
-    }
-
-    .wp-hero__intro p,
-    .wp-bridge-copy p,
-    .wp-grid-context,
-    .wp-grid-followup,
-    .wp-links-intro {
-      margin: 0;
-      font-size: 1rem;
-      line-height: 1.72;
-      color: #3f3a35;
-    }
-
-    .wp-grid-section {
-      padding: 0.75rem 1rem 2rem;
-    }
-
-    .wp-bridge-copy {
-      max-width: 1100px;
-      margin: 0 auto 1.35rem;
-    }
-
-    .wp-bridge-copy p {
-      margin: 0 0 0.8rem;
-    }
-
-    .wp-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1rem;
-    }
-
-    .wp-grid-context {
-      max-width: 1100px;
-      margin: 0 auto 1rem;
-    }
-
-    .wp-tile {
-      margin: 0;
-      background: #fbfaf7;
-      border: 1px solid #e7ddd3;
-      border-radius: 12px;
-      overflow: hidden;
-      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
-    }
-
-    .wp-tile__link {
-      display: block;
-      height: 100%;
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .wp-tile:hover {
-      transform: translateY(-2px);
-      border-color: #cfbea8;
-      box-shadow: 0 8px 24px rgba(44, 33, 24, 0.08);
-    }
-
-    .wp-tile__image-wrap {
-      aspect-ratio: 1 / 1;
-      overflow: hidden;
-      background: #efe8de;
-    }
-
-    .wp-tile__image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.25s ease;
-    }
-
-    .wp-tile:hover .wp-tile__image {
-      transform: scale(1.02);
-    }
-
-    .wp-tile__meta {
-      padding: 0.85rem 0.9rem 0.95rem;
-      display: grid;
-      gap: 0.3rem;
-    }
-
-    .wp-tile__category {
-      margin: 0;
-      font-size: 0.72rem;
-      line-height: 1.2;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: #8d7864;
-      font-weight: 600;
-    }
-
-    .wp-tile__title {
-      margin: 0;
-      font-size: 0.98rem;
-      line-height: 1.45;
-      color: #2f241b;
-      font-weight: 600;
-    }
-
-    .wp-grid-followup {
-      max-width: 1100px;
-      margin: 1.15rem auto 0;
-    }
-
-    .wp-grid-followup a,
-    .wp-bridge-copy a,
-    .wp-hero__intro a {
-      color: #8b5a2b;
-      text-decoration: underline;
-      text-underline-offset: 2px;
-    }
-
-    .wp-links-section {
-      padding: 0.5rem 1rem 2.5rem;
-    }
-
-    .wp-section-title {
-      margin: 0 0 1rem;
-      font-size: 1.45rem;
-      line-height: 1.2;
-      color: #2f241b;
-    }
-
-    .wp-links-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 0.9rem;
-    }
-
-    .wp-links-intro {
-      margin: 0 0 1rem;
-      max-width: 960px;
-      color: #4d433b;
-    }
-
-    .wp-link-card {
-      display: grid;
-      gap: 0.38rem;
-      padding: 1rem 1rem 1.05rem;
-      text-decoration: none;
-      color: inherit;
-      background: #f8f4ee;
-      border: 1px solid #e3d7ca;
-      border-radius: 12px;
-      transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
-    }
-
-    .wp-link-card:hover {
-      border-color: #cdb9a5;
-      transform: translateY(-1px);
-      box-shadow: 0 6px 20px rgba(44, 33, 24, 0.06);
-    }
-
-    .wp-link-card__title {
-      font-size: 1rem;
-      line-height: 1.35;
-      color: #34271e;
-    }
-
-    .wp-link-card__desc {
-      font-size: 0.93rem;
-      line-height: 1.55;
-      color: #5e5249;
-    }
-
-    @media (max-width: 980px) {
-      .wp-grid,
-      .wp-links-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 640px) {
-      .wp-hero {
-        padding-top: 1.5rem;
-      }
-
-      .wp-grid,
-      .wp-links-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .wp-tile__meta,
-      .wp-link-card {
-        padding-left: 0.9rem;
-        padding-right: 0.9rem;
-      }
-    }
-  </style>
-</BaseLayout>
+<KeywordLandingPage
+  pagePath={pagePath}
+  imageSectionPath={imageSectionPath}
+  gridBasePath={gridBasePath}
+  landing={landing}
+  breadcrumbItems={breadcrumbItems}
+  storyBlocks={storyBlocks}
+  faqItems={faqItems}
+  explorationIntro="Western Portrait Discovery"
+  explorationPaths={explorationPaths}
+  featuredReadingTitle={featuredReadingTitle}
+  featuredReadingIntro={featuredReadingIntro}
+  featuredReadingItems={featuredReadingItems}
+  collectionGroups={collectionGroups}
+  gridImages={gridImages}
+  collection={collection}
+  faqSection={faqSection}
+  galleryData={colorGallery}
+  slides={[]}
+  meta={{
+    title: pageMeta.title,
+    description: pageMeta.description,
+    ogDescription: pageMeta.description,
+  }}
+  structuredAbout={structuredAbout}
+  webPageAbout={webPageAbout}
+  genre={genre}
+  collectionAltPrefix={collectionAltPrefix}
+  heroVisualMode="hybridCarousel"
+  hybridCarouselProps={hybridCarouselProps}
+/>

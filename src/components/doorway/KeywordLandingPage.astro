@@ -47,6 +47,20 @@ export interface KeywordLandingGridItem {
   href?: string;
   src?: string;
   srcM?: string;
+  seriesLabel?: string;
+}
+
+export interface KeywordLandingCollectionRow {
+  label: string;
+  href: string;
+  cta?: string;
+  items: KeywordLandingGridItem[];
+}
+
+export interface KeywordLandingCollectionGroup {
+  title: string;
+  description: string;
+  rows: KeywordLandingCollectionRow[];
 }
 
 export interface KeywordLandingCollectionConfig {
@@ -65,6 +79,7 @@ interface Props {
   pagePath: string;
   imageSectionPath: string;
   gridBasePath: string;
+  galleryPaths?: string[];
   landing: KeywordLandingConfig;
   breadcrumbItems: KeywordLandingBreadcrumbItem[];
   storyBlocks: KeywordLandingStoryBlock[];
@@ -74,6 +89,7 @@ interface Props {
   featuredReadingTitle?: string;
   featuredReadingIntro?: string;
   featuredReadingItems: KeywordLandingReadingItem[];
+  collectionGroups?: KeywordLandingCollectionGroup[];
   gridImages?: KeywordLandingGridItem[];
   collection: KeywordLandingCollectionConfig;
   faqSection: KeywordLandingFaqSectionConfig;
@@ -88,12 +104,15 @@ interface Props {
   webPageAbout?: string[];
   genre?: string;
   collectionAltPrefix?: string;
+  heroVisualMode?: 'imageBar' | 'hybridCarousel';
+  hybridCarouselProps?: any;
 }
 
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import FeaturedReadingSection from '@/components/FeaturedReadingSection.astro';
 import LandingHeader from '@/components/Landing-Header.jsx';
 import ImageBar2 from '@/components/ImageBar2.jsx';
+import HybridBookCarousel from '@/components/hybrid/HybridBookCarousel.jsx';
 import SiteFooter from '@/components/Footer.astro';
 
 import { getStructuredData, getBreadcrumbList } from '@/components/utils/getStructuredData.ts';
@@ -109,6 +128,7 @@ const {
   pagePath,
   imageSectionPath,
   gridBasePath,
+  galleryPaths: overrideGalleryPaths = [],
   landing,
   breadcrumbItems,
   storyBlocks = [],
@@ -118,6 +138,7 @@ const {
   featuredReadingTitle = 'Explore the Ideas',
   featuredReadingIntro = '',
   featuredReadingItems = [],
+  collectionGroups = [],
   gridImages: providedGridImages = [],
   collection,
   faqSection,
@@ -128,13 +149,19 @@ const {
   webPageAbout = structuredAbout,
   genre = landing.title,
   collectionAltPrefix = landing.title,
+  heroVisualMode = 'imageBar',
+  hybridCarouselProps = null,
 } = Astro.props as Props;
 
-const galleryPaths: string[] = getOrderedWesternGalleryPaths(imageSectionPath);
+const galleryPaths: string[] = overrideGalleryPaths.length
+  ? overrideGalleryPaths
+  : getOrderedWesternGalleryPaths(imageSectionPath);
 const allGalleryData = import.meta.glob('../../data/Galleries/**/*.mjs', { eager: true }) as any;
 const galleryDatas = galleryPaths.map((path) => {
-  const filePath = '../../data/Galleries' + path.replace(/^\/Galleries/, '') + '.mjs';
-  return allGalleryData[filePath]?.galleryData || [];
+  const normalizedPath = path.replace(/^\/Galleries/, '');
+  const directFilePath = '../../data/Galleries' + normalizedPath + '.mjs';
+  const nestedFilePath = '../../data/Galleries' + normalizedPath + '/' + normalizedPath.split('/').pop() + '.mjs';
+  return allGalleryData[directFilePath]?.galleryData || allGalleryData[nestedFilePath]?.galleryData || [];
 });
 
 const headingCount = storyBlocks.filter((block, index) => index > 0 && block.subhead).length;
@@ -159,6 +186,8 @@ const gridImages = (providedGridImages?.length
       .filter((item: any) => item.id !== 'i-k4studios' && item.visibility !== 'ghost' && item.visibility !== 'hidden')
       .slice(0, 12)
 );
+
+const hasCollectionGroups = collectionGroups.length > 0;
 
 const stripHtml = (text: string) => text.replace(/<[^>]*>/g, '').trim();
 
@@ -266,12 +295,18 @@ const computedMeta = {
     </div>
 
     <div class="w-full max-w-[1200px] mx-auto px-4">
-      <div class="carousel-container">
-        <div class="carousel-placeholder" aria-hidden="true"></div>
-        <div class="carousel-fade reveal-on-scroll">
-          <ImageBar2 client:load slides={slides} />
+      {heroVisualMode === 'hybridCarousel' ? (
+        <div class="hero-carousel-section reveal-on-scroll">
+          <HybridBookCarousel client:load {...(hybridCarouselProps || {})} />
         </div>
-      </div>
+      ) : (
+        <div class="carousel-container">
+          <div class="carousel-placeholder" aria-hidden="true"></div>
+          <div class="carousel-fade reveal-on-scroll">
+            <ImageBar2 client:load slides={slides} />
+          </div>
+        </div>
+      )}
     </div>
 
     <section class="section-heading-wrap">
@@ -347,26 +382,76 @@ const computedMeta = {
           <p class="collection-intro">{collection.intro}</p>
         </div>
 
-        <div class="wallart-grid reveal-on-scroll">
-          {gridImages.map((item: any) => (
-            <a href={item.href || `${gridBasePath}/${item.id}`} class="wallart-grid__tile" title={item.title}>
-              <div class="wallart-grid__img-wrap">
-                <img
-                  src={getProxySrc(item.id, 'm')}
-                  data-fallback-src={item.srcM || item.src || ''}
-                  alt={item.alt || `${collectionAltPrefix} by Wayne Heim: ${item.title}`}
-                  loading="lazy"
-                  onerror="if (this.dataset.fallbackSrc && this.src !== this.dataset.fallbackSrc) { this.src = this.dataset.fallbackSrc; }"
-                  width="400"
-                  height="400"
-                  class="wallart-grid__img"
-                />
-                <span class="wallart-grid__hover">View Image</span>
-              </div>
-              <p class="wallart-grid__title">{item.title}</p>
-            </a>
-          ))}
-        </div>
+        {hasCollectionGroups ? (
+          <div class="collection-groups reveal-on-scroll">
+            {collectionGroups.map((group: KeywordLandingCollectionGroup) => (
+              <article class="collection-group">
+                <div class="collection-group__header">
+                  <h3 class="collection-group__title">{group.title}</h3>
+                  <p class="collection-group__description">{group.description}</p>
+                </div>
+
+                <div class="collection-group__rows">
+                  {group.rows.map((row: KeywordLandingCollectionRow) => (
+                    <section class="collection-row">
+                      <div class="wallart-grid wallart-grid--preview-row">
+                        {row.items.map((item: KeywordLandingGridItem) => (
+                          <a href={item.href || `${gridBasePath}/${item.id}`} class="wallart-grid__tile" title={item.title}>
+                            <div class="wallart-grid__img-wrap">
+                              <img
+                                src={getProxySrc(item.id, 'm')}
+                                data-fallback-src={item.srcM || item.src || ''}
+                                alt={item.alt || `${collectionAltPrefix} by Wayne Heim: ${item.title}`}
+                                loading="lazy"
+                                onerror="if (this.dataset.fallbackSrc && this.src !== this.dataset.fallbackSrc) { this.src = this.dataset.fallbackSrc; }"
+                                width="400"
+                                height="400"
+                                class="wallart-grid__img"
+                              />
+                              <span class="wallart-grid__hover">View Image</span>
+                            </div>
+                            <p class="wallart-grid__title">{item.title}</p>
+                          </a>
+                        ))}
+
+                        <a href={row.href} class="wallart-grid__see-more-bar" title={row.cta || 'See more'} aria-label={row.cta || 'See more'}>
+                          <span class="wallart-grid__see-more-glyph" aria-hidden="true">
+                            <svg viewBox="0 0 40 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M8 12L31 80L8 160" />
+                            </svg>
+                          </span>
+                          <span class="wallart-grid__see-more-label">See More</span>
+                        </a>
+                      </div>
+                    </section>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </div>
+        ) : (
+          <div class="wallart-grid reveal-on-scroll">
+            {gridImages.map((item: any) => (
+              <a href={item.href || `${gridBasePath}/${item.id}`} class="wallart-grid__tile" title={item.title}>
+                <div class="wallart-grid__img-wrap">
+                  <img
+                    src={getProxySrc(item.id, 'm')}
+                    data-fallback-src={item.srcM || item.src || ''}
+                    alt={item.alt || `${collectionAltPrefix} by Wayne Heim: ${item.title}`}
+                    loading="lazy"
+                    onerror="if (this.dataset.fallbackSrc && this.src !== this.dataset.fallbackSrc) { this.src = this.dataset.fallbackSrc; }"
+                    width="400"
+                    height="400"
+                    class="wallart-grid__img"
+                  />
+                  <span class="wallart-grid__hover">View Image</span>
+                </div>
+                <p class="wallart-grid__title">{item.title}</p>
+                {item.seriesLabel && <p class="wallart-grid__series">{item.seriesLabel}</p>}
+              </a>
+            ))}
+          </div>
+        )}
       </div>
     </section>
 
@@ -616,6 +701,9 @@ const computedMeta = {
       transform: translateY(0);
       visibility: visible;
     }
+    .hero-carousel-section {
+      margin: 0 0 0.75rem;
+    }
     .section-heading-wrap {
       margin: -0.5rem 0 4.25rem;
       text-align: center;
@@ -764,6 +852,7 @@ const computedMeta = {
       align-items: stretch;
     }
     .exploration-card {
+      order: 1;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
@@ -783,12 +872,16 @@ const computedMeta = {
       background: linear-gradient(180deg, rgba(255,255,255,1), rgba(252,248,242,0.98));
     }
     .exploration-card--featured {
+      order: 2;
       min-height: 248px;
       padding: 1.45rem 1.35rem 1.2rem;
-      background: linear-gradient(180deg, rgba(252,246,239,0.98), rgba(255,252,248,0.99));
+      background: linear-gradient(180deg, color-mix(in srgb, var(--path-accent) 16%, #fff8f1), rgba(255,252,248,0.99));
       border: 2px solid color-mix(in srgb, var(--path-accent) 32%, white);
-      box-shadow: 0 18px 36px rgba(71, 42, 22, 0.11);
+      box-shadow: 0 18px 36px rgba(71, 42, 22, 0.15);
       transform: translateY(-0.2rem);
+    }
+    .exploration-grid > .exploration-card:last-child:not(.exploration-card--featured) {
+      order: 3;
     }
     .exploration-card__eyebrow {
       display: inline-flex;
@@ -916,12 +1009,60 @@ const computedMeta = {
       font-size: 1rem;
       line-height: 1.68;
       color: #463b34;
-      white-space: nowrap;
+      white-space: normal;
+    }
+    .collection-groups {
+      display: grid;
+      gap: 1.3rem;
+    }
+    .collection-group {
+      border: 4px solid rgba(121, 98, 78, 0.12);
+      border-radius: 16px;
+      background: rgba(236, 228, 217, 0.6);
+      padding: 1rem;
+    }
+    .collection-group__header {
+      margin-bottom: 1rem;
+    }
+    .collection-group__title {
+      margin: 0 0 0.35rem;
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      font-size: 1.22rem;
+      line-height: 1.25;
+      font-weight: 700;
+      color: #241b15;
+      text-align: left;
+    }
+    .collection-group__title::after {
+      content: '';
+      flex: 1;
+      height: 2px;
+      background: linear-gradient(90deg, rgba(121, 98, 78, 0.35), rgba(121, 98, 78, 0.08));
+    }
+    .collection-group__description {
+      margin: 0;
+      font-size: 0.95rem;
+      line-height: 1.58;
+      color: #4d4037;
+    }
+    .collection-group__rows {
+      display: grid;
+      gap: 1rem;
+    }
+    .collection-row {
+      display: grid;
+      gap: 0;
     }
     .wallart-grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 0.95rem;
+    }
+    .wallart-grid--preview-row {
+      grid-template-columns: repeat(4, minmax(0, 1fr)) minmax(2.6rem, 0.22fr);
+      gap: 0.75rem;
     }
     .wallart-grid__tile {
       text-decoration: none;
@@ -1003,6 +1144,70 @@ const computedMeta = {
       overflow: hidden;
       text-overflow: ellipsis;
       letter-spacing: 0.01em;
+    }
+    .wallart-grid__see-more-bar {
+      display: flex;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+      min-height: 100%;
+      border-radius: 16px;
+      text-decoration: none;
+      color: #f8f4ef;
+      background: linear-gradient(180deg, #d9c9ba, #cab8a7);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.26), 0 8px 18px rgba(41, 30, 21, 0.08);
+      transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
+    }
+    .wallart-grid__see-more-bar:hover {
+      transform: translateX(2px);
+      background: linear-gradient(180deg, #cfbeae, #bfa996);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.32), 0 12px 22px rgba(41, 30, 21, 0.12);
+    }
+    .wallart-grid__see-more-glyph {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      color: rgba(255, 251, 246, 0.96);
+      text-shadow: 0 1px 1px rgba(80, 58, 42, 0.08);
+      opacity: 1;
+      transition: opacity 0.2s ease;
+    }
+    .wallart-grid__see-more-glyph svg {
+      width: 70%;
+      height: 84%;
+      overflow: visible;
+    }
+    .wallart-grid__see-more-glyph path {
+      stroke: currentColor;
+      stroke-width: 6;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      vector-effect: non-scaling-stroke;
+    }
+    .wallart-grid__see-more-label {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.58rem;
+      line-height: 1.2;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255, 250, 244, 0.96);
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      pointer-events: none;
+      text-align: center;
+      padding: 0.5rem 0.2rem;
+    }
+    .wallart-grid__see-more-bar:hover .wallart-grid__see-more-glyph {
+      opacity: 0;
+    }
+    .wallart-grid__see-more-bar:hover .wallart-grid__see-more-label {
+      opacity: 1;
     }
     .faq-answer a,
     .faq-overlay__content a {
@@ -1210,16 +1415,21 @@ const computedMeta = {
     }
     @media (max-width: 1100px) {
       .wallart-grid { grid-template-columns: repeat(4, 1fr); }
+      .wallart-grid--preview-row { grid-template-columns: repeat(4, minmax(0, 1fr)) minmax(2.3rem, 0.2fr); }
     }
     @media (max-width: 900px) {
       .term-shell { grid-template-columns: 1fr; }
       .wallart-grid { grid-template-columns: repeat(3, 1fr); }
+      .wallart-grid--preview-row { grid-template-columns: repeat(3, minmax(0, 1fr)) minmax(2.2rem, 0.24fr); }
     }
     @media (max-width: 1024px) {
       .mobile-breadcrumb-wrapper { display: block; }
     }
     @media (max-width: 768px) {
       .carousel-container { height: 200px; }
+      .hero-carousel-section {
+        margin-bottom: 0.35rem;
+      }
       .section-heading-wrap { margin: -4.85rem 0 3.9rem; }
       .section-heading .page-title { font-size: 2.35rem; line-height: 1.28; }
       .section-heading .page-subtitle {
@@ -1308,6 +1518,27 @@ const computedMeta = {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 0.55rem;
       }
+      .wallart-grid--preview-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .wallart-grid__see-more-bar {
+        min-height: 7rem;
+        grid-column: 1 / -1;
+      }
+      .wallart-grid__see-more-glyph {
+        width: 100%;
+        height: 100%;
+      }
+      .wallart-grid__see-more-glyph svg {
+        width: 4rem;
+        height: 78%;
+      }
+      .wallart-grid__see-more-label {
+        inset: 0;
+        left: 0;
+        transform: none;
+        font-size: 0.62rem;
+      }
       .wallart-grid__tile {
         border-radius: 14px;
         padding: 0.45rem 0.45rem 0.62rem;
@@ -1316,6 +1547,9 @@ const computedMeta = {
       .wallart-grid__title {
         font-size: 0.71rem;
         margin-top: 0.48rem;
+      }
+      .wallart-grid__series {
+        font-size: 0.62rem;
       }
       .faq-shell {
         padding: 1rem 0.85rem 1.2rem;

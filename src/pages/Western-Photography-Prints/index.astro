@@ -1,525 +1,64 @@
 ---
 export const prerender = true;
 
-// ─── Layout ──────────────────────────────────────────────────────────────────
-import CommercialLandingLayout from "@/layouts/CommercialLandingLayout.astro";
+import KeywordLandingPage from '@/components/doorway/KeywordLandingPage.astro';
 
-// ─── Structured-data helpers ─────────────────────────────────────────────────
-import { getBreadcrumbList } from "@/components/utils/getStructuredData.ts";
-
-// ─── Page data ───────────────────────────────────────────────────────────────
 import {
-  hero,
-  editions,
+  pagePath,
+  imageSectionPath,
+  gridBasePath,
+  landing,
+  breadcrumbItems,
+  storyBlocks,
+  explorationPaths,
+  featuredReadingTitle,
+  featuredReadingIntro,
+  featuredReadingItems,
+  collectionGroups,
   gridImages,
-  subCategories,
-  confidence,
+  collection,
+  faqSection,
+  faqItems,
   pageMeta,
-  breadcrumb,
-} from "@/data/hybrid-hubs/western-prints.ts";
+  structuredAbout,
+  webPageAbout,
+  genre,
+  collectionAltPrefix,
+  hybridCarouselProps,
+} from '@/data/hybrid-hubs/western-prints.ts';
 
-// ─── Paths ───────────────────────────────────────────────────────────────────
-const pagePath = "/Western-Photography-Prints";
-const canonicalUrl = `https://www.k4studios.com${pagePath}`;
-const engrainedHref = "/Other/K4-Select-Series/Engrained";
-
-// ─── Structured Data ─────────────────────────────────────────────────────────
-// getBreadcrumbList already returns a JSON string — do not double-stringify
-const breadcrumbsJSON = getBreadcrumbList([
-  { name: "Home", item: "https://www.k4studios.com/" },
-  { name: "Western Photography Prints", item: canonicalUrl },
-]);
-
-// CollectionPage + ItemList (top 8 images)
-const collectionSchema = JSON.stringify(
-  {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "@id": `${canonicalUrl}#webpage`,
-    url: canonicalUrl,
-    name: "Western Photography Prints",
-    description: pageMeta.description,
-    inLanguage: "en",
-    isPartOf: {
-      "@type": "WebSite",
-      "@id": "https://www.k4studios.com/#website",
-      name: "K4 Studios",
-      url: "https://www.k4studios.com/",
-    },
-    about: [
-      { "@type": "Thing", name: "Western Photography Prints" },
-      { "@type": "Thing", name: "Limited Edition Western Photography" },
-      { "@type": "Thing", name: "Limited Edition Fine Art Prints" },
-      { "@type": "Thing", name: "Cowboy Photography Prints" },
-      { "@type": "Thing", name: "Narrative Western Art Prints" },
-      { "@type": "Thing", name: "Native American Western Portrait Prints" },
-    ],
-    mainEntity: {
-      "@type": "ItemList",
-      numberOfItems: gridImages.length,
-      itemListElement: gridImages.map((img, i) => ({
-        "@type": "ListItem",
-        position: i + 1,
-        item: {
-          "@type": "VisualArtwork",
-          name: img.title,
-          image: `https://www.k4studios.com/img/${img.id}/l.jpg`,
-          url: `https://www.k4studios.com${img.href}`,
-          creator: {
-            "@type": "Person",
-            name: "Wayne Heim",
-            url: "https://www.k4studios.com/wayne-heim-western-fine-art-photography",
-          },
-          artMedium: "Archival fine art print",
-        },
-      })),
-    },
-    creator: {
-      "@type": "Person",
-      name: "Wayne Heim",
-      url: "https://www.k4studios.com/wayne-heim-western-fine-art-photography",
-    },
-    author: {
-      "@type": "Person",
-      name: "Wayne Heim",
-      url: "https://www.k4studios.com/wayne-heim-western-fine-art-photography",
-    },
-    copyrightHolder: {
-      "@type": "Person",
-      name: "Wayne Heim",
-      url: "https://www.k4studios.com/wayne-heim-western-fine-art-photography",
-    },
-  },
-  null,
-  2
-);
-
-const structuredDataJSON = `[${collectionSchema}]`;
-
-// ─── OG ──────────────────────────────────────────────────────────────────────
-const ogImageUrl = `https://www.k4studios.com/img/${pageMeta.ogImage}/l.jpg`;
-const meta = {
-  title: pageMeta.title,
-  description: pageMeta.description,
-  keywords: 'Western photography prints, cowboy photography prints, black and white Western photography prints, frontier photography prints, narrative western art prints, Native American western portrait prints, Western fine art photography prints, archival Western prints, Wayne Heim',
-  'og:title': pageMeta.title,
-  "og:type": "website",
-  "og:image": ogImageUrl,
-  "og:image:width": "1024",
-  "og:image:height": "683",
-  "og:url": canonicalUrl,
-  'twitter:title': pageMeta.title,
-  "twitter:card": "summary_large_image",
-  "twitter:image": ogImageUrl,
-};
-
-// ─── Helpers ─────────────────────────────────────────────────────────────────
-const getProxySrc = (id: string, size: string) => `/img/${id}/${size}.jpg`;
+import { galleryData as colorGallery }
+  from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs';
 ---
 
-<CommercialLandingLayout
-  title={pageMeta.title}
-  breadcrumb={breadcrumb}
-  meta={meta}
-  structuredDataJSON={structuredDataJSON}
-  breadcrumbsJSON={breadcrumbsJSON}
->
-
-  <!-- ═══════ HERO ═══════ -->
-  <section slot="hero" class="cl-hero">
-    <h1 class="cl-hero__h1">{hero.heading}</h1>
-    {hero.paragraphs.map((p) => <p class="cl-hero__p" set:html={p} />)}
-    <a href={hero.ctaHref} class="cl-hero__cta">{hero.ctaLabel}</a>
-  </section>
-
-  <!-- ═══════ EDITIONS ═══════ -->
-  <section slot="editions" class="cl-editions">
-    <h2 class="cl-editions__h2">{editions.heading}</h2>
-    <p class="cl-editions__intro">{editions.intro}</p>
-    <ul class="cl-editions__list">
-      {editions.tiers.map((t) => (
-        <li class="cl-editions__tier">
-          <span class="cl-editions__icon">{t.icon}</span>
-          <div>
-            {t.name.includes("Engrained") ? (
-              <a href={engrainedHref} class="cl-editions__name-link">
-                <strong class="cl-editions__name">{t.name}</strong>
-              </a>
-            ) : (
-              <strong class="cl-editions__name">{t.name}</strong>
-            )}
-            <span class="cl-editions__desc">{t.description}</span>
-          </div>
-        </li>
-      ))}
-    </ul>
-  </section>
-
-  <!-- ═══════ GRID ═══════ -->
-  <div slot="grid" id="prints-grid" class="cl-grid-wrap">
-    <p class="cl-grid__intro">A curated selection of Western photography prints spanning cowboy portraits, black and white frontier scenes, narrative western art images, and Indigenous Western portraiture across K4 collector editions.</p>
-    <div class="cl-grid">
-      {gridImages.map((img) => (
-        <a href={img.href} class="cl-grid__tile" title={img.title}>
-          <div class="cl-grid__img-wrap">
-            <img
-              src={getProxySrc(img.id, "m")}
-              alt={img.alt}
-              loading="lazy"
-              width="400"
-              height="400"
-              class="cl-grid__img"
-            />
-            <span class="cl-grid__hover">View Details</span>
-          </div>
-          <p class="cl-grid__title">{img.title}</p>
-        </a>
-      ))}
-    </div>
-  </div>
-
-  <!-- ═══════ SUB-CATEGORIES ═══════ -->
-  <section slot="subcategories" class="cl-subcats">
-    <h2 class="cl-subcats__h2">{subCategories.heading}</h2>
-    <div class="cl-subcats__grid">
-      {subCategories.links.map((link) => (
-        <a href={link.href} class="cl-subcats__card">
-          <strong class="cl-subcats__title">{link.title}</strong>
-          <span class="cl-subcats__desc">{link.description}</span>
-        </a>
-      ))}
-    </div>
-  </section>
-
-  <!-- ═══════ PURCHASE CONFIDENCE ═══════ -->
-  <section slot="confidence" class="cl-confidence">
-    <h2 class="cl-confidence__h2">{confidence.heading}</h2>
-    <ul class="cl-confidence__list">
-      {confidence.points.map((pt) => (
-        <li class="cl-confidence__item">{pt}</li>
-      ))}
-    </ul>
-  </section>
-
-</CommercialLandingLayout>
-
-<style is:global>
-  /* ─── Hero ───────────────────────────────────────────────────────────────── */
-  .cl-hero {
-    max-width: 780px;
-    margin: 0 auto;
-    padding: 2rem 1.5rem 1.5rem;
-    text-align: center;
-    font-family: 'Glegoo', serif;
-  }
-  .cl-hero__h1 {
-    font-size: 1.85rem;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin: 0 0 1rem;
-    line-height: 1.25;
-  }
-  .cl-hero__p {
-    font-size: 0.97rem;
-    line-height: 1.75;
-    color: #3a3530;
-    margin: 0 0 0.75rem;
-    text-align: left;
-  }
-  .cl-hero__link {
-    color: #6d5b4a;
-    text-decoration: underline;
-    text-underline-offset: 2px;
-    transition: color 0.2s ease;
-  }
-  .cl-hero__link:hover {
-    color: #5a4a3b;
-  }
-  .cl-hero__cta {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.75rem 2rem;
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: #fff;
-    background: #6d5b4a;
-    border-radius: 6px;
-    text-decoration: none;
-    font-family: 'Glegoo', serif;
-    transition: background 0.2s ease, box-shadow 0.2s ease;
-    letter-spacing: 0.02em;
-  }
-  .cl-hero__cta:hover {
-    background: #5a4a3b;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  }
-
-  /* ─── Editions ───────────────────────────────────────────────────────────── */
-  .cl-editions {
-    max-width: 780px;
-    margin: 0 auto;
-    padding: 2rem 1.5rem;
-    font-family: 'Glegoo', serif;
-    border-top: 1px solid #e8e2da;
-  }
-  .cl-editions__h2 {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin: 0;
-    text-align: center;
-    line-height: 1.3;
-  }
-  .cl-editions__intro {
-    font-size: 0.92rem;
-    line-height: 1.65;
-    color: #5a5249;
-    display: block;
-    text-align: center;
-    margin: 0 auto 1rem;
-    max-width: 680px;
-  }
-  .cl-editions__list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  .cl-editions__tier {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.75rem;
-    padding: 0.85rem 0;
-    border-bottom: 1px solid #eee8e0;
-  }
-  .cl-editions__tier:last-child {
-    border-bottom: none;
-  }
-  .cl-editions__icon {
-    font-size: 1.3rem;
-    line-height: 1;
-    flex-shrink: 0;
-    width: 1.5rem;
-    text-align: center;
-    color: #6d5b4a;
-    margin-top: 0.15rem;
-  }
-  .cl-editions__name {
-    font-size: 1rem;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin-right: 0.5rem;
-  }
-  .cl-editions__name-link {
-    text-decoration: none;
-    color: inherit;
-  }
-  .cl-editions__name-link:hover .cl-editions__name {
-    text-decoration: underline;
-    text-underline-offset: 2px;
-  }
-  .cl-editions__desc {
-    font-size: 0.9rem;
-    line-height: 1.6;
-    color: #5a5249;
-  }
-
-  /* ─── Grid ───────────────────────────────────────────────────────────────── */
-  .cl-grid-wrap {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 1rem;
-  }
-  .cl-grid__intro {
-    font-size: 1.02rem;
-    font-weight: 700;
-    line-height: 1.65;
-    color: #5a5249;
-    text-align: center;
-    margin: 0 auto 1.25rem;
-    max-width: 640px;
-    font-family: 'Glegoo', serif;
-  }
-  .cl-grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 0.7rem;
-  }
-  .cl-grid__img-wrap {
-    position: relative;
-    overflow: hidden;
-    border-radius: 3px;
-    width: 100%;
-    padding-bottom: 100%; /* 1:1 square via padding hack — immune to Tailwind preflight */
-    background: #f3efe8;
-    border: 1px solid #e2dbd2;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-    transition: box-shadow 0.3s ease;
-  }
-  .cl-grid__tile:hover .cl-grid__img-wrap {
-    box-shadow: 0 3px 12px rgba(0,0,0,0.12);
-  }
-  .cl-grid__img {
-    position: absolute;
-    inset: 6px;
-    width: calc(100% - 12px) !important;
-    height: calc(100% - 12px) !important;
-    max-width: none !important;
-    object-fit: contain;
-    background: #f3efe8;
-    transition: transform 0.6s ease;
-    display: block;
-    filter: saturate(0.92);
-  }
-  .cl-grid__tile:hover .cl-grid__img {
-    transform: scale(1.04);
-    filter: saturate(1);
-  }
-  .cl-grid__hover {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0,0,0,0.35);
-    color: #fff;
-    font-size: 0.85rem;
-    font-weight: 600;
-    font-family: 'Glegoo', serif;
-    letter-spacing: 0.04em;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
-  }
-  .cl-grid__tile:hover .cl-grid__hover {
-    opacity: 1;
-  }
-  .cl-grid__tile {
-    text-decoration: none;
-    color: inherit;
-    display: grid;
-    grid-template-rows: auto 1.3em;
-    align-content: start;
-    width: 100%;
-    min-width: 0;
-  }
-  .cl-grid__title {
-    font-size: 0.78rem;
-    font-weight: 600;
-    color: #2c2c2c;
-    margin: 0.35rem 0 0;
-    text-align: center;
-    line-height: 1.3;
-    height: 1.3em;
-    min-width: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-family: 'Glegoo', serif;
-  }
-
-  @media (max-width: 900px) {
-    .cl-grid { grid-template-columns: repeat(3, 1fr); }
-  }
-  @media (max-width: 600px) {
-    .cl-grid { grid-template-columns: repeat(2, 1fr); gap: 0.5rem; }
-    .cl-grid__title { font-size: 0.72rem; }
-  }
-
-  /* ─── Sub-categories ─────────────────────────────────────────────────────── */
-  .cl-subcats {
-    max-width: 780px;
-    margin: 0 auto;
-    padding: 2rem 1.5rem;
-    font-family: 'Glegoo', serif;
-    border-top: 1px solid #e8e2da;
-  }
-  .cl-subcats__h2 {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin: 0 0 1.25rem;
-    text-align: center;
-    line-height: 1.3;
-  }
-  .cl-subcats__grid {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-  .cl-subcats__card {
-    display: block;
-    padding: 0.85rem 1rem;
-    border: 1px solid #e8e2da;
-    border-radius: 6px;
-    text-decoration: none;
-    color: inherit;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
-  }
-  .cl-subcats__card:hover {
-    border-color: #c4b8a8;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.08);
-  }
-  .cl-subcats__title {
-    display: block;
-    font-size: 0.97rem;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin-bottom: 0.2rem;
-  }
-  .cl-subcats__desc {
-    font-size: 0.85rem;
-    color: #6d6258;
-    line-height: 1.5;
-  }
-
-  /* ─── Purchase Confidence ────────────────────────────────────────────────── */
-  .cl-confidence {
-    max-width: 780px;
-    margin: 0 auto;
-    padding: 2rem 1.5rem 2.5rem;
-    font-family: 'Glegoo', serif;
-    border-top: 1px solid #e8e2da;
-    text-align: center;
-  }
-  .cl-confidence__h2 {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin: 0 0 1.25rem;
-    line-height: 1.3;
-  }
-  .cl-confidence__list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.6rem 2rem;
-    text-align: left;
-    max-width: 580px;
-    margin: 0 auto;
-  }
-  .cl-confidence__item {
-    font-size: 0.9rem;
-    line-height: 1.6;
-    color: #3a3530;
-    padding-left: 1.2rem;
-    position: relative;
-  }
-  .cl-confidence__item::before {
-    content: "\2713";
-    position: absolute;
-    left: 0;
-    color: #6d5b4a;
-    font-weight: 700;
-  }
-
-  @media (max-width: 600px) {
-    .cl-hero__h1 { font-size: 1.45rem; }
-    .cl-confidence__list { grid-template-columns: 1fr; }
-    .cl-subcats, .cl-editions, .cl-confidence {
-      padding-left: 1rem;
-      padding-right: 1rem;
-    }
-  }
-</style>
+<KeywordLandingPage
+  pagePath={pagePath}
+  imageSectionPath={imageSectionPath}
+  gridBasePath={gridBasePath}
+  landing={landing}
+  breadcrumbItems={breadcrumbItems}
+  storyBlocks={storyBlocks}
+  faqItems={faqItems}
+  explorationIntro="Western Art Discovery"
+  explorationPaths={explorationPaths}
+  featuredReadingTitle={featuredReadingTitle}
+  featuredReadingIntro={featuredReadingIntro}
+  featuredReadingItems={featuredReadingItems}
+  collectionGroups={collectionGroups}
+  gridImages={gridImages}
+  collection={collection}
+  faqSection={faqSection}
+  galleryData={colorGallery}
+  slides={[]}
+  meta={{
+    title: pageMeta.title,
+    description: pageMeta.description,
+    ogDescription: pageMeta.description,
+  }}
+  structuredAbout={structuredAbout}
+  webPageAbout={webPageAbout}
+  genre={genre}
+  collectionAltPrefix={collectionAltPrefix}
+  heroVisualMode="hybridCarousel"
+  hybridCarouselProps={hybridCarouselProps}
+/>
