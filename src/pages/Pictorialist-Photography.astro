@@ -28,7 +28,8 @@ import '@/styles/global.css';
 // DYNAMIC IMAGE FEATHERING LOGIC
 // ----------------------
 
-const sectionPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History";
+const pagePath = "/Pictorialist-Photography";
+const gallerySectionPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History";
 
 type StorySection = {
   title?: string;
@@ -47,15 +48,22 @@ const landingKeywords = Array.isArray((landingWestern as any)?.keywords)
   ? (landingWestern as any).keywords
   : [];
 
+type NavEntry = {
+  href?: string;
+  children?: NavEntry[];
+};
+
 // --- COLLECT ALL DESCENDANT GALLERIES --- //
-function collectGalleryHrefs(node) {
-  let hrefs = [];
+function collectGalleryHrefs(node: NavEntry | null | undefined): string[] {
+  let hrefs: string[] = [];
+  if (!node) return hrefs;
   if (node.href && node.href.startsWith('/Galleries/')) hrefs.push(node.href);
   if (node.children) node.children.forEach(child => hrefs.push(...collectGalleryHrefs(child)));
   return hrefs;
 }
 
-function findNavEntry(nav, url) {
+function findNavEntry(nav: NavEntry[] | undefined, url: string): NavEntry | null {
+  if (!nav) return null;
   for (const entry of nav) {
     if (entry.href === url) return entry;
     if (entry.children) {
@@ -66,17 +74,17 @@ function findNavEntry(nav, url) {
   return null;
 }
 
-const landingNav = findNavEntry(siteNav, sectionPath);
+const landingNav = findNavEntry(siteNav as NavEntry[], gallerySectionPath);
 const galleryPaths = landingNav ? collectGalleryHrefs(landingNav) : [];
 
 const allGalleryData = import.meta.glob<{ galleryData?: any[] }>('@/data/Galleries/**/*.mjs', { eager: true });
-const galleryDatas = galleryPaths.map(path => {
+const galleryDatas = galleryPaths.map((path: string) => {
   const filePath = `@/data/Galleries${path.replace(/^\/Galleries/, "")}.mjs`;
   return allGalleryData[filePath]?.galleryData ?? [];
 });
 
 const featheredImages = getSideImages({
-  sectionPath,
+  sectionPath: gallerySectionPath,
   headingCount: mobileCount,
   poolMultiplier: 3
 });
@@ -87,7 +95,7 @@ const structuredData = getStructuredData({
   data: {
     title: landingWestern.title,
     description: landingDescription,
-    url: `https://k4studios.com${sectionPath}`,
+    url: `https://k4studios.com${pagePath}`,
     keywords: landingKeywords,
     copyrightNotice: "© Wayne Heim"
   },
@@ -103,9 +111,9 @@ const structuredData = getStructuredData({
 });
 
 // 🟢 OG/Twitter Meta Helper (auto-fills .ogUrl/.twitterUrl fields)
-const landingMeta = getLandingMeta(sectionPath);
-if (!landingMeta.ogUrl) landingMeta.ogUrl = `https://k4studios.com${sectionPath}`;
-if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${sectionPath}`;
+const landingMeta = getLandingMeta(pagePath);
+if (!landingMeta.ogUrl) landingMeta.ogUrl = `https://k4studios.com${pagePath}`;
+if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${pagePath}`;
 ---
 
 <!-- ✅ JSON-LD Structured Data for SEO -->
@@ -213,10 +221,7 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
           {landingWestern.subtitle}
         </h2>
         <p class="page-summary fade-in reveal-on-scroll">
-          Pictorialist photography is an artistic movement that began in the late nineteenth century and continues today through modern painterly fine art photography.
-        </p>
-        <p class="page-context-link fade-in reveal-on-scroll">
-          In the American West, that legacy continues when a single frame is shaped to carry atmosphere, history, and implied story rather than record alone.
+          Pictorialist photography began as a fine art movement in the late nineteenth century and continues today through modern pictorialism, where photographers like Wayne Heim use atmosphere, interpretation, and painterly control to create authored images rather than simple records. In the American West, that legacy continues when a single frame is shaped to carry atmosphere, history, and implied story rather than record alone.
         </p>
       </div>
     </section>
@@ -253,7 +258,7 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
           ))}
         </section>
 
-        <MobileStoryImages client:only="react" images={sanitizeForClient(featheredImages)} displayCount={mobileCount} />
+        <MobileStoryImages client:only="react" images={sanitizeForClient(featheredImages) as any} displayCount={mobileCount} />
       </div>
 
       <div class="sidebar-column hidden md:block">
@@ -261,7 +266,7 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
           <LandingRightImages
             client:load
             heading="Collection Samples"
-            images={featheredImages}
+            images={featheredImages as any}
             displayCount={6}
           />
         </div>
@@ -287,7 +292,22 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
       }
     });
   </script>
-</BaseLayout>
+  <style is:global>
+    .carousel-fade {
+      min-height: 410px !important;
+    }
+    .carousel-trim--bottom {
+      bottom: 4px !important;
+    }
+    @media (max-width: 768px) {
+      .carousel-fade {
+        min-height: 220px !important;
+      }
+      .carousel-trim--bottom {
+        bottom: 4px !important;
+      }
+    }
+  </style>
 
 <style>
   ul {
@@ -458,3 +478,4 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
     visibility: visible;
   }
 </style>
+</BaseLayout>

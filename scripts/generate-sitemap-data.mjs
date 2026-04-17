@@ -58,6 +58,7 @@ const EXCLUDE_PATTERNS = [
   /\/Test-show/i,
   /\/demo-show/i,
   /\/Template\//i,
+  /^\/Other\/Historical-Reenactment-Photography\/?$/,
   /backup$/i,
   /copy$/i,
 ];

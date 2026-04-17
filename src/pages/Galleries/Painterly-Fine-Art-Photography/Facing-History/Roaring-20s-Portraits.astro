@@ -81,6 +81,8 @@ function getProxySrc(imageId: string, size: string = 'm'): string {
 // Pick first feathered image for stability (swap to random if you want rotation)
 const landingImg = featheredImages[0];
 const landingImgUrl = landingImg?.id ? makeAbsoluteUrl(getProxySrc(landingImg.id, 'l')) : '';
+const landingDescription = (landingWestern as any).description || landingWestern.subtitle;
+const pageTitle = "1920s Portraits – Roaring 20s & Jazz Age Photography by Wayne Heim";
 
 const landingMeta = getLandingMeta(sectionPath, landingImgUrl);
 if (!landingMeta.ogUrl) landingMeta.ogUrl = `https://k4studios.com${sectionPath}`;
@@ -93,7 +95,7 @@ const structuredData = getStructuredData({
   type: "gallery",
   data: {
     title: landingWestern.title,
-    description: landingWestern.subtitle || landingWestern.description,
+    description: landingDescription,
     url: `https://k4studios.com${sectionPath}`,
     keywords: landingWestern.keywords || [],
     copyrightNotice: "© Wayne Heim"
@@ -110,7 +112,8 @@ const structuredData = getStructuredData({
 });
 ---
 <BaseLayout
-  title={`${landingWestern.title} – ${landingWestern.subtitle}`}
+  title={pageTitle}
+  description={landingDescription}
   meta={landingMeta}
   structuredDataJSON={structuredData}
 >
@@ -142,6 +145,9 @@ const structuredData = getStructuredData({
         <h2 class="page-subtitle fade-in reveal-on-scroll">
           {landingWestern.subtitle}
         </h2>
+        <p class="page-summary fade-in reveal-on-scroll">
+          {landingDescription}
+        </p>
       </div>
     </section>
 
@@ -313,6 +319,16 @@ ul li::marker {
       font-weight: 400;
       color: #6d5b4a;
       opacity: .9;
+    }
+
+    .section-heading .page-summary {
+      font-size: 0.92rem;
+      font-weight: 400;
+      color: #7a6a5a;
+      opacity: .88;
+      width: min(100%, 780px);
+      margin: 0.55rem auto 0;
+      line-height: 1.5;
     }
 
     .story-section {

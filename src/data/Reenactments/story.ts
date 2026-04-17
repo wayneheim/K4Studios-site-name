@@ -4,7 +4,8 @@ export const painterlyStory = [
   {
     title: "What Is Historical Reenactment Photography?",
     paragraphs: [
-      `Historical reenactment photography is the practice of documenting and artistically interpreting living history events—public gatherings where participants portray historical figures, re-create battles, and demonstrate period crafts, clothing, and daily life. At its best, reenactment photography captures not just what happened, but what it felt like to be there.`,
+      `At K4 Studios, Wayne Heim approaches historical reenactment photography as the practice of documenting and artistically interpreting living history events—public gatherings where participants portray historical figures, re-create battles, and demonstrate period crafts, clothing, and daily life. At its best, reenactment photography captures not just what happened, but what it felt like to be there.`,
+      `Historical reenactment photography, reenactor photography, and living history photography all overlap, but the strongest work does more than record costumes or action. It translates atmosphere, gesture, and period truth into images that carry both historical detail and emotional weight.`,
       `Historical reenactments themselves have a long, rich lineage—stretching back at least to Roman times, when epic battles were restaged in vast amphitheaters for the public to witness. Today's living history events continue that impulse to make the past present, giving audiences a visceral, multi-sensory way to learn and remember.`
     ]
   },

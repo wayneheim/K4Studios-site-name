@@ -102,7 +102,38 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
     twitterDescription:
       "Fine art reenactment photography—Civil War, WWII, and frontier portraits by Wayne Heim.",
     twitterImage: "/og/historical-reenactment.jpg",
+    canonicalUrl: "/Historical-Reenactment-Photography",
+    ogUrl: "https://www.k4studios.com/Historical-Reenactment-Photography",
+    twitterUrl: "https://www.k4studios.com/Historical-Reenactment-Photography",
     keywords: "historical reenactment photography, fine art reenactment photography, reenactor portraits, living history photography, Civil War reenactment, WWII reenactment, Wayne Heim",
+  },
+
+  "/Historical-Reenactment-Photography": {
+    ogTitle: "Historical Reenactment Photography & Reenactor Portraits – Wayne Heim",
+    ogDescription:
+      "Historical reenactment photography, reenactor portraits, and living history photography covering Civil War, WWII, and frontier events through painterly, story-driven fine art.",
+    ogImage: "/og/historical-reenactment.jpg",
+    ogType: "article",
+    twitterCard: "summary_large_image",
+    twitterTitle: "Historical Reenactment Photography & Reenactor Portraits",
+    twitterDescription:
+      "Living history photography, reenactor portraits, and fine art historical scenes from Civil War, WWII, and frontier events by Wayne Heim.",
+    twitterImage: "/og/historical-reenactment.jpg",
+    keywords: "historical reenactment photography, reenactor photography, living history photography, reenactor portraits, Civil War reenactment photography, WWII reenactment photography, frontier reenactment photography, Wayne Heim",
+  },
+
+  "/Pictorialist-Photography": {
+    ogTitle: "Pictorialist Photography | Modern Pictorialism by Wayne Heim",
+    ogDescription:
+      "Pictorialist photography explained from its nineteenth-century roots to modern pictorialism, painterly interpretation, and authored fine art photography by Wayne Heim.",
+    ogImage: "/og/painterly.jpg",
+    ogType: "article",
+    twitterCard: "summary_large_image",
+    twitterTitle: "Pictorialist Photography | Modern Pictorialism",
+    twitterDescription:
+      "What pictorialist photography means today, how modern pictorialism works, and how Wayne Heim carries that painterly fine art tradition forward.",
+    twitterImage: "/og/painterly.jpg",
+    keywords: "pictorialist photography, modern pictorialism photography, contemporary pictorialist photography, painterly photography, pictorialism, Wayne Heim",
   },
 
   "/Other/Series": {
@@ -205,17 +236,18 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
 
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits": {
     ogTitle:
-      "Roaring 20s Portraits – Jazz Age Photography by Wayne Heim",
+      "1920s Portraits | Roaring 20s & Jazz Age Photography by Wayne Heim",
     ogDescription:
-      "Painterly portraits of the Roaring 20s—flappers, gangsters, musicians, and speakeasy characters captured with cinematic atmosphere and narrative depth.",
+      "1920s portraits by Wayne Heim featuring Roaring 20s and Jazz Age flappers, gangsters, G-men, musicians, and speakeasy characters in painterly fine art photography.",
     ogImage: "/og/roaring20s.jpg",
     ogType: "website",
     twitterCard: "summary_large_image",
     twitterTitle:
-      "Roaring 20s Portraits – Jazz Age Photography",
+      "1920s Portraits | Roaring 20s & Jazz Age Photography",
     twitterDescription:
-      "Painterly Jazz Age portraits—flappers, speakeasies, and gangsters.",
+      "1920s portraits, Jazz Age characters, flappers, gangsters, and speakeasy figures by Wayne Heim.",
     twitterImage: "/og/roaring20s.jpg",
+    keywords: "1920s portraits, 1920s portrait photography, Roaring 20s portraits, Jazz Age portraits, flapper portraits, speakeasy portraits, gangster portraits, Wayne Heim",
   },
 
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits": {
@@ -316,18 +348,18 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
 
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII": {
     ogTitle:
-      "WWII Photography – Portraits of the Greatest Generation",
+      "WWII Photography | World War II Portraits, Battle Scenes, and Machines",
     ogDescription:
-      "Painterly WWII portraits capturing sacrifice, resilience, courage, and the emotional truth of wartime experience.",
+      "Painterly WWII photography by Wayne Heim featuring World War II portraits, battle scenes, and military machines.",
     ogImage: "/og/wwii.jpg",
     ogType: "website",
     twitterCard: "summary_large_image",
     twitterTitle:
-      "WWII Photography – Portraits of the Greatest Generation",
+      "WWII Photography | Portraits, Battle Scenes, and Machines",
     twitterDescription:
-      "Painterly WWII portraits and historical storytelling by Wayne Heim.",
+      "Painterly WWII photography spanning portraits, battle scenes, and military machines.",
     twitterImage: "/og/wwii.jpg",
-    keywords: "WWII photography, World War 2 photography, Greatest Generation portraits, WWII fine art, WWII portraits, military photography, Wayne Heim",
+    keywords: "WWII photography, World War II photography, World War 2 photography, WWII themed photography, WWII fine art photography, WWII battle photography, WWII portraits, WWII military machines, WWII reenactment photography, Wayne Heim",
   },
 
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War": {
@@ -360,7 +392,7 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
     twitterImage: "/og/wwii-portraits.jpg",
   },
 
-  "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Machines": {
+  "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines": {
     ogTitle:
       "Men & Machines – WWII Military Photography by Wayne Heim",
     ogDescription:

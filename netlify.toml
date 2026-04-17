@@ -357,8 +357,14 @@ status = 301
 force = true
 
 [[redirects]]
+from = "/Other/Historical-Reenactment-Photography*"
+to = "/Historical-Reenactment-Photography"
+status = 301
+force = true
+
+[[redirects]]
 from = "/historical-reenactment-photography*"
-to = "/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments"
+to = "/Historical-Reenactment-Photography"
 status = 301
 force = true
 

@@ -664,7 +664,7 @@ export const siteNav = [
     },
     {
       "label": "Historical Reenactment Photography",
-      "href": "/Other/Historical-Reenactment-Photography",
+      "href": "/Historical-Reenactment-Photography",
       "code": "O-S3",
       "slug": "historical-reenactment-photography",
       "type": "collection"

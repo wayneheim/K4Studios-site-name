@@ -70,6 +70,14 @@ export const facingHistoryStory = [
     ]
   },
 
+  {
+    subhead: "What Is Modern Pictorialism Photography?",
+    paragraphs: [
+      `Modern pictorialism photography is the contemporary continuation of the original pictorialist idea: photography as interpretation rather than mere evidence. The tools may be digital, but the standard remains artistic authorship, tonal control, atmosphere, and emotional intent.`,
+      `In practice, modern pictorialism is not about adding a filter to make an image look old. It is about building a photograph so mood, structure, and suggestion carry as much weight as subject matter. That is where Wayne Heim’s painterly fine art photography enters the conversation — not as imitation of a historic style, but as a living extension of the same visual philosophy.`
+    ]
+  },
+
   /* 6: Pictorialism —> Painterly Photography Bridge (NEW) */
   {
     subhead: "From Pictorialism to Painterly Photography",

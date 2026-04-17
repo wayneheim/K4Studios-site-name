@@ -28,8 +28,9 @@ import '@/styles/global.css';
 // DYNAMIC LOGIC SECTION
 // ----------------------
 
-const sectionPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History";
-const meta = getLandingMeta(sectionPath);
+const pagePath = "/Historical-Reenactment-Photography";
+const gallerySectionPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History";
+const meta = getLandingMeta(pagePath);
 
 type StorySection = {
   title?: string;
@@ -37,6 +38,11 @@ type StorySection = {
   tagline?: string;
   paragraphs?: string[];
   list?: string[];
+};
+
+type NavEntry = {
+  href?: string;
+  children?: NavEntry[];
 };
 
 const westernStorySections = westernStory as unknown as StorySection[];
@@ -48,7 +54,8 @@ const landingKeywords = Array.isArray((landingWestern as any)?.keywords)
 
 const headingCount = westernStorySections.filter((block, i) => i > 0 && block.subhead).length;
 
-function findNavEntry(nav, url) {
+function findNavEntry(nav: NavEntry[] | undefined, url: string): NavEntry | null {
+  if (!nav) return null;
   for (const entry of nav) {
     if (entry.href === url) return entry;
     if (entry.children) {
@@ -58,14 +65,14 @@ function findNavEntry(nav, url) {
   }
   return null;
 }
-function recursivelyGatherAllGalleryHrefs(node) {
-  let result = [];
+function recursivelyGatherAllGalleryHrefs(node: NavEntry | null | undefined): string[] {
+  let result: string[] = [];
   if (!node) return result;
   if (node.href && node.href.startsWith('/Galleries/')) result.push(node.href);
   if (node.children) node.children.forEach(child => result = result.concat(recursivelyGatherAllGalleryHrefs(child)));
   return result;
 }
-const landingNav = findNavEntry(siteNav, sectionPath);
+const landingNav = findNavEntry(siteNav, gallerySectionPath);
 const galleryPaths = landingNav
   ? recursivelyGatherAllGalleryHrefs(landingNav)
   : [];
@@ -76,7 +83,7 @@ const galleryDatas = galleryPaths.map(path => {
 });
 
 const featheredImages = getSideImages({
-  sectionPath,
+  sectionPath: gallerySectionPath,
   headingCount,
   poolMultiplier: 3
 });
@@ -86,7 +93,7 @@ const structuredData = getStructuredData({
   data: {
     title: landingWestern.title,
     description: landingDescription,
-    url: `https://k4studios.com${sectionPath}`,
+    url: `https://k4studios.com${pagePath}`,
     keywords: landingKeywords,
     copyrightNotice: "© Wayne Heim"
   },
@@ -107,7 +114,7 @@ const structuredData = getStructuredData({
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Historical Reenactment Photography: Capturing Living History From Battlefields to Frontier Towns",
+  "headline": "Historical Reenactment Photography & Reenactor Portraits by Wayne Heim",
   "author": {
     "@type": "Person",
     "name": "Wayne Heim"
@@ -120,7 +127,7 @@ const structuredData = getStructuredData({
       "url": "https://www.k4studios.com/images/k4-logo.png"
     }
   },
-  "description": "A comprehensive guide to historical reenactment photography—what living history events look like, how to photograph reenactors, and where to find events near you.",
+  "description": "A guide to historical reenactment photography, reenactor portraits, and living history scenes by Wayne Heim, covering Civil War, WWII, and frontier events.",
   "mainEntityOfPage": "https://www.k4studios.com/Historical-Reenactment-Photography"
 }
 </script>
@@ -206,7 +213,7 @@ const structuredData = getStructuredData({
           {landingWestern.subtitle}
         </h2>
         <p class="page-summary fade-in reveal-on-scroll">
-          Historical reenactment photography captures living history events and the people who bring the past to life—from Civil War battlefields to Wild West frontier towns.
+          At K4 Studios, Wayne Heim uses historical reenactment photography, reenactor portraits, and living history scenes to document Civil War, WWII, and frontier events as story-driven fine art grounded in real people, period atmosphere, and historical memory.
         </p>
       </div>
     </section>
@@ -237,7 +244,7 @@ const structuredData = getStructuredData({
           ))}
         </section>
 
-        <MobileStoryImages client:only="react" images={sanitizeForClient(featheredImages)} displayCount={headingCount} />
+        <MobileStoryImages client:only="react" images={sanitizeForClient(featheredImages) as any} displayCount={headingCount} />
       </div>
 
       <div class="sidebar-column hidden md:block">
@@ -245,7 +252,7 @@ const structuredData = getStructuredData({
           <LandingRightImages
             client:load
             heading="Collection Samples"
-            images={featheredImages}
+            images={featheredImages as any}
             displayCount={6}
           />
         </div>
@@ -260,6 +267,26 @@ const structuredData = getStructuredData({
         </div>
       </div>
       <label for="faq-toggle" class="more-toggle-label"></label>
+    </section>
+
+    <section class="story-layout pb-12">
+      <div class="text-column">
+        <section class="story-section" style="padding-top: 0.5rem; padding-bottom: 0;">
+          <article class="story-block" style="margin-bottom: 0;">
+            <h3 class="slide-in-left">Further Reading</h3>
+            <p class="reveal-on-scroll">
+              For a third-party feature on Wayne Heim's living history and reenactor photography, see
+              <a href="https://www.legendsofamerica.com/keeping-the-frontier-alive/?fbclid=IwY2xjawOSn35leHRuA2FlbQIxMQBzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEeLYVToeFshUxqBNTpC4V5Uf3ZdTL8gjDsGTq1NSwlHlwKIe77lSP1r6mVpf8_aem_2PYmc4kV8ZI3WgK4_1Y6_w" target="_blank" rel="noopener noreferrer">Legends of America</a>.
+            </p>
+            <p class="reveal-on-scroll">
+              If you are here to browse the artwork rather than the definition, start with
+              <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Facing History</a>
+              or review
+              <a href="/Other/Print-Options">print and edition options</a>.
+            </p>
+          </article>
+        </section>
+      </div>
     </section>
 
     <SiteFooter class="pt-8 pb-12" />

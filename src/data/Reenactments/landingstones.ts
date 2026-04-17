@@ -1,8 +1,20 @@
 export const landingWestern = {
     //Painterly Photogrqphy
-  title: "Historical Reenactment Events & Reenactor Photography",
-  subtitle: "From Civil War Battlefields to Wild West Frontier Towns",
+  title: "Historical Reenactment Photography & Reenactor Portraits",
+  subtitle: "Living History from Civil War Fields to Frontier Towns",
    breadcrumb: "Historical Reenactment Photography",
+  description:
+    "Historical reenactment photography, reenactor portraits, and living history scenes by Wayne Heim spanning Civil War, WWII, and frontier events.",
+  keywords: [
+    "historical reenactment photography",
+    "reenactor photography",
+    "living history photography",
+    "reenactor portraits",
+    "Civil War reenactment photography",
+    "WWII reenactment photography",
+    "frontier reenactment photography",
+    "Wayne Heim",
+  ],
 
   tombstones: [
     {

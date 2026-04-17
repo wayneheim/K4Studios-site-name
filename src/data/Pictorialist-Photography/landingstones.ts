@@ -3,6 +3,16 @@ export const landingWestern = {
   title: "Pictorialist Photography",
   subtitle: "From 19th-Century Movement to Modern Painterly Fine Art Photography",
    breadcrumb: "Pictorialist Photography",
+  description:
+    "Pictorialist photography from its nineteenth-century roots to modern pictorialism, painterly interpretation, and authored fine art photography by Wayne Heim.",
+  keywords: [
+    "pictorialist photography",
+    "modern pictorialism photography",
+    "contemporary pictorialist photography",
+    "painterly photography",
+    "fine art photography movement",
+    "Wayne Heim",
+  ],
 
   tombstones: [
     {
