@@ -244,16 +244,16 @@ const meta = {
         <a href="/Contact" class="text-[#8b0000] hover:underline">contact the studio directly</a>.
       </p>
 
-      <h3 class="text-xl font-semibold text-[#2c2c2c] mt-8 mb-3">Complete Image Index</h3>
+      <h3 class="text-xl font-semibold text-[#2c2c2c] mt-8 mb-3">Full Collection Pages</h3>
 
       <p>
-        For a full browsable grid of every image in each sub-collection, visit the dedicated index pages:
+        For a full browsable grid of every image in each sub-collection, visit the dedicated collection pages:
       </p>
 
       <ul class="list-disc pl-6">
         {subCollections.map((col) => (
           <li>
-            <a href={col.allUrl} class="text-[#8b0000] hover:underline">{col.name} – Full Index</a>
+            <a href={col.allUrl} class="text-[#8b0000] hover:underline">{col.name} – Full Collection</a>
             <span class="text-[#888]"> ({col.count} images)</span>
           </li>
         ))}

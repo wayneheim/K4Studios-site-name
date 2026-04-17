@@ -1,7 +1,7 @@
 ---
 export const prerender = true;
 /**
- * Dynamic /all - Complete Gallery Index Pages
+ * Dynamic /all - Gallery Collection Pages
  * 
  * Generated at build time for every gallery-source in siteNav.
  * This replaces individual /all.astro files per gallery.
@@ -9,9 +9,20 @@ export const prerender = true;
 import Footer from "@/components/Footer.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { siteNav } from "@/data/siteNav.ts";
+import {
+  getGalleryCollectionContext,
+  getGalleryCollectionLabel,
+  resolveGallerySourceHref,
+} from "@/utils/galleryCollectionNav.ts";
 
 // ✅ Glob import all gallery data at build time
 const galleryModules = import.meta.glob('/src/data/**/*.mjs', { eager: true });
+const collectionContentModules = {
+  ...import.meta.glob('/src/data/Galleries/**/landingstones.ts', { eager: true }),
+  ...import.meta.glob('/src/data/Galleries/**/*EntranceData.ts', { eager: true }),
+  ...import.meta.glob('/src/data/Other/**/landingstones.ts', { eager: true }),
+  ...import.meta.glob('/src/data/Other/**/*EntranceData.ts', { eager: true }),
+};
 
 // ✅ Generate static paths for all galleries
 export function getStaticPaths() {
@@ -57,7 +68,17 @@ export function getStaticPaths() {
 }
 
 // ✅ Get props from static path
-const { galleryHref, galleryLabel, breadcrumbLabels, breadcrumbHrefs } = Astro.props;
+const {
+  galleryHref,
+  galleryLabel,
+  breadcrumbLabels,
+  breadcrumbHrefs,
+}: {
+  galleryHref: string;
+  galleryLabel: string;
+  breadcrumbLabels: string[];
+  breadcrumbHrefs: string[];
+} = Astro.props;
 
 // ✅ Build data path from href (href + .mjs = data file)
 const dataPath = `/src/data${galleryHref}.mjs`;
@@ -82,16 +103,25 @@ const parentUrl = `https://www.k4studios.com${basePath}`;
 // ✅ Build gallery title from breadcrumb
 const galleryTitle = breadcrumbLabels.slice(-2).join(' – '); // Last 2 levels
 
-// ✅ SEO-optimized title and description
-const seoTitle = `${galleryTitle} Collection (${imageCount} Images) | Wayne Heim Fine Art`;
-const seoDescription = `Browse the full ${galleryTitle} collection by Wayne Heim. Explore all ${imageCount} fine art photographs with stories and collector information.`;
-
 // ✅ Text cleaners
 const cleanForDisplay = (val = "") =>
   String(val)
     .replace(/[\u0000-\u001F]+/g, " ")
     .replace(/\r?\n|\r/g, " ")
     .trim();
+
+const stripHtml = (val = "") =>
+  String(val)
+    .replace(/<[^>]*>/g, " ")
+    .replace(/&nbsp;/gi, " ");
+
+const cleanForPlainText = (val = "") => cleanForDisplay(stripHtml(val).replace(/\s+/g, " "));
+
+const truncateText = (text = "", maxLen = 240) => {
+  if (!text) return "";
+  if (text.length <= maxLen) return text;
+  return text.slice(0, maxLen).replace(/\s+\S*$/, "") + "…";
+};
 
 const truncateStory = (story: string, maxLen = 150) => {
   if (!story) return "";
@@ -100,11 +130,160 @@ const truncateStory = (story: string, maxLen = 150) => {
   return cleaned.slice(0, maxLen).replace(/\s+\S*$/, "") + "…";
 };
 
+const getContentRecord = (mod: any) => {
+  if (!mod || typeof mod !== 'object') return null;
+
+  const directCandidates = [
+    mod.entranceData,
+    mod.landingWestern,
+    mod.landingTraditional,
+    mod.landingWWII,
+    mod.landingCowboy,
+    mod.default,
+  ].filter(Boolean);
+
+  for (const candidate of directCandidates) {
+    if (candidate && typeof candidate === 'object') return candidate;
+  }
+
+  return Object.values(mod).find(
+    (value: any) => value && typeof value === 'object' && (value.title || value.subtitle || value.description),
+  ) || null;
+};
+
+const normalizeToken = (value = "") => String(value).toLowerCase().replace(/[^a-z0-9]/g, '');
+
+const scoreEntranceCandidate = (filePath: string, leafSegment: string) => {
+  const fileName = normalizeToken(filePath.split('/').pop()?.replace(/\.ts$/, '') || '');
+  const leaf = normalizeToken(leafSegment);
+  let score = 0;
+
+  if (leaf && fileName.includes(leaf)) score += 10;
+  if (leaf.includes('blackwhite') || leaf.includes('bw')) {
+    if (fileName.includes('bw') || fileName.includes('black')) score += 6;
+  }
+  if (leaf.includes('color')) {
+    if (fileName.includes('color')) score += 6;
+  }
+  if (leaf.includes('na') && fileName.includes('na')) score += 5;
+  if (leaf.includes('gallery') && fileName.includes('color')) score += 2;
+
+  return score;
+};
+
+const findEntranceRecord = (href: string) => {
+  const dirPath = href.slice(0, href.lastIndexOf('/'));
+  const leafSegment = href.split('/').pop() || '';
+  const dirPrefix = `/src/data${dirPath}/`;
+
+  const candidates = Object.entries(collectionContentModules)
+    .filter(([filePath]) => filePath.startsWith(dirPrefix) && filePath.endsWith('EntranceData.ts'))
+    .sort((a, b) => scoreEntranceCandidate(b[0], leafSegment) - scoreEntranceCandidate(a[0], leafSegment));
+
+  return candidates.length ? getContentRecord(candidates[0][1]) : null;
+};
+
+const findNearestLandingRecord = (href: string) => {
+  let currentPath = href;
+
+  while (currentPath && currentPath !== '/') {
+    const candidatePath = `/src/data${currentPath}/landingstones.ts`;
+    if (collectionContentModules[candidatePath]) {
+      return getContentRecord(collectionContentModules[candidatePath]);
+    }
+    currentPath = currentPath.slice(0, currentPath.lastIndexOf('/'));
+  }
+
+  return null;
+};
+
+const collectionContext = getGalleryCollectionContext(galleryHref);
+const entranceRecord = findEntranceRecord(galleryHref);
+const landingRecord = findNearestLandingRecord(galleryHref);
+
+const collectionSubtitle = cleanForPlainText(
+  entranceRecord?.subtitle ||
+  landingRecord?.subtitle ||
+  'Fine art photography by Wayne Heim'
+);
+
+const collectionLead = cleanForPlainText(
+  entranceRecord?.description ||
+  landingRecord?.description ||
+  landingRecord?.subtitle ||
+  `Browse the full ${galleryTitle} collection by Wayne Heim.`
+);
+
+const collectionSupportFallback = `This collection page keeps all ${imageCount} visible works in one browseable sequence and links each image to its full story page, collector notes, and image-level detail.`;
+const collectionSupport = (() => {
+  const sourceText = cleanForPlainText(entranceRecord?.details || landingRecord?.description || '');
+  if (!sourceText || sourceText === collectionLead) return collectionSupportFallback;
+  return truncateText(sourceText, 340);
+})();
+
+// ✅ SEO-optimized title and description
+const seoTitle = `${galleryTitle} Collection (${imageCount} Images) | Wayne Heim Fine Art`;
+const seoDescription = truncateText(
+  `${collectionLead} Browse all ${imageCount} images in the full collection.`,
+  160,
+);
+
+const buildRelatedDescription = (href: string) => {
+  const resolvedHref = resolveGallerySourceHref(href);
+  const relatedEntrance = findEntranceRecord(resolvedHref);
+  const relatedLanding = findNearestLandingRecord(resolvedHref);
+  const summary = cleanForPlainText(
+    relatedEntrance?.description || relatedLanding?.description || relatedLanding?.subtitle || ''
+  );
+
+  return truncateText(
+    summary || `Browse the full ${getGalleryCollectionLabel(resolvedHref)} collection.`,
+    145,
+  );
+};
+
+const relatedCollectionLinks = (() => {
+  const links: Array<{ href: string; title: string; description: string; eyebrow: string }> = [];
+
+  if (collectionContext.parent?.href) {
+    links.push({
+      href: collectionContext.parent.href,
+      title: `${collectionContext.parent.label} Overview`,
+      description: `Return to the ${collectionContext.parent.label} overview for curated entry points and broader context.`,
+      eyebrow: 'Overview',
+    });
+  }
+
+  for (const sibling of collectionContext.siblingGallerySources.slice(0, 3)) {
+    const siblingHref = resolveGallerySourceHref(sibling.href);
+    const siblingTitle = `${getGalleryCollectionLabel(siblingHref)} Collection`;
+    links.push({
+      href: `${siblingHref}/all`,
+      title: siblingTitle,
+      description: buildRelatedDescription(siblingHref),
+      eyebrow: 'Sibling Collection',
+    });
+  }
+
+  for (const siblingCollection of collectionContext.siblingCollections.slice(0, 3)) {
+    const siblingHref = resolveGallerySourceHref(siblingCollection.href);
+    const siblingTitle = `${getGalleryCollectionLabel(siblingHref)} Collection`;
+    links.push({
+      href: `${siblingHref}/all`,
+      title: siblingTitle,
+      description: buildRelatedDescription(siblingHref),
+      eyebrow: 'Related Collection',
+    });
+  }
+
+  return Array.from(new Map(links.map((link) => [link.href, link])).values()).slice(0, 6);
+})();
+
 // ✅ Proxy URL helper - never expose SmugMug URLs to crawlers
 const getProxySrc = (id: string, size: string) => `/img/${id}/${size}.jpg`;
 
 // ✅ Build breadcrumb JSON-LD
-const breadcrumbItems = breadcrumbHrefs.map((href, idx) => ({
+const breadcrumbItems = breadcrumbHrefs.map((href: string, idx: number) => ({
   "@type": "ListItem",
   "position": idx + 1,
   "item": { 
@@ -191,7 +370,7 @@ const heroImage = galleryData[0];
     <!-- Breadcrumb (visual only - SEO handled by JSON-LD) -->
     <nav aria-label="Breadcrumb" class="breadcrumb-nav">
       <ol class="breadcrumb-list">
-        {breadcrumbHrefs.map((href, idx) => (
+        {breadcrumbHrefs.map((href: string, idx: number) => (
           <li>
             {idx < breadcrumbHrefs.length - 1 ? (
               <a href={href}>{breadcrumbLabels[idx]}</a>
@@ -207,14 +386,37 @@ const heroImage = galleryData[0];
     <!-- Header with proper H1/H2 semantic hierarchy -->
     <div class="header">
       <h1>{galleryTitle} Collection ({imageCount} Images)</h1>
-      <h2>Fine Art Photography by Wayne Heim</h2>
+      <h2>{collectionSubtitle}</h2>
     </div>
 
     <!-- Gallery Intro -->
     <section class="gallery-intro">
-      <p>This page presents the full {galleryTitle} collection with all {imageCount} images. Each image links to its dedicated page with full story and collector information.</p>
+      <p>{collectionLead}</p>
+      <p>{collectionSupport}</p>
+      {collectionContext.parent?.href && collectionContext.parent?.label && (
+        <p class="overview-link">
+          Return to the <a href={collectionContext.parent.href}>{collectionContext.parent.label}</a> overview for curated entry points and the broader series context.
+        </p>
+      )}
       <p class="usage-hint">Hover to preview. Click any image to view the full image page.</p>
     </section>
+
+    {relatedCollectionLinks.length > 0 && (
+      <section class="related-collections" aria-label="Related collections">
+        <div class="related-collections__inner">
+          <h3>Related Collections</h3>
+          <div class="related-collections__grid">
+            {relatedCollectionLinks.map((link) => (
+              <a href={link.href} class="related-collections__card">
+                <span class="related-collections__eyebrow">{link.eyebrow}</span>
+                <strong>{link.title}</strong>
+                <span>{link.description}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
 
     <!-- Image Grid -->
     {galleryData.length > 0 ? (
@@ -300,7 +502,73 @@ const heroImage = galleryData[0];
 
     .gallery-intro { max-width:900px; margin:0 auto 24px; text-align:center; }
     .gallery-intro p { font-size:1rem; line-height:1.6; color:#3a2d24; margin:0 0 8px; }
+    .gallery-intro .overview-link { margin-top:10px; }
+    .gallery-intro a { color:#85644b; text-decoration:none; font-weight:600; }
+    .gallery-intro a:hover { color:#5a3e2b; text-decoration:underline; }
     .gallery-intro .usage-hint { font-size:0.9rem; color:#666; font-style:italic; margin-top:12px; }
+
+    .related-collections {
+      max-width:1200px;
+      margin:0 auto 28px;
+      padding:0 16px;
+    }
+
+    .related-collections__inner {
+      background:#f6f2ee;
+      border:1px solid #e2d8cf;
+      border-radius:10px;
+      padding:22px;
+    }
+
+    .related-collections__inner h3 {
+      margin:0 0 14px;
+      text-align:center;
+      font-size:1.1rem;
+      color:#2f2219;
+    }
+
+    .related-collections__grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+      gap:14px;
+    }
+
+    .related-collections__card {
+      display:flex;
+      flex-direction:column;
+      gap:6px;
+      padding:14px 16px;
+      border-radius:8px;
+      border:1px solid #d8cbc0;
+      background:#fff;
+      color:#3a2d24;
+      text-decoration:none;
+      transition:transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .related-collections__card:hover {
+      transform:translateY(-2px);
+      box-shadow:0 8px 18px rgba(0,0,0,.08);
+      border-color:#b79d87;
+    }
+
+    .related-collections__eyebrow {
+      font-size:0.72rem;
+      letter-spacing:0.08em;
+      text-transform:uppercase;
+      color:#8a6d57;
+    }
+
+    .related-collections__card strong {
+      font-size:1rem;
+      color:#2b1f17;
+    }
+
+    .related-collections__card span:last-child {
+      font-size:0.9rem;
+      line-height:1.5;
+      color:#5b4a3d;
+    }
 
     .empty-gallery { text-align:center; padding:60px 20px; }
     .empty-gallery a { color:#85644b; }
@@ -387,6 +655,7 @@ const heroImage = galleryData[0];
       .ssr-grid { padding:0 16px; gap:16px; }
       .ssr-card img { max-height:none; height:auto; }
       .ssr-card-content { max-height:none; }
+      .related-collections__inner { padding:18px; }
     }
   </style>
 

@@ -173,6 +173,8 @@ export default function GalleryInfo({
     return pickFirstRealImage(pool) || pool[0];
   }, [galleryData]);
 
+  const heroCaption = heroImage?.title || entranceData?.image?.caption || "";
+
   // "Explore the Gallery" always goes to first image in gallery
   const exploreHref =
     lowestSortImage?.id && trimmedBase
@@ -366,6 +368,7 @@ export default function GalleryInfo({
                       transition: 'opacity 0.5s ease-in-out',
                     }}
                   />
+                  {heroCaption && <figcaption>{heroCaption}</figcaption>}
                 </figure>
               </a>
             )}
@@ -451,6 +454,7 @@ export default function GalleryInfo({
                     }
                   }}
                 />
+                {heroCaption && <figcaption>{heroCaption}</figcaption>}
               </figure>
             </a>
           )}

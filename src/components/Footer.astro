@@ -3,8 +3,8 @@ const currentYear = new Date().getFullYear();
 import GalleryPreviewStrip from './GalleryPreviewStrip.astro';
 import BlogGalleryPreviewStrip from './BlogGalleryPreviewStrip.astro';
 import ShareDrawer from '@/components/ShareDrawer.jsx';
-import BrowseAllGrid from '@/components/BrowseAllGrid.jsx';
 import { extractImageId } from '@/utils/imageProxy.js';
+import { getGalleryCollectionLabel, isGallerySourceHref, resolveGallerySourceHref } from '@/utils/galleryCollectionNav.ts';
 
 const { 
   previewImages = [], 
@@ -61,9 +61,13 @@ const galleriesWithAllPages: Record<string, string> = {
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color": "Browse the full Native American Color Portrait collection",
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White": "Browse the full Native American Black & White Portrait collection",
 };
-const hasAuthoredAllPage = Object.prototype.hasOwnProperty.call(galleriesWithAllPages, previewPath);
-const allPageHref = hasAuthoredAllPage ? `${previewPath}/all` : null;
-const allPageLinkText = hasAuthoredAllPage ? galleriesWithAllPages[previewPath] : null;
+const hasExactGalleryCollection = previewPath ? isGallerySourceHref(previewPath) : false;
+const resolvedPreviewPath = hasExactGalleryCollection ? resolveGallerySourceHref(previewPath) : null;
+const collectionLabel = resolvedPreviewPath ? getGalleryCollectionLabel(resolvedPreviewPath) : null;
+const allPageHref = resolvedPreviewPath ? `${resolvedPreviewPath}/all` : null;
+const allPageLinkText = resolvedPreviewPath
+  ? (galleriesWithAllPages[resolvedPreviewPath] || `Browse the full ${collectionLabel} collection`)
+  : null;
 const shareImage = toShareUrl(rawShareImage) || (previewImages?.[0]?.id ? `${siteOrigin}/img/${previewImages[0].id}/xl.jpg` : undefined);
 ---
 
@@ -94,27 +98,17 @@ const shareImage = toShareUrl(rawShareImage) || (previewImages?.[0]?.id ? `${sit
     </div>
   )}
 
-  <!-- ✅ View full collection: authored /all pages get links, others get BrowseAllGrid -->
-  {showPreviewBar && !isBlog && hasAuthoredAllPage && (
+  <!-- ✅ View full collection: only exact gallery-source pages get a real /all collection link -->
+  {showPreviewBar && !isBlog && allPageHref && allPageLinkText && (
     <div class="mt-5 w-full flex justify-center">
       <a
         href={allPageHref}
         class="inline-block text-[#85644b] underline hover:text-[#5a3e2b] transition text-[1rem]"
-        onclick={`if(window.k4track) window.k4track('all_list_click', { galleryId: ${JSON.stringify(previewPath || '')}, pageType: 'gallery', trigger: 'view_complete_listing' }); if(window.k4emitActionPixel) window.k4emitActionPixel('browse_all_open', null, { galleryId: ${JSON.stringify(previewPath || '')}, sourceLayer: 'browse_all_open_pixel_v1', pageType: 'gallery', trigger: 'view_complete_listing' });`}
+        onclick={`if(window.k4track) window.k4track('all_list_click', { galleryId: ${JSON.stringify(resolvedPreviewPath || previewPath || '')}, pageType: 'gallery', trigger: 'view_complete_listing' }); if(window.k4emitActionPixel) window.k4emitActionPixel('browse_all_open', null, { galleryId: ${JSON.stringify(resolvedPreviewPath || previewPath || '')}, sourceLayer: 'browse_all_open_pixel_v1', pageType: 'gallery', trigger: 'view_complete_listing' });`}
       >
         {allPageLinkText}
       </a>
     </div>
-  )}
-
-  {showPreviewBar && !isBlog && !hasAuthoredAllPage && allImages && allImages.length > 0 && (
-    <BrowseAllGrid
-      client:only="react"
-      allImages={allImages}
-      basePath={previewPath}
-      galleryTitle={galleryTitle || title || "Gallery"}
-      buttonText="Browse Full Collection"
-    />
   )}
 
   <div class="mx-auto max-w-xl px-4 pt-2 pb-4 footer-fade">

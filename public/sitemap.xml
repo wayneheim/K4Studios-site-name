@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://www.k4studios.com/Art-of-the-West</loc>
-    <lastmod>2026-04-16T21:39:58-04:00</lastmod>
+    <lastmod>2026-04-17T11:34:32-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -230,7 +230,7 @@
   </url>
   <url>
     <loc>https://www.k4studios.com/Engrained</loc>
-    <lastmod>2026-04-17T03:20:12.825Z</lastmod>
+    <lastmod>2026-04-17T11:34:32-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -263,6 +263,12 @@
     <lastmod>2026-01-31T11:04:26-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/all</loc>
+    <lastmod>2026-02-02T14:41:24-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-2NT6fPf</loc>
@@ -829,6 +835,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/all</loc>
+    <lastmod>2026-01-26T23:29:15-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-2KLWL8W</loc>
     <lastmod>2026-04-13T22:22:00-04:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -1061,6 +1073,12 @@
     <lastmod>2026-01-31T11:04:26-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/all</loc>
+    <lastmod>2026-01-26T23:29:15-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-3fR8r7r</loc>
@@ -1603,6 +1621,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/all</loc>
+    <lastmod>2026-01-26T23:29:15-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-4b73W23</loc>
     <lastmod>2026-04-13T22:22:00-04:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -1787,6 +1811,12 @@
     <lastmod>2026-01-31T11:04:26-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/all</loc>
+    <lastmod>2026-01-31T19:32:08-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-23tZWBK</loc>
@@ -2533,6 +2563,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/all</loc>
+    <lastmod>2026-01-26T23:29:15-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-2d2fgNW</loc>
     <lastmod>2026-04-13T22:22:00-04:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -2819,6 +2855,12 @@
     <lastmod>2026-01-31T11:04:26-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/all</loc>
+    <lastmod>2026-01-26T23:29:15-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-2MmTpqQ</loc>
@@ -3175,6 +3217,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery/all</loc>
+    <lastmod>2026-01-26T23:29:15-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery/i-8tvnHvW</loc>
     <lastmod>2026-04-13T22:22:00-04:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -3203,6 +3251,12 @@
     <lastmod>2026-01-31T11:04:26-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/all</loc>
+    <lastmod>2026-01-26T23:29:15-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-2Jr5X8d</loc>
@@ -3685,6 +3739,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/all</loc>
+    <lastmod>2026-04-17T11:34:32-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-2MmTpqQ</loc>
     <lastmod>2026-04-13T22:22:00-04:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -3959,6 +4019,12 @@
     <lastmod>2026-01-31T11:04:26-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/all</loc>
+    <lastmod>2026-04-17T11:34:32-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-2d2fgNW</loc>
@@ -4249,6 +4315,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/all</loc>
+    <lastmod>2026-04-17T11:34:32-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-2DcTtvw</loc>
     <lastmod>2026-04-13T22:22:00-04:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -4465,6 +4537,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/all</loc>
+    <lastmod>2026-04-17T11:34:32-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-2hVf7F4</loc>
     <lastmod>2026-04-13T22:22:00-04:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -4643,6 +4721,12 @@
     <lastmod>2026-01-31T11:04:26-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/all</loc>
+    <lastmod>2026-04-17T11:34:32-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-2fQqHxW</loc>
@@ -6067,6 +6151,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/all</loc>
+    <lastmod>2026-01-26T23:29:15-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-5JVMpJZ</loc>
     <lastmod>2026-04-13T22:22:00-04:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -6197,6 +6287,12 @@
     <lastmod>2026-01-31T11:04:26-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/all</loc>
+    <lastmod>2026-01-26T23:29:15-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-28k5KDN</loc>
@@ -7285,6 +7381,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife/all</loc>
+    <lastmod>2026-01-26T23:29:15-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife/i-fHxpx2c</loc>
     <lastmod>2026-04-13T22:22:00-04:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -7373,6 +7475,12 @@
     <lastmod>2026-02-07T16:52:33-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/all</loc>
+    <lastmod>2026-01-26T23:29:15-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-3VCCKd2</loc>
@@ -7771,6 +7879,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Color/all</loc>
+    <lastmod>2026-01-26T23:29:15-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Color/i-3pJD592</loc>
     <lastmod>2026-04-13T22:22:00-04:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -8045,6 +8159,12 @@
     <lastmod>2026-01-31T11:04:26-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/all</loc>
+    <lastmod>2026-01-26T23:29:15-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-2KDvpNm</loc>
@@ -9079,6 +9199,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Boats/all</loc>
+    <lastmod>2026-01-28T02:08:20-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-7VD9zVJ</loc>
     <lastmod>2026-04-13T22:22:00-04:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -9155,6 +9281,12 @@
     <lastmod>2026-01-31T11:04:26-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/all</loc>
+    <lastmod>2026-01-26T23:29:15-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-336zMPt</loc>
@@ -9451,6 +9583,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Military/all</loc>
+    <lastmod>2026-01-27T22:26:55-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Military/i-6gP4DrL</loc>
     <lastmod>2026-04-13T22:22:00-04:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -9515,6 +9653,12 @@
     <lastmod>2026-01-31T11:04:26-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Planes/all</loc>
+    <lastmod>2026-03-05T13:53:47-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-28wLMv4</loc>
@@ -9685,6 +9829,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Trains/all</loc>
+    <lastmod>2026-03-05T13:53:47-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-3GkJNWF</loc>
     <lastmod>2026-04-13T22:22:00-04:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -9833,6 +9983,12 @@
     <lastmod>2026-01-31T11:04:26-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/all</loc>
+    <lastmod>2026-02-17T15:36:16-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-2rXwHbt</loc>
@@ -10019,6 +10175,12 @@
     <lastmod>2026-01-31T11:04:26-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/all</loc>
+    <lastmod>2026-03-17T23:16:34-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-2pHXbPq</loc>
@@ -10375,6 +10537,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/all</loc>
+    <lastmod>2026-02-18T12:36:48-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-5WZKmbB</loc>
     <lastmod>2026-04-13T22:22:00-04:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -10543,6 +10711,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/all</loc>
+    <lastmod>2026-02-19T09:43:45-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-5bqK2s3</loc>
     <lastmod>2026-04-13T22:22:00-04:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -10682,9 +10856,9 @@
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/all</loc>
-    <lastmod>2026-04-07T12:20:12-04:00</lastmod>
+    <lastmod>2026-04-14T12:33:00-04:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-28HMKqF</loc>
@@ -11288,9 +11462,9 @@
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/all</loc>
-    <lastmod>2026-04-07T12:20:12-04:00</lastmod>
+    <lastmod>2026-04-14T12:33:00-04:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-2jfdQGw</loc>
@@ -12182,7 +12356,7 @@
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color/all</loc>
-    <lastmod>2026-04-13T22:22:00-04:00</lastmod>
+    <lastmod>2026-04-17T11:34:32-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -12206,9 +12380,9 @@
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White/all</loc>
-    <lastmod>2026-04-13T22:13:34-04:00</lastmod>
+    <lastmod>2026-04-14T12:33:00-04:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White/i-67Qt8WM</loc>
@@ -12248,9 +12422,9 @@
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color/all</loc>
-    <lastmod>2026-04-13T22:13:34-04:00</lastmod>
+    <lastmod>2026-04-14T12:33:00-04:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color/i-4Hz6D7k</loc>
@@ -12410,9 +12584,9 @@
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/all</loc>
-    <lastmod>2026-04-13T22:13:34-04:00</lastmod>
+    <lastmod>2026-04-14T14:43:25-04:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/i-2tXvL9T</loc>
@@ -13274,9 +13448,9 @@
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all</loc>
-    <lastmod>2026-04-13T22:13:34-04:00</lastmod>
+    <lastmod>2026-04-14T14:43:25-04:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-2Cj8j9W</loc>
@@ -16021,6 +16195,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/all</loc>
+    <lastmod>2026-03-04T15:30:08-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-2MP7Gvv</loc>
     <lastmod>2026-04-13T22:22:00-04:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -16337,6 +16517,12 @@
     <lastmod>2026-01-31T11:04:26-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/all</loc>
+    <lastmod>2026-03-01T21:21:04-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-59zQzXC</loc>
@@ -16661,6 +16847,12 @@
     <lastmod>2026-01-31T11:04:26-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/all</loc>
+    <lastmod>2026-03-03T19:05:46-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-2BM6trD</loc>
@@ -17899,6 +18091,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/all</loc>
+    <lastmod>2026-03-03T19:05:46-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-2nrKDf9</loc>
     <lastmod>2026-04-13T22:22:00-04:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -18799,6 +18997,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/all</loc>
+    <lastmod>2026-03-03T20:10:25-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-2Pwm8vt</loc>
     <lastmod>2026-04-13T22:22:00-04:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -19493,6 +19697,12 @@
     <lastmod>2026-01-31T11:04:26-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/all</loc>
+    <lastmod>2026-03-03T19:05:46-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-22hf958</loc>
@@ -20677,6 +20887,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery/all</loc>
+    <lastmod>2026-01-26T23:29:15-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery/i-2M68L7c</loc>
     <lastmod>2026-04-13T22:22:00-04:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -20795,6 +21011,12 @@
     <lastmod>2026-01-31T11:04:26-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/all</loc>
+    <lastmod>2026-02-03T09:45:02-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-5wFxqjj</loc>
@@ -20929,6 +21151,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/all</loc>
+    <lastmod>2026-02-03T09:45:02-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-5ZsWtSx</loc>
     <lastmod>2026-04-13T22:22:00-04:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -21031,6 +21259,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery/all</loc>
+    <lastmod>2026-01-26T23:29:15-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery/i-5ZsWtSx</loc>
     <lastmod>2026-04-13T22:22:00-04:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -21131,6 +21365,12 @@
     <lastmod>2026-01-31T11:04:26-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/all</loc>
+    <lastmod>2026-04-13T22:13:34-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-2hZwZ6C</loc>
@@ -21523,6 +21763,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/all</loc>
+    <lastmod>2026-04-17T11:34:32-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-5DbNvHj</loc>
     <lastmod>2026-04-13T22:22:00-04:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -21601,6 +21847,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets/all</loc>
+    <lastmod>2026-04-17T11:34:32-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-5DbNvHj</loc>
     <lastmod>2026-04-13T22:22:00-04:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -21677,6 +21929,12 @@
     <lastmod>2026-01-31T11:04:26-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/all</loc>
+    <lastmod>2026-04-17T11:34:32-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-3tdkVSh</loc>
@@ -21833,6 +22091,12 @@
     <lastmod>2026-01-31T11:04:26-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/all</loc>
+    <lastmod>2026-01-26T23:29:15-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-3G3qWpd</loc>
@@ -22231,6 +22495,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars/all</loc>
+    <lastmod>2026-01-26T23:29:15-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars/i-2S2ZbzK</loc>
     <lastmod>2026-04-13T22:22:00-04:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -22289,6 +22559,12 @@
     <lastmod>2026-01-31T11:04:26-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/all</loc>
+    <lastmod>2026-01-26T23:29:15-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-4NQdjBP</loc>
@@ -22475,6 +22751,12 @@
     <lastmod>2026-01-31T11:04:26-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/all</loc>
+    <lastmod>2026-01-26T23:29:15-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-38H7pXm</loc>
@@ -22802,13 +23084,13 @@
   </url>
   <url>
     <loc>https://www.k4studios.com/old-western-art</loc>
-    <lastmod>2026-04-17T03:53:26.942Z</lastmod>
+    <lastmod>2026-04-17T11:34:32-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.k4studios.com/One-Image-Movie</loc>
-    <lastmod>2026-04-17T03:20:12.825Z</lastmod>
+    <lastmod>2026-04-17T11:34:32-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -22817,6 +23099,12 @@
     <lastmod>2026-01-31T11:04:26-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.k4studios.com/Other/Archive/all</loc>
+    <lastmod>2026-04-17T11:34:32-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.k4studios.com/Other/Archive/i-48G2HVM</loc>
@@ -23033,6 +23321,12 @@
     <lastmod>2026-01-31T11:04:26-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.k4studios.com/Other/K4-Select-Series/Engrained/Engrained-Series/all</loc>
+    <lastmod>2026-03-17T23:16:34-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.k4studios.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-4cdDwZt</loc>
@@ -23474,7 +23768,7 @@
   </url>
   <url>
     <loc>https://www.k4studios.com/vintage-western-art</loc>
-    <lastmod>2026-04-17T03:53:26.940Z</lastmod>
+    <lastmod>2026-04-17T11:34:32-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -23492,7 +23786,7 @@
   </url>
   <url>
     <loc>https://www.k4studios.com/western-artwork</loc>
-    <lastmod>2026-04-17T03:20:12.820Z</lastmod>
+    <lastmod>2026-04-17T11:34:32-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -23576,7 +23870,7 @@
   </url>
   <url>
     <loc>https://www.k4studios.com/Western-Wall-Art</loc>
-    <lastmod>2026-04-16T15:22:06-04:00</lastmod>
+    <lastmod>2026-04-17T11:34:32-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -23588,7 +23882,7 @@
   </url>
   <url>
     <loc>https://www.k4studios.com/wild-west-art</loc>
-    <lastmod>2026-04-17T03:20:12.820Z</lastmod>
+    <lastmod>2026-04-17T11:34:32-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

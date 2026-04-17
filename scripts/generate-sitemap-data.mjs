@@ -14,6 +14,8 @@ const PAGES_DIR = path.resolve(__dirname, '..', 'src', 'pages');
 const REPO_ROOT = path.resolve(__dirname, '..');
 const MASTER_GALLERY_DATA_FILE = path.resolve(__dirname, '..', 'src', 'data', 'galleryMaps', 'MasterGalleryData.mjs');
 const DOORWAY_REGISTRY_FILE = path.resolve(__dirname, '..', 'src', 'data', 'doorway', 'doorwayPages.ts');
+const SITE_NAV_FILE = path.resolve(__dirname, '..', 'src', 'data', 'siteNav.js');
+const DYNAMIC_ALL_ROUTE_FILE = path.resolve(__dirname, '..', 'src', 'pages', '[...gallery]', 'all.astro');
 
 const GHOST_IMAGE_ID = 'i-k4studios';
 const IMAGE_ID_REGEX = /^i-[A-Za-z0-9]+$/;
@@ -242,6 +244,67 @@ async function loadActiveDoorwayRoutes() {
   return entries;
 }
 
+async function loadDynamicAllCollectionRoutes() {
+  const entries = [];
+
+  try {
+    const routeStats = await stat(DYNAMIC_ALL_ROUTE_FILE);
+    const routeLastmod = getStableLastmodIso(DYNAMIC_ALL_ROUTE_FILE, routeStats.mtime.toISOString());
+    const siteNavMod = await import(pathToFileURL(SITE_NAV_FILE).href);
+    const navTree = siteNavMod?.siteNav;
+
+    if (!Array.isArray(navTree)) {
+      console.warn('  Warning: siteNav missing in siteNav.js');
+      return entries;
+    }
+
+    function extractGallerySources(items) {
+      const results = [];
+      for (const item of items || []) {
+        if (item?.type === 'gallery-source' && typeof item.href === 'string') {
+          results.push(item.href);
+        }
+        if (Array.isArray(item?.children) && item.children.length) {
+          results.push(...extractGallerySources(item.children));
+        }
+      }
+      return results;
+    }
+
+    const galleryHrefs = Array.from(new Set(extractGallerySources(navTree)));
+
+    for (const href of galleryHrefs) {
+      const normalizedHref = String(href || '').trim();
+      if (!normalizedHref.startsWith('/')) continue;
+
+      const dataFilePath = path.resolve(__dirname, '..', 'src', 'data', normalizedHref.replace(/^\//, '') + '.mjs');
+      let lastmod = routeLastmod;
+
+      try {
+        const dataStats = await stat(dataFilePath);
+        lastmod = getStableLastmodIso(dataFilePath, dataStats.mtime.toISOString()) || routeLastmod;
+      } catch {
+        lastmod = routeLastmod;
+      }
+
+      const urlPath = `${normalizedHref}/all`;
+      entries.push({
+        loc: SITE_URL + urlPath,
+        lastmod,
+        changefreq: 'monthly',
+        priority: Math.max(0.5, getPriority(normalizedHref) - 0.1),
+      });
+    }
+
+    console.log(`Generated ${entries.length} dynamic /all collection route entries`);
+  } catch (err) {
+    console.error('Error loading dynamic /all collection routes:', err.message);
+    console.error(err.stack);
+  }
+
+  return entries;
+}
+
 async function main() {
   console.log('Scanning pages directory:', PAGES_DIR);
   
@@ -252,11 +315,14 @@ async function main() {
   // Get dynamic route entries from MasterGalleryData
   const dynamicEntries = await loadDynamicRoutes();
 
+  // Get dynamic /all collection pages from siteNav gallery-source entries
+  const dynamicAllEntries = await loadDynamicAllCollectionRoutes();
+
   // Get active doorway pages from the doorway registry
   const doorwayEntries = await loadActiveDoorwayRoutes();
   
   // Combine and deduplicate
-  const allEntries = [...staticEntries, ...dynamicEntries, ...doorwayEntries];
+  const allEntries = [...staticEntries, ...dynamicEntries, ...dynamicAllEntries, ...doorwayEntries];
   const dedupedEntries = Array.from(new Map(allEntries.map((entry) => [entry.loc, entry])).values());
   
   // Sort for stable output (by URL)
@@ -285,6 +351,7 @@ export const sitemap: SitemapEntry[] = ${JSON.stringify(dedupedEntries, null, 2)
   console.log(`Wrote ${dedupedEntries.length} entries to ${path.relative(path.resolve(__dirname, '..'), outFile)}`);
   console.log(`  - ${staticEntries.length} static pages`);
   console.log(`  - ${dynamicEntries.length} dynamic gallery pages`);
+  console.log(`  - ${dynamicAllEntries.length} dynamic collection pages`);
   console.log(`  - ${doorwayEntries.length} active doorway pages`);
 
   // Also emit a static public/sitemap.xml so `/sitemap.xml` works even when deploying

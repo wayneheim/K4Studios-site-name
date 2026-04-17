@@ -13,7 +13,6 @@ import "@/styles/gallery-shell-core.css";
 
 import { getStructuredData } from "@/components/utils/getStructuredData.ts";
 import { getBreadcrumbList } from "@/components/utils/getStructuredData.ts";
-import { sitemapMatches } from "@/data/sitemapMatches.ts";
 
 interface Props {
   allImages: any[];
@@ -61,15 +60,21 @@ function fixMojibake(str = "") {
     .replace(/Â/g, "");
 }
 
+function isNavigableImage(img: any) {
+  const visibility = String(img?.visibility || "").toLowerCase().trim();
+  return Boolean(img?.id) && visibility !== "ghost" && visibility !== "hidden" && visibility !== "hide";
+}
+
 /** ---------------------------------------------------------------
  * Image context
  * --------------------------------------------------------------- */
 const isGhost = !initialImageId || initialImageId === "i-k4studios";
+const navigableImages = allImages.filter(isNavigableImage);
 const currentImage = isGhost
   ? null
-  : allImages.find((img) => img.id === initialImageId && img.visibility !== "ghost");
+  : navigableImages.find((img) => img.id === initialImageId);
 
-const previewImages = allImages.filter((img) => img.visibility !== "ghost").slice(0, 8);
+const previewImages = navigableImages.slice(0, 8);
 const previewPath = galleryPath;
 
 const singlePreviewImage =
@@ -77,10 +82,8 @@ const singlePreviewImage =
     ? previewImages[0]
     : null;
 
-const currentIndex = allImages.findIndex(
-  (img) => img.id === initialImageId && img.visibility !== "ghost"
-);
-const forcedImage = currentIndex >= 0 ? allImages[currentIndex] : singlePreviewImage;
+const currentIndex = navigableImages.findIndex((img) => img.id === initialImageId);
+const forcedImage = currentIndex >= 0 ? navigableImages[currentIndex] : singlePreviewImage;
 const selectedImage = currentImage || forcedImage;
 
 const usedEntranceData = {
@@ -187,7 +190,7 @@ function isGenericImageTitle(value = "") {
   return !normalized || /^(untitled|image|photo|no\s*title)$/i.test(normalized);
 }
 
-function appendSiteTitle(title) {
+function appendSiteTitle(title: string) {
   if (!title) return fallbackTitle;
   const lower = title.toLowerCase();
   if (lower.includes(siteName.toLowerCase())) return title;
@@ -238,11 +241,6 @@ const meta = {
   twitterImageAlt: ogAlt,
 };
 
-/** ---------------------------------------------------------------
- * Sister/Related Images Link for SEO internal linking
- * --------------------------------------------------------------- */
-const currentImageId = currentImage?.id || initialImageId;
-let sisterLink = sitemapMatches.find(m => m.a.includes(currentImageId))?.b || null;
 ---
 
 <BaseLayout title={pageTitle} meta={meta} structuredDataJSON={imageStructuredData} breadcrumbsJSON={breadcrumbsJSON}>
@@ -264,7 +262,7 @@ let sisterLink = sitemapMatches.find(m => m.a.includes(currentImageId))?.b || nu
           <h2 class="gallery-landing-subtitle">{fixMojibake(usedEntranceData.subtitle)}</h2>
         )}
         <GalleryInfo 
-          client:only="react" 
+          client:load 
           galleryKey={galleryPath}
           entranceData={{
             ...usedEntranceData,
@@ -331,6 +329,7 @@ let sisterLink = sitemapMatches.find(m => m.a.includes(currentImageId))?.b || nu
         }
 
         exploreButton?.addEventListener('click', () => {
+          window.dispatchEvent(new Event('enterChapters'));
           header?.classList.add('section-hidden');
           intro?.classList.add('section-hidden');
           if (chapter) {

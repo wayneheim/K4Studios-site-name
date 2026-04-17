@@ -587,6 +587,7 @@ export default function ChapterGalleryBase({
 
   // Sister link logic - use state to avoid SSR/client mismatch
   const currentImageId = galleryData[currentIndex]?.id;
+  const currentImageData = galleryData[currentIndex] || null;
   const [sisterMatch, setSisterMatch] = useState(() => {
     // Initial render: only use sitemapMatches (deterministic, same on server & client)
     return sitemapMatches.find(m => m.a.includes(currentImageId)) || null;
@@ -612,6 +613,14 @@ export default function ChapterGalleryBase({
   const hash = currentImageId ? currentImageId.split('').reduce((a, b) => ((a << 5) - a) + b.charCodeAt(0), 0) : 0;
   const anchorIndex = Math.abs(hash) % anchorTexts.length;
   const anchorText = anchorTexts[anchorIndex];
+  const prevImage = currentIndex > 0 ? galleryData[currentIndex - 1] : null;
+  const nextImage = currentIndex < galleryData.length - 1 ? galleryData[currentIndex + 1] : null;
+  const prevHref = prevImage && basePath ? `${basePath}/${prevImage.id}` : null;
+  const nextHref = nextImage && basePath ? `${basePath}/${nextImage.id}` : null;
+  const gridHref = basePath
+    ? `${basePath}${themeSlug ? `?theme=${encodeURIComponent(themeSlug)}&view=grid` : '?view=grid'}`
+    : null;
+  const exitHref = basePath || null;
   const [isLandscapeMobile, setIsLandscapeMobile] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1200);
@@ -623,6 +632,12 @@ export default function ChapterGalleryBase({
   const [seriesInfoScrollTo, setSeriesInfoScrollTo] = useState(null);
   const [showEngrainedInfoPopup, setShowEngrainedInfoPopup] = useState(false);
   const [enableEntryAnimation, setEnableEntryAnimation] = useState(false);
+
+  const isCurrentLandscape = Boolean(currentImageData && currentImageData.width > currentImageData.height);
+  const desktopLandscapeFrameMaxWidth = windowWidth >= 1280 ? "615px" : "585px";
+  const desktopLandscapeImageMaxWidth = windowWidth >= 1280 ? "590px" : "560px";
+  const desktopStoryColumnMaxWidth = isCurrentLandscape ? "24rem" : "28rem";
+  const desktopStoryColumnFlexBasis = isCurrentLandscape ? "23rem" : "27rem";
 
   const prevIndex = useRef(currentIndex);
   const notesBtnRef = useRef(null);
@@ -705,6 +720,7 @@ export default function ChapterGalleryBase({
 
   const goPrev = (e) => {
     e?.stopPropagation();
+    e?.preventDefault?.();
     if (tourOpen()) return;
     setIsExpanded(false);
     setCurrentIndex((i) => {
@@ -715,6 +731,7 @@ export default function ChapterGalleryBase({
   };
   const goNext = (e) => {
     e?.stopPropagation();
+    e?.preventDefault?.();
     if (tourOpen()) return;
     setIsExpanded(false);
     setCurrentIndex((i) => {
@@ -725,6 +742,7 @@ export default function ChapterGalleryBase({
   };
   const goGrid = (e) => {
     e?.stopPropagation();
+    e?.preventDefault?.();
     if (tourOpen()) return;
     setViewMode("grid");
     track("grid_open");
@@ -896,9 +914,10 @@ export default function ChapterGalleryBase({
     };
   }, [currentIndex, galleryData, viewMode, galleryKey, hasEnteredChapters]);
 
-  // ✅ Replaced old title updater with the hook
+  // Only swap to image-specific metadata when the chapter viewer is the active page mode.
   const entry = galleryData[currentIndex];
-  useMetaSwap(entry, titleBase, currentIndex);
+  const shouldSwapMeta = hasEnteredChapters && viewMode === "flip";
+  useMetaSwap(entry, titleBase, currentIndex, shouldSwapMeta);
 
   const imageCaptionExcerpt = useMemo(() => {
     const description = galleryData[currentIndex]?.description;
@@ -962,6 +981,7 @@ export default function ChapterGalleryBase({
         chapter.classList.add("section-hidden");
         chapter.classList.remove("section-visible");
       }
+      setHasEnteredChapters(false);
       if (header) header.classList.remove("section-hidden", "slide-fade-out");
       if (intro) intro.classList.remove("section-hidden", "slide-fade-out");
     };
@@ -1257,16 +1277,29 @@ export default function ChapterGalleryBase({
                   )}
 
                   {/* Right: Exit */}
-                  <button
-                    type="button"
-                    className="inline-flex items-center justify-center w-6 h-6 text-gray-300 hover:text-white transition-colors cursor-pointer"
-                    aria-label="Exit Chapter View"
-                    title="Exit Viewer"
-                    onClick={goExit}
-                    data-exit-btn-top
-                  >
-                    <CircleX className="w-5 h-5" />
-                  </button>
+                  {exitHref ? (
+                    <a
+                      href={exitHref}
+                      className="inline-flex items-center justify-center w-6 h-6 text-gray-300 hover:text-white transition-colors cursor-pointer"
+                      aria-label="Exit Chapter View"
+                      title="Exit Viewer"
+                      onClick={goExit}
+                      data-exit-btn-top
+                    >
+                      <CircleX className="w-5 h-5" />
+                    </a>
+                  ) : (
+                    <button
+                      type="button"
+                      className="inline-flex items-center justify-center w-6 h-6 text-gray-300 hover:text-white transition-colors cursor-pointer"
+                      aria-label="Exit Chapter View"
+                      title="Exit Viewer"
+                      onClick={goExit}
+                      data-exit-btn-top
+                    >
+                      <CircleX className="w-5 h-5" />
+                    </button>
+                  )}
                 </div>
               )}
               <AnimatePresence mode="wait">
@@ -1284,13 +1317,13 @@ export default function ChapterGalleryBase({
                   {/* IMAGE + ARROWS COLUMN */}
                   <div
                     className="flex flex-col items-center relative chapter-image-container-mobile"
-                    style={{ width: 'fit-content', ...(isMobile ? { maxWidth: '100%', overflowX: 'hidden', width: '100%' } : {}) }}
+                    style={{ width: 'fit-content', ...(isMobile ? { maxWidth: '100%', overflowX: 'hidden', width: '100%' } : { minWidth: 0 }) }}
                   >
 
                     <div className="w-full relative flex items-center justify-center mb-0 chapter-image-container-mobile" style={isMobile ? { maxWidth: '100%', overflowX: 'hidden' } : {}}>
                       {/* Removed absolute-positioned mobile arrows; moved to row near slideshow */}
 
-                      <div className="relative flex flex-row justify-center chapter-image-container-mobile" style={isMobile ? { maxWidth: '100%', overflowX: 'hidden', width: '100%' } : { maxWidth: '575px', width: 'fit-content' }}> 
+                      <div className="relative flex flex-row justify-center chapter-image-container-mobile" style={isMobile ? { maxWidth: '100%', overflowX: 'hidden', width: '100%' } : { maxWidth: isCurrentLandscape ? desktopLandscapeFrameMaxWidth : '575px', width: 'fit-content' }}> 
                         {/* Image container with absolutely positioned collector notes button outside/right of image edge */}
                         <div
                           className="relative flex justify-center items-center chapter-image-container-mobile"
@@ -1322,7 +1355,7 @@ export default function ChapterGalleryBase({
                                 // Desktop (>= 768px)
                                 return {
                                   cursor: "zoom-in",
-                                  maxWidth: isLandscape ? "550px" : "100%",
+                                  maxWidth: isLandscape ? desktopLandscapeImageMaxWidth : "100%",
                                   width: "auto",
                                   height: "auto",
                                   maxHeight: "70vh",
@@ -1703,17 +1736,31 @@ export default function ChapterGalleryBase({
                       </form>
 
                       {/* Grid icon (mobile) - Third on mobile */}
-                      <button
-                        type="button"
-                        onClick={goGrid}
-                        aria-label="View Grid Mode"
-                        title="View Grid Mode"
-                        className="md:hidden flex items-center justify-center gap-1 transition-colors"
-                        data-grid-btn
-                      >
-                        <Grid className="w-5 h-5" style={{ stroke: "#84766d" }} />
-                        <span className="text-xs" style={{ color: "#84766d", opacity: 0.5 }}>- All</span>
-                      </button>
+                      {gridHref ? (
+                        <a
+                          href={gridHref}
+                          onClick={goGrid}
+                          aria-label="View Grid Mode"
+                          title="View Grid Mode"
+                          className="md:hidden flex items-center justify-center gap-1 transition-colors"
+                          data-grid-btn
+                        >
+                          <Grid className="w-5 h-5" style={{ stroke: "#84766d" }} />
+                          <span className="text-xs" style={{ color: "#84766d", opacity: 0.5 }}>- All</span>
+                        </a>
+                      ) : (
+                        <button
+                          type="button"
+                          onClick={goGrid}
+                          aria-label="View Grid Mode"
+                          title="View Grid Mode"
+                          className="md:hidden flex items-center justify-center gap-1 transition-colors"
+                          data-grid-btn
+                        >
+                          <Grid className="w-5 h-5" style={{ stroke: "#84766d" }} />
+                          <span className="text-xs" style={{ color: "#84766d", opacity: 0.5 }}>- All</span>
+                        </button>
+                      )}
 
                       {/* ❤️ Like Button - Fourth on mobile */}
                       <div className="inline-flex items-center justify-center w-8 h-8 rounded-full border border-gray-300 bg-white shadow hover:bg-gray-100 transition-colors hover:border-red-200" data-like-btn>
@@ -1742,17 +1789,31 @@ export default function ChapterGalleryBase({
 
                       {/* Exit - Desktop only (mobile exit is in top bar) */}
                       {!isMobile && (
-                        <button
-                          type="button"
-                          className="inline-flex items-center justify-center w-8 h-8 border border-gray-300 bg-white text-gray-300 rounded-full shadow-sm hover:bg-gray-700 hover:text-gray-200 hover:border-red-200 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-gray-400 transition-colors cursor-pointer"
-                          aria-label="Exit Chapter View"
-                          title="Exit Viewer"
-                          style={{ position: 'relative', zIndex: 20 }}
-                          onClick={goExit}
-                          data-exit-btn
-                        >
-                          <CircleX className="w-7 h-7" />
-                        </button>
+                        exitHref ? (
+                          <a
+                            href={exitHref}
+                            className="inline-flex items-center justify-center w-8 h-8 border border-gray-300 bg-white text-gray-300 rounded-full shadow-sm hover:bg-gray-700 hover:text-gray-200 hover:border-red-200 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-gray-400 transition-colors cursor-pointer"
+                            aria-label="Exit Chapter View"
+                            title="Exit Viewer"
+                            style={{ position: 'relative', zIndex: 20 }}
+                            onClick={goExit}
+                            data-exit-btn
+                          >
+                            <CircleX className="w-7 h-7" />
+                          </a>
+                        ) : (
+                          <button
+                            type="button"
+                            className="inline-flex items-center justify-center w-8 h-8 border border-gray-300 bg-white text-gray-300 rounded-full shadow-sm hover:bg-gray-700 hover:text-gray-200 hover:border-red-200 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-gray-400 transition-colors cursor-pointer"
+                            aria-label="Exit Chapter View"
+                            title="Exit Viewer"
+                            style={{ position: 'relative', zIndex: 20 }}
+                            onClick={goExit}
+                            data-exit-btn
+                          >
+                            <CircleX className="w-7 h-7" />
+                          </button>
+                        )
                       )}
                       </div>
                       {/* Desktop-only Guide button to the right of the toolbar - hidden below 825px */}
@@ -1823,18 +1884,34 @@ export default function ChapterGalleryBase({
                       isMobile ? (
                         // Mobile: arrows flanking slideshow button
                         <div className="my-1 md:hidden flex items-center justify-center gap-3" data-image-id={currentId}>
-                          <button
-                            type="button"
-                            onClick={goPrev}
-                            aria-label="Previous Chapter"
-                            title="Previous"
-                            className="w-10 h-10 rounded-full bg-white  flex items-center justify-center active:scale-[0.98]"
-                            style={{ borderColor: "#ffffffff" }}
-                            data-prev-btn
-                          >
-                            <SquareChevronLeft className="w-6 h-6" style={{ color: "#bdb5aeff" }} />
-                            <span className="sr-only">Previous</span>
-                          </button>
+                          {prevHref ? (
+                            <a
+                              href={prevHref}
+                              onClick={goPrev}
+                              aria-label="Previous Chapter"
+                              title="Previous"
+                              className="w-10 h-10 rounded-full bg-white flex items-center justify-center active:scale-[0.98]"
+                              style={{ borderColor: "#ffffffff" }}
+                              data-prev-btn
+                            >
+                              <SquareChevronLeft className="w-6 h-6" style={{ color: "#bdb5aeff" }} />
+                              <span className="sr-only">Previous</span>
+                            </a>
+                          ) : (
+                            <button
+                              type="button"
+                              onClick={goPrev}
+                              aria-label="Previous Chapter"
+                              title="Previous"
+                              className="w-10 h-10 rounded-full bg-white flex items-center justify-center active:scale-[0.98]"
+                              style={{ borderColor: "#ffffffff", opacity: 0.45 }}
+                              disabled
+                              data-prev-btn
+                            >
+                              <SquareChevronLeft className="w-6 h-6" style={{ color: "#bdb5aeff" }} />
+                              <span className="sr-only">Previous</span>
+                            </button>
+                          )}
 
                           <div className="relative inline-flex items-center">
                             <button
@@ -1864,18 +1941,34 @@ export default function ChapterGalleryBase({
                             
                           </div>
 
-                          <button
-                            type="button"
-                            onClick={goNext}
-                            aria-label="Next Chapter"
-                            title="Next"
-                            className="w-10 h-10 rounded-full bg-white flex items-center justify-center active:scale-[0.98]"
-                            style={{ borderColor: "#c5d1c8ff" }}
-                            data-next-btn
-                          >
-                            <SquareChevronRight className="w-6 h-6" style={{ color: "#bdb5aeff" }} />
-                            <span className="sr-only">Next</span>
-                          </button>
+                          {nextHref ? (
+                            <a
+                              href={nextHref}
+                              onClick={goNext}
+                              aria-label="Next Chapter"
+                              title="Next"
+                              className="w-10 h-10 rounded-full bg-white flex items-center justify-center active:scale-[0.98]"
+                              style={{ borderColor: "#c5d1c8ff" }}
+                              data-next-btn
+                            >
+                              <SquareChevronRight className="w-6 h-6" style={{ color: "#bdb5aeff" }} />
+                              <span className="sr-only">Next</span>
+                            </a>
+                          ) : (
+                            <button
+                              type="button"
+                              onClick={goNext}
+                              aria-label="Next Chapter"
+                              title="Next"
+                              className="w-10 h-10 rounded-full bg-white flex items-center justify-center active:scale-[0.98]"
+                              style={{ borderColor: "#c5d1c8ff", opacity: 0.45 }}
+                              disabled
+                              data-next-btn
+                            >
+                              <SquareChevronRight className="w-6 h-6" style={{ color: "#bdb5aeff" }} />
+                              <span className="sr-only">Next</span>
+                            </button>
+                          )}
                         </div>
                       ) : (
                         // Desktop: keep standalone slideshow button with theme star indicator
@@ -1938,12 +2031,20 @@ export default function ChapterGalleryBase({
                   <div 
                     className="w-full md:pl-8"
                     style={(() => {
+                      const desktopLayoutStyle = isMobile
+                        ? {}
+                        : {
+                            flex: `1 1 ${desktopStoryColumnFlexBasis}`,
+                            maxWidth: desktopStoryColumnMaxWidth,
+                            minWidth: 0,
+                          };
+
                       // Tight zone (768-825px) - scale text down slightly
                       if (windowWidth >= 768 && windowWidth < 825) {
                         const scaleValue = 0.85 + ((windowWidth - 768) / (825 - 768)) * 0.15;
-                        return { transform: `scale(${scaleValue})`, transformOrigin: 'top center' };
+                        return { ...desktopLayoutStyle, transform: `scale(${scaleValue})`, transformOrigin: 'top center' };
                       }
-                      return {};
+                      return desktopLayoutStyle;
                     })()}
                   >
                     {/* Separator */}
@@ -2188,37 +2289,80 @@ export default function ChapterGalleryBase({
 
                     {/* Desktop Nav Buttons */}
                     <div className="hidden md:flex justify-center items-center gap-6 pt-4" data-image-id={currentId}>
-                      <button
-                        type="button"
-                        onClick={goPrev}
-                        className="bg-white p-1 -mt-16 rounded shadow flex items-center justify-center border border-gray-200 hover:border-gray-300 transition-colors"
-                        title="Back"
-                        data-prev-btn
-                      >
-                        <SquareChevronLeft className="w-5 h-5 text-gray-300 hover:text-gray-500 transition-colors" />
-                        <span className="sr-only">Previous</span>
-                      </button>
+                      {prevHref ? (
+                        <a
+                          href={prevHref}
+                          onClick={goPrev}
+                          className="bg-white p-1 -mt-16 rounded shadow flex items-center justify-center border border-gray-200 hover:border-gray-300 transition-colors"
+                          title="Back"
+                          data-prev-btn
+                        >
+                          <SquareChevronLeft className="w-5 h-5 text-gray-300 hover:text-gray-500 transition-colors" />
+                          <span className="sr-only">Previous</span>
+                        </a>
+                      ) : (
+                        <button
+                          type="button"
+                          onClick={goPrev}
+                          className="bg-white p-1 -mt-16 rounded shadow flex items-center justify-center border border-gray-200 transition-colors"
+                          title="Back"
+                          style={{ opacity: 0.45 }}
+                          disabled
+                          data-prev-btn
+                        >
+                          <SquareChevronLeft className="w-5 h-5 text-gray-300 transition-colors" />
+                          <span className="sr-only">Previous</span>
+                        </button>
+                      )}
 
-                      <button
-                        type="button"
-                        onClick={goGrid}
-                        className="bg-gray-100 w-11 h-11 -mt-16 rounded-full shadow flex items-center justify-center border border-gray-200 hover:border-gray-300 transition-colors"
-                        title="Index View"
-                        data-grid-btn
-                      >
-                        <Grid className="w-5 h-5 text-gray-400 hover:text-blue-600 transition-colors" />
-                      </button>
+                      {gridHref ? (
+                        <a
+                          href={gridHref}
+                          onClick={goGrid}
+                          className="bg-gray-100 w-11 h-11 -mt-16 rounded-full shadow flex items-center justify-center border border-gray-200 hover:border-gray-300 transition-colors"
+                          title="Index View"
+                          data-grid-btn
+                        >
+                          <Grid className="w-5 h-5 text-gray-400 hover:text-blue-600 transition-colors" />
+                          <span className="sr-only">Grid View</span>
+                        </a>
+                      ) : (
+                        <button
+                          type="button"
+                          onClick={goGrid}
+                          className="bg-gray-100 w-11 h-11 -mt-16 rounded-full shadow flex items-center justify-center border border-gray-200 hover:border-gray-300 transition-colors"
+                          title="Index View"
+                          data-grid-btn
+                        >
+                          <Grid className="w-5 h-5 text-gray-400 hover:text-blue-600 transition-colors" />
+                        </button>
+                      )}
 
-                      <button
-                        type="button"
-                        onClick={goNext}
-                        className={`bg-white p-1 -mt-16 rounded shadow flex items-center justify-center border border-gray-200 hover:border-gray-300 transition-colors ${showArrowHint ? 'animate-pulse' : ''}`}
-                        title="Next"
-                        data-next-btn
-                      >
-                        <SquareChevronRight className="w-5 h-5 text-gray-300 hover:text-gray-500 transition-colors" />
-                        <span className="sr-only">Next</span>
-                      </button>
+                      {nextHref ? (
+                        <a
+                          href={nextHref}
+                          onClick={goNext}
+                          className={`bg-white p-1 -mt-16 rounded shadow flex items-center justify-center border border-gray-200 hover:border-gray-300 transition-colors ${showArrowHint ? 'animate-pulse' : ''}`}
+                          title="Next"
+                          data-next-btn
+                        >
+                          <SquareChevronRight className="w-5 h-5 text-gray-300 hover:text-gray-500 transition-colors" />
+                          <span className="sr-only">Next</span>
+                        </a>
+                      ) : (
+                        <button
+                          type="button"
+                          onClick={goNext}
+                          className="bg-white p-1 -mt-16 rounded shadow flex items-center justify-center border border-gray-200 transition-colors"
+                          title="Next"
+                          style={{ opacity: 0.45 }}
+                          disabled
+                          data-next-btn
+                        >
+                          <SquareChevronRight className="w-5 h-5 text-gray-300 transition-colors" />
+                          <span className="sr-only">Next</span>
+                        </button>
+                      )}
                     </div>
 
                   </div>

@@ -11,70 +11,10 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const SITE_URL = 'https://www.k4studios.com';
-const LICENSE_URL = 'https://www.k4studios.com/licensing';
 const PUBLIC_DIR = path.resolve(__dirname, '..', 'public');
 const REPO_ROOT = path.resolve(__dirname, '..');
 
 const GHOST_IMAGE_ID = 'i-k4studios';
-const MAX_IMAGE_CAPTION_LENGTH = 700;
-const CAPTION_SENTENCE_LOOKBACK = 220;
-const CAPTION_HOOK_MAX_LENGTH = 180;
-
-function capImageCaption(caption) {
-  const normalized = normalizeCaptionText(caption);
-  if (normalized.length <= MAX_IMAGE_CAPTION_LENGTH) {
-    return normalized;
-  }
-
-  const hardLimit = MAX_IMAGE_CAPTION_LENGTH - 3;
-  const hardSlice = normalized.slice(0, hardLimit).trimEnd();
-  const searchStart = Math.max(0, hardSlice.length - CAPTION_SENTENCE_LOOKBACK);
-  const tail = hardSlice.slice(searchStart);
-
-  const sentenceMatches = [...tail.matchAll(/[.!?](?=(?:["')\]]|\s|$))/g)];
-  if (sentenceMatches.length > 0) {
-    const lastSentence = sentenceMatches[sentenceMatches.length - 1];
-    const sentenceBreak = searchStart + lastSentence.index + 1;
-    if (sentenceBreak >= Math.floor(hardLimit * 0.7)) {
-      return hardSlice.slice(0, sentenceBreak).trimEnd() + '...';
-    }
-  }
-
-  const lastWordBreak = hardSlice.lastIndexOf(' ');
-  if (lastWordBreak >= Math.floor(hardLimit * 0.85)) {
-    return hardSlice.slice(0, lastWordBreak).trimEnd() + '...';
-  }
-
-  return hardSlice + '...';
-}
-
-function clampCaptionForXml(caption) {
-  const normalized = normalizeCaptionText(caption);
-  if (!normalized) return normalized;
-
-  if (escapeXml(normalized).length <= MAX_IMAGE_CAPTION_LENGTH) {
-    return normalized;
-  }
-
-  const minimumLength = Math.floor(MAX_IMAGE_CAPTION_LENGTH * 0.6);
-  let working = normalized;
-
-  while (working.length > minimumLength && escapeXml(`${working}...`).length > MAX_IMAGE_CAPTION_LENGTH) {
-    const lastWordBreak = working.lastIndexOf(' ');
-    if (lastWordBreak <= 0) break;
-    working = working.slice(0, lastWordBreak).trimEnd();
-  }
-
-  if (escapeXml(`${working}...`).length > MAX_IMAGE_CAPTION_LENGTH) {
-    let hardTrimmed = working;
-    while (hardTrimmed.length > 0 && escapeXml(`${hardTrimmed}...`).length > MAX_IMAGE_CAPTION_LENGTH) {
-      hardTrimmed = hardTrimmed.slice(0, -1);
-    }
-    working = hardTrimmed.trimEnd();
-  }
-
-  return working ? `${working}...` : normalized.slice(0, Math.max(0, MAX_IMAGE_CAPTION_LENGTH - 3)).trimEnd() + '...';
-}
 
 function isGhostImageId(id) {
   return String(id || '').trim().toLowerCase() === GHOST_IMAGE_ID;
@@ -463,38 +403,10 @@ function escapeXml(str) {
     .replace(/'/g, '&apos;');
 }
 
-function normalizeCaptionText(value) {
-  if (!value) return '';
-  return String(value)
-    .replace(/[\u0000-\u001F\u007F]/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim();
-}
-
-function extractShortNarrativeHook(value) {
-  const normalized = normalizeCaptionText(value);
-  if (!normalized) return '';
-
-  const sentenceMatch = normalized.match(/^.+?[.!?](?=(?:["')\]]|\s|$))/);
-  const firstSentence = sentenceMatch ? sentenceMatch[0].trim() : normalized;
-
-  if (firstSentence.length <= CAPTION_HOOK_MAX_LENGTH) {
-    return firstSentence;
-  }
-
-  const softTrim = firstSentence.slice(0, CAPTION_HOOK_MAX_LENGTH).trimEnd();
-  const lastWordBreak = softTrim.lastIndexOf(' ');
-  if (lastWordBreak > Math.floor(CAPTION_HOOK_MAX_LENGTH * 0.75)) {
-    return `${softTrim.slice(0, lastWordBreak).trimEnd()}...`;
-  }
-
-  return `${softTrim}...`;
-}
-
 /**
  * Generate <url> entry with nested <image:image> for a gallery image
  */
-function generateUrlEntry(image, urlBase) {
+function generateUrlEntry(image, urlBase, lastmod = null) {
   // Skip ghost/hidden/placeholder images
   if (isHiddenImage(image)) {
     return null;
@@ -506,42 +418,16 @@ function generateUrlEntry(image, urlBase) {
   }
 
   const pageUrl = `${SITE_URL}${urlBase}/${image.id}`;
-  // Use proxy URLs capped at L - never expose XL or raw SmugMug URLs to bots
+  // Use proxy URLs capped at L - never expose XL or raw SmugMug URLs to bots.
+  // Google now documents image:loc as the only active image-specific tag here;
+  // titles/captions/licenses belong on the HTML page and structured data.
   const imageUrl = `${SITE_URL}/img/${image.id}/l.jpg`;
-  
-  // Build concise caption for sitemap usage: description + optional short narrative hook
-  const captionParts = [];
-  
-  // Primary: description
-  const descriptionText = normalizeCaptionText(image.description);
-  if (descriptionText) {
-    captionParts.push(descriptionText);
-  }
-  
-  // Secondary: optional one-sentence narrative hook (if different from description)
-  const storyText = normalizeCaptionText(image.story);
-  if (storyText) {
-    const hookText = extractShortNarrativeHook(storyText);
-    // Only add hook if meaningfully different from description
-    if (hookText && (!descriptionText || !descriptionText.includes(hookText.substring(0, 40)))) {
-      captionParts.push(hookText);
-    }
-  }
-  
-  // Join with paragraph separator, then cap for concise image search snippets
-  const captionSource = normalizeCaptionText(captionParts.join(' ')) || normalizeCaptionText(image.title) || 'Fine Art Photograph by Wayne Heim';
-  const caption = clampCaptionForXml(capImageCaption(captionSource));
-
-  // Use title as image title
-  const title = image.title || image.alt || 'Fine Art Photograph';
 
   return `  <url>
     <loc>${escapeXml(pageUrl)}</loc>
+    ${lastmod ? `<lastmod>${lastmod}</lastmod>` : ''}
     <image:image>
       <image:loc>${escapeXml(imageUrl)}</image:loc>
-      <image:title>${escapeXml(title)}</image:title>
-      <image:caption>${escapeXml(caption)}</image:caption>
-      <image:license>${LICENSE_URL}</image:license>
     </image:image>
   </url>`;
 }
@@ -588,12 +474,17 @@ async function processSection(section) {
 
   for (const gallery of section.galleries) {
     const dataPath = path.resolve(__dirname, gallery.dataPath);
+    let galleryLastmod = null;
     
     try {
       try {
         const dataStats = await stat(dataPath);
         const gitMs = getGitLastModifiedMs(dataPath);
-        sectionLastmodMs = Math.max(sectionLastmodMs, gitMs || dataStats.mtimeMs);
+        const galleryLastmodMs = gitMs || dataStats.mtimeMs;
+        sectionLastmodMs = Math.max(sectionLastmodMs, galleryLastmodMs);
+        galleryLastmod = Number.isFinite(galleryLastmodMs)
+          ? new Date(galleryLastmodMs).toISOString()
+          : null;
       } catch {
         // If the data file doesn't exist, the import will throw and we'll skip.
       }
@@ -608,7 +499,7 @@ async function processSection(section) {
 
       let count = 0;
       for (const image of galleryData) {
-        const entry = generateUrlEntry(image, gallery.urlBase);
+        const entry = generateUrlEntry(image, gallery.urlBase, galleryLastmod);
         if (entry) {
           entries.push(entry);
           count++;

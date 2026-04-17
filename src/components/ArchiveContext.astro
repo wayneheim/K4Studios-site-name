@@ -2,7 +2,7 @@
 /**
  * ArchiveContext.astro
  * 
- * Shared contextual link block for /all archive index pages.
+ * Shared contextual link block for /all collection pages.
  * Provides a single, consistent return link to the parent narrative/category page.
  * 
  * USAGE:
@@ -30,7 +30,7 @@ const { categoryUrl, categoryName } = Astro.props;
 
 <div class="archive-context">
   <p>
-    This page presents the complete image index for the 
+    This page presents the full collection for the 
     <a href={categoryUrl}>{categoryName}</a> series.
     For narrative context, historical intent, and artistic approach,
     return to the main overview.
