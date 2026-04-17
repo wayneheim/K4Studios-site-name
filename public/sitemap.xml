@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://www.k4studios.com/Art-of-the-West</loc>
-    <lastmod>2026-04-17T01:29:26.254Z</lastmod>
+    <lastmod>2026-04-16T21:39:58-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -224,7 +224,13 @@
   </url>
   <url>
     <loc>https://www.k4studios.com/cowboy-wall-art</loc>
-    <lastmod>2026-04-17T00:04:27.927Z</lastmod>
+    <lastmod>2026-04-16T21:39:58-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.k4studios.com/Engrained</loc>
+    <lastmod>2026-04-17T03:20:12.825Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -22795,6 +22801,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.k4studios.com/old-western-art</loc>
+    <lastmod>2026-04-17T03:53:26.942Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.k4studios.com/One-Image-Movie</loc>
+    <lastmod>2026-04-17T03:20:12.825Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.k4studios.com/Other/Archive</loc>
     <lastmod>2026-01-31T11:04:26-05:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -23455,6 +23473,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.k4studios.com/vintage-western-art</loc>
+    <lastmod>2026-04-17T03:53:26.940Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.k4studios.com/wayne-heim-western-fine-art-photography</loc>
     <lastmod>2026-04-14T15:35:19-04:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -23467,8 +23491,14 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.k4studios.com/western-artwork</loc>
+    <lastmod>2026-04-17T03:20:12.820Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.k4studios.com/Western-Black-and-White-Photography</loc>
-    <lastmod>2026-04-14T12:33:00-04:00</lastmod>
+    <lastmod>2026-04-16T21:39:58-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -23492,7 +23522,7 @@
   </url>
   <url>
     <loc>https://www.k4studios.com/western-fine-art-photography-collection</loc>
-    <lastmod>2026-04-14T12:33:00-04:00</lastmod>
+    <lastmod>2026-04-16T21:39:58-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -23510,7 +23540,7 @@
   </url>
   <url>
     <loc>https://www.k4studios.com/western-landscape-art</loc>
-    <lastmod>2026-04-17T01:29:26.241Z</lastmod>
+    <lastmod>2026-04-16T21:39:58-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -23522,7 +23552,7 @@
   </url>
   <url>
     <loc>https://www.k4studios.com/Western-Photography-Prints</loc>
-    <lastmod>2026-04-14T12:33:00-04:00</lastmod>
+    <lastmod>2026-04-16T21:39:58-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -23534,7 +23564,7 @@
   </url>
   <url>
     <loc>https://www.k4studios.com/western-portrait-photography</loc>
-    <lastmod>2026-04-14T12:33:00-04:00</lastmod>
+    <lastmod>2026-04-16T21:39:58-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -23553,6 +23583,12 @@
   <url>
     <loc>https://www.k4studios.com/Western-Wall-Art-for-Interior-Designers</loc>
     <lastmod>2026-04-15T21:51:45-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.k4studios.com/wild-west-art</loc>
+    <lastmod>2026-04-17T03:20:12.820Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

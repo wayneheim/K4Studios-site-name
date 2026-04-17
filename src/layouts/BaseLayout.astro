@@ -21,6 +21,7 @@ const {
   structuredDataJSON,
   breadcrumbsJSON,
   meta = {},
+  description,
   preloadImage
 } = Astro.props;
 
@@ -81,6 +82,7 @@ const trimDescription = (text = '', maxLength = 160) => {
 };
 
 const seoDescriptionRaw =
+  description ||
   meta.description ||
   (isImagePage ? preloadImage?.description : null) ||
   (Astro.url?.pathname === '/'

@@ -33,8 +33,8 @@ const canonicalUrl = `https://www.k4studios.com${basePath}/all`;
 const parentUrl = `https://www.k4studios.com${basePath}`;
 
 // ✅ SEO-optimized title and description (factual, not poetic)
-const seoTitle = `${galleryTitle} – Complete Index (${imageCount} Images) | Wayne Heim Fine Art`;
-const seoDescription = `Browse ${imageCount} painterly Western cowboy portraits in color by Wayne Heim. Cinematic frontier photography featuring authentic cowboys, ranch hands, and Old West characters. View full gallery with stories.`;
+const seoTitle = `${galleryTitle} Collection (${imageCount} Images) | Wayne Heim Fine Art`;
+const seoDescription = `Browse the full collection of ${imageCount} painterly Western cowboy portraits in color by Wayne Heim. Cinematic frontier photography featuring authentic cowboys, ranch hands, and Old West characters.`;
 
 // ✅ Genre definition (entity authority - what IS this type of photography)
 const genreDefinition = `Painterly Western Photography is a fine-art approach that draws from 19th-century pictorialism and painterly traditions, emphasizing tonal harmony, atmospheric light, and compositional restraint over literal realism.`;
@@ -132,7 +132,7 @@ const structuredDataJson = JSON.stringify({
     {
       "@type": "CollectionPage",
       "@id": canonicalUrl + "#collectionpage",
-      "name": galleryTitle + " – Complete Index",
+      "name": galleryTitle + " Collection",
       "url": canonicalUrl,
       "description": seoDescription,
       "isPartOf": { "@id": parentUrl + "#collection" },
@@ -147,7 +147,7 @@ const structuredDataJson = JSON.stringify({
         { "@type": "ListItem", "position": 2, "item": { "@id": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History", "name": "Facing History" } },
         { "@type": "ListItem", "position": 3, "item": { "@id": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits", "name": "Western Cowboy Portraits" } },
         { "@type": "ListItem", "position": 4, "item": { "@id": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color", "name": "Color" } },
-        { "@type": "ListItem", "position": 5, "item": { "@id": canonicalUrl, "name": "Complete Index" } }
+        { "@type": "ListItem", "position": 5, "item": { "@id": canonicalUrl, "name": "Collection" } }
       ]
     }
   ]
@@ -176,13 +176,13 @@ const structuredDataJson = JSON.stringify({
         <li><a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Facing History</a></li>
         <li><a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits">Western Cowboy Portraits</a></li>
         <li><a href={basePath}>Color</a></li>
-        <li>Complete Index</li>
+        <li>Collection</li>
       </ol>
     </nav>
 
     <!-- Header with proper H1/H2 semantic hierarchy -->
     <div class="header">
-      <h1>{galleryTitle} – Complete Index ({imageCount} Images)</h1>
+      <h1>{galleryTitle} Collection ({imageCount} Images)</h1>
       <h2>Painterly Western Fine Art & Story-Driven Frontier Imagery</h2>
     </div>
 

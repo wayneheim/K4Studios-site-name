@@ -1,0 +1,328 @@
+---
+export const prerender = true;
+
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import LandingHeader from '@/components/Landing-Header.jsx';
+import SiteFooter from '@/components/Footer.astro';
+import WesternDefinitions from '@/components/blog/WesternDefinitions.astro';
+import { getBreadcrumbList, getStructuredData } from '@/components/utils/getStructuredData.ts';
+
+import '@/styles/global.css';
+
+const sectionPath = '/One-Image-Movie';
+const canonicalUrl = 'https://www.k4studios.com/One-Image-Movie';
+
+const getProxySrc = (id: string, size: string) => `/img/${id}/${size}.jpg`;
+const getAbsoluteProxySrc = (id: string, size: string) => `https://www.k4studios.com/img/${id}/${size}.jpg`;
+
+const headerImages = [
+  { id: 'i-rRdrQBg', alt: 'Narrative Western frame carrying the pressure of a larger unseen story' },
+  { id: 'i-B7ZSdfs', alt: 'Frontier image suspended between decision and consequence' },
+  { id: 'i-jWDDpC4', alt: 'Landscape image showing that atmosphere itself can carry story' },
+  { id: 'i-vJSCrqC', alt: 'Portrait where silence and presence imply a larger life beyond the frame' },
+  { id: 'i-LCspRF4', alt: 'Painterly Western image functioning like a single unfinished film scene' },
+];
+
+const image1 = {
+  id: 'i-rRdrQBg',
+  src: getProxySrc('i-rRdrQBg', 'l'),
+  alt: 'One-Image Movie concept shown through a frontier scene carrying before and after inside one frame',
+};
+
+const image2 = {
+  id: 'i-vJSCrqC',
+  src: getProxySrc('i-vJSCrqC', 'l'),
+  alt: 'Portrait showing how stillness and implication create One-Image Movie pressure',
+};
+
+const image3 = {
+  id: 'i-jWDDpC4',
+  src: getProxySrc('i-jWDDpC4', 'l'),
+  alt: 'Landscape showing how atmosphere can behave like narrative in a One-Image Movie image',
+};
+
+const pageTitle = 'One-Image Movie | The Story-Bearing Still Image by Wayne Heim';
+const pageDescription = 'One-Image Movie is Wayne Heim’s concept for a still image built to carry the pressure of a larger narrative through atmosphere, implication, and unresolved motion inside a single frame.';
+
+const structuredImageUrls = [
+  ...headerImages.map((image) => getAbsoluteProxySrc(image.id, 'l')),
+  getAbsoluteProxySrc(image1.id, 'l'),
+  getAbsoluteProxySrc(image2.id, 'l'),
+  getAbsoluteProxySrc(image3.id, 'l'),
+];
+
+const breadcrumbStructuredData = getBreadcrumbList(
+  [
+    { name: 'Home', item: 'https://www.k4studios.com' },
+    { name: 'Narrative Western Art', item: 'https://www.k4studios.com/Narrative-Western-Art' },
+    { name: 'One-Image Movie', item: canonicalUrl },
+  ],
+  `${canonicalUrl}#breadcrumb`
+);
+
+const structuredData = getStructuredData({
+  type: 'Article',
+  data: {
+    headline: 'One-Image Movie | The Story-Bearing Still Image by Wayne Heim',
+    description: pageDescription,
+    url: canonicalUrl,
+    image: structuredImageUrls,
+    copyrightNotice: '© Wayne Heim',
+    author: {
+      '@type': 'Person',
+      name: 'Wayne Heim',
+    },
+    datePublished: '2026-04-17',
+    articleSection: 'Visual Storytelling',
+    definedTerm: {
+      name: 'One-Image Movie',
+      description: pageDescription,
+    },
+    keywords: [
+      'one-image movie',
+      'one image movie',
+      'narrative photography',
+      'visual storytelling in photography',
+      'cinematic still image',
+      'narrative western art',
+    ],
+  },
+  defaults: {
+    copyrightNotice: '© Wayne Heim',
+    license: 'https://k4studios.com/copyright',
+    creditText: 'Wayne Heim',
+    creatorName: 'Wayne Heim',
+    creatorUrl: 'https://k4studios.com/',
+  },
+});
+
+const meta = {
+  description: pageDescription,
+  keywords: 'one-image movie, one image movie, narrative photography, cinematic still image, visual storytelling photography, narrative western art',
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogType: 'article',
+  ogUrl: canonicalUrl,
+  ogImage: getAbsoluteProxySrc(headerImages[0].id, 'l'),
+  twitterTitle: pageTitle,
+  twitterDescription: pageDescription,
+  twitterUrl: canonicalUrl,
+  twitterImage: getAbsoluteProxySrc(headerImages[0].id, 'l'),
+  twitterCard: 'summary_large_image',
+};
+
+const pageBreadcrumb = `Home › <a href='/Narrative-Western-Art' style='color: inherit; text-decoration: none;' onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Narrative Western Art</a> › One-Image Movie`;
+---
+
+<BaseLayout
+  title={pageTitle}
+  structuredDataJSON={structuredData}
+  meta={meta}
+>
+  <script type="application/ld+json" set:html={breadcrumbStructuredData} />
+
+  <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
+    <div class="drawer-mode">
+      <LandingHeader client:load breadcrumb={pageBreadcrumb} />
+    </div>
+
+    <section class="header-image-bar">
+      <div class="header-bar-container">
+        {headerImages.map((img, index) => (
+          <div class={`header-bar-image pos-${index}`}>
+            <img
+              src={getProxySrc(img.id, 'l')}
+              alt={img.alt}
+              loading="eager"
+            />
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section style="text-align:center; padding:2rem 1rem 2rem;">
+      <h1 style="font-size:2.25rem; font-weight:700; margin-bottom:0.5rem; line-height:1.2;">
+        One-Image Movie
+      </h1>
+      <p style="font-size:1.1rem; color:#666; font-style:italic; margin-top:0.5rem;">
+        The story-bearing still image
+      </p>
+      <p style="font-size:0.95rem; color:#888; margin-top:0.75rem; letter-spacing:0.02em;">
+        Wayne Heim’s thesis that a single frame can carry the pressure of a larger unwritten film
+      </p>
+    </section>
+
+    <section class="story-section max-w-[860px] mx-auto px-4">
+      <article class="story-block space-y-4">
+        <p><strong>One-Image Movie</strong> is Wayne Heim’s term for a still image that behaves like a larger story rather than a sealed description. It is not just cinematic styling and it is not a slogan pasted onto a photograph. It is the point where gesture, atmosphere, implication, and restraint lock together strongly enough that the frame begins to feel like a whole narrative pressing through one moment.</p>
+
+        <p>That distinction matters because many images can be dramatic without becoming story-bearing. A One-Image Movie does more than look interesting. It suggests a before and an after. It makes the viewer feel that something has already happened, and that something else is still on its way. The frame stands still, but the mind does not.</p>
+
+        <p>This is also one of the central theses behind the work at K4 Studios. Narrative is not an add-on to the image. It is part of the image’s structure. The picture is built to be read as much as seen.</p>
+
+        <div class="section-heading-with-line">
+          <h2>Not a Technique, but a Condition an Image Reaches</h2>
+        </div>
+
+        <p>A One-Image Movie is not created by applying a preset, copying film stills, or making a photograph look retro. It emerges when the image carries enough pressure to imply an entire unwritten chapter. Light becomes motive. Posture becomes consequence. Silence becomes part of the storytelling. The viewer is not given everything, but they are given enough to enter.</p>
+
+        <p>That is why the idea crosses subject matter. It can appear in frontier portraits, Wild West narratives, historical scenes, and even landscapes where weather and atmosphere do the work a human gesture might do somewhere else. The common thread is implication, not category.</p>
+
+        <div class="section-heading-with-line">
+          <h2>The Narrative Thesis Behind the Work</h2>
+        </div>
+
+        <p>The narrative-art thesis underneath this idea is simple: the strongest still images are not exhausted by first recognition. They hold back enough information that the viewer must continue the scene internally. That is the same story pressure explored in <a href="/Narrative-Western-Art" style="color:#8b5a2b; text-decoration:underline;">Narrative Western Art</a>, where the image becomes a fragment of a larger life rather than a closed illustration.</p>
+
+        <p>In practice that means the work leans toward pauses, aftermaths, thresholds, held breath, private resolve, and emotional weather. A frame can feel cinematic without imitating cinema because cinema itself depends on implication, sequence, and what remains unresolved between one visible moment and the next.</p>
+
+        <h3 style="font-size:1.1rem; font-weight:600; margin-top:2.5rem; margin-bottom:0.5rem; color:#555;">Three Ways the One-Image Movie Appears</h3>
+        <div class="example-images">
+          <figure>
+            <img src={image1.src} alt={image1.alt} loading="lazy" />
+            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
+              Narrative scene where the visible instant feels like the middle of something larger
+            </figcaption>
+          </figure>
+          <figure>
+            <img src={image2.src} alt={image2.alt} loading="lazy" />
+            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
+              Portrait where silence, posture, and age carry unseen history
+            </figcaption>
+          </figure>
+          <figure>
+            <img src={image3.src} alt={image3.alt} loading="lazy" />
+            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
+              Landscape where atmosphere itself becomes the moving story
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="section-heading-with-line">
+          <h2>Why It Feels Different from Traditional Photography</h2>
+        </div>
+
+        <p>Traditional photography often resolves the moment by showing what is there clearly. A One-Image Movie keeps the moment open. It is still photographic, but it behaves more like visual literature. Meaning arrives gradually. The viewer supplies memory, tension, and completion. That is why these images often stay active after the first look instead of collapsing into simple recognition.</p>
+
+        <p>This is also why the idea overlaps naturally with painterly photography. Tone is sculpted. Edges are disciplined. Atmosphere is allowed to carry emotion instead of functioning as decoration. The goal is not to make the image look painted, but to give the frame enough authored control that story and feeling can stay alive inside it.</p>
+
+        <div class="section-heading-with-line">
+          <h2>From Single Frame to Picture Show</h2>
+        </div>
+
+        <p>A One-Image Movie stands on its own, but it also explains how larger K4 story systems grow. When several such images begin speaking to each other, the work can widen into a <a href="/Other/Shows" style="color:#8b5a2b; text-decoration:underline;">Picture Show</a>, where multiple chapters are stitched together into a fuller visual journey. The single-frame thesis remains the foundation; the sequence simply gives it more breathing room.</p>
+
+        <p>Even so, the single frame remains the sharpest test. If one image cannot hold a before, an after, and an emotional center at the same time, the larger system has nothing solid to build on.</p>
+
+        <div class="section-heading-with-line">
+          <h2>What It Means at K4 Studios</h2>
+        </div>
+
+        <p>At K4 Studios, One-Image Movie names the storytelling logic underneath much of the work. It is present in Wild West scenes, cowboy portraits, historical work, and landscapes where silence behaves like plot. It explains why the images often feel less like closed pictures and more like interrupted chapters. It is not branding laid over the work after the fact. It is part of the work’s internal architecture.</p>
+
+        <p>That is also why Google beginning to quote the phrase matters strategically. The term points to a real authored idea. It names a way of constructing still images so they carry more life than they can literally show.</p>
+
+        <div class="section-heading-with-line">
+          <h2>Where to Go Next</h2>
+        </div>
+
+        <p>If you want the broader thesis around story, continue into <a href="/Narrative-Western-Art" style="color:#8b5a2b; text-decoration:underline;">Narrative Western Art</a>. If you want the interpretive bridge explaining why a frame feels cinematic, open <a href="/western-storytelling-photography" style="color:#8b5a2b; text-decoration:underline;">Western Storytelling Photography</a>. If you want to see the idea working inside frontier material, move into the <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West" style="color:#8b5a2b; text-decoration:underline;">Wild West collection</a>. For the older long-form source page, the archive version still lives under <a href="/Other/One-Image-Movie" style="color:#8b5a2b; text-decoration:underline;">Other / One-Image-Movie</a>.</p>
+      </article>
+    </section>
+
+    <section class="max-w-[860px] mx-auto px-4 pt-8 pb-4">
+      <WesternDefinitions variant="post" />
+    </section>
+
+    <SiteFooter class="pt-8 pb-12" />
+  </main>
+
+  <style>
+    .header-image-bar {
+      width: 100%;
+      overflow: hidden;
+      margin-bottom: 0;
+    }
+
+    .header-bar-container {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0;
+      width: 100%;
+      height: 340px;
+    }
+
+    .header-bar-image {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header-bar-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    .section-heading-with-line {
+      margin-top: 2.5rem;
+      padding-top: 0.4rem;
+      border-top: 1px solid rgba(120, 104, 88, 0.35);
+    }
+
+    .section-heading-with-line h2 {
+      font-size: 1.45rem;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-top: 0.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .example-images {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .example-images figure {
+      margin: 0;
+    }
+
+    .example-images img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      display: block;
+    }
+
+    .story-section p {
+      font-size: 1.06rem;
+      line-height: 1.85;
+    }
+
+    @media (max-width: 900px) {
+      .header-bar-container {
+        grid-template-columns: repeat(3, 1fr);
+        height: 280px;
+      }
+
+      .header-bar-image.pos-3,
+      .header-bar-image.pos-4 {
+        display: none;
+      }
+
+      .example-images {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .header-bar-container {
+        height: 220px;
+      }
+    }
+  </style>
+</BaseLayout>

@@ -139,7 +139,7 @@ export default function BrowseAllGrid({
   allImages = [], 
   basePath = '',
   galleryTitle = 'Gallery',
-  buttonText = 'View All Images'
+  buttonText = 'Browse Full Collection'
 }) {
   const [isExpanded, setIsExpanded] = useState(false);
   const gridRef = useRef(null);
@@ -260,7 +260,7 @@ export default function BrowseAllGrid({
               color: '#2a1f17',
               margin: '0 0 8px 0',
             }}>
-              {galleryTitle} – Complete Index
+              {galleryTitle} Collection
             </h2>
             <p style={{
               fontFamily: "'Glegoo', serif",

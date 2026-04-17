@@ -101,10 +101,10 @@ These terms are already considered covered by existing pages and do not currentl
 
 ---
 
-## Built Locally / Pending Deploy
+## Newly Built / Now Live
 
 ### 1. `/Art-of-the-West`
-**Status:** Built locally  
+**Status:** Live  
 **Format:** Standalone concept / definition page  
 **Reason:** Strategic term because of Art of the West Magazine search overlap and Wayne Heim's feature there.
 
@@ -115,7 +115,7 @@ These terms are already considered covered by existing pages and do not currentl
 - Built as an exact-match concept page at `/Art-of-the-West` rather than a blog-only definition URL.
 
 ### 2. `/western-landscape-art`
-**Status:** Built locally  
+**Status:** Live  
 **Format:** Multi-term hybrid/editorial page  
 **Reason:** Natural cluster page spanning painterly western landscape intent and related subject/location modifiers.
 
@@ -132,29 +132,71 @@ These terms are already considered covered by existing pages and do not currentl
 - Showcase painterly landscapes by theme: water, sunsets, mountains.
 - Use one row per source/theme because these data sources are color-only.
 
----
-
-## Planned / Next Build Targets
-
-### 1. `Western Artwork`
-**Status:** Planned  
-**Recommended format:** Hybrid cluster page
+### 3. `/western-artwork`
+**Status:** Live  
+**Format:** Hybrid cluster page  
+**Reason:** Broad but viable canonical for general western artwork intent, spanning portraits, narrative frontier work, and landscapes.
 
 **Terms to carry:**
 - western artwork
 - western artwork for sale
 - western themed art
 
-### 2. `Wild West Art`
-**Status:** Planned  
-**Recommended format:** Hybrid cluster page
+### 4. `/wild-west-art`
+**Status:** Live  
+**Format:** Hybrid cluster page  
+**Reason:** Primary discovery route for Wild West art intent, now differentiated from the exact-match old-west definition page and the vintage-western commercial page.
 
 **Terms to carry:**
 - wild west art
 - wild west artwork
-- vintage cowboy art
-- vintage western art
+- frontier art
+
+### 5. `/old-western-art`
+**Status:** Live  
+**Format:** Standalone concept / definition page  
+**Reason:** Informational exact-match route for the meaning of old western art and vintage western art, framed around contemporary images that carry 1880s-era frontier atmosphere rather than literal antique objects.
+
+**Terms to carry:**
 - old western art
+- what is old western art
+- vintage western art meaning
+
+### 6. `/vintage-western-art`
+**Status:** Live  
+**Format:** Commercial grid / curated print page  
+**Reason:** Purchase-intent route for visitors seeking vintage western art, vintage cowboy art, or old-west wall presence in a cleaner shopping-oriented format.
+
+**Terms to carry:**
+- vintage western art
+- vintage cowboy art
+- old western art for sale
+
+### 7. `/One-Image-Movie`
+**Status:** Live  
+**Format:** Standalone concept / definition page  
+**Reason:** Strategic exact-match concept page for Wayne Heim's signature narrative term, using the existing `Other` page as source material but elevating it into a root-level canonical concept route.
+
+**Terms to carry:**
+- one-image movie
+- one image movie
+
+### 8. `/Engrained`
+**Status:** Live  
+**Format:** Commercial grid / concept hybrid  
+**Reason:** Specific commercial landing page for the Engrained wood-print concept, positioned around wood grain, vintage stories, rugged life, and landscapes.
+
+**Terms to carry:**
+- engrained
+- engrained wood prints
+- western art on wood
+- wood print fine art
+
+---
+
+## Planned / Next Build Targets
+
+No additional build targets are queued in this document at the moment. Add the next batch here before work begins so canonicals stay coordinated.
 
 ---
 
@@ -169,6 +211,14 @@ Use this section as the quick answer when deciding whether a new page is actuall
 | `/Western-Photography-Prints` | western art prints, western prints, western artwork prints, cowboy art prints, vintage cowboy print |
 | `/cowboy-wall-art` | cowboy wall art, cowboy artwork, western cowboy artwork |
 | `/western-fine-art-photography-collection` | artistic western photography |
+| `/Art-of-the-West` | art of the west |
+| `/western-landscape-art` | western landscape art, waterfall photography, mountain photography, Tetons, Rocky Mountains |
+| `/western-artwork` | western artwork, western artwork for sale, western themed art |
+| `/wild-west-art` | wild west art, wild west artwork, frontier art |
+| `/old-western-art` | old western art, what is old western art, vintage western art meaning |
+| `/vintage-western-art` | vintage western art, vintage cowboy art, old western art for sale |
+| `/One-Image-Movie` | one-image movie, one image movie |
+| `/Engrained` | engrained, engrained wood prints, western art on wood, wood print fine art |
 | `/Cowboy-Photography` | cowboy photography |
 | `/Contemporary-Western-Art` | contemporary western art |
 | `/Blog/what-is-western-cowboy-art` | western cowboy art |

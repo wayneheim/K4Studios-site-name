@@ -80,6 +80,7 @@ interface Props {
   imageSectionPath: string;
   gridBasePath: string;
   galleryPaths?: string[];
+  galleryDatasOverride?: any[][];
   landing: KeywordLandingConfig;
   breadcrumbItems: KeywordLandingBreadcrumbItem[];
   storyBlocks: KeywordLandingStoryBlock[];
@@ -129,6 +130,7 @@ const {
   imageSectionPath,
   gridBasePath,
   galleryPaths: overrideGalleryPaths = [],
+  galleryDatasOverride = [],
   landing,
   breadcrumbItems,
   storyBlocks = [],
@@ -157,12 +159,14 @@ const galleryPaths: string[] = overrideGalleryPaths.length
   ? overrideGalleryPaths
   : getOrderedWesternGalleryPaths(imageSectionPath);
 const allGalleryData = import.meta.glob('../../data/Galleries/**/*.mjs', { eager: true }) as any;
-const galleryDatas = galleryPaths.map((path) => {
-  const normalizedPath = path.replace(/^\/Galleries/, '');
-  const directFilePath = '../../data/Galleries' + normalizedPath + '.mjs';
-  const nestedFilePath = '../../data/Galleries' + normalizedPath + '/' + normalizedPath.split('/').pop() + '.mjs';
-  return allGalleryData[directFilePath]?.galleryData || allGalleryData[nestedFilePath]?.galleryData || [];
-});
+const galleryDatas = galleryDatasOverride.length
+  ? galleryDatasOverride
+  : galleryPaths.map((path) => {
+      const normalizedPath = path.replace(/^\/Galleries/, '');
+      const directFilePath = '../../data/Galleries' + normalizedPath + '.mjs';
+      const nestedFilePath = '../../data/Galleries' + normalizedPath + '/' + normalizedPath.split('/').pop() + '.mjs';
+      return allGalleryData[directFilePath]?.galleryData || allGalleryData[nestedFilePath]?.galleryData || [];
+    });
 
 const headingCount = storyBlocks.filter((block, index) => index > 0 && block.subhead).length;
 const featheredImages = getFeatheredImages({
@@ -175,19 +179,40 @@ const featheredImages = getFeatheredImages({
   poolMultiplier: 3,
 });
 
+function dedupeGridItems(items: KeywordLandingGridItem[]) {
+  const seen = new Set<string>();
+  return (items || []).filter((item) => {
+    if (!item?.id || seen.has(item.id)) return false;
+    seen.add(item.id);
+    return true;
+  });
+}
+
 const leadStoryBlock = storyBlocks[0];
 const secondaryStoryBlocks = storyBlocks.slice(1, 3);
 const faqSplitIndex = Math.ceil(faqItems.length / 2);
 const faqLeft = faqItems.slice(0, faqSplitIndex);
 const faqRight = faqItems.slice(faqSplitIndex);
-const gridImages = (providedGridImages?.length
+const gridImages = dedupeGridItems(providedGridImages?.length
   ? providedGridImages
   : (galleryData || [])
       .filter((item: any) => item.id !== 'i-k4studios' && item.visibility !== 'ghost' && item.visibility !== 'hidden')
       .slice(0, 12)
 );
 
-const hasCollectionGroups = collectionGroups.length > 0;
+const validCollectionGroups = collectionGroups
+  .map((group) => ({
+    ...group,
+    rows: (group.rows || [])
+      .map((row) => ({
+        ...row,
+        items: dedupeGridItems(row.items || []),
+      }))
+      .filter((row) => row.items.length > 0),
+  }))
+  .filter((group) => group.rows.length > 0);
+
+const hasCollectionGroups = validCollectionGroups.length > 0;
 
 const stripHtml = (text: string) => text.replace(/<[^>]*>/g, '').trim();
 
@@ -384,7 +409,7 @@ const computedMeta = {
 
         {hasCollectionGroups ? (
           <div class="collection-groups reveal-on-scroll">
-            {collectionGroups.map((group: KeywordLandingCollectionGroup) => (
+            {validCollectionGroups.map((group: KeywordLandingCollectionGroup) => (
               <article class="collection-group">
                 <div class="collection-group__header">
                   <h3 class="collection-group__title">{group.title}</h3>

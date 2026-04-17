@@ -22,8 +22,9 @@ function ensureAlt(item: any, fallbackAlt: string) {
   return base || fallbackAlt;
 }
 
-function selectGridImages(data: any[], hrefBase: string, offset: number, count: number, fallbackAlt: string) {
+function selectGridImages(data: any[], hrefBase: string, offset: number, count: number, fallbackAlt: string, excludedIds: string[] = []) {
   return cleanItems(data)
+    .filter((item: any) => !excludedIds.includes(item.id))
     .slice(offset, offset + count)
     .map((item: any) => ({
       id: item.id,
@@ -40,8 +41,10 @@ function selectCollectionPreviewRow(
   count: number,
   fallbackAlt: string,
   seriesLabel: string,
+  excludedIds: string[] = [],
 ) {
   return cleanItems(data)
+    .filter((item: any) => !excludedIds.includes(item.id))
     .slice(offset, offset + count)
     .map((item: any) => ({
       id: item.id,
@@ -99,6 +102,8 @@ export const hybridCarouselProps = {
   kicker: 'Selected Landscapes',
   counterLabel: 'Landscape',
 };
+
+const heroSlideIds = hybridCarouselProps.slides.map((slide: any) => slide.id);
 
 export const storyBlocks = [
   {
@@ -186,9 +191,9 @@ export const featuredReadingItems = [
 ];
 
 export const gridImages = [
-  ...selectGridImages(mountainsGallery, mountainsPath, 0, 4, 'Western mountain landscape by Wayne Heim'),
-  ...selectGridImages(waterGallery, waterPath, 1, 4, 'Western water and waterfall landscape by Wayne Heim'),
-  ...selectGridImages(sunsetsGallery, sunsetsPath, 1, 4, 'Western sunset landscape by Wayne Heim'),
+  ...selectGridImages(mountainsGallery, mountainsPath, 0, 4, 'Western mountain landscape by Wayne Heim', heroSlideIds),
+  ...selectGridImages(waterGallery, waterPath, 0, 4, 'Western water and waterfall landscape by Wayne Heim', heroSlideIds),
+  ...selectGridImages(sunsetsGallery, sunsetsPath, 0, 4, 'Western sunset landscape by Wayne Heim', heroSlideIds),
 ];
 
 export const collection = {
@@ -209,10 +214,11 @@ export const collectionGroups = [
         items: selectCollectionPreviewRow(
           waterGallery,
           waterPath,
-          1,
+          0,
           4,
           'Western waterfall landscape by Wayne Heim',
           'Water / Color',
+          heroSlideIds,
         ),
       },
       {
@@ -222,10 +228,11 @@ export const collectionGroups = [
         items: selectCollectionPreviewRow(
           sunsetsGallery,
           sunsetsPath,
-          1,
+          0,
           4,
           'Western sunset landscape by Wayne Heim',
           'Sunsets / Color',
+          heroSlideIds,
         ),
       },
       {
@@ -239,6 +246,7 @@ export const collectionGroups = [
           4,
           'Western mountain landscape by Wayne Heim',
           'Mountains / Color',
+          heroSlideIds,
         ),
       },
     ],

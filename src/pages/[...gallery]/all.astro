@@ -83,8 +83,8 @@ const parentUrl = `https://www.k4studios.com${basePath}`;
 const galleryTitle = breadcrumbLabels.slice(-2).join(' – '); // Last 2 levels
 
 // ✅ SEO-optimized title and description
-const seoTitle = `${galleryTitle} – Complete Index (${imageCount} Images) | Wayne Heim Fine Art`;
-const seoDescription = `Browse all ${imageCount} fine art photographs in ${galleryTitle} by Wayne Heim. View the complete gallery with full stories and collector information.`;
+const seoTitle = `${galleryTitle} Collection (${imageCount} Images) | Wayne Heim Fine Art`;
+const seoDescription = `Browse the full ${galleryTitle} collection by Wayne Heim. Explore all ${imageCount} fine art photographs with stories and collector information.`;
 
 // ✅ Text cleaners
 const cleanForDisplay = (val = "") =>
@@ -115,7 +115,7 @@ const breadcrumbItems = breadcrumbHrefs.map((href, idx) => ({
 breadcrumbItems.push({
   "@type": "ListItem",
   "position": breadcrumbItems.length + 1,
-  "item": { "@id": canonicalUrl, "name": "Complete Index" }
+  "item": { "@id": canonicalUrl, "name": "Collection" }
 });
 
 // ✅ Pre-build JSON-LD
@@ -154,7 +154,7 @@ const structuredDataJson = JSON.stringify({
     {
       "@type": "CollectionPage",
       "@id": canonicalUrl + "#collectionpage",
-      "name": galleryTitle + " – Complete Index",
+      "name": galleryTitle + " Collection",
       "url": canonicalUrl,
       "description": seoDescription,
       "isPartOf": { "@id": parentUrl + "#collection" },
@@ -200,19 +200,19 @@ const heroImage = galleryData[0];
             )}
           </li>
         ))}
-        <li>Complete Index</li>
+        <li>Collection</li>
       </ol>
     </nav>
 
     <!-- Header with proper H1/H2 semantic hierarchy -->
     <div class="header">
-      <h1>{galleryTitle} – Complete Index ({imageCount} Images)</h1>
+      <h1>{galleryTitle} Collection ({imageCount} Images)</h1>
       <h2>Fine Art Photography by Wayne Heim</h2>
     </div>
 
     <!-- Gallery Intro -->
     <section class="gallery-intro">
-      <p>This page presents all {imageCount} images in this gallery. Each image links to its dedicated page with full story and collector information.</p>
+      <p>This page presents the full {galleryTitle} collection with all {imageCount} images. Each image links to its dedicated page with full story and collector information.</p>
       <p class="usage-hint">Hover to preview. Click any image to view the full image page.</p>
     </section>
 

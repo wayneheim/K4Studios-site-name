@@ -1,0 +1,332 @@
+---
+export const prerender = true;
+
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import LandingHeader from '@/components/Landing-Header.jsx';
+import SiteFooter from '@/components/Footer.astro';
+import WesternDefinitions from '@/components/blog/WesternDefinitions.astro';
+import { getBreadcrumbList, getStructuredData } from '@/components/utils/getStructuredData.ts';
+
+import '@/styles/global.css';
+
+const canonicalUrl = 'https://www.k4studios.com/old-western-art';
+
+const getProxySrc = (id: string, size: string) => `/img/${id}/${size}.jpg`;
+const getAbsoluteProxySrc = (id: string, size: string) => `https://www.k4studios.com/img/${id}/${size}.jpg`;
+
+const headerImages = [
+  { id: 'i-XsdNV9s', alt: '1880s-era frontier portrait carrying the quiet atmosphere associated with old western art' },
+  { id: 'i-vP7bLLc', alt: 'Cowboy portrait with weathered presence and painterly old-West restraint' },
+  { id: 'i-B7ZSdfs', alt: 'Narrative frontier scene where consequence matters more than spectacle' },
+  { id: 'i-HBRmWg4', alt: 'Old-West figure study shaped by silence, shadow, and consequence' },
+  { id: 'i-rfFBRQM', alt: 'Weathered frontier portrait suggesting the moral gravity beneath western legend' },
+];
+
+const image1 = {
+  id: 'i-KVxkXrV',
+  src: getProxySrc('i-KVxkXrV', 'l'),
+  alt: 'Old western art portrait example showing the person inside the frontier symbol',
+};
+
+const image2 = {
+  id: 'i-Dw6Z8ff',
+  src: getProxySrc('i-Dw6Z8ff', 'l'),
+  alt: 'Vintage western interior scene where lamplight and tension create old-West atmosphere',
+};
+
+const image3 = {
+  id: 'i-8BbMZjs',
+  src: getProxySrc('i-8BbMZjs', 'l'),
+  alt: 'Quiet cowboy portrait using restraint and weathering to suggest an older frontier world',
+};
+
+const pageTitle = 'What Is Old Western Art? | Meaning, Vintage Atmosphere, and 1880s-Era Frontier Story';
+const pageDescription = 'Old western art describes imagery that carries the atmosphere, people, and story world of the 1880s-era frontier. Here it is framed as contemporary authored work, not literal antique art objects.';
+
+const structuredImageUrls = [
+  ...headerImages.map((image) => getAbsoluteProxySrc(image.id, 'l')),
+  getAbsoluteProxySrc(image1.id, 'l'),
+  getAbsoluteProxySrc(image2.id, 'l'),
+  getAbsoluteProxySrc(image3.id, 'l'),
+];
+
+const breadcrumbStructuredData = getBreadcrumbList(
+  [
+    { name: 'Home', item: 'https://www.k4studios.com' },
+    { name: 'Wild West Art', item: 'https://www.k4studios.com/wild-west-art' },
+    { name: 'Old Western Art', item: canonicalUrl },
+  ],
+  `${canonicalUrl}#breadcrumb`
+);
+
+const structuredData = getStructuredData({
+  type: 'Article',
+  data: {
+    headline: 'What Is Old Western Art?',
+    description: pageDescription,
+    url: canonicalUrl,
+    image: structuredImageUrls,
+    copyrightNotice: '© Wayne Heim',
+    author: {
+      '@type': 'Person',
+      name: 'Wayne Heim',
+    },
+    datePublished: '2026-04-17',
+    articleSection: 'Art History',
+    definedTerm: {
+      name: 'Old Western Art',
+      description: pageDescription,
+    },
+    keywords: [
+      'old western art',
+      'what is old western art',
+      'vintage western art meaning',
+      'old west art',
+      'vintage cowboy art',
+      'frontier art',
+    ],
+  },
+  defaults: {
+    copyrightNotice: '© Wayne Heim',
+    license: 'https://k4studios.com/copyright',
+    creditText: 'Wayne Heim',
+    creatorName: 'Wayne Heim',
+    creatorUrl: 'https://k4studios.com/',
+  },
+});
+
+const meta = {
+  description: pageDescription,
+  keywords: 'old western art, what is old western art, vintage western art meaning, old west art, vintage cowboy art, frontier art',
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogType: 'article',
+  ogUrl: canonicalUrl,
+  ogImage: getAbsoluteProxySrc(headerImages[0].id, 'l'),
+  twitterTitle: pageTitle,
+  twitterDescription: pageDescription,
+  twitterUrl: canonicalUrl,
+  twitterImage: getAbsoluteProxySrc(headerImages[0].id, 'l'),
+  twitterCard: 'summary_large_image',
+};
+
+const pageBreadcrumb = `Home › <a href='/wild-west-art' style='color: inherit; text-decoration: none;' onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Wild West Art</a> › Old Western Art`;
+---
+
+<BaseLayout
+  title={pageTitle}
+  structuredDataJSON={structuredData}
+  meta={meta}
+>
+  <script type="application/ld+json" set:html={breadcrumbStructuredData} />
+
+  <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
+    <div class="drawer-mode">
+      <LandingHeader client:load breadcrumb={pageBreadcrumb} />
+    </div>
+
+    <section class="header-image-bar">
+      <div class="header-bar-container">
+        {headerImages.map((img, index) => (
+          <div class={`header-bar-image pos-${index}`}>
+            <img
+              src={getProxySrc(img.id, 'l')}
+              alt={img.alt}
+              loading="eager"
+            />
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section style="text-align:center; padding:2rem 1rem 2rem;">
+      <h1 style="font-size:2.25rem; font-weight:700; margin-bottom:0.5rem; line-height:1.2;">
+        What Is Old Western Art?
+      </h1>
+      <p style="font-size:1.1rem; color:#666; font-style:italic; margin-top:0.5rem;">
+        Meaning, vintage atmosphere, and the 1880s-era frontier story world behind the term
+      </p>
+      <p style="font-size:0.95rem; color:#888; margin-top:0.75rem; letter-spacing:0.02em;">
+        A definition page for people who want old-west feeling, not literal nineteenth-century antiques
+      </p>
+    </section>
+
+    <section class="story-section max-w-[860px] mx-auto px-4">
+      <article class="story-block space-y-4">
+        <p><strong>Old western art</strong> is usually used to describe imagery that carries the atmosphere, people, and story world of the nineteenth-century frontier. In search, though, the phrase often does double duty. Sometimes it means literal antique Western art objects. Just as often it means contemporary work that feels rooted in the 1880s-era West through costume, setting, tone, weather, restraint, and story.</p>
+
+        <p>This page adopts the second meaning on purpose. At K4 Studios, old western art is not being treated as a collector term for objects made in the 1880s. It is being framed as present-day authored imagery that evokes the older frontier world strongly enough to satisfy the phrase without pretending to be antique material culture.</p>
+
+        <p>That distinction matters because it gives the term artistic room. It lets old western art describe modern images built from frontier memory, cowboy presence, vintage atmosphere, and narrative consequence rather than limiting the phrase to auction-house categories alone.</p>
+
+        <div class="section-heading-with-line">
+          <h2>Old Western Art vs. Antique Western Art</h2>
+        </div>
+
+        <p>The simplest way to separate the terms is this: <strong>antique Western art</strong> refers to works that were actually made in the historical period or near it. <strong>Old western art</strong>, as used here, refers to imagery about that world. The art may be contemporary, but the visual language is anchored in frontier-era life.</p>
+
+        <p>That means the age of the object is not the main point. The point is whether the work carries believable period feeling. Does it feel tied to frontier rooms, older clothing, weathered faces, hard choices, quiet aftermaths, and the land that shaped those lives? If so, the phrase old western art can still operate honestly, even when the artwork itself is modern.</p>
+
+        <div class="section-heading-with-line">
+          <h2>What Makes an Image Feel Old West?</h2>
+        </div>
+
+        <p>It is not enough to add a hat, a revolver, or a sepia cast. Old-West feeling comes from pressure. It comes from people who seem to belong to harsher rooms and wider distances. It comes from frontier interiors lit by practical light, faces marked by endurance, postures that imply labor or consequence, and scenes that feel connected to a life before and after the shutter.</p>
+
+        <p>That is why the better route into old western art usually involves more than one visual branch. Portraits matter because they restore the human core. Narrative scenes matter because they let the frontier remain unstable, not frozen into symbol. Tonal restraint matters because vintage atmosphere is often carried more by light, texture, and silence than by overt effects.</p>
+
+        <h3 style="font-size:1.1rem; font-weight:600; margin-top:2.5rem; margin-bottom:0.5rem; color:#555;">Three Working Faces of Old Western Art</h3>
+        <div class="example-images">
+          <figure>
+            <img src={image1.src} alt={image1.alt} loading="lazy" />
+            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
+              Portraiture that makes the frontier person matter before the frontier symbol
+            </figcaption>
+          </figure>
+          <figure>
+            <img src={image2.src} alt={image2.alt} loading="lazy" />
+            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
+              Interior narrative where lamplight, pause, and implication carry old-West mood
+            </figcaption>
+          </figure>
+          <figure>
+            <img src={image3.src} alt={image3.alt} loading="lazy" />
+            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
+              Quiet cowboy presence built from restraint instead of theatrical exaggeration
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="section-heading-with-line">
+          <h2>Why It Overlaps with Vintage Western Art</h2>
+        </div>
+
+        <p>Searchers often use <strong>vintage western art</strong> and <strong>old western art</strong> almost interchangeably. The overlap makes sense. In both cases, people are usually reaching for age, period mood, and historical atmosphere rather than a strict museum classification.</p>
+
+        <p>But the vintage phrase often carries more decorative or purchasing intent, while old western art can tilt more informational. That is why the site now separates them. This page handles the definition layer. The commercial route lives at <a href="/vintage-western-art" style="color:#8b5a2b; text-decoration:underline;">Vintage Western Art</a>, where the emphasis turns toward curated collector-facing work.</p>
+
+        <div class="section-heading-with-line">
+          <h2>From Western Painting to Contemporary Frontier Photography</h2>
+        </div>
+
+        <p>Historically, older frontier subjects were fixed in the public imagination through painters and illustrators who helped define how the West looked in American culture. That lineage still matters. But contemporary photography can extend the same field when it is handled with enough authorship. It can carry period atmosphere, narrative implication, and painterly tonal control without surrendering the work to reenactment novelty.</p>
+
+        <p>That is the bridge being used here. Old western art becomes a living category when modern images can still hold the emotional weather of the 1880s-era frontier. They do not need to be old objects. They need to feel like they belong to an older human world.</p>
+
+        <div class="section-heading-with-line">
+          <h2>What Old Western Art Means at K4 Studios</h2>
+        </div>
+
+        <p>At K4 Studios, old western art means painterly frontier imagery built around people, rooms, distance, and consequence. It includes cowboy portraits, frontier women, narrative Western scenes, and quieter moments where atmosphere does as much work as action. The aim is not to imitate age with surface tricks. It is to make the image feel as though it emerged from an older story-world.</p>
+
+        <p>That lets the term work in a way that is both strategic and honest. Searchers looking for old western art can land on imagery that carries the 1880s spirit they want, while still encountering contemporary work with authorship, mood, and collector-grade seriousness.</p>
+
+        <div class="section-heading-with-line">
+          <h2>Where to Go Next</h2>
+        </div>
+
+        <p>If you want the curated buying route, continue into <a href="/vintage-western-art" style="color:#8b5a2b; text-decoration:underline;">Vintage Western Art</a>. If you want the broader discovery hub, open <a href="/wild-west-art" style="color:#8b5a2b; text-decoration:underline;">Wild West Art</a>. For the larger artistic field behind the frontier branch, start with <a href="/Art-of-the-West" style="color:#8b5a2b; text-decoration:underline;">Art of the West</a>. And if you want the still-image storytelling thesis underneath much of this work, read <a href="/One-Image-Movie" style="color:#8b5a2b; text-decoration:underline;">One-Image Movie</a>.</p>
+      </article>
+    </section>
+
+    <section class="max-w-[860px] mx-auto px-4 pt-8 pb-4">
+      <WesternDefinitions variant="post" />
+    </section>
+
+    <SiteFooter class="pt-8 pb-12" />
+  </main>
+
+  <style>
+    .header-image-bar {
+      width: 100%;
+      overflow: hidden;
+      margin-bottom: 0;
+    }
+
+    .header-bar-container {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0;
+      width: 100%;
+      height: 340px;
+    }
+
+    .header-bar-image {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header-bar-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    .section-heading-with-line {
+      margin-top: 2.5rem;
+      padding-top: 0.4rem;
+      border-top: 1px solid rgba(120, 104, 88, 0.35);
+    }
+
+    .section-heading-with-line h2 {
+      font-size: 1.45rem;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-top: 0.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .example-images {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .example-images figure {
+      margin: 0;
+    }
+
+    .example-images img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      display: block;
+    }
+
+    .story-section p {
+      font-size: 1.06rem;
+      line-height: 1.85;
+    }
+
+    @media (max-width: 900px) {
+      .header-bar-container {
+        grid-template-columns: repeat(3, 1fr);
+        height: 280px;
+      }
+
+      .header-bar-image.pos-3,
+      .header-bar-image.pos-4 {
+        display: none;
+      }
+
+      .example-images {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .header-bar-container {
+        height: 220px;
+      }
+
+      .story-section p {
+        font-size: 1rem;
+        line-height: 1.75;
+      }
+    }
+  </style>
+</BaseLayout>
