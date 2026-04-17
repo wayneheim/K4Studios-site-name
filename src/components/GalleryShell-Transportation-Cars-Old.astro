@@ -146,6 +146,7 @@ const isImagePage = lastSegment.startsWith("i-");
 // Check for ?view=grid (shared theme links should skip intro)
 const isDirectGridView = Astro.url.searchParams.get("view") === "grid";
 const skipIntro = isImagePage || isDirectGridView;
+const shouldSsrChapterViewer = skipIntro;
 
 /** ---------------------------------------------------------------
  * Sister/Related Images Link for SEO internal linking
@@ -179,11 +180,17 @@ let sisterLink = sitemapMatches.find(m => m.a.includes(currentImageId))?.b || nu
       </div>
     )}
 
-    {skipIntro && (
-      <div id="chapter-section" class="section-visible" style="display:block;">
+    <div
+      id="chapter-section"
+      class={skipIntro ? "section-visible" : "section-hidden"}
+      style={skipIntro ? "display:block;" : "display:none;"}
+    >
+      {shouldSsrChapterViewer ? (
         <ChapterViewer client:load initialImageId={initialImageId || "i-k4studios"} />
-      </div>
-    )}
+      ) : (
+        <ChapterViewer client:only="react" initialImageId={initialImageId || "i-k4studios"} />
+      )}
+    </div>
   </div>
 
   <div class="h-12 md:h-20"></div>

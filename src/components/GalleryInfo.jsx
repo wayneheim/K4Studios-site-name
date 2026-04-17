@@ -16,7 +16,7 @@ function getSisterGalleryPath(path) {
 
   return null;
 }
-import { useState, useEffect, useMemo, useCallback } from "react";
+import { useState, useEffect, useMemo, useCallback, useRef } from "react";
 import { motion } from "framer-motion";
 import "../styles/galleryinfo.css";
 import ThemeBlock from "./ThemeBlock.jsx";
@@ -174,6 +174,7 @@ export default function GalleryInfo({
   }, [galleryData]);
 
   const heroCaption = heroImage?.title || entranceData?.image?.caption || "";
+  const heroFallbackSrc = heroImage?.srcL || heroImage?.src || "";
 
   // "Explore the Gallery" always goes to first image in gallery
   const exploreHref =
@@ -205,18 +206,61 @@ export default function GalleryInfo({
 
   // Track hero image loaded state for graceful fade-in
   const [heroLoaded, setHeroLoaded] = useState(false);
+  const previousHeroIdRef = useRef(heroImage?.id || null);
 
-  // Reset loaded state when hero image changes
+  // Reset loaded state only when the hero actually changes after mount.
+  // On first render the image may already be complete because it was preloaded,
+  // and resetting here would leave the hero permanently transparent.
   useEffect(() => {
-    setHeroLoaded(false);
+    if (previousHeroIdRef.current !== heroImage?.id) {
+      previousHeroIdRef.current = heroImage?.id || null;
+      setHeroLoaded(false);
+    }
   }, [heroImage?.id]);
 
-  // Ref callback: catches images that load from cache before onLoad attaches
-  const heroImgRef = useCallback((node) => {
-    if (node && node.complete && node.naturalWidth > 0) {
+  const applyHeroFallback = useCallback((node) => {
+    if (!node || !heroFallbackSrc || node.dataset.fallbackApplied === "true") {
+      return false;
+    }
+
+    const currentSrc = node.getAttribute("src") || node.currentSrc || "";
+    if (currentSrc === heroFallbackSrc) {
+      return false;
+    }
+
+    node.dataset.fallbackApplied = "true";
+    node.src = heroFallbackSrc;
+    return true;
+  }, [heroFallbackSrc]);
+
+  const handleHeroImageLoad = useCallback(() => {
+    setHeroLoaded(true);
+  }, []);
+
+  const handleHeroImageError = useCallback((event) => {
+    const swappedToFallback = applyHeroFallback(event.currentTarget);
+    if (!swappedToFallback) {
       setHeroLoaded(true);
     }
-  }, []);
+  }, [applyHeroFallback]);
+
+  // Ref callback: catches images that completed before React attached handlers,
+  // including already-failed localhost proxy requests.
+  const heroImgRef = useCallback((node) => {
+    if (!node || !node.complete) {
+      return;
+    }
+
+    if (node.naturalWidth > 0) {
+      setHeroLoaded(true);
+      return;
+    }
+
+    const swappedToFallback = applyHeroFallback(node);
+    if (!swappedToFallback) {
+      setHeroLoaded(true);
+    }
+  }, [applyHeroFallback]);
 
   // JS-verified gallery view: fires once per gallery per session
   // This is the ONLY gallery tracking signal — bots never reach here
@@ -358,7 +402,9 @@ export default function GalleryInfo({
                     ref={heroImgRef}
                     src={getProxySrc(heroImage.id, 'l')}
                     alt={heroImage.alt || heroImage.title || "Gallery preview"}
-                    onLoad={() => setHeroLoaded(true)}
+                    data-fallback-src={heroFallbackSrc || undefined}
+                    onLoad={handleHeroImageLoad}
+                    onError={handleHeroImageError}
                     style={{
                       maxWidth: "100%",
                       borderRadius: "9px",
@@ -434,7 +480,9 @@ export default function GalleryInfo({
                   ref={heroImgRef}
                   src={getProxySrc(heroImage.id, 'l')}
                   alt={heroImage.alt || heroImage.title || "Gallery preview"}
-                  onLoad={() => setHeroLoaded(true)}
+                  data-fallback-src={heroFallbackSrc || undefined}
+                  onLoad={handleHeroImageLoad}
+                  onError={handleHeroImageError}
                   style={{
                     maxWidth: "100%",
                     borderRadius: "9px",

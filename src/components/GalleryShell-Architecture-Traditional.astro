@@ -8,6 +8,7 @@ const GALLERY_PATH = "/Galleries/Fine-Art-Photography/Architecture/Gallery";
 const FALLBACK_DESCRIPTION = "Explore traditional fine art architecture photography by Wayne Heim. Historic buildings, structures, and architectural details.";
 
 const { breadcrumb, entranceData, initialImageId } = Astro.props;
+const shouldSsrChapterViewer = Boolean(initialImageId && initialImageId !== "i-k4studios") || Astro.url.searchParams.get("view") === "grid";
 ---
 
 <GalleryShellCore
@@ -19,5 +20,9 @@ const { breadcrumb, entranceData, initialImageId } = Astro.props;
   entranceData={entranceData}
   initialImageId={initialImageId}
 >
-  <ChapterViewer slot="chapter-viewer" client:load initialImageId={initialImageId || "i-k4studios"} />
+  {shouldSsrChapterViewer ? (
+    <ChapterViewer slot="chapter-viewer" client:load initialImageId={initialImageId || "i-k4studios"} />
+  ) : (
+    <ChapterViewer slot="chapter-viewer" client:only="react" initialImageId={initialImageId || "i-k4studios"} />
+  )}
 </GalleryShellCore>

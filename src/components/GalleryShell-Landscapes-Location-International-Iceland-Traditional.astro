@@ -8,6 +8,7 @@ const GALLERY_PATH = "/Galleries/Fine-Art-Photography/Landscapes/By-Location/Int
 const FALLBACK_DESCRIPTION = "Explore traditional fine art landscape photography of Iceland by Wayne Heim. Dramatic volcanic terrain, waterfalls, and glacial scenery.";
 
 const { breadcrumb, entranceData, initialImageId } = Astro.props;
+const shouldSsrChapterViewer = Boolean(initialImageId && initialImageId !== "i-k4studios") || Astro.url.searchParams.get("view") === "grid";
 ---
 
 <GalleryShellCore
@@ -19,5 +20,9 @@ const { breadcrumb, entranceData, initialImageId } = Astro.props;
   entranceData={entranceData}
   initialImageId={initialImageId}
 >
-  <ChapterViewer slot="chapter-viewer" client:load initialImageId={initialImageId || "i-k4studios"} />
+  {shouldSsrChapterViewer ? (
+    <ChapterViewer slot="chapter-viewer" client:load initialImageId={initialImageId || "i-k4studios"} />
+  ) : (
+    <ChapterViewer slot="chapter-viewer" client:only="react" initialImageId={initialImageId || "i-k4studios"} />
+  )}
 </GalleryShellCore>
