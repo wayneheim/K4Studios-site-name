@@ -43,14 +43,18 @@ function getProxyUrl(img: any, size: string = 'l', sourcePrefix: string | null =
   return '';
 }
 
-// Helper to generate licensing inquiry URL (never expose SmugMug buyLinks)
-function getLicenseUrl(img: any): string {
-  const id = img.id || img.src?.match(/\/(i-[a-zA-Z0-9]+)\//)?.[1] || '';
-  const title = encodeURIComponent(img.title || 'Untitled');
-  if (id) {
-    return `https://www.k4studios.com/Contact?license=${id}&title=${title}`;
+function getAcquireLicensePage(source: any, fallback: string): string {
+  const candidate = source?.acquireLicensePage || fallback || 'https://www.k4studios.com/licensing';
+
+  try {
+    const absolute = new URL(String(candidate), 'https://www.k4studios.com');
+    if (absolute.hostname === 'k4studios.com') {
+      absolute.hostname = 'www.k4studios.com';
+    }
+    return absolute.toString();
+  } catch {
+    return 'https://www.k4studios.com/licensing';
   }
-  return 'https://www.k4studios.com/Contact';
 }
 
 /**
@@ -159,7 +163,7 @@ export function getStructuredData({
         license: img.license || license,
         creditText: img.creditText || creditText,
         copyrightNotice: img.copyrightNotice || copyrightNotice,
-        acquireLicensePage: getLicenseUrl(img),
+        acquireLicensePage: getAcquireLicensePage(img, acquireLicensePage),
         creator: {
           "@type": "Person",
           name: creatorName,
@@ -240,7 +244,7 @@ export function getStructuredData({
       license: data.license || license,
       creditText: data.creditText || creditText,
       copyrightNotice: data.copyrightNotice || copyrightNotice,
-      acquireLicensePage: getLicenseUrl(data),
+      acquireLicensePage: getAcquireLicensePage(data, acquireLicensePage),
       creator: {
         "@type": "Person",
         name: creatorName,
@@ -269,7 +273,7 @@ export function getStructuredData({
       mainEntityOfPage: { "@type": "WebPage", "@id": data.pageUrl || data.url },
       potentialAction: {
         "@type": "TradeAction",
-        target: getLicenseUrl(data),
+        target: getAcquireLicensePage(data, acquireLicensePage),
         result: {
           "@type": "VisualArtwork",
           name: data.title,
@@ -287,7 +291,7 @@ export function getStructuredData({
             url: creatorUrl
           },
           license: data.license || license,
-          acquireLicensePage: getLicenseUrl(data)
+          acquireLicensePage: getAcquireLicensePage(data, acquireLicensePage)
         }
       }
     };

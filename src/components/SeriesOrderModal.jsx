@@ -198,6 +198,43 @@ function buildEngrainedMailtoLink(image, engrainedLink) {
   return `mailto:info@k4studios.com?subject=${subject}&body=${encodeURIComponent(body)}`;
 }
 
+const FIRST_PARTY_BUY_LINK_HOSTS = new Set(["k4studios.com", "www.k4studios.com"]);
+const BUY_LINK_PATH_PREFIXES = ["/Galleries/", "/Other/Photo-Shoots/"];
+const BUY_LINK_SMUGMUG_HOST = "wayne-heim.smugmug.com";
+
+// Legacy gallery data still contains first-party /A links; normalize them so we never emit broken internal buy URLs.
+function normalizeBuyLink(buyLink) {
+  if (typeof buyLink !== "string") return null;
+
+  const trimmed = buyLink.trim();
+  if (!trimmed) return null;
+
+  const normalizeUrl = (url) => {
+    if (!FIRST_PARTY_BUY_LINK_HOSTS.has(url.hostname)) {
+      return url.toString();
+    }
+
+    const hasSupportedPath = BUY_LINK_PATH_PREFIXES.some((prefix) => url.pathname.startsWith(prefix));
+    if (!hasSupportedPath || !url.pathname.endsWith("/A")) {
+      return null;
+    }
+
+    url.protocol = "https:";
+    url.hostname = BUY_LINK_SMUGMUG_HOST;
+    return url.toString();
+  };
+
+  try {
+    if (trimmed.startsWith("/")) {
+      return normalizeUrl(new URL(trimmed, "https://www.k4studios.com"));
+    }
+
+    return normalizeUrl(new URL(trimmed));
+  } catch {
+    return null;
+  }
+}
+
 export default function SeriesOrderModal({ isOpen, onClose, image, trackEvent }) {
   const [editionStates, setEditionStates] = useState({});
   const [pricingData, setPricingData] = useState(null);
@@ -242,10 +279,10 @@ export default function SeriesOrderModal({ isOpen, onClose, image, trackEvent })
   const effectiveSeries = seriesRegistry ? getEffectiveSeries(image, seriesRegistry) : [];
   const excludeSizes = seriesRegistry ? getExcludeSizesFromRegistry(image?.id, seriesRegistry) : {};
 
-  const hasBuyLink = typeof image?.buyLink === "string" && image.buyLink.trim().length > 0;
-  const shouldUseBuyLink = (seriesKey) => (seriesKey === "sketch" || seriesKey === "foundation") && hasBuyLink;
+  const buyLinkHref = normalizeBuyLink(image?.buyLink);
+  const shouldUseBuyLink = (seriesKey) => (seriesKey === "sketch" || seriesKey === "foundation") && !!buyLinkHref;
   const getTierOrderHref = (seriesKey, seriesDef, editionNumber, size = null, price = null) => {
-    if (shouldUseBuyLink(seriesKey)) return image.buyLink;
+    if (shouldUseBuyLink(seriesKey)) return buyLinkHref;
     return buildMailtoLink(image, seriesKey, seriesDef, editionNumber, size, price);
   };
 

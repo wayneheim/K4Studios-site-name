@@ -35,6 +35,55 @@ const GENERIC_CANDIDATE_PATTERNS = [
   /^artwork$/i,
 ];
 
+const GENERIC_COMPOSITION_TOKENS = new Set([
+  'fine',
+  'art',
+  'painterly',
+  'portrait',
+  'portraits',
+  'photography',
+  'photo',
+  'image',
+  'traditional',
+  'narrative',
+  'thematic',
+  'western',
+  'historical',
+  'historic',
+  'black',
+  'white',
+  'and',
+  'color',
+  'monochrome',
+  'classic',
+]);
+
+const GENERIC_PERSON_SUBJECT_PATTERNS = [
+  /^woman$/i,
+  /^young subject$/i,
+  /^young lady$/i,
+  /^sleeping figure$/i,
+  /^family portrait$/i,
+  /^senior portrait$/i,
+  /^historical reenactor$/i,
+  /^western reenactor$/i,
+  /^western figure$/i,
+  /^bride$/i,
+  /^1880s-era woman$/i,
+  /^portrait$/i,
+];
+
+const DEFINING_TRAIT_LABELS: Record<string, string> = {
+  reflection: 'Reflective',
+  authority: 'Authoritative',
+  consequence: 'Consequence-Marked',
+  aftermath: 'Aftermath-Marked',
+  endurance: 'Enduring',
+  restraint: 'Restrained',
+  resolve: 'Resolute',
+  vigilance: 'Vigilant',
+};
+
 const GENERIC_TITLE_TERMS = /\b(?:fine art|photograph(?:y)?|photo|image|artwork|gallery|wall art|decor|collection|collector|portrait|print|art)\b/i;
 const FRAGMENT_END_PATTERNS = /\b(?:a|an|the|in|on|at|by|for|of|with|from|to|into|onto|toward|towards|inside|outside|holding|carrying|standing|peering|looking|watching|saying|raised|braced|wearing|during|through|near|beyond|across|under|over)\b$/i;
 
@@ -129,7 +178,9 @@ function extractStructuredSubject(value = ''): string {
   for (const pattern of patterns) {
     const match = cleaned.match(pattern);
     if (!match?.[1]) continue;
-    const subject = cleanSubject(match[1]).replace(/^Color\s+/i, '').replace(/^Black and White\s+/i, '');
+    const subject = augmentGenericSubjectWithTrait(match[1], cleaned)
+      .replace(/^Color\s+/i, '')
+      .replace(/^Black and White\s+/i, '');
     if (subject && !isWeakCandidate(subject) && !looksLikeSentenceFragment(subject)) {
       return subject;
     }
@@ -194,6 +245,16 @@ function normalizeCandidate(value = ''): string {
   return trimPunctuation(cleaned);
 }
 
+function tokenizeCandidate(value = ''): string[] {
+  return normalizeCandidate(value).toLowerCase().match(/[a-z0-9]+/g) || [];
+}
+
+function isGenericTokenComposition(value = ''): boolean {
+  const tokens = tokenizeCandidate(value);
+  if (!tokens.length) return false;
+  return tokens.every((token) => GENERIC_COMPOSITION_TOKENS.has(token));
+}
+
 function hasSameNormalizedCandidate(first = '', second = ''): boolean {
   const normalizedFirst = normalizeCandidate(first).toLowerCase();
   const normalizedSecond = normalizeCandidate(second).toLowerCase();
@@ -205,7 +266,28 @@ function isWeakCandidate(value = ''): boolean {
   if (!cleaned) return true;
   if (cleaned.length < 3) return true;
   if (GENERIC_CANDIDATE_PATTERNS.some((pattern) => pattern.test(cleaned))) return true;
+  if (isGenericTokenComposition(cleaned)) return true;
   return false;
+}
+
+function extractDefiningTrait(description = ''): string {
+  const cleaned = stripAttribution(description);
+  const match = cleaned.match(/\bdefined by ([^.,;]+?)(?: rather than [^.,;]+)?(?:[.,;]|$)/i);
+  return trimPunctuation(match?.[1] || '').toLowerCase();
+}
+
+function augmentGenericSubjectWithTrait(subject = '', description = ''): string {
+  const cleanedSubject = cleanSubject(subject);
+  if (!cleanedSubject) return '';
+  if (!GENERIC_PERSON_SUBJECT_PATTERNS.some((pattern) => pattern.test(cleanedSubject))) {
+    return cleanedSubject;
+  }
+
+  const trait = extractDefiningTrait(description);
+  if (!trait) return cleanedSubject;
+
+  const traitLabel = DEFINING_TRAIT_LABELS[trait] || capitalizeFirst(trait);
+  return `${traitLabel} ${cleanedSubject}`;
 }
 
 function cleanSubject(value = ''): string {
@@ -237,7 +319,7 @@ function extractStrongDescriptionSubject(description = ''): string {
   for (const pattern of patterns) {
     const match = cleaned.match(pattern);
     if (!match?.[1]) continue;
-    const subject = cleanSubject(match[1]);
+    const subject = augmentGenericSubjectWithTrait(match[1], cleaned);
     if (subject && !isWeakCandidate(subject) && !looksLikeSentenceFragment(subject)) {
       return subject;
     }
@@ -247,7 +329,7 @@ function extractStrongDescriptionSubject(description = ''): string {
   if (!firstSentence) return '';
   if (PROMOTIONAL_PATTERNS.some((pattern) => pattern.test(firstSentence))) return '';
 
-  const subject = cleanSubject(firstSentence);
+  const subject = augmentGenericSubjectWithTrait(firstSentence, cleaned);
   return isWeakCandidate(subject) || looksLikeSentenceFragment(subject) ? '' : subject;
 }
 

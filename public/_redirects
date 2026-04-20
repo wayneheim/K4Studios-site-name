@@ -44,6 +44,8 @@ https://k4studios.com/(.+)/$  https://www.k4studios.com/$1  301!
 # =============================================================================
 
 # Legacy Photo-Shoots paths now canonicalized to SmugMug archive root
+/Other/*/i-:id  /.netlify/functions/smart-404?id=:id&path=/Other/:splat/i-:id  404!
+/Other/*/i-:id/A  /.netlify/functions/smart-404?id=:id&path=/Other/:splat/i-:id/A  404!
 /Other/Photo-Shoots  https://wayne-heim.smugmug.com/Other/Photo-Shoots  301!
 /Other/Photo-Shoots/*  https://wayne-heim.smugmug.com/Other/Photo-Shoots  301!
 /Other/Photo-Shoots-and-Themes/*  https://wayne-heim.smugmug.com/Other/Photo-Shoots  301!
@@ -95,6 +97,12 @@ https://k4studios.com/(.+)/$  https://www.k4studios.com/$1  301!
 /galleries/*/hack/*  /410.html  410!
 /galleries/*/Hack/*  /410.html  410!
 /galleries/*/HACK/*  /410.html  410!
+
+# Fine-Art portrait and misc image pages should resolve directly to their built HTML.
+/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-:id  /Galleries/Fine-Art-Photography/Portraits/Reenactors/i-:id/index.html  200
+/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-:id/*  /Galleries/Fine-Art-Photography/Portraits/Reenactors/i-:id/index.html  200
+/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-:id  /Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-:id/index.html  200
+/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-:id/*  /Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-:id/index.html  200
 
 # Smart 404 for image pages - only triggers on actual 404s
 # If image page doesn't exist, call smart-404 function to find/redirect

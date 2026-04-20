@@ -5,7 +5,6 @@ type ImageIdMap = Record<string, string[] | string>;
 
 let imageIdMapCache: ImageIdMap | null = null;
 let imageIdMapCacheTime = 0;
-let knownGallerySetCache: Set<string> | null = null;
 
 function normalizePath(pathname: string): string {
   if (!pathname) return '';
@@ -15,7 +14,7 @@ function normalizePath(pathname: string): string {
 }
 
 function extractImageId(pathname: string): string {
-  const match = normalizePath(pathname).match(/\/(i-[A-Za-z0-9-]+)$/);
+  const match = normalizePath(pathname).match(/\/(i-[A-Za-z0-9-]+)(?:\/[A-Z])?$/);
   return match ? match[1] : '';
 }
 
@@ -23,6 +22,45 @@ function getParentGalleryPath(pathname: string): string {
   let normalized = normalizePath(pathname);
   normalized = normalized.replace(/\/(i-[A-Za-z0-9-]+)\/[A-Z]$/, '/$1');
   return normalized.replace(/\/[iI]-[A-Za-z0-9-]+$/, '');
+}
+
+function findMatchingGalleryPath(requestedPath: string, candidates: string[]): string {
+  const requestedGalleryPath = normalizePath(getParentGalleryPath(requestedPath)).toLowerCase();
+  if (!requestedGalleryPath) return '';
+
+  return candidates.find((candidate) => {
+    return normalizePath(String(candidate || '')).toLowerCase() === requestedGalleryPath;
+  }) || '';
+}
+
+function pickCanonicalGalleryPath(requestedPath: string, candidates: string[]): string {
+  if (!Array.isArray(candidates) || candidates.length === 0) return '';
+  if (candidates.length === 1) return candidates[0];
+
+  const requestedLower = String(requestedPath || '').toLowerCase();
+  const matchedByType = candidates.find((candidate) => {
+    const candidateLower = String(candidate || '').toLowerCase();
+    if (requestedLower.includes('/painterly-fine-art-photography/') && candidateLower.includes('/painterly-fine-art-photography/')) {
+      return true;
+    }
+    if (
+      requestedLower.includes('/fine-art-photography/') &&
+      !requestedLower.includes('/painterly-fine-art-photography/') &&
+      candidateLower.includes('/fine-art-photography/') &&
+      !candidateLower.includes('/painterly-fine-art-photography/')
+    ) {
+      return true;
+    }
+    return false;
+  });
+
+  if (matchedByType) return matchedByType;
+
+  const painterlyPreferred = candidates.find((candidate) => {
+    return String(candidate || '').toLowerCase().includes('/painterly-fine-art-photography/');
+  });
+
+  return painterlyPreferred || candidates[0];
 }
 
 async function getImageIdMap(): Promise<ImageIdMap> {
@@ -42,24 +80,7 @@ async function getImageIdMap(): Promise<ImageIdMap> {
   const json = (await response.json()) as ImageIdMap;
   imageIdMapCache = json;
   imageIdMapCacheTime = now;
-  knownGallerySetCache = null;
   return json;
-}
-
-function getKnownGallerySet(imageIdMap: ImageIdMap): Set<string> {
-  if (knownGallerySetCache) return knownGallerySetCache;
-
-  const set = new Set<string>();
-  for (const rawPaths of Object.values(imageIdMap)) {
-    const paths = Array.isArray(rawPaths) ? rawPaths : [rawPaths];
-    for (const path of paths) {
-      const normalized = normalizePath(String(path || '')).toLowerCase();
-      if (normalized) set.add(normalized);
-    }
-  }
-
-  knownGallerySetCache = set;
-  return set;
 }
 
 export default async function smart404Edge(request: Request, context: { next: () => Promise<Response> }) {
@@ -77,26 +98,34 @@ export default async function smart404Edge(request: Request, context: { next: ()
 
   try {
     const imageIdMap = await getImageIdMap();
-    const knownGallerySet = getKnownGallerySet(imageIdMap);
-    const requestedGalleryPath = getParentGalleryPath(pathname);
-    const requestedLower = requestedGalleryPath.toLowerCase();
-
-    if (!knownGallerySet.has(requestedLower) && !knownGallerySet.has(`${requestedLower}/gallery`)) {
-      return context.next();
-    }
-
     const rawPaths = imageIdMap[imageId];
     if (!rawPaths) {
       return context.next();
     }
 
-    const canonicalPaths = Array.isArray(rawPaths) ? rawPaths : [rawPaths];
-    const firstCanonicalPath = normalizePath(String(canonicalPaths[0] || ''));
-    if (!firstCanonicalPath) {
+    const canonicalPaths = (Array.isArray(rawPaths) ? rawPaths : [rawPaths])
+      .map((candidate) => normalizePath(String(candidate || '')))
+      .filter(Boolean);
+    if (canonicalPaths.length === 0) {
       return context.next();
     }
 
-    const canonicalUrlPath = `${firstCanonicalPath}/${imageId}`;
+    const matchingGalleryPath = findMatchingGalleryPath(pathname, canonicalPaths);
+    if (matchingGalleryPath) {
+      const canonicalUrlPath = `${matchingGalleryPath}/${imageId}`;
+      if (canonicalUrlPath.toLowerCase() !== pathname.toLowerCase()) {
+        return Response.redirect(`${url.origin}${canonicalUrlPath}${url.search}`, 301);
+      }
+
+      return context.next();
+    }
+
+    const canonicalGalleryPath = pickCanonicalGalleryPath(pathname, canonicalPaths);
+    if (!canonicalGalleryPath) {
+      return context.next();
+    }
+
+    const canonicalUrlPath = `${canonicalGalleryPath}/${imageId}`;
     if (canonicalUrlPath.toLowerCase() === pathname.toLowerCase()) {
       return context.next();
     }

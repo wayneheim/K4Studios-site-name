@@ -46,6 +46,45 @@ function getParentGalleryPath(pathname) {
   return normalized.replace(/\/[iI]-[A-Za-z0-9-]+\/?$/, '');
 }
 
+function findMatchingGalleryPath(requestedPath, candidates) {
+  const requestedGalleryPath = normalizePath(getParentGalleryPath(requestedPath)).toLowerCase();
+  if (!requestedGalleryPath) return '';
+
+  return candidates.find((candidate) => {
+    return normalizePath(String(candidate || '')).toLowerCase() === requestedGalleryPath;
+  }) || '';
+}
+
+function pickCanonicalGalleryPath(requestedPath, candidates) {
+  if (!Array.isArray(candidates) || candidates.length === 0) return '';
+  if (candidates.length === 1) return candidates[0];
+
+  const requestedLower = String(requestedPath || '').toLowerCase();
+  const matchedByType = candidates.find((candidate) => {
+    const candidateLower = String(candidate || '').toLowerCase();
+    if (requestedLower.includes('/painterly-fine-art-photography/') && candidateLower.includes('/painterly-fine-art-photography/')) {
+      return true;
+    }
+    if (
+      requestedLower.includes('/fine-art-photography/') &&
+      !requestedLower.includes('/painterly-fine-art-photography/') &&
+      candidateLower.includes('/fine-art-photography/') &&
+      !candidateLower.includes('/painterly-fine-art-photography/')
+    ) {
+      return true;
+    }
+    return false;
+  });
+
+  if (matchedByType) return matchedByType;
+
+  const painterlyPreferred = candidates.find((candidate) => {
+    return String(candidate || '').toLowerCase().includes('/painterly-fine-art-photography/');
+  });
+
+  return painterlyPreferred || candidates[0];
+}
+
 function getImageIdMapLower() {
   if (_imageIdMapLower) return _imageIdMapLower;
   const imageIdMap = require('./imageIdMap.json');
@@ -395,41 +434,47 @@ exports.handler = async (event) => {
   // path is an array of gallery paths - prefer one that matches current gallery context
   const pathArray = lookup?.path;
   const canonicalImageId = lookup?.originalId || imageId;
+  const candidatePaths = (Array.isArray(pathArray) ? pathArray : [pathArray])
+    .map((candidate) => normalizePath(String(candidate || '')))
+    .filter(Boolean);
   
   // Determine the best gallery path based on context
   let correctGalleryPath = null;
-  if (Array.isArray(pathArray) && pathArray.length > 0) {
-    // Extract gallery context from the requested URL
-    // e.g., "/Galleries/Painterly-Fine-Art-Photography/..." or "/Galleries/Fine-Art-Photography/..."
-    const requestedPathLower = requestedPath.toLowerCase();
-    
-    // Try to find a path that matches the current gallery context
-    // Priority 1: Match by gallery type in URL
-    let matchingPath = pathArray.find(p => {
-      const pLower = p.toLowerCase();
-      // Check if both are in the same top-level gallery
-      if (requestedPathLower.includes('/painterly-fine-art-photography/') && 
-          pLower.includes('/painterly-fine-art-photography/')) {
-        return true;
-      }
-      if (requestedPathLower.includes('/fine-art-photography/') && 
-          !requestedPathLower.includes('/painterly-fine-art-photography/') &&
-          pLower.includes('/fine-art-photography/') &&
-          !pLower.includes('/painterly-fine-art-photography/')) {
-        return true;
-      }
-      return false;
-    });
-    
-    // Priority 2: If no match by gallery type, prefer Painterly galleries (higher priority)
-    if (!matchingPath) {
-      matchingPath = pathArray.find(p => p.toLowerCase().includes('/painterly-fine-art-photography/'));
+  const matchingGalleryPath = findMatchingGalleryPath(requestedPath, candidatePaths);
+  if (matchingGalleryPath) {
+    const matchedUrlPath = normalizePath(`${matchingGalleryPath}/${canonicalImageId}`);
+    if (matchedUrlPath && matchedUrlPath.toLowerCase() !== normalizePath(requestedPath).toLowerCase()) {
+      console.log(`[smart-404] Matching gallery membership found, normalizing URL: ${matchedUrlPath}`);
+      await logSmart404EdgeEvent({
+        outcome: 'valid_membership_normalized',
+        path: requestedPath,
+        imageId: canonicalImageId,
+        reason: 'valid-membership-normalized'
+      });
+      return {
+        statusCode: 301,
+        headers: {
+          'Location': `${matchedUrlPath}${passthroughQuery}`,
+          'Cache-Control': 'public, max-age=31536000',
+          'X-Smart-404': 'valid-membership-normalized'
+        },
+        body: ''
+      };
     }
-    
-    correctGalleryPath = matchingPath || pathArray[0];
-    console.log(`[smart-404] Multiple paths available: ${JSON.stringify(pathArray)}, selected: ${correctGalleryPath}`);
-  } else {
-    correctGalleryPath = pathArray;
+
+    console.log(`[smart-404] Requested path already matches a valid gallery membership: ${requestedPath}`);
+    await logSmart404EdgeEvent({
+      outcome: 'valid_membership_path',
+      path: requestedPath,
+      imageId: canonicalImageId,
+      reason: 'valid-membership-path'
+    });
+    return createBranded404Response(event, 'valid-membership-path', 300);
+  }
+
+  correctGalleryPath = pickCanonicalGalleryPath(requestedPath, candidatePaths);
+  if (candidatePaths.length > 1 && correctGalleryPath) {
+    console.log(`[smart-404] Multiple paths available: ${JSON.stringify(candidatePaths)}, selected: ${correctGalleryPath}`);
   }
   
   if (correctGalleryPath) {

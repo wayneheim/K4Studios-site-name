@@ -7,9 +7,9 @@
  */
 export const prerender = true;
 
-import GalleryShell from '@/components/GalleryShell-Transportation-Trains-Black-White.astro';
-import { entranceData as ColorEntranceData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Transportation/TransportationTrainsBWEntranceData.ts";
-import { galleryData } from '@/data/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White.mjs';
+import GalleryShell from '@/components/GalleryShell-Transportation-Trains-Black-White-Traditional.astro';
+import { entranceData as blackAndWhiteEntranceData } from "@/data/Galleries/Fine-Art-Photography/Transportation/Trains-Black-WhiteEntranceData.ts";
+import { galleryData } from '@/data/Galleries/Fine-Art-Photography/Transportation/Trains-Black-White.mjs';
 
 // Generate static paths for all visible images at build time
 export async function getStaticPaths() {
@@ -19,14 +19,11 @@ export async function getStaticPaths() {
 }
 
 const { id } = Astro.params;
-const imageData = galleryData.find(img => img.id === id);
-
-// Check if image is missing OR hidden (archived images stay in gallery with visibility: "hidden")
 
 ---
 
 <GalleryShell 
-  breadcrumb={ColorEntranceData.breadcrumb} 
-  entranceData={ColorEntranceData}
+  breadcrumb={blackAndWhiteEntranceData.breadcrumb} 
+  entranceData={blackAndWhiteEntranceData}
   initialImageId={id}
 />

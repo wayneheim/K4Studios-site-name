@@ -1,12 +1,22 @@
 
 function getSisterGalleryPath(path) {
   const normalizedPath = (path || '').replace(/\/+$/, '');
+  const specialCaseSwaps = [
+    ['/Galleries/Fine-Art-Photography/Transportation/Trains', '/Galleries/Fine-Art-Photography/Transportation/Trains-Black-White'],
+    ['/Galleries/Fine-Art-Photography/Transportation/Trains-Black-White', '/Galleries/Fine-Art-Photography/Transportation/Trains'],
+  ];
   const swaps = [
     ['/NA-Color', '/NA-Black-White'],
     ['/NA-Black-White', '/NA-Color'],
     ['/Color', '/Black-White'],
     ['/Black-White', '/Color'],
   ];
+
+  for (const [from, to] of specialCaseSwaps) {
+    if (normalizedPath === from) {
+      return to;
+    }
+  }
 
   for (const [from, to] of swaps) {
     if (normalizedPath.includes(from)) {

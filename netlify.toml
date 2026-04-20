@@ -273,6 +273,26 @@ force = true
 
 # --- Traditional (Fine-Art-Photography) Deep-Link Fixes ---
 [[redirects]]
+from = "/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-:id"
+to = "/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-:id/index.html"
+status = 200
+
+[[redirects]]
+from = "/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-:id/*"
+to = "/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-:id/index.html"
+status = 200
+
+[[redirects]]
+from = "/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-:id"
+to = "/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-:id/index.html"
+status = 200
+
+[[redirects]]
+from = "/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-:id/*"
+to = "/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-:id/index.html"
+status = 200
+
+[[redirects]]
 from = "/Galleries/Fine-Art-Photography/Transportation/{Trains-Color,Trains-Black-White,Cars,Boats}/i-:id/*"
 to = "/Galleries/Fine-Art-Photography/Transportation/:splat/i-:id/index.html"
 status = 200
@@ -309,6 +329,18 @@ force = true
 from = "/Other/K4-Select-Series/Series-3"
 to = "/Other/K4-Select-Series/Engrained"
 status = 301
+force = true
+
+[[redirects]]
+from = "/Other/*/i-:id"
+to = "/.netlify/functions/smart-404?id=:id&path=/Other/:splat/i-:id"
+status = 404
+force = true
+
+[[redirects]]
+from = "/Other/*/i-:id/A"
+to = "/.netlify/functions/smart-404?id=:id&path=/Other/:splat/i-:id/A"
+status = 404
 force = true
 
 [[redirects]]

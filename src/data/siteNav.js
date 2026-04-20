@@ -563,6 +563,13 @@ export const siteNav = [
       "slug": "trains",
       "type": "gallery-source"
     },
+    {
+      "label": "Black & White Train Photography",
+      "href": "/Galleries/Fine-Art-Photography/Transportation/Trains-Black-White",
+      "code": "T-S5-Ss6",
+      "slug": "trains-black-white",
+      "type": "gallery-source"
+    },
    
   ],
   "code": "T-S5",

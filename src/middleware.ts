@@ -307,12 +307,25 @@ function stripNestedTags(html: string): { cleaned: string; changed: boolean } {
 // it was caused by components using window.innerWidth during render instead of in useEffect
 export const onRequest: MiddlewareHandler = async (context, next) => {
   const { pathname, search } = context.url;
+  const shouldNoindexContactQuery = pathname === "/Contact" && (
+    context.url.searchParams.has("license") || context.url.searchParams.has("title")
+  );
 
   if (pathname.length > 1 && pathname.endsWith("/")) {
     return new Response(null, {
       status: 301,
       headers: {
         Location: `${normalizePath(pathname)}${search}`,
+      },
+    });
+  }
+
+  if (pathname === "/Glossary" && search) {
+    return new Response("Gone", {
+      status: 410,
+      headers: {
+        "Cache-Control": "public, max-age=3600",
+        "X-Robots-Tag": "noindex, nofollow",
       },
     });
   }
@@ -451,6 +464,11 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
   }
 
   const response = await next();
+  const responseHeaders = new Headers(response.headers);
+
+  if (shouldNoindexContactQuery) {
+    responseHeaders.set("X-Robots-Tag", "noindex, follow");
+  }
 
   // Route page-level misses to branded custom 404 page.
   // Keep asset/API 404s untouched.
@@ -474,7 +492,11 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
   if (contentType.includes("text/html")) {
     // Avoid consuming Astro's streamed HTML responses in dev.
     if (import.meta.env.DEV) {
-      return response;
+      if (!shouldNoindexContactQuery) return response;
+      return new Response(response.body, {
+        status: response.status,
+        headers: responseHeaders,
+      });
     }
 
     // Read from a clone so the original response body remains untouched if cleanup fails.
@@ -491,7 +513,7 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
     if (body.length > 1000000) {
       return new Response(body, {
         status: response.status,
-        headers: new Headers(response.headers),
+        headers: responseHeaders,
       });
     }
 
@@ -502,9 +524,14 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
     // ✅ Always return a new Response to avoid stream issues
     return new Response(cleaned, {
       status: response.status,
-      headers: new Headers(response.headers),
+      headers: responseHeaders,
     });
   }
 
-  return response;
+  if (!shouldNoindexContactQuery) return response;
+
+  return new Response(response.body, {
+    status: response.status,
+    headers: responseHeaders,
+  });
 };
