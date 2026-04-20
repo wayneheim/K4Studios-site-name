@@ -50,7 +50,8 @@ const structuredImageUrls = [
 const breadcrumbStructuredData = getBreadcrumbList(
   [
     { name: "Home", item: "https://www.k4studios.com" },
-    { name: "Narrative Western Art", item: "https://www.k4studios.com/Narrative-Western-Art" },
+    { name: "Blog", item: "https://www.k4studios.com/Blog" },
+    { name: "Photography Guides", item: "https://www.k4studios.com/Blog#photography-guides" },
     { name: "What Is Visual Storytelling in Photography?", item: canonicalUrl },
   ],
   `${canonicalUrl}#breadcrumb`
@@ -69,7 +70,7 @@ const structuredData = getStructuredData({
       name: "Wayne Heim"
     },
     datePublished: "2026-03-30",
-    articleSection: "Visual Storytelling",
+    articleSection: "Photography Guides",
     definedTerm: {
       name: "Visual Storytelling in Photography",
       description: pageDescription,
@@ -106,7 +107,7 @@ const meta = {
   twitterCard: "summary_large_image"
 };
 
-const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-decoration: none;' onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Blog</a> › What Is Visual Storytelling in Photography?`;
+const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-decoration: none;' onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Blog</a> › <a href='/Blog#photography-guides' style='color: inherit; text-decoration: none;' onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Photography Guides</a> › What Is Visual Storytelling in Photography?`;
 ---
 
 <BaseLayout title={pageTitle} structuredDataJSON={structuredData} meta={meta}>
@@ -142,9 +143,23 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
         <p>That story may come through posture, atmosphere, silence, gesture, distance, or consequence. It may be overt or barely perceptible. But the defining trait is the same: the image carries more life than it fully explains.</p>
 
-        <p>Visual storytelling is not limited to one subject. It can appear in portraiture, historical work, landscape, and especially in forms like <a href="/Narrative-Western-Art" style="color:#8b5a2b; text-decoration:underline;">Narrative Western Art</a>, where history and myth already live close to one another.</p>
+        <div class="section-heading-with-line">
+          <h2>How Visual Storytelling Is Usually Understood</h2>
+        </div>
 
-        <p>When visual storytelling is fully realized, the image begins to feel less like a photograph you finish quickly and more like a moving story caught in one suspended instant. That is the territory of the <a href="/Other/One-Image-Movie" style="color:#8b5a2b; text-decoration:underline;">One-Image Movie™</a>: a single frame carrying the pressure of a much larger experience.</p>
+        <p>Most definitions of visual storytelling describe it as the use of images to communicate narrative, emotion, or meaning without depending on explanation alone.</p>
+
+        <p>They usually point to elements like subject, composition, light, timing, and context - the choices that shape how a viewer reads a scene and begins assembling a story from what is visible.</p>
+
+        <p>Some approaches focus on sequence, where multiple images deepen a story over time. Others stay inside the single frame and ask how much narrative can be implied within one moment, where a photograph suggests a larger life without fully unfolding it.</p>
+
+        <div class="section-heading-with-line">
+          <h2>Where Those Definitions Fall Short</h2>
+        </div>
+
+        <p>But most of those definitions stop at communication. They explain how images carry information, symbolism, or narrative cues, but they say less about how an image can carry pressure.</p>
+
+        <p>A story can be shown and still remain thin. What matters more is whether the frame continues beyond its own edges - whether it holds a before and after, whether atmosphere participates in the meaning, and whether the viewer feels something unresolved still moving inside it. That deeper pressure is what begins to push an image beyond description and into something more lasting.</p>
 
         <div class="section-heading-with-line">
           <h2>What Makes an Image Story-Driven</h2>
@@ -181,6 +196,8 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         <p>They may be quiet, but they are not empty. They may be restrained, but they are not thin. The viewer keeps returning because the image continues to imply more than it gives away.</p>
 
         <p>This is also why visual storytelling often feels cinematic without needing motion. The frame is still, but the viewer's mind is not.</p>
+
+        <p>At K4 Studios, that is where the <a href="/Other/One-Image-Movie" style="color:#8b5a2b; text-decoration:underline;">One-Image Movie™</a> becomes a useful name: not a replacement for visual storytelling as a broader field, but a way of describing the moment a still image begins behaving like part of a larger unwritten story.</p>
 
         <div class="section-heading-with-line">
           <h2>What This Looks Like in Practice</h2>

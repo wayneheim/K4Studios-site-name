@@ -2,57 +2,57 @@ export const americanWesternArtFAQ = [
   {
     q: "What is American Western art?",
     a: [
-      "American Western art refers to artistic works that interpret the people, landscapes, and cultural history of the American West.",
-      "Traditionally associated with painting and sculpture, the genre now includes photography and other contemporary mediums that explore the frontier experience."
+      "American Western art is the broader commercial and collecting category for work centered on the people, landscapes, and frontier stories of the American West.",
+      "This page is built as the browse-led route into that work. If you want the historical explainer behind the phrase itself, continue into <a href='/Art-of-the-American-West'>Art of the American West</a>."
     ],
   },
   {
-    q: "How does American Western art differ from Western frontier art?",
+    q: "What subjects are featured in this collection?",
     a: [
-      "American Western art is the broader category. It includes many subjects tied to the American West—frontier life, cowboy culture, Indigenous presence, ranching traditions, and Western landscapes. Western frontier art is more specifically focused on the historical era of the frontier itself.",
-      "The distinction is scope: frontier art is one important branch of the larger Western art tradition."
+      "The collection moves through cowboy portraits, Indigenous portrait work, Wild West narratives, frontier reckoning, and character-led scenes shaped by atmosphere and consequence.",
+      "It is designed so visitors can browse by subject first, then move deeper into the specific branch that fits what they want to collect."
     ],
   },
   {
-    q: "Can photography be considered American Western art?",
+    q: "Are these museum-quality fine art prints?",
     a: [
-      "Yes. While Western art has historically been associated with painting and sculpture, contemporary photography now occupies a legitimate place within the tradition when it interprets the people, landscapes, and historical realities of the American West with artistic intent.",
-      "The defining factor is not medium alone, but the strength of interpretation."
+      "Yes. Works are produced as collector-grade fine art prints using archival processes intended for long-term display rather than short-life decorative reproduction.",
+      "The emphasis is on authored imagery, edition structure, and materials that support serious collecting."
     ],
   },
   {
-    q: "What subjects define American Western art?",
+    q: "What print formats are available?",
     a: [
-      "American Western art often centers on cowboys, Indigenous communities, ranch life, frontier conflict, open landscapes, horses, settlement, and the cultural forces that shaped the West.",
-      "The strongest works connect those subjects to larger questions of character, survival, and history."
+      "American Western art prints from K4 Studios are available on museum-grade paper, premium canvas, and <a href='/Other/K4-Select-Series/Engrained'>Engrained™</a> hardwood panels.",
+      "That range gives collectors different entry points depending on scale, finish, and how they want the work to live in a space."
     ],
   },
   {
-    q: "What makes Wayne Heim’s work part of the Western art tradition?",
+    q: "What makes this different from decorative Western wall art?",
     a: [
-      "Wayne Heim’s work interprets the American West through painterly photography—using tonal sculpting, layered texture, and narrative composition to create images that carry the emotional gravity of painting while remaining unmistakably photographic.",
-      "That approach places the work inside the broader Western art tradition rather than outside it."
+      "The difference is authorship. These images are built through painterly photography, tonal sculpting, narrative restraint, and a sustained focus on frontier character rather than on generic Western symbol-making.",
+      "They are intended to function as fine art and collected work, not as interchangeable decor."
     ],
   },
   {
-    q: "Does American Western art include Indigenous history and presence?",
+    q: "Are the works signed or limited?",
     a: [
-      "It must. Any serious interpretation of the American West has to acknowledge Indigenous presence, history, and cultural continuity. The Western tradition is incomplete when it reduces the frontier to settler mythology alone.",
-      "Responsible Western art engages that complexity rather than avoiding it."
+      "Selected works are released as numbered, signed editions, while others remain available through open archival formats depending on the series and presentation level.",
+      "That structure gives collectors room to begin with accessible prints and move toward more limited signed work over time."
     ],
   },
   {
-    q: "What print formats are available for these Western art pieces?",
+    q: "Can I browse cowboy, Indigenous, and frontier narrative work separately?",
     a: [
-      "Works are available as limited edition archival prints on museum-grade paper, premium canvas, and Wayne Heim’s proprietary Engrained™ hardwood panels.",
-      "Each piece is numbered, signed, and produced for long-term collection."
+      "Yes. This page is structured to move you directly into Cowboy Portraits, Indigenous Portraits, Stories of the Frontier, and the broader Wild West collection.",
+      "That makes it easier to browse the branch of American Western art that fits your space or collecting interest."
     ],
   },
   {
-    q: "Why do collectors seek American Western art?",
+    q: "Where should I start if I want the historical explainer instead of the browse page?",
     a: [
-      "Collectors are drawn to American Western art because it combines visual power with cultural memory. The genre carries the mythology, tension, landscape, and human stories of the American West in ways that remain emotionally durable over time.",
-      "The best Western art offers more than atmosphere—it offers narrative and meaning."
+      "Start with <a href='/Art-of-the-American-West'>Art of the American West</a> if you want the definition-led, historical explanation of the field.",
+      "This page is designed for browsing, comparing, and collecting the work rather than for carrying the full historical argument."
     ],
   },
 ];

@@ -1,8 +1,10 @@
-export const landingWestern = {
+export const landingWestern: any = {
   // Facing History — Historically Themed Fine Art Photography
   title: "Facing History — Historically Themed Fine Art Photography",
   subtitle:
-    "Western Frontier \u2022 Civil War \u2022 World War II \u2022 The Roaring Twenties",
+    "Western Frontier • Civil War • World War II • The Roaring Twenties",
+  description:
+    "Historical fine art photography by Wayne Heim featuring the Western frontier, Civil War, WWII, and the Roaring 20s.",
 
   // Keywords for structured data and semantic SEO (not meta keywords)
   keywords: [
@@ -53,7 +55,7 @@ export const landingWestern = {
       focusKey: "1920s",
     },
     {
-      title: "World War II Portraits",
+      title: "World War II",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII",
       imageId: "i-pd3hvNk",
       thumb: "/img/i-pd3hvNk/s.jpg",

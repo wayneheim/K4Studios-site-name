@@ -1,0 +1,312 @@
+---
+export const prerender = true;
+
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import CornerstoneArticle from '@/components/authority/CornerstoneArticle.astro';
+import { getStructuredData, getBreadcrumbList } from '@/components/utils/getStructuredData.ts';
+import {
+  westernNarrativesColorData,
+  westernNAColorData as cowboyNA,
+} from '@/data/carousel/westernLandingContent.ts';
+
+const pagePath = '/Art-of-the-American-West';
+const canonicalUrl = `https://www.k4studios.com${pagePath}`;
+const pageTitle = 'Art of the American West | Definition, History, and the Tradition Today';
+const pageDescription = 'A definition-led guide to Art of the American West, from the artists and themes that shaped the canon to the contemporary work that carries the tradition forward.';
+
+function ensureAlt(img: any, fallback: string) {
+  return (img?.alt || img?.title || fallback || '').trim();
+}
+
+function findImage(data: any[], id: string) {
+  return (data || []).find((img: any) => img?.id === id);
+}
+
+function makeSlide(img: any, hrefBase: string, fallback: string) {
+  if (!img?.id) return null;
+  return {
+    id: img.id,
+    title: img.title,
+    alt: ensureAlt(img, fallback),
+    story: img.story || img.description || '',
+    href: `${hrefBase}/${img.id}`,
+  };
+}
+
+function uniqueSlides(slides: any[]) {
+  const seen = new Set<string>();
+  return slides.filter((slide) => {
+    if (!slide?.id || seen.has(slide.id)) return false;
+    seen.add(slide.id);
+    return true;
+  });
+}
+
+const slides = uniqueSlides([
+  makeSlide(
+    findImage(westernNarrativesColorData, 'i-LCspRF4'),
+    '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color',
+    'Cowboy beside a frontier wagon at sunset'
+  ),
+  makeSlide(
+    findImage(westernNarrativesColorData, 'i-trZrk2w'),
+    '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color',
+    'Frontier riders pausing in the dark'
+  ),
+  makeSlide(
+    findImage(westernNarrativesColorData, 'i-hMXZ8Xh'),
+    '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color',
+    'Cowboy portrait under lamplight'
+  ),
+  makeSlide(
+    findImage(westernNarrativesColorData, 'i-vJSCrqC'),
+    '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color',
+    'Riders overlooking the open land of the American West'
+  ),
+  makeSlide(
+    findImage(cowboyNA, 'i-4Hz6D7k'),
+    '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color',
+    'Native portrait carrying the continuity of the West'
+  ),
+].filter(Boolean));
+
+const sampleSlides = uniqueSlides([
+  makeSlide(
+    findImage(westernNarrativesColorData, 'i-trZrk2w'),
+    '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color',
+    'Frontier riders pausing in the dark'
+  ),
+  makeSlide(
+    findImage(westernNarrativesColorData, 'i-vJSCrqC'),
+    '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color',
+    'Riders overlooking the open land of the American West'
+  ),
+  makeSlide(
+    findImage(westernNarrativesColorData, 'i-hMXZ8Xh'),
+    '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color',
+    'Cowboy portrait under lamplight'
+  ),
+  makeSlide(
+    findImage(cowboyNA, 'i-4Hz6D7k'),
+    '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color',
+    'Native portrait carrying the continuity of the West'
+  ),
+].filter(Boolean));
+
+const breadcrumb = `Home › Art of the American West`;
+
+const sections = [
+  {
+    heading: 'What Is Art of the American West?',
+    paragraphs: [
+      'Art of the American West is not built from subject alone. It includes the landscapes, people, histories, and mythologies of the American West—but those subjects matter only when the work shapes them into meaning. The phrase is often associated with painting because the canon was first shaped there, yet the field itself is not limited to a single medium.',
+      'A cowboy, a rider, or a dramatic horizon does not become Art of the American West by appearing in frame. The work must act on the subject-shaping meaning through authorship, composition, atmosphere, and consequence.',
+      'For the broadest umbrella above this page, start with <a href="/Blog/what-is-western-art">What Is Western Art</a>. This page narrows the conversation to the historical and cultural field most people mean when they use the phrase Art of the American West.'
+    ]
+  },
+  {
+    heading: 'How the American West Became an Artistic Idea',
+    paragraphs: [
+      'The American West did not enter art as a finished myth. It entered first as terrain, encounter, movement, and upheaval. Expansion, migration, war, surveying, settlement, railroads, trade, and Indigenous continuity all shaped the region long before later culture simplified it into symbols.',
+      'Artists helped turn that unstable historical reality into an artistic idea. Some recorded the West as witness. Others monumentalized it. Others translated its distances and pressures into national myth. Over time, the American West became not only a place, but one of the most durable subjects in American visual culture.',
+      'For the painters and image-makers who helped build that canon directly, continue into <a href="/Masters-of-American-Western-Art">Masters of American Western Art</a>.'
+    ]
+  },
+  {
+    heading: 'The Canon: From Witness to Myth',
+    paragraphs: [
+      'Before Frederic Remington and Charles M. Russell fixed the cowboy and frontier drama in popular memory, artists such as George Catlin and Karl Bodmer had already treated the American West as a subject worth recording. Their work preserved people, dress, ritual, and encounter with a documentary seriousness that still matters historically.',
+      'Later, artists such as Albert Bierstadt and Thomas Moran enlarged the scale of the West. Mountains, valleys, weather, and distance became more than setting. They became emotional and ideological space, helping audiences imagine the region as sublime, fateful, and civilizationally important.',
+      'Then Remington and Russell hardened the visual language of the Western canon: mounted movement, frontier conflict, cowboy stoicism, campfire suspense, dust, risk, and the moral theater of the open frontier. Their work did not simply depict the West. They taught generations how to imagine it. More than that, they defined how it could be seen—and what it meant to see it that way.'
+    ]
+  },
+  {
+    heading: 'Core Themes in Art of the American West',
+    paragraphs: [
+      'In the strongest work, landscape is not background. It is pressure—memory, distance, and consequence made visible. The West is never just setting; land acts as exposure and narrative scale. The open country of the West is part of the meaning, not a stage set behind it.',
+      'Indigenous presence is equally central. Any serious account of Art of the American West has to acknowledge that the story did not begin with settlers, cavalry, or ranch life. Indigenous nations shaped the land, the history, and the moral reality of the West long before later mythologies were built on top of them.',
+      'Cowboys, scouts, frontier families, lawmen, laborers, and migrants remain recurring figures not because they are decorative archetypes, but because they embody survival, movement, risk, identity, and reinvention. Those themes are why the field still holds cultural force.'
+    ]
+  },
+  {
+    heading: 'Beyond Myth: Where Western Art Becomes Something Else',
+    paragraphs: [
+      'The weaker versions of Western art stop at symbol. The stronger versions recover the lives beneath it. They remember that the cowboy was a worker before he was an icon, that frontier women held households and social worlds together, that Indigenous lives were not background to settlement, and that the West was carried by ordinary people under extraordinary pressure.',
+      'That is why the best Art of the American West often feels less like genre performance and more like human recovery. It restores burden, weather, loss, endurance, companionship, silence, and aftermath—things popular culture reduced to shorthand.',
+      'For a more concentrated look at the labor and lived reality beneath the cowboy symbol, see <a href="/authentic-cowboy-life">Authentic Cowboy Life in Western Art</a>.'
+    ]
+  },
+  {
+    heading: 'The Tradition in Contemporary Practice',
+    paragraphs: [
+      'The field did not close when the frontier closed. Art of the American West continues because the subject continues: land, memory, identity, consequence, and myth remain active questions for artists. The strongest contemporary work does not imitate the old masters mechanically. It extends their questions into present-day practice.',
+      'That continuation can appear across painting, sculpture, contemporary realism, and photography. The phrase matters most when it still names a living tradition rather than a sealed historical shelf.',
+      'At K4 Studios, the images are not presented as a separate category, but as evidence that the tradition still holds—when land, figure, and consequence are treated interpretively rather than decoratively. For the collection-driven route into that work, move into <a href="/American-Western-Art">American Western Art</a>.'
+    ]
+  },
+  {
+    heading: 'Painterly Photography as a Contemporary Extension',
+    paragraphs: [
+      'The canon painters established the real threshold: Western art becomes art when land, figure, and event are interpreted rather than merely shown. That is the standard that matters more than medium.',
+      'Photography first entered Western art as witness and record. Once it became capable of atmosphere, tonal structure, selection, and narrative implication, it also became capable of meeting that same interpretive threshold on its own terms. When it does, it no longer records the West—it participates in it.',
+      'In Wayne Heim\'s work, the aim is not to borrow the authority of painting, but to work inside the same interpretive tradition through photographic craft: controlled light, tonal sculpting, narrative restraint, and the sense that a still image can hold a larger life around it.',
+      'If you want that medium-specific bridge explained more directly, continue into <a href="/Photography-in-Western-Art">Photography in Western Art</a>, then into <a href="/Western-Fine-Art-Photography">Western Fine Art Photography</a> and the gallery world of <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier">Facing History</a>.'
+    ]
+  }
+];
+
+const guideLinks = [
+  {
+    href: '/Blog/what-is-western-art',
+    label: 'What Is Western Art',
+    description: 'The broad root definition page for the larger Western tradition and the history beneath its imagery.'
+  },
+  {
+    href: '/Art-of-the-American-West',
+    label: 'Art of the American West',
+    description: 'This definition-led page tracing the canon, themes, legacy, and ongoing life of the American West in art.'
+  },
+  {
+    href: '/Masters-of-American-Western-Art',
+    label: 'Masters of American Western Art',
+    description: 'The historical guide to the artists who built the visual language of the American West.'
+  },
+  {
+    href: '/American-Western-Art',
+    label: 'American Western Art',
+    description: 'The collection-driven route into Wayne Heim\'s limited-edition Western work and subject clusters.'
+  },
+  {
+    href: '/Fine-Art-Photography-of-the-American-West',
+    label: 'Fine Art Photography of the American West',
+    description: 'The broader photographic branch treating the American West as a full historical and visual environment.'
+  },
+  {
+    href: '/Western-Frontier-Art',
+    label: 'Western Frontier Art',
+    description: 'The branch centered on frontier life, hardship, consequence, and the historical pressures beneath legend.'
+  },
+  {
+    href: '/Photography-in-Western-Art',
+    label: 'Photography in Western Art',
+    description: 'The bridge explaining how photography entered the Western tradition through authorship and atmosphere.'
+  },
+  {
+    href: '/Western-Fine-Art-Photography',
+    label: 'Western Fine Art Photography',
+    description: 'A deeper look at authored Western photography as fine art rather than stock, decor, or casual record.'
+  },
+  {
+    href: '/Cowboy-Photography',
+    label: 'Cowboy Photography',
+    description: 'Narrative cowboy portraiture and frontier character treated as serious artistic subjects.'
+  },
+  {
+    href: '/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier',
+    label: 'Facing History',
+    description: 'The gallery destination where frontier lives, Native presence, and narrative Western pressure become fully visual.'
+  }
+];
+
+const heroImage = slides[0] ? `https://www.k4studios.com/img/${slides[0].id}/l.jpg` : 'https://www.k4studios.com/images/K4Logo-web-c.webp';
+
+const structuredData = getStructuredData({
+  type: 'Article',
+  data: {
+    title: 'Art of the American West',
+    headline: pageTitle,
+    description: pageDescription,
+    url: canonicalUrl,
+    image: heroImage,
+    articleSection: sections.map((section) => section.heading),
+    keywords: [
+      'art of the american west',
+      'american west art',
+      'american west art history',
+      'western art tradition',
+      'american west artists',
+      'western art history',
+      'art of the west'
+    ],
+  },
+  defaults: {
+    creatorName: 'Wayne Heim',
+    creatorUrl: 'https://www.k4studios.com/'
+  }
+});
+
+const breadcrumbData = getBreadcrumbList([
+  { name: 'Home', item: 'https://www.k4studios.com/' },
+  { name: 'Art of the American West', item: canonicalUrl },
+]);
+
+const meta = {
+  title: pageTitle,
+  description: pageDescription,
+  canonicalUrl,
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogImage: heroImage,
+  ogUrl: canonicalUrl,
+  twitterTitle: pageTitle,
+  twitterDescription: pageDescription,
+  twitterImage: heroImage,
+  twitterUrl: canonicalUrl,
+};
+---
+
+<BaseLayout title={pageTitle} structuredDataJSON={structuredData} breadcrumbsJSON={breadcrumbData} meta={meta}>
+  <main class="art-american-west-page bg-[#ffffff] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
+    <CornerstoneArticle
+      breadcrumb={breadcrumb}
+      title="Art of the American West"
+      subtitle="A field defined not by subject, but by what the work does with it."
+      summaryParagraphs={[
+        'Across the American West, the image has always carried weight—open land stretching beyond the horizon, riders set against sky and distance, moments of conflict, endurance, and quiet consequence. These are the scenes most people recognize as Western art—the land, the figures, the myth.',
+        'But recognition is not the same as understanding.',
+        'Art of the American West is not defined by what it shows, but by what it does with what it shows. It begins where subject stops being enough. This page traces how that standard formed, and how it continues today without collapsing into nostalgia, decor, or medium labels.',
+      ]}
+      sections={sections}
+      sectionGroupIndexes={[
+        [0, 1],
+        [2, 3],
+        [4, 5],
+        [6],
+      ]}
+      slides={slides}
+      sampleSlides={sampleSlides}
+      guideLinks={guideLinks}
+      sampleGroups={[
+        {
+          afterSection: 3,
+          imageIndexes: [0, 1, 2],
+          caption: 'These images reflect the canon at work: land, figure, atmosphere, and narrative pressure shaping how the American West is pictured and remembered.',
+        },
+        {
+          afterSection: 6,
+          imageIndexes: [1, 2, 3],
+          caption: 'These later examples show how the tradition can continue through contemporary interpretation, where historical weight is carried forward through authorship rather than imitation.',
+        },
+      ]}
+      carouselKicker="American West Tradition"
+      carouselCounterLabel="Works"
+      pagePath={pagePath}
+    />
+  </main>
+</BaseLayout>
+
+<style is:global>
+  .art-american-west-page .cornerstone-article .hero-carousel {
+    margin-top: 2rem;
+  }
+
+  .art-american-west-page .cornerstone-article .article-shell {
+    margin-top: 3rem;
+  }
+
+  .art-american-west-page .cornerstone-article .article-main {
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    background: rgba(0, 0, 0, 0.015);
+    box-shadow: none;
+  }
+</style>

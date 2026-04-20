@@ -57,6 +57,8 @@ const galleryDatas = galleryPaths.map(path => {
 // Feathered image injection logic
 const headingCount = westernStory.filter((block, i) => i > 0 && block.subhead).length;
 const featheredImages = getSideImages({ sectionPath, headingCount, galleryDatas });
+const landingDescription = (landingWestern as any).description || landingWestern.subtitle;
+const pageTitle = "WWII Portraits - World War II Portrait Photography by Wayne Heim";
 
 // ----------------------
 // NEW: dynamic OG/Twitter image
@@ -87,7 +89,7 @@ const structuredData = getStructuredData({
   type: "gallery",
   data: {
     title: landingWestern.title,
-    description: landingWestern.subtitle || landingWestern.description,
+    description: landingDescription,
     url: `https://k4studios.com${sectionPath}`,
     keywords: landingWestern.keywords || [],
     copyrightNotice: "© Wayne Heim"
@@ -107,7 +109,7 @@ const structuredData = getStructuredData({
 <!-- ✅ Structured data JSON-LD injection -->
 <script type="application/ld+json" is:inline set:html={structuredData}></script>
 
-<BaseLayout title={`${landingWestern.title} – ${landingWestern.subtitle}`} meta={landingMeta}>
+<BaseLayout title={pageTitle} description={landingDescription} meta={landingMeta}>
   <main class="bg-[#ffffff] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
     <div class="drawer-mode">
       <LandingHeader
@@ -140,6 +142,9 @@ const structuredData = getStructuredData({
         <h2 class="page-subtitle fade-in reveal-on-scroll">
           {landingWestern.subtitle}
         </h2>
+        <p class="page-summary fade-in reveal-on-scroll max-w-[760px] mx-auto mt-3 leading-7 text-[1rem] text-[#4f4136] px-4">
+          These portraits are built around presence more than costume, asking the viewer to feel the burden, dignity, and brotherhood carried behind the uniform.
+        </p>
       </div>
     </section>
 

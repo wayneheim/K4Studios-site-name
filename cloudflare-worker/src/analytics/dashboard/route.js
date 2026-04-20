@@ -119,6 +119,18 @@ export async function handleDashboardRequest(request, env, ctx) {
     const globalPartsNoBots = [];
     if (excludeIp) globalPartsNoBots.push(`(ip IS NULL OR ip != '${excludeIp}')`);
 
+    const shallowSuspiciousIpSubquery = `
+      SELECT DISTINCT raw.ip_hash
+      FROM raw_events raw
+      JOIN session_facts_v2 sf ON sf.session_id = raw.session_id
+      WHERE raw.ip_hash IS NOT NULL
+        AND raw.ip_hash != ''
+        AND (
+          COALESCE(sf.is_suspicious_internal_shallow, 0) = 1
+          OR COALESCE(sf.is_suspicious_datacenter_shallow, 0) = 1
+        )
+    `;
+
     // If Hide Bots is enabled, we keep the actual predicate around for
     // "Filtered"/hidden counts in the dashboard.
     const hideBotsPredicate = hideBots
@@ -135,6 +147,7 @@ export async function handleDashboardRequest(request, env, ctx) {
                  OR is_datacenter = 1
                  OR risk_level >= 4
             )
+            OR ip_hash IN (${shallowSuspiciousIpSubquery})
           ))
         )`
       : '';
@@ -180,6 +193,7 @@ export async function handleDashboardRequest(request, env, ctx) {
       // - hard-coded datacenter/searchbot prefixes (legacy)
       // - active blocks
       // - behavioral suspects (timing/velocity/volume/no-branching) from suspected_bots
+      // - low-confidence shallow sessions already identified by the v2 pipeline
       artIpParts.push(
         `NOT (
           ip_hash LIKE '3.%' OR ip_hash LIKE '17.%' OR ip_hash LIKE '18.%' OR ip_hash LIKE '40.77.%' OR ip_hash LIKE '52.%' OR ip_hash LIKE '54.%' OR ip_hash LIKE '65.55.%'
@@ -190,13 +204,15 @@ export async function handleDashboardRequest(request, env, ctx) {
                OR is_datacenter = 1
                OR risk_level >= 4
           )
+          OR ip_hash IN (${shallowSuspiciousIpSubquery})
         )`
       );
     }
     if (hideChardon && viewerIpHash && !excludeIpHash) artIpParts.push(`ip_hash != '${viewerIpHash}'`);
     if (hideChardon) artIpParts.push(`(referrer IS NULL OR referrer NOT LIKE '%localhost%')`);
     const artIpClause = artIpParts.length > 0 ? 'AND ' + artIpParts.join(' AND ') : '';
-    // Bot filter: exclude AWS, Apple crawler (17.x), Microsoft/Bing (40.77.x, 65.55.x), Ashburn datacenter
+    // Bot filter: exclude legacy datacenter/searchbot ranges, active blocks,
+    // high-risk suspected bots, and shallow low-confidence sessions from v2.
     const botClause = hideBots
       ? `AND NOT (
           ip LIKE '3.%' OR ip LIKE '17.%' OR ip LIKE '18.%' OR ip LIKE '40.77.%' OR ip LIKE '52.%' OR ip LIKE '54.%' OR ip LIKE '65.55.%'
@@ -208,6 +224,7 @@ export async function handleDashboardRequest(request, env, ctx) {
                OR is_datacenter = 1
                OR risk_level >= 4
           )
+          OR ip_hash IN (${shallowSuspiciousIpSubquery})
         )`
       : "";
     // Chardon filter: exclude team member location

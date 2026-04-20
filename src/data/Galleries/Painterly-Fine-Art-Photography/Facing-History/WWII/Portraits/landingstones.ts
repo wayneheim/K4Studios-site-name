@@ -22,9 +22,10 @@ const bwPool = filterGalleryImages(bwGallery);
 const colorImg = pickRandom(colorPool);
 const bwImg = pickRandom(bwPool);
 
-export const landingWestern = {
+export const landingWestern: any = {
   title: "WWII Portraits — Faces of The Greatest Generation",
   subtitle: "Step Inside the Story — Sacrifice & Brotherhood in Painterly Fine Art",
+  description: "WWII portraits and painterly World War II reenactment photography by Wayne Heim, focused on sacrifice, resilience, and the people behind the uniform.",
 
   // Keywords for structured data and semantic SEO (not meta keywords)
   keywords: [

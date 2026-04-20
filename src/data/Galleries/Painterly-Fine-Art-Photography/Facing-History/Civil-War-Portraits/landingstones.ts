@@ -1,6 +1,7 @@
-export const landingWestern = {
-  title: "Civil War Portraits — Historical Photography",
-  subtitle: "Step Inside the Story — Valor, Loss & Brotherhood in Painterly Fine Art",
+export const landingWestern: any = {
+  title: "Civil War Portraits — Historical Photography by Wayne Heim",
+  subtitle: "American Civil War portrait photography and reenactment art by Wayne Heim",
+  description: "Civil War portraits and painterly reenactment photography by Wayne Heim, focused on the people, sacrifice, and history of the era.",
 
   // Keywords for structured data and semantic SEO (not meta keywords)
   keywords: [
@@ -21,13 +22,13 @@ export const landingWestern = {
 
   tombstones: [
     {
-      title: 'Color Civil War Themed Art',
+      title: 'Color Civil War Portraits',
       href: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color',
       imageId: "i-R5L4KXL",
       thumb: "/img/i-R5L4KXL/s.jpg",
     },
     {
-      title: 'Black & White Civil War Themed Photos',
+      title: 'Black & White Civil War Portraits',
       href: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White',
       imageId: "i-GqDJLmF",
       thumb: "/img/i-GqDJLmF/s.jpg",

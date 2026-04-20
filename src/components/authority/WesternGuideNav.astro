@@ -5,22 +5,16 @@ interface GuideLink {
   description: string;
 }
 
-const {
-  currentPath = '',
-  heading = 'Continue the Western Art Guide',
-} = Astro.props as {
-  currentPath?: string;
-  heading?: string;
-};
-
-const normalizePath = (path: string) => String(path || '').replace(/\/+$/, '').toLowerCase();
-const normalizedCurrentPath = normalizePath(currentPath || Astro.url.pathname);
-
-const guideLinks: GuideLink[] = [
+const defaultGuideLinks: GuideLink[] = [
   {
     href: '/Blog/what-is-western-art',
     label: 'What Is Western Art, Really?',
-    description: 'History, meaning of, and the evolution of visual story telling in the Art of American West',
+    description: 'The root definition page covering the larger Western tradition, its history, and why the subject still matters',
+  },
+  {
+    href: '/Art-of-the-American-West',
+    label: 'Art of the American West',
+    description: 'A definition-led guide to the canon, themes, legacy, and continuing life of the American West in art',
   },
   {
     href: '/Masters-of-American-Western-Art',
@@ -30,7 +24,7 @@ const guideLinks: GuideLink[] = [
   {
     href: '/American-Western-Art',
     label: 'American Western Art',
-    description: 'The interpretive bridge connecting frontier history to present-day Western imagery',
+    description: 'The more collection-driven bridge connecting frontier history to Wayne Heim\'s limited-edition Western work',
   },
   {
     href: '/Fine-Art-Photography-of-the-American-West',
@@ -58,6 +52,19 @@ const guideLinks: GuideLink[] = [
     description: 'Narrative cowboy portraiture and frontier character as an artistic subject',
   },
 ];
+
+const {
+  currentPath = '',
+  heading = 'Continue the Western Art Guide',
+  guideLinks = defaultGuideLinks,
+} = Astro.props as {
+  currentPath?: string;
+  heading?: string;
+  guideLinks?: GuideLink[];
+};
+
+const normalizePath = (path: string) => String(path || '').replace(/\/+$/, '').toLowerCase();
+const normalizedCurrentPath = normalizePath(currentPath || Astro.url.pathname);
 ---
 
 <hr class="guide-divider" />

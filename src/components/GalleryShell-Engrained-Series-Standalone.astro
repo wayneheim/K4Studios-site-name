@@ -5,6 +5,7 @@ import GalleryInfo from "@/components/GalleryInfo.jsx";
 import ChapterViewer from "@/components/Chapter-Engrained-Series.jsx";
 import Footer from "@/components/Footer.astro";
 import ImageDetailsWidget from "@/components/ImageDetailsWidget.jsx";
+import { buildImageSeoTitle } from "@/utils/buildImageSeoTitle";
 
 import { galleryData as allImages } from "@/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs";
 import { landingWestern as landingEngrained } from "@/data/Other/K4-Select-Series/Engrained/landingstones.ts";
@@ -118,7 +119,20 @@ function appendSiteTitle(title) {
 }
 
 const pageTitle = currentImage
-  ? appendSiteTitle(fixMojibake(currentImage.title))
+  ? appendSiteTitle(
+      buildImageSeoTitle(
+        {
+          title: fixMojibake(currentImage.title),
+          alt: fixMojibake(currentImage.alt),
+          description: fixMojibake(currentImage.description),
+          story: fixMojibake(currentImage.story),
+        },
+        {
+          galleryPath: previewPath,
+          galleryTitle: fixMojibake(usedEntranceData.title),
+        }
+      ) || fixMojibake(currentImage.title)
+    )
   : appendSiteTitle(fixMojibake(usedEntranceData.title));
 
 const baseFallbackDescription =

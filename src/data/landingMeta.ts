@@ -206,32 +206,32 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
 
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History": {
     ogTitle:
-      "Facing History – Historical Portraits by Wayne Heim",
+      "Historical Photography | Western, Civil War, WWII, and Roaring 20s by Wayne Heim",
     ogDescription:
-      "Painterly historical portraiture of the American West, Civil War, WWII, and Roaring 20s—fine art photography revealing forgotten stories and human resilience.",
+      "Historical fine art photography by Wayne Heim featuring Western frontier portraits, Civil War imagery, WWII photography, and Roaring 20s character studies.",
     ogImage: "/og/facing-history.jpg",
     ogType: "website",
     twitterCard: "summary_large_image",
     twitterTitle:
-      "Facing History – Historical Portraits by Wayne Heim",
-    keywords: "historical portraiture, historically themed photography, Facing History, Civil War photography, WWII photography, Western cowboy portraits, historical fine art, Wayne Heim",
+      "Historical Photography | Western, Civil War, WWII, and Roaring 20s",
+    keywords: "historical photography, historical fine art photography, historical portraiture, Facing History, Civil War photography, WWII photography, Roaring 20s portraits, Western frontier photography, Wayne Heim",
     twitterDescription:
-      "Painterly portraits from the American West, Civil War, WWII, and Jazz Age.",
+      "Painterly historical photography spanning the American West, Civil War, WWII, and the Roaring 20s.",
     twitterImage: "/og/facing-history.jpg",
   },
 
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits": {
     ogTitle:
-      "Civil War Portraits – Historical Photography by Wayne Heim",
+      "Civil War Portraits | Historical Photography by Wayne Heim",
     ogDescription:
-      "Painterly Civil War portraits capturing valor, sacrifice, resolve, and the overlooked human stories behind America’s defining conflict.",
+      "Civil War portraits and painterly reenactment photography by Wayne Heim, focused on soldiers, sacrifice, and the human history of the era.",
     ogImage: "/og/civilwar.jpg",
     ogType: "website",
     twitterCard: "summary_large_image",
     twitterTitle:
-      "Civil War Portraits – Photography by Wayne Heim",
+      "Civil War Portraits | Photography by Wayne Heim",
     twitterDescription:
-      "Painterly Civil War portraits rendered with historical storytelling.",
+      "Civil War portraits and historical reenactment photography by Wayne Heim.",
     twitterImage: "/og/civilwar.jpg",    keywords: "Civil War photography, Civil War portraits, Civil War fine art, historical Civil War photography, Civil War reenactment photography, Wayne Heim",  },
 
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits": {
@@ -364,31 +364,31 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
 
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War": {
     ogTitle:
-      "The Art of War – WWII Battle Photography by Wayne Heim",
+      "WWII Battle Photography | World War II War Scenes by Wayne Heim",
     ogDescription:
-      "Painterly WWII battle scenes—combat tension, human grit, and historical atmosphere captured with fine art depth.",
+      "WWII battle photography by Wayne Heim featuring combat scenes, battlefield tension, and wartime atmosphere rendered in painterly fine art.",
     ogImage: "/og/wwii-war.jpg",
     ogType: "website",
     twitterCard: "summary_large_image",
     twitterTitle:
-      "The Art of War – WWII Battle Photography",
+      "WWII Battle Photography | War Scenes by Wayne Heim",
     twitterDescription:
-      "Painterly WWII battle scenes captured as fine art photography.",
+      "WWII battle scenes and World War II combat photography by Wayne Heim.",
     twitterImage: "/og/wwii-war.jpg",
   },
 
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits": {
     ogTitle:
-      "WWII Portraits – Faces of the Greatest Generation",
+      "WWII Portraits | World War II Portrait Photography by Wayne Heim",
     ogDescription:
-      "Painterly WWII portraits honoring the Greatest Generation—quiet strength, sacrifice, and resilience captured through fine art storytelling.",
+      "WWII portraits by Wayne Heim featuring soldiers, reenactors, sacrifice, and the human side of World War II in painterly fine art photography.",
     ogImage: "/og/wwii-portraits.jpg",
     ogType: "website",
     twitterCard: "summary_large_image",
     twitterTitle:
-      "WWII Portraits – Photography by Wayne Heim",
+      "WWII Portraits | Photography by Wayne Heim",
     twitterDescription:
-      "Painterly WWII portraits captured with historical storytelling.",
+      "WWII portraits and World War II reenactment photography by Wayne Heim.",
     twitterImage: "/og/wwii-portraits.jpg",
   },
 
@@ -625,6 +625,20 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
       "Historically rooted fine art photography of the American West by Wayne Heim. Cowboy portraits, frontier lives, Indigenous presence, and painterly landscapes.",
     twitterImage: "/images/cowboy.webp",
     keywords: "fine art photography american west, american west photography, american west fine art, american frontier photography, western fine art photography, painterly western photography, historical american west art, cowboy fine art photography, Wayne Heim",
+  },
+
+  "/American-Western-Art": {
+    ogTitle: "American Western Art | Collector Prints, Cowboy Portraits & Frontier Narratives – Wayne Heim",
+    ogDescription:
+      "Browse American Western art by Wayne Heim: collector-focused cowboy portraits, Indigenous portrait work, and frontier narrative scenes offered as museum-quality fine art prints.",
+    ogImage: "/images/cowboy.webp",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: "American Western Art | Collector Prints & Frontier Narratives",
+    twitterDescription:
+      "Collector-focused American Western art by Wayne Heim. Browse cowboy portraits, Indigenous portrait work, and frontier narratives as fine art prints.",
+    twitterImage: "/images/cowboy.webp",
+    keywords: "american western art, american western art prints, cowboy portraits, frontier narratives, indigenous portrait art, western fine art prints, painterly western art, Wayne Heim",
   },
 
   "/Historical-Western-Art": {

@@ -28,6 +28,12 @@ interface RelatedLink {
   description?: string;
 }
 
+interface GuideLink {
+  href: string;
+  label: string;
+  description: string;
+}
+
 interface FAQItem {
   q: string;
   a: string | string[];
@@ -44,6 +50,9 @@ const {
   title,
   subtitle,
   summary,
+  summaryParagraphs = [],
+  positionStatementHtml,
+  featuredCalloutHtml,
   contextHtml,
   contextPlacement = 'top',
   introParagraphs = [],
@@ -59,14 +68,19 @@ const {
   samplePlacement = 'hero',
   sampleInsertAfterSection = 2,
   sampleGroups = [],
+  sectionGroupIndexes = [],
   carouselKicker = 'Featured Works',
   carouselCounterLabel = 'Featured',
   pagePath = Astro.url.pathname,
+  guideLinks,
 } = Astro.props as {
   breadcrumb: string;
   title: string;
   subtitle?: string;
   summary?: string;
+  summaryParagraphs?: string[];
+  positionStatementHtml?: string;
+  featuredCalloutHtml?: string;
   contextHtml?: string;
   contextPlacement?: 'top' | 'below-carousel';
   introParagraphs?: string[];
@@ -82,9 +96,11 @@ const {
   samplePlacement?: 'hero' | 'inline';
   sampleInsertAfterSection?: number;
   sampleGroups?: SampleGroup[];
+  sectionGroupIndexes?: number[][];
   carouselKicker?: string;
   carouselCounterLabel?: string;
   pagePath?: string;
+  guideLinks?: GuideLink[];
 };
 
 const getProxySrc = (id: string, size: string = 'm') => `/img/${id}/${size}.jpg`;
@@ -124,6 +140,23 @@ const normalizedSampleGroups = (sampleGroups.length > 0
       ? [{ afterSection: sampleInsertAfterSection, caption: sampleCaption, images: stripImages }]
       : []));
 const showHeroSamples = stripImages.length > 0 && samplePlacement !== 'inline' && normalizedSampleGroups.length === 0;
+const showSidebar = relatedLinks.length > 0 || faqItems.length > 0;
+const normalizedSectionGroups = (sectionGroupIndexes.length > 0
+  ? sectionGroupIndexes
+      .map((group) => group
+        .map((sectionIndex) => sections[sectionIndex]
+          ? { section: sections[sectionIndex], sectionIndex }
+          : null)
+        .filter(Boolean) as { section: Section; sectionIndex: number }[])
+      .filter((group) => group.length > 0)
+  : [sections.map((section, sectionIndex) => ({ section, sectionIndex }))]);
+const showGroupedContent = normalizedSectionGroups.length > 1;
+const heroCarouselProps = {
+  slides,
+  kicker: carouselKicker,
+  counterLabel: carouselCounterLabel,
+} as any;
+const normalizedSummaryParagraphs = summaryParagraphs.filter(Boolean);
 ---
 
 <div class="drawer-mode">
@@ -140,17 +173,29 @@ const showHeroSamples = stripImages.length > 0 && samplePlacement !== 'inline' &
       <p class="eyebrow">Western Art Guide</p>
       <h1>{title}</h1>
       {subtitle && <p class="subtitle" set:html={autoLinkContent(subtitle)} />}
-      {summary && <p class="summary" set:html={autoLinkContent(summary)} />}
+      {normalizedSummaryParagraphs.length > 0 ? (
+        <div class="summary-block">
+          {normalizedSummaryParagraphs.map((paragraph) => (
+            <p class="summary" set:html={autoLinkContent(paragraph)} />
+          ))}
+        </div>
+      ) : (
+        summary && <p class="summary" set:html={autoLinkContent(summary)} />
+      )}
       {contextHtml && contextPlacement === 'top' && <p class="context" set:html={autoLinkContent(contextHtml)} />}
     </div>
+
+    {positionStatementHtml && (
+      <div class="position-statement-wrap">
+        <p class="position-statement" set:html={autoLinkContent(positionStatementHtml)} />
+      </div>
+    )}
 
     {slides.length > 0 && (
       <div class="hero-carousel">
         <HybridBookCarousel
           client:load
-          slides={slides}
-          kicker={carouselKicker}
-          counterLabel={carouselCounterLabel}
+          {...heroCarouselProps}
         />
       </div>
     )}
@@ -189,68 +234,79 @@ const showHeroSamples = stripImages.length > 0 && samplePlacement !== 'inline' &
     )}
   </header>
 
-  <div class="article-shell">
-    <div class="article-main">
-      {introParagraphs.length > 0 && (
-        <section class="intro-section">
-          {introParagraphs.map((paragraph, introIndex) => (
-            quoteFirstIntroParagraph && introIndex === 0 ? (
-              <blockquote class="intro-quote">
-                <p set:html={autoLinkContent(paragraph)} />
-              </blockquote>
-            ) : (
-              <p set:html={autoLinkContent(paragraph)} />
-            )
-          ))}
-        </section>
-      )}
-
-      {sections.map((section, sectionIndex) => (
-        <section class="content-section">
-          <h2 set:html={autoLinkContent(section.heading)} />
-          {section.paragraphs.map((paragraph) => (
-            <p set:html={autoLinkContent(paragraph)} />
-          ))}
-          {section.list && section.list.length > 0 && (
-            <ul>
-              {section.list.map((item) => (
-                <li set:html={autoLinkContent(item)} />
+  <div class={`article-shell${showSidebar ? '' : ' article-shell--full'}`}>
+    <div class={`article-main-stack${showGroupedContent ? ' article-main-stack--grouped' : ''}`}>
+      {normalizedSectionGroups.map((group, groupIndex) => (
+        <div class={`article-main${showGroupedContent ? ' article-main--grouped' : ''}`}>
+          {groupIndex === 0 && introParagraphs.length > 0 && (
+            <section class="intro-section">
+              {introParagraphs.map((paragraph, introIndex) => (
+                quoteFirstIntroParagraph && introIndex === 0 ? (
+                  <blockquote class="intro-quote">
+                    <p set:html={autoLinkContent(paragraph)} />
+                  </blockquote>
+                ) : (
+                  <p set:html={autoLinkContent(paragraph)} />
+                )
               ))}
-            </ul>
+            </section>
           )}
 
-          {normalizedSampleGroups
-            .filter((group) => group.afterSection === sectionIndex + 1)
-            .map((group) => (
-              <div class="sample-evidence-block">
-                <div class={`hero-strip${group.images.length === 2 ? ' hero-strip--pair' : ''}`} aria-label="Featured image links">
-                  {group.images.map((image) => (
-                    <a href={image.href} class="strip-card">
-                      <img
-                        src={getProxySrc(image.id, 'm')}
-                        alt={image.alt || image.title}
-                        loading="lazy"
-                        decoding="async"
-                        style={image.imageObjectPosition ? `object-position: ${image.imageObjectPosition};` : undefined}
-                      />
-                      <span>{image.title}</span>
-                    </a>
-                  ))}
-                </div>
+          {groupIndex === 0 && featuredCalloutHtml && (
+            <div class="featured-callout" set:html={autoLinkContent(featuredCalloutHtml)} />
+          )}
 
-                {group.caption && <p class="sample-caption" set:html={group.caption} />}
-                <div class="evidence-divider" aria-hidden="true">
-                  <span></span>
-                  <em>✦</em>
-                  <span></span>
-                </div>
-              </div>
-            ))}
-        </section>
+          {group.map(({ section, sectionIndex }) => (
+            <section class="content-section">
+              <h2 set:html={autoLinkContent(section.heading)} />
+              {section.paragraphs.map((paragraph) => (
+                <p set:html={autoLinkContent(paragraph)} />
+              ))}
+              {section.list && section.list.length > 0 && (
+                <ul>
+                  {section.list.map((item) => (
+                    <li set:html={autoLinkContent(item)} />
+                  ))}
+                </ul>
+              )}
+
+              {normalizedSampleGroups
+                .filter((group) => group.afterSection === sectionIndex + 1)
+                .map((group) => (
+                  <div
+                    class="sample-evidence-block"
+                    style={`--sample-evidence-width: ${group.images.length === 2 ? 'min(100%, 33.5rem)' : group.images.length === 3 ? 'min(100%, 52rem)' : 'min(100%, 60rem)'}`}
+                  >
+                    <div class={`hero-strip${group.images.length === 2 ? ' hero-strip--pair' : group.images.length === 3 ? ' hero-strip--triple' : ''}`} aria-label="Featured image links">
+                      {group.images.map((image) => (
+                        <a href={image.href} class="strip-card">
+                          <img
+                            src={getProxySrc(image.id, 'm')}
+                            alt={image.alt || image.title}
+                            loading="lazy"
+                            decoding="async"
+                            style={image.imageObjectPosition ? `object-position: ${image.imageObjectPosition};` : undefined}
+                          />
+                          <span>{image.title}</span>
+                        </a>
+                      ))}
+                    </div>
+
+                    {group.caption && <p class="sample-caption" set:html={group.caption} />}
+                    <div class="evidence-divider" aria-hidden="true">
+                      <span></span>
+                      <em>✦</em>
+                      <span></span>
+                    </div>
+                  </div>
+                ))}
+            </section>
+          ))}
+        </div>
       ))}
     </div>
 
-    {(relatedLinks.length > 0 || faqItems.length > 0) && (
+    {showSidebar && (
       <aside class="sidebar-column">
         <div class="related-box" aria-label={relatedHeading}>
           {relatedLinks.length > 0 && (
@@ -295,7 +351,7 @@ const showHeroSamples = stripImages.length > 0 && samplePlacement !== 'inline' &
   </div>
 </article>
 
-<WesternGuideNav currentPath={pagePath} />
+<WesternGuideNav currentPath={pagePath} guideLinks={guideLinks} />
 
 <SiteFooter class="pt-8 pb-12" />
 
@@ -359,6 +415,38 @@ const showHeroSamples = stripImages.length > 0 && samplePlacement !== 'inline' &
     max-width: 820px;
     margin: 1rem auto 0;
     color: #3d322a;
+    font-family: 'Glegoo', serif;
+  }
+
+  .summary-block {
+    max-width: 820px;
+    margin: 1rem auto 0;
+  }
+
+  .summary-block .summary {
+    max-width: none;
+    margin: 0 0 0.75rem;
+  }
+
+  .summary-block .summary:last-child {
+    margin-bottom: 0;
+  }
+
+  .position-statement-wrap {
+    width: min(90%, 760px);
+    margin: 0.35rem auto 2.5rem;
+  }
+
+  .position-statement {
+    margin: 0;
+    padding: 0.9rem 1.1rem;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #4a3a2f;
+    background: rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 14px;
     font-family: 'Glegoo', serif;
   }
 
@@ -435,6 +523,14 @@ const showHeroSamples = stripImages.length > 0 && samplePlacement !== 'inline' &
 
   .hero-strip--pair {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .hero-strip--triple {
+    grid-template-columns: repeat(3, minmax(0, 15.25rem));
+    justify-content: center;
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
@@ -581,6 +677,12 @@ const showHeroSamples = stripImages.length > 0 && samplePlacement !== 'inline' &
     align-items: start;
   }
 
+  .article-shell--full {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: none;
+    width: 100%;
+  }
+
   .sidebar-column {
     display: block;
   }
@@ -594,9 +696,40 @@ const showHeroSamples = stripImages.length > 0 && samplePlacement !== 'inline' &
     font-family: 'Glegoo', serif;
   }
 
+  .article-main-stack {
+    min-width: 0;
+  }
+
+  .article-main-stack--grouped {
+    display: flex;
+    flex-direction: column;
+    gap: 1.45rem;
+  }
+
   .intro-section,
   .content-section {
     margin-bottom: 2rem;
+  }
+
+  .featured-callout {
+    margin: 0 0 2rem;
+    padding: 1.05rem 1.15rem 1rem;
+    background: linear-gradient(180deg, #f8f1e7 0%, #fdf9f3 100%);
+    border: 1px solid #e3d3be;
+    border-left: 4px solid #8a6a45;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    color: #3a2c22;
+    font-size: 1.02rem;
+    line-height: 1.74;
+    font-family: 'Glegoo', serif;
+  }
+
+  .featured-callout strong {
+    display: block;
+    margin-bottom: 0.28rem;
+    font-size: 1.08rem;
+    color: #241d18;
   }
 
   .content-section:last-child {

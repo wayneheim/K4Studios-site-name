@@ -9,6 +9,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import GalleryHeader from "@/components/Gallery-LandingHeader.jsx";
 import GalleryInfo from "@/components/GalleryInfo.jsx";
 import Footer from "@/components/Footer.astro";
+import { buildImageSeoTitle } from "@/utils/buildImageSeoTitle";
 import "@/styles/gallery-shell-core.css";
 
 import { getStructuredData } from "@/components/utils/getStructuredData.ts";
@@ -200,6 +201,18 @@ function appendSiteTitle(title: string) {
 
 const pageTitle = currentImage
   ? appendSiteTitle(
+      buildImageSeoTitle(
+        {
+          title: fixMojibake(currentImage.title),
+          alt: fixMojibake(currentImage.alt),
+          description: fixMojibake(currentImage.description),
+          story: fixMojibake(currentImage.story),
+        },
+        {
+          galleryPath,
+          galleryTitle: fixMojibake(usedEntranceData.title),
+        }
+      ) ||
       fixMojibake(
         !isGenericImageTitle(currentImage.title)
           ? currentImage.title

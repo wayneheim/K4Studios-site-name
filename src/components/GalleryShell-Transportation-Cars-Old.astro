@@ -5,6 +5,7 @@ import GalleryInfo from "@/components/GalleryInfo.jsx";
 import ChapterViewer from "@/components/Chapter-Transportation-Cars.jsx";
 import Footer from "@/components/Footer.astro";
 import ImageDetailsWidget from "@/components/ImageDetailsWidget.jsx";
+import { buildImageSeoTitle } from "@/utils/buildImageSeoTitle";
 
 import { galleryData as allImages } from "@/data/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars.mjs";
 import { landingWestern } from "@/data/Galleries/Painterly-Fine-Art-Photography/Transportation/landingstones.ts";
@@ -109,7 +110,20 @@ function appendSiteTitle(title) {
 }
 
 const pageTitle = currentImage
-  ? appendSiteTitle(fixMojibake(currentImage.title))
+  ? appendSiteTitle(
+      buildImageSeoTitle(
+        {
+          title: fixMojibake(currentImage.title),
+          alt: fixMojibake(currentImage.alt),
+          description: fixMojibake(currentImage.description),
+          story: fixMojibake(currentImage.story),
+        },
+        {
+          galleryPath: previewPath,
+          galleryTitle: fixMojibake(usedEntranceData.title),
+        }
+      ) || fixMojibake(currentImage.title)
+    )
   : appendSiteTitle(fixMojibake(usedEntranceData.title));
 
 const baseFallbackDescription =

@@ -62,6 +62,8 @@ const galleryDatas = galleryPaths.map(path => {
 
 const headingCount = westernStory.filter((block, i) => i > 0 && block.subhead).length;
 const featheredImages = getSideImages({ sectionPath, headingCount, galleryDatas });
+const landingDescription = (landingWestern as any).description || landingWestern.subtitle;
+const pageTitle = "Civil War Portraits - Historical Photography by Wayne Heim";
 
 // ----------------------
 // NEW: dynamic OG/Twitter image
@@ -93,7 +95,7 @@ const structuredData = getStructuredData({
   type: "gallery",
   data: {
     title: landingWestern.title,
-    description: landingWestern.subtitle || landingWestern.description,
+    description: landingDescription,
     url: `https://k4studios.com${sectionPath}`,
     keywords: landingWestern.keywords || [],
     copyrightNotice: "© Wayne Heim"
@@ -114,7 +116,8 @@ const structuredData = getStructuredData({
 <script type="application/ld+json" is:inline set:html={structuredData}></script>
 
 <BaseLayout
-  title={`${landingWestern.title} – ${landingWestern.subtitle}`}
+  title={pageTitle}
+  description={landingDescription}
   meta={landingMeta}
 >
 
@@ -145,6 +148,9 @@ const structuredData = getStructuredData({
         <h2 class="page-subtitle fade-in reveal-on-scroll">
           {landingWestern.subtitle}
         </h2>
+        <p class="page-summary fade-in reveal-on-scroll max-w-[760px] mx-auto mt-3 leading-7 text-[1rem] text-[#4f4136] px-4">
+          Explore Civil War portraits and reenactment photography centered on soldiers, sacrifice, and the human history behind the conflict.
+        </p>
       </div>
     </section>
 

@@ -1,6 +1,6 @@
 export const landingWestern = {
-  title: "WWII Photography — Painterly Stories of War, Portraits, and Machines",
-  subtitle: "World War II battle scenes, portraits, and military machines by Wayne Heim",
+  title: "WWII Fine Art Photography — Painterly Stories of War, Portraits, and Machines",
+  subtitle: "Step Inside the Story — Sacrifice, Brotherhood & Wartime Resilience in Painterly Fine Art",
   description: "WWII fine art photography featuring World War II battle scenes, portraits, and military machines by Wayne Heim",
 
   // Keywords for structured data and semantic SEO (not meta keywords)
@@ -24,7 +24,7 @@ export const landingWestern = {
   ],
 
   breadcrumb: 
-  `<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=wwii" style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;" onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Facing History</a> | WWII Photography`,
+  `<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=wwii" style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;" onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Facing History</a> | WWII`,
 
   tombstones: [
     {

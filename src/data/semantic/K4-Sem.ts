@@ -190,6 +190,19 @@ westernArtDefinition: {
   imagePhrases: []
 },
 
+artOfTheAmericanWestDefinition: {
+  path: "/Art-of-the-American-West",
+  def: "Art of the American West names the historical and continuing artistic tradition that interprets the land, people, memory, and mythology of the American West through serious artistic intent.",
+  landingPhrases: [
+    { phrase: "art of the american west", rating: 5, use: true, link: "/Art-of-the-American-West" },
+    { phrase: "american west art history", rating: 4, use: true, link: "/Art-of-the-American-West" },
+    { phrase: "american west in art", rating: 4, use: true, link: "/Art-of-the-American-West" },
+    { phrase: "western american art history", rating: 4, use: true, link: "/Art-of-the-American-West" },
+    { phrase: "creating the american west in art", rating: 3, use: true, link: "/Art-of-the-American-West" },
+  ],
+  imagePhrases: []
+},
+
 // ============================================================================
 // DEFINITION ARTICLE: WESTERN FINE ART PHOTOGRAPHY
 // Cornerstone definition page — requires high internal link authority.

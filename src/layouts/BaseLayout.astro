@@ -57,6 +57,64 @@ const ensureAbsoluteUrl = (value) => {
   }
 };
 
+const normalizeText = (value = '') =>
+  String(value || '')
+    .replace(/<[^>]*>/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+const trimAtWord = (text = '', maxLength = 160) => {
+  const normalized = normalizeText(text);
+  if (!normalized) return '';
+  if (normalized.length <= maxLength) return normalized;
+
+  const slice = normalized.slice(0, maxLength + 1);
+  const boundary = slice.lastIndexOf(' ');
+  const trimmed = (boundary > Math.floor(maxLength * 0.6)
+    ? slice.slice(0, boundary)
+    : normalized.slice(0, maxLength)).trim();
+
+  return `${trimmed}…`;
+};
+
+const trimTitle = (text = '', maxLength = 65) => {
+  const normalized = normalizeText(text);
+  if (!normalized) return '';
+  if (normalized.length <= maxLength) return normalized;
+
+  const separatorPatterns = [' | ', ' – ', ' — ', ' - ', ': '];
+  for (const separator of separatorPatterns) {
+    const head = normalized.split(separator)[0]?.trim();
+    if (head && head.length >= 18 && head.length <= maxLength) {
+      return head;
+    }
+  }
+
+  return trimAtWord(normalized, maxLength);
+};
+
+const normalizeDescription = (text = '', fallback = '', minimumLength = 110, maximumLength = 160) => {
+  const normalized = normalizeText(text);
+  const fallbackText = trimAtWord(fallback, maximumLength);
+
+  if (!normalized) return fallbackText;
+  if (normalized.length >= minimumLength) return trimAtWord(normalized, maximumLength);
+
+  const supplements = [
+    'Explore painterly fine art photography, Western stories, and limited edition prints at K4 Studios.',
+    'View collector-focused galleries, stories, and archival print options at K4 Studios.',
+  ];
+
+  for (const supplement of supplements) {
+    const combined = `${normalized} ${supplement}`.trim();
+    if (combined.length >= minimumLength) {
+      return trimAtWord(combined, maximumLength);
+    }
+  }
+
+  return fallbackText;
+};
+
 // Titles
 const galleryTitle = meta.title || title || 'K4 Studios – Fine Art Photography';
 let pageTitle = isImagePage
@@ -64,22 +122,13 @@ let pageTitle = isImagePage
   : galleryTitle;
 
 // Remove HTML & redundant separators
-const cleanTitle = (pageTitle || '')
-  .replace(/<[^>]*>/g, '')
+const cleanTitleBase = normalizeText(pageTitle || '')
   .replace(/\s*\|\s*Wayne Heim.*$/gi, '')
   .trim();
+const cleanTitle = trimTitle(cleanTitleBase);
 
 const defaultDescription =
   'Discover painterly fine art photography, Western stories, and historical portraits by Wayne Heim. Explore galleries, stories, and limited edition prints from K4 Studios.';
-
-// ✅ Trim helper
-const trimDescription = (text = '', maxLength = 160) => {
-  if (!text) return '';
-  const trimmed = text.trim();
-  return trimmed.length > maxLength
-    ? trimmed.slice(0, trimmed.lastIndexOf(' ', maxLength)) + '…'
-    : trimmed;
-};
 
 const seoDescriptionRaw =
   description ||
@@ -89,7 +138,7 @@ const seoDescriptionRaw =
     ? defaultDescription
     : `${cleanTitle} – Fine Art Photography by Wayne Heim`);
 
-const seoDescription = trimDescription(seoDescriptionRaw);
+const seoDescription = normalizeDescription(seoDescriptionRaw, defaultDescription);
 
 const socialDescription =
   (isImagePage && preloadImage?.story)

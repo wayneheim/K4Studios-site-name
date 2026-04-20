@@ -106,6 +106,190 @@ let botBlockEnabledCache = true;
 let botBlockEnabledCacheTime = 0;
 let botFrictionEnabledCache = true;
 let botFrictionEnabledCacheTime = 0;
+let imageProxyFetchLogTableInitPromise = null;
+
+const MICROSOFT_BOT_ASNS = new Set([8075]);
+
+async function ensureImageProxyFetchLogTable(env) {
+  if (!env?.DB) return;
+  if (imageProxyFetchLogTableInitPromise) {
+    await imageProxyFetchLogTableInitPromise;
+    return;
+  }
+
+  imageProxyFetchLogTableInitPromise = (async () => {
+    await env.DB.prepare(
+      `CREATE TABLE IF NOT EXISTS image_proxy_fetch_log (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        created_at TEXT NOT NULL DEFAULT (datetime('now')),
+        proxy_url TEXT NOT NULL,
+        request_method TEXT NOT NULL,
+        image_id TEXT,
+        img_size TEXT,
+        asset_source TEXT,
+        cache_status TEXT,
+        requester_class TEXT,
+        bot_name TEXT,
+        cf_verified_bot INTEGER NOT NULL DEFAULT 0,
+        cf_asn INTEGER,
+        country TEXT,
+        upstream_url TEXT,
+        upstream_final_url TEXT,
+        upstream_status INTEGER,
+        final_status INTEGER,
+        referrer TEXT
+      )`
+    ).run();
+
+    await env.DB.prepare(
+      `CREATE INDEX IF NOT EXISTS idx_image_proxy_fetch_log_created_at
+        ON image_proxy_fetch_log (created_at)`
+    ).run();
+
+    await env.DB.prepare(
+      `CREATE INDEX IF NOT EXISTS idx_image_proxy_fetch_log_image_created
+        ON image_proxy_fetch_log (image_id, created_at)`
+    ).run();
+
+    await env.DB.prepare(
+      `CREATE INDEX IF NOT EXISTS idx_image_proxy_fetch_log_requester_created
+        ON image_proxy_fetch_log (requester_class, created_at)`
+    ).run();
+  })();
+
+  try {
+    await imageProxyFetchLogTableInitPromise;
+  } catch (e) {
+    imageProxyFetchLogTableInitPromise = null;
+    throw e;
+  }
+}
+
+function getImageProxyRequesterInfo(request, uaRaw = '') {
+  const ua = String(uaRaw || '');
+  const botName = getVerifiedBotName(ua) || null;
+  const cfVerifiedBot = Boolean(request?.cf?.botManagement?.verifiedBot);
+  const cfAsn = Number(request?.cf?.asn || 0) || null;
+
+  let requesterClass = 'generic';
+  if (cfVerifiedBot && botName) {
+    requesterClass = `verified:${botName}`;
+  } else if (cfVerifiedBot) {
+    requesterClass = 'verified:unknown';
+  } else if (botName) {
+    requesterClass = botName;
+  } else if (cfAsn && MICROSOFT_BOT_ASNS.has(cfAsn)) {
+    requesterClass = 'microsoft_asn';
+  }
+
+  return {
+    requesterClass,
+    botName,
+    cfVerifiedBot: cfVerifiedBot ? 1 : 0,
+    cfAsn,
+    country: request?.cf?.country || null,
+  };
+}
+
+function shouldLogImageProxyFetch({ requesterInfo, upstreamStatus, finalStatus }) {
+  if (!requesterInfo) {
+    return Number(finalStatus || 0) >= 400 || Number(upstreamStatus || 0) >= 300;
+  }
+
+  if (requesterInfo.requesterClass !== 'generic') {
+    return true;
+  }
+
+  if (Number(finalStatus || 0) >= 400) {
+    return true;
+  }
+
+  if (Number(upstreamStatus || 0) >= 300) {
+    return true;
+  }
+
+  return false;
+}
+
+async function logImageProxyFetch(env, payload) {
+  if (!env?.DB || !payload) return;
+
+  try {
+    await ensureImageProxyFetchLogTable(env);
+    await env.DB.prepare(
+      `INSERT INTO image_proxy_fetch_log (
+        proxy_url,
+        request_method,
+        image_id,
+        img_size,
+        asset_source,
+        cache_status,
+        requester_class,
+        bot_name,
+        cf_verified_bot,
+        cf_asn,
+        country,
+        upstream_url,
+        upstream_final_url,
+        upstream_status,
+        final_status,
+        referrer
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
+    ).bind(
+      payload.proxyUrl,
+      payload.requestMethod,
+      payload.imageId,
+      payload.imgSize,
+      payload.assetSource,
+      payload.cacheStatus,
+      payload.requesterClass,
+      payload.botName,
+      payload.cfVerifiedBot,
+      payload.cfAsn,
+      payload.country,
+      payload.upstreamUrl,
+      payload.upstreamFinalUrl,
+      payload.upstreamStatus,
+      payload.finalStatus,
+      payload.referrer
+    ).run();
+  } catch (e) {
+    console.error('Image proxy fetch logging error:', e);
+  }
+}
+
+function queueImageProxyFetchLog(ctx, env, request, payload) {
+  if (!env?.DB || !ctx?.waitUntil) return;
+
+  const requesterInfo = payload.requesterInfo || getImageProxyRequesterInfo(request, request?.headers?.get('User-Agent') || '');
+  if (!shouldLogImageProxyFetch({
+    requesterInfo,
+    upstreamStatus: payload.upstreamStatus,
+    finalStatus: payload.finalStatus,
+  })) {
+    return;
+  }
+
+  const requestUrl = new URL(request.url);
+  ctx.waitUntil(logImageProxyFetch(env, {
+    proxyUrl: `${requestUrl.pathname}${requestUrl.search}`,
+    requestMethod: request.method,
+    imageId: payload.imageId || null,
+    imgSize: payload.imgSize || null,
+    assetSource: payload.assetSource || null,
+    cacheStatus: payload.cacheStatus || null,
+    requesterClass: requesterInfo.requesterClass,
+    botName: requesterInfo.botName,
+    cfVerifiedBot: requesterInfo.cfVerifiedBot,
+    cfAsn: requesterInfo.cfAsn,
+    country: requesterInfo.country,
+    upstreamUrl: payload.upstreamUrl || null,
+    upstreamFinalUrl: payload.upstreamFinalUrl || null,
+    upstreamStatus: payload.upstreamStatus ?? null,
+    finalStatus: payload.finalStatus ?? null,
+    referrer: request.headers.get('Referer') || null,
+  }));
+}
 
 async function getRuntimeFlagEnabled(env, key, defaultEnabled = true) {
   if (!env?.DB) return defaultEnabled;
@@ -383,6 +567,7 @@ function resolveImageUrls(manifest, imageId, requestedSize) {
 
 async function proxyImage(smugMugUrl, request, size = null) {
   const imageResponse = await fetch(smugMugUrl, {
+    method: request.method === 'HEAD' ? 'HEAD' : 'GET',
     headers: {
       Accept: request.headers.get("Accept") || "image/*",
       "User-Agent": "K4-Image-Proxy-Worker/1.0",
@@ -395,11 +580,20 @@ async function proxyImage(smugMugUrl, request, size = null) {
     }
   });
 
+  const upstreamMeta = {
+    upstreamUrl: smugMugUrl,
+    upstreamFinalUrl: imageResponse.url || smugMugUrl,
+    upstreamStatus: imageResponse.status,
+  };
+
   if (!imageResponse.ok) {
-    return new Response("Image not found", {
-      status: imageResponse.status,
-      headers: { "Cache-Control": "no-store" }
-    });
+    return {
+      response: new Response("Image not found", {
+        status: imageResponse.status,
+        headers: { "Cache-Control": "no-store" }
+      }),
+      meta: upstreamMeta,
+    };
   }
 
   // IMPORTANT: No UA-based behavior here. Same URL => same bytes.
@@ -413,44 +607,63 @@ async function proxyImage(smugMugUrl, request, size = null) {
   };
 
   // XL assets should not be indexed directly by search engines.
-  if (size === 'xl' || shouldForceNoIndexForWorkerHost(request)) {
+  if (size === 'xl') {
     headers["X-Robots-Tag"] = "noindex, noimageindex, noai, noimageai";
   }
 
   // Keep the canonical image asset crawlable while retaining AI opt-out signals.
   // The /img/ response also emits a rel=canonical header back to the image page.
 
-  return new Response(imageResponse.body, { status: 200, headers });
+  return {
+    response: new Response(imageResponse.body, { status: 200, headers }),
+    meta: upstreamMeta,
+  };
 }
 
 async function proxyImageWithFallback(smugMugUrls, request, size = null) {
   if (!Array.isArray(smugMugUrls) || smugMugUrls.length === 0) {
-    return new Response("Image not found", {
-      status: 404,
-      headers: { "Cache-Control": "no-store" }
-    });
+    return {
+      response: new Response("Image not found", {
+        status: 404,
+        headers: { "Cache-Control": "no-store" }
+      }),
+      meta: {
+        upstreamUrl: null,
+        upstreamFinalUrl: null,
+        upstreamStatus: null,
+      },
+    };
   }
 
   let lastNotOk = null;
+  let lastMeta = {
+    upstreamUrl: null,
+    upstreamFinalUrl: null,
+    upstreamStatus: null,
+  };
   for (const url of smugMugUrls) {
     try {
-      const response = await proxyImage(url, request, size);
+      const { response, meta } = await proxyImage(url, request, size);
       if (response.status === 200) {
-        return response;
+        return { response, meta };
       }
       lastNotOk = response;
+      lastMeta = meta;
       if (response.status >= 500) {
-        return response;
+        return { response, meta };
       }
     } catch (e) {
       console.error('Upstream fallback fetch error:', e);
     }
   }
 
-  return lastNotOk || new Response("Image not found", {
-    status: 404,
-    headers: { "Cache-Control": "no-store" }
-  });
+  return {
+    response: lastNotOk || new Response("Image not found", {
+      status: 404,
+      headers: { "Cache-Control": "no-store" }
+    }),
+    meta: lastMeta,
+  };
 }
 
 // --------------------
@@ -529,15 +742,6 @@ function withFrictionDebugHeaders(response, debugInfo) {
     });
   } catch {
     return response;
-  }
-}
-
-function shouldForceNoIndexForWorkerHost(request) {
-  try {
-    const hostname = new URL(request?.url || '').hostname.toLowerCase();
-    return hostname === 'k4-image-proxy.wayneheim.workers.dev';
-  } catch {
-    return false;
   }
 }
 
@@ -724,10 +928,21 @@ async function handleImageRequest(request, ctx, env) {
     });
   }
 
+  const ua = request.headers.get('User-Agent') || '';
+  const requesterInfo = getImageProxyRequesterInfo(request, ua);
+
   // Legacy attribution-prefixed image URLs should not remain indexable alternatives.
   // Force a single dominant image URL shape.
   if (route.assetSource) {
     const canonicalPath = `/img/${route.canonicalImageId}/${route.size}.jpg`;
+    queueImageProxyFetchLog(ctx, env, request, {
+      requesterInfo,
+      imageId: route.canonicalImageId,
+      imgSize: route.size,
+      assetSource: route.assetSource,
+      cacheStatus: 'asset-prefix-redirect',
+      finalStatus: 301,
+    });
     return new Response(null, {
       status: 301,
       headers: {
@@ -739,6 +954,14 @@ async function handleImageRequest(request, ctx, env) {
 
   // Ghost image fallback - return transparent pixel instead of 404
   if (route.canonicalImageId === GHOST_IMAGE_ID) {
+    queueImageProxyFetchLog(ctx, env, request, {
+      requesterInfo,
+      imageId: route.canonicalImageId,
+      imgSize: route.size,
+      assetSource: route.assetSource,
+      cacheStatus: 'ghost',
+      finalStatus: 200,
+    });
     return new Response(TRANSPARENT_PIXEL_GIF, {
       status: 200,
       headers: {
@@ -760,7 +983,6 @@ async function handleImageRequest(request, ctx, env) {
              request.headers.get("X-Forwarded-For")?.split(",")[0]?.trim();
   const ipHash = hashIP(ip);
 
-  const ua = request.headers.get('User-Agent') || '';
   const cfVerifiedBot = Boolean(request.cf?.botManagement?.verifiedBot);
   const bypassImageControls = shouldBypassImageControls(env, request, ua);
   const botIntelEnabled = await getBotIntelEnabled(env);
@@ -771,6 +993,14 @@ async function handleImageRequest(request, ctx, env) {
       const isBlocked = await isIPBlocked(env, ipHash);
       if (isBlocked) {
         // Return 403 for blocked IPs - they get nothing
+        queueImageProxyFetchLog(ctx, env, request, {
+          requesterInfo,
+          imageId: route.canonicalImageId,
+          imgSize: route.size,
+          assetSource: route.assetSource,
+          cacheStatus: 'blocked',
+          finalStatus: 403,
+        });
         return new Response("Blocked", {
           status: 403,
           headers: { "Cache-Control": "no-store" }
@@ -850,6 +1080,15 @@ async function handleImageRequest(request, ctx, env) {
 
         // Hard stop only at clearly-bulk rates.
         if (uniquePerMinute >= 40) {
+          queueImageProxyFetchLog(ctx, env, request, {
+            requesterInfo,
+            imageId: route.canonicalImageId,
+            imgSize: route.size,
+            assetSource: route.assetSource,
+            cacheStatus: 'friction',
+            upstreamStatus: 429,
+            finalStatus: 429,
+          });
           return new Response('Too Many Requests', {
             status: 429,
             headers: {
@@ -878,7 +1117,7 @@ async function handleImageRequest(request, ctx, env) {
   try {
     const cached = await caches.default.match(canonicalRequest);
     if (cached) {
-      const upgraded = ensureNoAIHeaders(cached, route.size === 'xl' || shouldForceNoIndexForWorkerHost(request));
+      const upgraded = ensureNoAIHeaders(cached, route.size === 'xl');
 
       // Refresh cache with upgraded headers so future hits are clean.
       try {
@@ -935,6 +1174,15 @@ async function handleImageRequest(request, ctx, env) {
         }
       }
 
+      queueImageProxyFetchLog(ctx, env, request, {
+        requesterInfo,
+        imageId: route.canonicalImageId,
+        imgSize: route.size,
+        assetSource: route.assetSource,
+        cacheStatus: 'hit',
+        finalStatus: upgraded?.status || cached?.status || 200,
+      });
+
       return withFrictionDebugHeaders(upgraded, frictionDebug);
     }
   } catch (e) {
@@ -947,6 +1195,14 @@ async function handleImageRequest(request, ctx, env) {
     const smugMugUrls = resolveImageUrls(manifest, route.canonicalImageId, route.size);
 
     if (smugMugUrls.length === 0) {
+      queueImageProxyFetchLog(ctx, env, request, {
+        requesterInfo,
+        imageId: route.canonicalImageId,
+        imgSize: route.size,
+        assetSource: route.assetSource,
+        cacheStatus: 'manifest-miss',
+        finalStatus: 404,
+      });
       return new Response("Image not found", {
         status: 404,
         headers: { "Cache-Control": "no-store" }
@@ -1027,10 +1283,11 @@ async function handleImageRequest(request, ctx, env) {
       }
     }
 
-    let response = await proxyImageWithFallback(smugMugUrls, canonicalRequest, route.size);
+    const { response: upstreamResponse, meta: upstreamMeta } = await proxyImageWithFallback(smugMugUrls, canonicalRequest, route.size);
+    let response = upstreamResponse;
 
     if (response?.status === 200) {
-      response = ensureNoAIHeaders(response, route.size === 'xl' || shouldForceNoIndexForWorkerHost(request));
+      response = ensureNoAIHeaders(response, route.size === 'xl');
     }
 
     // Add canonical Link header so Google can associate /img/ bytes with the gallery page.
@@ -1056,11 +1313,31 @@ async function handleImageRequest(request, ctx, env) {
       console.error('Cache put error:', e);
     }
 
+    queueImageProxyFetchLog(ctx, env, request, {
+      requesterInfo,
+      imageId: route.canonicalImageId,
+      imgSize: route.size,
+      assetSource: route.assetSource,
+      cacheStatus: 'miss',
+      upstreamUrl: upstreamMeta?.upstreamUrl,
+      upstreamFinalUrl: upstreamMeta?.upstreamFinalUrl,
+      upstreamStatus: upstreamMeta?.upstreamStatus,
+      finalStatus: response?.status || 500,
+    });
+
     // If the request URL was prefixed, we still serve the canonical bytes.
     // The response headers are already long-lived, so clients + edge can cache as well.
     return withFrictionDebugHeaders(response, frictionDebug);
   } catch (err) {
     console.error("Image proxy error:", err);
+    queueImageProxyFetchLog(ctx, env, request, {
+      requesterInfo,
+      imageId: route?.canonicalImageId,
+      imgSize: route?.size,
+      assetSource: route?.assetSource,
+      cacheStatus: 'error',
+      finalStatus: 500,
+    });
     return new Response("Internal error", {
       status: 500,
       headers: { "Cache-Control": "no-store" }

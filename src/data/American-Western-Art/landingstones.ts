@@ -1,6 +1,6 @@
 export const landingAmericanWesternArt = {
   title: "American Western Art",
-  subtitle: "Painterly Photography Interpreting the American West",
+  subtitle: "Collector-focused cowboy portraits, Indigenous portrait work, and frontier narratives by Wayne Heim",
 
   keywords: [
     "American Western art",
@@ -9,6 +9,9 @@ export const landingAmericanWesternArt = {
     "American West art",
     "Western frontier art",
     "cowboy art",
+    "western art prints",
+    "cowboy portraits",
+    "frontier narratives",
     "Western art photography",
     "contemporary Western art",
     "painterly Western art",
@@ -23,19 +26,19 @@ export const landingAmericanWesternArt = {
   tombstones: [
     {
       title: "Cowboy Portraits",
-      href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier",
+      href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
       _thumbSource: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
       thumb: "",
     },
     {
       title: "Indigenous Portraits",
-      href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier",
+      href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color",
       _thumbSource: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color",
       thumb: "",
     },
     {
       title: "Stories of the Frontier",
-      href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier",
+      href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color",
       _thumbSource: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color",
       _thumbSources: [
         "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color",
@@ -44,8 +47,8 @@ export const landingAmericanWesternArt = {
       thumb: "",
     },
     {
-      title: "Frontier Reckoning",
-      href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier",
+      title: "Wild West Collection",
+      href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West",
       _thumbSource: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color",
       thumb: "/img/i-LCspRF4/s.jpg",
     },

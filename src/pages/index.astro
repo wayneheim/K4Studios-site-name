@@ -28,9 +28,7 @@ import '../styles/home-index.css';
 
 const sectionPath = "/index"; // treat homepage as special section
 const loreLegacyUrl = "/Other/K4-Select-Series/Engrained/Engrained-Series?theme=lore-and-legacy&view=grid";
-const loreLegacyShowUrl = "/Other/Stories/Lore-and-Legacy-Show";
 const loreLegacyThemeGalleryId = "/Other/K4-Select-Series/Engrained/Engrained-Series";
-const loreLegacyShowGalleryId = "/Other/Stories/Lore-and-Legacy-Show";
 
 function buildLorePixelHandler(action: string, sourceLayer: string, galleryId: string, trigger: string): string {
   const escapedGalleryId = JSON.stringify(galleryId);
@@ -51,12 +49,6 @@ const loreLegacyCtaPixelHandler = buildLorePixelHandler(
   'home_lore_legacy_cta_click_pixel_v1',
   loreLegacyThemeGalleryId,
   'banner-cta'
-);
-const loreLegacyAudioPixelHandler = buildLorePixelHandler(
-  'home_lore_legacy_audio_click',
-  'home_lore_legacy_audio_click_pixel_v1',
-  loreLegacyShowGalleryId,
-  'banner-audio-text'
 );
 
 const headingCount = painterlyStory.filter((block, i) => i > 0 && block.subhead).length;
@@ -178,61 +170,57 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://k4studios.com/";
       <TombstoneNav client:load items={landingWestern.tombstones} />
     </div>
 
-    <section class="home-show-banner reveal-on-scroll" aria-label="Lore and Legacy show promotion">
-      <a class="home-show-banner__image-link" href={loreLegacyUrl} data-k4-pixel="home-lore-legacy-image" data-k4-trigger="banner-image" onpointerdown={loreLegacyImagePixelHandler} onclick={loreLegacyImagePixelHandler}>
-        <img
-          src="/images/Lore.png"
-          alt="Lore and Legacy show artwork from the Enggrained series"
-          class="home-show-banner__image"
-          loading="lazy"
-          decoding="async"
-        />
-      </a>
-
-      <div class="home-show-banner__content">
-        <p class="home-show-banner__eyebrow">Featured Show</p>
-        <h2 class="home-show-banner__title">Step Into the Story</h2>
-        <ul class="show-feature-bullets">
-          <li>Recently showcased at the Great Western Art Show</li>
-          <li>
-            Profiled in <a href="https://aotw.com/2026/02/painterly-photography/" target="_blank" rel="noopener noreferrer">Art of the West Magazine</a>
-          </li>
-        </ul>
-        <p class="show-feature-body">
-          Explore <strong>Lore &amp; Legacy</strong>, the collection of booth images from the show, where painterly Western fine art photography transforms each image into a moment waiting to be completed.
-        </p>
-        <p class="show-feature-audio-link">
-          Want to do more than see them? <a href={loreLegacyShowUrl} data-k4-pixel="home-lore-legacy-audio" data-k4-trigger="banner-audio-text" onpointerdown={loreLegacyAudioPixelHandler} onclick={loreLegacyAudioPixelHandler}>Hear the narrated Lore &amp; Legacy picture show.</a>
-        </p>
-        <a class="home-show-banner__cta" href={loreLegacyUrl} data-k4-pixel="home-lore-legacy-cta" data-k4-trigger="banner-cta" onpointerdown={loreLegacyCtaPixelHandler} onclick={loreLegacyCtaPixelHandler}>
-          Begin the Journey &rarr;
-        </a>
-      </div>
-    </section>
-
-    <p class="page-context-link reveal-on-scroll" style="max-width: 760px; margin: 0.5rem auto 1.5rem; text-align: center;">
-      For a structured survey of the artist behind this work, see <a href="/wayne-heim-western-fine-art-photography">Wayne Heim</a>.
-    </p>
-
     <div class="story-layout">
       <div class="text-column">
         <div class="story-section">
           {painterlyStory.map((section, index) => (
-            <article class="story-block">
-              {section.title && <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />}
-              {section.subhead && <h3 class="slide-in-left" set:html={autoLinkKeywordsInText(section.subhead, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />}
-              {section.tagline && <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInText(section.tagline, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />}
-              {section.paragraphs?.map((para, i) => (
-                <p class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
-              ))}
-              {section.list && section.list.length > 0 && (
-                <ul>
-                  {section.list.map((item, j) => (
-                    <li class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
-                  ))}
-                </ul>
+            <>
+              <article class="story-block">
+                {section.title && <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />}
+                {section.subhead && <h3 class="slide-in-left" set:html={autoLinkKeywordsInText(section.subhead, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />}
+                {section.tagline && <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInText(section.tagline, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />}
+                {section.paragraphs?.map((para, i) => (
+                  <p class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
+                ))}
+                {section.list && section.list.length > 0 && (
+                  <ul>
+                    {section.list.map((item, j) => (
+                      <li class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
+                    ))}
+                  </ul>
+                )}
+              </article>
+
+              {index === 0 && (
+                <section class="home-show-banner home-show-banner--inline reveal-on-scroll" aria-label="Lore and Legacy show promotion">
+                  <a class="home-show-banner__image-link" href={loreLegacyUrl} data-k4-pixel="home-lore-legacy-image" data-k4-trigger="banner-image" onpointerdown={loreLegacyImagePixelHandler} onclick={loreLegacyImagePixelHandler}>
+                    <img
+                      src="/images/Lore.webp"
+                      alt="Lore and Legacy show artwork from the Enggrained series"
+                      class="home-show-banner__image"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </a>
+
+                  <div class="home-show-banner__content">
+                    <h2 class="home-show-banner__title">Step Into the Story</h2>
+                    <ul class="show-feature-bullets">
+                      <li>Recently showcased at the Great Western Art Show</li>
+                      <li>
+                        Profiled in <a href="https://aotw.com/2026/02/painterly-photography/" target="_blank" rel="noopener noreferrer">Art of the West Magazine</a>
+                      </li>
+                    </ul>
+                      <p class="show-feature-body">
+                        Explore <strong>Lore &amp; Legacy</strong>, the booth collection.
+                      </p>
+                    <a class="home-show-banner__cta" href={loreLegacyUrl} data-k4-pixel="home-lore-legacy-cta" data-k4-trigger="banner-cta" onpointerdown={loreLegacyCtaPixelHandler} onclick={loreLegacyCtaPixelHandler}>
+                      Begin the Journey &rarr;
+                    </a>
+                  </div>
+                </section>
               )}
-            </article>
+            </>
           ))}
         </div>
 
@@ -333,9 +321,7 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://k4studios.com/";
   <script is:inline>
     const HOME_IMAGE_LAYER = 'home_lore_legacy_image_click_pixel_v1';
     const HOME_CTA_LAYER = 'home_lore_legacy_cta_click_pixel_v1';
-    const HOME_AUDIO_LAYER = 'home_lore_legacy_audio_click_pixel_v1';
     const THEME_GALLERY_ID = '/Other/K4-Select-Series/Engrained/Engrained-Series';
-    const AUDIO_GALLERY_ID = '/Other/Stories/Lore-and-Legacy-Show';
 
     const pixelConfig = {
       'home-lore-legacy-image': {
@@ -351,14 +337,6 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://k4studios.com/";
         event: 'home_lore_legacy_cta_click',
         sourceLayer: HOME_CTA_LAYER,
         galleryId: THEME_GALLERY_ID,
-        pageType: 'landing',
-        theme: 'lore-and-legacy'
-      },
-      'home-lore-legacy-audio': {
-        action: 'home_lore_legacy_audio_click',
-        event: 'home_lore_legacy_audio_click',
-        sourceLayer: HOME_AUDIO_LAYER,
-        galleryId: AUDIO_GALLERY_ID,
         pageType: 'landing',
         theme: 'lore-and-legacy'
       }

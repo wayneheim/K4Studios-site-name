@@ -1,6 +1,7 @@
-export const landingWestern = {
+export const landingWestern: any = {
   title: "The Art of War — WWII Battle Photography in Painterly Fine Art",
   subtitle: "Step Inside the Story — Scenes From the Front in Painterly Fine Art",
+  description: "WWII battle photography by Wayne Heim featuring World War II combat scenes, reenactment action, and painterly wartime storytelling.",
 
   // Keywords for structured data and semantic SEO (not meta keywords)
   keywords: [
