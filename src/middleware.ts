@@ -21,6 +21,13 @@ function getParentGalleryPath(pathname: string): string {
   return normalized.replace(/\/[iI]-[A-Za-z0-9-]+\/?$/, "");
 }
 
+function hasMatchingGalleryPath(requestedPath: string, candidates: string[]): boolean {
+  const requestedGalleryPath = normalizePath(getParentGalleryPath(requestedPath)).toLowerCase();
+  if (!requestedGalleryPath) return false;
+
+  return candidates.some((candidate) => normalizePath(String(candidate || '')).toLowerCase() === requestedGalleryPath);
+}
+
 function getKnownGalleryPathsLower(): Set<string> {
   if (knownGalleryPathsLower) return knownGalleryPathsLower;
 
@@ -426,17 +433,19 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
 
     if (lookup?.paths?.length) {
       const requestedNormalized = normalizePath(pathname);
-      const canonicalGalleryPath = pickCanonicalGalleryPath(requestedNormalized, lookup.paths);
-      const canonicalUrlPath = normalizePath(`${canonicalGalleryPath}/${lookup.canonicalId}`);
+      if (!hasMatchingGalleryPath(requestedNormalized, lookup.paths)) {
+        const canonicalGalleryPath = pickCanonicalGalleryPath(requestedNormalized, lookup.paths);
+        const canonicalUrlPath = normalizePath(`${canonicalGalleryPath}/${lookup.canonicalId}`);
 
-      if (canonicalUrlPath && requestedNormalized.toLowerCase() !== canonicalUrlPath.toLowerCase()) {
-        console.log(`[image-rematch-301] ${requestedNormalized} -> ${canonicalUrlPath}`);
-        return new Response(null, {
-          status: 301,
-          headers: {
-            Location: `${canonicalUrlPath}${search}`,
-          },
-        });
+        if (canonicalUrlPath && requestedNormalized.toLowerCase() !== canonicalUrlPath.toLowerCase()) {
+          console.log(`[image-rematch-301] ${requestedNormalized} -> ${canonicalUrlPath}`);
+          return new Response(null, {
+            status: 301,
+            headers: {
+              Location: `${canonicalUrlPath}${search}`,
+            },
+          });
+        }
       }
     }
   }

@@ -12,6 +12,11 @@ function normalizePath(pathname: string) {
   return trimmed.length > 1 ? trimmed.replace(/\/+$/g, '') : trimmed;
 }
 
+function getParentGalleryPath(pathname: string) {
+  const normalized = normalizePath(pathname);
+  return normalized.replace(/\/[iI]-[A-Za-z0-9-]+\/?$/, '');
+}
+
 function getImageMapLower() {
   const lower: Record<string, { canonicalId: string; paths: string[] }> = {};
   for (const [id, rawPaths] of Object.entries(imageMap)) {
@@ -22,6 +27,13 @@ function getImageMapLower() {
     };
   }
   return lower;
+}
+
+function hasMatchingGalleryPath(requestedPath: string, candidates: string[]) {
+  const requestedGalleryPath = normalizePath(getParentGalleryPath(requestedPath)).toLowerCase();
+  if (!requestedGalleryPath) return false;
+
+  return candidates.some((candidate) => normalizePath(String(candidate || '')).toLowerCase() === requestedGalleryPath);
 }
 
 function pickCanonicalGalleryPath(requestedPath: string, candidates: string[]) {
@@ -62,10 +74,12 @@ const isImageNamespace = /^\/(?:Galleries|galleries|Other|other|Photography-Gall
 if (isImageNamespace && imageIdMatch) {
   const lookup = getImageMapLower()[imageIdMatch[1].toLowerCase()];
   if (lookup?.paths?.length) {
-    const canonicalGalleryPath = pickCanonicalGalleryPath(pathname, lookup.paths);
-    const canonicalUrlPath = normalizePath(`${canonicalGalleryPath}/${lookup.canonicalId}`);
-    if (canonicalUrlPath && pathname.toLowerCase() !== canonicalUrlPath.toLowerCase()) {
-      return Astro.redirect(`${canonicalUrlPath}${Astro.url.search}`, 301);
+    if (!hasMatchingGalleryPath(pathname, lookup.paths)) {
+      const canonicalGalleryPath = pickCanonicalGalleryPath(pathname, lookup.paths);
+      const canonicalUrlPath = normalizePath(`${canonicalGalleryPath}/${lookup.canonicalId}`);
+      if (canonicalUrlPath && pathname.toLowerCase() !== canonicalUrlPath.toLowerCase()) {
+        return Astro.redirect(`${canonicalUrlPath}${Astro.url.search}`, 301);
+      }
     }
   }
 }
