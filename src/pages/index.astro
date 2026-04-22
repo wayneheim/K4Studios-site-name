@@ -22,6 +22,7 @@ import { semantic as k4Semantic } from '../data/semantic/K4-Sem.ts';
 import { landingWestern }    from '../data/home/landingstones.ts';
 import { painterlyStory }    from '../data/home/story.ts';
 import { facingFAQ }         from '../data/home/faq.ts';
+import { stories as pictureShowStories } from '../data/Other/Stories/stories.mjs';
 
 import '../styles/global.css';
 import '../styles/home-index.css';
@@ -65,15 +66,16 @@ function getProxySrc(imageId: string, size: string = 'm'): string {
   return `/img/${imageId}/${size}.jpg`;
 }
 
-// Featured Collection image (i-7Mzzbvp - "Last Hand" - unmistakably Western)
-const featuredCollectionImage = {
-  id: "i-7Mzzbvp",
-  src: getProxySrc("i-7Mzzbvp", "xl"),
-  srcM: getProxySrc("i-7Mzzbvp", "m"),
-  srcS: getProxySrc("i-7Mzzbvp", "s"),
-  alt: "Painterly Western image of three cowboys on horseback racing forward, guns drawn, in a cloud of dust on the open prairie.",
-  width: 600,
-  height: 400
+const pictureShowsUrl = "/Other/Shows";
+const pictureShowsTrackingId = "Picture_Shows_Widget_Home";
+const pictureShowsWidgetImage = {
+  src: "/images/K4-Stories logo1b.webp",
+  src2: "/images/K4-Stories logo2.webp",
+  src3: "/images/K4-Stories-logo3b.gif",
+  alt: "K4 Studios Picture Shows logo",
+  width: 640,
+  height: 640,
+  fit: "contain" as const
 };
 
 // ----------------------
@@ -170,6 +172,14 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://k4studios.com/";
       <TombstoneNav client:load items={landingWestern.tombstones} />
     </div>
 
+    <section class="home-picture-shows-mobile" aria-label="Picture Shows link">
+      <div class="home-picture-shows-mobile__inner">
+        <span class="home-picture-shows-mobile__eyebrow">Picture Shows</span>
+        <p class="home-picture-shows-mobile__text">Explore the stories that live beyond the frame.</p>
+        <a class="home-picture-shows-mobile__link" href={pictureShowsUrl}>See where they will take you.</a>
+      </div>
+    </section>
+
     <div class="story-layout">
       <div class="text-column">
         <div class="story-section">
@@ -191,35 +201,6 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://k4studios.com/";
                 )}
               </article>
 
-              {index === 0 && (
-                <section class="home-show-banner home-show-banner--inline reveal-on-scroll" aria-label="Lore and Legacy show promotion">
-                  <a class="home-show-banner__image-link" href={loreLegacyUrl} data-k4-pixel="home-lore-legacy-image" data-k4-trigger="banner-image" onpointerdown={loreLegacyImagePixelHandler} onclick={loreLegacyImagePixelHandler}>
-                    <img
-                      src="/images/Lore.webp"
-                      alt="Lore and Legacy show artwork from the Enggrained series"
-                      class="home-show-banner__image"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </a>
-
-                  <div class="home-show-banner__content">
-                    <h2 class="home-show-banner__title">Step Into the Story</h2>
-                    <ul class="show-feature-bullets">
-                      <li>Recently showcased at the Great Western Art Show</li>
-                      <li>
-                        Profiled in <a href="https://aotw.com/2026/02/painterly-photography/" target="_blank" rel="noopener noreferrer">Art of the West Magazine</a>
-                      </li>
-                    </ul>
-                      <p class="show-feature-body">
-                        Explore <strong>Lore &amp; Legacy</strong>, the booth collection.
-                      </p>
-                    <a class="home-show-banner__cta" href={loreLegacyUrl} data-k4-pixel="home-lore-legacy-cta" data-k4-trigger="banner-cta" onpointerdown={loreLegacyCtaPixelHandler} onclick={loreLegacyCtaPixelHandler}>
-                      Begin the Journey &rarr;
-                    </a>
-                  </div>
-                </section>
-              )}
             </>
           ))}
         </div>
@@ -228,17 +209,19 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://k4studios.com/";
       </div>
 
       <div class="sidebar-column hidden md:block">
-        <!-- Featured Collection CTA -->
+        <!-- Featured collection CTA -->
         <div class="reveal-on-scroll" style="margin-top: 1.5rem; margin-bottom: 6rem;">
           <FeaturedCollection
-            image={featuredCollectionImage}
-            title="Western Cowboy Collection"
-            subtitle="Painterly portraits of the American West"
-            ctaText="Enter the Frontier"
-            ctaLink="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits"
-            collectionName="Western Cowboy Portraits"
-            trackingId="Cowboy_Jump_Home"
-            itemCount={250}
+            image={pictureShowsWidgetImage}
+            title="K4 Picture Shows"
+            subtitle="Explore the stories that live beyond the frame."
+            ctaText="See where they will take you."
+            ctaLink={pictureShowsUrl}
+            collectionName="K4 Studios Picture Shows"
+            trackingId={pictureShowsTrackingId}
+            trackingEvent="picture_shows_jump"
+            itemCount={pictureShowStories.length}
+            appendArrow={false}
           />
         </div>
         
@@ -322,6 +305,8 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://k4studios.com/";
     const HOME_IMAGE_LAYER = 'home_lore_legacy_image_click_pixel_v1';
     const HOME_CTA_LAYER = 'home_lore_legacy_cta_click_pixel_v1';
     const THEME_GALLERY_ID = '/Other/K4-Select-Series/Engrained/Engrained-Series';
+    const PICTURE_SHOWS_HOME_TRACKING_ID = 'Picture_Shows_Widget_Home';
+    const ANALYTICS_ENDPOINT = 'https://edge.k4studios.com/__k4e';
 
     const pixelConfig = {
       'home-lore-legacy-image': {
@@ -404,21 +389,60 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://k4studios.com/";
       image.src = pixelUrl;
     }
 
-    function emitLoreEvent(config, trigger) {
-      if (!config || !config.event) return;
-      if (typeof window.k4track !== 'function') return;
+    function emitTrackingEvent(eventName, extra = {}) {
+      if (!eventName) return;
+      if (typeof window.k4ShouldSuppressAnalytics === 'function' && window.k4ShouldSuppressAnalytics()) return;
 
       try {
-        window.k4track(config.event, {
-          galleryId: config.galleryId,
-          pageType: config.pageType,
-          sourceLayer: config.sourceLayer,
-          theme: config.theme,
-          trigger: trigger || null
-        });
+        if (typeof window.k4track === 'function') {
+          window.k4track(eventName, extra);
+          return;
+        }
       } catch (_) {
-        // best-effort only
+        // fall through to best-effort network send
       }
+
+      const sessionId = getLoreSessionId();
+      const payload = JSON.stringify({
+        session_id: sessionId,
+        event: eventName,
+        gallery_id: extra.galleryId || null,
+        page_type: extra.pageType || null,
+        source_layer: extra.sourceLayer || null,
+        trigger: extra.trigger || null,
+        theme: extra.theme || null
+      });
+
+      if (navigator.sendBeacon) {
+        const blob = new Blob([payload], { type: 'text/plain;charset=UTF-8' });
+        const ok = navigator.sendBeacon(ANALYTICS_ENDPOINT, blob);
+        if (ok) return;
+      }
+
+      if (typeof fetch === 'function') {
+        fetch(ANALYTICS_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: payload,
+          keepalive: true,
+          cache: 'no-store',
+          mode: 'cors',
+          credentials: 'include'
+        }).catch(() => {
+          // best-effort only
+        });
+      }
+    }
+
+    function emitLoreEvent(config, trigger) {
+      if (!config || !config.event) return;
+      emitTrackingEvent(config.event, {
+        galleryId: config.galleryId,
+        pageType: config.pageType,
+        sourceLayer: config.sourceLayer,
+        theme: config.theme,
+        trigger: trigger || null
+      });
     }
 
     document.addEventListener('DOMContentLoaded', () => {
@@ -447,6 +471,16 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://k4studios.com/";
         element.addEventListener('pointerdown', () => firePixel(element), { passive: true });
         element.addEventListener('click', () => firePixel(element), { passive: true });
       });
+
+      const pictureShowsMobileLink = document.querySelector('.home-picture-shows-mobile__link');
+      if (pictureShowsMobileLink) {
+        pictureShowsMobileLink.addEventListener('click', () => {
+          emitTrackingEvent('picture_shows_jump', {
+            galleryId: PICTURE_SHOWS_HOME_TRACKING_ID,
+            pageType: 'landing'
+          });
+        }, { passive: true });
+      }
     });
   </script>
 

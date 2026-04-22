@@ -197,7 +197,13 @@ SELECT
     'country', country,
     'region', region,
     'city', city,
-    'ua', ua
+    'automation_ua_signal', CASE
+      WHEN lower(COALESCE(ua, '')) LIKE '%headless%'
+        OR lower(COALESCE(ua, '')) LIKE '%googlebot%'
+        OR lower(COALESCE(ua, '')) LIKE '%bingbot%'
+        OR lower(COALESCE(ua, '')) LIKE '%crawler%'
+        OR lower(COALESCE(ua, '')) LIKE '%lighthouse%'
+      THEN 1 ELSE 0 END
   )
 FROM annotated;
 
@@ -240,7 +246,8 @@ bot_context AS (
     MAX(CASE WHEN COALESCE(suspected.is_datacenter, 0) = 1 THEN 1 ELSE 0 END) AS has_datacenter_ip_signal,
     MAX(CASE WHEN COALESCE(suspected.risk_level, 0) >= 4 THEN 1 ELSE 0 END) AS has_high_risk_bot_signal,
     MAX(CASE
-      WHEN lower(COALESCE(json_extract(canonical.metadata_json, '$.ua'), '')) LIKE '%headless%'
+      WHEN COALESCE(CAST(json_extract(canonical.metadata_json, '$.automation_ua_signal') AS INTEGER), 0) = 1
+        OR lower(COALESCE(json_extract(canonical.metadata_json, '$.ua'), '')) LIKE '%headless%'
         OR lower(COALESCE(json_extract(canonical.metadata_json, '$.ua'), '')) LIKE '%googlebot%'
         OR lower(COALESCE(json_extract(canonical.metadata_json, '$.ua'), '')) LIKE '%bingbot%'
         OR lower(COALESCE(json_extract(canonical.metadata_json, '$.ua'), '')) LIKE '%crawler%'
@@ -448,48 +455,3 @@ SET is_suspicious_internal_shallow = CASE
    )
   THEN 1 ELSE 0 END;
 
-WITH visitor_base AS (
-  SELECT
-    COALESCE(NULLIF(visitor_id, ''), 'session:' || session_id) AS effective_visitor_id,
-    session_id,
-    occurred_at,
-    canonical_page_load,
-    identity_confidence
-  FROM canonical_events_v2
-  WHERE is_bot = 0
-    AND (
-      (visitor_id IS NOT NULL AND trim(visitor_id) <> '')
-      OR (session_id IS NOT NULL AND trim(session_id) <> '')
-    )
-),
-visitor_agg AS (
-  SELECT
-    effective_visitor_id AS visitor_id,
-    MIN(occurred_at) AS first_seen_at,
-    MAX(occurred_at) AS last_seen_at,
-    COUNT(DISTINCT session_id) AS session_count,
-    SUM(CASE WHEN canonical_page_load = 1 THEN 1 ELSE 0 END) AS canonical_page_loads,
-    MAX(CASE identity_confidence WHEN 'persistent' THEN 3 WHEN 'session_only' THEN 2 ELSE 1 END) AS confidence_rank
-  FROM visitor_base
-  GROUP BY effective_visitor_id
-)
-INSERT INTO visitor_facts_v2 (
-  visitor_id,
-  first_seen_at,
-  last_seen_at,
-  session_count,
-  canonical_page_loads,
-  identity_confidence,
-  metadata_json,
-  updated_at
-)
-SELECT
-  visitor_id,
-  first_seen_at,
-  last_seen_at,
-  session_count,
-  canonical_page_loads,
-  CASE confidence_rank WHEN 3 THEN 'persistent' WHEN 2 THEN 'session_only' ELSE 'fallback' END,
-  json_object('generated_from', 'canonical_events_v2'),
-  datetime('now')
-FROM visitor_agg;

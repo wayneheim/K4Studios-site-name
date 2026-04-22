@@ -1,5 +1,36 @@
 import { useEffect, useState } from "react";
 import { ThumbsUp } from "lucide-react";
+import { trackEvent } from "@/utils/analytics.ts";
+
+function getCookieValue(name) {
+  if (typeof document === "undefined" || !name) return null;
+
+  const escapedName = name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const match = document.cookie.match(new RegExp(`(?:^|;\\s*)${escapedName}=([^;]+)`));
+
+  return match ? decodeURIComponent(match[1]) : null;
+}
+
+function getLikeAnalyticsIds() {
+  const sessionId = getCookieValue("k4_sid")
+    || (typeof sessionStorage !== "undefined" ? sessionStorage.getItem("k4_session_id") : null)
+    || null;
+
+  let visitorId = getCookieValue("k4_vid");
+
+  if (!visitorId && typeof window !== "undefined" && typeof window.k4getVisitorId === "function") {
+    try {
+      visitorId = window.k4getVisitorId() || null;
+    } catch {
+      visitorId = null;
+    }
+  }
+
+  return {
+    sessionId,
+    visitorId: visitorId || null,
+  };
+}
 
 export default function LikeButton({ imageId, pageTitle }) {
   const [liked, setLiked] = useState(false);
@@ -32,11 +63,19 @@ export default function LikeButton({ imageId, pageTitle }) {
       setLiked(true);
       localStorage.setItem("k4-liked-images", JSON.stringify([...likedImages, imageId]));
 
-      // Always log to Airtable (for analytics), but only email if not notified before
+      // Always send the like to the server for logging, but only notify once per browser/image.
       const shouldEmail = !isNotified;
       if (!isNotified) {
         localStorage.setItem("k4-liked-notified", JSON.stringify([...likedNotified, imageId]));
       }
+
+      const { sessionId, visitorId } = getLikeAnalyticsIds();
+
+      trackEvent("image_like", {
+        imageId,
+        pageType: "image",
+        trigger: shouldEmail ? "first_like_button" : "repeat_like_button",
+      });
       
       console.log("[LikeButton] Sending like to server, shouldEmail:", shouldEmail);
       try {
@@ -50,6 +89,8 @@ export default function LikeButton({ imageId, pageTitle }) {
             timestamp: Date.now(),
             isRepeatLike: isNotified, // Track if this is a repeat like
             sendEmail: shouldEmail,   // Only email on first-time likes
+            sessionId,
+            visitorId,
           }),
         });
         console.log("[LikeButton] Server response status:", res.status);

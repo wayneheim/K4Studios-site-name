@@ -1,0 +1,817 @@
+{
+    "created_at":  "2026-04-22T12:00:42.2591950-04:00",
+    "database":  "k4-analytics",
+    "cutoff_days":  30,
+    "cutoff_at":  "2026-03-23 16:00:36",
+    "backup_dir":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032",
+    "tables":  [
+                   {
+                       "table":  "raw_events",
+                       "date_column":  "ts",
+                       "order_by":  "id",
+                       "notes":  "Primary raw event log",
+                       "bucket_count":  32,
+                       "total_rows":  220769,
+                       "files":  [
+                                     {
+                                         "date":  "2026-02-20",
+                                         "row_count":  4318,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\raw_events\\raw_events-2026-02-20.json",
+                                         "bytes":  3981054
+                                     },
+                                     {
+                                         "date":  "2026-02-21",
+                                         "row_count":  9013,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\raw_events\\raw_events-2026-02-21.json",
+                                         "bytes":  8575233
+                                     },
+                                     {
+                                         "date":  "2026-02-22",
+                                         "row_count":  9039,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\raw_events\\raw_events-2026-02-22.json",
+                                         "bytes":  8886314
+                                     },
+                                     {
+                                         "date":  "2026-02-23",
+                                         "row_count":  9231,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\raw_events\\raw_events-2026-02-23.json",
+                                         "bytes":  8777415
+                                     },
+                                     {
+                                         "date":  "2026-02-24",
+                                         "row_count":  5568,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\raw_events\\raw_events-2026-02-24.json",
+                                         "bytes":  5164419
+                                     },
+                                     {
+                                         "date":  "2026-02-25",
+                                         "row_count":  3413,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\raw_events\\raw_events-2026-02-25.json",
+                                         "bytes":  3347079
+                                     },
+                                     {
+                                         "date":  "2026-02-26",
+                                         "row_count":  8742,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\raw_events\\raw_events-2026-02-26.json",
+                                         "bytes":  7922328
+                                     },
+                                     {
+                                         "date":  "2026-02-27",
+                                         "row_count":  5692,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\raw_events\\raw_events-2026-02-27.json",
+                                         "bytes":  5102651
+                                     },
+                                     {
+                                         "date":  "2026-02-28",
+                                         "row_count":  16809,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\raw_events\\raw_events-2026-02-28.json",
+                                         "bytes":  15691356
+                                     },
+                                     {
+                                         "date":  "2026-03-01",
+                                         "row_count":  24136,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\raw_events\\raw_events-2026-03-01.json",
+                                         "bytes":  21989910
+                                     },
+                                     {
+                                         "date":  "2026-03-02",
+                                         "row_count":  10943,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\raw_events\\raw_events-2026-03-02.json",
+                                         "bytes":  9942398
+                                     },
+                                     {
+                                         "date":  "2026-03-03",
+                                         "row_count":  7171,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\raw_events\\raw_events-2026-03-03.json",
+                                         "bytes":  6339767
+                                     },
+                                     {
+                                         "date":  "2026-03-04",
+                                         "row_count":  10122,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\raw_events\\raw_events-2026-03-04.json",
+                                         "bytes":  9461905
+                                     },
+                                     {
+                                         "date":  "2026-03-05",
+                                         "row_count":  4995,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\raw_events\\raw_events-2026-03-05.json",
+                                         "bytes":  4535433
+                                     },
+                                     {
+                                         "date":  "2026-03-06",
+                                         "row_count":  5189,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\raw_events\\raw_events-2026-03-06.json",
+                                         "bytes":  4941658
+                                     },
+                                     {
+                                         "date":  "2026-03-07",
+                                         "row_count":  8044,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\raw_events\\raw_events-2026-03-07.json",
+                                         "bytes":  7964381
+                                     },
+                                     {
+                                         "date":  "2026-03-08",
+                                         "row_count":  10206,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\raw_events\\raw_events-2026-03-08.json",
+                                         "bytes":  10259852
+                                     },
+                                     {
+                                         "date":  "2026-03-09",
+                                         "row_count":  5479,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\raw_events\\raw_events-2026-03-09.json",
+                                         "bytes":  5535025
+                                     },
+                                     {
+                                         "date":  "2026-03-10",
+                                         "row_count":  4593,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\raw_events\\raw_events-2026-03-10.json",
+                                         "bytes":  4393268
+                                     },
+                                     {
+                                         "date":  "2026-03-11",
+                                         "row_count":  2013,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\raw_events\\raw_events-2026-03-11.json",
+                                         "bytes":  1886882
+                                     },
+                                     {
+                                         "date":  "2026-03-12",
+                                         "row_count":  2959,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\raw_events\\raw_events-2026-03-12.json",
+                                         "bytes":  2883377
+                                     },
+                                     {
+                                         "date":  "2026-03-13",
+                                         "row_count":  6158,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\raw_events\\raw_events-2026-03-13.json",
+                                         "bytes":  6281473
+                                     },
+                                     {
+                                         "date":  "2026-03-14",
+                                         "row_count":  6510,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\raw_events\\raw_events-2026-03-14.json",
+                                         "bytes":  6518897
+                                     },
+                                     {
+                                         "date":  "2026-03-15",
+                                         "row_count":  8103,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\raw_events\\raw_events-2026-03-15.json",
+                                         "bytes":  8312047
+                                     },
+                                     {
+                                         "date":  "2026-03-16",
+                                         "row_count":  4912,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\raw_events\\raw_events-2026-03-16.json",
+                                         "bytes":  5052342
+                                     },
+                                     {
+                                         "date":  "2026-03-17",
+                                         "row_count":  4525,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\raw_events\\raw_events-2026-03-17.json",
+                                         "bytes":  4695886
+                                     },
+                                     {
+                                         "date":  "2026-03-18",
+                                         "row_count":  7056,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\raw_events\\raw_events-2026-03-18.json",
+                                         "bytes":  8003069
+                                     },
+                                     {
+                                         "date":  "2026-03-19",
+                                         "row_count":  2401,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\raw_events\\raw_events-2026-03-19.json",
+                                         "bytes":  2369282
+                                     },
+                                     {
+                                         "date":  "2026-03-20",
+                                         "row_count":  3679,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\raw_events\\raw_events-2026-03-20.json",
+                                         "bytes":  3674299
+                                     },
+                                     {
+                                         "date":  "2026-03-21",
+                                         "row_count":  3744,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\raw_events\\raw_events-2026-03-21.json",
+                                         "bytes":  3627151
+                                     },
+                                     {
+                                         "date":  "2026-03-22",
+                                         "row_count":  3594,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\raw_events\\raw_events-2026-03-22.json",
+                                         "bytes":  3423242
+                                     },
+                                     {
+                                         "date":  "2026-03-23",
+                                         "row_count":  2412,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\raw_events\\raw_events-2026-03-23.json",
+                                         "bytes":  2301825
+                                     }
+                                 ]
+                   },
+                   {
+                       "table":  "canonical_events_v2",
+                       "date_column":  "occurred_at",
+                       "order_by":  "id",
+                       "notes":  "Normalized analytics event log",
+                       "bucket_count":  32,
+                       "total_rows":  110731,
+                       "files":  [
+                                     {
+                                         "date":  "2026-02-20",
+                                         "row_count":  2118,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\canonical_events_v2\\canonical_events_v2-2026-02-20.json",
+                                         "bytes":  2451296
+                                     },
+                                     {
+                                         "date":  "2026-02-21",
+                                         "row_count":  4548,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\canonical_events_v2\\canonical_events_v2-2026-02-21.json",
+                                         "bytes":  5328202
+                                     },
+                                     {
+                                         "date":  "2026-02-22",
+                                         "row_count":  4459,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\canonical_events_v2\\canonical_events_v2-2026-02-22.json",
+                                         "bytes":  5422854
+                                     },
+                                     {
+                                         "date":  "2026-02-23",
+                                         "row_count":  4554,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\canonical_events_v2\\canonical_events_v2-2026-02-23.json",
+                                         "bytes":  5444187
+                                     },
+                                     {
+                                         "date":  "2026-02-24",
+                                         "row_count":  2716,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\canonical_events_v2\\canonical_events_v2-2026-02-24.json",
+                                         "bytes":  3170906
+                                     },
+                                     {
+                                         "date":  "2026-02-25",
+                                         "row_count":  1434,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\canonical_events_v2\\canonical_events_v2-2026-02-25.json",
+                                         "bytes":  1699867
+                                     },
+                                     {
+                                         "date":  "2026-02-26",
+                                         "row_count":  3641,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\canonical_events_v2\\canonical_events_v2-2026-02-26.json",
+                                         "bytes":  4182011
+                                     },
+                                     {
+                                         "date":  "2026-02-27",
+                                         "row_count":  2735,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\canonical_events_v2\\canonical_events_v2-2026-02-27.json",
+                                         "bytes":  3138864
+                                     },
+                                     {
+                                         "date":  "2026-02-28",
+                                         "row_count":  10564,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\canonical_events_v2\\canonical_events_v2-2026-02-28.json",
+                                         "bytes":  11830753
+                                     },
+                                     {
+                                         "date":  "2026-03-01",
+                                         "row_count":  13666,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\canonical_events_v2\\canonical_events_v2-2026-03-01.json",
+                                         "bytes":  15338311
+                                     },
+                                     {
+                                         "date":  "2026-03-02",
+                                         "row_count":  4991,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\canonical_events_v2\\canonical_events_v2-2026-03-02.json",
+                                         "bytes":  5735915
+                                     },
+                                     {
+                                         "date":  "2026-03-03",
+                                         "row_count":  3727,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\canonical_events_v2\\canonical_events_v2-2026-03-03.json",
+                                         "bytes":  4219375
+                                     },
+                                     {
+                                         "date":  "2026-03-04",
+                                         "row_count":  5076,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\canonical_events_v2\\canonical_events_v2-2026-03-04.json",
+                                         "bytes":  5926608
+                                     },
+                                     {
+                                         "date":  "2026-03-05",
+                                         "row_count":  2376,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\canonical_events_v2\\canonical_events_v2-2026-03-05.json",
+                                         "bytes":  2723360
+                                     },
+                                     {
+                                         "date":  "2026-03-06",
+                                         "row_count":  2350,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\canonical_events_v2\\canonical_events_v2-2026-03-06.json",
+                                         "bytes":  2742358
+                                     },
+                                     {
+                                         "date":  "2026-03-07",
+                                         "row_count":  4010,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\canonical_events_v2\\canonical_events_v2-2026-03-07.json",
+                                         "bytes":  4721303
+                                     },
+                                     {
+                                         "date":  "2026-03-08",
+                                         "row_count":  5073,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\canonical_events_v2\\canonical_events_v2-2026-03-08.json",
+                                         "bytes":  6078322
+                                     },
+                                     {
+                                         "date":  "2026-03-09",
+                                         "row_count":  2632,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\canonical_events_v2\\canonical_events_v2-2026-03-09.json",
+                                         "bytes":  3246739
+                                     },
+                                     {
+                                         "date":  "2026-03-10",
+                                         "row_count":  2609,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\canonical_events_v2\\canonical_events_v2-2026-03-10.json",
+                                         "bytes":  3072671
+                                     },
+                                     {
+                                         "date":  "2026-03-11",
+                                         "row_count":  994,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\canonical_events_v2\\canonical_events_v2-2026-03-11.json",
+                                         "bytes":  1151565
+                                     },
+                                     {
+                                         "date":  "2026-03-12",
+                                         "row_count":  1424,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\canonical_events_v2\\canonical_events_v2-2026-03-12.json",
+                                         "bytes":  1711448
+                                     },
+                                     {
+                                         "date":  "2026-03-13",
+                                         "row_count":  2884,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\canonical_events_v2\\canonical_events_v2-2026-03-13.json",
+                                         "bytes":  3484749
+                                     },
+                                     {
+                                         "date":  "2026-03-14",
+                                         "row_count":  3104,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\canonical_events_v2\\canonical_events_v2-2026-03-14.json",
+                                         "bytes":  3785637
+                                     },
+                                     {
+                                         "date":  "2026-03-15",
+                                         "row_count":  4053,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\canonical_events_v2\\canonical_events_v2-2026-03-15.json",
+                                         "bytes":  5032083
+                                     },
+                                     {
+                                         "date":  "2026-03-16",
+                                         "row_count":  2327,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\canonical_events_v2\\canonical_events_v2-2026-03-16.json",
+                                         "bytes":  2890972
+                                     },
+                                     {
+                                         "date":  "2026-03-17",
+                                         "row_count":  2107,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\canonical_events_v2\\canonical_events_v2-2026-03-17.json",
+                                         "bytes":  2621121
+                                     },
+                                     {
+                                         "date":  "2026-03-18",
+                                         "row_count":  3061,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\canonical_events_v2\\canonical_events_v2-2026-03-18.json",
+                                         "bytes":  3934121
+                                     },
+                                     {
+                                         "date":  "2026-03-19",
+                                         "row_count":  1102,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\canonical_events_v2\\canonical_events_v2-2026-03-19.json",
+                                         "bytes":  1311305
+                                     },
+                                     {
+                                         "date":  "2026-03-20",
+                                         "row_count":  1760,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\canonical_events_v2\\canonical_events_v2-2026-03-20.json",
+                                         "bytes":  2094009
+                                     },
+                                     {
+                                         "date":  "2026-03-21",
+                                         "row_count":  1779,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\canonical_events_v2\\canonical_events_v2-2026-03-21.json",
+                                         "bytes":  2092944
+                                     },
+                                     {
+                                         "date":  "2026-03-22",
+                                         "row_count":  1712,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\canonical_events_v2\\canonical_events_v2-2026-03-22.json",
+                                         "bytes":  2007896
+                                     },
+                                     {
+                                         "date":  "2026-03-23",
+                                         "row_count":  1145,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\canonical_events_v2\\canonical_events_v2-2026-03-23.json",
+                                         "bytes":  1344155
+                                     }
+                                 ]
+                   },
+                   {
+                       "table":  "session_facts_v2",
+                       "date_column":  "first_seen_at",
+                       "order_by":  "first_seen_at",
+                       "notes":  "Derived session facts",
+                       "bucket_count":  32,
+                       "total_rows":  1351,
+                       "files":  [
+                                     {
+                                         "date":  "2026-02-20",
+                                         "row_count":  43,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\session_facts_v2\\session_facts_v2-2026-02-20.json",
+                                         "bytes":  49802
+                                     },
+                                     {
+                                         "date":  "2026-02-21",
+                                         "row_count":  32,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\session_facts_v2\\session_facts_v2-2026-02-21.json",
+                                         "bytes":  37349
+                                     },
+                                     {
+                                         "date":  "2026-02-22",
+                                         "row_count":  63,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\session_facts_v2\\session_facts_v2-2026-02-22.json",
+                                         "bytes":  70457
+                                     },
+                                     {
+                                         "date":  "2026-02-23",
+                                         "row_count":  40,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\session_facts_v2\\session_facts_v2-2026-02-23.json",
+                                         "bytes":  45476
+                                     },
+                                     {
+                                         "date":  "2026-02-24",
+                                         "row_count":  36,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\session_facts_v2\\session_facts_v2-2026-02-24.json",
+                                         "bytes":  41143
+                                     },
+                                     {
+                                         "date":  "2026-02-25",
+                                         "row_count":  44,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\session_facts_v2\\session_facts_v2-2026-02-25.json",
+                                         "bytes":  52292
+                                     },
+                                     {
+                                         "date":  "2026-02-26",
+                                         "row_count":  50,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\session_facts_v2\\session_facts_v2-2026-02-26.json",
+                                         "bytes":  58948
+                                     },
+                                     {
+                                         "date":  "2026-02-27",
+                                         "row_count":  50,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\session_facts_v2\\session_facts_v2-2026-02-27.json",
+                                         "bytes":  57844
+                                     },
+                                     {
+                                         "date":  "2026-02-28",
+                                         "row_count":  22,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\session_facts_v2\\session_facts_v2-2026-02-28.json",
+                                         "bytes":  26787
+                                     },
+                                     {
+                                         "date":  "2026-03-01",
+                                         "row_count":  24,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\session_facts_v2\\session_facts_v2-2026-03-01.json",
+                                         "bytes":  28222
+                                     },
+                                     {
+                                         "date":  "2026-03-02",
+                                         "row_count":  121,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\session_facts_v2\\session_facts_v2-2026-03-02.json",
+                                         "bytes":  138912
+                                     },
+                                     {
+                                         "date":  "2026-03-03",
+                                         "row_count":  53,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\session_facts_v2\\session_facts_v2-2026-03-03.json",
+                                         "bytes":  61139
+                                     },
+                                     {
+                                         "date":  "2026-03-04",
+                                         "row_count":  74,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\session_facts_v2\\session_facts_v2-2026-03-04.json",
+                                         "bytes":  83517
+                                     },
+                                     {
+                                         "date":  "2026-03-05",
+                                         "row_count":  34,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\session_facts_v2\\session_facts_v2-2026-03-05.json",
+                                         "bytes":  38917
+                                     },
+                                     {
+                                         "date":  "2026-03-06",
+                                         "row_count":  52,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\session_facts_v2\\session_facts_v2-2026-03-06.json",
+                                         "bytes":  57563
+                                     },
+                                     {
+                                         "date":  "2026-03-07",
+                                         "row_count":  18,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\session_facts_v2\\session_facts_v2-2026-03-07.json",
+                                         "bytes":  20012
+                                     },
+                                     {
+                                         "date":  "2026-03-08",
+                                         "row_count":  25,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\session_facts_v2\\session_facts_v2-2026-03-08.json",
+                                         "bytes":  26769
+                                     },
+                                     {
+                                         "date":  "2026-03-09",
+                                         "row_count":  28,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\session_facts_v2\\session_facts_v2-2026-03-09.json",
+                                         "bytes":  32468
+                                     },
+                                     {
+                                         "date":  "2026-03-10",
+                                         "row_count":  29,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\session_facts_v2\\session_facts_v2-2026-03-10.json",
+                                         "bytes":  34319
+                                     },
+                                     {
+                                         "date":  "2026-03-11",
+                                         "row_count":  37,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\session_facts_v2\\session_facts_v2-2026-03-11.json",
+                                         "bytes":  41711
+                                     },
+                                     {
+                                         "date":  "2026-03-12",
+                                         "row_count":  22,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\session_facts_v2\\session_facts_v2-2026-03-12.json",
+                                         "bytes":  25239
+                                     },
+                                     {
+                                         "date":  "2026-03-13",
+                                         "row_count":  61,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\session_facts_v2\\session_facts_v2-2026-03-13.json",
+                                         "bytes":  67557
+                                     },
+                                     {
+                                         "date":  "2026-03-14",
+                                         "row_count":  51,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\session_facts_v2\\session_facts_v2-2026-03-14.json",
+                                         "bytes":  56861
+                                     },
+                                     {
+                                         "date":  "2026-03-15",
+                                         "row_count":  27,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\session_facts_v2\\session_facts_v2-2026-03-15.json",
+                                         "bytes":  30764
+                                     },
+                                     {
+                                         "date":  "2026-03-16",
+                                         "row_count":  35,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\session_facts_v2\\session_facts_v2-2026-03-16.json",
+                                         "bytes":  41682
+                                     },
+                                     {
+                                         "date":  "2026-03-17",
+                                         "row_count":  41,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\session_facts_v2\\session_facts_v2-2026-03-17.json",
+                                         "bytes":  45819
+                                     },
+                                     {
+                                         "date":  "2026-03-18",
+                                         "row_count":  37,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\session_facts_v2\\session_facts_v2-2026-03-18.json",
+                                         "bytes":  42537
+                                     },
+                                     {
+                                         "date":  "2026-03-19",
+                                         "row_count":  25,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\session_facts_v2\\session_facts_v2-2026-03-19.json",
+                                         "bytes":  28681
+                                     },
+                                     {
+                                         "date":  "2026-03-20",
+                                         "row_count":  45,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\session_facts_v2\\session_facts_v2-2026-03-20.json",
+                                         "bytes":  48540
+                                     },
+                                     {
+                                         "date":  "2026-03-21",
+                                         "row_count":  55,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\session_facts_v2\\session_facts_v2-2026-03-21.json",
+                                         "bytes":  59749
+                                     },
+                                     {
+                                         "date":  "2026-03-22",
+                                         "row_count":  46,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\session_facts_v2\\session_facts_v2-2026-03-22.json",
+                                         "bytes":  48327
+                                     },
+                                     {
+                                         "date":  "2026-03-23",
+                                         "row_count":  31,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\session_facts_v2\\session_facts_v2-2026-03-23.json",
+                                         "bytes":  32758
+                                     }
+                                 ]
+                   },
+                   {
+                       "table":  "visitor_facts_v2",
+                       "date_column":  "first_seen_at",
+                       "order_by":  "first_seen_at",
+                       "notes":  "Derived visitor facts",
+                       "bucket_count":  32,
+                       "total_rows":  82726,
+                       "files":  [
+                                     {
+                                         "date":  "2026-02-20",
+                                         "row_count":  1764,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\visitor_facts_v2\\visitor_facts_v2-2026-02-20.json",
+                                         "bytes":  721978
+                                     },
+                                     {
+                                         "date":  "2026-02-21",
+                                         "row_count":  3959,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\visitor_facts_v2\\visitor_facts_v2-2026-02-21.json",
+                                         "bytes":  1619734
+                                     },
+                                     {
+                                         "date":  "2026-02-22",
+                                         "row_count":  3976,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\visitor_facts_v2\\visitor_facts_v2-2026-02-22.json",
+                                         "bytes":  1626684
+                                     },
+                                     {
+                                         "date":  "2026-02-23",
+                                         "row_count":  3587,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\visitor_facts_v2\\visitor_facts_v2-2026-02-23.json",
+                                         "bytes":  1467585
+                                     },
+                                     {
+                                         "date":  "2026-02-24",
+                                         "row_count":  2269,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\visitor_facts_v2\\visitor_facts_v2-2026-02-24.json",
+                                         "bytes":  928523
+                                     },
+                                     {
+                                         "date":  "2026-02-25",
+                                         "row_count":  955,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\visitor_facts_v2\\visitor_facts_v2-2026-02-25.json",
+                                         "bytes":  391095
+                                     },
+                                     {
+                                         "date":  "2026-02-26",
+                                         "row_count":  3166,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\visitor_facts_v2\\visitor_facts_v2-2026-02-26.json",
+                                         "bytes":  1295393
+                                     },
+                                     {
+                                         "date":  "2026-02-27",
+                                         "row_count":  2130,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\visitor_facts_v2\\visitor_facts_v2-2026-02-27.json",
+                                         "bytes":  871670
+                                     },
+                                     {
+                                         "date":  "2026-02-28",
+                                         "row_count":  5259,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\visitor_facts_v2\\visitor_facts_v2-2026-02-28.json",
+                                         "bytes":  2151430
+                                     },
+                                     {
+                                         "date":  "2026-03-01",
+                                         "row_count":  9244,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\visitor_facts_v2\\visitor_facts_v2-2026-03-01.json",
+                                         "bytes":  3781296
+                                     },
+                                     {
+                                         "date":  "2026-03-02",
+                                         "row_count":  3283,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\visitor_facts_v2\\visitor_facts_v2-2026-03-02.json",
+                                         "bytes":  1343246
+                                     },
+                                     {
+                                         "date":  "2026-03-03",
+                                         "row_count":  2395,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\visitor_facts_v2\\visitor_facts_v2-2026-03-03.json",
+                                         "bytes":  980056
+                                     },
+                                     {
+                                         "date":  "2026-03-04",
+                                         "row_count":  3304,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\visitor_facts_v2\\visitor_facts_v2-2026-03-04.json",
+                                         "bytes":  1351835
+                                     },
+                                     {
+                                         "date":  "2026-03-05",
+                                         "row_count":  1739,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\visitor_facts_v2\\visitor_facts_v2-2026-03-05.json",
+                                         "bytes":  711750
+                                     },
+                                     {
+                                         "date":  "2026-03-06",
+                                         "row_count":  1392,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\visitor_facts_v2\\visitor_facts_v2-2026-03-06.json",
+                                         "bytes":  569830
+                                     },
+                                     {
+                                         "date":  "2026-03-07",
+                                         "row_count":  3755,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\visitor_facts_v2\\visitor_facts_v2-2026-03-07.json",
+                                         "bytes":  1536296
+                                     },
+                                     {
+                                         "date":  "2026-03-08",
+                                         "row_count":  4711,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\visitor_facts_v2\\visitor_facts_v2-2026-03-08.json",
+                                         "bytes":  1927299
+                                     },
+                                     {
+                                         "date":  "2026-03-09",
+                                         "row_count":  2272,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\visitor_facts_v2\\visitor_facts_v2-2026-03-09.json",
+                                         "bytes":  929747
+                                     },
+                                     {
+                                         "date":  "2026-03-10",
+                                         "row_count":  1565,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\visitor_facts_v2\\visitor_facts_v2-2026-03-10.json",
+                                         "bytes":  640584
+                                     },
+                                     {
+                                         "date":  "2026-03-11",
+                                         "row_count":  688,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\visitor_facts_v2\\visitor_facts_v2-2026-03-11.json",
+                                         "bytes":  281891
+                                     },
+                                     {
+                                         "date":  "2026-03-12",
+                                         "row_count":  1174,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\visitor_facts_v2\\visitor_facts_v2-2026-03-12.json",
+                                         "bytes":  480665
+                                     },
+                                     {
+                                         "date":  "2026-03-13",
+                                         "row_count":  2547,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\visitor_facts_v2\\visitor_facts_v2-2026-03-13.json",
+                                         "bytes":  1042224
+                                     },
+                                     {
+                                         "date":  "2026-03-14",
+                                         "row_count":  2670,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\visitor_facts_v2\\visitor_facts_v2-2026-03-14.json",
+                                         "bytes":  1092529
+                                     },
+                                     {
+                                         "date":  "2026-03-15",
+                                         "row_count":  3720,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\visitor_facts_v2\\visitor_facts_v2-2026-03-15.json",
+                                         "bytes":  1521980
+                                     },
+                                     {
+                                         "date":  "2026-03-16",
+                                         "row_count":  1995,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\visitor_facts_v2\\visitor_facts_v2-2026-03-16.json",
+                                         "bytes":  816458
+                                     },
+                                     {
+                                         "date":  "2026-03-17",
+                                         "row_count":  1645,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\visitor_facts_v2\\visitor_facts_v2-2026-03-17.json",
+                                         "bytes":  673306
+                                     },
+                                     {
+                                         "date":  "2026-03-18",
+                                         "row_count":  1076,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\visitor_facts_v2\\visitor_facts_v2-2026-03-18.json",
+                                         "bytes":  440586
+                                     },
+                                     {
+                                         "date":  "2026-03-19",
+                                         "row_count":  843,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\visitor_facts_v2\\visitor_facts_v2-2026-03-19.json",
+                                         "bytes":  345289
+                                     },
+                                     {
+                                         "date":  "2026-03-20",
+                                         "row_count":  1429,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\visitor_facts_v2\\visitor_facts_v2-2026-03-20.json",
+                                         "bytes":  584963
+                                     },
+                                     {
+                                         "date":  "2026-03-21",
+                                         "row_count":  1595,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\visitor_facts_v2\\visitor_facts_v2-2026-03-21.json",
+                                         "bytes":  652854
+                                     },
+                                     {
+                                         "date":  "2026-03-22",
+                                         "row_count":  1573,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\visitor_facts_v2\\visitor_facts_v2-2026-03-22.json",
+                                         "bytes":  643856
+                                     },
+                                     {
+                                         "date":  "2026-03-23",
+                                         "row_count":  1046,
+                                         "path":  "C:\\Users\\Wayne\\Documents\\GitHub\\K4-Studios\\cloudflare-worker\\d1-backups\\purge-candidates-20260422-120032\\visitor_facts_v2\\visitor_facts_v2-2026-03-23.json",
+                                         "bytes":  428313
+                                     }
+                                 ]
+                   }
+               ]
+}

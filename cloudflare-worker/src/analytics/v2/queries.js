@@ -498,63 +498,63 @@ export async function getV2CanonicalSummary(env, { windowKey = 'today', excludeI
               (SELECT COUNT(*)
                FROM raw_events
                WHERE ${rawWindowClause}
-                 AND lower(COALESCE(event_type, '')) = 'cowboy_jump'
+                 AND lower(COALESCE(event_type, '')) IN ('cowboy_jump', 'picture_shows_jump')
                  AND COALESCE(page, '') = '/'
-                 AND COALESCE(target_id, '') = 'Cowboy_Jump_Home'${rawViewerExclusionClause}) AS home_cowboy_jump_events,
+                 AND COALESCE(target_id, '') IN ('Cowboy_Jump_Home', 'Picture_Shows_Widget_Home')${rawViewerExclusionClause}) AS home_cowboy_jump_events,
               (SELECT COUNT(*)
                FROM raw_events
                WHERE ${rawWindowClause}
-                 AND lower(COALESCE(event_type, '')) = 'pilot_home_cowboy_jump_click'
+                 AND lower(COALESCE(event_type, '')) IN ('pilot_home_cowboy_jump_click', 'pilot_home_picture_shows_jump_click')
                  AND COALESCE(page, '') = '/'
-                 AND COALESCE(target_id, '') = 'Cowboy_Jump_Home'${rawViewerExclusionClause}) AS pilot_home_cowboy_jump_events,
+                 AND COALESCE(target_id, '') IN ('Cowboy_Jump_Home', 'Picture_Shows_Widget_Home')${rawViewerExclusionClause}) AS pilot_home_cowboy_jump_events,
               (SELECT COUNT(*)
                FROM raw_events
                WHERE ${rawWindowClause}
-                 AND lower(COALESCE(event_type, '')) = 'pilot_home_cowboy_jump_click'
+                 AND lower(COALESCE(event_type, '')) IN ('pilot_home_cowboy_jump_click', 'pilot_home_picture_shows_jump_click')
                  AND COALESCE(page, '') = '/'
-                 AND COALESCE(target_id, '') = 'Cowboy_Jump_Home'
+                 AND COALESCE(target_id, '') IN ('Cowboy_Jump_Home', 'Picture_Shows_Widget_Home')
                  AND COALESCE(country, '') <> ''${rawViewerExclusionClause}) AS pilot_home_cowboy_geo_coverage,
               (SELECT COUNT(*)
                FROM raw_events
                WHERE ${rawWindowClause}
-                 AND lower(COALESCE(event_type, '')) = 'pilot_home_cowboy_jump_click'
+                 AND lower(COALESCE(event_type, '')) IN ('pilot_home_cowboy_jump_click', 'pilot_home_picture_shows_jump_click')
                  AND COALESCE(page, '') = '/'
-                 AND COALESCE(target_id, '') = 'Cowboy_Jump_Home'
+                 AND COALESCE(target_id, '') IN ('Cowboy_Jump_Home', 'Picture_Shows_Widget_Home')
                  AND COALESCE(ua, '') <> ''${rawViewerExclusionClause}) AS pilot_home_cowboy_ua_coverage,
               (SELECT COUNT(*)
                FROM raw_events
                WHERE ${rawWindowClause}
-                 AND lower(COALESCE(event_type, '')) = 'pilot_home_cowboy_jump_click'
+                 AND lower(COALESCE(event_type, '')) IN ('pilot_home_cowboy_jump_click', 'pilot_home_picture_shows_jump_click')
                  AND COALESCE(page, '') = '/'
-                 AND COALESCE(target_id, '') = 'Cowboy_Jump_Home'
+                 AND COALESCE(target_id, '') IN ('Cowboy_Jump_Home', 'Picture_Shows_Widget_Home')
                  AND COALESCE(referer, '') <> ''
                  AND lower(COALESCE(referer, '')) <> 'unknown'${rawViewerExclusionClause}) AS pilot_home_cowboy_referrer_coverage,
               (SELECT COUNT(*)
                FROM raw_events
                WHERE ${rawWindowClause}
-                 AND lower(COALESCE(event_type, '')) = 'pilot_home_cowboy_jump_click'
+                 AND lower(COALESCE(event_type, '')) IN ('pilot_home_cowboy_jump_click', 'pilot_home_picture_shows_jump_click')
                  AND COALESCE(page, '') = '/'
-                 AND COALESCE(target_id, '') = 'Cowboy_Jump_Home'
+                 AND COALESCE(target_id, '') IN ('Cowboy_Jump_Home', 'Picture_Shows_Widget_Home')
                  AND COALESCE(ip, '') <> ''${rawViewerExclusionClause}) AS pilot_home_cowboy_ip_coverage,
               (SELECT COUNT(*)
                FROM raw_events
                WHERE ${rawWindowClause}
-                 AND lower(COALESCE(event_type, '')) = 'pilot_home_cowboy_jump_click'
+                 AND lower(COALESCE(event_type, '')) IN ('pilot_home_cowboy_jump_click', 'pilot_home_picture_shows_jump_click')
                  AND COALESCE(page, '') = '/'
-                 AND COALESCE(target_id, '') = 'Cowboy_Jump_Home'
+                 AND COALESCE(target_id, '') IN ('Cowboy_Jump_Home', 'Picture_Shows_Widget_Home')
                  AND (COALESCE(city, '') <> '' OR COALESCE(region, '') <> '')${rawViewerExclusionClause}) AS pilot_home_cowboy_city_region_coverage,
               (SELECT COUNT(DISTINCT COALESCE(NULLIF(session_id, ''), 'none'))
                FROM raw_events
                WHERE ${rawWindowClause}
-                 AND lower(COALESCE(event_type, '')) = 'pilot_home_cowboy_jump_click'
+                 AND lower(COALESCE(event_type, '')) IN ('pilot_home_cowboy_jump_click', 'pilot_home_picture_shows_jump_click')
                  AND COALESCE(page, '') = '/'
-                 AND COALESCE(target_id, '') = 'Cowboy_Jump_Home'${rawViewerExclusionClause}) AS pilot_home_cowboy_sessions,
+                 AND COALESCE(target_id, '') IN ('Cowboy_Jump_Home', 'Picture_Shows_Widget_Home')${rawViewerExclusionClause}) AS pilot_home_cowboy_sessions,
               (SELECT COUNT(DISTINCT COALESCE(NULLIF(visitor_id, ''), 'none'))
                FROM raw_events
                WHERE ${rawWindowClause}
-                 AND lower(COALESCE(event_type, '')) = 'pilot_home_cowboy_jump_click'
+                 AND lower(COALESCE(event_type, '')) IN ('pilot_home_cowboy_jump_click', 'pilot_home_picture_shows_jump_click')
                  AND COALESCE(page, '') = '/'
-                 AND COALESCE(target_id, '') = 'Cowboy_Jump_Home'${rawViewerExclusionClause}) AS pilot_home_cowboy_visitors,
+                 AND COALESCE(target_id, '') IN ('Cowboy_Jump_Home', 'Picture_Shows_Widget_Home')${rawViewerExclusionClause}) AS pilot_home_cowboy_visitors,
               (SELECT COUNT(*)
                FROM (
                  WITH trusted_page_loads AS (

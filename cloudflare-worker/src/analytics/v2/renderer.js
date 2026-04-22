@@ -28,7 +28,7 @@ function humanizeCoreActionLabel(row) {
     image_click: 'Grid Image Click',
     next: 'Next Image',
     prev: 'Previous Image',
-    jump: 'Cowboy Jump',
+    jump: 'Picture Shows Jump',
     back_to_start: 'Back To Start',
     audio_toggle: 'Story Narration Toggle',
     slider_click: 'Story Slide Click',
@@ -560,8 +560,8 @@ export function renderDashboardV2({ summary, authHeader = '' }) {
           <div class="list-row"><span>Baseline home page views (<code>page_view</code>)</span><strong>${homePageViews}</strong></div>
           <div class="list-row"><span>Pilot home page views (<code>pilot_home_page_view</code>)</span><strong>${pilotHomePageViews}</strong></div>
           <div class="list-row"><span>Page-view parity</span><strong>${pilotPageViewParity}%</strong></div>
-          <div class="list-row"><span>Baseline Cowboy Jump clicks (<code>cowboy_jump</code>)</span><strong>${homeCowboyJumpClicks}</strong></div>
-          <div class="list-row"><span>Pilot Cowboy Jump clicks (<code>pilot_home_cowboy_jump_click</code>)</span><strong>${pilotHomeCowboyJumpClicks}</strong></div>
+          <div class="list-row"><span>Baseline Picture Shows clicks (<code>cowboy_jump</code> + <code>picture_shows_jump</code>)</span><strong>${homeCowboyJumpClicks}</strong></div>
+          <div class="list-row"><span>Pilot Picture Shows clicks (<code>pilot_home_cowboy_jump_click</code> + <code>pilot_home_picture_shows_jump_click</code>)</span><strong>${pilotHomeCowboyJumpClicks}</strong></div>
           <div class="list-row"><span>Click parity</span><strong>${pilotCowboyParity}%</strong></div>
           <div class="list-row"><span>Pilot click sessions</span><strong>${pilotHomeCowboySessions}</strong></div>
           <div class="list-row"><span>Pilot click visitors</span><strong>${pilotHomeCowboyVisitors}</strong></div>

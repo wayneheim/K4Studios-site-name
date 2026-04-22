@@ -142,8 +142,10 @@ export default function TombstoneNav({
           
           // Track ALL tombstone clicks for analytics
           const handleClick = () => {
+            const sanitizedTitle = (item.title || 'Unknown').replace(/[^a-zA-Z0-9]/g, '_');
+
             if (typeof window !== 'undefined' && typeof window.k4track === 'function') {
-              window.k4track('gallery_explore_click', {
+              window.k4track('theme_click', {
                 galleryId: item.trackingId || sanitizedTitle,
                 pageType: 'landing'
               });
@@ -160,10 +162,9 @@ export default function TombstoneNav({
               : '';
             document.cookie = `k4_sid=${encodeURIComponent(sessionId)}; Path=/; SameSite=Lax; Secure${cookieDomainAttr}`;
             
-            const sanitizedTitle = (item.title || 'Unknown').replace(/[^a-zA-Z0-9]/g, '_');
             const payload = JSON.stringify({
               session_id: sessionId,
-              event: 'gallery_explore_click',
+              event: 'theme_click',
               gallery_id: item.trackingId || sanitizedTitle,
               page_type: 'landing'
             });

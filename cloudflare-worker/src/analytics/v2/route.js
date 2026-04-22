@@ -34,6 +34,22 @@ function withNoCache(headersInit = {}) {
   return headers;
 }
 
+async function autoRefreshDashboardV2(url, env) {
+  if (url.searchParams.get('refresh') === '0') {
+    return null;
+  }
+
+  try {
+    return await refreshV2Drain(env, {
+      batchSize: 1000,
+      maxBatches: 1,
+      forceRebuildFacts: false
+    });
+  } catch {
+    return null;
+  }
+}
+
 export async function handleDashboardV2Request(request, env) {
   try {
     const url = new URL(request.url);
@@ -41,6 +57,7 @@ export async function handleDashboardV2Request(request, env) {
     const excludeIp = url.searchParams.get('excludeIp') || null;
     const hideChardon = url.searchParams.get('hideChardon') === '1';
     const viewerIp = getBestClientIP(request);
+    await autoRefreshDashboardV2(url, env);
     const summary = await getV2CanonicalSummary(env, { windowKey, excludeIp, viewerIp, hideChardon });
     const authHeader = request.headers.get('Authorization') || '';
     return new Response(renderDashboardV2({ summary, windowKey, authHeader }), {
@@ -89,7 +106,7 @@ export async function handleDashboardV2RefreshRequest(request, env) {
   try {
     const url = new URL(request.url);
     const batchSize = Math.max(1, Math.min(Number(url.searchParams.get('batch') || '1000'), 1000));
-    const maxBatches = Math.max(1, Math.min(Number(url.searchParams.get('maxBatches') || '10'), 25));
+    const maxBatches = Math.max(1, Math.min(Number(url.searchParams.get('maxBatches') || '10'), 10));
     const forceRebuildFacts = url.searchParams.get('forceFacts') === '1';
     const summary = await refreshV2Drain(env, { batchSize, maxBatches, forceRebuildFacts });
     return new Response(JSON.stringify({ summary }, null, 2), {

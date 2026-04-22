@@ -171,11 +171,59 @@
 ul { list-style-type: disc; padding-left: 1.25em; }
 ul li { margin-top: 0.15em; margin-left: 1.5em; }
 ul li::marker { margin-top: 0.15em; font-size: 1.2em; color: gray; }
+.home-picture-shows-mobile { display: none; }
 @media (max-width: 768px) {
   .section-heading .page-title { font-size: 1.5rem; line-height: 1.3; }
   .section-heading .page-subtitle { max-width: 42ch; margin-left: auto; margin-right: auto; text-align: center; font-size: 1rem; line-height: 1.4; letter-spacing: -0.04em; }
   .section-heading-wrap { margin-top: 1rem; margin-bottom: 1rem; }
   .sidebar-column { display: none; }
+  .home-picture-shows-mobile {
+    display: block;
+    margin: 0.35rem auto 0.95rem;
+    padding: 0 1rem;
+    max-width: 720px;
+  }
+  .home-picture-shows-mobile__inner {
+    display: grid;
+    gap: 0.45rem;
+    padding: 0.95rem 1rem;
+    background: linear-gradient(180deg, #fbf8f3 0%, #f2ebe2 100%);
+    border: 1px solid rgba(141, 115, 92, 0.26);
+    border-radius: 14px;
+    box-shadow: 0 10px 24px rgba(92, 70, 52, 0.08);
+  }
+  .home-picture-shows-mobile__eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #8d735c;
+  }
+  .home-picture-shows-mobile__text {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.38;
+    color: #3f3226;
+  }
+  .home-picture-shows-mobile__link {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    padding: 0.42rem 0.82rem;
+    border-radius: 999px;
+    border: 1px solid rgba(121, 94, 71, 0.28);
+    background: rgba(121, 94, 71, 0.08);
+    color: #6d5440;
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  }
+  .home-picture-shows-mobile__link:hover,
+  .home-picture-shows-mobile__link:focus-visible {
+    background: rgba(121, 94, 71, 0.15);
+    border-color: rgba(121, 94, 71, 0.42);
+    color: #533e2e;
+  }
   .story-section { letter-spacing: -0.03em; }
   .story-block h2 { letter-spacing: -0.05em; font-size: 1.4rem !important; margin-top: -0.59rem; line-height: 1.15; }
   .story-block h3 { letter-spacing: -0.05em; font-size: 1.4rem !important; margin-top: -0.59rem; line-height: 1.15; }

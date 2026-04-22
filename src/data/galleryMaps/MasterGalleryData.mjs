@@ -44246,73 +44246,6 @@ export const galleryDataMap   = {
       ]
     }
   ],
-  "/Galleries/Fine-Art-Photography/Transportation/Trains-Black-White": [
-    {
-      "id": "i-tqSQMQK",
-      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-tqSQMQK/0/L6mN6DvwQ4cjzTmZVhrGMCtXBFp2pwLkVNzj5cghW/S/_DSF5219-Edit-Edit-S.jpg",
-      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-tqSQMQK/0/L9cdxmckvPjqfhXnzsB8XFtxTftRF5Txzvm5T2kvr/M/_DSF5219-Edit-Edit-M.jpg",
-      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-tqSQMQK/0/Mtr4sRBSxr3sNb33Rgt62Sk3khHscKNR4H9bxTvCN/L/_DSF5219-Edit-Edit-L.jpg",
-      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-tqSQMQK/0/KFMKkWm3PXSkxZtMnLvgtCBQr4SbZm86kST5dzf3n/XL/_DSF5219-Edit-Edit-XL.jpg",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-tqSQMQK/0/L6mN6DvwQ4cjzTmZVhrGMCtXBFp2pwLkVNzj5cghW/S/_DSF5219-Edit-Edit-S.jpg",
-      "rating": 4,
-      "visibility": "show",
-      "galleries": [
-        "Galleries/Fine-Art-Photography/Transportation/Trains-Black-White"
-      ]
-    },
-    {
-      "id": "i-GGK9QtB",
-      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-GGK9QtB/0/MvSFqN4DfjtfGdZM7wvjdBS3cCFzqdK29qdR7FFsN/S/_DSF5230-Edit-2-S.jpg",
-      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-GGK9QtB/0/MSLvBsN6jnccqFgg3G2ZBnG73BKZhn8SN5vKZhdZ9/M/_DSF5230-Edit-2-M.jpg",
-      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-GGK9QtB/0/LpW4V9HdfbfFknNXgw9PgwzDxcR8sn8fCLjtmX2sT/XL/_DSF5230-Edit-2-XL.jpg",
-      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-GGK9QtB/0/LpW4V9HdfbfFknNXgw9PgwzDxcR8sn8fCLjtmX2sT/XL/_DSF5230-Edit-2-XL.jpg",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-GGK9QtB/0/MvSFqN4DfjtfGdZM7wvjdBS3cCFzqdK29qdR7FFsN/S/_DSF5230-Edit-2-S.jpg",
-      "rating": 4,
-      "visibility": "show",
-      "galleries": [
-        "Galleries/Fine-Art-Photography/Transportation/Trains-Black-White"
-      ]
-    },
-    {
-      "id": "i-ghKSGpj",
-      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-ghKSGpj/0/KgNBPrkxQDhC3cJ8MVL8n6xx9WgmBmv7w53mL7rxg/S/_ANA7248-Edit-Enhanced-S.jpg",
-      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-ghKSGpj/0/NHfKppHL5KBdM7kwSQ8hMxkHB45Jpc88pgr9dSKcB/M/_ANA7248-Edit-Enhanced-M.jpg",
-      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-ghKSGpj/0/NM9d2ks3kNstptQsDm5GHbKnZNMhHrQVmgbqTQ4hg/XL/_ANA7248-Edit-Enhanced-XL.jpg",
-      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-ghKSGpj/0/NM9d2ks3kNstptQsDm5GHbKnZNMhHrQVmgbqTQ4hg/XL/_ANA7248-Edit-Enhanced-XL.jpg",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-ghKSGpj/0/KgNBPrkxQDhC3cJ8MVL8n6xx9WgmBmv7w53mL7rxg/S/_ANA7248-Edit-Enhanced-S.jpg",
-      "rating": 4,
-      "visibility": "show",
-      "galleries": [
-        "Galleries/Fine-Art-Photography/Transportation/Trains-Black-White"
-      ]
-    },
-    {
-      "id": "i-SfsCh3W",
-      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-SfsCh3W/0/LLT4PgsvNKGfDZ9VCSKSgZkWnhmKD87V8PzzhZFFc/S/_DSF0462-S.jpg",
-      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-SfsCh3W/0/NDGmrdzT9p4nvZ7JSt2dgpJCkjpPQ9vgcgbpzN77d/M/_DSF0462-M.jpg",
-      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-SfsCh3W/0/KM44rTLQxCpBR84TVZrKdW7xjW6jP4Pt7Lcq9BVSm/L/_DSF0462-L.jpg",
-      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-SfsCh3W/0/KGcvPp5pGVW88VnZJP6CZVJStN7Xwd6MDBxjgJNkW/XL/_DSF0462-XL.jpg",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-SfsCh3W/0/LLT4PgsvNKGfDZ9VCSKSgZkWnhmKD87V8PzzhZFFc/S/_DSF0462-S.jpg",
-      "rating": 0,
-      "visibility": "show",
-      "galleries": [
-        "Galleries/Fine-Art-Photography/Transportation/Trains-Black-White"
-      ]
-    },
-    {
-      "id": "i-t2FVBZ3",
-      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-t2FVBZ3/0/K87xwvDvg7NNd3rknV9nbpXwmZxpWm3JPVXvmgn6s/S/_O1H0422-2-S.jpg",
-      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-t2FVBZ3/0/K9tC2QRDskkS4b27jHKK9CXm44TF5rTGVr9CQtpm2/M/_O1H0422-2-M.jpg",
-      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-t2FVBZ3/0/LpCSp3LgSnrqg9HfKJzzBhCtVNhZpNfzbgFLQcBWW/XL/_O1H0422-2-XL.jpg",
-      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-t2FVBZ3/0/LpCSp3LgSnrqg9HfKJzzBhCtVNhZpNfzbgFLQcBWW/XL/_O1H0422-2-XL.jpg",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-t2FVBZ3/0/K87xwvDvg7NNd3rknV9nbpXwmZxpWm3JPVXvmgn6s/S/_O1H0422-2-S.jpg",
-      "rating": 4,
-      "visibility": "show",
-      "galleries": [
-        "Galleries/Fine-Art-Photography/Transportation/Trains-Black-White"
-      ]
-    }
-  ],
   "/Galleries/Fine-Art-Photography/Architecture/Gallery": [
     {
       "id": "i-fszvgmq",
@@ -49534,7 +49467,6 @@ export const sectionGalleries = {
     "/Galleries/Fine-Art-Photography/Transportation/Military",
     "/Galleries/Fine-Art-Photography/Transportation/Planes",
     "/Galleries/Fine-Art-Photography/Transportation/Trains",
-    "/Galleries/Fine-Art-Photography/Transportation/Trains-Black-White",
     "/Galleries/Fine-Art-Photography/Architecture/Gallery",
     "/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments",
     "/Galleries/Fine-Art-Photography/Miscellaneous/Pets",
@@ -49588,8 +49520,7 @@ export const sectionGalleries = {
     "/Galleries/Fine-Art-Photography/Transportation/Cars",
     "/Galleries/Fine-Art-Photography/Transportation/Military",
     "/Galleries/Fine-Art-Photography/Transportation/Planes",
-    "/Galleries/Fine-Art-Photography/Transportation/Trains",
-    "/Galleries/Fine-Art-Photography/Transportation/Trains-Black-White"
+    "/Galleries/Fine-Art-Photography/Transportation/Trains"
   ],
   "/Galleries/Fine-Art-Photography/Architecture": [
     "/Galleries/Fine-Art-Photography/Architecture/Gallery"
@@ -93748,71 +93679,6 @@ export const allImages        = [
     "visibility": "show",
     "galleries": [
       "Galleries/Fine-Art-Photography/Transportation/Trains"
-    ]
-  },
-  {
-    "id": "i-tqSQMQK",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-tqSQMQK/0/L6mN6DvwQ4cjzTmZVhrGMCtXBFp2pwLkVNzj5cghW/S/_DSF5219-Edit-Edit-S.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-tqSQMQK/0/L9cdxmckvPjqfhXnzsB8XFtxTftRF5Txzvm5T2kvr/M/_DSF5219-Edit-Edit-M.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-tqSQMQK/0/Mtr4sRBSxr3sNb33Rgt62Sk3khHscKNR4H9bxTvCN/L/_DSF5219-Edit-Edit-L.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-tqSQMQK/0/KFMKkWm3PXSkxZtMnLvgtCBQr4SbZm86kST5dzf3n/XL/_DSF5219-Edit-Edit-XL.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-tqSQMQK/0/L6mN6DvwQ4cjzTmZVhrGMCtXBFp2pwLkVNzj5cghW/S/_DSF5219-Edit-Edit-S.jpg",
-    "rating": 4,
-    "visibility": "show",
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Transportation/Trains-Black-White"
-    ]
-  },
-  {
-    "id": "i-GGK9QtB",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-GGK9QtB/0/MvSFqN4DfjtfGdZM7wvjdBS3cCFzqdK29qdR7FFsN/S/_DSF5230-Edit-2-S.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-GGK9QtB/0/MSLvBsN6jnccqFgg3G2ZBnG73BKZhn8SN5vKZhdZ9/M/_DSF5230-Edit-2-M.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-GGK9QtB/0/LpW4V9HdfbfFknNXgw9PgwzDxcR8sn8fCLjtmX2sT/XL/_DSF5230-Edit-2-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-GGK9QtB/0/LpW4V9HdfbfFknNXgw9PgwzDxcR8sn8fCLjtmX2sT/XL/_DSF5230-Edit-2-XL.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-GGK9QtB/0/MvSFqN4DfjtfGdZM7wvjdBS3cCFzqdK29qdR7FFsN/S/_DSF5230-Edit-2-S.jpg",
-    "rating": 4,
-    "visibility": "show",
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Transportation/Trains-Black-White"
-    ]
-  },
-  {
-    "id": "i-ghKSGpj",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-ghKSGpj/0/KgNBPrkxQDhC3cJ8MVL8n6xx9WgmBmv7w53mL7rxg/S/_ANA7248-Edit-Enhanced-S.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-ghKSGpj/0/NHfKppHL5KBdM7kwSQ8hMxkHB45Jpc88pgr9dSKcB/M/_ANA7248-Edit-Enhanced-M.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-ghKSGpj/0/NM9d2ks3kNstptQsDm5GHbKnZNMhHrQVmgbqTQ4hg/XL/_ANA7248-Edit-Enhanced-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-ghKSGpj/0/NM9d2ks3kNstptQsDm5GHbKnZNMhHrQVmgbqTQ4hg/XL/_ANA7248-Edit-Enhanced-XL.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-ghKSGpj/0/KgNBPrkxQDhC3cJ8MVL8n6xx9WgmBmv7w53mL7rxg/S/_ANA7248-Edit-Enhanced-S.jpg",
-    "rating": 4,
-    "visibility": "show",
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Transportation/Trains-Black-White"
-    ]
-  },
-  {
-    "id": "i-SfsCh3W",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-SfsCh3W/0/LLT4PgsvNKGfDZ9VCSKSgZkWnhmKD87V8PzzhZFFc/S/_DSF0462-S.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-SfsCh3W/0/NDGmrdzT9p4nvZ7JSt2dgpJCkjpPQ9vgcgbpzN77d/M/_DSF0462-M.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-SfsCh3W/0/KM44rTLQxCpBR84TVZrKdW7xjW6jP4Pt7Lcq9BVSm/L/_DSF0462-L.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-SfsCh3W/0/KGcvPp5pGVW88VnZJP6CZVJStN7Xwd6MDBxjgJNkW/XL/_DSF0462-XL.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-SfsCh3W/0/LLT4PgsvNKGfDZ9VCSKSgZkWnhmKD87V8PzzhZFFc/S/_DSF0462-S.jpg",
-    "rating": 0,
-    "visibility": "show",
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Transportation/Trains-Black-White"
-    ]
-  },
-  {
-    "id": "i-t2FVBZ3",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-t2FVBZ3/0/K87xwvDvg7NNd3rknV9nbpXwmZxpWm3JPVXvmgn6s/S/_O1H0422-2-S.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-t2FVBZ3/0/K9tC2QRDskkS4b27jHKK9CXm44TF5rTGVr9CQtpm2/M/_O1H0422-2-M.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-t2FVBZ3/0/LpCSp3LgSnrqg9HfKJzzBhCtVNhZpNfzbgFLQcBWW/XL/_O1H0422-2-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-t2FVBZ3/0/LpCSp3LgSnrqg9HfKJzzBhCtVNhZpNfzbgFLQcBWW/XL/_O1H0422-2-XL.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-t2FVBZ3/0/K87xwvDvg7NNd3rknV9nbpXwmZxpWm3JPVXvmgn6s/S/_O1H0422-2-S.jpg",
-    "rating": 4,
-    "visibility": "show",
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Transportation/Trains-Black-White"
     ]
   },
   {

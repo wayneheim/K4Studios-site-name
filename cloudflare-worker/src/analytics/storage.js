@@ -78,6 +78,7 @@ const CANONICAL_TRACKED_EVENTS = new Set([
   'order_clicked',
   'collector_notes_open',
   'cowboy_jump',
+  'picture_shows_jump',
   'exit_to_gallery',
   'gallery_explore_click',
   'gallery_preview_click',
@@ -113,6 +114,7 @@ const CANONICAL_TRACKED_EVENTS = new Set([
 
 const PIXEL_LAYER_TO_CANONICAL_EVENT = {
   cowboy_jump_pixel_v1: 'cowboy_jump',
+  picture_shows_jump_pixel_v1: 'picture_shows_jump',
   more_info_open_pixel_v1: 'more_info_open',
   order_clicked_pixel_v1: 'order_clicked',
   order_submitted_pixel_v1: 'order_submitted',

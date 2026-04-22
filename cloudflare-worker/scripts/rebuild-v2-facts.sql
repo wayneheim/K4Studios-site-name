@@ -43,7 +43,8 @@ bot_context AS (
     MAX(CASE WHEN COALESCE(suspected.is_datacenter, 0) = 1 THEN 1 ELSE 0 END) AS has_datacenter_ip_signal,
     MAX(CASE WHEN COALESCE(suspected.risk_level, 0) >= 4 THEN 1 ELSE 0 END) AS has_high_risk_bot_signal,
     MAX(CASE
-      WHEN lower(COALESCE(json_extract(canonical.metadata_json, '$.ua'), '')) LIKE '%headless%'
+      WHEN COALESCE(CAST(json_extract(canonical.metadata_json, '$.automation_ua_signal') AS INTEGER), 0) = 1
+        OR lower(COALESCE(json_extract(canonical.metadata_json, '$.ua'), '')) LIKE '%headless%'
         OR lower(COALESCE(json_extract(canonical.metadata_json, '$.ua'), '')) LIKE '%googlebot%'
         OR lower(COALESCE(json_extract(canonical.metadata_json, '$.ua'), '')) LIKE '%bingbot%'
         OR lower(COALESCE(json_extract(canonical.metadata_json, '$.ua'), '')) LIKE '%crawler%'
@@ -192,49 +193,6 @@ LEFT JOIN bot_context
   ON bot_context.session_id = aggregated.session_id;
 
 UPDATE session_facts_v2
-SET is_suspicious_datacenter_shallow = CASE
-  WHEN engaged_event_count = 0
-   AND (
-     canonical_page_loads = 1
-     OR (canonical_page_loads = 0 AND event_count <= 3)
-   )
-   AND (
-     COALESCE(CAST(json_extract(metadata_json, '$.ashburn_signal') AS INTEGER), 0) = 1
-     OR COALESCE(CAST(json_extract(metadata_json, '$.datacenter_ip_signal') AS INTEGER), 0) = 1
-     OR (
-       COALESCE(CAST(json_extract(metadata_json, '$.high_risk_bot_signal') AS INTEGER), 0) = 1
-       AND COALESCE(CAST(json_extract(metadata_json, '$.automation_ua_signal') AS INTEGER), 0) = 1
-     )
-   )
-  THEN 1 ELSE 0 END;
-
-UPDATE session_facts_v2
-SET is_suspicious_internal_shallow = CASE
-  WHEN engaged_event_count = 0
-   AND lower(COALESCE(source_family, '')) = 'k4 internal'
-   AND COALESCE(json_extract(metadata_json, '$.referrer_path'), '') = '/'
-   AND (
-     (
-       canonical_page_loads = 1
-       AND (
-         COALESCE(
-           NULLIF(trim(COALESCE(json_extract(metadata_json, '$.country'), '')), ''),
-           NULLIF(trim(COALESCE(json_extract(metadata_json, '$.region'), '')), ''),
-           NULLIF(trim(COALESCE(json_extract(metadata_json, '$.city'), '')), '')
-         ) IS NULL
-         OR (
-           event_count <= 2
-           AND COALESCE(landing_page_path, '') LIKE '%/i-%'
-         )
-         OR (
-           event_count = 1
-           AND COALESCE(landing_page_path, '') <> '/'
-         )
-         OR (
-           event_count = 1
-           AND COALESCE(landing_page_path, '') = '/'
-           AND CASE
-             WHEN UPPER(COALESCE(json_extract(metadata_json, '$.country'), '')) IN ('US', 'CA', 'AU', 'NZ') THEN 4
              WHEN UPPER(COALESCE(json_extract(metadata_json, '$.country'), '')) IN ('AD', 'AT', 'BE', 'BG', 'CH', 'CY', 'CZ', 'DE', 'DK', 'EE', 'ES', 'FI', 'FR', 'GB', 'GR', 'HR', 'HU', 'IE', 'IS', 'IT', 'LI', 'LT', 'LU', 'LV', 'MC', 'MT', 'NL', 'NO', 'PL', 'PT', 'RO', 'SE', 'SI', 'SK', 'SM', 'VA') THEN 3
              WHEN UPPER(COALESCE(json_extract(metadata_json, '$.country'), '')) IN ('HK', 'ID', 'IN', 'SG', 'VN') THEN 1
              WHEN trim(COALESCE(json_extract(metadata_json, '$.country'), '')) = '' THEN 0

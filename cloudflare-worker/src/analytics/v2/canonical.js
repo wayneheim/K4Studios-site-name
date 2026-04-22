@@ -132,6 +132,8 @@ function mapRawEventToFamily(rawEvent) {
       return { eventFamily: 'image_nav', eventAction: 'sister', canonicalPageLoad: 0 };
     case 'cowboy_jump':
       return { eventFamily: 'image_nav', eventAction: 'jump', canonicalPageLoad: 0 };
+    case 'picture_shows_jump':
+      return { eventFamily: 'image_nav', eventAction: 'jump', canonicalPageLoad: 0 };
     case 'presentation_last_image_back_to_start':
       return { eventFamily: 'image_nav', eventAction: 'back_to_start', canonicalPageLoad: 0 };
     case 'grid_open':

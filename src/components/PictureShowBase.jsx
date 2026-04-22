@@ -130,7 +130,7 @@ const usesEngrainedOrderModal = (image, basePath = "") => {
   return canonicalBasePath === ENGRAINED_BASE_PATH;
 };
 
-export default function PictureShowBase({ rawData = [], basePath = "", titleBase = "", globalAudioSrc = "", globalAudioMode = "score", presentationMode = false, introMeta = {}, outroMeta = {} }) {
+export default function PictureShowBase({ rawData = [], basePath = "", titleBase = "", globalAudioSrc = "", globalAudioMode = "score", presentationMode = false, showFooter = null, introMeta = {}, outroMeta = {} }) {
   // Detect if this is a story (has audio or intro metadata) vs gallery (neither)
   const isStory = useMemo(() => {
     return Boolean(globalAudioSrc) || Object.keys(introMeta).length > 0 || Object.keys(outroMeta).length > 0;
@@ -912,7 +912,7 @@ const isSpeechActive = () => {
   const notesPanelH = false;
   const progressNavH = false;
   const storyTextH = presentationMode;
-  const footerH = presentationMode;
+  const footerH = showFooter === true ? false : presentationMode;
   const introTitleClassName = presentationMode ? "font-semibold mb-2 text-5xl sm:text-6xl" : "font-semibold mb-1 text-3xl";
   const introLabelClassName = presentationMode ? "text-3xl sm:text-4xl block text-[#85644b]" : "text-xl block  text-[#85644b]";
   const introStoryClassName = presentationMode ? "italic text-lg sm:text-2xl leading-relaxed text-gray-700 mb-5" : "italic text-sm leading-relaxed text-gray-700 mb-4";

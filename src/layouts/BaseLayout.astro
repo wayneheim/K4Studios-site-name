@@ -342,7 +342,20 @@ const normalizedBreadcrumbsJSON = normalizeK4Host(breadcrumbsJSON);
 
           var vid = readCookie('k4_vid');
           if (!vid) {
+            try {
+              vid = localStorage.getItem('k4_vid') || '';
+            } catch (e) {
+              vid = '';
+            }
+          }
+          if (!vid) {
             vid = randomId();
+          }
+
+          if (vid) {
+            try {
+              localStorage.setItem('k4_vid', vid);
+            } catch (e) {}
           }
 
           if (sid) {

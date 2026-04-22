@@ -1,5 +1,5 @@
 import ChapterGalleryBase from './ChapterGalleryBase.jsx';
-import { galleryData as rawData } from "../data/Galleries/Fine-Art-Photography/Transportation/Trains-Black-White.mjs";
+import { galleryData as rawData } from "../data/Galleries/Fine-Art-Photography/Transportation/Trains.mjs";
 
 export default function ChapterTransportationTrainsBlackWhiteTraditional(props) {
   return (

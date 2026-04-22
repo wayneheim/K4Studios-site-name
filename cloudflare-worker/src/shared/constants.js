@@ -46,6 +46,7 @@ export const DATACENTER_PREFIXES = [
   '185.170.',                         // Datacenter
   '216.244.',                         // DotBot / hosting
   // Chinese cloud (specific ranges)
+  '43.134.',                          // Tencent Cloud SG/HK browser-like wave
   '43.154.', '43.155.', '43.159.',   // Tencent Cloud specific
   '101.32.', '101.33.',              // Tencent Cloud
   '119.28.', '124.243.',             // Alibaba/Huawei
@@ -80,6 +81,7 @@ export const DATACENTER_ASNS = [
   16509, 14618,  // Amazon AWS
   8075,          // Microsoft Azure
   15169, 396982, // Google Cloud
-  13335          // Cloudflare
+  13335,         // Cloudflare
+  132203         // Tencent Cloud
 ];
 

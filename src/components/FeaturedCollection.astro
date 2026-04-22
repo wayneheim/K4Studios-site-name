@@ -15,10 +15,14 @@ interface Props {
     src: string;
     srcS?: string;
     srcM?: string;
+    srcL?: string;
+    src2?: string;
+    src3?: string;
     alt: string;
-    id: string;
+    id?: string;
     width?: number;
     height?: number;
+    fit?: 'cover' | 'contain';
   };
   /** Collection title displayed prominently */
   title: string;
@@ -36,6 +40,10 @@ interface Props {
   hideOnMobile?: boolean;
   /** Optional: custom tracking ID for analytics */
   trackingId?: string;
+  /** Optional: analytics event name for CTA clicks */
+  trackingEvent?: string;
+  /** Optional: append arrow to CTA label */
+  appendArrow?: boolean;
 }
 
 const {
@@ -45,15 +53,18 @@ const {
   ctaText = "Enter the Frontier",
   ctaLink,
   collectionName,
-  itemCount = 250,
+  itemCount,
   hideOnMobile = false,
-  trackingId
+  trackingId,
+  trackingEvent = 'cowboy_jump',
+  appendArrow = true
 } = Astro.props;
 
 // Use trackingId if provided, otherwise fall back to collectionName
 const analyticsLabel = trackingId || collectionName;
 const analyticsEndpoint = 'https://edge.k4studios.com/__k4e';
 const pixelEndpoint = 'https://edge.k4studios.com/_state';
+const siteOrigin = 'https://www.k4studios.com';
 
 // Helper to generate proxy URL - ensures SmugMug URLs never appear in rendered HTML
 const getProxySrc = (imageId: string, size: string = 'm') => {
@@ -63,17 +74,36 @@ const getProxySrc = (imageId: string, size: string = 'm') => {
   return `/img/${imageId}/${safeSize}.jpg`;
 };
 
-// Use proxy URLs for all image sources
-const displaySrc = getProxySrc(image.id, 'm');
-const srcsetValue = `${getProxySrc(image.id, 's')} 400w, ${getProxySrc(image.id, 'm')} 600w, ${getProxySrc(image.id, 'l')} 1024w`;
-const fullUrl = `https://www.k4studios.com${ctaLink}`;
-const imageUrl = `https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${image.id}`;
-// Capped at 'l' to protect XL from bot discovery via structured data
-const proxyImageUrl = `https://www.k4studios.com${getProxySrc(image.id, 'l')}`;
+const toAbsoluteUrl = (value: string) => {
+  if (!value) return siteOrigin;
+  if (value.startsWith('http://') || value.startsWith('https://')) return value;
+  const normalized = value.startsWith('/') ? value : `/${value}`;
+  return new URL(normalized, siteOrigin).toString();
+};
+
+const hasProxyImage = Boolean(image.id);
+
+// Use proxy URLs for gallery images and pass through local/static assets unchanged.
+const displaySrc = hasProxyImage
+  ? getProxySrc(image.id!, 'm')
+  : (image.srcM || image.src);
+const srcsetValue = hasProxyImage
+  ? `${getProxySrc(image.id!, 's')} 400w, ${getProxySrc(image.id!, 'm')} 600w, ${getProxySrc(image.id!, 'l')} 1024w`
+  : [
+      image.srcS ? `${image.srcS} 400w` : '',
+      (image.srcM || image.src) ? `${image.srcM || image.src} 600w` : '',
+      (image.srcL || image.src) ? `${image.srcL || image.src} 1024w` : ''
+    ].filter(Boolean).join(', ');
+const fullUrl = toAbsoluteUrl(ctaLink);
+// Capped at 'l' to protect XL from bot discovery via structured data.
+const structuredImageUrl = hasProxyImage
+  ? toAbsoluteUrl(getProxySrc(image.id!, 'l'))
+  : toAbsoluteUrl(image.srcL || image.srcM || image.src);
 const acquireLicensePage = 'https://www.k4studios.com/licensing';
+const ctaLabel = appendArrow ? `${ctaText} →` : ctaText;
 
 // Build structured data for this featured collection
-// Uses proxy URL for image to avoid exposing SmugMug URLs
+// Uses proxied gallery URLs when available and falls back to local/static assets for branded cards.
 const structuredData = JSON.stringify({
   "@context": "https://schema.org",
   "@type": "CollectionPage",
@@ -93,7 +123,7 @@ const structuredData = JSON.stringify({
   },
   "image": {
     "@type": "ImageObject",
-    "url": proxyImageUrl,
+    "url": structuredImageUrl,
     "name": title,
     "description": image.alt,
     "creditText": "Wayne Heim",
@@ -119,9 +149,9 @@ const structuredData = JSON.stringify({
       {
         "@type": "ListItem",
         "position": 1,
-        "url": imageUrl,
+        "url": fullUrl,
         "name": title,
-        "image": proxyImageUrl
+        "image": structuredImageUrl
       }
     ]
   }
@@ -136,31 +166,53 @@ const structuredData = JSON.stringify({
   <script type="application/ld+json" set:html={structuredData} />
   
   <a href={ctaLink} class="fc-link" aria-label={`${ctaText} – ${collectionName}`}>
-    <div class="fc-mat">
-      <div class="fc-image-wrap">
-        <img 
-          src={displaySrc}
-          srcset={srcsetValue}
-          sizes="(max-width: 768px) 100vw, 320px"
-          alt={image.alt}
-          width={image.width || 600}
-          height={image.height || 400}
-          class="fc-image"
-          loading="lazy"
-          decoding="async"
-        />
+    <div class:list={["fc-mat", { "fc-mat--contain": image.fit === 'contain' }]}>
+      <div class:list={["fc-image-wrap", { "fc-image-wrap--contain": image.fit === 'contain' }]}>
+        <div class="fc-image-stack" data-hover-phase="base" data-hover-src={image.src2 || ''} data-hover-gif={image.src3 || ''}>
+          <img 
+            src={displaySrc}
+            srcset={srcsetValue || undefined}
+            sizes="(max-width: 768px) 100vw, 320px"
+            alt={image.alt}
+            width={image.width || 600}
+            height={image.height || 400}
+            class:list={["fc-image", "fc-image--base", { "fc-image--contain": image.fit === 'contain' }]}
+            loading="lazy"
+            decoding="async"
+          />
+          {image.src2 && (
+            <img
+              src={image.src2}
+              alt=""
+              aria-hidden="true"
+              class:list={["fc-image", "fc-image--overlay", "fc-image--hover", { "fc-image--contain": image.fit === 'contain' }]}
+              loading="lazy"
+              decoding="async"
+            />
+          )}
+          {image.src3 && (
+            <img
+              src={image.src3}
+              alt=""
+              aria-hidden="true"
+              class:list={["fc-image", "fc-image--overlay", "fc-image--gif", { "fc-image--contain": image.fit === 'contain' }]}
+              loading="lazy"
+              decoding="async"
+            />
+          )}
+        </div>
       </div>
     </div>
     
     <div class="fc-content">
       <h3 class="fc-title">{title}</h3>
       {subtitle && <p class="fc-subtitle">{subtitle}</p>}
-      <span class="fc-cta" data-hover="Explore Collection →">{ctaText} →</span>
+      <span class="fc-cta" data-hover={ctaLabel}>{ctaLabel}</span>
     </div>
   </a>
 </aside>
 
-<script define:vars={{ collectionName, ctaLink, analyticsLabel, analyticsEndpoint, pixelEndpoint }}>
+<script define:vars={{ collectionName, ctaLink, analyticsLabel, trackingEvent, analyticsEndpoint, pixelEndpoint }}>
   const emitActionPixel = (action, imageId = null, extra = {}) => {
     if (typeof window.k4ShouldSuppressAnalytics === 'function' && window.k4ShouldSuppressAnalytics()) {
       return;
@@ -238,29 +290,46 @@ const structuredData = JSON.stringify({
     sendViaFetch();
   };
 
-  // Track clicks on the Featured Collection CTA (cowboy jump widget)
+  // Track clicks on the Featured Collection CTA
   document.addEventListener('DOMContentLoaded', () => {
     const widget = document.querySelector('.featured-collection-widget');
     const link = widget?.querySelector('.fc-link');
+    const imageStack = widget?.querySelector('.fc-image-stack');
+    let hoverTimer = null;
     
     if (link) {
       link.addEventListener('click', () => {
         // Skip logging on localhost (admin/dev work)
         if (window.location.hostname === 'localhost') return;
 
-        sendK4('cowboy_jump', { galleryId: analyticsLabel, pageType: 'landing' });
-
-        // Home-only shadow event for controlled tracker comparison.
-        if (analyticsLabel === 'Cowboy_Jump_Home') {
-          sendK4('pilot_home_cowboy_jump_click', {
-            galleryId: analyticsLabel,
-            pageType: 'landing',
-            sourceLayer: 'pilot_home_v1_cowboy_jump_click',
-            theme: 'pilot_home_v1',
-            trigger: 'shadow_test'
-          });
-        }
+        sendK4(trackingEvent, { galleryId: analyticsLabel, pageType: 'landing' });
       });
+    }
+
+    if (link && imageStack) {
+      const hoverSrc = imageStack.getAttribute('data-hover-src');
+      const hoverGif = imageStack.getAttribute('data-hover-gif');
+
+      const setHoverPhase = (phase) => {
+        imageStack.setAttribute('data-hover-phase', phase);
+      };
+
+      if (hoverSrc || hoverGif) {
+        link.addEventListener('mouseenter', () => {
+          setHoverPhase(hoverSrc ? 'hover' : 'base');
+          if (hoverTimer) window.clearTimeout(hoverTimer);
+          if (hoverGif) {
+            hoverTimer = window.setTimeout(() => {
+              setHoverPhase('gif');
+            }, 400);
+          }
+        });
+
+        link.addEventListener('mouseleave', () => {
+          if (hoverTimer) window.clearTimeout(hoverTimer);
+          setHoverPhase('base');
+        });
+      }
     }
     
     // Warm the featured image immediately (s, m, l sizes)
@@ -302,18 +371,22 @@ const structuredData = JSON.stringify({
     border: 1px solid #e3d5c9;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(139, 0, 0, 0.08);
+    box-shadow: 0 2px 8px rgba(101, 76, 56, 0.08);
     transition: all 0.3s ease;
   }
   
   .fc-link:hover {
-    box-shadow: 0 4px 16px rgba(139, 0, 0, 0.15);
-    border-color: #8b0000;
+    box-shadow: 0 4px 14px rgba(117, 88, 62, 0.16);
+    border-color: #8d735c;
   }
   
   .fc-mat {
     padding: 0.5rem;
     background: linear-gradient(135deg, #f5f0e8 0%, #ebe4da 100%);
+  }
+
+  .fc-mat--contain {
+    padding: 0.25rem;
   }
   
   .fc-image-wrap {
@@ -323,21 +396,70 @@ const structuredData = JSON.stringify({
     overflow: hidden;
     border-radius: 6px;
   }
+
+  .fc-image-wrap--contain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 5 / 4;
+    padding: 0.35rem;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.98) 0%, #f3ede5 68%, #e5d8ca 100%);
+  }
+
+  .fc-image-stack {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
   
   .fc-image {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 8s ease-out;
+    transition: transform 8s ease-out, opacity 0.45s ease;
     will-change: transform;
   }
+
+  .fc-image--contain {
+    object-fit: contain;
+  }
+
+  .fc-image--overlay {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .fc-image-stack[data-hover-phase='hover'] .fc-image--base,
+  .fc-image-stack[data-hover-phase='gif'] .fc-image--base {
+    opacity: 0;
+  }
+
+  .fc-image-stack[data-hover-phase='hover'] .fc-image--hover {
+    opacity: 1;
+  }
+
+  .fc-image-stack[data-hover-phase='gif'] .fc-image--hover {
+    opacity: 0;
+  }
+
+  .fc-image-stack[data-hover-phase='gif'] .fc-image--gif {
+    opacity: 1;
+  }
   
-  .fc-link:hover .fc-image {
+  .fc-link:hover .fc-image:not(.fc-image--contain) {
     transition: transform 8s ease-out;
     transform: scale(1.1) translate(-2%, 4%) rotate(-1.5deg);
   }
+
+  .fc-link:hover .fc-image--contain {
+    transition: transform 0.45s ease, filter 0.45s ease;
+    transform: scale(1.01);
+    filter: drop-shadow(0 3px 10px rgba(88, 64, 45, 0.14));
+  }
   
-  .fc-link:not(:hover) .fc-image {
+  .fc-link:not(:hover) .fc-image:not(.fc-image--contain) {
     transition: transform 16s ease-in;
   }
   
@@ -377,9 +499,16 @@ const structuredData = JSON.stringify({
   .fc-cta::after {
     content: attr(data-hover);
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, 100%);
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: inherit;
+    box-sizing: border-box;
+    font: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    transform: translateY(100%);
     opacity: 0;
     transition: transform 0.6s ease, opacity 0.6s ease;
     white-space: nowrap;
@@ -392,7 +521,7 @@ const structuredData = JSON.stringify({
   }
   
   .fc-link:hover .fc-cta::after {
-    transform: translate(-50%, -50%);
+    transform: translateY(0);
     opacity: 1;
     color: white;
   }
