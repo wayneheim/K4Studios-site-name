@@ -153,7 +153,12 @@ export function renderDashboardV2({ summary, authHeader = '' }) {
   const externalSources = summary?.externalSources || [];
   const sessionGeography = summary?.sessionGeography || [];
   const imageViewGeography = summary?.imageViewGeography || [];
-  const entrySourceMix = summary?.entrySourceMix || [];
+  const entrySourceRawMix = summary?.entrySourceRawMix || [];
+  const entrySourceTrustedMix = summary?.entrySourceTrustedMix || [];
+  const entrySourceQualifiedMix = summary?.entrySourceQualifiedMix || [];
+  const pageKeyCoverageMix = summary?.pageKeyCoverageMix || [];
+  const pageKeyTransitionMix = summary?.pageKeyTransitionMix || [];
+  const pageKeyActorStats = summary?.pageKeyActorStats || null;
   const firstImageHopMix = summary?.firstImageHopMix || [];
   const firstImagePathMix = summary?.firstImagePathMix || [];
   const suspiciousSessionGeography = summary?.suspiciousSessionGeography || [];
@@ -187,6 +192,10 @@ export function renderDashboardV2({ summary, authHeader = '' }) {
   const pilotHomeCowboyCityRegionCoverage = Number(counts?.pilot_home_cowboy_city_region_coverage || 0);
   const pilotHomeCowboySessions = Number(counts?.pilot_home_cowboy_sessions || 0);
   const pilotHomeCowboyVisitors = Number(counts?.pilot_home_cowboy_visitors || 0);
+  const pageKeyActors = Number(pageKeyActorStats?.actors || 0);
+  const pageKeyActorsWith2PlusKeys = Number(pageKeyActorStats?.actors_with_2plus_keys || 0);
+  const pageKeyChainablePct = pageKeyActors > 0 ? ((pageKeyActorsWith2PlusKeys / pageKeyActors) * 100).toFixed(1) : '0.0';
+  const pageKeyTransitionTotal = pageKeyTransitionMix.reduce((sum, row) => sum + Number(row.transitions || 0), 0);
   const showPilotTrustMismatchNote = sessions === 0 && (homePageViews > 0 || pilotHomePageViews > 0);
   const sessionsReachingFirstImage = Number(counts?.sessions_reaching_first_image || 0);
   const directToFirstImageSessions = Number(counts?.direct_to_first_image_sessions || 0);
@@ -584,9 +593,27 @@ export function renderDashboardV2({ summary, authHeader = '' }) {
       </div>
       <div class="card">
         <h2>External Entry Sources</h2>
-        <p class="subtle">External or direct source families for trusted session entries only. Internal re-entry and internal test traffic are excluded from this card.</p>
+        <p class="subtle">Three layers are shown: Raw entries (all non-bot external/direct landings), Trusted entries (after suspicious/internal-test filtering), and Qualified entries (behavior-qualified truth set).</p>
         <div class="scroll-panel" style="max-height: 360px; margin-top: 8px;">
-          ${entrySourceMix.length ? entrySourceMix.map((row) => `<div class="list-row"><span>${row.source_label}</span><strong>${row.sessions}</strong></div>`).join('') : '<p>No entry source data in this window.</p>'}
+          <div class="list-row" style="border-bottom: 1px solid #333;"><span><strong>Qualified External Entries</strong></span><strong>${entrySourceQualifiedMix.reduce((sum, row) => sum + Number(row.sessions || 0), 0)}</strong></div>
+          ${entrySourceQualifiedMix.length ? entrySourceQualifiedMix.map((row) => `<div class="list-row"><span>${row.source_label}</span><strong>${row.sessions}</strong></div>`).join('') : '<p>No qualified entry source data in this window.</p>'}
+          <div class="list-row" style="margin-top: 8px; border-top: 1px solid #333;"><span><strong>Trusted External Entries</strong></span><strong>${entrySourceTrustedMix.reduce((sum, row) => sum + Number(row.sessions || 0), 0)}</strong></div>
+          ${entrySourceTrustedMix.length ? entrySourceTrustedMix.map((row) => `<div class="list-row"><span>${row.source_label}</span><strong>${row.sessions}</strong></div>`).join('') : '<p>No trusted entry source data in this window.</p>'}
+          <div class="list-row" style="margin-top: 8px; border-top: 1px solid #333;"><span><strong>Raw External Entries</strong></span><strong>${entrySourceRawMix.reduce((sum, row) => sum + Number(row.sessions || 0), 0)}</strong></div>
+          ${entrySourceRawMix.length ? entrySourceRawMix.map((row) => `<div class="list-row"><span>${row.source_label}</span><strong>${row.sessions}</strong></div>`).join('') : '<p>No raw entry source data in this window.</p>'}
+        </div>
+      </div>
+      <div class="card">
+        <h2>Pilot Navigation Observation</h2>
+        <p class="subtle">Derived from raw events with <code>page_key</code>. Actor stitching uses <code>session_id</code> → <code>session_id_v2</code> → <code>visitor_id</code>.</p>
+        <div class="list-row"><span>Keyed actors</span><strong>${pageKeyActors}</strong></div>
+        <div class="list-row"><span>Actors with 2+ page keys</span><strong>${pageKeyActorsWith2PlusKeys} (${pageKeyChainablePct}%)</strong></div>
+        <div class="list-row"><span>Observed key-to-key transitions</span><strong>${pageKeyTransitionTotal}</strong></div>
+        <div class="scroll-panel" style="max-height: 280px; margin-top: 8px;">
+          <div class="list-row" style="border-bottom: 1px solid #333;"><span><strong>Key Coverage</strong></span><strong>${pageKeyCoverageMix.reduce((sum, row) => sum + Number(row.events || 0), 0)} events</strong></div>
+          ${pageKeyCoverageMix.length ? pageKeyCoverageMix.map((row) => `<div class="list-row"><span>${row.page_key}</span><strong>${row.events} events · ${Number(row.actors || 0)} actors</strong></div>`).join('') : '<p>No page_key events in this window.</p>'}
+          <div class="list-row" style="margin-top: 8px; border-top: 1px solid #333;"><span><strong>Observed Transitions</strong></span><strong>${pageKeyTransitionTotal}</strong></div>
+          ${pageKeyTransitionMix.length ? pageKeyTransitionMix.map((row) => `<div class="list-row"><span>${row.from_key} -> ${row.to_key}</span><strong>${row.transitions}</strong></div>`).join('') : '<p>No key-to-key transitions observed yet.</p>'}
         </div>
       </div>
     </div>

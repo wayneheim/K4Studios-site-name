@@ -320,6 +320,7 @@ export async function getV2CanonicalSummary(env, { windowKey = 'today', excludeI
                 AND session_id NOT IN (SELECT session_id FROM viewer_excluded_sessions)` : '';
   const rawViewerExclusionClause = buildRawFilterExclusionClause(filterState);
   const canonicalViewerPredicate = buildCanonicalRawFilterPredicate(filterState);
+  const facebookHostCaseCondition = `(lower(referrer_host) = 'facebook.com' OR lower(referrer_host) LIKE '%.facebook.com' OR lower(referrer_host) = 'fb.com' OR lower(referrer_host) LIKE '%.fb.com')`;
   const geoLabelExpression = `CASE
     WHEN json_extract(metadata_json, '$.city') IS NOT NULL AND trim(json_extract(metadata_json, '$.city')) <> '' THEN
       json_extract(metadata_json, '$.city') ||
@@ -345,14 +346,27 @@ export async function getV2CanonicalSummary(env, { windowKey = 'today', excludeI
     WHEN referrer_host LIKE '%bing.%' THEN 'Bing'
     WHEN referrer_host LIKE '%pinterest.%' THEN 'Pinterest'
     WHEN referrer_host LIKE '%t.co%' OR referrer_host LIKE '%twitter.%' OR referrer_host LIKE '%x.com%' THEN 'Twitter/X'
-    WHEN referrer_host LIKE '%facebook.%' OR referrer_host LIKE '%fb.%' THEN 'Facebook'
+    WHEN ${facebookHostCaseCondition} THEN 'Facebook'
     WHEN referrer_host LIKE '%instagram.%' THEN 'Instagram'
     WHEN referrer_host LIKE '%www.k4studios.com%' OR referrer_host = 'k4studios.com' THEN 'K4 Internal'
     ELSE referrer_host
   END`;
+  const qualifiedExternalSessionPredicate = `(
+    COALESCE(sf.engaged_event_count, 0) > 0
+    OR COALESCE(sf.event_count, 0) >= 2
+    OR COALESCE(sf.canonical_page_loads, 0) >= 2
+    OR CAST((julianday(sf.last_seen_at) - julianday(sf.first_seen_at)) * 86400 AS INTEGER) >= 8
+  )`;
+  const facebookQualifiedPredicate = `(
+    lower(COALESCE(landing_rows.source_label, '')) <> 'facebook'
+    OR COALESCE(lower(landing_rows.referrer_path), '') LIKE '%fbclid=%'
+    OR COALESCE(sf.engaged_event_count, 0) > 0
+    OR COALESCE(sf.event_count, 0) >= 2
+    OR CAST((julianday(sf.last_seen_at) - julianday(sf.first_seen_at)) * 86400 AS INTEGER) >= 5
+  )`;
   const topImageLimitClause = (window.key === 'today' || window.key === 'yesterday') ? '' : 'LIMIT 10';
 
-  const [refreshStatus, counts, families, interactionActions, topEntryPages, topSitePages, topImages, externalSources, sessionGeography, imageViewGeography, entrySourceMix, firstImageHopMix, firstImagePathMix, suspiciousSessionGeography, suspiciousDatacenterSessionGeography, internalReentryMix] = await Promise.all([
+  const [refreshStatus, counts, families, interactionActions, topEntryPages, topSitePages, topImages, externalSources, sessionGeography, imageViewGeography, entrySourceRawMix, entrySourceTrustedMix, entrySourceQualifiedMix, pageKeyCoverageMix, pageKeyTransitionMix, pageKeyActorStats, firstImageHopMix, firstImagePathMix, suspiciousSessionGeography, suspiciousDatacenterSessionGeography, internalReentryMix] = await Promise.all([
     getV2RefreshStatus(env),
     env.DB.prepare(
       `WITH suspicious_internal_shallow AS (
@@ -694,7 +708,7 @@ export async function getV2CanonicalSummary(env, { windowKey = 'today', excludeI
            WHEN referrer_host LIKE '%bing.%' THEN 'Bing'
            WHEN referrer_host LIKE '%pinterest.%' THEN 'Pinterest'
            WHEN referrer_host LIKE '%t.co%' OR referrer_host LIKE '%twitter.%' OR referrer_host LIKE '%x.com%' THEN 'Twitter/X'
-           WHEN referrer_host LIKE '%facebook.%' OR referrer_host LIKE '%fb.%' THEN 'Facebook'
+           WHEN ${facebookHostCaseCondition} THEN 'Facebook'
            WHEN referrer_host LIKE '%www.k4studios.com%' OR referrer_host = 'k4studios.com' THEN 'K4 Internal'
            ELSE referrer_host
          END AS source_label,
@@ -755,6 +769,29 @@ export async function getV2CanonicalSummary(env, { windowKey = 'today', excludeI
          SELECT
            session_id,
            ${sourceLabelExpression} AS source_label,
+           COALESCE(referrer_path, '') AS referrer_path,
+           ROW_NUMBER() OVER (PARTITION BY session_id ORDER BY occurred_at ASC, id ASC) AS rn
+         FROM canonical_events_v2
+         WHERE ${windowClause}
+           AND canonical_page_load = 1
+           AND session_id IS NOT NULL
+           AND is_bot = 0
+       )
+      SELECT source_label, COUNT(*) AS sessions
+      FROM landing_rows
+      WHERE rn = 1
+        AND lower(COALESCE(source_label, '')) <> 'k4 internal'
+        AND lower(COALESCE(source_label, '')) <> 'internal test'
+       GROUP BY source_label
+       ORDER BY sessions DESC, source_label ASC
+       LIMIT 10`
+    ).all(),
+    env.DB.prepare(
+      `WITH landing_rows AS (
+         SELECT
+           session_id,
+           ${sourceLabelExpression} AS source_label,
+           COALESCE(referrer_path, '') AS referrer_path,
            ROW_NUMBER() OVER (PARTITION BY session_id ORDER BY occurred_at ASC, id ASC) AS rn
          FROM canonical_events_v2
          WHERE ${windowClause}
@@ -776,6 +813,125 @@ export async function getV2CanonicalSummary(env, { windowKey = 'today', excludeI
        ORDER BY sessions DESC, source_label ASC
        LIMIT 10`
     ).all(),
+    env.DB.prepare(
+      `WITH landing_rows AS (
+         SELECT
+           session_id,
+           ${sourceLabelExpression} AS source_label,
+           COALESCE(referrer_path, '') AS referrer_path,
+           ROW_NUMBER() OVER (PARTITION BY session_id ORDER BY occurred_at ASC, id ASC) AS rn
+         FROM canonical_events_v2
+         WHERE ${windowClause}
+           AND canonical_page_load = 1
+           AND session_id IS NOT NULL
+           AND is_bot = 0
+           AND session_id NOT IN (${suspiciousInternalShallowSessionSubquery})
+             AND session_id NOT IN (${suspiciousDatacenterSessionSubquery})
+             AND session_id NOT IN (${internalTestSessionSubquery})
+             ${viewerExcludedSessionSubquery ? `AND session_id NOT IN (${viewerExcludedSessionSubquery})` : ''}
+       )
+      SELECT COALESCE(sf.source_family, landing_rows.source_label) AS source_label, COUNT(*) AS sessions
+      FROM landing_rows
+      JOIN session_facts_v2 sf ON sf.session_id = landing_rows.session_id
+      WHERE rn = 1
+        AND lower(COALESCE(sf.source_family, landing_rows.source_label, '')) <> 'k4 internal'
+        AND lower(COALESCE(sf.source_family, landing_rows.source_label, '')) <> 'internal test'
+        AND ${qualifiedExternalSessionPredicate}
+        AND ${facebookQualifiedPredicate}
+       GROUP BY source_label
+       ORDER BY sessions DESC, source_label ASC
+       LIMIT 10`
+    ).all(),
+    env.DB.prepare(
+      `WITH keyed AS (
+         SELECT
+           page_key,
+           COALESCE(NULLIF(session_id, ''), NULLIF(session_id_v2, ''), NULLIF(visitor_id, '')) AS actor_id
+         FROM raw_events
+         WHERE ${rawWindowClause}
+           AND page_key IS NOT NULL
+           ${rawViewerExclusionClause}
+       )
+       SELECT
+         page_key,
+         COUNT(*) AS events,
+         COUNT(DISTINCT actor_id) AS actors
+       FROM keyed
+       GROUP BY page_key
+       ORDER BY events DESC, page_key ASC
+       LIMIT 25`
+    ).all(),
+    env.DB.prepare(
+      `WITH keyed AS (
+         SELECT
+           COALESCE(NULLIF(session_id, ''), NULLIF(session_id_v2, ''), NULLIF(visitor_id, '')) AS actor_id,
+           ts,
+           id,
+           page_key
+         FROM raw_events
+         WHERE ${rawWindowClause}
+           AND page_key IS NOT NULL
+           ${rawViewerExclusionClause}
+       ),
+       first_hits AS (
+         SELECT
+           actor_id,
+           page_key,
+           MIN(ts) AS first_ts,
+           MIN(id) AS first_id
+         FROM keyed
+         WHERE actor_id IS NOT NULL
+         GROUP BY actor_id, page_key
+       ),
+       ordered_paths AS (
+         SELECT
+           actor_id,
+           page_key,
+           ROW_NUMBER() OVER (PARTITION BY actor_id ORDER BY first_ts ASC, first_id ASC) AS step_no
+         FROM first_hits
+       ),
+       transitions AS (
+         SELECT
+           actor_id,
+           LAG(page_key) OVER (PARTITION BY actor_id ORDER BY step_no ASC) AS from_key,
+           page_key AS to_key
+         FROM ordered_paths
+       )
+       SELECT
+         from_key,
+         to_key,
+         COUNT(*) AS transitions
+       FROM transitions
+       WHERE from_key IS NOT NULL
+         AND to_key IS NOT NULL
+         AND from_key <> to_key
+       GROUP BY from_key, to_key
+       ORDER BY transitions DESC, from_key ASC, to_key ASC
+       LIMIT 25`
+    ).all(),
+    env.DB.prepare(
+      `WITH keyed AS (
+         SELECT
+           COALESCE(NULLIF(session_id, ''), NULLIF(session_id_v2, ''), NULLIF(visitor_id, '')) AS actor_id,
+           page_key
+         FROM raw_events
+         WHERE ${rawWindowClause}
+           AND page_key IS NOT NULL
+           ${rawViewerExclusionClause}
+       ),
+       actor_stats AS (
+         SELECT
+           actor_id,
+           COUNT(DISTINCT page_key) AS distinct_keys
+         FROM keyed
+         WHERE actor_id IS NOT NULL
+         GROUP BY actor_id
+       )
+       SELECT
+         COUNT(*) AS actors,
+         SUM(CASE WHEN distinct_keys >= 2 THEN 1 ELSE 0 END) AS actors_with_2plus_keys
+       FROM actor_stats`
+    ).first(),
     env.DB.prepare(
       `WITH trusted_page_loads AS (
          SELECT
@@ -962,7 +1118,13 @@ export async function getV2CanonicalSummary(env, { windowKey = 'today', excludeI
     externalSources: externalSources?.results || [],
     sessionGeography: sessionGeography?.results || [],
     imageViewGeography: imageViewGeography?.results || [],
-    entrySourceMix: entrySourceMix?.results || [],
+    entrySourceRawMix: entrySourceRawMix?.results || [],
+    entrySourceTrustedMix: entrySourceTrustedMix?.results || [],
+    entrySourceQualifiedMix: entrySourceQualifiedMix?.results || [],
+    entrySourceMix: entrySourceQualifiedMix?.results || [],
+    pageKeyCoverageMix: pageKeyCoverageMix?.results || [],
+    pageKeyTransitionMix: pageKeyTransitionMix?.results || [],
+    pageKeyActorStats: pageKeyActorStats || null,
     firstImageHopMix: firstImageHopMix?.results || [],
     firstImagePathMix: firstImagePathMix?.results || [],
     suspiciousSessionGeography: suspiciousSessionGeography?.results || [],

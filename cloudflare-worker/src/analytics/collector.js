@@ -144,6 +144,58 @@ function normalizeClientVisitorId(raw) {
   return /^[A-Za-z0-9._:-]+$/.test(value) ? value : null;
 }
 
+function normalizePagePathForKey(path) {
+  if (typeof path !== 'string') return null;
+  const trimmed = path.trim();
+  if (!trimmed) return null;
+  const normalized = trimmed.startsWith('/') ? trimmed : ('/' + trimmed);
+  return normalized.length > 1 ? normalized.replace(/\/+$/, '') : '/';
+}
+
+function resolvePilotPageKey(path) {
+  const normalized = normalizePagePathForKey(path);
+  if (!normalized) return null;
+
+  if (normalized === '/') return 'home';
+  if (normalized === '/Galleries/Painterly-Fine-Art-Photography') return 'painterly_main';
+  if (normalized === '/Galleries/Painterly-Fine-Art-Photography/Facing-History') return 'facing_history';
+  if (normalized === '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West') return 'wild_west';
+  if (
+    normalized === '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War'
+    || normalized === '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits'
+  ) {
+    return 'civil_war';
+  }
+
+  if (normalized === '/Other/Shows' || normalized === '/Other/Show') {
+    return 'shows_index';
+  }
+
+  const showPathToKey = {
+    '/Other/Show/Lore-and-Legacy-Show': 'show_lore_legacy',
+    '/Other/Show/Lore-and-Legacy-Chapter-1': 'show_lore_legacy_ch1',
+    '/Other/Show/Lore-and-Legacy-Chapter-2': 'show_lore_legacy_ch2',
+    '/Other/Show/Lore-and-Legacy-Chapter-3': 'show_lore_legacy_ch3',
+    '/Other/Show/The-Cost-of-the-Journey': 'show_cost_journey',
+    '/Other/Show/Sagebrush-Grit-and-Grace': 'show_sagebrush_grit_grace',
+    '/Other/Show/Outlaws-and-Bandits': 'show_outlaws_bandits',
+    '/Other/Show/Western-Living-History': 'show_western_living_history'
+  };
+
+  if (Object.prototype.hasOwnProperty.call(showPathToKey, normalized)) {
+    return showPathToKey[normalized];
+  }
+
+  return null;
+}
+
+function normalizePageKey(raw) {
+  if (typeof raw !== 'string') return null;
+  const value = raw.trim().toLowerCase();
+  if (!value || value.length > 64) return null;
+  return /^[a-z0-9_:-]+$/.test(value) ? value : null;
+}
+
 function getAllowedOrigin(request) {
   const origin = request?.headers?.get?.('Origin') || null;
   if (!origin) return 'https://www.k4studios.com';
@@ -215,6 +267,7 @@ export async function handleTrackRequest(request, env, ctx) {
       gallery_id = null,
       image_id = null,
       source_layer = null,
+      page_key = null,
       page_type = null,
       theme = null,
       referrer: clientReferrer = null,
@@ -226,6 +279,7 @@ export async function handleTrackRequest(request, env, ctx) {
     const normalizedPagePath = (typeof page_path === 'string' && page_path)
       ? (page_path.startsWith('/') ? page_path : ('/' + page_path))
       : null;
+    const normalizedPageKey = normalizePageKey(page_key) || resolvePilotPageKey(normalizedPagePath);
 
     // Event is required
     if (!event) {
@@ -323,6 +377,7 @@ export async function handleTrackRequest(request, env, ctx) {
       source: 'js',
       visitorId,
       sourceLayer: (typeof source_layer === 'string' && source_layer) ? source_layer : null,
+      pageKey: normalizedPageKey,
       // Use the client-reported page_path for easier SQL grouping.
       page: normalizedPagePath || null,
       // Preserve the best external referrer (edge cookie beats client hint).

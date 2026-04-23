@@ -49,7 +49,7 @@ export default function RebuiltScrollGrid({
 }) {
   const fireThemeStoryPixel = () => {
     emitActionPixel('theme_lore_legacy_audio_click', null, {
-      galleryId: '/Other/Stories/Lore-and-Legacy-Show',
+      galleryId: '/Other/Show/Lore-and-Legacy-Show',
       sourceLayer: 'theme_lore_legacy_audio_click_pixel_v1',
       pageType: 'gallery',
       theme: themeName ? String(themeName) : 'lore-and-legacy',

@@ -114,6 +114,18 @@ export function calculateRiskScore(stats) {
 export function normalizeReferrer(referer) {
   if (!referer) return "unknown";
   const lower = referer.toLowerCase();
+
+  const isFacebookHost = (value) => {
+    try {
+      const host = new URL(value).hostname.toLowerCase();
+      return host === 'facebook.com'
+        || host.endsWith('.facebook.com')
+        || host === 'fb.com'
+        || host.endsWith('.fb.com');
+    } catch (_) {
+      return false;
+    }
+  };
   
   // Handle already-normalized values (from cookie)
   if (lower === "google" || lower === "bing" || lower === "facebook" || 
@@ -126,7 +138,7 @@ export function normalizeReferrer(referer) {
   // Normalize full URLs
   if (lower.includes("google.") || lower.includes("google/")) return "google";
   if (lower.includes("bing.")) return "bing";
-  if (lower.includes("facebook.") || lower.includes("fb.")) return "facebook";
+  if (isFacebookHost(referer)) return "facebook";
   if (lower.includes("instagram.")) return "instagram";
   if (lower.includes("twitter.") || lower.includes("x.com") || lower.includes("t.co/")) return "twitter";
   if (lower.includes("chatgpt.com") || lower.includes("chat.openai.com")) return "chatgpt";

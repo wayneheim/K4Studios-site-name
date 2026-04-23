@@ -312,6 +312,7 @@ async function rebuildSessionFactsV2(env) {
          MAX(visitor_id) AS visitor_id,
          MIN(occurred_at) AS first_seen_at,
          MAX(occurred_at) AS last_seen_at,
+         CAST((julianday(MAX(occurred_at)) - julianday(MIN(occurred_at))) * 86400 AS INTEGER) AS duration_seconds,
          SUM(CASE WHEN canonical_page_load = 1 THEN 1 ELSE 0 END) AS canonical_page_loads,
          COUNT(*) AS event_count,
          SUM(CASE WHEN event_family IN ('image_view', 'image_nav', 'grid_action', 'gallery_action', 'story_action', 'guide_action', 'engagement_hint', 'buy_click', 'order_submit') THEN 1 ELSE 0 END) AS engaged_event_count,
@@ -437,7 +438,23 @@ async function rebuildSessionFactsV2(env) {
          WHEN lower(landing.referrer_host) LIKE '%bing.%' THEN 'Bing'
          WHEN lower(landing.referrer_host) LIKE '%pinterest.%' THEN 'Pinterest'
          WHEN lower(landing.referrer_host) LIKE '%t.co%' OR lower(landing.referrer_host) LIKE '%twitter.%' OR lower(landing.referrer_host) LIKE '%x.com%' THEN 'Twitter/X'
-         WHEN lower(landing.referrer_host) LIKE '%facebook.%' OR lower(landing.referrer_host) LIKE '%fb.%' THEN 'Facebook'
+         WHEN (
+           lower(landing.referrer_host) = 'facebook.com'
+           OR lower(landing.referrer_host) LIKE '%.facebook.com'
+           OR lower(landing.referrer_host) = 'fb.com'
+           OR lower(landing.referrer_host) LIKE '%.fb.com'
+         ) AND (
+           COALESCE(lower(landing.referrer_path), '') LIKE '%fbclid=%'
+           OR aggregated.engaged_event_count > 0
+           OR aggregated.event_count >= 2
+           OR aggregated.duration_seconds >= 5
+         ) THEN 'Facebook'
+         WHEN (
+           lower(landing.referrer_host) = 'facebook.com'
+           OR lower(landing.referrer_host) LIKE '%.facebook.com'
+           OR lower(landing.referrer_host) = 'fb.com'
+           OR lower(landing.referrer_host) LIKE '%.fb.com'
+         ) THEN 'Unqualified Social'
          WHEN lower(landing.referrer_host) LIKE '%instagram.%' THEN 'Instagram'
          WHEN lower(landing.referrer_host) LIKE '%k4studios.com%' THEN 'K4 Internal'
          ELSE landing.referrer_host
@@ -446,8 +463,10 @@ async function rebuildSessionFactsV2(env) {
          'has_page_load', CASE WHEN aggregated.canonical_page_loads > 0 THEN 1 ELSE 0 END,
          'has_engagement', CASE WHEN aggregated.engaged_event_count > 0 THEN 1 ELSE 0 END,
          'non_image_engagement_count', aggregated.non_image_engagement_count,
+         'duration_seconds', aggregated.duration_seconds,
          'referrer_host', landing.referrer_host,
          'referrer_path', landing.referrer_path,
+         'has_fbclid', CASE WHEN COALESCE(lower(landing.referrer_path), '') LIKE '%fbclid=%' THEN 1 ELSE 0 END,
          'country', json_extract(landing.metadata_json, '$.country'),
          'region', json_extract(landing.metadata_json, '$.region'),
          'city', json_extract(landing.metadata_json, '$.city'),

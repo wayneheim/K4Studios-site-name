@@ -1268,7 +1268,7 @@ if (/FBAN|FBAV|Messenger|Instagram/i.test(navigator.userAgent) && !showSlideshow
 {[
   { rotate: -15, x: -80, y: 8, href: "/", label: "HOME" },
   { rotate: 16, x: 130, y: 10, href: "/Contact/", label: "@" },
-  { rotate: 14, x: 190, y: 80, href: "/Other/Stories", label: "INDEX" },
+  { rotate: 14, x: 190, y: 80, href: "/Other/Show", label: "INDEX" },
 ].map((card, i) => (
   <motion.a
     key={`portal-${i}`}

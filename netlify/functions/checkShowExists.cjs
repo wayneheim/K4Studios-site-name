@@ -6,7 +6,7 @@ export async function handler(event) {
     const { filename } = JSON.parse(event.body || "{}");
     if (!filename) return { statusCode: 400, body: "Filename required" };
 
-    const filePath = path.join(process.cwd(), "src/data/Other/Stories", filename);
+    const filePath = path.join(process.cwd(), "src/data/Other/Show", filename);
     const exists = existsSync(filePath);
 
     return { statusCode: 200, body: JSON.stringify({ exists }) };

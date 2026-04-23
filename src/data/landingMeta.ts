@@ -175,7 +175,7 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
     twitterImage: "/images/K4-Stories logo1b.webp",
   },
 
-  "/Other/Stories": {
+  "/Other/Show": {
     ogTitle: "K4 Picture Show Stories – Cinematic Visual Narratives by Wayne Heim",
     ogDescription:
       "Curated visual stories and themed exhibitions featuring Wayne Heim's painterly Western photography—immersive slideshows with narrative depth.",

@@ -77,9 +77,9 @@ function getPriority(urlPath) {
   if (urlPath === '/wayne-heim-western-fine-art-photography') return 0.9;
   
   if (urlPath === '/Other/One-Image-Movie') return 0.9;
-  if (urlPath === '/Other/Stories') return 0.9;
+  if (urlPath === '/Other/Show') return 0.9;
   if (urlPath.startsWith('/Galleries/Painterly-Fine-Art-Photography')) return 0.8;
-  if (urlPath.startsWith('/Other/Stories/')) return 0.7;
+  if (urlPath.startsWith('/Other/Show/')) return 0.7;
   if (urlPath.startsWith('/Galleries/')) return 0.6;
   if (urlPath.startsWith('/Other/')) return 0.6;
   
@@ -93,8 +93,8 @@ function getPriority(urlPath) {
 // Change frequency hints based on content type
 function getChangeFreq(urlPath) {
   if (urlPath === '/') return 'weekly';
-  if (urlPath === '/Other/Stories') return 'weekly';
-  if (urlPath.startsWith('/Other/Stories/')) return 'monthly';
+  if (urlPath === '/Other/Show') return 'weekly';
+  if (urlPath.startsWith('/Other/Show/')) return 'monthly';
   if (urlPath === '/Other/One-Image-Movie') return 'monthly';
   if (urlPath.startsWith('/Galleries/')) return 'monthly';
   if (urlPath === '/Contact') return 'yearly';

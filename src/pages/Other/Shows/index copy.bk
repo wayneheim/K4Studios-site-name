@@ -188,7 +188,7 @@ meta.twitterCard = "summary_large_image";
             {visibleShows.map(show => (
               <article class="show-block mb-10">
                 <div class="flex flex-col md:flex-row md:items-start gap-4">
-                  <a href={`/Other/Stories/${show.slug}`} aria-label={show.title} class="flex-shrink-0">
+                  <a href={`/Other/Show/${show.slug}`} aria-label={show.title} class="flex-shrink-0">
                     <img
                       src={normalizeImageSrc(show.cover, 's')}
                       alt={show.alt || show.title}
@@ -199,11 +199,11 @@ meta.twitterCard = "summary_large_image";
                   </a>
                   <div class="flex-1 min-w-0">
                     <h2 class="text-xl font-bold mb-2">
-                      <a href={`/Other/Stories/${show.slug}`}>{show.title}</a>
+                      <a href={`/Other/Show/${show.slug}`}>{show.title}</a>
                     </h2>
                     <p class="text-sm text-gray-600 mb-2">{show.date}</p>
                     <p class="mb-4">{show.excerpt}</p>
-                    <a href={`/Other/Stories/${show.slug}`} class="underline text-blue-700">View Show →</a>
+                    <a href={`/Other/Show/${show.slug}`} class="underline text-blue-700">View Show →</a>
                   </div>
                 </div>
               </article>
@@ -216,7 +216,7 @@ meta.twitterCard = "summary_large_image";
               <ul class="space-y-2">
                 {visibleShows.map(show => (
                   <li>
-                    <a href={`/Other/Stories/${show.slug}`} class="block hover:text-red-600">
+                    <a href={`/Other/Show/${show.slug}`} class="block hover:text-red-600">
                       {show.title}
                     </a>
                     <span class="block text-xs text-gray-500">{show.date}</span>

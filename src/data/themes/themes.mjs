@@ -175,7 +175,7 @@ export const themes = [
     "introFollow": "Now step back into and explore each One-Image Movie.",
     "description": "This collection brings together the pieces featured at the Great Western Art Show-each one part of a larger narrative, each one unfinished until you step inside it.",
     "transitionLine": "Brows the images below and feel the emotion and experience each story.",
-    "storyUrl": "/Other/Stories/Lore-and-Legacy-Show",
+    "storyUrl": "/Other/Show/Lore-and-Legacy-Show",
     "storyCta": "Take a Narrated Tour",
     "imageCountLabel": "33 images in this collection",
     "visible": true,

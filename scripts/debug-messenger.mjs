@@ -2,7 +2,7 @@ import { spawn } from 'child_process';
 import { chromium } from 'playwright';
 
 const port = 4325;
-const url = `http://127.0.0.1:${port}/Other/Stories/Outlaws-and-Bandits`;
+const url = `http://127.0.0.1:${port}/Other/Show/Outlaws-and-Bandits`;
 const messengerUA = 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 [FBAN/MessengerForiOS;FBAV/434.1.0.29.120;FBBV/524541088;FBDV/iPhone14,3;FBMD/iPhone;FBSN/iOS;FBSV/16.6;FBSS/3;FBCR/;FBID/phone;FBLC/en_US;FBOP/5;FBIA/1]';
 
 function startAstro() {

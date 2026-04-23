@@ -286,9 +286,9 @@ https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By
 https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-fGKx3B6
 https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-jpptgFS
 https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-tMP9Lz2
-https://www.k4studios.com/Other/Stories/Outlaws-and-Bandits
+https://www.k4studios.com/Other/Show/Outlaws-and-Bandits
 https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-8X7hMPk
-https://www.k4studios.com/Other/Stories
+https://www.k4studios.com/Other/Show
 https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-7DDFpHQ
 https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-xqZwcZh
 https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-KgkW54w

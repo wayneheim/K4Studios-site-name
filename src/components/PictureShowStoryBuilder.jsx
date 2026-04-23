@@ -293,7 +293,7 @@ const structuredDataJSON = getStructuredData({
   data: {
     title: storyMeta.showTitle,
     description: storyMeta.description,
-    url: \`https://www.k4studios.com/Other/Stories/${safeSlug}\`,
+    url: \`https://www.k4studios.com/Other/Show/${safeSlug}\`,
     keywords: storyMeta.keywords,
     copyrightNotice: "© Wayne Heim, k4studios.com. All rights reserved."
   },
@@ -320,7 +320,7 @@ const structuredDataJSON = getStructuredData({
   <PictureShowBase
     client:load
     rawData={storyData}
-    basePath="/Other/Stories/${safeSlug}"
+    basePath="/Other/Show/${safeSlug}"
     titleBase={storyMeta.showTitle}
     globalAudioSrc={storyMeta.globalAudioSrc || ""}
     globalAudioMode={storyMeta.globalAudioMode || "score"}
@@ -1214,7 +1214,7 @@ export default function PictureShowStoryBuilder() {
 
                 if (data.exists) {
                   const ok = window.confirm(
-                    `⚠️ A show named "${filename}" already exists in /src/data/Other/Stories.\n\nDo you want to overwrite it?`
+                    `⚠️ A show named "${filename}" already exists in /src/data/Other/Show.\n\nDo you want to overwrite it?`
                   );
                   if (!ok) {
                     alert("Please choose a different title for your show.");

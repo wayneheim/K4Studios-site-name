@@ -48,11 +48,15 @@ function getReferrerSource(referer) {
     return 'Other';
   }
   if (host.endsWith('k4studios.com')) return null; // internal — no external source
+  const isFacebookHost = host === 'facebook.com'
+    || host.endsWith('.facebook.com')
+    || host === 'fb.com'
+    || host.endsWith('.fb.com');
   if (host.includes('googleusercontent')) return 'Google Images';
   if (host.includes('google')) return 'Google Search';
   if (host.includes('bing')) return 'Bing';
   if (host === 't.co' || host.includes('twitter') || host.includes('x.com')) return 'Twitter/X';
-  if (host.includes('facebook') || host.includes('fb.com')) return 'Facebook';
+  if (isFacebookHost) return 'Facebook';
   if (host.includes('pinterest')) return 'Pinterest';
   if (host.includes('duckduckgo')) return 'DuckDuckGo';
   if (host.includes('yandex')) return 'Yandex';
@@ -105,11 +109,15 @@ function classifyForEntryRef(referer) {
     return 'unattributed';
   }
   if (host.endsWith('k4studios.com')) return 'unattributed';
+  const isFacebookHost = host === 'facebook.com'
+    || host.endsWith('.facebook.com')
+    || host === 'fb.com'
+    || host.endsWith('.fb.com');
   if (host.includes('googleusercontent') || host.includes('images.google')) return 'google_images';
   if (host.includes('google')) return 'google_search';
   if (host.includes('bing')) return 'bing_search';
   if (host === 't.co' || host.includes('twitter') || host.includes('x.com')) return 'twitter';
-  if (host.includes('facebook') || host.includes('fb.com')) return 'facebook';
+  if (isFacebookHost) return 'facebook';
   if (host.includes('pinterest')) return 'pinterest';
   if (host.includes('duckduckgo')) return 'duckduckgo';
   if (host.includes('chatgpt') || host.includes('openai')) return 'chatgpt';
@@ -2177,7 +2185,7 @@ export async function getTopPages(env, filters) {
           CASE
             WHEN SUBSTR(COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')), 1, 1) = '/' THEN COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))
             ELSE '/' || COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))
-          END AS page_path,
+          END AS raw_page_path,
           e.ts,
           CASE
             WHEN e.event_type IN ('page_pixel', 'edge_page') THEN 'P'
@@ -2206,6 +2214,18 @@ export async function getTopPages(env, filters) {
             AND COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')) NOT LIKE '/i-%/%'
           )
       ),
+      normalized_filtered_events AS (
+        SELECT
+          session_key,
+          CASE
+            WHEN LOWER(raw_page_path) = '/other/stories' THEN '/Other/Shows'
+            WHEN LOWER(raw_page_path) LIKE '/other/stories/%' THEN '/Other/Show/' || SUBSTR(raw_page_path, 16)
+            ELSE raw_page_path
+          END AS page_path,
+          e.ts,
+          source_kind
+        FROM filtered_events e
+      ),
       not_found_hits AS (
         SELECT DISTINCT
           COALESCE(
@@ -2217,7 +2237,7 @@ export async function getTopPages(env, filters) {
           CASE
             WHEN SUBSTR(COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')), 1, 1) = '/' THEN COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))
             ELSE '/' || COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))
-          END AS page_path
+          END AS raw_page_path
         FROM classified_events e
         WHERE ${where}
           ${qualify(ipClause)}
@@ -2227,6 +2247,16 @@ export async function getTopPages(env, filters) {
           AND COALESCE(e.is_bot, 0) = 0
           AND e.event_type IN ('404', '410', 'smart404_redirect', 'smart404_gone', 'smart404_fallback', 'smart404_homepage')
           AND COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')) IS NOT NULL
+      ),
+      normalized_not_found_hits AS (
+        SELECT DISTINCT
+          session_key,
+          CASE
+            WHEN LOWER(raw_page_path) = '/other/stories' THEN '/Other/Shows'
+            WHEN LOWER(raw_page_path) LIKE '/other/stories/%' THEN '/Other/Show/' || SUBSTR(raw_page_path, 16)
+            ELSE raw_page_path
+          END AS page_path
+        FROM not_found_hits
       )
       SELECT
         fe.page_path,
@@ -2235,10 +2265,10 @@ export async function getTopPages(env, filters) {
         COUNT(DISTINCT fe.session_key) AS sessions,
         COUNT(DISTINCT CASE WHEN fe.source_kind = 'P' THEN fe.session_key END) AS pixel_sessions,
         COUNT(DISTINCT CASE WHEN fe.source_kind = 'J' THEN fe.session_key END) AS js_sessions
-      FROM filtered_events fe
+      FROM normalized_filtered_events fe
       WHERE NOT EXISTS (
         SELECT 1
-        FROM not_found_hits nf
+        FROM normalized_not_found_hits nf
         WHERE nf.session_key = fe.session_key
           AND nf.page_path = fe.page_path
       )

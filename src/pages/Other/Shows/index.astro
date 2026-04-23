@@ -63,7 +63,7 @@ const showZoomBySlug: Record<string, number> = {
   // 1 = no zoom, 1.08 = slight zoom in, 1.15 = stronger zoom in.
   "Lore-and-Legacy-Show": 1.2,
   "Lore-and-Legacy-Chapter-1": 1.1,
-  "Lore-and-Legacy-Chapter-2": 1.1,
+  "Lore-and-Legacy-Chapter-2": 1.14,
   "Lore-and-Legacy-Chapter-3": 1.11,
   "The-Cost-of-the-Journey": 1,
   "Sagebrush-Grit-and-Grace": 1,
@@ -178,10 +178,10 @@ meta.twitterCard = "summary_large_image";
         </div>
 
         <div class="hero-narrative">
-          <h1 class="hero-title">Picture Shows</h1>
+          <h1 class="hero-title">K4 Picture Shows</h1>
           <h2 class="hero-subtitle">
-            Every image - a story unfinished.<br />
-            Together… they reveal what the legends left out.
+            <span class="hero-subtitle-line">Every image - a story unfinished.</span>
+            <span class="hero-subtitle-line">Explore and see what the legends left out.</span>
           </h2>
           <div class="hero-copy">
             
@@ -216,7 +216,7 @@ meta.twitterCard = "summary_large_image";
                   <span class="face-index">{String(showIndex + 1).padStart(2, '0')}</span>
                 </div>
 
-                <a href={`/Other/Stories/${show.slug}`} aria-label={show.title} class="show-thumb-link">
+                <a href={`/Other/Show/${show.slug}`} aria-label={show.title} class="show-thumb-link" data-show-slug={show.slug}>
                   <img
                     src={normalizeImageSrc(show.cover, 'm')}
                     alt={show.alt || show.title}
@@ -227,18 +227,18 @@ meta.twitterCard = "summary_large_image";
                 </a>
 
                 <h3 class="face-title">
-                  <a href={`/Other/Stories/${show.slug}`}>{show.title}</a>
+                  <a href={`/Other/Show/${show.slug}`} data-show-slug={show.slug}>{show.title}</a>
                 </h3>
                 <p class="face-date">{show.date}</p>
                 <p class="face-excerpt">{show.excerpt}</p>
 
                 <div class="face-cta-row">
-                  <a href={`/Other/Stories/${show.slug}`} class="k4-play-btn" aria-label={`View show ${show.title}`}>
+                  <a href={`/Other/Show/${show.slug}`} class="k4-play-btn" aria-label={`View show ${show.title}`} data-show-slug={show.slug}>
                     <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                       <path d="M8 5v14l11-7z" />
                     </svg>
                   </a>
-                  <a href={`/Other/Stories/${show.slug}`} class="face-cta-text">View Show</a>
+                  <a href={`/Other/Show/${show.slug}`} class="face-cta-text" data-show-slug={show.slug}>View Show</a>
                 </div>
               </div>
             </article>
@@ -263,6 +263,142 @@ meta.twitterCard = "summary_large_image";
         <script type="application/ld+json" set:html={JSON.stringify(itemListStructuredData)}></script>
       )}
       <script type="application/ld+json" set:html={JSON.stringify(breadcrumbStructuredData)}></script>
+
+      <script is:inline>
+        (() => {
+          if (typeof window === "undefined" || typeof document === "undefined") return;
+
+          const FORCED_NAV_DEDUPE_MS = 1500;
+          let lastForcedNavHref = "";
+          let lastForcedNavAt = 0;
+
+          const resolveShowAnchor = (event) => {
+            const target = event?.target;
+            const anchor = target && target.closest ? target.closest("a[data-show-slug]") : null;
+            if (!anchor) return null;
+
+            const slug = anchor.getAttribute("data-show-slug");
+            if (!slug) return null;
+
+            if (anchor.hasAttribute("download")) return null;
+            if (anchor.target && anchor.target !== "_self") return null;
+
+            const href = anchor.getAttribute("href") || `/Other/Show/${slug}`;
+            const absoluteHref = href.startsWith("http") ? href : new URL(href, window.location.origin).toString();
+
+            return {
+              anchor,
+              slug,
+              showPath: `/Other/Show/${slug}`,
+              href: absoluteHref
+            };
+          };
+
+          const emitShowEvent = (eventType, payload, pixelLayer) => {
+            try {
+              if (typeof window.k4track === "function") {
+                window.k4track(eventType, payload);
+              }
+
+              if (typeof window.k4emitActionPixel === "function") {
+                window.k4emitActionPixel(eventType, null, {
+                  galleryId: payload.galleryId,
+                  pageType: payload.pageType,
+                  sourceLayer: pixelLayer,
+                  trigger: payload.trigger
+                });
+              }
+            } catch (_) {
+              // Keep navigation resilient if analytics helper is unavailable.
+            }
+          };
+
+          const onShowClick = (event) => {
+            const resolved = resolveShowAnchor(event);
+            if (!resolved) return;
+
+            // Suppress duplicate synthetic click after a forced touch fallback navigation.
+            if (
+              resolved.href === lastForcedNavHref &&
+              Date.now() - lastForcedNavAt < FORCED_NAV_DEDUPE_MS
+            ) {
+              return;
+            }
+
+            emitShowEvent(
+              "picture_show_click",
+              {
+                targetId: resolved.slug,
+                galleryId: resolved.showPath,
+                pageType: "gallery",
+                trigger: "shows_index_click"
+              },
+              "picture_show_click_pixel_v1"
+            );
+          };
+
+          const onTouchActivation = (event, trigger) => {
+            const resolved = resolveShowAnchor(event);
+            if (!resolved) return;
+            if (event.defaultPrevented) return;
+
+            emitShowEvent(
+              "picture_show_tap",
+              {
+                targetId: resolved.slug,
+                galleryId: resolved.showPath,
+                pageType: "gallery",
+                trigger
+              },
+              "picture_show_tap_pixel_v1"
+            );
+
+            lastForcedNavHref = resolved.href;
+            lastForcedNavAt = Date.now();
+
+            try {
+              event.preventDefault();
+            } catch (_) {
+              // Some event shapes may be non-cancelable; fallback still applies.
+            }
+
+            emitShowEvent(
+              "picture_show_nav_fallback",
+              {
+                targetId: resolved.slug,
+                galleryId: resolved.showPath,
+                pageType: "gallery",
+                trigger: `${trigger}_nav_fallback`
+              },
+              "picture_show_nav_fallback_pixel_v1"
+            );
+
+            window.location.assign(resolved.href);
+          };
+
+          document.addEventListener("click", onShowClick, { capture: true });
+
+          if ("PointerEvent" in window) {
+            document.addEventListener(
+              "pointerup",
+              (event) => {
+                if (event.pointerType !== "touch" && event.pointerType !== "pen") return;
+                onTouchActivation(event, "shows_index_pointerup_touch");
+              },
+              { capture: true }
+            );
+          } else {
+            document.addEventListener(
+              "touchend",
+              (event) => {
+                if (event.touches && event.touches.length > 1) return;
+                onTouchActivation(event, "shows_index_touchend");
+              },
+              { capture: true, passive: false }
+            );
+          }
+        })();
+      </script>
 
       <div class="shows-footer-gap" aria-hidden="true"></div>
     </div>
@@ -307,7 +443,7 @@ meta.twitterCard = "summary_large_image";
         margin: 0;
         color: #5d4a38;
         font-size: 1.08rem;
-        line-height: 1.7;
+        line-height: 1.32;
       }
 
       .shows-cta-lead {
@@ -374,12 +510,20 @@ meta.twitterCard = "summary_large_image";
         font-weight: 600;
       }
 
+      .hero-subtitle-line {
+        display: block;
+      }
+
+      .hero-subtitle-line + .hero-subtitle-line {
+        margin-top: 0.22rem;
+      }
+
       .hero-copy {
         margin-top: 1rem;
         display: grid;
         gap: 0.7rem;
         font-size: 1.02rem;
-        line-height: 1.72;
+        line-height: 1.32;
         color: #4d3a2a;
       }
 
@@ -409,7 +553,7 @@ meta.twitterCard = "summary_large_image";
         flex-direction: column;
         gap: 0.7rem;
         padding: 1.5rem;
-        min-height: 470px;
+        min-height: 456px;
       }
 
       .face-topline {
@@ -445,7 +589,7 @@ meta.twitterCard = "summary_large_image";
         margin: 0.35rem 0 0;
         font-size: 1.15rem;
         text-align: center;
-        line-height: 1.3;
+        line-height: 1.24;
         color: #392919;
         min-height: 2.95rem;
       }
@@ -473,7 +617,7 @@ meta.twitterCard = "summary_large_image";
       .face-excerpt {
         margin: 0;
         color: #4f3f2f;
-        line-height: 1.62;
+        line-height: 1.48;
         flex-grow: 1;
         display: -webkit-box;
         -webkit-line-clamp: 4;
@@ -497,6 +641,13 @@ meta.twitterCard = "summary_large_image";
 
       .face-cta-text:hover {
         color: #9a3d1f;
+      }
+
+      a[data-show-slug],
+      .k4-play-btn,
+      .face-cta-text {
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: rgba(139, 90, 43, 0.22);
       }
 
       @media (min-width: 900px) {
@@ -548,6 +699,57 @@ meta.twitterCard = "summary_large_image";
           max-width: 100% !important;
         }
 
+        .shows-hero {
+          display: grid;
+          grid-template-columns: minmax(108px, 39%) minmax(0, 1fr);
+          align-items: start;
+          column-gap: 0.8rem;
+          row-gap: 0.45rem;
+        }
+
+        .hero-narrative {
+          display: contents;
+        }
+
+        .artifact-panel {
+          grid-column: 1;
+          grid-row: 1;
+          place-items: start;
+          text-align: left;
+          padding-top: 0.1rem;
+        }
+
+        .hero-subtitle {
+          grid-column: 2;
+          grid-row: 1;
+          align-self: center;
+          margin: 0.3rem 0 0;
+          padding-left: 0.62rem;
+          border-left: 2px solid #bca58d;
+          font-size: 1rem;
+          line-height: 1.3;
+          font-style: italic;
+          color: #554131;
+          font-weight: 600;
+        }
+
+        .hero-title {
+          grid-column: 1 / -1;
+          grid-row: 2;
+          margin: 0.28rem 0 0;
+          text-align: center;
+          font-size: clamp(1.85rem, 8.2vw, 2.25rem);
+        }
+
+        .hero-copy {
+          grid-column: 1 / -1;
+          grid-row: 3;
+          margin-top: 0.4rem;
+          gap: 0.55rem;
+          font-size: 0.98rem;
+          line-height: 1.32;
+        }
+
         .shows-divider {
           height: 3px;
           margin: 0.65rem auto 1.25rem;
@@ -559,7 +761,7 @@ meta.twitterCard = "summary_large_image";
 
         .shows-cta p {
           font-size: 1rem;
-          line-height: 1.65;
+          line-height: 1.32;
         }
 
         .shows-cta-lead {
@@ -577,6 +779,14 @@ meta.twitterCard = "summary_large_image";
         .show-face-inner {
           min-height: 0;
           padding: 1.35rem;
+        }
+
+        .face-title {
+          line-height: 1.2;
+        }
+
+        .face-excerpt {
+          line-height: 1.4;
         }
 
         img {
@@ -600,7 +810,7 @@ meta.twitterCard = "summary_large_image";
         }
 
         .artifact-logo {
-          width: min(59.2%, 208px);
+          width: min(100%, 170px);
         }
       }
     </style>

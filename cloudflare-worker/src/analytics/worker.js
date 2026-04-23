@@ -410,11 +410,12 @@ function getReferrerSource(referer) {
     return "Other";
   }
   if (host.endsWith("k4studios.com")) return null;
+  const isFacebookHost = host === "facebook.com" || host.endsWith(".facebook.com") || host === "fb.com" || host.endsWith(".fb.com");
   if (host.includes("googleusercontent")) return "Google Images";
   if (host.includes("google")) return "Google Search";
   if (host.includes("bing")) return "Bing";
   if (host === "t.co" || host.includes("twitter") || host.includes("x.com")) return "Twitter/X";
-  if (host.includes("facebook") || host.includes("fb.com")) return "Facebook";
+  if (isFacebookHost) return "Facebook";
   if (host.includes("pinterest")) return "Pinterest";
   if (host.includes("duckduckgo")) return "DuckDuckGo";
   if (host.includes("yandex")) return "Yandex";
@@ -472,11 +473,12 @@ function classifyForEntryRef(referer) {
     return "unattributed";
   }
   if (host.endsWith("k4studios.com")) return "unattributed";
+  const isFacebookHost = host === "facebook.com" || host.endsWith(".facebook.com") || host === "fb.com" || host.endsWith(".fb.com");
   if (host.includes("googleusercontent") || host.includes("images.google")) return "google_images";
   if (host.includes("google")) return "google_search";
   if (host.includes("bing")) return "bing_search";
   if (host === "t.co" || host.includes("twitter") || host.includes("x.com")) return "twitter";
-  if (host.includes("facebook") || host.includes("fb.com")) return "facebook";
+  if (isFacebookHost) return "facebook";
   if (host.includes("pinterest")) return "pinterest";
   if (host.includes("duckduckgo")) return "duckduckgo";
   if (host.includes("chatgpt") || host.includes("openai")) return "chatgpt";
@@ -3000,7 +3002,7 @@ async function getTopPages(env, filters) {
           CASE
             WHEN SUBSTR(COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')), 1, 1) = '/' THEN COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))
             ELSE '/' || COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))
-          END AS page_path,
+          END AS raw_page_path,
           e.ts,
           CASE
             WHEN e.event_type IN ('page_pixel', 'edge_page') THEN 'P'
@@ -3029,6 +3031,18 @@ async function getTopPages(env, filters) {
             AND COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')) NOT LIKE '/i-%/%'
           )
       ),
+      normalized_filtered_events AS (
+        SELECT
+          session_key,
+          CASE
+            WHEN LOWER(raw_page_path) = '/other/stories' THEN '/Other/Shows'
+            WHEN LOWER(raw_page_path) LIKE '/other/stories/%' THEN '/Other/Show/' || SUBSTR(raw_page_path, 16)
+            ELSE raw_page_path
+          END AS page_path,
+          ts,
+          source_kind
+        FROM filtered_events
+      ),
       not_found_hits AS (
         SELECT DISTINCT
           COALESCE(
@@ -3040,7 +3054,7 @@ async function getTopPages(env, filters) {
           CASE
             WHEN SUBSTR(COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')), 1, 1) = '/' THEN COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))
             ELSE '/' || COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))
-          END AS page_path
+          END AS raw_page_path
         FROM classified_events e
         WHERE ${where}
           ${qualify(ipClause)}
@@ -3051,13 +3065,23 @@ async function getTopPages(env, filters) {
           AND e.event_type IN ('404', '410', 'smart404_redirect', 'smart404_gone', 'smart404_fallback', 'smart404_homepage')
           AND COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')) IS NOT NULL
       ),
+      normalized_not_found_hits AS (
+        SELECT DISTINCT
+          session_key,
+          CASE
+            WHEN LOWER(raw_page_path) = '/other/stories' THEN '/Other/Shows'
+            WHEN LOWER(raw_page_path) LIKE '/other/stories/%' THEN '/Other/Show/' || SUBSTR(raw_page_path, 16)
+            ELSE raw_page_path
+          END AS page_path
+        FROM not_found_hits
+      ),
       not_found_paths AS (
         SELECT DISTINCT
           CASE
             WHEN page_path = '/' THEN '/'
             ELSE RTRIM(page_path, '/')
           END AS page_path_norm
-        FROM not_found_hits
+        FROM normalized_not_found_hits
       )
       SELECT
         fe.page_path,
@@ -3066,10 +3090,10 @@ async function getTopPages(env, filters) {
         COUNT(DISTINCT fe.session_key) AS sessions,
         COUNT(DISTINCT CASE WHEN fe.source_kind = 'P' THEN fe.session_key END) AS pixel_sessions,
         COUNT(DISTINCT CASE WHEN fe.source_kind = 'J' THEN fe.session_key END) AS js_sessions
-      FROM filtered_events fe
+      FROM normalized_filtered_events fe
       WHERE NOT EXISTS (
         SELECT 1
-        FROM not_found_hits nf
+        FROM normalized_not_found_hits nf
         WHERE nf.session_key = fe.session_key
           AND nf.page_path = fe.page_path
       )
@@ -8372,7 +8396,9 @@ function classifyRefSourceSql(refCol = "entry_referer") {
     WHEN ${refCol} LIKE '%bing.%/images%' THEN 'bing_images'
     WHEN ${refCol} LIKE '%bing.%' THEN 'bing_search'
     WHEN ${refCol} LIKE '%pinterest.%' THEN 'pinterest'
-    WHEN ${refCol} LIKE '%facebook.%' OR ${refCol} LIKE '%fb.%' THEN 'facebook'
+    WHEN lower(${refCol}) = 'facebook.com' OR lower(${refCol}) = 'fb.com'
+      OR lower(${refCol}) LIKE '%://facebook.com/%' OR lower(${refCol}) LIKE '%://%.facebook.com/%'
+      OR lower(${refCol}) LIKE '%://fb.com/%' OR lower(${refCol}) LIKE '%://%.fb.com/%' THEN 'facebook'
     WHEN ${refCol} LIKE '%twitter.%' OR ${refCol} LIKE '%t.co/%' OR ${refCol} LIKE '%x.com%' THEN 'twitter'
     WHEN ${refCol} LIKE '%chatgpt.com%' OR ${refCol} LIKE '%chat.openai.com%' THEN 'chatgpt'
     WHEN ${refCol} LIKE '%instagram.%' THEN 'instagram'
@@ -8894,6 +8920,7 @@ async function logRawEvent(env, eventType, targetId, request, extras = {}) {
       sessionId = null,
       source = "proxy",
       page = null,
+      pageKey = null,
       refererOverride = null,
       deltaMs = null,
       visitorId = null,
@@ -8947,6 +8974,7 @@ async function logRawEvent(env, eventType, targetId, request, extras = {}) {
     ];
     const optional = [
       { name: "source_layer", value: sourceLayer },
+      { name: "page_key", value: pageKey },
       { name: "img_size", value: imgSize },
       { name: "ref_type", value: refType },
       { name: "inferred", value: inferred },
@@ -9380,6 +9408,53 @@ function normalizeClientVisitorId(raw) {
 }
 __name(normalizeClientVisitorId, "normalizeClientVisitorId");
 __name2(normalizeClientVisitorId, "normalizeClientVisitorId");
+function normalizePagePathForKey(path) {
+  if (typeof path !== "string") return null;
+  const trimmed = path.trim();
+  if (!trimmed) return null;
+  const normalized = trimmed.startsWith("/") ? trimmed : "/" + trimmed;
+  return normalized.length > 1 ? normalized.replace(/\/+$/, "") : "/";
+}
+__name(normalizePagePathForKey, "normalizePagePathForKey");
+__name2(normalizePagePathForKey, "normalizePagePathForKey");
+function resolvePilotPageKey(path) {
+  const normalized = normalizePagePathForKey(path);
+  if (!normalized) return null;
+  if (normalized === "/") return "home";
+  if (normalized === "/Galleries/Painterly-Fine-Art-Photography") return "painterly_main";
+  if (normalized === "/Galleries/Painterly-Fine-Art-Photography/Facing-History") return "facing_history";
+  if (normalized === "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West") return "wild_west";
+  if (normalized === "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War" || normalized === "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits") {
+    return "civil_war";
+  }
+  if (normalized === "/Other/Shows" || normalized === "/Other/Show") {
+    return "shows_index";
+  }
+  const showPathToKey = {
+    "/Other/Show/Lore-and-Legacy-Show": "show_lore_legacy",
+    "/Other/Show/Lore-and-Legacy-Chapter-1": "show_lore_legacy_ch1",
+    "/Other/Show/Lore-and-Legacy-Chapter-2": "show_lore_legacy_ch2",
+    "/Other/Show/Lore-and-Legacy-Chapter-3": "show_lore_legacy_ch3",
+    "/Other/Show/The-Cost-of-the-Journey": "show_cost_journey",
+    "/Other/Show/Sagebrush-Grit-and-Grace": "show_sagebrush_grit_grace",
+    "/Other/Show/Outlaws-and-Bandits": "show_outlaws_bandits",
+    "/Other/Show/Western-Living-History": "show_western_living_history"
+  };
+  if (Object.prototype.hasOwnProperty.call(showPathToKey, normalized)) {
+    return showPathToKey[normalized];
+  }
+  return null;
+}
+__name(resolvePilotPageKey, "resolvePilotPageKey");
+__name2(resolvePilotPageKey, "resolvePilotPageKey");
+function normalizePageKey(raw) {
+  if (typeof raw !== "string") return null;
+  const value = raw.trim().toLowerCase();
+  if (!value || value.length > 64) return null;
+  return /^[a-z0-9_:-]+$/.test(value) ? value : null;
+}
+__name(normalizePageKey, "normalizePageKey");
+__name2(normalizePageKey, "normalizePageKey");
 function makeSidSetCookieHeader(requestUrl, sessionId) {
   if (!sessionId) return null;
   let hostname = "";
@@ -9467,6 +9542,7 @@ async function handleTrackRequest(request, env, ctx) {
       gallery_id = null,
       image_id = null,
       source_layer = null,
+      page_key = null,
       page_type = null,
       theme = null,
       referrer: clientReferrer = null,
@@ -9477,6 +9553,7 @@ async function handleTrackRequest(request, env, ctx) {
       // Event sequence within session
     } = body;
     const normalizedPagePath = typeof page_path === "string" && page_path ? page_path.startsWith("/") ? page_path : "/" + page_path : null;
+    const normalizedPageKey = normalizePageKey(page_key) || resolvePilotPageKey(normalizedPagePath);
     if (!event) {
       const headers2 = applyNoStore(
         new Headers({ "Content-Type": "text/plain" })
@@ -9557,6 +9634,7 @@ async function handleTrackRequest(request, env, ctx) {
         source: "js",
         visitorId,
         sourceLayer: typeof source_layer === "string" && source_layer ? source_layer : null,
+        pageKey: normalizedPageKey,
         // Use the client-reported page_path for easier SQL grouping.
         page: normalizedPagePath || null,
         // Preserve the best external referrer (edge cookie beats client hint).
@@ -9711,6 +9789,7 @@ async function handleStatePixelRequest(request, env, ctx) {
     const pageType = (url.searchParams.get("pt") || "").trim() || null;
     const theme = (url.searchParams.get("th") || "").trim() || null;
     const trigger = (url.searchParams.get("tr") || "").trim() || (pixelType === "action" ? action : pixelType);
+    const pageKeyParam = normalizePageKey(url.searchParams.get("pk"));
     const pagePathParam = (url.searchParams.get("path") || "").trim() || null;
     const cookieHeader = request.headers.get("cookie") || "";
     const sidCookie = readCookieValue(cookieHeader, "k4_sid");
@@ -9732,6 +9811,7 @@ async function handleStatePixelRequest(request, env, ctx) {
       }
     }
     const pagePath = pagePathParam || normalizedPagePath || null;
+    const resolvedPageKey = pageKeyParam || resolvePilotPageKey(pagePath);
     // Read k4_entry_ref cookie (set by edge proxy) for the real external referrer.
     // The HTTP Referer for pixel requests is always the hosting k4studios page,
     // which is useless for attribution. The cookie captures the true entry source.
@@ -9746,6 +9826,7 @@ async function handleStatePixelRequest(request, env, ctx) {
         source: "pixel",
         visitorId,
         sourceLayer,
+        pageKey: resolvedPageKey,
         page: pagePath,
         refererOverride: storedReferer,
         pageType,

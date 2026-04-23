@@ -11,6 +11,10 @@ https://k4studios.com/(.+)/$  https://www.k4studios.com/$1  301!
 /Other/Blog  /Blog  301
 /Other/Blog/*  /Blog/:splat  301
 
+# Picture Shows canonical path migration
+/Other/Stories  /Other/Show  301!
+/Other/Stories/*  /Other/Show/:splat  301!
+
 # Canonicalize Engrained image URLs to SmugMug-mirroring structure:
 #   /Other/K4-Select-Series/Engrained/Engrained-Series/i-XXXX
 # Collapse duplicated Engrained segments observed in crawler traffic.

@@ -184,7 +184,7 @@ async function saveShowToServer(showArray, showMeta) {
   // --- Build file contents ---
   const mjsContent = `// Auto-generated Picture Show dataset\nexport const storyMeta = ${JSON.stringify(metaWithTimestamp, null, 2)};\nexport const storyData = ${JSON.stringify(slidesWithGhostAudio, null, 2)};`;
 
-  const astroContent = `---\n// Auto-generated Astro page for ${safeSlug}\nimport BaseLayout from \"@/layouts/BaseLayout.astro\";\nimport PictureShowBase from \"@/components/PictureShowBase.jsx\";\nimport { storyMeta, storyData } from \"@/data/Other/Stories/${safeSlug}.mjs\";\n--- \n\n<BaseLayout title={storyMeta.showTitle}>\n  <PictureShowBase\n    client:only=\"react\"\n    rawData={storyData}\n    basePath=\"/Other/Stories/${safeSlug}\"\n    titleBase={storyMeta.showTitle}\n    globalAudioSrc={storyMeta.globalAudioSrc || \"\"}\n    globalAudioMode={storyMeta.globalAudioMode || \"score\"}\n  />\n</BaseLayout>`;
+  const astroContent = `---\n// Auto-generated Astro page for ${safeSlug}\nimport BaseLayout from \"@/layouts/BaseLayout.astro\";\nimport PictureShowBase from \"@/components/PictureShowBase.jsx\";\nimport { storyMeta, storyData } from \"@/data/Other/Stories/${safeSlug}.mjs\";\n--- \n\n<BaseLayout title={storyMeta.showTitle}>\n  <PictureShowBase\n    client:only=\"react\"\n    rawData={storyData}\n    basePath=\"/Other/Show/${safeSlug}\"\n    titleBase={storyMeta.showTitle}\n    globalAudioSrc={storyMeta.globalAudioSrc || \"\"}\n    globalAudioMode={storyMeta.globalAudioMode || \"score\"}\n  />\n</BaseLayout>`;
 
   // --- Save to server ---
   try {
@@ -881,7 +881,7 @@ export default function PictureShowStoryBuilder() {
 
                 if (data.exists) {
                   const ok = window.confirm(
-                    `⚠️ A show named "${filename}" already exists in /src/data/Other/Stories.\n\nDo you want to overwrite it?`
+                    `⚠️ A show named "${filename}" already exists in /src/data/Other/Show.\n\nDo you want to overwrite it?`
                   );
                   if (!ok) {
                     alert("Please choose a different title for your show.");

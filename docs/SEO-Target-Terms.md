@@ -101,7 +101,7 @@ These terms are already considered covered by existing pages and do not currentl
 - interactive picture shows
 - visual presentations
 
-**`/Other/Stories`**
+**`/Other/Show`**
 - picture show stories
 - visual stories
 - cinematic photo narratives
@@ -232,7 +232,7 @@ Use this section as the quick answer when deciding whether a new page is actuall
 | `/Cowboy-Photography` | cowboy photography |
 | `/Contemporary-Western-Art` | contemporary western art |
 | `/Other/Shows` | picture shows, interactive picture shows, visual presentations |
-| `/Other/Stories` | picture show stories, visual stories, cinematic photo narratives |
+| `/Other/Show` | picture show stories, visual stories, cinematic photo narratives |
 | `/Blog/what-is-western-cowboy-art` | western cowboy art |
 
 ---
