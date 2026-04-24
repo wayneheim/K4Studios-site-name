@@ -209,6 +209,33 @@ const meta = {
   description: 'Cowboy art prints by Wayne Heim where frontier character, painterly light, and narrative pressure keep the image active on the wall.',
   ogDescription: 'Cowboy art prints where painterly light, frontier character, and narrative pressure keep the work alive on the wall.',
 };
+
+const collectionPageExtras = {
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    '@id': 'https://www.k4studios.com/cowboy-art-prints#offer-catalog',
+    name: 'Cowboy Art Prints Print Options',
+    url: 'https://www.k4studios.com/Other/Print-Options',
+    itemListElement: [
+      {
+        '@type': 'OfferCatalog',
+        name: 'Archival Paper Prints',
+      },
+      {
+        '@type': 'OfferCatalog',
+        name: 'Canvas Prints',
+      },
+      {
+        '@type': 'OfferCatalog',
+        name: 'Metal Prints',
+      },
+      {
+        '@type': 'OfferCatalog',
+        name: 'Engrained Baltic Birch Prints',
+      },
+    ],
+  },
+};
 ---
 
 <KeywordLandingPage
@@ -241,4 +268,5 @@ const meta = {
   webPageAbout={['Cowboy Art Prints', 'Western Cowboy Portraits', 'Western Fine Art Prints']}
   genre="Cowboy Art Prints"
   collectionAltPrefix="Cowboy art print"
+  collectionPageExtras={collectionPageExtras}
 />

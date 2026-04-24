@@ -1,0 +1,115 @@
+{
+  "generatedAt": "2026-04-24T18:24:35.500Z",
+  "base": "https://www.k4studios.com",
+  "scannedRouteCount": 4102,
+  "fetchErrorsCount": 0,
+  "fetchErrors": [],
+  "targets": [
+    {
+      "target": "/western-photos",
+      "inboundTotal": 5,
+      "inboundManualStructural": 5,
+      "inboundAutoKeywordLinker": 0,
+      "uniqueSourcePages": 4,
+      "allVisibleInRawHtmlNoJs": true,
+      "sourcePages": [
+        "/Glossary",
+        "/Western-Fine-Art-Photography",
+        "/Western-Photography-Art",
+        "/Western-Wall-Art"
+      ]
+    },
+    {
+      "target": "/western-artwork",
+      "inboundTotal": 11,
+      "inboundManualStructural": 6,
+      "inboundAutoKeywordLinker": 5,
+      "uniqueSourcePages": 9,
+      "allVisibleInRawHtmlNoJs": true,
+      "sourcePages": [
+        "/American-Western-Art",
+        "/Fine-Art-Photography-of-the-American-West",
+        "/Glossary",
+        "/Modern-Western-Interior-Design-Art",
+        "/Rustic-Western-Interior-Design-Art",
+        "/Western-Fine-Art-Photography",
+        "/Western-Interior-Design-Art",
+        "/Western-Photography-Art",
+        "/Western-Wall-Art-for-Interior-Designers"
+      ]
+    },
+    {
+      "target": "/historical-fine-art-photography-collection",
+      "inboundTotal": 5,
+      "inboundManualStructural": 5,
+      "inboundAutoKeywordLinker": 0,
+      "uniqueSourcePages": 4,
+      "allVisibleInRawHtmlNoJs": true,
+      "sourcePages": [
+        "/Fine-Art-Photography-of-the-American-West",
+        "/Glossary",
+        "/Historical-Western-Art",
+        "/Western-Fine-Art-Photography"
+      ]
+    }
+  ],
+  "targetCanonical": {
+    "/western-photos": {
+      "canonicalHref": "https://www.k4studios.com/western-photos",
+      "normalizedCanonicalPath": "/western-photos",
+      "selfReferential": true
+    },
+    "/western-artwork": {
+      "canonicalHref": "https://www.k4studios.com/western-artwork",
+      "normalizedCanonicalPath": "/western-artwork",
+      "selfReferential": true
+    },
+    "/historical-fine-art-photography-collection": {
+      "canonicalHref": "https://www.k4studios.com/historical-fine-art-photography-collection",
+      "normalizedCanonicalPath": "/historical-fine-art-photography-collection",
+      "selfReferential": true
+    }
+  },
+  "westernPhotosAnchorsTotal": 4,
+  "westernPhotosAnchorTargetCounts": [
+    {
+      "target": "/western-photos",
+      "count": 4
+    }
+  ],
+  "distLiveMismatch": [
+    {
+      "target": "/western-photos",
+      "distInboundTotal": 5,
+      "liveInboundTotal": 5,
+      "distManual": 5,
+      "liveManual": 5,
+      "distAuto": 0,
+      "liveAuto": 0,
+      "totalsMatch": true,
+      "splitMatch": true
+    },
+    {
+      "target": "/western-artwork",
+      "distInboundTotal": 11,
+      "liveInboundTotal": 11,
+      "distManual": 6,
+      "liveManual": 6,
+      "distAuto": 5,
+      "liveAuto": 5,
+      "totalsMatch": true,
+      "splitMatch": true
+    },
+    {
+      "target": "/historical-fine-art-photography-collection",
+      "distInboundTotal": 5,
+      "liveInboundTotal": 5,
+      "distManual": 5,
+      "liveManual": 5,
+      "distAuto": 0,
+      "liveAuto": 0,
+      "totalsMatch": true,
+      "splitMatch": true
+    }
+  ]
+}

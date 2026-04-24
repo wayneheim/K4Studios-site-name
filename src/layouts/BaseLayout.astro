@@ -7,8 +7,10 @@ export const prerender = true;
 // ✅ Safe server-side URL parsing
 let lastSegment = "";
 let isImagePage = false;
+let pathnameForMeta = '';
 try {
   if (Astro.url?.pathname) {
+    pathnameForMeta = Astro.url.pathname;
     lastSegment = Astro.url.pathname.split("/").pop() || "";
     isImagePage = lastSegment.startsWith("i-");
   }
@@ -63,6 +65,58 @@ const normalizeText = (value = '') =>
     .replace(/\s+/g, ' ')
     .trim();
 
+const formatPathSegment = (segment = '') =>
+  segment
+    .replace(/-/g, ' ')
+    .replace(/\b\w/g, (m) => m.toUpperCase())
+    .trim();
+
+const deriveContextKeyword = (pathname = '') => {
+  const segments = String(pathname || '').split('/').filter(Boolean);
+  if (!segments.length) return '';
+
+  const ignored = new Set(['galleries', 'other', 'show', 'shows', 'stories', 'story', 'blog']);
+  const genericTail = new Set([
+    'gallery',
+    'all',
+    'color',
+    'black-white',
+    'by-location',
+    'by-theme',
+    'by-subject',
+    'portraits',
+    'series',
+  ]);
+
+  const useful = segments
+    .map((segment) => ({
+      raw: segment,
+      lower: segment.toLowerCase(),
+      label: formatPathSegment(segment),
+    }))
+    .filter((segment) => !ignored.has(segment.lower) && !segment.lower.startsWith('i-'));
+
+  if (!useful.length) return '';
+
+  const chosen = [];
+  for (let i = useful.length - 1; i >= 0; i -= 1) {
+    const segment = useful[i];
+    if (genericTail.has(segment.lower) && chosen.length === 0) {
+      continue;
+    }
+    chosen.unshift(segment.label);
+    if (chosen.length >= 2) break;
+  }
+
+  if (!chosen.length) {
+    return normalizeText(useful.slice(-2).map((segment) => segment.label).join(' '));
+  }
+
+  return normalizeText(chosen.join(' '));
+};
+
+const imageContextKeyword = deriveContextKeyword(pathnameForMeta);
+
 const trimAtWord = (text = '', maxLength = 160) => {
   const normalized = normalizeText(text);
   if (!normalized) return '';
@@ -93,6 +147,138 @@ const trimTitle = (text = '', maxLength = 65) => {
   return trimAtWord(normalized, maxLength);
 };
 
+const normalizeImageTitle = (text = '', contextKeyword = '', imageRef = '', maximumLength = 88) => {
+  const baseTitle = normalizeText(text) || 'Fine Art Photograph';
+  const contextText = normalizeText(contextKeyword);
+  const refText = normalizeText(imageRef);
+
+  const baseLower = baseTitle.toLowerCase();
+  const compactContext = trimAtWord(contextText, 28).replace(/[.…]+$/g, '');
+  const contextSuffix =
+    compactContext && !baseLower.includes(compactContext.toLowerCase())
+      ? ` | ${compactContext}`
+      : '';
+
+  const withContext = `${baseTitle}${contextSuffix}`;
+  const refSuffix =
+    refText && !withContext.toLowerCase().includes(refText.toLowerCase())
+      ? ` | ${refText}`
+      : '';
+
+  const extras = `${contextSuffix}${refSuffix}`;
+  if (!extras) {
+    return trimAtWord(baseTitle, maximumLength).replace(/[.…]+$/g, '');
+  }
+
+  const maxBody = Math.max(28, maximumLength - extras.length);
+  const body = trimAtWord(baseTitle, maxBody).replace(/[\s|:;,.!?…]+$/g, '');
+  return `${body}${extras}`;
+};
+
+const deriveNonImageTitleContext = (pathname = '') => {
+  const segments = String(pathname || '').split('/').filter(Boolean);
+  if (!segments.length) return '';
+
+  const lowered = segments.map((segment) => segment.toLowerCase());
+  if (lowered[0] === 'other' && lowered[1] === 'show') return 'Show Section';
+  if (lowered[0] === 'other' && lowered[1] === 'stories') return 'Stories Section';
+
+  const hasPainterly = lowered.includes('painterly-fine-art-photography');
+  const hasFineArt = lowered.includes('fine-art-photography');
+  const styleLabel = hasPainterly ? 'Painterly' : (hasFineArt ? 'Fine Art' : '');
+
+  const modeMap = {
+    'na-black-white': 'Native American Black & White',
+    'na-color': 'Native American Color',
+    'black-white': 'Black & White',
+    'color': 'Color',
+  };
+
+  const modeSegment = lowered.find((segment) => Object.prototype.hasOwnProperty.call(modeMap, segment));
+  const modeLabel = modeSegment ? modeMap[modeSegment] : '';
+
+  let parentLabel = '';
+  if (modeSegment && modeSegment.startsWith('na-')) {
+    const modeIndex = lowered.lastIndexOf(modeSegment);
+    parentLabel = formatPathSegment(segments[modeIndex - 1] || '');
+  }
+
+  const parts = [];
+  if (styleLabel) parts.push(styleLabel);
+  if (parentLabel) parts.push(parentLabel);
+  if (modeLabel) parts.push(modeLabel);
+  if (parts.length) return normalizeText(parts.join(' '));
+
+  const ignored = new Set(['galleries', 'other', 'blog', 'index', 'all']);
+  const meaningful = segments.filter((segment) => {
+    const lower = segment.toLowerCase();
+    return !ignored.has(lower) && !lower.startsWith('i-');
+  });
+  if (!meaningful.length) return styleLabel;
+
+  const tail = [];
+  for (let i = meaningful.length - 1; i >= 0; i -= 1) {
+    const label = formatPathSegment(meaningful[i]);
+    if (!label) continue;
+    if (tail[0] && tail[0].toLowerCase() === label.toLowerCase()) continue;
+    tail.unshift(label);
+    if (tail.length >= 2) break;
+  }
+
+  if (styleLabel && !tail.join(' ').toLowerCase().includes(styleLabel.toLowerCase())) {
+    tail.unshift(styleLabel);
+  }
+
+  return normalizeText(tail.join(' '));
+};
+
+const deriveNonImageTitleVariant = (pathname = '') => {
+  const segments = String(pathname || '').split('/').filter(Boolean);
+  if (!segments.length) return '';
+
+  const lowered = segments.map((segment) => segment.toLowerCase());
+  const ignored = new Set(['galleries', 'other', 'blog', 'index']);
+  const meaningful = lowered.filter((segment) => !ignored.has(segment) && !segment.startsWith('i-'));
+  const variantParts = [];
+
+  if (lowered[lowered.length - 1] === 'all') {
+    variantParts.push('All Images');
+  }
+
+  if (
+    meaningful.length >= 2 &&
+    meaningful[meaningful.length - 1] === meaningful[meaningful.length - 2]
+  ) {
+    variantParts.push(`${formatPathSegment(meaningful[meaningful.length - 1])} Collection`);
+  }
+
+  return normalizeText(variantParts.join(' | '));
+};
+
+const normalizeStandardTitle = (text = '', pathname = '', maximumLength = 88) => {
+  const baseTitle = trimTitle(text, 72);
+  const context = deriveNonImageTitleContext(pathname);
+  const variant = deriveNonImageTitleVariant(pathname);
+  if (!baseTitle) return baseTitle;
+
+  const suffixParts = [];
+  const baseLower = baseTitle.toLowerCase();
+  if (context && !baseLower.includes(context.toLowerCase())) {
+    suffixParts.push(context);
+  }
+  const existingSuffix = suffixParts.join(' ').toLowerCase();
+  if (variant && !baseLower.includes(variant.toLowerCase()) && !existingSuffix.includes(variant.toLowerCase())) {
+    suffixParts.push(variant);
+  }
+
+  if (!suffixParts.length) return baseTitle;
+
+  const suffix = ` | ${suffixParts.join(' | ')}`;
+  const maxBody = Math.max(32, maximumLength - suffix.length);
+  const body = trimAtWord(baseTitle, maxBody).replace(/[\s|:;,.!?…]+$/g, '');
+  return `${body}${suffix}`;
+};
+
 const normalizeDescription = (text = '', fallback = '', minimumLength = 110, maximumLength = 160) => {
   const normalized = normalizeText(text);
   const fallbackText = trimAtWord(fallback, maximumLength);
@@ -115,6 +301,55 @@ const normalizeDescription = (text = '', fallback = '', minimumLength = 110, max
   return fallbackText;
 };
 
+const normalizeImageDescription = (text = '', imageTitle = '', fallback = '', imageRef = '', contextKeyword = '', maximumLength = 160) => {
+  const normalized = normalizeText(text);
+  const titleText = normalizeText(imageTitle);
+  const fallbackText = trimAtWord(fallback, maximumLength);
+  const contextText = normalizeText(contextKeyword);
+  const keywordSentence = contextText ? `Part of the ${contextText} collection.` : '';
+  const referenceSentence = imageRef ? `Image ${imageRef}.` : '';
+
+  const withReference = (baseText = '') => {
+    const candidate = normalizeText(baseText);
+    const candidateLower = candidate.toLowerCase();
+    if (!referenceSentence && !keywordSentence) return trimAtWord(candidate, maximumLength);
+
+    const extras = [];
+    if (keywordSentence && !candidateLower.includes(contextText.toLowerCase())) {
+      extras.push(keywordSentence);
+    }
+    if (referenceSentence && !candidateLower.includes(imageRef.toLowerCase())) {
+      extras.push(referenceSentence);
+    }
+
+    if (!extras.length) {
+      return trimAtWord(candidate, maximumLength);
+    }
+
+    const extrasText = extras.join(' ');
+    const reserve = extrasText.length + 1;
+    const maxBody = Math.max(60, maximumLength - reserve);
+    const body = trimAtWord(candidate, maxBody).replace(/[.!?…]+$/g, '');
+    return `${body}. ${extrasText}`;
+  };
+
+  const titleHint = titleText
+    ? `View ${titleText} by Wayne Heim.`
+    : 'View this fine art image by Wayne Heim.';
+
+  if (!normalized) {
+    return withReference(`${titleHint} ${fallbackText}`.trim());
+  }
+
+  const hasTitleSignal = titleText && normalized.toLowerCase().includes(titleText.toLowerCase());
+  if (normalized.length >= 100 && hasTitleSignal) {
+    return withReference(normalized);
+  }
+
+  const cleaned = normalized.replace(/[.!?…]+$/g, '');
+  return withReference(`${cleaned}. ${titleHint}`.trim());
+};
+
 // Titles
 const galleryTitle = meta.title || title || 'K4 Studios – Fine Art Photography';
 let pageTitle = isImagePage
@@ -125,7 +360,9 @@ let pageTitle = isImagePage
 const cleanTitleBase = normalizeText(pageTitle || '')
   .replace(/\s*\|\s*Wayne Heim.*$/gi, '')
   .trim();
-const cleanTitle = trimTitle(cleanTitleBase);
+const cleanTitle = isImagePage
+  ? normalizeImageTitle(cleanTitleBase || galleryTitle, imageContextKeyword, lastSegment)
+  : normalizeStandardTitle(cleanTitleBase, pathnameForMeta);
 
 const defaultDescription =
   'Discover painterly fine art photography, Western stories, and historical portraits by Wayne Heim. Explore galleries, stories, and limited edition prints from K4 Studios.';
@@ -138,7 +375,9 @@ const seoDescriptionRaw =
     ? defaultDescription
     : `${cleanTitle} – Fine Art Photography by Wayne Heim`);
 
-const seoDescription = normalizeDescription(seoDescriptionRaw, defaultDescription);
+const seoDescription = isImagePage
+  ? normalizeImageDescription(seoDescriptionRaw, cleanTitle, defaultDescription, lastSegment, imageContextKeyword)
+  : normalizeDescription(seoDescriptionRaw, defaultDescription);
 
 const socialDescription =
   (isImagePage && preloadImage?.story)

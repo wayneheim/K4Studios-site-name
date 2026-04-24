@@ -115,6 +115,7 @@ export const storyBlocks = [
     paragraphs: [
       'Vintage western art is one of those phrases people use when they want the emotional weather of the 1880s-era frontier but do not necessarily want a literal antique. They want the room presence of an older West: weathered figures, frontier interiors, hard light, story, silence, and the feeling that the image belongs to a longer American memory.',
       'That is the approach here. This page treats vintage western art as contemporary authored work that carries old-West atmosphere and story weight strongly enough to satisfy the search, while remaining collector-ready as fine art prints rather than faux-aged decor props.',
+      'Available as archival fine art prints, these vintage Western works are made for collectors who want old-West atmosphere, frontier character, and room-ready wall art with a stronger sense of authorship. This page gathers vintage cowboy art, frontier narrative scenes, and print options for homes, offices, lodges, and Western interiors.',
     ],
   },
   {

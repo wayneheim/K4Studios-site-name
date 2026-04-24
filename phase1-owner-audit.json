@@ -1,0 +1,637 @@
+{
+  "generatedAt": "2026-04-24T19:21:05.588Z",
+  "base": "https://www.k4studios.com",
+  "scannedRouteCount": 4102,
+  "liveFetchErrorsCount": 0,
+  "liveFetchErrors": [],
+  "rendered": {
+    "source": "dist rendered HTML (no JS execution)",
+    "targets": [
+      {
+        "target": "/western-photos",
+        "inboundTotal": 6,
+        "inboundManualStructural": 6,
+        "inboundAutoKeywordLinker": 0,
+        "uniqueSourcePages": 5,
+        "allVisibleInRawHtmlNoJs": true,
+        "sourceBreakdown": [
+          {
+            "sourcePage": "/Glossary",
+            "sourceType": "manual-structural",
+            "count": 2
+          },
+          {
+            "sourcePage": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/all",
+            "sourceType": "manual-structural",
+            "count": 1
+          },
+          {
+            "sourcePage": "/Western-Fine-Art-Photography",
+            "sourceType": "manual-structural",
+            "count": 1
+          },
+          {
+            "sourcePage": "/Western-Photography-Art",
+            "sourceType": "manual-structural",
+            "count": 1
+          },
+          {
+            "sourcePage": "/Western-Wall-Art",
+            "sourceType": "manual-structural",
+            "count": 1
+          }
+        ],
+        "anchorBreakdown": [
+          {
+            "anchorText": "western photos",
+            "sourceType": "manual-structural",
+            "count": 4
+          },
+          {
+            "anchorText": "Western Photos",
+            "sourceType": "manual-structural",
+            "count": 1
+          },
+          {
+            "anchorText": "Browse the full collection",
+            "sourceType": "manual-structural",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "target": "/western-art-photography",
+        "inboundTotal": 5,
+        "inboundManualStructural": 3,
+        "inboundAutoKeywordLinker": 2,
+        "uniqueSourcePages": 4,
+        "allVisibleInRawHtmlNoJs": true,
+        "sourceBreakdown": [
+          {
+            "sourcePage": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/all",
+            "sourceType": "manual-structural",
+            "count": 1
+          },
+          {
+            "sourcePage": "/Photography-in-Western-Art",
+            "sourceType": "auto-keyword-linker",
+            "count": 1
+          },
+          {
+            "sourcePage": "/Western-Fine-Art-Photography",
+            "sourceType": "manual-structural",
+            "count": 1
+          },
+          {
+            "sourcePage": "/Western-Photography-Art",
+            "sourceType": "manual-structural",
+            "count": 1
+          },
+          {
+            "sourcePage": "/Western-Photography-Art",
+            "sourceType": "auto-keyword-linker",
+            "count": 1
+          }
+        ],
+        "anchorBreakdown": [
+          {
+            "anchorText": "western art photography",
+            "sourceType": "manual-structural",
+            "count": 3
+          },
+          {
+            "anchorText": "Western art photography",
+            "sourceType": "auto-keyword-linker",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "target": "/Western-Photography-Art",
+        "inboundTotal": 19,
+        "inboundManualStructural": 18,
+        "inboundAutoKeywordLinker": 1,
+        "uniqueSourcePages": 4,
+        "allVisibleInRawHtmlNoJs": true,
+        "sourceBreakdown": [
+          {
+            "sourcePage": "/Glossary",
+            "sourceType": "manual-structural",
+            "count": 12
+          },
+          {
+            "sourcePage": "/western-art-photography",
+            "sourceType": "manual-structural",
+            "count": 3
+          },
+          {
+            "sourcePage": "/Photography-in-Western-Art",
+            "sourceType": "manual-structural",
+            "count": 2
+          },
+          {
+            "sourcePage": "/Photography-in-Western-Art",
+            "sourceType": "auto-keyword-linker",
+            "count": 1
+          },
+          {
+            "sourcePage": "/Western-Fine-Art-Photography",
+            "sourceType": "manual-structural",
+            "count": 1
+          }
+        ],
+        "anchorBreakdown": [
+          {
+            "anchorText": "Western Photography Art",
+            "sourceType": "manual-structural",
+            "count": 3
+          },
+          {
+            "anchorText": "Explore more examples",
+            "sourceType": "manual-structural",
+            "count": 2
+          },
+          {
+            "anchorText": "Western Art Photography",
+            "sourceType": "manual-structural",
+            "count": 2
+          },
+          {
+            "anchorText": "Discover the gallery",
+            "sourceType": "manual-structural",
+            "count": 2
+          },
+          {
+            "anchorText": "Western photography art",
+            "sourceType": "manual-structural",
+            "count": 2
+          },
+          {
+            "anchorText": "western photography art",
+            "sourceType": "manual-structural",
+            "count": 2
+          },
+          {
+            "anchorText": "American West Photography Art",
+            "sourceType": "manual-structural",
+            "count": 1
+          },
+          {
+            "anchorText": "Frontier Photography Art",
+            "sourceType": "manual-structural",
+            "count": 1
+          },
+          {
+            "anchorText": "View related works",
+            "sourceType": "manual-structural",
+            "count": 1
+          },
+          {
+            "anchorText": "See more in this style",
+            "sourceType": "manual-structural",
+            "count": 1
+          },
+          {
+            "anchorText": "Western photography art",
+            "sourceType": "auto-keyword-linker",
+            "count": 1
+          },
+          {
+            "anchorText": "Browse The Western Photography Art Collection",
+            "sourceType": "manual-structural",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "target": "/Western-Photography-Prints",
+        "inboundTotal": 13,
+        "inboundManualStructural": 13,
+        "inboundAutoKeywordLinker": 0,
+        "uniqueSourcePages": 10,
+        "allVisibleInRawHtmlNoJs": true,
+        "sourceBreakdown": [
+          {
+            "sourcePage": "/western-art-photography",
+            "sourceType": "manual-structural",
+            "count": 2
+          },
+          {
+            "sourcePage": "/Western-Fine-Art-Photography",
+            "sourceType": "manual-structural",
+            "count": 2
+          },
+          {
+            "sourcePage": "/western-fine-art-photography-collection",
+            "sourceType": "manual-structural",
+            "count": 2
+          },
+          {
+            "sourcePage": "/cowboy-art-prints",
+            "sourceType": "manual-structural",
+            "count": 1
+          },
+          {
+            "sourcePage": "/Cowboy-Fine-Art-Photography",
+            "sourceType": "manual-structural",
+            "count": 1
+          },
+          {
+            "sourcePage": "/western-artwork",
+            "sourceType": "manual-structural",
+            "count": 1
+          },
+          {
+            "sourcePage": "/Western-Black-and-White-Photography",
+            "sourceType": "manual-structural",
+            "count": 1
+          },
+          {
+            "sourcePage": "/Western-Photography-Art",
+            "sourceType": "manual-structural",
+            "count": 1
+          },
+          {
+            "sourcePage": "/western-photos",
+            "sourceType": "manual-structural",
+            "count": 1
+          },
+          {
+            "sourcePage": "/western-portrait-photography",
+            "sourceType": "manual-structural",
+            "count": 1
+          }
+        ],
+        "anchorBreakdown": [
+          {
+            "anchorText": "western photography prints",
+            "sourceType": "manual-structural",
+            "count": 5
+          },
+          {
+            "anchorText": "Western Photography Prints",
+            "sourceType": "manual-structural",
+            "count": 4
+          },
+          {
+            "anchorText": "Western Photography Prints Step into the broader print guide where scale, presentation, and collecting logic shape how the work lives in a room. See the print guide -",
+            "sourceType": "manual-structural",
+            "count": 1
+          },
+          {
+            "anchorText": "Western Photography Prints Use the print-focused route if the visitor is ready to compare images as purchasable works rather than simply browse the category. Shop the print path -",
+            "sourceType": "manual-structural",
+            "count": 1
+          },
+          {
+            "anchorText": "limited edition Western photography prints",
+            "sourceType": "manual-structural",
+            "count": 1
+          },
+          {
+            "anchorText": "Western Photography Prints Continue into the print-facing page once the image choice is leading and material questions start to matter. Move into prints -",
+            "sourceType": "manual-structural",
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "canonical": {
+      "/western-photos": {
+        "canonicalHref": "https://www.k4studios.com/western-photos",
+        "normalizedCanonicalPath": "/western-photos",
+        "selfReferential": true
+      },
+      "/western-art-photography": {
+        "canonicalHref": "https://www.k4studios.com/western-art-photography",
+        "normalizedCanonicalPath": "/western-art-photography",
+        "selfReferential": true
+      },
+      "/Western-Photography-Art": {
+        "canonicalHref": "https://www.k4studios.com/Western-Photography-Art",
+        "normalizedCanonicalPath": "/Western-Photography-Art",
+        "selfReferential": true
+      },
+      "/Western-Photography-Prints": {
+        "canonicalHref": "https://www.k4studios.com/Western-Photography-Prints",
+        "normalizedCanonicalPath": "/Western-Photography-Prints",
+        "selfReferential": true
+      }
+    }
+  },
+  "live": {
+    "source": "production fetched raw HTML (no JS execution)",
+    "targets": [
+      {
+        "target": "/western-photos",
+        "inboundTotal": 6,
+        "inboundManualStructural": 6,
+        "inboundAutoKeywordLinker": 0,
+        "uniqueSourcePages": 5,
+        "allVisibleInRawHtmlNoJs": true,
+        "sourceBreakdown": [
+          {
+            "sourcePage": "/Glossary",
+            "sourceType": "manual-structural",
+            "count": 2
+          },
+          {
+            "sourcePage": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/all",
+            "sourceType": "manual-structural",
+            "count": 1
+          },
+          {
+            "sourcePage": "/Western-Fine-Art-Photography",
+            "sourceType": "manual-structural",
+            "count": 1
+          },
+          {
+            "sourcePage": "/Western-Photography-Art",
+            "sourceType": "manual-structural",
+            "count": 1
+          },
+          {
+            "sourcePage": "/Western-Wall-Art",
+            "sourceType": "manual-structural",
+            "count": 1
+          }
+        ],
+        "anchorBreakdown": [
+          {
+            "anchorText": "western photos",
+            "sourceType": "manual-structural",
+            "count": 4
+          },
+          {
+            "anchorText": "Western Photos",
+            "sourceType": "manual-structural",
+            "count": 1
+          },
+          {
+            "anchorText": "Browse the full collection",
+            "sourceType": "manual-structural",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "target": "/western-art-photography",
+        "inboundTotal": 5,
+        "inboundManualStructural": 3,
+        "inboundAutoKeywordLinker": 2,
+        "uniqueSourcePages": 4,
+        "allVisibleInRawHtmlNoJs": true,
+        "sourceBreakdown": [
+          {
+            "sourcePage": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/all",
+            "sourceType": "manual-structural",
+            "count": 1
+          },
+          {
+            "sourcePage": "/Photography-in-Western-Art",
+            "sourceType": "auto-keyword-linker",
+            "count": 1
+          },
+          {
+            "sourcePage": "/Western-Fine-Art-Photography",
+            "sourceType": "manual-structural",
+            "count": 1
+          },
+          {
+            "sourcePage": "/Western-Photography-Art",
+            "sourceType": "manual-structural",
+            "count": 1
+          },
+          {
+            "sourcePage": "/Western-Photography-Art",
+            "sourceType": "auto-keyword-linker",
+            "count": 1
+          }
+        ],
+        "anchorBreakdown": [
+          {
+            "anchorText": "western art photography",
+            "sourceType": "manual-structural",
+            "count": 3
+          },
+          {
+            "anchorText": "Western art photography",
+            "sourceType": "auto-keyword-linker",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "target": "/Western-Photography-Art",
+        "inboundTotal": 19,
+        "inboundManualStructural": 18,
+        "inboundAutoKeywordLinker": 1,
+        "uniqueSourcePages": 4,
+        "allVisibleInRawHtmlNoJs": true,
+        "sourceBreakdown": [
+          {
+            "sourcePage": "/Glossary",
+            "sourceType": "manual-structural",
+            "count": 12
+          },
+          {
+            "sourcePage": "/western-art-photography",
+            "sourceType": "manual-structural",
+            "count": 3
+          },
+          {
+            "sourcePage": "/Photography-in-Western-Art",
+            "sourceType": "manual-structural",
+            "count": 2
+          },
+          {
+            "sourcePage": "/Photography-in-Western-Art",
+            "sourceType": "auto-keyword-linker",
+            "count": 1
+          },
+          {
+            "sourcePage": "/Western-Fine-Art-Photography",
+            "sourceType": "manual-structural",
+            "count": 1
+          }
+        ],
+        "anchorBreakdown": [
+          {
+            "anchorText": "Western Photography Art",
+            "sourceType": "manual-structural",
+            "count": 3
+          },
+          {
+            "anchorText": "Explore more examples",
+            "sourceType": "manual-structural",
+            "count": 2
+          },
+          {
+            "anchorText": "Western Art Photography",
+            "sourceType": "manual-structural",
+            "count": 2
+          },
+          {
+            "anchorText": "Discover the gallery",
+            "sourceType": "manual-structural",
+            "count": 2
+          },
+          {
+            "anchorText": "Western photography art",
+            "sourceType": "manual-structural",
+            "count": 2
+          },
+          {
+            "anchorText": "western photography art",
+            "sourceType": "manual-structural",
+            "count": 2
+          },
+          {
+            "anchorText": "American West Photography Art",
+            "sourceType": "manual-structural",
+            "count": 1
+          },
+          {
+            "anchorText": "Frontier Photography Art",
+            "sourceType": "manual-structural",
+            "count": 1
+          },
+          {
+            "anchorText": "View related works",
+            "sourceType": "manual-structural",
+            "count": 1
+          },
+          {
+            "anchorText": "See more in this style",
+            "sourceType": "manual-structural",
+            "count": 1
+          },
+          {
+            "anchorText": "Western photography art",
+            "sourceType": "auto-keyword-linker",
+            "count": 1
+          },
+          {
+            "anchorText": "Browse The Western Photography Art Collection",
+            "sourceType": "manual-structural",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "target": "/Western-Photography-Prints",
+        "inboundTotal": 13,
+        "inboundManualStructural": 13,
+        "inboundAutoKeywordLinker": 0,
+        "uniqueSourcePages": 10,
+        "allVisibleInRawHtmlNoJs": true,
+        "sourceBreakdown": [
+          {
+            "sourcePage": "/western-art-photography",
+            "sourceType": "manual-structural",
+            "count": 2
+          },
+          {
+            "sourcePage": "/Western-Fine-Art-Photography",
+            "sourceType": "manual-structural",
+            "count": 2
+          },
+          {
+            "sourcePage": "/western-fine-art-photography-collection",
+            "sourceType": "manual-structural",
+            "count": 2
+          },
+          {
+            "sourcePage": "/cowboy-art-prints",
+            "sourceType": "manual-structural",
+            "count": 1
+          },
+          {
+            "sourcePage": "/Cowboy-Fine-Art-Photography",
+            "sourceType": "manual-structural",
+            "count": 1
+          },
+          {
+            "sourcePage": "/western-artwork",
+            "sourceType": "manual-structural",
+            "count": 1
+          },
+          {
+            "sourcePage": "/Western-Black-and-White-Photography",
+            "sourceType": "manual-structural",
+            "count": 1
+          },
+          {
+            "sourcePage": "/Western-Photography-Art",
+            "sourceType": "manual-structural",
+            "count": 1
+          },
+          {
+            "sourcePage": "/western-photos",
+            "sourceType": "manual-structural",
+            "count": 1
+          },
+          {
+            "sourcePage": "/western-portrait-photography",
+            "sourceType": "manual-structural",
+            "count": 1
+          }
+        ],
+        "anchorBreakdown": [
+          {
+            "anchorText": "western photography prints",
+            "sourceType": "manual-structural",
+            "count": 5
+          },
+          {
+            "anchorText": "Western Photography Prints",
+            "sourceType": "manual-structural",
+            "count": 4
+          },
+          {
+            "anchorText": "Western Photography Prints Step into the broader print guide where scale, presentation, and collecting logic shape how the work lives in a room. See the print guide -",
+            "sourceType": "manual-structural",
+            "count": 1
+          },
+          {
+            "anchorText": "Western Photography Prints Use the print-focused route if the visitor is ready to compare images as purchasable works rather than simply browse the category. Shop the print path -",
+            "sourceType": "manual-structural",
+            "count": 1
+          },
+          {
+            "anchorText": "limited edition Western photography prints",
+            "sourceType": "manual-structural",
+            "count": 1
+          },
+          {
+            "anchorText": "Western Photography Prints Continue into the print-facing page once the image choice is leading and material questions start to matter. Move into prints -",
+            "sourceType": "manual-structural",
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "canonical": {
+      "/western-photos": {
+        "canonicalHref": "https://www.k4studios.com/western-photos",
+        "normalizedCanonicalPath": "/western-photos",
+        "selfReferential": true
+      },
+      "/western-art-photography": {
+        "canonicalHref": "https://www.k4studios.com/western-art-photography",
+        "normalizedCanonicalPath": "/western-art-photography",
+        "selfReferential": true
+      },
+      "/Western-Photography-Art": {
+        "canonicalHref": "https://www.k4studios.com/Western-Photography-Art",
+        "normalizedCanonicalPath": "/Western-Photography-Art",
+        "selfReferential": true
+      },
+      "/Western-Photography-Prints": {
+        "canonicalHref": "https://www.k4studios.com/Western-Photography-Prints",
+        "normalizedCanonicalPath": "/Western-Photography-Prints",
+        "selfReferential": true
+      }
+    }
+  }
+}

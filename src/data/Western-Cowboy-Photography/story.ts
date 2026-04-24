@@ -4,7 +4,7 @@
   {
     title: "What Is Western Cowboy Photography?",
     paragraphs: [
-      "Western cowboy photography is a form of fine art photography that isolates the cowboy—not as costume or cliché, but as a human subject shaped by labor, landscape, and a specific historical moment. It is not a rodeo snapshot. It is not a prop-room portrait. It is character-driven photographic work rooted in the same tradition that gave us Frederic Remington's cowboys and Charles M. Russell's frontier camps: authentic subjects, controlled composition, and narrative intent.",
+      "Western cowboy photography is a form of fine art photography that isolates the cowboy—not as costume or cliché, but as a human subject shaped by labor, landscape, and a specific historical moment. It is not a rodeo snapshot. It is not a prop-room portrait. It is not ordinary documentation of modern ranch life. It is character-driven photographic work rooted in the same tradition that gave us Frederic Remington's cowboys and Charles M. Russell's frontier camps: authentic subjects, controlled composition, and narrative intent grounded in frontier history.",
       "At K4 Studios, that tradition is realized through <a href=\"/Pictorialist-Photography\">painterly photography</a>—a disciplined process where light, tone, and texture are shaped until the image reads with the weight of a painting while remaining unmistakably photographic. The result is cowboy portraiture built for long viewing, not quick consumption.",
       "Here, \u2018Western art\u2019 refers to the American West—frontier life, cowboys, and 19th-century Western history—not European or Western civilization art traditions."
     ]

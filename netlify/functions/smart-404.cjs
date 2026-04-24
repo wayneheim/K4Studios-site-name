@@ -38,10 +38,9 @@ function normalizePath(path) {
 function getParentGalleryPath(pathname) {
   let normalized = normalizePath(pathname);
 
-  // Legacy SmugMug image links may append a single-letter suffix
-  // (commonly "/A") after the image id. Normalize to canonical image form
-  // before deriving the parent gallery path.
-  normalized = normalized.replace(/\/([iI]-[A-Za-z0-9-]+)\/[A-Z]\/?$/, '/$1');
+  // Legacy image links may append a suffix after the image id
+  // (for example "/A" or "/buy"). Normalize before deriving parent path.
+  normalized = normalized.replace(/\/([iI]-[A-Za-z0-9-]+)(?:\/[^/]+)?\/?$/, '/$1');
 
   return normalized.replace(/\/[iI]-[A-Za-z0-9-]+\/?$/, '');
 }

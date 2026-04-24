@@ -49173,11 +49173,11 @@ export const galleryDataMap   = {
     },
     {
       "id": "i-bWw2GPZ",
-      "srcS": "",
-      "srcM": "",
-      "srcL": "",
-      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bWw2GPZ/1/KRvFrN9Hf3tZLh2kGR7PxJbjfg3KR9mqskTkSngb9/XL/_WHO1469-889-890-XL.jpg",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bWw2GPZ/1/KRvFrN9Hf3tZLh2kGR7PxJbjfg3KR9mqskTkSngb9/XL/_WHO1469-889-890-XL.jpg",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sGW55ch/9/Kj96VdGRdrCfxJhtLctd9hB6FsFwSrmhQj6Txv3pT/S/_WHO2172-Edit-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sGW55ch/9/KGqHBZxwBWtM8cN7NdnCDhpLhHHLLPDmRFxNgWmKc/M/_WHO2172-Edit-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sGW55ch/9/LfdN6gS8TmPv2qrjM6NdcKbDVGbzxJPF3bzP95FGZ/L/_WHO2172-Edit-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sGW55ch/9/NhtM5dFBTWjr9dQK5VbGPJjMpCJd9KFHWGCcvM5x7/XL/_WHO2172-Edit-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sGW55ch/9/Kj96VdGRdrCfxJhtLctd9hB6FsFwSrmhQj6Txv3pT/S/_WHO2172-Edit-S.jpg",
       "rating": 4,
       "visibility": "show",
       "galleries": [
@@ -98597,11 +98597,11 @@ export const allImages        = [
   },
   {
     "id": "i-bWw2GPZ",
-    "srcS": "",
-    "srcM": "",
-    "srcL": "",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bWw2GPZ/1/KRvFrN9Hf3tZLh2kGR7PxJbjfg3KR9mqskTkSngb9/XL/_WHO1469-889-890-XL.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bWw2GPZ/1/KRvFrN9Hf3tZLh2kGR7PxJbjfg3KR9mqskTkSngb9/XL/_WHO1469-889-890-XL.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sGW55ch/9/Kj96VdGRdrCfxJhtLctd9hB6FsFwSrmhQj6Txv3pT/S/_WHO2172-Edit-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sGW55ch/9/KGqHBZxwBWtM8cN7NdnCDhpLhHHLLPDmRFxNgWmKc/M/_WHO2172-Edit-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sGW55ch/9/LfdN6gS8TmPv2qrjM6NdcKbDVGbzxJPF3bzP95FGZ/L/_WHO2172-Edit-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sGW55ch/9/NhtM5dFBTWjr9dQK5VbGPJjMpCJd9KFHWGCcvM5x7/XL/_WHO2172-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sGW55ch/9/Kj96VdGRdrCfxJhtLctd9hB6FsFwSrmhQj6Txv3pT/S/_WHO2172-Edit-S.jpg",
     "rating": 4,
     "visibility": "show",
     "galleries": [

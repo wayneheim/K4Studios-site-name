@@ -219,6 +219,10 @@ export function getStructuredData({
       if (cleaned) collectionObj.keywords = cleaned;
     }
 
+    if (data.collectionPageExtras && typeof data.collectionPageExtras === 'object') {
+      Object.assign(collectionObj, data.collectionPageExtras);
+    }
+
     return stringifySchema(collectionObj);
   }
 

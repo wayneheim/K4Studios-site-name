@@ -1,0 +1,188 @@
+{
+  "generatedAt": "2026-04-24T18:20:38.525Z",
+  "source": "dist rendered HTML (no JS execution)",
+  "targets": [
+    {
+      "target": "/western-photos",
+      "inboundTotal": 5,
+      "inboundManualStructural": 5,
+      "inboundAutoKeywordLinker": 0,
+      "uniqueSourcePages": 4,
+      "crawlableWithoutJavaScript": "yes",
+      "sourceBreakdown": [
+        {
+          "sourcePage": "/Glossary",
+          "sourceType": "manual-structural",
+          "count": 2
+        },
+        {
+          "sourcePage": "/Western-Fine-Art-Photography",
+          "sourceType": "manual-structural",
+          "count": 1
+        },
+        {
+          "sourcePage": "/Western-Photography-Art",
+          "sourceType": "manual-structural",
+          "count": 1
+        },
+        {
+          "sourcePage": "/Western-Wall-Art",
+          "sourceType": "manual-structural",
+          "count": 1
+        }
+      ],
+      "anchorBreakdown": [
+        {
+          "anchorText": "western photos",
+          "sourceType": "manual-structural",
+          "count": 3
+        },
+        {
+          "anchorText": "Western Photos",
+          "sourceType": "manual-structural",
+          "count": 1
+        },
+        {
+          "anchorText": "Browse the full collection",
+          "sourceType": "manual-structural",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "target": "/western-artwork",
+      "inboundTotal": 11,
+      "inboundManualStructural": 6,
+      "inboundAutoKeywordLinker": 5,
+      "uniqueSourcePages": 9,
+      "crawlableWithoutJavaScript": "yes",
+      "sourceBreakdown": [
+        {
+          "sourcePage": "/Glossary",
+          "sourceType": "manual-structural",
+          "count": 2
+        },
+        {
+          "sourcePage": "/Western-Wall-Art-for-Interior-Designers",
+          "sourceType": "auto-keyword-linker",
+          "count": 2
+        },
+        {
+          "sourcePage": "/American-Western-Art",
+          "sourceType": "manual-structural",
+          "count": 1
+        },
+        {
+          "sourcePage": "/Fine-Art-Photography-of-the-American-West",
+          "sourceType": "manual-structural",
+          "count": 1
+        },
+        {
+          "sourcePage": "/Modern-Western-Interior-Design-Art",
+          "sourceType": "auto-keyword-linker",
+          "count": 1
+        },
+        {
+          "sourcePage": "/Rustic-Western-Interior-Design-Art",
+          "sourceType": "auto-keyword-linker",
+          "count": 1
+        },
+        {
+          "sourcePage": "/Western-Fine-Art-Photography",
+          "sourceType": "manual-structural",
+          "count": 1
+        },
+        {
+          "sourcePage": "/Western-Interior-Design-Art",
+          "sourceType": "auto-keyword-linker",
+          "count": 1
+        },
+        {
+          "sourcePage": "/Western-Photography-Art",
+          "sourceType": "manual-structural",
+          "count": 1
+        }
+      ],
+      "anchorBreakdown": [
+        {
+          "anchorText": "western artwork",
+          "sourceType": "manual-structural",
+          "count": 4
+        },
+        {
+          "anchorText": "western artwork",
+          "sourceType": "auto-keyword-linker",
+          "count": 4
+        },
+        {
+          "anchorText": "Western Artwork",
+          "sourceType": "manual-structural",
+          "count": 1
+        },
+        {
+          "anchorText": "Explore more examples",
+          "sourceType": "manual-structural",
+          "count": 1
+        },
+        {
+          "anchorText": "Western artwork",
+          "sourceType": "auto-keyword-linker",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "target": "/historical-fine-art-photography-collection",
+      "inboundTotal": 5,
+      "inboundManualStructural": 5,
+      "inboundAutoKeywordLinker": 0,
+      "uniqueSourcePages": 4,
+      "crawlableWithoutJavaScript": "yes",
+      "sourceBreakdown": [
+        {
+          "sourcePage": "/Glossary",
+          "sourceType": "manual-structural",
+          "count": 2
+        },
+        {
+          "sourcePage": "/Fine-Art-Photography-of-the-American-West",
+          "sourceType": "manual-structural",
+          "count": 1
+        },
+        {
+          "sourcePage": "/Historical-Western-Art",
+          "sourceType": "manual-structural",
+          "count": 1
+        },
+        {
+          "sourcePage": "/Western-Fine-Art-Photography",
+          "sourceType": "manual-structural",
+          "count": 1
+        }
+      ],
+      "anchorBreakdown": [
+        {
+          "anchorText": "historical fine art photography collection",
+          "sourceType": "manual-structural",
+          "count": 3
+        },
+        {
+          "anchorText": "Historical Fine Art Photography Collection",
+          "sourceType": "manual-structural",
+          "count": 1
+        },
+        {
+          "anchorText": "See more in this style",
+          "sourceType": "manual-structural",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "westernPhotosAnchorTargetCounts": [
+    {
+      "target": "/western-photos",
+      "count": 4
+    }
+  ]
+}

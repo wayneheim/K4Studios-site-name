@@ -234,6 +234,8 @@ function getProxySrc(imageId: string, size: string = 'm'): string {
 
 const landingImg = featheredImages[0];
 const landingImgUrl = landingImg?.id ? makeAbsoluteUrl(getProxySrc(landingImg.id, 'l')) : '';
+const westernPainterlySeoTitle =
+  "Western Painterly Photography | Fine Art Western Photography by Wayne Heim";
 
 // ✅ Meta should be keyed to the HUB PAGE, not the cowboy gallery path
 const meta = getLandingMeta(pagePath, landingImgUrl);
@@ -276,10 +278,14 @@ const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => {
 ---
 
 <BaseLayout
-  title="Painterly Western Photography – Wayne Heim"
+  title="Western Painterly Photography"
   structuredDataJSON={structuredData}
   breadcrumbsJSON={breadcrumbData}
-  meta={meta}
+  meta={{
+    ...meta,
+    ogTitle: westernPainterlySeoTitle,
+    twitterTitle: westernPainterlySeoTitle,
+  }}
 >
   <!-- FAQ Structured Data for rich snippets -->
   <script type="application/ld+json" set:html={faqStructuredData} slot="head"></script>

@@ -1,0 +1,101 @@
+{
+  "totalCommercialPages": 30,
+  "pagesWithNoMeasuredInboundLinks": [
+    "/Fine-Art-Photography-of-the-American-West",
+    "/Western-Wall-Art",
+    "/Modern-Western-Interior-Design-Art",
+    "/Western-Interior-Design-Art",
+    "/Western-Wall-Art-for-Interior-Designers",
+    "/Rustic-Western-Interior-Design-Art",
+    "/western-photos",
+    "/western-portrait-photography",
+    "/old-western-art",
+    "/western-artwork",
+    "/historical-fine-art-photography-collection",
+    "/western-fine-art-photography-collection"
+  ],
+  "pagesWith0to1InboundLinks": [
+    "/Contemporary-Western-Art",
+    "/Fine-Art-Photography-of-the-American-West",
+    "/Western-Frontier-Art",
+    "/Western-Wall-Art",
+    "/Modern-Western-Interior-Design-Art",
+    "/Western-Interior-Design-Art",
+    "/Western-Wall-Art-for-Interior-Designers",
+    "/Rustic-Western-Interior-Design-Art",
+    "/Western-Black-and-White-Photography",
+    "/western-landscape-art",
+    "/western-photos",
+    "/western-portrait-photography",
+    "/old-western-art",
+    "/western-art-photography",
+    "/western-artwork",
+    "/historical-fine-art-photography-collection",
+    "/western-fine-art-photography-collection",
+    "/cowboy-art-prints"
+  ],
+  "topLinkedPages": [
+    {
+      "page": "/Western-Fine-Art-Photography",
+      "inboundLinkCount": 34
+    },
+    {
+      "page": "/Narrative-Western-Art",
+      "inboundLinkCount": 27
+    },
+    {
+      "page": "/American-Western-Art",
+      "inboundLinkCount": 9
+    },
+    {
+      "page": "/Western-Cowboy-Photography",
+      "inboundLinkCount": 6
+    },
+    {
+      "page": "/western-storytelling-photography",
+      "inboundLinkCount": 6
+    },
+    {
+      "page": "/Painterly-Western-Photography",
+      "inboundLinkCount": 5
+    },
+    {
+      "page": "/Historical-Western-Art",
+      "inboundLinkCount": 4
+    },
+    {
+      "page": "/Western-Photography-Art",
+      "inboundLinkCount": 4
+    },
+    {
+      "page": "/Cowboy-Fine-Art-Photography",
+      "inboundLinkCount": 3
+    },
+    {
+      "page": "/Western-Photography-Prints",
+      "inboundLinkCount": 3
+    }
+  ],
+  "owners": [
+    "/American-Western-Art",
+    "/Contemporary-Western-Art",
+    "/Cowboy-Fine-Art-Photography",
+    "/Fine-Art-Photography-of-the-American-West",
+    "/Historical-Western-Art",
+    "/Narrative-Western-Art",
+    "/Painterly-Western-Photography",
+    "/Western-Cowboy-Photography",
+    "/Western-Fine-Art-Photography",
+    "/Western-Frontier-Art",
+    "/Western-Photography-Art",
+    "/Western-Wall-Art",
+    "/Western-Black-and-White-Photography",
+    "/western-landscape-art",
+    "/western-portrait-photography",
+    "/vintage-western-art",
+    "/western-artwork",
+    "/historical-fine-art-photography-collection",
+    "/western-fine-art-photography-collection",
+    "/cowboy-art-prints"
+  ]
+}

@@ -246,10 +246,40 @@ westernPhotographyArtHub: {
   landingPhrases: [
     { phrase: "Western Photography Art", rating: 5, use: true },
     { phrase: "western photography art", rating: 5, use: true },
-    { phrase: "Western Art Photography", rating: 5, use: true },
-    { phrase: "western art photography", rating: 5, use: true },
+    { phrase: "Western Art Photography", rating: 5, use: true, link: "/western-art-photography" },
+    { phrase: "western art photography", rating: 5, use: true, link: "/western-art-photography" },
     { phrase: "American West photography art", rating: 4, use: true },
     { phrase: "frontier photography art", rating: 4, use: true },
+  ],
+  imagePhrases: []
+},
+
+westernPhotosHub: {
+  path: "/western-photos",
+  def: "Western photos as a dedicated discovery lane for photographer-authored images of the American West, separated from wall-decor and print-commerce intent.",
+  fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
+  landingPhrases: [
+    { phrase: "western photos", rating: 5, use: true, link: "/western-photos" },
+  ],
+  imagePhrases: []
+},
+
+westernArtworkHub: {
+  path: "/western-artwork",
+  def: "Western artwork as a broad authority lane connecting subject, medium, and collection routes without collapsing into a single photography-commercial owner.",
+  fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
+  landingPhrases: [
+    { phrase: "western artwork", rating: 5, use: true, link: "/western-artwork" },
+  ],
+  imagePhrases: []
+},
+
+historicalFineArtPhotographyCollectionHub: {
+  path: "/historical-fine-art-photography-collection",
+  def: "A collection-specific lane for historically grounded fine art photography with narrative continuity across the American frontier timeline.",
+  fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color",
+  landingPhrases: [
+    { phrase: "historical fine art photography collection", rating: 5, use: true, link: "/historical-fine-art-photography-collection" },
   ],
   imagePhrases: []
 },
@@ -309,7 +339,6 @@ westernWallArtHub: {
     { phrase: "cowboy artwork", rating: 4, use: true },
     { phrase: "western prints", rating: 4, use: true },
     { phrase: "cowboy pictures", rating: 4, use: true },
-    { phrase: "western photos", rating: 4, use: true },
     { phrase: "cowboy photographs", rating: 4, use: true },
     { phrase: "western home decor", rating: 4, use: true },
     { phrase: "cowboy home decor", rating: 4, use: true },

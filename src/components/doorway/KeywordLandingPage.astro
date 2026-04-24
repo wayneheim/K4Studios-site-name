@@ -105,6 +105,7 @@ interface Props {
   webPageAbout?: string[];
   genre?: string;
   collectionAltPrefix?: string;
+  collectionPageExtras?: Record<string, any>;
   heroVisualMode?: 'imageBar' | 'hybridCarousel';
   hybridCarouselProps?: any;
 }
@@ -151,6 +152,7 @@ const {
   webPageAbout = structuredAbout,
   genre = landing.title,
   collectionAltPrefix = landing.title,
+  collectionPageExtras = {},
   heroVisualMode = 'imageBar',
   hybridCarouselProps = null,
 } = Astro.props as Props;
@@ -226,6 +228,7 @@ const structuredData = getStructuredData({
     copyrightNotice: '© Wayne Heim',
     about: structuredAbout.map((name) => ({ '@type': 'Thing', name })),
     genre,
+    collectionPageExtras,
   },
   images: featheredImages,
   defaults: {

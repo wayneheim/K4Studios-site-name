@@ -1,0 +1,120 @@
+﻿{
+    "overview":  [
+                     {
+                         "Query":  "western artwork",
+                         "SearchVolume":  "2400",
+                         "KeywordDifficulty":  "9",
+                         "CPC":  "0.71",
+                         "Intent":  "i|c",
+                         "SERPFeatures":  "",
+                         "Trend":  "",
+                         "EvidenceSource":  "filtered overview"
+                     },
+                     {
+                         "Query":  "vintage western art",
+                         "SearchVolume":  "320",
+                         "KeywordDifficulty":  "5",
+                         "CPC":  "0.46",
+                         "Intent":  "c",
+                         "SERPFeatures":  "",
+                         "Trend":  "",
+                         "EvidenceSource":  "filtered overview"
+                     },
+                     {
+                         "Query":  "cowboy art prints",
+                         "SearchVolume":  "170",
+                         "KeywordDifficulty":  "3",
+                         "CPC":  "0.64",
+                         "Intent":  "i|c",
+                         "SERPFeatures":  "",
+                         "Trend":  "",
+                         "EvidenceSource":  "filtered overview"
+                     },
+                     {
+                         "Query":  "old western art",
+                         "SearchVolume":  "170",
+                         "KeywordDifficulty":  "6",
+                         "CPC":  "n/a",
+                         "Intent":  "i|c",
+                         "SERPFeatures":  "",
+                         "Trend":  "",
+                         "EvidenceSource":  "filtered overview"
+                     },
+                     {
+                         "Query":  "contemporary western art",
+                         "SearchVolume":  "170",
+                         "KeywordDifficulty":  "10",
+                         "CPC":  "1.31",
+                         "Intent":  "c",
+                         "SERPFeatures":  "",
+                         "Trend":  "",
+                         "EvidenceSource":  "filtered overview"
+                     }
+                 ],
+    "k4Status":  null,
+    "competitors":  [
+
+                    ],
+    "matrix":  [
+                   {
+                       "Query":  "western artwork",
+                       "Volume":  "2400",
+                       "KD":  "9",
+                       "IntendedK4Page":  null,
+                       "K4CurrentRank":  null,
+                       "K4RankingURL":  null,
+                       "DominantCompetitorPageType":  "insufficient query-level competitor rows",
+                       "SERPFormat":  "not available in provided row",
+                       "OpportunityScore":  12,
+                       "RecommendedMinimalAction":  "verify index + add exact-anchor reinforcement + light intro alignment"
+                   },
+                   {
+                       "Query":  "vintage western art",
+                       "Volume":  "320",
+                       "KD":  "5",
+                       "IntendedK4Page":  null,
+                       "K4CurrentRank":  null,
+                       "K4RankingURL":  null,
+                       "DominantCompetitorPageType":  "insufficient query-level competitor rows",
+                       "SERPFormat":  "not available in provided row",
+                       "OpportunityScore":  10,
+                       "RecommendedMinimalAction":  "verify index + add exact-anchor reinforcement + light intro alignment"
+                   },
+                   {
+                       "Query":  "cowboy art prints",
+                       "Volume":  "170",
+                       "KD":  "3",
+                       "IntendedK4Page":  null,
+                       "K4CurrentRank":  null,
+                       "K4RankingURL":  null,
+                       "DominantCompetitorPageType":  "insufficient query-level competitor rows",
+                       "SERPFormat":  "not available in provided row",
+                       "OpportunityScore":  10,
+                       "RecommendedMinimalAction":  "verify index + add exact-anchor reinforcement + light intro alignment"
+                   },
+                   {
+                       "Query":  "old western art",
+                       "Volume":  "170",
+                       "KD":  "6",
+                       "IntendedK4Page":  null,
+                       "K4CurrentRank":  null,
+                       "K4RankingURL":  null,
+                       "DominantCompetitorPageType":  "insufficient query-level competitor rows",
+                       "SERPFormat":  "not available in provided row",
+                       "OpportunityScore":  9,
+                       "RecommendedMinimalAction":  "verify index + add exact-anchor reinforcement + light intro alignment"
+                   },
+                   {
+                       "Query":  "contemporary western art",
+                       "Volume":  "170",
+                       "KD":  "10",
+                       "IntendedK4Page":  null,
+                       "K4CurrentRank":  null,
+                       "K4RankingURL":  null,
+                       "DominantCompetitorPageType":  "insufficient query-level competitor rows",
+                       "SERPFormat":  "not available in provided row",
+                       "OpportunityScore":  9,
+                       "RecommendedMinimalAction":  "verify index + add exact-anchor reinforcement + light intro alignment"
+                   }
+               ]
+}

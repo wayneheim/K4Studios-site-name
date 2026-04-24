@@ -4,7 +4,7 @@
   {
     title: "What Is Cowboy Fine Art Photography?",
     paragraphs: [
-      "Cowboy fine art photography is authored portraiture that treats the cowboy as a subject worthy of the same interpretive craft traditionally reserved for painted figures. It is not a rodeo action shot. It is not a prop-room costume portrait. It is character-driven fine art—work where light, tone, and composition are shaped until the image carries the weight of painting while remaining unmistakably photographic.",
+      "Cowboy fine art photography is authored portraiture that treats the cowboy as a subject worthy of the same interpretive craft traditionally reserved for painted figures. It is not a rodeo action shot. It is not a prop-room costume portrait. It is not contemporary ranch documentation. It is character-driven fine art—work where light, tone, and composition are shaped until the image carries the weight of painting while remaining unmistakably photographic.",
       "At K4 Studios, that craft takes a specific form: <a href=\"/Pictorialist-Photography\">painterly photography</a> rooted in the Pictorialist conviction that a photograph should interpret the world, not simply record it. The result is cowboy portraiture built for long viewing—images that reward return visits and resist easy interpretation.",
       "Here, \u2018Western art\u2019 refers to the American West—frontier life, cowboys, and 19th-century Western history—not European or Western civilization art traditions."
     ]

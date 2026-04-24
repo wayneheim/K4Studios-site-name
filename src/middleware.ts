@@ -1,11 +1,13 @@
 // src/middleware.ts
 import type { MiddlewareHandler } from "astro";
 import imageIdMap from "@/data/imageIdMap.json";
+import { galleryData as archiveGalleryData } from "@/data/Other/Archive/Archive.mjs";
 
 // Type assertion for the imageIdMap
 const imageMap = imageIdMap as Record<string, string[]>;
 
 let imageMapLower: Record<string, { canonicalId: string; paths: string[] }> | null = null;
+let archiveImageFallbacksLower: Record<string, { canonicalId: string; visibility: string }> | null = null;
 
 let knownGalleryPathsLower: Set<string> | null = null;
 
@@ -63,6 +65,35 @@ function getImageMapLower(): Record<string, { canonicalId: string; paths: string
 
   imageMapLower = lower;
   return lower;
+}
+
+function getArchiveImageFallbacksLower(): Record<string, { canonicalId: string; visibility: string }> {
+  if (archiveImageFallbacksLower) return archiveImageFallbacksLower;
+
+  const lower: Record<string, { canonicalId: string; visibility: string }> = {};
+  for (const item of archiveGalleryData as Array<{ id?: string; visibility?: string }>) {
+    const canonicalId = String(item?.id || "").trim();
+    if (!canonicalId) continue;
+
+    lower[canonicalId.toLowerCase()] = {
+      canonicalId,
+      visibility: String(item?.visibility || "").trim().toLowerCase(),
+    };
+  }
+
+  archiveImageFallbacksLower = lower;
+  return archiveImageFallbacksLower;
+}
+
+function getArchiveFallbackPathForImageId(imageId: string): string {
+  const lookup = getArchiveImageFallbacksLower()[String(imageId || "").toLowerCase()];
+  if (!lookup) return "";
+
+  if (lookup.visibility === "hidden" || lookup.visibility === "hide" || lookup.visibility === "ghost") {
+    return "/Other/Archive";
+  }
+
+  return `/Other/Archive/${lookup.canonicalId}`;
 }
 
 function pickCanonicalGalleryPath(requestedPath: string, candidates: string[]): string {
@@ -459,6 +490,19 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
             },
           });
         }
+      }
+    } else {
+      const requestedNormalized = normalizePath(pathname);
+      const archiveFallbackPath = normalizePath(getArchiveFallbackPathForImageId(requestedId));
+
+      if (archiveFallbackPath && requestedNormalized.toLowerCase() !== archiveFallbackPath.toLowerCase()) {
+        console.log(`[image-rematch-archive-301] ${requestedNormalized} -> ${archiveFallbackPath}`);
+        return new Response(null, {
+          status: 301,
+          headers: {
+            Location: `${archiveFallbackPath}${search}`,
+          },
+        });
       }
     }
   }

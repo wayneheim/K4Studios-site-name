@@ -1,6 +1,12 @@
 const IMAGE_ID_MAP_URL = 'https://www.k4studios.com/imageIdMap.json';
 const CACHE_TTL_MS = 5 * 60 * 1000;
 
+// IDs intentionally omitted from imageIdMap (for example hidden archive items)
+// can still receive a deterministic smart-404 redirect target.
+const ARCHIVE_FALLBACK_BY_ID: Record<string, string> = {
+  'i-fkmpxjf': '/Other/Archive',
+};
+
 type ImageIdMap = Record<string, string[] | string>;
 
 let imageIdMapCache: ImageIdMap | null = null;
@@ -14,14 +20,21 @@ function normalizePath(pathname: string): string {
 }
 
 function extractImageId(pathname: string): string {
-  const match = normalizePath(pathname).match(/\/(i-[A-Za-z0-9-]+)(?:\/[A-Z])?$/);
+  // Accept legacy suffixes after image IDs (for example /A, /buy)
+  // so moved-image rematching still runs instead of falling through.
+  const match = normalizePath(pathname).match(/\/(i-[A-Za-z0-9-]+)(?:\/[^/]+)?$/i);
   return match ? match[1] : '';
+}
+
+function getArchiveFallbackPath(imageId: string): string {
+  if (!imageId) return '';
+  return ARCHIVE_FALLBACK_BY_ID[imageId.toLowerCase()] || '';
 }
 
 function getParentGalleryPath(pathname: string): string {
   let normalized = normalizePath(pathname);
-  normalized = normalized.replace(/\/(i-[A-Za-z0-9-]+)\/[A-Z]$/, '/$1');
-  return normalized.replace(/\/[iI]-[A-Za-z0-9-]+$/, '');
+  normalized = normalized.replace(/\/(i-[A-Za-z0-9-]+)(?:\/[^/]+)?$/i, '/$1');
+  return normalized.replace(/\/[iI]-[A-Za-z0-9-]+$/i, '');
 }
 
 function findMatchingGalleryPath(requestedPath: string, candidates: string[]): string {
@@ -100,6 +113,10 @@ export default async function smart404Edge(request: Request, context: { next: ()
     const imageIdMap = await getImageIdMap();
     const rawPaths = imageIdMap[imageId];
     if (!rawPaths) {
+      const archiveFallbackPath = getArchiveFallbackPath(imageId);
+      if (archiveFallbackPath && pathname.toLowerCase() !== archiveFallbackPath.toLowerCase()) {
+        return Response.redirect(`${url.origin}${archiveFallbackPath}${url.search}`, 301);
+      }
       return context.next();
     }
 

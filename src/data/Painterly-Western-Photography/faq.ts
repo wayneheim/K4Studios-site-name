@@ -1,6 +1,6 @@
 export const facingFAQ = [
   {
-    q: "What is painterly Western photography?",
+    q: "What is Western painterly photography?",
     a: [
       "Painterly Western photography is a fine art discipline that combines photographic realism with the compositional restraint of painting and cinema. It emphasizes light, structure, tonal control, and atmosphere to create images that feel remembered rather than merely recorded.",
       "Rather than relying on surface effects, this approach is built through intentional capture, deliberate shaping of light, and narrative restraint — allowing story and emotion to emerge naturally within the frame."

@@ -37,6 +37,8 @@ export const entranceData = {
   details: `
     Every portrait in this color gallery is built with care, respect, and historical sensitivity, working with reenactors and cultural interpreters to preserve authenticity in attire, gesture, and setting. Wayne’s painterly process uses tonal shaping, controlled color, and classical composition to create portraits that feel intimate, grounded, and alive.<br><br>
 
+    This portrait series belongs within the broader <a href="/Painterly-Western-Photography" style="color:#85644b; text-decoration:underline; transition:color 0.2s;" onmouseover="this.style.color='#a74219'" onmouseout="this.style.color='#85644b'">Painterly Western Photography collection</a>, where figures of the American West are treated through atmosphere, restraint, and narrative presence.<br><br>
+
     These museum-quality fine art prints are available on archival paper, acrylic, metal, and Baltic Birch wood. Each finish supports different aspects of the work, from subtle surface texture to richer color depth, giving collectors flexible ways to live with the image.<br><br>
 
     For a more stripped and tonal reading of the same body of work, visit the companion <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White" style="color:#85644b; text-decoration:underline; transition:color 0.2s;" onmouseover="this.style.color='#a74219'" onmouseout="this.style.color='#85644b'">black-and-white Native American portraits gallery</a>.
