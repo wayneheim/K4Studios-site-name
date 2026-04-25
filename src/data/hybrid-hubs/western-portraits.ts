@@ -89,6 +89,12 @@ export const landing = {
   keywords: [
     'western portrait photography',
     'western portraits',
+    'cowgirl photos',
+    'cowgirl pictures',
+    'cowgirl images',
+    'cowgirl photography',
+    'frontier women',
+    'women of the west',
     'cowboy portrait photography',
     'western cowboy portraits',
     'black and white western portraits',
@@ -121,6 +127,7 @@ export const storyBlocks = [
     subhead: 'The strongest Western portraits do not stop at likeness.',
     paragraphs: [
       'Western portrait photography works best when the figure arrives as a person before arriving as an icon. Once the image turns into cowboy shorthand or historical costume alone, it loses the pressure that makes portraiture stay active on the wall.',
+      'This includes visitors searching for cowgirl photos, cowgirl pictures, or women of the West. The aim here is not costume-forward novelty, but authored Western portraits where presence, uncertainty, humor, danger, and resolve are allowed to coexist.',
       'The better pages in this cluster succeed because they let expression, posture, weathering, and atmosphere do the heavy lifting first. The portrait feels chosen, not stacked into a category bin.',
     ],
   },
@@ -128,6 +135,7 @@ export const storyBlocks = [
     subhead: 'Why this term needs a curated route',
     paragraphs: [
       'Visitors searching Western portraits are often looking for several related things at once: cowboy portraiture, black and white Western studies, and historically grounded portrait work with more gravity than decor. This page should separate those paths without making the interface feel commercial or overbuilt.',
+      'Many visitors still use broader phrases like western portrait photography and cowgirl photography. This route welcomes that language while keeping the visual tone aligned with K4 authorship and fine art intent.',
       'That is why the page stays selective up front, then opens into grouped portrait lanes below instead of dumping the whole archive in one flat wall.',
     ],
   },
@@ -357,7 +365,7 @@ export const faqItems = [
 ];
 
 export const pageMeta = {
-  title: 'Western Portrait Photography | Character-Driven Cowboy and Frontier Portraits – K4 Studios',
+  title: 'Western Portrait Photography | Cowgirl Photos, Cowboy Portraits, and Frontier Women',
   description: 'Western portrait photography by Wayne Heim presented as a curated route into cowboy portraits, Native American portrait work, and black-and-white Western character studies.',
 };
 

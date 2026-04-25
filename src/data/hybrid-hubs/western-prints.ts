@@ -121,6 +121,7 @@ export const storyBlocks = [
     subhead: 'A print page should feel curated, not piled high.',
     paragraphs: [
       'Western photography prints should not behave like a crowded storefront. The stronger move is to name the kind of work being offered, show a restrained sample, and let the visitor feel where the deeper story actually lives.',
+      'Many visitors arrive through plain-language intent like western art prints, western prints, cowboy art prints, or western wall art. This page keeps that doorway open while preserving K4\'s narrative-first standard.',
       'That matters here because the winning K4 pages in search are not generic catalog pages. They are cleaner hybrid pages and gallery endpoints that frame the work through atmosphere, narrative pressure, and authorship before asking for commitment.',
     ],
   },
@@ -128,13 +129,14 @@ export const storyBlocks = [
     subhead: 'What makes these Western prints different',
     paragraphs: [
       'These prints are built from cowboy portraits, Wild West narratives, and historically grounded images that keep atmosphere and consequence active on the wall. They are not just Western subjects translated into product language.',
-      'The page therefore works best when it behaves as a Trojan horse: it satisfies print intent at the surface, then reveals the deeper visual system underneath.',
+      'The page therefore works best when it meets print intent at the surface, then gradually reveals the deeper visual system underneath.',
     ],
   },
   {
     subhead: 'Where the page should send the visitor',
     paragraphs: [
       'Some visitors need a clean wall-art path. Others need the narrative bridge that explains why the work feels cinematic or unresolved. Others are ready for formats and collector options. This page should open those routes without turning into all of them at once.',
+      'For stronger subject routes, continue into <a href="/Cowboy-Fine-Art-Photography">Cowboy Fine Art Photography</a>, <a href="/wild-west-art">Wild West photography and art</a>, and <a href="/western-portrait-photography">cowgirl and Western portrait photography</a>.',
       'That is why the sample below stays selective and the lower sections push into Western Wall Art, Western Storytelling Photography, and print-format decisions instead of dumping the full archive up front.',
     ],
   },

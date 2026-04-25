@@ -252,7 +252,7 @@ const tombstonesWithThumbs = landingCowboy.tombstones.map((stone: any) => {
 ---
 
 <BaseLayout
-  title="Cowboy Fine Art Photography – Wayne Heim"
+  title="Cowboy Fine Art Photography | Painterly Cowboy Pictures and Western Art Prints"
   structuredDataJSON={structuredData}
   breadcrumbsJSON={breadcrumbData}
   meta={meta}
@@ -306,6 +306,13 @@ const tombstonesWithThumbs = landingCowboy.tombstones.map((stone: any) => {
         <h2 class="page-subtitle fade-in reveal-on-scroll">{landingCowboy.subtitle}</h2>
         <p class="page-summary fade-in reveal-on-scroll">
           Cowboy fine art photography is authored portraiture that treats the cowboy as a subject worthy of the same interpretive craft traditionally reserved for painted figures.
+        </p>
+        <h2 class="page-support-heading fade-in reveal-on-scroll">Cowboy Pictures Beyond the Cliche</h2>
+        <p class="page-summary fade-in reveal-on-scroll">
+          Many people begin with a simple search for cowboy pictures, cowboy photos, cowboy images, or black and white cowboy photos. K4 uses that familiar doorway to lead into something more layered: painterly cowboy photography shaped by gesture, consequence, silence, and story.
+        </p>
+        <p class="page-summary fade-in reveal-on-scroll">
+          Continue into <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White">black and white cowboy portraits</a>, <a href="/western-portrait-photography">cowgirl photos and Western portraits</a>, and <a href="/Western-Photography-Prints">Western art prints</a>.
         </p>
         <p class="page-context-link fade-in reveal-on-scroll">
           For print-first browsing and format pathways, start with <a href="/Western-Photography-Prints">western photography prints</a>.
@@ -520,8 +527,28 @@ const tombstonesWithThumbs = landingCowboy.tombstones.map((stone: any) => {
       text-align: center;
       opacity: 0.92;
     }
+    .page-summary a,
+    .page-context-link a {
+      color: #7a4d25;
+      text-decoration: underline;
+      text-underline-offset: 0.12em;
+    }
+    .page-summary a:hover,
+    .page-context-link a:hover {
+      color: #5d3617;
+    }
+    .page-support-heading {
+      margin: 1.05rem auto 0;
+      font-size: 1.12rem;
+      line-height: 1.35;
+      font-weight: 700;
+      color: #705a47;
+      text-align: center;
+      font-family: 'Glegoo', serif;
+    }
     @media (max-width: 768px) {
       .page-summary { font-size: 0.95rem; padding: 0 1rem; max-width: 90%; }
+      .page-support-heading { font-size: 1.02rem; padding: 0 1rem; max-width: 90%; }
     }
 
     /* Collections nav section (tombstones) */

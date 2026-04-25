@@ -86,7 +86,12 @@ export const landing = {
   subtitle: 'Wild West art shaped through frontier narrative, atmosphere, and the lived pressure beneath the legend rather than novelty nostalgia.',
   keywords: [
     'wild west art',
+    'wild west photography',
     'wild west artwork',
+    'old west photography',
+    'old western photos',
+    'western photos',
+    'western pictures',
     'frontier art',
     'frontier western art',
   ],
@@ -114,9 +119,10 @@ const heroSlideIds = hybridCarouselProps.slides.map((slide: any) => slide.id);
 export const storyBlocks = [
   {
     title: 'Wild West Art',
-    subhead: 'The phrase only matters if it points past costume and cliché.',
+    subhead: 'Wild West Photography Beneath the Legend',
     paragraphs: [
       'Wild West art is one of those terms people use because they know the atmosphere they want before they know the exact category. They may mean vintage cowboy art, old western art, or frontier scenes that feel steeped in myth. The stronger route is not to deny that language, but to deepen it until the search lands on work with real narrative and historical pressure.',
+      'Wild West photography often starts with familiar symbols: dust, hats, horses, guns, and frontier light. This body of work uses those signs as an entry point, then turns toward the deeper human drama beneath the legend - choices, losses, loyalties, and unfinished stories that made the West endure.',
       'That is why this page sits closer to frontier memory than to novelty nostalgia. The Wild West becomes meaningful when the legend is forced back through the people, land, silence, and consequence that produced it.',
     ],
   },
@@ -131,6 +137,7 @@ export const storyBlocks = [
     subhead: 'Old West feeling, authored rather than imitated',
     paragraphs: [
       'At K4 Studios the Wild West branch is built through painterly photography, not retro effects. Tone, restraint, and atmospheric control carry the period feeling. The result can speak to visitors searching vintage western art while still holding up as collected work rather than themed decor.',
+      'If you want the broader authority route, return to <a href="/Western-Fine-Art-Photography">Western Fine Art Photography</a>. If you want the still-image thesis underneath these scenes, read <a href="/One-Image-Movie">One-Image Movie</a>. If your intent is buying, continue into <a href="/cowboy-art-prints">Cowboy Art Prints</a>.',
       'From here the paths divide naturally into narrative scenes, black-and-white frontier portraits, and historically grounded Native portrait work that widens the story beyond the usual icons.',
     ],
   },
