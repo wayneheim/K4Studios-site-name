@@ -4,6 +4,30 @@
 **Status:** Active working reference  
 **Purpose:** Keep a single internal record of which SEO terms K4 Studios is actively targeting, which URL is intended to carry each term, and which terms are already considered covered so we do not create redundant pages.
 
+## Active Campaign Update (Hank Directive - April 24, 2026)
+
+This campaign adds a plain-language doorway layer without weakening K4's authored fine-art voice.
+
+- Master execution note: `docs/Hank-Directive-Execution-Plan-2026-04-24.md`
+- Keyword ownership sheet: `semrush-capture-2026-04-24/hank-keyword-ownership-sheet.csv`
+- Backlink recon shortlist: `semrush-capture-2026-04-24/hank-backlink-recon-candidates.csv`
+
+### Locked ownership routes for doorway clusters
+
+- Western authority: `/Western-Fine-Art-Photography`
+- Cowboy authority: `/Cowboy-Fine-Art-Photography`
+- Wild West authority: `/wild-west-art`
+- Cowgirl and portrait route: `/western-portrait-photography`
+- Commercial print routes: `/Western-Photography-Prints`, `/cowboy-art-prints`
+
+### Winner-protection routes (do not destabilize)
+
+- `/Blog/what-makes-an-image-feel-cinematic`
+- `/Blog/what-is-painterly-photography`
+- `/Blog/what-is-narrative-photography`
+- `/Blog/what-is-visual-storytelling-in-photography`
+- `/Pictorialist-Photography`
+
 ---
 
 ## Working Rules
