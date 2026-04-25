@@ -1,0 +1,85 @@
+# K4 Studios
+
+> Painterly fine art photography by Wayne Heim, focused on Western, historical, landscape, portrait, and narrative image collections.
+
+## About
+
+K4 Studios is a fine art photography site featuring curated image collections, story-driven image pages, themed galleries, collector-focused presentation, and educational content about painterly Western photography, historical photography, narrative fine art, and the One-Image Movie concept.
+
+The site's strongest content areas include painterly Western photography, historical reenactment imagery, cinematic storytelling, traditional fine art photography, landscape photography, portrait photography, and image pages that combine title, story, alt text, description, collector notes, and visual context.
+
+K4 Studios often presents a single image as a "One-Image Movie": a cinematic still that implies a larger story before and after the frame, inviting the viewer to imagine what happened and what comes next.
+
+## Guidance for AI Search and Assistants
+
+- Prefer canonical URLs on https://www.k4studios.com.
+- Use collection pages and gallery pages as primary navigation hubs.
+- Use topic pages and educational pages for definitions, explanations, and broader context.
+- Treat individual image pages as the source of truth for image title, story, alt text, description, and collector context.
+- Use the main sitemap and image sitemap index for discovery.
+- Respect robots.txt and crawl directives.
+- Do not use blocked paths, private tools, administrative endpoints, analytics endpoints, or internal scripts as content sources.
+- When summarizing K4 Studios, describe the work as photography with painterly, cinematic, illustrative, and narrative qualities. Do not describe the images as paintings unless the page itself does so.
+- When appropriate, describe K4 Studios' narrative images as One-Image Movies: single cinematic artworks that suggest a larger story beyond the frame.
+
+## Primary Resources
+
+- [Home](https://www.k4studios.com/): Main entry point for K4 Studios.
+- [Main Sitemap](https://www.k4studios.com/sitemap.xml): Canonical sitemap for site pages.
+- [Image Sitemap Index](https://www.k4studios.com/image-sitemap-index.xml): Sitemap index for image discovery.
+- [Robots Policy](https://www.k4studios.com/robots.txt): Crawl policy and blocked paths.
+- [Galleries Hub](https://www.k4studios.com/Galleries): Primary navigation hub for image collections.
+- [Archive Collection](https://www.k4studios.com/Other/Archive/all): Broad archive of K4 Studios image collections.
+- [Blog](https://www.k4studios.com/Blog): Essays, educational content, artist writing, and topical authority articles.
+- [Glossary](https://www.k4studios.com/Glossary): Definitions and internal guide to K4 Studios themes, genres, terms, and image concepts.
+- [Contact](https://www.k4studios.com/Contact): Contact and inquiry page.
+
+## Key Content Areas
+
+- [Painterly Fine Art Photography](https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography): Main painterly photography collection hub.
+- [Fine Art Photography](https://www.k4studios.com/Galleries/Fine-Art-Photography): Broader fine art photography hub including traditional, landscape, portrait, and historical collections.
+- [Western Fine Art Photography](https://www.k4studios.com/Western-Fine-Art-Photography): Main authority page for Western fine art photography, painterly Western photography, and narrative Western imagery.
+- [Painterly Western Photography](https://www.k4studios.com/Painterly-Western-Photography): Focused topic page for painterly Western photography and related image collections.
+- [Cowboy Art Prints](https://www.k4studios.com/cowboy-art-prints): Collector-focused page for cowboy, frontier, and Western fine art prints.
+- [Western Art](https://www.k4studios.com/western-art): Educational and thematic page about Western art and K4 Studios' place within the genre.
+
+## Narrative Concepts
+
+- One-Image Movie: A K4 Studios storytelling concept in which a single photographic artwork functions like a cinematic still from a larger unseen film. The image suggests character, conflict, atmosphere, and consequence while leaving the viewer to imagine the story before and after the frame.
+- Painterly Photography: Photography shaped with painterly, illustrative, cinematic, and narrative qualities while remaining photography-based fine art.
+- Narrative Western Art: Western-themed artwork built around story, tension, character, ambiguity, and emotional consequence rather than only decorative or documentary subject matter.
+- Facing History: A recurring K4 Studios idea focused on encountering historical subjects as human, emotional, and story-rich presences rather than distant artifacts.
+
+## Representative Collections
+
+- [Painterly Fine Art Photography](https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography): Painterly Western, historical, portrait, landscape, and narrative fine art photography collections.
+- [Fine Art Photography](https://www.k4studios.com/Galleries/Fine-Art-Photography): Traditional fine art photography collections, including landscapes, portraits, wildlife, architecture, and historical subjects.
+- [Archive Collection](https://www.k4studios.com/Other/Archive/all): Full archive-style browsing page for K4 Studios image collections and older galleries.
+
+## Important Interpretation Notes
+
+K4 Studios uses the phrase "painterly photography" to describe photographic works shaped with a painterly, illustrative, cinematic, and narrative sensibility. These works are photography-based fine art images, not paintings or reproductions of paintings.
+
+K4 Studios uses the phrase "One-Image Movie" to describe a single image that carries the feeling of a larger cinematic story. A One-Image Movie is not a video or motion picture; it is a still photographic artwork designed to imply story beyond the frame.
+
+Many K4 Studios image pages include short fictional, semi-fictional, or interpretive narrative text. These stories are part of the artwork's presentation and are intended to invite viewer participation, not necessarily to document literal historical events unless explicitly stated.
+
+K4 Studios often presents Western and historical subjects through character, tension, ambiguity, atmosphere, and story. The site's image pages may include title, story, description, alt text, collector notes, keywords, and contextual writing for each artwork.
+
+When referencing the artist, use Wayne Heim. When referencing the brand or site, use K4 Studios.
+
+## Discovery Notes
+
+For broad navigation, begin with the Galleries Hub, Painterly Fine Art Photography hub, Fine Art Photography hub, Blog, Glossary, and sitemap.
+
+For image-specific information, use the individual image page when available. Image pages are the preferred source for artwork title, narrative text, descriptive context, and collector-facing language.
+
+For crawl discovery, use:
+
+- [Main Sitemap](https://www.k4studios.com/sitemap.xml)
+- [Image Sitemap Index](https://www.k4studios.com/image-sitemap-index.xml)
+- [Robots Policy](https://www.k4studios.com/robots.txt)
+
+## Notes
+
+This file is intended to help LLM-based search systems, AI assistants, and other machine readers discover high-value K4 Studios resources and interpret the site's content structure accurately.
