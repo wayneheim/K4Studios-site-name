@@ -86,6 +86,8 @@ const singlePreviewImage =
 const currentIndex = navigableImages.findIndex((img) => img.id === initialImageId);
 const forcedImage = currentIndex >= 0 ? navigableImages[currentIndex] : singlePreviewImage;
 const selectedImage = currentImage || forcedImage;
+const previousImage = currentIndex > 0 ? navigableImages[currentIndex - 1] : null;
+const nextImage = currentIndex >= 0 && currentIndex < navigableImages.length - 1 ? navigableImages[currentIndex + 1] : null;
 
 const usedEntranceData = {
   ...entranceData,
@@ -118,6 +120,7 @@ const galleryAbsUrl = `${siteBase}${previewPath}`;
  * --------------------------------------------------------------- */
 const lastSegment = Astro.url?.pathname?.split("/").pop() || "";
 const isImagePage = lastSegment.startsWith("i-");
+const isCivilWarGallery = galleryPath.includes('/Civil-War-Portraits');
 // Check for ?view=grid (shared theme links should skip intro)
 const isDirectGridView = Astro.url.searchParams.get("view") === "grid";
 const skipIntro = isImagePage || isDirectGridView;
@@ -300,6 +303,14 @@ const meta = {
   <div class="h-12 md:h-20"></div>
 
   {/* ImageDetailsWidget removed - "More about this image" now in ChapterGalleryBase */}
+
+  {isImagePage && isCivilWarGallery && (
+    <section class="max-w-5xl mx-auto px-4 md:px-6 mb-8" aria-label="Civil War context">
+      <p class="text-sm md:text-base text-[#4e4339] leading-7">
+        Looking for the broader framing behind this image? Visit <a href="/Civil-War-Art" class="underline decoration-[#8b5a2b] underline-offset-2 hover:text-[#7a4f24]">Civil War Art</a> for the definition, narrative thesis, and collection routes.
+      </p>
+    </section>
+  )}
 
   <Footer
     previewImages={previewImages}

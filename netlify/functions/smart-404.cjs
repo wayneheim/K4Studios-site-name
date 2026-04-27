@@ -16,7 +16,10 @@ let _imageIdMapLower = null;
 let _knownGalleryPathsLower = null;
 let _branded404Html = null;
 let _branded404FetchedAt = 0;
+let _imageManifestMap = null;
+let _imageManifestFetchedAt = 0;
 const BRANDED_404_CACHE_TTL_MS = 300000;
+const IMAGE_MANIFEST_CACHE_TTL_MS = 300000;
 
 const SPECIAL_IMAGE_IDS = new Set(['i-k4studios']);
 const IMAGE_ID_STRICT_REGEX = /^i-[A-Za-z0-9]{6,10}$/;
@@ -172,6 +175,51 @@ async function getBranded404Html(event) {
   }
 
   return '<!DOCTYPE html><html><head><title>Not Found</title></head><body><h1>404 Not Found</h1></body></html>';
+}
+
+async function getImageManifestMap(event) {
+  const now = Date.now();
+  if (_imageManifestMap && (now - _imageManifestFetchedAt) < IMAGE_MANIFEST_CACHE_TTL_MS) {
+    return _imageManifestMap;
+  }
+
+  const origin = getOriginFromEvent(event);
+  const url = `${origin}/image-manifest.json`;
+  try {
+    const resp = await fetch(url, {
+      method: 'GET',
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (!resp || !resp.ok) return null;
+
+    const json = await resp.json();
+    if (!json || typeof json !== 'object') return null;
+
+    const lowerMap = {};
+    for (const [key, value] of Object.entries(json)) {
+      lowerMap[String(key || '').toLowerCase()] = value;
+    }
+
+    _imageManifestMap = lowerMap;
+    _imageManifestFetchedAt = now;
+    return _imageManifestMap;
+  } catch (e) {
+    console.log(`[smart-404] image-manifest fetch failed: ${e?.message || e}`);
+    return null;
+  }
+}
+
+function pickManifestImagePagePath(entry, imageId) {
+  if (!entry || typeof entry !== 'object') return '';
+  const paths = Array.isArray(entry.paths) ? entry.paths : [];
+  const firstPath = paths.find((p) => {
+    if (typeof p !== 'string') return false;
+    const n = normalizePath(p).toLowerCase();
+    return n.startsWith('/galleries/');
+  });
+  if (!firstPath || !imageId) return '';
+  return `${normalizePath(firstPath)}/${imageId}`;
 }
 
 async function createBranded404Response(event, reason, maxAge = 86400) {
@@ -395,6 +443,25 @@ exports.handler = async (event) => {
     return createBranded404Response(event, 'invalid-id-format');
   }
 
+  // Ghost sentinel URLs must never be rematched or redirected.
+  if (String(imageId || '').toLowerCase() === GHOST_IMAGE_ID) {
+    await logSmart404EdgeEvent({
+      outcome: 'ghost_id_rejected',
+      path: requestedPath,
+      imageId,
+      reason: 'ghost-id-rejected'
+    });
+    return {
+      statusCode: 410,
+      headers: {
+        'Cache-Control': 'public, max-age=86400',
+        'X-Robots-Tag': 'noindex, nofollow',
+        'X-Smart-404': 'ghost-id-rejected'
+      },
+      body: ''
+    };
+  }
+
   // Validate namespace shape first, but do not require parent gallery to exist.
   // Moved images should rematch by image ID and 301 to the canonical path.
   const isSupportedNamespace = /^\/(?:galleries|other|photography-galleries)\//i.test(requestedPath || '');
@@ -463,12 +530,21 @@ exports.handler = async (event) => {
 
     console.log(`[smart-404] Requested path already matches a valid gallery membership: ${requestedPath}`);
     await logSmart404EdgeEvent({
-      outcome: 'valid_membership_path',
+      outcome: 'valid_membership_fallback_gallery',
       path: requestedPath,
       imageId: canonicalImageId,
-      reason: 'valid-membership-path'
+      reason: 'valid-membership-fallback-gallery'
     });
-    return createBranded404Response(event, 'valid-membership-path', 300);
+    const fallbackGalleryUrl = `${normalizePath(matchingGalleryPath)}${passthroughQuery}`;
+    return {
+      statusCode: 301,
+      headers: {
+        'Location': fallbackGalleryUrl,
+        'Cache-Control': 'public, max-age=86400',
+        'X-Smart-404': 'valid-membership-fallback-gallery'
+      },
+      body: ''
+    };
   }
 
   correctGalleryPath = pickCanonicalGalleryPath(requestedPath, candidatePaths);
@@ -499,6 +575,55 @@ exports.handler = async (event) => {
   }
   
   // Image ID shape and gallery path are valid, but ID is unknown.
+  // Before returning 404, check image-manifest to catch real IDs that are
+  // temporarily missing from imageIdMap and recover to the parent gallery.
+  const manifestMap = await getImageManifestMap(event);
+  const normalizedImageIdLower = String(imageId || '').toLowerCase();
+  const manifestEntry = manifestMap && manifestMap[normalizedImageIdLower];
+  if (manifestEntry) {
+    const manifestImagePagePath = pickManifestImagePagePath(manifestEntry, imageId);
+    if (manifestImagePagePath && manifestImagePagePath.toLowerCase() !== normalizePath(requestedPath).toLowerCase()) {
+      const redirectUrl = `${manifestImagePagePath}${passthroughQuery}`;
+      console.log(`[smart-404] ID found in image-manifest, redirecting to manifest image page path: ${redirectUrl}`);
+      await logSmart404EdgeEvent({
+        outcome: 'manifest_id_image_page_redirect',
+        path: requestedPath,
+        imageId,
+        reason: 'manifest-id-image-page-redirect'
+      });
+      return {
+        statusCode: 301,
+        headers: {
+          'Location': redirectUrl,
+          'Cache-Control': 'public, max-age=86400',
+          'X-Smart-404': 'manifest-id-image-page-redirect'
+        },
+        body: ''
+      };
+    }
+
+    const parentNormalized = normalizePath(parentGalleryPath);
+    if (parentNormalized) {
+      const fallbackGalleryUrl = `${parentNormalized}${passthroughQuery}`;
+      console.log(`[smart-404] ID found in image-manifest but missing in imageIdMap, redirecting to parent gallery: ${fallbackGalleryUrl}`);
+      await logSmart404EdgeEvent({
+        outcome: 'manifest_id_parent_gallery_fallback',
+        path: requestedPath,
+        imageId,
+        reason: 'manifest-id-parent-gallery-fallback'
+      });
+      return {
+        statusCode: 301,
+        headers: {
+          'Location': fallbackGalleryUrl,
+          'Cache-Control': 'public, max-age=86400',
+          'X-Smart-404': 'manifest-id-parent-gallery-fallback'
+        },
+        body: ''
+      };
+    }
+  }
+
   // Deterministic crawl-safe response for all UAs.
   console.log(`[smart-404] Unknown image ID (deterministic 404): ${imageId}`);
   await logSmart404EdgeEvent({

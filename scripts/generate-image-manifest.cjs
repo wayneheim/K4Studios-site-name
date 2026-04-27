@@ -150,6 +150,11 @@ function urlMatchesId(url, id) {
   return typeof url === 'string' && typeof id === 'string' && url.includes(`/${id}/`);
 }
 
+function urlMatchesAnyId(url, ids) {
+  if (!Array.isArray(ids) || ids.length === 0) return false;
+  return ids.some((id) => urlMatchesId(url, id));
+}
+
 function extractImagesFromGalleryData(galleryData) {
   const images = [];
   if (!Array.isArray(galleryData)) return images;
@@ -158,12 +163,17 @@ function extractImagesFromGalleryData(galleryData) {
     const id = item && typeof item.id === 'string' ? item.id : '';
     if (!id.startsWith('i-') || id === 'i-k4studios') continue;
 
+    const idCandidates = [id];
+    if (typeof item.proxyAliasId === 'string' && item.proxyAliasId.startsWith('i-')) {
+      idCandidates.push(item.proxyAliasId);
+    }
+
     const urls = {};
-    if (isSmugMugUrl(item.srcS) && urlMatchesId(item.srcS, id)) urls.s = item.srcS;
-    if (isSmugMugUrl(item.srcM) && urlMatchesId(item.srcM, id)) urls.m = item.srcM;
-    if (isSmugMugUrl(item.srcL) && urlMatchesId(item.srcL, id)) urls.l = item.srcL;
-    if (isSmugMugUrl(item.srcXL) && urlMatchesId(item.srcXL, id)) urls.xl = item.srcXL;
-    if (isSmugMugUrl(item.src) && urlMatchesId(item.src, id)) urls.src = item.src;
+    if (isSmugMugUrl(item.srcS) && urlMatchesAnyId(item.srcS, idCandidates)) urls.s = item.srcS;
+    if (isSmugMugUrl(item.srcM) && urlMatchesAnyId(item.srcM, idCandidates)) urls.m = item.srcM;
+    if (isSmugMugUrl(item.srcL) && urlMatchesAnyId(item.srcL, idCandidates)) urls.l = item.srcL;
+    if (isSmugMugUrl(item.srcXL) && urlMatchesAnyId(item.srcXL, idCandidates)) urls.xl = item.srcXL;
+    if (isSmugMugUrl(item.src) && urlMatchesAnyId(item.src, idCandidates)) urls.src = item.src;
 
     if (Object.keys(urls).length > 0) {
       images.push({ id, urls });
@@ -171,6 +181,26 @@ function extractImagesFromGalleryData(galleryData) {
   }
 
   return images;
+}
+
+function toGalleryRoute(filePath) {
+  const rel = path.relative(DATA_DIR, filePath).replace(/\\/g, '/');
+  if (!rel.toLowerCase().endsWith('.mjs')) return '';
+
+  const withoutExt = rel.slice(0, -4); // strip .mjs
+  const parts = withoutExt.split('/').filter(Boolean);
+  if (parts.length === 0) return '';
+
+  // Collapse /Foo/Foo.mjs -> /Foo
+  if (parts.length >= 2) {
+    const last = parts[parts.length - 1].toLowerCase();
+    const prev = parts[parts.length - 2].toLowerCase();
+    if (last === prev) {
+      parts.pop();
+    }
+  }
+
+  return `/${parts.join('/')}`;
 }
 
 async function loadGalleryData(filePath) {
@@ -198,6 +228,7 @@ async function main() {
     try {
       const galleryData = await loadGalleryData(filePath);
       const images = extractImagesFromGalleryData(galleryData);
+      const galleryRoute = toGalleryRoute(filePath);
       
       if (images.length === 0) {
         skippedFiles++;
@@ -210,7 +241,15 @@ async function main() {
           manifest[id] = mergeUrlsByQuality(manifest[id], urls);
         } else {
           manifest[id] = mergeUrlsByQuality({}, urls);
+          manifest[id].paths = [];
           imageCount++;
+        }
+
+        if (!Array.isArray(manifest[id].paths)) {
+          manifest[id].paths = [];
+        }
+        if (galleryRoute && !manifest[id].paths.includes(galleryRoute)) {
+          manifest[id].paths.push(galleryRoute);
         }
         urlCount += Object.keys(urls).length;
       }

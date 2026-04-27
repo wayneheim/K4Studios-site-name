@@ -1,4 +1,5 @@
 const IMAGE_ID_MAP_URL = 'https://www.k4studios.com/imageIdMap.json';
+const IMAGE_MANIFEST_URL = 'https://www.k4studios.com/image-manifest.json';
 const CACHE_TTL_MS = 5 * 60 * 1000;
 
 // IDs intentionally omitted from imageIdMap (for example hidden archive items)
@@ -8,9 +9,13 @@ const ARCHIVE_FALLBACK_BY_ID: Record<string, string> = {
 };
 
 type ImageIdMap = Record<string, string[] | string>;
+const GHOST_IMAGE_ID = 'i-k4studios';
 
 let imageIdMapCache: ImageIdMap | null = null;
 let imageIdMapCacheTime = 0;
+let imageManifestIdSetCache: Set<string> | null = null;
+let imageManifestMapCache: Record<string, any> | null = null;
+let imageManifestCacheTime = 0;
 
 function normalizePath(pathname: string): string {
   if (!pathname) return '';
@@ -96,6 +101,45 @@ async function getImageIdMap(): Promise<ImageIdMap> {
   return json;
 }
 
+async function getImageManifestIdSet(): Promise<Set<string> | null> {
+  const now = Date.now();
+  if (imageManifestIdSetCache && now - imageManifestCacheTime < CACHE_TTL_MS) {
+    return imageManifestIdSetCache;
+  }
+
+  const response = await fetch(IMAGE_MANIFEST_URL, {
+    headers: { Accept: 'application/json' },
+  });
+
+  if (!response.ok) {
+    return null;
+  }
+
+  const json = (await response.json()) as Record<string, unknown>;
+  const lowerMap: Record<string, unknown> = {};
+  for (const [k, v] of Object.entries(json || {})) {
+    lowerMap[String(k || '').toLowerCase()] = v;
+  }
+
+  imageManifestMapCache = lowerMap;
+  imageManifestIdSetCache = new Set(Object.keys(json || {}).map((k) => String(k || '').toLowerCase()));
+  imageManifestCacheTime = now;
+  return imageManifestIdSetCache;
+}
+
+function pickManifestImagePagePath(entry: Record<string, unknown> | null | undefined, imageId: string): string {
+  if (!entry || typeof entry !== 'object') return '';
+  const rawPaths = (entry as any).paths;
+  const paths = Array.isArray(rawPaths) ? rawPaths : [];
+  const firstPath = paths.find((p): p is string => {
+    if (typeof p !== 'string') return false;
+    const n = normalizePath(p).toLowerCase();
+    return n.startsWith('/galleries/');
+  });
+  if (!firstPath || !imageId) return '';
+  return `${normalizePath(firstPath)}/${imageId}`;
+}
+
 export default async function smart404Edge(request: Request, context: { next: () => Promise<Response> }) {
   const url = new URL(request.url);
   const pathname = normalizePath(url.pathname);
@@ -109,10 +153,35 @@ export default async function smart404Edge(request: Request, context: { next: ()
     return context.next();
   }
 
+  if (String(imageId || '').toLowerCase() === GHOST_IMAGE_ID) {
+    return new Response('', {
+      status: 410,
+      headers: {
+        'Cache-Control': 'public, max-age=86400',
+        'X-Robots-Tag': 'noindex, nofollow'
+      }
+    });
+  }
+
   try {
     const imageIdMap = await getImageIdMap();
     const rawPaths = imageIdMap[imageId];
     if (!rawPaths) {
+      const manifestIds = await getImageManifestIdSet();
+      const imageIdLower = String(imageId || '').toLowerCase();
+      if (manifestIds && manifestIds.has(imageIdLower)) {
+        const manifestEntry = imageManifestMapCache?.[imageIdLower] as Record<string, unknown> | undefined;
+        const manifestImagePagePath = pickManifestImagePagePath(manifestEntry, imageId);
+        if (manifestImagePagePath && manifestImagePagePath.toLowerCase() !== pathname.toLowerCase()) {
+          return Response.redirect(`${url.origin}${manifestImagePagePath}${url.search}`, 301);
+        }
+
+        const parentGalleryPath = getParentGalleryPath(pathname);
+        if (parentGalleryPath) {
+          return Response.redirect(`${url.origin}${parentGalleryPath}${url.search}`, 301);
+        }
+      }
+
       const archiveFallbackPath = getArchiveFallbackPath(imageId);
       if (archiveFallbackPath && pathname.toLowerCase() !== archiveFallbackPath.toLowerCase()) {
         return Response.redirect(`${url.origin}${archiveFallbackPath}${url.search}`, 301);
@@ -134,7 +203,13 @@ export default async function smart404Edge(request: Request, context: { next: ()
         return Response.redirect(`${url.origin}${canonicalUrlPath}${url.search}`, 301);
       }
 
-      return context.next();
+      // If the request path is already a valid membership path, let the origin
+      // respond first. Recover only true misses (404) to gallery root.
+      const upstream = await context.next();
+      if (upstream.status === 404) {
+        return Response.redirect(`${url.origin}${matchingGalleryPath}${url.search}`, 301);
+      }
+      return upstream;
     }
 
     const canonicalGalleryPath = pickCanonicalGalleryPath(pathname, canonicalPaths);

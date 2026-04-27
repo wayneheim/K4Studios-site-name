@@ -80,9 +80,32 @@ const {
   breadcrumbHrefs: string[];
 } = Astro.props;
 
-// ✅ Build data path from href (href + .mjs = data file)
-const dataPath = `/src/data${galleryHref}.mjs`;
-const mod = galleryModules[dataPath] as any;
+// ✅ Resolve data module path from href.
+// Most gallery sources map to /src/data{href}.mjs, but some (e.g. /Other/Archive)
+// are stored as /src/data{href}/{leaf}.mjs.
+const buildDataModuleCandidates = (href: string) => {
+  const trimmed = href.replace(/\/+$/, '');
+  const leaf = trimmed.split('/').filter(Boolean).pop() || '';
+  const candidates = [
+    `/src/data${trimmed}.mjs`,
+  ];
+
+  if (leaf) {
+    candidates.push(`/src/data${trimmed}/${leaf}.mjs`);
+  }
+
+  return candidates;
+};
+
+const resolvedGalleryHrefForData = resolveGallerySourceHref(galleryHref);
+const dataModuleCandidates = [
+  ...buildDataModuleCandidates(galleryHref),
+  ...buildDataModuleCandidates(resolvedGalleryHrefForData),
+];
+
+const mod = dataModuleCandidates
+  .map((candidatePath) => galleryModules[candidatePath] as any)
+  .find(Boolean);
 
 // ✅ Load gallery data
 const rawGalleryData = mod?.galleryData || mod?.default || [];

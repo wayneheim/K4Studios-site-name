@@ -151,6 +151,19 @@ to = "/img/:id/:size.jpg"
 status = 301
 force = true
 
+# Targeted alias: legacy dead ID now mapped to live SmugMug source ID.
+[[redirects]]
+from = "/img/i-GmTkrzR/:size.jpg"
+to = "/img/i-7VSrLtw/:size.jpg"
+status = 301
+force = true
+
+[[redirects]]
+from = "/img/i-GmTkrzR/:size"
+to = "/img/i-7VSrLtw/:size.jpg"
+status = 301
+force = true
+
 [[redirects]]
 from = "/img/*"
 to = "https://k4-image-proxy.wayneheim.workers.dev/img/:splat"
@@ -342,6 +355,16 @@ from = "/Other/*/i-:id/A"
 to = "/.netlify/functions/smart-404?id=:id&path=/Other/:splat/i-:id/A"
 status = 404
 force = true
+
+[[redirects]]
+from = "/Galleries/*/i-:id"
+to = "/.netlify/functions/smart-404?id=:id&path=/Galleries/:splat/i-:id"
+status = 404
+
+[[redirects]]
+from = "/Galleries/*/i-:id/A"
+to = "/.netlify/functions/smart-404?id=:id&path=/Galleries/:splat/i-:id/A"
+status = 404
 
 [[redirects]]
 from = "/Other/Photo-Shoots"

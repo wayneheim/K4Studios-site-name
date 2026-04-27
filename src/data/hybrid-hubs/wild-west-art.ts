@@ -177,6 +177,12 @@ export const featuredReadingIntro = 'These supporting pages explain why the Wild
 
 export const featuredReadingItems = [
   {
+    title: 'Civil War Art',
+    href: '/Civil-War-Art',
+    description: 'Historical crossover authority page connecting Civil War pictures, photography, and artwork into a narrative fine art framework.',
+    eyebrow: 'Authority',
+  },
+  {
     title: 'Art of the West',
     href: '/Art-of-the-West',
     description: 'Use the broader concept page to place Wild West art inside the larger field of Western art rather than inside a novelty silo.',

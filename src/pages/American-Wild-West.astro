@@ -1,0 +1,224 @@
+---
+export const prerender = true;
+
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import CornerstoneArticle from '@/components/authority/CornerstoneArticle.astro';
+import { getStructuredData, getBreadcrumbList } from '@/components/utils/getStructuredData.ts';
+import {
+  cowboyColorDataFull,
+  cowboyBWData,
+  westernNarrativesColorData,
+  westernNarrativesBWData,
+} from '@/data/carousel/westernLandingContent.ts';
+
+const pagePath = '/american-wild-west';
+const canonicalUrl = `https://www.k4studios.com${pagePath}`;
+
+const pageTitle = 'American Wild West | Frontier History, Photography & Narrative Art';
+const pageDescription = 'Explore the American Wild West through narrative photography and frontier history. A story-driven bridge between the Civil War and Western legend.';
+
+const WILD_WEST_ART_PATH = '/wild-west-art';
+const CIVIL_WAR_ART_PATH = '/civil-war-art';
+const WESTERN_FINE_ART_PATH = '/Western-Fine-Art-Photography';
+const FACING_HISTORY_WILD_WEST_PATH = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West';
+const WESTERN_NARRATIVES_COLOR_PATH = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color';
+const COWBOY_COLOR_PATH = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color';
+
+function withGalleryPath(data: any[], galleryPath: string) {
+  return (data || []).map((img: any) => ({ ...img, galleryPath }));
+}
+
+function topRated(data: any[], count: number, skip = 0) {
+  return (data || [])
+    .filter((img: any) => img.id !== 'i-k4studios' && img.visibility !== 'ghost' && (img.rating || 0) >= 4)
+    .sort((a: any, b: any) => (a.sortOrder ?? 0) - (b.sortOrder ?? 0))
+    .slice(skip, skip + count);
+}
+
+function ensureAlt(img: any, fallback: string) {
+  return (img?.alt || img?.title || fallback || '').trim();
+}
+
+function makeSlide(img: any, hrefBase: string, fallback: string) {
+  return {
+    id: img.id,
+    title: img.title,
+    alt: ensureAlt(img, fallback),
+    story: img.story || img.description || '',
+    href: `${hrefBase}/${img.id}`,
+  };
+}
+
+function uniqueSlides(slides: any[]) {
+  const seen = new Set<string>();
+  return slides.filter((slide) => {
+    if (!slide?.id || seen.has(slide.id)) return false;
+    seen.add(slide.id);
+    return true;
+  });
+}
+
+const westernColor = withGalleryPath(westernNarrativesColorData, WESTERN_NARRATIVES_COLOR_PATH);
+const westernBW = withGalleryPath(westernNarrativesBWData, '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White');
+const cowboyColor = withGalleryPath(cowboyColorDataFull, COWBOY_COLOR_PATH);
+const cowboyBW = withGalleryPath(cowboyBWData, '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White');
+
+const slides = uniqueSlides([
+  ...topRated(westernColor, 3, 0).map((img: any) => makeSlide(img, img.galleryPath, 'Wild West narrative photography')),
+  ...topRated(cowboyColor, 2, 0).map((img: any) => makeSlide(img, img.galleryPath, 'Frontier portrait of the American Wild West')),
+]);
+
+const sampleSlides = uniqueSlides([
+  ...topRated(westernColor, 3, 3).map((img: any) => makeSlide(img, img.galleryPath, 'American Wild West narrative imagery')),
+  ...topRated(westernBW, 2, 0).map((img: any) => makeSlide(img, img.galleryPath, 'Wild West frontier photography')),
+  ...topRated(cowboyColor, 2, 2).map((img: any) => makeSlide(img, img.galleryPath, 'Western frontier portrait')),
+])
+  .filter((slide) => !slides.some((heroSlide) => heroSlide.id === slide.id))
+  .slice(0, 4);
+
+const breadcrumb = 'Home › American Wild West';
+
+const introParagraphs = [];
+
+const sections = [
+  {
+    heading: 'Part of the Facing History Collection',
+    paragraphs: [
+      'This page traces the transition between Civil War and Western legend—where displacement, pressure, and survival reshape individuals into the figures later remembered as the Wild West.',
+      `<a href="${CIVIL_WAR_ART_PATH}">← Return to Civil War Art</a>`,
+    ],
+  },
+  {
+    heading: 'From Civil War to the American Wild West',
+    paragraphs: [
+      'The end of the Civil War did not close a chapter—it displaced it.',
+      'Thousands of soldiers left the battlefield carrying skills, habits, and burdens that had no place in peacetime life. Discipline, violence, survival, and uncertainty did not disappear. They moved west.',
+      'In frontier towns and open territories, those same individuals became lawmen, outlaws, ranch hands, and drifters. The emotional and psychological weight of the Civil War did not stay behind—it reshaped itself into the world that would become known as the Wild West.',
+      'This is where history begins to shift—and where myth takes hold.',
+    ],
+  },
+  {
+    heading: 'The American Wild West as Lived Experience',
+    paragraphs: [
+      'The American Wild West is often reduced to imagery—horses, revolvers, open land, and motion. But those elements alone do not define it.',
+      'What shaped the Wild West was pressure: survival without structure, identity without stability, and consequence without distance from action.',
+      'These images are built as moments inside that pressure. They are not records of what happened, but interpretations of what it felt like to live inside it—where decisions carried weight, and outcomes were rarely clean.',
+      'This is where the distinction between documentation and narrative matters. One shows the event. The other places you inside it.',
+    ],
+  },
+];
+
+const faqItems = [
+  {
+    q: 'What is the relationship between Civil War art and Wild West imagery?',
+    a: `The Civil War and the American Wild West are historically connected through human consequence. Soldiers displaced from battle carried conflict habits and survival pressure westward. This page bridges that shift. Start with <a href="${CIVIL_WAR_ART_PATH}">Civil War Art</a>, then continue here, then move into <a href="${WILD_WEST_ART_PATH}">Wild West Art</a>.`,
+  },
+  {
+    q: 'Should I visit the Civil War page first?',
+    a: `Yes, ideally. The Civil War page establishes narrative foundations that make the Wild West transition clearer. But if you arrive here first looking for American Wild West imagery, this page works as a standalone entry point too.`,
+  },
+  {
+    q: 'What makes this different from typical Old West photography?',
+    a: `These are narrative fine art interpretations of frontier life, not documentary records or casual historical reenactment. The focus is on human consequence, adaptation, and the psychology of displacement—what frontier life felt like from inside the experience.`,
+  },
+  {
+    q: 'Where do I go after understanding the Wild West transition?',
+    a: `Move into <a href="${WILD_WEST_ART_PATH}">Wild West Art</a> to explore the full range of frontier narratives, then open <a href="${FACING_HISTORY_WILD_WEST_PATH}">Facing History: Wild West galleries</a> for deeper curation by region and character type.`,
+  },
+  {
+    q: 'Is this page a gallery I can browse?',
+    a: `Not directly—this is a narrative bridge page. For frontier history imagery you can browse directly, <a href="${WILD_WEST_ART_PATH}">start with Wild West Art</a> or move into the curated <a href="${WESTERN_FINE_ART_PATH}">Western Fine Art Photography</a> authority collection.`,
+  },
+  {
+    q: 'Why have both Civil War and Wild West pages separate from Western Fine Art Photography?',
+    a: `Each layer serves a different purpose in the narrative journey. Civil War explains conflict, American Wild West shows the transition, Wild West Art facilitates browsing, and Western Fine Art Photography is the full authority context. Together, they form the complete Facing History pathway.`,
+  },
+];
+
+const heroImage = slides[0] ? `https://www.k4studios.com/img/${slides[0].id}/l.jpg` : 'https://www.k4studios.com/images/K4Logo-web-c.webp';
+
+const structuredData = getStructuredData({
+  type: 'Article',
+  data: {
+    title: 'American Wild West',
+    headline: 'American Wild West | Frontier History, Photography & Narrative Art',
+    description: pageDescription,
+    url: canonicalUrl,
+    image: heroImage,
+    articleSection: sections.map((section) => section.heading),
+    keywords: [
+      'american wild west',
+      'frontier history',
+      'old west photography',
+      'wild west imagery',
+      'frontier photography',
+      'western frontier art',
+      'narrative western photography',
+    ],
+    faqItems: faqItems.map((item) => ({
+      question: item.q,
+      answer: Array.isArray(item.a) ? item.a.join(' ') : item.a,
+    })),
+  },
+  defaults: {
+    creatorName: 'Wayne Heim',
+    creatorUrl: 'https://www.k4studios.com/',
+  },
+});
+
+const breadcrumbData = getBreadcrumbList([
+  { name: 'Home', item: 'https://www.k4studios.com/' },
+  { name: 'American Wild West', item: canonicalUrl },
+]);
+
+const meta = {
+  title: pageTitle,
+  description: pageDescription,
+  canonicalUrl,
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogImage: heroImage,
+  ogUrl: canonicalUrl,
+  twitterTitle: pageTitle,
+  twitterDescription: pageDescription,
+  twitterImage: heroImage,
+  twitterUrl: canonicalUrl,
+};
+---
+
+<BaseLayout title={pageTitle} structuredDataJSON={structuredData} breadcrumbsJSON={breadcrumbData} meta={meta}>
+  <main class="bg-[#ffffff] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
+    <CornerstoneArticle
+      breadcrumb={breadcrumb}
+      title="American Wild West | Frontier History, Photography & Narrative Art"
+      subtitle=""
+      summaryParagraphs={[
+        'The American Wild West did not begin as legend. It emerged from the aftermath of the Civil War—carried west by individuals shaped by conflict, survival, and uncertainty.',
+        'Explore the frontier series where that aftermath becomes lived experience.',
+        `<a href='${WILD_WEST_ART_PATH}'>→ Enter Wild West Art</a>`,
+      ]}
+      summary=""
+      contextHtml=""
+      contextPlacement="none"
+      introParagraphs={introParagraphs}
+      quoteFirstIntroParagraph={false}
+      sections={sections}
+      slides={slides}
+      sampleSlides={sampleSlides}
+      relatedLinks={[]}
+      faqHeading="American Wild West FAQ"
+      faqItems={faqItems}
+      faqPlacement="bottom"
+      faqTagline="&quot;Where conflict becomes frontier, and consequence becomes legend.&quot;"
+      sampleGroups={[
+        {
+          afterSection: 1,
+          imageIndexes: [0, 1, 2],
+          caption: 'Frontier narrative photography showing the transformation from Civil War aftermath into Wild West emergence.',
+        },
+      ]}
+      carouselKicker="American Wild West Narrative Works"
+      carouselCounterLabel="Wild West Work"
+    />
+  </main>
+</BaseLayout>

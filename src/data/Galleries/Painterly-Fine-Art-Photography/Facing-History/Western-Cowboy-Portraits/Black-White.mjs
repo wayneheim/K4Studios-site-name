@@ -100,6 +100,29 @@ export const galleryData = [
  "sortOrder": 1
  },
  {
+ "id": "i-Mmszz6d",
+ "title": "A",
+ "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+ "alt": "New fine art photograph © Wayne Heim",
+ "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-Mmszz6d/0/KnRq5rMQWWW86xVCgQB94WJM2w9fQcmnkbbBKQzg8/XL/_O2H1672-XL.jpg",
+ "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-Mmszz6d/0/KnRq5rMQWWW86xVCgQB94WJM2w9fQcmnkbbBKQzg8/XL/_O2H1672-XL.jpg",
+ "srcL": "",
+ "srcM": "",
+ "srcS": "",
+ "srcOriginal": "",
+ "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-Mmszz6d/A",
+ "keywords": [
+ "HF23379",
+ "819"
+ ],
+ "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+ "notes": "",
+ "rating": 0,
+ "galleries": [],
+ "visibility": "show",
+ "sortOrder": 126
+ },
+ {
  "id": "i-W73hxx4",
  "title": "A Wink and a Nod to the Old West - Calamity Jane in Black & White",
  "description": "A confident frontier woman tips her hat and flashes a quick wink, her stance relaxed but full of character. The worn vest, bandana, and weathered textures evoke the rough humor and resilience often associated with figures of the American West. Captured in expressive black and white tones, the portrait highlights personality and presence within a timeless moment of Western storytelling. \n\n© Wayne Heim",
