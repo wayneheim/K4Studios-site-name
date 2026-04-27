@@ -122,6 +122,8 @@ dist
 # Local state files
 scripts/.indexnow-last-submit.json
 tmp_old_build/
+tmp_*.html
+cloudflare-worker/tmp_*.html
 
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
