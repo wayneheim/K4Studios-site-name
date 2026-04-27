@@ -9,13 +9,13 @@ export const prerender = true;
 
 import GalleryShell from '@/components/GalleryShell-Transportation-Trains-Black-White-Traditional.astro';
 import { entranceData as blackAndWhiteEntranceData } from "@/data/Galleries/Fine-Art-Photography/Transportation/Trains-Black-WhiteEntranceData.ts";
-import { galleryData } from '@/data/Galleries/Fine-Art-Photography/Transportation/Trains.mjs';
+import { galleryData } from '../../../../../data/Galleries/Fine-Art-Photography/Transportation/Trains-Black-White.mjs';
 
 // Generate static paths for all visible images at build time
 export async function getStaticPaths() {
   return galleryData
-    .filter(img => img.visibility !== 'hidden' && img.visibility !== 'hide' && img.visibility !== 'ghost' && img.id !== 'i-k4studios')
-    .map(img => ({ params: { id: img.id } }));
+    .filter((img: { id: string; visibility?: string }) => img.visibility !== 'hidden' && img.visibility !== 'hide' && img.visibility !== 'ghost' && img.id !== 'i-k4studios')
+    .map((img: { id: string }) => ({ params: { id: img.id } }));
 }
 
 const { id } = Astro.params;

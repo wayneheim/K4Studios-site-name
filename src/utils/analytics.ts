@@ -325,7 +325,6 @@ const DEFAULT_PIXEL_LAYER_BY_ACTION: Record<string, string> = {
   grid_show_more: 'grid_show_more_pixel_v1',
   grid_show_previous: 'grid_show_previous_pixel_v1',
   cowboy_jump: 'cowboy_jump_pixel_v1',
-  picture_shows_jump: 'picture_shows_jump_pixel_v1',
   order_clicked: 'order_clicked_pixel_v1',
   order_submitted: 'order_submitted_pixel_v1',
   series_info: 'series_info_pixel_v1',

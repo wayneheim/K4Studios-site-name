@@ -1,13 +1,10 @@
+/// <reference types="astro/client" />
 // src/middleware.ts
 import type { MiddlewareHandler } from "astro";
-import imageIdMap from "@/data/imageIdMap.json";
-import { galleryData as archiveGalleryData } from "@/data/Other/Archive/Archive.mjs";
+import imageIdMap from "./data/imageIdMap.json";
 
 // Type assertion for the imageIdMap
 const imageMap = imageIdMap as Record<string, string[]>;
-
-let imageMapLower: Record<string, { canonicalId: string; paths: string[] }> | null = null;
-let archiveImageFallbacksLower: Record<string, { canonicalId: string; visibility: string }> | null = null;
 
 let knownGalleryPathsLower: Set<string> | null = null;
 
@@ -21,13 +18,6 @@ function normalizePath(pathname: string): string {
 function getParentGalleryPath(pathname: string): string {
   const normalized = normalizePath(pathname);
   return normalized.replace(/\/[iI]-[A-Za-z0-9-]+\/?$/, "");
-}
-
-function hasMatchingGalleryPath(requestedPath: string, candidates: string[]): boolean {
-  const requestedGalleryPath = normalizePath(getParentGalleryPath(requestedPath)).toLowerCase();
-  if (!requestedGalleryPath) return false;
-
-  return candidates.some((candidate) => normalizePath(String(candidate || '')).toLowerCase() === requestedGalleryPath);
 }
 
 function getKnownGalleryPathsLower(): Set<string> {
@@ -45,84 +35,6 @@ function getKnownGalleryPathsLower(): Set<string> {
 
   knownGalleryPathsLower = paths;
   return knownGalleryPathsLower;
-}
-
-function getImageMapLower(): Record<string, { canonicalId: string; paths: string[] }> {
-  if (imageMapLower) return imageMapLower;
-
-  const lower: Record<string, { canonicalId: string; paths: string[] }> = {};
-  for (const [id, rawPaths] of Object.entries(imageMap)) {
-    const key = String(id || '').toLowerCase();
-    const values = Array.isArray(rawPaths) ? rawPaths : [rawPaths as unknown as string];
-    const normalizedPaths = values
-      .map((p) => normalizePath(String(p || '')))
-      .filter(Boolean);
-    lower[key] = {
-      canonicalId: id,
-      paths: normalizedPaths,
-    };
-  }
-
-  imageMapLower = lower;
-  return lower;
-}
-
-function getArchiveImageFallbacksLower(): Record<string, { canonicalId: string; visibility: string }> {
-  if (archiveImageFallbacksLower) return archiveImageFallbacksLower;
-
-  const lower: Record<string, { canonicalId: string; visibility: string }> = {};
-  for (const item of archiveGalleryData as Array<{ id?: string; visibility?: string }>) {
-    const canonicalId = String(item?.id || "").trim();
-    if (!canonicalId) continue;
-
-    lower[canonicalId.toLowerCase()] = {
-      canonicalId,
-      visibility: String(item?.visibility || "").trim().toLowerCase(),
-    };
-  }
-
-  archiveImageFallbacksLower = lower;
-  return archiveImageFallbacksLower;
-}
-
-function getArchiveFallbackPathForImageId(imageId: string): string {
-  const lookup = getArchiveImageFallbacksLower()[String(imageId || "").toLowerCase()];
-  if (!lookup) return "";
-
-  if (lookup.visibility === "hidden" || lookup.visibility === "hide" || lookup.visibility === "ghost") {
-    return "/Other/Archive";
-  }
-
-  return `/Other/Archive/${lookup.canonicalId}`;
-}
-
-function pickCanonicalGalleryPath(requestedPath: string, candidates: string[]): string {
-  if (!Array.isArray(candidates) || candidates.length === 0) return '';
-  if (candidates.length === 1) return candidates[0];
-
-  const requestedLower = String(requestedPath || '').toLowerCase();
-
-  const matchedByType = candidates.find((candidate) => {
-    const c = String(candidate || '').toLowerCase();
-    if (requestedLower.includes('/painterly-fine-art-photography/') && c.includes('/painterly-fine-art-photography/')) {
-      return true;
-    }
-    if (
-      requestedLower.includes('/fine-art-photography/') &&
-      !requestedLower.includes('/painterly-fine-art-photography/') &&
-      c.includes('/fine-art-photography/') &&
-      !c.includes('/painterly-fine-art-photography/')
-    ) {
-      return true;
-    }
-    return false;
-  });
-  if (matchedByType) return matchedByType;
-
-  const painterlyPreferred = candidates.find((candidate) =>
-    String(candidate || '').toLowerCase().includes('/painterly-fine-art-photography/')
-  );
-  return painterlyPreferred || candidates[0];
 }
 
 function isWhitelistedGalleryParent(pathname: string): boolean {
@@ -338,25 +250,12 @@ function stripNestedTags(html: string): { cleaned: string; changed: boolean } {
 // it was caused by components using window.innerWidth during render instead of in useEffect
 export const onRequest: MiddlewareHandler = async (context, next) => {
   const { pathname, search } = context.url;
-  const shouldNoindexContactQuery = pathname === "/Contact" && (
-    context.url.searchParams.has("license") || context.url.searchParams.has("title")
-  );
 
   if (pathname.length > 1 && pathname.endsWith("/")) {
     return new Response(null, {
       status: 301,
       headers: {
         Location: `${normalizePath(pathname)}${search}`,
-      },
-    });
-  }
-
-  if (pathname === "/Glossary" && search) {
-    return new Response("Gone", {
-      status: 410,
-      headers: {
-        "Cache-Control": "public, max-age=3600",
-        "X-Robots-Tag": "noindex, nofollow",
       },
     });
   }
@@ -452,67 +351,7 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
     });
   }
 
-  // Keep essay landing pages on their canonical non-file URLs in dev and prod.
-  if (/^\/Other\/Seeing(?:\/index\.html|\/)?$/i.test(pathname) && pathname !== "/Other/Seeing") {
-    return new Response(null, {
-      status: 301,
-      headers: { Location: "/Other/Seeing" },
-    });
-  }
-
-  if (/^\/Other\/Narrative-Art(?:\/index\.html|\/)?$/i.test(pathname) && pathname !== "/Other/Narrative-Art") {
-    return new Response(null, {
-      status: 301,
-      headers: { Location: "/Other/Narrative-Art" },
-    });
-  }
-
-  // Universal image rematch: if a URL ends with /i-xxxx and that ID exists in the
-  // manifest-derived map, 301 to the canonical gallery path.
-  const imageIdMatch = pathname.match(/\/(i-[A-Za-z0-9]+)\/?$/);
-  const isImageNamespace = /^\/(?:Galleries|galleries|Other|other|Photography-Galleries)\//.test(pathname);
-  if (isImageNamespace && imageIdMatch) {
-    const requestedId = imageIdMatch[1];
-    const lookup = getImageMapLower()[requestedId.toLowerCase()];
-
-    if (lookup?.paths?.length) {
-      const requestedNormalized = normalizePath(pathname);
-      if (!hasMatchingGalleryPath(requestedNormalized, lookup.paths)) {
-        const canonicalGalleryPath = pickCanonicalGalleryPath(requestedNormalized, lookup.paths);
-        const canonicalUrlPath = normalizePath(`${canonicalGalleryPath}/${lookup.canonicalId}`);
-
-        if (canonicalUrlPath && requestedNormalized.toLowerCase() !== canonicalUrlPath.toLowerCase()) {
-          console.log(`[image-rematch-301] ${requestedNormalized} -> ${canonicalUrlPath}`);
-          return new Response(null, {
-            status: 301,
-            headers: {
-              Location: `${canonicalUrlPath}${search}`,
-            },
-          });
-        }
-      }
-    } else {
-      const requestedNormalized = normalizePath(pathname);
-      const archiveFallbackPath = normalizePath(getArchiveFallbackPathForImageId(requestedId));
-
-      if (archiveFallbackPath && requestedNormalized.toLowerCase() !== archiveFallbackPath.toLowerCase()) {
-        console.log(`[image-rematch-archive-301] ${requestedNormalized} -> ${archiveFallbackPath}`);
-        return new Response(null, {
-          status: 301,
-          headers: {
-            Location: `${archiveFallbackPath}${search}`,
-          },
-        });
-      }
-    }
-  }
-
   const response = await next();
-  const responseHeaders = new Headers(response.headers);
-
-  if (shouldNoindexContactQuery) {
-    responseHeaders.set("X-Robots-Tag", "noindex, follow");
-  }
 
   // Route page-level misses to branded custom 404 page.
   // Keep asset/API 404s untouched.
@@ -536,11 +375,7 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
   if (contentType.includes("text/html")) {
     // Avoid consuming Astro's streamed HTML responses in dev.
     if (import.meta.env.DEV) {
-      if (!shouldNoindexContactQuery) return response;
-      return new Response(response.body, {
-        status: response.status,
-        headers: responseHeaders,
-      });
+      return response;
     }
 
     // Read from a clone so the original response body remains untouched if cleanup fails.
@@ -557,7 +392,7 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
     if (body.length > 1000000) {
       return new Response(body, {
         status: response.status,
-        headers: responseHeaders,
+        headers: new Headers(response.headers),
       });
     }
 
@@ -568,14 +403,9 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
     // ✅ Always return a new Response to avoid stream issues
     return new Response(cleaned, {
       status: response.status,
-      headers: responseHeaders,
+      headers: new Headers(response.headers),
     });
   }
 
-  if (!shouldNoindexContactQuery) return response;
-
-  return new Response(response.body, {
-    status: response.status,
-    headers: responseHeaders,
-  });
+  return response;
 };
