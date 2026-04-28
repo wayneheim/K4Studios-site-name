@@ -1,4 +1,4 @@
----
+﻿---
 export const prerender = true;
 import BaseLayout         from '@/layouts/BaseLayout.astro';
 import LandingHeader      from '@/components/Landing-Header.jsx';
@@ -68,7 +68,7 @@ const galleryDatas = galleryPaths.map((path) => {
   return allGalleryData[filePath]?.galleryData || [];
 });
 
-// IMPORTANT: pass galleryDatas so the util doesn’t explode
+// IMPORTANT: pass galleryDatas so the util doesnâ€™t explode
 const featheredImages = getSideImages({
   sectionPath,
   headingCount,
@@ -90,11 +90,11 @@ const structuredData = getStructuredData({
     description: landingDescription,
     url: `https://k4studios.com${sectionPath}`,
     keywords: landingKeywords,
-    copyrightNotice: "© Wayne Heim"
+    copyrightNotice: "Â© Wayne Heim"
   },
   images: featheredImages,
   defaults: {
-    copyrightNotice: "© Wayne Heim",
+    copyrightNotice: "Â© Wayne Heim",
     license: "https://k4studios.com/copyright",
     acquireLicensePage: "https://k4studios.com/Other/Print-Options",
     creditText: "Wayne Heim",
@@ -126,10 +126,10 @@ if (!landingMeta.ogUrl)      landingMeta.ogUrl      = `https://k4studios.com${se
 if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${sectionPath}`;
 ---
 
-<!-- ✅ JSON-LD Structured Data for SEO -->
-<script type="application/ld+json" is:inline set:html={structuredData}></script>
+<!-- âœ… JSON-LD Structured Data for SEO -->
 
 <BaseLayout
+  structuredDataJSON={structuredData}
   title={landingWestern.title}
   meta={landingMeta}
 >
@@ -164,7 +164,7 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
     </section>
 
     <div class="py-5">
-      <!-- Match the working version’s prop shape -->
+      <!-- Match the working versionâ€™s prop shape -->
       <TombstoneNav items={landingWestern.tombstones} />
     </div>
 

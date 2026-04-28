@@ -1,4 +1,4 @@
----
+﻿---
 export const prerender = true;
 import BaseLayout         from '@/layouts/BaseLayout.astro';
 import LandingHeader      from '@/components/Landing-Header.jsx';
@@ -87,7 +87,7 @@ const structuredData = getStructuredData({
     description: landingDescription,
     url: `https://k4studios.com${sectionPath}`,
     keywords: landingWestern.keywords || [],
-    copyrightNotice: "© Wayne Heim",
+    copyrightNotice: "Â© Wayne Heim",
     about: [
       { "@type": "Thing", name: "Historical Fine Art Photography" },
       { "@type": "Thing", name: "American West Art" },
@@ -101,7 +101,7 @@ const structuredData = getStructuredData({
   },
   images: featheredImages,
   defaults: {
-    copyrightNotice: "© Wayne Heim",
+    copyrightNotice: "Â© Wayne Heim",
     license: "https://k4studios.com/copyright",
     acquireLicensePage: "https://k4studios.com/Other/Print-Options",
     creditText: "Wayne Heim",
@@ -135,10 +135,10 @@ if (!landingMeta.ogUrl)      landingMeta.ogUrl      = `https://k4studios.com${se
 if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${sectionPath}`;
 ---
 
-<!-- ✅ JSON-LD Structured Data for SEO -->
-<script type="application/ld+json" is:inline set:html={structuredData}></script>
+<!-- âœ… JSON-LD Structured Data for SEO -->
 
 <BaseLayout
+  structuredDataJSON={structuredData}
   title={pageTitle}
   description={landingDescription}
   meta={landingMeta}
@@ -205,7 +205,7 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
                   ))}
                 </ul>
               )}
-              {/* Seeing essays — editorial discovery link */}
+              {/* Seeing essays â€” editorial discovery link */}
               {index === 0 && (
                 <p class="reveal-on-scroll text-sm text-[#666] mt-6 mb-4 italic">
                   For those interested in how historical images can function as lived narratives rather than documents, the <a href="/Other/Seeing" class="text-[#8b0000] hover:underline">Seeing essays</a> explore these ideas in more depth.
@@ -218,7 +218,7 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
                   <div class="story-slider-skeleton relative bg-[#ebe5dc] rounded-lg shadow-md px-6 py-5 max-w-2xl mx-auto border-2 border-[#d8d0c4] mb-12 h-[280px] overflow-hidden">
                     <div class="absolute top-2.5 left-2.5 w-3.5 h-3.5 border-l-2 border-t-2 border-[#c8bfb0]"></div>
                     <div class="absolute bottom-2.5 right-2.5 w-3.5 h-3.5 border-r-2 border-b-2 border-[#c8bfb0]"></div>
-                    <p class="text-[11px] uppercase tracking-[0.12em] text-[#8c7d6b] mb-3">One-Image Movie™ Preview</p>
+                    <p class="text-[11px] uppercase tracking-[0.12em] text-[#8c7d6b] mb-3">One-Image Movieâ„¢ Preview</p>
                     <div class="animate-pulse">
                       <div class="h-5 bg-[#d8d0c4] rounded w-3/4 mb-3"></div>
                       <div class="h-4 bg-[#d8d0c4] rounded w-full mb-2"></div>

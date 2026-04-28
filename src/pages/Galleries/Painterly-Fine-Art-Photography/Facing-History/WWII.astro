@@ -1,4 +1,4 @@
----
+﻿---
 export const prerender = true;
 import BaseLayout         from '@layouts/BaseLayout.astro';
 import LandingHeader      from '@components/Landing-Header.jsx';
@@ -35,12 +35,12 @@ const sectionPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WW
 function fixMojibake(str?: string) {
   if (!str) return str;
   return str
-    .replace(/â€™/g, "’")
-    .replace(/â€œ/g, "“")
-    .replace(/â€�/g, "”")
-    .replace(/â€“/g, "–")
-    .replace(/â€”/g, "—")
-    .replace(/â€¦/g, "…");
+    .replace(/Ã¢â‚¬â„¢/g, "â€™")
+    .replace(/Ã¢â‚¬Å“/g, "â€œ")
+    .replace(/Ã¢â‚¬ï¿½/g, "â€")
+    .replace(/Ã¢â‚¬â€œ/g, "â€“")
+    .replace(/Ã¢â‚¬â€/g, "â€”")
+    .replace(/Ã¢â‚¬Â¦/g, "â€¦");
 }
 
 function findNavEntry(nav, url) {
@@ -87,11 +87,11 @@ const structuredData = getStructuredData({
     description: landingDescription,
     url:         `https://k4studios.com${sectionPath}`,
     keywords:    landingWestern.keywords || [],
-    copyrightNotice: "© Wayne Heim"
+    copyrightNotice: "Â© Wayne Heim"
   },
   images: featheredImages,
   defaults: {
-    copyrightNotice: "© Wayne Heim",
+    copyrightNotice: "Â© Wayne Heim",
     license: "https://k4studios.com/copyright",
     acquireLicensePage: "https://k4studios.com/Other/Print-Options",
     creditText: "Wayne Heim",
@@ -126,9 +126,9 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
 ---
 
 <!-- JSON-LD -->
-<script type="application/ld+json" is:inline set:html={structuredData}></script>
 
 <BaseLayout
+  structuredDataJSON={structuredData}
   title={fixMojibake(pageTitle)}
   description={fixMojibake(landingDescription)}
   meta={landingMeta}

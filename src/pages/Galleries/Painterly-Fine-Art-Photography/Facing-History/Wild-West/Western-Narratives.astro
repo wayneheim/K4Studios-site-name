@@ -1,4 +1,4 @@
----
+﻿---
 // @ts-nocheck
 export const prerender = true;
 import BaseLayout         from '@/layouts/BaseLayout.astro';
@@ -46,12 +46,12 @@ const cowboyColorData = cowboyColorDataFull
 function fixMojibake(str) {
   if (!str) return str;
   return str
-    .replace(/â€™/g, "’")
-    .replace(/â€œ/g, "“")
-    .replace(/â€�/g, "”")
-    .replace(/â€“/g, "–")
-    .replace(/â€”/g, "—")
-    .replace(/â€¦/g, "…");
+    .replace(/Ã¢â‚¬â„¢/g, "â€™")
+    .replace(/Ã¢â‚¬Å“/g, "â€œ")
+    .replace(/Ã¢â‚¬ï¿½/g, "â€")
+    .replace(/Ã¢â‚¬â€œ/g, "â€“")
+    .replace(/Ã¢â‚¬â€/g, "â€”")
+    .replace(/Ã¢â‚¬Â¦/g, "â€¦");
 }
 
 const galleryPaths = [
@@ -73,11 +73,11 @@ const structuredData = getStructuredData({
     description: landingWestern.subtitle,
     url: `https://k4studios.com${pagePath}`,
     keywords: landingWestern.keywords || [],
-    copyrightNotice: "© Wayne Heim"
+    copyrightNotice: "Â© Wayne Heim"
   },
   images: featheredImages,
   defaults: {
-    copyrightNotice: "© Wayne Heim",
+    copyrightNotice: "Â© Wayne Heim",
     license: "https://k4studios.com/copyright",
     acquireLicensePage: "https://k4studios.com/Other/Print-Options",
     creditText: "Wayne Heim",
@@ -111,10 +111,10 @@ if (!landingMeta.ogUrl) landingMeta.ogUrl = `https://k4studios.com${pagePath}`;
 if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${pagePath}`;
 ---
 
-<!-- ✅ Inject JSON-LD in the head BEFORE layout, with set:html -->
-<script type="application/ld+json" is:inline set:html={structuredData}></script>
+<!-- âœ… Inject JSON-LD in the head BEFORE layout, with set:html -->
 
 <BaseLayout
+  structuredDataJSON={structuredData}
   title={landingWestern.title}
   meta={landingMeta}
 >
@@ -185,7 +185,7 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${pa
                       <div class="story-slider-skeleton relative bg-[#ebe5dc] rounded-lg shadow-md px-6 py-5 max-w-2xl mx-auto border-2 border-[#d8d0c4] mb-12 h-[280px] overflow-hidden">
                         <div class="absolute top-2.5 left-2.5 w-3.5 h-3.5 border-l-2 border-t-2 border-[#c8bfb0]"></div>
                         <div class="absolute bottom-2.5 right-2.5 w-3.5 h-3.5 border-r-2 border-b-2 border-[#c8bfb0]"></div>
-                        <p class="text-[11px] uppercase tracking-[0.12em] text-[#8c7d6b] mb-3">One-Image Movie™ Preview</p>
+                        <p class="text-[11px] uppercase tracking-[0.12em] text-[#8c7d6b] mb-3">One-Image Movieâ„¢ Preview</p>
                         <div class="animate-pulse">
                           <div class="h-5 bg-[#d8d0c4] rounded w-3/4 mb-3"></div>
                           <div class="h-4 bg-[#d8d0c4] rounded w-full mb-2"></div>
@@ -207,7 +207,7 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${pa
                   ))}
                 </ul>
               )}
-              {/* Seeing essays — editorial inset */}
+              {/* Seeing essays â€” editorial inset */}
               {index === 0 && (
                 <aside class="seeing-inset reveal-on-scroll" aria-label="Seeing essays note">
                   <p>
@@ -435,13 +435,13 @@ ul li::marker {
       }
 
       .mobile-themes-accordion summary::before {
-        content: '▼ ';
+        content: 'â–¼ ';
         font-size: 0.65rem;
         margin-right: 0.3rem;
       }
 
       .mobile-themes-accordion[open] summary::before {
-        content: '▲ ';
+        content: 'â–² ';
       }
 
       .mobile-themes-accordion .themes-content {

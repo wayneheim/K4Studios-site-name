@@ -1,4 +1,4 @@
----
+﻿---
 export const prerender = true;
 import BaseLayout         from '@/layouts/BaseLayout.astro';
 import LandingHeader      from '@/components/Landing-Header.jsx';
@@ -95,11 +95,11 @@ const structuredData = getStructuredData({
     description: landingDescription,
     url: `https://k4studios.com${pagePath}`,
     keywords: landingKeywords,
-    copyrightNotice: "© Wayne Heim"
+    copyrightNotice: "Â© Wayne Heim"
   },
   images: featheredImages,
   defaults: {
-    copyrightNotice: "© Wayne Heim",
+    copyrightNotice: "Â© Wayne Heim",
     license: "https://k4studios.com/copyright",
     acquireLicensePage: "https://k4studios.com/Other/Print-Options",
     creditText: "Wayne Heim",
@@ -110,7 +110,66 @@ const structuredData = getStructuredData({
 ---
 
 <!-- Article Structured Data for topical authority -->
-<script type="application/ld+json" is:inline>
+
+<!-- FAQ Schema for AI citation -->
+
+<BaseLayout
+  title={`${landingWestern.title} â€“ ${landingWestern.subtitle}`}
+  structuredDataJSON={structuredData}
+  meta={meta}
+>
+
+<script type="application/ld+json" is:inline slot="head">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a historical reenactment and why does it matter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A historical reenactment is living historyâ€”participants restage moments from the past so audiences can see, hear, and feel them in real time. It blends research, material culture, and performance to turn history into experience."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a reenactor and a living historian?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They are often the same people. 'Reenactor' highlights the performance; 'living historian' emphasizes the research and teaching. Both roles aim for accurate representationâ€”from clothing and tools to drill, rations, and routines."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are reenactments family-friendly?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yesâ€”most are designed for the public. Expect educational talks, museum-style exhibits, and plenty of opportunities to ask questions. Check each event's schedule for age-appropriate programs and loud-noise advisories."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What camera gear works best at reenactments?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A short telephoto zoom (70â€“200mm or 80â€“200mm) lets you work at a respectful distance and capture candid moments. Add a fast prime for low light and a lens hood to cut flare. Pack extra batteries and cardsâ€”and consider ear protection for blank-fire demonstrations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the etiquette for photographing reenactors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Be respectful and avoid interrupting in-character moments or safety briefings. Ask when unsureâ€”some roles may prefer not to be photographed. Don't cross ropes or lines, follow staff instructions, and if you post images, credit the event or unit when possible."
+      }
+    }
+  ]
+}
+</script>
+
+
+<script type="application/ld+json" is:inline slot="head">
 {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -132,61 +191,6 @@ const structuredData = getStructuredData({
 }
 </script>
 
-<!-- FAQ Schema for AI citation -->
-<script type="application/ld+json" is:inline>
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is a historical reenactment and why does it matter?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A historical reenactment is living history—participants restage moments from the past so audiences can see, hear, and feel them in real time. It blends research, material culture, and performance to turn history into experience."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the difference between a reenactor and a living historian?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "They are often the same people. 'Reenactor' highlights the performance; 'living historian' emphasizes the research and teaching. Both roles aim for accurate representation—from clothing and tools to drill, rations, and routines."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Are reenactments family-friendly?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes—most are designed for the public. Expect educational talks, museum-style exhibits, and plenty of opportunities to ask questions. Check each event's schedule for age-appropriate programs and loud-noise advisories."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What camera gear works best at reenactments?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A short telephoto zoom (70–200mm or 80–200mm) lets you work at a respectful distance and capture candid moments. Add a fast prime for low light and a lens hood to cut flare. Pack extra batteries and cards—and consider ear protection for blank-fire demonstrations."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the etiquette for photographing reenactors?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Be respectful and avoid interrupting in-character moments or safety briefings. Ask when unsure—some roles may prefer not to be photographed. Don't cross ropes or lines, follow staff instructions, and if you post images, credit the event or unit when possible."
-      }
-    }
-  ]
-}
-</script>
-
-<BaseLayout
-  title={`${landingWestern.title} – ${landingWestern.subtitle}`}
-  structuredDataJSON={structuredData}
-  meta={meta}
->
 
   <main class="bg-[#ffffff] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
     <div class="drawer-mode">

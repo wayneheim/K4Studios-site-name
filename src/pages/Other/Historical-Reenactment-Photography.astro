@@ -1,4 +1,4 @@
----
+﻿---
 export const prerender = true;
 import BaseLayout         from '@/layouts/BaseLayout.astro';
 import LandingHeader      from '@/components/Landing-Header.jsx';
@@ -73,18 +73,18 @@ const featheredImages = getSideImages({
   poolMultiplier: 3
 });
 
-// 🟩 STRUCTURED DATA for this landing (uses all feathered images)
+// ðŸŸ© STRUCTURED DATA for this landing (uses all feathered images)
 const structuredData = getStructuredData({
   type: "gallery",
   data: {
     title: landingWestern.title,
     description: landingWestern.subtitle,
     url: `https://k4studios.com${canonicalPagePath}`,
-    copyrightNotice: "© Wayne Heim"
+    copyrightNotice: "Â© Wayne Heim"
   },
   images: featheredImages,
   defaults: {
-    copyrightNotice: "© Wayne Heim",
+    copyrightNotice: "Â© Wayne Heim",
     license: "https://k4studios.com/copyright",
     acquireLicensePage: "https://k4studios.com/Other/Print-Options",
     creditText: "Wayne Heim",
@@ -93,7 +93,7 @@ const structuredData = getStructuredData({
   }
 });
 
-// 🟢 OG/Twitter Meta Helper (auto-fills .ogUrl/.twitterUrl fields)
+// ðŸŸ¢ OG/Twitter Meta Helper (auto-fills .ogUrl/.twitterUrl fields)
 const landingMeta = {
   ...getLandingMeta(legacyPagePath),
   canonicalUrl: canonicalPagePath,
@@ -102,11 +102,11 @@ const landingMeta = {
 };
 ---
 
-<!-- ✅ JSON-LD Structured Data for SEO -->
-<script type="application/ld+json" is:inline set:html={structuredData}></script>
+<!-- âœ… JSON-LD Structured Data for SEO -->
 
 <BaseLayout
-  title={`${landingWestern.title} – ${landingWestern.subtitle}`}
+  structuredDataJSON={structuredData}
+  title={`${landingWestern.title} â€“ ${landingWestern.subtitle}`}
   meta={landingMeta}
 >
 

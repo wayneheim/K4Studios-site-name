@@ -1,4 +1,4 @@
----
+﻿---
 export const prerender = true;
 import BaseLayout         from '@/layouts/BaseLayout.astro';
 import LandingHeader      from '@/components/Landing-Header.jsx';
@@ -128,11 +128,11 @@ const structuredData = getStructuredData({
     description: landingDescription,
     url: `https://k4studios.com${sectionPath}`,
     keywords: landingKeywords,
-    copyrightNotice: "© Wayne Heim"
+    copyrightNotice: "Â© Wayne Heim"
   },
   images: featheredImages,
   defaults: {
-    copyrightNotice: "© Wayne Heim",
+    copyrightNotice: "Â© Wayne Heim",
     license: "https://k4studios.com/copyright",
     acquireLicensePage: "https://k4studios.com/Other/Print-Options",
     creditText: "Wayne Heim",
@@ -142,11 +142,11 @@ const structuredData = getStructuredData({
 });
 ---
 
-<!-- ✅ SEO JSON-LD (Structured Data) -->
-<script type="application/ld+json" is:inline set:html={structuredData}></script>
+<!-- âœ… SEO JSON-LD (Structured Data) -->
 
 <!-- BASE LAYOUT -->
 <BaseLayout
+  structuredDataJSON={structuredData}
   title={landingWestern.title}
   meta={meta}
 >
