@@ -5,7 +5,7 @@ export default function ChapterCowboyColorWrapper(props){
   return (
     <ChapterGalleryBase
       rawData={rawData}
-      basePath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
+      basePath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color"
       titleBase="Western Cowboy Portraits – Native American"
       sectionKey="/Facing-History/Cowboy-Native-American"
       swipeHintKey="Painterly-Cowboy-NA"

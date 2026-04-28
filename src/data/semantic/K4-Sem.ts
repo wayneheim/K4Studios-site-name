@@ -714,7 +714,7 @@ nativeAmericans: {
 },
 
 cowboyNativeAmerican: {
-  path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color",
+  path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans",
   def: "Painterly portraits honoring Native American heritage—dignity, tradition, and spirit in every image.",
 
   landingPhrases: [

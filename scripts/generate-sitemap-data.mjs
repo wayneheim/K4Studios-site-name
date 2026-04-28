@@ -59,6 +59,8 @@ const EXCLUDE_PATTERNS = [
   /\/demo-show/i,
   /\/Template\//i,
   /^\/Other\/Historical-Reenactment-Photography\/?$/,
+  /^\/Galleries\/Painterly-Fine-Art-Photography\/Facing-History\/Western-Cowboy-Portraits\/NA-Color(?:\/|$)/,
+  /^\/Galleries\/Painterly-Fine-Art-Photography\/Facing-History\/Western-Cowboy-Portraits\/NA-Black-White(?:\/|$)/,
   /backup$/i,
   /copy$/i,
 ];

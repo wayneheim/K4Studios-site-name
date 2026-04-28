@@ -8,7 +8,7 @@ import { galleryData as cowboyNA } from '@/data/Galleries/Painterly-Fine-Art-Pho
 const gallerySources = [
   { data: cowboyColor, path: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color' },
   { data: cowboyBW, path: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White' },
-  { data: cowboyNA, path: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color' },
+  { data: cowboyNA, path: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color' },
 ];
 
 // Helper: Build a pool prioritized by rating (5 → 4 → 3 → others), randomized per rating

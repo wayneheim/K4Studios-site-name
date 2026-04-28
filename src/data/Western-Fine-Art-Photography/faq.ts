@@ -26,7 +26,7 @@ export const facingFAQ = [
     q: "What subjects are explored in this Western fine art photography collection?",
     a: [
       "This Western-themed fine art collection centers on character-driven portraiture and narrative imagery from the American West, including:",
-      "<ul><li><a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color'>Western Cowboy Portraits in Color</a></li><li><a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White'>Western Portraits in Black & White</a></li><li><a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color'>Indigenous Portraits of the West</a></li></ul>",
+      "<ul><li><a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color'>Western Cowboy Portraits in Color</a></li><li><a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White'>Western Portraits in Black & White</a></li><li><a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans'>Indigenous Portraits of the West</a></li></ul>",
       "Each Western series presents individuals as people rather than archetypes, inviting viewers to encounter the stories written in posture, expression, and silence."
     ],
   },

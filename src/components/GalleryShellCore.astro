@@ -107,17 +107,19 @@ const usedEntranceData = {
  * --------------------------------------------------------------- */
 const siteBase = import.meta.env.SITE || "https://www.k4studios.com";
 const pathOnly = Astro.url.pathname;
+const lastSegment = pathOnly.split("/").pop() || "";
+const isImagePage = lastSegment.startsWith("i-");
 // Include theme param in canonical if present (themes are indexable)
 const themeParam = Astro.url.searchParams.get("theme");
-const canonicalUrl = `${siteBase}${pathOnly.replace(/\/$/, "")}${themeParam ? `?theme=${themeParam}` : ""}`;
+const canonicalPath = isImagePage ? `${previewPath}/${lastSegment}` : previewPath;
+const canonicalUrl = `${siteBase}${canonicalPath.replace(/\/$/, "")}${themeParam ? `?theme=${themeParam}` : ""}`;
 const galleryAbsUrl = `${siteBase}${previewPath}`;
 
 /** ---------------------------------------------------------------
  * Detect if this is an image page or shared theme link
  * (moved early — needed for breadcrumb + structured data decisions)
  * --------------------------------------------------------------- */
-const lastSegment = Astro.url?.pathname?.split("/").pop() || "";
-const isImagePage = lastSegment.startsWith("i-");
+const isCivilWarGallery = galleryPath.includes('/Civil-War-Portraits');
 // Check for ?view=grid (shared theme links should skip intro)
 const isDirectGridView = Astro.url.searchParams.get("view") === "grid";
 const skipIntro = isImagePage || isDirectGridView;
@@ -240,6 +242,7 @@ const ogImage = selectedImage?.src;
 const ogAlt = selectedImage?.alt || selectedImage?.title || fixMojibake(usedEntranceData.title);
 
 const meta = {
+  canonicalUrl,
   description: pageDescription,
   ogTitle: pageTitle,
   ogDescription: pageDescription,

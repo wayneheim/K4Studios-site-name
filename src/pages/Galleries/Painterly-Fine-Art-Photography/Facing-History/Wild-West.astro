@@ -15,6 +15,9 @@ import { sanitizeForClient } from '../../../../components/utils/normalizeImage.t
 import { galleryData as cowboyColorDataFull } from '../../../../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs';
 import { galleryData as cowboyBWDataFull } from '../../../../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs';
 import { galleryData as cowboyNADataFull } from '../../../../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs';
+import { galleryData as nativeAmericanBWDataFull } from '../../../../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White.mjs';
+import { galleryData as westernNarrativesColorDataFull } from '../../../../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs';
+import { galleryData as westernNarrativesBWDataFull } from '../../../../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs';
 import { storySliderImageIds } from '../../../../data/storySlider.ts';
 import { getStructuredData } from '../../../../components/utils/getStructuredData.ts';
 
@@ -37,11 +40,24 @@ import '../../../../styles/oneupheader.css';
 
 const sectionPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West";
 const themeGalleryKey = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits";
+const westernNarrativesColorPath = `${sectionPath}/Western-Narratives/Color`;
+const westernNarrativesBWPath = `${sectionPath}/Western-Narratives/Black-White`;
+const nativeAmericansPath = `${sectionPath}/Native-Americans`;
+const nativeAmericanColorPath = `${nativeAmericansPath}/NA-Color`;
+const nativeAmericanBWPath = `${nativeAmericansPath}/NA-Black-White`;
+const cowboyColorPath = `${themeGalleryKey}/Color`;
+const cowboyBWPath = `${themeGalleryKey}/Black-White`;
 
 // Filter gallery data for StorySlider (reduce payload)
 const cowboyColorData = cowboyColorDataFull
   .filter((img: any) => storySliderImageIds.includes(img.id))
-  .map((img: any) => ({ id: img.id, title: img.title, story: img.story }));
+  .map((img: any) => ({
+    id: img.id,
+    title: img.title,
+    story: img.story,
+    galleryHref: cowboyColorPath,
+    pageHref: `${cowboyColorPath}/${img.id}`,
+  }));
 
 // Normalize any mojibake (UTF-8 shown as Latin-1) so titles render with proper punctuation
 function fixMojibake(str) {
@@ -56,12 +72,22 @@ function fixMojibake(str) {
 }
 
 const galleryPaths = [
-  "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
-  "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White",
-  "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color",
+  westernNarrativesColorPath,
+  westernNarrativesBWPath,
+  cowboyColorPath,
+  cowboyBWPath,
+  nativeAmericanColorPath,
+  nativeAmericanBWPath,
 ];
 
-const galleryDatas = [cowboyColorDataFull, cowboyBWDataFull, cowboyNADataFull];
+const galleryDatas = [
+  westernNarrativesColorDataFull,
+  westernNarrativesBWDataFull,
+  cowboyColorDataFull,
+  cowboyBWDataFull,
+  cowboyNADataFull,
+  nativeAmericanBWDataFull,
+];
 
 const headingCount = westernStory.filter((block, i) => i > 0 && block.subhead).length;
 // Pool 3x more images for client-side rotation variety
@@ -113,12 +139,10 @@ if (!landingMeta.ogUrl) landingMeta.ogUrl = `https://k4studios.com${sectionPath}
 if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${sectionPath}`;
 ---
 
-<!-- ✅ Inject JSON-LD in the head BEFORE layout, with set:html -->
-<script type="application/ld+json" is:inline set:html={structuredData}></script>
-
 <BaseLayout
   title={landingWestern.title}
   meta={landingMeta}
+  structuredDataJSON={structuredData}
 >
 
   <main class="bg-[#ffffff] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
@@ -195,7 +219,7 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
                           <div class="h-4 bg-[#d8d0c4] rounded w-4/6"></div>
                         </div>
                       </div>
-                      <StorySlider client:only="react" stories={cowboyColorData} galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Color" />
+                      <StorySlider client:only="react" stories={cowboyColorData} galleryPath={cowboyColorPath} />
                     </div>
                   )}
                   <p class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, cowboySemantic, Astro.url.pathname)} />

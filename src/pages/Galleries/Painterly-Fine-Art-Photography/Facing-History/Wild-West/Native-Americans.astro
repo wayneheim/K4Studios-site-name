@@ -80,7 +80,7 @@ const structuredData = getStructuredData({
   data: {
     title: landingWestern.title,
     description: landingWestern.subtitle,
-    url: `https://k4studios.com${sectionPath}`,
+    url: `https://k4studios.com${nativeAmericansPath}`,
     keywords: landingWestern.keywords || [],
     copyrightNotice: "© Wayne Heim"
   },
@@ -115,17 +115,15 @@ const landingImg = featheredImages[0];
 const landingImgUrl = landingImg?.id ? makeAbsoluteUrl(getProxySrc(landingImg.id, 'l')) : '';
 
 // Use landing meta with dynamic override
-const landingMeta = getLandingMeta(sectionPath, landingImgUrl);
-if (!landingMeta.ogUrl) landingMeta.ogUrl = `https://k4studios.com${sectionPath}`;
-if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${sectionPath}`;
+const landingMeta = getLandingMeta(nativeAmericansPath, landingImgUrl);
+if (!landingMeta.ogUrl) landingMeta.ogUrl = `https://k4studios.com${nativeAmericansPath}`;
+if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${nativeAmericansPath}`;
 ---
-
-<!-- ✅ Inject JSON-LD in the head BEFORE layout, with set:html -->
-<script type="application/ld+json" is:inline set:html={structuredData}></script>
 
 <BaseLayout
   title={landingWestern.title}
   meta={landingMeta}
+  structuredDataJSON={structuredData}
 >
 
   <main class="bg-[#ffffff] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">

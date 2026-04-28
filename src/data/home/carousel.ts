@@ -51,6 +51,12 @@ function filePathToHref(filePath) {
     parts.pop();
     url = '/' + parts.join('/');
   }
+  if (url === '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color') {
+    return '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color';
+  }
+  if (url === '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Black-White') {
+    return '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White';
+  }
   return url;
 }
 

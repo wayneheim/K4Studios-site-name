@@ -146,7 +146,14 @@ https://k4studios.com/(.+)/$  https://www.k4studios.com/$1  301!
 /Galleries/Painterly-Fine-Art-Photography/Facing-History/Art-of-War-WWII  /Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War  301
 /Galleries/Painterly-Fine-Art-Photography/Facing-History/Art-of-War-WWII/Black-White  /Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White  301
 /Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color/i-7hD9CCh  /Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-7hD9CCh  301!
-/Galleries/Painterly-Fine-Art-Photography/Facing-History/Native-American-Portraits  /Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color  301
+/Galleries/Painterly-Fine-Art-Photography/Facing-History/Native-American-Portraits  /Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans  301!
+/Galleries/Painterly-Fine-Art-Photography/Facing-History/Native-American-Portraits/*  /Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/:splat  301!
+/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color  /Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color  301!
+/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color/all  /Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color/all  301!
+/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color/i-:id  /Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color/i-:id  301!
+/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color/*  /Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color/:splat  301!
+/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Black-White  /Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White  301!
+/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Black-White/*  /Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White/:splat  301!
 
 */Photoshootsandevents/*  https://wayne-heim.smugmug.com/Other/Photo-Shoots  301!
 /data/system/*  /410.html  410

@@ -35,7 +35,7 @@ export const westernArtFAQ = [
     q: "What subjects appear in Western photography art?",
     a: [
       "This collection centers on character-driven portraiture and narrative imagery from the American West:",
-      "<ul><li><a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color'>Western Cowboy Portraits in Color</a></li><li><a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White'>Western Portraits in Black & White</a></li><li><a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color'>Indigenous Portraits of the West</a></li></ul>",
+      "<ul><li><a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color'>Western Cowboy Portraits in Color</a></li><li><a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White'>Western Portraits in Black & White</a></li><li><a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans'>Indigenous Portraits of the West</a></li></ul>",
       "Each series presents its subjects as people\u2014not archetypes or props\u2014inviting viewers into the stories written in posture, expression, and silence."
     ],
   },

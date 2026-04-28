@@ -115,12 +115,10 @@ if (!landingMeta.ogUrl) landingMeta.ogUrl = `https://k4studios.com${sectionPath}
 if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${sectionPath}`;
 ---
 
-<!-- ✅ Inject JSON-LD in the head BEFORE layout, with set:html -->
-<script type="application/ld+json" is:inline set:html={structuredData}></script>
-
 <BaseLayout
   title={landingWestern.title}
   meta={landingMeta}
+  structuredDataJSON={structuredData}
 >
 
   <main class="bg-[#ffffff] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">

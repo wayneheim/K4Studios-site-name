@@ -31,7 +31,7 @@ export const westernFAQ = [
     a: [
       `Every figure is a real person — often a reenactor, living historian, or cultural interpreter selected for knowledge, authenticity, and presence.`,
       `These portraits belong to the <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Facing History</a> framework, which approaches historically themed photography through lived human experience rather than imagined myth.`,
-      `This includes cowboy portraits as well as <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color">Native American portraiture</a>, created with cultural respect, historical accuracy, and narrative restraint.`
+      `This includes cowboy portraits as well as <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans">Native American portraiture</a>, created with cultural respect, historical accuracy, and narrative restraint.`
     ],
   },
 
@@ -40,7 +40,7 @@ export const westernFAQ = [
     a: [
       `Yes. Native American portraits are an essential part of Wayne’s Western themed photography — not an addition, but a foundational voice within the historical narrative of the American West.`,
       `These painterly fine art portraits honor identity, regalia, and presence without symbolism or fantasy, expanding Western art beyond the narrow cowboy myth.`,
-      `They are presented alongside cowboy portraits within the <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color">Western Cowboy Portraits</a> collection.`
+      `They are presented alongside cowboy portraits within the <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans">Native Americans</a> collection.`
     ],
   },
 
@@ -85,7 +85,7 @@ export const westernFAQ = [
     a: [
       `The <a href="/Other/K4-Select-Series/Engrained">Engrained Series</a> features select Western portraits printed directly onto Baltic Birch using a multi-layer UV process.`,
       `The natural wood grain interacts with the image, creating a tactile object that sits between photograph and artifact.`,
-      `Both cowboy and <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color">Native American portraits</a> are offered in this series, reinforcing the historical and material weight of the work.`
+      `Both cowboy and <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans">Native American portraits</a> are offered in this series, reinforcing the historical and material weight of the work.`
     ],
   },
 

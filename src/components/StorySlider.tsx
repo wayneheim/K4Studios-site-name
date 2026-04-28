@@ -5,6 +5,8 @@ interface StoryItem {
   id: string;
   title: string;
   story: string;
+  pageHref?: string;
+  galleryHref?: string;
 }
 
 interface StorySliderProps {
@@ -80,6 +82,16 @@ export default function StorySlider({ stories, galleryPath, variant = 'primary' 
     return normalize(truncated.slice(0, lastSpace) + '...');
   };
   const siteOrigin = 'https://www.k4studios.com';
+  const cleanPath = (path: string) => path.replace(/\/$/, '');
+  const getItemHref = (item: StoryItem) => {
+    if (item.pageHref) return item.pageHref;
+    const itemGalleryPath = item.galleryHref || galleryPath;
+    return `${cleanPath(itemGalleryPath)}/${item.id}`;
+  };
+  const toAbsoluteUrl = (href: string) => {
+    if (/^https?:\/\//i.test(href)) return href;
+    return `${siteOrigin}${href.startsWith('/') ? href : `/${href}`}`;
+  };
 
   // Structured data for SEO
   const structuredData = {
@@ -93,7 +105,7 @@ export default function StorySlider({ stories, galleryPath, variant = 'primary' 
       "position": index + 1,
       "name": item.title,
       "description": getExcerpt(item.story, 160),
-      "url": `${siteOrigin}${galleryPath}/${item.id}`
+      "url": toAbsoluteUrl(getItemHref(item))
     }))
   };
 
@@ -151,12 +163,12 @@ export default function StorySlider({ stories, galleryPath, variant = 'primary' 
           <div className={`relative overflow-hidden ${isSecondary ? 'h-[150px]' : 'h-[180px]'}`}>
             {/* Invisible clickable overlay */}
             <a 
-              href={`${galleryPath}/${selected[current].id}`}
+              href={getItemHref(selected[current])}
               className="absolute inset-0 z-0"
               aria-label={`View ${selected[current].title}`}
               onClick={() => trackEvent('story_slider_click', {
                 imageId: selected[current].id,
-                galleryId: galleryPath
+                galleryId: selected[current].galleryHref || galleryPath
               })}
             />
             <article key={selected[current].id} className={`relative z-10 pointer-events-none transition-opacity duration-400 ease-in-out ${isTransitioning ? 'opacity-0' : 'opacity-100'}`}>
@@ -195,7 +207,7 @@ export default function StorySlider({ stories, galleryPath, variant = 'primary' 
                 goToSlide(index);
                 trackEvent('story_slider_click', {
                   imageId: item.id,
-                  galleryId: galleryPath
+                  galleryId: item.galleryHref || galleryPath
                 });
               }}
               className={`rounded-full transition-all ${isSecondary ? 'w-2.5 h-2.5' : 'w-3 h-3'} ${

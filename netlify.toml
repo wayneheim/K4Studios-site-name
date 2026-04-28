@@ -518,6 +518,55 @@ to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western
 status = 301
 force = true
 
+# Legacy Native American collection routes now live under Wild West.
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Native-American-Portraits"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans"
+status = 301
+force = true
+
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Native-American-Portraits/*"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/:splat"
+status = 301
+force = true
+
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color"
+status = 301
+force = true
+
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color/all"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color/all"
+status = 301
+force = true
+
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color/i-:id"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color/i-:id"
+status = 301
+force = true
+
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color/*"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color/:splat"
+status = 301
+force = true
+
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Black-White"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White"
+status = 301
+force = true
+
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Black-White/*"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White/:splat"
+status = 301
+force = true
+
 # --- Legacy Painterly-Photography WWII path ---
 [[redirects]]
 from = "/Galleries/Painterly-Photography/Historical-Themed-Fine-Art-Photography/WWII-Themed-Fine-Art-Photography"
