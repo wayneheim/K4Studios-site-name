@@ -4,6 +4,7 @@ import PricingEditorModal from "./PricingEditorModal.jsx";
 import EngrainedStatusPanel from "./EngrainedStatusPanel.jsx";
 import SectionKeywordSuggestions from "./SectionKeywordSuggestions.jsx";
 import { generateSmartMetadata } from "../utils/autoTextGenerator.mjs";
+import { normalizeImageSrc } from "../utils/imageProxy.js";
 
 /* ---------- config: add more roots here if needed ---------- */
 const DATA_ROOTS = [
@@ -89,6 +90,16 @@ function pickImage(d = {}) {
     d.images?.[0]?.url || d.images?.[0]?.src || ""
   );
 }
+
+function toAbsoluteProxyImageUrl(src, size = "xl") {
+  const proxySrc = normalizeImageSrc(src, size);
+  if (!proxySrc) return "";
+  if (proxySrc.startsWith("/") && typeof window !== "undefined") {
+    return `${window.location.origin}${proxySrc}`;
+  }
+  return proxySrc;
+}
+
 function isRealItem(d) { return d && d.id !== "i-k4studios"; }
 
 /* --- Quick Refresh helpers (simple) --- */
@@ -1507,7 +1518,7 @@ ${collectorNotes}`;
               action: "index",
               imageId: updatedItem.id,
               galleryPath: selectedPath,
-              imageUrl: imageUrl.startsWith('http') ? imageUrl : 'https://photos.smugmug.com' + imageUrl
+              imageUrl: toAbsoluteProxyImageUrl(imageUrl, "xl")
             }),
           });
         } catch (viErr) {
@@ -1652,7 +1663,7 @@ ${collectorNotes}`;
                 action: "index",
                 imageId: imageData.id,
                 galleryPath: selectedPath,
-                imageUrl: imageUrl.startsWith('http') ? imageUrl : 'https://photos.smugmug.com' + imageUrl
+                imageUrl: toAbsoluteProxyImageUrl(imageUrl, "xl")
               }),
             });
           } catch (viErr) {
@@ -1735,7 +1746,7 @@ ${collectorNotes}`;
                   action: "index",
                   imageId: item.imageId,
                   galleryPath: item.galleryPath,
-                  imageUrl: item.src.startsWith('http') ? item.src : 'https://photos.smugmug.com' + item.src
+                  imageUrl: toAbsoluteProxyImageUrl(item.src, "xl")
                 }),
               });
             } catch (viErr) {
@@ -1869,7 +1880,7 @@ ${collectorNotes}`;
               action: "index",
               imageId: current.id,
               galleryPath: selectedPath,
-              imageUrl: imageUrl.startsWith('http') ? imageUrl : 'https://photos.smugmug.com' + imageUrl
+              imageUrl: toAbsoluteProxyImageUrl(imageUrl, "xl")
             }),
           });
         } catch (viErr) {
@@ -3128,11 +3139,7 @@ ${collectorNotes}`;
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {syncSeriesMembers.map((member) => {
                       const isMaster = syncMasterId === member.key;
-                      const imgUrl = member.src?.startsWith("http") 
-                        ? member.src 
-                        : member.src 
-                          ? `https://photos.smugmug.com${member.src}` 
-                          : "";
+                      const imgUrl = member.src ? normalizeImageSrc(member.src, "m") : "";
                       
                       // Extract gallery name from path
                       const pathParts = member.galleryPath.split("/");

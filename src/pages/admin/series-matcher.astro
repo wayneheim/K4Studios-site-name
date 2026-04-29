@@ -521,6 +521,12 @@
     let similaritySorted = false;
     let imageHashes = {};  // seriesId -> hash
     let mismatchCache = {}; // seriesId -> boolean (true if metadata differs across occurrences)
+
+    function toProxyImageUrl(src, imageId, size = 'm') {
+      const value = src || imageId || '';
+      const id = imageId || String(value).match(/\/(i-[A-Za-z0-9]+)(?:\/|$)/)?.[1] || String(value).match(/^i-[A-Za-z0-9]+$/)?.[0];
+      return id ? `/img/${id}/${size}.jpg` : '';
+    }
     
     // Normalize title for comparison (remove "Photography by Wayne Heim" etc)
     function normalizeTitle(title) {
@@ -1049,10 +1055,7 @@
         card.style.cssText = 'border: 2px solid ' + (occCount > 1 ? '#f5a524' : '#555') + '; border-radius: 8px; overflow: hidden; background: #252525;';
         
         // Build thumbnail URL
-        let thumbUrl = series.src || '';
-        if (thumbUrl && !thumbUrl.startsWith('http')) {
-          thumbUrl = 'https://photos.smugmug.com' + thumbUrl;
-        }
+        let thumbUrl = toProxyImageUrl(series.src, series.primaryImageId || series.occurrences?.[0]?.imageId, 'm');
         
         // Build tier HTML - each on its own line
         // In Limited Editions view, don't show Foundation tier or Sketch
@@ -1119,10 +1122,7 @@
         card.className = 'card' + (occCount > 1 ? ' multi' : '');
         card.dataset.seriesId = seriesId;
         
-        let thumbUrl = series.src || '';
-        if (thumbUrl && !thumbUrl.startsWith('http')) {
-          thumbUrl = 'https://photos.smugmug.com' + thumbUrl;
-        }
+        let thumbUrl = toProxyImageUrl(series.src, series.primaryImageId || series.occurrences?.[0]?.imageId, 'm');
         
         const filter = document.getElementById('filter-select').value;
         const tiersToShow = filter === 'limited' 
@@ -1186,13 +1186,13 @@
         if (!occ) continue;
         
         const hash = getHash(occ.imageId, occ.galleryPath);
-        const imageUrl = series.src || series.thumbnailUrl;
+        const imageUrl = toProxyImageUrl(series.src || series.thumbnailUrl, occ.imageId, 'xl');
         if (!hash && imageUrl) {
           needsIndexing.push({
             seriesId,
             imageId: occ.imageId,
             galleryPath: occ.galleryPath,
-            imageUrl: imageUrl.startsWith('http') ? imageUrl : 'https://photos.smugmug.com' + imageUrl
+            imageUrl
           });
         }
       }
@@ -1774,10 +1774,7 @@
       document.getElementById('modal-created').textContent = 
         series.createdAt ? new Date(series.createdAt).toLocaleDateString() : '-';
       
-      let thumbUrl = series.src || '';
-      if (thumbUrl && !thumbUrl.startsWith('http')) {
-        thumbUrl = 'https://photos.smugmug.com' + thumbUrl;
-      }
+      let thumbUrl = toProxyImageUrl(series.src, series.primaryImageId || series.occurrences?.[0]?.imageId, 'm');
       document.getElementById('modal-thumb').src = thumbUrl;
       
       // Render occurrences

@@ -10,6 +10,34 @@ import cloudflare from '@astrojs/cloudflare';
 const isProduction = process.env.NODE_ENV === 'production' || process.argv.includes('build');
 const excludePatterns = isProduction ? ['src/pages/admin/**/*'] : [];
 
+const smugMugAssetUrlPattern =
+  /https:\/\/photos\.smugmug\.com\/[^"'`\\\s),}]+\/(i-[A-Za-z0-9]+)\/[^"'`\\\s),}]+\/(S|M|L|XL|O|Ti)\/[^"'`\\\s),}]+/g;
+
+const sizeMap = {
+  S: 's',
+  M: 'm',
+  L: 'l',
+  XL: 'xl',
+  O: 'src',
+  Ti: 's',
+};
+
+function sanitizeSmugMugAssetUrls() {
+  return {
+    name: 'k4-sanitize-smugmug-asset-urls',
+    enforce: 'post',
+    renderChunk(code) {
+      if (!code.includes('https://photos.smugmug.com')) return null;
+
+      const sanitized = code.replace(smugMugAssetUrlPattern, (_url, imageId, size) => {
+        return `/img/${imageId}/${sizeMap[size] || 'm'}.jpg`;
+      });
+
+      return sanitized === code ? null : { code: sanitized, map: null };
+    },
+  };
+}
+
 export default defineConfig({
  site: 'https://www.k4studios.com',   // 👈 Add this
   // Enforce no trailing slashes for routes
@@ -25,6 +53,7 @@ export default defineConfig({
   // Exclude admin utilities from production builds (dev-only)
   ...(excludePatterns.length > 0 && { exclude: excludePatterns }),
   vite: {
+    plugins: [sanitizeSmugMugAssetUrls()],
     resolve: {
       alias: {
         '@': path.resolve('./src'),
