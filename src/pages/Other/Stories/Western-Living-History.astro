@@ -3,6 +3,7 @@ export const prerender = true;
 // Auto-generated Astro page for Western-Living-History
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import PictureShowBase from "@/components/PictureShowBase.jsx";
+import { sanitizeStoryShowData } from "@/components/utils/sanitizeStoryShowData.ts";
 import { storyMeta, storyData } from "@/data/Other/Stories/Western-Living-History.mjs";
 import { getStructuredData } from "@/components/utils/getStructuredData.ts";
 import { normalizeImageSrc } from "@/utils/imageProxy.js";
@@ -67,7 +68,7 @@ const structuredDataJSON = getStructuredData({
   </noscript>
   <PictureShowBase
     client:load
-    rawData={storyData}
+    rawData={sanitizeStoryShowData(storyData)}
     basePath="/Other/Show/Western-Living-History"
     titleBase={storyMeta.showTitle}
     globalAudioSrc={storyMeta.globalAudioSrc || ""}

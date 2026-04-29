@@ -270,7 +270,7 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${pa
           <LandingRightImages
             client:load
             heading="Collection Samples"
-            images={featheredImages as any}
+            images={sanitizeForClient(featheredImages) as any}
             displayCount={6}
           />
         </div>

@@ -353,7 +353,7 @@ const inRoomSlides = [engrainedSlides[4], engrainedSlides[5], engrainedSlides[7]
               <div class="wallart-grid__img-wrap">
                 <img
                   src={getProxySrc(item.id, 'm')}
-                  data-fallback-src={item.srcM || item.src || ''}
+                  data-fallback-src={getProxySrc(item.id, 'l')}
                   alt={item.alt || `Wild West wall art by Wayne Heim: ${item.title}`}
                   loading="lazy"
                   onerror="if (this.dataset.fallbackSrc && this.src !== this.dataset.fallbackSrc) { this.src = this.dataset.fallbackSrc; }"
@@ -431,7 +431,7 @@ const inRoomSlides = [engrainedSlides[4], engrainedSlides[5], engrainedSlides[7]
                   data-slide-index={index}
                   aria-hidden={index === 0 ? "false" : "true"}
                 >
-                  <img src={slide.src} alt={slide.alt || "In-room fine art presentation"} loading="lazy" />
+                  <img src={getProxySrc(slide.id, 'l')} alt={slide.alt || "In-room fine art presentation"} loading="lazy" />
                 </a>
               ))}
             </div>

@@ -3,6 +3,7 @@ export const prerender = true;
 // Auto-generated Astro page for The-Cost-of-the-Journey
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import PictureShowBase from "@/components/PictureShowBase.jsx";
+import { sanitizeStoryShowData } from "@/components/utils/sanitizeStoryShowData.ts";
 import { storyMeta, storyData } from "@/data/Other/Stories/The-Cost-of-the-Journey.mjs";
 import { getStructuredData } from "@/components/utils/getStructuredData.ts";
 import { normalizeImageSrc } from "@/utils/imageProxy.js";
@@ -67,7 +68,7 @@ const structuredDataJSON = getStructuredData({
   </noscript>
   <PictureShowBase
     client:load
-    rawData={storyData}
+    rawData={sanitizeStoryShowData(storyData)}
     basePath="/Other/Show/The-Cost-of-the-Journey"
     titleBase={storyMeta.showTitle}
     globalAudioSrc={storyMeta.globalAudioSrc || ""}

@@ -384,7 +384,7 @@ const tombstonesWithThumbs = landingCowboy.tombstones.map((stone: any) => {
           <LandingRightImages
             client:load
             heading="Cowboy Collection Samples"
-            images={featheredImages.map((image: any) => ({ ...image })) as unknown as never[]}
+            images={sanitizeForClient(featheredImages.map((image: any) => ({ ...image }))) as unknown as never[]}
             displayCount={6}
           />
         </div>

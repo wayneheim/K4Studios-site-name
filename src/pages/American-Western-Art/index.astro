@@ -397,7 +397,7 @@ const collectingLevels = [
               <div class="wallart-grid__img-wrap">
                 <img
                   src={getProxySrc(item.id, 'm')}
-                  data-fallback-src={item.srcM || item.src || ''}
+                  data-fallback-src={getProxySrc(item.id, 'l')}
                   alt={item.alt || `American Western art by Wayne Heim: ${item.title}`}
                   loading="lazy"
                   onerror="if (this.dataset.fallbackSrc && this.src !== this.dataset.fallbackSrc) { this.src = this.dataset.fallbackSrc; }"

@@ -240,7 +240,7 @@ const structuredData = getStructuredData({
 
       <div class="sidebar-column hidden md:block">
         <div class="sample-fade reveal-on-scroll">
-          <LandingRightImages client:load heading="Featured Scenes" images={featheredImages.slice(0, 5)} />
+          <LandingRightImages client:load heading="Featured Scenes" images={sanitizeForClient(featheredImages.slice(0, 5))} />
         </div>
       </div>
     </section>

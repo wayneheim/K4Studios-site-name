@@ -3,13 +3,14 @@ export const prerender = true;
 // Auto-generated Astro page for Builder-Test
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import PictureShowBase from "@/components/PictureShowBase.jsx";
+import { sanitizeStoryShowData } from "@/components/utils/sanitizeStoryShowData.ts";
 import { storyMeta, storyData } from "@/data/Other/Stories/Builder-Test.mjs";
 --- 
 
 <BaseLayout title={storyMeta.showTitle}>
   <PictureShowBase
     client:load
-    rawData={storyData}
+    rawData={sanitizeStoryShowData(storyData)}
     basePath="/Other/Show/Builder-Test"
     titleBase={storyMeta.showTitle}
     globalAudioSrc={storyMeta.globalAudioSrc || ""}

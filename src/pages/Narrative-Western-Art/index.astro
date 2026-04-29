@@ -184,7 +184,7 @@ const storySliderProps: any = {
 const mobileStoryImagesClient = sanitizeForClient(
   sampleImages.map((image: any) => ({ ...image }))
 ) as any;
-const sidebarImagesClient = sampleImages.map((image: any) => ({ ...image })) as any;
+const sidebarImagesClient = sanitizeForClient(sampleImages.map((image: any) => ({ ...image }))) as any;
 const mobileStoryImageProps = {
   images: mobileStoryImagesClient,
   displayCount: headingCount,

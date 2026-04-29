@@ -446,7 +446,7 @@ const structuredData = getStructuredData({
     </div>
     <div class="w-full max-w-[1200px] mx-auto px-4">
       <div class="carousel-fade reveal-on-scroll">
-        <ImageBar2 client:load slides={painterlySlides} />
+        <ImageBar2 client:load slides={sanitizeForClient(painterlySlides)} />
       </div>
     </div>
     <section class="section-heading-wrap">

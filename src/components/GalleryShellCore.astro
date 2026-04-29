@@ -91,7 +91,7 @@ const usedEntranceData = {
   ...entranceData,
   image: selectedImage
     ? {
-        src: selectedImage.src,
+        id: selectedImage.id,
         alt: entranceData?.image?.alt || selectedImage.alt || selectedImage.title,
         caption: entranceData?.image?.caption,
       }
@@ -238,7 +238,7 @@ const pageDescription =
 /** ---------------------------------------------------------------
  * OG / Twitter
  * --------------------------------------------------------------- */
-const ogImage = selectedImage?.src;
+const ogImage = selectedImage?.id ? `${siteBase}/img/${selectedImage.id}/l.jpg` : selectedImage?.src;
 const ogAlt = selectedImage?.alt || selectedImage?.title || fixMojibake(usedEntranceData.title);
 
 const meta = {
@@ -307,7 +307,7 @@ const meta = {
   <Footer
     previewImages={previewImages}
     previewPath={previewPath}
-    currentImageUrl={selectedImage ? (selectedImage.src.startsWith('http') ? selectedImage.src : `${siteBase}${selectedImage.src.startsWith('/') ? selectedImage.src : '/' + selectedImage.src}`) : undefined}
+    currentImageUrl={selectedImage?.id ? `${siteBase}/img/${selectedImage.id}/xl.jpg` : undefined}
     title={pageTitle}
     allImages={allImages}
     galleryTitle={fixMojibake(usedEntranceData.title)}

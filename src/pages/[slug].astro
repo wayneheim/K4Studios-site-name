@@ -4,6 +4,7 @@ export const prerender = true;
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import LandingHeader from '@/components/Landing-Header.jsx';
 import ImageBar2 from '@/components/ImageBar2.jsx';
+import { sanitizeForClient } from '@/components/utils/normalizeImage.ts';
 import SiteFooter from '@/components/Footer.astro';
 import UniversalDoorwayPageTemplate from '@/components/doorway/UniversalDoorwayPageTemplate.astro';
 import { slides as doorwayCarouselSlides } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/carousel';
@@ -103,7 +104,7 @@ const webPageSchema = JSON.stringify({
     </div>
 
     <div class="w-full max-w-[1200px] mx-auto px-4">
-      <ImageBar2 client:load slides={doorwayCarouselSlides} />
+      <ImageBar2 client:load slides={sanitizeForClient(doorwayCarouselSlides)} />
     </div>
 
     <UniversalDoorwayPageTemplate

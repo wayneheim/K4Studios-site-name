@@ -416,7 +416,7 @@ const tombstonesWithThumbs = landingWesternArt.tombstones.map((stone: any) => {
           <LandingRightImages
             client:load
             heading="Collection Samples"
-            images={featheredImages as unknown as never[]}
+            images={sanitizeForClient(featheredImages) as unknown as never[]}
             displayCount={6}
           />
         </div>

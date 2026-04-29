@@ -107,7 +107,7 @@ const featheredImagesSidebar = featheredImages.slice(0, 6);
     <LandingRightImages
       client:load
       heading="Collection Samples"
-      images={featheredImages.slice(0, 5)}
+      images={sanitizeForClient(featheredImages.slice(0, 5))}
     />
   </div>
 </div>

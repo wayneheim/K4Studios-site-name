@@ -112,7 +112,7 @@ const structuredData = getStructuredData({
 
   <div class="w-full max-w-[1200px] mx-auto px-4">
     <div class="carousel-fade reveal-on-scroll">
-  <ImageBar2 client:load slides={[]} />
+  <ImageBar2 client:load slides={sanitizeForClient([])} />
     </div>
   </div>
 
@@ -201,7 +201,7 @@ const structuredData = getStructuredData({
   <LandingRightImages
     client:load
     heading="Featured Portraits"
-    images={featheredImages.slice(0, 5)}
+    images={sanitizeForClient(featheredImages.slice(0, 5))}
     displayCount={5}
   />
 

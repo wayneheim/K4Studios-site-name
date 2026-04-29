@@ -174,7 +174,7 @@ export default function GalleryInfo({
   }, [galleryData]);
 
   const heroCaption = heroImage?.title || entranceData?.image?.caption || "";
-  const heroFallbackSrc = heroImage?.srcL || heroImage?.src || "";
+  const heroFallbackSrc = heroImage?.id ? getProxySrc(heroImage.id, 'l') : "";
 
   // "Explore the Gallery" always goes to first image in gallery
   const exploreHref =

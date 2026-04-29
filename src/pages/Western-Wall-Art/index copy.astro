@@ -68,7 +68,7 @@ const westernCollectionItemCount = galleryDatas.reduce((total, galleryData) => {
 }, 0);
 
 const clientFeatheredImages = sanitizeForClient(featheredImages) as unknown as never[];
-const sidebarFeatheredImages = featheredImages as unknown as never[];
+const sidebarFeatheredImages = sanitizeForClient(featheredImages) as unknown as never[];
 
 // ----------------------
 // STRUCTURED DATA

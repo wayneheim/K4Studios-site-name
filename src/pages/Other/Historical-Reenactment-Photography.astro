@@ -121,7 +121,7 @@ const landingMeta = {
 
     <div class="w-full max-w-[1200px] mx-auto px-4">
       <div class="carousel-fade reveal-on-scroll" style="min-height: auto !important; margin-bottom: 10px !important;">
-        <ImageBar2 client:load slides={featheredImages} />
+        <ImageBar2 client:load slides={sanitizeForClient(featheredImages)} />
       </div>
     </div>
 
@@ -184,7 +184,7 @@ const landingMeta = {
           <LandingRightImages
             client:load
             heading="Collection Samples"
-            images={featheredImages as any}
+            images={sanitizeForClient(featheredImages) as any}
             displayCount={6}
           />
         </div>

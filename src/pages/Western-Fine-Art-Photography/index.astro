@@ -257,7 +257,7 @@ const mobileStoryImageProps = {
 
 const sidebarImageProps = {
   heading: 'Collection Samples',
-  images: featheredImages,
+  images: sanitizeForClient(featheredImages),
   displayCount: 6,
 } as any;
 

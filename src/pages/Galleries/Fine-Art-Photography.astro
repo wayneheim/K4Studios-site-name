@@ -186,7 +186,7 @@ if (!meta.twitterUrl) meta.twitterUrl = `https://k4studios.com${sectionPath}`;
           <LandingRightImages
             client:load
             heading="Collection Samples"
-            images={featheredImagesSidebar}
+            images={sanitizeForClient(featheredImagesSidebar)}
           />
         </div>
       </div>

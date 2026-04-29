@@ -45,6 +45,7 @@ meta.twitterDescription = narrativeArtLanding.intro;
 
 const visibleNarrativeImages = narrativeImages.filter((image) => image.visibility !== "ghost");
 const fallbackImage = visibleNarrativeImages[0];
+const getProxySrc = (imageId, size = "m") => imageId ? `/img/${imageId}/${size}.jpg` : "";
 const essayCards = essays.map((essay, index) => {
   const image = visibleNarrativeImages.find((entry) => entry.id === essay.heroImageId) || fallbackImage;
   return {
@@ -85,7 +86,7 @@ const essayCards = essays.map((essay, index) => {
         <a href={`/Other/Narrative-Art/${essay.slug}`} class="narrative-card">
           <div class="narrative-card-image-wrap">
             <img
-              src={image?.srcM || image?.srcL || image?.src}
+              src={getProxySrc(image?.id, "m")}
               alt={image?.alt || essay.title}
               class="narrative-card-image"
               loading="lazy"

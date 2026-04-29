@@ -5,6 +5,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import FeaturedReadingSection from '@/components/FeaturedReadingSection.astro';
 import LandingHeader from '@/components/Landing-Header.jsx';
 import ImageBar2 from '@/components/ImageBar2.jsx';
+import { sanitizeForClient } from '@/components/utils/normalizeImage.ts';
 import SiteFooter from '@/components/Footer.astro';
 
 import { galleryData as wildWestNarrativesData } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs';
@@ -385,7 +386,7 @@ const meta = {
       <div class="carousel-container">
         <div class="carousel-placeholder" aria-hidden="true"></div>
         <div class="carousel-fade reveal-on-scroll">
-          <ImageBar2 client:load slides={wildWestSlides} />
+          <ImageBar2 client:load slides={sanitizeForClient(wildWestSlides)} />
         </div>
       </div>
     </div>
@@ -467,7 +468,7 @@ const meta = {
               <div class="wallart-grid__img-wrap">
                 <img
                   src={getProxySrc(item.id, 'm')}
-                  data-fallback-src={item.srcM || item.src || ''}
+                  data-fallback-src={getProxySrc(item.id, 'l')}
                   alt={item.alt || `Western storytelling photography by Wayne Heim: ${item.title}`}
                   loading="lazy"
                   onerror="if (this.dataset.fallbackSrc && this.src !== this.dataset.fallbackSrc) { this.src = this.dataset.fallbackSrc; }"

@@ -144,7 +144,7 @@ const structuredData = getStructuredData({
       <div class="carousel-container">
         <div class="carousel-placeholder" aria-hidden="true"></div>
         <div class="carousel-fade reveal-on-scroll">
-          <ImageBar2 client:load slides={architectureSlides} />
+          <ImageBar2 client:load slides={sanitizeForClient(architectureSlides)} />
         </div>
       </div>
     </div>
@@ -194,7 +194,7 @@ const structuredData = getStructuredData({
           <LandingRightImages
             client:load
             heading="Collection Samples"
-            images={featheredImagesSidebar}
+            images={sanitizeForClient(featheredImagesSidebar)}
             displayCount={6}
           />
         </div>

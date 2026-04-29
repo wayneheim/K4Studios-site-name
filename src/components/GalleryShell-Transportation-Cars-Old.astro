@@ -62,7 +62,7 @@ const usedEntranceData = {
   ...entranceData,
   image: selectedImage
     ? {
-        src: selectedImage.src,
+        id: selectedImage.id,
         alt: selectedImage.alt || selectedImage.title || entranceData?.image?.alt,
         caption: selectedImage.title || entranceData?.image?.caption,
       }

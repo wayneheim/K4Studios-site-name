@@ -107,7 +107,7 @@ const featheredImages = getFeatheredImages({
 const mobileStoryImagesClient = sanitizeForClient(
   featheredImages.map((image: any) => ({ ...image }))
 ) as any;
-const sidebarImagesClient = featheredImages.map((image: any) => ({ ...image })) as any;
+const sidebarImagesClient = sanitizeForClient(featheredImages.map((image: any) => ({ ...image }))) as any;
 const storySliderStoriesClient = cowboyColorData.map((story: any) => ({ ...story })) as any;
 
 const mobileStoryImageProps = {

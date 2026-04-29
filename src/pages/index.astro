@@ -229,7 +229,7 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://k4studios.com/";
           <LandingRightImages
             client:load
             heading="Explore Other Themes"
-            images={featheredImages}
+            images={sanitizeForClient(featheredImages)}
             displayCount={6}
           />
         </div>

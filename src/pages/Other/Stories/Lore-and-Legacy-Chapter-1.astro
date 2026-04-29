@@ -3,6 +3,7 @@ export const prerender = true;
 // Auto-generated Astro page for Lore-and-Legacy-Chapter-1
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import PictureShowBase from "@/components/PictureShowBase.jsx";
+import { sanitizeStoryShowData } from "@/components/utils/sanitizeStoryShowData.ts";
 import { storyMeta, storyData } from "@/data/Other/Stories/Lore-and-Legacy-Chapter-1.mjs";
 import { getStructuredData } from "@/components/utils/getStructuredData.ts";
 import { normalizeImageSrc } from "@/utils/imageProxy.js";
@@ -44,7 +45,7 @@ const structuredDataJSON = getStructuredData({
   </noscript>
   <PictureShowBase
     client:load
-    rawData={storyData}
+    rawData={sanitizeStoryShowData(storyData)}
     basePath="/Other/Show/Lore-and-Legacy-Chapter-1"
     titleBase={storyMeta.showTitle}
     globalAudioSrc={storyMeta.globalAudioSrc || ""}

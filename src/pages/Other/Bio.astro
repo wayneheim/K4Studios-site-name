@@ -246,7 +246,7 @@ const structuredData = getStructuredData({
           <LandingRightImages
             client:load
             heading="Selected Work"
-            images={featheredImages}
+            images={sanitizeForClient(featheredImages)}
             displayCount={6}
             dynamicSpacing={false}
           />

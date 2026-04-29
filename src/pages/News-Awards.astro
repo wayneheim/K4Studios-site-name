@@ -174,7 +174,7 @@ const structuredData = getStructuredData({
           <LandingRightImages
             client:load
             heading="Collection Samples"
-            images={featheredImages}
+            images={sanitizeForClient(featheredImages)}
             displayCount={6}
           />
         </div>

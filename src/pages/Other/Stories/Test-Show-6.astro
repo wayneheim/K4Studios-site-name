@@ -2,6 +2,7 @@
 export const prerender = true;
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import PictureShowBase from "@/components/PictureShowBase.jsx";
+import { sanitizeStoryShowData } from "@/components/utils/sanitizeStoryShowData.ts";
 import { getStructuredData } from "@/components/utils/getStructuredData.ts";
 import { storyMeta, storyData } from "@/data/Other/Stories/Test-Show-6.mjs";
 
@@ -41,7 +42,7 @@ const structuredData = getStructuredData({
   <div id="picture-show-content" class="relative z-10 bg-white min-h-screen">
     <PictureShowBase
       client:load
-      rawData={Array.isArray(storyData) ? storyData : []}
+      rawData={sanitizeStoryShowData(Array.isArray(storyData) ? storyData : [])}
       basePath="/Other/Show/Test-Show-6"
       titleBase={storyMeta?.showTitle || "Untitled Picture Show"}
       globalAudioSrc={storyMeta?.globalAudioSrc || ""}
