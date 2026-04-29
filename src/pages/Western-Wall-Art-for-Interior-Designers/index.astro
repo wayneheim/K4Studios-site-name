@@ -187,6 +187,15 @@ function getProxySrc(imageId: string, size: string = 'm'): string {
   return `/img/${imageId}/${size}.jpg`;
 }
 
+function getSlideImageId(slide: any): string {
+  return (
+    slide?.id ||
+    String(slide?.href || '').match(/\/(i-[A-Za-z0-9]+)(?:\/)?$/)?.[1] ||
+    String(slide?.src || '').match(/\/(i-[A-Za-z0-9]+)(?:\/|\.jpg$)/)?.[1] ||
+    ''
+  );
+}
+
 function makeAbsoluteUrl(src?: string) {
   if (!src) return "";
   if (src.startsWith("http://") || src.startsWith("https://")) return src;
@@ -469,7 +478,7 @@ const inRoomSlides = [engrainedSlides[4], engrainedSlides[5], engrainedSlides[7]
                   data-slide-index={index}
                   aria-hidden={index === 0 ? "false" : "true"}
                 >
-                  <img src={getProxySrc(slide.id, 'l')} alt={slide.alt || "In-room fine art presentation"} loading="lazy" />
+                  <img src={getProxySrc(getSlideImageId(slide), 'l')} alt={slide.alt || "In-room fine art presentation"} loading="lazy" />
                 </a>
               ))}
             </div>
