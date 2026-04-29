@@ -2,6 +2,7 @@
 
 const allModules = import.meta.glob('@/data/Galleries/**/*.mjs', { eager: true });
 import { normalizeImage } from '@/components/utils/normalizeImage';
+import { resolveCarouselGalleryHref } from '@/data/carousel/westernRouting';
 
 // CRITICAL: Sort file paths to ensure consistent order on server and client
 const sortedFilePaths = Object.keys(allModules).sort();
@@ -40,7 +41,7 @@ function selectStaticHeroSrc(img) {
   return img.srcS || img.srcM || img.srcL || img.src || '';
 }
 
-function filePathToHref(filePath) {
+function filePathToHref(filePath, imageId) {
   let url = filePath
     .replace(/^.*Galleries/, '/Galleries')
     .replace(/\.mjs$/, '')
@@ -51,12 +52,7 @@ function filePathToHref(filePath) {
     parts.pop();
     url = '/' + parts.join('/');
   }
-  if (url === '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color') {
-    return '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color';
-  }
-  if (url === '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Black-White') {
-    return '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White';
-  }
+  url = resolveCarouselGalleryHref(imageId, url);
   return url;
 }
 
@@ -73,7 +69,7 @@ function toSlide(rawImg, path, idx) {
   }
   return {
     id: img.id,
-    href: `${cleanPath}/${img.id}`,
+    href: `${resolveCarouselGalleryHref(img.id, cleanPath)}/${img.id}`,
     src: selectResponsiveSrc(img), // responsive for all others!
     srcS: img.srcS,
     srcM: img.srcM,
@@ -145,9 +141,9 @@ for (const filePath of sortedFilePaths) {
   );
   if (visible.length === 0) continue;
   if (filePath.includes('/Painterly-Fine-Art-Photography/')) {
-    painterlyPools.push({ images: buildRankedPool(visible), path: filePathToHref(filePath) });
+    painterlyPools.push({ images: buildRankedPool(visible), path: filePathToHref(filePath, visible[0]?.id) });
   } else if (filePath.includes('/Fine-Art-Photography/')) {
-    traditionalPools.push({ images: buildRankedPool(visible), path: filePathToHref(filePath) });
+    traditionalPools.push({ images: buildRankedPool(visible), path: filePathToHref(filePath, visible[0]?.id) });
   }
 }
 
@@ -164,7 +160,7 @@ for (let i = 0; i < 4; i++) {
 const staticCowboySlide = {
   ...normalizeImage({ ...staticCowboyImg }),
   id: staticCowboyImg.id,
-  href: `${filePathToHref(staticCowboyFilePath)}/${staticCowboyImg.id}`,
+  href: `${filePathToHref(staticCowboyFilePath, staticCowboyImg.id)}/${staticCowboyImg.id}`,
   src: selectStaticHeroSrc(staticCowboyImg),     // <--- ALWAYS .webp if available
   srcS: heroWebpSrcs[staticCowboyImg.id] || staticCowboyImg.srcS,
   srcM: staticCowboyImg.srcM,

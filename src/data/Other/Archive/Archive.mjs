@@ -1228,7 +1228,7 @@ export const galleryData = [
  "notes": "This work draws its strength from what is withheld. The composition favors vertical stillness and subdued motion, allowing psychological weight to replace action. Painterly diffusion softens the boundary between subject and environment, aligning the image with pictorialist traditions while maintaining a contemporary restraint.\n\nRather than dramatizing history, the photograph allows it to remain present - carried internally, not performed. The result is a contemplative piece that rewards prolonged viewing, offering collectors a work grounded in dignity, endurance, and quiet narrative depth.",
  "rating": 4,
  "visibility": "show",
- "archivedFrom": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color.mjs",
+ "archivedFrom": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
  "sortOrder": 81
  },
  {

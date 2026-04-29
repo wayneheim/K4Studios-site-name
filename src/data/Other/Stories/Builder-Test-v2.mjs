@@ -332,7 +332,7 @@ export const storyData = [
     "notes": "High Ground Justice, a masterclass in compositional tension. The image pulses with cinematic energy—each natural element choreographed to guide the eye and elevate the confrontation at its heart.\n\nThe scene is architected through visual geometry: the angled cliff echoing the attacker’s posture, the dark tree boxing him in, a triangular shadow driving us toward the man climbing the ridge. Every line of the land participates in the judgment. Trees observe. Shadows accuse. Grass betrays. And the cliff itself demands consequence. This is not just a conflict of men—but of place, memory, and fate.\n\nAbove, the trees stand like silent jurors. There's a mythic weight here—part Remington, part Greek tragedy. We’re left not with clarity, but questions: justice, revenge, or seized opportunity? This isn’t just a captured moment—it’s a constructed parable.",
     "rating": 0,
     "galleries": [
-      "Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color.mjs"
+      "Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs"
     ],
     "visibility": "show",
     "sortOrder": 5
@@ -377,7 +377,7 @@ export const storyData = [
     "notes": "Heim’s use of elevation, dramatic clouds, and clustered composition creates a sense of anticipation and narrative tension, recalling the heroic tableaus of classic Western cinema. The painterly treatment softens the raw landscape, highlighting light, form, and the emotional weight of the scene. For collectors, this image is a tribute to the legacy of Western art — a piece that invites new stories with every viewing.",
     "rating": 5,
     "galleries": [
-      "Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color.mjs"
+      "Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs"
     ],
     "visibility": "show",
     "sortOrder": 4
@@ -415,7 +415,7 @@ export const storyData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color.mjs"
+      "Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs"
     ],
     "visibility": "show",
     "sortOrder": 10

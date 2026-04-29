@@ -32,12 +32,6 @@ const BACKUP_PATTERN = /[-_\s](copy|bak|backup|old)(\d*|[-_\s].*)?\.mjs$/i;
 
 // Files to exclude from manifest generation (stale/duplicate data)
 const EXCLUDED_FILES = ['MasterGalleryData.mjs'];
-const LEGACY_GALLERY_ROUTE_MAP = Object.freeze({
-  '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color':
-    '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color',
-  '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Black-White':
-    '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White',
-});
 
 const SIZE_RANK = Object.freeze({
   TI: 1,
