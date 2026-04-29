@@ -24,7 +24,7 @@ export const slides = [
   },
   {
     id: 'i-rqk5Kdk',
-    href: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-rqk5Kdk',
+    href: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-rqk5Kdk',
     src: '/images/i-rqk5Kdk.webp',
     srcS: '/images/i-rqk5Kdk.webp',
     alt: 'Cowboy Portrait 3',
