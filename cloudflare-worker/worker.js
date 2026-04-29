@@ -5775,6 +5775,7 @@ __name(handleTrackEvent, "handleTrackEvent");
 
 // k4-image-proxy.js
 var MANIFEST_URL = "https://k4studios.com/image-manifest.json";
+var SMUGMUG_ORIGIN = "https://photos.smugmug.com";
 var IMAGE_ID_MAP_URL2 = "https://k4studios.com/imageIdMap.json";
 var MANIFEST_CACHE_TTL = 3600;
 var SIZE_FALLBACK = {
@@ -5971,11 +5972,18 @@ function resolveImageUrl(manifest, imageId, requestedSize) {
   if (!imageData) return null;
   const fallbackChain = SIZE_FALLBACK[requestedSize] || SIZE_FALLBACK.m;
   for (const size of fallbackChain) {
-    if (imageData[size]) return imageData[size];
+    if (imageData[size]) return resolveSmugMugOriginUrl(imageData[size]);
   }
   return null;
 }
 __name(resolveImageUrl, "resolveImageUrl");
+function resolveSmugMugOriginUrl(value) {
+  if (!value || typeof value !== "string") return null;
+  if (/^https:\/\/photos\.smugmug\.com/i.test(value)) return value;
+  if (value.startsWith("/")) return `${SMUGMUG_ORIGIN}${value}`;
+  return null;
+}
+__name(resolveSmugMugOriginUrl, "resolveSmugMugOriginUrl");
 async function proxyImage(smugMugUrl, request) {
   const imageResponse = await fetch(smugMugUrl, {
     headers: {

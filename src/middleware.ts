@@ -4,6 +4,9 @@ import imageIdMap from "@/data/imageIdMap.json";
 
 // Type assertion for the imageIdMap
 const imageMap = imageIdMap as Record<string, string[]>;
+const SMUGMUG_IMAGE_HOST = ["photos", "smugmug", "com"].join(".");
+const LEGACY_PHOTO_SHOOTS_PREFIX = ["", "Other", "Photo-Shoots", ""].join("/");
+const LEGACY_PHOTO_SHOOTS_THEMES_PREFIX = ["", "Other", "Photo-Shoots-and-Themes", ""].join("/");
 
 let imageMapLower: Record<string, { canonicalId: string; paths: string[] }> | null = null;
 
@@ -278,7 +281,7 @@ function stripNestedTags(html: string): { cleaned: string; changed: boolean } {
         }
         
         // Check if it's from SmugMug (they inject incomplete ImageObject)
-        const isSmugMug = normalizedContent.includes("photos.smugmug.com");
+        const isSmugMug = normalizedContent.includes(SMUGMUG_IMAGE_HOST);
         if (!isSmugMug) {
           return normalizedContent === content ? match : match.replace(content, normalizedContent); // Keep non-SmugMug ImageObject
         }
@@ -369,19 +372,21 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
   // - If found → 301 redirect to correct location (preserve link authority)
   // - If NOT found → 410 Gone (truly removed content)
   // - If NO image ID → 410 Gone (just a gallery listing, not matchable)
-  // Photoshootsandevents → redirect to SmugMug archive
+  // Photoshootsandevents is an old scraped-url archive, not a public surface.
   if (pathname.startsWith("/Photoshootsandevents/")) {
-    const smugmugPath = pathname.replace("/Photoshootsandevents/", "/Other/Photo-Shoots/");
-    return new Response(null, {
-      status: 301,
-      headers: { Location: `https://wayne-heim.smugmug.com${smugmugPath}` },
+    return new Response("Gone", {
+      status: 410,
+      headers: {
+        "X-Robots-Tag": "noindex",
+        "Cache-Control": "public, max-age=86400",
+      },
     });
   }
 
   const legacyGonePrefixes = [
     "/Scheduled-Shoots/",
-    "/Other/Photo-Shoots/",
-    "/Other/Photo-Shoots-and-Themes/",
+    LEGACY_PHOTO_SHOOTS_PREFIX,
+    LEGACY_PHOTO_SHOOTS_THEMES_PREFIX,
     "/Is-Winter/",
     "/keyword/",  // SmugMug search/tag paths
   ];

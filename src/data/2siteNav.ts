@@ -215,7 +215,6 @@ children: [
     children: [
       { label: "News & Awards", href: "/News-Awards" },
       { label: "Print Options", href: "/Other/Print-Options" },
-      { label: "Photo Shoots", href: "/Other/Photo-Shoots" },
       { label: "K4 Select Series", href: "/Other/K4-Select-Series" }
     ]
   },

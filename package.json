@@ -7,8 +7,9 @@
   "scripts": {
     "dev": "astro dev --host",
     "dev:netlify": "netlify dev",
-      "build": "npm run gen:master-data && npm run gen:prefetch-map && npm run gen:image-id-map && npm run gen:sitemap && npm run gen:image-sitemaps && npm run gen:sitemap:matches && npm run gen:story-slider && npm run gen:image-manifest && npm run copy:pricing && npm run copy:series-data && npm run gen:engrained-data && astro build && node scripts/warm-image-cache.mjs && npx cpx \"_redirects\" dist/",
-    "build:fast": "npm run gen:master-data && npm run gen:prefetch-map && npm run gen:image-id-map && npm run gen:sitemap && npm run gen:image-sitemaps && npm run gen:sitemap:matches && npm run gen:story-slider && npm run gen:image-manifest && npm run copy:pricing && npm run copy:series-data && npm run gen:engrained-data && astro build && npx cpx \"_redirects\" dist/",
+      "build": "npm run gen:master-data && npm run gen:prefetch-map && npm run gen:image-id-map && npm run gen:sitemap && npm run gen:image-sitemaps && npm run gen:sitemap:matches && npm run gen:story-slider && npm run gen:image-manifest && npm run copy:pricing && npm run copy:series-data && npm run gen:engrained-data && astro build && node scripts/warm-image-cache.mjs && npx cpx \"_redirects\" dist/ && npm run sanitize:public-output",
+    "build:fast": "npm run gen:master-data && npm run gen:prefetch-map && npm run gen:image-id-map && npm run gen:sitemap && npm run gen:image-sitemaps && npm run gen:sitemap:matches && npm run gen:story-slider && npm run gen:image-manifest && npm run copy:pricing && npm run copy:series-data && npm run gen:engrained-data && astro build && npx cpx \"_redirects\" dist/ && npm run sanitize:public-output",
+    "sanitize:public-output": "node scripts/sanitize-public-output.cjs",
     "build:astro:fast": "node -e \"import {spawnSync} from 'node:child_process'; const env={...process.env,NODE_OPTIONS:'--max-old-space-size=24576',UV_THREADPOOL_SIZE:'32'}; const cmd=process.platform==='win32'?'npx.cmd':'npx'; const r=spawnSync(cmd,['astro','build'],{stdio:'inherit',env}); process.exit(r.status ?? 1);\"",
     "deploy:prebuilt": "netlify deploy --prod --dir=dist --site=0849dde2-1b6e-4016-b0f4-1d609f1b8283",
       "release:prebuilt": "npm run build && npm run deploy:prebuilt && npm run submit:indexnow",

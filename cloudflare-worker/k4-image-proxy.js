@@ -59,6 +59,7 @@ import {
 // Cache-bust parameter to avoid waiting on Cloudflare's cached manifest after deploys.
 // Update this when you need the worker to pick up a newly deployed manifest immediately.
 const MANIFEST_URL = "https://k4studios.netlify.app/image-manifest.json";
+const SMUGMUG_ORIGIN = "https://photos.smugmug.com";
 const IMAGE_ID_MAP_URL = "https://k4studios.com/imageIdMap.json";
 const MANIFEST_CACHE_TTL = 3600; // seconds
 const IMAGE_CACHE_KEY_VERSION = "20260304-idfix1";
@@ -546,6 +547,13 @@ function resolveImageUrl(manifest, imageId, requestedSize) {
   return null;
 }
 
+function resolveSmugMugOriginUrl(value) {
+  if (!value || typeof value !== "string") return null;
+  if (/^https:\/\/photos\.smugmug\.com/i.test(value)) return value;
+  if (value.startsWith("/")) return `${SMUGMUG_ORIGIN}${value}`;
+  return null;
+}
+
 function resolveImageUrls(manifest, imageId, requestedSize) {
   const imageData = manifest[imageId];
   if (!imageData) return [];
@@ -557,9 +565,10 @@ function resolveImageUrls(manifest, imageId, requestedSize) {
   for (const size of fallbackChain) {
     const candidate = imageData[size];
     if (!candidate) continue;
-    if (seen.has(candidate)) continue;
-    seen.add(candidate);
-    urls.push(candidate);
+    const originUrl = resolveSmugMugOriginUrl(candidate);
+    if (!originUrl || seen.has(originUrl)) continue;
+    seen.add(originUrl);
+    urls.push(originUrl);
   }
 
   return urls;
@@ -2881,18 +2890,23 @@ export default {
       return await createBranded404Response(request);
     }
 
-    // Legacy Photoshootsandevents → SmugMug archive (301).
+    // Legacy Photoshootsandevents is an old scraped-url archive, not a public surface.
     // Must run BEFORE the imageIdAtEnd namespace guard, which would 404
     // /Photoshootsandevents/.../i-xxx as an unknown namespace.
     if (/^\/Photoshootsandevents(\/|$)/i.test(path)) {
-      return Response.redirect('https://wayne-heim.smugmug.com/Other/Photo-Shoots', 301);
+      return new Response('Gone', {
+        status: 410,
+        headers: { 'X-Robots-Tag': 'noindex', 'Cache-Control': 'public, max-age=86400' }
+      });
     }
 
-    // Legacy /Other/Photo-Shoots* → SmugMug archive (301, preserve full path).
-    // These are old SmugMug gallery URLs that no longer exist on k4studios.
+    // Legacy /Other/Photo-Shoots* are old scraped archive URLs, not a public surface.
     // Must run before the image-page pipeline which would 404 on unknown image IDs.
     if (/^\/Other\/Photo-Shoots/i.test(path)) {
-      return Response.redirect('https://wayne-heim.smugmug.com' + path, 301);
+      return new Response('Gone', {
+        status: 410,
+        headers: { 'X-Robots-Tag': 'noindex', 'Cache-Control': 'public, max-age=86400' }
+      });
     }
 
     // Bare /Galleries/lightbox (no ?dataset=) is a dead SmugMug endpoint → 410.

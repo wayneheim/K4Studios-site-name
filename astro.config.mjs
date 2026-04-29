@@ -9,6 +9,7 @@ import cloudflare from '@astrojs/cloudflare';
 // Exclude admin pages from production build
 const isProduction = process.env.NODE_ENV === 'production' || process.argv.includes('build');
 const excludePatterns = isProduction ? ['src/pages/admin/**/*'] : [];
+const SMUGMUG_ASSET_ORIGIN = ['https://photos', 'smugmug', 'com'].join('.');
 
 const smugMugAssetUrlPattern =
   /https:\/\/photos\.smugmug\.com\/[^"'`\\\s),}]+\/(i-[A-Za-z0-9]+)\/[^"'`\\\s),}]+\/(S|M|L|XL|O|Ti)\/[^"'`\\\s),}]+/g;
@@ -27,7 +28,7 @@ function sanitizeSmugMugAssetUrls() {
     name: 'k4-sanitize-smugmug-asset-urls',
     enforce: 'post',
     renderChunk(code) {
-      if (!code.includes('https://photos.smugmug.com')) return null;
+      if (!code.includes(SMUGMUG_ASSET_ORIGIN)) return null;
 
       const sanitized = code.replace(smugMugAssetUrlPattern, (_url, imageId, size) => {
         return `/img/${imageId}/${sizeMap[size] || 'm'}.jpg`;

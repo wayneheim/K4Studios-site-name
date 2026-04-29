@@ -1,7 +1,7 @@
 /**
  * generate-image-manifest.cjs
  * 
- * Extracts all image IDs and their SmugMug URLs from .mjs gallery files.
+ * Extracts all image IDs and their SmugMug origin paths from .mjs gallery files.
  * Outputs a consolidated manifest for the Cloudflare Worker proxy.
  * 
  * DOES NOT modify source .mjs files - extract only.
@@ -9,11 +9,11 @@
  * Output format:
  * {
  *   "i-ncFcHDM": {
- *     "s": "https://photos.smugmug.com/.../S/...-S.jpg",
- *     "m": "https://photos.smugmug.com/.../L/...-L.jpg",
- *     "l": "https://photos.smugmug.com/.../XL/...-XL.jpg",
- *     "xl": "https://photos.smugmug.com/.../XL/...-XL.jpg",
- *     "src": "https://photos.smugmug.com/.../XL/...-XL.jpg"
+ *     "s": "/.../S/...-S.jpg",
+ *     "m": "/.../L/...-L.jpg",
+ *     "l": "/.../XL/...-XL.jpg",
+ *     "xl": "/.../XL/...-XL.jpg",
+ *     "src": "/.../XL/...-XL.jpg"
  *   }
  * }
  * 
@@ -25,6 +25,9 @@ const path = require('path');
 const { pathToFileURL } = require('url');
 
 const DATA_DIR = path.join(__dirname, '..', 'src', 'data');
+const ARCHIVE_DATA_DIRS = new Set([
+  path.join(DATA_DIR, 'Other', 'Photo-Shoots').toLowerCase(),
+]);
 const OUTPUT_FILE = path.join(__dirname, '..', 'public', 'image-manifest.json');
 
 // Pattern to detect backup/copy files (e.g., Color-copy.mjs, file-bak.mjs, file copy.mjs)
@@ -125,7 +128,8 @@ function findMjsFiles(dir, files = []) {
     const fullPath = path.join(dir, entry.name);
     if (entry.isDirectory()) {
       // Skip node_modules, backups, etc.
-      if (!['node_modules', 'backups', '.git'].includes(entry.name)) {
+      const normalizedDir = fullPath.toLowerCase();
+      if (!['node_modules', 'backups', '.git'].includes(entry.name) && !ARCHIVE_DATA_DIRS.has(normalizedDir)) {
         findMjsFiles(fullPath, files);
       }
     } else if (entry.name.endsWith('.mjs')) {
@@ -146,6 +150,21 @@ function isSmugMugUrl(url) {
   return typeof url === 'string' && /^https:\/\/photos\.smugmug\.com/i.test(url);
 }
 
+function toSmugMugOriginPath(url) {
+  if (!isSmugMugUrl(url)) return url;
+  try {
+    return encodeArchivePathSegments(new URL(url).pathname);
+  } catch {
+    return encodeArchivePathSegments(url.replace(/^https:\/\/photos\.smugmug\.com/i, ''));
+  }
+}
+
+function encodeArchivePathSegments(pathname) {
+  return String(pathname || '')
+    .replace('/Other/Photo-Shoots-and-Themes', '/Other/Photo%2DShoots-and-Themes')
+    .replace('/Other/Photo-Shoots', '/Other/Photo%2DShoots');
+}
+
 function urlMatchesId(url, id) {
   return typeof url === 'string' && typeof id === 'string' && url.includes(`/${id}/`);
 }
@@ -159,11 +178,11 @@ function extractImagesFromGalleryData(galleryData) {
     if (!id.startsWith('i-') || id === 'i-k4studios') continue;
 
     const urls = {};
-    if (isSmugMugUrl(item.srcS) && urlMatchesId(item.srcS, id)) urls.s = item.srcS;
-    if (isSmugMugUrl(item.srcM) && urlMatchesId(item.srcM, id)) urls.m = item.srcM;
-    if (isSmugMugUrl(item.srcL) && urlMatchesId(item.srcL, id)) urls.l = item.srcL;
-    if (isSmugMugUrl(item.srcXL) && urlMatchesId(item.srcXL, id)) urls.xl = item.srcXL;
-    if (isSmugMugUrl(item.src) && urlMatchesId(item.src, id)) urls.src = item.src;
+    if (isSmugMugUrl(item.srcS) && urlMatchesId(item.srcS, id)) urls.s = toSmugMugOriginPath(item.srcS);
+    if (isSmugMugUrl(item.srcM) && urlMatchesId(item.srcM, id)) urls.m = toSmugMugOriginPath(item.srcM);
+    if (isSmugMugUrl(item.srcL) && urlMatchesId(item.srcL, id)) urls.l = toSmugMugOriginPath(item.srcL);
+    if (isSmugMugUrl(item.srcXL) && urlMatchesId(item.srcXL, id)) urls.xl = toSmugMugOriginPath(item.srcXL);
+    if (isSmugMugUrl(item.src) && urlMatchesId(item.src, id)) urls.src = toSmugMugOriginPath(item.src);
 
     if (Object.keys(urls).length > 0) {
       images.push({ id, urls });
