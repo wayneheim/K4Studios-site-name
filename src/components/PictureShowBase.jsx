@@ -1730,8 +1730,6 @@ const isSpeechActive = () => {
           className="bg-[#fff] font-serif text-center pb-16 w-full mt-12"
           style={{ fontFamily: "'Glegoo', serif" }}
           aria-label="Site footer"
-          itemScope
-          itemType="https://schema.org/Organization"
         >
           <div className="mx-auto max-w-xl px-4 pt-8 pb-4 footer-fade" aria-label="Footer controls and info">
             {/* 🔗 Share Drawer */}
@@ -1745,27 +1743,27 @@ const isSpeechActive = () => {
             {/* 🌐 Social Icons */}
             <div className="flex justify-center gap-5 mb-3">
               <a href="https://www.facebook.com/k4studiosphotography/" target="_blank" rel="noopener noreferrer">
-                <img className="social-icon" src="https://cdn.simpleicons.org/facebook/444444" alt="Facebook" width="20" height="20" itemProp="sameAs" />
+                <img className="social-icon" src="https://cdn.simpleicons.org/facebook/444444" alt="Facebook" width="20" height="20" />
               </a>
               <a href="https://www.instagram.com/k4studios/" target="_blank" rel="noopener noreferrer">
-                <img className="social-icon" src="https://cdn.simpleicons.org/instagram/444444" alt="Instagram" width="20" height="20" itemProp="sameAs" />
+                <img className="social-icon" src="https://cdn.simpleicons.org/instagram/444444" alt="Instagram" width="20" height="20" />
               </a>
               <a href="https://www.threads.com/@k4studios" target="_blank" rel="noopener noreferrer">
-                <img className="social-icon" src="https://cdn.simpleicons.org/threads/444444" alt="Threads" width="20" height="20" itemProp="sameAs" />
+                <img className="social-icon" src="https://cdn.simpleicons.org/threads/444444" alt="Threads" width="20" height="20" />
               </a>
               <a href="https://www.pinterest.com/K4studios/" target="_blank" rel="noopener noreferrer">
-                <img className="social-icon" src="https://cdn.simpleicons.org/pinterest/444444" alt="Pinterest" width="20" height="20" itemProp="sameAs" />
+                <img className="social-icon" src="https://cdn.simpleicons.org/pinterest/444444" alt="Pinterest" width="20" height="20" />
               </a>
               <a href="https://500px.com/wayneheim" target="_blank" rel="noopener noreferrer">
-                <img className="social-icon" src="https://cdn.simpleicons.org/500px/444444" alt="500px" width="20" height="20" itemProp="sameAs" />
+                <img className="social-icon" src="https://cdn.simpleicons.org/500px/444444" alt="500px" width="20" height="20" />
               </a>
               <a href="/Contact">
-                <img className="social-icon" src="https://cdn.simpleicons.org/gmail/444444" alt="Email" width="20" height="20" itemProp="sameAs" />
+                <img className="social-icon" src="https://cdn.simpleicons.org/gmail/444444" alt="Email" width="20" height="20" />
               </a>
             </div>
 
             {/* 🄯 Copyright */}
-            <div className="text-xs text-[#2c2c2c] opacity-70" itemProp="name">
+            <div className="text-xs text-[#2c2c2c] opacity-70">
               <time dateTime={new Date().getFullYear().toString()} aria-label={`Copyright ${new Date().getFullYear()}`}>&copy; {new Date().getFullYear()}</time>
               {' '}Wayne Heim - K4 Studios |{' '}
               <a href="/Glossary" className="underline hover:no-underline" title="Story Glossary">Story Glossary</a>

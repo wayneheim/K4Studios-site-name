@@ -165,7 +165,9 @@ if (isImagePage && preloadImage?.src) {
 }
 
 const canonicalUrl = ensureAbsoluteUrl(meta.canonicalUrl || Astro.url?.pathname || '/');
+const emitCanonical = meta.noCanonical !== true && meta.canonical !== false;
 const ogUrl = ensureAbsoluteUrl(meta.ogUrl || canonicalUrl);
+const robotsContent = meta.robots || (isImagePage ? "index, follow, noai, noimageai" : null);
 
 // Convert any SmugMug URLs to proxy format for OG/Twitter images
 // Default to 'l' to protect XL from bot discovery
@@ -228,8 +230,8 @@ const normalizedBreadcrumbsJSON = normalizeK4Host(breadcrumbsJSON);
     <meta name="author" content="Wayne Heim" />
     <meta name="copyright" content="© Wayne Heim, K4 Studios" />
     <meta name="creator" content="Wayne Heim" />
-    {isImagePage && <meta name="robots" content="index, follow, noai, noimageai" />}
-    <link rel="canonical" href={canonicalUrl} />
+    {robotsContent && <meta name="robots" content={robotsContent} />}
+    {emitCanonical && <link rel="canonical" href={canonicalUrl} />}
 
     {normalizedStructuredDataJSON && <script type="application/ld+json" set:html={normalizedStructuredDataJSON}></script>}
     {normalizedBreadcrumbsJSON && <script type="application/ld+json" set:html={normalizedBreadcrumbsJSON}></script>}

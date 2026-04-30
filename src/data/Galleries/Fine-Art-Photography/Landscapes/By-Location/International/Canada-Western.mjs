@@ -1009,7 +1009,7 @@ export const galleryData = [
   {
     "id": "i-ChMPCf2",
     "title": "Black & White Photo of a Foggy Morning at Emerald Lake",
-    "description": "Exploring the Canadian Rockies through fine art: Banff, Jasper, and Emerald Lake.",
+    "description": "A black and white fine art landscape photograph of fog drifting over the pier at Emerald Lake in the Canadian Rockies.",
     "alt": "Fog Rolling in Over the Pier of Emerald Lake",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-ChMPCf2/A",
     "keywords": [
@@ -1033,7 +1033,7 @@ export const galleryData = [
       "photography",
       "landscape"
     ],
-    "story": "Fine art exploration of the Canadian Rockies, from Banff to Jasper and Emerald Lake.",
+    "story": "Fog drifts over the pier at Emerald Lake in this black and white fine art photograph from the Canadian Rockies.",
     "notes": "",
     "rating": 0,
     "galleries": [],

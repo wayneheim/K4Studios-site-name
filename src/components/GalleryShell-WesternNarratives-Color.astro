@@ -19,5 +19,5 @@ const { breadcrumb, entranceData, initialImageId } = Astro.props;
   entranceData={entranceData}
   initialImageId={initialImageId}
 >
-  <ChapterViewer slot="chapter-viewer" client:load initialImageId={initialImageId || 'i-k4studios'} />
+  <ChapterViewer slot="chapter-viewer" client:load initialImageId={initialImageId} />
 </GalleryShellCore>

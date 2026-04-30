@@ -94,6 +94,12 @@ function extractImageId(src) {
   return null;
 }
 
+function stripComments(content) {
+  return String(content || '')
+    .replace(/\/\*[\s\S]*?\*\//g, '')
+    .replace(/^\s*\/\/.*$/gm, '');
+}
+
 function buildWarmUrl(imageId, size) {
   return `${BASE_URL}/img/${imageId}/${size}.jpg`;
 }
@@ -128,7 +134,7 @@ async function loadLandingStones() {
           scanDir(fullPath);
         } else if (entry.name === 'landingstones.ts') {
           try {
-            const content = fs.readFileSync(fullPath, 'utf8');
+            const content = stripComments(fs.readFileSync(fullPath, 'utf8'));
             const relPath = path.relative(dataDir, fullPath);
             
             // PRIMARY: Extract explicit imageId fields (canonical source of truth)

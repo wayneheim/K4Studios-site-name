@@ -1478,10 +1478,14 @@ async function handleImagePagePolicy(request, pathname, ctx, env) {
   if (String(imageId).toLowerCase() === GHOST_IMAGE_ID.toLowerCase()) {
     const isSearch = isSearchBot(request);
 
-    // Always return 404 for ghost sentinel to keep behavior identical for
-    // crawlers and human viewers.
-    ctx.waitUntil(logEdgeEvent(env, '404', pathname, imageId, isSearch, request));
-    return await createBranded404Response(request);
+    ctx.waitUntil(logEdgeEvent(env, '410', pathname, imageId, isSearch, request));
+    return new Response("Gone", {
+      status: 410,
+      headers: {
+        "Cache-Control": "public, max-age=86400",
+        "X-Robots-Tag": "noindex, nofollow, noarchive, noimageindex"
+      }
+    });
   }
 
   // Preserve query string across canonical redirects (e.g., ?k4debug=1)

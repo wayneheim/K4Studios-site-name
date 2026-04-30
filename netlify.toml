@@ -423,6 +423,13 @@ to = "/Glossary"
 status = 301
 force = true
 
+# Dev/prototype pages — permanently gone, signal 410 to crawlers
+[[redirects]]
+from = "/dev/*"
+to = "/"
+status = 410
+force = true
+
 [[redirects]]
 from = "/hack/feed.mg"
 to = "/"
@@ -584,12 +591,6 @@ force = true
 from = "/Photography-Galleries/*/i-:id"
 to = "/.netlify/functions/smart-404?id=:id&path=/Photography-Galleries/:splat/i-:id"
 status = 404
-force = true
-
-[[redirects]]
-from = "/Photography-Galleries/*"
-to = "/Galleries/:splat"
-status = 301
 force = true
 
 # --- Photoshoots and Events → SmugMug archive ---

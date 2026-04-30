@@ -488,7 +488,7 @@ function classifyForEntryRef(referer) {
 }
 __name(classifyForEntryRef, "classifyForEntryRef");
 __name2(classifyForEntryRef, "classifyForEntryRef");
-var IMAGE_ID_MAP_URL = "https://k4studios.com/imageIdMap.json";
+var IMAGE_ID_MAP_URL = "https://www.k4studios.com/imageIdMap.json";
 var IMAGE_ID_MAP_TTL_MS = 60 * 60 * 1e3;
 var _imageIdMapCache = null;
 var _imageIdMapCacheTime = 0;

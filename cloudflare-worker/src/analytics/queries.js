@@ -127,7 +127,7 @@ function classifyForEntryRef(referer) {
 }
 
 // ── Canonical image URL helper (used to avoid /art/i-... smart-404 function hits) ──
-const IMAGE_ID_MAP_URL = 'https://k4studios.com/imageIdMap.json';
+const IMAGE_ID_MAP_URL = 'https://www.k4studios.com/imageIdMap.json';
 const IMAGE_ID_MAP_TTL_MS = 60 * 60 * 1000;
 let _imageIdMapCache = null;
 let _imageIdMapCacheTime = 0;

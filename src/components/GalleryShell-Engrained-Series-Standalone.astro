@@ -219,9 +219,9 @@ let sisterLink = sitemapMatches.find(m => m.a.includes(currentImageId))?.b || nu
       style={skipIntro ? "display: block;" : "display: none;"}
     >
       {shouldSsrChapterViewer ? (
-        <ChapterViewer client:load initialImageId={initialImageId || "i-k4studios"} />
+        <ChapterViewer client:load initialImageId={initialImageId} />
       ) : (
-        <ChapterViewer client:only="react" initialImageId={initialImageId || "i-k4studios"} />
+        <ChapterViewer client:only="react" initialImageId={initialImageId} />
       )}
     </div>
   </div>

@@ -352,12 +352,10 @@ const structuredDataJson = JSON.stringify({
 const heroImage = galleryData[0];
 ---
 
-<BaseLayout title={seoTitle} description={seoDescription}>
+<BaseLayout title={seoTitle} description={seoDescription} meta={{ canonicalUrl, robots: "index, follow" }}>
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json" set:html={structuredDataJson} />
 
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href={canonicalUrl} />
   <link href="https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&display=swap" rel="stylesheet" />
 
   <div class="gallery-index-wrapper">

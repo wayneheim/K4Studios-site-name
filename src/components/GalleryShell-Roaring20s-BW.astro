@@ -25,8 +25,8 @@ const shouldSsrChapterViewer = Boolean(initialImageId && initialImageId !== "i-k
   initialImageId={initialImageId}
 >
   {shouldSsrChapterViewer ? (
-    <ChapterViewer slot="chapter-viewer" client:load initialImageId={initialImageId || "i-k4studios"} />
+    <ChapterViewer slot="chapter-viewer" client:load initialImageId={initialImageId} />
   ) : (
-    <ChapterViewer slot="chapter-viewer" client:only="react" initialImageId={initialImageId || "i-k4studios"} />
+    <ChapterViewer slot="chapter-viewer" client:only="react" initialImageId={initialImageId} />
   )}
 </GalleryShellCore>

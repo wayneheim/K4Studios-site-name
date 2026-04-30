@@ -36,7 +36,9 @@ async function main() {
   const fileUrl = "file:///" + ENGRAINED_PATH.replace(/\\/g, "/");
   const mod = await import(fileUrl);
   const sourceItems = mod.galleryData || mod.engrainedData || [];
-  const items = sourceItems.map(withPublicProxyImages);
+  const items = sourceItems
+    .filter((item) => item?.id !== "i-k4studios" && item?.visibility !== "ghost")
+    .map(withPublicProxyImages);
 
   // Ensure output directory exists
   const outDir = path.dirname(OUTPUT_PATH);

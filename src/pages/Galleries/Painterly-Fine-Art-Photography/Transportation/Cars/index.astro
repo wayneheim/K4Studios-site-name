@@ -12,7 +12,7 @@ const idFromURL = match ? match[1] : null;
 const validIds = galleryData.map((img) => img.id);
 const initialImageId = idFromURL && validIds.includes(idFromURL)
   ? idFromURL
-  : "i-k4studios";
+  : undefined;
 ---
 
 <GalleryShell 

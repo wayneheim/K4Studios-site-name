@@ -350,30 +350,9 @@ exports.handler = async (event) => {
     imageId = 'i-' + imageId;
   }
 
-  // Non-image legacy requests: canonicalize old namespace to /Galleries/*.
-  // This keeps old gallery URLs consolidating without forcing image lookup.
+  // Non-image legacy requests should not blind-redirect deprecated
+  // Photography-Galleries paths. Only image-detail URLs get rematched.
   if (!imageId) {
-    if (/^\/Photography-Galleries\//.test(requestedPath || '')) {
-      const canonicalPath = String(requestedPath || '').replace(/^\/Photography-Galleries\//, '/Galleries/');
-      const redirectUrl = `${canonicalPath}${passthroughQuery}`;
-      console.log(`[smart-404] Legacy non-image path -> ${redirectUrl}`);
-      await logSmart404EdgeEvent({
-        outcome: 'legacy_gallery_canonicalized',
-        path: requestedPath,
-        imageId: null,
-        reason: 'legacy-gallery-canonicalized'
-      });
-      return {
-        statusCode: 301,
-        headers: {
-          'Location': redirectUrl,
-          'Cache-Control': 'public, max-age=31536000',
-          'X-Smart-404': 'legacy-gallery-canonicalized'
-        },
-        body: ''
-      };
-    }
-
     console.log(`[smart-404] No image ID found, passing to 404`);
     await logSmart404EdgeEvent({
       outcome: 'no_image_id',

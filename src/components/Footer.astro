@@ -80,8 +80,6 @@ const shareImage = toShareUrl(rawShareImage) || (previewImages?.[0]?.id ? `${sit
   class="bg-[#fff] font-serif text-center pb-16 w-full"
   style="font-family: 'Glegoo', serif;"
   aria-label="Site footer"
-  itemscope
-  itemtype="https://schema.org/Organization"
 >
 
   {showPreviewBar && (
@@ -131,27 +129,27 @@ const shareImage = toShareUrl(rawShareImage) || (previewImages?.[0]?.id ? `${sit
     <!-- 🌐 Social Icons -->
     <div class="flex justify-center gap-5 mb-3">
       <a href="https://www.facebook.com/k4studiosphotography/" target="_blank" rel="noopener noreferrer">
-        <img class="social-icon" src="https://cdn.simpleicons.org/facebook/444444" alt="Facebook" width="20" height="20" itemprop="sameAs" />
+        <img class="social-icon" src="https://cdn.simpleicons.org/facebook/444444" alt="Facebook" width="20" height="20" />
       </a>
       <a href="https://www.instagram.com/k4studios/" target="_blank" rel="noopener noreferrer">
-        <img class="social-icon" src="https://cdn.simpleicons.org/instagram/444444" alt="Instagram" width="20" height="20" itemprop="sameAs" />
+        <img class="social-icon" src="https://cdn.simpleicons.org/instagram/444444" alt="Instagram" width="20" height="20" />
       </a>
       <a href="https://www.threads.com/@k4studios" target="_blank" rel="noopener noreferrer">
-        <img class="social-icon" src="https://cdn.simpleicons.org/threads/444444" alt="Threads" width="20" height="20" itemprop="sameAs" />
+        <img class="social-icon" src="https://cdn.simpleicons.org/threads/444444" alt="Threads" width="20" height="20" />
       </a>
       <a href="https://www.pinterest.com/K4studios/" target="_blank" rel="noopener noreferrer">
-        <img class="social-icon" src="https://cdn.simpleicons.org/pinterest/444444" alt="Pinterest" width="20" height="20" itemprop="sameAs" />
+        <img class="social-icon" src="https://cdn.simpleicons.org/pinterest/444444" alt="Pinterest" width="20" height="20" />
       </a>
       <a href="https://500px.com/wayneheim" target="_blank" rel="noopener noreferrer">
-        <img class="social-icon" src="https://cdn.simpleicons.org/500px/444444" alt="500px" width="20" height="20" itemprop="sameAs" />
+        <img class="social-icon" src="https://cdn.simpleicons.org/500px/444444" alt="500px" width="20" height="20" />
       </a>
       <a href="/Contact">
-        <img class="social-icon" src="https://cdn.simpleicons.org/gmail/444444" alt="Email" width="20" height="20" itemprop="sameAs" />
+        <img class="social-icon" src="https://cdn.simpleicons.org/gmail/444444" alt="Email" width="20" height="20" />
       </a>
     </div>
 
     <!-- 🄯 Copyright -->
-    <div class="text-xs text-[#2c2c2c] opacity-70" itemprop="name">
+    <div class="text-xs text-[#2c2c2c] opacity-70">
       <span class="block mb-1 text-[0.7rem] tracking-wide text-[#6a5a4a]"><a href="/Western-Fine-Art-Photography" class="hover:underline">Painterly Western Fine Art Photography</a> by Wayne Heim</span>
   <time datetime={`${currentYear}`}>&copy; {currentYear}</time>
       {' '}Wayne Heim |{' '}

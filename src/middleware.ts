@@ -119,14 +119,40 @@ function normalizeK4HostInSchemaContent(content: string): string {
     .replace(/https?:\\\/\\\/(?:www\.)?k4studios\.com/gi, "https:\\/\\/www.k4studios.com");
 }
 
-function redirectToCustom404(): Response {
-  return new Response(null, {
-    status: 302,
-    headers: {
-      Location: "/404",
-      "Cache-Control": "no-store, max-age=0",
-    },
+async function createCustom404Response(context: Parameters<MiddlewareHandler>[0], reason = "custom-404"): Promise<Response> {
+  const headers = new Headers({
+    "Cache-Control": "public, max-age=86400",
+    "X-Robots-Tag": "noindex, nofollow",
+    "X-K4-404": reason,
   });
+
+  try {
+    const notFoundUrl = new URL("/404", context.url);
+    const pageResponse = await fetch(notFoundUrl.toString(), {
+      headers: { Accept: "text/html" },
+    });
+
+    if (pageResponse.ok || pageResponse.status === 404) {
+      const contentType = pageResponse.headers.get("Content-Type");
+      headers.set("Content-Type", contentType || "text/html; charset=utf-8");
+
+      return new Response(pageResponse.body, {
+        status: 404,
+        headers,
+      });
+    }
+  } catch {
+    // Fall through to a minimal crawl-safe 404 if the branded page cannot load.
+  }
+
+  headers.set("Content-Type", "text/html; charset=utf-8");
+  return new Response(
+    "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"robots\" content=\"noindex, nofollow\"><title>Not Found</title></head><body><h1>404 Not Found</h1></body></html>",
+    {
+      status: 404,
+      headers,
+    },
+  );
 }
 
 function stripNestedTags(html: string): { cleaned: string; changed: boolean } {
@@ -335,6 +361,23 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
 
   // ✅ Redirect: legacy SmugMug /Photography-Galleries/ → modern /Galleries/
   // NOTE: These paths can bypass Netlify's _redirects in SSR mode.
+  // i-k4studios is a private gallery-state sentinel, not a real image page.
+  // If crawlers discover a synthesized /.../i-k4studios URL, terminate it
+  // before Astro renders a gallery shell or custom 404.
+  const isGhostImageRequest =
+    /^\/(?:Galleries|galleries|Other|other|Photography-Galleries)\//.test(pathname) &&
+    /\/i-k4studios\/?$/i.test(pathname);
+
+  if (isGhostImageRequest) {
+    return new Response("Gone", {
+      status: 410,
+      headers: {
+        "Cache-Control": "public, max-age=86400",
+        "X-Robots-Tag": "noindex, nofollow, noarchive, noimageindex",
+      },
+    });
+  }
+
   if (pathname === "/Photography-Galleries" || pathname.startsWith("/Photography-Galleries/")) {
     const imageIdMatch = pathname.match(/\/(i-[a-zA-Z0-9]+)\/?$/);
     if (imageIdMatch) {
@@ -350,7 +393,7 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
       }
 
       console.log(`[legacy-301] Blocked smart redirect for non-whitelisted parent: ${pathname}`);
-      return redirectToCustom404();
+      return createCustom404Response(context, "blocked-smart-redirect");
     }
 
     const rest = pathname.slice("/Photography-Galleries".length) || "";
@@ -415,7 +458,7 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
       console.log(`[smart-410] Legacy image ${imageId} not found in any gallery → /404`);
     }
     // No image ID or image not found → custom 404
-    return redirectToCustom404();
+    return createCustom404Response(context, "legacy-not-found");
   }
 
   // ✅ REDIRECT: Legacy Pictorialist paths → current Pictorialist page
@@ -475,7 +518,7 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
     responseHeaders.set("X-Robots-Tag", "noindex, follow");
   }
 
-  // Route page-level misses to branded custom 404 page.
+  // Route page-level misses to the branded 404 without a redirect hop.
   // Keep asset/API 404s untouched.
   if (
     response.status === 404 &&
@@ -483,13 +526,7 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
     context.request.method === "GET" &&
     !/\.[a-z0-9]+$/i.test(pathname)
   ) {
-    return new Response(null, {
-      status: 302,
-      headers: {
-        Location: "/404",
-        "Cache-Control": "no-store, max-age=0",
-      },
-    });
+    return createCustom404Response(context, "page-miss");
   }
 
   const contentType = response.headers.get("content-type") || "";

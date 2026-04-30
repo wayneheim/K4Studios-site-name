@@ -318,7 +318,7 @@ export const galleryData = [
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Cq3rbHT/0/NLKH2sCmcgMTWjZBVZrdsKQ8fB3dV5rjLpBWw4fqF/XL/_WHO4561-Edit-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Cq3rbHT/0/NLKH2sCmcgMTWjZBVZrdsKQ8fB3dV5rjLpBWw4fqF/XL/_WHO4561-Edit-Edit-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Cq3rbHT/0/KJJdmrJmQhpwhmhx9R4td4q3dDgnGbWQNFV89bJDk/L/_WHO4561-Edit-Edit-2-L.jpg",
-    "srcM": "",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Cq3rbHT/2/NRtT8ZzpcVhL99dV8sWCZ4wsbMLBBxLTsv6npnF93/M/_WHO4561-Edit-Edit-2-2-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Cq3rbHT/0/KS24fNQc2tKJBpq6xzBnFQTmPft9FsmXvbmc8WLTN/S/_WHO4561-Edit-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Cq3rbHT/A",

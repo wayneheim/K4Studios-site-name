@@ -17359,12 +17359,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-hQwkqXf</loc>
-    <lastmod>2026-04-22T18:23:46-04:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-Ht39nrT</loc>
     <lastmod>2026-04-22T18:23:46-04:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -17528,6 +17522,12 @@
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-M9cq3qz</loc>
+    <lastmod>2026-04-22T18:23:46-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-M9DgWmr</loc>
     <lastmod>2026-04-22T18:23:46-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -23605,12 +23605,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.k4studios.com/Other/Print-Options</loc>
-    <lastmod>2026-04-29T00:02:08-04:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://www.k4studios.com/Other/Seeing</loc>
     <lastmod>2026-04-15T21:51:45-04:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -23708,12 +23702,6 @@
   </url>
   <url>
     <loc>https://www.k4studios.com/Other/Shows</loc>
-    <lastmod>2026-04-28T16:11:57-04:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.k4studios.com/Other/Stories</loc>
     <lastmod>2026-04-28T16:11:57-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -23819,12 +23807,6 @@
     <lastmod>2026-04-14T15:35:19-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.k4studios.com/western-art-photography</loc>
-    <lastmod>2026-04-14T12:33:00-04:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.k4studios.com/western-artwork</loc>

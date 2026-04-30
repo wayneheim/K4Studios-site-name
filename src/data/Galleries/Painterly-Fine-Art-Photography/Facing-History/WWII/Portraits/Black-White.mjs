@@ -962,17 +962,17 @@ export const galleryData = [
     contentSource: "ai"
   },
   {
-    "id": "i-hQwkqXf",
+    "id": "i-M9DgWmr",
     "title": "The Gun Crew",
     "description": "A black and white World War II photography image capturing a wartime portrait of a gun crew positioned in readiness. This painterly WWII portrait reflects the discipline and restraint found in greatest generation photos, emphasizing service, duty, and moments of connection formed through shared responsibility. Part of a WWII fine art photography series exploring wartime portrait photography grounded in presence rather than spectacle. © Wayne Heim",
     "alt": "Black and white WWII gun crew positioned at mounted machine gun in wartime readiness",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-hQwkqXf/0/MLZrbqzWx6Sv9JWtZfsscTGjD7dx7mfTzRZmDGwB4/XL/_ANA3428-Edit-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-hQwkqXf/0/MLZrbqzWx6Sv9JWtZfsscTGjD7dx7mfTzRZmDGwB4/XL/_ANA3428-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-hQwkqXf/0/LCm9DXVw3HspRbcGSqw5VkKzddRGzj6TRrNw2QX28/L/_ANA3428-Edit-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-hQwkqXf/0/KHt874wnW5FqVkX737DwWVbWkDbCTqKSkKgsgd9Sr/M/_ANA3428-Edit-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-hQwkqXf/0/L8kjwN8MHSvMJkcQFPZSVvBcSTNcZktXc6D5Xz3rr/S/_ANA3428-Edit-S.jpg",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-M9DgWmr/1/NDb26Ngcx6PttfBhFgQXzWgmhnMMFNP3tfdqfHfwk/XL/_ANA3428-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-M9DgWmr/1/NDb26Ngcx6PttfBhFgQXzWgmhnMMFNP3tfdqfHfwk/XL/_ANA3428-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-M9DgWmr/1/NDb26Ngcx6PttfBhFgQXzWgmhnMMFNP3tfdqfHfwk/L/_ANA3428-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-M9DgWmr/1/NDb26Ngcx6PttfBhFgQXzWgmhnMMFNP3tfdqfHfwk/M/_ANA3428-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-M9DgWmr/1/NDb26Ngcx6PttfBhFgQXzWgmhnMMFNP3tfdqfHfwk/S/_ANA3428-Edit-S.jpg",
     "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-hQwkqXf/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-M9DgWmr/A",
 
     "keywords": [
       "wwii photography",

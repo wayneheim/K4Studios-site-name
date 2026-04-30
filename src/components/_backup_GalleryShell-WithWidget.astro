@@ -202,7 +202,7 @@ let sisterLink = sitemapMatches.find(m => m.a.includes(currentImageId))?.b || nu
     <!-- Chapter Viewer -->
     {skipIntro && (
       <div id="chapter-section" class="section-visible" style="display:block;">
-        <ChapterViewer client:load initialImageId={initialImageId || "i-k4studios"} />
+        <ChapterViewer client:load initialImageId={initialImageId} />
       </div>
     )}
   </div>

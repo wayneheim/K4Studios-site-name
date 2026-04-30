@@ -63,9 +63,15 @@ const pageTitle = "Lost to History – K4 Studios";
 const pageSubhead = "Looks like this story wandered off the trail.";
 const description =
   "Discover painterly fine art photography, Western stories, and historical portraits by Wayne Heim.";
+const meta = {
+  robots: "noindex, follow",
+  noCanonical: true,
+  ogUrl: "https://www.k4studios.com/",
+  twitterUrl: "https://www.k4studios.com/",
+};
 ---
 
-<BaseLayout title={pageTitle}>
+<BaseLayout title={pageTitle} description={description} meta={meta}>
   <link
     rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&display=swap"

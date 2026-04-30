@@ -72,11 +72,11 @@ export const videos: K4Video[] = [
       "This K4 Studios narrative slideshow film combines still fine art photography, voice, music, and written text to explore sacrifice, endurance, and legacy in the American West.",
     transcript: "",
     relatedLinks: [
-      { label: "American Western Art", href: "/Western-Fine-Art-Photography/American-Wild-West/" },
-      { label: "Western Fine Art Photography", href: "/Western-Fine-Art-Photography/" },
+      { label: "American Western Art", href: "/American-Western-Art" },
+      { label: "Western Fine Art Photography", href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History" },
       { label: "Wild West Galleries", href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/" },
       { label: "Watch on YouTube", href: "https://www.youtube.com/watch?v=icR5i4Kf4ZY" },
-      { label: "K4 Studios on YouTube", href: K4_YOUTUBE_CHANNEL_URL },
+      { label: "K4 Studios on YouTube", href: "https://www.youtube.com/@K4StudiosFineArt/videos" },
     ],
   },
   {

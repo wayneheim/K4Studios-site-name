@@ -112,6 +112,94 @@ function stringifySchema(value: any): string {
   return JSON.stringify(normalizeSchemaValue(value), null, 2);
 }
 
+const DEFAULT_GALLERY_ABOUT = [
+  { "@type": "Thing", name: "Fine Art Photography" },
+  { "@type": "Thing", name: "Photographic Art" },
+];
+
+function addAboutTerm(
+  terms: Array<{ "@type": string; name: string }>,
+  seen: Set<string>,
+  type: "Thing" | "Place",
+  name: string
+) {
+  const cleanName = name.trim();
+  if (!cleanName) return;
+  const key = `${type}:${cleanName.toLowerCase()}`;
+  if (seen.has(key)) return;
+  seen.add(key);
+  terms.push({ "@type": type, name: cleanName });
+}
+
+function buildContextualAbout(data: any, fallback = DEFAULT_GALLERY_ABOUT) {
+  if (Array.isArray(data?.about) && data.about.length > 0) return data.about;
+
+  const terms: Array<{ "@type": string; name: string }> = [];
+  const seen = new Set<string>();
+  const pathText = [
+    data?.url,
+    data?.pageUrl,
+    data?.galleryUrl,
+    data?.collectionContext?.collectionUrl,
+  ]
+    .filter(Boolean)
+    .join(" ")
+    .toLowerCase();
+  const text = [
+    pathText,
+    data?.title,
+    data?.description,
+    data?.alt,
+    data?.story,
+    Array.isArray(data?.keywords) ? data.keywords.join(" ") : data?.keywords,
+  ]
+    .filter(Boolean)
+    .join(" ")
+    .toLowerCase();
+
+  const isLandscape = /landscape|landscapes|lake|mountain|waterfall|national park|rockies|iceland|faroe|newfoundland/.test(text);
+  const isWestern = /western art|western-cowboy|western-narratives|western portrait|western fine art|cowboy|wild west|frontier|american west|native american/.test(text);
+  const isPortrait = /portrait|portraits|reenactor/.test(text);
+  const isHistorical = /civil war|wwi|wwii|world war|reenact|facing history|historical/.test(text);
+  const isBlackWhite = /black[ -]?white|black & white|monochrome|bw\b/.test(text);
+  const isEngrained = /engrained|wood print|wood/.test(text);
+  const isPainterly = /painterly/.test(text);
+
+  if (isLandscape) {
+    addAboutTerm(terms, seen, "Thing", "Fine Art Landscape Photography");
+  } else if (isPortrait) {
+    addAboutTerm(terms, seen, "Thing", "Fine Art Portrait Photography");
+  } else {
+    addAboutTerm(terms, seen, "Thing", "Fine Art Photography");
+  }
+
+  if (isBlackWhite) addAboutTerm(terms, seen, "Thing", "Black and White Photography");
+  if (isPainterly) addAboutTerm(terms, seen, "Thing", "Painterly Fine Art Photography");
+  if (isEngrained) addAboutTerm(terms, seen, "Thing", "Engrained Wood Art");
+  if (isWestern) addAboutTerm(terms, seen, "Thing", "Western Art");
+  if (isHistorical) addAboutTerm(terms, seen, "Thing", "Historical Photography");
+  if (isHistorical && isPortrait) addAboutTerm(terms, seen, "Thing", "Historical Portraiture");
+
+  const placeChecks: Array<[RegExp, string]> = [
+    [/emerald lake/, "Emerald Lake"],
+    [/canadian rockies|rockies/, "Canadian Rockies"],
+    [/\byoho\b/, "Yoho National Park"],
+    [/\bbanff\b/, "Banff National Park"],
+    [/\bjasper\b/, "Jasper National Park"],
+    [/british columbia/, "British Columbia"],
+    [/\balberta\b/, "Alberta"],
+    [/\biceland\b/, "Iceland"],
+    [/faroe/, "Faroe Islands"],
+    [/newfoundland/, "Newfoundland"],
+  ];
+
+  for (const [pattern, name] of placeChecks) {
+    if (pattern.test(text)) addAboutTerm(terms, seen, "Place", name);
+  }
+
+  return terms.length > 0 ? terms : fallback;
+}
+
 export function getStructuredData({
   type,
   data,
@@ -194,11 +282,7 @@ export function getStructuredData({
       description: data.description,
       url: data.url,
       genre: data.genre || "Fine Art Photography",
-      about: data.about || [
-        { "@type": "Thing", name: "Painterly Fine Art Photography" },
-        { "@type": "Thing", name: "Western Art" },
-        { "@type": "Thing", name: "Historical Portraiture" },
-      ],
+      about: buildContextualAbout(data),
       mainEntity: {
         "@type": "ImageGallery",
         "@id": `${data.url}#imagegallery`,
@@ -261,39 +345,12 @@ export function getStructuredData({
       artform: data.artform || "Fine Art Photography",
       artworkSurface: data.artworkSurface || "Archival paper",
       genre: data.genre || "Fine Art Photography",
-      about: data.about || [
-        { "@type": "Thing", name: "Painterly Fine Art Photography" },
-        { "@type": "Thing", name: "Western Art" },
-        { "@type": "Thing", name: "Historical Portraiture" },
-      ],
+      about: buildContextualAbout(data),
       isAccessibleForFree: true,
       ...(imagePublishedDate ? { datePublished: imagePublishedDate } : {}),
       ...(imageModifiedDate ? { dateModified: imageModifiedDate } : {}),
       inLanguage: "en",
       mainEntityOfPage: { "@type": "WebPage", "@id": data.pageUrl || data.url },
-      potentialAction: {
-        "@type": "TradeAction",
-        target: getAcquireLicensePage(data, acquireLicensePage),
-        result: {
-          "@type": "VisualArtwork",
-          name: data.title,
-          artMedium: "Photography",
-          artform: "Fine Art Print",
-          genre: data.genre || "Fine Art Photography",
-          creator: {
-            "@type": "Person",
-            name: creatorName,
-            url: creatorUrl
-          },
-          copyrightHolder: {
-            "@type": "Person",
-            name: creatorName,
-            url: creatorUrl
-          },
-          license: data.license || license,
-          acquireLicensePage: getAcquireLicensePage(data, acquireLicensePage)
-        }
-      }
     };
 
     if (data.galleryUrl) {
