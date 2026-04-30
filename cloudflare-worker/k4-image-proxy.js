@@ -2909,11 +2909,10 @@ export default {
       });
     }
 
-    // Bare /Galleries/lightbox (no ?dataset=) is a dead SmugMug endpoint → 410.
-    // Lightbox WITH ?dataset= is a real gallery page — pass through to origin.
-    if (lowerPath === '/galleries/lightbox' && !url.searchParams.has('dataset')) {
-      return new Response('Gone', {
-        status: 410,
+    // Legacy SmugMug/K4 lightbox endpoint. K4 now uses real /all gallery pages.
+    if (lowerPath === '/galleries/lightbox') {
+      return new Response('Not Found', {
+        status: 404,
         headers: { 'X-Robots-Tag': 'noindex', 'Cache-Control': 'public, max-age=86400' }
       });
     }

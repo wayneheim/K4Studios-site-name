@@ -48,9 +48,8 @@ Disallow: /Photoshootsandevents/
 Disallow: /Photography-Galleries/
 Disallow: /Pictorialist-Photography/
 
-# Block query string variations (lightbox, dataset, SmugMug API params)
+# Block query string variations (dataset, SmugMug API params)
 # Note: ?theme= and ?theme=...&view=grid URLs ARE indexed (shareable theme links)
-Disallow: /Galleries/lightbox
 Disallow: /Galleries?
 Disallow: /Glossary?
 Disallow: /*?dataset=

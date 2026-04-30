@@ -9955,12 +9955,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.k4studios.com/Galleries/lightbox</loc>
-    <lastmod>2026-04-07T12:20:12-04:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography</loc>
     <lastmod>2026-04-29T00:02:08-04:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -23810,7 +23804,7 @@
   </url>
   <url>
     <loc>https://www.k4studios.com/Videos</loc>
-    <lastmod>2026-04-29T22:05:41-04:00</lastmod>
+    <lastmod>2026-04-29T22:45:48-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

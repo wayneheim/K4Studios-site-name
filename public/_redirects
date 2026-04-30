@@ -34,9 +34,8 @@ https://k4studios.com/(.+)/$  https://www.k4studios.com/$1  301!
 # Block Glossary page with query strings (SmugMug API leakage)
 /Glossary?*  /410.html  410
 
-# Block bare lightbox URL (legacy SmugMug endpoint, not canonical)
-# Lightbox with ?dataset= is a real gallery page and should be allowed through
-/Galleries/lightbox  /410.html  410
+# Legacy lightbox URL: gallery indexes now use real /all pages.
+/Galleries/lightbox  /404.html  404
 
 # Block keyword pages (not proper content pages)
 /keyword/*  /404.html  404!

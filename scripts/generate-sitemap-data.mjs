@@ -84,6 +84,7 @@ const EXCLUDE_PATTERNS = [
   /\.js$/,          // JS endpoints
   /^\/404/,
   /^\/500/,
+  /^\/Galleries\/lightbox(?:\/|$)/i,
   // Exclude test/draft pages
   /\/Builder-Test/i,
   /\/Test-Show/i,
