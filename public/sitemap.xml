@@ -3746,7 +3746,7 @@
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/all</loc>
-    <lastmod>2026-04-17T14:31:40-04:00</lastmod>
+    <lastmod>2026-01-26T23:29:15-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -4028,7 +4028,7 @@
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/all</loc>
-    <lastmod>2026-04-17T14:31:40-04:00</lastmod>
+    <lastmod>2026-01-26T23:29:15-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -4322,7 +4322,7 @@
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/all</loc>
-    <lastmod>2026-04-17T14:31:40-04:00</lastmod>
+    <lastmod>2026-01-26T23:29:15-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -4544,7 +4544,7 @@
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/all</loc>
-    <lastmod>2026-04-17T14:31:40-04:00</lastmod>
+    <lastmod>2026-01-26T23:29:15-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -4730,7 +4730,7 @@
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/all</loc>
-    <lastmod>2026-04-17T14:31:40-04:00</lastmod>
+    <lastmod>2026-01-26T23:29:15-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -21764,7 +21764,7 @@
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/all</loc>
-    <lastmod>2026-04-17T14:31:40-04:00</lastmod>
+    <lastmod>2026-01-26T23:29:15-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -21848,7 +21848,7 @@
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets/all</loc>
-    <lastmod>2026-04-17T14:31:40-04:00</lastmod>
+    <lastmod>2026-01-26T23:29:15-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -21932,7 +21932,7 @@
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/all</loc>
-    <lastmod>2026-04-17T14:31:40-04:00</lastmod>
+    <lastmod>2026-01-26T23:29:15-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -23108,7 +23108,7 @@
   </url>
   <url>
     <loc>https://www.k4studios.com/Other/Archive/all</loc>
-    <lastmod>2026-04-17T14:31:40-04:00</lastmod>
+    <lastmod>2026-04-28T22:10:51-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -23817,6 +23817,12 @@
   <url>
     <loc>https://www.k4studios.com/Rustic-Western-Interior-Design-Art</loc>
     <lastmod>2026-04-29T00:46:36-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.k4studios.com/Videos</loc>
+    <lastmod>2026-04-29T16:06:08.511Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

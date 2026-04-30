@@ -41,6 +41,37 @@ function getStableLastmodIso(absoluteFilePath, fallbackMtimeIso) {
   return getGitLastModifiedIso(absoluteFilePath) || fallbackMtimeIso;
 }
 
+async function getFileLastmodIso(absoluteFilePath) {
+  const fileStats = await stat(absoluteFilePath);
+  return getStableLastmodIso(absoluteFilePath, fileStats.mtime.toISOString());
+}
+
+async function pathExists(absoluteFilePath) {
+  try {
+    await stat(absoluteFilePath);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+async function resolveGalleryDataFile(galleryHref) {
+  const normalizedHref = String(galleryHref || '').replace(/^\/+/, '');
+  const basePath = path.resolve(__dirname, '..', 'src', 'data', normalizedHref);
+  const lastSegment = normalizedHref.split('/').filter(Boolean).pop();
+  const candidates = [
+    `${basePath}.mjs`,
+    path.join(basePath, 'Gallery.mjs'),
+    lastSegment ? path.join(basePath, `${lastSegment}.mjs`) : null,
+  ].filter(Boolean);
+
+  for (const candidate of candidates) {
+    if (await pathExists(candidate)) return candidate;
+  }
+
+  return null;
+}
+
 // Paths to exclude from sitemap (for static pages)
 const EXCLUDE_PATTERNS = [
   /^\/api\//,
@@ -280,12 +311,13 @@ async function loadDynamicAllCollectionRoutes() {
       const normalizedHref = String(href || '').trim();
       if (!normalizedHref.startsWith('/')) continue;
 
-      const dataFilePath = path.resolve(__dirname, '..', 'src', 'data', normalizedHref.replace(/^\//, '') + '.mjs');
       let lastmod = routeLastmod;
 
       try {
-        const dataStats = await stat(dataFilePath);
-        lastmod = getStableLastmodIso(dataFilePath, dataStats.mtime.toISOString()) || routeLastmod;
+        const dataFilePath = await resolveGalleryDataFile(normalizedHref);
+        if (dataFilePath) {
+          lastmod = await getFileLastmodIso(dataFilePath) || routeLastmod;
+        }
       } catch {
         lastmod = routeLastmod;
       }
@@ -406,24 +438,29 @@ export const sitemap: SitemapEntry[] = ${JSON.stringify(dedupedEntries, null, 2)
 
   // ── Master sitemap index ──────────────────────────────────────────────
   // Enumerate all image-sitemap-*.xml files in public/ (exclude the index itself)
-  const publicFiles = await readdir(publicDir);
-  const imageSitemapFiles = publicFiles
-    .filter((f) => f.startsWith('image-sitemap-') && f.endsWith('.xml') && f !== 'image-sitemap-index.xml')
-    .sort();
-
   const childSitemaps = [
     'sitemap.xml',
     'blog-sitemap.xml',
     'image-sitemap-index.xml',
-    ...imageSitemapFiles,
   ];
 
-  const sitemapIndexEntries = childSitemaps.map((file) => {
-    return `  <sitemap>\n    <loc>${SITE_URL}/${file}</loc>\n    <lastmod>${timestamp}</lastmod>\n  </sitemap>`;
-  }).join('\n');
+  const sitemapIndexEntries = [];
+  for (const file of childSitemaps) {
+    const childPath = path.join(publicDir, file);
+    let childLastmod = timestamp;
+    try {
+      childLastmod = (await stat(childPath)).mtime.toISOString();
+    } catch {
+      childLastmod = timestamp;
+    }
+
+    sitemapIndexEntries.push(
+      `  <sitemap>\n    <loc>${SITE_URL}/${file}</loc>\n    <lastmod>${childLastmod}</lastmod>\n  </sitemap>`
+    );
+  }
 
   const sitemapIndexXml = `<?xml version="1.0" encoding="UTF-8"?>\n` +
-    `<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapIndexEntries}\n</sitemapindex>\n`;
+    `<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapIndexEntries.join('\n')}\n</sitemapindex>\n`;
 
   const sitemapIndexPath = path.join(publicDir, 'sitemap-index.xml');
   await writeFile(sitemapIndexPath, sitemapIndexXml, 'utf8');

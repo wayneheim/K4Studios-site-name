@@ -1,0 +1,307 @@
+---
+export const prerender = true;
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import LandingHeader from "@/components/Landing-Header.jsx";
+import SiteFooter from "@/components/Footer.astro";
+import { isRealYouTubeId, videos, type K4Video } from "@/data/videos/videoRegistry";
+import "@/styles/global.css";
+
+export function getStaticPaths() {
+  return videos
+    .filter((video) => video.hasDedicatedPage)
+    .map((video) => ({
+      params: { slug: video.slug },
+      props: { video },
+    }));
+}
+
+const { video } = Astro.props as { video: K4Video };
+const canonicalPath = `/Videos/${video.slug}/`;
+const canonicalUrl = `https://www.k4studios.com${canonicalPath}`;
+const pageTitle = `${video.title} | K4 Studios Video Archive`;
+const pageDescription = video.dek || video.description;
+const dateLabel = new Intl.DateTimeFormat("en-US", {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+}).format(new Date(`${video.date}T00:00:00`));
+const durationLabel = video.duration
+  ?.replace(/^PT/, "")
+  .replace(/(\d+)H/i, "$1 hr ")
+  .replace(/(\d+)M/i, "$1 min ")
+  .replace(/(\d+)S/i, "$1 sec")
+  .trim();
+
+const videoJsonLd = isRealYouTubeId(video.youtubeId)
+  ? JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      name: video.title,
+      description: video.description,
+      thumbnailUrl: video.thumbnail ? [new URL(video.thumbnail, canonicalUrl).toString()] : undefined,
+      uploadDate: video.date,
+      duration: video.duration,
+      embedUrl: `https://www.youtube-nocookie.com/embed/${video.youtubeId}`,
+      url: canonicalUrl,
+      publisher: {
+        "@type": "Organization",
+        name: "K4 Studios",
+        url: "https://www.k4studios.com/",
+      },
+      creator: {
+        "@type": "Person",
+        name: "Wayne Heim",
+        url: "https://www.k4studios.com/",
+      },
+    })
+  : undefined;
+
+const meta = {
+  title: pageTitle,
+  description: pageDescription,
+  canonicalUrl,
+  ogUrl: canonicalUrl,
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  twitterTitle: pageTitle,
+  twitterDescription: pageDescription,
+  ogImage: video.thumbnail || "/images/show-2t.webp",
+  ogImageAlt: video.thumbnailAlt || `${video.title} video thumbnail`,
+};
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} structuredDataJSON={videoJsonLd} meta={meta}>
+  <main class="video-detail-page">
+    <div class="drawer-mode">
+      <LandingHeader client:load breadcrumb={`Videos &rsaquo; ${video.title}`} />
+    </div>
+
+    <article class="video-article">
+      <a class="back-link" href="/Videos/">&larr; Back to Video Archive</a>
+
+      <div class="article-header">
+        <p class="eyebrow">{video.theme} / {video.type}</p>
+        <h1>{video.title}</h1>
+        {video.dek && <p class="dek">{video.dek}</p>}
+        <p class="meta-line">
+          <time datetime={video.date}>{dateLabel}</time>
+          {durationLabel && <span>{durationLabel}</span>}
+        </p>
+      </div>
+
+      <section class="player-wrap" aria-label={`${video.title} video`}>
+        {isRealYouTubeId(video.youtubeId) ? (
+          <iframe
+            src={`https://www.youtube-nocookie.com/embed/${video.youtubeId}`}
+            title={video.title}
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        ) : (
+          <div class="thumbnail-player">
+            <img src={video.thumbnail || "/images/show-2t.webp"} alt={video.thumbnailAlt || `${video.title} video thumbnail`} />
+            <p>Video embed pending.</p>
+          </div>
+        )}
+      </section>
+
+      <section class="content-section">
+        <h2>About This Video</h2>
+        <p>{video.description}</p>
+        <p>
+          This entry belongs to the K4 Studios video archive, a sitewide repository for narrative films, shorts, reels, artist commentary, process videos, show pieces, and behind-the-scenes work connected to Wayne Heim's painterly fine art photography.
+        </p>
+      </section>
+
+      {video.transcript && video.transcript.trim().length > 0 && (
+        <section class="content-section">
+          <h2>Transcript / Narration</h2>
+          <p>{video.transcript}</p>
+        </section>
+      )}
+
+      {video.relatedLinks && video.relatedLinks.length > 0 && (
+        <section class="content-section related-section">
+          <h2>Related Links</h2>
+          <ul>
+            {video.relatedLinks.map((link) => (
+              <li><a href={link.href}>{link.label}</a></li>
+            ))}
+          </ul>
+        </section>
+      )}
+    </article>
+
+    <SiteFooter previewImages={[]} previewPath="" title={pageTitle} label="" class="pt-8 pb-12" />
+  </main>
+
+  <style>
+    .video-detail-page {
+      min-height: 100vh;
+      overflow-x: hidden;
+      background: #fbfaf7;
+      color: #302a24;
+      font-family: "Glegoo", serif;
+    }
+
+    .video-article {
+      max-width: 980px;
+      margin: 2rem auto 3rem;
+      padding: 0 clamp(1rem, 4vw, 2rem);
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1.4rem;
+      color: #80654b;
+      font-size: 0.82rem;
+      text-decoration: none;
+    }
+
+    .back-link:hover,
+    .related-section a:hover {
+      color: #7a3d28;
+      text-decoration: underline;
+    }
+
+    .article-header {
+      max-width: 820px;
+      margin-bottom: 1.5rem;
+    }
+
+    .eyebrow {
+      margin: 0 0 0.8rem;
+      color: #8b6a4a;
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-weight: 700;
+    }
+
+    h1 {
+      margin: 0;
+      color: #221d18;
+      font-size: clamp(2rem, 5vw, 4rem);
+      line-height: 1.1;
+      font-weight: 500;
+    }
+
+    .dek {
+      max-width: 760px;
+      margin: 1rem 0 0;
+      color: #665b51;
+      font-size: 1.05rem;
+      line-height: 1.75;
+    }
+
+    .meta-line {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin: 1rem 0 0;
+      color: #8b7a67;
+      font-size: 0.82rem;
+    }
+
+    .meta-line span::before {
+      content: "/";
+      margin-right: 0.75rem;
+      color: #b6a898;
+    }
+
+    .player-wrap {
+      overflow: hidden;
+      border: 1px solid rgba(88, 72, 55, 0.18);
+      background: #fffdf9;
+      box-shadow: 0 18px 48px rgba(50, 38, 25, 0.08);
+    }
+
+    .player-wrap iframe,
+    .thumbnail-player {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 0;
+    }
+
+    .thumbnail-player {
+      position: relative;
+      background: #e8e0d4;
+    }
+
+    .thumbnail-player img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: saturate(0.84) contrast(1.03);
+    }
+
+    .thumbnail-player::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(36, 27, 18, 0.05), rgba(36, 27, 18, 0.44));
+    }
+
+    .thumbnail-player p {
+      position: absolute;
+      left: 50%;
+      bottom: 1.5rem;
+      z-index: 1;
+      transform: translateX(-50%);
+      margin: 0;
+      color: #fff8ed;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .content-section {
+      max-width: 780px;
+      margin: 2.25rem auto 0;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(88, 72, 55, 0.14);
+    }
+
+    .content-section h2 {
+      margin: 0 0 0.8rem;
+      color: #30261e;
+      font-size: 1.35rem;
+      font-weight: 500;
+    }
+
+    .content-section p {
+      color: #63574d;
+      line-height: 1.8;
+      font-size: 0.98rem;
+    }
+
+    .related-section ul {
+      margin: 0;
+      padding-left: 1.15rem;
+      color: #80654b;
+    }
+
+    .related-section li {
+      margin: 0.35rem 0;
+    }
+
+    .related-section a {
+      color: #6f553d;
+    }
+
+    @media (max-width: 620px) {
+      .video-article {
+        margin-top: 1rem;
+      }
+
+      .meta-line span::before {
+        content: "";
+        margin: 0;
+      }
+    }
+  </style>
+</BaseLayout>

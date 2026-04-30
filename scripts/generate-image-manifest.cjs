@@ -153,16 +153,10 @@ function isSmugMugUrl(url) {
 function toSmugMugOriginPath(url) {
   if (!isSmugMugUrl(url)) return url;
   try {
-    return encodeArchivePathSegments(new URL(url).pathname);
+    return new URL(url).pathname;
   } catch {
-    return encodeArchivePathSegments(url.replace(/^https:\/\/photos\.smugmug\.com/i, ''));
+    return url.replace(/^https:\/\/photos\.smugmug\.com/i, '');
   }
-}
-
-function encodeArchivePathSegments(pathname) {
-  return String(pathname || '')
-    .replace('/Other/Photo-Shoots-and-Themes', '/Other/Photo%2DShoots-and-Themes')
-    .replace('/Other/Photo-Shoots', '/Other/Photo%2DShoots');
 }
 
 function urlMatchesId(url, id) {

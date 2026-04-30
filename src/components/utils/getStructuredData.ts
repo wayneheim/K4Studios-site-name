@@ -297,11 +297,26 @@ export function getStructuredData({
     };
 
     if (data.galleryUrl) {
-      obj.isPartOf = {
+      const imageGallery = {
         "@type": "ImageGallery",
         "@id": data.galleryUrl + "#imagegallery",
         name: data.galleryTitle || "Gallery",
+        url: data.galleryUrl,
       };
+
+      const seriesContext = data.collectionContext;
+      if (seriesContext?.seriesName && seriesContext?.collectionUrl) {
+        obj.isPartOf = [
+          imageGallery,
+          {
+            "@type": "CreativeWorkSeries",
+            name: seriesContext.seriesName,
+            url: seriesContext.collectionUrl,
+          },
+        ];
+      } else {
+        obj.isPartOf = imageGallery;
+      }
     }
 
     if (data.thumbnailUrl) obj.thumbnailUrl = data.thumbnailUrl;

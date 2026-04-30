@@ -165,20 +165,8 @@ const SECTIONS = [
     galleries: [
       // By Location
       {
-        dataPath: '../src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Iceland.mjs',
-        urlBase: '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Iceland'
-      },
-      {
-        dataPath: '../src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands.mjs',
-        urlBase: '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands'
-      },
-      {
-        dataPath: '../src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western.mjs',
-        urlBase: '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western'
-      },
-      {
-        dataPath: '../src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland.mjs',
-        urlBase: '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland'
+        dataPath: '../src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery.mjs',
+        urlBase: '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery'
       },
       {
         dataPath: '../src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery.mjs',
@@ -198,16 +186,16 @@ const SECTIONS = [
       },
       // By Theme
       {
-        dataPath: '../src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/Gallery.mjs',
-        urlBase: '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/Gallery'
+        dataPath: '../src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/Mountains.mjs',
+        urlBase: '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains'
       },
       {
-        dataPath: '../src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets/Gallery.mjs',
-        urlBase: '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets/Gallery'
+        dataPath: '../src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets/Sunsets.mjs',
+        urlBase: '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets'
       },
       {
-        dataPath: '../src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Gallery.mjs',
-        urlBase: '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Gallery'
+        dataPath: '../src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs',
+        urlBase: '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water'
       }
     ]
   },
@@ -299,20 +287,20 @@ const SECTIONS = [
       },
       // By Theme
       {
-        dataPath: '../src/data/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/Gallery.mjs',
-        urlBase: '/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/Gallery'
+        dataPath: '../src/data/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/Color.mjs',
+        urlBase: '/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color'
       },
       {
-        dataPath: '../src/data/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/Gallery.mjs',
-        urlBase: '/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/Gallery'
+        dataPath: '../src/data/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/Black-White.mjs',
+        urlBase: '/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White'
       },
       {
-        dataPath: '../src/data/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/Gallery.mjs',
-        urlBase: '/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/Gallery'
+        dataPath: '../src/data/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/Mountains.mjs',
+        urlBase: '/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains'
       },
       {
-        dataPath: '../src/data/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/Gallery.mjs',
-        urlBase: '/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/Gallery'
+        dataPath: '../src/data/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/Sunsets.mjs',
+        urlBase: '/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets'
       },
       {
         dataPath: '../src/data/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs',
@@ -343,6 +331,10 @@ const SECTIONS = [
       {
         dataPath: '../src/data/Galleries/Fine-Art-Photography/Transportation/Trains.mjs',
         urlBase: '/Galleries/Fine-Art-Photography/Transportation/Trains'
+      },
+      {
+        dataPath: '../src/data/Galleries/Fine-Art-Photography/Transportation/Trains.mjs',
+        urlBase: '/Galleries/Fine-Art-Photography/Transportation/Trains-Black-White'
       }
     ]
   },

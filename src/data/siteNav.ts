@@ -684,6 +684,13 @@ export const siteNav = [
         "type": "section"
       },
       {
+        "label": "Videos",
+        "href": "/Videos/",
+        "code": "O-S5v",
+        "slug": "videos",
+        "type": "section"
+      },
+      {
         "label": "Seeing",
         "href": "/Other/Seeing",
         "code": "O-S5b",

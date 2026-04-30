@@ -14,6 +14,7 @@ import "@/styles/gallery-shell-core.css";
 
 import { getStructuredData } from "@/components/utils/getStructuredData.ts";
 import { getBreadcrumbList } from "@/components/utils/getStructuredData.ts";
+import { getCollectionContextEntry } from "@/data/semantic/collectionContext";
 
 interface Props {
   allImages: any[];
@@ -114,6 +115,10 @@ const themeParam = Astro.url.searchParams.get("theme");
 const canonicalPath = isImagePage ? `${previewPath}/${lastSegment}` : previewPath;
 const canonicalUrl = `${siteBase}${canonicalPath.replace(/\/$/, "")}${themeParam ? `?theme=${themeParam}` : ""}`;
 const galleryAbsUrl = `${siteBase}${previewPath}`;
+const collectionContextEntry = getCollectionContextEntry(previewPath);
+const collectionContextUrl = collectionContextEntry?.collectionUrl
+  ? `${siteBase}${collectionContextEntry.collectionUrl}`
+  : undefined;
 
 /** ---------------------------------------------------------------
  * Detect if this is an image page or shared theme link
@@ -140,6 +145,12 @@ const imageStructuredData = currentImage
           .slice(-2)
           .map((s) => s.replace(/-/g, " "))
           .join(" – "),
+        collectionContext: collectionContextEntry
+          ? {
+              seriesName: collectionContextEntry.seriesName,
+              collectionUrl: collectionContextUrl,
+            }
+          : undefined,
       },
     })
   : getStructuredData({

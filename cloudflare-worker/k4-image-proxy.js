@@ -58,11 +58,11 @@ import {
 
 // Cache-bust parameter to avoid waiting on Cloudflare's cached manifest after deploys.
 // Update this when you need the worker to pick up a newly deployed manifest immediately.
-const MANIFEST_URL = "https://k4studios.netlify.app/image-manifest.json";
+const MANIFEST_URL = "https://k4studios.netlify.app/image-manifest.json?v=20260429-smugmug-paths";
 const SMUGMUG_ORIGIN = "https://photos.smugmug.com";
 const IMAGE_ID_MAP_URL = "https://k4studios.com/imageIdMap.json";
 const MANIFEST_CACHE_TTL = 3600; // seconds
-const IMAGE_CACHE_KEY_VERSION = "20260304-idfix1";
+const IMAGE_CACHE_KEY_VERSION = "20260429-smugmug-paths";
 
 // --------------------
 // SIZE FALLBACK CHAINS

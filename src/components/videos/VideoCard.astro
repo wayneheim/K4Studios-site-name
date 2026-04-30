@@ -1,0 +1,56 @@
+---
+import type { K4Video } from "@/data/videos/videoRegistry";
+import { getVideoUrl, isRealYouTubeId } from "@/data/videos/videoRegistry";
+
+const { video } = Astro.props as { video: K4Video };
+const href = getVideoUrl(video);
+const dateLabel = new Intl.DateTimeFormat("en-US", {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+}).format(new Date(`${video.date}T00:00:00`));
+const themeClass = video.theme.toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+const typeClass = video.type.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+const hasExternalYouTube = !video.hasDedicatedPage && isRealYouTubeId(video.youtubeId);
+---
+
+<article
+  id={video.slug}
+  class="video-card"
+  data-video-card
+  data-date={video.date}
+  data-title={video.title}
+  data-type={video.type}
+  data-theme={video.theme}
+  data-featured={video.featured ? "true" : "false"}
+>
+  <a class="thumb-link" href={href} aria-label={`Watch or read more about ${video.title}`}>
+    <div class="thumb-wrap">
+      {video.thumbnail ? (
+        <img src={video.thumbnail} alt={video.thumbnailAlt || `${video.title} video thumbnail`} loading="lazy" />
+      ) : (
+        <div class="thumb-fallback" aria-hidden="true">K4</div>
+      )}
+      <span class="play-mark" aria-hidden="true">Play</span>
+    </div>
+  </a>
+
+  <div class="card-body">
+    <div class="badge-row" aria-label="Video classifications">
+      <span class={`badge theme theme-${themeClass}`}>{video.theme}</span>
+      <span class={`badge type type-${typeClass}`}>{video.type}</span>
+      {video.featured && <span class="badge featured">Featured</span>}
+    </div>
+    <p class="date">{dateLabel}</p>
+    <h2><a href={href}>{video.title}</a></h2>
+    <p class="dek">{video.dek || video.description}</p>
+    <div class="card-actions">
+      <a class="watch-link" href={href}>{video.hasDedicatedPage ? "Watch / Read More" : "View Video"}</a>
+      {hasExternalYouTube && (
+        <a class="external-link" href={`https://www.youtube.com/watch?v=${video.youtubeId}`} target="_blank" rel="noopener noreferrer">
+          YouTube
+        </a>
+      )}
+    </div>
+  </div>
+</article>

@@ -23,6 +23,7 @@ const TEXT_EXTENSIONS = new Set([
 ]);
 
 function shouldScan(filePath) {
+  if (path.basename(filePath) === 'image-manifest.json') return false;
   return TEXT_EXTENSIONS.has(path.extname(filePath).toLowerCase());
 }
 

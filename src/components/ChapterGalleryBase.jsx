@@ -33,6 +33,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Grid, Notebook, CircleX, SquareChevronLeft, SquareChevronRight, Info } from "lucide-react";
 import { getClosingSentence } from "../utils/seoDescriptionAppender.js";
 import { sitemapMatches } from "../data/sitemapMatches.ts";
+import {
+  buildCollectionContextStatement,
+  getCollectionContextEntry,
+} from "../data/semantic/collectionContext.ts";
 import ZoomOverlay from "./ZoomOverlay.jsx";
 import RebuiltScrollGrid from "./RebuiltScrollGrid";
 import MobileMiniDrawer from "./MobileMiniDrawer";
@@ -398,6 +402,11 @@ export default function ChapterGalleryBase({
     setClientPath(window.location.pathname.toLowerCase());
   }, []);
   const path = clientPath;
+  const collectionContextEntry =
+    getCollectionContextEntry(basePath) || getCollectionContextEntry(clientPath);
+  const collectionContextStatement = collectionContextEntry
+    ? buildCollectionContextStatement(collectionContextEntry)
+    : "";
   const isBW = path.includes("/black-white/");
   const editionTag = isBW ? "Black and White" : "Color";
   const isEngrainedSeries = basePath && basePath.includes("Engrained");
@@ -2181,6 +2190,19 @@ export default function ChapterGalleryBase({
                           {galleryData[currentIndex]?.description && (
                             <p style={{ margin: '0 0 1rem' }}>
                               {galleryData[currentIndex].description}
+                            </p>
+                          )}
+                          {collectionContextStatement && (
+                            <p
+                              className="collection-context-note"
+                              style={{
+                                margin: '0 0 1rem',
+                                color: '#7a6a58',
+                                fontSize: '0.86rem',
+                                lineHeight: '1.65'
+                              }}
+                            >
+                              {collectionContextStatement}
                             </p>
                           )}
                           {galleryData[currentIndex]?.notes && (

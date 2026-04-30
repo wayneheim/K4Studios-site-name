@@ -1,0 +1,584 @@
+---
+export const prerender = true;
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import LandingHeader from "@/components/Landing-Header.jsx";
+import SiteFooter from "@/components/Footer.astro";
+import VideoCard from "@/components/videos/VideoCard.astro";
+import { getVideoUrl, isRealYouTubeId, videos, videoThemes, videoTypes } from "@/data/videos/videoRegistry";
+import "@/styles/global.css";
+
+const pageTitle = "K4 Studios Videos | Fine Art Photography Films, Shorts & Stories";
+const pageDescription =
+  "A video archive of K4 Studios narrative films, shorts, artist commentary, and behind-the-scenes stories built around painterly fine art photography, historical imagery, and visual storytelling.";
+const archiveUrl = "https://www.k4studios.com/Videos/";
+const featuredVideo = videos.find((video) => video.featured) || videos[0];
+const featuredHref = getVideoUrl(featuredVideo);
+const sortedVideos = [...videos].sort((a, b) => Number(Boolean(b.featured)) - Number(Boolean(a.featured)) || b.date.localeCompare(a.date));
+const filterOptions = [
+  { label: "All", value: "all" },
+  { label: "Featured", value: "Featured" },
+  ...videoTypes.map((type) => ({
+    label:
+      type === "Full Video"
+        ? "Full Videos"
+        : type === "Behind the Scenes" || type === "Process"
+          ? type
+          : `${type}s`,
+    value: type,
+  })),
+  ...videoThemes.map((theme) => ({ label: theme, value: theme })),
+];
+
+const itemListJsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "K4 Studios Video Archive",
+  description: pageDescription,
+  url: archiveUrl,
+  itemListElement: sortedVideos.map((video, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: video.title,
+    url: new URL(getVideoUrl(video), archiveUrl).toString(),
+  })),
+});
+
+const meta = {
+  title: pageTitle,
+  description: pageDescription,
+  canonicalUrl: archiveUrl,
+  ogUrl: archiveUrl,
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  twitterTitle: pageTitle,
+  twitterDescription: pageDescription,
+  ogImage: featuredVideo.thumbnail || "/images/show-2t.webp",
+  ogImageAlt: featuredVideo.thumbnailAlt || "K4 Studios video archive featured video thumbnail",
+};
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} structuredDataJSON={itemListJsonLd} meta={meta}>
+  <main class="videos-page">
+    <div class="drawer-mode">
+      <LandingHeader client:load breadcrumb="Other &rsaquo; Videos" />
+    </div>
+
+    <section class="video-hero" aria-labelledby="videos-title">
+      <div class="hero-media">
+        {isRealYouTubeId(featuredVideo.youtubeId) ? (
+          <iframe
+            src={`https://www.youtube-nocookie.com/embed/${featuredVideo.youtubeId}`}
+            title={featuredVideo.title}
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        ) : (
+          <a href={featuredHref} class="hero-thumb" aria-label={`Watch ${featuredVideo.title}`}>
+            <img src={featuredVideo.thumbnail || "/images/show-2t.webp"} alt={featuredVideo.thumbnailAlt || `${featuredVideo.title} video thumbnail`} />
+            <span aria-hidden="true">Play</span>
+          </a>
+        )}
+      </div>
+
+      <div class="hero-copy">
+        <p class="eyebrow">Featured Video</p>
+        <h1 id="videos-title">K4 Studios Video Archive</h1>
+        <h2>{featuredVideo.title}</h2>
+        <p>{featuredVideo.dek || featuredVideo.description}</p>
+        <a class="primary-link" href={featuredHref}>Watch the Film &rarr;</a>
+      </div>
+    </section>
+
+    <section class="intro-panel" aria-label="Video archive introduction">
+      <p>
+        A collection of narrative films, shorts, artist commentary, and behind-the-scenes video pieces from K4 Studios. These works gather still photographs, voice, music, text, and memory into short visual experiences connected to Western art, historical storytelling, landscapes, and the painterly photographic process.
+      </p>
+    </section>
+
+    <section class="archive-tools" aria-label="Video archive controls">
+      <div class="filter-group" role="group" aria-label="Filter videos">
+        <span>Theme / Time Period</span>
+        <div class="filter-buttons">
+          {filterOptions.map((option) => (
+            <button type="button" data-filter={option.value} class={option.value === "all" ? "is-active" : ""}>
+              {option.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <label class="sort-control">
+        <span>Sort</span>
+        <select data-video-sort>
+          <option value="newest">Newest First</option>
+          <option value="oldest">Oldest First</option>
+          <option value="featured">Featured First</option>
+          <option value="title">Title A-Z</option>
+        </select>
+      </label>
+    </section>
+
+    <section class="video-grid" data-video-grid aria-label="K4 Studios videos">
+      {sortedVideos.map((video) => <VideoCard video={video} />)}
+    </section>
+
+    <p class="no-results" data-video-empty hidden>No videos match that filter yet.</p>
+
+    <SiteFooter previewImages={[]} previewPath="" title={pageTitle} label="" class="pt-8 pb-12" />
+  </main>
+
+  <script>
+    const grid = document.querySelector("[data-video-grid]");
+    const cards = grid ? Array.from(grid.querySelectorAll("[data-video-card]")) : [];
+    const filterButtons = Array.from(document.querySelectorAll("[data-filter]"));
+    const sortSelect = document.querySelector("[data-video-sort]");
+    const emptyState = document.querySelector("[data-video-empty]");
+
+    let activeFilter = "all";
+
+    function compareCards(a, b, sortMode) {
+      if (sortMode === "oldest") return a.dataset.date.localeCompare(b.dataset.date);
+      if (sortMode === "featured") {
+        const featuredDelta = Number(b.dataset.featured === "true") - Number(a.dataset.featured === "true");
+        return featuredDelta || b.dataset.date.localeCompare(a.dataset.date);
+      }
+      if (sortMode === "title") return a.dataset.title.localeCompare(b.dataset.title);
+      return b.dataset.date.localeCompare(a.dataset.date);
+    }
+
+    function updateArchive() {
+      if (!grid) return;
+      const sortMode = sortSelect ? sortSelect.value : "newest";
+      const sortedCards = [...cards].sort((a, b) => compareCards(a, b, sortMode));
+      let visibleCount = 0;
+
+      sortedCards.forEach((card) => {
+        const matchesFilter =
+          activeFilter === "all" ||
+          card.dataset.type === activeFilter ||
+          card.dataset.theme === activeFilter ||
+          (activeFilter === "Featured" && card.dataset.featured === "true");
+        card.hidden = !matchesFilter;
+        if (matchesFilter) visibleCount += 1;
+        grid.appendChild(card);
+      });
+
+      if (emptyState) emptyState.hidden = visibleCount > 0;
+    }
+
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        activeFilter = button.dataset.filter || "all";
+        filterButtons.forEach((candidate) => candidate.classList.toggle("is-active", candidate === button));
+        updateArchive();
+      });
+    });
+
+    if (sortSelect) sortSelect.addEventListener("change", updateArchive);
+  </script>
+
+  <style>
+    .videos-page {
+      background: #fbfaf7;
+      color: #302a24;
+      min-height: 100vh;
+      overflow-x: hidden;
+      font-family: "Glegoo", serif;
+    }
+
+    .video-hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
+      gap: clamp(1.25rem, 3vw, 3rem);
+      align-items: stretch;
+      max-width: 1180px;
+      margin: 2rem auto 0;
+      padding: clamp(1rem, 3vw, 2rem);
+    }
+
+    .hero-media,
+    .hero-copy {
+      border: 1px solid rgba(88, 72, 55, 0.18);
+      background: #fffdf9;
+      box-shadow: 0 18px 48px rgba(50, 38, 25, 0.08);
+    }
+
+    .hero-media {
+      min-height: 360px;
+      overflow: hidden;
+    }
+
+    .hero-media iframe,
+    .hero-thumb,
+    .hero-thumb img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .hero-media iframe {
+      aspect-ratio: 16 / 9;
+      border: 0;
+    }
+
+    .hero-thumb {
+      position: relative;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .hero-thumb img {
+      object-fit: cover;
+      filter: saturate(0.86) contrast(1.03);
+    }
+
+    .hero-thumb::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(36, 27, 18, 0.08), rgba(36, 27, 18, 0.42));
+    }
+
+    .hero-thumb span,
+    .play-mark {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      z-index: 1;
+      transform: translate(-50%, -50%);
+      width: 74px;
+      height: 74px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      background: rgba(32, 25, 18, 0.62);
+      color: transparent;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
+    }
+
+    .hero-thumb span::before,
+    .play-mark::before {
+      content: "";
+      margin-left: 5px;
+      border-top: 13px solid transparent;
+      border-bottom: 13px solid transparent;
+      border-left: 20px solid #fff8ed;
+    }
+
+    .hero-copy {
+      padding: clamp(1.35rem, 3vw, 2.35rem);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .eyebrow {
+      margin: 0 0 0.75rem;
+      color: #8b6a4a;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-weight: 700;
+    }
+
+    h1 {
+      margin: 0;
+      color: #221d18;
+      font-size: clamp(2.05rem, 4vw, 4rem);
+      line-height: 1.08;
+      font-weight: 500;
+    }
+
+    .hero-copy h2 {
+      margin: 1.45rem 0 0.85rem;
+      font-size: clamp(1.25rem, 2vw, 1.75rem);
+      line-height: 1.25;
+      color: #4a3728;
+      font-weight: 500;
+    }
+
+    .hero-copy p:not(.eyebrow),
+    .intro-panel p {
+      color: #675c52;
+      line-height: 1.75;
+      font-size: 1rem;
+    }
+
+    .primary-link,
+    .watch-link {
+      align-self: flex-start;
+      margin-top: 1rem;
+      border: 1px solid #b7a58f;
+      background: #f4efe8;
+      color: #3a2a1a;
+      padding: 0.62rem 1rem;
+      text-decoration: none;
+      font-size: 0.82rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .primary-link:hover,
+    .watch-link:hover {
+      background: #eadfce;
+      border-color: #8f7659;
+      transform: translateY(-1px);
+    }
+
+    .intro-panel {
+      max-width: 880px;
+      margin: 1.25rem auto 2rem;
+      padding: 0 1.25rem;
+      text-align: center;
+    }
+
+    .archive-tools {
+      max-width: 1180px;
+      margin: 0 auto 1.5rem;
+      padding: 1rem clamp(1rem, 3vw, 2rem);
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 220px;
+      gap: 1rem;
+      align-items: end;
+      border-top: 1px solid rgba(88, 72, 55, 0.13);
+      border-bottom: 1px solid rgba(88, 72, 55, 0.13);
+    }
+
+    .filter-group > span,
+    .sort-control span {
+      display: block;
+      margin-bottom: 0.55rem;
+      color: #6d5b49;
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .filter-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+    }
+
+    .filter-buttons button,
+    .sort-control select {
+      border: 1px solid rgba(117, 96, 72, 0.28);
+      background: #fffdf9;
+      color: #47382a;
+      min-height: 36px;
+      font-family: "Glegoo", serif;
+      font-size: 0.78rem;
+    }
+
+    .filter-buttons button {
+      cursor: pointer;
+      padding: 0.42rem 0.72rem;
+    }
+
+    .filter-buttons button.is-active,
+    .filter-buttons button:hover {
+      background: #3d332a;
+      color: #fff8ed;
+      border-color: #3d332a;
+    }
+
+    .sort-control select {
+      width: 100%;
+      padding: 0.42rem 0.6rem;
+    }
+
+    .video-grid {
+      max-width: 1180px;
+      margin: 0 auto 3rem;
+      padding: 0 clamp(1rem, 3vw, 2rem);
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    :global(.video-card) {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      overflow: hidden;
+      border: 1px solid rgba(88, 72, 55, 0.16);
+      background: #fffdf9;
+      box-shadow: 0 10px 26px rgba(50, 38, 25, 0.06);
+    }
+
+    :global(.thumb-link) {
+      display: block;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    :global(.thumb-wrap) {
+      position: relative;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      background: #e8e0d4;
+    }
+
+    :global(.thumb-wrap img) {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: saturate(0.82) contrast(1.02);
+      transition: transform 0.28s ease;
+    }
+
+    :global(.video-card:hover .thumb-wrap img) {
+      transform: scale(1.025);
+    }
+
+    :global(.play-mark) {
+      width: 48px;
+      height: 48px;
+    }
+
+    :global(.play-mark::before) {
+      border-top-width: 9px;
+      border-bottom-width: 9px;
+      border-left-width: 14px;
+    }
+
+    :global(.thumb-fallback) {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      place-items: center;
+      color: #6b5844;
+      font-size: 2rem;
+      letter-spacing: 0.18em;
+      background: linear-gradient(135deg, #efe8dc, #d9cdbd);
+    }
+
+    :global(.card-body) {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      padding: 1rem;
+    }
+
+    :global(.badge-row) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-bottom: 0.7rem;
+    }
+
+    :global(.badge) {
+      border: 1px solid rgba(67, 51, 36, 0.15);
+      padding: 0.18rem 0.48rem;
+      font-size: 0.64rem;
+      line-height: 1.35;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #3d342d;
+      background: #eee8df;
+    }
+
+    :global(.theme-wild-west) { background: #ead7c1; color: #5c361f; }
+    :global(.theme-civil-war) { background: #dce1e3; color: #35495a; }
+    :global(.theme-world-war-ii) { background: #dfe4d0; color: #3f4b2f; }
+    :global(.theme-roaring-20s) { background: #e5d8ab; color: #4c422c; }
+    :global(.theme-landscape) { background: #d7e0ce; color: #3e5338; }
+    :global(.theme-painterly-process) { background: #e8dfcf; color: #46392d; }
+    :global(.theme-shows-and-events) { background: #e7c9b4; color: #623b28; }
+    :global(.theme-artist-commentary) { background: #ded8d1; color: #4b433d; }
+    :global(.theme-general) { background: #e4e1dd; color: #4e4b47; }
+    :global(.type) { background: #f5f1ea; color: #62523f; }
+    :global(.featured) { background: #3d332a; color: #fff8ed; }
+
+    :global(.date) {
+      margin: 0 0 0.35rem;
+      color: #8c7a68;
+      font-size: 0.72rem;
+    }
+
+    :global(.video-card h2) {
+      margin: 0 0 0.65rem;
+      font-size: 1.05rem;
+      line-height: 1.35;
+      font-weight: 500;
+    }
+
+    :global(.video-card h2 a) {
+      color: #2d241c;
+      text-decoration: none;
+    }
+
+    :global(.video-card h2 a:hover) {
+      color: #7a3d28;
+    }
+
+    :global(.dek) {
+      margin: 0;
+      color: #665b51;
+      font-size: 0.86rem;
+      line-height: 1.65;
+    }
+
+    :global(.card-actions) {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-top: auto;
+      padding-top: 1rem;
+      flex-wrap: wrap;
+    }
+
+    :global(.watch-link) {
+      margin-top: 0;
+      padding: 0.48rem 0.72rem;
+      font-size: 0.68rem;
+    }
+
+    :global(.external-link) {
+      color: #80654b;
+      font-size: 0.78rem;
+    }
+
+    .no-results {
+      max-width: 1180px;
+      margin: -1rem auto 3rem;
+      padding: 0 2rem;
+      color: #6b5d50;
+      text-align: center;
+    }
+
+    @media (max-width: 900px) {
+      .video-hero,
+      .archive-tools {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-media {
+        min-height: 260px;
+      }
+
+      .video-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 620px) {
+      .video-hero {
+        padding-top: 0.75rem;
+      }
+
+      .video-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .filter-buttons {
+        max-height: none;
+      }
+    }
+  </style>
+</BaseLayout>
