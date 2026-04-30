@@ -7,6 +7,7 @@ import { getBreadcrumbList } from '@/components/utils/getStructuredData.ts';
 
 const pagePath = '/western-art-photography';
 const targetPath = '/Western-Photography-Art';
+const canonicalUrl = `https://www.k4studios.com${pagePath}`;
 const targetUrl = `https://www.k4studios.com${targetPath}`;
 
 const breadcrumb =
@@ -16,9 +17,9 @@ const meta = {
   title: 'Western Art Photography | Western Photography Art at K4 Studios',
   description:
     'Western art photography is a bridge term for Western photography art: authored photographs of the American West shaped by painterly craft, frontier atmosphere, and narrative intent rather than simple documentation.',
-  canonicalUrl: targetUrl,
-  ogUrl: targetUrl,
-  twitterUrl: targetUrl,
+  canonicalUrl,
+  ogUrl: canonicalUrl,
+  twitterUrl: canonicalUrl,
 };
 
 const breadcrumbsJSON = getBreadcrumbList([
@@ -52,7 +53,8 @@ const structuredDataJSON = JSON.stringify({
     '@type': 'DefinedTerm',
     name: 'Western Art Photography',
     description: 'A bridge term for Western photography art: authored photographic works that interpret the American West through painterly craft, historical awareness, and narrative intent.',
-    sameAs: targetUrl,
+    sameAs: canonicalUrl,
+    relatedLink: targetUrl,
   },
 }, null, 2);
 ---

@@ -85,7 +85,6 @@ const EXCLUDE_PATTERNS = [
   /^\/404/,
   /^\/500/,
   /^\/Galleries\/lightbox(?:\/|$)/i,
-  /^\/western-art-photography\/?$/i,
   /^\/Other\/Print-Options\/?$/i,
   /^\/Other\/Stories\/?$/i,
   // Exclude test/draft pages

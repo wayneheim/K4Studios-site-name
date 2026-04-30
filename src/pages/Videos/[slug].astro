@@ -17,7 +17,7 @@ export function getStaticPaths() {
 }
 
 const { video } = Astro.props as { video: K4Video };
-const canonicalPath = `/Videos/${video.slug}/`;
+const canonicalPath = `/Videos/${video.slug}`;
 const canonicalUrl = `https://www.k4studios.com${canonicalPath}`;
 const pageTitle = `${video.title} | K4 Studios Video Archive`;
 const pageDescription = video.dek || video.description;
@@ -74,7 +74,7 @@ const meta = {
     </div>
 
     <article class="video-article">
-      <a class="back-link" href="/Videos/">&larr; Back to Video Archive</a>
+      <a class="back-link" href="/Videos">&larr; Back to Video Archive</a>
 
       <div class="article-header">
         <p class="eyebrow">{video.type} / {video.theme}</p>

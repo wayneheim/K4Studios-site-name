@@ -678,7 +678,7 @@ export const siteNav = [
       },
       {
         "label": "Videos",
-        "href": "/Videos/",
+        "href": "/Videos",
         "code": "O-S5v",
         "slug": "videos",
         "type": "section"

@@ -57,14 +57,17 @@ const ensureAbsoluteUrl = (value) => {
   }
 };
 
-const normalizeText = (value = '') =>
+const normalizeMetaText = (value = '') =>
   String(value || '')
     .replace(/<[^>]*>/g, ' ')
+    .replace(/[\u2013\u2014]/g, ' - ')
+    .replace(/\u2026/g, '...')
+    .replace(/\u00a9/g, '(c)')
     .replace(/\s+/g, ' ')
     .trim();
 
 const trimAtWord = (text = '', maxLength = 160) => {
-  const normalized = normalizeText(text);
+  const normalized = normalizeMetaText(text);
   if (!normalized) return '';
   if (normalized.length <= maxLength) return normalized;
 
@@ -74,15 +77,15 @@ const trimAtWord = (text = '', maxLength = 160) => {
     ? slice.slice(0, boundary)
     : normalized.slice(0, maxLength)).trim();
 
-  return `${trimmed}…`;
+  return `${trimmed}...`;
 };
 
-const trimTitle = (text = '', maxLength = 65) => {
-  const normalized = normalizeText(text);
+const trimTitle = (text = '', maxLength = 70) => {
+  const normalized = normalizeMetaText(text);
   if (!normalized) return '';
   if (normalized.length <= maxLength) return normalized;
 
-  const separatorPatterns = [' | ', ' – ', ' — ', ' - ', ': '];
+  const separatorPatterns = [' | ', ' \u2013 ', ' \u2014 ', ' - ', ': '];
   for (const separator of separatorPatterns) {
     const head = normalized.split(separator)[0]?.trim();
     if (head && head.length >= 18 && head.length <= maxLength) {
@@ -90,11 +93,14 @@ const trimTitle = (text = '', maxLength = 65) => {
     }
   }
 
-  return trimAtWord(normalized, maxLength);
+  const brandSuffix = ' | K4 Studios';
+  const truncated = normalized.slice(0, Math.max(18, maxLength - brandSuffix.length)).trim();
+  const branded = `${truncated}${brandSuffix}`;
+  return branded.length <= maxLength ? branded : normalized.slice(0, maxLength).trim();
 };
 
 const normalizeDescription = (text = '', fallback = '', minimumLength = 110, maximumLength = 160) => {
-  const normalized = normalizeText(text);
+  const normalized = normalizeMetaText(text);
   const fallbackText = trimAtWord(fallback, maximumLength);
 
   if (!normalized) return fallbackText;
@@ -116,13 +122,13 @@ const normalizeDescription = (text = '', fallback = '', minimumLength = 110, max
 };
 
 // Titles
-const galleryTitle = meta.title || title || 'K4 Studios – Fine Art Photography';
+const galleryTitle = meta.title || meta.seoTitle || meta.ogTitle || title || 'K4 Studios - Fine Art Photography';
 let pageTitle = isImagePage
   ? (preloadImage?.title || meta.ogTitle || meta.ogImageTitle || galleryTitle)
   : galleryTitle;
 
 // Remove HTML & redundant separators
-const cleanTitleBase = normalizeText(pageTitle || '')
+const cleanTitleBase = normalizeMetaText(pageTitle || '')
   .replace(/\s*\|\s*Wayne Heim.*$/gi, '')
   .trim();
 const cleanTitle = trimTitle(cleanTitleBase);
@@ -136,7 +142,7 @@ const seoDescriptionRaw =
   (isImagePage ? preloadImage?.description : null) ||
   (Astro.url?.pathname === '/'
     ? defaultDescription
-    : `${cleanTitle} – Fine Art Photography by Wayne Heim`);
+    : `${cleanTitle} - Fine Art Photography by Wayne Heim`);
 
 const seoDescription = normalizeDescription(seoDescriptionRaw, defaultDescription);
 
@@ -232,6 +238,16 @@ const normalizedBreadcrumbsJSON = normalizeK4Host(breadcrumbsJSON);
     <meta name="creator" content="Wayne Heim" />
     {robotsContent && <meta name="robots" content={robotsContent} />}
     {emitCanonical && <link rel="canonical" href={canonicalUrl} />}
+    <noscript>
+      <style>
+        .reveal-on-scroll,
+        .slide-in-left {
+          opacity: 1 !important;
+          transform: none !important;
+          visibility: visible !important;
+        }
+      </style>
+    </noscript>
 
     {normalizedStructuredDataJSON && <script type="application/ld+json" set:html={normalizedStructuredDataJSON}></script>}
     {normalizedBreadcrumbsJSON && <script type="application/ld+json" set:html={normalizedBreadcrumbsJSON}></script>}

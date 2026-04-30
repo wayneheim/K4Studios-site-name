@@ -58,8 +58,8 @@ export const videos: K4Video[] = [
   {
     slug: "women-of-the-west-journey",
     title: "Women of the West: A Journey for Those Who Follow",
-    youtubeId: "icR5i4Kf4ZY",
-    externalUrl: "https://www.youtube.com/watch?v=icR5i4Kf4ZY",
+    youtubeId: "MfH9luYm_WU",
+    externalUrl: "https://www.youtube.com/watch?v=MfH9luYm_WU",
     type: "Narrated Film",
     theme: "Wild West",
     date: "2026-04-27",
@@ -75,7 +75,7 @@ export const videos: K4Video[] = [
       { label: "American Western Art", href: "/American-Western-Art" },
       { label: "Western Fine Art Photography", href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History" },
       { label: "Wild West Galleries", href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/" },
-      { label: "Watch on YouTube", href: "https://www.youtube.com/watch?v=icR5i4Kf4ZY" },
+      { label: "Watch on YouTube", href: "https://www.youtube.com/watch?v=MfH9luYm_WU" },
       { label: "K4 Studios on YouTube", href: "https://www.youtube.com/@K4StudiosFineArt/videos" },
     ],
   },
@@ -193,7 +193,7 @@ export function isRealYouTubeId(youtubeId?: string): youtubeId is string {
 }
 
 export function getVideoUrl(video: K4Video): string {
-  if (video.hasDedicatedPage) return `/Videos/${video.slug}/`;
+  if (video.hasDedicatedPage) return `/Videos/${video.slug}`;
   if (video.externalUrl) return video.externalUrl;
   if (isRealYouTubeId(video.youtubeId)) return `https://www.youtube.com/watch?v=${video.youtubeId}`;
   return `/Videos/#${video.slug}`;
