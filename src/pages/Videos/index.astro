@@ -5,32 +5,16 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
 import VideoCard from "@/components/videos/VideoCard.astro";
-import { getVideoUrl, isRealYouTubeId, videos, videoThemes, videoTypes } from "@/data/videos/videoRegistry";
+import { DEFAULT_VIDEO_TEASER_IMAGE, getVideoUrl, videos } from "@/data/videos/videoRegistry";
 import "@/styles/global.css";
 
 const pageTitle = "K4 Studios Videos | Fine Art Photography Films, Shorts & Stories";
 const pageDescription =
   "A video archive of K4 Studios narrative films, shorts, artist commentary, and behind-the-scenes stories built around painterly fine art photography, historical imagery, and visual storytelling.";
 const archiveUrl = "https://www.k4studios.com/Videos/";
-const featuredVideo = videos.find((video) => video.featured) || videos[0];
-const featuredHref = getVideoUrl(featuredVideo);
-const sortedVideos = [...videos].sort((a, b) => Number(Boolean(b.featured)) - Number(Boolean(a.featured)) || b.date.localeCompare(a.date));
-const filterOptions = [
-  { label: "All", value: "all" },
-  { label: "Featured", value: "Featured" },
-  ...videoTypes.map((type) => ({
-    label:
-      type === "Full Video"
-        ? "Full Videos"
-        : type === "Behind the Scenes" || type === "Process"
-          ? type
-          : `${type}s`,
-    value: type,
-  })),
-  ...videoThemes.map((theme) => ({ label: theme, value: theme })),
-];
+const sortedVideos = [...videos].sort((a, b) => b.date.localeCompare(a.date));
 
-const itemListJsonLd = JSON.stringify({
+const videoItemList = {
   "@context": "https://schema.org",
   "@type": "ItemList",
   name: "K4 Studios Video Archive",
@@ -42,6 +26,25 @@ const itemListJsonLd = JSON.stringify({
     name: video.title,
     url: new URL(getVideoUrl(video), archiveUrl).toString(),
   })),
+};
+
+const collectionPageJsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: "K4 Studios Video Archive",
+  description: pageDescription,
+  url: archiveUrl,
+  isPartOf: {
+    "@type": "WebSite",
+    name: "K4 Studios",
+    url: "https://www.k4studios.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "K4 Studios",
+    url: "https://www.k4studios.com/",
+  },
+  mainEntity: videoItemList,
 });
 
 const meta = {
@@ -53,12 +56,12 @@ const meta = {
   ogDescription: pageDescription,
   twitterTitle: pageTitle,
   twitterDescription: pageDescription,
-  ogImage: featuredVideo.thumbnail || "/images/show-2t.webp",
-  ogImageAlt: featuredVideo.thumbnailAlt || "K4 Studios video archive featured video thumbnail",
+  ogImage: DEFAULT_VIDEO_TEASER_IMAGE,
+  ogImageAlt: "K4 Studios video archive teaser image",
 };
 ---
 
-<BaseLayout title={pageTitle} description={pageDescription} structuredDataJSON={itemListJsonLd} meta={meta}>
+<BaseLayout title={pageTitle} description={pageDescription} structuredDataJSON={collectionPageJsonLd} meta={meta}>
   <main class="videos-page">
     <div class="drawer-mode">
       <LandingHeader client:load breadcrumb="Other &rsaquo; Videos" />
@@ -66,55 +69,24 @@ const meta = {
 
     <section class="video-hero" aria-labelledby="videos-title">
       <div class="hero-media">
-        {isRealYouTubeId(featuredVideo.youtubeId) ? (
-          <iframe
-            src={`https://www.youtube-nocookie.com/embed/${featuredVideo.youtubeId}`}
-            title={featuredVideo.title}
-            loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
-        ) : (
-          <a href={featuredHref} class="hero-thumb" aria-label={`Watch ${featuredVideo.title}`}>
-            <img src={featuredVideo.thumbnail || "/images/show-2t.webp"} alt={featuredVideo.thumbnailAlt || `${featuredVideo.title} video thumbnail`} />
-            <span aria-hidden="true">Play</span>
-          </a>
-        )}
+        <img src={DEFAULT_VIDEO_TEASER_IMAGE} alt="K4 Studios video archive teaser image" />
       </div>
 
       <div class="hero-copy">
-        <p class="eyebrow">Featured Video</p>
+        <p class="eyebrow">K4 Studios Videos</p>
         <h1 id="videos-title">K4 Studios Video Archive</h1>
-        <h2>{featuredVideo.title}</h2>
-        <p>{featuredVideo.dek || featuredVideo.description}</p>
-        <a class="primary-link" href={featuredHref}>Watch the Film &rarr;</a>
+        <p>Narrative films, shorts, reels, show pieces, and behind-the-scenes video work from K4 Studios &mdash; built from still photographs, voice, music, text, and memory.</p>
       </div>
-    </section>
-
-    <section class="intro-panel" aria-label="Video archive introduction">
-      <p>
-        A collection of narrative films, shorts, artist commentary, and behind-the-scenes video pieces from K4 Studios. These works gather still photographs, voice, music, text, and memory into short visual experiences connected to Western art, historical storytelling, landscapes, and the painterly photographic process.
-      </p>
     </section>
 
     <section class="archive-tools" aria-label="Video archive controls">
-      <div class="filter-group" role="group" aria-label="Filter videos">
-        <span>Theme / Time Period</span>
-        <div class="filter-buttons">
-          {filterOptions.map((option) => (
-            <button type="button" data-filter={option.value} class={option.value === "all" ? "is-active" : ""}>
-              {option.label}
-            </button>
-          ))}
-        </div>
-      </div>
-
       <label class="sort-control">
         <span>Sort</span>
         <select data-video-sort>
           <option value="newest">Newest First</option>
           <option value="oldest">Oldest First</option>
-          <option value="featured">Featured First</option>
+          <option value="type">Media Type</option>
+          <option value="theme">Subject / Theme</option>
           <option value="title">Title A-Z</option>
         </select>
       </label>
@@ -124,57 +96,48 @@ const meta = {
       {sortedVideos.map((video) => <VideoCard video={video} />)}
     </section>
 
-    <p class="no-results" data-video-empty hidden>No videos match that filter yet.</p>
-
     <SiteFooter previewImages={[]} previewPath="" title={pageTitle} label="" class="pt-8 pb-12" />
   </main>
 
   <script>
     const grid = document.querySelector("[data-video-grid]");
     const cards = grid ? Array.from(grid.querySelectorAll("[data-video-card]")) : [];
-    const filterButtons = Array.from(document.querySelectorAll("[data-filter]"));
     const sortSelect = document.querySelector("[data-video-sort]");
-    const emptyState = document.querySelector("[data-video-empty]");
-
-    let activeFilter = "all";
 
     function compareCards(a, b, sortMode) {
       if (sortMode === "oldest") return a.dataset.date.localeCompare(b.dataset.date);
-      if (sortMode === "featured") {
-        const featuredDelta = Number(b.dataset.featured === "true") - Number(a.dataset.featured === "true");
-        return featuredDelta || b.dataset.date.localeCompare(a.dataset.date);
-      }
+      if (sortMode === "theme") return a.dataset.theme.localeCompare(b.dataset.theme) || b.dataset.date.localeCompare(a.dataset.date);
+      if (sortMode === "type") return a.dataset.typeGroup.localeCompare(b.dataset.typeGroup) || b.dataset.date.localeCompare(a.dataset.date);
       if (sortMode === "title") return a.dataset.title.localeCompare(b.dataset.title);
       return b.dataset.date.localeCompare(a.dataset.date);
     }
 
-    function updateArchive() {
-      if (!grid) return;
-      const sortMode = sortSelect ? sortSelect.value : "newest";
-      const sortedCards = [...cards].sort((a, b) => compareCards(a, b, sortMode));
-      let visibleCount = 0;
-
-      sortedCards.forEach((card) => {
-        const matchesFilter =
-          activeFilter === "all" ||
-          card.dataset.type === activeFilter ||
-          card.dataset.theme === activeFilter ||
-          (activeFilter === "Featured" && card.dataset.featured === "true");
-        card.hidden = !matchesFilter;
-        if (matchesFilter) visibleCount += 1;
-        grid.appendChild(card);
-      });
-
-      if (emptyState) emptyState.hidden = visibleCount > 0;
+    function insertGroupHeader(label) {
+      const header = document.createElement("div");
+      header.className = "video-group-header";
+      header.textContent = label;
+      grid.appendChild(header);
     }
 
-    filterButtons.forEach((button) => {
-      button.addEventListener("click", () => {
-        activeFilter = button.dataset.filter || "all";
-        filterButtons.forEach((candidate) => candidate.classList.toggle("is-active", candidate === button));
-        updateArchive();
+    function updateArchive() {
+      if (!grid) return;
+      grid.querySelectorAll(".video-group-header").forEach((header) => header.remove());
+      const sortMode = sortSelect ? sortSelect.value : "newest";
+      const sortedCards = [...cards].sort((a, b) => compareCards(a, b, sortMode));
+      let currentGroup = "";
+
+      sortedCards.forEach((card) => {
+        if (sortMode === "theme" || sortMode === "type") {
+          const groupLabel = sortMode === "theme" ? card.dataset.theme : card.dataset.typeGroup;
+          if (groupLabel && groupLabel !== currentGroup) {
+            currentGroup = groupLabel;
+            insertGroupHeader(groupLabel);
+          }
+        }
+        card.hidden = false;
+        grid.appendChild(card);
       });
-    });
+    }
 
     if (sortSelect) sortSelect.addEventListener("change", updateArchive);
   </script>
@@ -190,12 +153,12 @@ const meta = {
 
     .video-hero {
       display: grid;
-      grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
-      gap: clamp(1.25rem, 3vw, 3rem);
+      grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.95fr);
+      gap: clamp(1rem, 2.4vw, 2rem);
       align-items: stretch;
       max-width: 1180px;
-      margin: 2rem auto 0;
-      padding: clamp(1rem, 3vw, 2rem);
+      margin: 1rem auto 0;
+      padding: clamp(0.8rem, 2.4vw, 1.5rem);
     }
 
     .hero-media,
@@ -203,45 +166,24 @@ const meta = {
       border: 1px solid rgba(88, 72, 55, 0.18);
       background: #fffdf9;
       box-shadow: 0 18px 48px rgba(50, 38, 25, 0.08);
+      border-radius: 8px;
     }
 
     .hero-media {
-      min-height: 360px;
+      min-height: 230px;
+      max-height: 320px;
       overflow: hidden;
     }
 
-    .hero-media iframe,
-    .hero-thumb,
-    .hero-thumb img {
+    .hero-media img {
       display: block;
       width: 100%;
       height: 100%;
-    }
-
-    .hero-media iframe {
-      aspect-ratio: 16 / 9;
-      border: 0;
-    }
-
-    .hero-thumb {
-      position: relative;
-      color: #fff;
-      text-decoration: none;
-    }
-
-    .hero-thumb img {
       object-fit: cover;
+      object-position: center;
       filter: saturate(0.86) contrast(1.03);
     }
 
-    .hero-thumb::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(36, 27, 18, 0.08), rgba(36, 27, 18, 0.42));
-    }
-
-    .hero-thumb span,
     .play-mark {
       position: absolute;
       left: 50%;
@@ -259,7 +201,6 @@ const meta = {
       box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
     }
 
-    .hero-thumb span::before,
     .play-mark::before {
       content: "";
       margin-left: 5px;
@@ -269,7 +210,7 @@ const meta = {
     }
 
     .hero-copy {
-      padding: clamp(1.35rem, 3vw, 2.35rem);
+      padding: clamp(1.1rem, 2.4vw, 1.8rem);
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -287,28 +228,19 @@ const meta = {
     h1 {
       margin: 0;
       color: #221d18;
-      font-size: clamp(2.05rem, 4vw, 4rem);
+      font-size: clamp(1.9rem, 3.2vw, 3.2rem);
       line-height: 1.08;
-      font-weight: 500;
-    }
-
-    .hero-copy h2 {
-      margin: 1.45rem 0 0.85rem;
-      font-size: clamp(1.25rem, 2vw, 1.75rem);
-      line-height: 1.25;
-      color: #4a3728;
       font-weight: 500;
     }
 
     .hero-copy p:not(.eyebrow),
     .intro-panel p {
       color: #675c52;
-      line-height: 1.75;
+      line-height: 1.65;
       font-size: 1rem;
     }
 
-    .primary-link,
-    .watch-link {
+    .primary-link {
       align-self: flex-start;
       margin-top: 1rem;
       border: 1px solid #b7a58f;
@@ -322,8 +254,7 @@ const meta = {
       transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
     }
 
-    .primary-link:hover,
-    .watch-link:hover {
+    .primary-link:hover {
       background: #eadfce;
       border-color: #8f7659;
       transform: translateY(-1px);
@@ -341,14 +272,14 @@ const meta = {
       margin: 0 auto 1.5rem;
       padding: 1rem clamp(1rem, 3vw, 2rem);
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 220px;
+      grid-template-columns: minmax(220px, 280px);
       gap: 1rem;
       align-items: end;
+      justify-content: end;
       border-top: 1px solid rgba(88, 72, 55, 0.13);
       border-bottom: 1px solid rgba(88, 72, 55, 0.13);
     }
 
-    .filter-group > span,
     .sort-control span {
       display: block;
       margin-bottom: 0.55rem;
@@ -358,13 +289,6 @@ const meta = {
       letter-spacing: 0.12em;
     }
 
-    .filter-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.45rem;
-    }
-
-    .filter-buttons button,
     .sort-control select {
       border: 1px solid rgba(117, 96, 72, 0.28);
       background: #fffdf9;
@@ -372,18 +296,6 @@ const meta = {
       min-height: 36px;
       font-family: "Glegoo", serif;
       font-size: 0.78rem;
-    }
-
-    .filter-buttons button {
-      cursor: pointer;
-      padding: 0.42rem 0.72rem;
-    }
-
-    .filter-buttons button.is-active,
-    .filter-buttons button:hover {
-      background: #3d332a;
-      color: #fff8ed;
-      border-color: #3d332a;
     }
 
     .sort-control select {
@@ -400,6 +312,17 @@ const meta = {
       gap: 1rem;
     }
 
+    .video-group-header {
+      grid-column: 1 / -1;
+      margin: 0.8rem 0 -0.15rem;
+      padding: 0.55rem 0 0.35rem;
+      border-top: 1px solid rgba(88, 72, 55, 0.18);
+      color: #6c5946;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+    }
+
     :global(.video-card) {
       display: flex;
       flex-direction: column;
@@ -408,6 +331,43 @@ const meta = {
       border: 1px solid rgba(88, 72, 55, 0.16);
       background: #fffdf9;
       box-shadow: 0 10px 26px rgba(50, 38, 25, 0.06);
+      border-radius: 8px;
+    }
+
+    :global(.video-card.type-card-movie-narrative),
+    :global(.video-card[data-type-key="movie-narrative"]) {
+      background: linear-gradient(180deg, #fffdf9 0%, #f1dfc8 100%) !important;
+      border-color: rgba(128, 86, 45, 0.24);
+    }
+
+    :global(.video-card.type-card-short-reel),
+    :global(.video-card[data-type-key="short-reel"]) {
+      background: linear-gradient(180deg, #f6f5f1 0%, #e1e1da 100%) !important;
+      border-color: rgba(85, 86, 79, 0.24);
+    }
+
+    :global(.video-card.type-card-process-bts),
+    :global(.video-card[data-type-key="process-bts"]) {
+      background: linear-gradient(180deg, #fffdf9 0%, #dfe7d6 100%) !important;
+      border-color: rgba(78, 97, 64, 0.2);
+    }
+
+    :global(.video-card.type-card-artist-commentary),
+    :global(.video-card[data-type-key="artist-commentary"]) {
+      background: linear-gradient(180deg, #fffdf9 0%, #dfe5e7 100%) !important;
+      border-color: rgba(70, 86, 100, 0.2);
+    }
+
+    :global(.video-card.type-card-show-event),
+    :global(.video-card[data-type-key="show-event"]) {
+      background: linear-gradient(180deg, #fffdf9 0%, #edcdb8 100%) !important;
+      border-color: rgba(124, 69, 39, 0.2);
+    }
+
+    :global(.video-card.type-card-general),
+    :global(.video-card[data-type-key="general"]) {
+      background: linear-gradient(180deg, #fffdf9 0%, #e9e6df 100%) !important;
+      border-color: rgba(88, 72, 55, 0.16);
     }
 
     :global(.thumb-link) {
@@ -465,10 +425,19 @@ const meta = {
       padding: 1rem;
     }
 
-    :global(.badge-row) {
+    :global(.badge-row),
+    :global(.meta-stack) {
       display: flex;
       flex-wrap: wrap;
       gap: 0.35rem;
+      align-items: center;
+    }
+
+    :global(.badge-row) {
+      margin-bottom: 0.45rem;
+    }
+
+    :global(.meta-stack) {
       margin-bottom: 0.7rem;
     }
 
@@ -483,22 +452,54 @@ const meta = {
       background: #eee8df;
     }
 
-    :global(.theme-wild-west) { background: #ead7c1; color: #5c361f; }
-    :global(.theme-civil-war) { background: #dce1e3; color: #35495a; }
-    :global(.theme-world-war-ii) { background: #dfe4d0; color: #3f4b2f; }
-    :global(.theme-roaring-20s) { background: #e5d8ab; color: #4c422c; }
-    :global(.theme-landscape) { background: #d7e0ce; color: #3e5338; }
-    :global(.theme-painterly-process) { background: #e8dfcf; color: #46392d; }
-    :global(.theme-shows-and-events) { background: #e7c9b4; color: #623b28; }
-    :global(.theme-artist-commentary) { background: #ded8d1; color: #4b433d; }
-    :global(.theme-general) { background: #e4e1dd; color: #4e4b47; }
-    :global(.type) { background: #f5f1ea; color: #62523f; }
+    :global(.type) {
+      border-color: rgba(48, 39, 31, 0.2);
+      color: #fff8ed;
+      font-weight: 700;
+    }
+
+    :global(.type-full-video),
+    :global(.type-narrated-film) {
+      background: #6f3f25;
+    }
+
+    :global(.type-short),
+    :global(.type-reel) {
+      background: #8a742f;
+    }
+
+    :global(.type-process),
+    :global(.type-behind-the-scenes) {
+      background: #4f5845;
+    }
+
+    :global(.type-artist-talk) {
+      background: #4b5363;
+    }
+
+    :global(.subject) {
+      background: rgba(255, 253, 249, 0.72);
+      color: #685747;
+      font-size: 0.6rem;
+    }
+
     :global(.featured) { background: #3d332a; color: #fff8ed; }
 
-    :global(.date) {
-      margin: 0 0 0.35rem;
+    :global(.date),
+    :global(.runtime) {
+      display: inline-flex;
+      align-items: center;
+      min-height: 1.45rem;
+      margin: 0;
       color: #8c7a68;
       font-size: 0.72rem;
+    }
+
+    :global(.runtime) {
+      border-left: 1px solid rgba(88, 72, 55, 0.18);
+      padding-left: 0.5rem;
+      color: #4f3d2d;
+      font-weight: 700;
     }
 
     :global(.video-card h2) {
@@ -527,21 +528,23 @@ const meta = {
     :global(.card-actions) {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
+      gap: 0.35rem;
       margin-top: auto;
       padding-top: 1rem;
       flex-wrap: wrap;
     }
 
-    :global(.watch-link) {
-      margin-top: 0;
-      padding: 0.48rem 0.72rem;
-      font-size: 0.68rem;
+    :global(.watch-label) {
+      color: #5a4938;
+      font-size: 0.76rem;
+      font-weight: 700;
     }
 
     :global(.external-link) {
-      color: #80654b;
+      color: #7a3d28;
       font-size: 0.78rem;
+      text-decoration: underline;
+      text-underline-offset: 2px;
     }
 
     .no-results {
@@ -574,10 +577,6 @@ const meta = {
 
       .video-grid {
         grid-template-columns: 1fr;
-      }
-
-      .filter-buttons {
-        max-height: none;
       }
     }
   </style>

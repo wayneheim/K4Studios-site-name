@@ -5,10 +5,10 @@ export default function ChapterTransportationTrainsBlackWhiteTraditional(props) 
   return (
     <ChapterGalleryBase
       rawData={rawData}
-      basePath="/Galleries/Fine-Art-Photography/Transportation/Trains-Black-White"
+      basePath="/Galleries/Fine-Art-Photography/Transportation/Trains"
       titleBase="Transportation — Trains — Black & White"
-      sectionKey="/Transportation/Trains-Black-White"
-      swipeHintKey="Transportation-Trains-Black-White"
+      sectionKey="/Transportation/Trains"
+      swipeHintKey="Transportation-Trains"
       {...props}
     />
   );

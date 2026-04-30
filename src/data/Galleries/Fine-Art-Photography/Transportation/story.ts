@@ -22,8 +22,7 @@ export const westernStory = [
       "Trains have long symbolized progress and connection. Wayne’s train photography documents their presence in landscapes filled with fog, steam, and light — from heritage railroads to rural tracks cutting through farmland."
     ],
     list: [
-      `<a href="/Galleries/Fine-Art-Photography/Transportation/Trains-Black-White">Black & White Train Photography</a>: Classic, tonal studies of steam and steel.`,
-      `<a href="/Galleries/Fine-Art-Photography/Transportation/Trains">Color Train Photography</a>: Vivid images that capture grit, heat, and the drama of rail power.`
+      `<a href="/Galleries/Fine-Art-Photography/Transportation/Trains">Train Photography</a>: Classic rail studies, including color and black-and-white views of steam and steel.`
     ],
     tagline: "Bring the history and grandeur of railroads into your collection."
   },
@@ -76,7 +75,7 @@ export const westernStory = [
       `<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits">Western Cowboy Portraits</a> – Grit, grandeur, and frontier spirit.`,
       `<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII">WWII Photography</a> – Sacrifice, brotherhood, and wartime history.`,
       `<a href="/Galleries/Fine-Art-Photography/Transportation/Cars">Classic Cars</a> – Icons of Americana and automotive design.`,
-      `<a href="/Galleries/Fine-Art-Photography/Transportation/Trains-Black-White">Black & White Train Photography</a> – Historic and tonal rail studies.`
+      `<a href="/Galleries/Fine-Art-Photography/Transportation/Trains">Train Photography</a> – Historic rail studies in the traditional fine art collection.`
     ]
   },
 

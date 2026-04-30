@@ -5,7 +5,7 @@ import PunchInIntro from "./PunchInIntro.jsx";
 import { warmImage } from "../utils/warmImage";
 import { emitActionPixel } from "../utils/analytics";
 
-export default function StoryShow({ images, startImageId, onExit }) {
+export default function StoryShow({ images, startImageId, onExit, imageSize = 'xl' }) {
   const [index, setIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [isIntro, setIsIntro] = useState(true);
@@ -101,24 +101,24 @@ export default function StoryShow({ images, startImageId, onExit }) {
   const isVertical = current?.aspectRatio && current.aspectRatio < 1;
 
   // ═══════════════════════════════════════════════════════════════════════════
-  // PHASE 4: Slideshow XL warming
-  // During intro: warm first 2 images at xl
+  // PHASE 4: Slideshow warming
+  // During intro: warm first 2 images
   // Rolling: warm N+1 and N+2 as slideshow advances
   // ═══════════════════════════════════════════════════════════════════════════
 
   // Warm first 2 images during intro overlay (free warm time)
   useEffect(() => {
     if (!isIntro || !orderedImages?.length) return;
-    orderedImages.slice(0, 2).forEach(img => warmImage(img.id, 'xl'));
-  }, [isIntro, orderedImages]);
+    orderedImages.slice(0, 2).forEach(img => warmImage(img.id, imageSize));
+  }, [isIntro, orderedImages, imageSize]);
 
-  // Rolling warm: as index advances, warm next 2 images at xl
+  // Rolling warm: as index advances, warm next 2 images
   useEffect(() => {
     if (!orderedImages?.length) return;
     orderedImages.slice(index + 1, index + 3).forEach(img => {
-      if (img?.id) warmImage(img.id, 'xl');
+      if (img?.id) warmImage(img.id, imageSize);
     });
-  }, [index, orderedImages]);
+  }, [index, orderedImages, imageSize]);
 
   // ═══════════════════════════════════════════════════════════════════════════
 

@@ -15,12 +15,16 @@ import { trackEvent as track, emitActionPixel } from "../utils/analytics";
 
 const ENGRAINED_BASE_PATH = "/Other/K4-Select-Series/Engrained/Engrained-Series";
 
-// Helper function to select the best image source for slideshow display
+// Helper function to select the public image source for Picture Show display.
 const getBestImageSrc = (image) => {
   if (!image) return "";
-  // Use proxy if we have an ID
+  if (image.id) return getProxySrc(image.id, 'l');
+  return normalizeImageSrc(image.srcL || image.srcM || image.src || image.srcXL || "", 'l');
+};
+
+const getSlideshowImageSrc = (image) => {
+  if (!image) return "";
   if (image.id) return getProxySrc(image.id, 'xl');
-  // Normalize any URL to proxy format
   return normalizeImageSrc(image.srcXL || image.srcL || image.srcM || image.src || "", 'xl');
 };
 
@@ -682,19 +686,19 @@ useEffect(() => {
   useEffect(() => {
     if (!filteredData?.length || currentIndex === 0) return;
     
-    // Warm current image at 'xl' size
+    // Warm current image at public display size
     if (filteredData[currentIndex]?.id) {
-      warmImage(filteredData[currentIndex].id, 'xl');
+      warmImage(filteredData[currentIndex].id, 'l');
     }
     
-    // Warm previous image at 'xl' size
+    // Warm previous image at public display size
     if (currentIndex > 1 && filteredData[currentIndex - 1]?.id) {
-      warmImage(filteredData[currentIndex - 1].id, 'xl');
+      warmImage(filteredData[currentIndex - 1].id, 'l');
     }
     
-    // Warm next image at 'xl' size
+    // Warm next image at public display size
     if (currentIndex < filteredData.length - 1 && filteredData[currentIndex + 1]?.id) {
-      warmImage(filteredData[currentIndex + 1].id, 'xl');
+      warmImage(filteredData[currentIndex + 1].id, 'l');
     }
   }, [currentIndex, filteredData]);
 
@@ -1201,7 +1205,7 @@ const isSpeechActive = () => {
                       >
                         {/* Base image (show only when not hovered) */}
                         <img
-                          src={normalizeImageSrc(currentImage?.src, 'xl')}
+                          src={normalizeImageSrc(currentImage?.src, 'l')}
                           alt={currentImage?.alt || currentImage?.title}
                           className="w-full h-full object-contain"
                           style={{ opacity: isCardHovered ? 0 : 1, transition: 'opacity 500ms ease-out' }}
@@ -1210,7 +1214,7 @@ const isSpeechActive = () => {
                         {/* Hover phase 1 */}
                         {currentImage?.src2 && (
                           <img
-                            src={normalizeImageSrc(currentImage.src2, 'xl')}
+                            src={normalizeImageSrc(currentImage.src2, 'l')}
                             alt=""
                             className="absolute inset-0 w-full h-full object-contain"
                             style={{ opacity: isCardHovered ? 1 : 0, transition: 'opacity 500ms ease-out', pointerEvents: 'none' }}
@@ -1220,7 +1224,7 @@ const isSpeechActive = () => {
                         {/* Hover phase 2 (animated gif) */}
                         {currentImage?.src3 && (
                           <img
-                            src={normalizeImageSrc(currentImage.src3, 'xl')}
+                            src={normalizeImageSrc(currentImage.src3, 'l')}
                             alt=""
                             className="absolute inset-0 w-full h-full object-contain"
                             style={{ opacity: hoverPhase === 2 ? 1 : 0, transition: 'opacity 500ms ease-out', pointerEvents: 'none' }}
@@ -1792,7 +1796,8 @@ const isSpeechActive = () => {
 
       {showSlideshow && (
         <StoryShow
-          images={filteredData}
+          images={filteredData.map((img) => ({ ...img, url: getSlideshowImageSrc(img) }))}
+          imageSize="xl"
           startImageId={currentImage?.id}
           onExit={() => {
             // Stop all audio when exiting slideshow

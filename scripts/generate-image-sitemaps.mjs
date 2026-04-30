@@ -331,10 +331,6 @@ const SECTIONS = [
       {
         dataPath: '../src/data/Galleries/Fine-Art-Photography/Transportation/Trains.mjs',
         urlBase: '/Galleries/Fine-Art-Photography/Transportation/Trains'
-      },
-      {
-        dataPath: '../src/data/Galleries/Fine-Art-Photography/Transportation/Trains.mjs',
-        urlBase: '/Galleries/Fine-Art-Photography/Transportation/Trains-Black-White'
       }
     ]
   },

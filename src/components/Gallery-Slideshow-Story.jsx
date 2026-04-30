@@ -9,13 +9,12 @@ import { emitActionPixel, trackEvent as track } from "../utils/analytics";
 
 // Helper function to select the best image source for slideshow display
 // Uses proxy URL to avoid exposing SmugMug URLs in rendered HTML
-const getBestImageSrc = (image) => {
+const getBestImageSrc = (image, imageSize = 'xl') => {
   if (!image || !image.id) return "";
-  // Request XL for slideshow (Worker handles fallback if XL unavailable)
-  return getProxySrc(image.id, 'xl');
+  return getProxySrc(image.id, imageSize);
 };
 
-export default function StoryShow({ images, startImageId, onExit, isMuted = false, setIsMuted, volume = 0.7, setVolume, audioRef, ambientAudioRef, setIsSpeaking, isSpeaking, globalAudioSrc, globalAudioMode }) {
+export default function StoryShow({ images, startImageId, onExit, imageSize = 'xl', isMuted = false, setIsMuted, volume = 0.7, setVolume, audioRef, ambientAudioRef, setIsSpeaking, isSpeaking, globalAudioSrc, globalAudioMode }) {
   const [index, setIndex] = useState(0);
   const [isIntro, setIsIntro] = useState(false);
   const [showControls, setShowControls] = useState(true);
@@ -144,8 +143,8 @@ export default function StoryShow({ images, startImageId, onExit, isMuted = fals
   const isVertical = current?.aspectRatio && current.aspectRatio < 1;
 
   // ═══════════════════════════════════════════════════════════════════════════
-  // Slideshow XL warming (matches Gallery-Slideshow.jsx)
-  // During intro: warm first 2 images at xl
+  // Slideshow warming (matches Gallery-Slideshow.jsx)
+  // During intro: warm first 2 images
   // Rolling: warm N+1 and N+2 as slideshow advances
   // ═══════════════════════════════════════════════════════════════════════════
 
@@ -153,17 +152,17 @@ export default function StoryShow({ images, startImageId, onExit, isMuted = fals
   useEffect(() => {
     if (!isIntro || !orderedImages?.length) return;
     orderedImages.slice(0, 2).forEach(img => {
-      if (img?.id) warmImage(img.id, 'xl');
+      if (img?.id) warmImage(img.id, imageSize);
     });
-  }, [isIntro, orderedImages]);
+  }, [isIntro, orderedImages, imageSize]);
 
-  // Rolling warm: as index advances, warm next 2 images at xl
+  // Rolling warm: as index advances, warm next 2 images
   useEffect(() => {
     if (!orderedImages?.length) return;
     orderedImages.slice(index + 1, index + 3).forEach(img => {
-      if (img?.id) warmImage(img.id, 'xl');
+      if (img?.id) warmImage(img.id, imageSize);
     });
-  }, [index, orderedImages]);
+  }, [index, orderedImages, imageSize]);
 
   // ═══════════════════════════════════════════════════════════════════════════
 
@@ -480,7 +479,7 @@ export default function StoryShow({ images, startImageId, onExit, isMuted = fals
             >
               <div className="w-screen h-screen flex items-center justify-center relative gallery-slideshow px-4 md:px-0">
                 <motion.img
-                  src={getBestImageSrc(current)}
+                  src={getBestImageSrc(current, imageSize)}
                   alt={current.alt || current.title || ""}
                   className={`object-contain ${isVertical ? "vertical" : ""}`}
                   style={imgStyle}

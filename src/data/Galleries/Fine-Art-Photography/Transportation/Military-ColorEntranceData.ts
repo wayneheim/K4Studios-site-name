@@ -20,7 +20,7 @@ export const entranceData = {
     Each image captures authentic machines, from restored WWII jeeps and armored transports to aviation icons that once dominated the skies. These traditional photographs emphasize realism and documentary precision, connecting viewers with the stories of conflict, service, and technological achievement.
     <br><br>
     For related collections, visit our 
-    <a href="/Galleries/Fine-Art-Photography/Transportation/Trains-Black-White"
+    <a href="/Galleries/Fine-Art-Photography/Transportation/Trains"
       style="color:#85644b; text-decoration:underline; transition:color 0.2s; font-size:inherit; font-family:inherit; font-weight:inherit;"
       onmouseover="this.style.color='#a74219'"
       onmouseout="this.style.color='#85644b'">Traditional Train Photography</a>,

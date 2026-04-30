@@ -145,33 +145,30 @@ export default function LandingHeader({ breadcrumb }) {
             transparent 2px 6px
           );
           z-index: 0;
-          opacity: 1;
-          transform: translateX(0);
+          opacity: 0.8;
           pointer-events: none;
         }
 
         .landing-header::before {
           left: 0;
           right: 50%;
-          margin-right: -20px;
-          transform: translateX(-100%);
+          margin-right: -30px;
           mask-image: linear-gradient(to right, transparent 40%, #000 85%, #000 100%);
         }
 
         .landing-header::after {
           left: 50%;
           right: 0;
-          margin-left: -20px;
-          transform: translateX(100%);
+          margin-left: -30px;
           mask-image: linear-gradient(to left, transparent 10%, transparent 40%, #000 85%, #000 100%);
         }
 
         .desktop-animate::before {
-          animation: stripeInLeft 0.6s ease-out forwards;
+          animation: none;
         }
 
         .desktop-animate::after {
-          animation: stripeInRight 0.6s ease-out forwards;
+          animation: none;
         }
 
         .breadcrumb-text {

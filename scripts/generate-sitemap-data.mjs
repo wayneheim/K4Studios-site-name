@@ -15,6 +15,7 @@ const REPO_ROOT = path.resolve(__dirname, '..');
 const MASTER_GALLERY_DATA_FILE = path.resolve(__dirname, '..', 'src', 'data', 'galleryMaps', 'MasterGalleryData.mjs');
 const DOORWAY_REGISTRY_FILE = path.resolve(__dirname, '..', 'src', 'data', 'doorway', 'doorwayPages.ts');
 const SITE_NAV_FILE = path.resolve(__dirname, '..', 'src', 'data', 'siteNav.js');
+const VIDEO_REGISTRY_FILE = path.resolve(__dirname, '..', 'src', 'data', 'videos', 'videoRegistry.ts');
 const DYNAMIC_ALL_ROUTE_FILE = path.resolve(__dirname, '..', 'src', 'pages', '[...gallery]', 'all.astro');
 
 const GHOST_IMAGE_ID = 'i-k4studios';
@@ -92,6 +93,7 @@ const EXCLUDE_PATTERNS = [
   /^\/Other\/Historical-Reenactment-Photography\/?$/,
   /^\/Galleries\/Painterly-Fine-Art-Photography\/Facing-History\/Western-Cowboy-Portraits\/NA-Color(?:\/|$)/,
   /^\/Galleries\/Painterly-Fine-Art-Photography\/Facing-History\/Western-Cowboy-Portraits\/NA-Black-White(?:\/|$)/,
+  /^\/Galleries\/Fine-Art-Photography\/Transportation\/Trains-Black-White(?:\/|$)/,
   /backup$/i,
   /copy$/i,
 ];
@@ -278,6 +280,42 @@ async function loadActiveDoorwayRoutes() {
   return entries;
 }
 
+async function loadVideoDetailRoutes() {
+  const entries = [];
+
+  try {
+    const source = await readFile(VIDEO_REGISTRY_FILE, 'utf8');
+    const fileStats = await stat(VIDEO_REGISTRY_FILE);
+    const lastmod = getStableLastmodIso(VIDEO_REGISTRY_FILE, fileStats.mtime.toISOString());
+
+    const dedicatedVideoRegex = /\{\s*slug:\s*['"]([^'"]+)['"][\s\S]*?hasDedicatedPage:\s*true[\s\S]*?\}/g;
+    const slugs = new Set();
+    let match;
+
+    while ((match = dedicatedVideoRegex.exec(source)) !== null) {
+      const slug = String(match[1] || '').trim();
+      if (slug) slugs.add(slug);
+    }
+
+    for (const slug of slugs) {
+      const urlPath = `/Videos/${slug}`;
+      entries.push({
+        loc: SITE_URL + urlPath,
+        lastmod,
+        changefreq: 'monthly',
+        priority: getPriority(urlPath),
+      });
+    }
+
+    console.log(`Generated ${entries.length} video detail route entries`);
+  } catch (err) {
+    console.error('Error loading video detail routes:', err.message);
+    console.error(err.stack);
+  }
+
+  return entries;
+}
+
 async function loadDynamicAllCollectionRoutes() {
   const entries = [];
 
@@ -355,9 +393,12 @@ async function main() {
 
   // Get active doorway pages from the doorway registry
   const doorwayEntries = await loadActiveDoorwayRoutes();
+
+  // Get dedicated video detail pages from the video registry
+  const videoEntries = await loadVideoDetailRoutes();
   
   // Combine and deduplicate
-  const allEntries = [...staticEntries, ...dynamicEntries, ...dynamicAllEntries, ...doorwayEntries];
+  const allEntries = [...staticEntries, ...dynamicEntries, ...dynamicAllEntries, ...doorwayEntries, ...videoEntries];
   const dedupedEntries = Array.from(new Map(allEntries.map((entry) => [entry.loc, entry])).values());
   
   // Sort for stable output (by URL)
@@ -388,6 +429,7 @@ export const sitemap: SitemapEntry[] = ${JSON.stringify(dedupedEntries, null, 2)
   console.log(`  - ${dynamicEntries.length} dynamic gallery pages`);
   console.log(`  - ${dynamicAllEntries.length} dynamic collection pages`);
   console.log(`  - ${doorwayEntries.length} active doorway pages`);
+  console.log(`  - ${videoEntries.length} video detail pages`);
 
   // Also emit a static public/sitemap.xml so `/sitemap.xml` works even when deploying
   // prebuilt artifacts without SSR/function bundles.

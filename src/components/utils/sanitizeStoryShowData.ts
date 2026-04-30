@@ -1,12 +1,12 @@
 import { normalizeImageSrc } from "@/utils/imageProxy.js";
 
 const IMAGE_FIELDS: Record<string, string> = {
-  src: "xl",
+  src: "l",
   srcS: "s",
   srcM: "m",
   srcL: "l",
-  srcXL: "xl",
-  srcOriginal: "xl",
+  srcXL: "l",
+  srcOriginal: "l",
 };
 
 export function sanitizeStoryShowData<T extends Record<string, any>>(items: T[] = []): T[] {
@@ -24,8 +24,8 @@ export function sanitizeStoryShowData<T extends Record<string, any>>(items: T[] 
       }
     }
 
-    if (item.src2) next.src2 = normalizeImageSrc(item.src2, "xl");
-    if (item.src3) next.src3 = normalizeImageSrc(item.src3, "xl");
+    if (item.src2) next.src2 = normalizeImageSrc(item.src2, "l");
+    if (item.src3) next.src3 = normalizeImageSrc(item.src3, "l");
 
     return next;
   });

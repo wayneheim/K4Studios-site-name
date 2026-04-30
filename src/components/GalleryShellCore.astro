@@ -271,7 +271,7 @@ const meta = {
 ---
 
 <BaseLayout title={pageTitle} meta={meta} structuredDataJSON={imageStructuredData} breadcrumbsJSON={breadcrumbsJSON}>
-  <div id="gallery-content" class="flex-grow relative">
+  <main id="gallery-content" class="flex-grow relative">
     {/* Header */}
     {!skipIntro && (
       <div id="header-section" class="section-visible" style="z-index: 10; position: relative;">
@@ -302,14 +302,14 @@ const meta = {
     )}
 
     {/* Chapter Viewer - ALWAYS rendered (may be hidden) so client-side theme logic can show it */}
-    <div 
+    <article 
       id="chapter-section" 
       class={skipIntro ? "section-visible" : "section-hidden"} 
       style={skipIntro ? "display: block;" : "display: none;"}
     >
       <slot name="chapter-viewer" />
-    </div>
-  </div>
+    </article>
+  </main>
 
   <div class="h-12 md:h-20"></div>
 
@@ -318,7 +318,7 @@ const meta = {
   <Footer
     previewImages={previewImages}
     previewPath={previewPath}
-    currentImageUrl={selectedImage?.id ? `${siteBase}/img/${selectedImage.id}/xl.jpg` : undefined}
+    currentImageUrl={selectedImage?.id ? `${siteBase}/img/${selectedImage.id}/l.jpg` : undefined}
     title={pageTitle}
     allImages={allImages}
     galleryTitle={fixMojibake(usedEntranceData.title)}

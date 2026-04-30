@@ -4,7 +4,7 @@ export const prerender = true;
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
-import { isRealYouTubeId, videos, type K4Video } from "@/data/videos/videoRegistry";
+import { formatIsoDuration, getVideoThumbnail, isRealYouTubeId, videos, type K4Video } from "@/data/videos/videoRegistry";
 import "@/styles/global.css";
 
 export function getStaticPaths() {
@@ -21,17 +21,13 @@ const canonicalPath = `/Videos/${video.slug}/`;
 const canonicalUrl = `https://www.k4studios.com${canonicalPath}`;
 const pageTitle = `${video.title} | K4 Studios Video Archive`;
 const pageDescription = video.dek || video.description;
+const thumbnail = getVideoThumbnail(video);
 const dateLabel = new Intl.DateTimeFormat("en-US", {
   year: "numeric",
   month: "long",
   day: "numeric",
 }).format(new Date(`${video.date}T00:00:00`));
-const durationLabel = video.duration
-  ?.replace(/^PT/, "")
-  .replace(/(\d+)H/i, "$1 hr ")
-  .replace(/(\d+)M/i, "$1 min ")
-  .replace(/(\d+)S/i, "$1 sec")
-  .trim();
+const durationLabel = formatIsoDuration(video.duration);
 
 const videoJsonLd = isRealYouTubeId(video.youtubeId)
   ? JSON.stringify({
@@ -39,7 +35,7 @@ const videoJsonLd = isRealYouTubeId(video.youtubeId)
       "@type": "VideoObject",
       name: video.title,
       description: video.description,
-      thumbnailUrl: video.thumbnail ? [new URL(video.thumbnail, canonicalUrl).toString()] : undefined,
+      thumbnailUrl: [new URL(thumbnail, canonicalUrl).toString()],
       uploadDate: video.date,
       duration: video.duration,
       embedUrl: `https://www.youtube-nocookie.com/embed/${video.youtubeId}`,
@@ -66,7 +62,7 @@ const meta = {
   ogDescription: pageDescription,
   twitterTitle: pageTitle,
   twitterDescription: pageDescription,
-  ogImage: video.thumbnail || "/images/show-2t.webp",
+  ogImage: thumbnail,
   ogImageAlt: video.thumbnailAlt || `${video.title} video thumbnail`,
 };
 ---
@@ -81,7 +77,7 @@ const meta = {
       <a class="back-link" href="/Videos/">&larr; Back to Video Archive</a>
 
       <div class="article-header">
-        <p class="eyebrow">{video.theme} / {video.type}</p>
+        <p class="eyebrow">{video.type} / {video.theme}</p>
         <h1>{video.title}</h1>
         {video.dek && <p class="dek">{video.dek}</p>}
         <p class="meta-line">
@@ -101,7 +97,7 @@ const meta = {
           ></iframe>
         ) : (
           <div class="thumbnail-player">
-            <img src={video.thumbnail || "/images/show-2t.webp"} alt={video.thumbnailAlt || `${video.title} video thumbnail`} />
+            <img src={thumbnail} alt={video.thumbnailAlt || `${video.title} video thumbnail`} />
             <p>Video embed pending.</p>
           </div>
         )}
