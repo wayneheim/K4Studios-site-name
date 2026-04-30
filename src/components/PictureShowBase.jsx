@@ -1748,6 +1748,9 @@ const isSpeechActive = () => {
               <a href="https://www.instagram.com/k4studios/" target="_blank" rel="noopener noreferrer">
                 <img className="social-icon" src="https://cdn.simpleicons.org/instagram/444444" alt="Instagram" width="20" height="20" />
               </a>
+              <a href="https://www.youtube.com/@K4StudiosFineArt" target="_blank" rel="noopener noreferrer">
+                <img className="social-icon" src="https://cdn.simpleicons.org/youtube/444444" alt="YouTube" width="20" height="20" />
+              </a>
               <a href="https://www.threads.com/@k4studios" target="_blank" rel="noopener noreferrer">
                 <img className="social-icon" src="https://cdn.simpleicons.org/threads/444444" alt="Threads" width="20" height="20" />
               </a>

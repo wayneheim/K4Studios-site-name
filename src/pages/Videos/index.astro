@@ -8,16 +8,16 @@ import VideoCard from "@/components/videos/VideoCard.astro";
 import { DEFAULT_VIDEO_TEASER_IMAGE, getVideoUrl, videos } from "@/data/videos/videoRegistry";
 import "@/styles/global.css";
 
-const pageTitle = "K4 Studios Videos | Fine Art Photography Films, Shorts & Stories";
+const pageTitle = "K4 Studios Video Stories | Fine Art Photography Films & Mini Movies";
 const pageDescription =
-  "A video archive of K4 Studios narrative films, shorts, artist commentary, and behind-the-scenes stories built around painterly fine art photography, historical imagery, and visual storytelling.";
+  "A video story archive of K4 Studios narrative films, vertical mini movies, artist commentary, and behind-the-scenes stories built around painterly fine art photography, historical imagery, and visual storytelling.";
 const archiveUrl = "https://www.k4studios.com/Videos";
 const sortedVideos = [...videos].sort((a, b) => b.date.localeCompare(a.date));
 
 const videoItemList = {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  name: "K4 Studios Video Archive",
+  name: "K4 Studios Video Story Archive",
   description: pageDescription,
   url: archiveUrl,
   itemListElement: sortedVideos.map((video, index) => ({
@@ -31,7 +31,7 @@ const videoItemList = {
 const collectionPageJsonLd = JSON.stringify({
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  name: "K4 Studios Video Archive",
+  name: "K4 Studios Video Story Archive",
   description: pageDescription,
   url: archiveUrl,
   isPartOf: {
@@ -57,7 +57,7 @@ const meta = {
   twitterTitle: pageTitle,
   twitterDescription: pageDescription,
   ogImage: DEFAULT_VIDEO_TEASER_IMAGE,
-  ogImageAlt: "K4 Studios video archive teaser image",
+  ogImageAlt: "K4 Studios video story archive teaser image",
 };
 ---
 
@@ -69,13 +69,13 @@ const meta = {
 
     <section class="video-hero" aria-labelledby="videos-title">
       <div class="hero-media">
-        <img src={DEFAULT_VIDEO_TEASER_IMAGE} alt="K4 Studios video archive teaser image" />
+        <img src={DEFAULT_VIDEO_TEASER_IMAGE} alt="K4 Studios video story archive teaser image" />
       </div>
 
       <div class="hero-copy">
-        <p class="eyebrow">K4 Studios Videos</p>
-        <h1 id="videos-title">K4 Studios Video Archive</h1>
-        <p>Narrative films, shorts, reels, show pieces, and behind-the-scenes video work from K4 Studios &mdash; built from still photographs, voice, music, text, and memory.</p>
+        <p class="eyebrow">K4 Studios Video Stories</p>
+        <h1 id="videos-title">K4 Studios Video Story Archive</h1>
+        <p>Narrative films, vertical mini movies, show pieces, and behind-the-scenes video work from K4 Studios &mdash; built from still photographs, voice, music, text, and memory.</p>
       </div>
     </section>
 
@@ -471,7 +471,15 @@ const meta = {
 
     :global(.type-short),
     :global(.type-reel) {
-      background: #8a742f;
+      background: #5f452b;
+      border-color: rgba(48, 39, 31, 0.26);
+      color: #fff8ed;
+    }
+
+    :global(.type-narrative-mini-movie) {
+      background: #24543b;
+      border-color: rgba(20, 59, 39, 0.32);
+      color: #fff8ed;
     }
 
     :global(.type-process),

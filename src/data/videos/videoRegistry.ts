@@ -13,6 +13,7 @@ export type VideoType =
   | "Full Video"
   | "Short"
   | "Reel"
+  | "Narrative Mini Movie"
   | "Narrated Film"
   | "Behind the Scenes"
   | "Artist Talk"
@@ -23,6 +24,7 @@ export type VideoType =
   | "Event";
 
 export type VideoMetadataSource = "manual" | "youtube-api";
+export type VideoOrientation = "horizontal" | "vertical";
 
 export const DEFAULT_VIDEO_TEASER_IMAGE = "/images/show-2t.webp";
 export const K4_YOUTUBE_CHANNEL_URL = "https://www.youtube.com/@K4StudiosFineArt";
@@ -38,6 +40,7 @@ export interface K4Video {
   theme: VideoTheme;
   date: string;
   duration?: string;
+  orientation?: VideoOrientation;
   featured?: boolean;
   hasDedicatedPage?: boolean;
   thumbnail?: string;
@@ -64,8 +67,9 @@ export const videos: K4Video[] = [
     theme: "Wild West",
     date: "2026-04-27",
     duration: "PT2M10S",
+    orientation: "horizontal",
     featured: true,
-    hasDedicatedPage: false,
+    hasDedicatedPage: true,
     thumbnailAlt: "Narrative Western art video featuring women of the American frontier.",
     dek: "A narrated sequence of painterly Western photographs honoring the women whose endurance shaped frontier life beyond the legend.",
     description:
@@ -81,37 +85,67 @@ export const videos: K4Video[] = [
   },
   {
     slug: "k4-studios-short-hdkr34fur4a",
-    title: "K4 Studios Short: Painterly Western Story",
+    title: "Painterly Western Story",
     youtubeId: "HDKR34fUR4A",
     externalUrl: "https://www.youtube.com/shorts/HDKR34fUR4A",
-    type: "Short",
+    type: "Narrative Mini Movie",
     theme: "Wild West",
     date: "2026-04-27",
     duration: "PT58S",
+    orientation: "vertical",
     featured: false,
-    hasDedicatedPage: false,
-    thumbnailAlt: "K4 Studios YouTube short featuring painterly fine art Western imagery.",
-    dek: "A short-form K4 Studios visual story drawn from painterly Western fine art photography.",
+    hasDedicatedPage: true,
+    thumbnailAlt: "Vertical narrated Western video story built from painterly fine art photography.",
+    dek: "A narrated mini movie drawn from painterly Western fine art photography, built as an emotional story hook rather than a simple social clip.",
     description:
-      "This K4 Studios short presents a compact visual story connected to Wayne Heim's painterly Western photography and historical fine art imagery.",
-    relatedLinks: [{ label: "K4 Studios Shorts", href: K4_YOUTUBE_SHORTS_URL }],
+      "This K4 Studios video story uses voice, music, and painterly Western photography by Wayne Heim to suggest a larger frontier moment. Like Wayne's unresolved narrative images, the piece asks viewers to imagine what came before the frame and what might happen after it.",
+    relatedLinks: [
+      { label: "Western Narrative Photography", href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives" },
+      { label: "K4 Studios Video Stories on YouTube", href: K4_YOUTUBE_SHORTS_URL },
+    ],
+  },
+  {
+    slug: "women-who-carried-the-west-short",
+    title: "Women Who Carried the West",
+    youtubeId: "nGE9Y_vTEJo",
+    externalUrl: "https://www.youtube.com/shorts/nGE9Y_vTEJo",
+    type: "Narrative Mini Movie",
+    theme: "Wild West",
+    date: "2026-04-30",
+    duration: "PT60S",
+    orientation: "vertical",
+    featured: false,
+    hasDedicatedPage: true,
+    thumbnailAlt: "Short-form Western visual story honoring the women who carried the American West.",
+    dek: "A 60 second visual story honoring the women of the American West, their endurance, sacrifice, and quiet strength for those who followed.",
+    description:
+      "This K4 Studios video story is the vertical mini-movie companion to Women of the West: A Journey for Those Who Follow. Created from painterly Western fine art photography by Wayne Heim, it honors the women history moved too quickly to name and invites viewers to imagine the story beyond the moment.",
+    relatedLinks: [
+      { label: "Full Women of the West Film", href: "/Videos/women-of-the-west-journey" },
+      { label: "Western Fine Art Photography", href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History" },
+      { label: "K4 Studios Video Stories on YouTube", href: K4_YOUTUBE_SHORTS_URL },
+    ],
   },
   {
     slug: "k4-studios-short-ailj8rowvxw",
-    title: "K4 Studios Short: Fine Art Photography Moment",
+    title: "Fine Art Photography Moment",
     youtubeId: "AiLj8rOwVXw",
     externalUrl: "https://www.youtube.com/shorts/AiLj8rOwVXw",
-    type: "Short",
+    type: "Narrative Mini Movie",
     theme: "General",
     date: "2026-04-27",
     duration: "PT1M04S",
+    orientation: "vertical",
     featured: false,
-    hasDedicatedPage: false,
+    hasDedicatedPage: true,
     thumbnailAlt: "K4 Studios YouTube short featuring painterly fine art photography.",
-    dek: "A short-form video piece from the K4 Studios fine art photography archive.",
+    dek: "A compact narrated video story from the K4 Studios fine art photography archive.",
     description:
-      "This K4 Studios short offers a brief visual piece from the broader archive of painterly fine art photography, video stories, and studio work.",
-    relatedLinks: [{ label: "K4 Studios Shorts", href: K4_YOUTUBE_SHORTS_URL }],
+      "This K4 Studios mini movie uses a narrow social-video format for a larger fine art purpose: voice, music, and painterly photography working together as a visual story. The image is not treated as a closed answer, but as an unresolved moment that asks the viewer to fill in the blanks.",
+    relatedLinks: [
+      { label: "What Is a One-Image Movie?", href: "/Other/One-Image-Movie" },
+      { label: "K4 Studios Video Stories on YouTube", href: K4_YOUTUBE_SHORTS_URL },
+    ],
   },
 ];
 
@@ -131,6 +165,7 @@ export const videoTypes: VideoType[] = [
   "Full Video",
   "Short",
   "Reel",
+  "Narrative Mini Movie",
   "Narrated Film",
   "Behind the Scenes",
   "Artist Talk",
@@ -163,8 +198,8 @@ export function getVideoTypeGroup(type: VideoType): { key: string; label: string
   if (type === "Narrated Film" || type === "Movie" || type === "Full Video") {
     return { key: "movie-narrative", label: "Narrated Film / Movie" };
   }
-  if (type === "Short" || type === "Reel") {
-    return { key: "short-reel", label: "Short / Reel" };
+  if (type === "Narrative Mini Movie" || type === "Short" || type === "Reel") {
+    return { key: "short-reel", label: "Narrative Mini Movie" };
   }
   if (type === "Process" || type === "Behind the Scenes") {
     return { key: "process-bts", label: "Process / Behind the Scenes" };

@@ -16,7 +16,9 @@ const typeGroup = getVideoTypeGroup(video.type);
 const durationLabel = formatIsoDuration(video.duration);
 const hasExternalYouTube = isRealYouTubeId(video.youtubeId);
 const externalYouTubeHref = hasExternalYouTube ? video.externalUrl || `https://www.youtube.com/watch?v=${video.youtubeId}` : undefined;
-const watchHref = externalYouTubeHref || href;
+const watchHref = video.hasDedicatedPage ? href : externalYouTubeHref || href;
+const watchLabel = video.hasDedicatedPage ? "K4 watch page" : "YouTube";
+const watchIsExternal = Boolean(!video.hasDedicatedPage && externalYouTubeHref);
 ---
 
 <article
@@ -54,8 +56,8 @@ const watchHref = externalYouTubeHref || href;
     <div class="card-actions">
       <span class="watch-label">Watch:</span>
       {watchHref && (
-        <a class="external-link" href={watchHref} target={externalYouTubeHref ? "_blank" : undefined} rel={externalYouTubeHref ? "noopener noreferrer" : undefined}>
-          YouTube
+        <a class="external-link" href={watchHref} target={watchIsExternal ? "_blank" : undefined} rel={watchIsExternal ? "noopener noreferrer" : undefined}>
+          {watchLabel}
         </a>
       )}
     </div>
