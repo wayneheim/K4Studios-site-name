@@ -10,6 +10,18 @@ export const entranceData = {
     "Banff National Park photography",
     "Wayne Heim Canadian landscape photography"
   ],
+  genre: "Fine Art Landscape Photography",
+  schemaAbout: [
+    "Fine Art Landscape Photography",
+    "Traditional Fine Art Photography",
+    "Color Landscape Photography",
+    "Canadian Rockies",
+    { "@type": "Place", name: "Western Canada" },
+    { "@type": "Place", name: "Banff National Park" },
+    { "@type": "Place", name: "Jasper National Park" },
+    { "@type": "Place", name: "Lake Louise" },
+    { "@type": "Place", name: "Emerald Lake" }
+  ],
   title: "Canadian Rockies & Western Canada Landscape Photography by Wayne Heim – Fine Art Prints",
   subtitle: "From Banff to Jasper – Grandeur, Color, and Wilderness Captured in Fine Art",
   description: `

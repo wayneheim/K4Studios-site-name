@@ -45,7 +45,7 @@ const files = [
   "src/pages/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/[id].astro",
   "src/pages/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/[id].astro",
   "src/pages/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/[id].astro",
-  "src/pages/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color/[id].astro",
+  "src/pages/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color/[id].astro",
   "src/pages/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/[id].astro",
   "src/pages/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/[id].astro",
   "src/pages/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/[id].astro",

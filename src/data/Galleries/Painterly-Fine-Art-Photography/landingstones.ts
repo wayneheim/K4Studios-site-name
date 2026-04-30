@@ -16,6 +16,14 @@ export const landingWestern = {
     "fine art prints",
     "collector fine art"
   ],
+  genre: "Painterly Fine Art Photography",
+  schemaAbout: [
+    "Painterly Photography",
+    "Narrative Fine Art Photography",
+    "Pictorialist Photography",
+    "Fine Art Photography",
+    "One-Image Movie"
+  ],
 
   breadcrumb:
     `<a href="/" title="Home" style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;" onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Wayne Heim</a> | Painterly Fine Art Photography`,

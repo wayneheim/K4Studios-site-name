@@ -1,7 +1,7 @@
 // carousel.ts for Fine Art Landscapes → By-Theme
 
-// Import all gallery mjs modules for Western-Cowboy-Portraits and its children
-const modules = import.meta.glob('@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/**/*.mjs', { eager: true });
+// Import all gallery mjs modules for Native-Americans and its children
+const modules = import.meta.glob('@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/**/*.mjs', { eager: true });
 
 // Collect gallery datasets and URL paths
 const galleryDatas = [];
@@ -20,10 +20,10 @@ for (const filePath in modules) {
   const visible = data.filter(img => img.id !== 'i-k4studios' && img.visibility !== 'ghost');
   if (visible.length === 0) continue;
   // Extract subfolder name from file path for path building (exclude .mjs extension)
-  const match = filePath.match(/Western-Cowboy-Portraits\/?([^/]*?)(?:\.mjs)?$/);
+  const match = filePath.match(/Wild-West\/Native-Americans\/?([^/]*?)(?:\.mjs)?$/);
   const subfolder = match && match[1] ? `/${match[1]}` : '';
   galleryDatas.push(visible);
-  galleryPaths.push(`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits${subfolder}`);
+  galleryPaths.push(`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans${subfolder}`);
 }
 
 // Helper: Build a pool prioritized by rating (5 → 4 → 3 → others), randomized per rating

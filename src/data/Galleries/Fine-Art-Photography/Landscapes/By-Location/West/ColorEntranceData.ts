@@ -14,6 +14,16 @@ export const entranceData = {
     "Western skies",
     "Wayne Heim western photography"
   ],
+  genre: "Fine Art Landscape Photography",
+  schemaAbout: [
+    "Fine Art Landscape Photography",
+    "Traditional Fine Art Photography",
+    "Western Landscape Photography",
+    "American West",
+    { "@type": "Place", name: "Grand Tetons" },
+    { "@type": "Place", name: "Yellowstone National Park" },
+    { "@type": "Place", name: "Monument Valley" }
+  ],
 
   description: `
     Wayne Heim’s traditional Western landscape photography captures the vast scale and spirit of the American frontier. From sunset over desert mesas to alpine lakes reflecting the Grand Tetons, these fine art prints preserve the West with clarity, balance, and timeless detail. Collectors and nature lovers alike will find each piece a testament to the region’s beauty and resilience.

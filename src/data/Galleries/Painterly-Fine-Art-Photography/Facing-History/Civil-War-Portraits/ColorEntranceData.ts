@@ -19,6 +19,14 @@ export const entranceData = {
     "Facing History photography",
     "19th-century photography style"
   ],
+  genre: "Civil War Art",
+  schemaAbout: [
+    "Civil War Art",
+    "Historical Reenactment Photography",
+    "Civil War Portraiture",
+    "Painterly Photography",
+    "Americana"
+  ],
 
   description:
     "Explore vivid and emotional Civil War art prints that blend historical accuracy with painterly expression. Wayne Heim’s color portraits of Civil War reenactors are crafted with a fine art touch — turning battlefield moments and solemn reflections into collectible photographic artwork.",

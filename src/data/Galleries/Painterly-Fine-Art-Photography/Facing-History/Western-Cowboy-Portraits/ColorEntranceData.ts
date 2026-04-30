@@ -20,6 +20,15 @@ export const entranceData = {
     "Wayne Heim cowboy photography",
     "Facing History photography"
   ],
+  genre: "Western Fine Art Photography",
+  schemaAbout: [
+    "Western Fine Art Photography",
+    "Western Portrait Photography",
+    "Cowboy Art",
+    "Painterly Photography",
+    "Narrative Western Art",
+    "Historical Reenactment Photography"
+  ],
 
   description:
     "Explore Color Western Portraits by Wayne Heim through painterly images shaped by long light, frontier atmosphere, and human presence. These portraits are less about action than the pause around it: faces, postures, and gestures that suggest a larger life without needing to explain it. Warmth, distance, dust, and memory all remain alive here, giving the American West a sense of breath as well as weight.",

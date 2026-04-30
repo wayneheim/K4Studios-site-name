@@ -77,6 +77,8 @@ const structuredData = getStructuredData({
     description: landingWestern.subtitle || landingWestern.description,
     url: `https://k4studios.com${sectionPath}`,
     keywords: landingWestern.keywords || [],
+    genre: (landingWestern as any).genre,
+    schemaAbout: (landingWestern as any).schemaAbout || (landingWestern as any).semanticAbout,
     copyrightNotice: "© Wayne Heim"
   },
   images: featheredImages,

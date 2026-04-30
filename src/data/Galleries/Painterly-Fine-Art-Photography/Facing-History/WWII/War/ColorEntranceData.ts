@@ -34,6 +34,14 @@ export const entranceData = {
     "Facing History photography",
     "Second World War art"
   ],
+  genre: "World War II Art",
+  schemaAbout: [
+    "World War II Art",
+    "Historical Reenactment Photography",
+    "Military History Photography",
+    "Painterly Photography",
+    "World War II Reenactment"
+  ],
 
   description:
     "Experience World War II through painterly color art prints by Wayne Heim. Each image from the Art of War gallery weaves authentic WWII reenactment with fine art vision, creating immersive portraits of soldiers, battlefields, and the spirit of an era. These artworks capture not only the conflict but the humanity, courage, and complexity of the Greatest Generation.",

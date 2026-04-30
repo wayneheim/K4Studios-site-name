@@ -16,6 +16,15 @@ export const landingWestern = {
     "Western art on wood",
     "WWII art on wood"
   ],
+  genre: "Fine Art Photography on Wood",
+  schemaAbout: [
+    "Fine Art Photography on Wood",
+    "Engrained Fine Art Prints",
+    "Painterly Photography",
+    "Fine Art Wood Prints",
+    "Western Art",
+    "Americana"
+  ],
 
   breadcrumb: `<a href="/Galleries/Painterly-Fine-Art-Photography" style="color: #444; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 10; transition: color 0.2s ease;" onmouseover="this.style.color='darkred'" onmouseout="this.style.color='#444'">Painterly Photography</a> | Engrained Series`,
 

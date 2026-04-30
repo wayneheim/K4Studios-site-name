@@ -18,6 +18,14 @@ export const entranceData = {
     "Facing History photography",
     "painterly western portraits"
   ],
+  genre: "Native American Fine Art Photography",
+  schemaAbout: [
+    "Native American Portrait Photography",
+    "Indigenous Fine Art Photography",
+    "Painterly Photography",
+    "Historical Reenactment Photography",
+    "Western Fine Art Photography"
+  ],
 
   description: `
     Explore painterly Native American portrait photography in color, where regalia, gesture, and atmosphere carry the emotional weight of the image. Wayne Heim’s fine art portraits are built around presence rather than spectacle, using color to deepen texture, identity, and the lived humanity within the frame.<br><br>

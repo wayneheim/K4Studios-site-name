@@ -132,7 +132,8 @@ function addAboutTerm(
 }
 
 function buildContextualAbout(data: any, fallback = DEFAULT_GALLERY_ABOUT) {
-  if (Array.isArray(data?.about) && data.about.length > 0) return data.about;
+  const explicitAbout = normalizeExplicitAbout(data?.schemaAbout || data?.semanticAbout || data?.about);
+  if (explicitAbout.length > 0) return explicitAbout;
 
   const terms: Array<{ "@type": string; name: string }> = [];
   const seen = new Set<string>();
@@ -198,6 +199,27 @@ function buildContextualAbout(data: any, fallback = DEFAULT_GALLERY_ABOUT) {
   }
 
   return terms.length > 0 ? terms : fallback;
+}
+
+function normalizeExplicitAbout(value: any): Array<{ "@type": string; name: string }> {
+  if (!Array.isArray(value)) return [];
+
+  const terms: Array<{ "@type": string; name: string }> = [];
+  const seen = new Set<string>();
+
+  for (const item of value) {
+    if (typeof item === "string") {
+      addAboutTerm(terms, seen, "Thing", item);
+      continue;
+    }
+
+    if (!item || typeof item !== "object") continue;
+    const name = typeof item.name === "string" ? item.name : "";
+    const type = item["@type"] === "Place" ? "Place" : "Thing";
+    addAboutTerm(terms, seen, type, name);
+  }
+
+  return terms;
 }
 
 export function getStructuredData({

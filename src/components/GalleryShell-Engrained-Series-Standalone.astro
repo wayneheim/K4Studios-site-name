@@ -74,6 +74,8 @@ const usedEntranceData = {
   title: entranceData?.title || landingEngrained?.title || "Gallery",
   subtitle: entranceData?.subtitle || landingEngrained?.subtitle || "",
   description: entranceData?.description || landingEngrained?.description || "",
+  genre: entranceData?.genre || landingEngrained?.genre,
+  schemaAbout: entranceData?.schemaAbout || landingEngrained?.schemaAbout || entranceData?.semanticAbout || landingEngrained?.semanticAbout,
 };
 
 /** ---------------------------------------------------------------
@@ -90,7 +92,14 @@ const galleryAbsUrl = `${siteBase}${previewPath}`;
  * Structured data
  * --------------------------------------------------------------- */
 const imageStructuredData = currentImage
-  ? getStructuredData({ type: "image", data: currentImage })
+  ? getStructuredData({
+      type: "image",
+      data: {
+        ...currentImage,
+        schemaAbout: currentImage.schemaAbout || currentImage.semanticAbout || currentImage.about || usedEntranceData.schemaAbout,
+        genre: currentImage.genre || usedEntranceData.genre,
+      },
+    })
   : getStructuredData({
       type: "gallery",
       data: {
@@ -99,6 +108,8 @@ const imageStructuredData = currentImage
           fixMojibake(usedEntranceData.description) ||
           fixMojibake(usedEntranceData.subtitle),
         url: galleryAbsUrl,
+        genre: usedEntranceData.genre,
+        schemaAbout: usedEntranceData.schemaAbout,
       },
       images: previewImages,
     });

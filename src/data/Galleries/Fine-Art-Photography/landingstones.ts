@@ -3,6 +3,14 @@ export const landingWestern = {
   title: "Fine Art Photography by Wayne Heim",
   subtitle:
     "Traditional Style Photographs: Every image a chapter. Every chapter a story worth feeling.",
+  genre: "Traditional Fine Art Photography",
+  schemaAbout: [
+    "Traditional Fine Art Photography",
+    "Fine Art Landscape Photography",
+    "Fine Art Portrait Photography",
+    "Transportation Photography",
+    "Architecture Photography"
+  ],
   breadcrumb:
     `<a href="/" title="Home" style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;" onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Wayne Heim</a> | Traditional Photography`,
 

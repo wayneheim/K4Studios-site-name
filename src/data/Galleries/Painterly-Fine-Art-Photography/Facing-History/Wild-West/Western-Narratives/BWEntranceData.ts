@@ -15,6 +15,15 @@ export const entranceData = {
     "Wayne Heim Western art",
     "Facing History photography"
   ],
+  genre: "Narrative Western Art",
+  schemaAbout: [
+    "Western Fine Art Photography",
+    "Narrative Western Art",
+    "Cowboy Art",
+    "Painterly Photography",
+    "Historical Reenactment Photography",
+    "Black and White Western Photography"
+  ],
 
   description:
     "Discover black and white Western narrative photography that distills the frontier into tone, gesture, and unresolved story. Wayne Heim's monochrome Western fine art images emphasize form, silence, and narrative pressure rather than spectacle.",

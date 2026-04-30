@@ -101,6 +101,8 @@ const usedEntranceData = {
   title: entranceData?.title || landingData?.title || "Gallery",
   subtitle: entranceData?.subtitle || landingData?.subtitle || "",
   description: entranceData?.description || landingData?.description || "",
+  genre: entranceData?.genre || landingData?.genre,
+  schemaAbout: entranceData?.schemaAbout || landingData?.schemaAbout || entranceData?.semanticAbout || landingData?.semanticAbout,
 };
 
 /** ---------------------------------------------------------------
@@ -151,6 +153,8 @@ const imageStructuredData = currentImage
               collectionUrl: collectionContextUrl,
             }
           : undefined,
+        schemaAbout: currentImage.schemaAbout || currentImage.semanticAbout || currentImage.about || usedEntranceData.schemaAbout,
+        genre: currentImage.genre || usedEntranceData.genre,
       },
     })
   : getStructuredData({
@@ -159,6 +163,8 @@ const imageStructuredData = currentImage
         title: fixMojibake(usedEntranceData.title),
         description: fixMojibake(usedEntranceData.description) || fixMojibake(usedEntranceData.subtitle),
         url: galleryAbsUrl,
+        genre: usedEntranceData.genre,
+        schemaAbout: usedEntranceData.schemaAbout,
       },
       images: previewImages,
     });
