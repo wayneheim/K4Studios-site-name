@@ -721,7 +721,7 @@ export default function ChapterGalleryBase({
     const metaName = widget.querySelector('meta[itemprop="name"]');
     const linkImage = widget.querySelector('link[itemprop="image"]');
     if (metaName) metaName.setAttribute('content', currentImage.title || currentImage.alt || '');
-    if (linkImage) linkImage.setAttribute('href', getProxySrc(currentImage.id, 'xl'));
+    if (linkImage) linkImage.setAttribute('href', getProxySrc(currentImage.id, 'l'));
     
     // Collapse widget when changing images
     widget.classList.remove('expanded');

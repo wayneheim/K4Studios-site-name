@@ -11,7 +11,7 @@
  *   import { getProxySrc, getProxySrcset, normalizeImageSrc } from '@/utils/imageProxy.js';
  *   
  *   <img src={getProxySrc(image.id, 'm')} />
- *   <img src={getProxySrc(image.id, 'xl')} srcset={getProxySrcset(image.id)} />
+ *   <img src={getProxySrc(image.id, 'l')} srcset={getProxySrcset(image.id)} />
  *   <img src={normalizeImageSrc(anyUrl)} /> // Handles SmugMug URLs, IDs, or local paths
  */
 
@@ -95,13 +95,13 @@ export function getProxySrc(imageId, size = 'm') {
  * Generate a srcset string using proxy URLs
  * @param {string} imageId - The image ID
  * @param {object} options - Optional config
- * @param {boolean} options.includeXL - Include XL size (default: true)
+ * @param {boolean} options.includeXL - Include the largest public slot (default: false)
  * @returns {string} srcset string like "/img/i-abc123/s 400w, /img/i-abc123/m 600w, ..."
  */
 export function getProxySrcset(imageId, options = {}) {
   if (!imageId) return undefined;
   
-  const { includeXL = true } = options;
+  const { includeXL = false } = options;
   
   const sources = [
     `${getProxySrc(imageId, 's')} 400w`,
@@ -125,7 +125,7 @@ export function getProxySrcset(imageId, options = {}) {
  * @param {string} preferredSize - Primary size to request
  * @returns {string} Proxy URL
  */
-export function getBestProxySrc(imageId, preferredSize = 'xl') {
+export function getBestProxySrc(imageId, preferredSize = 'l') {
   // The Worker handles size fallback, so we just request what we want
   return getProxySrc(imageId, preferredSize);
 }

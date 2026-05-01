@@ -792,6 +792,28 @@ function ensureNoAIHeaders(response, forceNoIndex = false) {
   }
 }
 
+function addCanonicalImageLinkHeader(response, imageIdMap, canonicalImageId) {
+  try {
+    if (!response || response.status !== 200 || !canonicalImageId) return response;
+    if (response.headers?.get?.('Link')) return response;
+
+    const galleryPaths = imageIdMap?.[canonicalImageId];
+    const galleryPath = Array.isArray(galleryPaths) ? galleryPaths[0] : galleryPaths;
+    if (!galleryPath) return response;
+
+    const canonicalPageUrl = `https://www.k4studios.com${galleryPath}/${canonicalImageId}`;
+    const headers = new Headers(response.headers);
+    headers.set('Link', `<${canonicalPageUrl}>; rel="canonical"`);
+    return new Response(response.body, {
+      status: response.status,
+      statusText: response.statusText,
+      headers
+    });
+  } catch {
+    return response;
+  }
+}
+
 function hasK4SessionCookies(request) {
   const cookieHeader = request.headers.get('Cookie') || '';
   return /(?:^|;)\s*k4_vid=/.test(cookieHeader) || /(?:^|;)\s*k4_sid=/.test(cookieHeader);
@@ -1126,7 +1148,16 @@ async function handleImageRequest(request, ctx, env) {
   try {
     const cached = await caches.default.match(canonicalRequest);
     if (cached) {
-      const upgraded = ensureNoAIHeaders(cached, route.size === 'xl');
+      let upgraded = ensureNoAIHeaders(cached, route.size === 'xl');
+
+      if (upgraded?.status === 200 && !upgraded.headers?.get?.('Link')) {
+        try {
+          const imageIdMap = await getImageIdMap(ctx);
+          upgraded = addCanonicalImageLinkHeader(upgraded, imageIdMap, route.canonicalImageId);
+        } catch (e) {
+          console.error('Cached canonical Link repair error:', e);
+        }
+      }
 
       // Refresh cache with upgraded headers so future hits are clean.
       try {
@@ -1302,14 +1333,7 @@ async function handleImageRequest(request, ctx, env) {
     // Add canonical Link header so Google can associate /img/ bytes with the gallery page.
     // Uses the same imageIdMap the smart-404 relies on: imageId → ['/Galleries/...']
     if (response?.status === 200) {
-      const galleryPaths = imageIdMap?.[route.canonicalImageId];
-      const galleryPath = Array.isArray(galleryPaths) ? galleryPaths[0] : galleryPaths;
-      if (galleryPath) {
-        const canonicalPageUrl = `https://www.k4studios.com${galleryPath}/${route.canonicalImageId}`;
-        const newHeaders = new Headers(response.headers);
-        newHeaders.set('Link', `<${canonicalPageUrl}>; rel="canonical"`);
-        response = new Response(response.body, { status: 200, headers: newHeaders });
-      }
+      response = addCanonicalImageLinkHeader(response, imageIdMap, route.canonicalImageId);
     }
 
     // Cache successful responses under the canonical key.

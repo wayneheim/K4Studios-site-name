@@ -10,6 +10,7 @@ import cloudflare from '@astrojs/cloudflare';
 const isProduction = process.env.NODE_ENV === 'production' || process.argv.includes('build');
 const excludePatterns = isProduction ? ['src/pages/admin/**/*'] : [];
 const SMUGMUG_ASSET_ORIGIN = ['https://photos', 'smugmug', 'com'].join('.');
+const buildConcurrency = Number.parseInt(process.env.ASTRO_BUILD_CONCURRENCY || '', 10);
 
 const smugMugAssetUrlPattern =
   /https:\/\/photos\.smugmug\.com\/[^"'`\\\s),}]+\/(i-[A-Za-z0-9]+)\/[^"'`\\\s),}]+\/(S|M|L|XL|O|Ti)\/[^"'`\\\s),}]+/g;
@@ -53,6 +54,11 @@ export default defineConfig({
   ],
   // Exclude admin utilities from production builds (dev-only)
   ...(excludePatterns.length > 0 && { exclude: excludePatterns }),
+  ...(Number.isFinite(buildConcurrency) && buildConcurrency > 1 && {
+    build: {
+      concurrency: buildConcurrency,
+    },
+  }),
   vite: {
     plugins: [sanitizeSmugMugAssetUrls()],
     resolve: {

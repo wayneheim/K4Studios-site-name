@@ -18,7 +18,7 @@ function getCarouselSrc(s) {
     return getProxySrc(s.id, 'm');
   }
   // Fallback for old carousel data without id (shouldn't happen)
-  return s.srcM || s.srcL || s.srcXL || s.src || '';
+  return s.srcM || s.srcL || s.src || '';
 }
 
 function getCarouselSrcset(s) {

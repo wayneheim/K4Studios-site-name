@@ -21,13 +21,13 @@ function withPublicProxyImages(item) {
   }
 
   const imageId = item.id;
+  const { srcXL, ...publicItem } = item;
   return {
-    ...item,
+    ...publicItem,
     src: `/img/${imageId}/l.jpg`,
     srcS: `/img/${imageId}/s.jpg`,
     srcM: `/img/${imageId}/m.jpg`,
     srcL: `/img/${imageId}/l.jpg`,
-    srcXL: `/img/${imageId}/xl.jpg`,
   };
 }
 
