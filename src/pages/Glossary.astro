@@ -4,10 +4,9 @@ import BaseLayout         from '@/layouts/BaseLayout.astro';
 import LandingHeader      from '@/components/Landing-Header.jsx';
 import ImageBar2          from '@/components/ImageBar2.jsx';
 import LandingRightImages from '@/components/LandingRightImages.jsx';
-import FAQAccordion       from '@/components/FAQAccordion.jsx';
 import SiteFooter         from '@/components/Footer.astro';
 import MobileStoryImages  from '@/components/MobileStoryImages.jsx';
-import { getStructuredData } from '@/components/utils/getStructuredData.ts';
+import { getBreadcrumbList } from '@/components/utils/getStructuredData.ts';
 import { getLandingMeta } from '@/data/landingMeta.ts';
 import { slides as painterlySlides } from '@/data/Galleries/Painterly-Fine-Art-Photography/carousel.ts';
 
@@ -26,7 +25,6 @@ import { getSideImages } from '@/components/utils/getSideImages.ts';
 import { sanitizeForClient } from '@/components/utils/normalizeImage.ts';
 import { semantic } from '@/data/semantic/K4-Sem.ts';
 import { galleryDataMap } from '@/data/galleryMaps/MasterGalleryData.mjs'; // ← fallback DB
-import { facingFAQ } from '@/data/Galleries/Painterly-Fine-Art-Photography/faq.ts';
 import { isBackupFile } from '@/utils/filterBackupFiles.ts';
 
 import '@/styles/global.css';
@@ -132,8 +130,6 @@ const glossaryBreadcrumb = `
   <nav class="breadcrumb">
     <a href="/">Home</a>
     <span class="breadcrumb-separator">›</span>
-    <a href="${sectionPath}">Painterly Fine Art Photography</a>
-    <span class="breadcrumb-separator">›</span>
     <span>Glossary</span>
   </nav>
 `;
@@ -206,13 +202,22 @@ function getBranchImages(baseHref: string): any[] {
 }
 
 /* =============== terms extraction for new K4-Sem structure =============== */
-type PhraseItem = { phrase: string; rating?: number; use?: boolean; };
+type PhraseItem = { phrase: string; rating?: number; use?: boolean; link?: string; };
 type SemanticSection = {
   path?: string;
   def?: string;                 // new top-level definition per section
   landingPhrases?: PhraseItem[];
   imagePhrases?: PhraseItem[];
 };
+
+type GlossaryEntryKind =
+  | "canonicalConcept"
+  | "synonym"
+  | "gallery"
+  | "image"
+  | "archive"
+  | "collectorTerm"
+  | "brandTerm";
 
 type Term = {
   label: string;
@@ -224,6 +229,87 @@ type Term = {
   blurbPool?: string[];
   example?: null | { id: string; src?: string; title?: string; alt?: string; href: string; baseHref: string; };
 };
+
+type GlossaryConceptConfig = {
+  key: string;
+  label: string;
+  kind: GlossaryEntryKind;
+  priority: number;
+  href?: string;
+  sourceNote?: string;
+};
+
+type GlossaryConcept = {
+  label: string;
+  kind: GlossaryEntryKind;
+  priority: number;
+  href: string;
+  definition: string;
+  relatedTerms: string[];
+  featuredExamples: Array<{ id: string; title?: string; alt?: string; href: string; }>;
+  sourceNote?: string;
+};
+
+const START_HERE_LINKS = [
+  { label: "Painterly Photography", href: "/Galleries/Painterly-Fine-Art-Photography" },
+  { label: "Western Fine Art Photography", href: "/Western-Fine-Art-Photography" },
+  { label: "Cowboy Fine Art Photography", href: "/Cowboy-Fine-Art-Photography" },
+  { label: "Narrative Western Art", href: "/Narrative-Western-Art" },
+  { label: "Historical Themed Photography", href: "/Blog/what-is-historically-themed-photography" },
+  { label: "One-Image Movies", href: "/One-Image-Movie" },
+  { label: "Engrained Series", href: "/Other/K4-Select-Series/Engrained" },
+  { label: "Fine Art Print Editions", href: "/Other/Print-Options" },
+];
+
+const CURATED_GLOSSARY_CONFIG: GlossaryConceptConfig[] = [
+  { key: "glossaryPainterlyPhotography", label: "Painterly Photography", kind: "canonicalConcept", priority: 1, href: "/Galleries/Painterly-Fine-Art-Photography" },
+  { key: "westernHubLanding", label: "Western Fine Art Photography", kind: "canonicalConcept", priority: 1, href: "/Western-Fine-Art-Photography" },
+  { key: "westernFineArtPhotographyDefinition", label: "Western Fine Art Photography Definition", kind: "canonicalConcept", priority: 1 },
+  { key: "cowboyFineArtHub", label: "Cowboy Fine Art Photography", kind: "canonicalConcept", priority: 1, href: "/Cowboy-Fine-Art-Photography" },
+  { key: "westernNarratives", label: "Narrative Western Art", kind: "canonicalConcept", priority: 1, href: "/Narrative-Western-Art" },
+  { key: "historicallyThemedPhotography", label: "Historically Themed Photography", kind: "canonicalConcept", priority: 1 },
+  { key: "facingHistory", label: "Facing History", kind: "brandTerm", priority: 2 },
+  { key: "oneImageMovie", label: "One-Image Movies", kind: "brandTerm", priority: 2, href: "/One-Image-Movie" },
+  { key: "engrained", label: "Engrained Series", kind: "brandTerm", priority: 2 },
+  { key: "painterlyWesternHub", label: "Painterly Western Photography", kind: "canonicalConcept", priority: 2 },
+  { key: "westernPhotographyArtHub", label: "Western Photography Art", kind: "canonicalConcept", priority: 2 },
+  { key: "westernCowboyHub", label: "Western Cowboy Photography", kind: "canonicalConcept", priority: 2 },
+  { key: "printOptions", label: "Fine Art Print Editions", kind: "collectorTerm", priority: 3 },
+  { key: "westernWallArtHub", label: "Western Wall Art", kind: "collectorTerm", priority: 3 },
+  { key: "wildWest", label: "Wild West Photography", kind: "gallery", priority: 4 },
+  { key: "cowboy", label: "Western Cowboy Portraits", kind: "gallery", priority: 4 },
+  { key: "nativeAmericans", label: "Native American Portraits", kind: "gallery", priority: 4 },
+  { key: "landscapes", label: "Painterly Western Landscapes", kind: "gallery", priority: 4, href: "/Galleries/Painterly-Fine-Art-Photography/Landscapes" },
+  { key: "civilwar", label: "Civil War Portraits", kind: "gallery", priority: 4 },
+  { key: "wwii", label: "World War II Photography", kind: "gallery", priority: 4 },
+  { key: "wwiiPortraits", label: "World War II Portraits", kind: "gallery", priority: 4 },
+  { key: "wwiiArtOfWar", label: "World War II Art of War", kind: "gallery", priority: 4 },
+  { key: "roaring20s", label: "Roaring Twenties Portraits", kind: "gallery", priority: 4 },
+  { key: "portraitsTraditional", label: "Traditional Portrait Photography", kind: "gallery", priority: 4 },
+  { key: "reenactorsTraditional", label: "Historical Reenactor Portraits", kind: "gallery", priority: 4 },
+  { key: "architectureTraditional", label: "Traditional Architecture Photography", kind: "gallery", priority: 4 },
+  { key: "landscapeTraditional", label: "Traditional Landscape Photography", kind: "gallery", priority: 4 },
+  { key: "landscapeWestPainterly", label: "Painterly Western Landscapes", kind: "gallery", priority: 4 },
+  { key: "mountainsPainterly", label: "Painterly Mountain Photography", kind: "gallery", priority: 4 },
+  { key: "waterPainterly", label: "Painterly Water Photography", kind: "gallery", priority: 4 },
+  { key: "sunsetsPainterly", label: "Painterly Sunset Photography", kind: "gallery", priority: 4 },
+  { key: "transportation", label: "Painterly Transportation Photography", kind: "gallery", priority: 4 },
+  { key: "railwayPainterly", label: "Painterly Train Photography", kind: "gallery", priority: 4 },
+  { key: "transportationTraditional", label: "Traditional Transportation Photography", kind: "gallery", priority: 4 },
+  { key: "aviationTraditional", label: "Aviation Photography", kind: "gallery", priority: 4 },
+  { key: "railwayTraditional", label: "Railway Photography", kind: "gallery", priority: 4 },
+  { key: "militaryVehiclesTraditional", label: "Military Vehicle Photography", kind: "gallery", priority: 4 },
+  { key: "miscellaneousPainterly", label: "Painterly Miscellaneous Photography", kind: "gallery", priority: 4 },
+  { key: "miscellaneousTraditional", label: "Traditional Miscellaneous Photography", kind: "gallery", priority: 4 },
+  { key: "westernBlackWhiteHub", label: "Black and White Western Art", kind: "canonicalConcept", priority: 4 },
+  { key: "glossaryContemporaryWesternArt", label: "Contemporary Western Art", kind: "canonicalConcept", priority: 4 },
+  { key: "westernArtDefinition", label: "Western Art", kind: "canonicalConcept", priority: 4 },
+  { key: "artOfTheAmericanWestDefinition", label: "Art of the American West", kind: "canonicalConcept", priority: 4 },
+  { key: "glossaryCowboyArt", label: "Cowboy Art", kind: "synonym", priority: 5 },
+  { key: "westernPhotographyStyle", label: "Western Photography Style", kind: "synonym", priority: 5 },
+  { key: "westernThemedPhotography", label: "Western Themed Photography", kind: "synonym", priority: 5 },
+  { key: "glossaryVintageWesternPhotography", label: "Vintage Western Photography", kind: "synonym", priority: 5 },
+];
 
 function extractPhrasesWithType(sem: Record<string, SemanticSection>): Term[] {
   const all: Term[] = [];
@@ -314,23 +400,205 @@ function pickExampleFor(termLabel: string, parentKey?: string, termPath?: string
   return { ...choice, href, baseHref: baseForHref };
 }
 
-/* =============== compose terms =============== */
-const FALLBACK_BLURBS = [
-  "See more in this style",
-  "Browse the full collection",
-  "View related works",
-  "Explore more examples",
-  "Discover the gallery",
-];
+/* =============== curated glossary compose layer =============== */
+function normalizeTermLabel(value: string = "") {
+  return value
+    .toLowerCase()
+    .replace(/™/g, "")
+    .replace(/™/g, "")
+    .replace(/&/g, "and")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+}
 
-const RAW_TERMS: Term[] = extractPhrasesWithType(semantic as any).map(p => ({
-  ...p,
-  blurbPool: p.blurbPool && p.blurbPool.length ? p.blurbPool : FALLBACK_BLURBS,
-  example: p.origin === "image" ? pickExampleFor(p.label, p.parentKey, p.path) : null
+function cleanGlossaryDefinition(value: string = "") {
+  return String(value || "")
+    .replace(/<[^>]*>/g, ' ')
+    .replace(/\b(?:Explore|See|Read about|View)\s+[A-Z][^.]*?(?:\||$)[^.]*\.?/g, ' ')
+    .replace(/\s+\|\s+/g, ' ')
+    .replace(/\s+\./g, '.')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function isPhraseVariantStuffing(term: string, config: GlossaryConceptConfig) {
+  const normalized = normalizeTermLabel(term);
+  if (!normalized) return true;
+  if (/â„¢/.test(term)) return true;
+  if (config.key === "oneImageMovie") {
+    return /^(one image movies?|what is a one image movie)$/.test(normalized);
+  }
+  return false;
+}
+
+function isPublicVariantStuffing(term: string, pageTitle: string = "") {
+  const normalized = normalizeTermLabel(term);
+  const title = normalizeTermLabel(pageTitle);
+  if (!normalized) return true;
+  if (/[™]|â„¢|Ã¢â€žÂ¢/.test(term)) return true;
+  if (title.includes("one image movie")) {
+    return normalized.includes("one image movie");
+  }
+  return false;
+}
+
+function getPublicKeywordList(pageTitle: string, phrases: PhraseItem[] = []) {
+  return phrases
+    .filter(p => p?.use !== false)
+    .sort((a, b) => (b.rating || 0) - (a.rating || 0))
+    .map(p => p.phrase)
+    .filter(phrase => !isPublicVariantStuffing(phrase, pageTitle))
+    .slice(0, 6);
+}
+
+function uniqueStrings(values: Array<string | undefined | null>): string[] {
+  const seen = new Set<string>();
+  const out: string[] = [];
+  for (const value of values) {
+    const label = String(value || "").trim();
+    if (!label) continue;
+    const key = normalizeTermLabel(label);
+    if (!key || seen.has(key)) continue;
+    seen.add(key);
+    out.push(label);
+  }
+  return out;
+}
+
+function getSynonymsFor(labels: string[]): string[] {
+  const map = (semantic as any).synonymMap || {};
+  const needles = new Set(labels.map(normalizeTermLabel));
+  const out: string[] = [];
+
+  for (const [canonical, synonyms] of Object.entries(map)) {
+    const canonicalNorm = normalizeTermLabel(canonical);
+    const synonymList = Array.isArray(synonyms) ? synonyms as string[] : [];
+    const synonymNorms = synonymList.map(normalizeTermLabel);
+    const matches = needles.has(canonicalNorm) || synonymNorms.some(s => needles.has(s));
+    if (matches) out.push(String(canonical), ...synonymList);
+  }
+
+  return uniqueStrings(out);
+}
+
+function getPhrases(section: SemanticSection | undefined): string[] {
+  if (!section) return [];
+  return uniqueStrings([
+    ...(section.landingPhrases || []).filter(p => p?.use !== false).map(p => p.phrase),
+    ...(section.imagePhrases || []).filter(p => p?.use !== false).map(p => p.phrase),
+  ]);
+}
+
+function buildFeaturedExamples(label: string, section: SemanticSection | undefined, key: string) {
+  const candidates = uniqueStrings([label, ...getPhrases(section)]).slice(0, 4);
+  const examples = candidates
+    .map(term => pickExampleFor(term, key, section?.path))
+    .filter(Boolean)
+    .slice(0, 3) as Array<{ id: string; title?: string; alt?: string; href: string; }>;
+
+  const seen = new Set<string>();
+  return examples.filter(ex => {
+    if (!ex?.id || seen.has(ex.id)) return false;
+    seen.add(ex.id);
+    return true;
+  });
+}
+
+function buildGlossaryConcept(config: GlossaryConceptConfig): GlossaryConcept {
+  const section = (semantic as any)[config.key] as SemanticSection | undefined;
+  const phrases = getPhrases(section);
+  const href = config.href || section?.path || "/Galleries/Painterly-Fine-Art-Photography";
+  const relatedTerms = uniqueStrings([
+    ...phrases.filter(p => normalizeTermLabel(p) !== normalizeTermLabel(config.label) && !isPhraseVariantStuffing(p, config)),
+    ...getSynonymsFor([config.label, ...phrases]),
+  ].filter(p => !isPhraseVariantStuffing(p || "", config))).slice(0, 8);
+
+  return {
+    label: config.label,
+    kind: config.kind,
+    priority: config.priority,
+    href,
+    definition: cleanGlossaryDefinition(section?.def || "A K4 Studios reference term connected to Wayne Heim's fine art photography, story structure, and collector presentation."),
+    relatedTerms,
+    featuredExamples: config.kind === "gallery" || config.kind === "canonicalConcept"
+      ? buildFeaturedExamples(config.label, section, config.key)
+      : [],
+    sourceNote: config.sourceNote,
+  };
+}
+
+const GLOSSARY_ENTRIES = Array.from(
+  CURATED_GLOSSARY_CONFIG
+    .map(buildGlossaryConcept)
+    .reduce((map, entry) => {
+      const key = normalizeTermLabel(entry.label);
+      if (!map.has(key)) map.set(key, entry);
+      return map;
+    }, new Map<string, GlossaryConcept>())
+    .values()
+).sort((a, b) => a.priority - b.priority || a.label.localeCompare(b.label));
+
+const RAW_TERMS: Term[] = GLOSSARY_ENTRIES.map(entry => ({
+  label: entry.label,
+  rating: 10 - entry.priority,
+  origin: "landing",
+  path: entry.href,
+  parentKey: undefined,
+  definition: [
+    entry.definition,
+    entry.relatedTerms.length ? `Also related: ${entry.relatedTerms.join(', ')}` : '',
+  ].filter(Boolean).join(' '),
+  blurbPool: [
+    entry.kind === "gallery"
+      ? `View the ${entry.label} collection`
+      : entry.kind === "brandTerm"
+        ? `Read about ${entry.label}`
+        : `Explore ${entry.label}`,
+  ],
+  example: entry.featuredExamples[0]
+    ? { ...entry.featuredExamples[0], baseHref: entry.href }
+    : null,
 }));
 
-RAW_TERMS.sort((a, b) => a.label.localeCompare(b.label));
 const LETTERS = Array.from(new Set(RAW_TERMS.map(t => (t.label?.[0] || "#").toUpperCase()))).sort();
+
+const GLOSSARY_GROUPS: Array<{ title: string; kinds: GlossaryEntryKind[]; intro: string }> = [
+  {
+    title: "Core Concepts",
+    kinds: ["canonicalConcept"],
+    intro: "Primary K4 language: the concepts that deserve first-class definitions and authority links.",
+  },
+  {
+    title: "K4 Terms",
+    kinds: ["brandTerm"],
+    intro: "Named K4 ideas and series that help explain the structure of Wayne Heim's work.",
+  },
+  {
+    title: "Collector Terms",
+    kinds: ["collectorTerm"],
+    intro: "Terms that connect semantic meaning to print presentation, editions, interiors, and collecting.",
+  },
+  {
+    title: "Gallery Paths",
+    kinds: ["gallery"],
+    intro: "Curated gallery branches that are useful as examples, not raw keyword lists.",
+  },
+  {
+    title: "Search Language",
+    kinds: ["synonym"],
+    intro: "Common phrase variants grouped under nearby concepts instead of promoted as duplicate glossary entries.",
+  },
+];
+
+const DUPLICATE_GLOSSARY_GROUPS = [
+  "Cowboy art / cowboy artwork / cowboy photo art / cowboy fine art / cowboy portraits",
+  "Western fine art photography / western photography / fine art western / western fine art prints",
+  "Narrative Western art / Western narratives / western storytelling photography / cinematic Western photography",
+  "Painterly photography / painterly fine art photography / painterly style photography",
+  "Historically themed photography / historical themed photography / historically inspired photography / history themed photography",
+  "One-Image Movie / One-Image Movies / single-frame narrative / cinematic still photography",
+  "Engrained Series / Engrained Prints / wood prints / Baltic Birch",
+];
 
 /* =============== page meta / side images =============== */
 // Key landing pages for grid (must be in frontmatter)
@@ -378,39 +646,61 @@ const baseMeta = getLandingMeta(sectionPath);
 const meta = {
   ...baseMeta,
   // OVERRIDE page/tab title so it doesn't use the Painterly landing title
-  title: "K4 Studios – Story Glossary",
-  ogTitle: "K4 Studios – Story Glossary",
-  ogDescription: "A site-wide glossary of storytelling terms with examples from Painterly and Traditional galleries."
+  title: "K4 Studios Story Glossary | Wayne Heim Fine Art Photography Terms",
+  description: "A curated K4 Studios glossary explaining painterly photography, Western fine art photography, One-Image Movies, Engrained prints, and collector-focused story language.",
+  canonicalUrl: "https://www.k4studios.com/Glossary",
+  ogTitle: "K4 Studios Story Glossary",
+  ogDescription: "A curated semantic reference for Wayne Heim's painterly fine art photography, Western narrative art, historical portraiture, One-Image Movies, and Engrained prints.",
+  twitterTitle: "K4 Studios Story Glossary"
 };
 
 const headingCount = 1;
 const featheredImages = getSideImages({ sectionPath, headingCount });
 const featheredImagesSidebar = featheredImages.slice(0, 5);
 
-const structuredData = getStructuredData({
-  type: "gallery",
-  data: {
-    title: "K4 Studios – Story Glossary",
-    description: "Experience the site-wide storytelling glossary with definitions and examples.",
-    url: "https://www.k4studios.com/Glossary",
-    keywords: [],
-    copyrightNotice: "Copyright Wayne Heim"
+const structuredData = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": "https://www.k4studios.com/Glossary#collection",
+  name: "K4 Studios Story Glossary",
+  description: "A curated semantic reference for Wayne Heim's painterly fine art photography, Western narrative art, historical portraiture, One-Image Movies, Engrained prints, and collector-focused image stories.",
+  url: "https://www.k4studios.com/Glossary",
+  inLanguage: "en",
+  keywords: GLOSSARY_ENTRIES.map(entry => entry.label).join(", "),
+  about: GLOSSARY_ENTRIES.slice(0, 24).map(entry => ({
+    "@type": "DefinedTerm",
+    name: entry.label,
+    description: entry.definition,
+    inDefinedTermSet: "https://www.k4studios.com/Glossary",
+  })),
+  creator: {
+    "@type": "Person",
+    name: "Wayne Heim",
+    url: "https://www.k4studios.com/"
   },
-  images: featheredImages,
-  defaults: {
-    copyrightNotice: "Copyright Wayne Heim",
-    license: "https://k4studios.com/copyright",
-    acquireLicensePage: "https://k4studios.com/Other/Print-Options",
-    creditText: "Wayne Heim",
-    creatorName: "Wayne Heim",
-    creatorUrl: "https://k4studios.com/"
-  }
-});
+  publisher: {
+    "@type": "Organization",
+    name: "K4 Studios",
+    url: "https://www.k4studios.com/"
+  },
+  copyrightHolder: {
+    "@type": "Person",
+    name: "Wayne Heim",
+    url: "https://www.k4studios.com/"
+  },
+  copyrightNotice: "Copyright Wayne Heim"
+}, null, 2);
+
+const breadcrumbsJSON = getBreadcrumbList([
+  { name: "Home", item: "https://www.k4studios.com/" },
+  { name: "K4 Studios Story Glossary", item: "https://www.k4studios.com/Glossary" },
+]);
 ---
 
 <BaseLayout
-  title={isLegacyUrl ? "Page No Longer Available – K4 Studios" : "K4 Studios – Story Glossary"}
+  title={isLegacyUrl ? "Page No Longer Available - K4 Studios" : "K4 Studios Story Glossary | Wayne Heim Fine Art Photography Terms"}
   structuredDataJSON={structuredData}
+  breadcrumbsJSON={breadcrumbsJSON}
   meta={meta}
 >
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&display=swap" />
@@ -444,19 +734,33 @@ const structuredData = getStructuredData({
     <div class="mobile-breadcrumb-wrapper">
       <div class="mobile-breadcrumb" set:html={glossaryBreadcrumb} />
     </div>
+    <article aria-labelledby="glossary-title">
     <div class="w-full max-w-[1200px] mx-auto px-4">
       <div class="carousel-fade reveal-on-scroll">
         <ImageBar2 client:load slides={sanitizeForClient(painterlySlides)} />
       </div>
     </div>
-    <section class="section-heading-wrap">
+    <section class="section-heading-wrap glossary-heading-wrap">
       <div class="section-heading">
-        <h1 class="page-title fade-in reveal-on-scroll">
+        <h1 id="glossary-title" class="page-title">
           K4 Studios Story Glossary
         </h1>
-        <h2 class="page-subtitle fade-in reveal-on-scroll">
-          Painterly & Traditional Fine Art Terms
-        </h2>
+        <p class="page-subtitle">
+          This glossary explains the core language behind Wayne Heim's painterly fine art photography, Western narrative art, historical portraiture, One-Image Movies, Engrained prints, and collector-focused image stories.
+        </p>
+      </div>
+    </section>
+
+    <section class="w-full max-w-[1200px] mx-auto px-4 my-10" aria-labelledby="start-here-heading">
+      <div class="rounded-lg border border-gray-200 bg-[#f8f7f3] p-6">
+        <h2 id="start-here-heading" class="text-2xl font-semibold mb-4 text-center tracking-tight">Start Here</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+          {START_HERE_LINKS.map(item => (
+            <a href={item.href} class="block rounded border border-gray-200 bg-white px-4 py-3 text-sm font-semibold text-gray-900 hover:border-[#8b5a2b] hover:text-[#8b5a2b] transition">
+              {item.label}
+            </a>
+          ))}
+        </div>
       </div>
     </section>
 
@@ -479,14 +783,10 @@ const structuredData = getStructuredData({
           if (!sem.def && page.href.toLowerCase().includes('/traditional-fine-art-photography/architecture'))
             sem = semantic.architectureTraditional || sem;
 
-          let def = sem.def || "Explore the collection";
+          let def = cleanGlossaryDefinition(sem.def || "Explore the collection");
           let landingPhrases = sem.landingPhrases || [];
 
-          const keywords = landingPhrases
-            .filter(p => p.use !== false)
-            .sort((a, b) => (b.rating || 0) - (a.rating || 0))
-            .map(p => p.phrase)
-            .slice(0, 10);
+          const keywords = getPublicKeywordList(page.title, landingPhrases);
           const colorClass = page.href === "/" ? "bg-yellow-50" : (page.href.startsWith("/Galleries/Painterly-Fine-Art-Photography") || page.href.includes("/engrained") || page.title.includes("Engrained")) ? "bg-blue-50" : page.href.startsWith("/Galleries/Traditional-Fine-Art-Photography") ? "bg-green-50" : "bg-white";
           return (
             <div class={`relative group rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300 ${colorClass}`}>
@@ -501,7 +801,7 @@ const structuredData = getStructuredData({
                     </p>
                     <div class="absolute inset-0 hidden group-hover:block">
                       <p class="text-sm text-gray-500 line-clamp-3">
-                        {keywords.map(k => toTitleCase(k)).join(', ')}
+                        {keywords.join(', ')}
                       </p>
                     </div>
                   </div>
@@ -550,14 +850,14 @@ const structuredData = getStructuredData({
       </div>
     </section>
 
-    <!-- ===================== Existing Glossary Layout ===================== -->
+    <!-- ===================== Curated Glossary Layout ===================== -->
     <section class="story-layout">
       <div class="text-column">
         <section class="story-section">
           <header class="mb-8">
-            <h2 class="text-2xl font-semibold tracking-tight">Painterly Photography Glossary</h2>
+            <h2 class="text-2xl font-semibold tracking-tight">Curated Glossary Concepts</h2>
             <p class="mt-2 text-base text-gray-600">
-              “Image” entries show an example from the same branch; if there’s no direct match, we pick a stable example from that branch (rotates daily).
+              Canonical concepts are first-class entries. Related search language is grouped beneath those concepts so keyword variants and image titles do not compete with the main K4 vocabulary.
             </p>
           </header>
           {LETTERS.length > 0 && (
@@ -599,14 +899,14 @@ const structuredData = getStructuredData({
                             )}
                             <div class="min-w-0">
                               <div class="flex items-center gap-2 mb-1">
-                                <a href={mainLink} class="text-lg font-medium hover:underline">{toTitleCase(t.label)}</a>
+                                <a href={mainLink} class="text-lg font-medium hover:underline">{t.label}</a>
                                 <span class={`ml-2 inline-flex items-center rounded-full border px-2 py-0.5 text-[11px] tracking-wide
                                   ${t.origin === "landing"
                                     ? "border-green-300 bg-green-50 text-green-700"
                                     : "border-blue-300 bg-blue-50 text-blue-700"
                                   }`
                                 }>
-                                  {t.origin === "landing" ? "Gallery" : "Image"}
+                                  {t.origin === "landing" ? "Concept" : "Example"}
                                 </span>
                               </div>
                               {t.definition && (
@@ -630,6 +930,17 @@ const structuredData = getStructuredData({
             })}
           </div>
         </section>
+        <section class="story-section mt-12 rounded-lg border border-gray-200 bg-gray-50 p-5">
+          <h2 class="text-xl font-semibold">Grouped Duplicate Language</h2>
+          <p class="mt-1 text-sm text-gray-600">
+            These repetitive phrase families are now handled as related language under canonical entries instead of equal glossary headings.
+          </p>
+          <ul class="mt-4 grid grid-cols-1 gap-2 text-sm text-gray-700">
+            {DUPLICATE_GLOSSARY_GROUPS.map(group => (
+              <li class="rounded border border-gray-200 bg-white px-3 py-2">{group}</li>
+            ))}
+          </ul>
+        </section>
         <MobileStoryImages client:only="react" images={sanitizeForClient(featheredImages)} displayCount={headingCount} />
       </div>
       <div class="sidebar-column hidden md:block">
@@ -638,15 +949,7 @@ const structuredData = getStructuredData({
         </div>
       </div>
     </section>
-    <section class="pb-10">
-      <input type="checkbox" id="faq-toggle" class="more-toggle" />
-      <div class="truncate-container" style="min-height:0;">
-        <div class="truncate-text">
-          <FAQAccordion items={facingFAQ} />
-        </div>
-      </div>
-      <label for="faq-toggle" class="more-toggle-label"></label>
-    </section>
+    </article>
     <SiteFooter class="pt-8 pb-12" />
     <!-- Hidden div to force Tailwind to include all inset utilities -->
     <div style="display:none">
@@ -656,5 +959,23 @@ const structuredData = getStructuredData({
   )}
   <style>
     .story-section { font-family: 'Glegoo', serif; }
+    .glossary-heading-wrap {
+      margin: 2rem auto 1.25rem;
+      padding: 0 1rem;
+      text-align: center;
+    }
+    .glossary-heading-wrap .section-heading {
+      margin: 0 auto;
+      max-width: 920px;
+    }
+    .glossary-heading-wrap .page-title {
+      margin: 0 0 0.65rem;
+    }
+    .glossary-heading-wrap .page-subtitle {
+      max-width: 820px;
+      margin: 0 auto;
+      line-height: 1.55;
+      opacity: 1;
+    }
   </style>
 </BaseLayout>
