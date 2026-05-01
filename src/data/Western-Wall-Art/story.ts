@@ -39,7 +39,7 @@ export const wallArtStory = [
     subhead: "For Those Who Look Closely",
     paragraphs: [
       "This work is created for collectors who value original art with narrative substance — images that invite attention and reward return.",
-      "Explore the galleries below. When a piece stays with you, examine print options and scale, and consider how it might live in your space."
+      "Explore the galleries below. When a piece stays with you, examine print options and scale, and consider how it might live in your space. For design teams sourcing across rooms or hospitality projects, see <a href='/Western-Wall-Art-for-Interior-Designers' style='color:#8b5a2b; text-decoration:underline;'>Western Wall Art for Interior Designers</a>."
     ],
   },
 

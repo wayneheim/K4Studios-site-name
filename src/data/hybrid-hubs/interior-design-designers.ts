@@ -170,24 +170,24 @@ export const thesis = {
   heading: 'Western Wall Art for Interior Designers and Spec Teams',
   subtitle: 'Specification-driven painterly Western artwork for residential, hospitality, and lodge projects',
   body: [
-    'Placement-ready statement artwork for residential, hospitality, and lodge projects.',
-    'Design projects rarely fail on taste-they fail on placement, scale, and sequence.',
-    'This page is built for interior teams sourcing western wall art for interior designers: artwork selected for entry statements, focal walls, transition zones, and supporting moments across multi-room plans.',
+    'Specifier-ready western wall art for interior designers, residential project teams, lodge properties, and boutique hospitality interiors.',
+    'Design projects rarely fail on taste-they fail on placement, scale, sequence, and the handoff between concept board and approved artwork package.',
+    'This page is built for interior teams sourcing western wall art for interior designers: artwork selected for entry statements, focal walls, transition zones, guest suites, corridors, and supporting moments across multi-room plans.',
     'Each piece is constructed to carry visual weight without overpowering the space-allowing designers to control tone, pacing, and narrative presence across a project.',
-    'Use this as a working layer between concept direction and final install-where selections move from mood board to specification with clarity.',
+    'Use this as a working layer between concept direction and final install-where selections move from mood board to specification with clearer sizing, material, and placement decisions.',
   ],
 };
 
 export const definition = {
   heading: 'Specifier Framework: Placement, Scale, and Narrative Role',
   paragraphs: [
-    'The priority here is use-case clarity: entry statement, focal wall, transition piece, or supporting layer.',
-    'Each image is chosen as statement western artwork for living room, lodge, and hospitality interiors where visual hierarchy matters.',
+    'The priority here is use-case clarity: entry statement, focal wall, transition piece, hospitality suite, corridor rhythm, or supporting layer.',
+    'Each image is chosen as statement western artwork for living room, lodge, ranch, boutique hotel, and hospitality interiors where visual hierarchy matters.',
     'Rather than relying on subject alone, the work is built through a painterly approach-layering light, atmosphere, and composition to create imagery that holds attention and integrates into the structure of a space.',
-    'This allows selections to move cleanly from mood board to install plan, without guesswork.',
+    'This allows selections to move cleanly from mood board to install plan, with artwork choices tied to scale, room role, material finish, and viewing distance.',
     'Need broader philosophy? Return to the <a href="/Western-Interior-Design-Art">Western Interior Design Art hub</a>.',
     'Need aesthetic direction? Compare <a href="/Modern-Western-Interior-Design-Art">Modern</a> and <a href="/Rustic-Western-Interior-Design-Art">Rustic</a> interior pathways.',
-    'Ready to build a project? Use this page to define placement, scale, and sequencing across the space.',
+    'Ready to build a project? Use this page to define placement, scale, and sequencing across the space, then review <a href="/Other/Print-Options">print options</a> or <a href="/Contact">contact K4 Studios</a> for project-specific guidance.',
     'For full narrative context behind the work, explore the <a href="/Facing-History/Wild-West">Wild West collection</a>.',
   ],
   essayHref: '/Western-Wall-Art',
@@ -210,7 +210,7 @@ export const faqItems = [
   {
     q: 'Can I specify by room scale and wall dimensions?',
     a: [
-      'Yes. Prints are available in multiple formats and sizes, including larger statement options. Room-based sizing and placement guidance is available for designers and collectors building around a specific wall or furniture plan.'
+      'Yes. Prints are available in multiple formats and sizes, including larger statement options. Room-based sizing and placement guidance is available for designers and collectors building around a specific wall, furniture plan, suite package, or hospitality zone.'
     ],
   },
   {
@@ -222,7 +222,14 @@ export const faqItems = [
   {
     q: 'How should I start sourcing for a multi-room project?',
     a: [
-      'Start with this mixed painterly grid to map mood and subject direction, then continue to the linked galleries by category. This makes it easier to maintain visual consistency while varying subject matter across rooms.'
+      'Start with this mixed painterly grid to map mood and subject direction, then continue to the linked galleries by category. This makes it easier to maintain visual consistency while varying subject matter across rooms.',
+      'For design teams, the practical next step is to identify anchor walls first, then fill transition zones and secondary rooms with quieter works that support the same visual language.'
+    ],
+  },
+  {
+    q: 'Can K4 Studios help with designer or hospitality art packages?',
+    a: [
+      'Yes. For interior designers, lodge properties, boutique hospitality spaces, and multi-room residential projects, selections can be discussed around wall size, viewing distance, material finish, subject mix, and project rhythm. Start with the grid on this page, then use the contact page for project-specific sourcing.'
     ],
   },
   {

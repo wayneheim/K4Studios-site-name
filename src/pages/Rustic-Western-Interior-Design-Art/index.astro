@@ -246,6 +246,14 @@ const quickExploreLinks = [
     href: "/Western-Interior-Design-Art",
   },
   {
+    label: "Project Inquiry",
+    href: "/Contact",
+  },
+  {
+    label: "Print Options",
+    href: "/Other/Print-Options",
+  },
+  {
     label: "Designer Spec Page",
     href: "/Western-Wall-Art-for-Interior-Designers",
   },
@@ -256,6 +264,24 @@ const quickExploreLinks = [
   {
     label: "Modern Path",
     href: "/Modern-Western-Interior-Design-Art",
+  },
+];
+
+const topActionLinks = [
+  {
+    label: "Specify Rustic Wall Art",
+    href: "/Western-Wall-Art-for-Interior-Designers",
+    detail: "Plan placement, scale, and room-to-room sequencing.",
+  },
+  {
+    label: "View Print Options",
+    href: "/Other/Print-Options",
+    detail: "Compare paper, canvas, metal, and Engrained wood prints.",
+  },
+  {
+    label: "Contact for Project Help",
+    href: "/Contact",
+    detail: "Ask about sizing, materials, and multi-room selections.",
   },
 ];
 
@@ -321,6 +347,17 @@ const inRoomSlides = [engrainedSlides[4], engrainedSlides[5], engrainedSlides[7]
       <div class="section-heading">
         <h1 class="page-title fade-in reveal-on-scroll">{landingWallArt.title}</h1>
         <h2 class="page-subtitle fade-in reveal-on-scroll">{landingWallArt.subtitle}</h2>
+      </div>
+    </section>
+
+    <section class="top-action-section">
+      <div class="top-action-shell reveal-on-scroll">
+        {topActionLinks.map((link) => (
+          <a href={link.href} class="top-action-card">
+            <strong>{link.label}</strong>
+            <span>{link.detail}</span>
+          </a>
+        ))}
       </div>
     </section>
 
@@ -865,6 +902,48 @@ const inRoomSlides = [engrainedSlides[4], engrainedSlides[5], engrainedSlides[7]
       display: block;
       margin: 0 auto;
       max-width: 44rem;
+    }
+
+    .top-action-section {
+      max-width: 1180px;
+      margin: -2.9rem auto 1.35rem;
+      padding: 0 1rem;
+    }
+    .top-action-shell {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.78rem;
+      border-top: 1px solid rgba(121, 98, 78, 0.18);
+      border-bottom: 1px solid rgba(121, 98, 78, 0.18);
+      padding: 0.86rem 0;
+    }
+    .top-action-card {
+      display: grid;
+      gap: 0.28rem;
+      min-height: 5.1rem;
+      padding: 0.82rem 0.9rem;
+      color: #2f251e;
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid rgba(121, 98, 78, 0.16);
+      border-radius: 8px;
+      box-shadow: 0 8px 18px rgba(41, 30, 21, 0.04);
+      transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+    }
+    .top-action-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(123, 74, 40, 0.38);
+      background: rgba(252, 248, 242, 0.98);
+    }
+    .top-action-card strong {
+      font-size: 0.96rem;
+      line-height: 1.26;
+      color: #3b2b21;
+    }
+    .top-action-card span {
+      font-size: 0.84rem;
+      line-height: 1.42;
+      color: #625245;
     }
 
     .term-section {
@@ -1853,6 +1932,7 @@ const inRoomSlides = [engrainedSlides[4], engrainedSlides[5], engrainedSlides[7]
       }
 
       .term-section,
+      .top-action-section,
       .exploration-section,
       .collection-section,
       .collecting-section,
@@ -1863,6 +1943,17 @@ const inRoomSlides = [engrainedSlides[4], engrainedSlides[5], engrainedSlides[7]
 
       .term-section {
         margin: 0.55rem auto 1rem;
+      }
+      .top-action-section {
+        margin: -2.75rem auto 1rem;
+      }
+      .top-action-shell {
+        grid-template-columns: 1fr;
+        gap: 0.58rem;
+      }
+      .top-action-card {
+        min-height: unset;
+        padding: 0.78rem 0.86rem;
       }
       .term-shell {
         grid-template-columns: 1fr;

@@ -797,6 +797,62 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
     keywords: "painterly Western photography, painterly fine art photography, Western fine art photography, cinematic Western photography, artistic cowboy photography, painterly cowboy portraits, Wayne Heim",
   },
 
+  "/Western-Interior-Design-Art": {
+    ogTitle: "Western Interior Design Art for Statement Spaces",
+    ogDescription:
+      "Western interior design art by Wayne Heim, curated as statement western artwork for residential, lodge, hospitality, and collector interiors.",
+    ogImage: "/images/cowboy.webp",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: "Western Interior Design Art for Statement Spaces",
+    twitterDescription:
+      "Statement western artwork and painterly fine art photography for residential, lodge, hospitality, and collector interiors.",
+    twitterImage: "/images/cowboy.webp",
+    keywords: "western interior design art, western interior design artwork, western wall art, statement western artwork, fine art for western interiors, western decor fine art, lodge wall art, Wayne Heim",
+  },
+
+  "/Modern-Western-Interior-Design-Art": {
+    ogTitle: "Modern Western Interior Design Art for Clean Spaces",
+    ogDescription:
+      "Modern western interior design art by Wayne Heim, curated for contemporary rooms, tonal restraint, open compositions, and statement western artwork.",
+    ogImage: "/images/cowboy.webp",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: "Modern Western Interior Design Art",
+    twitterDescription:
+      "Contemporary western interior design artwork with restraint, tonal control, and statement-ready painterly fine art.",
+    twitterImage: "/images/cowboy.webp",
+    keywords: "modern western interior design, contemporary western interior design, modern western wall art, contemporary western wall art, statement western artwork, fine art for western interiors, Wayne Heim",
+  },
+
+  "/Rustic-Western-Interior-Design-Art": {
+    ogTitle: "Rustic Western Interior Design Art for Lodge Spaces",
+    ogDescription:
+      "Rustic western interior design art by Wayne Heim, curated for lodge, ranch, hospitality, wood-led rooms, and warm material-driven interiors.",
+    ogImage: "/images/cowboy.webp",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: "Rustic Western Interior Design Art",
+    twitterDescription:
+      "Rustic western wall art and painterly fine art photography for lodge, ranch, hospitality, and warm material-driven interiors.",
+    twitterImage: "/images/cowboy.webp",
+    keywords: "rustic western interior design, rustic western wall art, western lodge wall art, ranch house wall art, western interior design art, Engrained wood prints, Wayne Heim",
+  },
+
+  "/Western-Wall-Art-for-Interior-Designers": {
+    ogTitle: "Western Wall Art for Interior Designers",
+    ogDescription:
+      "Western wall art for interior designers by Wayne Heim, curated for spec teams, statement walls, lodge projects, hospitality interiors, and multi-room plans.",
+    ogImage: "/images/cowboy.webp",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: "Western Wall Art for Interior Designers",
+    twitterDescription:
+      "Specifier-ready western wall art for interior designers, lodge projects, hospitality interiors, and multi-room artwork plans.",
+    twitterImage: "/images/cowboy.webp",
+    keywords: "western wall art for interior designers, western interior designer, western artwork for interior designers, statement western artwork, lodge wall art, hospitality wall art, fine art for western interiors, Wayne Heim",
+  },
+
   "default": {
     ogTitle: "Wayne Heim Fine Art Photography",
     ogDescription:
