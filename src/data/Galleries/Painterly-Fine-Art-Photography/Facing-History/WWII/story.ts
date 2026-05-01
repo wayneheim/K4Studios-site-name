@@ -58,7 +58,7 @@ export const westernStory = [
     tagline: "Historical Fine Art That Holds Its Tension",
     paragraphs: [
       `Wayne Heim’s WWII work is more than a tribute. Each print is produced to museum standards and built to live as both fine art and a living memorial to the Greatest Generation.`,
-      `With every portrait and battlefield scene, the collector receives more than a decorative image: a story, a conversation, and a visual bridge across generations. The broader <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Facing History</a> collection carries that same historically inspired approach into Civil War, Western frontier, and Roaring 20s work.`,
+      `With every portrait and battlefield scene, the collector receives more than a decorative image: a story, a conversation, and a visual bridge across generations. If you are choosing by print path and wall presence, use <a href="/WWII-Themed-Fine-Art-Prints">WWII Themed Fine Art Prints</a>; the broader <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Facing History</a> collection carries that same historically inspired approach into Civil War, Western frontier, and Roaring 20s work.`,
       `These are the kinds of images that unfold over time because the tension inside them never fully resolves.`
     ]
   },

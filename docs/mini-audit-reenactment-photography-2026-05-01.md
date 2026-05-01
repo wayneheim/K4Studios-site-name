@@ -50,6 +50,14 @@ Do not force one to own everything. Google is splitting them in a sensible way.
 - From `/Blog/what-is-historically-themed-photography` to `/Historical-Reenactment-Photography` and `/Galleries/Painterly-Fine-Art-Photography/Facing-History`.
 - From era-specific pages, link back carefully only when the reader needs the broader reenactment context.
 
+## Commercial Doorway Fit
+
+Weak.
+
+This cluster is primarily informational, practice-based, and event/proof-oriented. The current ranking split makes sense: `/Historical-Reenactment-Photography` explains the category, while `/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments` proves the inventory.
+
+A `/Western-Wall-Art` style commercial page would likely feel forced here unless a future keyword pull reveals buyer terms like "reenactment art prints" or "living history wall art." Even then, the better commercial route may be era-specific: WWII inspired prints, Civil War art prints, or Western historical art prints.
+
 ## Files Likely Touched
 
 - `src/data/Other/Historical-Reenactment-Photography/story.ts`
@@ -79,3 +87,4 @@ Safe candidate for the first or second Phase 2 batch.
 
 Recommended action: parent/proof reciprocal links only. No new page needed. No canonical or indexation changes.
 
+Commercial recommendation: do not create a reenactment commercial doorway now.

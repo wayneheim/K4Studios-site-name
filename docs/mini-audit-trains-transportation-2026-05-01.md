@@ -67,6 +67,14 @@ This can support painterly and fine-art transportation language, but the train p
 
 Anchor language should favor natural terms like "train photography," "vintage train photography," "steam locomotive photography," and "painterly train photography." Avoid manufacturing a new thin "railway photography" route unless future data proves it deserves one.
 
+## Commercial Doorway Fit
+
+Possible later, but not the first move.
+
+The tracked keywords are mostly informational/photo-category terms, and Google already prefers the train gallery as the ranking page. A commercial page modeled after `/Western-Wall-Art` could make sense for terms like "train photography prints," "locomotive wall art," "steam train art prints," or "railroad wall art," but those terms need a broader keyword pull before implementation.
+
+Do not build a commercial train page until we know whether buyer-intent train terms have meaningful volume. For now, let the existing train gallery remain the parent/proof page.
+
 ## Files Likely Touched
 
 - `src/data/Galleries/Fine-Art-Photography/Transportation/story.ts`
@@ -88,3 +96,4 @@ Safe candidate for the first non-Western Phase 2 batch.
 
 Recommended action: light internal-link reinforcement only. Do not create a new train doorway yet. Do not canonicalize gallery pages. Do not rewrite the winning train page heavily.
 
+Commercial recommendation: monitor and research. No commercial train doorway yet.

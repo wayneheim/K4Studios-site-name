@@ -4,10 +4,16 @@ import { galleryData as mountainsGallery }
   from '@/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/Mountains.mjs';
 import { galleryData as sunsetsGallery }
   from '@/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets/Sunsets.mjs';
+import { galleryData as painterlyWestGallery }
+  from '@/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs';
+import { galleryData as traditionalWestGallery }
+  from '@/data/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs';
 
 const waterPath = '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water';
 const mountainsPath = '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains';
 const sunsetsPath = '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets';
+const painterlyWestPath = '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery';
+const traditionalWestPath = '/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery';
 
 function cleanItems(data: any[]) {
   return (data || [])
@@ -70,15 +76,20 @@ function buildHybridSlides(data: any[], hrefBase: string, count: number, fallbac
 export const pagePath = '/western-landscape-art';
 export const imageSectionPath = '/Galleries/Painterly-Fine-Art-Photography/Landscapes';
 export const gridBasePath = mountainsPath;
-export const galleryPaths = [mountainsPath, sunsetsPath, waterPath];
+export const galleryPaths = [painterlyWestPath, traditionalWestPath, mountainsPath, sunsetsPath, waterPath];
 
 export const landing = {
   title: 'Western Landscape Art',
   subtitle: 'Western landscape art shaped through painterly mountain light, waterfall atmosphere, Tetons stillness, and Rocky Mountain presence rather than generic scenic inventory.',
   keywords: [
     'western landscape art',
+    'western landscape wall art',
+    'western landscape art prints',
+    'fine art western landscape prints',
     'waterfall photography',
+    'waterfall fine art prints',
     'mountain photography',
+    'mountain wall art',
     'tetons photography',
     'rocky mountains photography',
     'painterly western landscapes',
@@ -112,6 +123,7 @@ export const storyBlocks = [
     paragraphs: [
       'The strongest Western landscape art does not treat the land as decoration behind the legend. It treats mountains, rivers, weather, and distance as active forces that shaped frontier life in the first place. That is why this page brings painterly mountain photography, waterfall photography, and Western landscape images together under one route.',
       'In this body of work, the West is carried through atmosphere and pressure rather than through postcard shorthand. The Tetons, the Rocky Mountains, reflective water, and sunset light matter here because they hold stillness, scale, and consequence inside the frame.',
+      'For collectors, western landscape wall art works best when the image carries more than scenery. The right print brings atmosphere into a room without becoming generic decor: mountain weather, water movement, Western distance, and the quiet pressure of place.',
     ],
   },
   {
@@ -126,6 +138,13 @@ export const storyBlocks = [
     paragraphs: [
       'The Tetons and the broader Rocky Mountain country appear here not as travel markers, but as emotional geography. Some images are quiet and reflective. Others carry weather, storm light, or the suspended calm that arrives just before the land changes again.',
       'Seen together, these themes create a cleaner and more useful route for collectors who want Western landscape art with atmosphere and authorship, whether they enter through mountain photography, waterfall imagery, or the broader Western fine art landscape tradition.',
+    ],
+  },
+  {
+    subhead: 'Western landscape prints for rooms that need presence',
+    paragraphs: [
+      'A landscape print has to survive the room after the first glance. Scale, contrast, tonal restraint, and surface choice all matter because the work becomes part of daily attention rather than a passing scenic view.',
+      'This page therefore treats western landscape art prints as collector objects first. The gallery rows below lead into the actual proof: painterly Western locations, traditional Western mountain studies, water and waterfall work, and sunset images where light is atmosphere rather than decoration.',
     ],
   },
 ];
@@ -158,6 +177,15 @@ export const explorationPaths = [
     cta: 'Compare formats -',
     accent: '#7b644e',
   },
+  {
+    title: 'Western Wall Art',
+    eyebrow: 'Commercial Route',
+    hideEyebrow: true,
+    href: '/Western-Wall-Art',
+    description: 'Compare the broader Western wall-art route if you are choosing by room presence, format, and long-term display.',
+    cta: 'Open wall art guide -',
+    accent: '#8a5d3d',
+  },
 ];
 
 export const featuredReadingTitle = 'Exploring Land, Atmosphere and Presence';
@@ -183,6 +211,12 @@ export const featuredReadingItems = [
     eyebrow: 'Concept',
   },
   {
+    title: 'Western Wall Art',
+    href: '/Western-Wall-Art',
+    description: 'Use the buyer-focused wall-art page to compare collector entry points, room fit, and print formats across Western subjects.',
+    eyebrow: 'Collector',
+  },
+  {
     title: 'What Makes an Image Feel Cinematic?',
     href: '/Blog/what-makes-an-image-feel-cinematic',
     description: 'See how silence, tension, and implied change can make a landscape hold the viewer longer than surface beauty alone.',
@@ -198,15 +232,43 @@ export const gridImages = [
 
 export const collection = {
   kicker: 'Thematic Selections',
-  title: 'Painterly Western Landscape Themes',
-  intro: 'One color row per theme, built around the actual image pools for water, sunsets, and mountains so the page reflects the landscape inventory honestly.',
+  title: 'Western Landscape Art Prints and Proof Galleries',
+  intro: 'A compact route through the actual landscape inventory: Western locations, mountain weather, water movement, and sunset atmosphere for collectors comparing wall art and fine art print paths.',
 };
 
 export const collectionGroups = [
   {
     title: 'Western Landscape Themes',
-    description: 'Three thematic rows that let mountain photography, waterfall photography, and painterly Western sunset work live together without flattening them into one scenic pile.',
+    description: 'Rows built from real image pools so the page can answer commercial landscape intent without inventing inventory or flattening the work into generic scenic decor.',
     rows: [
+      {
+        label: 'Painterly Western Location Landscapes',
+        href: painterlyWestPath,
+        cta: 'See more painterly Western landscapes',
+        items: selectCollectionPreviewRow(
+          painterlyWestGallery,
+          painterlyWestPath,
+          0,
+          4,
+          'Painterly Western landscape wall art by Wayne Heim',
+          'West / Painterly',
+          heroSlideIds,
+        ),
+      },
+      {
+        label: 'Traditional Western Mountain Landscapes',
+        href: traditionalWestPath,
+        cta: 'See more traditional Western landscapes',
+        items: selectCollectionPreviewRow(
+          traditionalWestGallery,
+          traditionalWestPath,
+          0,
+          4,
+          'Traditional Western mountain photography print by Wayne Heim',
+          'West / Traditional',
+          heroSlideIds,
+        ),
+      },
       {
         label: 'Water and Waterfall Landscapes',
         href: waterPath,
@@ -266,6 +328,18 @@ export const faqItems = [
     ],
   },
   {
+    q: 'Can Western landscape art work as wall art without becoming decor?',
+    a: [
+      'Yes. The difference is whether the image still holds structure, atmosphere, and authorship after it enters the room. These works are selected as fine art western landscape prints first, with wall presence as the practical collector use.',
+    ],
+  },
+  {
+    q: 'Where should I start if I am choosing by print format or room fit?',
+    a: [
+      'Use <a href="/Other/Print-Options">Print Options</a> for materials and formats, or compare the broader <a href="/Western-Wall-Art">Western Wall Art</a> route if you are deciding how Western art should function in a room.',
+    ],
+  },
+  {
     q: 'Does this page also cover waterfall photography and mountain photography?',
     a: [
       'Yes. This page is intentionally built to serve those adjacent searches together because the intent overlaps naturally. Visitors looking for Western landscape art are often also looking for painterly mountain photography, waterfall scenes, and Tetons or Rocky Mountain imagery.',
@@ -298,21 +372,27 @@ export const faqItems = [
 ];
 
 export const pageMeta = {
-  title: 'Western Landscape Art | Painterly Mountain and Waterfall Photography by Wayne Heim – K4 Studios',
-  description: 'Western landscape art by Wayne Heim featuring painterly mountain photography, waterfall imagery, Tetons, Rocky Mountain views, and Western sunset landscapes.',
+  title: 'Western Landscape Art Prints | Mountain, Waterfall and Western Wall Art by Wayne Heim - K4 Studios',
+  description: 'Western landscape art prints by Wayne Heim featuring painterly mountain wall art, waterfall fine art prints, Tetons, Rocky Mountain views, and Western sunset landscapes.',
 };
 
 export const structuredAbout = [
   'Western Landscape Art',
+  'Western Landscape Wall Art',
+  'Western Landscape Art Prints',
   'Painterly Landscape Photography',
   'Mountain Photography',
+  'Mountain Wall Art',
   'Waterfall Photography',
+  'Waterfall Fine Art Prints',
   'Tetons',
   'Rocky Mountains',
 ];
 
 export const webPageAbout = [
   'Western Landscape Art',
+  'Western Landscape Wall Art',
+  'Fine Art Western Landscape Prints',
   'Mountain Photography',
   'Waterfall Photography',
   'Western Sunset Landscapes',

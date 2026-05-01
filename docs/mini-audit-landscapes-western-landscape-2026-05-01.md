@@ -66,6 +66,23 @@ However, current ranking pages are gallery proof pages, not the hybrid parent. D
 - From `/Galleries/Painterly-Fine-Art-Photography/Landscapes` to `/western-landscape-art` only where it helps visitors looking specifically for Western landscape art.
 - From `/Blog/what-is-painterly-photography` to painterly landscapes only as a collector path, not as a landscape SEO rewrite.
 
+## Commercial Doorway Fit
+
+Strong, but only if scoped around Western landscape buyer intent.
+
+This is the clearest non-cowboy candidate for reusing the `/Western-Wall-Art` format. The commercial page should not chase broad "landscape photography" first. It should lean into buyer-intent terms where K4 can stay distinctive:
+
+- western landscape wall art
+- western landscape art prints
+- fine art western landscape prints
+- mountain wall art
+- waterfall fine art prints
+- rustic mountain wall art
+
+The existing `/western-landscape-art` hybrid hub may be the right page to strengthen commercially rather than creating a new route. It already has a semantic parent role and actual image rows. A commercial pass could add more collector/room/print-format language and stronger links into West, Mountains, Water, and Sunsets proof galleries.
+
+Guardrail: do not flatten the painterly landscape gallery into decor copy. The commercial path should help buyers enter the work while preserving the atmospheric/art-first voice.
+
 ## Files Likely Touched
 
 - `src/data/hybrid-hubs/western-landscape-art.ts`
@@ -96,3 +113,4 @@ Implement after Trains/Reenactment unless Wayne wants the Western landscape art 
 
 Recommended action: light parent/child links only. No new pages yet. Do not push generic "landscape photography" too hard because KD and intent are broad.
 
+Commercial recommendation: good candidate after a clean keyword pull. Prefer strengthening `/western-landscape-art` before creating `/Western-Landscape-Wall-Art`.

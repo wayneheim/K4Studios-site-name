@@ -64,6 +64,23 @@ This is the inventory and image-level purchase path.
 - From `/Engrained` to the full Engrained Series gallery and relevant Western/narrative/art concept pages.
 - From individual Engrained image pages back to `/Engrained` only if it does not distract from the buy/collector path.
 
+## Commercial Doorway Fit
+
+Very strong, but highest brand/product risk.
+
+Engrained is already commercial by nature: it is a material, product system, collector path, and signature K4 presentation. The `/Western-Wall-Art` format is highly relevant here because it uses print/collector language, room context, FAQ, and image proof.
+
+The better move may be to strengthen `/Engrained` as the commercial parent rather than build a generic "wood prints" page immediately. The page should defend the branded concept first, then carefully absorb buyer-intent terms:
+
+- wood print fine art
+- western art on wood
+- western wood prints
+- fine art wood prints
+- photography printed on wood
+- Baltic birch wall art
+
+Guardrail: do not turn Engrained into generic Etsy-style wood decor copy. The page needs to keep the idea that the material participates in the story.
+
 ## Files Likely Touched
 
 - `src/data/hybrid-hubs/engrained.ts`
@@ -93,3 +110,4 @@ Hold until after the cleaner clusters.
 
 Recommended action now: no implementation. First, add Engrained/wood-print terms to tracking or run a broader keyword pull. Then decide whether `/Engrained` should be the canonical public parent versus `/Other/K4-Select-Series/Engrained`.
 
+Commercial recommendation: high-value future candidate. Validate tracked terms first, then strengthen `/Engrained` as the commercial parent.

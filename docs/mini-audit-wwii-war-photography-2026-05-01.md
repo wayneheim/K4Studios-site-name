@@ -49,6 +49,22 @@ This page is already doing exactly what the model wants: it bridges WWII, histor
 - From the WWII parent to War, Portraits, and Machines child pages if not already strong enough.
 - From child WWII section pages back to the WWII parent and, where relevant, to the broader Facing History hub.
 
+## Commercial Doorway Fit
+
+Promising, but handle with more care than the train cluster.
+
+Recent sketch-level WWII sales suggest real collector demand. A commercial page patterned after `/Western-Wall-Art` could eventually work if it is aimed at buyer-intent terms such as "WWII fine art prints," "WWII inspired wall art," "WWII themed art prints," or "military history art prints."
+
+The guardrail is critical: do not aim a commercial page at plain "WWII photography." That query likely belongs to archival, documentary, public-domain, or historical record images. Any commercial page must make the same distinction already added to the WWII hub: K4's work is contemporary, WWII-themed / inspired fine art made with living historians, period detail, painterly light, and narrative intent.
+
+Possible future commercial routes to validate:
+
+- `/WWII-Fine-Art-Prints`
+- `/WWII-Wall-Art`
+- `/Military-History-Art-Prints`
+
+Do not build these until the WWII keyword universe has been expanded beyond the current tracked CSV.
+
 ## Files Likely Touched
 
 - `src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/story.ts`
@@ -78,3 +94,4 @@ Safe as a protect-and-link batch.
 
 Recommended action: add a few clarifying internal links only. Do not create a new WWII doorway page. Do not heavily rewrite the winning WWII parent.
 
+Commercial recommendation: high-priority research candidate because sales signal exists. No new commercial page yet.
