@@ -433,6 +433,17 @@ painterlyPhotographyStyle: {
   ],
 },
 
+painterlyPhotographyDefinition: {
+  path: "/Blog/what-is-painterly-photography",
+  def: "Painterly photography is a photographic approach where light, tone, composition, atmosphere, and selective detail are shaped to create images with the emotional presence and visual structure associated with painting.",
+  landingPhrases: [
+    { phrase: "painterly photography", rating: 9, use: true, link: "/Blog/what-is-painterly-photography" },
+    { phrase: "what is painterly photography", rating: 9, use: true, link: "/Blog/what-is-painterly-photography" },
+    { phrase: "painterly photography definition", rating: 9, use: true, link: "/Blog/what-is-painterly-photography" },
+  ],
+  imagePhrases: []
+},
+
 historicallyThemedPhotography: {
   path: "/Blog/what-is-historically-themed-photography",
   def: "Historically themed photography is contemporary fine art photography that interprets people, events, and eras from the past through research, real subjects, period detail, and visual storytelling. At K4 Studios, it is treated as lived narrative - not archival historical photography, costume spectacle, or AI-generated nostalgia.",
@@ -457,11 +468,10 @@ historicallyThemedPhotography: {
 
 glossaryPainterlyPhotography: {
   path: "/Galleries/Painterly-Fine-Art-Photography",
-  def: "Painterly photography merges photographic realism with the tonal richness, texture, and emotional depth of classical painting. It's a fine art approach crafted for collectors who value narrative and permanence over decoration.",
+  def: "Painterly fine art photography is the collector-facing K4 Studios gallery discipline where photographic realism, tonal richness, texture, and emotional depth are shaped into finished fine art prints.",
   fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
   landingPhrases: [
     { phrase: "painterly fine art photography", rating: 5, use: true, link: "/Galleries/Painterly-Fine-Art-Photography" },
-    { phrase: "painterly photography", rating: 5, use: true, link: "/Galleries/Painterly-Fine-Art-Photography" },
   ],
   imagePhrases: []
 },
@@ -611,7 +621,7 @@ glossaryContemporaryWesternArt: {
     { phrase: "western canon", rating: 3, use: true },
     { phrase: "painterly Western photograph", rating: 5, use: true, link: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits" },
     { phrase: "painterly Western images", rating: 5, use: true, link: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits" },
-    { phrase: "Pictorialist tradition", rating: 5, use: true, link: "/Painterly-Western-Photography" },
+    { phrase: "Pictorialist tradition", rating: 5, use: true, link: "/Pictorialist-Photography" },
     { phrase: "narrative Western art", rating: 5, use: true, link: "/Narrative-Western-Art" },
     { phrase: "Baltic Birch", rating: 4, use: true, link: "/Other/K4-Select-Series/Engrained" }
   ]
@@ -1627,7 +1637,6 @@ painterly: {
   fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
   landingPhrases: [
     { phrase: "Painterly Fine Art Photography", rating: 5, use: true },
-    { phrase: "painterly photography", rating: 5, use: true },
     { phrase: "painterly storytelling", rating: 5, use: true },
     { phrase: "painterly compositions", rating: 4, use: true },
     { phrase: "painterly art collection", rating: 4, use: true },

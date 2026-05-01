@@ -5,7 +5,7 @@ export const facingFAQ = [
       "Painterly fine art photography is a storytelling-focused photographic style that blends real-world photography with the compositional discipline of painting. Wayne Heim’s work draws from the Pictorialist tradition, using controlled light, atmosphere, and texture to create images that feel cinematic, immersive, and emotionally grounded.",
       // CHANGED: explicitly reinforce “style” language once
       "Rather than documenting events, this painterly style explores what moments *felt* like — making it especially powerful for historically themed and narrative-driven imagery.",
-      `Curious how this style differs from traditional photography? <a href="/Galleries/Painterly-Fine-Art-Photography">Read Wayne’s full guide to painterly photography</a>.`
+      `Curious how this style differs from traditional photography? <a href="/Blog/what-is-painterly-photography">Read Wayne’s full guide to painterly photography</a>.`
     ],
   },
 
@@ -15,7 +15,7 @@ export const facingFAQ = [
       "Painterly photography is built from real light, real people, and real environments. Unlike AI-generated or purely digital artwork, every image begins with intentional photography and is shaped through hands-on, fine art post-production.",
       // CHANGED: tightened phrasing, removed slight redundancy
       "Wayne’s process is rooted in photographic craft and historical research — not algorithms or shortcuts — resulting in artwork with authenticity, depth, and narrative integrity.",
-      `For a behind-the-scenes look at Wayne’s painterly process, see <a href="/Galleries/Painterly-Fine-Art-Photography">What Is Painterly Photography?</a>`
+      `For a behind-the-scenes look at Wayne’s painterly process, see <a href="/Blog/what-is-painterly-photography">What Is Painterly Photography?</a>`
     ],
   },
 

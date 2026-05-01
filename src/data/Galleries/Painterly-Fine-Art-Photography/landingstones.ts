@@ -1,7 +1,7 @@
 export const landingWestern = {
   // Painterly Fine Art Photography — STYLE / DISCIPLINE HUB
   title: "Painterly Fine Art Photography",
-  subtitle: "A Narrative Approach Where Light, Atmosphere, and Story Shape the Image",
+  subtitle: "Storytelling Photography Shaped Like Memory, Light, and Legend",
 
   // Keywords for structured data and semantic SEO (discipline-focused)
   keywords: [

@@ -2,23 +2,23 @@ export const painterlyStory = [
 
   /* ──────────────────────────────────────── 1: INTRO & ORIENTATION */
   {
-    title: "Painterly Fine Art Photography — Style, Discipline, and Story",
+    title: "Where Photography Becomes Story",
     paragraphs: [
-      "Painterly fine art photography is a narrative-driven photographic discipline rooted in atmosphere, emotional weight, and intention. Rather than documenting what happened, it explores what it felt like — using light, tone, structure, and restraint to carry story through a single frame.",
-      "At K4 Studios, painterly photography represents one of two core approaches to image-making. Some work here is rendered through a painterly, cinematic lens. Other work is presented as traditional fine art photography. Both are authored with intention. This page focuses on the painterly discipline.",
-      "The term is often flattened into style language — soft focus, painterly edits, or photographs that merely resemble paintings. Here it means something stricter: photographic work built with the control, hierarchy, and emotional shaping we associate with serious painting.",
-      "Wayne Heim's painterly photography spans <a href='/Blog/what-is-western-fine-art-photography' style='color:#1a5f7a; text-decoration:underline;'>Western fine art</a> narratives, historically themed portraits, landscapes, and Americana subjects — unified not by subject matter, but by narrative construction and emotional truth.",
-      "Within that broader discipline, <a href=\"/Western-Fine-Art-Photography\">Western Fine Art Photography</a> focuses the painterly approach on frontier subject matter, while <a href=\"/American-Western-Art\">American Western Art</a> places that work inside the longer lineage of the West."
+      "Wayne Heim's painterly photography begins with the camera, but it does not end with documentation. It is built from years of visual storytelling, fine art discipline, and a lifelong instinct for shaping an image until it feels less like something seen and more like something remembered.",
+      "To Wayne, painterly photography is not a filter, preset, or digital shortcut. It is a way of building a photograph with the emotional gravity of painting - using light, atmosphere, composition, texture, and restraint to pull the viewer into a moment already in motion.",
+      "His work carries the spirit of modern Pictorialism into <a href=\"/Western-Fine-Art-Photography\">Western fine art photography</a>, historical scenes, landscapes, portraits, and Americana subjects. Real people. Real light. Real places. But shaped with the eye of an illustrator and the patience of a storyteller.",
+      "These are photographs with a foot in history and a hand on the door of imagination - images made not simply to show what was there, but to let the viewer feel what might have happened.",
+      "For Wayne, painterly photography is where the photographed world becomes a story you can enter. Explore the painterly collections below, or read Wayne's full guide: <a href=\"/Blog/what-is-painterly-photography\" style=\"color:#1a5f7a; text-decoration:underline;\">What Is Painterly Photography?</a>"
     ]
   },
 
   /* ──────────────────────────────────────── 2: WHAT PAINTERLY MEANS */
   {
-    subhead: "What Painterly Photography Is — and Is Not",
+    subhead: "What Painterly Photography Means Here",
     paragraphs: [
-      "Painterly photography is not a filter, preset, or surface treatment applied after the fact. It begins before the shutter is pressed — in how light is shaped, space is organized, and narrative hierarchy is established within the frame.",
-      "Every painterly image is built, not embellished. Texture, atmosphere, and tonal depth emerge from structure and intent rather than effect. The goal is not realism for its own sake, but resonance — images that feel remembered rather than recorded.",
-      `For a deeper discussion of how the term "painterly photography" is used — and often misused — see <a href="/Blog/what-is-painterly-photography" style="color:#1a5f7a; text-decoration:underline;">What Is Painterly Photography</a>.`
+      "On this site, painterly photography means more than a photograph made to resemble a painting. It means the image has been authored from the beginning - light chosen for mood, composition shaped for story, texture and tone used to carry memory rather than decoration.",
+      "Every painterly image is built, not embellished. The goal is not realism for its own sake, but resonance - images that feel remembered rather than merely recorded.",
+      `For the full definition, history, and distinction from painterly editing, read Wayne's guide: <a href="/Blog/what-is-painterly-photography" style="color:#1a5f7a; text-decoration:underline;">What Is Painterly Photography?</a>`
     ]
   },
 
@@ -86,8 +86,9 @@ export const painterlyStory = [
   {
     subhead: "For Collectors",
     paragraphs: [
-      "Painterly fine art photography is created for collectors who value depth over decoration — those drawn to images that reward long viewing and personal interpretation.",
-      "Both archival print editions and the Engrained Series are crafted for longevity, built to live with you rather than simply fill a wall."
+      "These images are made for rooms where atmosphere matters - studies, libraries, lodges, historic homes, creative spaces, and quiet corners where art is allowed to hold a little mystery.",
+      "A painterly photograph by Wayne Heim is not meant to behave like ordinary wall decor. It is meant to gather attention over time. The longer you live with it, the more the story opens.",
+      "Available as archival fine art prints and select <a href=\"/Other/K4-Select-Series/Engrained\">Engrained wood pieces</a>, each image is crafted as a lasting object - part photograph, part story, part invitation."
     ]
   },
 
