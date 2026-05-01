@@ -1,0 +1,281 @@
+---
+export const prerender = true;
+
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import CornerstoneArticle from '@/components/authority/CornerstoneArticle.astro';
+import { getStructuredData, getBreadcrumbList } from '@/components/utils/getStructuredData.ts';
+import {
+  cowboyBWData,
+  cowboyColorDataFull,
+  westernNarrativesBWData,
+  westernNarrativesColorData,
+} from '@/data/carousel/westernLandingContent.ts';
+import { galleryData as civilWarBWData } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs';
+import { galleryData as civilWarColorData } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs';
+
+const pagePath = '/Civil-War-Art';
+const canonicalUrl = `https://www.k4studios.com${pagePath}`;
+
+const pageTitle = 'Civil War Art | Civil War Photography & Narrative Fine Art';
+const pageDescription = 'Explore Civil War art through painterly fine art photography. Civil War inspired and themed images built as cinematic, story-driven moments beyond traditional historical depiction.';
+
+const CIVIL_WAR_COLOR_PATH = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color';
+const CIVIL_WAR_BW_PATH = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White';
+const CIVIL_WAR_HUB_PATH = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits';
+const FACING_HISTORY_COLLECTION_PATH = '/Galleries/Painterly-Fine-Art-Photography/Facing-History';
+
+const WESTERN_NARRATIVES_COLOR_PATH = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color';
+const WESTERN_NARRATIVES_BW_PATH = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White';
+const COWBOY_COLOR_PATH = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color';
+const COWBOY_BW_PATH = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White';
+
+function withGalleryPath(data: any[], galleryPath: string) {
+  return (data || []).map((img: any) => ({ ...img, galleryPath }));
+}
+
+function topRated(data: any[], count: number, skip = 0) {
+  return (data || [])
+    .filter((img: any) => img.id !== 'i-k4studios' && img.visibility !== 'ghost' && (img.rating || 0) >= 4)
+    .sort((a: any, b: any) => (a.sortOrder ?? 0) - (b.sortOrder ?? 0))
+    .slice(skip, skip + count);
+}
+
+function ensureAlt(img: any, fallback: string) {
+  return (img?.alt || img?.title || fallback || '').trim();
+}
+
+function makeSlide(img: any, hrefBase: string, fallback: string) {
+  return {
+    id: img.id,
+    title: img.title,
+    alt: ensureAlt(img, fallback),
+    story: img.story || img.description || '',
+    href: `${hrefBase}/${img.id}`,
+  };
+}
+
+function uniqueSlides(slides: any[]) {
+  const seen = new Set<string>();
+  return slides.filter((slide) => {
+    if (!slide?.id || seen.has(slide.id)) return false;
+    seen.add(slide.id);
+    return true;
+  });
+}
+
+const civilWarColor = withGalleryPath(civilWarColorData, CIVIL_WAR_COLOR_PATH);
+const civilWarBW = withGalleryPath(civilWarBWData, CIVIL_WAR_BW_PATH);
+
+const westernColor = withGalleryPath(westernNarrativesColorData, WESTERN_NARRATIVES_COLOR_PATH);
+const westernBW = withGalleryPath(westernNarrativesBWData, WESTERN_NARRATIVES_BW_PATH);
+const cowboyColor = withGalleryPath(cowboyColorDataFull, COWBOY_COLOR_PATH);
+const cowboyBW = withGalleryPath(cowboyBWData, COWBOY_BW_PATH);
+
+const slides = uniqueSlides([
+  ...topRated(civilWarColor, 4, 0).map((img: any) => makeSlide(img, img.galleryPath, 'Civil War art photograph of a narrative moment')),
+  ...topRated(civilWarBW, 2, 0).map((img: any) => makeSlide(img, img.galleryPath, 'Civil War photography scene showing wartime tension')),
+]);
+
+const sampleSlides = uniqueSlides([
+  ...topRated(civilWarColor, 4, 4).map((img: any) => makeSlide(img, img.galleryPath, 'Narrative Civil War artwork depicting human consequence')),
+  ...topRated(civilWarBW, 4, 2).map((img: any) => makeSlide(img, img.galleryPath, 'Civil War narrative photography')),
+  ...topRated(westernColor, 2, 2).map((img: any) => makeSlide(img, img.galleryPath, 'Western narrative photography')),
+  ...topRated(westernBW, 2, 2).map((img: any) => makeSlide(img, img.galleryPath, 'Frontier black and white narrative')),
+  ...topRated(cowboyColor, 1, 2).map((img: any) => makeSlide(img, img.galleryPath, 'Western portrait photography')),
+  ...topRated(cowboyBW, 1, 2).map((img: any) => makeSlide(img, img.galleryPath, 'Western portrait photography')),
+])
+  .filter((slide) => !slides.some((heroSlide) => heroSlide.id === slide.id))
+  .slice(0, 4);
+
+const keyCivilWarPieces = uniqueSlides([
+  ...topRated(civilWarColor, 2, 0).map((img: any) => makeSlide(img, img.galleryPath, 'Civil War narrative image')),
+  ...topRated(civilWarBW, 2, 0).map((img: any) => makeSlide(img, img.galleryPath, 'Civil War narrative image')),
+]).slice(0, 3);
+
+const breadcrumb = 'Home › Civil War Art';
+
+const introParagraphs = [
+  'Civil War art is often remembered through paintings and historical record. This collection approaches it differently-through painterly, narrative-driven photography that focuses on the individuals, the weight of decision, and the quiet moments inside history rather than the events themselves.',
+];
+
+const sections = [
+  {
+    heading: 'Civil War Photography, Pictures, and Artwork',
+    paragraphs: [
+      'For those searching for Civil War art, Civil War pictures, or Civil War photography, these images are built as narrative moments rather than historical records. Each piece functions as a <a href="/One-Image-Movie">One-Image Movie™</a>, inviting the viewer to step into a moment that feels lived rather than simply observed.',
+      'Whether you are searching for Civil War artwork, Civil War inspired photography, Civil War themed art, or historically inspired Civil War images, this collection centers on narrative depth rather than surface depiction.',
+      'The distinction matters. Documentary images prove that something happened. Narrative fine art images ask what that event felt like from inside the frame-how fear, duty, uncertainty, and consequence register in a person before and after the visible action.',
+    ],
+  },
+  {
+    heading: 'The Human Story Beneath the Conflict',
+    paragraphs: [
+      'The strongest Civil War photographs in this body of work are built around human structure beneath the myth. They emphasize posture, hesitation, burden, and moral pressure rather than spectacle.',
+      'This is not reenactment as costume. It is Civil War reenactment photography shaped as narrative method-using period setting, controlled atmosphere, and authored composition to recover the emotional architecture of a historical moment.',
+      'For the wider authored framework behind this approach, continue into <a href="/Western-Fine-Art-Photography">Western Fine Art Photography</a>.',
+    ],
+  },
+  {
+    heading: 'From Civil War to the Rise of the Wild West',
+    paragraphs: [
+      'The end of the Civil War did not close a chapter-it displaced it.',
+      'Thousands of soldiers left the battlefield carrying skills, habits, and burdens that had no place in peacetime life. Discipline, violence, survival, and uncertainty did not disappear. They moved west.',
+      'As the country expanded into frontier territories, those same men-Union and Confederate alike-became lawmen, outlaws, ranch hands, and drifters. The emotional and psychological weight of the Civil War did not stay behind. It followed them into the open land that would later be called the Wild West.',
+      'This is where the transition begins.',
+      'To understand that transformation more deeply-how conflict becomes frontier, and how consequence reshapes into legend-move into the American Wild West bridge page.',
+      '<a href="/american-wild-west">Continue into American Wild West</a>',
+    ],
+  },
+  {
+    heading: 'Explore Civil War Collections',
+    paragraphs: [
+      `Start in the <a href="${CIVIL_WAR_HUB_PATH}">Civil War gallery hub</a> for a full range of Civil War art and photography collections, then move into the <a href="${CIVIL_WAR_COLOR_PATH}">color Civil War portraits</a> or the <a href="${CIVIL_WAR_BW_PATH}">black and white Civil War sets</a> depending on the tonal route you want.`,
+      keyCivilWarPieces.length > 0
+        ? `For direct entry points, begin with <a href="${keyCivilWarPieces[0].href}">${keyCivilWarPieces[0].title}</a>${keyCivilWarPieces[1] ? `, <a href="${keyCivilWarPieces[1].href}">${keyCivilWarPieces[1].title}</a>` : ''}${keyCivilWarPieces[2] ? `, and <a href="${keyCivilWarPieces[2].href}">${keyCivilWarPieces[2].title}</a>` : ''}.`
+        : 'For direct entry points, start with the narrative Civil War image pages linked from the Civil War gallery hub.',
+    ],
+  },
+  {
+    heading: 'Civil War Art Prints and Collecting',
+    paragraphs: [
+      'Collectors usually arrive here looking for one of three things: historical resonance, narrative depth, or print quality that sustains repeated viewing. Civil War artwork prints in this collection are built for that slower relationship to the image.',
+      'If your next step is acquisition, use the image pages to evaluate composition, story, and tonal structure first, then move to print options once the right piece is clear. The goal is not novelty ownership, but long-term visual and narrative value.',
+    ],
+  },
+];
+
+const faqItems = [
+  {
+    q: 'What is Civil War art in photography?',
+    a: 'Civil War art in photography is a narrative fine art approach that uses Civil War-era subjects to interpret emotion, consequence, and historical atmosphere through authored composition rather than documentary record alone.',
+  },
+  {
+    q: 'What is Civil War art on this site?',
+    a: 'Civil War art here refers to narrative fine art photography that interprets Civil War-era subjects through authored composition, atmosphere, and human consequence rather than documentary-only intent.',
+  },
+  {
+    q: 'Is this page for Civil War pictures, photography, or artwork?',
+    a: 'It is intentionally built for all three intents: definition-level understanding, visual browsing of Civil War images, and collector-oriented evaluation of Civil War artwork prints.',
+  },
+  {
+    q: 'Where should I start if I want to browse quickly?',
+    a: `Start with the <a href="${CIVIL_WAR_HUB_PATH}">Civil War gallery hub</a>, then open the <a href="${CIVIL_WAR_BW_PATH}">black and white sets</a> or key narrative image pages linked above.`,
+  },
+  {
+    q: 'How does this differ from reenactment event coverage?',
+    a: 'The images are authored as narrative fine art. They use reenactment contexts, but the objective is emotional and historical interpretation, not event reporting.',
+  },
+  {
+    q: 'How did the Civil War influence the rise of the Wild West?',
+    a: `After the war, many people carried conflict habits and survival pressure westward, reshaping frontier life and identity. To follow that narrative shift, continue into <a href="/wild-west-art">Wild West Art</a> and then the <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West">Facing History: Wild West galleries</a>.`,
+  },
+  {
+    q: 'Can I follow a timeline from Civil War images into frontier narratives?',
+    a: `Yes. A useful sequence is Civil War portraits first, then Western transition narratives, then character-focused frontier portraits. Start with the Civil War hub and continue into <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color">Western Narratives</a> for the post-war shift in tone and setting.`,
+  },
+  {
+    q: 'Why pair Civil War and Wild West collections on one path?',
+    a: 'Because many viewers search for historical imagery by era but connect most deeply by human continuity-under pressure, aftermath, and adaptation. Pairing these collections lets that continuity unfold as one narrative journey rather than isolated topics.',
+  },
+  {
+    q: 'Where should collectors go after Civil War pieces?',
+    a: `If the Civil War work resonates, the next collector step is thematic expansion into frontier-era works that keep the same cinematic voice. Use <a href="/wild-west-art">Wild West Art</a> as the bridge page, then open individual Wild West image pages from Facing History to evaluate print fit and narrative depth.`,
+  },
+];
+
+const heroImage = slides[0] ? `https://www.k4studios.com/img/${slides[0].id}/l.jpg` : 'https://www.k4studios.com/images/K4Logo-web-c.webp';
+
+const structuredData = getStructuredData({
+  type: 'Article',
+  data: {
+    title: 'Civil War Art',
+    headline: 'Civil War Art | Narrative Fine Art Photography',
+    description: pageDescription,
+    url: canonicalUrl,
+    image: heroImage,
+    articleSection: sections.map((section) => section.heading),
+    keywords: [
+      'civil war art',
+      'civil war photography',
+      'civil war pictures',
+      'civil war artwork',
+      'civil war art prints',
+      'civil war inspired photography',
+      'civil war themed art',
+      'civil war reenactment photography',
+      'narrative fine art photography',
+      'painterly civil war photography',
+    ],
+    faqItems: faqItems.map((item) => ({
+      question: item.q,
+      answer: Array.isArray(item.a) ? item.a.join(' ') : item.a,
+    })),
+  },
+  defaults: {
+    creatorName: 'Wayne Heim',
+    creatorUrl: 'https://www.k4studios.com/',
+  },
+});
+
+const breadcrumbData = getBreadcrumbList([
+  { name: 'Home', item: 'https://www.k4studios.com/' },
+  { name: 'Civil War Art', item: canonicalUrl },
+]);
+
+const meta = {
+  title: pageTitle,
+  description: pageDescription,
+  canonicalUrl,
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogImage: heroImage,
+  ogUrl: canonicalUrl,
+  twitterTitle: pageTitle,
+  twitterDescription: pageDescription,
+  twitterImage: heroImage,
+  twitterUrl: canonicalUrl,
+};
+---
+
+<BaseLayout title={pageTitle} structuredDataJSON={structuredData} breadcrumbsJSON={breadcrumbData} meta={meta}>
+  <main class="bg-[#ffffff] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
+    <CornerstoneArticle
+      breadcrumb={breadcrumb}
+      title="Civil War Art | Narrative Fine Art Photography"
+      subtitle="A definition-led Civil War authority page that bridges intent from Civil War pictures and photography into narrative fine art and collecting."
+      summaryParagraphs={[
+        '<strong>Part of the Facing History Collection</strong>',
+        'This Civil War art page is part of the Facing History series-a narrative pathway that traces how conflict, consequence, and human decisions shape the transition from the Civil War into the American frontier.',
+        `Begin with the full <a href="${FACING_HISTORY_COLLECTION_PATH}">Facing History collection</a> to follow the visual and narrative progression across eras.`,
+        `<a href="${FACING_HISTORY_COLLECTION_PATH}">Enter the Facing History Collection</a>`,
+      ]}
+      summary="Civil War art spans paintings, historical imagery, and modern interpretations of the American Civil War. This page defines Civil War art through painterly, narrative-driven photography-bringing together Civil War pictures, Civil War photography, and fine art Civil War imagery into a single story-focused collection."
+      contextHtml={`<strong class='context-cta-heading'>Begin the Civil War Collection</strong><br />Explore the full Civil War series within the Facing History collection-where each image builds part of a larger narrative.<br /><a href='${CIVIL_WAR_HUB_PATH}'>Enter the Civil War Collection</a>`}
+      contextPlacement="below-carousel"
+      introParagraphs={introParagraphs}
+      quoteFirstIntroParagraph={false}
+      sections={sections}
+      slides={slides}
+      sampleSlides={sampleSlides}
+      relatedLinks={[]}
+      faqHeading="Civil War Art FAQ"
+      faqItems={faqItems}
+      faqPlacement="bottom"
+      faqTagline="&quot;History, lives, and hidden moments - experienced within a single image.&quot;"
+      sampleGroups={[
+        {
+          afterSection: 1,
+          imageIndexes: [0, 1],
+          caption: 'Civil War photography examples where atmosphere and human tension carry the narrative intent.',
+        },
+        {
+          afterSection: 3,
+          imageIndexes: [2, 3],
+          caption: 'Civil War artwork samples selected for collectors evaluating print-worthy narrative depth.',
+        },
+      ]}
+      carouselKicker="Civil War Narrative Works"
+      carouselCounterLabel="Civil War Work"
+    />
+  </main>
+</BaseLayout>

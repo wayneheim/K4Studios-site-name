@@ -7,6 +7,8 @@ import { galleryData as naBwGallery }
 
 const bwPath =
 	'/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White';
+const bwAllPath =
+	'/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/all';
 const narrativeBwPath =
 	'/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White';
 const naBwPath =
@@ -107,7 +109,7 @@ export const storyBlocks = [
 		subhead: 'Monochrome works when it removes noise, not life.',
 		paragraphs: [
 			'Western black and white photography matters when tone, gesture, and atmosphere carry more weight without color than they would with it. The removal of color should sharpen the human presence in the frame, not flatten it into style.',
-			'That is why the stronger monochrome pages in this cluster are not generic black-and-white galleries. They keep portraiture, narrative pressure, and historical gravity visible inside the tonal structure.',
+			'That is why the stronger monochrome pages in this cluster are not generic black-and-white galleries. They keep portraiture, narrative pressure, and historical gravity visible inside the tonal structure, with the <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White">black and white Western portrait gallery</a> and its <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/all">complete black and white cowboy archive</a> acting as the proof set behind this parent page.',
 		],
 	},
 	{
@@ -144,6 +146,14 @@ export const explorationPaths = [
 		cta: 'Explore black and white Western portraits -',
 		accent: '#7b4a28',
 		featured: true,
+	},
+	{
+		title: 'Complete Black and White Cowboy Archive',
+		eyebrow: 'Full Inventory',
+		href: bwAllPath,
+		description: 'Browse the full index of black and white cowboy portraits when you want every available monochrome image page in one crawlable set.',
+		cta: 'Open the complete archive -',
+		accent: '#5f524a',
 	},
 	{
 		title: 'Cinematic Western Art',

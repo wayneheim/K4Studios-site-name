@@ -48,6 +48,7 @@ export const facingHistoryStory = [
     paragraphs: [
       "Wayne’s Civil War portraits focus on the human cost of conflict rather than battlefield spectacle. Smoke, stillness, and expression replace action, creating painterly Civil War photography rooted in character and consequence.",
       "Each portrait captures a single frame from an unwritten epic—the emotional hinge between what has been endured and what must follow. Posture becomes narrative. Shadow becomes memory.",
+      "For the broader guide that explains Civil War art, Civil War inspired photography, Civil War themed art, and the collector path into these works, begin with <a href=\"/Civil-War-Art\">Civil War Art</a>.",
       "Collectors of Civil War themed fine art photography will find works that honor courage, doubt, and sacrifice with restraint and psychological depth rather than reenactment excess."
     ],
     list: [
@@ -60,6 +61,7 @@ export const facingHistoryStory = [
     subhead: "WWII Portraits — Sacrifice, Brotherhood & the Human Heart in Wartime",
     paragraphs: [
       "The WWII series moves beyond documentation into story-driven wartime portraiture. Mud, machinery, fatigue, and quiet exchanges form the emotional language of these painterly WWII photographs.",
+      "These are not archival World War II photographs; they are <a href=\"/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII\">WWII themed fine art photographs</a> created with living historians, period detail, painterly light, and narrative intent.",
       "Each image holds the weight of an unseen film—intentional light, deliberate stillness, and gestures that speak louder than action. These portraits meditate on courage, fear, camaraderie, and survival.",
       "Ideal for collectors of WWII fine art photography, military history art, and historically themed imagery grounded in authenticity rather than spectacle."
     ],
@@ -110,7 +112,7 @@ export const facingHistoryStory = [
   {
     subhead: "Bring History Home",
     paragraphs: [
-      "Facing History—Civil War resolve, Western myth, WWII resilience, Jazz-Age intrigue—offers more than themed photography. These are narrative artifacts crafted for collectors who want their walls to speak.",
+      "Facing History—Civil War resolve, Western myth, <a href=\"/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII\">WWII resilience</a>, Jazz-Age intrigue—offers more than themed photography. These are narrative artifacts crafted for collectors who want their walls to speak.",
       "If you value mood, psychology, restraint, and story, there is a moment here waiting to live in your space."
     ]
   },

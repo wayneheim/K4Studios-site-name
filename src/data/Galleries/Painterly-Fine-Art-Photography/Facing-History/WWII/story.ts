@@ -8,6 +8,7 @@ export const westernStory = [
     paragraphs: [
       `Step into the WWII gallery at K4 Studios, where history is approached not as spectacle, but as lived experience. Wayne Heim’s painterly fine art photography explores the courage, exhaustion, ingenuity, and sacrifice carried by the Greatest Generation through portraits, wartime scenes, and the machinery that shaped their world.`,
       `Within K4's broader <a href="/Blog/what-is-historically-themed-photography">historically themed photography</a> framework, the World War II work is contemporary fine art built from research, real subjects, period detail, and visual storytelling.`,
+      `These are not archival World War II photographs. They are contemporary WWII-themed fine art photographs created with living historians, period detail, painterly light, and narrative intent—images built to feel remembered, not merely recorded.`,
       `These images move beyond documentation. Mud-splattered armor, weary faces, quiet exchanges, and the geometry of steel all become part of a larger narrative about duty, survival, and human resilience under pressure.`,
       `Each image here works through the logic of the <strong>One-Image Movie™</strong> — a single frame weighted with unresolved narrative, where what happened moments before and what may happen next remain powerfully present.`,
       `The result is WWII fine art photography that asks the viewer to do more than look. It asks the viewer to stand inside the moment and feel the cost of it.`
@@ -35,7 +36,7 @@ export const westernStory = [
     tagline: "WWII Reenactment Photography, Elevated",
     paragraphs: [
       `Wayne Heim’s painterly method combines research, authentic period equipment, and disciplined lighting to turn reenactment photography into fine art with emotional weight. This is not digital mood-making. Each image is built through light, tone, texture, and restraint to evoke the era’s lived-in truth.`,
-      `From the chaos of battle to the calm before the storm, Wayne’s WWII photography bridges documentary realism with a timeless painterly aesthetic—making each piece a story, not just a record.`,
+      `From the chaos of battle to the calm before the storm, Wayne’s WWII themed photography bridges living history realism with a timeless painterly aesthetic—making each piece a story, not just a record.`,
       `That discipline is what lets the frame hold both history and ambiguity at once.`
     ]
   },
@@ -57,7 +58,7 @@ export const westernStory = [
     tagline: "Historical Fine Art That Holds Its Tension",
     paragraphs: [
       `Wayne Heim’s WWII work is more than a tribute. Each print is produced to museum standards and built to live as both fine art and a living memorial to the Greatest Generation.`,
-      `With every portrait and battlefield scene, the collector receives more than a decorative image: a story, a conversation, and a visual bridge across generations.`,
+      `With every portrait and battlefield scene, the collector receives more than a decorative image: a story, a conversation, and a visual bridge across generations. The broader <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Facing History</a> collection carries that same historically inspired approach into Civil War, Western frontier, and Roaring 20s work.`,
       `These are the kinds of images that unfold over time because the tension inside them never fully resolves.`
     ]
   },

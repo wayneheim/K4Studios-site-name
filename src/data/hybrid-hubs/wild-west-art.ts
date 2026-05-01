@@ -87,6 +87,10 @@ export const landing = {
   keywords: [
     'wild west art',
     'wild west artwork',
+    'old west art',
+    'wild west poster',
+    'old west posters',
+    'wild west paintings',
     'frontier art',
     'frontier western art',
   ],
@@ -117,7 +121,7 @@ export const storyBlocks = [
     subhead: 'The phrase only matters if it points past costume and cliché.',
     paragraphs: [
       'Wild West art is one of those terms people use because they know the atmosphere they want before they know the exact category. They may mean vintage cowboy art, old western art, or frontier scenes that feel steeped in myth. The stronger route is not to deny that language, but to deepen it until the search lands on work with real narrative and historical pressure.',
-      'That is why this page sits closer to frontier memory than to novelty nostalgia. The Wild West becomes meaningful when the legend is forced back through the people, land, silence, and consequence that produced it.',
+      'That is why this page sits closer to frontier memory than to novelty nostalgia. The Wild West becomes meaningful when the legend is forced back through the people, land, silence, and consequence that produced it. For the historical bridge behind the phrase, see <a href="/american-wild-west">American Wild West</a>; this page remains the art, prints, posters, and collector route.',
     ],
   },
   {
@@ -153,6 +157,14 @@ export const explorationPaths = [
     description: 'Use the exact-match definition page if the visitor is really asking what old western art means and how the term differs from literal antique art.',
     cta: 'Read the definition -',
     accent: '#7a614f',
+  },
+  {
+    title: 'American Wild West',
+    eyebrow: 'Historical Bridge',
+    href: '/american-wild-west',
+    description: 'Read the cultural and historical bridge page when the visitor needs the frontier context before choosing Wild West art or prints.',
+    cta: 'Read the bridge -',
+    accent: '#6b5548',
   },
   {
     title: 'Vintage Western Art',
@@ -332,6 +344,12 @@ export const faqItems = [
     ],
   },
   {
+    q: 'Is this the same as the American Wild West page?',
+    a: [
+      'No. <a href="/american-wild-west">American Wild West</a> is the historical bridge page. Wild West Art is the visual and collector route for Wild West artwork, Old West art, frontier artwork, prints, posters, and image browsing.',
+    ],
+  },
+  {
     q: 'Why include Native portrait work under Wild West art?',
     a: [
       'Because the American frontier was never carried by one mythology alone. The stronger Wild West route widens the historical field instead of narrowing it to cowboy shorthand.',
@@ -358,6 +376,9 @@ export const pageMeta = {
 
 export const structuredAbout = [
   'Wild West Art',
+  'Old West Art',
+  'Wild West Posters',
+  'Wild West Paintings',
   'Frontier Art',
   'Narrative Western Art',
 ];
@@ -365,6 +386,9 @@ export const structuredAbout = [
 export const webPageAbout = [
   'Wild West Art',
   'Wild West Artwork',
+  'Old West Art',
+  'Old West Posters',
+  'Frontier Artwork',
   'Frontier Art',
 ];
 

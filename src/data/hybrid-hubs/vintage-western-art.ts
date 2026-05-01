@@ -81,6 +81,10 @@ export const landing = {
   keywords: [
     'vintage western art',
     'vintage cowboy art',
+    'vintage western prints',
+    'vintage cowboy print',
+    'old western art',
+    'old west posters',
     'old western art for sale',
     'old west wall art',
     'frontier art prints',
@@ -128,7 +132,7 @@ export const storyBlocks = [
     subhead: 'A cleaner buying route',
     paragraphs: [
       'This page is intentionally more commercial than the broader Wild West hub. It narrows the field to a curated selection, then sends visitors into the right galleries and print options once they know which branch of vintage western art they actually want to live with.',
-      'If the visitor needs the definition before the purchase path, the linked old-west article handles that question directly. If they already know the mood they want, the grid and collection sections below keep the path simple.',
+      'That keeps vintage western prints, a single vintage cowboy print, old western art, and old west posters on one useful route instead of splitting closely related collector intent into thin pages. If the visitor needs the definition before the purchase path, the linked old-west article handles that question directly. If they already know the mood they want, the grid and collection sections below keep the path simple.',
     ],
   },
 ];
@@ -307,6 +311,12 @@ export const faqItems = [
     ],
   },
   {
+    q: 'Does this page cover vintage western prints and old west posters too?',
+    a: [
+      'Yes. Those searches usually describe the same collector path: Western imagery with old-West atmosphere that can live as a print or wall piece. This page keeps vintage western prints, vintage cowboy print, old western art, and old west posters together until there is enough evidence to split them.',
+    ],
+  },
+  {
     q: 'How is this different from the Wild West Art page?',
     a: [
       'Wild West Art is the broader discovery page. This page is narrower and more commercial, built for visitors who already know they want vintage western or old-West wall presence.',
@@ -322,6 +332,10 @@ export const pageMeta = {
 export const structuredAbout = [
   'Vintage Western Art',
   'Vintage Cowboy Art',
+  'Vintage Western Prints',
+  'Vintage Cowboy Print',
+  'Old Western Art',
+  'Old West Posters',
   'Old Western Art For Sale',
   'Frontier Art Prints',
   'Wild West Art',
@@ -330,7 +344,10 @@ export const structuredAbout = [
 export const webPageAbout = [
   'Vintage Western Art',
   'Vintage Cowboy Art',
+  'Vintage Western Prints',
+  'Vintage Cowboy Print',
   'Old West Wall Art',
+  'Old West Posters',
   'Frontier Art Prints',
 ];
 

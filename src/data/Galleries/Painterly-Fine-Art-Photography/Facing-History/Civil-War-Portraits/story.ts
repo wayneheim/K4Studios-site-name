@@ -10,6 +10,7 @@ export const westernStory = [
       `Civil War fine art photography explores the human experience of America’s most defining conflict through character, atmosphere, and emotional restraint. Rather than documenting battles, it focuses on the individuals who carried history forward — soldiers, civilians, and moments shaped by consequence.`,
       `Wayne Heim’s Civil War portraits invite you into that space. Through painterly fine art techniques and cinematic storytelling, these images transform historical reenactment into deeply human narratives — echoing the stillness of 19th-century photography while carrying modern psychological depth.`,
       `This collection is part of K4's broader <a href="/Blog/what-is-historically-themed-photography">historically themed photography</a> framework, where the historical element is the subject and story rather than the age of the photograph.`,
+      `For the broader guide that gathers Civil War art, Civil War inspired photography, Civil War themed art, and collector intent, start with <a href="/Civil-War-Art">Civil War Art</a>. This gallery remains the visual collection where the image pages carry the lived evidence.`,
       `Each portrait is built as a One-Image Movie™ — a hinge moment suspended between conflict and reflection. You are not simply observing the past; you are stepping into it. The silence, the weight of choice, the breath before consequence — all invite you to imagine the chapters that came before and those that must follow.`,
       `This is not Civil War spectacle. It is Civil War history carried through face, posture, and the unresolved feeling of a life still in motion.`
     ]
@@ -90,7 +91,8 @@ export const westernStory = [
     subhead: "Continue the Journey",
     tagline: "Explore More Facing History Collections",
     paragraphs: [
-      `Step into <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/">World War II</a> — painterly portraits of sacrifice, brotherhood, and the human cost of global conflict.`,
+      `Step into <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/">World War II</a> — WWII inspired photography shaped as painterly portraits of sacrifice, brotherhood, and the human cost of global conflict.`,
+      `Follow the wider historical path through <a href="/Civil-War-Art">Civil War Art</a>, then continue into <a href="/american-wild-west">American Wild West</a> to see how conflict aftermath becomes frontier pressure.`,
       `Or explore the <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/">Roaring 20s</a> — jazz-age intrigue, rebellion, and cinematic shadow shaped into fine art.`
     ]
   }

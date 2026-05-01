@@ -13,6 +13,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.k4studios.com/american-wild-west</loc>
+    <lastmod>2026-05-01T16:18:11.808Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.k4studios.com/Art-of-the-American-West</loc>
     <lastmod>2026-04-30T21:37:32-04:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -195,6 +201,12 @@
   <url>
     <loc>https://www.k4studios.com/cinematic-western-art</loc>
     <lastmod>2026-04-16T15:22:06-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.k4studios.com/Civil-War-Art</loc>
+    <lastmod>2026-05-01T16:48:11.470Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

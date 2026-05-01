@@ -38,7 +38,7 @@ const seoDescription = `Browse the full collection of ${imageCount} painterly We
 
 // ✅ Genre definition (entity authority - what IS this type of photography)
 const genreDefinition = `Painterly Western Photography is a fine-art approach that draws from 19th-century pictorialism and painterly traditions, emphasizing tonal harmony, atmospheric light, and compositional restraint over literal realism.`;
-const genreBridge = `Wayne Heim's color work applies this approach to Western subject matter, using controlled palette, directional light, and narrative suggestion to create images that function as cinematic story fragments rather than documentary records.`;
+const genreBridge = `Wayne Heim's color work applies this approach to Western subject matter, using controlled palette, directional light, and narrative suggestion to create images that function as cinematic story fragments rather than documentary records. For the parent route that gathers the color and black-and-white proof pages, return to <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits" style="color:#85644b;">Western Cowboy Portraits</a>.`;
 
 // ✅ Authoritative definition block (per Quill: scope, authorship, completeness)
 const indexDefinition = `This page presents the complete color archive of Western Cowboy Portraits by Wayne Heim. The collection documents frontier-era characters, working cowboys, and narrative moments drawn from Western history and lived reenactment—rendered in a painterly fine-art style.`;
@@ -191,7 +191,7 @@ const structuredDataJson = JSON.stringify({
       </figure>
       <div class="definition-text">
         <p>{genreDefinition}</p>
-        <p>{genreBridge}</p>
+        <p set:html={genreBridge} />
       </div>
     </section>
 

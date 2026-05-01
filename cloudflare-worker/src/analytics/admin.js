@@ -11,6 +11,9 @@ import { updateBotIntelligence } from './storage.js';
 // --------------------
 // Shared helpers
 // --------------------
+const PROTECTED_CRAWLER_PATTERN =
+  /(googlebot|googlebot-image|google-inspectiontool|adsbot-google|googleother|apis-google|bingbot|bingpreview|msnbot|bingimagesbot|adidxbot|duckduckbot|applebot|yandex|baiduspider|slurp)/i;
+
 function withAdminNoCacheHeaders(baseHeaders = {}) {
   const headers = new Headers(baseHeaders);
   headers.set("Cache-Control", "no-store, no-cache, must-revalidate");
@@ -30,6 +33,40 @@ function clampInt(value, { min, max, fallback }) {
   const n = parseInt(String(value ?? ''), 10);
   if (!Number.isFinite(n)) return fallback;
   return Math.max(min, Math.min(max, n));
+}
+
+function isProtectedCrawlerRow(row) {
+  if (!row) return false;
+  if (Number(row.is_verified_bot || 0) === 1) return true;
+  return PROTECTED_CRAWLER_PATTERN.test(String(row.bot_name || ''));
+}
+
+async function getBlockSafetyInfo(env, ipHash) {
+  const row = await env.DB.prepare(`
+    SELECT risk_level, risk_score, rules_triggered, total_requests, is_verified_bot, bot_name
+    FROM suspected_bots WHERE ip_hash = ?
+  `).bind(ipHash).first();
+
+  if (isProtectedCrawlerRow(row)) {
+    return { row, protected: true, reason: 'protected_search_crawler' };
+  }
+
+  const recentUa = await env.DB.prepare(`
+    SELECT ua
+    FROM raw_events
+    WHERE ip_hash = ?
+      AND ua IS NOT NULL
+      AND ua != ''
+    ORDER BY ts DESC
+    LIMIT 20
+  `).bind(ipHash).all();
+
+  const matchedUa = (recentUa?.results || []).find(r => PROTECTED_CRAWLER_PATTERN.test(String(r.ua || '')));
+  if (matchedUa) {
+    return { row, protected: true, reason: 'protected_search_crawler_ua', ua: matchedUa.ua };
+  }
+
+  return { row, protected: false };
 }
 
 // --------------------
@@ -114,10 +151,19 @@ export async function handleBlockIP(request, env) {
       });
     }
 
-    const suspectInfo = await env.DB.prepare(`
-      SELECT risk_level, risk_score, rules_triggered, total_requests 
-      FROM suspected_bots WHERE ip_hash = ?
-    `).bind(ip_hash).first();
+    const safety = await getBlockSafetyInfo(env, ip_hash);
+    if (safety.protected) {
+      return new Response(JSON.stringify({
+        error: safety.reason,
+        ip_hash,
+        bot_name: safety.row?.bot_name || null
+      }), {
+        status: 409,
+        headers: { 'Content-Type': 'application/json' }
+      });
+    }
+
+    const suspectInfo = safety.row;
 
     await env.DB.prepare(`
       INSERT INTO blocked_ips (ip_hash, risk_level, risk_score, rules_triggered, total_requests, reason, blocked_by)

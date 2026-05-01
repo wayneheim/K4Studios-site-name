@@ -718,7 +718,8 @@ async function updateBotIntelligence(env) {
           country = COALESCE(excluded.country, suspected_bots.country),
           updated_at = datetime('now'),
           status = CASE
-            WHEN suspected_bots.status IN ('blocked', 'verified') THEN suspected_bots.status
+            WHEN excluded.is_verified_bot = 1 THEN 'verified'
+            WHEN suspected_bots.status = 'blocked' THEN 'blocked'
             ELSE excluded.status
           END,
           classifier_version = 3
