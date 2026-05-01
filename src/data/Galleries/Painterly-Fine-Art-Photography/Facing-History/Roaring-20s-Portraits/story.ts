@@ -29,6 +29,7 @@ export const westernStory = [
     subhead: "Part of the Facing History Series",
     paragraphs: [
       `The Roaring 20s portraits belong to Wayne Heim’s broader <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Facing History</a> body of work — an ongoing exploration of how individuals carry themselves inside moments that reshape culture, identity, and consequence.`,
+      `They also sit inside K4's <a href="/Blog/what-is-historically-themed-photography">historically themed photography</a> definition: contemporary fine art that interprets the past through research, period detail, real subjects, and story.`,
       `From Civil War resolve to Jazz Age rebellion and World War II sacrifice, Facing History treats each era not as isolated nostalgia, but as a living chapter in a larger human story. The Roaring 20s becomes a turning point — a moment where freedom, fear, and moral tension collide, leaving fingerprints still visible today.`
     ]
   },

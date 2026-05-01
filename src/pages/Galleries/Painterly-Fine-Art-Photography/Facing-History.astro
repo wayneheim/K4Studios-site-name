@@ -75,7 +75,7 @@ const featheredImages = getSideImages({
 });
 const featheredImagesSidebar = featheredImages.slice(0, 6);
 const landingDescription = (landingWestern as any).description || landingWestern.subtitle;
-const pageTitle = "Historical Photography - Western, Civil War, WWII, and Roaring 20s by Wayne Heim";
+const pageTitle = "Facing History - Historically Themed Fine Art Photography by Wayne Heim";
 
 // ----------------------
 // Structured Data
@@ -89,7 +89,10 @@ const structuredData = getStructuredData({
     keywords: landingWestern.keywords || [],
     copyrightNotice: "Â© Wayne Heim",
     about: [
-      { "@type": "Thing", name: "Historical Fine Art Photography" },
+      { "@type": "Thing", name: "Historically Themed Fine Art Photography" },
+      { "@type": "Thing", name: "History Inspired Photography" },
+      { "@type": "Thing", name: "History Themed Photography" },
+      { "@type": "Thing", name: "Contemporary Historical Fine Art" },
       { "@type": "Thing", name: "American West Art" },
       { "@type": "Thing", name: "American Frontier" },
       { "@type": "Thing", name: "Western Cowboy Portraits" },
@@ -97,7 +100,7 @@ const structuredData = getStructuredData({
       { "@type": "Thing", name: "WWII Photography" },
       { "@type": "Thing", name: "Old West" },
     ],
-    genre: "Historical Fine Art Photography",
+    genre: "Historically Themed Fine Art Photography",
   },
   images: featheredImages,
   defaults: {

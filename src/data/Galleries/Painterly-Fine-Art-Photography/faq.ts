@@ -25,7 +25,7 @@ export const facingFAQ = [
       // CHANGED: add “themed” explicitly, once
       "The collection spans a range of Americana, Western, and historically themed photography collections, including:",
       `<ul>
-        <li><a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Facing History</a> — painterly historical reenactment portraits (Civil War, WWII, Roaring 20s)</li>
+        <li><a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Facing History</a> — historically themed fine art photography across Civil War, WWII, Western frontier, and Roaring 20s stories</li>
         <li><a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits">Western cowboy and frontier portraits</a></li>
         <li><a href="/Galleries/Painterly-Fine-Art-Photography/Landscapes">Painterly landscapes</a> of the American West, High Desert, Great Plains, and Mountain regions</li>
         <li><a href="/Galleries/Painterly-Fine-Art-Photography/Transportation">Transportation & Americana themes</a> — trains, vintage vehicles, and working machines</li>
@@ -41,7 +41,7 @@ export const facingFAQ = [
       "A One-Image Movie™ is Wayne Heim’s signature narrative framework — a single photograph crafted to carry the emotional weight of a complete story.",
       // CHANGED: tightened language slightly, no meaning change
       "Rather than offering answers, these images create tension and implication: a moment suspended between what just happened and what must happen next. This approach is central to Wayne’s painterly style and historically themed work.",
-      `You’ll find One-Image Movies™ throughout the site, particularly in <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Facing History</a> and <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits">Western Cowboy Portraits</a>.`
+      `You’ll find One-Image Movies™ throughout the site, particularly in <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Facing History</a>, the historically themed fine art photography collection, and <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits">Western Cowboy Portraits</a>.`
     ],
   },
 

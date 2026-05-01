@@ -109,7 +109,7 @@ export const narrativeWesternArtStory = [
     paragraphs: [
       "The collections above open into a larger narrative world of the American West, one shaped by frontier history, psychological presence, and the unfinished stories of the people who lived it.",
       "These narratives are not isolated. They exist within a larger historical framework of people, place, and consequence that unfolds across the American West.",
-      "From there, <a href=\"/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier\">Facing History</a> leads into galleries where each image acts as a doorway into a broader Western story.",
+      "From there, <a href=\"/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier\">Facing History</a> leads into historically themed fine art photography where each image acts as a doorway into a broader Western story.",
       "These are not simply pictures of the West.",
       "They are story-bearing images meant to be entered."
     ]

@@ -17,10 +17,10 @@ export const facingFAQ = [
   },
 
   {
-    q: "How is this different from traditional historical photography?",
+    q: "How is this different from archival or traditional historical photography?",
     a: [
-      "Facing History is not documentary reenactment photography, costume portraiture, or digitally aged imagery.",
-      "Each image is constructed using sculpted light, controlled texture, and painterly post-production rooted in classical portraiture and illustration. The result is historically themed photography that feels timeless and narrative-driven rather than archival or instructional."
+      "Facing History is not archival historical photography, documentary reenactment coverage, costume portraiture, or digitally aged imagery.",
+      "Each image is constructed using sculpted light, controlled texture, and painterly post-production rooted in classical portraiture and illustration. The result is historically themed fine art photography that feels timeless and narrative-driven rather than archival, instructional, or merely nostalgic."
     ],
   },
 

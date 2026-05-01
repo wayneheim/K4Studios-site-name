@@ -9,6 +9,7 @@ export const westernStory = [
     paragraphs: [
       `Civil War fine art photography explores the human experience of America’s most defining conflict through character, atmosphere, and emotional restraint. Rather than documenting battles, it focuses on the individuals who carried history forward — soldiers, civilians, and moments shaped by consequence.`,
       `Wayne Heim’s Civil War portraits invite you into that space. Through painterly fine art techniques and cinematic storytelling, these images transform historical reenactment into deeply human narratives — echoing the stillness of 19th-century photography while carrying modern psychological depth.`,
+      `This collection is part of K4's broader <a href="/Blog/what-is-historically-themed-photography">historically themed photography</a> framework, where the historical element is the subject and story rather than the age of the photograph.`,
       `Each portrait is built as a One-Image Movie™ — a hinge moment suspended between conflict and reflection. You are not simply observing the past; you are stepping into it. The silence, the weight of choice, the breath before consequence — all invite you to imagine the chapters that came before and those that must follow.`,
       `This is not Civil War spectacle. It is Civil War history carried through face, posture, and the unresolved feeling of a life still in motion.`
     ]

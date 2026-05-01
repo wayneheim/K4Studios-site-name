@@ -70,7 +70,7 @@ export const historicalStory = [
   {
     subhead: "Step Inside the Historical West",
     paragraphs: [
-      "The doorway below opens into the frontier era that shaped the mythology of the American West. From there, <a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier'>Facing History</a> unfolds into galleries where individual stories play out across a larger historical landscape.",
+      "The doorway below opens into the frontier era that shaped the mythology of the American West. From there, <a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier'>Facing History</a> unfolds into historically themed fine art photography where individual stories play out across a larger historical landscape.",
       "These are not galleries you browse. They are rooms you enter. The history behind them runs deeper than any single frame can hold."
     ]
   }

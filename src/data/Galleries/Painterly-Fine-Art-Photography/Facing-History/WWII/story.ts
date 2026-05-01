@@ -7,6 +7,7 @@ export const westernStory = [
     tagline: "Story-Driven WWII Photography, Portraits, and Living History",
     paragraphs: [
       `Step into the WWII gallery at K4 Studios, where history is approached not as spectacle, but as lived experience. Wayne Heim’s painterly fine art photography explores the courage, exhaustion, ingenuity, and sacrifice carried by the Greatest Generation through portraits, wartime scenes, and the machinery that shaped their world.`,
+      `Within K4's broader <a href="/Blog/what-is-historically-themed-photography">historically themed photography</a> framework, the World War II work is contemporary fine art built from research, real subjects, period detail, and visual storytelling.`,
       `These images move beyond documentation. Mud-splattered armor, weary faces, quiet exchanges, and the geometry of steel all become part of a larger narrative about duty, survival, and human resilience under pressure.`,
       `Each image here works through the logic of the <strong>One-Image Movie™</strong> — a single frame weighted with unresolved narrative, where what happened moments before and what may happen next remain powerfully present.`,
       `The result is WWII fine art photography that asks the viewer to do more than look. It asks the viewer to stand inside the moment and feel the cost of it.`

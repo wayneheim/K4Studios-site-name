@@ -1,5 +1,5 @@
 export const landingWestern: any = {
-  title: "Civil War Portraits — Historical Photography by Wayne Heim",
+  title: "Civil War Portraits - Historically Themed Fine Art Photography by Wayne Heim",
   subtitle: "American Civil War portrait photography and reenactment art by Wayne Heim",
   description: "Civil War portraits and painterly reenactment photography by Wayne Heim, focused on the people, sacrifice, and history of the era.",
 

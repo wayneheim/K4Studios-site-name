@@ -135,7 +135,7 @@ export const oneImageMoviePage = {
     {
       subhead: "The Role of One-Image Movies™ Across K4 Studios",
       paragraphs: [
-        `Nearly every major gallery in the K4 portfolio contains works built with the One-Image Movie™ philosophy. That thread is especially visible in <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Facing History</a>, where Western and historical images carry consequence beyond the frame.`,
+        `Nearly every major gallery in the K4 portfolio contains works built with the One-Image Movie™ philosophy. That thread is especially visible in <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Facing History</a>, where historically themed fine art photography carries consequence beyond the frame.`,
         `It remains present in <a href="/Galleries/Painterly-Fine-Art-Photography/Landscapes">Landscapes</a>, where atmosphere, memory, and silence become the story rather than the backdrop.`,
         `Within the broader narrative system of the site, it also connects directly to <a href="/Narrative-Western-Art">Narrative Western Art</a>, where story becomes the organizing principle rather than a byproduct of subject matter.`
       ]

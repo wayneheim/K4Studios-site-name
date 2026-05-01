@@ -52,7 +52,7 @@ export const painterlyStory = [
   {
     subhead: "Facing History — Where Memory Walks Beside You",
     paragraphs: [
-      "Civil War. WWII. Historical reenactment photography. The echo of who we were—and who we still are.",
+      "Civil War. WWII. Historically themed fine art photography. The echo of who we were—and who we still are.",
       "History isn’t past. It lingers in fabric, posture, smoke, steel—the way a man carries the weight of a century in his shoulders.",
       "These aren’t reenactments. They are resurrections—intimate, human, unguarded. A painterly approach to historical portraiture that speaks with the gravity of lived experience.",
       "For collectors who want their walls to carry a heartbeat. Step inside the Facing History series."
@@ -117,7 +117,7 @@ export const painterlyStory = [
       "<a href='/Painterly-Western-Photography'>Painterly Western Photography</a> — Craft, Light & Narrative Discipline",
       "<a href='/Galleries/Fine-Art-Photography'>Traditional Fine Art Photography</a> — Classical Landscapes, Portraits & Transportation",
       "Painterly Landscape Photography — Mountains, Waterfalls, Western Horizons",
-      "Facing History — Civil War, WWII, Historical Reenactment Photography",
+      "<a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History'>Facing History</a> — historically themed fine art photography across Civil War, WWII, Western frontier, and Roaring 20s stories",
       "One-Image Movies™ — The signature K4 cinematic storytelling experience",
       "Engrained Series — Fine art wood prints that breathe with grain and story"
     ],

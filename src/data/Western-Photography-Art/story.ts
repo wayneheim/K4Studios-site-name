@@ -84,7 +84,7 @@ export const westernArtStory = [
     subhead: "Step Into the Stories of the American West",
     paragraphs: [
       "The collections above lead into the frontier era that shaped the mythology of the American West.",
-      "From there <a href=\"/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier\">Facing History</a> opens into galleries where individual stories unfold across a wider historical landscape—moments of tension, survival, and character that formed the foundation of the Western legend.",
+      "From there <a href=\"/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier\">Facing History</a> opens into historically themed fine art photography where individual stories unfold across a wider historical landscape—moments of tension, survival, and character that formed the foundation of the Western legend.",
       "These are not galleries you browse.",
       "They are rooms you enter."
     ]

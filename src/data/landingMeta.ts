@@ -206,33 +206,33 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
 
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History": {
     ogTitle:
-      "Historical Photography | Western, Civil War, WWII, and Roaring 20s by Wayne Heim",
+      "Facing History | Historically Themed Fine Art Photography by Wayne Heim",
     ogDescription:
-      "Historical fine art photography by Wayne Heim featuring Western frontier portraits, Civil War imagery, WWII photography, and Roaring 20s character studies.",
+      "Historically themed fine art photography by Wayne Heim, interpreting the Western frontier, Civil War, WWII, and Roaring 20s through researched detail, real subjects, painterly craft, and story-driven visual narrative.",
     ogImage: "/og/facing-history.jpg",
     ogType: "website",
     twitterCard: "summary_large_image",
     twitterTitle:
-      "Historical Photography | Western, Civil War, WWII, and Roaring 20s",
-    keywords: "historical photography, historical fine art photography, historical portraiture, Facing History, Civil War photography, WWII photography, Roaring 20s portraits, Western frontier photography, Wayne Heim",
+      "Facing History | Historically Themed Fine Art Photography",
+    keywords: "historically themed fine art photography, historically themed photography, history themed photography, history inspired photography, historically inspired photography, Facing History, Civil War portraits, WWII fine art photography, Roaring 20s portraits, Western frontier photography, Wayne Heim",
     twitterDescription:
-      "Painterly historical photography spanning the American West, Civil War, WWII, and the Roaring 20s.",
+      "Painterly, history inspired fine art photography spanning the American West, Civil War, WWII, and the Roaring 20s.",
     twitterImage: "/og/facing-history.jpg",
   },
 
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits": {
     ogTitle:
-      "Civil War Portraits | Historical Photography by Wayne Heim",
+      "Civil War Portraits | Historically Themed Fine Art Photography by Wayne Heim",
     ogDescription:
-      "Civil War portraits and painterly reenactment photography by Wayne Heim, focused on soldiers, sacrifice, and the human history of the era.",
+      "Historically themed Civil War fine art photography by Wayne Heim, focused on soldiers, sacrifice, researched period detail, and the human history of the era.",
     ogImage: "/og/civilwar.jpg",
     ogType: "website",
     twitterCard: "summary_large_image",
     twitterTitle:
-      "Civil War Portraits | Photography by Wayne Heim",
+      "Civil War Portraits | Historically Themed Photography",
     twitterDescription:
-      "Civil War portraits and historical reenactment photography by Wayne Heim.",
-    twitterImage: "/og/civilwar.jpg",    keywords: "Civil War photography, Civil War portraits, Civil War fine art, historical Civil War photography, Civil War reenactment photography, Wayne Heim",  },
+      "Civil War portraits and historically themed fine art photography by Wayne Heim.",
+    twitterImage: "/og/civilwar.jpg",    keywords: "Civil War photography, Civil War portraits, Civil War fine art, historically themed photography, Civil War reenactment photography, Wayne Heim",  },
 
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits": {
     ogTitle:

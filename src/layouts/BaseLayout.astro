@@ -20,6 +20,7 @@ const {
   title = 'Gallery',
   structuredDataJSON,
   breadcrumbsJSON,
+  extraStructuredDataJSON,
   meta = {},
   description,
   preloadImage
@@ -224,6 +225,17 @@ const ogImageType = meta.ogImageType || inferMimeType(ogImage) || 'image/jpeg';
 const twitterCard = meta.twitterCard || (twitterImage ? 'summary_large_image' : 'summary');
 const normalizedStructuredDataJSON = normalizeK4Host(structuredDataJSON);
 const normalizedBreadcrumbsJSON = normalizeK4Host(breadcrumbsJSON);
+const normalizedExtraStructuredDataJSON = Array.isArray(extraStructuredDataJSON)
+  ? extraStructuredDataJSON.map(normalizeK4Host)
+  : (extraStructuredDataJSON ? [normalizeK4Host(extraStructuredDataJSON)] : []);
+const jsonLdScripts = [
+  normalizedStructuredDataJSON,
+  normalizedBreadcrumbsJSON,
+  ...normalizedExtraStructuredDataJSON,
+]
+  .filter(Boolean)
+  .map((json) => `<script type="application/ld+json">${json}</script>`)
+  .join('\n');
 ---
 
 <!DOCTYPE html>
@@ -234,7 +246,7 @@ const normalizedBreadcrumbsJSON = normalizeK4Host(breadcrumbsJSON);
     <title>{cleanTitle}</title>
     <meta name="description" content={seoDescription} />
     <meta name="author" content="Wayne Heim" />
-    <meta name="copyright" content="© Wayne Heim, K4 Studios" />
+    <meta name="copyright" content="Copyright Wayne Heim, K4 Studios" />
     <meta name="creator" content="Wayne Heim" />
     {robotsContent && <meta name="robots" content={robotsContent} />}
     {emitCanonical && <link rel="canonical" href={canonicalUrl} />}
@@ -249,8 +261,8 @@ const normalizedBreadcrumbsJSON = normalizeK4Host(breadcrumbsJSON);
       </style>
     </noscript>
 
-    {normalizedStructuredDataJSON && <script type="application/ld+json" set:html={normalizedStructuredDataJSON}></script>}
-    {normalizedBreadcrumbsJSON && <script type="application/ld+json" set:html={normalizedBreadcrumbsJSON}></script>}
+    <Fragment set:html={jsonLdScripts} />
+    <slot name="head" />
 
     <!-- ✅ OG / Twitter -->
     <meta property="og:title" content={cleanTitle} />

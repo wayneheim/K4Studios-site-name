@@ -1,0 +1,450 @@
+---
+/**
+ * What Is Historically Themed Photography?
+ *
+ * Purpose: define the parent category behind Facing History.
+ * This page clarifies that "historically themed" refers to subject, story,
+ * and authorship - not the age of the photograph.
+ */
+export const prerender = true;
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import LandingHeader from "@/components/Landing-Header.jsx";
+import SiteFooter from "@/components/Footer.astro";
+import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
+import { getBreadcrumbList, getStructuredData } from "@/components/utils/getStructuredData.ts";
+
+import "@/styles/global.css";
+
+const sectionPath = "/Blog/what-is-historically-themed-photography";
+const canonicalUrl = "https://www.k4studios.com/Blog/what-is-historically-themed-photography";
+
+const getProxySrc = (id: string, size: string) => `/img/${id}/${size}.jpg`;
+const getAbsoluteProxySrc = (id: string, size: string) => `https://www.k4studios.com/img/${id}/${size}.jpg`;
+
+const headerImages = [
+  {
+    id: "i-8BbMZjs",
+    alt: "Western frontier portrait used as historically themed fine art photography",
+  },
+  {
+    id: "i-C5ZGjMH",
+    alt: "Civil War portrait interpreted through historically themed fine art photography",
+  },
+  {
+    id: "i-pd3hvNk",
+    alt: "World War II living history scene interpreted as history inspired photography",
+  },
+  {
+    id: "i-tpvJWLm",
+    alt: "Roaring 20s portrait interpreted as historically themed photography",
+  },
+];
+
+const examples = [
+  {
+    id: "i-8BbMZjs",
+    src: getProxySrc("i-8BbMZjs", "l"),
+    alt: "Painterly Western portrait grounded in research, living history, and frontier narrative",
+    caption: "Western frontier - history as lived character and myth under pressure",
+    href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-8BbMZjs",
+  },
+  {
+    id: "i-C5ZGjMH",
+    src: getProxySrc("i-C5ZGjMH", "l"),
+    alt: "Civil War portrait using historically themed fine art photography to explore command and consequence",
+    caption: "Civil War - restraint, responsibility, and the human cost of conflict",
+    href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-C5ZGjMH",
+  },
+  {
+    id: "i-pd3hvNk",
+    src: getProxySrc("i-pd3hvNk", "l"),
+    alt: "World War II themed fine art photography built from real reenactors and period detail",
+    caption: "World War II - machinery, service, fatigue, and memory",
+    href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-pd3hvNk",
+  },
+  {
+    id: "i-tpvJWLm",
+    src: getProxySrc("i-tpvJWLm", "l"),
+    alt: "Roaring 20s portrait showing history themed photography beyond archival documentation",
+    caption: "Roaring 20s - glamour, tension, and consequence in a changing age",
+    href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-tpvJWLm",
+  },
+];
+
+const pageTitle = "What Is Historically Themed Photography? Definition and Examples";
+const pageDescription = "Historically themed photography is contemporary fine art photography that interprets people, eras, and events from the past through research, real subjects, period detail, and visual storytelling.";
+
+const structuredImageUrls = examples.map((image) => getAbsoluteProxySrc(image.id, "l"));
+
+const breadcrumbStructuredData = getBreadcrumbList(
+  [
+    { name: "Home", item: "https://www.k4studios.com" },
+    { name: "Blog", item: "https://www.k4studios.com/Blog" },
+    { name: "Historically Themed Photography", item: canonicalUrl },
+  ],
+  `${canonicalUrl}#breadcrumb`
+);
+
+const structuredData = getStructuredData({
+  type: "Article",
+  data: {
+    headline: "What Is Historically Themed Photography?",
+    description: pageDescription,
+    url: canonicalUrl,
+    image: structuredImageUrls,
+    copyrightNotice: "Copyright Wayne Heim",
+    author: {
+      "@type": "Person",
+      name: "Wayne Heim",
+    },
+    datePublished: "2026-05-01",
+    articleSection: "Photography",
+    definedTerm: {
+      name: "Historically Themed Photography",
+      description: pageDescription,
+    },
+    keywords: [
+      "historically themed photography",
+      "historically themed fine art photography",
+      "history themed photography",
+      "history inspired photography",
+      "historically inspired photography",
+      "Facing History",
+    ],
+  },
+  defaults: {
+    copyrightNotice: "Copyright Wayne Heim",
+    license: "https://k4studios.com/copyright",
+    creditText: "Wayne Heim",
+    creatorName: "Wayne Heim",
+    creatorUrl: "https://k4studios.com/",
+  },
+});
+
+const meta = {
+  description: pageDescription,
+  keywords: "historically themed photography, historically themed fine art photography, history themed photography, history inspired photography, historically inspired photography, Facing History",
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogType: "article",
+  ogUrl: canonicalUrl,
+  ogImage: getAbsoluteProxySrc("i-C5ZGjMH", "l"),
+  twitterTitle: pageTitle,
+  twitterDescription: pageDescription,
+  twitterUrl: canonicalUrl,
+  twitterImage: getAbsoluteProxySrc("i-C5ZGjMH", "l"),
+  twitterCard: "summary_large_image",
+};
+
+const faqStructuredData = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is historically themed photography?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Historically themed photography is contemporary fine art photography that interprets people, eras, and events from the past through research, real subjects, period detail, and visual storytelling. The historical element is the subject and story, not the age of the photograph.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How is historically themed photography different from historical photography?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Historical photography often refers to antique, archival, documentary, or historically significant photographs. Historically themed photography is new work made today that uses history as subject matter for authored fine art.",
+      },
+    },
+  ],
+});
+
+const blogBreadcrumb = `Other &rsaquo; <a href='/Blog' style='color: inherit; text-decoration: none;' onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Blog</a> &rsaquo; Historically Themed Photography`;
+---
+
+<BaseLayout
+  title={pageTitle}
+  structuredDataJSON={structuredData}
+  breadcrumbsJSON={breadcrumbStructuredData}
+  extraStructuredDataJSON={faqStructuredData}
+  meta={meta}
+>
+  <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
+    <div class="drawer-mode">
+      <LandingHeader client:load breadcrumb={blogBreadcrumb} />
+    </div>
+
+    <section class="header-image-bar">
+      <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History" class="header-bar-link" aria-label="Explore Facing History">
+        <div class="header-bar-container">
+          {headerImages.map((img, index) => (
+            <div class={`header-bar-image pos-${index}`}>
+              <img
+                src={getProxySrc(img.id, "l")}
+                alt={img.alt}
+                loading={index === 0 ? "eager" : "lazy"}
+              />
+            </div>
+          ))}
+        </div>
+      </a>
+    </section>
+
+    <section style="text-align:center; padding:2rem 1rem 2rem;">
+      <h1 style="font-size:2.35rem; font-weight:700; margin-bottom:0.5rem; line-height:1.2;">
+        What Is Historically Themed Photography?
+      </h1>
+      <p style="font-size:1.18rem; color:#666; font-style:italic;">
+        History as subject, story, and fine art interpretation
+      </p>
+      <p style="font-size:0.95rem; color:#888; margin-top:0.75rem; letter-spacing:0.02em;">
+        A working definition for collectors, curators, living historians, and serious viewers
+      </p>
+    </section>
+
+    <section class="story-section max-w-[860px] mx-auto px-4">
+      <article class="story-block space-y-4">
+
+        <p><strong>Historically themed photography is contemporary fine art photography that interprets people, eras, and events from the past through research, real subjects, period detail, and visual storytelling. It is not archival historical photography, costume portraiture, or reenactment documentation alone. The historical element is the subject and story, not the age of the photograph.</strong></p>
+
+        <p>It is defined by the subject, the historical imagination behind it, and the artistic authorship used to make the past feel present.</p>
+
+        <p>That distinction matters because the phrase <em>historical photography</em> often points toward antique photographs, archival images, documentary records, or famous photographs from history. Historically themed photography is different. The photograph may be made today, but the work engages history as living material.</p>
+
+        <p>At K4 Studios, that idea comes together most clearly in <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History" style="color:#8b5a2b; text-decoration:underline;">Facing History - historically themed fine art photography</a>, Wayne Heim's collection spanning the Western frontier, Civil War, World War II, and the Roaring 20s.</p>
+
+        <div class="early-funnel" style="background:#f8f6f3; border-left:4px solid #8b5a2b; padding:1.25rem 1.5rem; margin:2rem 0; border-radius:0 8px 8px 0;">
+          <p style="margin:0; font-size:1.05rem;">
+            To see the definition in practice, enter <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History" style="color:#8b5a2b; font-weight:600; text-decoration:underline;">Facing History</a>, the main collection of K4's historically themed fine art photography.
+          </p>
+        </div>
+
+        <div class="section-heading-with-line">
+          <h2>What Historically Themed Photography Is</h2>
+        </div>
+
+        <p>Historically themed photography uses the visual language of the past without pretending to be a surviving artifact from that past. It can draw from living historians, reenactors, period settings, researched clothing, military equipment, frontier tools, Jazz Age styling, or other historical references.</p>
+
+        <p>The strongest work is not about costume alone. It is about the human pressure inside the era: duty, survival, authority, fear, pride, grief, resilience, and memory.</p>
+
+        <p>In Wayne Heim's work, the image is built as a <a href="/Other/One-Image-Movie" style="color:#8b5a2b; text-decoration:underline;">One-Image Movie</a> - a single frame that implies what came before and what may follow. The historical details support the story, but the story is carried by posture, light, expression, silence, and restraint.</p>
+
+        <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 1.5rem;">
+          <li style="margin-bottom:0.5rem;"><strong>Research-based</strong> - grounded in real eras, material culture, and lived context</li>
+          <li style="margin-bottom:0.5rem;"><strong>Contemporary</strong> - made today as authored fine art, not discovered as archive</li>
+          <li style="margin-bottom:0.5rem;"><strong>Story-driven</strong> - built to suggest consequence, not just describe clothing</li>
+          <li style="margin-bottom:0.5rem;"><strong>Painterly</strong> - shaped through light, tone, texture, and print-minded composition</li>
+          <li><strong>Human-centered</strong> - focused on people inside history rather than history as scenery</li>
+        </ul>
+
+        <div class="section-heading-with-line">
+          <h2>What It Is Not</h2>
+        </div>
+
+        <p><strong>It is not archival historical photography.</strong><br />An archival photograph is historically valuable because it comes from the past or documents a real historical moment. Historically themed photography may be created now, using history as subject and source.</p>
+
+        <p><strong>It is not reenactment documentation alone.</strong><br />Reenactment photography can document events, battles, camps, or demonstrations. Historically themed fine art photography may use living history as a starting point, but the finished image is authored as art.</p>
+
+        <p><strong>It is not costume portraiture.</strong><br />Clothing can be accurate and still be empty. The goal is not to dress someone up. The goal is to create a believable encounter with a person, pressure, and moment.</p>
+
+        <p><strong>It is not AI nostalgia.</strong><br />The K4 approach depends on real people, real locations, researched objects, intentional light, and the unpredictable authority of lived presence.</p>
+
+        <div class="section-heading-with-line">
+          <h2>Examples Across Facing History</h2>
+        </div>
+
+        <div class="example-images">
+          {examples.map((image) => (
+            <figure>
+              <a href={image.href}>
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  loading="lazy"
+                />
+              </a>
+              <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
+                {image.caption}
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+
+        <div class="section-heading-with-line">
+          <h2>How K4 Studios Approaches It</h2>
+        </div>
+
+        <p>Wayne Heim's historically themed photography begins with living people, not stock nostalgia. Reenactors and living historians bring knowledge into the frame: how a hat sits after a long day, how a soldier stands when fatigue has become normal, how a woman in a charged era occupies space without announcing herself.</p>
+
+        <p>That living knowledge matters. As Wayne wrote in a Legends of America feature on living historians and the American West, the real power of these encounters is that history becomes a conversation between generations, not a distant museum label.</p>
+
+        <p>The photograph then moves beyond record. Light is sculpted. Texture is controlled. The frame is built for narrative pressure. The result is history inspired photography that feels researched but not academic, cinematic but not theatrical, and emotionally present without becoming sentimental.</p>
+
+        <div class="section-heading-with-line">
+          <h2>How It Differs From Historical Reenactment Photography</h2>
+        </div>
+
+        <p><a href="/Historical-Reenactment-Photography" style="color:#8b5a2b; text-decoration:underline;">Historical reenactment photography</a> is the adjacent practice. It centers living history events, reenactors, encampments, demonstrations, and public interpretation.</p>
+
+        <p>Historically themed fine art photography is the broader artistic category. It may begin at a reenactment, but it does not end there. It uses historical material as the foundation for authored narrative artwork.</p>
+
+        <p>That is why Facing History can move from the American frontier to Civil War portraits, World War II scenes, and Roaring 20s character studies without changing its core identity. The time period changes. The artistic premise does not.</p>
+
+        <p>The same idea carries into <a href="/Other/K4-Select-Series/Engrained" style="color:#8b5a2b; text-decoration:underline;">Engrained historical works</a>, where select Facing History images are printed on Baltic Birch so the material surface becomes part of the historical presence. The wood grain does not replace the story; it deepens the sense that memory, craft, and image are bound together.</p>
+
+        <div class="section-heading-with-line">
+          <h2>Why the Term Matters</h2>
+        </div>
+
+        <p>Collectors and search engines both need clearer language here. If everything is called historical photography, contemporary fine art can be mistaken for archive, documentary, or history-of-photography content.</p>
+
+        <p><strong>Historically themed photography</strong> names the actual category: new fine art made from historical subject matter, research, and human storytelling.</p>
+
+        <p><strong>History inspired photography</strong> and <strong>history themed photography</strong> are useful variants, but the strongest phrase for K4 Studios is <strong>historically themed fine art photography</strong> because it holds all three parts together: the historical subject, the authored theme, and the fine art standard.</p>
+
+        <div style="background:#f9f7f4; padding:2rem; border-radius:8px; margin-top:2.5rem; text-align:center;">
+          <h3 style="font-size:1.25rem; font-weight:700; margin-bottom:0.75rem;">Explore Historically Themed Fine Art Photography</h3>
+          <p style="margin-bottom:1.25rem; color:#555;">
+            Move into Facing History to see Western frontier portraits, Civil War studies, WWII scenes, and Roaring 20s imagery shaped through research, restraint, and story.
+          </p>
+          <a
+            href="/Galleries/Painterly-Fine-Art-Photography/Facing-History"
+            style="display:inline-block; background:#8b5a2b; color:#fff; padding:0.75rem 2rem; border-radius:8px; text-decoration:none; font-weight:600;"
+          >
+            View Facing History
+          </a>
+        </div>
+
+        <p style="font-size:0.9rem; color:#666; margin-top:1.5rem;">
+          Related reading: <a href="/Glossary" style="color:#8b5a2b; text-decoration:underline;">K4 Studios Glossary</a> and <a href="https://www.legendsofamerica.com/keeping-the-frontier-alive/" target="_blank" rel="noopener" style="color:#8b5a2b; text-decoration:underline;">Keeping the Frontier Alive: Living Historians and the Art of The American West</a>.
+        </p>
+      </article>
+    </section>
+
+    <WesternDefinitions variant="definition" currentPage={15} />
+
+    <SiteFooter />
+  </main>
+</BaseLayout>
+
+<style>
+  .header-image-bar {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    background: #1f1b18;
+  }
+
+  .header-bar-link,
+  .header-bar-container {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .header-bar-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .header-bar-image {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .header-bar-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: saturate(0.95) contrast(1.05);
+  }
+
+  .header-bar-container::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(0,0,0,0.22), transparent 18%, transparent 82%, rgba(0,0,0,0.22));
+    pointer-events: none;
+  }
+
+  .section-heading-with-line {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .section-heading-with-line h2 {
+    margin: 0;
+    padding-right: 1rem;
+    white-space: nowrap;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #2c2c2c;
+  }
+
+  .section-heading-with-line::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #ddd;
+  }
+
+  .example-images {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0 2rem;
+  }
+
+  .example-images figure {
+    margin: 0;
+  }
+
+  .example-images img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.16);
+  }
+
+  @media (max-width: 760px) {
+    .header-image-bar {
+      height: 240px;
+    }
+
+    .header-bar-container {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .section-heading-with-line {
+      display: block;
+    }
+
+    .section-heading-with-line h2 {
+      white-space: normal;
+      padding-right: 0;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-heading-with-line::after {
+      display: block;
+      width: 100%;
+    }
+
+    .example-images {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 480px) {
+    .example-images {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

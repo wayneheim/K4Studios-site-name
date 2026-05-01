@@ -9,8 +9,9 @@ export const facingHistoryStory = [
       "These works are not casual recreations or costume-driven portraits. They are story-built studies shaped with painterly craft, researched authenticity, and the disciplined eye of a medical illustrator turned cinematic storyteller. The work begins with understanding — the real lives, the real stakes, the choices that built the framework legend was later draped over. Only from that foundation does interpretation follow.",
       "Across the collection, history is treated not as static subject matter but as lived narrative, with each image opening outward into what came before the moment and what may follow after it.",
       "At its best, the work closes the distance between viewer and history until the past stops feeling observed and starts feeling present.",
+      "For the category definition behind this work, see <a href=\"/Blog/what-is-historically-themed-photography\">What Is Historically Themed Photography?</a>.",
       "Many portraits function as <strong>One-Image Movies™</strong> — single frames constructed with the emotional gravity of a complete story arc. A breath before a decision. A pause weighted with consequence. These are moments still in motion, inviting the viewer to step inside the narrative.",
-      "For collectors of painterly fine art, historically themed portraiture, and story-rich reenactment photography, Facing History offers a curated journey into worlds that feel both familiar and newly alive."
+      "For collectors of painterly fine art, historically themed photography, history inspired portraiture, and story-rich living history imagery, Facing History offers a curated journey into worlds that feel both familiar and newly alive."
     ]
   },
 
@@ -96,7 +97,7 @@ export const facingHistoryStory = [
 
   // 8: WHY IT MATTERS
   {
-    subhead: "Why Story-Driven Historical Photography Matters",
+    subhead: "Why Story-Driven, Historically Themed Photography Matters",
     paragraphs: [
       "In an era dominated by speed, automation, and AI-generated imagery, Facing History insists on the human hand. Every subject is real. Every detail is researched. Every shadow is earned.",
       "Rooted in the Pictorialist tradition and shaped by Wayne’s background in medical illustration, these works sculpt emotion, tension, and restraint until a single image carries narrative gravity.",

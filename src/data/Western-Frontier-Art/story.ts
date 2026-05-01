@@ -84,7 +84,7 @@ export const frontierArtStory = [
     subhead: "Step Into the Frontier Story",
     paragraphs: [
       "The collections above lead into the historical world that shaped the mythology of the American West.",
-      "From there <a href=\"/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier\">Facing History</a> opens into galleries where individual stories unfold through tension, survival, endurance, and character.",
+      "From there <a href=\"/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier\">Facing History</a> opens into historically themed frontier photography where individual stories unfold through tension, survival, endurance, and character.",
       "These are not galleries you browse.",
       "They are rooms you enter."
     ]

@@ -9,6 +9,7 @@ export const westernStory = [
     paragraphs: [
       `Most people think they know the Wild West: the rider on the horizon, the lawman in the street, the silhouette cut clean against dust and sunset. But what Hollywood and dime store novels really gave us are the legends.`,
       `The West wasn't built by symbols, it created them. Beneath these lives, hidden amongst their framework, are countless stories of labor, endurance, loss and sacrifice made by the people history rarely stopped long enough to recognize, let alone long enough to name.`,
+      `This section is part of K4's <a href="/Blog/what-is-historically-themed-photography">historically themed photography</a> framework: contemporary fine art that interprets the past through research, real subjects, period detail, and story.`,
       `This is the core of Wayne Heim's contemporary western art — the human structure beneath the legend, where a weathered face, a held breath, or the aftermath of a choice can carry more truth than the icon alone.`
     ]
   },

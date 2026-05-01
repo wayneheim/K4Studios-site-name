@@ -451,7 +451,7 @@ export const faqItems = [
   {
     q: 'Is this page the same thing as Facing History?',
     a: [
-      'No. This is a curated collection-facing route into the broader <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Facing History</a> series. It is built to make the historical branches legible quickly, then push visitors toward the main hub once they know where they want to go deeper.',
+      'No. This is a curated collection-facing route into the broader <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Facing History</a> historically themed fine art photography series. It is built to make the historical branches legible quickly, then push visitors toward the main hub once they know where they want to go deeper.',
     ],
   },
   {
@@ -487,8 +487,8 @@ export const faqItems = [
 ];
 
 export const pageMeta = {
-  title: 'Facing History Series | Historical Fine Art Photography by Wayne Heim - K4 Studios',
-  description: 'The Facing History Series by Wayne Heim is a historical fine art photography collection moving through Wild West, Civil War, World War II, and Roaring Twenties work shaped by story, atmosphere, and historical memory.',
+  title: 'Facing History Series | Historically Themed Fine Art Photography by Wayne Heim - K4 Studios',
+  description: 'The Facing History Series by Wayne Heim is a historically themed fine art photography collection moving through Wild West, Civil War, World War II, and Roaring Twenties work shaped by story, atmosphere, and historical memory.',
 };
 
 export const structuredAbout = [

@@ -136,12 +136,15 @@ printOptions: {
 },
 facingHistory: {
   path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History",
-  def: "An ongoing series that blends living history and painterly craft into character-driven portraiture.",
+  def: "Facing History is Wayne Heim's historically themed fine art photography series, blending research, real subjects, living history, and painterly craft into character-driven visual narratives.",
 
   landingPhrases: [
     // Primary, high-authority terms (WritingBrain core)
     { phrase: "Facing History", rating: 5, use: true },
-    { phrase: "historical portraiture", rating: 5, use: true },
+    { phrase: "Facing History historically themed fine art photography collection", rating: 5, use: true },
+    { phrase: "historically themed fine art photography collection", rating: 5, use: true },
+    { phrase: "K4 Studios historically themed fine art photography collection", rating: 5, use: true },
+    { phrase: "historical portraiture", rating: 4, use: true },
     { phrase: "story-driven historical photography", rating: 5, use: true },
     { phrase: "moments from history", rating: 5, use: true },
     { phrase: "Step inside the story", rating: 5, use: true },
@@ -431,15 +434,19 @@ painterlyPhotographyStyle: {
 },
 
 historicallyThemedPhotography: {
-  path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History",
-  def: "Historically themed photography captures eras, events, and figures from the past through a fine art lens—grounded in research, lived experience, and visual storytelling rather than costume spectacle or historical kitsch.",
+  path: "/Blog/what-is-historically-themed-photography",
+  def: "Historically themed photography is contemporary fine art photography that interprets people, events, and eras from the past through research, real subjects, period detail, and visual storytelling. At K4 Studios, it is treated as lived narrative - not archival historical photography, costume spectacle, or AI-generated nostalgia.",
   landingPhrases: [
     { phrase: "historically themed photography", rating: 9, use: true },
+    { phrase: "historically themed fine art photography", rating: 9, use: true },
     { phrase: "historically themed art", rating: 8, use: true },
     { phrase: "historically themed fine art", rating: 7, use: true },
     { phrase: "historically themed wall art", rating: 7, use: true },
     { phrase: "historical themed photography", rating: 8, use: true },
     { phrase: "history themed photography", rating: 7, use: true },
+    { phrase: "history inspired photography", rating: 8, use: true },
+    { phrase: "historically inspired photography", rating: 8, use: true },
+    { phrase: "historical fine art photography", rating: 6, use: true },
   ],
 },
 

@@ -20,6 +20,7 @@ export const westernStory = [
     tagline: "Not costume. Not archetype. Presence.",
     paragraphs: [
       `Some portraits lean toward quiet strength. Others hold tension just beneath the surface. The strongest do both. These are not portraits built around costume or archetype. They are built around people.`,
+      `As part of K4's <a href="/Blog/what-is-historically-themed-photography">historically themed photography</a> framework, these Western portraits use research, real subjects, and period detail as the foundation for authored fine art rather than reenactment documentation.`,
       `The cowboy, the drifter, the frontier woman, the laborer — each one approached not as a symbol, but as a presence shaped by time and pressure. What matters is not who they represent, but what they carry.`,
     ]
   },

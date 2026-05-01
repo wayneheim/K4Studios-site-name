@@ -13,7 +13,7 @@
 
 interface Props {
   variant?: "index" | "definition" | "post";
-  currentPage?: number; // 1-14, used to highlight current page in definition variant
+  currentPage?: number; // 1-15, used to highlight current page in definition variant
 }
 
 const { variant = "post", currentPage } = Astro.props;
@@ -116,6 +116,13 @@ const cornerstonePages = [
     title: "What Is Visual Storytelling in Photography?",
     description: "How a photograph moves beyond description and begins carrying story",
     group: "narrative"
+  },
+  {
+    number: 15,
+    href: "/Blog/what-is-historically-themed-photography",
+    title: "What Is Historically Themed Photography?",
+    description: "History as subject, story, and fine art interpretation",
+    group: "disciplines"
   }
 ];
 
@@ -182,6 +189,11 @@ const cornerstonePages = [
           <span class="num">8</span>
           <h3>What Is Cowboy Fine Art Photography?</h3>
           <p>Authored portraiture - craft, narrative, and psychological depth</p>
+        </a>
+        <a href="/Blog/what-is-historically-themed-photography" class="card">
+          <span class="num">15</span>
+          <h3>What Is Historically Themed Photography?</h3>
+          <p>History as subject, story, and fine art interpretation</p>
         </a>
       </div>
     </section>

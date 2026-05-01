@@ -28,6 +28,7 @@
     "gen:image-sitemaps": "node scripts/generate-image-sitemaps.mjs",
     "gen:sitemap:matches": "node scripts/generate-sitemap-matches.mjs",
     "gen:story-slider": "node scripts/generate-story-slider-data.cjs",
+    "audit:local:historically-themed": "node scripts/audit-local-page.mjs http://127.0.0.1:8787/Blog/what-is-historically-themed-photography",
     "populate-archive": "node scripts/populate-archive.cjs",
     "preview": "npm run build && wrangler dev",
     "deploy": "npm run build && wrangler deploy",

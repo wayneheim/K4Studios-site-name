@@ -64,7 +64,7 @@ export const contemporaryWesternArtStory = [
     subhead: "Enter the Contemporary West",
     paragraphs: [
       "The collections above lead into a contemporary interpretation of the American West—one that honors historical depth while remaining visually and emotionally current.",
-      "From there, <a href=\"/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier\">Facing History</a> opens into galleries where contemporary photographic craft carries the Western tradition forward through story, mood, and character.",
+      "From there, <a href=\"/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier\">Facing History</a> opens into historically themed fine art photography where contemporary craft carries the Western tradition forward through story, mood, and character.",
       "The West is not finished.",
       "Its art should not be either."
     ]

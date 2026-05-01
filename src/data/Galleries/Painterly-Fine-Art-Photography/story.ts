@@ -50,6 +50,7 @@ export const painterlyStory = [
     paragraphs: [
       "Facing History is a guiding framework within Wayne Heim’s painterly photography — a commitment to exploring historical moments through human presence rather than spectacle.",
       "These works are intentionally historically themed — created through research, collaboration, and period accuracy — but authored as fine art narratives rather than reenactment documentation. The focus is emotional truth, not literal reconstruction.",
+      "For the parent definition, see <a href=\"/Blog/what-is-historically-themed-photography\">What Is Historically Themed Photography?</a>.",
       "Civil War soldiers caught between duty and doubt. WWII figures shaped by brotherhood and fear. Roaring 20s characters suspended between glamour and consequence."
     ],
     list: [
@@ -104,7 +105,7 @@ export const painterlyStory = [
     subhead: "Choosing Your Path",
     paragraphs: [
       "From here, you may explore painterly Western narratives, historically themed work, landscapes, or compare this approach with traditional fine art photography elsewhere on the site.",
-      "If you want the story-first branch, move into <a href=\"/Narrative-Western-Art\">Narrative Western Art</a>. If you want the present-tense continuation of the tradition, move into <a href=\"/Contemporary-Western-Art\">Contemporary Western Art</a>. <a href=\"/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier\">Facing History</a> remains the core gallery path where those ideas become images.",
+      "If you want the story-first branch, move into <a href=\"/Narrative-Western-Art\">Narrative Western Art</a>. If you want the present-tense continuation of the tradition, move into <a href=\"/Contemporary-Western-Art\">Contemporary Western Art</a>. <a href=\"/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier\">Facing History</a> remains the core historically themed fine art photography path where those ideas become images.",
       "Both disciplines are intentional. This page defines the painterly path."
     ]
   },

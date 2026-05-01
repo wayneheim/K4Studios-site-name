@@ -83,6 +83,8 @@ function sanitizeKeywords(kw: string | string[] | undefined): string | undefined
 function canonicalizeK4Host(value: string): string {
   if (!value || typeof value !== "string") return value;
   return value
+    .replace(/Â©/g, "Copyright")
+    .replace(/©/g, "Copyright")
     .replace(/https?:\/\/(?:www\.)?k4studios\.com/gi, "https://www.k4studios.com")
     .replace(/https%3A%2F%2F(?:www\.)?k4studios\.com/gi, "https%3A%2F%2Fwww.k4studios.com")
     .replace(/https?:\\\/\\\/(?:www\.)?k4studios\.com/gi, "https:\\/\\/www.k4studios.com");
@@ -178,7 +180,7 @@ function buildContextualAbout(data: any, fallback = DEFAULT_GALLERY_ABOUT) {
   if (isPainterly) addAboutTerm(terms, seen, "Thing", "Painterly Fine Art Photography");
   if (isEngrained) addAboutTerm(terms, seen, "Thing", "Engrained Wood Art");
   if (isWestern) addAboutTerm(terms, seen, "Thing", "Western Art");
-  if (isHistorical) addAboutTerm(terms, seen, "Thing", "Historical Photography");
+  if (isHistorical) addAboutTerm(terms, seen, "Thing", "Historically Themed Photography");
   if (isHistorical && isPortrait) addAboutTerm(terms, seen, "Thing", "Historical Portraiture");
 
   const placeChecks: Array<[RegExp, string]> = [
@@ -243,7 +245,7 @@ export function getStructuredData({
   }
 }): string {
   const {
-    copyrightNotice = "© Wayne Heim, www.k4studios.com. All rights reserved.",
+    copyrightNotice = "Copyright Wayne Heim, www.k4studios.com. All rights reserved.",
     license = "https://www.k4studios.com/licensing",
     acquireLicensePage = "https://www.k4studios.com/licensing",
     creditText = "Wayne Heim",
