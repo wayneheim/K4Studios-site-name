@@ -123,17 +123,17 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
   },
 
   "/Pictorialist-Photography": {
-    ogTitle: "Pictorialist Photography | Modern Pictorialism by Wayne Heim",
+    ogTitle: "What Is Pictorialist Photography? Definition & Modern Pictorialism",
     ogDescription:
-      "Pictorialist photography explained from its nineteenth-century roots to modern pictorialism, painterly interpretation, and authored fine art photography by Wayne Heim.",
+      "Pictorialist photography defined: the 19th-century fine art movement, its core traits, major artists, and why modern pictorialism matters again.",
     ogImage: "/og/painterly.jpg",
     ogType: "article",
     twitterCard: "summary_large_image",
-    twitterTitle: "Pictorialist Photography | Modern Pictorialism",
+    twitterTitle: "What Is Pictorialist Photography?",
     twitterDescription:
-      "What pictorialist photography means today, how modern pictorialism works, and how Wayne Heim carries that painterly fine art tradition forward.",
+      "Definition, history, characteristics, and modern relevance of pictorialist photography.",
     twitterImage: "/og/painterly.jpg",
-    keywords: "pictorialist photography, modern pictorialism photography, contemporary pictorialist photography, painterly photography, pictorialism, Wayne Heim",
+    keywords: "pictorialist photography, what is pictorialist photography, pictorialism photography definition, modern pictorialism photography, contemporary pictorialist photography, painterly photography, pictorialism, Alfred Stieglitz, Gertrude Kasebier, Edward Steichen, Wayne Heim",
   },
 
   "/Other/Series": {
@@ -252,18 +252,18 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
 
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits": {
     ogTitle:
-      "Western Cowboy Portraits – Wayne Heim",
+      "Western Cowboy Portraits | Cowboy Photography by Wayne Heim",
     ogDescription:
-      "Western cowboy portraits by Wayne Heim: painterly fine art portraits of frontier characters, Old West figures, and historically grounded subjects of the American West.",
+      "Explore Western cowboy portraits and cowboy photography by Wayne Heim: painterly fine art portraits, frontier characters, Old West figures, and collector prints.",
     ogImage: "https://k4studios.com/img/i-7Mzzbvp/l.jpg",
     ogType: "website",
     twitterCard: "summary_large_image",
     twitterTitle:
-      "Western Cowboy Portraits – Wayne Heim",
+      "Western Cowboy Portraits | Cowboy Photography by Wayne Heim",
     twitterDescription:
-      "Painterly Western cowboy portraits and frontier character studies by Wayne Heim.",
+      "Painterly cowboy portraits, frontier character studies, and fine art photography of the American West.",
     twitterImage: "https://k4studios.com/img/i-7Mzzbvp/l.jpg",
-    keywords: "Western cowboy portraits, Western portrait photography, cowboy portraits, Western cowboy photography, Western fine art photography, Old West photography, Native American portraits, frontier portraits, Wayne Heim",
+    keywords: "Western cowboy portraits, cowboy photography, cowboy portrait photography, Western portrait photography, cowboy portraits, Western cowboy photography, fine art cowboy photography, Old West photography, frontier portraits, Wayne Heim",
   },
 
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West": {

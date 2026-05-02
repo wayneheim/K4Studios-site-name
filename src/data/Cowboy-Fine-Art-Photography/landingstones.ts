@@ -25,13 +25,13 @@ export const landingCowboy = {
   tombstones: [
     {
       title: "Cowboy Portraits in Color",
-      href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier",
+      href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits",
       _thumbSource: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
       thumb: "",
     },
     {
       title: "Black & White Cowboy Photography",
-      href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier",
+      href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits",
       _thumbSource: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White",
       thumb: "",
     },

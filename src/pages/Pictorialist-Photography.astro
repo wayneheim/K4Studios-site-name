@@ -43,7 +43,7 @@ const westernStorySections = westernStory as unknown as StorySection[];
 const mobileCount = westernStorySections.filter((block, i) => i > 0 && block.subhead).length;
 
 const landingDescription =
-  landingWestern.subtitle || (landingWestern as any)?.description || '';
+  (landingWestern as any)?.description || landingWestern.subtitle || '';
 const landingKeywords = Array.isArray((landingWestern as any)?.keywords)
   ? (landingWestern as any).keywords
   : [];
@@ -89,116 +89,112 @@ const featheredImages = getSideImages({
   poolMultiplier: 3
 });
 
-// ðŸŸ© STRUCTURED DATA for this landing (uses all feathered images)
 const structuredData = getStructuredData({
   type: "gallery",
   data: {
     title: landingWestern.title,
     description: landingDescription,
-    url: `https://k4studios.com${pagePath}`,
+    url: `https://www.k4studios.com${pagePath}`,
     keywords: landingKeywords,
-    copyrightNotice: "Â© Wayne Heim"
+    copyrightNotice: "Copyright Wayne Heim"
   },
   images: featheredImages,
   defaults: {
-    copyrightNotice: "Â© Wayne Heim",
-    license: "https://k4studios.com/copyright",
-    acquireLicensePage: "https://k4studios.com/Other/Print-Options",
+    copyrightNotice: "Copyright Wayne Heim",
+    license: "https://www.k4studios.com/copyright",
+    acquireLicensePage: "https://www.k4studios.com/Other/Print-Options",
     creditText: "Wayne Heim",
     creatorName: "Wayne Heim",
-    creatorUrl: "https://k4studios.com/"
+    creatorUrl: "https://www.k4studios.com/"
   }
 });
 
 // ðŸŸ¢ OG/Twitter Meta Helper (auto-fills .ogUrl/.twitterUrl fields)
 const landingMeta = getLandingMeta(pagePath);
-if (!landingMeta.ogUrl) landingMeta.ogUrl = `https://k4studios.com${pagePath}`;
-if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${pagePath}`;
+if (!landingMeta.ogUrl) landingMeta.ogUrl = `https://www.k4studios.com${pagePath}`;
+if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://www.k4studios.com${pagePath}`;
+
+const faqItems = [
+  {
+    question: "What is pictorialist photography?",
+    answer: "Pictorialist photography is a fine art photography movement that began in the late nineteenth century. It treats the photograph as an interpreted artwork shaped by mood, atmosphere, composition, tonal control, and the artist's hand rather than as a mechanical record alone.",
+  },
+  {
+    question: "Who were important pictorialist photographers?",
+    answer: "Important pictorialist photographers and related early art-photography figures include Alfred Stieglitz, Gertrude Kasebier, Edward Steichen, Clarence H. White, F. Holland Day, and Julia Margaret Cameron.",
+  },
+  {
+    question: "What is the connection between pictorialism and painterly photography?",
+    answer: "Painterly photography descends from the pictorialist tradition. Both approaches value atmosphere, interpretation, tonal control, and artistic authorship over literal documentation alone.",
+  },
+  {
+    question: "How is modern pictorialist photography different from filters or AI effects?",
+    answer: "Modern pictorialist photography is built through intentional craft from concept to final print. A filter changes the surface of an image; pictorialism changes the purpose of the photograph by making interpretation, atmosphere, and authorship central.",
+  },
+  {
+    question: "Why does pictorialism matter today?",
+    answer: "Pictorialism matters today because photography is again being pushed beyond documentation. In a world of instant records, automated edits, and AI effects, pictorialism argues for authored photographs that carry mood, story, and fine art presence.",
+  },
+];
+
+function dedupeFaq(items: typeof faqItems) {
+  const seen = new Set<string>();
+  return items.filter((item) => {
+    const key = item.question.trim().toLowerCase();
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
+const faqStructuredData = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": `https://www.k4studios.com${pagePath}#faq`,
+  mainEntity: dedupeFaq(faqItems).map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
+});
+
+const articleStructuredData = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": `https://www.k4studios.com${pagePath}#article`,
+  headline: "What Is Pictorialist Photography? Definition, History, and Modern Pictorialism",
+  author: {
+    "@type": "Person",
+    name: "Wayne Heim",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "K4 Studios",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.k4studios.com/images/k4-logo.png",
+    },
+  },
+  description: "A definition and history of pictorialist photography, including major artists, core characteristics, historic printing methods, and its renewed relevance to modern painterly fine art photography.",
+  mainEntityOfPage: `https://www.k4studios.com${pagePath}`,
+});
 ---
 
-<!-- âœ… JSON-LD Structured Data for SEO -->
+<!-- JSON-LD Structured Data for SEO -->
 
-<!-- âœ… Article Structured Data for topical authority -->
+<!-- Article Structured Data for topical authority -->
 
-<!-- âœ… FAQ Schema for AI citation -->
+<!-- FAQ Schema for AI citation -->
 
 <BaseLayout
   structuredDataJSON={structuredData}
-  title={`${landingWestern.title} â€“ ${landingWestern.subtitle}`}
+  extraStructuredDataJSON={[articleStructuredData, faqStructuredData]}
+  title={`${landingWestern.title} - ${landingWestern.subtitle}`}
   meta={landingMeta}
 >
-
-<script type="application/ld+json" is:inline slot="head">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is pictorialist photography?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Pictorialist photography is an artistic movement that emerged in the late nineteenth century when photographers began rejecting the idea that a camera should simply record reality. Early pictorialists believed photography could function as fine artâ€”capable of mood, interpretation, and emotional storytelling. The movement helped establish photography as a legitimate artistic medium, and modern pictorialist photography continues that tradition today."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How does Wayne Heim's approach differ from the historic Pictorialists?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Wayne fuses traditional pictorialist principlesâ€”mood, texture, narrative intentâ€”with digital technique and a storyteller's eye trained in medical illustration and fine art. The spirit is inherited; the execution is distinctly contemporary."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the connection between pictorialism and painterly photography?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Painterly photography descends directly from the pictorialist tradition. The principles are the sameâ€”atmosphere, interpretation, authorial craftâ€”applied through contemporary tools and artistic vision. Pictorialism gave painterly photography its philosophical foundation and historical credibility."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How is modern pictorialist photography different from filters or AI effects?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Every image is handcrafted from concept to print. There is no shortcut. The painterly quality comes from lived experience, emotional intent, and years of disciplined creative practiceâ€”not a slider or a preset."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Why does pictorialism matter today?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "In a sea of mass-produced images, modern pictorialism is about authorship, vision, and making art that lingersâ€”inviting viewers to pause, look again, and feel something that stays."
-      }
-    }
-  ]
-}
-</script>
-
-
-<script type="application/ld+json" is:inline slot="head">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Pictorialist Photography: From 19th-Century Movement to Modern Painterly Fine Art",
-  "author": {
-    "@type": "Person",
-    "name": "Wayne Heim"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "K4 Studios",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://www.k4studios.com/images/k4-logo.png"
-    }
-  },
-  "description": "An in-depth explanation of pictorialist photography, its historical roots in the 19th century, and how its principles continue today through modern painterly fine art photography.",
-  "mainEntityOfPage": "https://www.k4studios.com/Pictorialist-Photography"
-}
-</script>
 
 
   <main class="bg-[#ffffff] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
@@ -225,7 +221,7 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${pa
           {landingWestern.subtitle}
         </h2>
         <p class="page-summary fade-in reveal-on-scroll">
-          Pictorialist photography began as a fine art movement in the late nineteenth century and continues today through modern pictorialism, where photographers like Wayne Heim use atmosphere, interpretation, and painterly control to create authored images rather than simple records. In the American West, that legacy continues when a single frame is shaped to carry atmosphere, history, and implied story rather than record alone.
+          Pictorialist photography began as a fine art movement in the late nineteenth century, arguing that a photograph could be interpreted, crafted, and finished as art rather than treated as a mechanical record. That argument feels newly relevant now, as photographers again push beyond documentation into authored, painterly, story-driven forms of photographic art.
         </p>
       </div>
     </section>

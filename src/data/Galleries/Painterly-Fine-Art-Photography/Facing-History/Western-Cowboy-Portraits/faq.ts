@@ -3,7 +3,7 @@ export const westernFAQ = [
   {
     q: "What are Western cowboy portraits?",
     a: [
-      `Western cowboy portraits are fine art portraits centered on cowboy subjects within the historical and visual tradition of the American West. Rather than generic Western-themed imagery, they emphasize individual presence, frontier character, and narrative consequence.`,
+      `Western cowboy portraits are fine art portraits centered on cowboy subjects within the historical and visual tradition of the American West. Rather than generic Western-themed imagery, stock cowboy photos, or rodeo coverage, they emphasize individual presence, frontier character, and narrative consequence.`,
       `Wayne Heim’s Western cowboy portraits are painterly, historically grounded, and built for long viewing, linking portraiture to the broader tradition of <a href="/Western-Cowboy-Photography">Western Cowboy Photography</a>.`
     ],
   },
@@ -41,6 +41,14 @@ export const westernFAQ = [
       `Yes. Native American portraits are an essential part of Wayne’s Western themed photography — not an addition, but a foundational voice within the historical narrative of the American West.`,
       `These painterly fine art portraits honor identity, regalia, and presence without symbolism or fantasy, expanding Western art beyond the narrow cowboy myth.`,
       `They are presented alongside cowboy portraits within the <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans">Native Americans</a> collection.`
+    ],
+  },
+
+  {
+    q: "Is this the main cowboy photography gallery at K4 Studios?",
+    a: [
+      `Yes. This Western Cowboy Portraits page is the primary gallery destination for cowboy photography, cowboy portrait photography, and painterly Western portraits by Wayne Heim.`,
+      `Supporting pages such as <a href="/Cowboy-Photography">Cowboy Photography</a>, <a href="/Western-Cowboy-Photography">Western Cowboy Photography</a>, and <a href="/Cowboy-Fine-Art-Photography">Cowboy Fine Art Photography</a> explain the subject from different angles, while this gallery shows the actual body of work.`
     ],
   },
 

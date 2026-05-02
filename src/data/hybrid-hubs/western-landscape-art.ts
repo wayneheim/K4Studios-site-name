@@ -227,7 +227,7 @@ export const featuredReadingItems = [
 export const gridImages = [
   ...selectGridImages(mountainsGallery, mountainsPath, 0, 4, 'Western mountain landscape by Wayne Heim', heroSlideIds),
   ...selectGridImages(waterGallery, waterPath, 0, 4, 'Western water and waterfall landscape by Wayne Heim', heroSlideIds),
-  ...selectGridImages(sunsetsGallery, sunsetsPath, 0, 4, 'Western sunset landscape by Wayne Heim', heroSlideIds),
+  ...selectGridImages(sunsetsGallery, sunsetsPath, 4, 4, 'Western sunset landscape by Wayne Heim', heroSlideIds),
 ];
 
 export const collection = {
@@ -290,7 +290,7 @@ export const collectionGroups = [
         items: selectCollectionPreviewRow(
           sunsetsGallery,
           sunsetsPath,
-          0,
+          4,
           4,
           'Western sunset landscape by Wayne Heim',
           'Sunsets / Color',

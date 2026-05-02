@@ -1,10 +1,13 @@
 export const landingWestern = {
-  title: "Western Portraits — Painterly Fine Art Photography",
+  title: "Western Cowboy Portraits — Painterly Fine Art Photography",
   subtitle: "Faces shaped by the frontier, and what they carry.",
 
   // Keywords used internally for structured data, semantic linking, and contextual SEO
   keywords: [
     "Western portraits",
+    "Western cowboy portraits",
+    "cowboy photography",
+    "cowboy portrait photography",
     "painterly Western portraits",
     "Western fine art photography",
     "Western portrait photography",
@@ -49,7 +52,7 @@ export const landingWestern = {
       onmouseover="this.style.color='darkred'"
       onmouseout="this.style.color='inherit'"
     >Wild West</a>
-    | Western Portraits
+    | Western Cowboy Portraits
   `,
 
   tombstones: [

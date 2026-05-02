@@ -21,6 +21,7 @@ const pageDescription = 'Explore Western photos featuring cinematic cowboy scene
 
 const COWBOY_COLOR_PATH = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color';
 const COWBOY_BW_PATH = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White';
+const COWBOY_PARENT_PATH = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits';
 const WESTERN_NARRATIVES_COLOR_PATH = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color';
 const WESTERN_NARRATIVES_BW_PATH = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White';
 const NATIVE_AMERICANS_COLOR_PATH = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color';
@@ -121,9 +122,9 @@ const relatedLinks = [
     description: 'The primary collection hub for Western fine art photography across subjects and formats.',
   },
   {
-    href: '/Cowboy-Photography',
-    label: 'Cowboy Photography Gallery',
-    description: 'A broader entry point into cowboy images, portraits, and the artistic side of the subject.',
+    href: COWBOY_PARENT_PATH,
+    label: 'Western Cowboy Portraits',
+    description: 'The main cowboy photography gallery: painterly cowboy portraits, frontier characters, and fine art prints.',
   },
   {
     href: '/western-portrait-photography',
@@ -239,6 +240,9 @@ const getProxySrc = (id: string, size: string) => `/img/${id}/${size}.jpg`;
           </p>
           <p>
             Start with the images, then follow the threads deeper into the galleries and stories behind them.
+          </p>
+          <p>
+            For the cowboy portrait branch, start with the <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits">Western Cowboy Portraits</a> gallery.
           </p>
         </div>
       </div>

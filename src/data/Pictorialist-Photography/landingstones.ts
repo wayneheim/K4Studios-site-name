@@ -1,12 +1,14 @@
 export const landingWestern = {
     //Pictorialist Photography
   title: "Pictorialist Photography",
-  subtitle: "From 19th-Century Movement to Modern Painterly Fine Art Photography",
+  subtitle: "Definition, History, and Modern Painterly Fine Art Photography",
    breadcrumb: "Pictorialist Photography",
   description:
-    "Pictorialist photography from its nineteenth-century roots to modern pictorialism, painterly interpretation, and authored fine art photography by Wayne Heim.",
+    "What pictorialist photography is, why the fine art movement mattered, and how modern pictorialism connects to Wayne Heim's painterly photographic art.",
   keywords: [
     "pictorialist photography",
+    "what is pictorialist photography",
+    "pictorialism photography definition",
     "modern pictorialism photography",
     "contemporary pictorialist photography",
     "painterly photography",
