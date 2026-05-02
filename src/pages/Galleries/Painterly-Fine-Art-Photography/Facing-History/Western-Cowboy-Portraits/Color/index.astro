@@ -5,8 +5,6 @@ import { entranceData as ColorEntranceData } from "../../../../../../data/Galler
 
 const match = Astro.url.pathname.match(/\/(i-[a-zA-Z0-9]+)/);
 const initialImageId = match ? match[1] : undefined;
-
-console.log("🔥 initialImageId:", initialImageId); // ✅ Add this
 ---
 
 <GalleryShell

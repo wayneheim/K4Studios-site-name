@@ -33,11 +33,12 @@ const cowboyColorPath = '/Galleries/Painterly-Fine-Art-Photography/Facing-Histor
 const narrativeColorPath = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color';
 const naColorPath = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color';
 const wildWestCollectionPath = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West';
-const frontierCollectionPath = '/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier';
+const frontierCollectionPath = wildWestCollectionPath;
 
 const landingDescription = 'Browse American Western art by Wayne Heim: collector-focused cowboy portraits, Indigenous portrait work, and frontier narrative scenes offered as museum-quality fine art prints.';
 const introLeadParagraphs = americanWesternArtStory[0]?.paragraphs || [];
 const introSupportText = americanWesternArtStory[1]?.paragraphs?.[0] || '';
+const editorialSections = americanWesternArtStory.slice(2);
 const faqLeft = americanWesternArtFAQ.slice(0, 4);
 const faqRight = americanWesternArtFAQ.slice(4, 8);
 
@@ -369,6 +370,19 @@ const collectingLevels = [
       </div>
     </section>
 
+    <section class="western-story-depth">
+      <div class="western-story-depth__shell reveal-on-scroll">
+        {editorialSections.map((section: any) => (
+          <article class="western-story-depth__block">
+            {section.subhead && <h2>{section.subhead}</h2>}
+            {section.paragraphs?.map((paragraph: string) => (
+              <p>{paragraph}</p>
+            ))}
+          </article>
+        ))}
+      </div>
+    </section>
+
     <section class="collections-nav-section">
       <div class="collections-nav-shell reveal-on-scroll">
         <p class="collections-kicker">Browse by Collection</p>
@@ -415,6 +429,10 @@ const collectingLevels = [
 
         <div class="collection-footer reveal-on-scroll">
           <p class="collection-storyline">Each image is a <a href="/Other/One-Image-Movie">one-image movie</a> - click to step inside the story.</p>
+          <p class="collection-storyline collection-storyline--video">
+            See how these stories breathe beyond the frame in the narrated film
+            <a href="/Videos/women-of-the-west-journey">Women of the West</a>.
+          </p>
           <a href={frontierCollectionPath} class="collection-index-link">View the full frontier collection</a>
         </div>
       </div>
@@ -734,6 +752,49 @@ const collectingLevels = [
       color: #5b4c40;
     }
 
+    .western-story-depth {
+      max-width: 1180px;
+      margin: 0 auto 1.45rem;
+      padding: 0 1rem;
+    }
+
+    .western-story-depth__shell {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.95rem;
+      background: rgba(255, 252, 247, 0.94);
+      border: 1px solid rgba(121, 98, 78, 0.18);
+      border-radius: 18px;
+      padding: 1.25rem;
+      box-shadow: 0 18px 28px rgba(52, 38, 26, 0.06);
+    }
+
+    .western-story-depth__block {
+      min-width: 0;
+      padding: 0.8rem 0.85rem;
+      background: rgba(255, 255, 255, 0.66);
+      border: 1px solid rgba(121, 98, 78, 0.12);
+      border-radius: 12px;
+    }
+
+    .western-story-depth__block h2 {
+      margin: 0 0 0.48rem;
+      font-size: 1.06rem;
+      line-height: 1.34;
+      color: #241b15;
+    }
+
+    .western-story-depth__block p {
+      margin: 0 0 0.72rem;
+      font-size: 0.94rem;
+      line-height: 1.62;
+      color: #4a3d34;
+    }
+
+    .western-story-depth__block p:last-child {
+      margin-bottom: 0;
+    }
+
     .collections-nav-section {
       max-width: 1180px;
       margin: 0 auto 1.45rem;
@@ -1020,6 +1081,13 @@ const collectingLevels = [
       color: #7b4a28;
       text-decoration: underline;
       text-underline-offset: 0.14em;
+    }
+
+    .collection-storyline--video {
+      max-width: 46rem;
+      margin-left: auto;
+      margin-right: auto;
+      color: #4a3d34;
     }
 
     .collection-index-link {
@@ -1368,7 +1436,8 @@ const collectingLevels = [
     }
 
     @media (max-width: 900px) {
-      .term-shell {
+      .term-shell,
+      .western-story-depth__shell {
         grid-template-columns: 1fr;
       }
 
@@ -1415,6 +1484,7 @@ const collectingLevels = [
       }
 
       .term-shell,
+      .western-story-depth__shell,
       .collections-nav-shell,
       .collection-shell,
       .collecting-shell,

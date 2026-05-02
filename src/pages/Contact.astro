@@ -123,6 +123,9 @@ const breadcrumb = "Other › Contact";
             <p class="invite">
               We are happy to answer questions or help you find <br>the perfect image for your needs.
             </p>
+            <p class="cold-entry-note">
+              If you arrived here directly, you can also start with print options or browse the main Western story collection before sending an inquiry.
+            </p>
           </>
         )}
 
@@ -133,6 +136,13 @@ const breadcrumb = "Other › Contact";
         </div>
 
         <p class="note">I typically respond within 1–2 business days.</p>
+
+        {!isLicenseInquiry && (
+          <div class="contact-paths" aria-label="Helpful starting points">
+            <a href="/Other/Print-Options">Print Options</a>
+            <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West">Wild West Collection</a>
+          </div>
+        )}
 
         {/* Entity identity block — colophon style */}
         {!isLicenseInquiry && (
@@ -202,6 +212,14 @@ const breadcrumb = "Other › Contact";
       color: #666;
     }
 
+    .cold-entry-note {
+      max-width: 470px;
+      margin: 1.25rem auto 0;
+      font-size: 0.92rem;
+      line-height: 1.6;
+      color: #5f574b;
+    }
+
     .license-intro {
       font-size: 1.05rem;
       line-height: 1.6;
@@ -255,6 +273,34 @@ const breadcrumb = "Other › Contact";
       font-size: 0.9rem;
       color: #888;
       margin-top: 0;
+    }
+
+    .contact-paths {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.8rem;
+      margin: 1.25rem 0 0;
+    }
+
+    .contact-paths a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem 0.85rem;
+      border: 1px solid #d6cec4;
+      color: #5f574b;
+      text-decoration: none;
+      font-size: 0.84rem;
+      font-weight: 600;
+      background: #fbf8f3;
+      transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+    }
+
+    .contact-paths a:hover {
+      color: darkred;
+      border-color: #b7a898;
+      background: #fffdf9;
     }
 
     /* Colophon-style identity block */

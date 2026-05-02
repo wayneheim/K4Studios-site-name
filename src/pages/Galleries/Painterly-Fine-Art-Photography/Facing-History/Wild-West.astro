@@ -184,6 +184,14 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
       <TombstoneNav client:load items={landingWestern.tombstones} />
     </div>
 
+    <section class="video-story-bridge reveal-on-scroll" aria-label="Narrated Wild West video story">
+      <p class="video-story-bridge__eyebrow">Narrated Story Test</p>
+      <p class="video-story-bridge__copy">
+        See how these Western stories breathe beyond the frame in the narrated short
+        <a href="/Videos/women-who-carried-the-west-short">Women Who Carried the West</a>.
+      </p>
+    </section>
+
     <section class="story-layout">
       <div class="text-column">
         <section class="story-section">
@@ -508,6 +516,39 @@ ul li::marker {
       font-weight: 500;
       color: #6d5b4a;
       opacity: .9;
+    }
+
+    .video-story-bridge {
+      max-width: 780px;
+      margin: -0.35rem auto 0.8rem;
+      padding: 0.8rem 1rem;
+      text-align: center;
+      border-top: 1px solid rgba(121, 98, 78, 0.18);
+      border-bottom: 1px solid rgba(121, 98, 78, 0.18);
+      color: #57483c;
+      font-family: 'Glegoo', serif;
+    }
+
+    .video-story-bridge__eyebrow {
+      margin: 0 0 0.25rem;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: #7b4a28;
+    }
+
+    .video-story-bridge__copy {
+      margin: 0;
+      font-size: 0.95rem;
+      line-height: 1.55;
+    }
+
+    .video-story-bridge__copy a {
+      color: #7b4a28;
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 0.14em;
     }
 
     .story-section {
