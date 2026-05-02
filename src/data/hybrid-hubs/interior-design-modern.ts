@@ -307,9 +307,9 @@ export const collectorClose = {
 };
 
 export const pageMeta = {
-  title: 'Modern Western Interior Design Art for Clean, Statement Spaces',
+  title: 'Modern & Contemporary Western Interior Design Art',
   description:
-    'Modern western interior design artwork by Wayne Heim, curated for clean contemporary spaces with tonal restraint, narrative clarity, and statement-ready fine art for western interiors.',
+    'Modern western interior design and contemporary western interior design artwork by Wayne Heim, curated for clean spaces with tonal restraint, narrative clarity, and statement-ready fine art for western interiors.',
   ogImage: carouselSlides[0]?.id || 'i-Lk9XZKB',
 };
 

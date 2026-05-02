@@ -1,0 +1,489 @@
+---
+export const prerender = true;
+
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import LandingHeader from '@/components/Landing-Header.jsx';
+import SiteFooter from '@/components/Footer.astro';
+import { getBreadcrumbList } from '@/components/utils/getStructuredData.ts';
+import { getVideoBySlug, getVideoThumbnail } from '@/data/videos/videoRegistry';
+import { galleryData as westernNarrativesColor }
+  from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs';
+import { galleryData as cowboyPortraitsColor }
+  from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs';
+import { galleryData as cowboyPortraitsBw }
+  from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs';
+
+import '@/styles/global.css';
+
+const pagePath = '/women-of-the-wild-west';
+const canonicalUrl = `https://www.k4studios.com${pagePath}`;
+const pageTitle = 'Women of the Wild West | Frontier Women in Western Art';
+const pageDescription =
+  'Women of the Wild West explored through Wayne Heim narrative Western art: frontier women, mothers, teachers, wives, daughters, survivors, and the lives behind the legend.';
+
+const video = getVideoBySlug('women-of-the-west-journey');
+const shortVideo = getVideoBySlug('women-who-carried-the-west-short');
+const videoThumb = video ? getVideoThumbnail(video) : '/images/show-2t.webp';
+
+const galleries = [
+  {
+    path: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color',
+    data: westernNarrativesColor,
+    fallback: 'Women of the Wild West in narrative Western art by Wayne Heim',
+  },
+  {
+    path: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color',
+    data: cowboyPortraitsColor,
+    fallback: 'Frontier woman portrait in painterly Western art by Wayne Heim',
+  },
+  {
+    path: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White',
+    data: cowboyPortraitsBw,
+    fallback: 'Black and white frontier woman portrait by Wayne Heim',
+  },
+];
+
+function itemText(item: any) {
+  return `${item?.title || ''} ${item?.alt || ''} ${item?.description || ''} ${item?.story || ''} ${JSON.stringify(item?.tags || {})} ${JSON.stringify(item?.keywords || {})}`.toLowerCase();
+}
+
+function cleanItems(data: any[]) {
+  return (data || [])
+    .filter((item: any) => item?.id && item.id !== 'i-k4studios')
+    .filter((item: any) => item.visibility !== 'ghost' && item.visibility !== 'hidden' && item.visibility !== 'hide')
+    .sort((a: any, b: any) => (a.sortOrder ?? 0) - (b.sortOrder ?? 0));
+}
+
+const womenImages = galleries
+  .flatMap((gallery) =>
+    cleanItems(gallery.data)
+      .filter((item: any) => {
+        const text = itemText(item);
+        return (
+          text.includes('women-of-the-west') ||
+          text.includes('frontier-women') ||
+          text.includes('frontier woman') ||
+          text.includes('woman ') ||
+          text.includes('women ') ||
+          text.includes('teacher') ||
+          text.includes('wife') ||
+          text.includes('daughter')
+        );
+      })
+      .map((item: any) => ({
+        id: item.id,
+        title: item.title || 'Women of the Wild West',
+        alt: item.alt || item.title || gallery.fallback,
+        description: item.description || item.story || '',
+        href: `${gallery.path}/${item.id}`,
+      }))
+  )
+  .filter((item: any, index: number, all: any[]) => all.findIndex((other) => other.id === item.id) === index)
+  .slice(0, 18);
+
+const heroImage = womenImages[0] ? `https://www.k4studios.com/img/${womenImages[0].id}/l.jpg` : `https://www.k4studios.com${videoThumb}`;
+
+const sections = [
+  {
+    heading: 'The Real Women Behind the Wild West',
+    paragraphs: [
+      'The Wild West is often remembered through cowboys, outlaws, lawmen, and open land. But frontier life was also held together by women whose labor, patience, intelligence, and endurance rarely became the center of the legend.',
+      'Women of the Wild West were mothers, teachers, wives, daughters, photographers, workers, caretakers, homesteaders, and survivors. Their stories were not always loud, but they shaped the emotional structure of frontier life.',
+    ],
+  },
+  {
+    heading: 'Frontier Mothers, Teachers, Wives, Daughters, and Survivors',
+    paragraphs: [
+      'A schoolhouse, a window, a table, a lantern, a riverbank, a weathered fence: these are not small subjects. They are the places where frontier life continued after the dramatic part of the myth moved on.',
+      'Wayne Heim approaches these figures through painterly Western photography and narrative Western art, focusing on the quiet pressure of waiting, working, deciding, remembering, and carrying life forward.',
+    ],
+  },
+  {
+    heading: 'Women, Work, Silence, and Strength on the Western Frontier',
+    paragraphs: [
+      'The women of the Old West were not simply background figures in a cowboy story. They were witnesses, builders, teachers, image-makers, healers, business owners, and the human center of many frontier communities.',
+      'This page gathers those threads into one subject route: women of the Wild West as a human story, a historical presence, and a recurring part of K4 Studios narrative Western fine art.',
+    ],
+  },
+  {
+    heading: 'Myth vs. Lived Reality',
+    paragraphs: [
+      'The popular Wild West often favors spectacle: gunfights, saloons, cattle drives, and outlaws. Those subjects matter, but they are incomplete without the quieter lives that gave the frontier continuity.',
+      'In Wayne Heim\'s work, women of the Wild West are not decoration around the myth. They are part of the myth\'s foundation: figures of vigilance, tenderness, labor, grief, resolve, and memory.',
+    ],
+  },
+  {
+    heading: 'Women of the Wild West in Wayne Heim\'s Narrative Western Art',
+    paragraphs: [
+      'These images begin as photographic scenes, then are shaped through Wayne Heim\'s painterly process into Western fine art prints with the atmosphere and story weight of classic frontier art.',
+      'The result is not archival documentation and not generic Western decor. It is narrative Western art centered on the lives behind the legend.',
+    ],
+  },
+];
+
+const faqItems = [
+  {
+    q: 'Who were the women of the Wild West?',
+    a: 'Women of the Wild West included homesteaders, teachers, mothers, wives, daughters, workers, business owners, photographers, Native women, and survivors whose labor and decisions shaped frontier communities.',
+  },
+  {
+    q: 'Is this page about history or art?',
+    a: 'Both. It explains the human subject of frontier women while showing how Wayne Heim interprets that subject through painterly Western photography and narrative Western fine art.',
+  },
+  {
+    q: 'Where can I watch the Women of the West video?',
+    a: 'The featured Women of the West film is linked on this page and in the K4 Studios video archive.',
+  },
+  {
+    q: 'Are these women of the Wild West images available as prints?',
+    a: 'Selected works can be explored through the linked image pages and print options. The page also connects to Western wall art, Wild West art, and cowboy portrait collections.',
+  },
+];
+
+const articleJsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'Women of the Wild West',
+  name: pageTitle,
+  description: pageDescription,
+  url: canonicalUrl,
+  image: heroImage,
+  author: {
+    '@type': 'Person',
+    name: 'Wayne Heim',
+    url: 'https://www.k4studios.com/',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'K4 Studios',
+    url: 'https://www.k4studios.com/',
+  },
+  about: [
+    { '@type': 'Thing', name: 'Women of the Wild West' },
+    { '@type': 'Thing', name: 'Frontier Women' },
+    { '@type': 'Thing', name: 'Wild West Art' },
+    { '@type': 'Thing', name: 'Narrative Western Art' },
+  ],
+  mainEntity: {
+    '@type': 'FAQPage',
+    mainEntity: faqItems.map((item) => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.a,
+      },
+    })),
+  },
+});
+
+const breadcrumbData = getBreadcrumbList([
+  { name: 'Home', item: 'https://www.k4studios.com/' },
+  { name: 'Women of the Wild West', item: canonicalUrl },
+]);
+
+const meta = {
+  title: pageTitle,
+  description: pageDescription,
+  canonicalUrl,
+  ogUrl: canonicalUrl,
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogImage: heroImage,
+  twitterTitle: pageTitle,
+  twitterDescription: pageDescription,
+  twitterImage: heroImage,
+};
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} structuredDataJSON={articleJsonLd} breadcrumbsJSON={breadcrumbData} meta={meta}>
+  <main class="women-page">
+    <div class="drawer-mode">
+      <LandingHeader client:load breadcrumb="Facing History &rsaquo; Women of the Wild West" />
+    </div>
+
+    <article class="page-shell">
+      <section class="hero" aria-labelledby="women-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Wild West History / Narrative Western Art</p>
+          <h1 id="women-title">Women of the Wild West</h1>
+          <p class="dek">Frontier women, mothers, teachers, wives, daughters, workers, and survivors interpreted through Wayne Heim's painterly Western photography and narrative fine art.</p>
+          <div class="hero-actions" aria-label="Primary routes">
+            <a href="/Videos/women-of-the-west-journey">Watch the Women of the West film</a>
+            <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West">Explore Wild West galleries</a>
+          </div>
+        </div>
+        {womenImages[0] && (
+          <a class="hero-image" href={womenImages[0].href}>
+            <img src={`/img/${womenImages[0].id}/l.jpg`} alt={womenImages[0].alt} />
+          </a>
+        )}
+      </section>
+
+      <section class="intro-links" aria-label="Related Western art routes">
+        <a href="/american-wild-west">American Wild West</a>
+        <a href="/wild-west-art">Wild West Art</a>
+        <a href="/western-artwork">Western Artwork</a>
+        <a href="/Western-Wall-Art">Western Wall Art</a>
+        <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits">Western Cowboy Portraits</a>
+      </section>
+
+      {sections.map((section) => (
+        <section class="content-section">
+          <h2>{section.heading}</h2>
+          {section.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+        </section>
+      ))}
+
+      <section class="video-feature" aria-labelledby="women-video">
+        <div>
+          <p class="eyebrow">Featured Film</p>
+          <h2 id="women-video">Women of the West: A Journey for Those Who Follow</h2>
+          <p>{video?.dek || 'A narrated sequence of painterly Western photographs honoring the women whose endurance shaped frontier life beyond the legend.'}</p>
+          <div class="video-links">
+            <a href="/Videos/women-of-the-west-journey">Watch the full film</a>
+            <a href="/Videos/women-who-carried-the-west-short">Watch the short companion</a>
+            <a href="https://www.youtube.com/watch?v=MfH9luYm_WU">Open on YouTube</a>
+          </div>
+        </div>
+        <a class="video-thumb" href="/Videos/women-of-the-west-journey">
+          <img src={videoThumb} alt={video?.thumbnailAlt || 'Women of the West video thumbnail'} />
+        </a>
+      </section>
+
+      <section class="image-grid-section" aria-labelledby="women-art">
+        <p class="eyebrow">Selected Works</p>
+        <h2 id="women-art">Women of the Wild West in K4 Studios Art</h2>
+        <p>These selected image pages provide crawlable visual proof for the subject: frontier women at windows, tables, schoolhouses, fences, rivers, cabins, and in portraits where endurance is carried through posture and light.</p>
+        <div class="image-grid">
+          {womenImages.slice(0, 12).map((item) => (
+            <a href={item.href} class="image-card">
+              <img src={`/img/${item.id}/m.jpg`} alt={item.alt} loading="lazy" />
+              <span>{item.title}</span>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section class="commercial-bridge" aria-labelledby="related-prints">
+        <h2 id="related-prints">Related Western Fine Art Prints</h2>
+        <p>For collectors searching beyond the historical subject, this women-of-the-West route connects into the broader K4 system of Wild West art, cowboy wall art, Western artwork, and collector-grade fine art prints.</p>
+        <div class="bridge-links">
+          <a href="/wild-west-art">Wild West art prints</a>
+          <a href="/cowboy-wall-art">Cowboy wall art</a>
+          <a href="/Western-Wall-Art">Western wall art</a>
+          <a href="/Other/Print-Options">Print options</a>
+        </div>
+      </section>
+
+      <section class="faq" aria-labelledby="women-faq">
+        <h2 id="women-faq">Women of the Wild West FAQ</h2>
+        {faqItems.map((item) => (
+          <details>
+            <summary>{item.q}</summary>
+            <p>{item.a}</p>
+          </details>
+        ))}
+      </section>
+    </article>
+
+    <SiteFooter previewImages={[]} previewPath="" title={pageTitle} label="" class="pt-8 pb-12" />
+  </main>
+
+  <style>
+    .women-page {
+      background: #fff;
+      color: #2f2924;
+      min-height: 100vh;
+      font-family: "Glegoo", serif;
+      overflow-x: hidden;
+    }
+
+    .page-shell {
+      width: min(1180px, calc(100% - 2rem));
+      margin: 0 auto 4rem;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.7fr);
+      gap: clamp(1.2rem, 3vw, 2.25rem);
+      align-items: center;
+      padding: clamp(1rem, 4vw, 2rem) 0 1.5rem;
+    }
+
+    .eyebrow {
+      margin: 0 0 0.75rem;
+      color: #8a6248;
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-weight: 700;
+    }
+
+    h1,
+    h2 {
+      color: #211b17;
+      font-weight: 500;
+      line-height: 1.12;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.4rem, 6vw, 5.2rem);
+    }
+
+    h2 {
+      margin: 0 0 0.85rem;
+      font-size: clamp(1.45rem, 2.6vw, 2.4rem);
+    }
+
+    .dek,
+    .content-section p,
+    .video-feature p,
+    .image-grid-section p,
+    .commercial-bridge p,
+    .faq p {
+      color: #5d5148;
+      line-height: 1.8;
+      font-size: 1rem;
+    }
+
+    .dek {
+      max-width: 720px;
+      margin: 1rem 0 0;
+      font-size: clamp(1.02rem, 1.7vw, 1.25rem);
+    }
+
+    .hero-image,
+    .video-thumb,
+    .image-card {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .hero-image img,
+    .video-thumb img {
+      width: 100%;
+      display: block;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      border: 1px solid rgba(80, 64, 48, 0.2);
+      box-shadow: 0 18px 42px rgba(50, 38, 24, 0.12);
+    }
+
+    .hero-actions,
+    .video-links,
+    .bridge-links,
+    .intro-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin-top: 1.2rem;
+    }
+
+    .hero-actions a,
+    .video-links a,
+    .bridge-links a,
+    .intro-links a {
+      border: 1px solid rgba(116, 82, 55, 0.28);
+      color: #6f452d;
+      background: #fffdf9;
+      padding: 0.62rem 0.85rem;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      text-decoration: none;
+    }
+
+    .intro-links {
+      border-top: 1px solid rgba(90, 70, 50, 0.16);
+      border-bottom: 1px solid rgba(90, 70, 50, 0.16);
+      padding: 1rem 0;
+      margin-bottom: 2rem;
+    }
+
+    .content-section,
+    .image-grid-section,
+    .commercial-bridge,
+    .faq,
+    .video-feature {
+      margin: clamp(2rem, 5vw, 4rem) 0;
+    }
+
+    .content-section {
+      max-width: 850px;
+    }
+
+    .video-feature {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 0.55fr);
+      gap: 1.5rem;
+      align-items: center;
+      padding: clamp(1.1rem, 3vw, 2rem);
+      border-top: 1px solid rgba(90, 70, 50, 0.16);
+      border-bottom: 1px solid rgba(90, 70, 50, 0.16);
+      background: #fffdf9;
+    }
+
+    .video-thumb img {
+      aspect-ratio: 16 / 9;
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 0.9rem;
+      margin-top: 1.2rem;
+    }
+
+    .image-card {
+      display: block;
+      border: 1px solid rgba(90, 70, 50, 0.14);
+      background: #fff;
+    }
+
+    .image-card img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      display: block;
+    }
+
+    .image-card span {
+      display: block;
+      padding: 0.65rem;
+      color: #5d5148;
+      font-size: 0.78rem;
+      line-height: 1.45;
+    }
+
+    .commercial-bridge {
+      max-width: 900px;
+      padding: 1.4rem;
+      background: #f8f5ef;
+      border: 1px solid rgba(90, 70, 50, 0.14);
+    }
+
+    .faq details {
+      border-top: 1px solid rgba(90, 70, 50, 0.16);
+      padding: 1rem 0;
+    }
+
+    .faq summary {
+      cursor: pointer;
+      color: #2b241f;
+      font-weight: 700;
+    }
+
+    @media (max-width: 780px) {
+      .hero,
+      .video-feature {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-image img {
+        max-height: 520px;
+      }
+    }
+  </style>
+</BaseLayout>

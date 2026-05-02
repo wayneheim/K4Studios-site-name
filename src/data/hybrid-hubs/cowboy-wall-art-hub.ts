@@ -85,15 +85,18 @@ export const gridBasePath = colorPath;
 
 export const landing = {
   title: 'Cowboy Wall Art',
-  subtitle: 'Cowboy wall art framed as a clean route into character, atmosphere, and authored Western presence rather than a giant wall of generic decor inventory.',
+  subtitle: 'Cowboy wall art and cowboy artwork by Wayne Heim, shaped as painterly Western fine art prints for rooms, collectors, and frontier-story interiors.',
   keywords: [
     'cowboy wall art',
     'western cowboy wall art',
     'cowboy art prints',
     'western wall art',
     'western cowboy art prints',
+    'western cowboy art',
     'cowboy artwork',
     'cowboy artwork prints',
+    'cowboy paintings',
+    'cowboy photos',
   ],
   breadcrumb: '<a class="breadcrumb-link" href="/">Home</a> / <span class="breadcrumb-current">Cowboy Wall Art</span>',
 };
@@ -117,8 +120,9 @@ export const hybridCarouselProps = {
 export const storyBlocks = [
   {
     title: 'Cowboy Wall Art',
-    subhead: 'This works best when it feels chosen, not stacked.',
+    subhead: 'Cowboy artwork for walls, rooms, and collector print paths.',
     paragraphs: [
+      'These cowboy artworks begin as photographic scenes, then are shaped through Wayne Heim\'s painterly process into narrative Western fine art prints with the mood and presence of classic cowboy paintings.',
       'Cowboy wall art is easy to flatten into a decor category, which is exactly why the page has to stay visually disciplined. If it turns into a giant pile of images, the work starts reading like inventory instead of authored presence.',
       'The better move is to open with a stronger visual tag, define what kind of cowboy work this is, and then keep the sample tight enough that the page still feels curated.',
     ],
@@ -157,6 +161,15 @@ export const explorationPaths = [
     description: 'Move into the print-facing page that reframes cowboy intent through authorship, presence, and collector logic.',
     cta: 'Explore cowboy prints -',
     accent: '#6d5b4a',
+  },
+  {
+    title: 'Western Wall Art',
+    eyebrow: 'Buyer Route',
+    hideEyebrow: true,
+    href: '/Western-Wall-Art',
+    description: 'Use the broader Western wall art page for room placement, Western prints, Western wall decor, and interior display intent.',
+    cta: 'Open the wall art hub -',
+    accent: '#73543a',
   },
   {
     title: 'Western Storytelling Photography',
@@ -356,8 +369,8 @@ export const faqItems = [
 ];
 
 export const pageMeta = {
-  title: 'Cowboy Wall Art | Curated Story-Driven Western Wall Art – K4 Studios',
-  description: 'Cowboy wall art by Wayne Heim presented as a curated entry into cowboy portraiture, atmosphere, narrative Western work, and collector-facing print routes rather than generic decor inventory.',
+  title: 'Cowboy Wall Art | Cowboy Artwork & Western Cowboy Art Prints',
+  description: 'Cowboy wall art by Wayne Heim featuring cowboy artwork, Western cowboy art prints, painterly cowboy photography, and narrative frontier portraits for collectors and rooms.',
 };
 
 export const structuredAbout = [

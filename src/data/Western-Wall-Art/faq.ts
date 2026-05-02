@@ -1,75 +1,65 @@
 export const wallArtFAQ = [
-
-  // 1. DEFINITION — What is Western wall art?
   {
     q: "What is Western wall art?",
     a: [
-      "Western wall art refers to artwork inspired by the American West — including cowboy culture, frontier life, Western landscapes, and Indigenous presence.",
-      "Within this category exists a wide range of work, from mass-produced décor to original fine art photography. The distinction lies in authorship, intent, and archival quality. Fine art Western wall art is created to endure, reward close viewing, and hold long-term value."
+      "Western wall art is artwork made for display around the American West, including cowboy wall art, Wild West scenes, Western landscapes, Civil War art prints, vintage Western art, and frontier subjects.",
+      "At K4 Studios, the phrase refers to Wayne Heim's painterly fine art photography presented as collector-grade Western art prints rather than generic wall decor.",
     ],
   },
 
-  // 2. WILD WEST COWBOY PHOTOGRAPHY — Clarified authority
   {
-    q: "What is wild west cowboy photography?",
+    q: "Are these Western art prints or photographs?",
     a: [
-      "Wild West cowboy photography explores frontier identity through historically grounded portraiture and narrative imagery, rather than staged spectacle or decorative cliché.",
-      "Wayne Heim’s wild west cowboy photography includes both contemporary Western individuals and historically researched living-history subjects, approached with accuracy, restraint, and respect. Each image is created as collectible fine art, not themed décor. For a deeper definition and full category context, see <a href='/Western-Cowboy-Photography' style='color:#8b5a2b; text-decoration:underline;'>Western Cowboy Photography</a>."
+      "They are both. Wayne Heim's Western wall art begins as photography, then is shaped through a painterly process into finished fine art prints with the mood, texture, and narrative presence many collectors associate with classic Western artwork.",
+      "The work does not pretend to be oil painting. It uses photography as the authored medium for Western art prints, cowboy artwork, and narrative frontier scenes.",
     ],
   },
 
-  // 3. DIFFERENTIATION — Fine art vs décor
   {
-    q: "How is fine art Western photography different from decorative wall art?",
+    q: "Where should I start if I want cowboy wall art?",
     a: [
-      "Decorative wall art is designed to fill space or match an interior style. Fine art is designed to hold attention, deepen over time, and invite interpretation.",
-      "Wayne Heim’s Western photography is authored work — each image created with narrative intent, painterly discipline, and the expectation that it will be lived with rather than passed over."
+      "Start with <a href='/cowboy-wall-art' style='color:#8b5a2b; text-decoration:underline;'>Cowboy Wall Art</a> for room and display intent, or use <a href='/cowboy-art-prints' style='color:#8b5a2b; text-decoration:underline;'>Cowboy Art Prints</a> when the goal is specifically to compare print-ready cowboy artwork.",
+      "For the full body of portrait work, browse the <a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits' style='color:#8b5a2b; text-decoration:underline;'>Western Cowboy Portraits</a> collection.",
     ],
   },
 
-  // 4. QUALITY — Museum-quality defined
   {
-    q: "What makes this Western wall art museum-quality?",
+    q: "What subjects are available as Western wall art?",
     a: [
-      "Museum-quality refers both to artistic rigor and physical production. Wayne Heim’s work is printed using archival papers, pigment inks rated for generations, and finishing methods suitable for gallery and institutional display.",
-      "Beyond materials, museum-quality means work that holds up under scrutiny — images built with compositional discipline, narrative depth, and visual intelligence."
+      "The collection includes cowboy portraits, Wild West narrative scenes, Civil War art, vintage Western art, Western landscapes, black and white Western photography, and historically themed fine art.",
+      "Use this page as the broad commercial route, then continue into the subject page that best matches the room, collector interest, or story direction.",
     ],
   },
 
-  // 5. SUBJECTS — Scope of the work
   {
-    q: "What subjects are featured in this Western wall art collection?",
+    q: "What makes this different from standard Western wall decor?",
     a: [
-      "The collection includes character-driven cowboy portraits, frontier landscapes, Indigenous portraits, and narrative Western scenes.",
-      "What unites these works is approach: restraint over spectacle, ambiguity over explanation, and imagery that invites the viewer to engage rather than consume."
+      "Standard Western wall decor often uses theme as the main value. K4 Studios uses subject, light, composition, atmosphere, and story to create Western artwork that can hold attention over time.",
+      "The goal is wall presence with authorship: Western art prints that work in a room without becoming disposable decoration.",
     ],
   },
 
-  // 6. PRINT OPTIONS — How to purchase
   {
-    q: "What print options are available for Western wall art?",
+    q: "What print options are available?",
     a: [
-      "Multiple presentation formats are available, including archival paper prints, canvas, metal, and the <a href='/Other/K4-Select-Series/Engrained' style='color:#8b5a2b; text-decoration:underline;'>Engrained Series</a> — printed directly onto Baltic Birch wood.",
-      "Each piece is produced to order, signed by the artist, and prepared with collector-grade materials. <a href='/Other/Print-Options'>Explore print options here</a>."
+      "Multiple presentation formats are available, including archival paper prints, canvas, metal, and the <a href='/Other/K4-Select-Series/Engrained' style='color:#8b5a2b; text-decoration:underline;'>Engrained Series</a> printed directly onto Baltic Birch wood.",
+      "<a href='/Other/Print-Options' style='color:#8b5a2b; text-decoration:underline;'>Explore print options here</a>.",
     ],
   },
 
-  // 7. SIZING — Scale & placement
   {
-    q: "What sizes are available for Western fine art prints?",
+    q: "Do these works fit interior design projects?",
     a: [
-      "Prints are available in a range of sizes, from intimate works suited to personal spaces to large-format pieces designed to anchor a room.",
-      "Because each image has its own ideal proportions, recommended sizes are provided on individual image pages. Custom sizing is available for collectors with specific needs."
+      "Yes. Western wall art can be sourced for living rooms, offices, lodge spaces, ranch interiors, boutique hospitality projects, and multi-room design plans.",
+      "For project-focused sourcing, use <a href='/Western-Wall-Art-for-Interior-Designers' style='color:#8b5a2b; text-decoration:underline;'>Western Wall Art for Interior Designers</a> or the broader <a href='/Western-Interior-Design-Art' style='color:#8b5a2b; text-decoration:underline;'>Western Interior Design Art</a> hub.",
     ],
   },
 
-  // 8. VINTAGE / OLD WEST — Reframed safely
   {
-    q: "What is meant by vintage Western wall art?",
+    q: "Where does vintage Western art fit?",
     a: [
-      "Vintage Western wall art often refers to imagery that evokes historical Western eras through tone, restraint, and narrative structure — not necessarily antique origin.",
-      "Wayne Heim’s work achieves this timeless quality through craft and storytelling rather than artificial aging or novelty effects. The sense of history emerges from the image itself."
+      "Vintage Western art belongs to the old West and frontier-atmosphere branch of the collection. It is the best route for visitors looking for vintage cowboy art, old western art, old West posters, or historically styled Western prints.",
+      "Start with <a href='/vintage-western-art' style='color:#8b5a2b; text-decoration:underline;'>Vintage Western Art</a> for that subject family.",
     ],
   },
-
 ];

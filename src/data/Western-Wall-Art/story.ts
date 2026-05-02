@@ -1,46 +1,46 @@
 export const wallArtStory = [
-
-  // 1. OPENING - GALLERY/COLLECTION INTENT (commercial, not definitional)
   {
-    title: "Western Wall Art for Collectors",
-    subhead: "Museum-Quality Fine Art, Not Décor",
+    title: "Western Wall Art",
+    subhead: "Western art prints for homes, offices, lodges, and collector interiors.",
     paragraphs: [
-      "This collection presents Western wall art by <a href='/wayne-heim-western-fine-art-photography'>Wayne Heim</a> - original fine art photographs created for collectors rather than decoration. Each piece is authored with narrative intent, painterly restraint, and archival craft, designed to command presence and reward long-term viewing.",
-      "These works move beyond mass-produced Western imagery. They are created as finished art objects - built to live on the wall, deepen with familiarity, and hold meaning over time.",
-      "For those seeking context on how Western fine art differs from decorative imagery, explore <a href='/Blog/what-is-western-fine-art-photography' style='color:#8b5a2b; text-decoration:underline;'>What Is Western Fine Art Photography</a>."
+      "Wayne Heim's Western wall art includes cowboy wall art, Western art prints, vintage Western art, Wild West scenes, Civil War art prints, and frontier landscapes created as collector-grade fine art for real rooms and long-term display.",
+      "This page is the commercial category route for K4 Studios: a practical starting point for collectors, homeowners, offices, lodge spaces, hospitality projects, and interior designers looking for Western wall decor with more authorship than generic inventory.",
+      "Browse by subject below, then continue into individual image pages, print options, or the more specialized Western artwork and cowboy art print routes."
     ],
   },
 
   {
-    subhead: "Fine Art Versus Decoration",
+    subhead: "Browse Western art prints by subject",
     paragraphs: [
-      "The difference between decorative wall art and fine art is not price — it is purpose. Decorative art fills space. Fine art holds attention, deepening through familiarity rather than fading into the background.",
-      "Wayne Heim’s Western photography is shaped by narrative restraint and a painterly approach rooted in the <a href='/Pictorialist-Photography' style='color:#8b5a2b; text-decoration:underline;'>Pictorialist tradition</a>. Light is sculpted. Composition serves story. Each image functions as a fragment of a larger, implied narrative — a single frame from an unseen film."
+      "For cowboy wall art and cowboy artwork, start with the <a href='/cowboy-wall-art' style='color:#8b5a2b; text-decoration:underline;'>Cowboy Wall Art</a> page or the dedicated <a href='/cowboy-art-prints' style='color:#8b5a2b; text-decoration:underline;'>Cowboy Art Prints</a> route.",
+      "For broader Western artwork, including painterly portraits, frontier scenes, and landscape work, continue to <a href='/western-artwork' style='color:#8b5a2b; text-decoration:underline;'>Western Artwork</a>. For old West feeling and vintage cowboy art, use <a href='/vintage-western-art' style='color:#8b5a2b; text-decoration:underline;'>Vintage Western Art</a>.",
+      "History-focused collectors can move directly into <a href='/Civil-War-Art' style='color:#8b5a2b; text-decoration:underline;'>Civil War Art</a>, while visitors looking for frontier narratives can open <a href='/wild-west-art' style='color:#8b5a2b; text-decoration:underline;'>Wild West Art</a>."
     ],
   },
 
   {
-    subhead: "Archival Craft, Built to Endure",
+    subhead: "Western wall decor with fine art intent",
     paragraphs: [
-      "Every work is produced using archival materials — museum-grade papers, pigment inks rated for generations, and presentation options designed for long-term presence.",
-      "Whether framed traditionally, presented as canvas, or printed directly onto Baltic Birch in the <a href='/Other/K4-Select-Series/Engrained' style='color:#8b5a2b; text-decoration:underline;'>Engrained Series</a>, each piece is crafted to museum standards and intended to live with the collector over time."
+      "Many searches for Western wall decor are really searches for a room anchor: a piece that can hold a living room, hallway, office, lodge wall, ranch interior, or hospitality space without feeling disposable.",
+      "K4's Western wall art begins as photography, then is shaped through Wayne Heim's painterly process into fine art prints with the mood, restraint, and story presence often associated with classic Western paintings.",
+      "That bridge matters. These are not oil paintings, posters, or stock decor. They are photographic Western artworks designed for collectors who want the atmosphere of the American West in a finished wall piece."
     ],
   },
 
   {
-    subhead: "Subjects with Lasting Presence",
+    subhead: "Print formats, scale, and placement",
     paragraphs: [
-      "This collection spans the breadth of Western wall art — character-driven cowboy portraits, frontier landscapes shaped by atmosphere and restraint, and narrative scenes that resist easy explanation.",
-      "What unites these works is intention. Ambiguity over certainty. Presence over spectacle. Images designed to remain relevant long after first viewing."
+      "Selected works are available as archival fine art prints, canvas, metal, and wood-based presentations through the <a href='/Other/Print-Options' style='color:#8b5a2b; text-decoration:underline;'>Print Options</a> path.",
+      "For warmer material presence, the <a href='/Other/K4-Select-Series/Engrained' style='color:#8b5a2b; text-decoration:underline;'>Engrained Series</a> prints selected images directly onto Baltic Birch wood panels. For project sourcing, see <a href='/Western-Wall-Art-for-Interior-Designers' style='color:#8b5a2b; text-decoration:underline;'>Western Wall Art for Interior Designers</a>.",
+      "The best route is simple: choose the subject family first, open the image pages that hold attention, then compare material, size, and presentation options."
     ],
   },
 
   {
-    subhead: "For Those Who Look Closely",
+    subhead: "Why these are not generic Western prints",
     paragraphs: [
-      "This work is created for collectors who value original art with narrative substance — images that invite attention and reward return.",
-      "Explore the galleries below. When a piece stays with you, examine print options and scale, and consider how it might live in your space. For design teams sourcing across rooms or hospitality projects, see <a href='/Western-Wall-Art-for-Interior-Designers' style='color:#8b5a2b; text-decoration:underline;'>Western Wall Art for Interior Designers</a>."
+      "Generic Western prints often stop at theme: cowboy, horse, sunset, saloon, mountain. Wayne Heim's work uses those subjects only when they carry human pressure, frontier memory, atmosphere, or narrative consequence.",
+      "The result is Western wall art that can satisfy practical buyer intent while still belonging to the broader K4 Studios language of narrative Western art, painterly photography, and historically themed fine art."
     ],
   },
-
 ];

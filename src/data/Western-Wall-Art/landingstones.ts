@@ -1,46 +1,82 @@
 export const landingWallArt = {
-  // Western Wall Art — COLLECTOR & DISCOVERY HUB
+  // Western Wall Art - COMMERCIAL CATEGORY TEST HUB
   title: "Western Wall Art",
-  subtitle: "Museum-Quality Cowboy, Narrative Western, and Frontier Fine Art Prints",
+  subtitle: "Western Art Prints, Cowboy Wall Art, and Frontier Fine Art for Homes, Offices, Lodges, and Collector Interiors",
 
   // Keywords for structured data and semantic SEO (not meta keywords)
   keywords: [
     "Western Wall Art",
+    "western wall decor",
+    "western wall artwork",
+    "western art prints",
+    "western prints",
     "western wall art prints",
     "cowboy wall art",
+    "cowboy artwork",
+    "cowboy fine art prints",
     "western fine art prints",
     "western photography wall art",
+    "vintage western art",
+    "civil war art prints",
     "narrative western art",
     "narrative western wall art",
     "western art for collectors",
     "museum quality western art",
-    "cowboy fine art prints",
-    "western fine art prints",
     "western portrait photography",
     "American West wall art",
     "One-Image Movie",
-    "Wayne Heim"
+    "Wayne Heim",
   ],
 
   breadcrumb:
     `<a href="/" title="Home" style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;" onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Wayne Heim</a> | Western Wall Art`,
 
-  // Tombstones — collector-oriented entry points
+  // Tombstones - commercial entry points for the A/B test
   tombstones: [
+    {
+      title: "Cowboy Wall Art",
+      href: "/cowboy-wall-art",
+      thumb: "",
+    },
+    {
+      title: "Cowboy Art Prints",
+      href: "/cowboy-art-prints",
+      thumb: "",
+    },
+    {
+      title: "Western Artwork",
+      href: "/western-artwork",
+      thumb: "",
+    },
+    {
+      title: "Vintage Western Art",
+      href: "/vintage-western-art",
+      thumb: "",
+    },
+    {
+      title: "Wild West Art",
+      href: "/wild-west-art",
+      thumb: "",
+    },
+    {
+      title: "Civil War Art Prints",
+      href: "/Civil-War-Art",
+      thumb: "",
+    },
     {
       title: "Western Cowboy Portraits",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
-      thumb: "", // Dynamically populated
+      thumb: "",
     },
     {
       title: "Narrative Western Art",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color",
-      thumb: "", // Dynamically populated
+      thumb: "",
     },
     {
       title: "Western Landscapes",
       href: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery",
-      thumb: "", // Dynamically populated
+      thumb: "",
     },
     {
       title: "Print Options & Materials",
@@ -48,7 +84,7 @@ export const landingWallArt = {
       thumb: "/images/tombstones/print-options-ts.webp",
     },
     {
-      title: "Fine Art on Wood — Engrained Series",
+      title: "Fine Art on Wood - Engrained Series",
       href: "/Other/K4-Select-Series/Engrained",
       thumb: "/images/tombstones/engrained-ts.jpg",
     },

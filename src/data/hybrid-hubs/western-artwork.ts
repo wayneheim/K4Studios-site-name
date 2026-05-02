@@ -77,12 +77,16 @@ export const galleryPaths = [cowboyPath, narrativePath, mountainsPath, waterPath
 
 export const landing = {
   title: 'Western Artwork',
-  subtitle: 'Western artwork that moves beyond themed inventory into painterly portraits, story-driven frontier scenes, and landscapes with enough atmosphere to hold a wall on their own.',
+  subtitle: 'Western artwork by Wayne Heim blending fine art photography, painterly finishing, and cinematic storytelling into Western art prints rooted in frontier life, cowboy history, and the mythic American West.',
   keywords: [
     'western artwork',
     'western artwork for sale',
+    'western art paintings',
+    'western paintings',
     'western themed art',
     'western fine art',
+    'western fine art photography',
+    'western art prints',
     'western wall artwork',
     'painterly western artwork',
   ],
@@ -111,8 +115,9 @@ const heroSlideIds = hybridCarouselProps.slides.map((slide: any) => slide.id);
 export const storyBlocks = [
   {
     title: 'Western Artwork',
-    subhead: 'A broad term only works if the page earns the breadth.',
+    subhead: 'Western art prints, painterly photography, and frontier subjects under one clear roof.',
     paragraphs: [
+      'Wayne Heim\'s Western artwork blends fine art photography, painterly finishing, and cinematic storytelling to create Western art prints rooted in frontier life, cowboy history, and the mythic American West.',
       'Western artwork is often used as a catch-all phrase, but most pages built around it collapse into either generic decor or a single narrow subject. This page works differently. It treats Western artwork as a serious authored field that can hold portraiture, narrative frontier scenes, and landscapes without flattening them into the same decorative sentence.',
       'That matters because people searching this phrase are often looking for something broader than cowboy iconography alone. They want Western artwork for sale, but they also want to know whether the work has atmosphere, seriousness, and enough visual authority to live with over time.',
     ],
@@ -159,6 +164,15 @@ export const explorationPaths = [
     description: 'Use the print-focused route if the visitor is ready to compare images as purchasable works rather than simply browse the category.',
     cta: 'Shop the print path -',
     accent: '#6c5a4d',
+  },
+  {
+    title: 'Western Wall Art',
+    eyebrow: 'Commercial Route',
+    hideEyebrow: true,
+    href: '/Western-Wall-Art',
+    description: 'Use the broad wall-art page for Western prints, Western wall decor, room placement, and print-format buying intent.',
+    cta: 'Explore wall art -',
+    accent: '#70523c',
   },
 ];
 
@@ -318,8 +332,8 @@ export const faqItems = [
 ];
 
 export const pageMeta = {
-  title: 'Western Artwork | Painterly Western Art by Wayne Heim – K4 Studios',
-  description: 'Western artwork by Wayne Heim spanning painterly portraits, narrative frontier scenes, and atmospheric landscapes for collectors seeking serious Western art.',
+  title: 'Western Artwork | Western Art Prints & Painterly Western Art',
+  description: 'Western artwork by Wayne Heim blending fine art photography, painterly finishing, cowboy history, frontier life, and cinematic storytelling into collectible Western art prints.',
 };
 
 export const structuredAbout = [

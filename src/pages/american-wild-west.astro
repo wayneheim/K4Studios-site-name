@@ -15,12 +15,13 @@ const pagePath = '/american-wild-west';
 const canonicalUrl = `https://www.k4studios.com${pagePath}`;
 
 const pageTitle = 'American Wild West | Frontier History, Photography & Narrative Art';
-const pageDescription = 'Explore the American Wild West through narrative photography and frontier history. A story-driven bridge between the Civil War and Western legend.';
+const pageDescription = 'What was the American Wild West? Explore the Wild West time period, frontier history, cowboys, outlaws, women, and the narrative Western art it inspires.';
 
 const WILD_WEST_ART_PATH = '/wild-west-art';
 const CIVIL_WAR_ART_PATH = '/Civil-War-Art';
 const WESTERN_FINE_ART_PATH = '/Western-Fine-Art-Photography';
 const FACING_HISTORY_WILD_WEST_PATH = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West';
+const WOMEN_OF_THE_WILD_WEST_PATH = '/women-of-the-wild-west';
 const WESTERN_NARRATIVES_COLOR_PATH = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color';
 const WESTERN_NARRATIVES_BW_PATH = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White';
 const COWBOY_COLOR_PATH = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color';
@@ -82,6 +83,14 @@ const sampleSlides = uniqueSlides([
 const breadcrumb = 'Home › American Wild West';
 
 const sections = [
+  {
+    heading: 'What Was the Wild West?',
+    paragraphs: [
+      'The Wild West generally refers to the American frontier period of the 19th century, especially the decades of westward expansion, settlement, conflict, ranching, mining, railroads, and myth-making that shaped the popular image of the Old West.',
+      'For Wayne Heim, the Wild West is not only a time period. It is a visual stage for human stories-endurance, silence, consequence, and the lives behind the legend.',
+      `After this historical overview, continue into <a href="${WILD_WEST_ART_PATH}">Wild West Art</a> for the visual collector route or <a href="${WOMEN_OF_THE_WILD_WEST_PATH}">Women of the Wild West</a> for the frontier women subject page and featured video.`,
+    ],
+  },
   {
     heading: 'Part of the Facing History Collection',
     paragraphs: [
@@ -152,6 +161,13 @@ const structuredData = getStructuredData({
       'frontier history',
       'old west photography',
       'wild west imagery',
+      'what is the wild west',
+      'wild west time period',
+      'era of the wild west',
+      'wild wild west era',
+      'wild west cowboys',
+      'wild west outlaws',
+      'women of the wild west',
       'frontier photography',
       'western frontier art',
       'narrative western photography',
@@ -195,8 +211,10 @@ const meta = {
       subtitle=""
       summaryParagraphs={[
         'The American Wild West did not begin as legend. It emerged from the aftermath of the Civil War-carried west by individuals shaped by conflict, survival, and uncertainty.',
+        'The Wild West generally refers to the 19th-century American frontier period of westward expansion, settlement, ranching, mining, railroads, conflict, and myth-making.',
         'Explore the frontier series where that aftermath becomes lived experience.',
         `<a href='${WILD_WEST_ART_PATH}'>Enter Wild West Art</a>`,
+        `<a href='${WOMEN_OF_THE_WILD_WEST_PATH}'>Explore Women of the Wild West</a>`,
       ]}
       summary=""
       contextHtml=""

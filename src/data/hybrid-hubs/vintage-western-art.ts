@@ -85,6 +85,8 @@ export const landing = {
     'vintage cowboy print',
     'old western art',
     'old west posters',
+    'vintage western wall art',
+    'old west art',
     'old western art for sale',
     'old west wall art',
     'frontier art prints',
@@ -119,6 +121,7 @@ export const storyBlocks = [
     paragraphs: [
       'Vintage western art is one of those phrases people use when they want the emotional weather of the 1880s-era frontier but do not necessarily want a literal antique. They want the room presence of an older West: weathered figures, frontier interiors, hard light, story, silence, and the feeling that the image belongs to a longer American memory.',
       'That is the approach here. This page treats vintage western art as contemporary authored work that carries old-West atmosphere and story weight strongly enough to satisfy the search, while remaining collector-ready as fine art prints rather than faux-aged decor props.',
+      'It is also the intended K4 route for vintage cowboy art, vintage western prints, vintage western wall art, old western art, old west art, and old west posters.',
     ],
   },
   {
@@ -163,6 +166,15 @@ export const explorationPaths = [
     description: 'Compare archival paper, canvas, metal, and presentation choices once the right vintage-western image has been found.',
     cta: 'Compare print formats -',
     accent: '#564a42',
+  },
+  {
+    title: 'Western Wall Art',
+    eyebrow: 'Buyer Route',
+    hideEyebrow: true,
+    href: '/Western-Wall-Art',
+    description: 'Move to the broader commercial wall-art hub for western prints, room placement, and decor/collector buying intent.',
+    cta: 'Open wall art hub -',
+    accent: '#6b5040',
   },
 ];
 
@@ -326,7 +338,7 @@ export const faqItems = [
 
 export const pageMeta = {
   title: 'Vintage Western Art | Vintage Cowboy Art Prints by Wayne Heim – K4 Studios',
-  description: 'Vintage western art by Wayne Heim featuring vintage cowboy art, old-west atmosphere, and painterly frontier prints created for collectors rather than antique-object shoppers.',
+  description: 'Vintage western art by Wayne Heim featuring vintage cowboy art, vintage western prints, old western art, old west posters, and painterly frontier prints for collectors.',
 };
 
 export const structuredAbout = [

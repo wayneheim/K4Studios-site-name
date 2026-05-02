@@ -279,9 +279,9 @@ export const collectorClose = {
 };
 
 export const pageMeta = {
-  title: 'Western Interior Design Art for Statement Spaces',
+  title: 'Western Interior Design Art | Statement Western Artwork',
   description:
-    'Western interior design artwork featuring Engrained wood prints and painterly photography by Wayne Heim, curated as statement western artwork and fine art for western interiors.',
+    'Western interior design art and western interior design artwork by Wayne Heim, curated as statement western artwork and fine art for western interiors.',
   ogImage: carouselSlides[0]?.id || 'i-Lk9XZKB',
 };
 

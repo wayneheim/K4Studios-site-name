@@ -242,6 +242,146 @@ westernFineArtPhotographyDefinition: {
   imagePhrases: []
 },
 
+westernArtworkCommercialHub: {
+  path: "/western-artwork",
+  def: "The commercial and collector-facing route for Western artwork by Wayne Heim, bridging painterly photography with the language buyers use for Western art, Western paintings, and frontier fine art prints.",
+  fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
+  landingPhrases: [
+    { phrase: "western artwork", rating: 6, use: true, link: "/western-artwork" },
+    { phrase: "western artwork for sale", rating: 5, use: true, link: "/western-artwork" },
+    { phrase: "western art paintings", rating: 5, use: true, link: "/western-artwork" },
+    { phrase: "western paintings", rating: 5, use: true, link: "/western-artwork" },
+    { phrase: "western fine art photography", rating: 5, use: true, link: "/western-artwork" },
+    { phrase: "famous western paintings", rating: 3, use: true, link: "/western-artwork" },
+  ],
+  imagePhrases: []
+},
+
+westernPrintsCommercialHub: {
+  path: "/Western-Wall-Art",
+  def: "The buyer-intent route for Western art prints, Western prints, Western wall decor, and Western wall artwork, with clear commercial language for homes, offices, lodges, and interior projects.",
+  fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
+  landingPhrases: [
+    { phrase: "western art prints", rating: 6, use: true, link: "/Western-Wall-Art" },
+    { phrase: "western prints", rating: 6, use: true, link: "/Western-Wall-Art" },
+    { phrase: "western wall artwork", rating: 6, use: true, link: "/Western-Wall-Art" },
+    { phrase: "western wall decor", rating: 6, use: true, link: "/Western-Wall-Art" },
+    { phrase: "western wall art", rating: 6, use: true, link: "/Western-Wall-Art" },
+  ],
+  imagePhrases: []
+},
+
+cowboyWallArtCommercialHub: {
+  path: "/cowboy-wall-art",
+  def: "The commercial route for cowboy wall art and cowboy artwork, positioning Wayne Heim's painterly cowboy photography as collector-grade Western cowboy art for rooms and display.",
+  fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
+  landingPhrases: [
+    { phrase: "cowboy wall art", rating: 6, use: true, link: "/cowboy-wall-art" },
+    { phrase: "cowboy artwork", rating: 6, use: true, link: "/cowboy-wall-art" },
+    { phrase: "cowboy paintings", rating: 5, use: true, link: "/cowboy-wall-art" },
+    { phrase: "cowboy photos", rating: 4, use: true, link: "/cowboy-wall-art" },
+    { phrase: "western cowboy art", rating: 5, use: true, link: "/cowboy-wall-art" },
+  ],
+  imagePhrases: []
+},
+
+cowboyArtPrintsCommercialHub: {
+  path: "/cowboy-art-prints",
+  def: "The print-focused route for cowboy art prints, Western cowboy art prints, and cowboy artwork prints.",
+  fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
+  landingPhrases: [
+    { phrase: "cowboy art prints", rating: 6, use: true, link: "/cowboy-art-prints" },
+    { phrase: "western cowboy art prints", rating: 6, use: true, link: "/cowboy-art-prints" },
+    { phrase: "cowboy artwork prints", rating: 6, use: true, link: "/cowboy-art-prints" },
+    { phrase: "cowboy photography prints", rating: 5, use: true, link: "/cowboy-art-prints" },
+  ],
+  imagePhrases: []
+},
+
+vintageWesternArtCommercialHub: {
+  path: "/vintage-western-art",
+  def: "The commercial route for vintage Western art, vintage cowboy art, old western art, old west art, and vintage Western prints by Wayne Heim.",
+  fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
+  landingPhrases: [
+    { phrase: "vintage western art", rating: 6, use: true, link: "/vintage-western-art" },
+    { phrase: "vintage cowboy art", rating: 6, use: true, link: "/vintage-western-art" },
+    { phrase: "vintage western prints", rating: 6, use: true, link: "/vintage-western-art" },
+    { phrase: "vintage cowboy print", rating: 5, use: true, link: "/vintage-western-art" },
+    { phrase: "old western art", rating: 5, use: true, link: "/vintage-western-art" },
+    { phrase: "old west art", rating: 5, use: true, link: "/vintage-western-art" },
+    { phrase: "old west posters", rating: 4, use: true, link: "/vintage-western-art" },
+  ],
+  imagePhrases: []
+},
+
+wildWestArtCommercialHub: {
+  path: "/wild-west-art",
+  def: "The visual-art route for Wild West art, Wild West artwork, Wild West photos, Wild West pictures, and Western frontier art.",
+  fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West",
+  landingPhrases: [
+    { phrase: "wild west art", rating: 6, use: true, link: "/wild-west-art" },
+    { phrase: "wild west artwork", rating: 6, use: true, link: "/wild-west-art" },
+    { phrase: "wild west photos", rating: 5, use: true, link: "/wild-west-art" },
+    { phrase: "wild west pictures", rating: 5, use: true, link: "/wild-west-art" },
+    { phrase: "pictures wild west", rating: 4, use: true, link: "/wild-west-art" },
+    { phrase: "western frontier art", rating: 5, use: true, link: "/wild-west-art" },
+  ],
+  imagePhrases: []
+},
+
+americanWildWestInfoHub: {
+  path: "/american-wild-west",
+  def: "The informational route for American Wild West questions: what the Wild West was, the time period, cowboys, outlaws, frontier life, and the art it inspired.",
+  fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West",
+  landingPhrases: [
+    { phrase: "american wild west", rating: 6, use: true, link: "/american-wild-west" },
+    { phrase: "what is the wild west", rating: 6, use: true, link: "/american-wild-west" },
+    { phrase: "what was the wild west", rating: 6, use: true, link: "/american-wild-west" },
+    { phrase: "wild west time period", rating: 6, use: true, link: "/american-wild-west" },
+    { phrase: "era of the wild west", rating: 5, use: true, link: "/american-wild-west" },
+    { phrase: "wild wild west era", rating: 5, use: true, link: "/american-wild-west" },
+    { phrase: "wild west cowboys", rating: 5, use: true, link: "/american-wild-west" },
+    { phrase: "wild west outlaws", rating: 4, use: true, link: "/american-wild-west" },
+  ],
+  imagePhrases: []
+},
+
+womenWildWestInfoHub: {
+  path: "/women-of-the-wild-west",
+  def: "The informational and narrative-art route for women of the Wild West, frontier women, and the women behind Wayne Heim's Women of the West video/story work.",
+  fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives",
+  landingPhrases: [
+    { phrase: "women of the wild west", rating: 6, use: true, link: "/women-of-the-wild-west" },
+    { phrase: "frontier women", rating: 5, use: true, link: "/women-of-the-wild-west" },
+    { phrase: "women of the west", rating: 5, use: true, link: "/women-of-the-wild-west" },
+  ],
+  imagePhrases: []
+},
+
+westernInteriorDesignCommercialHub: {
+  path: "/Western-Interior-Design-Art",
+  def: "The interior-design route for Western interior design art, Western artwork for interiors, and statement Western art in designed spaces.",
+  fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
+  landingPhrases: [
+    { phrase: "western interior design", rating: 6, use: true, link: "/Western-Interior-Design-Art" },
+    { phrase: "western interior design art", rating: 6, use: true, link: "/Western-Interior-Design-Art" },
+    { phrase: "western artwork for interiors", rating: 5, use: true, link: "/Western-Interior-Design-Art" },
+  ],
+  imagePhrases: []
+},
+
+modernWesternInteriorDesignCommercialHub: {
+  path: "/Modern-Western-Interior-Design-Art",
+  def: "The modern and contemporary interior-design route for contemporary Western interior design and modern Western art in refined spaces.",
+  fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
+  landingPhrases: [
+    { phrase: "contemporary western interior design", rating: 6, use: true, link: "/Modern-Western-Interior-Design-Art" },
+    { phrase: "modern western interior design", rating: 6, use: true, link: "/Modern-Western-Interior-Design-Art" },
+    { phrase: "modern western interior design art", rating: 5, use: true, link: "/Modern-Western-Interior-Design-Art" },
+  ],
+  imagePhrases: []
+},
+
 westernPhotographyArtHub: {
   path: "/Western-Photography-Art",
   def: "The bridge page for Western photography art — also phrased as Western art photography — connecting photographic authorship to the larger Western art tradition.",
@@ -763,6 +903,21 @@ cowboyNativeAmerican: {
     // --- Long-tail semantic enrichers (glossary, KWLinker only) ---
     { phrase: "painterly Native American images", rating: 3, use: true }
   ]
+},
+
+civilWarArtCommercialHub: {
+  path: "/Civil-War-Art",
+  def: "The commercial and narrative-art route for Civil War art, Civil War artwork, Civil War art prints, Civil War wall art, and Civil War photography art by Wayne Heim.",
+  fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits",
+  landingPhrases: [
+    { phrase: "civil war art", rating: 6, use: true, link: "/Civil-War-Art" },
+    { phrase: "civil war artwork", rating: 6, use: true, link: "/Civil-War-Art" },
+    { phrase: "civil war art prints", rating: 6, use: true, link: "/Civil-War-Art" },
+    { phrase: "civil war wall art", rating: 6, use: true, link: "/Civil-War-Art" },
+    { phrase: "civil war photography art", rating: 5, use: true, link: "/Civil-War-Art" },
+    { phrase: "historical fine art photography", rating: 5, use: true, link: "/Civil-War-Art" },
+  ],
+  imagePhrases: []
 },
 
 civilwar: {

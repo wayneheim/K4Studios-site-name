@@ -712,17 +712,17 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
   },
 
   "/Western-Wall-Art": {
-    ogTitle: "Western Wall Art – Cowboy Fine Art Prints",
+    ogTitle: "Western Wall Art | Western Art Prints & Cowboy Wall Art",
     ogDescription:
-      "Museum-quality Western wall art and wild west cowboy photography by Wayne Heim. Vintage western art, cowboy portraits, and frontier landscapes — cinematic, story-driven, and historically rooted.",
+      "Western wall art by Wayne Heim, including Western art prints, cowboy wall art, vintage Western art, Civil War art prints, and frontier fine art for homes, offices, lodges, and collector interiors.",
     ogImage: "/images/cowboy.webp",
     ogType: "website",
     twitterCard: "summary_large_image",
-    twitterTitle: "Western Wall Art – Cowboy Fine Art Prints",
+    twitterTitle: "Western Wall Art | Western Art Prints & Cowboy Wall Art",
     twitterDescription:
-      "Wild west cowboy photography and vintage western wall art for collectors. Original fine art by Wayne Heim.",
+      "Western art prints, cowboy wall art, vintage Western art, and frontier fine art for homes, offices, lodges, and collector interiors.",
     twitterImage: "/images/cowboy.webp",
-    keywords: "Western wall art, cowboy wall art, Western fine art prints, wild west cowboy photography, vintage Western art, Western home decor, cowboy art prints, Wayne Heim",
+    keywords: "Western wall art, western wall decor, western wall artwork, western art prints, western prints, cowboy wall art, cowboy artwork, vintage Western art, Civil War art prints, Western home decor, cowboy art prints, Wayne Heim",
   },
 
   "/Western-Black-and-White-Photography": {

@@ -83,7 +83,7 @@ export const galleryPaths = [narrativeColorPath, narrativeBwPath, cowboyColorPat
 
 export const landing = {
   title: 'Wild West Art',
-  subtitle: 'Wild West art shaped through frontier narrative, atmosphere, and the lived pressure beneath the legend rather than novelty nostalgia.',
+  subtitle: 'Wild West art shaped through painterly photography, frontier storytelling, cowboy imagery, and cinematic scenes of the American West.',
   keywords: [
     'wild west art',
     'wild west artwork',
@@ -91,6 +91,10 @@ export const landing = {
     'wild west poster',
     'old west posters',
     'wild west paintings',
+    'wild west photos',
+    'wild west pictures',
+    'pictures wild west',
+    'western frontier art',
     'frontier art',
     'frontier western art',
   ],
@@ -165,6 +169,15 @@ export const explorationPaths = [
     description: 'Read the cultural and historical bridge page when the visitor needs the frontier context before choosing Wild West art or prints.',
     cta: 'Read the bridge -',
     accent: '#6b5548',
+  },
+  {
+    title: 'Women of the Wild West',
+    eyebrow: 'Subject Route',
+    hideEyebrow: true,
+    href: '/women-of-the-wild-west',
+    description: 'Follow the subject page for frontier women, women of the Old West, and the featured Women of the West video route.',
+    cta: 'Explore frontier women -',
+    accent: '#6f5148',
   },
   {
     title: 'Vintage Western Art',
@@ -371,7 +384,7 @@ export const faqItems = [
 
 export const pageMeta = {
   title: 'Wild West Art | Frontier Artwork by Wayne Heim – K4 Studios',
-  description: 'Wild West art by Wayne Heim featuring frontier narratives, painterly Wild West artwork, and historically inflected imagery grounded in atmosphere and story.',
+  description: 'Wild West art by Wayne Heim featuring frontier artwork, wild west photos, old west art, cowboy imagery, painterly photography, and cinematic scenes of the American West.',
 };
 
 export const structuredAbout = [
@@ -379,6 +392,9 @@ export const structuredAbout = [
   'Old West Art',
   'Wild West Posters',
   'Wild West Paintings',
+  'Wild West Photos',
+  'Wild West Pictures',
+  'Western Frontier Art',
   'Frontier Art',
   'Narrative Western Art',
 ];
@@ -388,6 +404,8 @@ export const webPageAbout = [
   'Wild West Artwork',
   'Old West Art',
   'Old West Posters',
+  'Wild West Photos',
+  'Western Frontier Art',
   'Frontier Artwork',
   'Frontier Art',
 ];

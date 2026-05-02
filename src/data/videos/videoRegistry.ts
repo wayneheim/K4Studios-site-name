@@ -76,6 +76,7 @@ export const videos: K4Video[] = [
       "This K4 Studios narrative slideshow film combines still fine art photography, voice, music, and written text to explore sacrifice, endurance, and legacy in the American West.",
     transcript: "",
     relatedLinks: [
+      { label: "Women of the Wild West", href: "/women-of-the-wild-west" },
       { label: "American Western Art", href: "/American-Western-Art" },
       { label: "Western Fine Art Photography", href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History" },
       { label: "Wild West Galleries", href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/" },
@@ -121,6 +122,7 @@ export const videos: K4Video[] = [
     description:
       "This K4 Studios video story is the vertical mini-movie companion to Women of the West: A Journey for Those Who Follow. Created from painterly Western fine art photography by Wayne Heim, it honors the women history moved too quickly to name and invites viewers to imagine the story beyond the moment.",
     relatedLinks: [
+      { label: "Women of the Wild West", href: "/women-of-the-wild-west" },
       { label: "Full Women of the West Film", href: "/Videos/women-of-the-west-journey" },
       { label: "Western Fine Art Photography", href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History" },
       { label: "K4 Studios Video Stories on YouTube", href: K4_YOUTUBE_SHORTS_URL },
