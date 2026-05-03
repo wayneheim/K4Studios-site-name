@@ -51,6 +51,7 @@
     subhead: "The Painterly Process in Western Fine Art Photography",
     paragraphs: [
       "The visual language of this work draws from the Pictorialist tradition, applying painterly discipline to photographic process. Every decision\u2014framing, exposure, tonal balance\u2014is made in service of story. Light is sculpted to reveal character. Texture is layered to create atmosphere. Color is shaped until the image reads with the weight of a painting while remaining unmistakably photographic.",
+      "Each finished work is rooted in camera-based photography and shaped by the trained hand and eye of an award-winning illustrator. The final image is individually crafted through light, color, texture, atmosphere, focus, and restraint - a Western photograph carried beyond documentation into fine art presence.",
       "This is not a filter or a preset. It is a process closer to painting: deliberate, iterative, and guided by decades of experience in medical illustration and fine art. The painterly quality comes from lived experience and disciplined creative practice\u2014not automation."
     ]
   },

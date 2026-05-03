@@ -101,7 +101,7 @@ export const facingHistoryStory = [
   {
     subhead: "Why Story-Driven, Historically Themed Photography Matters",
     paragraphs: [
-      "In an era dominated by speed, automation, and AI-generated imagery, Facing History insists on the human hand. Every subject is real. Every detail is researched. Every shadow is earned.",
+      "In an era dominated by speed and automation, Facing History insists on the human hand. Every subject is real. Every detail is researched. Every shadow is earned.",
       "Rooted in the Pictorialist tradition and shaped by Wayne’s background in medical illustration, these works sculpt emotion, tension, and restraint until a single image carries narrative gravity.",
       "Painterly photography gives history its breath back—allowing truth and imagination to coexist while leaving space for reflection rather than instruction.",
       "That is why it endures. Not for perfection, but for presence."
@@ -117,11 +117,11 @@ export const facingHistoryStory = [
     ]
   },
 
-  // 10: STORY VS AI
+  // 10: STORY AND AUTHORSHIP
   {
-    subhead: "Where Storytelling Triumphs Over Algorithms",
+    subhead: "Where Storytelling Carries the Human Hand",
     paragraphs: [
-      "Painterly photography stands apart from traditional photography and AI-generated imagery because it carries intent. These images are built, not synthesized.",
+      "Painterly photography stands apart because it carries intent. These images are built through research, real subjects, real light, and the discipline to let a moment keep its mystery.",
       "AI can replicate appearance, but it cannot replicate empathy, research, lived presence, or the instinct to honor a moment. Wayne’s Facing History portraits are shaped from authenticity—real reenactors, real light, and decades of narrative craft.",
       "For collectors who value story over novelty and meaning over convenience, Facing History offers fine art rooted in truth, imagination, and reverence."
     ]

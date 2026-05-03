@@ -28,6 +28,7 @@
     subhead: "Craft Before Effect",
     paragraphs: [
       "This is not just a visual style. It is a way of seeing the West through structure, restraint, and implied narrative.",
+      "Wayne Heim's painterly Western images are camera-based works personally shaped through light, color, texture, atmosphere, focus, and human judgment.",
       "Painterly photography is often misunderstood as texture or mood added in post-processing. In this work, those qualities emerge from structure - from how light defines form, how tone establishes hierarchy, and how composition carries tension.",
       "Nothing is incidental. Texture follows intent. Color is controlled. Shadow is used not to obscure, but to suggest."
     ]

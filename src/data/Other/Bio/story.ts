@@ -28,6 +28,7 @@ export const painterlyStory = [
     subhead: "What Illustration Taught Me About Photography",
     paragraphs: [
       "As a medical illustrator, I was trained to distill complex information into clarity—to emphasize what matters, eliminate what doesn’t, and guide the eye through a story of function, purpose, and life.",
+      "My painterly Western images begin as camera-based works. The camera records the moment; the artist shapes what remains. That trained hand and eye - built through medical illustration, fine art, and years of visual problem-solving - guides the final image through light, color, texture, atmosphere, focus, and human judgment.",
       "That same discipline drives my painterly photography: remove distraction. Control the frame. Let the image carry the story without saying a word too many.",
       "In both disciplines, story is king. And when you cut away the noise, what’s left is what you were meant to feel all along."
     ]

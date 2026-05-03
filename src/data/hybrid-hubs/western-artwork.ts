@@ -133,6 +133,7 @@ export const storyBlocks = [
     subhead: 'What makes this artwork different',
     paragraphs: [
       'At K4 Studios the work is built through a painterly photographic process where tone, atmosphere, and restraint do as much work as subject. That means the broad phrase Western artwork can still land on something authored: images that feel collected rather than sourced, and lived with rather than merely matched to a room.',
+      'The finished works are rooted in camera-based photography and shaped through Wayne Heim\'s trained illustrator eye - light, color, texture, atmosphere, focus, and judgment working together rather than formulaic production.',
       'If the visitor wants a narrower path, the routes below break the field into landscapes, portraits, narrative work, and collector formats without losing the larger Western-art frame that brought them here in the first place.',
     ],
   },

@@ -23,6 +23,7 @@ export const wallArtStory = [
     paragraphs: [
       "Many searches for Western wall decor are really searches for a room anchor: a piece that can hold a living room, hallway, office, lodge wall, ranch interior, or hospitality space without feeling disposable.",
       "K4's Western wall art begins as photography, then is shaped through Wayne Heim's painterly process into fine art prints with the mood, restraint, and story presence often associated with classic Western paintings.",
+      "Individually crafted Western fine art, rooted in photography and shaped by human imagination, gives these works their collector-facing strength before they become room-facing objects.",
       "That bridge matters. These are not oil paintings, posters, or stock decor. They are photographic Western artworks designed for collectors who want the atmosphere of the American West in a finished wall piece."
     ],
   },

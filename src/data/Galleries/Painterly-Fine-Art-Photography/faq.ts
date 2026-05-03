@@ -10,9 +10,9 @@ export const facingFAQ = [
   },
 
   {
-    q: "How does painterly photography differ from AI-generated art or digital illustration?",
+    q: "How is painterly photography rooted in real photographic craft?",
     a: [
-      "Painterly photography is built from real light, real people, and real environments. Unlike AI-generated or purely digital artwork, every image begins with intentional photography and is shaped through hands-on, fine art post-production.",
+      "Painterly photography is built from real light, real people, and real environments. Every image begins with intentional photography and is shaped through hands-on, fine art post-production.",
       // CHANGED: tightened phrasing, removed slight redundancy
       "Wayne’s process is rooted in photographic craft and historical research — not algorithms or shortcuts — resulting in artwork with authenticity, depth, and narrative integrity.",
       `For a behind-the-scenes look at Wayne’s painterly process, see <a href="/Blog/what-is-painterly-photography">What Is Painterly Photography?</a>`

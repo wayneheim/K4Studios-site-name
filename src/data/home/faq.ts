@@ -21,11 +21,11 @@ export const facingFAQ = [
     ],
   },
 
-  /* 3 — No AI / Real Photography */
+  /* 3 — Camera-Based / Real Photography */
   {
-    q: "Are the images digitally illustrated or AI-generated?",
+    q: "Are the images rooted in real photography?",
     a: [
-      "No. Every image begins as real photography—captured on location or in studio—and is shaped through Wayne’s hands-on painterly process. There is no AI generation, no synthetic imagery, and no automated shortcuts.",
+      "Yes. Every image begins as real photography - captured on location or in studio - and is shaped through Wayne's hands-on painterly process.",
       "To explore how photographic style and narrative are developed in this work, visit the <a href=\"/Galleries/Painterly-Fine-Art-Photography\">Painterly Fine Art Photography</a> collection."
     ],
   },
@@ -80,7 +80,7 @@ export const facingFAQ = [
     q: "Why choose Wayne Heim over mass-produced or decorative art?",
     a: [
       "Every image is intentionally crafted—never manufactured. Wayne’s work is grounded in real photography, painterly discipline, historical awareness, and narrative structure.",
-      "In a market saturated with AI-generated imagery and generic décor, this work stands apart: human, cinematic, emotionally grounded, and built to endure. <a href='/Western-Wall-Art'>Explore the collection</a>."
+      "In a market saturated with generic decor, this work stands apart: human, cinematic, emotionally grounded, and built to endure. <a href='/Western-Wall-Art'>Explore the collection</a>."
     ],
   }
 ];

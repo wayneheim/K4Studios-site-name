@@ -5,6 +5,7 @@ export const painterlyStory = [
     title: "Where Photography Becomes Story",
     paragraphs: [
       "Wayne Heim's painterly photography begins with the camera, but it does not end with documentation. It is built from years of visual storytelling, fine art discipline, and a lifelong instinct for shaping an image until it feels less like something seen and more like something remembered.",
+      "Wayne Heim's painterly fine art begins as camera-based photography. The camera records the moment; the artist shapes what remains. Drawing on the trained hand and eye of an award-winning medical illustrator, Wayne builds each final image through light, color, texture, atmosphere, focus, and restraint - not generated, not assembled by formula, but shaped through judgment and human imagination.",
       "To Wayne, painterly photography is not a filter, preset, or digital shortcut. It is a way of building a photograph with the emotional gravity of painting - using light, atmosphere, composition, texture, and restraint to pull the viewer into a moment already in motion.",
       "His work carries the spirit of modern Pictorialism into <a href=\"/Western-Fine-Art-Photography\">Western fine art photography</a>, historical scenes, landscapes, portraits, and Americana subjects. Real people. Real light. Real places. But shaped with the eye of an illustrator and the patience of a storyteller.",
       "These are photographs with a foot in history and a hand on the door of imagination - images made not simply to show what was there, but to let the viewer feel what might have happened.",
@@ -96,7 +97,7 @@ export const painterlyStory = [
   {
     subhead: "Why Painterly Photography Matters",
     paragraphs: [
-      "In an era of AI-generated imagery, instant filters, and mass-produced décor, painterly photography stands apart. It is shaped by human judgment, patience, and narrative intent — qualities that cannot be automated.",
+      "In an era of instant filters and mass-produced decor, painterly photography stands apart because it remains rooted in authorship. It is shaped by human judgment, patience, and narrative intent.",
       "These images endure because they slow us down, asking us to feel history rather than skim it."
     ]
   },

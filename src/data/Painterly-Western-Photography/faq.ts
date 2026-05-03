@@ -40,10 +40,10 @@ export const facingFAQ = [
   },
 
   {
-    q: "How does this work differ from AI-generated or digitally fabricated art?",
+    q: "How is this work rooted in real subjects and real light?",
     a: [
-      "Painterly Western photography is grounded in real subjects, real light, and real environments. Each image begins with photographic capture and is refined through traditional fine art practices rather than artificial generation.",
-      "The resulting work reflects patience, judgment, and lived experience — qualities that cannot be automated."
+      "Painterly Western photography is grounded in real subjects, real light, and real environments. Each image begins with photographic capture and is refined through traditional fine art practices.",
+      "The resulting work reflects patience, judgment, and lived experience."
     ],
   },
 
