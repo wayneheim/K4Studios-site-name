@@ -17,6 +17,7 @@ const { title, subtitle, sections } = essay;
 
 const sectionPath = "/Other/Seeing/narrative-without-resolution";
 const canonicalUrl = `https://k4studios.com${sectionPath}`;
+const seoDescription = "Narrative without resolution in photography: how an unresolved image can imply a larger story, invite interpretation, and hold the viewer after the frame ends.";
 
 const structuredData = getStructuredData({
   type: "Article",
@@ -42,13 +43,14 @@ const structuredData = getStructuredData({
 
 const meta = {
   ...getLandingMeta(sectionPath, ""),
+  description: seoDescription,
   ogUrl: canonicalUrl,
   ogTitle: title,
-  ogDescription: subtitle || `A visual literacy essay: ${title}`,
+  ogDescription: seoDescription,
   ogType: "article",
   twitterUrl: canonicalUrl,
   twitterTitle: title,
-  twitterDescription: subtitle || `A visual literacy essay: ${title}`,
+  twitterDescription: seoDescription,
   twitterCard: "summary"
 };
 

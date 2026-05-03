@@ -271,6 +271,18 @@ westernPrintsCommercialHub: {
   imagePhrases: []
 },
 
+westernPhotographyPrintsHub: {
+  path: "/Western-Photography-Prints",
+  def: "The print-specific route for Western photography prints by Wayne Heim, presenting cowboy portraits, Wild West narratives, and historically grounded Western images as collector-grade fine art prints.",
+  fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
+  landingPhrases: [
+    { phrase: "western photography prints", rating: 6, use: true, link: "/Western-Photography-Prints" },
+    { phrase: "western fine art photography prints", rating: 5, use: true, link: "/Western-Photography-Prints" },
+    { phrase: "limited edition western photography", rating: 5, use: true, link: "/Western-Photography-Prints" },
+  ],
+  imagePhrases: []
+},
+
 cowboyWallArtCommercialHub: {
   path: "/cowboy-wall-art",
   def: "The commercial route for cowboy wall art and cowboy artwork, positioning Wayne Heim's painterly cowboy photography as collector-grade Western cowboy art for rooms and display.",
@@ -316,7 +328,7 @@ vintageWesternArtCommercialHub: {
 
 wildWestArtCommercialHub: {
   path: "/wild-west-art",
-  def: "The visual-art route for Wild West art, Wild West artwork, Wild West photos, Wild West pictures, and Western frontier art.",
+  def: "The visual-art route for Wild West art, Wild West artwork, Wild West photos, and Wild West pictures. Exact Western frontier art intent is handled by the dedicated Western Frontier Art route.",
   fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West",
   landingPhrases: [
     { phrase: "wild west art", rating: 6, use: true, link: "/wild-west-art" },
@@ -324,7 +336,18 @@ wildWestArtCommercialHub: {
     { phrase: "wild west photos", rating: 5, use: true, link: "/wild-west-art" },
     { phrase: "wild west pictures", rating: 5, use: true, link: "/wild-west-art" },
     { phrase: "pictures wild west", rating: 4, use: true, link: "/wild-west-art" },
-    { phrase: "western frontier art", rating: 5, use: true, link: "/wild-west-art" },
+  ],
+  imagePhrases: []
+},
+
+westernFrontierArtHub: {
+  path: "/Western-Frontier-Art",
+  def: "The exact-match route for Western frontier art, focused on painterly fine art of American frontier life, character, tension, and consequence.",
+  fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West",
+  landingPhrases: [
+    { phrase: "western frontier art", rating: 6, use: true, link: "/Western-Frontier-Art" },
+    { phrase: "american frontier art", rating: 5, use: true, link: "/Western-Frontier-Art" },
+    { phrase: "frontier art", rating: 4, use: true, link: "/Western-Frontier-Art" },
   ],
   imagePhrases: []
 },
@@ -415,6 +438,7 @@ westernBlackWhiteHub: {
     { phrase: "Western Black and White Photography", rating: 5, use: true },
     { phrase: "Black and White Western Photography", rating: 5, use: true },
     { phrase: "Black and White Cowboy Photography", rating: 5, use: true },
+    { phrase: "black and white cowboy portrait", rating: 5, use: true },
     { phrase: "black and white cowboy art", rating: 5, use: true },
     { phrase: "black and white western wall art", rating: 4, use: true },
     { phrase: "black and white western art", rating: 4, use: true },
@@ -555,6 +579,8 @@ westernPhotographyStyle: {
   landingPhrases: [
     { phrase: "western photography style", rating: 9, use: true },
     { phrase: "western style photography", rating: 9, use: true },
+    { phrase: "western art style", rating: 8, use: true, link: "/Blog/what-is-western-art" },
+    { phrase: "western style art", rating: 8, use: true, link: "/Blog/what-is-western-art" },
     { phrase: "western style fine art", rating: 7, use: true },
     { phrase: "western style art photography", rating: 7, use: true },
     { phrase: "western style wall art", rating: 6, use: true },
@@ -635,12 +661,12 @@ glossaryWesternStylePhotography: {
 },
 
 glossaryVintageWesternPhotography: {
-  path: "/Western-Wall-Art",
-  def: "Vintage Western photography refers to imagery that evokes historical Western eras through tone, restraint, and narrative structure—rather than literal age or archival origin. It captures the spirit of the frontier through deliberate craft, not nostalgic imitation. Explore <a href='/Western-Wall-Art'>Western Wall Art</a> | <a href='/Western-Fine-Art-Photography'>Western Fine Art Photography</a>.",
+  path: "/vintage-western-art",
+  def: "Vintage Western photography refers to imagery that evokes historical Western eras through tone, restraint, and narrative structure rather than literal age or archival origin. It captures the spirit of the frontier through deliberate craft, not nostalgic imitation. Explore <a href='/vintage-western-art'>Vintage Western Art</a> | <a href='/Western-Fine-Art-Photography'>Western Fine Art Photography</a>.",
   landingPhrases: [
-    { phrase: "vintage western photography", rating: 4, use: true, link: "/Western-Wall-Art" },
-    { phrase: "vintage cowboy photography", rating: 4, use: true, link: "/Western-Wall-Art" },
-    { phrase: "vintage western art", rating: 4, use: true, link: "/Western-Wall-Art" },
+    { phrase: "vintage western photography", rating: 4, use: true, link: "/vintage-western-art" },
+    { phrase: "vintage cowboy photography", rating: 4, use: true, link: "/vintage-western-art" },
+    { phrase: "vintage western art", rating: 4, use: true, link: "/vintage-western-art" },
   ],
   imagePhrases: []
 },
@@ -673,6 +699,10 @@ glossaryWesternNarratives: {
     { phrase: "narrative western photography", rating: 5, use: true, link: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives" },
     { phrase: "western storytelling photography", rating: 4, use: true, link: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives" },
     { phrase: "cinematic western photography", rating: 4, use: true, link: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives" },
+    { phrase: "cinematic feeling in photography", rating: 4, use: true, link: "/Blog/what-makes-an-image-feel-cinematic" },
+    { phrase: "drama vs tension", rating: 4, use: true, link: "/Other/Seeing/the-difference-between-drama-and-tension" },
+    { phrase: "unresolved image story", rating: 4, use: true, link: "/Other/Seeing/narrative-without-resolution" },
+    { phrase: "narrative without resolution", rating: 4, use: true, link: "/Other/Seeing/narrative-without-resolution" },
   ],
   imagePhrases: []
 },

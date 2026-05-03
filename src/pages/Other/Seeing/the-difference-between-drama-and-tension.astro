@@ -17,6 +17,7 @@ const { title, subtitle, sections } = essay;
 
 const sectionPath = "/Other/Seeing/the-difference-between-drama-and-tension";
 const canonicalUrl = `https://k4studios.com${sectionPath}`;
+const seoDescription = "The difference between drama and tension in visual storytelling: why some images shout while others hold pressure, implication, and unresolved consequence.";
 
 const structuredData = getStructuredData({
   type: "Article",
@@ -42,13 +43,14 @@ const structuredData = getStructuredData({
 
 const meta = {
   ...getLandingMeta(sectionPath, ""),
+  description: seoDescription,
   ogUrl: canonicalUrl,
   ogTitle: title,
-  ogDescription: subtitle || `A visual literacy essay: ${title}`,
+  ogDescription: seoDescription,
   ogType: "article",
   twitterUrl: canonicalUrl,
   twitterTitle: title,
-  twitterDescription: subtitle || `A visual literacy essay: ${title}`,
+  twitterDescription: seoDescription,
   twitterCard: "summary"
 };
 

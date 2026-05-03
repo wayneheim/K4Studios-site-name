@@ -107,6 +107,7 @@ interface Props {
   collectionAltPrefix?: string;
   heroVisualMode?: 'imageBar' | 'hybridCarousel';
   hybridCarouselProps?: any;
+  preHeroIntro?: string;
 }
 
 import BaseLayout from '@/layouts/BaseLayout.astro';
@@ -154,6 +155,7 @@ const {
   collectionAltPrefix = landing.title,
   heroVisualMode = 'imageBar',
   hybridCarouselProps = null,
+  preHeroIntro = '',
 } = Astro.props as Props;
 
 const galleryPaths: string[] = overrideGalleryPaths.length
@@ -319,6 +321,12 @@ const computedMeta = {
     <div class="mobile-breadcrumb-wrapper">
       <div class="mobile-breadcrumb" set:html={landing.breadcrumb} />
     </div>
+
+    {preHeroIntro && (
+      <section class="pre-hero-intro">
+        <p set:html={preHeroIntro} />
+      </section>
+    )}
 
     <div class="w-full max-w-[1200px] mx-auto px-4">
       {heroVisualMode === 'hybridCarousel' ? (
@@ -681,6 +689,23 @@ const computedMeta = {
     }
     .mobile-breadcrumb :global(a:hover) {
       text-decoration: underline;
+    }
+    .pre-hero-intro {
+      max-width: 880px;
+      margin: 0.6rem auto 0.75rem;
+      padding: 0 1rem;
+      text-align: center;
+    }
+    .pre-hero-intro p {
+      margin: 0;
+      color: #4a3d32;
+      font-size: 1rem;
+      line-height: 1.65;
+    }
+    .pre-hero-intro :global(a) {
+      color: #7d4f2f;
+      text-decoration: underline;
+      text-underline-offset: 0.16em;
     }
     .fade-in {
       opacity: 0;
