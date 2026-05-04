@@ -1,4 +1,11 @@
 export const facingFAQ = [
+  {
+    q: "Is Wayne Heim a Western photographer?",
+    a: [
+      "Yes. Wayne Heim is a Western photographer, western fine art photographer, and award-winning medical illustrator whose K4 Studios work interprets the American West through painterly photography, historical cowboy themes, living-history subjects, and narrative restraint.",
+      "Unlike many Western photographers who focus mainly on landscape, rodeo, documentary ranch work, or decor imagery, Heim's Western photography is built around character, atmosphere, and implied story."
+    ],
+  },
  {
     q: "What makes Wayne Heim’s photography different from others in the genre?",
     a: [

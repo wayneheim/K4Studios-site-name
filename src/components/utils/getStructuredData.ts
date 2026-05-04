@@ -124,6 +124,12 @@ const K4_ORGANIZATION_ID = "https://www.k4studios.com/#organization";
 const K4_ORGANIZATION_URL = "https://www.k4studios.com/";
 const K4_ORGANIZATION_LOGO = "https://www.k4studios.com/images/K4Logo-web-c.webp";
 const K4_CREATOR_REF = { "@id": K4_PERSON_ID };
+const K4_CREATOR_PERSON = {
+  "@type": "Person",
+  "@id": K4_PERSON_ID,
+  name: "Wayne Heim",
+  url: "https://www.k4studios.com/Other/Bio",
+};
 
 function addAboutTerm(
   terms: Array<{ "@type": string; name: string }>,
@@ -408,7 +414,7 @@ export function getStructuredData({
       url: data.url,
       mainEntityOfPage: { "@type": "WebPage", "@id": data.url },
       inLanguage: "en",
-      author: data.author || K4_CREATOR_REF,
+      author: data.author || K4_CREATOR_PERSON,
       publisher: {
         "@type": "Organization",
         "@id": K4_ORGANIZATION_ID,
@@ -477,7 +483,7 @@ export function getStructuredData({
           : "https://www.k4studios.com/images/K4Logo-web-c.webp"),
       datePublished: ensureIsoWithTimezone(data.datePublished),
       dateModified: ensureIsoWithTimezone(data.dateModified || data.datePublished),
-      author: K4_CREATOR_REF,
+      author: data.author || K4_CREATOR_PERSON,
       publisher: publisherObj,
       copyrightHolder: K4_CREATOR_REF,
       copyrightNotice: data.copyrightNotice || copyrightNotice,
@@ -530,7 +536,7 @@ export function getStructuredData({
       image: data.image || "https://www.k4studios.com/images/K4Logo-web-c.webp",
       datePublished: data.datePublished || todayIso,
       dateModified: data.dateModified || data.datePublished || todayIso,
-      author: K4_CREATOR_REF,
+      author: data.author || K4_CREATOR_PERSON,
       publisher: publisherObj,
       copyrightHolder: K4_CREATOR_REF,
       copyrightNotice: data.copyrightNotice || copyrightNotice,

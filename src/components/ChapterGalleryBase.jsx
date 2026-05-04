@@ -53,6 +53,7 @@ import { siteNav } from "../data/siteNav.js";
 import { useImageFallbackRedirect } from "./utils/useImageFallbackRedirect.js";
 import { themes } from "../data/themes/themes.mjs";
 import blogImageMap from "../data/blogImageMap.js";
+import { isWesternImagePath, westernImageAttributionText } from "../data/wayneEntity.js";
 
 /* =========================================================
    Image Proxy URL Generator
@@ -407,6 +408,7 @@ export default function ChapterGalleryBase({
   const isBW = path.includes("/black-white/");
   const editionTag = isBW ? "Black and White" : "Color";
   const isEngrainedSeries = basePath && basePath.includes("Engrained");
+  const showWesternImageAttribution = isImageDetailRender && isWesternImagePath(basePath);
 
   // Generate appropriate title for the section landing page
   const getSectionDisplayTitle = (url) => {
@@ -2200,6 +2202,19 @@ export default function ChapterGalleryBase({
                               }}
                             >
                               {collectionContextStatement}
+                            </p>
+                          )}
+                          {showWesternImageAttribution && (
+                            <p
+                              className="western-image-attribution"
+                              style={{
+                                margin: '0 0 1rem',
+                                color: '#7a6a58',
+                                fontSize: '0.86rem',
+                                lineHeight: '1.65'
+                              }}
+                            >
+                              {westernImageAttributionText}
                             </p>
                           )}
                           {galleryData[currentIndex]?.notes && (

@@ -1,14 +1,13 @@
----
+﻿---
 export const prerender = true;
 import BaseLayout         from '../../layouts/BaseLayout.astro';
 import LandingHeader      from '../../components/Landing-Header.jsx';
-// import ImageBar2       from '../../components/ImageBar2.jsx'; // ← disabled
+// import ImageBar2       from '../../components/ImageBar2.jsx'; // â† disabled
 import TombstoneNav       from '../../components/TombstoneNav.jsx';
 import LandingRightImages from '../../components/LandingRightImages.jsx';
 import FAQAccordion       from '../../components/FAQAccordion.jsx';
 import SiteFooter         from '../../components/Footer.astro';
 import MobileStoryImages  from '../../components/MobileStoryImages.jsx';
-import { getStructuredData } from '../../components/utils/getStructuredData.ts';
 import { getLandingMeta } from '../../data/landingMeta.ts';
 
 import { siteNav } from '../../data/siteNav.ts';
@@ -102,32 +101,58 @@ const featheredImages = bioImageSources.flatMap((path) =>
 
 const landingDescription =
   landingWestern.subtitle || (landingWestern as any)?.description || "";
-const landingKeywords = (landingWestern as any)?.keywords || [];
 const closingLine = 'Embrace the Past. Live the Story.';
 
-const structuredData = getStructuredData({
-  type: "gallery",
-  data: {
-    title: landingWestern.title,
-    description: landingDescription,
-    url: `https://k4studios.com${pagePath}`,
-    keywords: landingKeywords,
-    copyrightNotice: "© Wayne Heim"
+const structuredData = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "@id": "https://www.k4studios.com/Other/Bio#profilepage",
+  url: "https://www.k4studios.com/Other/Bio",
+  name: "Wayne Heim - Western Fine Art Photographer & Medical Illustrator",
+  description:
+    "Wayne Heim is a Western fine art photographer, award-winning medical illustrator, and fine art storyteller whose painterly photography brings a trained illustrator's eye to the American West, living history, and narrative image-making.",
+  mainEntity: {
+    "@type": "Person",
+    "@id": "https://www.k4studios.com/#person",
+    name: "Wayne Heim",
+    url: "https://www.k4studios.com/Other/Bio",
+    image: "https://www.k4studios.com/images/Bio-Heim.jpg",
+    jobTitle: "Western Fine Art Photographer, Fine Art Photographer, Medical Illustrator",
+    description:
+      "Wayne Heim is a Western fine art photographer, award-winning medical illustrator, and fine art storyteller known for painterly Western photography, living-history subjects, and narrative image-making.",
+    worksFor: { "@id": "https://www.k4studios.com/#organization" },
+    brand: { "@id": "https://www.k4studios.com/#organization" },
+    sameAs: [
+      "https://www.instagram.com/k4studios/"
+    ],
+    knowsAbout: [
+      "Western fine art photography",
+      "painterly photography",
+      "cowboy photography",
+      "living history",
+      "historical reenactment photography",
+      "medical illustration",
+      "visual storytelling"
+    ],
+    subjectOf: [
+      {
+        "@type": "Article",
+        name: "Painterly Photography",
+        url: "https://aotw.com/2026/02/painterly-photography/"
+      }
+    ]
   },
-  images: featheredImages,
-  defaults: {
-    copyrightNotice: "© Wayne Heim",
-    license: "https://k4studios.com/copyright",
-    acquireLicensePage: "https://k4studios.com/Other/Print-Options",
-    creditText: "Wayne Heim",
-    creatorName: "Wayne Heim",
-    creatorUrl: "https://k4studios.com/"
+  isPartOf: {
+    "@type": "WebSite",
+    "@id": "https://www.k4studios.com/#website",
+    name: "K4 Studios",
+    url: "https://www.k4studios.com/"
   }
-});
+}, null, 2);
 ---
 
 <BaseLayout
-  title={`${landingWestern.title} – ${landingWestern.subtitle}`}
+  title={`${landingWestern.title} â€“ ${landingWestern.subtitle}`}
   structuredDataJSON={structuredData}
   meta={meta}
 >
@@ -209,10 +234,10 @@ const structuredData = getStructuredData({
                 <aside class="bio-pathways reveal-on-scroll" aria-label="Explore the work">
                   <p class="bio-pathways-kicker">Explore the Work</p>
                   <ul class="bio-pathways-list">
-                    <li><a href="/Galleries/Painterly-Fine-Art-Photography">Painterly Photography</a> — atmosphere, restraint, and authored image-making.</li>
-                    <li><a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Narrative Historical Series</a> — story-driven work rooted in history and consequence.</li>
-                    <li><a href="/Other/One-Image-Movie">One-Image Movies™</a> — the core concept behind the work’s narrative structure.</li>
-                    <li><a href="/wayne-heim-western-fine-art-photography">Western Fine Art Photography</a> — a structured survey of one major body of work.</li>
+                    <li><a href="/Galleries/Painterly-Fine-Art-Photography">Painterly Photography</a> â€” atmosphere, restraint, and authored image-making.</li>
+                    <li><a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Narrative Historical Series</a> â€” story-driven work rooted in history and consequence.</li>
+                    <li><a href="/Other/One-Image-Movie">One-Image Moviesâ„¢</a> â€” the core concept behind the workâ€™s narrative structure.</li>
+                    <li><a href="/wayne-heim-western-fine-art-photography">Western Fine Art Photography</a> â€” a structured survey of one major body of work.</li>
                   </ul>
                   <p class="reveal-on-scroll" style="margin-top:1rem; color:#54483d; line-height:1.75;">
                     Across the work, I keep returning to the conditions that gave Western subjects their weight: labor, weather, silence, distance, and consequence rather than symbol alone.
@@ -221,7 +246,7 @@ const structuredData = getStructuredData({
               )}
               {index === westernStory.length - 1 && (
                 <p class="bio-final-cta reveal-on-scroll">
-                  <a href="/Galleries/Painterly-Fine-Art-Photography">Explore the work →</a>
+                  <a href="/Galleries/Painterly-Fine-Art-Photography">Explore the work â†’</a>
                 </p>
               )}
             </article>

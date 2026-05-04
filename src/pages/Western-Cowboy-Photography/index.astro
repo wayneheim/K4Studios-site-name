@@ -32,6 +32,7 @@ import { getOrderedWesternGalleryPaths } from '@/data/carousel/westernRouting.ts
 import { getFeatheredImages } from '@/components/utils/getFeatheredImages.ts';
 import { autoLinkKeywordsInText } from '@/components/utils/autoLinkKeywordsInText.ts';
 import { semantic as k4Semantic } from '@/data/semantic/K4-Sem.ts';
+import { westernArtistAttributionHtml } from '@/data/wayneEntity.js';
 
 // ✅ HUB-SCOPED DATA SOURCES
 import { landingWestern }
@@ -335,6 +336,7 @@ const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => {
         <p class="page-summary fade-in reveal-on-scroll">
           Western cowboy photography is character-driven fine art photography that isolates the cowboy as a human subject shaped by labor, landscape, and a specific historical moment.
         </p>
+        <p class="page-summary fade-in reveal-on-scroll" set:html={westernArtistAttributionHtml} />
       </div>
     </section>
 

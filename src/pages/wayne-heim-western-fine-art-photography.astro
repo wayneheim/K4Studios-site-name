@@ -1,4 +1,4 @@
----
+﻿---
 export const prerender = true;
 /**
  * Wayne Heim — Western Fine Art Photography
@@ -160,60 +160,21 @@ const characterSection = characterStudies.length >= 6 ? characterStudies : chara
 const nativePortraits = naImages.slice(0, 6);
 
 // Page metadata
-const pageTitle = "Wayne Heim | Western Fine Art Photography";
-const pageDescription = "Wayne Heim is a contemporary western fine art photographer whose painterly photography explores the American West through narrative restraint, cinematic atmosphere, and narrative western art photography. View curated works spanning black and white cowboy portraits, Wild West narrative scenes, and Native American portraits.";
+const pageTitle = "Wayne Heim | Western Photographer & Fine Art Storyteller";
+const pageDescription = "Wayne Heim is a contemporary Western photographer and western fine art photographer whose painterly photography explores the American West through historical cowboy themes, narrative restraint, and cinematic atmosphere.";
 const canonicalUrl = "https://www.k4studios.com/wayne-heim-western-fine-art-photography";
 
-/**
- * Structured Data: Authority Hybrid Pattern
- * 
- * TWO separate JSON-LD blocks (NOT merged, NOT @graph):
- * 1. Person — establishes Wayne Heim as canonical entity
- * 2. CreativeWork — frames the surveyed body of work
- * 
- * ❌ NO ImageObject entries
- * ❌ NO ItemList / Gallery / CollectionPage
- * ❌ NO Product / Offer
- * ❌ NO BreadcrumbList
- * ❌ NO sameAs social links (avoids entity merging)
- * 
- * This is a catalog essay / reference surface, not a gallery.
- */
-
-const personSchema = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "@id": "https://www.k4studios.com/wayne-heim-western-fine-art-photography#person",
-  "name": "Wayne Heim",
-  "jobTitle": "Western Fine Art Photographer",
-  "description": "Wayne Heim is a contemporary western fine art photographer known for painterly, narrative-driven imagery rooted in pictorialist tradition.",
-  "sameAs": [
-    "https://www.k4studios.com",
-    "https://www.instagram.com/k4studios/"
-  ],
-  "knowsAbout": [
-    "Western Fine Art Photography",
-    "Cowboy Portraiture",
-    "Narrative Western Art",
-    "Pictorialism",
-    "Narrative Photography",
-    "Historical Reenactment Photography"
-  ],
-  "url": "https://www.k4studios.com/wayne-heim-western-fine-art-photography",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://www.k4studios.com/wayne-heim-western-fine-art-photography"
-  }
-};
+// Body-of-work schema only. The Bio page is the canonical Wayne Heim entity page.
 
 const creativeWorkSchema = {
   "@context": "https://schema.org",
-  "@type": "CreativeWork",
+  "@type": "CreativeWorkSeries",
   "@id": "https://www.k4studios.com/wayne-heim-western-fine-art-photography#work",
-  "name": "Western Fine Art Photography by Wayne Heim",
+  "name": "Wayne Heim's Western Fine Art Photography",
+  "url": canonicalUrl,
   "creator": {
     "@type": "Person",
-    "@id": "https://www.k4studios.com/wayne-heim-western-fine-art-photography#person"
+    "@id": "https://www.k4studios.com/#person"
   },
   "about": [
     "Western Fine Art Photography",
@@ -222,7 +183,8 @@ const creativeWorkSchema = {
     "Narrative Western Imagery",
     "Pictorialist Photography"
   ],
-  "description": "A representative survey of Wayne Heim's western fine art photography, spanning black and white portraiture, cinematic color work, and narrative-driven scenes that extend into narrative western art.",
+  "description": "This page introduces Wayne Heim's Western fine art photography - a body of painterly, story-driven images of the American West created through camera-based photography, living-history subjects, and the trained eye of an award-winning illustrator.",
+  "mainEntityOfPage": { "@id": `${canonicalUrl}#webpage` },
   "isPartOf": {
     "@type": "WebSite",
     "name": "K4 Studios",
@@ -230,7 +192,6 @@ const creativeWorkSchema = {
   }
 };
 
-const personSchemaJson = JSON.stringify(personSchema, null, 2);
 const creativeWorkSchemaJson = JSON.stringify(creativeWorkSchema, null, 2);
 
 // Meta for BaseLayout
@@ -241,7 +202,7 @@ const meta = {
   ogTitle: pageTitle,
   ogDescription: pageDescription,
   ogImage: bwPortraits[0]?.id ? `https://www.k4studios.com${getProxySrc(bwPortraits[0].id, 'l')}` : '',
-  ogType: "profile",
+  ogType: "article",
   ogUrl: canonicalUrl,
   twitterTitle: pageTitle,
   twitterDescription: pageDescription,
@@ -254,8 +215,6 @@ const breadcrumb = '<a href="/">Home</a> / <span>Wayne Heim</span>';
 ---
 
 <BaseLayout title={pageTitle} meta={meta}>
-  <!-- Person Schema: Wayne Heim as canonical entity -->
-  <script type="application/ld+json" set:html={personSchemaJson} slot="head" />
   <!-- CreativeWork Schema: Surveyed body of work -->
   <script type="application/ld+json" set:html={creativeWorkSchemaJson} slot="head" />
   
@@ -281,7 +240,7 @@ const breadcrumb = '<a href="/">Home</a> / <span>Wayne Heim</span>';
         <section class="story-section">
           <article class="story-block">
             <p class="reveal-on-scroll survey-statement">
-              This page presents a representative survey of Wayne Heim's western fine art photography, spanning black and white portraiture, cinematic color work, character studies, and narrative-driven scenes of the American West.
+              This page introduces <a href="/Other/Bio" class="editorial-link">Wayne Heim's</a> Western fine art photography - a body of painterly, story-driven images of the American West created through camera-based photography, living-history subjects, and the trained eye of an award-winning illustrator.
             </p>
             <p class="reveal-on-scroll reference-statement">
               This overview is intended as a reference survey of Heim's western fine art photography, offering a structured view of recurring themes, visual approaches, and narrative forms within his work.

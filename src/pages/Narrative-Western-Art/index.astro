@@ -28,6 +28,7 @@ import { getOrderedWesternGalleryPaths } from '@/data/carousel/westernRouting.ts
 import { getFeatheredImages } from '@/components/utils/getFeatheredImages.ts';
 import { autoLinkKeywordsInText } from '@/components/utils/autoLinkKeywordsInText.ts';
 import { semantic as k4Semantic } from '@/data/semantic/K4-Sem.ts';
+import { westernArtistAttributionHtml } from '@/data/wayneEntity.js';
 
 import { landingNarrativeWesternArt }
   from '@/data/Narrative-Western-Art/landingstones.ts';
@@ -378,6 +379,7 @@ const tombstonesWithThumbs = landingNarrativeWesternArt.tombstones.map((stone: a
           {openingDefinition.map((paragraph) => (
             <p>{paragraph}</p>
           ))}
+          <p set:html={westernArtistAttributionHtml} />
           <p>For the artist authority page behind this narrative body of work, see <a href="/wayne-heim-western-fine-art-photography">Wayne Heim</a>.</p>
           <p>For concise companion guides tied to this collection, see <a href="/western-storytelling-photography">Western Storytelling Photography</a>, <a href="/cinematic-western-art">Cinematic Western Art</a>, and <a href="/cowboy-art-prints">Cowboy Art Prints</a>.</p>
         </div>

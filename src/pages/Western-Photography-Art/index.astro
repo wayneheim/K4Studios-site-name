@@ -30,6 +30,7 @@ import { getOrderedWesternGalleryPaths } from '@/data/carousel/westernRouting.ts
 import { getFeatheredImages } from '@/components/utils/getFeatheredImages.ts';
 import { autoLinkKeywordsInText } from '@/components/utils/autoLinkKeywordsInText.ts';
 import { semantic as k4Semantic } from '@/data/semantic/K4-Sem.ts';
+import { westernArtistAttributionHtml } from '@/data/wayneEntity.js';
 
 // ✅ HUB-SCOPED DATA SOURCES
 import { landingWesternArt }
@@ -333,6 +334,7 @@ const tombstonesWithThumbs = landingWesternArt.tombstones.map((stone: any) => {
           {openingDefinition.map((paragraph) => (
             <p>{paragraph}</p>
           ))}
+          <p set:html={westernArtistAttributionHtml} />
         </div>
       </div>
     </section>

@@ -28,6 +28,7 @@ import { getOrderedWesternGalleryPaths } from '@/data/carousel/westernRouting.ts
 import { getFeatheredImages } from '@/components/utils/getFeatheredImages.ts';
 import { autoLinkKeywordsInText } from '@/components/utils/autoLinkKeywordsInText.ts';
 import { semantic as k4Semantic } from '@/data/semantic/K4-Sem.ts';
+import { westernArtistAttributionHtml } from '@/data/wayneEntity.js';
 
 // ✅ HUB-SCOPED DATA SOURCES (your duped folder)
 import { landingWestern }
@@ -305,6 +306,7 @@ const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => {
       <div class="section-heading">
         <h1 class="page-title fade-in reveal-on-scroll">{landingWestern.title}</h1>
         <h2 class="page-subtitle fade-in reveal-on-scroll">{landingWestern.subtitle}</h2>
+        <p class="page-summary fade-in reveal-on-scroll" set:html={westernArtistAttributionHtml} />
       </div>
     </section>
 

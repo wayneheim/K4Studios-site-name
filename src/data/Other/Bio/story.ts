@@ -4,11 +4,11 @@ export const painterlyStory = [
     subhead: "Painterly – Narrative – Historical – Western – Landscape – Portraiture",
     callout: "I don’t just shoot moments. I build meaning—not in perfect light, but in the tension between clarity and ambiguity.",
     paragraphs: [
-      "Wayne Heim is the artist behind K4 Studios and the creator of its <a href='/Western-Fine-Art-Photography'>painterly Western fine art photography</a>, a body of camera-based fine art centered on the American West, historical atmosphere, character-driven portraiture, and <a href='/Other/One-Image-Movie'>One-Image Moviesâ„¢</a>.",
+      "Wayne Heim is the artist behind K4 Studios: a Western photographer, fine art photographer, and award-winning medical illustrator whose <a href='/Western-Fine-Art-Photography'>painterly Western fine art photography</a> centers on the American West, historical atmosphere, character-driven portraiture, and <a href='/Other/One-Image-Movie'>One-Image Moviesâ„¢</a>.",
         "His work moves between <strong>narrative photography</strong> and <strong>cinematic photography</strong>, blending photographic craft and illustration to create images that feel like whole stories pressing through a single frame. Within <strong>American West photography</strong>, he is drawn less to spectacle than to human consequence.",
       "Welcome to K4 Studios. I’m Wayne Heim—a nationally recognized medical illustrator as well as a fine art photographer, and that dual discipline shapes the way I build images: structure first, story always.",
       "Across Western, historical, portrait, and landscape work, the through-line is the same: narrative first. The subject changes. The commitment to story does not.",
-      "The American West remains one deep current in that practice, and a <a href='/wayne-heim-western-fine-art-photography'>representative survey of Wayne Heim’s Western fine art photography</a> is presented separately as a structured overview of one major body of work.",
+      "The American West remains one deep current in that practice, and a <a href='/wayne-heim-western-fine-art-photography'>representative survey of Western photographer Wayne Heim</a> is presented separately as a structured overview of one major body of work.",
         "Each image is built as a fragment of a larger story, part of what Wayne calls a <a href='/Other/One-Image-Movie'>One-Image Movie™</a>—a frame shaped to hold narrative pressure without giving everything away."
     ]
   },
@@ -49,7 +49,7 @@ export const painterlyStory = [
       "From storm-battered landscapes and Western outlaws to Civil War widows, reenactors, and solitary figures, every subject I photograph is a vessel for something larger: memory, myth, and the echo of unspoken lives.",
       "This isn’t just a portfolio. It’s a conversation—a slow turn through lives half-remembered. A photo-narrative anthology where every frame is a page torn from a book that never got written.",
       "Some viewers walk away with admiration. Others walk away unsettled. I’m not aiming for applause. I’m aiming for resonance.",
-      "Most photographers don't tell these stories. Painters and filmmakers have owned this ground for generations — the real lives behind the myth of the American West. I believe you can't reinterpret a story you've never understood. So the work starts there: before the legend, with the lives that built it.",
+      "Most photographers don't tell these stories. Even among Western photographers, much of the field leans toward landscape, rodeo, documentary ranch life, or decor. Painters and filmmakers have owned this ground for generations — the real lives behind the myth of the American West. I believe you can't reinterpret a story you've never understood. So the work starts there: before the legend, with the lives that built it.",
       "That lineage—from Russell and Remington forward into the present—is where this work lives: not in the myth alone, but in the human weight beneath it.",
       "Embrace the Past. Live the Story."
     ]

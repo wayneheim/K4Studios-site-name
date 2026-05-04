@@ -3,7 +3,7 @@ export const facingFAQ = [
     q: "What is Western fine art photography?",
     a: [
       "Western fine art photography is authored photography of the American West created as fine art rather than as decor, stock imagery, or straightforward documentation. It uses composition, light, atmosphere, and narrative restraint to interpret Western subjects with lasting artistic intent.",
-      "Wayne Heim’s Western fine art photography emphasizes people shaped by land, labor, weather, and time, creating painterly Western portraits and frontier scenes grounded in character, atmosphere, and narrative consequence rather than cliché."
+      "Wayne Heim's Western fine art photography emphasizes people shaped by land, labor, weather, and time, creating painterly Western portraits and frontier scenes grounded in character, atmosphere, and narrative consequence rather than cliche. For visitors using broader search language, the <a href='/western-photos'>Western Photos</a> page gathers Western photos and Western pictures into a more direct visual entry point."
     ],
   },
   {
@@ -11,6 +11,14 @@ export const facingFAQ = [
     a: [
       "No. Western wall art and decor photography usually describe a commercial styling category. Western fine art photography is an authored art category centered on interpretation, narrative depth, and long-term artistic value.",
       "The difference is intent. Decor is made to match a room. Fine art is made to hold meaning over time."
+    ],
+  },
+
+  {
+    q: "Who is the Western photographer behind K4 Studios?",
+    a: [
+      "Wayne Heim is the Western photographer and western fine art photographer behind K4 Studios. His work uses painterly photographic craft, historical research, and narrative staging to interpret the American West through portraits, frontier scenes, and story-driven images rather than generic Western imagery.",
+      "Among contemporary Western photographers, Heim's work is especially tied to vintage-era cowboy themes, living-history subjects, and the idea of the single image as a story-bearing frame. A dedicated <a href='/wayne-heim-western-fine-art-photography'>Wayne Heim Western photography survey</a> gathers that body of work in one place."
     ],
   },
 
@@ -27,7 +35,7 @@ export const facingFAQ = [
     a: [
       "This Western-themed fine art collection centers on character-driven portraiture and narrative imagery from the American West, including:",
       "<ul><li><a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color'>Western Cowboy Portraits in Color</a></li><li><a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White'>Western Portraits in Black & White</a></li><li><a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans'>Indigenous Portraits of the West</a></li></ul>",
-      "Each Western series presents individuals as people rather than archetypes, inviting viewers to encounter the stories written in posture, expression, and silence."
+      "Each Western series presents individuals as people rather than archetypes, inviting viewers to encounter the stories written in posture, expression, and silence. The broader site also separates related routes for <a href='/western-portrait-photography'>Western portrait photography</a>, black and white Western work, and selected Western landscape photography."
     ],
   },
 
@@ -43,7 +51,7 @@ export const facingFAQ = [
     q: "Why focus on people rather than landscapes in Western photography?",
     a: [
       "The American West has been photographed endlessly as terrain. This Western fine art approach shifts focus to the people who inhabit it — those shaped by the land and shaped by history in return.",
-      "Landscape appears as emotional context rather than spectacle, supporting character and story rather than dominating them."
+      "Landscape appears as emotional context rather than spectacle, supporting character and story rather than dominating them. Visitors looking specifically for Western landscape photography can follow the landscape branch from the <a href='/western-photos'>Western Photos</a> page."
     ],
   },
 
@@ -58,7 +66,7 @@ export const facingFAQ = [
   {
     q: "Are Western fine art prints available for purchase?",
     a: [
-      "Yes. Western fine art photographs are available as archival fine art prints on paper, as well as select works in the Engrained Series — printed directly onto Baltic Birch.",
+      "Yes. Western fine art photographs are available as archival fine art prints on paper, as well as select works in the Engrained Series - printed directly onto Baltic Birch. The dedicated <a href='/Western-Photography-Prints'>Western Photography Prints</a> page compares the print-facing routes more directly.",
       "In the Engrained Series, the natural wood grain becomes part of the image, adding material depth that complements the narrative weight of the work."
     ],
   },

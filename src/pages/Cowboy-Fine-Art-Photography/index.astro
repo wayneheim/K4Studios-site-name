@@ -32,6 +32,7 @@ import { getOrderedWesternGalleryPaths } from '@/data/carousel/westernRouting.ts
 import { getFeatheredImages } from '@/components/utils/getFeatheredImages.ts';
 import { autoLinkKeywordsInText } from '@/components/utils/autoLinkKeywordsInText.ts';
 import { semantic as k4Semantic } from '@/data/semantic/K4-Sem.ts';
+import { westernArtistAttributionHtml } from '@/data/wayneEntity.js';
 
 // ✅ HUB-SCOPED DATA SOURCES (Cowboy Authority Hub)
 import { landingCowboy }
@@ -307,6 +308,7 @@ const tombstonesWithThumbs = landingCowboy.tombstones.map((stone: any) => {
         <p class="page-summary fade-in reveal-on-scroll">
           Cowboy fine art photography is authored portraiture that treats the cowboy as a subject worthy of the same interpretive craft traditionally reserved for painted figures.
         </p>
+        <p class="page-summary fade-in reveal-on-scroll" set:html={westernArtistAttributionHtml} />
       </div>
     </section>
 
