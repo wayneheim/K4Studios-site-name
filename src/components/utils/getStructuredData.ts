@@ -119,6 +119,12 @@ const DEFAULT_GALLERY_ABOUT = [
   { "@type": "Thing", name: "Photographic Art" },
 ];
 
+const K4_PERSON_ID = "https://www.k4studios.com/#person";
+const K4_ORGANIZATION_ID = "https://www.k4studios.com/#organization";
+const K4_ORGANIZATION_URL = "https://www.k4studios.com/";
+const K4_ORGANIZATION_LOGO = "https://www.k4studios.com/images/K4Logo-web-c.webp";
+const K4_CREATOR_REF = { "@id": K4_PERSON_ID };
+
 function addAboutTerm(
   terms: Array<{ "@type": string; name: string }>,
   seen: Set<string>,
@@ -249,9 +255,6 @@ export function getStructuredData({
     license = "https://www.k4studios.com/licensing",
     acquireLicensePage = "https://www.k4studios.com/licensing",
     creditText = "Wayne Heim",
-    creatorName = "Wayne Heim",
-    creatorUrl = "https://www.k4studios.com/",
-    creatorSameAs = [],
     organizationSameAs = [],
   } = defaults;
 
@@ -276,17 +279,8 @@ export function getStructuredData({
         creditText: img.creditText || creditText,
         copyrightNotice: img.copyrightNotice || copyrightNotice,
         acquireLicensePage: getAcquireLicensePage(img, acquireLicensePage),
-        creator: {
-          "@type": "Person",
-          name: creatorName,
-          url: creatorUrl,
-          ...(creatorSameAs.length ? { sameAs: creatorSameAs } : {}),
-        },
-        copyrightHolder: {
-          "@type": "Person",
-          name: creatorName,
-          url: creatorUrl,
-        },
+        creator: K4_CREATOR_REF,
+        copyrightHolder: K4_CREATOR_REF,
         ...(publishedDate ? { datePublished: publishedDate } : {}),
         ...(modifiedDate ? { dateModified: modifiedDate } : {}),
         ...(img.thumbnailUrl ? { thumbnailUrl: getProxyUrl(img, 's') } : {}),
@@ -312,12 +306,14 @@ export function getStructuredData({
         "@id": `${data.url}#imagegallery`,
         name: data.title,
         description: data.description,
+        creator: K4_CREATOR_REF,
+        copyrightHolder: K4_CREATOR_REF,
         image: featuredImages,
       },
       ...(collectionPublishedDate ? { datePublished: collectionPublishedDate } : {}),
       ...(collectionModifiedDate ? { dateModified: collectionModifiedDate } : {}),
-      creator: { "@type": "Person", name: creatorName, url: creatorUrl },
-      copyrightHolder: { "@type": "Person", name: creatorName, url: creatorUrl },
+      creator: K4_CREATOR_REF,
+      copyrightHolder: K4_CREATOR_REF,
       copyrightNotice: data.copyrightNotice || copyrightNotice,
       inLanguage: "en",
     };
@@ -353,17 +349,8 @@ export function getStructuredData({
       creditText: data.creditText || creditText,
       copyrightNotice: data.copyrightNotice || copyrightNotice,
       acquireLicensePage: getAcquireLicensePage(data, acquireLicensePage),
-      creator: {
-        "@type": "Person",
-        name: creatorName,
-        url: creatorUrl,
-        ...(creatorSameAs.length ? { sameAs: creatorSameAs } : {}),
-      },
-      copyrightHolder: {
-        "@type": "Person",
-        name: creatorName,
-        url: creatorUrl,
-      },
+      creator: K4_CREATOR_REF,
+      copyrightHolder: K4_CREATOR_REF,
       // VisualArtwork properties (top-level for Google)
       artMedium: data.artMedium || "Archival fine art print",
       artform: data.artform || "Fine Art Photography",
@@ -421,30 +408,21 @@ export function getStructuredData({
       url: data.url,
       mainEntityOfPage: { "@type": "WebPage", "@id": data.url },
       inLanguage: "en",
-      author: data.author || {
-        "@type": "Person",
-        name: creatorName,
-        url: creatorUrl,
-        ...(creatorSameAs.length ? { sameAs: creatorSameAs } : {}),
-      },
+      author: data.author || K4_CREATOR_REF,
       publisher: {
         "@type": "Organization",
-        "@id": "https://www.k4studios.com/#organization",
+        "@id": K4_ORGANIZATION_ID,
         name: "K4 Studios",
-        url: "https://www.k4studios.com/",
+        url: K4_ORGANIZATION_URL,
         logo: {
           "@type": "ImageObject",
-          url: "https://www.k4studios.com/images/K4Logo-web-c.webp",
+          url: K4_ORGANIZATION_LOGO,
           width: 512,
           height: 512,
         },
         ...(organizationSameAs.length ? { sameAs: organizationSameAs } : {}),
       },
-      copyrightHolder: {
-        "@type": "Person",
-        name: creatorName,
-        url: creatorUrl,
-      },
+      copyrightHolder: K4_CREATOR_REF,
       copyrightNotice: data.copyrightNotice || copyrightNotice,
     };
 
@@ -469,17 +447,14 @@ export function getStructuredData({
       return dateStr;
     }
 
-    const authorId = `${creatorUrl.replace(/\/$/, "")}#person`;
-    const orgUrl = "https://www.k4studios.com/";
-
     const publisherObj = {
       "@type": "Organization",
-      "@id": `${orgUrl}#organization`,
+      "@id": K4_ORGANIZATION_ID,
       name: "K4 Studios",
-      url: orgUrl,
+      url: K4_ORGANIZATION_URL,
       logo: {
         "@type": "ImageObject",
-        url: "https://www.k4studios.com/images/K4Logo-web-c.webp",
+        url: K4_ORGANIZATION_LOGO,
         width: 512,
         height: 512,
       },
@@ -502,18 +477,9 @@ export function getStructuredData({
           : "https://www.k4studios.com/images/K4Logo-web-c.webp"),
       datePublished: ensureIsoWithTimezone(data.datePublished),
       dateModified: ensureIsoWithTimezone(data.dateModified || data.datePublished),
-      author: {
-        "@type": "Person",
-        name: creatorName,
-        url: creatorUrl,
-        ...(creatorSameAs.length ? { sameAs: creatorSameAs } : {}),
-      },
+      author: K4_CREATOR_REF,
       publisher: publisherObj,
-      copyrightHolder: {
-        "@type": "Person",
-        name: creatorName,
-        url: creatorUrl,
-      },
+      copyrightHolder: K4_CREATOR_REF,
       copyrightNotice: data.copyrightNotice || copyrightNotice,
       genre: data.genre || "Fine Art Photography Commentary",
       wordCount:
@@ -540,12 +506,12 @@ export function getStructuredData({
     
     const publisherObj = {
       "@type": "Organization",
-      "@id": "https://www.k4studios.com/#organization",
+      "@id": K4_ORGANIZATION_ID,
       name: "K4 Studios",
-      url: "https://www.k4studios.com/",
+      url: K4_ORGANIZATION_URL,
       logo: {
         "@type": "ImageObject",
-        url: "https://www.k4studios.com/images/K4Logo-web-c.webp",
+        url: K4_ORGANIZATION_LOGO,
         width: 512,
         height: 512,
       },
@@ -564,18 +530,9 @@ export function getStructuredData({
       image: data.image || "https://www.k4studios.com/images/K4Logo-web-c.webp",
       datePublished: data.datePublished || todayIso,
       dateModified: data.dateModified || data.datePublished || todayIso,
-      author: {
-        "@type": "Person",
-        name: creatorName,
-        url: creatorUrl,
-        ...(creatorSameAs.length ? { sameAs: creatorSameAs } : {}),
-      },
+      author: K4_CREATOR_REF,
       publisher: publisherObj,
-      copyrightHolder: {
-        "@type": "Person",
-        name: creatorName,
-        url: creatorUrl,
-      },
+      copyrightHolder: K4_CREATOR_REF,
       copyrightNotice: data.copyrightNotice || copyrightNotice,
       inLanguage: "en",
       ...(data.articleSection ? { articleSection: data.articleSection } : {}),

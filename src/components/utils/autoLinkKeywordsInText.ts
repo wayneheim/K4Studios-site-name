@@ -38,9 +38,12 @@ const CANONICAL_LINK_MAP: Record<string, string> = {
   'western art paintings': '/western-artwork',
   'western paintings': '/western-artwork',
   'western artwork for sale': '/western-artwork',
-  'western art prints': '/Western-Wall-Art',
+  'western art prints': '/western-art-prints',
+  'western fine art prints': '/western-art-prints',
+  'limited edition western prints': '/western-art-prints',
+  'american west art prints': '/western-art-prints',
   'western photography prints': '/Western-Photography-Prints',
-  'western prints': '/Western-Wall-Art',
+  'western prints': '/western-art-prints',
   'western wall art': '/Western-Wall-Art',
   'western wall decor': '/Western-Wall-Art',
   'western wall artwork': '/Western-Wall-Art',
@@ -48,9 +51,23 @@ const CANONICAL_LINK_MAP: Record<string, string> = {
   'cowboy artwork': '/cowboy-wall-art',
   'cowboy paintings': '/cowboy-wall-art',
   'cowboy photos': '/cowboy-wall-art',
+  'cowboy pictures': '/cowboy-pictures',
+  'cowboy picture': '/cowboy-pictures',
+  'cowboy images': '/cowboy-pictures',
   'cowboy art prints': '/cowboy-art-prints',
   'western cowboy art prints': '/cowboy-art-prints',
-  'cowboy artwork prints': '/cowboy-art-prints',
+  'cowboy artwork prints': '/cowboy-artwork-prints',
+  'cowboy fine art prints': '/cowboy-fine-art-prints',
+  'western cowboy fine art prints': '/cowboy-fine-art-prints',
+  'limited edition cowboy prints': '/cowboy-fine-art-prints',
+  'cowboy themed artwork': '/cowboy-themed-artwork',
+  'cowboy themed art': '/cowboy-themed-artwork',
+  'western themed artwork': '/cowboy-themed-artwork',
+  'western cowboy pictures': '/western-cowboy-pictures',
+  'wild west cowboy pictures': '/western-cowboy-pictures',
+  'old west pictures': '/old-west-pictures',
+  'old west picture': '/old-west-pictures',
+  'western frontier pictures': '/old-west-pictures',
   'vintage western art': '/vintage-western-art',
   'vintage cowboy art': '/vintage-western-art',
   'vintage western prints': '/vintage-western-art',
@@ -84,7 +101,9 @@ const CANONICAL_LINK_MAP: Record<string, string> = {
   'western art photography': '/Western-Photography-Art',
   'western photography art': '/Western-Photography-Art',
   'western black and white photography': '/Western-Black-and-White-Photography',
-  'western cowboy art': '/cowboy-wall-art',
+  'western cowboy art': '/western-cowboy-art',
+  'cowboy western art': '/western-cowboy-art',
+  'western cowboy fine art': '/western-cowboy-art',
   'western cowboy photography': '/Western-Cowboy-Photography',
   'cowboy photography': '/Cowboy-Photography',
   'western cowboy portraits': '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits',
@@ -98,6 +117,13 @@ function escapeRegex(str: string): string {
 // Helper: check if image is from Archive (should not be used for auto-linking)
 function isArchiveImage(img: { galleries?: string[] }): boolean {
   return (img.galleries || []).some(g => g.startsWith('Other/Archive') || g.startsWith('/Other/Archive'));
+}
+
+function isVisibleImage(img: { id?: string; visibility?: string } | null | undefined): boolean {
+  if (!img?.id) return false;
+  if (String(img.id).trim().toLowerCase() === 'i-k4studios') return false;
+  const visibility = String(img.visibility || 'show').trim().toLowerCase();
+  return !['hidden', 'non', 'none', ''].includes(visibility);
 }
 
 // Normalize only dash variants to a single en-dash character without touching spaces/case
@@ -463,8 +489,10 @@ export function autoLinkKeywordsInText(
           const kids = sectionGalleries[sec] || [];
           if (kids.length) {
             poolEntries.push(
-              ...kids.flatMap(key =>
-                (galleryDataMap[key] || []).map(img => ({ img, galleryKey: key }))
+              ...kids.flatMap((key: any) =>
+                (galleryDataMap[key] || [])
+                  .filter((img: any) => isVisibleImage(img))
+                  .map((img: any) => ({ img, galleryKey: key }))
               )
             );
             return;
@@ -474,26 +502,31 @@ export function autoLinkKeywordsInText(
           const alt1 = sec.startsWith('/') ? sec.slice(1) : '/' + sec;
           const direct = galleryDataMap[sec] || galleryDataMap[alt1] || [];
           if (direct.length) {
-            poolEntries.push(...direct.map(img => ({ img, galleryKey: sec })));
+            poolEntries.push(
+              ...direct
+                .filter((img: any) => isVisibleImage(img))
+                .map((img: any) => ({ img, galleryKey: sec }))
+            );
             return;
           }
 
           // Fallback: scan allImages by gallery membership first, then by src path include
           // Exclude Archive images - they should only appear in Archive gallery
-          const byGallery = allImages.filter(img => 
+          const byGallery = allImages.filter((img: any) => 
+            isVisibleImage(img) &&
             !isArchiveImage(img) && 
-            (img.galleries || []).some(g => g === sec || g === alt1)
+            (img.galleries || []).some((g: any) => g === sec || g === alt1)
           );
           if (byGallery.length) {
-            poolEntries.push(...byGallery.map(img => ({ img, galleryKey: sec })));
+            poolEntries.push(...byGallery.map((img: any) => ({ img, galleryKey: sec })));
             return;
           }
 
           const matchPath = sec + '/';
           poolEntries.push(
             ...allImages
-              .filter(img => !isArchiveImage(img) && img.src.includes(matchPath))
-              .map(img => ({ img, galleryKey: img.galleries?.[0] || sec }))
+              .filter((img: any) => isVisibleImage(img) && !isArchiveImage(img) && img.src.includes(matchPath))
+              .map((img: any) => ({ img, galleryKey: img.galleries?.[0] || sec }))
           );
         });
 
@@ -516,12 +549,13 @@ export function autoLinkKeywordsInText(
       const res = getSectionForKW(lc, semantic);
       if (res && res.type === 'universal') {
         // Exclude Archive images from universal pool
-        let pool = allImages.filter(img => !exclude.has(img.id) && !isArchiveImage(img));
-        if (!pool.length) pool = allImages.filter(img => !isArchiveImage(img));
+        let pool = allImages.filter((img: any) => !exclude.has(img.id) && isVisibleImage(img) && !isArchiveImage(img));
+        if (!pool.length) pool = allImages.filter((img: any) => isVisibleImage(img) && !isArchiveImage(img));
         const pick = pickDeterministic(pool, `${currentPath}|${lc}|universal`);
         if (!pick) continue;
-        const secRaw = String(pick.galleries?.[0] || '').replace(/^\/+/, '');
-        href = secRaw ? `/${secRaw}/${pick.id}` : `/Galleries/${pick.id}`;
+        const pickedImage = pick as any;
+        const secRaw = String(pickedImage.galleries?.[0] || '').replace(/^\/+/, '');
+        href = secRaw ? `/${secRaw}/${pickedImage.id}` : `/Galleries/${pickedImage.id}`;
       }
     }
 
@@ -544,8 +578,10 @@ export function autoLinkKeywordsInText(
               const kids = sectionGalleries[sec] || [];
               if (kids.length) {
                 poolEntries2.push(
-                  ...kids.flatMap(key =>
-                    (galleryDataMap[key] || []).map(img => ({ img, galleryKey: key }))
+                  ...kids.flatMap((key: any) =>
+                    (galleryDataMap[key] || [])
+                      .filter((img: any) => isVisibleImage(img))
+                      .map((img: any) => ({ img, galleryKey: key }))
                   )
                 );
                 return;
@@ -554,24 +590,29 @@ export function autoLinkKeywordsInText(
               const alt1 = sec.startsWith('/') ? sec.slice(1) : '/' + sec;
               const direct = galleryDataMap[sec] || galleryDataMap[alt1] || [];
               if (direct.length) {
-                poolEntries2.push(...direct.map(img => ({ img, galleryKey: sec })));
+                poolEntries2.push(
+                  ...direct
+                    .filter((img: any) => isVisibleImage(img))
+                    .map((img: any) => ({ img, galleryKey: sec }))
+                );
                 return;
               }
 
-              const byGallery = allImages.filter(img => 
+              const byGallery = allImages.filter((img: any) => 
+                isVisibleImage(img) &&
                 !isArchiveImage(img) && 
-                (img.galleries || []).some(g => g === sec || g === alt1)
+                (img.galleries || []).some((g: any) => g === sec || g === alt1)
               );
               if (byGallery.length) {
-                poolEntries2.push(...byGallery.map(img => ({ img, galleryKey: sec })));
+                poolEntries2.push(...byGallery.map((img: any) => ({ img, galleryKey: sec })));
                 return;
               }
 
               const matchPath = sec + '/';
               poolEntries2.push(
                 ...allImages
-                  .filter(img => !isArchiveImage(img) && img.src.includes(matchPath))
-                  .map(img => ({ img, galleryKey: img.galleries?.[0] || sec }))
+                  .filter((img: any) => isVisibleImage(img) && !isArchiveImage(img) && img.src.includes(matchPath))
+                  .map((img: any) => ({ img, galleryKey: img.galleries?.[0] || sec }))
               );
             });
             const filtered2 = poolEntries2.filter(e => !exclude.has(e.img.id));

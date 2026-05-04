@@ -48,6 +48,10 @@ import '@/styles/oneupheader.css';
 
 // ✅ The actual page URL
 const pagePath = "/Western-Fine-Art-Photography";
+const pageUrl = `https://www.k4studios.com${pagePath}`;
+const personId = "https://www.k4studios.com/#person";
+const organizationId = "https://www.k4studios.com/#organization";
+const bioPath = "/Other/Bio";
 
 // ✅ A REAL siteNav node to power feathering + gallery pool + autolinking
 // (This is why Cowboy page works — we emulate that here)
@@ -124,7 +128,7 @@ const structuredData = getStructuredData({
   data: {
     title: landingWestern.title,
     description: landingDescription,
-    url: `https://k4studios.com${pagePath}`,
+    url: pageUrl,
     keywords: landingWestern.keywords || [],
     copyrightNotice: "© Wayne Heim",
     // Enhanced "about" topics specific to Western subject matter
@@ -143,11 +147,11 @@ const structuredData = getStructuredData({
   images: featheredImages,
   defaults: {
     copyrightNotice: "© Wayne Heim",
-    license: "https://k4studios.com/copyright",
-    acquireLicensePage: "https://k4studios.com/Other/Print-Options",
+    license: "https://www.k4studios.com/copyright",
+    acquireLicensePage: "https://www.k4studios.com/Other/Print-Options",
     creditText: "Wayne Heim",
     creatorName: "Wayne Heim",
-    creatorUrl: "https://k4studios.com/"
+    creatorUrl: "https://www.k4studios.com/Other/Bio"
   }
 });
 
@@ -155,8 +159,8 @@ const structuredData = getStructuredData({
 // BREADCRUMB STRUCTURED DATA
 // ----------------------
 const breadcrumbData = getBreadcrumbList([
-  { name: "Home", item: "https://k4studios.com/" },
-  { name: "Western Fine Art Photography", item: `https://k4studios.com${pagePath}` },
+  { name: "Home", item: "https://www.k4studios.com/" },
+  { name: "Western Fine Art Photography", item: pageUrl },
 ]);
 
 // ----------------------
@@ -168,7 +172,7 @@ const stripHtml = (text: string) => text.replace(/<[^>]*>/g, '').trim();
 const faqStructuredData = JSON.stringify({
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "@id": `https://k4studios.com${pagePath}#faq`,
+  "@id": `${pageUrl}#faq`,
   mainEntity: facingFAQ.slice(0, 10).map((item: any) => ({
     "@type": "Question",
     name: item.q,
@@ -185,16 +189,16 @@ const faqStructuredData = JSON.stringify({
 const webPageSchema = JSON.stringify({
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": `https://k4studios.com${pagePath}#webpage`,
-  url: `https://k4studios.com${pagePath}`,
+  "@id": `${pageUrl}#webpage`,
+  url: pageUrl,
   name: "Western Fine Art Photography",
   description: "Western fine art photography by Wayne Heim: authored, painterly photography of the American West centered on character, frontier history, and narrative depth rather than decor, stock imagery, or modern Western lifestyle photography.",
   inLanguage: "en",
   isPartOf: {
     "@type": "WebSite",
-    "@id": "https://k4studios.com/#website",
+    "@id": "https://www.k4studios.com/#website",
     name: "K4 Studios",
-    url: "https://k4studios.com/"
+    url: "https://www.k4studios.com/"
   },
   about: [
     { "@type": "Thing", name: "Western Fine Art Photography" },
@@ -203,17 +207,18 @@ const webPageSchema = JSON.stringify({
     { "@type": "Thing", name: "Narrative Western Art" },
     { "@type": "Thing", name: "American West Photography" }
   ],
-  author: { "@id": "https://k4studios.com/#person" },
-  creator: { "@id": "https://k4studios.com/#person" },
-  copyrightHolder: { "@id": "https://k4studios.com/#person" },
-  mainEntity: { "@id": `https://k4studios.com${pagePath}#imagegallery` },
+  author: { "@id": personId },
+  creator: { "@id": personId },
+  copyrightHolder: { "@id": personId },
+  publisher: { "@id": organizationId },
+  mainEntity: { "@id": `${pageUrl}#imagegallery` },
 }, null, 2);
 
 // OG/Twitter image: first feathered image
 function makeAbsoluteUrl(src?: string) {
   if (!src) return "";
   if (src.startsWith("http://") || src.startsWith("https://")) return src;
-  return `https://k4studios.com${src.startsWith("/") ? src : "/" + src}`;
+  return `https://www.k4studios.com${src.startsWith("/") ? src : "/" + src}`;
 }
 
 // Proxy URL helper - ensures SmugMug URLs never appear in SSR HTML
@@ -225,10 +230,34 @@ function getProxySrc(imageId: string, size: string = 'm'): string {
 const landingImg = featheredImages[0];
 const landingImgUrl = landingImg?.id ? makeAbsoluteUrl(getProxySrc(landingImg.id, 'l')) : '';
 
+const articleStructuredData = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": `${pageUrl}#article`,
+  headline: "Western Fine Art Photography: Authored, Painterly Photography of the American West",
+  name: "Western Fine Art Photography",
+  description: "Western fine art photography interprets the American West through authored, painterly photographs built for narrative depth, historical atmosphere, and long-term artistic value rather than decor or stock imagery.",
+  url: pageUrl,
+  mainEntityOfPage: { "@id": `${pageUrl}#webpage` },
+  author: { "@id": personId },
+  creator: { "@id": personId },
+  copyrightHolder: { "@id": personId },
+  publisher: { "@id": organizationId },
+  image: landingImgUrl || "https://www.k4studios.com/images/K4Logo-web-c.webp",
+  inLanguage: "en",
+  articleSection: "Western Fine Art Photography",
+  about: [
+    { "@type": "Thing", name: "Western Fine Art Photography" },
+    { "@type": "Thing", name: "Painterly Photography" },
+    { "@type": "Thing", name: "Narrative Western Art" },
+    { "@type": "Thing", name: "Historically Themed Photography" },
+  ],
+}, null, 2);
+
 // ✅ Meta should be keyed to the HUB PAGE, not the cowboy gallery path
 const meta = getLandingMeta(pagePath, landingImgUrl);
-if (!meta.ogUrl) meta.ogUrl = `https://k4studios.com${pagePath}`;
-if (!meta.twitterUrl) meta.twitterUrl = `https://k4studios.com${pagePath}`;
+if (!meta.ogUrl) meta.ogUrl = pageUrl;
+if (!meta.twitterUrl) meta.twitterUrl = pageUrl;
 
 // ----------------------
 // DYNAMIC TOMBSTONE THUMBNAILS
@@ -280,36 +309,9 @@ const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => {
   title="Western Fine Art Photography | Painterly Fine Art of the American West – Wayne Heim"
   structuredDataJSON={structuredData}
   breadcrumbsJSON={breadcrumbData}
+  extraStructuredDataJSON={[faqStructuredData, webPageSchema, articleStructuredData]}
   meta={meta}
 >
-  <!-- FAQ Structured Data for rich snippets -->
-  <script type="application/ld+json" set:html={faqStructuredData} slot="head"></script>
-  <!-- WebPage Schema (subject authority) -->
-  <script type="application/ld+json" set:html={webPageSchema} slot="head"></script>
-
-  <!-- Article Structured Data for topical authority -->
-  <script type="application/ld+json" is:inline>
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Western Fine Art Photography: Authored, Painterly Photography of the American West",
-    "author": {
-      "@type": "Person",
-      "name": "Wayne Heim"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "K4 Studios",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.k4studios.com/images/k4-logo.png"
-      }
-    },
-    "description": "Western fine art photography interprets the American West through authored, painterly photographs built for narrative depth, historical atmosphere, and long-term artistic value rather than decor or stock imagery.",
-    "mainEntityOfPage": "https://www.k4studios.com/Western-Fine-Art-Photography"
-  }
-  </script>
-  
   <main class="bg-[#ffffff] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
     <div class="drawer-mode">
       <LandingHeader client:load breadcrumb={landingWestern.breadcrumb} />
@@ -333,10 +335,13 @@ const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => {
           Western fine art photography interprets the American West through narrative, atmosphere, and restraint. It draws from a painterly tradition where images are constructed with intention—shaped to carry story, memory, and emotional weight beyond the moment they depict. The aim is not to borrow the frontier as iconography, but to return to the labor, weather, silence, and consequence that gave it force. Each image exists as part of a larger narrative—what I call a One-Image Movie™.
         </p>
         <p class="page-context-link fade-in reveal-on-scroll">
+          At K4 Studios, <a href={bioPath}>Wayne Heim</a> defines Western fine art photography as authored, painterly photographic art of the American West &mdash; built through narrative intent, atmospheric light, compositional restraint, and historically grounded subject matter.
+        </p>
+        <p class="page-context-link fade-in reveal-on-scroll">
           This work exists within the broader tradition of American Western art, where artists interpret the frontier through painting, sculpture, and now photographic craft. For the broader cross-medium definition behind this page, see <a href="/Blog/what-is-western-fine-art">What Is Western Fine Art?</a>. That bridge between photographic realism and artistic interpretation is explored further in <a href="/Western-Photography-Art">Western photography art</a>. From there, the larger narrative world opens into <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier">Facing History</a>, the historically themed fine art photography collection.
         </p>
         <p class="page-context-link fade-in reveal-on-scroll">
-          For the artist authority page anchoring this body of work, see <a href="/wayne-heim-western-fine-art-photography">Wayne Heim</a>.
+          For the artist authority page anchoring this body of work, see <a href={bioPath}>Wayne Heim</a>.
         </p>
       </div>
     </section>

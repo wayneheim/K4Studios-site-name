@@ -75,7 +75,7 @@ const defaultCoverImage = visibleShows.length > 0 ? visibleShows[0].cover : "/im
 const normalizedDefaultCoverImage = normalizeImageSrc(defaultCoverImage, "l");
 
 const structuredData = getStructuredData({
-  type: "BlogPosting",
+  type: "Article",
   data: {
     headline: "K4 Studios Picture Shows",
     description: "Interactive picture shows and visual presentations showcasing Wayne Heim's fine art photography through immersive storytelling experiences.",
@@ -100,6 +100,7 @@ const structuredData = getStructuredData({
 const itemListStructuredData = {
   "@context": "https://schema.org",
   "@type": "ItemList",
+  "@id": `${toAbsoluteUrl(sectionPath)}#shows-list`,
   name: "K4 Studios Picture Shows",
   description: "Interactive visual presentations and themed exhibitions by Wayne Heim, combining fine art photography with cinematic storytelling.",
   url: toAbsoluteUrl(sectionPath),
@@ -109,20 +110,29 @@ const itemListStructuredData = {
     url: toAbsoluteUrl("/")
   },
   itemListElement: visibleShows.map((show, index) => ({
-    "@type": "BlogPosting",
+    "@type": "ListItem",
     position: index + 1,
-    headline: show.title,
-    url: toAbsoluteUrl(`/Other/Shows/${show.slug}`),
-    datePublished:
-      typeof show.date === "string" && /^\d{4}-\d{2}-\d{2}$/.test(show.date)
-        ? `${show.date}T00:00:00Z`
-        : show.date,
-    image: toAbsoluteUrl(normalizeImageSrc(show.cover || defaultCoverImage, "l")),
-    description: show.excerpt,
-    author: {
-      "@type": "Person",
-      name: "Wayne Heim",
-      url: toAbsoluteUrl("/")
+    url: toAbsoluteUrl(`/Other/Show/${show.slug}`),
+    item: {
+      "@type": "CreativeWork",
+      "@id": `${toAbsoluteUrl(`/Other/Show/${show.slug}`)}#creativework`,
+      name: show.title,
+      headline: show.title,
+      url: toAbsoluteUrl(`/Other/Show/${show.slug}`),
+      ...(typeof show.date === "string" && show.date.trim()
+        ? {
+            datePublished: /^\d{4}-\d{2}-\d{2}$/.test(show.date)
+              ? `${show.date}T00:00:00Z`
+              : show.date
+          }
+        : {}),
+      image: toAbsoluteUrl(normalizeImageSrc(show.cover || defaultCoverImage, "l")),
+      description: show.excerpt,
+      author: {
+        "@type": "Person",
+        name: "Wayne Heim",
+        url: toAbsoluteUrl("/")
+      }
     }
   }))
 };

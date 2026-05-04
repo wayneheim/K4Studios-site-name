@@ -361,6 +361,12 @@ status = 301
 force = true
 
 [[redirects]]
+from = "/Bio"
+to = "/Other/Bio"
+status = 301
+force = true
+
+[[redirects]]
 from = "/news-awards*"
 to = "/News-Awards"
 status = 301

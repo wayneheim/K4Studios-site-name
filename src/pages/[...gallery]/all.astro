@@ -221,10 +221,18 @@ const collectionSupport = (() => {
   return truncateText(sourceText, 340);
 })();
 
+const styleLabel = galleryHref.includes('/Painterly-Fine-Art-Photography/')
+  ? 'Painterly'
+  : (galleryHref.includes('/Fine-Art-Photography/') ? 'Traditional' : '');
+
+const styledGalleryTitle = styleLabel && !new RegExp(`^${styleLabel}\\b`, 'i').test(galleryTitle)
+  ? `${styleLabel} ${galleryTitle}`
+  : galleryTitle;
+
 // ✅ SEO-optimized title and description
-const seoTitle = `${galleryTitle} Collection (${imageCount} Images) | Wayne Heim Fine Art`;
+const seoTitle = `${styledGalleryTitle} Collection (${imageCount} Images) | Wayne Heim Fine Art`;
 const seoDescription = truncateText(
-  `${collectionLead} Browse all ${imageCount} images in the full collection.`,
+  `${styledGalleryTitle} complete collection: browse all ${imageCount} images, story pages, and collector details from this K4 Studios gallery.`,
   160,
 );
 

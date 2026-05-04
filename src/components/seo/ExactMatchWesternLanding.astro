@@ -136,14 +136,12 @@ const breadcrumb = `<a href="/">Home</a> / <span>${page.breadcrumbLabel}</span>`
       ))}
     </section>
 
-    <section class="print-cta" aria-label="Collectible fine art prints">
+    <section class="print-cta" aria-label={page.collectorCtaLabel || 'Collectible fine art prints'}>
       <div>
-        <p class="eyebrow">Collector Entry</p>
-        <h2>Collectible Western Fine Art Prints</h2>
+        <p class="eyebrow">{page.collectorEyebrow || 'Collector Entry'}</p>
+        <h2>{page.collectorHeading || 'Collectible Western Fine Art Prints'}</h2>
         <p>
-          Explore the full Wild West universe through crawlable archive pages, image pages, and collector options for
-          Wayne Heim's painterly Western photography. K4 Studios presents these works as camera-based fine art prints
-          built for story, atmosphere, and long-term viewing.
+          {page.collectorText || `Explore the full Wild West universe through crawlable archive pages, image pages, and collector options for Wayne Heim's painterly Western photography. K4 Studios presents these works as camera-based fine art prints built for story, atmosphere, and long-term viewing.`}
         </p>
       </div>
       <nav aria-label="Wild West archive and collector links">

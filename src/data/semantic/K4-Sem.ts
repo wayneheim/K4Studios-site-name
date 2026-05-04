@@ -258,15 +258,15 @@ westernArtworkCommercialHub: {
 },
 
 westernPrintsCommercialHub: {
-  path: "/Western-Wall-Art",
-  def: "The buyer-intent route for Western art prints, Western prints, Western wall decor, and Western wall artwork, with clear commercial language for homes, offices, lodges, and interior projects.",
+  path: "/western-art-prints",
+  def: "The collector-facing route for Western art prints by Wayne Heim, connecting cowboy portraits, frontier narratives, Native American portrait work, limited-edition language, series context, and archival fine art print presentation.",
   fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
   landingPhrases: [
-    { phrase: "western art prints", rating: 6, use: true, link: "/Western-Wall-Art" },
-    { phrase: "western prints", rating: 6, use: true, link: "/Western-Wall-Art" },
-    { phrase: "western wall artwork", rating: 6, use: true, link: "/Western-Wall-Art" },
-    { phrase: "western wall decor", rating: 6, use: true, link: "/Western-Wall-Art" },
-    { phrase: "western wall art", rating: 6, use: true, link: "/Western-Wall-Art" },
+    { phrase: "western art prints", rating: 7, use: true, link: "/western-art-prints" },
+    { phrase: "western fine art prints", rating: 6, use: true, link: "/western-art-prints" },
+    { phrase: "limited edition western prints", rating: 6, use: true, link: "/western-art-prints" },
+    { phrase: "american west art prints", rating: 5, use: true, link: "/western-art-prints" },
+    { phrase: "western prints", rating: 4, use: true, link: "/western-art-prints" },
   ],
   imagePhrases: []
 },
@@ -285,27 +285,110 @@ westernPhotographyPrintsHub: {
 
 cowboyWallArtCommercialHub: {
   path: "/cowboy-wall-art",
-  def: "The commercial route for cowboy wall art and cowboy artwork, positioning Wayne Heim's painterly cowboy photography as collector-grade Western cowboy art for rooms and display.",
+  def: "The commercial route for cowboy wall art and decor-facing cowboy artwork, positioning Wayne Heim's painterly cowboy photography as collector-grade work for rooms and display.",
   fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
   landingPhrases: [
     { phrase: "cowboy wall art", rating: 6, use: true, link: "/cowboy-wall-art" },
-    { phrase: "cowboy artwork", rating: 6, use: true, link: "/cowboy-wall-art" },
+    { phrase: "cowboy artwork", rating: 4, use: true, link: "/cowboy-wall-art" },
     { phrase: "cowboy paintings", rating: 5, use: true, link: "/cowboy-wall-art" },
     { phrase: "cowboy photos", rating: 4, use: true, link: "/cowboy-wall-art" },
-    { phrase: "western cowboy art", rating: 5, use: true, link: "/cowboy-wall-art" },
   ],
   imagePhrases: []
 },
 
 cowboyArtPrintsCommercialHub: {
   path: "/cowboy-art-prints",
-  def: "The print-focused route for cowboy art prints, Western cowboy art prints, and cowboy artwork prints.",
+  def: "The print-focused route for cowboy art prints and Western cowboy art prints, with cowboy fine art prints and cowboy artwork prints handled by dedicated collector routes.",
   fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
   landingPhrases: [
     { phrase: "cowboy art prints", rating: 6, use: true, link: "/cowboy-art-prints" },
     { phrase: "western cowboy art prints", rating: 6, use: true, link: "/cowboy-art-prints" },
-    { phrase: "cowboy artwork prints", rating: 6, use: true, link: "/cowboy-art-prints" },
     { phrase: "cowboy photography prints", rating: 5, use: true, link: "/cowboy-art-prints" },
+  ],
+  imagePhrases: []
+},
+
+cowboyArtworkPrintsCommercialHub: {
+  path: "/cowboy-artwork-prints",
+  def: "The collector-focused route for cowboy artwork prints by Wayne Heim, emphasizing painterly cowboy photography, archival presentation, series context, and limited-edition print language.",
+  fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
+  landingPhrases: [
+    { phrase: "cowboy artwork prints", rating: 7, use: true, link: "/cowboy-artwork-prints" },
+    { phrase: "cowboy artwork print", rating: 5, use: true, link: "/cowboy-artwork-prints" },
+    { phrase: "western cowboy artwork prints", rating: 5, use: true, link: "/cowboy-artwork-prints" },
+  ],
+  imagePhrases: []
+},
+
+cowboyFineArtPrintsCommercialHub: {
+  path: "/cowboy-fine-art-prints",
+  def: "The collector and edition-oriented route for cowboy fine art prints by Wayne Heim, focused on archival print presentation, limited-edition language, and series-aware Western cowboy imagery.",
+  fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
+  landingPhrases: [
+    { phrase: "cowboy fine art prints", rating: 7, use: true, link: "/cowboy-fine-art-prints" },
+    { phrase: "western cowboy fine art prints", rating: 6, use: true, link: "/cowboy-fine-art-prints" },
+    { phrase: "limited edition cowboy prints", rating: 6, use: true, link: "/cowboy-fine-art-prints" },
+    { phrase: "collector cowboy prints", rating: 5, use: true, link: "/cowboy-fine-art-prints" },
+  ],
+  imagePhrases: []
+},
+
+westernCowboyArtCommercialHub: {
+  path: "/western-cowboy-art",
+  def: "The exact-match commercial route for Western cowboy art by Wayne Heim, centered on painterly cowboy portraiture, frontier character, Western story, and collector-focused fine art print paths.",
+  fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
+  landingPhrases: [
+    { phrase: "western cowboy art", rating: 7, use: true, link: "/western-cowboy-art" },
+    { phrase: "cowboy western art", rating: 6, use: true, link: "/western-cowboy-art" },
+    { phrase: "western cowboy fine art", rating: 5, use: true, link: "/western-cowboy-art" },
+  ],
+  imagePhrases: []
+},
+
+cowboyThemedArtworkCommercialHub: {
+  path: "/cowboy-themed-artwork",
+  def: "The theme-intent route for cowboy themed artwork, translating decor-style search language into Wayne Heim's painterly cowboy photography, Western portrait collections, and fine art print options.",
+  fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
+  landingPhrases: [
+    { phrase: "cowboy themed artwork", rating: 7, use: true, link: "/cowboy-themed-artwork" },
+    { phrase: "cowboy themed art", rating: 6, use: true, link: "/cowboy-themed-artwork" },
+    { phrase: "western themed artwork", rating: 5, use: true, link: "/cowboy-themed-artwork" },
+  ],
+  imagePhrases: []
+},
+
+cowboyPicturesCommercialHub: {
+  path: "/cowboy-pictures",
+  def: "The plain-language visual route for cowboy pictures by Wayne Heim, serving cowboy image search intent while leading visitors into painterly cowboy portrait collections and fine art print options.",
+  fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
+  landingPhrases: [
+    { phrase: "cowboy pictures", rating: 7, use: true, link: "/cowboy-pictures" },
+    { phrase: "cowboy picture", rating: 5, use: true, link: "/cowboy-pictures" },
+    { phrase: "cowboy images", rating: 4, use: true, link: "/cowboy-pictures" },
+  ],
+  imagePhrases: []
+},
+
+westernCowboyPicturesCommercialHub: {
+  path: "/western-cowboy-pictures",
+  def: "The exact-match visual route for Western cowboy pictures by Wayne Heim, combining cowboy portraits, Western scenes, frontier narrative, and collector-facing image paths.",
+  fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West",
+  landingPhrases: [
+    { phrase: "western cowboy pictures", rating: 7, use: true, link: "/western-cowboy-pictures" },
+    { phrase: "wild west cowboy pictures", rating: 5, use: true, link: "/western-cowboy-pictures" },
+    { phrase: "western cowboy images", rating: 4, use: true, link: "/western-cowboy-pictures" },
+  ],
+  imagePhrases: []
+},
+
+oldWestPicturesCommercialHub: {
+  path: "/old-west-pictures",
+  def: "The plain-language route for Old West pictures by Wayne Heim, turning frontier image search intent into painterly Western narrative photography and collector print paths.",
+  fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color",
+  landingPhrases: [
+    { phrase: "old west pictures", rating: 7, use: true, link: "/old-west-pictures" },
+    { phrase: "old west picture", rating: 5, use: true, link: "/old-west-pictures" },
+    { phrase: "western frontier pictures", rating: 5, use: true, link: "/old-west-pictures" },
   ],
   imagePhrases: []
 },
@@ -2003,9 +2086,36 @@ universal: {
     ],
 
     "western cowboy art": [
-      "western art", 
-      "cowboy art prints", 
+      "cowboy western art",
+      "western cowboy fine art",
       "cowboy painting art"
+    ],
+
+    "cowboy fine art prints": [
+      "western cowboy fine art prints",
+      "limited edition cowboy prints",
+      "collector cowboy prints"
+    ],
+
+    "cowboy themed artwork": [
+      "cowboy themed art",
+      "western themed artwork",
+      "cowboy theme artwork"
+    ],
+
+    "cowboy pictures": [
+      "cowboy picture",
+      "cowboy images"
+    ],
+
+    "western cowboy pictures": [
+      "wild west cowboy pictures",
+      "western cowboy images"
+    ],
+
+    "old west pictures": [
+      "old west picture",
+      "western frontier pictures"
     ],
 
     "wild west photography": [

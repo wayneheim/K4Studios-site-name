@@ -1,4 +1,6 @@
 type LandingMetaEntry = {
+  title?: string;
+  seoTitle?: string;
   ogTitle: string;
   ogDescription: string;
   ogImage: string;
@@ -12,6 +14,25 @@ type LandingMetaEntry = {
 
 export const landingMetaDB: Record<string, LandingMetaEntry> = {
   "/": {
+    title: "Wayne Heim – Western & Painterly Fine Art Photography",
+    seoTitle: "Wayne Heim – Western & Painterly Fine Art Photography",
+    ogTitle: "Wayne Heim – Western & Painterly Fine Art Photography",
+    ogDescription:
+      "Step inside the story: painterly western, historical, and fine art photography by Wayne Heim. Western fine art prints, cowboy portraits, landscapes, and collector editions.",
+    ogImage: "/og/painterly.jpg",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle:
+      "Wayne Heim – Western & Painterly Fine Art Photography",
+    twitterDescription:
+      "Step inside the story: painterly western and historical fine art photography by Wayne Heim.",
+    twitterImage: "/og/painterly.jpg",
+    keywords: "Wayne Heim, Western fine art photography, painterly photography, cowboy portraits, fine art prints, Western art, historical photography, K4 Studios",
+  },
+
+  "/index": {
+    title: "Wayne Heim – Western & Painterly Fine Art Photography",
+    seoTitle: "Wayne Heim – Western & Painterly Fine Art Photography",
     ogTitle: "Wayne Heim – Western & Painterly Fine Art Photography",
     ogDescription:
       "Step inside the story: painterly western, historical, and fine art photography by Wayne Heim. Western fine art prints, cowboy portraits, landscapes, and collector editions.",
@@ -601,6 +622,8 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
   },
 
   "/Galleries/Fine-Art-Photography": {
+    title: "Traditional Fine Art Photography by Wayne Heim",
+    seoTitle: "Traditional Fine Art Photography by Wayne Heim",
     ogTitle: "Traditional Fine Art Photography by Wayne Heim",
     ogDescription:
       "Traditional fine art photography—landscapes, portraits, architecture, and atmospheric scenes captured with museum-quality precision.",
@@ -611,6 +634,150 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
     twitterDescription:
       "Fine art landscapes, portraits, and architecture by Wayne Heim.",
     twitterImage: "/og/traditional.jpg",
+  },
+
+  "/Galleries/Fine-Art-Photography/Landscapes": {
+    title: "Traditional Landscape Photography by Wayne Heim",
+    seoTitle: "Traditional Landscape Photography by Wayne Heim",
+    ogTitle: "Traditional Landscape Photography by Wayne Heim",
+    ogDescription:
+      "Traditional landscape photography by Wayne Heim, spanning mountain ranges, western vistas, and atmospheric studies produced as museum-quality fine art prints.",
+    ogImage: "/og/landscapes-color.jpg",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: "Traditional Landscape Photography by Wayne Heim",
+    twitterDescription:
+      "Traditional landscape fine art photography by Wayne Heim, from western vistas to atmospheric mountain studies.",
+    twitterImage: "/og/landscapes-color.jpg",
+    keywords: "traditional landscape photography, fine art landscape photography, western landscape photography, mountain landscape art, Wayne Heim",
+  },
+
+  "/Galleries/Fine-Art-Photography/Transportation": {
+    title: "Traditional Transportation Photography by Wayne Heim",
+    seoTitle: "Traditional Transportation Photography by Wayne Heim",
+    ogTitle: "Traditional Transportation Photography by Wayne Heim",
+    ogDescription:
+      "Traditional transportation photography by Wayne Heim, featuring trains, aircraft, classic cars, and vessels interpreted as collectible fine art prints.",
+    ogImage: "/og/transportation.jpg",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: "Traditional Transportation Photography by Wayne Heim",
+    twitterDescription:
+      "Fine art transportation photography by Wayne Heim featuring trains, planes, cars, and boats.",
+    twitterImage: "/og/transportation.jpg",
+    keywords: "transportation photography, train photography, aircraft photography, classic car photography, Wayne Heim",
+  },
+
+  "/Galleries/Fine-Art-Photography/Architecture": {
+    title: "Architectural Fine Art Photography by Wayne Heim",
+    seoTitle: "Architectural Fine Art Photography by Wayne Heim",
+    ogTitle: "Architectural Fine Art Photography by Wayne Heim",
+    ogDescription:
+      "Architectural fine art photography by Wayne Heim, exploring form, geometry, atmosphere, and built history through traditional photographic craft.",
+    ogImage: "/og/architecture.jpg",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: "Architectural Fine Art Photography by Wayne Heim",
+    twitterDescription:
+      "Architecture-focused fine art photography by Wayne Heim, centered on structure, form, and atmosphere.",
+    twitterImage: "/og/architecture.jpg",
+    keywords: "architectural photography, architecture fine art photography, traditional architecture photography, Wayne Heim",
+  },
+
+  "/Galleries/Fine-Art-Photography/Landscapes/By-Location": {
+    title: "Landscape Photography by Location | Wayne Heim",
+    seoTitle: "Landscape Photography by Location | Wayne Heim",
+    ogTitle: "Landscape Photography by Location | Wayne Heim",
+    ogDescription:
+      "Landscape photography organized by location, featuring regional studies from the American West, Midwest, Northeast, South, and international destinations.",
+    ogImage: "/og/landscapes-location.jpg",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: "Landscape Photography by Location | Wayne Heim",
+    twitterDescription:
+      "Explore traditional landscape photography by location, from U.S. regions to international destinations.",
+    twitterImage: "/og/landscapes-location.jpg",
+    keywords: "landscape photography by location, regional landscape photography, western landscape photography, Wayne Heim",
+  },
+
+  "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International": {
+    title: "International Landscape Photography | Wayne Heim",
+    seoTitle: "International Landscape Photography | Wayne Heim",
+    ogTitle: "International Landscape Photography | Wayne Heim",
+    ogDescription:
+      "International landscape photography by Wayne Heim, including Iceland, the Faroe Islands, Newfoundland, and western Canada.",
+    ogImage: "/og/landscapes-international.jpg",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: "International Landscape Photography | Wayne Heim",
+    twitterDescription:
+      "International landscape studies by Wayne Heim from Iceland, the Faroe Islands, Newfoundland, and western Canada.",
+    twitterImage: "/og/landscapes-international.jpg",
+    keywords: "international landscape photography, Iceland photography, Faroe Islands photography, Newfoundland photography, Wayne Heim",
+  },
+
+  "/Galleries/Fine-Art-Photography/Landscapes/By-Theme": {
+    title: "Fine Art Landscapes by Theme | Wayne Heim",
+    seoTitle: "Fine Art Landscapes by Theme | Wayne Heim",
+    ogTitle: "Fine Art Landscapes by Theme | Wayne Heim",
+    ogDescription:
+      "Themed landscape collections by Wayne Heim, including mountain studies, sunsets, water subjects, color work, and black-and-white landscapes.",
+    ogImage: "/og/landscapes-theme.jpg",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: "Fine Art Landscapes by Theme | Wayne Heim",
+    twitterDescription:
+      "Browse themed landscape galleries from mountains and sunsets to water, color, and black-and-white studies.",
+    twitterImage: "/og/landscapes-theme.jpg",
+    keywords: "landscapes by theme, mountain landscape photography, sunset landscape photography, black and white landscapes, Wayne Heim",
+  },
+
+  "/Galleries/Fine-Art-Photography/Miscellaneous": {
+    title: "Miscellaneous Fine Art Photography | Wayne Heim",
+    seoTitle: "Miscellaneous Fine Art Photography | Wayne Heim",
+    ogTitle: "Miscellaneous Fine Art Photography | Wayne Heim",
+    ogDescription:
+      "Miscellaneous fine art photography by Wayne Heim, spanning reenactments, wildlife, and pet portraits in a traditional style.",
+    ogImage: "/og/misc.jpg",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: "Miscellaneous Fine Art Photography | Wayne Heim",
+    twitterDescription:
+      "Traditional-style miscellaneous galleries featuring reenactments, wildlife, and pet portraits.",
+    twitterImage: "/og/misc.jpg",
+    keywords: "miscellaneous fine art photography, wildlife photography, reenactment photography, pet portraits, Wayne Heim",
+  },
+
+  "/Galleries/Fine-Art-Photography/Portraits": {
+    title: "Traditional Portrait Photography by Wayne Heim",
+    seoTitle: "Traditional Portrait Photography by Wayne Heim",
+    ogTitle: "Traditional Portrait Photography by Wayne Heim",
+    ogDescription:
+      "Traditional portrait photography by Wayne Heim, including color, black-and-white, and reenactor portrait studies shaped for fine art print presentation.",
+    ogImage: "/og/portraits.jpg",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: "Traditional Portrait Photography by Wayne Heim",
+    twitterDescription:
+      "Traditional portrait studies by Wayne Heim in color, black-and-white, and reenactor series.",
+    twitterImage: "/og/portraits.jpg",
+    keywords: "traditional portrait photography, fine art portrait photography, reenactor portraits, black and white portraits, Wayne Heim",
+  },
+
+  "/Narrative-Western-Art": {
+    title: "Narrative Western Art | Story-Led Frontier Fine Art by Wayne Heim",
+    seoTitle: "Narrative Western Art | Story-Led Frontier Fine Art by Wayne Heim",
+    ogTitle: "Narrative Western Art | Story-Led Frontier Fine Art by Wayne Heim",
+    ogDescription:
+      "Narrative Western art by Wayne Heim: story-led frontier fine art built around consequence, character, and historical atmosphere rather than decorative Western motifs.",
+    ogImage: "/images/cowboy.webp",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: "Narrative Western Art | Wayne Heim",
+    twitterDescription:
+      "Story-led Western fine art rooted in frontier character, consequence, and atmosphere.",
+    twitterImage: "/images/cowboy.webp",
+    keywords: "narrative western art, western storytelling art, frontier narrative photography, Wayne Heim",
   },
 
   "/Fine-Art-Photography-of-the-American-West": {
@@ -912,6 +1079,8 @@ export function getLandingMeta(path: string, imageOverride?: string) {
   );
 
   return {
+    title: baseMeta.title || baseMeta.seoTitle || baseMeta.ogTitle,
+    seoTitle: baseMeta.seoTitle || baseMeta.title || baseMeta.ogTitle,
     ogTitle: baseMeta.ogTitle,
     ogDescription: uniqueDesc,
     ogImage: imageOverride || baseMeta.ogImage,

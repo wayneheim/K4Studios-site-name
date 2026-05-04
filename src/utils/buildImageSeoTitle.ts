@@ -9,6 +9,7 @@ const ATTRIBUTION_PATTERNS = [
 ];
 
 const PROMOTIONAL_PATTERNS = [
+  /\bsee\b/i,
   /\bdiscover\b/i,
   /\bdelve\b/i,
   /\bexplor(?:e|ing)\b/i,
@@ -30,6 +31,9 @@ const GENERIC_CANDIDATE_PATTERNS = [
   /^photographic artwork$/i,
   /^wayne heim$/i,
   /^wayne heim fine art photography$/i,
+  /^new wayne heim$/i,
+  /^photographic wayne heim$/i,
+  /^wayne heim\s*(?:'|’|&#39;)?\s*(?:19|20)?\d{2}$/i,
   /^portrait$/i,
   /^gallery$/i,
   /^artwork$/i,
@@ -110,6 +114,11 @@ const CONTEXT_LABELS: Array<{ pattern: RegExp; label: string }> = [
   { pattern: /\/Landscapes\/By-Theme\/Mountains/i, label: 'Mountain Landscape Photograph' },
   { pattern: /\/Landscapes\/By-Theme\/Black-White/i, label: 'Black and White Landscape Photograph' },
   { pattern: /\/Landscapes\/By-Theme\/Color/i, label: 'Landscape Photograph' },
+  { pattern: /\/Landscapes\/By-Location\/International/i, label: 'International Landscape Photograph' },
+  { pattern: /\/Landscapes\/By-Location\/West/i, label: 'Western U.S. Landscape Photograph' },
+  { pattern: /\/Landscapes\/By-Location\/Midwest/i, label: 'Midwest Landscape Photograph' },
+  { pattern: /\/Landscapes\/By-Location\/Northeast/i, label: 'Northeast Landscape Photograph' },
+  { pattern: /\/Landscapes\/By-Location\/South/i, label: 'Southern U.S. Landscape Photograph' },
   { pattern: /\/Architecture\//i, label: 'Architectural Photograph' },
   { pattern: /\/Miscellaneous\/Pets/i, label: 'Pet Photograph' },
   { pattern: /\/Miscellaneous\/Wildlife/i, label: 'Wildlife Photograph' },
@@ -245,6 +254,14 @@ function normalizeCandidate(value = ''): string {
   return trimPunctuation(cleaned);
 }
 
+function normalizeComparableTitle(value = ''): string {
+  return stripAttribution(value)
+    .replace(/\s+[|:-]\s+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .toLowerCase();
+}
+
 function tokenizeCandidate(value = ''): string[] {
   return normalizeCandidate(value).toLowerCase().match(/[a-z0-9]+/g) || [];
 }
@@ -345,14 +362,20 @@ function extractAltOrTitleSubject(value = ''): string {
 
 function inferContextLabel(galleryPath = '', galleryTitle = ''): string {
   const normalizedPath = String(galleryPath || '');
+  const styleLabel = /\/Galleries\/Painterly-Fine-Art-Photography\//i.test(normalizedPath)
+    ? 'Painterly'
+    : (/\/Galleries\/Fine-Art-Photography\//i.test(normalizedPath) ? 'Traditional' : '');
+
   for (const entry of CONTEXT_LABELS) {
     if (entry.pattern.test(normalizedPath)) {
-      return entry.label;
+      return styleLabel ? `${styleLabel} ${entry.label}` : entry.label;
     }
   }
 
   const title = trimPunctuation(stripAttribution(galleryTitle));
-  if (title) return title;
+  if (title) return styleLabel && !new RegExp(`^${styleLabel}\\b`, 'i').test(title)
+    ? `${styleLabel} ${title}`
+    : title;
 
   const segments = normalizedPath
     .split('/')
@@ -361,7 +384,8 @@ function inferContextLabel(galleryPath = '', galleryTitle = ''): string {
     .slice(-2)
     .map((segment) => segment.replace(/-/g, ' '));
 
-  return segments.join(' ') || 'Fine Art Photograph';
+  const fallback = segments.join(' ') || 'Fine Art Photograph';
+  return styleLabel ? `${styleLabel} ${fallback}` : fallback;
 }
 
 function composeTitle(
@@ -394,11 +418,36 @@ function composeTitle(
     return `${cleanedSubject} | ${cleanedContext}`;
   }
 
+  // For alt/description/story sourced titles, keep gallery context in the title to
+  // disambiguate images that appear in multiple sections (theme, location, painterly/traditional).
+  if ((source === 'alt' || source === 'description' || source === 'story') && cleanedContext && !subjectLower.includes(contextLower)) {
+    return `${cleanedSubject} | ${cleanedContext}`;
+  }
+
   return cleanedSubject;
 }
 
+function needsCatalogDisambiguation(value = ''): boolean {
+  const cleaned = normalizeCandidate(value);
+  if (!cleaned) return true;
+  const primary = String(value || '').split('|')[0]?.trim() || cleaned;
+  const primaryWordCount = countWords(primary);
+
+  if (countWords(cleaned) <= 3) return true;
+  if (primaryWordCount <= 6) return true;
+  if (PROMOTIONAL_PATTERNS.some((pattern) => pattern.test(primary))) return true;
+  if (looksLikeSentenceFragment(primary)) return true;
+  if (/\b(?:new|photographic)\s+wayne\s+heim\b/i.test(cleaned)) return true;
+  if (/\bwayne\s+heim\b/i.test(cleaned)) return true;
+  if (/\b(?:cowboy|woman|soldier|portrait|train|automobile|vehicle|submarine|landscape|narrative|wwii|roaring\s*20s|black\s*(?:and|&)\s*white)\b/i.test(primary) && primaryWordCount <= 14) {
+    return true;
+  }
+  if (/^wayne\s+heim\s*(?:'|’|&#39;)?\s*(?:19|20)?\d{2}$/i.test(cleaned)) return true;
+  return false;
+}
+
 export function buildImageSeoTitle(
-  image: { title?: string; alt?: string; description?: string; story?: string } | null | undefined,
+  image: { id?: string; title?: string; alt?: string; description?: string; story?: string } | null | undefined,
   options: { galleryPath?: string; galleryTitle?: string } = {}
 ): string {
   const contextLabel = inferContextLabel(options.galleryPath, options.galleryTitle);
@@ -409,33 +458,67 @@ export function buildImageSeoTitle(
   const titleValue = image.title || '';
   const descriptionValue = image.description || '';
   const storyValue = image.story || '';
+  const imageId = String(image.id || '').trim();
 
   const altSubject = extractAltOrTitleSubject(altValue);
   const descriptionSubject = extractStrongDescriptionSubject(descriptionValue);
   const altMatchesTitle = hasSameNormalizedCandidate(altValue, titleValue);
   const namedTitle = extractNamedWorkTitle(titleValue);
 
-  if (altSubject && !altMatchesTitle) {
-    return composeTitle(altSubject, contextLabel, 'alt');
+  let resolvedTitle = '';
+
+  if (namedTitle && !isWeakCandidate(namedTitle) && !looksLikeSentenceFragment(namedTitle)) {
+    resolvedTitle = composeTitle(namedTitle, contextLabel, 'named-title');
   }
 
-  if (altMatchesTitle && (namedTitle || altSubject)) {
-    return composeTitle(namedTitle || altSubject, contextLabel, 'named-title');
+  if (!resolvedTitle && altSubject && !altMatchesTitle) {
+    resolvedTitle = composeTitle(altSubject, contextLabel, 'alt');
   }
 
-  if (descriptionSubject) {
-    return composeTitle(descriptionSubject, contextLabel, 'description');
+  if (!resolvedTitle && altMatchesTitle && (namedTitle || altSubject)) {
+    resolvedTitle = composeTitle(namedTitle || altSubject, contextLabel, 'named-title');
   }
 
-  if (namedTitle) {
-    return composeTitle(namedTitle, contextLabel, 'named-title');
+  if (!resolvedTitle && descriptionSubject) {
+    resolvedTitle = composeTitle(descriptionSubject, contextLabel, 'description');
+  }
+
+  if (!resolvedTitle && namedTitle) {
+    resolvedTitle = composeTitle(namedTitle, contextLabel, 'named-title');
   }
 
   const titleSubject = extractAltOrTitleSubject(titleValue);
-  if (titleSubject) {
-    return composeTitle(titleSubject, contextLabel, 'title');
+  if (!resolvedTitle && titleSubject) {
+    resolvedTitle = composeTitle(titleSubject, contextLabel, 'title');
   }
 
   const storySubject = extractStrongDescriptionSubject(storyValue);
-  return composeTitle(storySubject, contextLabel, 'story');
+  if (!resolvedTitle) {
+    resolvedTitle = composeTitle(storySubject, contextLabel, 'story');
+  }
+
+  const normalizedResolved = normalizeCandidate(resolvedTitle);
+  if (!normalizedResolved && contextLabel) {
+    resolvedTitle = contextLabel;
+  }
+
+  if (imageId && needsCatalogDisambiguation(resolvedTitle)) {
+    const resolvedLower = normalizeComparableTitle(resolvedTitle);
+    const contextLower = normalizeComparableTitle(contextLabel);
+    if (contextLabel && contextLower && !resolvedLower.includes(contextLower)) {
+      resolvedTitle = resolvedTitle
+        ? `${resolvedTitle} | ${contextLabel}`
+        : contextLabel;
+    }
+
+    const shortId = imageId.replace(/^i-/i, '');
+    const titleWithContextLower = normalizeComparableTitle(resolvedTitle);
+    if (resolvedTitle && !titleWithContextLower.includes(shortId.toLowerCase())) {
+      resolvedTitle = `${resolvedTitle} | ${shortId}`;
+    } else if (!resolvedTitle) {
+      resolvedTitle = `${contextLabel || 'Fine Art Photograph'} | ${shortId}`;
+    }
+  }
+
+  return resolvedTitle;
 }

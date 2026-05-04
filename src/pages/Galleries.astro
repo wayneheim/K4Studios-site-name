@@ -26,8 +26,9 @@ import { slides as homeSlides } from '../data/home/carousel.ts';
 
 import '../styles/global.css';
 
-const sectionPath = "/Galleries/Painterly-Fine-Art-Photography";
+const sectionPath = "/Galleries";
 const meta = getLandingMeta(sectionPath);
+meta.description = "Browse K4 Studios galleries, including painterly Western stories, historical portraits, traditional landscapes, transportation, architecture, and fine art photography collections.";
 
 type StorySection = {
   title?: string;
@@ -69,7 +70,7 @@ const structuredData = getStructuredData({
 ---
 
 <BaseLayout
-  title={`${landingWestern.title} – ${landingWestern.subtitle}`}
+  title="Browse K4 Galleries | Painterly & Traditional Fine Art Photography by Wayne Heim"
   structuredDataJSON={structuredData}
   meta={meta}
 >

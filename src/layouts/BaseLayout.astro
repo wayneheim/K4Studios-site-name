@@ -81,23 +81,12 @@ const trimAtWord = (text = '', maxLength = 160) => {
   return `${trimmed}...`;
 };
 
-const trimTitle = (text = '', maxLength = 70) => {
+const trimTitle = (text = '', maxLength = 95) => {
   const normalized = normalizeMetaText(text);
   if (!normalized) return '';
   if (normalized.length <= maxLength) return normalized;
 
-  const separatorPatterns = [' | ', ' \u2013 ', ' \u2014 ', ' - ', ': '];
-  for (const separator of separatorPatterns) {
-    const head = normalized.split(separator)[0]?.trim();
-    if (head && head.length >= 18 && head.length <= maxLength) {
-      return head;
-    }
-  }
-
-  const brandSuffix = ' | K4 Studios';
-  const truncated = normalized.slice(0, Math.max(18, maxLength - brandSuffix.length)).trim();
-  const branded = `${truncated}${brandSuffix}`;
-  return branded.length <= maxLength ? branded : normalized.slice(0, maxLength).trim();
+  return trimAtWord(normalized, maxLength);
 };
 
 const normalizeDescription = (text = '', fallback = '', minimumLength = 110, maximumLength = 160) => {
@@ -123,7 +112,7 @@ const normalizeDescription = (text = '', fallback = '', minimumLength = 110, max
 };
 
 // Titles
-const galleryTitle = meta.title || meta.seoTitle || meta.ogTitle || title || 'K4 Studios - Fine Art Photography';
+const galleryTitle = title || meta.title || meta.seoTitle || meta.ogTitle || 'K4 Studios - Fine Art Photography';
 let pageTitle = isImagePage
   ? (preloadImage?.title || meta.ogTitle || meta.ogImageTitle || galleryTitle)
   : galleryTitle;
@@ -132,28 +121,75 @@ let pageTitle = isImagePage
 const cleanTitleBase = normalizeMetaText(pageTitle || '')
   .replace(/\s*\|\s*Wayne Heim.*$/gi, '')
   .trim();
-const cleanTitle = trimTitle(cleanTitleBase);
+const cleanTitle = isImagePage
+  ? cleanTitleBase
+  : trimTitle(cleanTitleBase);
+
+const pathname = Astro.url?.pathname || '';
+let finalTitle = cleanTitle;
+if (/^\/Other\/Show(?:\/|$)/i.test(pathname) && !/\|\s*Show$/i.test(finalTitle)) {
+  finalTitle = `${finalTitle} | Show`;
+}
+if (/^\/Other\/Stories(?:\/|$)/i.test(pathname) && !/\|\s*Stories$/i.test(finalTitle)) {
+  finalTitle = `${finalTitle} | Stories`;
+}
 
 const defaultDescription =
   'Discover painterly fine art photography, Western stories, and historical portraits by Wayne Heim. Explore galleries, stories, and limited edition prints from K4 Studios.';
 
 const seoDescriptionRaw =
   description ||
+  meta.seoDescription ||
+  meta.ogDescription ||
+  meta.twitterDescription ||
   meta.description ||
   (isImagePage ? preloadImage?.description : null) ||
   (Astro.url?.pathname === '/'
     ? defaultDescription
-    : `${cleanTitle} - Fine Art Photography by Wayne Heim`);
+    : `${finalTitle} - Fine Art Photography by Wayne Heim`);
 
 const seoDescription = normalizeDescription(seoDescriptionRaw, defaultDescription);
 const seoDescriptionMaxLength =
   Number.isFinite(Number(meta.descriptionMaxLength)) && Number(meta.descriptionMaxLength) > 0
     ? Number(meta.descriptionMaxLength)
     : 160;
-const finalSeoDescription =
+let finalSeoDescription =
   seoDescriptionMaxLength === 160
     ? seoDescription
     : normalizeDescription(seoDescriptionRaw, defaultDescription, 80, seoDescriptionMaxLength);
+
+if (isImagePage && lastSegment && !finalSeoDescription.includes(lastSegment)) {
+  const shortId = lastSegment.replace(/^i-/i, '');
+  const parentSegments = (Astro.url?.pathname || '')
+    .split('/')
+    .filter(Boolean)
+    .slice(0, -1);
+  const usefulSegments = parentSegments
+    .filter((segment) => !/^(Galleries|Other|Fine-Art-Photography|Painterly-Fine-Art-Photography)$/i.test(segment));
+  const contextSegments = usefulSegments.slice(-3);
+  const contextLabel = contextSegments
+    .join(' ')
+    .replace(/-/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .toLowerCase();
+  const suffix = contextLabel
+    ? ` K4 image ${shortId} in ${contextLabel}.`
+    : ` K4 image ${shortId}.`;
+  const maxDescriptionLength = Math.max(80, seoDescriptionMaxLength);
+  const baseLength = Math.max(0, maxDescriptionLength - suffix.length);
+  finalSeoDescription = `${trimAtWord(finalSeoDescription, baseLength).replace(/\.\.\.$/, '').trim()}${suffix}`;
+}
+
+if (!isImagePage && /^\/Other\/(?:Show|Stories)(?:\/|$)/i.test(pathname)) {
+  const sectionLabel = /^\/Other\/Show(?:\/|$)/i.test(pathname) ? 'K4 show page.' : 'K4 story page.';
+  if (!finalSeoDescription.toLowerCase().includes(sectionLabel.toLowerCase())) {
+    const suffix = ` ${sectionLabel}`;
+    const maxDescriptionLength = Math.max(80, seoDescriptionMaxLength);
+    const baseLength = Math.max(0, maxDescriptionLength - suffix.length);
+    finalSeoDescription = `${trimAtWord(finalSeoDescription, baseLength).replace(/\.\.\.$/, '').trim()}${suffix}`;
+  }
+}
 
 const socialDescription =
   (isImagePage && preloadImage?.story)
@@ -168,21 +204,25 @@ let ogHeight = preloadImage?.height || "1200";
 
 if (isImagePage && preloadImage?.src) {
   rawOgImage = preloadImage.src;
-  ogAlt = preloadImage.alt || preloadImage.title || cleanTitle;
+  ogAlt = preloadImage.alt || preloadImage.title || finalTitle;
   ogWidth = preloadImage.width || ogWidth;
   ogHeight = preloadImage.height || ogHeight;
 } else if (meta.ogImage) {
   rawOgImage = meta.ogImage;
-  ogAlt = meta.ogImageAlt || meta.ogImageTitle || cleanTitle;
+  ogAlt = meta.ogImageAlt || meta.ogImageTitle || finalTitle;
 } else {
   rawOgImage = "/images/show-2t.webp";
-  ogAlt = cleanTitle;
+  ogAlt = finalTitle;
 }
 
 const canonicalUrl = ensureAbsoluteUrl(meta.canonicalUrl || Astro.url?.pathname || '/');
 const emitCanonical = meta.noCanonical !== true && meta.canonical !== false;
 const ogUrl = ensureAbsoluteUrl(meta.ogUrl || canonicalUrl);
-const robotsContent = meta.robots || (isImagePage ? "index, follow, noai, noimageai" : null);
+const isInternalPreviewPage =
+  /\/(?:Builder-Test[^/]*|Test-Show[^/]*|Test-show[^/]*|Template)(?:\/|$)/i.test(pathname) ||
+  /\/index%20copy(?:\/|$)/i.test(pathname) ||
+  /\/index copy(?:\/|$)/i.test(pathname);
+const robotsContent = meta.robots || (isInternalPreviewPage ? "noindex, follow" : (isImagePage ? "index, follow, noai, noimageai" : null));
 
 // Convert any SmugMug URLs to proxy format for OG/Twitter images
 // Default to 'l' to protect XL from bot discovery
@@ -210,7 +250,7 @@ const ogImageSecureUrl = ogImage;
 
 const ogType = isImagePage ? "article" : (meta.ogType || "website");
 
-const twitterTitle = meta.twitterTitle || cleanTitle;
+const twitterTitle = meta.twitterTitle || finalTitle;
 const twitterImage = toAbsoluteProxyUrl(meta.twitterImage || rawOgImage, 'l');
 const twitterUrl = ensureAbsoluteUrl(meta.twitterUrl || ogUrl);
 
@@ -237,6 +277,41 @@ const normalizedExtraStructuredDataJSON = Array.isArray(extraStructuredDataJSON)
   ? extraStructuredDataJSON.map(normalizeK4Host)
   : (extraStructuredDataJSON ? [normalizeK4Host(extraStructuredDataJSON)] : []);
 const jsonLdScripts = [
+  JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://www.k4studios.com/#person",
+        name: "Wayne Heim",
+        url: "https://www.k4studios.com/Other/Bio",
+        image: "https://www.k4studios.com/images/K4Logo-web.webp",
+        jobTitle: "Fine Art Photographer and Medical Illustrator",
+        worksFor: { "@id": "https://www.k4studios.com/#organization" },
+        brand: { "@id": "https://www.k4studios.com/#organization" },
+        knowsAbout: [
+          "Western fine art photography",
+          "Painterly photography",
+          "Narrative Western art",
+          "Historically themed photography",
+          "Medical illustration",
+        ],
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.k4studios.com/#organization",
+        name: "K4 Studios",
+        url: "https://www.k4studios.com/",
+        founder: { "@id": "https://www.k4studios.com/#person" },
+        logo: {
+          "@type": "ImageObject",
+          url: "https://www.k4studios.com/images/K4Logo-web-c.webp",
+          width: 512,
+          height: 512,
+        },
+      },
+    ],
+  }),
   normalizedStructuredDataJSON,
   normalizedBreadcrumbsJSON,
   ...normalizedExtraStructuredDataJSON,
@@ -251,7 +326,7 @@ const jsonLdScripts = [
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{cleanTitle}</title>
+    <title>{finalTitle}</title>
     <meta name="description" content={finalSeoDescription} />
     <meta name="author" content="Wayne Heim" />
     <meta name="copyright" content="Copyright Wayne Heim, K4 Studios" />
@@ -273,7 +348,7 @@ const jsonLdScripts = [
     <slot name="head" />
 
     <!-- ✅ OG / Twitter -->
-    <meta property="og:title" content={cleanTitle} />
+    <meta property="og:title" content={finalTitle} />
     <meta property="og:description" content={socialDescription || seoDescription} />
     <meta property="og:image" content={ogImage} />
     <meta property="og:image:secure_url" content={ogImageSecureUrl} />
