@@ -1,6 +1,7 @@
 /**
  * Submit URLs to Bing IndexNow directly from your generated sitemap.xml
- * Usage: node scripts/submit-indexnow.mjs [--dry-run] [--no-wait-live]
+ * Streaming mode submits one URL at a time as soon as eligible changes are detected.
+ * Usage: node scripts/submit-indexnow.mjs [--dry-run] [--no-wait-live] [--allow-full-submit]
  */
 
 import fs from "fs";
@@ -8,10 +9,12 @@ import path from "path";
 import { fileURLToPath } from "url";
 
 // === ⏰ SUBMIT INTERVAL CONTROL ===
-const SUBMIT_INTERVAL_HOURS = 6;
+// Default is immediate submission for streaming compliance.
+const SUBMIT_INTERVAL_HOURS = Number(process.env.INDEXNOW_MIN_INTERVAL_HOURS || 0);
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const LAST_SUBMIT_PATH = path.join(__dirname, ".indexnow-last-submit.json");
+const URL_STATE_PATH = path.join(__dirname, ".indexnow-url-signatures.json");
 
 // === 🔧 CONFIGURATION ===
 const SITE_HOST = "www.k4studios.com";
@@ -20,14 +23,14 @@ const INDEXNOW_KEY_URL = `https://${SITE_HOST}/${INDEXNOW_KEY}.txt`;
 const SITEMAP_PATH = path.join(__dirname, "../dist/sitemap.xml");
 const SITEMAP_URL = process.env.SITEMAP_URL || `https://${SITE_HOST}/sitemap.xml`;
 const ENDPOINT = "https://api.indexnow.org/indexnow";
-const BATCH_SIZE = 500;
-const DELAY_MS = 2000; // 2s between requests
+const STREAM_DELAY_MS = Number(process.env.INDEXNOW_STREAM_DELAY_MS || 250);
 const LIVE_CHECK_TIMEOUT_MS = Number(process.env.INDEXNOW_LIVE_TIMEOUT_MS || 10 * 60 * 1000);
 const LIVE_CHECK_INTERVAL_MS = Number(process.env.INDEXNOW_LIVE_INTERVAL_MS || 20 * 1000);
 const LIVE_CHECK_USER_AGENT = "K4-IndexNow-Verifier/1.0";
 
 const isDryRun = process.argv.includes("--dry-run");
 const shouldWaitForLive = !process.argv.includes("--no-wait-live");
+const allowFullSubmit = process.argv.includes("--allow-full-submit");
 
 // === 🧠 HELPERS ===
 function sleep(ms) {
@@ -42,6 +45,70 @@ function uniqueUrls(urls) {
 function extractUrlsFromSitemap(xmlContent) {
   const matches = [...xmlContent.matchAll(/<loc>(.*?)<\/loc>/g)];
   return uniqueUrls(matches.map((m) => m[1].trim()));
+}
+
+function extractEntriesFromSitemap(xmlContent) {
+  const entries = [];
+  const urlBlocks = [...xmlContent.matchAll(/<url>([\s\S]*?)<\/url>/g)];
+
+  for (const block of urlBlocks) {
+    const section = block[1] || "";
+    const locMatch = section.match(/<loc>(.*?)<\/loc>/);
+    if (!locMatch?.[1]) continue;
+
+    const url = locMatch[1].trim();
+    const lastmodMatch = section.match(/<lastmod>(.*?)<\/lastmod>/);
+    const lastmod = lastmodMatch?.[1]?.trim() || "";
+    entries.push({ url, lastmod });
+  }
+
+  if (entries.length === 0) {
+    return extractUrlsFromSitemap(xmlContent).map((url) => ({ url, lastmod: "" }));
+  }
+
+  return entries;
+}
+
+function buildSignatureMap(entries) {
+  const map = {};
+  for (const entry of entries) {
+    map[entry.url] = entry.lastmod || "";
+  }
+  return map;
+}
+
+function loadUrlSignatureState() {
+  if (!fs.existsSync(URL_STATE_PATH)) {
+    return null;
+  }
+
+  try {
+    const parsed = JSON.parse(fs.readFileSync(URL_STATE_PATH, "utf8"));
+    if (!parsed || typeof parsed !== "object") {
+      return null;
+    }
+    return parsed;
+  } catch {
+    return null;
+  }
+}
+
+function saveUrlSignatureState(signatures) {
+  fs.writeFileSync(URL_STATE_PATH, JSON.stringify(signatures, null, 2));
+}
+
+function computeChangedUrls(currentSignatures, previousSignatures) {
+  if (!previousSignatures) {
+    return [];
+  }
+
+  const changed = [];
+  for (const [url, signature] of Object.entries(currentSignatures)) {
+    if (previousSignatures[url] !== signature) {
+      changed.push(url);
+    }
+  }
+  return changed;
 }
 
 async function fetchText(url, label) {
@@ -144,32 +211,34 @@ async function waitForUrlsToGoLive(urls) {
   };
 }
 
-async function submitBatch(urlList, batchNum) {
+async function submitUrl(url, submitNum) {
   const payload = {
     host: SITE_HOST,
     key: INDEXNOW_KEY,
     keyLocation: INDEXNOW_KEY_URL,
-    urlList,
+    urlList: [url],
   };
 
-  console.log(`🚀 Submitting batch ${batchNum} (${urlList.length} URLs)...`);
+  console.log(`🚀 Submitting URL ${submitNum}: ${url}`);
 
   if (isDryRun) {
-    console.log(`🧪 Dry run: skipping POST for batch ${batchNum}`);
-    return;
+    console.log(`🧪 Dry run: skipping POST for URL ${submitNum}`);
+    return true;
   }
 
   try {
     const res = await fetch(ENDPOINT, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json; charset=utf-8" },
       body: JSON.stringify(payload),
     });
 
     const text = await res.text();
-    console.log(`✅ Batch ${batchNum} response: ${res.status} ${text}`);
+    console.log(`✅ URL ${submitNum} response: ${res.status} ${text}`);
+    return res.ok;
   } catch (err) {
-    console.error(`❌ Error in batch ${batchNum}:`, err);
+    console.error(`❌ Error submitting URL ${submitNum}:`, err);
+    return false;
   }
 }
 
@@ -185,7 +254,7 @@ async function main() {
   }
   const now = Date.now();
   const hoursSince = (now - lastSubmit) / (1000 * 60 * 60);
-  if (!isDryRun && hoursSince < SUBMIT_INTERVAL_HOURS) {
+  if (!isDryRun && SUBMIT_INTERVAL_HOURS > 0 && hoursSince < SUBMIT_INTERVAL_HOURS) {
     console.log(`⏳ Skipping IndexNow submit: Only ${hoursSince.toFixed(2)} hours since last submit. Interval is ${SUBMIT_INTERVAL_HOURS} hours.`);
     return;
   }
@@ -193,27 +262,42 @@ async function main() {
   let xml;
   let allUrls;
   let submitUrls;
+  let currentSignatures = null;
+  let previousSignatures = null;
 
   if (fs.existsSync(SITEMAP_PATH)) {
     console.log(`📄 Using local sitemap at: ${SITEMAP_PATH}`);
     xml = fs.readFileSync(SITEMAP_PATH, "utf8");
-    allUrls = extractUrlsFromSitemap(xml);
+    const localEntries = extractEntriesFromSitemap(xml);
+    allUrls = localEntries.map((entry) => entry.url);
+    currentSignatures = buildSignatureMap(localEntries);
+    previousSignatures = loadUrlSignatureState();
+    submitUrls = computeChangedUrls(currentSignatures, previousSignatures);
+
     console.log(`📄 Found ${allUrls.length} URLs in local sitemap.xml`);
+    if (previousSignatures) {
+      console.log(`🧾 Detected ${submitUrls.length} changed/new URL(s) since last IndexNow submit state.`);
+    } else {
+      console.log("ℹ️ No local IndexNow signature state found; using live sitemap comparison for initial baseline detection.");
+    }
 
     try {
       const liveUrls = await loadRemoteSitemapUrlsWithRetry();
       console.log(`🌐 Found ${liveUrls.length} URLs in live sitemap.xml`);
 
-      const liveUrlSet = new Set(liveUrls);
-      const newUrls = allUrls.filter((url) => !liveUrlSet.has(url));
+      if (!previousSignatures) {
+        const liveUrlSet = new Set(liveUrls);
+        const newUrls = allUrls.filter((url) => !liveUrlSet.has(url));
+        submitUrls = uniqueUrls([...submitUrls, ...newUrls]);
+      }
 
-      if (newUrls.length > 0) {
-        console.log(`🆕 Detected ${newUrls.length} URL(s) not yet present in the live sitemap.`);
+      if (submitUrls.length > 0) {
+        console.log(`🆕 Detected ${submitUrls.length} URL(s) requiring IndexNow submission.`);
 
-        const { liveUrls: readyUrls, missingUrls } = await waitForUrlsToGoLive(newUrls);
+        const { liveUrls: readyUrls, missingUrls } = await waitForUrlsToGoLive(submitUrls);
 
         if (readyUrls.length === 0) {
-          console.error("❌ No newly added URLs are live yet. Skipping IndexNow submission.");
+          console.error("❌ No changed/new URLs are live yet. Skipping IndexNow submission.");
           return;
         }
 
@@ -226,7 +310,7 @@ async function main() {
 
         submitUrls = readyUrls;
       } else {
-        console.log("ℹ️ No new URLs detected versus the live sitemap. Submitting the full sitemap URL set.");
+        console.log("ℹ️ No changed/new URLs detected for IndexNow submission.");
       }
     } catch (err) {
       if (shouldWaitForLive) {
@@ -247,28 +331,70 @@ async function main() {
 
     allUrls = extractUrlsFromSitemap(xml);
     console.log(`📄 Found ${allUrls.length} URLs in remote sitemap.xml`);
+
+    if (allowFullSubmit) {
+      submitUrls = allUrls;
+    }
+
+    if (!isDryRun) {
+      const remoteEntries = extractEntriesFromSitemap(xml);
+      currentSignatures = buildSignatureMap(remoteEntries);
+      saveUrlSignatureState(currentSignatures);
+    }
   }
 
-  submitUrls = submitUrls || allUrls;
+  if (!submitUrls && allowFullSubmit) {
+    submitUrls = allUrls;
+  }
+
+  if (!submitUrls) {
+    submitUrls = [];
+  }
 
   if (submitUrls.length === 0) {
-    console.warn("⚠️ No URLs qualified for IndexNow submission.");
+    console.warn("⚠️ No URLs qualified for streaming IndexNow submission.");
+    console.warn("ℹ️ To force a full one-time stream, rerun with --allow-full-submit.");
+
+    if (!isDryRun && currentSignatures) {
+      saveUrlSignatureState(currentSignatures);
+      console.log("💾 Updated local IndexNow signature state for future change detection.");
+    }
+
     return;
   }
 
-  console.log(`📬 Preparing to submit ${submitUrls.length} URL(s) to IndexNow${isDryRun ? ' [dry run]' : ''}`);
+  console.log(`📬 Preparing to stream ${submitUrls.length} URL(s) to IndexNow${isDryRun ? ' [dry run]' : ''}`);
 
-  for (let i = 0; i < submitUrls.length; i += BATCH_SIZE) {
-    const batch = submitUrls.slice(i, i + BATCH_SIZE);
-    await submitBatch(batch, Math.floor(i / BATCH_SIZE) + 1);
-    if (i + BATCH_SIZE < submitUrls.length) await sleep(DELAY_MS);
+  const successfulUrls = [];
+  for (let i = 0; i < submitUrls.length; i += 1) {
+    const ok = await submitUrl(submitUrls[i], i + 1);
+    if (ok) {
+      successfulUrls.push(submitUrls[i]);
+    }
+    if (i + 1 < submitUrls.length) await sleep(STREAM_DELAY_MS);
+  }
+
+  if (!isDryRun && currentSignatures) {
+    const allSucceeded = successfulUrls.length === submitUrls.length;
+    if (allSucceeded) {
+      saveUrlSignatureState(currentSignatures);
+    } else {
+      const merged = { ...(previousSignatures || {}) };
+      for (const url of successfulUrls) {
+        if (Object.prototype.hasOwnProperty.call(currentSignatures, url)) {
+          merged[url] = currentSignatures[url];
+        }
+      }
+      saveUrlSignatureState(merged);
+    }
+    console.log(`💾 Updated local IndexNow signature state (${successfulUrls.length}/${submitUrls.length} URL(s) sent successfully).`);
   }
 
   // Update last submit time
   if (!isDryRun) {
     fs.writeFileSync(LAST_SUBMIT_PATH, JSON.stringify({ lastSubmit: now }));
   }
-  console.log("🎉 All batches submitted!");
+  console.log("🎉 Streaming submission complete.");
 }
 
 main();

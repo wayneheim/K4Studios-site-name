@@ -6,6 +6,7 @@
     paragraphs: [
       "This gallery presents painterly Western photography by <a href='/wayne-heim-western-fine-art-photography'>Wayne Heim</a> - narrative-driven images shaped by controlled light, tonal restraint, and compositional discipline. Cowboys, frontier figures, and Western landscapes appear here not as spectacle, but as atmosphere, character, and lived experience.",
       "Within the broader discipline of <a href='/Western-Fine-Art-Photography'>Western Fine Art Photography</a>, painterly Western photography names the method-centered branch where tonal sculpting, restraint, and authorship become the primary focus.",
+      "For the new exact-match collector doorway, continue to <a href='/western-painterly-fine-art-photography'>painterly Western fine art photography</a>.",
       "At its strongest, painterly Western photography turns a subject into a story, suggesting what happened before the frame and what emotional weight remains inside it.",
       "Here, 'Western art' refers to the American West — frontier life, cowboys, and 19th-century Western history — not European or Western civilization art traditions.",
       "These works are built to reward sustained viewing. Story is carried through posture, light, and stillness rather than explanation, allowing meaning to emerge gradually over time.",

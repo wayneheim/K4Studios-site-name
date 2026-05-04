@@ -19,7 +19,11 @@ const VALID_SIZES = ['s', 'm', 'l', 'xl', 'src'];
 
 // Keep runtime source first-party by default. Local/dev environments can set
 // PUBLIC_IMAGE_PROXY_ORIGIN when they need to target a direct proxy origin.
-const IMAGE_BASE = import.meta.env?.PUBLIC_IMAGE_PROXY_ORIGIN || '';
+const configuredImageBase = import.meta.env?.PUBLIC_IMAGE_PROXY_ORIGIN;
+const IMAGE_BASE =
+  typeof configuredImageBase === 'string' && configuredImageBase.trim().length > 0
+    ? configuredImageBase.trim().replace(/\/$/, '')
+    : '';
 
 /**
  * Extract image ID from various URL formats

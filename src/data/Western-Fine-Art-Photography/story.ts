@@ -12,6 +12,7 @@
       "At its strongest, each image exists as part of a larger narrative, suggesting what happened before and what may come next.",
       "Within this broader category, <strong>artistic Western photography</strong> represents a specific interpretive approach focused on mood, authorship, and visual storytelling, a distinction developed more fully in the definition of <a href=\"/Blog/what-is-artistic-western-photography\">artistic Western photography</a>.",
       "At K4 Studios, that tradition takes a specific form: <a href=\"/Blog/what-is-painterly-photography\">painterly photography</a> rooted in the <a href=\"/Pictorialist-Photography\">Pictorialist</a> conviction that a photograph should interpret the world, not simply record it. Light is sculpted. Tone is controlled. Composition serves narrative restraint rather than spectacle. The result occupies a space between painting and photography\u2014authored, layered, and built to endure.",
+      "For the exact-match collection route focused on painterly Western fine art photography, see <a href='/western-painterly-fine-art-photography'>western painterly fine art photography</a>.",
       "Here, \u2018Western art\u2019 refers to the American West\u2014frontier life, cowboys, and 19th-century Western history\u2014not European or Western civilization art traditions."
     ]
   },

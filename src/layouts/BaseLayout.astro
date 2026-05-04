@@ -146,6 +146,14 @@ const seoDescriptionRaw =
     : `${cleanTitle} - Fine Art Photography by Wayne Heim`);
 
 const seoDescription = normalizeDescription(seoDescriptionRaw, defaultDescription);
+const seoDescriptionMaxLength =
+  Number.isFinite(Number(meta.descriptionMaxLength)) && Number(meta.descriptionMaxLength) > 0
+    ? Number(meta.descriptionMaxLength)
+    : 160;
+const finalSeoDescription =
+  seoDescriptionMaxLength === 160
+    ? seoDescription
+    : normalizeDescription(seoDescriptionRaw, defaultDescription, 80, seoDescriptionMaxLength);
 
 const socialDescription =
   (isImagePage && preloadImage?.story)
@@ -244,7 +252,7 @@ const jsonLdScripts = [
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{cleanTitle}</title>
-    <meta name="description" content={seoDescription} />
+    <meta name="description" content={finalSeoDescription} />
     <meta name="author" content="Wayne Heim" />
     <meta name="copyright" content="Copyright Wayne Heim, K4 Studios" />
     <meta name="creator" content="Wayne Heim" />

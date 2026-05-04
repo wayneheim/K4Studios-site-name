@@ -430,6 +430,17 @@ painterlyWesternHub: {
   imagePhrases: []
 },
 
+westernPainterlyFineArtPhotographyHub: {
+  path: "/western-painterly-fine-art-photography",
+  def: "The exact-match collection route for Western painterly fine art photography by Wayne Heim, combining camera-based Western realism, painterly atmosphere, and collectible fine art print intent.",
+  fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
+  landingPhrases: [
+    { phrase: "western painterly fine art photography", rating: 6, use: true, link: "/western-painterly-fine-art-photography" },
+    { phrase: "painterly western fine art photography", rating: 6, use: true, link: "/western-painterly-fine-art-photography" }
+  ],
+  imagePhrases: []
+},
+
 westernBlackWhiteHub: {
   path: "/Western-Black-and-White-Photography",
   def: "Western fine art photography in black and white—emphasizing contrast, character, and the timeless human experience of the American West.",
@@ -446,6 +457,17 @@ westernBlackWhiteHub: {
     { phrase: "Black and White Western Fine Art", rating: 4, use: true },
     { phrase: "Monochrome Western Photography", rating: 4, use: true },
     { phrase: "black and white pictures of cowboys", rating: 3, use: true },
+  ],
+  imagePhrases: []
+},
+
+cowboyPainterlyFineArtPhotographyHub: {
+  path: "/cowboy-painterly-fine-art-photography",
+  def: "The exact-match collection route for cowboy painterly fine art photography by Wayne Heim, centered on camera-based cowboy portraits, frontier character, Western storytelling, and collectible fine art prints.",
+  fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
+  landingPhrases: [
+    { phrase: "cowboy painterly fine art photography", rating: 6, use: true, link: "/cowboy-painterly-fine-art-photography" },
+    { phrase: "painterly cowboy photography", rating: 6, use: true, link: "/cowboy-painterly-fine-art-photography" }
   ],
   imagePhrases: []
 },

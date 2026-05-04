@@ -977,7 +977,6 @@
     "i-GSQ3KDN:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": "s-LcVx75U",
     "i-WBDjhsD:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": "s-xcvU4hC",
     "i-hXdn5Z8:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": "s-Zwmf58t",
-    "i-GmTkrzR:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": "s-TNR52Ja",
     "i-xMCZJNR:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": "s-chapdNZ",
     "i-QJR63LW:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": "s-KEBAsZ9",
     "i-p6nks3C:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": "s-M7puRLD",
@@ -27747,25 +27746,6 @@
       "linkedCount": 1,
       "excludeSizes": {},
       "createdAt": "2026-01-14T15:14:14.619Z"
-    },
-    "s-TNR52Ja": {
-      "primaryImageId": "i-GmTkrzR",
-      "tiers": [
-        "sketch"
-      ],
-      "title": "Western Fine Art Moment",
-      "src": "/img/i-GmTkrzR/l.jpg",
-      "occurrences": [
-        {
-          "imageId": "i-GmTkrzR",
-          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-          "title": "Held Between Breaths",
-          "src": "/img/i-GmTkrzR/l.jpg"
-        }
-      ],
-      "linkedCount": 1,
-      "excludeSizes": {},
-      "createdAt": "2026-01-14T15:14:26.177Z"
     },
     "s-chapdNZ": {
       "primaryImageId": "i-xMCZJNR",

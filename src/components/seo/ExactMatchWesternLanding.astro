@@ -1,0 +1,486 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import LandingHeader from '@/components/Landing-Header.jsx';
+import FAQAccordion from '@/components/FAQAccordion.jsx';
+import SiteFooter from '@/components/Footer.astro';
+import { getStructuredData, getBreadcrumbList } from '@/components/utils/getStructuredData.ts';
+import '@/styles/global.css';
+import '@/styles/oneupheader.css';
+
+const { page } = Astro.props;
+const canonicalUrl = `https://www.k4studios.com${page.path}`;
+const firstImage = page.heroImage || page.gridImages[0];
+const schemaImages = [firstImage, ...page.gridImages].filter(Boolean);
+
+const structuredData = getStructuredData({
+  type: 'gallery',
+  data: {
+    title: page.h1,
+    description: page.intro,
+    url: canonicalUrl,
+    keywords: page.keywords,
+    about: page.schemaAbout.map((name) => ({ '@type': 'Thing', name })),
+    genre: 'Painterly Western Fine Art Photography',
+    copyrightNotice: 'Copyright Wayne Heim',
+  },
+  images: schemaImages,
+  defaults: {
+    copyrightNotice: 'Copyright Wayne Heim',
+    license: 'https://www.k4studios.com/copyright',
+    acquireLicensePage: 'https://www.k4studios.com/Other/Print-Options',
+    creditText: 'Wayne Heim',
+    creatorName: 'Wayne Heim',
+    creatorUrl: 'https://www.k4studios.com/',
+  },
+});
+
+const breadcrumbsJSON = getBreadcrumbList([
+  { name: 'Home', item: 'https://www.k4studios.com/' },
+  { name: page.breadcrumbLabel, item: canonicalUrl },
+]);
+
+const stripHtml = (text: string) => String(text || '').replace(/<[^>]*>/g, '').trim();
+const faqStructuredData = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  '@id': `${canonicalUrl}#faq`,
+  mainEntity: page.faqItems.map((item) => ({
+    '@type': 'Question',
+    name: item.q,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: stripHtml(Array.isArray(item.a) ? item.a.join(' ') : item.a),
+    },
+  })),
+}, null, 2);
+
+const meta = {
+  title: page.title,
+  seoTitle: page.title,
+  ogTitle: page.title,
+  description: page.metaDescription,
+  ogDescription: page.metaDescription,
+  story: page.metaDescription,
+  ogImage: firstImage?.srcL || '/images/cowboy.webp',
+  ogImageAlt: firstImage?.alt || page.h1,
+  ogType: 'website',
+  ogUrl: canonicalUrl,
+  twitterTitle: page.title,
+  twitterDescription: page.metaDescription,
+  twitterImage: firstImage?.srcL || '/images/cowboy.webp',
+  twitterUrl: canonicalUrl,
+  canonicalUrl,
+  keywords: page.keywords.join(', '),
+  descriptionMaxLength: 230,
+};
+
+const breadcrumb = `<a href="/">Home</a> / <span>${page.breadcrumbLabel}</span>`;
+---
+
+<BaseLayout
+  title={page.title}
+  meta={meta}
+  structuredDataJSON={structuredData}
+  breadcrumbsJSON={breadcrumbsJSON}
+>
+  <script type="application/ld+json" set:html={faqStructuredData} slot="head"></script>
+
+  <main class="exact-western-page">
+    <div class="drawer-mode">
+      <LandingHeader client:load breadcrumb={breadcrumb} />
+    </div>
+
+    <section class="exact-hero" aria-label={page.h1}>
+      <div class="exact-hero-copy">
+        <p class="eyebrow">Wayne Heim | K4 Studios | Fine Art Prints</p>
+        <h1>{page.h1}</h1>
+        <p class="intro">{page.intro}</p>
+        <div class="hero-actions" aria-label="Primary collection action">
+          <a href={page.heroLink.href}>{page.heroLink.label}</a>
+        </div>
+      </div>
+      <a class="hero-image-link" href={firstImage.href} aria-label={`View ${firstImage.title}`}>
+        <img src={firstImage.srcL || firstImage.src} alt={firstImage.alt} loading="eager" decoding="async" />
+        <span>
+          <strong>{firstImage.title}</strong>
+          <em>{firstImage.caption}</em>
+        </span>
+      </a>
+    </section>
+
+    <section class="exact-grid-section" aria-label={page.gridLabel}>
+      <div class="section-inner">
+        <h2>{page.gridHeading || `Featured ${page.h1}`}</h2>
+        <div class="exact-grid">
+          {page.gridImages.map((image) => (
+            <a class="image-card" href={image.href}>
+              <img src={image.src} alt={image.alt} loading="eager" decoding="async" />
+              <span class="image-copy">
+                <strong>{image.title}</strong>
+                <em>{image.caption}</em>
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="exact-content">
+      {page.sections.map((section) => (
+        <article>
+          <h2>{section.h2}</h2>
+          {section.paragraphs.map((paragraph) => (
+            <p>{paragraph}</p>
+          ))}
+        </article>
+      ))}
+    </section>
+
+    <section class="print-cta" aria-label="Collectible fine art prints">
+      <div>
+        <p class="eyebrow">Collector Entry</p>
+        <h2>Collectible Western Fine Art Prints</h2>
+        <p>
+          Explore the full Wild West universe through crawlable archive pages, image pages, and collector options for
+          Wayne Heim's painterly Western photography. K4 Studios presents these works as camera-based fine art prints
+          built for story, atmosphere, and long-term viewing.
+        </p>
+      </div>
+      <nav aria-label="Wild West archive and collector links">
+        {page.collectorLinks.map((link) => (
+          <a href={link.href}>{link.label}</a>
+        ))}
+      </nav>
+    </section>
+
+    <section class="related-links" aria-label="Explore related Western themes">
+      <h2>Explore Related Western Themes</h2>
+      <nav>
+        {page.themeLinks.map((link) => (
+          <a href={link.href}>{link.label}</a>
+        ))}
+      </nav>
+    </section>
+
+    <section class="exact-faq" id="faq">
+      <FAQAccordion items={page.faqItems} />
+    </section>
+
+    <SiteFooter class="pt-8 pb-12" />
+  </main>
+
+  <style>
+    .exact-western-page {
+      background: #fff;
+      color: #2f2a25;
+      font-family: 'Glegoo', serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .exact-hero,
+    .section-inner,
+    .exact-content,
+    .print-cta,
+    .related-links,
+    .exact-faq {
+      width: min(1120px, calc(100% - 2rem));
+      margin: 0 auto;
+    }
+
+    .exact-hero {
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.75fr);
+      gap: 1.5rem;
+      align-items: center;
+      padding: 2.2rem 0 1.7rem;
+    }
+
+    .eyebrow {
+      margin: 0 0 0.45rem;
+      color: #82694f;
+      font-size: 0.78rem;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0 0 0.75rem;
+      max-width: 16ch;
+      color: #211d19;
+      font-size: clamp(2rem, 4.3vw, 4.4rem);
+      line-height: 1.05;
+      font-weight: 500;
+      letter-spacing: 0;
+    }
+
+    .intro {
+      max-width: 860px;
+      margin: 0;
+      color: #5d5045;
+      font-size: 1.04rem;
+      line-height: 1.68;
+    }
+
+    .hero-actions,
+    .print-cta nav,
+    .related-links nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.65rem;
+      margin-top: 1.25rem;
+    }
+
+    .exact-hero .hero-actions {
+      justify-content: flex-start;
+    }
+
+    .hero-image-link {
+      display: block;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .hero-image-link img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      display: block;
+      border-radius: 8px;
+      background: #efe7de;
+      box-shadow: 0 16px 34px rgba(0, 0, 0, 0.18);
+    }
+
+    .hero-image-link span {
+      display: block;
+      padding-top: 0.55rem;
+      color: #65584d;
+      font-size: 0.88rem;
+      line-height: 1.35;
+      text-align: center;
+    }
+
+    .hero-image-link strong,
+    .hero-image-link em {
+      display: block;
+    }
+
+    .hero-image-link em {
+      font-style: normal;
+    }
+
+    .hero-actions a,
+    .print-cta a,
+    .related-links a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 2.5rem;
+      padding: 0.55rem 0.85rem;
+      border: 1px solid #c9b8a7;
+      border-radius: 6px;
+      color: #5a3922;
+      background: #fbfaf8;
+      text-decoration: none;
+      font-size: 0.9rem;
+      line-height: 1.25;
+    }
+
+    .hero-actions a:hover,
+    .print-cta a:hover,
+    .related-links a:hover {
+      border-color: #9b7652;
+      background: #f7f2ec;
+    }
+
+    .exact-grid-section {
+      padding: 1.2rem 0 2.2rem;
+    }
+
+    .exact-grid-section h2,
+    .related-links h2,
+    .print-cta h2,
+    .exact-content h2 {
+      margin: 0 0 0.85rem;
+      color: #2c2520;
+      font-size: clamp(1.35rem, 2.2vw, 1.9rem);
+      font-weight: 500;
+      letter-spacing: 0;
+      line-height: 1.2;
+      text-align: center;
+    }
+
+    .exact-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0.85rem;
+    }
+
+    .image-card {
+      display: block;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .image-card img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      display: block;
+      border-radius: 8px;
+      background: #efe7de;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.14);
+    }
+
+    .image-copy {
+      display: block;
+      min-height: 4.8rem;
+      padding-top: 0.48rem;
+      text-align: center;
+      line-height: 1.32;
+    }
+
+    .image-copy strong,
+    .image-copy em {
+      display: block;
+    }
+
+    .image-copy strong {
+      color: #3d332b;
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    .image-copy em {
+      margin-top: 0.12rem;
+      color: #78695d;
+      font-size: 0.8rem;
+      font-style: normal;
+    }
+
+    .exact-content {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.35rem 2rem;
+      padding: 0.5rem 0 2.2rem;
+    }
+
+    .exact-content article {
+      border-top: 1px solid #e5ddd4;
+      padding-top: 1rem;
+    }
+
+    .exact-content h2 {
+      text-align: left;
+      font-size: 1.28rem;
+    }
+
+    .exact-content p,
+    .print-cta p {
+      margin: 0 0 0.78rem;
+      color: #594d43;
+      font-size: 0.98rem;
+      line-height: 1.65;
+    }
+
+    .print-cta {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(240px, 0.85fr);
+      gap: 1.5rem;
+      align-items: center;
+      padding: 1.45rem;
+      border: 1px solid #e2d7cc;
+      border-radius: 8px;
+      background: #faf7f2;
+    }
+
+    .print-cta h2,
+    .print-cta .eyebrow {
+      text-align: left;
+    }
+
+    .print-cta nav {
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-content: flex-start;
+      margin-top: 0;
+    }
+
+    .print-cta a {
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .related-links {
+      padding: 2.4rem 0 1rem;
+      text-align: center;
+    }
+
+    .exact-faq {
+      padding: 0.5rem 0 2.5rem;
+    }
+
+    @media (max-width: 900px) {
+      .exact-hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .exact-hero .hero-actions {
+        justify-content: center;
+      }
+
+      h1,
+      .intro {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-image-link {
+        max-width: 420px;
+        margin: 0 auto;
+      }
+
+      .exact-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .exact-content,
+      .print-cta {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .exact-hero {
+        padding-top: 1.4rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .intro {
+        font-size: 0.96rem;
+      }
+
+      .exact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .image-card {
+        max-width: 310px;
+        margin: 0 auto;
+      }
+
+      .hero-actions a,
+      .print-cta a,
+      .related-links a {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+      }
+    }
+  </style>
+</BaseLayout>
