@@ -53,6 +53,13 @@ const DESIRED_RANK_BY_KEY = Object.freeze({
   src: SIZE_RANK.XL
 });
 
+const HIDDEN_VISIBILITY = new Set(['hidden', 'hide', 'ghost', 'non', 'none', '']);
+
+function isHiddenImage(item) {
+  const visibility = String(item?.visibility ?? 'show').trim().toLowerCase();
+  return HIDDEN_VISIBILITY.has(visibility);
+}
+
 function detectUrlSizeRank(url) {
   if (!url) return SIZE_RANK.UNKNOWN;
   try {
@@ -170,6 +177,7 @@ function extractImagesFromGalleryData(galleryData) {
   for (const item of galleryData) {
     const id = item && typeof item.id === 'string' ? item.id : '';
     if (!id.startsWith('i-') || id === 'i-k4studios') continue;
+    if (isHiddenImage(item)) continue;
 
     const urls = {};
     if (isSmugMugUrl(item.srcS) && urlMatchesId(item.srcS, id)) urls.s = toSmugMugOriginPath(item.srcS);

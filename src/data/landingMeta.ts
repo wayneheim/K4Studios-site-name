@@ -210,6 +210,8 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
   },
 
   "/Galleries/Painterly-Fine-Art-Photography": {
+    title: "Painterly Fine Art Photography - Wayne Heim",
+    seoTitle: "Painterly Fine Art Photography - Wayne Heim",
     ogTitle:
       "Painterly Fine Art Photography by Wayne Heim",
     ogDescription:
@@ -272,6 +274,8 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
   },
 
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits": {
+    title: "Western Cowboy Portraits - Wayne Heim",
+    seoTitle: "Western Cowboy Portraits - Wayne Heim",
     ogTitle:
       "Western Cowboy Portraits | Cowboy Photography by Wayne Heim",
     ogDescription:
@@ -288,6 +292,8 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
   },
 
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West": {
+    title: "Wild West Photography - Wayne Heim",
+    seoTitle: "Wild West Photography - Wayne Heim",
     ogTitle:
       "Wild West Photography – Wayne Heim",
     ogDescription:
@@ -304,6 +310,8 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
   },
 
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives": {
+    title: "Western Narratives - Wayne Heim",
+    seoTitle: "Western Narratives - Wayne Heim",
     ogTitle:
       "Western Narratives – Wayne Heim",
     ogDescription:
@@ -320,6 +328,8 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
   },
 
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans": {
+    title: "Native American Portraits - Wayne Heim",
+    seoTitle: "Native American Portraits - Wayne Heim",
     ogTitle:
       "Native American Portraits – Wayne Heim",
     ogDescription:
@@ -336,6 +346,8 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
   },
 
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color": {
+    title: "Native American Portraits - Color - Wayne Heim",
+    seoTitle: "Native American Portraits - Color - Wayne Heim",
     ogTitle:
       "Native American Portraits - Color – Wayne Heim",
     ogDescription:
@@ -352,6 +364,8 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
   },
 
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White": {
+    title: "Native American Portraits - Black and White - Wayne Heim",
+    seoTitle: "Native American Portraits - Black and White - Wayne Heim",
     ogTitle:
       "Native American Portraits - Black & White – Wayne Heim",
     ogDescription:
@@ -685,9 +699,9 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
   },
 
   "/Galleries/Fine-Art-Photography/Landscapes/By-Location": {
-    title: "Landscape Photography by Location | Wayne Heim",
-    seoTitle: "Landscape Photography by Location | Wayne Heim",
-    ogTitle: "Landscape Photography by Location | Wayne Heim",
+    title: "Landscape Photography by Location - Wayne Heim",
+    seoTitle: "Landscape Photography by Location - Wayne Heim",
+    ogTitle: "Landscape Photography by Location - Wayne Heim",
     ogDescription:
       "Landscape photography organized by location, featuring regional studies from the American West, Midwest, Northeast, South, and international destinations.",
     ogImage: "/og/landscapes-location.jpg",
@@ -701,9 +715,9 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
   },
 
   "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International": {
-    title: "International Landscape Photography | Wayne Heim",
-    seoTitle: "International Landscape Photography | Wayne Heim",
-    ogTitle: "International Landscape Photography | Wayne Heim",
+    title: "International Landscape Photography - Wayne Heim",
+    seoTitle: "International Landscape Photography - Wayne Heim",
+    ogTitle: "International Landscape Photography - Wayne Heim",
     ogDescription:
       "International landscape photography by Wayne Heim, including Iceland, the Faroe Islands, Newfoundland, and western Canada.",
     ogImage: "/og/landscapes-international.jpg",
@@ -717,9 +731,9 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
   },
 
   "/Galleries/Fine-Art-Photography/Landscapes/By-Theme": {
-    title: "Fine Art Landscapes by Theme | Wayne Heim",
-    seoTitle: "Fine Art Landscapes by Theme | Wayne Heim",
-    ogTitle: "Fine Art Landscapes by Theme | Wayne Heim",
+    title: "Fine Art Landscapes by Theme - Wayne Heim",
+    seoTitle: "Fine Art Landscapes by Theme - Wayne Heim",
+    ogTitle: "Fine Art Landscapes by Theme - Wayne Heim",
     ogDescription:
       "Themed landscape collections by Wayne Heim, including mountain studies, sunsets, water subjects, color work, and black-and-white landscapes.",
     ogImage: "/og/landscapes-theme.jpg",
@@ -733,9 +747,9 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
   },
 
   "/Galleries/Fine-Art-Photography/Miscellaneous": {
-    title: "Miscellaneous Fine Art Photography | Wayne Heim",
-    seoTitle: "Miscellaneous Fine Art Photography | Wayne Heim",
-    ogTitle: "Miscellaneous Fine Art Photography | Wayne Heim",
+    title: "Miscellaneous Fine Art Photography - Wayne Heim",
+    seoTitle: "Miscellaneous Fine Art Photography - Wayne Heim",
+    ogTitle: "Miscellaneous Fine Art Photography - Wayne Heim",
     ogDescription:
       "Miscellaneous fine art photography by Wayne Heim, spanning reenactments, wildlife, and pet portraits in a traditional style.",
     ogImage: "/og/misc.jpg",
@@ -965,6 +979,8 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
   },
 
   "/Western-Interior-Design-Art": {
+    title: "Western Interior Design Art - Collector Prints by Wayne Heim",
+    seoTitle: "Western Interior Design Art - Collector Prints by Wayne Heim",
     ogTitle: "Western Interior Design Art for Statement Spaces",
     ogDescription:
       "Western interior design art by Wayne Heim, curated as statement western artwork for residential, lodge, hospitality, and collector interiors.",
@@ -979,6 +995,8 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
   },
 
   "/Modern-Western-Interior-Design-Art": {
+    title: "Modern Western Interior Design Art - Collector Prints by Wayne Heim",
+    seoTitle: "Modern Western Interior Design Art - Collector Prints by Wayne Heim",
     ogTitle: "Modern Western Interior Design Art for Clean Spaces",
     ogDescription:
       "Modern western interior design art by Wayne Heim, curated for contemporary rooms, tonal restraint, open compositions, and statement western artwork.",
@@ -993,6 +1011,8 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
   },
 
   "/Rustic-Western-Interior-Design-Art": {
+    title: "Rustic Western Interior Design Art - Collector Prints by Wayne Heim",
+    seoTitle: "Rustic Western Interior Design Art - Collector Prints by Wayne Heim",
     ogTitle: "Rustic Western Interior Design Art for Lodge Spaces",
     ogDescription:
       "Rustic western interior design art by Wayne Heim, curated for lodge, ranch, hospitality, wood-led rooms, and warm material-driven interiors.",
@@ -1007,6 +1027,8 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
   },
 
   "/Western-Wall-Art-for-Interior-Designers": {
+    title: "Western Wall Art for Interior Designers - Wayne Heim",
+    seoTitle: "Western Wall Art for Interior Designers - Wayne Heim",
     ogTitle: "Western Wall Art for Interior Designers",
     ogDescription:
       "Western wall art for interior designers by Wayne Heim, curated for spec teams, statement walls, lodge projects, hospitality interiors, and multi-room plans.",

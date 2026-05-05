@@ -509,6 +509,19 @@ for = "/*"
 # ✅ Legacy & Backup Path Fixes (Add-on)
 ##############################
 
+# --- Short Facing History crawl debt ---
+[[redirects]]
+from = "/Facing-History/Wild-West"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West"
+status = 301
+force = true
+
+[[redirects]]
+from = "/Facing-History/Wild-West/*"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/:splat"
+status = 301
+force = true
+
 # --- Legacy "Backup" or "Copy" folders from SmugMug exports ---
 [[redirects]]
 from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/*/{Color,Black-White}{%20Backup, Backup, copy, Copy, -back2}/*"

@@ -212,26 +212,20 @@ async function waitForUrlsToGoLive(urls) {
 }
 
 async function submitUrl(url, submitNum) {
-  const payload = {
-    host: SITE_HOST,
-    key: INDEXNOW_KEY,
-    keyLocation: INDEXNOW_KEY_URL,
-    urlList: [url],
-  };
+  const requestUrl = new URL(ENDPOINT);
+  requestUrl.searchParams.set("url", url);
+  requestUrl.searchParams.set("key", INDEXNOW_KEY);
+  requestUrl.searchParams.set("keyLocation", INDEXNOW_KEY_URL);
 
   console.log(`🚀 Submitting URL ${submitNum}: ${url}`);
 
   if (isDryRun) {
-    console.log(`🧪 Dry run: skipping POST for URL ${submitNum}`);
+    console.log(`🧪 Dry run: skipping single-URL request for URL ${submitNum}`);
     return true;
   }
 
   try {
-    const res = await fetch(ENDPOINT, {
-      method: "POST",
-      headers: { "Content-Type": "application/json; charset=utf-8" },
-      body: JSON.stringify(payload),
-    });
+    const res = await fetch(requestUrl);
 
     const text = await res.text();
     console.log(`✅ URL ${submitNum} response: ${res.status} ${text}`);

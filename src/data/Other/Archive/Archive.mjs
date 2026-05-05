@@ -568,7 +568,7 @@ export const galleryData = [
  ],
  "notes": "Authority is handled here with unusual restraint. Rather than relying on action or confrontation, the portrait lets posture, dress, and controlled light establish a sense of experience that feels settled into the figure.\n\nWhat gives the work distinction is its quiet formality. The badge reads less as ornament than as history, and the softened tonal structure keeps the image rooted in character rather than display. The result is a portrait of composure, duty, and earned presence.",
  "rating": 4,
- "visibility": "hidden",
+ "visibility": "show",
  "archivedFrom": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
  "sortOrder": 537
  },

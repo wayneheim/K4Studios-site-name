@@ -657,7 +657,8 @@ const baseMeta = getLandingMeta(sectionPath);
 const meta = {
   ...baseMeta,
   // OVERRIDE page/tab title so it doesn't use the Painterly landing title
-  title: "K4 Studios Story Glossary | Wayne Heim Fine Art Photography Terms",
+  seoTitle: "K4 Studios Story Glossary - Wayne Heim Fine Art Photography Terms",
+  title: "K4 Studios Story Glossary - Wayne Heim Fine Art Photography Terms",
   description: "A curated K4 Studios glossary explaining painterly photography, Western fine art photography, One-Image Movies, Engrained prints, and collector-focused story language.",
   canonicalUrl: "https://www.k4studios.com/Glossary",
   ogTitle: "K4 Studios Story Glossary",
@@ -709,7 +710,7 @@ const breadcrumbsJSON = getBreadcrumbList([
 ---
 
 <BaseLayout
-  title={isLegacyUrl ? "Page No Longer Available - K4 Studios" : "K4 Studios Story Glossary | Wayne Heim Fine Art Photography Terms"}
+  title={isLegacyUrl ? "Page No Longer Available - K4 Studios" : "K4 Studios Story Glossary - Wayne Heim Fine Art Photography Terms"}
   structuredDataJSON={structuredData}
   breadcrumbsJSON={breadcrumbsJSON}
   meta={meta}

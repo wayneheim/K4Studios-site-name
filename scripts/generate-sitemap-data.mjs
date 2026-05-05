@@ -20,6 +20,12 @@ const DYNAMIC_ALL_ROUTE_FILE = path.resolve(__dirname, '..', 'src', 'pages', '[.
 
 const GHOST_IMAGE_ID = 'i-k4studios';
 const IMAGE_ID_REGEX = /^i-[A-Za-z0-9]+$/;
+const HIDDEN_VISIBILITY = new Set(['hidden', 'hide', 'ghost', 'non', 'none', '']);
+
+function isHiddenImage(img) {
+  const visibility = String(img?.visibility ?? 'show').trim().toLowerCase();
+  return HIDDEN_VISIBILITY.has(visibility);
+}
 
 function isGhostImageId(id) {
   return String(id || '').trim().toLowerCase() === GHOST_IMAGE_ID;
@@ -218,7 +224,7 @@ async function loadDynamicRoutes() {
           images
             .filter((img) => img && typeof img.id === 'string')
             .filter((img) => !isGhostImageId(img.id))
-            .filter((img) => img.visibility !== 'hidden' && img.visibility !== 'hide' && img.visibility !== 'ghost')
+            .filter((img) => !isHiddenImage(img))
             .map((img) => String(img.id).trim())
             .filter((id) => IMAGE_ID_REGEX.test(id))
         )
