@@ -298,7 +298,7 @@ status = 200
 
 
 ##############################
-# ✅ SEO Redirects & Mapping
+# ✅ SEO Redirects and Mapping
 ##############################
 [[redirects]]
 from = "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/{West,International,Northeast,South,Midwest}"
