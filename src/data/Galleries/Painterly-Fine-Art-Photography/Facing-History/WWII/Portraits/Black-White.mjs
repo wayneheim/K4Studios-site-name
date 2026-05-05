@@ -1133,9 +1133,9 @@ export const galleryData = [
   },
   {
     "id": "i-BBHzSFk",
-    "title": ">\nThe Soldier’s Smile\n\n<",
-    "description": ">\nA black and white World War II portrait capturing a rare moment of warmth and humanity amid wartime service. This fine art WWII photography image focuses on connection, presence, and the quiet individuality behind the uniform, emphasizing emotion over spectacle. Part of a painterly WWII portraits series exploring wartime portraits, heroic portraits, and moments of connection within the Greatest Generation. © Wayne Heim\n\n<",
-    "alt": ">\nWorld War II soldier smiling while holding a camera during wartime portrait moment — painterly WWII photography\n\n<",
+    "title": "The Soldier's Smile",
+    "description": "A black and white World War II portrait capturing a rare moment of warmth and humanity amid wartime service. This fine art WWII photography image focuses on connection, presence, and the quiet individuality behind the uniform, emphasizing emotion over spectacle. Part of a painterly WWII portraits series exploring wartime portraits, heroic portraits, and moments of connection within the Greatest Generation. Copyright Wayne Heim",
+    "alt": "World War II soldier smiling while holding a camera during a quiet wartime portrait moment in painterly black and white photography.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-BBHzSFk/0/MDwJH6pNL6SR4XLFzFsbwjDhvQ4vqQPfK3ftChxHr/XL/_PEN0931-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-BBHzSFk/0/MDwJH6pNL6SR4XLFzFsbwjDhvQ4vqQPfK3ftChxHr/XL/_PEN0931-Edit-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-BBHzSFk/0/LDF3KPJq6qwzp3KLMkzwBLt9zJF5TWvNrbHh9VZ4f/L/_PEN0931-Edit-Edit-L.jpg",
@@ -1145,7 +1145,7 @@ export const galleryData = [
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-BBHzSFk/A",
 
     "keywords": [
-      ">\nwwii photography",
+      "wwii photography",
       "wartime portraits",
       "heroic portraits",
       "greatest generation photos",
@@ -1154,11 +1154,11 @@ export const galleryData = [
       "wwii reenactment photography",
       "fine art war photography",
       "soldier portrait",
-      "black and white wwii portrait\n\n<"
+      "black and white wwii portrait"
     ],
 
-    "story": ">\nFor a moment, the war loosens its grip. The camera rests easily in his hands, not as a weapon or tool of duty, but as proof that life still exists beyond orders and marching lines.\n\nHe smiles—not for victory, not for history, but for the simple act of being seen. Somewhere beyond the frame, laughter lingers, and the weight of the uniform feels briefly lighter.\n\nThe shutter captures more than a portrait. It holds a fragile pause between hardships, a reminder that even in wartime, humanity refuses to disappear.\n\n<",
-    "notes": ">\nThis portrait departs from traditional wartime hero imagery by embracing vulnerability and human presence. The relaxed posture and genuine expression echo documentary traditions while maintaining the compositional restraint of classical portraiture. The image balances historical authenticity with painterly softness, allowing the viewer to encounter not simply a soldier, but an individual suspended briefly outside the machinery of war — a defining characteristic of narrative-driven fine art photography.",
+    "story": "For a moment, the war loosens its grip. The camera rests easily in his hands, not as a weapon or tool of duty, but as proof that life still exists beyond orders and marching lines.\n\nHe smiles not for victory, not for history, but for the simple act of being seen. Somewhere beyond the frame, laughter lingers, and the weight of the uniform feels briefly lighter.\n\nThe shutter captures more than a portrait. It holds a fragile pause between hardships, a reminder that even in wartime, humanity refuses to disappear.",
+    "notes": "This portrait departs from traditional wartime hero imagery by embracing vulnerability and human presence. The relaxed posture and genuine expression echo documentary traditions while maintaining the compositional restraint of classical portraiture. The image balances historical authenticity with painterly softness, allowing the viewer to encounter not simply a soldier, but an individual suspended briefly outside the machinery of war - a defining characteristic of narrative-driven fine art photography.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1167,9 +1167,9 @@ export const galleryData = [
   },
   {
     "id": "i-6sP3zMj",
-    "title": ">\nCamp Quiet\n\n<",
-    "description": ">\nA black and white World War II photograph capturing a rare moment of rest and connection among soldiers gathered beneath canvas tents. This fine art WWII photography image emphasizes atmosphere, presence, and shared humanity rather than battlefield spectacle, reflecting the quieter realities of wartime life. Part of a painterly WWII portraits and wartime portraits series exploring moments of connection, the Greatest Generation, and the lived experience behind historic service. © Wayne Heim\n\n<",
-    "alt": ">\nWorld War II soldiers resting together under canvas tents during quiet wartime moment — painterly WWII photography\n\n<",
+    "title": "Camp Quiet",
+    "description": "A black and white World War II photograph capturing a rare moment of rest and connection among soldiers gathered beneath canvas tents. This fine art WWII photography image emphasizes atmosphere, presence, and shared humanity rather than battlefield spectacle, reflecting the quieter realities of wartime life. Part of a painterly WWII portraits and wartime portraits series exploring moments of connection, the Greatest Generation, and the lived experience behind historic service. Copyright Wayne Heim",
+    "alt": "World War II soldiers resting together under canvas tents during a quiet wartime moment in painterly black and white photography.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-6sP3zMj/2/KQFMNkns6Q4HztBg8kdz3B2qqXc2hLzZH3fRQJ8rL/XL/_WHZ4086-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-6sP3zMj/2/KQFMNkns6Q4HztBg8kdz3B2qqXc2hLzZH3fRQJ8rL/XL/_WHZ4086-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-6sP3zMj/2/MV8HQVQ2dKnmcWLmP97GfZLjQWqVXrd3hqqKWddsH/L/_WHZ4086-Edit-L.jpg",
@@ -1179,7 +1179,7 @@ export const galleryData = [
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-6sP3zMj/A",
 
     "keywords": [
-      ">\nwwii photography",
+      "wwii photography",
       "wartime portraits",
       "moments of connection",
       "greatest generation photos",
@@ -1188,11 +1188,11 @@ export const galleryData = [
       "wwii reenactment photography",
       "fine art war photography",
       "soldiers at camp",
-      "black and white wwii photography\n\n<"
+      "black and white wwii photography"
     ],
 
-    "story": ">\nThe war waits outside the canvas walls. Inside, time slows to conversation, shared glances, and the small rituals that make uncertainty bearable.\n\nChairs creak in the grass. Someone listens more than he speaks. Another watches the distance, already halfway back to duty. No orders yet—only the fragile space between what was and what comes next.\n\nIn these quiet moments, the soldiers become simply men again, holding onto ordinary life while history gathers just beyond the tent lines.\n\n<",
-    "notes": ">\nThis image draws strength from restraint rather than action, echoing documentary traditions while maintaining painterly compositional balance. The grouping of figures creates a natural narrative rhythm, guiding the eye through posture and gesture instead of drama. By focusing on communal stillness, the work expands wartime storytelling beyond heroism into memory, atmosphere, and shared human experience—an approach aligned with narrative-driven fine art photography rooted in historical presence.",
+    "story": "The war waits outside the canvas walls. Inside, time slows to conversation, shared glances, and the small rituals that make uncertainty bearable.\n\nChairs creak in the grass. Someone listens more than he speaks. Another watches the distance, already halfway back to duty. No orders yet, only the fragile space between what was and what comes next.\n\nIn these quiet moments, the soldiers become simply men again, holding onto ordinary life while history gathers just beyond the tent lines.",
+    "notes": "This image draws strength from restraint rather than action, echoing documentary traditions while maintaining painterly compositional balance. The grouping of figures creates a natural narrative rhythm, guiding the eye through posture and gesture instead of drama. By focusing on communal stillness, the work expands wartime storytelling beyond heroism into memory, atmosphere, and shared human experience - an approach aligned with narrative-driven fine art photography rooted in historical presence.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",

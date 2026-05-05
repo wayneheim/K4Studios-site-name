@@ -80,6 +80,15 @@ function pickRandom(arr, n) {
   return shuffle(arr).slice(0, n);
 }
 
+function getImageAltText(image) {
+  if (image?.alt && String(image.alt).trim()) return String(image.alt).trim();
+  if (image?.title && String(image.title).trim()) return String(image.title).trim();
+  if (image?.description && String(image.description).trim()) {
+    return String(image.description).replace(/\s+/g, " ").trim();
+  }
+  return "Fine art photography by Wayne Heim";
+}
+
 // Select carousel slides from pools with variety
 // Strategy: 1 cowboy (hero) + 4 images from 4 different random pools + 1 cowboy (not adjacent)
 function selectSlides(pools, heroWebpSrcs) {
@@ -260,6 +269,7 @@ export default function HomeCarousel() {
       <div className="carousel-track" ref={trackRef}>
         {displaySlides.map((s, i) => {
           const isDuplicate = duplicated && i >= slides.length;
+          const altText = getImageAltText(s);
           return (
           <figure
             className="carousel-slide"
@@ -268,10 +278,10 @@ export default function HomeCarousel() {
             itemType="https://schema.org/ImageObject"
             aria-hidden={isDuplicate ? "true" : undefined}
           >
-            <a href={s.href} title={isDuplicate ? undefined : s.alt} aria-label={isDuplicate ? undefined : s.alt} tabIndex={isDuplicate ? -1 : undefined} onClick={isDuplicate ? undefined : (event) => handleTrackedNavigation(event, s.href, () => trackHomeHeroNavigation(s.href, s.id || null))}>
+            <a href={s.href} title={isDuplicate ? undefined : altText} aria-label={isDuplicate ? undefined : altText} tabIndex={isDuplicate ? -1 : undefined} onClick={isDuplicate ? undefined : (event) => handleTrackedNavigation(event, s.href, () => trackHomeHeroNavigation(s.href, s.id || null))}>
               <img
                 src={s.id ? getProxySrc(s.id, 's') : (s.srcS || s.src)}
-                alt={isDuplicate ? "" : s.alt}
+                alt={isDuplicate ? "" : altText}
                 itemProp="contentUrl"
                 loading={s.loading}
                 fetchpriority={s.fetchpriority}

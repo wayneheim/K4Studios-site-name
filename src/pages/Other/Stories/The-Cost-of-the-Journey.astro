@@ -58,11 +58,11 @@ const structuredDataJSON = getStructuredData({
 ---
 
 <BaseLayout title={storyMeta.showTitle} meta={meta} structuredDataJSON={structuredDataJSON}>
-  <h1 class="sr-only">{storyMeta.showTitle} – Picture Show by Wayne Heim</h1>
+  <p class="sr-only">{storyMeta.showTitle} – Picture Show by Wayne Heim</p>
   <noscript>
     <img
       src={noscriptImage}
-      alt="${storyMeta.showTitle} – Cinematic Picture Show"
+      alt={`${storyMeta.showTitle} - Cinematic Picture Show`}
       style="width:100%;height:auto;display:block;"
     />
   </noscript>

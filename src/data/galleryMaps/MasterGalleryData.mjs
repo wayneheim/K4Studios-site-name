@@ -48971,7 +48971,7 @@ export const galleryDataMap   = {
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-mBD4f67/4/Kjwgj85Wx5nJd7dM2L4nNhFS6sV7tWvM3N4NjQc7n/XL/_O2H3075-Edit-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-mBD4f67/4/MsM2XJdvdhPx6W2s3j59nxNZb8STcr67qBMBsz3Zt/S/_O2H3075-Edit-Edit-S.jpg",
       "rating": 4,
-      "visibility": "hidden",
+      "visibility": "show",
       "galleries": [
         "Other/Archive"
       ]
@@ -98395,7 +98395,7 @@ export const allImages        = [
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-mBD4f67/4/Kjwgj85Wx5nJd7dM2L4nNhFS6sV7tWvM3N4NjQc7n/XL/_O2H3075-Edit-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-mBD4f67/4/MsM2XJdvdhPx6W2s3j59nxNZb8STcr67qBMBsz3Zt/S/_O2H3075-Edit-Edit-S.jpg",
     "rating": 4,
-    "visibility": "hidden",
+    "visibility": "show",
     "galleries": [
       "Other/Archive"
     ]

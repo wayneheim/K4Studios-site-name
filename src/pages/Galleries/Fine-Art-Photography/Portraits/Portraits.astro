@@ -110,6 +110,8 @@ const structuredData = getStructuredData({
     breadcrumb={landingWestern.breadcrumb}
   />
 
+  <h1 class="sr-only">{landingWestern.title}</h1>
+
   <div class="w-full max-w-[1200px] mx-auto px-4">
     <div class="carousel-fade reveal-on-scroll">
   <ImageBar2 client:load slides={sanitizeForClient([])} />

@@ -71,6 +71,15 @@ const resolveImageHref = (match) => {
   return `${galleryBase}/i-${imageId.replace(/^i-/, "")}`;
 };
 
+const getImageAltText = (image) => {
+  if (image?.alt && String(image.alt).trim()) return String(image.alt).trim();
+  if (image?.title && String(image.title).trim()) return String(image.title).trim();
+  if (image?.description && String(image.description).trim()) {
+    return String(image.description).replace(/\s+/g, " ").trim();
+  }
+  return "Fine art photography by Wayne Heim";
+};
+
 /**
  * MobileStoryImages - Inline images for mobile with client-side rotation
  * 
@@ -135,7 +144,7 @@ export default function MobileStoryImages({ images = [], displayCount }) {
 
         const img = document.createElement("img");
         img.src = match.id ? getProxySrc(match.id, 's') : (match.srcS || match.srcM || match.srcL || match.src);
-        img.alt = match.alt || "";
+        img.alt = getImageAltText(match);
         img.className = "mobile-inline-img";
         img.width = 280;  // Explicit dimensions to prevent CLS
         img.height = 350; // Approximate aspect ratio for portrait images

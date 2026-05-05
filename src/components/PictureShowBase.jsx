@@ -904,6 +904,7 @@ const isSpeechActive = () => {
   if (!isReady) {
     return (
       <div className="flex items-center justify-center w-full h-[80vh] text-[#8b7355]">
+        <h1 className="sr-only">{titleBase ? `${titleBase} - Picture Show by Wayne Heim` : "K4 Picture Show"}</h1>
         <p>Loading slideshow…</p>
       </div>
     );
