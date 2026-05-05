@@ -80,9 +80,15 @@ const {
   breadcrumbHrefs: string[];
 } = Astro.props;
 
-// ✅ Build data path from href (href + .mjs = data file)
-const dataPath = `/src/data${galleryHref}.mjs`;
-const mod = galleryModules[dataPath] as any;
+// ✅ Build data path from href. Most galleries are href + .mjs, but a few
+// store the module inside a same-named folder, e.g. /Black-White/Black-White.mjs.
+const leafSegment = galleryHref.split('/').filter(Boolean).at(-1) || '';
+const dataPathCandidates = [
+  `/src/data${galleryHref}.mjs`,
+  `/src/data${galleryHref}/${leafSegment}.mjs`,
+];
+const dataPath = dataPathCandidates.find((candidate) => galleryModules[candidate]);
+const mod = dataPath ? galleryModules[dataPath] as any : null;
 
 // ✅ Load gallery data
 const rawGalleryData = mod?.galleryData || mod?.default || [];
@@ -229,10 +235,133 @@ const styledGalleryTitle = styleLabel && !new RegExp(`^${styleLabel}\\b`, 'i').t
   ? `${styleLabel} ${galleryTitle}`
   : galleryTitle;
 
+const getGalleryVariant = (href: string) => {
+  const isBlackWhite = /\/(Black-White|NA-Black-White)(\/|$)/i.test(href);
+  const isColor = /\/(Color|NA-Color|Trains-Color)(\/|$)/i.test(href);
+  if (isBlackWhite) return 'Black and White';
+  if (isColor) return 'Color';
+  return '';
+};
+
+const getSerpCollectionTitle = (title: string, href: string) => {
+  const variant = getGalleryVariant(href);
+  const prefix = variant ? `${variant} ` : '';
+
+  if (/Western-Cowboy-Portraits/i.test(href)) {
+    return `${prefix}Cowboy Photography | Western Portrait Collection`;
+  }
+
+  if (/Western-Narratives/i.test(href)) {
+    return `${prefix}Western Photography | Narrative Collection`;
+  }
+
+  if (/Native-Americans/i.test(href)) {
+    return `${prefix}Native American Photography | Portrait Collection`;
+  }
+
+  if (/Civil-War-Portraits/i.test(href)) {
+    return `${prefix}Civil War Portrait Photography | Historical Collection`;
+  }
+
+  if (/Roaring-20s-Portraits/i.test(href)) {
+    return `${prefix}1920s Portrait Photography | Roaring 20s Collection`;
+  }
+
+  if (/\/WWII\/War\//i.test(href)) {
+    return `${prefix}WWII Photography | War Collection`;
+  }
+
+  if (/\/WWII\/Machines\//i.test(href)) {
+    return `${prefix}WWII Machine Photography | Military Collection`;
+  }
+
+  if (/\/WWII\/Portraits\//i.test(href)) {
+    return `${prefix}WWII Portrait Photography | Historical Collection`;
+  }
+
+  if (/\/Landscapes\/By-Location\/International\//i.test(href)) {
+    const leaf = href.split('/').at(-1) || '';
+    const location = leaf === 'Gallery' ? 'International' : leaf.replace(/-/g, ' ');
+    return `${location} Landscape Photography | Complete Collection`;
+  }
+
+  if (/\/Landscapes\/By-Location\//i.test(href)) {
+    const region = href.split('/').at(-2) === 'By-Location' ? 'Regional' : href.split('/').at(-2) || '';
+    const label = region === 'By-Location' ? 'Regional' : region.replace(/-/g, ' ');
+    return `${label} Landscape Photography | Complete Collection`;
+  }
+
+  if (/\/Landscapes\/By-Theme\//i.test(href)) {
+    const theme = href.split('/').at(-1)?.replace(/-/g, ' ') || '';
+    if (/Black White/i.test(theme)) return 'Black and White Landscape Photography | Complete Collection';
+    if (/Color/i.test(theme)) return 'Color Landscape Photography | Complete Collection';
+    return `${theme} Landscape Photography | Complete Collection`;
+  }
+
+  if (/\/Portraits\//i.test(href) || /\/Portraits$/i.test(href)) {
+    if (/Reenactors/i.test(href)) return 'Reenactor Portrait Photography | Complete Collection';
+    return `${prefix}Portrait Photography | Complete Collection`;
+  }
+
+  if (/\/Transportation\//i.test(href)) {
+    if (/Trains-Black-White/i.test(href)) return 'Black and White Train Photography | Transportation Collection';
+    if (/Trains-Color|\/Trains$/i.test(href)) return `${prefix || ''}Train Photography | Transportation Collection`;
+    if (/Cars/i.test(href)) return 'Car Photography | Transportation Collection';
+    if (/Boats/i.test(href)) return 'Boat Photography | Transportation Collection';
+    if (/Planes/i.test(href)) return 'Plane Photography | Transportation Collection';
+    if (/Military/i.test(href)) return 'Military Vehicle Photography | Transportation Collection';
+  }
+
+  if (/\/Architecture\/Gallery/i.test(href)) {
+    return 'Architecture Photography | Complete Collection';
+  }
+
+  if (/\/Miscellaneous\/Reenactments/i.test(href)) {
+    return 'Historical Reenactment Photography | Complete Collection';
+  }
+
+  if (/\/Miscellaneous\/Wildlife/i.test(href)) {
+    return 'Wildlife Photography | Complete Collection';
+  }
+
+  if (/\/Miscellaneous\/Pets/i.test(href)) {
+    return 'Pet Photography | Complete Collection';
+  }
+
+  if (/\/Other\/Archive/i.test(href)) {
+    return 'Photography Archive | Complete Image Collection';
+  }
+
+  if (/\/Engrained-Series/i.test(href)) {
+    return 'Engrained Wood Print Photography | Complete Collection';
+  }
+
+  const readableTitle = title
+    .replace(/\s+[–-]\s+Black\s*&\s*White$/i, '')
+    .replace(/\s+[–-]\s+Color$/i, '')
+    .replace(/\bBlack\s*&\s*White\b/gi, 'Black and White');
+
+  return `${prefix}${readableTitle} | Complete Collection`;
+};
+
+const seoCollectionTitle = getSerpCollectionTitle(styledGalleryTitle, galleryHref).replace(/\s+/g, ' ').trim();
+const seoCollectionSubject = seoCollectionTitle.split('|')[0].trim();
+const descriptionSubject = seoCollectionSubject
+  .replace(/\s+Photography$/i, ' photographs')
+  .replace(/\s+Portraits$/i, ' portraits')
+  .replace(/^Black and White\b/, 'black and white')
+  .replace(/^Color\b/, 'color')
+  .replace(/\bPortrait photographs\b/g, 'portrait photographs')
+  .replace(/\bLandscape photographs\b/g, 'landscape photographs')
+  .replace(/\bMachine photographs\b/g, 'machine photographs')
+  .replace(/\bTrain photographs\b/g, 'train photographs')
+  .replace(/\s+/g, ' ')
+  .trim();
+
 // ✅ SEO-optimized title and description
-const seoTitle = `${styledGalleryTitle} Collection (${imageCount} Images) | Wayne Heim Fine Art`;
+const seoTitle = seoCollectionTitle;
 const seoDescription = truncateText(
-  `${styledGalleryTitle} complete collection: browse all ${imageCount} images, story pages, and collector details from this K4 Studios gallery.`,
+  `Complete listing of ${imageCount} ${descriptionSubject} by Wayne Heim, with image pages, stories, and collector details.`,
   160,
 );
 

@@ -118,15 +118,15 @@ export const storyBlocks = [
     subhead: 'Western art prints, painterly photography, and frontier subjects under one clear roof.',
     paragraphs: [
       'Wayne Heim\'s Western artwork blends fine art photography, painterly finishing, and cinematic storytelling to create Western art prints rooted in frontier life, cowboy history, and the mythic American West.',
-      'Western artwork is often used as a catch-all phrase, but most pages built around it collapse into either generic decor or a single narrow subject. This page works differently. It treats Western artwork as a serious authored field that can hold portraiture, narrative frontier scenes, and landscapes without flattening them into the same decorative sentence.',
-      'That matters because people searching this phrase are often looking for something broader than cowboy iconography alone. They want Western artwork for sale, but they also want to know whether the work has atmosphere, seriousness, and enough visual authority to live with over time.',
+      'Western artwork can carry more than a familiar subject. In Wayne Heim\'s work, the category opens into portraiture, narrative frontier scenes, and atmospheric Western landscapes - each shaped with painterly restraint, historical memory, and collector-grade intent.',
+      'The result reaches beyond cowboy iconography alone. These works hold atmosphere, seriousness, and enough visual authority to live with over time as collectible Western artwork.',
     ],
   },
   {
     subhead: 'Portrait, story, and land all belong here',
     paragraphs: [
       'The West was never only a face, and it was never only a horizon. Strong Western artwork has room for both. Portraiture carries character and human weather. Narrative scenes carry tension, consequence, and memory. Landscapes carry scale, silence, and the geography that shaped everything else.',
-      'Seen together, those branches create a more honest route for the term. Instead of treating Western themed art like a style bucket, the page lets the category open into the kinds of work people actually mean when they want something deeper than themed merchandise.',
+      'Seen together, those branches create a more honest shape for the term. Western themed art can be more than a style bucket when the work carries authorship, depth, and a stronger sense of place than themed merchandise.',
     ],
   },
   {
@@ -134,7 +134,7 @@ export const storyBlocks = [
     paragraphs: [
       'At K4 Studios the work is built through a painterly photographic process where tone, atmosphere, and restraint do as much work as subject. That means the broad phrase Western artwork can still land on something authored: images that feel collected rather than sourced, and lived with rather than merely matched to a room.',
       'The finished works are rooted in camera-based photography and shaped through Wayne Heim\'s trained illustrator eye - light, color, texture, atmosphere, focus, and judgment working together rather than formulaic production.',
-      'If the visitor wants a narrower path, the routes below break the field into landscapes, portraits, narrative work, and collector formats without losing the larger Western-art frame that brought them here in the first place.',
+      'The narrower branches below move through landscapes, portraits, narrative work, and collector formats while keeping the larger Western-art frame intact.',
     ],
   },
 ];
@@ -162,7 +162,7 @@ export const explorationPaths = [
     eyebrow: 'Collector Route',
     hideEyebrow: true,
     href: '/Western-Photography-Prints',
-    description: 'Use the print-focused route if the visitor is ready to compare images as purchasable works rather than simply browse the category.',
+    description: 'A print-focused path for comparing images as purchasable works across collector formats.',
     cta: 'Shop the print path -',
     accent: '#6c5a4d',
   },
@@ -171,20 +171,20 @@ export const explorationPaths = [
     eyebrow: 'Commercial Route',
     hideEyebrow: true,
     href: '/Western-Wall-Art',
-    description: 'Use the broad wall-art page for Western prints, Western wall decor, room placement, and print-format buying intent.',
+    description: 'Western prints, Western wall decor, room placement, and print formats for display-focused collectors.',
     cta: 'Explore wall art -',
     accent: '#70523c',
   },
 ];
 
 export const featuredReadingTitle = 'Exploring Art, Story and Atmosphere';
-export const featuredReadingIntro = 'These pages do the semantic work that the broad phrase Western artwork cannot carry by itself.';
+export const featuredReadingIntro = 'These related guides add history, definition, and craft context around the larger Western artwork tradition.';
 
 export const featuredReadingItems = [
   {
     title: 'Art of the West',
     href: '/Art-of-the-West',
-    description: 'Use the concept page when the visitor needs the larger artistic field behind the category term.',
+    description: 'A wider look at the artistic field behind the Western artwork tradition.',
     eyebrow: 'Concept',
   },
   {
@@ -217,7 +217,7 @@ export const gridImages = [
 export const collection = {
   kicker: 'Artwork Paths',
   title: 'Three Branches of Western Artwork',
-  intro: 'The page keeps the broad term intact but breaks it into the actual visual families people usually mean when they search it.',
+  intro: 'Western artwork spans portraiture, narrative frontier scenes, and landscape work without losing the larger tradition that connects them.',
 };
 
 export const collectionGroups = [
@@ -301,15 +301,15 @@ export const faqSection = {
 
 export const faqItems = [
   {
-    q: 'What does Western artwork mean on this page?',
+    q: 'What does Western artwork include?',
     a: [
       'It means a broader authored field rather than a single subject bucket: portraiture, narrative frontier scenes, and landscapes connected by painterly treatment, atmosphere, and collector-grade intent.',
     ],
   },
   {
-    q: 'Is this page meant to cover western themed art too?',
+    q: 'Does western themed art belong here too?',
     a: [
-      'Yes, but in a narrowed way. The page acknowledges that searchers use western themed art as a broad phrase while directing them toward work with more depth than theme-based decor alone.',
+      'Yes, when the work carries more depth than theme-based decor alone. Wayne Heim\'s Western themed art is shaped through atmosphere, historical memory, and painterly photographic treatment.',
     ],
   },
   {
@@ -321,7 +321,7 @@ export const faqItems = [
   {
     q: 'Why combine portraits, narratives, and landscapes under one route?',
     a: [
-      'Because the term western artwork is inherently broad. A better page lets the visitor start broad, then move into the branch that matches what they actually want once the intent becomes clearer.',
+      'Because western artwork is inherently broad. Portraits, narrative scenes, and landscapes each carry a different part of the Western tradition, and each branch supports a different kind of collector interest.',
     ],
   },
   {

@@ -2912,6 +2912,19 @@ export default {
     const path = url.pathname;
     const lowerPath = path.toLowerCase();
 
+    // Zone firewall parity: reject PHP probes before any origin, proxy, or
+    // analytics work. K4 has no PHP routes, so these are always hostile/noise.
+    if (lowerPath.includes('.php')) {
+      return new Response('Blocked', {
+        status: 403,
+        headers: {
+          'Content-Type': 'text/plain; charset=utf-8',
+          'X-Robots-Tag': 'noindex, nofollow',
+          'Cache-Control': 'no-store'
+        }
+      });
+    }
+
     // Legacy SmugMug keyword URL junk should always be hard-404.
     // Prevents homepage fallback with junk path preserved in the address bar.
     if (/(^|\/)keyword(?:\/|$)/i.test(path)) {

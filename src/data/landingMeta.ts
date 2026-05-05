@@ -18,14 +18,14 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
     seoTitle: "Wayne Heim – Western & Painterly Fine Art Photography",
     ogTitle: "Wayne Heim – Western & Painterly Fine Art Photography",
     ogDescription:
-      "Step inside the story: painterly western, historical, and fine art photography by Wayne Heim. Western fine art prints, cowboy portraits, landscapes, and collector editions.",
+      "Painterly and traditional fine art photography by Wayne Heim, featuring Western stories, historical portraits, landscapes, and narrative collector prints.",
     ogImage: "/og/painterly.jpg",
     ogType: "website",
     twitterCard: "summary_large_image",
     twitterTitle:
       "Wayne Heim – Western & Painterly Fine Art Photography",
     twitterDescription:
-      "Step inside the story: painterly western and historical fine art photography by Wayne Heim.",
+      "Painterly and traditional fine art photography by Wayne Heim, featuring Western stories, historical portraits, landscapes, and narrative collector prints.",
     twitterImage: "/og/painterly.jpg",
     keywords: "Wayne Heim, Western fine art photography, painterly photography, cowboy portraits, fine art prints, Western art, historical photography, K4 Studios",
   },
@@ -35,14 +35,14 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
     seoTitle: "Wayne Heim – Western & Painterly Fine Art Photography",
     ogTitle: "Wayne Heim – Western & Painterly Fine Art Photography",
     ogDescription:
-      "Step inside the story: painterly western, historical, and fine art photography by Wayne Heim. Western fine art prints, cowboy portraits, landscapes, and collector editions.",
+      "Painterly and traditional fine art photography by Wayne Heim, featuring Western stories, historical portraits, landscapes, and narrative collector prints.",
     ogImage: "/og/painterly.jpg",
     ogType: "website",
     twitterCard: "summary_large_image",
     twitterTitle:
       "Wayne Heim – Western & Painterly Fine Art Photography",
     twitterDescription:
-      "Step inside the story: painterly western and historical fine art photography by Wayne Heim.",
+      "Painterly and traditional fine art photography by Wayne Heim, featuring Western stories, historical portraits, landscapes, and narrative collector prints.",
     twitterImage: "/og/painterly.jpg",
     keywords: "Wayne Heim, Western fine art photography, painterly photography, cowboy portraits, fine art prints, Western art, historical photography, K4 Studios",
   },
@@ -1061,6 +1061,8 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
 ------------------------------*/
 
 function buildUniqueDescription(baseDesc: string, path: string) {
+  if (path === "/" || path === "/index") return baseDesc;
+
   const segment = path.split("/").filter(Boolean).slice(-1)[0] || "";
   const readable = segment
     .replace(/-/g, " ")
