@@ -1033,22 +1033,21 @@ export default function ChapterGalleryBase({
   }, [viewMode, isZoomed]);
 
   // ═══════════════════════════════════════════════════════════════════════════
-  // IMAGE WARMING: Pre-fetch adjacent images to reduce cold-cache delays
+  // IMAGE WARMING: Pre-fetch adjacent viewer images to reduce cold-cache delays
   // Size mapping: s = grid thumbs, m = grid cards, l = viewer, xl = slideshow
   // ═══════════════════════════════════════════════════════════════════════════
 
-  // Phase 1: Viewer navigation warm - warm current ±3 to cover flip nav AND grid paint area
+  // Phase 1: Viewer navigation warm - warm current ±3 to cover flip nav
   useEffect(() => {
     if (!galleryData?.length || viewMode !== "flip") return;
     
-    // Warm current + 3 before + 3 after at 'l' (viewer) AND 'm' (grid)
-    // This covers both flip navigation and the visible grid area when switching
+    // Warm current + 3 before + 3 after at 'l' for viewer navigation.
+    // Grid mode loads its own 'm' images when the grid is opened.
     const warmRange = 3;
     for (let offset = -warmRange; offset <= warmRange; offset++) {
       const idx = currentIndex + offset;
       if (idx >= 0 && idx < galleryData.length && galleryData[idx]?.id) {
         warmImage(galleryData[idx].id, 'l'); // For viewer display
-        warmImage(galleryData[idx].id, 'm'); // For grid display
       }
     }
   }, [currentIndex, galleryData, viewMode]);
@@ -1057,6 +1056,12 @@ export default function ChapterGalleryBase({
   // Uses galleryData.length as dep so it runs once data is actually loaded
   useEffect(() => {
     if (!galleryData?.length) return;
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      const isImageDetailPath = /\/i-[a-zA-Z0-9_-]+\/?$/.test(window.location.pathname);
+      const isSharedGridView = params.get("view") === "grid" || params.has("theme");
+      if (isImageDetailPath || isSharedGridView) return;
+    }
     
     // Warm first image at 'l' for "Explore the Gallery" click
     warmImage(galleryData[0].id, 'l');
@@ -1068,47 +1073,6 @@ export default function ChapterGalleryBase({
       warmImage(img.id, 'l'); // for click-through
     });
   }, [galleryData.length]); // Run once when data loads
-
-  // Phase 3: Sister gallery warm - background warm Color ↔ Black-White sibling
-  // Uses requestIdleCallback to avoid impacting current gallery load
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
-    
-    const currentPath = window.location.pathname.replace(/\/$/, '');
-    const sisterPath = getSisterGalleryPath(currentPath);
-    
-    if (!sisterPath) return;
-    
-    // Strip the image ID to get gallery base path
-    const sisterGalleryPath = sisterPath.replace(/\/i-[^/]+$/, '');
-    
-    const warmSisterGallery = async () => {
-      try {
-        const res = await fetch('/galleryPrefetchMap.json');
-        if (!res.ok) return;
-        const prefetchMap = await res.json();
-        const sisterImages = prefetchMap[sisterGalleryPath];
-        
-        if (sisterImages?.length) {
-          // Warm first 6 images at 'l' size for viewer click-through
-          sisterImages.slice(0, 6).forEach(imgId => {
-            warmImage(imgId, 'l');
-          });
-        }
-      } catch {
-        // Silent fail - this is just an optimization
-      }
-    };
-    
-    // Use idle callback for non-blocking background warm
-    if ('requestIdleCallback' in window) {
-      const id = requestIdleCallback(warmSisterGallery, { timeout: 3000 });
-      return () => cancelIdleCallback(id);
-    } else {
-      const timer = setTimeout(warmSisterGallery, 500);
-      return () => clearTimeout(timer);
-    }
-  }, []); // Run once on mount
 
   // ═══════════════════════════════════════════════════════════════════════════
 
