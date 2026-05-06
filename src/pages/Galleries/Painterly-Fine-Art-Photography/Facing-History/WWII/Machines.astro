@@ -1,6 +1,7 @@
-﻿---
+---
 export const prerender = true;
 import BaseLayout         from '@/layouts/BaseLayout.astro';
+import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import LandingHeader      from '@/components/Landing-Header.jsx';
 import ImageBar2          from '@/components/ImageBar2.jsx';
 import TombstoneNav       from '@/components/TombstoneNav.jsx';
@@ -70,7 +71,7 @@ function makeAbsoluteUrl(src?: string) {
 // Proxy URL helper - ensures SmugMug URLs never appear in SSR HTML
 function getProxySrc(imageId: string, size: string = 'm'): string {
   if (!imageId) return '';
-  return `/img/${imageId}/${size}.jpg`;
+  return getSemanticImageUrl(imageId, {}, size);
 }
 
 const landingImg    = featheredImages[0];
@@ -90,11 +91,11 @@ const structuredData = getStructuredData({
     description: landingWestern.subtitle || landingWestern.description,
     url: `https://k4studios.com${sectionPath}`,
     keywords: landingWestern.keywords || [],
-    copyrightNotice: "Â© Wayne Heim"
+    copyrightNotice: "© Wayne Heim"
   },
   images: featheredImages,
   defaults: {
-    copyrightNotice: "Â© Wayne Heim",
+    copyrightNotice: "© Wayne Heim",
     license: "https://k4studios.com/copyright",
     acquireLicensePage: "https://k4studios.com/Other/Print-Options",
     creditText: "Wayne Heim",
@@ -104,9 +105,9 @@ const structuredData = getStructuredData({
 });
 ---
 
-<!-- âœ… Structured data JSON-LD injection -->
+<!-- ✅ Structured data JSON-LD injection -->
 
-<BaseLayout title={`${landingWestern.title} â€“ ${landingWestern.subtitle}`} structuredDataJSON={structuredData} meta={landingMeta}>
+<BaseLayout title={`${landingWestern.title} – ${landingWestern.subtitle}`} structuredDataJSON={structuredData} meta={landingMeta}>
   <main class="bg-[#ffffff] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
     <div class="drawer-mode">
       <LandingHeader

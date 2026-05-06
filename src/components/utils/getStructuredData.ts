@@ -16,14 +16,17 @@ function getProxyUrl(img: any, size: string = 'l', sourcePrefix: string | null =
 
   // If we have an id, use the proxy
   if (img.id && img.id.startsWith('i-')) {
-    if (!sourcePrefix && size === 'l' && USE_SEMANTIC_IMAGE_URLS) {
-      return getSemanticImageUrl(img, { galleryPath: img.galleryUrl }, { absolute: true });
+    if (!sourcePrefix && USE_SEMANTIC_IMAGE_URLS) {
+      return getSemanticImageUrl(img, { galleryPath: img.galleryUrl }, size, { absolute: true });
     }
     return `https://www.k4studios.com/img/${applyPrefix(stripPrefix(img.id))}/${size}.jpg`;
   }
   // Try to extract id from src URL
   const idMatch = img.src?.match(/\/(i-[a-zA-Z0-9]+)\//);
   if (idMatch) {
+    if (!sourcePrefix && USE_SEMANTIC_IMAGE_URLS) {
+      return getSemanticImageUrl(stripPrefix(idMatch[1]), { galleryPath: img.galleryUrl }, size, { absolute: true });
+    }
     return `https://www.k4studios.com/img/${applyPrefix(stripPrefix(idMatch[1]))}/${size}.jpg`;
   }
   // Fallback: if it's already a k4studios URL, use it
@@ -35,6 +38,9 @@ function getProxyUrl(img: any, size: string = 'l', sourcePrefix: string | null =
         if (m) {
           const canonicalId = m[2];
           const safeSize = m[3] || size;
+          if (!sourcePrefix && USE_SEMANTIC_IMAGE_URLS) {
+            return getSemanticImageUrl(canonicalId, { galleryPath: img.galleryUrl }, safeSize, { absolute: true });
+          }
           return `https://www.k4studios.com/img/${applyPrefix(canonicalId)}/${safeSize}.jpg`;
         }
       }

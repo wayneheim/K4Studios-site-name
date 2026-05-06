@@ -1,6 +1,7 @@
 ---
 export const prerender = true;
 import BaseLayout    from "@/layouts/BaseLayout.astro";
+import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter    from "@/components/Footer.astro";
 import StorySlider   from "@/components/StorySlider.tsx";
@@ -21,7 +22,7 @@ import "@/styles/global.css";
 // Proxy URL helper - ensures SmugMug URLs never appear in SSR HTML
 function getProxySrc(imageId: string, size: string = 'm'): string {
   if (!imageId) return '';
-  return `/img/${imageId}/${size}.jpg`;
+  return getSemanticImageUrl(imageId, {}, size);
 }
 
 // ----------------------

@@ -2,6 +2,7 @@
 export const prerender = true;
 
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import LandingHeader from '@/components/Landing-Header.jsx';
 import SiteFooter from '@/components/Footer.astro';
 import { getStructuredData, getBreadcrumbList } from '@/components/utils/getStructuredData.ts';
@@ -13,8 +14,8 @@ const canonicalUrl = `https://www.k4studios.com${pagePath}`;
 const pageTitle = 'Authentic Cowboy Life in Western Art: Before the Myth, the Work';
 const pageDescription = 'Explore authentic cowboy life through Western art, narrative Western photography, and frontier labor—bridging ranch reality and the truth behind the cowboy myth.';
 
-const getProxySrc = (id: string, size: string) => `/img/${id}/${size}.jpg`;
-const getAbsoluteProxySrc = (id: string, size: string) => `https://www.k4studios.com/img/${id}/${size}.jpg`;
+const getProxySrc = (id: string, size: string = "l") => getSemanticImageUrl(id, {}, size);
+const getAbsoluteProxySrc = (id: string, size: string = "l") => getSemanticImageUrl(id, {}, size, { absolute: true });
 
 const headerImage = {
   id: 'i-H8VZWJM',

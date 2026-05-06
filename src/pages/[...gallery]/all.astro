@@ -800,16 +800,20 @@ const heroImage = galleryData[0];
       for (let i = 0; i < WARM_COUNT; i++) {
         const imgEl = cards[i].querySelector('img');
         if (!imgEl) continue;
-        const src = imgEl.getAttribute('src');
-        const match = src?.match(/\/img\/(i-[^/]+)/);
-        if (match) {
-          // Fire-and-forget warming
+        const warmUrls = new Set();
+        const src = imgEl.currentSrc || imgEl.getAttribute('src');
+        if (src) warmUrls.add(src);
+
+        const srcset = imgEl.getAttribute('srcset') || '';
+        srcset.split(',').forEach((candidate) => {
+          const url = candidate.trim().split(/\s+/)[0];
+          if (url && /\/img\/i-[^/]+\/m\//.test(url)) warmUrls.add(url);
+        });
+
+        warmUrls.forEach((url) => {
           const img = new Image();
-          img.src = `/img/${match[1]}/s.jpg`;
-          // Also warm 'm' for responsive srcset
-          const imgM = new Image();
-          imgM.src = `/img/${match[1]}/m.jpg`;
-        }
+          img.src = url;
+        });
       }
     })();
   </script>

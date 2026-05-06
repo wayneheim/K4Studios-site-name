@@ -10,6 +10,7 @@ import FAQAccordion       from '@/components/FAQAccordion.jsx';
 import SiteFooter         from '@/components/Footer.astro';
 import MobileStoryImages  from '@/components/MobileStoryImages.jsx';
 import { sanitizeForClient } from '@/components/utils/normalizeImage.ts';
+import { getSemanticImageUrl, normalizeImageSrc } from '@/utils/imageProxy.js';
 
 // Gallery data for images
 import { galleryData as cowboyColorDataFull }
@@ -155,7 +156,7 @@ const webPageSchema = JSON.stringify({
 // OG/Twitter image - use proxy URLs to avoid exposing SmugMug
 function getProxySrc(imageId: string, size: string = 'm'): string {
   if (!imageId) return '';
-  return `/img/${imageId}/${size}.jpg`;
+  return getSemanticImageUrl(imageId, {}, size);
 }
 
 function makeAbsoluteUrl(src?: string) {
@@ -201,7 +202,10 @@ const tombstoneGalleryMap: Record<string, any[]> = {
 };
 
 const tombstonesWithThumbs = landingWallArt.tombstones.map((stone: any) => {
-  if (stone.thumb) return { ...stone, thumbs: [stone.thumb] };
+  if (stone.thumb) {
+    const thumb = normalizeImageSrc(stone.thumb, 's');
+    return { ...stone, thumb, thumbs: [thumb] };
+  }
   const galleryData = tombstoneGalleryMap[stone.href];
   const thumbs = galleryData ? getTombstoneThumbs(galleryData) : [];
   return {

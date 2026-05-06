@@ -5,6 +5,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import LandingHeader from '@/components/Landing-Header.jsx';
 import SiteFooter from '@/components/Footer.astro';
 import { getBreadcrumbList } from '@/components/utils/getStructuredData.ts';
+import { getSemanticImageUrl } from '@/utils/imageProxy.js';
 import { getVideoBySlug, getVideoThumbnail } from '@/data/videos/videoRegistry';
 import { galleryData as westernNarrativesColor }
   from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs';
@@ -81,7 +82,7 @@ const womenImages = galleries
   .filter((item: any, index: number, all: any[]) => all.findIndex((other) => other.id === item.id) === index)
   .slice(0, 18);
 
-const heroImage = womenImages[0] ? `https://www.k4studios.com/img/${womenImages[0].id}/l.jpg` : `https://www.k4studios.com${videoThumb}`;
+const heroImage = womenImages[0] ? getSemanticImageUrl(womenImages[0].id, {}, 'l', { absolute: true }) : `https://www.k4studios.com${videoThumb}`;
 
 const sections = [
   {
@@ -215,7 +216,7 @@ const meta = {
         </div>
         {womenImages[0] && (
           <a class="hero-image" href={womenImages[0].href}>
-            <img src={`/img/${womenImages[0].id}/l.jpg`} alt={womenImages[0].alt} />
+            <img src={getSemanticImageUrl(womenImages[0].id, {}, 'l')} alt={womenImages[0].alt} />
           </a>
         )}
       </section>
@@ -258,7 +259,7 @@ const meta = {
         <div class="image-grid">
           {womenImages.slice(0, 12).map((item) => (
             <a href={item.href} class="image-card">
-              <img src={`/img/${item.id}/m.jpg`} alt={item.alt} loading="lazy" />
+              <img src={getSemanticImageUrl(item.id, {}, 'm')} alt={item.alt} loading="lazy" />
               <span>{item.title}</span>
             </a>
           ))}

@@ -3,7 +3,7 @@ const currentYear = new Date().getFullYear();
 import GalleryPreviewStrip from './GalleryPreviewStrip.astro';
 import BlogGalleryPreviewStrip from './BlogGalleryPreviewStrip.astro';
 import ShareDrawer from '@/components/ShareDrawer.jsx';
-import { extractImageId } from '@/utils/imageProxy.js';
+import { extractImageId, getSemanticImageUrl, normalizeImageSrc } from '@/utils/imageProxy.js';
 import { getGalleryCollectionLabel, isGallerySourceHref, resolveGallerySourceHref } from '@/utils/galleryCollectionNav.ts';
 
 const { 
@@ -35,21 +35,23 @@ const showPreviewBar =
 // Convert any SmugMug URL to absolute proxy URL for sharing
 const toShareUrl = (src: string | undefined) => {
   if (!src) return undefined;
-  // Already a proxy URL - make absolute
+  // Already a proxy URL - upgrade legacy URLs and make absolute.
   if (src.startsWith('/img/')) {
-    return `${siteOrigin}${src.replace(/\/(s|m|l|xl|src)(?:\.jpe?g)?$/i, '/l.jpg')}`;
+    return new URL(normalizeImageSrc(src, 'l'), siteOrigin).toString();
   }
   // Static image - make absolute  
   if (src.startsWith('/images/')) return `${siteOrigin}${src}`;
   // Already absolute/hosted proxy URL - preserve semantic filenames.
   if (src.includes('k4studios.com/img/')) {
-    return src
-      .replace(/https?:\/\/(?:www\.)?k4studios\.com/i, siteOrigin)
-      .replace(/\/(s|m|l|xl|src)(?:\.jpe?g)?$/i, '/l.jpg');
+    try {
+      return new URL(normalizeImageSrc(new URL(src).pathname, 'l'), siteOrigin).toString();
+    } catch {
+      return src.replace(/https?:\/\/(?:www\.)?k4studios\.com/i, siteOrigin);
+    }
   }
   // Extract ID from SmugMug URL and convert to proxy
   const imageId = extractImageId(src);
-  if (imageId) return `${siteOrigin}/img/${imageId}/l.jpg`;
+  if (imageId) return getSemanticImageUrl(imageId, {}, 'l', { absolute: true, origin: siteOrigin });
   // Unknown - return undefined to avoid leaking
   return undefined;
 };
@@ -73,7 +75,7 @@ const allPageHref = resolvedPreviewPath ? `${resolvedPreviewPath}/all` : null;
 const allPageLinkText = resolvedPreviewPath
   ? (galleriesWithAllPages[resolvedPreviewPath] || `Browse the full ${collectionLabel} collection`)
   : null;
-const shareImage = toShareUrl(rawShareImage) || (previewImages?.[0]?.id ? `${siteOrigin}/img/${previewImages[0].id}/l.jpg` : undefined);
+const shareImage = toShareUrl(rawShareImage) || (previewImages?.[0]?.id ? getSemanticImageUrl(previewImages[0].id, {}, 'l', { absolute: true, origin: siteOrigin }) : undefined);
 ---
 
 <footer

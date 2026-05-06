@@ -2,6 +2,7 @@
 export const prerender = true;
 import Layout from '../layouts/BaseLayout.astro';
 import LandingHeader from '@/components/Landing-Header.jsx';
+import { getSemanticImageUrl } from '@/utils/imageProxy.js';
 import '@/styles/global.css';
 
 const siteOrigin = 'https://www.k4studios.com';
@@ -25,7 +26,7 @@ I'm interested in licensing or purchasing the following image from K4 Studios:
 
 Title: ${decodeURIComponent(imageTitle)}
 Image ID: ${licenseId}
-View at: ${siteOrigin}/img/${licenseId}/l.jpg
+View at: ${siteOrigin}${getSemanticImageUrl(licenseId, {}, "l")}
 Please let me know about licensing options and pricing.
 
 Thank you!`
@@ -93,7 +94,7 @@ const breadcrumb = "Other › Contact";
     <!-- Hero Image Banner -->
     <section class="hero-banner">
       <img 
-        src="/img/i-z9Pfbc5/l.jpg" 
+        src={getSemanticImageUrl("i-z9Pfbc5", {}, "l")} 
         alt="Western fine art photography by Wayne Heim"
         class="hero-image"
       />
@@ -106,7 +107,7 @@ const breadcrumb = "Other › Contact";
           <>
             <h1>License This Image</h1>
             <div class="license-preview">
-              <img src={`/img/${licenseId}/m.jpg`} alt={decodeURIComponent(imageTitle)} class="license-image" />
+              <img src={getSemanticImageUrl(licenseId, {}, "m")} alt={decodeURIComponent(imageTitle)} class="license-image" />
               <p class="license-title">{decodeURIComponent(imageTitle)}</p>
             </div>
             <p class="license-intro">

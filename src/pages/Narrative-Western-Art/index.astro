@@ -1,6 +1,7 @@
 ---
 export const prerender = true;
 import BaseLayout         from '@/layouts/BaseLayout.astro';
+import { getSemanticImageUrl, normalizeImageSrc } from "@/utils/imageProxy.js";
 import LandingHeader      from '@/components/Landing-Header.jsx';
 import TombstoneNav       from '@/components/TombstoneNav.jsx';
 import LandingRightImages from '@/components/LandingRightImages.jsx';
@@ -9,7 +10,7 @@ import SiteFooter         from '@/components/Footer.astro';
 import MobileStoryImages  from '@/components/MobileStoryImages.jsx';
 import StorySlider        from '@/components/StorySlider.tsx';
 import HybridBookCarousel from '@/components/hybrid/HybridBookCarousel.jsx';
-import { sanitizeForClient } from '@/components/utils/normalizeImage.ts';
+import { sanitizeCarouselForClient, sanitizeForClient } from '@/components/utils/normalizeImage.ts';
 
 import {
   cowboyColorDataFull,
@@ -169,7 +170,7 @@ const reorderedSampleImages = [...topSampleImages].sort((a: any, b: any) => {
 });
 const sampleImages = reorderedSampleImages.length >= 6 ? reorderedSampleImages : featheredImages;
 
-const carouselSlidesClient = carouselSlides.map((slide: any) => ({ ...slide })) as any;
+const carouselSlidesClient = sanitizeCarouselForClient(carouselSlides.map((slide: any) => ({ ...slide }))) as any;
 const carouselProps = {
   slides: carouselSlidesClient,
   galleryBasePath: carouselGalleryBasePath,
@@ -280,7 +281,7 @@ function makeAbsoluteUrl(src?: string) {
 
 function getProxySrc(imageId: string, size: string = 'm'): string {
   if (!imageId) return '';
-  return `/img/${imageId}/${size}.jpg`;
+  return getSemanticImageUrl(imageId, {}, size);
 }
 
 const landingImg = featheredImages[0];
@@ -308,7 +309,10 @@ const tombstoneGalleryMap: Record<string, any[]> = {
 };
 
 const tombstonesWithThumbs = landingNarrativeWesternArt.tombstones.map((stone: any) => {
-  if (stone.thumb) return { ...stone, thumbs: [stone.thumb] };
+  if (stone.thumb) {
+    const thumb = normalizeImageSrc(stone.thumb, 's');
+    return { ...stone, thumb, thumbs: [thumb] };
+  }
   const galleryData = tombstoneGalleryMap[stone._thumbSource || stone.href];
   const thumbs = galleryData ? getTombstoneThumbs(galleryData) : [];
   return {

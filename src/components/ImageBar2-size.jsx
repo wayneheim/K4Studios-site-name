@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import "../styles/ImageBar3.css";
+import { getSemanticImageUrl } from "../utils/imageProxy.js";
 
 const getImageAltText = (slide) => {
   if (slide?.alt && String(slide.alt).trim()) return String(slide.alt).trim();
@@ -9,6 +10,16 @@ const getImageAltText = (slide) => {
   }
   return "Fine art image by Wayne Heim";
 };
+
+const getGalleryPathFromImageHref = (href = "") => String(href || "").replace(/\/i-[a-zA-Z0-9-]+\/?$/, "");
+
+function getCarouselSrc(slide) {
+  if (slide?.id) {
+    return getSemanticImageUrl(slide, { galleryPath: slide.galleryPath || getGalleryPathFromImageHref(slide.href) }, 'm');
+  }
+
+  return slide?.srcS || slide?.srcM || slide?.srcL || slide?.src || '';
+}
 
 // Glob import: grabs all carousel slide data files from both Galleries and Other
 const allCarousels = import.meta.glob([
@@ -86,7 +97,7 @@ export default function ImageBar2({ slides }) {
           >
             <a href={s.href} title={imageAlt} aria-label={imageAlt}>
               <img
-                src={s.srcS || s.srcM || s.srcL || s.src}
+                src={getCarouselSrc(s)}
                 alt={imageAlt}
                 // Use fetchpriority for first image, loading="lazy" for the rest
                 {...(typeof s.fetchpriority === "string"

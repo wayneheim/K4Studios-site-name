@@ -1,9 +1,16 @@
 import { useEffect, useRef, useState, useCallback } from "react";
 import '../styles/ImageCarousel.css';
+import { getSemanticImageUrl, extractImageId } from '../utils/imageProxy.js';
+
+function getSlideImageSrc(slide) {
+  const imageId = slide.id || extractImageId(slide.src);
+  return imageId ? getSemanticImageUrl(imageId, {}, 's') : slide.src;
+}
 
 const slides = [
   {
     href: "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-fCG2nm8",
+    id: "i-kHqNdGX",
     src: "/img/i-kHqNdGX/s.jpg",
     alt: "Three elder cowboys on bench in rustic painterly fine art photography",
     description:
@@ -11,6 +18,7 @@ const slides = [
   },
   {
     href: "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-qVZ9m7j",
+    id: "i-pN7Hmfz",
     src: "/img/i-pN7Hmfz/s.jpg",
     alt: "Cowboy with shotgun guarding rustic church entrance in painterly Western art",
     description:
@@ -18,6 +26,7 @@ const slides = [
   },
   {
     href: "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-8BbMZjs",
+    id: "i-WjRnQ6N",
     src: "/img/i-WjRnQ6N/s.jpg",
     alt: "Horseback cowboy in painterly fine art style staring across vast Western horizon",
     description:
@@ -25,6 +34,7 @@ const slides = [
   },
   {
     href: "https://www.k4studios.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-xF7p92v",
+    id: "i-QDL5jR7",
     src: "/img/i-QDL5jR7/s.jpg",
     alt: "Cowboy being shot and struck by lightning in stylized painterly Western scene",
     description:
@@ -32,6 +42,7 @@ const slides = [
   },
   {
     href: "https://www.k4studios.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-thTwwHZ",
+    id: "i-5JksgQk",
     src: "/img/i-5JksgQk/s.jpg",
     alt: "Western cowboy holding rifle at rustic cabin window – Fine Art by K4 Studios",
     description:
@@ -82,7 +93,7 @@ export default function ImageCarousel() {
           >
             <a href={slide.href} title={slide.alt} aria-label={slide.alt}>
               <img
-                src={slide.src}
+                src={getSlideImageSrc(slide)}
                 alt={slide.alt}
                 loading="lazy"
                 itemProp="contentUrl"

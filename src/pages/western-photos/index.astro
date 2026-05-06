@@ -2,6 +2,7 @@
 export const prerender = true;
 
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import LandingHeader from '@/components/Landing-Header.jsx';
 import SiteFooter from '@/components/Footer.astro';
 import { getBreadcrumbList } from '@/components/utils/getStructuredData.ts';
@@ -190,7 +191,7 @@ const structuredDataJSON = JSON.stringify({
   },
 }, null, 2);
 
-const heroImage = photoTiles[0]?.id ? `https://www.k4studios.com/img/${photoTiles[0].id}/l.jpg` : '/images/show-2t.webp';
+const heroImage = photoTiles[0]?.id ? getSemanticImageUrl(photoTiles[0].id, {}, 'l', { absolute: true }) : '/images/show-2t.webp';
 
 const meta = {
   title: pageTitle,
@@ -209,7 +210,7 @@ const meta = {
   keywords: 'western photos, western pictures, cowboy photos, western photo prints, western portraits, American West photography, Wayne Heim',
 };
 
-const getProxySrc = (id: string, size: string) => `/img/${id}/${size}.jpg`;
+const getProxySrc = (id: string, size: string = "l") => getSemanticImageUrl(id, {}, size);
 ---
 
 <BaseLayout

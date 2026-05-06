@@ -17,6 +17,7 @@
 
 import { getImageSlugPhraseForPath } from '../data/semantic/K4-Sem.ts';
 import imageFilenameSlugs from '../data/imageFilenameSlugs.json';
+import imageIdMap from '../data/imageIdMap.json';
 
 export const USE_SEMANTIC_IMAGE_URLS = true;
 
@@ -71,7 +72,7 @@ export function normalizeImageSrc(src, size = 'm') {
   if (src.startsWith('/img/')) {
     const proxyMatch = src.match(/\/img\/(i-[a-zA-Z0-9-]+)\/(s|m|l|xl|src)(?:\.jpe?g)?/i);
     if (proxyMatch) {
-      return getProxySrc(proxyMatch[1], size);
+      return getSemanticImageUrl(proxyMatch[1], {}, size);
     }
     return src;
   }
@@ -82,7 +83,7 @@ export function normalizeImageSrc(src, size = 'm') {
   // Try to extract an image ID
   const imageId = extractImageId(src);
   if (imageId) {
-    return getProxySrc(imageId, size);
+    return getSemanticImageUrl(imageId, {}, size);
   }
   
   // Unknown format - return as-is (might be external or placeholder)
@@ -156,6 +157,11 @@ function parseSemanticArgs(sizeOrOptions, maybeOptions) {
   };
 }
 
+function getInferredGalleryPathForImageId(imageId) {
+  const paths = imageIdMap?.[imageId];
+  return Array.isArray(paths) && paths.length > 0 ? paths[0] : '';
+}
+
 export function getSemanticImageUrl(image, galleryContext = {}, sizeOrOptions = {}, maybeOptions = {}) {
   const imageId = typeof image === 'string' ? image : image?.id;
   if (!imageId) return '';
@@ -178,6 +184,7 @@ export function getSemanticImageUrl(image, galleryContext = {}, sizeOrOptions = 
     galleryContext?.galleryPath ||
       galleryContext?.path ||
       galleryContext?.urlBase ||
+      getInferredGalleryPathForImageId(imageId) ||
       ''
   );
 

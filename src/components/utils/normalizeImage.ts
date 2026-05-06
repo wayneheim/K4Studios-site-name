@@ -57,3 +57,19 @@ export function sanitizeForClient<T extends ImageVariants>(images: T[]): Partial
     // Explicitly exclude: src, srcS, srcM, srcL, srcXL, srcOriginal, buyLink
   } as Partial<T>));
 }
+
+export function sanitizeCarouselForClient<T extends ImageVariants>(images: T[]): Partial<T>[] {
+  return images.map(img => ({
+    id: img.id,
+    title: img.title,
+    alt: img.alt,
+    href: img.href,
+    galleryPath: img.galleryPath,
+    description: img.description,
+    keywords: img.keywords,
+    story: img.story,
+    imageObjectPosition: img.imageObjectPosition,
+    imageScale: img.imageScale,
+    // Explicitly exclude: src, srcS, srcM, srcL, srcXL, srcOriginal, buyLink
+  } as Partial<T>));
+}

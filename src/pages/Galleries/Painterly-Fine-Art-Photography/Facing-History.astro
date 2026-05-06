@@ -1,6 +1,7 @@
-﻿---
+---
 export const prerender = true;
 import BaseLayout         from '@/layouts/BaseLayout.astro';
+import { getSemanticImageUrl, normalizeImageSrc } from "@/utils/imageProxy.js";
 import LandingHeader      from '@/components/Landing-Header.jsx';
 import ImageBar2          from '@/components/ImageBar2.jsx';
 import TombstoneNav       from '@/components/TombstoneNav.jsx';
@@ -32,6 +33,11 @@ import '@/styles/global.css';
 // ----------------------
 
 const sectionPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History";
+const semanticTombstones = landingWestern.tombstones.map((stone: any) => ({
+  ...stone,
+  thumb: normalizeImageSrc(stone.thumb, 's'),
+  thumbs: (stone.thumbs || [stone.thumb]).filter(Boolean).map((thumb: string) => normalizeImageSrc(thumb, 's')),
+}));
 
 // Filter gallery data for StorySlider (reduce payload)
 const cowboyColorData = cowboyColorDataFull
@@ -87,7 +93,7 @@ const structuredData = getStructuredData({
     description: landingDescription,
     url: `https://k4studios.com${sectionPath}`,
     keywords: landingWestern.keywords || [],
-    copyrightNotice: "Â© Wayne Heim",
+    copyrightNotice: "© Wayne Heim",
     about: [
       { "@type": "Thing", name: "Historically Themed Fine Art Photography" },
       { "@type": "Thing", name: "History Inspired Photography" },
@@ -104,7 +110,7 @@ const structuredData = getStructuredData({
   },
   images: featheredImages,
   defaults: {
-    copyrightNotice: "Â© Wayne Heim",
+    copyrightNotice: "© Wayne Heim",
     license: "https://k4studios.com/copyright",
     acquireLicensePage: "https://k4studios.com/Other/Print-Options",
     creditText: "Wayne Heim",
@@ -125,7 +131,7 @@ function makeAbsoluteUrl(src?: string) {
 // Proxy URL helper - ensures SmugMug URLs never appear in SSR HTML
 function getProxySrc(imageId: string, size: string = 'm'): string {
   if (!imageId) return '';
-  return `/img/${imageId}/${size}.jpg`;
+  return getSemanticImageUrl(imageId, {}, size);
 }
 
 // Pick first feathered image for stability (or random if desired)
@@ -138,7 +144,7 @@ if (!landingMeta.ogUrl)      landingMeta.ogUrl      = `https://k4studios.com${se
 if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${sectionPath}`;
 ---
 
-<!-- âœ… JSON-LD Structured Data for SEO -->
+<!-- ✅ JSON-LD Structured Data for SEO -->
 
 <BaseLayout
   structuredDataJSON={structuredData}
@@ -181,7 +187,7 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
     </section>
 
     <div class="py-5">
-      <TombstoneNav client:load items={landingWestern.tombstones} />
+      <TombstoneNav client:load items={semanticTombstones} />
     </div>
 
     <section class="story-layout">
@@ -208,7 +214,7 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
                   ))}
                 </ul>
               )}
-              {/* Seeing essays â€” editorial discovery link */}
+              {/* Seeing essays — editorial discovery link */}
               {index === 0 && (
                 <p class="reveal-on-scroll text-sm text-[#666] mt-6 mb-4 italic">
                   For those interested in how historical images can function as lived narratives rather than documents, the <a href="/Other/Seeing" class="text-[#8b0000] hover:underline">Seeing essays</a> explore these ideas in more depth.
@@ -221,7 +227,7 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
                   <div class="story-slider-skeleton relative bg-[#ebe5dc] rounded-lg shadow-md px-6 py-5 max-w-2xl mx-auto border-2 border-[#d8d0c4] mb-12 h-[280px] overflow-hidden">
                     <div class="absolute top-2.5 left-2.5 w-3.5 h-3.5 border-l-2 border-t-2 border-[#c8bfb0]"></div>
                     <div class="absolute bottom-2.5 right-2.5 w-3.5 h-3.5 border-r-2 border-b-2 border-[#c8bfb0]"></div>
-                    <p class="text-[11px] uppercase tracking-[0.12em] text-[#8c7d6b] mb-3">One-Image Movieâ„¢ Preview</p>
+                    <p class="text-[11px] uppercase tracking-[0.12em] text-[#8c7d6b] mb-3">One-Image Movie™ Preview</p>
                     <div class="animate-pulse">
                       <div class="h-5 bg-[#d8d0c4] rounded w-3/4 mb-3"></div>
                       <div class="h-4 bg-[#d8d0c4] rounded w-full mb-2"></div>

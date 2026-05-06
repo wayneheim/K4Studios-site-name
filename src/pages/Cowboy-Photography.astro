@@ -2,6 +2,7 @@
 export const prerender = true;
 
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import CornerstoneArticle from '@/components/authority/CornerstoneArticle.astro';
 import { getStructuredData, getBreadcrumbList } from '@/components/utils/getStructuredData.ts';
 import { galleryData as westLandscapes }
@@ -191,7 +192,7 @@ const faqItems = [
   }
 ];
 
-const heroImage = slides[0] ? `https://www.k4studios.com/img/${slides[0].id}/l.jpg` : 'https://www.k4studios.com/images/K4Logo-web-c.webp';
+const heroImage = slides[0] ? getSemanticImageUrl(slides[0].id, {}, "l", { absolute: true }) : 'https://www.k4studios.com/images/K4Logo-web-c.webp';
 
 const structuredData = getStructuredData({
   type: 'Article',

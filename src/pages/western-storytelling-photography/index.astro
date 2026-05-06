@@ -2,6 +2,7 @@
 export const prerender = true;
 
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import FeaturedReadingSection from '@/components/FeaturedReadingSection.astro';
 import LandingHeader from '@/components/Landing-Header.jsx';
 import ImageBar2 from '@/components/ImageBar2.jsx';
@@ -340,7 +341,7 @@ const webPageSchema = JSON.stringify({
 
 function getProxySrc(imageId: string, size: string = 'm'): string {
   if (!imageId) return '';
-  return `/img/${imageId}/${size}.jpg`;
+  return getSemanticImageUrl(imageId, {}, size);
 }
 
 function makeAbsoluteUrl(src?: string) {

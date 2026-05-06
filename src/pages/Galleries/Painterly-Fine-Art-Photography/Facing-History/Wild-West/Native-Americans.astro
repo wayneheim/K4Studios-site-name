@@ -2,6 +2,7 @@
 // @ts-nocheck
 export const prerender = true;
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getSemanticImageUrl, normalizeImageSrc } from "@/utils/imageProxy.js";
 import LandingHeader from '@/components/Landing-Header.jsx';
 import ImageBar2 from '@/components/ImageBar2.jsx';
 import TombstoneNav from '@/components/TombstoneNav.jsx';
@@ -32,6 +33,11 @@ import '@/styles/oneupheader.css';
 
 const sectionPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West";
 const nativeAmericansPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans";
+const semanticTombstones = landingWestern.tombstones.map((stone: any) => ({
+  ...stone,
+  thumb: normalizeImageSrc(stone.thumb, 's'),
+  thumbs: (stone.thumbs || [stone.thumb]).filter(Boolean).map((thumb: string) => normalizeImageSrc(thumb, 's')),
+}));
 const nativeAmericanColorPath = `${nativeAmericansPath}/NA-Color`;
 
 // Normalize any mojibake (UTF-8 shown as Latin-1) so titles render with proper punctuation
@@ -107,7 +113,7 @@ function makeAbsoluteUrl(src) {
 // Proxy URL helper - ensures SmugMug URLs never appear in SSR HTML
 function getProxySrc(imageId: string, size: string = 'm'): string {
   if (!imageId) return '';
-  return `/img/${imageId}/${size}.jpg`;
+  return getSemanticImageUrl(imageId, {}, size);
 }
 
 // Pick first feathered image for stability (swap to random if desired)
@@ -162,7 +168,7 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${na
     </section>
 
     <div class="py-5">
-      <TombstoneNav client:load items={landingWestern.tombstones} dividerMaxWidth="900px" />
+      <TombstoneNav client:load items={semanticTombstones} dividerMaxWidth="900px" />
     </div>
 
     <section class="story-layout">

@@ -11,7 +11,7 @@ import MobileStoryImages  from '@/components/MobileStoryImages.jsx';
 import StorySlider        from '@/components/StorySlider.tsx';
 import WesternGuideNav    from '@/components/authority/WesternGuideNav.astro';
 import { sanitizeForClient } from '@/components/utils/normalizeImage.ts';
-import { getSemanticImageUrl } from '@/utils/imageProxy.js';
+import { getSemanticImageUrl, normalizeImageSrc } from '@/utils/imageProxy.js';
 
 // Story slider can still point at a cowboy gallery (fine)
 import { galleryData as cowboyColorDataFull }
@@ -304,7 +304,10 @@ const sidebarImageProps = {
 // Build tombstones with thumbs array for client-side random selection
 const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => {
   // If thumb is already set, keep it as single item
-  if (stone.thumb) return { ...stone, thumbs: [stone.thumb] };
+  if (stone.thumb) {
+    const thumb = normalizeImageSrc(stone.thumb, 's');
+    return { ...stone, thumb, thumbs: [thumb] };
+  }
   // Use _thumbSource for gallery lookup (all hrefs now point to Facing History)
   const galleryData = tombstoneGalleryMap[stone._thumbSource || stone.href];
   const thumbs = galleryData ? getTombstoneThumbs(galleryData) : [];

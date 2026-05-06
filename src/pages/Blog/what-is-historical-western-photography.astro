@@ -16,6 +16,7 @@
 export const prerender = true;
 
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
@@ -27,8 +28,8 @@ const sectionPath = "/Blog/what-is-historical-western-photography";
 const canonicalUrl = "https://www.k4studios.com/Blog/what-is-historical-western-photography";
 
 // Proxy URL helper
-const getProxySrc = (id: string, size: string) => `/img/${id}/${size}.jpg`;
-const getAbsoluteProxySrc = (id: string, size: string) => `https://www.k4studios.com/img/${id}/${size}.jpg`;
+const getProxySrc = (id: string, size: string = "l") => getSemanticImageUrl(id, {}, size);
+const getAbsoluteProxySrc = (id: string, size: string = "l") => getSemanticImageUrl(id, {}, size, { absolute: true });
 
 // Header image - cowboy that represents historical narrative
 const headerImage = {

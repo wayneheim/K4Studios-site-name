@@ -1,6 +1,7 @@
-﻿---
+---
 export const prerender = true;
 import BaseLayout         from '@/layouts/BaseLayout.astro';
+import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import LandingHeader      from '@/components/Landing-Header.jsx';
 import ImageBar2          from '@/components/ImageBar2.jsx';
 import TombstoneNav       from '@/components/TombstoneNav.jsx';
@@ -75,11 +76,11 @@ const structuredData = getStructuredData({
     description: landingWestern.subtitle || landingWestern.description,
     url: `https://k4studios.com${sectionPath}`,
     keywords: landingWestern.keywords || [],
-    copyrightNotice: "Â© Wayne Heim"
+    copyrightNotice: "© Wayne Heim"
   },
   images: featheredImages,
   defaults: {
-    copyrightNotice: "Â© Wayne Heim",
+    copyrightNotice: "© Wayne Heim",
     license: "https://k4studios.com/copyright",
     acquireLicensePage: "https://k4studios.com/Other/Print-Options",
     creditText: "Wayne Heim",
@@ -100,7 +101,7 @@ function makeAbsoluteUrl(src?: string) {
 // Proxy URL helper - ensures SmugMug URLs never appear in SSR HTML
 function getProxySrc(imageId: string, size: string = 'm'): string {
   if (!imageId) return '';
-  return `/img/${imageId}/${size}.jpg`;
+  return getSemanticImageUrl(imageId, {}, size);
 }
 
 // Pick first feathered image for stability (or random if desired)
@@ -113,11 +114,11 @@ if (!landingMeta.ogUrl)      landingMeta.ogUrl      = `https://k4studios.com${se
 if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${sectionPath}`;
 ---
 
-<!-- âœ… JSON-LD Structured Data for SEO -->
+<!-- ✅ JSON-LD Structured Data for SEO -->
 
 <BaseLayout
   structuredDataJSON={structuredData}
-  title={`${landingWestern.title} â€“ ${landingWestern.subtitle}`}
+  title={`${landingWestern.title} – ${landingWestern.subtitle}`}
   meta={landingMeta}
 >
 

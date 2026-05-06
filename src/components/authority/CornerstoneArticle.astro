@@ -6,6 +6,7 @@ import WesternGuideNav from '@/components/authority/WesternGuideNav.astro';
 import { autoLinkKeywordsInText } from '@/components/utils/autoLinkKeywordsInText.ts';
 import { semantic as k4Semantic } from '@/data/semantic/K4-Sem.ts';
 import { getSemanticImageUrl } from '@/utils/imageProxy.js';
+import { sanitizeCarouselForClient } from '@/components/utils/normalizeImage.ts';
 
 interface Slide {
   id: string;
@@ -155,7 +156,7 @@ const normalizedSectionGroups = (sectionGroupIndexes.length > 0
   : [sections.map((section, sectionIndex) => ({ section, sectionIndex }))]);
 const showGroupedContent = normalizedSectionGroups.length > 1;
 const heroCarouselProps = {
-  slides,
+  slides: sanitizeCarouselForClient(slides),
   kicker: carouselKicker,
   counterLabel: carouselCounterLabel,
 } as any;

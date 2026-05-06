@@ -1,4 +1,4 @@
-import { normalizeImageSrc } from "@/utils/imageProxy.js";
+import { getSemanticImageUrl, normalizeImageSrc } from "@/utils/imageProxy.js";
 
 const IMAGE_FIELDS: Record<string, string> = {
   src: "l",
@@ -18,7 +18,11 @@ export function sanitizeStoryShowData<T extends Record<string, any>>(items: T[] 
 
     for (const [field, size] of Object.entries(IMAGE_FIELDS)) {
       if (imageId) {
-        next[field] = `/img/${imageId}/${size}.jpg`;
+        next[field] = getSemanticImageUrl(
+          { id: imageId, title: item.title || item.name || imageId },
+          { galleryPath: item.galleryPath || item.linkedGalleryPath || item.href },
+          size
+        );
       } else if (item[field]) {
         next[field] = normalizeImageSrc(item[field], size);
       }

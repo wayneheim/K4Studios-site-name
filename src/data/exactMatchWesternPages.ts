@@ -3,6 +3,7 @@ import { galleryData as cowboyColorData } from '@/data/Galleries/Painterly-Fine-
 import { galleryData as cowboyBwData } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs';
 import { galleryData as westernNarrativesColorData } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs';
 import { galleryData as nativeColorData } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs';
+import { getSemanticImageUrl } from '@/utils/imageProxy.js';
 
 const COWBOY_COLOR_PATH = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color';
 const COWBOY_BW_PATH = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White';
@@ -25,8 +26,8 @@ function cleanText(value = '') {
     .trim();
 }
 
-function proxySrc(id, size = 'm') {
-  return `/img/${id}/${size}.jpg`;
+function proxySrc(item, gallery, size = 'm') {
+  return getSemanticImageUrl(item, { galleryPath: gallery.path }, size);
 }
 
 function image(source, id, caption, altOverride = '') {
@@ -40,8 +41,8 @@ function image(source, id, caption, altOverride = '') {
     alt: altOverride || item.alt || item.title || 'Western painterly fine art photography by Wayne Heim',
     description: cleanText(item.description || item.notes || item.title),
     caption,
-    src: proxySrc(id, 'm'),
-    srcL: proxySrc(id, 'l'),
+    src: proxySrc(item, gallery, 'm'),
+    srcL: proxySrc(item, gallery, 'l'),
     href: `${gallery.path}/${id}`,
     buyLink: item.buyLink || '',
   };

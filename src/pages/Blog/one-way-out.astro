@@ -1,6 +1,7 @@
 ---
 export const prerender = true;
 import BaseLayout    from "@/layouts/BaseLayout.astro";
+import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import BlogJsonLd    from "@/components/blog/BlogJsonLd.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter    from "@/components/Footer.astro";
@@ -24,8 +25,8 @@ import { galleryData as wwiiPortraitsBW } from "@/data/Galleries/Painterly-Fine-
 import "@/styles/global.css";
 
 // Proxy URL helpers
-const getProxySrc = (id: string, size: string) => `/img/${id}/${size}.jpg`;
-const getAbsoluteProxySrc = (id: string, size: string) => `https://www.k4studios.com/img/${id}/${size}.jpg`;
+const getProxySrc = (id: string, size: string = "l") => getSemanticImageUrl(id, {}, size);
+const getAbsoluteProxySrc = (id: string, size: string = "l") => getSemanticImageUrl(id, {}, size, { absolute: true });
 
 const sectionPath = "/Blog/one-way-out";
 const coverImageId = "i-7VWX9vk";

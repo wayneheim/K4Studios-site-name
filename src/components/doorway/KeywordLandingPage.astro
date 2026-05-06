@@ -114,7 +114,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import FeaturedReadingSection from '@/components/FeaturedReadingSection.astro';
 import LandingHeader from '@/components/Landing-Header.jsx';
 import ImageBar2 from '@/components/ImageBar2.jsx';
-import { sanitizeForClient } from '@/components/utils/normalizeImage.ts';
+import { sanitizeCarouselForClient, sanitizeForClient } from '@/components/utils/normalizeImage.ts';
 import HybridBookCarousel from '@/components/hybrid/HybridBookCarousel.jsx';
 import SiteFooter from '@/components/Footer.astro';
 
@@ -311,6 +311,13 @@ const computedMeta = {
   twitterCard: 'summary_large_image',
   twitterImage: landingImgUrl,
 };
+
+const safeHybridCarouselProps = hybridCarouselProps
+  ? {
+      ...hybridCarouselProps,
+      slides: sanitizeCarouselForClient(hybridCarouselProps.slides || []),
+    }
+  : null;
 ---
 
 <BaseLayout
@@ -340,7 +347,7 @@ const computedMeta = {
     <div class="w-full max-w-[1200px] mx-auto px-4">
       {heroVisualMode === 'hybridCarousel' ? (
         <div class="hero-carousel-section reveal-on-scroll">
-          <HybridBookCarousel client:load {...(hybridCarouselProps || {})} />
+          <HybridBookCarousel client:load {...(safeHybridCarouselProps || {})} />
         </div>
       ) : (
         <div class="carousel-container">

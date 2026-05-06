@@ -6,7 +6,7 @@ import SiteFooter    from "@/components/Footer.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
 import { getStructuredData } from "@/components/utils/getStructuredData.ts";
 import { getLandingMeta } from "@/data/landingMeta.ts";
-import { normalizeImageSrc } from "@/utils/imageProxy.js";
+import { getSemanticImageUrl, normalizeImageSrc } from "@/utils/imageProxy.js";
 
 import { posts } from "@/data/Other/Blog/posts.mjs"; // new dataset
 import { galleryData as painterlyImages } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs";
@@ -60,7 +60,7 @@ const structuredData = (getStructuredData as any)({
 });
 
 // OG/Twitter image - use absolute proxy URL capped at L size
-const ogImageUrl = "https://www.k4studios.com/img/i-LCspRF4/l.jpg";
+const ogImageUrl = getSemanticImageUrl("i-LCspRF4", {}, "l", { absolute: true });
 
 const meta = getLandingMeta(sectionPath);
 meta.ogImage = ogImageUrl;

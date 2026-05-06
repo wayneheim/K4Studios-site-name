@@ -1742,7 +1742,7 @@ const isSpeechActive = () => {
             {/* 🔗 Share Drawer */}
             <div className="pb-4">
               <ShareDrawer
-                imageUrl={filteredData?.[0]?.src}
+                imageUrl={filteredData?.[0] ? getSemanticImageUrl(filteredData[0], { galleryPath: filteredData[0].galleryPath || filteredData[0].galleryUrl }, 'l') : undefined}
                 pageTitle="Story Complete - K4 Studios"
               />
             </div>

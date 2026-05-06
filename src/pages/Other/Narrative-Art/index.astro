@@ -1,6 +1,7 @@
 ---
 export const prerender = true;
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
 import { getStructuredData } from "@/components/utils/getStructuredData.ts";
@@ -45,7 +46,7 @@ meta.twitterDescription = narrativeArtLanding.intro;
 
 const visibleNarrativeImages = narrativeImages.filter((image) => image.visibility !== "ghost");
 const fallbackImage = visibleNarrativeImages[0];
-const getProxySrc = (imageId, size = "m") => imageId ? `/img/${imageId}/${size}.jpg` : "";
+const getProxySrc = (imageId, size = "m") => imageId ? getSemanticImageUrl(imageId, {}, size) : "";
 const essayCards = essays.map((essay, index) => {
   const image = visibleNarrativeImages.find((entry) => entry.id === essay.heroImageId) || fallbackImage;
   return {

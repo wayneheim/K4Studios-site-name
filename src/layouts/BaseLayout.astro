@@ -231,18 +231,23 @@ const toAbsoluteProxyUrl = (src: string, size = 'l') => {
   // If it's already a local/static image, just make it absolute
   if (src.startsWith('/images/')) return ensureAbsoluteUrl(src);
 
-  // Already a proxy URL: preserve semantic filenames and normalize legacy sizes to .jpg.
+  // Already a proxy URL: preserve semantic filenames and upgrade legacy sizes.
   if (src.startsWith('/img/')) {
-    return `${canonicalOrigin}${src.replace(/(\/(?:s|m|l|xl|src))(?:\.jpe?g)?$/i, '$1.jpg')}`;
+    return ensureAbsoluteUrl(normalizeImageSrc(src, size));
   }
   if (/^https?:\/\/(?:www\.)?k4studios\.com\/img\//i.test(src)) {
-    return normalizeK4Host(src.replace(/(\/(?:s|m|l|xl|src))(?:\.jpe?g)?$/i, '$1.jpg'));
+    try {
+      const path = new URL(src).pathname;
+      return ensureAbsoluteUrl(normalizeImageSrc(path, size));
+    } catch {
+      return normalizeK4Host(src);
+    }
   }
 
   // Extract image ID and convert to absolute proxy URL
   const imageId = extractImageId(src) || (src.startsWith('i-') ? src : null);
   if (imageId) {
-    return `${canonicalOrigin}/img/${imageId}/${size}.jpg`;
+    return ensureAbsoluteUrl(normalizeImageSrc(imageId, size));
   }
   // Fallback - try to use as-is (shouldn't happen)
   return ensureAbsoluteUrl(src);

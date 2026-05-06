@@ -1,6 +1,7 @@
 ---
 export const prerender = true;
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import PictureShowBase from "@/components/PictureShowBase.jsx";
 import { sanitizeStoryShowData } from "@/components/utils/sanitizeStoryShowData.ts";
 import { getStructuredData } from "@/components/utils/getStructuredData.ts";
@@ -9,7 +10,7 @@ import { storyData, storyMeta } from "@/data/Other/Stories/Builder-Test-v3.mjs";
 const pageTitle = storyMeta.showTitle || "Untitled Picture Show";
 const pageDescription = storyMeta.description || "This is the meta description";
 const ogImage = Array.isArray(storyData) && storyData.length > 0 && storyData[0].id
-  ? `https://www.k4studios.com/img/${storyData[0].id}/l.jpg`
+  ? getSemanticImageUrl(storyData[0].id, {}, "l", { absolute: true })
   : "/og/painterly.jpg";
 
 const meta = {

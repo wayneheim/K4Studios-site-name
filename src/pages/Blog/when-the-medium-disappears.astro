@@ -1,6 +1,7 @@
 ---
 export const prerender = true;
 import BaseLayout    from "@/layouts/BaseLayout.astro";
+import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import BlogJsonLd    from "@/components/blog/BlogJsonLd.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter    from "@/components/Footer.astro";
@@ -23,8 +24,8 @@ import { galleryData as wwiiPortraitsBW } from "@/data/Galleries/Painterly-Fine-
 import "@/styles/global.css";
 
 // Proxy URL helpers
-const getProxySrc = (id: string, size: string) => `/img/${id}/${size}.jpg`;
-const getAbsoluteProxySrc = (id: string, size: string) => `https://www.k4studios.com/img/${id}/${size}.jpg`;
+const getProxySrc = (id: string, size: string = "l") => getSemanticImageUrl(id, {}, size);
+const getAbsoluteProxySrc = (id: string, size: string = "l") => getSemanticImageUrl(id, {}, size, { absolute: true });
 
 const sectionPath = "/Blog/when-the-medium-disappears";
 const coverImageId = "i-7Mzzbvp";
@@ -248,7 +249,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         <!-- B&W inline image -->
         <figure style="text-align:center; margin:1.5rem auto; max-width:480px;">
           <img 
-            src="/img/i-5s8Zkrb/l.jpg" 
+            src={getProxySrc("i-5s8Zkrb", "l")} 
             alt="Technique and craft in visual storytelling" 
             style="width:100%; height:auto; border-radius:8px; display:block; margin:0 auto;" 
           />

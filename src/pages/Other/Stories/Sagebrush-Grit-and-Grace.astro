@@ -2,6 +2,7 @@
 export const prerender = true;
 // Auto-generated Astro page for Sagebrush-Grit-and-Grace
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import PictureShowBase from "@/components/PictureShowBase.jsx";
 import { sanitizeStoryShowData } from "@/components/utils/sanitizeStoryShowData.ts";
 import { storyMeta, storyData } from "@/data/Other/Stories/Sagebrush-Grit-and-Grace.mjs";
@@ -11,7 +12,7 @@ import { normalizeImageSrc } from "@/utils/imageProxy.js";
 // Proxy URL helper - ensures SmugMug URLs never appear in SSR HTML
 function getProxySrc(imageId: string, size: string = 'm'): string {
   if (!imageId) return '';
-  return `/img/${imageId}/${size}.jpg`;
+  return getSemanticImageUrl(imageId, {}, size);
 }
 
 const sectionPath = "/Other/Show/Sagebrush-Grit-and-Grace";
