@@ -25,7 +25,7 @@ export const galleryData = [
   {
     "id": "i-wxLBqLg",
     "title": "Grand Sunset Photography by Wayne Heim",
-    "description": "Grand Sunset. Jackson Hole Wyoming, sunset lights the sky behind snow covered Grand Teton mountains ©Wayne Heim",
+    "description": "Sunset lights the sky behind snow-covered Grand Teton mountains near Jackson Hole, Wyoming, creating a sunset landscape of color, scale, and evening stillness. This traditional fine art photograph creates Grand Teton wall art rooted in winter light, alpine atmosphere, and the quiet close of day.",
     "alt": "White Paint - Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-wxLBqLg/A",
     "keywords": [
@@ -56,7 +56,7 @@ export const galleryData = [
   {
     "id": "i-VScCFDQ",
     "title": "Painterly Sunset Scenes In Fine Art",
-    "description": "Delve into painterly sunset scenes via this painterly sunset scenes by Wayne Heim. Highlighting sunset landscape photography through sunset landscape photography and sunset landscape photography, it's great for collectors interested in painterly sunset scenes. © Wayne Heim",
+    "description": "Sunset color settles over Berea Falls in Ohio, turning water, stone, and evening light into a painterly sunset scene. This traditional fine art landscape photograph creates sunset wall art rooted in moving water, warm reflection, and the quiet drama of dusk.",
     "alt": "Grand Sunset Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-VScCFDQ/A",
     "keywords": [
@@ -91,7 +91,7 @@ export const galleryData = [
   {
     "id": "i-kcvnCvz",
     "title": "Sunset in Arches. #2 Photography by Wayne Heim",
-    "description": "Sunset in Arches. Sun is setting behind rock formations in Arches National Park, Utah ©Wayne Heim",
+    "description": "Sunset settles behind rock formations in Arches National Park, Utah, turning desert stone and sky into a warm color landscape. This traditional sunset landscape photograph creates Utah wall art rooted in natural form, evening light, and the atmosphere of dusk.",
     "alt": "Sunset in Arches  #1   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-kcvnCvz/A",
     "keywords": [
@@ -122,7 +122,7 @@ export const galleryData = [
   {
     "id": "i-3jXg4hf",
     "title": "Sunset Landscape Photography And Painterly Sunset Scenes",
-    "description": "A fine art landscape photograph of a sunset over open land, shaped by stillness rather than spectacle. Wayne Heim's fine art landscape photography treats place as emotional geography, where light and terrain carry memory rather than spectacle. Light, tone, and composition shape a quiet narrative rooted in place and memory - where silence holds its own weight in open country. Part of Wayne Heim's fine art landscape photography series. © Wayne Heim",
+    "description": "A painterly sunset scene unfolds over the water and rocks near Berea Falls, where evening color gives the landscape a quiet, emotional charge. This traditional fine art landscape photograph creates sunset wall art shaped by reflection, stone, and the last light of day.",
     "alt": "Sunset in Arches. #2 Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-3jXg4hf/A",
     "keywords": [
@@ -157,7 +157,7 @@ export const galleryData = [
   {
     "id": "i-XmVfrdk",
     "title": "Painterly Sunset Scenes Study",
-    "description": "Explore painterly sunset scenes with Wayne Heim's painterly sunset scenes. This painterly sunset scenes piece conveys sunset landscape photography, painterly sunset scenes, and painterly sunset scenes, perfect for fans of painterly sunset scenes. © Wayne Heim",
+    "description": "This painterly sunset study turns evening light, open land, and quiet atmosphere into traditional fine art landscape photography. The image creates sunset wall art rooted in color, distance, and the restrained beauty of the day’s final glow.",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-XmVfrdk/A",
     "keywords": [
@@ -192,7 +192,7 @@ export const galleryData = [
   {
     "id": "i-mcrrSZ2",
     "title": "Exploring Sunset Photography",
-    "description": "A fine art landscape of a sunset over open land, shaped by solitude rather than spectacle. Approached with restraint and precision, Wayne Heim's landscapes prioritize mood, tone, and presence over literal representation. Light, tone, and composition shape a quiet narrative rooted in place and memory - where distance defines the relationship between viewer and land. Part of Wayne Heim's fine art landscape photography series. © Wayne Heim",
+    "description": "A classic sunset settles over a Wyoming landscape, turning light, ridge, and distance into a quiet study of evening atmosphere. This traditional sunset landscape photograph creates wall art rooted in Western scale, warm color, and the emotional pull of high country.",
     "alt": "Fine art photography of sunset photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-mcrrSZ2/A",
     "keywords": [
@@ -229,7 +229,7 @@ export const galleryData = [
   {
     "id": "i-hVB6Pxq",
     "title": "Sunset Landscape Photography Study",
-    "description": "A fine art landscape photograph of a sunset over open land, shaped by stillness rather than spectacle. Rather than documenting scenery, this work explores how place shapes perception, memory, and stillness. Light, tone, and composition shape a quiet narrative rooted in place and memory - where silence holds its own weight in open country. Part of Wayne Heim's fine art landscape photography series. © Wayne Heim",
+    "description": "A Vermont sunset landscape holds the frame with open land, soft color, and the restrained quiet of evening. This traditional fine art landscape photograph creates New England sunset wall art rooted in rural atmosphere, seasonal tone, and the calm authority of fading light.",
     "alt": "Another View    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-hVB6Pxq/A",
     "keywords": [
@@ -264,7 +264,7 @@ export const galleryData = [
   {
     "id": "i-fJTxRJG",
     "title": "Sunset Road   Photography by Wayne Heim",
-    "description": "A fine art landscape of a sunset over open land, shaped by solitude rather than spectacle. Wayne Heim's fine art landscape photography treats place as emotional geography, where light and terrain carry memory rather than spectacle. Light, tone, and composition shape a quiet narrative rooted in place and memory - where distance defines the relationship between viewer and land. Part of Wayne Heim's fine art landscape photography series. © Wayne Heim",
+    "description": "Sunset falls over a lonely Western road, turning distance, open land, and evening color into a quiet journey. This traditional sunset landscape photograph creates Western wall art rooted in road, horizon, solitude, and the pull of light beyond the bend.",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-fJTxRJG/A",
     "keywords": [
@@ -297,7 +297,7 @@ export const galleryData = [
   {
     "id": "i-zrvTR9s",
     "title": "Sunset at the Farm.  Photography by Wayne Heim",
-    "description": "Sunset at the Farm -  sunsetting behind a rural farm outlining the buildings.©Wayne Heim",
+    "description": "Sunset behind a rural farm outlines the buildings against the evening sky, turning countryside structure into a landscape of silhouette and memory. This traditional fine art sunset photograph creates rural wall art rooted in farm atmosphere, fading light, and quiet land.",
     "alt": "Sunset Road   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-zrvTR9s/A",
     "keywords": [
@@ -330,7 +330,7 @@ export const galleryData = [
   {
     "id": "i-2qqHRQ6",
     "title": "Angry Sunset . Photography by Wayne Heim",
-    "description": "Angry Sunset - dark gray clouds at sunset seem to warn of storm .©Wayne Heim",
+    "description": "Dark gray clouds gather at sunset, warning of storm and turning the sky into the center of the landscape. This traditional sunset landscape photograph creates wall art rooted in weather, drama, evening light, and the charged atmosphere before change.",
     "alt": "Sunset at the Farm.  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-2qqHRQ6/A",
     "keywords": [
@@ -363,7 +363,7 @@ export const galleryData = [
   {
     "id": "i-rh75LzX",
     "title": "Tiny Bubbles  Photography by Wayne Heim",
-    "description": "18 x 24 In StockTiny Bubbles - waves producing frothy bubbles come in on shore of Lake Erie as sunset in the west.©Wayne Heim",
+    "description": "Tiny waves and frothy bubbles move along the Lake Erie shore as sunset colors the western sky. This traditional sunset landscape photograph creates coastal wall art rooted in water, shoreline texture, evening color, and the small movements of a lake at day’s end.",
     "alt": "Angry Sunset . Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-rh75LzX/A",
     "keywords": [
@@ -395,7 +395,7 @@ export const galleryData = [
   {
     "id": "i-hVvx83K",
     "title": "Heading Out   Photography by Wayn Heim",
-    "description": "Heading Out -- flock of geese wing their way out over the water at the harbor entrance in Fairport Harbor, Ohio ©Wayne Heim",
+    "description": "A flock of geese wings out over the water near the harbor entrance in Fairport Harbor, Ohio, carrying motion into the sunset scene. This traditional fine art landscape photograph creates sunset wall art rooted in birds, harbor water, and the quiet departure of evening.",
     "alt": "Tiny Bubbles  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-hVvx83K/A",
     "keywords": [
@@ -428,7 +428,7 @@ export const galleryData = [
   {
     "id": "i-LXP3hD7",
     "title": "Out of the Rocks - Photography of Wayne Heim",
-    "description": "Out of the Rocks - tree appears to be growing out of the rocks on lake shore at unset.©Wayne Heim",
+    "description": "A tree appears to grow from rocks along a lakeshore at sunset, turning a small natural surprise into a quiet landscape study. This traditional fine art sunset photograph creates wall art rooted in shoreline stone, tree form, evening light, and the resilience of nature.",
     "alt": "Heading Out   Photography by Wayn Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-LXP3hD7/A",
     "keywords": [
@@ -461,7 +461,7 @@ export const galleryData = [
   {
     "id": "i-6WBNkgx",
     "title": "Lone Guard: Artist Point at Sunset",
-    "description": "Sunset of Lone Guard tree overlooking Yellowstone River at Artist Point in Yellowstone National Park.",
+    "description": "A lone tree overlooks the Yellowstone River at Artist Point as sunset settles into the canyon landscape. This traditional sunset landscape photograph creates Yellowstone wall art rooted in watchfulness, river distance, canyon light, and the quiet presence of one standing form.",
     "alt": "Out of the Rocks - Photography of Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-6WBNkgx/A",
     "keywords": [
@@ -493,7 +493,7 @@ export const galleryData = [
   {
     "id": "i-rMTRD6x",
     "title": "Midnight Sun Sunset",
-    "description": "Fine art landscape photography of Iceland Sunset in the Summer.",
+    "description": "The midnight sun settles over Iceland in summer, turning northern light into a lingering sunset landscape. This traditional fine art photograph creates Iceland sunset wall art rooted in open land, long color, and the strange quiet of daylight that refuses to fully leave.",
     "alt": "Lone Guard: Artist Point at Sunset",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-rMTRD6x/A",
     "keywords": [
@@ -525,7 +525,7 @@ export const galleryData = [
   {
     "id": "i-MwsQPKg",
     "title": "Sunset Landscape Photography Moment",
-    "description": "A fine art landscape photograph of a sunset over open land, shaped by stillness rather than spectacle. Approached with restraint and precision, Wayne Heim's landscapes prioritize mood, tone, and presence over literal representation. Light, tone, and composition shape a quiet narrative rooted in place and memory - where silence holds its own weight in open country. Part of Wayne Heim's fine art landscape photography series. © Wayne Heim",
+    "description": "An Iceland sunset in fall color becomes a painterly landscape of light, atmosphere, and quiet terrain. This traditional fine art photograph creates sunset wall art rooted in northern color, seasonal mood, and the emotional depth of evening over open land.",
     "alt": "Midnight Sun Sunset",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-MwsQPKg/A",
     "keywords": [
@@ -560,7 +560,7 @@ export const galleryData = [
   {
     "id": "i-rWFC3dL",
     "title": "Goðafoss waterfall Iceland",
-    "description": "Fine art landscape photography of Iceland sunset in the Summer.",
+    "description": "Goðafoss waterfall in Iceland is held in summer evening light, where water, sky, and northern atmosphere shape the scene. This traditional sunset landscape photograph creates Iceland wall art rooted in falling water, long light, and the quiet force of the land.",
     "alt": "Fine art landscape photography of Iceland Sunset and clouds in the Fall.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-rWFC3dL/A",
     "keywords": [
@@ -592,7 +592,7 @@ export const galleryData = [
   {
     "id": "i-6NKTKgw",
     "title": "Sunset Rays on the Village",
-    "description": "Fine art landscape sunset photograph of the Faroe Islands.",
+    "description": "Sunset rays fall over a Faroe Islands village, warming the coastal landscape without softening its remote character. This traditional fine art sunset photograph creates Faroe Islands wall art rooted in village light, North Atlantic atmosphere, and the quiet close of day.",
     "alt": "Goðafoss waterfall Iceland",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-6NKTKgw/A",
     "keywords": [
@@ -624,7 +624,7 @@ export const galleryData = [
   {
     "id": "i-P7pMnQ9",
     "title": "Faroe Island Coastal Town",
-    "description": "Fine art, black & white, landscape sunset photography of the Faroe Islands.",
+    "description": "A Faroe Islands coastal town is rendered as black and white sunset landscape photography, balancing village structure with sea, slope, and evening atmosphere. This traditional fine art photograph creates monochrome sunset wall art rooted in North Atlantic place and quiet tonal drama.",
     "alt": "Sunset Rays on the Village",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-P7pMnQ9/A",
     "keywords": [
@@ -656,7 +656,7 @@ export const galleryData = [
   {
     "id": "i-f4Jq6NZ",
     "title": "Davis West Virginia Sunrise in full show.",
-    "description": "Multi-color spectacular sunrise in Davis West Virginia showcasing natures pallet of painterly color.",
+    "description": "A multi-color sunrise rises over Davis, West Virginia, turning mountain air into a painterly field of purple, pink, orange, and gold. This traditional fine art landscape photograph creates sunrise wall art rooted in color, atmosphere, and quiet Appalachian morning drama.",
     "alt": "Faroe Island Coastal Town",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-f4Jq6NZ/A",
     "keywords": [
@@ -688,7 +688,7 @@ export const galleryData = [
   {
     "id": "i-MwLgJL5",
     "title": "Sunset Landscape Photography Moment",
-    "description": "Discover the sunset landscape photography in this powerful painterly sunset scenes by Wayne Heim. A compelling work that embodies painterly sunset scenes, sunset landscape photography, and painterly sunset scenes. Perfect for art lovers seeking sunset landscape photography to enhance their collection. © Wayne Heim",
+    "description": "A panoramic sunrise opens over Davis, West Virginia, with layered color and mountain distance giving the scene its quiet force. This traditional fine art landscape photograph creates sunrise wall art rooted in Appalachian atmosphere, painterly color, and the first light over high country.",
     "alt": "Davis West Virginia Sunrise in full show.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-MwLgJL5/A",
     "keywords": [
@@ -722,7 +722,7 @@ export const galleryData = [
   {
     "id": "i-vSFBSgr",
     "title": "A Painters Pallet",
-    "description": "Multi-color purple and pink and orange sunrise over the sleepy mountain top in Davis West Virginia.",
+    "description": "Purple, pink, and orange sunrise color spreads over the sleepy mountaintop near Davis, West Virginia. This traditional fine art landscape photograph creates painterly sunrise wall art rooted in Appalachian atmosphere, elevation, and the soft spectacle of morning light.",
     "alt": "Eminent Rise",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-vSFBSgr/A",
     "keywords": [
@@ -754,7 +754,7 @@ export const galleryData = [
   {
     "id": "i-NSj5zsB",
     "title": "Classic Sunset Scenery Study",
-    "description": "Discover the classic sunset scenery in this powerful classic sunset scenery by Wayne Heim. A compelling work that embodies sunset photography, sunset photography, and classic sunset scenery. Featuring classic sunset scenery, perfect for art lovers seeking classic sunset scenery to enhance their collection. © Wayne Heim",
+    "description": "A broad sunrise panorama near Davis, West Virginia turns mountain color into classic fine art landscape photography. This painterly sunrise scene creates wall art rooted in Appalachian distance, layered light, and the quiet drama of morning across high country.",
     "alt": "Wayne Heim's classic sunset scenery artwork",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-NSj5zsB/A",
     "keywords": [
@@ -790,7 +790,7 @@ export const galleryData = [
   {
     "id": "i-ZNSFtRg",
     "title": "End of the Day Color Show",
-    "description": "Colorful display of natures colors in the sunset as it reflects off of the meandering stream.",
+    "description": "A colorful end-of-day display reflects from a meandering stream, turning sunset light into a flowing landscape of color and motion. This traditional fine art photograph creates sunset wall art rooted in water, reflection, evening atmosphere, and the quiet music of a winding stream.",
     "alt": "Full Valley View",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-ZNSFtRg/A",
     "keywords": [
@@ -822,7 +822,7 @@ export const galleryData = [
   {
     "id": "i-QNc3gRK",
     "title": "Sun Setting Over The Bend",
-    "description": "Setting sun colors over the iconic Horse Shoe Bend formation in Arizona.",
+    "description": "Setting sun colors the iconic Horseshoe Bend formation in Arizona, turning canyon curve, river depth, and desert light into a dramatic sunset landscape. This traditional fine art photograph creates Arizona wall art rooted in red rock, evening color, and Western scale.",
     "alt": "End of the Day Color Show",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-QNc3gRK/A",
     "keywords": [
@@ -854,7 +854,7 @@ export const galleryData = [
   {
     "id": "i-bKgqLF7",
     "title": "Remaining Blue",
-    "description": "Capturing the remaining vibrant blue sky of the end of the day as it mixes with the natural red rock colors and orange, yellow and pink of the setting sun at Horse Shoe Bend Park.",
+    "description": "Remaining blue sky lingers above Horseshoe Bend as red rock, orange, yellow, and pink sunset color gather over the canyon. This traditional sunset landscape photograph creates Arizona wall art rooted in desert color, river bend, and the final balance of day and night.",
     "alt": "Sun Setting Over The Bend",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-bKgqLF7/A",
     "keywords": [
@@ -886,7 +886,7 @@ export const galleryData = [
   {
     "id": "i-2hVf7F4",
     "title": "Sunset Photography Moment",
-    "description": "Discover the sunset photography in this powerful sunset photography by Wayne Heim. A compelling work that embodies classic sunset scenery, classic sunset scenery, and sunset photography. Featuring classic sunset scenery, perfect for art lovers seeking sunset photography to enhance their collection. © Wayne Heim",
+    "description": "A Southern sunset panorama turns open sky, warm color, and distant land into traditional fine art landscape photography. This sunset wall art is rooted in evening atmosphere, broad horizon, and the classic quiet of a day fading over open country.",
     "alt": "sunset photography in fine art photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-2hVf7F4/A",
     "keywords": [
@@ -922,7 +922,7 @@ export const galleryData = [
   {
     "id": "i-7zGDNJf",
     "title": "Mount Hood at Sunset  Photo by Wayne Heim",
-    "description": "Mount Hood at Sunset. Mt Hood in Oregon as the sun is going down. Trillium lake is in the foreground and you can see snow cats grooming the slopes of the mountain  ©Wayne Heim",
+    "description": "Mount Hood glows at sunset above Trillium Lake in Oregon, with the mountain holding the scene in quiet balance. This traditional fine art sunset photograph creates Pacific Northwest wall art rooted in evening color, snow, water, and the calm drama of a high peak.",
     "alt": "Field at Sunset     Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-7zGDNJf/A",
     "keywords": [
@@ -954,7 +954,7 @@ export const galleryData = [
   {
     "id": "i-VbL6CF7",
     "title": "Shadow Reflection. Photography by Wayne Heim",
-    "description": "Shadow Reflection -  tree reflection in water at sunset.©Wayne Heim",
+    "description": "A tree reflection in water at sunset turns shadow, surface, and evening color into a quiet landscape study. This traditional fine art sunset photograph creates wall art rooted in reflection, still water, natural form, and the last light of day.",
     "alt": "Mill House, Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-VbL6CF7/A",
     "keywords": [
