@@ -25,7 +25,7 @@ export const galleryData = [
   {
     "id": "i-c8SFXzH",
     "title": "Classic Car Photography - Route 66 Art",
-    "description": "A painterly fine art photograph of a vintage automobile on Route 66, defined by motion rather than nostalgia. Wayne Heim's vintage transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Tone and restraint shape a narrative grounded in invention and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A green Hudson show car becomes classic car photography through restored form, color, and the quiet dignity of historic automotive design. This automotive fine art photograph creates vintage car wall art rooted in craftsmanship, show-car polish, and the memory carried by old machines.",
     "alt": "Hudson -- Photography of Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-c8SFXzH/A",
     "keywords": [
@@ -60,7 +60,7 @@ export const galleryData = [
   {
     "id": "i-PfrKwt2",
     "title": "Painterly Classic Car Photos For Auto Lovers Moment",
-    "description": "A painterly fine art photograph of a vintage automobile on Route 66, defined by motion rather than nostalgia. Wayne Heim's fine art transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Tone and restraint shape a narrative grounded in invention and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A vintage transportation scene near the East Broad Top Railroad becomes automotive fine art through machinery, surface, and the atmosphere of working history. This traditional transportation photograph creates wall art rooted in steel, memory, and the visual relationship between old vehicles and rail culture.",
     "alt": "Hudson -- Photography of Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-PfrKwt2/A",
     "keywords": [
@@ -95,7 +95,7 @@ export const galleryData = [
   {
     "id": "i-NjL3FKh",
     "title": "Model A -- Black & White Photography by Wayne Heim",
-    "description": "Model A  -  restored Ford at car show. ©Wayne Heim",
+    "description": "A restored Ford Model A is rendered in black and white, turning classic car photography into a study of shape, chrome, and historic automotive character. This vintage automobile photograph creates wall art rooted in restoration, car show culture, and the enduring appeal of early Ford design.",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-NjL3FKh/A",
     "keywords": [
@@ -125,7 +125,7 @@ export const galleryData = [
   {
     "id": "i-Q347VzH",
     "title": "Timeless Automotive Prints Moment",
-    "description": "A painterly fine art photograph of a vintage automobile, defined by motion rather than nostalgia. Wayne Heim's historic transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Tone and restraint shape a narrative grounded in invention and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A vintage transportation detail becomes fine art through texture, mechanical form, and restrained atmosphere. This automotive photograph creates classic car wall art rooted in historic machinery, working surfaces, and the quiet beauty of old vehicle design.",
     "alt": "Model A -- Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-Q347VzH/A",
     "keywords": [
@@ -160,7 +160,7 @@ export const galleryData = [
   {
     "id": "i-cQfBvZN",
     "title": "Capturing Classic Car Photography",
-    "description": "A painterly fine art photograph of a vintage automobile on Route 66, defined by motion rather than nostalgia. Wayne Heim's vintage transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Tone and restraint shape a narrative grounded in invention and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A classic automotive scene becomes fine art through line, surface, and the disciplined character of vintage transportation photography. This automobile photograph creates wall art rooted in restored machinery, historic design, and the emotional pull of old steel.",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-cQfBvZN/A",
     "keywords": [
@@ -195,7 +195,7 @@ export const galleryData = [
   {
     "id": "i-b6B4gSK",
     "title": "Gold Show Car - Photography by Wayne Heim",
-    "description": "Gold Show Car - restored historic car site with others at a show. ©Wayne Heim",
+    "description": "A gold show car sits among other restored historic automobiles, turning car show polish into traditional automotive fine art. This classic car photograph creates vintage vehicle wall art rooted in color, reflection, craftsmanship, and the pride of restoration.",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-b6B4gSK/A",
     "keywords": [
@@ -225,7 +225,7 @@ export const galleryData = [
   {
     "id": "i-93kRpLv",
     "title": "Plymouth Hood - Black & White Photography by Wayne Heim",
-    "description": "Plymouth Hood -  photo of the hood of a 1939 Plymouth. ©Wayne Heim",
+    "description": "The hood of a 1939 Plymouth becomes black and white automotive fine art, where chrome, curve, and surface carry the image. This classic car photograph creates wall art rooted in vintage design, mechanical detail, and the sculptural beauty of restored automobile form.",
     "alt": "Gold Show Car - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-93kRpLv/A",
     "keywords": [
@@ -255,7 +255,7 @@ export const galleryData = [
   {
     "id": "i-xbZS9Zk",
     "title": "Vintage Plymouth - Photography by Wayne Heim",
-    "description": "Vintage Plymouth --very old Plymouth pick up truck sits in a meadow.©Wayne Heim",
+    "description": "An old Plymouth pickup truck sits in a meadow, turning abandonment and age into vintage automobile photography. This classic truck image creates automotive wall art rooted in weathered metal, rural stillness, and the melancholy beauty of machines left behind.",
     "alt": "Plymouth Hood - Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-xbZS9Zk/A",
     "keywords": [
@@ -285,7 +285,7 @@ export const galleryData = [
   {
     "id": "i-J4RsWqM",
     "title": "Vintage Ford    Photography by Wayne Heim",
-    "description": "A painterly fine art photograph of a vintage automobile, defined by motion rather than nostalgia. Wayne Heim's fine art transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Tone and restraint shape a narrative grounded in invention and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A vintage Ford in sunset light becomes automotive fine art through color, silhouette, and the quiet romance of old design. This classic car photograph creates wall art rooted in historic transportation, evening atmosphere, and the lasting presence of a restored automobile.",
     "alt": "Vintage Plymouth - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-J4RsWqM/A",
     "keywords": [
@@ -315,7 +315,7 @@ export const galleryData = [
   {
     "id": "i-VJSqCHx",
     "title": "Red Wheel  -  Photography  of Wayne Heim",
-    "description": "Red Wheel -- interior of restored antique car showing red steering wheel and dashboard,©Wayne Heim",
+    "description": "The red steering wheel and dashboard of a restored antique car become a close study of interior design, color, and craftsmanship. This automotive fine art photograph creates classic car wall art rooted in detail, restoration, and the tactile beauty of vintage controls.",
     "alt": "Vintage Ford    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-VJSqCHx/A",
     "keywords": [
@@ -345,7 +345,7 @@ export const galleryData = [
   {
     "id": "i-mJXkGHp",
     "title": "Classic Chevy   Photography by Wayne Heim",
-    "description": "Classic red Chevy at car show in Conneaut. ©Wayne Heim",
+    "description": "A classic red Chevy at a Conneaut car show becomes automotive fine art through color, shine, and restored presence. This classic car photograph creates wall art rooted in show-car culture, vintage Chevrolet design, and the pleasure of old machines kept alive.",
     "alt": "Red Wheel  -  Photography  of Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-mJXkGHp/A",
     "keywords": [
@@ -375,7 +375,7 @@ export const galleryData = [
   {
     "id": "i-L4hPXbq",
     "title": "Buick     Photography by Wayne Heim",
-    "description": "A painterly fine art photograph of a vintage automobile, defined by motion rather than nostalgia. Wayne Heim's historic transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Tone and restraint shape a narrative grounded in invention and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A classic turquoise Buick front end becomes vintage automobile photography through chrome, color, and sculptural form. This automotive fine art image creates classic car wall art rooted in mid-century design, show-car detail, and the bold personality of restored American cars.",
     "alt": "Classic Chevy   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-L4hPXbq/A",
     "keywords": [
@@ -405,7 +405,7 @@ export const galleryData = [
   {
     "id": "i-XW8VLHx",
     "title": "EBT Overpass",
-    "description": "Vintage red pickup truck driving as East Broad Top steam locomotive passes on the overpass in the background.",
+    "description": "A vintage red pickup passes beneath the East Broad Top steam locomotive, joining automotive and rail history in a single transportation scene. This fine art photograph creates vintage vehicle wall art rooted in motion, old roads, steam-era atmosphere, and the meeting of two historic machines.",
     "alt": "Buick     Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-XW8VLHx/A",
     "keywords": [
@@ -435,7 +435,7 @@ export const galleryData = [
   {
     "id": "i-q3t9GT6",
     "title": "Hood Up   Photography by Wayne Heim",
-    "description": "A painterly fine art photograph of a vintage automobile, defined by motion rather than nostalgia. Wayne Heim's vintage transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Tone and restraint shape a narrative grounded in invention and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A car with its hood raised at a show becomes automotive fine art through exposed machinery, restoration culture, and the ritual of looking under the surface. This classic car photograph creates wall art rooted in mechanical curiosity, vintage design, and the pride of keeping old engines alive.",
     "alt": "EBT Overpass",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-q3t9GT6/A",
     "keywords": [
@@ -465,7 +465,7 @@ export const galleryData = [
   {
     "id": "i-BJF28jt",
     "title": "Hudson Terreplane   Photography by Wayne Heim",
-    "description": "Famous Hudson Terraplane vintage car.    © Wayne Heim",
+    "description": "A famous Hudson Terraplane becomes classic car photography through restored shape, historic presence, and the confident stance of vintage automotive design. This fine art automobile print creates wall art rooted in Hudson history, show-car polish, and old American engineering.",
     "alt": "Hood Up   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-BJF28jt/A",
     "keywords": [
@@ -495,7 +495,7 @@ export const galleryData = [
   {
     "id": "i-6DDjGcH",
     "title": "Close up of Terraplane   Black and White Photography by Wayne Heim",
-    "description": "Close up look at the Hudson Terreplane. ©Wayne Heim",
+    "description": "A close view of the Hudson Terraplane becomes black and white automotive fine art, reducing the car to surface, emblem, chrome, and form. This vintage car photograph creates wall art rooted in detail, restoration, and the sculptural force of historic automobile design.",
     "alt": "Hudson Terreplane   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-6DDjGcH/A",
     "keywords": [
@@ -525,7 +525,7 @@ export const galleryData = [
   {
     "id": "i-zwNxLnH",
     "title": "Capturing Painterly Classic Car Photos For Auto Lovers",
-    "description": "Explore painterly classic car photos for auto lovers with Wayne Heim's automotive art prints. This timeless automotive prints piece conveys route 66 art, classic car photography, and painterly classic car photos for auto lovers, perfect for fans of automotive art prints. © Wayne Heim",
+    "description": "A vintage automotive subject becomes painterly transportation photography through old metal, historic setting, and the quiet presence of machinery at rest. This classic car art print creates wall art rooted in timeless automotive design, texture, and memory.",
     "alt": "Close up of Terraplane   Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-zwNxLnH/A",
     "keywords": [
@@ -562,7 +562,7 @@ export const galleryData = [
   {
     "id": "i-SjhNDgV",
     "title": "Needs Work -- Photography by Wayne Heim",
-    "description": "Needs Work - old Chevy needing restoration sits abandoned in a field. ©Wayne Heim",
+    "description": "An old Chevy sits abandoned in a field, needing restoration but still carrying the dignity of its original form. This vintage automobile photograph creates automotive wall art rooted in weathered metal, rural abandonment, and the story of a machine waiting for another chance.",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-SjhNDgV/A",
     "keywords": [
@@ -592,7 +592,7 @@ export const galleryData = [
   {
     "id": "i-knwvmNV",
     "title": "Texas Pontiac  Photography by Wayne HEim",
-    "description": "A painterly fine art photograph of a vintage automobile, defined by motion rather than nostalgia. Wayne Heim's fine art transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Tone and restraint shape a narrative grounded in invention and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "An old Pontiac sits in a Texas yard, turning ordinary roadside decay into vintage automobile photography. This automotive fine art image creates wall art rooted in weather, place, aging paint, and the quiet endurance of an old car left in the open.",
     "alt": "Needs Work -- Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-knwvmNV/A",
     "keywords": [
@@ -622,7 +622,7 @@ export const galleryData = [
   {
     "id": "i-gpKrXBm",
     "title": "Gear Shirt    Photography by Wayne Heim",
-    "description": "View through driver's window shows the center console gear shift.  ©Wayne Heim",
+    "description": "A view through the driver's window reveals the center console gear shift, turning an interior detail into automotive fine art. This classic car photograph creates wall art rooted in cockpit design, mechanical touch, and the intimate experience of vintage driving.",
     "alt": "Texas Pontiac  Photography by Wayne HEim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-gpKrXBm/A",
     "keywords": [
@@ -652,7 +652,7 @@ export const galleryData = [
   {
     "id": "i-SbCkpwH",
     "title": "Needs Work  -- Black & White Photography by Wayne Heim",
-    "description": "Needs Work -- old Plymouth pickup truck from 1940's in much need of restoring.©Wayne Heim",
+    "description": "An old Plymouth pickup from the 1940s waits in need of restoration, its worn body carrying the beauty of age and use. This black and white automotive photograph creates vintage truck wall art rooted in weathered metal, repair, and the memory of working vehicles.",
     "alt": "Gear Shirt    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-SbCkpwH/A",
     "keywords": [
@@ -682,7 +682,7 @@ export const galleryData = [
   {
     "id": "i-pqbd83r",
     "title": "Driver's Seat - Photography by Wayne Heim",
-    "description": "Driver's Seat -- the interior of a restored show car showing steering wheel and fancy gear shift. ©Wayne Heim",
+    "description": "The driver's seat of a restored show car becomes automotive fine art through steering wheel, gear shift, and interior detail. This classic car photograph creates wall art rooted in craftsmanship, design, and the tactile beauty of sitting behind the wheel.",
     "alt": "Needs Work  -- Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-pqbd83r/A",
     "keywords": [
@@ -712,7 +712,7 @@ export const galleryData = [
   {
     "id": "i-gsJ9DLL",
     "title": "Old Front Seat - Black & White Photography by Wayne Heim",
-    "description": "Old Front Seat - shows the front seat of an old car.  ©Wayne Heim",
+    "description": "The front seat of an old car becomes black and white automotive photography, turning upholstery, age, and interior structure into a quiet study of use. This vintage automobile image creates wall art rooted in memory, worn surfaces, and the human space inside a machine.",
     "alt": "Driver's Seat - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-gsJ9DLL/A",
     "keywords": [
@@ -742,7 +742,7 @@ export const galleryData = [
   {
     "id": "i-FrmDMQq",
     "title": "Route 66 Art Study",
-    "description": "A painterly fine art photograph of a vintage automobile on Route 66, defined by motion rather than nostalgia. Wayne Heim's historic transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Tone and restraint shape a narrative grounded in invention and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A vintage automobile scene becomes classic car photography through form, surface, and the atmosphere of historic transportation. This automotive fine art photograph creates wall art rooted in old roads, restored machinery, and the timeless appeal of cars built with character.",
     "alt": "Old Front Seat - Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-FrmDMQq/A",
     "keywords": [
@@ -777,7 +777,7 @@ export const galleryData = [
   {
     "id": "i-gH4Qd3N",
     "title": "Capturing Classic Car Art Prints For Enthusiasts",
-    "description": "Discover the classic car art prints for enthusiasts in this powerful automotive art prints by Wayne Heim. A compelling work that embodies classic car photography, route 66 art, and painterly classic car photos for auto lovers. Perfect for art lovers seeking classic car art prints for enthusiasts to enhance their collection. © Wayne Heim",
+    "description": "A classic automotive subject is rendered as fine art through shape, surface, and the quiet authority of vintage design. This classic car art print creates wall art for enthusiasts drawn to historic transportation, mechanical detail, and the memory held in old vehicles.",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-gH4Qd3N/A",
     "keywords": [
@@ -813,7 +813,7 @@ export const galleryData = [
   {
     "id": "i-fr3rcbb",
     "title": "Classic Car Photography In Fine Art",
-    "description": "A painterly fine art photograph of a vintage automobile on Route 66, defined by motion rather than nostalgia. Wayne Heim's vintage transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Tone and restraint shape a narrative grounded in invention and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A vintage automobile becomes fine art through texture, tone, and the disciplined structure of automotive photography. This classic car photograph creates wall art rooted in restoration, historic vehicle design, and the enduring presence of old steel.",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-fr3rcbb/A",
     "keywords": [
@@ -848,7 +848,7 @@ export const galleryData = [
   {
     "id": "i-336zMPt",
     "title": "Route 66 Car Photography Prints Moment",
-    "description": "A painterly fine art photograph of a vintage automobile on Route 66, defined by motion rather than nostalgia. Wayne Heim's fine art transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Tone and restraint shape a narrative grounded in invention and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A vintage transportation scene becomes automotive wall art through motion, machinery, and historic atmosphere. This classic car photograph carries the feeling of old roads, old engines, and the human ambition built into transportation design.",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-336zMPt/A",
     "keywords": [
@@ -882,7 +882,7 @@ export const galleryData = [
   {
     "id": "i-V8xzMjq",
     "title": "Automotive Art Prints And Route 66 Art",
-    "description": "A painterly fine art photograph of a vintage automobile on Route 66, defined by motion rather than nostalgia. Wayne Heim's historic transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Tone and restraint shape a narrative grounded in invention and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A vintage automobile is treated as automotive fine art, where design, surface, and mechanical history carry the frame. This classic car photograph creates wall art rooted in timeless vehicle form, restored presence, and the visual romance of historic transportation.",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-V8xzMjq/A",
     "keywords": [
@@ -917,7 +917,7 @@ export const galleryData = [
   {
     "id": "i-mT37fhN",
     "title": "Classic Car Art Prints For Enthusiasts In Fine Art",
-    "description": "A painterly fine art photograph of a vintage automobile on Route 66, defined by motion rather than nostalgia. Wayne Heim's vintage transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Tone and restraint shape a narrative grounded in invention and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A classic car subject becomes fine art through painterly light, old metal, and the visual discipline of transportation photography. This automotive print creates wall art rooted in vintage design, collector enthusiasm, and the emotional pull of historic automobiles.",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-mT37fhN/A",
     "keywords": [
@@ -952,7 +952,7 @@ export const galleryData = [
   {
     "id": "i-W27q59Q",
     "title": "Night Moves",
-    "description": "Vintage car out for a night stroll heads down the road as the vintage #16 steam engine passes behind on the elevated tracks on it's way to the next station. © Wayne Heim",
+    "description": "A vintage car heads down the road at night as East Broad Top steam engine number 16 passes behind on elevated tracks. This automotive and rail transportation photograph creates wall art rooted in motion, night atmosphere, and the meeting of old machines in one cinematic moment.",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-W27q59Q/A",
     "keywords": [
@@ -982,7 +982,7 @@ export const galleryData = [
   {
     "id": "i-tCqCrV5",
     "title": "Exploring Route 66 Car Photography Prints",
-    "description": "A painterly fine art photograph of a vintage automobile on Route 66, defined by motion rather than nostalgia. Wayne Heim's fine art transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Tone and restraint shape a narrative grounded in invention and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A vintage automobile scene becomes fine art through road, machinery, and the quiet atmosphere of transportation history. This classic car photograph creates wall art rooted in movement, old-road memory, and the enduring appeal of historic automotive design.",
     "alt": "Night Moves",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-tCqCrV5/A",
     "keywords": [
@@ -1018,7 +1018,7 @@ export const galleryData = [
   {
     "id": "i-kJTR6Bf",
     "title": "Classic Car Photography Study",
-    "description": "A painterly fine art photograph of a vintage automobile on Route 66, defined by motion rather than nostalgia. Wayne Heim's historic transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Tone and restraint shape a narrative grounded in invention and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A classic car study becomes automotive fine art through form, finish, and the disciplined attention given to restored machinery. This vintage automobile photograph creates wall art rooted in craftsmanship, historic design, and the sculptural beauty of old cars.",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-kJTR6Bf/A",
     "keywords": [
@@ -1053,7 +1053,7 @@ export const galleryData = [
   {
     "id": "i-fgVVLbm",
     "title": "Capturing Route 66 Art",
-    "description": "A painterly fine art photograph of a vintage automobile on Route 66, defined by motion rather than nostalgia. Wayne Heim's vintage transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Tone and restraint shape a narrative grounded in invention and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A vintage automobile subject becomes fine art through surface, line, and the atmosphere of old transportation. This classic car photograph creates automotive wall art rooted in historic design, painterly restraint, and the lasting romance of machines built for distance.",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-fgVVLbm/A",
     "keywords": [
@@ -1088,7 +1088,7 @@ export const galleryData = [
   {
     "id": "i-g8T6jdd",
     "title": "Painterly Classic Car Photos For Auto Lovers In Fine Art",
-    "description": "Delve into painterly classic car photos for auto lovers via this painterly classic car photos for auto lovers by Wayne Heim. Highlighting route 66 art through classic car photography and classic car photography, it's great for collectors interested in painterly classic car photos for auto lovers. © Wayne Heim",
+    "description": "A painterly classic car photograph turns vintage automotive design into wall art for collectors and enthusiasts. The image is rooted in old metal, historic transportation, and the quiet emotional pull of vehicles that carry memory as much as motion.",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-g8T6jdd/A",
     "keywords": [
@@ -1123,7 +1123,7 @@ export const galleryData = [
   {
     "id": "i-JdXPPpF",
     "title": "Liberty Aviation Museum   Black and White Photography by Wayne Heim",
-    "description": "Front of Liberty Aviation Museum with vintage car in front.   ©Wayne Heim",
+    "description": "The front of Liberty Aviation Museum with a vintage car outside becomes black and white transportation photography, joining automotive and aviation history. This fine art photograph creates wall art rooted in museum atmosphere, historic machinery, and the public memory of transportation design.",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-JdXPPpF/A",
     "keywords": [
@@ -1153,7 +1153,7 @@ export const galleryData = [
   {
     "id": "i-ZpwKrbj",
     "title": "Automotive Art Prints And Timeless Automotive Prints",
-    "description": "Discover the automotive art prints in this powerful timeless automotive prints by Wayne Heim. A compelling work that embodies classic car art prints for enthusiasts, classic car art prints for enthusiasts, and route 66 art. Perfect for art lovers seeking automotive art prints to enhance their collection. © Wayne Heim",
+    "description": "A vintage automotive subject becomes fine art through weathered surface, mechanical character, and transportation history. This classic car photograph creates wall art rooted in timeless automotive form, old-road atmosphere, and the visual weight of machines built to last.",
     "alt": "Liberty Aviation Museum   Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-ZpwKrbj/A",
     "keywords": [
@@ -1188,7 +1188,7 @@ export const galleryData = [
   {
     "id": "i-jXXqmN2",
     "title": "The Essence Of Route 66 Car Photography Prints",
-    "description": "Delve into route 66 car photography prints via this automotive art prints by Wayne Heim. Highlighting route 66 car photography prints through classic car photography and classic car art prints for enthusiasts, it's great for collectors interested in route 66 car photography prints. © Wayne Heim",
+    "description": "A classic automobile scene is shaped into fine art through line, surface, and the quiet drama of historic transportation. This vintage car photograph creates automotive wall art rooted in old roads, collector culture, and the lasting beauty of restored machinery.",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-jXXqmN2/A",
     "keywords": [
@@ -1223,7 +1223,7 @@ export const galleryData = [
   {
     "id": "i-rtPVxVG",
     "title": "Fine Art Route 66 Car Photography Prints",
-    "description": "A painterly fine art photograph of a vintage automobile on Route 66, defined by motion rather than nostalgia. Wayne Heim's fine art transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Tone and restraint shape a narrative grounded in invention and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A vintage automobile becomes fine art through form, texture, and the atmosphere of old-road travel. This classic car photograph creates wall art rooted in automotive history, painterly restraint, and the enduring appeal of historic vehicles.",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-rtPVxVG/A",
     "keywords": [
@@ -1258,7 +1258,7 @@ export const galleryData = [
   {
     "id": "i-pStwNMq",
     "title": "Exploring Timeless Automotive Prints",
-    "description": "A painterly fine art photograph of a vintage automobile on Route 66, defined by motion rather than nostalgia. Wayne Heim's historic transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Tone and restraint shape a narrative grounded in invention and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A timeless automotive subject is rendered as fine art through restored detail, mechanical form, and quiet visual authority. This classic car photograph creates vintage automobile wall art rooted in craftsmanship, transportation history, and the memory of old engines.",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-pStwNMq/A",
     "keywords": [
@@ -1293,7 +1293,7 @@ export const galleryData = [
   {
     "id": "i-CfcqrJ9",
     "title": "Fine Art Classic Car Art Prints For Enthusiasts",
-    "description": "A painterly fine art photograph of a vintage automobile, defined by motion rather than nostalgia. Wayne Heim's vintage transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Tone and restraint shape a narrative grounded in invention and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A classic automobile becomes wall art through the disciplined beauty of automotive form, surface, and historic design. This fine art car photograph is rooted in vintage transportation, collector enthusiasm, and the painterly presence of old machinery.",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-CfcqrJ9/A",
     "keywords": [
@@ -1328,7 +1328,7 @@ export const galleryData = [
   {
     "id": "i-QfJt7xr",
     "title": "The Essence Of Painterly Classic Car Photos For Auto Lovers",
-    "description": "A painterly fine art photograph of a vintage automobile on Route 66, defined by motion rather than nostalgia. Wayne Heim's fine art transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Tone and restraint shape a narrative grounded in invention and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A painterly classic car photograph turns vintage automotive design into a study of form, color, and memory. This automotive fine art image creates wall art rooted in collector culture, restored machinery, and the lasting character of old vehicles.",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-QfJt7xr/A",
     "keywords": [
@@ -1363,7 +1363,7 @@ export const galleryData = [
   {
     "id": "i-Psb5Rzp",
     "title": "Classic Car Photography - Route 66 Art",
-    "description": "A painterly fine art photograph of a vintage automobile on Route 66, defined by motion rather than nostalgia. Wayne Heim's historic transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Tone and restraint shape a narrative grounded in invention and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A classic car study becomes automotive fine art through line, shine, and the quiet authority of historic design. This vintage automobile photograph creates wall art rooted in old-road atmosphere, restored character, and the pleasure of seeing machinery as art.",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-Psb5Rzp/A",
     "keywords": [
@@ -1399,7 +1399,7 @@ export const galleryData = [
   {
     "id": "i-NSJhpSV",
     "title": "Route 66 Car Photography Prints Portrait",
-    "description": "A painterly fine art photograph of a vintage automobile on Route 66, defined by motion rather than nostalgia. Wayne Heim's vintage transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Tone and restraint shape a narrative grounded in invention and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A vintage automobile portrait becomes fine art through surface, detail, and the sculptural presence of classic car design. This automotive photograph creates wall art rooted in historic transportation, restoration culture, and the enduring appeal of old metal.",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-NSJhpSV/A",
     "keywords": [
@@ -1434,7 +1434,7 @@ export const galleryData = [
   {
     "id": "i-j3jLH4h",
     "title": "Capturing Route 66 Art",
-    "description": "A painterly fine art photograph of a vintage automobile on Route 66, defined by motion rather than nostalgia. Wayne Heim's fine art transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Tone and restraint shape a narrative grounded in invention and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A classic automotive subject is photographed as fine art, with old metal, reflection, and form carrying the image. This vintage car photograph creates wall art rooted in timeless design, collector passion, and the visual memory of transportation history.",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-j3jLH4h/A",
     "keywords": [
@@ -1469,7 +1469,7 @@ export const galleryData = [
   {
     "id": "i-rT9Kp2K",
     "title": "Route 66 Art Portrait",
-    "description": "A painterly fine art photograph of a vintage automobile on Route 66, defined by motion rather than nostalgia. Wayne Heim's historic transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Tone and restraint shape a narrative grounded in invention and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A vintage automobile scene becomes transportation wall art through form, surface, and the emotional pull of old roads. This classic car photograph is rooted in automotive history, painterly restraint, and the enduring character of machines made for motion.",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-rT9Kp2K/A",
     "keywords": [
@@ -1503,7 +1503,7 @@ export const galleryData = [
   {
     "id": "i-PrdZP4Z",
     "title": "The Essence Of Timeless Automotive Prints",
-    "description": "Discover the timeless automotive prints in this powerful painterly classic car photos for auto lovers by Wayne Heim. A compelling work that embodies classic car art prints for enthusiasts, route 66 art, and timeless automotive prints. Perfect for art lovers seeking timeless automotive prints to enhance their collection. © Wayne Heim",
+    "description": "A timeless automotive print begins with the presence of a vintage car: old metal, historic design, and the memory of motion held still. This classic car photograph creates wall art rooted in restoration, transportation history, and the quiet romance of machinery.",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-PrdZP4Z/A",
     "keywords": [
@@ -1538,7 +1538,7 @@ export const galleryData = [
   {
     "id": "i-XZ2DDS3",
     "title": "Classic Car Art Prints For Enthusiasts Portrait",
-    "description": "A painterly fine art photograph of a vintage automobile on Route 66, defined by motion rather than nostalgia. Wayne Heim's vintage transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Tone and restraint shape a narrative grounded in invention and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A classic car portrait becomes automotive fine art through detail, surface, and the confident form of vintage design. This photograph creates wall art for enthusiasts drawn to restored vehicles, historic transportation, and the visual strength of old cars.",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-XZ2DDS3/A",
     "keywords": [
@@ -1572,7 +1572,7 @@ export const galleryData = [
   {
     "id": "i-7PM87B8",
     "title": "Automotive Art Prints - Route 66 Car Photography Prints",
-    "description": "Delve into automotive art prints via this route 66 car photography prints by Wayne Heim. Highlighting timeless automotive prints through painterly classic car photos for auto lovers and automotive art prints, it's great for collectors interested in automotive art prints. © Wayne Heim",
+    "description": "A vintage automobile detail becomes fine art through line, finish, and the quiet precision of classic car design. This automotive photograph creates wall art rooted in restored machinery, collector culture, and the timeless appeal of historic vehicles.",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-7PM87B8/A",
     "keywords": [
