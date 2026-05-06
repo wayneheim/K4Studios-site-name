@@ -13,59 +13,65 @@ import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
 import { getBreadcrumbList, getStructuredData } from "@/components/utils/getStructuredData.ts";
+import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 
 import "@/styles/global.css";
 
 const sectionPath = "/Blog/what-is-historically-themed-photography";
 const canonicalUrl = "https://www.k4studios.com/Blog/what-is-historically-themed-photography";
 
-const getProxySrc = (id: string, size: string) => `/img/${id}/${size}.jpg`;
-const getAbsoluteProxySrc = (id: string, size: string) => `https://www.k4studios.com/img/${id}/${size}.jpg`;
-
 const headerImages = [
   {
     id: "i-8BbMZjs",
+    title: "Minding the Herd",
+    galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
     alt: "Western frontier portrait used as historically themed fine art photography",
   },
   {
     id: "i-C5ZGjMH",
+    title: "The Burden of Rank",
+    galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color",
     alt: "Civil War portrait interpreted through historically themed fine art photography",
   },
   {
     id: "i-pd3hvNk",
+    title: "The Recoil",
+    galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color",
     alt: "World War II living history scene interpreted as history inspired photography",
   },
   {
     id: "i-tpvJWLm",
+    title: "Havana Post Cigars",
+    galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White",
     alt: "Roaring 20s portrait interpreted as historically themed photography",
   },
 ];
 
 const examples = [
   {
-    id: "i-8BbMZjs",
-    src: getProxySrc("i-8BbMZjs", "l"),
+    ...headerImages[0],
+    src: getSemanticImageUrl(headerImages[0], { galleryPath: headerImages[0].galleryPath }),
     alt: "Painterly Western portrait grounded in research, living history, and frontier narrative",
     caption: "Western frontier - history as lived character and myth under pressure",
     href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-8BbMZjs",
   },
   {
-    id: "i-C5ZGjMH",
-    src: getProxySrc("i-C5ZGjMH", "l"),
+    ...headerImages[1],
+    src: getSemanticImageUrl(headerImages[1], { galleryPath: headerImages[1].galleryPath }),
     alt: "Civil War portrait using historically themed fine art photography to explore command and consequence",
     caption: "Civil War - restraint, responsibility, and the human cost of conflict",
     href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-C5ZGjMH",
   },
   {
-    id: "i-pd3hvNk",
-    src: getProxySrc("i-pd3hvNk", "l"),
+    ...headerImages[2],
+    src: getSemanticImageUrl(headerImages[2], { galleryPath: headerImages[2].galleryPath }),
     alt: "World War II themed fine art photography built from real reenactors and period detail",
     caption: "World War II - machinery, service, fatigue, and memory",
     href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-pd3hvNk",
   },
   {
-    id: "i-tpvJWLm",
-    src: getProxySrc("i-tpvJWLm", "l"),
+    ...headerImages[3],
+    src: getSemanticImageUrl(headerImages[3], { galleryPath: headerImages[3].galleryPath }),
     alt: "Roaring 20s portrait showing history themed photography beyond archival documentation",
     caption: "Roaring 20s - glamour, tension, and consequence in a changing age",
     href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-tpvJWLm",
@@ -75,7 +81,16 @@ const examples = [
 const pageTitle = "What Is Historically Themed Photography? Definition and Examples";
 const pageDescription = "Historically themed photography is contemporary fine art photography that interprets people, eras, and events from the past through research, real subjects, period detail, and visual storytelling.";
 
-const structuredImageUrls = examples.map((image) => getAbsoluteProxySrc(image.id, "l"));
+const structuredImageUrls = examples.map((image) =>
+  getSemanticImageUrl(image, { galleryPath: image.galleryPath }, "l", { absolute: true })
+);
+const socialImage = headerImages[1];
+const socialImageUrl = getSemanticImageUrl(
+  socialImage,
+  { galleryPath: socialImage.galleryPath },
+  "l",
+  { absolute: true }
+);
 
 const breadcrumbStructuredData = getBreadcrumbList(
   [
@@ -129,11 +144,11 @@ const meta = {
   ogDescription: pageDescription,
   ogType: "article",
   ogUrl: canonicalUrl,
-  ogImage: getAbsoluteProxySrc("i-C5ZGjMH", "l"),
+  ogImage: socialImageUrl,
   twitterTitle: pageTitle,
   twitterDescription: pageDescription,
   twitterUrl: canonicalUrl,
-  twitterImage: getAbsoluteProxySrc("i-C5ZGjMH", "l"),
+  twitterImage: socialImageUrl,
   twitterCard: "summary_large_image",
 };
 
@@ -181,7 +196,7 @@ const blogBreadcrumb = `Other &rsaquo; <a href='/Blog' style='color: inherit; te
           {headerImages.map((img, index) => (
             <div class={`header-bar-image pos-${index}`}>
               <img
-                src={getProxySrc(img.id, "l")}
+                src={getSemanticImageUrl(img, { galleryPath: img.galleryPath })}
                 alt={img.alt}
                 loading={index === 0 ? "eager" : "lazy"}
               />
