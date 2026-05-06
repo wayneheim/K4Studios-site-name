@@ -28,6 +28,9 @@ const middleIndex = Math.floor(visibleImages.length / 2);
     opacity: 0;
     animation: fadeStripIn 0.4s ease forwards;
     animation-delay: 850ms;
+    max-width: 100%;
+    overflow: hidden;
+    min-width: 0;
   }
 
   @keyframes fadeStripIn { to { opacity: 1; } }
@@ -38,6 +41,8 @@ const middleIndex = Math.floor(visibleImages.length / 2);
     justify-content: center;
     gap: 0.75rem;
     margin-bottom: 0.75rem;
+    min-width: 0;
+    padding: 0 0.25rem;
   }
 
   .gallery-label {
@@ -48,7 +53,11 @@ const middleIndex = Math.floor(visibleImages.length / 2);
     opacity: 0;
     animation: fadeLabelIn 0.75s ease-out forwards;
     animation-delay: 600ms;
-    white-space: nowrap;
+    max-width: 100%;
+    text-align: center;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    line-height: 1.35;
   }
 
   .gallery-hr {
@@ -81,9 +90,18 @@ const middleIndex = Math.floor(visibleImages.length / 2);
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     gap: 1rem;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 0 1rem;
+    max-width: 100%;
+    box-sizing: border-box;
+    scrollbar-width: none;
+    min-width: 0;
+  }
+  .gallery-strip::-webkit-scrollbar { display: none; }
+  @media (min-width: 640px) {
+    .gallery-strip { justify-content: center; }
   }
 
   .gallery-thumb {
@@ -106,6 +124,37 @@ const middleIndex = Math.floor(visibleImages.length / 2);
     height: 100%;
     object-fit: cover;
     display: block;
+  }
+
+  @media (max-width: 540px) {
+    .gallery-preview-strip {
+      margin-top: 2rem;
+      padding: 0.75rem 0;
+    }
+
+    .gallery-label-frame {
+      gap: 0.45rem;
+    }
+
+    .gallery-label {
+      font-size: 1rem;
+      flex: 1 1 auto;
+    }
+
+    .gallery-hr {
+      flex: 1 1 28px;
+      min-width: 24px;
+    }
+
+    .gallery-strip {
+      gap: 0.75rem;
+      padding: 0 0.25rem;
+    }
+
+    .gallery-thumb {
+      width: clamp(82px, 25vw, 104px);
+      height: clamp(82px, 25vw, 104px);
+    }
   }
 
   .anim-left { animation-name: fadeSlideLeft; }

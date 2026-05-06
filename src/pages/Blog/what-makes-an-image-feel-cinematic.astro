@@ -132,10 +132,10 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
     </section>
 
     <section style="text-align:center; padding:2rem 1rem 2rem;">
-      <h1 style="font-size:2.5rem; font-weight:700; margin-bottom:0.5rem; line-height:1.2;">
+      <h1 style="font-size:clamp(1.6rem, 5vw, 2.5rem); font-weight:700; margin-bottom:0.5rem; line-height:1.2;">
         What Makes an Image Feel Cinematic?
       </h1>
-      <p style="font-size:1.25rem; color:#666; font-style:italic;">
+      <p style="font-size:clamp(1rem, 3vw, 1.25rem); color:#666; font-style:italic;">
         Not color grading. Not spectacle. Story under pressure.
       </p>
       <p style="font-size:0.95rem; color:#888; margin-top:0.75rem; letter-spacing:0.02em;">
@@ -154,16 +154,6 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         <p>That feeling does not come from orange-and-teal color grading, wide lenses, or borrowed movie style by themselves. Those may affect surface aesthetics. Cinematic presence comes from tension, implication, framing, atmosphere, and consequence.</p>
 
         <p>This is why cinematic photography so often overlaps with <a href="/Blog/what-is-narrative-photography" style="color:#8b5a2b; text-decoration:underline;">narrative photography</a>. Both depend on the viewer sensing a larger story pressing around the frame.</p>
-
-        <aside class="cinematic-bridge" aria-label="Cinematic principles in Wayne Heim's artwork">
-          <p class="bridge-kicker">From Concept to Artwork</p>
-          <p>At K4 Studios, these cinematic principles are not treated as theory alone. Wayne Heim's <a href="/Western-Fine-Art-Photography">Western fine art photography</a> uses tension, painterly light, atmosphere, and unresolved narrative to create still images that feel like scenes from a larger story.</p>
-          <div class="bridge-links" aria-label="Explore cinematic artwork paths">
-            <a href="/cinematic-western-art">See the idea applied</a>
-            <a href="/Other/One-Image-Movie">Understand One-Image Movie&trade;</a>
-            <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West">Browse the finished work</a>
-          </div>
-        </aside>
 
         <BlogGalleryPreviewStrip
           images={cinematicPreviewImages}
@@ -184,6 +174,16 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
           <li style="margin-bottom:0.5rem;"><strong>Character</strong> — The subject feels inhabited rather than posed into symbol.</li>
           <li style="margin-bottom:0.5rem;"><strong>Restraint</strong> — The image withholds enough to keep the viewer mentally moving inside it.</li>
         </ul>
+
+        <aside class="cinematic-bridge" aria-label="Cinematic principles in Wayne Heim's artwork">
+          <p class="bridge-kicker">From Concept to Artwork</p>
+          <p style="line-height:1.4; margin-bottom:0.5rem;">At K4 Studios, these cinematic principles are not treated as theory alone. Wayne Heim's <a href="/Western-Fine-Art-Photography">Western fine art photography</a> uses tension, painterly light, atmosphere, and unresolved narrative to create still images that feel like scenes from a larger story.</p>
+          <div class="bridge-links" aria-label="Explore cinematic artwork paths">
+            <a href="/cinematic-western-art">See the idea applied</a>
+            <a href="/Other/One-Image-Movie">Understand One-Image Movie&trade;</a>
+            <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West">Browse the finished work</a>
+          </div>
+        </aside>
 
         <div class="section-heading-with-line">
           <h2>Why Motion Is Not Required</h2>
@@ -290,7 +290,25 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
   </main>
 
   <style>
+    :global(html), :global(body) { max-width: 100%; overflow-x: hidden; }
+    :global(*), :global(*::before), :global(*::after) { box-sizing: border-box; }
+    :global(.page-container) {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: clip;
+    }
+    main { width: 100%; min-width: 0; }
     .story-section { line-height: 1.7; }
+    .story-section,
+    .story-block {
+      width: 100%;
+      min-width: 0;
+      max-width: 860px;
+    }
+    .story-block {
+      overflow-wrap: anywhere;
+      word-break: normal;
+    }
     .story-block p { margin-bottom: 1rem; font-size: clamp(1rem, 2.5vw, 1.125rem); }
     .story-block a { color: #8b5a2b; text-decoration: underline; }
     .story-block h2 {
@@ -306,6 +324,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
       max-width: 1100px;
       margin: 0 auto;
       padding: 0 1rem;
+      min-width: 0;
     }
     .hero-image {
       display: block;
@@ -317,42 +336,64 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
       margin-top: 1rem;
     }
     .cinematic-bridge,
+    .one-image-callout,
+    .section-heading-with-line,
+    .example-images,
+    .story-block figure,
+    .story-block img {
+      max-width: 100%;
+      min-width: 0;
+    }
     .one-image-callout {
       margin: 2rem 0;
       border-top: 1px solid rgba(139, 90, 43, 0.28);
       border-bottom: 1px solid rgba(139, 90, 43, 0.18);
-      padding: 1.25rem 0;
+      padding: 1.15rem 0;
     }
     .cinematic-bridge {
       background: linear-gradient(90deg, rgba(139, 90, 43, 0.07), rgba(255, 255, 255, 0));
       padding-left: 1rem;
       padding-right: 1rem;
+      margin: 1.25rem 0;
+      border-top: 1px solid rgba(139, 90, 43, 0.28);
+      border-bottom: 1px solid rgba(139, 90, 43, 0.18);
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
     }
     .bridge-kicker {
-      margin-bottom: 0.35rem !important;
+      margin-bottom: 0.25rem !important;
       color: #7a4d2b;
       font-size: 0.8rem !important;
       letter-spacing: 0.08em;
       text-transform: uppercase;
+    }
+    .bridge-summary {
+      display: none;
     }
     .bridge-links {
       display: flex;
       flex-wrap: wrap;
       gap: 0.75rem;
       margin-top: 1rem;
+      min-width: 0;
     }
     .bridge-links a {
       display: inline-flex;
       align-items: center;
-      min-height: 2.5rem;
+      justify-content: center;
+      text-align: center;
+      min-height: 1.75rem;
       border: 1px solid rgba(139, 90, 43, 0.35);
-      border-radius: 6px;
-      padding: 0.55rem 0.8rem;
+      border-radius: 5px;
+      padding: 0.3rem 0.5rem;
       background: rgba(255, 255, 255, 0.74);
       color: #6d3f22;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       font-weight: 600;
       text-decoration: none;
+      max-width: 100%;
+      white-space: normal;
+      overflow-wrap: anywhere;
     }
     .bridge-links a:hover {
       border-color: rgba(139, 0, 0, 0.45);
@@ -371,7 +412,17 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
       gap: 1rem;
       margin: 1.5rem 0 2rem;
     }
+    @media (max-width: 540px) {
+      .example-images { grid-template-columns: 1fr; }
+    }
+    @media (min-width: 541px) and (max-width: 768px) {
+      .example-images { grid-template-columns: repeat(2, 1fr); }
+    }
     .example-images figure { margin: 0; }
+    .example-images a {
+      display: block;
+      max-width: 100%;
+    }
     .example-images img {
       width: 100%;
       aspect-ratio: 3 / 4;
@@ -380,7 +431,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
     }
     .image-grid-cta {
       text-align: center;
-      margin: -0.5rem 0 2.25rem !important;
+      margin: 1.5rem 0 2.25rem !important;
     }
     .image-grid-cta a {
       display: inline-block;
@@ -390,8 +441,43 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
       text-underline-offset: 0.2em;
     }
     @media (max-width: 768px) {
-      .example-images { grid-template-columns: 1fr; }
+      .hero-image-wrap { padding: 0 0.875rem; }
+      .hero-image {
+        height: clamp(180px, 48vw, 260px);
+        border-radius: 10px;
+      }
       .story-section { padding-left: 1rem; padding-right: 1rem; }
+      .cinematic-bridge {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0.875rem;
+        padding-right: 0.875rem;
+      }
+      .bridge-links {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.6rem;
+      }
+      .bridge-links a {
+        width: 100%;
+        min-height: 2.75rem;
+      }
+    }
+    @media (max-width: 540px) {
+      .story-block p,
+      .story-block li {
+        overflow-wrap: anywhere;
+      }
+      .example-images img {
+        aspect-ratio: 4 / 5;
+        max-height: min(70vh, 560px);
+      }
+    }
+    .section-heading-with-line {
+      border-bottom: 1px solid rgba(139, 90, 43, 0.25);
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
     }
   </style>
 </BaseLayout>
