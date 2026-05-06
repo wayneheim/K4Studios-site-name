@@ -9,6 +9,7 @@ export const westernStory = [
     paragraphs: [
       `Not in action, not in spectacle, but in the moment a person holds something just beneath the surface. A look that lingers a second too long. A posture shaped by weather, work, and memory. The kind of presence that suggests a life without needing to explain it.`,
       `This is where Wayne Heim's Western cowboy portraits live: painterly fine art photography shaped around presence, atmosphere, and the quiet pressure of the American frontier.`,
+      `Part of Wayne Heim's broader <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West">Wild West photography collection</a>, these western photos focus on cowboy portraits, frontier faces, and character-driven Old West studies.`,
       `The cowboy, the drifter, the frontier woman, the ranch hand - each portrait is less a costume than an encounter, less a symbol than a life caught holding its own weight.`
     ]
   },

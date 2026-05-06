@@ -92,13 +92,15 @@ const galleryDatas = [
 const headingCount = westernStory.filter((block, i) => i > 0 && block.subhead).length;
 // Pool 3x more images for client-side rotation variety
 const featheredImages = getFeatheredImages({ sectionPath, headingCount, galleryDatas, galleryPaths, poolMultiplier: 3 });
+const westernPhotosSchemaTitle = "Western Photos & Wild West Photography - Art of the American Frontier";
+const westernPhotosSchemaDescription = "A browseable collection of western photos, cowboy portraits, frontier scenes, Native American portraits, and painterly Wild West photography by Wayne Heim.";
 
 // Structured data for gallery landing
 const structuredData = getStructuredData({
   type: "gallery",
   data: {
-    title: landingWestern.title,
-    description: landingWestern.subtitle,
+    title: westernPhotosSchemaTitle,
+    description: westernPhotosSchemaDescription,
     url: `https://k4studios.com${sectionPath}`,
     keywords: landingWestern.keywords || [],
     copyrightNotice: "© Wayne Heim"

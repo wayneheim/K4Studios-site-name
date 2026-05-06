@@ -4,8 +4,14 @@ export const landingWestern = {
 
   // Keywords used internally for structured data, semantic linking, and contextual SEO
   keywords: [
+    "western photos",
+    "Western photos",
     "Wild West photography",
+    "cowboy photos",
+    "cowboy portraits",
+    "frontier scenes",
     "American frontier art",
+    "American frontier photography",
     "Wild West fine art photography",
     "Western fine art photography",
     "narrative Western art",
@@ -16,6 +22,8 @@ export const landingWestern = {
     "frontier photography",
     "American West photography",
     "painterly Western photography",
+    "Western wall art",
+    "Western fine art prints",
     "story driven Western art"
   ],
 

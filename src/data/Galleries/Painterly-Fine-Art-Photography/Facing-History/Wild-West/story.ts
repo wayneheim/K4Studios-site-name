@@ -7,6 +7,7 @@ export const westernStory = [
     subhead: "Western Spirit, the legends, and lives that lived beneath them.",
     tagline: "Rediscovering untold stories of cowboys, settlers, and Native Americans.",
     paragraphs: [
+      `Browse western photos, cowboy portraits, frontier scenes, Native American portraits, and painterly Wild West photography created as fine art prints and wall art.`,
       `Most people think they know the Wild West: the rider on the horizon, the lawman in the street, the silhouette cut clean against dust and sunset. But what Hollywood and dime store novels really gave us are the legends.`,
       `The West wasn't built by symbols, it created them. Beneath these lives, hidden amongst their framework, are countless stories of labor, endurance, loss and sacrifice made by the people history rarely stopped long enough to recognize, let alone long enough to name.`,
       `This section is part of K4's <a href="/Blog/what-is-historically-themed-photography">historically themed photography</a> framework: contemporary fine art that interprets the past through research, real subjects, period detail, and story.`,

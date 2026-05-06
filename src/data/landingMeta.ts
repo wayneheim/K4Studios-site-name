@@ -10,6 +10,7 @@ type LandingMetaEntry = {
   twitterDescription: string;
   twitterImage: string;
   keywords?: string;
+  descriptionMaxLength?: number;
 };
 
 export const landingMetaDB: Record<string, LandingMetaEntry> = {
@@ -292,21 +293,22 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
   },
 
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West": {
-    title: "Wild West Photography - Wayne Heim",
-    seoTitle: "Wild West Photography - Wayne Heim",
+    title: "Western Photos & Wild West Photography by Wayne Heim",
+    seoTitle: "Western Photos & Wild West Photography by Wayne Heim",
     ogTitle:
-      "Wild West Photography – Wayne Heim",
+      "Western Photos & Wild West Photography by Wayne Heim",
     ogDescription:
-      "Wild West photography by Wayne Heim: painterly frontier images of legend, labor, endurance, and the human lives beneath the myth of the American West.",
+      "Browse western photos, cowboy portraits, frontier scenes, Native American portraits, and Wild West photography by Wayne Heim, created as painterly Western fine art prints and wall art.",
     ogImage: "/images/cowboy.webp",
     ogType: "website",
     twitterCard: "summary_large_image",
     twitterTitle:
-      "Wild West Photography – Wayne Heim",
+      "Western Photos & Wild West Photography by Wayne Heim",
     twitterDescription:
-      "Painterly Wild West photography and frontier storytelling by Wayne Heim.",
+      "Browse western photos, cowboy portraits, frontier scenes, Native American portraits, and Wild West photography by Wayne Heim.",
     twitterImage: "/images/cowboy.webp",
-    keywords: "Wild West photography, Wild West fine art photography, American frontier photography, frontier storytelling photography, story driven Western art, painterly frontier photography, Wayne Heim",
+    keywords: "western photos, Western photos, Wild West photography, cowboy photos, cowboy portraits, frontier scenes, Native American portraits, American frontier photography, Western fine art photography, painterly Western photography, Western wall art, Western fine art prints, Wayne Heim",
+    descriptionMaxLength: 220,
   },
 
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives": {
@@ -1099,7 +1101,8 @@ export function getLandingMeta(path: string, imageOverride?: string) {
   const baseMeta = landingMetaDB[clean] || landingMetaDB["default"];
 
   const uniqueDesc = trimMetaDescription(
-    buildUniqueDescription(baseMeta.ogDescription, clean)
+    buildUniqueDescription(baseMeta.ogDescription, clean),
+    baseMeta.descriptionMaxLength
   );
 
   return {
@@ -1117,5 +1120,6 @@ export function getLandingMeta(path: string, imageOverride?: string) {
     twitterUrl: "",
     description: uniqueDesc,
     keywords: baseMeta.keywords || "",
+    descriptionMaxLength: baseMeta.descriptionMaxLength,
   };
 }
