@@ -16,6 +16,7 @@
  */
 
 import { getImageSlugPhraseForPath } from '../data/semantic/K4-Sem.ts';
+import imageFilenameSlugs from '../data/imageFilenameSlugs.json';
 
 export const USE_SEMANTIC_IMAGE_URLS = true;
 
@@ -181,7 +182,9 @@ export function getSemanticImageUrl(image, galleryContext = {}, sizeOrOptions = 
   );
 
   const titleSlug = slugifyImageSegment(
-    typeof image === 'object' ? (image.title || image.alt || image.name) : '',
+    (typeof image === 'object' && image.filenameSlug) ||
+      imageFilenameSlugs[imageId] ||
+      (typeof image === 'object' ? (image.title || image.name) : ''),
     String(imageId).replace(/^i-/i, '') || 'image'
   );
   const phrase = slugifyImageSegment(

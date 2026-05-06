@@ -28,6 +28,7 @@ export const slides = [
   {
     src: "https://photos.smugmug.com/photos/i-5JksgQk/0/LRrHbjGncpLW4WHHKsQjz95chSW3nxhsdMsMsQJD5/O/i-5JksgQk.jpg",
     href: "https://www.k4studios.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-thTwwHZ",
+    title: "Over My Dead Body: Frontier Stand-off",
     alt: "Vintage cowboy portrait: rugged old west cowboy aiming from his cabin window.",
     description: "Vintage fine art portrait of a rugged cowboy peering through his cabin window with a gun, evoking the wild spirit of the old west."
   },

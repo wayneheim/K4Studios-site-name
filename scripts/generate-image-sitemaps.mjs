@@ -15,6 +15,7 @@ const SITE_URL = 'https://www.k4studios.com';
 const PUBLIC_DIR = path.resolve(__dirname, '..', 'public');
 const REPO_ROOT = path.resolve(__dirname, '..');
 const K4_SEM_PATH = path.join(REPO_ROOT, 'src', 'data', 'semantic', 'K4-Sem.ts');
+const IMAGE_FILENAME_SLUGS_PATH = path.join(REPO_ROOT, 'src', 'data', 'imageFilenameSlugs.json');
 
 const GHOST_IMAGE_ID = 'i-k4studios';
 
@@ -83,6 +84,14 @@ function loadImageSlugPhraseByPath() {
   }
 }
 
+function loadImageFilenameSlugs() {
+  try {
+    return JSON.parse(readFileSync(IMAGE_FILENAME_SLUGS_PATH, 'utf8'));
+  } catch {
+    return {};
+  }
+}
+
 function extractImageSlugPhraseByPath(source) {
   const map = {};
   const entryPattern = /path:\s*"([^"]+)"\s*,\s*imageSlugPhrase:\s*"([^"]+)"/g;
@@ -93,6 +102,7 @@ function extractImageSlugPhraseByPath(source) {
 }
 
 const imageSlugPhraseByPath = loadImageSlugPhraseByPath();
+const imageFilenameSlugs = loadImageFilenameSlugs();
 
 function getFallbackPhraseFromGalleryPath(galleryPath) {
   const parts = String(galleryPath || '').replace(/\/+$/, '').split('/').filter(Boolean);
@@ -105,7 +115,10 @@ function getFallbackPhraseFromGalleryPath(galleryPath) {
 }
 
 function getSemanticImageUrl(image, urlBase) {
-  const titleSlug = slugifyImageSegment(image?.title || image?.alt, String(image?.id || '').replace(/^i-/i, '') || 'image');
+  const titleSlug = slugifyImageSegment(
+    imageFilenameSlugs[image?.id] || image?.filenameSlug || image?.title || image?.name,
+    String(image?.id || '').replace(/^i-/i, '') || 'image'
+  );
   const normalizedBase = String(urlBase || '').replace(/\/+$/, '');
   const phrase = slugifyImageSegment(
     imageSlugPhraseByPath[normalizedBase] || getFallbackPhraseFromGalleryPath(normalizedBase),
