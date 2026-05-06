@@ -325,7 +325,7 @@ const tombstonesWithThumbs = landingAmericanWest.tombstones.map((stone: any) => 
         <p class="page-summary fade-in reveal-on-scroll">
           Fine art photography of the American West brings together cowboy portraits, Indigenous presence, frontier lives, and the land that shaped them. It is broader than cowboy-only Western imagery and distinct from decor, stock, or scenic-postcard photography.
         </p>
-        <p class="fade-in reveal-on-scroll" style="margin-top:0.75rem;">
+        <p class="page-summary fade-in reveal-on-scroll" style="margin-top:0.75rem;">
           For the narrower subject hub, visit <a href="/Western-Fine-Art-Photography" style="text-decoration: underline;"><strong>Western Fine Art Photography</strong></a>. For the larger cultural frame, continue into <a href="/American-Western-Art" style="text-decoration: underline;">American Western Art</a>.
         </p>
       </div>
@@ -546,15 +546,24 @@ const tombstonesWithThumbs = landingAmericanWest.tombstones.map((stone: any) => 
     }
 
     @media (max-width: 768px) {
-      .section-heading .page-title { font-size: 1.5rem; line-height: 1.3; }
+                 .section-heading .page-title { font-size: 1.5rem; line-height: 1.13; margin-top: 2.30em !important;}
       .section-heading .page-subtitle {
         max-width: 42ch; margin-left: auto; margin-right: auto; text-align: center;
-        font-size: 1rem; line-height: 1.4; letter-spacing: -0.04em;
+        font-size: 1rem; line-height: 1.4; letter-spacing: -0.01em;
       }
-      .section-heading-wrap { margin-top: 0.6rem; margin-bottom: 1rem; }
+      .section-heading-wrap { margin-top: 0.2rem; margin-bottom: 1rem; }
       .sidebar-column { display: none; }
       .story-section { letter-spacing: -0.03em; }
-      .page-summary { font-size: 0.95rem; padding: 0 1rem; max-width: 90%; }
+      .page-summary {
+        font-size: 0.98rem;
+        line-height: 1.42;
+        text-align: justify;
+        text-justify: inter-word;
+        max-width: 86%;
+        padding-left: 0;
+        padding-right: 0;
+        margin: 0.15rem auto 1.25rem;
+      }
       .collections-nav-section { padding-top: 1.55rem; }
       .collections-heading { font-size: 1.03rem; margin: 0.95rem auto 0.05rem; }
       .story-block h2 {
@@ -562,6 +571,7 @@ const tombstonesWithThumbs = landingAmericanWest.tombstones.map((stone: any) => 
         font-size: 1.4rem !important;
         margin-top: -0.59rem;
         line-height: 1.15;
+        
       }
     }
 

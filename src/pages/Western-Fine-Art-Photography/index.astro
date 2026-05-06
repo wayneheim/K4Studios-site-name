@@ -532,7 +532,7 @@ const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => {
         max-width: 42ch; margin-left: auto; margin-right: auto; text-align: center;
         font-size: 1rem; line-height: 1.4; letter-spacing: -0.04em;
       }
-      .section-heading-wrap { margin-top: 0.6rem; margin-bottom: 1rem; }
+      .section-heading-wrap { margin-top: 0.2rem; margin-bottom: 1rem; }
       .sidebar-column { display: none; }
       .story-section { letter-spacing: -0.03em; }
       .story-block h2 {
@@ -649,7 +649,21 @@ const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => {
       color: #5d3617;
     }
     @media (max-width: 768px) {
-      .page-summary { font-size: 0.95rem; padding: 0 1rem; max-width: 90%; }
+            .section-heading .page-title { font-size: 1.5rem; line-height: 1.13; margin-top: 3.0em;}
+      .section-heading .page-subtitle {
+        max-width: 42ch; margin-left: auto; margin-right: auto; text-align: center;
+        font-size: 1rem; line-height: 1.4; letter-spacing: -0.01em;
+      }
+      .page-summary {
+        font-size: 0.98rem;
+        line-height: 1.2;
+        text-align: justify;
+        text-justify: inter-word;
+        max-width: 86%;
+        padding-left: 0;
+        padding-right: 0;
+        margin: 0.15rem auto 1.25rem;
+      }
       .page-context-link { font-size: 0.94rem; padding: 0 1rem; max-width: 90%; }
     }
 

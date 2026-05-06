@@ -419,12 +419,22 @@ const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => {
     ul li::marker { margin-top: 0.15em; font-size: 1.2em; color: gray; }
 
     @media (max-width: 768px) {
-      .section-heading .page-title { font-size: 1.5rem; line-height: 1.3; }
+      .section-heading .page-title { font-size: 1.5rem; line-height: 1.13; margin-top: 2.0em;}
       .section-heading .page-subtitle {
         max-width: 42ch; margin-left: auto; margin-right: auto; text-align: center;
-        font-size: 1rem; line-height: 1.4; letter-spacing: -0.04em;
+        font-size: 1rem; line-height: 1.4; letter-spacing: -0.01em;
       }
-      .section-heading-wrap { margin-top: 1rem; margin-bottom: 1rem; }
+      .section-heading .page-summary {
+        font-size: 0.98rem;
+        line-height: 1.42;
+        text-align: justify;
+        text-justify: inter-word;
+        max-width: 86%;
+        padding-left: 0;
+        padding-right: 0;
+        margin: 0.15rem auto 1.25rem;
+      }
+      .section-heading-wrap { margin-top: 0.3rem; margin-bottom: 1rem; }
       .sidebar-column { display: none; }
       .story-section { letter-spacing: -0.03em; }
       .story-block h2 {
@@ -445,6 +455,17 @@ const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => {
     .section-heading-wrap { margin: -3rem 0 1.5rem; text-align: center; }
     .section-heading .page-title { font-size: 2rem; margin-bottom: .4rem; }
     .section-heading .page-subtitle { font-size: 1rem; font-weight: 500; color: #6d5b4a; opacity: .9; }
+    .section-heading .page-summary {
+      max-width: 680px;
+      margin: 0.25rem auto 1.8rem;
+      padding: 0 1.2rem;
+      font-family: 'Glegoo', serif;
+      font-size: 1.04rem;
+      line-height: 1.55;
+      color: #4a3e34;
+      text-align: center;
+      opacity: 0.92;
+    }
 
     .story-section {
       line-height: 1.3; padding: 2rem 1.5rem; max-width: 860px; margin: 0 auto;

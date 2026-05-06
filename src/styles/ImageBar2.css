@@ -188,6 +188,6 @@
 @media (max-width: 768px) {
   .carousel-fade { 
     margin-top: -15px !important;
-    min-height: 270px; /* Reserve space on mobile */
+    min-height: 212px; /* Keep CLS protection without reserving a large blank strip */
   }
 }

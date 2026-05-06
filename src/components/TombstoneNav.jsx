@@ -230,6 +230,7 @@ export default function TombstoneNav({
                 className="tombstone-card tombstone-animate"
                 style={{ animationDelay: `${1.05 + visualPos * 0.1}s` }}
               >
+                <span className="tombstone-mobile-overlay" aria-hidden="true">Explore</span>
                 <img
                   src={selectedThumbs[index]}
                   alt={contextualAlt}

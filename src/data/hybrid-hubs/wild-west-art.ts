@@ -158,7 +158,7 @@ export const explorationPaths = [
     title: 'Old Western Art',
     eyebrow: 'Definition Route',
     href: '/old-western-art',
-    description: 'Use the exact-match definition page if the visitor is really asking what old western art means and how the term differs from literal antique art.',
+    description: 'A plain-language guide to old western art, what the phrase means, and how it differs from antique or vintage Western pieces.',
     cta: 'Read the definition -',
     accent: '#7a614f',
   },
@@ -166,7 +166,7 @@ export const explorationPaths = [
     title: 'American Wild West',
     eyebrow: 'Historical Bridge',
     href: '/american-wild-west',
-    description: 'Read the cultural and historical bridge page when the visitor needs the frontier context before choosing Wild West art or prints.',
+    description: 'A cultural bridge into the people, places, myths, and history that shaped America’s frontier imagination.',
     cta: 'Read the bridge -',
     accent: '#6b5548',
   },
@@ -175,7 +175,7 @@ export const explorationPaths = [
     eyebrow: 'Subject Route',
     hideEyebrow: true,
     href: '/women-of-the-wild-west',
-    description: 'Follow the subject page for frontier women, women of the Old West, and the featured Women of the West video route.',
+    description: 'Explore frontier women, women of the Old West, and the stories behind the Women of the West video feature.',
     cta: 'Explore frontier women -',
     accent: '#6f5148',
   },
@@ -184,38 +184,38 @@ export const explorationPaths = [
     eyebrow: 'Commercial Route',
     hideEyebrow: true,
     href: '/vintage-western-art',
-    description: 'Follow the curated commercial page if the visitor wants vintage western art or vintage cowboy art with clearer print-buying intent.',
+    description: 'Browse Western artwork with a vintage spirit, classic cowboy appeal, and clearer print-buying intent.',
     cta: 'Shop vintage western art -',
     accent: '#55504c',
   },
 ];
 
 export const featuredReadingTitle = 'Exploring Frontier Memory and Legend';
-export const featuredReadingIntro = 'These supporting pages explain why the Wild West can still operate as serious art language instead of mere nostalgia.';
+export const featuredReadingIntro = 'These related pages look at the Wild West from different angles: as art, story, history, and collectible Western imagery.';
 
 export const featuredReadingItems = [
   {
     title: 'Art of the West',
     href: '/Art-of-the-West',
-    description: 'Use the broader concept page to place Wild West art inside the larger field of Western art rather than inside a novelty silo.',
+    description: 'Explore how Wild West imagery fits within the larger tradition of Western art — from frontier memory and landscape to character, conflict, and myth.',
     eyebrow: 'Concept',
   },
   {
     title: 'Narrative Western Art',
     href: '/Narrative-Western-Art',
-    description: 'Follow the story-bearing branch where implication matters more than action alone.',
+    description: 'Follow the story-driven side of Western art, where a single image can suggest what happened before, what may happen next, and what remains unresolved.',
     eyebrow: 'Guide',
   },
   {
     title: 'Old Western Art',
     href: '/old-western-art',
-    description: 'See how old western art is being defined here as contemporary work that carries 1880s-era frontier story and atmosphere rather than antique-object collecting.',
+    description: 'See how old western art can mean more than antique prints or historical decoration. Here, it points to contemporary work shaped by 1800s frontier mood, story, and atmosphere.',
     eyebrow: 'Guide',
   },
   {
     title: 'Vintage Western Art',
     href: '/vintage-western-art',
-    description: 'Use the commercial route when the frontier mood is already right and the visitor wants a curated page of purchasable work.',
+    description: 'Browse Western images with an aged, timeless, or frontier-inspired feel — artwork suited for collectors looking for the mood of the Old West in finished prints.',
     eyebrow: 'Prints',
   },
 ];

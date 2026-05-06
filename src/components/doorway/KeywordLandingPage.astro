@@ -414,7 +414,6 @@ const safeHybridCarouselProps = hybridCarouselProps
               class:list={["exploration-card", path.featured && 'exploration-card--featured']}
               style={`--path-accent:${path.accent};`}
             >
-              {!path.hideEyebrow && <span class="exploration-card__eyebrow">{path.eyebrow}</span>}
               <h3 class="exploration-card__title">{path.title}</h3>
               <p class="exploration-card__body">{path.description}</p>
               <span class="exploration-card__cta">{path.cta}</span>
@@ -445,6 +444,15 @@ const safeHybridCarouselProps = hybridCarouselProps
                   {group.rows.map((row: KeywordLandingCollectionRow) => (
                     <section class="collection-row">
                       <div class="wallart-grid wallart-grid--preview-row">
+                        <a href={row.href} class="wallart-grid__see-more-bar" title={row.cta || 'Browse full collection'} aria-label={row.cta || 'Browse full collection'}>
+                          <span class="wallart-grid__see-more-glyph" aria-hidden="true">
+                            <svg viewBox="0 0 40 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M8 12L31 80L8 160" />
+                            </svg>
+                          </span>
+                          <span class="wallart-grid__see-more-label">Browse Full Collection</span>
+                        </a>
+
                         {row.items.map((item: KeywordLandingGridItem) => (
                           <a href={item.href || `${gridBasePath}/${item.id}`} class="wallart-grid__tile" title={item.title}>
                             <div class="wallart-grid__img-wrap">
@@ -463,15 +471,6 @@ const safeHybridCarouselProps = hybridCarouselProps
                             <p class="wallart-grid__title">{item.title}</p>
                           </a>
                         ))}
-
-                        <a href={row.href} class="wallart-grid__see-more-bar" title={row.cta || 'See more'} aria-label={row.cta || 'See more'}>
-                          <span class="wallart-grid__see-more-glyph" aria-hidden="true">
-                            <svg viewBox="0 0 40 160" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M8 12L31 80L8 160" />
-                            </svg>
-                          </span>
-                          <span class="wallart-grid__see-more-label">See More</span>
-                        </a>
                       </div>
                     </section>
                   ))}
@@ -967,14 +966,15 @@ const safeHybridCarouselProps = hybridCarouselProps
       margin: 0 0 0.6rem;
       font-size: 1.35rem;
       line-height: 1.15;
-      color: #241b15;
+      font-weight: 700;
+      color: #31261e;
       text-align: center;
     }
     .exploration-card:not(.exploration-card--featured) .exploration-card__title {
-      margin-top: 2rem;
+      margin-top: 0.2rem;
     }
     .exploration-card--featured .exploration-card__title {
-      margin-top: -0.95rem;
+      margin-top: 0;
       font-size: 1.7rem;
     }
     .exploration-card--featured .exploration-card__eyebrow {
@@ -1499,13 +1499,17 @@ const safeHybridCarouselProps = hybridCarouselProps
       .hero-carousel-section {
         margin-bottom: 0.35rem;
       }
-      .section-heading-wrap { margin: -4.85rem 0 3.9rem; }
-      .section-heading .page-title { font-size: 2.35rem; line-height: 1.28; }
+      .section-heading-wrap { margin: -2.85rem 0 3.9rem; }
+      .section-heading .page-title { font-size: 2.35rem; line-height: 1.58; }
       .section-heading .page-subtitle {
         font-size: 0.98rem;
         line-height: 1.42;
-        max-width: 42ch;
-        padding: 0 0.35rem;
+        max-width: 86%;
+        padding-left: 0;
+        padding-right: 0;
+        margin: 0.15rem auto 1.25rem;
+        text-align: justify;
+        text-justify: inter-word;
       }
       .term-section,
       .exploration-section,
@@ -1563,7 +1567,42 @@ const safeHybridCarouselProps = hybridCarouselProps
       .exploration-card--featured {
         min-height: unset;
         transform: none;
-        padding: 1rem 0.95rem;
+        padding: 0.82rem 0.78rem 0.72rem;
+      }
+      .exploration-card__eyebrow {
+        margin-bottom: 0.45rem;
+        padding: 0.24rem 0.62rem;
+        font-size: 0.63rem;
+      }
+      .exploration-card--featured .exploration-card__eyebrow {
+        width: auto;
+        min-width: 0;
+        max-width: 100%;
+        padding-left: 0.62rem;
+        padding-right: 0.62rem;
+        border-radius: 999px;
+        background: color-mix(in srgb, var(--path-accent) 14%, white);
+      }
+      .exploration-card__title {
+        margin: 0 0 0.35rem;
+        font-size: 1.02rem;
+        line-height: 1.22;
+      }
+      .exploration-card:not(.exploration-card--featured) .exploration-card__title {
+        margin-top: 0.05rem;
+      }
+      .exploration-card--featured .exploration-card__title {
+        margin-top: 0;
+        font-size: 1.16rem;
+      }
+      .exploration-card__body {
+        font-size: 0.9rem;
+        line-height: 1.46;
+      }
+      .exploration-card__cta {
+        margin-top: 0.55rem;
+        font-size: 0.74rem;
+        letter-spacing: 0.05em;
       }
       .exploration-card--featured { order: -1; }
       .collection-shell {
@@ -1591,22 +1630,27 @@ const safeHybridCarouselProps = hybridCarouselProps
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
       .wallart-grid__see-more-bar {
-        min-height: 7rem;
+        min-height: 2rem;
         grid-column: 1 / -1;
+        grid-row: 1;
+        border-radius: 10px;
+        padding: 0.22rem 0.65rem;
+        margin-bottom: 0.08rem;
+        justify-content: center;
+        background: linear-gradient(180deg, #75685b, #423b34);
+        box-shadow: inset 0 0 0 1px rgba(255,255,255,0.26), 0 4px 10px rgba(41, 30, 21, 0.08);
       }
       .wallart-grid__see-more-glyph {
-        width: 100%;
-        height: 100%;
-      }
-      .wallart-grid__see-more-glyph svg {
-        width: 4rem;
-        height: 78%;
+        display: none;
       }
       .wallart-grid__see-more-label {
-        inset: 0;
-        left: 0;
-        transform: none;
+        position: static;
+        opacity: 1;
         font-size: 0.62rem;
+        line-height: 1.15;
+        letter-spacing: 0.12em;
+        color: rgba(255, 249, 242, 0.98);
+        padding: 0;
       }
       .wallart-grid__tile {
         border-radius: 14px;
