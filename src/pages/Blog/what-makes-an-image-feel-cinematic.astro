@@ -4,8 +4,10 @@ export const prerender = true;
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
+import BlogGalleryPreviewStrip from "@/components/BlogGalleryPreviewStrip.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
 import { getBreadcrumbList, getStructuredData } from "@/components/utils/getStructuredData.ts";
+import { galleryData as westernNarrativesColorGallery } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs";
 
 import "@/styles/global.css";
 
@@ -16,9 +18,9 @@ const getProxySrc = (id: string, size: string) => `/img/${id}/${size}.jpg`;
 const getAbsoluteProxySrc = (id: string, size: string) => `https://www.k4studios.com/img/${id}/${size}.jpg`;
 
 const headerImage = {
-  id: "i-9BhX2Lj",
-  src: getProxySrc("i-9BhX2Lj", "l"),
-  alt: "Cinematic stillness shaped through tension and narrative presence"
+  id: "i-LL2Gp5r",
+  src: getProxySrc("i-LL2Gp5r", "l"),
+  alt: "Special Delivery, a cinematic Western narrative artwork with figures gathered before a halted night train"
 };
 
 const image1 = {
@@ -36,6 +38,15 @@ const image3 = {
   src: getProxySrc("i-gxMVNh3", "l"),
   alt: "Landscape with cinematic atmosphere and emotional direction"
 };
+
+const cinematicPreviewIds = ["i-LL2Gp5r", "i-9BhX2Lj", "i-DczpNpH", "i-gxMVNh3", "i-3SxncXS", "i-LCspRF4"];
+const cinematicPreviewImages = cinematicPreviewIds
+  .map((id) => westernNarrativesColorGallery.find((img: any) => img.id === id))
+  .filter(Boolean)
+  .map((img: any) => ({
+    ...img,
+    galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color",
+  }));
 
 const pageTitle = "What Makes an Image Feel Cinematic? | K4 Studios";
 const pageDescription = "Cinematic photography is not created by color grading alone. This guide explains how tension, implication, atmosphere, and framing make a still image feel cinematic.";
@@ -144,6 +155,22 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
         <p>This is why cinematic photography so often overlaps with <a href="/Blog/what-is-narrative-photography" style="color:#8b5a2b; text-decoration:underline;">narrative photography</a>. Both depend on the viewer sensing a larger story pressing around the frame.</p>
 
+        <aside class="cinematic-bridge" aria-label="Cinematic principles in Wayne Heim's artwork">
+          <p class="bridge-kicker">From Concept to Artwork</p>
+          <p>At K4 Studios, these cinematic principles are not treated as theory alone. Wayne Heim's <a href="/Western-Fine-Art-Photography">Western fine art photography</a> uses tension, painterly light, atmosphere, and unresolved narrative to create still images that feel like scenes from a larger story.</p>
+          <div class="bridge-links" aria-label="Explore cinematic artwork paths">
+            <a href="/cinematic-western-art">See the idea applied</a>
+            <a href="/Other/One-Image-Movie">Understand One-Image Movie&trade;</a>
+            <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West">Browse the finished work</a>
+          </div>
+        </aside>
+
+        <BlogGalleryPreviewStrip
+          images={cinematicPreviewImages}
+          limit={6}
+          label="Cinematic Western Art Preview"
+        />
+
         <div class="section-heading-with-line">
           <h2>The Core Conditions of Cinematic Presence</h2>
         </div>
@@ -167,6 +194,10 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         <p>A glance, a half-turn, a silence, a delayed gesture, the shape of light on a face, the space between two figures — all of these can create cinematic pressure without visible action.</p>
 
         <p>This is one reason images can feel like moving stories even when nothing in them literally moves. At K4 Studios, that kind of single-frame momentum is described through the <a href="/Other/One-Image-Movie" style="color:#8b5a2b; text-decoration:underline;">One-Image Movie™</a> idea.</p>
+
+        <aside class="one-image-callout">
+          <p><strong>One finished image, a larger unseen story.</strong> This is also the foundation of Wayne Heim's <a href="/Other/One-Image-Movie">One-Image Movie&trade;</a> approach: a single finished artwork built to suggest what happened before the frame and what may happen next.</p>
+        </aside>
 
         <div class="section-heading-with-line">
           <h2>What People Often Confuse With Cinematic</h2>
@@ -195,7 +226,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
               <img src={image1.src} alt={image1.alt} loading="lazy" />
             </a>
             <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
-              Tension held in stillness rather than action
+              Tension and unresolved story held in stillness rather than action
             </figcaption>
           </figure>
           <figure>
@@ -203,7 +234,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
               <img src={image2.src} alt={image2.alt} loading="lazy" />
             </a>
             <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
-              Atmosphere behaving like unresolved plot
+              Atmosphere and painterly light behaving like unresolved plot
             </figcaption>
           </figure>
           <figure>
@@ -211,10 +242,14 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
               <img src={image3.src} alt={image3.alt} loading="lazy" />
             </a>
             <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
-              Landscape as emotional direction, not just setting
+              Composition implying the before-and-after beyond the frame
             </figcaption>
           </figure>
         </div>
+
+        <p class="image-grid-cta">
+          <a href="/cinematic-western-art">View more cinematic Western art</a>
+        </p>
 
         <div class="section-heading-with-line">
           <h2>Why Cinematic Feeling Matters</h2>
@@ -230,18 +265,20 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
         <p>If you want to see how cinematic feeling operates inside still photography, start with the pages and galleries where story, atmosphere, and implication are treated as structural elements rather than embellishment.</p>
 
+        <p>For collectors, these are finished fine-art prints, not studies or examples - cinematic still images created as complete works of Western narrative art.</p>
+
         <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 2rem;">
           <li style="margin-bottom:0.75rem;">
-            <a href="/Other/One-Image-Movie" style="color:#8b5a2b; font-weight:600; text-decoration:underline;">One-Image Movie™</a> — The concept page for still images that carry the momentum of a larger story
+            <a href="/cinematic-western-art" style="color:#8b5a2b; font-weight:600; text-decoration:underline;">Cinematic Western Art</a> - See how atmosphere, implication, and framing create cinematic force in Wayne Heim's Western artwork
           </li>
           <li style="margin-bottom:0.75rem;">
-            <a href="/cinematic-western-art" style="color:#8b5a2b; text-decoration:underline;">Cinematic Western Art</a> — A concise guide to how atmosphere, implication, and framing create cinematic force in Western still images
+            <a href="/Other/One-Image-Movie" style="color:#8b5a2b; text-decoration:underline;">One-Image Movie&trade;</a> - The concept page for still images that carry the momentum of a larger story
           </li>
           <li style="margin-bottom:0.75rem;">
-            <a href="/Narrative-Western-Art" style="color:#8b5a2b; text-decoration:underline;">Narrative Western Art</a> — Where cinematic implication meets Western subject matter
+            <a href="/Narrative-Western-Art" style="color:#8b5a2b; text-decoration:underline;">Narrative Western Art</a> - Where cinematic implication meets Western subject matter
           </li>
           <li style="margin-bottom:0.75rem;">
-            <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History" style="color:#8b5a2b; text-decoration:underline;">Facing History</a> — Historically themed work built on atmosphere and consequence
+            <a href="/Western-Fine-Art-Photography" style="color:#8b5a2b; text-decoration:underline;">Western Fine Art Photography</a> - The broader collector-facing context for Wayne Heim's finished Western work
           </li>
         </ul>
       </article>
@@ -255,6 +292,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
   <style>
     .story-section { line-height: 1.7; }
     .story-block p { margin-bottom: 1rem; font-size: clamp(1rem, 2.5vw, 1.125rem); }
+    .story-block a { color: #8b5a2b; text-decoration: underline; }
     .story-block h2 {
       margin-top: 2.5rem;
       margin-bottom: 1rem;
@@ -274,9 +312,58 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
       width: 100%;
       height: clamp(220px, 34vw, 360px);
       object-fit: cover;
-      object-position: center 28%;
+      object-position: center 48%;
       border-radius: 12px;
       margin-top: 1rem;
+    }
+    .cinematic-bridge,
+    .one-image-callout {
+      margin: 2rem 0;
+      border-top: 1px solid rgba(139, 90, 43, 0.28);
+      border-bottom: 1px solid rgba(139, 90, 43, 0.18);
+      padding: 1.25rem 0;
+    }
+    .cinematic-bridge {
+      background: linear-gradient(90deg, rgba(139, 90, 43, 0.07), rgba(255, 255, 255, 0));
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    .bridge-kicker {
+      margin-bottom: 0.35rem !important;
+      color: #7a4d2b;
+      font-size: 0.8rem !important;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .bridge-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+    .bridge-links a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 2.5rem;
+      border: 1px solid rgba(139, 90, 43, 0.35);
+      border-radius: 6px;
+      padding: 0.55rem 0.8rem;
+      background: rgba(255, 255, 255, 0.74);
+      color: #6d3f22;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .bridge-links a:hover {
+      border-color: rgba(139, 0, 0, 0.45);
+      color: #8b0000;
+    }
+    .one-image-callout {
+      border-left: 3px solid #8b5a2b;
+      border-top: 0;
+      border-bottom: 0;
+      padding: 0.25rem 0 0.25rem 1rem;
+      color: #4a4038;
     }
     .example-images {
       display: grid;
@@ -290,6 +377,17 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
       aspect-ratio: 3 / 4;
       object-fit: cover;
       border-radius: 8px;
+    }
+    .image-grid-cta {
+      text-align: center;
+      margin: -0.5rem 0 2.25rem !important;
+    }
+    .image-grid-cta a {
+      display: inline-block;
+      color: #8b5a2b;
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 0.2em;
     }
     @media (max-width: 768px) {
       .example-images { grid-template-columns: 1fr; }
