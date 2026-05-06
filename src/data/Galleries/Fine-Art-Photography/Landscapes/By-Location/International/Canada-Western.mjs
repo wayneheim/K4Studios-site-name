@@ -24,7 +24,7 @@ export const galleryData = [
   {
     "id": "i-VJfbx5Z",
     "title": "Fantastic Places - International – Across Borders In Canada-Western",
-    "description": "Wayne Heim presents fantastic places in this International – Across Borders work depicting Canada-Western. Embodying International – Across Borders, painterly european landscapes, and international landscape photography, it's recommended for lovers of fantastic places. © Wayne Heim",
+    "description": "A sweeping panorama of the Canadian Rockies, shaped by layered peaks, alpine distance, and the grandeur of Western Canada. This traditional fine art landscape photograph brings Banff and Jasper country into a wide, contemplative view for collectors drawn to mountain wall art and international landscape photography.",
     "alt": "Geological Wonderment of the Canadian Rockies",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-VJfbx5Z/A",
     "keywords": [
@@ -49,7 +49,7 @@ export const galleryData = [
   {
     "id": "i-NQBsdSD",
     "title": "The Start of Winter in the Canadian Rockies",
-    "description": "The essence of the Canadian Rockies in fine art: Banff, Jasper, and Emerald Lake.",
+    "description": "Early winter settles over the Canadian Rockies in this traditional fine art landscape photograph, where snow, rock, and distant alpine light begin to quiet the scene. The image carries the rugged beauty of Banff and Jasper landscape photography, with the first signs of winter giving the mountains a restrained, timeless presence.",
     "alt": "Geological Wonderment of the Canadian Rockies",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-NQBsdSD/A",
     "keywords": [
@@ -89,7 +89,7 @@ export const galleryData = [
   {
     "id": "i-TVtxcrX",
     "title": "Black & White Photo of a Snow Covered Mountain Peak",
-    "description": "Fine art images of the Canadian Rockies with highlights from Banff, Jasper, and Emerald Lake.",
+    "description": "A snow-covered mountain peak rises in black and white, reducing the Canadian Rockies to form, texture, and tonal strength. This traditional fine art landscape photograph emphasizes the sculptural character of Western Canada's alpine country, creating a quiet mountain print rooted in structure and atmosphere.",
     "alt": "The Start of Winter in the Canadian Rockies",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-TVtxcrX/A",
     "keywords": [
@@ -129,7 +129,7 @@ export const galleryData = [
   {
     "id": "i-JrzzGDD",
     "title": "A Sunny Winter Day in the Canadian Rockies",
-    "description": "Fine art exploration of the Canadian Rockies, from Banff to Jasper and Emerald Lake.",
+    "description": "Sunlight breaks across a winter day in the Canadian Rockies, revealing snow, trees, and mountain distance with crisp alpine clarity. This traditional fine art landscape photograph captures the clean beauty of Banff and Jasper country, offering Western Canada wall art shaped by brightness, stillness, and scale.",
     "alt": "Black & White Photo of a Snow Covered Mountain Peak",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-JrzzGDD/A",
     "keywords": [
@@ -169,7 +169,7 @@ export const galleryData = [
   {
     "id": "i-rDTVGSF",
     "title": "Mountain Peaks Reflecting on a Crystal Clear Lake",
-    "description": "Artistic representations of the Canadian Rockies, highlighting Banff, Jasper, and Emerald Lake.",
+    "description": "Mountain peaks reflect across a crystal-clear lake in this Canadian Rockies fine art photograph, where water turns the landscape into a near-symmetrical meditation. The scene blends alpine grandeur, still reflection, and traditional fine art landscape photography for collectors drawn to quiet Western Canada landscape prints.",
     "alt": "A Sunny Winter Day in the Canadian Rockies",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-rDTVGSF/A",
     "keywords": [
@@ -209,7 +209,7 @@ export const galleryData = [
   {
     "id": "i-Wkmt5Jm",
     "title": "Pine Trees Along the Lake Edge",
-    "description": "The essence of the Canadian Rockies in fine art: Banff, Jasper, and Emerald Lake.",
+    "description": "Pine trees line the edge of a Canadian Rockies lake, giving the scene a grounded foreground against the larger pull of water and mountain distance. This traditional fine art landscape photograph balances forest, shoreline, and alpine atmosphere, making it a quiet piece of Western Canada wall art.",
     "alt": "Mountain Peaks Reflecting on a Crystal Clear Lake",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-Wkmt5Jm/A",
     "keywords": [
@@ -249,7 +249,7 @@ export const galleryData = [
   {
     "id": "i-WHdcCJt",
     "title": "Black & White Photo of a Weathered Mountain Peak",
-    "description": "The essence of the Canadian Rockies in fine art: Banff, Jasper, and Emerald Lake.",
+    "description": "A weathered mountain peak is rendered in black and white, emphasizing the carved surfaces and ancient weight of the Canadian Rockies. This traditional fine art landscape photograph strips the scene to rock, snow, and tone, creating a strong alpine print with a timeless Western Canada presence.",
     "alt": "Pine Trees Along the Lake Edge",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-WHdcCJt/A",
     "keywords": [
@@ -289,7 +289,7 @@ export const galleryData = [
   {
     "id": "i-BQzssgZ",
     "title": "A Flattened Mountain Peak in the Canadian Rockies",
-    "description": "Fine art landscape photography of the Canadian Rockies — Banff, Jasper, and the surrounding peaks. Wayne Heim captures the sculptural drama of weathered mountain summits and alpine light.",
+    "description": "A flattened mountain summit in the Canadian Rockies becomes a sculptural study of weather, stone, and alpine light. This traditional fine art landscape photograph captures the rugged geology of Banff and Jasper country, turning a weathered peak into quiet Western Canada mountain wall art.",
     "alt": "Black & White Photo of a Weathered Mountain Peak",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-BQzssgZ/A",
     "keywords": [
@@ -329,7 +329,7 @@ export const galleryData = [
   {
     "id": "i-gr9Wk8W",
     "title": "Parallel Mountain Peaks in the Canadian Rockies",
-    "description": "Fine art photography of the Canadian Rockies, featuring Banff, Jasper, and Emerald Lake.",
+    "description": "Parallel mountain peaks stretch across the Canadian Rockies in a wide alpine composition built on rhythm and distance. This traditional fine art landscape photograph emphasizes the layered structure of Western Canada's mountain country, offering a clean, expansive Banff and Jasper landscape print.",
     "alt": "A Flattened Mountain Peak in the Canadian Rockies",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-gr9Wk8W/A",
     "keywords": [
@@ -369,7 +369,7 @@ export const galleryData = [
   {
     "id": "i-xfBNqVW",
     "title": "The Sun Reflecting Through the Trees in Canada",
-    "description": "Stunning fine art photography showcasing the Canadian Rockies, including Banff, Jasper, and Emerald Lake.",
+    "description": "Sunlight filters through the trees in Western Canada, turning a forested mountain scene into a study of glow, shadow, and atmosphere. This traditional fine art landscape photograph brings a quieter note to Canadian Rockies photography, where the drama lives in light moving through the woods.",
     "alt": "Parallel Mountain Peaks in the Canadian Rockies",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-xfBNqVW/A",
     "keywords": [
@@ -409,7 +409,7 @@ export const galleryData = [
   {
     "id": "i-2KLWL8W",
     "title": "Black & White Photo of the Sun Illuminating Snow Covered Mountain Tops",
-    "description": "Fine art exploration of the Canadian Rockies, from Banff to Jasper and Emerald Lake.",
+    "description": "Sunlight touches snow-covered mountain tops in this black and white Canadian Rockies photograph, separating ridge, cloud, and alpine form with quiet precision. The image works as traditional fine art landscape photography, shaped by contrast, high mountain light, and the stark beauty of Western Canada.",
     "alt": "The Sun Reflecting Through the Trees in Canada",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-2KLWL8W/A",
     "keywords": [
@@ -449,7 +449,7 @@ export const galleryData = [
   {
     "id": "i-hFQ68vN",
     "title": "Mountain Shadows on the Glaciers",
-    "description": "Captivating images of the Canadian Rockies through fine art, featuring Banff, Jasper, and Emerald Lake.",
+    "description": "Mountain shadows move across glacier surfaces in this Canadian Rockies fine art photograph, revealing the scale and cold geometry of the alpine landscape. This traditional fine art landscape print captures Banff and Jasper country through light, shadow, ice, and the slow drama of high elevation.",
     "alt": "Black & White Photo of the Sun Illuminating Snow Covered Mountain Tops",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-hFQ68vN/A",
     "keywords": [
@@ -489,7 +489,7 @@ export const galleryData = [
   {
     "id": "i-qf3vXpX",
     "title": "Sunwapta Falls at Night",
-    "description": "The essence of the Canadian Rockies in fine art: Banff, Jasper, and Emerald Lake.",
+    "description": "Sunwapta Falls appears at night as water, rock, and darkness gather into a moody Canadian Rockies landscape. This traditional fine art landscape photograph brings Jasper National Park into a quieter register, creating Western Canada wall art shaped by moving water and nocturnal atmosphere.",
     "alt": "Mountain Shadows on the Glaciers",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-qf3vXpX/A",
     "keywords": [
@@ -529,7 +529,7 @@ export const galleryData = [
   {
     "id": "i-BHzqrcT",
     "title": "Illuminated Pine Trees at Sunwapta Falls",
-    "description": "Landscape photography of the stunning Canadian Rockies, including Banff, Jasper, and Emerald Lake.",
+    "description": "Illuminated pine trees rise near Sunwapta Falls, their forms catching light against the darker mood of the Canadian Rockies. This traditional fine art landscape photograph blends forest, water, and alpine night into a distinctive Jasper National Park wall art image.",
     "alt": "Sunwapta Falls at Night",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-BHzqrcT/A",
     "keywords": [
@@ -569,7 +569,7 @@ export const galleryData = [
   {
     "id": "i-g6pX48d",
     "title": "The Milky Way Over Sunwapta Falls",
-    "description": "Exploring the Canadian Rockies through fine art: Banff, Jasper, and Emerald Lake.",
+    "description": "The Milky Way arcs above Sunwapta Falls in this Canadian Rockies night landscape, joining alpine water, forest, and stars in one quiet frame. This traditional fine art landscape photograph expands Jasper National Park photography into the sky, creating Western Canada wall art with a sense of wonder and scale.",
     "alt": "Illuminated Pine Trees at Sunwapta Falls",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-g6pX48d/A",
     "keywords": [
@@ -609,7 +609,7 @@ export const galleryData = [
   {
     "id": "i-wGPKrn9",
     "title": "A Rocky Water's Edge with the Canadian Rockies in the Distance",
-    "description": "Landscape photography of the stunning Canadian Rockies, including Banff, Jasper, and Emerald Lake.",
+    "description": "A rocky water's edge leads the eye toward the Canadian Rockies in the distance, joining shoreline texture with broad alpine atmosphere. This traditional fine art landscape photograph captures Western Canada through stone, water, and mountain scale, suited for collectors of quiet Canadian Rockies wall art.",
     "alt": "The Milky Way Over Sunwapta Falls",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-wGPKrn9/A",
     "keywords": [
@@ -649,7 +649,7 @@ export const galleryData = [
   {
     "id": "i-tV4GpBb",
     "title": "Black & White Photo of the Road Through the Canadian Rockies",
-    "description": "Fine art exploration of the Canadian Rockies, from Banff to Jasper and Emerald Lake.",
+    "description": "A road cuts through the Canadian Rockies in black and white, becoming a visual path into the vastness of Western Canada. This traditional fine art landscape photograph uses road, mountain, and tonal contrast to suggest movement, solitude, and the long pull of Banff and Jasper country.",
     "alt": "A Rocky Water's Edge with the Canadian Rockies in the Distance",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-tV4GpBb/A",
     "keywords": [
@@ -689,7 +689,7 @@ export const galleryData = [
   {
     "id": "i-VWxTZH4",
     "title": "A Mountain Peak Reflecting on Emerald Lake",
-    "description": "Exploring the Canadian Rockies through fine art: Banff, Jasper, and Emerald Lake.",
+    "description": "A mountain peak reflects on Emerald Lake, where still water turns the Canadian Rockies into a doubled landscape of stone and color. This traditional fine art landscape photograph is rooted in Yoho National Park, offering Emerald Lake wall art shaped by symmetry, clarity, and alpine calm.",
     "alt": "Black & White Photo of the Road Through the Canadian Rockies",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-VWxTZH4/A",
     "keywords": [
@@ -729,7 +729,7 @@ export const galleryData = [
   {
     "id": "i-Nvn4r5N",
     "title": "Sunset on Emerald Lake and the Lodge",
-    "description": "Landscape photography of the stunning Canadian Rockies, including Banff, Jasper, and Emerald Lake.",
+    "description": "Sunset settles over Emerald Lake and its lodge, warming the Canadian Rockies with quiet evening color. This traditional fine art landscape photograph combines mountain reflection, lodge presence, and alpine atmosphere into a refined Emerald Lake wall art print from Western Canada.",
     "alt": "A Mountain Peak Reflecting on Emerald Lake",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-Nvn4r5N/A",
     "keywords": [
@@ -769,7 +769,7 @@ export const galleryData = [
   {
     "id": "i-86Nsnnc",
     "title": "Landslide and Mountain Peaks Reflecting on Emerald Lake",
-    "description": "Stunning fine art photography showcasing the Canadian Rockies, including Banff, Jasper, and Emerald Lake.",
+    "description": "Landslide scars and mountain peaks reflect across Emerald Lake, giving this Canadian Rockies photograph both beauty and geological force. The image works as traditional fine art landscape photography, balancing serene reflection with the rugged evidence of time and movement in Yoho National Park.",
     "alt": "Sunset on Emerald Lake and the Lodge",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-86Nsnnc/A",
     "keywords": [
@@ -809,7 +809,7 @@ export const galleryData = [
   {
     "id": "i-9FJgtJJ",
     "title": "A Moonlit Evening at Emerald Lake Lodge",
-    "description": "Breathtaking fine art photography of the Canadian Rockies, encompassing Banff, Jasper, and Emerald Lake.",
+    "description": "Moonlight softens Emerald Lake Lodge and the surrounding Canadian Rockies, turning the evening scene into a quiet alpine memory. This traditional fine art landscape photograph blends water, lodge, mountain, and night atmosphere into elegant Emerald Lake wall art.",
     "alt": "Landslide and Mountain Peaks Reflecting on Emerald Lake",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-9FJgtJJ/A",
     "keywords": [
@@ -849,7 +849,7 @@ export const galleryData = [
   {
     "id": "i-3LqFBdB",
     "title": "Black & White Photo of Mountain Peaks on a Foggy Morning",
-    "description": "Artistic views of the Canadian Rockies showcasing Banff, Jasper, and Emerald Lake.",
+    "description": "Fog gathers around mountain peaks in this black and white Canadian Rockies photograph, reducing the scene to tone, mist, and alpine silhouette. This traditional fine art landscape print captures the quieter side of Banff and Jasper country, where atmosphere carries as much weight as the mountains themselves.",
     "alt": "A Moonlit Evening at Emerald Lake Lodge",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-3LqFBdB/A",
     "keywords": [
@@ -889,7 +889,7 @@ export const galleryData = [
   {
     "id": "i-dBd5pHx",
     "title": "Morning Fog at Emerald Lake",
-    "description": "Landscape photography of the stunning Canadian Rockies, including Banff, Jasper, and Emerald Lake.",
+    "description": "Morning fog drifts across Emerald Lake, softening the Canadian Rockies into layers of water, trees, and mist. This traditional fine art landscape photograph from Yoho National Park creates Emerald Lake wall art built on quiet atmosphere, reflection, and early light.",
     "alt": "Black & White Photo of Mountain Peaks on a Foggy Morning",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-dBd5pHx/A",
     "keywords": [
@@ -929,7 +929,7 @@ export const galleryData = [
   {
     "id": "i-MWfpZWw",
     "title": "Pine Trees Reflecting on Emerald Lake",
-    "description": "The essence of the Canadian Rockies in fine art: Banff, Jasper, and Emerald Lake.",
+    "description": "Pine trees reflect on Emerald Lake in this traditional fine art landscape photograph, where water and forest settle into a calm Canadian Rockies composition. The image offers a quieter view of Western Canada, shaped by reflection, alpine stillness, and the soft geometry of the shoreline.",
     "alt": "Morning Fog at Emerald Lake",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-MWfpZWw/A",
     "keywords": [
@@ -969,7 +969,7 @@ export const galleryData = [
   {
     "id": "i-G8SjQHw",
     "title": "Fog Rolling in Over the Pier of Emerald Lake",
-    "description": "Fine art captures of the Canadian Rockies featuring Banff, Jasper, and Emerald Lake.",
+    "description": "Fog rolls over the pier at Emerald Lake, drawing the Canadian Rockies into a scene of water, wood, and soft morning atmosphere. This traditional fine art landscape photograph creates Emerald Lake wall art with a restrained, painterly quiet and a strong sense of place.",
     "alt": "Pine Trees Reflecting on Emerald Lake",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-G8SjQHw/A",
     "keywords": [
@@ -1009,7 +1009,7 @@ export const galleryData = [
   {
     "id": "i-ChMPCf2",
     "title": "Black & White Photo of a Foggy Morning at Emerald Lake",
-    "description": "A black and white fine art landscape photograph of fog drifting over the pier at Emerald Lake in the Canadian Rockies.",
+    "description": "Fog drifts over the pier at Emerald Lake in black and white, reducing the Canadian Rockies to mood, shape, and tonal restraint. This traditional fine art landscape photograph turns Yoho National Park into a quiet study of mist, water, and alpine silence.",
     "alt": "Fog Rolling in Over the Pier of Emerald Lake",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-ChMPCf2/A",
     "keywords": [
@@ -1049,7 +1049,7 @@ export const galleryData = [
   {
     "id": "i-XQmGrxd",
     "title": "The Sun Breaking Through a Foggy Morning",
-    "description": "Immersive landscape photography of the Canadian Rockies: Banff, Jasper, and Emerald Lake.",
+    "description": "The sun breaks through a foggy morning at Emerald Lake, lifting the Canadian Rockies out of mist and shadow. This traditional fine art landscape photograph captures the moment when light begins to claim the scene, creating Western Canada wall art with atmosphere and quiet drama.",
     "alt": "Black & White Photo of a Foggy Morning at Emerald Lake",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-XQmGrxd/A",
     "keywords": [
@@ -1089,7 +1089,7 @@ export const galleryData = [
   {
     "id": "i-d4pjWhk",
     "title": "Morning Fog Sweeping Across Emerald Lake",
-    "description": "The majesty of the Canadian Rockies in fine art, including Banff, Jasper, and Emerald Lake.",
+    "description": "Morning fog sweeps across Emerald Lake, moving through the trees and water like a veil over the Canadian Rockies. This traditional fine art landscape photograph from Yoho National Park emphasizes alpine stillness, soft weather, and the emotional pull of misty mountain light.",
     "alt": "The Sun Breaking Through a Foggy Morning",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-d4pjWhk/A",
     "keywords": [
@@ -1129,7 +1129,7 @@ export const galleryData = [
   {
     "id": "i-ScxVg7H",
     "title": "Sunrise at Emerald Lake Lodge in British Columbia",
-    "description": "Stunning fine art photography showcasing the Canadian Rockies, including Banff, Jasper, and Emerald Lake.",
+    "description": "Sunrise reaches Emerald Lake Lodge in British Columbia, warming the Canadian Rockies with early light and reflection. This traditional fine art landscape photograph brings lodge, water, forest, and mountain together as refined Emerald Lake wall art from Western Canada.",
     "alt": "Morning Fog Sweeping Across Emerald Lake",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-ScxVg7H/A",
     "keywords": [
@@ -1169,7 +1169,7 @@ export const galleryData = [
   {
     "id": "i-Mh8j6BG",
     "title": "A Single Canoe Sitting in Emerald Lake",
-    "description": "Landscape photography of the stunning Canadian Rockies, including Banff, Jasper, and Emerald Lake.",
+    "description": "A single canoe rests on Emerald Lake, giving the Canadian Rockies a quiet human scale without disturbing the alpine stillness. This traditional fine art landscape photograph from Yoho National Park blends water, mountain, and solitude into a simple, memorable Emerald Lake wall art image.",
     "alt": "Sunrise at Emerald Lake Lodge in British Columbia",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-Mh8j6BG/A",
     "keywords": [
@@ -1209,7 +1209,7 @@ export const galleryData = [
   {
     "id": "i-w4dqJMm",
     "title": "The Canadian Rockies Surrounding Emerald Lake",
-    "description": "Stunning fine art photography showcasing the Canadian Rockies, including Banff, Jasper, and Emerald Lake.",
+    "description": "The Canadian Rockies surround Emerald Lake in a broad alpine view, where water, trees, and mountains gather into a classic Western Canada landscape. This traditional fine art landscape photograph captures the grandeur of Yoho National Park with clarity, balance, and calm.",
     "alt": "A Single Canoe Sitting in Emerald Lake",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-w4dqJMm/A",
     "keywords": [
@@ -1249,7 +1249,7 @@ export const galleryData = [
   {
     "id": "i-MmGfvfX",
     "title": "The Canadian Rockies from the Edge of Emerald Lake",
-    "description": "Fine art captures of the Canadian Rockies featuring Banff, Jasper, and Emerald Lake.",
+    "description": "From the edge of Emerald Lake, the Canadian Rockies rise in layered distance, giving the shoreline a powerful sense of scale. This traditional fine art landscape photograph turns Yoho National Park into expansive Emerald Lake wall art, shaped by mountain form, water, and alpine air.",
     "alt": "The Canadian Rockies Surrounding Emerald Lake",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-MmGfvfX/A",
     "keywords": [
@@ -1289,7 +1289,7 @@ export const galleryData = [
   {
     "id": "i-WM6RF9v",
     "title": "Wood Adrift on Emerald Lake in Yoho National Park",
-    "description": "Landscape photography of the stunning Canadian Rockies, including Banff, Jasper, and Emerald Lake.",
+    "description": "Driftwood rests along Emerald Lake in Yoho National Park, adding texture and quiet foreground detail to the Canadian Rockies beyond. This traditional fine art landscape photograph balances wood, water, and mountain reflection, creating Western Canada wall art with a natural, grounded presence.",
     "alt": "The Canadian Rockies from the Edge of Emerald Lake",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-WM6RF9v/A",
     "keywords": [
@@ -1329,7 +1329,7 @@ export const galleryData = [
   {
     "id": "i-VcX798j",
     "title": "The Mountain Peaks and Clouds Reflecting on Emerald Lake",
-    "description": "Fine art exploration of the Canadian Rockies, from Banff to Jasper and Emerald Lake.",
+    "description": "Mountain peaks and clouds reflect across Emerald Lake in this wide Canadian Rockies landscape, turning sky and water into a layered mirror. This traditional fine art landscape photograph from Yoho National Park offers Emerald Lake wall art shaped by reflection, scale, and alpine stillness.",
     "alt": "Wood Adrift on Emerald Lake in Yoho National Park",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-VcX798j/A",
     "keywords": [
@@ -1369,7 +1369,7 @@ export const galleryData = [
   {
     "id": "i-vfxQXDw",
     "title": "Evidence of Landslides on the Mountains",
-    "description": "Breathtaking fine art photography of the Canadian Rockies, encompassing Banff, Jasper, and Emerald Lake.",
+    "description": "Landslide evidence marks the mountains above Emerald Lake, revealing the raw geological character of the Canadian Rockies. This traditional fine art landscape photograph balances beauty with force, creating Western Canada wall art rooted in alpine structure, weather, and time.",
     "alt": "The Mountain Peaks and Clouds Reflecting on Emerald Lake",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-vfxQXDw/A",
     "keywords": [
@@ -1409,7 +1409,7 @@ export const galleryData = [
   {
     "id": "i-P6dZbqC",
     "title": "Cargo Train Riding Along the River's Edge",
-    "description": "Immersive landscape photography of the Canadian Rockies: Banff, Jasper, and Emerald Lake.",
+    "description": "A cargo train moves along the river's edge beneath the Canadian Rockies, placing human industry within the scale of Western Canada's landscape. This traditional fine art landscape photograph blends rail, water, and mountain distance into a Banff and Jasper region image with movement and story.",
     "alt": "Evidence of Landslides on the Mountains",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-P6dZbqC/A",
     "keywords": [
@@ -1449,7 +1449,7 @@ export const galleryData = [
   {
     "id": "i-h8WQFDs",
     "title": "Standing on the Ice-Covered Moraine Lake in Banff National Park",
-    "description": "Breathtaking fine art photography of the Canadian Rockies, encompassing Banff, Jasper, and Emerald Lake.",
+    "description": "Standing on ice-covered Moraine Lake in Banff National Park, the viewer is placed inside the cold stillness of the Canadian Rockies. This traditional fine art landscape photograph captures frozen water, mountain presence, and the stark beauty of Western Canada in early winter.",
     "alt": "Cargo Train Riding Along the River's Edge",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-h8WQFDs/A",
     "keywords": [
@@ -1489,7 +1489,7 @@ export const galleryData = [
   {
     "id": "i-NJ5gGw7",
     "title": "Early Winter Snow Covering the Wild Grass",
-    "description": "The majesty of the Canadian Rockies in fine art, including Banff, Jasper, and Emerald Lake.",
+    "description": "Early winter snow covers the wild grass in the Canadian Rockies, quieting the foreground beneath a larger alpine world. This traditional fine art landscape photograph from Western Canada captures the season's first hush, blending grasses, snow, and mountain atmosphere into understated wall art.",
     "alt": "Standing on the Ice-Covered Moraine Lake in Banff National Park",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-NJ5gGw7/A",
     "keywords": [

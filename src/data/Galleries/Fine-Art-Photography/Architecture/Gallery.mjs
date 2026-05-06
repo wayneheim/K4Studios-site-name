@@ -25,7 +25,7 @@ export const galleryData = [
   {
     "id": "i-fszvgmq",
     "title": "Front Door - Take a Seat",
-    "description": "Fine art photograph of a rustic Venetian doorway with green shutters, weathered stucco walls, and three mismatched chairs — a classic quiet street scene in Venice, Italy. Captured in natural light, this architectural detail image blends rich textures with the charm of everyday Italian life. Part of Wayne Heim’s Architecture & Travel series, this piece celebrates historic European design, Venetian color palettes, and painterly storytelling through composition.",
+    "description": "A quiet Venetian doorway becomes a study in fine art architecture photography, with green shutters, weathered stucco, mismatched chairs, and flower boxes holding the rhythm of everyday Italian life. The image blends rustic European texture, architectural detail, and painterly travel photography into a scene that feels lived in rather than staged.",
     "alt": "Photograph of a rustic Venetian front door with three mismatched chairs, green shutters, and potted flowers on the windowsill.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-fszvgmq/3/MT6xBV59M4CCW9kmG9mck2sDR6MGxhMQX3jGQ7ppP/XL/P1010060-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-fszvgmq/3/MT6xBV59M4CCW9kmG9mck2sDR6MGxhMQX3jGQ7ppP/XL/P1010060-XL.jpg",
@@ -76,7 +76,7 @@ export const galleryData = [
   {
     "id": "i-fsmXzLW",
     "title": "Quiet Between the Boats",
-    "description": "Painterly fine art photograph of a Venetian canal lined with weathered buildings, blooming window boxes, and moored boats. Captured in natural light and rich detail, this image highlights the timeless charm of Venice’s architecture and waterways. Part of Wayne Heim’s Fine Art Architecture collection, it blends travel photography, European texture, and classical beauty for collectors of Italy-inspired wall art.",
+    "description": "This Venetian canal scene turns moored boats, flowered windows, and time-worn facades into architectural fine art photography. The water, brick, shutters, and soft color create a layered portrait of Venice, shaped for collectors drawn to European architecture wall art and quiet travel photography.",
     "alt": "Color photograph of a Venetian canal with old brick buildings, flower boxes, and small boats moored at the water’s edge.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-fsmXzLW/3/NMKw2LqhC7SGBFFSmJdJXs53gfnCczXGgGcj8P3dr/XL/P1000824-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-fsmXzLW/3/NMKw2LqhC7SGBFFSmJdJXs53gfnCczXGgGcj8P3dr/XL/P1000824-XL.jpg",
@@ -111,7 +111,7 @@ export const galleryData = [
   {
     "id": "i-kdkL5WG",
     "title": "Out to Dry",
-    "description": "Fine art photograph of a colorful laundry line strung between Venetian apartments, with bold pinks, purples, and whites fluttering against terracotta walls and a bright blue sky. Captured in Murano or Burano, Italy, this piece from Wayne Heim’s Architecture & Travel series celebrates everyday life, color, and the architectural charm of historic Italian island towns. Ideal for collectors of painterly street photography, Mediterranean textures, or modern European wall art.",
+    "description": "A bright laundry line stretches between Venetian buildings, turning domestic color into fine art architecture photography. Fabric, balconies, terracotta walls, and blue sky work together as a painterly study of everyday European street life, ideal for collectors of travel architecture photography and Mediterranean wall art.",
     "alt": "Colorful laundry hangs on a clothesline between traditional Venetian buildings, fluttering against a bright blue sky.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-kdkL5WG/3/LPX7sxmfhz6dJQDQqL5NshLqqPg4d3kKVJQkPG6MV/XL/P1010018%20%281%29-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-kdkL5WG/3/LPX7sxmfhz6dJQDQqL5NshLqqPg4d3kKVJQkPG6MV/XL/P1010018%20%281%29-XL.jpg",
@@ -142,7 +142,7 @@ export const galleryData = [
   {
     "id": "i-d9wMKtJ",
     "title": "Rundown",
-    "description": "Fine art photograph of a rustic waterfront building on Burano, near Venice, Italy. Cracked plaster, faded brickwork, and a working boat in the canal capture the authentic character of Venetian island life. This painterly architectural study by Wayne Heim highlights the charm of weathered textures, saltwater patina, and everyday waterfront scenes in Italy’s historic lagoon. A perfect wall art print for collectors of European architecture, rustic travel photography, or Mediterranean coastal imagery.",
+    "description": "This weathered Burano waterfront building carries the honest beauty of salt, plaster, brick, and workaday canal life. As rustic architectural wall art, the image blends Venetian island character with fine art architecture photography, preserving the textures and color of a place shaped by water and time.",
     "alt": "Weathered waterfront building with faded stucco, brick, and a blue boat in a Burano canal near Venice, Italy.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-d9wMKtJ/3/NKZQ6RhTCD4BTMKxDqrXw97qqjBfLQkpn4GT7N8KR/XL/P1010038-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-d9wMKtJ/3/NKZQ6RhTCD4BTMKxDqrXw97qqjBfLQkpn4GT7N8KR/XL/P1010038-XL.jpg",
@@ -173,7 +173,7 @@ export const galleryData = [
   {
     "id": "i-QkG3vmv",
     "title": "Dome and Windows ",
-    "description": "Fine art architectural photograph of the dome interior at Les Invalides, Napoleon’s Tomb, in Paris, France. This richly detailed image by Wayne Heim captures gilded ornament, religious frescos, and the dramatic interplay of light streaming through the windows of the historic dome. A striking piece of European architecture photography, perfect for collectors of fine art prints featuring cathedrals, Paris monuments, or classical interiors.",
+    "description": "The dome of Les Invalides rises in gilded rhythm, transforming Napoleon's Tomb into architectural fine art photography. Fresco, window light, gold ornament, and Baroque structure combine in a dramatic Paris interior study for collectors of European architecture wall art and historic architectural prints.",
     "alt": "Interior dome of Les Invalides in Paris, showing gilded ribs, painted frescos, and arched windows with natural light.",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-QkG3vmv/4/Kj4mjtBf3tDZZwprL2rZcqMVXn6kkWLQT5sr3XSzP/XL/_IMG3022-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-QkG3vmv/4/Kj4mjtBf3tDZZwprL2rZcqMVXn6kkWLQT5sr3XSzP/XL/_IMG3022-XL.jpg",
@@ -204,7 +204,7 @@ export const galleryData = [
   {
     "id": "i-3R8rc7C",
     "title": "Strasbourg - Canal at Sunset",
-    "description": "Fine art photograph of Strasbourg’s historic Old Town, featuring colorful half-timbered buildings along the canal in Alsace, France. Captured at sunset by Wayne Heim, this painterly scene highlights warm reflections, European architecture, and the timeless charm of Petite France. A perfect wall art print for collectors of French travel photography, romantic European cityscapes, and fine art architecture images.",
+    "description": "Strasbourg's canal-side buildings glow at sunset in this fine art architecture photograph from Alsace, France. Half-timbered facades, warm reflections, and the quiet charm of Petite France create a painterly European cityscape for collectors of historic architecture photography and romantic travel wall art.",
     "alt": "Colorful canal-side buildings in Strasbourg, Alsace, France, reflected in the water at sunset.",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3R8rc7C/5/KHWWRK86KRnzZkQxB5wVQCzHRwvncXtjgMrM9TFwR/XL/_IMG2241-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3R8rc7C/5/KHWWRK86KRnzZkQxB5wVQCzHRwvncXtjgMrM9TFwR/XL/_IMG2241-XL.jpg",
@@ -235,7 +235,7 @@ export const galleryData = [
   {
     "id": "i-thtMmjm",
     "title": "Hotel de Ville",
-    "description": "Fine art photograph of the Hôtel de Ville in Paris, France, capturing the ornate Renaissance Revival façade of the city’s historic town hall. Wayne Heim’s image highlights the grand scale, intricate stonework, and dramatic sky, showcasing one of Paris’s most iconic landmarks. Perfect wall art for collectors of European architecture photography, Parisian monuments, and classical cityscapes.",
+    "description": "The Hotel de Ville in Paris stands as a grand example of European architecture wall art, with carved stone, Renaissance Revival detail, and a dramatic sky giving the facade weight and presence. This architectural fine art photograph captures both the civic scale and ornamental beauty of one of Paris's landmark buildings.",
     "alt": "Grand façade of the Hôtel de Ville in Paris, showing ornate Renaissance Revival architecture under a dramatic sky.",
     "src": "https://photos.smugmug.com/photos/i-thtMmjm/4/L2gc8zQWh8f39rVvWH2g5zV5XXGcndBbxWqp77QJZ/XL/i-thtMmjm-XL.jpg",
     "srcXL": "https://photos.smugmug.com/photos/i-thtMmjm/4/L2gc8zQWh8f39rVvWH2g5zV5XXGcndBbxWqp77QJZ/XL/i-thtMmjm-XL.jpg",
@@ -265,7 +265,7 @@ export const galleryData = [
   {
     "id": "i-XV5CXk6",
     "title": "Lone Boat, Burano",
-    "description": "Fine art photograph of a small blue boat tied along a quiet canal in Burano, Italy. Captured with painterly light and colorful architecture, Wayne Heim’s image highlights the rustic beauty and charm of Venetian island life. Perfect wall art for collectors of Italy photography, Burano canal scenes, and European coastal architecture.",
+    "description": "A lone blue boat rests along a Burano canal, framed by weathered walls, trees, and reflected color. This fine art architecture photograph blends Venetian island life with rustic European texture, creating quiet travel architecture wall art rooted in stillness, color, and place.",
     "alt": "Blue boat tied to a canal beside rustic buildings and trees in Burano, Italy.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-XV5CXk6/3/NMk5pPrgtjDB84Tsz2rsGWtGhPKtcpCkmdMxzFzw5/XL/P1010052-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-XV5CXk6/3/NMk5pPrgtjDB84Tsz2rsGWtGhPKtcpCkmdMxzFzw5/XL/P1010052-XL.jpg",
@@ -296,7 +296,7 @@ export const galleryData = [
   {
     "id": "i-pDP765B",
     "title": "Bed Time",
-    "description": "Fine art photograph of a rustic log cabin bedroom in the Smoky Mountains, featuring a handmade quilt, wooden bed, and vintage cradle. Wayne Heim’s image captures the warm light and timeless atmosphere of Appalachian pioneer life. Ideal wall art for collectors of historical interiors, rustic Americana, and cabin photography.",
+    "description": "This rustic log cabin bedroom becomes a piece of historic architecture photography, with a handmade quilt, wooden bed, cradle, and window light preserving the feel of Appalachian pioneer life. The image works as architectural fine art photography for collectors drawn to early American interiors, cabin history, and rustic wall art.",
     "alt": "Rustic log cabin bedroom with a wooden bed, handmade quilt, and cradle by the window.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Other-Stuff/n-HwTHD/Still-Lifes/i-pDP765B/4/LdwV5fH969Tc6XjgQQnzQmnZ9FsF5zkpp7k3H8rHS/XL/_IGP1778-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Other-Stuff/n-HwTHD/Still-Lifes/i-pDP765B/4/LdwV5fH969Tc6XjgQQnzQmnZ9FsF5zkpp7k3H8rHS/XL/_IGP1778-XL.jpg",
@@ -326,7 +326,7 @@ export const galleryData = [
   {
     "id": "i-VX7fW9d",
     "title": "Eiffel Tower in Sepia",
-    "description": "Sepia fine art photograph of the Eiffel Tower in Paris, France. Captured in a vintage style with warm tones, this image by Wayne Heim transforms the iconic landmark into a timeless study of light, structure, and history. Perfect wall art for collectors of Paris photography, Eiffel Tower prints, and European architectural fine art.",
+    "description": "The Eiffel Tower is rendered in warm sepia as a timeless study of structure, memory, and Parisian landmark design. This architectural fine art photograph softens iron into atmosphere, creating European architecture wall art with the feel of vintage travel photography and pictorialist restraint.",
     "alt": "Sepia-toned photograph of the Eiffel Tower in Paris, viewed from below.",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-VX7fW9d/3/L364qQ7RKxtVtpSpwXXF5wdkxRHz2rkBRNgRX9Txq/XL/_IMG2276-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-VX7fW9d/3/L364qQ7RKxtVtpSpwXXF5wdkxRHz2rkBRNgRX9Txq/XL/_IMG2276-XL.jpg",
@@ -356,7 +356,7 @@ export const galleryData = [
   {
     "id": "i-DRBBHkV",
     "title": "Support",
-    "description": "Sepia fine art photograph of the Eiffel Tower’s support structure in Paris, France. Captured in close detail by Wayne Heim, this image emphasizes the intricate ironwork and strong symmetry of the tower’s design. The warm sepia tones highlight the patterns and architectural harmony, transforming this iconic landmark into an abstract study of rhythm and form. Perfect wall art for collectors of Paris architecture, Eiffel Tower photography, and structural fine art.",
+    "description": "A close view of the Eiffel Tower's support structure turns ironwork, symmetry, and riveted engineering into architectural fine art photography. The sepia tone emphasizes rhythm and design, making this Paris landmark image a strong structural study for collectors of European architecture wall art.",
     "alt": "Sepia-toned close-up photograph of the Eiffel Tower’s iron support structure viewed from below.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-DRBBHkV/3/Lmpw38rLvXht5v7kRSMqT45grtx8McnngH9mCgqMF/XL/_IMG2283-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-DRBBHkV/3/Lmpw38rLvXht5v7kRSMqT45grtx8McnngH9mCgqMF/XL/_IMG2283-XL.jpg",
@@ -385,7 +385,7 @@ export const galleryData = [
   {
     "id": "i-VbsJ838",
     "title": "Bored - Notre Dame Gargoyle",
-    "description": "Fine art photograph of a gargoyle atop the historic Notre Dame Cathedral in Paris, France. Captured by Wayne Heim, this image shows the iconic Gothic sculpture gazing over the rooftops of Paris with a contemplative, almost humorous expression. Presented in rich detail, it blends architecture, history, and personality, making it an ideal artwork for collectors of Paris photography, European landmarks, and Gothic architectural art.",
+    "description": "A Notre Dame gargoyle watches over the rooftops of Paris in this historic architecture photograph from before the cathedral fire. Gothic sculpture, stone detail, and human-like expression give the image both documentary value and fine art presence, making it a distinctive piece of European architectural wall art.",
     "alt": "Notre Dame gargoyle overlooking Paris rooftops with a contemplative expression.",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-VbsJ838/4/NTvMZNv86vcdSRBVwTMH6Sx8FxQx9hMFB5qzvk5wP/XL/_IMG2540-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-VbsJ838/4/NTvMZNv86vcdSRBVwTMH6Sx8FxQx9hMFB5qzvk5wP/XL/_IMG2540-XL.jpg",
@@ -415,7 +415,7 @@ export const galleryData = [
   {
     "id": "i-cGdLT5v",
     "title": "Italian Church   Photography by Wayne Heim",
-    "description": "Fine art landscape & architectural photography of the Alps, Venice, Murano and Burano, Italy.",
+    "description": "This Italian church scene belongs to the tradition of fine art architecture photography, where stone, faith, light, and European setting come together as more than a travel record. The image emphasizes historic structure, quiet atmosphere, and the enduring visual language of Italian architectural design.",
     "alt": "Bored - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-cGdLT5v/3/KZWWGVWGDQqJc2GnhjC48PV9FgVNpXVBNhr7FdZfT/XL/P1000879-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-cGdLT5v/3/KZWWGVWGDQqJc2GnhjC48PV9FgVNpXVBNhr7FdZfT/XL/P1000879-2-XL.jpg",
@@ -462,7 +462,7 @@ export const galleryData = [
   {
     "id": "i-JxKNknz",
     "title": "Spire of  Notre Dame - Photography by Wayne Heim",
-    "description": "Spire of Notre Dame -  looking out on one of the spires of Notre Dame Cathedral in Paris with the Seine River in the background. ©Wayne Heim",
+    "description": "A Notre Dame spire rises above Paris with the Seine River beyond, creating a historic architecture photograph rooted in Gothic detail and city memory. This image works as European architecture wall art, preserving the cathedral's sculptural form and its relationship to the surrounding Paris skyline.",
     "alt": "Italian Church   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/photos/i-JxKNknz/4/KqXRZBM2jL3576mSXQr3JBcVdSds5SwsgXmCrhM6r/XL/i-JxKNknz-XL.jpg",
     "srcXL": "https://photos.smugmug.com/photos/i-JxKNknz/4/KqXRZBM2jL3576mSXQr3JBcVdSds5SwsgXmCrhM6r/XL/i-JxKNknz-XL.jpg",
@@ -509,7 +509,7 @@ export const galleryData = [
   {
     "id": "i-rQDRZP2",
     "title": "Tower Bridge - Photography by Wayne Heim",
-    "description": "Tower Bridge - popular view of the Tower Bridge from across the Thames River in London, England.©Wayne Heim",
+    "description": "Tower Bridge stretches across the Thames in this fine art architecture photograph of London, England. The image balances landmark recognition with structural detail, turning one of Britain's most familiar bridges into European architectural wall art shaped by history, river light, and urban presence.",
     "alt": "Spire of  Notre Dame - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-rQDRZP2/4/MZDPgQx4rT7SFH8kjNJf5q5CHgT25pL6BtCP42G7L/XL/IMGP3340-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-rQDRZP2/4/MZDPgQx4rT7SFH8kjNJf5q5CHgT25pL6BtCP42G7L/XL/IMGP3340-XL.jpg",
@@ -556,7 +556,7 @@ export const galleryData = [
   {
     "id": "i-dkBvtw9",
     "title": "Tinkers Creek - Photography by Wayne Heim",
-    "description": "SOLD - Tinkers Creek -  view of the Berea Bridge from below the falls in Berea Ohio. ©Wayne Heim Call for ordering options.",
+    "description": "Berea Bridge and Tinkers Creek come together in this architectural landscape photograph from Ohio, where stone, water, and weathered structure share the frame. The image blends historic architecture photography with natural setting, creating rustic wall art rooted in local place and memory.",
     "alt": "Tower Bridge - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/photos/i-dkBvtw9/7/MjJHK73fpNBxTLNfxpB9PfmTHqWCrGKsNscHpgrLS/XL/i-dkBvtw9-XL.jpg",
     "srcXL": "https://photos.smugmug.com/photos/i-dkBvtw9/7/MjJHK73fpNBxTLNfxpB9PfmTHqWCrGKsNscHpgrLS/XL/i-dkBvtw9-XL.jpg",
@@ -603,7 +603,7 @@ export const galleryData = [
   {
     "id": "i-sbmJt9r",
     "title": "Steel  Yard Blues -- Photography by Wayne Heim",
-    "description": "Fine art architecture photography of a steel forging plant in Illinois.",
+    "description": "This steel forging plant becomes industrial fine art architecture photography, with weathered metal, factory structure, and hard-edged geometry carrying the weight of American labor. The image turns utilitarian architecture into textured wall art shaped by grit, pattern, and industrial memory.",
     "alt": "Tinkers Creek - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Old-Buildings-and-Structures/Modern/i-sbmJt9r/2/NGTbXm5P7rtfTvqzWRzSM3cLPxhbrh7QkxRQLkKf9/XL/_W3H7682_tonemapped-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Old-Buildings-and-Structures/Modern/i-sbmJt9r/2/NGTbXm5P7rtfTvqzWRzSM3cLPxhbrh7QkxRQLkKf9/XL/_W3H7682_tonemapped-XL.jpg",
@@ -650,7 +650,7 @@ export const galleryData = [
   {
     "id": "i-8JBjk6p",
     "title": "Corner of Forge - Photography by Wayne Heim",
-    "description": "Fine art architecture photography of a steel forging plant in Illinois.",
+    "description": "The corner of a steel forge is treated as architectural fine art photography, where industrial walls, beams, and worn surfaces form a composition of texture and structure. This image belongs to the language of historic industrial architecture, preserving the visual force of a working American plant.",
     "alt": "Steel  Yard Blues -- Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Old-Buildings-and-Structures/Modern/i-8JBjk6p/3/KQfMPskGXDNHLtVz23sJ2CvS8HPLhWhkDdjkp2gLd/XL/_W3H7744_tonemapped-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Old-Buildings-and-Structures/Modern/i-8JBjk6p/3/KQfMPskGXDNHLtVz23sJ2CvS8HPLhWhkDdjkp2gLd/XL/_W3H7744_tonemapped-XL.jpg",
@@ -697,7 +697,7 @@ export const galleryData = [
   {
     "id": "i-SCWP4NP",
     "title": "Line Cabin   Photography by Wayne Heim",
-    "description": "Small  line cabin where men could stay while watching cattle.©Wayne Heim",
+    "description": "A small line cabin stands as rustic architectural wall art, recalling the isolated shelters used by cattlemen watching over open range. Weathered wood, plain construction, and frontier utility give the image historic weight, connecting architecture photography with the practical life of the American West.",
     "alt": "Corner of Forge - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/photos/i-SCWP4NP/3/L8VR5pF7XnJQTtsBmbqQ7BSxN7mwqJPtCtDdVH2PV/XL/i-SCWP4NP-XL.jpg",
     "srcXL": "https://photos.smugmug.com/photos/i-SCWP4NP/3/L8VR5pF7XnJQTtsBmbqQ7BSxN7mwqJPtCtDdVH2PV/XL/i-SCWP4NP-XL.jpg",
@@ -744,7 +744,7 @@ export const galleryData = [
   {
     "id": "i-ZgXTnCV",
     "title": "Grandma's Garage. Photography by Wayne Heim",
-    "description": "Grandma's Garage - Old single car garage in Gates Mills, Ohio is decorated for Christmas. ©Wayne Heim",
+    "description": "This old single-car garage in Gates Mills, Ohio becomes fine art architecture photography through the contrast of humble structure and Christmas decoration. Weathered siding, seasonal detail, and local Americana give the image a nostalgic architectural presence suited to collectors of rustic wall art.",
     "alt": "Line Cabin   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Gates-Mills/i-ZgXTnCV/10/LzL2RJHt9WvC8xVrJjZHZZ9SbXmcP5pb8qw7cKn8d/XL/_IMG0458-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Gates-Mills/i-ZgXTnCV/10/LzL2RJHt9WvC8xVrJjZHZZ9SbXmcP5pb8qw7cKn8d/XL/_IMG0458-XL.jpg",
@@ -791,7 +791,7 @@ export const galleryData = [
   {
     "id": "i-PmxqLBs",
     "title": "Better Days\". Photography by Wayne Heim",
-    "description": "\"Better Days\". Black and white nature photo of old barn on \"Mormon Row\", North of Jackson Hole Wyoming. ©Wayne Heim",
+    "description": "An old barn on Mormon Row becomes black and white historic architecture photography, its weathered frame standing against the memory of Jackson Hole, Wyoming. The image emphasizes rustic structure, Western history, and quiet endurance, making it strong architectural wall art rooted in place.",
     "alt": "Grandma's Garage. Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-PmxqLBs/4/NBFrN3VNTbGmSNHXmT5CxtrPsLzNNFv3DB38JdbfT/XL/_IMG6287-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-PmxqLBs/4/NBFrN3VNTbGmSNHXmT5CxtrPsLzNNFv3DB38JdbfT/XL/_IMG6287-XL.jpg",
@@ -838,7 +838,7 @@ export const galleryData = [
   {
     "id": "i-3grzD9s",
     "title": "Barn Textures: Ravages of time in Black and White",
-    "description": "Black and white high key photo of old barn on the famous Mormon Row with a hipped roof in Jackson Hole Wyoming. Note how the weathered wood creates fantastic patterns and striping when viewed in black and white. ©Wayne Heim",
+    "description": "This high-key black and white photograph studies the weathered wood of a Mormon Row barn near Jackson Hole, Wyoming. The hipped roof, stripped grain, and worn boards turn rustic architecture into fine art photography, emphasizing pattern, age, and the visual force of Western homestead design.",
     "alt": "Better Days\". Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-3grzD9s/4/KhTnsKNR956hXP74PPNqRt3Rv8CPxZDNntcmHWjVB/XL/_IMG6296-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-3grzD9s/4/KhTnsKNR956hXP74PPNqRt3Rv8CPxZDNntcmHWjVB/XL/_IMG6296-XL.jpg",
@@ -885,7 +885,7 @@ export const galleryData = [
   {
     "id": "i-S6m4mR2",
     "title": "\"Out the Door\"",
-    "description": "B/W high key photo from inside an old log barn at the foot of the Teton on \"Mormon Row\" just outside of Jackson Hole Wyoming. Voyeuristic view from inside the dark building pears out into the daylight. ©Wayne Heim",
+    "description": "From inside an old Mormon Row barn, the open doorway frames daylight and the Teton landscape beyond. This black and white architectural fine art photograph uses shadow, wood, and distance to turn a rustic interior into a quiet study of Western structure and memory.",
     "alt": "Barn Textures: Ravages of time in Black and White",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-S6m4mR2/4/Mqpppt5R4qgpCnP68JNZJgW9W4zwFfgbHqBh2jw5j/XL/_IMG6301-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-S6m4mR2/4/Mqpppt5R4qgpCnP68JNZJgW9W4zwFfgbHqBh2jw5j/XL/_IMG6301-XL.jpg",
@@ -932,7 +932,7 @@ export const galleryData = [
   {
     "id": "i-xZH95Bj",
     "title": "Tetons on the Outside",
-    "description": "Teton Mountain view looking out of the open barn door.. Looking out an old barn door at the Tetons. Dark isolation of inside of barn is shattered by the light streaming inside breaking the silence, while lurking in the distance is a view of the Grand and the Teton mountain range. ©Wayne Heim",
+    "description": "An old barn doorway opens toward the Grand Tetons, using darkness, light, and weathered wood as a natural frame. This rustic architecture photograph blends Western landscape with historic structure, creating fine art wall art shaped by isolation, mountain distance, and frontier atmosphere.",
     "alt": "\"Out the Door\"",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-xZH95Bj/4/K6vZMjBHgPrPF3RSDS4M6rf9KLV77cdchCHTw6MCn/XL/_IMG6333-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-xZH95Bj/4/K6vZMjBHgPrPF3RSDS4M6rf9KLV77cdchCHTw6MCn/XL/_IMG6333-2-XL.jpg",
@@ -979,7 +979,7 @@ export const galleryData = [
   {
     "id": "i-DKjkHL6",
     "title": "End of The Day: A Cowboy's Reflection",
-    "description": "Muted rustic colored photograph of T.A. Moulton Barn with a single cowboy looking over the structure. This is one of the barns on Mormon Row near Jackson Hole Wyoming. Rustic textures of the old weathered barn are married with a muted pallet and presentation of the sunset adding the the \"historic\" feeling of the moment. © Wayne Heim",
+    "description": "The T.A. Moulton Barn is seen at day's end with a lone cowboy figure nearby, giving this rustic architecture photograph a narrative Western presence. Weathered boards, muted color, and sunset atmosphere turn the iconic Mormon Row structure into painterly architectural wall art.",
     "alt": "Tetons on the Outside",
     "src": "https://photos.smugmug.com/photos/i-DKjkHL6/3/MhSzt8zT6HmRvn3mc4NBn9zHM7DH5bjpj7ht2gCGj/XL/i-DKjkHL6-XL.jpg",
     "srcXL": "https://photos.smugmug.com/photos/i-DKjkHL6/3/MhSzt8zT6HmRvn3mc4NBn9zHM7DH5bjpj7ht2gCGj/XL/i-DKjkHL6-XL.jpg",
@@ -1026,7 +1026,7 @@ export const galleryData = [
   {
     "id": "i-74rc8wb",
     "title": "Out for a Walk",
-    "description": "A single cowboy sets the seen as he takes a walk on Mormon Row, Jackson Hole Wyoming- This is the T.A. Moulton Barn, one of the most iconic barns in America on Mormon Row just outside of Jackson Hole Wyoming. Fall is one of the best time to take pictures of this area as the golden hues of the aspens and grass play off of the blue mountains and dramatic Teton backdrop. ©Wayne Heim",
+    "description": "A lone cowboy walks near the T.A. Moulton Barn on Mormon Row, placing historic Western architecture inside a living landscape. Golden fall color, Teton backdrop, and rustic structure make this fine art architecture photograph a bridge between cowboy imagery, homestead history, and Western wall art.",
     "alt": "End of The Day: A Cowboy's Reflection",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-74rc8wb/4/LHBC25HP5wnzWFJ8mnwcvBDkQ4tbtRQt9X62GZjFz/XL/_IMG6310-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-74rc8wb/4/LHBC25HP5wnzWFJ8mnwcvBDkQ4tbtRQt9X62GZjFz/XL/_IMG6310-XL.jpg",
@@ -1073,7 +1073,7 @@ export const galleryData = [
   {
     "id": "i-Bdbf3L9",
     "title": "The Great Protectors - by Wayne Heim",
-    "description": "Between Trees - T.A. Moulton Barn, a famous old barn, is viewed between or guarded by two cottonwood trees. The great golden protectors perfectly frame the scene and focus the attention on the barn and the Tetons in the background.  © Wayne Heim",
+    "description": "The T.A. Moulton Barn is framed by two golden cottonwood trees, turning a famous Wyoming structure into rustic architectural wall art. This fine art architecture photograph uses natural framing, weathered wood, and the Teton backdrop to emphasize protection, memory, and Western place.",
     "alt": "Out for a Walk",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-Bdbf3L9/5/LW5kVVz87p9QBdFCChS79XrtVKxbk3mBZL9bsn94w/XL/_IMG6391-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-Bdbf3L9/5/LW5kVVz87p9QBdFCChS79XrtVKxbk3mBZL9bsn94w/XL/_IMG6391-XL.jpg",
@@ -1120,7 +1120,7 @@ export const galleryData = [
   {
     "id": "i-FSKvn59",
     "title": "Old Homesteaded     Photography by Wayne Heim",
-    "description": "Old homestead in Wyoming mountains in background. ©Wayne Heim",
+    "description": "An old Wyoming homestead sits beneath a mountain backdrop, carrying the spare beauty of Western historic architecture photography. Weathered structure, open land, and distance give the image a quiet frontier character, suited to collectors of rustic architectural wall art and American West imagery.",
     "alt": "The Great Protectors - by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-FSKvn59/4/KH39JWRK5XSgJLGwwS6BPkGV2Hn5Jpf9xgDJ2xjKn/XL/_IMG6414-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-FSKvn59/4/KH39JWRK5XSgJLGwwS6BPkGV2Hn5Jpf9xgDJ2xjKn/XL/_IMG6414-XL.jpg",
@@ -1167,7 +1167,7 @@ export const galleryData = [
   {
     "id": "i-C6srdp6",
     "title": "Black & White Photo of Chicago & St. Louis Train Car",
-    "description": "Fine art architectural photography of Union Station at the Crowne Plaza Hotel in Indianapolis, Indiana.",
+    "description": "A Chicago & St. Louis train car at Union Station becomes black and white architectural fine art photography, with metal, rail history, and interior structure shaping the frame. The image preserves the character of Indianapolis's historic station while emphasizing texture, contrast, and transportation-era design.",
     "alt": "Old Homesteaded     Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Indiana/Union-Station-Crowne-Plaza/i-C6srdp6/4/MGwKQzZbs8qD5Mzrbg58JWgBsvRTcLPH4pWf9FnKw/XL/_IMG4856-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Indiana/Union-Station-Crowne-Plaza/i-C6srdp6/4/MGwKQzZbs8qD5Mzrbg58JWgBsvRTcLPH4pWf9FnKw/XL/_IMG4856-XL.jpg",
@@ -1214,7 +1214,7 @@ export const galleryData = [
   {
     "id": "i-wS2s9zK",
     "title": "Black & White Photo of the Bar Entryway Arch",
-    "description": "Fine art architectural photography of Union Station at the Crowne Plaza Hotel in Indianapolis, Indiana.",
+    "description": "The bar entryway arch at Union Station in Indianapolis is rendered as black and white fine art architecture photography. Curved structure, shadow, and historic interior detail create a graphic architectural study, connecting old rail-station craftsmanship with contemporary wall art.",
     "alt": "Black & White Photo of Chicago & St. Louis Train Car",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Indiana/Union-Station-Crowne-Plaza/i-wS2s9zK/4/Kbm3NbBsh5dSPgn25R5XPTvCWZ9F75hF3XQwxM6Cv/XL/_IMG5017-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Indiana/Union-Station-Crowne-Plaza/i-wS2s9zK/4/Kbm3NbBsh5dSPgn25R5XPTvCWZ9F75hF3XQwxM6Cv/XL/_IMG5017-XL.jpg",
@@ -1261,7 +1261,7 @@ export const galleryData = [
   {
     "id": "i-gW6Drbm",
     "title": "Box Design of the Arched Ceiling",
-    "description": "Fine art architectural photography of Union Station at the Crowne Plaza Hotel in Indianapolis, Indiana.",
+    "description": "A boxed arched ceiling inside Union Station becomes architectural fine art photography through repetition, geometry, and overhead rhythm. The image studies historic interior design as pattern and structure, turning the Indianapolis landmark into refined architecture wall art.",
     "alt": "Black & White Photo of the Bar Entryway Arch",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Indiana/Union-Station-Crowne-Plaza/i-gW6Drbm/3/LBzJPBpF3vjJZHjzmZprnWDhCMVWDbNMrdfqs3bpt/XL/_IMG5049-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Indiana/Union-Station-Crowne-Plaza/i-gW6Drbm/3/LBzJPBpF3vjJZHjzmZprnWDhCMVWDbNMrdfqs3bpt/XL/_IMG5049-XL.jpg",
@@ -1308,7 +1308,7 @@ export const galleryData = [
   {
     "id": "i-BHDHLVB",
     "title": "Grand Central Train Station Rose Window",
-    "description": "Fine art architectural photography of the historic Rose window Union Station at the Crowne Plaza Hotel in Indianapolis, Indiana. Photo highlights the wonderful geometric patterns in the architecture and lighting. Red and gold shadow areas frame and draw the eye into the center where the blues and multi-colors of the grand round rose window become the centerpiece.",
+    "description": "The rose window at Union Station in Indianapolis becomes the glowing center of this fine art architecture photograph. Red and gold shadow, geometric framing, and stained-glass color draw the eye inward, creating historic architectural wall art rooted in symmetry, light, and old station grandeur.",
     "alt": "Box Design of the Arched Ceiling",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Indiana/Union-Station-Crowne-Plaza/i-BHDHLVB/3/MSDJRjNqqhzvHqZmshrZdvtVdTpjhVpt3d2M8zWNL/XL/_IMG5013-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Indiana/Union-Station-Crowne-Plaza/i-BHDHLVB/3/MSDJRjNqqhzvHqZmshrZdvtVdTpjhVpt3d2M8zWNL/XL/_IMG5013-XL.jpg",
@@ -1355,7 +1355,7 @@ export const galleryData = [
   {
     "id": "i-FTxZTPq",
     "title": "Up Close to the Rose Window Grand Central Station",
-    "description": "Unique view of the iconic Art Nuvu style architecture in the ceiling of the Grand Central Station. Red and gold checkered ceiling is boldly bisected by the arching curves of the light and colors of the stained glass window. Rose window of Union Station at the Crowne Plaza Hotel in Indianapolis, Indiana.",
+    "description": "This close architectural study of the Union Station rose window emphasizes stained glass, red and gold ceiling pattern, and sweeping curves of historic interior design. As fine art architecture photography, the image turns rail-station ornament into a vivid study of geometry, color, and crafted light.",
     "alt": "Grand Central Train Station Rose Window",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Indiana/Union-Station-Crowne-Plaza/i-FTxZTPq/3/NLbjx9RhzSx8mBvbhdDMB6kCJJw34v8Qhh7bWNpGK/XL/_IMG5109-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Indiana/Union-Station-Crowne-Plaza/i-FTxZTPq/3/NLbjx9RhzSx8mBvbhdDMB6kCJJw34v8Qhh7bWNpGK/XL/_IMG5109-XL.jpg",
@@ -1402,7 +1402,7 @@ export const galleryData = [
   {
     "id": "i-3jzjDGJ",
     "title": "Illumination -  Photography by Wayne Heim",
-    "description": "Illumination - a Paris shop window shows a variety of colorful lights and  lamps.©Wayne Heim",
+    "description": "A Paris shop window filled with colorful lamps becomes travel architecture photography through glow, reflection, and storefront detail. The image captures the way urban interiors spill into the street, creating fine art wall art from light, glass, and the intimate architecture of everyday Paris.",
     "alt": "Up Close to the Rose Window Grand Central Station",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Other-Stuff/n-HwTHD/Still-Lifes/i-3jzjDGJ/6/NHGh9rG5z9KzmqrGQsw5WPDvcrkWVRc8wf6rQQsp4/XL/_IMG1895-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Other-Stuff/n-HwTHD/Still-Lifes/i-3jzjDGJ/6/NHGh9rG5z9KzmqrGQsw5WPDvcrkWVRc8wf6rQQsp4/XL/_IMG1895-XL.jpg",
@@ -1449,7 +1449,7 @@ export const galleryData = [
   {
     "id": "i-hR2z9FK",
     "title": "Memphis Blues - Photography by Wayne Heim",
-    "description": "Memphis Blues - night scene of historic Beale Street in Memphis, TN ©Wayne Heim",
+    "description": "Historic Beale Street glows at night in this fine art architecture photograph from Memphis, Tennessee. Neon, storefronts, and street atmosphere turn the blues district into urban architectural wall art, preserving the rhythm, color, and cultural memory of a landmark American street.",
     "alt": "Illumination -  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Memphis/i-hR2z9FK/3/L2993nR8Qk9RTrhkpzmNgLpMgBJ2K646XGPfZTfXJ/XL/_WEH6329-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Memphis/i-hR2z9FK/3/L2993nR8Qk9RTrhkpzmNgLpMgBJ2K646XGPfZTfXJ/XL/_WEH6329-Edit-XL.jpg",
@@ -1496,7 +1496,7 @@ export const galleryData = [
   {
     "id": "i-KsG2qNv",
     "title": "Colorful Blues City Cafe - Photography by Wayne Heim,",
-    "description": "Colorful  Blues City Cafe -  color picture of the cafe on Beale Street in Memphis. ©Wayne Heim",
+    "description": "The Blues City Cafe on Beale Street becomes colorful urban architecture photography, with signage, facade, and Memphis street life carrying the energy of the scene. This fine art wall art image blends historic place, musical culture, and architectural character into one vivid storefront study.",
     "alt": "Memphis Blues - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Memphis/i-KsG2qNv/4/Kmwh3ZXKjr2vGQvLhJH9tKzLjSFQX48tVt3zS3Zvx/XL/_WEH6362-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Memphis/i-KsG2qNv/4/Kmwh3ZXKjr2vGQvLhJH9tKzLjSFQX48tVt3zS3Zvx/XL/_WEH6362-XL.jpg",
@@ -1543,7 +1543,7 @@ export const galleryData = [
   {
     "id": "i-RwgQ8Sd",
     "title": "Blues City Cafe - Black & White Photography by Wayne Heim",
-    "description": "Blues City Cafe - front of the cafe in Memphis, TN. ©Wayne Heim",
+    "description": "The front of Blues City Cafe is rendered in black and white, turning a Memphis landmark into urban architectural fine art photography. Signage, windows, and street-level structure give the image a timeless Beale Street presence for collectors drawn to music history and historic city wall art.",
     "alt": "Colorful Blues City Cafe - Photography by Wayne Heim,",
     "src": "https://photos.smugmug.com/photos/i-RwgQ8Sd/2/MPwqwJPFrq5GwtwCM8Mc39QDrzD9PM7KV8QqdBTzV/XL/i-RwgQ8Sd-XL.jpg",
     "srcXL": "https://photos.smugmug.com/photos/i-RwgQ8Sd/2/MPwqwJPFrq5GwtwCM8Mc39QDrzD9PM7KV8QqdBTzV/XL/i-RwgQ8Sd-XL.jpg",
@@ -1590,7 +1590,7 @@ export const galleryData = [
   {
     "id": "i-VBm2bg7",
     "title": "Corner of Forge - Black & White Photography by Wayne Heim",
-    "description": "Fine art architecture photography of a steel forging plant in Illinois.",
+    "description": "This black and white view of a steel forging plant transforms industrial structure into fine art architecture photography. Hard surfaces, factory geometry, and tonal contrast reveal the visual strength of American industrial architecture, creating wall art shaped by grit, labor, and form.",
     "alt": "Blues City Cafe - Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Old-Buildings-and-Structures/Modern/i-VBm2bg7/3/KgczcRDT7Q7wpddTVPtfZSxmM9mbVq9cN4pWKSLpZ/XL/_W3H7745_tonemapped-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Old-Buildings-and-Structures/Modern/i-VBm2bg7/3/KgczcRDT7Q7wpddTVPtfZSxmM9mbVq9cN4pWKSLpZ/XL/_W3H7745_tonemapped-XL.jpg",
@@ -1637,7 +1637,7 @@ export const galleryData = [
   {
     "id": "i-4p3VpcQ",
     "title": "Pipes. Black & White Photography by Wayne Heim",
-    "description": "Pipes --pipes run along the outside of a factory.©Wayne Heim",
+    "description": "Pipes running along the outside of a factory become a black and white study in industrial architecture photography. Repetition, metal, shadow, and utility turn the building's exterior systems into architectural fine art, emphasizing structure as both function and visual rhythm.",
     "alt": "Corner of Forge - Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/photos/i-4p3VpcQ/3/NPQD9M9Vvvc9RVGDNkmK685c9HVLgPm953MMXbmj4/XL/i-4p3VpcQ-XL.jpg",
     "srcXL": "https://photos.smugmug.com/photos/i-4p3VpcQ/3/NPQD9M9Vvvc9RVGDNkmK685c9HVLgPm953MMXbmj4/XL/i-4p3VpcQ-XL.jpg",
@@ -1684,7 +1684,7 @@ export const galleryData = [
   {
     "id": "i-HRVSDSc",
     "title": "Forge Co -- Black & White Photography by Wayne Heim",
-    "description": "Fine art architecture photography of a steel forging plant in Illinois.",
+    "description": "A steel forging plant is treated as industrial architectural fine art photography, where factory walls, metalwork, and weathered surfaces carry the force of work and time. The image turns practical industrial design into textured wall art with a strong American manufacturing character.",
     "alt": "Pipes. Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Old-Buildings-and-Structures/Modern/i-HRVSDSc/2/K6wbCR3zjvM3gNmV4RsvnsWLqCWV39fzgfnqwzzQZ/XL/_W3H7760_1_2_3hdr-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Old-Buildings-and-Structures/Modern/i-HRVSDSc/2/K6wbCR3zjvM3gNmV4RsvnsWLqCWV39fzgfnqwzzQZ/XL/_W3H7760_1_2_3hdr-2-XL.jpg",
@@ -1731,7 +1731,7 @@ export const galleryData = [
   {
     "id": "i-2NT6fPf",
     "title": "Black & White Photo of Joining Metal Beams",
-    "description": "Fine art architectural photography of Union Station at the Crowne Plaza Hotel in Indianapolis, Indiana.",
+    "description": "Joining metal beams at Union Station in Indianapolis become black and white architectural photography, emphasizing the strength and pattern of historic rail-station construction. This fine art image turns structural detail into wall art shaped by geometry, craftsmanship, and industrial-era design.",
     "alt": "Forge Co -- Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Indiana/Union-Station-Crowne-Plaza/i-2NT6fPf/3/MZVjMQmmc5bPHfSvQBL4VnTbqVpZRvWDZJdDHgC4M/XL/_IMG4854-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Indiana/Union-Station-Crowne-Plaza/i-2NT6fPf/3/MZVjMQmmc5bPHfSvQBL4VnTbqVpZRvWDZJdDHgC4M/XL/_IMG4854-XL.jpg",
@@ -1778,7 +1778,7 @@ export const galleryData = [
   {
     "id": "i-wST5LzJ",
     "title": "Spring Air - Photography by Wayne Heim",
-    "description": "Spring Air - bedroom at Hale Farm is aired out by open window in the spring.©Wayne Heim",
+    "description": "An open window airs a bedroom at Hale Farm, turning a simple historic interior into quiet architecture photography. Wood, fabric, light, and domestic space create fine art wall art rooted in early American life, architectural memory, and the intimate texture of preserved places.",
     "alt": "Black & White Photo of Joining Metal Beams",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment/i-wST5LzJ/5/MbgDn8hDNJSKQtRZnqhGzBfpvmZjC5MzKfDnbfpSh/XL/_WHZ0599-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment/i-wST5LzJ/5/MbgDn8hDNJSKQtRZnqhGzBfpvmZjC5MzKfDnbfpSh/XL/_WHZ0599-XL.jpg",
@@ -1825,7 +1825,7 @@ export const galleryData = [
   {
     "id": "i-3DWdjDb",
     "title": "Light in the Window   Photography by Wayne Heim",
-    "description": "Single light shines in window of Iceland building. ©Wayne Heim",
+    "description": "A single light glows in the window of an Icelandic building, creating a minimalist piece of architectural fine art photography. The image uses darkness, structure, and one warm point of illumination to turn a quiet exterior into travel architecture wall art with a strong sense of mystery.",
     "alt": "Spring Air - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3DWdjDb/0/M6P4mZ6rxdS2tbPnZt8mkskGFWWtTQXmQCf3JzZXw/XL/_WHZ2975-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3DWdjDb/0/M6P4mZ6rxdS2tbPnZt8mkskGFWWtTQXmQCf3JzZXw/XL/_WHZ2975-XL.jpg",
@@ -1872,7 +1872,7 @@ export const galleryData = [
   {
     "id": "i-HzMDDcG",
     "title": "Walk to the Light House . Photography by Wayne Heim",
-    "description": "18 x 24 In StockWalk to the Lighthouse  - rocky seawall leads the the Fairport Harbor Lighthouse in Ohio ©Wayne Heim",
+    "description": "A rocky seawall leads toward Fairport Harbor Lighthouse in Ohio, blending architectural landmark photography with coastal movement. Stone, water, and the lighthouse form a strong visual path, creating fine art wall art rooted in Lake Erie atmosphere and maritime structure.",
     "alt": "Light in the Window   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/photos/i-HzMDDcG/4/KVqmwJz5ZtffS4gGtKr8MPVBhLNzr5HGnkfmDqRnM/XL/i-HzMDDcG-XL.jpg",
     "srcXL": "https://photos.smugmug.com/photos/i-HzMDDcG/4/KVqmwJz5ZtffS4gGtKr8MPVBhLNzr5HGnkfmDqRnM/XL/i-HzMDDcG-XL.jpg",
@@ -1919,7 +1919,7 @@ export const galleryData = [
   {
     "id": "i-5gxKbqh",
     "title": "Cabot's Tower on Signal Hill     Photography by Wayne Heim",
-    "description": "Cabots Tower on Signal Hill overlooking harbour in St John's Newfoundland and Labrador, Canada.\n©Wayne Heim",
+    "description": "Cabot Tower on Signal Hill overlooks the harbor in St. John's, Newfoundland and Labrador, in this fine art architecture photograph. Stone, elevation, and coastal distance give the image a historic landmark presence, suited to collectors of travel architecture photography and Canadian maritime wall art.",
     "alt": "Walk to the Light House . Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-5gxKbqh/1/KrDHZPdRTrcv29mjdtGZqmm2fwmqRDXKKHZRFCxFS/XL/_WHZ3140-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-5gxKbqh/1/KrDHZPdRTrcv29mjdtGZqmm2fwmqRDXKKHZRFCxFS/XL/_WHZ3140-XL.jpg",
@@ -1966,7 +1966,7 @@ export const galleryData = [
   {
     "id": "i-54qW72n",
     "title": "Little Black Church   Photography by Wayne Heim",
-    "description": "Many of Iceland's churches are painted black.\n©Wayne Heim",
+    "description": "A small black church in Iceland stands with stark simplicity, turning rural Nordic architecture into fine art photography. Its dark exterior, spare form, and surrounding landscape create architectural wall art shaped by contrast, restraint, and the quiet power of place.",
     "alt": "Cabot's Tower on Signal Hill     Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-54qW72n/0/MFHHJ6PG7M5vQndnxrHMjXxXMK3F9N6jKBXwTsHgN/XL/_WHZ0948-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-54qW72n/0/MFHHJ6PG7M5vQndnxrHMjXxXMK3F9N6jKBXwTsHgN/XL/_WHZ0948-XL.jpg",
@@ -2013,7 +2013,7 @@ export const galleryData = [
   {
     "id": "i-7wvRTpR",
     "title": "Long Path to Church    Photography by Wayne Heim",
-    "description": "Long rough path leads to church in Iceland.©Wayne Heim",
+    "description": "A long rough path leads toward a church in Iceland, creating a fine art architecture photograph built on distance, approach, and atmosphere. The image connects rural landscape with historic structure, turning a simple church path into quiet travel architecture wall art.",
     "alt": "Little Black Church   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-7wvRTpR/0/MLkJJsmdCTCKBNdTHHGRFp5n2TCjbMd8HPV4XrXzD/XL/_WHZ0987-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-7wvRTpR/0/MLkJJsmdCTCKBNdTHHGRFp5n2TCjbMd8HPV4XrXzD/XL/_WHZ0987-XL.jpg",
@@ -2060,7 +2060,7 @@ export const galleryData = [
   {
     "id": "i-Cm3LPhJ",
     "title": "Cemetery Wall  Photography by Wayne Heim",
-    "description": "Stone wall encloses the cemetery beside one of  Iceland's churches. ©Wayne Heim",
+    "description": "A stone cemetery wall encloses the ground beside an Icelandic church, giving this architectural photograph a strong sense of boundary, memory, and place. The image works as fine art architecture photography through texture, restraint, and the quiet relationship between faith, stone, and landscape.",
     "alt": "Long Path to Church    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-Cm3LPhJ/0/LxkxhkGLGxGxx4dGwVVMRVW3mSWczNZR5X4fMRXgG/XL/_WHZ1006-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-Cm3LPhJ/0/LxkxhkGLGxGxx4dGwVVMRVW3mSWczNZR5X4fMRXgG/XL/_WHZ1006-XL.jpg",
@@ -2107,7 +2107,7 @@ export const galleryData = [
   {
     "id": "i-tZLkQzn",
     "title": "Boat Houses     Photography by Wayne Heim",
-    "description": "Colorful row of boat houses in the Faroe Islands. ©Wayne Heim",
+    "description": "A colorful row of boat houses in the Faroe Islands becomes coastal architectural fine art photography. Repeated forms, vivid paint, and waterfront setting create travel architecture wall art that balances utility, color, and the weathered character of North Atlantic life.",
     "alt": "Cemetery Wall  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-tZLkQzn/2/NK6hGzBHCPwRbVb462bknF5S9SsLVgz5Zz8BKpphs/XL/_WHZ9716_tonemapped-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-tZLkQzn/2/NK6hGzBHCPwRbVb462bknF5S9SsLVgz5Zz8BKpphs/XL/_WHZ9716_tonemapped-Edit-XL.jpg",
@@ -2136,7 +2136,7 @@ export const galleryData = [
   {
     "id": "i-RgdMkhT",
     "title": "Church by the Sea    Black and White Photography by Wayne Heim",
-    "description": "Small country church stands by the sea. \n©Wayne Heim",
+    "description": "A small country church stands by the sea in this black and white architecture photograph from the Faroe Islands. The image uses shoreline, structure, and tonal restraint to create fine art wall art with a strong sense of solitude, faith, and coastal endurance.",
     "alt": "Boat Houses     Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-RgdMkhT/1/KPk6cNfNfHxkNzbNZCPb52XR9pndG79SwC2f2SfpN/XL/_WHZ9733_tonemapped-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-RgdMkhT/1/KPk6cNfNfHxkNzbNZCPb52XR9pndG79SwC2f2SfpN/XL/_WHZ9733_tonemapped-Edit-XL.jpg",
@@ -2165,7 +2165,7 @@ export const galleryData = [
   {
     "id": "i-7wLkrSR",
     "title": "Stain Glass . Photography by Wayne Heim",
-    "description": "Stain Glass - Window in Grand Central Station in Indianapolis, Indiana.©Wayne Heim",
+    "description": "A stained-glass window in Indianapolis Union Station becomes a fine art architecture photograph of color, pattern, and historic interior craftsmanship. The image emphasizes light and geometry, turning old station detail into architectural wall art with a quiet sense of ceremony.",
     "alt": "Church by the Sea    Black and White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/photos/i-7wLkrSR/4/Kcx2TTfZSv3mH9pjzX4MjwF2kmkvPrPP9crSrPpvd/XL/i-7wLkrSR-XL.jpg",
     "srcXL": "https://photos.smugmug.com/photos/i-7wLkrSR/4/Kcx2TTfZSv3mH9pjzX4MjwF2kmkvPrPP9crSrPpvd/XL/i-7wLkrSR-XL.jpg",
@@ -2194,7 +2194,7 @@ export const galleryData = [
   {
     "id": "i-WwsR9Q8",
     "title": "Gears - Photography by Wayne Heim",
-    "description": "Fine art architectural photography of Normandy, Paris and Strasbourg, France.",
+    "description": "This close study of gears in France turns mechanical detail into architectural fine art photography. Metal, repetition, and design create a structural image that connects Parisian engineering with historic architecture wall art, emphasizing function as a form of visual rhythm.",
     "alt": "Stain Glass . Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-WwsR9Q8/3/NZ8Q55M23HbjSS7545qkDRKcx6wtx4WhK7XLGD4t2/XL/_IMG2307-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-WwsR9Q8/3/NZ8Q55M23HbjSS7545qkDRKcx6wtx4WhK7XLGD4t2/XL/_IMG2307-XL.jpg",
@@ -2223,7 +2223,7 @@ export const galleryData = [
   {
     "id": "i-3XJGN8s",
     "title": "Eiffel Gears. Photography by Wayne Heim",
-    "description": "Fine art architectural photography of Normandy, Paris and Strasbourg, France.",
+    "description": "Eiffel Tower gears and mechanical structure become a refined example of architectural fine art photography. This Paris detail study focuses on engineering, form, and industrial elegance, creating European architecture wall art from the hidden mechanics of an iconic landmark.",
     "alt": "Gears - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-3XJGN8s/3/NXJcFdZk6tG2xQPGjNPFVSxgvNncc4JdqsJDF87zB/XL/_IMG2308-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-3XJGN8s/3/NXJcFdZk6tG2xQPGjNPFVSxgvNncc4JdqsJDF87zB/XL/_IMG2308-XL.jpg",
@@ -2252,7 +2252,7 @@ export const galleryData = [
   {
     "id": "i-kL5zPRR",
     "title": "Notre Dame Cathedral -- Black & White Photography by Wayne Heim",
-    "description": "Fine art architectural photography of Notre Dame before the devastating fire.",
+    "description": "Notre Dame Cathedral is preserved here in black and white before the devastating fire, giving the image historic architecture photography value beyond its visual beauty. Gothic stone, Parisian memory, and cathedral structure combine as European architectural wall art with documentary weight.",
     "alt": "Eiffel Gears. Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-kL5zPRR/3/K2SB3gWVGtr6JVDDq3NV24V3VM7jc8QhT92NqjWPM/XL/_IMG2625-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-kL5zPRR/3/K2SB3gWVGtr6JVDDq3NV24V3VM7jc8QhT92NqjWPM/XL/_IMG2625-XL.jpg",
@@ -2281,7 +2281,7 @@ export const galleryData = [
   {
     "id": "i-7jFd3GL",
     "title": "Heavenward - Photography by Wayne Heim",
-    "description": "Fine art architectural photography of Notre Dame before the devastating fire.",
+    "description": "Looking heavenward inside Notre Dame, this fine art architecture photograph studies Gothic lift, sacred structure, and the upward pull of stone. Captured before the fire, the image preserves a historic Paris interior as European architectural wall art shaped by reverence and memory.",
     "alt": "Notre Dame Cathedral -- Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-7jFd3GL/6/Lz8pbPzMLJVCxsgW6LK6Wtz44wcCn8ZS9w4xFqDWK/XL/_IMG2474-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-7jFd3GL/6/Lz8pbPzMLJVCxsgW6LK6Wtz44wcCn8ZS9w4xFqDWK/XL/_IMG2474-2-XL.jpg",
@@ -2310,7 +2310,7 @@ export const galleryData = [
   {
     "id": "i-7VD9zVJ",
     "title": "Venice Canal - Photography by Wayne Heim",
-    "description": "Fine art landscape & architectural photography of the Alps, Venice, Murano and Burano, Italy.",
+    "description": "A Venice canal becomes fine art architecture photography through water, aged facades, and the layered textures of Italian city life. The image blends travel photography with European architecture wall art, preserving the relationship between buildings, boats, and the slow rhythm of the lagoon.",
     "alt": "Heavenward - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-7VD9zVJ/3/KWtf4kdn9TtnkBmPBv25FxLVDzF5VdRdD7fC2RXc3/XL/P1000873-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-7VD9zVJ/3/KWtf4kdn9TtnkBmPBv25FxLVDzF5VdRdD7fC2RXc3/XL/P1000873-XL.jpg",
@@ -2339,7 +2339,7 @@ export const galleryData = [
   {
     "id": "i-Vt563w6",
     "title": "Blues Cafe - Black & White Photography by Wayne Heim",
-    "description": "Blues Cafe -  one of the many cafes on Beales Street in Memphis Tennessee. ©Wayne Heim",
+    "description": "A Beale Street cafe in Memphis becomes black and white urban architecture photography, with storefront detail and signage carrying the memory of the blues district. The image creates fine art wall art from American street culture, historic place, and architectural character.",
     "alt": "Venice Canal - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Memphis/i-Vt563w6/3/KNdcXXk79hFLsrpznWNFWcKcDvWTZbmWrJk2TWDkW/XL/_WEH6362-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Memphis/i-Vt563w6/3/KNdcXXk79hFLsrpznWNFWcKcDvWTZbmWrJk2TWDkW/XL/_WEH6362-XL.jpg",
@@ -2368,7 +2368,7 @@ export const galleryData = [
   {
     "id": "i-pcdT7DZ",
     "title": "Morning After.  Photography by Wayne Heim",
-    "description": "Fine art architectural photography of Normandy, Paris and Strasbourg, France.",
+    "description": "This French architectural scene carries the quiet aftermath of place, light, and structure. As fine art architecture photography, the image blends travel observation with historic European atmosphere, creating wall art shaped by texture, memory, and the lived surfaces of France.",
     "alt": "Blues Cafe - Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-pcdT7DZ/3/NCL7vWTtM4gbzpcrc7kdkPgtBdsW7XpVsLtL5M9gL/XL/_IMG2693-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-pcdT7DZ/3/NCL7vWTtM4gbzpcrc7kdkPgtBdsW7XpVsLtL5M9gL/XL/_IMG2693-XL.jpg",
@@ -2397,7 +2397,7 @@ export const galleryData = [
   {
     "id": "i-8XNRjZF",
     "title": "View from the Past: The Tetons",
-    "description": "View from broken window in one of the old building on Mormon row in Jackson Hole Wyoming. Dark black inside creates the perfect frame inside the frame of the picture of the mountains. Black isolation is perfect balance to the rustic isolation of the Old West.© Wayne Heim",
+    "description": "A broken window on Mormon Row frames the Tetons beyond, turning an old Wyoming building into rustic architectural fine art photography. Dark interior edges, weathered wood, and mountain distance create Western wall art about isolation, history, and the view left behind.",
     "alt": "Morning After.  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8XNRjZF/4/MDQSkn9HrRGrJZFPtmbMpbhh9wpg5MhLgMsfFqXc3/XL/_IMG6130-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8XNRjZF/4/MDQSkn9HrRGrJZFPtmbMpbhh9wpg5MhLgMsfFqXc3/XL/_IMG6130-XL.jpg",
@@ -2426,7 +2426,7 @@ export const galleryData = [
   {
     "id": "i-Wf6GRbp",
     "title": "Rustic Altar    Black & White Photography by Wayne Heim",
-    "description": "Rustic log church looking out window over the altar.  ©Wayne Heim",
+    "description": "A rustic log church interior looks out past the altar, blending sacred space with frontier structure. This black and white fine art architecture photograph uses wood, window light, and quiet geometry to create rustic architectural wall art rooted in faith, simplicity, and place.",
     "alt": "View from the Past: The Tetons",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-Wf6GRbp/2/MwdkNZ2RnZpcPcvDWHv3kDqgcvPvkHbgvM2NdCPpM/XL/_WHZ7407-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-Wf6GRbp/2/MwdkNZ2RnZpcPcvDWHv3kDqgcvPvkHbgvM2NdCPpM/XL/_WHZ7407-XL.jpg",
@@ -2455,7 +2455,7 @@ export const galleryData = [
   {
     "id": "i-RFCHLhg",
     "title": "Tetons Peek - Black & White Photography by Wayne Heim",
-    "description": "Tetons Peek -- peeking out the barn door at the Grand Tetons in Jackson Hole, Wyoming. ©Wayne Heim",
+    "description": "The Grand Tetons appear through a barn doorway in this black and white rustic architecture photograph from Jackson Hole, Wyoming. Weathered wood, shadow, and mountain distance form a natural frame, creating fine art wall art rooted in Western homestead history.",
     "alt": "Rustic Altar    Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-RFCHLhg/4/KVDZnx3Tf2r2dwNVMcjMWqgF39SQFwhfccjDcWtqX/XL/_IMG6333-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-RFCHLhg/4/KVDZnx3Tf2r2dwNVMcjMWqgF39SQFwhfccjDcWtqX/XL/_IMG6333-XL.jpg",
@@ -2484,7 +2484,7 @@ export const galleryData = [
   {
     "id": "i-SNVMFJ7",
     "title": "Window   Photography by Wayne Heim",
-    "description": "Window -  Old weathered shack with window to the world ©Wayne Heim",
+    "description": "An old weathered shack window becomes a study in rustic architectural fine art photography. Worn boards, empty space, and the suggestion of a view beyond turn a simple structure into wall art about time, shelter, and the quiet endurance of forgotten places.",
     "alt": "Tetons Peek - Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-SNVMFJ7/4/KqnjWSJrspSgrQDv7PQbnXvrQNqFvBJTH9X76tZvP/XL/_IMG6053-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-SNVMFJ7/4/KqnjWSJrspSgrQDv7PQbnXvrQNqFvBJTH9X76tZvP/XL/_IMG6053-XL.jpg",
@@ -2513,7 +2513,7 @@ export const galleryData = [
   {
     "id": "i-sPThR67",
     "title": "Red Barn. Photography by Wayne Heim",
-    "description": "Red Barn -  Side of old red barn with hayloft door. ©Wayne Heim",
+    "description": "The side of an old red barn, with its hayloft door and weathered surface, becomes rustic architectural wall art. This fine art architecture photograph emphasizes color, wood texture, and rural American design, preserving the character of a working structure shaped by time.",
     "alt": "Window   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/photos/i-sPThR67/4/K9KWVqsXdBGDLjWnZbhJjP94TDnbL3N7vX8KSBxkP/XL/i-sPThR67-XL.jpg",
     "srcXL": "https://photos.smugmug.com/photos/i-sPThR67/4/K9KWVqsXdBGDLjWnZbhJjP94TDnbL3N7vX8KSBxkP/XL/i-sPThR67-XL.jpg",
@@ -2542,7 +2542,7 @@ export const galleryData = [
   {
     "id": "i-mTV4SXC",
     "title": "Stairs to the Lighthouse  Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
+    "description": "Stairs rise toward a lighthouse in Newfoundland, Canada, connecting coastal landscape with architectural destination. This fine art travel photograph uses movement, stone, and structure to create maritime architecture wall art rooted in North Atlantic weather and place.",
     "alt": "Red Barn. Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-mTV4SXC/3/M9KPP397BfgSLS888vdBGbVtm2sNmVkLj94XWJ3Cw/XL/_WHK3201_tonemapped-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-mTV4SXC/3/M9KPP397BfgSLS888vdBGbVtm2sNmVkLj94XWJ3Cw/XL/_WHK3201_tonemapped-XL.jpg",
@@ -2571,7 +2571,7 @@ export const galleryData = [
   {
     "id": "i-qMjzwHC",
     "title": "Napoleon's Dome - Photography by Wayne Heim",
-    "description": "Napoleon's Dome 0 view of the ornate dome and side wall of Napoleon's Tomb in Paris. ©Wayne Heim",
+    "description": "Napoleon's Tomb in Paris is seen through ornate dome and wall detail, creating European architectural fine art photography rich with history and decoration. The image emphasizes gilded structure, classical design, and monumental interior space for collectors of Paris architecture wall art.",
     "alt": "Stairs to the Lighthouse  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-qMjzwHC/4/K5GDQLd9JNRH7HgXhTzW4TvNKNWvzMfjrzrGSzbkx/XL/_IMG3006-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-qMjzwHC/4/K5GDQLd9JNRH7HgXhTzW4TvNKNWvzMfjrzrGSzbkx/XL/_IMG3006-XL.jpg",
@@ -2600,7 +2600,7 @@ export const galleryData = [
   {
     "id": "i-GTDMD9v",
     "title": "Conneaut Lighthouse   Photography by Wayne Heim",
-    "description": "Angry waves at the Lighthouse at Conneaut harbor in Ohio.\n© Wayne Heim",
+    "description": "Angry waves strike near the Conneaut Harbor Lighthouse in Ohio, blending architectural landmark photography with the force of Lake Erie weather. The image turns lighthouse structure, water, and storm energy into fine art wall art with a strong maritime character.",
     "alt": "Napoleon's Dome - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-GTDMD9v/5/LNP432kBfxFHTjhmsnDnLZbqF9tHr8WVwhzNT3zNk/XL/_OLY0581-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-GTDMD9v/5/LNP432kBfxFHTjhmsnDnLZbqF9tHr8WVwhzNT3zNk/XL/_OLY0581-Edit-XL.jpg",
@@ -2629,7 +2629,7 @@ export const galleryData = [
   {
     "id": "i-KHbCmS4",
     "title": "Napoleon's Angel - Black & White Photography by Wayne Heim",
-    "description": "Fine art architectural photography of Normandy, Paris and Strasbourg, France.",
+    "description": "Napoleon's Angel is rendered in black and white as historic architectural fine art photography from Paris. Sculpture, monument detail, and tonal restraint create European architecture wall art that balances sacred symbolism, stone craftsmanship, and the atmosphere of memory.",
     "alt": "Conneaut Lighthouse   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-KHbCmS4/3/Lrt9WRdcpPnhSKnqtbSNx4j6vfLs98KM6PhKtZC6h/XL/_IMG3055-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-KHbCmS4/3/Lrt9WRdcpPnhSKnqtbSNx4j6vfLs98KM6PhKtZC6h/XL/_IMG3055-XL.jpg",
@@ -2658,7 +2658,7 @@ export const galleryData = [
   {
     "id": "i-XnwwX98",
     "title": "Black & White Photo of Metal Support Arches",
-    "description": "Fine art architectural photography of Union Station at the Crowne Plaza Hotel in Indianapolis, Indiana.",
+    "description": "Metal support arches at Union Station in Indianapolis become black and white fine art architecture photography. The image emphasizes structural rhythm, rail-station craftsmanship, and historic industrial design, turning beams and arches into strong architectural wall art.",
     "alt": "Napoleon's Angel - Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Indiana/Union-Station-Crowne-Plaza/i-XnwwX98/3/KRCgvZ5RPKmxHqDJn2CzrJNZgcVQ2ZX9zWV92CbMB/XL/_IMG4846-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Indiana/Union-Station-Crowne-Plaza/i-XnwwX98/3/KRCgvZ5RPKmxHqDJn2CzrJNZgcVQ2ZX9zWV92CbMB/XL/_IMG4846-XL.jpg",
@@ -2687,7 +2687,7 @@ export const galleryData = [
   {
     "id": "i-3JtKnsk",
     "title": "Black & White Photo of the Crowne Bar",
-    "description": "Fine art architectural photography of Union Station at the Crowne Plaza Hotel in Indianapolis, Indiana.",
+    "description": "The Crowne Bar at Union Station is treated as black and white architectural photography, where interior structure, historic setting, and tonal contrast shape the scene. This fine art wall art image preserves the atmosphere of an adapted rail-station landmark in Indianapolis.",
     "alt": "Black & White Photo of Metal Support Arches",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Indiana/Union-Station-Crowne-Plaza/i-3JtKnsk/3/KgGv4H9FVfpJ37h4twz9rTHnWTg3D6SKWfxS4MFq8/XL/_IMG5000-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Indiana/Union-Station-Crowne-Plaza/i-3JtKnsk/3/KgGv4H9FVfpJ37h4twz9rTHnWTg3D6SKWfxS4MFq8/XL/_IMG5000-XL.jpg",
@@ -2716,7 +2716,7 @@ export const galleryData = [
   {
     "id": "i-VpHcxGd",
     "title": "Black & White Photo of the Wheel Window",
-    "description": "Fine art architectural photography of Union Station at the Crowne Plaza Hotel in Indianapolis, Indiana.",
+    "description": "The wheel window at Union Station becomes a black and white study of historic architecture, geometry, and light. This fine art architecture photograph turns a circular design element into wall art shaped by symmetry, old station craftsmanship, and quiet visual order.",
     "alt": "Black & White Photo of the Crowne Bar",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Indiana/Union-Station-Crowne-Plaza/i-VpHcxGd/3/MXKQw8ndfCNn7B863KWTRzdHRVR4tFszkpW3vjx8N/XL/_IMG5008-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Indiana/Union-Station-Crowne-Plaza/i-VpHcxGd/3/MXKQw8ndfCNn7B863KWTRzdHRVR4tFszkpW3vjx8N/XL/_IMG5008-XL.jpg",
@@ -2745,7 +2745,7 @@ export const galleryData = [
   {
     "id": "i-GvvsRGb",
     "title": "Mill Creek Mill    Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Lanterman's Mill in the Mill Creek Metroparks of Youngstown, Ohio.",
+    "description": "Lanterman's Mill in Mill Creek MetroParks becomes architectural landscape photography, where historic structure, stone, water, and Ohio woodland meet. The image works as fine art wall art for collectors drawn to mills, regional landmarks, and rustic American architecture.",
     "alt": "Black & White Photo of the Wheel Window",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/MillCreek-Metropark/i-GvvsRGb/4/NhVGqZTKTqm92tF5ccRZf2NrqjPrgJ9MsJpF68JMh/XL/_WEH7255-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/MillCreek-Metropark/i-GvvsRGb/4/NhVGqZTKTqm92tF5ccRZf2NrqjPrgJ9MsJpF68JMh/XL/_WEH7255-XL.jpg",
@@ -2774,7 +2774,7 @@ export const galleryData = [
   {
     "id": "i-4mqhqMP",
     "title": "Check Point - Photography by Wayne Heim",
-    "description": "Fine art architecture photography of a steel forging plant in Illinois.",
+    "description": "A checkpoint within a steel forging plant becomes industrial architectural fine art photography, shaped by hard surfaces, utility, and factory rhythm. The image preserves the visual force of American industrial space, turning working architecture into textured wall art.",
     "alt": "Mill Creek Mill    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Old-Buildings-and-Structures/Modern/i-4mqhqMP/2/MZj9jKnhMX8sSqChgDMKzWMD2SrVs5jFvXHzbXCDV/XL/_W3H7774_1_2_3p-matix%20hdr-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Old-Buildings-and-Structures/Modern/i-4mqhqMP/2/MZj9jKnhMX8sSqChgDMKzWMD2SrVs5jFvXHzbXCDV/XL/_W3H7774_1_2_3p-matix%20hdr-XL.jpg",
@@ -2803,7 +2803,7 @@ export const galleryData = [
   {
     "id": "i-z7J4HZw",
     "title": "Haut-Koenigsbourg Castle - Photography by Wayne AHeim",
-    "description": "Haut-Koenigsbourg Castle - located near Strasbourg France view of one of the towers. ©Wayne Heim",
+    "description": "Haut-Koenigsbourg Castle near Strasbourg, France, rises as a study in European historic architecture photography. Stone tower, medieval form, and Alsatian setting give the image a strong landmark presence, creating architectural wall art rooted in age, defense, and memory.",
     "alt": "Check Point - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/photos/i-z7J4HZw/3/NRRRMC4CjQ7C8CdmDMqKPcq5mR5nQFpCJSbdC97F3/XL/i-z7J4HZw-XL.jpg",
     "srcXL": "https://photos.smugmug.com/photos/i-z7J4HZw/3/NRRRMC4CjQ7C8CdmDMqKPcq5mR5nQFpCJSbdC97F3/XL/i-z7J4HZw-XL.jpg",
@@ -2832,7 +2832,7 @@ export const galleryData = [
   {
     "id": "i-HwrRpsv",
     "title": "Pipes - Black & White Photography by Wayne Heim",
-    "description": "Fine art architecture photography of a steel forging plant in Illinois.",
+    "description": "Factory pipes become black and white industrial architecture photography, their repetition and exterior routing turning utility into visual structure. This fine art image emphasizes pattern, metal, and the rough honesty of working buildings, creating wall art from American industrial design.",
     "alt": "Haut-Koenigsbourg Castle - Photography by Wayne AHeim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Old-Buildings-and-Structures/Modern/i-HwrRpsv/2/LjkKpxG4rQPKSnF6DBgV623CHZdkVL2zJ6BjcpMtf/XL/_W3H7762_1_2_332%20merge_tonemapped-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Old-Buildings-and-Structures/Modern/i-HwrRpsv/2/LjkKpxG4rQPKSnF6DBgV623CHZdkVL2zJ6BjcpMtf/XL/_W3H7762_1_2_332%20merge_tonemapped-2-XL.jpg",
@@ -2861,7 +2861,7 @@ export const galleryData = [
   {
     "id": "i-tG3cqHk",
     "title": "Louvre at Night - Photography by Wayne Heim",
-    "description": "Louvre at Night - scene in front of the Louvre in Paris, France.©Wayne Heim",
+    "description": "The Louvre at night becomes European architecture wall art through light, stone, glass, and Parisian atmosphere. This fine art architecture photograph captures the museum's landmark presence after dark, balancing historic grandeur with the quiet drama of the city at night.",
     "alt": "Pipes - Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/photos/i-tG3cqHk/3/M8q4Mbffj3j4HGZMvfhXnCcfbb65sr74pfXs9qxSq/XL/i-tG3cqHk-XL.jpg",
     "srcXL": "https://photos.smugmug.com/photos/i-tG3cqHk/3/M8q4Mbffj3j4HGZMvfhXnCcfbb65sr74pfXs9qxSq/XL/i-tG3cqHk-XL.jpg",
@@ -2890,7 +2890,7 @@ export const galleryData = [
   {
     "id": "i-RqPhH9F",
     "title": "Roof Tops of Venice - Photography by Wayne Heim",
-    "description": "Fine art architectural photography of Normandy, Paris and Strasbourg, France.",
+    "description": "The rooftops of Venice form a layered study in Italian architecture photography, with tiles, walls, and city texture carrying the memory of the lagoon. This fine art travel image creates European architectural wall art from the overlooked upper surfaces of a historic city.",
     "alt": "Louvre at Night - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-RqPhH9F/3/KxKrfZDJfd6fhhVDqvbxR35dn7gtgdTT2Jp9ZjzrV/XL/_IMG2228-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-RqPhH9F/3/KxKrfZDJfd6fhhVDqvbxR35dn7gtgdTT2Jp9ZjzrV/XL/_IMG2228-XL.jpg",
@@ -2919,7 +2919,7 @@ export const galleryData = [
   {
     "id": "i-jtJR9Qz",
     "title": "Misty \"Eiffel - Photography by Wayne Heim",
-    "description": "Fine art architectural photography of Normandy, Paris and Strasbourg, France.",
+    "description": "The Eiffel Tower emerges through mist in this atmospheric Paris architecture photograph. Softened structure, muted distance, and landmark form turn the scene into European architectural fine art photography with a quiet, dreamlike travel-wall-art presence.",
     "alt": "Roof Tops of Venice - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-jtJR9Qz/3/MMCCwpHCw3rPNkR76zW9KQrN8bXRnwBWR7sS2BwKg/XL/_IMG2260-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-jtJR9Qz/3/MMCCwpHCw3rPNkR76zW9KQrN8bXRnwBWR7sS2BwKg/XL/_IMG2260-XL.jpg",
@@ -2948,7 +2948,7 @@ export const galleryData = [
   {
     "id": "i-32QwpNJ",
     "title": "Homestead - Black & White Photography by Wayne Heim",
-    "description": "Homestead - shows an old homestead in Wyoming. ©Wayne Heim",
+    "description": "An old Wyoming homestead stands in black and white as rustic architectural fine art photography. Weathered structure, open land, and Western isolation create wall art about endurance, abandonment, and the plain-spoken architecture of frontier life.",
     "alt": "Misty \"Eiffel - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-32QwpNJ/4/Ndpq9Q8LmZJW26RFvck5Q89nJBwJ2Ntg7W2mLbS4k/XL/_IMG6414-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-32QwpNJ/4/Ndpq9Q8LmZJW26RFvck5Q89nJBwJ2Ntg7W2mLbS4k/XL/_IMG6414-Edit-XL.jpg",
@@ -2977,7 +2977,7 @@ export const galleryData = [
   {
     "id": "i-Rh64N3s",
     "title": "Alone on Prairie - Black & White Photography",
-    "description": "Alone on Prairie - lone cabin on the plains in Wyoming ©Wayne Heim",
+    "description": "A lone cabin sits on the Wyoming prairie in this black and white rustic architecture photograph. The image uses emptiness, distance, and weathered shelter to create fine art wall art rooted in Western isolation and the quiet memory of frontier structures.",
     "alt": "Homestead - Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-Rh64N3s/4/NRP87LNCQvVHDc7NJj5kh4hjbcqSb4sLHjBmzTgbf/XL/_IMG6274-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-Rh64N3s/4/NRP87LNCQvVHDc7NJj5kh4hjbcqSb4sLHjBmzTgbf/XL/_IMG6274-Edit-XL.jpg",
@@ -3006,7 +3006,7 @@ export const galleryData = [
   {
     "id": "i-X99RLdm",
     "title": "Hayloft - Black & White Photography by Wayne Heim",
-    "description": "Hayloft - shows opening to the hayloft in an old barn. ©Wayne Heim",
+    "description": "A hayloft opening in an old barn becomes a black and white study of rustic architecture, shadow, and weathered wood. This fine art photograph turns a simple farm detail into architectural wall art about use, age, and the graphic strength of rural design.",
     "alt": "Alone on Prairie - Black & White Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-X99RLdm/4/NTCGvB6zpdLjfDVXb7qWFdZZgs5GwP4r3DdpG7SJS/XL/_IMG6298-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-X99RLdm/4/NTCGvB6zpdLjfDVXb7qWFdZZgs5GwP4r3DdpG7SJS/XL/_IMG6298-XL.jpg",
@@ -3035,7 +3035,7 @@ export const galleryData = [
   {
     "id": "i-zNQvqk6",
     "title": "Castle Cross- Photography by Wayne Heim",
-    "description": "Fine art architectural photography of Normandy, Paris and Strasbourg, France.",
+    "description": "A castle cross in France becomes a fine art architecture photograph of stone, symbol, and historic atmosphere. The image connects European landmark detail with quiet spiritual weight, creating architectural wall art rooted in old-world craftsmanship and memory.",
     "alt": "Hayloft - Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-zNQvqk6/3/NHXGbSmDxVF4VN8HK2tJWTCrP8X5PQd5rCn5vFckw/XL/_IMG2129-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-zNQvqk6/3/NHXGbSmDxVF4VN8HK2tJWTCrP8X5PQd5rCn5vFckw/XL/_IMG2129-XL.jpg",
@@ -3064,7 +3064,7 @@ export const galleryData = [
   {
     "id": "i-vF6XNgd",
     "title": "Catacombs of Paris - Photography of Wayne Heim",
-    "description": "Fine art architectural photography of Normandy, Paris and Strasbourg, France.",
+    "description": "The Catacombs of Paris are rendered as architectural fine art photography, where stone, passage, and human history press close around the frame. This European architecture image carries a darker historic presence, turning underground structure into wall art shaped by memory and mortality.",
     "alt": "Castle Cross- Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-vF6XNgd/3/KjkgfCbqpGhxrPF4r7z4CfjL4GnX4q3fQ5wTbvRkN/XL/_IMG2711-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-vF6XNgd/3/KjkgfCbqpGhxrPF4r7z4CfjL4GnX4q3fQ5wTbvRkN/XL/_IMG2711-XL.jpg",
@@ -3093,7 +3093,7 @@ export const galleryData = [
   {
     "id": "i-hNpZZPn",
     "title": "Window on Faroe  Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "A window in the Faroe Islands becomes travel architecture photography, using simple structure, weathered surface, and island atmosphere to create a quiet architectural study. The image works as fine art wall art for collectors drawn to North Atlantic places and understated design.",
     "alt": "Catacombs of Paris - Photography of Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-hNpZZPn/8/MTM8Fqgc7tQJtsWZ37qkW9M4sLRrXxSL44WMd2W8x/XL/_WHZ9224-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-hNpZZPn/8/MTM8Fqgc7tQJtsWZ37qkW9M4sLRrXxSL44WMd2W8x/XL/_WHZ9224-Edit-XL.jpg",
@@ -3122,7 +3122,7 @@ export const galleryData = [
   {
     "id": "i-3dZtNxv",
     "title": "Mill House, Black and White Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Lanterman's Mill in the Mill Creek Metroparks of Youngstown, Ohio.",
+    "description": "Lanterman's Mill is shown in black and white, turning the Ohio landmark into historic architectural fine art photography. Stone, water, and mill structure create rustic wall art grounded in regional memory, craftsmanship, and the lasting character of old working buildings.",
     "alt": "Window on Faroe  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/MillCreek-Metropark/i-3dZtNxv/4/LGPbRfNNNcmsCX5JbqtXNKs7N5w5mxqdwFjcZ7zmV/XL/_WEH7210-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/MillCreek-Metropark/i-3dZtNxv/4/LGPbRfNNNcmsCX5JbqtXNKs7N5w5mxqdwFjcZ7zmV/XL/_WEH7210-2-XL.jpg",
@@ -3151,7 +3151,7 @@ export const galleryData = [
   {
     "id": "i-2xDqgqS",
     "title": "Ye Olde Ranch House  Black and White Photography by Wayne Heim",
-    "description": "Isolated old ranch house in Wyoming with Grand Tetons in background.  ©Wayne Heim",
+    "description": "An isolated ranch house stands beneath the Grand Tetons, creating black and white rustic architecture photography rooted in Wyoming history. The image blends Western landscape with weathered shelter, forming fine art wall art about endurance, distance, and frontier life.",
     "alt": "Mill House, Black and White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-2xDqgqS/2/MRzQTJkwrFvQG2Z3fwJ6s43V2C2hFfsfvGXRKdSNX/XL/_WHZ7636-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-2xDqgqS/2/MRzQTJkwrFvQG2Z3fwJ6s43V2C2hFfsfvGXRKdSNX/XL/_WHZ7636-XL.jpg",
@@ -3180,7 +3180,7 @@ export const galleryData = [
   {
     "id": "i-RBTGb7k",
     "title": "Painterly Mountain Photography:  Barn Reflection   Black and White Photography by Wayne Heim",
-    "description": "Sun reflects off old barn on Mormon Row in Wyoming.  ©Wayne Heim Fine art painterly mountain photography. © Wayne Heim",
+    "description": "Sunlight reflects from an old Mormon Row barn in this black and white architectural landscape photograph from Wyoming. The image combines painterly mountain photography with rustic architecture, creating fine art wall art shaped by reflection, weathered wood, and Teton atmosphere.",
     "alt": "Ye Olde Ranch House  Black and White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-RBTGb7k/4/L4rN8Xm7FsjMxFfKJkN7wb8gcKkcjkmkDshW6HpgN/XL/_WHZ7671_tonemapped-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-RBTGb7k/4/L4rN8Xm7FsjMxFfKJkN7wb8gcKkcjkmkDshW6HpgN/XL/_WHZ7671_tonemapped-Edit-2-XL.jpg",
@@ -3209,7 +3209,7 @@ export const galleryData = [
   {
     "id": "i-PVbJdpj",
     "title": "Old Fence - Black & White Photography by Wayne Heim",
-    "description": "Old Fence - old weathered fence that had fallen down in Wyoming. ©Wayne Heim",
+    "description": "A fallen old fence in Wyoming becomes black and white rustic architectural detail photography, with weathered wood and open ground carrying the story of age and abandonment. The image creates understated Western wall art from structure, decay, and the quiet geometry of rural life.",
     "alt": "Painterly Mountain Photography:  Barn Reflection   Black and White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-PVbJdpj/4/MGrSTLCqgxRFXZNMzZTnZTGkGbXwNxjtxWR3MW6Q2/XL/_IMG6295-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-PVbJdpj/4/MGrSTLCqgxRFXZNMzZTnZTGkGbXwNxjtxWR3MW6Q2/XL/_IMG6295-XL.jpg",
@@ -3238,7 +3238,7 @@ export const galleryData = [
   {
     "id": "i-8LMkTQg",
     "title": "Still Standing in Black & white    Photography by Wayne Heim",
-    "description": "Old famous barn on Mormon row has weathered the years as seen in black & white. ©Wayne Heim",
+    "description": "A famous old barn on Mormon Row still stands after years of weather and silence, rendered here in black and white fine art architecture photography. The image preserves rustic Western structure as wall art about endurance, time, and the visual gravity of historic barns.",
     "alt": "Old Fence - Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8LMkTQg/4/K8MGnN2dbbLf9CxqfNwdWKksmT7NMh8L8smb4HG6S/XL/_img6307-edit-edit2-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8LMkTQg/4/K8MGnN2dbbLf9CxqfNwdWKksmT7NMh8L8smb4HG6S/XL/_img6307-edit-edit2-Edit-XL.jpg",
@@ -3267,7 +3267,7 @@ export const galleryData = [
   {
     "id": "i-Hk6CHqx",
     "title": "Iconic Landmarks Study",
-    "description": "A fine art photograph of an architectural arch, defined by permanence rather than spectacle. Wayne Heim's architectural fine art photography explores structures as witnesses to human labor and time, where wood, stone, and weathering carry consequence as much as shelter. Light, texture, and composition shape a narrative rooted in craftsmanship and memory. Part of Wayne Heim's fine art architecture photography collection. © Wayne Heim",
+    "description": "An architectural arch is treated as a quiet study in permanence, craft, and human design. This fine art architecture photograph emphasizes wood, stone, weathering, and light as witnesses to labor and time, creating architectural wall art rooted in memory rather than spectacle.",
     "alt": "Still Standing in Black & white    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-Hk6CHqx/0/Ng6v799Q2FrSztDD5Tvn8Wg3H2jtZ9d8jTpdXX657/XL/_O1H0177_tonemapped-596-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-Hk6CHqx/0/Ng6v799Q2FrSztDD5Tvn8Wg3H2jtZ9d8jTpdXX657/XL/_O1H0177_tonemapped-596-XL.jpg",
@@ -3302,7 +3302,7 @@ export const galleryData = [
   {
     "id": "i-3S3RMNW",
     "title": "Fine Art Quiet Grandeur Of Architecture",
-    "description": "A fine art photograph of an architectural arch, defined by craftsmanship rather than spectacle. Wayne Heim's fine art architecture photography explores structures as witnesses to human labor and time, where wood, stone, and weathering carry consequence as much as shelter. Light, texture, and composition shape a narrative rooted in craftsmanship and memory. Part of Wayne Heim's fine art architecture photography collection. © Wayne Heim",
+    "description": "This architectural arch becomes fine art architecture photography through restraint, texture, and the dignity of crafted structure. Stone, wood, light, and weathered surfaces shape a quiet image about permanence, making it architectural wall art with a strong sense of history and human touch.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3S3RMNW/0/NLFRjW6FX8f9sGDcH2gSHCCSBwvFn7hj5hrXjcmpg/XL/_O1H0177_tonemapped-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3S3RMNW/0/NLFRjW6FX8f9sGDcH2gSHCCSBwvFn7hj5hrXjcmpg/XL/_O1H0177_tonemapped-XL.jpg",

@@ -25,7 +25,7 @@ export const galleryData = [
   {
     "id": "i-j4PxV9D",
     "title": "Painterly European Landscapes Moment In Iceland",
-    "description": "A fine art landscape photograph of the Icelandic landscape, shaped by stillness rather than spectacle. Wayne Heim's fine art landscape photography treats place as emotional geography - not destination, but atmosphere. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the land holds its breath between seasons. Part of Wayne Heim's international landscape photography series. © Wayne Heim",
+    "description": "A quiet Icelandic shoreline becomes traditional fine art landscape photography, shaped by tide, stone, and a restrained northern atmosphere. This Iceland fine art landscape photograph treats place as emotional geography, turning an international landscape into wall art rooted in silence, distance, and memory.",
     "alt": "Low Tide",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-j4PxV9D/A",
     "keywords": [
@@ -50,7 +50,7 @@ export const galleryData = [
   {
     "id": "i-X2gSwwB",
     "title": "The Way to Church     Photography by Wayne Heim",
-    "description": "Country church in Iceland seems to be in the middle of nowhere. ©Wayne Heim",
+    "description": "A lone country church stands in the Icelandic landscape, surrounded by open ground and a feeling of remote stillness. This traditional fine art landscape photograph blends Iceland architecture, rural solitude, and international landscape photography into a quiet image of faith, distance, and place.",
     "alt": "Low Tide",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-X2gSwwB/A",
     "keywords": [
@@ -138,7 +138,7 @@ export const galleryData = [
   {
     "id": "i-SfChdG7",
     "title": "Volcanic Rock on Coast of Iceland.   Photography by Wayne Heim",
-    "description": "Volcanic rock off the coat of Iceland gets pounded by the sea.  ©Wayne Heim",
+    "description": "Volcanic rock off the coast of Iceland is battered by the sea, turning the shoreline into a raw study of water, lava, and endurance. This Iceland fine art landscape photograph captures the force of the North Atlantic, creating coastal wall art shaped by black rock, surf, and geological memory.",
     "alt": "The Way to Church     Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-SfChdG7/A",
     "keywords": [
@@ -226,7 +226,7 @@ export const galleryData = [
   {
     "id": "i-RSbm8WZ",
     "title": "Kirkjufellsoss Waterfall  Black and White Photography by Wayne Heim",
-    "description": "Icelandic waterfall flow from the rocks of Iceland. ©Wayne Heim",
+    "description": "Kirkjufellsfoss flows through dark Icelandic rock in this black and white waterfall photograph, reducing the scene to water, stone, and tonal force. The image works as traditional fine art landscape photography, rooted in Iceland waterfall photography and the stark beauty of the Snaefellsnes Peninsula.",
     "alt": "Volcanic Rock on Coast of Iceland.   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-RSbm8WZ/A",
     "keywords": [
@@ -314,7 +314,7 @@ export const galleryData = [
   {
     "id": "i-KmSDnWP",
     "title": "Black Falls   Photography by Wayne Heim",
-    "description": "One of the many waterfalls in Iceland.\n©Wayne Heim",
+    "description": "Black Falls becomes a study of water and shadow in the Icelandic landscape, where falling water cuts through dark volcanic stone. This traditional fine art landscape photograph brings Iceland waterfall photography into a quiet, dramatic register for collectors drawn to rugged northern wall art.",
     "alt": "Kirkjufellsoss Waterfall  Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-KmSDnWP/A",
     "keywords": [
@@ -402,7 +402,7 @@ export const galleryData = [
   {
     "id": "i-SDNCNQ5",
     "title": "Gullfoss Waterfall   Black & White Photography by Wayne Heim",
-    "description": "View of the Gullfoss waterfall canyon. \n©Wayne Heim",
+    "description": "Gullfoss waterfall and its canyon are rendered in black and white, emphasizing the power of water moving through Iceland's carved volcanic landscape. This traditional fine art landscape photograph turns one of the Golden Circle's great waterfalls into stark Iceland wall art shaped by force, depth, and atmosphere.",
     "alt": "Black Falls   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-SDNCNQ5/A",
     "keywords": [
@@ -490,7 +490,7 @@ export const galleryData = [
   {
     "id": "i-7ZQqVws",
     "title": "Waterfall Gullfoss  Black & White Iceland",
-    "description": "View of Gullfoss waterfall in Iceland.\n©Wayne Heim",
+    "description": "Gullfoss spreads through the frame in black and white, with water, mist, and canyon walls forming a powerful Icelandic landscape study. This Iceland fine art landscape photograph emphasizes the waterfall's scale and movement while preserving the timeless restraint of traditional landscape photography.",
     "alt": "Gullfoss Waterfall   Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-7ZQqVws/A",
     "keywords": [
@@ -578,7 +578,7 @@ export const galleryData = [
   {
     "id": "i-bxc3S9M",
     "title": "View of the Gullfoss   Photography by Wayne Heim",
-    "description": "View looking down river of the Gullfoss waterfall  and gorge in Iceland. ©Wayne Heim",
+    "description": "Looking downriver from Gullfoss, this Iceland landscape photograph follows water as it moves through the gorge beyond the falls. The image blends Iceland waterfall photography, canyon structure, and traditional fine art landscape photography into wall art about motion, erosion, and time.",
     "alt": "Waterfall Gullfoss  Black & White Iceland",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-bxc3S9M/A",
     "keywords": [
@@ -666,7 +666,7 @@ export const galleryData = [
   {
     "id": "i-CNhJtLS",
     "title": "Barn in the Land of Midnight Sun  Photography by Wayne Heim",
-    "description": "Old Icelandic barn and silo stand out against the midnight sun. ©Wayne Heim",
+    "description": "An old Icelandic barn and silo stand beneath the midnight sun, giving the landscape a quiet human mark against the northern light. This traditional fine art landscape photograph blends rural Iceland, open field, and international landscape photography into wall art shaped by solitude and endurance.",
     "alt": "View of the Gullfoss   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-CNhJtLS/A",
     "keywords": [
@@ -754,7 +754,7 @@ export const galleryData = [
   {
     "id": "i-9jfFZxt",
     "title": "Iceland Fantastic Places Study",
-    "description": "Explore fantastic places with Wayne Heim's international landscape photography in Iceland. This International – Across Borders piece conveys International – Across Borders, international landscape photography, and fantastic places, perfect for fans of international landscape photography. © Wayne Heim",
+    "description": "This Icelandic landscape carries the feeling of a fantastic place without losing its restraint, using light, land, and distance to create a quiet northern mood. As traditional fine art landscape photography, the image belongs to an international landscape series rooted in atmosphere rather than postcard spectacle.",
     "alt": "Barn in the Land of Midnight Sun  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-9jfFZxt/A",
     "keywords": [
@@ -779,7 +779,7 @@ export const galleryData = [
   {
     "id": "i-rMTRD6x",
     "title": "Midnight Sun Sunset",
-    "description": "A fine art landscape of the Icelandic landscape, shaped by permanence rather than spectacle. Approached with restraint and precision, each frame captures the character of the land rather than its postcard appeal. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the land outlasts every witness. Part of Wayne Heim's international landscape photography series. © Wayne Heim",
+    "description": "The midnight sun settles over Iceland with a low, lingering glow, turning the land into a study of permanence and atmosphere. This Iceland fine art landscape photograph uses color, horizon, and northern light to create traditional landscape wall art with a quiet, elemental force.",
     "alt": "Capturing Iceland's summer beauty through fine art photography.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-rMTRD6x/A",
     "keywords": [
@@ -867,7 +867,7 @@ export const galleryData = [
   {
     "id": "i-bb6zG8J",
     "title": "Seljalandfoss    Black & White Photography by Wayne Heim",
-    "description": "One of the many Waterfalls of Iceland.\n©Wayne Heim",
+    "description": "Seljalandsfoss is rendered in black and white, where falling water and Icelandic rock become a study of motion and tone. This traditional fine art landscape photograph brings Iceland waterfall photography into a restrained, timeless form for collectors drawn to elemental wall art.",
     "alt": "Midnight Sun Sunset",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-bb6zG8J/A",
     "keywords": [
@@ -955,7 +955,7 @@ export const galleryData = [
   {
     "id": "i-WMnSL5c",
     "title": "Side Seljalandfoss   Black & White Photography by Wayne Heim",
-    "description": "A side view of the Seljalandfoss waterfall in Iceland. ©Wayne Heim",
+    "description": "A side view of Seljalandsfoss reveals the waterfall's falling curtain, surrounding cliff, and the quiet power of Icelandic water. This Iceland fine art landscape photograph combines waterfall movement with volcanic structure, creating traditional landscape wall art from one of Iceland's iconic falls.",
     "alt": "Seljalandfoss    Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-WMnSL5c/A",
     "keywords": [
@@ -1043,7 +1043,7 @@ export const galleryData = [
   {
     "id": "i-4D9zZXP",
     "title": "Iceland Painterly European Landscapes Study",
-    "description": "A fine art landscape photograph of the Icelandic landscape, shaped by stillness rather than spectacle. Rather than documenting scenery, this work reveals the quiet presence that defines a region. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the land holds its breath between seasons. Part of Wayne Heim's international landscape photography series. © Wayne Heim",
+    "description": "This Icelandic landscape is shaped by stillness, light, and restrained composition rather than spectacle. As traditional fine art landscape photography, the image turns Iceland's open land into international landscape wall art rooted in quiet presence, distance, and memory.",
     "alt": "Side Seljalandfoss   Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-4D9zZXP/A",
     "keywords": [
@@ -1067,7 +1067,7 @@ export const galleryData = [
   {
     "id": "i-Z6JpCvW",
     "title": "Looking up at Vik  Black & White Photography by Wayne Heim",
-    "description": "Looking up a wall at the Beach at Vik Iceland.\n©Wayne Heim",
+    "description": "Looking upward along the black sand beach at Vik, this black and white Iceland photograph turns cliff, wall, and sky into a stark landscape study. The image belongs to traditional fine art landscape photography, using Iceland's coastal geology to create wall art with vertical force and tonal restraint.",
     "alt": "Fine art exploration of Iceland's summer landscapes.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-Z6JpCvW/A",
     "keywords": [
@@ -1155,7 +1155,7 @@ export const galleryData = [
   {
     "id": "i-vLs8Ngj",
     "title": "Lava Rocks  and distant Glacier",
-    "description": "Icelandic landscape of lava rocks, hills, and vegetation. ©Wayne Heim",
+    "description": "Lava rocks, low hills, vegetation, and a distant glacier define this Icelandic landscape, where fire-born ground meets ice in the distance. This traditional fine art landscape photograph emphasizes Iceland volcanic landscape photography, creating wall art shaped by lava, glacier, and northern atmosphere.",
     "alt": "Looking up at Vik  Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-vLs8Ngj/A",
     "keywords": [
@@ -1243,7 +1243,7 @@ export const galleryData = [
   {
     "id": "i-vZC2GK7",
     "title": "Icelandic Coast Lighthouse",
-    "description": "Cliff rises above the coast of Iceland.\n©Wayne Heim",
+    "description": "A lighthouse stands above the Icelandic coast, set against cliffs, sea, and the spare force of the northern landscape. This Iceland fine art landscape photograph blends coastal landmark, volcanic edge, and international landscape photography into wall art with a strong sense of exposure and place.",
     "alt": "Lava Rocks  and distant Glacier",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-vZC2GK7/A",
     "keywords": [
@@ -1331,7 +1331,7 @@ export const galleryData = [
   {
     "id": "i-C42pbCN",
     "title": "Snaefellsjoekull Path   Black & White Photography by Wayne Heim",
-    "description": "Hiking path in Snaefellsjoekull National Park.\n©Wayne Heim",
+    "description": "A hiking path crosses Snaefellsjokull National Park, drawing the eye through an Icelandic landscape of open ground, volcanic texture, and distance. This traditional fine art landscape photograph turns a simple path into Iceland wall art about movement, solitude, and the pull of the land.",
     "alt": "Icelandic Coast Lighthouse",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-C42pbCN/A",
     "keywords": [
@@ -1419,7 +1419,7 @@ export const galleryData = [
   {
     "id": "i-f82Jczr",
     "title": "Looking Out    Photography by Wayne Heim",
-    "description": "View looking out of a glacier cave in Iceland.\n©Wayne Heim",
+    "description": "A view from inside a glacier cave frames Iceland's outer landscape through ice, darkness, and blue-toned light. This Iceland glacier photograph works as traditional fine art landscape photography, turning the cave opening into wall art about shelter, scale, and the fragile edge between ice and land.",
     "alt": "Snaefellsjoekull Path   Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-f82Jczr/A",
     "keywords": [
@@ -1507,7 +1507,7 @@ export const galleryData = [
   {
     "id": "i-gBPsDtv",
     "title": "Iceland Landscape: International Landscape Photography",
-    "description": "A fine art landscape of the Icelandic landscape, shaped by solitude rather than spectacle. Wayne Heim's fine art landscape photography treats place as emotional geography - not destination, but atmosphere. Light, tone, and composition shape a quiet narrative rooted in place and memory - where distance and silence are companions here. Part of Wayne Heim's international landscape photography series. © Wayne Heim",
+    "description": "This Iceland landscape stretches into silence, shaped by distance, atmosphere, and the emotional weight of open ground. As traditional fine art landscape photography, the image turns an international landscape into wall art rooted in solitude, northern light, and quiet memory.",
     "alt": "Looking Out    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-gBPsDtv/A",
     "keywords": [
@@ -1531,7 +1531,7 @@ export const galleryData = [
   {
     "id": "i-SCgDCs2",
     "title": "Glacier Wall     Black & White Photography by Wayne Heim",
-    "description": "Glacier wall in Iceland looks like solid rock.\n©Wayne Heim",
+    "description": "A glacier wall in Iceland appears almost like solid rock, with ice, debris, and texture merging into a dark geological surface. This black and white Iceland glacier photograph brings traditional fine art landscape photography into a raw study of ice, stone, and time.",
     "alt": "Summer landscapes of Iceland in fine art photography.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-SCgDCs2/A",
     "keywords": [
@@ -1619,7 +1619,7 @@ export const galleryData = [
   {
     "id": "i-fTtjrxB",
     "title": "Skaftafell Glacier   Photography by Wayne Heim",
-    "description": "The black glacier Skaftafell looks more like rock than ice.  ©Wayne Heim",
+    "description": "Skaftafell Glacier appears dark and heavy, its surface carrying volcanic grit that makes ice read almost like rock. This Iceland glacier photograph is traditional fine art landscape photography with an elemental force, turning black ice and mountain scale into stark northern wall art.",
     "alt": "Glacier Wall     Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-fTtjrxB/A",
     "keywords": [
@@ -1707,7 +1707,7 @@ export const galleryData = [
   {
     "id": "i-DzgFdS2",
     "title": "Mountains and Black Sands of Glacial Field - Iceland",
-    "description": "Summer landscapes of Iceland in fine art photography.",
+    "description": "Mountains and black sands surround a glacial field in Iceland, where volcanic ground and distant ice define the landscape's hard contrast. This traditional fine art landscape photograph blends Iceland glacier photography with volcanic terrain, creating wall art about fire, ice, and open space.",
     "alt": "Skaftafell Glacier   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-DzgFdS2/A",
     "keywords": [
@@ -1795,7 +1795,7 @@ export const galleryData = [
   {
     "id": "i-bHsxCJ9",
     "title": "Mountain Glacier   Black & White Photography  by Wayne Heim",
-    "description": "Outside of glaciers look like mountains with all the dirt which is trapped in the ice.\n©Wayne Heim",
+    "description": "A mountain glacier in Iceland is rendered in black and white, its dirt-streaked ice reading like a carved alpine wall. This traditional fine art landscape photograph emphasizes Iceland glacier photography, turning ice, stone, and tonal contrast into rugged northern wall art.",
     "alt": "Mountains and Black Sands of Glacial Field - Iceland",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-bHsxCJ9/A",
     "keywords": [
@@ -1883,7 +1883,7 @@ export const galleryData = [
   {
     "id": "i-f4pz8mB",
     "title": "Jonah - Inside the Glacier.",
-    "description": "Summer landscapes of Iceland in fine art photography.",
+    "description": "Inside the glacier, ice becomes a cavern of shadow, blue light, and enclosing form. This Iceland glacier photograph turns the experience of being within the ice into traditional fine art landscape photography, creating wall art shaped by atmosphere, scale, and the strange intimacy of frozen space.",
     "alt": "Mountain Glacier   Black & White Photography  by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-f4pz8mB/A",
     "keywords": [
@@ -1971,7 +1971,7 @@ export const galleryData = [
   {
     "id": "i-JzJQ9fz",
     "title": "Black & Blue   Photography by Wayne Heim",
-    "description": "Ice cave combines both lack and blue ice for an interesting effect.  ©Wayne Heim",
+    "description": "Black and blue ice meet inside an Icelandic cave, creating a layered study of color, cold, and geological pressure. This Iceland glacier photograph blends abstract texture with traditional fine art landscape photography, turning ice into wall art with depth, mystery, and northern force.",
     "alt": "Jonah - Inside the Glacier.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-JzJQ9fz/A",
     "keywords": [
@@ -2059,7 +2059,7 @@ export const galleryData = [
   {
     "id": "i-rbB747M",
     "title": "Lava Field   Photography by Wayne Heim",
-    "description": "A fine art landscape photograph of the Icelandic landscape, shaped by permanence rather than spectacle. Approached with restraint and precision, each frame captures the character of the land rather than its postcard appeal. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the land outlasts every witness. Part of Wayne Heim's international landscape photography series. © Wayne Heim",
+    "description": "The lava field around Krafla stretches across Iceland with a rough permanence born from fire and time. This traditional fine art landscape photograph emphasizes Iceland volcanic landscape photography, creating wall art rooted in black rock, endurance, and the memory of eruption.",
     "alt": "Black & Blue   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-rbB747M/A",
     "keywords": [
@@ -2147,7 +2147,7 @@ export const galleryData = [
   {
     "id": "i-VZtrKd5",
     "title": "Breidamerkurjokull Glacier  Photography by  Wayne Heim",
-    "description": "Sides of the glacier that are criss crossed with volcanic sand.  ©Wayne Heim",
+    "description": "Breidamerkurjokull Glacier is marked by bands of volcanic sand, where ice and ash create dark lines across the frozen surface. This Iceland glacier photograph works as traditional fine art landscape photography, turning the glacier's scarred structure into wall art about pressure, movement, and time.",
     "alt": "Lava Field   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-VZtrKd5/A",
     "keywords": [
@@ -2235,7 +2235,7 @@ export const galleryData = [
   {
     "id": "i-XJDcZSr",
     "title": "Fish in Ice  Photography by Wayne Heim",
-    "description": "Iceberg looks like it has a fish between its layers.  ©Wayne Heim",
+    "description": "An iceberg seems to hold the suggestion of a fish within its layered ice, turning natural form into a quiet visual riddle. This Iceland fine art landscape photograph blends ice detail, abstraction, and coastal atmosphere into wall art shaped by imagination and glacial texture.",
     "alt": "Breidamerkurjokull Glacier  Photography by  Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-XJDcZSr/A",
     "keywords": [
@@ -2323,7 +2323,7 @@ export const galleryData = [
   {
     "id": "i-hmB6HFt",
     "title": "Angry Waves on Ice   Photography by Wayne Heim",
-    "description": "The angry sea batters the chunks of ice in the waters off Iceland.   ©Wayne Heim",
+    "description": "Angry waves batter chunks of ice along the Icelandic coast, bringing ocean force and glacial fragility into the same frame. This traditional fine art landscape photograph combines Iceland glacier photography with seascape drama, creating wall art about impact, motion, and cold northern light.",
     "alt": "Fish in Ice  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-hmB6HFt/A",
     "keywords": [
@@ -2411,7 +2411,7 @@ export const galleryData = [
   {
     "id": "i-MwsQPKg",
     "title": "Iceland Landscape: International Landscape Photography",
-    "description": "A fine art landscape of the Icelandic landscape, shaped by stillness rather than spectacle. Rather than documenting scenery, this work reveals the quiet presence that defines a region. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the land holds its breath between seasons. Part of Wayne Heim's international landscape photography series. © Wayne Heim",
+    "description": "This Icelandic landscape is shaped by stillness, weather, and the quiet pull of distance. As traditional fine art landscape photography, the image belongs to an international landscape series that treats Iceland as atmosphere and memory rather than simple destination.",
     "alt": "Angry Waves on Ice   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-MwsQPKg/A",
     "keywords": [
@@ -2436,7 +2436,7 @@ export const galleryData = [
   {
     "id": "i-3fR8r7r",
     "title": "Iceland Painterly European Landscapes Study",
-    "description": "A fine art landscape photograph of the Icelandic landscape, shaped by solitude rather than spectacle. Wayne Heim's fine art landscape photography treats place as emotional geography - not destination, but atmosphere. Light, tone, and composition shape a quiet narrative rooted in place and memory - where distance and silence are companions here. Part of Wayne Heim's international landscape photography series. © Wayne Heim",
+    "description": "Iceland's fall light settles across the land with a restrained, painterly calm. This traditional fine art landscape photograph uses color, distance, and silence to create Iceland landscape wall art rooted in seasonal change and the emotional geography of the north.",
     "alt": "Iceland's fall sunsets and clouds through fine art photography.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-3fR8r7r/A",
     "keywords": [
@@ -2461,7 +2461,7 @@ export const galleryData = [
   {
     "id": "i-HqpbFxF",
     "title": "Capturing Fantastic Places In Iceland",
-    "description": "Delve into fantastic places via this International – Across Borders by Wayne Heim from Iceland. Highlighting fantastic places through International – Across Borders and International – Across Borders, it's great for collectors interested in fantastic places. © Wayne Heim",
+    "description": "This Iceland landscape presents a fantastic place through restraint rather than excess, letting land, light, and weather carry the scene. The image works as traditional fine art landscape photography, part of an international landscape series shaped by quiet drama and northern atmosphere.",
     "alt": "Highlights of Iceland's top landscape photography.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-HqpbFxF/A",
     "keywords": [
@@ -2485,7 +2485,7 @@ export const galleryData = [
   {
     "id": "i-xjv9Dv9",
     "title": "Iceland Landscape: Fantastic Places",
-    "description": "A fine art landscape of the Icelandic landscape, shaped by stillness rather than spectacle. Approached with restraint and precision, each frame captures the character of the land rather than its postcard appeal. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the land holds its breath between seasons. Part of Wayne Heim's international landscape photography series. © Wayne Heim",
+    "description": "A still Icelandic landscape holds its breath between weather and season, turning open land into a quiet study of presence. This traditional fine art landscape photograph creates Iceland wall art rooted in atmosphere, distance, and the understated force of the land.",
     "alt": "Artistic fall scenes from Iceland's terrains.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-xjv9Dv9/A",
     "keywords": [
@@ -2510,7 +2510,7 @@ export const galleryData = [
   {
     "id": "i-VWcV6vv",
     "title": "Fine Art International – Across Borders Of Iceland",
-    "description": "Delve into International – Across Borders via this international landscape photography by Wayne Heim from Iceland. Highlighting International – Across Borders through International – Across Borders and international landscape photography, it's great for collectors interested in International – Across Borders. © Wayne Heim",
+    "description": "This Iceland landscape carries the feeling of a world apart, with light and land working together in a restrained international landscape photograph. As traditional fine art landscape photography, it creates wall art shaped by silence, northern color, and the character of place.",
     "alt": "Iceland's fall landscapes through the lens of fine art.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-VWcV6vv/A",
     "keywords": [
@@ -2534,7 +2534,7 @@ export const galleryData = [
   {
     "id": "i-Sm5wgc8",
     "title": "Capturing Painterly European Landscapes In Iceland",
-    "description": "A fine art landscape photograph of the Icelandic landscape, shaped by solitude rather than spectacle. Rather than documenting scenery, this work reveals the quiet presence that defines a region. Light, tone, and composition shape a quiet narrative rooted in place and memory - where distance and silence are companions here. Part of Wayne Heim's international landscape photography series. © Wayne Heim",
+    "description": "Iceland's fall landscape is rendered with painterly restraint, using color, distance, and quiet composition to hold the mood of the season. This traditional fine art landscape photograph belongs to an international landscape series rooted in atmosphere, solitude, and northern memory.",
     "alt": "Capturing Iceland's fall beauty through fine art photography.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-Sm5wgc8/A",
     "keywords": [
@@ -2559,7 +2559,7 @@ export const galleryData = [
   {
     "id": "i-z3JwmQT",
     "title": "Exploring Painterly European Landscapes In Iceland",
-    "description": "A fine art landscape of the Icelandic landscape, shaped by stillness rather than spectacle. Wayne Heim's fine art landscape photography treats place as emotional geography - not destination, but atmosphere. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the land holds its breath between seasons. Part of Wayne Heim's international landscape photography series. © Wayne Heim",
+    "description": "A broad Icelandic landscape unfolds with quiet force, shaped by land, weather, and the long silence of open country. This traditional fine art landscape photograph creates Iceland wall art through restrained color, painterly distance, and the emotional pull of place.",
     "alt": "Highlights of Iceland's top landscape photography.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-z3JwmQT/A",
     "keywords": [
@@ -2583,7 +2583,7 @@ export const galleryData = [
   {
     "id": "i-BGbC6wT",
     "title": "Iceland Landscape: International Landscape Photography",
-    "description": "A fine art landscape photograph of the Icelandic landscape, shaped by solitude rather than spectacle. Approached with restraint and precision, each frame captures the character of the land rather than its postcard appeal. Light, tone, and composition shape a quiet narrative rooted in place and memory - where distance and silence are companions here. Part of Wayne Heim's international landscape photography series. © Wayne Heim",
+    "description": "This Iceland landscape turns solitude into structure, using light, tone, and open distance to create a quiet fine art image. As traditional landscape photography, it belongs to an international landscape series focused on atmosphere, place, and the endurance of the land.",
     "alt": "Elite selection of Iceland's fine art landscape shots.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-BGbC6wT/A",
     "keywords": [
@@ -2608,7 +2608,7 @@ export const galleryData = [
   {
     "id": "i-FhRjnhW",
     "title": "Gljúfrabúi",
-    "description": "A fine art landscape of the Icelandic landscape, shaped by permanence rather than spectacle. Rather than documenting scenery, this work reveals the quiet presence that defines a region. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the land outlasts every witness. Part of Wayne Heim's international landscape photography series. © Wayne Heim",
+    "description": "Gljufrabui is treated as Iceland fine art landscape photography, where waterfall, cliff, and enclosed atmosphere create a hidden sense of force. This traditional landscape photograph turns one of Iceland's more intimate falls into wall art shaped by water, stone, and discovery.",
     "alt": "Fine art exploration of Iceland's fall landscapes.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-FhRjnhW/A",
     "keywords": [
@@ -2696,7 +2696,7 @@ export const galleryData = [
   {
     "id": "i-4PJ9Tq6",
     "title": "Fantastic Places In Iceland",
-    "description": "A fine art landscape photograph of the Icelandic landscape, shaped by stillness rather than spectacle. Wayne Heim's fine art landscape photography treats place as emotional geography - not destination, but atmosphere. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the land holds its breath between seasons. Part of Wayne Heim's international landscape photography series. © Wayne Heim",
+    "description": "This Iceland landscape holds the feeling of a fantastic place through quiet light, landform, and atmosphere. Rather than spectacle, the image offers traditional fine art landscape photography rooted in stillness, international travel, and the deep character of the Icelandic terrain.",
     "alt": "Gljúfrabúi",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-4PJ9Tq6/A",
     "keywords": [
@@ -2721,7 +2721,7 @@ export const galleryData = [
   {
     "id": "i-hz2cL2D",
     "title": "Fine Art International – Across Borders Of Iceland",
-    "description": "A fine art landscape of the Icelandic landscape, shaped by solitude rather than spectacle. Approached with restraint and precision, each frame captures the character of the land rather than its postcard appeal. Light, tone, and composition shape a quiet narrative rooted in place and memory - where distance and silence are companions here. Part of Wayne Heim's international landscape photography series. © Wayne Heim",
+    "description": "This Icelandic landscape is shaped by solitude and the quiet measure of distance, giving the scene a strong northern stillness. As traditional fine art landscape photography, it turns international travel into wall art about atmosphere, place, and memory.",
     "alt": "Iceland's best landscape photography in fine art.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-hz2cL2D/A",
     "keywords": [
@@ -2746,7 +2746,7 @@ export const galleryData = [
   {
     "id": "i-Z83L9NS",
     "title": "International Landscape Photography In Iceland",
-    "description": "A fine art landscape photograph of the Icelandic landscape, shaped by stillness rather than spectacle. Rather than documenting scenery, this work reveals the quiet presence that defines a region. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the land holds its breath between seasons. Part of Wayne Heim's international landscape photography series. © Wayne Heim",
+    "description": "Iceland's landscape is rendered as an international fine art photograph, where restrained color and open land create a quiet sense of place. The image belongs to traditional fine art landscape photography, shaped by northern light, distance, and the silence between features.",
     "alt": "Elite selection of Iceland's fine art landscape shots.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-Z83L9NS/A",
     "keywords": [
@@ -2771,7 +2771,7 @@ export const galleryData = [
   {
     "id": "i-hRwVLbb",
     "title": "International Landscape Photography And International – Across Borders Of Iceland",
-    "description": "A fine art landscape of the Icelandic landscape, shaped by solitude rather than spectacle. Wayne Heim's fine art landscape photography treats place as emotional geography - not destination, but atmosphere. Light, tone, and composition shape a quiet narrative rooted in place and memory - where distance and silence are companions here. Part of Wayne Heim's international landscape photography series. © Wayne Heim",
+    "description": "This black and white Iceland landscape reduces the scene to distance, tone, and atmosphere, emphasizing the solitude of the northern land. As traditional fine art landscape photography, it creates Iceland wall art with a spare, contemplative presence.",
     "alt": "Iceland's best landscape photography in fine art.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-hRwVLbb/A",
     "keywords": [
@@ -2796,7 +2796,7 @@ export const galleryData = [
   {
     "id": "i-tnFbsvM",
     "title": "Skógafoss Falls in the Fall",
-    "description": "Fall landscapes of Iceland in fine art photography.",
+    "description": "Skogafoss falls through the Icelandic landscape in autumn, where water, mist, and seasonal tone give the scene quiet gravity. This traditional fine art landscape photograph belongs to Iceland waterfall photography, creating wall art shaped by force, weather, and fall color.",
     "alt": "Best of Iceland's fine art landscape images.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-tnFbsvM/A",
     "keywords": [
@@ -2884,7 +2884,7 @@ export const galleryData = [
   {
     "id": "i-zQrCP2v",
     "title": "Iceland's Skógafoss",
-    "description": "Iceland fine art landscape photography including waterfalls and scenes from around Iceland.",
+    "description": "Skogafoss is rendered as Iceland fine art landscape photography, with waterfall, mist, and surrounding land carrying the force of the scene. The image turns one of Iceland's iconic waterfalls into traditional wall art rooted in motion, atmosphere, and northern scale.",
     "alt": "Skógafoss Falls in the Fall",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-zQrCP2v/A",
     "keywords": [
@@ -2972,7 +2972,7 @@ export const galleryData = [
   {
     "id": "i-czrBwzH",
     "title": "Puffin",
-    "description": "Fine art images of Iceland during the summer season.",
+    "description": "A puffin becomes part of Iceland's broader landscape story, a living note within the cliffs, wind, and coastal world of the island. This traditional fine art photograph expands Iceland landscape wall art beyond landforms alone, connecting wildlife, shoreline, and northern place.",
     "alt": "Iceland's Skógafoss",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-czrBwzH/A",
     "keywords": [
@@ -3060,7 +3060,7 @@ export const galleryData = [
   {
     "id": "i-td4TJFn",
     "title": "Lava",
-    "description": "Capturing Iceland's summer beauty through fine art photography.",
+    "description": "Fresh lava and dark volcanic ground define this Iceland landscape, where the land still feels newly made. This traditional fine art landscape photograph emphasizes Iceland volcanic landscape photography, creating wall art from texture, heat, cooled rock, and geological force.",
     "alt": "Puffin",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-td4TJFn/A",
     "keywords": [
@@ -3148,7 +3148,7 @@ export const galleryData = [
   {
     "id": "i-jH75mBX",
     "title": "Sculpture on Shore Walk",
-    "description": "This sculpture can be seen on the shore walk in Iceland.  ©Wayne Heim",
+    "description": "A shoreline sculpture in Iceland stands between human mark and coastal landscape, set against the spare atmosphere of the northern shore. This traditional fine art landscape photograph blends travel, place, and Iceland wall art through structure, sea air, and quiet observation.",
     "alt": "Lava",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-jH75mBX/A",
     "keywords": [
@@ -3236,7 +3236,7 @@ export const galleryData = [
   {
     "id": "i-tM7nXPd",
     "title": "Overlook",
-    "description": "Iceland's finest fine art landscape photography collection.",
+    "description": "An overlook opens onto Iceland's rugged landscape, giving the viewer a wide sense of terrain, weather, and distance. This traditional fine art landscape photograph creates Iceland wall art shaped by elevation, northern atmosphere, and the quiet scale of the land.",
     "alt": "Sculpture on Shore Walk",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-tM7nXPd/A",
     "keywords": [
@@ -3324,7 +3324,7 @@ export const galleryData = [
   {
     "id": "i-gvhHBMm",
     "title": "On the beach",
-    "description": "Fine art exploration of Iceland's summer landscapes.",
+    "description": "On the beach in Iceland, black sand, water, and open coastal space form a restrained landscape study. This traditional fine art landscape photograph turns the Icelandic shoreline into wall art rooted in texture, tide, and the elemental meeting of land and sea.",
     "alt": "Overlook",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-gvhHBMm/A",
     "keywords": [
@@ -3412,7 +3412,7 @@ export const galleryData = [
   {
     "id": "i-c3RK5G4",
     "title": "Fjaðrárgljúfur Canyon",
-    "description": "A fine art landscape photograph of the Icelandic landscape, shaped by permanence rather than spectacle. Approached with restraint and precision, each frame captures the character of the land rather than its postcard appeal. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the land outlasts every witness. Part of Wayne Heim's international landscape photography series. © Wayne Heim",
+    "description": "Fjadrargljufur Canyon cuts through the Icelandic landscape with deep curves, green edges, and ancient carved form. This traditional fine art landscape photograph creates Iceland canyon wall art shaped by water, erosion, and the quiet drama of geological time.",
     "alt": "On the beach",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-c3RK5G4/A",
     "keywords": [
@@ -3500,7 +3500,7 @@ export const galleryData = [
   {
     "id": "i-KVnLdHz",
     "title": "Fjaðrárgljúfur Canyon Black and White",
-    "description": "Iceland's summer landscapes through the lens of fine art.",
+    "description": "Fjadrargljufur Canyon is rendered in black and white, emphasizing the sculptural cuts and tonal depth of Iceland's carved terrain. This traditional fine art landscape photograph turns canyon walls, river movement, and northern atmosphere into stark Iceland wall art.",
     "alt": "Fjaðrárgljúfur Canyon",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-KVnLdHz/A",
     "keywords": [
@@ -3588,7 +3588,7 @@ export const galleryData = [
   {
     "id": "i-f8GTnnN",
     "title": "Middle Falls, Iceland",
-    "description": "Artistic photography of Iceland's summer terrains.",
+    "description": "Middle Falls moves through the Icelandic landscape with quiet force, where falling water and rugged terrain create a layered northern scene. This traditional fine art landscape photograph belongs to Iceland waterfall photography, offering wall art shaped by motion, rock, and atmosphere.",
     "alt": "Fjaðrárgljúfur Canyon Black and White",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-f8GTnnN/A",
     "keywords": [
@@ -3676,7 +3676,7 @@ export const galleryData = [
   {
     "id": "i-9Tv44Gf",
     "title": "No More Power",
-    "description": "A fine art landscape of the Icelandic landscape, shaped by stillness rather than spectacle. Rather than documenting scenery, this work reveals the quiet presence that defines a region. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the land holds its breath between seasons. Part of Wayne Heim's international landscape photography series. © Wayne Heim",
+    "description": "No More Power turns an Icelandic landscape detail into a quiet meditation on abandonment, silence, and the force of place. This traditional fine art landscape photograph blends human trace with northern terrain, creating Iceland wall art rooted in memory and stillness.",
     "alt": "Middle Falls, Iceland",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-9Tv44Gf/A",
     "keywords": [
@@ -3764,7 +3764,7 @@ export const galleryData = [
   {
     "id": "i-VjpvmSB",
     "title": "Spring Lupine Flowers",
-    "description": "A fine art landscape photograph of the Icelandic landscape, shaped by permanence rather than spectacle. Wayne Heim's fine art landscape photography treats place as emotional geography - not destination, but atmosphere. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the land outlasts every witness. Part of Wayne Heim's international landscape photography series. © Wayne Heim",
+    "description": "Spring lupine flowers bring a softer color into Iceland's rugged landscape, set against the island's broader language of wind, field, and open space. This traditional fine art landscape photograph creates Iceland wall art that balances floral detail with northern atmosphere.",
     "alt": "No More Power",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-VjpvmSB/A",
     "keywords": [
@@ -3852,7 +3852,7 @@ export const galleryData = [
   {
     "id": "i-KhvPX7W",
     "title": "Black and White Lupines",
-    "description": "A fine art landscape of the Icelandic landscape, shaped by stillness rather than spectacle. Approached with restraint and precision, each frame captures the character of the land rather than its postcard appeal. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the land holds its breath between seasons. Part of Wayne Heim's international landscape photography series. © Wayne Heim",
+    "description": "Lupines are rendered in black and white, transforming Iceland's spring color into tone, form, and quiet rhythm. This traditional fine art landscape photograph turns flowers, field, and northern light into restrained Iceland wall art with a painterly sense of texture.",
     "alt": "Spring Lupine Flowers",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-KhvPX7W/A",
     "keywords": [
@@ -4028,7 +4028,7 @@ export const galleryData = [
   {
     "id": "i-ZzQrBnX",
     "title": "Evening Sun in Contrast",
-    "description": "A fine art landscape of the Icelandic landscape, shaped by tension rather than spectacle. Wayne Heim's fine art landscape photography treats place as emotional geography - not destination, but atmosphere. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the landscape holds competing forces in balance. Part of Wayne Heim's international landscape photography series. © Wayne Heim",
+    "description": "Evening sun strikes the Icelandic landscape with contrast and restraint, giving rock, field, and distance a dramatic northern edge. This traditional fine art landscape photograph creates Iceland wall art shaped by low light, atmosphere, and the long pull of summer evening.",
     "alt": "Setting Sun",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-ZzQrBnX/A",
     "keywords": [
@@ -4116,7 +4116,7 @@ export const galleryData = [
   {
     "id": "i-6GxGFH8",
     "title": "Blue Ice",
-    "description": "A fine art landscape photograph of the Icelandic landscape, shaped by permanence rather than spectacle. Approached with restraint and precision, each frame captures the character of the land rather than its postcard appeal. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the land outlasts every witness. Part of Wayne Heim's international landscape photography series. © Wayne Heim",
+    "description": "Blue ice becomes the central subject in this Iceland glacier photograph, where cold color, hard surface, and glacial texture create a quiet abstract landscape. This traditional fine art landscape image turns ice into wall art about age, compression, and northern light.",
     "alt": "Evening Sun in Contrast",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-6GxGFH8/A",
     "keywords": [
@@ -4204,7 +4204,7 @@ export const galleryData = [
   {
     "id": "i-95Sm25K",
     "title": "Diamond Beach",
-    "description": "Fine art photography capturing Iceland's summer landscapes.",
+    "description": "Diamond Beach is shaped by black sand, scattered ice, and the cold meeting of glacier and sea. This traditional fine art landscape photograph captures one of Iceland's most striking coastal scenes, creating wall art rooted in contrast, texture, and glacial atmosphere.",
     "alt": "Blue Ice",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-95Sm25K/A",
     "keywords": [
@@ -4292,7 +4292,7 @@ export const galleryData = [
   {
     "id": "i-5RjfgGf",
     "title": "Vestrahorn",
-    "description": "Capturing Iceland's summer beauty through fine art photography.",
+    "description": "Vestrahorn rises above black sand and coastal terrain, giving Iceland's southern landscape a dramatic mountain presence. This traditional fine art landscape photograph creates Iceland wall art shaped by dark beach, weather, reflection, and the unmistakable form of the mountain.",
     "alt": "Diamond Beach",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-5RjfgGf/A",
     "keywords": [
@@ -4380,7 +4380,7 @@ export const galleryData = [
   {
     "id": "i-BBnrHNk",
     "title": "Green Puffs. Vestrahorn Iceland",
-    "description": "Visual symmetry. Blue sky, dark clouds, black sand beach. Horizontal striping is broken up with random green tuffs of grass, dotting the landscape like dabs of paint.",
+    "description": "Green tufts dot the black sand near Vestrahorn like small painterly marks against a graphic Icelandic landscape. This traditional fine art landscape photograph uses horizontal bands, dark beach, blue sky, and mountain atmosphere to create Iceland wall art with strong visual rhythm.",
     "alt": "Vestrahorn",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-BBnrHNk/A",
     "keywords": [
@@ -4468,7 +4468,7 @@ export const galleryData = [
   {
     "id": "i-B3z9hrZ",
     "title": "Sand Dunes. Vestrahorn Iceland",
-    "description": "Summer landscapes of Iceland in fine art photography.",
+    "description": "Sand dunes at Vestrahorn create a textured foreground beneath one of Iceland's most recognizable mountain forms. This traditional fine art landscape photograph turns black sand, wind-shaped patterns, and distant peaks into Iceland wall art rooted in movement and place.",
     "alt": "Green Puffs. Vestrahorn Iceland",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-B3z9hrZ/A",
     "keywords": [
@@ -4556,7 +4556,7 @@ export const galleryData = [
   {
     "id": "i-BBvdb2k",
     "title": "Vestrahorn Beach",
-    "description": "Artistic photography of Iceland's summer terrains.",
+    "description": "Vestrahorn Beach stretches across black sand and coastal light, where mountain, sky, and shore form a spare Icelandic landscape. This traditional fine art landscape photograph creates wall art shaped by distance, volcanic sand, and the northern edge of the sea.",
     "alt": "Sand Dunes. Vestrahorn Iceland",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-BBvdb2k/A",
     "keywords": [
@@ -4644,7 +4644,7 @@ export const galleryData = [
   {
     "id": "i-pzm8nxG",
     "title": "Vestrahorn Camp",
-    "description": "Fine art photography capturing Iceland's summer landscapes.",
+    "description": "Vestrahorn Camp sits within a landscape of dark sand, mountain presence, and Icelandic coastal atmosphere. This traditional fine art landscape photograph blends human trace with raw terrain, creating Iceland wall art rooted in place, weather, and scale.",
     "alt": "Vestrahorn Beach",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-pzm8nxG/A",
     "keywords": [
@@ -4732,7 +4732,7 @@ export const galleryData = [
   {
     "id": "i-N84vx6j",
     "title": "Viking Village at Vestrahorn. Iceland",
-    "description": "Iceland's summer landscapes through the lens of fine art.",
+    "description": "The Viking village at Vestrahorn stands beneath Iceland's dramatic mountain and coastal landscape, joining human-made structures with black sand and northern atmosphere. This traditional fine art landscape photograph creates wall art shaped by history, terrain, and cinematic place.",
     "alt": "Vestrahorn Camp",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-N84vx6j/A",
     "keywords": [
@@ -4820,7 +4820,7 @@ export const galleryData = [
   {
     "id": "i-3kpwVkG",
     "title": "Sand Trails. Vestrahorn Beach",
-    "description": "Summer landscapes of Iceland in fine art photography.",
+    "description": "Sand trails at Vestrahorn lead through the black beach toward mountain and sky, using wind-shaped texture as the path through the frame. This traditional fine art landscape photograph turns Iceland's coastal sand into wall art about motion, pattern, and northern distance.",
     "alt": "Viking Village at Vestrahorn. Iceland",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-3kpwVkG/A",
     "keywords": [
@@ -4908,7 +4908,7 @@ export const galleryData = [
   {
     "id": "i-KVJCjJ8",
     "title": "Sand tails. Windy Vestrahorn",
-    "description": "Capturing Iceland's summer beauty through fine art photography.",
+    "description": "Wind pulls tails through the sand at Vestrahorn, creating a delicate pattern across Iceland's black beach. This traditional fine art landscape photograph captures motion written into the ground, making Iceland wall art from sand, wind, and the mountain's quiet presence.",
     "alt": "Sand Trails. Vestrahorn Beach",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-KVJCjJ8/A",
     "keywords": [
@@ -4996,7 +4996,7 @@ export const galleryData = [
   {
     "id": "i-dhmXp5T",
     "title": "Vestrahorn and Batman mountan.",
-    "description": "Capturing Iceland's summer beauty through fine art photography.",
+    "description": "Vestrahorn, sometimes called Batman Mountain, rises beyond Iceland's black sand in a landscape of sharp form and coastal atmosphere. This traditional fine art landscape photograph creates wall art from mountain silhouette, volcanic beach, and the dramatic restraint of the Icelandic coast.",
     "alt": "Sand tails. Windy Vestrahorn",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-dhmXp5T/A",
     "keywords": [
@@ -5084,7 +5084,7 @@ export const galleryData = [
   {
     "id": "i-tXhKFfZ",
     "title": "Sand Patterns",
-    "description": "Iceland's summer landscapes through the lens of fine art.",
+    "description": "Sand patterns spread across the black beach at Vestrahorn, turning wind and surface into a natural abstract design. This traditional fine art landscape photograph uses texture, repetition, and Icelandic coastal light to create wall art rooted in detail and atmosphere.",
     "alt": "Vestrahorn and Batman mountan.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-tXhKFfZ/A",
     "keywords": [
@@ -5172,7 +5172,7 @@ export const galleryData = [
   {
     "id": "i-7b7dkrw",
     "title": "Rocks with Tails",
-    "description": "A fine art landscape of the Icelandic landscape, shaped by stillness rather than spectacle. Rather than documenting scenery, this work reveals the quiet presence that defines a region. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the land holds its breath between seasons. Part of Wayne Heim's international landscape photography series. © Wayne Heim",
+    "description": "Rocks with wind-formed tails sit across Iceland's black sand, revealing how weather writes movement into the landscape. This traditional fine art landscape photograph creates Iceland wall art from small geological details, coastal wind, and the quiet force of pattern.",
     "alt": "Sand Patterns",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-7b7dkrw/A",
     "keywords": [
@@ -6151,7 +6151,7 @@ export const galleryData = [
   {
     "id": "i-pLPp6pv",
     "title": "Lava Fingers",
-    "description": "Iceland's finest fine art landscape photography collection.",
+    "description": "Lava fingers reach across Iceland's volcanic ground, turning cooled fire into a study of line, texture, and permanence. This traditional fine art landscape photograph emphasizes Iceland volcanic landscape photography, creating wall art shaped by eruption, surface, and time.",
     "alt": "Lava Flow",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-pLPp6pv/A",
     "keywords": [
@@ -6239,7 +6239,7 @@ export const galleryData = [
   {
     "id": "i-L8xPVfV",
     "title": "Eruption Iceland",
-    "description": "Summer landscapes of Iceland in fine art photography.",
+    "description": "An Icelandic eruption landscape becomes a traditional fine art photograph of fire-born ground, smoke-dark memory, and raw geological force. The image turns volcanic terrain into Iceland wall art rooted in lava, change, and the land's restless creation.",
     "alt": "Lava Fingers",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-L8xPVfV/A",
     "keywords": [
@@ -6327,7 +6327,7 @@ export const galleryData = [
   {
     "id": "i-NTLGTsc",
     "title": "Iceland: Land of Fire and Ice",
-    "description": "Artistic photography of Iceland's summer terrains.",
+    "description": "Iceland becomes the land of fire and ice in this traditional fine art landscape photograph, where volcanic force and glacial presence define the character of the scene. The image creates Iceland wall art shaped by elemental contrast, northern light, and geological drama.",
     "alt": "Eruption Iceland",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-NTLGTsc/A",
     "keywords": [
@@ -6415,7 +6415,7 @@ export const galleryData = [
   {
     "id": "i-PMB2nk4",
     "title": "Fire and Ice",
-    "description": "Fine art photography capturing Iceland's summer landscapes.",
+    "description": "Fire and ice meet in the Icelandic landscape, where volcanic ground and cold atmosphere suggest the island's opposing forces. This traditional fine art landscape photograph creates Iceland wall art rooted in contrast, texture, and the uneasy balance of creation and erosion.",
     "alt": "Iceland: Land of Fire and Ice",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-PMB2nk4/A",
     "keywords": [
@@ -6503,7 +6503,7 @@ export const galleryData = [
   {
     "id": "i-5TtKShN",
     "title": "HALLGRIMSKIRKJA and Ericson  Photography by Wayne Heim",
-    "description": "Fine art exploration of Iceland's summer landscapes.",
+    "description": "Hallgrimskirkja and the Leif Erikson statue stand as Icelandic landmarks within a broader travel landscape of architecture, history, and northern light. This traditional fine art photograph brings Iceland wall art into the city, balancing cultural presence with the atmosphere of place.",
     "alt": "Fire and Ice",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-5TtKShN/A",
     "keywords": [

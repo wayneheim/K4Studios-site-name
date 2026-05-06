@@ -24,7 +24,7 @@ export const galleryData = [
   {
     "id": "i-QfHn5BW",
     "title": "Painterly European Landscapes In Newfoundland",
-    "description": "Delve into painterly european landscapes via this fantastic places by Wayne Heim from Newfoundland. Highlighting international landscape photography through international landscape photography and fantastic places, it's great for collectors interested in painterly european landscapes. © Wayne Heim",
+    "description": "A quiet Newfoundland landscape becomes traditional fine art landscape photography, shaped by Atlantic distance, weathered ground, and the spare beauty of the Canadian coast. This international landscape photograph creates Newfoundland coastal wall art rooted in atmosphere, texture, and the feeling of a place held close by sea and sky.",
     "alt": "Walt to the Other Side     Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-QfHn5BW/A",
     "keywords": [
@@ -48,7 +48,7 @@ export const galleryData = [
   {
     "id": "i-HG9sdF8",
     "title": "Beached   Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
+    "description": "A beached boat rests along the Newfoundland shore, turning coastal stillness into traditional fine art landscape photography. Weathered wood, shoreline texture, and Atlantic quiet give the image the character of Newfoundland coastal wall art, shaped by water, work, and time.",
     "alt": "Walt to the Other Side     Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-HG9sdF8/A",
     "keywords": [
@@ -83,7 +83,7 @@ export const galleryData = [
   {
     "id": "i-MW6s3bR",
     "title": "Let's Fish    Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
+    "description": "A fishing scene along the Newfoundland coast brings boats, water, and maritime life into a quiet traditional fine art landscape photograph. This Atlantic Canada image works as Newfoundland coastal wall art, preserving the working rhythm of shore life without losing the larger mood of place.",
     "alt": "Beached   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-MW6s3bR/A",
     "keywords": [
@@ -118,7 +118,7 @@ export const galleryData = [
   {
     "id": "i-fFXHHbL",
     "title": "At Anchor   Black and White Photography by wayne Heim",
-    "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
+    "description": "A boat sits at anchor in black and white, held by still water and the quiet gravity of Newfoundland's coastal landscape. This traditional fine art landscape photograph turns harbor life into Atlantic Canada wall art, shaped by reflection, restraint, and maritime memory.",
     "alt": "Let's Fish    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-fFXHHbL/A",
     "keywords": [
@@ -153,7 +153,7 @@ export const galleryData = [
   {
     "id": "i-zWLGTKr",
     "title": "Way to the Lighthouse   Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
+    "description": "A path leads toward a Newfoundland lighthouse, drawing the eye through coastal ground, weather, and the promise of open Atlantic water. This traditional fine art landscape photograph blends Newfoundland lighthouse photography with rugged shoreline wall art, rooted in direction, distance, and place.",
     "alt": "At Anchor   Black and White Photography by wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-zWLGTKr/A",
     "keywords": [
@@ -188,7 +188,7 @@ export const galleryData = [
   {
     "id": "i-mTV4SXC",
     "title": "Stairs to the Lighthouse  Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Newfoundland, Canada — rugged coastal cliffs, weathered lighthouses, and the shores of North America's easternmost province. Wayne Heim captures the raw beauty of this Atlantic landscape.",
+    "description": "Stairs rise toward a lighthouse on the Newfoundland coast, connecting rocky ground, Atlantic air, and human passage through the landscape. This traditional fine art landscape photograph creates Newfoundland lighthouse wall art with a strong sense of movement, weather, and maritime place.",
     "alt": "Way to the Lighthouse   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-mTV4SXC/A",
     "keywords": [
@@ -223,7 +223,7 @@ export const galleryData = [
   {
     "id": "i-jpptgFS",
     "title": "Stormy Cape  Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
+    "description": "A stormy cape on the Newfoundland coast becomes a study of weather, rock, and Atlantic exposure. This traditional fine art landscape photograph turns coastal drama into Newfoundland seascape wall art, shaped by wind, distance, and the raw edge of North America.",
     "alt": "Stairs to the Lighthouse  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-jpptgFS/A",
     "keywords": [
@@ -258,7 +258,7 @@ export const galleryData = [
   {
     "id": "i-KJ8CCgP",
     "title": "Lighthouse   Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
+    "description": "A Newfoundland lighthouse stands against the coastal landscape, carrying the quiet authority of a landmark built for weather and sea. This traditional fine art landscape photograph blends lighthouse photography, Atlantic Canada atmosphere, and rugged shoreline wall art into a restrained maritime scene.",
     "alt": "Stormy Cape  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-KJ8CCgP/A",
     "keywords": [
@@ -293,7 +293,7 @@ export const galleryData = [
   {
     "id": "i-4DspwhB",
     "title": "Holding It Back  B/W    Black and White Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
+    "description": "In black and white, Holding It Back studies the Newfoundland shore through rock, water, and tonal restraint. This traditional fine art landscape photograph turns the Atlantic edge into coastal wall art about pressure, resistance, and the enduring shape of the land.",
     "alt": "Lighthouse   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-4DspwhB/A",
     "keywords": [
@@ -328,7 +328,7 @@ export const galleryData = [
   {
     "id": "i-S4NsS8J",
     "title": "Mining in Sleepy Cove   Black and White Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
+    "description": "Mining in Sleepy Cove is rendered in black and white, blending Newfoundland's coastal landscape with traces of human labor and industry. This traditional fine art landscape photograph creates Atlantic Canada wall art rooted in harbor history, shoreline texture, and the weathered memory of work.",
     "alt": "Holding It Back  B/W    Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-S4NsS8J/A",
     "keywords": [
@@ -363,7 +363,7 @@ export const galleryData = [
   {
     "id": "i-VpQXM8V",
     "title": "Rocky Beach    Black and White Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
+    "description": "A rocky Newfoundland beach becomes black and white traditional fine art landscape photography, where stone, surf, and horizon form a spare coastal study. The image works as Newfoundland seascape wall art, shaped by texture, tide, and the rugged Atlantic edge.",
     "alt": "Mining in Sleepy Cove   Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-VpQXM8V/A",
     "keywords": [
@@ -398,7 +398,7 @@ export const galleryData = [
   {
     "id": "i-NVCw96z",
     "title": "The Point   Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
+    "description": "The Point reaches into Newfoundland's Atlantic landscape with a quiet sense of exposure and distance. This traditional fine art landscape photograph captures shoreline, rock, and coastal atmosphere as Newfoundland wall art rooted in the meeting of land, water, and weather.",
     "alt": "Rocky Beach    Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-NVCw96z/A",
     "keywords": [
@@ -433,7 +433,7 @@ export const galleryData = [
   {
     "id": "i-CGTT8xr",
     "title": "Kitty  Looks Up Black and White Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
+    "description": "Kitty Looks Up brings a small living presence into the Newfoundland landscape, set against the broader language of shore, stone, and coastal stillness. This black and white traditional fine art photograph creates Atlantic Canada wall art with a quiet human scale and an intimate sense of place.",
     "alt": "The Point   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-CGTT8xr/A",
     "keywords": [
@@ -468,7 +468,7 @@ export const galleryData = [
   {
     "id": "i-6v5353T",
     "title": "Snow Cone   Black and White  Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
+    "description": "Snow Cone is rendered in black and white as a compact study of shape, ice, and Newfoundland coastal atmosphere. This traditional fine art landscape photograph turns a small shoreline subject into Atlantic Canada wall art, shaped by tone, texture, and northern restraint.",
     "alt": "Kitty  Looks Up Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-6v5353T/A",
     "keywords": [
@@ -503,7 +503,7 @@ export const galleryData = [
   {
     "id": "i-MrMvnZL",
     "title": "Getting Close  Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
+    "description": "Getting Close draws the viewer into Newfoundland's coastal world, where water, rock, and distance carry the frame. This traditional fine art landscape photograph creates Newfoundland seascape wall art with a quiet approach, balancing detail and atmosphere along the Atlantic shore.",
     "alt": "Snow Cone   Black and White  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-MrMvnZL/A",
     "keywords": [
@@ -538,7 +538,7 @@ export const galleryData = [
   {
     "id": "i-rkfH3Nc",
     "title": "Eerie Moon   Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
+    "description": "An eerie moon hangs over the Newfoundland landscape, giving the Atlantic coast a quiet, otherworldly mood. This traditional fine art landscape photograph turns moonlight, shoreline, and northern atmosphere into Newfoundland coastal wall art shaped by mystery and restraint.",
     "alt": "Getting Close  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-rkfH3Nc/A",
     "keywords": [
@@ -573,7 +573,7 @@ export const galleryData = [
   {
     "id": "i-fZ2J8wr",
     "title": "Eerie Moon Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
+    "description": "Eerie Moon studies the Newfoundland coast through pale light, open space, and a mood of quiet isolation. This traditional fine art landscape photograph creates Atlantic Canada wall art rooted in moonlit atmosphere, maritime distance, and the stillness of the shore.",
     "alt": "Eerie Moon   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-fZ2J8wr/A",
     "keywords": [
@@ -608,7 +608,7 @@ export const galleryData = [
   {
     "id": "i-BTPWxsz",
     "title": "Out There     Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
+    "description": "Out There looks toward the Newfoundland coast with a sense of distance, exposure, and Atlantic space. This traditional fine art landscape photograph creates Newfoundland seascape wall art from horizon, water, and the feeling of looking beyond the edge of land.",
     "alt": "Eerie Moon Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-BTPWxsz/A",
     "keywords": [
@@ -643,7 +643,7 @@ export const galleryData = [
   {
     "id": "i-HCG5PRx",
     "title": "Bonavista Lighthouse    Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
+    "description": "Bonavista Lighthouse stands on the Newfoundland coast as a landmark of weather, guidance, and Atlantic history. This traditional fine art landscape photograph blends Newfoundland lighthouse photography with rugged coastal wall art, shaped by sea air, horizon, and maritime endurance.",
     "alt": "Out There     Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-HCG5PRx/A",
     "keywords": [
@@ -678,7 +678,7 @@ export const galleryData = [
   {
     "id": "i-4b73W23",
     "title": "Close to St John's       Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
+    "description": "Near St. John's, Newfoundland, the landscape carries the layered feel of coastal settlement, Atlantic air, and rugged shoreline. This traditional fine art landscape photograph creates Newfoundland wall art rooted in place, distance, and the weathered character of Canada's eastern edge.",
     "alt": "Bonavista Lighthouse    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-4b73W23/A",
     "keywords": [
@@ -713,7 +713,7 @@ export const galleryData = [
   {
     "id": "i-Mcbt4wC",
     "title": "Lighthouse   Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
+    "description": "A lighthouse anchors the Newfoundland landscape, standing between land, ocean, and changing Atlantic weather. This traditional fine art landscape photograph works as Newfoundland lighthouse wall art, preserving the quiet strength of coastal landmarks and maritime place.",
     "alt": "Close to St John's       Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-Mcbt4wC/A",
     "keywords": [
@@ -748,7 +748,7 @@ export const galleryData = [
   {
     "id": "i-7k6tvvL",
     "title": "Beached   Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
+    "description": "A beached boat rests along the Newfoundland shore, its form shaped by weather, work, and the slow pause between tides. This traditional fine art landscape photograph creates coastal wall art from boat, shoreline, and the Atlantic stillness of a working maritime place.",
     "alt": "Lighthouse   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-7k6tvvL/A",
     "keywords": [
@@ -783,7 +783,7 @@ export const galleryData = [
   {
     "id": "i-zLXHHCN",
     "title": "Rock Going Swimming  Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
+    "description": "Rock Going Swimming turns a Newfoundland shoreline detail into a quiet seascape study, where stone and water meet with a sense of humor and force. This traditional fine art landscape photograph creates Atlantic Canada wall art from rock, tide, and coastal texture.",
     "alt": "Beached   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-zLXHHCN/A",
     "keywords": [
@@ -818,7 +818,7 @@ export const galleryData = [
   {
     "id": "i-ZzfQpTX",
     "title": "Breakers  Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
+    "description": "Breakers roll against the Newfoundland coast, turning surf and stone into a direct study of Atlantic power. This traditional fine art landscape photograph belongs to Newfoundland seascape photography, creating coastal wall art shaped by impact, motion, and raw maritime atmosphere.",
     "alt": "Rock Going Swimming  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-ZzfQpTX/A",
     "keywords": [
@@ -853,7 +853,7 @@ export const galleryData = [
   {
     "id": "i-BFBxLHw",
     "title": "Jewels   Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
+    "description": "Jewels studies small coastal details along Newfoundland's shore, where water, rock, and light create a quieter kind of seascape. This traditional fine art landscape photograph turns the Atlantic edge into intimate Newfoundland wall art rooted in texture, reflection, and discovery.",
     "alt": "Breakers  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-BFBxLHw/A",
     "keywords": [
@@ -888,7 +888,7 @@ export const galleryData = [
   {
     "id": "i-HskLV54",
     "title": "Angry Waves.   Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
+    "description": "Angry waves strike the Newfoundland coast, giving the scene a hard Atlantic force and a sense of weather in motion. This traditional fine art landscape photograph creates Newfoundland seascape wall art shaped by surf, rock, and the rugged edge of North America.",
     "alt": "Jewels   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-HskLV54/A",
     "keywords": [
@@ -923,7 +923,7 @@ export const galleryData = [
   {
     "id": "i-j3wMxB9",
     "title": "Boat in Harbor  Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
+    "description": "A boat rests in harbor along the Newfoundland coast, surrounded by water, working shoreline, and quiet maritime atmosphere. This traditional fine art landscape photograph turns harbor life into Atlantic Canada wall art rooted in boats, reflection, and coastal memory.",
     "alt": "Angry Waves.   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-j3wMxB9/A",
     "keywords": [
@@ -958,7 +958,7 @@ export const galleryData = [
   {
     "id": "i-5JKmkZd",
     "title": "Newfoundland Harbor    Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
+    "description": "Newfoundland Harbor captures the working calm of boats, water, and coastal settlement along Canada's Atlantic edge. This traditional fine art landscape photograph creates Newfoundland coastal wall art from harbor structure, maritime rhythm, and the quiet presence of place.",
     "alt": "Boat in Harbor  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-5JKmkZd/A",
     "keywords": [
@@ -993,7 +993,7 @@ export const galleryData = [
   {
     "id": "i-bRGTmKv",
     "title": "Little Cove  Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
+    "description": "Little Cove gathers water, rock, and shoreline into a compact Newfoundland coastal landscape. This traditional fine art landscape photograph turns the protected edge of the Atlantic into wall art shaped by shelter, texture, and the enduring mood of a maritime cove.",
     "alt": "Newfoundland Harbor    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-bRGTmKv/A",
     "keywords": [
@@ -1028,7 +1028,7 @@ export const galleryData = [
   {
     "id": "i-JW39KK8",
     "title": "Cabot Tower on Signal Hill 5    Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
+    "description": "Cabot Tower on Signal Hill overlooks St. John's and the Newfoundland harbor, joining historic architecture with coastal landscape. This traditional fine art landscape photograph creates Atlantic Canada wall art rooted in landmark history, harbor distance, and the rugged eastern edge of North America.",
     "alt": "Little Cove  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-JW39KK8/A",
     "keywords": [
