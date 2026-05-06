@@ -24,7 +24,7 @@ export const galleryData = [
  {
     "id": "i-B3z9hrZ",
     "title": "Open Country",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "description": "Sand dunes near Vestrahorn in Iceland become color landscape photography shaped by black sand, mountain distance, and coastal atmosphere. This traditional fine art landscape photograph creates wall art rooted in texture, wind, and the quiet drama of Iceland’s southern shore.",
     "alt": "Sand Dunes. Vestrahorn Iceland",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-B3z9hrZ/A",
     "keywords": [
@@ -112,7 +112,7 @@ export const galleryData = [
  {
     "id": "i-pLPp6pv",
     "title": "Lava Fingers",
-    "description": "Collection of the Best Iceland fine art landscape photography.",
+    "description": "Lava fingers reach across Iceland’s volcanic ground, turning cooled fire into a study of line, texture, and permanence. This traditional fine art landscape photograph creates Iceland wall art shaped by lava, color, surface, and geological force.",
     "alt": "Sand Dunes. Vestrahorn Iceland",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-pLPp6pv/A",
     "keywords": [
@@ -200,7 +200,7 @@ export const galleryData = [
  {
     "id": "i-VjpvmSB",
     "title": "Spring Lupine Flowers",
-    "description": "Fine art landscape photography of Iceland in the Summer.",
+    "description": "Spring lupine flowers bring color into Iceland’s rugged landscape, softening the island’s harder language of wind, field, and volcanic ground. This traditional fine art landscape photograph creates color landscape wall art rooted in seasonal bloom and northern atmosphere.",
     "alt": "Lava Fingers",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-VjpvmSB/A",
     "keywords": [
@@ -288,7 +288,7 @@ export const galleryData = [
  {
     "id": "i-Vm7vR4f",
     "title": "Morning Light",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "description": "Morning light moves through the Hocking Hills landscape, turning rock, forest, and natural color into a quiet fine art study. This traditional color landscape photograph creates Ohio wall art rooted in woodland atmosphere, regional texture, and the soft discipline of light.",
     "alt": "Spring Lupine Flowers",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-Vm7vR4f/A",
     "keywords": [
@@ -376,7 +376,7 @@ export const galleryData = [
  {
     "id": "i-c4qSzm6",
     "title": "Open Country",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "description": "A Hocking Hills landscape becomes traditional color landscape photography through forest, stone, and the subdued richness of natural light. This fine art landscape image creates Ohio wall art rooted in woodland stillness, regional geology, and the quiet force of place.",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-c4qSzm6/A",
     "keywords": [
@@ -464,7 +464,7 @@ export const galleryData = [
  {
     "id": "i-NMRNtrB",
     "title": "Field Work",
-    "description": "Discover the painterly photo art in this powerful art by Wayne Heim. ",
+    "description": "Field Work becomes color landscape photography through the quiet relationship between forest, ground, and natural light in Hocking Hills, Ohio. This traditional fine art landscape photograph creates wall art rooted in woodland texture, regional terrain, and the grounded beauty of working land.",
     "alt": "cowboy painting art in fine art photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-NMRNtrB/A",
     "keywords": [
@@ -561,7 +561,7 @@ export const galleryData = [
  {
     "id": "i-KG32NV6",
     "title": "Evening Study",
-    "description": "This artwork by Wayne Heim showcases powerful nature © Wayne Heim",
+    "description": "Evening Study turns the Hocking Hills landscape into a quiet color photograph shaped by stone, trees, and late-day atmosphere. This traditional fine art landscape image creates Ohio wall art rooted in natural structure, warm restraint, and the calm mood of wooded terrain.",
     "alt": "Fine art photography in Western style by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-KG32NV6/A",
     "keywords": [
@@ -658,7 +658,7 @@ export const galleryData = [
  {
     "id": "i-ZxWZpmH",
     "title": "Morning Light",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "description": "Morning light filters through a Hocking Hills landscape, where trees, rock, and color gather into a quiet regional scene. This traditional fine art landscape photograph creates color wall art rooted in Ohio woodland atmosphere and the subtle beauty of natural light.",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-ZxWZpmH/A",
     "keywords": [
@@ -746,7 +746,7 @@ export const galleryData = [
  {
     "id": "i-2d2fgNW",
     "title": "Morning Light",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "description": "A Hocking Hills landscape is shaped by morning light, forest texture, and the quiet color of Ohio’s wooded terrain. This traditional fine art landscape photograph creates wall art rooted in natural structure, regional atmosphere, and understated color.",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-2d2fgNW/A",
     "keywords": [
@@ -834,7 +834,7 @@ export const galleryData = [
  {
     "id": "i-p2Hdrmc",
     "title": "Quiet Moment",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "description": "A quiet Hocking Hills moment becomes traditional color landscape photography, where forest, stone, and light settle into a calm composition. This fine art landscape creates Ohio wall art rooted in stillness, woodland texture, and the emotional pull of place.",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-p2Hdrmc/A",
     "keywords": [
@@ -922,7 +922,7 @@ export const galleryData = [
  {
     "id": "i-VHMgr5J",
     "title": "Painterly Landscape Photo: Light through trees.",
-    "description": "Fine art painterly photography of light shining through the trees.",
+    "description": "Light shines through the trees in this painterly color landscape photograph, turning woodland atmosphere into quiet fine art. The image creates natural light landscape wall art shaped by forest depth, filtered glow, and the traditional beauty of trees.",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-VHMgr5J/A",
     "keywords": [
@@ -1010,7 +1010,7 @@ export const galleryData = [
  {
     "id": "i-FGWfXBM",
     "title": "Evening Study",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "description": "Evening Study gathers Hocking Hills forest, rock, and late light into a broad color landscape. This traditional fine art photograph creates Ohio wall art rooted in woodland structure, regional terrain, and the calm authority of evening atmosphere.",
     "alt": "Painterly Landscape Photo: Light through trees.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-FGWfXBM/A",
     "keywords": [
@@ -1098,7 +1098,7 @@ export const galleryData = [
  {
     "id": "i-gr3rsVB",
     "title": "Natural Light",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "description": "Natural light shapes this winter landscape into a quiet color study, where snow, trees, and soft atmosphere carry the frame. This traditional fine art landscape photograph creates winter wall art rooted in stillness, seasonal restraint, and the beauty of natural light.",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-gr3rsVB/A",
     "keywords": [
@@ -1186,7 +1186,7 @@ export const galleryData = [
  {
     "id": "i-V94r3Sb",
     "title": "The Sun Shining on a Pine Tree Sapling Growing on a Rock",
-    "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
+    "description": "Sunlight touches a pine sapling growing from rock in the Canadian Rockies, turning resilience into the center of a color landscape photograph. This traditional fine art landscape image creates alpine wall art rooted in stone, tree, light, and quiet mountain endurance.",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-V94r3Sb/A",
     "keywords": [
@@ -1274,7 +1274,7 @@ export const galleryData = [
  {
     "id": "i-tZLkQzn",
     "title": "Boat Houses Photography by Wayne Heim",
-    "description": "Colorful row of boat houses in the Faroe Islands. ©Wayne Heim",
+    "description": "A colorful row of boat houses in the Faroe Islands becomes coastal color landscape photography, where built form, water, and island atmosphere share the frame. This traditional fine art image creates wall art rooted in maritime color, shelter, and North Atlantic place.",
     "alt": "The Sun Shining on a Pine Tree Sapling Growing on a Rock",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-tZLkQzn/A",
     "keywords": [
@@ -1362,7 +1362,7 @@ export const galleryData = [
  {
     "id": "i-VhDJfhj",
     "title": "Woolly Iceland Photography by Wayne Heim",
-    "description": "Sheep graze peacefully in a field of Iceland.\n©Wayne Heim",
+    "description": "Sheep graze peacefully in an Icelandic field, adding a living rhythm to the island’s open landscape. This traditional color landscape photograph creates Iceland wall art rooted in rural quiet, natural texture, and the gentle pastoral side of northern terrain.",
     "alt": "Boat Houses Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-VhDJfhj/A",
     "keywords": [
@@ -1450,7 +1450,7 @@ export const galleryData = [
  {
     "id": "i-XFRSBrL",
     "title": "Shelters Photography by Wayne Heim",
-    "description": "Shelters for livestock dot the hillside. ©Wayne Heim",
+    "description": "Livestock shelters dot a hillside, giving the landscape a quiet human and agricultural trace. This traditional color landscape photograph creates wall art rooted in rural terrain, practical shelter, hillside rhythm, and the weathered character of working land.",
     "alt": "Woolly Iceland Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-XFRSBrL/A",
     "keywords": [
@@ -1538,7 +1538,7 @@ export const galleryData = [
  {
     "id": "i-83tPbLW",
     "title": "Faroe Lighthouse Photography by Wayne Heim",
-    "description": "Lighthouse is located in the Faroe Islands.\n©Wayne Heim",
+    "description": "A lighthouse in the Faroe Islands anchors the coastal landscape, standing against sea, ground, and northern weather. This traditional fine art landscape photograph creates Faroe Islands wall art rooted in maritime color, lighthouse presence, and North Atlantic atmosphere.",
     "alt": "Shelters Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-83tPbLW/A",
     "keywords": [
@@ -1626,7 +1626,7 @@ export const galleryData = [
  {
     "id": "i-nxGfZNp",
     "title": "Faroe Gate Photography by Wayne Heim",
-    "description": "View of sea from walkway blocked by gate. ©Wayne Heim",
+    "description": "A gate blocks the walkway while the sea opens beyond it, turning a simple Faroe Islands scene into a color landscape about threshold and distance. This traditional fine art photograph creates coastal wall art rooted in path, barrier, ocean, and island atmosphere.",
     "alt": "Faroe Lighthouse Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-nxGfZNp/A",
     "keywords": [
@@ -1714,7 +1714,7 @@ export const galleryData = [
  {
     "id": "i-TRtWkLG",
     "title": "Big Rocks PHotogrphy by Wayne Heim",
-    "description": "Huge rocks litter the hillside in the Faroe Islands.\n©Wayne Heim",
+    "description": "Huge rocks scatter across a Faroe Islands hillside, giving the landscape a rugged sense of scale and surface. This traditional color landscape photograph creates wall art rooted in stone, slope, texture, and the weathered force of North Atlantic terrain.",
     "alt": "Faroe Gate Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-TRtWkLG/A",
     "keywords": [
@@ -1802,7 +1802,7 @@ export const galleryData = [
  {
     "id": "i-TPsBSVZ",
     "title": "End of the Rainbow in Iceland Photography by Wayne Heim",
-    "description": "Rainbow in Iceland seem to end at the little house",
+    "description": "A rainbow in Iceland seems to end at a little house, turning weather, color, and land into a quiet visual promise. This traditional fine art landscape photograph creates Iceland wall art rooted in atmosphere, rural scale, and the fleeting magic of northern light.",
     "alt": "Big Rocks PHotogrphy by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-TPsBSVZ/A",
     "keywords": [
@@ -1890,7 +1890,7 @@ export const galleryData = [
  {
     "id": "i-xh9HRXJ",
     "title": "Hiking the Glacier Photography by Wayne Heim",
-    "description": "Some of the sight you see when hiking the glaciers in Iceland. ©Wayne Heim",
+    "description": "Hiking a glacier in Iceland reveals a landscape of ice, stone, and cold color, shaped by scale and movement. This traditional fine art landscape photograph creates glacier wall art rooted in texture, exploration, and the raw beauty of Iceland’s frozen terrain.",
     "alt": "End of the Rainbow in Iceland Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-xh9HRXJ/A",
     "keywords": [
@@ -1978,7 +1978,7 @@ export const galleryData = [
  {
     "id": "i-5xqVf2N",
     "title": "Looking Up Through the Ice Photography by Wayne Heim",
-    "description": "You are in an ice cave looking up through a whole in the top of the glacier. ©Wayne Heim",
+    "description": "Inside an Icelandic ice cave, the view looks upward through an opening in the glacier, turning blue ice and overhead light into a color landscape study. This traditional fine art photograph creates glacier cave wall art rooted in wonder, cold texture, and enclosed scale.",
     "alt": "Hiking the Glacier Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-5xqVf2N/A",
     "keywords": [
@@ -2066,7 +2066,7 @@ export const galleryData = [
  {
     "id": "i-HSgTpdm",
     "title": "Cold Inside Photography by Wayne Heim",
-    "description": "This dramatic shot is of the inside of a glacier cave in Iceland. ©Wayne Heim",
+    "description": "The inside of a glacier cave in Iceland becomes a dramatic color landscape, shaped by ice walls, shadow, and blue light. This traditional fine art photograph creates glacier wall art rooted in cold atmosphere, sculptural form, and the strange interior world of ice.",
     "alt": "Looking Up Through the Ice Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-HSgTpdm/A",
     "keywords": [
@@ -2154,7 +2154,7 @@ export const galleryData = [
  {
     "id": "i-JDqV2sQ",
     "title": "Glacier Cave Photography by Wayne Heim",
-    "description": "Looking out from one of the many glacier caves in Iceland ©Wayne Heim",
+    "description": "Looking out from a glacier cave in Iceland, the outer landscape is framed by ice, darkness, and cold color. This traditional fine art landscape photograph creates wall art rooted in threshold, scale, and the fragile boundary between cave and open land.",
     "alt": "Cold Inside Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-JDqV2sQ/A",
     "keywords": [
@@ -2242,7 +2242,7 @@ export const galleryData = [
  {
     "id": "i-v33BRwG",
     "title": "Around the Bend 2 Photography by Wayne Heim",
-    "description": "What is around the bend in the road in Wyoming. ©Wayne Heim",
+    "description": "A Wyoming road bends through the landscape, inviting the viewer to wonder what waits beyond the curve. This traditional color landscape photograph creates Western wall art rooted in movement, road, distance, and the quiet pull of open country.",
     "alt": "Glacier Cave Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-v33BRwG/A",
     "keywords": [
@@ -2330,7 +2330,7 @@ export const galleryData = [
  {
     "id": "i-sVT8z89",
     "title": "Peaceful River Photography by Wayne Heim",
-    "description": "A peaceful river flows through the quiet Wyoming countryside. ©Wayne Heim",
+    "description": "A peaceful river flows through the quiet Wyoming countryside, carrying stillness through the Western landscape. This traditional color landscape photograph creates wall art rooted in water, open land, and the calm atmosphere of the American West.",
     "alt": "Around the Bend 2 Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-sVT8z89/A",
     "keywords": [
@@ -2418,7 +2418,7 @@ export const galleryData = [
  {
     "id": "i-7hz5LWz",
     "title": "Painterly photography: Aspen Fall",
-    "description": "Grove of aspen trees in the fall outside of Jackson Hole Wyoming. ©Wayne Heim",
+    "description": "A grove of aspen trees in fall outside Jackson Hole, Wyoming becomes painterly color landscape photography. This traditional fine art photograph creates Western wall art rooted in autumn color, tree rhythm, and the luminous quiet of mountain country.",
     "alt": "Peaceful River Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-7hz5LWz/A",
     "keywords": [
@@ -2506,7 +2506,7 @@ export const galleryData = [
  {
     "id": "i-mTV4SXC",
     "title": "Stairs to the Lighthouse Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
+    "description": "Stairs rise toward a Newfoundland lighthouse, connecting coastal ground, Atlantic air, and human passage through the landscape. This traditional color landscape photograph creates Newfoundland wall art rooted in maritime place, movement, and the rugged shore of North America.",
     "alt": "Painterly photography: Aspen Fall",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-mTV4SXC/A",
     "keywords": [
@@ -2594,7 +2594,7 @@ export const galleryData = [
  {
     "id": "i-xBJqD6x",
     "title": "Erosion 2 Photography by Wayne Heim",
-    "description": "18 x 24 In StockErosion 2 - the eroded landscape of Utah ©Wayne Heim",
+    "description": "The eroded landscape of Utah becomes traditional color landscape photography shaped by desert texture, carved ground, and geological time. This fine art landscape creates Utah wall art rooted in erosion, arid form, and the rugged beauty of the American West.",
     "alt": "Stairs to the Lighthouse Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-xBJqD6x/A",
     "keywords": [
@@ -2682,7 +2682,7 @@ export const galleryData = [
  {
     "id": "i-WvsDG8b",
     "title": "Sunset Over the Canyon Photography by Wayne Heim",
-    "description": "Sunset at Canyon Lands National Park in Utah. ©Wayne Heim",
+    "description": "Sunset at Canyonlands National Park in Utah turns canyon country into a color landscape of light, distance, and carved land. This traditional fine art photograph creates Utah wall art rooted in evening atmosphere, desert scale, and the rugged beauty of the American West.",
     "alt": "Erosion 2 Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-WvsDG8b/A",
     "keywords": [
@@ -2770,7 +2770,7 @@ export const galleryData = [
  {
     "id": "i-7S934Ld",
     "title": "Double Arches. Photography by Wayne Heim",
-    "description": "Double Arches- view of two of the arches in Arches National Park in Utah. ©Wayne Heim",
+    "description": "Double Arches in Arches National Park, Utah becomes traditional color landscape photography shaped by stone openings, desert light, and carved form. This fine art landscape creates Utah wall art rooted in red-rock country, erosion, and natural architecture.",
     "alt": "Sunset Over the Canyon Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-7S934Ld/A",
     "keywords": [
@@ -2858,7 +2858,7 @@ export const galleryData = [
  {
     "id": "i-GH3g3bV",
     "title": "Plateau in Sky Photography by Wayne Heim",
-    "description": "One of the many plateaus in Bryce Nation Park ©Wayne Heim",
+    "description": "A plateau rises in Bryce National Park, turning Utah’s desert landscape into a color study of height, stone, and open sky. This traditional fine art photograph creates canyon wall art rooted in sculptural landform, warm terrain, and Western atmosphere.",
     "alt": "Double Arches. Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-GH3g3bV/A",
     "keywords": [
@@ -2946,7 +2946,7 @@ export const galleryData = [
  {
     "id": "i-BBj6j4Q",
     "title": "Looking Up Photography by Wayne Heim",
-    "description": "Looking up from the floor of the Narrows in Zion National Park. ©Wayne Heim",
+    "description": "Looking up from the floor of the Narrows in Zion National Park, the canyon walls become a color landscape of stone, height, and filtered light. This traditional fine art photograph creates Zion wall art rooted in vertical force, canyon atmosphere, and desert enclosure.",
     "alt": "Plateau in Sky Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-BBj6j4Q/A",
     "keywords": [
@@ -3034,7 +3034,7 @@ export const galleryData = [
  {
     "id": "i-kcvnCvz",
     "title": "Sunset in Arches. #2 Photography by Wayne Heim",
-    "description": "18 x 24 In StockSunset in Arches. Sun is setting behind rock formations in Arches National Park, Utah ©Wayne Heim",
+    "description": "Sunset settles behind rock formations in Arches National Park, Utah, turning desert stone and sky into a warm color landscape. This traditional fine art photograph creates Utah wall art rooted in natural form, evening light, and the atmosphere of dusk.",
     "alt": "Looking Up Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-kcvnCvz/A",
     "keywords": [
@@ -3122,7 +3122,7 @@ export const galleryData = [
  {
     "id": "i-zXsjXwN",
     "title": "Forest Path. Photography by Wayne Heim",
-    "description": "Painterly photography. Forest Path , quiet path through the woods of Hocking Hills in Ohio ©Wayne Heim",
+    "description": "A quiet forest path through Hocking Hills, Ohio becomes painterly color landscape photography, shaped by trees, trail, and soft woodland light. This traditional fine art landscape creates Ohio wall art rooted in natural passage, stillness, and the invitation of the woods.",
     "alt": "Sunset in Arches. #2 Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-zXsjXwN/A",
     "keywords": [
@@ -3210,7 +3210,7 @@ export const galleryData = [
  {
     "id": "i-gWV8wV3",
     "title": "The Rock Bridge Photography by Wayne Heim",
-    "description": "The Rock Bridge near Old Man's Cave in Hocking Hills Park.©Wayne Heim",
+    "description": "The Rock Bridge near Old Man’s Cave in Hocking Hills becomes traditional color landscape photography through stone, forest, and natural structure. This fine art image creates Ohio wall art rooted in regional geology, woodland atmosphere, and the quiet strength of carved rock.",
     "alt": "Forest Path. Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-gWV8wV3/A",
     "keywords": [
@@ -3298,7 +3298,7 @@ export const galleryData = [
  {
     "id": "i-rW68r3t",
     "title": "Grand Canyon of the East Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Letchworth State Park in New York.",
+    "description": "Letchworth State Park in New York becomes color landscape photography through canyon scale, river distance, and layered terrain. This traditional fine art photograph creates wall art rooted in the Grand Canyon of the East and the quiet drama of regional landscape.",
     "alt": "The Rock Bridge Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-rW68r3t/A",
     "keywords": [
@@ -3386,7 +3386,7 @@ export const galleryData = [
  {
     "id": "i-2qqHRQ6",
     "title": "Angry Sunset . Photography by Wayne Heim",
-    "description": "Angry Sunset - dark gray clouds at sunset seem to warn of storm .©Wayne Heim",
+    "description": "Dark gray clouds gather at sunset, warning of storm and turning the sky into the center of the landscape. This traditional color landscape photograph creates wall art rooted in weather, drama, evening light, and the charged atmosphere before change.",
     "alt": "Grand Canyon of the East Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-2qqHRQ6/A",
     "keywords": [
@@ -3474,7 +3474,7 @@ export const galleryData = [
  {
     "id": "i-zrvTR9s",
     "title": "Sunset at the Farm. Photography by Wayne Heim",
-    "description": "Sunset at the Farm - sunsetting behind a rural farm outlining the buildings.©Wayne Heim",
+    "description": "Sunset behind a rural farm outlines buildings against the evening sky, turning countryside structure into a color landscape of silhouette and memory. This traditional fine art photograph creates rural wall art rooted in farm atmosphere, fading light, and quiet land.",
     "alt": "Angry Sunset . Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-zrvTR9s/A",
     "keywords": [
@@ -3562,7 +3562,7 @@ export const galleryData = [
  {
     "id": "i-qmfkzcG",
     "title": "Go Left Photography by Wayne Heim",
-    "description": "Road sign indicate go left as road foes along a gorge. ©Wayne Heim",
+    "description": "A road sign points left as the road follows a gorge, turning direction, terrain, and passage into a color landscape study. This traditional fine art photograph creates wall art rooted in road, canyon edge, and the quiet decision of where the land leads next.",
     "alt": "Sunset at the Farm. Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-qmfkzcG/A",
     "keywords": [
@@ -3650,7 +3650,7 @@ export const galleryData = [
  {
     "id": "i-J6CS9dN",
     "title": "Distant View",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "description": "A distant Vermont view becomes traditional color landscape photography through open land, soft atmosphere, and restrained regional light. This fine art landscape creates New England wall art rooted in distance, seasonal quiet, and the calm presence of rural place.",
     "alt": "Go Left Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-J6CS9dN/A",
     "keywords": [
@@ -3738,7 +3738,7 @@ export const galleryData = [
  {
     "id": "i-4rJVZLg",
     "title": "Natural Light",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "description": "Natural light shapes this Vermont landscape into a quiet color study of land, trees, and regional atmosphere. This traditional fine art landscape photograph creates New England wall art rooted in soft light, rural texture, and understated seasonal beauty.",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-4rJVZLg/A",
     "keywords": [
@@ -3826,7 +3826,7 @@ export const galleryData = [
  {
     "id": "i-4S3C7Hx",
     "title": "Open Country",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "description": "Open country in Vermont becomes a traditional color landscape photograph shaped by rural distance, natural light, and quiet terrain. This fine art landscape creates New England wall art rooted in openness, seasonal atmosphere, and the calm authority of place.",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-4S3C7Hx/A",
     "keywords": [
@@ -3914,7 +3914,7 @@ export const galleryData = [
  {
     "id": "i-h7Rcxmr",
     "title": "Evening Study",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "description": "Evening light settles across a Vermont landscape, turning land, color, and atmosphere into a restrained fine art scene. This traditional color landscape photograph creates New England wall art rooted in rural quiet, seasonal tone, and the soft close of day.",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-h7Rcxmr/A",
     "keywords": [
@@ -4002,7 +4002,7 @@ export const galleryData = [
  {
     "id": "i-68NCBvz",
     "title": "Distant View",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "description": "A distant Vermont landscape opens across the frame with quiet scale, natural color, and regional atmosphere. This traditional fine art photograph creates New England wall art rooted in open land, seasonal distance, and the stillness of rural terrain.",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-68NCBvz/A",
     "keywords": [
@@ -4090,7 +4090,7 @@ export const galleryData = [
  {
     "id": "i-WqnXv6B",
     "title": "Morning Light",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "description": "Morning light moves across a Vermont landscape, giving the scene a calm color presence and a quiet sense of place. This traditional fine art landscape photograph creates New England wall art rooted in rural atmosphere, soft light, and the understated beauty of morning.",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-WqnXv6B/A",
     "keywords": [
