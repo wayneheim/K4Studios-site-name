@@ -24,7 +24,7 @@ export const galleryData = [
   {
     "id": "i-Vq3RmbR",
     "title": "The Essence Of Animal Kingdom",
-    "description": "Uncover animal kingdom through this fauna photography from Wayne Heim. Showcasing fauna photography, wildlife photography, and nature's beauty, it's perfect for enthusiasts of animal kingdom. © Wayne Heim",
+    "description": "A wild animal portrait becomes fine art through posture, attention, and the quiet force of the animal kingdom. This wildlife photograph by Wayne Heim creates wall art rooted in nature's beauty, close observation, and the living presence of an animal held in a single moment.",
     "alt": "The Essence Of Animal Kingdom",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife/i-Vq3RmbR/A",
     "keywords": [
@@ -50,7 +50,7 @@ export const galleryData = [
   {
     "id": "i-n8bjD4g",
     "title": "On My Own - Photography by Wayne Heim",
-    "description": "On My Own - lone fax in a meadow looks around for company. ©Wayne Heim",
+    "description": "A lone fox kit stands in a meadow, looking around as if searching for company. This fine art wildlife photograph turns a small animal moment into wildlife wall art rooted in vulnerability, curiosity, and the open quiet of the field.",
     "alt": "On My Own - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife/i-n8bjD4g/A",
     "keywords": [
@@ -79,7 +79,7 @@ export const galleryData = [
   {
     "id": "i-JNGBnsD",
     "title": "Got an Itch - Photography by Wayne Heim",
-    "description": "Got an Itch - bull moose scratches in the woods of Wyoming.©Wayne Heim",
+    "description": "A bull moose scratches in the woods of Wyoming, caught in a practical, unguarded moment of wild behavior. This animal portrait photograph creates fine art wildlife wall art rooted in size, texture, and the everyday reality of life in the forest.",
     "alt": "Got an Itch - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife/i-JNGBnsD/A",
     "keywords": [
@@ -108,7 +108,7 @@ export const galleryData = [
   {
     "id": "i-n2CpJ8n",
     "title": "I See You - Photography by Wayne Heim",
-    "description": "I See You - close up of a dragon fly as it sits on a thistle. ©Wayne Heim",
+    "description": "A dragonfly rests on a thistle, its small body and alert presence transformed into close-up nature photography. This fine art wildlife image creates fauna wall art rooted in delicate structure, sharp attention, and the beauty of a brief insect encounter.",
     "alt": "I See You - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife/i-n2CpJ8n/A",
     "keywords": [
@@ -137,7 +137,7 @@ export const galleryData = [
   {
     "id": "i-GDgGnbJ",
     "title": "Holding On - Photography by Wayne Heim",
-    "description": "Holding On - close up of a dragon fly holding on to the end of a twig. ©Wayne Heim",
+    "description": "A dragonfly holds to the end of a twig, turning balance, detail, and stillness into fine art nature photography. This wildlife photograph creates fauna wall art from small-scale tension, fragile structure, and the quiet discipline of looking closely.",
     "alt": "Holding On - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife/i-GDgGnbJ/A",
     "keywords": [
@@ -166,7 +166,7 @@ export const galleryData = [
   {
     "id": "i-ZwgGZbg",
     "title": "Big Boy - Photography by Wayne Heim",
-    "description": "Big Boy _ Close up of a bull moose . ©Wayne Heim",
+    "description": "A close portrait of a bull moose fills the frame with mass, texture, and calm authority. This fine art wildlife photograph creates animal portrait wall art rooted in Wyoming nature, wild presence, and the sculptural force of a mature moose.",
     "alt": "Big Boy - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife/i-ZwgGZbg/A",
     "keywords": [
@@ -195,7 +195,7 @@ export const galleryData = [
   {
     "id": "i-NNmzZph",
     "title": "Watching     Photography by Wayne Heim",
-    "description": "Moose stands in field watching something in distance.  ©Wayne Heim",
+    "description": "A moose stands in a field watching something in the distance, holding the landscape with quiet alertness. This fine art wildlife photograph creates animal wall art rooted in stillness, attention, and the watchful rhythm of wild life.",
     "alt": "Watching     Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife/i-NNmzZph/A",
     "keywords": [
@@ -224,7 +224,7 @@ export const galleryData = [
   {
     "id": "i-K9X6wsx",
     "title": "Exploring Animal Kingdom",
-    "description": "Witness animal kingdom in Wayne Heim's wildlife photography. This image features nature's beauty with wild animal art and wildlife photography, ideal for admirers of animal kingdom. © Wayne Heim",
+    "description": "A wild animal study becomes fine art through eye contact, posture, and the restrained beauty of nature photography. This wildlife image creates animal portrait wall art rooted in presence, field observation, and the unspoken tension of the animal kingdom.",
     "alt": "Exploring Animal Kingdom",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife/i-K9X6wsx/A",
     "keywords": [
@@ -251,7 +251,7 @@ export const galleryData = [
   {
     "id": "i-HVvng4J",
     "title": "Getting a Drink     Photography by Wayne Heim",
-    "description": "Moose by pond getting a drink.  ©Wayne Heim",
+    "description": "A moose lowers near a pond for a drink, bringing water, body, and quiet instinct into one natural scene. This fine art wildlife photograph creates wall art rooted in Wyoming nature, animal behavior, and the calm intimacy of a wild moment.",
     "alt": "Getting a Drink     Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife/i-HVvng4J/A",
     "keywords": [
@@ -280,7 +280,7 @@ export const galleryData = [
   {
     "id": "i-kw4LCrd",
     "title": "Cool Water    Photography by Wayne Heim",
-    "description": "Moose stands in the cool water of a stream.\n©Wayne Heim",
+    "description": "A moose stands in the cool water of a stream, surrounded by the quiet textures of wild country. This wildlife photograph creates fine art animal wall art rooted in water, stillness, and the grounded presence of a large animal at ease.",
     "alt": "Cool Water    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife/i-kw4LCrd/A",
     "keywords": [
@@ -309,7 +309,7 @@ export const galleryData = [
   {
     "id": "i-vqC5jTC",
     "title": "The Essence Of Animal Portrait",
-    "description": "Wayne Heim's animal portrait captures the spirit of wildlife art in this wildlife art image. Featuring animal kingdom, nature's beauty, and animal portrait, it's ideal for wildlife art enthusiasts. © Wayne Heim",
+    "description": "A wild animal portrait is shaped by posture, atmosphere, and the watchful presence of the subject. This fine art wildlife photograph creates animal wall art rooted in nature's beauty, quiet tension, and the direct visual language of the animal kingdom.",
     "alt": "The Essence Of Animal Portrait",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife/i-vqC5jTC/A",
     "keywords": [
@@ -335,7 +335,7 @@ export const galleryData = [
   {
     "id": "i-fHxpx2c",
     "title": "Fauna Photography Study",
-    "description": "Wayne Heim's fauna photography captures the spirit of wildlife photography in this wild animal art image. Featuring wild animal art, wildlife photography, and fauna photography, it's ideal for wildlife photography enthusiasts. © Wayne Heim",
+    "description": "This fauna photograph turns a wild subject into a quiet study of form, alertness, and natural presence. As fine art wildlife photography, it creates wild animal wall art rooted in observation, restraint, and the living character of the scene.",
     "alt": "Fauna Photography Study",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife/i-fHxpx2c/A",
     "keywords": [
@@ -360,7 +360,7 @@ export const galleryData = [
   {
     "id": "i-zM8tjW7",
     "title": "Animal Portrait And Fauna Photography",
-    "description": "Experience animal portrait through this evocative fauna photography from Wayne Heim's portfolio. This piece highlights nature's beauty with fauna photography, while conveying nature's beauty, ideal for those who appreciate animal portrait. © Wayne Heim",
+    "description": "An animal portrait becomes fine art through quiet expression, natural setting, and the held tension of a living subject. This wildlife photograph creates fauna wall art rooted in nature photography, wild animal presence, and the dignity of close observation.",
     "alt": "Animal Portrait And Fauna Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife/i-zM8tjW7/A",
     "keywords": [
