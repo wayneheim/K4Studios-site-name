@@ -24,7 +24,7 @@ export const galleryData = [
  {
     "id": "i-ZgXTnCV",
     "title": "Open Country",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "description": "A quiet winter scene in Gates Mills, Ohio becomes black and white landscape photography through snow, stillness, and the humble architecture of place. This traditional fine art landscape photograph creates monochrome wall art rooted in winter atmosphere, memory, and regional character.",
     "alt": "Grandma's Garage. Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-ZgXTnCV/A",
     "keywords": [
@@ -57,7 +57,7 @@ export const galleryData = [
  {
     "id": "i-2MmTpqQ",
     "title": "Morning Light",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "description": "Morning light turns this black and white landscape into a study of tone, distance, and quiet atmosphere. As traditional fine art landscape photography, the image creates wall art rooted in restraint, soft structure, and the emotional pull of land held without color.",
     "alt": "Grandma's Garage. Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-2MmTpqQ/A",
     "keywords": [
@@ -90,7 +90,7 @@ export const galleryData = [
  {
     "id": "i-nwVhxGk",
     "title": "White Paint - Black & White Photography by Wayne Heim",
-    "description": "White Paint - grove of aspen trees in the snow with one lone pine tree in background. ©Wayne Heim",
+    "description": "A grove of aspen trees stands in the snow with one lone pine in the background, turning winter woods into black and white landscape photography. This traditional fine art photograph creates monochrome wall art rooted in tree pattern, snow, and quiet mountain atmosphere.",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-nwVhxGk/A",
     "keywords": [
@@ -123,7 +123,7 @@ export const galleryData = [
  {
     "id": "i-sNtN8KK",
     "title": "Black & White Photo of a Pine Tree Growing on Top of a Rock",
-    "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
+    "description": "A pine tree grows from rock in the Canadian Rockies, turning endurance, stone, and alpine stillness into black and white landscape photography. This traditional fine art landscape photograph creates monochrome wall art rooted in mountain texture, natural resilience, and quiet Canadian wilderness.",
     "alt": "White Paint - Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-sNtN8KK/A",
     "keywords": [
@@ -156,7 +156,7 @@ export const galleryData = [
  {
     "id": "i-WNk5sxX",
     "title": "Quiet Moment",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "description": "A quiet winter moment becomes traditional black and white landscape photography, shaped by snow, soft light, and the restrained mood of the season. This monochrome landscape wall art carries a calm, contemplative presence rooted in stillness and natural texture.",
     "alt": "Black & White Photo of a Pine Tree Growing on Top of a Rock",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-WNk5sxX/A",
     "keywords": [
@@ -189,7 +189,7 @@ export const galleryData = [
  {
     "id": "i-HgQBk3g",
     "title": "Crystal  - black & White Photography by Wayne Heim",
-    "description": "Crystal: Lone tree with Ice crystals on snow. Idaho.©Wayne Heim",
+    "description": "A lone tree with ice crystals on snow becomes a black and white winter landscape study from Idaho. This traditional fine art landscape photograph creates wall art rooted in solitude, delicate texture, and the quiet poetry of cold country.",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-HgQBk3g/A",
     "keywords": [
@@ -222,7 +222,7 @@ export const galleryData = [
  {
     "id": "i-VZ3N4km",
     "title": "Before and After. Photography by Wayne Heim",
-    "description": "Black and white photograph of snow and clouds near Bondurant Wyoming. ©Wayne Heim",
+    "description": "Snow and clouds near Bondurant, Wyoming become black and white landscape photography shaped by tonal contrast and atmospheric change. This traditional fine art image creates wall art rooted in winter weather, distance, and the quiet drama of high country.",
     "alt": "Crystal  - black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-VZ3N4km/A",
     "keywords": [
@@ -255,7 +255,7 @@ export const galleryData = [
  {
     "id": "i-XVdVWhm",
     "title": "Giants -- Black & White Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Glacier National Park and Montana.",
+    "description": "Giants rises from the Glacier National Park and Montana landscape in black and white, turning mountain scale into a study of tone and form. This traditional fine art landscape photograph creates monochrome wall art rooted in alpine grandeur, contrast, and quiet force.",
     "alt": "Before and After. Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-XVdVWhm/A",
     "keywords": [
@@ -288,7 +288,7 @@ export const galleryData = [
  {
     "id": "i-VQR6R5v",
     "title": "Texture -- Black & White Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Glacier National Park and Montana.",
+    "description": "Texture becomes the subject in this black and white Glacier National Park landscape, where rock, slope, and mountain surface carry the frame. This traditional fine art landscape photograph creates monochrome wall art rooted in rugged detail, tonal depth, and northern mountain structure.",
     "alt": "Giants -- Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-VQR6R5v/A",
     "keywords": [
@@ -321,7 +321,7 @@ export const galleryData = [
  {
     "id": "i-sLbdc7W",
     "title": "Faroe Island Lighthouse    Black and White Photography by Wayne Heim",
-    "description": "Close up view of the lighthouse on Faroe Islands.   ©Wayne Heim",
+    "description": "A close view of a lighthouse in the Faroe Islands becomes black and white landscape photography through structure, coastal atmosphere, and North Atlantic restraint. This monochrome landscape photograph creates wall art rooted in maritime isolation, landmark form, and quiet weather.",
     "alt": "Texture -- Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-sLbdc7W/A",
     "keywords": [
@@ -354,7 +354,7 @@ export const galleryData = [
  {
     "id": "i-2N4ghBL",
     "title": "Snowy Bend. Photography by Wayne Heim",
-    "description": "Snowy Bend, Road along the Chagrin River in Gates Mills, Ohio Heavy snow is falling  ©Wayne Heim",
+    "description": "A snowy road bends along the Chagrin River in Gates Mills, Ohio, with heavy snow softening the scene into tonal quiet. This black and white landscape photograph creates winter wall art rooted in snowfall, river atmosphere, and the still beauty of Northeast Ohio.",
     "alt": "Faroe Island Lighthouse    Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-2N4ghBL/A",
     "keywords": [
@@ -387,7 +387,7 @@ export const galleryData = [
  {
     "id": "i-Rh64N3s",
     "title": "Alone on Prairie - Black & White Photography",
-    "description": "Alone on Prairie - lone cabin on the plains in Wyoming ©Wayne Heim",
+    "description": "A lone cabin sits on the Wyoming plains, turning isolation and open land into black and white landscape photography. This traditional fine art print creates monochrome wall art rooted in solitude, shelter, and the spare emotional weight of the prairie.",
     "alt": "Snowy Bend. Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-Rh64N3s/A",
     "keywords": [
@@ -420,7 +420,7 @@ export const galleryData = [
  {
     "id": "i-PmxqLBs",
     "title": "Better Days\". Photography by Wayne Heim",
-    "description": "\"Better Days\". Black and white nature photo of old barn on \"Mormon Row\", North of Jackson Hole Wyoming. ©Wayne Heim",
+    "description": "An old barn on Mormon Row north of Jackson Hole, Wyoming carries the weathered dignity of better days. This black and white landscape photograph creates wall art rooted in rustic architecture, homestead memory, and the enduring presence of Grand Teton country.",
     "alt": "Alone on Prairie - Black & White Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-PmxqLBs/A",
     "keywords": [
@@ -453,7 +453,7 @@ export const galleryData = [
  {
     "id": "i-S6m4mR2",
     "title": "\"Out the Door\"",
-    "description": "B/W high key photo from inside an old log barn at the foot of the Teton on \"Mormon Row\" just outside of Jackson Hole Wyoming. Voyeuristic view from inside the dark building pears out into the daylight. ©Wayne Heim",
+    "description": "From inside an old log barn on Mormon Row near Jackson Hole, Wyoming, daylight opens toward the Tetons beyond. This black and white landscape photograph creates wall art rooted in interior darkness, mountain distance, and the tension between shelter and horizon.",
     "alt": "Better Days\". Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-S6m4mR2/A",
     "keywords": [
@@ -486,7 +486,7 @@ export const galleryData = [
  {
     "id": "i-8qbxTWM",
     "title": "Moulton Barn, Jackson Hole Wyoming. Photograph by Wayne Heim",
-    "description": "Black and white photograph of cowboy overseeing the Mormon Row Barn. ©Wayne Heim",
+    "description": "A cowboy stands near the Mormon Row Barn in Jackson Hole, Wyoming, turning historic structure and Western presence into black and white landscape photography. This traditional fine art image creates wall art rooted in weathered wood, open land, and the quiet authority of place.",
     "alt": "\"Out the Door\"",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-8qbxTWM/A",
     "keywords": [
@@ -519,7 +519,7 @@ export const galleryData = [
  {
     "id": "i-RFCHLhg",
     "title": "Tetons Peek - Black & White Photography by Wayne Heim",
-    "description": "Tetons Peek -- peeking out the barn door at the Grand Tetons in Jackson Hole, Wyoming. ©Wayne Heim",
+    "description": "The Grand Tetons peek through a barn doorway near Jackson Hole, Wyoming, turning shadowed structure into a frame for mountain distance. This black and white landscape photograph creates wall art rooted in rustic architecture, light, and the quiet reveal of place.",
     "alt": "Moulton Barn, Jackson Hole Wyoming. Photograph by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-RFCHLhg/A",
     "keywords": [
@@ -552,7 +552,7 @@ export const galleryData = [
  {
     "id": "i-32QwpNJ",
     "title": "Homestead - Black & White Photography by Wayne Heim",
-    "description": "Homestead - shows an old homestead in Wyoming. ©Wayne Heim",
+    "description": "An old Wyoming homestead becomes black and white landscape photography through weathered structure, open land, and quiet distance. This traditional fine art photograph creates monochrome wall art rooted in frontier memory, rural isolation, and the spare strength of the American West.",
     "alt": "Tetons Peek - Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-32QwpNJ/A",
     "keywords": [
@@ -585,7 +585,7 @@ export const galleryData = [
  {
     "id": "i-WmSkQXV",
     "title": "Wyoming Road - Black  & White Photography by Wayne Heim",
-    "description": "Wyoming Road - lonely road across Wyoming with the Grand Tetons in background. ©Wayne Heim",
+    "description": "A lonely Wyoming road stretches toward the Grand Tetons, turning distance and direction into black and white landscape photography. This traditional fine art image creates wall art rooted in open road, mountain horizon, and the long pull of Western travel.",
     "alt": "Homestead - Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-WmSkQXV/A",
     "keywords": [
@@ -618,7 +618,7 @@ export const galleryData = [
  {
     "id": "i-c8XWk8P",
     "title": "View of Letchworth Canyon   Black & White Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Letchworth State Park in New York.",
+    "description": "Letchworth Canyon is rendered in black and white, with gorge walls, river distance, and layered terrain shaping the scene. This traditional fine art landscape photograph creates monochrome wall art rooted in New York’s carved landscape and the quiet drama of scale.",
     "alt": "Wyoming Road - Black  & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-c8XWk8P/A",
     "keywords": [
@@ -651,7 +651,7 @@ export const galleryData = [
  {
     "id": "i-vjBFwm7",
     "title": "Urban Growth    Photography by Wayne Heim",
-    "description": "Fine art architectural photography of Las Vegas, Nevada.",
+    "description": "Urban Growth turns Las Vegas architecture into black and white fine art, where city structure, geometry, and built form become the landscape. This monochrome photograph creates architectural wall art rooted in growth, density, and the graphic force of modern place.",
     "alt": "View of Letchworth Canyon   Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-vjBFwm7/A",
     "keywords": [
@@ -684,7 +684,7 @@ export const galleryData = [
  {
     "id": "i-cJDBjjD",
     "title": "Erosion",
-    "description": "\"Erosion\" B/W landscape photo of Bryce Canyon formations and clouds in Bryce Canyon National Park, Utah. ©Wayne Heim",
+    "description": "Bryce Canyon formations and cloud texture are rendered in black and white, turning Utah’s desert landscape into a study of erosion, stone, and atmosphere. This traditional fine art landscape photograph creates monochrome canyon wall art rooted in sculptural terrain.",
     "alt": "Erosion - black and white landscape photograph of Bryce Canyon formations in Utah.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-cJDBjjD/A",
     "keywords": [
@@ -715,7 +715,7 @@ export const galleryData = [
  {
     "id": "i-Jh262Z7",
     "title": "Night Highway - Black & white Photography by Wayne Heim",
-    "description": "Night Highway - night travel through Utah. ©Wayne Heim",
+    "description": "Night Highway turns travel through Utah into black and white landscape photography, where road, darkness, and motion carry the frame. This traditional fine art image creates monochrome wall art rooted in night travel, Western distance, and the quiet pull of the road.",
     "alt": "Night Highway - black and white night travel photograph in Utah by Wayne Heim.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-Jh262Z7/A",
     "keywords": [
@@ -746,7 +746,7 @@ export const galleryData = [
  {
     "id": "i-fCx77HN",
     "title": "Over the Hill -- Black & White Photography",
-    "description": "Over the Hill - shot of a road going over a hill in western states. ©Wayne Heim",
+    "description": "A road rises over a hill in the Western states, turning simple terrain into black and white landscape photography about movement and uncertainty. This traditional fine art landscape creates wall art rooted in road, horizon, and the question of what comes next.",
     "alt": "Over the Hill - black and white photograph of a road rising over a hill in the western states.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-fCx77HN/A",
     "keywords": [
@@ -777,7 +777,7 @@ export const galleryData = [
  {
     "id": "i-RLJhSZ8",
     "title": "Canyon Clouds - Black  & White Photography by Wayne Heinm",
-    "description": "Canyon Clouds - shows threatening clouds over Bryce Canyon in Utah. ©Wayne Heim",
+    "description": "Threatening clouds gather over Bryce Canyon in Utah, giving the black and white canyon landscape a charged, atmospheric weight. This traditional fine art photograph creates monochrome desert wall art rooted in stone, sky, and the drama of weather over carved land.",
     "alt": "Canyon Clouds - black and white photograph of clouds over Bryce Canyon in Utah.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-RLJhSZ8/A",
     "keywords": [
@@ -808,7 +808,7 @@ export const galleryData = [
  {
     "id": "i-PPSGJGr",
     "title": "Looking Up. Photography by Wayne Hein",
-    "description": "Looking Up, black and white photo of mountain face looking towards the top. ©Wayne Heim",
+    "description": "Looking Up studies a mountain face in black and white, pulling the viewer’s eye toward height, texture, and stone. This traditional fine art landscape photograph creates monochrome mountain wall art rooted in vertical force, shadow, and quiet scale.",
     "alt": "Looking Up - black and white photograph looking up a mountain face by Wayne Heim.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-PPSGJGr/A",
     "keywords": [
@@ -839,7 +839,7 @@ export const galleryData = [
  {
     "id": "i-Nj2t7F2",
     "title": "Three Peaks. Photography by Wayne Heim",
-    "description": "Three Peaks poke head up in desolate landscape, black and white photograph  ©Wayne Heim",
+    "description": "Three peaks rise from a desolate landscape in black and white, turning sparse terrain into a study of distance and form. This traditional fine art landscape photograph creates wall art rooted in mountain shape, open ground, and stark quiet.",
     "alt": "Looking Up. Photography by Wayne Hein",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-Nj2t7F2/A",
     "keywords": [
@@ -872,7 +872,7 @@ export const galleryData = [
  {
     "id": "i-fC7SBVp",
     "title": "Arch View - Black  & White Photography by Wayne Heim",
-    "description": "Arch View - sunset as see through a rock arch in Zion National Park. ©Wayne Heim",
+    "description": "A sunset seen through a rock arch in Zion National Park becomes black and white landscape photography, reducing desert color to form, shadow, and light. This traditional fine art photograph creates monochrome Utah wall art rooted in natural architecture and canyon atmosphere.",
     "alt": "Three Peaks. Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-fC7SBVp/A",
     "keywords": [
@@ -905,7 +905,7 @@ export const galleryData = [
  {
     "id": "i-MdQLNhm",
     "title": "Aspen Blockade - Black & White Photography by Wayne Heim",
-    "description": "Aspen Blockade - thick stand of Aspen trees seem to form a blockade. ©Wayne Heim",
+    "description": "A thick stand of aspen trees forms a visual blockade in this black and white landscape photograph. The image creates traditional fine art wall art through repetition, vertical rhythm, bark texture, and the quiet graphic strength of trees.",
     "alt": "Arch View - Black  & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-MdQLNhm/A",
     "keywords": [
@@ -938,7 +938,7 @@ export const galleryData = [
  {
     "id": "i-b3F54M6",
     "title": "Scenic Walkway. Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Lanterman's Mill in the Mill Creek Metroparks of Youngstown, Ohio.",
+    "description": "A scenic walkway near Lanterman’s Mill in Mill Creek MetroParks becomes black and white landscape photography, where path, stone, trees, and water guide the eye. This traditional fine art photograph creates Ohio wall art rooted in passage, regional memory, and natural structure.",
     "alt": "Aspen Blockade - Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-b3F54M6/A",
     "keywords": [
@@ -971,7 +971,7 @@ export const galleryData = [
  {
     "id": "i-RFkJ7Jz",
     "title": "Rock Perspective - Black & White Photography by Wayne Heim",
-    "description": "Rock Perspective - looking up the sheer rock wall in one area of the Akron Metro Parks. ©Wayne Heim",
+    "description": "A sheer rock wall in the Akron Metro Parks becomes black and white landscape photography through angle, texture, and vertical force. This traditional fine art image creates monochrome wall art rooted in stone, shadow, and the feeling of looking upward through terrain.",
     "alt": "Scenic Walkway. Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-RFkJ7Jz/A",
     "keywords": [
@@ -1004,7 +1004,7 @@ export const galleryData = [
  {
     "id": "i-XXszFrn",
     "title": "Best Walkway - Black & White Photography by  Wayne Hein",
-    "description": "Best Walkway -  trail around the Walter C Best Wildlife Preserve in Chardon, Ohio. ©Wayne Heim",
+    "description": "A trail around Walter C. Best Wildlife Preserve in Chardon, Ohio becomes black and white landscape photography through path, trees, and quiet regional light. This traditional fine art photograph creates monochrome wall art rooted in local place, movement, and natural restraint.",
     "alt": "Rock Perspective - Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-XXszFrn/A",
     "keywords": [
@@ -1037,7 +1037,7 @@ export const galleryData = [
  {
     "id": "i-p3wwjCQ",
     "title": "Fire trees in Black and White    Photography by Wayne Heim",
-    "description": "After the Fire. Trees in Wyoming.\n ©Wayne Heim",
+    "description": "After the fire, trees stand in black and white against the Wyoming landscape, carrying the visual weight of survival, loss, and renewal. This traditional fine art landscape photograph creates wall art shaped by burned timber, open land, and stark Western atmosphere.",
     "alt": "Best Walkway - Black & White Photography by  Wayne Hein",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-p3wwjCQ/A",
     "keywords": [
@@ -1070,7 +1070,7 @@ export const galleryData = [
  {
     "id": "i-sBk6VHd",
     "title": "Wide Prairie   Black & White Photography by Wayne Heim",
-    "description": "Wide expanse of grassland in Wyoming.\n ©Wayne Heim",
+    "description": "A wide expanse of Wyoming grassland becomes black and white landscape photography, shaped by open distance, low terrain, and prairie stillness. This traditional fine art image creates monochrome wall art rooted in Western scale and the spare beauty of open country.",
     "alt": "Fire trees in Black and White    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-sBk6VHd/A",
     "keywords": [
@@ -1103,7 +1103,7 @@ export const galleryData = [
  {
     "id": "i-4QFPzCL",
     "title": "Prairie Church   Black & White Photography by Wayne Heim",
-    "description": "Church stand apart on the prairie with a few outbuildings. ©Wayne Heim",
+    "description": "A church stands apart on the prairie with a few outbuildings, giving the black and white landscape a quiet human anchor. This traditional fine art photograph creates prairie wall art rooted in solitude, faith, and the open space around small structures.",
     "alt": "Wide Prairie   Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-4QFPzCL/A",
     "keywords": [
@@ -1136,7 +1136,7 @@ export const galleryData = [
  {
     "id": "i-qCQD7DJ",
     "title": "Prairie Church  Black & White Photography by Wayne Heim",
-    "description": "In Stock 9 x 12 AluminiumChurch stands alone on the western Iceland landscape. ©Wayne Heim",
+    "description": "A lone church stands in the western Iceland landscape, rendered in black and white with spare form and open terrain. This traditional fine art landscape photograph creates monochrome wall art rooted in isolation, faith, and the stark atmosphere of northern land.",
     "alt": "Prairie Church   Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-qCQD7DJ/A",
     "keywords": [
@@ -1169,7 +1169,7 @@ export const galleryData = [
  {
     "id": "i-46W9gTN",
     "title": "Distant Church  Black and White Photography by Wayne Heim",
-    "description": "Lone Church silhouetted against the hills in the background.  ©Wayne Heim",
+    "description": "A distant church is silhouetted against hills, turning architecture and land into a restrained black and white landscape study. This traditional fine art photograph creates monochrome wall art rooted in distance, quiet structure, and the small human mark within open terrain.",
     "alt": "Prairie Church  Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-46W9gTN/A",
     "keywords": [
@@ -1202,7 +1202,7 @@ export const galleryData = [
  {
     "id": "i-bjNrsSx",
     "title": "Vik Wall  Black & White Photography by Wayne Heim",
-    "description": "Vik wall on the black sand beaches of Iceland where the Game of  Thrones was filmed.\n©Wayne Heim",
+    "description": "The wall at Vík rises from Iceland’s black sand beach in this black and white landscape photograph, where coast, cliff, and cinematic terrain meet. This traditional fine art image creates monochrome Iceland wall art rooted in volcanic shore, vertical form, and northern atmosphere.",
     "alt": "Distant Church  Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-bjNrsSx/A",
     "keywords": [
@@ -1235,7 +1235,7 @@ export const galleryData = [
  {
     "id": "i-xg8gr3k",
     "title": "Hole in the Wall  Black & White Photography by Wayne Heim",
-    "description": "Whole in the wall of the glacier is actually the entrance to a cave.©Wayne Heim",
+    "description": "A hole in a glacier wall becomes the entrance to a cave, turning ice, shadow, and opening into black and white landscape photography. This traditional fine art image creates monochrome glacier wall art rooted in mystery, scale, and the strange architecture of ice.",
     "alt": "Vik Wall  Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-xg8gr3k/A",
     "keywords": [
@@ -1268,7 +1268,7 @@ export const galleryData = [
  {
     "id": "i-K6dkwFH",
     "title": "Cave Entrance   Black & White Photography by Wayne Heim",
-    "description": "This is a view looking out of a glacial cave entrance in Iceland. ©Wayne Heim",
+    "description": "Looking out from a glacial cave entrance in Iceland, this black and white landscape photograph frames the outer world through ice and shadow. The image creates monochrome wall art rooted in enclosure, cold light, and the fragile boundary between cave and landscape.",
     "alt": "Hole in the Wall  Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-K6dkwFH/A",
     "keywords": [
@@ -1301,7 +1301,7 @@ export const galleryData = [
  {
     "id": "i-VtCT6nZ",
     "title": "River Through Ice    Black & White Photography by Wayne Heim",
-    "description": "An Icelandic river runs though a glacial field.\n©Wayne Heim",
+    "description": "An Icelandic river runs through a glacial field, turning water, ice, and dark terrain into black and white landscape photography. This traditional fine art photograph creates monochrome wall art rooted in movement, cold texture, and the elemental force of Iceland.",
     "alt": "Cave Entrance   Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-VtCT6nZ/A",
     "keywords": [
@@ -1334,7 +1334,7 @@ export const galleryData = [
  {
     "id": "i-L5tx3bd",
     "title": "Open Country",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "description": "A broad black and white landscape study turns open country into tone, distance, and quiet atmosphere. This traditional fine art landscape photograph creates monochrome wall art rooted in natural structure, regional texture, and the calm authority of land without color.",
     "alt": "River Through Ice    Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-L5tx3bd/A",
     "keywords": [
@@ -1367,7 +1367,7 @@ export const galleryData = [
  {
     "id": "i-GnD9h8S",
     "title": "Field Work",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "description": "Field Work becomes a black and white landscape photograph shaped by land texture, open space, and the quiet discipline of looking. This traditional fine art image creates monochrome wall art rooted in rural atmosphere, pattern, and the restrained beauty of working ground.",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-GnD9h8S/A",
     "keywords": [
@@ -1400,7 +1400,7 @@ export const galleryData = [
  {
     "id": "i-CM9ZWBr",
     "title": "Landscape Study",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "description": "This black and white landscape study uses form, light, and natural texture to hold the frame without relying on color. As traditional fine art landscape photography, it creates wall art rooted in tonal restraint, quiet depth, and the structure of place.",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-CM9ZWBr/A",
     "keywords": [
@@ -1433,7 +1433,7 @@ export const galleryData = [
  {
     "id": "i-PVbJdpj",
     "title": "Old Fence - Black & White Photography by Wayne Heim",
-    "description": "Old Fence - old weathered fence that had fallen down in Wyoming. ©Wayne Heim",
+    "description": "An old weathered fence lies fallen in the Wyoming landscape, turning a small remnant into a black and white study of time and use. This traditional fine art photograph creates monochrome wall art rooted in rural texture, abandonment, and the quiet geometry of the American West.",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-PVbJdpj/A",
     "keywords": [
@@ -1466,7 +1466,7 @@ export const galleryData = [
  {
     "id": "i-wzJRjp5",
     "title": "Landscape Study",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "description": "A black and white landscape study reduces the scene to tone, shape, and atmosphere. This traditional fine art photograph creates monochrome wall art rooted in quiet observation, natural structure, and the understated force of land seen without color.",
     "alt": "Old Fence - Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-wzJRjp5/A",
     "keywords": [
