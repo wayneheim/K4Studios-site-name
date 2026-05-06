@@ -109,8 +109,7 @@ const meta = {
 const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-decoration: none;' onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Blog</a> › Narrative Western Art vs Traditional Western Art`;
 ---
 
-<BaseLayout title={pageTitle} structuredDataJSON={structuredData} meta={meta}>
-  <script type="application/ld+json" set:html={breadcrumbStructuredData} slot="head" />
+<BaseLayout title={pageTitle} structuredDataJSON={structuredData} breadcrumbsJSON={breadcrumbStructuredData} meta={meta}>
   <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
     <div class="drawer-mode">
       <LandingHeader client:load breadcrumb={blogBreadcrumb} />

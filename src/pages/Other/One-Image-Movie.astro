@@ -120,13 +120,12 @@ const breadcrumbData = getBreadcrumbList([
   { name: "What Is a One-Image Movie?", item: `https://k4studios.com${sectionPath}` }
 ]);
 
-// Combine structured data
-const combinedStructuredData = `[${structuredData}, ${breadcrumbData}]`;
 ---
 
 <BaseLayout
   title={`${oneImageMoviePage.title} – K4 Studios`}
-  structuredDataJSON={combinedStructuredData}
+  structuredDataJSON={structuredData}
+  breadcrumbsJSON={breadcrumbData}
   meta={meta}
 >
   <div class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">

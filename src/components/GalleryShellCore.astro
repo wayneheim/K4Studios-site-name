@@ -67,6 +67,29 @@ function isNavigableImage(img: any) {
   return Boolean(img?.id) && visibility !== "ghost" && visibility !== "hidden" && visibility !== "hide";
 }
 
+function buildCaptionExcerpt(description = "", minChars = 150, maxChars = 280) {
+  const cleanText = String(description || "").replace(/\s+/g, " ").trim();
+  if (!cleanText) return "";
+  if (cleanText.length <= maxChars) return cleanText;
+
+  const boundedText = cleanText.slice(0, maxChars + 1);
+  const sentenceBoundaryMatches = [...boundedText.matchAll(/[.!?](?=\s|$)/g)];
+  const preferredBoundary = sentenceBoundaryMatches
+    .map((m) => m.index)
+    .filter((idx) => typeof idx === "number" && idx >= minChars)
+    .pop();
+
+  let cutIndex = typeof preferredBoundary === "number" ? preferredBoundary + 1 : -1;
+  if (cutIndex === -1) {
+    const safeSlice = boundedText.slice(0, maxChars);
+    const lastSpace = safeSlice.lastIndexOf(" ");
+    cutIndex = lastSpace > minChars ? lastSpace : maxChars;
+  }
+
+  const text = cleanText.slice(0, cutIndex).trim();
+  return cutIndex < cleanText.length ? `${text}...` : text;
+}
+
 /** ---------------------------------------------------------------
  * Image context
  * --------------------------------------------------------------- */
@@ -139,6 +162,7 @@ const imageStructuredData = currentImage
       type: "image",
       data: {
         ...currentImage,
+        caption: buildCaptionExcerpt(fixMojibake(currentImage.description)),
         pageUrl: canonicalUrl,
         galleryUrl: galleryAbsUrl,
         galleryTitle: galleryPath
@@ -253,6 +277,20 @@ const pageDescription =
       (usedEntranceData?.subtitle && fixMojibake(usedEntranceData.subtitle)) ||
       baseFallbackDescription;
 
+const webPageStructuredData = currentImage
+  ? JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": canonicalUrl,
+      url: canonicalUrl,
+      name: pageTitle,
+      description: pageDescription,
+      mainEntity: { "@id": `${canonicalUrl}#image` },
+      breadcrumb: { "@id": `${canonicalUrl}#breadcrumbs` },
+      inLanguage: "en",
+    }, null, 2)
+  : undefined;
+
 /** ---------------------------------------------------------------
  * OG / Twitter
  * --------------------------------------------------------------- */
@@ -277,7 +315,7 @@ const meta = {
 
 ---
 
-<BaseLayout title={pageTitle} meta={meta} structuredDataJSON={imageStructuredData} breadcrumbsJSON={breadcrumbsJSON}>
+<BaseLayout title={pageTitle} meta={meta} structuredDataJSON={imageStructuredData} breadcrumbsJSON={breadcrumbsJSON} extraStructuredDataJSON={webPageStructuredData}>
   <main id="gallery-content" class="flex-grow relative">
     {/* Header */}
     {!skipIntro && (
@@ -313,6 +351,8 @@ const meta = {
       id="chapter-section" 
       class={skipIntro ? "section-visible" : "section-hidden"} 
       style={skipIntro ? "display: block;" : "display: none;"}
+      itemscope={currentImage ? true : undefined}
+      itemtype={currentImage ? "https://schema.org/VisualArtwork" : undefined}
     >
       <slot name="chapter-viewer" />
     </article>

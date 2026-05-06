@@ -346,7 +346,7 @@ export function getStructuredData({
       "@id": artworkPageUrl ? `${artworkPageUrl}#image` : (proxyUrl ? `${proxyUrl}#image` : undefined),
       name: data.title,
       description: data.description,
-      caption: data.alt || data.title,
+      caption: data.caption || data.alt || data.title,
       contentUrl: proxyUrl || undefined,
       url: artworkPageUrl || undefined,
       encodingFormat: data.mimeType || "image/jpeg",

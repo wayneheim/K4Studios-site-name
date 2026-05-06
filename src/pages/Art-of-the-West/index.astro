@@ -139,10 +139,9 @@ const nextSteps = [
 <BaseLayout
   title={pageTitle}
   structuredDataJSON={structuredData}
+  breadcrumbsJSON={breadcrumbStructuredData}
   meta={meta}
 >
-  <script type="application/ld+json" set:html={breadcrumbStructuredData} slot="head" />
-
   <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
     <div class="drawer-mode">
       <LandingHeader client:load breadcrumb={pageBreadcrumb} />

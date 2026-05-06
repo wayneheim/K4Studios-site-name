@@ -1338,6 +1338,7 @@ export default function ChapterGalleryBase({
                     style={{ width: 'fit-content', ...(isMobile ? { maxWidth: '100%', overflowX: 'hidden', width: '100%' } : { minWidth: 0 }) }}
                   >
 
+                    <figure style={{ margin: 0 }}>
                     <div className="w-full relative flex items-center justify-center mb-0 chapter-image-container-mobile" style={isMobile ? { maxWidth: '100%', overflowX: 'hidden' } : {}}>
                       {/* Removed absolute-positioned mobile arrows; moved to row near slideshow */}
 
@@ -1351,6 +1352,7 @@ export default function ChapterGalleryBase({
                             ref={chapterImageRef}
                             src={getProxySrc(galleryData[currentIndex]?.id, 'l')}
                             alt={galleryData[currentIndex]?.alt || galleryData[currentIndex]?.title}
+                            itemProp="image contentUrl"
                             className="chapter-image-mobile rounded-lg block"
                             style={
                               (() => {
@@ -1560,7 +1562,7 @@ export default function ChapterGalleryBase({
 
                     {/* Subtle caption excerpt (from "More about this image" description) */}
                     {imageCaptionExcerpt?.text && (
-                      <div className="mx-auto mt-2 mb-2 px-3" style={{ maxWidth: isMobile ? '390px' : '500px' }}>
+                      <figcaption className="mx-auto mt-2 mb-2 px-3" style={{ maxWidth: isMobile ? '390px' : '500px' }} itemProp="caption">
                         <p
                           className="image-caption"
                           style={{
@@ -1581,8 +1583,9 @@ export default function ChapterGalleryBase({
                         >
                           “{imageCaptionExcerpt.text}{imageCaptionExcerpt.truncated ? '...' : ''}”
                         </p>
-                      </div>
+                      </figcaption>
                     )}
+                    </figure>
 
                     {/* Unified Nav Row + Guide trigger */}
                     <div className={`flex items-center justify-center gap-2 mb-1 ${isMobile ? 'mt-2' : 'mt-4'}`}>
@@ -2075,9 +2078,10 @@ export default function ChapterGalleryBase({
                     </div>
 
                     {/* Logo Watermark - shows theme icon when in theme mode, K4 logo otherwise */}
-                    <div className="mb-4 flex justify-center relative z-0 hidden md:flex">
+                    <nav className="mb-4 flex justify-center relative z-0 hidden md:flex" aria-label="Gallery navigation">
                       <a
                         href={sectionUrl}
+                        rel="up"
                         title={activeTheme ? `Theme: ${activeTheme.name} in "${sectionDisplayTitle}"` : titleText}
                         className="relative block group"
                       >
@@ -2092,7 +2096,7 @@ export default function ChapterGalleryBase({
                         </span>
                         <span className="sr-only">{activeTheme ? `Theme: ${activeTheme.name} in ${sectionDisplayTitle}` : sectionDisplayTitle}</span>
                       </a>
-                    </div>
+                    </nav>
 
                     {/* Title - styled chapter label + H1 for actual title */}
                     {(() => {
@@ -2114,6 +2118,7 @@ export default function ChapterGalleryBase({
                           </p>
                           <ChapterTitleTag
                             className="font-semibold tracking-wide text-[#85644b] chapter-title"
+                            itemProp={isImageDetailRender ? "name" : undefined}
                             style={{ fontSize: isMobile ? mobileTitleSize : "1.55rem", opacity: 0.5, lineHeight: "1.35", marginTop: 0, marginBottom: 0 }}
                           >
                             {chapterTitle}
@@ -2123,9 +2128,12 @@ export default function ChapterGalleryBase({
                     })()}
 
                     {/* Story */}
-                    <p className="italic text-base mt-3 md:text-lg mb-4 leading-snug text-left">
-                      {galleryData[currentIndex]?.story}
-                    </p>
+                    <section className="image-story" aria-labelledby={`image-story-heading-${currentId || 'default'}`}>
+                      <h2 id={`image-story-heading-${currentId || 'default'}`} className="sr-only">Story</h2>
+                      <p className="italic text-base mt-3 md:text-lg mb-4 leading-snug text-left">
+                        {galleryData[currentIndex]?.story}
+                      </p>
+                    </section>
 
                     {/* More about this image - Tier 1 SEO pattern */}
                     {(galleryData[currentIndex]?.description || galleryData[currentIndex]?.notes) && (
@@ -2187,13 +2195,17 @@ export default function ChapterGalleryBase({
                           textAlign: 'left'
                         }}>
                           {galleryData[currentIndex]?.description && (
-                            <p style={{ margin: '0 0 1rem' }}>
-                              {galleryData[currentIndex].description}
-                            </p>
+                            <section className="image-description" aria-labelledby={`image-description-heading-${currentId || 'default'}`}>
+                              <h2 id={`image-description-heading-${currentId || 'default'}`} className="sr-only">About this image</h2>
+                              <p itemProp="description" style={{ margin: '0 0 1rem' }}>
+                                {galleryData[currentIndex].description}
+                              </p>
+                            </section>
                           )}
                           {collectionContextStatement && (
-                            <p
+                            <aside
                               className="collection-context-note"
+                              aria-labelledby={`series-context-heading-${currentId || 'default'}`}
                               style={{
                                 margin: '0 0 1rem',
                                 color: '#7a6a58',
@@ -2201,8 +2213,9 @@ export default function ChapterGalleryBase({
                                 lineHeight: '1.65'
                               }}
                             >
+                              <h3 id={`series-context-heading-${currentId || 'default'}`} className="sr-only">Part of the {sectionDisplayTitle} series</h3>
                               {collectionContextStatement}
-                            </p>
+                            </aside>
                           )}
                           {showWesternImageAttribution && (
                             <p
@@ -2218,23 +2231,24 @@ export default function ChapterGalleryBase({
                             </p>
                           )}
                           {galleryData[currentIndex]?.notes && (
-                            <div 
+                            <section 
                               id={`canonical-notes-${galleryData[currentIndex]?.id || 'default'}`}
                               className="notes-section"
                               data-notes-canonical="true"
+                              aria-labelledby={`collector-notes-heading-${currentId || 'default'}`}
                               style={{
                                 marginTop: '1rem',
                                 paddingTop: '0.75rem',
                                 borderTop: '1px dashed rgba(200, 190, 180, 0.4)'
                               }}
                             >
-                              <p className="notes-label" style={{
+                              <h3 id={`collector-notes-heading-${currentId || 'default'}`} className="notes-label" style={{
                                 fontSize: '0.85rem',
                                 fontWeight: '500',
                                 color: '#928176',
                                 margin: '0 0 0.5rem',
                                 letterSpacing: '0.04em'
-                              }}>Collector Notes:</p>
+                              }}>Collector Notes:</h3>
                               <p style={{
                                 fontStyle: 'italic',
                                 color: '#9a9a99',
@@ -2243,7 +2257,7 @@ export default function ChapterGalleryBase({
                               }}>
                                 {galleryData[currentIndex].notes}
                               </p>
-                            </div>
+                            </section>
                           )}
 
                           {/* Featured in blog — links image → conversation post */}
