@@ -24,7 +24,6 @@ const SITEMAP_PATH = path.join(__dirname, "../dist/sitemap.xml");
 const SITEMAP_URL = process.env.SITEMAP_URL || `https://${SITE_HOST}/sitemap.xml`;
 const ENDPOINT = "https://api.indexnow.org/indexnow";
 const STREAM_DELAY_MS = Number(process.env.INDEXNOW_STREAM_DELAY_MS || 250);
-const BATCH_SIZE = Math.max(1, Number(process.env.INDEXNOW_BATCH_SIZE || 10000));
 const LIVE_CHECK_TIMEOUT_MS = Number(process.env.INDEXNOW_LIVE_TIMEOUT_MS || 10 * 60 * 1000);
 const LIVE_CHECK_INTERVAL_MS = Number(process.env.INDEXNOW_LIVE_INTERVAL_MS || 20 * 1000);
 const LIVE_CHECK_CONCURRENCY = Math.max(1, Number(process.env.INDEXNOW_LIVE_CONCURRENCY || 16));
@@ -244,37 +243,6 @@ async function submitUrl(url, submitNum) {
 }
 
 // === 🚦 MAIN ===
-async function submitUrlBatch(urls, batchNum, totalBatches) {
-  console.log(`Submitting batch ${batchNum}/${totalBatches}: ${urls.length} URL(s)`);
-
-  if (isDryRun) {
-    console.log(`Dry run: skipping batch request ${batchNum}/${totalBatches}`);
-    return true;
-  }
-
-  try {
-    const res = await fetch(ENDPOINT, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json; charset=utf-8",
-      },
-      body: JSON.stringify({
-        host: SITE_HOST,
-        key: INDEXNOW_KEY,
-        keyLocation: INDEXNOW_KEY_URL,
-        urlList: urls,
-      }),
-    });
-
-    const text = await res.text();
-    console.log(`Batch ${batchNum}/${totalBatches} response: ${res.status} ${text}`);
-    return res.ok;
-  } catch (err) {
-    console.error(`Error submitting batch ${batchNum}/${totalBatches}:`, err);
-    return false;
-  }
-}
-
 async function main() {
   // Check last submit time
   let lastSubmit = 0;
@@ -392,36 +360,6 @@ async function main() {
       console.log("💾 Updated local IndexNow signature state for future change detection.");
     }
 
-    return;
-  }
-
-  if (submitUrls.length > 100) {
-    const batches = [];
-    for (let i = 0; i < submitUrls.length; i += BATCH_SIZE) {
-      batches.push(submitUrls.slice(i, i + BATCH_SIZE));
-    }
-
-    console.log(`Preparing to batch-submit ${submitUrls.length} URL(s) to IndexNow in ${batches.length} batch(es)${isDryRun ? ' [dry run]' : ''}`);
-
-    let successfulCount = 0;
-    for (let i = 0; i < batches.length; i += 1) {
-      const ok = await submitUrlBatch(batches[i], i + 1, batches.length);
-      if (ok) {
-        successfulCount += batches[i].length;
-      }
-    }
-
-    if (!isDryRun && currentSignatures) {
-      if (successfulCount === submitUrls.length) {
-        saveUrlSignatureState(currentSignatures);
-      }
-      console.log(`Updated local IndexNow signature state (${successfulCount}/${submitUrls.length} URL(s) sent successfully).`);
-    }
-
-    if (!isDryRun) {
-      fs.writeFileSync(LAST_SUBMIT_PATH, JSON.stringify({ lastSubmit: now }));
-    }
-    console.log("Batch submission complete.");
     return;
   }
 
