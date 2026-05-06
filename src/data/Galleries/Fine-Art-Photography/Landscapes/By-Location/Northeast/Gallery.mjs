@@ -25,7 +25,7 @@ export const galleryData = [
   {
     "id": "i-6Vj6H86",
     "title": "The Essence Of Autumn In New England",
-    "description": "A fine art landscape photograph of the New England countryside, shaped by scale rather than spectacle. Wayne Heim's fine art landscape photography treats place as emotional geography - not destination, but atmosphere. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the terrain dwarfs human measure. Part of Wayne Heim's New England landscape photography series. © Wayne Heim",
+    "description": "A long black and white view of Letchworth Canyon turns gorge, river, and distant trees into traditional fine art landscape photography. This Northeast landscape photograph creates wall art rooted in scale, shadow, and the quiet force of a carved New York landscape.",
     "alt": "Long View of Letchworth Canyon   Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-6Vj6H86/A",
     "keywords": [
@@ -75,7 +75,7 @@ export const galleryData = [
   {
     "id": "i-BZZRZwC",
     "title": "Around the Bend. Black and White Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Letchworth State Park in New York.",
+    "description": "Around the Bend follows the curve of Letchworth State Park in black and white, where river, canyon wall, and forest shape the scene. This traditional fine art landscape photograph creates Northeast wall art from moving water, rock, and quiet regional atmosphere.",
     "alt": "Long View of Letchworth Canyon   Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-BZZRZwC/A",
     "keywords": [
@@ -122,7 +122,7 @@ export const galleryData = [
   {
     "id": "i-nVXX6Fn",
     "title": "Rushing Water  Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Letchworth State Park in New York.",
+    "description": "Rushing water moves through Letchworth State Park with the steady force of a New York gorge landscape. This traditional fine art landscape photograph belongs to Northeast waterfall photography, creating wall art shaped by current, stone, and motion.",
     "alt": "Around the Bend. Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-nVXX6Fn/A",
     "keywords": [
@@ -169,7 +169,7 @@ export const galleryData = [
   {
     "id": "i-KVgw4cV",
     "title": "Log Above Falls  Bllack & White Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Letchworth State Park in New York.",
+    "description": "A fallen log rests above the falls at Letchworth State Park, turning water, wood, and rock into a black and white study of balance and time. This traditional fine art landscape photograph creates Northeast wall art rooted in waterfall movement and natural structure.",
     "alt": "Rushing Water  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-KVgw4cV/A",
     "keywords": [
@@ -216,7 +216,7 @@ export const galleryData = [
   {
     "id": "i-gHjq9S9",
     "title": "Canyon Stream   Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Watkins Glen, New York.",
+    "description": "A canyon stream moves through Watkins Glen, where water, stone walls, and shadowed passage create a quiet Finger Lakes landscape. This traditional fine art landscape photograph creates Northeast wall art shaped by flow, gorge, and enclosed atmosphere.",
     "alt": "Log Above Falls  Bllack & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-gHjq9S9/A",
     "keywords": [
@@ -263,7 +263,7 @@ export const galleryData = [
   {
     "id": "i-xbVp2GS",
     "title": "Ravine Waterfalls   Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Watkins Glen, New York.",
+    "description": "Ravine waterfalls descend through Watkins Glen, where layered rock and moving water define the narrow New York gorge. This traditional fine art landscape photograph creates Northeast waterfall wall art rooted in canyon walls, water, and stone.",
     "alt": "Canyon Stream   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-xbVp2GS/A",
     "keywords": [
@@ -310,7 +310,7 @@ export const galleryData = [
   {
     "id": "i-QGSJxwc",
     "title": "Watkins Glen Canyon. Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Watkins Glen, New York.",
+    "description": "Watkins Glen Canyon becomes traditional fine art landscape photography, with rock walls, water, and carved passage giving the scene its depth. This Northeast landscape wall art carries the quiet drama of gorge, shadow, and stream.",
     "alt": "Ravine Waterfalls   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-QGSJxwc/A",
     "keywords": [
@@ -357,7 +357,7 @@ export const galleryData = [
   {
     "id": "i-vqC5jTC",
     "title": "Exploring The Northeast",
-    "description": "Delve into The Northeast via this see beauty in simplicity by Wayne Heim. Highlighting The Northeast through autumn in new england and see beauty in simplicity, it's great for collectors interested in The Northeast. © Wayne Heim",
+    "description": "This record is filed in the Northeast gallery, but the source path identifies the image as Yellowstone. The description follows the record itself: a traditional fine art landscape photograph shaped by Western terrain, unusual light, and the quiet strangeness of geothermal country.",
     "alt": "Watkins Glen Canyon. Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-vqC5jTC/A",
     "keywords": [
@@ -407,7 +407,7 @@ export const galleryData = [
   {
     "id": "i-dT6fKnc",
     "title": "Yellowstone Hotspots   Photography by Wayne Heim",
-    "description": "In Stock 18 x 24Geyser pools  at Yellowstone National Park in Wyoming. ©Wayne Heim",
+    "description": "Geyser pools at Yellowstone National Park in Wyoming form a traditional fine art landscape photograph shaped by mineral color, steam, and volcanic ground. This image should be treated as Yellowstone landscape wall art rather than a Northeast landscape scene.",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-dT6fKnc/A",
     "keywords": [
@@ -454,7 +454,7 @@ export const galleryData = [
   {
     "id": "i-dmwDS7K",
     "title": "Autumn In New England And The Northeast",
-    "description": "Discover the autumn in new england in this powerful The Northeast by Wayne Heim. A compelling work that embodies see beauty in simplicity, autumn in new england, and The Northeast. Perfect for art lovers seeking autumn in new england to enhance their collection. © Wayne Heim",
+    "description": "A broad mountain panorama creates traditional fine art landscape photography through layered ridges, open air, and quiet seasonal atmosphere. This regional landscape wall art carries the feeling of the Northeast and Appalachia without relying on spectacle.",
     "alt": "Yellowstone Hotspots   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-dmwDS7K/A",
     "keywords": [
@@ -504,7 +504,7 @@ export const galleryData = [
   {
     "id": "i-s3xXCPH",
     "title": "See Beauty In Simplicity Moment",
-    "description": "Delve into see beauty in simplicity via this autumn in new england by Wayne Heim. Highlighting The Northeast through autumn in new england and The Northeast, it's great for collectors interested in see beauty in simplicity. © Wayne Heim",
+    "description": "A forest scene becomes traditional fine art landscape photography through shadow, water, and the simple beauty of trees. This Northeast-style woodland photograph creates wall art rooted in texture, quiet light, and the discipline of seeing beauty in simplicity.",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-s3xXCPH/A",
     "keywords": [
@@ -554,7 +554,7 @@ export const galleryData = [
   {
     "id": "i-p5ghtLz",
     "title": "A Path Less Traveled",
-    "description": "Light creating playful shadows through the forest trees and stream. Greens and browns of nature paint the picture of texture and discovery.",
+    "description": "A forest path follows light, shadow, trees, and stream through a quiet woodland scene. This traditional fine art landscape photograph creates regional wall art shaped by discovery, natural texture, and the invitation of a path less traveled.",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-p5ghtLz/A",
     "keywords": [
@@ -601,7 +601,7 @@ export const galleryData = [
   {
     "id": "i-rfGP5Zj",
     "title": "See Beauty In Simplicity In Fine Art",
-    "description": "A fine art landscape of the New England countryside, shaped by tension rather than spectacle. Approached with restraint and precision, each frame captures the character of the land rather than its postcard appeal. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the landscape holds competing forces in balance. Part of Wayne Heim's New England landscape photography series. © Wayne Heim",
+    "description": "This woodland landscape holds competing forces in balance: forest, water, stone, and filtered light. As traditional fine art landscape photography, it creates Northeast wall art rooted in quiet tension, texture, and the emotional weight of place.",
     "alt": "A Path Less Traveled",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-rfGP5Zj/A",
     "keywords": [
@@ -651,7 +651,7 @@ export const galleryData = [
   {
     "id": "i-bdSGG9L",
     "title": "Autumn In New England Landscape",
-    "description": "A fine art landscape photograph of the New England countryside, shaped by scale rather than spectacle. Rather than documenting scenery, this work reveals the quiet presence that defines a region. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the terrain dwarfs human measure. Part of Wayne Heim's New England landscape photography series. © Wayne Heim",
+    "description": "Autumn color moves through the landscape with the quiet richness associated with New England and the broader Northeast. This traditional fine art landscape photograph turns forest, terrain, and seasonal light into restrained autumn wall art.",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-bdSGG9L/A",
     "keywords": [
@@ -701,7 +701,7 @@ export const galleryData = [
   {
     "id": "i-BqKXR7D",
     "title": "See Beauty In Simplicity - The Northeast",
-    "description": "Delve into see beauty in simplicity via this The Northeast by Wayne Heim. Highlighting The Northeast through The Northeast and autumn in new england, it's great for collectors interested in see beauty in simplicity. © Wayne Heim",
+    "description": "This landscape study is built on simplicity: forest, water, texture, and quiet seasonal atmosphere. As traditional fine art landscape photography, it creates Northeast wall art rooted in understated natural structure and the beauty of restraint.",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-BqKXR7D/A",
     "keywords": [
@@ -751,7 +751,7 @@ export const galleryData = [
   {
     "id": "i-nqpGhhX",
     "title": "Hidden Falls x2",
-    "description": "Another hidden waterfall in the forest of West Virginia.",
+    "description": "Hidden Falls x2 reveals a waterfall tucked into the forest of West Virginia, where water and shadow move through a private woodland scene. This traditional fine art landscape photograph creates waterfall wall art rooted in discovery, regional terrain, and quiet natural drama.",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-nqpGhhX/A",
     "keywords": [
@@ -798,7 +798,7 @@ export const galleryData = [
   {
     "id": "i-MGNfc8z",
     "title": "Capturing The Northeast",
-    "description": "A fine art landscape of the New England countryside, shaped by tension rather than spectacle. Wayne Heim's fine art landscape photography treats place as emotional geography - not destination, but atmosphere. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the landscape holds competing forces in balance. Part of Wayne Heim's New England landscape photography series. © Wayne Heim",
+    "description": "A forest landscape becomes a study of the Northeast’s larger visual language: water, trees, shadow, and restrained natural light. This traditional fine art landscape photograph creates regional wall art shaped by autumn atmosphere and hidden woodland presence.",
     "alt": "Hidden Falls x2",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-MGNfc8z/A",
     "keywords": [
@@ -848,7 +848,7 @@ export const galleryData = [
   {
     "id": "i-f4Jq6NZ",
     "title": "Davis West Virginia Sunrise in full show.",
-    "description": "Multi-color spectacular sunrise in Davis West Virginia showcasing natures pallet of painterly color.",
+    "description": "A multicolor sunrise rises over Davis, West Virginia, turning mountain air into a painterly field of purple, pink, orange, and gold. This traditional fine art landscape photograph creates sunrise wall art rooted in color, atmosphere, and quiet morning drama.",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-f4Jq6NZ/A",
     "keywords": [
@@ -895,7 +895,7 @@ export const galleryData = [
   {
     "id": "i-MwLgJL5",
     "title": "Capturing See Beauty In Simplicity",
-    "description": "A fine art landscape photograph of the New England countryside, shaped by scale rather than spectacle. Approached with restraint and precision, each frame captures the character of the land rather than its postcard appeal. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the terrain dwarfs human measure. Part of Wayne Heim's New England landscape photography series. © Wayne Heim",
+    "description": "A panoramic sunrise opens into layered mountain distance and soft atmospheric color. This traditional fine art landscape photograph creates regional wall art shaped by ridge, sky, and the first light over high country.",
     "alt": "Davis West Virginia Sunrise in full show.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-MwLgJL5/A",
     "keywords": [
@@ -945,7 +945,7 @@ export const galleryData = [
   {
     "id": "i-vSFBSgr",
     "title": "A Painters Pallet",
-    "description": "Multi-color purple and pink and orange sunrise over the sleepy mountain top in Davis West Virginia.",
+    "description": "A painter’s palette of purple, pink, and orange spreads over a sleepy mountaintop near Davis, West Virginia. This traditional fine art landscape photograph creates colorful sunrise wall art rooted in atmosphere, elevation, and painterly natural light.",
     "alt": "Eminent Rise",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-vSFBSgr/A",
     "keywords": [
@@ -992,7 +992,7 @@ export const galleryData = [
   {
     "id": "i-hVB6Pxq",
     "title": "Exploring Autumn In New England",
-    "description": "A fine art landscape of the New England countryside, shaped by tension rather than spectacle. Rather than documenting scenery, this work reveals the quiet presence that defines a region. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the landscape holds competing forces in balance. Part of Wayne Heim's New England landscape photography series. © Wayne Heim",
+    "description": "Autumn in New England appears through quiet land, seasonal color, and restrained regional light. This traditional fine art landscape photograph creates New England wall art shaped by fall atmosphere, simplicity, and the calm presence of the Northeast.",
     "alt": "A Painters Pallet",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-hVB6Pxq/A",
     "keywords": [
@@ -1042,7 +1042,7 @@ export const galleryData = [
   {
     "id": "i-R5xvd53",
     "title": "See Beauty In Simplicity Study",
-    "description": "Delve into see beauty in simplicity via this see beauty in simplicity by Wayne Heim. Highlighting see beauty in simplicity through autumn in new england and see beauty in simplicity, it's great for collectors interested in see beauty in simplicity. © Wayne Heim",
+    "description": "A wide Northeast panorama becomes traditional fine art landscape photography, where open land, sky, and fall atmosphere gather into a quiet regional scene. The image creates autumn wall art rooted in simplicity, distance, and the emotional rhythm of rural place.",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-R5xvd53/A",
     "keywords": [
@@ -1092,7 +1092,7 @@ export const galleryData = [
   {
     "id": "i-cQ5DJJL",
     "title": "Exploring Autumn In New England",
-    "description": "A fine art landscape photograph of the New England countryside, shaped by scale rather than spectacle. Wayne Heim's fine art landscape photography treats place as emotional geography - not destination, but atmosphere. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the terrain dwarfs human measure. Part of Wayne Heim's New England landscape photography series. © Wayne Heim",
+    "description": "A countryside scene is shaped by autumn light and the quiet scale of Northeast land. This traditional fine art landscape photograph creates New England-style wall art rooted in fall color, regional texture, and calm atmosphere.",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-cQ5DJJL/A",
     "keywords": [
@@ -1142,7 +1142,7 @@ export const galleryData = [
   {
     "id": "i-2MmTpqQ",
     "title": "See Beauty In Simplicity And The Northeast",
-    "description": "A fine art landscape of the New England countryside, shaped by tension rather than spectacle. Approached with restraint and precision, each frame captures the character of the land rather than its postcard appeal. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the landscape holds competing forces in balance. Part of Wayne Heim's New England landscape photography series. © Wayne Heim",
+    "description": "This Northeast landscape holds the competing forces of autumn: color and restraint, softness and structure, distance and detail. As traditional fine art landscape photography, it creates regional wall art shaped by seasonal atmosphere and quiet tension.",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-2MmTpqQ/A",
     "keywords": [
@@ -1192,7 +1192,7 @@ export const galleryData = [
   {
     "id": "i-h7Rcxmr",
     "title": "The Northeast And Autumn In New England",
-    "description": "Delve into The Northeast via this autumn in new england by Wayne Heim. Highlighting autumn in new england through see beauty in simplicity and The Northeast, it's great for collectors interested in The Northeast. © Wayne Heim",
+    "description": "An autumn landscape gathers the Northeast’s familiar language of trees, open ground, and changing light. This traditional fine art landscape photograph creates New England wall art rooted in fall color, rural stillness, and the restrained beauty of simplicity.",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-h7Rcxmr/A",
     "keywords": [
@@ -1242,7 +1242,7 @@ export const galleryData = [
   {
     "id": "i-wqjGgt4",
     "title": "Fine Art Autumn In New England",
-    "description": "A fine art landscape photograph of the New England countryside, shaped by scale rather than spectacle. Rather than documenting scenery, this work reveals the quiet presence that defines a region. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the terrain dwarfs human measure. Part of Wayne Heim's New England landscape photography series. © Wayne Heim",
+    "description": "Fine art autumn in New England appears through seasonal tone, quiet land, and regional atmosphere. This traditional fine art landscape photograph creates Northeast wall art shaped by fall color, open countryside, and the calm authority of place.",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-wqjGgt4/A",
     "keywords": [
@@ -1291,7 +1291,7 @@ export const galleryData = [
   {
     "id": "i-4WL9kr6",
     "title": "The Essence Of The Northeast",
-    "description": "A fine art landscape of the New England countryside, shaped by tension rather than spectacle. Wayne Heim's fine art landscape photography treats place as emotional geography - not destination, but atmosphere. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the landscape holds competing forces in balance. Part of Wayne Heim's New England landscape photography series. © Wayne Heim",
+    "description": "The essence of the Northeast is held through quiet tension, seasonal light, and the balance between land, trees, and distance. This traditional fine art landscape photograph creates New England wall art rooted in autumn atmosphere and rural restraint.",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-4WL9kr6/A",
     "keywords": [
@@ -1341,7 +1341,7 @@ export const galleryData = [
   {
     "id": "i-68NCBvz",
     "title": "Exploring Autumn In New England",
-    "description": "A fine art landscape photograph of the New England countryside, shaped by scale rather than spectacle. Approached with restraint and precision, each frame captures the character of the land rather than its postcard appeal. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the terrain dwarfs human measure. Part of Wayne Heim's New England landscape photography series. © Wayne Heim",
+    "description": "An autumn landscape unfolds with scale and quiet color, showing the Northeast as a place of distance, weather, and seasonal memory. This traditional fine art landscape photograph creates New England wall art shaped by fall atmosphere and regional terrain.",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-68NCBvz/A",
     "keywords": [
@@ -1391,7 +1391,7 @@ export const galleryData = [
   {
     "id": "i-jgkhwcs",
     "title": "Autumn In New England Landscape",
-    "description": "A fine art landscape of the New England countryside, shaped by tension rather than spectacle. Rather than documenting scenery, this work reveals the quiet presence that defines a region. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the landscape holds competing forces in balance. Part of Wayne Heim's New England landscape photography series. © Wayne Heim",
+    "description": "Autumn in New England becomes traditional fine art landscape photography through seasonal color, rolling land, and atmospheric light. The image creates Northeast wall art rooted in fall foliage, rural texture, and the quiet emotional pull of the season.",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-jgkhwcs/A",
     "keywords": [
@@ -1441,7 +1441,7 @@ export const galleryData = [
   {
     "id": "i-6qnzDzx",
     "title": "The Northeast - See Beauty In Simplicity",
-    "description": "A fine art landscape photograph of the New England countryside, shaped by scale rather than spectacle. Wayne Heim's fine art landscape photography treats place as emotional geography - not destination, but atmosphere. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the terrain dwarfs human measure. Part of Wayne Heim's New England landscape photography series. © Wayne Heim",
+    "description": "The Northeast and the beauty of simplicity meet in this autumn landscape, where land, color, and quiet light hold the image together. This traditional fine art photograph creates New England wall art rooted in restraint, seasonal atmosphere, and place.",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-6qnzDzx/A",
     "keywords": [
@@ -1491,7 +1491,7 @@ export const galleryData = [
   {
     "id": "i-jP9xB7p",
     "title": "Exploring The Northeast",
-    "description": "A fine art landscape of the New England countryside, shaped by tension rather than spectacle. Approached with restraint and precision, each frame captures the character of the land rather than its postcard appeal. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the landscape holds competing forces in balance. Part of Wayne Heim's New England landscape photography series. © Wayne Heim",
+    "description": "A Northeast countryside scene becomes traditional fine art landscape photography, where autumn atmosphere and rural quiet give the image its weight. This regional wall art piece is rooted in fall color, open land, and restrained natural beauty.",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-jP9xB7p/A",
     "keywords": [
@@ -1541,7 +1541,7 @@ export const galleryData = [
   {
     "id": "i-Qdgw4G5",
     "title": "Capturing The Northeast",
-    "description": "Explore The Northeast with Wayne Heim's see beauty in simplicity. This see beauty in simplicity piece conveys autumn in new england, The Northeast, and The Northeast, perfect for fans of see beauty in simplicity. © Wayne Heim",
+    "description": "The Northeast is captured through autumn countryside, where fall color, trees, and soft light carry the frame. This traditional fine art landscape photograph creates New England wall art shaped by seasonal change and simple regional beauty.",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-Qdgw4G5/A",
     "keywords": [
@@ -1591,7 +1591,7 @@ export const galleryData = [
   {
     "id": "i-sRRJHVz",
     "title": "Fine Art The Northeast",
-    "description": "A fine art landscape photograph of the New England countryside, shaped by scale rather than spectacle. Rather than documenting scenery, this work reveals the quiet presence that defines a region. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the terrain dwarfs human measure. Part of Wayne Heim's New England landscape photography series. © Wayne Heim",
+    "description": "Fine art photography of the Northeast appears here as a landscape of fall color, terrain, and quiet distance. This traditional landscape photograph creates New England wall art rooted in autumn atmosphere and the calm scale of rural land.",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-sRRJHVz/A",
     "keywords": [
@@ -1641,7 +1641,7 @@ export const galleryData = [
   {
     "id": "i-2PC8CL2",
     "title": "See Beauty In Simplicity And The Northeast",
-    "description": "A fine art landscape of the New England countryside, shaped by tension rather than spectacle. Wayne Heim's fine art landscape photography treats place as emotional geography - not destination, but atmosphere. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the landscape holds competing forces in balance. Part of Wayne Heim's New England landscape photography series. © Wayne Heim",
+    "description": "This Northeast landscape balances simplicity and seasonal tension, using autumn color and open terrain to hold the viewer. As traditional fine art landscape photography, it creates regional wall art rooted in quiet rural character.",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-2PC8CL2/A",
     "keywords": [
@@ -1691,7 +1691,7 @@ export const galleryData = [
   {
     "id": "i-HqXtbrD",
     "title": "The Northeast Landscape",
-    "description": "Explore The Northeast with Wayne Heim's The Northeast. This see beauty in simplicity piece conveys autumn in new england, autumn in new england, and The Northeast, perfect for fans of The Northeast. © Wayne Heim",
+    "description": "A Northeast landscape is shaped by autumn light, rural land, and the quiet pattern of trees and field. This traditional fine art landscape photograph creates New England wall art with a grounded sense of simplicity, place, and seasonal atmosphere.",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-HqXtbrD/A",
     "keywords": [
@@ -1741,7 +1741,7 @@ export const galleryData = [
   {
     "id": "i-7pG4nQv",
     "title": "See Beauty In Simplicity And See Beauty In Simplicity",
-    "description": "A fine art landscape photograph of the New England countryside, shaped by scale rather than spectacle. Approached with restraint and precision, each frame captures the character of the land rather than its postcard appeal. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the terrain dwarfs human measure. Part of Wayne Heim's New England landscape photography series. © Wayne Heim",
+    "description": "Seeing beauty in simplicity becomes the center of this autumn landscape, where field, trees, and fall light form a quiet composition. This traditional fine art landscape photograph creates New England wall art with restrained Northeast atmosphere.",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-7pG4nQv/A",
     "keywords": [
@@ -1791,7 +1791,7 @@ export const galleryData = [
   {
     "id": "i-DKPmrRN",
     "title": "Autumn In New England - Autumn In New England",
-    "description": "A fine art landscape of the New England countryside, shaped by tension rather than spectacle. Rather than documenting scenery, this work reveals the quiet presence that defines a region. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the landscape holds competing forces in balance. Part of Wayne Heim's New England landscape photography series. © Wayne Heim",
+    "description": "Autumn in New England is rendered through seasonal landscape, where color and terrain create a quiet regional mood. This traditional fine art landscape photograph creates Northeast wall art shaped by fall color, rural land, and emotional restraint.",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-DKPmrRN/A",
     "keywords": [
@@ -1841,7 +1841,7 @@ export const galleryData = [
   {
     "id": "i-gM4DZ97",
     "title": "See Beauty In Simplicity - See Beauty In Simplicity",
-    "description": "A fine art landscape photograph of the New England countryside, shaped by scale rather than spectacle. Wayne Heim's fine art landscape photography treats place as emotional geography - not destination, but atmosphere. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the terrain dwarfs human measure. Part of Wayne Heim's New England landscape photography series. © Wayne Heim",
+    "description": "A Northeast landscape study reduces the scene to light, land, and seasonal color. This traditional fine art landscape photograph creates New England wall art rooted in simplicity, autumn atmosphere, and the calm scale of rural terrain.",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-gM4DZ97/A",
     "keywords": [
@@ -1891,7 +1891,7 @@ export const galleryData = [
   {
     "id": "i-rsKpjQ8",
     "title": "Autumn In New England And See Beauty In Simplicity",
-    "description": "A fine art landscape of the New England countryside, shaped by tension rather than spectacle. Approached with restraint and precision, each frame captures the character of the land rather than its postcard appeal. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the landscape holds competing forces in balance. Part of Wayne Heim's New England landscape photography series. © Wayne Heim",
+    "description": "Autumn in New England meets the beauty of simplicity in this regional landscape, where color, field, and quiet distance carry the scene. This traditional fine art landscape photograph creates Northeast wall art shaped by restraint and seasonal memory.",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-rsKpjQ8/A",
     "keywords": [
@@ -1941,7 +1941,7 @@ export const galleryData = [
   {
     "id": "i-T3fx2pT",
     "title": "Exploring Autumn In New England",
-    "description": "A fine art landscape photograph of the New England countryside, shaped by scale rather than spectacle. Rather than documenting scenery, this work reveals the quiet presence that defines a region. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the terrain dwarfs human measure. Part of Wayne Heim's New England landscape photography series. © Wayne Heim",
+    "description": "An autumn landscape unfolds with quiet scale, drawing on the familiar rhythm of trees, field, and fall color. This traditional fine art landscape photograph creates New England wall art rooted in the Northeast’s seasonal atmosphere.",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-T3fx2pT/A",
     "keywords": [
@@ -1990,7 +1990,7 @@ export const galleryData = [
   {
     "id": "i-DmxFbF6",
     "title": "See Beauty In Simplicity In Fine Art",
-    "description": "A fine art landscape of the New England countryside, shaped by tension rather than spectacle. Wayne Heim's fine art landscape photography treats place as emotional geography - not destination, but atmosphere. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the landscape holds competing forces in balance. Part of Wayne Heim's New England landscape photography series. © Wayne Heim",
+    "description": "This Northeast landscape holds a subtle tension between autumn color, open ground, and the stillness of rural place. As traditional fine art landscape photography, it creates regional wall art shaped by simplicity, fall light, and quiet character.",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-DmxFbF6/A",
     "keywords": [
@@ -2040,7 +2040,7 @@ export const galleryData = [
   {
     "id": "i-VDnpX3W",
     "title": "Fine Art See Beauty In Simplicity",
-    "description": "Explore see beauty in simplicity with Wayne Heim's autumn in new england. This The Northeast piece conveys see beauty in simplicity, see beauty in simplicity, and see beauty in simplicity, perfect for fans of autumn in new england. © Wayne Heim",
+    "description": "A landscape becomes fine art through restraint, color, and the quiet logic of the Northeast countryside. This traditional landscape photograph creates New England wall art rooted in autumn atmosphere and the simple beauty of rural place.",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-VDnpX3W/A",
     "keywords": [
@@ -2090,7 +2090,7 @@ export const galleryData = [
   {
     "id": "i-wTXh9Lv",
     "title": "Exploring The Northeast",
-    "description": "A fine art landscape photograph of the New England countryside, shaped by scale rather than spectacle. Approached with restraint and precision, each frame captures the character of the land rather than its postcard appeal. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the terrain dwarfs human measure. Part of Wayne Heim's New England landscape photography series. © Wayne Heim",
+    "description": "The Northeast appears in a landscape shaped by scale, fall atmosphere, and quiet countryside. This traditional fine art photograph creates New England wall art rooted in seasonal light, rural distance, and restrained regional beauty.",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-wTXh9Lv/A",
     "keywords": [
@@ -2140,7 +2140,7 @@ export const galleryData = [
   {
     "id": "i-5RjNxDr",
     "title": "Autumn In New England Landscape",
-    "description": "Delve into autumn in new england via this see beauty in simplicity by Wayne Heim. Highlighting see beauty in simplicity through see beauty in simplicity and autumn in new england, it's great for collectors interested in autumn in new england. © Wayne Heim",
+    "description": "Autumn in New England is held through color, field, and the quiet presence of trees. This traditional fine art landscape photograph creates Northeast wall art shaped by fall simplicity and the emotional rhythm of rural land.",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-5RjNxDr/A",
     "keywords": [
@@ -2189,7 +2189,7 @@ export const galleryData = [
   {
     "id": "i-Rpxdj4F",
     "title": "The Northeast In Fine Art",
-    "description": "A fine art landscape of the New England countryside, shaped by tension rather than spectacle. Rather than documenting scenery, this work reveals the quiet presence that defines a region. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the landscape holds competing forces in balance. Part of Wayne Heim's New England landscape photography series. © Wayne Heim",
+    "description": "A Northeast landscape becomes fine art where autumn color and quiet terrain hold the frame. This traditional landscape photograph creates New England wall art rooted in fall atmosphere, rural distance, and seasonal restraint.",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-Rpxdj4F/A",
     "keywords": [
@@ -2239,7 +2239,7 @@ export const galleryData = [
   {
     "id": "i-PhDqRHJ",
     "title": "The Northeast Study",
-    "description": "Discover the The Northeast in this powerful The Northeast by Wayne Heim. A compelling work that embodies The Northeast, autumn in new england, and autumn in new england. Perfect for art lovers seeking The Northeast to enhance their collection. © Wayne Heim",
+    "description": "This Northeast landscape study creates a calm, grounded sense of place through autumn light, rural land, and quiet scale. As traditional fine art landscape photography, it creates New England wall art shaped by fall color and restrained atmosphere.",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-PhDqRHJ/A",
     "keywords": [
@@ -2288,7 +2288,7 @@ export const galleryData = [
   {
     "id": "i-B9pcP9b",
     "title": "The Northeast Study",
-    "description": "A fine art landscape photograph of the New England countryside, shaped by scale rather than spectacle. Wayne Heim's fine art landscape photography treats place as emotional geography - not destination, but atmosphere. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the terrain dwarfs human measure. Part of Wayne Heim's New England landscape photography series. © Wayne Heim",
+    "description": "A Northeast landscape becomes a traditional fine art photograph through autumn color, rolling terrain, and the quiet strength of regional light. The image creates New England wall art rooted in countryside and the season’s restrained beauty.",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-B9pcP9b/A",
     "keywords": [
@@ -2338,7 +2338,7 @@ export const galleryData = [
   {
     "id": "i-WqnXv6B",
     "title": "See Beauty In Simplicity Moment",
-    "description": "A fine art landscape of the New England countryside, shaped by tension rather than spectacle. Approached with restraint and precision, each frame captures the character of the land rather than its postcard appeal. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the landscape holds competing forces in balance. Part of Wayne Heim's New England landscape photography series. © Wayne Heim",
+    "description": "Seeing beauty in simplicity defines this autumn landscape, where trees, field, and fall light form a quiet composition. This traditional fine art landscape photograph creates New England wall art with a restrained Northeast atmosphere.",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-WqnXv6B/A",
     "keywords": [
@@ -2387,7 +2387,7 @@ export const galleryData = [
   {
     "id": "i-mgSFMf3",
     "title": "Autumn In New England Landscape",
-    "description": "A fine art landscape photograph of the New England countryside, shaped by stillness rather than spectacle. Rather than documenting scenery, this work reveals the quiet presence that defines a region. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the land holds its breath between seasons. Part of Wayne Heim's New England landscape photography series. © Wayne Heim",
+    "description": "Autumn in New England is shaped here by stillness, regional terrain, and soft seasonal color. This traditional fine art landscape photograph creates Northeast wall art rooted in quiet countryside, fall atmosphere, and the land’s pause between seasons.",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-mgSFMf3/A",
     "keywords": [
@@ -2419,7 +2419,7 @@ export const galleryData = [
   {
     "id": "i-D7VJ3Nh",
     "title": "Autumn In New England Moment",
-    "description": "A fine art landscape of the New England countryside, shaped by solitude rather than spectacle. Wayne Heim's fine art landscape photography treats place as emotional geography - not destination, but atmosphere. Light, tone, and composition shape a quiet narrative rooted in place and memory - where distance and silence are companions here. Part of Wayne Heim's New England landscape photography series. © Wayne Heim",
+    "description": "An autumn landscape carries a sense of solitude, with trees, color, and open distance creating a quiet regional mood. This traditional fine art landscape photograph creates New England wall art shaped by fall light and rural stillness.",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-D7VJ3Nh/A",
     "keywords": [
@@ -2451,7 +2451,7 @@ export const galleryData = [
   {
     "id": "i-6gXJFDR",
     "title": "The Northeast - See Beauty In Simplicity",
-    "description": "A fine art landscape photograph of the New England countryside, shaped by stillness rather than spectacle. Approached with restraint and precision, each frame captures the character of the land rather than its postcard appeal. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the land holds its breath between seasons. Part of Wayne Heim's New England landscape photography series. © Wayne Heim",
+    "description": "The Northeast and the beauty of simplicity meet in this quiet autumn landscape, where color and land hold the image together. This traditional fine art photograph creates New England wall art rooted in restraint, seasonal atmosphere, and place.",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-6gXJFDR/A",
     "keywords": [
@@ -2483,7 +2483,7 @@ export const galleryData = [
   {
     "id": "i-GjpFSmz",
     "title": "The Essence Of The Northeast",
-    "description": "A fine art landscape of the New England countryside, shaped by solitude rather than spectacle. Rather than documenting scenery, this work reveals the quiet presence that defines a region. Light, tone, and composition shape a quiet narrative rooted in place and memory - where distance and silence are companions here. Part of Wayne Heim's New England landscape photography series. © Wayne Heim",
+    "description": "The essence of the Northeast appears in a wide autumn panorama, where land, trees, and atmosphere stretch across the frame. This traditional fine art landscape photograph creates New England wall art shaped by distance, color, and rural quiet.",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-GjpFSmz/A",
     "keywords": [
@@ -2515,7 +2515,7 @@ export const galleryData = [
   {
     "id": "i-bQHXTGL",
     "title": "Exploring Autumn In New England",
-    "description": "A fine art landscape photograph of the New England countryside, shaped by stillness rather than spectacle. Wayne Heim's fine art landscape photography treats place as emotional geography - not destination, but atmosphere. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the land holds its breath between seasons. Part of Wayne Heim's New England landscape photography series. © Wayne Heim",
+    "description": "Autumn in New England is explored through quiet countryside, where color, line, and light create a restrained seasonal landscape. This traditional fine art landscape photograph creates Northeast wall art rooted in fall atmosphere and regional memory.",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-bQHXTGL/A",
     "keywords": [
@@ -2547,7 +2547,7 @@ export const galleryData = [
   {
     "id": "i-6GZxKjN",
     "title": "The Northeast Landscape",
-    "description": "A fine art landscape of the New England countryside, shaped by solitude rather than spectacle. Approached with restraint and precision, each frame captures the character of the land rather than its postcard appeal. Light, tone, and composition shape a quiet narrative rooted in place and memory - where distance and silence are companions here. Part of Wayne Heim's New England landscape photography series. © Wayne Heim",
+    "description": "A Northeast landscape carries quiet solitude, using open land, trees, and autumn light to shape the scene. This traditional fine art photograph creates New England wall art with a calm, grounded sense of place.",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-6GZxKjN/A",
     "keywords": [
@@ -2579,7 +2579,7 @@ export const galleryData = [
   {
     "id": "i-vnRK6nq",
     "title": "The Essence Of See Beauty In Simplicity",
-    "description": "A fine art landscape photograph of the New England countryside, shaped by stillness rather than spectacle. Rather than documenting scenery, this work reveals the quiet presence that defines a region. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the land holds its breath between seasons. Part of Wayne Heim's New England landscape photography series. © Wayne Heim",
+    "description": "The beauty of simplicity defines this regional landscape, where autumn color and quiet land create a restrained fine art image. This traditional landscape photograph creates Northeast wall art rooted in New England atmosphere, season, and stillness.",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-vnRK6nq/A",
     "keywords": [
@@ -2611,7 +2611,7 @@ export const galleryData = [
   {
     "id": "i-qpPKnkk",
     "title": "Autumn In New England Moment",
-    "description": "Explore autumn in new england with Wayne Heim's autumn in new england. This The Northeast piece conveys see beauty in simplicity, autumn in new england, and autumn in new england, perfect for fans of autumn in new england. © Wayne Heim",
+    "description": "An autumn in New England moment unfolds across quiet countryside, where fall color, open ground, and soft light give the image its mood. This traditional fine art landscape photograph creates Northeast wall art shaped by simplicity and seasonal memory.",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-qpPKnkk/A",
     "keywords": [
@@ -2643,7 +2643,7 @@ export const galleryData = [
   {
     "id": "i-6jZxx8J",
     "title": "The Essence Of See Beauty In Simplicity",
-    "description": "A fine art landscape of the New England countryside, shaped by solitude rather than spectacle. Wayne Heim's fine art landscape photography treats place as emotional geography - not destination, but atmosphere. Light, tone, and composition shape a quiet narrative rooted in place and memory - where distance and silence are companions here. Part of Wayne Heim's New England landscape photography series. © Wayne Heim",
+    "description": "This Northeast landscape uses simplicity as its strength: autumn color, land, and distance held in quiet balance. As traditional fine art landscape photography, it creates New England wall art rooted in rural atmosphere and seasonal restraint.",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-6jZxx8J/A",
     "keywords": [
@@ -2675,7 +2675,7 @@ export const galleryData = [
   {
     "id": "i-vXBVBKJ",
     "title": "Exploring Autumn In New England",
-    "description": "A fine art landscape photograph of the New England countryside, shaped by stillness rather than spectacle. Approached with restraint and precision, each frame captures the character of the land rather than its postcard appeal. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the land holds its breath between seasons. Part of Wayne Heim's New England landscape photography series. © Wayne Heim",
+    "description": "A wide autumn panorama carries the Northeast’s quiet seasonal identity, where land and light settle into a restrained composition. This traditional fine art landscape photograph creates New England wall art rooted in fall color, openness, and place.",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-vXBVBKJ/A",
     "keywords": [
