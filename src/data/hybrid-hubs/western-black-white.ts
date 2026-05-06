@@ -75,7 +75,7 @@ export const gridBasePath = bwPath;
 
 export const landing = {
 	title: 'Western Black and White Photography',
-	subtitle: 'Western black and white photography where tone, contrast, and restraint give cowboy and frontier imagery more lasting pressure than color alone.',
+	subtitle: 'Western black and white photography where tone, contrast, and restraint give cowboy photos, frontier portraits, and Western art more lasting pressure than color alone.',
 	keywords: [
 		'western black and white photography',
 		'black and white western art',
@@ -313,8 +313,8 @@ export const faqItems = [
 ];
 
 export const pageMeta = {
-	title: 'Western Black and White Photography | Monochrome Cowboy and Frontier Work – K4 Studios',
-	description: 'Western black and white photography by Wayne Heim presented as a curated route into monochrome cowboy portraits, narrative Western scenes, and Native American portrait work.',
+	title: 'Western Black and White Photography | Black and White Cowboy Photos',
+	description: 'Western black and white photography by Wayne Heim, including black and white cowboy photos, monochrome frontier portraits, narrative Western scenes, and black and white Western art.',
 };
 
 export const structuredAbout = [

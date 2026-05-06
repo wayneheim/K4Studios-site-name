@@ -270,12 +270,12 @@ export const cowboyPainterlyFineArtPhotographyPage = {
 
 export const cowboyPicturesPage = {
   path: '/cowboy-pictures',
-  title: 'Cowboy Pictures | K4 Studios',
-  h1: 'Cowboy Pictures',
+  title: 'Cowboy Pictures & Cowboy Photos | K4 Studios',
+  h1: 'Cowboy Pictures and Cowboy Photos',
   metaDescription:
-    'Cowboy pictures by Wayne Heim presented as painterly Western fine art photography, collectible cowboy portraits, frontier scenes, and story-driven fine art prints.',
+    'Cowboy pictures and cowboy photos by Wayne Heim, presented as painterly Western fine art photography, collectible cowboy portraits, frontier scenes, and story-driven prints.',
   intro:
-    'Cowboy pictures at K4 Studios are not stock cowboy imagery or disposable Western decor. Wayne Heim builds each photograph around character, atmosphere, and the quiet pressure of the American West, then presents selected works as collectible fine art prints.',
+    'Cowboy pictures and cowboy photos at K4 Studios are not stock cowboy imagery or disposable Western decor. Wayne Heim builds each photograph around character, atmosphere, and the quiet pressure of the American West, then presents selected works as collectible fine art prints.',
   breadcrumbLabel: 'Cowboy Pictures',
   schemaAbout: [
     'Cowboy Pictures',

@@ -357,8 +357,8 @@ export const faqItems = [
 ];
 
 export const pageMeta = {
-  title: 'Western Photography Prints | Curated Western Art Prints by Wayne Heim – K4 Studios',
-  description: 'Western photography prints by Wayne Heim presented as a curated entry into story-driven cowboy portraits, Wild West narratives, and collector-grade Western wall presence.',
+  title: 'Western Photography Prints | Western Photo Prints by Wayne Heim',
+  description: 'Western photography prints and Western photo prints by Wayne Heim, curated from cowboy portraits, Wild West narratives, and collector-grade images of the American West.',
 };
 
 export const structuredAbout = [
