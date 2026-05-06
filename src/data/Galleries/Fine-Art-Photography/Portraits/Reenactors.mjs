@@ -20,7 +20,7 @@ export const galleryData = [
   {
     "id": "i-nrtRrhM",
     "title": "The Essence Of Living History Art",
-    "description": "A painterly Western photograph of a frontier woman, defined by vigilance rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A reenactor portrait holds a period character in a quiet, carefully shaped moment. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "WWII Reenactor Photography: War News. Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-nrtRrhM/4/MqCRWwTjrG7k2hmtZFLctQTkz28MtxSJczDRpMq8F/XL/P8180283-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-nrtRrhM/A",
@@ -49,7 +49,7 @@ export const galleryData = [
   {
     "id": "i-3kHSr6x",
     "title": "Hello     Photography by Wayne Heim",
-    "description": "Portrait of woman reenactor at D Day Conneaut.  © Wayne Heim",
+    "description": "Portrait of woman reenactor at D-Day Conneaut. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "WWII Reenactor Photography: War News. Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-3kHSr6x/3/LFR3gFbtV7F49XzQCTRxtMd2qDWXRM7JdjLLTGvvN/XL/_WHZ2770-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-3kHSr6x/A",
@@ -75,7 +75,7 @@ export const galleryData = [
   {
     "id": "i-8JSFvtM",
     "title": "Portrait   Photography by Wayne Heim",
-    "description": "A painterly Western photograph of a frontier woman, defined by authority rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where command was earned through presence and experience. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A soldier portrait at d-day conneaut becomes a wwii reenactment portrait shaped by costume, expression, and historical atmosphere. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "Hello     Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-8JSFvtM/4/L5FTH3gmsV892L56T4HDnZ4rdK2DfTfBLzMhTvKbL/XL/_WEH1929-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-8JSFvtM/A",
@@ -101,7 +101,7 @@ export const galleryData = [
   {
     "id": "i-Q5V5cks",
     "title": "Repair Job   Photography by Wayne Heim",
-    "description": "Red Cross worker mends shirt during reenactment  at D Day Conneaut.  © Wayne Heim",
+    "description": "A Red Cross worker mending a shirt becomes a quiet portrait of wartime support and practical care. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "Portrait   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-Q5V5cks/4/NPrKzKrK9xgqKLFSFm5c9mPXWB9Ck9BZ3mPr3K3DT/XL/_W3H3186-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-Q5V5cks/A",
@@ -127,7 +127,7 @@ export const galleryData = [
   {
     "id": "i-xnx9RzR",
     "title": "Ready for Battle   Photography by Wayne Heim",
-    "description": "Reenactor in camouflage paint ready for battle at D Day Conneaut.  ©Wayne Heim",
+    "description": "A reenactor in camouflage paint is held in a tense portrait of preparation and resolve. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "Repair Job   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-xnx9RzR/4/L6H4RB2V8TMr8TxWMMgdJSX9LNbmqNJd583ndnbcW/XL/_IMG0787-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-xnx9RzR/A",
@@ -153,7 +153,7 @@ export const galleryData = [
   {
     "id": "i-MqTznst",
     "title": "Holder of the Flag  Photography by Wayne Heim",
-    "description": "Soldier presents the flag during flag raising at the D Day Conneaut reenactment. ©Wayne Heim",
+    "description": "Soldier presents the flag during flag raising at the D-Day Conneaut reenactment. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "Ready for Battle   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-2010/i-MqTznst/5/M3bkrRz3JmWNmzCWt5QCpB9RBC7rFPWC4b4ZXgpvD/XL/_IGP7294-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-MqTznst/A",
@@ -179,7 +179,7 @@ export const galleryData = [
   {
     "id": "i-FRg6MPm",
     "title": "Young Resistance Fighter    Photography by Wayne Heim",
-    "description": "Young girl in the role of French Resistance fighter during D Day Conneaut. © Wayne Heim",
+    "description": "A young reenactor portraying a French Resistance fighter becomes a portrait of courage, youth, and historical imagination. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "Holder of the Flag  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-FRg6MPm/4/MNvwvZvJDpP3VGpHn9ggCLGsN5QcZQbBtNT835ZZv/XL/_WEH1151-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-FRg6MPm/A",
@@ -205,7 +205,7 @@ export const galleryData = [
   {
     "id": "i-fpNsP5K",
     "title": "German Look Alike     Photography by Wayne Heim",
-    "description": "Portrait of German reenactor who looks like actor  Artie Johnson.  © Wayne Heim",
+    "description": "Portrait of German reenactor who looks like actor Artie Johnson. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "Young Resistance Fighter    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-2010/i-fpNsP5K/4/NfNQqz6npHcS3974CWMHKDkWkXxL5Jrc647b2X7hC/XL/_IGP7129-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-fpNsP5K/A",
@@ -231,7 +231,7 @@ export const galleryData = [
   {
     "id": "i-4gKdf3V",
     "title": "German Reenactors   Photography by Wayne Heim",
-    "description": "A painterly Western photograph of a frontier woman, defined by vigilance rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "Two German reenactors during a battle. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "German Look Alike     Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-4gKdf3V/4/NfCMrwJgtZDWXdjBQQrdC4GTBN8cXfZrqK2HrTPVV/XL/_IMG9454-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-4gKdf3V/A",
@@ -257,7 +257,7 @@ export const galleryData = [
   {
     "id": "i-v4rqtKD",
     "title": "Portrait in Camp  Black & White Photography by Wayne Heim",
-    "description": "German reenactor sits in his tent in the Axis camp during D Day Conneaut.\n© Wayne Heim",
+    "description": "German reenactor sits in his tent in the Axis camp during D-Day Conneaut. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "German Reenactors   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-v4rqtKD/4/LRSwwv7GNmf2FtqmNkXWCk9CR5RQbPz9NHGXj5Ddz/XL/_W3H3041-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-v4rqtKD/A",
@@ -283,7 +283,7 @@ export const galleryData = [
   {
     "id": "i-9bZ5Jvm",
     "title": "Capturing Historic Reenactor Prints",
-    "description": "A painterly Western photograph of a frontier woman, defined by consequence rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where every decision carried weight that echoed forward. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A reenactor portrait holds a period character in a quiet, carefully shaped moment. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "Portrait in Camp  Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-9bZ5Jvm/2/LsLMCmcKWMGZDKWKT4j3CdrRX8pcv8pcW7ZwVFcBS/XL/_OWH0437-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-9bZ5Jvm/A",
@@ -314,7 +314,7 @@ export const galleryData = [
   {
     "id": "i-9NT8GV4",
     "title": "I Am Waiting   Black & White Photography by Wayne Heim",
-    "description": "Portrait of a woman reenactor at D Day Conneaut.  © Wayne Heim",
+    "description": "Portrait of a woman reenactor at D-Day Conneaut. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "© Wayne Heim 2016",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-9NT8GV4/5/Lx2BBK5MG5hKbG9pRbkFm2vskdgnjjzcffPHVhkV7/XL/_W3H3194-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-9NT8GV4/A",
@@ -340,7 +340,7 @@ export const galleryData = [
   {
     "id": "i-tz4T7z9",
     "title": "WWII Navy Radio Operator - Watching for Signals",
-    "description": "Hunkered down in his sand bag bunker, the WWII radio operator eagerly watches for any signal to come from the beach. Reenactor in role of radio operator during D  Day Conneaut.  © Wayne Heim",
+    "description": "A WWII radio operator watches for signals from a sandbag bunker, turning communication and suspense into a focused reenactment portrait. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "I Am Waiting   Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-tz4T7z9/4/KgrzfLNfrdgMpt9T74fgTXNDf9H9n6v8McFNVRGSH/XL/_W3H4585-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-tz4T7z9/A",
@@ -366,7 +366,7 @@ export const galleryData = [
   {
     "id": "i-8ZC4vFq",
     "title": "Highly Decorated PFC   Photography by Wayne Heim",
-    "description": "WW II Veteran poses with all the metals he earned.   © Wayne Heim",
+    "description": "A WWII veteran is photographed with earned medals and quiet dignity, grounding the reenactment setting in lived history. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "WWII Navy Radio Operator - Watching for Signals",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-8ZC4vFq/4/KF3jpQG4RmH6q2dbRmDgjXJfNfNqMRL2xm5jZtnGB/XL/_W3H4899-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-8ZC4vFq/A",
@@ -392,7 +392,7 @@ export const galleryData = [
   {
     "id": "i-LwdHptZ",
     "title": "Time Out  - Photography by Wayne Heim",
-    "description": "Time Out - Allied reenactors take a rest period during D Day Conneaut reenactment© Wayne Heim",
+    "description": "Time Out - Allied reenactors take a rest period during D-Day Conneaut reenactment. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "Highly Decorated PFC   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-LwdHptZ/4/MQP8MtJMbnBJCzdkGJMMXGgKwfMsqBhqhQjjXgxKn/XL/_W3H6532-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-LwdHptZ/A",
@@ -418,7 +418,7 @@ export const galleryData = [
   {
     "id": "i-hjmBkbt",
     "title": "Reenactor Couple     Black & White Photography by Wayne Heim",
-    "description": "Two reenactors pose during D Day Conneaut.  © Wayne Heim",
+    "description": "A two reenactors pose during d-day conneaut becomes a wwii reenactment portrait shaped by costume, expression, and historical atmosphere. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "Time Out  - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-hjmBkbt/4/M43nDngVtDzZKQkGzxwmHdwXn4QhXM7vthBTNRpxQ/XL/_W3H6590-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-hjmBkbt/A",
@@ -444,7 +444,7 @@ export const galleryData = [
   {
     "id": "i-v83nSC8",
     "title": "Singing Officer    Black & white Photography by Wayne Heim",
-    "description": "Officer entertains at the USO Dance during D  Day Conneaut      © Wayne Heim",
+    "description": "Officer entertains at the USO Dance during D-Day Conneaut. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "Reenactor Couple     Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-v83nSC8/4/MwQTTMHsFS4gGx2mmZ4wkW684mvPStHnv3s79k3JV/XL/_W3H6730-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-v83nSC8/A",
@@ -470,7 +470,7 @@ export const galleryData = [
   {
     "id": "i-xjqktc4",
     "title": "Let Me Entertain You.   Black & white Photography by Wayne Heim",
-    "description": "A painterly Western photograph of a frontier woman, defined by vigilance rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "Singing at USO Dance. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "Singing Officer    Black & white Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-xjqktc4/5/K9hDSMBdH3XGMKgG2G85LCg24DB2vfhzGCMXGJBck/XL/_W3H6732-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-xjqktc4/A",
@@ -496,7 +496,7 @@ export const galleryData = [
   {
     "id": "i-JLdsCWg",
     "title": "Hard Day    Photography by Wayne  Heim",
-    "description": "Civil War Reenactment  after a hard day   © Wayne Heim",
+    "description": "Civil War Reenactment after a hard day. This Civil War reenactment photograph creates living history wall art rooted in period costume, historical character, and the quiet human scale of the past.",
     "alt": "Let Me Entertain You.   Black & white Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment/i-JLdsCWg/5/Lhs26QFqp8Qb8J9sBR3WmDrdRc7T2mZFRB5xz3D9M/XL/_WHZ1170-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-JLdsCWg/A",
@@ -522,7 +522,7 @@ export const galleryData = [
   {
     "id": "i-V6Z49XZ",
     "title": "Pilot    Black & White Photography by Wayne Heim",
-    "description": "Portrait of Pilot reenactor at D Day Conneaut.  © Wayne Heim",
+    "description": "Portrait of Pilot reenactor at D-Day Conneaut. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "Hard Day    Photography by Wayne  Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-V6Z49XZ/3/K7jBxphkNxNL88gXkjVLx5ggP8RNVNKf9md43Fz2S/XL/_WHZ1776-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-V6Z49XZ/A",
@@ -548,7 +548,7 @@ export const galleryData = [
   {
     "id": "i-xMxDrS5",
     "title": "Pretty in Blue ( black & white)   Photography by Wayne Heim",
-    "description": "Woman reenactor poses for a portrait during D  Day Conneaut. © Wayne Heim",
+    "description": "Woman reenactor poses for a portrait during D-Day Conneaut. This historical reenactment photograph creates living history wall art rooted in period costume, character, and the quiet authority of a carefully held portrait.",
     "alt": "Pilot    Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-xMxDrS5/3/L63RHJT4f3WHMSLhn7ztP3w78FbvmbcHk8zfjkWsB/XL/_WHZ2607-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-xMxDrS5/A",
@@ -574,7 +574,7 @@ export const galleryData = [
   {
     "id": "i-RTj9HSn",
     "title": "Dancing     Photography by Wayne Heim",
-    "description": "Couple dance at USO Dance during D Day Conneaut. © Wayne Heim",
+    "description": "Couple dance at USO Dance during D-Day Conneaut. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "Pretty in Blue ( black & white)   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-RTj9HSn/3/KkWwP3dLVWZB3zRdDdKq9kmTrn8cZjDp3N854Vh7C/XL/_WHZ5391%20b-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-RTj9HSn/A",
@@ -600,7 +600,7 @@ export const galleryData = [
   {
     "id": "i-2ZFJZNj",
     "title": "Portrait of Tank Commander    Photography by Wayne Heim",
-    "description": "Portrait of tank commander during Bulletfest.   © Wayne Heim",
+    "description": "A portrait of tank commander during bulletfest becomes a wwii reenactment portrait shaped by costume, expression, and historical atmosphere. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "Dancing     Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-2ZFJZNj/1/Lnm4ZK962b4krmCG4KQcs4v4K7c2N56LpTnjRNtXr/XL/_W3H4218c-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-2ZFJZNj/A",
@@ -626,7 +626,7 @@ export const galleryData = [
   {
     "id": "i-KVf62F2",
     "title": "Period Costume Photography In Fine Art",
-    "description": "A painterly Western photograph of a frontier woman, defined by consequence rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where every decision carried weight that echoed forward. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A reenactor portrait holds a period character in a quiet, carefully shaped moment. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "Portrait of Tank Commander    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-KVf62F2/2/MjrW57J6THhpGBq63G4xQMjLt9Bsc7V5rfzt4txSX/XL/_OWH0441-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-KVf62F2/A",
@@ -656,7 +656,7 @@ export const galleryData = [
   {
     "id": "i-HZWL29h",
     "title": "Reenactor Photography Study",
-    "description": "Explore reenactor photography with Wayne Heim's living history art. This period costume photography piece conveys living history art, historic reenactor prints, and reenactor photography, perfect for fans of living history art. © Wayne Heim",
+    "description": "A reenactor photography study becomes a wwii reenactment portrait shaped by costume, expression, and historical atmosphere. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "© Wayne Heim 2016",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-HZWL29h/2/NdbGk4t9tRdjRHDJsGQtjkQBZL4mwNPPwf8Z8DmCP/XL/_OWH0576-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-HZWL29h/A",
@@ -687,7 +687,7 @@ export const galleryData = [
   {
     "id": "i-JB8X7Dx",
     "title": "Reenactment Portraits In Fine Art",
-    "description": "A painterly Western photograph of a frontier woman, defined by vigilance rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A reenactor portrait holds a period character in a quiet, carefully shaped moment. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "© Wayne Heim 2016",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-JB8X7Dx/3/LKkt6ZmBg5rwn5x45jSpDHcZp66MT5bRTSNjVBLjb/XL/_WHZ4147-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-JB8X7Dx/A",
@@ -717,7 +717,7 @@ export const galleryData = [
   {
     "id": "i-qBH8D5h",
     "title": "Portrait of a Civilian Reenactor   Black & White Photography by Wayne Heim",
-    "description": "Woman in period dress poses for a portrait\n© Wayne Heim",
+    "description": "Woman in period dress poses for a portrait. This historical reenactment photograph creates living history wall art rooted in period costume, character, and the quiet authority of a carefully held portrait.",
     "alt": "© Wayne Heim 2016",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-qBH8D5h/1/KMgWnPRfFQZXdXsjvsWfPMzTbjmqt7BLQhBQgtV8W/XL/_WHK7187-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-qBH8D5h/A",
@@ -743,7 +743,7 @@ export const galleryData = [
   {
     "id": "i-W7CFHMJ",
     "title": "Hi There!    Photography by Wayne Heim",
-    "description": "A painterly Western photograph of a woman, defined by authority rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where command was earned through presence and experience. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A woman reenactor at d-day conneaut becomes a wwii reenactment portrait shaped by costume, expression, and historical atmosphere. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "Portrait of a Civilian Reenactor   Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-W7CFHMJ/3/KcvzJ2w94Vd6XxWFRS7D4c26sHMh8k8VTC5xQp8S4/XL/P8170038-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-W7CFHMJ/A",
@@ -769,7 +769,7 @@ export const galleryData = [
   {
     "id": "i-mdfNg9Z",
     "title": "Pilot    Black & White Photography by Wayne Heim",
-    "description": "Reenactor as a pilot who has  parachuted behind enemy lines.    © Wayne Heim",
+    "description": "Reenactor as a pilot who has parachuted behind enemy lines. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "Hi There!    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-mdfNg9Z/3/KFdnVM2gmWN7BPmSdZJ7dDBrCL8g3ZqXMVJrSwDDf/XL/P8180439-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-mdfNg9Z/A",
@@ -795,7 +795,7 @@ export const galleryData = [
   {
     "id": "i-6dXLqcb",
     "title": "Hung Up     Photography by Wayne Heim",
-    "description": "Paratrooper reenactor is hung up in a tree after jumping behind enemy lines at D Day  Conneaut.    © Wayne Heim",
+    "description": "Paratrooper reenactor is hung up in a tree after jumping behind enemy lines at D-Day Conneaut. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "Pilot    Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-6dXLqcb/3/LGjh76cHrrNCnLZ8PnFpBMFgD6fFWvXBRxv5dfnzz/XL/_OLY3116-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-6dXLqcb/A",
@@ -821,7 +821,7 @@ export const galleryData = [
   {
     "id": "i-8hqzX95",
     "title": "Giving Orders  Black and White Photography by Wayne Heim",
-    "description": "A painterly Western photograph of a frontier woman, defined by vigilance rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A commander gives orders to his men becomes a wwii reenactment portrait shaped by costume, expression, and historical atmosphere. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "Hung Up     Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-8hqzX95/5/NPf9j8QBfCFJHHHksz4vHbKsKWRv7WNBZP4n6CML7/XL/_OLY3243-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-8hqzX95/A",
@@ -847,7 +847,7 @@ export const galleryData = [
   {
     "id": "i-5XfJ6WV",
     "title": "Portrait of Old Time Photographer   Photography by Wayne Heim",
-    "description": "Gentleman with original WWII photography equipment poses for a portrait at D Day Conneaut.     © Wayne Heim",
+    "description": "A gentleman with original WWII photography equipment becomes a portrait of the image-maker inside living history. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "Giving Orders  Black and White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-5XfJ6WV/5/NTTk2v3MqkD5s9fQVP7smKZ2zc4v89PXHmcFvKNpV/XL/_OLY3265-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-5XfJ6WV/A",
@@ -873,7 +873,7 @@ export const galleryData = [
   {
     "id": "i-KHwLvpT",
     "title": "Yes Sir     Black & White Photography by Wayne Heim",
-    "description": "Soldier salutes at D Day reenactment in Conneaut, Ohio.  © Wayne Heim",
+    "description": "Soldier salutes at D-Day reenactment in Conneaut, Ohio. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "Portrait of Old Time Photographer   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-KHwLvpT/4/LrHQCFqwHPmj9w54H7RnRd7SKRncpcRKd8jj38tfc/XL/_OLY1285-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-KHwLvpT/A",
@@ -899,7 +899,7 @@ export const galleryData = [
   {
     "id": "i-xPMsGwF",
     "title": "Exploring Reenactor Photography",
-    "description": "Discover the reenactor photography in this powerful historic reenactor prints by Wayne Heim. A compelling work that embodies period costume photography, historic reenactor prints, and living history art. Perfect for art lovers seeking reenactor photography to enhance their collection. © Wayne Heim",
+    "description": "A reenactor portrait holds a period character in a quiet, carefully shaped moment. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "Yes Sir     Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-xPMsGwF/4/MKJBNvqtkRdpLFzw8KbbpjF9Kx2mfDGWsL8ZvK2d7/XL/P8190993-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-xPMsGwF/A",
@@ -930,7 +930,7 @@ export const galleryData = [
   {
     "id": "i-Z3xcgPq",
     "title": "Period Costume Photography Study",
-    "description": "A painterly Western photograph of a frontier woman, defined by consequence rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where every decision carried weight that echoed forward. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A period costume photography study becomes a wwii reenactment portrait shaped by costume, expression, and historical atmosphere. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "© Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-Z3xcgPq/4/KK5Z8j2wSHGNmwHsnvzwpXLc765x5mr9RwRp6JNjZ/XL/P8191033-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-Z3xcgPq/A",
@@ -960,7 +960,7 @@ export const galleryData = [
   {
     "id": "i-KtG6P6R",
     "title": "Writing Home    Black and White Photography by Wayne Heim",
-    "description": "Brother and sister writing a letter during reenactment.       © Wayne Heim",
+    "description": "A brother and sister writing a letter during reenactment become a quiet portrait of home, distance, and wartime imagination. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "© Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-KtG6P6R/5/Lkg5PkQPkbJpxsfdWsTtqf9L5JssgWTdHJDNT6bKQ/XL/_OLY4084-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-KtG6P6R/A",
@@ -986,7 +986,7 @@ export const galleryData = [
   {
     "id": "i-Q9FtWZH",
     "title": "Reenactor Photography In Fine Art",
-    "description": "A painterly Western photograph of a frontier woman, defined by vigilance rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A reenactor portrait holds a period character in a quiet, carefully shaped moment. This Western reenactment portrait creates historic character wall art rooted in period costume, frontier atmosphere, and Wayne Heim's restrained fine art photography.",
     "alt": "Writing Home    Black and White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-Q9FtWZH/0/MCMtDgBdCFtTx9LPCXvN4vG3DG4LHsXb7gjjH4N6k/XL/_OLY2320-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-Q9FtWZH/A",
@@ -1017,7 +1017,7 @@ export const galleryData = [
   {
     "id": "i-RQDpTBd",
     "title": "Forward   Photography by Wayne Heim",
-    "description": "\"Forward\" is the order for the Commonwealth troops during this reenactment.  Wayne Heim ©2015",
+    "description": "\"Forward\" is the order for the Commonwealth troops during this reenactment. This historical reenactment photograph creates living history wall art rooted in period costume, character, and the quiet authority of a carefully held portrait.",
     "alt": "© Wayne Heim 2018",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-RQDpTBd/3/Kq74Sst5NRXcPPd7tVBSXn9zBCbxnFQL58Nxnw9f4/XL/_WHZ3907-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-RQDpTBd/A",
@@ -1043,7 +1043,7 @@ export const galleryData = [
   {
     "id": "i-TFGwMrt",
     "title": "Period Costume Photography In Fine Art",
-    "description": "A painterly Western photograph of a frontier woman, defined by consequence rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where every decision carried weight that echoed forward. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A reenactor portrait holds a period character in a quiet, carefully shaped moment. This Western reenactment portrait creates historic character wall art rooted in period costume, frontier atmosphere, and Wayne Heim's restrained fine art photography.",
     "alt": "Forward   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-TFGwMrt/1/Kr729g2QJFcDggMjVrLJXkFK35zDqWRbbjm557mmG/XL/_OL31657-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-TFGwMrt/A",
@@ -1073,7 +1073,7 @@ export const galleryData = [
   {
     "id": "i-x66BqR2",
     "title": "Capturing Historic Reenactor Prints",
-    "description": "A painterly Western photograph of a frontier woman, defined by vigilance rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A reenactor portrait holds a period character in a quiet, carefully shaped moment. This Western reenactment portrait creates historic character wall art rooted in period costume, frontier atmosphere, and Wayne Heim's restrained fine art photography.",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-x66BqR2/1/MP2pSqhtm35JftBzNkz5JkhDsVkcXrCwMQMDh7gKG/XL/_OL31665-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-x66BqR2/A",
@@ -1102,7 +1102,7 @@ export const galleryData = [
   {
     "id": "i-2KDvpNm",
     "title": "Period Costume Photography Moment",
-    "description": "A painterly Western photograph of a frontier woman, defined by consequence rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where every decision carried weight that echoed forward. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A period costume photography moment becomes a western reenactment portrait shaped by costume, expression, and historical atmosphere. This Western reenactment portrait creates historic character wall art rooted in period costume, frontier atmosphere, and Wayne Heim's restrained fine art photography.",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-2KDvpNm/0/LP8GwcX9kTXvWPmmknF6ftbv65b5khxGmfdt5RtK6/XL/_ANA5778-Edit-2-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-2KDvpNm/A",
@@ -1133,7 +1133,7 @@ export const galleryData = [
   {
     "id": "i-mtJrXvg",
     "title": "Living History Art - Period Costume Photography",
-    "description": "A painterly Western photograph of a frontier woman, defined by vigilance rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "Living History Art - Period Costume Photography. This Western reenactment portrait creates historic character wall art rooted in period costume, frontier atmosphere, and Wayne Heim's restrained fine art photography.",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-mtJrXvg/0/L8P7mNVpzf5CMd7PvHdqrF4jgGcKwgs6SV5tbVbFN/XL/_ANA5778-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-mtJrXvg/A",
@@ -1163,7 +1163,7 @@ export const galleryData = [
   {
     "id": "i-krZ5VMv",
     "title": "Reenactor Photography Moment",
-    "description": "A painterly Western photograph of a frontier woman, defined by hesitation rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where a moment of pause could mean life or death. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A reenactor photography moment becomes a western reenactment portrait shaped by costume, expression, and historical atmosphere. This Western reenactment portrait creates historic character wall art rooted in period costume, frontier atmosphere, and Wayne Heim's restrained fine art photography.",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-krZ5VMv/0/K36LZBPnfFNWM8rM2JpdGjk7jGt5n6xBqK6jwPwjf/XL/_PEN0072-Edit-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-krZ5VMv/A",
@@ -1193,7 +1193,7 @@ export const galleryData = [
   {
     "id": "i-47ZthJv",
     "title": "Reenactor Photography - Reenactment Portraits",
-    "description": "A painterly Western photograph of a frontier woman, defined by vigilance rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A reenactor photography - reenactment portraits becomes a western reenactment portrait shaped by costume, expression, and historical atmosphere. This Western reenactment portrait creates historic character wall art rooted in period costume, frontier atmosphere, and Wayne Heim's restrained fine art photography.",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-47ZthJv/1/K854Fk6ztzVBZ4zxWbC7xR5BDMTLJxqjsv4VGbc8W/XL/_ANA5826-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-47ZthJv/A",
@@ -1223,7 +1223,7 @@ export const galleryData = [
   {
     "id": "i-mL3cFDF",
     "title": "Exploring Reenactor Photography",
-    "description": "A painterly Western photograph of a frontier woman, defined by consequence rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where every decision carried weight that echoed forward. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A reenactor portrait holds a period character in a quiet, carefully shaped moment. This Western reenactment portrait creates historic character wall art rooted in period costume, frontier atmosphere, and Wayne Heim's restrained fine art photography.",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-mL3cFDF/1/MsrH5Zg9qVg3kpDtHBWn58qMFNF3zLTKQphbgHqm2/XL/_PEN0088-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-mL3cFDF/A",
@@ -1254,7 +1254,7 @@ export const galleryData = [
   {
     "id": "i-Ph9wSQ2",
     "title": "Capturing Reenactment Portraits",
-    "description": "Delve into reenactment portraits via this reenactor photography by Wayne Heim. Highlighting living history art through period costume photography and period costume photography, it's great for collectors interested in reenactment portraits. © Wayne Heim",
+    "description": "A reenactor portrait holds a period character in a quiet, carefully shaped moment. This historical reenactment photograph creates living history wall art rooted in period costume, character, and the quiet authority of a carefully held portrait.",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-Ph9wSQ2/1/MqkPmrcwCXXNX5N6NH3WX5cGRBjmMrxpvFQjTfzXw/XL/_ANA6503-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-Ph9wSQ2/A",
@@ -1285,7 +1285,7 @@ export const galleryData = [
   {
     "id": "i-q9gwvwQ",
     "title": "Reenactor Photography In Fine Art",
-    "description": "A painterly Western photograph of a frontier woman, defined by vigilance rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A reenactor portrait holds a period character in a quiet, carefully shaped moment. This Western reenactment portrait creates historic character wall art rooted in period costume, frontier atmosphere, and Wayne Heim's restrained fine art photography.",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-q9gwvwQ/1/LnGp3xXMwn78QkJn3v4jzdNWGpjnbgWw6k9Mdqdw7/XL/_OL38761-Edit-4-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-q9gwvwQ/A",
@@ -1316,7 +1316,7 @@ export const galleryData = [
   {
     "id": "i-XtFSMcg",
     "title": "Historic Reenactor Prints Study",
-    "description": "Explore historic reenactor prints with Wayne Heim's historic reenactor prints. This reenactor photography piece conveys reenactor photography, living history art, and historic reenactor prints, perfect for fans of historic reenactor prints. © Wayne Heim",
+    "description": "A historic reenactor prints study becomes a historical reenactment portrait shaped by costume, expression, and historical atmosphere. This historical reenactment photograph creates living history wall art rooted in period costume, character, and the quiet authority of a carefully held portrait.",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-XtFSMcg/0/MQVhDTSzbMzMsJSsmm3kncmTb2WLgbN8C9cjf4xnQ/XL/_OL38784-Edit-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-XtFSMcg/A",
@@ -1347,7 +1347,7 @@ export const galleryData = [
   {
     "id": "i-KvVGmvX",
     "title": "Exploring Reenactment Portraits",
-    "description": "Explore reenactment portraits with Wayne Heim's living history art. This historic reenactor prints piece conveys reenactor photography, living history art, and reenactment portraits, perfect for fans of living history art. © Wayne Heim",
+    "description": "A reenactor portrait holds a period character in a quiet, carefully shaped moment. This historical reenactment photograph creates living history wall art rooted in period costume, character, and the quiet authority of a carefully held portrait.",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-KvVGmvX/1/LrjWqwM3v3CJXLrjLXhFqf8kPgfjRzzGkwBBtrqnm/XL/_OL30103-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-KvVGmvX/A",
@@ -1376,7 +1376,7 @@ export const galleryData = [
   {
     "id": "i-ft5fC69",
     "title": "Capturing Reenactment Portraits",
-    "description": "Explore reenactment portraits with Wayne Heim's reenactment portraits. This living history art piece conveys reenactor photography, period costume photography, and reenactment portraits, perfect for fans of reenactment portraits. © Wayne Heim",
+    "description": "A reenactor portrait holds a period character in a quiet, carefully shaped moment. This historical reenactment photograph creates living history wall art rooted in period costume, character, and the quiet authority of a carefully held portrait.",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-ft5fC69/1/KT5RJCJ7XKkkpbkFjZnpzjkthDkhk2brSHnCpkv6M/XL/_ANA4477-Edit-3-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-ft5fC69/A",
@@ -1405,7 +1405,7 @@ export const galleryData = [
   {
     "id": "i-TD5LPgq",
     "title": "Exploring Reenactment Portraits",
-    "description": "Delve into reenactment portraits via this reenactor photography by Wayne Heim. Highlighting reenactor photography through living history art and historic reenactor prints, it's great for collectors interested in reenactment portraits. © Wayne Heim",
+    "description": "A reenactor portrait holds a period character in a quiet, carefully shaped moment. This historical reenactment photograph creates living history wall art rooted in period costume, character, and the quiet authority of a carefully held portrait.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-TD5LPgq/1/MK3wtpkJf4Bvsh2VjJjpXDDQmNTWQMWwS8MFdT985/XL/_ANA4478-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-TD5LPgq/A",
@@ -1434,7 +1434,7 @@ export const galleryData = [
   {
     "id": "i-9DrbLRG",
     "title": "Period Costume Photography And Period Costume Photography",
-    "description": "Discover the period costume photography in this powerful period costume photography by Wayne Heim. A compelling work that embodies reenactment portraits, reenactment portraits, and period costume photography. Perfect for art lovers seeking period costume photography to enhance their collection. © Wayne Heim",
+    "description": "Period Costume Photography And Period Costume Photography. This historical reenactment photograph creates living history wall art rooted in period costume, character, and the quiet authority of a carefully held portrait.",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-9DrbLRG/1/Lr2kCGbxBHDP65CMzhNcTQ2tq6wC7ZG4wtLWfXnpv/XL/_PEN0411-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-9DrbLRG/A",
@@ -1461,7 +1461,7 @@ export const galleryData = [
   {
     "id": "i-pk47rW4",
     "title": "Reenactor Photography Study",
-    "description": "A painterly Western photograph of a cowboy, defined by consequence rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where every decision carried weight that echoed forward. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A reenactor photography study becomes a western reenactment portrait shaped by costume, expression, and historical atmosphere. This Western reenactment portrait creates historic character wall art rooted in period costume, frontier atmosphere, and Wayne Heim's restrained fine art photography.",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pk47rW4/1/LJPNf4ZV5Tm7mLk9pkskq3bfdmRtv7Nmj2hmFSwG9/XL/_PEN0418-Edit-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pk47rW4/A",
@@ -1490,7 +1490,7 @@ export const galleryData = [
   {
     "id": "i-Wd8cVgw",
     "title": "Living History Art Portrait",
-    "description": "A painterly Western photograph of a cowboy, defined by vigilance rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A living history art portrait becomes a western reenactment portrait shaped by costume, expression, and historical atmosphere. This Western reenactment portrait creates historic character wall art rooted in period costume, frontier atmosphere, and Wayne Heim's restrained fine art photography.",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-Wd8cVgw/1/LrPwb9VcR4MW6vw8H9hBHxHXKCtsLjjT3nwmLM3st/XL/_ANA4940-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-Wd8cVgw/A",
@@ -1519,7 +1519,7 @@ export const galleryData = [
   {
     "id": "i-QdTk3tx",
     "title": "Reenactor Photography Moment",
-    "description": "A painterly Western photograph of a cowboy, defined by consequence rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where every decision carried weight that echoed forward. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A reenactor photography moment becomes a western reenactment portrait shaped by costume, expression, and historical atmosphere. This Western reenactment portrait creates historic character wall art rooted in period costume, frontier atmosphere, and Wayne Heim's restrained fine art photography.",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-QdTk3tx/1/K84Kx8PnzJDKKkDtSFdggr543fkQTfZ5dKptkhSNC/XL/_ANA4940-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-QdTk3tx/A",
@@ -1547,7 +1547,7 @@ export const galleryData = [
   {
     "id": "i-QR9ctvg",
     "title": "Reenactment Portraits In Fine Art",
-    "description": "A painterly Western photograph of a cowboy, defined by vigilance rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A reenactor portrait holds a period character in a quiet, carefully shaped moment. This Western reenactment portrait creates historic character wall art rooted in period costume, frontier atmosphere, and Wayne Heim's restrained fine art photography.",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-QR9ctvg/0/MVkSHjVh6GP8Lm3ML3cCMrcNPVKznGvrmmkKLpZKp/XL/_OL37783-Enhanced-Edit-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-QR9ctvg/A",
@@ -1576,7 +1576,7 @@ export const galleryData = [
   {
     "id": "i-k7s8Zg4",
     "title": "Living History Art And Historic Reenactor Prints",
-    "description": "A painterly Western photograph of a cowboy, defined by consequence rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where every decision carried weight that echoed forward. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "Living History Art And Historic Reenactor Prints. This Western reenactment portrait creates historic character wall art rooted in period costume, frontier atmosphere, and Wayne Heim's restrained fine art photography.",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-k7s8Zg4/0/M5KFSxZ9SmSPGzMb82d4XKFhDzHXXDXT5Stbfc5qs/XL/_OL37899-Edit-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-k7s8Zg4/A",
@@ -1605,7 +1605,7 @@ export const galleryData = [
   {
     "id": "i-9n8DJRb",
     "title": "Exploring Reenactor Photography",
-    "description": "A painterly Western photograph of a cowboy, defined by vigilance rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A reenactor portrait holds a period character in a quiet, carefully shaped moment. This Western reenactment portrait creates historic character wall art rooted in period costume, frontier atmosphere, and Wayne Heim's restrained fine art photography.",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-9n8DJRb/0/Kv8VJCbpgsTV83ggwJLT98qC8pxFjVPmK7pSFnswZ/XL/_OL38491-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-9n8DJRb/A",
@@ -1633,7 +1633,7 @@ export const galleryData = [
   {
     "id": "i-vQ9LLVL",
     "title": "Historic Reenactor Prints Moment",
-    "description": "A painterly Western photograph of a cowboy, defined by consequence rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where every decision carried weight that echoed forward. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A historic reenactor prints moment becomes a western reenactment portrait shaped by costume, expression, and historical atmosphere. This Western reenactment portrait creates historic character wall art rooted in period costume, frontier atmosphere, and Wayne Heim's restrained fine art photography.",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-vQ9LLVL/1/LWQnzTB3V9dTkw8RCjm3d6Qp9t2C73vNMwd2WRWTC/XL/_ANA3399-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-vQ9LLVL/A",
@@ -1662,7 +1662,7 @@ export const galleryData = [
   {
     "id": "i-z7QmfM5",
     "title": "The Essence Of Reenactment Portraits",
-    "description": "A painterly Western photograph of a cowboy, defined by vigilance rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A reenactor portrait holds a period character in a quiet, carefully shaped moment. This Western reenactment portrait creates historic character wall art rooted in period costume, frontier atmosphere, and Wayne Heim's restrained fine art photography.",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-z7QmfM5/0/K8mvdvbN5ngHL26zLQ5Xq7vqvQnCvWhCrws9VgRZD/XL/_PEN0758-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-z7QmfM5/A",
@@ -1691,7 +1691,7 @@ export const galleryData = [
   {
     "id": "i-pg52Vcg",
     "title": "Reenactor Photography Study",
-    "description": "A painterly Western photograph of a cowboy, defined by consequence rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where every decision carried weight that echoed forward. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A reenactor photography study becomes a western reenactment portrait shaped by costume, expression, and historical atmosphere. This Western reenactment portrait creates historic character wall art rooted in period costume, frontier atmosphere, and Wayne Heim's restrained fine art photography.",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pg52Vcg/0/L8CCnZxjZcD5kMH6BSh9KDvfxtW5WnmMGhrpWjJg8/XL/_OL35924-Edit-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pg52Vcg/A",
@@ -1719,7 +1719,7 @@ export const galleryData = [
   {
     "id": "i-dDgBwcp",
     "title": "Exploring Reenactment Portraits",
-    "description": "A painterly Western photograph of a cowboy, defined by vigilance rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A reenactor portrait holds a period character in a quiet, carefully shaped moment. This Western reenactment portrait creates historic character wall art rooted in period costume, frontier atmosphere, and Wayne Heim's restrained fine art photography.",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-dDgBwcp/0/KVL7QqXH7CFzGjvXqfj46WQnsHBGXnCF7Q3nxkdj3/XL/_OL38418-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-dDgBwcp/A",
@@ -1747,7 +1747,7 @@ export const galleryData = [
   {
     "id": "i-xJ2ncLF",
     "title": "Historic Reenactor Prints Moment",
-    "description": "A painterly Western photograph of a cowboy, defined by consequence rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where every decision carried weight that echoed forward. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A historic reenactor prints moment becomes a western reenactment portrait shaped by costume, expression, and historical atmosphere. This Western reenactment portrait creates historic character wall art rooted in period costume, frontier atmosphere, and Wayne Heim's restrained fine art photography.",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-xJ2ncLF/1/KxXg6kLLbLZRR5tp586fTb4mH3fPXWvfpptdzdKTn/XL/_OL38494-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-xJ2ncLF/A",
@@ -1775,7 +1775,7 @@ export const galleryData = [
   {
     "id": "i-kvdDsK8",
     "title": "Capturing Reenactment Portraits",
-    "description": "A painterly Western photograph of a cowboy, defined by vigilance rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A reenactor portrait holds a period character in a quiet, carefully shaped moment. This Western reenactment portrait creates historic character wall art rooted in period costume, frontier atmosphere, and Wayne Heim's restrained fine art photography.",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-kvdDsK8/0/MpbnGPsZjrJWmwtfRfQhsg5MgfRnD7Wmx4pwQBznt/XL/_PEN0762-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-kvdDsK8/A",
@@ -1804,7 +1804,7 @@ export const galleryData = [
   {
     "id": "i-HWWSkqG",
     "title": "Too far gone.",
-    "description": "A painterly Western photograph of a cowboy, defined by authority rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where command was earned through presence and experience. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A medical can't save this one becomes a wwii reenactment portrait shaped by costume, expression, and historical atmosphere. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-HWWSkqG/2/Nd8MMS66ZJ4RKjCcgVR6Fz4nXsV56xbVjjcDpn6DG/XL/_OLY4622-Edit-3-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-HWWSkqG/A",
@@ -1828,7 +1828,7 @@ export const galleryData = [
   {
     "id": "i-qfk69f2",
     "title": "Commandant   Photography by Wayne Heim",
-    "description": "Portrait of a German Commandant at Rockford WWII Days.   © Wayne Heim",
+    "description": "Portrait of a German Commandant at Rockford WWII Days. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "Too far gone.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2014/i-qfk69f2/4/KGTgmcQszswW9GJvM8mTqkcpQ5vDGck8Dp9bJWkfz/XL/_W3H4558-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-qfk69f2/A",
@@ -1852,7 +1852,7 @@ export const galleryData = [
   {
     "id": "i-f8CRdFh",
     "title": "Living History Art Moment",
-    "description": "A painterly Western photograph of a cowboy, defined by consequence rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where every decision carried weight that echoed forward. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A living history art moment becomes a western reenactment portrait shaped by costume, expression, and historical atmosphere. This Western reenactment portrait creates historic character wall art rooted in period costume, frontier atmosphere, and Wayne Heim's restrained fine art photography.",
     "alt": "Commandant   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-f8CRdFh/2/KbCmBNg5W5NB8ZdKBTJcMgXx6mTVsRzM46cXTFWKv/XL/_O1H0377-Edit-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-f8CRdFh/A",
@@ -1881,7 +1881,7 @@ export const galleryData = [
   {
     "id": "i-bsQkK6z",
     "title": "Salute - Photography by Wayne Heim",
-    "description": "Salute -GI\"s salute at raising of colors during reenactment at D-Day Conneaut. ©Wayne Heim",
+    "description": "Salute -GI\"s salute at raising of colors during reenactment at D-Day Conneaut. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-bsQkK6z/4/LdzGpHCQcqj35w3hMrSPH2WsrVFcfCCVXsbzFwb2g/XL/_IMG8520-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-bsQkK6z/A",
@@ -1905,7 +1905,7 @@ export const galleryData = [
   {
     "id": "i-k5t6JSt",
     "title": "General's Wife  Photography by Wayne Heim",
-    "description": "Portrait of a woman reenactiog a general's wife© Wayne Heim",
+    "description": "Portrait of a woman reenacting a general's wife. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "Salute - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-k5t6JSt/4/NV4XdGd9rGMnTxHD5NTJTZ2P8jZdzZ2TsVLrTZp7q/XL/_W3H3193-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-k5t6JSt/A",
@@ -1929,7 +1929,7 @@ export const galleryData = [
   {
     "id": "i-nRvvWrZ",
     "title": "Reenactor Photography And Historic Reenactor Prints",
-    "description": "Delve into reenactor photography via this historic reenactor prints by Wayne Heim. Highlighting living history art through period costume photography and reenactor photography, it's great for collectors interested in reenactor photography. © Wayne Heim",
+    "description": "A reenactor photography and historic reenactor prints becomes a historical reenactment portrait shaped by costume, expression, and historical atmosphere. This historical reenactment photograph creates living history wall art rooted in period costume, character, and the quiet authority of a carefully held portrait.",
     "alt": "General's Wife  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-nRvvWrZ/1/KTR4hZgZzXM73DMQ46rxrvNCxLCMGt3nGK4tG5pVm/XL/_OLY7493-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-nRvvWrZ/A",
@@ -1958,7 +1958,7 @@ export const galleryData = [
   {
     "id": "i-4dq9DBD",
     "title": "Artist At Work     Photography by Wayne Heim",
-    "description": "Reenactor relaxes by drawing during time off at D Day Conneaut . © Wayne Heim",
+    "description": "A reenactor relaxing by drawing during time off becomes a portrait of creativity inside a historical setting. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "© Wayne Heim 2018",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-4dq9DBD/4/MWQtPNd8Cw9xMRcwNg5vmkqQwGg8sZcKwZssQmQgv/XL/_IMG6550-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-4dq9DBD/A",
@@ -1982,7 +1982,7 @@ export const galleryData = [
   {
     "id": "i-QW5rZBL",
     "title": "Ready for Battle    Photography by Wayne Heim",
-    "description": "Soldier in full battle gear ready for reenactment.  © Wayne Heim",
+    "description": "A reenactor in camouflage paint is held in a tense portrait of preparation and resolve. This historical reenactment photograph creates living history wall art rooted in period costume, character, and the quiet authority of a carefully held portrait.",
     "alt": "Artist At Work     Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/photos/i-QW5rZBL/2/KPS94XGkGqSPnk4XfRpJzzQ9rsrbP7QJp9NCBD3H4/XL/i-QW5rZBL-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-QW5rZBL/A",
@@ -2006,7 +2006,7 @@ export const galleryData = [
   {
     "id": "i-VTf5zR7",
     "title": "I Got A Secret    Photography by Wayne Heim",
-    "description": "Two young ladies share a secret at civil war reenactment.   © Wayne Heim",
+    "description": "Two young ladies share a secret at civil war reenactment. This Civil War reenactment photograph creates living history wall art rooted in period costume, historical character, and the quiet human scale of the past.",
     "alt": "Ready for Battle    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-VTf5zR7/4/NHXZFSCs4j3hrcGhqcMfDjrss7XT6VdgpMFWPWj2R/XL/_W3H2386-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-VTf5zR7/A",
@@ -2030,7 +2030,7 @@ export const galleryData = [
   {
     "id": "i-kr4C6mL",
     "title": "A Flapper     Photography by Wayne Heim",
-    "description": "Portrait of a 20's Flapper in sepia tones.         © Wayne Heim",
+    "description": "A 1920s reenactment portrait at Old Bedford Village brings gangsters, flappers, and bootlegger-era atmosphere into living history. This Roaring Twenties portrait creates period costume wall art rooted in historical play, theatrical character, and the visual memory of another era.",
     "alt": "I Got A Secret    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Merzke-Wedding/Merzke-Wedding/i-kr4C6mL/1/MTbVtpLtpnDBNQD6Vw7Fh9WK6dSn2wqKhb5P43T7T/XL/_WEH7512-Edit-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-kr4C6mL/A",
@@ -2054,7 +2054,7 @@ export const galleryData = [
   {
     "id": "i-8ShsBMH",
     "title": "Pretty in Blue   Photography by Wayne Heim",
-    "description": "Lady reenactor poses for picture  during D Day Conneaut.  © Wayne Heim",
+    "description": "Lady reenactor poses for picture during D-Day Conneaut. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "A Flapper     Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-8ShsBMH/3/KrXmsB47qzw7ggcMkGt4c3mv7fTqCKLrmk8RFsjH3/XL/_WHZ2604-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-8ShsBMH/A",
@@ -2078,7 +2078,7 @@ export const galleryData = [
   {
     "id": "i-TDvHhm3",
     "title": "Exploring Reenactment Portraits",
-    "description": "Discover the reenactment portraits in this powerful reenactment portraits by Wayne Heim. A compelling work that embodies reenactment portraits, reenactment portraits, and reenactor photography. Perfect for art lovers seeking reenactment portraits to enhance their collection. © Wayne Heim",
+    "description": "A reenactor portrait holds a period character in a quiet, carefully shaped moment. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "Pretty in Blue   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-TDvHhm3/1/NL3gZPD5gTvjxb3V34kBKKP7j4wCMsbT8GKtPtprz/XL/_OLY3644-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-TDvHhm3/A",
@@ -2106,7 +2106,7 @@ export const galleryData = [
   {
     "id": "i-CJcQsxw",
     "title": "Historic Reenactor Prints Portrait",
-    "description": "A painterly Western photograph of a cowboy, defined by vigilance rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A historic reenactor prints portrait becomes a western reenactment portrait shaped by costume, expression, and historical atmosphere. This Western reenactment portrait creates historic character wall art rooted in period costume, frontier atmosphere, and Wayne Heim's restrained fine art photography.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-CJcQsxw/6/LdhvsPQgL7XV9f5BxcKF7tHZV24BjqGzd7QWkq4td/XL/_DSF9874-Edit-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-CJcQsxw/A",
@@ -2134,7 +2134,7 @@ export const galleryData = [
   {
     "id": "i-rffQS2z",
     "title": "The Essence Of Living History Art",
-    "description": "A painterly Western photograph of a cowboy, defined by consequence rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where every decision carried weight that echoed forward. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A reenactor portrait holds a period character in a quiet, carefully shaped moment. This Western reenactment portrait creates historic character wall art rooted in period costume, frontier atmosphere, and Wayne Heim's restrained fine art photography.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-rffQS2z/6/LLS96GpcWv4GPLbj4psjvSxDhDx32wfSRvFgCJ3qV/XL/_DSF9947-Edit-Enhanced-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-rffQS2z/A",
@@ -2162,7 +2162,7 @@ export const galleryData = [
   {
     "id": "i-r4pwPkf",
     "title": "Capturing Reenactment Portraits",
-    "description": "A painterly Western photograph of a cowboy, defined by vigilance rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A reenactor portrait holds a period character in a quiet, carefully shaped moment. This Western reenactment portrait creates historic character wall art rooted in period costume, frontier atmosphere, and Wayne Heim's restrained fine art photography.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-r4pwPkf/6/MQ2tMcRpNm4z89QbhDthtWbS5n4Cs4xm37LxZGHp9/XL/_DSF0046-Edit-Edit-3-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-r4pwPkf/A",
@@ -2190,7 +2190,7 @@ export const galleryData = [
   {
     "id": "i-JX4qCWv",
     "title": "Period Costume Photography Study",
-    "description": "Explore period costume photography with Wayne Heim's historic reenactor prints. This historic reenactor prints piece conveys historic reenactor prints, historic reenactor prints, and period costume photography, perfect for fans of historic reenactor prints. © Wayne Heim",
+    "description": "A period costume photography study becomes a roaring twenties reenactment portrait shaped by costume, expression, and historical atmosphere. This Roaring Twenties portrait creates period costume wall art rooted in historical play, theatrical character, and the visual memory of another era.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-JX4qCWv/2/Km9qr6g2rRxqt2KCqj7rZrfJrPGzD4hKTkC6dPQCw/XL/_O1H0390-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-JX4qCWv/A",
@@ -2217,7 +2217,7 @@ export const galleryData = [
   {
     "id": "i-mMB9r4J",
     "title": "The Essence Of Historic Reenactor Prints",
-    "description": "Discover the historic reenactor prints in this powerful reenactment portraits by Wayne Heim. A compelling work that embodies reenactor photography, reenactment portraits, and reenactment portraits. Perfect for art lovers seeking historic reenactor prints to enhance their collection. © Wayne Heim",
+    "description": "A reenactor portrait holds a period character in a quiet, carefully shaped moment. This Roaring Twenties portrait creates period costume wall art rooted in historical play, theatrical character, and the visual memory of another era.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-mMB9r4J/2/NLF5dc2WVkGbz3zqfvgZSZmtqcWxG5hLbTGVC3xsf/XL/_O1H0234-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-mMB9r4J/A",
@@ -2246,7 +2246,7 @@ export const galleryData = [
   {
     "id": "i-qTWkrsx",
     "title": "Historic Reenactor Prints Study",
-    "description": "A painterly Western photograph of a cowboy, defined by consequence rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where every decision carried weight that echoed forward. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A historic reenactor prints study becomes a roaring twenties reenactment portrait shaped by costume, expression, and historical atmosphere. This Roaring Twenties portrait creates period costume wall art rooted in historical play, theatrical character, and the visual memory of another era.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-qTWkrsx/1/MZKSzSgKMLWwrvKmbgDtXV9pSvmRB96TtkK3nxpSW/XL/_O1H0323-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-qTWkrsx/A",
@@ -2274,7 +2274,7 @@ export const galleryData = [
   {
     "id": "i-XdNc5xz",
     "title": "1920's  at Old Bedford Village",
-    "description": "Reenactors at Old Bedford Village 1920's event. Gangsters, flappers, bootleggers abound.",
+    "description": "A 1920s reenactment portrait at Old Bedford Village brings gangsters, flappers, and bootlegger-era atmosphere into living history. This Roaring Twenties portrait creates period costume wall art rooted in historical play, theatrical character, and the visual memory of another era.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-XdNc5xz/8/KJh6HsPG6qVfptsG5VLFgJDqLQnbm6rxsrVvgKhH3/XL/_DSF2623-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-XdNc5xz/A",
@@ -2298,7 +2298,7 @@ export const galleryData = [
   {
     "id": "i-KSjJXBB",
     "title": "Reenactor Photography Study",
-    "description": "Delve into reenactor photography via this living history art by Wayne Heim. Highlighting historic reenactor prints through historic reenactor prints and reenactment portraits, it's great for collectors interested in reenactor photography. © Wayne Heim",
+    "description": "A reenactor photography study becomes a historical reenactment portrait shaped by costume, expression, and historical atmosphere. This historical reenactment photograph creates living history wall art rooted in period costume, character, and the quiet authority of a carefully held portrait.",
     "alt": "1920's  at Old Bedford Village",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-KSjJXBB/3/MPNw2SVHB7HThfmKHgn3nz6MR6NSMKLCxzmGJW8Tv/XL/_O1H0295-Edit-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-KSjJXBB/A",
@@ -2327,7 +2327,7 @@ export const galleryData = [
   {
     "id": "i-GmFFNMG",
     "title": "Couple Portrait   Photography by Wayne Heim",
-    "description": "Couple portrait of reenactors att D Day Conneaut.  © Wayne Heim",
+    "description": "Couple portrait of reenactors at D-Day Conneaut. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-GmFFNMG/4/NWjTXLg7GP8vQmXrKK4ZtsCwPWsVz3DpSBbQxr6vp/XL/_W3H6590-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-GmFFNMG/A",
@@ -2351,7 +2351,7 @@ export const galleryData = [
   {
     "id": "i-wfxSxw3",
     "title": "Carpetbagger   Photography by Wayne Heim",
-    "description": "Portrait of a carpetbagger during a civil war reenactment at Hale Farm.   © Wayne Heim",
+    "description": "Portrait of a carpetbagger during a civil war reenactment at Hale Farm. This Civil War reenactment photograph creates living history wall art rooted in period costume, historical character, and the quiet human scale of the past.",
     "alt": "Couple Portrait   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment/i-wfxSxw3/5/KKRc3VXVxGp4nfSGkFVk9GtnWsT2BPFCx8mV4zzF6/XL/_WHZ0561-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-wfxSxw3/A",
@@ -2375,7 +2375,7 @@ export const galleryData = [
   {
     "id": "i-MG2RBSQ",
     "title": "Reenactment Portraits Portrait",
-    "description": "A painterly Western photograph of a cowboy, defined by vigilance rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A reenactment portraits portrait becomes a wwii reenactment portrait shaped by costume, expression, and historical atmosphere. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "Carpetbagger   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-MG2RBSQ/0/K89XfPfJkjNC2dpnRhrkn5xXP669pqjCtj2LHRsqC/XL/_K1W0867-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-MG2RBSQ/A",
@@ -2404,7 +2404,7 @@ export const galleryData = [
   {
     "id": "i-k7bp7Xk",
     "title": "Helping a Fallen Friend  Photography by Wayne Heim",
-    "description": "Soldier tries to help a fallen friend as they land on the beach. ©Wayne Heim",
+    "description": "Soldier tries to help a fallen friend as they land on the beach. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "© Wayne Heim 2018",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-2010/i-k7bp7Xk/6/LNFd9sdrbFFZPBbsD38P3VxTtv2zG2vvrznnZ6Cxt/XL/_IGP6625-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-k7bp7Xk/A",
@@ -2428,7 +2428,7 @@ export const galleryData = [
   {
     "id": "i-FjdrwWV",
     "title": "German Tank Driver   Photography by Wayne Heim",
-    "description": "German tank driver during Battle of La Fier Bridge. ©Wayne Heim",
+    "description": "German tank driver during Battle of La Fier Bridge. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "Helping a Fallen Friend  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-2010/i-FjdrwWV/5/LrVr4D98L6vDp8DgLdP9XGjsxpFQk2dz7FSPxqBDW/XL/_IGP8142-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-FjdrwWV/A",
@@ -2452,7 +2452,7 @@ export const galleryData = [
   {
     "id": "i-PXcwZNn",
     "title": "Yes Sir Right Away    Photography by Wayne Heim",
-    "description": "Allied officer reenactor gets orders  from headquarters during D Day Conneaut. ©Wayne Heim",
+    "description": "Allied officer reenactor gets orders from headquarters during D-Day Conneaut. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "German Tank Driver   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-PXcwZNn/5/KtStdLF5h4TQ3xCx59K2vDCXgpMJgHpP2WQFtVgwT/XL/_IMG0974-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-PXcwZNn/A",
@@ -2476,7 +2476,7 @@ export const galleryData = [
   {
     "id": "i-4Gk8HRG",
     "title": "Guiding the Landing Craft. Photography by Wayne Heim",
-    "description": "Captain of the landing craft guides the boat during D Day Conneaut  © Wayne Heim",
+    "description": "Captain of the landing craft guides the boat during D-Day Conneaut. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "Yes Sir Right Away    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-4Gk8HRG/4/KfDfN44Ntdq3wnTVcmvsX6LGD3qLTMhsxNdr4p4r8/XL/_WEH0736-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-4Gk8HRG/A",
@@ -2500,7 +2500,7 @@ export const galleryData = [
   {
     "id": "i-bMSrCFg",
     "title": "Young Reenactor  Photography by Wayne Heim",
-    "description": "Young Reenactor- young girl at Hale Farm in Civil War Reenactmenty ©Wayne Heim",
+    "description": "Young Reenactor- young girl at Hale Farm in Civil War Reenactmenty. This Civil War reenactment photograph creates living history wall art rooted in period costume, historical character, and the quiet human scale of the past.",
     "alt": "Guiding the Landing Craft. Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment/i-bMSrCFg/5/MDf7shLZfGZrg787DNSXvtmCwcwp9GxN97gmwFMh5/XL/_WHZ0659-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-bMSrCFg/A",
@@ -2524,7 +2524,7 @@ export const galleryData = [
   {
     "id": "i-7f7NnQg",
     "title": "Checking Adornments       Photography by Wayne HeimWayne Heim",
-    "description": "Soldier checks uniform for correct arrangement of metals.  © Wayne Heim",
+    "description": "Soldier checks uniform for correct arrangement of medals. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "Young Reenactor  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-7f7NnQg/4/LBwZDSdTr9Qs3Rg9t2qSB3wdRvhqJgpdCM7GHFMjN/XL/_IMG5842-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-7f7NnQg/A",
@@ -2548,7 +2548,7 @@ export const galleryData = [
   {
     "id": "i-ZkL52bP",
     "title": "Finishing Chow    Photography by Wayne Heim",
-    "description": "Young soldier in his tent finishing his meal. © Wayne Heim",
+    "description": "Young soldier in his tent finishing his meal. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "Checking Adornments       Photography by Wayne HeimWayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-ZkL52bP/4/K6F2qssnp4jkVWr4k9fWLfcpPwXs6tFJtkXG8cfGz/XL/_IMG5924-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-ZkL52bP/A",
@@ -2572,7 +2572,7 @@ export const galleryData = [
   {
     "id": "i-sZDB6pL",
     "title": "French Girl    Black & White Photography by Wayne Heim",
-    "description": "Girl reenactor as a French Resistance fighter. © Wayne Heim",
+    "description": "A young reenactor portraying a French Resistance fighter becomes a portrait of courage, youth, and historical imagination. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "Finishing Chow    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-sZDB6pL/4/K5nM9LFVfBCB4s5zVPt5Vzq5V92Z2xQS9TssxNWQj/XL/_WEH1175-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-sZDB6pL/A",
@@ -2596,7 +2596,7 @@ export const galleryData = [
   {
     "id": "i-G7HRV64",
     "title": "Portrait of a Young G I   Black & White Photography by Wayne Heim",
-    "description": "Young reenactor at D Day Conneaut reenactment.  © Wayne Heim",
+    "description": "A young reenactor at d-day conneaut reenactment becomes a wwii reenactment portrait shaped by costume, expression, and historical atmosphere. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "French Girl    Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-G7HRV64/4/LD4KMvgxBHcn4vQ2sBPKmBfgbksfBJzbq63pRZc9R/XL/_IMG6105-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-G7HRV64/A",
@@ -2620,7 +2620,7 @@ export const galleryData = [
   {
     "id": "i-zv6zQZr",
     "title": "Shaving     Black & White Photography by Wayne Heim",
-    "description": "Soldier shaves in the morning at Allied Camp during D Day Conneaut.  © Wayne Heim",
+    "description": "Soldier shaves in the morning at Allied Camp during D-Day Conneaut. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "Portrait of a Young G I   Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-zv6zQZr/4/Kg28cdSMQZWgZNSFL48j62SgpZnr7gZg4JmsZBdC4/XL/_WEH1897-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-zv6zQZr/A",
@@ -2648,7 +2648,7 @@ export const galleryData = [
   {
     "id": "i-nD4rzmL",
     "title": "Portrait of a Soldier   Black & White Photography by Wayne Heim",
-    "description": "Portrait of a Soldier reenactor during D Day Conneaut. © Wayne Heim",
+    "description": "Portrait of a Soldier reenactor during D-Day Conneaut. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "Shaving     Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Rockford-WWII-Days-2013/i-nD4rzmL/4/LbcbvRJvCXV7wcrnXZ2nS5rSgDCsdvXM8RBgvdDcC/XL/_WEH5001-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-nD4rzmL/A",
@@ -2676,7 +2676,7 @@ export const galleryData = [
   {
     "id": "i-g2FJ9wX",
     "title": "What Is That?   Photography by Wayne Heim",
-    "description": "Three reenactor look to something in the distance during reenactment.  © Wayne Heim",
+    "description": "Three reenactor look to something in the distance during reenactment. This historical reenactment photograph creates living history wall art rooted in period costume, character, and the quiet authority of a carefully held portrait.",
     "alt": "Portrait of a Soldier   Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2014/i-g2FJ9wX/4/KhCB3bWdmp77pjDBfHBnj4mthVTk8Ns93jNT8QT5W/XL/_W3H4242-4-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-g2FJ9wX/A",
@@ -2704,7 +2704,7 @@ export const galleryData = [
   {
     "id": "i-qfT8Lmh",
     "title": "Let's Go Team    Photography by Wayne Heim",
-    "description": "Reenactor is dressed for football game  © Wayne Heim",
+    "description": "A reenactor is dressed for football game becomes a historical reenactment portrait shaped by costume, expression, and historical atmosphere. This historical reenactment photograph creates living history wall art rooted in period costume, character, and the quiet authority of a carefully held portrait.",
     "alt": "What Is That?   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2014/i-qfT8Lmh/4/NVKLpkFG7gxVjD5fKPsDZtzRDXfDc8vg2FHPPS2Qx/XL/_W3H4687-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-qfT8Lmh/A",
@@ -2732,7 +2732,7 @@ export const galleryData = [
   {
     "id": "i-s5wsLGN",
     "title": "Mr Mayor       Photography by Wayne Heim",
-    "description": "Portrait of the Mayor during civil war reenactment.  © Wayne Heim",
+    "description": "Portrait of the Mayor during civil war reenactment. This Civil War reenactment photograph creates living history wall art rooted in period costume, historical character, and the quiet human scale of the past.",
     "alt": "Let's Go Team    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment-/i-s5wsLGN/14/NV8wBmLZ4tfV5w5RGJNsdmV7LJ6HwvCXzqk2GTwnD/XL/_W3H1524-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-s5wsLGN/A",
@@ -2760,7 +2760,7 @@ export const galleryData = [
   {
     "id": "i-kvfSCpN",
     "title": "Young Union Soldier   Photography by Wayne Heim",
-    "description": "Portrait of young Union soldier during Civil War reenactment. © Wayne Heim",
+    "description": "Portrait of young Union soldier during Civil War reenactment. This Civil War reenactment photograph creates living history wall art rooted in period costume, historical character, and the quiet human scale of the past.",
     "alt": "Mr Mayor       Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-kvfSCpN/5/LBpzdtjDgtxSfMpc6cnd9Q3GcnVDN5p69qzrsSd2f/XL/_W3H2026-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-kvfSCpN/A",
@@ -2788,7 +2788,7 @@ export const galleryData = [
   {
     "id": "i-pqBnWFd",
     "title": "Union Troops Charge     Photography by Wayne Heim",
-    "description": "Union troops charge during a civil war reenactment. © Wayne Heim",
+    "description": "Union troops charge during a civil war reenactment. This Civil War reenactment photograph creates living history wall art rooted in period costume, historical character, and the quiet human scale of the past.",
     "alt": "Young Union Soldier   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pqBnWFd/4/K3333MRMQkPvStwKQxGGNDc6D9zB7kVBk8sqqG7cv/XL/_W3H2112-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pqBnWFd/A",
@@ -2816,7 +2816,7 @@ export const galleryData = [
   {
     "id": "i-Lwg8bsX",
     "title": "Checking the Rules    Photography by Wayne Heim",
-    "description": "Reenactor appears to be checking rules of encounter at reenactment   © Wayne Heim",
+    "description": "Reenactor appears to be checking rules of encounter at reenactment. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "Union Troops Charge     Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-Lwg8bsX/6/LhKQtcTc7Jm7fqHgZMzcfRWMRkZBHQhsnSSh2b6hR/XL/_W3H3897-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-Lwg8bsX/A",
@@ -2844,7 +2844,7 @@ export const galleryData = [
   {
     "id": "i-RxjLXGM",
     "title": "Leisure Talk   Black & White Photography by Wayne Heim",
-    "description": "Three reenactor sit and chat in the Allied camp of D Day Conneaut.  © Wayne Heim",
+    "description": "Three reenactor sit and chat in the Allied camp of D-Day Conneaut. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "Checking the Rules    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-RxjLXGM/4/LzRCRKCh8sVgbfKJpDvHsTqfmpdtZhgr3qgWjLrNJ/XL/_W3H6528-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-RxjLXGM/A",
@@ -2872,7 +2872,7 @@ export const galleryData = [
   {
     "id": "i-LhVX3Qt",
     "title": "Portrait at Rockford   Black & White Photography by Wayne Heim",
-    "description": "Young reenactor poses at the Rockford WWII reenactment. © Wayne Heim",
+    "description": "Young reenactor poses at the Rockford WWII reenactment. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "Leisure Talk   Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-LhVX3Qt/3/K9sVwgRkC2ZHxXDTJ2xgZPC4RfqGs8LR2XZgNfWVj/XL/_WHZ8117-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-LhVX3Qt/A",
@@ -2900,7 +2900,7 @@ export const galleryData = [
   {
     "id": "i-7VwVNCk",
     "title": "That's Funny    Black & White Photography by Wayne Heim",
-    "description": "Woman reenactor laughs at a joke during\n D Day  reenactment.   © Wayne Heim",
+    "description": "Woman reenactor laughs at a joke during D-Day reenactment. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "Portrait at Rockford   Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-7VwVNCk/2/KqjCqJrwBr9KS6MVzNhvrSZSHRnhTvJdGXdXdSD9m/XL/_WHZ4188-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-7VwVNCk/A",
@@ -2928,7 +2928,7 @@ export const galleryData = [
   {
     "id": "i-mmqLB5K",
     "title": "Young Aide   Photography by Wayne Heim",
-    "description": "Young girl act as aid during WWII reenactment.  © Wayne Heim",
+    "description": "A young aide in a WWII reenactment becomes a portrait of service, youth, and period atmosphere. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "That's Funny    Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-mmqLB5K/3/NDKtNm2pFLRkM4xSxsR7gkMq5gZGbNhHJnTZJKSZM/XL/_OLY2867-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-mmqLB5K/A",
@@ -2956,7 +2956,7 @@ export const galleryData = [
   {
     "id": "i-7vJM8T5",
     "title": "War Correspondent  Black and White Photography by Wayne Heim",
-    "description": "War Correspondent takes a rest during D-Day Conneaut.   © Wayne Heim",
+    "description": "War Correspondent takes a rest during D-Day Conneaut. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "Young Aide   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-7vJM8T5/3/NPX4zkbGSnpCFw9PZH7PD3mt4XknG2hcQ5rtwfPF6/XL/P8180900-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-7vJM8T5/A",
@@ -2984,7 +2984,7 @@ export const galleryData = [
   {
     "id": "i-VC8KtTj",
     "title": "Living History Art Moment",
-    "description": "Explore living history art with Wayne Heim's living history art. This living history art piece conveys historic reenactor prints, period costume photography, and living history art, perfect for fans of living history art. © Wayne Heim",
+    "description": "A living history art moment becomes a historical reenactment portrait shaped by costume, expression, and historical atmosphere. This historical reenactment photograph creates living history wall art rooted in period costume, character, and the quiet authority of a carefully held portrait.",
     "alt": "War Correspondent  Black and White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-VC8KtTj/1/KRNcNQBWLn2TKwMQTTGDF2bx3ZxHs443hhMPzv9kR/XL/_K1W1064-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-VC8KtTj/A",
@@ -3016,7 +3016,7 @@ export const galleryData = [
   {
     "id": "i-qfPmmsJ",
     "title": "Fine Art Period Costume Photography",
-    "description": "Explore period costume photography with Wayne Heim's reenactor photography. This historic reenactor prints piece conveys living history art, reenactment portraits, and period costume photography, perfect for fans of reenactor photography. © Wayne Heim",
+    "description": "A reenactor portrait holds a period character in a quiet, carefully shaped moment. This historical reenactment photograph creates living history wall art rooted in period costume, character, and the quiet authority of a carefully held portrait.",
     "alt": "© Wayne Heim 2018",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-qfPmmsJ/1/LXptSMsRjWVWgr7PDvXZRQNRmgRjDxcHtjcNqF52B/XL/_K1W1360-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-qfPmmsJ/A",
@@ -3049,7 +3049,7 @@ export const galleryData = [
   {
     "id": "i-tpBwQzL",
     "title": "Living History Art And Period Costume Photography",
-    "description": "A painterly Western photograph of a cowboy on the American frontier, defined by consequence rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where every decision carried weight that echoed forward. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "Living History Art And Period Costume Photography. This Western reenactment portrait creates historic character wall art rooted in period costume, frontier atmosphere, and Wayne Heim's restrained fine art photography.",
     "alt": "© Wayne Heim 2018",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-tpBwQzL/1/Kg6r3Gz5CV6xPTzSx32z4gG8CPWHBwHpvSdjHsx64/XL/_8171247-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-tpBwQzL/A",
@@ -3081,7 +3081,7 @@ export const galleryData = [
   {
     "id": "i-tKZP3Hq",
     "title": "Reenactment Portraits Study",
-    "description": "A painterly Western photograph of a cowboy on the American frontier, defined by vigilance rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A reenactment portraits study becomes a western reenactment portrait shaped by costume, expression, and historical atmosphere. This Western reenactment portrait creates historic character wall art rooted in period costume, frontier atmosphere, and Wayne Heim's restrained fine art photography.",
     "alt": "© Wayne Heim 2018",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-tKZP3Hq/1/KQFhkv5HC8wrXskcqRBQmhf2VzQXNvj43HmMcXMJZ/XL/_OLY2320-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-tKZP3Hq/A",
@@ -3112,7 +3112,7 @@ export const galleryData = [
   {
     "id": "i-nVVdKFm",
     "title": "Reenactor Photography - Reenactor Photography",
-    "description": "A painterly Western photograph of a cowboy on the American frontier, defined by consequence rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where every decision carried weight that echoed forward. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A reenactor photography - reenactor photography becomes a western reenactment portrait shaped by costume, expression, and historical atmosphere. This Western reenactment portrait creates historic character wall art rooted in period costume, frontier atmosphere, and Wayne Heim's restrained fine art photography.",
     "alt": "© Wayne Heim 2018",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-nVVdKFm/1/MhrZrdDwm3n4bxdPHvL5xvkbsznG2MnTT5Q2P7xj5/XL/_K1W1423-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-nVVdKFm/A",
@@ -3145,7 +3145,7 @@ export const galleryData = [
   {
     "id": "i-39mSbkS",
     "title": "Exploring Historic Reenactor Prints",
-    "description": "A painterly Western photograph of a cowboy on the American frontier, defined by vigilance rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A reenactor portrait holds a period character in a quiet, carefully shaped moment. This Western reenactment portrait creates historic character wall art rooted in period costume, frontier atmosphere, and Wayne Heim's restrained fine art photography.",
     "alt": "© Wayne Heim 2018",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-39mSbkS/1/LvxXBqP3vBvMKqHwVQLVrWqsbmMNMGnrKrR37RnvQ/XL/_K1W1441-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-39mSbkS/A",
@@ -3177,7 +3177,7 @@ export const galleryData = [
   {
     "id": "i-djZrQxQ",
     "title": "The Essence Of Period Costume Photography",
-    "description": "A painterly Western photograph of a cowboy on the American frontier, defined by consequence rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where every decision carried weight that echoed forward. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A reenactor portrait holds a period character in a quiet, carefully shaped moment. This Western reenactment portrait creates historic character wall art rooted in period costume, frontier atmosphere, and Wayne Heim's restrained fine art photography.",
     "alt": "© Wayne Heim 2018",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-djZrQxQ/2/KzTTFvt3cJPS4KZVZCRc3cwqm2rTbxmd8zDnJ98rT/XL/_OLY7510-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-djZrQxQ/A",
@@ -3210,7 +3210,7 @@ export const galleryData = [
   {
     "id": "i-jFZMg3C",
     "title": "Reenactor Photography Moment",
-    "description": "Discover the reenactor photography in this powerful living history art by Wayne Heim. A compelling work that embodies period costume photography, reenactment portraits, and reenactment portraits. Perfect for art lovers seeking reenactor photography to enhance their collection. © Wayne Heim",
+    "description": "A reenactor photography moment becomes a historical reenactment portrait shaped by costume, expression, and historical atmosphere. This historical reenactment photograph creates living history wall art rooted in period costume, character, and the quiet authority of a carefully held portrait.",
     "alt": "© Wayne Heim 2018",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-jFZMg3C/1/KQ6FRfXd5pnFzjdzQHpH8T7xCkLn9qdWPHFFKztB3/XL/_OLY7602-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-jFZMg3C/A",
@@ -3242,7 +3242,7 @@ export const galleryData = [
   {
     "id": "i-pBMmvMZ",
     "title": "Historic Reenactor Prints In Fine Art",
-    "description": "Explore historic reenactor prints with Wayne Heim's living history art. This reenactment portraits piece conveys reenactment portraits, reenactor photography, and historic reenactor prints, perfect for fans of living history art. © Wayne Heim",
+    "description": "A reenactor portrait holds a period character in a quiet, carefully shaped moment. This historical reenactment photograph creates living history wall art rooted in period costume, character, and the quiet authority of a carefully held portrait.",
     "alt": "© Wayne Heim 2018",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pBMmvMZ/1/NVDWDnFw4SLJrbmVT79F7hXSN3T225sSfTvzGxSJg/XL/_8182447-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pBMmvMZ/A",
@@ -3275,7 +3275,7 @@ export const galleryData = [
   {
     "id": "i-fjmNj9W",
     "title": "The Essence Of Living History Art",
-    "description": "A painterly Western photograph of a cowboy on the American frontier, defined by vigilance rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A reenactor portrait holds a period character in a quiet, carefully shaped moment. This Western reenactment portrait creates historic character wall art rooted in period costume, frontier atmosphere, and Wayne Heim's restrained fine art photography.",
     "alt": "© Wayne Heim 2018",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-fjmNj9W/1/L4xS2cbKWzjMPP6HHz6VLqSrvBLBctQ2jSNJLkttb/XL/_K1W1094-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-fjmNj9W/A",
@@ -3307,7 +3307,7 @@ export const galleryData = [
   {
     "id": "i-7rkr8Z6",
     "title": "Reenactment Portraits Moment",
-    "description": "A painterly Western photograph of a cowboy on the American frontier, defined by hesitation rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where a moment of pause could mean life or death. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A reenactment portraits moment becomes a western reenactment portrait shaped by costume, expression, and historical atmosphere. This Western reenactment portrait creates historic character wall art rooted in period costume, frontier atmosphere, and Wayne Heim's restrained fine art photography.",
     "alt": "© Wayne Heim 2018",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-7rkr8Z6/1/KZPXnp4J25SWJvNzwpXZ8zBC64CbTFswvqMN7kp93/XL/_WHZ5754-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-7rkr8Z6/A",
@@ -3339,7 +3339,7 @@ export const galleryData = [
   {
     "id": "i-XNtPzD7",
     "title": "Fine Art Period Costume Photography",
-    "description": "A painterly Western photograph of a cowboy on the American frontier, defined by consequence rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where every decision carried weight that echoed forward. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A reenactor portrait holds a period character in a quiet, carefully shaped moment. This Western reenactment portrait creates historic character wall art rooted in period costume, frontier atmosphere, and Wayne Heim's restrained fine art photography.",
     "alt": "© Wayne Heim 2018",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-XNtPzD7/1/L35ng4cSm5N2KK847cz9Sw54rjVQ6BppwsvDn73LQ/XL/_WHZ5821-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-XNtPzD7/A",
@@ -3371,7 +3371,7 @@ export const galleryData = [
   {
     "id": "i-qpKS7tN",
     "title": "Fine Art Historic Reenactor Prints",
-    "description": "A painterly Western photograph of a cowboy on the American frontier, defined by vigilance rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A reenactor portrait holds a period character in a quiet, carefully shaped moment. This Western reenactment portrait creates historic character wall art rooted in period costume, frontier atmosphere, and Wayne Heim's restrained fine art photography.",
     "alt": "© Wayne Heim 2018",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-qpKS7tN/1/K6w2T26bF7wTTMZmXs62S7pFRkNDPZ2PqD5W9zMDK/XL/_WHZ5796-Edit-3_pp-Edit-3-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-qpKS7tN/A",
@@ -3404,7 +3404,7 @@ export const galleryData = [
   {
     "id": "i-ZkcTsDM",
     "title": "Period Costume Photography In Fine Art",
-    "description": "A painterly Western photograph of a cowboy on the American frontier, defined by consequence rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where every decision carried weight that echoed forward. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A reenactor portrait holds a period character in a quiet, carefully shaped moment. This Western reenactment portrait creates historic character wall art rooted in period costume, frontier atmosphere, and Wayne Heim's restrained fine art photography.",
     "alt": "© Wayne Heim 2018",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-ZkcTsDM/1/MSvX2HTgzrhzGWn7r7zbN9fRDVkmnLMgBZ6vcMnxG/XL/_WHZ5823-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-ZkcTsDM/A",
@@ -3437,7 +3437,7 @@ export const galleryData = [
   {
     "id": "i-3VnsXB3",
     "title": "Like Your Hat    Photography by Wayne Heim",
-    "description": "Girl tries on sailor's hat during the USO Dance at D Day Conneaut. © Wayne Heim",
+    "description": "Girl tries on sailor's hat during the USO Dance at D-Day Conneaut. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "© Wayne Heim 2018",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-3VnsXB3/3/M2zZPc86JJ3p5xBkRNrWDSN6L8ZMVmxXd9mc4CWcS/XL/_WHZ5416-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-3VnsXB3/A",
@@ -3465,7 +3465,7 @@ export const galleryData = [
   {
     "id": "i-qNCs79W",
     "title": "Fine Art Period Costume Photography",
-    "description": "A painterly Western photograph of a cowboy on the American frontier, defined by vigilance rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A reenactor portrait holds a period character in a quiet, carefully shaped moment. This Western reenactment portrait creates historic character wall art rooted in period costume, frontier atmosphere, and Wayne Heim's restrained fine art photography.",
     "alt": "Like Your Hat    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-qNCs79W/1/L5gG7vtVTGsCcQ6fK23wF4gm3RZTXg8k6gx5xCPNx/XL/_IMG8552-Edit-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-qNCs79W/A",
@@ -3497,7 +3497,7 @@ export const galleryData = [
   {
     "id": "i-pjp2Fn2",
     "title": "Exploring Reenactor Photography",
-    "description": "A painterly Western photograph of a cowboy on the American frontier, defined by consequence rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where every decision carried weight that echoed forward. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A reenactor portrait holds a period character in a quiet, carefully shaped moment. This Western reenactment portrait creates historic character wall art rooted in period costume, frontier atmosphere, and Wayne Heim's restrained fine art photography.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pjp2Fn2/1/Kr2hCHW9b4qqLcZXHFJ5GCTBrDnLFM9n2w8K29XXv/XL/_ANA5778-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pjp2Fn2/A",
@@ -3530,7 +3530,7 @@ export const galleryData = [
   {
     "id": "i-kBjb67r",
     "title": "Reenactment Portraits Moment",
-    "description": "A painterly Western photograph of a cowboy on the American frontier, defined by hesitation rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where a moment of pause could mean life or death. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A reenactment portraits moment becomes a western reenactment portrait shaped by costume, expression, and historical atmosphere. This Western reenactment portrait creates historic character wall art rooted in period costume, frontier atmosphere, and Wayne Heim's restrained fine art photography.",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-kBjb67r/2/LvL6tkfS3hhkh9Bt8qFGN8ThtrbvRHnkMvFqpgFjK/XL/_PEN0595-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-kBjb67r/A",
@@ -3563,7 +3563,7 @@ export const galleryData = [
   {
     "id": "i-r6sLgbF",
     "title": "The Essence Of Period Costume Photography",
-    "description": "A painterly Western photograph of a cowboy on the American frontier, defined by consequence rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where every decision carried weight that echoed forward. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A reenactor portrait holds a period character in a quiet, carefully shaped moment. This Western reenactment portrait creates historic character wall art rooted in period costume, frontier atmosphere, and Wayne Heim's restrained fine art photography.",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-r6sLgbF/1/MsZb5fGdHv4s4N3jrwRjGdJgM9D5mhM9BFqjwXK6f/XL/_OL38491-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-r6sLgbF/A",
@@ -3596,7 +3596,7 @@ export const galleryData = [
   {
     "id": "i-2mLnKzM",
     "title": "Dancing Not Flying    Photography by Wayne Heim",
-    "description": "Airborne soldier dance instead of flying.  © Wayne Heim",
+    "description": "Airborne soldier dance instead of flying. This historical reenactment photograph creates living history wall art rooted in period costume, character, and the quiet authority of a carefully held portrait.",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-2mLnKzM/3/KMHpFV2z8GPQQb5hvLpB9dWnmF6FNcXDtxhPJp7hj/XL/_WHZ5385-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-2mLnKzM/A",
@@ -3624,7 +3624,7 @@ export const galleryData = [
   {
     "id": "i-XGxmxvJ",
     "title": "1920's  at Old Bedford Village",
-    "description": "Reenactors at Old Bedford Village 1920's event. Gangsters, flappers, bootleggers abound.",
+    "description": "A 1920s reenactment portrait at Old Bedford Village brings gangsters, flappers, and bootlegger-era atmosphere into living history. This Roaring Twenties portrait creates period costume wall art rooted in historical play, theatrical character, and the visual memory of another era.",
     "alt": "Dancing Not Flying    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-XGxmxvJ/2/MfC7gw2NF7RvTkwFfx8Gb8XxcGH2Bbm2d3QLXqwdJ/XL/_DSF3060-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-XGxmxvJ/A",
@@ -3652,7 +3652,7 @@ export const galleryData = [
   {
     "id": "i-nktmGwh",
     "title": "1920's  at Old Bedford Village",
-    "description": "Reenactors at Old Bedford Village 1920's event. Gangsters, flappers, bootleggers abound.",
+    "description": "A 1920s reenactment portrait at Old Bedford Village brings gangsters, flappers, and bootlegger-era atmosphere into living history. This Roaring Twenties portrait creates period costume wall art rooted in historical play, theatrical character, and the visual memory of another era.",
     "alt": "1920's  at Old Bedford Village",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-nktmGwh/9/NRHXMhG76F4RqfmXrbF4j6jgrpcCcb4WpJf98cHLP/XL/_DSF2451-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-nktmGwh/A",
@@ -3680,7 +3680,7 @@ export const galleryData = [
   {
     "id": "i-gSLFRvV",
     "title": "1920's  at Old Bedford Village",
-    "description": "Reenactors at Old Bedford Village 1920's event. Gangsters, flappers, bootleggers abound.",
+    "description": "A 1920s reenactment portrait at Old Bedford Village brings gangsters, flappers, and bootlegger-era atmosphere into living history. This Roaring Twenties portrait creates period costume wall art rooted in historical play, theatrical character, and the visual memory of another era.",
     "alt": "1920's  at Old Bedford Village",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-gSLFRvV/2/Mg9zBXxLBVmWqhbLDmJg2ckPdfM7KjHtdV2pbwPfr/XL/_DSF3141-Edit-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-gSLFRvV/A",
@@ -3708,7 +3708,7 @@ export const galleryData = [
   {
     "id": "i-NfHK4bH",
     "title": "1920's  at Old Bedford Village",
-    "description": "Reenactors at Old Bedford Village 1920's event. Gangsters, flappers, bootleggers abound.",
+    "description": "A 1920s reenactment portrait at Old Bedford Village brings gangsters, flappers, and bootlegger-era atmosphere into living history. This Roaring Twenties portrait creates period costume wall art rooted in historical play, theatrical character, and the visual memory of another era.",
     "alt": "1920's  at Old Bedford Village",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-NfHK4bH/7/LWqrXQBJKk9knfgkBBRTHfM9qqhjt8jGM9J3qHKjz/XL/_DSF2514-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-NfHK4bH/A",
@@ -3736,7 +3736,7 @@ export const galleryData = [
   {
     "id": "i-HpPSqDN",
     "title": "1920's  at Old Bedford Village",
-    "description": "Reenactors at Old Bedford Village 1920's event. Gangsters, flappers, bootleggers abound.",
+    "description": "A 1920s reenactment portrait at Old Bedford Village brings gangsters, flappers, and bootlegger-era atmosphere into living history. This Roaring Twenties portrait creates period costume wall art rooted in historical play, theatrical character, and the visual memory of another era.",
     "alt": "1920's  at Old Bedford Village",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-HpPSqDN/8/NSLBw5tPthMRS8p85Db3x7VMNShRxZVcDv6wxwFjx/XL/_DSF3300-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-HpPSqDN/A",
@@ -3764,7 +3764,7 @@ export const galleryData = [
   {
     "id": "i-54pbbvZ",
     "title": "1920's  at Old Bedford Village",
-    "description": "Reenactors at Old Bedford Village 1920's event. Gangsters, flappers, bootleggers abound.",
+    "description": "A 1920s reenactment portrait at Old Bedford Village brings gangsters, flappers, and bootlegger-era atmosphere into living history. This Roaring Twenties portrait creates period costume wall art rooted in historical play, theatrical character, and the visual memory of another era.",
     "alt": "1920's  at Old Bedford Village",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-54pbbvZ/8/LVxhQzpX4pdssMsDpTG52qZv8bsJg6NgggnkvqWFF/XL/_DSF3362-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-54pbbvZ/A",
@@ -3792,7 +3792,7 @@ export const galleryData = [
   {
     "id": "i-t9JXs5s",
     "title": "1920's  at Old Bedford Village",
-    "description": "Reenactors at Old Bedford Village 1920's event. Gangsters, flappers, bootleggers abound.",
+    "description": "A 1920s reenactment portrait at Old Bedford Village brings gangsters, flappers, and bootlegger-era atmosphere into living history. This Roaring Twenties portrait creates period costume wall art rooted in historical play, theatrical character, and the visual memory of another era.",
     "alt": "1920's  at Old Bedford Village",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-t9JXs5s/1/Mk2tJkNvPMfTK2dDBbzCn3PFLdQSh6kvN6DzNcDBv/XL/_DSF3444-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-t9JXs5s/A",
@@ -3820,7 +3820,7 @@ export const galleryData = [
   {
     "id": "i-9Nxnvfb",
     "title": "1920's  at Old Bedford Village",
-    "description": "Reenactors at Old Bedford Village 1920's event. Gangsters, flappers, bootleggers abound.",
+    "description": "A 1920s reenactment portrait at Old Bedford Village brings gangsters, flappers, and bootlegger-era atmosphere into living history. This Roaring Twenties portrait creates period costume wall art rooted in historical play, theatrical character, and the visual memory of another era.",
     "alt": "1920's  at Old Bedford Village",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-9Nxnvfb/8/MsNZZd8NWBF8Nm9RmX6XZXsZm8jvSt6sc7TCS3C99/XL/_DSF2590-Enhanced-NR-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-9Nxnvfb/A",
@@ -3848,7 +3848,7 @@ export const galleryData = [
   {
     "id": "i-KFt8HPV",
     "title": "1920's  at Old Bedford Village",
-    "description": "Reenactors at Old Bedford Village 1920's event. Gangsters, flappers, bootleggers abound.",
+    "description": "A 1920s reenactment portrait at Old Bedford Village brings gangsters, flappers, and bootlegger-era atmosphere into living history. This Roaring Twenties portrait creates period costume wall art rooted in historical play, theatrical character, and the visual memory of another era.",
     "alt": "1920's  at Old Bedford Village",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-KFt8HPV/9/MRjMjjz4523H3NFLjNLpSnwNhTZPnsVNzDC3jW6NZ/XL/_O1H0933-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-KFt8HPV/A",
@@ -3876,7 +3876,7 @@ export const galleryData = [
   {
     "id": "i-6CG4M79",
     "title": "1920's  at Old Bedford Village",
-    "description": "Reenactors at Old Bedford Village 1920's event. Gangsters, flappers, bootleggers abound.",
+    "description": "A 1920s reenactment portrait at Old Bedford Village brings gangsters, flappers, and bootlegger-era atmosphere into living history. This Roaring Twenties portrait creates period costume wall art rooted in historical play, theatrical character, and the visual memory of another era.",
     "alt": "1920's  at Old Bedford Village",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-6CG4M79/8/LQbQ7SxNq2KdkTK499RdRHMWjjbC3CZVJkdxDw2pW/XL/_DSF2623-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-6CG4M79/A",
@@ -3904,7 +3904,7 @@ export const galleryData = [
   {
     "id": "i-nvrqCNC",
     "title": "1920's  at Old Bedford Village",
-    "description": "Reenactors at Old Bedford Village 1920's event. Gangsters, flappers, bootleggers abound.",
+    "description": "A 1920s reenactment portrait at Old Bedford Village brings gangsters, flappers, and bootlegger-era atmosphere into living history. This Roaring Twenties portrait creates period costume wall art rooted in historical play, theatrical character, and the visual memory of another era.",
     "alt": "1920's  at Old Bedford Village",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-nvrqCNC/8/NbH3Nw2mkmjQDS62MHXx8rm3bRSBpHhK8G4LGpZMK/XL/_DSF2791-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-nvrqCNC/A",
@@ -3932,7 +3932,7 @@ export const galleryData = [
   {
     "id": "i-8NFCwF9",
     "title": "1920's  at Old Bedford Village",
-    "description": "Reenactors at Old Bedford Village 1920's event. Gangsters, flappers, bootleggers abound.",
+    "description": "A 1920s reenactment portrait at Old Bedford Village brings gangsters, flappers, and bootlegger-era atmosphere into living history. This Roaring Twenties portrait creates period costume wall art rooted in historical play, theatrical character, and the visual memory of another era.",
     "alt": "1920's  at Old Bedford Village",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-8NFCwF9/3/NBNxW8PG2fvf7LtDtzNCmpLTHfS3DHQ9w5swwsW9N/XL/_DSF3049-Edit-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-8NFCwF9/A",
@@ -3960,7 +3960,7 @@ export const galleryData = [
   {
     "id": "i-Pq9zH8k",
     "title": "Reenactor Photography - Period Costume Photography",
-    "description": "A painterly Western photograph of a 1920's  at old bedford village, defined by vigilance rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A 1920s reenactment portrait at Old Bedford Village brings gangsters, flappers, and bootlegger-era atmosphere into living history. This Roaring Twenties portrait creates period costume wall art rooted in historical play, theatrical character, and the visual memory of another era.",
     "alt": "1920's  at Old Bedford Village",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-Pq9zH8k/3/Mdw7F2FZfjfH5xkcxmT9kvqPMXrxpnWDxHM2VgB2p/XL/_HF20097-Edit-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-Pq9zH8k/A",
@@ -3992,7 +3992,7 @@ export const galleryData = [
   {
     "id": "i-SQLp9tD",
     "title": "The Essence Of Living History Art",
-    "description": "A painterly Western photograph of a cowboy on the American frontier, defined by authority rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where command was earned through presence and experience. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A reenactor portrait holds a period character in a quiet, carefully shaped moment. This Roaring Twenties portrait creates period costume wall art rooted in historical play, theatrical character, and the visual memory of another era.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-SQLp9tD/3/LGrPN8pJhR8zVVHbsFmgb7TMggL4bkCL4fkQd8m77/XL/_HF20143-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-SQLp9tD/A",
@@ -4024,7 +4024,7 @@ export const galleryData = [
   {
     "id": "i-hF6kxcd",
     "title": "Fine Art Reenactor Photography",
-    "description": "A painterly Western photograph of a cowboy on the American frontier, defined by consequence rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where every decision carried weight that echoed forward. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A reenactor portrait holds a period character in a quiet, carefully shaped moment. This Roaring Twenties portrait creates period costume wall art rooted in historical play, theatrical character, and the visual memory of another era.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-hF6kxcd/4/NKp98ccqRrvK2h6wkjmPgQvXJwSvr82b4n8L2nhRG/XL/_HF29857-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-hF6kxcd/A",
@@ -4057,7 +4057,7 @@ export const galleryData = [
   {
     "id": "i-XncvD6D",
     "title": "Exploring Reenactor Photography",
-    "description": "A painterly Western photograph of a cowboy, defined by vigilance rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A reenactor portrait holds a period character in a quiet, carefully shaped moment. This Western reenactment portrait creates historic character wall art rooted in period costume, frontier atmosphere, and Wayne Heim's restrained fine art photography.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-XncvD6D/3/NbGjWtCb8NHG9Rw2FdRnJq3rWdJnxMtzT3S8Wdfn4/XL/_O1H1884-Edit-Edit-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-XncvD6D/A",
@@ -4086,7 +4086,7 @@ export const galleryData = [
   {
     "id": "i-wm9Z2Mw",
     "title": "Exploring Living History Art",
-    "description": "A painterly Western photograph of a cowboy, defined by authority rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where command was earned through presence and experience. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A reenactor portrait holds a period character in a quiet, carefully shaped moment. This Western reenactment portrait creates historic character wall art rooted in period costume, frontier atmosphere, and Wayne Heim's restrained fine art photography.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-wm9Z2Mw/2/LcpdhwXXdJbMbssskSmfS7MJr85bkLtjTfgJjt28X/XL/_HF21557-Edit-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-wm9Z2Mw/A",
@@ -4113,7 +4113,7 @@ export const galleryData = [
   {
     "id": "i-HLmtBMq",
     "title": "Reenactor Photography Study",
-    "description": "A painterly Western photograph of a cowboy, defined by consequence rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where every decision carried weight that echoed forward. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A reenactor photography study becomes a roaring twenties reenactment portrait shaped by costume, expression, and historical atmosphere. This Roaring Twenties portrait creates period costume wall art rooted in historical play, theatrical character, and the visual memory of another era.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-HLmtBMq/3/KfknZk3cbq2jGfCQpJH5vFQgH7BGNWQhnhFz4WngB/XL/_HF29452-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-HLmtBMq/A",
@@ -4141,7 +4141,7 @@ export const galleryData = [
   {
     "id": "i-n7gMS6W",
     "title": "Fine Art Reenactor Photography",
-    "description": "Delve into reenactor photography via this historic reenactor prints by Wayne Heim. Highlighting reenactor photography through period costume photography and period costume photography, it's great for collectors interested in reenactor photography. © Wayne Heim",
+    "description": "A reenactor portrait holds a period character in a quiet, carefully shaped moment. This Roaring Twenties portrait creates period costume wall art rooted in historical play, theatrical character, and the visual memory of another era.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-n7gMS6W/3/KXvTVptxFLBL4VtNTRCqsmB4LsTMF7z9PLMG8QHrd/XL/_O2H3157-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-n7gMS6W/A",
@@ -4169,7 +4169,7 @@ export const galleryData = [
   {
     "id": "i-wM4s2Dg",
     "title": "Reenactor Photography - Reenactor Photography",
-    "description": "A painterly Western photograph of a cowboy, defined by vigilance rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A reenactor photography - reenactor photography becomes a roaring twenties reenactment portrait shaped by costume, expression, and historical atmosphere. This Roaring Twenties portrait creates period costume wall art rooted in historical play, theatrical character, and the visual memory of another era.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-wM4s2Dg/2/NGCG2SDfrPbDPMCpff2xKKn3wZ4Pg2QPPXJwQNM72/XL/_O1H5410-Edit-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-wM4s2Dg/A",
@@ -4197,7 +4197,7 @@ export const galleryData = [
   {
     "id": "i-RxHPZHr",
     "title": "Wild West at Old Bedford Village",
-    "description": "Wild West: 1890's comes to Old Bedford Village. Western reenactors at The Old Bedford Historical Village",
+    "description": "Wild West: 1890's comes to Old Bedford Village. Western reenactors at The Old Bedford Historical Village. This Roaring Twenties portrait creates period costume wall art rooted in historical play, theatrical character, and the visual memory of another era.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-RxHPZHr/1/Lgsz5zsC8zxgTRkMf9cDzkZMbwjhVpD249TrGLf5G/XL/_O1H5507-Edit-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-RxHPZHr/A",
@@ -4221,7 +4221,7 @@ export const galleryData = [
   {
     "id": "i-P5C9sqm",
     "title": "Wild West at Old Bedford Village",
-    "description": "Wild West: 1890's comes to Old Bedford Village. Western reenactors at The Old Bedford Historical Village",
+    "description": "Wild West: 1890's comes to Old Bedford Village. Western reenactors at The Old Bedford Historical Village. This Roaring Twenties portrait creates period costume wall art rooted in historical play, theatrical character, and the visual memory of another era.",
     "alt": "Wild West at Old Bedford Village",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-P5C9sqm/0/LrJjdzBPdR2x4wmPbL2hCT9sSVftD3Jq75trLXbVf/XL/_ANA8462-Edit-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-P5C9sqm/A",
@@ -4245,7 +4245,7 @@ export const galleryData = [
   {
     "id": "i-gsQ8mdb",
     "title": "Reenactor Photography Portrait",
-    "description": "Delve into reenactor photography via this reenactor photography by Wayne Heim. Highlighting reenactment portraits through living history art and period costume photography, it's great for collectors interested in reenactor photography. © Wayne Heim",
+    "description": "A reenactor photography portrait becomes a roaring twenties reenactment portrait shaped by costume, expression, and historical atmosphere. This Roaring Twenties portrait creates period costume wall art rooted in historical play, theatrical character, and the visual memory of another era.",
     "alt": "Wild West at Old Bedford Village",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-gsQ8mdb/1/NGckVmRH7JN77tmRVXZVLZpDjWqmWGvD4vLRBj7Q7/XL/_ANA0964-Edit-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-gsQ8mdb/A",
@@ -4274,7 +4274,7 @@ export const galleryData = [
   {
     "id": "i-hNb2Pxn",
     "title": "Period Costume Photography Portrait",
-    "description": "A painterly Western photograph of a cowboy, defined by consequence rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where every decision carried weight that echoed forward. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A period costume photography portrait becomes a roaring twenties reenactment portrait shaped by costume, expression, and historical atmosphere. This Roaring Twenties portrait creates period costume wall art rooted in historical play, theatrical character, and the visual memory of another era.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-hNb2Pxn/1/NTvKvZX22TKJNsKmn5RxJ8cFLbQc7QDKq2vm78wtj/XL/_DSF7668-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-hNb2Pxn/A",
@@ -4302,7 +4302,7 @@ export const galleryData = [
   {
     "id": "i-Fps6pmx",
     "title": "Capturing Reenactment Portraits",
-    "description": "A painterly Western photograph of a cowboy, defined by vigilance rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A reenactor portrait holds a period character in a quiet, carefully shaped moment. This Roaring Twenties portrait creates period costume wall art rooted in historical play, theatrical character, and the visual memory of another era.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-Fps6pmx/1/LHCD8Mzh82VrQrRCXX6fZ42C7mhwc4vpnLLdBbfcf/XL/_O1H0377-Edit-Edit-3-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-Fps6pmx/A",
@@ -4330,7 +4330,7 @@ export const galleryData = [
   {
     "id": "i-HcCXGGq",
     "title": "Wild West at Old Bedford Village",
-    "description": "Wild West: 1890's comes to Old Bedford Village. Western reenactors at The Old Bedford Historical Village",
+    "description": "Wild West: 1890's comes to Old Bedford Village. Western reenactors at The Old Bedford Historical Village. This Roaring Twenties portrait creates period costume wall art rooted in historical play, theatrical character, and the visual memory of another era.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-HcCXGGq/1/LghGBFtvtMj2BLZjBHZHQGc2xpT6nQqpgJC9hGSt3/XL/_O1H0121-Edit-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-HcCXGGq/A",
@@ -4354,7 +4354,7 @@ export const galleryData = [
   {
     "id": "i-G9pvq8g",
     "title": "Fine Art Period Costume Photography",
-    "description": "A painterly Western photograph of a wild west at old bedford village, defined by consequence rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where every decision carried weight that echoed forward. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A reenactor portrait holds a period character in a quiet, carefully shaped moment. This Roaring Twenties portrait creates period costume wall art rooted in historical play, theatrical character, and the visual memory of another era.",
     "alt": "Wild West at Old Bedford Village",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-G9pvq8g/1/K4r4pP5jnbVhjf3k6kJRgXdpZSDBqMXt9QKMF4LKm/XL/_O1H0487-Edit-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-G9pvq8g/A",
@@ -4383,7 +4383,7 @@ export const galleryData = [
   {
     "id": "i-CPSbBTp",
     "title": "Wild West at Old Bedford Village",
-    "description": "Wild West: 1890's comes to Old Bedford Village. Western reenactors at The Old Bedford Historical Village",
+    "description": "Wild West: 1890's comes to Old Bedford Village. Western reenactors at The Old Bedford Historical Village. This Roaring Twenties portrait creates period costume wall art rooted in historical play, theatrical character, and the visual memory of another era.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-CPSbBTp/1/LfjHFqXLVpjvgLPWRPHpxLzwm5wcq6TkZ6gZXnQFV/XL/_O1H0365-Enhanced-Edit-Edit-Edit-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-CPSbBTp/A",
@@ -4407,7 +4407,7 @@ export const galleryData = [
   {
     "id": "i-jKj7pq5",
     "title": "Reenactment Portraits - Historic Reenactor Prints",
-    "description": "A painterly Western photograph of a wild west at old bedford village, defined by vigilance rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A reenactment portraits - historic reenactor prints becomes a roaring twenties reenactment portrait shaped by costume, expression, and historical atmosphere. This Roaring Twenties portrait creates period costume wall art rooted in historical play, theatrical character, and the visual memory of another era.",
     "alt": "Wild West at Old Bedford Village",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-jKj7pq5/2/LRbLgqrCF7rhk9TsrnF3Q8krBKLs2NPK4xSTPh54h/XL/_O1H0568-Edit-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-jKj7pq5/A",
@@ -4435,7 +4435,7 @@ export const galleryData = [
   {
     "id": "i-kcMTXwj",
     "title": "Wild West at Old Bedford Village",
-    "description": "Wild West: 1890's comes to Old Bedford Village. Western reenactors at The Old Bedford Historical Village",
+    "description": "Wild West: 1890's comes to Old Bedford Village. Western reenactors at The Old Bedford Historical Village. This Roaring Twenties portrait creates period costume wall art rooted in historical play, theatrical character, and the visual memory of another era.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-kcMTXwj/0/Kxbt3KRFPSZPGdsX5PvzSJNcWs5j5TQZTXGwnD6b5/XL/_ANA0010-Edit-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-kcMTXwj/A",
@@ -4459,7 +4459,7 @@ export const galleryData = [
   {
     "id": "i-VS9Dwjj",
     "title": "Wild West at Old Bedford Village",
-    "description": "Wild West: 1890's comes to Old Bedford Village. Western reenactors at The Old Bedford Historical Village",
+    "description": "Wild West: 1890's comes to Old Bedford Village. Western reenactors at The Old Bedford Historical Village. This Roaring Twenties portrait creates period costume wall art rooted in historical play, theatrical character, and the visual memory of another era.",
     "alt": "Wild West at Old Bedford Village",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-VS9Dwjj/1/NWPN8pz8cgK2XQvnmjK8mjw23TwXrQ59PjHDQgMq3/XL/_O1H0900-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-VS9Dwjj/A",
@@ -4483,7 +4483,7 @@ export const galleryData = [
   {
     "id": "i-jvX9wRM",
     "title": "Wild West at Old Bedford Village",
-    "description": "Wild West: 1890's comes to Old Bedford Village. Western reenactors at The Old Bedford Historical Village",
+    "description": "Wild West: 1890's comes to Old Bedford Village. Western reenactors at The Old Bedford Historical Village. This Roaring Twenties portrait creates period costume wall art rooted in historical play, theatrical character, and the visual memory of another era.",
     "alt": "Wild West at Old Bedford Village",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-jvX9wRM/0/Kz4dpcKz9j6488DfCwfH4xcw224XgqGTcDfCjLTMT/XL/_ANA0368-Edit-2-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-jvX9wRM/A",
@@ -4507,7 +4507,7 @@ export const galleryData = [
   {
     "id": "i-VFBgL3h",
     "title": "Exploring Period Costume Photography",
-    "description": "A painterly Western photograph of a wild west at old bedford village, defined by consequence rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where every decision carried weight that echoed forward. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A reenactor portrait holds a period character in a quiet, carefully shaped moment. This Roaring Twenties portrait creates period costume wall art rooted in historical play, theatrical character, and the visual memory of another era.",
     "alt": "Wild West at Old Bedford Village",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-VFBgL3h/2/LS9kdkL89zC5x2NkmrLVL8pTNbbGXpGW8hmhqQ5pn/XL/_O1H0948-Edit-Edit-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-VFBgL3h/A",
@@ -4535,7 +4535,7 @@ export const galleryData = [
   {
     "id": "i-pJjV7XZ",
     "title": "The Essence Of Period Costume Photography",
-    "description": "A painterly Western photograph of a cowboy, defined by vigilance rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A reenactor portrait holds a period character in a quiet, carefully shaped moment. This Roaring Twenties portrait creates period costume wall art rooted in historical play, theatrical character, and the visual memory of another era.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-pJjV7XZ/1/Kqq2C6FrR8G7N2tJmN3XQkpJhLgJSN73TmpX8H7dx/XL/_ANA0574-Enhanced-Edit-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pJjV7XZ/A",
@@ -4562,7 +4562,7 @@ export const galleryData = [
   {
     "id": "i-b6wmrzx",
     "title": "Wild West at Old Bedford Village",
-    "description": "Wild West: 1890's comes to Old Bedford Village. Western reenactors at The Old Bedford Historical Village",
+    "description": "Wild West: 1890's comes to Old Bedford Village. Western reenactors at The Old Bedford Historical Village. This Roaring Twenties portrait creates period costume wall art rooted in historical play, theatrical character, and the visual memory of another era.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-b6wmrzx/0/KcqjZ37hrGSTS4TZMd7r27SKTz7C269cWGxdjqmw4/XL/_ANA0610-Edit-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-b6wmrzx/A",
@@ -4586,7 +4586,7 @@ export const galleryData = [
   {
     "id": "i-65GWjcq",
     "title": "Wild West at Old Bedford Village",
-    "description": "Wild West: 1890's comes to Old Bedford Village. Western reenactors at The Old Bedford Historical Village",
+    "description": "Wild West: 1890's comes to Old Bedford Village. Western reenactors at The Old Bedford Historical Village. This Roaring Twenties portrait creates period costume wall art rooted in historical play, theatrical character, and the visual memory of another era.",
     "alt": "Wild West at Old Bedford Village",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-65GWjcq/0/LMh79Qnz2N48mgtWqCxvqfrS9prNJ2tNTJb6Vnfpz/XL/_O1H1825-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-65GWjcq/A",
@@ -4610,7 +4610,7 @@ export const galleryData = [
   {
     "id": "i-J4CGdsN",
     "title": "Historic Reenactor Prints Portrait",
-    "description": "A painterly Western photograph of a wild west at old bedford village, defined by authority rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where command was earned through presence and experience. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A historic reenactor prints portrait becomes a roaring twenties reenactment portrait shaped by costume, expression, and historical atmosphere. This Roaring Twenties portrait creates period costume wall art rooted in historical play, theatrical character, and the visual memory of another era.",
     "alt": "Wild West at Old Bedford Village",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-J4CGdsN/8/KkqG2R3rTq2MqMXBDqRbGf7s57kJBnthWghN7NKJX/XL/_DSF2399-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-J4CGdsN/A",
@@ -4638,7 +4638,7 @@ export const galleryData = [
   {
     "id": "i-w9C8ZWP",
     "title": "Fine Art Reenactor Photography",
-    "description": "A painterly Western photograph of a 1920's  at old bedford village, defined by consequence rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where every decision carried weight that echoed forward. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A 1920s reenactment portrait at Old Bedford Village brings gangsters, flappers, and bootlegger-era atmosphere into living history. This Roaring Twenties portrait creates period costume wall art rooted in historical play, theatrical character, and the visual memory of another era.",
     "alt": "1920's  at Old Bedford Village",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-w9C8ZWP/1/MkpXczQ58bTFdwMhpsrXrgtMh4pfJ4np4vM8q3fdH/XL/_PEN0072-Edit-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-w9C8ZWP/A",
@@ -4666,7 +4666,7 @@ export const galleryData = [
   {
     "id": "i-b3jMQNM",
     "title": "Fine Art Reenactor Photography",
-    "description": "A painterly Western photograph of a cowboy, defined by vigilance rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A reenactor portrait holds a period character in a quiet, carefully shaped moment. This Western reenactment portrait creates historic character wall art rooted in period costume, frontier atmosphere, and Wayne Heim's restrained fine art photography.",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-b3jMQNM/1/KTV4qL3pN2Rf5V9Fzx92vgkD77QQg2tCrbf66r3bH/XL/_ANA5826-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-b3jMQNM/A",
@@ -4694,7 +4694,7 @@ export const galleryData = [
   {
     "id": "i-364tqsH",
     "title": "Hi Betsy    Photography of Wayne Heim",
-    "description": "A painterly Western photograph of a cowboy, defined by authority rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where command was earned through presence and experience. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "description": "A portrait of d-day reenactor becomes a wwii reenactment portrait shaped by costume, expression, and historical atmosphere. This WWII reenactment photograph creates living history wall art rooted in period costume, human presence, and the emotional tension of a recreated wartime scene.",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-364tqsH/4/K22jm6sztnKjkPWcdb8p3nzLwx333M5QwNK5WLNhF/XL/_IMG3932-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-364tqsH/A",
@@ -4718,7 +4718,7 @@ export const galleryData = [
   {
     "id": "i-cHBczG6",
     "title": "Cowboy Art: Where do I go from here?",
-    "description": "Painterly Wild West themed photography of woman in cape. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "description": "Painterly Wild West themed photography of woman in cape. Embrace the spirit of the Old West with Wayne Heim's captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. This Western reenactment portrait creates historic character wall art rooted in period costume, frontier atmosphere, and Wayne Heim's restrained fine art photography.",
     "alt": "Cowboy Art: Where do I go from here?",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-cHBczG6/4/LkZhqRk8x3NFL6XjkBxcK7ZSkXPksnp2rrKzhwJLt/XL/old%20west%20themed%20portrait%20_O1H0742-Edit-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-cHBczG6/A",
@@ -4770,7 +4770,7 @@ export const galleryData = [
   {
     "id": "i-QsNP7mR",
     "title": "Living History Art In Fine Art",
-    "description": "Witness living history art in Wayne Heim's reenactment portraits. This image features historic reenactor prints with reenactment portraits and reenactment portraits, ideal for admirers of living history art. © Wayne Heim",
+    "description": "Witness living history art in Wayne Heim's reenactment portraits. This image features historic reenactor prints with reenactment portraits and reenactment portraits, ideal for admirers of living history art. This Roaring Twenties portrait creates period costume wall art rooted in historical play, theatrical character, and the visual memory of another era.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-QsNP7mR/0/L2Zrf8tjpqjrB6JJh4W9RWpXwQvM66JPkfQ28MRSq/L/_O2H2798-853-L.jpg",
     "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-QsNP7mR/A",
@@ -4799,7 +4799,7 @@ export const galleryData = [
   {
     "id": "i-B2H9fFs",
     "title": "Reenactment Portraits Moment",
-    "description": "Delve into reenactment portraits via this historic reenactor prints by Wayne Heim. Highlighting living history art through living history art and reenactor photography, it's great for collectors interested in reenactment portraits. © Wayne Heim",
+    "description": "A reenactment portraits moment becomes a roaring twenties reenactment portrait shaped by costume, expression, and historical atmosphere. This Roaring Twenties portrait creates period costume wall art rooted in historical play, theatrical character, and the visual memory of another era.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-B2H9fFs/0/L8G8sx2mpjDFhzk22PW8PbLnnqGJ2H3Zdnp9Lg4Nk/L/_HF24190-705-L.jpg",
     "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Best-OF-OBV-25/n-swc6MX/i-B2H9fFs/A",
