@@ -25,7 +25,7 @@ export const galleryData = [
  {
  "id": "i-RNzNnCf",
  "title": "Cowboy Art And Fine Art Western Photography",
- "description": "A painterly Western photograph of a cowboy, defined by duty rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where obligation to others anchored a drifting world. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A black and white Western portrait becomes fine art through posture, shadow, and restrained expression. This traditional fine art portrait by Wayne Heim creates Western portrait wall art rooted in character, quiet authority, and the timeless force of monochrome photography.",
  "alt": "Megan",
  "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-RNzNnCf/1/MBqvqFrvBmHdjj8Njr95BC775k3pT5XQGS2zPjgP3/XL/_WHZ1114-Edit-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-RNzNnCf/1/MBqvqFrvBmHdjj8Njr95BC775k3pT5XQGS2zPjgP3/XL/_WHZ1114-Edit-XL.jpg",
@@ -54,7 +54,7 @@ export const galleryData = [
  {
  "id": "i-mMZDVvM",
  "title": "Cowboy Western Cowboy Art",
- "description": "A painterly Western photograph of a cowboy, defined by vigilance rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A Western cowboy portrait is shaped in black and white through stance, light, and the hard quiet of frontier presence. This traditional fine art portrait photograph creates cowboy wall art rooted in rugged character, restraint, and the visual language of the American West.",
  "alt": "Photographic artwork © Wayne Heim",
  "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-mMZDVvM/0/NCZx45p6ZR4TntFSTPWKLwqzTPBwXJcX5tkKC69mD/XL/w_whz5994-edit-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-mMZDVvM/0/NCZx45p6ZR4TntFSTPWKLwqzTPBwXJcX5tkKC69mD/XL/w_whz5994-edit-XL.jpg",
@@ -84,7 +84,7 @@ export const galleryData = [
  {
  "id": "i-GLhK6TT",
  "title": "Exploring Western Fine Art",
- "description": "A painterly Western photograph of a cowboy, defined by duty rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where obligation to others anchored a drifting world. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A black and white wedding portrait is treated as traditional fine art portrait photography, where expression, gesture, and tonal restraint carry the moment. The image creates portrait wall art rooted in intimacy, memory, and the quiet gravity of a personal milestone.",
  "alt": "Fine art image by Wayne Heim",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-GLhK6TT/1/K9mrwL86rXn2ZSZ4GXQQ86qFC4Bqz8Dv25JXBJ2zQ/XL/_FWH7478-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-GLhK6TT/1/K9mrwL86rXn2ZSZ4GXQQ86qFC4Bqz8Dv25JXBJ2zQ/XL/_FWH7478-XL.jpg",
@@ -113,7 +113,7 @@ export const galleryData = [
  {
  "id": "i-8ZC4vFq",
  "title": "Historic Western Prints Study",
- "description": "Discover the historic western prints in this powerful cowboy portraits by Wayne Heim. A compelling work that embodies Western cowboys, cowboy art, and rugged spirit. Perfect for art lovers seeking historic western prints to enhance their collection. © Wayne Heim",
+ "description": "A historic reenactment portrait becomes black and white fine art through period clothing, expression, and the atmosphere of living history. This traditional portrait photograph creates reenactor wall art rooted in costume, character, and the human presence behind the recreated past.",
  "alt": "Thank You Kiss Photography by Wayne Heim",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-8ZC4vFq/4/KF3jpQG4RmH6q2dbRmDgjXJfNfNqMRL2xm5jZtnGB/XL/_W3H4899-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-8ZC4vFq/4/KF3jpQG4RmH6q2dbRmDgjXJfNfNqMRL2xm5jZtnGB/XL/_W3H4899-XL.jpg",
@@ -141,7 +141,7 @@ export const galleryData = [
  {
  "id": "i-5FHtCVg",
  "title": "Pals - Black & White Photography by Wayne Heim",
- "description": "Pals - black & white photo of a boy and his Black Labrador dog. ©Wayne Heim",
+ "description": "A boy and his Black Labrador are held in a quiet black and white portrait of friendship and trust. This traditional fine art portrait creates wall art rooted in companionship, childhood, and the emotional bond between a child and dog.",
  "alt": "Photographic artwork © Wayne Heim",
  "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-5FHtCVg/4/L8F9n9mqkBv7ZT5sqfwFG4wC573bdpcqhZbH926K4/XL/_IMG4636-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-5FHtCVg/4/L8F9n9mqkBv7ZT5sqfwFG4wC573bdpcqhZbH926K4/XL/_IMG4636-XL.jpg",
@@ -168,7 +168,7 @@ export const galleryData = [
  {
  "id": "i-dQbG65F",
  "title": "Powerful Works Of Art In Fine Art",
- "description": "A painterly Western photograph of a cowboy, defined by vigilance rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A young woman's portrait becomes black and white fine art through expression, light, and the restrained drama of monochrome tone. This traditional portrait photograph creates wall art rooted in presence, confidence, and the quiet elegance of human character.",
  "alt": "Megan",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Prom-2016/Prom-2018/i-dQbG65F/2/Nbbqd9R2CwDT35sCLLGGJkwcsTZTP4SLZ2DTsbXkW/XL/_WHK3073-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Prom-2016/Prom-2018/i-dQbG65F/2/Nbbqd9R2CwDT35sCLLGGJkwcsTZTP4SLZ2DTsbXkW/XL/_WHK3073-XL.jpg",
@@ -198,7 +198,7 @@ export const galleryData = [
  {
  "id": "i-g9njn76",
  "title": "Capturing Western Cowboy Art",
- "description": "Explore western cowboy art with Wayne Heim's powerful works of art. This cowboy artwork piece conveys wild west photography, cowboy art, and western cowboy art, perfect for fans of powerful works of art. © Wayne Heim",
+ "description": "A black and white wedding portrait becomes a study of posture, connection, and formal restraint. This traditional fine art portrait photograph creates wall art rooted in personal history, ceremony, and the expressive power of monochrome photography.",
  "alt": "Photographic artwork © Wayne Heim",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-g9njn76/0/MMjrbPWSM5h7FkQnNk6qpCF7rjXxQsDHFTkGrFTkH/XL/_O1H2329-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-g9njn76/0/MMjrbPWSM5h7FkQnNk6qpCF7rjXxQsDHFTkGrFTkH/XL/_O1H2329-XL.jpg",
@@ -226,7 +226,7 @@ export const galleryData = [
  {
  "id": "i-gjVgKTL",
  "title": "Thank You Kiss Photography by Wayne Heim",
- "description": "A painterly Western photograph of a frontier woman, defined by authority rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where command was earned through presence and experience. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "Two reenactors share a kiss at D-Day Conneaut, turning a staged historical setting into a human black and white portrait. This traditional fine art photograph creates reenactment portrait wall art rooted in affection, memory, and the emotional life inside living history.",
  "alt": "Pals - Black & White Photography by Wayne Heim",
  "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-gjVgKTL/3/NbgQNKHrC96TP9RwQbHGzN7QxbJkzKPgMpLQJ7g83/XL/_IMG8678-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-gjVgKTL/3/NbgQNKHrC96TP9RwQbHGzN7QxbJkzKPgMpLQJ7g83/XL/_IMG8678-XL.jpg",
@@ -253,7 +253,7 @@ export const galleryData = [
  {
  "id": "i-zkVnCjx",
  "title": "We'll Meet Again Photography by Wayne Heim",
- "description": "Dancers at the USO dance of D Day Conneaut.©Wayne Heim",
+ "description": "Dancers at the USO dance during D-Day Conneaut become a black and white portrait of movement, nostalgia, and wartime-era atmosphere. This traditional fine art reenactment photograph creates wall art rooted in period costume, music, and living history.",
  "alt": "Highly Decorated PFC Photography by Wayne Heim",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-zkVnCjx/6/LFb58JT5Vg2DznNWCmsRrS9TsDS5wvTRsh24KkDH2/XL/_IMG3978-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-zkVnCjx/6/LFb58JT5Vg2DznNWCmsRrS9TsDS5wvTRsh24KkDH2/XL/_IMG3978-XL.jpg",
@@ -280,7 +280,7 @@ export const galleryData = [
  {
  "id": "i-t4bq7qj",
  "title": "Rugged Spirit Moment",
- "description": "A painterly Western photograph of a cowboy, defined by hesitation rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where a moment of pause could mean life or death. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A young portrait subject is rendered in black and white with quiet attention to expression, light, and emotional stillness. This traditional fine art portrait photograph creates monochrome wall art rooted in youth, presence, and the subtle tension of a held moment.",
  "alt": "Female Reenactor Photography by Wayne Heim",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Samantha/Spring-2020/i-t4bq7qj/1/MPzCcMWpsqNQKWrZh5DrRpQhxrVrh9zgtL7s9mMCK/XL/_WHZ5449-Edit-Edit-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Samantha/Spring-2020/i-t4bq7qj/1/MPzCcMWpsqNQKWrZh5DrRpQhxrVrh9zgtL7s9mMCK/XL/_WHZ5449-Edit-Edit-XL.jpg",
@@ -310,7 +310,7 @@ export const galleryData = [
  {
  "id": "i-CjRTfF3",
  "title": "Deep in thought.",
- "description": "A painterly Western photograph of a frontier woman, defined by vigilance rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A woman appears deep in thought in this black and white portrait, where expression and stillness carry the frame. This traditional fine art portrait photograph creates monochrome wall art rooted in introspection, restraint, and quiet human presence.",
  "alt": "I Am Waiting Black & White Photography by Wayne Heim",
  "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-CjRTfF3/1/KJzmhfMGtRMfqTpsZ6g33BP2RhqQmQ8HcvWB23jHZ/XL/_WHZ1247-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-CjRTfF3/1/KJzmhfMGtRMfqTpsZ6g33BP2RhqQmQ8HcvWB23jHZ/XL/_WHZ1247-XL.jpg",
@@ -337,7 +337,7 @@ export const galleryData = [
  {
  "id": "i-TdvK9cd",
  "title": "USO Performer Back & White Photography by Wayne Heim",
- "description": "Reenactor as a USO performer at the USA Dance of D Day Conneaut.©Wayne Heim",
+ "description": "A USO performer at the D-Day Conneaut dance is rendered as a black and white reenactment portrait, shaped by period costume and stage presence. This traditional fine art photograph creates living history wall art rooted in performance, memory, and wartime-era atmosphere.",
  "alt": "We'll Meet Again Photography by Wayne Heim",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-TdvK9cd/5/NjmP3p5xzLxmWtCxXqz7CLK4GJHNvL6DNWMrp9HWK/XL/_IMG3997-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-TdvK9cd/5/NjmP3p5xzLxmWtCxXqz7CLK4GJHNvL6DNWMrp9HWK/XL/_IMG3997-XL.jpg",
@@ -364,7 +364,7 @@ export const galleryData = [
  {
  "id": "i-Gf48H98",
  "title": "Portrait of a Goth Black & White Photography by Wayne Heim",
- "description": "A painterly Western photograph of a woman, defined by authority rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where command was earned through presence and experience. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A goth portrait in the woods becomes black and white fine art through contrast, expression, and the texture of setting. This traditional portrait photograph creates monochrome wall art rooted in individuality, style, and the quiet drama of personal presence.",
  "alt": "USO Performer Back & White Photography by Wayne Heim",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Models-in-May/i-Gf48H98/1/L6wdqt5GTt74LzkV4b2TNg2H6ZV6kZwSwWC2RVqwL/XL/_WHZ0839-2-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Models-in-May/i-Gf48H98/1/L6wdqt5GTt74LzkV4b2TNg2H6ZV6kZwSwWC2RVqwL/XL/_WHZ0839-2-XL.jpg",
@@ -391,7 +391,7 @@ export const galleryData = [
  {
  "id": "i-z8JXFZ2",
  "title": "Cowboy Powerful Works Of Art",
- "description": "Explore fine art Western photography with Wayne Heim's powerful works of art. This western landscapes fine art piece conveys painterly cowboy portraits, frontier life, and fine art Western photography, perfect for fans of powerful works of art. © Wayne Heim",
+ "description": "A black and white character portrait becomes Western fine art through expression, tonal depth, and restrained atmosphere. This traditional portrait photograph creates wall art rooted in rugged presence, human story, and the dramatic power of monochrome.",
  "alt": "Portrait of a Goth Black & White Photography by Wayne Heim",
  "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-z8JXFZ2/1/L389CD7XhgnWWNSsMFZbcSkCCPRNxjkVrFvgPgggV/XL/_WHZ1101-Edit-2-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-z8JXFZ2/1/L389CD7XhgnWWNSsMFZbcSkCCPRNxjkVrFvgPgggV/XL/_WHZ1101-Edit-2-XL.jpg",
@@ -419,7 +419,7 @@ export const galleryData = [
  {
  "id": "i-TzLS9r7",
  "title": "Frontier Life In Fine Art",
- "description": "A painterly Western photograph of an outlaw, defined by vigilance rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A black and white Western portrait carries the watchful quiet of an outlaw or frontier figure. This traditional fine art portrait photograph creates Western wall art rooted in vigilance, character, and the unresolved story held in a single face.",
  "alt": "New fine art photograph © Wayne Heim",
  "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-TzLS9r7/3/L224KG23B9h6fWtvxPTXNvBrbv8H9shCLtqKnz5Rj/XL/_IMG5633-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-TzLS9r7/3/L224KG23B9h6fWtvxPTXNvBrbv8H9shCLtqKnz5Rj/XL/_IMG5633-XL.jpg",
@@ -448,7 +448,7 @@ export const galleryData = [
  {
  "id": "i-FthDrjJ",
  "title": "Cowboy Artwork",
- "description": "A painterly Western photograph of a cowboy, defined by duty rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where obligation to others anchored a drifting world. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A young boy is photographed in black and white with the directness and quiet scale of a classic portrait. This traditional fine art portrait creates wall art rooted in youth, expression, and the lasting force of monochrome character photography.",
  "alt": "Portrait of Young Boy Black & White Photography by Wayne Heim",
  "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-FthDrjJ/3/M9nhthjcjRqQndVBdMFX9hwt5wwbq6DgP8mRvGMLd/XL/_IMG5685-2-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-FthDrjJ/3/M9nhthjcjRqQndVBdMFX9hwt5wwbq6DgP8mRvGMLd/XL/_IMG5685-2-XL.jpg",
@@ -477,7 +477,7 @@ export const galleryData = [
  {
  "id": "i-4k3RNmc",
  "title": "Cowboy Artwork - Western Cowboy Art",
- "description": "Explore cowboy artwork with Wayne Heim's western cowboy art. This cowboy painting art piece conveys cowboy art, powerful works of art, and cowboy artwork, perfect for fans of western cowboy art. © Wayne Heim",
+ "description": "A young aviator portrait becomes black and white fine art through costume, expression, and a sense of imagined adventure. This traditional portrait photograph creates character wall art rooted in childhood, role-play, and the cinematic pull of a single look.",
  "alt": "Young Aviator Photography by Wayne Heim",
  "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-4k3RNmc/3/KZrKGSJ9H7DfDJrJfKnccWmqcG5FvPxJJHhrn4wqc/XL/_IMG5693-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-4k3RNmc/3/KZrKGSJ9H7DfDJrJfKnccWmqcG5FvPxJJHhrn4wqc/XL/_IMG5693-XL.jpg",
@@ -507,7 +507,7 @@ export const galleryData = [
  {
  "id": "i-9ZnSqzD",
  "title": "You Got Lipstick Photography by Wayne Hei",
- "description": "Bride wipes lipstick from groom's face.\n ©Wayne Heim",
+ "description": "A bride wipes lipstick from the groom's face, turning a small wedding moment into a black and white portrait of tenderness and humor. This traditional fine art photograph creates wall art rooted in gesture, intimacy, and the unscripted details of love.",
  "alt": "Cowgirl Black & White Photography by Wayne Heim",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-9ZnSqzD/2/Kb7b6LqRJgwpksSWQ6r5sbdxR5kXzCVtS6gD7P523/XL/_WHZ5945-Edit-2-2-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-9ZnSqzD/2/Kb7b6LqRJgwpksSWQ6r5sbdxR5kXzCVtS6gD7P523/XL/_WHZ5945-Edit-2-2-XL.jpg",
@@ -534,7 +534,7 @@ export const galleryData = [
  {
  "id": "i-vKxJbtv",
  "title": "Cowboy Rugged Spirit",
- "description": "A painterly Western photograph of a cowboy, defined by vigilance rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A reenactment portrait is shaped in black and white through period clothing, posture, and a quiet sense of historical character. This traditional fine art photograph creates living history wall art rooted in costume, expression, and the human face of the past.",
  "alt": "You Got Lipstick Photography by Wayne Hei",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Rockford-WWII-Days-2013/i-vKxJbtv/4/L29fT4cX4ghtgLNGLrvwwwTKZpGDcP5kQn4kTbMC9/XL/_WEH5839-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Rockford-WWII-Days-2013/i-vKxJbtv/4/L29fT4cX4ghtgLNGLrvwwwTKZpGDcP5kQn4kTbMC9/XL/_WEH5839-XL.jpg",
@@ -564,7 +564,7 @@ export const galleryData = [
  {
  "id": "i-9NT8GV4",
  "title": "Fine Art Western Cowboy Art",
- "description": "Discover the western cowboy art in this powerful western landscapes fine art by Wayne Heim. A compelling work that embodies western fine art, historic western prints, and Western cowboys. Perfect for art lovers seeking western cowboy art to enhance their collection. © Wayne Heim",
+ "description": "A black and white reenactment portrait carries the tension of waiting and watching within a historical scene. This traditional fine art photograph creates character wall art rooted in period atmosphere, restrained expression, and the drama of implied action.",
  "alt": "Are They Coming Yet Black & White Photography by Wayne Heim",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-9NT8GV4/5/Lx2BBK5MG5hKbG9pRbkFm2vskdgnjjzcffPHVhkV7/XL/_W3H3194-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-9NT8GV4/5/Lx2BBK5MG5hKbG9pRbkFm2vskdgnjjzcffPHVhkV7/XL/_W3H3194-XL.jpg",
@@ -594,7 +594,7 @@ export const galleryData = [
  {
  "id": "i-9WzBrqT",
  "title": "Capturing the West",
- "description": "Explore western fine art with Wayne Heim's painterly cowboy portraits. This Western cowboys piece conveys frontier life, western cowboy art, perfect for fans of painterly cowboy portraits. © Wayne Heim",
+ "description": "A black and white portrait is built around quiet expression, soft light, and the restrained elegance of monochrome photography. This traditional fine art portrait creates wall art rooted in human presence, memory, and the emotional weight of a held glance.",
  "alt": "Deep in thought.",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-9WzBrqT/2/K9PgjTCwsrfNjTj6s9GqQFqjRJ5vC2fwjxTFgXcXt/XL/_WHZ5735-Edit-2-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-9WzBrqT/2/K9PgjTCwsrfNjTj6s9GqQFqjRJ5vC2fwjxTFgXcXt/XL/_WHZ5735-Edit-2-XL.jpg",
@@ -623,7 +623,7 @@ export const galleryData = [
  {
  "id": "i-PtmDWWS",
  "title": "Western Cowboy Art - Rustic Charm",
- "description": "A painterly Western photograph of a cowboy, defined by authority rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where command was earned through presence and experience. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A black and white reenactor portrait becomes Western-style character photography through posture, expression, and the language of historical clothing. This traditional fine art portrait creates wall art rooted in rugged presence, period atmosphere, and visual restraint.",
  "alt": "Wayne Heim – Fine Art Photography",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-PtmDWWS/4/MCktkwWMGR4rpMmxnV7zNFfqth5q2WDKM37Cz2cTs/XL/_W3H6651-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-PtmDWWS/4/MCktkwWMGR4rpMmxnV7zNFfqth5q2WDKM37Cz2cTs/XL/_W3H6651-XL.jpg",
@@ -652,7 +652,7 @@ export const galleryData = [
  {
  "id": "i-nZX8jLD",
  "title": "Rustic Charm And Historic Western Prints",
- "description": "A painterly Western photograph of a cowboy, defined by vigilance rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A sailor boy portrait is rendered in black and white with a sense of childhood ceremony, costume, and quiet pride. This traditional fine art portrait photograph creates monochrome wall art rooted in youth, memory, and the timeless shape of formal dress.",
  "alt": "Sailor Boy Photography by Wayne Heim",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-nZX8jLD/1/M548bHrb3G67jD7VZPXk9HcVTpvVq7pfjgCN7Z2vX/XL/_WHZ5840-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-nZX8jLD/1/M548bHrb3G67jD7VZPXk9HcVTpvVq7pfjgCN7Z2vX/XL/_WHZ5840-XL.jpg",
@@ -681,7 +681,7 @@ export const galleryData = [
  {
  "id": "i-BJxw3Dz",
  "title": "1920's at Old Bedford Village",
- "description": "Reenactors at Old Bedford Village 1920's event. Gangsters, flappers, bootleggers abound.",
+ "description": "Reenactors at Old Bedford Village's 1920s event become a black and white portrait of gangsters, flappers, and bootlegger-era atmosphere. This traditional fine art photograph creates Roaring Twenties wall art rooted in period costume, historical play, and living history.",
  "alt": "Fine art image by Wayne Heim",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-BJxw3Dz/8/LKZDc6fpTHLSr5M2DG2tnWFfTMjNMQwBbC3kQ9sdk/XL/_DSF2516-Edit-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-BJxw3Dz/8/LKZDc6fpTHLSr5M2DG2tnWFfTMjNMQwBbC3kQ9sdk/XL/_DSF2516-Edit-XL.jpg",
@@ -708,7 +708,7 @@ export const galleryData = [
  {
  "id": "i-7bxKBFk",
  "title": "Capturing Rustic Charm",
- "description": "A painterly Western photograph of a 1920's at old bedford village, defined by authority rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where command was earned through presence and experience. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A quiet personal portrait becomes black and white fine art through expression, soft contrast, and the intimate restraint of monochrome photography. This traditional portrait image creates wall art rooted in family memory, presence, and the emotional clarity of a simple pose.",
  "alt": "1920's at Old Bedford Village",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-7bxKBFk/1/K6CqvSCC9Xqr7G3bSfcfKTwQvXjxbsxXZjS5bfFwW/XL/_WHZ0521-Edit-Edit-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-7bxKBFk/1/K6CqvSCC9Xqr7G3bSfcfKTwQvXjxbsxXZjS5bfFwW/XL/_WHZ0521-Edit-Edit-XL.jpg",
@@ -737,7 +737,7 @@ export const galleryData = [
  {
  "id": "i-xMxDrS5",
  "title": "Western Art And Wild West Photography",
- "description": "A painterly Western photograph of a cowboy, defined by duty rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where obligation to others anchored a drifting world. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A historical reenactment portrait becomes black and white fine art through period dress, posture, and the quiet tension of character. This traditional portrait photograph creates living history wall art rooted in costume, restraint, and the human face inside historical performance.",
  "alt": "Photographic artwork © Wayne Heim",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-xMxDrS5/3/L63RHJT4f3WHMSLhn7ztP3w78FbvmbcHk8zfjkWsB/XL/_WHZ2607-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-xMxDrS5/3/L63RHJT4f3WHMSLhn7ztP3w78FbvmbcHk8zfjkWsB/XL/_WHZ2607-XL.jpg",
@@ -767,7 +767,7 @@ export const galleryData = [
  {
  "id": "i-qkMT7hL",
  "title": "Ready for the Aisle Photography by Wayne Heim",
- "description": "A painterly Western photograph of a frontier woman, defined by vigilance rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A bridesmaid prepares for the ceremony in this black and white wedding portrait, held in a quiet moment before the aisle. This traditional fine art photograph creates portrait wall art rooted in anticipation, elegance, and the private pause before public ritual.",
  "alt": "Pretty in Blue ( black & white) Photography by Wayne Heim",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-qkMT7hL/1/LgkQNKJRRn3H7njWJBBVwDZR5kSHNNCkPksWC4qz2/XL/_WHZ5860-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-qkMT7hL/1/LgkQNKJRRn3H7njWJBBVwDZR5kSHNNCkPksWC4qz2/XL/_WHZ5860-XL.jpg",
@@ -794,7 +794,7 @@ export const galleryData = [
  {
  "id": "i-FfQhchB",
  "title": "Rustic Charm And Rugged Spirit",
- "description": "Delve into rustic charm via this rugged spirit by Wayne Heim. Highlighting frontier life through cowboy portraits and Western cowboys, it's great for collectors interested in rustic charm. © Wayne Heim",
+ "description": "A reenactment character portrait is shaped in black and white by uniform, gesture, and the force of historical atmosphere. This traditional fine art photograph creates living history wall art rooted in period costume, human presence, and the tension of recreated memory.",
  "alt": "Ready for the Aisle Photography by Wayne Heim",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-FfQhchB/3/MmSGC38P3mzR9ZsSR36mvjm3bpGwgGSbksSbb2TnQ/XL/_WHZ5370-2-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-FfQhchB/3/MmSGC38P3mzR9ZsSR36mvjm3bpGwgGSbksSbb2TnQ/XL/_WHZ5370-2-XL.jpg",
@@ -823,7 +823,7 @@ export const galleryData = [
  {
  "id": "i-3VCCKd2",
  "title": "Exploring Western Cowboy Art",
- "description": "Explore western cowboy art with Wayne Heim's western fine art. This western art piece conveys Western cowboys, western landscapes fine art, and western cowboy art, perfect for fans of western fine art. © Wayne Heim",
+ "description": "A historical reenactment portrait becomes black and white character photography through expression, costuming, and the discipline of a staged moment made to feel lived. This traditional fine art portrait creates wall art rooted in living history and visual restraint.",
  "alt": "Take This Photography by Wayne Heim",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-3VCCKd2/3/MKZQ47L8ccmzwsH55vXPNVKS47z6HdDpBFHNGV7Lm/XL/_WHZ5358-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-3VCCKd2/3/MKZQ47L8ccmzwsH55vXPNVKS47z6HdDpBFHNGV7Lm/XL/_WHZ5358-XL.jpg",
@@ -852,7 +852,7 @@ export const galleryData = [
  {
  "id": "i-pcH8S3J",
  "title": "Waiting Black and White Photography by Wayne Heim",
- "description": "Woman waits for time to dress for wedding. ©Wayne Heim",
+ "description": "A woman waits for the time to dress for her wedding, caught in a black and white portrait of anticipation and quiet interior thought. This traditional fine art photograph creates wedding wall art rooted in stillness, transition, and the private emotional space before ceremony.",
  "alt": "Our Stories Photography by Wayne Heim",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Courtney-and-Nick-Wedding/i-pcH8S3J/3/Mdj5nwJ9ZrHHqN7xtDTqjqzr7RsnthqDDRVN75gTZ/XL/_WHZ6849-Edit-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Courtney-and-Nick-Wedding/i-pcH8S3J/3/Mdj5nwJ9ZrHHqN7xtDTqjqzr7RsnthqDDRVN75gTZ/XL/_WHZ6849-Edit-XL.jpg",
@@ -879,7 +879,7 @@ export const galleryData = [
  {
  "id": "i-RTj9HSn",
  "title": "Outlaw Portraits Cowboy",
- "description": "Discover the outlaw portraits in this powerful historic western prints by Wayne Heim. A compelling work that embodies cowboy art, western cowboy art, and cowboy painting art. Perfect for art lovers seeking outlaw portraits to enhance their collection. © Wayne Heim",
+ "description": "A black and white reenactment portrait carries the watchful tension of a historical character caught between action and pause. This traditional fine art photograph creates living history wall art rooted in costume, expression, and implied consequence.",
  "alt": "Waiting Black and White Photography by Wayne Heim",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-RTj9HSn/3/KkWwP3dLVWZB3zRdDdKq9kmTrn8cZjDp3N854Vh7C/XL/_WHZ5391%20b-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-RTj9HSn/3/KkWwP3dLVWZB3zRdDdKq9kmTrn8cZjDp3N854Vh7C/XL/_WHZ5391%20b-XL.jpg",
@@ -908,7 +908,7 @@ export const galleryData = [
  {
  "id": "i-Dq6HwJp",
  "title": "Western Fine Art Portrait",
- "description": "Delve into western fine art via this powerful works of art by Wayne Heim. Highlighting outlaw portraits through cowboy painting art and western landscapes fine art, it's great for collectors interested in western fine art. © Wayne Heim",
+ "description": "A wedding dance becomes a black and white portrait of movement, closeness, and shared rhythm. This traditional fine art photograph creates portrait wall art rooted in intimacy, celebration, and the quiet poetry of bodies moving together.",
  "alt": "Dancing Photography by Wayne Heim",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-Dq6HwJp/1/Mz62CVBvMZxPk3F5r4tZtSCks5sWLck8FMTCHPBv9/XL/_WHZ5829-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-Dq6HwJp/1/Mz62CVBvMZxPk3F5r4tZtSCks5sWLck8FMTCHPBv9/XL/_WHZ5829-XL.jpg",
@@ -936,7 +936,7 @@ export const galleryData = [
  {
  "id": "i-Q4JpqnD",
  "title": "Cowboy Portraits Study",
- "description": "A painterly Western photograph of a cowboy, defined by authority rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where command was earned through presence and experience. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A black and white reenactment portrait is shaped by historical clothing, posture, and the quiet pressure of a character held in time. This traditional fine art photograph creates living history wall art rooted in expression, period atmosphere, and dramatic restraint.",
  "alt": "Fine art image by Wayne Heim",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-Q4JpqnD/4/KtgGMRB2phQXShKw8LqrX6Rb3C7cZnhTXBqFSmVFv/XL/_W3H6653-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-Q4JpqnD/4/KtgGMRB2phQXShKw8LqrX6Rb3C7cZnhTXBqFSmVFv/XL/_W3H6653-XL.jpg",
@@ -965,7 +965,7 @@ export const galleryData = [
  {
  "id": "i-bVC4M8w",
  "title": "Cowboy Artwork - Historic Western Prints",
- "description": "A painterly Western photograph of a cowboy, defined by duty rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where obligation to others anchored a drifting world. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A mother and son portrait becomes black and white fine art through closeness, tonal restraint, and the emotional weight of family connection. This traditional portrait photograph creates wall art rooted in affection, memory, and the quiet structure of relationship.",
  "alt": "Mother & Son Photography by Wayne Heim",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-bVC4M8w/1/NG4BNfKjTqxwj9hNk44KbNFNLPcVGSJTcjS3JRWbT/XL/_WHZ7185-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-bVC4M8w/1/NG4BNfKjTqxwj9hNk44KbNFNLPcVGSJTcjS3JRWbT/XL/_WHZ7185-XL.jpg",
@@ -994,7 +994,7 @@ export const galleryData = [
  {
  "id": "i-zF4sTBK",
  "title": "Female Reenactor Photography by Wayne Heim",
- "description": "Woman dressed as a reenactor at Rockford WWII Days. ©Wayne Heim",
+ "description": "A woman dressed as a reenactor at Rockford WWII Days becomes a black and white living history portrait. This traditional fine art photograph creates reenactment wall art rooted in period costume, feminine presence, and the human scale of historical memory.",
  "alt": "Swearing In Black & White Photography by Wayne Heim",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Rockford-WWII-Days-2011/i-zF4sTBK/4/L7cL7Qw7sKKjpthckcb8sp6pPsd3ngDvrVxC4p8hD/XL/_IMG8585-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Rockford-WWII-Days-2011/i-zF4sTBK/4/L7cL7Qw7sKKjpthckcb8sp6pPsd3ngDvrVxC4p8hD/XL/_IMG8585-XL.jpg",
@@ -1021,7 +1021,7 @@ export const galleryData = [
  {
  "id": "i-stghf3f",
  "title": "Looks Good Photography by Wayne Heim",
- "description": "A painterly Western photograph of a frontier woman, defined by vigilance rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A woman tries on a hat in this black and white portrait, turning a small gesture into a study of style, choice, and self-presentation. This traditional fine art photograph creates portrait wall art rooted in expression, character, and quiet personal drama.",
  "alt": "Photographic artwork © Wayne Heim",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-stghf3f/1/LfDCH8738qNJ4WHHTFTsKRJBLbvWfMbfwd7gMm9KB/XL/_WHZ5802-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-stghf3f/1/LfDCH8738qNJ4WHHTFTsKRJBLbvWfMbfwd7gMm9KB/XL/_WHZ5802-XL.jpg",
@@ -1048,7 +1048,7 @@ export const galleryData = [
  {
  "id": "i-qBH8D5h",
  "title": "Outlaw Portraits - Western Cowboy Art",
- "description": "A painterly Western photograph of an outlaw, defined by duty rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where obligation to others anchored a drifting world. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A black and white Western-style portrait carries the mood of an outlaw study, shaped by expression, shadow, and restrained character. This traditional fine art portrait creates wall art rooted in rugged presence, frontier imagination, and the power of monochrome storytelling.",
  "alt": "Looks Good Photography by Wayne Heim",
  "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-qBH8D5h/1/KMgWnPRfFQZXdXsjvsWfPMzTbjmqt7BLQhBQgtV8W/XL/_WHK7187-Edit-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-qBH8D5h/1/KMgWnPRfFQZXdXsjvsWfPMzTbjmqt7BLQhBQgtV8W/XL/_WHK7187-Edit-XL.jpg",
@@ -1076,7 +1076,7 @@ export const galleryData = [
  {
  "id": "i-JcqCMM3",
  "title": "Powerful Works Of Art Portrait",
- "description": "Delve into powerful works of art via this fine art Western photography by Wayne Heim. Highlighting cowboy painting art through western cowboy art it's great for collectors interested in powerful works of art. © Wayne Heim",
+ "description": "A civilian reenactor portrait becomes black and white fine art through period styling, expression, and the quiet tension of historical character. This traditional portrait photograph creates living history wall art rooted in costume, face, and remembered atmosphere.",
  "alt": "Portrait of a Civilian Reenactor Black & White Photography by Wayne Heim",
  "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-JcqCMM3/1/MPbv3ck3frJ3TTh38tZHFGSdZ4LPmnV7bm4ctk6sg/XL/_WHZ0756-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-JcqCMM3/1/MPbv3ck3frJ3TTh38tZHFGSdZ4LPmnV7bm4ctk6sg/XL/_WHZ0756-XL.jpg",
@@ -1106,7 +1106,7 @@ export const galleryData = [
  {
  "id": "i-m4hMSXM",
  "title": "What's Up There Black and White Photography by Wayne Heim",
- "description": "A painterly Western photograph of a woman, defined by vigilance rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A woman poses in the woods looking upward, creating a black and white portrait of curiosity, stillness, and private thought. This traditional fine art photograph creates monochrome wall art rooted in expression, natural setting, and quiet visual tension.",
  "alt": "Wayne Heim – Fine Art Photography",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Models-in-May/i-m4hMSXM/1/KxdxgwZ8N2KNjSZbqx9sP6bsDBBqzxjZKwM3h2CHQ/XL/_WHZ0571-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Models-in-May/i-m4hMSXM/1/KxdxgwZ8N2KNjSZbqx9sP6bsDBBqzxjZKwM3h2CHQ/XL/_WHZ0571-XL.jpg",
@@ -1133,7 +1133,7 @@ export const galleryData = [
  {
  "id": "i-HTN4w9V",
  "title": "Outlaw Portraits - Western Cowboys",
- "description": "A painterly Western photograph of an outlaw, defined by duty rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where obligation to others anchored a drifting world. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A black and white character portrait carries the atmosphere of an outlaw or frontier figure, shaped by expression and restraint. This traditional fine art photograph creates Western-inspired wall art rooted in watchfulness, ambiguity, and the tension of a face held in shadow.",
  "alt": "What's Up There Black and White Photography by Wayne Heim",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-HTN4w9V/0/KvWPDLcVF69q6GCZXVHXnhVndtSFNs7TWHmtHVWR9/XL/_WHZ0437-Edit-Edit-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-HTN4w9V/0/KvWPDLcVF69q6GCZXVHXnhVndtSFNs7TWHmtHVWR9/XL/_WHZ0437-Edit-Edit-XL.jpg",
@@ -1162,7 +1162,7 @@ export const galleryData = [
  {
  "id": "i-ztNRLR6",
  "title": "Loving Couple Photography by Wayne Heim",
- "description": "A painterly Western photograph of a frontier woman, defined by vigilance rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A loving couple poses by the lake in a black and white portrait of closeness and shared ease. This traditional fine art photograph creates portrait wall art rooted in affection, stillness, and the quiet bond between two people.",
  "alt": "Fine art image by Wayne Heim",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-ztNRLR6/1/NLDKK4DfPS3SWgwpKnn5g6bKC2vBZJNq9k2rQxrGG/XL/_WHZ5978-Edit-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-ztNRLR6/1/NLDKK4DfPS3SWgwpKnn5g6bKC2vBZJNq9k2rQxrGG/XL/_WHZ5978-Edit-XL.jpg",
@@ -1189,7 +1189,7 @@ export const galleryData = [
  {
  "id": "i-VFWQsdm",
  "title": "Western Landscapes Fine Art - Outlaw Portraits",
- "description": "Explore western landscapes fine art with Wayne Heim's outlaw portraits. This wild west photography piece conveys western art, and western landscapes fine art, perfect for fans of outlaw portraits. © Wayne Heim",
+ "description": "A black and white Western portrait is built from expression, shadow, and the charged stillness of character. This traditional fine art photograph creates portrait wall art rooted in frontier atmosphere, human presence, and the restrained drama of monochrome.",
  "alt": "Loving Couple Photography by Wayne Heim",
  "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-VFWQsdm/1/L7zHZwHzJrcJNgnjLPjmxjQSfdb8GnMtssdps9cQH/XL/_DSF3185-Edit-Edit-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-VFWQsdm/1/L7zHZwHzJrcJNgnjLPjmxjQSfdb8GnMtssdps9cQH/XL/_DSF3185-Edit-Edit-XL.jpg",
@@ -1219,7 +1219,7 @@ export const galleryData = [
  {
  "id": "i-kP4wjmp",
  "title": "I Served Photography by Wayne Heim",
- "description": "A painterly Western photograph of a frontier woman, defined by authority rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where command was earned through presence and experience. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A WWII veteran at D-Day Conneaut is rendered in a black and white portrait of service, memory, and lived history. This traditional fine art photograph creates portrait wall art rooted in honor, presence, and the quiet dignity of someone who carried the real story.",
  "alt": "New fine art photograph © Wayne Heim",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-kP4wjmp/4/KFPJ9xJrZC4FkxFc8j27zKQwrH3N7rjnw6b443wLq/XL/_IMG2073-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-kP4wjmp/4/KFPJ9xJrZC4FkxFc8j27zKQwrH3N7rjnw6b443wLq/XL/_IMG2073-XL.jpg",
@@ -1246,7 +1246,7 @@ export const galleryData = [
  {
  "id": "i-vsZPHzr",
  "title": "Comfort - Black & White Photography by Wayne Heim",
- "description": "Fine art architectural photography of Normandy, Paris and Strasbourg, France.",
+ "description": "Comfort becomes the center of this black and white portrait, where human gesture and quiet emotion carry the frame. This traditional fine art photograph creates portrait wall art rooted in tenderness, restraint, and the expressive power of a small human moment.",
  "alt": "I Served Photography by Wayne Heim",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-vsZPHzr/4/KrFt55WRH9PfqF66WkZdFjkVZw44bpsHjQBF9XSxp/XL/_IMG3130-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-vsZPHzr/4/KrFt55WRH9PfqF66WkZdFjkVZw44bpsHjQBF9XSxp/XL/_IMG3130-XL.jpg",
@@ -1273,7 +1273,7 @@ export const galleryData = [
  {
  "id": "i-x7Nj6FH",
  "title": "Cowboy Portraits - Western Fine Art",
- "description": "Discover the cowboy portraits in this powerful western fine art by Wayne Heim. A compelling work that embodies historic western prints, Western cowboys, and cowboy painting art. Perfect for art lovers seeking cowboy portraits to enhance their collection. © Wayne Heim",
+ "description": "A black and white Western portrait becomes fine art through posture, expression, and tonal atmosphere. This traditional portrait photograph creates cowboy-inspired wall art rooted in rugged character, quiet drama, and the visual strength of monochrome.",
  "alt": "Comfort - Black & White Photography by Wayne Heim",
  "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-x7Nj6FH/1/NgMkcD2bTZB86dRQnJ9qfCDHWJH5VLvFWNjq5mPBK/XL/_WHZ0936-Edit-2-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-x7Nj6FH/1/NgMkcD2bTZB86dRQnJ9qfCDHWJH5VLvFWNjq5mPBK/XL/_WHZ0936-Edit-2-XL.jpg",
@@ -1301,7 +1301,7 @@ export const galleryData = [
  {
  "id": "i-FwBg8rF",
  "title": "Goth Black and White Photography by Wayne Heim",
- "description": "Woman goth poses for photoshoot in woods.\n ©Wayne Heim",
+ "description": "A goth portrait in the woods is shaped by black and white contrast, personal style, and controlled expression. This traditional fine art portrait creates monochrome wall art rooted in individuality, texture, and the dramatic stillness of a posed character study.",
  "alt": "Fine art image by Wayne Heim",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Models-in-May/i-FwBg8rF/1/LXcxdpWg72sSGzmsrrtw5qTDNgQ8zDGj4fntPhsLd/XL/_WHZ0764-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Models-in-May/i-FwBg8rF/1/LXcxdpWg72sSGzmsrrtw5qTDNgQ8zDGj4fntPhsLd/XL/_WHZ0764-XL.jpg",
@@ -1328,7 +1328,7 @@ export const galleryData = [
  {
  "id": "i-bfMNVrv",
  "title": "Historic Western Prints - Rustic Charm",
- "description": "Explore historic western prints with Wayne Heim's rustic charm. This cowboy art piece conveys outlaw portraits, painterly cowboy portraits, and historic western prints, perfect for fans of rustic charm. © Wayne Heim",
+ "description": "A black and white Western portrait is held with quiet restraint, using light and expression to suggest character rather than explain it. This traditional fine art photograph creates Western wall art rooted in historic mood, rugged presence, and the ambiguity of a face in monochrome.",
  "alt": "Goth Black and White Photography by Wayne Heim",
  "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-bfMNVrv/1/LLBGQ6X7rXb8qpd49rtPCs6dKWL2GqB4N5x57wGww/XL/_WHZ1118-Edit-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-bfMNVrv/1/LLBGQ6X7rXb8qpd49rtPCs6dKWL2GqB4N5x57wGww/XL/_WHZ1118-Edit-XL.jpg",
@@ -1357,7 +1357,7 @@ export const galleryData = [
  {
  "id": "i-ZGmLsjg",
  "title": "The Essence Of Historic Western Prints",
- "description": "A painterly Western photograph of a cowboy, defined by duty rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where obligation to others anchored a drifting world. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A black and white Western character portrait carries the feel of an old frontier print, shaped by tone, costume, and expression. This traditional fine art portrait creates wall art rooted in historic Western atmosphere, painterly restraint, and human presence.",
  "alt": "Wayne Heim – Fine Art Photography",
  "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-ZGmLsjg/1/MVpGFw4RhzghcFx6xJFL2gMnQ69VCw5xk3r6v4sxL/XL/_WHK1254-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-ZGmLsjg/1/MVpGFw4RhzghcFx6xJFL2gMnQ69VCw5xk3r6v4sxL/XL/_WHK1254-XL.jpg",
@@ -1386,7 +1386,7 @@ export const galleryData = [
  {
  "id": "i-DNCNfvk",
  "title": "Father & Daughter Photography by wayne Heim",
- "description": "Intimate portrait of Father and \nDaughter done in a sepia tone. Companion piece for Mother & Daughter. ©Wayne Heim",
+ "description": "An intimate sepia-toned portrait of father and daughter becomes a quiet study of family connection. This traditional fine art portrait creates wall art rooted in tenderness, generational memory, and the companion relationship to the Mother & Daughter piece.",
  "alt": "Fine art image by Wayne Heim",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Heim-Family-Reunion/Family-Reunion/i-DNCNfvk/4/Kj3q8ZcWB7xdGT34LdkBJMpvRNsHM3Nq9jkbZCVTR/XL/_WHZ7798-2-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Heim-Family-Reunion/Family-Reunion/i-DNCNfvk/4/Kj3q8ZcWB7xdGT34LdkBJMpvRNsHM3Nq9jkbZCVTR/XL/_WHZ7798-2-XL.jpg",
@@ -1413,7 +1413,7 @@ export const galleryData = [
  {
  "id": "i-PNs7bP5",
  "title": "Mother & Daughter Photography by Wayne Heim",
- "description": "Intimate portrait of Mother & Daughter done in sepia tone. Companion piece for Father & Daughter. ©Wayne Heim",
+ "description": "An intimate sepia-toned portrait of mother and daughter is held with warmth, restraint, and emotional closeness. This traditional fine art portrait creates family wall art rooted in connection, memory, and its companion relationship to the Father & Daughter piece.",
  "alt": "Father & Daughter Photography by wayne Heim",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Heim-Family-Reunion/Family-Reunion/i-PNs7bP5/2/LMDdJL7TvbQ7FWbC2nqGmkGT4bb4CxZK4gT68bq7W/XL/_WHZ7804-2-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Heim-Family-Reunion/Family-Reunion/i-PNs7bP5/2/LMDdJL7TvbQ7FWbC2nqGmkGT4bb4CxZK4gT68bq7W/XL/_WHZ7804-2-XL.jpg",
@@ -1443,7 +1443,7 @@ export const galleryData = [
  {
  "id": "i-S5x62Zc",
  "title": "Almost Time Black and White Photography by Wayne Heim",
- "description": "Young woman contemplates her upcoming wedding. ©Wayne Heim",
+ "description": "A young woman contemplates her upcoming wedding in a black and white portrait of anticipation and inward quiet. This traditional fine art photograph creates wedding portrait wall art rooted in stillness, transition, and the emotional weight before ceremony.",
  "alt": "Mother & Daughter Photography by Wayne Heim",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Courtney-and-Nick-Wedding/i-S5x62Zc/3/K6sQJkt3D56fwgNbzxZJfW3L8LT4ftdx9TPV9zF4r/XL/_WHZ6940-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Courtney-and-Nick-Wedding/i-S5x62Zc/3/K6sQJkt3D56fwgNbzxZJfW3L8LT4ftdx9TPV9zF4r/XL/_WHZ6940-XL.jpg",
@@ -1473,7 +1473,7 @@ export const galleryData = [
  {
  "id": "i-VGfBgBn",
  "title": "Western Cowboy Art - Frontier Life",
- "description": "A painterly Western photograph of a cowboy, defined by vigilance rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A black and white portrait carries the quiet emotional charge of a wedding day, shaped by light, expression, and the restraint of monochrome photography. This traditional fine art portrait creates wall art rooted in personal memory, ceremony, and human presence.",
  "alt": "Almost Time Black and White Photography by Wayne Heim",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-VGfBgBn/1/KP9q4KnWgZq3fn8L2ZFkK9sFD7ZWwkZ6PNDVm7c8k/XL/_WHZ5899-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-VGfBgBn/1/KP9q4KnWgZq3fn8L2ZFkK9sFD7ZWwkZ6PNDVm7c8k/XL/_WHZ5899-XL.jpg",
@@ -1502,7 +1502,7 @@ export const galleryData = [
  {
  "id": "i-nr48tJT",
  "title": "Posing in Hat Photography by Wayne Heim",
- "description": "Woman poses for a portrait in hat she just got. ©Wayne Heim",
+ "description": "A woman poses in a hat she just received, turning a small personal moment into a black and white character portrait. This traditional fine art photograph creates portrait wall art rooted in expression, style, and the pleasure of inhabiting a new look.",
  "alt": "Fine art image by Wayne Heim",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-nr48tJT/1/LwwZjHpkkWSWjTQpkDQLwdr6F7mJbwFj8CNPWpX56/XL/_WHZ5838-2-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-nr48tJT/1/LwwZjHpkkWSWjTQpkDQLwdr6F7mJbwFj8CNPWpX56/XL/_WHZ5838-2-XL.jpg",
@@ -1532,7 +1532,7 @@ export const galleryData = [
  {
  "id": "i-r7CPZSf",
  "title": "Wild West Photography Moment",
- "description": "A painterly Western photograph of a cowboy, defined by hesitation rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where a moment of pause could mean life or death. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A black and white wedding portrait becomes a study of character, dress, and quiet presence. This traditional fine art photograph creates monochrome wall art rooted in human expression, formal atmosphere, and the restrained elegance of the moment.",
  "alt": "Posing in Hat Photography by Wayne Heim",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-r7CPZSf/0/NWsSGW4Gb737pVQVGqXXrbLPD3QQwRbr5XhNhTTRP/XL/_FWH6741-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-r7CPZSf/0/NWsSGW4Gb737pVQVGqXXrbLPD3QQwRbr5XhNhTTRP/XL/_FWH6741-XL.jpg",
@@ -1560,7 +1560,7 @@ export const galleryData = [
  {
  "id": "i-QqDQz8x",
  "title": "Capturing Cowboy Painting Art",
- "description": "Discover the cowboy painting art in this powerful western art by Wayne Heim. A compelling work that embodies powerful works of art, wild west photography, and western landscapes fine art. Perfect for art lovers seeking cowboy painting art to enhance their collection. © Wayne Heim",
+ "description": "A black and white portrait is shaped by formal dress, gesture, and the quiet visual strength of monochrome tone. This traditional fine art photograph creates portrait wall art rooted in elegance, character, and the lasting structure of a single pose.",
  "alt": "New fine art photograph © Wayne Heim",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-QqDQz8x/0/Mdpqs96fsSfcFV8h6knfp5xwvnLkzsqBWFQdkRPJh/XL/_O1H0445-Enhanced-NR-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-QqDQz8x/0/Mdpqs96fsSfcFV8h6knfp5xwvnLkzsqBWFQdkRPJh/XL/_O1H0445-Enhanced-NR-XL.jpg",
@@ -1589,7 +1589,7 @@ export const galleryData = [
  {
  "id": "i-RR4b3rG",
  "title": "Rustic Charm Moment",
- "description": "A painterly Western photograph of a cowboy, defined by duty rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where obligation to others anchored a drifting world. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A black and white wedding portrait carries a restrained, classic presence, using light and posture to hold the moment without excess. This traditional fine art photograph creates portrait wall art rooted in ceremony, personal memory, and quiet confidence.",
  "alt": "Fine art image by Wayne Heim",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-RR4b3rG/0/KhhD6TznS498N3b53VzHsZsm8KWmDTTkbq6d6cR8P/XL/_FWH6830-2-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-RR4b3rG/0/KhhD6TznS498N3b53VzHsZsm8KWmDTTkbq6d6cR8P/XL/_FWH6830-2-XL.jpg",
@@ -1618,7 +1618,7 @@ export const galleryData = [
  {
  "id": "i-rZFNBqH",
  "title": "Cowboy Portraits Portrait",
- "description": "Discover the cowboy portraits in this powerful wild west photography by Wayne Heim. A compelling work that embodies fine art Western photography, cowboy painting art, and rugged spirit. Perfect for art lovers seeking cowboy portraits to enhance their collection. © Wayne Heim",
+ "description": "A black and white portrait becomes a study in expression, form, and the quiet authority of monochrome photography. This traditional fine art portrait creates wall art rooted in personal presence, tonal depth, and the dignity of a held moment.",
  "alt": "New fine art photograph © Wayne Heim",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-rZFNBqH/0/LX3LNtCVjPFqLDcvHpv4KmsVSXWWThtC6snqFg7Kn/XL/_FWH6835-Edit-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-rZFNBqH/0/LX3LNtCVjPFqLDcvHpv4KmsVSXWWThtC6snqFg7Kn/XL/_FWH6835-Edit-XL.jpg",
@@ -1647,7 +1647,7 @@ export const galleryData = [
  {
  "id": "i-b7FN4Nx",
  "title": "The Essence Of Rustic Charm",
- "description": "Delve into rustic charm via this cowboy portraits by Wayne Heim. Highlighting historic western prints through powerful works of art and outlaw portraits, it's great for collectors interested in rustic charm. © Wayne Heim",
+ "description": "A black and white portrait is framed with restrained elegance, allowing face, posture, and light to carry the story. This traditional fine art photograph creates portrait wall art rooted in memory, character, and the emotional clarity of monochrome.",
  "alt": "New fine art photograph © Wayne Heim",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-b7FN4Nx/0/Mxq5rKKJq9QQGV99C4HjxGhp5TbjC5rq9khC6WmKK/XL/_O1H0460-Enhanced-NR-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-b7FN4Nx/0/Mxq5rKKJq9QQGV99C4HjxGhp5TbjC5rq9khC6WmKK/XL/_O1H0460-Enhanced-NR-XL.jpg",
@@ -1675,7 +1675,7 @@ export const galleryData = [
  {
  "id": "i-T8CQBwG",
  "title": "Cowboy Painting Art Study",
- "description": "A painterly Western photograph of a cowboy, defined by vigilance rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A black and white wedding portrait becomes fine art through formal clothing, quiet expression, and the structure of light. This traditional portrait photograph creates wall art rooted in ceremony, style, and the lasting presence of a single figure.",
  "alt": "Wayne Heim – Fine Art Photography",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-T8CQBwG/0/MJdc6vwF7FCtffjFvMjGWjNLkFJCkVgd9dL82nG3t/XL/_FWH6944-2-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-T8CQBwG/0/MJdc6vwF7FCtffjFvMjGWjNLkFJCkVgd9dL82nG3t/XL/_FWH6944-2-XL.jpg",
@@ -1705,7 +1705,7 @@ export const galleryData = [
  {
  "id": "i-Z7ctKfL",
  "title": "Powerful Works Of Art In Fine Art",
- "description": "A painterly Western photograph of a cowboy, defined by duty rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where obligation to others anchored a drifting world. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A formal black and white portrait carries the timeless weight of ceremony, posture, and personal presence. This traditional fine art photograph creates wall art rooted in elegance, memory, and the disciplined beauty of monochrome portraiture.",
  "alt": "Photographic artwork © Wayne Heim",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-Z7ctKfL/0/LRgDfpcdJCMdsbtWBHhQH2LjxvLrjJk2NHpzVjkKF/XL/_FWH7038-2-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-Z7ctKfL/0/LRgDfpcdJCMdsbtWBHhQH2LjxvLrjJk2NHpzVjkKF/XL/_FWH7038-2-XL.jpg",
@@ -1735,7 +1735,7 @@ export const galleryData = [
  {
  "id": "i-6hJ8kbm",
  "title": "Cowboy Artwork And Frontier Life",
- "description": "Discover the cowboy artwork in this powerful frontier life by Wayne Heim. A compelling work that embodies outlaw portraits, fine art Western photography, and cowboy painting art. Perfect for art lovers seeking cowboy artwork to enhance their collection. © Wayne Heim",
+ "description": "A black and white portrait is shaped by quiet confidence, tonal restraint, and the subtle drama of formal presentation. This traditional fine art photograph creates portrait wall art rooted in presence, memory, and the expressive strength of a composed figure.",
  "alt": "Fine art image by Wayne Heim",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-6hJ8kbm/0/KrPtSr42N883GZRjttWxCNNzXc7hCprw7vqn74K9X/XL/_FWH7104-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-6hJ8kbm/0/KrPtSr42N883GZRjttWxCNNzXc7hCprw7vqn74K9X/XL/_FWH7104-XL.jpg",
@@ -1762,7 +1762,7 @@ export const galleryData = [
  {
  "id": "i-6gnqGf4",
  "title": "Exploring Cowboy Portraits",
- "description": "A painterly Western photograph of a cowboy, defined by vigilance rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A black and white portrait holds the subject with quiet clarity, letting expression, dress, and light define the frame. This traditional fine art photograph creates wall art rooted in character, restraint, and the classic language of monochrome portrait photography.",
  "alt": "New fine art photograph © Wayne Heim",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-6gnqGf4/0/LFjP7MCKPgZfDXMDvx26kB8MtLFnPRM77fMmdD9xk/XL/_FWH7216-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-6gnqGf4/0/LFjP7MCKPgZfDXMDvx26kB8MtLFnPRM77fMmdD9xk/XL/_FWH7216-XL.jpg",
@@ -1791,7 +1791,7 @@ export const galleryData = [
  {
  "id": "i-DFqr488",
  "title": "Cowboy Western Landscapes Fine Art",
- "description": "A painterly Western photograph of a cowboy, defined by duty rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where obligation to others anchored a drifting world. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A formal portrait becomes black and white fine art through posture, texture, and the controlled drama of light. This traditional portrait photograph creates wall art rooted in elegance, human presence, and the visual discipline of monochrome.",
  "alt": "New fine art photograph © Wayne Heim",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-DFqr488/1/KK2ZsxP9hsrXVww3WZ7WPPMBFDJHh8p2wSLZGNSRh/XL/_FWH7407-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-DFqr488/1/KK2ZsxP9hsrXVww3WZ7WPPMBFDJHh8p2wSLZGNSRh/XL/_FWH7407-XL.jpg",
@@ -1820,7 +1820,7 @@ export const galleryData = [
  {
  "id": "i-QQGxbsp",
  "title": "Capturing Fine Art Western Photography",
- "description": "Delve into fine art Western photography via this cowboy portraits by Wayne Heim. Highlighting outlaw portraits through western fine art it's great for collectors interested in fine art Western photography. © Wayne Heim",
+ "description": "An engagement portrait is rendered in black and white with quiet attention to relationship, expression, and shared presence. This traditional fine art photograph creates portrait wall art rooted in connection, promise, and the emotional stillness between two people.",
  "alt": "Fine art image by Wayne Heim",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Nick-Tricia-Engagement/i-QQGxbsp/0/NXJCfMqtSVMtfLzjj6C5mbkc6FpWB2DgDz6dB7BKH/XL/_DSF4801-Edit-Edit-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Nick-Tricia-Engagement/i-QQGxbsp/0/NXJCfMqtSVMtfLzjj6C5mbkc6FpWB2DgDz6dB7BKH/XL/_DSF4801-Edit-Edit-XL.jpg",
@@ -1850,7 +1850,7 @@ export const galleryData = [
  {
  "id": "i-pgzRbqs",
  "title": "Western Portrait",
- "description": "A painterly Western photograph of a cowboy, defined by vigilance rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A black and white engagement portrait becomes a study of closeness, formal restraint, and the quiet force of human connection. This traditional fine art photograph creates portrait wall art rooted in relationship, memory, and the timeless language of monochrome.",
  "alt": "New fine art photograph © Wayne Heim",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Nick-Tricia-Engagement/i-pgzRbqs/0/NNVdBtBw4CJ8WVRqmCc7B7QspPt8DZBtHrp3gmrxq/XL/_DSF4811-Edit-XL.jpg",
  "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Nick-Tricia-Engagement/i-pgzRbqs/0/NNVdBtBw4CJ8WVRqmCc7B7QspPt8DZBtHrp3gmrxq/XL/_DSF4811-Edit-XL.jpg",
