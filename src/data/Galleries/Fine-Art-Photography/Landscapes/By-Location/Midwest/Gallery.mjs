@@ -25,7 +25,7 @@ export const galleryData = [
   {
     "id": "i-gr3rsVB",
     "title": "Midwest Landscape Photography Moment",
-    "description": "A fine art landscape photograph of the Midwestern landscape, shaped by stillness rather than spectacle. Wayne Heim's fine art landscape photography treats place as emotional geography - not destination, but atmosphere. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the land holds its breath between seasons. Part of Wayne Heim's Midwestern landscape photography series. © Wayne Heim",
+    "description": "A quiet Midwestern winter scene becomes traditional fine art landscape photography, shaped by snow, stillness, and the muted character of Ohio light. This Midwest landscape photograph creates regional wall art rooted in atmosphere, memory, and the quiet rhythm of the land between seasons.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Winter-2021/Winter-202021/i-gr3rsVB/1/LM9mRk4DBdp4J5V7K69rVfXqswJrC4MqHmdZ4SrPM/XL/b6d4160a7f0ca7a337974b5c3bcedd9-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Winter-2021/Winter-202021/i-gr3rsVB/1/LM9mRk4DBdp4J5V7K69rVfXqswJrC4MqHmdZ4SrPM/XL/b6d4160a7f0ca7a337974b5c3bcedd9-Edit-XL.jpg",
@@ -55,7 +55,7 @@ export const galleryData = [
   {
     "id": "i-2N4ghBL",
     "title": "Snowy Bend. Photography by Wayne Heim",
-    "description": "Snowy Bend, Road along the Chagrin River in Gates Mills, Ohio Heavy snow is falling  ©Wayne Heim",
+    "description": "Heavy snow falls along a bend in the road near the Chagrin River in Gates Mills, Ohio, turning a familiar Midwest scene into quiet winter wall art. This traditional fine art landscape photograph captures the hush of snowfall, the curve of the road, and the restrained beauty of Ohio landscape photography.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Gates-Mills/i-2N4ghBL/9/LMwGpRJ3QKsKjdFXNSvHPXKtJq7Ts8fhCHXZvDbkK/XL/_IMG0573-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Gates-Mills/i-2N4ghBL/9/LMwGpRJ3QKsKjdFXNSvHPXKtJq7Ts8fhCHXZvDbkK/XL/_IMG0573-XL.jpg",
@@ -84,7 +84,7 @@ export const galleryData = [
   {
     "id": "i-vcmfFCM",
     "title": "Middle Falls. Photography by Wayne Heim",
-    "description": "\"Middle Falls'. Black and White photo of the Middle Waterfalls at Letchworth State Park. ©Wayne Heim",
+    "description": "Middle Falls at Letchworth State Park is rendered in black and white, reducing water, rock, and mist to tone and movement. This traditional fine art landscape photograph brings waterfall photography into a strong regional landscape study shaped by current, contrast, and carved stone.",
     "alt": "Snowy Bend. Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Lights/i-vcmfFCM/6/MzWw7JHnqStF99TFh2K3cTQmGcknnqNdk65WRG2hw/XL/_IMG7044-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Lights/i-vcmfFCM/6/MzWw7JHnqStF99TFh2K3cTQmGcknnqNdk65WRG2hw/XL/_IMG7044-Edit-XL.jpg",
@@ -113,7 +113,7 @@ export const galleryData = [
   {
     "id": "i-b3F54M6",
     "title": "Scenic Walkway. Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Lanterman's Mill in the Mill Creek Metroparks of Youngstown, Ohio.",
+    "description": "A scenic walkway near Lanterman’s Mill in Mill Creek MetroParks becomes traditional fine art landscape photography, where path, trees, stone, and water draw the viewer through the Ohio landscape. The image creates Midwest wall art rooted in regional parks, quiet passage, and natural structure.",
     "alt": "Middle Falls. Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/MillCreek-Metropark/i-b3F54M6/5/KLJRkVxDw2wvpPS4xJ3xZNKd7CXLzJmx7kp5wV2qp/XL/_WEH7202-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/MillCreek-Metropark/i-b3F54M6/5/KLJRkVxDw2wvpPS4xJ3xZNKd7CXLzJmx7kp5wV2qp/XL/_WEH7202-XL.jpg",
@@ -142,7 +142,7 @@ export const galleryData = [
   {
     "id": "i-3dZtNxv",
     "title": "Mill House, Black and White Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Lanterman's Mill in the Mill Creek Metroparks of Youngstown, Ohio.",
+    "description": "Lanterman’s Mill is rendered in black and white as a historic Ohio landscape, where stone, water, and old architecture hold the frame. This traditional fine art landscape photograph creates Midwest wall art rooted in regional memory, mill history, and the quiet strength of built places within nature.",
     "alt": "Scenic Walkway. Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/MillCreek-Metropark/i-3dZtNxv/4/LGPbRfNNNcmsCX5JbqtXNKs7N5w5mxqdwFjcZ7zmV/XL/_WEH7210-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/MillCreek-Metropark/i-3dZtNxv/4/LGPbRfNNNcmsCX5JbqtXNKs7N5w5mxqdwFjcZ7zmV/XL/_WEH7210-2-XL.jpg",
@@ -171,7 +171,7 @@ export const galleryData = [
   {
     "id": "i-VbL6CF7",
     "title": "Shadow Reflection. Photography by Wayne Heim",
-    "description": "Shadow Reflection -  tree reflection in water at sunset.©Wayne Heim",
+    "description": "A tree reflection at sunset turns still water into a quiet Midwestern landscape study, where shadow and light meet on the surface. This traditional fine art landscape photograph creates Ohio wall art shaped by reflection, evening color, and the subtle beauty of familiar places.",
     "alt": "Mill House, Black and White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/photos/i-VbL6CF7/4/NjRMzJ7S6pbvkFnHrWNnnWccSwdCFWqCnJfcJKZZj/XL/i-VbL6CF7-XL.jpg",
     "srcXL": "https://photos.smugmug.com/photos/i-VbL6CF7/4/NjRMzJ7S6pbvkFnHrWNnnWccSwdCFWqCnJfcJKZZj/XL/i-VbL6CF7-XL.jpg",
@@ -200,7 +200,7 @@ export const galleryData = [
   {
     "id": "i-VN5gQB3",
     "title": "Meeting of the Falls   Photography by Wayne Heim",
-    "description": "Two waterfalls in the Chagrin River seem to meet as the flow over the rocks. ©Wayne Heim",
+    "description": "Two waterfalls meet along the Chagrin River, where water moves over rock with quiet force and natural rhythm. This traditional fine art landscape photograph creates Midwest waterfall wall art rooted in Ohio river scenery, motion, and the sculptural character of flowing water.",
     "alt": "Shadow Reflection. Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/photos/i-VN5gQB3/4/MDtvR3xwsMDvTCccFL2MV3bD62c2xT6Bjm6bJRjP3/XL/i-VN5gQB3-XL.jpg",
     "srcXL": "https://photos.smugmug.com/photos/i-VN5gQB3/4/MDtvR3xwsMDvTCccFL2MV3bD62c2xT6Bjm6bJRjP3/XL/i-VN5gQB3-XL.jpg",
@@ -229,7 +229,7 @@ export const galleryData = [
   {
     "id": "i-fGKx3B6",
     "title": "Ru   Black & White Photography by Wayne Heim",
-    "description": "Rushing Rapids-  Berea Falls churning water of rapids  in black & White ©Wayne Heim",
+    "description": "Berea Falls churns in black and white, turning rushing rapids into a study of water, rock, and tonal force. This traditional fine art landscape photograph creates Ohio waterfall wall art with a strong Midwest character, shaped by motion, contrast, and river energy.",
     "alt": "Meeting of the Falls   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-fGKx3B6/5/L2CwF66LGT3KsKtfwCMgn8VL5RPBwhs4J3HKJnv4x/XL/_W3H9140_tonemapped-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-fGKx3B6/5/L2CwF66LGT3KsKtfwCMgn8VL5RPBwhs4J3HKJnv4x/XL/_W3H9140_tonemapped-XL.jpg",
@@ -258,7 +258,7 @@ export const galleryData = [
   {
     "id": "i-LXP3hD7",
     "title": "Out of the Rocks - Photography of Wayne Heim",
-    "description": "Out of the Rocks - tree appears to be growing out of the rocks on lake shore at unset.©Wayne Heim",
+    "description": "A tree appears to grow straight from the rocks along a lakeshore at sunset, turning a small natural detail into Midwest landscape wall art. This traditional fine art photograph blends shoreline, stone, tree form, and evening light into a quiet regional landscape study.",
     "alt": "Ru   Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/photos/i-LXP3hD7/4/KP9hz4z4hJqQ6Jfrq6QSNkX5MxRRRHvMVj4XzkPch/XL/i-LXP3hD7-XL.jpg",
     "srcXL": "https://photos.smugmug.com/photos/i-LXP3hD7/4/KP9hz4z4hJqQ6Jfrq6QSNkX5MxRRRHvMVj4XzkPch/XL/i-LXP3hD7-XL.jpg",
@@ -287,7 +287,7 @@ export const galleryData = [
   {
     "id": "i-GvZBLcv",
     "title": "Capturing Midwest Landscape Photography",
-    "description": "A fine art landscape of the Midwestern landscape, shaped by solitude rather than spectacle. Approached with restraint and precision, each frame captures the character of the land rather than its postcard appeal. Light, tone, and composition shape a quiet narrative rooted in place and memory - where distance and silence are companions here. Part of Wayne Heim's Midwestern landscape photography series. © Wayne Heim",
+    "description": "A Midwestern river landscape is shaped by autumn color, moving water, and a quiet sense of place. This traditional fine art landscape photograph creates Ohio wall art rooted in regional scenery, seasonal change, and the understated drama of Midwest landscape photography.",
     "alt": "Out of the Rocks - Photography of Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-GvZBLcv/4/LJHjhv9hTSm9Xf4G7h7tHwfRx5DTTd4kk9j2cFN9D/XL/_WHZ7325-Edit-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-GvZBLcv/4/LJHjhv9hTSm9Xf4G7h7tHwfRx5DTTd4kk9j2cFN9D/XL/_WHZ7325-Edit-Edit-2-XL.jpg",
@@ -317,7 +317,7 @@ export const galleryData = [
   {
     "id": "i-LR3Vr2N",
     "title": "Midwest Landscape Photography Moment",
-    "description": "Discover the midwest landscape photography in this powerful midwest landscape photography by Wayne Heim. A compelling work that embodies midwest landscape photography, midwest landscape photography, and midwest landscape photography. Perfect for art lovers seeking midwest landscape photography to enhance their collection. © Wayne Heim",
+    "description": "Black River West Falls in Elyria, Ohio becomes a traditional fine art landscape photograph, where falling water and layered stone give the scene structure and motion. The image creates Midwest waterfall wall art shaped by regional geology, river force, and quiet Ohio atmosphere.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Black-River-West-Falls/i-LR3Vr2N/2/Khgs6T3t84nZwpGHQBw5ZZzJTKbHtNxgj9F5DPBs2/XL/_WHZ7433-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Black-River-West-Falls/i-LR3Vr2N/2/Khgs6T3t84nZwpGHQBw5ZZzJTKbHtNxgj9F5DPBs2/XL/_WHZ7433-Edit-XL.jpg",
@@ -347,7 +347,7 @@ export const galleryData = [
   {
     "id": "i-N3ShZHB",
     "title": "Midwest Landscape Photography - Midwest Landscape Photography",
-    "description": "A fine art landscape photograph of autumn in the heartland, shaped by stillness rather than spectacle. Rather than documenting scenery, this work reveals the quiet presence that defines a region. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the land holds its breath between seasons. Part of Wayne Heim's Midwestern landscape photography series. © Wayne Heim",
+    "description": "A winter Midwest landscape settles into stillness, with snow and bare trees giving the scene a restrained seasonal mood. This traditional fine art landscape photograph creates Ohio winter wall art rooted in quiet weather, muted light, and the emotional geography of familiar land.",
     "alt": "Fine art landscape photography capturing Black River West Falls in Elyria, Ohio.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Winter-2021/Winter-202021/i-N3ShZHB/2/LnCtQQBh79Lzdnns9fFPcQH3LzQz5bFZZVkDbWr5n/XL/_ANA0655-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Winter-2021/Winter-202021/i-N3ShZHB/2/LnCtQQBh79Lzdnns9fFPcQH3LzQz5bFZZVkDbWr5n/XL/_ANA0655-Edit-XL.jpg",
@@ -377,7 +377,7 @@ export const galleryData = [
   {
     "id": "i-V92SWJF",
     "title": "Midwest Landscape Photography In Fine Art",
-    "description": "Explore midwest landscape photography with Wayne Heim's midwest landscape photography. This midwest landscape photography piece conveys midwest landscape photography, midwest landscape photography, and midwest landscape photography, perfect for fans of midwest landscape photography. © Wayne Heim",
+    "description": "Snow and trees define this Midwestern winter landscape, where the scene depends on restraint rather than spectacle. This traditional fine art landscape photograph creates Ohio wall art shaped by winter quiet, pale light, and the subtle structure of the land.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Winter-2021/Winter-202021/i-V92SWJF/2/LVP6t62VNpcJ86rq32BX38vV4w2brFm35h8vfXpLr/XL/_ANA0731-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Winter-2021/Winter-202021/i-V92SWJF/2/LVP6t62VNpcJ86rq32BX38vV4w2brFm35h8vfXpLr/XL/_ANA0731-Edit-XL.jpg",
@@ -407,7 +407,7 @@ export const galleryData = [
   {
     "id": "i-KFLXt4D",
     "title": "The Essence Of Midwest Landscape Photography",
-    "description": "A fine art landscape of the Midwestern landscape, shaped by solitude rather than spectacle. Wayne Heim's fine art landscape photography treats place as emotional geography - not destination, but atmosphere. Light, tone, and composition shape a quiet narrative rooted in place and memory - where distance and silence are companions here. Part of Wayne Heim's Midwestern landscape photography series. © Wayne Heim",
+    "description": "Hocking Hills becomes a traditional fine art landscape photograph through rock, forest, and the quiet weight of Midwestern terrain. This Ohio landscape wall art emphasizes regional texture, wooded atmosphere, and the carved character of one of the Midwest’s most distinctive natural places.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-KFLXt4D/3/LPSzpWPNhZMW2phKsRm6L6W4F3bKCKDGhM5Vt5sTf/XL/_ANA0801_tonemapped-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-KFLXt4D/3/LPSzpWPNhZMW2phKsRm6L6W4F3bKCKDGhM5Vt5sTf/XL/_ANA0801_tonemapped-Edit-XL.jpg",
@@ -437,7 +437,7 @@ export const galleryData = [
   {
     "id": "i-LmTHhDn",
     "title": "Midwest Landscape Photography Moment",
-    "description": "A fine art landscape photograph of the Midwestern landscape, shaped by stillness rather than spectacle. Approached with restraint and precision, each frame captures the character of the land rather than its postcard appeal. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the land holds its breath between seasons. Part of Wayne Heim's Midwestern landscape photography series. © Wayne Heim",
+    "description": "A Hocking Hills landscape gathers rock, trees, and quiet Midwestern atmosphere into a restrained natural scene. This traditional fine art landscape photograph creates Ohio wall art rooted in woodland texture, regional geology, and the calm force of place.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-LmTHhDn/1/MnRBmfp7SzkdnCktwsjWQMJNfhxNSvwBQrQD7rK2G/XL/_ANA0893_tonemapped-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-LmTHhDn/1/MnRBmfp7SzkdnCktwsjWQMJNfhxNSvwBQrQD7rK2G/XL/_ANA0893_tonemapped-XL.jpg",
@@ -467,7 +467,7 @@ export const galleryData = [
   {
     "id": "i-KG32NV6",
     "title": "Fine Art Midwest Landscape Photography",
-    "description": "A fine art landscape of the Midwestern landscape, shaped by solitude rather than spectacle. Rather than documenting scenery, this work reveals the quiet presence that defines a region. Light, tone, and composition shape a quiet narrative rooted in place and memory - where distance and silence are companions here. Part of Wayne Heim's Midwestern landscape photography series. © Wayne Heim",
+    "description": "The Hocking Hills landscape is treated as Midwestern fine art photography, where forest, rock, and shadow create a quiet sense of depth. This traditional landscape photograph turns Ohio terrain into wall art shaped by regional character and natural stillness.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-KG32NV6/1/LcHRwgRqd9spGM3FKxFtL2m3Zd4TkQqJXG7MscR86/XL/_ANA0901_tonemapped-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-KG32NV6/1/LcHRwgRqd9spGM3FKxFtL2m3Zd4TkQqJXG7MscR86/XL/_ANA0901_tonemapped-Edit-XL.jpg",
@@ -497,7 +497,7 @@ export const galleryData = [
   {
     "id": "i-NMRNtrB",
     "title": "Fine Art Midwest Landscape Photography",
-    "description": "A fine art landscape photograph of the Midwestern landscape, shaped by stillness rather than spectacle. Wayne Heim's fine art landscape photography treats place as emotional geography - not destination, but atmosphere. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the land holds its breath between seasons. Part of Wayne Heim's Midwestern landscape photography series. © Wayne Heim",
+    "description": "A wooded Hocking Hills scene carries the quiet presence of Midwestern landscape photography, where trees, rock, and light settle into balance. This traditional fine art landscape photograph creates Ohio wall art rooted in restraint, texture, and place.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-NMRNtrB/1/MbqLr7d6z3LmR3nkK5wrcvgb88x2VKbxT7qzHvnB4/XL/_ANA0906_tonemapped-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-NMRNtrB/1/MbqLr7d6z3LmR3nkK5wrcvgb88x2VKbxT7qzHvnB4/XL/_ANA0906_tonemapped-XL.jpg",
@@ -527,7 +527,7 @@ export const galleryData = [
   {
     "id": "i-c4qSzm6",
     "title": "Capturing Midwest Landscape Photography",
-    "description": "Explore midwest landscape photography with Wayne Heim's midwest landscape photography. This midwest landscape photography piece conveys midwest landscape photography, midwest landscape photography, and midwest landscape photography, perfect for fans of midwest landscape photography. © Wayne Heim",
+    "description": "Hocking Hills appears as traditional fine art landscape photography, shaped by the region’s forested rock forms and subdued natural light. This Ohio landscape wall art carries the quiet atmosphere of Midwestern woods, stone, and seasonal stillness.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-c4qSzm6/2/L8mDpGBCXxVpNW44ZvjbDMHzkPSxNfVzfjqSNL3Rk/XL/_ANA0922_tonemapped-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-c4qSzm6/2/L8mDpGBCXxVpNW44ZvjbDMHzkPSxNfVzfjqSNL3Rk/XL/_ANA0922_tonemapped-XL.jpg",
@@ -557,7 +557,7 @@ export const galleryData = [
   {
     "id": "i-2d2fgNW",
     "title": "Midwest Landscape Photography - Midwest Landscape Photography",
-    "description": "A fine art landscape of the Midwestern landscape, shaped by solitude rather than spectacle. Approached with restraint and precision, each frame captures the character of the land rather than its postcard appeal. Light, tone, and composition shape a quiet narrative rooted in place and memory - where distance and silence are companions here. Part of Wayne Heim's Midwestern landscape photography series. © Wayne Heim",
+    "description": "A Hocking Hills landscape becomes a study in Midwest natural form, with rock, forest, and light creating a quiet regional atmosphere. This traditional fine art landscape photograph creates Ohio wall art rooted in geology, woodland silence, and the character of place.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-2d2fgNW/3/MjRrkkznf9LbBPX2wJ2qSg4H24PqJgpCLwRkg3dzN/XL/_ANA0936_tonemapped-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-2d2fgNW/3/MjRrkkznf9LbBPX2wJ2qSg4H24PqJgpCLwRkg3dzN/XL/_ANA0936_tonemapped-XL.jpg",
@@ -587,7 +587,7 @@ export const galleryData = [
   {
     "id": "i-Vm7vR4f",
     "title": "The Essence Of Midwest Landscape Photography",
-    "description": "A fine art landscape photograph of the Midwestern landscape, shaped by stillness rather than spectacle. Rather than documenting scenery, this work reveals the quiet presence that defines a region. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the land holds its breath between seasons. Part of Wayne Heim's Midwestern landscape photography series. © Wayne Heim",
+    "description": "The essence of a Midwestern landscape appears in the quiet relationship between trees, rock, and filtered light. This traditional fine art landscape photograph creates Ohio wall art shaped by Hocking Hills texture, forest atmosphere, and understated natural beauty.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-Vm7vR4f/1/NQwsZJnBSHHJnk7xvNvHJjbLJSD9cTFXHqwFwkVBK/XL/_ANA1025-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-Vm7vR4f/1/NQwsZJnBSHHJnk7xvNvHJjbLJSD9cTFXHqwFwkVBK/XL/_ANA1025-Edit-XL.jpg",
@@ -617,7 +617,7 @@ export const galleryData = [
   {
     "id": "i-FGWfXBM",
     "title": "Fine Art Midwest Landscape Photography",
-    "description": "A fine art landscape of the Midwestern landscape, shaped by solitude rather than spectacle. Wayne Heim's fine art landscape photography treats place as emotional geography - not destination, but atmosphere. Light, tone, and composition shape a quiet narrative rooted in place and memory - where distance and silence are companions here. Part of Wayne Heim's Midwestern landscape photography series. © Wayne Heim",
+    "description": "A wide Hocking Hills view becomes traditional fine art landscape photography, where forest, stone, and seasonal light hold the frame with quiet strength. This Midwest landscape photograph creates Ohio wall art rooted in natural structure and regional atmosphere.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-FGWfXBM/2/LRdwkfrtJpCkBhjLJmv3kHv2KCsNMcDLpkLS3pPfd/XL/_ANA1034-Pano-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-FGWfXBM/2/LRdwkfrtJpCkBhjLJmv3kHv2KCsNMcDLpkLS3pPfd/XL/_ANA1034-Pano-Edit-XL.jpg",
@@ -647,7 +647,7 @@ export const galleryData = [
   {
     "id": "i-jd8JMK2",
     "title": "Midwest Landscape Photography Study",
-    "description": "A fine art landscape photograph of the Midwestern landscape, shaped by stillness rather than spectacle. Approached with restraint and precision, each frame captures the character of the land rather than its postcard appeal. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the land holds its breath between seasons. Part of Wayne Heim's Midwestern landscape photography series. © Wayne Heim",
+    "description": "This Midwestern landscape study draws on the quiet character of Ohio woods, where light, trees, and landform create a restrained natural scene. As traditional fine art landscape photography, it turns familiar terrain into wall art about place, stillness, and memory.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-jd8JMK2/1/L3RK7J2ffgpshxVFMZ49gGT8F9TGWJh2SWJ6nX3v3/XL/_ANA1061-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-jd8JMK2/1/L3RK7J2ffgpshxVFMZ49gGT8F9TGWJh2SWJ6nX3v3/XL/_ANA1061-XL.jpg",
@@ -677,7 +677,7 @@ export const galleryData = [
   {
     "id": "i-VHMgr5J",
     "title": "Painterly Landscape Photo: Light through trees.",
-    "description": "Fine art painterly photography of light shining through the trees.",
+    "description": "Light shines through the trees in this painterly Midwest landscape photograph, turning woodland atmosphere into quiet fine art. The image creates Ohio landscape wall art shaped by filtered light, forest depth, and the traditional beauty of trees in changing weather.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-VHMgr5J/3/LgZt3XgvxQRRc3nSbw3L7zsC7XK4VVCRpGtdgW94T/XL/_ANA1097-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-VHMgr5J/3/LgZt3XgvxQRRc3nSbw3L7zsC7XK4VVCRpGtdgW94T/XL/_ANA1097-Edit-Edit-XL.jpg",
@@ -706,7 +706,7 @@ export const galleryData = [
   {
     "id": "i-RWr4ppX",
     "title": "Exploring Midwest Landscape Photography",
-    "description": "Delve into midwest landscape photography via this midwest landscape photography by Wayne Heim. Highlighting midwest landscape photography through midwest landscape photography and midwest landscape photography, it's great for collectors interested in midwest landscape photography. © Wayne Heim",
+    "description": "A Midwestern woodland scene becomes traditional fine art landscape photography through light, texture, and the quiet structure of the trees. This Ohio wall art image carries the regional mood of Hocking Hills and the understated force of forested terrain.",
     "alt": "Painterly Landscape Photo: Light through trees.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-RWr4ppX/0/Lf22GWtD8Xn8mMpvkqDN9S4QbVPkvfRwKSfZZCtsV/XL/_ANA1140_tonemapped-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-RWr4ppX/0/Lf22GWtD8Xn8mMpvkqDN9S4QbVPkvfRwKSfZZCtsV/XL/_ANA1140_tonemapped-2-XL.jpg",
@@ -736,7 +736,7 @@ export const galleryData = [
   {
     "id": "i-ScMsR8H",
     "title": "Midwest Landscape Photography Landscape",
-    "description": "A fine art landscape of the Midwestern landscape, shaped by solitude rather than spectacle. Rather than documenting scenery, this work reveals the quiet presence that defines a region. Light, tone, and composition shape a quiet narrative rooted in place and memory - where distance and silence are companions here. Part of Wayne Heim's Midwestern landscape photography series. © Wayne Heim",
+    "description": "A Midwest landscape gathers trees, rock, and muted natural light into a quiet composition of place. This traditional fine art landscape photograph creates Ohio wall art rooted in woodland stillness, regional terrain, and the calm emotional weight of familiar land.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-ScMsR8H/2/MVk4K6K4BgdVhQT8Fg6pmStBzCV35SHwkVLQ7nFVs/XL/_ANA1155-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-ScMsR8H/2/MVk4K6K4BgdVhQT8Fg6pmStBzCV35SHwkVLQ7nFVs/XL/_ANA1155-XL.jpg",
@@ -766,7 +766,7 @@ export const galleryData = [
   {
     "id": "i-rm2GNVm",
     "title": "Midwest Landscape Photography Moment",
-    "description": "A fine art landscape photograph of the Midwestern landscape, shaped by stillness rather than spectacle. Wayne Heim's fine art landscape photography treats place as emotional geography - not destination, but atmosphere. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the land holds its breath between seasons. Part of Wayne Heim's Midwestern landscape photography series. © Wayne Heim",
+    "description": "A Hocking Hills landscape holds the frame with Midwestern restraint, letting rock, forest, and light speak without spectacle. This traditional fine art landscape photograph creates Ohio wall art shaped by quiet atmosphere and regional natural form.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-rm2GNVm/2/NdSmTXLJQCQB88TGBZcft2f2NxhD3jTPcqmR2dDCc/XL/_ANA1156-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-rm2GNVm/2/NdSmTXLJQCQB88TGBZcft2f2NxhD3jTPcqmR2dDCc/XL/_ANA1156-XL.jpg",
@@ -796,7 +796,7 @@ export const galleryData = [
   {
     "id": "i-kqQ26Rw",
     "title": "Midwest Landscape Photography - Midwest Landscape Photography",
-    "description": "A fine art landscape of the Midwestern landscape, shaped by solitude rather than spectacle. Approached with restraint and precision, each frame captures the character of the land rather than its postcard appeal. Light, tone, and composition shape a quiet narrative rooted in place and memory - where distance and silence are companions here. Part of Wayne Heim's Midwestern landscape photography series. © Wayne Heim",
+    "description": "A Midwestern landscape is framed through the textures of Ohio woods and stone, turning familiar regional terrain into fine art. This traditional landscape photograph creates wall art rooted in Hocking Hills atmosphere, natural structure, and quiet seasonal light.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-kqQ26Rw/1/KQJFznnbbJjrLm6s9nvFdjJvvZNJHPn8bMxgtK9Mh/XL/_ANA1161-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-kqQ26Rw/1/KQJFznnbbJjrLm6s9nvFdjJvvZNJHPn8bMxgtK9Mh/XL/_ANA1161-XL.jpg",
@@ -826,7 +826,7 @@ export const galleryData = [
   {
     "id": "i-8hzdpxL",
     "title": "Midwest Landscape Photography Moment",
-    "description": "A fine art landscape photograph of the Midwestern landscape, shaped by stillness rather than spectacle. Rather than documenting scenery, this work reveals the quiet presence that defines a region. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the land holds its breath between seasons. Part of Wayne Heim's Midwestern landscape photography series. © Wayne Heim",
+    "description": "The Midwest landscape appears in a quiet study of trees, rock, and filtered light, where atmosphere matters more than grand spectacle. This traditional fine art landscape photograph creates Ohio wall art shaped by Hocking Hills terrain and the subtle beauty of regional place.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-8hzdpxL/3/Lk4rQNLGmhsSDP743qKRNPvF3dsRsGQdR6W2VrpRT/XL/_ANA1162-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-8hzdpxL/3/Lk4rQNLGmhsSDP743qKRNPvF3dsRsGQdR6W2VrpRT/XL/_ANA1162-Edit-XL.jpg",
@@ -856,7 +856,7 @@ export const galleryData = [
   {
     "id": "i-p2Hdrmc",
     "title": "Capturing Midwest Landscape Photography",
-    "description": "A fine art landscape of the Midwestern landscape, shaped by solitude rather than spectacle. Wayne Heim's fine art landscape photography treats place as emotional geography - not destination, but atmosphere. Light, tone, and composition shape a quiet narrative rooted in place and memory - where distance and silence are companions here. Part of Wayne Heim's Midwestern landscape photography series. © Wayne Heim",
+    "description": "A Hocking Hills scene becomes traditional fine art landscape photography, with rock, woodland, and light forming a quiet regional composition. This Midwest landscape wall art preserves the understated beauty of Ohio’s forested terrain.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-p2Hdrmc/1/MT8wMVd2c7w4LgpggBNLp5R58V2KpQQxdx99JkddG/XL/_ANA1236-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-p2Hdrmc/1/MT8wMVd2c7w4LgpggBNLp5R58V2KpQQxdx99JkddG/XL/_ANA1236-Edit-XL.jpg",
@@ -886,7 +886,7 @@ export const galleryData = [
   {
     "id": "i-f56454D",
     "title": "Red barn and storm clouds.",
-    "description": "Old red barn with storm approaching from behind. Painterly landscape photography.",
+    "description": "An old red barn stands beneath approaching storm clouds, turning rural Midwest weather into painterly landscape photography. This traditional fine art landscape photograph creates barn wall art rooted in Ohio countryside, weathered structure, and the emotional charge of a storm on the horizon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/photos/i-f56454D/2/NLrRHSwc6DCd2QGZ8N538dC6t72zr3HXKK8HhpMss/XL/i-f56454D-XL.jpg",
     "srcXL": "https://photos.smugmug.com/photos/i-f56454D/2/NLrRHSwc6DCd2QGZ8N538dC6t72zr3HXKK8HhpMss/XL/i-f56454D-XL.jpg",
@@ -915,7 +915,7 @@ export const galleryData = [
   {
     "id": "i-nxp4vKr",
     "title": "The Essence Of Midwest Landscape Photography",
-    "description": "A fine art landscape photograph of the Midwestern landscape, shaped by stillness rather than spectacle. Approached with restraint and precision, each frame captures the character of the land rather than its postcard appeal. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the land holds its breath between seasons. Part of Wayne Heim's Midwestern landscape photography series. © Wayne Heim",
+    "description": "A Midwestern landscape is shaped by quiet distance, seasonal light, and the restrained character of regional terrain. This traditional fine art landscape photograph creates Midwest wall art rooted in place, atmosphere, and the emotional geography of familiar land.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/photos/i-nxp4vKr/0/KVwSF25cZWwDKTDV27PCqzBctnNKMH2NKzDQWhBd5/XL/i-nxp4vKr-XL.jpg",
     "srcXL": "https://photos.smugmug.com/photos/i-nxp4vKr/0/KVwSF25cZWwDKTDV27PCqzBctnNKMH2NKzDQWhBd5/XL/i-nxp4vKr-XL.jpg",
@@ -945,7 +945,7 @@ export const galleryData = [
   {
     "id": "i-4rJVZLg",
     "title": "Midwest Landscape Photography Landscape",
-    "description": "Discover the midwest landscape photography in this powerful midwest landscape photography by Wayne Heim. A compelling work that embodies midwest landscape photography, midwest landscape photography, and midwest landscape photography. Perfect for art lovers seeking midwest landscape photography to enhance their collection. © Wayne Heim",
+    "description": "A rural landscape with Midwest character becomes traditional fine art photography through quiet light, open space, and a feeling of place. This landscape wall art carries the calm, grounded tone of regional scenery, even as the image reaches beyond strict Ohio borders.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-4rJVZLg/0/NQ2LBTPSk9nK2CCm3w3jGFKgRvQZctBM8Bczs2KXj/XL/_O1H0474-Edit-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-4rJVZLg/0/NQ2LBTPSk9nK2CCm3w3jGFKgRvQZctBM8Bczs2KXj/XL/_O1H0474-Edit-Edit-Edit-XL.jpg",
@@ -975,7 +975,7 @@ export const galleryData = [
   {
     "id": "i-jrGJSbH",
     "title": "Fine Art Midwest Landscape Photography",
-    "description": "A fine art landscape of the Midwestern landscape, shaped by solitude rather than spectacle. Rather than documenting scenery, this work reveals the quiet presence that defines a region. Light, tone, and composition shape a quiet narrative rooted in place and memory - where distance and silence are companions here. Part of Wayne Heim's Midwestern landscape photography series. © Wayne Heim",
+    "description": "A quiet rural scene becomes traditional fine art landscape photography, shaped by trees, field, and the soft visual rhythm of regional land. This Midwest-leaning landscape wall art emphasizes atmosphere, restraint, and the familiar pull of countryside.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-jrGJSbH/0/L8Vvw9TcfZ86dHjfmdrX7XTSxKpCwx5NRkDsjQjGM/XL/_O1H0478-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-jrGJSbH/0/L8Vvw9TcfZ86dHjfmdrX7XTSxKpCwx5NRkDsjQjGM/XL/_O1H0478-XL.jpg",
@@ -1005,7 +1005,7 @@ export const galleryData = [
   {
     "id": "i-72t3jbT",
     "title": "Fine Art Midwest Landscape Photography",
-    "description": "A fine art landscape photograph of the Midwestern landscape, shaped by stillness rather than spectacle. Wayne Heim's fine art landscape photography treats place as emotional geography - not destination, but atmosphere. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the land holds its breath between seasons. Part of Wayne Heim's Midwestern landscape photography series. © Wayne Heim",
+    "description": "This landscape photograph treats rural place as atmosphere, using light, trees, and open ground to create a quiet fine art image. It works as traditional landscape wall art with a Midwestern sensibility, rooted in stillness, season, and memory.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-72t3jbT/0/K2mWB59NpV5H87qQcx6p2mzRJsNt39RPZVKWx9TSF/XL/_O1H0479-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-72t3jbT/0/K2mWB59NpV5H87qQcx6p2mzRJsNt39RPZVKWx9TSF/XL/_O1H0479-Edit-Edit-XL.jpg",
@@ -1035,7 +1035,7 @@ export const galleryData = [
   {
     "id": "i-HmSt4wB",
     "title": "Exploring Midwest Landscape Photography",
-    "description": "Discover the midwest landscape photography in this powerful midwest landscape photography by Wayne Heim. A compelling work that embodies midwest landscape photography, midwest landscape photography, and midwest landscape photography. Perfect for art lovers seeking midwest landscape photography to enhance their collection. © Wayne Heim",
+    "description": "A rural landscape is held with quiet restraint, allowing trees, field, and light to carry the scene. This traditional fine art landscape photograph creates regional wall art with a Midwest spirit, shaped by familiar land, weather, and seasonal atmosphere.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-HmSt4wB/0/MNVRfbPV56hdnJPnZqSJNKLSpCcnNpPX7pwVMLdSb/XL/_O1H0482-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-HmSt4wB/0/MNVRfbPV56hdnJPnZqSJNKLSpCcnNpPX7pwVMLdSb/XL/_O1H0482-Edit-Edit-XL.jpg",
@@ -1065,7 +1065,7 @@ export const galleryData = [
   {
     "id": "i-9sP9Qxs",
     "title": "Midwest Landscape Photography - Midwest Landscape Photography",
-    "description": "Delve into midwest landscape photography via this midwest landscape photography by Wayne Heim. Highlighting midwest landscape photography through midwest landscape photography and midwest landscape photography, it's great for collectors interested in midwest landscape photography. © Wayne Heim",
+    "description": "A quiet Midwestern landscape moment is shaped by land, weather, and restrained natural light. This traditional fine art landscape photograph creates regional wall art rooted in atmosphere, stillness, and the understated beauty of everyday places.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/photos/i-9sP9Qxs/0/NMnwwRKtm3NrBqPvjcJ6xGM4K39Cpq8JQcPQ5tSwn/XL/i-9sP9Qxs-XL.jpg",
     "srcXL": "https://photos.smugmug.com/photos/i-9sP9Qxs/0/NMnwwRKtm3NrBqPvjcJ6xGM4K39Cpq8JQcPQ5tSwn/XL/i-9sP9Qxs-XL.jpg",
@@ -1095,7 +1095,7 @@ export const galleryData = [
   {
     "id": "i-jt8P6Wg",
     "title": "Capturing Midwest Landscape Photography",
-    "description": "A fine art landscape of the Midwestern landscape, shaped by solitude rather than spectacle. Approached with restraint and precision, each frame captures the character of the land rather than its postcard appeal. Light, tone, and composition shape a quiet narrative rooted in place and memory - where distance and silence are companions here. Part of Wayne Heim's Midwestern landscape photography series. © Wayne Heim",
+    "description": "This Midwest landscape photograph gathers open ground, trees, and quiet light into a restrained fine art study. The image creates traditional landscape wall art rooted in regional character, seasonal mood, and the soft emotional pull of familiar land.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-jt8P6Wg/0/LMd2CdmdLXTLBBhmLCgscxD4w9d9JVf6RDGpLq2Pn/XL/_O1H0991-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-jt8P6Wg/0/LMd2CdmdLXTLBBhmLCgscxD4w9d9JVf6RDGpLq2Pn/XL/_O1H0991-XL.jpg",
@@ -1125,7 +1125,7 @@ export const galleryData = [
   {
     "id": "i-Sv7gsQB",
     "title": "Exploring Midwest Landscape Photography",
-    "description": "Delve into midwest landscape photography via this midwest landscape photography by Wayne Heim. Highlighting midwest landscape photography through midwest landscape photography and midwest landscape photography, it's great for collectors interested in midwest landscape photography. © Wayne Heim",
+    "description": "A Midwestern landscape becomes fine art through quiet composition, natural texture, and a sense of place rather than spectacle. This traditional landscape photograph creates Midwest wall art shaped by trees, field, and the atmosphere of regional light.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-Sv7gsQB/0/MffBjRxXBkxDfNtDGKqBJXRrHzZxSBSgrJvbnbvMf/XL/_O1H0992-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-Sv7gsQB/0/MffBjRxXBkxDfNtDGKqBJXRrHzZxSBSgrJvbnbvMf/XL/_O1H0992-XL.jpg",
@@ -1155,7 +1155,7 @@ export const galleryData = [
   {
     "id": "i-f6BHPxK",
     "title": "Midwest Landscape Photography In Fine Art",
-    "description": "A fine art landscape photograph of the Midwestern landscape, shaped by stillness rather than spectacle. Rather than documenting scenery, this work reveals the quiet presence that defines a region. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the land holds its breath between seasons. Part of Wayne Heim's Midwestern landscape photography series. © Wayne Heim",
+    "description": "This Midwest landscape photograph carries the feeling of a quiet summer evening, where land and sky settle into a restrained regional mood. As traditional fine art landscape photography, it creates wall art rooted in open space, seasonal light, and place.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-f6BHPxK/0/NbD36VRkgCvCFM47NVXLPLN8g5wR8sn92wrNCF2PM/XL/20230727_195121-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-f6BHPxK/0/NbD36VRkgCvCFM47NVXLPLN8g5wR8sn92wrNCF2PM/XL/20230727_195121-XL.jpg",
@@ -1185,7 +1185,7 @@ export const galleryData = [
   {
     "id": "i-8hTCKbn",
     "title": "Midwest Landscape Photography In Fine Art",
-    "description": "Delve into midwest landscape photography via this midwest landscape photography by Wayne Heim. Highlighting midwest landscape photography through midwest landscape photography and midwest landscape photography, it's great for collectors interested in midwest landscape photography. © Wayne Heim",
+    "description": "A Midwestern fine art landscape holds the frame with subtle light, natural texture, and familiar terrain. This traditional landscape photograph creates regional wall art shaped by quiet atmosphere and the understated beauty of the heartland.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-8hTCKbn/0/NgnMfs685p73KB4cCMF5dcfKmGrfbKNdH5d4Ngzr7/XL/_O1H1036-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-8hTCKbn/0/NgnMfs685p73KB4cCMF5dcfKmGrfbKNdH5d4Ngzr7/XL/_O1H1036-XL.jpg",
@@ -1215,7 +1215,7 @@ export const galleryData = [
   {
     "id": "i-qLRXb8W",
     "title": "The Essence Of Midwest Landscape Photography",
-    "description": "A fine art landscape of the Midwestern landscape, shaped by solitude rather than spectacle. Wayne Heim's fine art landscape photography treats place as emotional geography - not destination, but atmosphere. Light, tone, and composition shape a quiet narrative rooted in place and memory - where distance and silence are companions here. Part of Wayne Heim's Midwestern landscape photography series. © Wayne Heim",
+    "description": "The essence of Midwest landscape photography appears in the stillness of trees, land, and open air. This traditional fine art photograph creates regional wall art rooted in quiet distance, natural texture, and the emotional geography of familiar places.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-qLRXb8W/0/KV8SGcJjMjTr6f43VHf8Xr9GvSrdWM8NWSxN4bdgW/XL/_O1H1037-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-qLRXb8W/0/KV8SGcJjMjTr6f43VHf8Xr9GvSrdWM8NWSxN4bdgW/XL/_O1H1037-XL.jpg",
@@ -1245,7 +1245,7 @@ export const galleryData = [
   {
     "id": "i-kpzgc6N",
     "title": "Midwest Landscape Photography And Midwest Landscape Photography",
-    "description": "A fine art landscape photograph of the Midwestern landscape, shaped by stillness rather than spectacle. Approached with restraint and precision, each frame captures the character of the land rather than its postcard appeal. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the land holds its breath between seasons. Part of Wayne Heim's Midwestern landscape photography series. © Wayne Heim",
+    "description": "A Midwestern landscape is shaped by open space, soft light, and the quiet structure of regional terrain. This traditional fine art landscape photograph creates wall art rooted in place, restraint, and the stillness that defines much of the Midwest.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-kpzgc6N/0/KjXVpFc7Fz3T84pRbVmbJv29nH2NJxfF24TJb6xs6/XL/_O1H1043-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-kpzgc6N/0/KjXVpFc7Fz3T84pRbVmbJv29nH2NJxfF24TJb6xs6/XL/_O1H1043-XL.jpg",
@@ -1275,7 +1275,7 @@ export const galleryData = [
   {
     "id": "i-VM79mV2",
     "title": "Midwest Landscape Photography Moment",
-    "description": "A fine art landscape of the Midwestern landscape, shaped by solitude rather than spectacle. Rather than documenting scenery, this work reveals the quiet presence that defines a region. Light, tone, and composition shape a quiet narrative rooted in place and memory - where distance and silence are companions here. Part of Wayne Heim's Midwestern landscape photography series. © Wayne Heim",
+    "description": "A quiet Midwest landscape moment unfolds through natural light, field, and the familiar rhythm of regional land. This traditional fine art landscape photograph creates wall art shaped by atmosphere, season, and the understated beauty of place.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-VM79mV2/0/Km9hWGGXJxVWSSqLWmNgR4K2qdWRbPzzhGXd5bhfZ/XL/_O1H1044-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-VM79mV2/0/Km9hWGGXJxVWSSqLWmNgR4K2qdWRbPzzhGXd5bhfZ/XL/_O1H1044-XL.jpg",
@@ -1305,7 +1305,7 @@ export const galleryData = [
   {
     "id": "i-sHqStwk",
     "title": "The Essence Of Midwest Landscape Photography",
-    "description": "A fine art landscape photograph of the Midwestern landscape, shaped by stillness rather than spectacle. Wayne Heim's fine art landscape photography treats place as emotional geography - not destination, but atmosphere. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the land holds its breath between seasons. Part of Wayne Heim's Midwestern landscape photography series. © Wayne Heim",
+    "description": "A Midwestern landscape rests in stillness, using light, space, and natural texture to carry the scene. This traditional fine art photograph creates Midwest wall art rooted in quiet observation, regional land, and the emotional pull of familiar countryside.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-sHqStwk/0/KG7RZCtvNJjXKQTfn265gLrBG2jrdf2cGrRvkKQFb/XL/_O1H1045-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-sHqStwk/0/KG7RZCtvNJjXKQTfn265gLrBG2jrdf2cGrRvkKQFb/XL/_O1H1045-XL.jpg",
@@ -1335,7 +1335,7 @@ export const galleryData = [
   {
     "id": "i-43SfvFJ",
     "title": "Midwest Landscape Photography Landscape",
-    "description": "A fine art landscape of the Midwestern landscape, shaped by solitude rather than spectacle. Approached with restraint and precision, each frame captures the character of the land rather than its postcard appeal. Light, tone, and composition shape a quiet narrative rooted in place and memory - where distance and silence are companions here. Part of Wayne Heim's Midwestern landscape photography series. © Wayne Heim",
+    "description": "This Midwest landscape photograph turns open terrain and natural light into a restrained study of place. The image creates traditional fine art wall art shaped by seasonal atmosphere, quiet land, and the grounded character of the region.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-43SfvFJ/0/Ln9CWsztf94nK9W2wH59FwF8Lw5PV8xr6djZgKSPq/XL/_O1H1048-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-43SfvFJ/0/Ln9CWsztf94nK9W2wH59FwF8Lw5PV8xr6djZgKSPq/XL/_O1H1048-XL.jpg",
@@ -1365,7 +1365,7 @@ export const galleryData = [
   {
     "id": "i-8RHD2km",
     "title": "Midwest Landscape Photography In Fine Art",
-    "description": "A fine art landscape photograph of the Midwestern landscape, shaped by stillness rather than spectacle. Rather than documenting scenery, this work reveals the quiet presence that defines a region. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the land holds its breath between seasons. Part of Wayne Heim's Midwestern landscape photography series. © Wayne Heim",
+    "description": "A Midwest landscape is rendered as fine art through quiet structure, open land, and the subtle movement of light. This traditional landscape photograph creates regional wall art rooted in stillness, natural texture, and the understated beauty of the heartland.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-8RHD2km/0/KqnhLfGtxqxFwQdPbsFGBRjkv654DSM2RQwHSnpbR/XL/_DSF5226-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-8RHD2km/0/KqnhLfGtxqxFwQdPbsFGBRjkv654DSM2RQwHSnpbR/XL/_DSF5226-XL.jpg",
@@ -1395,7 +1395,7 @@ export const galleryData = [
   {
     "id": "i-Mtm6Htz",
     "title": "Capturing Midwest Landscape Photography",
-    "description": "A fine art landscape of the Midwestern landscape, shaped by solitude rather than spectacle. Wayne Heim's fine art landscape photography treats place as emotional geography - not destination, but atmosphere. Light, tone, and composition shape a quiet narrative rooted in place and memory - where distance and silence are companions here. Part of Wayne Heim's Midwestern landscape photography series. © Wayne Heim",
+    "description": "A panoramic Midwest landscape stretches across the frame with open sky, quiet land, and regional atmosphere. This traditional fine art landscape photograph creates wall art rooted in scale, stillness, and the calm presence of the Midwestern countryside.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-Mtm6Htz/0/K4FJX58Nk2KskTm6WH5CrkqTMPXLjVQKKpM35xX3c/XL/_O1H1068-Pano-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-Mtm6Htz/0/K4FJX58Nk2KskTm6WH5CrkqTMPXLjVQKKpM35xX3c/XL/_O1H1068-Pano-Edit-XL.jpg",
