@@ -25,7 +25,7 @@ export const galleryData = [
   {
     "id": "i-7VD9zVJ",
     "title": "Venice Canal - Photography by Wayne Heim",
-    "description": "Fine art landscape & architectural photography of the Alps, Venice, Murano and Burano, Italy.",
+    "description": "A Venice canal becomes maritime fine art photography through water, boats, aged architecture, and the quiet rhythm of the city. This traditional transportation photograph creates Venice canal wall art rooted in Italian atmosphere, historic buildings, and the visual poetry of travel by water.",
     "alt": "Venice Canal - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-7VD9zVJ/3/KWtf4kdn9TtnkBmPBv25FxLVDzF5VdRdD7fC2RXc3/XL/P1000873-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-7VD9zVJ/3/KWtf4kdn9TtnkBmPBv25FxLVDzF5VdRdD7fC2RXc3/XL/P1000873-XL.jpg",
@@ -74,7 +74,7 @@ export const galleryData = [
   {
     "id": "i-vbVkS8z",
     "title": "Mather Bunks -- Black & White Photography by Wayne Heim",
-    "description": "Mather Bunks  - one of the seaman's quarters on the William G Mather. ©Wayne Heim",
+    "description": "Seamen's bunks aboard the William G. Mather are rendered as historic ship photography, turning a working vessel's quarters into a quiet study of maritime life. This black and white transportation photograph creates wall art rooted in shipboard history, confined space, and the practical architecture of life on the water.",
     "alt": "Mather Bunks -- Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/William-G-Mather-Ship/i-vbVkS8z/5/MSKsk4w7kp7jDsBZTbRkf3CsKxqMn9Gn7N2sRCKT6/XL/_IMG0301-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/William-G-Mather-Ship/i-vbVkS8z/5/MSKsk4w7kp7jDsBZTbRkf3CsKxqMn9Gn7N2sRCKT6/XL/_IMG0301-XL.jpg",
@@ -107,7 +107,7 @@ export const galleryData = [
   {
     "id": "i-qXc8XpL",
     "title": "Lynx On Lake Erie - Photography by Wayne Heim",
-    "description": "Lynx -  the Tall Ship Lynx sails on Lake Erie in a visit to Cleveland, Ohio ©Wayne Heim",
+    "description": "The tall ship Lynx sails on Lake Erie during a visit to Cleveland, Ohio, bringing sail, water, and historic maritime design into one frame. This fine art boat photograph creates Lake Erie wall art rooted in tall ship photography, motion, and the romance of traditional sailing vessels.",
     "alt": "Lynx On Lake Erie - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-qXc8XpL/6/NZH422kZLssXfwKzRdH7zKSHWh7jx2FpphNMzWvQw/XL/WAYNE_HEIM_810-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-qXc8XpL/6/NZH422kZLssXfwKzRdH7zKSHWh7jx2FpphNMzWvQw/XL/WAYNE_HEIM_810-Edit-XL.jpg",
@@ -140,7 +140,7 @@ export const galleryData = [
   {
     "id": "i-hQ6LXhh",
     "title": "Parade of Tall Ships     photography by Wayne Heim",
-    "description": "Parade of the Tall Ship when they visited Cleveland, Ohio on Lake Erie. ©Wayne Heim",
+    "description": "A parade of tall ships moves through Cleveland Harbor on Lake Erie, turning sail, water, and gathering vessels into a maritime fine art photograph. This transportation image creates harbor wall art rooted in tall ship photography, regional history, and the spectacle of ships under sail.",
     "alt": "Parade of Tall Ships     photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-hQ6LXhh/4/Lr9cq5FFnSzTrvFSDfMMjXw3NLPZc9HS3SKmFBmhx/XL/WAYNE_HEIM_822-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-hQ6LXhh/4/Lr9cq5FFnSzTrvFSDfMMjXw3NLPZc9HS3SKmFBmhx/XL/WAYNE_HEIM_822-XL.jpg",
@@ -174,7 +174,7 @@ export const galleryData = [
   {
     "id": "i-TkMGVM8",
     "title": "Bringing Up the Rear  Photography  by Wayne hEIM",
-    "description": "Final ship enters Cleveland Harbor during the Parade of Tall Ship. ©Wayne Heim",
+    "description": "The final tall ship enters Cleveland Harbor during the parade, carrying the quiet drama of arrival and procession. This maritime transportation photograph creates Lake Erie wall art rooted in harbor movement, sailing history, and the visual rhythm of ships coming home.",
     "alt": "Bringing Up the Rear  Photography  by Wayne hEIM",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-TkMGVM8/4/LCznqLpKQQ29MKFvPZtngqQZcgWv9jwXWXvkTVmHs/XL/_WEH7035-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-TkMGVM8/4/LCznqLpKQQ29MKFvPZtngqQZcgWv9jwXWXvkTVmHs/XL/_WEH7035-XL.jpg",
@@ -206,7 +206,7 @@ export const galleryData = [
   {
     "id": "i-DJqFfsq",
     "title": "Mast Before the Storm   Black & White Photography by Wayne Heim",
-    "description": "Tall ship mast before the foreboding clouds.\n©Wayne Heim",
+    "description": "A tall ship mast rises before foreboding storm clouds, turning rigging, sky, and tension into black and white maritime photography. This traditional fine art transportation image creates tall ship wall art rooted in weather, structure, and the charged silence before a storm.",
     "alt": "Mast Before the Storm   Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-DJqFfsq/5/LF7NM7ppSC89VCP43sCDqWr9cjJGJxsmcZzT2NvNP/XL/WAYNE_HEIM_827-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-DJqFfsq/5/LF7NM7ppSC89VCP43sCDqWr9cjJGJxsmcZzT2NvNP/XL/WAYNE_HEIM_827-XL.jpg",
@@ -236,7 +236,7 @@ export const galleryData = [
   {
     "id": "i-VGdpvbh",
     "title": "Row of Fishing Boats   Photography by Wayne Heim",
-    "description": "Fishing boats docked in the harbor of a village in the Faroe Islands. ©Wayne Heim",
+    "description": "Fishing boats line the harbor of a Faroe Islands village, bringing maritime work, color, and North Atlantic place into a quiet transportation photograph. This fine art boat image creates harbor wall art rooted in fishing culture, village life, and the working rhythm of boats at rest.",
     "alt": "Row of Fishing Boats   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-VGdpvbh/1/M66J3GXWw54Q67jXZQBsq5cp8tbmp4VgnDzZWfcxV/XL/_WHZ9797_tonemapped-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-VGdpvbh/1/M66J3GXWw54Q67jXZQBsq5cp8tbmp4VgnDzZWfcxV/XL/_WHZ9797_tonemapped-Edit-2-XL.jpg",
@@ -267,7 +267,7 @@ export const galleryData = [
   {
     "id": "i-G9v9NvL",
     "title": "The Faroe Boats   Black and White Photography by Wayne Heim",
-    "description": "Fishing boats sit at rest in Faroe Harbor. \n©Wayne Heim",
+    "description": "Fishing boats rest in a Faroe Islands harbor, rendered in black and white with a quiet sense of maritime stillness. This fine art boat photograph creates harbor wall art rooted in North Atlantic weather, working vessels, and the restrained beauty of boats between journeys.",
     "alt": "The Faroe Boats   Black and White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-G9v9NvL/1/MmXZ3HmgCPqxgqSm8wX2MmSmrdHR3zMvnQXkfBpQT/XL/_WHZ9798_tonemapped-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-G9v9NvL/1/MmXZ3HmgCPqxgqSm8wX2MmSmrdHR3zMvnQXkfBpQT/XL/_WHZ9798_tonemapped-Edit-2-XL.jpg",
@@ -298,7 +298,7 @@ export const galleryData = [
   {
     "id": "i-X3Cn7X9",
     "title": "© Wayne Heim '21",
-    "description": "© Wayne Heim '21",
+    "description": "A boat and water scene becomes traditional maritime fine art photography through shape, surface, and quiet transportation detail. This boat photograph creates wall art rooted in movement, utility, and the visual character of vessels held in a single working moment.",
     "alt": "© Wayne Heim '21",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-X3Cn7X9/0/M95j8jPX82bFpb3jXpPSr57wQs2ZDVFL2vvL2vTVn/XL/_ANA3176-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-X3Cn7X9/0/M95j8jPX82bFpb3jXpPSr57wQs2ZDVFL2vvL2vTVn/XL/_ANA3176-Edit-XL.jpg",
@@ -320,7 +320,7 @@ export const galleryData = [
   {
     "id": "i-DS9wCpW",
     "title": "© Wayne Heim '21",
-    "description": "© Wayne Heim '21",
+    "description": "A military transportation subject appears within the Boats gallery, so the description stays safely broad rather than forcing a maritime claim. This traditional fine art transportation photograph creates wall art rooted in machinery, structure, and the historical presence of military vehicle design.",
     "alt": "© Wayne Heim '21",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-DS9wCpW/1/MnFhHXGCf53hLFXxX4Mhwsjhx74VcdFhBqwcBnXZ3/XL/_ANA3291-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-DS9wCpW/1/MnFhHXGCf53hLFXxX4Mhwsjhx74VcdFhBqwcBnXZ3/XL/_ANA3291-Edit-Edit-XL.jpg",
@@ -342,7 +342,7 @@ export const galleryData = [
   {
     "id": "i-X88ZNb4",
     "title": "© Wayne Heim '21",
-    "description": "© Wayne Heim '21",
+    "description": "A military transportation detail is treated as fine art through form, surface, and mechanical presence. This traditional transportation photograph creates wall art rooted in historic vehicle design, utilitarian structure, and the visual weight of engineered equipment.",
     "alt": "© Wayne Heim '21",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-X88ZNb4/1/MGWTc2XH3Ztrh3stZnJf8mmnpBb3s484cmLPkzzBz/XL/_ANA3303-Edit-2-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-X88ZNb4/1/MGWTc2XH3Ztrh3stZnJf8mmnpBb3s484cmLPkzzBz/XL/_ANA3303-Edit-2-2-XL.jpg",
@@ -364,7 +364,7 @@ export const galleryData = [
   {
     "id": "i-wTvbzbV",
     "title": "© Wayne Heim '21",
-    "description": "© Wayne Heim '21",
+    "description": "A military transportation scene becomes fine art through texture, structure, and the disciplined geometry of machinery. This traditional transportation photograph creates wall art rooted in historical equipment, mechanical design, and the quiet force of utilitarian form.",
     "alt": "© Wayne Heim '21",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-wTvbzbV/1/KMDXkjwc9j8JtzwDFFBN5tgXrw7xDpBjkSXjkxv5D/XL/_ANA3350-Enhanced-Edit-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-wTvbzbV/1/KMDXkjwc9j8JtzwDFFBN5tgXrw7xDpBjkSXjkxv5D/XL/_ANA3350-Enhanced-Edit-Edit-2-XL.jpg",
