@@ -25,7 +25,7 @@ export const galleryData = [
   {
     "id": "i-9nbhQs2",
     "title": "Capturing International Landscape Photography In The-Faroe-Islands",
-    "description": "A fine art landscape photograph of the Faroe Islands, shaped by isolation rather than spectacle. Wayne Heim's fine art landscape photography treats place as emotional geography - not destination, but atmosphere. Light, tone, and composition shape a quiet narrative rooted in place and memory - where remoteness is the point, not the problem. Part of Wayne Heim's international landscape photography series. © Wayne Heim",
+    "description": "A wide Faroe Islands panorama turns remoteness, cloud, and North Atlantic distance into traditional fine art landscape photography. This international landscape photograph creates Faroe Islands coastal wall art shaped by isolation, atmosphere, and the quiet power of place.",
     "alt": "Faroe Panorama    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-9nbhQs2/A",
     "keywords": [
@@ -50,7 +50,7 @@ export const galleryData = [
   {
     "id": "i-8fp2dv2",
     "title": "Waterfall in Faroe   Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "A waterfall cuts through the Faroe Islands landscape, where water, rock, and steep green ground meet under North Atlantic weather. This traditional fine art landscape photograph brings Faroe Islands waterfall photography into a restrained, atmospheric wall art study.",
     "alt": "Faroe Panorama    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-8fp2dv2/A",
     "keywords": [
@@ -89,7 +89,7 @@ export const galleryData = [
   {
     "id": "i-vGqmqRv",
     "title": "Faroe Coast   Black and White Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "The Faroe coast is rendered in black and white, reducing cliffs, sea, and weather to tone and structure. This traditional fine art landscape photograph creates Faroe Islands coastal wall art rooted in North Atlantic force and quiet isolation.",
     "alt": "Waterfall in Faroe   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-vGqmqRv/A",
     "keywords": [
@@ -128,7 +128,7 @@ export const galleryData = [
   {
     "id": "i-XFfkRMj",
     "title": "Coastline of Faroes 3 Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "The coastline of the Faroes stretches through layered cliffs, sea, and remote island atmosphere. This traditional fine art landscape photograph creates Faroe Islands coastal wall art shaped by rugged shorelines, distance, and North Atlantic light.",
     "alt": "Faroe Coast   Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-XFfkRMj/A",
     "keywords": [
@@ -167,7 +167,7 @@ export const galleryData = [
   {
     "id": "i-d7Lpt4h",
     "title": "Coastline of Faroes  21   Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "A Faroe Islands coastline scene gathers cliff, water, and island weather into a rugged traditional landscape photograph. The image works as North Atlantic coastal wall art, preserving the hard edge and quiet scale of the Faroes.",
     "alt": "Coastline of Faroes 3 Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-d7Lpt4h/A",
     "keywords": [
@@ -206,7 +206,7 @@ export const galleryData = [
   {
     "id": "i-ZWmNjfX",
     "title": "Faroe Coast 2  Black and white  Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "This black and white Faroe coast photograph turns rock, sea, and sky into a study of tonal weight. As traditional fine art landscape photography, it creates Faroe Islands seascape wall art with a spare, weathered presence.",
     "alt": "Coastline of Faroes  21   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-ZWmNjfX/A",
     "keywords": [
@@ -245,7 +245,7 @@ export const galleryData = [
   {
     "id": "i-cX5zWPd",
     "title": "Faroe Coast 5     Black and White Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "Faroe Coast 5 reduces the island edge to black and white form, where cliffs and water hold the composition with quiet force. This traditional fine art landscape photograph creates Faroe Islands coastal wall art rooted in contrast, weather, and stone.",
     "alt": "Faroe Coast 2  Black and white  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-cX5zWPd/A",
     "keywords": [
@@ -284,7 +284,7 @@ export const galleryData = [
   {
     "id": "i-wPM5mcx",
     "title": "Coastline of Faroes 5  Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "A color view of the Faroe coastline brings green slopes, sea, and cliff forms into a balanced North Atlantic landscape. This traditional fine art landscape photograph creates Faroe Islands wall art shaped by remoteness, texture, and coastal light.",
     "alt": "Faroe Coast 5     Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-wPM5mcx/A",
     "keywords": [
@@ -323,7 +323,7 @@ export const galleryData = [
   {
     "id": "i-qXm2HJW",
     "title": "Faroe Coast with Houses    Black and White Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "Houses sit along the Faroe coast in black and white, giving the landscape a human scale without softening its isolation. This traditional fine art landscape photograph creates Faroe Islands coastal wall art from village, cliff, and sea.",
     "alt": "Coastline of Faroes 5  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-qXm2HJW/A",
     "keywords": [
@@ -362,7 +362,7 @@ export const galleryData = [
   {
     "id": "i-X48TWHK",
     "title": "Coastline Faroes  8   Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "A Faroe Islands coastline opens in color, with village, water, and steep land carrying the frame. This traditional fine art landscape photograph blends North Atlantic landscape photography with the lived character of remote island settlements.",
     "alt": "Faroe Coast with Houses    Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-X48TWHK/A",
     "keywords": [
@@ -401,7 +401,7 @@ export const galleryData = [
   {
     "id": "i-wSSQBMx",
     "title": "Faroe Coast 6  Black and White Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "A road and coastal sweep draw the eye through the Faroe Islands in black and white. This traditional fine art landscape photograph turns shoreline, distance, and island terrain into Faroe Islands coastal wall art with strong tonal restraint.",
     "alt": "Coastline Faroes  8   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-wSSQBMx/A",
     "keywords": [
@@ -440,7 +440,7 @@ export const galleryData = [
   {
     "id": "i-kvxfbSH",
     "title": "Arms into the Sea  Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "Arms of land reach into the sea along the Faroe Islands coast, dividing water and cliff into a powerful natural shape. This traditional fine art landscape photograph creates North Atlantic coastal wall art from rock, sea, and island geometry.",
     "alt": "Faroe Coast 6  Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-kvxfbSH/A",
     "keywords": [
@@ -479,7 +479,7 @@ export const galleryData = [
   {
     "id": "i-swc5Gjw",
     "title": "Faroe Coast 7   Black and White Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "Faroe Coast 7 uses black and white to emphasize the carved edge of the islands against the Atlantic. This traditional fine art landscape photograph creates Faroe Islands seascape wall art shaped by cliff, water, and stark atmosphere.",
     "alt": "Arms into the Sea  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-swc5Gjw/A",
     "keywords": [
@@ -518,7 +518,7 @@ export const galleryData = [
   {
     "id": "i-PzdV5BK",
     "title": "Coastline of Faroes 12  Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "The coastline of the Faroes stretches into a rugged North Atlantic view, where green land meets restless sea. This traditional fine art landscape photograph creates Faroe Islands coastal wall art rooted in distance, weather, and island form.",
     "alt": "Faroe Coast 7   Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-PzdV5BK/A",
     "keywords": [
@@ -557,7 +557,7 @@ export const galleryData = [
   {
     "id": "i-sT8vtJS",
     "title": "Faroe Landscape 2  Black and White    Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "A black and white Faroe landscape turns slope, sea, and sky into a quiet study of shape and tone. This traditional fine art landscape photograph creates international landscape wall art with the remote character of the North Atlantic.",
     "alt": "Coastline of Faroes 12  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-sT8vtJS/A",
     "keywords": [
@@ -596,7 +596,7 @@ export const galleryData = [
   {
     "id": "i-DNRRnjT",
     "title": "Coastline of Faroes 16   Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "A color coastline in the Faroe Islands carries the rhythm of cliff, settlement, and sea. This traditional fine art landscape photograph creates Faroe Islands wall art shaped by remote village life and rugged coastal atmosphere.",
     "alt": "Faroe Landscape 2  Black and White    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-DNRRnjT/A",
     "keywords": [
@@ -635,7 +635,7 @@ export const galleryData = [
   {
     "id": "i-kFxHpZn",
     "title": "Faroe Landscape 2a  Black and White Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "Faroe Landscape 2a is rendered in black and white, emphasizing the island’s hard contours and quiet weather. This traditional fine art landscape photograph creates Faroe Islands coastal wall art with depth, distance, and tonal calm.",
     "alt": "Coastline of Faroes 16   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-kFxHpZn/A",
     "keywords": [
@@ -674,7 +674,7 @@ export const galleryData = [
   {
     "id": "i-zG7QGxD",
     "title": "Coastline of Faroes  17     Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "The Faroe coastline rolls through color, cliff, and sea, carrying the weathered beauty of a remote Atlantic island. This traditional fine art landscape photograph creates Faroe Islands coastal wall art with a strong sense of place.",
     "alt": "Faroe Landscape 2a  Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-zG7QGxD/A",
     "keywords": [
@@ -713,7 +713,7 @@ export const galleryData = [
   {
     "id": "i-NNPr3tv",
     "title": "Coastline of Faroes  19  Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "Coastline of Faroes 19 captures the island edge in color, where land and ocean meet under shifting northern light. This traditional fine art landscape photograph creates North Atlantic wall art rooted in coastal rhythm and island distance.",
     "alt": "Coastline of Faroes  17     Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-NNPr3tv/A",
     "keywords": [
@@ -752,7 +752,7 @@ export const galleryData = [
   {
     "id": "i-4xwHLKT",
     "title": "Faroe Waterfall  6      Black and White Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "A Faroe waterfall becomes black and white fine art, where falling water and dark island terrain create a strong tonal study. This traditional landscape photograph brings Faroe Islands waterfall photography into a quiet, rugged wall art form.",
     "alt": "Coastline of Faroes  19  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-4xwHLKT/A",
     "keywords": [
@@ -791,7 +791,7 @@ export const galleryData = [
   {
     "id": "i-dTscGvh",
     "title": "Faroe Waterfall     Black and White Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "This black and white Faroe waterfall photograph emphasizes water, rock, and the steep pull of the island landscape. It creates traditional fine art wall art from North Atlantic weather, movement, and terrain.",
     "alt": "Faroe Waterfall  6      Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-dTscGvh/A",
     "keywords": [
@@ -830,7 +830,7 @@ export const galleryData = [
   {
     "id": "i-Sx3Tj3N",
     "title": "Faroe Waves    Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "Faroe waves strike the coast with Atlantic force, turning water and rock into a rugged seascape. This traditional fine art landscape photograph creates Faroe Islands coastal wall art shaped by motion, spray, and weather.",
     "alt": "Faroe Waterfall     Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-Sx3Tj3N/A",
     "keywords": [
@@ -869,7 +869,7 @@ export const galleryData = [
   {
     "id": "i-tMP9Lz2",
     "title": "Wavers Crash in the Faroes 7    Black and White Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "Crashing waves in the Faroes become a black and white study of impact, surf, and stone. This traditional fine art landscape photograph creates Faroe Islands seascape wall art with a stark North Atlantic edge.",
     "alt": "Faroe Waves    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-tMP9Lz2/A",
     "keywords": [
@@ -908,7 +908,7 @@ export const galleryData = [
   {
     "id": "i-FGb4VCC",
     "title": "Faroe Wave 2    Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "Faroe Wave 2 captures the sea in motion against the hard island coast. This traditional fine art landscape photograph brings Faroe Islands seascape photography into a color study of water, rock, and Atlantic force.",
     "alt": "Wavers Crash in the Faroes 7    Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-FGb4VCC/A",
     "keywords": [
@@ -947,7 +947,7 @@ export const galleryData = [
   {
     "id": "i-Csb9jdC",
     "title": "Crash Waves in Faroe Islands   5   Black and White Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "Crashing waves in the Faroe Islands are rendered in black and white, emphasizing spray, impact, and coastal strength. This traditional fine art seascape creates wall art rooted in North Atlantic motion and rugged shore.",
     "alt": "Faroe Wave 2    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-Csb9jdC/A",
     "keywords": [
@@ -986,7 +986,7 @@ export const galleryData = [
   {
     "id": "i-3zX2HFQ",
     "title": "Faroe Cattle   Black and White Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "Faroe cattle stand within a black and white island landscape, giving the rugged terrain a quiet living presence. This traditional fine art landscape photograph creates Faroe Islands wall art from pasture, animal life, and remote North Atlantic atmosphere.",
     "alt": "Crash Waves in Faroe Islands   5   Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-3zX2HFQ/A",
     "keywords": [
@@ -1025,7 +1025,7 @@ export const galleryData = [
   {
     "id": "i-5x6QThQ",
     "title": "Tindholmur Islet off Faroe Islands",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "Tindhólmur Islet rises off the Faroe Islands in a dramatic meeting of sea, cliff, and distance. This traditional fine art landscape photograph creates Faroe Islands coastal wall art shaped by iconic island form and North Atlantic isolation.",
     "alt": "Faroe Cattle   Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-5x6QThQ/A",
     "keywords": [
@@ -1064,7 +1064,7 @@ export const galleryData = [
   {
     "id": "i-hwcm6hw",
     "title": "Grazing Faroe Sheep   Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "Grazing sheep settle into the Faroe Islands landscape, where pasture, slope, and weather define the scene. This traditional fine art landscape photograph creates Faroe Islands wall art rooted in rural life and island atmosphere.",
     "alt": "Tindholmur Islet off Faroe Islands",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-hwcm6hw/A",
     "keywords": [
@@ -1103,7 +1103,7 @@ export const galleryData = [
   {
     "id": "i-NwtcFR6",
     "title": "Faroe Sheep     Black and White Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "Faroe sheep are rendered in black and white, turning pasture and animal presence into a quiet island study. This traditional fine art landscape photograph creates Faroe Islands wall art with a spare, pastoral North Atlantic mood.",
     "alt": "Grazing Faroe Sheep   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-NwtcFR6/A",
     "keywords": [
@@ -1142,7 +1142,7 @@ export const galleryData = [
   {
     "id": "i-VSfpDWt",
     "title": "Faroe Coast 12    Black and White Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "Faroe Coast 12 becomes a black and white study of the island edge, where land drops toward the sea in layered tonal form. This traditional fine art landscape photograph creates Faroe Islands coastal wall art with restrained drama.",
     "alt": "Faroe Sheep     Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-VSfpDWt/A",
     "keywords": [
@@ -1181,7 +1181,7 @@ export const galleryData = [
   {
     "id": "i-3rMjx2z",
     "title": "Faroe Coast 13     Black and White Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "Faroe Coast 13 stretches in black and white, emphasizing the rugged sweep of cliff, ocean, and distant island weather. This traditional fine art landscape photograph creates North Atlantic coastal wall art with a strong, quiet presence.",
     "alt": "Faroe Coast 12    Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-3rMjx2z/A",
     "keywords": [
@@ -1220,7 +1220,7 @@ export const galleryData = [
   {
     "id": "i-mz2ZGbZ",
     "title": "Coast of Faroe  2     Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "The Faroe coast opens in color, where steep land and Atlantic water create a remote island landscape. This traditional fine art landscape photograph creates Faroe Islands wall art shaped by sea, slope, and weather.",
     "alt": "Faroe Coast 13     Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-mz2ZGbZ/A",
     "keywords": [
@@ -1259,7 +1259,7 @@ export const galleryData = [
   {
     "id": "i-BBDdJHb",
     "title": "Coast of Faroe 3   Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "Coast of Faroe 3 carries a broad North Atlantic view, joining island cliffs, water, and sky in a calm coastal composition. This traditional fine art landscape photograph creates Faroe Islands coastal wall art rooted in scale and place.",
     "alt": "Coast of Faroe  2     Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-BBDdJHb/A",
     "keywords": [
@@ -1298,7 +1298,7 @@ export const galleryData = [
   {
     "id": "i-2hM9WmS",
     "title": "Faroe Coast 14    Black and White Photography by Wayne Heim",
-    "description": "Large Format fine art landscape photography of the Faroe Islands.",
+    "description": "Faroe Coast 14 is rendered in black and white as a large-format landscape study, emphasizing cliff shape, water, and atmospheric distance. This traditional fine art photograph creates Faroe Islands seascape wall art with a strong panoramic feel.",
     "alt": "Coast of Faroe 3   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-2hM9WmS/A",
     "keywords": [
@@ -1337,7 +1337,7 @@ export const galleryData = [
   {
     "id": "i-zfDT2n9",
     "title": "Coast of Faroe 5   Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "Coast of Faroe 5 captures the island shoreline in color, where green land meets open Atlantic water. This traditional fine art landscape photograph creates Faroe Islands coastal wall art shaped by texture, distance, and weather.",
     "alt": "Faroe Coast 14    Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-zfDT2n9/A",
     "keywords": [
@@ -1376,7 +1376,7 @@ export const galleryData = [
   {
     "id": "i-m44WWcP",
     "title": "Coast of Faroe  6   Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "The Faroe coastline stretches through layers of land and sea, holding the quiet drama of a remote North Atlantic island. This traditional fine art landscape photograph creates Faroe Islands wall art with a clean coastal presence.",
     "alt": "Coast of Faroe 5   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-m44WWcP/A",
     "keywords": [
@@ -1415,7 +1415,7 @@ export const galleryData = [
   {
     "id": "i-4cmkwMH",
     "title": "Coast of Faroe 7    Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "Coast of Faroe 7 turns the rugged island edge into a sweeping color landscape. This traditional fine art photograph creates Faroe Islands coastal wall art rooted in cliff structure, ocean distance, and atmospheric light.",
     "alt": "Coast of Faroe  6   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-4cmkwMH/A",
     "keywords": [
@@ -1454,7 +1454,7 @@ export const galleryData = [
   {
     "id": "i-5BrczB7",
     "title": "Sunset Over Faroe Sea     Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "Sunset settles over the Faroe sea, bringing color and quiet to a remote North Atlantic horizon. This traditional fine art landscape photograph creates Faroe Islands sunset wall art shaped by water, sky, and island solitude.",
     "alt": "Coast of Faroe 7    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-5BrczB7/A",
     "keywords": [
@@ -1493,7 +1493,7 @@ export const galleryData = [
   {
     "id": "i-F3t7JCp",
     "title": "Faroe Rainbow 3    Black and White Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "A Faroe rainbow is rendered in black and white, transforming weather and light into a tonal landscape study. This traditional fine art photograph creates Faroe Islands wall art from cloud, atmosphere, and the fleeting structure of rain.",
     "alt": "Sunset Over Faroe Sea     Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-F3t7JCp/A",
     "keywords": [
@@ -1532,7 +1532,7 @@ export const galleryData = [
   {
     "id": "i-vMpVqqt",
     "title": "End of the Faroe Rainbow   Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "The end of a Faroe rainbow touches the island landscape with a brief, luminous gesture. This traditional fine art landscape photograph creates Faroe Islands wall art shaped by weather, color, and North Atlantic atmosphere.",
     "alt": "Faroe Rainbow 3    Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-vMpVqqt/A",
     "keywords": [
@@ -1571,7 +1571,7 @@ export const galleryData = [
   {
     "id": "i-TLCtbSJ",
     "title": "Rainbow on Faroe   Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "A rainbow crosses the Faroe Islands, joining land, water, and cloud in a moment of shifting weather. This traditional fine art landscape photograph creates Faroe Islands wall art with color, atmosphere, and remote island drama.",
     "alt": "End of the Faroe Rainbow   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-TLCtbSJ/A",
     "keywords": [
@@ -1610,7 +1610,7 @@ export const galleryData = [
   {
     "id": "i-g92RtVZ",
     "title": "Rainbow Over the Bay    Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "A rainbow arcs over the bay in the Faroe Islands, turning the harbor and hills into a quiet weather-born scene. This traditional fine art landscape photograph creates North Atlantic wall art rooted in light, water, and island mood.",
     "alt": "Rainbow on Faroe   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-g92RtVZ/A",
     "keywords": [
@@ -1649,7 +1649,7 @@ export const galleryData = [
   {
     "id": "i-GtHXZzZ",
     "title": "Sunset over Faroe Islands   Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "Sunset over the Faroe Islands brings warmth to the sea and cliffs, softening the remote landscape without losing its strength. This traditional fine art landscape photograph creates Faroe Islands coastal wall art shaped by evening light and Atlantic distance.",
     "alt": "Rainbow Over the Bay    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-GtHXZzZ/A",
     "keywords": [
@@ -1688,7 +1688,7 @@ export const galleryData = [
   {
     "id": "i-Mr6swzM",
     "title": "Coast of Faroe  12     Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "Coast of Faroe 12 holds the island edge in color, where water and land meet under shifting northern light. This traditional fine art landscape photograph creates Faroe Islands coastal wall art with atmosphere, texture, and restraint.",
     "alt": "Sunset over Faroe Islands   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-Mr6swzM/A",
     "keywords": [
@@ -1727,7 +1727,7 @@ export const galleryData = [
   {
     "id": "i-6ksmdC9",
     "title": "Faroe Road toe the Sea 2   Black and White Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "A road leads toward the sea in black and white, guiding the viewer through the Faroe Islands landscape. This traditional fine art photograph creates Faroe Islands wall art from road, coast, and the pull of North Atlantic distance.",
     "alt": "Coast of Faroe  12     Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-6ksmdC9/A",
     "keywords": [
@@ -1766,7 +1766,7 @@ export const galleryData = [
   {
     "id": "i-xqHQmLS",
     "title": "Landscape of Faroe 3   Black and White Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "Landscape of Faroe 3 is rendered in black and white, emphasizing broad island shapes, weather, and tonal depth. This traditional fine art landscape photograph creates Faroe Islands wall art with quiet strength and remote atmosphere.",
     "alt": "Faroe Road toe the Sea 2   Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-xqHQmLS/A",
     "keywords": [
@@ -1805,7 +1805,7 @@ export const galleryData = [
   {
     "id": "i-n24658z",
     "title": "Landscape of Faroe 2 Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "Landscape of Faroe 2 uses color to hold the island’s rolling land, water, and North Atlantic light. This traditional fine art landscape photograph creates Faroe Islands wall art rooted in openness, texture, and place.",
     "alt": "Landscape of Faroe 3   Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-n24658z/A",
     "keywords": [
@@ -1844,7 +1844,7 @@ export const galleryData = [
   {
     "id": "i-qwGRQLs",
     "title": "Faroe Coast  18      Black and White Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "Faroe Coast 18 becomes a black and white coastal study, where cliffs and water shape the island’s hard edge. This traditional fine art landscape photograph creates Faroe Islands seascape wall art with strong tonal atmosphere.",
     "alt": "Landscape of Faroe 2 Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-qwGRQLs/A",
     "keywords": [
@@ -1883,7 +1883,7 @@ export const galleryData = [
   {
     "id": "i-BnT4j9H",
     "title": "Faroe Stream  Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "A Faroe stream moves through the island landscape, adding water, line, and quiet motion to the rugged terrain. This traditional fine art landscape photograph creates Faroe Islands wall art from stream, slope, and North Atlantic weather.",
     "alt": "Faroe Coast  18      Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-BnT4j9H/A",
     "keywords": [
@@ -1922,7 +1922,7 @@ export const galleryData = [
   {
     "id": "i-sqBFkqC",
     "title": "Faroe Stream 7    Black and White Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "Faroe Stream 7 is rendered in black and white, reducing water and hillside to tone, movement, and form. This traditional fine art landscape photograph creates Faroe Islands wall art with a quiet, graphic presence.",
     "alt": "Faroe Stream  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-sqBFkqC/A",
     "keywords": [
@@ -1961,7 +1961,7 @@ export const galleryData = [
   {
     "id": "i-jsKpN4G",
     "title": "Landscape of Faroe  7    Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "Landscape of Faroe 7 gathers open land, weather, and distant island shape into a broad traditional landscape photograph. This Faroe Islands wall art piece carries the remote stillness of the North Atlantic.",
     "alt": "Faroe Stream 7    Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-jsKpN4G/A",
     "keywords": [
@@ -2000,7 +2000,7 @@ export const galleryData = [
   {
     "id": "i-8PwBb78",
     "title": "Faroe Stream with Gate  Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "A stream and gate create a human threshold within the Faroe Islands landscape, balancing rural detail with open terrain. This traditional fine art landscape photograph creates Faroe Islands wall art rooted in water, pasture, and place.",
     "alt": "Landscape of Faroe  7    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-8PwBb78/A",
     "keywords": [
@@ -2039,7 +2039,7 @@ export const galleryData = [
   {
     "id": "i-G4wkRxM",
     "title": "Faroe Gate     Black and White Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "A Faroe gate becomes black and white landscape detail, set within the larger language of stream, field, and island weather. This traditional fine art photograph creates Faroe Islands wall art with rural restraint and quiet structure.",
     "alt": "Faroe Stream with Gate  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-G4wkRxM/A",
     "keywords": [
@@ -2078,7 +2078,7 @@ export const galleryData = [
   {
     "id": "i-q62Pgf9",
     "title": "Faroe Stream 5    Black and White Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "Faroe Stream 5 turns water and land into a black and white study of movement through remote terrain. This traditional fine art landscape photograph creates Faroe Islands wall art shaped by stream, slope, and tonal calm.",
     "alt": "Faroe Gate     Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-q62Pgf9/A",
     "keywords": [
@@ -2117,7 +2117,7 @@ export const galleryData = [
   {
     "id": "i-XHtpBtn",
     "title": "Faroe Stream  3  Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "A Faroe stream runs through the landscape in color, carrying water across green ground beneath North Atlantic skies. This traditional fine art landscape photograph creates Faroe Islands wall art from quiet motion and island atmosphere.",
     "alt": "Faroe Stream 5    Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-XHtpBtn/A",
     "keywords": [
@@ -2156,7 +2156,7 @@ export const galleryData = [
   {
     "id": "i-jBj2bt5",
     "title": "Faroe Stream 3    Black and White Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "Faroe Stream 3 is rendered in black and white, emphasizing the graphic path of water through the island landscape. This traditional fine art photograph creates Faroe Islands wall art rooted in flow, texture, and restraint.",
     "alt": "Faroe Stream  3  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-jBj2bt5/A",
     "keywords": [
@@ -2195,7 +2195,7 @@ export const galleryData = [
   {
     "id": "i-xr3P9wD",
     "title": "Faroe Stream 4    Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "Faroe Stream 4 follows water through the island terrain, turning a small movement into a calm landscape structure. This traditional fine art photograph creates Faroe Islands wall art with water, land, and quiet northern color.",
     "alt": "Faroe Stream 3    Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-xr3P9wD/A",
     "keywords": [
@@ -2234,7 +2234,7 @@ export const galleryData = [
   {
     "id": "i-pd5cVMb",
     "title": "Faroe Coast  20     Black and White Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "Faroe Coast 20 in black and white studies the rugged shoreline through cliff, ocean, and weathered tonal contrast. This traditional fine art landscape photograph creates Faroe Islands seascape wall art with a strong North Atlantic mood.",
     "alt": "Faroe Stream 4    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-pd5cVMb/A",
     "keywords": [
@@ -2273,7 +2273,7 @@ export const galleryData = [
   {
     "id": "i-szBvk3H",
     "title": "Faroe Stream 2   Black and White Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "Faroe Stream 2 becomes a black and white landscape study, where water and dark ground create a restrained island composition. This traditional fine art photograph creates Faroe Islands wall art from motion, texture, and quiet terrain.",
     "alt": "Faroe Coast  20     Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-szBvk3H/A",
     "keywords": [
@@ -2312,7 +2312,7 @@ export const galleryData = [
   {
     "id": "i-gGV3jHF",
     "title": "Faroe Landscape  12   black and white Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "Faroe Landscape 12 is rendered in black and white, giving the island’s landforms a spare and timeless presence. This traditional fine art landscape photograph creates Faroe Islands wall art rooted in tone, weather, and remoteness.",
     "alt": "Faroe Stream 2   Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-gGV3jHF/A",
     "keywords": [
@@ -2351,7 +2351,7 @@ export const galleryData = [
   {
     "id": "i-bQ5rkvz",
     "title": "Faroe Waterfall   Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "A Faroe waterfall moves through steep island terrain, bringing water and vertical force into the landscape. This traditional fine art photograph creates Faroe Islands waterfall wall art shaped by movement, rock, and North Atlantic atmosphere.",
     "alt": "Faroe Landscape  12   black and white Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-bQ5rkvz/A",
     "keywords": [
@@ -2390,7 +2390,7 @@ export const galleryData = [
   {
     "id": "i-B6RmswN",
     "title": "Faroe Cemetery   Black and White Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "A Faroe cemetery is rendered in black and white, placing memory and place within the island landscape. This traditional fine art landscape photograph creates Faroe Islands wall art rooted in stone, weather, and quiet human presence.",
     "alt": "Faroe Waterfall   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-B6RmswN/A",
     "keywords": [
@@ -2429,7 +2429,7 @@ export const galleryData = [
   {
     "id": "i-8VXpK7w",
     "title": "Faroe Waterfall  5   Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "Faroe Waterfall 5 captures falling water within the rugged island landscape, balancing motion with a sense of remote stillness. This traditional fine art landscape photograph creates Faroe Islands waterfall wall art with depth and atmosphere.",
     "alt": "Faroe Cemetery   Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-8VXpK7w/A",
     "keywords": [
@@ -2468,7 +2468,7 @@ export const galleryData = [
   {
     "id": "i-99HTVBx",
     "title": "Faroe Landscape  11a  black and white Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "Faroe Landscape 11a becomes black and white wall art, reducing the island scene to form, distance, and tonal weather. This traditional fine art landscape photograph carries the spare force of the North Atlantic.",
     "alt": "Faroe Waterfall  5   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-99HTVBx/A",
     "keywords": [
@@ -2507,7 +2507,7 @@ export const galleryData = [
   {
     "id": "i-fStbcJ8",
     "title": "Faroe Pony  Black and White Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "A Faroe pony stands within a black and white island landscape, giving the remote scene a quiet living center. This traditional fine art landscape photograph creates Faroe Islands wall art from animal presence, weather, and open terrain.",
     "alt": "Faroe Landscape  11a  black and white Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-fStbcJ8/A",
     "keywords": [
@@ -2546,7 +2546,7 @@ export const galleryData = [
   {
     "id": "i-SpQjFwx",
     "title": "Faroe Landscape 11  Black and White Photography",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "Faroe Landscape 11 is rendered in black and white, emphasizing the island’s rough landforms and quiet distance. This traditional fine art landscape photograph creates Faroe Islands wall art shaped by tone, atmosphere, and isolation.",
     "alt": "Faroe Pony  Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-SpQjFwx/A",
     "keywords": [
@@ -2585,7 +2585,7 @@ export const galleryData = [
   {
     "id": "i-dzSgp9g",
     "title": "Landscape of Faroe  8  Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "Landscape of Faroe 8 captures the island terrain in color, where land, weather, and remote atmosphere carry the image. This traditional fine art landscape photograph creates Faroe Islands wall art rooted in North Atlantic place.",
     "alt": "Faroe Landscape 11  Black and White Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-dzSgp9g/A",
     "keywords": [
@@ -2624,7 +2624,7 @@ export const galleryData = [
   {
     "id": "i-qH4KKbv",
     "title": "Faroe Waterfall  7    Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "Faroe Waterfall 7 brings falling water into a rugged island setting, balancing motion with quiet landscape weight. This traditional fine art photograph creates Faroe Islands waterfall wall art shaped by stream, slope, and weather.",
     "alt": "Landscape of Faroe  8  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-qH4KKbv/A",
     "keywords": [
@@ -2663,7 +2663,7 @@ export const galleryData = [
   {
     "id": "i-tv9cmjM",
     "title": "Faroe Waterfall 2     Black and White Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "Faroe Waterfall 2 is rendered in black and white, turning water and land into a strong tonal study. This traditional fine art landscape photograph creates Faroe Islands waterfall wall art with a restrained North Atlantic mood.",
     "alt": "Faroe Waterfall  7    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-tv9cmjM/A",
     "keywords": [
@@ -2702,7 +2702,7 @@ export const galleryData = [
   {
     "id": "i-WMCS6Xq",
     "title": "Coast of Faroe 14    Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "Coast of Faroe 14 opens onto the island edge in color, where sea, slope, and distant land form a quiet coastal rhythm. This traditional fine art landscape photograph creates Faroe Islands seascape wall art.",
     "alt": "Faroe Waterfall 2     Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-WMCS6Xq/A",
     "keywords": [
@@ -2741,7 +2741,7 @@ export const galleryData = [
   {
     "id": "i-g3cjMWB",
     "title": "Faroe Landscape 8    black and White Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "Faroe Landscape 8 in black and white emphasizes the spare structure of the island terrain. This traditional fine art landscape photograph creates Faroe Islands wall art from tone, weather, and remote land.",
     "alt": "Coast of Faroe 14    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-g3cjMWB/A",
     "keywords": [
@@ -2780,7 +2780,7 @@ export const galleryData = [
   {
     "id": "i-cbzQ7mj",
     "title": "Faroe Landscape 4 Black and white Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "Faroe Landscape 4 is rendered in black and white as a broad study of island shape and atmosphere. This traditional fine art landscape photograph creates Faroe Islands wall art with a strong sense of distance and restraint.",
     "alt": "Faroe Landscape 8    black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-cbzQ7mj/A",
     "keywords": [
@@ -2860,7 +2860,7 @@ export const galleryData = [
   {
     "id": "i-smLKRJH",
     "title": "Landscape of Faroe 13  Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "Landscape of Faroe 13 captures the island’s sweeping landforms in color, balancing green terrain with North Atlantic atmosphere. This traditional fine art landscape photograph creates Faroe Islands wall art rooted in scale and place.",
     "alt": "Landscape of Faroe 12 Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-smLKRJH/A",
     "keywords": [
@@ -2899,7 +2899,7 @@ export const galleryData = [
   {
     "id": "i-SFHZKkz",
     "title": "Faroe Waves 3   Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "Faroe Waves 3 studies the Atlantic as it moves against the island coast. This traditional fine art landscape photograph creates Faroe Islands seascape wall art shaped by water, rock, and coastal force.",
     "alt": "Landscape of Faroe 13  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-SFHZKkz/A",
     "keywords": [
@@ -2938,7 +2938,7 @@ export const galleryData = [
   {
     "id": "i-6q5gXJP",
     "title": "Faroe Waves 4   Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "Faroe Waves 4 captures the sea’s movement along the island edge, where surf and rock form a rugged coastal rhythm. This traditional fine art landscape photograph creates Faroe Islands wall art with North Atlantic energy.",
     "alt": "Faroe Waves 3   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-6q5gXJP/A",
     "keywords": [
@@ -2977,7 +2977,7 @@ export const galleryData = [
   {
     "id": "i-zSqxXtw",
     "title": "Faroe Waves  5    Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "Faroe Waves 5 turns the restless Atlantic into a color seascape of motion, surface, and coastal impact. This traditional fine art landscape photograph creates Faroe Islands seascape wall art shaped by water and weather.",
     "alt": "Faroe Waves 4   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-zSqxXtw/A",
     "keywords": [
@@ -3016,7 +3016,7 @@ export const galleryData = [
   {
     "id": "i-m2wzGs2",
     "title": "Crashing Waves in Faroes 3    Black and White Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "Crashing waves in the Faroes are rendered in black and white, emphasizing force, spray, and shoreline resistance. This traditional fine art landscape photograph creates Faroe Islands seascape wall art with stark Atlantic power.",
     "alt": "Faroe Waves  5    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-m2wzGs2/A",
     "keywords": [
@@ -3055,7 +3055,7 @@ export const galleryData = [
   {
     "id": "i-fGsWc5H",
     "title": "Crashing Waves in Faroes 2   Black and White Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "Crashing waves in the Faroes become a black and white study of motion and impact against the island shore. This traditional fine art landscape photograph creates North Atlantic wall art rooted in surf, rock, and weather.",
     "alt": "Crashing Waves in Faroes 3    Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-fGsWc5H/A",
     "keywords": [
@@ -3094,7 +3094,7 @@ export const galleryData = [
   {
     "id": "i-wSx559f",
     "title": "Faroe Waves 6   Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "Faroe Waves 6 captures Atlantic water folding and breaking along the coast. This traditional fine art landscape photograph creates Faroe Islands seascape wall art with color, movement, and rugged shoreline atmosphere.",
     "alt": "Crashing Waves in Faroes 2   Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-wSx559f/A",
     "keywords": [
@@ -3133,7 +3133,7 @@ export const galleryData = [
   {
     "id": "i-6HH4L3v",
     "title": "Faroe Waves 7   Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "Faroe Waves 7 studies the sea’s energy along the island edge, where water meets rock under northern light. This traditional fine art landscape photograph creates Faroe Islands coastal wall art with motion and weather.",
     "alt": "Faroe Waves 6   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-6HH4L3v/A",
     "keywords": [
@@ -3172,7 +3172,7 @@ export const galleryData = [
   {
     "id": "i-P7pMnQ9",
     "title": "Faroe Island Coastal Town",
-    "description": "Fine art, black & white, landscape sunset photography of the Faroe Islands.",
+    "description": "A coastal town in the Faroe Islands is rendered in black and white, balancing village structure with sea and slope. This traditional fine art landscape photograph creates Faroe Islands wall art rooted in settlement, coast, and North Atlantic atmosphere.",
     "alt": "Faroe Waves 7   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-P7pMnQ9/A",
     "keywords": [
@@ -3211,7 +3211,7 @@ export const galleryData = [
   {
     "id": "i-6NKTKgw",
     "title": "Sunset Rays on the Village",
-    "description": "Fine art landscape sunset photograph of the Faroe Islands.",
+    "description": "Sunset rays fall over a Faroe village, warming the island landscape without losing its remote quiet. This traditional fine art landscape photograph creates Faroe Islands sunset wall art shaped by settlement, light, and coastal distance.",
     "alt": "Faroe Island Coastal Town",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-6NKTKgw/A",
     "keywords": [
@@ -3250,7 +3250,7 @@ export const galleryData = [
   {
     "id": "i-FxL2Ktq",
     "title": "Waves Crash in the Faroes       Black and White Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "Waves crash in the Faroes in black and white, turning Atlantic motion into a stark coastal study. This traditional fine art landscape photograph creates Faroe Islands seascape wall art with force, spray, and tonal drama.",
     "alt": "Sunset Rays on the Village",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-FxL2Ktq/A",
     "keywords": [
@@ -3289,7 +3289,7 @@ export const galleryData = [
   {
     "id": "i-Wf6337s",
     "title": "Little Steeple in the Faroe Islands    Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "A little steeple rises within the Faroe Islands landscape, adding a quiet human note to the coastal terrain. This traditional fine art landscape photograph creates Faroe Islands wall art from church, village, and North Atlantic atmosphere.",
     "alt": "Waves Crash in the Faroes       Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-Wf6337s/A",
     "keywords": [
@@ -3328,7 +3328,7 @@ export const galleryData = [
   {
     "id": "i-vwPNvvL",
     "title": "Coast of Faroe  15     Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "Coast of Faroe 15 follows the island shoreline through water, rock, and remote light. This traditional fine art landscape photograph creates Faroe Islands coastal wall art shaped by seashore texture and atmospheric distance.",
     "alt": "Little Steeple in the Faroe Islands    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-vwPNvvL/A",
     "keywords": [
@@ -3367,7 +3367,7 @@ export const galleryData = [
   {
     "id": "i-QFpd2x4",
     "title": "Looking Outward   Black and White Photography",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "Looking Outward is rendered in black and white, turning the Faroe Islands landscape into a quiet act of distance and observation. This traditional fine art photograph creates North Atlantic wall art from horizon, land, and restrained tone.",
     "alt": "Coast of Faroe  15     Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-QFpd2x4/A",
     "keywords": [
@@ -3406,7 +3406,7 @@ export const galleryData = [
   {
     "id": "i-fWPjdt3",
     "title": "Faroe Landscape  6      Black and White Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "Faroe Landscape 6 in black and white emphasizes the spare force of island terrain and weather. This traditional fine art landscape photograph creates Faroe Islands wall art rooted in tone, distance, and rugged landform.",
     "alt": "Looking Outward   Black and White Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-fWPjdt3/A",
     "keywords": [
@@ -3445,7 +3445,7 @@ export const galleryData = [
   {
     "id": "i-2GH8KXC",
     "title": "Coast of Faroe  17     Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "Coast of Faroe 17 captures the island edge in color, where land meets sea under shifting North Atlantic light. This traditional fine art landscape photograph creates Faroe Islands coastal wall art with texture and atmosphere.",
     "alt": "Faroe Landscape  6      Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-2GH8KXC/A",
     "keywords": [
@@ -3484,7 +3484,7 @@ export const galleryData = [
   {
     "id": "i-Mpps7Mt",
     "title": "Faroe Coast 22     black and White Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "Faroe Coast 22 is rendered in black and white, reducing the shoreline to cliff, water, and tonal weight. This traditional fine art landscape photograph creates Faroe Islands seascape wall art with quiet force.",
     "alt": "Coast of Faroe  17     Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-Mpps7Mt/A",
     "keywords": [
@@ -3523,7 +3523,7 @@ export const galleryData = [
   {
     "id": "i-s62pCtc",
     "title": "Coast of Faroe  18     Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "Coast of Faroe 18 captures the rugged island shoreline in color, balancing sea movement with steep land and distance. This traditional fine art landscape photograph creates Faroe Islands coastal wall art rooted in place and weather.",
     "alt": "Faroe Coast 22     black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-s62pCtc/A",
     "keywords": [
@@ -3562,7 +3562,7 @@ export const galleryData = [
   {
     "id": "i-65H69Vz",
     "title": "Faroe Coast 24      black and White Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "Faroe Coast 24 becomes a black and white landscape study of remote shoreline and North Atlantic water. This traditional fine art photograph creates Faroe Islands coastal wall art with a spare, timeless mood.",
     "alt": "Coast of Faroe  18     Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-65H69Vz/A",
     "keywords": [
@@ -3601,7 +3601,7 @@ export const galleryData = [
   {
     "id": "i-Gw8K6Vh",
     "title": "Coast of Faroe  20    Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "Coast of Faroe 20 opens onto the island edge in color, where cliffs and ocean share the frame. This traditional fine art landscape photograph creates Faroe Islands wall art shaped by sea, slope, and remote atmosphere.",
     "alt": "Faroe Coast 24      black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-Gw8K6Vh/A",
     "keywords": [
@@ -3640,7 +3640,7 @@ export const galleryData = [
   {
     "id": "i-RRX5LQb",
     "title": "Faroe Coast 25   Black and White Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "Faroe Coast 25 is rendered in black and white, turning cliff and sea into a quiet study of contrast and distance. This traditional fine art landscape photograph creates Faroe Islands coastal wall art with strong tonal restraint.",
     "alt": "Coast of Faroe  20    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-RRX5LQb/A",
     "keywords": [
@@ -3679,7 +3679,7 @@ export const galleryData = [
   {
     "id": "i-Vt4H5PV",
     "title": "Faroe Coast 26     Black and White Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "Faroe Coast 26 carries the island’s rugged edge in black and white, where Atlantic water meets hard land. This traditional fine art landscape photograph creates Faroe Islands seascape wall art with quiet strength.",
     "alt": "Faroe Coast 25   Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-Vt4H5PV/A",
     "keywords": [
@@ -3718,7 +3718,7 @@ export const galleryData = [
   {
     "id": "i-q794hHD",
     "title": "Faroe Coast 27    black and White Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "Faroe Coast 27 in black and white emphasizes shoreline structure, sea movement, and remote island weather. This traditional fine art landscape photograph creates Faroe Islands coastal wall art rooted in tone and atmosphere.",
     "alt": "Faroe Coast 26     Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-q794hHD/A",
     "keywords": [
@@ -3757,7 +3757,7 @@ export const galleryData = [
   {
     "id": "i-dXHvGd9",
     "title": "Coast of Faroe  22     Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "Coast of Faroe 22 captures the island shoreline in color, where water, cliffs, and light form a quiet North Atlantic scene. This traditional fine art landscape photograph creates Faroe Islands coastal wall art.",
     "alt": "Faroe Coast 27    black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-dXHvGd9/A",
     "keywords": [
@@ -3796,7 +3796,7 @@ export const galleryData = [
   {
     "id": "i-qrdkF7m",
     "title": "Coast of Faroe  23     Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "Coast of Faroe 23 follows the remote island edge through land, sea, and weathered distance. This traditional fine art landscape photograph creates Faroe Islands wall art shaped by coastal rhythm and atmosphere.",
     "alt": "Coast of Faroe  22     Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-qrdkF7m/A",
     "keywords": [
@@ -3835,7 +3835,7 @@ export const galleryData = [
   {
     "id": "i-HqcTxcr",
     "title": "Coast of Faroe  24     Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "Coast of Faroe 24 brings together sea, cliff, and open sky in a restrained island composition. This traditional fine art landscape photograph creates Faroe Islands coastal wall art with a strong North Atlantic presence.",
     "alt": "Coast of Faroe  23     Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-HqcTxcr/A",
     "keywords": [
@@ -3874,7 +3874,7 @@ export const galleryData = [
   {
     "id": "i-7Tj6R33",
     "title": "Big, Little and Medium  Photography by Wayne",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "Big, Little and Medium studies the scale relationships within a Faroe Islands landscape, where forms repeat across land and sea. This traditional fine art photograph creates Faroe Islands wall art rooted in pattern, distance, and quiet humor.",
     "alt": "Coast of Faroe  24     Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-7Tj6R33/A",
     "keywords": [
@@ -3913,7 +3913,7 @@ export const galleryData = [
   {
     "id": "i-zD48j45",
     "title": "Faroe Boat Houses    Black and White Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "Faroe boat houses are rendered in black and white, turning coastal shelter and working waterfront into a tonal landscape study. This traditional fine art photograph creates Faroe Islands wall art from village life, boats, and shoreline structure.",
     "alt": "Big, Little and Medium  Photography by Wayne",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-zD48j45/A",
     "keywords": [
@@ -3952,7 +3952,7 @@ export const galleryData = [
   {
     "id": "i-hxLj9xB",
     "title": "Boat Houses on the Faroe Island   Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "Boat houses on the Faroe Islands bring color, shelter, and maritime use into the landscape. This traditional fine art photograph creates Faroe Islands coastal wall art rooted in working waterfronts and North Atlantic place.",
     "alt": "Faroe Boat Houses    Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-hxLj9xB/A",
     "keywords": [
@@ -3991,7 +3991,7 @@ export const galleryData = [
   {
     "id": "i-xrXKTpD",
     "title": "Faroe Country Church  2         Black and White Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "A Faroe country church stands in black and white within the island landscape, balancing faith, structure, and isolation. This traditional fine art photograph creates Faroe Islands wall art from church architecture, open land, and weather.",
     "alt": "Boat Houses on the Faroe Island   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-xrXKTpD/A",
     "keywords": [
@@ -4030,7 +4030,7 @@ export const galleryData = [
   {
     "id": "i-DcmkVhb",
     "title": "Faroe Country Church     Black and White Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "A Faroe country church is rendered in black and white, giving the remote landscape a quiet human anchor. This traditional fine art landscape photograph creates Faroe Islands wall art rooted in faith, village memory, and North Atlantic atmosphere.",
     "alt": "Faroe Country Church  2         Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-DcmkVhb/A",
     "keywords": [
@@ -4069,7 +4069,7 @@ export const galleryData = [
   {
     "id": "i-pKmQ9Ch",
     "title": "Fishing Village in Faroe Islands    Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "A fishing village in the Faroe Islands sits within a landscape of water, houses, and steep island terrain. This traditional fine art photograph creates Faroe Islands coastal wall art shaped by settlement, harbor, and maritime life.",
     "alt": "Faroe Country Church     Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-pKmQ9Ch/A",
     "keywords": [
@@ -4108,7 +4108,7 @@ export const galleryData = [
   {
     "id": "i-mqMfQ7r",
     "title": "Faroe Lighthouse 3     Black and White Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "A Faroe lighthouse is rendered in black and white, standing as a coastal marker against weather, rock, and sea. This traditional fine art landscape photograph creates Faroe Islands lighthouse wall art with stark maritime restraint.",
     "alt": "Fishing Village in Faroe Islands    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-mqMfQ7r/A",
     "keywords": [
@@ -4147,7 +4147,7 @@ export const galleryData = [
   {
     "id": "i-DDVrKQD",
     "title": "Faroe Lighthouse  Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "A Faroe lighthouse anchors the coastline, carrying the quiet authority of a structure built for sea and weather. This traditional fine art landscape photograph creates Faroe Islands lighthouse wall art rooted in Atlantic exposure and place.",
     "alt": "Faroe Lighthouse 3     Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-DDVrKQD/A",
     "keywords": [
@@ -4186,7 +4186,7 @@ export const galleryData = [
   {
     "id": "i-FZXJX87",
     "title": "Faroe Lighthouse 2      Black and White Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "Faroe Lighthouse 2 in black and white turns the coastal landmark into a study of structure, weather, and distance. This traditional fine art landscape photograph creates Faroe Islands lighthouse wall art with a spare North Atlantic mood.",
     "alt": "Faroe Lighthouse  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-FZXJX87/A",
     "keywords": [
@@ -4225,7 +4225,7 @@ export const galleryData = [
   {
     "id": "i-gdBhfG8",
     "title": "Faroe Lighthouse 2   Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "Faroe Lighthouse 2 in color places the landmark within a rugged island landscape of sea, ground, and sky. This traditional fine art photograph creates Faroe Islands coastal wall art shaped by lighthouse presence and maritime weather.",
     "alt": "Faroe Lighthouse 2      Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-gdBhfG8/A",
     "keywords": [
@@ -4264,7 +4264,7 @@ export const galleryData = [
   {
     "id": "i-T8MJpbv",
     "title": "Faroe Lighthouse    Black and White Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "A Faroe lighthouse is rendered in black and white, its form set against the island’s quiet coastal atmosphere. This traditional fine art landscape photograph creates lighthouse wall art rooted in navigation, solitude, and North Atlantic endurance.",
     "alt": "Faroe Lighthouse 2   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-T8MJpbv/A",
     "keywords": [
@@ -4303,7 +4303,7 @@ export const galleryData = [
   {
     "id": "i-WVGNqs6",
     "title": "Faroe Lighthouse 3  Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "Faroe Lighthouse 3 captures a coastal landmark in color, surrounded by the island’s weathered terrain. This traditional fine art landscape photograph creates Faroe Islands lighthouse wall art with a strong sense of place.",
     "alt": "Faroe Lighthouse    Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-WVGNqs6/A",
     "keywords": [
@@ -4342,7 +4342,7 @@ export const galleryData = [
   {
     "id": "i-kL2NfSk",
     "title": "Faroe Boats 2   Black and White Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "Faroe Boats 2 is rendered in black and white, turning working boats into a quiet maritime landscape study. This traditional fine art photograph creates Faroe Islands coastal wall art from harbor life, form, and tone.",
     "alt": "Faroe Lighthouse 3  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-kL2NfSk/A",
     "keywords": [
@@ -4381,7 +4381,7 @@ export const galleryData = [
   {
     "id": "i-2pwdXXJ",
     "title": "Fishing Boats in Faroe   Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "Fishing boats in the Faroe Islands bring the working coast into a traditional fine art landscape photograph. The image creates Faroe Islands wall art rooted in boats, water, village life, and North Atlantic maritime rhythm.",
     "alt": "Faroe Boats 2   Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-2pwdXXJ/A",
     "keywords": [
@@ -4420,7 +4420,7 @@ export const galleryData = [
   {
     "id": "i-7bDfPwf",
     "title": "Boats  Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "Boats rest within the Faroe Islands landscape, where harbor, water, and island weather hold the scene. This traditional fine art photograph creates Faroe Islands coastal wall art shaped by maritime work and quiet atmosphere.",
     "alt": "Fishing Boats in Faroe   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-7bDfPwf/A",
     "keywords": [
@@ -4459,7 +4459,7 @@ export const galleryData = [
   {
     "id": "i-23tZWBK",
     "title": "Faroe Boats      Black and White Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "Faroe boats are rendered in black and white, emphasizing their forms against the working coastal landscape. This traditional fine art photograph creates Faroe Islands wall art rooted in harbor life, tonal restraint, and sea culture.",
     "alt": "Boats  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-23tZWBK/A",
     "keywords": [
@@ -4498,7 +4498,7 @@ export const galleryData = [
   {
     "id": "i-8btJjgn",
     "title": "Coast of Faroe  25     Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "Coast of Faroe 25 carries the island shoreline in color, with water, rock, and distance forming a rugged North Atlantic composition. This traditional fine art landscape photograph creates Faroe Islands coastal wall art.",
     "alt": "Faroe Boats      Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-8btJjgn/A",
     "keywords": [
@@ -4537,7 +4537,7 @@ export const galleryData = [
   {
     "id": "i-7QtRc47",
     "title": "Faroe Shelters  Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "Faroe shelters sit within the island landscape, offering small signs of human use against broad coastal weather. This traditional fine art photograph creates Faroe Islands wall art from shelter, land, and remote atmosphere.",
     "alt": "Coast of Faroe  25     Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-7QtRc47/A",
     "keywords": [
@@ -4576,7 +4576,7 @@ export const galleryData = [
   {
     "id": "i-sdWVBzH",
     "title": "Faroe Shelters  7   Black and White Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
+    "description": "Faroe Shelters 7 is rendered in black and white, turning humble structures into a quiet island landscape study. This traditional fine art photograph creates Faroe Islands wall art rooted in rural shelter, weather, and tone.",
     "alt": "Faroe Shelters  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-sdWVBzH/A",
     "keywords": [
@@ -4615,7 +4615,7 @@ export const galleryData = [
   {
     "id": "i-LXSxjwP",
     "title": "Faroe Shelters 2  Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "Faroe Shelters 2 places small structures within the larger island landscape, balancing human scale with North Atlantic space. This traditional fine art photograph creates Faroe Islands wall art shaped by shelter, field, and weather.",
     "alt": "Faroe Shelters  7   Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-LXSxjwP/A",
     "keywords": [
@@ -4654,7 +4654,7 @@ export const galleryData = [
   {
     "id": "i-tfFVDTm",
     "title": "Faroe Shelters 5    Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "Faroe Shelters 5 captures the quiet relationship between built shelter and open island terrain. This traditional fine art landscape photograph creates Faroe Islands wall art rooted in remoteness, practicality, and atmospheric light.",
     "alt": "Faroe Shelters 2  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-tfFVDTm/A",
     "keywords": [
@@ -4693,7 +4693,7 @@ export const galleryData = [
   {
     "id": "i-xrzfVbW",
     "title": "Faroe Shelters 6    Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "Faroe Shelters 6 brings coastal shelter and remote landscape into the same frame, where buildings feel shaped by weather and necessity. This traditional fine art photograph creates Faroe Islands wall art with a strong sense of place.",
     "alt": "Faroe Shelters 5    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-xrzfVbW/A",
     "keywords": [
@@ -4732,7 +4732,7 @@ export const galleryData = [
   {
     "id": "i-r6t9ZVR",
     "title": "Faroe Shelters 7    Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "Faroe Shelters 7 captures small structures within the larger sweep of island land and weather. This traditional fine art landscape photograph creates Faroe Islands wall art rooted in rural presence, distance, and North Atlantic atmosphere.",
     "alt": "Faroe Shelters 6    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-r6t9ZVR/A",
     "keywords": [
@@ -4771,7 +4771,7 @@ export const galleryData = [
   {
     "id": "i-JZsNXPN",
     "title": "Faroe Shelters 8    Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "Faroe Shelters 8 continues the quiet study of built forms within the remote island landscape. This traditional fine art photograph creates Faroe Islands wall art from shelter, terrain, and the weathered character of place.",
     "alt": "Faroe Shelters 7    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-JZsNXPN/A",
     "keywords": [
@@ -4810,7 +4810,7 @@ export const galleryData = [
   {
     "id": "i-zW8cTfv",
     "title": "Looking Out to Sea     Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands.",
+    "description": "Looking Out to Sea holds the Faroe Islands coastline as a moment of distance and watchfulness. This traditional fine art landscape photograph creates North Atlantic wall art shaped by horizon, sea, and the quiet edge of land.",
     "alt": "Faroe Shelters 8    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-zW8cTfv/A",
     "keywords": [
