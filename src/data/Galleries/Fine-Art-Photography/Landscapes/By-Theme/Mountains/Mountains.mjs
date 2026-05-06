@@ -25,7 +25,7 @@ export const galleryData = [
   {
     "id": "i-sTCJ5dz",
     "title": "Mountain Landscape Photography In Fine Art",
-    "description": "A fine art landscape photograph of the Teton range, shaped by scale rather than spectacle. Wayne Heim's fine art landscape photography treats place as emotional geography, where light and terrain carry memory rather than spectacle. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the human presence becomes secondary to terrain. Part of Wayne Heim's fine art landscape photography series. © Wayne Heim",
+    "description": "The Grand Teton range becomes mountain landscape photography shaped by scale, silence, and the emotional weight of terrain. This traditional fine art landscape photograph creates painterly mountain wall art rooted in summit form, atmospheric distance, and the quiet authority of Western peaks.",
     "alt": "The Grand    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-sTCJ5dz/A",
     "keywords": [
@@ -57,7 +57,7 @@ export const galleryData = [
   {
     "id": "i-WgGWH9C",
     "title": "Majestic Ridge - After the Storm",
-    "description": "Majestic Ridge. Etna Wyoming. snow covered mountain side © Wayne Heim",
+    "description": "A snow-covered mountainside near Etna, Wyoming becomes traditional mountain landscape photography shaped by cold light, ridge form, and post-storm quiet. This mountain wall art carries the stillness and strength of high country after weather has passed.",
     "alt": "The Grand    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-WgGWH9C/A",
     "keywords": [
@@ -87,7 +87,7 @@ export const galleryData = [
   {
     "id": "i-TvpKdWW",
     "title": "Sunset Approach    Photography by Wayne Heim",
-    "description": "Sunset view of the approach to Zion National Park, Utah. ©Wayne Heim",
+    "description": "The sunset approach to Zion National Park turns Utah’s mountain and canyon country into traditional fine art landscape photography. This mountain landscape image creates wall art rooted in warm evening light, desert terrain, and the anticipation of entering red-rock country.",
     "alt": "Majestic Ridge - After the Storm",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-TvpKdWW/A",
     "keywords": [
@@ -117,7 +117,7 @@ export const galleryData = [
   {
     "id": "i-4SmFT2v",
     "title": "Standing Guard   Black & White Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Glacier National Park and Montana.",
+    "description": "Standing Guard presents Glacier National Park and Montana as mountain landscape photography shaped by alpine presence, quiet light, and rugged distance. This traditional fine art landscape creates mountain wall art rooted in Montana atmosphere and the enduring strength of the northern Rockies.",
     "alt": "Sunset Approach    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-4SmFT2v/A",
     "keywords": [
@@ -146,7 +146,7 @@ export const galleryData = [
   {
     "id": "i-wxLBqLg",
     "title": "Grand Sunset Photography by Wayne Heim",
-    "description": "Grand Sunset. Jackson Hole Wyoming, sunset lights the sky behind snow covered Grand Teton mountains ©Wayne Heim",
+    "description": "Sunset lights the sky behind snow-covered Grand Teton mountains near Jackson Hole, Wyoming, creating a mountain landscape of color, scale, and evening stillness. This traditional fine art photograph creates Grand Teton wall art rooted in winter light and alpine atmosphere.",
     "alt": "White Paint - Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-wxLBqLg/A",
     "keywords": [
@@ -177,7 +177,7 @@ export const galleryData = [
   {
     "id": "i-8WSrqG4",
     "title": "Snow Majesty - Photography by Wayne Heim",
-    "description": "Snow Majesty - snow covered mountains in Wyoming ©Wayne Heim",
+    "description": "Snow Majesty studies snow-covered mountains in Wyoming, where ridge, light, and winter silence define the scene. This traditional mountain landscape photograph creates wall art rooted in high-country scale, cold atmosphere, and the quiet grandeur of Western peaks.",
     "alt": "Grand Sunset Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-8WSrqG4/A",
     "keywords": [
@@ -207,7 +207,7 @@ export const galleryData = [
   {
     "id": "i-7zGDNJf",
     "title": "Mount Hood at Sunset  Photo by Wayne Heim",
-    "description": "Mount Hood at Sunset. Mt Hood in Oregon as the sun is going down. Trillium lake is in the foreground and you can see snow cats grooming the slopes of the mountain  ©Wayne Heim",
+    "description": "Mount Hood glows at sunset above Trillium Lake in Oregon, with the mountain holding the scene in quiet balance. This traditional fine art mountain photograph creates alpine wall art rooted in evening color, snow, water, and the calm drama of a Pacific Northwest peak.",
     "alt": "Field at Sunset     Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-7zGDNJf/A",
     "keywords": [
@@ -240,7 +240,7 @@ export const galleryData = [
   {
     "id": "i-8hwfnGn",
     "title": "\"Meandering MountainStream\". Photography by Wayne Heim",
-    "description": "\"Meandering Stream\". Black and white landscape photography of mountain stream, clouds and trees along \"Mormon Row\", just north of Jackson Hole Wyoming. ©Wayne Heim",
+    "description": "A mountain stream moves through clouds and trees along Mormon Row, north of Jackson Hole, Wyoming. This traditional mountain landscape photograph creates wall art rooted in water, weather, and the quiet natural rhythm beneath the Grand Tetons.",
     "alt": "Deserted Barn photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-8hwfnGn/A",
     "keywords": [
@@ -271,7 +271,7 @@ export const galleryData = [
   {
     "id": "i-wtHsJGQ",
     "title": "Old Farm. Photography by Wayne Heim",
-    "description": "Old Farm - Sepia photograph of old  Wyoming homestead with mountains in the background- part of Mormon Row. ©Wayne Heim",
+    "description": "An old Wyoming homestead on Mormon Row stands before mountains in a sepia-toned landscape of weathered structure and distance. This traditional mountain landscape photograph creates Western wall art rooted in homestead memory, open land, and the enduring presence of the Tetons.",
     "alt": "\"Meandering Stream\". Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-wtHsJGQ/A",
     "keywords": [
@@ -301,7 +301,7 @@ export const galleryData = [
   {
     "id": "i-MXKDnVL",
     "title": "Holding Pens. Photography by Wayne Heim",
-    "description": "Holding Pens.  Sepia toned photo of old weathered Wyoming holding pens with the Grand Tetons  in the background. ©Wayne Heim",
+    "description": "Old Wyoming holding pens stand weathered beneath the Grand Tetons, joining ranch history with mountain landscape photography. This sepia-toned fine art photograph creates Western mountain wall art rooted in rough timber, open ground, and the working memory of the land.",
     "alt": "Old Farm. Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-MXKDnVL/A",
     "keywords": [
@@ -331,7 +331,7 @@ export const galleryData = [
   {
     "id": "i-8XNRjZF",
     "title": "View from the Past: The Tetons",
-    "description": "View from broken window in one of the old building on Mormon row in Jackson Hole Wyoming. Dark black inside creates the perfect frame inside the frame of the picture of the mountains. Black isolation is perfect balance to the rustic isolation of the Old West.© Wayne Heim",
+    "description": "A broken window on Mormon Row frames the Tetons near Jackson Hole, Wyoming, turning an old building into a dark frame around mountain distance. This traditional mountain landscape photograph creates wall art rooted in Old West isolation, rustic structure, and the view left behind.",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-8XNRjZF/A",
     "keywords": [
@@ -362,7 +362,7 @@ export const galleryData = [
   {
     "id": "i-PVbJdpj",
     "title": "Old Fence - Black & White Photography by Wayne Heim",
-    "description": "Old Fence - old weathered fence that had fallen down in Wyoming. ©Wayne Heim",
+    "description": "An old weathered fence lies fallen in the Wyoming landscape, turning a small remnant into a study of time, use, and mountain-country silence. This traditional fine art landscape photograph creates Western wall art rooted in rural texture, abandonment, and quiet geometry.",
     "alt": "Better Days\". Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-PVbJdpj/A",
     "keywords": [
@@ -393,7 +393,7 @@ export const galleryData = [
   {
     "id": "i-74rc8wb",
     "title": "Out for a Walk",
-    "description": "A single cowboy sets the seen as he takes a walk on Mormon Row, Jackson Hole Wyoming- This is the T.A. Moulton Barn, one of the most iconic barns in America on Mormon Row just outside of Jackson Hole Wyoming. Fall is one of the best time to take pictures of this area as the golden hues of the aspens and grass play off of the blue mountains and dramatic Teton backdrop. ©Wayne Heim",
+    "description": "A single cowboy walks near the T.A. Moulton Barn on Mormon Row, with the Tetons rising behind autumn grass and golden trees. This mountain landscape photograph creates Western wall art rooted in Wyoming history, human scale, and the dramatic backdrop of the Grand Tetons.",
     "alt": "Old Fence - Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-74rc8wb/A",
     "keywords": [
@@ -423,7 +423,7 @@ export const galleryData = [
   {
     "id": "i-xZH95Bj",
     "title": "Tetons on the Outside",
-    "description": "Teton Mountain view looking out of the open barn door.. Looking out an old barn door at the Tetons. Dark isolation of inside of barn is shattered by the light streaming inside breaking the silence, while lurking in the distance is a view of the Grand and the Teton mountain range. ©Wayne Heim",
+    "description": "An open barn door frames the Grand Tetons, with dark interior isolation broken by daylight and mountain distance beyond. This traditional mountain landscape photograph creates wall art rooted in Wyoming barns, shadow, silence, and the pull of the Teton range.",
     "alt": "Tetons Peek - Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-xZH95Bj/A",
     "keywords": [
@@ -454,7 +454,7 @@ export const galleryData = [
   {
     "id": "i-Bdbf3L9",
     "title": "The Great Protectors - by Wayne Heim",
-    "description": "Between Trees - T.A. Moulton Barn, a famous old barn, is viewed between or guarded by two cottonwood trees. The great golden protectors perfectly frame the scene and focus the attention on the barn and the Tetons in the background.  © Wayne Heim",
+    "description": "The T.A. Moulton Barn is framed between two golden cottonwood trees, with the Tetons rising in the background. This traditional mountain landscape photograph creates wall art rooted in Wyoming homestead history, natural framing, and the protective rhythm of trees around an iconic barn.",
     "alt": "Buttermilk Falls",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-Bdbf3L9/A",
     "keywords": [
@@ -485,7 +485,7 @@ export const galleryData = [
   {
     "id": "i-98c9sG9",
     "title": "Coming Fall  Photography by Wayne Heim",
-    "description": "Trees begin to change color as fall approached in shadow of the Tetons. ©Wayne Heim",
+    "description": "Trees begin to change color in the shadow of the Tetons, bringing autumn into a quiet mountain landscape. This traditional fine art photograph creates Grand Teton wall art rooted in seasonal transition, golden foliage, and the calm force of Wyoming peaks.",
     "alt": "The Great Protectors - by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-98c9sG9/A",
     "keywords": [
@@ -515,7 +515,7 @@ export const galleryData = [
   {
     "id": "i-WJvRGjn",
     "title": "Young Trees    Photography by Wayne Heim",
-    "description": "Small group of trees stand in field in shadow of the Tetons. ©Wayne Heim",
+    "description": "A small group of trees stands in a field beneath the shadow of the Tetons, giving the mountain landscape a quiet foreground rhythm. This traditional fine art photograph creates Western mountain wall art rooted in scale, young growth, and the stillness of open Wyoming land.",
     "alt": "Coming Fall  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-WJvRGjn/A",
     "keywords": [
@@ -545,7 +545,7 @@ export const galleryData = [
   {
     "id": "i-Rpvhss3",
     "title": "Rio - Black & White Photography by Wayne Heim",
-    "description": "Rio - shot of Rio de Janerio, Brazil including the mountain with the statue of Christ the Redeemer (Cristo Redentor). ©Wayne Heim",
+    "description": "Rio de Janeiro is seen with the mountain of Christ the Redeemer rising above the city, turning urban distance and landmark form into mountain landscape photography. This traditional fine art photograph creates international mountain wall art rooted in Brazil, elevation, and cultural presence.",
     "alt": "Young Trees    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-Rpvhss3/A",
     "keywords": [
@@ -575,7 +575,7 @@ export const galleryData = [
   {
     "id": "i-LgrdsMQ",
     "title": "Rio    Black and White Photography by Wayne Heim",
-    "description": "A fine art landscape of the Teton range, shaped by stillness rather than spectacle. Approached with restraint and precision, Wayne Heim's landscapes prioritize mood, tone, and presence over literal representation. Light, tone, and composition shape a quiet narrative rooted in place and memory - where silence holds its own weight in open country. Part of Wayne Heim's fine art landscape photography series. © Wayne Heim",
+    "description": "Rio de Janeiro becomes a mountain landscape through distance, city form, and the elevated presence of Christ the Redeemer. This traditional fine art photograph creates international mountain wall art rooted in urban scale, atmosphere, and the meeting of land and city.",
     "alt": "Rio - Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-LgrdsMQ/A",
     "keywords": [
@@ -605,7 +605,7 @@ export const galleryData = [
   {
     "id": "i-mcrrSZ2",
     "title": "Exploring Sunset Photography",
-    "description": "A fine art landscape photograph of the Teton range, shaped by solitude rather than spectacle. Rather than documenting scenery, this work explores how place shapes perception, memory, and stillness. Light, tone, and composition shape a quiet narrative rooted in place and memory - where distance defines the relationship between viewer and land. Part of Wayne Heim's fine art landscape photography series. © Wayne Heim",
+    "description": "A classic sunset settles over a Wyoming mountain landscape, turning light, ridge, and distance into a quiet study of evening atmosphere. This traditional mountain landscape photograph creates wall art rooted in sunset color, Western scale, and the emotional pull of high country.",
     "alt": "Fine art photography of sunset photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-mcrrSZ2/A",
     "keywords": [
@@ -640,7 +640,7 @@ export const galleryData = [
   {
     "id": "i-9Zv7LRm",
     "title": "Painterly Mountain Photography:  Between the Trees  Photography by Wayne Heim",
-    "description": "Famous Moulton Barn seen through two trees. Grand Tetons rise up behind this in Wyoming. ©Wayne Heim Fine art painterly mountain photography. © Wayne Heim",
+    "description": "The famous Moulton Barn is seen between two trees, with the Grand Tetons rising behind it in Wyoming. This painterly mountain photograph creates Western wall art rooted in homestead history, natural framing, and the iconic landscape character of Jackson Hole.",
     "alt": "Grand Tetons     Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-9Zv7LRm/A",
     "keywords": [
@@ -674,7 +674,7 @@ export const galleryData = [
   {
     "id": "i-wnBw2xt",
     "title": "Church in the Country  Photography by Wayne Heim",
-    "description": "Little church is nestled in the countryside of Iceland. ©Wayne Heim",
+    "description": "A small country church rests in the Icelandic countryside, set against a mountain landscape of open ground and northern light. This traditional fine art photograph creates mountain wall art rooted in rural quiet, faith, and the spare atmosphere of Iceland.",
     "alt": "Painterly Mountain Photography:  Between the Trees  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-wnBw2xt/A",
     "keywords": [
@@ -704,7 +704,7 @@ export const galleryData = [
   {
     "id": "i-gsFcMFJ",
     "title": "Top Crop    Photography by Wayne Heim",
-    "description": "Rock outcropping on the top of a hill in Iceland. ©Wayne Heim",
+    "description": "A rock outcropping crowns a hill in Iceland, turning mountain form, slope, and sky into traditional fine art landscape photography. This mountain image creates wall art rooted in volcanic texture, high ground, and the quiet strength of northern terrain.",
     "alt": "Church in the Country  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-gsFcMFJ/A",
     "keywords": [
@@ -734,7 +734,7 @@ export const galleryData = [
   {
     "id": "i-2DcTtvw",
     "title": "Landscape of Rock Mountain  Photography by Wayne Heim",
-    "description": "Part of the Rock Mountain landscape and fields of Ye in Iceland.  ©Wayne Heim",
+    "description": "Rock Mountain and surrounding fields in Iceland create a layered mountain landscape of stone, pasture, and open air. This traditional fine art photograph creates Iceland mountain wall art rooted in rural terrain, geological form, and the quiet scale of place.",
     "alt": "Top Crop    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-2DcTtvw/A",
     "keywords": [
@@ -764,7 +764,7 @@ export const galleryData = [
   {
     "id": "i-xVS6dxc",
     "title": "Flowers and Mountains   Photography by Wayne Heim",
-    "description": "Lupin flowers bloom in the foreground while the mountains of Iceland rise majestically in the background.  ©Wayne Heim",
+    "description": "Lupine flowers bloom in the foreground while Icelandic mountains rise in the distance, joining delicate color with alpine scale. This traditional fine art mountain photograph creates wall art rooted in seasonal bloom, northern light, and the contrast between flower and peak.",
     "alt": "Landscape of Rock Mountain  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-xVS6dxc/A",
     "keywords": [
@@ -794,7 +794,7 @@ export const galleryData = [
   {
     "id": "i-Mf7gmw7",
     "title": "Road to Church  Photography by Wayne Heim",
-    "description": "Road leading to as small country church.\n©Wayne Heim",
+    "description": "A road leads toward a small country church, placing human passage within a larger mountain landscape. This traditional fine art photograph creates wall art rooted in distance, rural structure, and the quiet pull of a road through open country.",
     "alt": "Flowers and Mountains   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-Mf7gmw7/A",
     "keywords": [
@@ -824,7 +824,7 @@ export const galleryData = [
   {
     "id": "i-ZfJzXjP",
     "title": "Open Road   Photography by Wayne Heim",
-    "description": "Road winds through the country side in Iceland. ©Wayne Heim",
+    "description": "A road winds through the Icelandic countryside, drawing the eye into a broad mountain landscape of open land and northern atmosphere. This traditional fine art photograph creates Iceland mountain wall art rooted in movement, distance, and the quiet promise of the road.",
     "alt": "Road to Church  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-ZfJzXjP/A",
     "keywords": [
@@ -853,7 +853,7 @@ export const galleryData = [
   {
     "id": "i-tM7nXPd",
     "title": "Overlook",
-    "description": "Collection of the Best Iceland fine art landscape photography.",
+    "description": "An overlook opens onto Iceland’s rugged mountain landscape, where terrain, weather, and distance gather into a wide sense of place. This traditional fine art photograph creates mountain wall art rooted in elevation, northern atmosphere, and the quiet scale of the land.",
     "alt": "Open Road   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-tM7nXPd/A",
     "keywords": [
@@ -882,7 +882,7 @@ export const galleryData = [
   {
     "id": "i-RHkxK9x",
     "title": "Mountain Landscape Photography - Painterly Mountain Art",
-    "description": "A fine art landscape of the Teton range, shaped by scale rather than spectacle. Wayne Heim's fine art landscape photography treats place as emotional geography, where light and terrain carry memory rather than spectacle. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the human presence becomes secondary to terrain. Part of Wayne Heim's fine art landscape photography series. © Wayne Heim",
+    "description": "This mountain landscape photograph is shaped by light, terrain, and painterly atmosphere rather than spectacle. The image creates painterly mountain wall art rooted in form, quiet distance, and the traditional fine art language of land held with restraint.",
     "alt": "Overlook",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-RHkxK9x/A",
     "keywords": [
@@ -914,7 +914,7 @@ export const galleryData = [
   {
     "id": "i-7jBKDJ9",
     "title": "Painterly Mountain Art Study",
-    "description": "A fine art landscape photograph of the Teton range, shaped by stillness rather than spectacle. Approached with restraint and precision, Wayne Heim's landscapes prioritize mood, tone, and presence over literal representation. Light, tone, and composition shape a quiet narrative rooted in place and memory - where silence holds its own weight in open country. Part of Wayne Heim's fine art landscape photography series. © Wayne Heim",
+    "description": "This painterly mountain art study turns ridge, light, and atmospheric distance into a quiet fine art landscape. The image creates mountain wall art rooted in texture, tonal depth, and the emotional structure of terrain.",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-7jBKDJ9/A",
     "keywords": [
@@ -946,7 +946,7 @@ export const galleryData = [
   {
     "id": "i-Lc9fCHw",
     "title": "The Essence Of Painterly Mountain Art",
-    "description": "A fine art landscape of the Teton range, shaped by scale rather than spectacle. Rather than documenting scenery, this work explores how place shapes perception, memory, and stillness. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the human presence becomes secondary to terrain. Part of Wayne Heim's fine art landscape photography series. © Wayne Heim",
+    "description": "The essence of painterly mountain art appears in the relationship between landform, light, and quiet distance. This traditional mountain landscape photograph creates wall art rooted in atmosphere, restraint, and the felt presence of high country.",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-Lc9fCHw/A",
     "keywords": [
@@ -978,7 +978,7 @@ export const galleryData = [
   {
     "id": "i-35gFhbt",
     "title": "Painterly Mountain Art And Painterly Mountain Art",
-    "description": "A fine art landscape photograph of the Teton range, shaped by stillness rather than spectacle. Wayne Heim's fine art landscape photography treats place as emotional geography, where light and terrain carry memory rather than spectacle. Light, tone, and composition shape a quiet narrative rooted in place and memory - where silence holds its own weight in open country. Part of Wayne Heim's fine art landscape photography series. © Wayne Heim",
+    "description": "Painterly mountain art comes through in the softened atmosphere, layered terrain, and quiet scale of this landscape photograph. This traditional fine art image creates mountain wall art rooted in mood, landform, and the visual memory of place.",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-35gFhbt/A",
     "keywords": [
@@ -1010,7 +1010,7 @@ export const galleryData = [
   {
     "id": "i-Qs5qL2f",
     "title": "Mountain Landscape Photography Moment",
-    "description": "A fine art landscape of the Teton range, shaped by scale rather than spectacle. Approached with restraint and precision, Wayne Heim's landscapes prioritize mood, tone, and presence over literal representation. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the human presence becomes secondary to terrain. Part of Wayne Heim's fine art landscape photography series. © Wayne Heim",
+    "description": "A mountain landscape moment becomes fine art through scale, light, and the restrained presence of terrain. This traditional landscape photograph creates painterly mountain wall art rooted in atmosphere, natural structure, and the quiet authority of high ground.",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-Qs5qL2f/A",
     "keywords": [
@@ -1042,7 +1042,7 @@ export const galleryData = [
   {
     "id": "i-2znG97v",
     "title": "Head in Clouds  -  Black & White Photography by Wayne Heim",
-    "description": "Head in Clouds - cloud drifts towards the top of a mountain in Wyoming.©Wayne Heim",
+    "description": "A cloud drifts toward the top of a mountain, giving the scene a quiet sense of movement and scale. This traditional mountain landscape photograph creates wall art rooted in summit atmosphere, weather, and the fleeting conversation between cloud and peak.",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-2znG97v/A",
     "keywords": [
@@ -1072,7 +1072,7 @@ export const galleryData = [
   {
     "id": "i-BzsKZNR",
     "title": "Canoe s for Rent.  Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Glacier National Park and Montana.",
+    "description": "Canoes for rent sit within the Glacier National Park and Montana landscape, giving the mountain scene a small human invitation. This traditional fine art photograph creates mountain wall art rooted in alpine water, recreational quiet, and the calm presence of the northern Rockies.",
     "alt": "Head in Clouds  -  Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-BzsKZNR/A",
     "keywords": [
