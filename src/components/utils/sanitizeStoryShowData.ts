@@ -9,6 +9,11 @@ const IMAGE_FIELDS: Record<string, string> = {
   srcOriginal: "l",
 };
 
+function getPrimaryGalleryPath(item: Record<string, any>) {
+  const firstGallery = Array.isArray(item.galleries) ? item.galleries[0] : "";
+  return item.galleryPath || firstGallery || item.linkedGalleryPath || item.href;
+}
+
 export function sanitizeStoryShowData<T extends Record<string, any>>(items: T[] = []): T[] {
   return items.map((item) => {
     if (!item || typeof item !== "object") return item;
@@ -20,7 +25,7 @@ export function sanitizeStoryShowData<T extends Record<string, any>>(items: T[] 
       if (imageId) {
         next[field] = getSemanticImageUrl(
           { id: imageId, title: item.title || item.name || imageId },
-          { galleryPath: item.galleryPath || item.linkedGalleryPath || item.href },
+          { galleryPath: getPrimaryGalleryPath(item) },
           size
         );
       } else if (item[field]) {

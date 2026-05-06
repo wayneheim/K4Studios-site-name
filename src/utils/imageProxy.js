@@ -134,13 +134,24 @@ function getFallbackPhraseFromGalleryPath(galleryPath) {
 }
 
 function normalizeGalleryPath(value) {
-  const raw = String(value || '').trim();
+  let raw = String(value || '').trim().replace(/\\/g, '/');
   if (!raw) return '';
   try {
-    return new URL(raw, 'https://www.k4studios.com').pathname.replace(/\/+$/, '');
+    raw = new URL(raw, 'https://www.k4studios.com').pathname;
   } catch {
-    return raw.replace(/\/+$/, '');
+    // Keep normalizing local data paths below.
   }
+
+  raw = raw
+    .replace(/^\/?src\/data\/Galleries\//i, '/Galleries/')
+    .replace(/^\/?src\/data\//i, '/')
+    .replace(/\.mjs$/i, '')
+    .replace(/\/+$/, '');
+
+  if (/^\/?K4-Select-Series\//i.test(raw)) raw = `/Other/${raw.replace(/^\/+/, '')}`;
+  if (/^Galleries\//i.test(raw)) raw = `/${raw}`;
+
+  return raw;
 }
 
 function parseSemanticArgs(sizeOrOptions, maybeOptions) {
