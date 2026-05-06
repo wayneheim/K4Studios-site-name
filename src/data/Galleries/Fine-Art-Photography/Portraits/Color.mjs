@@ -25,7 +25,7 @@ export const galleryData = [
  {
  "id": "i-nxz6Zxg",
  "title": "Cowboy Cowboy Painting Art",
- "description": "A painterly Western photograph of a cowboy, defined by duty rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where obligation to others anchored a drifting world. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A color wedding portrait becomes traditional fine art portrait photography through gesture, expression, and the quiet intimacy of a shared moment. This painterly portrait by Wayne Heim creates wall art rooted in connection, warmth, and the personal story carried by color and light.",
  "alt": "I Got Him Photography by Wayne Heim",
  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-nxz6Zxg/A",
  "keywords": [
@@ -53,7 +53,7 @@ export const galleryData = [
  {
  "id": "i-HKm2xH2",
  "title": "Wild West Photography Portrait",
- "description": "Delve into wild west photography via this painterly cowboy portraits by Wayne Heim. Highlighting western cowboy art through cowboy portraits and fine art Western photography, it's great for collectors interested in wild west photography. © Wayne Heim",
+ "description": "A color portrait is shaped by soft light, personal presence, and the intimate restraint of fine art photography. This traditional portrait image creates wall art rooted in memory, expression, and the quiet emotional force of a single human face.",
  "alt": "I Got Him Photography by Wayne Heim",
  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-HKm2xH2/A",
  "keywords": [
@@ -82,7 +82,7 @@ export const galleryData = [
  {
  "id": "i-kPXCbrd",
  "title": "Oh No! Photography by Wayne Heim",
- "description": "A painterly Western photograph of a cowboy on the American frontier, defined by vigilance rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A woman reacts with surprise during a portrait session, turning expression and timing into the center of the image. This color fine art portrait creates wall art rooted in personality, humor, and the unscripted spark that makes a photograph feel alive.",
  "alt": "Wayne Heim – Fine Art Photography",
  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-kPXCbrd/A",
  "keywords": [
@@ -111,7 +111,7 @@ export const galleryData = [
  {
  "id": "i-ZXBnkzr",
  "title": "Goth Photography by Wayne Heim",
- "description": "A painterly Western photograph of a cowboy on the American frontier, defined by authority rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where command was earned through presence and experience. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A goth portrait becomes color fine art through style, expression, and the controlled drama of a posed character study. This traditional portrait photograph creates wall art rooted in individuality, atmosphere, and the visual confidence of personal identity.",
  "alt": "Oh No! Photography by Wayne Heim",
  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-ZXBnkzr/A",
  "keywords": [
@@ -140,7 +140,7 @@ export const galleryData = [
  {
  "id": "i-xZBJLVP",
  "title": "Fine Art Western Photography - Frontier Life",
- "description": "A painterly Western photograph of a cowboy, defined by duty rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where obligation to others anchored a drifting world. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A color portrait is held with quiet attention to expression, light, and human presence. This traditional fine art portrait photograph creates wall art rooted in personality, mood, and the painterly quality of a carefully shaped moment.",
  "alt": "Goth Photography by Wayne Heim",
  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-xZBJLVP/A",
  "keywords": [
@@ -170,7 +170,7 @@ export const galleryData = [
  {
  "id": "i-qW6L7dN",
  "title": "Frontier Life In Fine Art",
- "description": "A painterly Western photograph of an outlaw, defined by vigilance rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A color portrait becomes fine art through posture, expression, and restrained atmosphere. This traditional portrait photograph creates wall art rooted in character, human presence, and the quiet story suggested by a single look.",
  "alt": "New fine art photograph © Wayne Heim",
  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-qW6L7dN/A",
  "keywords": [
@@ -199,7 +199,7 @@ export const galleryData = [
  {
  "id": "i-rQKZKdQ",
  "title": "Can We do This Photography by Wayne Heim",
- "description": "Crew member of tall ship puzzles at docking. \n ©Wayne Heim",
+ "description": "A tall ship crew member puzzles through docking, turning maritime work into a color portrait of concentration and practical tension. This traditional fine art photograph creates character portrait wall art rooted in expression, action, and the human side of life on the water.",
  "alt": "Fine art image by Wayne Heim",
  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-rQKZKdQ/A",
  "keywords": [
@@ -228,7 +228,7 @@ export const galleryData = [
  {
  "id": "i-Dv73Z9Z",
  "title": "Capturing Western Landscapes Fine Art",
- "description": "Explore western landscapes fine art with Wayne Heim's outlaw portraits. This frontier life piece conveys Western cowboys, cowboy portraits, and western landscapes fine art, perfect for fans of outlaw portraits. © Wayne Heim",
+ "description": "A historical reenactment portrait is shaped in color through costume, posture, and a sense of living history. This traditional fine art portrait creates wall art rooted in period atmosphere, character, and the human face inside a recreated moment.",
  "alt": "Can We do This Photography by Wayne Heim",
  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-Dv73Z9Z/A",
  "keywords": [
@@ -256,7 +256,7 @@ export const galleryData = [
  {
  "id": "i-ZRSNQvG",
  "title": "Mr. & Mrs. Photography by Wayne Heim",
- "description": "A painterly Western photograph of a cowboy on the American frontier, defined by authority rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where command was earned through presence and experience. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "Newlyweds leave after the ceremony in a color wedding portrait full of movement, joy, and transition. This traditional fine art photograph creates portrait wall art rooted in celebration, personal history, and the first steps into a shared life.",
  "alt": "Thank You Sir Photography by Wayne Heim",
  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-ZRSNQvG/A",
  "keywords": [
@@ -285,7 +285,7 @@ export const galleryData = [
  {
  "id": "i-hpMXkWC",
  "title": "Welcome to the Show Photography by Wayne Heim",
- "description": "Woman with top hat seem to be welcoming us to come in. ©Wayne Heim",
+ "description": "A woman in a top hat seems to welcome the viewer into the scene, turning theatrical presence into color character portrait photography. This traditional fine art portrait creates wall art rooted in invitation, costume, and the confident charm of performance.",
  "alt": "Mr. & Mrs. Photography by Wayne Heim",
  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-hpMXkWC/A",
  "keywords": [
@@ -314,7 +314,7 @@ export const galleryData = [
  {
  "id": "i-3xJqH6t",
  "title": "Lady in Blue Light Photography by Wayne Heim",
- "description": "Portrait of woman in blue light dresses in steampunk. ©Wayne Heim",
+ "description": "A woman in steampunk dress is photographed in blue light, creating a color portrait shaped by costume, mood, and theatrical atmosphere. This traditional fine art portrait creates wall art rooted in character, color, and the dramatic language of styled portrait photography.",
  "alt": "Welcome to the Show Photography by Wayne Heim",
  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-3xJqH6t/A",
  "keywords": [
@@ -343,7 +343,7 @@ export const galleryData = [
  {
  "id": "i-4z3tZgc",
  "title": "Full View Photography by Wayne Heim",
- "description": "View of woman in full steampunk dress.\n ©Wayne Heim",
+ "description": "A full view of a woman in steampunk dress becomes color fine art portrait photography through costume, stance, and controlled atmosphere. This portrait creates wall art rooted in character design, visual texture, and the story suggested by dress and posture.",
  "alt": "Lady in Blue Light Photography by Wayne Heim",
  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-4z3tZgc/A",
  "keywords": [
@@ -372,7 +372,7 @@ export const galleryData = [
  {
  "id": "i-63nPPxF",
  "title": "Western Fine Art - Western Art",
- "description": "Discover the western fine art in this powerful western art by Wayne Heim. A compelling work that embodies painterly cowboy portraits, powerful works of art, and cowboy artwork. Perfect for art lovers seeking western fine art to enhance their collection. © Wayne Heim",
+ "description": "A color portrait is shaped by warmth, expression, and the painterly restraint of fine art photography. This traditional portrait image creates wall art rooted in personal presence, soft atmosphere, and the emotional clarity of a held moment.",
  "alt": "Full View Photography by Wayne Heim",
  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-63nPPxF/A",
  "keywords": [
@@ -399,7 +399,7 @@ export const galleryData = [
  {
  "id": "i-n9WGTPS",
  "title": "Exploring Western Fine Art",
- "description": "A painterly Western photograph of a cowboy, defined by duty rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where obligation to others anchored a drifting world. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A young portrait subject is rendered in color with soft light, natural expression, and a quiet sense of personality. This traditional fine art portrait photograph creates wall art rooted in youth, presence, and the painterly warmth of color photography.",
  "alt": "Wayne Heim – Fine Art Photography",
  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-n9WGTPS/A",
  "keywords": [
@@ -428,7 +428,7 @@ export const galleryData = [
  {
  "id": "i-bTt8gx5",
  "title": "Cowboy Portraits",
- "description": "Discover the in this powerful cowboy portraits by Wayne Heim. A compelling work that embodies outlaw portraits, fine art Western photography, and rugged spirit. Perfect for art lovers seeking to enhance their collection. © Wayne Heim",
+ "description": "A color portrait captures a young subject with quiet attention to expression, setting, and personal presence. This traditional fine art portrait creates wall art rooted in character, natural light, and the visual tenderness of a carefully held moment.",
  "alt": "Fine art image by Wayne Heim",
  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-bTt8gx5/A",
  "keywords": [
@@ -458,7 +458,7 @@ export const galleryData = [
  {
  "id": "i-vbphs5v",
  "title": "Historic Western Prints And Rugged Spirit",
- "description": "A painterly Western photograph of a cowboy, defined by vigilance rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A senior portrait becomes color fine art through pose, light, and the sense of self beginning to emerge. This traditional portrait photograph creates wall art rooted in youth, transition, confidence, and the emotional threshold between childhood and adulthood.",
  "alt": "Wayne Heim – Fine Art Photography",
  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-vbphs5v/A",
  "keywords": [
@@ -486,7 +486,7 @@ export const galleryData = [
  {
  "id": "i-MRwnLT8",
  "title": "Painterly Cowboy Portraits Portrait",
- "description": "A painterly Western photograph of a cowboy, defined by duty rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where obligation to others anchored a drifting world. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A color senior portrait is shaped by natural light, expressive posture, and a sense of quiet confidence. This traditional fine art photograph creates portrait wall art rooted in individuality, youth, and the painterly atmosphere of a personal milestone.",
  "alt": "Wayne Heim – Fine Art Photography",
  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-MRwnLT8/A",
  "keywords": [
@@ -513,7 +513,7 @@ export const galleryData = [
  {
  "id": "i-SJXqKqR",
  "title": "The Essence Of Western Landscapes Fine Art",
- "description": "Delve into western landscapes fine art via this western art by Wayne Heim. Highlighting rugged spirit through powerful works of art it's great for collectors interested in western landscapes fine art. © Wayne Heim",
+ "description": "A color portrait holds the subject with warmth, atmosphere, and the quiet structure of traditional fine art photography. This portrait creates wall art rooted in presence, natural expression, and the emotional pull of a single composed moment.",
  "alt": "Wayne Heim – Fine Art Photography",
  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-SJXqKqR/A",
  "keywords": [
@@ -543,7 +543,7 @@ export const galleryData = [
  {
  "id": "i-gTcsrMb",
  "title": "Capturing Outlaw Portraits",
- "description": "Delve into outlaw portraits via this wild west photography by Wayne Heim. Highlighting fine art Western photography through rustic charm and cowboy art, it's great for collectors interested in outlaw portraits. © Wayne Heim",
+ "description": "A young subject is photographed in color with soft light and a quiet sense of interior presence. This traditional fine art portrait creates wall art rooted in personality, atmosphere, and the painterly character of natural color photography.",
  "alt": "Fine art image by Wayne Heim",
  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-gTcsrMb/A",
  "keywords": [
@@ -572,7 +572,7 @@ export const galleryData = [
  {
  "id": "i-qfFFV9r",
  "title": "Formal Portrait Photography by Wayne Heim",
- "description": "A painterly Western photograph of a cowboy on the American frontier, defined by vigilance rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A formal wedding portrait becomes color fine art through pose, ceremony, and the quiet dignity of the moment. This traditional portrait photograph creates wall art rooted in elegance, memory, and the lasting structure of a formal milestone.",
  "alt": "Fine art image by Wayne Heim",
  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-qfFFV9r/A",
  "keywords": [
@@ -601,7 +601,7 @@ export const galleryData = [
  {
  "id": "i-NCMRvhT",
  "title": "Painterly Cowboy Portraits Moment",
- "description": "Discover the painterly cowboy portraits in this powerful western fine art by Wayne Heim. A compelling work that embodies historic western prints, and wild west photography. Perfect for art lovers seeking painterly cowboy portraits to enhance their collection. © Wayne Heim",
+ "description": "A color portrait in formal wedding context is shaped by expression, dress, and the quiet atmosphere of ceremony. This traditional fine art photograph creates portrait wall art rooted in personal history, style, and the emotional clarity of the day.",
  "alt": "Formal Portrait Photography by Wayne Heim",
  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-NCMRvhT/A",
  "keywords": [
@@ -631,7 +631,7 @@ export const galleryData = [
  {
  "id": "i-6GkqmLJ",
  "title": "Cowboy Fine Art Western Photography",
- "description": "A painterly Western photograph of a cowboy, defined by authority rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where command was earned through presence and experience. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A color wedding portrait becomes fine art through connection, posture, and warm human presence. This traditional portrait photograph creates wall art rooted in relationship, ceremony, and the painterly rhythm of color and light.",
  "alt": "Wayne Heim – Fine Art Photography",
  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-6GkqmLJ/A",
  "keywords": [
@@ -661,7 +661,7 @@ export const galleryData = [
  {
  "id": "i-M3F8SJn",
  "title": "Painterly Cowboy Portraits Cowboy",
- "description": "A painterly Western photograph of a cowboy, defined by duty rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where obligation to others anchored a drifting world. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A color portrait is shaped by expression, light, and personal atmosphere rather than spectacle. This traditional fine art portrait creates wall art rooted in character, human presence, and the subtle story held in a composed face.",
  "alt": "Photographic artwork © Wayne Heim",
  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-M3F8SJn/A",
  "keywords": [
@@ -691,7 +691,7 @@ export const galleryData = [
  {
  "id": "i-5kwfBPg",
  "title": "Western Landscapes Fine Art In Fine Art",
- "description": "A painterly Western photograph of a cowboy, defined by vigilance rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A young portrait subject is rendered in color with quiet light, natural expression, and a gentle painterly atmosphere. This traditional fine art photograph creates portrait wall art rooted in youth, presence, and the small emotional charge of a still moment.",
  "alt": "Wayne Heim – Fine Art Photography",
  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-5kwfBPg/A",
  "keywords": [
@@ -721,7 +721,7 @@ export const galleryData = [
  {
  "id": "i-RfxzLFv",
  "title": "Cowboy Portraits Study",
- "description": "A painterly Western photograph of a cowboy, defined by duty rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where obligation to others anchored a drifting world. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A color wedding portrait becomes a study of expression, ceremony, and personal presence. This traditional fine art photograph creates wall art rooted in elegance, memory, and the painterly warmth of a formal moment held in color.",
  "alt": "Fine art image by Wayne Heim",
  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-RfxzLFv/A",
  "keywords": [
@@ -750,7 +750,7 @@ export const galleryData = [
  {
  "id": "i-PXLw8g9",
  "title": "Cowboy Portraits Study",
- "description": "A painterly Western photograph of a cowboy, defined by vigilance rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A formal color portrait is held with restraint, posture, and quiet confidence. This traditional fine art photograph creates portrait wall art rooted in ceremony, personal style, and the painterly structure of light and color.",
  "alt": "Photographic artwork © Wayne Heim",
  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-PXLw8g9/A",
  "keywords": [
@@ -780,7 +780,7 @@ export const galleryData = [
  {
  "id": "i-hSp59Cb",
  "title": "Frontier Life - Western Landscapes Fine Art",
- "description": "A painterly Western photograph of a cowboy, defined by duty rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where obligation to others anchored a drifting world. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A color wedding portrait carries the emotional charge of ceremony through posture, expression, and formal dress. This traditional fine art photograph creates wall art rooted in personal memory, relationship, and the quiet authority of a composed portrait.",
  "alt": "Wayne Heim – Fine Art Photography",
  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-hSp59Cb/A",
  "keywords": [
@@ -809,7 +809,7 @@ export const galleryData = [
  {
  "id": "i-nnRwtxn",
  "title": "Western Cowboys And Powerful Works Of Art",
- "description": "A painterly Western photograph of a cowboy, defined by vigilance rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A formal portrait becomes color fine art through controlled light, dress, and the subject's quiet presence. This traditional portrait photograph creates wall art rooted in elegance, confidence, and the lasting visual language of ceremony.",
  "alt": "New fine art photograph © Wayne Heim",
  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-nnRwtxn/A",
  "keywords": [
@@ -838,7 +838,7 @@ export const galleryData = [
  {
  "id": "i-T8CQBwG",
  "title": "Powerful Works Of Art Study",
- "description": "A painterly Western photograph of a cowboy, defined by duty rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where obligation to others anchored a drifting world. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A color formal portrait is shaped by pose, clothing, and the painterly handling of light. This traditional fine art photograph creates portrait wall art rooted in ceremony, character, and the restrained beauty of a single figure.",
  "alt": "Wayne Heim – Fine Art Photography",
  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-T8CQBwG/A",
  "keywords": [
@@ -868,7 +868,7 @@ export const galleryData = [
  {
  "id": "i-SN7LTzk",
  "title": "Fine Art Western Photography Moment",
- "description": "Delve into fine art Western photography via this frontier life by Wayne Heim. Highlighting cowboy artwork through outlaw portraits and western cowboy art, it's great for collectors interested in fine art Western photography. © Wayne Heim",
+ "description": "A color wedding portrait becomes traditional fine art through expression, formal atmosphere, and the quiet relationship between subject and light. This portrait creates wall art rooted in memory, ceremony, and the emotional tone of the day.",
  "alt": "New fine art photograph © Wayne Heim",
  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-SN7LTzk/A",
  "keywords": [
@@ -896,7 +896,7 @@ export const galleryData = [
  {
  "id": "i-kwZN26x",
  "title": "Rugged Spirit Portrait",
- "description": "A painterly Western photograph of an outlaw, defined by vigilance rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A color portrait is shaped by quiet expression, formal presence, and painterly light. This traditional fine art photograph creates portrait wall art rooted in personal character, ceremony, and the subtle drama of color photography.",
  "alt": "Wayne Heim – Fine Art Photography",
  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-kwZN26x/A",
  "keywords": [
@@ -924,7 +924,7 @@ export const galleryData = [
  {
  "id": "i-7LWGsvH",
  "title": "The Essence Of Historic Western Prints",
- "description": "Delve into historic western prints via this frontier life by Wayne Heim. Highlighting painterly cowboy portraits through rustic charm and Western cowboys, it's great for collectors interested in historic western prints. © Wayne Heim",
+ "description": "A color formal portrait carries the confidence and polish of a carefully composed personal image. This traditional fine art photograph creates wall art rooted in posture, expression, and the lasting presence of a ceremonial moment.",
  "alt": "Wayne Heim – Fine Art Photography",
  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-7LWGsvH/A",
  "keywords": [
@@ -953,7 +953,7 @@ export const galleryData = [
  {
  "id": "i-XJgt6gK",
  "title": "Cowboy Art Moment",
- "description": "A painterly Western photograph of a cowboy, defined by hesitation rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where a moment of pause could mean life or death. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A color portrait becomes fine art through pose, controlled expression, and warm visual atmosphere. This traditional portrait photograph creates wall art rooted in character, personal style, and the quiet narrative held inside a single frame.",
  "alt": "Photographic artwork © Wayne Heim",
  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-XJgt6gK/A",
  "keywords": [
@@ -981,7 +981,7 @@ export const galleryData = [
  {
  "id": "i-3pJD592",
  "title": "Western Landscapes Fine Art Cowboy",
- "description": "A painterly Western photograph of a cowboy, defined by vigilance rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A color formal portrait is shaped by light, posture, and the painterly structure of the scene. This traditional fine art photograph creates portrait wall art rooted in elegance, human presence, and the emotional memory of a composed moment.",
  "alt": "Photographic artwork © Wayne Heim",
  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-3pJD592/A",
  "keywords": [
@@ -1011,7 +1011,7 @@ export const galleryData = [
  {
  "id": "i-VkcsxKv",
  "title": "Cowboy Portraits Moment",
- "description": "Delve into cowboy portraits via this painterly cowboy portraits by Wayne Heim. Highlighting Western cowboys through western landscapes fine art and frontier life, it's great for collectors interested in cowboy portraits. © Wayne Heim",
+ "description": "A color portrait holds the subject with quiet attention to expression, dress, and personal atmosphere. This traditional fine art photograph creates wall art rooted in character, color, and the understated force of a carefully shaped portrait.",
  "alt": "Fine art image by Wayne Heim",
  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-VkcsxKv/A",
  "keywords": [
@@ -1041,7 +1041,7 @@ export const galleryData = [
  {
  "id": "i-mSd5DWR",
  "title": "Wild West Photography - Frontier Life",
- "description": "Discover the wild west photography in this powerful frontier life by Wayne Heim. A compelling work that embodies outlaw portraits, western fine art. Perfect for art lovers seeking wild west photography to enhance their collection. © Wayne Heim",
+ "description": "A color portrait becomes traditional fine art through expression, atmosphere, and the disciplined use of light. This portrait photograph creates wall art rooted in personal presence, quiet confidence, and the painterly feeling of a held moment.",
  "alt": "Wayne Heim – Fine Art Photography",
  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-mSd5DWR/A",
  "keywords": [
@@ -1070,7 +1070,7 @@ export const galleryData = [
  {
  "id": "i-7HGrjRd",
  "title": "Wild West Photography In Fine Art",
- "description": "Discover the wild west photography in this powerful rugged spirit by Wayne Heim. A compelling work that embodies cowboy portraits, western art, and western landscapes fine art. Perfect for art lovers seeking wild west photography to enhance their collection. © Wayne Heim",
+ "description": "A color formal portrait is shaped by human presence, warm light, and the quiet drama of ceremony. This traditional fine art photograph creates portrait wall art rooted in memory, expression, and the visual strength of a composed figure.",
  "alt": "Wayne Heim – Fine Art Photography",
  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-7HGrjRd/A",
  "keywords": [
@@ -1099,7 +1099,7 @@ export const galleryData = [
  {
  "id": "i-WThMvLG",
  "title": "Rustic Charm And Cowboy Portraits",
- "description": "A painterly Western photograph of a cowboy, defined by duty rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where obligation to others anchored a drifting world. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A color portrait carries the formal confidence of a ceremonial moment, held with restraint and painterly light. This traditional fine art photograph creates wall art rooted in expression, posture, and the quiet dignity of personal presentation.",
  "alt": "Photographic artwork © Wayne Heim",
  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-WThMvLG/A",
  "keywords": [
@@ -1129,7 +1129,7 @@ export const galleryData = [
  {
  "id": "i-dRqZjmK",
  "title": "Rustic Charm Cowboy",
- "description": "A painterly Western photograph of a cowboy, defined by vigilance rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A color portrait becomes fine art through careful light, composed posture, and the subject's quiet presence. This traditional portrait photograph creates wall art rooted in ceremony, confidence, and the painterly warmth of color photography.",
  "alt": "New fine art photograph © Wayne Heim",
  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-dRqZjmK/A",
  "keywords": [
@@ -1159,7 +1159,7 @@ export const galleryData = [
  {
  "id": "i-62sCLX4",
  "title": "Fine Art Painterly Portrait Photography:",
- "description": "A painterly Western photograph of a cowboy on the American frontier, defined by authority rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where command was earned through presence and experience. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A painterly color portrait is shaped by formal dress, human presence, and the emotional atmosphere of the moment. This traditional fine art portrait photograph creates wall art rooted in ceremony, memory, and the expressive power of color.",
  "alt": "Wayne Heim – Fine Art Photography",
  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-62sCLX4/A",
  "keywords": [
@@ -1188,7 +1188,7 @@ export const galleryData = [
  {
  "id": "i-LcWbnLw",
  "title": "Fine Art Painterly Portrait Photography:",
- "description": "A painterly Western photograph of a cowboy on the American frontier, defined by vigilance rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+ "description": "A color portrait becomes painterly through soft atmosphere, formal styling, and the quiet force of a composed human figure. This traditional fine art photograph creates portrait wall art rooted in presence, elegance, and the lasting memory of the day.",
  "alt": "Fine Art Painterly Portrait Photography:",
  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-LcWbnLw/A",
  "keywords": [
@@ -1217,7 +1217,7 @@ export const galleryData = [
  {
  "id": "i-nbBGhv6",
  "title": "Fine Art Cowboy Portraits",
- "description": "Discover the cowboy portraits in this powerful powerful works of art by Wayne Heim. A compelling work that embodies frontier life, rustic charm, and cowboy artwork. Perfect for art lovers seeking cowboy portraits to enhance their collection. © Wayne Heim",
+ "description": "An engagement portrait is rendered in color with warmth, closeness, and the quiet anticipation of a shared future. This traditional fine art portrait creates wall art rooted in relationship, promise, and the emotional stillness between two people.",
  "alt": "Fine Art Painterly Portrait Photography:",
  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-nbBGhv6/A",
  "keywords": [
@@ -1245,7 +1245,7 @@ export const galleryData = [
  {
  "id": "i-mMCXK5Q",
  "title": "The Essence Of Powerful Works Of Art",
- "description": "Discover the powerful works of art in this powerful rustic charm by Wayne Heim. A compelling work that embodies cowboy painting art, Western cowboys, and western fine art. Perfect for art lovers seeking powerful works of art to enhance their collection. © Wayne Heim",
+ "description": "A color engagement portrait becomes fine art through shared presence, warm light, and restrained composition. This traditional portrait photograph creates wall art rooted in relationship, memory, and the quiet confidence of two people held together in the frame.",
  "alt": "Fine art image by Wayne Heim",
  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-mMCXK5Q/A",
  "keywords": [
@@ -1274,7 +1274,7 @@ export const galleryData = [
  {
  "id": "i-rKWtq55",
  "title": "Exploring Powerful Works Of Art",
- "description": "Explore powerful works of art with Wayne Heim's painterly cowboy portraits. This fine art Western photography piece conveys wild west photography, historic western prints, and powerful works of art, perfect for fans of painterly cowboy portraits. © Wayne Heim",
+ "description": "A color engagement portrait is shaped by connection, expression, and the painterly handling of light. This traditional fine art photograph creates portrait wall art rooted in closeness, personal story, and the promise carried by a shared glance.",
  "alt": "Photographic artwork © Wayne Heim",
  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-rKWtq55/A",
  "keywords": [
