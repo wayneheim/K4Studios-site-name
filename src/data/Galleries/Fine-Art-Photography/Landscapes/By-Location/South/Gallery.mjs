@@ -25,7 +25,7 @@ export const galleryData = [
   {
     "id": "i-8tvnHvW",
     "title": "Traditional Southern Landscape Photography In Fine Art",
-    "description": "Discover the traditional southern landscape photography in this powerful traditional southern landscape photography by Wayne Heim. A compelling work that embodies South – Light and Legacy, southern landscape prints, and traditional southern landscape photography. Featuring traditional southern landscape photography, perfect for art lovers seeking traditional southern landscape photography to enhance their collection. © Wayne Heim",
+    "description": "A secluded Southern woodland scene becomes traditional southern landscape photography, shaped by forest, trees, and quiet natural light. This southern landscape print creates wall art rooted in stillness, regional atmosphere, and the softer legacy of land held beneath shade.",
     "alt": "Wayne Heim's traditional southern landscape photography artwork",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery/i-8tvnHvW/A",
     "keywords": [
@@ -62,7 +62,7 @@ export const galleryData = [
   {
     "id": "i-R6Zh32H",
     "title": "South – Light And Legacy - South – Light And Legacy",
-    "description": "A fine art landscape photograph of the Blue Ridge Mountains, shaped by stillness rather than spectacle. Wayne Heim's fine art landscape photography treats place as emotional geography - not destination, but atmosphere. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the land holds its breath between seasons. Part of Wayne Heim's Southern landscape photography series. © Wayne Heim",
+    "description": "A quiet Southern landscape is shaped by woodland shade, natural texture, and the restrained character of regional light. This traditional southern landscape photograph creates wall art rooted in trees, stillness, and the lingering sense of place carried by the land.",
     "alt": "South – Light and Legacy in fine art photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery/i-R6Zh32H/A",
     "keywords": [
@@ -98,7 +98,7 @@ export const galleryData = [
   {
     "id": "i-rH4MSZg",
     "title": "Southern Landscape Prints Portrait",
-    "description": "A fine art landscape of the Blue Ridge Mountains, shaped by solitude rather than spectacle. Approached with restraint and precision, each frame captures the character of the land rather than its postcard appeal. Light, tone, and composition shape a quiet narrative rooted in place and memory - where distance and silence are companions here. Part of Wayne Heim's Southern landscape photography series. © Wayne Heim",
+    "description": "A Southern woodland landscape becomes fine art through soft light, forest texture, and a quiet sense of seclusion. This traditional southern landscape print creates regional wall art shaped by trees, atmosphere, and the calm weight of place.",
     "alt": "Wayne Heim's southern landscape prints artwork",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery/i-rH4MSZg/A",
     "keywords": [
@@ -135,7 +135,7 @@ export const galleryData = [
   {
     "id": "i-ZBbxVgZ",
     "title": "Traditional Southern Landscape Photography In Fine Art",
-    "description": "Discover the traditional southern landscape photography in this powerful southern landscape prints by Wayne Heim. A compelling work that embodies traditional southern landscape photography, southern landscape prints, and South – Light and Legacy. Featuring South – Light and Legacy, perfect for art lovers seeking traditional southern landscape photography to enhance their collection. © Wayne Heim",
+    "description": "A Southern landscape holds the frame through quiet natural light, forested texture, and the understated beauty of regional terrain. This traditional southern landscape photograph creates wall art rooted in woodland atmosphere, stillness, and the legacy of place.",
     "alt": "Fine art photography of traditional southern landscape photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery/i-ZBbxVgZ/A",
     "keywords": [
