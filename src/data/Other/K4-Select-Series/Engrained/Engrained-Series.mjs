@@ -27,7 +27,7 @@ export const galleryData = [
   {
     "id": "i-Lk9XZKB",
     "title": "Worth Every Mile",
-    "description": "A couple embraces outside a weathered homestead, their movement caught in a moment of return shaped by distance and time. This narrative western art photograph captures reunion as a physical and emotional convergence, where gesture, fabric, and proximity carry the weight of the journey behind it. \n\n© Wayne Heim",
+    "description": "A couple embraces outside a weathered homestead, their reunion shaped by distance, wind, and the long road behind them. As part of the Engrained Series, this narrative Western photograph becomes fine art wood print, with natural grain adding warmth and permanence to the emotional arrival.",
     "alt": "Cowboy embracing a woman outside a rustic homestead, dress and coat moving with the wind in a cinematic Western reunion scene.",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Lk9XZKB/0/MHPqRDqXckm64s6dtbz8j56FTXZjJrf246tntQgxM/XL/Worth%20Every%20Mile%2016%20x%2024-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Lk9XZKB/0/MHPqRDqXckm64s6dtbz8j56FTXZjJrf246tntQgxM/XL/Worth%20Every%20Mile%2016%20x%2024-XL.jpg",
@@ -82,7 +82,7 @@ export const galleryData = [
   {
     "id": "i-x6rrj3V",
     "title": "This Is Where I Stand",
-    "description": "Light cuts across the rough boards of a frontier cabin as a determined woman steadies her rifle toward the open window, her posture quiet but unyielding. The scene captures a moment of guarded resolve—someone who has already measured the cost and chosen her ground. Rooted in the spirit of the American frontier and the storytelling tradition of narrative Western art, the image reflects the strength and self-determination that defined many lives in the Old West. \n\n© Wayne Heim",
+    "description": "A determined frontier woman steadies her rifle from a cabin window, having chosen her ground before anyone crosses it. This Engrained Print turns homestead defense and psychological Western portraiture into wood print fine art, where natural grain reinforces boundary, resolve, and self-determination.",
     "alt": "Woman aiming a rifle from a shadowed interior window at dawn.",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-x6rrj3V/0/MBQ9hdCn55qZPPHLQV7Fkpn74wKH5794vjT2PgLjn/XL/Where%20I%20Stand%2018%20x%2024-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-x6rrj3V/0/MBQ9hdCn55qZPPHLQV7Fkpn74wKH5794vjT2PgLjn/XL/Where%20I%20Stand%2018%20x%2024-XL.jpg",
@@ -146,7 +146,7 @@ export const galleryData = [
   {
     "id": "i-J6Gdmr4",
     "title": "\"Special Delivery\"",
-    "description": "Four shadowed figures stand on the rails before a halted night train, their forms emerging through thick fog under the engine’s blazing headlamp. The painterly Western scene blends cinematic light and atmosphere with Western fine art photography, capturing a tense moment of confrontation on the frontier. Dramatic contrast, textured haze, and layered composition create a narrative rich with ambiguity, where power, consequence, and reckoning unfold in silence.\n\n© Wayne Heim",
+    "description": "Four shadowed figures stand before a halted night train, fog and headlamp turning the rails into a stage for reckoning. This Engrained Series wood print blends Western confrontation with railroad myth, giving the cinematic fog, silhouettes, and moral tension the physical depth of photographic art on wood.",
     "alt": "Four western figures standing on railroad tracks in fog before a night train headlight, painterly cinematic western scene.",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-J6Gdmr4/0/KfRRCJRpH6tz8ztTMbp8d2hsckqBNnNqdj926NsgJ/XL/Welcome%20Party%2030%20x%2020-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-J6Gdmr4/0/KfRRCJRpH6tz8ztTMbp8d2hsckqBNnNqdj926NsgJ/XL/Welcome%20Party%2030%20x%2020-XL.jpg",
@@ -218,7 +218,7 @@ export const galleryData = [
   {
     "id": "i-G8gfsL5",
     "title": "Untimely Parting",
-    "description": "Grieving figures gather outside a small frontier church, their posture revealing the raw weight of loss and farewell. One woman collapses to her knees while another hides her face, and a man stands beside them searching the sky as if for answers that will not come. Rendered in painterly Western tones and cinematic light, the scene reflects the quieter realities behind frontier life—moments of mourning, resilience, and the human cost woven into the mythology of the American West. \n\n© Wayne Heim",
+    "description": "Grieving frontier figures gather outside a small church, their bodies carrying loss before words can reach it. As an Engrained Print, this narrative Western scene becomes wood print fine art, using natural grain and painterly restraint to give mourning, faith, and endurance a tactile permanence.",
     "alt": "Three grieving frontier figures outside a small church mourning beside a grave in a painterly Western scene.",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-G8gfsL5/0/Ng7DQh5tSD3jvrcTkPR6McjKvbXwcZHrLZ5f27pWJ/XL/Untimely%20Parting%2016%20x%2020-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-G8gfsL5/0/Ng7DQh5tSD3jvrcTkPR6McjKvbXwcZHrLZ5f27pWJ/XL/Untimely%20Parting%2016%20x%2020-XL.jpg",
@@ -282,7 +282,7 @@ export const galleryData = [
   {
     "id": "i-PnGsDQp",
     "title": "Till Death Do Us Part",
-    "description": "Inside a dim frontier cabin, a woman cradles her husband as lantern light washes softly across rough timber walls and worn blankets. The painterly Western scene captures an intimate moment of love and farewell, where quiet devotion replaces the violence and hardship often associated with frontier life. Warm, cinematic light and careful composition give the image the emotional gravity of classic Western storytelling while preserving the authenticity of fine art photography.\n\n© Wayne Heim",
+    "description": "A woman cradles her dying husband inside a lantern-lit cabin, holding love and farewell in the same small circle of warmth. This Engrained Series wood print turns intimate Western storytelling into fine art on wood, where natural grain strengthens the tenderness, mortality, and frontier hardship within the scene.",
     "alt": "Woman holding a dying frontiersman in a lantern-lit cabin interior, intimate painterly Western scene.",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-PnGsDQp/0/LkJhM74SGrQZdvMdLGwMXcbS38vGPsbccj6H2DWmD/XL/Till%20Death%20Do%20Us%20Part%2018%20x%2030-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-PnGsDQp/0/LkJhM74SGrQZdvMdLGwMXcbS38vGPsbccj6H2DWmD/XL/Till%20Death%20Do%20Us%20Part%2018%20x%2030-XL.jpg",
@@ -346,7 +346,7 @@ export const galleryData = [
   {
     "id": "i-nmDtVXP",
     "title": "This Is the Hand — I Can Feel It",
-    "description": "Lantern light pools across a rough wooden table as an older gambler studies the cards in his hands, the room around him fading into shadow. Dust, whiskey, and quiet calculation linger in the air while the moment stretches between chance and consequence. Framed with the atmospheric depth of painterly Western photography, the scene captures the private tension of frontier gambling—where pride, luck, and hard experience often shared the same dimly lit table. \n\n© Wayne Heim",
+    "description": "An older gambler studies his cards in warm lamplight, caught between luck, debt, and the dangerous optimism of one last hand. This Engrained Print becomes wood print fine art, pairing painterly Western portraiture with natural grain to deepen the saloon tension and psychological stakes.",
     "alt": "Older cowboy seated at a dimly lit table holding playing cards, warm lantern light casting deep shadows.",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-nmDtVXP/0/KwNcm2hP5xh7pBSXbLqqXFrjtv2GvhBkb9JzJjdDd/XL/This%20is%20the%20Hand%2018%20x%2024-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-nmDtVXP/0/KwNcm2hP5xh7pBSXbLqqXFrjtv2GvhBkb9JzJjdDd/XL/This%20is%20the%20Hand%2018%20x%2024-XL.jpg",
@@ -412,7 +412,7 @@ export const galleryData = [
   {
     "id": "i-gM5crmq",
     "title": "Pinkerton's Grasp",
-    "description": "A violent struggle erupts on a frontier porch as two men grapple with a lawman while a third stands above them, weapon drawn. The painterly Western scene captures the raw intensity of justice and vengeance colliding on the American frontier. Dramatic posture, sculpted light, and textured tones emphasize the physical tension and moral ambiguity that define narrative Western fine art photography.\n\n© Wayne Heim",
+    "description": "A violent porch struggle traps three men in a moment where authority, resistance, and consequence collide. This Engrained Series wood print turns narrative Western art into a tactile frontier reckoning, with natural grain reinforcing the physical tension and moral ambiguity of the scene.",
     "alt": "Three men fighting on a frontier porch, one choking a lawman while another stands with a gun.",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-gM5crmq/0/NZwmqW58gZ59TXm3z56W4PKLX5mkjvM2Xfcv9Nhgd/XL/Pinkertons%20Grasp%2016%20x%2020-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-gM5crmq/0/NZwmqW58gZ59TXm3z56W4PKLX5mkjvM2Xfcv9Nhgd/XL/Pinkertons%20Grasp%2016%20x%2020-XL.jpg",
@@ -485,7 +485,7 @@ export const galleryData = [
   {
     "id": "i-8pfC4qn",
     "title": "One Way Out",
-    "description": "A lone rider leads his horse across rugged stone as smoke and fire stain the sky behind the ridge. The landscape glows with the raw colors of flame and dusk, turning the terrain into a stage of endurance rather than escape. With its sweeping composition and dramatic sky, the scene carries the cinematic scale often found in painterly Western storytelling. \n\n© Wayne Heim",
+    "description": "A lone rider leads his horse across rugged stone while smoke and fire stain the sky behind him, turning escape into endurance. As an Engrained Series landscape narrative, this wood print fine art piece uses natural grain to deepen the fire-lit terrain and the mythic weight of moving forward.",
     "alt": "Lone rider guiding a saddled horse across rocky terrain beneath a fiery smoke-filled sky, rendered in painterly Western photography.",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-8pfC4qn/0/Mf77hsNvZhWP94Rpf5x4jDmVKQPD7SKX3XDpctqwB/XL/One%20Way%20Out%2036%20x%2026%20copy-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-8pfC4qn/0/Mf77hsNvZhWP94Rpf5x4jDmVKQPD7SKX3XDpctqwB/XL/One%20Way%20Out%2036%20x%2026%20copy-XL.jpg",
@@ -551,7 +551,7 @@ export const galleryData = [
   {
     "id": "i-LdQzCRt",
     "title": "Night Raid",
-    "description": "Two frontier riders pause in the darkness of a rocky canyon, scanning the night for movement as their horses stand ready beneath them. The painterly Western scene uses dramatic light and shadow to evoke the suspense of a midnight mission on the American frontier. Cinematic composition, textured atmosphere, and subdued tones place the viewer inside a moment of quiet vigilance common to Western fine art photography and narrative cowboy imagery.\n\n© Wayne Heim",
+    "description": "Two riders pause in the darkness of a rocky canyon, scanning the night while their horses stand ready beneath them. This Engrained Series wood print turns a nocturnal Western scene into fine art on wood, using natural grain and shadow to heighten vigilance, secrecy, and frontier suspense.",
     "alt": "Cowboys on horseback at night scanning the distance in a rocky canyon, cinematic frontier scene.",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-LdQzCRt/0/KWjFf3czXHD7TVHxQGwpHvFtB3x2w8vS2D4SMCZHX/XL/Night%20Raid%2030%20x%2022%20copy-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-LdQzCRt/0/KWjFf3czXHD7TVHxQGwpHvFtB3x2w8vS2D4SMCZHX/XL/Night%20Raid%2030%20x%2022%20copy-XL.jpg",
@@ -617,7 +617,7 @@ export const galleryData = [
   {
     "id": "i-B8sDF3M",
     "title": "Meant What I Said!",
-    "description": "A defiant cowboy faces the viewer with revolver extended, a coiled rope and red neckerchief framing the tension of the moment. This painterly Western portrait captures the split second before action, blending cinematic storytelling with textured atmosphere drawn from the mythology of the American frontier. The bold stance, dramatic angle, and sunlit dust evoke classic Western showdowns while preserving the authenticity and grit of fine art Western photography.\n\n© Wayne Heim",
+    "description": "A defiant cowboy aims a revolver toward the viewer, red scarf and coiled rope intensifying the showdown's immediate pressure. This large-format Engrained Print turns painterly Western confrontation into wood print fine art, where natural grain adds grit and permanence to the moment before action.",
     "alt": "Cowboy aiming revolver toward viewer with red neckerchief and coiled rope in foreground, painterly Western showdown portrait.",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-B8sDF3M/0/KfsXQnSkdThMQxVtQC4zzFWRxD8DRGz3GRNPfSP5m/XL/Meant%20What%20I%20Said%2030%20x%2050%20copy-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-B8sDF3M/0/KfsXQnSkdThMQxVtQC4zzFWRxD8DRGz3GRNPfSP5m/XL/Meant%20What%20I%20Said%2030%20x%2050%20copy-XL.jpg",
@@ -694,7 +694,7 @@ export const galleryData = [
   {
     "id": "i-wV53528",
     "title": "Show me a sign.",
-    "description": "An older cowboy sits outside a weathered building, illuminated by a single lamp as evening light fades around him. His relaxed posture and steady gaze suggest a pause at the end of a long day, framed by worn wood, dust, and quiet frontier surroundings. The warm, painterly tones and controlled shadow give the portrait the reflective atmosphere often associated with classic cowboy art, emphasizing character and presence over action. \n\n© Wayne Heim",
+    "description": "An older cowboy sits beneath lamplight outside a weathered building, waiting for a sign with humor, grief, and worn-down hope. This Engrained Series wood print turns a reflective Western portrait into photographic art on wood, where natural grain deepens the sense of prayer, age, and solitude.",
     "alt": "Elderly cowboy seated beside a wooden wall under warm lamplight, resting with hands on his knees in a quiet frontier moment.",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-wV53528/0/L43jkVzd83dRBjfKhhZVr8Ps82MxkbFVjqzKxHkC4/XL/Lord%20Send%20Me%20a%20Sign%2016%20x%2020%20copy-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-wV53528/0/L43jkVzd83dRBjfKhhZVr8Ps82MxkbFVjqzKxHkC4/XL/Lord%20Send%20Me%20a%20Sign%2016%20x%2020%20copy-XL.jpg",
@@ -762,7 +762,7 @@ export const galleryData = [
   {
     "id": "i-zdvVgqx",
     "title": "Lord Help Us All",
-    "description": "A lone figure stands before the small frontier church, coat lifting in the wind while the old wooden doors rest quietly behind him. Shotgun in hand, he watches the empty road with the calm gravity of someone who understands that faith and survival often walked the same hard ground in the American frontier. Rendered with the tonal depth of painterly Western photography, the scene carries the weight of quiet resolve—where protection, belief, and the long memory of the West share the same still moment. \n\n© Wayne Heim",
+    "description": "A lone guardian stands before a frontier church with shotgun in hand, where faith, protection, and threat meet in a single still posture. As part of the Engrained Series, this Western image becomes wood print fine art, with natural grain strengthening the sacred-rustic tension of the scene.",
     "alt": "Armed guardian stands watch outside an old church, coat billowing like a preacher, shotgun at the ready.",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-zdvVgqx/0/M4gGrdRkBhNhbvw2FPpQ6Hb4ZbMQ3snZ5VnCbnS72/XL/Lord%20Help%20Us%20All%2016%20x%2036%20copy-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-zdvVgqx/0/M4gGrdRkBhNhbvw2FPpQ6Hb4ZbMQ3snZ5VnCbnS72/XL/Lord%20Help%20Us%20All%2016%20x%2036%20copy-XL.jpg",
@@ -839,7 +839,7 @@ export const galleryData = [
   {
     "id": "i-gFTwXkq",
     "title": "Loaded for Bear",
-    "description": "Inside a dim frontier cabin, a gunman sits beneath warm lamplight carefully loading his revolver while a rifle rests nearby against the wall. The quiet interior, worn wood, and controlled lighting create the tense stillness often associated with narrative Western art, where atmosphere and restraint carry the weight of the moment. \n\n© Wayne Heim",
+    "description": "A gunman loads his revolver inside a dim frontier cabin, with rifle, lamplight, and rough timber shaping the private ritual of preparation. This Engrained Print becomes wood panel art through shadow, grain, and painterly restraint, turning readiness into a tactile study of resolve.",
     "alt": "Painterly Western fine art photograph of a cowboy seated in a rustic cabin, loading a revolver by lamplight.",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-gFTwXkq/0/MMGs3tBxK5Bmf4r2bML7StkqHk9Dq5nQQR9L8Jctf/XL/Loaded%20for%20Bear%2016%20x%2020%20copy-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-gFTwXkq/0/MMGs3tBxK5Bmf4r2bML7StkqHk9Dq5nQQR9L8Jctf/XL/Loaded%20for%20Bear%2016%20x%2020%20copy-XL.jpg",
@@ -916,7 +916,7 @@ export const galleryData = [
   {
     "id": "i-svbQj25",
     "title": "Lifted",
-    "description": "Morning light spills across a rising hillside as a lone rider pauses along the narrow trail, eyes closed and face lifted toward the warmth of the day. The quiet moment between movement and decision hangs in the air while horse and rider stand balanced against the rugged Western landscape. Rendered in soft painterly textures and natural earth tones, the image reflects the quiet strength, reflection, and inward resolve that define narrative Western fine art photography.\n\n© Wayne Heim",
+    "description": "A frontier woman on horseback pauses on a rising hillside, face lifted into morning light as stillness becomes its own form of strength. This Engrained Series wood print blends Western landscape, spiritual quiet, and painterly portraiture, allowing natural grain to support the image's upward movement and reflective calm.",
     "alt": "Frontier woman on horseback pausing on a steep hillside trail with eyes closed and face lifted into the morning sun.",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-svbQj25/0/NBzdqPRZ8K5zNbb92f8B4cH9cTt7JXSHkVTL4Dq4s/XL/Lifted%2016%20x%2036%20copy-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-svbQj25/0/NBzdqPRZ8K5zNbb92f8B4cH9cTt7JXSHkVTL4Dq4s/XL/Lifted%2016%20x%2036%20copy-XL.jpg",
@@ -984,7 +984,7 @@ export const galleryData = [
   {
     "id": "i-rxQn29x",
     "title": "Last Hand",
-    "description": "Three cowboys charge across open prairie with revolvers raised, dust exploding beneath pounding hooves as the moment surges toward confrontation. This painterly Western action scene captures the raw speed and danger of frontier life, blending cinematic motion with textured atmosphere and historic tone. The composition freezes a split second of pursuit and resolve, evoking the spirit of classic Western storytelling while retaining the authenticity of fine art Western photography.\n\n© Wayne Heim",
+    "description": "Three cowboys thunder across open prairie with revolvers raised, dust and motion freezing into a charged moment of pursuit. As an Engrained Print, this painterly Western action scene becomes wood print fine art, where natural grain adds physical grit to the speed, danger, and frontier energy.",
     "alt": "Three cowboys galloping on horseback across dusty prairie with revolvers drawn, painterly Western action scene.",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-rxQn29x/0/LLpP9qSxK6BhKrTTsbWcw5LRC46grLJwnm8vgLGHJ/XL/Last%20Hand%2042%20x%2030%20copy-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-rxQn29x/0/LLpP9qSxK6BhKrTTsbWcw5LRC46grLJwnm8vgLGHJ/XL/Last%20Hand%2042%20x%2030%20copy-XL.jpg",
@@ -1048,7 +1048,7 @@ export const galleryData = [
   {
     "id": "i-bVSh9xt",
     "title": "Justified — or Damned “A Claustrophobic Consequence of Decisions”",
-    "description": "Three figures move through a steep rocky hillside where stone outcrops and dry grass tighten the space around them. One man sits wounded while two others close in from opposite sides, the terrain shaping the moment as much as the men themselves. The scene unfolds like a Western tableau—compressed, tense, and inevitable—captured in painterly Western photography that explores consequence, confrontation, and the fragile line between justice and survival on the frontier.\n\n© Wayne Heim",
+    "description": "Three men are drawn together by rocky terrain, injury, and consequence in a compressed Western tableau where survival and justice blur. This Engrained Series wood print turns moral ambiguity into physical texture, with natural grain reinforcing the stone, pressure, and unresolved weight of the scene.",
     "alt": "Three men confronting each other across rocky Western hillside terrain with one wounded figure seated against the stone.",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-bVSh9xt/0/L7hpJ3KDL5TQ3S44XDkZVKdN4HTsk6Z94sSWgVSTL/XL/Justified%20or%20Damned%2036%20x%2026%20c2%20copy-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-bVSh9xt/0/L7hpJ3KDL5TQ3S44XDkZVKdN4HTsk6Z94sSWgVSTL/XL/Justified%20or%20Damned%2036%20x%2026%20c2%20copy-XL.jpg",
@@ -1112,7 +1112,7 @@ export const galleryData = [
   {
     "id": "i-vhmHCCM",
     "title": "Jane",
-    "description": "A confident frontier woman rests beneath a weathered wooden overhang, her relaxed stance and knowing expression framed by soft light and aged timber. The portrait highlights character, posture, and period detail, rendered with the textured atmosphere of painterly Western photography. \n\n© Wayne Heim",
+    "description": "A confident frontier woman rests beneath weathered wood with an easy stance and knowing expression. Printed as part of the Engrained Series, this Western portrait becomes wood print fine art, pairing painterly character study with natural grain, warmth, and rustic frontier presence.",
     "alt": "Frontier woman in hat and vest standing beneath a wooden overhang.",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-vhmHCCM/0/M6r6tkggWScthhbqChbpvwTqQNxBhCvbFjsP9brt4/XL/Jane%2024%20x%2036%20copy-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-vhmHCCM/0/M6r6tkggWScthhbqChbpvwTqQNxBhCvbFjsP9brt4/XL/Jane%2024%20x%2036%20copy-XL.jpg",
@@ -1178,7 +1178,7 @@ export const galleryData = [
   {
     "id": "i-4pQCmVZ",
     "title": "For Better or Worse",
-    "description": "A contemplative frontier woman stands beside a sunlit window, her crossed arms and distant gaze framed by soft natural light and muted interior tones. The portrait emphasizes quiet strength and reflection, rendered with the atmospheric texture and subtle tonal depth characteristic of painterly Western portrait photography. \n\n© Wayne Heim",
+    "description": "A frontier woman stands beside soft window light, arms crossed and gaze turned toward a future she may not fully trust. This Engrained Series portrait becomes fine art on wood, using natural grain, painterly atmosphere, and Western storytelling to deepen the emotional texture of endurance.",
     "alt": "Frontier woman in vintage dress, arms crossed, standing in soft window.",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-4pQCmVZ/0/MPKPRJGkVjCJNL8Gg88jDM5GGPmjN47zDxxj8r4Z2/XL/For%20Better%20or%20For%20Worse%2016%20x%2024%20copy-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-4pQCmVZ/0/MPKPRJGkVjCJNL8Gg88jDM5GGPmjN47zDxxj8r4Z2/XL/For%20Better%20or%20For%20Worse%2016%20x%2024%20copy-XL.jpg",
@@ -1245,7 +1245,7 @@ export const galleryData = [
   {
     "id": "i-hCk9fs9",
     "title": "End of His Rope",
-    "description": "A painterly Western portrait of a cowboy at dawn, quietly working a rope through his hands in the soft haze of the American frontier. Warm ochre tones, dust-lit atmosphere, and cinematic morning light create a contemplative scene rooted in Western fine art photography. \n\n© Wayne Heim",
+    "description": "A cowboy works rope through his hands at dawn, the quiet gesture becoming a study of discipline, patience, and inner control. This Engrained Print turns a painterly Western portrait into wood print fine art, where natural grain echoes rope fiber, dust, and the calm before decision.",
     "alt": "Painterly western cowboy portrait at dawn holding a rope in warm frontier light, cinematic fine art western photography.",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hCk9fs9/0/MpRVxTC6Cbc6w9mXfm6VmhPgLTrV7pr7T7rhKcqbj/XL/End%20of%20His%20Rope%2016%20x%2024%20copy-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hCk9fs9/0/MpRVxTC6Cbc6w9mXfm6VmhPgLTrV7pr7T7rhKcqbj/XL/End%20of%20His%20Rope%2016%20x%2024%20copy-XL.jpg",
@@ -1308,7 +1308,7 @@ export const galleryData = [
   {
     "id": "i-5VmRqpZ",
     "title": "Do you HEAR me now?!",
-    "description": "A frontier homestead becomes the stage for a tense confrontation as a determined woman raises a stick across a split-rail fence, refusing to yield ground. Two men stand beyond the boundary, their presence pressing against the fragile line between property and intrusion. The painterly Western scene captures a moment where ordinary people become fierce defenders of home, land, and dignity on the American frontier.\n\n© Wayne Heim",
+    "description": "A frontier woman confronts two men across a fence, raising a stick as boundary, warning, and declaration. This Engrained Series wood print turns homestead defense into narrative Western art, where grain, fence, and figure work together to make the refusal to yield feel physical.",
     "alt": "Frontier woman confronting two men across a wooden fence at a rural homestead while raising a stick in defiance.",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-5VmRqpZ/0/KGL3sL8qcVKdp7Vq8nz4N92mK9PccZCj4m7jSmQ6Q/XL/Do%20you%20hear%20me%20now%2042%20x%2020%20copy-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-5VmRqpZ/0/KGL3sL8qcVKdp7Vq8nz4N92mK9PccZCj4m7jSmQ6Q/XL/Do%20you%20hear%20me%20now%2042%20x%2020%20copy-XL.jpg",
@@ -1376,7 +1376,7 @@ export const galleryData = [
   {
     "id": "i-swWgKsW",
     "title": "Day in Review",
-    "description": "A lone cowboy pauses beside a wagon as the last light of day settles across the prairie, warm sunset tones catching the edges of his hat and weathered coat. The painterly Western photograph captures a quiet frontier moment—part reflection, part endurance—where the long work of the trail gives way to evening stillness. Rich golden light, historic atmosphere, and cinematic composition evoke the timeless mood of Western art while preserving the authenticity of narrative-driven fine art photography.\n\n© Wayne Heim",
+    "description": "A lone cowboy pauses beside a wagon at sunset, the day's weight settling into warm prairie light and reflective stillness. In the Engrained Series, this narrative Western photograph becomes photographic art on wood, with natural grain strengthening the image's themes of endurance, travel, and memory.",
     "alt": "Cowboy standing beside frontier wagon at sunset on open prairie, warm golden hour light in painterly Western photograph.",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-swWgKsW/0/KwrmbngJ6qKKmG9B2VST5XV6gGrFGrGLcf5K7txd9/XL/Day%20In%20Review%2018%20x%2030%20copy-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-swWgKsW/0/KwrmbngJ6qKKmG9B2VST5XV6gGrFGrGLcf5K7txd9/XL/Day%20In%20Review%2018%20x%2030%20copy-XL.jpg",
@@ -1459,7 +1459,7 @@ export const galleryData = [
   {
     "id": "i-4QZ7HPR",
     "title": "Cough and Covenant",
-    "description": "Lamplight falls across a dim frontier cabin as one man kneels beside another who lies weak and fevered on the floor. The gesture is simple—water offered, a hand steady in the half-dark—but the moment carries the quiet weight of loyalty and sacrifice that shaped life on the American frontier. Suspended between suffering and compassion, the scene reveals a human side of frontier life rarely spoken of in legend: survival bound not only by grit, but by brotherhood. \n\n© Wayne Heim",
+    "description": "A frontier man tends a fevered companion by lamplight, turning care, covenant, and mortality into a quiet Western interior. This Engrained Print becomes fine art wood print through the pairing of warm painterly light and natural grain, giving the scene a tactile sense of brotherhood and sacrifice.",
     "alt": "Frontier man tending a wounded companion on a cabin floor under lamplight in a dramatic narrative Western art scene.",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-4QZ7HPR/0/L97B7ZZxksrLW5z8NDSJDx2RTbZdfcBbfNCT8NZVX/XL/Cough%20and%20Covenant%2016%20x%2020%20copy-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-4QZ7HPR/0/L97B7ZZxksrLW5z8NDSJDx2RTbZdfcBbfNCT8NZVX/XL/Cough%20and%20Covenant%2016%20x%2020%20copy-XL.jpg",
@@ -1524,7 +1524,7 @@ export const galleryData = [
   {
     "id": "i-jL4Gk5N",
     "title": "Color of Conviction",
-    "description": "An old prospector kneels at the edge of a quiet frontier stream, patiently working his pan through the cold water as tall grass sways behind him. Time seems to slow in the moment—every movement deliberate, every swirl of the pan another small wager against doubt. Rendered with painterly depth and natural tones, the scene captures the quiet perseverance and stubborn hope that defined countless lives across the American frontier.\n\n© Wayne Heim",
+    "description": "An old prospector kneels beside a creek, working his pan with patience, hope, and the stubborn conviction of frontier life. As wood print fine art in the Engrained Series, this painterly Western image uses natural grain to echo water, age, and the long search for what may or may not be found.",
     "alt": "Elderly gold prospector with a long beard kneeling beside a creek while panning for gold in a Western frontier setting.",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-jL4Gk5N/0/MtG8SF86dHpCjxtLhD8Rz6JDNkQHWRPD68HkctJd9/XL/Color%20of%20Conviction%2016%20x%2024%20copy-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-jL4Gk5N/0/MtG8SF86dHpCjxtLhD8Rz6JDNkQHWRPD68HkctJd9/XL/Color%20of%20Conviction%2016%20x%2024%20copy-XL.jpg",
@@ -1593,7 +1593,7 @@ export const galleryData = [
   {
     "id": "i-BmwzGg4",
     "title": "Open Country Brothers",
-    "description": "Two seasoned frontiersmen stand beside a saddled horse beneath a vast Western sky, one pointing toward the distant horizon as if tracing the path of memory across the open range. The painterly Western portrait captures a moment of quiet alliance between cultures and lifetimes shaped by the frontier. Rich textures, historic detail, and cinematic light create a narrative-driven scene that reflects both companionship and the shifting tides of the American West.\n\n© Wayne Heim",
+    "description": "An Indigenous scout and frontier trapper stand beside a horse beneath open Western sky, their shared posture suggesting alliance, memory, and cultural change. This Engrained Series wood print blends narrative Western art with historical portraiture, letting the natural grain reinforce companionship, land, and legacy.",
     "alt": "Indigenous scout and frontier trapper standing beside a horse under dramatic prairie sky, painterly Western portrait.",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-BmwzGg4/0/M96z5tk7w2Hp2fC6RwrZZTGtT4sgMWmmH3qbJx5mq/XL/Brothers%20of%20the%20Open%20Country%2034%20x%2020%20copy-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-BmwzGg4/0/M96z5tk7w2Hp2fC6RwrZZTGtT4sgMWmmH3qbJx5mq/XL/Brothers%20of%20the%20Open%20Country%2034%20x%2020%20copy-XL.jpg",
@@ -1660,7 +1660,7 @@ export const galleryData = [
   {
     "id": "i-wX39m6G",
     "title": "$3 for a whiskey?",
-    "description": "A bearded cowboy pauses at a saloon table, whiskey glass raised as lamplight and drifting smoke frame the scene in deep blue shadow. The moment carries the quiet tension of frontier life—half conversation, half calculation—captured with cinematic lighting and painterly texture. Rooted in the mood and character tradition of classic cowboy art, the portrait blends atmospheric Western storytelling with modern fine art Western photography. \n\n© Wayne Heim",
+    "description": "A bearded cowboy sits at a saloon table with whiskey raised, caught between skepticism, humor, and frontier calculation. This Engrained Print turns a painterly Western portrait into wood panel art, where natural grain enhances the lamplight, smoke, and rustic barroom atmosphere.",
     "alt": "Bearded cowboy seated at a saloon table holding a whiskey glass, lit by warm lantern light against a dark blue Western bar interior.",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-wX39m6G/0/M2MJ8JJWzh4fVPWMxMBM4Dpb6mMjSdjTf43Rgt8rh/L/3%20dollars%20for%20a%20whiskey%2016%20x%2024%20copy-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-wX39m6G/0/NTRVC3TQVs8wQxwTM9kpSkQGJDBwrdGsq8NkMHHGQ/XL/3%20dollars%20for%20a%20whiskey%2016%20x%2024%20copy-XL.jpg",
@@ -1725,7 +1725,7 @@ export const galleryData = [
   {
     "id": "i-HZVV8J2",
     "title": "Under Pressure",
-    "description": "A battlefield nurse focuses on a delicate task, her attention fixed as she works with measured precision in a confined space. This WWII fine art photography image captures the quiet intensity of wartime medical care, where restraint, proximity, and repetition define the moment. \n\n© Wayne Heim",
+    "description": "A WWII nurse works under pressure in a close, disciplined moment of wartime care, where attention and repetition become acts of endurance. This Engrained Series historical print becomes wood print fine art, giving the intimate medical scene a tactile permanence suited to museum-quality WWII storytelling.",
     "alt": "WWII nurse concentrating on medical equipment during triage, captured in a painterly wartime portrait with soft tones and close framing.",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-HZVV8J2/2/LGGzgS3tNjSXfDnvXpMCJjpP9zH2SzRC6gcv7rBdq/L/WWII-Under-Pressure-ws-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-HZVV8J2/2/KMvnrN76BM5NtnVZrgkc25fHM7vT5SpXgfW7PHZ8q/XL/WWII-Under-Pressure-ws-XL.jpg",
@@ -1774,7 +1774,7 @@ export const galleryData = [
   {
     "id": "i-ZWDpsxz",
     "title": "Wave Goodbye",
-    "description": "A woman pauses mid-gesture on a train platform, her raised hand held in the quiet space between presence and departure. This narrative western art image uses light, posture, and negative space to suggest a fleeting moment shaped by memory, distance, and the passage of time. \n\n© Wayne Heim",
+    "description": "A woman pauses on a train platform with her hand raised in farewell, holding the space between presence and departure. As an Engrained Series wood print, this narrative Western image becomes photographic art on wood, with grain and softened atmosphere reinforcing memory, distance, and the consequence of leaving.",
     "alt": "Painterly Western photograph of a woman holding a farewell gesture from a train platform, capturing a quiet moment of departure on the American frontier.",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-ZWDpsxz/0/K3QvRVJkgM28sjdKQBvNjvdLGN4NbNs5mzQPTzkXS/XL/Settler-Wave-Goodbye-ws-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-ZWDpsxz/A",
@@ -1837,7 +1837,7 @@ export const galleryData = [
   {
     "id": "i-hVBkc7Q",
     "title": "Mormon Row – Sunset Solitude",
-    "description": "An old barn stands against the fading light at Mormon Row in Jackson Hole, Wyoming, with mountains rising behind it under a shifting sky. This western landscape photography captures the quiet tension between structure and open land, where weathered wood, distance, and atmosphere define the Mountain West. \n\n© Wayne Heim",
+    "description": "An old barn at Mormon Row stands against fading Wyoming light, framed by mountain distance and the quiet endurance of Western architecture. This Engrained Print turns the landmark into wood print fine art, where natural grain strengthens the rustic barn texture and the stillness of the Mountain West.",
     "alt": "Old wooden barn at Mormon Row with mountains in the background under a dramatic evening sky in Jackson Hole, Wyoming.",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hVBkc7Q/0/MMjTz8GVDxfjpbq8zwbqhkJ7NW5dgw2JN9VT75xZw/L/Landscape%3DMoulton-Barn-ws-L.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hVBkc7Q/A",
@@ -1892,7 +1892,7 @@ export const galleryData = [
   {
     "id": "i-Prk5NPT",
     "title": "Upper Yellowstone Falls",
-    "description": "Water surges over the edge of Upper Yellowstone Falls, dropping into a canyon framed by rugged cliffs and dense forest. This western landscape photography captures the force and scale of the scene, with mist rising and light catching the movement of the river below. \n\n© Wayne Heim",
+    "description": "Upper Yellowstone Falls surges into a canyon of forest and rock, balancing raw water movement with the permanence of land. This Engrained Series landscape print becomes fine art wood print, using natural grain to deepen the canyon texture and give the waterfall's force a grounded, tactile presence.",
     "alt": "Upper Yellowstone Falls cascading into a canyon surrounded by forest and rock cliffs, with mist rising from the water below.",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Prk5NPT/1/MKg8XCN9xFc8bz3LjH9RQKjZWjbFDD3dQvGk8NbDB/XL/Landscape-Upper-Falls-ws-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Prk5NPT/A",
@@ -1942,7 +1942,7 @@ export const galleryData = [
   {
     "id": "i-C58KMqF",
     "title": "Moral High Ground",
-    "description": "A lone white church sits atop a grassy rise under a wide sky, surrounded by open land and a simple fence line. Space and distance define the scene, allowing the structure to stand quietly within the broader Western landscape. \n\n© Wayne Heim",
+    "description": "A solitary white church stands on a grassy rise beneath open Western sky, its small form carrying faith, distance, and silence. Printed as part of the Engrained Series, this rural church landscape becomes wood print fine art, with the natural grain adding warmth and quiet permanence to the minimalist scene.",
     "alt": "Solitary white church on a grassy hill with fence posts in the foreground under open sky, captured in western landscape photography.",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-C58KMqF/0/MvvQKfpDCNrJbRQtT6DZjx789WnM3cQDr6xjWtkR7/XL/Landscape-Moral-Highground-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-C58KMqF/A",
@@ -1993,7 +1993,7 @@ export const galleryData = [
   {
     "id": "i-NQ5tCTb",
     "title": "In the Weeds",
-    "description": "A quiet stream reflects distant peaks and trees near Jackson Hole, Wyoming, while tall grasses frame the water’s edge in the foreground. Layers of texture and reflection create depth, guiding the viewer through a calm and contemplative landscape. \n\n© Wayne Heim",
+    "description": "A quiet stream near Jackson Hole reflects distant peaks while foreground grasses slow the eye and ask the viewer to look through the landscape rather than past it. This Engrained Series wood print turns western landscape photography into layered fine art on wood, where natural grain deepens the sense of reflection, obstruction, and patience.",
     "alt": "Foreground grasses surrounding a still reflective stream at Schwabacher Landing with the Teton Mountains in autumn, captured in western landscape photography.",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-NQ5tCTb/1/LPxP59ds4wCGZFJQH3hfJZhfpgPszwd8LgtF27kf9/XL/Landscape-In-the-weeds-ws-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-NQ5tCTb/A",
@@ -2043,7 +2043,7 @@ export const galleryData = [
   {
     "id": "i-xF7p92v",
     "title": "The Mill, Still Kept",
-    "description": "The historic Crystal Mill stands above a rushing mountain river near Marble, Colorado, surrounded by dense forest and steep rock. This western landscape photography captures the balance between structure and environment, with weathered wood, cascading water, and alpine terrain defining the Mountain West setting. \n\n© Wayne Heim",
+    "description": "Crystal Mill stands above a rushing Colorado mountain river, its weathered structure held between alpine forest, stone, and water. This Engrained Series landscape print becomes photographic art on wood, allowing natural grain to support the image's themes of architecture, endurance, and the land's permission to remain.",
     "alt": "Historic wooden mill perched on rocky cliff above rushing river in Colorado, surrounded by forest.",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-xF7p92v/1/LfzVnKWgbD5K2vBRfBsjsXLzPpSJMsVgXGdQWx7Rs/XL/Landscape-Crystal-mill-ws-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-xF7p92v/A",
@@ -2099,7 +2099,7 @@ export const galleryData = [
   {
     "id": "i-b4wG4vh",
     "title": "Cotton Candy - Jackson Hole, Wyoming",
-    "description": "A single pink cloud drifts above rolling hills and open grassland near Jackson Hole, Wyoming, as soft evening light settles across the landscape. This western landscape photography captures a fleeting atmospheric moment, where color and sky briefly take precedence over the quiet terrain below. \n\n© Wayne Heim",
+    "description": "A single pink cloud drifts above open Wyoming hills, giving the Western landscape a brief, almost humorous softness before the light fades. As part of the Engrained Series, this painterly landscape photograph becomes wood print fine art, pairing subtle sky color with natural grain and quiet rustic restraint.",
     "alt": "Single pink cloud floating above open Wyoming hills at sunset, with soft light over grassland.",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-b4wG4vh/0/LcZFTsWTvTFvChZchD3c4zSLDNc5ZHGzcDW97SbbD/XL/Landscape-Cotton-Canday-ws-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-b4wG4vh/A",
@@ -2148,7 +2148,7 @@ export const galleryData = [
   {
     "id": "i-4cdDwZt",
     "title": "Buffy",
-    "description": "A solitary bison moves through a golden field beneath the towering peaks of the Grand Tetons, with bare trees and a dramatic sky framing the scene. This Western landscape photography captures the scale of the Mountain West, balancing wildlife presence against rugged alpine terrain and shifting light. \n\n© Wayne Heim",
+    "description": "A solitary bison moves through golden grass beneath the Grand Tetons, balancing wildlife presence with the monumental scale of the Mountain West. This Engrained Print turns western wildlife art into fine art on wood, where natural grain reinforces the grounded presence of animal, land, and mountain.",
     "alt": "Bison walking through a grassy field with the Grand Tetons rising in the background under a colorful sky.",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-4cdDwZt/1/LGtWNZBGm7wLDQ26K4XzfVGKkwmKHLmZRBnXtZpZk/XL/Landscape-Buffy-ws-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-4cdDwZt/A",
@@ -2205,7 +2205,7 @@ export const galleryData = [
   {
     "id": "i-VGxwS5N",
     "title": "Aspens",
-    "description": "Tall aspen trees rise in close formation, their pale trunks extending upward through soft light and patches of blue sky. This vertical Western landscape photography emphasizes height, rhythm, and the layered canopy of a Mountain West grove. \n\n© Wayne Heim",
+    "description": "Aspen trunks rise in close formation toward blue sky, creating a vertical Mountain West landscape built on rhythm, height, and natural architecture. In the Engrained Series, this painterly landscape photograph becomes wood print fine art, with natural grain echoing the tree forms and enhancing the tactile calm of the grove.",
     "alt": "Upward view of tall aspen trees with white trunks and green leaves against a blue sky, captured in a vertical fine art landscape photograph.",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-VGxwS5N/1/LGMW7HBRsH59NBL3LwXb6xL3wGzLFr3hV5JD4zRzb/XL/Landscape-Aspens-ws-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-VGxwS5N/A",
@@ -2255,7 +2255,7 @@ export const galleryData = [
   {
     "id": "i-6rWZnHP",
     "title": "Arizona Sunset at the Bend",
-    "description": "Red rock formations stretch beneath a wide sky as warm light from the setting sun settles across the terrain, revealing texture in stone and brush. This Western landscape captures the transition of day into evening through painterly landscape photography. \n\n© Wayne Heim",
+    "description": "Red rock and desert grass hold the last warmth of an Arizona sunset, turning the landscape into a quiet study of color, stone, and fading light. This Engrained Series landscape print becomes fine art wood print, where the natural grain supports the desert texture and deepens the sense of earth beneath the image.",
     "alt": "Desert landscape with red rock formations and grasses at sunset, warm light fading across the sky in a Western landscape photography scene.",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-6rWZnHP/0/Ks46Wkf8hG42dxcSS3XKStBctnTP297vmGmfdQ2rH/XL/Landscape-Arizona-Sunset-ws-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-6rWZnHP/A",
@@ -2306,7 +2306,7 @@ export const galleryData = [
   {
     "id": "i-VrbD648",
     "title": "Three Wise Men",
-    "description": "Three men hold position on the porch of a weathered frontier cabin, rifles ready as they brace for whatever may come across the open ground. Their staggered stance forms a tight defensive line—each watching a different angle, each carrying the quiet weight of the moment. Rendered in painterly Western tones and cinematic light, the scene captures the tense calm before confrontation that defines narrative Western fine art photography.\n\n© Wayne Heim",
+    "description": "Three armed men hold a defensive line on a frontier porch, rifles ready and attention divided across the unseen ground ahead. As wood print fine art in the Engrained Series, this narrative Western scene gains physical weight from the panel grain, strengthening its sense of structure, anticipation, and shared resolve.",
     "alt": "Three armed cowboys standing on the porch of a log cabin holding rifles and watching the frontier.",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-VrbD648/0/NJr29pfGhTbRXx9S5D2gRb3s6nBXSmStKmB6kxT32/XL/Cowobys-3-Amigos-ws-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-VrbD648/A",
@@ -2363,7 +2363,7 @@ export const galleryData = [
   {
     "id": "i-PkspRGs",
     "title": "Three Amigos: Western Cowboy Conference",
-    "description": "Three seasoned cowboys sit shoulder to shoulder along a weathered boardwalk, the afternoon sun stretching long shadows across the planks. Their posture is easy but deliberate—men accustomed to watching more than speaking, measuring the world in quiet observation rather than hurried words. Hats tipped against the light and boots planted firm, they occupy the space with the calm authority that only years on the frontier could teach.\n\n© Wayne Heim",
+    "description": "Three seasoned cowboys sit together in warm Western light, their posture suggesting council, experience, and the slow authority of lives earned the hard way. This Engrained Series wood print turns a character-rich cowboy portrait into collectible Western wall art, with natural grain adding warmth and rustic permanence.",
     "alt": "Color portrait of three older cowboys seated on a bench in a Western street, hats tilted, coats and boots catching warm light.",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-PkspRGs/1/LnwSGD3TJHMCTxfFz5fF7KSVpwMKjTS3SfdCMr7cx/XL/Cowboys-3-Wise-Men-ws-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-PkspRGs/A",
@@ -2427,7 +2427,7 @@ export const galleryData = [
   {
     "id": "i-hntD8Vp",
     "title": "Wounded: Blood on the Bandolier",
-    "description": "A man in a wide-brimmed hat lowers his gaze as he grips his side, a bandolier crossing his chest and a coil of rope resting over his shoulder. The tight framing and softened edges isolate the moment, shaping a tense study of pain and endurance within the American frontier through fine art western photography. \n\n© Wayne Heim",
+    "description": "A wounded vaquero grips his side beneath a bandolier, his lowered head carrying pain, disbelief, and the aftermath of violence. Printed in the Engrained Series, this fine art Western photograph becomes photographic art on wood, where texture and grain reinforce the image's bodily weight and frontier consequence.",
     "alt": "Vaquero with bandolier across his chest clutching a wound, head lowered in a tense moment within a Western frontier setting.",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hntD8Vp/0/KfdKn9HNgL2SkWBn4Dsf5kL39RfXrzp6HvqVtMW7w/XL/Cowboy-Wounded-ws-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hntD8Vp/A",
@@ -2489,7 +2489,7 @@ export const galleryData = [
   {
     "id": "i-ZNTzTJ7",
     "title": "Up to No Good",
-    "description": "A lone cowboy pauses in a doorway with revolver in hand, the bright afternoon light spilling across the wooden threshold while the interior behind him remains in shadow. The composition emphasizes posture and environment, using the strong vertical frame of the door to guide the viewer’s eye from darkness into open daylight. The painterly treatment and warm tonal contrast reinforce the cinematic tension often associated with Western frontier scenes, presenting a moment defined by presence and anticipation rather than action. \n\n© Wayne Heim",
+    "description": "A cowboy stands in a sunlit doorway with revolver at his side, half in shadow and half in open day. This Engrained Print turns Western tension into wood panel art, using the natural grain and painterly atmosphere to heighten the sense that the viewer has witnessed a private moment before trouble begins.",
     "alt": "Cowboy seen from behind standing in a sunlit doorway holding a revolver at his side, framed by the dark interior of a frontier building.",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-ZNTzTJ7/3/KV3BpbhWj7QtFnT5N9dn95VHRKsjFBnkGqDQBgRrR/XL/Cowboy-Up-to-No-Good-ws-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-ZNTzTJ7/A",
@@ -2551,7 +2551,7 @@ export const galleryData = [
   {
     "id": "i-thTwwHZ",
     "title": "Over My Dead Body: Frontier Stand-off",
-    "description": "An older cowboy stands inside a frontier cabin, rifle raised as he peers through a weathered window toward the uncertain yard beyond. Warm morning light spills across rough timber walls and worn wool, creating a dramatic interplay of shadow and glow that heightens the tension of the moment. This painterly Western portrait blends historic atmosphere with cinematic storytelling, capturing the quiet resolve of a lone frontiersman preparing to defend what’s his.\n\n© Wayne Heim",
+    "description": "An older cowboy braces at a cabin window with rifle raised, caught in the narrow pause before consequence arrives. This Engrained Series Western wood print uses painterly light, rough timber, and natural grain to turn frontier defense into a tactile study of resolve, fear, and moral edge.",
     "alt": "Color Western portrait of an older cowboy holding a rifle at a cabin window, braced in anticipation.",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-thTwwHZ/0/NgDqhj49pW87nLKcm2hLTV4xpLcxmfPnDfspB8JZL/XL/Cowboy-Over-My-Dead-Body-ws-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-thTwwHZ/A",
@@ -2631,7 +2631,7 @@ export const galleryData = [
   {
     "id": "i-Spk5gdH",
     "title": "Longing and Regret",
-    "description": "An elderly man with a long beard gazes off into the distance, his face softly lit as subtle texture and muted tones surround him. The tight composition isolates his expression, creating a quiet, contemplative portrait shaped by light, age, and stillness. \n\n© Wayne Heim",
+    "description": "An elderly cowboy looks into the distance with the gravity of old choices and quiet regret. This painterly Western portrait becomes wood print fine art in the Engrained Series, where subtle texture, muted tone, and natural grain strengthen the piece's sense of memory, age, and unresolved story.",
     "alt": "Bearded elderly cowboy in a wide-brimmed hat looking into the distance, capturing a contemplative moment in a Western portrait setting.",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Spk5gdH/8/MmjhWHz9gsBVmXmJRjHjhdntvnrd3L7cfMHQVkgtT/XL/Cowboy-One-Last-Look-ws-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Spk5gdH/A",
@@ -2692,7 +2692,7 @@ export const galleryData = [
   {
     "id": "i-mrHbrNb",
     "title": "Morning Joe",
-    "description": "A smiling man sits at a rustic table, lifting a tin cup as soft light washes over his face and the surrounding wood textures. This relaxed moment captures the warmth and ease of frontier life through fine art Western photography. \n\n© Wayne Heim",
+    "description": "A cowboy pours coffee in a small, sun-warmed moment of frontier routine, where humor and habit carry as much story as action. As an Engrained Series wood print, the image becomes photographic art on wood, pairing Western character study with natural grain, warmth, and rustic interior presence.",
     "alt": "Smiling cowboy with mustache holding coffee cup in rustic Old West kitchen, painterly vintage-style Western photograph by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-mrHbrNb/1/K2kw2sM6ZbwsVMtDjXnLN63FL9254Wjr8znhLc8Lk/XL/Cowboy-Morning-Joe-ws-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-mrHbrNb/A",
@@ -2767,7 +2767,7 @@ export const galleryData = [
   {
     "id": "i-Shpfdbm",
     "title": "One Last Look",
-    "description": "A bearded man in a red shirt stands alone against an open landscape, his posture steady as soft morning light settles across his face and clothing. This Western portrait captures a moment of quiet reflection on the American frontier through fine art Western photography. \n\n© Wayne Heim",
+    "description": "A bearded cowboy stands alone in open morning light, his posture carrying the weight of departure, reflection, and words left unsaid. This Engrained Print turns a quiet Western portrait into fine art wood print, allowing the natural grain to reinforce the image's weathered emotional surface.",
     "alt": "A bearded cowboy in a red shirt and wide-brimmed hat stands alone in soft morning light, facing forward in an open Western landscape.",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Shpfdbm/1/LMBSDtzhV4Z9Phctd8qgSHzdDKNmng4X4VKdDLSjw/XL/Cowboy-Long-Goodbye-ws-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Shpfdbm/A",
@@ -2828,7 +2828,7 @@ export const galleryData = [
   {
     "id": "i-8hMzqz2",
     "title": "Just a Sip to Settle My Nerves",
-    "description": "An older cowboy quietly pours a final whiskey at a wooden bar, warm lamplight catching the grain of the timber and the lines etched into his weathered face. The intimate framing emphasizes gesture and atmosphere, allowing the moment to unfold with quiet authenticity rather than spectacle. Rendered with painterly restraint and cinematic shadow, the scene reflects the character of fine art Western photography, capturing a private ritual at the end of a long frontier day. \n\n© Wayne Heim",
+    "description": "A cowboy pauses over a drink in warm interior light, the gesture held somewhere between comfort, memory, and regret. Printed as part of the Engrained Series, this painterly Western portrait becomes wood print fine art, where the natural grain deepens the saloon atmosphere and gives the moment a handmade, lived-in presence.",
     "alt": "Older cowboy in a wide-brim hat pours whiskey at a wooden bar, warm lamplight on his weathered face and hands.",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-8hMzqz2/1/KtZV6DxQSNx7XTq2x5bscZngKjgBbDbs2pRwWqFVD/XL/Cowboy-Just-a-Sip-ws-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-8hMzqz2/A",
@@ -2883,7 +2883,7 @@ export const galleryData = [
   {
     "id": "i-JfqzrnN",
     "title": "Hired Gun – Ranger on the Rails",
-    "description": "A lone Western figure stands beside a railcar, head lowered and hand resting near his sidearm, as light falls across worn fabric and weathered wood. The vertical composition emphasizes stillness and weight, capturing a quiet moment along the American frontier tied to rail travel and duty. \n\n© Wayne Heim",
+    "description": "A lone Western figure stands beside a railcar, hat lowered and hand near his sidearm, caught in a narrow moment of duty, travel, and unfinished business. This Engrained Series wood print blends narrative Western art with railroad atmosphere, turning frontier stillness into photographic art on wood with a quiet, tactile sense of weight.",
     "alt": "Lawman standing beside a railcar inside a train station, hat brim lowered as warm light falls across his coat and revolver.",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-JfqzrnN/2/NJGkNn4VCmq9MR4qhphkJM6B5mJDFjVTcmMgGRBCt/XL/Cowboy-Hired-Gun-ws-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-JfqzrnN/A",
@@ -2938,7 +2938,7 @@ export const galleryData = [
   {
     "id": "i-xqbdC8P",
     "title": "Hero’s Ride – Civil War Soldier In Battle",
-    "description": "A Civil War soldier rides forward on horseback through a haze of smoke, with distant figures and a faint American flag receding into the background. His uniform and steady posture place him within the tension of an active battlefield, capturing a moment of forward movement within Civil War photography.\n\n© Wayne Heim",
+    "description": "A Union cavalry soldier rides forward through battlefield smoke in a Civil War scene built around restraint, motion, and historical consequence. As part of the Engrained Series, this Civil War fine art photograph becomes wood print fine art, with the natural grain helping the image feel carried by history rather than merely displayed on a surface.",
     "alt": "Union Civil War cavalry soldier riding a chestnut horse through battlefield smoke, American flag faint in the background – painterly Civil War fine art photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-xqbdC8P/0/MGSqVLk33VwBcNtRgpQGJ5q3QWGSDMsqzwkrPw5h4/XL/Civil-War-Heros-ride-ws-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-xqbdC8P/A",
