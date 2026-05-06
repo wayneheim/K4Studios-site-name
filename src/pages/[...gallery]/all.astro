@@ -14,6 +14,7 @@ import {
   getGalleryCollectionLabel,
   resolveGallerySourceHref,
 } from "@/utils/galleryCollectionNav.ts";
+import { getSemanticImageSrcset, getSemanticImageUrl } from "@/utils/imageProxy.js";
 
 // ✅ Glob import all gallery data at build time
 const galleryModules = import.meta.glob('/src/data/**/*.mjs', { eager: true });
@@ -416,9 +417,6 @@ const relatedCollectionLinks = (() => {
   return Array.from(new Map(links.map((link) => [link.href, link])).values()).slice(0, 6);
 })();
 
-// ✅ Proxy URL helper - never expose SmugMug URLs to crawlers
-const getProxySrc = (id: string, size: string) => `/img/${id}/${size}.jpg`;
-
 // ✅ Build breadcrumb JSON-LD
 const breadcrumbItems = breadcrumbHrefs.map((href: string, idx: number) => ({
   "@type": "ListItem",
@@ -557,12 +555,8 @@ const heroImage = galleryData[0];
     {galleryData.length > 0 ? (
       <div class="ssr-grid">
         {galleryData.map((item: any, idx: number) => {
-          const imageUrl = getProxySrc(item.id, 's');
-          const srcsetParts = [
-            `${getProxySrc(item.id, 's')} 400w`,
-            `${getProxySrc(item.id, 'm')} 600w`,
-            `${getProxySrc(item.id, 'l')} 1024w`
-          ].join(", ");
+          const imageUrl = getSemanticImageUrl(item, { galleryPath: basePath }, 's');
+          const srcsetParts = getSemanticImageSrcset(item, { galleryPath: basePath });
           const linkUrl = `${basePath}/${item.id}`;
           const title = cleanForDisplay(item.title || 'Untitled');
           

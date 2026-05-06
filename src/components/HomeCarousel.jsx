@@ -17,9 +17,12 @@
 import { useEffect, useRef, useState } from "react";
 import "../styles/ImageBar2.css";
 import { warmImage } from "../utils/warmImage";
+import { getSemanticImageUrl } from "../utils/imageProxy.js";
 
 // ✅ Proxy URL helper - never expose SmugMug URLs to crawlers
-const getProxySrc = (id, size = "s") => `/img/${id}/${size}.jpg`;
+const getGalleryPathFromImageHref = (href = "") => String(href || "").replace(/\/i-[a-zA-Z0-9-]+\/?$/, "");
+const getCarouselImageSrc = (image, size = "s") =>
+  image?.id ? getSemanticImageUrl(image, { galleryPath: image.galleryPath || getGalleryPathFromImageHref(image.href) }, size) : "";
 
 // Fisher-Yates shuffle
 function shuffle(arr) {
@@ -116,7 +119,7 @@ function selectSlides(pools, heroWebpSrcs) {
   // 1. Pick FIRST cowboy (hero position)
   const cowboy1 = pickFromPool(pools.westernCowboy);
   if (cowboy1) {
-    const heroSrc = getProxySrc(cowboy1.id, 's');
+    const heroSrc = getCarouselImageSrc(cowboy1, 's');
     slides.push({
       ...cowboy1,
       src: heroSrc,
@@ -280,7 +283,7 @@ export default function HomeCarousel() {
           >
             <a href={s.href} title={isDuplicate ? undefined : altText} aria-label={isDuplicate ? undefined : altText} tabIndex={isDuplicate ? -1 : undefined} onClick={isDuplicate ? undefined : (event) => handleTrackedNavigation(event, s.href, () => trackHomeHeroNavigation(s.href, s.id || null))}>
               <img
-                src={s.id ? getProxySrc(s.id, 's') : (s.srcS || s.src)}
+                src={s.id ? getCarouselImageSrc(s, 's') : (s.srcS || s.src)}
                 alt={isDuplicate ? "" : altText}
                 itemProp="contentUrl"
                 loading={s.loading}

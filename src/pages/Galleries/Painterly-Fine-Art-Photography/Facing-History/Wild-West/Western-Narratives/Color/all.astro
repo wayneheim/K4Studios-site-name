@@ -10,6 +10,7 @@ export const prerender = true;
 import Footer from "@/components/Footer.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import ArchiveContext from "@/components/ArchiveContext.astro";
+import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 
 // ✅ Direct import - no query params needed
 import { galleryData as rawGalleryData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs";
@@ -68,7 +69,10 @@ const truncateStory = (story: string, maxLen = 150) => {
 };
 
 // ✅ Proxy URL helper - never expose SmugMug URLs to crawlers
-const getProxySrc = (id: string, size: string) => `/img/${id}/${size}.jpg`;
+const getProxySrc = (id: string, size: string = 'l') => {
+  const image = galleryData.find((item: any) => item.id === id) || { id };
+  return getSemanticImageUrl(image, { galleryPath: basePath }, size);
+};
 
 // ✅ Pre-build per-image JSON-LD to avoid streaming issues
 const imageJsonLdMap = new Map();

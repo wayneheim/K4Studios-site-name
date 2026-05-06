@@ -8,6 +8,7 @@
  * 
  * Structured data uses CollectionPage schema for Google rich results.
  */
+import { getSemanticImageSrcset, getSemanticImageUrl } from '@/utils/imageProxy.js';
 
 interface Props {
   /** The featured image to display */
@@ -66,14 +67,6 @@ const analyticsEndpoint = 'https://edge.k4studios.com/__k4e';
 const pixelEndpoint = 'https://edge.k4studios.com/_state';
 const siteOrigin = 'https://www.k4studios.com';
 
-// Helper to generate proxy URL - ensures SmugMug URLs never appear in rendered HTML
-const getProxySrc = (imageId: string, size: string = 'm') => {
-  if (!imageId) return '';
-  const validSizes = ['s', 'm', 'l', 'xl', 'src'];
-  const safeSize = validSizes.includes(size) ? size : 'm';
-  return `/img/${imageId}/${safeSize}.jpg`;
-};
-
 const toAbsoluteUrl = (value: string) => {
   if (!value) return siteOrigin;
   if (value.startsWith('http://') || value.startsWith('https://')) return value;
@@ -82,13 +75,14 @@ const toAbsoluteUrl = (value: string) => {
 };
 
 const hasProxyImage = Boolean(image.id);
+const imageContext = { galleryPath: ctaLink };
 
 // Use proxy URLs for gallery images and pass through local/static assets unchanged.
 const displaySrc = hasProxyImage
-  ? getProxySrc(image.id!, 'm')
+  ? getSemanticImageUrl(image, imageContext, 'm')
   : (image.srcM || image.src);
 const srcsetValue = hasProxyImage
-  ? `${getProxySrc(image.id!, 's')} 400w, ${getProxySrc(image.id!, 'm')} 600w, ${getProxySrc(image.id!, 'l')} 1024w`
+  ? getSemanticImageSrcset(image, imageContext)
   : [
       image.srcS ? `${image.srcS} 400w` : '',
       (image.srcM || image.src) ? `${image.srcM || image.src} 600w` : '',
@@ -97,7 +91,7 @@ const srcsetValue = hasProxyImage
 const fullUrl = toAbsoluteUrl(ctaLink);
 // Capped at 'l' to protect XL from bot discovery via structured data.
 const structuredImageUrl = hasProxyImage
-  ? toAbsoluteUrl(getProxySrc(image.id!, 'l'))
+  ? toAbsoluteUrl(getSemanticImageUrl(image, imageContext))
   : toAbsoluteUrl(image.srcL || image.srcM || image.src);
 const acquireLicensePage = 'https://www.k4studios.com/licensing';
 const ctaLabel = appendArrow ? `${ctaText} →` : ctaText;

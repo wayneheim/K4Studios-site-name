@@ -503,13 +503,26 @@ function getKnownGallerySetFromImageIdMap(imageIdMap) {
 const ASSET_SOURCE_PREFIXES = new Set(['OG', 'TW', 'PN', 'SD']);
 
 function parseImageRoute(pathname) {
-  // allow optional .jpg suffix and trailing slash
-  const match = pathname.match(/^\/img\/((?:OG|TW|PN|SD)-)?(i-[a-zA-Z0-9-]+)\/(s|m|l|xl|src)(?:\.jpe?g)?\/?$/i);
+  // Supports legacy size URLs and semantic JPG filenames:
+  // /img/i-xxxxx/l.jpg
+  // /img/i-xxxxx/slugified-title-gallery-phrase.jpg
+  // /img/i-xxxxx/s/slugified-title-gallery-phrase.jpg
+  // /img/i-xxxxx/m/slugified-title-gallery-phrase.jpg
+  const semanticSizedMatch = pathname.match(/^\/img\/((?:OG|TW|PN|SD)-)?(i-[a-zA-Z0-9-]+)\/(s|m)\/([^/?#]+\.jpe?g)\/?$/i);
+  const legacyOrDefaultMatch = semanticSizedMatch
+    ? null
+    : pathname.match(/^\/img\/((?:OG|TW|PN|SD)-)?(i-[a-zA-Z0-9-]+)\/([^/?#]+)\/?$/i);
+  const match = semanticSizedMatch || legacyOrDefaultMatch;
   if (!match) return null;
 
   const rawPrefix = match[1] || null;
   const canonicalImageId = match[2];
-  const size = match[3];
+  const explicitSemanticSize = semanticSizedMatch ? match[3].toLowerCase() : null;
+  const routeTail = semanticSizedMatch ? (match[4] || '') : (match[3] || '');
+  const sizeMatch = explicitSemanticSize ? null : routeTail.match(/^(s|m|l|xl|src)(?:\.jpe?g)?$/i);
+  const semanticMatch = routeTail.match(/^[a-z0-9][a-z0-9-]*\.jpe?g$/i);
+  if (!sizeMatch && !semanticMatch) return null;
+  const size = explicitSemanticSize || (sizeMatch ? sizeMatch[1].toLowerCase() : 'l');
 
   const prefix = rawPrefix ? String(rawPrefix).replace('-', '').toUpperCase() : null;
   if (prefix && !ASSET_SOURCE_PREFIXES.has(prefix)) return null;
@@ -517,7 +530,8 @@ function parseImageRoute(pathname) {
   const imageId = prefix ? `${prefix}-${canonicalImageId}` : canonicalImageId;
   const assetSource = prefix ? prefix.toLowerCase() : null;
 
-  return { imageId, canonicalImageId, size, assetSource };
+  const semanticSlug = semanticMatch ? routeTail : null;
+  return { imageId, canonicalImageId, size, assetSource, semanticSlug };
 }
 
 function rewriteLegacyProxyToImgRequest(request) {
@@ -621,7 +635,6 @@ async function proxyImage(smugMugUrl, request, size = null) {
   }
 
   // Keep the canonical image asset crawlable while retaining AI opt-out signals.
-  // The /img/ response also emits a rel=canonical header back to the image page.
 
   return {
     response: new Response(imageResponse.body, { status: 200, headers }),
@@ -796,19 +809,11 @@ function addCanonicalImageLinkHeader(response, imageIdMap, canonicalImageId) {
   try {
     if (!response || response.status !== 200 || !canonicalImageId) return response;
     if (response.headers?.get?.('Link')) return response;
-
-    const galleryPaths = imageIdMap?.[canonicalImageId];
-    const galleryPath = Array.isArray(galleryPaths) ? galleryPaths[0] : galleryPaths;
-    if (!galleryPath) return response;
-
-    const canonicalPageUrl = `https://www.k4studios.com${galleryPath}/${canonicalImageId}`;
-    const headers = new Headers(response.headers);
-    headers.set('Link', `<${canonicalPageUrl}>; rel="canonical"`);
-    return new Response(response.body, {
-      status: response.status,
-      statusText: response.statusText,
-      headers
-    });
+    // Stage 1 semantic JPG rollout:
+    // The Worker can resolve by image ID, but it cannot reliably compute the
+    // approved title + gallery phrase filename from imageIdMap alone. Do not
+    // emit a weaker page-canonical Link header on binary image responses.
+    return response;
   } catch {
     return response;
   }
@@ -1330,8 +1335,9 @@ async function handleImageRequest(request, ctx, env) {
       response = ensureNoAIHeaders(response, route.size === 'xl');
     }
 
-    // Add canonical Link header so Google can associate /img/ bytes with the gallery page.
-    // Uses the same imageIdMap the smart-404 relies on: imageId → ['/Galleries/...']
+    // Stage 1 semantic JPG rollout intentionally does not add a Link canonical
+    // header here; generated HTML, schema, and image sitemaps carry the preferred
+    // semantic image URL until the worker has title + phrase data available.
     if (response?.status === 200) {
       response = addCanonicalImageLinkHeader(response, imageIdMap, route.canonicalImageId);
     }

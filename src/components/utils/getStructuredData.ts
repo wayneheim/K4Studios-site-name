@@ -1,4 +1,5 @@
 // src/components/utils/getStructuredData.ts
+import { getSemanticImageUrl, USE_SEMANTIC_IMAGE_URLS } from "../../utils/imageProxy.js";
 
 // Helper to convert image to proxy URL (never expose SmugMug URLs in structured data)
 function getProxyUrl(img: any, size: string = 'l', sourcePrefix: string | null = null): string {
@@ -15,6 +16,9 @@ function getProxyUrl(img: any, size: string = 'l', sourcePrefix: string | null =
 
   // If we have an id, use the proxy
   if (img.id && img.id.startsWith('i-')) {
+    if (!sourcePrefix && size === 'l' && USE_SEMANTIC_IMAGE_URLS) {
+      return getSemanticImageUrl(img, { galleryPath: img.galleryUrl }, { absolute: true });
+    }
     return `https://www.k4studios.com/img/${applyPrefix(stripPrefix(img.id))}/${size}.jpg`;
   }
   // Try to extract id from src URL

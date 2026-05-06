@@ -32,6 +32,306 @@ export const categoryMap = {
   miscellaneous: "Miscellaneous",
 };
 
+// Controlled gallery-level phrase appended to semantic image filenames.
+// Example future filename shape:
+// slugify(image.title) + "-" + imageSlugPhrase + ".jpg"
+export const imageSlugPhraseEntries = [
+  {
+    key: "civilWarColor",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color",
+    imageSlugPhrase: "civil-war-portrait-art",
+  },
+  {
+    key: "civilWarBW",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White",
+    imageSlugPhrase: "civil-war-portrait-art",
+  },
+  {
+    key: "westernCowboyColor",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
+    imageSlugPhrase: "western-cowboy-portrait-art",
+  },
+  {
+    key: "westernCowboyBW",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White",
+    imageSlugPhrase: "western-cowboy-portrait-art",
+  },
+  {
+    key: "westernNarrativesColor",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color",
+    imageSlugPhrase: "western-cowboy-art",
+  },
+  {
+    key: "westernNarrativesBW",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White",
+    imageSlugPhrase: "western-cowboy-art",
+  },
+  {
+    key: "nativeAmericansColor",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color",
+    imageSlugPhrase: "native-american-portrait-art",
+  },
+  {
+    key: "nativeAmericansBW",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White",
+    imageSlugPhrase: "native-american-portrait-art",
+  },
+  {
+    key: "roaring20sColor",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color",
+    imageSlugPhrase: "roaring-20s-portrait-art",
+  },
+  {
+    key: "roaring20sBW",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White",
+    imageSlugPhrase: "roaring-20s-portrait-art",
+  },
+  {
+    key: "wwiiWarColor",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color",
+    imageSlugPhrase: "wwii-battle-art",
+  },
+  {
+    key: "wwiiWarBW",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White",
+    imageSlugPhrase: "wwii-battle-art",
+  },
+  {
+    key: "wwiiMachinesColor",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color",
+    imageSlugPhrase: "wwii-military-vehicle-art",
+  },
+  {
+    key: "wwiiMachinesBW",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White",
+    imageSlugPhrase: "wwii-military-vehicle-art",
+  },
+  {
+    key: "wwiiPortraitsColor",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color",
+    imageSlugPhrase: "wwii-historical-portrait-art",
+  },
+  {
+    key: "wwiiPortraitsBW",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White",
+    imageSlugPhrase: "wwii-historical-portrait-art",
+  },
+  {
+    key: "painterlyLandscapeInternational",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery",
+    imageSlugPhrase: "international-landscape-photography",
+  },
+  {
+    key: "painterlyLandscapeMidwest",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery",
+    imageSlugPhrase: "midwest-landscape-photography",
+  },
+  {
+    key: "painterlyLandscapeNortheast",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery",
+    imageSlugPhrase: "northeast-landscape-photography",
+  },
+  {
+    key: "painterlyLandscapeSouth",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery",
+    imageSlugPhrase: "southern-landscape-photography",
+  },
+  {
+    key: "painterlyLandscapeWest",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery",
+    imageSlugPhrase: "western-landscape-photography",
+  },
+  {
+    key: "painterlyMountains",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains",
+    imageSlugPhrase: "mountain-landscape-photography",
+  },
+  {
+    key: "painterlySunsets",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets",
+    imageSlugPhrase: "sunset-landscape-photography",
+  },
+  {
+    key: "painterlyWater",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water",
+    imageSlugPhrase: "water-landscape-photography",
+  },
+  {
+    key: "painterlyTransportationCars",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars",
+    imageSlugPhrase: "classic-car-fine-art-photography",
+  },
+  {
+    key: "painterlyTrainsColor",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color",
+    imageSlugPhrase: "railroad-fine-art-photography",
+  },
+  {
+    key: "painterlyTrainsBW",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White",
+    imageSlugPhrase: "railroad-fine-art-photography",
+  },
+  {
+    key: "painterlyMiscPortraits",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits",
+    imageSlugPhrase: "painterly-portrait-art",
+  },
+  {
+    key: "traditionalArchitecture",
+    path: "/Galleries/Fine-Art-Photography/Architecture/Gallery",
+    imageSlugPhrase: "fine-art-architecture-photography",
+  },
+  {
+    key: "traditionalLandscapeCanadaWestern",
+    path: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western",
+    imageSlugPhrase: "canadian-western-landscape-photography",
+  },
+  {
+    key: "traditionalLandscapeIceland",
+    path: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland",
+    imageSlugPhrase: "iceland-landscape-photography",
+  },
+  {
+    key: "traditionalLandscapeNewfoundland",
+    path: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland",
+    imageSlugPhrase: "newfoundland-landscape-photography",
+  },
+  {
+    key: "traditionalLandscapeFaroe",
+    path: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands",
+    imageSlugPhrase: "faroe-islands-landscape-photography",
+  },
+  {
+    key: "traditionalLandscapeMidwest",
+    path: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery",
+    imageSlugPhrase: "midwest-landscape-photography",
+  },
+  {
+    key: "traditionalLandscapeNortheast",
+    path: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery",
+    imageSlugPhrase: "northeast-landscape-photography",
+  },
+  {
+    key: "traditionalLandscapeSouth",
+    path: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery",
+    imageSlugPhrase: "southern-landscape-photography",
+  },
+  {
+    key: "traditionalLandscapeWest",
+    path: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery",
+    imageSlugPhrase: "western-landscape-photography",
+  },
+  {
+    key: "traditionalLandscapeBW",
+    path: "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White",
+    imageSlugPhrase: "black-and-white-landscape-photography",
+  },
+  {
+    key: "traditionalLandscapeColor",
+    path: "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color",
+    imageSlugPhrase: "fine-art-landscape-photography",
+  },
+  {
+    key: "traditionalMountains",
+    path: "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains",
+    imageSlugPhrase: "mountain-landscape-photography",
+  },
+  {
+    key: "traditionalSunsets",
+    path: "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets",
+    imageSlugPhrase: "sunset-landscape-photography",
+  },
+  {
+    key: "traditionalWater",
+    path: "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water",
+    imageSlugPhrase: "water-landscape-photography",
+  },
+  {
+    key: "traditionalPets",
+    path: "/Galleries/Fine-Art-Photography/Miscellaneous/Pets",
+    imageSlugPhrase: "pet-portrait-photography",
+  },
+  {
+    key: "traditionalReenactments",
+    path: "/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments",
+    imageSlugPhrase: "historical-reenactment-photography",
+  },
+  {
+    key: "traditionalWildlife",
+    path: "/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife",
+    imageSlugPhrase: "wildlife-fine-art-photography",
+  },
+  {
+    key: "traditionalPortraitsBW",
+    path: "/Galleries/Fine-Art-Photography/Portraits/Black-White",
+    imageSlugPhrase: "black-and-white-portrait-photography",
+  },
+  {
+    key: "traditionalPortraitsColor",
+    path: "/Galleries/Fine-Art-Photography/Portraits/Color",
+    imageSlugPhrase: "fine-art-portrait-photography",
+  },
+  {
+    key: "traditionalReenactorPortraits",
+    path: "/Galleries/Fine-Art-Photography/Portraits/Reenactors",
+    imageSlugPhrase: "historical-reenactment-portrait-art",
+  },
+  {
+    key: "traditionalBoats",
+    path: "/Galleries/Fine-Art-Photography/Transportation/Boats",
+    imageSlugPhrase: "boat-fine-art-photography",
+  },
+  {
+    key: "traditionalCars",
+    path: "/Galleries/Fine-Art-Photography/Transportation/Cars",
+    imageSlugPhrase: "classic-car-fine-art-photography",
+  },
+  {
+    key: "traditionalMilitary",
+    path: "/Galleries/Fine-Art-Photography/Transportation/Military",
+    imageSlugPhrase: "military-vehicle-photography",
+  },
+  {
+    key: "traditionalPlanes",
+    path: "/Galleries/Fine-Art-Photography/Transportation/Planes",
+    imageSlugPhrase: "aviation-fine-art-photography",
+  },
+  {
+    key: "traditionalTrains",
+    path: "/Galleries/Fine-Art-Photography/Transportation/Trains",
+    imageSlugPhrase: "railway-fine-art-photography",
+  },
+  {
+    key: "traditionalTrainsBW",
+    path: "/Galleries/Fine-Art-Photography/Transportation/Trains-Black-White",
+    imageSlugPhrase: "black-and-white-railway-photography",
+  },
+  {
+    key: "engrained",
+    path: "/Other/K4-Select-Series/Engrained",
+    imageSlugPhrase: "engrained-fine-art-prints",
+  },
+  {
+    key: "engrainedSeries",
+    path: "/Other/K4-Select-Series/Engrained/Engrained-Series",
+    imageSlugPhrase: "engrained-fine-art-prints",
+  },
+];
+
+export const imageSlugPhraseByKey = Object.fromEntries(
+  imageSlugPhraseEntries.map((entry) => [entry.key, entry.imageSlugPhrase])
+);
+
+export const imageSlugPhraseByPath = Object.fromEntries(
+  imageSlugPhraseEntries.map((entry) => [entry.path, entry.imageSlugPhrase])
+);
+
+export function getImageSlugPhraseForPath(path) {
+  if (!path || typeof path !== "string") return null;
+  const normalizedPath = path.replace(/\/+$/, "");
+  return imageSlugPhraseByPath[normalizedPath] || null;
+}
+
 export const semantic = {
  reenactorsTraditional: {
   path: "/Galleries/Fine-Art-Photography/Portraits/Reenactors",

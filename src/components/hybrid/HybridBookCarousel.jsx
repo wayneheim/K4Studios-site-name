@@ -16,12 +16,13 @@
  * Images use /img/{id}/l — never xl.
  */
 import { useState, useEffect, useRef, useCallback } from "react";
+import { getSemanticImageUrl } from "../../utils/imageProxy.js";
 
 const INTERVAL_MS = 8500;
 const FADE_MS = 1200;
 
 // Proxy helper — never expose SmugMug URLs
-const getProxySrc = (id, size = "l") => `/img/${id}/${size}.jpg`;
+const getGalleryPathFromImageHref = (href = "") => String(href || "").replace(/\/i-[a-zA-Z0-9-]+\/?$/, "");
 
 export default function HybridBookCarousel({
   slides = [],
@@ -95,7 +96,7 @@ export default function HybridBookCarousel({
         <div className={`hybrid-book-image${fading ? " is-fading" : ""}`}>
           <a href={chapterLink} aria-label={`View "${current.title}"`}>
             <img
-              src={getProxySrc(current.id, "l")}
+              src={getSemanticImageUrl(current, { galleryPath: getGalleryPathFromImageHref(current.href) || galleryBasePath })}
               alt={current.alt || current.title}
               width="960"
               height="640"

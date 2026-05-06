@@ -1,7 +1,9 @@
 import { useEffect, useMemo } from "react";
+import { getSemanticImageUrl } from "../utils/imageProxy.js";
 
 // ✅ Proxy URL helper - never expose SmugMug URLs to crawlers
-const getProxySrc = (id, size = "s") => `/img/${id}/${size}.jpg`;
+const getMobileImageSrc = (image, size = "s") =>
+  image?.id ? getSemanticImageUrl(image, { galleryPath: image.galleryPath }, size) : "";
 
 // Fisher-Yates shuffle
 const shuffleArray = (arr) => {
@@ -58,7 +60,7 @@ export default function MobileStoryImages({ images = [], displayCount }) {
         link.style.display = "block";
 
         const img = document.createElement("img");
-        img.src = match.id ? getProxySrc(match.id, 's') : (match.srcS || match.srcM || match.srcL || match.src);
+        img.src = match.id ? getMobileImageSrc(match, 's') : (match.srcS || match.srcM || match.srcL || match.src);
         img.alt = match.alt || "";
         img.className = "mobile-inline-img";
         img.width = 280;  // Explicit dimensions to prevent CLS

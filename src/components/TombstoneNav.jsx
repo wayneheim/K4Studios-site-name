@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { buildContextualAlt, getPageContext } from '../utils/buildContextualAlt';
+import { getSemanticImageUrl } from '../utils/imageProxy.js';
 import { warmImage } from '../utils/warmImage';
 import '../styles/tombstone-nav.css';
 
@@ -17,13 +18,19 @@ const TRACK_ENDPOINT = 'https://edge.k4studios.com/__k4e';
  * - Already relative /img/... URLs: forces to 's' size
  * - Local static images (/images/...): returns as-is
  */
-function normalizeThumbUrl(url) {
+function normalizeThumbUrl(url, item = {}) {
   if (!url) return '';
+  const toSemanticSmall = (id) =>
+    getSemanticImageUrl(
+      { id, title: item.imageTitle || item.title || id },
+      { galleryPath: item._thumbSource || item.galleryPath || item.href },
+      's'
+    );
   
   // Already a relative proxy URL - force to 's' size for thumbnails
   if (url.startsWith('/img/')) {
     const proxyMatch = url.match(/\/img\/(i-[a-zA-Z0-9-]+)\/(s|m|l|xl|src)/);
-    if (proxyMatch) return `/img/${proxyMatch[1]}/s.jpg`;
+    if (proxyMatch) return toSemanticSmall(proxyMatch[1]);
     return url;
   }
   
@@ -33,13 +40,13 @@ function normalizeThumbUrl(url) {
   // Extract image ID from SmugMug URL pattern: /i-XXXXXX/
   const smugMugMatch = url.match(/\/(i-[a-zA-Z0-9]+)\//);
   if (smugMugMatch) {
-    return `/img/${smugMugMatch[1]}/s.jpg`;
+    return toSemanticSmall(smugMugMatch[1]);
   }
   
   // Absolute proxy URL - convert to relative with 's' size
   const proxyMatch = url.match(/\/img\/(i-[a-zA-Z0-9-]+)\/(s|m|l|xl|src)/);
   if (proxyMatch) {
-    return `/img/${proxyMatch[1]}/s.jpg`;
+    return toSemanticSmall(proxyMatch[1]);
   }
   
   // Unknown format - return as-is (might be external or placeholder)
@@ -60,7 +67,7 @@ export default function TombstoneNav({
 
   // Client-side random thumb selection from thumbs array
   const [selectedThumbs, setSelectedThumbs] = useState(() => 
-    items.map(item => normalizeThumbUrl(item.thumbs?.[0] || item.thumb || ''))
+    items.map(item => normalizeThumbUrl(item.thumbs?.[0] || item.thumb || '', item))
   );
   
   // Resolved page context (from prop or auto-detected from path)
@@ -93,7 +100,7 @@ export default function TombstoneNav({
       } else {
         thumb = item.thumb || '';
       }
-      return normalizeThumbUrl(thumb);
+      return normalizeThumbUrl(thumb, item);
     }));
   }, [items, propPageContext]);
 

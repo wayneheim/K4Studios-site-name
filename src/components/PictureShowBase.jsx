@@ -9,17 +9,23 @@ import SeriesOrderModal from "./SeriesOrderModal.jsx";
 import SimpleStoryShow from "./Gallery-Slideshow.jsx";
 import StoryShowWithAudio from "./Gallery-Slideshow-Story.jsx";
 import imageIdMap from "../data/imageIdMap.json";
-import { getProxySrc, normalizeImageSrc } from "../utils/imageProxy.js";
+import { getProxySrc, getSemanticImageUrl, normalizeImageSrc } from "../utils/imageProxy.js";
 import { warmImage } from "../utils/warmImage";
 import { trackEvent as track, emitActionPixel } from "../utils/analytics";
 
 const ENGRAINED_BASE_PATH = "/Other/K4-Select-Series/Engrained/Engrained-Series";
 
 // Helper function to select the public image source for Picture Show display.
-const getBestImageSrc = (image) => {
+const getBestImageSrc = (image, basePath = "") => {
   if (!image) return "";
-  if (image.id) return getProxySrc(image.id, 'l');
+  if (image.id) return getSemanticImageUrl(image, { galleryPath: basePath });
   return normalizeImageSrc(image.srcL || image.srcM || image.src || image.srcXL || "", 'l');
+};
+
+const getPresentationThumbSrc = (image, basePath = "") => {
+  if (!image) return "";
+  if (image.id) return getSemanticImageUrl(image, { galleryPath: basePath }, 's');
+  return normalizeImageSrc(image.src, 's');
 };
 
 const getSlideshowImageSrc = (image) => {
@@ -993,7 +999,7 @@ const isSpeechActive = () => {
                       className="group block rounded-md overflow-hidden border border-gray-300 hover:shadow-md transition-all"
                     >
                       <img
-                        src={normalizeImageSrc(img.src, 's')}
+                        src={getPresentationThumbSrc(img, basePath)}
                         alt={img.alt || img.title}
                         className="w-[110px] h-[110px] object-cover group-hover:opacity-90"
                       />
@@ -1206,7 +1212,7 @@ const isSpeechActive = () => {
                       >
                         {/* Base image (show only when not hovered) */}
                         <img
-                          src={normalizeImageSrc(currentImage?.src, 'l')}
+                          src={getBestImageSrc(currentImage, basePath)}
                           alt={currentImage?.alt || currentImage?.title}
                           className="w-full h-full object-contain"
                           style={{ opacity: isCardHovered ? 0 : 1, transition: 'opacity 500ms ease-out' }}
@@ -1325,7 +1331,7 @@ const isSpeechActive = () => {
                       } : undefined}
                     >
                       <img
-                        src={getBestImageSrc(currentImage)}
+                        src={getBestImageSrc(currentImage, basePath)}
                         alt={currentImage?.alt || currentImage?.title}
                         className="rounded-lg shadow-md"
                         onContextMenu={(e) => e.preventDefault()}
@@ -1690,7 +1696,7 @@ const isSpeechActive = () => {
                                 title={img.title || `Slide ${index}`}
                               >
                                 <img
-                                  src={normalizeImageSrc(img.src, 's')}
+                                  src={getPresentationThumbSrc(img, basePath)}
                                   alt={img.alt || img.title}
                                   className={`h-[84px] w-[84px] object-cover transition-opacity duration-200 ${
                                     isActive ? "opacity-100" : "opacity-75 group-hover:opacity-100"

@@ -12,6 +12,7 @@
  */
 import { useState, useEffect, useRef } from 'react';
 import { trackEvent, emitActionPixel } from '../utils/analytics';
+import { getSemanticImageUrl } from '../utils/imageProxy.js';
 
 // ✅ Grid styling matches /all.astro
 const gridStyles = {
@@ -69,7 +70,8 @@ const cardNumberStyles = {
 };
 
 // ✅ Proxy URL helper
-const getProxySrc = (id, size) => `/img/${id}/${size}.jpg`;
+const getBrowseImageSrc = (image, basePath, size = 'm') =>
+  image?.id ? getSemanticImageUrl(image, { galleryPath: basePath }, size) : '';
 
 // ✅ Text cleaner
 const cleanText = (val = '') =>
@@ -96,7 +98,7 @@ function ImageCard({ item, index, basePath, onImageClick }) {
   const storyExcerpt = truncateStory(item.story);
   const linkUrl = `${basePath}/${item.id}`;
   // Use 'm' size for thumbnails (medium)
-  const imgSrc = getProxySrc(item.id, 'm');
+  const imgSrc = getBrowseImageSrc(item, basePath, 'm');
   const altText = item.alt || `${title} – Wayne Heim Fine Art Photography`;
 
   return (

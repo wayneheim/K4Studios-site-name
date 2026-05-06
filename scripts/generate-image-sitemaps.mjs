@@ -2,6 +2,7 @@
 // This is the professional pattern for large sites - allows GSC tracking per section
 // Usage: node scripts/generate-image-sitemaps.mjs
 
+import { readFileSync } from 'node:fs';
 import { writeFile, mkdir, readFile, stat } from 'node:fs/promises';
 import { execSync } from 'node:child_process';
 import path from 'node:path';
@@ -13,6 +14,7 @@ const __dirname = path.dirname(__filename);
 const SITE_URL = 'https://www.k4studios.com';
 const PUBLIC_DIR = path.resolve(__dirname, '..', 'public');
 const REPO_ROOT = path.resolve(__dirname, '..');
+const K4_SEM_PATH = path.join(REPO_ROOT, 'src', 'data', 'semantic', 'K4-Sem.ts');
 
 const GHOST_IMAGE_ID = 'i-k4studios';
 
@@ -56,6 +58,60 @@ function isHiddenImage(image) {
   if (image?.show === false) return true;
 
   return false;
+}
+
+function slugifyImageSegment(value, fallback = 'image') {
+  const slug = String(value || '')
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/&/g, ' and ')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .replace(/-{2,}/g, '-')
+    .slice(0, 80)
+    .replace(/-+$/g, '');
+
+  return slug || fallback;
+}
+
+function loadImageSlugPhraseByPath() {
+  try {
+    return extractImageSlugPhraseByPath(readFileSync(K4_SEM_PATH, 'utf8'));
+  } catch {
+    return {};
+  }
+}
+
+function extractImageSlugPhraseByPath(source) {
+  const map = {};
+  const entryPattern = /path:\s*"([^"]+)"\s*,\s*imageSlugPhrase:\s*"([^"]+)"/g;
+  for (const match of source.matchAll(entryPattern)) {
+    map[match[1].replace(/\/+$/, '')] = match[2];
+  }
+  return map;
+}
+
+const imageSlugPhraseByPath = loadImageSlugPhraseByPath();
+
+function getFallbackPhraseFromGalleryPath(galleryPath) {
+  const parts = String(galleryPath || '').replace(/\/+$/, '').split('/').filter(Boolean);
+  const meaningfulPart = [...parts]
+    .reverse()
+    .find((part) => !/^(gallery|color|black-white|na-color|na-black-white)$/i.test(part));
+  return meaningfulPart
+    ? slugifyImageSegment(meaningfulPart, 'k4-fine-art-photography')
+    : 'k4-fine-art-photography';
+}
+
+function getSemanticImageUrl(image, urlBase) {
+  const titleSlug = slugifyImageSegment(image?.title || image?.alt, String(image?.id || '').replace(/^i-/i, '') || 'image');
+  const normalizedBase = String(urlBase || '').replace(/\/+$/, '');
+  const phrase = slugifyImageSegment(
+    imageSlugPhraseByPath[normalizedBase] || getFallbackPhraseFromGalleryPath(normalizedBase),
+    'k4-fine-art-photography'
+  );
+  return `${SITE_URL}/img/${image.id}/${titleSlug}-${phrase}.jpg`;
 }
 
 /**
@@ -409,7 +465,7 @@ function generateUrlEntry(image, urlBase, lastmod = null) {
   // Use proxy URLs capped at L - never expose XL or raw SmugMug URLs to bots.
   // Google now documents image:loc as the only active image-specific tag here;
   // titles/captions/licenses belong on the HTML page and structured data.
-  const imageUrl = `${SITE_URL}/img/${image.id}/l.jpg`;
+  const imageUrl = getSemanticImageUrl(image, urlBase);
 
   return `  <url>
     <loc>${escapeXml(pageUrl)}</loc>

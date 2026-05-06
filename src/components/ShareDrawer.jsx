@@ -39,7 +39,7 @@ export default function ShareDrawer({ imageUrl: propImageUrl, pageTitle, pageDes
     // Only rewrite proxy URLs; leave static /images/* alone.
     try {
       const u = new URL(raw, window.location.origin);
-      const m = u.pathname.match(/^\/img\/((?:OG|TW|PN|SD)-)?(i-[a-zA-Z0-9-]+)\/(s|m|l|xl|src)(?:\.jpe?g)?\/?$/);
+      const m = u.pathname.match(/^\/img\/((?:OG|TW|PN|SD)-)?(i-[a-zA-Z0-9-]+)\/[^/?#]+(?:\.jpe?g)?\/?$/);
       if (!m) return raw;
       const canonicalId = m[2];
       u.pathname = `/img/PN-${canonicalId}/l.jpg`;

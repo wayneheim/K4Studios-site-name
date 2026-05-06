@@ -3,6 +3,7 @@ export const prerender = true;
 import Footer from '@/components/Footer.astro';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import ArchiveContext from '@/components/ArchiveContext.astro';
+import { getSemanticImageUrl } from '@/utils/imageProxy.js';
 
 import { galleryData as rawGalleryData } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs';
 import { entranceData } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-EntranceData.ts';
@@ -46,7 +47,10 @@ const truncateStory = (story: string, maxLen = 150) => {
   return cleaned.slice(0, maxLen).replace(/\s+\S*$/, '') + '…';
 };
 
-const getProxySrc = (id: string, size: string) => `/img/${id}/${size}.jpg`;
+const getProxySrc = (id: string, size: string = 'l') => {
+  const image = galleryData.find((item: any) => item.id === id) || { id };
+  return getSemanticImageUrl(image, { galleryPath: basePath }, size);
+};
 
 const imageJsonLdMap = new Map();
 galleryData.forEach((item: any) => {

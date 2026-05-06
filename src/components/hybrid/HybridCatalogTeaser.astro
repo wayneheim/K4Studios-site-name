@@ -1,4 +1,5 @@
 ---
+import { getSemanticImageUrl } from '@/utils/imageProxy.js';
 /**
  * HybridCatalogTeaser.astro
  *
@@ -38,7 +39,7 @@ const {
   galleryLabel = "Explore the Full Collection →",
 } = Astro.props;
 
-const getProxySrc = (id: string, size: string) => `/img/${id}/${size}.jpg`;
+const getGalleryPathFromImageHref = (href = '') => String(href || '').replace(/\/i-[a-zA-Z0-9-]+\/?$/, '');
 ---
 
 <section class="hybrid-catalog reveal-on-scroll">
@@ -57,7 +58,7 @@ const getProxySrc = (id: string, size: string) => `/img/${id}/${size}.jpg`;
       >
         <div class="hybrid-catalog__thumb-wrap">
           <img
-            src={getProxySrc(img.id, "m")}
+            src={getSemanticImageUrl(img, { galleryPath: getGalleryPathFromImageHref(img.href || '') || galleryHref }, 'm')}
             alt={img.alt || img.title}
             width="400"
             height="280"

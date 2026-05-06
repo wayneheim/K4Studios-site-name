@@ -2,9 +2,12 @@ import { useEffect, useRef, useState } from "react";
 import "../styles/ImageBar2.css";
 import { slides as homeSlides } from "../data/home/carousel.ts";
 import { warmImage } from "../utils/warmImage";
+import { getSemanticImageUrl } from "../utils/imageProxy.js";
 
 // ✅ Proxy URL helper - never expose SmugMug URLs to crawlers
-const getProxySrc = (id, size = "s") => `/img/${id}/${size}.jpg`;
+const getGalleryPathFromImageHref = (href = "") => String(href || "").replace(/\/i-[a-zA-Z0-9-]+\/?$/, "");
+const getHomeImageSrc = (slide, size = "s") =>
+  slide?.id ? getSemanticImageUrl(slide, { galleryPath: slide.galleryPath || getGalleryPathFromImageHref(slide.href) }, size) : "";
 
 const getImageAltText = (slide) => {
   if (slide?.alt && String(slide.alt).trim()) return String(slide.alt).trim();
@@ -79,7 +82,7 @@ export default function ImageBar2Home() {
           >
             <a href={s.href} title={isDuplicate ? undefined : imageAlt} aria-label={isDuplicate ? undefined : imageAlt} tabIndex={isDuplicate ? -1 : undefined}>
               <img
-                src={s.id ? getProxySrc(s.id, 's') : (s.srcS || s.src)}
+                src={s.id ? getHomeImageSrc(s, 's') : (s.srcS || s.src)}
                 alt={isDuplicate ? "" : imageAlt}
                 itemProp="contentUrl"
                 loading={s.loading}

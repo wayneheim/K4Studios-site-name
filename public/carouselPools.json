@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-14T04:49:24.776Z",
+  "generated": "2026-05-06T06:06:42.226Z",
   "heroIds": [
     "i-ncFcHDM",
     "i-KtmPcCf",
@@ -14,6 +14,8 @@
     "westernCowboy": [
       {
         "id": "i-ncFcHDM",
+        "title": "One Last Look",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
         "src": "/img/i-ncFcHDM/s",
         "srcS": "/img/i-ncFcHDM/s",
         "srcM": "/img/i-ncFcHDM/m",
@@ -27,6 +29,8 @@
       },
       {
         "id": "i-5s8Zkrb",
+        "title": "A Watchful Eye",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White",
         "src": "/img/i-5s8Zkrb/s",
         "srcS": "/img/i-5s8Zkrb/s",
         "srcM": "/img/i-5s8Zkrb/m",
@@ -40,6 +44,8 @@
       },
       {
         "id": "i-LCspRF4",
+        "title": "Day in Review",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color",
         "src": "/img/i-LCspRF4/s",
         "srcS": "/img/i-LCspRF4/s",
         "srcM": "/img/i-LCspRF4/m",
@@ -53,6 +59,8 @@
       },
       {
         "id": "i-nZbDC9C",
+        "title": "Held by Memory",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White",
         "src": "/img/i-nZbDC9C/s",
         "srcS": "/img/i-nZbDC9C/s",
         "srcM": "/img/i-nZbDC9C/m",
@@ -66,6 +74,8 @@
       },
       {
         "id": "i-rRdrQBg",
+        "title": "Above the Divide",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color",
         "src": "/img/i-rRdrQBg/s",
         "srcS": "/img/i-rRdrQBg/s",
         "srcM": "/img/i-rRdrQBg/m",
@@ -79,6 +89,8 @@
       },
       {
         "id": "i-Z54nXZm",
+        "title": "Watching the Wind",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White",
         "src": "/img/i-Z54nXZm/s",
         "srcS": "/img/i-Z54nXZm/s",
         "srcM": "/img/i-Z54nXZm/m",
@@ -92,6 +104,8 @@
       },
       {
         "id": "i-k4b6c5b",
+        "title": "What Remains",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
         "src": "/img/i-k4b6c5b/s",
         "srcS": "/img/i-k4b6c5b/s",
         "srcM": "/img/i-k4b6c5b/m",
@@ -105,6 +119,8 @@
       },
       {
         "id": "i-RLZFsxp",
+        "title": "The Old Hand",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White",
         "src": "/img/i-RLZFsxp/s",
         "srcS": "/img/i-RLZFsxp/s",
         "srcM": "/img/i-RLZFsxp/m",
@@ -118,6 +134,8 @@
       },
       {
         "id": "i-c5K798H",
+        "title": "Meant What I Said!",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color",
         "src": "/img/i-c5K798H/s",
         "srcS": "/img/i-c5K798H/s",
         "srcM": "/img/i-c5K798H/m",
@@ -131,6 +149,8 @@
       },
       {
         "id": "i-Txh4c8k",
+        "title": "Loose Ends: Cowboy Roping Skills",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White",
         "src": "/img/i-Txh4c8k/s",
         "srcS": "/img/i-Txh4c8k/s",
         "srcM": "/img/i-Txh4c8k/m",
@@ -144,6 +164,8 @@
       },
       {
         "id": "i-4Hz6D7k",
+        "title": "Carried Forward",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color",
         "src": "/img/i-4Hz6D7k/s",
         "srcS": "/img/i-4Hz6D7k/s",
         "srcM": "/img/i-4Hz6D7k/m",
@@ -157,6 +179,8 @@
       },
       {
         "id": "i-67Qt8WM",
+        "title": "Held Close",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White",
         "src": "/img/i-67Qt8WM/s",
         "srcS": "/img/i-67Qt8WM/s",
         "srcM": "/img/i-67Qt8WM/m",
@@ -170,6 +194,8 @@
       },
       {
         "id": "i-jcLJT4J",
+        "title": "For Better or Worse",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
         "src": "/img/i-jcLJT4J/s",
         "srcS": "/img/i-jcLJT4J/s",
         "srcM": "/img/i-jcLJT4J/m",
@@ -183,6 +209,8 @@
       },
       {
         "id": "i-6z4gpF7",
+        "title": "A Sheriff's Silent Oath",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White",
         "src": "/img/i-6z4gpF7/s",
         "srcS": "/img/i-6z4gpF7/s",
         "srcM": "/img/i-6z4gpF7/m",
@@ -196,6 +224,8 @@
       },
       {
         "id": "i-7Mzzbvp",
+        "title": "Last Hand",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color",
         "src": "/img/i-7Mzzbvp/s",
         "srcS": "/img/i-7Mzzbvp/s",
         "srcM": "/img/i-7Mzzbvp/m",
@@ -209,6 +239,8 @@
       },
       {
         "id": "i-zTWQkqD",
+        "title": "The Devil Comes in Daylight",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White",
         "src": "/img/i-zTWQkqD/s",
         "srcS": "/img/i-zTWQkqD/s",
         "srcM": "/img/i-zTWQkqD/m",
@@ -222,6 +254,8 @@
       },
       {
         "id": "i-LmpRvHw",
+        "title": "Watching the High Ground",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color",
         "src": "/img/i-LmpRvHw/s",
         "srcS": "/img/i-LmpRvHw/s",
         "srcM": "/img/i-LmpRvHw/m",
@@ -235,6 +269,8 @@
       },
       {
         "id": "i-zDcr5T3",
+        "title": "Standing at Ease",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White",
         "src": "/img/i-zDcr5T3/s",
         "srcS": "/img/i-zDcr5T3/s",
         "srcM": "/img/i-zDcr5T3/m",
@@ -248,6 +284,8 @@
       },
       {
         "id": "i-T6bD4w7",
+        "title": "Weathered",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
         "src": "/img/i-T6bD4w7/s",
         "srcS": "/img/i-T6bD4w7/s",
         "srcM": "/img/i-T6bD4w7/m",
@@ -261,6 +299,8 @@
       },
       {
         "id": "i-RdsBKX8",
+        "title": "Rooted in Dust",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White",
         "src": "/img/i-RdsBKX8/s",
         "srcS": "/img/i-RdsBKX8/s",
         "srcM": "/img/i-RdsBKX8/m",
@@ -276,6 +316,8 @@
     "civilWar": [
       {
         "id": "i-xhX479V",
+        "title": "Through the Smoke",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color",
         "src": "/img/i-xhX479V/s",
         "srcS": "/img/i-xhX479V/s",
         "srcM": "/img/i-xhX479V/m",
@@ -289,6 +331,8 @@
       },
       {
         "id": "i-834cDZ8",
+        "title": "After the Smoke",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White",
         "src": "/img/i-834cDZ8/s",
         "srcS": "/img/i-834cDZ8/s",
         "srcM": "/img/i-834cDZ8/m",
@@ -302,6 +346,8 @@
       },
       {
         "id": "i-C5ZGjMH",
+        "title": "The Burden of Rank",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color",
         "src": "/img/i-C5ZGjMH/s",
         "srcS": "/img/i-C5ZGjMH/s",
         "srcM": "/img/i-C5ZGjMH/m",
@@ -315,6 +361,8 @@
       },
       {
         "id": "i-GqDJLmF",
+        "title": "Between Orders",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White",
         "src": "/img/i-GqDJLmF/s",
         "srcS": "/img/i-GqDJLmF/s",
         "srcM": "/img/i-GqDJLmF/m",
@@ -328,6 +376,8 @@
       },
       {
         "id": "i-9q7BrTt",
+        "title": "Little Drummer Boy",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color",
         "src": "/img/i-9q7BrTt/s",
         "srcS": "/img/i-9q7BrTt/s",
         "srcM": "/img/i-9q7BrTt/m",
@@ -341,6 +391,8 @@
       },
       {
         "id": "i-vQXXDRJ",
+        "title": "Passing Time",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White",
         "src": "/img/i-vQXXDRJ/s",
         "srcS": "/img/i-vQXXDRJ/s",
         "srcM": "/img/i-vQXXDRJ/m",
@@ -354,6 +406,8 @@
       },
       {
         "id": "i-N2LmzLK",
+        "title": "The Cost of Colors",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color",
         "src": "/img/i-N2LmzLK/s",
         "srcS": "/img/i-N2LmzLK/s",
         "srcM": "/img/i-N2LmzLK/m",
@@ -367,6 +421,8 @@
       },
       {
         "id": "i-TkBf43K",
+        "title": "Counting Time",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White",
         "src": "/img/i-TkBf43K/s",
         "srcS": "/img/i-TkBf43K/s",
         "srcM": "/img/i-TkBf43K/m",
@@ -380,6 +436,8 @@
       },
       {
         "id": "i-pvFgTr4",
+        "title": "Fog of War",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color",
         "src": "/img/i-pvFgTr4/s",
         "srcS": "/img/i-pvFgTr4/s",
         "srcM": "/img/i-pvFgTr4/m",
@@ -393,6 +451,8 @@
       },
       {
         "id": "i-ShbbBcz",
+        "title": "Holding Ground",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White",
         "src": "/img/i-ShbbBcz/s",
         "srcS": "/img/i-ShbbBcz/s",
         "srcM": "/img/i-ShbbBcz/m",
@@ -406,6 +466,8 @@
       },
       {
         "id": "i-DJKJkMb",
+        "title": "Hold Fast",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color",
         "src": "/img/i-DJKJkMb/s",
         "srcS": "/img/i-DJKJkMb/s",
         "srcM": "/img/i-DJKJkMb/m",
@@ -419,6 +481,8 @@
       },
       {
         "id": "i-mDZn7Xx",
+        "title": "The Steady Gaze",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White",
         "src": "/img/i-mDZn7Xx/s",
         "srcS": "/img/i-mDZn7Xx/s",
         "srcM": "/img/i-mDZn7Xx/m",
@@ -432,6 +496,8 @@
       },
       {
         "id": "i-nWsP2r2",
+        "title": "Catching Up",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color",
         "src": "/img/i-nWsP2r2/s",
         "srcS": "/img/i-nWsP2r2/s",
         "srcM": "/img/i-nWsP2r2/m",
@@ -445,6 +511,8 @@
       },
       {
         "id": "i-dWHn77W",
+        "title": "On Official Business",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White",
         "src": "/img/i-dWHn77W/s",
         "srcS": "/img/i-dWHn77W/s",
         "srcM": "/img/i-dWHn77W/m",
@@ -458,6 +526,8 @@
       },
       {
         "id": "i-fdtLTbW",
+        "title": "Interesting Proposition",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color",
         "src": "/img/i-fdtLTbW/s",
         "srcS": "/img/i-fdtLTbW/s",
         "srcM": "/img/i-fdtLTbW/m",
@@ -471,6 +541,8 @@
       },
       {
         "id": "i-5jfqH53",
+        "title": "In His Sights",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White",
         "src": "/img/i-5jfqH53/s",
         "srcS": "/img/i-5jfqH53/s",
         "srcM": "/img/i-5jfqH53/m",
@@ -484,6 +556,8 @@
       },
       {
         "id": "i-CGRD3jF",
+        "title": "Tending to the Boys",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color",
         "src": "/img/i-CGRD3jF/s",
         "srcS": "/img/i-CGRD3jF/s",
         "srcM": "/img/i-CGRD3jF/m",
@@ -497,6 +571,8 @@
       },
       {
         "id": "i-qSgZ7zD",
+        "title": "Lines of Work",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White",
         "src": "/img/i-qSgZ7zD/s",
         "srcS": "/img/i-qSgZ7zD/s",
         "srcM": "/img/i-qSgZ7zD/m",
@@ -510,6 +586,8 @@
       },
       {
         "id": "i-hD6jQZZ",
+        "title": "Soldier Taking 5",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color",
         "src": "/img/i-hD6jQZZ/s",
         "srcS": "/img/i-hD6jQZZ/s",
         "srcM": "/img/i-hD6jQZZ/m",
@@ -523,6 +601,8 @@
       },
       {
         "id": "i-qkhr8Nv",
+        "title": "The Scholar of War",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White",
         "src": "/img/i-qkhr8Nv/s",
         "srcS": "/img/i-qkhr8Nv/s",
         "srcM": "/img/i-qkhr8Nv/m",
@@ -538,6 +618,8 @@
     "wwii": [
       {
         "id": "i-4p3fBxJ",
+        "title": "Wwii Artistic Documentary And WWII Action Art",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color",
         "src": "/img/i-4p3fBxJ/s",
         "srcS": "/img/i-4p3fBxJ/s",
         "srcM": "/img/i-4p3fBxJ/m",
@@ -551,6 +633,8 @@
       },
       {
         "id": "i-p8JdtJM",
+        "title": "Landing Into Chaos",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White",
         "src": "/img/i-p8JdtJM/s",
         "srcS": "/img/i-p8JdtJM/s",
         "srcM": "/img/i-p8JdtJM/m",
@@ -564,6 +648,8 @@
       },
       {
         "id": "i-rBtrrtx",
+        "title": "Tracks Across Memory",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color",
         "src": "/img/i-rBtrrtx/s",
         "srcS": "/img/i-rBtrrtx/s",
         "srcM": "/img/i-rBtrrtx/m",
@@ -577,6 +663,8 @@
       },
       {
         "id": "i-wdnJQwf",
+        "title": "History’s Edge",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White",
         "src": "/img/i-wdnJQwf/s",
         "srcS": "/img/i-wdnJQwf/s",
         "srcM": "/img/i-wdnJQwf/m",
@@ -590,6 +678,8 @@
       },
       {
         "id": "i-8QXD4Cq",
+        "title": "Gun Crew Conference",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color",
         "src": "/img/i-8QXD4Cq/s",
         "srcS": "/img/i-8QXD4Cq/s",
         "srcM": "/img/i-8QXD4Cq/m",
@@ -603,6 +693,8 @@
       },
       {
         "id": "i-sphS8CJ",
+        "title": "Composure",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White",
         "src": "/img/i-sphS8CJ/s",
         "srcS": "/img/i-sphS8CJ/s",
         "srcM": "/img/i-sphS8CJ/m",
@@ -616,6 +708,8 @@
       },
       {
         "id": "i-wp7KTps",
+        "title": "WWII Reenactment Photography: Smoke Signals by Wayne Heim",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color",
         "src": "/img/i-wp7KTps/s",
         "srcS": "/img/i-wp7KTps/s",
         "srcM": "/img/i-wp7KTps/m",
@@ -629,6 +723,8 @@
       },
       {
         "id": "i-F33M327",
+        "title": "Call for the Medic",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White",
         "src": "/img/i-F33M327/s",
         "srcS": "/img/i-F33M327/s",
         "srcM": "/img/i-F33M327/m",
@@ -642,6 +738,8 @@
       },
       {
         "id": "i-wRxHNc4",
+        "title": "Out of the Dust",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color",
         "src": "/img/i-wRxHNc4/s",
         "srcS": "/img/i-wRxHNc4/s",
         "srcM": "/img/i-wRxHNc4/m",
@@ -655,6 +753,8 @@
       },
       {
         "id": "i-t6xx8Cq",
+        "title": "Steel Overhead",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White",
         "src": "/img/i-t6xx8Cq/s",
         "srcS": "/img/i-t6xx8Cq/s",
         "srcM": "/img/i-t6xx8Cq/m",
@@ -668,6 +768,8 @@
       },
       {
         "id": "i-JnmQDPd",
+        "title": "A Moment to Breathe",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color",
         "src": "/img/i-JnmQDPd/s",
         "srcS": "/img/i-JnmQDPd/s",
         "srcM": "/img/i-JnmQDPd/m",
@@ -681,6 +783,8 @@
       },
       {
         "id": "i-7FwpMPD",
+        "title": "Waiting on the Word",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White",
         "src": "/img/i-7FwpMPD/s",
         "srcS": "/img/i-7FwpMPD/s",
         "srcM": "/img/i-7FwpMPD/m",
@@ -694,6 +798,8 @@
       },
       {
         "id": "i-XNN4GPQ",
+        "title": "Cold Soldier   Photography by Wayne Heim",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color",
         "src": "/img/i-XNN4GPQ/s",
         "srcS": "/img/i-XNN4GPQ/s",
         "srcM": "/img/i-XNN4GPQ/m",
@@ -707,6 +813,8 @@
       },
       {
         "id": "i-74wg6VQ",
+        "title": "Go! Move Now!",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White",
         "src": "/img/i-74wg6VQ/s",
         "srcS": "/img/i-74wg6VQ/s",
         "srcM": "/img/i-74wg6VQ/m",
@@ -720,6 +828,8 @@
       },
       {
         "id": "i-LMvspP9",
+        "title": "Steel in Motion",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color",
         "src": "/img/i-LMvspP9/s",
         "srcS": "/img/i-LMvspP9/s",
         "srcM": "/img/i-LMvspP9/m",
@@ -733,6 +843,8 @@
       },
       {
         "id": "i-qrSVhmS",
+        "title": "Thunder Answered",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White",
         "src": "/img/i-qrSVhmS/s",
         "srcS": "/img/i-qrSVhmS/s",
         "srcM": "/img/i-qrSVhmS/m",
@@ -746,6 +858,8 @@
       },
       {
         "id": "i-wFV22SQ",
+        "title": "Duty at the Desk",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color",
         "src": "/img/i-wFV22SQ/s",
         "srcS": "/img/i-wFV22SQ/s",
         "srcM": "/img/i-wFV22SQ/m",
@@ -759,6 +873,8 @@
       },
       {
         "id": "i-LhVX3Qt",
+        "title": "Before He Knew",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White",
         "src": "/img/i-LhVX3Qt/s",
         "srcS": "/img/i-LhVX3Qt/s",
         "srcM": "/img/i-LhVX3Qt/m",
@@ -772,6 +888,8 @@
       },
       {
         "id": "i-7wSnzbn",
+        "title": "Looking for Trouble",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color",
         "src": "/img/i-7wSnzbn/s",
         "srcS": "/img/i-7wSnzbn/s",
         "srcM": "/img/i-7wSnzbn/m",
@@ -785,6 +903,8 @@
       },
       {
         "id": "i-xs6MWcM",
+        "title": "Whispers in the Brush",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White",
         "src": "/img/i-xs6MWcM/s",
         "srcS": "/img/i-xs6MWcM/s",
         "srcM": "/img/i-xs6MWcM/m",
@@ -800,6 +920,8 @@
     "roaring20s": [
       {
         "id": "i-8zkKqtg",
+        "title": "Earned in Small Change",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color",
         "src": "/img/i-8zkKqtg/s",
         "srcS": "/img/i-8zkKqtg/s",
         "srcM": "/img/i-8zkKqtg/m",
@@ -813,6 +935,8 @@
       },
       {
         "id": "i-MhMbDtL",
+        "title": "Quiet Modern",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White",
         "src": "/img/i-MhMbDtL/s",
         "srcS": "/img/i-MhMbDtL/s",
         "srcM": "/img/i-MhMbDtL/m",
@@ -826,6 +950,8 @@
       },
       {
         "id": "i-WSh3Nqv",
+        "title": "Phoning It In",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color",
         "src": "/img/i-WSh3Nqv/s",
         "srcS": "/img/i-WSh3Nqv/s",
         "srcM": "/img/i-WSh3Nqv/m",
@@ -839,6 +965,8 @@
       },
       {
         "id": "i-7rWrmHq",
+        "title": "A Gentleman of His Time",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White",
         "src": "/img/i-7rWrmHq/s",
         "srcS": "/img/i-7rWrmHq/s",
         "srcM": "/img/i-7rWrmHq/m",
@@ -852,6 +980,8 @@
       },
       {
         "id": "i-KMhKvRb",
+        "title": "Signal Received",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color",
         "src": "/img/i-KMhKvRb/s",
         "srcS": "/img/i-KMhKvRb/s",
         "srcM": "/img/i-KMhKvRb/m",
@@ -865,6 +995,8 @@
       },
       {
         "id": "i-jRPgZj3",
+        "title": "Following His Lead",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White",
         "src": "/img/i-jRPgZj3/s",
         "srcS": "/img/i-jRPgZj3/s",
         "srcM": "/img/i-jRPgZj3/m",
@@ -878,6 +1010,8 @@
       },
       {
         "id": "i-k9qB2jV",
+        "title": "Terms of Respect",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color",
         "src": "/img/i-k9qB2jV/s",
         "srcS": "/img/i-k9qB2jV/s",
         "srcM": "/img/i-k9qB2jV/m",
@@ -891,6 +1025,8 @@
       },
       {
         "id": "i-Dc7Xpdw",
+        "title": "Union Break",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White",
         "src": "/img/i-Dc7Xpdw/s",
         "srcS": "/img/i-Dc7Xpdw/s",
         "srcM": "/img/i-Dc7Xpdw/m",
@@ -904,6 +1040,8 @@
       },
       {
         "id": "i-VqxgW5k",
+        "title": "Just a Typical Saturday Afternoon",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color",
         "src": "/img/i-VqxgW5k/s",
         "srcS": "/img/i-VqxgW5k/s",
         "srcM": "/img/i-VqxgW5k/m",
@@ -917,6 +1055,8 @@
       },
       {
         "id": "i-trPHqZK",
+        "title": "Front Porch Accord",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White",
         "src": "/img/i-trPHqZK/s",
         "srcS": "/img/i-trPHqZK/s",
         "srcM": "/img/i-trPHqZK/m",
@@ -930,6 +1070,8 @@
       },
       {
         "id": "i-NVz5zk2",
+        "title": "Terms of Consideration",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color",
         "src": "/img/i-NVz5zk2/s",
         "srcS": "/img/i-NVz5zk2/s",
         "srcM": "/img/i-NVz5zk2/m",
@@ -943,6 +1085,8 @@
       },
       {
         "id": "i-DfS7sz2",
+        "title": "The Long Regard",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White",
         "src": "/img/i-DfS7sz2/s",
         "srcS": "/img/i-DfS7sz2/s",
         "srcM": "/img/i-DfS7sz2/m",
@@ -956,6 +1100,8 @@
       },
       {
         "id": "i-9cZHdvB",
+        "title": "Terms of Order",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color",
         "src": "/img/i-9cZHdvB/s",
         "srcS": "/img/i-9cZHdvB/s",
         "srcM": "/img/i-9cZHdvB/m",
@@ -969,6 +1115,8 @@
       },
       {
         "id": "i-zKXCVqN",
+        "title": "Holding Court",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White",
         "src": "/img/i-zKXCVqN/s",
         "srcS": "/img/i-zKXCVqN/s",
         "srcM": "/img/i-zKXCVqN/m",
@@ -982,6 +1130,8 @@
       },
       {
         "id": "i-zrVCpMP",
+        "title": "Terms of Power",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color",
         "src": "/img/i-zrVCpMP/s",
         "srcS": "/img/i-zrVCpMP/s",
         "srcM": "/img/i-zrVCpMP/m",
@@ -995,6 +1145,8 @@
       },
       {
         "id": "i-W7rj9DJ",
+        "title": "Through the Fog",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White",
         "src": "/img/i-W7rj9DJ/s",
         "srcS": "/img/i-W7rj9DJ/s",
         "srcM": "/img/i-W7rj9DJ/m",
@@ -1008,6 +1160,8 @@
       },
       {
         "id": "i-rxnpqCQ",
+        "title": "Unspoken Rank",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color",
         "src": "/img/i-rxnpqCQ/s",
         "srcS": "/img/i-rxnpqCQ/s",
         "srcM": "/img/i-rxnpqCQ/m",
@@ -1021,6 +1175,8 @@
       },
       {
         "id": "i-tpvJWLm",
+        "title": "Havana Post Cigars",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White",
         "src": "/img/i-tpvJWLm/s",
         "srcS": "/img/i-tpvJWLm/s",
         "srcM": "/img/i-tpvJWLm/m",
@@ -1034,6 +1190,8 @@
       },
       {
         "id": "i-qgJkNtv",
+        "title": "Posted Until Dawn",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color",
         "src": "/img/i-qgJkNtv/s",
         "srcS": "/img/i-qgJkNtv/s",
         "srcM": "/img/i-qgJkNtv/m",
@@ -1047,6 +1205,8 @@
       },
       {
         "id": "i-Pt7whDS",
+        "title": "The Watchman",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White",
         "src": "/img/i-Pt7whDS/s",
         "srcS": "/img/i-Pt7whDS/s",
         "srcM": "/img/i-Pt7whDS/m",
@@ -1062,6 +1222,8 @@
     "painterlyLandscapes": [
       {
         "id": "i-wqJHvpV",
+        "title": "Across Quiet Ground",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery",
         "src": "/img/i-wqJHvpV/s",
         "srcS": "/img/i-wqJHvpV/s",
         "srcM": "/img/i-wqJHvpV/m",
@@ -1075,6 +1237,8 @@
       },
       {
         "id": "i-GBTSWkW",
+        "title": "Still Working",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery",
         "src": "/img/i-GBTSWkW/s",
         "srcS": "/img/i-GBTSWkW/s",
         "srcM": "/img/i-GBTSWkW/m",
@@ -1088,6 +1252,8 @@
       },
       {
         "id": "i-fgkX7Jn",
+        "title": "The Stream Remembers",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery",
         "src": "/img/i-fgkX7Jn/s",
         "srcS": "/img/i-fgkX7Jn/s",
         "srcM": "/img/i-fgkX7Jn/m",
@@ -1101,6 +1267,8 @@
       },
       {
         "id": "i-7LZhFkc",
+        "title": "Built to Endure",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery",
         "src": "/img/i-7LZhFkc/s",
         "srcS": "/img/i-7LZhFkc/s",
         "srcM": "/img/i-7LZhFkc/m",
@@ -1114,6 +1282,8 @@
       },
       {
         "id": "i-G6gftd8",
+        "title": "Open Country",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery",
         "src": "/img/i-G6gftd8/s",
         "srcS": "/img/i-G6gftd8/s",
         "srcM": "/img/i-G6gftd8/m",
@@ -1127,6 +1297,8 @@
       },
       {
         "id": "i-mfMVdnH",
+        "title": "The Shape of Waiting Land",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery",
         "src": "/img/i-mfMVdnH/s",
         "srcS": "/img/i-mfMVdnH/s",
         "srcM": "/img/i-mfMVdnH/m",
@@ -1140,6 +1312,8 @@
       },
       {
         "id": "i-zXsjXwN",
+        "title": "Into the Green",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery",
         "src": "/img/i-zXsjXwN/s",
         "srcS": "/img/i-zXsjXwN/s",
         "srcM": "/img/i-zXsjXwN/m",
@@ -1153,6 +1327,8 @@
       },
       {
         "id": "i-mSp9WgK",
+        "title": "Autumn Holds Its Breath",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery",
         "src": "/img/i-mSp9WgK/s",
         "srcS": "/img/i-mSp9WgK/s",
         "srcM": "/img/i-mSp9WgK/m",
@@ -1166,6 +1342,8 @@
       },
       {
         "id": "i-p5ghtLz",
+        "title": "The Way Through",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery",
         "src": "/img/i-p5ghtLz/s",
         "srcS": "/img/i-p5ghtLz/s",
         "srcM": "/img/i-p5ghtLz/m",
@@ -1179,6 +1357,8 @@
       },
       {
         "id": "i-5BJh8BQ",
+        "title": "Closed",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery",
         "src": "/img/i-5BJh8BQ/s",
         "srcS": "/img/i-5BJh8BQ/s",
         "srcM": "/img/i-5BJh8BQ/m",
@@ -1192,6 +1372,8 @@
       },
       {
         "id": "i-2M68L7c",
+        "title": "Cut by Water",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery",
         "src": "/img/i-2M68L7c/s",
         "srcS": "/img/i-2M68L7c/s",
         "srcM": "/img/i-2M68L7c/m",
@@ -1205,6 +1387,8 @@
       },
       {
         "id": "i-HP6hJm4",
+        "title": "Quiet Persistence",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery",
         "src": "/img/i-HP6hJm4/s",
         "srcS": "/img/i-HP6hJm4/s",
         "srcM": "/img/i-HP6hJm4/m",
@@ -1218,6 +1402,8 @@
       },
       {
         "id": "i-FpmhtnM",
+        "title": "A Narrow Permission",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery",
         "src": "/img/i-FpmhtnM/s",
         "srcS": "/img/i-FpmhtnM/s",
         "srcM": "/img/i-FpmhtnM/m",
@@ -1231,6 +1417,8 @@
       },
       {
         "id": "i-Jstk9Gx",
+        "title": "A Line Made of Time",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery",
         "src": "/img/i-Jstk9Gx/s",
         "srcS": "/img/i-Jstk9Gx/s",
         "srcM": "/img/i-Jstk9Gx/m",
@@ -1244,6 +1432,8 @@
       },
       {
         "id": "i-zwwCqFz",
+        "title": "Evening Without Witness",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery",
         "src": "/img/i-zwwCqFz/s",
         "srcS": "/img/i-zwwCqFz/s",
         "srcM": "/img/i-zwwCqFz/m",
@@ -1257,6 +1447,8 @@
       },
       {
         "id": "i-8sW4rf4",
+        "title": "Lives Between Tides",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery",
         "src": "/img/i-8sW4rf4/s",
         "srcS": "/img/i-8sW4rf4/s",
         "srcM": "/img/i-8sW4rf4/m",
@@ -1270,6 +1462,8 @@
       },
       {
         "id": "i-GmFFsFL",
+        "title": "Dueling Falls",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery",
         "src": "/img/i-GmFFsFL/s",
         "srcS": "/img/i-GmFFsFL/s",
         "srcM": "/img/i-GmFFsFL/m",
@@ -1283,6 +1477,8 @@
       },
       {
         "id": "i-NkNwLM6",
+        "title": "Hidden Falls",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery",
         "src": "/img/i-NkNwLM6/s",
         "srcS": "/img/i-NkNwLM6/s",
         "srcM": "/img/i-NkNwLM6/m",
@@ -1296,6 +1492,8 @@
       },
       {
         "id": "i-nqpGhhX",
+        "title": "Uninterrupted",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery",
         "src": "/img/i-nqpGhhX/s",
         "srcS": "/img/i-nqpGhhX/s",
         "srcM": "/img/i-nqpGhhX/m",
@@ -1309,6 +1507,8 @@
       },
       {
         "id": "i-SNtZNVm",
+        "title": "The Long Bend",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery",
         "src": "/img/i-SNtZNVm/s",
         "srcS": "/img/i-SNtZNVm/s",
         "srcM": "/img/i-SNtZNVm/m",
@@ -1324,6 +1524,8 @@
     "painterlyTransportation": [
       {
         "id": "i-VzhZFL7",
+        "title": "Steam Engine Wall Art For Collectors Moment",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color",
         "src": "/img/i-VzhZFL7/s",
         "srcS": "/img/i-VzhZFL7/s",
         "srcM": "/img/i-VzhZFL7/m",
@@ -1337,6 +1539,8 @@
       },
       {
         "id": "i-FrDFN7V",
+        "title": "Fine Art Steam Engine Photography",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White",
         "src": "/img/i-FrDFN7V/s",
         "srcS": "/img/i-FrDFN7V/s",
         "srcM": "/img/i-FrDFN7V/m",
@@ -1350,6 +1554,8 @@
       },
       {
         "id": "i-QgkMVvX",
+        "title": "Painterly Classic Car Photos For Auto Lovers Portrait",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars",
         "src": "/img/i-QgkMVvX/s",
         "srcS": "/img/i-QgkMVvX/s",
         "srcM": "/img/i-QgkMVvX/m",
@@ -1363,6 +1569,8 @@
       },
       {
         "id": "i-L9qJ9K3",
+        "title": "7094 Locomotive",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color",
         "src": "/img/i-L9qJ9K3/s",
         "srcS": "/img/i-L9qJ9K3/s",
         "srcM": "/img/i-L9qJ9K3/m",
@@ -1376,6 +1584,8 @@
       },
       {
         "id": "i-n6PjStj",
+        "title": "Steam Engine Wall Art For Collectors In Fine Art",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White",
         "src": "/img/i-n6PjStj/s",
         "srcS": "/img/i-n6PjStj/s",
         "srcM": "/img/i-n6PjStj/m",
@@ -1389,6 +1599,8 @@
       },
       {
         "id": "i-2S2ZbzK",
+        "title": "Timeless Automotive Prints - Timeless Automotive Prints",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars",
         "src": "/img/i-2S2ZbzK/s",
         "srcS": "/img/i-2S2ZbzK/s",
         "srcM": "/img/i-2S2ZbzK/m",
@@ -1402,6 +1614,8 @@
       },
       {
         "id": "i-vRh7JXz",
+        "title": "7094: Unique Perspective",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color",
         "src": "/img/i-vRh7JXz/s",
         "srcS": "/img/i-vRh7JXz/s",
         "srcM": "/img/i-vRh7JXz/m",
@@ -1415,6 +1629,8 @@
       },
       {
         "id": "i-SfsCh3W",
+        "title": "Creature of the darkness.",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White",
         "src": "/img/i-SfsCh3W/s",
         "srcS": "/img/i-SfsCh3W/s",
         "srcM": "/img/i-SfsCh3W/m",
@@ -1428,6 +1644,8 @@
       },
       {
         "id": "i-SPVGpxw",
+        "title": "Capturing Timeless Automotive Prints",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars",
         "src": "/img/i-SPVGpxw/s",
         "srcS": "/img/i-SPVGpxw/s",
         "srcM": "/img/i-SPVGpxw/m",
@@ -1441,6 +1659,8 @@
       },
       {
         "id": "i-mdDVM3R",
+        "title": "End of the line",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color",
         "src": "/img/i-mdDVM3R/s",
         "srcS": "/img/i-mdDVM3R/s",
         "srcM": "/img/i-mdDVM3R/m",
@@ -1454,6 +1674,8 @@
       },
       {
         "id": "i-n6ktVfH",
+        "title": "The Essence Of Vintage Train Photography For Man Cave",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White",
         "src": "/img/i-n6ktVfH/s",
         "srcS": "/img/i-n6ktVfH/s",
         "srcM": "/img/i-n6ktVfH/m",
@@ -1467,6 +1689,8 @@
       },
       {
         "id": "i-7dRzH7F",
+        "title": "Capturing Timeless Automotive Prints",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars",
         "src": "/img/i-7dRzH7F/s",
         "srcS": "/img/i-7dRzH7F/s",
         "srcM": "/img/i-7dRzH7F/m",
@@ -1480,6 +1704,8 @@
       },
       {
         "id": "i-PZMQcjb",
+        "title": "Yard Work",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color",
         "src": "/img/i-PZMQcjb/s",
         "srcS": "/img/i-PZMQcjb/s",
         "srcM": "/img/i-PZMQcjb/m",
@@ -1493,6 +1719,8 @@
       },
       {
         "id": "i-jwzQrKx",
+        "title": "Steam Engine Art In Fine Art",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White",
         "src": "/img/i-jwzQrKx/s",
         "srcS": "/img/i-jwzQrKx/s",
         "srcM": "/img/i-jwzQrKx/m",
@@ -1506,6 +1734,8 @@
       },
       {
         "id": "i-cgh854F",
+        "title": "Automotive Art Prints - Route 66 Art",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars",
         "src": "/img/i-cgh854F/s",
         "srcS": "/img/i-cgh854F/s",
         "srcM": "/img/i-cgh854F/m",
@@ -1519,6 +1749,8 @@
       },
       {
         "id": "i-3FrzPRt",
+        "title": "Conductor",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color",
         "src": "/img/i-3FrzPRt/s",
         "srcS": "/img/i-3FrzPRt/s",
         "srcM": "/img/i-3FrzPRt/m",
@@ -1532,6 +1764,8 @@
       },
       {
         "id": "i-ML26tVm",
+        "title": "Steam Engine Art Portrait",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White",
         "src": "/img/i-ML26tVm/s",
         "srcS": "/img/i-ML26tVm/s",
         "srcM": "/img/i-ML26tVm/m",
@@ -1545,6 +1779,8 @@
       },
       {
         "id": "i-Dqn5vGG",
+        "title": "Waiting for his fair.",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars",
         "src": "/img/i-Dqn5vGG/s",
         "srcS": "/img/i-Dqn5vGG/s",
         "srcM": "/img/i-Dqn5vGG/m",
@@ -1558,6 +1794,8 @@
       },
       {
         "id": "i-DgSG4Ht",
+        "title": "Checking the Rails",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color",
         "src": "/img/i-DgSG4Ht/s",
         "srcS": "/img/i-DgSG4Ht/s",
         "srcM": "/img/i-DgSG4Ht/m",
@@ -1571,6 +1809,8 @@
       },
       {
         "id": "i-JNBbHjN",
+        "title": "Vintage Train Photography Moment",
+        "galleryPath": "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White",
         "src": "/img/i-JNBbHjN/s",
         "srcS": "/img/i-JNBbHjN/s",
         "srcM": "/img/i-JNBbHjN/m",
@@ -1586,6 +1826,8 @@
     "traditionalLandscapes": [
       {
         "id": "i-VJfbx5Z",
+        "title": "Fantastic Places - International – Across Borders In Canada-Western",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western",
         "src": "/img/i-VJfbx5Z/s",
         "srcS": "/img/i-VJfbx5Z/s",
         "srcM": "/img/i-VJfbx5Z/m",
@@ -1599,6 +1841,8 @@
       },
       {
         "id": "i-9nbhQs2",
+        "title": "Capturing International Landscape Photography In The-Faroe-Islands",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands",
         "src": "/img/i-9nbhQs2/s",
         "srcS": "/img/i-9nbhQs2/s",
         "srcM": "/img/i-9nbhQs2/m",
@@ -1612,6 +1856,8 @@
       },
       {
         "id": "i-j4PxV9D",
+        "title": "Painterly European Landscapes Moment In Iceland",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland",
         "src": "/img/i-j4PxV9D/s",
         "srcS": "/img/i-j4PxV9D/s",
         "srcM": "/img/i-j4PxV9D/m",
@@ -1625,6 +1871,8 @@
       },
       {
         "id": "i-QfHn5BW",
+        "title": "Painterly European Landscapes In Newfoundland",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland",
         "src": "/img/i-QfHn5BW/s",
         "srcS": "/img/i-QfHn5BW/s",
         "srcM": "/img/i-QfHn5BW/m",
@@ -1638,6 +1886,8 @@
       },
       {
         "id": "i-gr3rsVB",
+        "title": "Midwest Landscape Photography Moment",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery",
         "src": "/img/i-gr3rsVB/s",
         "srcS": "/img/i-gr3rsVB/s",
         "srcM": "/img/i-gr3rsVB/m",
@@ -1651,6 +1901,8 @@
       },
       {
         "id": "i-6Vj6H86",
+        "title": "The Essence Of Autumn In New England",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery",
         "src": "/img/i-6Vj6H86/s",
         "srcS": "/img/i-6Vj6H86/s",
         "srcM": "/img/i-6Vj6H86/m",
@@ -1664,6 +1916,8 @@
       },
       {
         "id": "i-8tvnHvW",
+        "title": "Traditional Southern Landscape Photography In Fine Art",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery",
         "src": "/img/i-8tvnHvW/s",
         "srcS": "/img/i-8tvnHvW/s",
         "srcM": "/img/i-8tvnHvW/m",
@@ -1677,6 +1931,8 @@
       },
       {
         "id": "i-dT6fKnc",
+        "title": "Yellowstone Hotspots  ",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery",
         "src": "/img/i-dT6fKnc/s",
         "srcS": "/img/i-dT6fKnc/s",
         "srcM": "/img/i-dT6fKnc/m",
@@ -1690,6 +1946,8 @@
       },
       {
         "id": "i-NQBsdSD",
+        "title": "The Start of Winter in the Canadian Rockies",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western",
         "src": "/img/i-NQBsdSD/s",
         "srcS": "/img/i-NQBsdSD/s",
         "srcM": "/img/i-NQBsdSD/m",
@@ -1703,6 +1961,8 @@
       },
       {
         "id": "i-8fp2dv2",
+        "title": "Waterfall in Faroe   Photography by Wayne Heim",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands",
         "src": "/img/i-8fp2dv2/s",
         "srcS": "/img/i-8fp2dv2/s",
         "srcM": "/img/i-8fp2dv2/m",
@@ -1716,6 +1976,8 @@
       },
       {
         "id": "i-X2gSwwB",
+        "title": "The Way to Church     Photography by Wayne Heim",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland",
         "src": "/img/i-X2gSwwB/s",
         "srcS": "/img/i-X2gSwwB/s",
         "srcM": "/img/i-X2gSwwB/m",
@@ -1729,6 +1991,8 @@
       },
       {
         "id": "i-HG9sdF8",
+        "title": "Beached   Photography by Wayne Heim",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland",
         "src": "/img/i-HG9sdF8/s",
         "srcS": "/img/i-HG9sdF8/s",
         "srcM": "/img/i-HG9sdF8/m",
@@ -1742,6 +2006,8 @@
       },
       {
         "id": "i-2N4ghBL",
+        "title": "Snowy Bend. Photography by Wayne Heim",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery",
         "src": "/img/i-2N4ghBL/s",
         "srcS": "/img/i-2N4ghBL/s",
         "srcM": "/img/i-2N4ghBL/m",
@@ -1755,6 +2021,8 @@
       },
       {
         "id": "i-BZZRZwC",
+        "title": "Around the Bend. Black and White Photography by Wayne Heim",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery",
         "src": "/img/i-BZZRZwC/s",
         "srcS": "/img/i-BZZRZwC/s",
         "srcM": "/img/i-BZZRZwC/m",
@@ -1768,6 +2036,8 @@
       },
       {
         "id": "i-rH4MSZg",
+        "title": "Southern Landscape Prints Portrait",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery",
         "src": "/img/i-rH4MSZg/s",
         "srcS": "/img/i-rH4MSZg/s",
         "srcM": "/img/i-rH4MSZg/m",
@@ -1781,6 +2051,8 @@
       },
       {
         "id": "i-5vvB6PH",
+        "title": "The Grand    Black and White Photography by Wayne Heim",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery",
         "src": "/img/i-5vvB6PH/s",
         "srcS": "/img/i-5vvB6PH/s",
         "srcM": "/img/i-5vvB6PH/m",
@@ -1794,6 +2066,8 @@
       },
       {
         "id": "i-TVtxcrX",
+        "title": "Black & White Photo of a Snow Covered Mountain Peak",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western",
         "src": "/img/i-TVtxcrX/s",
         "srcS": "/img/i-TVtxcrX/s",
         "srcM": "/img/i-TVtxcrX/m",
@@ -1807,6 +2081,8 @@
       },
       {
         "id": "i-vGqmqRv",
+        "title": "Faroe Coast   Black and White Photography by Wayne Heim",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands",
         "src": "/img/i-vGqmqRv/s",
         "srcS": "/img/i-vGqmqRv/s",
         "srcM": "/img/i-vGqmqRv/m",
@@ -1820,6 +2096,8 @@
       },
       {
         "id": "i-SfChdG7",
+        "title": "Volcanic Rock on Coast of Iceland.   Photography by Wayne Heim",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland",
         "src": "/img/i-SfChdG7/s",
         "srcS": "/img/i-SfChdG7/s",
         "srcM": "/img/i-SfChdG7/m",
@@ -1833,6 +2111,8 @@
       },
       {
         "id": "i-MW6s3bR",
+        "title": "Let's Fish    Photography by Wayne Heim",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland",
         "src": "/img/i-MW6s3bR/s",
         "srcS": "/img/i-MW6s3bR/s",
         "srcM": "/img/i-MW6s3bR/m",
@@ -1848,6 +2128,8 @@
     "traditionalTransportation": [
       {
         "id": "i-7VD9zVJ",
+        "title": "Venice Canal - Photography by Wayne Heim",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Transportation/Boats",
         "src": "/img/i-7VD9zVJ/s",
         "srcS": "/img/i-7VD9zVJ/s",
         "srcM": "/img/i-7VD9zVJ/m",
@@ -1861,6 +2143,8 @@
       },
       {
         "id": "i-c8SFXzH",
+        "title": "Classic Car Photography - Route 66 Art",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Transportation/Cars",
         "src": "/img/i-c8SFXzH/s",
         "srcS": "/img/i-c8SFXzH/s",
         "srcM": "/img/i-c8SFXzH/m",
@@ -1874,6 +2158,8 @@
       },
       {
         "id": "i-nFzhgqf",
+        "title": "Western Portrait",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Transportation/Military",
         "src": "/img/i-nFzhgqf/s",
         "srcS": "/img/i-nFzhgqf/s",
         "srcM": "/img/i-nFzhgqf/m",
@@ -1887,6 +2173,8 @@
       },
       {
         "id": "i-pwMVKTQ",
+        "title": "Capturing Aviation Art Prints",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Transportation/Planes",
         "src": "/img/i-pwMVKTQ/s",
         "srcS": "/img/i-pwMVKTQ/s",
         "srcM": "/img/i-pwMVKTQ/m",
@@ -1900,6 +2188,8 @@
       },
       {
         "id": "i-tqSQMQK",
+        "title": "Progress, Interrupted",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Transportation/Trains",
         "src": "/img/i-tqSQMQK/s",
         "srcS": "/img/i-tqSQMQK/s",
         "srcM": "/img/i-tqSQMQK/m",
@@ -1913,6 +2203,8 @@
       },
       {
         "id": "i-vbVkS8z",
+        "title": "Mather Bunks -- Black & White Photography by Wayne Heim",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Transportation/Boats",
         "src": "/img/i-vbVkS8z/s",
         "srcS": "/img/i-vbVkS8z/s",
         "srcM": "/img/i-vbVkS8z/m",
@@ -1926,6 +2218,8 @@
       },
       {
         "id": "i-PfrKwt2",
+        "title": "Painterly Classic Car Photos For Auto Lovers Moment",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Transportation/Cars",
         "src": "/img/i-PfrKwt2/s",
         "srcS": "/img/i-PfrKwt2/s",
         "srcM": "/img/i-PfrKwt2/m",
@@ -1939,6 +2233,8 @@
       },
       {
         "id": "i-X88ZNb4",
+        "title": "Western Portrait",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Transportation/Military",
         "src": "/img/i-X88ZNb4/s",
         "srcS": "/img/i-X88ZNb4/s",
         "srcM": "/img/i-X88ZNb4/m",
@@ -1952,6 +2248,8 @@
       },
       {
         "id": "i-dTLMtz9",
+        "title": "Plane Art Prints For Enthusiasts In Fine Art",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Transportation/Planes",
         "src": "/img/i-dTLMtz9/s",
         "srcS": "/img/i-dTLMtz9/s",
         "srcM": "/img/i-dTLMtz9/m",
@@ -1965,6 +2263,8 @@
       },
       {
         "id": "i-GGK9QtB",
+        "title": "Iron Will",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Transportation/Trains",
         "src": "/img/i-GGK9QtB/s",
         "srcS": "/img/i-GGK9QtB/s",
         "srcM": "/img/i-GGK9QtB/m",
@@ -1978,6 +2278,8 @@
       },
       {
         "id": "i-qXc8XpL",
+        "title": "Lynx On Lake Erie - Photography by Wayne Heim",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Transportation/Boats",
         "src": "/img/i-qXc8XpL/s",
         "srcS": "/img/i-qXc8XpL/s",
         "srcM": "/img/i-qXc8XpL/m",
@@ -1991,6 +2293,8 @@
       },
       {
         "id": "i-NjL3FKh",
+        "title": "Model A -- Black & White Photography by Wayne Heim",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Transportation/Cars",
         "src": "/img/i-NjL3FKh/s",
         "srcS": "/img/i-NjL3FKh/s",
         "srcM": "/img/i-NjL3FKh/m",
@@ -2004,6 +2308,8 @@
       },
       {
         "id": "i-7PT9GwS",
+        "title": "Gun Turret -  Photography by Wayne Heim",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Transportation/Military",
         "src": "/img/i-7PT9GwS/s",
         "srcS": "/img/i-7PT9GwS/s",
         "srcM": "/img/i-7PT9GwS/m",
@@ -2017,6 +2323,8 @@
       },
       {
         "id": "i-kPsZTTH",
+        "title": "Duo   Photography by Wayne Heim",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Transportation/Planes",
         "src": "/img/i-kPsZTTH/s",
         "srcS": "/img/i-kPsZTTH/s",
         "srcM": "/img/i-kPsZTTH/m",
@@ -2030,6 +2338,8 @@
       },
       {
         "id": "i-ghKSGpj",
+        "title": "Beneath the Giant",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Transportation/Trains",
         "src": "/img/i-ghKSGpj/s",
         "srcS": "/img/i-ghKSGpj/s",
         "srcM": "/img/i-ghKSGpj/m",
@@ -2043,6 +2353,8 @@
       },
       {
         "id": "i-hQ6LXhh",
+        "title": "Parade of Tall Ships     photography by Wayne Heim",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Transportation/Boats",
         "src": "/img/i-hQ6LXhh/s",
         "srcS": "/img/i-hQ6LXhh/s",
         "srcM": "/img/i-hQ6LXhh/m",
@@ -2056,6 +2368,8 @@
       },
       {
         "id": "i-Q347VzH",
+        "title": "Timeless Automotive Prints Moment",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Transportation/Cars",
         "src": "/img/i-Q347VzH/s",
         "srcS": "/img/i-Q347VzH/s",
         "srcM": "/img/i-Q347VzH/m",
@@ -2069,6 +2383,8 @@
       },
       {
         "id": "i-6gP4DrL",
+        "title": "Ambulance - Photography by Wayne Heim",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Transportation/Military",
         "src": "/img/i-6gP4DrL/s",
         "srcS": "/img/i-6gP4DrL/s",
         "srcM": "/img/i-6gP4DrL/m",
@@ -2082,6 +2398,8 @@
       },
       {
         "id": "i-QFBWthj",
+        "title": "Going Away - Photograohy by Wayne Heim",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Transportation/Planes",
         "src": "/img/i-QFBWthj/s",
         "srcS": "/img/i-QFBWthj/s",
         "srcM": "/img/i-QFBWthj/m",
@@ -2095,6 +2413,8 @@
       },
       {
         "id": "i-t2FVBZ3",
+        "title": "Line of Work",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Transportation/Trains",
         "src": "/img/i-t2FVBZ3/s",
         "srcS": "/img/i-t2FVBZ3/s",
         "srcM": "/img/i-t2FVBZ3/m",
@@ -2110,6 +2430,8 @@
     "traditionalOther": [
       {
         "id": "i-fsmXzLW",
+        "title": "Quiet Between the Boats",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Architecture/Gallery",
         "src": "/img/i-fsmXzLW/s",
         "srcS": "/img/i-fsmXzLW/s",
         "srcM": "/img/i-fsmXzLW/m",
@@ -2123,6 +2445,8 @@
       },
       {
         "id": "i-3R8rc7C",
+        "title": "Strasbourg - Canal at Sunset",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Architecture/Gallery",
         "src": "/img/i-3R8rc7C/s",
         "srcS": "/img/i-3R8rc7C/s",
         "srcM": "/img/i-3R8rc7C/m",
@@ -2136,6 +2460,8 @@
       },
       {
         "id": "i-fszvgmq",
+        "title": "Front Door - Take a Seat",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Architecture/Gallery",
         "src": "/img/i-fszvgmq/s",
         "srcS": "/img/i-fszvgmq/s",
         "srcM": "/img/i-fszvgmq/m",
@@ -2149,6 +2475,8 @@
       },
       {
         "id": "i-kdkL5WG",
+        "title": "Out to Dry",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Architecture/Gallery",
         "src": "/img/i-kdkL5WG/s",
         "srcS": "/img/i-kdkL5WG/s",
         "srcM": "/img/i-kdkL5WG/m",
@@ -2162,6 +2490,8 @@
       },
       {
         "id": "i-d9wMKtJ",
+        "title": "Rundown",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Architecture/Gallery",
         "src": "/img/i-d9wMKtJ/s",
         "srcS": "/img/i-d9wMKtJ/s",
         "srcM": "/img/i-d9wMKtJ/m",
@@ -2175,6 +2505,8 @@
       },
       {
         "id": "i-QkG3vmv",
+        "title": "Dome and Windows ",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Architecture/Gallery",
         "src": "/img/i-QkG3vmv/s",
         "srcS": "/img/i-QkG3vmv/s",
         "srcM": "/img/i-QkG3vmv/m",
@@ -2188,6 +2520,8 @@
       },
       {
         "id": "i-XV5CXk6",
+        "title": "Lone Boat, Burano",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Architecture/Gallery",
         "src": "/img/i-XV5CXk6/s",
         "srcS": "/img/i-XV5CXk6/s",
         "srcM": "/img/i-XV5CXk6/m",
@@ -2201,6 +2535,8 @@
       },
       {
         "id": "i-DRBBHkV",
+        "title": "Support",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Architecture/Gallery",
         "src": "/img/i-DRBBHkV/s",
         "srcS": "/img/i-DRBBHkV/s",
         "srcM": "/img/i-DRBBHkV/m",
@@ -2214,6 +2550,8 @@
       },
       {
         "id": "i-VbsJ838",
+        "title": "Bored - Notre Dame Gargoyle",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Architecture/Gallery",
         "src": "/img/i-VbsJ838/s",
         "srcS": "/img/i-VbsJ838/s",
         "srcM": "/img/i-VbsJ838/m",
@@ -2227,6 +2565,8 @@
       },
       {
         "id": "i-thtMmjm",
+        "title": "Hotel de Ville",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Architecture/Gallery",
         "src": "/img/i-thtMmjm/s",
         "srcS": "/img/i-thtMmjm/s",
         "srcM": "/img/i-thtMmjm/m",
@@ -2240,6 +2580,8 @@
       },
       {
         "id": "i-pDP765B",
+        "title": "Bed Time",
+        "galleryPath": "/Galleries/Fine-Art-Photography/Architecture/Gallery",
         "src": "/img/i-pDP765B/s",
         "srcS": "/img/i-pDP765B/s",
         "srcM": "/img/i-pDP765B/m",

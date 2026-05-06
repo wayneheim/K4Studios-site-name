@@ -5,6 +5,7 @@ import HybridBookCarousel from '@/components/hybrid/HybridBookCarousel.jsx';
 import WesternGuideNav from '@/components/authority/WesternGuideNav.astro';
 import { autoLinkKeywordsInText } from '@/components/utils/autoLinkKeywordsInText.ts';
 import { semantic as k4Semantic } from '@/data/semantic/K4-Sem.ts';
+import { getSemanticImageUrl } from '@/utils/imageProxy.js';
 
 interface Slide {
   id: string;
@@ -103,7 +104,9 @@ const {
   guideLinks?: GuideLink[];
 };
 
-const getProxySrc = (id: string, size: string = 'm') => `/img/${id}/${size}.jpg`;
+const getGalleryPathFromImageHref = (href = '') => String(href || '').replace(/\/i-[a-zA-Z0-9-]+\/?$/, '');
+const getArticleImageSrc = (image: Slide, size: string = 'm') =>
+  getSemanticImageUrl(image, { galleryPath: getGalleryPathFromImageHref(image.href) }, size);
 const sampleSourceSlides = sampleSlides.length > 0 ? sampleSlides : slides;
 const stripImages = sampleSourceSlides.slice(0, 4);
 const autoLinkExcludeImages = uniqueSlideIds(slides, sampleSlides);
@@ -213,7 +216,7 @@ const normalizedSummaryParagraphs = summaryParagraphs.filter(Boolean);
           {stripImages.map((image) => (
             <a href={image.href} class="strip-card">
               <img
-                src={getProxySrc(image.id, 'm')}
+                src={getArticleImageSrc(image, 'm')}
                 alt={image.alt || image.title}
                 loading="lazy"
                 decoding="async"
@@ -281,7 +284,7 @@ const normalizedSummaryParagraphs = summaryParagraphs.filter(Boolean);
                       {group.images.map((image) => (
                         <a href={image.href} class="strip-card">
                           <img
-                            src={getProxySrc(image.id, 'm')}
+                            src={getArticleImageSrc(image, 'm')}
                             alt={image.alt || image.title}
                             loading="lazy"
                             decoding="async"

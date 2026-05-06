@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState, useCallback } from "react";
 import "../styles/ImageBar2.css";
 import { buildContextualAlt, getPageContext } from "../utils/buildContextualAlt";
-import { getProxySrc, getCarouselProxySrcset } from "@/utils/imageProxy.js";
+import { getSemanticImageSrcset, getSemanticImageUrl } from "@/utils/imageProxy.js";
 import { warmImage } from "../utils/warmImage";
 
 /**
@@ -12,10 +12,12 @@ import { warmImage } from "../utils/warmImage";
  * We use srcset + sizes so browser picks the right one automatically.
  * All URLs go through /img/{id}/{size} proxy to hide SmugMug URLs.
  */
+const getGalleryPathFromImageHref = (href = "") => String(href || "").replace(/\/i-[a-zA-Z0-9-]+\/?$/, "");
+
 function getCarouselSrc(s) {
   // Use proxy URL - request M size for faster loading
   if (s.id) {
-    return getProxySrc(s.id, 'm');
+    return getSemanticImageUrl(s, { galleryPath: s.galleryPath || getGalleryPathFromImageHref(s.href) }, 'm');
   }
   // Fallback for old carousel data without id (shouldn't happen)
   return s.srcM || s.srcL || s.src || '';
@@ -24,7 +26,7 @@ function getCarouselSrc(s) {
 function getCarouselSrcset(s) {
   // Use proxy srcset if we have an image ID
   if (s.id) {
-    return getCarouselProxySrcset(s.id);
+    return getSemanticImageSrcset(s, { galleryPath: s.galleryPath || getGalleryPathFromImageHref(s.href) });
   }
   // Fallback for old carousel data without sized sources
   if (!s.srcM && !s.srcL) {

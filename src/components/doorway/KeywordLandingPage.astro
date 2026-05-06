@@ -123,6 +123,7 @@ import { getOrderedWesternGalleryPaths } from '@/data/carousel/westernRouting.ts
 import { getFeatheredImages } from '@/components/utils/getFeatheredImages.ts';
 import { autoLinkKeywordsInText } from '@/components/utils/autoLinkKeywordsInText.ts';
 import { semantic as k4Semantic } from '@/data/semantic/K4-Sem.ts';
+import { getSemanticImageUrl } from '@/utils/imageProxy.js';
 
 import '@/styles/global.css';
 import '@/styles/oneupheader.css';
@@ -278,9 +279,17 @@ const webPageSchema = JSON.stringify({
   mainEntity: { '@id': `https://www.k4studios.com${pagePath}#imagegallery` },
 }, null, 2);
 
-function getProxySrc(imageId: string, size: string = 'm'): string {
-  if (!imageId) return '';
-  return `/img/${imageId}/${size}.jpg`;
+function getGalleryPathFromImageHref(href = '') {
+  return String(href || '').replace(/\/i-[a-zA-Z0-9-]+\/?$/, '');
+}
+
+function getImageContext(item: any, fallbackPath = gridBasePath) {
+  return { galleryPath: getGalleryPathFromImageHref(item?.href || '') || fallbackPath };
+}
+
+function getCollectionImageSrc(item: any, size: string = 'm', fallbackPath = gridBasePath): string {
+  if (!item?.id) return '';
+  return getSemanticImageUrl(item, getImageContext(item, fallbackPath), size);
 }
 
 function makeAbsoluteUrl(src?: string) {
@@ -290,7 +299,7 @@ function makeAbsoluteUrl(src?: string) {
 }
 
 const landingImg = featheredImages[0];
-const landingImgUrl = landingImg?.id ? makeAbsoluteUrl(getProxySrc(landingImg.id, 'l')) : '';
+const landingImgUrl = landingImg?.id ? makeAbsoluteUrl(getSemanticImageUrl(landingImg, { galleryPath: imageSectionPath })) : '';
 const computedMeta = {
   title: meta.title,
   description: meta.description,
@@ -433,8 +442,8 @@ const computedMeta = {
                           <a href={item.href || `${gridBasePath}/${item.id}`} class="wallart-grid__tile" title={item.title}>
                             <div class="wallart-grid__img-wrap">
                               <img
-                                src={getProxySrc(item.id, 'm')}
-                                data-fallback-src={getProxySrc(item.id, 'l')}
+                                src={getCollectionImageSrc(item, 'm', row.href || gridBasePath)}
+                                data-fallback-src={getCollectionImageSrc(item, 'l', row.href || gridBasePath)}
                                 alt={item.alt || `${collectionAltPrefix} by Wayne Heim: ${item.title}`}
                                 loading="lazy"
                                 onerror="if (this.dataset.fallbackSrc && this.src !== this.dataset.fallbackSrc) { this.src = this.dataset.fallbackSrc; }"
@@ -469,8 +478,8 @@ const computedMeta = {
               <a href={item.href || `${gridBasePath}/${item.id}`} class="wallart-grid__tile" title={item.title}>
                 <div class="wallart-grid__img-wrap">
                   <img
-                    src={getProxySrc(item.id, 'm')}
-                    data-fallback-src={getProxySrc(item.id, 'l')}
+                    src={getCollectionImageSrc(item, 'm')}
+                    data-fallback-src={getCollectionImageSrc(item, 'l')}
                     alt={item.alt || `${collectionAltPrefix} by Wayne Heim: ${item.title}`}
                     loading="lazy"
                     onerror="if (this.dataset.fallbackSrc && this.src !== this.dataset.fallbackSrc) { this.src = this.dataset.fallbackSrc; }"

@@ -41,15 +41,15 @@ const toShareUrl = (src: string | undefined) => {
   }
   // Static image - make absolute  
   if (src.startsWith('/images/')) return `${siteOrigin}${src}`;
-  // Extract ID from SmugMug URL and convert to proxy
-  const imageId = extractImageId(src);
-  if (imageId) return `${siteOrigin}/img/${imageId}/l.jpg`;
-  // Already absolute proxy URL
+  // Already absolute/hosted proxy URL - preserve semantic filenames.
   if (src.includes('k4studios.com/img/')) {
     return src
       .replace(/https?:\/\/(?:www\.)?k4studios\.com/i, siteOrigin)
       .replace(/\/(s|m|l|xl|src)(?:\.jpe?g)?$/i, '/l.jpg');
   }
+  // Extract ID from SmugMug URL and convert to proxy
+  const imageId = extractImageId(src);
+  if (imageId) return `${siteOrigin}/img/${imageId}/l.jpg`;
   // Unknown - return undefined to avoid leaking
   return undefined;
 };

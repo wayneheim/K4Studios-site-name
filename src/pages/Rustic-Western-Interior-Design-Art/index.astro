@@ -5,6 +5,7 @@ import LandingHeader      from '@/components/Landing-Header.jsx';
 import ImageBar2          from '@/components/ImageBar2.jsx';
 import { sanitizeForClient } from '@/components/utils/normalizeImage.ts';
 import SiteFooter         from '@/components/Footer.astro';
+import { getSemanticImageUrl } from '@/utils/imageProxy.js';
 
 import { getStructuredData, getBreadcrumbList } from '@/components/utils/getStructuredData.ts';
 import { getLandingMeta } from '@/data/landingMeta.ts';
@@ -184,7 +185,22 @@ const webPageSchema = JSON.stringify({
 // OG/Twitter image - use proxy URLs to avoid exposing SmugMug
 function getProxySrc(imageId: string, size: string = 'm'): string {
   if (!imageId) return '';
-  return `/img/${imageId}/${size}.jpg`;
+  return getSemanticImageUrl({ id: imageId, title: imageId }, { galleryPath: imageSectionPath }, size as any);
+}
+
+function getItemGalleryPath(item: any): string {
+  return String(item?.href || '').replace(/\/i-[A-Za-z0-9-]+\/?$/, '') || '/Other/K4-Select-Series/Engrained/Engrained-Series';
+}
+
+function getGridImageSrc(item: any, size: string = 'm'): string {
+  if (!item?.id) return '';
+  return getSemanticImageUrl(item, { galleryPath: getItemGalleryPath(item) }, size as any);
+}
+
+function getRoomSlideSrc(slide: any, size: string = 'l'): string {
+  const id = getSlideImageId(slide);
+  if (!id) return '';
+  return getSemanticImageUrl({ ...slide, id }, { galleryPath: '/Other/K4-Select-Series/Engrained/Engrained-Series' }, size as any);
 }
 
 function getSlideImageId(slide: any): string {
@@ -436,8 +452,8 @@ const inRoomSlides = [engrainedSlides[4], engrainedSlides[5], engrainedSlides[7]
             <a href={item.href || `/Other/K4-Select-Series/Engrained/Engrained-Series/${item.id}`} class="wallart-grid__tile" title={item.title}>
               <div class="wallart-grid__img-wrap">
                 <img
-                  src={getProxySrc(item.id, 'm')}
-                  data-fallback-src={getProxySrc(item.id, 'l')}
+                  src={getGridImageSrc(item, 'm')}
+                  data-fallback-src={getGridImageSrc(item, 'l')}
                   alt={item.alt || `Western interior design art by Wayne Heim: ${item.title}`}
                   loading="lazy"
                   onerror="if (this.dataset.fallbackSrc && this.src !== this.dataset.fallbackSrc) { this.src = this.dataset.fallbackSrc; }"
@@ -515,7 +531,7 @@ const inRoomSlides = [engrainedSlides[4], engrainedSlides[5], engrainedSlides[7]
                   data-slide-index={index}
                   aria-hidden={index === 0 ? "false" : "true"}
                 >
-                  <img src={getProxySrc(getSlideImageId(slide), 'l')} alt={slide.alt || "In-room fine art presentation"} loading="lazy" />
+                  <img src={getRoomSlideSrc(slide, 'l')} alt={slide.alt || "In-room fine art presentation"} loading="lazy" />
                 </a>
               ))}
             </div>

@@ -197,6 +197,8 @@ function normalizeImage(img, galleryHref) {
 
   return {
     id: img.id,
+    title: img.title || '',
+    galleryPath: resolvedGalleryHref,
     // All src fields now use proxy URLs
     src: getProxyUrl(img.id, 's'),
     srcS: getProxyUrl(img.id, 's'),

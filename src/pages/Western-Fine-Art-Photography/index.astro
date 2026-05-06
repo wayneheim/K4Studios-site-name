@@ -11,6 +11,7 @@ import MobileStoryImages  from '@/components/MobileStoryImages.jsx';
 import StorySlider        from '@/components/StorySlider.tsx';
 import WesternGuideNav    from '@/components/authority/WesternGuideNav.astro';
 import { sanitizeForClient } from '@/components/utils/normalizeImage.ts';
+import { getSemanticImageUrl } from '@/utils/imageProxy.js';
 
 // Story slider can still point at a cowboy gallery (fine)
 import { galleryData as cowboyColorDataFull }
@@ -225,7 +226,16 @@ function makeAbsoluteUrl(src?: string) {
 // Proxy URL helper - ensures SmugMug URLs never appear in SSR HTML
 function getProxySrc(imageId: string, size: string = 'm'): string {
   if (!imageId) return '';
-  return `/img/${imageId}/${size}.jpg`;
+  return getSemanticImageUrl({ id: imageId, title: imageId }, { galleryPath: imageSectionPath }, size as any);
+}
+
+function getImageGalleryPath(image: any): string {
+  return String(image?.href || '').replace(/\/i-[A-Za-z0-9-]+\/?$/, '') || imageSectionPath;
+}
+
+function getSemanticSizedSrc(image: any, size: string = 'm'): string {
+  if (!image?.id) return '';
+  return getSemanticImageUrl(image, { galleryPath: getImageGalleryPath(image) }, size as any);
 }
 
 const landingImg = featheredImages[0];
@@ -379,7 +389,7 @@ const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => {
                   {topGridImages.map((image: any) => (
                     <a class="intent-grid-card" href={image.href}>
                       <img
-                        src={image.id ? getProxySrc(image.id, 'm') : ''}
+                        src={getSemanticSizedSrc(image, 'm')}
                         alt={image.alt || image.title || 'Western fine art photography image'}
                         loading="lazy"
                         decoding="async"

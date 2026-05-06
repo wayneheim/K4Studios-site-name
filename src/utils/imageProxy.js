@@ -15,7 +15,12 @@
  *   <img src={normalizeImageSrc(anyUrl)} /> // Handles SmugMug URLs, IDs, or local paths
  */
 
+import { getImageSlugPhraseForPath } from '../data/semantic/K4-Sem.ts';
+
+export const USE_SEMANTIC_IMAGE_URLS = true;
+
 const VALID_SIZES = ['s', 'm', 'l', 'xl', 'src'];
+const DEFAULT_IMAGE_SLUG_PHRASE = 'k4-fine-art-photography';
 
 // Keep runtime source first-party by default. Local/dev environments can set
 // PUBLIC_IMAGE_PROXY_ORIGIN when they need to target a direct proxy origin.
@@ -40,8 +45,8 @@ export function extractImageId(url) {
   const smugMugMatch = url.match(/\/(i-[a-zA-Z0-9]+)\//);
   if (smugMugMatch) return smugMugMatch[1];
   
-  // Proxy URL pattern: /img/i-XXXXXX/size
-  const proxyMatch = url.match(/\/img\/(i-[a-zA-Z0-9-]+)\/(s|m|l|xl|src)(?:\.jpe?g)?/i);
+  // Proxy URL pattern: /img/i-XXXXXX/size.jpg or /img/i-XXXXXX/semantic-slug.jpg
+  const proxyMatch = url.match(/\/img\/(?:OG-|TW-|PN-|SD-)?(i-[a-zA-Z0-9-]+)\/[^/?#]+(?:\.jpe?g)?/i);
   if (proxyMatch) return proxyMatch[1];
   
   return null;
@@ -93,6 +98,113 @@ export function getProxySrc(imageId, size = 'm') {
   if (!imageId) return '';
   const safeSize = VALID_SIZES.includes(size) ? size : 'm';
   return `${IMAGE_BASE}/img/${imageId}/${safeSize}.jpg`;
+}
+
+export function getLegacyImageUrl(imageId, size = 'm') {
+  return getProxySrc(imageId, size);
+}
+
+export function slugifyImageSegment(value, fallback = 'image') {
+  const slug = String(value || '')
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/&/g, ' and ')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .replace(/-{2,}/g, '-')
+    .slice(0, 80)
+    .replace(/-+$/g, '');
+
+  return slug || fallback;
+}
+
+function getFallbackPhraseFromGalleryPath(galleryPath) {
+  const normalizedPath = normalizeGalleryPath(galleryPath);
+  const parts = normalizedPath.split('/').filter(Boolean);
+  const meaningfulPart = [...parts]
+    .reverse()
+    .find((part) => !/^(gallery|color|black-white|na-color|na-black-white)$/i.test(part));
+
+  return meaningfulPart
+    ? slugifyImageSegment(meaningfulPart, DEFAULT_IMAGE_SLUG_PHRASE)
+    : DEFAULT_IMAGE_SLUG_PHRASE;
+}
+
+function normalizeGalleryPath(value) {
+  const raw = String(value || '').trim();
+  if (!raw) return '';
+  try {
+    return new URL(raw, 'https://www.k4studios.com').pathname.replace(/\/+$/, '');
+  } catch {
+    return raw.replace(/\/+$/, '');
+  }
+}
+
+function parseSemanticArgs(sizeOrOptions, maybeOptions) {
+  if (typeof sizeOrOptions === 'string') {
+    return {
+      size: sizeOrOptions,
+      options: maybeOptions || {},
+    };
+  }
+
+  return {
+    size: sizeOrOptions?.size || 'l',
+    options: sizeOrOptions || {},
+  };
+}
+
+export function getSemanticImageUrl(image, galleryContext = {}, sizeOrOptions = {}, maybeOptions = {}) {
+  const imageId = typeof image === 'string' ? image : image?.id;
+  if (!imageId) return '';
+
+  const { size, options } = parseSemanticArgs(sizeOrOptions, maybeOptions);
+  const safeSize = VALID_SIZES.includes(size) ? size : 'l';
+
+  const {
+    absolute = false,
+    origin = 'https://www.k4studios.com',
+    useSemantic = USE_SEMANTIC_IMAGE_URLS,
+  } = options;
+
+  if (!useSemantic || safeSize === 'xl' || safeSize === 'src') {
+    const legacyUrl = getProxySrc(imageId, safeSize);
+    return absolute ? new URL(legacyUrl, origin).toString() : legacyUrl;
+  }
+
+  const galleryPath = normalizeGalleryPath(
+    galleryContext?.galleryPath ||
+      galleryContext?.path ||
+      galleryContext?.urlBase ||
+      ''
+  );
+
+  const titleSlug = slugifyImageSegment(
+    typeof image === 'object' ? (image.title || image.alt || image.name) : '',
+    String(imageId).replace(/^i-/i, '') || 'image'
+  );
+  const phrase = slugifyImageSegment(
+    galleryContext?.imageSlugPhrase ||
+      getImageSlugPhraseForPath(galleryPath) ||
+      getFallbackPhraseFromGalleryPath(galleryPath),
+    DEFAULT_IMAGE_SLUG_PHRASE
+  );
+  const filename = `${titleSlug}-${phrase}.jpg`;
+  const sizeSegment = safeSize === 'l' ? '' : `/${safeSize}`;
+  const semanticUrl = `${IMAGE_BASE}/img/${imageId}${sizeSegment}/${filename}`;
+
+  return absolute ? new URL(semanticUrl, origin).toString() : semanticUrl;
+}
+
+export function getSemanticImageSrcset(image, galleryContext = {}, options = {}) {
+  if (!image) return undefined;
+
+  return [
+    `${getSemanticImageUrl(image, galleryContext, 's', options)} 400w`,
+    `${getSemanticImageUrl(image, galleryContext, 'm', options)} 600w`,
+    `${getSemanticImageUrl(image, galleryContext, 'l', options)} 1024w`,
+  ].join(', ');
 }
 
 /**

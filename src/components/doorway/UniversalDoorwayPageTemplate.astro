@@ -14,6 +14,7 @@
  * This template renders INSIDE the page shell ([slug].astro provides
  * BaseLayout, LandingHeader, ImageBar2, SiteFooter).
  */
+import { getSemanticImageUrl } from '@/utils/imageProxy.js';
 
 interface DoorwayFaqItem {
   question: string;
@@ -101,12 +102,16 @@ const cleanedSecondaryLinks = (secondaryLinks || [])
   .filter((link) => !/^\/doorway\//i.test(link.href))
   .slice(0, 4);
 
+function getGalleryPathFromImageHref(href = '') {
+  return String(href || '').replace(/\/i-[a-zA-Z0-9-]+\/?$/, '');
+}
+
 const cleanedHeroImages = (heroImages || [])
   .filter((image) => image?.id?.trim() && image?.href?.trim())
   .slice(0, 3)
   .map((image) => ({
     ...image,
-    src: `/img/${image.id}/l.jpg`,
+    src: getSemanticImageUrl(image, { galleryPath: getGalleryPathFromImageHref(image.href) }),
   }));
 
 const cleanedStorySections = (storySections || [])
@@ -116,7 +121,7 @@ const cleanedGridImages = (gridImages || [])
   .filter((image) => image?.id?.trim() && image?.href?.trim())
   .map((image) => ({
     ...image,
-    src: `/img/${image.id}/m.jpg`,
+    src: getSemanticImageUrl(image, { galleryPath: getGalleryPathFromImageHref(image.href) }, 'm'),
   }));
 ---
 

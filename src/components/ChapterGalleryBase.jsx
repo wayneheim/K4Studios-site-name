@@ -51,6 +51,7 @@ import { createPortal } from "react-dom";
 import useMetaSwap from "./hooks/useMetaSwap.js";
 import { siteNav } from "../data/siteNav.js";
 import { useImageFallbackRedirect } from "./utils/useImageFallbackRedirect.js";
+import { getSemanticImageUrl } from "../utils/imageProxy.js";
 import { themes } from "../data/themes/themes.mjs";
 import blogImageMap from "../data/blogImageMap.js";
 import { isWesternImagePath, westernImageAttributionText } from "../data/wayneEntity.js";
@@ -606,6 +607,9 @@ export default function ChapterGalleryBase({
   // Sister link logic - use state to avoid SSR/client mismatch
   const currentImageId = galleryData[currentIndex]?.id;
   const currentImageData = galleryData[currentIndex] || null;
+  const currentSemanticImageUrl = currentImageData
+    ? getSemanticImageUrl(currentImageData, { galleryPath: basePath })
+    : "";
   const [sisterMatch, setSisterMatch] = useState(() => {
     // Initial render: only use sitemapMatches (deterministic, same on server & client)
     return sitemapMatches.find(m => m.a.includes(currentImageId)) || null;
@@ -723,11 +727,11 @@ export default function ChapterGalleryBase({
     const metaName = widget.querySelector('meta[itemprop="name"]');
     const linkImage = widget.querySelector('link[itemprop="image"]');
     if (metaName) metaName.setAttribute('content', currentImage.title || currentImage.alt || '');
-    if (linkImage) linkImage.setAttribute('href', getProxySrc(currentImage.id, 'l'));
+    if (linkImage) linkImage.setAttribute('href', getSemanticImageUrl(currentImage, { galleryPath: basePath }));
     
     // Collapse widget when changing images
     widget.classList.remove('expanded');
-  }, [currentIndex, galleryData]);
+  }, [currentIndex, galleryData, basePath]);
 
   const tourOpen = () =>
     typeof document !== "undefined" &&
@@ -1350,7 +1354,7 @@ export default function ChapterGalleryBase({
                         >
                           <img
                             ref={chapterImageRef}
-                            src={getProxySrc(galleryData[currentIndex]?.id, 'l')}
+                            src={currentSemanticImageUrl || getProxySrc(galleryData[currentIndex]?.id, 'l')}
                             alt={galleryData[currentIndex]?.alt || galleryData[currentIndex]?.title}
                             itemProp="image contentUrl"
                             className="chapter-image-mobile rounded-lg block"
@@ -2285,7 +2289,7 @@ export default function ChapterGalleryBase({
                             );
                           })()}
                           
-                          {/* Discover related - uses sitemapMatches for cross-gallery linking */}
+                          {/* Cross-image discovery - uses sitemapMatches as an anti-orphan crawl mesh */}
                           {(() => {
                             const currentId = galleryData[currentIndex]?.id;
                             if (!currentId) return null;
@@ -2310,6 +2314,8 @@ export default function ChapterGalleryBase({
                             return (
                               <a 
                                 href={href}
+                                className="cross-image-discovery-link"
+                                aria-label="Explore another image from the K4 Studios collection"
                                 onClick={() => {
                                   track("sister_image_click", { imageId: currentId, pageType: 'image', trigger: 'explore_more_photos' });
                                   emitActionPixel("sister_image_click", currentId, {

@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
+import { getSemanticImageUrl } from "../utils/imageProxy.js";
 
 // ✅ Proxy URL helper - never expose SmugMug URLs to crawlers
-const getProxySrc = (id, size = "s") => `/img/${id}/${size}.jpg`;
+const getGalleryPathFromImageHref = (href = "") => String(href || "").replace(/\/i-[a-zA-Z0-9-]+\/?$/, "");
 
 // Extract image ID from href like "/Galleries/.../i-abc123"
 const extractIdFromHref = (href) => {
@@ -109,9 +110,9 @@ export default function LandingRightImagesDynamic({
         <h3 className="thumb-heading">{heading}</h3>
       </div>
 
-      {images.map(({ href, id, alt, title }, index) => {
+      {images.map(({ href, id, alt, title, galleryPath }, index) => {
         const imageId = id || extractIdFromHref(href);
-        const imageSrc = imageId ? getProxySrc(imageId, 's') : '';
+        const imageSrc = imageId ? getSemanticImageUrl({ id: imageId, title, alt }, { galleryPath: galleryPath || getGalleryPathFromImageHref(href) }, 's') : '';
         
         return (
           <div 

@@ -1,4 +1,6 @@
 ---
+import { getSemanticImageUrl } from '@/utils/imageProxy.js';
+
 interface Props {
   images: {
     id: string;
@@ -139,7 +141,7 @@ const middleIndex = Math.floor(visibleImages.length / 2);
           style={`animation-delay: ${delay}ms`}
         >
           <img
-            src={`/img/${img.id}/s.jpg`}
+            src={getSemanticImageUrl(img, { galleryPath: img.galleryPath }, 's')}
             alt={img.alt ?? img.title ?? "Gallery image"}
             loading="lazy"
           />

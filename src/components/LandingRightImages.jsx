@@ -1,15 +1,19 @@
 import { useEffect, useState, useMemo } from "react";
 import { warmImage } from "../utils/warmImage";
+import { getSemanticImageUrl } from "../utils/imageProxy.js";
 import "../styles/landing-right-images.css";
 
 // ✅ Proxy URL helper - never expose SmugMug URLs to crawlers
-const getProxySrc = (id, size = "s") => `/img/${id}/${size}.jpg`;
+const getSidebarImageSrc = (image, imageId, size = "s") =>
+  imageId ? getSemanticImageUrl({ ...image, id: imageId }, { galleryPath: image.galleryPath || getGalleryPathFromImageHref(image.href) }, size) : "";
 
 // Extract image ID from href like "/Galleries/.../i-abc123"
 const extractIdFromHref = (href) => {
   const match = href?.match(/\/(i-[a-zA-Z0-9]+)$/);
   return match ? match[1] : null;
 };
+
+const getGalleryPathFromImageHref = (href = "") => String(href || "").replace(/\/i-[a-zA-Z0-9-]+\/?$/, "");
 
 // Fisher-Yates shuffle
 const shuffleArray = (arr) => {
@@ -121,10 +125,10 @@ export default function LandingRightImages({ heading = "", images = [], displayC
         <h3 className="thumb-heading">{heading}</h3>
       </div>
 
-      {displayImages.map(({ href, id, alt, title, story, description }, index) => {
+      {displayImages.map(({ href, id, alt, title, story, description, galleryPath }, index) => {
         // Get ID from prop or extract from href
         const imageId = id || extractIdFromHref(href);
-        const imageSrc = imageId ? getProxySrc(imageId, 's') : '';
+        const imageSrc = getSidebarImageSrc({ href, id, alt, title, story, description, galleryPath }, imageId, 's');
         const caption = title || alt || '';
         const hoverText = showTitles ? getStoryTeaser(story) || undefined : title;
         const imageAlt = getImageAltText({ alt, title, description });

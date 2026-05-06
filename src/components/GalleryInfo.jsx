@@ -22,7 +22,7 @@ import "../styles/galleryinfo.css";
 import ThemeBlock from "./ThemeBlock.jsx";
 import { themes } from "@/data/themes/themes.mjs";
 import { warmImage } from "../utils/warmImage";
-import { getProxySrc } from "../utils/imageProxy";
+import { getSemanticImageUrl } from "../utils/imageProxy";
 import { trackEvent, emitActionPixel } from "../utils/analytics";
 
 /* ---------------------------------------------------------
@@ -174,7 +174,7 @@ export default function GalleryInfo({
   }, [galleryData]);
 
   const heroCaption = heroImage?.title || entranceData?.image?.caption || "";
-  const heroFallbackSrc = heroImage?.id ? getProxySrc(heroImage.id, 'l') : "";
+  const heroFallbackSrc = heroImage?.id ? getSemanticImageUrl(heroImage, { galleryPath: trimmedBase }) : "";
 
   // "Explore the Gallery" always goes to first image in gallery
   const exploreHref =
@@ -400,7 +400,7 @@ export default function GalleryInfo({
                   )}
                   <img
                     ref={heroImgRef}
-                    src={getProxySrc(heroImage.id, 'l')}
+                    src={getSemanticImageUrl(heroImage, { galleryPath: trimmedBase })}
                     alt={heroImage.alt || heroImage.title || "Gallery preview"}
                     data-fallback-src={heroFallbackSrc || undefined}
                     onLoad={handleHeroImageLoad}
@@ -478,7 +478,7 @@ export default function GalleryInfo({
                 )}
                 <img
                   ref={heroImgRef}
-                  src={getProxySrc(heroImage.id, 'l')}
+                  src={getSemanticImageUrl(heroImage, { galleryPath: trimmedBase })}
                   alt={heroImage.alt || heroImage.title || "Gallery preview"}
                   data-fallback-src={heroFallbackSrc || undefined}
                   onLoad={handleHeroImageLoad}

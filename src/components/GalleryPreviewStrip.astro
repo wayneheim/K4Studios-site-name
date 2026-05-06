@@ -20,6 +20,7 @@ const rawBaseUrl = (typeof path === "string" && path.length) ? path : Astro.url.
 
 // Dynamic resolution using siteNav: if provided base is a parent (collection) node, find first descendant gallery-source
 import { siteNav } from '@/data/siteNav';
+import { getSemanticImageUrl } from '@/utils/imageProxy.js';
 
 type NavNode = { href: string; type?: string; children?: NavNode[] };
 
@@ -131,7 +132,7 @@ const heroImageId = candidatePool[0]?.id || null;
           data-preview-click
         >
           <img
-            src={`/img/${img.id}/s.jpg`}
+            src={getSemanticImageUrl(img, { galleryPath: resolvedBaseUrl }, 's')}
             alt={img.alt ?? img.title ?? "Gallery image"}
             loading="lazy"
           />

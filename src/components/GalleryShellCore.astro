@@ -15,6 +15,7 @@ import "@/styles/gallery-shell-core.css";
 import { getStructuredData } from "@/components/utils/getStructuredData.ts";
 import { getBreadcrumbList } from "@/components/utils/getStructuredData.ts";
 import { getCollectionContextEntry } from "@/data/semantic/collectionContext";
+import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 
 interface Props {
   allImages: any[];
@@ -296,19 +297,22 @@ const webPageStructuredData = currentImage
  * --------------------------------------------------------------- */
 const ogImage = selectedImage?.id ? `${siteBase}/img/${selectedImage.id}/l.jpg` : selectedImage?.src;
 const ogAlt = selectedImage?.alt || selectedImage?.title || fixMojibake(usedEntranceData.title);
+const preferredImageUrl = selectedImage?.id
+  ? getSemanticImageUrl(selectedImage, { galleryPath: previewPath }, { absolute: true, origin: siteBase })
+  : selectedImage?.src;
 
 const meta = {
   canonicalUrl,
   description: pageDescription,
   ogTitle: pageTitle,
   ogDescription: pageDescription,
-  ogImage: ogImage,
+  ogImage: preferredImageUrl || ogImage,
   ogType: currentImage ? "article" : "website",
   ogUrl: canonicalUrl,
   ogImageAlt: ogAlt,
   twitterTitle: pageTitle,
   twitterDescription: pageDescription,
-  twitterImage: ogImage,
+  twitterImage: preferredImageUrl || ogImage,
   twitterUrl: canonicalUrl,
   twitterImageAlt: ogAlt,
 };
@@ -365,7 +369,7 @@ const meta = {
   <Footer
     previewImages={previewImages}
     previewPath={previewPath}
-    currentImageUrl={selectedImage?.id ? `${siteBase}/img/${selectedImage.id}/l.jpg` : undefined}
+    currentImageUrl={preferredImageUrl}
     title={pageTitle}
     allImages={allImages}
     galleryTitle={fixMojibake(usedEntranceData.title)}
