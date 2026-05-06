@@ -25,7 +25,7 @@ export const galleryData = [
   {
     "id": "i-s3nMQsB",
     "title": "Capturing Miscellaneous Painterly Photography",
-    "description": "Immerse yourself in miscellaneous painterly photography with this stunning miscellaneous painterly photography by Wayne Heim. Capturing experimental fine art, creative painterly art, and experimental fine art, it's a must-have for collectors of miscellaneous painterly photography. © Wayne Heim",
+    "description": "A pet portrait becomes fine art through quiet expression, close attention, and the small emotional gravity animals carry without trying. This animal portrait photograph by Wayne Heim creates pet wall art rooted in personality, presence, and the familiar bond between human and companion.",
     "alt": "Capturing Miscellaneous Painterly Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Other-Stuff/n-HwTHD/Critters/Pets/i-s3nMQsB/3/MsnzwMcZv5mLGMwf2zXZr8wFT38drKKmxFsMpJ2JF/XL/_IMG7650-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Other-Stuff/n-HwTHD/Critters/Pets/i-s3nMQsB/3/MsnzwMcZv5mLGMwf2zXZr8wFT38drKKmxFsMpJ2JF/XL/_IMG7650-Edit-XL.jpg",
@@ -56,7 +56,7 @@ export const galleryData = [
   {
     "id": "i-9x2P85T",
     "title": "Cat in a Bag _ Black & White Photography by Wayne Heim",
-    "description": "Cat in a Bag - young cat peeking out on a duffel bag. ©Wayne Heim",
+    "description": "A young cat peeks from a duffel bag, turning a small domestic surprise into black and white pet photography. This fine art cat portrait captures curiosity, shelter, and mischief in a simple moment made memorable by expression and timing.",
     "alt": "Cat in a Bag _ Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-9x2P85T/3/LprpH9LBWCHND3gLNKLfgrNG5LL47GVCcr5ks5hKX/XL/_IMG5576-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-9x2P85T/3/LprpH9LBWCHND3gLNKLfgrNG5LL47GVCcr5ks5hKX/XL/_IMG5576-XL.jpg",
@@ -84,7 +84,7 @@ export const galleryData = [
   {
     "id": "i-pZxP9tV",
     "title": "Hi There - Black and White Photography by Wayne Heim",
-    "description": "Hi there - young Westie pup looks inquisitively  at the camera. ©Wayne Heim",
+    "description": "A young Westie puppy looks inquisitively toward the camera, full of alertness, softness, and new-world wonder. This black and white dog portrait photograph creates fine art pet wall art rooted in personality, eye contact, and the charm of early puppyhood.",
     "alt": "Hi There -- Black and White Photography of young Westie puppy by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Other-Stuff/n-HwTHD/Critters/Pets/i-pZxP9tV/3/Kr8JBLJ2MxJJcwJkzXnmSpLq77Pg5scck8JksBqRL/XL/_IMG3645-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Other-Stuff/n-HwTHD/Critters/Pets/i-pZxP9tV/3/Kr8JBLJ2MxJJcwJkzXnmSpLq77Pg5scck8JksBqRL/XL/_IMG3645-2-XL.jpg",
@@ -112,7 +112,7 @@ export const galleryData = [
   {
     "id": "i-7tpCc48",
     "title": "Greyhound    Photography by Wayne Heim",
-    "description": "Sydney --rescue Greyhound poses. ©Wayne Heim",
+    "description": "Sydney, a rescue greyhound, poses with the long elegant lines and quiet dignity that define the breed. This fine art dog portrait photograph turns posture, restraint, and gentle presence into animal wall art with a calm, classical feel.",
     "alt": "Greyhound    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-7tpCc48/3/KcPsv9KB84bz6rnmC9CXVdtQtKQCF8Dzsnb22Mb3P/XL/_IMG4090-2-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-7tpCc48/3/KcPsv9KB84bz6rnmC9CXVdtQtKQCF8Dzsnb22Mb3P/XL/_IMG4090-2-Edit-XL.jpg",
@@ -140,7 +140,7 @@ export const galleryData = [
   {
     "id": "i-SCKPhWW",
     "title": "It Wasn't Me - Photography by Wayne Heim",
-    "description": "It Wasn't Me - little dog lays looking at you as if he did something wrong. ©Wayne Heim",
+    "description": "A small dog lies looking up with the unmistakable expression of innocence under suspicion. This fine art pet portrait turns humor, posture, and eye contact into dog wall art rooted in personality, guilt, and the little dramas of companion life.",
     "alt": "It Wasn't Me - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Texas-to-Wyoming/i-SCKPhWW/4/MpSmBfTmkQqJcVHNt9bRLFF4c2wF7qv9DrJ9F8Z6f/XL/_IMG5510-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Texas-to-Wyoming/i-SCKPhWW/4/MpSmBfTmkQqJcVHNt9bRLFF4c2wF7qv9DrJ9F8Z6f/XL/_IMG5510-XL.jpg",
@@ -168,7 +168,7 @@ export const galleryData = [
   {
     "id": "i-7PtnHmz",
     "title": "Water Play - Black & White Photography by Wayne Heim",
-    "description": "Water Play -  cat stares at stream of  running water getting ready to play with it. ©Wayne Heim",
+    "description": "A cat studies a stream of running water with total concentration, caught at the instant before play begins. This black and white pet photograph creates animal portrait wall art from curiosity, anticipation, and the quiet tension of a cat deciding what happens next.",
     "alt": "Water Play - Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Texas-to-Wyoming/i-7PtnHmz/4/NJBxm6KwXnnQD5BfVVWBSQM3tKR2mdC9DsNMCrsZM/XL/_IMG5567-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Texas-to-Wyoming/i-7PtnHmz/4/NJBxm6KwXnnQD5BfVVWBSQM3tKR2mdC9DsNMCrsZM/XL/_IMG5567-XL.jpg",
@@ -196,7 +196,7 @@ export const galleryData = [
   {
     "id": "i-5mTvRhD",
     "title": "Can I Go - Photography by Wayne Heim",
-    "description": "Can I Go -- cat looks out of a gym bag asking to go too. ©Wayne Heim",
+    "description": "A cat looks out from a gym bag as if asking to come along, turning a simple domestic moment into fine art pet photography. This cat portrait carries humor, longing, and personality, creating pet wall art rooted in the small negotiations of everyday life.",
     "alt": "Can I Go - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Texas-to-Wyoming/i-5mTvRhD/4/MqWRK5mXTm7WrVFbZZSchWtzPHh7gbKkKSjQzJDw5/XL/_IMG5576-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Texas-to-Wyoming/i-5mTvRhD/4/MqWRK5mXTm7WrVFbZZSchWtzPHh7gbKkKSjQzJDw5/XL/_IMG5576-XL.jpg",
@@ -224,7 +224,7 @@ export const galleryData = [
   {
     "id": "i-BZ4RgGh",
     "title": "Chewie - Photography by Wayne Heim",
-    "description": "Chewie - portrait of a Chorkie who looks like Star Wars figure Chewbacca. ©Wayne Heim",
+    "description": "Chewie, a Chorkie with a face full of character, is photographed as a small companion with oversized presence. This fine art dog portrait blends humor, texture, and personality into pet wall art for collectors drawn to expressive animal photography.",
     "alt": "Chewie - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-BZ4RgGh/3/KKXJw8mZ3bhJDFQ9khLqqqZHjkh4R9qRqmtCs2LJ9/XL/_IGP3936-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-BZ4RgGh/3/KKXJw8mZ3bhJDFQ9khLqqqZHjkh4R9qRqmtCs2LJ9/XL/_IGP3936-XL.jpg",
@@ -252,7 +252,7 @@ export const galleryData = [
   {
     "id": "i-NHRCp22",
     "title": "Nice Kitty - Black & White Photography by Wayne Heim",
-    "description": "Nice Kitty -- little girl holds her kitty while watching the camera.©Wayne Heim",
+    "description": "A little girl holds her kitten while both face the camera, creating a quiet portrait of trust, care, and childhood attachment. This black and white pet photograph becomes fine art wall art through the relationship between child, animal, and stillness.",
     "alt": "Nice Kitty - Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-NHRCp22/5/LrNdctV39fD32ZptFGGhnQ79pfQGttzhgk4kn3vp2/XL/P1050612-Editw-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-NHRCp22/5/LrNdctV39fD32ZptFGGhnQ79pfQGttzhgk4kn3vp2/XL/P1050612-Editw-XL.jpg",
@@ -280,7 +280,7 @@ export const galleryData = [
   {
     "id": "i-CCNhBwc",
     "title": "Peek a Boo - Black & White Photography by Wayne Heim",
-    "description": "Peek a Boo - pet rat peeks over carpet. ©Wayne Heim",
+    "description": "A pet rat peeks over the carpet in a small moment of curiosity and comic timing. This black and white animal portrait turns an overlooked companion into fine art pet photography, shaped by expression, scale, and playful presence.",
     "alt": "Peek a Boo - Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-CCNhBwc/3/M7T3m2cNdPTHCGfHP9wttxvm5z3jmFFrBtjhmVkkF/XL/_IMG4381-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-CCNhBwc/3/M7T3m2cNdPTHCGfHP9wttxvm5z3jmFFrBtjhmVkkF/XL/_IMG4381-XL.jpg",
@@ -308,7 +308,7 @@ export const galleryData = [
   {
     "id": "i-rhLNhpZ",
     "title": "Can I get Down - Photography by Wayne AHeim",
-    "description": "Can I Get Down - a pet rat tries to get down from his bed. ©Wayne Heim",
+    "description": "A pet rat tries to climb down from the bed, caught between hesitation and determination. This fine art animal photograph creates pet wall art from movement, personality, and the quiet humor of a tiny companion navigating a much larger world.",
     "alt": "Can I get Down - Photography by Wayne AHeim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-rhLNhpZ/3/MHfPxXf2hqVLkqCmCZvXbTSHtzdv5f66prGfDpVzR/XL/_IMG4392-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-rhLNhpZ/3/MHfPxXf2hqVLkqCmCZvXbTSHtzdv5f66prGfDpVzR/XL/_IMG4392-XL.jpg",
@@ -336,7 +336,7 @@ export const galleryData = [
   {
     "id": "i-5JVMpJZ",
     "title": "Twins -- Black & White Photography by Wayne Heim",
-    "description": "Twins  - a boy holds his two gerbils. ©Wayne Heim",
+    "description": "A boy holds two gerbils close, turning a simple pet portrait into a small study of care, pride, and childhood tenderness. This black and white animal photograph creates fine art pet wall art rooted in connection, trust, and the gentle scale of small companions.",
     "alt": "Twins -- Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-5JVMpJZ/3/Kk52JR8cspkF95xspCBzVgVbkPnqzVT2PC255Rhft/XL/_IMG4442-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-5JVMpJZ/3/Kk52JR8cspkF95xspCBzVgVbkPnqzVT2PC255Rhft/XL/_IMG4442-XL.jpg",
@@ -364,7 +364,7 @@ export const galleryData = [
   {
     "id": "i-V92pfNN",
     "title": "Feels Good - Black & White Photography by Wayne Heim",
-    "description": "Feels Good --cat scratched head on carpet covered stair. ©Wayne Heim",
+    "description": "A cat scratches its head against a carpeted stair, caught in a private moment of comfort and instinct. This black and white pet photograph turns everyday animal behavior into fine art wall art through texture, timing, and quiet domestic humor.",
     "alt": "Feels Good - Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-V92pfNN/3/MpCCRLmXbB8NH3fDgTJbBd6M3cqJhTm3cBZ37HjwS/XL/_IMG4489-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-V92pfNN/3/MpCCRLmXbB8NH3fDgTJbBd6M3cqJhTm3cBZ37HjwS/XL/_IMG4489-XL.jpg",
@@ -392,7 +392,7 @@ export const galleryData = [
   {
     "id": "i-dTH9cj4",
     "title": "Trust -- Black and White Photography by Wayne Heim",
-    "description": "Trust  - cat's paw in human hand shows his trust of his owner. ©Wayne Heim",
+    "description": "A cat’s paw rests in a human hand, turning a small gesture into a portrait of trust. This black and white pet photograph creates fine art animal wall art rooted in touch, companionship, and the quiet emotional language between people and their animals.",
     "alt": "Trust -- Black and White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-dTH9cj4/3/KtSTqzcBH7qJw4f3KvmXHXGNnZMz5PjdzG8p5cVXj/XL/_IMG4528-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-dTH9cj4/3/KtSTqzcBH7qJw4f3KvmXHXGNnZMz5PjdzG8p5cVXj/XL/_IMG4528-XL.jpg",
@@ -420,7 +420,7 @@ export const galleryData = [
   {
     "id": "i-tVmdphq",
     "title": "Cat in A Basket - Black & White Photography by Wayne Heim",
-    "description": "Cat in a Basket --pretty cat sits in a bushel basket looking inquisitively. ©Wayne Heim",
+    "description": "A pretty cat sits inside a bushel basket, looking out with a calm, inquisitive expression. This black and white cat portrait creates fine art pet wall art through texture, shape, and the quiet charm of an animal perfectly framed by its surroundings.",
     "alt": "Cat in A Basket - Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-tVmdphq/3/NbtgbfxsjmGxSWdGVCLwD62PdGcKG8TgctT5qWWpC/XL/_IMG4543-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-tVmdphq/3/NbtgbfxsjmGxSWdGVCLwD62PdGcKG8TgctT5qWWpC/XL/_IMG4543-XL.jpg",
@@ -448,7 +448,7 @@ export const galleryData = [
   {
     "id": "i-bkZm3zs",
     "title": "He is Mine - Black and White Photography by Wayne Heim",
-    "description": "He is Mine - black and white photo of boy and his black Labrador Retriever. ©Wayne Heim",
+    "description": "A boy holds his black Labrador Retriever close, creating a black and white portrait of loyalty, pride, and possession in the gentlest sense. This fine art dog photograph becomes pet wall art rooted in childhood, companionship, and the bond between boy and dog.",
     "alt": "He is Mine - Black and White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Kids/i-bkZm3zs/3/KvGSKdcQFvzfZqKnTk2XdgPGqVPfzcm9w6tXf7MRm/XL/_IMG4635-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Kids/i-bkZm3zs/3/KvGSKdcQFvzfZqKnTk2XdgPGqVPfzcm9w6tXf7MRm/XL/_IMG4635-XL.jpg",
@@ -476,7 +476,7 @@ export const galleryData = [
   {
     "id": "i-TJLXpHJ",
     "title": "Best Friends. Black & White Photograph by Wayne Heim",
-    "description": "Best Friends -  boy and his dog are seen in moment of togetherness.©Wayne Heim",
+    "description": "A boy and his dog share a quiet moment of togetherness, held in black and white with warmth and restraint. This fine art pet portrait creates dog wall art rooted in friendship, loyalty, and the kind of bond that needs very little explanation.",
     "alt": "Best Friends. Black & White Photograph by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-TJLXpHJ/5/NM6m79bF6Z2CKXjgCsxLSH5qFf5WsWPJV2H3GjG5H/XL/_IMG4636-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-TJLXpHJ/5/NM6m79bF6Z2CKXjgCsxLSH5qFf5WsWPJV2H3GjG5H/XL/_IMG4636-XL.jpg",
@@ -504,7 +504,7 @@ export const galleryData = [
   {
     "id": "i-vPmTJp8",
     "title": "It's Mine - Black and White Photogarphy by Wayne Heim",
-    "description": "It's Mine -- Beagle dog holding a toy and his look is one of defying you to take it away. ©Wayne Heim",
+    "description": "A beagle holds a toy with a look that dares the viewer to try taking it away. This black and white dog portrait creates fine art pet wall art from humor, possession, and the stubborn little dignity of a beloved companion.",
     "alt": "It's Mine - Black and White Photogarphy by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-vPmTJp8/4/MdDR3hLg6Lbtm6gDNfRmZ8gHm2cVGm2VCjpWwLSwZ/XL/_IMG4744-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-vPmTJp8/4/MdDR3hLg6Lbtm6gDNfRmZ8gHm2cVGm2VCjpWwLSwZ/XL/_IMG4744-XL.jpg",
@@ -532,7 +532,7 @@ export const galleryData = [
   {
     "id": "i-fMTtsT7",
     "title": "All Mine -- Black & White Photography by Wayne Heim",
-    "description": "All Mine  - young boy embraces his dog. ©Wayne Heim",
+    "description": "A young boy embraces his dog with the full certainty of childhood affection. This black and white pet portrait creates fine art dog wall art rooted in closeness, trust, and the protective bond between a child and a loyal companion.",
     "alt": "All Mine -- Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-fMTtsT7/5/LxSPxk8BFfrtKnGNrxGHBNz74r8BWKGR6xTvVpPnj/XL/_IMG5081-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-fMTtsT7/5/LxSPxk8BFfrtKnGNrxGHBNz74r8BWKGR6xTvVpPnj/XL/_IMG5081-XL.jpg",
@@ -560,7 +560,7 @@ export const galleryData = [
   {
     "id": "i-hBdhx6Q",
     "title": "Dog Park - Photography by Wayne Heim",
-    "description": "Fine art architectural photography of Normandy, Paris and Strasbourg, France.",
+    "description": "A dog park scene in France becomes fine art pet photography through place, movement, and the easy rhythm of animals in public life. This animal portrait photograph creates pet wall art rooted in travel, companionship, and the shared spaces where dogs become part of the landscape.",
     "alt": "Dog Park - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-hBdhx6Q/3/K4TkqZfLqbfJZjBSV53WHSK9Bkz4HT5VKJN99VZSg/XL/_IMG3082-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-hBdhx6Q/3/K4TkqZfLqbfJZjBSV53WHSK9Bkz4HT5VKJN99VZSg/XL/_IMG3082-XL.jpg",
@@ -591,7 +591,7 @@ export const galleryData = [
   {
     "id": "i-mQZ9rNb",
     "title": "Cat's Eyes -  Black & White Photography by Wayne Heim",
-    "description": "Cat's Eyes -- close up study of a cat's eyes. ©Wayne Heim",
+    "description": "A close study of a cat’s eyes turns expression, light, and focus into black and white pet photography. This fine art cat portrait creates animal wall art rooted in mystery, attention, and the watchful intelligence of a familiar companion.",
     "alt": "Cat's Eyes -  Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-mQZ9rNb/3/LprpH9LBWCHND3gLNKLfgrNG5LL47GVCcr5ks5hKX/XL/_IMG4486-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-mQZ9rNb/3/K8x7ZbScD4FJz2k4wFzr9z6gjcxdjZ44GfBzn3pmd/XL/_IMG4486-XL.jpg",
