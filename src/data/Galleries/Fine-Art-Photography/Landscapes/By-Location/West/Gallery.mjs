@@ -25,7 +25,7 @@ export const galleryData = [
   {
     "id": "i-P2MJv28",
     "title": "Stream to the Tetons  Black and White Photography by Wayne Heim",
-    "description": "Stream with the Teton Mountains in the background. ©Wayne Heim",
+    "description": "A stream leads toward the Teton Mountains in this black and white Wyoming landscape photograph, joining water, mountain distance, and quiet Western atmosphere. This traditional western landscape photography creates wall art rooted in the scale and stillness of the American West.",
     "alt": "Mountain Back Road   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-P2MJv28/2/LfGr4bMBwT5vzSLqGsTxxXXvf66wFnr7rXXTftGsP/XL/_WHZ7505_tonemapped-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-P2MJv28/2/LfGr4bMBwT5vzSLqGsTxxXXvf66wFnr7rXXTftGsP/XL/_WHZ7505_tonemapped-XL.jpg",
@@ -58,7 +58,7 @@ export const galleryData = [
   {
     "id": "i-ZRMbMjx",
     "title": "Western Skies Portrait",
-    "description": "A fine art landscape photograph of the Teton range, shaped by scale rather than spectacle. Wayne Heim's fine art landscape photography treats place as emotional geography - not destination, but atmosphere. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the terrain dwarfs human measure. Part of Wayne Heim's Western American landscape photography series. © Wayne Heim",
+    "description": "Western skies stretch over a Wyoming mountain landscape, where light, distance, and open terrain give the scene its quiet authority. This traditional western landscape photograph creates Western scenery wall art shaped by atmosphere, scale, and the vast horizons of the American West.",
     "alt": "Wayne Heim's Western skies artwork",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-ZRMbMjx/2/MPTqJtChg5KKqgRxhRmPWJN7RqFcB6kwpXfG6TtZQ/XL/_WHZ7538-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-ZRMbMjx/2/MPTqJtChg5KKqgRxhRmPWJN7RqFcB6kwpXfG6TtZQ/XL/_WHZ7538-Edit-XL.jpg",
@@ -96,7 +96,7 @@ export const galleryData = [
   {
     "id": "i-2xDqgqS",
     "title": "Ye Olde Ranch House  Black and White Photography by Wayne Heim",
-    "description": "Isolated old ranch house in Wyoming with Grand Tetons in background.  ©Wayne Heim",
+    "description": "An isolated old ranch house stands in Wyoming with the Grand Tetons rising beyond it, turning homestead solitude into black and white Western landscape photography. This traditional western landscape print creates wall art rooted in distance, weathered shelter, and the hard quiet of the American West.",
     "alt": "Tetons from the River    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-2xDqgqS/2/MRzQTJkwrFvQG2Z3fwJ6s43V2C2hFfsfvGXRKdSNX/XL/_WHZ7636-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-2xDqgqS/2/MRzQTJkwrFvQG2Z3fwJ6s43V2C2hFfsfvGXRKdSNX/XL/_WHZ7636-XL.jpg",
@@ -129,7 +129,7 @@ export const galleryData = [
   {
     "id": "i-R5CQpXg",
     "title": "Western Skies - Traditional Western Landscape Photography",
-    "description": "A fine art landscape of the Teton range, shaped by openness rather than spectacle. Approached with restraint and precision, each frame captures the character of the land rather than its postcard appeal. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the horizon extends beyond comfort. Part of Wayne Heim's Western American landscape photography series. © Wayne Heim",
+    "description": "Open Western skies and mountain distance give this landscape its sense of space, restraint, and horizon. This traditional western landscape photography creates Western scenery wall art shaped by atmosphere, scale, and the wide visual rhythm of the American West.",
     "alt": "Wayne Heim's Western skies artwork",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-R5CQpXg/2/LcZbsHbf5fsNQLzBHrZbhWh7RLqkgS79bsvbpTpnm/XL/_WHZ7862_tonemapped-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-R5CQpXg/2/LcZbsHbf5fsNQLzBHrZbhWh7RLqkgS79bsvbpTpnm/XL/_WHZ7862_tonemapped-Edit-Edit-XL.jpg",
@@ -167,7 +167,7 @@ export const galleryData = [
   {
     "id": "i-VRxrHwD",
     "title": "Meandering River    Black and White Photography by Wayne Heim",
-    "description": "Small river meanders through the pines in Wyoming.  ©Wayne Heim",
+    "description": "A small river meanders through pines in Wyoming, turning water, trees, and quiet land into a black and white Western landscape study. This traditional western landscape photograph creates wall art rooted in natural movement, solitude, and regional mountain atmosphere.",
     "alt": "The Grand  Peak   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-VRxrHwD/3/LpHPdQLPBDgF5sqLV32mjLhHC5MbQcR6vpct2B2vQ/XL/_WHZ8022-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-VRxrHwD/3/LpHPdQLPBDgF5sqLV32mjLhHC5MbQcR6vpct2B2vQ/XL/_WHZ8022-2-XL.jpg",
@@ -200,7 +200,7 @@ export const galleryData = [
   {
     "id": "i-dT6fKnc",
     "title": "Yellowstone Hotspots  ",
-    "description": "Geyser pools  at Yellowstone National Park in Wyoming. ©Wayne Heim",
+    "description": "Geyser pools at Yellowstone National Park in Wyoming become a traditional Western landscape photograph shaped by mineral water, steam, and volcanic ground. This Yellowstone landscape image creates Western scenery wall art rooted in geothermal color, texture, and the strange quiet of the American West.",
     "alt": "Yellowstone Hotspots ",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-dT6fKnc/2/NfJKpbpJqL9jDJjD5SKNT4R97Rj4vSjrJrhp4gvkw/XL/_WHZ8329-Pano-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-dT6fKnc/2/NfJKpbpJqL9jDJjD5SKNT4R97Rj4vSjrJrhp4gvkw/XL/_WHZ8329-Pano-Edit-XL.jpg",
@@ -234,7 +234,7 @@ export const galleryData = [
   {
     "id": "i-p3wwjCQ",
     "title": "Fire trees in Black and White    Photography by Wayne Heim",
-    "description": "A fine art landscape photograph of the Teton range, shaped by scale rather than spectacle. Rather than documenting scenery, this work reveals the quiet presence that defines a region. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the terrain dwarfs human measure. Part of Wayne Heim's Western American landscape photography series. © Wayne Heim",
+    "description": "After the fire, trees stand in black and white against the Wyoming landscape, carrying the visual weight of survival, loss, and renewal. This traditional western landscape photograph creates wall art shaped by burned timber, open land, and the stark atmosphere of the American West.",
     "alt": "Yellowstone Hotspots   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-p3wwjCQ/2/KwCkHhgWph4GXgN24Mgx3smSd4p94hm3CNVQvqsX5/XL/_WHZ8397-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-p3wwjCQ/2/KwCkHhgWph4GXgN24Mgx3smSd4p94hm3CNVQvqsX5/XL/_WHZ8397-Edit-XL.jpg",
@@ -268,7 +268,7 @@ export const galleryData = [
   {
     "id": "i-dt57xrq",
     "title": "Western Skies And Western Scenery Wall Art",
-    "description": "A fine art landscape of the Teton range, shaped by stillness rather than spectacle. Wayne Heim's fine art landscape photography treats place as emotional geography - not destination, but atmosphere. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the land holds its breath between seasons. Part of Wayne Heim's Western American landscape photography series. © Wayne Heim",
+    "description": "Western skies move across a wide landscape, turning cloud, land, and distance into a quiet study of atmosphere. This traditional western landscape photography creates Western scenery wall art rooted in vast horizons, weather, and the open character of the American West.",
     "alt": "Fine art photography of Western skies by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-dt57xrq/2/LCWMf7G4Bkz5BChKnMcTP4GW3CvvdPBjmnJSC6jHC/XL/_WHZ9476_tonemapped-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-dt57xrq/2/LCWMf7G4Bkz5BChKnMcTP4GW3CvvdPBjmnJSC6jHC/XL/_WHZ9476_tonemapped-Edit-XL.jpg",
@@ -305,7 +305,7 @@ export const galleryData = [
   {
     "id": "i-ckNQLBL",
     "title": "Western Scenery Wall Art - Western Scenery Wall Art",
-    "description": "A fine art landscape photograph of the Teton range, shaped by scale rather than spectacle. Approached with restraint and precision, each frame captures the character of the land rather than its postcard appeal. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the terrain dwarfs human measure. Part of Wayne Heim's Western American landscape photography series. © Wayne Heim",
+    "description": "A Western landscape is shaped by open sky, mountain distance, and the quiet pull of terrain. This traditional western landscape photograph creates Western scenery wall art with a restrained sense of scale, atmosphere, and American West solitude.",
     "alt": "Wayne Heim's western scenery wall art artwork",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-ckNQLBL/3/ND3KnW9xnG65hZBBhz9HQFSv3ZP9T8MbfR9dBS4mk/XL/_WHZ9516-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-ckNQLBL/3/ND3KnW9xnG65hZBBhz9HQFSv3ZP9T8MbfR9dBS4mk/XL/_WHZ9516-Edit-XL.jpg",
@@ -343,7 +343,7 @@ export const galleryData = [
   {
     "id": "i-F3tf9C4",
     "title": "Exploring Traditional Western Landscape Photography",
-    "description": "A fine art landscape of the Teton range, shaped by openness rather than spectacle. Rather than documenting scenery, this work reveals the quiet presence that defines a region. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the horizon extends beyond comfort. Part of Wayne Heim's Western American landscape photography series. © Wayne Heim",
+    "description": "A broad Western landscape opens across the frame, where horizon, mountain form, and sky carry the image without spectacle. This traditional western landscape photography creates wall art rooted in the vast horizons and quiet visual power of the American West.",
     "alt": "traditional western landscape photography in fine art photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-F3tf9C4/2/Lcxh6v9vxrmKGdb9Hj5FWMP3cdMWBTsdKwLphC2G4/XL/_OLY1274-Pano-Edit-Edit2-final-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-F3tf9C4/2/Lcxh6v9vxrmKGdb9Hj5FWMP3cdMWBTsdKwLphC2G4/XL/_OLY1274-Pano-Edit-Edit2-final-XL.jpg",
@@ -381,7 +381,7 @@ export const galleryData = [
   {
     "id": "i-9Zv7LRm",
     "title": "Painterly Mountain Photography:  Between the Trees  Photography by Wayne Heim",
-    "description": "Famous Moulton Barn seen through two trees. Grand Tetons rise up behind this in Wyoming. ©Wayne Heim Fine art painterly mountain photography. © Wayne Heim",
+    "description": "The famous Moulton Barn is seen between two trees, with the Grand Tetons rising behind it in Wyoming. This painterly mountain photograph creates Western scenery wall art rooted in homestead history, natural framing, and the iconic landscape character of Jackson Hole.",
     "alt": "Grand Tetons     Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-9Zv7LRm/3/MtWL98DrD97rBF7d2MgMNCVpg4SP4WmJXFxFHkZ6Z/XL/_WHZ9589-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-9Zv7LRm/3/MtWL98DrD97rBF7d2MgMNCVpg4SP4WmJXFxFHkZ6Z/XL/_WHZ9589-2-XL.jpg",
@@ -415,7 +415,7 @@ export const galleryData = [
   {
     "id": "i-QNqpz9W",
     "title": "Cotton Tail",
-    "description": "Sliver of a cloud forms a white tail as it appears to be caught on a tree at the foot of the Teton Mountains. Photo taken at sunrise just outside of Jackson Hole Wyoming.",
+    "description": "A sliver of cloud forms a white tail near a tree at the foot of the Teton Mountains, photographed at sunrise outside Jackson Hole, Wyoming. This traditional western landscape photograph creates wall art from cloud, tree, mountain, and the small visual surprises of Western sky.",
     "alt": "Painterly Mountain Photography:  Between the Trees  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-QNqpz9W/2/M7ckMB3ZB4XQjt7qfD6j6VHkWjfKrJqPHCkxSpmmb/XL/_OLY1321-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-QNqpz9W/2/M7ckMB3ZB4XQjt7qfD6j6VHkWjfKrJqPHCkxSpmmb/XL/_OLY1321-XL.jpg",
@@ -448,7 +448,7 @@ export const galleryData = [
   {
     "id": "i-5vvB6PH",
     "title": "The Grand    Black and White Photography by Wayne Heim",
-    "description": "The Grand  main summit of the Grand Teton Mountains. ©Wayne Heim",
+    "description": "The Grand Teton rises as the central summit in this black and white mountain landscape, rendered with scale, restraint, and quiet force. This traditional western landscape photograph creates Grand Teton wall art rooted in Wyoming mountain form and the timeless presence of the American West.",
     "alt": "Cotton Tail",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-5vvB6PH/2/MVLbWkR3NXTDZhvjBgcRMZGhJZ7F6tb3rjrKJSqdX/XL/_OLY1590-Pano-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-5vvB6PH/2/MVLbWkR3NXTDZhvjBgcRMZGhJZ7F6tb3rjrKJSqdX/XL/_OLY1590-Pano-Edit-XL.jpg",
@@ -481,7 +481,7 @@ export const galleryData = [
   {
     "id": "i-NRsfsrH",
     "title": "Mountain Landscape Photography In Fine Art",
-    "description": "A fine art landscape photograph of the Teton range, shaped by scale rather than spectacle. Wayne Heim's fine art landscape photography treats place as emotional geography - not destination, but atmosphere. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the terrain dwarfs human measure. Part of Wayne Heim's Western American landscape photography series. © Wayne Heim",
+    "description": "The Grand Tetons become a study in mountain landscape photography, where summit, sky, and distance carry the frame. This traditional western landscape photograph creates painterly mountain wall art shaped by form, atmosphere, and the clean authority of Western peaks.",
     "alt": "The Grand    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-NRsfsrH/2/LSvknwM5qDNZcmHZx7c5PKmkXM6fvdPW5p4t2CTW2/XL/_OLY1590-Pano_tonemapped-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-NRsfsrH/2/LSvknwM5qDNZcmHZx7c5PKmkXM6fvdPW5p4t2CTW2/XL/_OLY1590-Pano_tonemapped-Edit-XL.jpg",
@@ -513,7 +513,7 @@ export const galleryData = [
   {
     "id": "i-hmsrXK6",
     "title": "Where Buffalo Roam",
-    "description": "A herd of buffalo graze on the plains in Wyoming. ©Wayne Heim",
+    "description": "A herd of buffalo grazes on the plains in Wyoming, placing animal presence within the open structure of Western land. This traditional western landscape photograph creates American West wall art shaped by prairie, wildlife, and the enduring rhythm of open country.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-hmsrXK6/2/KrKcbcRbqMnDqfxCC52NBs4mZvsWzXbXgRGTGCgfN/XL/_WHZ9816-Edit2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-hmsrXK6/2/KrKcbcRbqMnDqfxCC52NBs4mZvsWzXbXgRGTGCgfN/XL/_WHZ9816-Edit2-XL.jpg",
@@ -547,7 +547,7 @@ export const galleryData = [
   {
     "id": "i-sVT8z89",
     "title": "Peaceful River",
-    "description": "A peaceful river flows through the quiet Wyoming countryside. ©Wayne Heim",
+    "description": "A peaceful river flows through the quiet Wyoming countryside, carrying stillness through the Western landscape. This traditional western landscape photograph creates wall art rooted in water, open land, and the calm atmosphere of the American West.",
     "alt": "Where Buffalo Roam   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-sVT8z89/2/MHrTpfs6p75fGDTHMChCw25bpxVgqLs7PPtzkRvFF/XL/_WHZ9821-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-sVT8z89/2/MHrTpfs6p75fGDTHMChCw25bpxVgqLs7PPtzkRvFF/XL/_WHZ9821-Edit-2-XL.jpg",
@@ -581,7 +581,7 @@ export const galleryData = [
   {
     "id": "i-bddbzmJ",
     "title": "Western Landscape Photography Landscape",
-    "description": "A fine art landscape of the Teton range, shaped by stillness rather than spectacle. Approached with restraint and precision, each frame captures the character of the land rather than its postcard appeal. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the land holds its breath between seasons. Part of Wayne Heim's Western American landscape photography series. © Wayne Heim",
+    "description": "A Western landscape opens in layers of land, sky, and atmosphere, inviting the viewer to feel every layer of it rather than simply pass through. This traditional western landscape photograph creates ethereal Western wall art shaped by distance, softness, and quiet terrain.",
     "alt": "Peaceful River  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-bddbzmJ/2/NBz7FMN56xd5zxnwhnp3N4ztnPbRKVs8SZMLBKPj7/XL/_WHZ9823-Pano-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-bddbzmJ/2/NBz7FMN56xd5zxnwhnp3N4ztnPbRKVs8SZMLBKPj7/XL/_WHZ9823-Pano-XL.jpg",
@@ -618,7 +618,7 @@ export const galleryData = [
   {
     "id": "i-RHHbQPW",
     "title": "Western Landscape Photography And Ethereal Landscapes",
-    "description": "A fine art landscape photograph of the Teton range, shaped by scale rather than spectacle. Rather than documenting scenery, this work reveals the quiet presence that defines a region. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the terrain dwarfs human measure. Part of Wayne Heim's Western American landscape photography series. © Wayne Heim",
+    "description": "This Western landscape carries an ethereal quality, with light, distance, and open ground creating a layered sense of place. As traditional western landscape photography, it becomes wall art rooted in atmosphere, restraint, and the quiet depth of the American West.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-RHHbQPW/2/LPBJDg2xSwthHBGTCStSpG52nfhg9G5xhj6jgMQKh/XL/_WHZ9829-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-RHHbQPW/2/LPBJDg2xSwthHBGTCStSpG52nfhg9G5xhj6jgMQKh/XL/_WHZ9829-XL.jpg",
@@ -655,7 +655,7 @@ export const galleryData = [
   {
     "id": "i-F5qnBrS",
     "title": "Foot Bridge    Black & White  Photography  Wayne Heim",
-    "description": "A fine art landscape of the Teton range, shaped by stillness rather than spectacle. Wayne Heim's fine art landscape photography treats place as emotional geography - not destination, but atmosphere. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the land holds its breath between seasons. Part of Wayne Heim's Western American landscape photography series. © Wayne Heim",
+    "description": "A footbridge crosses through a canyon, turning passage, stone, and shadow into black and white Western landscape photography. This traditional landscape image creates wall art shaped by structure, movement, and the quiet mystery of what lies beyond the bend.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-F5qnBrS/3/NQhpsWsMwmJ6d2k9xwD6ZxBqcG8hsGt8bf86Wjb5K/XL/_WHZ0198_tonemapped_tonemapped-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-F5qnBrS/3/NQhpsWsMwmJ6d2k9xwD6ZxBqcG8hsGt8bf86Wjb5K/XL/_WHZ0198_tonemapped_tonemapped-Edit-Edit-XL.jpg",
@@ -689,7 +689,7 @@ export const galleryData = [
   {
     "id": "i-fgtQxKW",
     "title": "Devils Tower",
-    "description": "A fine art landscape photograph of the Teton range, shaped by scale rather than spectacle. Approached with restraint and precision, each frame captures the character of the land rather than its postcard appeal. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the terrain dwarfs human measure. Part of Wayne Heim's Western American landscape photography series. © Wayne Heim",
+    "description": "Devils Tower rises from the Wyoming landscape in this traditional western landscape photograph, carrying the weight of landmark, geology, and distance. The image creates Western scenery wall art rooted in stone, open sky, and the enduring presence of the American West.",
     "alt": "Foot Bridge    Black & White  Photography  Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-fgtQxKW/2/M6mLFkzFnzbc4szFLNzScfggnmT4Jjph9G3GpJRCK/XL/_WHZ0298-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-fgtQxKW/2/M6mLFkzFnzbc4szFLNzScfggnmT4Jjph9G3GpJRCK/XL/_WHZ0298-Edit-XL.jpg",
@@ -723,7 +723,7 @@ export const galleryData = [
   {
     "id": "i-sbMQznL",
     "title": "Devil's Tower   Photography by Wayne Heim",
-    "description": "A fine art landscape of the Teton range, shaped by stillness rather than spectacle. Rather than documenting scenery, this work reveals the quiet presence that defines a region. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the land holds its breath between seasons. Part of Wayne Heim's Western American landscape photography series. © Wayne Heim",
+    "description": "Devil’s Tower stands as a Wyoming landmark, shaped by stone, sky, and the surrounding Western landscape. This traditional western landscape photograph creates wall art rooted in geological force, quiet scale, and the visual authority of the American West.",
     "alt": "Devils Tower    Black and White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-sbMQznL/7/K3tZPm3JXcFT78wVQQQc4LNZT5Smh6SdKNPKNrmK8/XL/_WHZ0316_tonemapped-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-sbMQznL/7/K3tZPm3JXcFT78wVQQQc4LNZT5Smh6SdKNPKNrmK8/XL/_WHZ0316_tonemapped-Edit-XL.jpg",
@@ -756,7 +756,7 @@ export const galleryData = [
   {
     "id": "i-dwvGWVf",
     "title": "Around the Bend  Photography by Wayne Heim",
-    "description": "What is around the bend in the Wyoming landscape?   ©Wayne Heim",
+    "description": "A bend in the Wyoming landscape invites the eye forward, turning road, curve, and open terrain into a question. This traditional western landscape photograph creates wall art shaped by movement, uncertainty, and the quiet pull of Western distance.",
     "alt": "Devil's Tower   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-dwvGWVf/4/L23kcgLvX6N2H8T5CDMhT92XZjwc4WQwMhhrRvnsV/XL/_WHZ0405-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-dwvGWVf/4/L23kcgLvX6N2H8T5CDMhT92XZjwc4WQwMhhrRvnsV/XL/_WHZ0405-XL.jpg",
@@ -789,7 +789,7 @@ export const galleryData = [
   {
     "id": "i-vMNKH96",
     "title": "Feel Every Layer Of It And Ethereal Landscapes",
-    "description": "A fine art landscape photograph of the Teton range, shaped by scale rather than spectacle. Wayne Heim's fine art landscape photography treats place as emotional geography - not destination, but atmosphere. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the terrain dwarfs human measure. Part of Wayne Heim's Western American landscape photography series. © Wayne Heim",
+    "description": "A layered Western landscape carries an ethereal mood, where distance, light, and terrain settle into a quiet visual rhythm. This traditional western landscape photograph creates wall art for collectors drawn to atmosphere, openness, and the feeling of land unfolding in layers.",
     "alt": "Around the Bend  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-vMNKH96/4/LfgdCpGfnMqPCvc3LCCmtPnqNBcwMvdKxrbcjTJ4j/XL/_WHZ0408-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-vMNKH96/4/LfgdCpGfnMqPCvc3LCCmtPnqNBcwMvdKxrbcjTJ4j/XL/_WHZ0408-XL.jpg",
@@ -826,7 +826,7 @@ export const galleryData = [
   {
     "id": "i-f8QrtJp",
     "title": "Canadian Rockies Peak and Pine Trees Reflecting on the Water",
-    "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
+    "description": "A Canadian Rockies peak and pine trees reflect across still water, bringing mountain, forest, and mirrored surface into balance. This traditional fine art landscape photograph creates alpine wall art rooted in the clarity and quiet scale of Banff, Jasper, and Emerald Lake country.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-f8QrtJp/3/Mp5wpFwtBtf4xz9sH65bT54Jp72hFcksZN7kzFt4k/XL/_WHZ2738-Pano2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-f8QrtJp/3/Mp5wpFwtBtf4xz9sH65bT54Jp72hFcksZN7kzFt4k/XL/_WHZ2738-Pano2-XL.jpg",
@@ -859,7 +859,7 @@ export const galleryData = [
   {
     "id": "i-Ggkxvm8",
     "title": "Western Landscape Photography Study",
-    "description": "A fine art landscape of the Teton range, shaped by stillness rather than spectacle. Approached with restraint and precision, each frame captures the character of the land rather than its postcard appeal. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the land holds its breath between seasons. Part of Wayne Heim's Western American landscape photography series. © Wayne Heim",
+    "description": "This Western landscape study holds light, land, and atmosphere in a quiet balance. As traditional western landscape photography, it creates wall art rooted in openness, layered distance, and the restrained beauty of the American West.",
     "alt": "Canadian Rockies Peak and Pine Trees Reflecting on the Water",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Ggkxvm8/0/KZZ6GCsZ2zr3b244w7FDpCkFdrLVXB9QVkC8PXWxs/XL/_O1H0264-Edit-464-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Ggkxvm8/0/KZZ6GCsZ2zr3b244w7FDpCkFdrLVXB9QVkC8PXWxs/XL/_O1H0264-Edit-464-XL.jpg",
@@ -896,7 +896,7 @@ export const galleryData = [
   {
     "id": "i-dGJDdP2",
     "title": "Capturing Ethereal Landscapes",
-    "description": "A fine art landscape photograph of the Teton range, shaped by scale rather than spectacle. Rather than documenting scenery, this work reveals the quiet presence that defines a region. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the terrain dwarfs human measure. Part of Wayne Heim's Western American landscape photography series. © Wayne Heim",
+    "description": "An ethereal Western landscape becomes a study of light, terrain, and quiet distance. This traditional western landscape photograph creates wall art shaped by atmosphere, open space, and the feeling of land carrying more than one visible layer.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-dGJDdP2/1/KqkRFRD6NRPwMvNHSWX7WNSQwN4xHwQvxkX9Lm7wF/XL/_DSF4943-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-dGJDdP2/1/KqkRFRD6NRPwMvNHSWX7WNSQwN4xHwQvxkX9Lm7wF/XL/_DSF4943-XL.jpg",
@@ -933,7 +933,7 @@ export const galleryData = [
   {
     "id": "i-WWng23V",
     "title": "Capturing Ethereal Landscapes",
-    "description": "Explore ethereal landscapes with Wayne Heim's western landscape photography. This ethereal landscapes piece conveys ethereal landscapes, feel every layer of it, and ethereal landscapes, perfect for fans of western landscape photography. © Wayne Heim",
+    "description": "This Western landscape carries a soft, ethereal presence, where light and distance turn open terrain into a quiet visual meditation. As traditional western landscape photography, it creates wall art rooted in atmosphere, restraint, and the long pull of the horizon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-WWng23V/0/L65dVNnRgXCqx8crxKnNvhBWHmCF7HbzJPxCSdqB4/XL/_DSF4951-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-WWng23V/0/L65dVNnRgXCqx8crxKnNvhBWHmCF7HbzJPxCSdqB4/XL/_DSF4951-Edit-XL.jpg",
@@ -970,7 +970,7 @@ export const galleryData = [
   {
     "id": "i-4Bf2zsv",
     "title": "Capturing Western Landscape Photography",
-    "description": "A fine art landscape of the Teton range, shaped by stillness rather than spectacle. Wayne Heim's fine art landscape photography treats place as emotional geography - not destination, but atmosphere. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the land holds its breath between seasons. Part of Wayne Heim's Western American landscape photography series. © Wayne Heim",
+    "description": "A Western landscape panorama stretches across the frame, shaped by quiet light, broad terrain, and a layered sense of distance. This traditional western landscape photograph creates wall art rooted in scale, atmosphere, and the open language of the American West.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-4Bf2zsv/0/KRZDgCxGWnn8BB4SzPHFHqx4wfh5jGNm5Hs4jd38z/XL/_O1H0436-Pano-Enhanced-NR-593-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-4Bf2zsv/0/KRZDgCxGWnn8BB4SzPHFHqx4wfh5jGNm5Hs4jd38z/XL/_O1H0436-Pano-Enhanced-NR-593-XL.jpg",
@@ -1007,7 +1007,7 @@ export const galleryData = [
   {
     "id": "i-SSw3qvn",
     "title": "Fine Art Ethereal Landscapes",
-    "description": "A fine art landscape photograph of the Teton range, shaped by scale rather than spectacle. Approached with restraint and precision, each frame captures the character of the land rather than its postcard appeal. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the terrain dwarfs human measure. Part of Wayne Heim's Western American landscape photography series. © Wayne Heim",
+    "description": "Ethereal light and Western terrain meet in this fine art landscape photograph, where atmosphere matters as much as form. This traditional western landscape image creates wall art shaped by quiet distance, subtle texture, and the emotional pull of open land.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-SSw3qvn/0/ML4ZbpwTgT53kKNnbvTP5kVVW6VcHcVG8L9mSbCSq/XL/_O1H0422-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-SSw3qvn/0/ML4ZbpwTgT53kKNnbvTP5kVVW6VcHcVG8L9mSbCSq/XL/_O1H0422-XL.jpg",
@@ -1043,7 +1043,7 @@ export const galleryData = [
   {
     "id": "i-cSFvwcM",
     "title": "Ethereal Landscapes Moment",
-    "description": "A fine art landscape of the Teton range, shaped by stillness rather than spectacle. Rather than documenting scenery, this work reveals the quiet presence that defines a region. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the land holds its breath between seasons. Part of Wayne Heim's Western American landscape photography series. © Wayne Heim",
+    "description": "A Western landscape moment becomes ethereal through softened light, quiet terrain, and a sense of stillness held in the frame. This traditional western landscape photograph creates wall art rooted in atmosphere, openness, and the layered mood of the American West.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-cSFvwcM/0/MSWL9L3PRfScJkkNRWvHXQj9W9Z5GTSKtK9gdmKsn/XL/_O1H0149-Enhanced-NR-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-cSFvwcM/0/MSWL9L3PRfScJkkNRWvHXQj9W9Z5GTSKtK9gdmKsn/XL/_O1H0149-Enhanced-NR-XL.jpg",
@@ -1080,7 +1080,7 @@ export const galleryData = [
   {
     "id": "i-8XNRjZF",
     "title": "View from the Past: The Tetons",
-    "description": "View from broken window in one of the old building on Mormon row in Jackson Hole Wyoming. Dark black inside creates the perfect frame inside the frame of the picture of the mountains. Black isolation is perfect balance to the rustic isolation of the Old West.© Wayne Heim",
+    "description": "A broken window on Mormon Row frames the Tetons near Jackson Hole, Wyoming, turning an old building into a dark frame around mountain distance. This traditional western landscape photograph creates wall art rooted in Old West isolation, rustic structure, and the view left behind.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8XNRjZF/4/MDQSkn9HrRGrJZFPtmbMpbhh9wpg5MhLgMsfFqXc3/XL/_IMG6130-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8XNRjZF/4/MDQSkn9HrRGrJZFPtmbMpbhh9wpg5MhLgMsfFqXc3/XL/_IMG6130-XL.jpg",
@@ -1111,7 +1111,7 @@ export const galleryData = [
   {
     "id": "i-DKjkHL6",
     "title": "End of The Day: A Cowboy's Reflection",
-    "description": "Muted rustic colored photograph of T.A. Moulton Barn with a single cowboy looking over the structure. This is one of the barns on Mormon Row near Jackson Hole Wyoming. Rustic textures of the old weathered barn are married with a muted pallet and presentation of the sunset adding the the \"historic\" feeling of the moment. © Wayne Heim",
+    "description": "The T.A. Moulton Barn on Mormon Row near Jackson Hole is shown with a lone cowboy figure looking over the weathered structure. This Western landscape photograph blends rustic architecture, muted sunset color, and historical atmosphere into wall art rooted in Wyoming place and memory.",
     "alt": "View from the Past: The Tetons",
     "src": "https://photos.smugmug.com/photos/i-DKjkHL6/3/MhSzt8zT6HmRvn3mc4NBn9zHM7DH5bjpj7ht2gCGj/XL/i-DKjkHL6-XL.jpg",
     "srcXL": "https://photos.smugmug.com/photos/i-DKjkHL6/3/MhSzt8zT6HmRvn3mc4NBn9zHM7DH5bjpj7ht2gCGj/XL/i-DKjkHL6-XL.jpg",
@@ -1142,7 +1142,7 @@ export const galleryData = [
   {
     "id": "i-WgGWH9C",
     "title": "Majestic Ridge - After the Storm",
-    "description": "Majestic Ridge. Etna Wyoming. snow covered mountain side © Wayne Heim",
+    "description": "A snow-covered mountainside near Etna, Wyoming becomes a traditional western landscape photograph shaped by cold light, ridge form, and post-storm quiet. This Western mountain wall art carries the stillness and strength of high country after weather has passed.",
     "alt": "End of The Day: A Cowboy's Reflection",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-WgGWH9C/4/LQsXggRzD5BtzjNhNxFWzXCfBXnfcZGp4DwwkS9S4/XL/P1030226-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-WgGWH9C/4/LQsXggRzD5BtzjNhNxFWzXCfBXnfcZGp4DwwkS9S4/XL/P1030226-XL.jpg",
@@ -1173,7 +1173,7 @@ export const galleryData = [
   {
     "id": "i-cRWPFSz",
     "title": "Drifting over high plains.",
-    "description": "A fine art landscape photograph of the Teton range, shaped by scale rather than spectacle. Wayne Heim's fine art landscape photography treats place as emotional geography - not destination, but atmosphere. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the terrain dwarfs human measure. Part of Wayne Heim's Western American landscape photography series. © Wayne Heim",
+    "description": "Clouds drift over golden plains, turning open Western land into a quiet study of sky, color, and distance. This traditional western landscape photograph creates wall art rooted in high plains atmosphere, movement, and the soft pull of open country.",
     "alt": "Majestic Ridge - After the Storm",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-cRWPFSz/10/MVTGHVtK6HP38KHgRpsW8QQgX6GCKkG5cRRDM6CM2/XL/_WEH7838-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-cRWPFSz/10/MVTGHVtK6HP38KHgRpsW8QQgX6GCKkG5cRRDM6CM2/XL/_WEH7838-Edit-XL.jpg",
@@ -1203,7 +1203,7 @@ export const galleryData = [
   {
     "id": "i-S7QHbjP",
     "title": "Question River   Photography by Wayne Heim",
-    "description": "The Big Question mark is what a stream makes through the trees in this winter scene.©Wayne Heim",
+    "description": "A stream curves through trees in a winter scene, forming the shape of a question mark across the Western landscape. This traditional western landscape photograph creates wall art rooted in snow, water, woodland texture, and the quiet visual wit of nature.",
     "alt": "Drifting over high plains.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-S7QHbjP/4/MDV5Dm5GTGsP4fSBK2sCZrkG3txS5P6k6T3Hfghc4/XL/P1020533-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-S7QHbjP/4/MDV5Dm5GTGsP4fSBK2sCZrkG3txS5P6k6T3Hfghc4/XL/P1020533-XL.jpg",
@@ -1234,7 +1234,7 @@ export const galleryData = [
   {
     "id": "i-cgSjPmT",
     "title": "Ethereal Landscapes - Western Landscape Photography",
-    "description": "Discover the ethereal landscapes in this powerful western landscape photography by Wayne Heim. A compelling work that embodies ethereal landscapes, western landscape photography, and western landscape photography. Perfect for art lovers seeking ethereal landscapes to enhance their collection. © Wayne Heim",
+    "description": "This Western landscape carries an ethereal quality through light, winter terrain, and the quiet structure of trees and water. As traditional western landscape photography, it creates wall art shaped by atmosphere, texture, and the feeling of place layered beneath the surface.",
     "alt": "Question River   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-cgSjPmT/4/KzNFTq6PzXBjCLHdG239ZHKPQXm4dLKrM3nT5xV82/XL/P1020645-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-cgSjPmT/4/KzNFTq6PzXBjCLHdG239ZHKPQXm4dLKrM3nT5xV82/XL/P1020645-XL.jpg",
@@ -1268,7 +1268,7 @@ export const galleryData = [
   {
     "id": "i-tF8fFm4",
     "title": "\"Snowcaps\".  B/W Photography by Wayne Heim.",
-    "description": "\"Snowcaps.\" B/w nature photo of snow covered rocks in stream in Wyoming. ©Wayne Heim",
+    "description": "Snow-covered rocks sit in a Wyoming stream, turning winter water and stone into a black and white nature study. This traditional western landscape photograph creates wall art rooted in stream texture, snow, and the quiet force of small details in the American West.",
     "alt": "Puff.",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Lights/i-tF8fFm4/5/LwMwRjdzKv4GHQwmkQRVfWdkvxr6b2gsJfSkXvQht/XL/P1020645-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Lights/i-tF8fFm4/5/LwMwRjdzKv4GHQwmkQRVfWdkvxr6b2gsJfSkXvQht/XL/P1020645-Edit-XL.jpg",
@@ -1299,7 +1299,7 @@ export const galleryData = [
   {
     "id": "i-R5vHcxf",
     "title": "Evening Lake   Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Glacier National Park and Montana.",
+    "description": "Evening light settles over Glacier National Park and Montana, turning lake, mountain, and atmosphere into traditional Western landscape photography. This fine art landscape image creates Montana wall art rooted in alpine stillness and the quiet drama of the American West.",
     "alt": "\"Snowcaps\".  B/W Photography by Wayne Heim.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-R5vHcxf/4/KGJLx76qQSH6DPzMVbxmtwh2mL9p4NVv4VLqBhtCk/XL/_IGP2880-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-R5vHcxf/4/KGJLx76qQSH6DPzMVbxmtwh2mL9p4NVv4VLqBhtCk/XL/_IGP2880-XL.jpg",
@@ -1329,7 +1329,7 @@ export const galleryData = [
   {
     "id": "i-HgQBk3g",
     "title": "Crystal  - black & White Photography by Wayne Heim",
-    "description": "Crystal: Lone tree with Ice crystals on snow. Idaho.©Wayne Heim",
+    "description": "A lone tree with ice crystals on snow becomes a black and white Western landscape study from Idaho. This traditional fine art landscape photograph creates winter wall art rooted in solitude, delicate texture, and the quiet poetry of cold country.",
     "alt": "Evening Lake   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-HgQBk3g/4/LKj69cZBGJPPDxg6fkxwVLbfLSWVWtbTx8qGjVffk/XL/fairy%20tree-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-HgQBk3g/4/LKj69cZBGJPPDxg6fkxwVLbfLSWVWtbTx8qGjVffk/XL/fairy%20tree-Edit-XL.jpg",
@@ -1360,7 +1360,7 @@ export const galleryData = [
   {
     "id": "i-Dk4tMWB",
     "title": "Approaching Zion. Photography by Wayne Heim",
-    "description": "Approaching Zion- view of two areas approaching Zion National Park, Utah. ©Wayne Heim",
+    "description": "Approaching Zion National Park in Utah, the landscape opens through desert form, layered distance, and the anticipation of red-rock country. This traditional western landscape photograph creates Utah wall art rooted in canyon approach, light, and the sculptural terrain of the American West.",
     "alt": "Crystal  - black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/photos/i-Dk4tMWB/3/LbJfK5Z3j5x8XzM9fW5KNd2LcndSw57KMVsJv9PGj/XL/i-Dk4tMWB-XL.jpg",
     "srcXL": "https://photos.smugmug.com/photos/i-Dk4tMWB/3/LbJfK5Z3j5x8XzM9fW5KNd2LcndSw57KMVsJv9PGj/XL/i-Dk4tMWB-XL.jpg",
@@ -1391,7 +1391,7 @@ export const galleryData = [
   {
     "id": "i-vh7p4gv",
     "title": "Last De-FENCE  - Springtime in the Rockies",
-    "description": "Last De-FENCE.  Wyoming - only tops of fence  posts show in this winter scene. © Wayne Heim",
+    "description": "Only the tops of fence posts rise through a Wyoming winter scene, creating a spare study of snow, line, and buried structure. This traditional western landscape photograph creates wall art rooted in quiet humor, seasonal depth, and the minimal beauty of the American West.",
     "alt": "Approaching Zion. Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-vh7p4gv/4/Lngbm9kCvN2vHVPmWQpQnFxtZgVNGGtT8KC6X38nr/XL/P1020959-b-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-vh7p4gv/4/Lngbm9kCvN2vHVPmWQpQnFxtZgVNGGtT8KC6X38nr/XL/P1020959-b-XL.jpg",
@@ -1422,7 +1422,7 @@ export const galleryData = [
   {
     "id": "i-VZ3N4km",
     "title": "Before and After. Photography by Wayne Heim",
-    "description": "Black and white photograph of snow and clouds near Bondurant Wyoming. ©Wayne Heim",
+    "description": "Snow and clouds near Bondurant, Wyoming become a black and white Western landscape photograph shaped by tonal contrast and atmospheric change. This traditional western landscape image creates wall art rooted in weather, distance, and the quiet drama of high country.",
     "alt": "Last De-FENCE  - Springtime in the Rockies",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-VZ3N4km/4/NF2PcFvX6HcL4DpT9pchq2QGdq8PJ4cHCJcv4TQ2H/XL/P1020966-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-VZ3N4km/4/NF2PcFvX6HcL4DpT9pchq2QGdq8PJ4cHCJcv4TQ2H/XL/P1020966-XL.jpg",
@@ -1453,7 +1453,7 @@ export const galleryData = [
   {
     "id": "i-nwVhxGk",
     "title": "White Paint - Black & White Photography by Wayne Heim",
-    "description": "White Paint - grove of aspen trees in the snow with one lone pine tree in background. ©Wayne Heim",
+    "description": "A grove of aspen trees stands in the snow with one lone pine in the background, turning winter woods into a black and white Western landscape study. This traditional fine art photograph creates wall art rooted in tree pattern, snow, and quiet mountain atmosphere.",
     "alt": "Before and After. Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-nwVhxGk/4/MTV6JrkTrgtDdnMGwvwdfmcpnktqnSc9J8LNNZGB3/XL/white-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-nwVhxGk/4/MTV6JrkTrgtDdnMGwvwdfmcpnktqnSc9J8LNNZGB3/XL/white-XL.jpg",
@@ -1484,7 +1484,7 @@ export const galleryData = [
   {
     "id": "i-wxLBqLg",
     "title": "Grand Sunset Photography by Wayne Heim",
-    "description": "Grand Sunset. Jackson Hole Wyoming, sunset lights the sky behind snow covered Grand Teton mountains ©Wayne Heim",
+    "description": "Sunset lights the sky behind snow-covered Grand Teton mountains near Jackson Hole, Wyoming, creating a Western landscape of color, scale, and evening stillness. This traditional fine art photograph creates Grand Teton wall art rooted in mountain light and winter atmosphere.",
     "alt": "White Paint - Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-wxLBqLg/4/Mm5fwXCtgHGHkMzKqnnLCR7KZcBvWQD7SQ37xbMGT/XL/P1030095-c-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-wxLBqLg/4/Mm5fwXCtgHGHkMzKqnnLCR7KZcBvWQD7SQ37xbMGT/XL/P1030095-c-XL.jpg",
@@ -1515,7 +1515,7 @@ export const galleryData = [
   {
     "id": "i-4SmFT2v",
     "title": "Standing Guard   Black & White Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Glacier National Park and Montana.",
+    "description": "Standing Guard presents Glacier National Park and Montana as traditional Western landscape photography, shaped by mountain presence, quiet light, and alpine distance. This fine art landscape creates wall art rooted in Montana atmosphere and the enduring strength of the American West.",
     "alt": "Grand Sunset Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-4SmFT2v/4/KfsS8MRJWVtLcrMwxZfF2g8fCftLJnxTLh6Hhf37Z/XL/_IGP2847-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-4SmFT2v/4/KfsS8MRJWVtLcrMwxZfF2g8fCftLJnxTLh6Hhf37Z/XL/_IGP2847-XL.jpg",
@@ -1545,7 +1545,7 @@ export const galleryData = [
   {
     "id": "i-XVdVWhm",
     "title": "Giants -- Black & White Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Glacier National Park and Montana.",
+    "description": "Giants rises from the Glacier National Park and Montana landscape in black and white, turning mountain scale into a study of tone and form. This traditional western landscape photograph creates wall art rooted in alpine grandeur, contrast, and quiet force.",
     "alt": "Standing Guard   Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-XVdVWhm/4/NLfWnxBqV7bSHkLCdxNpVNtBg2B9wzqz9KnFLQNq2/XL/_IGP2936-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-XVdVWhm/4/NLfWnxBqV7bSHkLCdxNpVNtBg2B9wzqz9KnFLQNq2/XL/_IGP2936-XL.jpg",
@@ -1575,7 +1575,7 @@ export const galleryData = [
   {
     "id": "i-jb5HQM7",
     "title": "Escarpment    Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Glacier National Park and Montana.",
+    "description": "Escarpment studies the Glacier National Park and Montana landscape through slope, rock, and mountain structure. This traditional Western landscape photograph creates wall art shaped by elevation, rugged form, and the calm authority of the northern Rockies.",
     "alt": "Giants -- Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-jb5HQM7/4/KPGDW6kSSJxg9vj4FnZ6MLKcnwRXhxcpkpvkp87CL/XL/_IGP2999-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-jb5HQM7/4/KPGDW6kSSJxg9vj4FnZ6MLKcnwRXhxcpkpvkp87CL/XL/_IGP2999-2-XL.jpg",
@@ -1605,7 +1605,7 @@ export const galleryData = [
   {
     "id": "i-6Qt5RcK",
     "title": "Deserted Barn photography by Wayne Heim",
-    "description": "Deserted Barn with falling down fence. ©Wayne Heim",
+    "description": "A deserted barn and falling fence stand within a Western landscape, turning weathered structure into a quiet symbol of time and abandonment. This traditional western landscape photograph creates rustic wall art rooted in rural memory, open land, and the endurance of place.",
     "alt": "Escarpment    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-6Qt5RcK/3/MCdRNmth4STXXLkGjXTcFK6wT3h7qXv62HtBvQKHF/XL/_IGP3890-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-6Qt5RcK/3/MCdRNmth4STXXLkGjXTcFK6wT3h7qXv62HtBvQKHF/XL/_IGP3890-Edit-XL.jpg",
@@ -1636,7 +1636,7 @@ export const galleryData = [
   {
     "id": "i-8hwfnGn",
     "title": "\"Meandering MountainStream\". Photography by Wayne Heim",
-    "description": "\"Meandering Stream\". Black and white landscape photography of mountain stream, clouds and trees along \"Mormon Row\", just north of Jackson Hole Wyoming. ©Wayne Heim",
+    "description": "A mountain stream moves through clouds and trees along Mormon Row, north of Jackson Hole, Wyoming. This black and white Western landscape photograph creates wall art rooted in water, weather, and the quiet natural rhythm beneath the Grand Tetons.",
     "alt": "Deserted Barn photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8hwfnGn/4/MbqLKWfq7zjCHr6zwbgbKzsRZGpkMFWzwCnKXnSxx/XL/_IMG6007-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8hwfnGn/4/MbqLKWfq7zjCHr6zwbgbKzsRZGpkMFWzwCnKXnSxx/XL/_IMG6007-XL.jpg",
@@ -1667,7 +1667,7 @@ export const galleryData = [
   {
     "id": "i-Rh64N3s",
     "title": "Alone on Prairie - Black & White Photography",
-    "description": "Alone on Prairie - lone cabin on the plains in Wyoming ©Wayne Heim",
+    "description": "A lone cabin sits on the Wyoming plains, turning isolation and open land into black and white Western landscape photography. This traditional western landscape print creates wall art rooted in solitude, shelter, and the spare emotional weight of the prairie.",
     "alt": "\"Meandering Stream\". Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-Rh64N3s/4/NRP87LNCQvVHDc7NJj5kh4hjbcqSb4sLHjBmzTgbf/XL/_IMG6274-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-Rh64N3s/4/NRP87LNCQvVHDc7NJj5kh4hjbcqSb4sLHjBmzTgbf/XL/_IMG6274-Edit-XL.jpg",
@@ -1698,7 +1698,7 @@ export const galleryData = [
   {
     "id": "i-SCWP4NP",
     "title": "Line Cabin   Photography by Wayne Heim",
-    "description": "Small  line cabin where men could stay while watching cattle.©Wayne Heim",
+    "description": "A small line cabin stands as a shelter once used while watching cattle, giving the Western landscape a quiet human trace. This traditional western landscape photograph creates wall art rooted in ranch life, utility, and the hard practical beauty of open country.",
     "alt": "Alone on Prairie - Black & White Photography",
     "src": "https://photos.smugmug.com/photos/i-SCWP4NP/3/L8VR5pF7XnJQTtsBmbqQ7BSxN7mwqJPtCtDdVH2PV/XL/i-SCWP4NP-XL.jpg",
     "srcXL": "https://photos.smugmug.com/photos/i-SCWP4NP/3/L8VR5pF7XnJQTtsBmbqQ7BSxN7mwqJPtCtDdVH2PV/XL/i-SCWP4NP-XL.jpg",
@@ -1729,7 +1729,7 @@ export const galleryData = [
   {
     "id": "i-PmxqLBs",
     "title": "Better Days\". Photography by Wayne Heim",
-    "description": "\"Better Days\". Black and white nature photo of old barn on \"Mormon Row\", North of Jackson Hole Wyoming. ©Wayne Heim",
+    "description": "An old barn on Mormon Row north of Jackson Hole, Wyoming carries the weathered dignity of better days. This black and white Western landscape photograph creates wall art rooted in rustic architecture, homestead memory, and the enduring presence of the Grand Teton country.",
     "alt": "Line Cabin   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-PmxqLBs/4/NBFrN3VNTbGmSNHXmT5CxtrPsLzNNFv3DB38JdbfT/XL/_IMG6287-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-PmxqLBs/4/NBFrN3VNTbGmSNHXmT5CxtrPsLzNNFv3DB38JdbfT/XL/_IMG6287-XL.jpg",
@@ -1760,7 +1760,7 @@ export const galleryData = [
   {
     "id": "i-PVbJdpj",
     "title": "Old Fence - Black & White Photography by Wayne Heim",
-    "description": "Old Fence - old weathered fence that had fallen down in Wyoming. ©Wayne Heim",
+    "description": "An old weathered fence lies fallen in the Wyoming landscape, turning a small remnant into a black and white study of time and use. This traditional western landscape photograph creates wall art rooted in rural texture, abandonment, and the quiet geometry of the American West.",
     "alt": "Better Days\". Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-PVbJdpj/4/MGrSTLCqgxRFXZNMzZTnZTGkGbXwNxjtxWR3MW6Q2/XL/_IMG6295-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-PVbJdpj/4/MGrSTLCqgxRFXZNMzZTnZTGkGbXwNxjtxWR3MW6Q2/XL/_IMG6295-XL.jpg",
@@ -1791,7 +1791,7 @@ export const galleryData = [
   {
     "id": "i-X99RLdm",
     "title": "Hayloft - Black & White Photography by Wayne Heim",
-    "description": "Hayloft - shows opening to the hayloft in an old barn. ©Wayne Heim",
+    "description": "A hayloft opening in an old barn becomes a black and white Western landscape detail, shaped by shadow, weathered wood, and rural structure. This traditional fine art photograph creates rustic Western wall art rooted in old barns, age, and the visual strength of simple forms.",
     "alt": "Old Fence - Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-X99RLdm/4/NTCGvB6zpdLjfDVXb7qWFdZZgs5GwP4r3DdpG7SJS/XL/_IMG6298-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-X99RLdm/4/NTCGvB6zpdLjfDVXb7qWFdZZgs5GwP4r3DdpG7SJS/XL/_IMG6298-XL.jpg",
@@ -1822,7 +1822,7 @@ export const galleryData = [
   {
     "id": "i-S6m4mR2",
     "title": "\"Out the Door\"",
-    "description": "B/W high key photo from inside an old log barn at the foot of the Teton on \"Mormon Row\" just outside of Jackson Hole Wyoming. Voyeuristic view from inside the dark building pears out into the daylight. ©Wayne Heim",
+    "description": "From inside an old log barn on Mormon Row near Jackson Hole, Wyoming, daylight opens toward the Tetons beyond. This black and white Western landscape photograph creates wall art rooted in interior darkness, mountain distance, and the quiet tension between shelter and horizon.",
     "alt": "Hayloft - Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-S6m4mR2/4/Mqpppt5R4qgpCnP68JNZJgW9W4zwFfgbHqBh2jw5j/XL/_IMG6301-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-S6m4mR2/4/Mqpppt5R4qgpCnP68JNZJgW9W4zwFfgbHqBh2jw5j/XL/_IMG6301-XL.jpg",
@@ -1853,7 +1853,7 @@ export const galleryData = [
   {
     "id": "i-8LMkTQg",
     "title": "Still Standing in Black & white    Photography by Wayne Heim",
-    "description": "Old famous barn on Mormon row has weathered the years as seen in black & white. ©Wayne Heim",
+    "description": "An old famous barn on Mormon Row stands in black and white, weathered by years and held against the Wyoming landscape. This traditional western landscape photograph creates rustic wall art rooted in endurance, homestead history, and the quiet strength of weathered wood.",
     "alt": "\"Out the Door\"",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8LMkTQg/4/K8MGnN2dbbLf9CxqfNwdWKksmT7NMh8L8smb4HG6S/XL/_img6307-edit-edit2-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8LMkTQg/4/K8MGnN2dbbLf9CxqfNwdWKksmT7NMh8L8smb4HG6S/XL/_img6307-edit-edit2-Edit-XL.jpg",
@@ -1884,7 +1884,7 @@ export const galleryData = [
   {
     "id": "i-RFCHLhg",
     "title": "Tetons Peek - Black & White Photography by Wayne Heim",
-    "description": "Tetons Peek -- peeking out the barn door at the Grand Tetons in Jackson Hole, Wyoming. ©Wayne Heim",
+    "description": "The Grand Tetons peek through a barn doorway near Jackson Hole, Wyoming, turning shadowed structure into a frame for mountain distance. This black and white Western landscape photograph creates wall art rooted in rustic architecture, light, and the quiet reveal of place.",
     "alt": "Still Standing in Black & white    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-RFCHLhg/4/KVDZnx3Tf2r2dwNVMcjMWqgF39SQFwhfccjDcWtqX/XL/_IMG6333-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-RFCHLhg/4/KVDZnx3Tf2r2dwNVMcjMWqgF39SQFwhfccjDcWtqX/XL/_IMG6333-XL.jpg",
@@ -1915,7 +1915,7 @@ export const galleryData = [
   {
     "id": "i-xZH95Bj",
     "title": "Tetons on the Outside",
-    "description": "Teton Mountain view looking out of the open barn door.. Looking out an old barn door at the Tetons. Dark isolation of inside of barn is shattered by the light streaming inside breaking the silence, while lurking in the distance is a view of the Grand and the Teton mountain range. ©Wayne Heim",
+    "description": "An open barn door frames the Grand Tetons, with dark interior isolation broken by daylight and mountain distance beyond. This traditional western landscape photograph creates wall art rooted in Wyoming barns, shadow, silence, and the pull of the Teton range.",
     "alt": "Tetons Peek - Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-xZH95Bj/4/K6vZMjBHgPrPF3RSDS4M6rf9KLV77cdchCHTw6MCn/XL/_IMG6333-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-xZH95Bj/4/K6vZMjBHgPrPF3RSDS4M6rf9KLV77cdchCHTw6MCn/XL/_IMG6333-2-XL.jpg",
@@ -1946,7 +1946,7 @@ export const galleryData = [
   {
     "id": "i-sFJ4hBz",
     "title": "Alone on Prairie    Photography by Wayne Heim",
-    "description": "A fine art landscape of the Teton range, shaped by solitude rather than spectacle. Approached with restraint and precision, each frame captures the character of the land rather than its postcard appeal. Light, tone, and composition shape a quiet narrative rooted in place and memory - where distance and silence are companions here. Part of Wayne Heim's Western American landscape photography series. © Wayne Heim",
+    "description": "An old barn stands before the Tetons, creating a Western landscape of weathered structure, open ground, and mountain presence. This traditional western landscape photograph creates wall art rooted in Wyoming homestead history and the quiet drama of rural isolation.",
     "alt": "Tetons on the Outside",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-sFJ4hBz/4/KVNrwMCVRt3GSxmgQLxVpVhrwz7QjSzfxcDHqbVw5/XL/_IMG6379-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-sFJ4hBz/4/KVNrwMCVRt3GSxmgQLxVpVhrwz7QjSzfxcDHqbVw5/XL/_IMG6379-XL.jpg",
@@ -1977,7 +1977,7 @@ export const galleryData = [
   {
     "id": "i-2Jr5X8d",
     "title": "Buttermilk Falls",
-    "description": "A fine art landscape photograph of the Teton range, shaped by scale rather than spectacle. Rather than documenting scenery, this work reveals the quiet presence that defines a region. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the terrain dwarfs human measure. Part of Wayne Heim's Western American landscape photography series. © Wayne Heim",
+    "description": "Buttermilk Falls in Idaho becomes a traditional western landscape photograph shaped by moving water, rock, and quiet natural force. This waterfall image creates wall art rooted in Western mountain country, stream texture, and the steady pull of falling water.",
     "alt": "Alone on Prairie    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-2Jr5X8d/4/L3Wgd3NHC37dzwptHDDBkqk6nwkgkk5PMFxKgkZd3/XL/P1020471-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-2Jr5X8d/4/L3Wgd3NHC37dzwptHDDBkqk6nwkgkk5PMFxKgkZd3/XL/P1020471-XL.jpg",
@@ -2007,7 +2007,7 @@ export const galleryData = [
   {
     "id": "i-Bdbf3L9",
     "title": "The Great Protectors - by Wayne Heim",
-    "description": "Between Trees - T.A. Moulton Barn, a famous old barn, is viewed between or guarded by two cottonwood trees. The great golden protectors perfectly frame the scene and focus the attention on the barn and the Tetons in the background.  © Wayne Heim",
+    "description": "The T.A. Moulton Barn is framed between two golden cottonwood trees, with the Tetons rising in the background. This traditional western landscape photograph creates wall art rooted in Wyoming homestead history, natural framing, and the protective rhythm of trees around an iconic barn.",
     "alt": "Buttermilk Falls",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-Bdbf3L9/5/LW5kVVz87p9QBdFCChS79XrtVKxbk3mBZL9bsn94w/XL/_IMG6391-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-Bdbf3L9/5/LW5kVVz87p9QBdFCChS79XrtVKxbk3mBZL9bsn94w/XL/_IMG6391-XL.jpg",
@@ -2038,7 +2038,7 @@ export const galleryData = [
   {
     "id": "i-WmSkQXV",
     "title": "Wyoming Road - Black  & White Photography by Wayne Heim",
-    "description": "Wyoming Road - lonely road across Wyoming with the Grand Tetons in background. ©Wayne Heim",
+    "description": "A lonely Wyoming road stretches toward the Grand Tetons, turning distance and direction into black and white Western landscape photography. This traditional western landscape image creates wall art rooted in open road, mountain horizon, and the long pull of American West travel.",
     "alt": "The Great Protectors - by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-WmSkQXV/4/KvHmv6B9ZFTmpQhsk8x3rw9VcBsqgFfLVdzkvhMM4/XL/_IMG6439-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-WmSkQXV/4/KvHmv6B9ZFTmpQhsk8x3rw9VcBsqgFfLVdzkvhMM4/XL/_IMG6439-XL.jpg",
@@ -2069,7 +2069,7 @@ export const galleryData = [
   {
     "id": "i-VBDWkZV",
     "title": "Country Road   Photography by Wayne Heim",
-    "description": "Wyoming road with mountains in background  \n©Wayne Heim",
+    "description": "A Wyoming country road leads toward mountains in the distance, creating a traditional western landscape photograph about movement, openness, and approach. This Western scenery wall art is rooted in road, horizon, and the quiet invitation of open country.",
     "alt": "Wyoming Road - Black  & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/photos/i-VBDWkZV/3/K5rRHrB6jk6Lg77qDRhVTBttw8hvVxrxKjqPG9g22/XL/i-VBDWkZV-XL.jpg",
     "srcXL": "https://photos.smugmug.com/photos/i-VBDWkZV/3/K5rRHrB6jk6Lg77qDRhVTBttw8hvVxrxKjqPG9g22/XL/i-VBDWkZV-XL.jpg",
@@ -2100,7 +2100,7 @@ export const galleryData = [
   {
     "id": "i-mvV5gWN",
     "title": "Western Sky Xandy.",
-    "description": "A fine art landscape of the Teton range, shaped by stillness rather than spectacle. Wayne Heim's fine art landscape photography treats place as emotional geography - not destination, but atmosphere. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the land holds its breath between seasons. Part of Wayne Heim's Western American landscape photography series. © Wayne Heim",
+    "description": "Clouds drift over golden prairie in a Western sky scene, turning open land and weather into a quiet study of color and distance. This traditional western landscape photograph creates wall art rooted in sky, prairie, and the soft spectacle of open country.",
     "alt": "Country Road   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-mvV5gWN/9/LsgtDwDk6kKjzmCnrDtDhbPmNFP7svbD57fQkvXJt/XL/_WEH7842-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-mvV5gWN/9/LsgtDwDk6kKjzmCnrDtDhbPmNFP7svbD57fQkvXJt/XL/_WEH7842-XL.jpg",
@@ -2130,7 +2130,7 @@ export const galleryData = [
   {
     "id": "i-RhMjXGk",
     "title": "Bryce Canyon",
-    "description": "Black and white landscape photograph of Bryce Canyon formations and cloud texture in Utah. © Wayne Heim",
+    "description": "Bryce Canyon formations and cloud texture are rendered in black and white, turning Utah’s canyon landscape into a study of shape, erosion, and atmosphere. This traditional desert landscape photograph creates Utah wall art rooted in stone, shadow, and sculptural terrain.",
     "alt": "Black and white landscape photograph of Bryce Canyon formations in Utah.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-RhMjXGk/8/LdTmRq4SPLfrbVFDB3bx69n7vz98RXcq9d9BxxJkM/XL/_WEH8022_tonemapped-3-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-RhMjXGk/8/LdTmRq4SPLfrbVFDB3bx69n7vz98RXcq9d9BxxJkM/XL/_WEH8022_tonemapped-3-XL.jpg",
@@ -2160,7 +2160,7 @@ export const galleryData = [
   {
     "id": "i-7FnMfnx",
     "title": "On the road again. Wyoming.",
-    "description": "A fine art landscape of the Teton range, shaped by stillness rather than spectacle. Rather than documenting scenery, this work reveals the quiet presence that defines a region. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the land holds its breath between seasons. Part of Wayne Heim's Western American landscape photography series. © Wayne Heim",
+    "description": "A road carries the feeling of Wyoming highway life, turning movement, open land, and Western distance into a traditional landscape photograph. This Western scenery wall art is rooted in travel, horizon, and the quiet pull of the road ahead.",
     "alt": "On the road again. Wyoming.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-7FnMfnx/10/KR7zkj89GdZbZNThWc4XW8gGSgct52KCSG7KzjR2V/XL/_WEH8158-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-7FnMfnx/10/KR7zkj89GdZbZNThWc4XW8gGSgct52KCSG7KzjR2V/XL/_WEH8158-XL.jpg",
@@ -2190,7 +2190,7 @@ export const galleryData = [
   {
     "id": "i-BXnLp72",
     "title": "Perseverance. Photography by Wayne Heim",
-    "description": "\"Perseverance\" Old gnarled tree survives in Wyoming landscape. ©Wayne Heim",
+    "description": "An old gnarled tree survives in the Wyoming landscape, turning endurance into the center of the frame. This traditional western landscape photograph creates wall art rooted in resilience, weathered form, and the stark beauty of survival in open country.",
     "alt": "On the road again. Wyoming.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-BXnLp72/9/NN6zDZM5HFqBtX3SnCx353msFTLHQJ8MbFrFHjsHs/XL/_WEH8409-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-BXnLp72/9/NN6zDZM5HFqBtX3SnCx353msFTLHQJ8MbFrFHjsHs/XL/_WEH8409-2-XL.jpg",
@@ -2221,7 +2221,7 @@ export const galleryData = [
   {
     "id": "i-fCx77HN",
     "title": "Over the Hill -- Black & White Photography",
-    "description": "Over the Hill - shot of a road going over a hill in western states. ©Wayne Heim",
+    "description": "A road rises over a hill in the Western states, turning simple terrain into a black and white image about movement and uncertainty. This traditional western landscape photograph creates wall art rooted in road, horizon, and the quiet question of what comes next.",
     "alt": "Perseverance. Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-fCx77HN/10/LVRCT2fggMw6CSQ5kxK2Mv9xGhtT5GcRVkBQMmvJV/XL/_WEH8495-3-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-fCx77HN/10/LVRCT2fggMw6CSQ5kxK2Mv9xGhtT5GcRVkBQMmvJV/XL/_WEH8495-3-XL.jpg",
@@ -2252,7 +2252,7 @@ export const galleryData = [
   {
     "id": "i-xBJqD6x",
     "title": "Erosion 2  Photography by Wayne Heim",
-    "description": "Erosion 2 - the eroded landscape of Utah  ©Wayne Heim",
+    "description": "The eroded landscape of Utah becomes a traditional western landscape photograph shaped by desert texture, carved ground, and geological time. This Utah landscape image creates wall art rooted in erosion, arid form, and the rugged beauty of the American West.",
     "alt": "Over the Hill -- Black & White Photography",
     "src": "https://photos.smugmug.com/photos/i-xBJqD6x/3/LqkCXrfnJPb952BS6rjjZQR5bDf3LrgDwx8SgRnLb/XL/i-xBJqD6x-XL.jpg",
     "srcXL": "https://photos.smugmug.com/photos/i-xBJqD6x/3/LqkCXrfnJPb952BS6rjjZQR5bDf3LrgDwx8SgRnLb/XL/i-xBJqD6x-XL.jpg",
@@ -2283,7 +2283,7 @@ export const galleryData = [
   {
     "id": "i-PPSGJGr",
     "title": "Looking Up. Photography by Wayne Hein",
-    "description": "Looking Up, black and white photo of mountain face looking towards the top. ©Wayne Heim",
+    "description": "Looking Up studies a mountain face in black and white, pulling the viewer’s eye toward height, texture, and stone. This traditional western landscape photograph creates mountain wall art rooted in vertical force, shadow, and the quiet scale of rock.",
     "alt": "Erosion 2  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-PPSGJGr/11/Mt49CqMCDR8nHfqRRN4dCP6zxMMvzZgjrS6dBFDC9/XL/_WEH9901-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-PPSGJGr/11/Mt49CqMCDR8nHfqRRN4dCP6zxMMvzZgjrS6dBFDC9/XL/_WEH9901-XL.jpg",
@@ -2314,7 +2314,7 @@ export const galleryData = [
   {
     "id": "i-Nj2t7F2",
     "title": "Three Peaks. Photography by Wayne Heim",
-    "description": "Three Peaks poke head up in desolate landscape, black and white photograph  ©Wayne Heim",
+    "description": "Three peaks rise from a desolate landscape in black and white, turning sparse terrain into a study of distance and form. This traditional western landscape photograph creates wall art rooted in mountain shape, open ground, and the stark quiet of the American West.",
     "alt": "Looking Up. Photography by Wayne Hein",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-Nj2t7F2/11/L78xKR3D6J2srXzJvR542mkKHN5Qvb5mXV6J34DKs/XL/_WEH9908-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-Nj2t7F2/11/L78xKR3D6J2srXzJvR542mkKHN5Qvb5mXV6J34DKs/XL/_WEH9908-XL.jpg",
@@ -2345,7 +2345,7 @@ export const galleryData = [
   {
     "id": "i-vsFH6hj",
     "title": "Test of Time - Black & White Photography by Wayne Heim",
-    "description": "Test of Time --old roots of a tree are all that is left. ©Wayne Heim",
+    "description": "Old tree roots remain as a test of time, turning a small remnant into a black and white Western landscape detail. This traditional fine art photograph creates wall art rooted in texture, endurance, and the quiet evidence of what survives.",
     "alt": "Three Peaks. Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-vsFH6hj/9/NNdkx4fGJjzVshwKV2xmLVf9dqWcc3LqQLQB458Dv/XL/_WEH9914-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-vsFH6hj/9/NNdkx4fGJjzVshwKV2xmLVf9dqWcc3LqQLQB458Dv/XL/_WEH9914-Edit-XL.jpg",
@@ -2376,7 +2376,7 @@ export const galleryData = [
   {
     "id": "i-7S934Ld",
     "title": "Double Arches. Photography by Wayne Heim",
-    "description": "Double Arches- view of two of the arches in Arches National Park in Utah. ©Wayne Heim",
+    "description": "Double Arches in Arches National Park, Utah becomes a traditional western landscape photograph shaped by stone openings, desert light, and carved form. This Utah landscape image creates wall art rooted in red-rock country, erosion, and natural architecture.",
     "alt": "Test of Time - Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-7S934Ld/10/Njbnk99DjCRnN84Q266t6FHpSqbpvdxWFkQ8n38Tm/XL/_WEH0011-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-7S934Ld/10/Njbnk99DjCRnN84Q266t6FHpSqbpvdxWFkQ8n38Tm/XL/_WEH0011-XL.jpg",
@@ -2407,7 +2407,7 @@ export const galleryData = [
   {
     "id": "i-NdL9dGW",
     "title": "Sunset in Arches  #1   Photography by Wayne Heim",
-    "description": "Sun is setting over the vast landscape of Utah.  ©Wayne Heim",
+    "description": "The sun sets over the vast landscape of Utah, turning open desert distance into a traditional western landscape photograph. This Utah wall art is shaped by evening light, scale, and the quiet drama of the American West at day’s end.",
     "alt": "Double Arches. Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-NdL9dGW/11/Mr6HFK8nSp835Fbgq4bstjpL9Hh37G6MDSXsztf6g/XL/_WEH0098-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-NdL9dGW/11/Mr6HFK8nSp835Fbgq4bstjpL9Hh37G6MDSXsztf6g/XL/_WEH0098-XL.jpg",
@@ -2438,7 +2438,7 @@ export const galleryData = [
   {
     "id": "i-kcvnCvz",
     "title": "Sunset in Arches. #2 Photography by Wayne Heim",
-    "description": "Sunset in Arches. Sun is setting behind rock formations in Arches National Park, Utah ©Wayne Heim",
+    "description": "Sunset settles behind rock formations in Arches National Park, Utah, creating a Western landscape of stone, sky, and fading light. This traditional desert landscape photograph creates Utah wall art rooted in natural form, color, and the atmosphere of dusk.",
     "alt": "Sunset in Arches  #1   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-kcvnCvz/11/LPQbLScpc8SGNH4mnfqzpZvFW479Z2kXswNzPFbRP/XL/_WEH0101-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-kcvnCvz/11/LPQbLScpc8SGNH4mnfqzpZvFW479Z2kXswNzPFbRP/XL/_WEH0101-XL.jpg",
@@ -2469,7 +2469,7 @@ export const galleryData = [
   {
     "id": "i-M8FrQGL",
     "title": "Endless texture.",
-    "description": "A fine art landscape photograph of the Teton range, shaped by scale rather than spectacle. Wayne Heim's fine art landscape photography treats place as emotional geography - not destination, but atmosphere. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the terrain dwarfs human measure. Part of Wayne Heim's Western American landscape photography series. © Wayne Heim",
+    "description": "Endless texture defines this Canyonlands, Utah landscape, where stone, erosion, and desert surface become the subject. This traditional western landscape photograph creates Utah wall art rooted in canyon detail, geological rhythm, and the quiet force of layered terrain.",
     "alt": "Sunset in Arches. #2 Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-M8FrQGL/11/M89pbC2SG439bP95qJsFnvf8RkBnNH8zDxhP2jc5R/XL/_WEH0229-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-M8FrQGL/11/M89pbC2SG439bP95qJsFnvf8RkBnNH8zDxhP2jc5R/XL/_WEH0229-XL.jpg",
@@ -2499,7 +2499,7 @@ export const galleryData = [
   {
     "id": "i-WvsDG8b",
     "title": "Sunset Over the Canyon   Photography by Wayne Heim",
-    "description": "Sunset at Canyon Lands National Park in Utah.  ©Wayne Heim",
+    "description": "Sunset at Canyonlands National Park in Utah turns canyon country into a study of light, distance, and carved land. This traditional western landscape photograph creates Utah wall art rooted in evening atmosphere, desert scale, and the rugged beauty of the American West.",
     "alt": "Endless texture.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-WvsDG8b/9/MnJCVn9QJLmjBWfwD6QPQ8q7V5CtgKsdJPprJdV84/XL/_WEH0274-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-WvsDG8b/9/MnJCVn9QJLmjBWfwD6QPQ8q7V5CtgKsdJPprJdV84/XL/_WEH0274-Edit-Edit-XL.jpg",
@@ -2530,7 +2530,7 @@ export const galleryData = [
   {
     "id": "i-pVWz7xc",
     "title": "Mountain Back Road   Photography by Wayne Heim",
-    "description": "Rutted road leads to the mountains in the background in Wyoming.  ©Wayne Heim",
+    "description": "A rutted Wyoming back road leads toward mountains in the background, turning rough passage into traditional western landscape photography. This Western scenery wall art is rooted in road, distance, and the open invitation of mountain country.",
     "alt": "Sunset Over the Canyon   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-pVWz7xc/2/KK46ZGggd2kv6bFHjDBKwwnNcMQ44B24BxxBRxwnB/XL/_WHZ7256-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-pVWz7xc/2/KK46ZGggd2kv6bFHjDBKwwnNcMQ44B24BxxBRxwnB/XL/_WHZ7256-XL.jpg",
