@@ -25,7 +25,7 @@ export const galleryData = [
   {
     "id": "i-pwMVKTQ",
     "title": "Capturing Aviation Art Prints",
-    "description": "A painterly fine art photograph of a vintage airplane, defined by motion rather than nostalgia. Wayne Heim's vintage transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Light and structure shape a narrative rooted in transition, industry, and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A Cleveland Air Show aircraft moment becomes aviation photography through gesture, machinery, and the excitement of flight culture. This fine art plane photograph creates aviation wall art rooted in airshow energy, aircraft presence, and the human enthusiasm surrounding machines built to fly.",
     "alt": "Thumbs Up    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-pwMVKTQ/A",
     "keywords": [
@@ -58,7 +58,7 @@ export const galleryData = [
   {
     "id": "i-dTLMtz9",
     "title": "Plane Art Prints For Enthusiasts In Fine Art",
-    "description": "A painterly fine art photograph of vintage aviation, defined by motion rather than nostalgia. Wayne Heim's fine art transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Light and structure shape a narrative rooted in transition, industry, and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A vintage aviation subject becomes fine art through aircraft form, light, and the mechanical romance of flight. This plane photography creates aviation art prints rooted in transportation history, engineered structure, and the timeless appeal of airplanes held in a single frame.",
     "alt": "Thumbs Up    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-dTLMtz9/A",
     "keywords": [
@@ -85,7 +85,7 @@ export const galleryData = [
   {
     "id": "i-kPsZTTH",
     "title": "Duo   Photography by Wayne Heim",
-    "description": "Two planes from the Cleveland Air show show their stuff. ©Wayne Heim",
+    "description": "Two planes from the Cleveland Air Show perform together, turning aircraft motion and formation into aviation photography. This fine art plane image creates airshow wall art rooted in speed, coordination, and the visual excitement of machines moving through open sky.",
     "alt": "F4 Phantom II Fighter Jet  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-kPsZTTH/A",
     "keywords": [
@@ -113,7 +113,7 @@ export const galleryData = [
   {
     "id": "i-QFBWthj",
     "title": "Going Away - Photograohy by Wayne Heim",
-    "description": "Going Away - the Air Force Thunderbirds fly away in formation at Cleveland Air Show. ©Wayne Heim",
+    "description": "The Air Force Thunderbirds fly away in formation at the Cleveland Air Show, carrying precision, distance, and military aviation presence across the frame. This plane photograph creates aviation wall art rooted in formation flight, airshow spectacle, and the disciplined rhythm of aircraft in motion.",
     "alt": "Duo   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-QFBWthj/A",
     "keywords": [
@@ -141,7 +141,7 @@ export const galleryData = [
   {
     "id": "i-Bj2CzZB",
     "title": "Stacked- Photography by Wayne Heim",
-    "description": "On Top of Each Other - Air Force Thunderbirds fly stacked over each other almost touching. ©Wayne Heim",
+    "description": "Air Force Thunderbirds fly stacked almost on top of each other, turning close formation into a study of precision and trust. This aviation photograph creates plane wall art rooted in military flight discipline, airshow drama, and the narrow space between control and risk.",
     "alt": "Going Away - Photograohy by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-Bj2CzZB/A",
     "keywords": [
@@ -169,7 +169,7 @@ export const galleryData = [
   {
     "id": "i-GfVVjJz",
     "title": "Close Formation - Photography by Wayne Heim",
-    "description": "Close Formation - Air Force Thunderbirds fly in close formation at the Cleveland Air Show. ©Wayne Heim",
+    "description": "The Air Force Thunderbirds fly in close formation at the Cleveland Air Show, creating a clean study of alignment, speed, and sky. This aviation photograph creates airshow wall art rooted in military aircraft precision, formation discipline, and the visual force of planes moving as one.",
     "alt": "Stacked- Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-GfVVjJz/A",
     "keywords": [
@@ -197,7 +197,7 @@ export const galleryData = [
   {
     "id": "i-VXDQLcR",
     "title": "One More - Photography by Wayne Heim",
-    "description": "One More - five Air Force Thunderbirds fly in pyramid formation at Cleveland Air Show. ©Wayne Heim",
+    "description": "Five Air Force Thunderbirds fly in pyramid formation at the Cleveland Air Show, turning formation geometry into aviation fine art. This plane photograph creates wall art rooted in airshow photography, military aircraft performance, and the ordered beauty of flight.",
     "alt": "Close Formation - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-VXDQLcR/A",
     "keywords": [
@@ -225,7 +225,7 @@ export const galleryData = [
   {
     "id": "i-nKNphs8",
     "title": "Close Six - Photography by Wayne Heim",
-    "description": "Air Force Thunderbirds fly in close pyramid formation. ©Wayne Heim",
+    "description": "The Air Force Thunderbirds fly in a close pyramid formation, compressing aircraft, distance, and trust into one precise aviation image. This fine art plane photograph creates wall art rooted in military aviation photography, airshow discipline, and the elegance of controlled speed.",
     "alt": "One More - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-nKNphs8/A",
     "keywords": [
@@ -253,7 +253,7 @@ export const galleryData = [
   {
     "id": "i-TLf9dqV",
     "title": "We Remember -- Photography by Wayne Heim",
-    "description": "We Remember -- Pow*Mia Flag flies with the Stars and Stripes ©Wayne Heim",
+    "description": "A POW/MIA flag flies with the Stars and Stripes, bringing remembrance into the aviation and military setting. This fine art photograph creates patriotic wall art rooted in service, memory, and the human cost carried alongside aircraft, airshows, and military history.",
     "alt": "Close Six - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-TLf9dqV/A",
     "keywords": [
@@ -281,7 +281,7 @@ export const galleryData = [
   {
     "id": "i-jQRfK97",
     "title": "USAF Plane  Photography by Wayne Heim",
-    "description": "A painterly fine art photograph of a passenger car, defined by motion rather than nostalgia. Wayne Heim's historic transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Light and structure shape a narrative rooted in transition, industry, and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A WWII-era U.S. Air Force passenger plane becomes aviation photography through aircraft form, historic purpose, and restored presence. This vintage airplane photograph creates wall art rooted in military aviation history, transport aircraft design, and the quieter side of wartime flight.",
     "alt": "We Remember -- Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-jQRfK97/A",
     "keywords": [
@@ -309,7 +309,7 @@ export const galleryData = [
   {
     "id": "i-LBfNr5K",
     "title": "Navy Fighter    Photography by Wayne Heim",
-    "description": "Navy fighter sits on runway at an air show.\n ©Wayne Heim",
+    "description": "A Navy fighter sits on the runway at an air show, turning military aircraft design into fine art transportation photography. This plane photograph creates aviation wall art rooted in runway presence, fighter aircraft structure, and the stillness before flight.",
     "alt": "USAF Plane  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-LBfNr5K/A",
     "keywords": [
@@ -337,7 +337,7 @@ export const galleryData = [
   {
     "id": "i-ZRfqtVk",
     "title": "Propeller   Photography by Wayne Heim",
-    "description": "A painterly fine art photograph of a vintage airplane, defined by motion rather than nostalgia. Wayne Heim's vintage transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Light and structure shape a narrative rooted in transition, industry, and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "The propeller of an old restored plane becomes aviation fine art through radial form, mechanical detail, and the memory of motion. This vintage airplane photograph creates wall art rooted in aircraft engineering, restored machinery, and the sculptural beauty of flight hardware.",
     "alt": "Navy Fighter    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-ZRfqtVk/A",
     "keywords": [
@@ -365,7 +365,7 @@ export const galleryData = [
   {
     "id": "i-Hs3n5dS",
     "title": "Yankee Doodle Dandy   Photography by Wayne Heim",
-    "description": "Yankee Doodle Dandy  is a U.S Air Force WWII era passenger plane. ©Wayne Heim \n\n\n\n\n\n\n\n\nI",
+    "description": "Yankee Doodle Dandy, a WWII-era U.S. Air Force passenger plane, becomes vintage aviation photography through restored aircraft form and historic identity. This fine art plane photograph creates aviation wall art rooted in military transport history, aircraft preservation, and wartime-era design.",
     "alt": "Propeller   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-Hs3n5dS/A",
     "keywords": [
@@ -393,7 +393,7 @@ export const galleryData = [
   {
     "id": "i-HtkF9rx",
     "title": "Dandy's Nose   Photography by Wayne Heim",
-    "description": "A painterly fine art photograph of a passenger car, defined by motion rather than nostalgia. Wayne Heim's fine art transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Light and structure shape a narrative rooted in transition, industry, and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "The nose of the USAF passenger plane Yankee Doodle Dandy becomes a close aviation portrait, shaped by aircraft form and restored surface. This vintage airplane photograph creates wall art rooted in military transport design, historic aircraft detail, and the personality carried by a plane's face.",
     "alt": "Yankee Doodle Dandy   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-HtkF9rx/A",
     "keywords": [
@@ -421,7 +421,7 @@ export const galleryData = [
   {
     "id": "i-3x7rZ6g",
     "title": "Dandy in Black & White     Black & White Photography by Wayne Heim",
-    "description": "Black & White view of nose of USAF passenger plane  ©Wayne Heim",
+    "description": "The nose of a USAF passenger plane is rendered in black and white, turning aircraft structure into a tonal study of form and history. This vintage aviation photograph creates plane wall art rooted in military transport design, restored surface, and the quiet force of monochrome aircraft photography.",
     "alt": "Dandy's Nose   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-3x7rZ6g/A",
     "keywords": [
@@ -449,7 +449,7 @@ export const galleryData = [
   {
     "id": "i-TW5rKS7",
     "title": "WW II Fighter - Photography by Wayne Heim",
-    "description": "WW II Fighter -  fighter plane demonstration with smoke to follow path. ©Wayne Heim",
+    "description": "A WWII fighter plane demonstrates with smoke tracing its path, turning aircraft motion into aviation photography. This fine art plane image creates wall art rooted in military aviation, airshow movement, and the visible arc of speed through the sky.",
     "alt": "Dandy in Black & White     Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-TW5rKS7/A",
     "keywords": [
@@ -477,7 +477,7 @@ export const galleryData = [
   {
     "id": "i-dRBzDM9",
     "title": "Dandy in Flight   Photography by Wayne Heim",
-    "description": "Yankee Doodle Dandy USAF plane in flight.  ©Wayne Heim",
+    "description": "Yankee Doodle Dandy flies overhead, turning a WWII-era USAF passenger plane into aviation art in motion. This fine art plane photograph creates wall art rooted in historic flight, military transport aircraft, and the restored grace of vintage aviation.",
     "alt": "WW II Fighter - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-dRBzDM9/A",
     "keywords": [
@@ -505,7 +505,7 @@ export const galleryData = [
   {
     "id": "i-6cNGRBZ",
     "title": "B-25 -- Photography by Wayne Heim",
-    "description": "B-25 -  WW II B-25 bomber in demonstration at D Day Conneaut. ©Wayne Heim",
+    "description": "A WWII B-25 bomber demonstrates at D-Day Conneaut, bringing historic military aviation into the air above a living history setting. This aviation photograph creates WWII aircraft wall art rooted in bomber history, flight demonstration, and the machinery of wartime memory.",
     "alt": "Dandy in Flight   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-6cNGRBZ/A",
     "keywords": [
@@ -533,7 +533,7 @@ export const galleryData = [
   {
     "id": "i-7PT9GwS",
     "title": "Gun Turret -  Photography by Wayne Heim",
-    "description": "Gun Turret -  WW II bomber protected by gun turret.©Wayne Heim",
+    "description": "A WWII bomber gun turret becomes aviation fine art through glass, metal, and the defensive geometry of aircraft design. This military aviation photograph creates wall art rooted in bomber history, wartime engineering, and the close mechanical tension of protection from the air.",
     "alt": "B-25 -- Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-7PT9GwS/A",
     "keywords": [
@@ -561,7 +561,7 @@ export const galleryData = [
   {
     "id": "i-28wLMv4",
     "title": "Propeller of B52   Photogra[phy by Wayne Heim",
-    "description": "Power plant of the B52 , Close up of a propeller.    ©Wayne Heim",
+    "description": "A close view of a B-52 power plant and propeller becomes aviation photography through engine structure, blade form, and mechanical force. This fine art aircraft image creates plane wall art rooted in military aviation detail, power, and the engineering language of flight.",
     "alt": "Gun Turret -  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-28wLMv4/A",
     "keywords": [
@@ -589,7 +589,7 @@ export const galleryData = [
   {
     "id": "i-DXWW75L",
     "title": "Front View    Photography by Wayne Heim",
-    "description": "Front view of WW II bomber showing gun turret, pilot  seat and propellers.  ©Wayne Heim",
+    "description": "The front view of a WWII bomber shows gun turret, pilot seat, and propellers, turning aircraft architecture into fine art transportation photography. This vintage aviation image creates wall art rooted in bomber design, cockpit presence, and the layered machinery of wartime flight.",
     "alt": "Propeller of B52   Photogra[phy by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-DXWW75L/A",
     "keywords": [
@@ -617,7 +617,7 @@ export const galleryData = [
   {
     "id": "i-sTRwRwB",
     "title": "Cockpit    Photograph by Wayne Heim",
-    "description": "Cockpit of WW II bomber seen from rear.  ©Wayne Heim",
+    "description": "The cockpit of a WWII bomber seen from the rear becomes aviation fine art through instruments, confined space, and the practical architecture of flight. This aircraft photograph creates wall art rooted in cockpit detail, bomber history, and the human scale inside military aviation.",
     "alt": "Front View    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-sTRwRwB/A",
     "keywords": [
@@ -645,7 +645,7 @@ export const galleryData = [
   {
     "id": "i-Sv2QJHR",
     "title": "Inside Gun Turret 3   Photography by Wayne Heim",
-    "description": "Inside view of a gun turret on WW II\n bomber  ©Wayne Heim",
+    "description": "Inside a WWII bomber gun turret, glass, metal, and cramped geometry form a tense aviation study. This military aircraft photograph creates wall art rooted in turret design, wartime protection, and the close interior world of bomber crews.",
     "alt": "Cockpit    Photograph by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-Sv2QJHR/A",
     "keywords": [
@@ -673,7 +673,7 @@ export const galleryData = [
   {
     "id": "i-n69gkSP",
     "title": "Bomb Bay --Black & White Photography by Wayne Heim",
-    "description": "Bomb Bay - looking up into the bomb bay of a plane showing the bombs waiting to be dropped.©Wayne Heim",
+    "description": "Looking up into the bomb bay of a plane, the image studies suspended bombs, aircraft structure, and the unsettling mechanics of war. This black and white aviation photograph creates military aircraft wall art rooted in bomber design, shadow, and wartime machinery.",
     "alt": "Inside Gun Turret 3   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-n69gkSP/A",
     "keywords": [
@@ -701,7 +701,7 @@ export const galleryData = [
   {
     "id": "i-WhRvxFT",
     "title": "Bombs Away -  Photography by Wayne Heim",
-    "description": "B25 bomber flies over with bomb bay doors open. ©Wayne Heim",
+    "description": "A B-25 bomber flies overhead with bomb bay doors open, turning military aviation into a dramatic plane photograph. This WWII aircraft image creates wall art rooted in bomber flight, open sky, and the tense visual language of wartime machinery.",
     "alt": "Bomb Bay --Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-WhRvxFT/A",
     "keywords": [
@@ -729,7 +729,7 @@ export const galleryData = [
   {
     "id": "i-DGWLqTv",
     "title": "Timeless Aviation Prints Study",
-    "description": "A painterly fine art photograph of vintage aviation, defined by motion rather than nostalgia. Wayne Heim's historic transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Light and structure shape a narrative rooted in transition, industry, and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A B-25 bomber in flight becomes timeless aviation photography through aircraft form, open bomb bay doors, and the drama of airshow motion. This fine art plane photograph creates wall art rooted in WWII aircraft history, aviation art, and the enduring presence of machines built for war and flight.",
     "alt": "Bombs Away -  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-DGWLqTv/A",
     "keywords": [
