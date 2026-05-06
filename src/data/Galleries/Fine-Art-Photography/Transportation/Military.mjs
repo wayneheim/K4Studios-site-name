@@ -25,7 +25,7 @@ export const galleryData = [
   {
     "id": "i-nFzhgqf",
     "title": "Western Portrait",
-    "description": "Fine Art Photography by Wayne Heim from the Photo Shoots collection. New Work! — More info coming soon.",
+    "description": "A WWII reenactment military transportation scene becomes fine art through machinery, beach terrain, and the atmosphere of staged history. This historic military vehicle photograph creates wall art rooted in D-Day reenactment, armored presence, and the visual weight of wartime transportation.",
     "alt": "© Wayne Heim '21",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-nFzhgqf/2/LjtzbsgR8dG4VwnXLvcPL8p6L2pZZRJgCNrh7Wj37/XL/_WHK1449-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-nFzhgqf/2/LjtzbsgR8dG4VwnXLvcPL8p6L2pZZRJgCNrh7Wj37/XL/_WHK1449-XL.jpg",
@@ -57,7 +57,7 @@ export const galleryData = [
   {
     "id": "i-X88ZNb4",
     "title": "Western Portrait",
-    "description": "Fine Art Photography by Wayne Heim from the Photo Shoots collection. New Work! — More info coming soon.",
+    "description": "Coming up the sand, a military vehicle scene carries the force of WWII reenactment photography through armor, beach, and forward motion. This historic transportation photograph creates wall art rooted in D-Day atmosphere, military machinery, and the pressure of a landing moment.",
     "alt": "Coming Up the Sand.   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-X88ZNb4/1/MGWTc2XH3Ztrh3stZnJf8mmnpBb3s484cmLPkzzBz/XL/_ANA3303-Edit-2-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-X88ZNb4/1/MGWTc2XH3Ztrh3stZnJf8mmnpBb3s484cmLPkzzBz/XL/_ANA3303-Edit-2-2-XL.jpg",
@@ -89,7 +89,7 @@ export const galleryData = [
   {
     "id": "i-7PT9GwS",
     "title": "Gun Turret -  Photography by Wayne Heim",
-    "description": "Gun Turret -  WW II bomber protected by gun turret.©Wayne Heim",
+    "description": "A WWII bomber gun turret becomes military aviation photography through glass, metal, and the defensive geometry of wartime aircraft design. This historic transportation photograph creates wall art rooted in bomber history, aviation detail, and the mechanical tension of protection from the air.",
     "alt": "© Wayne Heim '21",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Liberty-Aviation-Museum/i-7PT9GwS/4/LSwnfmPpBkdrjcr2bTkXBTx5vPsh5Xsf4N9J5WfV3/XL/_IMG8646-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Liberty-Aviation-Museum/i-7PT9GwS/4/LSwnfmPpBkdrjcr2bTkXBTx5vPsh5Xsf4N9J5WfV3/XL/_IMG8646-Edit-XL.jpg",
@@ -121,7 +121,7 @@ export const galleryData = [
   {
     "id": "i-6gP4DrL",
     "title": "Ambulance - Photography by Wayne Heim",
-    "description": "Ambulance - restored WW II ambulance on display at Liberty Aviation. ©Wayne Heim",
+    "description": "A restored WWII ambulance on display at Liberty Aviation becomes historic military vehicle art through its medical purpose, utilitarian form, and restored wartime presence. This military transportation photograph creates wall art rooted in service, rescue, and the machinery that carried aid through war.",
     "alt": "Gun Turret -  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Liberty-Aviation-Museum/i-6gP4DrL/4/MhvtsVkfjkXfmLFXKFf9XXcb42KqnZQLfnQcBPdqC/XL/_IMG9075-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Liberty-Aviation-Museum/i-6gP4DrL/4/MhvtsVkfjkXfmLFXKFf9XXcb42KqnZQLfnQcBPdqC/XL/_IMG9075-XL.jpg",
@@ -153,7 +153,7 @@ export const galleryData = [
   {
     "id": "i-SDtQKgL",
     "title": "Don't Go - Photography by Wayne Heim",
-    "description": "Don't  Go --  GI and his girl sit atop a tank, she seems to say \"Don\"t Go Away\". Reenactors from D Day Conneaut.©Wayne Heim",
+    "description": "A GI and his girl sit atop a tank during a WWII reenactment, turning military transportation into a human story of pause, affection, and uncertainty. This fine art military vehicle photograph creates wall art rooted in armor, living history, and the emotional space around departure.",
     "alt": "Ambulance - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Rockford-WWII-Days-2013/i-SDtQKgL/4/KmTQL2stM5xZwQp9NKRnpSZ9Z4V5VHvwcgMsCFdts/XL/_WEH4360-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Rockford-WWII-Days-2013/i-SDtQKgL/4/KmTQL2stM5xZwQp9NKRnpSZ9Z4V5VHvwcgMsCFdts/XL/_WEH4360-XL.jpg",
@@ -185,7 +185,7 @@ export const galleryData = [
   {
     "id": "i-WhRvxFT",
     "title": "Bombs Away -  Photography by Wayne Heim",
-    "description": "B25 bomber flies over with bomb bay doors open. ©Wayne Heim",
+    "description": "A B-25 bomber flies overhead with bomb bay doors open, turning military aviation into a dramatic transportation photograph. This WWII aircraft image creates wall art rooted in flight, wartime machinery, and the tense geometry of a bomber crossing the sky.",
     "alt": "Don't Go - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-WhRvxFT/3/KsTSFHD4bpPP2rtFf4Pvfj6PLNvSVjMBKMgGQ5SFK/XL/_WHZ4071-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-WhRvxFT/3/KsTSFHD4bpPP2rtFf4Pvfj6PLNvSVjMBKMgGQ5SFK/XL/_WHZ4071-XL.jpg",
@@ -217,7 +217,7 @@ export const galleryData = [
   {
     "id": "i-mN4NQNP",
     "title": "Small but Mighty in Color   Photography by Wayne Heim",
-    "description": "Tank used in Bulletfest reenactment.  Wayne Heim ©2015",
+    "description": "A tank used in a Bulletfest reenactment becomes color military transportation photography through armored shape, mechanical force, and restored battlefield presence. This historic vehicle photograph creates wall art rooted in tank design, reenactment culture, and the compact power of wartime machinery.",
     "alt": "Bombs Away -  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-mN4NQNP/1/ND89wQx7dgSDGnJjkCwr3HvHk6xbjtkGq8Tcgf94k/XL/_W3H3910_tonemapped-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-mN4NQNP/1/ND89wQx7dgSDGnJjkCwr3HvHk6xbjtkGq8Tcgf94k/XL/_W3H3910_tonemapped-XL.jpg",
@@ -249,7 +249,7 @@ export const galleryData = [
   {
     "id": "i-72mDffp",
     "title": "Small but Mighty  Black & White Photography by Wayne Heim",
-    "description": "Tank used in Bulletfest reenactment.  Wayne Heim ©2015",
+    "description": "A tank used in a Bulletfest reenactment is rendered in black and white, emphasizing armor, mass, and mechanical character. This military transportation photograph creates wall art rooted in tank photography, historic vehicle design, and the stark force of wartime equipment.",
     "alt": "Small but Mighty in Color   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-72mDffp/1/KML9wqqvLp3MBxGDhQvDPPB9pHcprHkpTLkKVGZBZ/XL/_W3H3910_tonemapped-3-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-72mDffp/1/KML9wqqvLp3MBxGDhQvDPPB9pHcprHkpTLkKVGZBZ/XL/_W3H3910_tonemapped-3-XL.jpg",
@@ -281,7 +281,7 @@ export const galleryData = [
   {
     "id": "i-DS9wCpW",
     "title": "Photo Shoots Study",
-    "description": "© Wayne Heim '21",
+    "description": "A military transportation subject becomes fine art through mechanical form, structure, and the quiet authority of restored wartime equipment. This historic vehicle photograph creates wall art rooted in military machinery, utility, and the visual weight of engineered purpose.",
     "alt": "Small but Mighty  Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-DS9wCpW/1/MnFhHXGCf53hLFXxX4Mhwsjhx74VcdFhBqwcBnXZ3/XL/_ANA3291-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-DS9wCpW/1/MnFhHXGCf53hLFXxX4Mhwsjhx74VcdFhBqwcBnXZ3/XL/_ANA3291-Edit-Edit-XL.jpg",
@@ -313,7 +313,7 @@ export const galleryData = [
   {
     "id": "i-wTvbzbV",
     "title": "Photo Shoots Study",
-    "description": "© Wayne Heim '21",
+    "description": "A military vehicle detail is treated as historic transportation photography, where surface, machinery, and structure carry the frame. This fine art photograph creates wall art rooted in wartime equipment, mechanical design, and the disciplined presence of military transportation.",
     "alt": "© Wayne Heim '21",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-wTvbzbV/1/KMDXkjwc9j8JtzwDFFBN5tgXrw7xDpBjkSXjkxv5D/XL/_ANA3350-Enhanced-Edit-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-wTvbzbV/1/KMDXkjwc9j8JtzwDFFBN5tgXrw7xDpBjkSXjkxv5D/XL/_ANA3350-Enhanced-Edit-Edit-2-XL.jpg",
