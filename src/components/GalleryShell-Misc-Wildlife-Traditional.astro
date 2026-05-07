@@ -1,14 +1,19 @@
 ---
-import GalleryShellCore from "@/components/GalleryShellCore.astro";
+import GalleryShellCore from '@/components/GalleryShellCore.astro';
+import ChapterGalleryDirect from '@/components/ChapterGalleryDirect.jsx';
 import ChapterViewer from "@/components/Chapter-Misc-Wildlife-Traditional.jsx";
 import { galleryData as allImages } from "@/data/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife.mjs";
 import { landingWestern as landingData } from "@/data/Galleries/Fine-Art-Photography/Miscellaneous/landingstones.ts";
+import { buildDirectImagePayload } from '@/utils/buildDirectImagePayload.js';
 
 const GALLERY_PATH = "/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife";
 const FALLBACK_DESCRIPTION = "Explore traditional fine art wildlife photography by Wayne Heim. Nature's creatures captured in their element.";
 
 const { breadcrumb, entranceData, initialImageId } = Astro.props;
-const shouldSsrChapterViewer = Boolean(initialImageId && initialImageId !== "i-k4studios") || Astro.url.searchParams.get("view") === "grid";
+const isDirectImagePage = Boolean(initialImageId && initialImageId !== 'i-k4studios');
+const directImagePayload = isDirectImagePage
+  ? buildDirectImagePayload({ allImages, initialImageId, galleryPath: GALLERY_PATH })
+  : null;
 ---
 
 <GalleryShellCore
@@ -20,9 +25,15 @@ const shouldSsrChapterViewer = Boolean(initialImageId && initialImageId !== "i-k
   entranceData={entranceData}
   initialImageId={initialImageId}
 >
-  {shouldSsrChapterViewer ? (
-    <ChapterViewer slot="chapter-viewer" client:load initialImageId={initialImageId} />
+  {directImagePayload ? (
+    <ChapterGalleryDirect
+      slot="chapter-viewer"
+      client:load
+      initialImageId={initialImageId}
+      directImagePayload={directImagePayload}
+      galleryPath={GALLERY_PATH}
+    />
   ) : (
-    <ChapterViewer slot="chapter-viewer" client:only="react" initialImageId={initialImageId} />
+    <ChapterViewer slot="chapter-viewer" client:load initialImageId={initialImageId} />
   )}
 </GalleryShellCore>

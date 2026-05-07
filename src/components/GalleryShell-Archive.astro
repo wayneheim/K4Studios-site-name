@@ -2,10 +2,12 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import GalleryHeader from "@/components/Gallery-LandingHeader.jsx";
 import GalleryInfo from "@/components/GalleryInfo.jsx";
+import ChapterGalleryDirect from "@/components/ChapterGalleryDirect.jsx";
 import ChapterViewer from "@/components/Chapter-Archive.jsx";
 import Footer from "@/components/Footer.astro";
 import ImageDetailsWidget from "@/components/ImageDetailsWidget.jsx";
 import { buildImageSeoTitle } from "@/utils/buildImageSeoTitle";
+import { buildDirectImagePayload } from "@/utils/buildDirectImagePayload.js";
 
 import { galleryData as allImages } from "@/data/Other/Archive/Archive.mjs";
 import { getStructuredData } from "@/components/utils/getStructuredData.ts";
@@ -178,7 +180,9 @@ const lastSegment = Astro.url?.pathname?.split("/").pop() || "";
 const isImagePage = lastSegment.startsWith("i-");
 const isDirectGridView = Astro.url.searchParams.get("view") === "grid";
 const skipIntro = isImagePage || isDirectGridView;
-const shouldSsrChapterViewer = skipIntro;
+const directImagePayload = currentImage
+  ? buildDirectImagePayload({ allImages, initialImageId, galleryPath: previewPath })
+  : null;
 
 /** ---------------------------------------------------------------
  * Sister/Related Images Link for SEO internal linking
@@ -221,10 +225,15 @@ let sisterLink = sitemapMatches.find(m => m.a.includes(currentImageId))?.b || nu
       class={skipIntro ? "section-visible" : "section-hidden"}
       style={skipIntro ? "display:block;" : "display:none;"}
     >
-  {shouldSsrChapterViewer ? (
-        <ChapterViewer client:load initialImageId={initialImageId} />
+      {directImagePayload ? (
+        <ChapterGalleryDirect
+          client:load
+          initialImageId={initialImageId}
+          directImagePayload={directImagePayload}
+          galleryPath={previewPath}
+        />
       ) : (
-        <ChapterViewer client:only="react" initialImageId={initialImageId} />
+        <ChapterViewer client:load initialImageId={initialImageId} />
       )}
     </div>
     
