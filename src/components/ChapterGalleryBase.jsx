@@ -2206,8 +2206,10 @@ export default function ChapterGalleryBase({
                         <img
                           src={activeTheme ? "/images/theme%20icon.webp" : "/images/K4Logo-web-b.jpg"}
                           alt={activeTheme ? `Theme: ${activeTheme.name}` : altText}
+                          width={160}
+                          height={66}
                           className="h-16.5 mb-5 transition-opacity duration-300 group-hover:opacity-0 group-hover:pointer-events-none"
-                          style={{ borderRadius: activeTheme ? "8px" : "50px", maxWidth: "160px", opacity: activeTheme ? ".65" : ".20" }}
+                          style={{ borderRadius: activeTheme ? "8px" : "50px", width: "160px", height: "66px", maxWidth: "160px", objectFit: "contain", opacity: activeTheme ? ".65" : ".20" }}
                         />
                         <span className="absolute inset-0 flex items-center justify-center text-center text-[#7a6a58] font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none bg-white rounded-full" style={{ borderRadius: activeTheme ? "8px" : "50px" }}>
                           {sectionDisplayTitle}
