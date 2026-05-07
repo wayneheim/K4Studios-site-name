@@ -25,7 +25,7 @@ export const galleryData = [
   {
     "id": "i-MhMbDtL",
     "title": "Quiet Modern",
-    "description": "“Quiet Modern” is a Roaring 20s fine art portrait by Wayne Heim, created in a restrained, painterly style that reflects the transition of the 1920s. This 1920s fine art photography piece explores identity, independence, and social shift through posture, gaze, and subtle period detail. Rooted in Wayne Heim’s Roaring Twenties portraits collection, the image emphasizes presence over spectacle, capturing the psychological tone of a changing era. © Wayne Heim",
+    "description": "A restrained black and white entry in the Roaring 20s portraits gallery, this 1920s fine art photography piece centers a young woman in period dress and cloche hat with quiet modern confidence. The composition supports Roaring 20s photography authority through posture, gaze, and subtle Jazz Age character rather than spectacle. Built for collectors seeking roaring twenties art prints with psychological presence, the image reads as both historical portrait and cinematic character study.\n\n© Wayne Heim",
     "alt": "Roaring 20s fine art portrait of a young woman in a cloche hat standing outdoors in a 1920s setting.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-MhMbDtL/A",
 
@@ -59,7 +59,7 @@ export const galleryData = [
   {
     "id": "i-7rWrmHq",
     "title": "A Gentleman of His Time",
-    "description": "A black and white Roaring 20s portrait capturing a dignified figure of the 1920s, defined by presence rather than spectacle. Tailored attire, steady posture, and controlled light shape a narrative rooted in identity and transition during the Jazz Age. This 1920s fine art photography piece reflects the restraint and psychological weight characteristic of roaring twenties portraits. © Wayne Heim",
+    "description": "A dignified black and white 1920s portrait of a gentleman in suit, hat, and cane, shaped by formal restraint and steady presence. This Roaring 20s photography piece supports the Roaring 20s portraits collection with clear Jazz Age character, period attire, and fine art portrait structure. As 1920s fine art photography, it emphasizes authority, composure, and the quiet social codes behind roaring twenties art prints.\n\n© Wayne Heim",
     "alt": "Black and white 1920s portrait of a distinguished gentleman in suit and hat holding a cane, Roaring Twenties fine art photography.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-7rWrmHq/A",
 
@@ -97,7 +97,7 @@ export const galleryData = [
   {
     "id": "i-jRPgZj3",
     "title": "Following His Lead",
-    "description": "A black and white Roaring 20s portrait capturing a quiet generational moment set against the texture of Old Bedford Village. This 1920s fine art photography piece reflects the restraint and atmosphere of Jazz Age portraits, where small gestures carry weight. Grounded in the spirit of Roaring 20s photography and roaring twenties portraits, the image leans into memory rather than spectacle. © Wayne Heim",
+    "description": "A black and white Roaring 20s portrait of a man and young boy walking together, built around generational rhythm, period dress, and quiet movement. This 1920s fine art photography image strengthens the Roaring 20s portraits gallery by pairing Jazz Age atmosphere with historical portrait storytelling. The result is a restrained roaring twenties art print about example, inheritance, and the small gestures that shape identity.\n\n© Wayne Heim",
     "alt": "Black and white 1920s portrait of a father and young boy walking together at Old Bedford Village, Roaring 20s fine art photography.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-jRPgZj3/A",
 
@@ -131,7 +131,7 @@ export const galleryData = [
   {
     "id": "i-Dc7Xpdw",
     "title": "Union Break",
-    "description": "A black and white Roaring 20s portrait capturing a working-class figure during a quiet pause at Old Bedford Village. Rooted in 1920s fine art photography and the texture of roaring twenties portraits, the image leans into atmosphere over glamour. This piece reflects the grounded side of Roaring 20s photography — where labor, posture, and stillness shape the narrative of the era. © Wayne Heim",
+    "description": "A grounded black and white Roaring 20s portrait of a working-class man in cap and overalls resting in a chair. This 1920s fine art photography piece expands the Roaring 20s portraits collection beyond glamour, using posture, labor-era clothing, and stillness to reflect the quieter side of Jazz Age life. As roaring 20s photography, it offers collectors a historical portrait rooted in presence rather than performance.\n\n© Wayne Heim",
     "alt": "Black and white 1920s portrait of a man in overalls and flat cap resting in a chair, Roaring 20s fine art photography.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-Dc7Xpdw/A",
 
@@ -165,7 +165,7 @@ export const galleryData = [
   {
     "id": "i-trPHqZK",
     "title": "Front Porch Accord",
-    "description": "A monochrome portrait of a man and boy seated on a wooden porch, composed with painterly restraint. Light, posture, and spatial tension create a generational narrative built on presence rather than action. Part of Wayne Heim’s Roaring 20s Portraits collection. © Wayne Heim",
+    "description": "A black and white Roaring 20s portrait of an older man and boy seated on a wooden porch, shaped by silence, posture, and generational distance. The image supports 1920s fine art photography authority through historical portrait structure and restrained Jazz Age atmosphere. Within the Roaring 20s portraits collection, it reads as a quiet roaring twenties art print about example, patience, and what passes between generations without being spoken.\n\n© Wayne Heim",
     "alt": "Black and white portrait of an older man and boy seated on a wooden porch in quiet conversation",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-trPHqZK/A",
 
@@ -199,7 +199,7 @@ export const galleryData = [
   {
     "id": "i-DfS7sz2",
     "title": "The Long Regard",
-    "description": "A black and white portrait shaped by restraint and presence, this work reflects the discipline of 1920s fine art photography and jazz age portraits without leaning on spectacle. Light, posture, and negative space create quiet tension — the kind often found in Roaring 20s portraiture and silent film era photography. A study in control, authority, and the weight of lived experience. © Wayne Heim",
+    "description": "A black and white 1920s fine art portrait of an older gentleman seated with a cane, composed with strong tonal restraint and psychological weight. This Roaring 20s photography piece fits the Roaring 20s portraits collection through period dress, stillness, and the formal authority of Jazz Age portraiture. Designed as a roaring twenties art print, it emphasizes presence, age, and lived experience over decorative nostalgia.\n\n© Wayne Heim",
     "alt": "Black and white fine art portrait of an older man seated with cane, rendered in the style of Roaring 20s photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-DfS7sz2/A",
 
@@ -232,7 +232,7 @@ export const galleryData = [
   {
     "id": "i-zKXCVqN",
     "title": "Holding Court",
-    "description": "A black and white portrait rooted in restraint and psychological presence, this work from Wayne Heim’s 1920s fine art photography collection reflects the quiet authority often associated with Roaring 20s portraits. Rather than spectacle, the image emphasizes posture, stillness, and controlled light—elements that shape narrative without overt action.\n\nLight sculpts the face and hands, while the framing architecture creates a subtle stage. The composition echoes traditions of archival portraiture and jazz age portraits, yet remains distinctly contemporary in its cinematic control. Part of Wayne Heim’s Facing History fine art photography series. © Wayne Heim",
+    "description": "A seated black and white Roaring 20s portrait of a gentleman holding a cane on a wooden porch, defined by posture, authority, and controlled light. This 1920s fine art photography piece strengthens the Roaring 20s portraits gallery with clear Jazz Age portrait language and a restrained historical setting. As a roaring twenties art print, it presents character through stillness, structure, and quiet command rather than spectacle.\n\n© Wayne Heim",
     "alt": "Black and white 1920s fine art portrait of a seated gentleman holding a cane on a wooden porch, defined by quiet authority and restrained posture.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-zKXCVqN/A",
 
@@ -266,7 +266,7 @@ export const galleryData = [
   {
     "id": "i-W7rj9DJ",
     "title": "Through the Fog",
-    "description": "A monochrome fine art portrait shaped by painterly restraint and atmospheric depth. This work blends 1920s fine art photography influence with a Roaring 20s vignette sensibility, allowing fog, posture, and silence to define the narrative. Light and shadow guide the eye while preserving ambiguity, inviting sustained viewing rather than immediate resolution. © Wayne Heim",
+    "description": "A moody black and white Roaring 20s portrait of a man standing in fog, shaped by atmosphere, silence, and painterly tonal restraint. This 1920s fine art photography work supports Roaring 20s photography authority while leaning toward silent film era photography through mystery, shadow, and unresolved presence. Within the Roaring 20s portraits collection, it becomes a psychological roaring twenties art print built on ambiguity.\n\n© Wayne Heim",
     "alt": "Moody black and white portrait of a man standing in fog, painterly Roaring 20s fine art photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-W7rj9DJ/A",
 
@@ -301,7 +301,7 @@ export const galleryData = [
   {
     "id": "i-tpvJWLm",
     "title": "Havana Post Cigars",
-    "description": "A black and white Roaring 20s fine art photograph capturing presence over performance. This roaring 20s photography composition uses posture, vehicle, and signage to construct a controlled narrative shaped by restraint. Light, stance, and framing create a Roaring 20s vignette that rewards sustained viewing rather than spectacle. © Wayne Heim",
+    "description": "A black and white Roaring 20s fine art photograph of a man leaning beside a vintage car and Havana Post Cigars sign, composed with period detail and controlled confidence. This 1920s fine art photography piece connects Roaring 20s portraits, Jazz Age atmosphere, and roaring 20s photography through stance, signage, and the promise of movement. As a roaring twenties art print, it suggests status, ambition, and self-presentation without overplaying the scene.\n\n© Wayne Heim",
     "alt": "Black and white Roaring 20s fine art photograph of a man leaning against a vintage car beside a Havana Post Cigars sign",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-tpvJWLm/A",
 
@@ -337,7 +337,7 @@ export const galleryData = [
   {
     "id": "i-Pt7whDS",
     "title": "The Watchman",
-    "description": "A black and white fine art portrait rooted in 1920s fine art photography and painterly restraint. Light from a narrow window sculpts the figure, emphasizing posture, authority, and quiet vigilance rather than spectacle. The tonal contrast and controlled composition align with Roaring 20s photography aesthetics, where presence carries more weight than action. This work reflects the discipline of roaring twenties portraits — composed, deliberate, and psychologically grounded. © Wayne Heim",
+    "description": "A black and white Roaring 20s portrait of a uniformed man standing watch beside a window, shaped by narrow light and disciplined stillness. This 1920s fine art photography piece supports the Roaring 20s portraits gallery through historical portrait structure, Jazz Age restraint, and strong tonal contrast. As roaring 20s photography, it emphasizes vigilance, authority, and the quiet tension of a figure holding his position.\n\n© Wayne Heim",
     "alt": "Black and white roaring twenties portrait of a uniformed man standing watch beside a window",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-Pt7whDS/A",
 
@@ -370,7 +370,7 @@ export const galleryData = [
   {
     "id": "i-nDfspwn",
     "title": "In His Own Time",
-    "description": "A black and white fine art portrait rooted in 1920s fine art photography and painterly restraint. Window light shapes the figure with controlled tonal contrast, emphasizing presence over spectacle. This work reflects the discipline of Roaring 20s Portraits and jazz age portraits — composed, deliberate, and psychologically grounded. As part of Wayne Heim’s exploration of 1920s portraits and roaring 20s photography, the image rewards slow viewing, where stillness carries more weight than action. © Wayne Heim",
+    "description": "A black and white 1920s fine art portrait of a uniformed man standing in quiet window light, composed with restraint and psychological clarity. This Roaring 20s photography piece belongs naturally within the Roaring 20s portraits collection, where posture, shadow, and controlled tone carry the historical portrait. It works as a roaring twenties art print for collectors drawn to stillness, authority, and Jazz Age atmosphere.\n\n© Wayne Heim",
     "alt": "Black and white roaring twenties portrait of a uniformed man standing by a window in quiet light",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-nDfspwn/A",
 
@@ -403,7 +403,7 @@ export const galleryData = [
   {
     "id": "i-rWLJL2v",
     "title": "Sunday Best",
-    "description": "A black and white portrait rooted in 1920s fine art photography and painterly restraint. This work reflects the discipline of Roaring 20s photography, where posture and proximity carry more weight than performance. Light and tonal control align with Roaring 20s Portraits and jazz age portraits, emphasizing presence, composure, and shared resolve. © Wayne Heim",
+    "description": "A black and white Roaring 20s portrait of a well-dressed couple standing together with composed resolve. This 1920s fine art photography piece supports the Roaring 20s portraits gallery through period attire, shared posture, and the social presence of Jazz Age portraiture. As a roaring twenties art print, it balances intimacy and formality, presenting partnership as quiet strength rather than staged nostalgia.\n\n© Wayne Heim",
     "alt": "Black and white roaring twenties portrait of a well-dressed couple standing close together",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-rWLJL2v/A",
 
@@ -436,7 +436,7 @@ export const galleryData = [
   {
     "id": "i-QmjZvHF",
     "title": "Waiting on the Step",
-    "description": "A black and white portrait rooted in 1920s fine art photography and painterly restraint. This piece draws from Roaring 20s photography and classic 1920s portraits, where posture and stillness carry more weight than spectacle. The composition reflects the discipline of roaring twenties portraits — grounded, deliberate, and psychologically aware. © Wayne Heim",
+    "description": "A black and white 1920s portrait of a seated man on a wooden step, shaped by rural texture, posture, and quiet pause. This Roaring 20s photography image strengthens the Roaring 20s portraits collection by showing historical portrait character outside the glamour of the Jazz Age. As 1920s fine art photography, it offers a grounded roaring twenties art print about waiting, labor, and the weight of what comes next.\n\n© Wayne Heim",
     "alt": "Black and white 1920s portrait of a seated man on a wooden step outside a rustic building",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-QmjZvHF/A",
 
@@ -468,7 +468,7 @@ export const galleryData = [
   {
     "id": "i-mgVpfhT",
     "title": "The Line Is Live",
-    "description": "A black and white portrait rooted in 1920s fine art photography and Roaring 20s photography aesthetics. This jazz age portrait captures a composed figure at a desk, holding an early telephone as tension gathers in silence rather than spectacle. Light from the side window sculpts posture and expression, emphasizing restraint, authority, and psychological presence over action. \n\nThe tonal control and disciplined composition reflect the language of Roaring 20s portraits and roaring twenties art prints, where atmosphere carries narrative weight. Part of Wayne Heim’s exploration of roaring twenties portraits — work shaped by painterly photography, historical portrait influence, and quiet narrative tension. © Wayne Heim",
+    "description": "A black and white Roaring 20s portrait of a man seated at a desk with a vintage telephone, composed around tension, shadow, and the unseen voice at the other end of the line. This 1920s fine art photography piece supports Roaring 20s photography authority through Jazz Age interior atmosphere and historical portrait storytelling. As a roaring twenties art print, it turns communication, decision, and silence into a cinematic character study.\n\n© Wayne Heim",
     "alt": "Black and white roaring twenties portrait of a man in a fedora speaking on a vintage telephone in a dimly lit interior",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-mgVpfhT/A",
 
@@ -502,7 +502,7 @@ export const galleryData = [
   {
     "id": "i-5WZKmbB",
     "title": "The Quiet Foreman",
-    "description": "A monochrome portrait rooted in 1920s fine art photography, this work explores the quieter side of the Roaring 20s — where industry, restraint, and character defined identity. Rendered with painterly photography techniques, light and shadow sculpt the figure into presence rather than performance. The controlled composition aligns with roaring twenties portraits that emphasize psychological weight over spectacle, reflecting the discipline and stillness that shaped the era. © Wayne Heim",
+    "description": "A black and white Roaring 20s portrait of a working-class man in cap and overalls leaning forward in quiet reflection. This 1920s fine art photography piece expands the Roaring 20s portraits collection with labor-era presence, Jazz Age restraint, and historical portrait depth. As roaring 20s photography, it offers collectors a roaring twenties art print centered on character, work, and interior resolve rather than glamour.\n\n© Wayne Heim",
     "alt": "Black and white 1920s fine art portrait of a working-class man in cap and overalls leaning forward in quiet reflection",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-5WZKmbB/A",
 
@@ -535,7 +535,7 @@ export const galleryData = [
   {
     "id": "i-JMqBWxb",
     "title": "Between Deals",
-    "description": "A black-and-white Roaring 20s portrait capturing a sharply dressed gentleman standing in quiet deliberation, arms folded, gaze turned slightly off-frame. Rendered with disciplined light and restrained contrast, this work reflects the psychological tension of the Jazz Age—where commerce, loyalty, and reputation often shifted between conversations. Part of a narrative-driven approach to 1920s fine art photography, this piece invites sustained viewing and interpretation rather than spectacle. © Wayne Heim",
+    "description": "A black and white Roaring 20s fine art portrait of a sharply dressed gentleman standing with arms folded, his gaze turned just beyond the frame. This 1920s fine art photography piece strengthens Roaring 20s portraits authority through Jazz Age clothing, controlled light, and a sense of negotiation or consequence. As a roaring twenties art print, it favors psychological tension and cinematic restraint over decorative nostalgia.\n\n© Wayne Heim",
     "alt": "Black and white Roaring 20s fine art portrait of a sharply dressed 1920s gentleman standing with arms crossed in quiet contemplation",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-JMqBWxb/A",
 
@@ -569,7 +569,7 @@ export const galleryData = [
   {
     "id": "i-7dksHnz",
     "title": "She Knows the Room",
-    "description": "A black-and-white Roaring 20s fine art portrait of a stylish woman standing just outside the crowd, her expression alive with confidence and subtle calculation. Soft focus and restrained tonal contrast evoke the atmosphere of the Jazz Age while preserving psychological depth over nostalgia. This piece reflects a narrative-driven approach to 1920s fine art photography, where posture, expression, and social awareness carry the tension. © Wayne Heim",
+    "description": "A black and white Roaring 20s portrait of a stylish woman in period dress and hat, captured with confidence, social awareness, and restrained tonal softness. This 1920s fine art photography work supports the Roaring 20s portraits gallery through Jazz Age presence and historical portrait clarity. As roaring 20s photography, it becomes a roaring twenties art print about charm, perception, and the power of knowing the room.\n\n© Wayne Heim",
     "alt": "Black and white Roaring 20s fine art portrait of a smiling 1920s woman in period dress and hat standing confidently near a doorway",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-7dksHnz/A",
 
@@ -603,7 +603,7 @@ export const galleryData = [
   {
     "id": "i-cpRfZ8j",
     "title": "What She Won’t Say",
-    "description": "A black-and-white Roaring 20s fine art portrait of a seated woman in period dress and cloche hat, defined by restraint rather than spectacle. Soft, directional light and controlled tonal contrast shape a quiet study in posture, memory, and interior resolve. Part of a narrative-driven approach to 1920s fine art photography, this image invites sustained viewing and interpretation through expression and stillness. © Wayne Heim",
+    "description": "A black and white Roaring 20s fine art portrait of a seated woman in period dress and cloche hat, shaped by folded hands, angled gaze, and quiet interior resolve. This 1920s fine art photography piece supports Roaring 20s portraits authority through Jazz Age styling, controlled light, and historical portrait structure. As a roaring twenties art print, it invites sustained viewing through silence, restraint, and what remains unsaid.\n\n© Wayne Heim",
     "alt": "Black and white Roaring 20s fine art portrait of a seated woman in 1920s dress and cloche hat gazing thoughtfully toward the light",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-cpRfZ8j/A",
 
@@ -637,7 +637,7 @@ export const galleryData = [
   {
     "id": "i-KdGdjFZ",
     "title": "He’s Seen This Before",
-    "description": "A black-and-white Roaring 20s fine art portrait of a distinguished gentleman standing near a window, defined by composure rather than spectacle. Directional light and disciplined tonal control emphasize posture, restraint, and quiet authority. This work reflects a narrative-driven approach to 1920s fine art photography, focusing on character and consequence rather than decorative nostalgia. © Wayne Heim",
+    "description": "A black and white Roaring 20s portrait of an older gentleman standing near a window, defined by composure, profile, and directional light. This 1920s fine art photography piece strengthens the Roaring 20s portraits collection with Jazz Age restraint and historical portrait authority. As roaring 20s photography, it presents experience, patience, and quiet judgment as the real subject of the image.\n\n© Wayne Heim",
     "alt": "Black and white Roaring 20s fine art portrait of an older gentleman in vest and tie standing thoughtfully by a window",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-KdGdjFZ/A",
 
@@ -671,7 +671,7 @@ export const galleryData = [
   {
     "id": "i-fNTTW43",
     "title": "He’s Seen This Before",
-    "description": "A black-and-white Roaring 20s fine art portrait of a distinguished gentleman standing near a window, defined by composure rather than spectacle. Directional light and disciplined tonal control emphasize posture, restraint, and quiet authority. This work reflects a narrative-driven approach to 1920s fine art photography, focusing on character and consequence rather than decorative nostalgia. © Wayne Heim",
+    "description": "A black and white Roaring 20s portrait of an older gentleman standing thoughtfully near a window, composed around light, posture, and seasoned restraint. This 1920s fine art photography piece supports the Roaring 20s portraits gallery through Jazz Age portrait language and historical character study. As a roaring twenties art print, it emphasizes experience carried in the body rather than action or spectacle.\n\n© Wayne Heim",
     "alt": "Black and white Roaring 20s fine art portrait of an older gentleman in vest and tie standing thoughtfully by a window",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-fNTTW43/A",
 
@@ -705,7 +705,7 @@ export const galleryData = [
   {
     "id": "i-T2XDQPG",
     "title": "He Doesn’t Flinch",
-    "description": "A black-and-white Roaring 20s fine art portrait of a distinguished gentleman standing in controlled light, defined by resolve rather than spectacle. Strong directional illumination and disciplined tonal contrast emphasize posture, presence, and quiet authority. This work reflects a narrative-driven approach to 1920s fine art photography, focusing on character and conviction over decorative nostalgia. © Wayne Heim",
+    "description": "A black and white Roaring 20s fine art portrait of an older gentleman with glasses and mustache standing in strong window light. This 1920s fine art photography piece supports Roaring 20s photography authority through direct gaze, tonal contrast, and disciplined Jazz Age portrait structure. As part of the Roaring 20s portraits collection, it reads as a roaring twenties art print about resolve, composure, and refusal to yield.\n\n© Wayne Heim",
     "alt": "Black and white Roaring 20s fine art portrait of an older gentleman with mustache and glasses standing confidently in window light",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-T2XDQPG/A",
 
@@ -739,7 +739,7 @@ export const galleryData = [
   {
     "id": "i-jm2ddJx",
     "title": "Mr. & Mrs. Trouble",
-    "description": "A black-and-white Roaring 20s fine art portrait of a sharply dressed couple posed in quiet defiance. The seated gentleman holds a vintage firearm while the woman stands behind him, composed and unflinching. Softened edges and restrained tonal contrast evoke the atmosphere of the Jazz Age while emphasizing posture, loyalty, and shared resolve. This work reflects a narrative-driven approach to 1920s fine art photography, where presence and partnership carry the tension. © Wayne Heim",
+    "description": "A black and white Roaring 20s portrait of a sharply dressed couple, with the seated man holding a vintage firearm while the woman stands behind him in composed alignment. This 1920s fine art photography piece supports the Roaring 20s portraits collection through Jazz Age styling, historical portrait tension, and partnership as narrative force. As a roaring twenties art print, it suggests loyalty, danger, and agreement without turning the scene into spectacle.\n\n© Wayne Heim",
     "alt": "Black and white Roaring 20s fine art portrait of a 1920s couple with the man seated holding a firearm and the woman standing behind him with hands on his shoulders",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-jm2ddJx/A",
 
@@ -773,7 +773,7 @@ export const galleryData = [
   {
     "id": "i-xfjX34L",
     "title": "Still Here",
-    "description": "A black-and-white Roaring 20s fine art portrait of a seated gentleman on a wooden porch, defined by endurance rather than spectacle. Strong directional light and grounded composition emphasize presence, age, and quiet authority. This work reflects a narrative-driven approach to 1920s fine art photography, focusing on character shaped by labor, land, and lived experience rather than decorative nostalgia. © Wayne Heim",
+    "description": "A black and white Roaring 20s portrait of an older man seated on a wooden porch, grounded by strong light, weathered architecture, and still endurance. This 1920s fine art photography piece expands the Roaring 20s portraits gallery with a quieter historical portrait rooted in age, labor, and lived experience. As roaring 20s photography, it becomes a roaring twenties art print about remaining, watching, and outlasting what passes.\n\n© Wayne Heim",
     "alt": "Black and white Roaring 20s fine art portrait of an older man seated in a wooden chair on a rustic porch in window light",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-xfjX34L/A",
 
@@ -807,7 +807,7 @@ export const galleryData = [
   {
     "id": "i-Gzdmm73",
     "title": "Make It Known",
-    "description": "A black-and-white Roaring 20s fine art portrait of a sharply dressed gentleman projecting his voice through a handheld megaphone, defined by urgency rather than spectacle. Strong directional light and architectural stone backdrop reinforce presence and conviction. This work reflects a narrative-driven approach to 1920s fine art photography, focusing on declaration, persuasion, and public resolve rather than decorative nostalgia. © Wayne Heim",
+    "description": "A black and white Roaring 20s fine art portrait of a sharply dressed man speaking through a handheld megaphone against a stone wall. This 1920s fine art photography piece supports Roaring 20s portraits authority through public gesture, Jazz Age styling, and strong historical portrait structure. As roaring 20s photography, it creates a roaring twenties art print about voice, persuasion, and the need to be heard.\n\n© Wayne Heim",
     "alt": "Black and white Roaring 20s fine art portrait of a 1920s man in suit and hat speaking through a megaphone against a stone wall",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-Gzdmm73/A",
 
@@ -841,7 +841,7 @@ export const galleryData = [
   {
     "id": "i-jQCkBDs",
     "title": "Standing Proper",
-    "description": "A black-and-white Roaring 20s fine art portrait of a sharply dressed gentleman standing with cane in a rural setting, defined by composure rather than spectacle. Balanced composition and restrained tonal contrast emphasize posture, attire, and deliberate presence. This work reflects a narrative-driven approach to 1920s fine art photography, where character and social positioning shape the tension. © Wayne Heim",
+    "description": "A black and white Roaring 20s portrait of a well-dressed gentleman standing with a cane before a rustic building, composed with balance and formal restraint. This 1920s fine art photography piece strengthens the Roaring 20s portraits collection through period attire, historical portrait clarity, and Jazz Age self-presentation. As a roaring twenties art print, it turns posture, clothing, and place into a quiet claim of position.\n\n© Wayne Heim",
     "alt": "Black and white Roaring 20s fine art portrait of a well-dressed 1920s gentleman standing confidently with a cane in front of a rustic building",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-jQCkBDs/A",
 
@@ -875,7 +875,7 @@ export const galleryData = [
   {
     "id": "i-sjtz7Fj",
     "title": "He’ll Handle It",
-    "description": "A black-and-white Roaring 20s fine art portrait of a sharply dressed gentleman standing on a wooden porch, holding a vintage firearm with composed assurance. Clean architectural lines and restrained tonal contrast emphasize posture, balance, and deliberate presence. This work reflects a narrative-driven approach to 1920s fine art photography, where character and quiet conviction carry the tension rather than spectacle. © Wayne Heim",
+    "description": "A black and white Roaring 20s portrait of a suited man standing on a wooden porch with a vintage firearm held in composed restraint. This 1920s fine art photography piece supports the Roaring 20s portraits gallery through Jazz Age styling, historical portrait structure, and quiet narrative tension. As roaring 20s photography, it creates a roaring twenties art print about resolve, protection, and what may happen just beyond the frame.\n\n© Wayne Heim",
     "alt": "Black and white Roaring 20s fine art portrait of a 1920s man in suit and hat standing on a porch holding a vintage firearm",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-sjtz7Fj/A",
 
@@ -909,7 +909,7 @@ export const galleryData = [
   {
     "id": "i-zgNxHdz",
     "title": "Steady Pace",
-    "description": "A black-and-white Roaring 20s fine art portrait of a gentleman riding a vintage bicycle across a rural setting, defined by composure rather than spectacle. Softened tonal transitions and balanced composition emphasize posture, motion, and quiet resolve. This work reflects a narrative-driven approach to 1920s fine art photography, where character and measured movement shape the tension. © Wayne Heim",
+    "description": "A black and white Roaring 20s portrait of a gentleman riding a vintage bicycle through a rural setting, composed around measured motion and upright presence. This 1920s fine art photography piece supports Roaring 20s photography authority through period character, Jazz Age restraint, and historical portrait storytelling. As part of the Roaring 20s portraits collection, it reads as a roaring twenties art print about progress, rhythm, and continuing forward.\n\n© Wayne Heim",
     "alt": "Black and white Roaring 20s fine art portrait of a 1920s gentleman riding a vintage bicycle near a rustic building",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-zgNxHdz/A",
 
