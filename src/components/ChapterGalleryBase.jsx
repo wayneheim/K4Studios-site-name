@@ -57,6 +57,47 @@ const EngrainedOrderModal = lazy(() => import("./EngrainedOrderModal.jsx"));
 const SeriesOrderModal = lazy(() => import("./SeriesOrderModal.jsx"));
 const SeriesInfoPopup = lazy(() => import("./SeriesInfoPopup.jsx"));
 
+function GalleryImageFrame({
+  plain = false,
+  frameKey,
+  direction,
+  enableEntryAnimation,
+  swipeHandlers,
+  currentId,
+  children,
+}) {
+  const className = "flex flex-col md:flex-row gap-6 md:gap-6 items-center justify-center md:min-h-[75vh]";
+
+  if (plain) {
+    return (
+      <div
+        className={className}
+        {...swipeHandlers}
+        data-image-id={currentId}
+      >
+        {children}
+      </div>
+    );
+  }
+
+  return (
+    <AnimatePresence mode="wait">
+      <motion.div
+        key={frameKey}
+        initial={enableEntryAnimation ? { opacity: 0, x: direction > 0 ? 150 : -150 } : false}
+        animate={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, x: direction > 0 ? -150 : 150 }}
+        transition={{ duration: 0.6, ease: [0.45, 0, 0.55, 1] }}
+        className={className}
+        {...swipeHandlers}
+        data-image-id={currentId}
+      >
+        {children}
+      </motion.div>
+    </AnimatePresence>
+  );
+}
+
 /* =========================================================
    Image Proxy URL Generator
    Converts image ID + size to /img/{id}/{size} proxy URL
@@ -420,8 +461,10 @@ export default function ChapterGalleryBase({
   const chapterImageRef = useRef(null);
 
   // Load series registry after the primary image has settled; it only enriches badges/pricing.
+  const hasDirectGalleryLoader = Boolean(directImagePayload?.currentImage && typeof loadFullGallery === "function");
   const [seriesRegistry, setSeriesRegistry] = useState(null);
   useEffect(() => {
+    if (hasDirectGalleryLoader) return;
     let cancelled = false;
     let idleId = null;
     let timerId = null;
@@ -457,7 +500,7 @@ export default function ChapterGalleryBase({
       }
       if (timerId) window.clearTimeout(timerId);
     };
-  }, []);
+  }, [hasDirectGalleryLoader]);
 
   // Edition context for SEO uniqueness - use basePath for SSR-safe initial render
   const [clientPath, setClientPath] = useState((basePath || "").toLowerCase());
@@ -559,7 +602,7 @@ export default function ChapterGalleryBase({
     }
   };
 
-  const isDirectDataMode = Boolean(directImagePayload?.currentImage && typeof loadFullGallery === "function");
+  const isDirectDataMode = hasDirectGalleryLoader;
   const [loadedRawData, setLoadedRawData] = useState(null);
   const fullGalleryLoadPromiseRef = useRef(null);
 
@@ -613,6 +656,13 @@ export default function ChapterGalleryBase({
     }
 
     return fullGalleryLoadPromiseRef.current;
+  };
+
+  const ensureSeriesRegistryLoaded = async () => {
+    if (seriesRegistry) return seriesRegistry;
+    const registry = await loadSeriesRegistry();
+    setSeriesRegistry(registry);
+    return registry;
   };
 
   // 🚨 ADD THIS LINE:
@@ -1389,17 +1439,14 @@ export default function ChapterGalleryBase({
                   )}
                 </div>
               )}
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={currentIndex}
-                  initial={enableEntryAnimation ? { opacity: 0, x: direction > 0 ? 150 : -150 } : false}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: direction > 0 ? -150 : 150 }}
-                  transition={{ duration: 0.6, ease: [0.45, 0, 0.55, 1] }}
-                  className="flex flex-col md:flex-row gap-6 md:gap-6 items-center justify-center md:min-h-[75vh]"
-                  {...swipeHandlers}
-                  data-image-id={currentId}
-                >
+              <GalleryImageFrame
+                plain={isDirectDataMode && !enableEntryAnimation}
+                frameKey={currentIndex}
+                direction={direction}
+                enableEntryAnimation={enableEntryAnimation}
+                swipeHandlers={swipeHandlers}
+                currentId={currentId}
+              >
 
                   {/* IMAGE + ARROWS COLUMN */}
                   <div
@@ -1423,6 +1470,8 @@ export default function ChapterGalleryBase({
                             alt={galleryData[currentIndex]?.alt || galleryData[currentIndex]?.title}
                             itemProp="image contentUrl"
                             className="chapter-image-mobile rounded-lg block"
+                            width={galleryData[currentIndex]?.width || undefined}
+                            height={galleryData[currentIndex]?.height || undefined}
                             loading="eager"
                             fetchPriority="high"
                             decoding="async"
@@ -1572,9 +1621,10 @@ export default function ChapterGalleryBase({
                                     <button
                                       key={seriesKey}
                                       type="button"
-                                      onClick={(e) => {
+                                      onClick={async (e) => {
                                         e.stopPropagation();
                                         track("series_info");
+                                        await ensureSeriesRegistryLoaded();
                                         setSeriesInfoScrollTo(seriesKey);
                                         setShowSeriesInfoPopup(true);
                                       }}
@@ -1926,12 +1976,13 @@ export default function ChapterGalleryBase({
                                 <div key={seriesKey} className="flex items-center">
                                   <button
                                     type="button"
-                                    onClick={(e) => {
-                                      e.stopPropagation();
-                                      track("series_info");
-                                      setSeriesInfoScrollTo(seriesKey);
-                                      setShowSeriesInfoPopup(true);
-                                    }}
+                                      onClick={async (e) => {
+                                        e.stopPropagation();
+                                        track("series_info");
+                                        await ensureSeriesRegistryLoaded();
+                                        setSeriesInfoScrollTo(seriesKey);
+                                        setShowSeriesInfoPopup(true);
+                                      }}
                                     title={`${def.label} Series Member`}
                                     className="text-lg p-1 transition-opacity"
                                     style={{ color: "#3c83b3", opacity: 0.7 }}
@@ -2476,8 +2527,7 @@ export default function ChapterGalleryBase({
                     </div>
 
                   </div>
-                </motion.div>
-              </AnimatePresence>
+              </GalleryImageFrame>
               </>
             )}
 

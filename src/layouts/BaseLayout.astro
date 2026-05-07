@@ -223,6 +223,7 @@ const isInternalPreviewPage =
   /\/index copy(?:\/|$)/i.test(pathname);
 const robotsContent = meta.robots || (isInternalPreviewPage ? "noindex, follow" : (isImagePage ? "index, follow, noai, noimageai" : null));
 const clarityDelayMs = isImagePage ? 4000 : 2000;
+const analyticsDelayMs = isImagePage ? 4000 : 0;
 
 // Convert any SmugMug URLs to proxy format for OG/Twitter images
 // Default to 'l' to protect XL from bot discovery
@@ -493,10 +494,26 @@ const jsonLdScripts = [
     </script>
 
     <!-- K4 Custom Analytics - track all page views -->
-    <script>
-      import { trackPageView } from '../utils/analytics';
+    <script define:vars={{ analyticsDelayMs }}>
+      const runK4PageView = () => {
+        import('../utils/analytics').then(({ trackPageView }) => {
+          trackPageView();
+        }).catch(() => {});
+      };
 
-      trackPageView();
+      if (analyticsDelayMs > 0 && typeof window !== 'undefined') {
+        window.addEventListener('load', () => {
+          window.setTimeout(() => {
+            if ('requestIdleCallback' in window) {
+              window.requestIdleCallback(runK4PageView, { timeout: 1000 });
+            } else {
+              runK4PageView();
+            }
+          }, analyticsDelayMs);
+        }, { once: true });
+      } else {
+        runK4PageView();
+      }
     </script>
   </head>
 
