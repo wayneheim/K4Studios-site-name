@@ -1184,7 +1184,6 @@ export default function ChapterGalleryBase({
   prevIndex.current = currentIndex;
 
   const currentId = galleryData[currentIndex]?.id;
-  const [tourOpenNonce, setTourOpenNonce] = useState(0);
 
   // Add this near other useState/useEffect hooks inside ChapterGalleryBase
   const [showThemePopover, setShowThemePopover] = useState(false);
@@ -1807,18 +1806,6 @@ export default function ChapterGalleryBase({
                         )
                       )}
                       </div>
-                      {/* Desktop-only Guide button to the right of the toolbar - hidden below 825px */}
-                      {!isMobile && windowWidth >= 825 && (
-                        <button
-                          type="button"
-                          onClick={() => { track("guide_open"); setTourOpenNonce(n => n + 1); }}
-                          className="hidden md:inline-flex items-center gap-2 rounded-full px-3 py-1 bg-white border border-gray-200 hover:border-red-300 shadow-sm transition-colors"
-                          title="View our brief guided walk-through of all the features of our gallery viewer."
-                          aria-label="Open Guide"
-                        >
-                          <span className="text-sm font-medium text-gray-500">Guide</span>
-                        </button>
-                      )}
                     </div>
 
                     {/* Mobile Series Icons - row below toolbar, above Play Show */}
@@ -2448,9 +2435,8 @@ export default function ChapterGalleryBase({
         />
       )}
 
-  {/* Swipe hint + Guided Tour - only show in flip mode, not grid */}
+      {/* Swipe hint */}
       {viewMode === "flip" && <SwipeHint galleryKey={galleryKey || "k4-gallery"} />}
-  <GalleryTour sectionKey={sectionKey} imageId={currentId} openNonce={tourOpenNonce} />
 
       <EngrainedOrderModal
         isOpen={showPricingModal}
