@@ -389,10 +389,46 @@ export default function ChapterGalleryBase({
   // Note: page_view is now tracked globally in BaseLayout.astro
   // Gallery-specific events (nav, zoom, etc.) still use track() with galleryId
 
-  // Load series registry on mount (for Chronicle/Legend data)
+  const chapterImageRef = useRef(null);
+
+  // Load series registry after the primary image has settled; it only enriches badges/pricing.
   const [seriesRegistry, setSeriesRegistry] = useState(null);
   useEffect(() => {
-    loadSeriesRegistry().then(setSeriesRegistry);
+    let cancelled = false;
+    let idleId = null;
+    let timerId = null;
+    let imgEl = null;
+
+    const loadRegistry = () => {
+      loadSeriesRegistry().then((registry) => {
+        if (!cancelled) setSeriesRegistry(registry);
+      });
+    };
+
+    const scheduleLoad = () => {
+      if (cancelled) return;
+      if (typeof window !== "undefined" && "requestIdleCallback" in window) {
+        idleId = window.requestIdleCallback(loadRegistry, { timeout: 3000 });
+      } else {
+        timerId = window.setTimeout(loadRegistry, 1500);
+      }
+    };
+
+    imgEl = chapterImageRef.current;
+    if (imgEl && !imgEl.complete) {
+      imgEl.addEventListener("load", scheduleLoad, { once: true });
+    } else {
+      scheduleLoad();
+    }
+
+    return () => {
+      cancelled = true;
+      if (imgEl) imgEl.removeEventListener("load", scheduleLoad);
+      if (idleId && typeof window !== "undefined" && "cancelIdleCallback" in window) {
+        window.cancelIdleCallback(idleId);
+      }
+      if (timerId) window.clearTimeout(timerId);
+    };
   }, []);
 
   // Edition context for SEO uniqueness - use basePath for SSR-safe initial render
@@ -522,13 +558,11 @@ export default function ChapterGalleryBase({
 
   useImageFallbackRedirect(galleryData);
 
-  // Prevent SSR/CSR errors: if the imageId in the URL is invalid, render nothing and let the hook redirect
-  let imageIdFromUrl = null;
-  if (typeof window !== "undefined") {
-    const match = window.location.pathname.match(/\/(i-[a-zA-Z0-9_-]+)$/);
-    imageIdFromUrl = match ? match[1] : null;
-  }
-  const isImageDetail = !!imageIdFromUrl;
+  // Prevent SSR/CSR errors: if the routed imageId is invalid, render nothing and let the hook redirect
+  const imageIdFromUrl = initialImageId && String(initialImageId).toLowerCase() !== "i-k4studios"
+    ? String(initialImageId)
+    : null;
+  const isImageDetail = Boolean(imageIdFromUrl);
   // Case-insensitive comparison to handle URL case variations
   const imageIdFromUrlLower = imageIdFromUrl?.toLowerCase();
   const foundImage = !isImageDetail || galleryData.some(e => e && e.id && e.id.toLowerCase() === imageIdFromUrlLower);
@@ -539,25 +573,12 @@ export default function ChapterGalleryBase({
 
   // Auto-enter chapters if URL has image ID or ?view=grid (shared theme links)
   const [hasEnteredChapters, setHasEnteredChapters] = useState(() => {
-    if (typeof window !== "undefined") {
-      // Enter immediately if viewing a specific image
-      if (/\/(i-[a-zA-Z0-9_-]+)/.test(window.location.pathname)) return true;
-      // Enter immediately if ?view=grid is present (shared theme link)
-      const params = new URLSearchParams(window.location.search);
-      if (params.get("view") === "grid") return true;
-    }
-    return false;
+    return Boolean(initialImageId);
   });
   // SSR-safe initial index: match initialImageId or URL
   const initialIndex = (() => {
     if (!galleryData.length) return 0;
-    // Try to match URL first (SSR: window is undefined)
-    let idFromURL = undefined;
-    if (typeof window !== "undefined") {
-      const match = window.location.pathname.match(/\/(i-[a-zA-Z0-9_-]+)$/);
-      idFromURL = match ? match[1] : undefined;
-    }
-    const idToFind = idFromURL || initialImageId;
+    const idToFind = initialImageId;
     if (idToFind) {
       // Case-insensitive comparison to handle URL case variations
       const idToFindLower = idToFind.toLowerCase();
@@ -569,16 +590,8 @@ export default function ChapterGalleryBase({
   const [currentIndex, setCurrentIndex] = useState(initialIndex);
   const [isExpanded, setIsExpanded] = useState(false);
   const [showNotes, setShowNotes] = useState(false);
-  // Support ?view=grid URL param to force grid view (for shared theme links)
-  const [viewMode, setViewMode] = useState(() => {
-    if (typeof window !== "undefined") {
-      const params = new URLSearchParams(window.location.search);
-      const urlView = params.get("view");
-      // Only override to grid if explicitly requested via URL
-      return urlView === "grid" ? "grid" : "flip";
-    }
-    return "flip";
-  });
+  // Start hydration from the same mode SSR rendered; URL params switch this after mount.
+  const [viewMode, setViewMode] = useState("flip");
   const [isZoomed, setIsZoomed] = useState(false);
   const [showArrowHint, setShowArrowHint] = useState(false);
   const [matColor, setMatColor] = useState("white");
@@ -645,7 +658,7 @@ export default function ChapterGalleryBase({
   const exitHref = basePath || null;
   const [isLandscapeMobile, setIsLandscapeMobile] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1200);
+  const [windowWidth, setWindowWidth] = useState(1200);
   const [showStoryShow, setShowStoryShow] = useState(false);
   const [showCollectorHint, setShowCollectorHint] = useState(false);
   const [showPricingModal, setShowPricingModal] = useState(false);
@@ -663,7 +676,6 @@ export default function ChapterGalleryBase({
 
   const prevIndex = useRef(currentIndex);
   const notesBtnRef = useRef(null);
-  const chapterImageRef = useRef(null);
   const qualifiedViewTimerRef = useRef(null);
 
   // Effect to borrow notes content from widget to popup (one-way move)
@@ -1322,25 +1334,15 @@ export default function ChapterGalleryBase({
                             alt={galleryData[currentIndex]?.alt || galleryData[currentIndex]?.title}
                             itemProp="image contentUrl"
                             className="chapter-image-mobile rounded-lg block"
+                            loading="eager"
+                            fetchPriority="high"
+                            decoding="async"
                             style={
                               (() => {
                                 const img = galleryData[currentIndex];
                                 const isLandscape = img && img.width > img.height;
                                 
-                                // Mobile (< 768px)
-                                if (windowWidth < 768) {
-                                  return {
-                                    cursor: "zoom-in",
-                                    maxWidth: "calc(100vw - 2.5rem)",
-                                    width: "auto",
-                                    height: "auto",
-                                    maxHeight: "65vh",
-                                    border: '1px solid rgba(120,120,120,0.30)',
-                                    boxShadow: '0 1px 3px rgba(0,0,0,0.08)'
-                                  };
-                                }
-                                
-                                // Desktop (>= 768px)
+                                // Keep the image markup hydration-stable; mobile sizing is handled by CSS.
                                 return {
                                   cursor: "zoom-in",
                                   maxWidth: isLandscape ? desktopLandscapeImageMaxWidth : "100%",

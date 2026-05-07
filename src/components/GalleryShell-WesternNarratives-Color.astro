@@ -1,6 +1,7 @@
 ---
 import GalleryShellCore from '@/components/GalleryShellCore.astro';
 import ChapterViewer from '@/components/Chapter-WesternNarrativesColor.jsx';
+import ChapterImageDetailStatic from '@/components/ChapterImageDetailStatic.astro';
 import { galleryData as allImages } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs';
 import { landingWestern as landingData } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/landingstones.ts';
 
@@ -8,6 +9,21 @@ const GALLERY_PATH = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/W
 const FALLBACK_DESCRIPTION = 'Explore painterly Western narrative photography in color by Wayne Heim.';
 
 const { breadcrumb, entranceData, initialImageId } = Astro.props;
+
+function isNavigableImage(img) {
+  const visibility = String(img?.visibility || '').toLowerCase().trim();
+  return Boolean(img?.id) && visibility !== 'ghost' && visibility !== 'hidden' && visibility !== 'hide';
+}
+
+const navigableImages = allImages.filter(isNavigableImage);
+const currentIndex = initialImageId
+  ? navigableImages.findIndex((img) => img.id === initialImageId)
+  : -1;
+const currentImage = currentIndex >= 0 ? navigableImages[currentIndex] : null;
+const prevImage = currentIndex > 0 ? navigableImages[currentIndex - 1] : null;
+const nextImage = currentIndex >= 0 && currentIndex < navigableImages.length - 1
+  ? navigableImages[currentIndex + 1]
+  : null;
 ---
 
 <GalleryShellCore
@@ -19,5 +35,18 @@ const { breadcrumb, entranceData, initialImageId } = Astro.props;
   entranceData={entranceData}
   initialImageId={initialImageId}
 >
-  <ChapterViewer slot="chapter-viewer" client:load initialImageId={initialImageId} />
+  {currentImage ? (
+    <ChapterImageDetailStatic
+      slot="chapter-viewer"
+      image={currentImage}
+      galleryPath={GALLERY_PATH}
+      galleryTitle="WILD-WEST: Western Narratives"
+      index={currentIndex}
+      count={navigableImages.length}
+      prevImage={prevImage}
+      nextImage={nextImage}
+    />
+  ) : (
+    <ChapterViewer slot="chapter-viewer" client:load initialImageId={initialImageId} />
+  )}
 </GalleryShellCore>

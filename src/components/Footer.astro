@@ -120,12 +120,21 @@ const shareImage = toShareUrl(rawShareImage) || (previewImages?.[0]?.id ? getSem
 
     <!-- 🔗 Share Drawer (with fallback) -->
     <div class="pb-4">
+      {isImagePage ? (
+        <ShareDrawer
+          client:idle
+          imageUrl={shareImage}
+          pageTitle={title || 'K4 Studios'}
+          pageDescription=""
+        />
+      ) : (
         <ShareDrawer
           client:load
           imageUrl={shareImage}
           pageTitle={title || 'K4 Studios'}
           pageDescription=""
         />
+      )}
     </div>
 
     <!-- 🌐 Social Icons -->

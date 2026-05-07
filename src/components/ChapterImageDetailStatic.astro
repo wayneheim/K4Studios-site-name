@@ -1,0 +1,172 @@
+---
+import { getCollectionContextEntry, buildCollectionContextStatement } from "@/data/semantic/collectionContext";
+import { getSemanticImageUrl } from "@/utils/imageProxy.js";
+
+interface Props {
+  image: any;
+  galleryPath: string;
+  galleryTitle: string;
+  index: number;
+  count: number;
+  prevImage?: any;
+  nextImage?: any;
+}
+
+const {
+  image,
+  galleryPath,
+  galleryTitle,
+  index,
+  count,
+  prevImage = null,
+  nextImage = null,
+} = Astro.props;
+
+function cleanText(value = "") {
+  return String(value || "").replace(/\s+/g, " ").trim();
+}
+
+function buildCaptionExcerpt(description = "", minChars = 150, maxChars = 280) {
+  const text = cleanText(description);
+  if (!text) return "";
+  if (text.length <= maxChars) return text;
+
+  const boundedText = text.slice(0, maxChars + 1);
+  const sentenceBoundaryMatches = [...boundedText.matchAll(/[.!?](?=\s|$)/g)];
+  const preferredBoundary = sentenceBoundaryMatches
+    .map((match) => match.index)
+    .filter((idx) => typeof idx === "number" && idx >= minChars)
+    .pop();
+
+  let cutIndex = typeof preferredBoundary === "number" ? preferredBoundary + 1 : -1;
+  if (cutIndex === -1) {
+    const safeSlice = boundedText.slice(0, maxChars);
+    const lastSpace = safeSlice.lastIndexOf(" ");
+    cutIndex = lastSpace > minChars ? lastSpace : maxChars;
+  }
+
+  return `${text.slice(0, cutIndex).trim()}...`;
+}
+
+const imageUrl = getSemanticImageUrl(image, { galleryPath });
+const alt = image?.alt || image?.title || "K4 Studios fine art photograph";
+const title = image?.title || alt;
+const story = image?.story || "";
+const description = image?.description || "";
+const notes = image?.notes || "";
+const caption = buildCaptionExcerpt(description);
+const prevHref = prevImage ? `${galleryPath}/${prevImage.id}` : "";
+const nextHref = nextImage ? `${galleryPath}/${nextImage.id}` : "";
+const collectionContextEntry = getCollectionContextEntry(galleryPath);
+const collectionContextStatement = collectionContextEntry
+  ? buildCollectionContextStatement(collectionContextEntry)
+  : "";
+---
+
+<div
+  class="min-h- bg-white text-black font-serif px-5 py-2 md:py-8 overflow-x-hidden"
+  style="font-family:Glegoo, serif;max-width:100%;width:100%;box-sizing:border-box"
+>
+  <div class="relative max-w-6xl mx-auto">
+    <div
+      class="flex flex-col md:flex-row gap-6 md:gap-6 items-center justify-center md:min-h-[75vh]"
+      data-image-id={image.id}
+      style="touch-action:pan-y pinch-zoom;opacity:1;transform:none"
+    >
+      <div class="flex flex-col items-center relative chapter-image-container-mobile" style="width:fit-content;min-width:0">
+        <figure style="margin:0">
+          <div class="w-full relative flex items-center justify-center mb-0 chapter-image-container-mobile">
+            <div class="relative flex flex-row justify-center chapter-image-container-mobile" style="max-width:575px;width:fit-content">
+              <div class="relative flex justify-center items-center chapter-image-container-mobile" style="width:fit-content;max-width:100%;margin:0 auto">
+                <img
+                  src={imageUrl}
+                  alt={alt}
+                  itemprop="image contentUrl"
+                  class="chapter-image-mobile rounded-lg block"
+                  loading="eager"
+                  fetchpriority="high"
+                  decoding="async"
+                  draggable="false"
+                  style="cursor:zoom-in;max-width:100%;width:auto;height:auto;max-height:70vh;transition:box-shadow .3s ease;border:1px solid rgba(110,110,110,0.28);box-shadow:0 2px 5px rgba(0,0,0,0.10)"
+                />
+              </div>
+            </div>
+          </div>
+          {caption && (
+            <figcaption class="mx-auto mt-2 mb-2 px-3" style="max-width:500px" itemprop="caption">
+              <p class="image-caption" style="text-align:center;font-style:italic;margin-top:0.25rem;margin-bottom:0;font-size:0.74rem;line-height:1.35;color:#9ca3af;opacity:1;min-height:2.7em;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">
+                "{caption}"
+              </p>
+            </figcaption>
+          )}
+        </figure>
+
+        <div class="flex items-center justify-center gap-2 mb-1 mt-4">
+          <div class="flex items-center gap-1 md:gap-6 mx-auto rounded-xl shadow-sm px-3 py-1 select-none bg-white max-w-[1300px]" style="max-width:1300px;min-width:0;justify-content:space-evenly;border:1px solid #e5e7eb">
+            <a href={galleryPath} class="flex items-center justify-center w-7 h-7 text-gray-500 text-lg transition-colors duration-150 hover:text-gray-700 border border-gray-200 hover:bg-gray-100 bg-white rounded-full shadow-sm hover:border-red-200 hover:border-gray-300 focus:border-gray-300" aria-label="Show gallery menu" title="Show Gallery">☰</a>
+            <div class="text-sm text-gray-400 font-medium flex items-center whitespace-nowrap" style="letter-spacing:-0.085em">{index + 1} - {count}</div>
+            <a href={`${galleryPath}?view=grid`} aria-label="View Grid Mode" title="View Grid Mode" class="flex items-center justify-center gap-1 transition-colors text-xs" style="color:#84766d;opacity:0.65">Grid</a>
+            <a href={galleryPath} class="inline-flex items-center justify-center w-8 h-8 border border-gray-300 bg-white text-gray-300 rounded-full shadow-sm hover:bg-gray-700 hover:text-gray-200 hover:border-red-200 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-gray-400 transition-colors cursor-pointer" aria-label="Exit Chapter View" title="Exit Viewer">x</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full md:pl-8" style="flex:1 1 27rem;max-width:28rem;min-width:0">
+        <nav class="mb-4 flex justify-center relative z-0 hidden md:flex" aria-label="Gallery navigation">
+          <a href={galleryPath.replace(/\/Color$/, "")} rel="up" title={galleryTitle} class="relative block group">
+            <img src="/images/K4Logo-web-b.jpg" alt={galleryTitle} class="h-16.5 mb-5 transition-opacity duration-300 group-hover:opacity-0 group-hover:pointer-events-none" style="border-radius:50px;max-width:160px;opacity:.20" />
+            <span class="absolute inset-0 flex items-center justify-center text-center text-[#7a6a58] font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none bg-white rounded-full" style="border-radius:50px">{galleryTitle}</span>
+            <span class="sr-only">{galleryTitle}</span>
+          </a>
+        </nav>
+
+        <div class="text-center" style="font-family:'Glegoo', serif;margin-bottom:0.5rem">
+          <p class="font-semibold tracking-wide text-[#85644b]" style="font-size:1.55rem;opacity:0.5;line-height:1.35;margin-bottom:0.25rem">Chapter {index + 1}:</p>
+          <h1 class="font-semibold tracking-wide text-[#85644b] chapter-title" itemprop="name" style="font-size:1.55rem;opacity:0.5;line-height:1.35;margin-top:0;margin-bottom:0">{title}</h1>
+        </div>
+
+        {story && (
+          <section class="image-story" aria-labelledby={`image-story-heading-${image.id}`}>
+            <h2 id={`image-story-heading-${image.id}`} class="sr-only">Story</h2>
+            <p class="italic text-base mt-3 md:text-lg mb-4 leading-snug text-left">{story}</p>
+          </section>
+        )}
+
+        {(description || notes || collectionContextStatement) && (
+          <details class="more-about-image" style="margin:0">
+            <summary style="display:block;list-style:none;cursor:pointer;font-size:0.85rem;color:#7a6a58;font-family:'Glegoo', serif;padding:0.5rem 0;text-align:center">
+              <span class="plus-minus-icon" style="display:inline-block;font-size:0.9em;margin-right:0.4em;font-weight:bold"></span>
+              More about this image
+            </summary>
+            <div class="details-content" style="font-size:0.9rem;line-height:1.7;padding-top:0.5rem;border-top:1px dashed rgba(200, 190, 180, 0.4);text-align:left">
+              {description && (
+                <section class="image-description" aria-labelledby={`image-description-heading-${image.id}`}>
+                  <h2 id={`image-description-heading-${image.id}`} class="sr-only">About this image</h2>
+                  <p itemprop="description" style="margin:0 0 1rem">{description}</p>
+                </section>
+              )}
+              {collectionContextStatement && (
+                <aside class="collection-context-note" aria-labelledby={`series-context-heading-${image.id}`} style="margin:0 0 1rem;color:#7a6a58;font-size:0.86rem;line-height:1.65">
+                  <h3 id={`series-context-heading-${image.id}`} class="sr-only">Part of the {galleryTitle} series</h3>
+                  {collectionContextStatement}
+                </aside>
+              )}
+              {notes && (
+                <section id={`canonical-notes-${image.id}`} class="notes-section" data-notes-canonical="true" aria-labelledby={`collector-notes-heading-${image.id}`} style="margin-top:1rem;padding-top:0.75rem;border-top:1px dashed rgba(200, 190, 180, 0.4)">
+                  <h3 id={`collector-notes-heading-${image.id}`} class="notes-label" style="font-size:0.85rem;font-weight:500;color:#928176;margin:0 0 0.5rem;letter-spacing:0.04em">Collector Notes:</h3>
+                  <p style="font-style:italic;color:#9a9a99;margin:0;mix-blend-mode:multiply">{notes}</p>
+                </section>
+              )}
+            </div>
+          </details>
+        )}
+
+        <div class="hidden md:flex justify-center items-center gap-6 pt-4" data-image-id={image.id}>
+          {prevHref && <a href={prevHref} class="bg-white p-1 -mt-16 rounded shadow flex items-center justify-center border border-gray-200 hover:border-gray-300 transition-colors" title="Back" data-prev-btn="true">Previous</a>}
+          <a href={`${galleryPath}?view=grid`} class="bg-gray-100 px-3 h-11 -mt-16 rounded-full shadow flex items-center justify-center border border-gray-200 hover:border-gray-300 transition-colors" title="Index View" data-grid-btn="true">Grid</a>
+          {nextHref && <a href={nextHref} class="bg-white p-1 -mt-16 rounded shadow flex items-center justify-center border border-gray-200 hover:border-gray-300 transition-colors" title="Next" data-next-btn="true">Next</a>}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
