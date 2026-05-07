@@ -25,7 +25,7 @@ export const galleryData = [
   {
     "id": "i-Z54nXZm",
     "title": "Watching the Wind",
-    "description": "A Native American man stands in profile wearing a feathered headdress, partially surrounded by drifting smoke that softens the edges of the scene. His posture is steady and composed, with the environment blending into the figure through a restrained, painterly treatment. This Western fine art photography image reflects heritage and tradition through stillness, presence, and connection to the land. \n\n© Wayne Heim",
+    "description": "A Native American man stands in profile beneath drifting smoke, his feathered headdress and quiet posture shaped through painterly black and white treatment. This Native American fine art photography portrait creates Native American wall art rooted in heritage, stillness, continuity, and the enduring relationship between presence and land.\n\n© Wayne Heim",
     "alt": "Native American man in feathered headdress standing in smoke, a painterly Native American portrait with soft atmospheric detail.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Z54nXZm/0/KshX8MCZFtDBzRsXCZhQcjVbNXmPJwBR3NCFbsm2K/XL/_WHO3500-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Z54nXZm/0/KshX8MCZFtDBzRsXCZhQcjVbNXmPJwBR3NCFbsm2K/XL/_WHO3500-Edit-Edit-XL.jpg",
@@ -57,7 +57,7 @@ export const galleryData = [
   {
     "id": "i-67Qt8WM",
     "title": "Held Close",
-    "description": "A man stands in quiet stillness, hands held together as he looks off to the side, his posture calm and composed. The scene is softened by light and atmosphere, blending the figure into a subdued, painterly environment. This Native American fine art photography portrait reflects heritage and tradition through presence and restraint. \n\n© Wayne Heim",
+    "description": "Hands held together, the figure stands in quiet reflection as soft atmosphere dissolves the edges of the scene. This painterly Native American portrait creates fine art wall decor rooted in restraint, heritage, and the quiet emotional gravity carried through posture rather than performance.\n\n© Wayne Heim",
     "alt": "Side profile of a man with clasped hands emerging through soft haze, a muted and atmospheric portrait.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-67Qt8WM/0/NNc9RjZRPfShrwTz2R93KK8q7XzP3f7cvTj8rQML4/XL/_WHO1255-897-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-67Qt8WM/0/NNc9RjZRPfShrwTz2R93KK8q7XzP3f7cvTj8rQML4/XL/_WHO1255-897-XL.jpg",
@@ -88,7 +88,7 @@ export const galleryData = [
   {
     "id": "i-nZbDC9C",
     "title": "Held by Memory",
-    "description": "Seated in quiet profile, the figure holds steady as attention lifts beyond the immediate, posture relaxed but grounded. The moment centers on presence and reflection, where stillness carries more weight than movement. \n\n© Wayne Heim",
+    "description": "An elder sits in calm profile, attention lifted beyond the immediate as memory and experience settle into stillness. This Native American fine art photography portrait creates Native American art prints rooted in continuity, reflection, and the enduring presence of lived history.\n\n© Wayne Heim",
     "alt": "Elder Native American man seated in profile, looking into the distance with calm and reflective expression.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-nZbDC9C/1/LPJkK7RgGkqVmSZpkCwLrf9zPS2QrpGZj9cjkCVrG/XL/_HF20466-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-nZbDC9C/1/LPJkK7RgGkqVmSZpkCwLrf9zPS2QrpGZj9cjkCVrG/XL/_HF20466-Edit-2-XL.jpg",
@@ -119,7 +119,7 @@ export const galleryData = [
   {
     "id": "i-zDcr5T3",
     "title": "Standing at Ease",
-    "description": "A figure stands grounded and steady, rifle held without tension as the body settles into its own rhythm. Strength is carried quietly here-nothing performed, nothing forced-just balance held in place over time. \n\n© Wayne Heim",
+    "description": "A figure stands grounded with rifle lowered and tension absent, strength carried through balance rather than display. This painterly Native American portrait creates fine art wall art rooted in composure, tradition, restraint, and the quiet authority of presence held over time.\n\n© Wayne Heim",
     "alt": "Man standing with rifle in a calm, composed stance, captured in Native American fine art photography.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zDcr5T3/0/KHwcQBfWJ2Hv55Qg43gzrJ56gjbWCvvVr6PhzpRJm/XL/_HF24217-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zDcr5T3/0/KHwcQBfWJ2Hv55Qg43gzrJ56gjbWCvvVr6PhzpRJm/XL/_HF24217-Edit-XL.jpg",
@@ -153,7 +153,7 @@ export const galleryData = [
   {
     "id": "i-xfVhZw7",
     "title": "After the Drums Fade",
-    "description": "A figure holds still in profile, the weight of presence carried without gesture or display. The quiet feels earned, shaped by time rather than momentary action, where what remains matters more than what has passed. This image reflects painterly Native American fine art photography grounded in continuity and restraint. \n\n© Wayne Heim",
+    "description": "Held in profile beneath soft atmosphere and light, the figure stands in the quiet space left after ceremony and sound have passed. This Native American fine art photography portrait creates heritage art rooted in continuity, reflection, stillness, and the psychological depth of presence without performance.\n\n© Wayne Heim",
     "alt": "Profile view of a man in traditional headdress standing in stillness, softly framed by atmosphere and light.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xfVhZw7/0/MWCJWz4c29WtJjZKQ5CXjt97RB245s3vN3q8vSr9z/XL/_WHO6048-923-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xfVhZw7/0/MWCJWz4c29WtJjZKQ5CXjt97RB245s3vN3q8vSr9z/XL/_WHO6048-923-2-XL.jpg",
