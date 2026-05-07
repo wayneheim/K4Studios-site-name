@@ -41,26 +41,50 @@ const headerImage = {
 const image1 = {
   id: "i-8JHmjF9",
   src: getProxySrc("i-8JHmjF9", "l"),
-  alt: "Landscape shaped by atmosphere and tonal control in the Western fine art tradition"
+  alt: "Western landscape shaped by atmosphere, light, and tonal control in fine art photography"
 };
 const image2 = {
   id: "i-44jcjTQ",
   src: getProxySrc("i-44jcjTQ", "l"),
-  alt: "Cowboy portrait where composition serves narrative rather than record"
+  alt: "Cowboy portrait built around character, posture, and narrative intent rather than stereotype"
 };
 const image3 = {
   id: "i-Txh4c8k",
   src: getProxySrc("i-Txh4c8k", "l"),
-  alt: "Black and white study demonstrating that medium matters less than vision"
+  alt: "Black-and-white Western study showing craft, tonal design, and authorship beyond medium"
 };
 const image4 = {
   id: "i-7hD9CCh",
   src: getProxySrc("i-7hD9CCh", "l"),
-  alt: "Native American woman at water's edge — presence through painterly restraint"
+  alt: "Native American figure at the water's edge rendered with restraint, presence, and cultural dignity"
 };
 
-const pageTitle = "What Is Western Fine Art? Definition, Meaning, and Why the Term Matters";
-const pageDescription = "Western fine art is the authored core of Western art across painting, photography, sculpture, and other media. Learn what the term means and what qualifies work as fine art.";
+const landscapeDeepImage = {
+  id: "i-SNtZNVm",
+  src: getProxySrc("i-SNtZNVm", "l"),
+  alt: "Painterly western landscape photograph of Horseshoe Bend, showing the Colorado River curving through layered sandstone cliffs under soft evening light"
+};
+
+const cowboyDeepImage = {
+  id: "i-k4b6c5b",
+  src: getProxySrc("i-k4b6c5b", "l"),
+  alt: "Elderly cowboy wearing a wide-brim hat, painterly Western fine art portrait with soft dust tones"
+};
+
+const blackWhiteDeepImage = {
+  id: "i-qMQf7b6",
+  src: getProxySrc("i-qMQf7b6", "l"),
+  alt: "Frontier gunman seated inside a log cabin loading cartridges into a revolver"
+};
+
+const nativeAmericanDeepImage = {
+  id: "i-WfRwfpM",
+  src: getProxySrc("i-WfRwfpM", "l"),
+  alt: "Native American woman standing in soft light, wearing traditional dress with braids and looking off into the distance"
+};
+
+const pageTitle = "What Is Western Fine Art? Definition, Meaning, and Why It Matters";
+const pageDescription = "What is Western fine art? Learn how authorship, intent, and compositional restraint distinguish it across painting, photography, sculpture, and other media.";
 
 const structuredImageUrls = [
   getAbsoluteProxySrc(headerImage.id, "l"),
@@ -68,6 +92,10 @@ const structuredImageUrls = [
   getAbsoluteProxySrc(image2.id, "l"),
   getAbsoluteProxySrc(image3.id, "l"),
   getAbsoluteProxySrc(image4.id, "l"),
+  getAbsoluteProxySrc(landscapeDeepImage.id, "l"),
+  getAbsoluteProxySrc(cowboyDeepImage.id, "l"),
+  getAbsoluteProxySrc(blackWhiteDeepImage.id, "l"),
+  getAbsoluteProxySrc(nativeAmericanDeepImage.id, "l"),
 ];
 
 const breadcrumbStructuredData = getBreadcrumbList(
@@ -85,7 +113,7 @@ const breadcrumbStructuredData = getBreadcrumbList(
 const structuredData = getStructuredData({
   type: "Article",
   data: {
-    headline: "What Is Western Fine Art? Definition, Meaning, and Why the Term Matters",
+    headline: "What Is Western Fine Art? Definition, Meaning, and Why It Matters",
     description: pageDescription,
     url: canonicalUrl,
     image: structuredImageUrls,
@@ -95,6 +123,7 @@ const structuredData = getStructuredData({
       name: "Wayne Heim"
     },
     datePublished: "2026-02-02",
+    dateModified: "2026-05-07",
     articleSection: "Fine Art",
     definedTerm: {
       name: "Western Fine Art",
@@ -166,9 +195,54 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
       <h1 style="font-size:2.25rem; font-weight:700; margin-bottom:0.5rem; line-height:1.2;">
         What Is Western Fine Art? Definition, Meaning, <br>and Why the Term Matters
       </h1>
-      <p style="font-size:0.95rem; color:#888; margin-top:0.75rem; letter-spacing:0.02em;">
-        Reconciling painting and photography under a single authorship standard
+      <p style="font-size:0.95rem; color:#755f4f; margin-top:0.75rem; letter-spacing:0.02em;">
+        Western subject matter is only the beginning. Authorship is what makes it fine art.
       </p>
+    </section>
+
+    <!-- Early Visual Bridge -->
+    <section class="early-examples-section">
+      <div class="early-examples-shell">
+        <p class="early-examples-kicker">See the Standard at Work</p>
+        <h2 class="early-examples-title">Western fine art begins where subject matter stops being enough.</h2>
+        <p class="early-examples-intro">
+          Landscape, portraiture, black-and-white study, and historical presence can all enter the Western fine art tradition when authorship, restraint, and narrative intent shape the image.
+        </p>
+
+        <div class="early-examples-grid">
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/${image1.id}`}>
+              <img src={image1.src} alt={image1.alt} loading="eager" />
+            </a>
+            <figcaption>Landscape shaped by atmosphere, structure, and authorship.</figcaption>
+          </figure>
+
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${image2.id}`}>
+              <img src={image2.src} alt={image2.alt} loading="lazy" />
+            </a>
+            <figcaption>Western portraiture built from character, posture, and intent.</figcaption>
+          </figure>
+
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/${image3.id}`}>
+              <img src={image3.src} alt={image3.alt} loading="lazy" />
+            </a>
+            <figcaption>Black-and-white restraint as artistic discipline.</figcaption>
+          </figure>
+
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${image4.id}`}>
+              <img src={image4.src} alt={image4.alt} loading="lazy" />
+            </a>
+            <figcaption>Presence and dignity carried through composition.</figcaption>
+          </figure>
+        </div>
+
+        <a class="early-examples-cta" href="/Western-Fine-Art-Photography">
+          Explore Western Fine Art Photography
+        </a>
+      </div>
     </section>
 
     <!-- Article Content -->
@@ -180,17 +254,13 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
         <p>The term Western fine art has historically been conflated with painting—oils on canvas depicting frontier mythology, cowboy stoicism, and romanticized landscapes. Today, the term appears across painting, photography, galleries, and museums—often without agreement on what qualifies.</p>
 
-        <p>But the term itself makes no reference to medium.<br>
-        Western fine art is not a material or a technique.<br>
-        <strong>It is an authorship standard.</strong></p>
+        <p>But the term itself makes no reference to medium. Western fine art is not a material or a technique. <strong>It is an authorship standard.</strong></p>
 
         <p>As a result, Western fine art now encompasses painting, photography, sculpture, and other media—so long as the work meets the same threshold of intent, restraint, and artistic rigor.</p>
 
-        <p>If Western art is the full cultural tradition of the American West, Western fine art is its authored core: the part of that tradition created to endure as art rather than to decorate, advertise, or merely document.</p>
+        <p>If Western art is the full cultural tradition of the American West, Western fine art is its authored core: the part of that tradition created to endure as art rather than to decorate, advertise, or merely document. <em>For artist authority page tied to this, see <a href="/wayne-heim-western-fine-art-photography" style="color:#8b5a2b; text-decoration:underline;">Wayne Heim</a>.</em></p>
 
-        <p>For the artist authority page tied to this site’s photographic branch of that tradition, see <a href="/wayne-heim-western-fine-art-photography" style="color:#8b5a2b; text-decoration:underline;">Wayne Heim</a>.</p>
-
-        <p>As the art world continues to dissolve arbitrary boundaries between photography and painting, the definition of what qualifies as fine art in the Western genre has become both contested and essential to understand. This guide clarifies those definitions and explains why the distinction matters.</p>
+        <p>As the art world continues to dissolve arbitrary boundaries between photography and painting, the definition of what qualifies as fine art in the Western genre becomes both contested and essential to understand. Below we clarify those definitions and explain why the distinction matters.</p>
 
         <!-- SECTION 2: What Is Western Fine Art? -->
         <div class="section-heading-with-line">
@@ -202,34 +272,43 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         <p>Across mediums, Western fine art is unified by three factors:</p>
 
         <ul style="list-style:none; padding-left:0; margin:1rem 0 1.5rem;">
-          <li style="margin-bottom:0.5rem;"><strong>Authorship</strong></li>
-          <li style="margin-bottom:0.5rem;"><strong>Intent</strong></li>
-          <li style="margin-bottom:0.5rem;"><strong>Compositional restraint</strong></li>
-        </ul>
+          <li style="margin-bottom:0.5rem;"><strong>Authorship - Intent  -  Compositional Restraint</strong></li>
+          </ul>
 
         <p>It is work created to be experienced as art first—not documentation, not décor, not nostalgia.</p>
 
         <p>The subject matter may include frontier architecture, cowboy life, open landscapes, Native American culture, or the tension between settlement and wilderness. But subject alone does not make something fine art.</p>
 
-        <p>Intent does.<br>
-        Execution does.<br>
-        Vision does.</p>
+        <p>Intent of the work does. Execution does. And most importantly, vision does.</p>
 
         <p>Where fine art diverges from commercial or documentary work is in its refusal to perform. It does not pander to expectation. It does not chase trend. It exists on its own terms, anchored in tradition but not imprisoned by it.</p>
+
+        <aside class="inline-art-callout inline-art-callout--right">
+          <a href={`/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/${landscapeDeepImage.id}`}>
+            <img src={landscapeDeepImage.src} alt={landscapeDeepImage.alt} loading="lazy" />
+          </a>
+          <p>Landscape becomes fine art when atmosphere and composition carry more weight than scenery alone.</p>
+        </aside>
 
         <!-- SECTION 3: Where Western Fine Art Fits -->
         <div class="section-heading-with-line">
           <h2>Where Western Fine Art Fits</h2>
         </div>
-
+  <aside class="inline-art-callout inline-art-callout--right">
+          <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${cowboyDeepImage.id}`}>
+            <img src={cowboyDeepImage.src} alt={cowboyDeepImage.alt} loading="lazy" />
+          </a>
+          <p>Subject matter begins the conversation. It's authorship that decides if it becomes fine art.</p>
+        </aside>
         <p>Western fine art is not the entirety of Western art. It is the authored core within it.</p>
+
+      
 
         <p>Western art as a whole includes illustration, commercial work, décor imagery, film, and popular visual culture. It encompasses everything from dime-store novel covers to Hollywood Westerns and tourist photography.</p>
 
         <p>Western fine art sits inside that larger world as the work created with lasting artistic intent—pieces meant to endure, not merely decorate or entertain.</p>
 
-        <p>If Western art is the cultural story of the American frontier,<br>
-        Western fine art is the portion of that story shaped by deliberate artistic authorship.</p>
+        <p>If Western art is the cultural story of the American frontier, Western fine art is the portion of that story shaped by deliberate artistic authorship.</p>
 
         <!-- SECTION 4: Painting, Photography, and the Western Canon -->
         <div class="section-heading-with-line">
@@ -242,30 +321,29 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
         <p><em>The camera was seen as a tool of capture, not creation.</em></p>
 
+        <aside class="inline-art-callout inline-art-callout--left">
+          <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/${blackWhiteDeepImage.id}`}>
+            <img src={blackWhiteDeepImage.src} alt={blackWhiteDeepImage.alt} loading="lazy" />
+          </a>
+          <p>The medium changes. The standard does not: composition, restraint, authorship, and intent.</p>
+        </aside>
+
         <p>That distinction no longer holds. As institutions like MoMA, the Getty, and the Smithsonian have elevated photography to equal standing with painting, the barrier between mediums has dissolved.</p>
 
         <p>What matters now is not how the work was made, but whether it meets the threshold of authorship, intent, and artistic rigor.</p>
 
         <p>In this context, photography is no longer a secondary medium documenting what painters imagined. It is a parallel force—capable of the same narrative depth and cultural weight.</p>
 
-        <p>The question is no longer:<br>
-        <em>"Is it a painting or a photograph?"</em></p>
-
-        <p>The question is:<br>
-        <strong>"Is it fine art?"</strong></p>
+        <p>The question is no longer: 
+        <em>"Is it a painting or a photograph?" </em>  The question is:
+        "Can it be <strong>fine art?"</strong></p>
 
         <!-- SECTION 5: Western Fine Art Photography -->
         <div class="section-heading-with-line">
           <h2>Western Fine Art Photography</h2>
         </div>
 
-        <p>Most Western photography does not qualify as <a href="/Blog/what-is-western-fine-art-photography" style="color:#8b5a2b; text-decoration:underline;">Western fine art photography</a>.</p>
-
-        <p>It may be beautiful.<br>
-        It may be popular.<br>
-        It may sell well in tourist markets.</p>
-
-        <p>But fine art requires more than subject recognition or technical competence.</p>
+        <p>Most Western photography does not qualify as <a href="/Blog/what-is-western-fine-art-photography" style="color:#8b5a2b; text-decoration:underline;">Western fine art photography</a>.It may be beautiful. It may be popular. It may sell well in tourist markets. But fine art requires more than subject recognition or technical competence.</p>
 
         <p>What elevates Western photography to fine art is the same standard applied to painting:</p>
 
@@ -276,71 +354,19 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
           <li style="margin-bottom:0.5rem;">A refusal to reduce the West to cliché</li>
         </ul>
 
-        <p>Fine art Western photography does not rely on golden-hour saturation, HDR excess, or postcard-ready compositions. It finds tension, ambiguity, and quietness in a genre historically dominated by spectacle.</p>
+        <p>Fine art Western photography does not rely on golden-hour saturation, HDR excess, or postcard-ready compositions. It finds tension, ambiguity, and quietness in a genre historically dominated by spectacle. It treats the subject with the seriousness of a painter—choosing light, framing, and moment with intention.</p>
 
-        <p>It treats the subject with the seriousness of a painter—choosing light, framing, and moment with intention.</p>
+        <p>The West is not a backdrop. It is a condition. And capturing that condition requires more than a camera. It requires perspective.</p>
 
-        <p>The West is not a backdrop.<br>
-        It is a condition.</p>
-
-        <p>And capturing that condition requires more than a camera.<br>
-        It requires perspective.</p>
-
-        <!-- IMAGE BLOCK (SERP visibility) -->
-        <h3 style="font-size:1.1rem; font-weight:600; margin-top:2.5rem; margin-bottom:0.5rem; color:#555;">Representative Examples of Western Fine Art Photography</h3>
-        <div class="example-images">
-          <figure>
-            <a href={`/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/${image1.id}`}>
-              <img 
-                src={image1.src} 
-                alt={image1.alt}
-                loading="lazy"
-              />
-            </a>
-            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
-              Landscape as fine art: authorship over scenery.
-            </figcaption>
-          </figure>
-          <figure>
-            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${image2.id}`}>
-              <img 
-                src={image2.src} 
-                alt={image2.alt}
-                loading="lazy"
-              />
-            </a>
-            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
-              Cowboy portraiture: character, not archetype.
-            </figcaption>
-          </figure>
-          <figure>
-            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/${image3.id}`}>
-              <img 
-                src={image3.src} 
-                alt={image3.alt}
-                loading="lazy"
-              />
-            </a>
-            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
-              Black and white: craft defines fine art, not color.
-            </figcaption>
-          </figure>
-          <figure>
-            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${image4.id}`}>
-              <img 
-                src={image4.src} 
-                alt={image4.alt}
-                loading="lazy"
-              />
-            </a>
-            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
-              Presence and tradition through intentional vision.
-            </figcaption>
-          </figure>
-        </div>
+        <aside class="inline-art-callout inline-art-callout--right">
+          <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color/${nativeAmericanDeepImage.id}`}>
+            <img src={nativeAmericanDeepImage.src} alt={nativeAmericanDeepImage.alt} loading="lazy" />
+          </a>
+          <p>That standard also holds in Native American portraiture, where dignity and continuity matter more than costume or cliché.</p>
+        </aside>
 
         <!-- SECTION 6: What Western Fine Art Is Not -->
-        <div class="section-heading-with-line">
+        <div class="section-heading-with-line; ">
           <h2>What Western Fine Art Is Not</h2>
         </div>
 
@@ -356,11 +382,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         Work whose primary function is record rather than authored interpretation.</p>
 
         <p><strong>Genre clichés</strong><br>
-        Visual tropes used as shorthand rather than narrative elements.</p>
-
-        <p>The dividing line is intent.</p>
-
-        <p>If the work exists primarily to sell quickly, appeal broadly, or reinforce expectation, it is not fine art.</p>
+        Visual tropes used as shorthand rather than narrative elements. The dividing line is intent. If the work exists primarily to sell quickly, appeal broadly, or reinforce expectation, it is not fine art.</p>
 
         <p>Western fine art exists to be considered over time—returning meaning rather than immediate gratification.</p>
 
@@ -409,6 +431,184 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 </BaseLayout>
 
 <style>
+  .early-examples-section {
+    max-width: 1000px;
+    margin: 0 auto 2.25rem;
+    padding: 0 1rem;
+  }
+
+  .early-examples-shell {
+    background: rgba(255, 252, 247, 0.96);
+    border: 1px solid rgba(121, 98, 78, 0.16);
+    border-radius: 18px;
+    padding: 1.35rem 1.25rem 1.55rem;
+    box-shadow: 0 18px 34px rgba(52, 38, 26, 0.07);
+    text-align: center;
+  }
+
+  .early-examples-kicker {
+    margin: 0 0 0.45rem;
+    font-size: 0.74rem;
+    font-weight: 200;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: #7b4a28;
+  }
+
+  .early-examples-title {
+    margin: 0 auto 0.65rem;
+    max-width: 200rem;
+    font-size: clamp(1.25rem, 2.4vw, 1.65rem);
+    line-height: 1.25;
+    color: #241b15;
+  }
+
+  .early-examples-intro {
+    max-width: 52rem;
+    margin: 0 auto 1.1rem;
+    font-size: 0.98rem;
+    line-height: 1.6;
+    color: #4a3d34;
+  }
+
+  .early-examples-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.05rem;
+    margin: 1.15rem 0 1rem;
+  }
+
+  .early-examples-grid figure {
+    margin: 0;
+    min-width: 0;
+  }
+
+  .early-examples-grid figure a {
+    display: block;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #efe7dc;
+    border: 1px solid rgba(121, 98, 78, 0.14);
+    box-shadow: 0 8px 18px rgba(41, 30, 21, 0.06);
+  }
+
+  .early-examples-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    transition: transform 0.45s ease;
+  }
+
+  .early-examples-grid a:hover img {
+    transform: scale(1.035);
+  }
+
+  .early-examples-grid figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.78rem;
+    line-height: 1.35;
+    color: #6a5a4c;
+    font-style: italic;
+  }
+
+  .early-examples-cta {
+    display: inline-block;
+    margin-top: 0.35rem;
+    color: #7b4a28;
+    font-size: 0.92rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(123, 74, 40, 0.35);
+    padding-bottom: 0.12rem;
+  }
+
+  .early-examples-cta:hover {
+    color: #5f381e;
+    border-bottom-color: rgba(95, 56, 30, 0.55);
+  }
+
+  .inline-art-callout {
+    width: min(320px, 42%);
+    margin: 0.25rem 0 1.1rem 1.935rem;
+    padding: 0.85rem;
+    border: 1px solid rgba(121, 98, 78, 0.16);
+    border-radius: 14px;
+    background: rgba(249, 247, 244, 0.92);
+    box-shadow: 0 12px 24px rgba(52, 38, 26, 0.06);
+  }
+
+  .inline-art-callout--right {
+    width: min(411px, 42%);
+    float: right;
+  }
+
+  .inline-art-callout--left {
+    float: left;
+    margin: 0.35rem 1.35rem 1.1rem 0;
+  }
+
+  .inline-art-callout a {
+    display: block;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #efe7dc;
+  }
+
+  .inline-art-callout img {
+    width: 100%;
+    display: block;
+  }
+
+  .inline-art-callout p {
+    margin: 0.85rem 0 0;
+    font-size: 0.85rem !important;
+    line-height: 1.38;
+    color: #6a5a4c;
+    font-style: italic;
+  }
+
+  @media (max-width: 768px) {
+    .early-examples-section {
+      margin-bottom: 1.55rem;
+      padding: 0 0.75rem;
+    }
+
+    .early-examples-shell {
+      padding: 1rem 0.85rem 1.15rem;
+      border-radius: 14px;
+    }
+
+    .early-examples-title {
+      font-size: 1.18rem;
+    }
+
+    .early-examples-intro {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin-bottom: 0.85rem;
+    }
+
+    .early-examples-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.55rem;
+    }
+
+    .early-examples-grid figcaption {
+      font-size: 0.72rem;
+    }
+
+    .inline-art-callout,
+    .inline-art-callout--right,
+    .inline-art-callout--left {
+      float: none;
+      width: 100%;
+      margin: 1rem 0;
+    }
+  }
+
   /* Section headings with line */
   .section-heading-with-line {
     display: flex;
@@ -416,6 +616,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
     gap: 1.5rem;
     margin-top: 2.5rem;
     margin-bottom: 0;
+    clear: both;
   }
   .section-heading-with-line::after {
     content: '';
@@ -450,7 +651,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
   .example-images {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
+    gap: 1.15rem;
     margin: 2rem 0;
     padding: 1.5rem;
     background: #f9f9f9;

@@ -37,20 +37,25 @@ const headerImage = {
 const image1 = {
   id: "i-ncFcHDM",
   src: getProxySrc("i-ncFcHDM", "l"),
-  alt: "Cowboy shaped by warm directional light — form over detail"
+  alt: "Cowboy portrait shaped by directional light, warm tone, and selective detail in painterly photography"
 };
 const image2 = {
   id: "i-LCspRF4",
   src: getProxySrc("i-LCspRF4", "l"),
-  alt: "Atmosphere carrying narrative weight in a Western scene"
+  alt: "Western figures in atmosphere and dusk light, where narrative emerges through tone and mood"
 };
 const image3 = {
   id: "i-46kWCqc",
   src: getProxySrc("i-46kWCqc", "l"),
-  alt: "Tonal control and compositional restraint in a character study"
+  alt: "Mounted Western figure held in tonal restraint and deep blue atmosphere"
+};
+const sidePanelImage = {
+  id: "i-NdQnj6P",
+  src: getProxySrc("i-NdQnj6P", "l"),
+  alt: "Painterly Western portrait with atmospheric light, tonal layering, and narrative tension"
 };
 
-const pageTitle = "What Is Painterly Photography? Definition, Editing, Fine Art";
+const pageTitle = "What Is Painterly Photography? Definition and Meaning";
 const faqItems = [
   {
     question: "What is painterly photography?",
@@ -73,7 +78,7 @@ const faqItems = [
     answer: "K4 Studios applies the painterly tradition to Western and historically themed fine art photography, using authored scenes, atmospheric light, color, grain, texture, and narrative restraint to move the viewer from record into story."
   }
 ];
-const pageDescription = "Painterly photography is a term used in many ways - from editing presets to fine art practice. This article distinguishes surface effects from the discipline of painterly fine art photography.";
+const pageDescription = "What is painterly photography? This article defines the term, separates it from painterly editing, and explains its place in fine art photography.";
 
 const structuredImageUrls = [
   getAbsoluteProxySrc(headerImage.id, "l"),
@@ -107,6 +112,7 @@ const structuredData = getStructuredData({
       name: "Wayne Heim"
     },
     datePublished: "2026-01-24",
+    dateModified: "2026-05-07",
     articleSection: "Photography",
     definedTerm: {
       name: "Painterly Photography",
@@ -191,8 +197,8 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
       <article class="story-block space-y-4">
 
         <!-- SECTION 1: Definition -->
-        <p style="font-size:0.95rem; color:#666; margin-bottom:1.5rem; font-style:italic;">
-          The painterly approach within <a href="/Blog/what-is-artistic-western-photography" style="color:#8b5a2b; text-decoration:underline;">artistic Western photography</a> and the broader discipline of <a href="/Galleries/Painterly-Fine-Art-Photography" style="color:#8b5a2b; text-decoration:underline;">painterly fine art photography</a>
+        <p style="font-size:0.95rem; color:#666; margin-bottom:1.5rem; font-style:italic; text-align:center;">
+          Painterly <a href="/Blog/what-is-artistic-western-photography" style="color:#8b5a2b; text-decoration:underline;">artistic Western photography</a> and the broader discipline of <a href="/Galleries/Painterly-Fine-Art-Photography" style="color:#8b5a2b; text-decoration:underline;">painterly fine art photography</a>
         </p>
 
         <p><strong>Painterly photography</strong> is a photographic approach in which light, tone, composition, atmosphere, and selective detail are shaped to create images with the emotional presence and visual structure associated with painting.</p>
@@ -207,53 +213,84 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
         <p>If artistic Western photography describes interpretive authorship, painterly photography describes a specific visual philosophy inside that approach—one rooted in atmosphere, tonal control, and narrative restraint.</p>
 
-        <p>It is not a filter.<br/>
-        It is not a preset.<br/>
-        It is not a post-processing trick.</p>
+        <p>It is not simply a filter... nor just a preset... It is MORE than "post processing tricks". Painterly fine art photography is a fine art discipline built from the first decision to the final print.</p>
 
-        <p>Painterly fine art photography is a fine art discipline built from the first decision to the final print.</p>
-
-        <!-- SECTION 2: Where It Fits -->
+        <!-- SECTION 5: What Defines -->
         <div class="section-heading-with-line">
-          <h2>Where It Fits in the Western Art Structure</h2>
+          <h2>Key Characteristics of Painterly Photography</h2>
         </div>
 
-        <p>Across the <a href="/Blog/what-is-western-art" style="color:#8b5a2b; text-decoration:underline;">Western art</a> series, each term describes a different level of meaning:</p>
+        <div class="painterly-focus-grid">
+          <div class="painterly-focus-main">
 
-        <ul style="list-style:none; padding-left:1rem; margin:1rem 0 1.5rem;">
-          <li style="margin-bottom:0.5rem;"><strong><a href="/Blog/what-is-western-art" style="color:#8b5a2b; text-decoration:underline;">Western art</a></strong> — the broad cultural tradition</li>
-          <li style="margin-bottom:0.5rem;"><strong><a href="/Blog/what-is-western-fine-art" style="color:#8b5a2b; text-decoration:underline;">Western fine art</a></strong> — the authorship standard</li>
-          <li style="margin-bottom:0.5rem;"><strong><a href="/Blog/what-is-western-fine-art-photography" style="color:#8b5a2b; text-decoration:underline;">Western fine art photography</a></strong> — the photographic medium</li>
-          <li style="margin-bottom:0.5rem;"><strong><a href="/Blog/what-is-artistic-western-photography" style="color:#8b5a2b; text-decoration:underline;">Artistic Western photography</a></strong> — the interpretive approach</li>
-          <li><strong>Painterly photography</strong> — the tonal, atmospheric expression of that approach</li>
-        </ul>
+            <p>Painterly photography emphasizes:</p>
 
-        <p>Painterly photography is not a separate category from artistic photography.<br/>
-        It is a refinement of it.</p>
+            <ul style="list-style:none; padding-left:0; margin:0.75rem 0 1.25rem;">
+              <li style="margin-bottom:0.8rem;"><strong>Directional light</strong><br/>Light is used to sculpt form rather than simply illuminate it.</li>
+              <li style="margin-bottom:0.8rem;"><strong>Tonal hierarchy</strong><br/>Some elements dominate. Others recede. The image has visual structure.</li>
+              <li style="margin-bottom:0.8rem;"><strong>Atmosphere over detail</strong><br/>Clarity is used selectively. Mood takes priority over description.</li>
+              <li style="margin-bottom:0.8rem;"><strong>Color and texture as narrative</strong><br/>Blended color, grain, and texture support the story and guide the eye rather than sitting on top of the image as decoration.</li>
+              <li style="margin-bottom:0.8rem;"><strong>Narrative restraint</strong><br/>Images suggesting a story rather than fully explaining it.</li>
+              <li><strong>Print presence</strong><br/>The final photograph is conceived as a physical art object, not just a screen image.</li>
+            </ul>
+          </div>
 
-        <p>Where artistic Western photography focuses on interpretation, painterly photography focuses on how that interpretation is expressed visually.</p>
+          <aside class="painterly-focus-side" aria-label="Painterly photography visual example">
+            <figure>
+              <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${sidePanelImage.id}`}>
+                <img
+                  src={sidePanelImage.src}
+                  alt={sidePanelImage.alt}
+                  loading="lazy"
+                />
+              </a>
+              <figcaption>
+                Atmospheric light and tonal layering show how painterly photography builds mood, hierarchy, and narrative presence.
+              </figcaption>
+            </figure>
+          </aside>
+        </div>
 
         <!-- SECTION 3: Modern Misuse -->
         <div class="section-heading-with-line">
           <h2>Painterly Photography vs. Painterly Editing</h2>
         </div>
 
-        <p>Today, the word <em>painterly</em> is widely used to describe editing styles.</p>
+        <div class="painterly-focus-grid">
+          <div class="painterly-focus-main">
+            <p>Today, the word <em>painterly</em> is widely used to describe editing styles.</p>
 
-        <p>Search for painterly photography and you will find:</p>
-        <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 1.5rem;">
-          <li style="margin-bottom:0.5rem;">Presets promising painterly tones</li>
-          <li style="margin-bottom:0.5rem;">Tutorials teaching painterly edits</li>
-          <li>Software advertising painterly effects</li>
-        </ul>
+            <p>Search for painterly photography and you will find:</p>
+            <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 1.5rem;">
+              <li style="margin-bottom:0.5rem;">Presets promising painterly tones</li>
+              <li style="margin-bottom:0.5rem;">Tutorials teaching painterly edits</li>
+              <li>Software advertising painterly effects</li>
+            </ul>
 
-        <p>This usage is widespread and legitimate. It reflects a desire for warmth, texture, and visual softness. But it has shifted the meaning of the word.</p>
+            <p>This usage is widespread and legitimate. It reflects a desire for warmth, texture, and visual softness. But it has shifted the meaning of the word.</p>
 
-        <p>Painterly photography is often understood as something applied after capture, rather than something embedded in the image from the beginning. That is why so many modern explanations stop at resemblance: soft edges, brushlike texture, muted palettes, or painterly mood.</p>
+            <p>Painterly photography is often charactorized as mearly something applied after capture, rather than foundationally part of the image and story. That is why so many modern explanations stop at describing resemblance: soft edges, brushlike texture, muted palettes, or painterly feel.</p>
 
-        <p>When painterly qualities can be added with a slider, the distinction between authored fine art and stylistic treatment becomes blurred.</p>
+            <p>When the painterly qualities of a piece overpower the work, the distinction between authored fine art and stylistic treatment becomes blurred.</p>
 
-        <p>The difference is whether the treatment becomes part of the story. Texture, grain, color blending, and softened detail can all support a painterly image, but only when they guide the eye, deepen atmosphere, and help the viewer enter the scene. If the viewer notices the technique first, the image has already begun to fail.</p>
+            <p>The difference lies in whether the artist's choice of approach and treatment becomes part of the story or sits on top and competes for the voice. Texture, grain, color blending, and softened detail can all support painterly images, but only become successful when they guide the eye, deepen atmosphere, and help the viewer enter the scene. If the viewer notices the technique first, the image has already begun to fail.</p>
+          </div>
+
+          <aside class="painterly-focus-side" aria-label="Directional light in painterly Western photography">
+            <figure>
+              <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${image1.id}`}>
+                <img
+                  src={image1.src}
+                  alt={image1.alt}
+                  loading="lazy"
+                />
+              </a>
+              <figcaption>
+                Directional light and selective detail let painterly photography shape form without slipping into mere effect.
+              </figcaption>
+            </figure>
+          </aside>
+        </div>
 
         <!-- SECTION 4: Historical Meaning -->
         <div class="section-heading-with-line">
@@ -262,14 +299,12 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
         <p>The deeper meaning of painterly photography comes from <a href="/Pictorialist-Photography" style="color:#8b5a2b; text-decoration:underline;">pictorialist photography</a>, the late nineteenth- and early twentieth-century movement that argued photography could function as fine art rather than mechanical documentation.</p>
 
-        <p>Pictorialist photographers believed the camera could function as an artistic medium rather than a recording device. Artists associated with the movement and its lineage, including Alfred Stieglitz, Gertrude Kasebier, Edward Steichen, Clarence H. White, F. Holland Day, and Julia Margaret Cameron, helped make the case that photographs could carry mood, authorship, and emotional interpretation.</p>
-
-        <p>They:</p>
-        <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 1.5rem;">
-          <li style="margin-bottom:0.5rem;">Controlled light deliberately</li>
-          <li style="margin-bottom:0.5rem;">Emphasized tone over detail</li>
+        <p>Pictorialist photographers believed the camera could function as an artistic medium rather than a recording device. Artists associated with the movement and its lineage, including Alfred Stieglitz, Gertrude Kasebier, Edward Steichen, Clarence H. White, F. Holland Day, and Julia Margaret Cameron, helped make the case that photographs could carry mood, authorship, and emotional interpretation. These pioneers:</p>
+        <ul style="list-style:disc; columns:2; column-gap:2rem; padding-left:1.5rem; margin:1rem 0 1.5rem;">
+          <li style="margin-bottom:0.5rem;">Treated the photograph as a finished art object</li>
           <li style="margin-bottom:0.5rem;">Used atmosphere to shape emotion</li>
-          <li>Treated the photograph as a finished art object</li>
+          <li style="margin-bottom:0.5rem;">Emphasized tone over detail</li>
+          <li style="margin-bottom:0.5rem;">Controlled light deliberately</li>
         </ul>
 
         <p>Their work shifted photography from documentation toward authorship.</p>
@@ -279,7 +314,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         <p>That argument has become relevant again. Today, photographers are once more pushing the medium beyond documentation through staged scenes, cinematic light, digital craft, alternative printing, and hybrid forms. The question is no longer only whether a photograph is accurate. The stronger question is whether it has been authored into something with lasting artistic presence.</p>
 
         <p>Painterly fine art photography continues that trajectory. It is:</p>
-        <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 1.5rem;">
+        <ul style="list-style:disc; columns:2; column-gap:2rem; padding-left:1.5rem; margin:1rem 0 1.5rem;">
           <li style="margin-bottom:0.5rem;">Narrative-driven</li>
           <li style="margin-bottom:0.5rem;">Print-first</li>
           <li style="margin-bottom:0.5rem;">Craft-intensive</li>
@@ -287,114 +322,104 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
           <li>Structurally composed</li>
         </ul>
 
-        <p>Painterly qualities are not added at the end.<br/>
-        They are embedded from the beginning.</p>
+        <p>Painterly qualities are not added at the end. They are embedded from the beginning.</p>
 
-        <!-- SECTION 5: What Defines -->
+        <!-- SECTION 2: Where It Fits -->
         <div class="section-heading-with-line">
-          <h2>Key Characteristics of Painterly Photography</h2>
+          <h2>Where It Fits in the Western Art Structure</h2>
         </div>
 
-        <p>Painterly photography emphasizes:</p>
+        <div class="painterly-focus-grid">
+          <div class="painterly-focus-main">
+            <p>Across the <a href="/Blog/what-is-western-art" style="color:#8b5a2b; text-decoration:underline;">Western art</a> series, each term describes a different level of meaning:</p>
 
-        <ul style="list-style:none; padding-left:0; margin:1rem 0 1.5rem;">
-          <li style="margin-bottom:1rem;"><strong>Directional light</strong><br/>Light is used to sculpt form rather than simply illuminate it.</li>
-          <li style="margin-bottom:1rem;"><strong>Tonal hierarchy</strong><br/>Some elements dominate. Others recede. The image has visual structure.</li>
-          <li style="margin-bottom:1rem;"><strong>Atmosphere over detail</strong><br/>Clarity is used selectively. Mood takes priority over description.</li>
-          <li style="margin-bottom:1rem;"><strong>Color and texture as narrative</strong><br/>Blended color, grain, and texture support the story and guide the eye rather than sitting on top of the image as decoration.</li>
-          <li style="margin-bottom:1rem;"><strong>Narrative restraint</strong><br/>The image suggests a story rather than explaining it.</li>
-          <li><strong>Print presence</strong><br/>The final photograph is conceived as a physical art object, not just a screen image.</li>
-        </ul>
+            <ul style="list-style:none; padding-left:1rem; margin:1rem 0 1.5rem;">
+              <li style="margin-bottom:0.5rem;"><strong><a href="/Blog/what-is-western-art" style="color:#8b5a2b; text-decoration:underline;">Western art</a></strong> — the broad cultural tradition</li>
+              <li style="margin-bottom:0.5rem;"><strong><a href="/Blog/what-is-western-fine-art" style="color:#8b5a2b; text-decoration:underline;">Western fine art</a></strong> — the authorship standard</li>
+              <li style="margin-bottom:0.5rem;"><strong><a href="/Blog/what-is-western-fine-art-photography" style="color:#8b5a2b; text-decoration:underline;">Western fine art photography</a></strong> — the photographic medium</li>
+              <li style="margin-bottom:0.5rem;"><strong><a href="/Blog/what-is-artistic-western-photography" style="color:#8b5a2b; text-decoration:underline;">Artistic Western photography</a></strong> — the interpretive approach</li>
+              <li><strong>Painterly photography</strong> — the tonal, atmospheric expression of that approach</li>
+            </ul>
+
+            <p>Painterly photography is not a separate category from artistic photography.</p>
+            <p>It is a principal refinement of it.</p>
+
+            <p>Where artistic Western photography focuses on interpretation, painterly photography focuses on how that interpretation is expressed visually.</p>
+          </div>
+
+          <aside class="painterly-focus-side" aria-label="Atmospheric storytelling in Western fine art photography">
+            <figure>
+              <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${image2.id}`}>
+                <img
+                  src={image2.src}
+                  alt={image2.alt}
+                  loading="lazy"
+                />
+              </a>
+              <figcaption>
+                Atmosphere and softened description let painterly photography suggest story instead of spelling it out.
+              </figcaption>
+            </figure>
+          </aside>
+        </div>
 
         <!-- SECTION 6: Practitioner's Perspective -->
         <div class="section-heading-with-line">
           <h2>A Practitioner's Perspective</h2>
         </div>
 
-        <p>My work is grounded in this painterly tradition.</p>
-
-        <p>As a fine art photographer and former medical illustrator, I approach photography as a constructed visual language rather than a passive recording process. The structural discipline once applied to anatomical rendering now guides my photographic work.</p>
+        <p>My work is grounded in this painterly tradition. As a fine art photographer and former medical illustrator, I approach photography as a constructed visual language rather than a passive recording process. The structural discipline once applied to anatomical rendering now guides my photographic work.</p>
 
         <p>Wayne Heim's approach to painterly photography begins with the camera. The camera records the moment; the artist shapes what remains. Drawing on the trained hand and eye of an award-winning illustrator, the final image is built through light, color, texture, atmosphere, focus, restraint, and human imagination.</p>
 
         <p>The painterly quality in these images does not come from filters. It emerges from:</p>
-        <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 1.5rem;">
-          <li style="margin-bottom:0.5rem;">Directional light</li>
-          <li style="margin-bottom:0.5rem;">Atmospheric conditions</li>
-          <li style="margin-bottom:0.5rem;">Color relationships</li>
-          <li style="margin-bottom:0.5rem;">Texture and grain used as visual memory</li>
-          <li style="margin-bottom:0.5rem;">Compositional control</li>
-          <li>Tonal intention carried through to print</li>
+        <ul style="list-style:disc; columns:2; column-gap:2rem; padding-left:1.5rem; margin:0.75rem 0 1.25rem;">
+          <li style="margin-bottom:0.4rem;">Texture and grain used as visual memory</li>
+          <li style="margin-bottom:0.4rem;">Tonal intention carried through to print</li>
+          <li style="margin-bottom:0.4rem;">Compositional control</li>
+          <li style="margin-bottom:0.4rem;">Directional light</li>
+          <li style="margin-bottom:0.4rem;">Atmospheric conditions</li>
+          <li>Color relationships</li>
         </ul>
 
         <p>In practice, that may involve building a visual surface from multiple subtle decisions: blending color so it feels remembered rather than literal, introducing texture from other photographic sources, using grain to soften the digital edge, and shaping light so the viewer's attention moves through the frame instead of stopping at the facts of the scene.</p>
 
-        <p>Each image is conceived as a story rather than a moment—a single frame drawn from a larger, unseen narrative.</p>
+        <p>Each image is conceived as a story rather than a moment-a single frame drawn from a larger, unseen narrative.</p>
 
-        <p>My primary subject is the American West: cowboy portraiture, frontier narrative, and Western landscapes. I also work with historically themed subjects, always with the same goal:</p>
-
-        <p>To create photographs that function as fine art objects, not as documentation or stylistic effects.</p>
-
-        <!-- SECTION 7: Visual Examples -->
-        <div class="section-heading-with-line">
-          <h2>What This Looks Like in Practice</h2>
-        </div>
-
-        <div class="example-images">
-          <figure>
-            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${image1.id}`}>
-              <img 
-                src={image1.src} 
-                alt={image1.alt}
-                loading="lazy"
-              />
-            </a>
-            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
-              Directional light sculpts the subject, letting form and mood carry more weight than documentary detail.
-            </figcaption>
-          </figure>
-          
-          <figure>
-            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${image2.id}`}>
-              <img 
-                src={image2.src} 
-                alt={image2.alt}
-                loading="lazy"
-              />
-            </a>
-            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
-              Atmosphere softens literal description and lets the implied story gather around the figures.
-            </figcaption>
-          </figure>
-
-          <figure>
-            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${image3.id}`}>
-              <img 
-                src={image3.src} 
-                alt={image3.alt}
-                loading="lazy"
-              />
-            </a>
-            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
-              Tonal restraint creates hierarchy, holding attention on character instead of surface spectacle.
-            </figcaption>
-          </figure>
-        </div>
+        <p>My primary subject is the American West: cowboy portraiture, frontier narrative, and Western landscapes. I also work with historically themed subjects, always with the same goal: To create photographs that function as fine art objects, not as documentation or stylistic effects.</p>
 
         <!-- SECTION 8: Why It Matters -->
         <div class="section-heading-with-line">
           <h2>Why the Painterly Approach Matters</h2>
         </div>
 
-        <p>Painterly photography slows the viewer down.</p>
+        <div class="painterly-focus-grid">
+          <div class="painterly-focus-main">
+            <p>Painterly photography slows the viewer down.</p>
 
-        <p>Instead of rewarding a quick glance, it invites sustained attention. The image is not about what is immediately visible, but about what gradually emerges.</p>
+            <p>Instead of rewarding a quick glance, it invites sustained attention. The image is not about what is immediately visible, but about what gradually emerges.</p>
 
-        <p>At its best, the painterly approach lets the eye and brain suspend disbelief. The viewer stops thinking, <em>I am looking at a photograph of an event</em>, and begins to feel that a story is unfolding in front of them.</p>
+            <p>At its best, the painterly approach lets the eye and brain suspend disbelief. The viewer stops thinking, <em>I am looking at a photograph of an event</em>, and begins to feel that a story is unfolding in front of them.</p>
 
-        <p>In a crowded visual world, presence does not come from intensity or saturation. It comes from structure, tone, and restraint.</p>
+            <p>In a crowded visual world, presence does not come from intensity or saturation. It comes from structure, tone, and restraint.</p>
+            <p style="text-align:center; font-weight:700; font-style:italic; margin-top:6rem;"><em>When technique recedes, story begins.</em></p>
+          </div>
 
-        <p>When technique recedes, story begins.</p>
+          <aside class="painterly-focus-side" aria-label="Tonal restraint in Western fine art photography">
+            <figure>
+              <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${image3.id}`}>
+                <img
+                  src={image3.src}
+                  alt={image3.alt}
+                  loading="lazy"
+                />
+              </a>
+              <figcaption>
+                Tonal restraint creates hierarchy, guiding the eye toward character, atmosphere, and implied narrative.
+              </figcaption>
+            </figure>
+          </aside>
+        </div>
 
         <section class="faq-block" aria-labelledby="painterly-faq-heading">
           <div class="section-heading-with-line">
@@ -454,8 +479,52 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
       color: #1a1a1a;
     }
     .story-block ul { font-size: clamp(1rem, 2.5vw, 1.125rem); }
+    .painterly-focus-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      letter-spacing: -0.03em;
+      gap: 1.25rem;
+      margin-top: 0.25rem;
+    }
+    .painterly-focus-main p,
+    .painterly-focus-main li {
+      line-height: 1.42;
+    }
+    .painterly-focus-main p {
+      
+      margin-bottom: 0.85rem;
+    }
+    .painterly-focus-main .section-heading-with-line {
+      margin-top: 1.8rem;
+      margin-bottom: 0.15rem;
+    }
+    .painterly-focus-main .section-heading-with-line + p {
+      margin-top: 0.35rem;
+    }
+    .painterly-focus-side figure {
+      margin: 0;
+      padding: 1rem 1rem 1.45rem;
+      background: #f8f8f8;
+      border: 1px solid #e3e3e3;
+      border-radius: 12px;
+    }
+    .painterly-focus-side img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      display: block;
+    }
+    .painterly-focus-side figcaption {
+      margin-top: 2.6rem;
+      font-size: 0.85rem;
+      color: #666;
+      font-style: italic;
+      
+      line-height: 1.35;
+    }
     .faq-block details {
       border-top: 1px solid #ddd;
+        color: #666;
       padding: 0.85rem 0;
     }
     .faq-block details:last-child {
@@ -474,6 +543,26 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
     @media (max-width: 640px) {
       .story-section { padding-left: 1rem; padding-right: 1rem; }
       .story-block p, .story-block ul { line-height: 1.6; }
+      .painterly-focus-side {
+        order: -1;
+      }
+    }
+
+    @media (min-width: 980px) {
+      .painterly-focus-grid {
+        grid-template-columns: minmax(0, 1fr) 322px;
+        gap: 2.4rem;
+        align-items: start;
+        margin-top: 0.8rem;
+      }
+      .painterly-focus-side {
+        position: sticky;
+        top: 4.25rem;
+        align-self: start;
+      }
+      .painterly-focus-side figure {
+        margin-top: 1rem;
+      }
     }
     
     /* Mobile overflow protection */

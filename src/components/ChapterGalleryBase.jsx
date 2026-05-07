@@ -2204,14 +2204,29 @@ export default function ChapterGalleryBase({
                         className="relative block group"
                       >
                         <img
-                          src={activeTheme ? "/images/theme%20icon.webp" : "/images/K4Logo-web-b.jpg"}
+                          src={activeTheme ? "/images/theme%20icon.webp" : "/images/K4Logo-web.webp"}
                           alt={activeTheme ? `Theme: ${activeTheme.name}` : altText}
-                          width={160}
-                          height={66}
+                          width={activeTheme ? 160 : 96}
+                          height={activeTheme ? 66 : 96}
                           className="h-16.5 mb-5 transition-opacity duration-300 group-hover:opacity-0 group-hover:pointer-events-none"
-                          style={{ borderRadius: activeTheme ? "8px" : "50px", width: "160px", height: "66px", maxWidth: "160px", objectFit: "contain", opacity: activeTheme ? ".65" : ".20" }}
+                          style={{
+                            borderRadius: activeTheme ? "8px" : "999px",
+                            width: activeTheme ? "160px" : "96px",
+                            height: activeTheme ? "66px" : "96px",
+                            maxWidth: activeTheme ? "160px" : "96px",
+                            objectFit: activeTheme ? "contain" : "cover",
+                            opacity: activeTheme ? ".65" : ".20"
+                          }}
                         />
-                        <span className="absolute inset-0 flex items-center justify-center text-center text-[#7a6a58] font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none bg-white rounded-full" style={{ borderRadius: activeTheme ? "8px" : "50px" }}>
+                        <span
+                          className="absolute inset-0 flex items-center justify-center text-center text-[#7a6a58] font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none bg-white rounded-full"
+                          style={{
+                            borderRadius: activeTheme ? "8px" : "999px",
+                            width: activeTheme ? "160px" : "96px",
+                            height: activeTheme ? "66px" : "96px",
+                            margin: "0 auto"
+                          }}
+                        >
                           {sectionDisplayTitle}
                         </span>
                         <span className="sr-only">{activeTheme ? `Theme: ${activeTheme.name} in ${sectionDisplayTitle}` : sectionDisplayTitle}</span>

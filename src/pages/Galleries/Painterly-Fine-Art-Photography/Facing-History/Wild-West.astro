@@ -192,13 +192,7 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
       <TombstoneNav client:load items={semanticTombstones} />
     </div>
 
-    <section class="video-story-bridge reveal-on-scroll" aria-label="Narrated Wild West video story">
-      <p class="video-story-bridge__eyebrow">Narrated Story Test</p>
-      <p class="video-story-bridge__copy">
-        See how these Western stories breathe beyond the frame in the narrated short
-        <a href="/Videos/women-who-carried-the-west-short">Women Who Carried the West</a>.
-      </p>
-    </section>
+ 
 
     <section class="story-layout">
       <div class="text-column">
@@ -261,7 +255,12 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
             </article>
           ))}
         </section>
-
+   <section class="video-story-bridge reveal-on-scroll" aria-label="Narrated Wild West video story">
+      <p class="video-story-bridge__copy">
+        See stories breathe beyond the frame in our narrated short:
+        <a href="/Videos/women-who-carried-the-west-short">Women Who Carried the West</a>.
+      </p>
+    </section>
         <MobileStoryImages client:only="react" images={sanitizeForClient(featheredImages)} displayCount={headingCount} />
       </div>
 

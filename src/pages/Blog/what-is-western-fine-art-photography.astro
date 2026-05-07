@@ -42,23 +42,39 @@ const headerImages = [
 
 // Demo section images (3) - different from header
 const image1 = {
-  id: "i-ncFcHDM",
-  src: getProxySrc("i-ncFcHDM", "l"),
-  alt: "Cowboy rendered as a man rather than a silhouette — character over cliché"
+  id: "i-7Kwv8vc",
+  src: getProxySrc("i-7Kwv8vc", "l"),
+  alt: "Cowboy portrait in painterly light, treated as character rather than Western silhouette"
 };
 const image2 = {
   id: "i-Txh4c8k",
   src: getProxySrc("i-Txh4c8k", "l"),
-  alt: "Rope work in black and white — craft practiced when no one is watching"
+  alt: "Black-and-white rope work scene emphasizing practiced labor, restraint, and photographic authorship"
 };
 const image3 = {
   id: "i-7hD9CCh",
   src: getProxySrc("i-7hD9CCh", "l"),
-  alt: "Quiet attention at the water's edge — presence over performance"
+  alt: "Native American woman at the water's edge portrayed with quiet presence and narrative stillness"
 };
 
-const pageTitle = "What Is Western Fine Art Photography? Definition, Distinction, and What It Is Not";
-const pageDescription = "Western fine art photography is not décor, not stock imagery, not rodeo documentation. This article defines the discipline and distinguishes it from commercial Western imagery.";
+const closerImage1 = {
+  id: "i-MHGPvcs",
+  src: getProxySrc("i-MHGPvcs", "l"),
+  alt: "Western landscape shaped by atmosphere, light, and tonal control in fine art photography"
+};
+const closerImage2 = {
+  id: "i-mLPgSpC",
+  src: getProxySrc("i-mLPgSpC", "l"),
+  alt: "Western portrait built around character, posture, and narrative intent rather than stereotype"
+};
+const closerImage3 = {
+  id: "i-Cg4ZB72",
+  src: getProxySrc("i-Cg4ZB72", "l"),
+  alt: "Black-and-white Western study showing craft, tonal design, and authorship beyond medium"
+};
+
+const pageTitle = "What Is Western Fine Art Photography? Definition and Distinction";
+const pageDescription = "What is Western fine art photography? This article defines the medium and distinguishes it from decor, stock Western imagery, rodeo coverage, and documentary record.";
 
 const structuredImageUrls = [
   getAbsoluteProxySrc(headerImages[2].id, "l"),
@@ -96,6 +112,7 @@ const structuredData = getStructuredData({
       name: "Wayne Heim"
     },
     datePublished: "2026-01-29",
+    dateModified: "2026-05-07",
     articleSection: "Photography",
     definedTerm: {
       name: "Western Fine Art Photography",
@@ -171,12 +188,57 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
       <h1 style="font-size:2.5rem; font-weight:700; margin-bottom:0.5rem; line-height:1.2;">
         What Is Western Fine Art Photography?
       </h1>
-      <p style="font-size:1.25rem; color:#666; font-style:italic;">
-        Definition, distinction, and what it is not
+      <p style="font-size:1rem; color:#3f3f46; margin-top:0.9rem; max-width:780px; margin-left:auto; margin-right:auto; line-height:1.6;">
+        <strong>Definition:</strong> Western fine art photography interprets the American West through authorship, atmosphere, and visual intent rather than simple documentation.
       </p>
-      <p style="font-size:0.95rem; color:#888; margin-top:0.75rem; letter-spacing:0.02em;">
-        A working definition for collectors, curators, and serious viewers
+      <p style="font-size:0.95rem; color:#755f4f; margin-top:0.75rem; letter-spacing:0.02em;">
+        The subject begins the conversation. Authorship decides whether the image endures.
       </p>
+    </section>
+
+    <!-- Early Visual Bridge -->
+    <section class="early-examples-section">
+      <div class="early-examples-shell">
+        <p class="early-examples-kicker">See the Standard at Work</p>
+        <h2 class="early-examples-title">Western fine art photography begins where the camera stops merely recording.</h2>
+        <p class="early-examples-intro">
+          Character, labor, atmosphere, and historical presence become fine art when composition, restraint, and narrative intent shape what the viewer is asked to see.
+        </p>
+
+        <div class="early-examples-grid">
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${image1.id}`}>
+              <img src={image1.src} alt={image1.alt} loading="eager" />
+            </a>
+            <figcaption>Character over cowboy shorthand.</figcaption>
+          </figure>
+
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/${image2.id}`}>
+              <img src={image2.src} alt={image2.alt} loading="lazy" />
+            </a>
+            <figcaption>Labor, restraint, and photographic authorship.</figcaption>
+          </figure>
+
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color/${image3.id}`}>
+              <img src={image3.src} alt={image3.alt} loading="lazy" />
+            </a>
+            <figcaption>Presence, dignity, and narrative stillness.</figcaption>
+          </figure>
+
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/${headerImages[0].id}`}>
+              <img src={getProxySrc(headerImages[0].id, "l")} alt={headerImages[0].alt} loading="lazy" />
+            </a>
+            <figcaption>Landscape carries atmosphere, structure, and authorship.</figcaption>
+          </figure>
+        </div>
+
+        <a class="early-examples-cta" href="/Western-Fine-Art-Photography">
+          Explore Western Fine Art Photography
+        </a>
+      </div>
     </section>
 
     <!-- Article Content -->
@@ -199,11 +261,13 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         <!-- EARLY FUNNEL -->
         <div class="early-funnel" style="background:#f8f6f3; border-left:4px solid #8b5a2b; padding:1.25rem 1.5rem; margin:2rem 0; border-radius:0 8px 8px 0;">
           <p style="margin:0; font-size:1.05rem;">
-            To see these ideas in practice, explore the primary 
-            <a href="/Western-Fine-Art-Photography" style="color:#8b5a2b; font-weight:600; text-decoration:underline;">Western Fine Art Photography collection</a>.
+            The definition matters because the work is meant to be seen, not just explained. Explore the primary
+            <a href="/Western-Fine-Art-Photography" style="color:#8b5a2b; font-weight:600; text-decoration:underline;">Western Fine Art Photography collection</a>
+            to see how authorship, atmosphere, and restraint carry through the images themselves.
           </p>
           <p style="margin:0.75rem 0 0; font-size:1.05rem;">
-            For the artist authority page behind that work, see <a href="/wayne-heim-western-fine-art-photography" style="color:#8b5a2b; font-weight:600; text-decoration:underline;">Wayne Heim</a>.
+            For the artist authority page behind that work, see
+            <a href="/wayne-heim-western-fine-art-photography" style="color:#8b5a2b; font-weight:600; text-decoration:underline;">Wayne Heim</a>.
           </p>
         </div>
 
@@ -259,12 +323,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
           <h2>What Defines Western Fine Art Photography</h2>
         </div>
 
-        <p>Fine art photography—Western or otherwise—is defined by authorship. The photographer shapes how the image functions, what it communicates, and how it rewards attention over time.</p>
-
-        <p>The photograph is not found.<br>
-        It is made.</p>
-
-        <p>In Western fine art photography, this authorship often appears as:</p>
+        <p>Fine art photography—Western or otherwise—is defined by authorship. The photographer shapes how the image functions, what it communicates, and how it rewards attention over time. The photograph is not found, it is made. In Western fine art photography, this authorship often appears as:</p>
 
         <p><strong>Character over archetype</strong><br>
         Cowboys, ranchers, and frontier figures appear as individuals rather than symbols.</p>
@@ -282,46 +341,46 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
         <!-- SECTION 5: Visual Demonstration -->
         <div class="section-heading-with-line">
-          <h2>What This Looks Like</h2>
+          <h2>A Closer Look at the Same Artistic Standard</h2>
         </div>
 
         <div class="example-images">
           <figure>
-            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${image1.id}`}>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/${closerImage1.id}`}>
               <img 
-                src={image1.src} 
-                alt={image1.alt}
+                src={closerImage1.src} 
+                alt={closerImage1.alt}
                 loading="lazy"
               />
             </a>
             <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
-              Cowboy portrait in painterly light — a man, not a silhouette
+              A fine art Western landscape builds atmosphere, structure, and authorship instead of relying on familiar scenery.
             </figcaption>
           </figure>
           
           <figure>
-            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/${image2.id}`}>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${closerImage2.id}`}>
               <img 
-                src={image2.src} 
-                alt={image2.alt}
+                src={closerImage2.src} 
+                alt={closerImage2.alt}
                 loading="lazy"
               />
             </a>
             <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
-              Rope work in black and white — craft practiced when no one is watching
+              Character and posture matter more than stereotype when the work is authored as fine art.
             </figcaption>
           </figure>
 
           <figure>
-            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color/${image3.id}`}>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/${closerImage3.id}`}>
               <img 
-                src={image3.src} 
-                alt={image3.alt}
+                src={closerImage3.src} 
+                alt={closerImage3.alt}
                 loading="lazy"
               />
             </a>
             <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
-              Native American woman at the water's edge — presence, memory, and quiet attention
+              Tonal restraint and craft carry the image beyond genre shorthand.
             </figcaption>
           </figure>
         </div>
@@ -389,6 +448,105 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
       .story-section { padding-left: 1rem; padding-right: 1rem; }
       .story-block p, .story-block ul { line-height: 1.6; }
     }
+
+    .early-examples-section {
+      max-width: 1180px;
+      margin: 0 auto 2.25rem;
+      padding: 0 1rem;
+    }
+
+    .early-examples-shell {
+      background: rgba(255, 252, 247, 0.96);
+      border: 1px solid rgba(121, 98, 78, 0.16);
+      border-radius: 18px;
+      padding: 1.35rem 1.25rem 1.55rem;
+      box-shadow: 0 18px 34px rgba(52, 38, 26, 0.07);
+      text-align: center;
+    }
+
+    .early-examples-kicker {
+      margin: 0 0 0.45rem;
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: #7b4a28;
+    }
+
+    .early-examples-title {
+      margin: 0 auto 0.65rem;
+      max-width: 52rem;
+      font-size: clamp(1.25rem, 2.4vw, 1.65rem);
+      line-height: 1.25;
+      color: #241b15;
+    }
+
+    .early-examples-intro {
+      max-width: 52rem;
+      margin: 0 auto 1.1rem;
+      font-size: 0.98rem;
+      line-height: 1.6;
+      color: #4a3d34;
+    }
+
+    .early-examples-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0.85rem;
+      margin: 1.15rem 0 1rem;
+    }
+
+    .early-examples-grid figure {
+      margin: 0;
+      min-width: 0;
+    }
+
+    .early-examples-grid figure a {
+      display: block;
+      aspect-ratio: 3 / 4;
+      overflow: hidden;
+      border-radius: 12px;
+      background: #efe7dc;
+      border: 1px solid rgba(121, 98, 78, 0.14);
+      box-shadow: 0 8px 18px rgba(41, 30, 21, 0.06);
+    }
+
+    .early-examples-grid img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+      transition: transform 0.45s ease;
+    }
+
+    .early-examples-grid a:hover img {
+      transform: scale(1.035);
+    }
+
+    .early-examples-grid figcaption {
+      margin-top: 0.5rem;
+      font-size: 0.78rem;
+      line-height: 1.35;
+      color: #6a5a4c;
+      font-style: italic;
+    }
+
+    .early-examples-cta {
+      display: inline-block;
+      margin-top: 0.35rem;
+      color: #7b4a28;
+      font-size: 0.92rem;
+      font-weight: 700;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(123, 74, 40, 0.35);
+      padding-bottom: 0.12rem;
+    }
+
+    .early-examples-cta:hover {
+      color: #5f381e;
+      border-bottom-color: rgba(95, 56, 30, 0.55);
+    }
     
     /* Mobile overflow protection */
     @media (max-width: 768px) {
@@ -404,6 +562,34 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         white-space: normal !important;
         overflow-wrap: break-word !important;
         word-wrap: break-word !important;
+      }
+
+      .early-examples-section {
+        margin-bottom: 1.55rem;
+        padding: 0 0.75rem;
+      }
+
+      .early-examples-shell {
+        padding: 1rem 0.85rem 1.15rem;
+        border-radius: 14px;
+      }
+
+      .early-examples-title {
+        font-size: 1.18rem;
+      }
+
+      .early-examples-intro {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin-bottom: 0.85rem;
+      }
+
+      .early-examples-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .early-examples-grid figcaption {
+        font-size: 0.72rem;
       }
     }
     
@@ -571,9 +757,19 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
     .example-images figure {
       margin: 0;
     }
+    .example-images figure a {
+      display: block;
+      aspect-ratio: 3 / 4;
+      overflow: hidden;
+      border-radius: 8px;
+      background: #efe7dc;
+    }
     .example-images img {
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
       border-radius: 8px;
     }
     @media (max-width: 768px) {

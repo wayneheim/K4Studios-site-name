@@ -133,7 +133,6 @@ const galleryPaths = Object.keys(galleryDataMap);
         </p>    </section>
 
     <section class="story-layout" style="font-family: 'Glegoo', serif;">
-      <!-- MAIN CONTENT (left) -->
       <div class="text-column">
         {posts.map(post => (
           <article class="story-block mb-10">
@@ -158,23 +157,6 @@ const galleryPaths = Object.keys(galleryDataMap);
             </div>
           </article>
         ))}
-      </div>
-
-      <!-- SIDEBAR (right) -->
-      <div class="sidebar-column hidden md:block">
-        <div class="sample-fade reveal-on-scroll p-4 border rounded-xl shadow bg-gray-50">
-          <h3 class="font-bold mb-3">All Posts</h3>
-          <ul class="space-y-2">
-            {posts.map(post => (
-              <li>
-                <a href={`/Blog/${post.slug}`} class="block hover:text-red-600">
-                  {post.title}
-                </a>
-                <span class="block text-xs text-gray-500">{post.date}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
       </div>
     </section>
 
@@ -207,7 +189,6 @@ const galleryPaths = Object.keys(galleryDataMap);
           </div>
         </article>
       </div>
-      <div class="sidebar-column hidden md:block" aria-hidden="true"></div>
     </section>
 
     <!-- Full-width divider before Cornerstones -->

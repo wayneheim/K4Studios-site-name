@@ -38,11 +38,28 @@ const image3 = {
   alt: "Quiet portrait carrying emotional consequence beyond the visible moment"
 };
 
+const narrativeImage1 = {
+  id: "i-5BtMrfM",
+  src: getProxySrc("i-5BtMrfM", "l"),
+  alt: "Cowboy standing beside a frontier wagon at sunset, carrying the weight of a larger story"
+};
+const narrativeImage2 = {
+  id: "i-trM4FpR",
+  src: getProxySrc("i-trM4FpR", "l"),
+  alt: "A cowboy by a window with a rifle, framed as a narrative moment rather than a posed portrait"
+};
+const narrativeImage3 = {
+  id: "i-z9Pfbc5",
+  src: getProxySrc("i-z9Pfbc5", "l"),
+  alt: "A bearded cowboy in a red shirt and wide-brimmed hat, held in quiet morning light"
+};
+
 const pageTitle = "Narrative Western Art vs Traditional Western Art | K4 Studios";
 const pageDescription = "Not all Western art carries a story. This guide clarifies the difference between narrative Western art and more traditional Western art shaped primarily by subject or convention.";
 
 const structuredImageUrls = [
   getAbsoluteProxySrc(headerImage.id, "l"),
+  
   getAbsoluteProxySrc(image1.id, "l"),
   getAbsoluteProxySrc(image2.id, "l"),
   getAbsoluteProxySrc(image3.id, "l"),
@@ -107,7 +124,7 @@ const meta = {
   twitterCard: "summary_large_image"
 };
 
-const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-decoration: none;' onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Blog</a> › Narrative Western Art vs Traditional Western Art`;
+const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-decoration: none;' onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Blog</a> › Narrative vs Traditional Western Art`;
 ---
 
 <BaseLayout title={pageTitle} structuredDataJSON={structuredData} breadcrumbsJSON={breadcrumbStructuredData} meta={meta}>
@@ -127,17 +144,51 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
       <p style="font-size:1.25rem; color:#666; font-style:italic;">
         Where subject gives way to consequence
       </p>
-      <p style="font-size:0.95rem; color:#888; margin-top:0.75rem; letter-spacing:0.02em;">
-        A distinction for collectors, curators, and viewers trying to name what feels deeper
+      <p style="font-size:0.95rem; color:#755f4f; margin-top:0.75rem; letter-spacing:0.02em;">
+        Some Western art shows the subject. Narrative Western art leaves the viewer carrying what happened around it.
       </p>
+    </section>
+
+    <!-- Early Visual Bridge -->
+    <section class="early-examples-section">
+      <div class="early-examples-shell">
+        <p class="early-examples-kicker">See the Difference</p>
+        <h2 class="early-examples-title">Narrative Western art begins when the image refuses to finish the story for you.</h2>
+        <p class="early-examples-intro">
+          These works move past subject recognition into implication: a face that carries consequence, a night scene that feels unfinished, a quiet portrait that asks what happened before and what follows after.
+        </p>
+
+        <div class="early-examples-grid early-examples-grid--three">
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${image1.id}`}>
+              <img src={image1.src} alt={image1.alt} loading="eager" />
+            </a>
+            <figcaption>Character over icon.</figcaption>
+          </figure>
+
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${image2.id}`}>
+              <img src={image2.src} alt={image2.alt} loading="lazy" />
+            </a>
+            <figcaption>The frame as hinge, not illustration.</figcaption>
+          </figure>
+
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${image3.id}`}>
+              <img src={image3.src} alt={image3.alt} loading="lazy" />
+            </a>
+            <figcaption>Presence rather than archetype.</figcaption>
+          </figure>
+        </div>
+
+        <a class="early-examples-cta" href="/Narrative-Western-Art">
+          Explore Narrative Western Art
+        </a>
+      </div>
     </section>
 
     <section class="story-section max-w-[860px] mx-auto px-4">
       <article class="story-block space-y-4">
-        <p style="font-size:0.95rem; color:#666; margin-bottom:1.5rem; font-style:italic;">
-          A comparison between Western art that presents the subject and Western art that carries the life inside it
-        </p>
-
         <p><strong>Narrative Western art</strong> and <strong>traditional Western art</strong> often share the same visible subjects: cowboys, riders, frontier towns, wide land, and the iconography of the American West. What separates them is not the hat, the horse, or the horizon. It is what the image asks the viewer to carry.</p>
 
         <p>Traditional Western art may honor the subject, preserve the myth, or present the recognizable language of the West with skill and conviction. <a href="/Narrative-Western-Art" style="color:#8b5a2b; text-decoration:underline;">Narrative Western art</a> goes further. It builds pressure inside the frame until the image suggests a life before the moment, a consequence after it, and a human weight larger than the subject alone.</p>
@@ -149,8 +200,14 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         <div class="section-heading-with-line">
           <h2>What Traditional Western Art Does Well</h2>
         </div>
-
+<aside class="inline-art-callout inline-art-callout--left">
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${narrativeImage3.id}`}>
+              <img src={narrativeImage3.src} alt={narrativeImage3.alt} loading="lazy" />
+            </a>
+            <p>Presence rather than archetype - story carried in quiet attention</p>
+          </aside>
         <p>Traditional Western art preserves a powerful visual inheritance. It gives form to the cowboy, the rider, the open range, the charge, the dust, the silhouette against distance. It keeps the cultural memory of the West alive.</p>
+ 
 
         <p>That work matters. Without it, the Western canon would not exist. Painters like Remington and Russell established a visual language that still shapes how the frontier is imagined.</p>
 
@@ -159,6 +216,13 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         <div class="section-heading-with-line">
           <h2>What Makes Western Art Narrative</h2>
         </div>
+
+        <aside class="inline-art-callout inline-art-callout--right">
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${narrativeImage2.id}`}>
+              <img src={narrativeImage2.src} alt={narrativeImage2.alt} loading="lazy" />
+            </a>
+            <p>Night and implication - the frame as hinge, not illustration</p>
+          </aside>
 
         <p>Narrative Western art is not defined by action. It is defined by implication.</p>
 
@@ -185,36 +249,17 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         </ul>
 
         <div class="section-heading-with-line">
-          <h2>What This Looks Like in Practice</h2>
+          <h2>A Closer Look at Narrative Western Art</h2>
         </div>
 
-        <div class="example-images">
-          <figure>
-              <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${image1.id}`}>
-              <img src={image1.src} alt={image1.alt} loading="lazy" />
-            </a>
-            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
-              Character over icon — a portrait carrying consequence beyond costume
-            </figcaption>
-          </figure>
-          <figure>
-              <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${image2.id}`}>
-              <img src={image2.src} alt={image2.alt} loading="lazy" />
-            </a>
-            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
-              Night and implication — the frame as hinge, not illustration
-            </figcaption>
-          </figure>
-          <figure>
-              <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${image3.id}`}>
-              <img src={image3.src} alt={image3.alt} loading="lazy" />
-            </a>
-            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
-              Presence rather than archetype — story carried in quiet attention
-            </figcaption>
-          </figure>
+        <div class="example-aside-grid">
         </div>
-
+ <aside class="inline-art-callout inline-art-callout--left">
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${narrativeImage1.id}`}>
+              <img src={narrativeImage1.src} alt={narrativeImage1.alt} loading="lazy" />
+            </a>
+            <p>Character over icon - a portrait carrying consequence beyond costume</p>
+          </aside>
         <div class="section-heading-with-line">
           <h2>Why the Distinction Matters</h2>
         </div>
@@ -229,7 +274,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
           <h2>Explore the Work</h2>
         </div>
 
-        <p>If you want to see this distinction in practice, begin with the <a href="/Narrative-Western-Art" style="color:#8b5a2b; text-decoration:underline; font-weight:600;">Narrative Western Art</a> page, then step into galleries where the idea is carried by atmosphere, history, and character rather than theory alone.</p>
+        <p>To see the distinction in practice, begin with the <a href="/Narrative-Western-Art" style="color:#8b5a2b; text-decoration:underline; font-weight:600;">Narrative Western Art</a> page, then step into the galleries where atmosphere, history, and character carry the story without needing to explain it.</p>
 
         <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 2rem;">
           <li style="margin-bottom:0.75rem;">
@@ -270,27 +315,208 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
     .hero-image {
       display: block;
       width: 100%;
-      height: clamp(220px, 34vw, 360px);
+      height: clamp(280px, 42vw, 460px);
       object-fit: cover;
       object-position: center 28%;
       border-radius: 12px;
       margin-top: 1rem;
     }
-    .example-images {
+    .early-examples-section {
+      max-width: 1180px;
+      margin: 0 auto 2.25rem;
+      padding: 0 1rem;
+    }
+    .early-examples-shell {
+      background: rgba(255, 252, 247, 0.96);
+      border: 1px solid rgba(121, 98, 78, 0.16);
+      border-radius: 18px;
+      padding: 1.35rem 1.25rem 1.55rem;
+      box-shadow: 0 18px 34px rgba(52, 38, 26, 0.07);
+      text-align: center;
+    }
+    .early-examples-kicker {
+      margin: 0 0 0.45rem;
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: #7b4a28;
+    }
+    .early-examples-title {
+      margin: 0 auto 0.65rem;
+      max-width: 52rem;
+      font-size: clamp(1.25rem, 2.4vw, 1.65rem);
+      line-height: 1.25;
+      color: #241b15;
+    }
+    .early-examples-intro {
+      max-width: 52rem;
+      margin: 0 auto 1.1rem;
+      font-size: 0.98rem;
+      line-height: 1.6;
+      color: #4a3d34;
+    }
+    .early-examples-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.85rem;
+      max-width: 850px;
+      margin: 1.15rem auto 1rem;
+    }
+    .early-examples-grid figure {
+      margin: 0;
+      min-width: 0;
+    }
+    .early-examples-grid figure a {
+      display: block;
+      aspect-ratio: 3 / 4;
+      overflow: hidden;
+      border-radius: 12px;
+      background: #efe7dc;
+      border: 1px solid rgba(121, 98, 78, 0.14);
+      box-shadow: 0 8px 18px rgba(41, 30, 21, 0.06);
+    }
+    .early-examples-grid img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+      transition: transform 0.45s ease;
+    }
+    .early-examples-grid a:hover img {
+      transform: scale(1.035);
+    }
+    .early-examples-grid figcaption {
+      margin-top: 0.5rem;
+      font-size: 0.78rem;
+      line-height: 1.35;
+      color: #6a5a4c;
+      font-style: italic;
+    }
+    .early-examples-cta {
+      display: inline-block;
+      margin-top: 0.35rem;
+      color: #7b4a28;
+      font-size: 0.92rem;
+      font-weight: 700;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(123, 74, 40, 0.35);
+      padding-bottom: 0.12rem;
+    }
+    .early-examples-cta:hover {
+      color: #5f381e;
+      border-bottom-color: rgba(95, 56, 30, 0.55);
+    }
+    .example-aside-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 1rem;
       margin: 1.5rem 0 2rem;
+      clear: both;
     }
-    .example-images figure { margin: 0; }
-    .example-images img {
+    .narrative-art-aside {
+      float: none;
+      width: auto;
+      margin: 0;
+      padding: 0.85rem;
+      border: 1px solid rgba(121, 98, 78, 0.16);
+      border-radius: 14px;
+      background: rgba(249, 247, 244, 0.92);
+      box-shadow: 0 12px 24px rgba(52, 38, 26, 0.06);
+    }
+    .narrative-art-aside a {
+      display: block;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+    .narrative-art-aside img {
+      display: block;
       width: 100%;
       aspect-ratio: 3 / 4;
       object-fit: cover;
-      border-radius: 8px;
+      object-position: center;
     }
+    .narrative-art-aside p {
+      margin: 0.55rem 0 0;
+      font-size: 0.85rem;
+      color: #666;
+      font-style: italic;
+      line-height: 1.45;
+    }
+      .inline-art-callout {
+        width: min(320px, 42%);
+        margin: 0.35rem 0 1.4rem 1.9rem;
+        padding: 0.85rem;
+        border: 1px solid rgba(121, 98, 78, 0.16);
+        border-radius: 14px;
+        background: rgba(249, 247, 244, 0.92);
+        box-shadow: 0 12px 24px rgba(52, 38, 26, 0.06);
+      }
+      .inline-art-callout--right {
+        float: right;
+        margin-left: 2.1rem;
+      }
+      .inline-art-callout--left {
+        float: left;
+        margin: 0.35rem 2.1rem 1.4rem 0;
+      }
+      .inline-art-callout a {
+        display: block;
+        overflow: hidden;
+        border-radius: 10px;
+        background: #efe7dc;
+      }
+      .inline-art-callout img {
+        width: 100%;
+        display: block;
+      }
+      .inline-art-callout p {
+        margin: 0.85rem 0 0;
+        font-size: 0.85rem;
+        color: #666;
+        font-style: italic;
+        line-height: 1.35;
+      }
+      @media (max-width: 860px) {
+        .inline-art-callout {
+          width: min(100%, 520px);
+          float: none;
+          margin: 1rem auto 1.25rem;
+        }
+      }
+      @media (max-width: 640px) {
+        .inline-art-callout {
+          width: 100%;
+          padding: 0.75rem;
+        }
+      }
     @media (max-width: 768px) {
-      .example-images { grid-template-columns: 1fr; }
+      .early-examples-section {
+        margin-bottom: 1.55rem;
+        padding: 0 0.75rem;
+      }
+      .early-examples-shell {
+        padding: 1rem 0.85rem 1.15rem;
+        border-radius: 14px;
+      }
+      .early-examples-title {
+        font-size: 1.18rem;
+      }
+      .early-examples-intro {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin-bottom: 0.85rem;
+      }
+      .early-examples-grid {
+        grid-template-columns: 1fr;
+        max-width: 360px;
+        gap: 0.75rem;
+      }
+      .early-examples-grid figcaption {
+        font-size: 0.72rem;
+      }
+      .example-aside-grid { grid-template-columns: 1fr; }
       .story-section { padding-left: 1rem; padding-right: 1rem; }
     }
   </style>

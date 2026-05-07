@@ -40,38 +40,38 @@ const headerImage = {
 const image1 = {
   id: "i-KVxkXrV",
   src: getProxySrc("i-KVxkXrV", "l"),
-  alt: "Western cowboy art example — character-driven portrait showing the human dimension behind the icon"
+  alt: "Cowboy portrait in frontier light emphasizing character, vigilance, and the human weight behind the Western icon"
 };
 const image2 = {
   id: "i-Dw6Z8ff",
   src: getProxySrc("i-Dw6Z8ff", "l"),
-  alt: "Western cowboy art — painterly atmosphere and narrative presence in fine art photography"
+  alt: "Cowboy figure in painterly atmosphere where narrative presence matters more than spectacle"
 };
 const image3 = {
   id: "i-8BbMZjs",
   src: getProxySrc("i-8BbMZjs", "l"),
-  alt: "Western cowboy art — quiet determination and psychological depth beyond the heroic silhouette"
+  alt: "Western cowboy portrait expressing quiet determination and psychological depth beyond heroic pose"
 };
 
 // Darker aftermath images for "Where Cowboy Art Goes From Here"
 const darkImage1 = {
   id: "i-B7ZSdfs",
   src: getProxySrc("i-B7ZSdfs", "l"),
-  alt: "Western cowboy art — the weight of consequence after action"
+  alt: "Cowboy figure carrying the emotional weight of consequence after action"
 };
 const darkImage2 = {
   id: "i-rfFBRQM",
   src: getProxySrc("i-rfFBRQM", "l"),
-  alt: "Western cowboy art — loss and quiet aftermath beyond the myth"
+  alt: "Western cowboy scene shaped by loss, absence, and quiet aftermath beyond frontier myth"
 };
 const darkImage3 = {
   id: "i-HBRmWg4",
   src: getProxySrc("i-HBRmWg4", "l"),
-  alt: "Western cowboy art — psychological weight and what remains when the dust settles"
+  alt: "Western cowboy portrait focused on psychological weight and what remains when the action is over"
 };
 
-const pageTitle = "What Is Western Cowboy Art? | K4 Studios";
-const pageDescription = "Western cowboy art centers on one of the most recognizable figures in American visual culture—exploring the history, myth, and enduring symbolism of the American cowboy across painting, sculpture, and photography.";
+const pageTitle = "What Is Western Cowboy Art? Definition, History, and Meaning";
+const pageDescription = "What is Western cowboy art? Explore the history, myth, and enduring meaning of the American cowboy across painting, sculpture, and fine art photography.";
 
 const structuredImageUrls = [
   getAbsoluteProxySrc(headerImage.id, "l"),
@@ -105,6 +105,7 @@ const structuredData = getStructuredData({
       name: "Wayne Heim"
     },
     datePublished: "2026-02-04",
+    dateModified: "2026-05-07",
     articleSection: "Fine Art Photography",
     definedTerm: {
       name: "Western Cowboy Art",
@@ -187,22 +188,29 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
       <article class="story-block space-y-4">
 
         <!-- SECTION 1: Introduction -->
-        <p><strong>Western cowboy art</strong> centers on one of the most recognizable figures in American visual culture: the cowboy. For more than a century, painters, sculptors, photographers, and filmmakers have returned to this subject, shaping a visual language that has become synonymous with the American West itself.</p>
+        <p><strong>Western cowboy art</strong> centers on a figure who began as a worker and became one of the most enduring symbols in American visual culture. The cowboy appears in painting, sculpture, photography, film, illustration, and popular memory because he carries more than a hat, horse, or silhouette against a sunset.</p>
 
-        <p>But the cowboy is more than a hat, a horse, or a silhouette against a sunset. He is the product of a particular time, a particular place, and a particular set of hardships. Western cowboy art is not simply about imagery. It is about the lives, risks, and decisions that formed one of the most enduring symbols in American history.</p>
+        <p>At its strongest, cowboy art is not about costume. It is about labor, risk, endurance, responsibility, and the hard choices that shaped life in the American West. The cowboy became mythic because the real life beneath the myth was difficult enough to deserve remembering.</p>
 
-        <p>This page defines what Western cowboy art is, where it comes from, and why it continues to matter today.</p>
+        <p>This page defines Western cowboy art, traces the history behind the cowboy image, and explains why the figure still matters in serious Western fine art today.</p>
 
         <!-- SECTION 2: The Symbol -->
         <div class="section-heading-with-line">
           <h2>The Symbol That Outlived the Frontier</h2>
         </div>
-
+        <aside class="inline-art-callout inline-art-callout--right">
+          <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${darkImage1.id}`}>
+            <img src={darkImage1.src} alt={darkImage1.alt} loading="lazy" />
+          </a>
+          <p>Contemporary cowboy art can hold grief and consequence inside the frame instead of stopping at action.</p>
+        </aside>
         <p>The classic cowboy figure is instantly recognizable: wide-brimmed hat, boots, spurs, horse beneath him, horizon stretching out ahead. This image appears everywhere—from museum walls to movie posters to modern home décor.</p>
+
+
 
         <p>Yet the icon itself is a constructed one.</p>
 
-        <p>Many of the visual elements we associate with the cowboy were refined or popularized after the peak of the open-range era. The famous Stetson-style hat, for example, did not become widespread until the late 1860s and 1870s, when John B. Stetson introduced the "Boss of the Plains" design after traveling west and recognizing the need for a practical, all-weather hat. By the time the hat became a defining symbol, the classic era of the cattle drives was already beginning to change.</p>
+        <p>Many of the details now treated as timeless cowboy identity were refined after the open-range era was already changing. Even the famous broad-brimmed hat became standardized through practical design, popular use, and later visual repetition. By the time the cowboy image hardened into iconography, history and myth were already braided together.</p>
 
         <p>In this sense, the cowboy we recognize today is part history, part evolution, and part myth.</p>
 
@@ -212,39 +220,52 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         <div class="section-heading-with-line">
           <h2>The Real Beginnings of the Cowboy</h2>
         </div>
-
+<aside class="inline-art-callout inline-art-callout--right">
+          <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${image1.id}`}>
+            <img src={image1.src} alt={image1.alt} loading="lazy" />
+          </a>
+          <p>A frontier narrative portrait keeps Western cowboy art tied to lived history rather than costume alone.</p>
+        </aside>
         <p>The cowboy did not travel west as a fully formed icon. He was born there.</p>
 
-        <p>After the Civil War, hundreds of thousands of settlers moved westward. Historians estimate that between 250,000 and 500,000 people traveled overland trails between 1841 and 1869. The Homestead Act of 1862 accelerated this movement, offering land to those willing to risk everything for it.</p>
+        <p>After the Civil War, westward movement intensified. Families, laborers, freedmen, immigrants, ranchers, and fortune-seekers crossed into territories where opportunity and danger often arrived together. The Homestead Act, cattle trails, rail expansion, and the unsettled economy of the postwar years all helped shape the world that produced the working cowboy.</p>
 
-        <p>By the mid-1860s, wagon traffic surged. Tens of thousands of travelers crossed the plains each year, chasing opportunity in territories that were still largely undefined. The completion of the Transcontinental Railroad in 1869 would soon change this movement, but for a brief window of time, the American West was shaped by people willing to trade certainty for possibility.</p>
+        <p>For a brief window of time, the American West was defined by people willing to trade certainty for possibility. Out of that environment, the cowboy emerged—not as a romantic hero, but as a necessary worker.</p>
 
-        <p>Out of that environment, the cowboy emerged—not as a romantic hero, but as a working figure. He was a laborer, a cattle driver, a ranch hand, a problem solver. His life was defined by long days, harsh weather, low pay, and constant risk.</p>
+        <p>He was a laborer, a cattle driver, a ranch hand, a problem solver. His life was defined by long days, harsh weather, low pay, and constant risk. The cowboy was not the mythic West. He was the product of it.</p>
 
-        <p>The cowboy was not the mythic West. He was the product of it.</p>
+        
 
         <!-- SECTION 4: How the Myth Took Hold -->
         <div class="section-heading-with-line">
           <h2>How the Myth Took Hold</h2>
         </div>
-
+        
         <p>While the real cowboy worked long hours for modest wages, a different version of him began to appear in print.</p>
 
         <p>Dime novels of the late nineteenth century transformed the cowboy into a heroic figure—fast with a gun, noble in spirit, and larger than life. These stories spread across the country, shaping how people who had never seen the West imagined it.</p>
 
-        <p>By the early twentieth century, silent films and later Hollywood Westerns amplified the myth. Cowboys became moral icons—defenders of justice, symbols of freedom, and embodiments of American individualism.</p>
+        <aside class="inline-art-callout inline-art-callout--left">
+          <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${image2.id}`}>
+            <img src={image2.src} alt={image2.alt} loading="lazy" />
+          </a>
+          <p>Painterly atmosphere carries the cowboy from illustration-era myth into contemporary fine art interpretation.</p>
+        </aside>
+        <p>By the early twentieth century, silent films and later Hollywood Westerns amplified the myth. The cowboy became a moral shorthand: a figure of freedom, justice, self-reliance, and danger simplified into a shape audiences could recognize instantly.</p>
 
         <p>Western art followed a similar trajectory. Painters like Frederic Remington and Charles M. Russell captured dramatic frontier scenes and cowboy life, blending observation with storytelling. Their works helped establish the visual canon of the American West—dynamic compositions, heroic figures, and narrative tension.</p>
 
         <p>From that point forward, the cowboy existed in two worlds:</p>
-        <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 1.5rem;">
+        <ul style="list-style:disc; columns:2; column-gap:2rem; padding-left:1.5rem; margin:1rem 0 1.5rem;">
           <li style="margin-bottom:0.5rem;">The historical figure who labored on the range</li>
           <li>The mythic symbol who lived in art and story</li>
         </ul>
 
         <p>Western cowboy art draws from both.</p>
 
-        <p>It is also broader than one visual style. In one era, the subject was carried through the historical realism of Remington and Russell. In another, it was stripped into charcoal-like monochrome, where form, shadow, and weathered presence carried the frame. Today, it extends into contemporary photographic interpretation, where the cowboy remains a serious artistic subject rather than a decorative motif.</p>
+        <p>It is also broader than one visual style. In one era, the subject was carried through the historical realism of Remington and Russell. In another, it was stripped into charcoal-like monochrome, where form, shadow, and weathered presence carried the frame.</p>
+
+        <p>Today, it extends into contemporary photographic interpretation, where the cowboy remains a serious artistic subject rather than a decorative motif.</p>
 
         <p>At K4 Studios, that contemporary branch appears through <a href="/Painterly-Western-Photography" style="color:#8b5a2b; text-decoration:underline;">painterly Western photography</a> and <a href="/Western-Black-and-White-Photography" style="color:#8b5a2b; text-decoration:underline;">Western black and white photography</a>—two approaches that carry the genre forward without leaving its historical weight behind.</p>
 
@@ -262,56 +283,15 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         <p>But over time, their lives became symbolic.</p>
 
         <p>The cowboy came to represent:</p>
-        <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 1.5rem;">
+        <ul style="list-style:disc; columns:2; column-gap:2rem; padding-left:1.5rem; margin:1rem 0 1.5rem;">
           <li style="margin-bottom:0.5rem;">Independence</li>
           <li style="margin-bottom:0.5rem;">Responsibility</li>
           <li style="margin-bottom:0.5rem;">Self-reliance</li>
-          <li style="margin-bottom:0.5rem;">Moral clarity</li>
+          <li style="margin-bottom:0.5rem;">Hard-won resolve</li>
           <li>Endurance through hardship</li>
         </ul>
 
         <p>These qualities remain culturally powerful, which is why cowboy imagery continues to resonate long after the frontier itself disappeared.</p>
-
-        <!-- IMAGE BLOCK: Iconic Cowboy Art Examples -->
-        <h3 style="font-size:1.1rem; font-weight:600; margin-top:2.5rem; margin-bottom:0.5rem; color:#555;">Examples of Western Cowboy Art</h3>
-        <div class="example-images">
-          <figure>
-            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${image1.id}`}>
-              <img 
-                src={image1.src} 
-                alt={image1.alt}
-                loading="lazy"
-              />
-            </a>
-            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
-              Frontier narrative — history and story intertwined
-            </figcaption>
-          </figure>
-          <figure>
-            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${image2.id}`}>
-              <img 
-                src={image2.src} 
-                alt={image2.alt}
-                loading="lazy"
-              />
-            </a>
-            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
-              Black-and-white portrait — character over spectacle
-            </figcaption>
-          </figure>
-          <figure>
-            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${image3.id}`}>
-              <img 
-                src={image3.src} 
-                alt={image3.alt}
-                loading="lazy"
-              />
-            </a>
-            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
-              Quiet determination — beyond the heroic pose
-            </figcaption>
-          </figure>
-        </div>
 
         <!-- SECTION 6: The Story Behind the Story -->
         <div class="section-heading-with-line">
@@ -323,6 +303,13 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         <p>The full story begins long before the trail dust, the cattle drives, or the open range. It begins with a decision—the moment someone chose to leave the certainty of towns, families, and familiar streets behind. It begins with wagons loaded in eastern yards, with goodbyes at rail depots, with maps that ended in blank space and promise.</p>
 
         <p>You cannot tell the story of the West without telling the story of the journey that led there.</p>
+
+        <aside class="inline-art-callout inline-art-callout--right">
+          <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${image3.id}`}>
+            <img src={image3.src} alt={image3.alt} loading="lazy" />
+          </a>
+          <p>Contemporary cowboy art gains force when quiet psychology replaces the default heroic pose.</p>
+        </aside>
 
         <p>The cowboy, the homesteader, the frontier woman, the scout, the soldier—each one is part of a longer narrative about risk, endurance, and the human urge to push beyond the known. The West was not just a place. It was a wager. A dream large enough that people were willing to trade comfort, safety, and sometimes their lives to chase it.</p>
 
@@ -337,22 +324,16 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
           <h2>The Cowboy as an Artistic Subject</h2>
         </div>
 
-        <p>Because of this symbolic weight, the cowboy became a central subject in Western art.</p>
-
-        <p>Traditional Western paintings often emphasized:</p>
-        <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 1.5rem;">
+        <p>Because of this symbolic weight, the cowboy became a central subject in Western art. Traditional Western paintings often emphasized:</p>
+        <ul style="list-style:disc; columns:2; column-gap:2rem; padding-left:1.5rem; margin:1rem 0 1.5rem;">
           <li style="margin-bottom:0.5rem;">Dramatic action</li>
           <li style="margin-bottom:0.5rem;">Heroic poses</li>
           <li style="margin-bottom:0.5rem;">Romantic landscapes</li>
           <li>Clear moral narratives</li>
         </ul>
 
-        <p>These images helped build the mythic identity of the cowboy. They also established the visual expectations many viewers still carry today.</p>
-
-        <p>But not all cowboy art follows that heroic template.</p>
-
-        <p>Some artists focus on quieter moments:</p>
-        <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 1.5rem;">
+        <p>These images helped build the mythic identity of the cowboy. They also established the visual expectations many viewers still carry today. But not all cowboy art follows that heroic template. Some artists focus on quieter moments:</p>
+        <ul style="list-style:disc; columns:2; column-gap:2rem; padding-left:1.5rem; margin:1rem 0 1.5rem;">
           <li style="margin-bottom:0.5rem;">A rider alone at dusk</li>
           <li style="margin-bottom:0.5rem;">A figure waiting beside a fire</li>
           <li>The weight of responsibility in a single posture</li>
@@ -365,10 +346,16 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
           <h2>Where Cowboy Art Goes From Here</h2>
         </div>
 
+        <aside class="inline-art-callout inline-art-callout--left">
+          <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${darkImage2.id}`}>
+            <img src={darkImage2.src} alt={darkImage2.alt} loading="lazy" />
+          </a>
+          <p>Loss, aftermath, and silence expand Western cowboy art beyond the clean edges of legend.</p>
+        </aside>
         <p>The mythic tradition continues to hold power. But contemporary artists are asking different questions—not whether the cowboy is heroic, but what he carries beneath the hat.</p>
 
         <p>The work being made now looks for:</p>
-        <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 1.5rem;">
+        <ul style="list-style:disc; columns:2; column-gap:2rem; padding-left:1.5rem; margin:1rem 0 1.5rem;">
           <li style="margin-bottom:0.5rem;">Consequence as much as resolve</li>
           <li style="margin-bottom:0.5rem;">Doubt alongside certainty</li>
           <li style="margin-bottom:0.5rem;">The pause before action</li>
@@ -376,48 +363,9 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
           <li>Quiet determination earned through hardship</li>
         </ul>
 
-        <p>This is not a rejection of the myth. It is an extension of it—into territory the earlier painters could not reach. The icon endures because artists keep finding new dimensions inside it.</p>
+        
 
-        <!-- IMAGE BLOCK: Darker/Aftermath Images -->
-        <h3 style="font-size:1.1rem; font-weight:600; margin-top:2.5rem; margin-bottom:0.5rem; color:#555;">Beyond the Heroic Frame</h3>
-        <div class="example-images">
-          <figure>
-            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${darkImage1.id}`}>
-              <img 
-                src={darkImage1.src} 
-                alt={darkImage1.alt}
-                loading="lazy"
-              />
-            </a>
-            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
-              Till Death Do Us Part
-            </figcaption>
-          </figure>
-          <figure>
-            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${darkImage2.id}`}>
-              <img 
-                src={darkImage2.src} 
-                alt={darkImage2.alt}
-                loading="lazy"
-              />
-            </a>
-            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
-              Untimely Parting
-            </figcaption>
-          </figure>
-          <figure>
-            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${darkImage3.id}`}>
-              <img 
-                src={darkImage3.src} 
-                alt={darkImage3.alt}
-                loading="lazy"
-              />
-            </a>
-            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
-              Cough and Covenant
-            </figcaption>
-          </figure>
-        </div>
+        <p>This is not a rejection of the myth. It is an extension of it—into territory the earlier painters could not reach. The icon endures because artists keep finding new dimensions inside it.</p>
 
         <!-- SECTION 9: Contemporary Photography -->
         <div class="section-heading-with-line">
@@ -426,18 +374,23 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
         <p>Today, Western cowboy art is not limited to painting or sculpture. Photography has become an increasingly important part of the <a href="/Blog/what-is-western-fine-art" style="color:#8b5a2b; text-decoration:underline;">Western fine art</a> conversation.</p>
 
+        <aside class="inline-art-callout inline-art-callout--right">
+          <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${darkImage3.id}`}>
+            <img src={darkImage3.src} alt={darkImage3.alt} loading="lazy" />
+          </a>
+          <p>Psychological weight keeps the cowboy relevant as an artistic subject, not just a historical emblem.</p>
+        </aside>
+
         <p>When practiced as fine art, cowboy photography follows the same principles that guided earlier painters:</p>
-        <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 1.5rem;">
+        <ul style="list-style:disc; columns:2; column-gap:2rem; padding-left:1.5rem; margin:1rem 0 1.5rem;">
           <li style="margin-bottom:0.5rem;">Intentional composition</li>
           <li style="margin-bottom:0.5rem;">Narrative presence</li>
           <li style="margin-bottom:0.5rem;">Emotional restraint</li>
           <li>Authorial vision</li>
         </ul>
 
-        <p>The goal is not simply to record what a cowboy looks like. It is to interpret what the figure represents.</p>
-
-        <p>Contemporary photographic work often focuses on:</p>
-        <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 1.5rem;">
+        <p>The goal is not simply to record what a cowboy looks like. It is to interpret what the figure represents. Contemporary photographic work often focuses on:</p>
+        <ul style="list-style:disc; columns:2; column-gap:2rem; padding-left:1.5rem; margin:1rem 0 1.5rem;">
           <li style="margin-bottom:0.5rem;">Character over stereotype</li>
           <li style="margin-bottom:0.5rem;">Atmosphere over spectacle</li>
           <li>Story over symbol</li>
@@ -466,7 +419,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
           </li>
         </ul>
 
-        <p>The cowboy is not just a symbol of the past. He is a story still being written.</p>
+        <p>The cowboy is not only a symbol of the past. He remains a question the present keeps returning to: what does a person carry, what does he endure, and what remains after the dust settles?</p>
 
       </article>
     </section>
@@ -512,8 +465,49 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
     font-size: clamp(1.25rem, 3vw, 1.5rem);
   }
   .story-block ul { font-size: clamp(1rem, 2.5vw, 1.125rem); }
+  .inline-art-callout {
+    width: min(320px, 42%);
+    margin: 0.35rem 0 1.4rem 1.9rem;
+    padding: 0.85rem;
+    border: 1px solid rgba(121, 98, 78, 0.16);
+    border-radius: 14px;
+    background: rgba(249, 247, 244, 0.92);
+    box-shadow: 0 12px 24px rgba(52, 38, 26, 0.06);
+  }
+  .inline-art-callout--right {
+    float: right;
+    margin-left: 2.1rem;
+  }
+  .inline-art-callout--left {
+    float: left;
+    margin: 0.35rem 2.1rem 1.4rem 0;
+  }
+  .inline-art-callout a {
+    display: block;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #efe7dc;
+  }
+  .inline-art-callout img {
+    width: 100%;
+    display: block;
+  }
+  .inline-art-callout p {
+    margin: 0.85rem 0 0;
+    font-size: 0.85rem;
+    color: #666;
+    font-style: italic;
+    line-height: 1.35;
+  }
   @media (max-width: 640px) {
     .story-block p, .story-block ul { line-height: 1.6; }
+    .inline-art-callout,
+    .inline-art-callout--right,
+    .inline-art-callout--left {
+      float: none;
+      width: 100%;
+      margin: 1rem 0;
+    }
   }
   
   /* 3-across image row */

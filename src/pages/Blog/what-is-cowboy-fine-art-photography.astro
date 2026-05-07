@@ -53,21 +53,21 @@ const image3 = {
   alt: "Cowboy fine art photography — moment suspended in narrative tension"
 };
 
-// Process-focused images
-const processImage1 = {
-  id: "i-KVxkXrV",
-  src: getProxySrc("i-KVxkXrV", "l"),
-  alt: "Cowboy fine art photography — controlled light and compositional intention"
+// Narrative western images for the aside callouts
+const narrativeImage1 = {
+  id: "i-LCspRF4",
+  src: getProxySrc("i-LCspRF4", "l"),
+  alt: "Cowboy standing beside frontier wagon at sunset on open prairie, warm golden hour light in painterly Western photograph."
 };
-const processImage2 = {
-  id: "i-Dw6Z8ff",
-  src: getProxySrc("i-Dw6Z8ff", "l"),
-  alt: "Cowboy fine art photography — tonal restraint and emotional weight"
+const narrativeImage2 = {
+  id: "i-mqQxwNn",
+  src: getProxySrc("i-mqQxwNn", "l"),
+  alt: "By a window, a cowboy holds a rifle and looks outward, partially lit in a black and white Western portrait."
 };
-const processImage3 = {
-  id: "i-8BbMZjs",
-  src: getProxySrc("i-8BbMZjs", "l"),
-  alt: "Cowboy fine art photography — presence over pose"
+const narrativeImage3 = {
+  id: "i-ncFcHDM",
+  src: getProxySrc("i-ncFcHDM", "l"),
+  alt: "A bearded cowboy in a red shirt and wide-brimmed hat stands alone in soft morning light, facing forward in an open Western landscape."
 };
 
 const pageTitle = "What Is Cowboy Fine Art Photography? | K4 Studios";
@@ -78,9 +78,9 @@ const structuredImageUrls = [
   getAbsoluteProxySrc(image1.id, "l"),
   getAbsoluteProxySrc(image2.id, "l"),
   getAbsoluteProxySrc(image3.id, "l"),
-  getAbsoluteProxySrc(processImage1.id, "l"),
-  getAbsoluteProxySrc(processImage2.id, "l"),
-  getAbsoluteProxySrc(processImage3.id, "l"),
+  getAbsoluteProxySrc(narrativeImage1.id, "l"),
+  getAbsoluteProxySrc(narrativeImage2.id, "l"),
+  getAbsoluteProxySrc(narrativeImage3.id, "l"),
 ];
 
 const breadcrumbStructuredData = getBreadcrumbList(
@@ -179,8 +179,46 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         What Is Cowboy Fine Art Photography?
       </h1>
       <p style="font-size:0.95rem; color:#888; margin-top:0.75rem; letter-spacing:0.02em;">
-        Authored portraiture of the American cowboy — craft, narrative, and psychological depth
+        Character over costume. Presence over pose. The cowboy treated as fine art, not nostalgia.
       </p>
+    </section>
+
+    <!-- Early Visual Bridge -->
+    <section class="early-examples-section">
+      <div class="early-examples-shell">
+        <p class="early-examples-kicker">See the Portrait Standard</p>
+        <h2 class="early-examples-title">Cowboy fine art photography begins when the figure becomes more than a symbol.</h2>
+        <p class="early-examples-intro">
+          These images treat the cowboy through painterly light, narrative restraint, and psychological presence—where character matters more than costume and atmosphere carries more weight than spectacle.
+        </p>
+
+        <div class="early-examples-grid early-examples-grid--three">
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${image1.id}`}>
+              <img src={image1.src} alt={image1.alt} loading="eager" />
+            </a>
+            <figcaption>Painterly light and narrative restraint.</figcaption>
+          </figure>
+
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${image2.id}`}>
+              <img src={image2.src} alt={image2.alt} loading="lazy" />
+            </a>
+            <figcaption>Character study with atmospheric depth.</figcaption>
+          </figure>
+
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${image3.id}`}>
+              <img src={image3.src} alt={image3.alt} loading="lazy" />
+            </a>
+            <figcaption>Narrative tension held in a single frame.</figcaption>
+          </figure>
+        </div>
+
+        <a class="early-examples-cta" href="/Cowboy-Fine-Art-Photography">
+          Explore Cowboy Fine Art Photography
+        </a>
+      </div>
     </section>
 
     <!-- Article Content -->
@@ -190,11 +228,11 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         <!-- SECTION 1: Introduction -->
         <p><strong>Cowboy fine art photography</strong> treats the cowboy not as a nostalgic symbol or documentary subject, but as a figure worthy of authored portraiture—created with intentional composition, controlled light, and narrative depth.</p>
 
-        <p>In this context, Western art refers to the American West—frontier life, cowboys, and 19th-century Western history—forming a distinct artistic tradition within American fine art.</p>
+        <p>The cowboy carries one of the most recognizable shapes in American visual culture: hat, posture, weather, dust, distance. But fine art begins when that familiar shape stops being shorthand and becomes a person, a story, or a question the viewer has to stay with.</p>
 
-        <p>This is not snapshot photography of rodeos, ranch work, or lifestyle content. It is fine art: images built to reward sustained viewing, invite interpretation, and reveal meaning over time.</p>
+        <p>This is not snapshot photography of rodeos, ranch work, or lifestyle content. It is Western fine art photography built to reward sustained viewing, invite interpretation, and reveal meaning over time.</p>
 
-        <p>This page defines what cowboy fine art photography is, how it differs from other cowboy imagery, and why the distinction matters.</p>
+        <p>Cowboy fine art photography separates the familiar Western image from the authored work—the portrait that holds presence, story, and meaning long after the first glance.</p>
 
         <!-- SECTION 2: What Makes It Fine Art -->
         <div class="section-heading-with-line">
@@ -237,52 +275,16 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
           <li>Psychological presence replaces heroic pose</li>
         </ul>
 
-        <!-- IMAGE BLOCK: Examples -->
-        <h3 style="font-size:1.1rem; font-weight:600; margin-top:2.5rem; margin-bottom:0.5rem; color:#555;">Examples of Cowboy Fine Art Photography</h3>
-        <div class="example-images">
-          <figure>
-              <a href={`/Other/Archive/${image1.id}`}>
-              <img 
-                src={image1.src} 
-                alt={image1.alt}
-                loading="lazy"
-              />
-            </a>
-            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
-              Painterly light — atmosphere over spectacle
-            </figcaption>
-          </figure>
-          <figure>
-              <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${image2.id}`}>
-              <img 
-                src={image2.src} 
-                alt={image2.alt}
-                loading="lazy"
-              />
-            </a>
-            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
-              Character study — presence over pose
-            </figcaption>
-          </figure>
-          <figure>
-              <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${image3.id}`}>
-              <img 
-                src={image3.src} 
-                alt={image3.alt}
-                loading="lazy"
-              />
-            </a>
-            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
-              Narrative tension — the moment before
-            </figcaption>
-          </figure>
-        </div>
-
         <!-- SECTION 4: The Painterly Approach -->
         <div class="section-heading-with-line">
           <h2>The Painterly Approach</h2>
         </div>
-
+<aside class="inline-art-callout inline-art-callout--right">
+          <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${narrativeImage1.id}`}>
+            <img src={narrativeImage1.src} alt={narrativeImage1.alt} loading="lazy" />
+          </a>
+          <p>Controlled light gives the story its structure before the subject ever speaks.</p>
+        </aside>
         <p>Much of the strongest cowboy fine art photography draws from the <a href="/Blog/what-is-painterly-photography" style="color:#8b5a2b; text-decoration:underline;">painterly tradition</a>—applying principles from painting to photographic work.</p>
 
         <p>This means:</p>
@@ -295,14 +297,23 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
         <p>The painterly approach transforms photography from capture to construction. The image is not found—it is made.</p>
 
+        <h3 style="font-size:1.1rem; font-weight:600; margin-top:2.5rem; margin-bottom:0.5rem; color:#555;">A Closer Look at Narrative Western Art</h3>
+
         <!-- SECTION 5: Character Over Archetype -->
         <div class="section-heading-with-line">
           <h2>Character Over Archetype</h2>
         </div>
-
+<aside class="inline-art-callout inline-art-callout--left">
+          <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/${narrativeImage2.id}`}>
+            <img src={narrativeImage2.src} alt={narrativeImage2.alt} loading="lazy" />
+          </a>
+          <p>In black and white, atmosphere and consequence carry the weight.</p>
+        </aside>
         <p>One of the key distinctions of cowboy fine art photography is its treatment of the subject.</p>
 
         <p>Traditional <a href="/Blog/what-is-western-cowboy-art" style="color:#8b5a2b; text-decoration:underline;">Western cowboy art</a> often presents the cowboy as an archetype—the lone rider, the gunfighter, the heroic silhouette. These images have power, but they trade individual humanity for symbolic weight.</p>
+
+        
 
         <p>Cowboy fine art photography moves in the opposite direction. It looks for:</p>
         <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 1.5rem;">
@@ -317,13 +328,22 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         <!-- SECTION 6: Narrative Photography -->
         <div class="section-heading-with-line">
           <h2>Narrative Photography and the One-Image Movie</h2>
-        </div>
+        </div>       
+        
+        <aside class="inline-art-callout inline-art-callout--right">
+          <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${narrativeImage3.id}`}>
+            <img src={narrativeImage3.src} alt={narrativeImage3.alt} loading="lazy" />
+          </a>
+          <p>Presence over pose gives the story a human center instead of a symbolic one.</p>
+        </aside>
 
         <p>The finest cowboy fine art photography functions as narrative—each image a complete story, not a fragment.</p>
 
         <p>This approach, sometimes called the <a href="/Other/One-Image-Movie" style="color:#8b5a2b; text-decoration:underline;">One-Image Movie</a>, treats the photograph as a single frame from an unseen film. The dust hasn't fully settled. The decision hasn't been made. The consequence hasn't arrived.</p>
 
         <p>The viewer enters the frame at a moment of suspended tension. They are invited to complete the story—to imagine what came before and what follows after.</p>
+
+
 
         <p>This narrative architecture requires:</p>
         <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 1.5rem;">
@@ -333,46 +353,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
           <li>Composition that guides the eye through the story</li>
         </ul>
 
-        <!-- IMAGE BLOCK: Process -->
-        <h3 style="font-size:1.1rem; font-weight:600; margin-top:2.5rem; margin-bottom:0.5rem; color:#555;">The Fine Art Process</h3>
-        <div class="example-images">
-          <figure>
-              <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${processImage1.id}`}>
-              <img 
-                src={processImage1.src} 
-                alt={processImage1.alt}
-                loading="lazy"
-              />
-            </a>
-            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
-              Controlled light — every shadow earns its place
-            </figcaption>
-          </figure>
-          <figure>
-              <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${processImage2.id}`}>
-              <img 
-                src={processImage2.src} 
-                alt={processImage2.alt}
-                loading="lazy"
-              />
-            </a>
-            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
-              Tonal restraint — emotion through control
-            </figcaption>
-          </figure>
-          <figure>
-              <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${processImage3.id}`}>
-              <img 
-                src={processImage3.src} 
-                alt={processImage3.alt}
-                loading="lazy"
-              />
-            </a>
-            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
-              Presence over pose — humanity beneath the hat
-            </figcaption>
-          </figure>
-        </div>
+        <div style="clear: both;"></div>
 
         <!-- SECTION 7: Historical vs Contemporary -->
         <div class="section-heading-with-line">
@@ -450,6 +431,144 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 </BaseLayout>
 
 <style>
+  .early-examples-section {
+    max-width: 1180px;
+    margin: 0 auto 2.25rem;
+    padding: 0 1rem;
+  }
+
+  .early-examples-shell {
+    background: rgba(255, 252, 247, 0.96);
+    border: 1px solid rgba(121, 98, 78, 0.16);
+    border-radius: 18px;
+    padding: 1.35rem 1.25rem 1.55rem;
+    box-shadow: 0 18px 34px rgba(52, 38, 26, 0.07);
+    text-align: center;
+  }
+
+  .early-examples-kicker {
+    margin: 0 0 0.45rem;
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: #7b4a28;
+  }
+
+  .early-examples-title {
+    margin: 0 auto 0.65rem;
+    max-width: 48rem;
+    font-size: clamp(1.25rem, 2.4vw, 1.65rem);
+    line-height: 1.25;
+    color: #241b15;
+  }
+
+  .early-examples-intro {
+    max-width: 52rem;
+    margin: 0 auto 1.1rem;
+    font-size: 0.98rem;
+    line-height: 1.6;
+    color: #4a3d34;
+  }
+
+  .early-examples-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.85rem;
+    margin: 1.15rem 0 1rem;
+  }
+
+  .early-examples-grid--three {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .early-examples-grid figure {
+    margin: 0;
+    min-width: 0;
+  }
+
+  .early-examples-grid figure a {
+    display: block;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #efe7dc;
+    border: 1px solid rgba(121, 98, 78, 0.14);
+    box-shadow: 0 8px 18px rgba(41, 30, 21, 0.06);
+  }
+
+  .early-examples-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    transition: transform 0.45s ease;
+  }
+
+  .early-examples-grid a:hover img {
+    transform: scale(1.035);
+  }
+
+  .early-examples-grid figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.78rem;
+    line-height: 1.35;
+    color: #6a5a4c;
+    font-style: italic;
+  }
+
+  .early-examples-cta {
+    display: inline-block;
+    margin-top: 0.35rem;
+    color: #7b4a28;
+    font-size: 0.92rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(123, 74, 40, 0.35);
+    padding-bottom: 0.12rem;
+  }
+
+  .early-examples-cta:hover {
+    color: #5f381e;
+    border-bottom-color: rgba(95, 56, 30, 0.55);
+  }
+
+  @media (max-width: 768px) {
+    .early-examples-section {
+      margin-bottom: 1.55rem;
+      padding: 0 0.75rem;
+    }
+
+    .early-examples-shell {
+      padding: 1rem 0.85rem 1.15rem;
+      border-radius: 14px;
+    }
+
+    .early-examples-title {
+      font-size: 1.18rem;
+    }
+
+    .early-examples-intro {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin-bottom: 0.85rem;
+    }
+
+    .early-examples-grid,
+    .early-examples-grid--three {
+      grid-template-columns: 1fr;
+      max-width: 360px;
+    }
+
+    .early-examples-grid figcaption {
+      font-size: 0.72rem;
+    }
+  }
+
   /* Section headings with line */
   .section-heading-with-line {
     display: flex;
@@ -486,42 +605,51 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
   @media (max-width: 640px) {
     .story-block p, .story-block ul { line-height: 1.6; }
   }
-  
-  /* 3-across image row */
-  .example-images {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    margin: 2rem 0;
-    padding: 1.5rem;
-    background: #f9f9f9;
-    border-radius: 12px;
-    align-items: start;
+
+  .inline-art-callout {
+    width: min(320px, 42%);
+    margin: 0.35rem 0 1.4rem 1.9rem;
+    padding: 0.85rem;
+    border: 1px solid rgba(121, 98, 78, 0.16);
+    border-radius: 14px;
+    background: rgba(249, 247, 244, 0.92);
+    box-shadow: 0 12px 24px rgba(52, 38, 26, 0.06);
   }
-  .example-images figure {
-    margin: 0;
+  .inline-art-callout--right {
+    float: right;
+    margin-left: 2.1rem;
   }
-  .example-images figure a {
+  .inline-art-callout--left {
+    float: left;
+    margin: 0.35rem 2.1rem 1.4rem 0;
+  }
+  .inline-art-callout a {
     display: block;
-    aspect-ratio: 3/4;
     overflow: hidden;
-    border-radius: 8px;
+    border-radius: 10px;
+    background: #efe7dc;
   }
-  .example-images img {
+  .inline-art-callout img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top center;
+    display: block;
   }
-  @media (max-width: 900px) {
-    .example-images {
-      grid-template-columns: repeat(2, 1fr);
+  .inline-art-callout p {
+    margin: 0.85rem 0 0;
+    font-size: 0.85rem;
+    color: #666;
+    font-style: italic;
+    line-height: 1.35;
+  }
+  @media (max-width: 860px) {
+    .inline-art-callout {
+      width: min(100%, 520px);
+      float: none;
+      margin: 1rem auto 1.25rem;
     }
   }
-  @media (max-width: 500px) {
-    .example-images {
-      grid-template-columns: 1fr;
-      gap: 0.75rem;
+  @media (max-width: 640px) {
+    .inline-art-callout {
+      width: 100%;
       padding: 0.75rem;
     }
   }
