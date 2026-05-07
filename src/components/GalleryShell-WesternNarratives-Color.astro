@@ -4,15 +4,11 @@ import ChapterViewer from '@/components/Chapter-WesternNarrativesColor.jsx';
 import ChapterViewerDirect from '@/components/ChapterWesternNarrativesColorDirect.jsx';
 import { galleryData as allImages } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs';
 import { landingWestern as landingData } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/landingstones.ts';
-import * as visualIndexModule from '@/data/visualIndex.json';
 import { getSemanticImageUrl } from '@/utils/imageProxy.js';
+import { getImageDimensions } from '@/utils/getImageDimensions.js';
 
 const GALLERY_PATH = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color';
 const FALLBACK_DESCRIPTION = 'Explore painterly Western narrative photography in color by Wayne Heim.';
-const visualIndex = visualIndexModule.default || visualIndexModule;
-const DIRECT_IMAGE_DIMENSIONS = {
-  "i-7Mzzbvp": { width: 1024, height: 709 },
-};
 
 const { breadcrumb, entranceData, initialImageId } = Astro.props;
 const shouldSsrChapterViewer = Boolean(initialImageId && initialImageId !== "i-k4studios") || Astro.url.searchParams.get("view") === "grid";
@@ -25,7 +21,7 @@ function isNavigableImage(img) {
 
 function toDirectImage(entry) {
   if (!entry) return null;
-  const visualMeta = visualIndex?.[entry.id] || DIRECT_IMAGE_DIMENSIONS[entry.id] || {};
+  const dims = getImageDimensions(entry);
   const {
     src,
     srcS,
@@ -45,8 +41,7 @@ function toDirectImage(entry) {
 
   return {
     ...safeEntry,
-    width: entry.width || visualMeta.width,
-    height: entry.height || visualMeta.height,
+    ...(dims ? { width: dims.width, height: dims.height } : {}),
     src: getSemanticImageUrl(entry, { galleryPath: GALLERY_PATH }, 'm'),
   };
 }

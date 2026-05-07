@@ -47,6 +47,7 @@ import { useImageFallbackRedirect } from "./utils/useImageFallbackRedirect.js";
 import { themes } from "../data/themes/themes.mjs";
 import blogImageMap from "../data/blogImageMap.js";
 import { isWesternImagePath, westernImageAttributionText } from "../data/wayneEntity.js";
+import { getImageDimensions } from "../utils/getImageDimensions.js";
 
 const ZoomOverlay = lazy(() => import("./ZoomOverlay.jsx"));
 const RebuiltScrollGrid = lazy(() => import("./RebuiltScrollGrid"));
@@ -405,6 +406,23 @@ function buildDirectGalleryWindow(payload) {
   return windowData;
 }
 
+function getValidImageDimensions(image) {
+  if (!image || typeof image !== "object") return null;
+
+  const width = Number(image.width);
+  const height = Number(image.height);
+  if (!Number.isFinite(width) || !Number.isFinite(height) || width <= 0 || height <= 0) {
+    return null;
+  }
+
+  return {
+    width,
+    height,
+    aspectRatio: width / height,
+    orientation: width === height ? "square" : width > height ? "horizontal" : "vertical",
+  };
+}
+
 /**
  * ChapterGalleryBase
  */
@@ -729,6 +747,7 @@ export default function ChapterGalleryBase({
   // Sister link logic - use state to avoid SSR/client mismatch
   const currentImageId = galleryData[currentIndex]?.id;
   const currentImageData = galleryData[currentIndex] || null;
+  const currentImageDimensions = getImageDimensions(currentImageData) || getValidImageDimensions(currentImageData);
   const currentDisplayImageUrl = currentImageData
     ? currentImageData.src || getProxySrc(currentImageData.id, 'l')
     : "";
@@ -783,7 +802,7 @@ export default function ChapterGalleryBase({
   const [showEngrainedInfoPopup, setShowEngrainedInfoPopup] = useState(false);
   const [enableEntryAnimation, setEnableEntryAnimation] = useState(false);
 
-  const isCurrentLandscape = Boolean(currentImageData && currentImageData.width > currentImageData.height);
+  const isCurrentLandscape = currentImageDimensions?.orientation === "horizontal";
   const desktopLandscapeFrameMaxWidth = windowWidth >= 1280 ? "615px" : "585px";
   const desktopLandscapeImageMaxWidth = windowWidth >= 1280 ? "590px" : "560px";
   const desktopStoryColumnMaxWidth = isCurrentLandscape ? "24rem" : "28rem";
@@ -1468,15 +1487,15 @@ export default function ChapterGalleryBase({
                             alt={galleryData[currentIndex]?.alt || galleryData[currentIndex]?.title}
                             itemProp="image contentUrl"
                             className="chapter-image-mobile rounded-lg block"
-                            width={galleryData[currentIndex]?.width || undefined}
-                            height={galleryData[currentIndex]?.height || undefined}
+                            {...(currentImageDimensions
+                              ? { width: currentImageDimensions.width, height: currentImageDimensions.height }
+                              : {})}
                             loading="eager"
                             fetchPriority="high"
                             decoding="async"
                             style={
                               (() => {
-                                const img = galleryData[currentIndex];
-                                const isLandscape = img && img.width > img.height;
+                                const isLandscape = currentImageDimensions?.orientation === "horizontal";
                                 
                                 // Keep the image markup hydration-stable; mobile sizing is handled by CSS.
                                 return {
