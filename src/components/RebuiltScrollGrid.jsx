@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { SERIES_DEFINITIONS, SERIES_ICONS, getEffectiveSeries, loadSeriesRegistry } from "../data/seriesDefinitions.js";
-import { getSemanticImageUrl } from "@/utils/imageProxy.js";
+import { getProxySrc } from "@/utils/imageProxyCore.js";
 import { warmImage } from "../utils/warmImage";
 import { trackEvent, emitActionPixel } from "../utils/analytics";
 
@@ -84,7 +84,7 @@ export default function RebuiltScrollGrid({
   const getPreferredSrc = (entry, cols) => {
     if (!entry?.id) return null;
     // M size (~600px) is sufficient for grid cards at any column count
-    return getSemanticImageUrl(entry, { galleryPath: typeof galleryKey === "string" && galleryKey.startsWith("/") ? galleryKey : getParentGalleryUrl() }, 'm');
+    return entry.src || getProxySrc(entry.id, 'm');
   };
 
   const getParentGalleryUrl = () => {

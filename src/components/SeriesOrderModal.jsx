@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { CircleX, Info } from "lucide-react";
 import { SERIES_DEFINITIONS, SERIES_ICONS, getEffectiveSeries, getSeriesPricingList, fetchPricingConfig, loadSeriesRegistry, getExcludeSizesFromRegistry } from "../data/seriesDefinitions.js";
-import { normalizeImageSrc } from "../utils/imageProxy.js";
+import { normalizeImageSrc } from "../utils/imageProxyCore.js";
 
 // Import config at build time as fallback (auto-synced, no manual copy needed)
 import pricingConfigFallback from "../data/pricingConfig.json";

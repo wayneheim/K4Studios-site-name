@@ -28,7 +28,6 @@ import { trackEvent, emitActionPixel, emitChapterViewPixel } from "../utils/anal
 import { useState, useRef, useEffect, useMemo, lazy, Suspense } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Grid, Notebook, CircleX, SquareChevronLeft, SquareChevronRight, Info } from "lucide-react";
-import { getClosingSentence } from "../utils/seoDescriptionAppender.js";
 import { sitemapMatches } from "../data/sitemapMatches.ts";
 import {
   buildCollectionContextStatement,
@@ -45,7 +44,6 @@ import { createPortal } from "react-dom";
 import useMetaSwap from "./hooks/useMetaSwap.js";
 import { siteNav } from "../data/siteNav.js";
 import { useImageFallbackRedirect } from "./utils/useImageFallbackRedirect.js";
-import { getSemanticImageUrl } from "../utils/imageProxy.js";
 import { themes } from "../data/themes/themes.mjs";
 import blogImageMap from "../data/blogImageMap.js";
 import { isWesternImagePath, westernImageAttributionText } from "../data/wayneEntity.js";
@@ -731,8 +729,8 @@ export default function ChapterGalleryBase({
   // Sister link logic - use state to avoid SSR/client mismatch
   const currentImageId = galleryData[currentIndex]?.id;
   const currentImageData = galleryData[currentIndex] || null;
-  const currentSemanticImageUrl = currentImageData
-    ? getSemanticImageUrl(currentImageData, { galleryPath: basePath })
+  const currentDisplayImageUrl = currentImageData
+    ? currentImageData.src || getProxySrc(currentImageData.id, 'l')
     : "";
   const [sisterMatch, setSisterMatch] = useState(() => {
     // Initial render: only use sitemapMatches (deterministic, same on server & client)
@@ -856,7 +854,7 @@ export default function ChapterGalleryBase({
     const metaName = widget.querySelector('meta[itemprop="name"]');
     const linkImage = widget.querySelector('link[itemprop="image"]');
     if (metaName) metaName.setAttribute('content', currentImage.title || currentImage.alt || '');
-    if (linkImage) linkImage.setAttribute('href', getSemanticImageUrl(currentImage, { galleryPath: basePath }));
+    if (linkImage) linkImage.setAttribute('href', currentImage.src || getProxySrc(currentImage.id, 'l'));
     
     // Collapse widget when changing images
     widget.classList.remove('expanded');
@@ -1466,7 +1464,7 @@ export default function ChapterGalleryBase({
                         >
                           <img
                             ref={chapterImageRef}
-                            src={currentSemanticImageUrl || getProxySrc(galleryData[currentIndex]?.id, 'l')}
+                            src={currentDisplayImageUrl || getProxySrc(galleryData[currentIndex]?.id, 'l')}
                             alt={galleryData[currentIndex]?.alt || galleryData[currentIndex]?.title}
                             itemProp="image contentUrl"
                             className="chapter-image-mobile rounded-lg block"

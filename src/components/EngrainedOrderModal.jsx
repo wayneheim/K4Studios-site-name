@@ -9,7 +9,7 @@ import {
   getSeriesPricingList,
   loadSeriesRegistry,
 } from "../data/seriesDefinitions.js";
-import { getProxySrc, normalizeImageSrc } from "../utils/imageProxy.js";
+import { getProxySrc, normalizeImageSrc } from "../utils/imageProxyCore.js";
 
 function getInStockCount(inventory = {}) {
   return inventory.inStock || Math.max(0, (inventory.printed || 0) - (inventory.sold || 0));

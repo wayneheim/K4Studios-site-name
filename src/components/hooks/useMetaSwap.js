@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { getSemanticImageUrl } from "../../utils/imageProxy.js";
+import { getProxySrc } from "../../utils/imageProxyCore.js";
 
 // optional: import your mojibake fixer if you want clean quotes/dashes
 // import fixMojibake from "../utils/fixMojibake";
@@ -62,7 +62,7 @@ export default function useMetaSwap(entry, baseTitle = "K4 Studios Gallery", ind
     setMeta(`meta[property="og:title"]`, chapterLabel);
     setMeta(`meta[property="og:description"]`, entry.description || entry.story || "");
     if (entry.id) {
-      setMeta(`meta[property="og:image"]`, getSemanticImageUrl(entry, { galleryPath: entry.galleryUrl || entry.galleryPath }, 'l'));
+      setMeta(`meta[property="og:image"]`, entry.src || getProxySrc(entry.id, 'l'));
     }
 
   }, [entry, baseTitle, index, enabled]);
