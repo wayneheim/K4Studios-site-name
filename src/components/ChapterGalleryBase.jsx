@@ -25,7 +25,7 @@ function getSisterGalleryPath(path) {
 }
 import { warmImage } from "../utils/warmImage";
 import { trackEvent, emitActionPixel, emitChapterViewPixel } from "../utils/analytics";
-import { useState, useRef, useEffect, useMemo } from "react";
+import { useState, useRef, useEffect, useMemo, lazy, Suspense } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Grid, Notebook, CircleX, SquareChevronLeft, SquareChevronRight, Info } from "lucide-react";
 import { getClosingSentence } from "../utils/seoDescriptionAppender.js";
@@ -34,17 +34,11 @@ import {
   buildCollectionContextStatement,
   getCollectionContextEntry,
 } from "../data/semantic/collectionContext.ts";
-import ZoomOverlay from "./ZoomOverlay.jsx";
-import RebuiltScrollGrid from "./RebuiltScrollGrid";
 import MobileMiniDrawer from "./MobileMiniDrawer";
 import "./ScrollFlipZoomStyles.css";
 import "../styles/global.css";
 import SwipeHint from "./SwipeHint";
 import LikeButton from "@/components/LikeButton.jsx";
-import StoryShow from "./Gallery-Slideshow.jsx";
-import EngrainedOrderModal from "./EngrainedOrderModal.jsx";
-import SeriesOrderModal from "./SeriesOrderModal.jsx";
-import SeriesInfoPopup from "./SeriesInfoPopup.jsx";
 import { SERIES_DEFINITIONS, SERIES_ICONS, getEffectiveSeries, loadSeriesRegistry } from "../data/seriesDefinitions.js";
 import useHorizontalSwipeNav from "./hooks/useHorizontalSwipeNav.js";
 import { createPortal } from "react-dom";
@@ -55,6 +49,13 @@ import { getSemanticImageUrl } from "../utils/imageProxy.js";
 import { themes } from "../data/themes/themes.mjs";
 import blogImageMap from "../data/blogImageMap.js";
 import { isWesternImagePath, westernImageAttributionText } from "../data/wayneEntity.js";
+
+const ZoomOverlay = lazy(() => import("./ZoomOverlay.jsx"));
+const RebuiltScrollGrid = lazy(() => import("./RebuiltScrollGrid"));
+const StoryShow = lazy(() => import("./Gallery-Slideshow.jsx"));
+const EngrainedOrderModal = lazy(() => import("./EngrainedOrderModal.jsx"));
+const SeriesOrderModal = lazy(() => import("./SeriesOrderModal.jsx"));
+const SeriesInfoPopup = lazy(() => import("./SeriesInfoPopup.jsx"));
 
 /* =========================================================
    Image Proxy URL Generator
@@ -340,11 +341,38 @@ function fixMojibake(str) {
     .replace(/â€¦/g, "…");
 }
 
+function buildDirectGalleryWindow(payload) {
+  if (!payload?.currentImage) return null;
+
+  const totalCount = Math.max(
+    Number(payload.totalCount) || 0,
+    Number(payload.index) + 1 || 1
+  );
+  const currentIndex = Math.max(0, Number(payload.index) || 0);
+  const windowData = Array.from({ length: totalCount }, (_, idx) => ({
+    id: `__k4-placeholder-${idx}`,
+    visibility: "hidden",
+    __placeholder: true,
+  }));
+
+  if (payload.prevImage && currentIndex > 0) {
+    windowData[currentIndex - 1] = payload.prevImage;
+  }
+  windowData[currentIndex] = payload.currentImage;
+  if (payload.nextImage && currentIndex < totalCount - 1) {
+    windowData[currentIndex + 1] = payload.nextImage;
+  }
+
+  return windowData;
+}
+
 /**
  * ChapterGalleryBase
  */
 export default function ChapterGalleryBase({
   rawData,
+  directImagePayload,
+  loadFullGallery,
   basePath,
   titleBase,
   sectionKey,
@@ -531,16 +559,26 @@ export default function ChapterGalleryBase({
     }
   };
 
+  const isDirectDataMode = Boolean(directImagePayload?.currentImage && typeof loadFullGallery === "function");
+  const [loadedRawData, setLoadedRawData] = useState(null);
+  const fullGalleryLoadPromiseRef = useRef(null);
+
   const galleryData = useMemo(() => {
-    const arr = Array.isArray(rawData) ? rawData : [];
+    const directWindow = isDirectDataMode && !loadedRawData
+      ? buildDirectGalleryWindow(directImagePayload)
+      : null;
+    const arr = Array.isArray(loadedRawData)
+      ? loadedRawData
+      : directWindow || (Array.isArray(rawData) ? rawData : []);
     let filtered = arr
-      .filter((e) => e && !isGhost(e) && !isHidden(e));
+      .filter((e) => e && (e.__placeholder || (!isGhost(e) && !isHidden(e))));
     
     // If theme filter is active, filter to only images with that theme
     if (themeSlug) {
       filtered = filtered
-        .filter((e) => e.themes && typeof e.themes[themeSlug] !== "undefined")
+        .filter((e) => e.__placeholder || (e.themes && typeof e.themes[themeSlug] !== "undefined"))
         .sort((a, b) => {
+          if (a.__placeholder || b.__placeholder) return 0;
           // Sort by theme order value (the number stored in themes[slug])
           const orderA = a.themes?.[themeSlug] ?? 9999;
           const orderB = b.themes?.[themeSlug] ?? 9999;
@@ -548,11 +586,34 @@ export default function ChapterGalleryBase({
         });
     } else {
       // Default sort by sortOrder
-      filtered = filtered.sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0));
+      filtered = directWindow
+        ? filtered
+        : filtered.sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0));
     }
     
     return filtered;
-  }, [rawData, themeSlug]);
+  }, [rawData, loadedRawData, directImagePayload, isDirectDataMode, themeSlug]);
+
+  const ensureFullGalleryLoaded = async () => {
+    if (!isDirectDataMode) return galleryData;
+    if (Array.isArray(loadedRawData)) return loadedRawData;
+    if (!loadFullGallery) return null;
+
+    if (!fullGalleryLoadPromiseRef.current) {
+      fullGalleryLoadPromiseRef.current = Promise.resolve(loadFullGallery())
+        .then((data) => {
+          const arr = Array.isArray(data) ? data : [];
+          setLoadedRawData(arr);
+          return arr;
+        })
+        .catch((error) => {
+          fullGalleryLoadPromiseRef.current = null;
+          throw error;
+        });
+    }
+
+    return fullGalleryLoadPromiseRef.current;
+  };
 
   // 🚨 ADD THIS LINE:
 
@@ -613,7 +674,7 @@ export default function ChapterGalleryBase({
     }
     // Force grid view if theme or view=grid is present
     if ((hasTheme || hasViewGrid) && viewMode !== "grid") {
-      setViewMode("grid");
+      ensureFullGalleryLoaded().finally(() => setViewMode("grid"));
     }
   }, []); // Run once after hydration
 
@@ -648,10 +709,16 @@ export default function ChapterGalleryBase({
   const hash = currentImageId ? currentImageId.split('').reduce((a, b) => ((a << 5) - a) + b.charCodeAt(0), 0) : 0;
   const anchorIndex = Math.abs(hash) % anchorTexts.length;
   const anchorText = anchorTexts[anchorIndex];
-  const prevImage = currentIndex > 0 ? galleryData[currentIndex - 1] : null;
-  const nextImage = currentIndex < galleryData.length - 1 ? galleryData[currentIndex + 1] : null;
-  const prevHref = prevImage && basePath ? `${basePath}/${prevImage.id}` : null;
-  const nextHref = nextImage && basePath ? `${basePath}/${nextImage.id}` : null;
+  const rawPrevImage = currentIndex > 0 ? galleryData[currentIndex - 1] : null;
+  const rawNextImage = currentIndex < galleryData.length - 1 ? galleryData[currentIndex + 1] : null;
+  const prevImage = rawPrevImage && !rawPrevImage.__placeholder ? rawPrevImage : null;
+  const nextImage = rawNextImage && !rawNextImage.__placeholder ? rawNextImage : null;
+  const prevHref = basePath && currentIndex > 0
+    ? (prevImage ? `${basePath}/${prevImage.id}` : "#")
+    : null;
+  const nextHref = basePath && currentIndex < galleryData.length - 1
+    ? (nextImage ? `${basePath}/${nextImage.id}` : "#")
+    : null;
   const gridHref = basePath
     ? `${basePath}${themeSlug ? `?theme=${encodeURIComponent(themeSlug)}&view=grid` : '?view=grid'}`
     : null;
@@ -752,32 +819,53 @@ export default function ChapterGalleryBase({
   // Nav handlers
   const exitNavPendingRef = useRef(false);
 
-  const goPrev = (e) => {
+  const goPrev = async (e) => {
     e?.stopPropagation();
     e?.preventDefault?.();
     if (tourOpen()) return;
     setIsExpanded(false);
-    setCurrentIndex((i) => {
-      const newIndex = Math.max(i - 1, 0);
-      track("nav_prev", { imageId: galleryData[newIndex]?.id, pageType: 'image' });
-      return newIndex;
-    });
+    const newIndex = Math.max(currentIndex - 1, 0);
+    if (galleryData[newIndex]?.__placeholder) {
+      const fullData = await ensureFullGalleryLoaded();
+      const currentId = galleryData[currentIndex]?.id;
+      const fullCurrentIndex = Array.isArray(fullData)
+        ? fullData.findIndex((img) => img?.id === currentId)
+        : -1;
+      const targetIndex = fullCurrentIndex > 0 ? fullCurrentIndex - 1 : newIndex;
+      track("nav_prev", { imageId: fullData?.[targetIndex]?.id, pageType: 'image' });
+      setCurrentIndex(targetIndex);
+      return;
+    }
+    track("nav_prev", { imageId: galleryData[newIndex]?.id, pageType: 'image' });
+    setCurrentIndex(newIndex);
   };
-  const goNext = (e) => {
+  const goNext = async (e) => {
     e?.stopPropagation();
     e?.preventDefault?.();
     if (tourOpen()) return;
     setIsExpanded(false);
-    setCurrentIndex((i) => {
-      const newIndex = Math.min(i + 1, galleryData.length - 1);
-      track("nav_next", { imageId: galleryData[newIndex]?.id, pageType: 'image' });
-      return newIndex;
-    });
+    const newIndex = Math.min(currentIndex + 1, galleryData.length - 1);
+    if (galleryData[newIndex]?.__placeholder) {
+      const fullData = await ensureFullGalleryLoaded();
+      const currentId = galleryData[currentIndex]?.id;
+      const fullCurrentIndex = Array.isArray(fullData)
+        ? fullData.findIndex((img) => img?.id === currentId)
+        : -1;
+      const targetIndex = fullCurrentIndex >= 0
+        ? Math.min(fullCurrentIndex + 1, fullData.length - 1)
+        : newIndex;
+      track("nav_next", { imageId: fullData?.[targetIndex]?.id, pageType: 'image' });
+      setCurrentIndex(targetIndex);
+      return;
+    }
+    track("nav_next", { imageId: galleryData[newIndex]?.id, pageType: 'image' });
+    setCurrentIndex(newIndex);
   };
-  const goGrid = (e) => {
+  const goGrid = async (e) => {
     e?.stopPropagation();
     e?.preventDefault?.();
     if (tourOpen()) return;
+    await ensureFullGalleryLoaded();
     setViewMode("grid");
     track("grid_open");
   };
@@ -1058,7 +1146,7 @@ export default function ChapterGalleryBase({
     const warmRange = 3;
     for (let offset = -warmRange; offset <= warmRange; offset++) {
       const idx = currentIndex + offset;
-      if (idx >= 0 && idx < galleryData.length && galleryData[idx]?.id) {
+      if (idx >= 0 && idx < galleryData.length && galleryData[idx]?.id && !galleryData[idx]?.__placeholder) {
         warmImage(galleryData[idx].id, 'l'); // For viewer display
       }
     }
@@ -1076,11 +1164,11 @@ export default function ChapterGalleryBase({
     }
     
     // Warm first image at 'l' for "Explore the Gallery" click
-    warmImage(galleryData[0].id, 'l');
+    if (!galleryData[0]?.__placeholder) warmImage(galleryData[0].id, 'l');
     
     // Warm preview strip images at 's' for display AND 'l' for click-through
     // 's' = what the thumbnails actually render, 'l' = what viewer loads
-    galleryData.slice(0, 6).forEach(img => {
+    galleryData.slice(0, 6).filter((img) => !img?.__placeholder).forEach(img => {
       warmImage(img.id, 's'); // for display
       warmImage(img.id, 'l'); // for click-through
     });
@@ -1210,13 +1298,15 @@ export default function ChapterGalleryBase({
 
       <div className="relative max-w-6xl mx-auto">
         {isZoomed ? (
-          <ZoomOverlay
-            imageData={galleryData[currentIndex]}
-            matColor={matColor}
-            setMatColor={setMatColor}
-            onClose={() => setIsZoomed(false)}
-            isEngrained={isEngrainedSeries}
-          />
+          <Suspense fallback={null}>
+            <ZoomOverlay
+              imageData={galleryData[currentIndex]}
+              matColor={matColor}
+              setMatColor={setMatColor}
+              onClose={() => setIsZoomed(false)}
+              isEngrained={isEngrainedSeries}
+            />
+          </Suspense>
         ) : (
           <>
             {viewMode === "flip" && (
@@ -1689,12 +1779,13 @@ export default function ChapterGalleryBase({
 
                       {/* Jump form - Second on mobile */}
                       <form
-                        onSubmit={(e) => {
+                        onSubmit={async (e) => {
                           e.preventDefault();
                           e.stopPropagation();
                           if (tourOpen()) return;
                           const num = parseInt(e.target.elements.chapterNum.value, 10);
                           if (!isNaN(num) && num >= 1 && num <= galleryData.length) {
+                            await ensureFullGalleryLoaded();
                             setIsExpanded(false);
                             setCurrentIndex(num - 1);
                           }
@@ -1894,9 +1985,10 @@ export default function ChapterGalleryBase({
                           <div className="relative inline-flex items-center">
                             <button
                               type="button"
-                              onClick={() => {
+                              onClick={async () => {
                                 track('slideshow_start', { pageType: 'image', imageId: galleryData[currentIndex]?.id, trigger: 'play_slideshow' });
                                 if (!tourOpen()) {
+                                  await ensureFullGalleryLoaded();
                                   setShowStoryShow(true);
                                 }
                               }}
@@ -1953,9 +2045,10 @@ export default function ChapterGalleryBase({
                         <div className="relative inline-flex items-center">
                           <button
                             type="button"
-                            onClick={() => {
+                            onClick={async () => {
                               track('slideshow_start', { pageType: 'image', imageId: galleryData[currentIndex]?.id, trigger: 'play_slideshow' });
                               if (!tourOpen()) {
+                                await ensureFullGalleryLoaded();
                                 setShowStoryShow(true);
                               }
                             }}
@@ -2398,29 +2491,31 @@ export default function ChapterGalleryBase({
 
             {/* Grid View */}
             {viewMode === "grid" && (
-              <RebuiltScrollGrid
-                galleryData={galleryData}
-                onCardClick={(i) => {
-                  if (tourOpen()) return;
-                  setCurrentIndex(i);
-                  setIsExpanded(false);
-                  setViewMode("flip");
-                  window.scrollTo(0, 0);
-                }}
-                initialImageIndex={currentIndex}
-                isEngrainedSeries={isEngrainedSeries}
-                style={{ display: viewMode === "grid" ? "block" : "none" }}
-                // Pass theme info for shared theme links (grid header)
-                themeName={activeTheme?.name || null}
-                themeIntroLead={activeTheme?.introLead || null}
-                themeIntroFollow={activeTheme?.introFollow || null}
-                themeDescription={activeTheme?.description || null}
-                themeTransitionLine={activeTheme?.transitionLine || null}
-                themeStoryUrl={activeTheme?.storyUrl || null}
-                themeStoryCta={activeTheme?.storyCta || null}
-                themeImageCountLabel={activeTheme?.imageCountLabel || null}
-                themeImageCount={activeTheme ? galleryData.length : null}
-              />
+              <Suspense fallback={null}>
+                <RebuiltScrollGrid
+                  galleryData={galleryData}
+                  onCardClick={(i) => {
+                    if (tourOpen()) return;
+                    setCurrentIndex(i);
+                    setIsExpanded(false);
+                    setViewMode("flip");
+                    window.scrollTo(0, 0);
+                  }}
+                  initialImageIndex={currentIndex}
+                  isEngrainedSeries={isEngrainedSeries}
+                  style={{ display: viewMode === "grid" ? "block" : "none" }}
+                  // Pass theme info for shared theme links (grid header)
+                  themeName={activeTheme?.name || null}
+                  themeIntroLead={activeTheme?.introLead || null}
+                  themeIntroFollow={activeTheme?.introFollow || null}
+                  themeDescription={activeTheme?.description || null}
+                  themeTransitionLine={activeTheme?.transitionLine || null}
+                  themeStoryUrl={activeTheme?.storyUrl || null}
+                  themeStoryCta={activeTheme?.storyCta || null}
+                  themeImageCountLabel={activeTheme?.imageCountLabel || null}
+                  themeImageCount={activeTheme ? galleryData.length : null}
+                />
+              </Suspense>
             )}
           </>
         )}
@@ -2428,41 +2523,55 @@ export default function ChapterGalleryBase({
 
       {/* Slideshow */}
       {showStoryShow && (
-        <StoryShow
-          images={galleryData.map((img) => ({ ...img, url: getProxySrc(img.id, 'xl') }))}
-          startImageId={galleryData[currentIndex]?.id}
-          onExit={() => setShowStoryShow(false)}
-        />
+        <Suspense fallback={null}>
+          <StoryShow
+            images={galleryData.filter((img) => !img?.__placeholder).map((img) => ({ ...img, url: getProxySrc(img.id, 'xl') }))}
+            startImageId={galleryData[currentIndex]?.id}
+            onExit={() => setShowStoryShow(false)}
+          />
+        </Suspense>
       )}
 
       {/* Swipe hint */}
       {viewMode === "flip" && <SwipeHint galleryKey={galleryKey || "k4-gallery"} />}
 
-      <EngrainedOrderModal
-        isOpen={showPricingModal}
-        onClose={() => setShowPricingModal(false)}
-        image={galleryData[currentIndex]}
-        trackEvent={track}
-      />
+      {showPricingModal && (
+        <Suspense fallback={null}>
+          <EngrainedOrderModal
+            isOpen={showPricingModal}
+            onClose={() => setShowPricingModal(false)}
+            image={galleryData[currentIndex]}
+            trackEvent={track}
+          />
+        </Suspense>
+      )}
 
       {/* Series Order Modal (for non-Engrained images) */}
-      <SeriesOrderModal
-        isOpen={showSeriesOrderModal}
-        onClose={() => setShowSeriesOrderModal(false)}
-        image={galleryData[currentIndex]}
-        trackEvent={track}
-      />
+      {showSeriesOrderModal && (
+        <Suspense fallback={null}>
+          <SeriesOrderModal
+            isOpen={showSeriesOrderModal}
+            onClose={() => setShowSeriesOrderModal(false)}
+            image={galleryData[currentIndex]}
+            trackEvent={track}
+          />
+        </Suspense>
+      )}
 
       {/* Series Info Popup (all series descriptions) */}
-      <SeriesInfoPopup
-        isOpen={showSeriesInfoPopup}
-        onClose={() => {
-          setShowSeriesInfoPopup(false);
-          setSeriesInfoScrollTo(null);
-        }}
-        scrollToSeries={seriesInfoScrollTo}
-        activeSeries={getEffectiveSeries(galleryData[currentIndex], seriesRegistry).filter(s => s !== "engrained")}
-      />
+      {showSeriesInfoPopup && (
+        <Suspense fallback={null}>
+          <SeriesInfoPopup
+            isOpen={showSeriesInfoPopup}
+            onClose={() => {
+              setShowSeriesInfoPopup(false);
+              setSeriesInfoScrollTo(null);
+            }}
+            scrollToSeries={seriesInfoScrollTo}
+            activeSeries={getEffectiveSeries(galleryData[currentIndex], seriesRegistry).filter(s => s !== "engrained")}
+          />
+        </Suspense>
+      )}
 
       {/* Engrained Info Popup (museum label style, same as circle-i info overlay) */}
       <AnimatePresence>

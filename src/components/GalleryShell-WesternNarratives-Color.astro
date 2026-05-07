@@ -1,22 +1,50 @@
 ---
 import GalleryShellCore from '@/components/GalleryShellCore.astro';
 import ChapterViewer from '@/components/Chapter-WesternNarrativesColor.jsx';
-import ChapterImageDetailStatic from '@/components/ChapterImageDetailStatic.astro';
+import ChapterViewerDirect from '@/components/ChapterWesternNarrativesColorDirect.jsx';
 import { galleryData as allImages } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs';
 import { landingWestern as landingData } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/landingstones.ts';
+import { getSemanticImageUrl } from '@/utils/imageProxy.js';
 
 const GALLERY_PATH = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color';
 const FALLBACK_DESCRIPTION = 'Explore painterly Western narrative photography in color by Wayne Heim.';
 
 const { breadcrumb, entranceData, initialImageId } = Astro.props;
+const shouldSsrChapterViewer = Boolean(initialImageId && initialImageId !== "i-k4studios") || Astro.url.searchParams.get("view") === "grid";
+const isDirectImagePage = Boolean(initialImageId && initialImageId !== "i-k4studios");
 
 function isNavigableImage(img) {
   const visibility = String(img?.visibility || '').toLowerCase().trim();
   return Boolean(img?.id) && visibility !== 'ghost' && visibility !== 'hidden' && visibility !== 'hide';
 }
 
+function toDirectImage(entry) {
+  if (!entry) return null;
+  const {
+    src,
+    srcS,
+    srcM,
+    srcL,
+    srcXL,
+    srcOriginal,
+    image,
+    imageUrl,
+    url,
+    thumb,
+    preview,
+    keywords,
+    galleries,
+    ...safeEntry
+  } = entry;
+
+  return {
+    ...safeEntry,
+    src: getSemanticImageUrl(entry, { galleryPath: GALLERY_PATH }, 'm'),
+  };
+}
+
 const navigableImages = allImages.filter(isNavigableImage);
-const currentIndex = initialImageId
+const currentIndex = isDirectImagePage
   ? navigableImages.findIndex((img) => img.id === initialImageId)
   : -1;
 const currentImage = currentIndex >= 0 ? navigableImages[currentIndex] : null;
@@ -24,6 +52,22 @@ const prevImage = currentIndex > 0 ? navigableImages[currentIndex - 1] : null;
 const nextImage = currentIndex >= 0 && currentIndex < navigableImages.length - 1
   ? navigableImages[currentIndex + 1]
   : null;
+const directImagePayload = currentImage
+  ? {
+      currentImage: toDirectImage(currentImage),
+      prevImage: toDirectImage(prevImage),
+      nextImage: toDirectImage(nextImage),
+      index: currentIndex,
+      totalCount: navigableImages.length,
+      galleryMeta: {
+        title: "WILD-WEST: Western Narratives",
+        basePath: GALLERY_PATH,
+        chapterName: "Western Narratives - Color",
+        sectionName: "Wild West",
+      },
+    }
+  : null;
+
 ---
 
 <GalleryShellCore
@@ -35,18 +79,16 @@ const nextImage = currentIndex >= 0 && currentIndex < navigableImages.length - 1
   entranceData={entranceData}
   initialImageId={initialImageId}
 >
-  {currentImage ? (
-    <ChapterImageDetailStatic
+  {directImagePayload ? (
+    <ChapterViewerDirect
       slot="chapter-viewer"
-      image={currentImage}
-      galleryPath={GALLERY_PATH}
-      galleryTitle="WILD-WEST: Western Narratives"
-      index={currentIndex}
-      count={navigableImages.length}
-      prevImage={prevImage}
-      nextImage={nextImage}
+      client:load
+      initialImageId={initialImageId}
+      directImagePayload={directImagePayload}
     />
-  ) : (
+  ) : shouldSsrChapterViewer ? (
     <ChapterViewer slot="chapter-viewer" client:load initialImageId={initialImageId} />
+  ) : (
+    <ChapterViewer slot="chapter-viewer" client:only="react" initialImageId={initialImageId} />
   )}
 </GalleryShellCore>

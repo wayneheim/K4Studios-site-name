@@ -8,6 +8,8 @@ const GALLERY_PATH = "/Galleries/Fine-Art-Photography/Portraits/Black-White";
 const FALLBACK_DESCRIPTION = "Explore traditional black and white fine art portrait photography by Wayne Heim. Timeless character studies with dramatic lighting.";
 
 const { breadcrumb, entranceData, initialImageId } = Astro.props;
+const shouldSsrChapterViewer = Boolean(initialImageId && initialImageId !== "i-k4studios") || Astro.url.searchParams.get("view") === "grid";
+
 ---
 
 <GalleryShellCore
@@ -19,5 +21,9 @@ const { breadcrumb, entranceData, initialImageId } = Astro.props;
   entranceData={entranceData}
   initialImageId={initialImageId}
 >
-  <ChapterViewer slot="chapter-viewer" client:load initialImageId={initialImageId} />
+  {shouldSsrChapterViewer ? (
+    <ChapterViewer slot="chapter-viewer" client:load initialImageId={initialImageId} />
+  ) : (
+    <ChapterViewer slot="chapter-viewer" client:only="react" initialImageId={initialImageId} />
+  )}
 </GalleryShellCore>
