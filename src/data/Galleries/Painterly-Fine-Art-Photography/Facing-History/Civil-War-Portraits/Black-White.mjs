@@ -25,7 +25,7 @@ export const galleryData = [
   {
     "id": "i-834cDZ8",
     "title": "After the Smoke",
-    "description": "A painterly Civil War art portrait depicting a battle-worn American Civil War soldier in the aftermath of conflict. Rooted in disciplined civil war photography and 19th-century portrait traditions, the image emphasizes restraint over drama. \n\nSoft tonal gradation and shallow depth recall historic reenactment photography while avoiding theatrical excess. This Civil War fine art photograph explores civil war valor and loss through posture, light, and compositional control rather than reenactment spectacle. \n\nPart of the Facing History collection, this work contributes to contemporary Civil War art prints and legacy portraits for collectors drawn to historically grounded narrative imagery. © Wayne Heim",
+    "description": `A battle-worn Union soldier stands in the quiet after conflict, rendered as painterly Civil War art through sepia tone, softened focus, and restrained posture. This Civil War fine art photograph belongs to the Faces of Conflict body of work, creating Civil War portrait wall art rooted in aftermath, endurance, and the human cost carried after the smoke clears.`,
     "alt": "Painterly Civil War portrait of a Union soldier standing after battle, rendered in sepia tones with soft focus and restrained composition.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-834cDZ8/A",
 
@@ -71,7 +71,7 @@ export const galleryData = [
   {
     "id": "i-GqDJLmF",
     "title": "Between Orders",
-    "description": "A painterly Civil War portrait set within a quiet encampment, where smoke, canvas, and softened light shape a disciplined study of posture and restraint. Rather than dramatizing conflict, this Civil War fine art photograph lingers in the in-between — a moment of waiting that carries its own tension and psychological weight.\n\nRooted in 19th-century photography and the visual language of historical portraiture, the image reads as Civil War art built from atmosphere and compositional control. For collectors drawn to Civil War portraits, Faces of Conflict, and historically grounded civil war photography, this work offers a calm, durable presence suited to Civil War collections and American history wall decor. © Wayne Heim",
+    "description": `A soldier stands in a smoky Civil War encampment, hands set at his hips as canvas, haze, and stillness gather around him. This painterly Civil War portrait creates historically grounded Civil War photography for collectors drawn to waiting, discipline, and the tense interval between orders.`,
     "alt": "Painterly Civil War portrait of a uniformed soldier standing in a smoky camp beside canvas tents, hands on hips, rendered in soft sepia tones.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-GqDJLmF/A",
 
@@ -114,7 +114,7 @@ export const galleryData = [
   {
     "id": "i-vQXXDRJ",
     "title": "Passing Time",
-    "description": "A painterly Civil War portrait depicting a uniformed soldier reading in a quiet encampment. Rendered in softened sepia tones with restrained composition, this Civil War fine art photograph draws from 19th-century photography and historic portrait traditions rather than battlefield spectacle.\n\nPart of the Faces of Conflict body of work, the image explores the contemplative side of American Civil War life — emphasizing posture, atmosphere, and psychological presence. Designed for collectors of Civil War art and historically grounded civil war photography, this piece contributes depth to curated Civil War collections. © Wayne Heim",
+    "description": `A Civil War soldier reads alone in camp, turning a quiet pause into painterly historical portrait photography. This Civil War fine art image creates legacy portrait wall art rooted in the private intervals of war, where smoke lingers and a man briefly returns to himself before history resumes.`,
     "alt": "Painterly Civil War portrait of a uniformed soldier seated in camp reading a book, surrounded by soft sepia haze.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-vQXXDRJ/A",
 
@@ -149,7 +149,7 @@ export const galleryData = [
   {
     "id": "i-TkBf43K",
     "title": "Counting Time",
-    "description": "A painterly Civil War portrait depicting a young drummer practicing in a quiet encampment. Rendered in softened sepia tones with restrained composition, this Civil War fine art photograph draws from 19th-century photography and historic portrait traditions rather than spectacle.\n\nPart of the Faces of Conflict body of work, the image explores youth, discipline, and anticipation within the American Civil War. Emphasizing atmosphere and psychological presence over reenactment drama, this piece contributes depth to Civil War collections and historically grounded civil war photography.\n\nIdeal for collectors seeking Civil War art, Civil War portraits, and legacy portraits for collectors drawn to contemplative American history wall decor. © Wayne Heim",
+    "description": `A young Civil War drummer practices in a smoky encampment, his attention fixed on rhythm before the day demands more from him. This painterly Civil War portrait creates Civil War art prints rooted in youth, discipline, and the quiet weight of a boy learning how sound can move men toward consequence.`,
     "alt": "Painterly Civil War portrait of a young drummer seated in a smoky encampment practicing with drumsticks, rendered in soft sepia tones.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-TkBf43K/A",
 
@@ -184,7 +184,7 @@ export const galleryData = [
   {
     "id": "i-ShbbBcz",
     "title": "Holding Ground",
-    "description": "A painterly Civil War portrait depicting a uniformed soldier resting his weight against his rifle in a subdued encampment setting. Rendered in softened sepia tones and restrained composition, this Civil War fine art photograph draws from 19th-century photography and historic portrait traditions rather than dramatic battlefield imagery.\n\nPart of the Faces of Conflict body of work, the image explores endurance and composure within the American Civil War. Emphasizing posture, atmosphere, and psychological presence, it contributes to thoughtfully curated Civil War collections and historically grounded civil war photography.\n\nIdeal for collectors seeking Civil War art, Civil War portraits, and legacy portraits for collectors drawn to contemplative American history wall decor. © Wayne Heim",
+    "description": `A soldier leans into his rifle with the stillness of someone holding position rather than seeking display. This painterly Civil War fine art photograph creates Civil War portrait wall art rooted in endurance, composure, and the disciplined silence that belongs to men who remain steady when nothing else is certain.`,
     "alt": "Painterly Civil War portrait of a uniformed soldier leaning on his rifle in soft sepia haze, rendered with restrained composition.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-ShbbBcz/A",
 
@@ -219,7 +219,7 @@ export const galleryData = [
   {
     "id": "i-mDZn7Xx",
     "title": "The Steady Gaze",
-    "description": "A painterly Civil War portrait depicting a uniformed soldier standing at ease, rendered in softened sepia tones with disciplined composition. Rooted in 19th-century photography and historic portrait traditions, this Civil War fine art photograph emphasizes experience and composure over action.\n\nPart of the Faces of Conflict body of work, the image explores maturity and restraint within the American Civil War. Through posture, atmosphere, and controlled tonality, it contributes to Civil War collections focused on psychological depth and historically grounded civil war photography.\n\nWell suited for collectors seeking Civil War portraits, Civil War art, and legacy portraits for collectors drawn to contemplative American history wall decor. © Wayne Heim",
+    "description": `A seasoned Civil War soldier stands at ease with rifle in hand, his expression shaped by experience rather than urgency. This black and white Civil War portrait creates Faces of Conflict wall art rooted in composure, maturity, and the quiet authority of a man who has already stood through more than he says.`,
     "alt": "Painterly Civil War portrait of a uniformed soldier holding a rifle, gazing forward with calm composure in soft sepia tones.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-mDZn7Xx/A",
 
@@ -253,7 +253,7 @@ export const galleryData = [
   {
     "id": "i-dWHn77W",
     "title": "On Official Business",
-    "description": "A painterly Civil War portrait depicting a civilian figure walking through a military encampment, rendered in softened sepia tones and disciplined composition. Rooted in 19th-century photography and historic portrait traditions, this Civil War fine art photograph explores the presence of non-combatant roles within wartime environments.\n\nPart of the Faces of Conflict body of work, the image emphasizes atmosphere, posture, and narrative restraint over spectacle. By focusing on the intersection of civilian authority and military space, it contributes to historically grounded civil war photography and thoughtfully curated Civil War collections.\n\nIdeal for collectors seeking Civil War art, Civil War portraits, and legacy portraits for collectors drawn to nuanced American history wall decor. © Wayne Heim",
+    "description": `A civilian figure moves through a smoky Civil War encampment with a case in hand, carrying purpose through a military space without wearing the uniform. This painterly Civil War photograph expands the Facing History narrative beyond soldiers, creating historically themed wall art about authority, vulnerability, and the non-combatant roles that moved quietly through war.`,
     "alt": "Painterly Civil War portrait of a civilian man in a top hat walking through a smoky military encampment carrying a case, rendered in soft sepia tones.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-dWHn77W/A",
 
@@ -288,7 +288,7 @@ export const galleryData = [
   {
     "id": "i-5jfqH53",
     "title": "In His Sights",
-    "description": "A painterly Civil War portrait depicting a uniformed soldier aiming his rifle from a fortified position, rendered in restrained monochrome tones. Rooted in 19th-century photography and historic martial portrait traditions, this Civil War fine art photograph emphasizes discipline and compositional control rather than spectacle.\n\nPart of the Faces of Conflict body of work, the image explores concentration and resolve within the American Civil War. Through compressed tonality and selective focus, it presents Civil War art shaped by psychological intensity and measured restraint.\n\nWell suited for collectors seeking Civil War art, Civil War portraits, and historically grounded civil war photography that balances tension with painterly control. © Wayne Heim",
+    "description": `A Civil War soldier aims from a fortified position, the rifle line narrowing the scene into discipline, breath, and consequence. This painterly Civil War photography creates fine art wall art rooted in focus, measured intent, and the psychological tension of a moment before history contracts to precision.`,
     "alt": "Painterly Civil War portrait of a uniformed soldier aiming a rifle from behind a wooden fortification in soft monochrome tones.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-5jfqH53/A",
 
@@ -322,7 +322,7 @@ export const galleryData = [
   {
     "id": "i-qSgZ7zD",
     "title": "Lines of Work",
-    "description": "A painterly Civil War portrait depicting a civilian laborer measuring and marking timber within a military encampment. Rendered in softened sepia tones and disciplined composition, this Civil War fine art photograph draws from 19th-century photography and historic craft traditions rather than battlefield spectacle.\n\nPart of the Faces of Conflict body of work, the image emphasizes labor, preparation, and infrastructure within the American Civil War. Through restrained tonality and compositional control, it contributes to historically grounded civil war photography and thoughtfully curated Civil War collections.\n\nIdeal for collectors seeking Civil War art, Civil War portraits, and legacy portraits for collectors drawn to nuanced American history wall decor. © Wayne Heim",
+    "description": `A Civil War laborer measures and marks timber inside a smoky encampment, showing that war is built by hands long before it is fought by lines. This painterly historical photograph creates Civil War art rooted in infrastructure, craft, and the quiet practical labor beneath American Civil War history.`,
     "alt": "Painterly Civil War portrait of a man measuring and marking timber at a wooden table in a smoky encampment, rendered in soft sepia tones.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-qSgZ7zD/A",
 
@@ -356,7 +356,7 @@ export const galleryData = [
   {
     "id": "i-qkhr8Nv",
     "title": "The Scholar of War",
-    "description": "A painterly Civil War portrait depicting a bearded soldier wearing spectacles, rendered in softened sepia tones with disciplined composition. Rooted in 19th-century photography and historic portrait traditions, this Civil War fine art photograph emphasizes intellect and psychological presence over spectacle.\n\nPart of the Faces of Conflict body of work, the image explores contemplation and moral weight within the American Civil War. Through restrained tonality and close framing, it contributes to historically grounded civil war photography and thoughtfully curated Civil War collections.\n\nWell suited for collectors seeking Civil War art, Civil War portraits, and legacy portraits for collectors drawn to nuanced American history wall decor. © Wayne Heim",
+    "description": `A bearded soldier in spectacles becomes a painterly Civil War portrait of intellect, conscience, and measured attention. This Faces of Conflict image creates Civil War wall art rooted in thought as much as force, reminding the viewer that war is shaped by judgment, memory, and moral weight as well as action.`,
     "alt": "Painterly Civil War portrait of a bearded soldier wearing spectacles and a hat, gazing sideways in soft sepia tones.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-qkhr8Nv/A",
 
@@ -390,7 +390,7 @@ export const galleryData = [
   {
     "id": "i-tHwDWLC",
     "title": "Counsel in the Field",
-    "description": "A painterly Civil War portrait depicting a small group of soldiers in discussion within an open field. Rendered in softened sepia tones with disciplined composition, this Civil War fine art photograph draws from 19th-century photography and historic martial portrait traditions rather than battlefield spectacle.\n\nPart of the Faces of Conflict body of work, the image emphasizes deliberation and collective resolve within the American Civil War. Through atmospheric restraint and compositional structure, it contributes to historically grounded civil war photography and thoughtfully curated Civil War collections.\n\nWell suited for collectors seeking Civil War art, Civil War portraits, and legacy portraits for collectors drawn to nuanced American history wall decor. © Wayne Heim",
+    "description": `Four Civil War soldiers stand in quiet counsel in an open field, rifles grounded while decision gathers between them. This painterly Civil War fine art photograph creates historically grounded wall art rooted in deliberation, collective resolve, and the unseen conversations that move history before feet ever advance.`,
     "alt": "Painterly Civil War portrait of four uniformed soldiers standing in discussion in a grassy field, rifles resting, rendered in soft sepia tones.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-tHwDWLC/A",
 
@@ -425,7 +425,7 @@ export const galleryData = [
   {
     "id": "i-2rXwHbt",
     "title": "In Formation",
-    "description": "A painterly Civil War portrait depicting three uniformed soldiers standing in disciplined alignment, rendered in softened sepia tones with structured composition. Rooted in 19th-century photography and historic martial portrait traditions, this Civil War fine art photograph emphasizes unity, composure, and collective resolve rather than battlefield spectacle.\n\nPart of the Faces of Conflict body of work, the image explores formation and shared purpose within the American Civil War. Through restrained tonality and compositional balance, it contributes to historically grounded civil war photography and thoughtfully curated Civil War collections.\n\nWell suited for collectors seeking Civil War art, Civil War portraits, and legacy portraits for collectors drawn to contemplative American history wall decor. © Wayne Heim",
+    "description": `Three Civil War soldiers stand in disciplined formation, rifles upright and posture held with quiet control. This painterly Civil War portrait creates Civil War art prints rooted in unity, order, and the visible structure of command before the line is asked to move.`,
     "alt": "Painterly Civil War portrait of three uniformed soldiers standing in formation with rifles, rendered in soft sepia tones.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-2rXwHbt/A",
 
@@ -459,7 +459,7 @@ export const galleryData = [
   {
     "id": "i-jHxmb55",
     "title": "Waiting for the Call",
-    "description": "A painterly Civil War photograph depicting a young drummer standing slightly apart from a small group of Union soldiers. Rendered in softened sepia tones, the composition emphasizes anticipation and placement rather than action. The rear-facing posture and lowered drum suggest readiness held in restraint.\n\nRooted in 19th-century photographic tradition and historically grounded Civil War photography, this fine art portrait explores hierarchy, youth, and the quiet intervals between orders. Part of the Faces of Conflict body of work within Wayne Heim’s Facing History series, the image contributes to Civil War collections focused on narrative depth rather than spectacle.\n\nIdeal for collectors seeking Civil War portraits, Civil War art prints, and legacy portraits for collectors drawn to contemplative American Civil War imagery. © Wayne Heim",
+    "description": `A young drummer stands just behind the soldiers, separated enough to feel the weight of waiting but close enough to belong to the line. This painterly Civil War photograph creates legacy portrait wall art rooted in youth, readiness, and the suspended moment before sound is called into service.`,
     "alt": "Painterly Civil War portrait of a young drummer boy standing behind Union soldiers, rendered in soft sepia tones.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-jHxmb55/A",
 
@@ -493,7 +493,7 @@ export const galleryData = [
   {
     "id": "i-7PMTVGg",
     "title": "Veterans of the Line",
-    "description": "A painterly Civil War portrait depicting seasoned soldiers standing in disciplined formation, rifles vertical and gaze unwavering. Rendered in softened sepia tones with structured composition, the image emphasizes endurance and collective experience rather than battlefield drama.\n\nRooted in 19th-century photographic tradition and historically grounded Civil War photography, this fine art work explores maturity within service — the quiet authority of men who have stood the line repeatedly. Part of the Faces of Conflict body of work within Wayne Heim’s Facing History series, it contributes to Civil War collections focused on dignity, structure, and lived presence.\n\nIdeal for collectors seeking Civil War portraits, Civil War art prints, and legacy portraits for collectors drawn to contemplative American Civil War imagery. © Wayne Heim",
+    "description": `Seasoned Union soldiers stand in formation, rifles vertical and expressions marked by service rather than spectacle. This painterly Civil War portrait creates Civil War collection wall art rooted in dignity, structure, and the lived presence of men who have carried the line before.`,
     "alt": "Painterly Civil War portrait of seasoned Union soldiers standing in formation with rifles, rendered in soft sepia tones.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-7PMTVGg/A",
 
@@ -527,7 +527,7 @@ export const galleryData = [
   {
     "id": "i-4xLxQpk",
     "title": "Under the Colors",
-    "description": "A black and white Civil War photograph capturing a commanding officer standing before a line of Union soldiers assembled beneath the American flag during reenactment. Emphasizing formation, posture, and ceremonial discipline rather than battlefield action, this fine art Civil War photography image reflects Wayne Heim’s historically grounded approach to Civil War reenactment photography. Part of the Facing History series. © Wayne Heim",
+    "description": `A commanding officer stands before Union soldiers assembled beneath the American flag, turning formation into a ceremony of order and obligation. This black and white Civil War photograph creates historically grounded Civil War art rooted in discipline, regimental identity, and the authority gathered under the colors.`,
     "alt": "Civil War officer standing before Union soldiers assembled in formation beneath the American flag.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-4xLxQpk/A",
 
@@ -561,7 +561,7 @@ export const galleryData = [
   {
     "id": "i-gF8ZqQS",
     "title": "Sound the Assembly",
-    "description": "A black and white Civil War photograph capturing a bugler sounding the assembly in a reenactment camp. This painterly Civil War fine art image emphasizes posture, atmosphere, and the quiet authority of ritual rather than spectacle. Part of Wayne Heim’s Facing History collection, the work reflects his disciplined approach to historically themed fine art photography—where light, restraint, and narrative presence shape scenes rooted in duty and memory. © Wayne Heim",
+    "description": `A Union bugler sounds the assembly in camp, the note cutting through tents, morning air, and the brief comfort of rest. This painterly Civil War fine art photograph creates historic reenactor wall art rooted in ritual, duty, and the decisive sound that redraws the line between stillness and obligation.`,
     "alt": "Black and white Civil War reenactment photograph of a Union bugler sounding assembly near camp tents",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-gF8ZqQS/A",
 
@@ -596,7 +596,7 @@ export const galleryData = [
   {
     "id": "i-bcHKgfx",
     "title": "Not The Same Man",
-    "description": "A black and white Civil War portrait capturing the psychological aftermath of conflict rather than the spectacle of battle. In this historically grounded fine art photograph, a Union soldier stands in quiet reflection — defined by endurance, memory, and the unseen cost of war. Light, posture, and restraint shape a narrative rooted in consequence rather than reenactment drama. Part of Wayne Heim’s Facing History series exploring American Civil War photography through a painterly, story-driven lens. © Wayne Heim",
+    "description": `A Union soldier stands in profile with rifle in hand, his stillness carrying the psychological aftermath of conflict rather than the drama of battle. This painterly Civil War portrait creates Faces of Conflict wall art rooted in memory, endurance, and the quiet distance between the man who left and the man who returns.`,
     "alt": "Black and white Civil War portrait of a bearded Union soldier standing in profile with rifle, rendered in painterly fine art style.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-bcHKgfx/A",
 
@@ -638,7 +638,7 @@ export const galleryData = [
   {
     "id": "i-bCzTRRB",
     "title": "Remnant of the Line",
-    "description": "A monochrome American Civil War portrait rendered in Wayne Heim’s disciplined, painterly approach to historically themed photography. This Civil War portrait moves beyond reenactment spectacle, focusing instead on memory, endurance, and the human cost carried long after the conflict ends. Rooted in 19th-century photography aesthetics and part of the Facing History series, this piece reflects the gravity found in legacy portraits for collectors of Civil War art prints and traditional reenactment photography collections. © Wayne Heim",
+    "description": `An elderly Civil War figure stands as a remnant of the line, his presence shaped by survival more than decoration. This black and white Civil War portrait creates legacy wall art rooted in memory, endurance, and the human consequence that remains long after the regiment, the smoke, and the command have passed.`,
     "alt": "Black and white Civil War portrait of an elderly soldier in Union cap with medal, rendered in painterly fine art style.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-bCzTRRB/A",
 
@@ -675,7 +675,7 @@ export const galleryData = [
   {
     "id": "i-QW5C48m",
     "title": "Echo of the Line",
-    "description": "A black and white Civil War portrait from Wayne Heim’s Facing History fine art photography collection. This historically grounded Civil War photography study explores memory, duty, and consequence beyond spectacle or reenactment drama. Light, restraint, and disciplined composition reflect the tradition of 19th-century photography while elevating the image into narrative Western fine art.\n\nPart of Wayne Heim’s Civil War collection — blending American Civil War history, Civil War portraits, and traditional reenactment photography into museum-quality historic reenactor prints for collectors of Civil War art and 19th-century photography. © Wayne Heim",
+    "description": `An elderly soldier raises his hand as if answering a command still carried in memory, long after the line itself has dissolved. This painterly Civil War portrait creates historic reenactor wall art rooted in discipline, age, and the echo of service that survives in posture rather than noise.`,
     "alt": "Black and white Civil War portrait of an elderly soldier reenactor raising his hand, captured in painterly 19th-century style fine art photography by Wayne Heim.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-QW5C48m/A",
 
@@ -711,7 +711,7 @@ export const galleryData = [
   {
     "id": "i-xKnSff2",
     "title": "Hands to the Wheel",
-    "description": "A historically grounded Civil War photography study from Wayne Heim’s Facing History fine art photography collection. This Civil War portrait scene captures Union soldiers preparing artillery within a Civil War encampment, rendered with the tonal restraint and compositional discipline of 19th-century photography.\n\nBlending American Civil War history, Civil War reenactment photography, and narrative Western art, the image reflects duty, coordination, and consequence rather than spectacle. Part of Wayne Heim’s Civil War collections — museum-quality historic reenactor prints for collectors of Civil War art and traditional reenactment photography. © Wayne Heim",
+    "description": `Hands gather around the wheel of a field cannon, turning artillery into a study of labor, coordination, and shared burden. This painterly Civil War photography creates Civil War art rooted in machinery made human, where wood, iron, and muscle meet in the disciplined work before impact.`,
     "alt": "Civil War reenactors preparing artillery cannon in a sepia-toned fine art Civil War photography study by Wayne Heim.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-xKnSff2/A",
 
@@ -748,7 +748,7 @@ export const galleryData = [
   {
     "id": "i-vztmrNx",
     "title": "A Quiet Commission",
-    "description": "A black and white Civil War portrait rendered with painterly restraint, this fine art photograph from Wayne Heim’s Facing History series captures the enduring weight of command. Rooted in Civil War photography and 19th-century photography traditions, the image reflects the compositional discipline of historic reenactor prints while elevating the subject beyond reenactment alone. Light, posture, and tonal control create a study in duty and consequence rather than spectacle. Ideal for collectors of Civil War art, civil war photography, and legacy portraits for collectors. © Wayne Heim",
+    "description": `An older Union officer sits in quiet reflection, the weight of command carried in posture, gaze, and controlled silence. This painterly Civil War portrait creates fine art wall art rooted in 19th-century photographic tradition, command, and the commissions men continue to bear long after the shouting stops.`,
     "alt": "Black and white Civil War portrait of an older Union officer seated in quiet reflection, fine art photography by Wayne Heim.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-vztmrNx/A",
 
@@ -783,7 +783,7 @@ export const galleryData = [
   {
     "id": "i-vRTfLrV",
     "title": "Holding the Homefront",
-    "description": "A black and white Civil War themed photography portrait capturing the quiet strength of women during the American Civil War. Rather than spectacle, this Civil War reenactment photography study centers on presence, endurance, and the unseen weight carried beyond the battlefield. Light and restraint echo the tonal discipline of 19th-century photography while honoring the human cost behind the conflict.\n\nPart of Wayne Heim’s Facing History series, this work reflects a historically grounded approach to Civil War art and traditional reenactment photography collection imagery — where narrative depth and emotional consequence matter more than pageantry. Ideal for collectors seeking legacy portraits for collectors and historically themed fine art. © Wayne Heim",
+    "description": `Two women sit together in a Civil War homefront portrait, close enough to share the burden yet separated by what cannot be said aloud. This painterly Civil War themed photograph creates legacy portrait wall art rooted in waiting, domestic consequence, and the quiet strength carried beyond the battlefield.`,
     "alt": "Black and white Civil War reenactment portrait of two women seated together in period dress, reflecting the quiet strength of the American Civil War homefront © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-vRTfLrV/A",
 
@@ -820,7 +820,7 @@ export const galleryData = [
   {
     "id": "i-q5tM4bH",
     "title": "Between Drills",
-    "description": "A black and white Civil War portrait photograph capturing a solitary soldier in a moment of stillness between duty and action. Wayne Heim’s American Civil War fine art photography approaches civil war photography with restraint and historical grounding, emphasizing presence over spectacle. Light, posture, and controlled composition shape a narrative rooted in consequence rather than pageantry.\n\nPart of the Facing History collection, this work contributes to a traditional reenactment photography collection centered on Civil War portraits and historically informed storytelling. Created for collectors of civil war art prints, 19th-century photography, and legacy portraits for collectors, this piece reflects a disciplined approach to Civil War photography and civil war art. © Wayne Heim",
+    "description": `A solitary soldier stands between drills, held in the thin space after command but before the next demand. This black and white Civil War portrait creates historically grounded fine art wall art rooted in waiting, restraint, and the psychological interval where duty gathers itself again.`,
     "alt": "Black and white Civil War portrait of a reenactor soldier standing between drills, fine art photography by Wayne Heim © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-q5tM4bH/A",
 
@@ -858,7 +858,7 @@ export const galleryData = [
   {
     "id": "i-WDPZRGD",
     "title": "Rear Guard",
-    "description": "A painterly Civil War photography piece depicting a mounted figure positioned as the rear guard, defined by vigilance rather than spectacle. This American Civil War image reflects Wayne Heim’s disciplined approach to civil war reenactment photography, where light, posture, and restraint shape narrative consequence. \n\nPart of a traditional reenactment photography collection within the Facing History series, this work draws from 19th-century photography and Civil War portrait traditions while maintaining a contemporary fine art voice. Designed for collectors seeking civil war art prints, legacy portraits for collectors, and historically grounded American history wall decor. © Wayne Heim",
+    "description": `A mounted Civil War rear guard turns vigilance into quiet command, watching the space no one else can see. This painterly Civil War photography creates American history wall art rooted in responsibility, negative space, and the silent duty of guarding what follows behind.`,
     "alt": "Mounted Civil War reenactor serving as rear guard in painterly American Civil War fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-WDPZRGD/A",
 
@@ -894,7 +894,7 @@ export const galleryData = [
   {
     "id": "i-ScfTV48",
     "title": "Whispered Promises",
-    "description": "A black and white Civil War photography portrait capturing a quiet exchange between a couple in the shadow of conflict. This image from Wayne Heim’s American Civil War collection explores civil war themed photography through restraint rather than spectacle. Light, posture, and proximity shape a narrative rooted in consequence, memory, and the human cost behind history.\n\nPart of Wayne Heim’s Civil War fine art photography and traditional reenactment photography collection, this piece reflects the emotional depth found in historic reenactor prints and legacy portraits for collectors. Civil War art prints like this emphasize atmosphere, presence, and the lived tension beneath 19th-century photography traditions. © Wayne Heim",
+    "description": `A Civil War couple shares a quiet exchange beneath the shadow of parting, their closeness carrying more tension than any battlefield gesture. This black and white Civil War portrait creates historically themed wall art rooted in whispered promises, homefront uncertainty, and the human cost behind the uniform.`,
     "alt": "Black and white Civil War portrait of a couple sharing a quiet moment before parting — fine art photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-ScfTV48/A",
 
@@ -930,7 +930,7 @@ export const galleryData = [
   {
     "id": "i-CvnVxzQ",
     "title": "Gunners at the Ready",
-    "description": "A black and white Civil War photography study capturing Union gunners positioned at a field cannon, defined by restraint rather than spectacle. Rooted in American Civil War reenactment photography, this image reflects Wayne Heim’s disciplined approach to civil war art — where light, composition, and historical awareness shape narrative presence over pageantry.\n\nPart of the Facing History collection, this work explores 19th-century photography aesthetics through traditional reenactment photography collection methods, emphasizing duty, tension, and the quiet weight before impact. Ideal for collectors of civil war art prints, historic reenactor prints, and legacy portraits for collectors seeking historically grounded fine art. © Wayne Heim",
+    "description": `Union gunners stand ready at a field cannon, their posture hardened by repetition and the knowledge of what comes next. This painterly Civil War reenactment photograph creates Civil War art prints rooted in artillery discipline, restraint, and the breathless second before the line speaks.`,
     "alt": "Civil War reenactment photography of Union cannon crew preparing to fire field artillery in black and white fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-CvnVxzQ/A",
 
@@ -966,7 +966,7 @@ export const galleryData = [
   {
     "id": "i-m5CqBfM",
     "title": "Smoke Over Hale Farm",
-    "description": "A black and white Civil War photography image capturing a live cannon firing during a Hale Farm reenactment. This work is part of Wayne Heim’s American Civil War fine art photography, rooted in historical awareness rather than spectacle. Smoke, recoil, and disciplined composition shape a narrative grounded in duty, consequence, and the physical weight carried by reenactors in traditional reenactment photography collection settings.\n\nUnlike decorative civil war art prints or theatrical civil war paintings, this image approaches civil war reenactment photography with restraint and tonal control — where atmosphere and structure carry the emotional gravity of the moment. Ideal for collectors seeking legacy portraits for collectors and museum-quality civil war photography that reflects American Civil War history with painterly depth. © Wayne Heim",
+    "description": `A field cannon fires at Hale Farm, smoke rolling forward until tents, trees, and certainty disappear into atmosphere. This painterly Civil War fine art photograph creates museum-quality Civil War wall art rooted in artillery, consequence, and the lingering echo of a single charge released into open ground.`,
     "alt": "Black and white Civil War reenactment photograph of Union artillery crew firing a cannon at Hale Farm, smoke billowing during live fire moment – fine art photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-m5CqBfM/A",
 
@@ -1005,7 +1005,7 @@ export const galleryData = [
   {
     "id": "i-JdswJLd",
     "title": "Worn by Duty",
-    "description": "A black and white Civil War portrait capturing the enduring presence of a 19th-century soldier, defined by endurance rather than spectacle. This work is part of Wayne Heim’s Civil War fine art photography collection, where restraint, historical awareness, and compositional discipline shape each image. \n\nLight and posture carry the narrative — emphasizing memory, consequence, and the lived experience behind traditional reenactment photography. Created with the tonal depth of 19th-century photography, this piece speaks to collectors of Civil War art prints, civil war photography, and legacy portraits for collectors seeking historically grounded fine art. © Wayne Heim",
+    "description": `A 19th-century soldier is rendered in black and white with the quiet pressure of duty worn into face, posture, and stillness. This painterly Civil War portrait creates legacy wall art rooted in endurance, memory, and the weight a man carries after the field itself has gone silent.`,
     "alt": "Black and white Civil War portrait of a 19th-century soldier by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-JdswJLd/A",
 
@@ -1040,7 +1040,7 @@ export const galleryData = [
   {
     "id": "i-N3945FQ",
     "title": "A Veteran’s Silence",
-    "description": "A black and white Civil War portrait rooted in restraint rather than spectacle. This American Civil War fine art photograph reflects the discipline and tonal depth of 19th-century photography while elevating traditional reenactment photography into narrative-driven civil war art. \n\nWayne Heim approaches civil war photography with historical awareness and compositional precision, emphasizing presence, memory, and the quiet endurance of those shaped by conflict. Part of the Facing History collection — created for collectors of civil war art prints, legacy portraits for collectors, and museum-quality historic reenactor prints. © Wayne Heim",
+    "description": `A veteran sits in silence, shaped less by the battle itself than by what memory continues to ask of him. This black and white Civil War portrait creates historic fine art wall art rooted in restraint, age, and the unspoken burden of service carried long after the marching ends.`,
     "alt": "Civil War veteran portrait in black and white fine art photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-N3945FQ/A",
 
@@ -1074,7 +1074,7 @@ export const galleryData = [
   {
     "id": "i-gd64pg2",
     "title": "Ghosts from the Past",
-    "description": "A painterly Civil War portrait capturing the presence of a seasoned soldier rendered through restrained black and white photography. This American Civil War fine art photograph reflects the tonal discipline of 19th-century photography while elevating traditional reenactment photography into narrative-driven civil war art.\n\nWayne Heim approaches civil war photography with historical awareness and compositional precision, emphasizing character over spectacle and memory over pageantry. Part of the Facing History collection — created for collectors seeking civil war art prints, historic reenactor prints, and legacy portraits for collectors grounded in authenticity and depth. © Wayne Heim",
+    "description": `A seasoned Civil War figure looks steady rather than haunted, yet the past lingers in the quiet authority of his gaze. This painterly black and white portrait creates Civil War art prints rooted in memory, presence, and the ghostlike residue of conflict that refuses to fully fade.`,
     "alt": "Civil War soldier portrait in fine art black and white photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-gd64pg2/A",
 
