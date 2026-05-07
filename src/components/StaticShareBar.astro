@@ -1,0 +1,52 @@
+---
+const {
+  imageUrl,
+  pageTitle = 'K4 Studios',
+  pageDescription = '',
+  pageUrl = Astro.url.href,
+} = Astro.props;
+
+const encodedUrl = encodeURIComponent(pageUrl);
+const encodedTitle = encodeURIComponent(pageTitle);
+const encodedDescription = encodeURIComponent(pageDescription || pageTitle);
+const encodedShareText = encodeURIComponent(`${pageTitle}\n\n${pageUrl}`);
+const pinterestMedia = imageUrl ? encodeURIComponent(imageUrl) : '';
+---
+
+<div class="static-share" aria-label="Share this page">
+  <span class="static-share__label">Share</span>
+  <a href={`https://twitter.com/intent/tweet?text=${encodedTitle}%20${encodedUrl}`} target="_blank" rel="noopener noreferrer">X</a>
+  <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`} target="_blank" rel="noopener noreferrer">Facebook</a>
+  <a href={`https://pinterest.com/pin/create/button/?url=${encodedUrl}&media=${pinterestMedia}&description=${encodedDescription}`} target="_blank" rel="noopener noreferrer">Pinterest</a>
+  <a href={`mailto:?subject=${encodedTitle}&body=${encodedShareText}`}>Email</a>
+</div>
+
+<style>
+  .static-share {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    color: #6f635a;
+    font-family: 'Glegoo', serif;
+    font-size: 0.72rem;
+  }
+
+  .static-share__label {
+    color: #7a7876;
+    font-weight: 700;
+    margin-right: 0.1rem;
+  }
+
+  .static-share a {
+    color: #6f635a;
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+  }
+
+  .static-share a:hover,
+  .static-share a:focus-visible {
+    color: #8b0000;
+  }
+</style>

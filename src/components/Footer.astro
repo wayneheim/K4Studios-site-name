@@ -3,6 +3,7 @@ const currentYear = new Date().getFullYear();
 import GalleryPreviewStrip from './GalleryPreviewStrip.astro';
 import BlogGalleryPreviewStrip from './BlogGalleryPreviewStrip.astro';
 import ShareDrawer from '@/components/ShareDrawer.jsx';
+import StaticShareBar from '@/components/StaticShareBar.astro';
 import { extractImageId, getSemanticImageUrl, normalizeImageSrc } from '@/utils/imageProxy.js';
 import { getGalleryCollectionLabel, isGallerySourceHref, resolveGallerySourceHref } from '@/utils/galleryCollectionNav.ts';
 
@@ -76,6 +77,7 @@ const allPageLinkText = resolvedPreviewPath
   ? (galleriesWithAllPages[resolvedPreviewPath] || `Browse the full ${collectionLabel} collection`)
   : null;
 const shareImage = toShareUrl(rawShareImage) || (previewImages?.[0]?.id ? getSemanticImageUrl(previewImages[0].id, {}, 'l', { absolute: true, origin: siteOrigin }) : undefined);
+const sharePageUrl = new URL(Astro.url.pathname, siteOrigin).toString();
 ---
 
 <footer
@@ -121,11 +123,11 @@ const shareImage = toShareUrl(rawShareImage) || (previewImages?.[0]?.id ? getSem
     <!-- 🔗 Share Drawer (with fallback) -->
     <div class="pb-4">
       {isImagePage ? (
-        <ShareDrawer
-          client:idle
+        <StaticShareBar
           imageUrl={shareImage}
           pageTitle={title || 'K4 Studios'}
           pageDescription=""
+          pageUrl={sharePageUrl}
         />
       ) : (
         <ShareDrawer
