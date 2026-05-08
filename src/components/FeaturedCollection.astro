@@ -74,19 +74,25 @@ const toAbsoluteUrl = (value: string) => {
   return new URL(normalized, siteOrigin).toString();
 };
 
+const encodeLocalAssetUrl = (value?: string) => {
+  if (!value) return '';
+  if (value.startsWith('http://') || value.startsWith('https://')) return value;
+  return encodeURI(value);
+};
+
 const hasProxyImage = Boolean(image.id);
 const imageContext = { galleryPath: ctaLink };
 
 // Use proxy URLs for gallery images and pass through local/static assets unchanged.
 const displaySrc = hasProxyImage
   ? getSemanticImageUrl(image, imageContext, 'm')
-  : (image.srcM || image.src);
+  : encodeLocalAssetUrl(image.srcM || image.src);
 const srcsetValue = hasProxyImage
   ? getSemanticImageSrcset(image, imageContext)
   : [
-      image.srcS ? `${image.srcS} 400w` : '',
-      (image.srcM || image.src) ? `${image.srcM || image.src} 600w` : '',
-      (image.srcL || image.src) ? `${image.srcL || image.src} 1024w` : ''
+      image.srcS ? `${encodeLocalAssetUrl(image.srcS)} 400w` : '',
+      (image.srcM || image.src) ? `${encodeLocalAssetUrl(image.srcM || image.src)} 600w` : '',
+      (image.srcL || image.src) ? `${encodeLocalAssetUrl(image.srcL || image.src)} 1024w` : ''
     ].filter(Boolean).join(', ');
 const fullUrl = toAbsoluteUrl(ctaLink);
 // Capped at 'l' to protect XL from bot discovery via structured data.
@@ -176,7 +182,7 @@ const structuredData = JSON.stringify({
           />
           {image.src2 && (
             <img
-              src={image.src2}
+              src={encodeLocalAssetUrl(image.src2)}
               alt=""
               aria-hidden="true"
               class:list={["fc-image", "fc-image--overlay", "fc-image--hover", { "fc-image--contain": image.fit === 'contain' }]}
@@ -186,7 +192,7 @@ const structuredData = JSON.stringify({
           )}
           {image.src3 && (
             <img
-              src={image.src3}
+              src={encodeLocalAssetUrl(image.src3)}
               alt=""
               aria-hidden="true"
               class:list={["fc-image", "fc-image--overlay", "fc-image--gif", { "fc-image--contain": image.fit === 'contain' }]}

@@ -1,29 +1,7 @@
 import React, { useEffect, useState } from "react";
-import SiteNavMenu from "./siteNavMenu.jsx"; // adjust path if needed
+import SiteNavMenu from "./siteNavMenu.jsx";
 
-function useIsMobile() {
-  const [mobile, setMobile] = useState(false);
-  useEffect(() => {
-    const check = () => setMobile(window.innerWidth <= 768);
-    check();
-    window.addEventListener("resize", check);
-    return () => window.removeEventListener("resize", check);
-  }, []);
-  return mobile;
-}
-
-function LogoSlot({ isMobile, triggerStripe }) {
-  // ✅ Logo visible by default - JS only controls animation, not visibility
-  const [logoIn, setLogoIn] = useState(true);
-  useEffect(() => {
-    if (!isMobile) {
-      // Still trigger stripe animation after delay
-      const timer = setTimeout(() => {
-        triggerStripe();
-      }, 500); // ⏱️ Synced to breadcrumb fade-in
-      return () => clearTimeout(timer);
-    }
-  }, [isMobile, triggerStripe]);
+function LogoSlot() {
   return (
     <a href="/" className="k4-header-logo">
       <img src="/images/K4Logo-web.webp" alt="K4 Studios Home" className="k4-logo-img" />
@@ -31,73 +9,51 @@ function LogoSlot({ isMobile, triggerStripe }) {
   );
 }
 
-function DelayedRH() {
-  const [show, setShow] = useState(false);
-  useEffect(() => {
-    const timer = setTimeout(() => setShow(true), 500); // ⏱️ Synced to breadcrumb fade-in
-    return () => clearTimeout(timer);
-  }, []);
-  return show ? (
-    <div className="rhs">
-      <SiteNavMenu />
-    </div>
-  ) : (
-    <div className="rhs" style={{ width: 220 }} />
-  );
-}
-
 export default function LandingHeader({ breadcrumb }) {
-  const isMobile = useIsMobile();
   const [animateStripes, setAnimateStripes] = useState(false);
   const [showWHLogo, setShowWHLogo] = useState(false);
-  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
+    const stripeTimer = window.setTimeout(() => {
+      setAnimateStripes(true);
+    }, 500);
+    const logoTimer = window.setTimeout(() => {
+      setShowWHLogo(true);
+    }, 875);
+
+    return () => {
+      window.clearTimeout(stripeTimer);
+      window.clearTimeout(logoTimer);
+    };
   }, []);
-
-  useEffect(() => {
-    if (mounted && isMobile) {
-      const timer = setTimeout(() => setShowWHLogo(true), 875); // WH logo fade timing unchanged
-      return () => clearTimeout(timer);
-    } else {
-      setShowWHLogo(false);
-    }
-  }, [mounted, isMobile]);
 
   return (
     <div
       role="banner"
-      className={`landing-header${mounted && isMobile ? " mobile-animate" : ""}${mounted && animateStripes ? " desktop-animate" : ""}`}
+      className={`landing-header${animateStripes ? " desktop-animate" : ""}`}
       style={{ position: "relative", zIndex: 100 }}
     >
       <div
-  className="breadcrumb-text desktop-only breadcrumb-fade"
-  style={{ animationDelay: ".5s" }}
-  dangerouslySetInnerHTML={{ __html: breadcrumb }}
-/>
+        className="breadcrumb-text desktop-only breadcrumb-fade"
+        style={{ animationDelay: ".5s" }}
+        dangerouslySetInnerHTML={{ __html: breadcrumb }}
+      />
 
+      <LogoSlot />
 
-      <LogoSlot isMobile={mounted && isMobile} triggerStripe={() => setAnimateStripes(true)} />
-      {!mounted || isMobile ? (
-        <div className="rhs">
-          <SiteNavMenu />
-        </div>
-      ) : (
-        <DelayedRH />
-      )}
+      <div className="rhs">
+        <SiteNavMenu />
+      </div>
 
-      {mounted && isMobile && (
-  <a
-    href="mailto:wayne@k4studios.com"
-    className={`wh-logo-mobile${showWHLogo ? " fade-in" : ""}`}
-    aria-label="Email Wayne Heim"
-    rel="external"
-    target="_blank"
-  >
-    <img src="/images/WH.png" alt="WH logo" />
-  </a>
-)}
+      <a
+        href="mailto:wayne@k4studios.com"
+        className={`wh-logo-mobile${showWHLogo ? " fade-in" : ""}`}
+        aria-label="Email Wayne Heim"
+        rel="external"
+        target="_blank"
+      >
+        <img src="/images/WH.png" alt="WH logo" />
+      </a>
 
       <style jsx>{`
         @import url("https://fonts.googleapis.com/css2?family=Glegoo&display=swap");
@@ -223,6 +179,7 @@ export default function LandingHeader({ breadcrumb }) {
           .desktop-only {
             display: none;
           }
+
           .landing-header::before,
           .landing-header::after {
             transform: scaleX(0.76);

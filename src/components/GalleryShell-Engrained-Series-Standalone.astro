@@ -202,7 +202,7 @@ let sisterLink = sitemapMatches.find(m => m.a.includes(currentImageId))?.b || nu
     {/* Header */}
     {!skipIntro && (
       <div id="header-section" class="section-visible" style="z-index: 10; position: relative;">
-        <GalleryHeader client:load breadcrumb={breadcrumb} />
+        <GalleryHeader client:load breadcrumb={breadcrumb} currentPath={Astro.url.pathname} />
       </div>
     )}
 

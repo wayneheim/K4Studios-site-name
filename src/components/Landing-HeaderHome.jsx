@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import SiteNavMenu from "./siteNavMenu.jsx";
+import SiteNavMenu from "./siteNavMenuHome.jsx";
 import "../styles/landing-header-home.css";
 
 function useIsMobile() {

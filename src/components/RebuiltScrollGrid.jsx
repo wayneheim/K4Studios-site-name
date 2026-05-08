@@ -1,11 +1,12 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { SERIES_DEFINITIONS, SERIES_ICONS, getEffectiveSeries, loadSeriesRegistry } from "../data/seriesDefinitions.js";
-import { getProxySrc } from "@/utils/imageProxyCore.js";
+import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import { warmImage } from "../utils/warmImage";
 import { trackEvent, emitActionPixel } from "../utils/analytics";
 
-const BATCH_SIZES = { 1: 25, 2: 24, 3: 30 };
+const BATCH_SIZES = { 1: 6, 2: 8, 3: 9 };
+const GRID_WARM_COUNT = 3;
 
 function getColCount() {
   if (typeof window !== "undefined") {
@@ -83,8 +84,10 @@ export default function RebuiltScrollGrid({
   // Worker handles fallback if M isn't available
   const getPreferredSrc = (entry, cols) => {
     if (!entry?.id) return null;
-    // M size (~600px) is sufficient for grid cards at any column count
-    return entry.src || getProxySrc(entry.id, 'm');
+    // Force semantic M-size grid URLs.
+    // Do not trust entry.src here because some datasets still carry larger
+    // legacy proxy variants, which can silently upsize the whole grid.
+    return getSemanticImageUrl(entry, { galleryPath: galleryKey }, 'm');
   };
 
   const getParentGalleryUrl = () => {
@@ -245,14 +248,13 @@ export default function RebuiltScrollGrid({
       if (url) {
         const img = new window.Image();
         img.decoding = "async";
-        img.loading = "eager";
         img.src = url;
       }
     });
     
-    // Pre-warm next 9 images in Cloudflare proxy cache (above the fold for next batch)
-    // This ensures CF cache is hot before user clicks "Show More"
-    galleryData.slice(preloadStart, Math.min(preloadStart + 9, galleryData.length)).forEach((entry) => {
+    // Keep proxy warming small so the grid doesn't flood the worker while
+    // visible cards are still loading.
+    galleryData.slice(preloadStart, Math.min(preloadStart + GRID_WARM_COUNT, galleryData.length)).forEach((entry) => {
       if (entry?.id) {
         warmImage(entry.id, 'm'); // Grid cards use M size
       }
@@ -267,7 +269,6 @@ export default function RebuiltScrollGrid({
       if (url) {
         const img = new window.Image();
         img.decoding = "async";
-        img.loading = "eager";
         img.src = url;
       }
     });

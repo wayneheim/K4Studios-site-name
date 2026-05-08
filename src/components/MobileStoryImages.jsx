@@ -110,17 +110,12 @@ export default function MobileStoryImages({ images = [], displayCount }) {
   
   useEffect(() => {
     if (window.innerWidth > 768) {
-      console.log("MobileStoryImages: skipping on desktop");
       return;
     }
 
     const tryInsertImages = () => {
       const storyBlocks = document.querySelectorAll(".story-block");
-      console.log("MobileStoryImages: Found story blocks →", storyBlocks.length);
-      console.log("MobileStoryImages: Shuffled images available →", shuffledImages.length);
-
       if (!storyBlocks.length || !shuffledImages.length) {
-        console.log("MobileStoryImages: Retrying in 300ms...");
         return setTimeout(tryInsertImages, 300);
       }
 
@@ -163,7 +158,6 @@ export default function MobileStoryImages({ images = [], displayCount }) {
         container.appendChild(link);
         container.appendChild(caption);
 
-        console.log(`Inserting linked mobile image before <h3> in block[${index}]:`, match.id);
         h3.parentNode?.insertBefore(container, h3);
       });
     };

@@ -4,9 +4,19 @@ import { siteNav } from "../data/siteNav.ts";
 import { handleGalleryNavClick } from "../utils/prefetchGallery.ts";
 import "../styles/siteNavMenu.css";
 
-export default function SiteNavMenu({ forceMobile = false }) {
+export default function SiteNavMenuHome({ forceMobile = false }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [resetSignal, setResetSignal] = useState(0);
+  const [mounted, setMounted] = useState(false);
+  const [isMobileViewport, setIsMobileViewport] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    const checkMobile = () => setIsMobileViewport(window.innerWidth <= 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   const closeMobileMenu = () => {
     setMobileOpen(false);
@@ -34,14 +44,14 @@ export default function SiteNavMenu({ forceMobile = false }) {
       if (!panel) return;
       panel.classList.remove("open-left", "open-right");
       const { style } = panel;
-      const visibility = style.visibility;
-      const display = style.display;
+      const v = style.visibility;
+      const d = style.display;
       style.visibility = "hidden";
       style.display = "block";
       requestAnimationFrame(() => {
         const rect = panel.getBoundingClientRect();
-        style.visibility = visibility;
-        style.display = display;
+        style.visibility = v;
+        style.display = d;
         const overR = rect.right > window.innerWidth;
         const overL = rect.left < 0;
         if (overR && !overL) panel.classList.add("open-left");
@@ -50,8 +60,8 @@ export default function SiteNavMenu({ forceMobile = false }) {
       });
     };
 
-    parents.forEach((parent) => parent.addEventListener("mouseenter", onEnter));
-    return () => parents.forEach((parent) => parent.removeEventListener("mouseenter", onEnter));
+    parents.forEach((p) => p.addEventListener("mouseenter", onEnter));
+    return () => parents.forEach((p) => p.removeEventListener("mouseenter", onEnter));
   }, [forceMobile]);
 
   useEffect(() => {
@@ -63,15 +73,17 @@ export default function SiteNavMenu({ forceMobile = false }) {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  function MenuBranch({ node, depth = 0, delay = 0, reset, forceBranchMobile = false }) {
+  function MenuBranch({ node, depth = 0, delay = 0, reset, forceMobile = false, mounted = false, isMobileViewport = false }) {
     const [expanded, setExpanded] = useState(false);
     const hasKids = node.children?.length > 0;
-    const isDrawerView = forceBranchMobile || mobileOpen;
 
     useEffect(() => setExpanded(false), [reset]);
 
+    const isMobileView = () =>
+      mounted && (forceMobile || isMobileViewport || mobileOpen);
+
     const handleClick = (e) => {
-      if (isDrawerView && hasKids) {
+      if (isMobileView() && hasKids) {
         e.preventDefault();
         setExpanded((x) => !x);
       }
@@ -96,7 +108,7 @@ export default function SiteNavMenu({ forceMobile = false }) {
         style={{ animationDelay: `${0.1 + delay}s` }}
       >
         <div className="menu-row" style={{ display: "flex", alignItems: "center" }}>
-          {hasKids && isDrawerView && (
+          {hasKids && isMobileView() && (
             <button
               className={`mini-ham-icon hover-collapse mobile-only${expanded ? " rotated" : ""}`}
               onClick={handleToggle}
@@ -126,7 +138,7 @@ export default function SiteNavMenu({ forceMobile = false }) {
             title={!hasKids ? getLeafLabel() : node.label}
             aria-label={!hasKids ? getLeafLabel() : node.label}
             {...(node.external ? { target: "_blank", rel: "nofollow noopener noreferrer" } : {})}
-            onClick={isDrawerView && hasKids ? handleClick : (node.type === "gallery-source" ? (e) => {
+            onClick={isMobileView() && hasKids ? handleClick : (node.type === "gallery-source" ? (e) => {
               e.preventDefault();
               handleGalleryNavClick(node.href);
             } : undefined)}
@@ -134,7 +146,7 @@ export default function SiteNavMenu({ forceMobile = false }) {
             {!hasKids ? getLeafLabel() : node.label}
           </a>
 
-          {isDrawerView && (
+          {isMobileView() && (
             <a
               href={node.href || "#"}
               className="mobile-nav-arrow"
@@ -173,7 +185,9 @@ export default function SiteNavMenu({ forceMobile = false }) {
                 depth={depth + 1}
                 delay={delay}
                 reset={reset}
-                forceBranchMobile={forceBranchMobile}
+                forceMobile={forceMobile}
+                mounted={mounted}
+                isMobileViewport={isMobileViewport}
               />
             ))}
           </div>
@@ -263,7 +277,9 @@ export default function SiteNavMenu({ forceMobile = false }) {
                       node={root}
                       delay={i * 0.1}
                       reset={resetSignal}
-                      forceBranchMobile={forceMobile}
+                      forceMobile={forceMobile}
+                      mounted={mounted}
+                      isMobileViewport={isMobileViewport}
                     />
                   ))}
               </div>
@@ -286,7 +302,9 @@ export default function SiteNavMenu({ forceMobile = false }) {
                   node={root}
                   delay={i * 0.1}
                   reset={resetSignal}
-                  forceBranchMobile={forceMobile}
+                  forceMobile={forceMobile}
+                  mounted={mounted}
+                  isMobileViewport={isMobileViewport}
                 />
               ))
           )}
