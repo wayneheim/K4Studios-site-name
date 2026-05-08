@@ -495,11 +495,18 @@ const jsonLdScripts = [
 
     <!-- K4 Custom Analytics - track all page views -->
     <script define:vars={{ analyticsDelayMs }}>
+      window.__k4AnalyticsDelayMs = analyticsDelayMs;
+    </script>
+    <script>
+      import { trackPageView } from '../utils/analytics';
+
       const runK4PageView = () => {
-        import('../utils/analytics').then(({ trackPageView }) => {
+        try {
           trackPageView();
-        }).catch(() => {});
+        } catch (_) {}
       };
+
+      const analyticsDelayMs = Number(globalThis.__k4AnalyticsDelayMs || 0);
 
       if (analyticsDelayMs > 0 && typeof window !== 'undefined') {
         window.addEventListener('load', () => {
