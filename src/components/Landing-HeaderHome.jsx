@@ -3,7 +3,7 @@ import SiteNavMenu from "./siteNavMenuHome.jsx";
 import "../styles/landing-header-home.css";
 
 function useIsMobile() {
-  const [mobile, setMobile] = useState(false);
+  const [mobile, setMobile] = useState(null);
   useEffect(() => {
     const check = () => setMobile(window.innerWidth <= 768);
     check();
@@ -89,7 +89,9 @@ export default function LandingHeader({ breadcrumb }) {
 
       <K4Splash isMobile={isMobile} />
       <LogoSlot isMobile={isMobile} triggerStripe={() => setAnimateStripes(true)} />
-      {isMobile || typeof window === "undefined" ? (
+      {isMobile === null ? (
+        <div className="rhs" style={{ width: 220 }} />
+      ) : isMobile ? (
         <div className="rhs">
           <SiteNavMenu />
         </div>
@@ -97,7 +99,7 @@ export default function LandingHeader({ breadcrumb }) {
         <DelayedRH />
       )}
 
-    {isMobile && (
+    {isMobile === true && (
   <a
     href="mailto:wayne@k4studios.com"
     className={`wh-logo-mobile${showWHLogo ? " fade-in" : ""}`}

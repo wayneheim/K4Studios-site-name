@@ -1,4 +1,4 @@
----
+﻿---
 export const prerender = true;
 import BaseLayout    from "@/layouts/BaseLayout.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
@@ -56,7 +56,7 @@ const structuredData = getStructuredData({
     headline: "K4 Studios Picture Shows",
     description: "Interactive picture shows and visual presentations showcasing Wayne Heim's fine art photography through immersive storytelling experiences.",
     url: toAbsoluteUrl(sectionPath),
-    copyrightNotice: "© Wayne Heim",
+    copyrightNotice: "┬⌐ Wayne Heim",
     author: { "@type": "Person", name: "Wayne Heim" },
     image: toAbsoluteUrl(normalizedDefaultCoverImage),
     articleSection: "Visual Storytelling",
@@ -64,7 +64,7 @@ const structuredData = getStructuredData({
     wordCount: 800
   },
   defaults: {
-    copyrightNotice: "© Wayne Heim",
+    copyrightNotice: "┬⌐ Wayne Heim",
     license: toAbsoluteUrl("/copyright"),
     creditText: "Wayne Heim",
     creatorName: "Wayne Heim",
@@ -119,19 +119,19 @@ if (!meta.ogUrl) meta.ogUrl = toAbsoluteUrl(sectionPath);
 if (!meta.twitterUrl) meta.twitterUrl = toAbsoluteUrl(sectionPath);
 
 meta.description =
-  "Experience interactive picture shows from Wayne Heim — immersive visual presentations combining fine art photography with cinematic storytelling. Discover themed collections and narrative-driven exhibitions.";
+  "Experience interactive picture shows from Wayne Heim ΓÇö immersive visual presentations combining fine art photography with cinematic storytelling. Discover themed collections and narrative-driven exhibitions.";
 meta.keywords =
   "picture shows, interactive photography, visual presentations, fine art exhibitions, cinematic storytelling, Wayne Heim, themed collections, immersive art experiences";
-meta.ogTitle = "K4 Studios Picture Shows – Interactive Visual Presentations by Wayne Heim";
+meta.ogTitle = "K4 Studios Picture Shows ΓÇô Interactive Visual Presentations by Wayne Heim";
 meta.ogDescription =
-  "Explore interactive picture shows featuring Wayne Heim's fine art photography — themed visual presentations that combine storytelling with immersive gallery experiences.";
+  "Explore interactive picture shows featuring Wayne Heim's fine art photography ΓÇö themed visual presentations that combine storytelling with immersive gallery experiences.";
 meta.ogImage = toAbsoluteUrl(landingImgUrl);
 meta.twitterCard = "summary_large_image";
 
 ---
 
 <BaseLayout
-  title="K4 Studios Picture Shows – Interactive Visual Presentations & Fine Art Photography by Wayne Heim"
+  title="K4 Studios Picture Shows ΓÇô Interactive Visual Presentations & Fine Art Photography by Wayne Heim"
   structuredDataJSON={structuredData}
   meta={meta}
 >
@@ -140,7 +140,7 @@ meta.twitterCard = "summary_large_image";
 
     <div class="page-container w-full max-w-[1200px] mx-auto px-4">
       <div class="drawer-mode">
-        <LandingHeader client:load breadcrumb="Other › Shows" />
+        <LandingHeader client:load breadcrumb="Other ΓÇ║ Shows" />
       </div>
 
       <section class="section-heading-wrap text-center">
@@ -148,7 +148,7 @@ meta.twitterCard = "summary_large_image";
           <h1 class="page-title fade-in reveal-on-scroll">Picture Shows</h1>
           <h2 class="page-subtitle fade-in reveal-on-scroll">
             Every image - a story unfinished.<br />
-            Together… they reveal what the legends left out.
+            TogetherΓÇª they reveal what the legends left out.
           </h2>
         </div>
       </section>
@@ -166,18 +166,18 @@ meta.twitterCard = "summary_large_image";
         <h2 class="text-4xl font-extrabold mb-2">K4 Studios Picture Shows</h2>
         <h3 class="text-2xl font-semibold mb-8 text-gray-700">
           Every image - a story unfinished.<br />
-          Together… they reveal what the legends left out.
+          TogetherΓÇª they reveal what the legends left out.
         </h3>
         <div class="text-lg leading-relaxed text-gray-700 space-y-5">
           <p>
-            A glance lingers longer than it should… a choice hangs just before it’s made.<br />
-            Somewhere in that space… the story begins to widen.
+            A glance lingers longer than it shouldΓÇª a choice hangs just before itΓÇÖs made.<br />
+            Somewhere in that spaceΓÇª the story begins to widen.
           </p>
           <p>
-            Lives, stitched together in fragments. Moments that don’t resolve… only gather. A fabric begins to form— threads of loss, discovery, and consequence knit into something larger than any one life.
+            Lives, stitched together in fragments. Moments that donΓÇÖt resolveΓÇª only gather. A fabric begins to formΓÇö threads of loss, discovery, and consequence knit into something larger than any one life.
           </p>
           <p>
-            Pull it back, and you begin to see the legends— the lives, the losses, the hopes history moved too fast to name.
+            Pull it back, and you begin to see the legendsΓÇö the lives, the losses, the hopes history moved too fast to name.
           </p>
         </div>
       </section>
@@ -203,7 +203,7 @@ meta.twitterCard = "summary_large_image";
                     </h2>
                     <p class="text-sm text-gray-600 mb-2">{show.date}</p>
                     <p class="mb-4">{show.excerpt}</p>
-                    <a href={`/Other/Show/${show.slug}`} class="underline text-blue-700">View Show →</a>
+                    <a href={`/Other/Show/${show.slug}`} class="underline text-blue-700">View Show ΓåÆ</a>
                   </div>
                 </div>
               </article>

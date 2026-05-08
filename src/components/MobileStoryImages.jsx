@@ -1,6 +1,7 @@
 import { useEffect, useMemo } from "react";
 import { warmImage } from "../utils/warmImage";
 import { getSemanticImageUrl } from "../utils/imageProxy.js";
+import "../styles/MobileStoryImages.css";
 
 // ✅ Proxy URL helper - never expose SmugMug URLs to crawlers
 const getGalleryPathFromImageHref = (href = "") => String(href || "").replace(/\/i-[a-zA-Z0-9-]+\/?$/, "");
@@ -165,42 +166,5 @@ export default function MobileStoryImages({ images = [], displayCount }) {
     tryInsertImages();
   }, [shuffledImages, displayCount]);
 
-  return (
-    <>
-      <style jsx global>{`
-        .mobile-inline-img-wrapper {
-          text-align: center;
-          margin: 1.75rem auto 2.25rem;
-          max-width: 280px;
-        }
-
-        .mobile-inline-img {
-          width: 100%;
-          height: auto;
-          aspect-ratio: 4 / 5;
-          object-fit: cover;
-          border-radius: 8px;
-          box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-          display: block;
-          contain: layout;
-        }
-
-        .mobile-inline-img:hover {
-          transform: scale(1.025);
-          box-shadow: 0 10px 24px rgba(0, 0, 0, 0.24);
-        }
-
-        .mobile-caption {
-          font-family: 'Glegoo', serif;
-          font-size: 0.95rem;
-          color: #4c3a2e;
-          margin-top: 0.5rem;
-          padding: 0 0.25rem;
-          line-height: 1.4;
-          opacity: 0.95;
-        }
-      `}</style>
-    </>
-  );
+  return null;
 }
