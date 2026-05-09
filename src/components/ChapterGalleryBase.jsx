@@ -476,47 +476,20 @@ export default function ChapterGalleryBase({
 
   const chapterImageRef = useRef(null);
 
-  // Load series registry after the primary image has settled; it only enriches badges/pricing.
+  // Load series registry immediately so series badges reflect assigned tiers on first page load.
   const hasDirectGalleryLoader = Boolean(directImagePayload?.currentImage && typeof loadFullGallery === "function");
   const [seriesRegistry, setSeriesRegistry] = useState(null);
   useEffect(() => {
-    if (hasDirectGalleryLoader) return;
     let cancelled = false;
-    let idleId = null;
-    let timerId = null;
-    let imgEl = null;
 
-    const loadRegistry = () => {
-      loadSeriesRegistry().then((registry) => {
-        if (!cancelled) setSeriesRegistry(registry);
-      });
-    };
-
-    const scheduleLoad = () => {
-      if (cancelled) return;
-      if (typeof window !== "undefined" && "requestIdleCallback" in window) {
-        idleId = window.requestIdleCallback(loadRegistry, { timeout: 3000 });
-      } else {
-        timerId = window.setTimeout(loadRegistry, 1500);
-      }
-    };
-
-    imgEl = chapterImageRef.current;
-    if (imgEl && !imgEl.complete) {
-      imgEl.addEventListener("load", scheduleLoad, { once: true });
-    } else {
-      scheduleLoad();
-    }
+    loadSeriesRegistry().then((registry) => {
+      if (!cancelled) setSeriesRegistry(registry);
+    });
 
     return () => {
       cancelled = true;
-      if (imgEl) imgEl.removeEventListener("load", scheduleLoad);
-      if (idleId && typeof window !== "undefined" && "cancelIdleCallback" in window) {
-        window.cancelIdleCallback(idleId);
-      }
-      if (timerId) window.clearTimeout(timerId);
     };
-  }, [hasDirectGalleryLoader]);
+  }, []);
 
   // Edition context for SEO uniqueness - use basePath for SSR-safe initial render
   const [clientPath, setClientPath] = useState((basePath || "").toLowerCase());
