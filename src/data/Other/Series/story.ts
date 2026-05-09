@@ -58,7 +58,7 @@ export const seriesStory = [
     ],
     list: [
       "Signed and numbered",
-      "Limited edition of 250 per image",
+      "Limited edition of 100 per image",
       "Larger formats than Foundation",
       "Upgraded fine art paper"
     ]

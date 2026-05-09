@@ -12,7 +12,7 @@ const SERIES_REGISTRY_PATH = path.join(process.cwd(), "src/data/seriesRegistry.j
 const SERIES_DEFINITIONS = {
   sketch: { limit: null, description: "Open edition, 5×7 only", sizes: ['5" x 7"'] },
   foundation: { limit: null, description: "Open edition, larger formats", sizes: ['8" x 10"', '11" x 14"'] },
-  chronicle: { limit: 250, description: "Limited edition of 250", sizes: ['16" x 20"', '20" x 24"'] },
+  chronicle: { limit: 100, description: "Limited edition of 100", sizes: ['16" x 20"', '20" x 24"'] },
   legend: { limit: 12, description: "Limited edition of 12", sizes: ['30" x 40"', '40" x 60"'] },
   engrained: { limit: 50, description: "Limited edition of 50", sizes: [] },
 };

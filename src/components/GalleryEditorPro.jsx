@@ -208,7 +208,7 @@ const btnBlue = "bg-blue-300 border-blue-700 text-black";
 const SERIES_DEFINITIONS = {
   sketch: { label: "Sketch", limit: null, description: "Open edition, 5×7 only" },
   foundation: { label: "Foundation", limit: null, description: "Open edition, larger formats" },
-  chronicle: { label: "Chronicle", limit: 250, description: "Limited edition of 250" },
+  chronicle: { label: "Chronicle", limit: 100, description: "Limited edition of 100" },
   legend: { label: "Legend", limit: 12, description: "Limited edition of 12" },
 };
 

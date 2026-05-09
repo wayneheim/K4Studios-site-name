@@ -250,7 +250,7 @@ export default function PricingEditorModal({ isOpen, onClose }) {
     descriptions: {
       sketch: "Open edition proof prints on archival matte paper.",
       foundation: "Open edition archival prints in collector-friendly sizes.",
-      chronicle: "Limited edition of 250, unsigned, museum-quality archival print.",
+      chronicle: "Limited edition of 100, unsigned, museum-quality archival print.",
       legend: "Ultra-limited edition of 12, signed, museum-grade canvas.",
     },
     cardCopy: {

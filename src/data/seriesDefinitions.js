@@ -33,9 +33,9 @@ export const SERIES_DEFINITIONS = {
   chronicle: {
     label: "Chronicle",
     icon: "⌘",
-    description: "Limited edition of 250, unsigned, museum-quality archival print.",
+    description: "Limited edition of 100, unsigned, museum-quality archival print.",
     showEdition: true,
-    editionLimit: 250,
+    editionLimit: 100,
     fulfillment: "contact", // mailto for now
     buttonLabel: "Contact Us to Order",
     sortOrder: 3,

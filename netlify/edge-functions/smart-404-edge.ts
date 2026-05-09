@@ -1,10 +1,6 @@
-const IMAGE_ID_MAP_URL = 'https://www.k4studios.com/imageIdMap.json';
-const CACHE_TTL_MS = 5 * 60 * 1000;
+import imageIdMapData from '../../src/data/imageIdMap.json';
 
 type ImageIdMap = Record<string, string[] | string>;
-
-let imageIdMapCache: ImageIdMap | null = null;
-let imageIdMapCacheTime = 0;
 
 function normalizePath(pathname: string): string {
   if (!pathname) return '';
@@ -63,25 +59,7 @@ function pickCanonicalGalleryPath(requestedPath: string, candidates: string[]): 
   return painterlyPreferred || candidates[0];
 }
 
-async function getImageIdMap(): Promise<ImageIdMap> {
-  const now = Date.now();
-  if (imageIdMapCache && now - imageIdMapCacheTime < CACHE_TTL_MS) {
-    return imageIdMapCache;
-  }
-
-  const response = await fetch(IMAGE_ID_MAP_URL, {
-    headers: { Accept: 'application/json' },
-  });
-
-  if (!response.ok) {
-    throw new Error(`imageIdMap fetch failed: ${response.status}`);
-  }
-
-  const json = (await response.json()) as ImageIdMap;
-  imageIdMapCache = json;
-  imageIdMapCacheTime = now;
-  return json;
-}
+const imageIdMap = imageIdMapData as ImageIdMap;
 
 export default async function smart404Edge(request: Request, context: { next: () => Promise<Response> }) {
   const url = new URL(request.url);
@@ -97,7 +75,6 @@ export default async function smart404Edge(request: Request, context: { next: ()
   }
 
   try {
-    const imageIdMap = await getImageIdMap();
     const rawPaths = imageIdMap[imageId];
     if (!rawPaths) {
       return context.next();
