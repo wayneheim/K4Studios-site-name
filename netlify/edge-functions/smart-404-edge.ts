@@ -1,6 +1,32 @@
-import imageIdMapData from '../../src/data/imageIdMap.json';
-
 type ImageIdMap = Record<string, string[] | string>;
+
+let imageIdMapCache: ImageIdMap | null = null;
+let imageIdMapPromise: Promise<ImageIdMap> | null = null;
+
+async function getImageIdMap(request: Request): Promise<ImageIdMap> {
+  if (imageIdMapCache) return imageIdMapCache;
+
+  if (!imageIdMapPromise) {
+    const mapUrl = new URL('/imageIdMap.json', request.url);
+    imageIdMapPromise = fetch(mapUrl.toString(), {
+      headers: { Accept: 'application/json' }
+    })
+      .then(async (response) => {
+        if (!response.ok) {
+          throw new Error(`imageIdMap fetch failed: ${response.status}`);
+        }
+        const data = await response.json() as ImageIdMap;
+        imageIdMapCache = data;
+        return data;
+      })
+      .catch((_error) => {
+        imageIdMapPromise = null;
+        return {};
+      });
+  }
+
+  return imageIdMapPromise;
+}
 
 function normalizePath(pathname: string): string {
   if (!pathname) return '';
@@ -59,8 +85,6 @@ function pickCanonicalGalleryPath(requestedPath: string, candidates: string[]): 
   return painterlyPreferred || candidates[0];
 }
 
-const imageIdMap = imageIdMapData as ImageIdMap;
-
 export default async function smart404Edge(request: Request, context: { next: () => Promise<Response> }) {
   const url = new URL(request.url);
   const pathname = normalizePath(url.pathname);
@@ -75,6 +99,7 @@ export default async function smart404Edge(request: Request, context: { next: ()
   }
 
   try {
+    const imageIdMap = await getImageIdMap(request);
     const rawPaths = imageIdMap[imageId];
     if (!rawPaths) {
       return context.next();
