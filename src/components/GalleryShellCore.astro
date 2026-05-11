@@ -356,7 +356,7 @@ const meta = {
       class={skipIntro ? "section-visible" : "section-hidden"} 
       style={skipIntro ? "display: block;" : "display: none;"}
       itemscope={currentImage ? true : undefined}
-      itemtype={currentImage ? "https://schema.org/VisualArtwork" : undefined}
+      itemtype={currentImage ? "https://schema.org/ImageObject https://schema.org/VisualArtwork" : undefined}
     >
       <slot name="chapter-viewer" />
     </article>

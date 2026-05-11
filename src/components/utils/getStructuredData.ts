@@ -141,6 +141,19 @@ const K4_CREATOR_PERSON = {
   url: "https://www.k4studios.com/Other/Bio",
 };
 
+function buildArtworkOffer(data: any, fallbackAcquireLicensePage: string) {
+  const offerUrl = data?.buyLink || data?.offerUrl || getAcquireLicensePage(data, fallbackAcquireLicensePage);
+  if (!offerUrl) return undefined;
+
+  return {
+    "@type": "Offer",
+    url: offerUrl,
+    availability: "https://schema.org/InStock",
+    itemCondition: "https://schema.org/NewCondition",
+    seller: { "@id": K4_ORGANIZATION_ID },
+  };
+}
+
 function addAboutTerm(
   terms: Array<{ "@type": string; name: string }>,
   seen: Set<string>,
@@ -449,6 +462,7 @@ export function getStructuredData({
       ...(artworkFields.additionalType ? { additionalType: artworkFields.additionalType } : {}),
       about: buildContextualAbout(data),
       isAccessibleForFree: true,
+      offers: buildArtworkOffer(data, acquireLicensePage),
       ...(imagePublishedDate ? { datePublished: imagePublishedDate } : {}),
       ...(imageModifiedDate ? { dateModified: imageModifiedDate } : {}),
       inLanguage: "en",
