@@ -9,6 +9,7 @@ import { getLandingMeta } from "@/data/landingMeta.ts";
 import { getSemanticImageUrl, normalizeImageSrc } from "@/utils/imageProxy.js";
 
 import { posts } from "@/data/Other/Blog/posts.mjs"; // new dataset
+import { essays as seeingEssaysData } from "@/data/Other/Seeing/story.ts";
 import { galleryData as painterlyImages } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs";
 import { galleryData as civilWarColor } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs";
 import { galleryData as civilWarBW } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs";
@@ -90,7 +91,11 @@ const allGalleryImages = [
 const previewImages = shuffleArray(allGalleryImages).slice(0, 6);
 const previewPath = "/Galleries"; // Needed for GalleryPreviewStrip to render
 
+const insideFramePosts = posts.filter(post => (post.type ?? "inside-frame") === "inside-frame");
+const [featuredInsideFramePost, ...insideFrameArchivePosts] = insideFramePosts;
+
 const foundationalEssay = {
+  type: "seeing",
   href: "/Blog/when-the-medium-disappears",
   title: "Inside the Frame: When the Medium Disappears",
   date: "2025-09-29",
@@ -98,6 +103,57 @@ const foundationalEssay = {
   chip: "Essay",
   initial: "E",
 };
+
+const seeingEssays = [
+  foundationalEssay,
+  ...seeingEssaysData.map((essay, index) => ({
+    type: "seeing",
+    href: `/Other/Seeing/${essay.slug}`,
+    title: essay.title,
+    date: "",
+    excerpt: essay.subtitle,
+    chip: "Seeing",
+    initial: String(index + 1),
+  }))
+];
+
+const collectorFieldNotes = [
+  {
+    type: "collector-field-notes",
+    title: "What Makes a Fine Art Print Worth Owning?",
+    excerpt: "A practical field note on value, authorship, craft, editioning, and lasting presence.",
+    href: "/Blog/what-makes-a-fine-art-print-worth-owning",
+    published: true,
+  },
+  {
+    type: "collector-field-notes",
+    title: "How to Display Western Art in a Modern Home Without Turning It Into a Theme Room",
+    excerpt: "Western art does not have to make a modern home feel themed. Chosen with conviction, restraint, and presence, it can bring story, gravity, and human weight into a room that might otherwise feel too polished to breathe.",
+    href: "/Blog/how-to-display-western-art-in-a-modern-home",
+    published: true,
+  },
+  {
+    type: "collector-field-notes",
+    title: "Collecting Fine Art Photography: A Beginner's Guide",
+    excerpt: "Collecting fine art photography begins when you stop asking whether an image fills a wall and start asking whether it can live with you, challenge you, and keep returning something over time.",
+    href: "/Blog/collecting-fine-art-photography-beginners-guide",
+    published: true,
+  },
+  {
+    type: "collector-field-notes",
+    title: "Wood Prints vs Paper Prints: How the Surface Changes the Story",
+    excerpt: "A collector-oriented look at how material, texture, and finish alter the emotional read of an image.",
+    href: null,
+    published: false,
+  },
+  {
+    type: "collector-field-notes",
+    title: "Decor Art vs Fine Art: What Is the Difference?",
+    excerpt: "A plainspoken distinction between filling a wall and living with work that keeps speaking.",
+    href: null,
+    published: false,
+  },
+];
 
 // Setup for keyword linking
 const galleryDatas = Object.values(galleryDataMap).flat();
@@ -118,76 +174,118 @@ const galleryPaths = Object.keys(galleryDataMap);
     <section class="section-heading-wrap">
       <div class="section-heading" style="font-family: 'Glegoo', serif;">
         <h1 class="page-title fade-in reveal-on-scroll" style="font-family: 'Glegoo', serif;">Inside the Frame</h1>
-        <h2 class="page-subtitle fade-in reveal-on-scroll" style="font-family: 'Glegoo', serif;">
-          Conversations on story, image, and meaning
-        </h2>
+        <p class="page-subtitle fade-in reveal-on-scroll" style="font-family: 'Glegoo', serif;">
+          The K4 Studios Blog
+        </p>
       </div>
     </section>
 
     <!-- Intro block -->
     <section class="intro-text max-w-2xl mx-auto px-4 text-center mb-10">
-  <h2 class="text-4xl font-extrabold mb-2" style="font-family: 'Glegoo', serif;">Inside the Frame</h2>
-  <h3 class="text-2xl font-semibold mb-8 text-gray-700" style="font-family: 'Glegoo', serif;">The K4 Studios Blog</h3>
-        <p class="text-lg leading-relaxed text-gray-700" set:html={autoLinkKeywordsInText('\"Inside the Frame\" is where I step out from behind the lens and share the stories that shape my work. Part interview, part reflection, these posts explore composition, symbolism, and the choices that transform my fine art photography into narrative-driven, storytelling.', galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} /></p>        <p class="text-sm text-gray-500 mt-4 italic">
-          <a href="/Other/Seeing" class="text-[#8b0000] hover:underline">Seeing</a> is a short essay series on visual literacy and interpretation.
-        </p>    </section>
+      <p class="text-lg leading-relaxed text-gray-700" set:html={autoLinkKeywordsInText('Inside the Frame is where I step out from behind the lens and share the stories, craft, and visual ideas behind the work — from individual image conversations to essays on seeing, collecting, and living with narrative fine art.', galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
+      <p class="text-sm text-gray-500 mt-4 italic">
+        <a href="/Other/Seeing" class="text-[#8b0000] hover:underline">Seeing</a> remains a short essay series on visual literacy and interpretation, now gathered here beside the image conversations and collector notes.
+      </p>
+    </section>
 
-    <section class="story-layout" style="font-family: 'Glegoo', serif;">
-      <div class="text-column">
-        {posts.map(post => (
-          <article class="story-block mb-10">
-            <div class="flex flex-col md:flex-row md:items-start gap-4 items-center md:items-start">
-              <a href={`/Blog/${post.slug}`} aria-label={post.title} class="flex-shrink-0">
+    <section class="story-layout editorial-section inside-frame-section" aria-labelledby="inside-frame-heading" style="font-family: 'Glegoo', serif;">
+      <div class="text-column inside-frame-column">
+        <div class="editorial-section-head">
+          <h2 id="inside-frame-heading">Inside the Frame</h2>
+          <p>Image conversations and artwork essays exploring composition, symbolism, and the choices that turn a single image into narrative fine art.</p>
+        </div>
+
+        {featuredInsideFramePost && (
+          <article class="inside-frame-feature">
+            <a href={`/Blog/${featuredInsideFramePost.slug}`} aria-label={featuredInsideFramePost.title} class="inside-frame-feature-image">
+              <img
+                src={normalizeImageSrc(featuredInsideFramePost.cover, 'm')}
+                alt={featuredInsideFramePost.title}
+                oncontextmenu="event.preventDefault()"
+              />
+            </a>
+            <div class="inside-frame-feature-copy">
+              <span class="inside-frame-label">Newest Addition</span>
+              <h3>
+                <a href={`/Blog/${featuredInsideFramePost.slug}`}>{featuredInsideFramePost.title}</a>
+              </h3>
+              <p class="inside-frame-date">{featuredInsideFramePost.date}</p>
+              <p set:html={autoLinkKeywordsInText(featuredInsideFramePost.excerpt, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
+              <a href={`/Blog/${featuredInsideFramePost.slug}`} class="inside-frame-link">Read more →</a>
+            </div>
+          </article>
+        )}
+
+        <div class="inside-frame-grid">
+        {insideFrameArchivePosts.map((post) => (
+          <article class="inside-frame-card">
+            <div class="inside-frame-card-inner">
+              <a href={`/Blog/${post.slug}`} aria-label={post.title} class="inside-frame-card-image">
                 <img
-                  src={normalizeImageSrc(post.cover, 'm')}
+                  src={normalizeImageSrc(post.cover, 's')}
                   alt={post.title}
-                  class="rounded-2xl shadow max-w-[200px] h-[200px] object-cover"
-                  style="aspect-ratio: 1/1;"
                   oncontextmenu="event.preventDefault()"
                 />
               </a>
-              <div class="flex-1 min-w-0">
-                <h2 class="text-xl font-bold mb-2">
+              <div class="inside-frame-card-copy">
+                <span class="inside-frame-label">Image Essay</span>
+                <h3>
                   <a href={`/Blog/${post.slug}`}>{post.title}</a>
-                </h2>
-                <p class="text-sm text-gray-600 mb-2">{post.date}</p>
-                <p class="mb-4" set:html={autoLinkKeywordsInText(post.excerpt, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
-                <a href={`/Blog/${post.slug}`} class="underline text-blue-700">Read more →</a>
+                </h3>
+                <p class="inside-frame-date">{post.date}</p>
+                <p set:html={autoLinkKeywordsInText(post.excerpt, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
+                <a href={`/Blog/${post.slug}`} class="inside-frame-link">Read more →</a>
               </div>
             </div>
           </article>
         ))}
+        </div>
       </div>
     </section>
 
-    <!-- Foundational Essay Section -->
-    <section class="foundational-essay story-layout" style="font-family: 'Glegoo', serif;">
+    <section class="story-layout editorial-section" aria-labelledby="seeing-heading" style="font-family: 'Glegoo', serif;">
       <div class="text-column">
-        <h3 class="foundational-kicker">Foundational Essay</h3>
-        <article class="story-block mb-10">
-          <div class="foundational-card group flex flex-col md:flex-row md:items-start gap-4 items-center md:items-start">
-            <a href={foundationalEssay.href} aria-label={foundationalEssay.title} class="flex-shrink-0">
-              <div class="foundational-art" aria-hidden="true">
-                <div class="foundational-art-inner">
-                  <span class="foundational-chip">{foundationalEssay.chip}</span>
-                  <div class="foundational-art-body">
-                    <span class="foundational-initial">{foundationalEssay.initial}</span>
-                    <span class="foundational-art-copy">On medium, meaning, and restraint</span>
-                  </div>
-                </div>
-              </div>
-            </a>
+        <div class="editorial-section-head">
+          <h2 id="seeing-heading">Seeing</h2>
+          <p>Short essays on visual literacy, ambiguity, tension, and the quiet work of learning how to look.</p>
+        </div>
 
-            <div class="flex-1 min-w-0">
-              <h2 class="text-xl font-bold mb-2">
-                <a href={foundationalEssay.href}>{foundationalEssay.title}</a>
-              </h2>
-              <p class="text-sm text-gray-600 mb-2">{foundationalEssay.date}</p>
-              <p class="mb-4">{foundationalEssay.excerpt}</p>
-              <a href={foundationalEssay.href} class="underline text-blue-700">Read essay →</a>
-            </div>
-          </div>
-        </article>
+        <div class="compact-essay-grid">
+          {seeingEssays.map(essay => (
+            <article class="compact-essay-card">
+              <span class="compact-chip">{essay.chip}</span>
+              <h3><a href={essay.href}>{essay.title}</a></h3>
+              {essay.date && <p class="compact-date">{essay.date}</p>}
+              <p>{essay.excerpt}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="story-layout editorial-section" aria-labelledby="collector-field-notes-heading" style="font-family: 'Glegoo', serif;">
+      <div class="text-column">
+        <div class="editorial-section-head">
+          <h2 id="collector-field-notes-heading">Collector Field Notes</h2>
+          <p>Practical essays for people learning how to choose, display, understand, and live with serious art.</p>
+        </div>
+
+        <div class="collector-note-grid">
+          {collectorFieldNotes.map(note => (
+            <article class="collector-note-card" data-status={note.published ? "published" : "upcoming"}>
+              <span class="compact-chip">Field Note</span>
+              <h3>
+                {note.published && note.href ? (
+                  <a href={note.href}>{note.title}</a>
+                ) : (
+                  <span>{note.title}</span>
+                )}
+              </h3>
+              <p>{note.excerpt}</p>
+              {!note.published && <p class="collector-status">Coming soon</p>}
+            </article>
+          ))}
+        </div>
       </div>
     </section>
 
@@ -209,6 +307,267 @@ const galleryPaths = Object.keys(galleryDataMap);
   </main>
 
   <style>
+    .editorial-section {
+      margin-top: 3rem;
+    }
+
+    .editorial-section-head {
+      text-align: center;
+      margin: 0 auto 2rem;
+      max-width: 720px;
+    }
+
+    .editorial-section-head h2 {
+      font-family: 'Glegoo', serif;
+      font-size: 1.55rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin: 0 0 0.55rem;
+    }
+
+    .editorial-section-head p {
+      color: #666;
+      font-size: 0.98rem;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    .inside-frame-section {
+      max-width: 1040px;
+    }
+
+    .inside-frame-column {
+      max-width: 1040px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .inside-frame-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.7rem;
+      align-items: stretch;
+    }
+
+    .inside-frame-feature {
+      display: grid;
+      grid-template-columns: 142px minmax(0, 1fr);
+      gap: 1rem;
+      align-items: center;
+      max-width: 760px;
+      margin: 0 auto 1rem;
+      padding: 0.65rem;
+      border: 1px solid #e6e1dc;
+      border-radius: 8px;
+      background: #faf9f7;
+      box-shadow: 0 6px 18px rgba(64, 47, 32, 0.045);
+    }
+
+    .inside-frame-feature-image {
+      display: block;
+      overflow: hidden;
+      border-radius: 6px;
+      background: #eee9e3;
+    }
+
+    .inside-frame-feature-image img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    .inside-frame-feature-copy {
+      min-width: 0;
+    }
+
+    .inside-frame-feature-copy h3 {
+      font-family: 'Glegoo', serif;
+      font-size: 1.08rem;
+      font-weight: 600;
+      line-height: 1.32;
+      color: #242424;
+      margin: 0.25rem 0 0.25rem;
+    }
+
+    .inside-frame-feature-copy h3 a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .inside-frame-feature-copy h3 a:hover {
+      color: #8b0000;
+      text-decoration: underline;
+    }
+
+    .inside-frame-feature-copy p {
+      color: #555;
+      font-size: 0.86rem;
+      line-height: 1.48;
+      margin: 0;
+    }
+
+    .inside-frame-card {
+      border: 1px solid #e6e1dc;
+      border-radius: 8px;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(250, 249, 247, 0.96));
+      overflow: hidden;
+    }
+
+    .inside-frame-card-inner {
+      display: grid;
+      grid-template-columns: 104px minmax(0, 1fr);
+      min-height: 100%;
+    }
+
+    .inside-frame-card-image {
+      display: block;
+      min-height: 100%;
+      background: #eee9e3;
+    }
+
+    .inside-frame-card-image img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 138px;
+      object-fit: cover;
+    }
+
+    .inside-frame-card-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0.75rem 0.85rem;
+      min-width: 0;
+    }
+
+    .inside-frame-card-copy h3 {
+      font-family: 'Glegoo', serif;
+      font-size: 0.92rem;
+      font-weight: 600;
+      line-height: 1.32;
+      color: #242424;
+      margin: 0.25rem 0 0.2rem;
+    }
+
+    .inside-frame-card-copy h3 a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .inside-frame-card-copy h3 a:hover {
+      color: #8b0000;
+      text-decoration: underline;
+    }
+
+    .inside-frame-card-copy p {
+      color: #555;
+      font-size: 0.78rem;
+      line-height: 1.42;
+      margin: 0;
+    }
+
+    .inside-frame-label {
+      color: #8e7a66;
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .inside-frame-date {
+      color: #777 !important;
+      font-size: 0.68rem !important;
+      margin: 0 0 0.38rem !important;
+    }
+
+    .inside-frame-link {
+      align-self: flex-start;
+      color: #7a2d20;
+      font-size: 0.76rem;
+      font-weight: 600;
+      margin-top: 0.45rem;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(122, 45, 32, 0.35);
+    }
+
+    .inside-frame-link:hover {
+      color: #8b0000;
+      border-bottom-color: #8b0000;
+    }
+
+    .compact-essay-grid,
+    .collector-note-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.85rem;
+    }
+
+    .compact-essay-card,
+    .collector-note-card {
+      border: 1px solid #e8e6e3;
+      border-radius: 8px;
+      background: #faf9f7;
+      padding: 1rem;
+      text-align: left;
+    }
+
+    .compact-essay-card h3,
+    .collector-note-card h3 {
+      font-family: 'Glegoo', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.4;
+      color: #2c2c2c;
+      margin: 0.45rem 0 0.35rem;
+    }
+
+    .compact-essay-card a,
+    .collector-note-card a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .compact-essay-card a:hover,
+    .collector-note-card a:hover {
+      color: #8b0000;
+      text-decoration: underline;
+    }
+
+    .compact-essay-card p,
+    .collector-note-card p {
+      color: #666;
+      font-size: 0.88rem;
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    .compact-chip,
+    .collector-status {
+      display: inline-block;
+      color: #8e7a66;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .compact-date {
+      color: #777 !important;
+      font-size: 0.78rem !important;
+      margin: 0 0 0.4rem !important;
+    }
+
+    .collector-note-card[data-status="upcoming"] h3 {
+      color: #3f3a35;
+    }
+
+    .collector-status {
+      margin-top: 0.75rem !important;
+    }
+
     /* Cornerstones divider */
     .cornerstones-divider {
       width: 100%;
@@ -330,6 +689,46 @@ const galleryPaths = Object.keys(galleryDataMap);
     }
 
     @media (max-width: 768px) {
+      .editorial-section {
+        margin-top: 2.5rem;
+      }
+
+      .editorial-section-head {
+        margin-bottom: 1.5rem;
+      }
+
+      .compact-essay-grid,
+      .collector-note-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .inside-frame-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .inside-frame-feature {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+        gap: 0.75rem;
+      }
+
+      .inside-frame-feature-copy {
+        padding: 0.15rem 0.2rem 0.25rem;
+      }
+
+      .inside-frame-card-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .inside-frame-card-image img {
+        aspect-ratio: 16 / 10;
+        min-height: 0;
+      }
+
+      .inside-frame-card-copy {
+        padding: 1rem;
+      }
+
       .foundational-essay {
         text-align: center;
         padding-top: 2rem;

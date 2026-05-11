@@ -2,6 +2,8 @@
 import type { MiddlewareHandler } from "astro";
 import imageIdMap from "@/data/imageIdMap.json";
 
+const staticPageModules = import.meta.glob("/src/pages/**/*.astro");
+
 // Type assertion for the imageIdMap
 const imageMap = imageIdMap as Record<string, string[]>;
 const SMUGMUG_IMAGE_HOST = ["photos", "smugmug", "com"].join(".");
@@ -11,6 +13,7 @@ const LEGACY_PHOTO_SHOOTS_THEMES_PREFIX = ["", "Other", "Photo-Shoots-and-Themes
 let imageMapLower: Record<string, { canonicalId: string; paths: string[] }> | null = null;
 
 let knownGalleryPathsLower: Set<string> | null = null;
+let staticRouteMapLower: Record<string, string> | null = null;
 
 function normalizePath(pathname: string): string {
   if (!pathname) return "";
@@ -46,6 +49,44 @@ function getKnownGalleryPathsLower(): Set<string> {
 
   knownGalleryPathsLower = paths;
   return knownGalleryPathsLower;
+}
+
+function getStaticRoutePath(pageFile: string): string {
+  const normalizedFile = String(pageFile || "").replace(/^\/src\/pages/i, "");
+  if (!normalizedFile.endsWith(".astro")) return "";
+  if (normalizedFile.includes("/[") || normalizedFile.startsWith("[")) return "";
+
+  let routePath = normalizedFile.replace(/\.astro$/i, "");
+  routePath = routePath.replace(/\/index$/i, "/");
+
+  if (!routePath.startsWith("/")) {
+    routePath = `/${routePath}`;
+  }
+
+  return normalizePath(routePath);
+}
+
+function getStaticRouteMapLower(): Record<string, string> {
+  if (staticRouteMapLower) return staticRouteMapLower;
+
+  const routes: Record<string, string> = {};
+
+  for (const pageFile of Object.keys(staticPageModules)) {
+    const canonicalPath = getStaticRoutePath(pageFile);
+    if (!canonicalPath) continue;
+
+    routes[canonicalPath.toLowerCase()] = canonicalPath;
+  }
+
+  staticRouteMapLower = routes;
+  return staticRouteMapLower;
+}
+
+function getCanonicalStaticRoute(pathname: string): string {
+  const normalizedPath = normalizePath(pathname).toLowerCase();
+  if (!normalizedPath) return "";
+
+  return getStaticRouteMapLower()[normalizedPath] || "";
 }
 
 function getImageMapLower(): Record<string, { canonicalId: string; paths: string[] }> {
@@ -339,6 +380,17 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
   const shouldNoindexContactQuery = pathname === "/Contact" && (
     context.url.searchParams.has("license") || context.url.searchParams.has("title")
   );
+
+  const canonicalStaticRoute = getCanonicalStaticRoute(pathname);
+  const normalizedPathname = normalizePath(pathname);
+  if (canonicalStaticRoute && canonicalStaticRoute !== normalizedPathname) {
+    return new Response(null, {
+      status: 301,
+      headers: {
+        Location: `${canonicalStaticRoute}${search}`,
+      },
+    });
+  }
 
   if (pathname.length > 1 && pathname.endsWith("/")) {
     return new Response(null, {
