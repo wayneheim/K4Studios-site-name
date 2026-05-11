@@ -46,6 +46,36 @@ function getParentGalleryPath(pathname: string): string {
   return normalized.replace(/\/[iI]-[A-Za-z0-9-]+$/, '');
 }
 
+function isFilteredGalleryView(url: URL): boolean {
+  return url.searchParams.has('theme') || url.searchParams.has('view');
+}
+
+function isHtmlResponse(response: Response): boolean {
+  return (response.headers.get('content-type') || '').toLowerCase().includes('text/html');
+}
+
+async function addFilteredGalleryNoindex(response: Response): Promise<Response> {
+  if (!isHtmlResponse(response)) return response;
+
+  const html = await response.text();
+  const robotsMeta = '<meta name="robots" content="noindex, follow">';
+  const nextHeaders = new Headers(response.headers);
+  nextHeaders.set('X-Robots-Tag', 'noindex, follow');
+
+  let body = html;
+  if (/<meta\s+name=["']robots["'][^>]*>/i.test(body)) {
+    body = body.replace(/<meta\s+name=["']robots["'][^>]*>/i, robotsMeta);
+  } else {
+    body = body.replace(/<head([^>]*)>/i, `<head$1>${robotsMeta}`);
+  }
+
+  return new Response(body, {
+    status: response.status,
+    statusText: response.statusText,
+    headers: nextHeaders,
+  });
+}
+
 function findMatchingGalleryPath(requestedPath: string, candidates: string[]): string {
   const requestedGalleryPath = normalizePath(getParentGalleryPath(requestedPath)).toLowerCase();
   if (!requestedGalleryPath) return '';
@@ -88,6 +118,10 @@ function pickCanonicalGalleryPath(requestedPath: string, candidates: string[]): 
 export default async function smart404Edge(request: Request, context: { next: () => Promise<Response> }) {
   const url = new URL(request.url);
   const pathname = normalizePath(url.pathname);
+  const shouldNoindexFilteredView =
+    request.method === 'GET' &&
+    isFilteredGalleryView(url) &&
+    !extractImageId(pathname);
 
   if (!/^\/(?:Galleries|galleries|Other|other|Photography-Galleries)\//.test(pathname)) {
     return context.next();
@@ -95,21 +129,24 @@ export default async function smart404Edge(request: Request, context: { next: ()
 
   const imageId = extractImageId(pathname);
   if (!imageId) {
-    return context.next();
+    const response = await context.next();
+    return shouldNoindexFilteredView ? addFilteredGalleryNoindex(response) : response;
   }
 
   try {
     const imageIdMap = await getImageIdMap(request);
     const rawPaths = imageIdMap[imageId];
     if (!rawPaths) {
-      return context.next();
+      const response = await context.next();
+      return shouldNoindexFilteredView ? addFilteredGalleryNoindex(response) : response;
     }
 
     const canonicalPaths = (Array.isArray(rawPaths) ? rawPaths : [rawPaths])
       .map((candidate) => normalizePath(String(candidate || '')))
       .filter(Boolean);
     if (canonicalPaths.length === 0) {
-      return context.next();
+      const response = await context.next();
+      return shouldNoindexFilteredView ? addFilteredGalleryNoindex(response) : response;
     }
 
     const matchingGalleryPath = findMatchingGalleryPath(pathname, canonicalPaths);
@@ -119,21 +156,25 @@ export default async function smart404Edge(request: Request, context: { next: ()
         return Response.redirect(`${url.origin}${canonicalUrlPath}${url.search}`, 301);
       }
 
-      return context.next();
+      const response = await context.next();
+      return shouldNoindexFilteredView ? addFilteredGalleryNoindex(response) : response;
     }
 
     const canonicalGalleryPath = pickCanonicalGalleryPath(pathname, canonicalPaths);
     if (!canonicalGalleryPath) {
-      return context.next();
+      const response = await context.next();
+      return shouldNoindexFilteredView ? addFilteredGalleryNoindex(response) : response;
     }
 
     const canonicalUrlPath = `${canonicalGalleryPath}/${imageId}`;
     if (canonicalUrlPath.toLowerCase() === pathname.toLowerCase()) {
-      return context.next();
+      const response = await context.next();
+      return shouldNoindexFilteredView ? addFilteredGalleryNoindex(response) : response;
     }
 
     return Response.redirect(`${url.origin}${canonicalUrlPath}${url.search}`, 301);
   } catch (_error) {
-    return context.next();
+    const response = await context.next();
+    return shouldNoindexFilteredView ? addFilteredGalleryNoindex(response) : response;
   }
 }

@@ -109,13 +109,6 @@ const structuredDataJson = JSON.stringify({
       founder: { '@id': 'https://www.k4studios.com/#person' }
     },
     {
-      '@type': 'Person',
-      '@id': 'https://www.k4studios.com/#person',
-      name: 'Wayne Heim',
-      jobTitle: 'Fine Art Photographer',
-      url: 'https://www.k4studios.com/'
-    },
-    {
       '@type': 'CollectionPage',
       '@id': canonicalUrl + '#collectionpage',
       name: galleryTitle + ' Collection',
@@ -123,7 +116,6 @@ const structuredDataJson = JSON.stringify({
       description: seoDescription,
       isPartOf: { '@id': parentUrl + '#collection' },
       creator: { '@id': 'https://www.k4studios.com/#person' },
-      numberOfItems: imageCount,
       mainEntity: [
         { '@id': canonicalUrl + '#imagegallery' },
         { '@id': canonicalUrl + '#itemlist' }
@@ -134,12 +126,13 @@ const structuredDataJson = JSON.stringify({
       '@type': 'BreadcrumbList',
       '@id': canonicalUrl + '#breadcrumb',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Painterly Fine Art', item: 'https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography' },
-        { '@type': 'ListItem', position: 2, name: 'Facing History', item: 'https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History' },
-        { '@type': 'ListItem', position: 3, name: 'Wild West', item: 'https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West' },
-        { '@type': 'ListItem', position: 4, name: 'Native Americans', item: 'https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans' },
-        { '@type': 'ListItem', position: 5, name: 'Color', item: 'https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color' },
-        { '@type': 'ListItem', position: 6, name: 'Collection', item: canonicalUrl }
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.k4studios.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Painterly Fine Art', item: 'https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography' },
+        { '@type': 'ListItem', position: 3, name: 'Facing History', item: 'https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History' },
+        { '@type': 'ListItem', position: 4, name: 'Wild West', item: 'https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West' },
+        { '@type': 'ListItem', position: 5, name: 'Native Americans', item: 'https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans' },
+        { '@type': 'ListItem', position: 6, name: 'Color', item: 'https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color' },
+        { '@type': 'ListItem', position: 7, name: 'Collection', item: canonicalUrl }
       ]
     }
   ]

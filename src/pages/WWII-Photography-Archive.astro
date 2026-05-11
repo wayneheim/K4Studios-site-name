@@ -102,7 +102,6 @@ const structuredData = JSON.stringify({
       "name": "WWII Photography Archive",
       "description": pageDescription,
       "url": canonicalUrl,
-      "numberOfItems": totalCount,
       "creator": {
         "@type": "Person",
         "name": "Wayne Heim",
@@ -125,8 +124,7 @@ const structuredData = JSON.stringify({
           "item": {
             "@type": "ImageGallery",
             "name": gal.name,
-            "url": `https://www.k4studios.com${gal.url}`,
-            "numberOfItems": gal.count
+            "url": `https://www.k4studios.com${gal.url}`
           }
         }))
       }

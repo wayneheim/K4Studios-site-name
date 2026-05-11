@@ -540,7 +540,7 @@ export const galleryData = [
   {
     "id": "i-T6bD4w7",
     "title": "Weathered",
-    "description": "A quiet three-quarter portrait reveals the lined face and steady gaze of a frontier rider beneath a wide-brimmed hat, the light soft against weathered skin and dusted sky. Saddle, rope, horse, or range-worn clothing anchor the portrait in lived labor instead of costume. That grounded presence makes it cowboy art shaped by frontier life, painterly Western photography, and the American frontier.\n\n© Wayne Heim",
+    "description": "A quiet three-quarter portrait reveals the lined face and steady gaze of a frontier rider beneath a wide-brimmed hat, the light soft against weathered skin and dusted sky. Range-worn clothing, weathered skin, and a steady gaze anchor the portrait in lived labor instead of costume. That grounded presence makes it cowboy art shaped by frontier life, painterly Western photography, and the American frontier.\n\n© Wayne Heim",
     "alt": "Frontier rider with mustache and red bandana gazing toward the horizon beneath a wide-brimmed hat.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-T6bD4w7/0/L29WdpFxN5xMRXT2xvnxQ7NJpDf8snXRwMPhKZLP8/XL/_HF28246-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-T6bD4w7/0/L29WdpFxN5xMRXT2xvnxQ7NJpDf8snXRwMPhKZLP8/XL/_HF28246-Edit-XL.jpg",
@@ -5367,7 +5367,7 @@ export const galleryData = [
   {
     "id": "i-qvg23gW",
     "title": "Paid in Time",
-    "description": "A seated frontier man rests in soft shadow and muted light, framed by weathered texture, layered atmosphere, and the quiet dignity of a hard-lived pause. Saddle, rope, horse, or range-worn clothing anchor the portrait in lived labor instead of costume. That grounded presence makes it cowboy art shaped by frontier life, painterly Western photography, and the American frontier.\n\n© Wayne Heim",
+    "description": "A seated frontier man rests in soft shadow and muted light, framed by weathered texture, layered atmosphere, and the quiet dignity of a hard-lived pause. Range-worn clothing, weathered skin, and a steady gaze anchor the portrait in lived labor instead of costume. That grounded presence makes it cowboy art shaped by frontier life, painterly Western photography, and the American frontier.\n\n© Wayne Heim",
     "alt": "A man in a tall black hat and fur-lined coat sits in reflective stillness, rendered in painterly Western photography with softly blurred surroundings.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-qvg23gW/0/Kh3LHHxHhfVtFk74mww5HpkxM4FT3PMHFRKChqSHc/XL/_WHO0611-1259-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-qvg23gW/0/Kh3LHHxHhfVtFk74mww5HpkxM4FT3PMHFRKChqSHc/XL/_WHO0611-1259-XL.jpg",

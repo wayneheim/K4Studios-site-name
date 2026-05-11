@@ -5,7 +5,7 @@ import GalleryInfo from "@/components/GalleryInfo.jsx";
 import ChapterViewer from "@/components/Chapter-Transportation-Cars.jsx";
 import Footer from "@/components/Footer.astro";
 import ImageDetailsWidget from "@/components/ImageDetailsWidget.jsx";
-import { buildImageSeoTitle } from "@/utils/buildImageSeoTitle";
+import { getImagePageSeoMeta } from "@/utils/imagePageSeoMeta";
 
 import { galleryData as allImages } from "@/data/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars.mjs";
 import { landingWestern } from "@/data/Galleries/Painterly-Fine-Art-Photography/Transportation/landingstones.ts";
@@ -76,9 +76,11 @@ const usedEntranceData = {
 // SITE / URL helpers
 const siteBase = import.meta.env.SITE || "https://www.k4studios.com";
 const pathOnly = Astro.url.pathname;
-// Include theme param in canonical if present (themes are indexable)
-const themeParam = Astro.url.searchParams.get("theme");
-const canonicalUrl = `${siteBase}${pathOnly.replace(/\/$/, "")}${themeParam ? `?theme=${themeParam}` : ""}`;
+const baseGalleryUrl = `${siteBase}${previewPath.replace(/\/$/, "")}`;
+const hasActiveQueryFilter = Astro.url.searchParams.has("theme") || Astro.url.searchParams.has("view");
+const canonicalUrl = hasActiveQueryFilter
+  ? baseGalleryUrl
+  : `${siteBase}${pathOnly.replace(/\/$/, "")}`;
 const galleryAbsUrl = `${siteBase}${previewPath}`;
 
 // Structured data
@@ -109,28 +111,27 @@ function appendSiteTitle(title) {
   return `${title} | ${siteName} ${siteSuffix}`;
 }
 
+const imageSeoMeta = currentImage
+  ? getImagePageSeoMeta({
+      id: currentImage.id,
+      title: fixMojibake(currentImage.title),
+      alt: fixMojibake(currentImage.alt),
+      description: fixMojibake(currentImage.description),
+      galleryPath: previewPath,
+      themes: currentImage.themes,
+      keywords: currentImage.keywords,
+    })
+  : null;
+
 const pageTitle = currentImage
-  ? appendSiteTitle(
-      buildImageSeoTitle(
-        {
-          id: currentImage.id,
-          title: fixMojibake(currentImage.title),
-          alt: fixMojibake(currentImage.alt),
-          description: fixMojibake(currentImage.description),
-          story: fixMojibake(currentImage.story),
-        },
-        {
-          galleryPath: previewPath,
-          galleryTitle: fixMojibake(usedEntranceData.title),
-        }
-      ) || fixMojibake(currentImage.title)
-    )
+  ? imageSeoMeta?.pageTitle || fallbackTitle
   : appendSiteTitle(fixMojibake(usedEntranceData.title));
 
 const baseFallbackDescription =
   "Explore painterly fine art photography of cars, trucks, and classic vehicles by Wayne Heim.";
 
 const pageDescription =
+  imageSeoMeta?.metaDescription ||
   (currentImage?.description && fixMojibake(currentImage.description)) ||
   (usedEntranceData?.description && fixMojibake(usedEntranceData.description)) ||
   (usedEntranceData?.subtitle && fixMojibake(usedEntranceData.subtitle)) ||
@@ -141,7 +142,9 @@ const ogImage = selectedImage?.src;
 const ogAlt = selectedImage?.alt || selectedImage?.title || fixMojibake(usedEntranceData.title);
 
 const meta = {
+  canonicalUrl,
   description: pageDescription,
+  robots: hasActiveQueryFilter ? "noindex, follow" : undefined,
   ogTitle: pageTitle,
   ogDescription: pageDescription,
   ogImage: ogImage,

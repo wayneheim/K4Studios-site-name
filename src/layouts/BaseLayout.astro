@@ -160,29 +160,6 @@ let finalSeoDescription =
     ? seoDescription
     : normalizeDescription(seoDescriptionRaw, defaultDescription, 80, seoDescriptionMaxLength, seoDescriptionOptions);
 
-if (isImagePage && lastSegment && !finalSeoDescription.includes(lastSegment)) {
-  const shortId = lastSegment.replace(/^i-/i, '');
-  const parentSegments = (Astro.url?.pathname || '')
-    .split('/')
-    .filter(Boolean)
-    .slice(0, -1);
-  const usefulSegments = parentSegments
-    .filter((segment) => !/^(Galleries|Other|Fine-Art-Photography|Painterly-Fine-Art-Photography)$/i.test(segment));
-  const contextSegments = usefulSegments.slice(-3);
-  const contextLabel = contextSegments
-    .join(' ')
-    .replace(/-/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim()
-    .toLowerCase();
-  const suffix = contextLabel
-    ? ` K4 image ${shortId} in ${contextLabel}.`
-    : ` K4 image ${shortId}.`;
-  const maxDescriptionLength = Math.max(80, seoDescriptionMaxLength);
-  const baseLength = Math.max(0, maxDescriptionLength - suffix.length);
-  finalSeoDescription = `${trimAtWord(finalSeoDescription, baseLength).replace(/\.\.\.$/, '').trim()}${suffix}`;
-}
-
 if (!isImagePage && /^\/Other\/(?:Show|Stories)(?:\/|$)/i.test(pathname)) {
   const sectionLabel = /^\/Other\/Show(?:\/|$)/i.test(pathname) ? 'K4 show page.' : 'K4 story page.';
   if (!finalSeoDescription.toLowerCase().includes(sectionLabel.toLowerCase())) {

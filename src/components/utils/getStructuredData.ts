@@ -800,10 +800,9 @@ export function getCollectionImageGalleryGraph({
       name,
       description,
       url: normalizedPageUrl,
-      numberOfItems: itemListElement.length,
       creator: K4_CREATOR_REF,
       copyrightHolder: K4_CREATOR_REF,
-      hasPart: { "@id": listId },
+      mainEntity: { "@id": listId },
     },
     {
       "@type": "ItemList",
@@ -849,7 +848,7 @@ export function getFAQPageStructuredData(items: FAQItem[] = [], pageUrl?: string
   });
 }
 
-export function getThemeItemListStructuredData(galleryKey: string, name = "Gallery Themes"): string {
+export function getThemeItemListStructuredData(galleryKey: string, name = "Gallery Themes", pageUrl = galleryKey): string {
   if (!galleryKey) return "";
 
   const normalizedKey = galleryKey
@@ -873,7 +872,7 @@ export function getThemeItemListStructuredData(galleryKey: string, name = "Galle
   return stringifySchema({
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "@id": `${normalizeK4Url(galleryKey)}#gallery-themes`,
+    "@id": `${normalizeK4Url(pageUrl)}#gallery-themes`,
     name,
     description: "Curated visual themes available in this One-Image Movie gallery.",
     numberOfItems: galleryThemes.length,

@@ -9,7 +9,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import GalleryHeader from "@/components/Gallery-LandingHeader.jsx";
 import GalleryInfo from "@/components/GalleryInfo.jsx";
 import Footer from "@/components/Footer.astro";
-import { buildImageSeoTitle } from "@/utils/buildImageSeoTitle";
+import { getImagePageSeoMeta } from "@/utils/imagePageSeoMeta";
 import "@/styles/gallery-shell-core.css";
 
 import { getStructuredData } from "@/components/utils/getStructuredData.ts";
@@ -138,10 +138,12 @@ const siteBase = import.meta.env.SITE || "https://www.k4studios.com";
 const pathOnly = Astro.url.pathname;
 const lastSegment = pathOnly.split("/").pop() || "";
 const isImagePage = lastSegment.startsWith("i-");
-// Include theme param in canonical if present (themes are indexable)
-const themeParam = Astro.url.searchParams.get("theme");
 const canonicalPath = isImagePage ? `${previewPath}/${lastSegment}` : previewPath;
-const canonicalUrl = `${siteBase}${canonicalPath.replace(/\/$/, "")}${themeParam ? `?theme=${themeParam}` : ""}`;
+const baseGalleryUrl = `${siteBase}${previewPath.replace(/\/$/, "")}`;
+const hasActiveQueryFilter = Astro.url.searchParams.has("theme") || Astro.url.searchParams.has("view");
+const canonicalUrl = hasActiveQueryFilter
+  ? baseGalleryUrl
+  : `${siteBase}${canonicalPath.replace(/\/$/, "")}`;
 const galleryAbsUrl = `${siteBase}${previewPath}`;
 const collectionContextEntry = getCollectionContextEntry(previewPath);
 const collectionContextUrl = collectionContextEntry?.collectionUrl
@@ -240,11 +242,6 @@ const siteName = "Wayne Heim";
 const siteSuffix = "Fine Art Photography";
 const fallbackTitle = "Gallery | Wayne Heim Fine Art Photography";
 
-function isGenericImageTitle(value = "") {
-  const normalized = String(value || "").trim().toLowerCase();
-  return !normalized || /^(untitled|image|photo|no\s*title)$/i.test(normalized);
-}
-
 function appendSiteTitle(title: string) {
   if (!title) return fallbackTitle;
   const lower = title.toLowerCase();
@@ -253,34 +250,26 @@ function appendSiteTitle(title: string) {
   return `${title} | ${siteName} ${siteSuffix}`;
 }
 
+const imageSeoMeta = currentImage
+  ? getImagePageSeoMeta({
+      id: currentImage.id,
+      title: fixMojibake(currentImage.title),
+      alt: fixMojibake(currentImage.alt),
+      description: fixMojibake(currentImage.description),
+      galleryPath,
+      themes: currentImage.themes,
+      keywords: currentImage.keywords,
+    })
+  : null;
+
 const pageTitle = currentImage
-  ? appendSiteTitle(
-      buildImageSeoTitle(
-        {
-          id: currentImage.id,
-          title: fixMojibake(currentImage.title),
-          alt: fixMojibake(currentImage.alt),
-          description: fixMojibake(currentImage.description),
-          story: fixMojibake(currentImage.story),
-        },
-        {
-          galleryPath,
-          galleryTitle: fixMojibake(usedEntranceData.title),
-        }
-      ) ||
-      fixMojibake(
-        !isGenericImageTitle(currentImage.title)
-          ? currentImage.title
-          : !isGenericImageTitle(currentImage.alt)
-          ? currentImage.alt
-          : `${currentImage.id || "Image"}`
-      )
-    )
+  ? imageSeoMeta?.pageTitle || fallbackTitle
   : appendSiteTitle(fixMojibake(usedEntranceData.title));
 
 const pageDescription =
   isImagePage
-    ? (currentImage?.description && fixMojibake(currentImage.description)) ||
+    ? imageSeoMeta?.metaDescription ||
+      (currentImage?.description && fixMojibake(currentImage.description)) ||
       (currentImage?.story && fixMojibake(currentImage.story)) ||
       (currentImage?.alt && fixMojibake(currentImage.alt)) ||
       baseFallbackDescription
@@ -314,6 +303,7 @@ const preferredImageUrl = selectedImage?.id
 const meta = {
   canonicalUrl,
   description: pageDescription,
+  robots: hasActiveQueryFilter ? "noindex, follow" : undefined,
   ogTitle: pageTitle,
   ogDescription: pageDescription,
   ogImage: preferredImageUrl || ogImage,

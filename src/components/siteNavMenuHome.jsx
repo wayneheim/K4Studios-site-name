@@ -128,7 +128,7 @@ export default function SiteNavMenuHome({ forceMobile = false }) {
               aria-hidden="true"
               role="presentation"
             >
-              â—‹
+              {"\u25CB"}
             </span>
           )}
 

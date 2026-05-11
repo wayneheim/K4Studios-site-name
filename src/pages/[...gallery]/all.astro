@@ -419,14 +419,21 @@ const relatedCollectionLinks = (() => {
 })();
 
 // ✅ Build breadcrumb JSON-LD
-const breadcrumbItems = breadcrumbHrefs.map((href: string, idx: number) => ({
+const breadcrumbItems = [
+  {
+    "@type": "ListItem",
+    "position": 1,
+    "item": { "@id": "https://www.k4studios.com/", "name": "Home" },
+  },
+  ...breadcrumbHrefs.map((href: string, idx: number) => ({
   "@type": "ListItem",
-  "position": idx + 1,
+  "position": idx + 2,
   "item": { 
     "@id": `https://www.k4studios.com${href}`, 
     "name": breadcrumbLabels[idx] 
   }
-}));
+  })),
+];
 breadcrumbItems.push({
   "@type": "ListItem",
   "position": breadcrumbItems.length + 1,
@@ -468,13 +475,6 @@ const structuredDataJson = JSON.stringify({
       "founder": { "@id": "https://www.k4studios.com/#person" }
     },
     {
-      "@type": "Person",
-      "@id": "https://www.k4studios.com/#person",
-      "name": "Wayne Heim",
-      "jobTitle": "Fine Art Photographer",
-      "url": "https://www.k4studios.com/"
-    },
-    {
       "@type": "CollectionPage",
       "@id": canonicalUrl + "#collectionpage",
       "name": galleryTitle + " Collection",
@@ -482,7 +482,6 @@ const structuredDataJson = JSON.stringify({
       "description": seoDescription,
       "isPartOf": { "@id": parentUrl + "#collection" },
       "creator": { "@id": "https://www.k4studios.com/#person" },
-      "numberOfItems": imageCount,
       "mainEntity": [
         { "@id": canonicalUrl + "#imagegallery" },
         { "@id": canonicalUrl + "#itemlist" }
