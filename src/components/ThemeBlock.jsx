@@ -6,7 +6,8 @@ import { trackEvent } from "../utils/analytics";
  * ThemeBlock - displays themes available for a gallery
  * Shows up to 4 themes initially, with "More..." to expand
  * ALL themes remain in DOM for SEO (hidden via CSS, not removed)
- * Includes JSON-LD structured data for theme discovery
+ * Theme JSON-LD is injected at the page level so mobile/desktop renders
+ * do not duplicate the same ItemList.
  * 
  * @param {string} galleryKey - The gallery identifier (e.g., "/Galleries/Painterly-.../Western-Cowboy-Portraits")
  */
@@ -58,37 +59,8 @@ export default function ThemeBlock({ galleryKey }) {
 
   const needsExpansion = galleryThemes.length > VISIBLE_COUNT;
   const hiddenCount = galleryThemes.length - VISIBLE_COUNT;
-  const siteOrigin = "https://www.k4studios.com";
-
-  // Build structured data for SEO (ItemList of themes)
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "name": "Gallery Themes",
-    "description": `Curated visual themes available in this One-Image Movie™ gallery`,
-    "numberOfItems": galleryThemes.length,
-    "itemListElement": galleryThemes.map((t, index) => {
-      const datasetPath = t.dataset.replace(/^src\/data\/Galleries\//, '/Galleries/').replace(/^src\/data\/Other\//, '/Other/').replace(/\.mjs$/, '');
-      // Use grid view URL for theme links (shows collection overview)
-      const themeUrl = `${datasetPath}?theme=${t.slug}&view=grid`;
-      return {
-        "@type": "ListItem",
-        "position": index + 1,
-        "name": t.name,
-        "description": t.description || `Explore the ${t.name} theme`,
-        "url": `${siteOrigin}${themeUrl}`
-      };
-    })
-  };
-
   return (
     <>
-      {/* Structured Data for SEO - Theme discovery */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
-
       <div 
         className="theme-block-wrapper"
         style={{ 

@@ -1,5 +1,6 @@
 // src/components/utils/getStructuredData.ts
 import { getSemanticImageUrl, USE_SEMANTIC_IMAGE_URLS } from "../../utils/imageProxy.js";
+import { themes } from "../../data/themes/themes.mjs";
 
 // Helper to convert image to proxy URL (never expose SmugMug URLs in structured data)
 function getProxyUrl(img: any, size: string = 'l', sourcePrefix: string | null = null): string {
@@ -728,4 +729,100 @@ export function getGalleryBreadcrumbList(
     { name: data.title, item: data.url },
   ];
   return getBreadcrumbList(items);
+}
+
+/* ============================================================
+   LANDING PAGE SCHEMA HELPERS
+============================================================ */
+type FAQItem = {
+  q?: string;
+  a?: string | string[];
+  question?: string;
+  answer?: string | string[];
+};
+
+function normalizeK4Url(value: string): string {
+  try {
+    const url = new URL(String(value), "https://www.k4studios.com");
+    if (url.hostname === "k4studios.com") url.hostname = "www.k4studios.com";
+    return url.toString();
+  } catch {
+    return "https://www.k4studios.com/";
+  }
+}
+
+function faqAnswerText(answer: string | string[] | undefined): string {
+  if (Array.isArray(answer)) return answer.join("");
+  return answer || "";
+}
+
+export function getFAQPageStructuredData(items: FAQItem[] = [], pageUrl?: string): string {
+  const mainEntity = items
+    .map((item) => ({
+      question: item.q || item.question || "",
+      answer: faqAnswerText(item.a ?? item.answer),
+    }))
+    .filter((item) => item.question && item.answer)
+    .map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    }));
+
+  if (!mainEntity.length) return "";
+
+  const normalizedPageUrl = pageUrl ? normalizeK4Url(pageUrl) : undefined;
+  return stringifySchema({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    ...(normalizedPageUrl ? { "@id": `${normalizedPageUrl}#faq` } : {}),
+    mainEntity,
+  });
+}
+
+export function getThemeItemListStructuredData(galleryKey: string, name = "Gallery Themes"): string {
+  if (!galleryKey) return "";
+
+  const normalizedKey = galleryKey
+    .toLowerCase()
+    .replace(/\\/g, "/")
+    .replace(/^\/galleries\//i, "")
+    .replace(/\/$/, "");
+
+  const galleryThemes = themes.filter((theme: any) => {
+    if (theme.visible === false || !theme.dataset) return false;
+    const normalizedDataset = theme.dataset
+      .toLowerCase()
+      .replace(/\\/g, "/")
+      .replace(/^src\/data\/galleries\//i, "")
+      .replace(/\.mjs$/i, "");
+    return normalizedDataset.includes(normalizedKey) || normalizedKey.includes(normalizedDataset);
+  });
+
+  if (!galleryThemes.length) return "";
+
+  return stringifySchema({
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "@id": `${normalizeK4Url(galleryKey)}#gallery-themes`,
+    name,
+    description: "Curated visual themes available in this One-Image Movie gallery.",
+    numberOfItems: galleryThemes.length,
+    itemListElement: galleryThemes.map((theme: any, index: number) => {
+      const datasetPath = theme.dataset
+        .replace(/^src\/data\/Galleries\//, "/Galleries/")
+        .replace(/^src\/data\/Other\//, "/Other/")
+        .replace(/\.mjs$/, "");
+      return {
+        "@type": "ListItem",
+        position: index + 1,
+        name: theme.name,
+        description: theme.description || `Explore the ${theme.name} theme.`,
+        url: normalizeK4Url(`${datasetPath}?theme=${theme.slug}&view=grid`),
+      };
+    }),
+  });
 }

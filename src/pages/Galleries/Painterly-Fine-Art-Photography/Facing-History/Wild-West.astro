@@ -20,7 +20,11 @@ import { galleryData as nativeAmericanBWDataFull } from '../../../../data/Galler
 import { galleryData as westernNarrativesColorDataFull } from '../../../../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs';
 import { galleryData as westernNarrativesBWDataFull } from '../../../../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs';
 import { storySliderImageIds } from '../../../../data/storySlider.ts';
-import { getStructuredData } from '../../../../components/utils/getStructuredData.ts';
+import {
+  getFAQPageStructuredData,
+  getStructuredData,
+  getThemeItemListStructuredData,
+} from '../../../../components/utils/getStructuredData.ts';
 
 import { getFeatheredImages } from '../../../../components/utils/getFeatheredImages.ts';
 import { autoLinkKeywordsInText } from '../../../../components/utils/autoLinkKeywordsInText.ts';
@@ -121,6 +125,8 @@ const structuredData = getStructuredData({
     creatorUrl: "https://k4studios.com/"
   }
 });
+const faqStructuredData = getFAQPageStructuredData(westernFAQ, `https://k4studios.com${sectionPath}`);
+const themeStructuredData = getThemeItemListStructuredData(themeGalleryKey);
 
 // ----------------------
 // NEW: dynamic OG/Twitter image
@@ -151,6 +157,7 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
   title={landingWestern.title}
   meta={landingMeta}
   structuredDataJSON={structuredData}
+  extraStructuredDataJSON={[themeStructuredData, faqStructuredData]}
 >
 
   <main class="bg-[#ffffff] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
