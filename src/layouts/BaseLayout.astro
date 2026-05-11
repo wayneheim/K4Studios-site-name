@@ -22,7 +22,8 @@ const {
   extraStructuredDataJSON,
   meta = {},
   description,
-  preloadImage
+  preloadImage,
+  disableAutoBreadcrumbs = false
 } = Astro.props;
 
 // ✅ Safe URL parsing (works server-side)
@@ -422,7 +423,7 @@ const ogImageType = meta.ogImageType || inferMimeType(ogImage) || 'image/jpeg';
 const twitterCard = meta.twitterCard || (twitterImage ? 'summary_large_image' : 'summary');
 const normalizedStructuredDataJSON = normalizeK4Host(structuredDataJSON);
 const normalizedAutoImageJSON = !normalizedStructuredDataJSON ? normalizeK4Host(buildAutoImageSchema()) : null;
-const normalizedBreadcrumbsJSON = normalizeK4Host(breadcrumbsJSON || buildAutoBreadcrumbs());
+const normalizedBreadcrumbsJSON = disableAutoBreadcrumbs ? null : normalizeK4Host(breadcrumbsJSON || buildAutoBreadcrumbs());
 const normalizedExtraStructuredDataJSON = Array.isArray(extraStructuredDataJSON)
   ? extraStructuredDataJSON.map(normalizeK4Host)
   : (extraStructuredDataJSON ? [normalizeK4Host(extraStructuredDataJSON)] : []);

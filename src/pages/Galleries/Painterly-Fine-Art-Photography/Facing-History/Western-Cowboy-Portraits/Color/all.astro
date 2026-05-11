@@ -158,10 +158,13 @@ const structuredDataJson = JSON.stringify({
 }, null, 2);
 ---
 
-<BaseLayout title={seoTitle} description={seoDescription} meta={{ canonicalUrl, robots: "index, follow", descriptionMaxLength: 180, preserveDescriptionDashes: true, preserveTitleDashes: true }}>
-  <!-- JSON-LD Structured Data -->
-  <script type="application/ld+json" set:html={structuredDataJson} />
-
+<BaseLayout
+  title={seoTitle}
+  description={seoDescription}
+  meta={{ canonicalUrl, robots: "index, follow", descriptionMaxLength: 180, preserveDescriptionDashes: true, preserveTitleDashes: true }}
+  structuredDataJSON={structuredDataJson}
+  disableAutoBreadcrumbs={true}
+>
   <link href="https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&display=swap" rel="stylesheet" />
 
   <div class="gallery-index-wrapper">
