@@ -11,7 +11,7 @@ import FAQAccordion       from '../components/FAQAccordion.jsx';
 import SiteFooter         from '../components/Footer.astro';
 import MobileStoryImages  from '../components/MobileStoryImages.jsx';
 
-import { getStructuredData } from '../components/utils/getStructuredData.ts';
+import { getFAQPageStructuredData, getStructuredData } from '../components/utils/getStructuredData.ts';
 import { getLandingMeta }    from '../data/landingMeta.ts';
 import { siteNav }           from '../data/siteNav.ts';
 import { getSideImagesHome2 as getSideImages } from '../components/utils/getSideImagesHome2.ts';
@@ -101,6 +101,7 @@ const structuredData = getStructuredData({
     creatorUrl: "https://k4studios.com/"
   }
 });
+const faqStructuredData = getFAQPageStructuredData(facingFAQ, "https://k4studios.com/");
 
 // ----------------------
 // NEW: dynamic OG/Twitter image
@@ -122,6 +123,7 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://k4studios.com/";
 <BaseLayout
   title={`${landingWestern.title} - ${landingWestern.subtitle}`}
   structuredDataJSON={structuredData}
+  extraStructuredDataJSON={faqStructuredData}
   meta={meta}
 >
 

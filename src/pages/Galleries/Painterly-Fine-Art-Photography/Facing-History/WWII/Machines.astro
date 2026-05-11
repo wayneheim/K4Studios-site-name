@@ -9,7 +9,7 @@ import LandingRightImages from '@/components/LandingRightImages.jsx';
 import FAQAccordion       from '@/components/FAQAccordion.jsx';
 import SiteFooter         from '@/components/Footer.astro';
 import MobileStoryImages  from '@/components/MobileStoryImages.jsx';
-import { getStructuredData } from '@/components/utils/getStructuredData.ts';
+import { getFAQPageStructuredData, getStructuredData } from '@/components/utils/getStructuredData.ts';
 
 import { siteNav } from '@/data/siteNav.ts';
 import { getSideImages } from '@/components/utils/getSideImages.ts';
@@ -103,11 +103,12 @@ const structuredData = getStructuredData({
     creatorUrl: "https://k4studios.com/"
   }
 });
+const faqStructuredData = getFAQPageStructuredData(westernFAQ, `https://k4studios.com${sectionPath}`);
 ---
 
 <!-- ✅ Structured data JSON-LD injection -->
 
-<BaseLayout title={`${landingWestern.title} – ${landingWestern.subtitle}`} structuredDataJSON={structuredData} meta={landingMeta}>
+<BaseLayout title={`${landingWestern.title} – ${landingWestern.subtitle}`} structuredDataJSON={structuredData} extraStructuredDataJSON={faqStructuredData} meta={landingMeta}>
   <main class="bg-[#ffffff] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
     <div class="drawer-mode">
       <LandingHeader

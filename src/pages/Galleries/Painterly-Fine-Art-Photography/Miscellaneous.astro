@@ -9,7 +9,7 @@ import LandingRightImages from '@/components/LandingRightImages.jsx';
 import FAQAccordion       from '@/components/FAQAccordion.jsx';
 import SiteFooter         from '@/components/Footer.astro';
 import MobileStoryImages  from '@/components/MobileStoryImages-size.jsx';
-import { getStructuredData } from '@/components/utils/getStructuredData.ts';
+import { getFAQPageStructuredData, getStructuredData } from '@/components/utils/getStructuredData.ts';
 
 import { siteNav } from '@/data/siteNav.ts';
 import { getSideImages } from '@/components/utils/getSideImages-size.ts';
@@ -88,6 +88,7 @@ const structuredData = getStructuredData({
     creatorUrl: "https://k4studios.com/"
   }
 });
+const faqStructuredData = getFAQPageStructuredData(facingFAQ, `https://k4studios.com${sectionPath}`);
 
 // ----------------------
 // NEW: dynamic OG/Twitter image
@@ -118,6 +119,7 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
 
 <BaseLayout
   structuredDataJSON={structuredData}
+  extraStructuredDataJSON={faqStructuredData}
   title={`${landingWestern.title} – ${landingWestern.subtitle}`}
   meta={landingMeta}
 >

@@ -9,7 +9,7 @@ import LandingRightImages from '@/components/LandingRightImages.jsx';
 import FAQAccordion       from '@/components/FAQAccordion.jsx';
 import SiteFooter         from '@/components/Footer.astro';
 import MobileStoryImages  from '@/components/MobileStoryImages-size.jsx';
-import { getStructuredData } from '@/components/utils/getStructuredData.ts';
+import { getFAQPageStructuredData, getStructuredData } from '@/components/utils/getStructuredData.ts';
 
 import { siteNav } from '@/data/siteNav.ts';
 import { getSideImages } from '@/components/utils/getSideImages.ts';
@@ -112,6 +112,7 @@ const structuredData = getStructuredData({
     creatorUrl: "https://k4studios.com/"
   }
 });
+const faqStructuredData = getFAQPageStructuredData(transportationFAQ, `https://k4studios.com${sectionPath}`);
 ---
 
 <!-- SEO JSON-LD (Structured Data) -->
@@ -119,6 +120,7 @@ const structuredData = getStructuredData({
 <!-- BASE LAYOUT — meta prop added! -->
 <BaseLayout
   structuredDataJSON={structuredData}
+  extraStructuredDataJSON={faqStructuredData}
   title={`${landingWestern.title} – ${landingWestern.subtitle}`}
   meta={meta}
 >

@@ -1,4 +1,4 @@
-﻿---
+---
 export const prerender = true;
 import BaseLayout         from '@/layouts/BaseLayout.astro';
 import LandingHeader      from '@/components/Landing-Header.jsx';
@@ -8,7 +8,7 @@ import LandingRightImages from '@/components/LandingRightImages.jsx';
 import FAQAccordion       from '@/components/FAQAccordion.jsx';
 import SiteFooter         from '@/components/Footer.astro';
 import MobileStoryImages  from '@/components/MobileStoryImages.jsx';
-import { getStructuredData } from '@/components/utils/getStructuredData.ts';
+import { getFAQPageStructuredData, getStructuredData } from '@/components/utils/getStructuredData.ts';
 import { getLandingMeta } from '@/data/landingMeta.ts';
 
 import { siteNav } from '@/data/siteNav.ts';
@@ -84,11 +84,11 @@ const structuredData = getStructuredData({
     description: landingWestern.subtitle || (landingWestern as any).description,
     url: `https://k4studios.com${sectionPath}`,
     keywords: (landingWestern as any).keywords || [],
-    copyrightNotice: "Â© Wayne Heim"
+    copyrightNotice: "© Wayne Heim"
   },
   images: featheredImages,
   defaults: {
-    copyrightNotice: "Â© Wayne Heim",
+    copyrightNotice: "© Wayne Heim",
     license: "https://k4studios.com/copyright",
     acquireLicensePage: "https://k4studios.com/Other/Print-Options",
     creditText: "Wayne Heim",
@@ -96,12 +96,14 @@ const structuredData = getStructuredData({
     creatorUrl: "https://k4studios.com/"
   }
 });
+const faqStructuredData = getFAQPageStructuredData(westernFAQ, `https://k4studios.com${sectionPath}`);
 ---
 
-<!-- âœ… Structured data JSON-LD injection -->
+<!-- ✅ Structured data JSON-LD injection -->
 
 <BaseLayout
   structuredDataJSON={structuredData}
+  extraStructuredDataJSON={faqStructuredData}
   title={landingWestern.title}
   description={landingWestern.subtitle}
   meta={landingMeta}

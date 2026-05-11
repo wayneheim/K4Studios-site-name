@@ -9,7 +9,7 @@ import FAQAccordion       from '../components/FAQAccordion.jsx';
 import SiteFooter         from '../components/Footer.astro';
 import MobileStoryImages  from '../components/MobileStoryImages.jsx';
 
-import { getStructuredData } from '../components/utils/getStructuredData.ts';
+import { getFAQPageStructuredData, getStructuredData } from '../components/utils/getStructuredData.ts';
 import { getLandingMeta }    from '../data/landingMeta.ts';
 import { siteNav }           from '../data/siteNav.ts';
 import { getSideImagesHome2 as getSideImages } from '../components/utils/getSideImagesHome2.ts';
@@ -67,11 +67,13 @@ const structuredData = getStructuredData({
     creatorUrl: "https://k4studios.com/"
   }
 });
+const faqStructuredData = getFAQPageStructuredData(facingFAQ, `https://k4studios.com${sectionPath}`);
 ---
 
 <BaseLayout
   title="Browse K4 Galleries | Painterly & Traditional Fine Art Photography by Wayne Heim"
   structuredDataJSON={structuredData}
+  extraStructuredDataJSON={faqStructuredData}
   meta={meta}
 >
   <main class="bg-white text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">

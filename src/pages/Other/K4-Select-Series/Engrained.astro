@@ -8,6 +8,7 @@ import LandingRightImages from '../../../components/LandingRightImages.jsx';
 import FAQAccordion       from '../../../components/FAQAccordion.jsx';
 import SiteFooter         from '../../../components/Footer.astro';
 import MobileStoryImages  from '../../../components/MobileStoryImages.jsx';
+import { getFAQPageStructuredData } from '../../../components/utils/getStructuredData.ts';
 
 import { siteNav } from '../../../data/siteNav.ts';
 import { getSideImagesOther } from '../../../components/utils/getSideImagesOther.ts';
@@ -38,9 +39,10 @@ const featheredImages = getSideImagesOther({
 
 // Desktop sidebar: always 5 samples
 const featheredImagesSidebar = featheredImages.slice(0, 6);
+const faqStructuredData = getFAQPageStructuredData(facingFAQ, "https://k4studios.com/Other/K4-Select-Series/Engrained");
 ---
 
-<BaseLayout title={`${landingWestern.title} – ${landingWestern.subtitle}`}>
+<BaseLayout title={`${landingWestern.title} – ${landingWestern.subtitle}`} extraStructuredDataJSON={faqStructuredData}>
   <main class="bg-[#ffffff] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
     <div class="drawer-mode">
       <LandingHeader client:load breadcrumb={landingWestern.breadcrumb} />

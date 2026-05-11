@@ -9,6 +9,7 @@ import FAQAccordion       from '../../components/FAQAccordion.jsx';
 import SiteFooter         from '../../components/Footer.astro';
 import MobileStoryImages  from '../../components/MobileStoryImages.jsx';
 import { getLandingMeta } from '../../data/landingMeta.ts';
+import { getFAQPageStructuredData } from '../../components/utils/getStructuredData.ts';
 
 import { siteNav } from '../../data/siteNav.ts';
 import { sanitizeForClient } from '@/components/utils/normalizeImage.ts';
@@ -149,11 +150,13 @@ const structuredData = JSON.stringify({
     url: "https://www.k4studios.com/"
   }
 }, null, 2);
+const faqStructuredData = getFAQPageStructuredData(facingFAQ, "https://k4studios.com/Other/Bio");
 ---
 
 <BaseLayout
   title={`${landingWestern.title} â€“ ${landingWestern.subtitle}`}
   structuredDataJSON={structuredData}
+  extraStructuredDataJSON={faqStructuredData}
   meta={meta}
 >
 

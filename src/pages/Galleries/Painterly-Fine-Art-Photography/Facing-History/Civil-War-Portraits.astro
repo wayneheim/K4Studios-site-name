@@ -20,7 +20,7 @@ import { landingWestern } from '../../../../data/Galleries/Painterly-Fine-Art-Ph
 import { westernStory } from '../../../../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/story.ts';
 import { westernFAQ } from '../../../../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/faq.ts';
 
-import { getStructuredData } from '../../../../components/utils/getStructuredData.ts';
+import { getFAQPageStructuredData, getStructuredData } from '../../../../components/utils/getStructuredData.ts';
 import { getLandingMeta } from '../../../../data/landingMeta.ts';
 
 import '../../../../styles/global.css';
@@ -111,12 +111,14 @@ const structuredData = getStructuredData({
     creatorUrl: "https://k4studios.com/"
   }
 });
+const faqStructuredData = getFAQPageStructuredData(westernFAQ, `https://k4studios.com${sectionPath}`);
 ---
 
 <!-- JSON-LD Structured Data for SEO -->
 
 <BaseLayout
   structuredDataJSON={structuredData}
+  extraStructuredDataJSON={faqStructuredData}
   title={pageTitle}
   description={landingDescription}
   meta={landingMeta}

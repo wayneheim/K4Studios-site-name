@@ -13,7 +13,7 @@ import MobileStoryImages  from '@/components/MobileStoryImages.jsx';
 import StorySlider        from '@/components/StorySlider.tsx';
 import { galleryData as cowboyColorDataFull } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs';
 import { storySliderImageIds } from '@/data/storySlider.ts';
-import { getStructuredData } from '@/components/utils/getStructuredData.ts';
+import { getFAQPageStructuredData, getStructuredData } from '@/components/utils/getStructuredData.ts';
 import { getLandingMeta } from '@/data/landingMeta.ts';
 
 import { siteNav } from '@/data/siteNav.ts';
@@ -101,6 +101,7 @@ const structuredData = getStructuredData({
     creatorUrl: "https://k4studios.com/"
   }
 });
+const faqStructuredData = getFAQPageStructuredData(facingFAQ, `https://k4studios.com${sectionPath}`);
 
 // ----------------------
 // NEW: dynamic OG/Twitter image
@@ -140,6 +141,7 @@ const featuredCollectionImage = {
 <BaseLayout
   title={landingWestern.title}
   structuredDataJSON={structuredData}
+  extraStructuredDataJSON={faqStructuredData}
   meta={meta}
 >
 
