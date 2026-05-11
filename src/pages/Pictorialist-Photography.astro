@@ -10,11 +10,8 @@ import SiteFooter         from '@/components/Footer.astro';
 import MobileStoryImages  from '@/components/MobileStoryImages.jsx';
 import { getStructuredData } from '@/components/utils/getStructuredData.ts';
 
-import { siteNav } from '@/data/siteNav.ts';
 import { getSideImages } from '@/components/utils/getSideImages.ts';
 import { sanitizeForClient } from '@/components/utils/normalizeImage.ts';
-import { autoLinkKeywordsInText } from '@/components/utils/autoLinkKeywordsInText.ts';
-import { semantic as k4Semantic } from '@/data/semantic/K4-Sem.ts';
 
 import { landingWestern } from '@/data/Pictorialist-Photography/landingstones.ts';
 import { facingHistoryStory as westernStory } from '@/data/Pictorialist-Photography/story.ts';
@@ -47,41 +44,6 @@ const landingDescription =
 const landingKeywords = Array.isArray((landingWestern as any)?.keywords)
   ? (landingWestern as any).keywords
   : [];
-
-type NavEntry = {
-  href?: string;
-  children?: NavEntry[];
-};
-
-// --- COLLECT ALL DESCENDANT GALLERIES --- //
-function collectGalleryHrefs(node: NavEntry | null | undefined): string[] {
-  let hrefs: string[] = [];
-  if (!node) return hrefs;
-  if (node.href && node.href.startsWith('/Galleries/')) hrefs.push(node.href);
-  if (node.children) node.children.forEach(child => hrefs.push(...collectGalleryHrefs(child)));
-  return hrefs;
-}
-
-function findNavEntry(nav: NavEntry[] | undefined, url: string): NavEntry | null {
-  if (!nav) return null;
-  for (const entry of nav) {
-    if (entry.href === url) return entry;
-    if (entry.children) {
-      const found = findNavEntry(entry.children, url);
-      if (found) return found;
-    }
-  }
-  return null;
-}
-
-const landingNav = findNavEntry(siteNav as NavEntry[], gallerySectionPath);
-const galleryPaths = landingNav ? collectGalleryHrefs(landingNav) : [];
-
-const allGalleryData = import.meta.glob<{ galleryData?: any[] }>('@/data/Galleries/**/*.mjs', { eager: true });
-const galleryDatas = galleryPaths.map((path: string) => {
-  const filePath = `@/data/Galleries${path.replace(/^\/Galleries/, "")}.mjs`;
-  return allGalleryData[filePath]?.galleryData ?? [];
-});
 
 const featheredImages = getSideImages({
   sectionPath: gallerySectionPath,
@@ -236,21 +198,21 @@ const articleStructuredData = JSON.stringify({
           {westernStorySections.map((section) => (
             <article class="story-block">
               {section.title && (
-                <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
+                <h2 class="slide-in-left" set:html={section.title} />
               )}
               {section.subhead && (
-                <h3 class="slide-in-left" set:html={autoLinkKeywordsInText(section.subhead, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
+                <h3 class="slide-in-left" set:html={section.subhead} />
               )}
               {section.tagline && (
-                <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInText(section.tagline, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
+                <h4 class="tagline reveal-on-scroll" set:html={section.tagline} />
               )}
               {section.paragraphs?.map((para) => (
-                <p class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
+                <p class="reveal-on-scroll" set:html={para} />
               ))}
               {section.list && section.list.length > 0 && (
                 <ul>
                   {section.list.map((item) => (
-                    <li class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
+                    <li class="reveal-on-scroll" set:html={item} />
                   ))}
                 </ul>
               )}
@@ -258,7 +220,7 @@ const articleStructuredData = JSON.stringify({
           ))}
         </section>
 
-        <MobileStoryImages client:only="react" images={sanitizeForClient(featheredImages) as any} displayCount={mobileCount} />
+        <MobileStoryImages client:only="react" images={sanitizeForClient(featheredImages) as any} displayCount={3} />
       </div>
 
       <div class="sidebar-column hidden md:block">
@@ -267,7 +229,7 @@ const articleStructuredData = JSON.stringify({
             client:load
             heading="Collection Samples"
             images={sanitizeForClient(featheredImages) as any}
-            displayCount={6}
+            displayCount={3}
           />
         </div>
       </div>

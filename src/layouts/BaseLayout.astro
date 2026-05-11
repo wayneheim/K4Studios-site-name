@@ -57,17 +57,17 @@ const ensureAbsoluteUrl = (value) => {
   }
 };
 
-const normalizeMetaText = (value = '') =>
+const normalizeMetaText = (value = '', options = {}) =>
   String(value || '')
     .replace(/<[^>]*>/g, ' ')
-    .replace(/[\u2013\u2014]/g, ' - ')
+    .replace(options.preserveDashes ? /$^/g : /[\u2013\u2014]/g, ' - ')
     .replace(/\u2026/g, '...')
     .replace(/\u00a9/g, '(c)')
     .replace(/\s+/g, ' ')
     .trim();
 
-const trimAtWord = (text = '', maxLength = 160) => {
-  const normalized = normalizeMetaText(text);
+const trimAtWord = (text = '', maxLength = 160, options = {}) => {
+  const normalized = normalizeMetaText(text, options);
   if (!normalized) return '';
   if (normalized.length <= maxLength) return normalized;
 
@@ -80,20 +80,20 @@ const trimAtWord = (text = '', maxLength = 160) => {
   return `${trimmed}...`;
 };
 
-const trimTitle = (text = '', maxLength = 95) => {
-  const normalized = normalizeMetaText(text);
+const trimTitle = (text = '', maxLength = 95, options = {}) => {
+  const normalized = normalizeMetaText(text, options);
   if (!normalized) return '';
   if (normalized.length <= maxLength) return normalized;
 
-  return trimAtWord(normalized, maxLength);
+  return trimAtWord(normalized, maxLength, options);
 };
 
-const normalizeDescription = (text = '', fallback = '', minimumLength = 110, maximumLength = 160) => {
-  const normalized = normalizeMetaText(text);
-  const fallbackText = trimAtWord(fallback, maximumLength);
+const normalizeDescription = (text = '', fallback = '', minimumLength = 110, maximumLength = 160, options = {}) => {
+  const normalized = normalizeMetaText(text, options);
+  const fallbackText = trimAtWord(fallback, maximumLength, options);
 
   if (!normalized) return fallbackText;
-  if (normalized.length >= minimumLength) return trimAtWord(normalized, maximumLength);
+  if (normalized.length >= minimumLength) return trimAtWord(normalized, maximumLength, options);
 
   const supplements = [
     'Explore painterly fine art photography, Western stories, and limited edition prints at K4 Studios.',
@@ -103,7 +103,7 @@ const normalizeDescription = (text = '', fallback = '', minimumLength = 110, max
   for (const supplement of supplements) {
     const combined = `${normalized} ${supplement}`.trim();
     if (combined.length >= minimumLength) {
-      return trimAtWord(combined, maximumLength);
+      return trimAtWord(combined, maximumLength, options);
     }
   }
 
@@ -111,18 +111,19 @@ const normalizeDescription = (text = '', fallback = '', minimumLength = 110, max
 };
 
 // Titles
+const titleTextOptions = { preserveDashes: meta.preserveTitleDashes === true };
 const galleryTitle = meta.seoTitle || title || meta.title || meta.ogTitle || 'K4 Studios - Fine Art Photography';
 let pageTitle = isImagePage
   ? (preloadImage?.title || meta.ogTitle || meta.ogImageTitle || galleryTitle)
   : galleryTitle;
 
 // Remove HTML & redundant separators
-const cleanTitleBase = normalizeMetaText(pageTitle || '')
+const cleanTitleBase = normalizeMetaText(pageTitle || '', titleTextOptions)
   .replace(/\s*\|\s*Wayne Heim.*$/gi, '')
   .trim();
 const cleanTitle = isImagePage
   ? cleanTitleBase
-  : trimTitle(cleanTitleBase);
+  : trimTitle(cleanTitleBase, 95, titleTextOptions);
 
 const pathname = Astro.url?.pathname || '';
 let finalTitle = cleanTitle;
@@ -147,7 +148,8 @@ const seoDescriptionRaw =
     ? defaultDescription
     : `${finalTitle} - Fine Art Photography by Wayne Heim`);
 
-const seoDescription = normalizeDescription(seoDescriptionRaw, defaultDescription);
+const seoDescriptionOptions = { preserveDashes: meta.preserveDescriptionDashes === true };
+const seoDescription = normalizeDescription(seoDescriptionRaw, defaultDescription, 110, 160, seoDescriptionOptions);
 const seoDescriptionMaxLength =
   Number.isFinite(Number(meta.descriptionMaxLength)) && Number(meta.descriptionMaxLength) > 0
     ? Number(meta.descriptionMaxLength)
@@ -155,7 +157,7 @@ const seoDescriptionMaxLength =
 let finalSeoDescription =
   seoDescriptionMaxLength === 160
     ? seoDescription
-    : normalizeDescription(seoDescriptionRaw, defaultDescription, 80, seoDescriptionMaxLength);
+    : normalizeDescription(seoDescriptionRaw, defaultDescription, 80, seoDescriptionMaxLength, seoDescriptionOptions);
 
 if (isImagePage && lastSegment && !finalSeoDescription.includes(lastSegment)) {
   const shortId = lastSegment.replace(/^i-/i, '');
@@ -264,6 +266,143 @@ const twitterTitle = meta.twitterTitle || finalTitle;
 const twitterImage = toAbsoluteProxyUrl(meta.twitterImage || rawOgImage, 'l');
 const twitterUrl = ensureAbsoluteUrl(meta.twitterUrl || ogUrl);
 
+const stripHash = (value) => String(value || '').split('#')[0];
+
+const labelFromSegment = (segment = '') => {
+  const decoded = decodeURIComponent(String(segment || ''));
+  const specialLabels = {
+    'K4': 'K4',
+    'WWII': 'WWII',
+    'NA': 'Native American',
+    'B': 'Black & White',
+    'BW': 'Black & White',
+  };
+
+  if (/^i-[A-Za-z0-9-]+$/.test(decoded)) {
+    return preloadImage?.title || decoded;
+  }
+
+  return decoded
+    .split('-')
+    .filter(Boolean)
+    .map((part) => specialLabels[part] || (/^[A-Z0-9]+$/.test(part) ? part : `${part.charAt(0).toUpperCase()}${part.slice(1)}`))
+    .join(' ')
+    .replace(/\bBlack White\b/gi, 'Black & White')
+    .replace(/\bFine Art Photography\b/g, 'Fine Art Photography')
+    .trim();
+};
+
+const buildAutoBreadcrumbs = () => {
+  if (!pathname || pathname === '/') return null;
+
+  const segments = pathname.split('/').filter(Boolean);
+  if (!segments.length) return null;
+
+  const itemListElement = [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://www.k4studios.com/",
+    },
+  ];
+
+  const cumulative = [];
+  segments.forEach((segment, index) => {
+    cumulative.push(segment);
+    const itemUrl = ensureAbsoluteUrl(`/${cumulative.join('/')}`);
+    itemListElement.push({
+      "@type": "ListItem",
+      position: index + 2,
+      name: index === segments.length - 1
+        ? (isImagePage ? (preloadImage?.title || labelFromSegment(segment)) : labelFromSegment(segment))
+        : labelFromSegment(segment),
+      item: itemUrl,
+    });
+  });
+
+  return JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": `${stripHash(canonicalUrl)}#breadcrumbs`,
+    itemListElement,
+  });
+};
+
+const isGalleryRoute =
+  /^\/Galleries(?:\/|$)/i.test(pathname) ||
+  /^\/Other\/(?:Archive|K4-Select-Series)(?:\/|$)/i.test(pathname);
+
+const buildAutoWebPageSchema = () => {
+  const pageType = isGalleryRoute ? "CollectionPage" : "WebPage";
+  const webPage = {
+    "@context": "https://schema.org",
+    "@type": pageType,
+    "@id": `${stripHash(canonicalUrl)}#webpage`,
+    url: canonicalUrl,
+    name: finalTitle,
+    description: finalSeoDescription,
+    inLanguage: "en",
+    isPartOf: {
+      "@type": "WebSite",
+      "@id": "https://www.k4studios.com/#website",
+      name: "K4 Studios",
+      url: "https://www.k4studios.com/",
+      publisher: { "@id": "https://www.k4studios.com/#organization" },
+    },
+    primaryImageOfPage: ogImage
+      ? {
+          "@type": "ImageObject",
+          url: ogImage,
+          caption: ogAlt || finalTitle,
+        }
+      : undefined,
+    creator: { "@id": "https://www.k4studios.com/#person" },
+    publisher: { "@id": "https://www.k4studios.com/#organization" },
+  };
+
+  if (isGalleryRoute) {
+    webPage.mainEntity = {
+      "@type": "ImageGallery",
+      "@id": `${stripHash(canonicalUrl)}#imagegallery`,
+      name: finalTitle,
+      description: finalSeoDescription,
+      creator: { "@id": "https://www.k4studios.com/#person" },
+      publisher: { "@id": "https://www.k4studios.com/#organization" },
+    };
+  }
+
+  return JSON.stringify(webPage);
+};
+
+const buildAutoImageSchema = () => {
+  if (!isImagePage) return null;
+
+  return JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": ["ImageObject", "VisualArtwork"],
+    "@id": `${stripHash(canonicalUrl)}#image`,
+    name: preloadImage?.title || finalTitle,
+    description: finalSeoDescription,
+    caption: preloadImage?.alt || preloadImage?.title || finalTitle,
+    url: canonicalUrl,
+    contentUrl: ogImage || undefined,
+    thumbnailUrl: twitterImage || ogImage || undefined,
+    identifier: lastSegment,
+    creator: { "@id": "https://www.k4studios.com/#person" },
+    copyrightHolder: { "@id": "https://www.k4studios.com/#person" },
+    creditText: "Wayne Heim",
+    copyrightNotice: "Copyright Wayne Heim, www.k4studios.com. All rights reserved.",
+    license: "https://www.k4studios.com/licensing",
+    acquireLicensePage: "https://www.k4studios.com/licensing",
+    encodingFormat: ogImageType,
+    inLanguage: "en",
+    mainEntityOfPage: { "@id": `${stripHash(canonicalUrl)}#webpage` },
+    ...(preloadImage?.width ? { width: preloadImage.width } : {}),
+    ...(preloadImage?.height ? { height: preloadImage.height } : {}),
+  });
+};
+
 const inferMimeType = (url) => {
   if (!url) return null;
   try {
@@ -282,10 +421,52 @@ const inferMimeType = (url) => {
 const ogImageType = meta.ogImageType || inferMimeType(ogImage) || 'image/jpeg';
 const twitterCard = meta.twitterCard || (twitterImage ? 'summary_large_image' : 'summary');
 const normalizedStructuredDataJSON = normalizeK4Host(structuredDataJSON);
-const normalizedBreadcrumbsJSON = normalizeK4Host(breadcrumbsJSON);
+const normalizedAutoImageJSON = !normalizedStructuredDataJSON ? normalizeK4Host(buildAutoImageSchema()) : null;
+const normalizedBreadcrumbsJSON = normalizeK4Host(breadcrumbsJSON || buildAutoBreadcrumbs());
 const normalizedExtraStructuredDataJSON = Array.isArray(extraStructuredDataJSON)
   ? extraStructuredDataJSON.map(normalizeK4Host)
   : (extraStructuredDataJSON ? [normalizeK4Host(extraStructuredDataJSON)] : []);
+
+const collectSchemaTypes = (value, types = new Set()) => {
+  if (!value) return types;
+  if (Array.isArray(value)) {
+    value.forEach((item) => collectSchemaTypes(item, types));
+    return types;
+  }
+  if (typeof value !== 'object') return types;
+
+  const type = value['@type'];
+  if (Array.isArray(type)) {
+    type.forEach((item) => types.add(String(item)));
+  } else if (type) {
+    types.add(String(type));
+  }
+
+  if (value['@graph']) collectSchemaTypes(value['@graph'], types);
+  Object.values(value).forEach((item) => {
+    if (item && typeof item === 'object') collectSchemaTypes(item, types);
+  });
+  return types;
+};
+
+const jsonContainsSchemaType = (json, typeName) => {
+  if (!json || typeof json !== 'string') return false;
+  try {
+    return collectSchemaTypes(JSON.parse(json)).has(typeName);
+  } catch {
+    return new RegExp(`"@type"\\s*:\\s*"${typeName}"`).test(json);
+  }
+};
+
+const suppliedJsonLd = [
+  normalizedStructuredDataJSON,
+  normalizedBreadcrumbsJSON,
+  ...normalizedExtraStructuredDataJSON,
+].filter(Boolean);
+const hasExplicitPageSchema = suppliedJsonLd.some((json) =>
+  jsonContainsSchemaType(json, 'WebPage') || jsonContainsSchemaType(json, 'CollectionPage')
+);
+const normalizedAutoWebPageJSON = hasExplicitPageSchema ? null : normalizeK4Host(buildAutoWebPageSchema());
 const jsonLdScripts = [
   JSON.stringify({
     "@context": "https://schema.org",
@@ -326,6 +507,8 @@ const jsonLdScripts = [
       },
     ],
   }),
+  normalizedAutoWebPageJSON,
+  normalizedAutoImageJSON,
   normalizedStructuredDataJSON,
   normalizedBreadcrumbsJSON,
   ...normalizedExtraStructuredDataJSON,

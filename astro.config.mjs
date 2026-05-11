@@ -4,8 +4,6 @@ import netlify from '@astrojs/netlify';
 import tailwind from '@astrojs/tailwind';
 import path from 'path';
 
-import cloudflare from '@astrojs/cloudflare';
-
 // Exclude admin pages from production build
 const isProduction = process.env.NODE_ENV === 'production' || process.argv.includes('build');
 const excludePatterns = isProduction ? ['src/pages/admin/**/*'] : [];
@@ -47,7 +45,7 @@ export default defineConfig({
 
   // Netlify adapter requires server output for SSR routes and dynamic admin/tools pages.
   output: 'server',
-  adapter: cloudflare(),
+  adapter: netlify(),
   integrations: [
     react(),
     tailwind(),  // <-- Tailwind goes here!

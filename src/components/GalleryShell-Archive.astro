@@ -92,7 +92,17 @@ const galleryAbsUrl = `${siteBase}${previewPath}`;
  * Structured data
  * --------------------------------------------------------------- */
 const imageStructuredData = currentImage
-  ? getStructuredData({ type: "image", data: currentImage })
+  ? getStructuredData({
+      type: "image",
+      data: {
+        ...currentImage,
+        pageUrl: canonicalUrl,
+        galleryUrl: galleryAbsUrl,
+        galleryTitle: "Archive",
+        schemaAbout: currentImage.schemaAbout || currentImage.semanticAbout || currentImage.about || usedEntranceData.schemaAbout,
+        genre: currentImage.genre || usedEntranceData.genre,
+      },
+    })
   : getStructuredData({
       type: "gallery",
       data: {

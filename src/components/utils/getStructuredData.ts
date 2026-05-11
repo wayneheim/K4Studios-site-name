@@ -225,6 +225,78 @@ function buildContextualAbout(data: any, fallback = DEFAULT_GALLERY_ABOUT) {
   return terms.length > 0 ? terms : fallback;
 }
 
+function imagePathText(data: any): string {
+  return [
+    data?.url,
+    data?.pageUrl,
+    data?.galleryUrl,
+    data?.collectionContext?.collectionUrl,
+    data?.galleryTitle,
+    data?.title,
+    data?.description,
+    data?.alt,
+    Array.isArray(data?.keywords) ? data.keywords.join(" ") : data?.keywords,
+  ]
+    .filter(Boolean)
+    .join(" ")
+    .toLowerCase();
+}
+
+function inferArtworkSchemaFields(data: any) {
+  const text = imagePathText(data);
+  const isEngrained = /engrained|wood print|wood panel|baltic birch/.test(text);
+  const isPainterly = /painterly-fine-art-photography|painterly/.test(text);
+  const isBlackWhite = /black-white|black white|black & white|monochrome|\bbw\b/.test(text);
+  const isWesternNarrative = /western-narratives|narrative western|narrative photography/.test(text);
+  const isCowboy = /western-cowboy-portraits|cowboy/.test(text);
+  const isNativeAmerican = /native-americans|native american/.test(text);
+  const isCivilWar = /civil-war|civil war/.test(text);
+  const isWwii = /wwii|world war ii|wartime/.test(text);
+  const isLandscape = /landscape|landscapes|water|mountain|sunset|iceland|faroe|newfoundland|canada-western/.test(text);
+  const isPortrait = /portrait|portraits|reenactor/.test(text);
+  const isTransportation = /transportation|cars|trains|planes|boats|classic car|route 66/.test(text);
+
+  let artMedium = "Fine art photography";
+  if (isEngrained) {
+    artMedium = "UV-printed painterly photography on Baltic birch wood panel";
+  } else if (isBlackWhite) {
+    artMedium = "Black and white fine art photography";
+  } else if (isPainterly) {
+    artMedium = "Painterly fine art photography";
+  }
+
+  const genre: string[] = [];
+  const addGenre = (value: string) => {
+    if (!genre.includes(value)) genre.push(value);
+  };
+
+  if (isLandscape) addGenre("Landscape fine art photography");
+  if (isPortrait) addGenre("Fine art portrait photography");
+  if (isWesternNarrative) addGenre("Narrative photography");
+  if (isCowboy) addGenre("Cowboy art");
+  if (isNativeAmerican) addGenre("Native American historical art");
+  if (isCivilWar) addGenre("Civil War art");
+  if (isWwii) addGenre("WWII art");
+  if (isCowboy || isNativeAmerican || isWesternNarrative) addGenre("Western fine art photography");
+  if (isCivilWar || isWwii || isNativeAmerican) addGenre("Historical fine art photography");
+  if (isTransportation && genre.length === 0) addGenre("Fine art photography");
+  if (genre.length === 0) addGenre("Fine art photography");
+
+  const additionalType =
+    data?.additionalType ||
+    (isEngrained || isWesternNarrative || /facing-history|cinematic|story|one-image movie/.test(text)
+      ? "One-Image Movie"
+      : undefined);
+
+  return {
+    artform: data?.artform || "Photograph",
+    artMedium: data?.artMedium || artMedium,
+    artworkSurface: data?.artworkSurface || (isEngrained ? "Baltic birch wood panel" : undefined),
+    genre: data?.genre || (genre.length === 1 ? genre[0] : genre),
+    additionalType,
+  };
+}
+
 function normalizeExplicitAbout(value: any): Array<{ "@type": string; name: string }> {
   if (!Array.isArray(value)) return [];
 
@@ -350,6 +422,7 @@ export function getStructuredData({
     const artworkPageUrl = data.pageUrl || data.url;
     const imagePublishedDate = data.datePublished || data.dateCreated;
     const imageModifiedDate = data.dateModified;
+    const artworkFields = inferArtworkSchemaFields(data);
     const obj: any = {
       "@context": "https://schema.org",
       "@type": ["ImageObject", "VisualArtwork"],
@@ -366,12 +439,14 @@ export function getStructuredData({
       copyrightNotice: data.copyrightNotice || copyrightNotice,
       acquireLicensePage: getAcquireLicensePage(data, acquireLicensePage),
       creator: K4_CREATOR_REF,
+      artist: K4_CREATOR_REF,
       copyrightHolder: K4_CREATOR_REF,
       // VisualArtwork properties (top-level for Google)
-      artMedium: data.artMedium || "Archival fine art print",
-      artform: data.artform || "Fine Art Photography",
-      artworkSurface: data.artworkSurface || "Archival paper",
-      genre: data.genre || "Fine Art Photography",
+      artform: artworkFields.artform,
+      artMedium: artworkFields.artMedium,
+      ...(artworkFields.artworkSurface ? { artworkSurface: artworkFields.artworkSurface } : {}),
+      genre: artworkFields.genre,
+      ...(artworkFields.additionalType ? { additionalType: artworkFields.additionalType } : {}),
       about: buildContextualAbout(data),
       isAccessibleForFree: true,
       ...(imagePublishedDate ? { datePublished: imagePublishedDate } : {}),

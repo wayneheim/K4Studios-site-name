@@ -11,6 +11,8 @@ type LandingMetaEntry = {
   twitterImage: string;
   keywords?: string;
   descriptionMaxLength?: number;
+  preserveDescriptionDashes?: boolean;
+  preserveDescriptionExact?: boolean;
 };
 
 export const landingMetaDB: Record<string, LandingMetaEntry> = {
@@ -133,27 +135,30 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
   "/Historical-Reenactment-Photography": {
     ogTitle: "Historical Reenactment Photography & Reenactor Portraits – Wayne Heim",
     ogDescription:
-      "Historical reenactment photography, reenactor portraits, and living history photography covering Civil War, WWII, and frontier events through painterly, story-driven fine art.",
+      "Fine art portraits of Civil War soldiers, WWII veterans, frontier cowboys, and Roaring 20s characters — living history interpreted through painterly photography by Wayne Heim.",
     ogImage: "/og/historical-reenactment.jpg",
     ogType: "article",
     twitterCard: "summary_large_image",
     twitterTitle: "Historical Reenactment Photography & Reenactor Portraits",
     twitterDescription:
-      "Living history photography, reenactor portraits, and fine art historical scenes from Civil War, WWII, and frontier events by Wayne Heim.",
+      "Fine art portraits of Civil War soldiers, WWII veterans, frontier cowboys, and Roaring 20s characters — living history interpreted through painterly photography by Wayne Heim.",
     twitterImage: "/og/historical-reenactment.jpg",
     keywords: "historical reenactment photography, reenactor photography, living history photography, reenactor portraits, Civil War reenactment photography, WWII reenactment photography, frontier reenactment photography, Wayne Heim",
+    descriptionMaxLength: 190,
+    preserveDescriptionDashes: true,
+    preserveDescriptionExact: true,
   },
 
   "/Pictorialist-Photography": {
     ogTitle: "What Is Pictorialist Photography? Definition & Modern Pictorialism",
     ogDescription:
-      "Pictorialist photography defined: the 19th-century fine art movement, its core traits, major artists, and why modern pictorialism matters again.",
+      "What is pictorialist photography? Its history, core principles, and how Wayne Heim's modern painterly work continues that tradition today.",
     ogImage: "/og/painterly.jpg",
     ogType: "article",
     twitterCard: "summary_large_image",
     twitterTitle: "What Is Pictorialist Photography?",
     twitterDescription:
-      "Definition, history, characteristics, and modern relevance of pictorialist photography.",
+      "What is pictorialist photography? Its history, core principles, and how Wayne Heim's modern painterly work continues that tradition today.",
     twitterImage: "/og/painterly.jpg",
     keywords: "pictorialist photography, what is pictorialist photography, pictorialism photography definition, modern pictorialism photography, contemporary pictorialist photography, painterly photography, pictorialism, Alfred Stieglitz, Gertrude Kasebier, Edward Steichen, Wayne Heim",
   },
@@ -260,18 +265,20 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
 
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits": {
     ogTitle:
-      "1920s Portraits | Roaring 20s & Jazz Age Photography by Wayne Heim",
+      "Roaring 20s Portraits | 1920s Jazz Age Fine Art Photography by Wayne Heim",
     ogDescription:
-      "1920s portraits by Wayne Heim featuring Roaring 20s and Jazz Age flappers, gangsters, G-men, musicians, and speakeasy characters in painterly fine art photography.",
+      "Painterly fine art portraits of flappers, gangsters, G-men, and speakeasy characters — the Roaring 20s reimagined as cinematic, story-driven artwork by Wayne Heim.",
     ogImage: "/og/roaring20s.jpg",
     ogType: "website",
     twitterCard: "summary_large_image",
     twitterTitle:
-      "1920s Portraits | Roaring 20s & Jazz Age Photography",
+      "Roaring 20s Portraits | 1920s Jazz Age Fine Art Photography by Wayne Heim",
     twitterDescription:
-      "1920s portraits, Jazz Age characters, flappers, gangsters, and speakeasy figures by Wayne Heim.",
+      "Painterly fine art portraits of flappers, gangsters, G-men, and speakeasy characters — the Roaring 20s reimagined as cinematic, story-driven artwork by Wayne Heim.",
     twitterImage: "/og/roaring20s.jpg",
     keywords: "1920s portraits, 1920s portrait photography, Roaring 20s portraits, Jazz Age portraits, flapper portraits, speakeasy portraits, gangster portraits, Wayne Heim",
+    descriptionMaxLength: 180,
+    preserveDescriptionDashes: true,
   },
 
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits": {
@@ -881,17 +888,20 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
   },
 
   "/Western-Cowboy-Photography": {
-    ogTitle: "Western Cowboy Photography – Wayne Heim",
+    ogTitle: "Western Cowboy Photography | Painterly Fine Art Portraits by Wayne Heim",
     ogDescription:
-      "Western cowboy photography and wild west cowboy portraits—authentic character studies from the American frontier, crafted with painterly depth and narrative restraint.",
+      "Authentic cowboy portraits crafted as painterly fine art — not stock imagery or rodeo snapshots. Frontier characters, story-driven composition, and the grit of the American West.",
     ogImage: "/images/cowboy.webp",
     ogType: "website",
     twitterCard: "summary_large_image",
-    twitterTitle: "Western Cowboy Photography – Wayne Heim",
+    twitterTitle: "Western Cowboy Photography | Painterly Fine Art Portraits by Wayne Heim",
     twitterDescription:
-      "Authentic cowboy portraits and wild west photography by Wayne Heim. Character-driven fine art from the American frontier.",
+      "Authentic cowboy portraits crafted as painterly fine art — not stock imagery or rodeo snapshots. Frontier characters, story-driven composition, and the grit of the American West.",
     twitterImage: "/images/cowboy.webp",
     keywords: "Western cowboy photography, cowboy portraits, wild west photography, cowboy portrait photography, Western cowboy portraits, fine art cowboy photography, authentic Western photography, Wayne Heim",
+    descriptionMaxLength: 190,
+    preserveDescriptionDashes: true,
+    preserveDescriptionExact: true,
   },
 
   "/Western-Wall-Art": {
@@ -1101,7 +1111,9 @@ export function getLandingMeta(path: string, imageOverride?: string) {
   const baseMeta = landingMetaDB[clean] || landingMetaDB["default"];
 
   const uniqueDesc = trimMetaDescription(
-    buildUniqueDescription(baseMeta.ogDescription, clean),
+    baseMeta.preserveDescriptionExact
+      ? baseMeta.ogDescription
+      : buildUniqueDescription(baseMeta.ogDescription, clean),
     baseMeta.descriptionMaxLength
   );
 
@@ -1121,5 +1133,6 @@ export function getLandingMeta(path: string, imageOverride?: string) {
     description: uniqueDesc,
     keywords: baseMeta.keywords || "",
     descriptionMaxLength: baseMeta.descriptionMaxLength,
+    preserveDescriptionDashes: baseMeta.preserveDescriptionDashes === true,
   };
 }

@@ -78,7 +78,7 @@ const faqItems = [
     answer: "K4 Studios applies the painterly tradition to Western and historically themed fine art photography, using authored scenes, atmospheric light, color, grain, texture, and narrative restraint to move the viewer from record into story."
   }
 ];
-const pageDescription = "What is painterly photography? This article defines the term, separates it from painterly editing, and explains its place in fine art photography.";
+const pageDescription = "Painterly photography means different things — presets, editing styles, fine art practice. Here's what actually separates a surface effect from a disciplined artistic approach.";
 
 const structuredImageUrls = [
   getAbsoluteProxySrc(headerImage.id, "l"),
@@ -150,7 +150,9 @@ const meta = {
   twitterDescription: pageDescription,
   twitterUrl: canonicalUrl,
   twitterImage: getAbsoluteProxySrc(image1.id, "l"),
-  twitterCard: "summary_large_image"
+  twitterCard: "summary_large_image",
+  descriptionMaxLength: 190,
+  preserveDescriptionDashes: true
 };
 
 

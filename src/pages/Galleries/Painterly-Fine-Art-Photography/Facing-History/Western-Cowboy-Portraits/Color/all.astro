@@ -34,8 +34,8 @@ const canonicalUrl = `https://www.k4studios.com${basePath}/all`;
 const parentUrl = `https://www.k4studios.com${basePath}`;
 
 // ✅ SEO-optimized title and description (factual, not poetic)
-const seoTitle = `Color Cowboy Photography | Western Portrait Collection`;
-const seoDescription = `Complete listing of ${imageCount} color cowboy photographs by Wayne Heim from the Western Cowboy Portrait Collection, with image pages and collector details.`;
+const seoTitle = `Western Cowboy Portraits in Color | 147 Painterly Fine Art Images — Wayne Heim`;
+const seoDescription = `147 color cowboy portraits by Wayne Heim — painterly fine art photography of frontier life, Western characters, and the American West, each image a story-driven artwork.`;
 
 // ✅ Genre definition (entity authority - what IS this type of photography)
 const genreDefinition = `Painterly Western Photography is a fine-art approach that draws from 19th-century pictorialism and painterly traditions, emphasizing tonal harmony, atmospheric light, and compositional restraint over literal realism.`;
@@ -158,7 +158,7 @@ const structuredDataJson = JSON.stringify({
 }, null, 2);
 ---
 
-<BaseLayout title={seoTitle} description={seoDescription} meta={{ canonicalUrl, robots: "index, follow" }}>
+<BaseLayout title={seoTitle} description={seoDescription} meta={{ canonicalUrl, robots: "index, follow", descriptionMaxLength: 180, preserveDescriptionDashes: true, preserveTitleDashes: true }}>
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json" set:html={structuredDataJson} />
 

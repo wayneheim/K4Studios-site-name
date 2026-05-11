@@ -7,13 +7,10 @@ const path = require("path");
 const https = require("https");
 const http = require("http");
 
-// Try to load sharp for proper image decoding
-let sharp;
-try {
-  sharp = require("sharp");
-} catch (e) {
-  console.warn("[visualIndex] Sharp not available, color analysis will be limited");
-}
+// Sharp is intentionally not bundled into Netlify functions. Manual Netlify
+// deploys run from Windows here, and native sharp binaries can mismatch the
+// Linux function runtime. Visual indexing fails gracefully when sharp is absent.
+const sharp = null;
 
 const VISUAL_INDEX_PATH = path.join(process.cwd(), "src/data/visualIndex.json");
 

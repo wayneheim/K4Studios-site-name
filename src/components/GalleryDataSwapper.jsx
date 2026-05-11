@@ -342,16 +342,24 @@ export default function GalleryDataSwapper({ datasetPath = "" }) {
     if (!file) return;
 
     const reader = new FileReader();
-    reader.onload = (event) => {
+    reader.onload = async (event) => {
       try {
         const text = event.target.result;
         let parsed;
 
         if (file.name.endsWith('.mjs')) {
-          // Parse .mjs files: extract array from "export const galleryData = [...]"
-          const match = text.match(/[\s\S]*?export\s+const\s+\w+\s*=\s*(\[[\s\S]*\]);?/);
-          if (!match) throw new Error("Invalid MJS format - could not find array");
-          parsed = eval(match[1]); // ⚠️ local-only use
+          const moduleUrl = URL.createObjectURL(
+            new Blob([text], { type: 'text/javascript' })
+          );
+          try {
+            const backupModule = await import(/* @vite-ignore */ moduleUrl);
+            parsed =
+              backupModule.galleryData ||
+              Object.values(backupModule).find((value) => Array.isArray(value));
+          } finally {
+            URL.revokeObjectURL(moduleUrl);
+          }
+          if (!parsed) throw new Error("Invalid MJS format - could not find exported array");
         } else {
           parsed = JSON.parse(text);
         }

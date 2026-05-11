@@ -34,8 +34,8 @@ const canonicalUrl = `https://www.k4studios.com${basePath}/all`;
 const parentUrl = `https://www.k4studios.com${basePath}`;
 
 // ✅ SEO-optimized title and description (factual, not poetic)
-const seoTitle = `Black and White Cowboy Photography | Western Portrait Collection`;
-const seoDescription = `Complete listing of ${imageCount} black and white cowboy photographs by Wayne Heim from the Western Cowboy Portrait Collection, with image pages and collector details.`;
+const seoTitle = `Western Cowboy Portraits in Black & White | 99 Painterly Fine Art Images — Wayne Heim`;
+const seoDescription = `99 black and white cowboy portraits by Wayne Heim — monochrome fine art photography of frontier characters, tonal restraint, and the grit of the American West.`;
 
 // ✅ Genre definition (entity authority - what IS this type of photography)
 const genreDefinition = `Black and White Western Cowboy Photography is a fine-art approach emphasizing form, texture, and tonal structure, tracing its lineage to early Western photography while prioritizing psychological presence over environmental spectacle.`;
@@ -170,7 +170,7 @@ const structuredDataJson = JSON.stringify({
 }, null, 2);
 ---
 
-<BaseLayout title={seoTitle} description={seoDescription} meta={{ canonicalUrl, robots: "index, follow" }}>
+<BaseLayout title={seoTitle} description={seoDescription} meta={{ canonicalUrl, robots: "index, follow", preserveDescriptionDashes: true, preserveTitleDashes: true }}>
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json" set:html={structuredDataJson} />
 
