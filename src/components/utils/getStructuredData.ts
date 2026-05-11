@@ -143,6 +143,10 @@ const K4_CREATOR_PERSON = {
 };
 
 function buildArtworkOffer(data: any, fallbackAcquireLicensePage: string) {
+  if (data?.commerce?.schema) {
+    return data.commerce.schema;
+  }
+
   const offerUrl = data?.buyLink || data?.offerUrl || getAcquireLicensePage(data, fallbackAcquireLicensePage);
   if (!offerUrl) return undefined;
 
@@ -439,7 +443,7 @@ export function getStructuredData({
     const artworkFields = inferArtworkSchemaFields(data);
     const obj: any = {
       "@context": "https://schema.org",
-      "@type": ["ImageObject", "VisualArtwork"],
+      "@type": data?.commerce ? ["ImageObject", "VisualArtwork", "Product"] : ["ImageObject", "VisualArtwork"],
       "@id": artworkPageUrl ? `${artworkPageUrl}#image` : (proxyUrl ? `${proxyUrl}#image` : undefined),
       name: data.title,
       description: data.description,
@@ -749,6 +753,68 @@ function normalizeK4Url(value: string): string {
   } catch {
     return "https://www.k4studios.com/";
   }
+}
+
+export function getCollectionImageGalleryGraph({
+  pageUrl,
+  name,
+  description,
+  images = [],
+  basePath,
+}: {
+  pageUrl: string;
+  name: string;
+  description?: string;
+  images?: Array<{ id?: string; title?: string; description?: string; alt?: string }>;
+  basePath: string;
+}): any[] {
+  const normalizedPageUrl = normalizeK4Url(pageUrl);
+  const listId = `${normalizedPageUrl}#itemlist`;
+  const galleryId = `${normalizedPageUrl}#imagegallery`;
+  const normalizedBasePath = String(basePath || "").replace(/\/$/, "");
+
+  const itemListElement = images
+    .filter((image) => image?.id)
+    .map((image, index) => {
+      const imagePageUrl = normalizeK4Url(`${normalizedBasePath}/${image.id}`);
+      const imageName = image.title || image.id;
+
+      return {
+        "@type": "ListItem",
+        position: index + 1,
+        url: imagePageUrl,
+        item: {
+          "@type": "ImageObject",
+          "@id": `${imagePageUrl}#image`,
+          url: imagePageUrl,
+          name: imageName,
+          ...(image.description || image.alt ? { description: image.description || image.alt } : {}),
+        },
+      };
+    });
+
+  return [
+    {
+      "@type": "ImageGallery",
+      "@id": galleryId,
+      name,
+      description,
+      url: normalizedPageUrl,
+      numberOfItems: itemListElement.length,
+      creator: K4_CREATOR_REF,
+      copyrightHolder: K4_CREATOR_REF,
+      hasPart: { "@id": listId },
+    },
+    {
+      "@type": "ItemList",
+      "@id": listId,
+      name: `${name} Image List`,
+      description,
+      numberOfItems: itemListElement.length,
+      itemListOrder: "https://schema.org/ItemListOrderAscending",
+      itemListElement,
+    },
+  ];
 }
 
 function faqAnswerText(answer: string | string[] | undefined): string {

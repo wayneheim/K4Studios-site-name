@@ -261,7 +261,13 @@ const toAbsoluteProxyUrl = (src: string, size = 'l') => {
 const ogImage = toAbsoluteProxyUrl(rawOgImage, 'l');
 const ogImageSecureUrl = ogImage;
 
-const ogType = isImagePage ? "article" : (meta.ogType || "website");
+const commerceOffer = meta.commerceOffer || null;
+const productPriceAmount = commerceOffer?.lowPrice;
+const productPriceCurrency = commerceOffer?.priceCurrency || "USD";
+const productAvailability = commerceOffer?.availability
+  ? String(commerceOffer.availability).replace(/^https?:\/\/schema\.org\//i, "").replace(/([a-z])([A-Z])/g, "$1 $2").toLowerCase()
+  : null;
+const ogType = meta.ogType || (isImagePage && commerceOffer ? "product" : (isImagePage ? "article" : "website"));
 
 const twitterTitle = meta.twitterTitle || finalTitle;
 const twitterImage = toAbsoluteProxyUrl(meta.twitterImage || rawOgImage, 'l');
@@ -555,6 +561,11 @@ const jsonLdScripts = [
     <meta property="og:image:alt" content={ogAlt} />
     <meta property="og:image:type" content={ogImageType} />
     <meta property="og:type" content={ogType} />
+    {commerceOffer && productPriceAmount !== undefined && productPriceAmount !== null && (
+      <meta property="product:price:amount" content={String(productPriceAmount)} />
+    )}
+    {commerceOffer && <meta property="product:price:currency" content={productPriceCurrency} />}
+    {commerceOffer && productAvailability && <meta property="product:availability" content={productAvailability} />}
     <meta property="og:url" content={ogUrl} />
     <meta property="og:site_name" content="K4 Studios – Fine Art Photography" />
     <meta property="og:locale" content="en_US" />

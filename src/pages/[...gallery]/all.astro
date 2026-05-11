@@ -15,6 +15,7 @@ import {
   resolveGallerySourceHref,
 } from "@/utils/galleryCollectionNav.ts";
 import { getSemanticImageSrcset, getSemanticImageUrl } from "@/utils/imageProxy.js";
+import { getCollectionImageGalleryGraph } from "@/components/utils/getStructuredData.ts";
 
 // ✅ Glob import all gallery data at build time
 const galleryModules = import.meta.glob('/src/data/**/*.mjs', { eager: true });
@@ -433,6 +434,14 @@ breadcrumbItems.push({
 });
 
 // ✅ Pre-build JSON-LD
+const collectionImageGalleryGraph = getCollectionImageGalleryGraph({
+  pageUrl: canonicalUrl,
+  name: `${galleryTitle} Collection`,
+  description: seoDescription,
+  images: galleryData,
+  basePath,
+});
+
 const structuredDataJson = JSON.stringify({
   "@context": "https://schema.org",
   "@graph": [
@@ -473,8 +482,13 @@ const structuredDataJson = JSON.stringify({
       "description": seoDescription,
       "isPartOf": { "@id": parentUrl + "#collection" },
       "creator": { "@id": "https://www.k4studios.com/#person" },
-      "numberOfItems": imageCount
+      "numberOfItems": imageCount,
+      "mainEntity": [
+        { "@id": canonicalUrl + "#imagegallery" },
+        { "@id": canonicalUrl + "#itemlist" }
+      ]
     },
+    ...collectionImageGalleryGraph,
     {
       "@type": "BreadcrumbList",
       "@id": canonicalUrl + "#breadcrumb",

@@ -16,6 +16,8 @@ import { getStructuredData } from "@/components/utils/getStructuredData.ts";
 import { getBreadcrumbList } from "@/components/utils/getStructuredData.ts";
 import { getCollectionContextEntry } from "@/data/semantic/collectionContext";
 import { getSemanticImageUrl } from "@/utils/imageProxy.js";
+import ImageCommerceModalStatic from "@/components/ImageCommerceModalStatic.astro";
+import { resolveImageCommerce } from "@/data/commerceResolver.js";
 
 interface Props {
   allImages: any[];
@@ -145,6 +147,13 @@ const collectionContextEntry = getCollectionContextEntry(previewPath);
 const collectionContextUrl = collectionContextEntry?.collectionUrl
   ? `${siteBase}${collectionContextEntry.collectionUrl}`
   : undefined;
+const imageCommerce = currentImage
+  ? resolveImageCommerce({
+      image: currentImage,
+      galleryPath: previewPath,
+      pageUrl: canonicalUrl,
+    })
+  : null;
 
 /** ---------------------------------------------------------------
  * Detect if this is an image page or shared theme link
@@ -180,6 +189,7 @@ const imageStructuredData = currentImage
           : undefined,
         schemaAbout: currentImage.schemaAbout || currentImage.semanticAbout || currentImage.about || usedEntranceData.schemaAbout,
         genre: currentImage.genre || usedEntranceData.genre,
+        commerce: imageCommerce,
       },
     })
   : getStructuredData({
@@ -307,7 +317,8 @@ const meta = {
   ogTitle: pageTitle,
   ogDescription: pageDescription,
   ogImage: preferredImageUrl || ogImage,
-  ogType: currentImage ? "article" : "website",
+  ogType: currentImage && imageCommerce ? "product" : (currentImage ? "article" : "website"),
+  commerceOffer: imageCommerce?.schema || null,
   ogUrl: canonicalUrl,
   ogImageAlt: ogAlt,
   twitterTitle: pageTitle,
@@ -359,6 +370,9 @@ const meta = {
       itemtype={currentImage ? "https://schema.org/ImageObject https://schema.org/VisualArtwork" : undefined}
     >
       <slot name="chapter-viewer" />
+      {currentImage && imageCommerce && (
+        <ImageCommerceModalStatic commerce={imageCommerce} image={currentImage} galleryPath={previewPath} />
+      )}
     </article>
   </main>
 

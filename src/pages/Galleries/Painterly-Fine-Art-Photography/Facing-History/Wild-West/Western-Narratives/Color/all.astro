@@ -11,6 +11,7 @@ import Footer from "@/components/Footer.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import ArchiveContext from "@/components/ArchiveContext.astro";
 import { getSemanticImageUrl } from "@/utils/imageProxy.js";
+import { getCollectionImageGalleryGraph } from "@/components/utils/getStructuredData.ts";
 
 // ✅ Direct import - no query params needed
 import { galleryData as rawGalleryData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs";
@@ -101,6 +102,14 @@ galleryData.forEach((item: any) => {
 });
 
 // ✅ Pre-build JSON-LD to avoid streaming issues
+const collectionImageGalleryGraph = getCollectionImageGalleryGraph({
+  pageUrl: canonicalUrl,
+  name: `${galleryTitle} Collection`,
+  description: seoDescription,
+  images: galleryData,
+  basePath,
+});
+
 const structuredDataJson = JSON.stringify({
   "@context": "https://schema.org",
   "@graph": [
@@ -141,8 +150,13 @@ const structuredDataJson = JSON.stringify({
       "description": seoDescription,
       "isPartOf": { "@id": parentUrl + "#collection" },
       "creator": { "@id": "https://www.k4studios.com/#person" },
-      "numberOfItems": imageCount
+      "numberOfItems": imageCount,
+      "mainEntity": [
+        { "@id": canonicalUrl + "#imagegallery" },
+        { "@id": canonicalUrl + "#itemlist" }
+      ]
     },
+    ...collectionImageGalleryGraph,
     {
       "@type": "BreadcrumbList",
       "@id": canonicalUrl + "#breadcrumb",
