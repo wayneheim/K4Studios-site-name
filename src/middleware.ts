@@ -380,10 +380,11 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
   const shouldNoindexContactQuery = pathname === "/Contact" && (
     context.url.searchParams.has("license") || context.url.searchParams.has("title")
   );
+  const isImagePageWithCaseSensitiveId = /\/i-[A-Za-z0-9]+\/?$/i.test(pathname);
 
   const canonicalStaticRoute = getCanonicalStaticRoute(pathname);
   const normalizedPathname = normalizePath(pathname);
-  if (canonicalStaticRoute && canonicalStaticRoute !== normalizedPathname) {
+  if (!isImagePageWithCaseSensitiveId && canonicalStaticRoute && canonicalStaticRoute !== normalizedPathname) {
     return new Response(null, {
       status: 301,
       headers: {

@@ -209,7 +209,7 @@ details[open] .arrow-icon {
 }
 
 /* Mobile/Desktop toggle for ThemeBlock and image layout */
-.theme-block-desktop {
+.theme-block-unified {
   display: block;
   position: absolute;
   top: 100%;
@@ -217,6 +217,12 @@ details[open] .arrow-icon {
   right: 0;
   margin-top: 0.5rem;
   z-index: 100;
+}
+.theme-block-unified summary {
+  display: none;
+}
+.theme-block-unified:not([open]) .themes-content {
+  display: block;
 }
 .desktop-sample-image {
   display: block;
@@ -226,9 +232,6 @@ details[open] .arrow-icon {
 }
 
 @media (max-width: 767px) {
-  .theme-block-desktop {
-    display: none !important;
-  }
   .desktop-sample-image {
     display: none !important;
   }
@@ -247,6 +250,16 @@ details[open] .arrow-icon {
     text-align: center;
     max-width: 200px;
     margin: 0.5rem auto 0;
+  }
+  .theme-block-unified {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    margin-top: 1rem;
+  }
+  .theme-block-unified:not([open]) .themes-content {
+    display: none;
   }
   
   /* Mobile Themes Accordion */

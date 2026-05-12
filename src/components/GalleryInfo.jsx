@@ -418,17 +418,6 @@ export default function GalleryInfo({
                 </figure>
               </a>
             )}
-            {/* Mobile: Accordion-style ThemeBlock - only show if themes exist */}
-            {hasThemesForGallery(trimmedBase) && (
-              <details className="mobile-themes-accordion">
-                <summary>
-                  <span className="accordion-arrow">▼</span> Featured Themes
-                </summary>
-                <div className="themes-content">
-                  <ThemeBlock galleryKey={trimmedBase} galleryData={galleryData} />
-                </div>
-              </details>
-            )}
           </div>
 
           {/* Desktop: Image first, then ThemeBlock below */}
@@ -507,10 +496,16 @@ export default function GalleryInfo({
             </a>
           )}
 
-          {/* Desktop: ThemeBlock below image */}
-          <div className="theme-block-desktop">
-            <ThemeBlock galleryKey={trimmedBase} galleryData={galleryData} />
-          </div>
+          {hasThemesForGallery(trimmedBase) && (
+            <details className="theme-block-unified mobile-themes-accordion">
+              <summary>
+                <span className="accordion-arrow">▼</span> Featured Themes
+              </summary>
+              <div className="themes-content">
+                <ThemeBlock galleryKey={trimmedBase} galleryData={galleryData} />
+              </div>
+            </details>
+          )}
         </motion.div>
       </section>
 

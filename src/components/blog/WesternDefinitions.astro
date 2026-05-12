@@ -130,12 +130,19 @@ const cornerstonePages = [
 
 {variant === "index" && (
   <section class="cornerstones">
-    <h2>Cornerstones</h2>
+    <div class="cornerstones-title-row" aria-hidden="true">
+      <span class="section-title-rule"></span>
+      <h2>Cornerstones</h2>
+      <span class="section-title-rule"></span>
+    </div>
     <p class="subhead">Reference articles defining the disciplines behind the work.</p>
 
     <section class="cornerstone-group">
       <div class="cornerstone-group-head">
-        <h3>Foundations</h3>
+        <div class="cornerstone-group-title-row">
+          <h3>Foundations</h3>
+          <span class="section-title-rule" aria-hidden="true"></span>
+        </div>
         <p>Core definitions that establish the Western and fine art framework behind the work.</p>
       </div>
 
@@ -165,7 +172,10 @@ const cornerstonePages = [
 
     <section class="cornerstone-group">
       <div class="cornerstone-group-head">
-        <h3>Disciplines & Forms</h3>
+        <div class="cornerstone-group-title-row">
+          <h3>Disciplines & Forms</h3>
+          <span class="section-title-rule" aria-hidden="true"></span>
+        </div>
         <p>Specific branches, subjects, and authored traditions inside the larger Western photography field.</p>
       </div>
 
@@ -191,7 +201,7 @@ const cornerstonePages = [
           <p>Authored portraiture - craft, narrative, and psychological depth</p>
         </a>
         <a href="/Blog/what-is-historically-themed-photography" class="card">
-          <span class="num">15</span>
+          <span class="num">9</span>
           <h3>What Is Historically Themed Photography?</h3>
           <p>History as subject, story, and fine art interpretation</p>
         </a>
@@ -200,38 +210,41 @@ const cornerstonePages = [
 
     <section class="cornerstone-group">
       <div class="cornerstone-group-head">
-        <h3>Narrative & Story</h3>
+        <div class="cornerstone-group-title-row">
+          <h3>Narrative & Story</h3>
+          <span class="section-title-rule" aria-hidden="true"></span>
+        </div>
         <p>Story-first essays on implication, cinematic presence, and the narrative philosophy shaping the images.</p>
       </div>
 
       <div class="cornerstone-grid">
         <a href="/Blog/narrative-western-art-vs-traditional" class="card">
-          <span class="num">9</span>
+          <span class="num">10</span>
           <h3>Narrative Western Art vs Traditional Western Art</h3>
           <p>Where story, consequence, and lived experience separate from subject alone</p>
         </a>
         <a href="/Blog/what-is-narrative-photography" class="card">
-          <span class="num">10</span>
+          <span class="num">11</span>
           <h3>What Is Narrative Photography?</h3>
           <p>Definition, structure, and why some photographs feel like lived moments</p>
         </a>
         <a href="/Blog/what-makes-an-image-feel-cinematic" class="card">
-          <span class="num">11</span>
+          <span class="num">12</span>
           <h3>What Makes an Image Feel Cinematic?</h3>
           <p>Tension, implication, framing, and the felt presence of story</p>
         </a>
         <a href="/Blog/can-photography-be-narrative-western-art" class="card">
-          <span class="num">12</span>
+          <span class="num">13</span>
           <h3>Can Photography Be Narrative Western Art?</h3>
           <p>Why medium does not determine narrative depth or artistic legitimacy</p>
         </a>
         <a href="/Blog/narrative-vs-documentary-photography" class="card">
-          <span class="num">13</span>
+          <span class="num">14</span>
           <h3>Narrative vs Documentary Photography</h3>
           <p>How interpretation, implication, and record diverge inside the frame</p>
         </a>
         <a href="/Blog/what-is-visual-storytelling-in-photography" class="card">
-          <span class="num">14</span>
+          <span class="num">15</span>
           <h3>What Is Visual Storytelling in Photography?</h3>
           <p>How a photograph moves beyond description and begins carrying story</p>
         </a>
@@ -283,12 +296,31 @@ const cornerstonePages = [
     text-align: center;
   }
 
+  .cornerstones-title-row {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .cornerstones-title-row h2 {
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  .section-title-rule {
+    flex: 1;
+    height: 1px;
+    border-radius: 999px;
+    background: linear-gradient(to right, transparent, rgba(139, 90, 43, 0.5) 18%, rgba(139, 90, 43, 0.5) 82%, transparent);
+  }
+
   .cornerstones h2 {
     font-family: 'Glegoo', serif;
     font-size: 1.5rem;
     font-weight: 600;
     color: #1a1a1a;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .cornerstones .subhead {
@@ -310,12 +342,28 @@ const cornerstonePages = [
     margin-bottom: 1rem;
   }
 
+  .cornerstone-group-title-row {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .cornerstone-group-title-row h3 {
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  .cornerstone-group-title-row .section-title-rule {
+    min-width: 2.5rem;
+  }
+
   .cornerstone-group-head h3 {
     font-family: 'Glegoo', serif;
     font-size: 1.15rem;
     font-weight: 600;
     color: #2c2c2c;
-    margin: 0 0 0.3rem 0;
+    margin: 0;
   }
 
   .cornerstone-group-head p {
@@ -332,6 +380,14 @@ const cornerstonePages = [
   }
 
   @media (max-width: 640px) {
+    .cornerstones-title-row {
+      gap: 0.55rem;
+    }
+
+    .cornerstone-group-title-row {
+      gap: 0.5rem;
+    }
+
     .cornerstone-grid {
       grid-template-columns: 1fr;
     }

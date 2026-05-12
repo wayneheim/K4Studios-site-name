@@ -173,26 +173,37 @@ const galleryPaths = Object.keys(galleryDataMap);
 
     <section class="section-heading-wrap">
       <div class="section-heading" style="font-family: 'Glegoo', serif;">
-        <h1 class="page-title fade-in reveal-on-scroll" style="font-family: 'Glegoo', serif;">Inside the Frame</h1>
-        <p class="page-subtitle fade-in reveal-on-scroll" style="font-family: 'Glegoo', serif;">
-          The K4 Studios Blog
+        <h1 class="page-title" style="font-family: 'Glegoo', serif;">Blog | Essays | Cornerstones</h1>
+        <p class="page-subtitle" style="font-family: 'Glegoo', serif;">
+          The K4 Studios Reeding Room: Conversations on fine art, visual literacy, and collecting.
         </p>
       </div>
     </section>
 
     <!-- Intro block -->
-    <section class="intro-text max-w-2xl mx-auto px-4 text-center mb-10">
-      <p class="text-lg leading-relaxed text-gray-700" set:html={autoLinkKeywordsInText('Inside the Frame is where I step out from behind the lens and share the stories, craft, and visual ideas behind the work — from individual image conversations to essays on seeing, collecting, and living with narrative fine art.', galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
-      <p class="text-sm text-gray-500 mt-4 italic">
-        <a href="/Other/Seeing" class="text-[#8b0000] hover:underline">Seeing</a> remains a short essay series on visual literacy and interpretation, now gathered here beside the image conversations and collector notes.
+    <section class="intro-text max-w-5xl mx-auto px-4 text-center mb-10">
+      <p class="text-lg leading-relaxed text-gray-700">
+        This is the reading room behind the work - a gathering place for image conversations, collector field notes, visual-literacy essays, and cornerstone articles on narrative fine art photography.
+      </p>
+      <p class="text-lg leading-relaxed text-gray-700 mt-4">
+        Here, the focus moves beyond what an image shows into what it asks: how it speaks, how it lingers, how it earns a place in a room, and how the viewer becomes part of the story.
       </p>
     </section>
 
     <section class="story-layout editorial-section inside-frame-section" aria-labelledby="inside-frame-heading" style="font-family: 'Glegoo', serif;">
       <div class="text-column inside-frame-column">
         <div class="editorial-section-head">
-          <h2 id="inside-frame-heading">Inside the Frame</h2>
+          <div class="section-title-rule-row" aria-hidden="true">
+            <span class="section-title-rule"></span>
+            <h2 id="inside-frame-heading">Inside the Frame</h2>
+            <span class="section-title-rule"></span>
+          </div>
           <p>Image conversations and artwork essays exploring composition, symbolism, and the choices that turn a single image into narrative fine art.</p>
+        </div>
+
+        <div class="inside-frame-series-intro">
+          <p>Inside the Frame is where I step out from behind the lens and share the stories, craft, and visual ideas behind the work — from individual image conversations to essays on seeing, collecting, and living with narrative fine art.</p>
+          <p><a href="/Other/Seeing">Seeing</a> remains a short essay series on visual literacy and interpretation, now gathered here beside the image conversations and collector notes.</p>
         </div>
 
         {featuredInsideFramePost && (
@@ -205,11 +216,13 @@ const galleryPaths = Object.keys(galleryDataMap);
               />
             </a>
             <div class="inside-frame-feature-copy">
-              <span class="inside-frame-label">Newest Addition</span>
+              <div class="inside-frame-feature-meta">
+                <span class="inside-frame-label">Newest Addition</span>
+                <span class="inside-frame-date">{featuredInsideFramePost.date}</span>
+              </div>
               <h3>
                 <a href={`/Blog/${featuredInsideFramePost.slug}`}>{featuredInsideFramePost.title}</a>
               </h3>
-              <p class="inside-frame-date">{featuredInsideFramePost.date}</p>
               <p set:html={autoLinkKeywordsInText(featuredInsideFramePost.excerpt, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
               <a href={`/Blog/${featuredInsideFramePost.slug}`} class="inside-frame-link">Read more →</a>
             </div>
@@ -228,11 +241,13 @@ const galleryPaths = Object.keys(galleryDataMap);
                 />
               </a>
               <div class="inside-frame-card-copy">
-                <span class="inside-frame-label">Image Essay</span>
+                <div class="inside-frame-card-meta">
+                  <span class="inside-frame-label">Image Essay</span>
+                  <span class="inside-frame-date">{post.date}</span>
+                </div>
                 <h3>
                   <a href={`/Blog/${post.slug}`}>{post.title}</a>
                 </h3>
-                <p class="inside-frame-date">{post.date}</p>
                 <p set:html={autoLinkKeywordsInText(post.excerpt, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
                 <a href={`/Blog/${post.slug}`} class="inside-frame-link">Read more →</a>
               </div>
@@ -243,10 +258,14 @@ const galleryPaths = Object.keys(galleryDataMap);
       </div>
     </section>
 
-    <section class="story-layout editorial-section" aria-labelledby="seeing-heading" style="font-family: 'Glegoo', serif;">
+    <section class="story-layout editorial-section seeing-section" aria-labelledby="seeing-heading" style="font-family: 'Glegoo', serif;">
       <div class="text-column">
         <div class="editorial-section-head">
-          <h2 id="seeing-heading">Seeing</h2>
+          <div class="section-title-rule-row" aria-hidden="true">
+            <span class="section-title-rule"></span>
+            <h2 id="seeing-heading">Seeing</h2>
+            <span class="section-title-rule"></span>
+          </div>
           <p>Short essays on visual literacy, ambiguity, tension, and the quiet work of learning how to look.</p>
         </div>
 
@@ -263,10 +282,14 @@ const galleryPaths = Object.keys(galleryDataMap);
       </div>
     </section>
 
-    <section class="story-layout editorial-section" aria-labelledby="collector-field-notes-heading" style="font-family: 'Glegoo', serif;">
+    <section class="story-layout editorial-section collector-field-notes-section" aria-labelledby="collector-field-notes-heading" style="font-family: 'Glegoo', serif;">
       <div class="text-column">
         <div class="editorial-section-head">
-          <h2 id="collector-field-notes-heading">Collector Field Notes</h2>
+          <div class="section-title-rule-row" aria-hidden="true">
+            <span class="section-title-rule"></span>
+            <h2 id="collector-field-notes-heading">Collector Field Notes</h2>
+            <span class="section-title-rule"></span>
+          </div>
           <p>Practical essays for people learning how to choose, display, understand, and live with serious art.</p>
         </div>
 
@@ -307,6 +330,14 @@ const galleryPaths = Object.keys(galleryDataMap);
   </main>
 
   <style>
+    .section-heading {
+      margin-bottom: 0;
+    }
+
+    .intro-text {
+      margin-top: .5rem;
+    }
+
     .editorial-section {
       margin-top: 3rem;
     }
@@ -315,6 +346,33 @@ const galleryPaths = Object.keys(galleryDataMap);
       text-align: center;
       margin: 0 auto 2rem;
       max-width: 720px;
+    }
+
+    .seeing-section .editorial-section-head {
+      max-width: 900px;
+    }
+
+    .collector-field-notes-section .editorial-section-head {
+      max-width: 900px;
+    }
+
+    .section-title-rule-row {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      margin-bottom: 0.55rem;
+    }
+
+    .section-title-rule-row h2 {
+      margin: 0;
+      white-space: nowrap;
+    }
+
+    .section-title-rule {
+      flex: 1;
+      height: 1px;
+      border-radius: 999px;
+      background: linear-gradient(to right, transparent, #70675b 18%, #70675b 82%, transparent);
     }
 
     .editorial-section-head h2 {
@@ -332,8 +390,50 @@ const galleryPaths = Object.keys(galleryDataMap);
       margin: 0;
     }
 
+    .seeing-section .editorial-section-head p {
+      max-width: 860px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .collector-field-notes-section .editorial-section-head p {
+      max-width: 860px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     .inside-frame-section {
-      max-width: 1040px;
+      max-width: 1180px;
+    }
+
+    .inside-frame-section .editorial-section-head {
+      max-width: 980px;
+    }
+
+    .inside-frame-series-intro {
+      max-width: 980px;
+      margin: -0.25rem auto 1rem;
+      text-align: center;
+    }
+
+    .inside-frame-series-intro p {
+      color: #666;
+      font-size: 0.94rem;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    .inside-frame-series-intro p + p {
+      margin-top: 0.45rem;
+    }
+
+    .inside-frame-series-intro a {
+      color: #8b0000;
+      text-decoration: none;
+    }
+
+    .inside-frame-series-intro a:hover {
+      text-decoration: underline;
     }
 
     .inside-frame-column {
@@ -354,9 +454,9 @@ const galleryPaths = Object.keys(galleryDataMap);
       grid-template-columns: 142px minmax(0, 1fr);
       gap: 1rem;
       align-items: center;
-      max-width: 760px;
+      max-width: 820px;
       margin: 0 auto 1rem;
-      padding: 0.65rem;
+      padding: 0.8rem 1rem;
       border: 1px solid #e6e1dc;
       border-radius: 8px;
       background: #faf9f7;
@@ -379,6 +479,26 @@ const galleryPaths = Object.keys(galleryDataMap);
 
     .inside-frame-feature-copy {
       min-width: 0;
+    }
+
+    .inside-frame-feature-meta,
+    .inside-frame-card-meta {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 0.75rem;
+      margin: 0 0 0.2rem;
+    }
+
+    .inside-frame-card-meta {
+      align-items: center;
+    }
+
+    .inside-frame-card-meta .inside-frame-date,
+    .inside-frame-feature-meta .inside-frame-date {
+      flex-shrink: 0;
+      margin: 0;
+      text-align: right;
     }
 
     .inside-frame-feature-copy h3 {
@@ -507,11 +627,15 @@ const galleryPaths = Object.keys(galleryDataMap);
 
     .compact-essay-card,
     .collector-note-card {
-      border: 1px solid #e8e6e3;
+      border: 1px solid #b89460;
       border-radius: 8px;
-      background: #faf9f7;
       padding: 1rem;
       text-align: left;
+    }
+
+    .collector-note-card {
+      background: #f0eeec;
+      background: color-mix(in srgb, #f8f6f4 95%, rgb(194, 188, 181) 1%);
     }
 
     .compact-essay-card h3,
@@ -697,6 +821,10 @@ const galleryPaths = Object.keys(galleryDataMap);
         margin-bottom: 1.5rem;
       }
 
+      .section-title-rule-row {
+        gap: 0.55rem;
+      }
+
       .compact-essay-grid,
       .collector-note-grid {
         grid-template-columns: 1fr;
@@ -727,6 +855,11 @@ const galleryPaths = Object.keys(galleryDataMap);
 
       .inside-frame-card-copy {
         padding: 1rem;
+      }
+
+      .inside-frame-feature-meta,
+      .inside-frame-card-meta {
+        gap: 0.5rem;
       }
 
       .foundational-essay {
