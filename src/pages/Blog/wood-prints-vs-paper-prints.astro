@@ -1,0 +1,504 @@
+---
+export const prerender = true;
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import BlogJsonLd from "@/components/blog/BlogJsonLd.astro";
+import LandingHeader from "@/components/Landing-Header.jsx";
+import SiteFooter from "@/components/Footer.astro";
+import { getStructuredData } from "@/components/utils/getStructuredData.ts";
+import { getSemanticImageUrl } from "@/utils/imageProxy.js";
+import "@/styles/global.css";
+
+const sectionPath = "/Blog/wood-prints-vs-paper-prints";
+const canonicalUrl = `https://www.k4studios.com${sectionPath}`;
+
+const pageTitle = "Wood Prints vs Paper Prints: How Surface Changes the Story | K4 Studios";
+const pageDescription = "A collector’s guide to wood prints vs paper prints — how surface, grain, texture, light, and material presence change the way fine art photography lives in a room.";
+const pageExcerpt = "A fine art print is not only an image. Paper, wood, canvas, acrylic, and other surfaces change how the work feels, how it holds light, and how it becomes part of a room.";
+const publishedDate = "2026-05-11";
+const engrainedPath = "/Other/K4-Select-Series/Engrained";
+
+const getProxySrc = (id: string, size: string = "l") => getSemanticImageUrl(id, {}, size);
+const getAbsoluteProxySrc = (id: string, size: string = "l") => getSemanticImageUrl(id, {}, size, { absolute: true });
+
+type ArticleImage = {
+  id?: string;
+  href: string;
+  src: string;
+  absoluteSrc?: string;
+  alt: string;
+  caption: string;
+};
+
+const heroImage: ArticleImage = {
+  href: engrainedPath,
+  src: "/images/Untitled-1_0018_Frame_Mockup_Set_16_11 cod.jpg.jpg",
+  absoluteSrc: "https://www.k4studios.com/images/Untitled-1_0018_Frame_Mockup_Set_16_11%20cod.jpg.jpg",
+  alt: "Fine art print displayed in a warm interior, showing how surface and presentation affect the room",
+  caption: "Surface is not an afterthought. It changes how the image becomes part of the room.",
+};
+
+const artExamples: ArticleImage[] = [
+  {
+    href: engrainedPath,
+    src: "/images/Untitled-1_0014_10b puff.jpg.jpg",
+    absoluteSrc: "https://www.k4studios.com/images/Untitled-1_0014_10b%20puff.jpg.jpg",
+    alt: "Large fine art print displayed in a warm collector interior",
+    caption: "A room receives paper, wood, and other surfaces differently before the subject is even considered.",
+  },
+  {
+    id: "i-J6Gdmr4",
+    href: engrainedPath,
+    src: getProxySrc("i-J6Gdmr4", "m"),
+    alt: "Engrained wood print of shadowed Western figures before a night train",
+    caption: "Engrained pieces use wood as atmosphere, not as a novelty surface.",
+  },
+  {
+    href: engrainedPath,
+    src: "/images/Untitled-1_0008_4sign.jpg.jpg",
+    absoluteSrc: "https://www.k4studios.com/images/Untitled-1_0008_4sign.jpg.jpg",
+    alt: "Western fine art print displayed in an interior setting",
+    caption: "Scale and surface change whether a print feels like a picture on a wall or an object in the room.",
+  },
+  {
+    id: "i-x6rrj3V",
+    href: engrainedPath,
+    src: getProxySrc("i-x6rrj3V", "m"),
+    alt: "Engrained wood print of a frontier woman aiming from a cabin window",
+    caption: "Selective control keeps grain from overwhelming faces, hands, and areas of visual focus.",
+  },
+  {
+    id: "i-xqbdC8P",
+    href: engrainedPath,
+    src: getProxySrc("i-xqbdC8P", "m"),
+    alt: "Engrained Civil War fine art wood print with historical atmosphere",
+    caption: "Some historical images ask for a surface that feels carried by time.",
+  },
+];
+
+const inlineImagesBySection: Record<number, ArticleImage> = {
+  1: artExamples[0],
+  3: artExamples[1],
+  4: artExamples[2],
+  6: artExamples[3],
+  11: artExamples[4],
+};
+
+const structuredData = getStructuredData({
+  type: "BlogPosting",
+  data: {
+    headline: "Wood Prints vs Paper Prints: How the Surface Changes the Story",
+    description: pageDescription,
+    url: canonicalUrl,
+    image: [
+      heroImage.absoluteSrc,
+      ...artExamples
+        .map(image => image.absoluteSrc || (image.id ? getAbsoluteProxySrc(image.id, "l") : ""))
+        .filter(Boolean)
+    ],
+    copyrightNotice: "© Wayne Heim",
+    author: {
+      "@type": "Person",
+      name: "Wayne Heim"
+    },
+    datePublished: publishedDate,
+    dateModified: publishedDate,
+    articleSection: "Collector Field Notes",
+    keywords: [
+      "wood prints vs paper prints",
+      "fine art wood prints",
+      "fine art photography prints",
+      "Engrained wood print series",
+      "paper prints",
+      "collector field notes"
+    ]
+  },
+  defaults: {
+    copyrightNotice: "© Wayne Heim",
+    license: "https://k4studios.com/copyright",
+    creditText: "Wayne Heim",
+    creatorName: "Wayne Heim",
+    creatorUrl: "https://k4studios.com/"
+  }
+});
+
+const meta = {
+  description: pageDescription,
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogType: "article",
+  ogUrl: canonicalUrl,
+  ogImage: heroImage.absoluteSrc,
+  ogImageAlt: heroImage.alt,
+  twitterTitle: pageTitle,
+  twitterDescription: pageDescription,
+  twitterUrl: canonicalUrl,
+  twitterImage: heroImage.absoluteSrc,
+  twitterCard: "summary_large_image"
+};
+
+const sections = [
+  {
+    heading: "The surface is not neutral",
+    paragraphs: [
+      `Every print surface has a voice. Paper can whisper. Wood can remember. Canvas can soften. Acrylic can polish. Metal can sharpen. None of these are automatically better than the others, but none of them are invisible. The surface becomes part of the artwork’s presence whether we acknowledge it or not.`,
+      `That means the question is not simply, “Which print type looks best?”`,
+      `The better question is: Which surface makes this image more itself?`,
+      `A quiet portrait may gain intimacy on paper. A weathered Western scene may gain physical gravity on wood. A clean architectural photograph may benefit from the sleekness of acrylic or metal. A soft landscape may feel more painterly on a textured surface, while a highly detailed image may ask for a surface that preserves precision.`,
+      `The wrong surface does not always ruin an image, but it can make the work speak in the wrong accent. It can make a serious piece feel decorative, a quiet piece feel glossy, or a rugged piece feel too polished for its own truth.`,
+    ],
+  },
+  {
+    heading: "What paper does best",
+    paragraphs: [
+      `Paper remains one of the most important homes for <a href="/Blog/what-is-western-fine-art-photography">fine art photography</a>. A good paper print can feel intimate, traditional, and serious. It asks the viewer to come closer. It does not usually announce itself as an object first. Instead, it lets tone, detail, shadow, and composition lead the experience.`,
+      `Paper is especially strong when an image depends on tonal range, delicate transitions, fine detail, or quiet atmosphere. Black-and-white work often benefits from the way paper holds shadow and midtone. Painterly photography can also feel graceful on paper because the surface does not compete with the image.`,
+      `There is also a history to paper. It connects photography to the print tradition, to the darkroom, to portfolios, books, archives, and museum walls. Even when the process is digital, a fine paper print can still carry that sense of careful photographic lineage.`,
+      `Paper also gives the collector flexibility. A framed print can move between rooms and interior styles with ease. It can feel refined, archival, and contemplative without calling attention to its own material presence. For many images, that quiet authority is exactly right.`,
+      `Paper is not the ordinary option.`,
+      `It is often the most elegant one.`,
+    ],
+  },
+  {
+    heading: "What wood brings into the room",
+    paragraphs: [
+      `Wood changes the conversation immediately. A wood print does not pretend to be neutral. It brings grain, warmth, age, imperfection, and physical presence into the image. It turns the photograph into an object with its own material life.`,
+      `That can be powerful when the subject already carries history, weather, landscape, or human endurance. Western art, historically themed photography, frontier scenes, Civil War imagery, old structures, weathered faces, and atmospheric landscapes can all deepen when the surface itself seems to belong to time.`,
+      `But wood can also go wrong. If the grain is used as a novelty, the image can become gimmicky. If the surface overwhelms the photograph, the story is lost. If everything becomes rustic simply because it is on wood, the work can slide into décor rather than fine art.`,
+      `The best wood prints do not use wood as decoration.`,
+      `They use wood as meaning.`,
+      `That distinction is important. Wood should not be chosen because it is trendy, rustic, or different. It should be chosen because the image needs what wood can bring: grain, warmth, surface history, edge, texture, and a sense that the material is participating in the final work.`,
+    ],
+  },
+  {
+    heading: "Not all wood prints are the same",
+    paragraphs: [
+      `A wood print is not one thing.`,
+      `Some wood photo prints are made through dye sublimation, where the image is transferred with heat into a specially coated surface. Others are made through UV printing, where ink is cured directly onto the panel. Both can produce beautiful results, but they do not treat the wood, the color, or the grain in the same way.`,
+      `That difference matters.`,
+      `When an image is printed onto raw or lightly prepared wood without a strong white base, the grain remains visible and active. Color settles into the character of the surface. Whites become the wood itself. The result can feel soft, aged, organic, and beautifully imperfect — but color strength, facial clarity, and fine detail can suffer if the grain takes over too much.`,
+      `At the other extreme, some wood-print processes use a bright white base coat across the entire image area before the color is printed. That white layer gives the color something clean to sit on. Detail sharpens. Reds, blues, skin tones, and highlights hold more accurately. But the tradeoff is just as clear: much of the wood’s natural voice gets buried beneath the white. The print may be technically cleaner, but the grain becomes quieter, sometimes nearly absent.`,
+      `That is the central problem with many wood prints.`,
+      `Either the wood dominates the photograph, or the photograph covers the wood.`,
+      `The <a href="/Other/K4-Select-Series/Engrained">Engrained series</a> grew out of refusing that tradeoff. After calling and searching for a way to achieve the balance these images demanded, we partnered with a local printer and spent months developing a custom five-layer UV print system. The goal was not to replace paper or claim that wood is always better. The goal was to create a surface for the images that needed grain, age, warmth, and history to become part of the final object.`,
+      `That control changes everything.`,
+      `Selective white ink protects the parts of the image that need clarity, structure, and visual strength. Other areas allow the grain to rise back into the picture and become part of the atmosphere. Color, grain, detail, and emotion are not left to fight each other. They are shaped into relationship.`,
+      `The wood is not a novelty surface. It is not hidden under a full white blanket. It is not allowed to wander through the image uncontrolled. It is brought into the work like another layer of story.`,
+      `The grain carries its own history. The image carries another. In the Engrained series, those two histories meet — the physical life of the wood and the imagined, historical, painterly world inside the photograph. The result is not simply an image printed on wood. It is a finished object where material and story are meant to belong to each other.`,
+      `For painterly historical fine art, that matters. The surface should not merely display the past. It should feel as though time has entered the piece.`,
+    ],
+  },
+  {
+    heading: "Grain should serve the image",
+    paragraphs: [
+      `Wood grain is not automatically beautiful inside a photograph. Sometimes it helps. Sometimes it interferes. The difference is whether the grain supports the image’s emotional structure or merely sits on top of it.`,
+      `In a strong wood print, the grain should feel as if it belongs to the world of the image. It may deepen a dusty sky, age a wall, warm a face, break up a shadow, or make the piece feel embedded in history. It should bring atmosphere without stealing authorship. The viewer should feel the material, but still enter the image.`,
+      `This is especially important with faces, hands, figures, and areas of visual focus. If the grain cuts through the wrong place too aggressively, it can distract from expression or gesture. If it is controlled carefully, it can become part of the mood while allowing the important parts of the image to hold.`,
+      `The question is not whether the grain is visible.`,
+      `The question is whether the grain has been invited into the story.`,
+    ],
+  },
+  {
+    heading: "When paper may be the better choice",
+    paragraphs: [
+      `Paper may be the stronger choice when the image needs quiet. A photograph with delicate tonal transitions, subtle facial expression, precise detail, or a more intimate emotional register may benefit from the calm authority of paper. Paper does not usually add much physical drama of its own, and that restraint can be valuable.`,
+      `If the image already carries a great deal of visual complexity, paper may give it room to breathe. If the composition relies on clean negative space, fine gradations, or exact color relationships, paper can preserve those relationships without introducing another texture into the conversation.`,
+      `Paper also works well when the collector wants a more classic presentation. A framed print can feel refined, archival, and flexible. It can move between rooms and interior styles more easily than a heavily material object, especially when the available <a href="/Other/Print-Options">print options</a> are chosen to support the image rather than overpower it.`,
+      `In other words, paper is not the lesser option. It is the quieter one. For some images, quiet is exactly the point.`,
+    ],
+  },
+  {
+    heading: "When wood may be the stronger choice",
+    paragraphs: [
+      `Wood may be the stronger choice when the image benefits from physical presence. Some photographs want to feel less like windows and more like artifacts. They want warmth, grain, edge, and a sense that the material has lived a life of its own.`,
+      `Western and historically themed images often respond well to this because the subject matter already carries ideas of age, place, weather, and endurance. A wood print can also work beautifully in a modern home because it brings warmth without requiring the whole room to become rustic. Against clean walls, simple furniture, and restrained interiors, wood can add human texture. It can soften a polished space while still feeling intentional and art-forward.`,
+      `But the wood has to earn its role. It should not be chosen only because “Western art looks good on wood.” That is too easy. The better question is whether the material deepens the particular image.`,
+      `Does the grain make the atmosphere richer? Does it support the subject? Does it make the piece feel more grounded, more storied, more alive? Does it help the room hold the work without needing extra decoration?`,
+      `When the answer is yes, wood can become more than a surface. It can become part of the image’s memory.`,
+    ],
+  },
+  {
+    heading: "The danger of novelty surfaces",
+    paragraphs: [
+      `Collectors should be wary of surfaces chosen only because they are different.`,
+      `Different is not the same as better. A photograph can be printed on almost anything now: metal, glass, acrylic, fabric, tile, reclaimed boards, and more. Some of those choices can be beautiful. Some can be appropriate. But novelty is not authorship.`,
+      `A surface should not be a trick that distracts from a weak image. It should not be a shortcut to personality. It should not make the viewer say, “That’s interesting,” while forgetting to care about what is actually in the frame.`,
+      `The surface must answer to the artwork.`,
+      `If it deepens the image, it belongs. If it merely advertises itself, it is in the way. This is one reason serious presentation matters. A collector should feel that the surface was chosen because the image required it, not because it looked clever on a sales table.`,
+    ],
+  },
+  {
+    heading: "How surface changes a room",
+    paragraphs: [
+      `The same image can change a room differently depending on its surface. A framed paper print often brings refinement. It can feel collected, archival, and contemplative. It may sit beautifully in a study, hallway, gallery wall, bedroom, or formal living space. It invites close looking and often rewards quieter placement.`,
+      `A wood print brings more object presence. It can hold a wall with less framing around it. It can warm a modern room, ground a rustic room, or create contrast in a clean interior. It may feel less like a picture hung on a wall and more like a finished piece occupying the space.`,
+      `Neither is automatically more serious. Seriousness comes from the alignment between image, surface, scale, and intent.`,
+      `That alignment is what you are really looking for as a collector. Not the trendiest surface. Not the loudest presentation. Not the option someone else told you was premium. The right surface is the one that helps the artwork live honestly in the room.`,
+    ],
+  },
+  {
+    heading: "Ask what the image wants to become",
+    paragraphs: [
+      `Before choosing between wood and paper, look at the image itself. Is it intimate or expansive? Quiet or forceful? Clean or weathered? Contemporary or historical? Does it depend on subtle tone, or does it want material texture? Should the viewer feel like they are looking through a window, or encountering an object? Should the print disappear into the image, or should the material become part of the encounter?`,
+      `These questions matter because collecting is not just buying the image you like. It is choosing the final form the image will take in your life.`,
+      `A good print surface supports the artwork.`,
+      `A great one completes it.`,
+      `That does not mean the choice has to be complicated. Often the image will tell you what it wants if you stop treating surface as an upgrade menu and start treating it as part of the art.`,
+    ],
+  },
+  {
+    heading: "The K4 view: material should carry story",
+    paragraphs: [
+      `For K4 Studios, surface is not a finishing option tacked onto the end of the process. It is part of the storytelling system.`,
+      `Some images belong on paper because they ask for quiet, tonal control, and traditional photographic intimacy. Others ask for more physical presence — something warmer, rougher, and more embedded in time. That is where wood becomes meaningful, especially when the image already carries weather, history, dust, character, or the atmosphere of <a href="/Blog/what-is-painterly-photography">painterly photography</a>.`,
+      `The Engrained series exists for that reason. Its custom five-layer UV process is designed to let color, grain, detail, and emotion negotiate with one another. Where the image needs strength, the process protects it. Where the story benefits from age, texture, and atmosphere, the wood is allowed to speak.`,
+      `The goal is never to make a photograph look rustic for the sake of rustic. The goal is to let the material deepen the emotional truth of the image. Wood grain should not decorate the work; it should become part of its atmosphere. Paper should not merely hold the file; it should preserve the silence, tone, and structure of the piece.`,
+      `The surface should help the viewer feel what the image already knows.`,
+    ],
+  },
+  {
+    heading: "The final test",
+    paragraphs: [
+      `When choosing between wood and paper, do not begin with the product option. Begin with the experience.`,
+      `What should this image feel like when you pass it every morning? What should it bring into the room? Warmth? Distance? Stillness? Grit? Memory? Elegance? Weather? Does it need the quiet authority of paper, or the physical presence of wood?`,
+      `The right choice is not about which surface is more impressive. It is about which one lets the image stay alive.`,
+      `A fine art print should not feel like a photograph placed onto a material at the end of the process. It should feel as though image and surface arrived at the same truth from different directions.`,
+      `That is when the print stops being a reproduction.`,
+      `It becomes a presence.`,
+    ],
+  },
+];
+
+let inlineImageCount = 0;
+const articleSections = sections.map((section, index) => {
+  const image = inlineImagesBySection[index];
+  const imageAlign = image ? (inlineImageCount++ % 2 === 0 ? "left" : "right") : undefined;
+
+  return {
+    ...section,
+    image,
+    imageAlign,
+  };
+});
+
+const previewImages = [];
+const previewPath = "/Galleries";
+const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-decoration: none;' onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Blog</a> › Wood Prints vs Paper Prints`;
+---
+
+<BaseLayout
+  title={pageTitle}
+  meta={meta}
+>
+  <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
+    <div class="drawer-mode">
+      <LandingHeader client:load breadcrumb={blogBreadcrumb} />
+    </div>
+
+    <section class="collector-hero">
+      <p class="collector-kicker">Collector Field Notes</p>
+      <h1>Wood Prints vs Paper Prints: How the Surface Changes the Story</h1>
+      <p class="collector-deck">{pageExcerpt}</p>
+    </section>
+
+    <figure class="collector-top-image">
+      <a href={heroImage.href}>
+        <img src={heroImage.src} alt={heroImage.alt} loading="eager" />
+      </a>
+      <figcaption>{heroImage.caption}</figcaption>
+    </figure>
+
+    <section class="collector-article-wrap">
+      <BlogJsonLd json={structuredData}>
+        <article class="collector-article">
+          <p>A photograph does not become finished simply because it has been printed. It becomes finished when the image finds the right body.</p>
+          <p>Sometimes that body is paper — quiet, archival, refined, and deeply connected to the history of fine art photography. Sometimes it is wood, where grain, surface, edge, and material presence become part of the experience. Sometimes another surface may be right for a different kind of image altogether.</p>
+          <p>This is not a contest between surfaces. Paper is not lesser. Wood is not automatically more serious. The real question is whether the surface helps the image become more itself.</p>
+          <p>That question matters because surface changes experience. It changes how light moves through the work, how shadow settles, how color breathes, how the image holds the wall, and how the room receives it. A photograph printed on quiet archival paper does not speak the same way as that same photograph printed directly onto wood. The subject may be the same. The emotional temperature is not.</p>
+          <p>For collectors, this is worth understanding. You are not only choosing what image to live with. You are choosing how that image enters the world.</p>
+
+          {articleSections.map((section) => (
+            <>
+              <h2>{section.heading}</h2>
+              {section.image && (
+                <figure class={`collector-inline-image collector-inline-image--${section.imageAlign}`}>
+                  <a href={section.image.href}>
+                    <img src={section.image.src} alt={section.image.alt} loading="lazy" />
+                  </a>
+                  <figcaption>{section.image.caption}</figcaption>
+                </figure>
+              )}
+              {section.paragraphs.map(paragraph => (
+                <p><Fragment set:html={paragraph} /></p>
+              ))}
+            </>
+          ))}
+        </article>
+      </BlogJsonLd>
+    </section>
+
+    <SiteFooter
+      previewImages={previewImages}
+      previewPath={previewPath}
+      title="Wood Prints vs Paper Prints"
+      label="Explore Engrained"
+      class="pt-12 pb-12"
+    />
+  </main>
+
+  <style>
+    .collector-hero {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 3rem 1rem 1.5rem;
+      text-align: center;
+    }
+
+    .collector-kicker {
+      color: #8e7a66;
+      font-size: 0.76rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      margin: 0 0 0.75rem;
+      text-transform: uppercase;
+    }
+
+    .collector-hero h1 {
+      font-size: clamp(2rem, 5vw, 3.15rem);
+      font-weight: 700;
+      line-height: 1.15;
+      margin: 0 0 1rem;
+    }
+
+    .collector-deck {
+      color: #5f5b57;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin: 0 auto;
+      max-width: 680px;
+    }
+
+    .collector-top-image {
+      max-width: 900px;
+      margin: 0 auto 2rem;
+      padding: 0 1rem;
+    }
+
+    .collector-top-image img {
+      border-radius: 8px;
+      display: block;
+      height: auto;
+      width: 100%;
+    }
+
+    .collector-top-image figcaption,
+    .collector-inline-image figcaption {
+      color: #777;
+      font-size: 0.84rem;
+      font-style: italic;
+      line-height: 1.5;
+      margin: 0.45rem 0 0;
+      text-align: center;
+    }
+
+    .collector-inline-image img {
+      border-radius: 8px;
+      display: block;
+      height: auto;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .collector-article-wrap {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    .collector-article {
+      font-size: 1.02rem;
+      line-height: 1.72;
+    }
+
+    .collector-article p {
+      margin: 0 0 1rem;
+    }
+
+    .collector-article p a {
+      color: #7a1f16;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.18em;
+    }
+
+    .collector-article p a:hover {
+      color: #4f130e;
+      text-decoration-thickness: 1.5px;
+    }
+
+    .collector-article p a:focus-visible {
+      outline: 2px solid #7a1f16;
+      outline-offset: 3px;
+    }
+
+    .collector-article h2 {
+      clear: both;
+      color: #242424;
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      font-size: 1.45rem;
+      font-weight: 700;
+      line-height: 1.35;
+      margin: 2.35rem 0 0.85rem;
+      text-align: left;
+    }
+
+    .collector-article h2::after {
+      content: "";
+      flex: 1 1 2rem;
+      height: 1px;
+      min-width: 2rem;
+      background: linear-gradient(to right, #d8d1c9, transparent);
+    }
+
+    .collector-inline-image {
+      max-width: 320px;
+      width: min(38%, 320px);
+      margin: 0.25rem 0 1rem;
+    }
+
+    .collector-inline-image--left {
+      float: left;
+      margin-right: 1.35rem;
+    }
+
+    .collector-inline-image--right {
+      float: right;
+      margin-left: 1.35rem;
+    }
+
+    @media (max-width: 520px) {
+      .collector-hero {
+        padding-top: 2rem;
+      }
+
+      .collector-article h2 {
+        gap: 0.65rem;
+      }
+
+      .collector-article h2::after {
+        min-width: 1rem;
+      }
+
+      .collector-inline-image,
+      .collector-inline-image--left,
+      .collector-inline-image--right {
+        float: none;
+        margin: 1rem auto 1.25rem;
+        max-width: 360px;
+        width: 100%;
+      }
+    }
+  </style>
+</BaseLayout>

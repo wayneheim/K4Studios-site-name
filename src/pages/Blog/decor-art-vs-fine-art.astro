@@ -1,0 +1,574 @@
+---
+export const prerender = true;
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import BlogJsonLd from "@/components/blog/BlogJsonLd.astro";
+import LandingHeader from "@/components/Landing-Header.jsx";
+import SiteFooter from "@/components/Footer.astro";
+import { getStructuredData } from "@/components/utils/getStructuredData.ts";
+import { getSemanticImageUrl } from "@/utils/imageProxy.js";
+import "@/styles/global.css";
+
+const sectionPath = "/Blog/decor-art-vs-fine-art";
+const canonicalUrl = `https://www.k4studios.com${sectionPath}`;
+
+const pageTitle = "Decor Art vs Fine Art: What Is the Difference? | K4 Studios";
+const pageDescription = "A collector-focused guide to the difference between decor art and fine art — how authorship, intent, voice, story, and emotional endurance change what an image brings into a room.";
+const pageExcerpt = "Decor art completes a space. Fine art gives the space a voice. The difference is not always price, subject, or medium — it is authorship, intent, depth, and whether the work keeps asking to be seen.";
+const publishedDate = "2026-05-11";
+
+const westernNarrativesPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color";
+const cowboyPortraitsPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color";
+const engrainedPath = "/Other/K4-Select-Series/Engrained";
+
+const getProxySrc = (id: string, size: string = "l") => getSemanticImageUrl(id, {}, size);
+const getAbsoluteProxySrc = (id: string, size: string = "l") => getSemanticImageUrl(id, {}, size, { absolute: true });
+
+type ArticleImage = {
+  id?: string;
+  href: string;
+  src: string;
+  absoluteSrc?: string;
+  alt: string;
+  caption: string;
+  className?: string;
+};
+
+const heroImage: ArticleImage = {
+  href: engrainedPath,
+  src: "/images/Untitled-1_0016_11 lake.jpg.jpg",
+  absoluteSrc: "https://www.k4studios.com/images/Untitled-1_0016_11%20lake.jpg.jpg",
+  alt: "Lake landscape fine art print displayed in a quiet room, giving the space a calm visual voice",
+  caption: "Decor can complete a room. Fine art can change what the room says.",
+};
+
+const artExamples: ArticleImage[] = [
+  {
+    href: engrainedPath,
+    src: "/images/Untitled-1_0001_3 church.jpg.jpg",
+    absoluteSrc: "https://www.k4studios.com/images/Untitled-1_0001_3%20church.jpg.jpg",
+    alt: "Historical fine art print displayed in a warm interior setting",
+    caption: "The room matters, but the artwork should not become only a design solution.",
+  },
+  {
+    id: "i-fCG2nm8",
+    href: cowboyPortraitsPath,
+    src: getProxySrc("i-fCG2nm8", "m"),
+    alt: "Three older cowboys seated together in a painterly Western portrait",
+    caption: "A portrait can hold a room when it feels like presence, not filler.",
+  },
+  {
+    id: "i-5TGTZ9P",
+    href: westernNarrativesPath,
+    src: getProxySrc("i-5TGTZ9P", "m"),
+    alt: "Rifleman seated against a rocky hillside aiming a long gun while his horse stands behind him",
+    caption: "Narrative art asks what happened before the frame and what may happen next.",
+  },
+  {
+    href: engrainedPath,
+    src: "/images/Untitled-1_0014_10b puff.jpg.jpg",
+    absoluteSrc: "https://www.k4studios.com/images/Untitled-1_0014_10b%20puff.jpg.jpg",
+    alt: "Fine art print displayed in a warm interior with soft atmosphere and quiet wall presence",
+    caption: "A peaceful image can still have authorship if it keeps returning something over time.",
+    className: "collector-inline-image--feature",
+  },
+  {
+    id: "i-mrHbrNb",
+    href: engrainedPath,
+    src: getProxySrc("i-mrHbrNb", "m"),
+    alt: "Engrained wood print of a cowboy pouring coffee in warm frontier light",
+    caption: "The strongest work keeps speaking after the room is already finished.",
+  },
+];
+
+const inlineImagesBySection: Record<number, ArticleImage> = {
+  1: artExamples[0],
+  3: artExamples[1],
+  5: artExamples[2],
+  8: artExamples[3],
+  13: artExamples[4],
+};
+
+const structuredData = getStructuredData({
+  type: "BlogPosting",
+  data: {
+    headline: "Decor Art vs Fine Art: What Is the Difference?",
+    description: pageDescription,
+    url: canonicalUrl,
+    image: [
+      heroImage.absoluteSrc,
+      ...artExamples
+        .map(image => image.absoluteSrc || (image.id ? getAbsoluteProxySrc(image.id, "l") : ""))
+        .filter(Boolean)
+    ],
+    copyrightNotice: "© Wayne Heim",
+    author: {
+      "@type": "Person",
+      name: "Wayne Heim"
+    },
+    datePublished: publishedDate,
+    dateModified: publishedDate,
+    articleSection: "Collector Field Notes",
+    keywords: [
+      "decor art vs fine art",
+      "difference between decor art and fine art",
+      "fine art collecting",
+      "western fine art",
+      "narrative art",
+      "collector field notes"
+    ]
+  },
+  defaults: {
+    copyrightNotice: "© Wayne Heim",
+    license: "https://k4studios.com/copyright",
+    creditText: "Wayne Heim",
+    creatorName: "Wayne Heim",
+    creatorUrl: "https://k4studios.com/"
+  }
+});
+
+const meta = {
+  description: pageDescription,
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogType: "article",
+  ogUrl: canonicalUrl,
+  ogImage: heroImage.absoluteSrc,
+  ogImageAlt: heroImage.alt,
+  twitterTitle: pageTitle,
+  twitterDescription: pageDescription,
+  twitterUrl: canonicalUrl,
+  twitterImage: heroImage.absoluteSrc,
+  twitterCard: "summary_large_image"
+};
+
+const sections = [
+  {
+    heading: "Decor serves the room",
+    paragraphs: [
+      `Decor art often begins with the space.`,
+      `There is an empty wall. A missing color. A need for balance above the couch, bed, mantel, console, hallway table, or office desk. The image is selected because it helps solve that design problem. It may be beautiful, pleasant, stylish, calming, dramatic, or perfectly suited to the room.`,
+      `That is useful. It has value. A room without visual harmony can feel unfinished, and decor art can bring comfort and coherence into a home. Not every object has to carry emotional weight. Not every wall needs to challenge the viewer. Sometimes a room simply needs softness, order, or a place for the eye to rest.`,
+      `But decor usually serves the space first. Its job is to support the room’s existing mood, not change the emotional center of it. It often works best when it does not ask too much of the viewer. It blends, coordinates, softens, echoes, or completes.`,
+      `Fine art may do some of those things too, but that is not where its value begins.`,
+      `Fine art begins with the work itself.`,
+    ],
+  },
+  {
+    heading: "Fine art begins with intent",
+    paragraphs: [
+      `Fine art is made with a deeper purpose than filling space.`,
+      `That purpose may be emotional, visual, historical, symbolic, psychological, spiritual, narrative, formal, or some mixture of all of those things. The artist is not simply producing an attractive image. The artist is making decisions meant to shape how the viewer sees, feels, questions, remembers, or returns.`,
+      `Intent does not mean the artwork has to explain itself. In fact, some of the strongest fine art refuses easy explanation. But it should feel authored. It should feel like someone made choices with consequence: what to reveal, what to hide, where to place the figure, how to control light, how much silence to leave, what kind of tension to preserve, and what kind of beauty to trust.`,
+      `That is different from an image designed mainly to fit a trend.`,
+      `Fine art carries evidence of a mind behind it. A point of view. A reason for existing beyond surface appeal. It may still be beautiful in a room. It may still work with the furniture, the light, and the architecture. But it is not dependent on those things to matter.`,
+      `A decorative image may need the room to complete it.`,
+      `Fine art can stand there before the room is ready.`,
+    ],
+  },
+  {
+    heading: "The subject is not the difference",
+    paragraphs: [
+      `A common mistake is thinking the subject decides whether something is decor or fine art.`,
+      `It does not.`,
+      `A landscape can be decor. A landscape can be fine art. A Western image can be decor. A Western image can be fine art. A portrait can be decorative filler, or it can hold a room with the force of another human presence. The difference is not the label placed on the subject. The difference is what the work does with that subject.`,
+      `A cowboy hat is not meaning. A horse is not depth. A mountain is not transcendence. A weathered face is not automatically wisdom.`,
+      `Subject matter opens the door. Authorship decides whether anything meaningful happens inside.`,
+      `This is especially important with familiar genres like <a href="/Blog/what-is-western-art">Western art</a>. The symbols are powerful, but they are also easy to flatten. Cowboys, horses, open land, dust, rifles, hats, frontier buildings, and weathered faces can become costume if the work has no deeper pressure.`,
+      `Fine art does not merely show the symbol.`,
+      `It asks what the symbol costs.`,
+    ],
+  },
+  {
+    heading: "Some images whisper. Some confront.",
+    paragraphs: [
+      `Fine art does not have one volume.`,
+      `Some pieces speak softly. They invite quiet admiration, slow looking, and private return. They do not demand attention from across the room, but they reward anyone willing to stay with them. Their power is in restraint.`,
+      `Other pieces confront. They hold the wall with more force. They announce themselves. They ask a sharper question of the room and of the person standing in front of them.`,
+      `Both can be serious. The question is not whether the work is loud or quiet. The question is whether it has a voice.`,
+      `A decorative image may look pleasant and still say very little. A fine art image may be quiet and still change the air. It may command attention not through volume, but through presence — through the sense that something unresolved is waiting inside it.`,
+      `That is the voice you are choosing to bring home.`,
+    ],
+  },
+  {
+    heading: "Decor answers quickly",
+    paragraphs: [
+      `Decor usually wants to be understood quickly.`,
+      `That is part of its function. It should create an immediate impression: calm, warmth, polish, rustic charm, modern edge, softness, brightness, drama. It often works through quick recognition and quick compatibility. You look at it and understand why it is there.`,
+      `Fine art may also catch you quickly, but it should not be exhausted quickly.`,
+      `A fine art image can be beautiful at first glance and still withhold something. It can be clear enough to invite you in and unresolved enough to keep you there. It may leave a question in the room. It may change as the light changes, as your mood changes, as your life changes, as you learn how to look at it.`,
+      `That delay matters.`,
+      `An image that gives everything away in the first ten seconds may decorate well, but it may not endure as art. The strongest work does not simply announce itself. It lingers.`,
+    ],
+  },
+  {
+    heading: "Narrative art asks the viewer to listen",
+    paragraphs: [
+      `Some images are not finished by looking alone.`,
+      `They have to be listened to.`,
+      `A <a href="/Blog/what-is-narrative-photography">narrative image</a> carries a before and an after. It does not simply show a subject; it implies a world. Something happened before the frame, and something may happen after it. The viewer senses pressure beyond the visible moment and begins to participate.`,
+      `That participation is one of the great differences between decoration and fine art. Decor usually wants to be understood quickly. Fine art often keeps part of itself unresolved. It lets silence do some of the work. It asks the viewer to lean in, not because the image is unclear, but because it is alive enough to keep opening.`,
+      `That is why some images feel as if they speak with a voice. They do not explain everything. They leave enough room for memory, imagination, unease, admiration, or recognition to answer back.`,
+      `A decorative Western image might say, “Here is a cowboy.”`,
+      `A narrative Western artwork might make you wonder what he has done, what he has lost, what he is waiting for, or what he knows that no one else in the room knows yet.`,
+      `One gives you recognition.`,
+      `The other gives you involvement.`,
+    ],
+  },
+  {
+    heading: "Craft matters, but craft is not enough",
+    paragraphs: [
+      `Fine art should be well made. That does not always mean polished, perfect, or technically showy, but the craft should serve the work. Composition, light, color, tone, surface, scale, printing, framing, and presentation all matter because they shape the experience.`,
+      `But craft alone does not make fine art.`,
+      `A technically excellent image can still feel empty. A perfectly sharp photograph can still have nothing to say. A large print can still be small in spirit. A polished surface can still hide weak authorship.`,
+      `The real test is whether the craft deepens the feeling, not whether it calls attention to itself.`,
+      `In strong <a href="/Blog/what-is-western-fine-art-photography">fine art photography</a>, technique becomes part of the work’s presence. You may notice the atmosphere first, or the gesture, or the silence, or the way the image seems to hold its breath. Only later do you begin to understand how carefully the piece was built.`,
+      `Craft should open the door.`,
+      `It should not stand in the doorway asking to be admired.`,
+    ],
+  },
+  {
+    heading: "A theme fades. A voice deepens.",
+    paragraphs: [
+      `Themes can be useful. They give a room direction. They help people organize taste. Western, rustic, modern, traditional, coastal, industrial, vintage, minimalist — all of these can guide design choices.`,
+      `But a theme is not the same as a voice.`,
+      `A theme says what category something belongs to. A voice says why it matters.`,
+      `That difference becomes clearer over time. A themed image may feel satisfying when the room first comes together, but once the novelty fades, it can become part of the background. It did its job. It matched. It completed the look.`,
+      `Fine art can deepen with age because the relationship deepens. Not just because of markets, scarcity, or provenance, though those things may matter. It deepens because the viewer keeps living with it. The image gathers memory. It becomes tied to rooms, seasons, conversations, mornings, departures, returns, and quiet moments no one else sees.`,
+      `A theme may tell people what you like.`,
+      `A voice tells them what you are willing to live beside.`,
+    ],
+  },
+  {
+    heading: "Price does not decide the question",
+    paragraphs: [
+      `Expensive decor exists. Affordable fine art exists.`,
+      `Price can reflect materials, edition structure, print quality, scale, framing, artist recognition, rarity, or demand. Those things matter, but price alone cannot tell you whether an image has depth.`,
+      `A costly object may still be decorative if its main purpose is to signal taste, status, or style. A modest print may carry real artistic presence if it has authorship, feeling, and endurance.`,
+      `For collectors, this is important. Do not let price do your looking for you. It can provide context, but it cannot replace attention.`,
+      `Ask better questions. Does the work feel authored? Does it carry a point of view? Does it keep returning something after the first glance? Does the image deepen as you spend time with it? Does it become part of the room’s inner life, or merely part of its design?`,
+      `Those questions reveal more than the price tag.`,
+    ],
+  },
+  {
+    heading: "Fine art changes the room by changing the viewer",
+    paragraphs: [
+      `Decor changes the wall.`,
+      `Fine art changes the relationship between the wall, the room, and the person standing there.`,
+      `That may sound grand, but it happens quietly. A strong piece can change how a room feels before anyone says a word. It can slow the eye. It can introduce gravity. It can bring silence into a busy space, edge into a polished one, warmth into a cold one, memory into a new one.`,
+      `More importantly, it can change the person living with it. Not all at once. Not dramatically. But through return.`,
+      `You pass it in the morning. You see it differently at night. You notice a gesture you missed. A shadow feels heavier than before. The face in the image seems less like a subject and more like a presence. The story shifts because you have shifted.`,
+      `That is when art becomes part of a life rather than part of a layout.`,
+    ],
+  },
+  {
+    heading: "What you choose becomes part of what you say",
+    paragraphs: [
+      `Art in a home is never neutral.`,
+      `The pieces you choose become part of your public language and your private inheritance. They say something to visitors, yes, but they also say something back to you. They become part of what your children see, what guests remember, what the room holds, and what remains after ordinary decoration has faded into the background.`,
+      `A theme says what you like.`,
+      `Fine art says what you value.`,
+      `It can reveal your taste, your temperament, your ideals, your sense of beauty, your appetite for mystery, your relationship to history, and your willingness to live with something that does not answer too quickly.`,
+      `Over time, the right artwork becomes more than a moment on the wall. It becomes an extension of your voice. It becomes part of what you choose to say and, in some quiet way, part of what you pass on to those willing to listen.`,
+      `So ask the harder question:`,
+      `What will your art say about you?`,
+    ],
+  },
+  {
+    heading: "The room should not be the highest authority",
+    paragraphs: [
+      `A room matters. Scale matters. Color matters. Placement matters. The art should not fight the space for no reason. But the room should not become the highest authority.`,
+      `If every decision is reduced to matching, coordinating, and filling, the art never gets to be more than useful. It becomes obedient. It becomes part of the room’s service staff.`,
+      `Fine art deserves a little more respect than that.`,
+      `Sometimes the right piece will not match perfectly. Sometimes it will introduce a note the room did not already contain. Sometimes it will bring age into a clean space, shadow into a bright one, grit into a polished one, or story into a quiet one.`,
+      `That tension can be exactly why the room comes alive.`,
+      `The question is not whether the art disappears into the room.`,
+      `The question is whether the room becomes more honest because the art is there.`,
+    ],
+  },
+  {
+    heading: "How to tell what you are really looking at",
+    paragraphs: [
+      `If you are trying to decide whether an image is decor art or fine art, slow down and ask what happens after recognition.`,
+      `Do you only understand the subject, or do you feel a point of view? Does the image rely on trend, or does it carry authorship? Does it match a room, or can it stand on its own? Does it give you the whole answer immediately, or does it keep opening? Does the surface, scale, and presentation deepen the work, or merely package it?`,
+      `Most importantly, do you return?`,
+      `Return is the great test — the quiet answer to <a href="/Other/Seeing/what-makes-an-image-last">what makes an image last</a>. Not hype. Not category. Not price. Not whether someone else tells you it is important.`,
+      `If the image keeps calling you back, something is happening.`,
+      `That is where collecting begins.`,
+    ],
+  },
+  {
+    heading: "The K4 view: art should outlive the first glance",
+    paragraphs: [
+      `At K4 Studios, the goal is not to make images that simply fit a wall. The goal is to make work that keeps a wall alive.`,
+      `That means story matters. Atmosphere matters. Authorship matters. The unresolved moment matters. A Western image should not rely only on the fact that it contains Western subjects. A painterly photograph should not depend only on surface effect. A fine art print should not be reduced to a product option.`,
+      `The work should keep asking to be seen.`,
+      `It should carry enough structure to hold the eye, enough mystery to leave room for the viewer, and enough emotional truth to remain present after the first impression fades. It should become part of the room without being swallowed by it.`,
+      `Decor can finish a space beautifully.`,
+      `Fine art does something stranger and more lasting.`,
+      `It keeps the space unfinished in the best possible way — still breathing, still asking, still alive.`,
+    ],
+  },
+  {
+    heading: "What voice will you speak with?",
+    paragraphs: [
+      `The difference between decor art and fine art is not that one belongs in homes and the other belongs in museums. Serious art belongs in daily life. It belongs where people pass it in the morning, argue beneath it, gather near it, grow older with it, and discover it again when the light changes.`,
+      `Decor can finish a space beautifully. Fine art can do something stranger and more lasting. It can give the space a voice.`,
+      `So the question is not only whether the image matches the room.`,
+      `The question is whether it speaks with the kind of presence you want near your life.`,
+      `What voice will you speak with?`,
+      `What do you have to say?`,
+    ],
+  },
+];
+
+let inlineImageCount = 0;
+const articleSections = sections.map((section, index) => {
+  const image = inlineImagesBySection[index];
+  const imageAlign = image ? (inlineImageCount++ % 2 === 0 ? "left" : "right") : undefined;
+
+  return {
+    ...section,
+    image,
+    imageAlign,
+  };
+});
+
+const previewImages = [];
+const previewPath = "/Galleries";
+const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-decoration: none;' onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Blog</a> › Decor Art vs Fine Art`;
+---
+
+<BaseLayout
+  title={pageTitle}
+  meta={meta}
+>
+  <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
+    <div class="drawer-mode">
+      <LandingHeader client:load breadcrumb={blogBreadcrumb} />
+    </div>
+
+    <section class="collector-hero">
+      <p class="collector-kicker">Collector Field Notes</p>
+      <h1>Decor Art vs Fine Art: What Is the Difference?</h1>
+      <p class="collector-deck">{pageExcerpt}</p>
+    </section>
+
+    <figure class="collector-top-image">
+      <a href={heroImage.href}>
+        <img src={heroImage.src} alt={heroImage.alt} loading="eager" />
+      </a>
+      <figcaption>{heroImage.caption}</figcaption>
+    </figure>
+
+    <section class="collector-article-wrap">
+      <BlogJsonLd json={structuredData}>
+        <article class="collector-article">
+          <p>Not every image on a wall has a voice.</p>
+          <p>Some images are chosen to soften a room, balance a color palette, fill an empty space, or make a home feel finished. There is nothing wrong with that. Rooms need beauty, warmth, rhythm, and rest.</p>
+          <p>That is the honest role of decor art. It serves the room.</p>
+          <p>Fine art asks for something more. It does not merely complete a space; it speaks into it. Sometimes that voice is quiet enough to feel like memory. Sometimes it is bold enough to confront the room. Sometimes it lingers in the background until one day you realize it has been shaping the atmosphere all along.</p>
+          <p>The difference between decor art and fine art is not always price, size, subject, or medium. It is voice. It is authorship. It is whether the image still has something to say after the room is finished.</p>
+          <p>Decor can make a wall look complete.</p>
+          <p>Fine art can make a room feel awake.</p>
+
+          {articleSections.map((section) => (
+            <>
+              <h2>{section.heading}</h2>
+              {section.image && (
+                <figure class={`collector-inline-image collector-inline-image--${section.imageAlign} ${section.image.className ?? ""}`}>
+                  <a href={section.image.href}>
+                    <img src={section.image.src} alt={section.image.alt} loading="lazy" />
+                  </a>
+                  <figcaption>{section.image.caption}</figcaption>
+                </figure>
+              )}
+              {section.paragraphs.map(paragraph => (
+                <p><Fragment set:html={paragraph} /></p>
+              ))}
+            </>
+          ))}
+        </article>
+      </BlogJsonLd>
+    </section>
+
+    <SiteFooter
+      previewImages={previewImages}
+      previewPath={previewPath}
+      title="Decor Art vs Fine Art"
+      label="Explore Galleries"
+      class="pt-12 pb-12"
+    />
+  </main>
+
+  <style>
+    .collector-hero {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 3rem 1rem 1.5rem;
+      text-align: center;
+    }
+
+    .collector-kicker {
+      color: #8e7a66;
+      font-size: 0.76rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      margin: 0 0 0.75rem;
+      text-transform: uppercase;
+    }
+
+    .collector-hero h1 {
+      font-size: clamp(2rem, 5vw, 3.15rem);
+      font-weight: 700;
+      line-height: 1.15;
+      margin: 0 0 1rem;
+    }
+
+    .collector-deck {
+      color: #5f5b57;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin: 0 auto;
+      max-width: 680px;
+    }
+
+    .collector-top-image {
+      max-width: 900px;
+      margin: 0 auto 2rem;
+      padding: 0 1rem;
+    }
+
+    .collector-top-image img {
+      border-radius: 8px;
+      display: block;
+      height: auto;
+      width: 100%;
+    }
+
+    .collector-top-image figcaption,
+    .collector-inline-image figcaption {
+      color: #777;
+      font-size: 0.84rem;
+      font-style: italic;
+      line-height: 1.5;
+      margin: 0.45rem 0 0;
+      text-align: center;
+    }
+
+    .collector-inline-image img {
+      border-radius: 8px;
+      display: block;
+      height: auto;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .collector-article-wrap {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    .collector-article {
+      font-size: 1.02rem;
+      line-height: 1.72;
+    }
+
+    .collector-article p {
+      margin: 0 0 1rem;
+    }
+
+    .collector-article p a {
+      color: #7a1f16;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.18em;
+    }
+
+    .collector-article p a:hover {
+      color: #4f130e;
+      text-decoration-thickness: 1.5px;
+    }
+
+    .collector-article p a:focus-visible {
+      outline: 2px solid #7a1f16;
+      outline-offset: 3px;
+    }
+
+    .collector-article h2 {
+      clear: both;
+      color: #242424;
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      font-size: 1.45rem;
+      font-weight: 700;
+      line-height: 1.35;
+      margin: 2.35rem 0 0.85rem;
+      text-align: left;
+    }
+
+    .collector-article h2::after {
+      content: "";
+      flex: 1 1 2rem;
+      height: 1px;
+      min-width: 2rem;
+      background: linear-gradient(to right, #d8d1c9, transparent);
+    }
+
+    .collector-inline-image {
+      max-width: 320px;
+      width: min(38%, 320px);
+      margin: 0.25rem 0 1rem;
+    }
+
+    .collector-inline-image--left {
+      float: left;
+      margin-right: 1.35rem;
+    }
+
+    .collector-inline-image--right {
+      float: right;
+      margin-left: 1.35rem;
+    }
+
+    .collector-inline-image--feature {
+      max-width: 380px;
+      width: min(44%, 380px);
+    }
+
+    .collector-inline-image--feature img {
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    @media (max-width: 520px) {
+      .collector-hero {
+        padding-top: 2rem;
+      }
+
+      .collector-article h2 {
+        gap: 0.65rem;
+      }
+
+      .collector-article h2::after {
+        min-width: 1rem;
+      }
+
+      .collector-inline-image,
+      .collector-inline-image--left,
+      .collector-inline-image--right {
+        float: none;
+        margin: 1rem auto 1.25rem;
+        max-width: 360px;
+        width: 100%;
+      }
+
+      .collector-inline-image--feature {
+        max-width: 390px;
+      }
+    }
+  </style>
+</BaseLayout>
