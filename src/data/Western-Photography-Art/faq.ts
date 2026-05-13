@@ -1,4 +1,4 @@
-export const westernArtFAQ = [
+﻿export const westernArtFAQ = [
   {
     q: "What is Western photography art?",
     a: [

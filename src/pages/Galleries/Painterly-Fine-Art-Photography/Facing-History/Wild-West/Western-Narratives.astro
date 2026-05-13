@@ -175,14 +175,17 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${pa
               {section.subhead && <h3 class="slide-in-left" set:html={autoLinkKeywordsInText(section.subhead, galleryDatas, featheredImages, galleryPaths, cowboySemantic, Astro.url.pathname)} />}
               {section.tagline && <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInText(section.tagline, galleryDatas, featheredImages, galleryPaths, cowboySemantic, Astro.url.pathname)} />}
 
-              {/* Mobile-only Themes Accordion - appears as graphic divider */}
+              {/* Single SSR theme block: mobile in-flow, desktop moved to sidebar after hydration. */}
               {index === 0 && (
-                <details class="mobile-themes-accordion md:hidden">
+                <>
+                <span data-theme-block-home></span>
+                <details class="mobile-themes-accordion responsive-theme-block" data-theme-block>
                   <summary>Featured Themes</summary>
                   <div class="themes-content">
                     <ThemeBlock client:load galleryKey={dataSectionPath} />
                   </div>
                 </details>
+                </>
               )}
 
               {section.paragraphs?.map((para, i) => (
@@ -231,9 +234,7 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${pa
       </div>
 
       <div class="sidebar-column hidden md:block">
-        <div class="theme-block-wrap reveal-on-scroll" style="margin-bottom: 1.5rem; position: relative; z-index: 500;">
-          <ThemeBlock client:load galleryKey={dataSectionPath} />
-        </div>
+        <div class="theme-block-wrap reveal-on-scroll" data-theme-block-target style="margin-bottom: 1.5rem; position: relative; z-index: 500;"></div>
         <div class="sample-fade reveal-on-scroll">
           <LandingRightImages
             client:load
@@ -275,6 +276,24 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${pa
         });
         els.forEach(el => observer.observe(el));
       }
+
+      const themeBlock = document.querySelector("[data-theme-block]");
+      const themeHome = document.querySelector("[data-theme-block-home]");
+      const themeTarget = document.querySelector("[data-theme-block-target]");
+      const placeThemeBlock = () => {
+        if (!themeBlock || !themeHome || !themeTarget) return;
+        if (window.matchMedia("(min-width: 768px)").matches) {
+          themeBlock.setAttribute("open", "");
+          themeTarget.appendChild(themeBlock);
+        } else if (themeBlock.previousElementSibling !== themeHome) {
+          themeBlock.removeAttribute("open");
+          themeHome.after(themeBlock);
+        } else {
+          themeBlock.removeAttribute("open");
+        }
+      };
+      placeThemeBlock();
+      window.addEventListener("resize", placeThemeBlock, { passive: true });
 
       // NEW: auto-expand FAQ box if a question is clicked
       const faqToggle = document.getElementById("faq-toggle");
@@ -637,6 +656,20 @@ ul li::marker {
   transition-delay: 1s;
 }
 
+  @media (min-width: 768px) {
+    .responsive-theme-block {
+      border: 0;
+      margin: 0;
+    }
+
+    .responsive-theme-block summary {
+      display: none;
+    }
+
+    .responsive-theme-block:not([open]) .themes-content {
+      display: block;
+    }
+  }
 
   /* Prevent tooltip clipping for ThemeBlock */
   .theme-block-wrap,

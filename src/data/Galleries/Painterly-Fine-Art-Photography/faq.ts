@@ -38,9 +38,8 @@ export const facingFAQ = [
   {
     q: "What are One-Image Movies™?",
     a: [
-      "A One-Image Movie™ is Wayne Heim’s signature narrative framework — a single photograph crafted to carry the emotional weight of a complete story.",
-      // CHANGED: tightened language slightly, no meaning change
-      "Rather than offering answers, these images create tension and implication: a moment suspended between what just happened and what must happen next. This approach is central to Wayne’s painterly style and historically themed work.",
+      "A One-Image Movie™ is Wayne Heim’s signature narrative-art framework — a finished presentation where photographic image, title, authored writing, unresolved implication, and viewer participation lock together.",
+      "Rather than offering answers, these works create tension and implication: a moment suspended between what just happened and what must happen next, with the final unwritten story completed in the viewer’s mind. This approach is central to Wayne’s painterly style and historically themed work.",
       `You’ll find One-Image Movies™ throughout the site, particularly in <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Facing History</a>, the historically themed fine art photography collection, and <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits">Western Cowboy Portraits</a>.`
     ],
   },

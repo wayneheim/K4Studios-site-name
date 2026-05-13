@@ -1,15 +1,17 @@
 export const oneImageMoviePage = {
   title: "What Is a One-Image Movie™?",
-  subtitle: "A New Medium of Fine Art Storytelling by Wayne Heim",
+  subtitle: "Wayne Heim’s K4 Studios Narrative-Art Format",
 
   sections: [
     // 1. OPENING
     {
-      subhead: "A Story Told in a Single Frame",
+      subhead: "The Doorway Into the Form",
       paragraphs: [
-        `A One-Image Movie™ is more than a photograph. It is the kind of image that reaches for you before you have time to stand back from it, carrying the pressure of a larger story inside a single frame. Wayne Heim created the concept to describe a kind of fine art storytelling that does not simply depict a scene, but pulls you toward it like a lost moment from an unwritten film.`,
-        `<strong>What Is a One-Image Movie™ (Definition)</strong><br />A One-Image Movie™ is a single photograph charged with enough narrative weight to feel like a whole story pressing through one frame. Rather than closing the moment, it opens it—through gesture, atmosphere, and unresolved tension—until the viewer is drawn inside to complete what the image has set in motion.`,
-        `A One-Image Movie™ is not a technique to be applied, but a condition an image reaches when story, atmosphere, and implication lock together. Each one carries its own before and after. Nothing moves, yet everything feels in motion. These images are built to collapse the distance between viewer and story until looking gives way to presence.`
+        `<strong>What Is a One-Image Movie™?</strong><br />A One-Image Movie™ may first appear to be a single photograph charged with enough narrative weight to feel like a whole story pressing through one frame. That is the doorway into the form — but not the whole experience.`,
+        `Wayne Heim’s One-Image Movies™ are finished narrative-art presentations built from a photographic image, title, authored poetic writing, unresolved implication, and viewer participation. The image does not deliver a closed story. The title and writing do not explain it away. Together, they provide the charged pieces of an unwritten scene.`,
+        `The final “movie” is assembled in the viewer’s mind. Memory, instinct, emotion, and lived experience become part of the work, shaping a story no two viewers complete in exactly the same way.`,
+        `A narrative photograph can suggest a story. A Wayne Heim One-Image Movie™ asks the viewer to help complete one.`,
+        `A One-Image Movie™ is not a technique applied to a photograph, nor is it simply any image that suggests a story. It is the completed K4 Studios narrative-art format that emerges when image, title, authored writing, atmosphere, implication, and viewer participation lock together. Nothing moves, yet everything feels in motion. The movement happens inside the viewer.`
       ]
     },
 
@@ -18,7 +20,7 @@ export const oneImageMoviePage = {
       subhead: "The Origin of the One-Image Movie™",
       paragraphs: [
         `The idea began as a challenge: how do you tell a complete story without dialogue, motion, or sequence? As Wayne developed his painterly photographic style—grounded in illustration, cinema, and pictorialism—he realized that a single image could feel like a living scene, paused in the middle of a narrative we instinctively understand.`,
-        `The term "One-Image Movie" emerged naturally—a description not of a technique, but of an experience. These works feel like the frame that comes right *before* or *after* something important… a hinge moment suspended in time.`
+        `The term "One-Image Movie" emerged as Wayne Heim’s name for this assembled narrative-art experience, not as a filter, production technique, or generic category of image. It identifies the particular K4 Studios format where image, title, authored story, atmosphere, restraint, and viewer imagination operate together to create the sense of a larger unwritten scene.`
       ]
     },
 
@@ -26,15 +28,16 @@ export const oneImageMoviePage = {
     {
       subhead: "What Makes a One-Image Movie™ Different?",
       bullets: [
-        "A complete cinematic moment in a single still frame.",
+        "A branded narrative-art format rather than a generic narrative image.",
+        "A finished narrative-art presentation where image, title, authored writing, and viewer participation operate together.",
         "Character-driven storytelling built on gesture, posture, and expression.",
         "Lighting and composition inspired by classical painting and modern cinema.",
-        "Narrative cues that hint at unseen events before and after the image.",
+        "Narrative cues that hint at unseen events before and after the image without closing explanation.",
         "Painterly depth that transforms realism into mythology.",
         "Emotional ambiguity—enough clarity to anchor the story, enough mystery to invite interpretation."
       ],
       paragraphs: [
-        `A One-Image Movie™ isn't defined by subject matter. It can surface in Western work, historical work, portraiture, landscapes, or contemporary images. What matters is the pressure inside the frame: the feeling that a full story is leaning against a single moment. It belongs to cinematic photography without needing motion to do the work. These qualities cannot be assembled mechanically; they arrive when the image carries more than it reveals.`
+        `Many photographs can suggest a story. That alone does not make them One-Image Movies™. Wayne Heim’s One-Image Movies™ identify a specific K4 Studios narrative-art format: a finished work where image, title, authored poetic text, unresolved implication, and viewer participation operate together. The work does not hand the viewer a closed explanation. It creates an unresolved narrative condition, and the viewer steps into that space to complete the story differently each time.`
       ]
     },
 
@@ -43,10 +46,11 @@ export const oneImageMoviePage = {
       subhead: "When an Image Becomes a One-Image Movie™",
       bullets: [
         "The moment sits suspended between before and after.",
+        "The title and authored writing deepen rather than merely describe.",
         "The figures carry a history that is not fully shown.",
         "Tension exists without requiring visible action.",
         "Light and atmosphere carry emotional consequence.",
-        "The image suggests continuation beyond the frame."
+        "The viewer is required to complete the unwritten story."
       ],
       paragraphs: [
         `When a One-Image Movie™ emerges, these conditions tend to be present. They are not ingredients or steps, but signs that the image has crossed a threshold and begun carrying more life than it can fully show. This is the same pressure toward implication that shapes <a href="/Narrative-Western-Art">Narrative Western Art</a>, where the story is carried as much by what the image withholds as by what it reveals.`
@@ -58,7 +62,7 @@ export const oneImageMoviePage = {
       subhead: "The Psychology Behind a Single-Frame Narrative",
       paragraphs: [
         `The mind does not stay still in front of an image charged with tension, atmosphere, and character. It starts moving. It fills the silence. It feels around the edges for what happened before and what might come next. One-Image Movies™ lean into that instinct, giving the viewer just enough to enter the moment without explaining it away.`,
-        `That is why no two people fully experience the same One-Image Movie™ in the same way. The image reaches out, but the viewer brings the rest. Memory, emotion, and history complete the circuit.`,
+        `That is why no two people fully experience the same One-Image Movie™ in the same way. The image reaches out, but the viewer brings the rest. Memory, emotion, instinct, and lived history complete the circuit. The viewer is the final ingredient.`,
         `When it works, the image stops being something you see and becomes something you feel. The distance collapses. Observation gives way to experience.`,
         `This becomes even more powerful when image and story are paired with restraint. The experience starts to behave less like traditional photography and more like music. You are not led to a fixed meaning. You are pulled into a felt one. The image does not resolve. It stays with you.`,
         `This relationship between image, text, and viewer is explored further in <a href="/Blog/hearing-the-art">Hearing the Art</a>, a conversation on how visual storytelling can shift from observation to participation.`
@@ -69,9 +73,9 @@ export const oneImageMoviePage = {
     {
       subhead: "The Literary Engine Behind the One-Image Movie™",
       paragraphs: [
-        `The One-Image Movie™ is not only visual—it is literary. Every image in the K4 Studios universe carries with it a written chapter story, crafted to ignite the imagination and pull the viewer into the moment. These narratives do not explain the image; they activate it. They provide just enough spark to turn curiosity into emotional investment.`,
-        `Each story is balanced with precision—a whisper instead of a lecture, a clue instead of a map. The goal is to let the viewer feel the moment breathe around them. Why is his coat torn? What happened three seconds before this? Why does that man have only one boot? These unanswered questions are intentional, designed to draw the viewer in feet first.`,
-        `This story-first philosophy ensures that every One-Image Movie™ functions like a psychological portal. The viewer is no longer a passive observer; they become a witness, an accomplice, or the author of the conclusion to "their story." The artwork becomes a collaboration between artist and audience—a cinematic moment fused with the oxygen of imagination.`
+        `A One-Image Movie™ is not the photograph alone. It is the relationship between the photograph, the title, the written story, and the viewer’s own interpretation. Remove any one of those elements and the format changes.`,
+        `The image opens the door. The title turns the handle. The writing lights the room. The viewer decides what happened before and what happens next. These narratives do not explain the image; they activate it, deepening uncertainty and emotional investment rather than closing the scene.`,
+        `This story-first philosophy ensures that every One-Image Movie™ functions like a psychological portal. The viewer is no longer a passive observer; they become the final participant in a viewer-completed story. The artwork becomes a collaboration between artist and audience, a finished narrative-art presentation fused with the oxygen of imagination.`
       ]
     },
 
@@ -102,8 +106,8 @@ export const oneImageMoviePage = {
     {
       subhead: "A New Medium, Not a Technique",
       paragraphs: [
-        `One-Image Movies™ aren't created through a preset, filter, or effect. They are built through storytelling discipline: character study, painterly toning, compositional flow, atmospheric depth, and narrative restraint.`,
-        `The goal is timelessness—not mimicry. Not retro. Not cinematic cosplay. But imagery that feels like visual literature.`
+        `A One-Image Movie™ is not image-to-video conversion, animation, or a still frame from a motion picture. It does not point back to a finished film or fixed storyline. It points forward into an unwritten story that each viewer completes differently through the image, title, authored writing, and lived experience.`,
+        `One-Image Movies™ are not created through a preset, filter, or effect. They are built through storytelling discipline: character study, painterly toning, compositional flow, atmospheric depth, authored writing, and narrative restraint. The goal is timelessness, not mimicry: a branded narrative-art format that feels like visual literature.`
       ]
     },
 
@@ -124,10 +128,10 @@ export const oneImageMoviePage = {
     {
       subhead: "When One-Image Movies™ Become Chapters — The Picture Show",
       paragraphs: [
-        `While a One-Image Movie™ stands on its own, some stories demand more than a single frame. This is where the <strong><a href="/Other/Shows">Picture Show</a></strong> emerges—the expanded narrative form of the One-Image Movie™ philosophy.`,
-        `<strong><a href="/Other/Shows">Picture Shows</a></strong> take the experience even further. Wayne stitches multiple One-Image Movies™ into themed presentations—cinematic journeys where each frame acts as a chapter in a larger visual narrative. These aren't slideshows; they are short-form cinematic experiences built with pacing, atmosphere, character development, and narrative arcs.`,
-        `Wayne enhances each <strong><a href="/Other/Shows">Picture Show</a></strong> with the written chapter stories that accompany the images, and in many cases, with voice-over narration and carefully chosen sound design. The result is immersive storytelling that blurs the line between fine art, cinema, and oral tradition—a multi-sensory journey into the world of the image.`,
-        `Where the One-Image Movie™ invites the viewer to complete the story, the <strong><a href="/Other/Shows">Picture Show</a></strong> invites them to travel through it—audio-narrated, but never constrained. It is the natural evolution of Wayne's storytelling vocabulary and a cornerstone of K4 Studios' future.`
+        `While a One-Image Movie™ stands on its own, some stories demand more than a single frame. This is where the <strong><a href="/Other/Shows">Picture Show</a></strong> emerges as a guided presentation of individual One-Image Movies™.`,
+        `The Picture Show is not the One-Image Movie™ itself. It is a guided presentation of individual One-Image Movies™. Each still work remains the primary narrative-art unit; the presentation simply invites the viewer deeper into the image, title, story, and unresolved experience already present in the work.`,
+        `Wayne can enhance a <strong><a href="/Other/Shows">Picture Show</a></strong> with written chapter stories, voice-over narration, and sound design, but those layers do not replace the primary form. They are presentation, not the narrative-art unit itself.`,
+        `Where the One-Image Movie™ invites the viewer to complete the story, the <strong><a href="/Other/Shows">Picture Show</a></strong> invites them to travel among multiple viewer-completed stories without closing any one of them.`
       ]
     },
 

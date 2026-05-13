@@ -30,8 +30,8 @@ export const cowboyFAQ = [
   {
     q: "What are One-Image Movies™ in cowboy photography?",
     a: [
-      "A One-Image Movie™ is Wayne Heim’s term for a single photographic frame designed to carry the emotional weight of a larger cinematic narrative.",
-      "In cowboy photography, each image functions like a still from an unseen Western film — rich with implication, atmosphere, and unresolved story."
+      "A One-Image Movie™ is Wayne Heim’s term for a K4 Studios narrative-art format built from image, title, authored writing, unresolved implication, and viewer participation.",
+      "In cowboy photography, the still image carries frontier atmosphere and pressure, but the work reaches completion only when the viewer steps into the unwritten story those elements open."
     ],
   },
 

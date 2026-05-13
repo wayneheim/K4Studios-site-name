@@ -536,6 +536,29 @@ div.mini-drawer-nav div.mini-nav-item {
   }
 }
 
+.image-detail-image-wrap {
+  position: relative;
+}
+
+.image-price-signature {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  z-index: 2;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.72rem;
+  font-style: italic;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.55),
+    0 0 8px rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+}
+
 @media (max-width: 768px) {
   h1 {
     font-size: 80%;          /* scale down to 80% of normal size */

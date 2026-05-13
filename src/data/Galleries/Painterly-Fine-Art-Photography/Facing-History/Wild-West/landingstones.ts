@@ -51,12 +51,13 @@ export const landingWestern = {
     {
       title: "Western Narratives",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives",
-      thumb: "/images/tombstones/cowboy-c-ts.jpg",
+      thumb: "/images/tombstones/Cowboy-j-ts.webp",
     },
     {
       title: "Western Portraits",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits",
-      thumb: "/images/tombstones/cowboy-bw-ts.jpg",
+      imageId: "i-3SxncXS",
+      thumb: "/img/i-3SxncXS/s.jpg",
     },
     {
       title: "Native Americans",

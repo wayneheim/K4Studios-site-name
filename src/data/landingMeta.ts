@@ -103,15 +103,15 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
   },
 
   "/Other/One-Image-Movie": {
-    ogTitle: "What Is a One-Image Movie? – Fine Art Storytelling by Wayne Heim",
-    ogDescription:
-      "A One-Image Movie is a single photograph constructed to function as a complete narrative moment—suggesting a beginning, middle, and end within one frame.",
+      ogTitle: "Wayne Heim’s One-Image Movies™ | K4 Studios Narrative Art",
+      ogDescription:
+        "Wayne Heim’s One-Image Movies™ are K4 Studios narrative-art presentations combining photographic image, title, authored story, unresolved implication, and viewer interpretation to create a cinematic experience completed in the viewer’s imagination.",
     ogImage: "/og/one-image-movie.jpg",
     ogType: "article",
     twitterCard: "summary_large_image",
-    twitterTitle: "What Is a One-Image Movie? – Wayne Heim",
-    twitterDescription:
-      "Discover One-Image Movies: narrative photography and single-frame cinematic storytelling by Wayne Heim.",
+      twitterTitle: "Wayne Heim’s One-Image Movies™ | K4 Studios",
+      twitterDescription:
+        "Wayne Heim’s One-Image Movies™ join image, title, authored writing, unresolved implication, and viewer participation into a finished narrative-art presentation.",
     twitterImage: "/og/one-image-movie.jpg",
   },
 
@@ -325,14 +325,14 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
       "Western Narratives – Wayne Heim",
     ogDescription:
       "Narrative Western photography by Wayne Heim: cinematic frontier images built around implication, atmosphere, and the pressure of the larger story beyond the frame.",
-    ogImage: "/images/tombstones/cowboy-c-ts.jpg",
+    ogImage: "/images/tombstones/Cowboy-j-ts.webp",
     ogType: "website",
     twitterCard: "summary_large_image",
     twitterTitle:
       "Western Narratives – Narrative Western Photography",
     twitterDescription:
       "Narrative Western art and cinematic frontier photography by Wayne Heim.",
-    twitterImage: "/images/tombstones/cowboy-c-ts.jpg",
+    twitterImage: "/images/tombstones/Cowboy-j-ts.webp",
     keywords: "narrative Western photography, Western narratives, narrative Western art, cinematic Western photography, Western storytelling photography, frontier narrative art, Wayne Heim",
   },
 

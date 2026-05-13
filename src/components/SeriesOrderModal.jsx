@@ -3,19 +3,17 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { CircleX, Info } from "lucide-react";
 import { SERIES_DEFINITIONS, SERIES_ICONS, getEffectiveSeries, getSeriesPricingList, fetchPricingConfig, loadSeriesRegistry, getExcludeSizesFromRegistry } from "../data/seriesDefinitions.js";
+import { getSpecialtyPrintSeries } from "../data/pricing/printSeries.js";
 import { normalizeImageSrc } from "../utils/imageProxyCore.js";
 
 // Import config at build time as fallback (auto-synced, no manual copy needed)
 import pricingConfigFallback from "../data/pricingConfig.json";
 
-// Engrained info copy (not in pricingConfig since it has its own flow)
+// Engrained has its own order flow, but its public copy lives with shared print series data.
+const [ENGRAINED_SERIES] = getSpecialtyPrintSeries();
 const ENGRAINED_INFO = {
-  title: "Engrained Series",
-  body: `The Engrained Series represents Wayne Heim's most distinctive collector offering—painterly fine art and Western photography uniquely printed on Baltic birch wood using a signature UV layering process.
-
-Each piece transforms the natural grain of the wood into an integral part of the artwork, creating depth and warmth impossible to achieve on traditional media. The result is a one-of-a-kind presentation where every grain tells its own story alongside Wayne's vision.
-
-Limited to editions of 50 or fewer, Engrained pieces arrive ready to hang with a float mount presentation on 0.5" thick birch panels.`
+  title: ENGRAINED_SERIES.name,
+  body: ENGRAINED_SERIES.description,
 };
 
 // Info overlay component (museum label style) - fixed position to float above modal

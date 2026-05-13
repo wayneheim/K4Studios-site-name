@@ -34,8 +34,8 @@ export const facingFAQ = [
   {
     q: "What is a One-Image Movie™?",
     a: [
-      "A One-Image Movie™ is Wayne Heim’s signature narrative photography style — a single photographic frame designed to carry the emotional weight and cinematic tension of an entire film.",
-      "Each image suggests both the moment before and the moment after, allowing the viewer to complete the story through imagination. It is storytelling through still imagery—motion, emotion, and meaning compressed into one frame."
+      "A One-Image Movie™ is Wayne Heim’s signature narrative-art format, built from photographic image, title, authored writing, unresolved implication, and viewer participation rather than the image alone.",
+      "The still work suggests the moment before and the moment after, but the final unwritten movie is completed through the viewer’s imagination, memory, and lived experience."
     ],
   },
 

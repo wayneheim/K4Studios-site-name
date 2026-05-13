@@ -1451,7 +1451,7 @@ export default function ChapterGalleryBase({
                       <div className="relative flex flex-row justify-center chapter-image-container-mobile" style={isMobile ? { maxWidth: '100%', overflowX: 'hidden', width: '100%' } : { maxWidth: isCurrentLandscape ? desktopLandscapeFrameMaxWidth : '575px', width: 'fit-content' }}> 
                         {/* Image container with absolutely positioned collector notes button outside/right of image edge */}
                         <div
-                          className="relative flex justify-center items-center chapter-image-container-mobile"
+                          className="relative flex justify-center items-center chapter-image-container-mobile image-detail-image-wrap"
                           style={{ width: 'fit-content', maxWidth: '100%', margin: '0 auto' }}
                         >
                           <img
@@ -1518,6 +1518,11 @@ export default function ChapterGalleryBase({
                               }
                             }}
                           />
+                          {currentImageData && (
+                            <span className="image-price-signature">
+                              © W. Heim | Fine art prints from $25
+                            </span>
+                          )}
                           {/* Desktop Collector Notes button absolutely positioned outside/right of image edge */}
                           {!isMobile && galleryData[currentIndex]?.notes?.trim() && (
                             <button

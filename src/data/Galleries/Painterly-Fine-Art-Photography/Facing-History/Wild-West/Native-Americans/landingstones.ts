@@ -71,14 +71,16 @@ export const landingWestern = {
     {
       title: "Narrative Works",
       subtitle: "Color",
-      href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color?theme=na-narrative-color-images&view=grid",
+      href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color/all?theme=na-narrative-color-images&view=grid",
+      dockHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color/all?theme=na-narrative-color-images&view=grid",
       imageId: "i-7hD9CCh",
       thumb: "/img/i-7hD9CCh/s.jpg",
     },
     {
       title: "Narrative Works",
       subtitle: "B/W",
-      href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White?theme=na-narrative-b-w-images&view=grid",
+      href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White/all?theme=na-narrative-b-w-images&view=grid",
+      dockHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White/all?theme=na-narrative-b-w-images&view=grid",
       imageId: "i-Z54nXZm",
       thumb: "/img/i-Z54nXZm/s.jpg",
     },

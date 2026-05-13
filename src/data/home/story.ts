@@ -80,7 +80,7 @@ export const painterlyStory = [
     list: [
       "Painterly Fine Art Photography — textures and tones shaped like brushstrokes born from light.",
       "Traditional Fine Art Photography — classical composition, honest light, and enduring craft.",
-      "Cinematic Storytelling — a single frame carrying the emotional weight of an unseen film.",
+      "Cinematic Storytelling — image, title, authored writing, and viewer imagination carrying the pressure of an unwritten story.",
       "Historical & Western Authenticity — real dust, real people, real moments breathing through the work."
     ],
     closingParagraph: "This isn’t photography that competes. It conquers—quietly, confidently, like a man who knows the weight of his boots."
@@ -90,9 +90,9 @@ export const painterlyStory = [
   {
     subhead: "What Is a One-Image Movie™?",
     paragraphs: [
-      "A One-Image Movie™ is Wayne Heim's signature artistic form: a single photographic moment crafted with the emotional depth, cinematic tension, and narrative arc of an entire film.",
-      "Each One-Image Movie™ carries its own sense of motion and momentum. The viewer is naturally pulled into imagining what happened just before the shutter clicked—and what might unfold afterward.",
-      "Rooted in the Pictorialist movement and shaped by decades of illustration experience, this approach fuses painterly depth with story-driven composition. These aren’t static images; they are cinematic worlds compressed into a single breath."
+      "A One-Image Movie™ is Wayne Heim’s signature narrative-art form: a finished presentation built from photographic image, title, authored writing, unresolved implication, and viewer participation.",
+      "Each One-Image Movie™ carries its own sense of motion and momentum, but the movie is not fixed in the image alone. The viewer is pulled into completing what happened before, what may follow, and what it means.",
+      "Rooted in the Pictorialist movement and shaped by decades of illustration experience, this approach fuses painterly depth with story-driven composition, authored text, and lived interpretation. The final unwritten story is minted in the viewer’s mind."
     ]
   },
 

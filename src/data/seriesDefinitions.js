@@ -2,90 +2,35 @@
 // Used by: SeriesOrderModal, GalleryEditorPro, editionState.js
 // PRICING: Managed in pricingConfig.json via Edit Pricing button in EditorPro
 
+import {
+  formatPrice as formatSharedPrice,
+  getSeriesDefinitionMap,
+  getSeriesIcons,
+  getSeriesPricingEntries,
+} from "./pricing/printSeries.js";
+
 // Series Icons — Unicode symbols for each series level
-export const SERIES_ICONS = {
-  sketch: "✽",       // Six petaled asterisk
-  foundation: "✯",   // Outlined star
-  chronicle: "⌘",    // Place of interest / command
-  legend: "❖",       // Black diamond minus white X
-  engrained: "◈",    // White diamond containing black small diamond
-};
-
-export const SERIES_DEFINITIONS = {
-  sketch: {
-    label: "Sketch",
-    icon: "✽",
-    description: "Open edition proof prints on archival matte paper.",
-    showEdition: false,
-    fulfillment: "contact",
-    buttonLabel: "Contact Us to Order",
-    sortOrder: 1,
-  },
-  foundation: {
-    label: "Foundation",
-    icon: "✯",
-    description: "Open edition archival prints in collector-friendly sizes.",
-    showEdition: false,
-    fulfillment: "contact",
-    buttonLabel: "Contact Us to Order",
-    sortOrder: 2,
-  },
-  chronicle: {
-    label: "Chronicle",
-    icon: "⌘",
-    description: "Limited edition of 100, unsigned, museum-quality archival print.",
-    showEdition: true,
-    editionLimit: 100,
-    fulfillment: "contact", // mailto for now
-    buttonLabel: "Contact Us to Order",
-    sortOrder: 3,
-  },
-  legend: {
-    label: "Legend",
-    icon: "❖",
-    description: "Ultra-limited edition of 12, signed, museum-grade canvas.",
-    showEdition: true,
-    editionLimit: 12,
-    fulfillment: "contact",
-    buttonLabel: "Contact Us to Order",
-    sortOrder: 4,
-  },
-  // Engrained — has its own modal, not managed in standard series flow
-  engrained: {
-    label: "Engrained",
-    icon: "◈",
-    description: "One-of-a-kind wood-burned artwork on premium hardwood.",
-    showEdition: true,
-    editionLimit: 50,
-    fulfillment: "contact",
-    buttonLabel: "Inquire",
-    sortOrder: 99, // Not shown in standard modal (has its own flow)
-  },
-};
-
 // Helper to format price for display
+export const SERIES_ICONS = getSeriesIcons();
+
+export const SERIES_DEFINITIONS = getSeriesDefinitionMap();
+
 export function formatPrice(amount) {
-  if (!amount && amount !== 0) return "Call";
-  return `$${amount.toLocaleString()}`;
+  return formatSharedPrice(amount);
 }
 
 // Get pricing entries as array of {size, price} for a series
 // Returns null if no pricing available (display "Call")
 // If excludeSizes is provided, filters out excluded sizes for that series
 export function getSeriesPricingList(seriesKey, pricingData, excludeSizes = null) {
-  const pricing = pricingData?.[seriesKey];
-  if (!pricing || Object.keys(pricing).length === 0) return null;
-  
-  // Get excluded sizes for this series (if any)
-  const excluded = excludeSizes?.[seriesKey] || [];
-  
-  return Object.entries(pricing)
-    .filter(([size]) => !excluded.includes(size))
-    .map(([size, price]) => ({
-      size,
-      price,
-      display: `${size}: $${price.toLocaleString()}`,
-    }));
+  const pricingEntries = getSeriesPricingEntries(seriesKey, pricingData, excludeSizes);
+  if (pricingEntries.length === 0) return null;
+
+  return pricingEntries.map(({ size, price, displayPrice }) => ({
+    size,
+    price,
+    display: `${size}: ${displayPrice}`,
+  }));
 }
 
 // Fetch runtime config (pricing + all copy) from server or static fallback

@@ -35,8 +35,8 @@ export const bwWesternFAQ = [
   {
     q: "What are One-Image Movies™?",
     a: [
-      "A One-Image Movie™ is a single photographic frame designed to carry the emotional weight of a larger, implied narrative — functioning like a still from an unseen film.",
-      "In black and white, this approach gains additional force. The absence of color creates space for imagination, allowing the viewer to complete the story through interpretation."
+      "A One-Image Movie™ is Wayne Heim’s narrative-art format, built from photographic image, title, authored writing, unresolved implication, and viewer participation rather than the frame alone.",
+      "In black and white, this approach gains additional force. The absence of color creates more space for imagination, allowing the viewer to complete the unwritten story through interpretation and lived association."
     ],
   },
 

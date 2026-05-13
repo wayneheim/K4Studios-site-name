@@ -20467,7 +20467,7 @@ export const galleryData = [
     "id": "i-wdF6Hw3",
     "title": "Day in Review",
     "description": "A lone cowboy pauses beside a wagon as the last light of day settles across the prairie, warm sunset tones catching the edges of his hat and weathered coat. The painterly Western photograph captures a quiet frontier moment-part reflection, part endurance-where the long work of the trail gives way to evening stillness. Rich golden light, historic atmosphere, and cinematic composition evoke the timeless mood of Western art while preserving the authenticity of narrative-driven fine art photography. As painterly Western photography, it links horse, rider, motion, and landscape to the larger doorway language of fine art Western photography. Its unresolved story structure makes it a natural fit for narrative Western art.\n\n© Wayne Heim",
-    "alt": "Cowboy standing beside frontier wagon at sunset on open prairie, warm golden hour light in painterly Western photograph.",
+    "alt": "Lone cowboy paused beside a frontier wagon at sunset on open prairie, warm golden-hour light and long evening shadows in painterly Western photography.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wdF6Hw3/1/LksDQhMZLgf7TRVdTB26w6Gbc4ZP9LbpDGG6fTfQB/XL/_WHO7929-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wdF6Hw3/1/LksDQhMZLgf7TRVdTB26w6Gbc4ZP9LbpDGG6fTfQB/XL/_WHO7929-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wdF6Hw3/1/LksDQhMZLgf7TRVdTB26w6Gbc4ZP9LbpDGG6fTfQB/XL/_WHO7929-Edit-XL.jpg",
@@ -20529,7 +20529,7 @@ export const galleryData = [
   },
   {
     "id": "i-mqDfN5z",
-    "title": "Color of Conviction",
+      "alt": "Young Native American girl standing above a seated figure on layered stone, traditional clothing and open-sky light emphasizing elevation and quiet exchange.",
     "description": "An old prospector kneels at the edge of a quiet frontier stream, patiently working his pan through the cold water as tall grass sways behind him. Time seems to slow in the moment-every movement deliberate, every swirl of the pan another small wager against doubt. As narrative Western art, it expands the gallery beyond cowboy myth into the emotional, domestic, and moral stakes of frontier life. The painterly photography layer keeps the color, light, and atmosphere aligned with the K4 doorway pages.\n\n© Wayne Heim",
     "alt": "Elderly gold prospector with a long beard kneeling beside a creek while panning for gold in a Western frontier setting.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-mqDfN5z/0/L2r8cg8mNj42GqbVR95PRhK9CtjMkZ5ptkRJ84FsK/XL/_WHO0893-Edit-XL.jpg",
@@ -20578,7 +20578,7 @@ export const galleryData = [
   },
   {
     "id": "i-g9mC35L",
-    "title": "Over My Dead Body: Frontier Stand-off",
+      "alt": "Three men spread across a constricted rocky hillside in a tense frontier standoff, with stone, sage, and distance amplifying the painterly Western tension.",
     "description": "An older cowboy stands inside a frontier cabin, rifle raised as he peers through a weathered window toward the uncertain yard beyond. Warm morning light spills across rough timber walls and worn wool, creating a dramatic interplay of shadow and glow that heightens the tension of the moment. This painterly Western portrait blends historic atmosphere with cinematic storytelling, capturing the quiet resolve of a lone frontiersman preparing to defend what's his. The warm color and shadow give the scene a painterly photography bridge between saloon atmosphere, cowboy art, and narrative Western art.\n\n© Wayne Heim",
     "alt": "Color Western portrait of an older cowboy holding a rifle at a cabin window, braced in anticipation.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-g9mC35L/3/MkZJSPBDHNrPcwxskbXwLMp9wHGZfkh458CM398dD/XL/old%20west%20cowboy%20photo_O1H0377-Edit-Edit-2-XL.jpg",

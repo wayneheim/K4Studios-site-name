@@ -2260,7 +2260,7 @@ fineart: {
 // --- ONE-IMAGE MOVIE DEFINITION PAGE ---
 oneImageMovie: {
   path: "/Other/One-Image-Movie",
-  def: "A One-Image Movie is a fully realized moment of cinema—compressed into a single frame—where character, mood, and narrative arc exist all at once.",
+  def: "A One-Image Movie is Wayne Heim’s name for a finished K4 Studios narrative-art presentation where image, title, authored writing, unresolved implication, atmosphere, and viewer participation operate together to create an unwritten story in the viewer’s mind.",
 
   landingPhrases: [
     // Primary targets — highest intent

@@ -6,7 +6,7 @@ export const storySections: DoorwayStorySection[] = [
     paragraphs: [
       'The frame holds because it refuses to settle. A before and after are both present, but neither is handed to you.',
       'In <a href="/wayne-heim-western-fine-art-photography" style="color:#8b5a2b; text-decoration:underline;">Wayne Heim\'s</a> work, gesture, spacing, and directional light carry that pressure without drifting into illustration or explanation.',
-      'That is the <em>One-Image Movie</em>: a still frame that keeps moving in the viewer\'s head.',
+      'That is the doorway into the <em>One-Image Movie</em>: the image starts the scene, but title, authored writing, atmosphere, and viewer participation keep it moving in the viewer\'s head.',
     ],
   },
   {
@@ -20,9 +20,9 @@ export const storySections: DoorwayStorySection[] = [
   {
     subhead: 'The One-Image Movie',
     paragraphs: [
-      'A one-image movie does not explain itself. It drops you into the middle of pressure and lets the rest build in your head.',
+      'A one-image movie does not explain itself, and it is not the image alone. It is Wayne Heim\'s assembled narrative-art format, where image, title, authored writing, unresolved implication, and viewer participation lock together.',
       'That comes out of painterly tradition, cinematic structure, and a refusal to flatten frontier subjects into nostalgia.',
-      'The image is complete, but it never feels finished.',
+      'The still work is complete, but it never feels finished because the final unwritten story is completed in the viewer\'s mind.',
     ],
   },
   {
@@ -55,7 +55,7 @@ export const deepFaqItems: DoorwayDeepFaqItem[] = [
     question: 'Do storytelling photos need multiple images?',
     answers: [
       'No. One frame is enough if it carries a real before and after.',
-      'Series can deepen the experience, but the K4 move is the one-image movie.',
+      'Series can deepen the experience, but the K4 move is the one-image movie, where the still work, title, authored writing, and viewer completion form the primary narrative unit.',
     ],
   },
   {
