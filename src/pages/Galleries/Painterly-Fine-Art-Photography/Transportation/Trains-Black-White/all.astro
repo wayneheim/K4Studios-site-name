@@ -1,0 +1,61 @@
+---
+export const prerender = false;
+
+import CommercialCollectionAllPage from "@/components/all-pages/CommercialCollectionAllPage.astro";
+import { galleryData as rawGalleryData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White.mjs";
+import { entranceData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Transportation/TransportationTrainsBWEntranceData.ts";
+import { buildWildWestAllPageDock } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/dock/buildWildWestAllPageDock.ts";
+import { getFormattedLowestStandardPrintPrice } from "@/data/pricing/printSeries.js";
+
+const basePath = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White";
+const canonicalPath = `${basePath}/all`;
+const variantDescriptor = "black and white";
+const { sectionDockItems, dockCenterIndex } = buildWildWestAllPageDock({ currentKey: "transportation-1", currentHref: canonicalPath });
+
+const breadcrumbHtml = [
+  '<a href="/Galleries/Painterly-Fine-Art-Photography">Painterly Fine Art Photography</a>',
+  '<a href="/Galleries/Painterly-Fine-Art-Photography/Transportation">Transportation</a>',
+  `<a href="${basePath}">Trains Black &amp; White</a>`,
+  'Collection',
+].join(' | ');
+
+const breadcrumbStructuredItems = [
+  { href: "/Galleries", name: "Galleries" },
+  { href: "/Galleries/Painterly-Fine-Art-Photography", name: "Painterly Fine Art Photography" },
+  { href: "/Galleries/Painterly-Fine-Art-Photography/Transportation", name: "Transportation" },
+  { href: basePath, name: "Trains Black & White" },
+];
+
+const copy = {
+  seoDescription: `Browse {imageCount} ${variantDescriptor} train and locomotive fine art prints by Wayne Heim, with railroad imagery, collector notes, and print options from ${getFormattedLowestStandardPrintPrice()}.`,
+  indexDefinition: `This page presents the complete ${variantDescriptor} archive of train and locomotive photography by Wayne Heim. The collection gathers steam engines, railroads, locomotives, railcars, and transportation icons shaped by tonal painterly atmosphere.`,
+  indexLinkNote: "All {imageCount} images open to individual artwork pages with full narrative context, metadata, and collector information.",
+  commercialH1: "Train and Locomotive Fine Art Series",
+  commercialDeck: `A collection of painterly ${variantDescriptor} railroad and locomotive artwork by Wayne Heim.`,
+  catalogEntranceTitle: "Black and White Train and Locomotive Fine Art Prints",
+  catalogEntranceCopy: "Browse monochrome railroad photography built around steam, steel, motion, industrial history, and the enduring romance of rail travel.",
+  collectionIntro: `Browse the complete collection of ${variantDescriptor} train and locomotive images shaped by mechanical detail, railroad atmosphere, motion, and history. Each artwork opens to its full story, collector notes, image metadata, and available print details.`,
+  gatewayIntroCopy: `{imageCount} painterly ${variantDescriptor} train and locomotive photographs by Wayne Heim, available as archival fine art prints from ${getFormattedLowestStandardPrintPrice()}. Four edition tiers - open-edition studies to ultra-limited signed collector works - on fine art paper and Baltic Birch wood panels.`,
+  gatewaySupportingCopy: "Every image below is a railroad story in a single frame. Click any work to read the narrative, explore collector notes, and view print details.",
+};
+---
+
+<CommercialCollectionAllPage
+  rawGalleryData={rawGalleryData}
+  entranceData={entranceData}
+  basePath={basePath}
+  canonicalPath={canonicalPath}
+  breadcrumbHtml={breadcrumbHtml}
+  breadcrumbStructuredItems={breadcrumbStructuredItems}
+  sectionDockItems={sectionDockItems}
+  dockCenterIndex={dockCenterIndex}
+  currentDockTitle="Transportation Black and White Trains and Locomotives"
+  archiveContext={{ categoryUrl: "/Galleries/Painterly-Fine-Art-Photography/Transportation", categoryName: "Transportation" }}
+  identity={{
+    collectionName: "Trains and Locomotives",
+    variantName: "Black & White",
+    variantDescriptor: `${variantDescriptor} train and locomotive`,
+    gatewayBrandLabel: "Train and Locomotive Fine Art Prints - Black & White Collection",
+  }}
+  copy={copy}
+/>

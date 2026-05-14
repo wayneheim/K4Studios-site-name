@@ -1,0 +1,36 @@
+---
+export const prerender = false;
+
+import CommercialCollectionAllPage from "@/components/all-pages/CommercialCollectionAllPage.astro";
+import { galleryData as rawGalleryData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs";
+import { entranceData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/ColorEntranceData.ts";
+import { buildWildWestAllPageDock } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/dock/buildWildWestAllPageDock.ts";
+import { getFormattedLowestStandardPrintPrice } from "@/data/pricing/printSeries.js";
+
+const basePath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color";
+const canonicalPath = `${basePath}/all`;
+const { sectionDockItems, dockCenterIndex } = buildWildWestAllPageDock({ currentKey: "wwii-portraits-0", currentHref: canonicalPath });
+const breadcrumbHtml = ['<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Facing History</a>', '<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII">WWII</a>', '<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits">Portraits</a>', `<a href="${basePath}">Color</a>`, 'Collection'].join(' | ');
+const breadcrumbStructuredItems = [
+  { href: "/Galleries", name: "Galleries" },
+  { href: "/Galleries/Painterly-Fine-Art-Photography", name: "Painterly Fine Art Photography" },
+  { href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History", name: "Facing History" },
+  { href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII", name: "WWII" },
+  { href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits", name: "WWII Portraits" },
+  { href: basePath, name: "Color" },
+];
+const copy = {
+  seoDescription: `Browse {imageCount} painterly color WWII portrait fine art prints by Wayne Heim, with Greatest Generation portraits, collector notes, and print options from ${getFormattedLowestStandardPrintPrice()}.`,
+  indexDefinition: "This page presents the complete color archive of WWII Portraits by Wayne Heim. The collection gathers wartime character studies, reenactor portraits, and Greatest Generation images shaped by painterly color.",
+  indexLinkNote: "All {imageCount} images link to individual image pages with full stories, metadata, and collector information.",
+  commercialH1: "WWII Portrait Fine Art Series",
+  commercialDeck: "A collection of painterly WWII portrait artwork by Wayne Heim.",
+  catalogEntranceTitle: "WWII Portrait Fine Art Prints by Wayne Heim",
+  catalogEntranceCopy: "Browse painterly World War II portrait photography built around sacrifice, resilience, brotherhood, and human presence.",
+  collectionIntro: "Browse the complete collection of color WWII portrait images shaped by wartime atmosphere, expression, uniform detail, gesture, and remembrance. Each artwork opens to its full story, collector notes, image metadata, and available print details.",
+  gatewayIntroCopy: `{imageCount} painterly color WWII portrait photographs by Wayne Heim, available as archival fine art prints from ${getFormattedLowestStandardPrintPrice()}. Four edition tiers - open-edition studies to ultra-limited signed collector works - on fine art paper and Baltic Birch wood panels.`,
+  gatewaySupportingCopy: "Every image below is a wartime character study in a single frame. Click any work to read the narrative, explore collector notes, and view print details.",
+};
+---
+
+<CommercialCollectionAllPage rawGalleryData={rawGalleryData} entranceData={entranceData} basePath={basePath} canonicalPath={canonicalPath} breadcrumbHtml={breadcrumbHtml} breadcrumbStructuredItems={breadcrumbStructuredItems} sectionDockItems={sectionDockItems} dockCenterIndex={dockCenterIndex} currentDockTitle="The WWII Color Portraits" archiveContext={{ categoryUrl: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits", categoryName: "WWII Portraits" }} identity={{ collectionName: "WWII Portraits", variantName: "Color", variantDescriptor: "color WWII portrait", gatewayBrandLabel: "WWII Portrait Fine Art Prints - Color Collection" }} copy={copy} />

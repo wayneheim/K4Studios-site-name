@@ -239,7 +239,7 @@ export default function TombstoneNav({
         })}
       </div>
 
-      <style jsx>{`
+      <style>{`
         @media (max-width: 640px) {
           .tombstone-nav {
             transform: scale(0.87);

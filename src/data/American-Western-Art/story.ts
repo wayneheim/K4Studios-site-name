@@ -28,7 +28,7 @@ export const americanWesternArtStory = [
     subhead: "Frontier Narratives as One-Image Movies",
     paragraphs: [
       "The frontier narrative works are built as unresolved scenes. A rider pauses, a woman waits, a group gathers, a moment has already shifted and the viewer arrives just after the pressure becomes visible.",
-      "Wayne Heim calls this approach a One-Image Movie: a single photographic frame carrying the emotional weight of a larger story. In the American Western art category, these images give collectors more than subject matter. They give the wall a sense of before, after, and consequence."
+      "Wayne Heim calls this approach a One-Image Movie: a finished narrative-art experience where image, title, authored story, and viewer imagination work together. The photograph opens the scene. The words deepen the uncertainty. The viewer completes the final unwritten story. In the American Western art category, these images give collectors more than subject matter. They give the wall a sense of before, after, and consequence."
     ]
   },
   {

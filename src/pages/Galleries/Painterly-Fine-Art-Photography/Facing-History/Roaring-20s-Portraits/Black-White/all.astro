@@ -1,0 +1,72 @@
+---
+export const prerender = false;
+
+import CommercialCollectionAllPage from "@/components/all-pages/CommercialCollectionAllPage.astro";
+import { galleryData as rawGalleryData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White.mjs";
+import { entranceData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/BWEntranceData.ts";
+import { buildWildWestAllPageDock } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/dock/buildWildWestAllPageDock.ts";
+import { getFormattedLowestStandardPrintPrice } from "@/data/pricing/printSeries.js";
+
+const basePath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White";
+const canonicalPath = `${basePath}/all`;
+const variantDescriptor = "black and white";
+
+const breadcrumbHtml = [
+  '<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Facing History</a>',
+  '<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits">Roaring 20s Portraits</a>',
+  `<a href="${basePath}">Black &amp; White</a>`,
+  'Collection',
+].join(' | ');
+
+const breadcrumbStructuredItems = [
+  { href: "/Galleries", name: "Galleries" },
+  { href: "/Galleries/Painterly-Fine-Art-Photography", name: "Painterly Fine Art Photography" },
+  { href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History", name: "Facing History" },
+  { href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits", name: "Roaring 20s Portraits" },
+  { href: basePath, name: "Black & White" },
+];
+
+const { sectionDockItems, dockCenterIndex } = buildWildWestAllPageDock({
+  currentKey: "roaring-20s-1",
+  currentHref: canonicalPath,
+});
+
+const copy = {
+  seoDescription: `Browse {imageCount} ${variantDescriptor} Roaring 20s portrait fine art prints by Wayne Heim, with Jazz Age characters, collector notes, and print options from ${getFormattedLowestStandardPrintPrice()}.`,
+  indexDefinition:
+    `This page presents the complete ${variantDescriptor} archive of Roaring 20s Portraits by Wayne Heim. The collection gathers Jazz Age character studies, flappers, gangsters, G-men, speakeasy figures, and cinematic 1920s portraits shaped by tonal painterly atmosphere.`,
+  indexLinkNote: "All {imageCount} images open to individual artwork pages with full narrative context, metadata, and collector information.",
+  commercialH1: "Roaring 20s Portrait Fine Art Series",
+  commercialDeck: `A collection of painterly ${variantDescriptor} Jazz Age portrait artwork by Wayne Heim.`,
+  catalogEntranceTitle: "Black and White Roaring 20s Fine Art Prints",
+  catalogEntranceCopy: "Browse monochrome 1920s portrait photography built around character, gesture, tonal atmosphere, and cinematic Jazz Age presence.",
+  collectionIntro:
+    `Browse the complete collection of ${variantDescriptor} Roaring 20s portrait images shaped by speakeasy mood, Jazz Age style, character, gesture, and story. Each artwork opens to its full story, collector notes, image metadata, and available print details.`,
+  gatewayCollectionName: "Roaring 20s Portraits",
+  gatewayIntroCopy: `{imageCount} painterly ${variantDescriptor} Roaring 20s portrait photographs by Wayne Heim, available as archival fine art prints from ${getFormattedLowestStandardPrintPrice()}. Four edition tiers - open-edition studies to ultra-limited signed collector works - on fine art paper and Baltic Birch wood panels.`,
+  gatewaySupportingCopy: "Every image below is a Jazz Age character study in a single frame. Click any work to read the narrative, explore collector notes, and view print details.",
+};
+---
+
+<CommercialCollectionAllPage
+  rawGalleryData={rawGalleryData}
+  entranceData={entranceData}
+  basePath={basePath}
+  canonicalPath={canonicalPath}
+  breadcrumbHtml={breadcrumbHtml}
+  breadcrumbStructuredItems={breadcrumbStructuredItems}
+  sectionDockItems={sectionDockItems}
+  dockCenterIndex={dockCenterIndex}
+  currentDockTitle="The Roaring 20s Black and White Portraits"
+  archiveContext={{
+    categoryUrl: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits",
+    categoryName: "Roaring 20s Portraits",
+  }}
+  identity={{
+    collectionName: "Roaring 20s Portraits",
+    variantName: "Black & White",
+    variantDescriptor: `${variantDescriptor} Roaring 20s portrait`,
+    gatewayBrandLabel: "Roaring 20s Portrait Fine Art Prints - Black & White Collection",
+  }}
+  copy={copy}
+/>

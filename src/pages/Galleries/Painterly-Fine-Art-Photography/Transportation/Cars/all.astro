@@ -1,0 +1,60 @@
+---
+export const prerender = false;
+
+import CommercialCollectionAllPage from "@/components/all-pages/CommercialCollectionAllPage.astro";
+import { galleryData as rawGalleryData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars.mjs";
+import { entranceData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Transportation/TransportationCarsEntranceData.ts";
+import { buildWildWestAllPageDock } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/dock/buildWildWestAllPageDock.ts";
+import { getFormattedLowestStandardPrintPrice } from "@/data/pricing/printSeries.js";
+
+const basePath = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars";
+const canonicalPath = `${basePath}/all`;
+const { sectionDockItems, dockCenterIndex } = buildWildWestAllPageDock({ currentKey: "transportation-2", currentHref: canonicalPath });
+
+const breadcrumbHtml = [
+  '<a href="/Galleries/Painterly-Fine-Art-Photography">Painterly Fine Art Photography</a>',
+  '<a href="/Galleries/Painterly-Fine-Art-Photography/Transportation">Transportation</a>',
+  `<a href="${basePath}">Cars</a>`,
+  'Collection',
+].join(' | ');
+
+const breadcrumbStructuredItems = [
+  { href: "/Galleries", name: "Galleries" },
+  { href: "/Galleries/Painterly-Fine-Art-Photography", name: "Painterly Fine Art Photography" },
+  { href: "/Galleries/Painterly-Fine-Art-Photography/Transportation", name: "Transportation" },
+  { href: basePath, name: "Cars" },
+];
+
+const copy = {
+  seoDescription: `Browse {imageCount} painterly classic car fine art prints by Wayne Heim, with vintage automobile imagery, collector notes, and print options from ${getFormattedLowestStandardPrintPrice()}.`,
+  indexDefinition: "This page presents the complete archive of classic car and automobile photography by Wayne Heim. The collection gathers vintage cars, classic automobiles, muscle cars, and transportation icons shaped by painterly color.",
+  indexLinkNote: "All {imageCount} images link to individual image pages with full stories, metadata, and collector information.",
+  commercialH1: "Classic Car Fine Art Series",
+  commercialDeck: "A collection of painterly classic car and automobile artwork by Wayne Heim.",
+  catalogEntranceTitle: "Classic Car Fine Art Prints",
+  catalogEntranceCopy: "Browse painterly automotive photography built around design, chrome, color, nostalgia, and the personality of vintage motoring.",
+  collectionIntro: "Browse the complete collection of classic car images shaped by design detail, reflection, color, road culture, and automotive history. Each artwork opens to its full story, collector notes, image metadata, and available print details.",
+  gatewayIntroCopy: `{imageCount} painterly classic car and automobile photographs by Wayne Heim, available as archival fine art prints from ${getFormattedLowestStandardPrintPrice()}. Four edition tiers - open-edition studies to ultra-limited signed collector works - on fine art paper and Baltic Birch wood panels.`,
+  gatewaySupportingCopy: "Every image below is an automotive story in a single frame. Click any work to read the narrative, explore collector notes, and view print details.",
+};
+---
+
+<CommercialCollectionAllPage
+  rawGalleryData={rawGalleryData}
+  entranceData={entranceData}
+  basePath={basePath}
+  canonicalPath={canonicalPath}
+  breadcrumbHtml={breadcrumbHtml}
+  breadcrumbStructuredItems={breadcrumbStructuredItems}
+  sectionDockItems={sectionDockItems}
+  dockCenterIndex={dockCenterIndex}
+  currentDockTitle="Transportation Classic Car Photos"
+  archiveContext={{ categoryUrl: "/Galleries/Painterly-Fine-Art-Photography/Transportation", categoryName: "Transportation" }}
+  identity={{
+    collectionName: "Classic Cars",
+    variantName: "Color",
+    variantDescriptor: "classic car",
+    gatewayBrandLabel: "Classic Car Fine Art Prints - Color Collection",
+  }}
+  copy={copy}
+/>

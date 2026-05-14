@@ -925,7 +925,7 @@ export const galleryData = [
   },
   {
     "id": "i-Wx5scCf",
-    "title": "Justified - or Damned: A Claustrophobic Consequence of Decisions",
+    "title": "Justified - or Damned: The Wounded Man at Stone",
     "description": "Three figures move through a steep rocky hillside where stone outcrops and dry grass tighten the space around them. One man sits wounded while two others close in from opposite sides, the terrain shaping the moment as much as the men themselves. The scene unfolds like a Western tableau-compressed, tense, and inevitable-captured in painterly Western photography that explores consequence, confrontation, and the fragile line between justice and survival on the frontier. As narrative Western art, it expands the gallery beyond cowboy myth into the emotional, domestic, and moral stakes of frontier life. The result reinforces the gallery as fine art Western photography with a distinctly K4 sense of authorship.\n\n© Wayne Heim",
     "alt": "Three men confronting each other across rocky Western hillside terrain with one wounded figure seated against the stone.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Wx5scCf/0/LDq7zSzrMs3gDgSF2BwqVPsjDLcFWkDxFj3mBWBpD/XL/_HF25859-1151-1156-1159-XL.jpg",
@@ -20191,7 +20191,7 @@ export const galleryData = [
   },
   {
     "id": "i-CD6rgtF",
-    "title": "Justified - or Damned: A Claustrophobic Consequence of Decisions",
+    "title": "Justified - or Damned: The Hillside Funnel",
     "description": "Three figures move cautiously along a rugged hillside, the steep rock and sparse trees creating a natural funnel that narrows the distance between them. The wide landscape contrasts with the tension of the moment, each man positioned within the terrain as if the land itself has arranged the encounter. Sunlight and shadow carve through stone and sage, giving the scene a grounded, cinematic sense of scale and consequence. The scene supports narrative Western art through color, posture, and consequence while reinforcing fine art Western photography as the primary authority signal.\n\n© Wayne Heim",
     "alt": "Three men positioned across a rocky hillside in a tense frontier standoff, rendered in painterly Western photography.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-CD6rgtF/0/LChZ9N6GQp8SqQjsjq8FvFrWcXFJhdFkSRFGZwwXH/XL/_WHO3211-Edit-Edit-Edit-XL.jpg",
@@ -20235,7 +20235,7 @@ export const galleryData = [
   },
   {
     "id": "i-gL3Nnth",
-    "title": "Justified - or Damned: A Claustrophobic Consequence of Decisions",
+    "title": "Justified - or Damned: Stone, Sage, and Reckoning",
     "description": "Three figures move cautiously along a rugged hillside, the steep rock and sparse trees creating a natural funnel that narrows the distance between them. The wide landscape contrasts with the tension of the moment, each man positioned within the terrain as if the land itself has arranged the encounter. Sunlight and shadow carve through stone and sage, giving the scene a grounded, cinematic sense of scale and consequence. The scene supports narrative Western art through color, posture, and consequence while reinforcing fine art Western photography as the primary authority signal. The painterly photography layer keeps the color, light, and atmosphere aligned with the K4 doorway pages.\n\n© Wayne Heim",
     "alt": "Three men positioned across a rocky hillside in a tense frontier standoff, rendered in painterly Western photography.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-gL3Nnth/0/LnxkbXNFRDnVKbTd2XghjJ4fBXxHB6JDNp4BDzTBc/XL/_HF25859-1151-1156-1159-XL.jpg",

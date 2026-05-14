@@ -70,6 +70,10 @@ function isNavigableImage(img: any) {
   return Boolean(img?.id) && visibility !== "ghost" && visibility !== "hidden" && visibility !== "hide";
 }
 
+function sortByGalleryOrder(images: any[]) {
+  return [...images].sort((a, b) => (a?.sortOrder ?? 0) - (b?.sortOrder ?? 0));
+}
+
 function buildCaptionExcerpt(description = "", minChars = 150, maxChars = 280) {
   const cleanText = String(description || "").replace(/\s+/g, " ").trim();
   if (!cleanText) return "";
@@ -97,7 +101,7 @@ function buildCaptionExcerpt(description = "", minChars = 150, maxChars = 280) {
  * Image context
  * --------------------------------------------------------------- */
 const isGhost = !initialImageId || initialImageId === "i-k4studios";
-const navigableImages = allImages.filter(isNavigableImage);
+const navigableImages = sortByGalleryOrder(allImages.filter(isNavigableImage));
 const currentImage = isGhost
   ? null
   : navigableImages.find((img) => img.id === initialImageId);
@@ -339,7 +343,7 @@ const meta = {
           <h2 class="gallery-landing-subtitle">{fixMojibake(usedEntranceData.subtitle)}</h2>
         )}
         <GalleryInfo 
-          client:load 
+          client:only="react" 
           galleryKey={galleryPath}
           entranceData={{
             ...usedEntranceData,

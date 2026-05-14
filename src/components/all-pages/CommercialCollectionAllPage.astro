@@ -1,0 +1,2306 @@
+﻿---
+import Footer from "@/components/Footer.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import ArchiveContext from "@/components/ArchiveContext.astro";
+import LandingHeader from "@/components/Landing-Header.jsx";
+import { getSemanticImageUrl } from "@/utils/imageProxy.js";
+import {
+  getAggregateOfferForCollection,
+  getHighestStandardPrintPrice,
+  getFormattedLowestStandardPrintPrice,
+  getLowestStandardPrintPrice,
+  getStandardPrintSeries,
+} from "@/data/pricing/printSeries.js";
+import { resolveImageCommerce } from "@/data/commerceResolver.js";
+
+type BreadcrumbItem = { name: string; href: string };
+
+const {
+  rawGalleryData,
+  entranceData,
+  basePath,
+  contentBasePath: configuredContentBasePath,
+  canonicalPath: configuredCanonicalPath,
+  breadcrumbHtml,
+  breadcrumbStructuredItems,
+  sectionDockItems,
+  dockCenterIndex,
+  currentDockTitle,
+  archiveContext = {},
+  identity = {},
+  copy = {},
+} = Astro.props as {
+  rawGalleryData: any[];
+  entranceData?: any;
+  basePath: string;
+  contentBasePath?: string;
+  canonicalPath?: string;
+  breadcrumbHtml: string;
+  breadcrumbStructuredItems: BreadcrumbItem[];
+  sectionDockItems: any[];
+  dockCenterIndex: number;
+  currentDockTitle: string;
+  archiveContext?: {
+    categoryUrl?: string;
+    categoryName?: string;
+  };
+  identity?: {
+    collectionName?: string;
+    variantName?: string;
+    variantDescriptor?: string;
+    gatewayBrandLabel?: string;
+  };
+  copy?: Record<string, string>;
+};
+
+// âœ… Filter out ghosts and hidden (archived) images
+const galleryData = rawGalleryData.filter((img: any) => 
+  img.visibility !== "ghost" && 
+  img.visibility !== "hidden" && 
+  img.id !== "i-k4studios"
+);
+
+const activeThemeSlug = Astro.url.searchParams.get("theme") || "";
+const filteredGalleryData = activeThemeSlug
+  ? galleryData.filter((img: any) => Boolean(img?.themes?.[activeThemeSlug]))
+  : galleryData;
+
+const humanizeSegment = (segment = "") =>
+  decodeURIComponent(String(segment || ""))
+    .replace(/-/g, " ")
+    .trim();
+
+// âœ… Clean URL paths
+const siteOrigin = "https://www.k4studios.com";
+const contentBasePath = configuredContentBasePath || basePath;
+const canonicalPath = configuredCanonicalPath || `${basePath}/all`;
+const canonicalUrl = `${siteOrigin}${canonicalPath}`;
+const galleryBaseUrl = `${siteOrigin}${contentBasePath}`;
+const collectionPageId = `${canonicalUrl}#collectionpage`;
+const imageGalleryId = `${galleryBaseUrl}#imagegallery`;
+const itemListId = `${canonicalUrl}#itemlist`;
+const breadcrumbId = `${canonicalUrl}#breadcrumb`;
+
+// âœ… Gallery metadata
+const collectionSlug = basePath.split("/").filter(Boolean).at(-2) || "Western-Narratives";
+const variantSlug = basePath.split("/").filter(Boolean).at(-1) || "Color";
+const collectionName = identity.collectionName || humanizeSegment(collectionSlug) || "Western Narratives";
+const variantName = identity.variantName || humanizeSegment(variantSlug) || "Color";
+const variantDescriptor = identity.variantDescriptor || variantName.toLowerCase();
+const galleryTitle = `${collectionName} - ${variantName}`;
+const gallerySubtitle = entranceData?.subtitle || "Painterly Fine Art Photography";
+const imageCount = filteredGalleryData.length;
+const formatCopy = (value = "") =>
+  String(value)
+    .replaceAll("{imageCount}", String(imageCount))
+    .replaceAll("{variantName}", variantName)
+    .replaceAll("{variantLower}", variantName.toLowerCase())
+    .replaceAll("{variantDescriptor}", variantDescriptor)
+    .replaceAll("{collectionName}", collectionName)
+    .replaceAll("{collectionLower}", collectionName.toLowerCase())
+    .replaceAll("{lowestPrintPrice}", getFormattedLowestStandardPrintPrice());
+
+// âœ… SEO-optimized title and description (factual, not poetic)
+const gatewayBrandLabel = identity.gatewayBrandLabel || `${collectionName} Fine Art Prints - ${variantName} Collection`;
+const seoTitle = `${gatewayBrandLabel} | K4 Studios`;
+const seoDescription = formatCopy(copy.seoDescription || `Browse ${imageCount} ${variantDescriptor} ${collectionName.toLowerCase()} fine art prints by Wayne Heim, with collector notes and print options from ${getFormattedLowestStandardPrintPrice()}.`);
+
+// âœ… Genre definition (entity authority - what IS this type of photography)
+
+// âœ… Authoritative definition block (per Quill: scope, authorship, completeness)
+const indexDefinition = formatCopy(copy.indexDefinition || `This page presents the complete ${variantName.toLowerCase()} archive of ${collectionName} by Wayne Heim.`);
+const indexLinkNote = formatCopy(copy.indexLinkNote || `All ${imageCount} images link to individual image pages with full stories, metadata, and collector information.`);
+const printAvailabilityNote = formatCopy(copy.printAvailabilityNote || `All works are available as fine art prints from ${getFormattedLowestStandardPrintPrice()}. Select images are also available in the Engrained Series - printed on Baltic Birch using a five-layer UV process - with pricing specific to each image.`);
+const commercialH1 = formatCopy(copy.commercialH1 || `${collectionName} Fine Art Series`);
+const commercialDeck = formatCopy(copy.commercialDeck || `A collection of painterly fine art photography by Wayne Heim.`);
+const catalogEntranceTitle = formatCopy(copy.catalogEntranceTitle || `Story-Driven Fine Art Prints by Wayne Heim`);
+const catalogEntranceCopy = formatCopy(copy.catalogEntranceCopy || `Browse cinematic, painterly photography built as single-frame stories - artwork created for collectors who want more than decoration.`);
+const collectionIntro = formatCopy(copy.collectionIntro || `Browse the complete collection. Each artwork opens to its full story, collector notes, image metadata, and available print details.`);
+const gatewayCollectionName = formatCopy(copy.gatewayCollectionName || collectionName);
+const gatewayIntroCopy = formatCopy(copy.gatewayIntroCopy || `${imageCount} painterly ${variantName.toLowerCase()} ${collectionName.toLowerCase()} fine art photographs by Wayne Heim, available as archival fine art prints from ${getFormattedLowestStandardPrintPrice()}. Four edition tiers - open-edition studies to ultra-limited signed collector works - on fine art paper and Baltic Birch wood panels.`);
+const gatewaySupportingCopy = formatCopy(copy.gatewaySupportingCopy || `Every image below is a complete story in a single frame. Click any work to read the narrative, explore collector notes, and view print details.`);
+const standardPrintSeries = getStandardPrintSeries() as Array<{
+  name: string;
+  subtitle: string;
+  collectorSummary: string;
+  symbol: string;
+  learnMoreHref: string;
+  sizes: Array<{ display: string }>;
+}>;
+
+// âœ… Text cleaner for JSON-LD (escapes quotes for JSON)
+const cleanForJson = (val = "") =>
+  String(val)
+    .replace(/[\u0000-\u001F]+/g, " ")
+    .replace(/"/g, '\\"')
+    .replace(/\r?\n|\r/g, " ")
+    .trim();
+
+// âœ… Text cleaner for HTML display (preserves quotes)
+const cleanForDisplay = (val = "") =>
+  String(val)
+    .replace(/[\u0000-\u001F]+/g, " ")
+    .replace(/\r?\n|\r/g, " ")
+    .trim();
+
+// âœ… Truncate story text for cards (150 chars max per Quill)
+const truncateStory = (story: string, maxLen = 150) => {
+  if (!story) return "";
+  const cleaned = cleanForDisplay(story);
+  if (cleaned.length <= maxLen) return cleaned;
+  return cleaned.slice(0, maxLen).replace(/\s+\S*$/, "") + "...";
+};
+
+const truncateWords = (text: string, maxWords = 30) => {
+  const cleaned = cleanForDisplay(text);
+  if (!cleaned) return "";
+  const words = cleaned.split(/\s+/);
+  if (words.length <= maxWords) return cleaned;
+  return `${words.slice(0, maxWords).join(" ")}...`;
+};
+
+// âœ… Proxy URL helper - never expose SmugMug URLs to crawlers
+const getProxySrc = (id: string, size: string = 'l') => {
+  const image = filteredGalleryData.find((item: any) => item.id === id)
+    || galleryData.find((item: any) => item.id === id)
+    || { id };
+  return getSemanticImageUrl(image, { galleryPath: contentBasePath }, size);
+};
+
+const getCardSeries = (image: any) => {
+  const commerce = resolveImageCommerce({
+    image,
+    galleryPath: contentBasePath,
+    pageUrl: `${siteOrigin}${contentBasePath}/${image?.id || ""}`,
+  });
+  return commerce?.tiers || [];
+};
+
+const toAbsoluteK4Url = (url = "") => {
+  if (!url) return `${siteOrigin}/images/show-2t.webp`;
+  if (/^https?:\/\//i.test(url)) return url;
+  return `${siteOrigin}${url.startsWith("/") ? "" : "/"}${url}`;
+};
+
+const gatewayHeroItem = filteredGalleryData[0] || galleryData[0];
+const gatewayHeroTitle = cleanForDisplay(gatewayHeroItem?.title || galleryTitle);
+const gatewayHeroAlt = gatewayHeroItem?.alt
+  ? `${cleanForDisplay(gatewayHeroItem.alt).replace(/[.\s]*$/, "")}. Collection hero image.`
+  : `Fine art photograph by Wayne Heim: ${gatewayHeroTitle}`;
+const gatewayHeroHref = gatewayHeroItem ? `${contentBasePath}/${gatewayHeroItem.id}` : "#collection-grid";
+const gatewayHeroSrc = gatewayHeroItem ? getProxySrc(gatewayHeroItem.id, 'l') : "";
+const gatewayHeroSrcSet = gatewayHeroItem
+  ? `${getProxySrc(gatewayHeroItem.id, 'm')} 720w, ${getProxySrc(gatewayHeroItem.id, 'l')} 1200w`
+  : "";
+const seenCardAltCounts = new Map<string, number>();
+const fallbackSocialImage = "/images/show-2t.webp";
+const socialImage = gatewayHeroSrc || (filteredGalleryData[0] ? getProxySrc(filteredGalleryData[0].id, 'l') : "") || fallbackSocialImage;
+const socialImageUrl = toAbsoluteK4Url(socialImage);
+const socialImageAlt = `${collectionName} Fine Art Prints by Wayne Heim`;
+const lowestStandardPrintPrice = getLowestStandardPrintPrice();
+const highestStandardPrintPrice = getHighestStandardPrintPrice();
+const aggregateOffer = {
+  ...getAggregateOfferForCollection(imageCount),
+  lowPrice: lowestStandardPrintPrice,
+  highPrice: highestStandardPrintPrice,
+  offerCount: imageCount,
+  seller: { "@id": "https://www.k4studios.com/#organization" },
+};
+
+// âœ… Pre-build per-image JSON-LD to avoid streaming issues
+const imageJsonLdMap = new Map();
+filteredGalleryData.forEach((item: any) => {
+  // Capped at 'l' to protect XL from bot discovery
+  const imageUrl = getProxySrc(item.id, 'l');
+  const linkUrl = `${contentBasePath}/${item.id}`;
+  const fullUrl = `https://www.k4studios.com${linkUrl}`;
+  const title = cleanForJson(item.title);
+  const altText = item.alt 
+    ? cleanForJson(item.alt)
+    : `Western cowboy fine art photograph: ${title} - Wayne Heim`;
+  
+  imageJsonLdMap.set(item.id, JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    name: title,
+    description: altText,
+    contentUrl: imageUrl,
+    url: fullUrl,
+    creditText: "(c) Wayne Heim - K4 Studios",
+    license: "https://www.k4studios.com/licensing",
+    creator: { "@type": "Person", name: "Wayne Heim" },
+    mainEntityOfPage: fullUrl
+  }));
+});
+
+const itemListElement = filteredGalleryData
+  .filter((image: any) => image?.id)
+  .map((image: any, index: number) => {
+    const imagePageUrl = `${galleryBaseUrl}/${image.id}`;
+
+    return {
+      "@type": "ListItem",
+      "position": index + 1,
+      "url": imagePageUrl,
+      "name": cleanForDisplay(image.title || image.id),
+      "item": { "@id": `${imagePageUrl}#image` },
+    };
+  });
+
+const breadcrumbJsonItems = [
+  { "@type": "ListItem", "position": 1, "item": { "@id": `${siteOrigin}/`, "name": "Home" } },
+  ...(breadcrumbStructuredItems || []).map((item, index) => ({
+    "@type": "ListItem",
+    "position": index + 2,
+    "item": {
+      "@id": `${siteOrigin}${item.href}`,
+      "name": item.name,
+    },
+  })),
+  { "@type": "ListItem", "position": (breadcrumbStructuredItems || []).length + 2, "item": { "@id": canonicalUrl, "name": "Collection" } },
+];
+
+const structuredDataJson = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": collectionPageId,
+      "url": canonicalUrl,
+      "name": seoTitle,
+      "description": seoDescription,
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://www.k4studios.com/#website"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": socialImageUrl,
+        "caption": seoTitle
+      },
+      "creator": { "@id": "https://www.k4studios.com/#person" },
+      "publisher": { "@id": "https://www.k4studios.com/#organization" },
+      "mainEntity": { "@id": imageGalleryId },
+      "offers": aggregateOffer
+    },
+    {
+      "@type": "ImageGallery",
+      "@id": imageGalleryId,
+      "url": galleryBaseUrl,
+      "name": `${galleryTitle} Collection`,
+      "description": seoDescription,
+      "creator": { "@id": "https://www.k4studios.com/#person" },
+      "publisher": { "@id": "https://www.k4studios.com/#organization" },
+      "hasPart": { "@id": itemListId }
+    },
+    {
+      "@type": "ItemList",
+      "@id": itemListId,
+      "name": `${galleryTitle} Image List`,
+      "numberOfItems": itemListElement.length,
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "itemListElement": itemListElement
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": breadcrumbId,
+      "itemListElement": breadcrumbJsonItems
+    }
+  ]
+}, null, 2);
+
+const pageMeta = {
+  canonicalUrl,
+  robots: "index, follow",
+  ogTitle: seoTitle,
+  ogDescription: seoDescription,
+  ogImage: socialImage,
+  ogImageAlt: socialImageAlt,
+  ogUrl: canonicalUrl,
+  twitterTitle: seoTitle,
+  twitterDescription: seoDescription,
+  twitterImage: socialImage,
+  twitterUrl: canonicalUrl,
+};
+
+const compactBreadcrumbHtml = breadcrumbHtml
+  .replace(/Facing History/g, "FH")
+  .replace(/\|\s*Collection\s*$/, "| Series");
+---
+
+<BaseLayout title={seoTitle} description={seoDescription} meta={pageMeta} structuredDataJSON={structuredDataJson} disableAutoBreadcrumbs={true}>
+  <link href="https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&display=swap" rel="stylesheet" />
+
+  <div class="all-page-header-frame">
+    <LandingHeader client:load breadcrumb={compactBreadcrumbHtml} />
+  </div>
+
+  <div class="gallery-index-wrapper" id="top">
+    <!-- K4 Studios Catalog Entrance -->
+    <section class="collection-gateway catalog-entrance" aria-labelledby="gateway-heading">
+      <a class="gateway-artwork" href={gatewayHeroHref} aria-label={`Open artwork detail for ${gatewayHeroTitle}`}>
+        <span class="gateway-artwork-mat">
+          <img
+            src={gatewayHeroSrc}
+            srcset={gatewayHeroSrcSet || undefined}
+            sizes="(max-width: 768px) 100vw, (max-width: 1100px) 42vw, 480px"
+            alt={gatewayHeroAlt}
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+          />
+        </span>
+      </a>
+      <div class="gateway-copy">
+        <p class="gateway-kicker">K4 STUDIOS FINE ART PRINT CATALOG</p>
+        <h1 class="gateway-brand" id="gateway-heading">{gatewayBrandLabel}</h1>
+        <p class="gateway-copy-text">{gatewayIntroCopy}</p>
+        <p class="gateway-copy-text">{gatewaySupportingCopy}</p>
+      </div>
+    </section>
+
+    <!-- K4 Section Dock Prototype -->
+    <section class="collection-dock" aria-labelledby="collection-dock-heading">
+      <div class="dock-heading">
+        <div>
+          <h2 id="collection-dock-heading"><span id="dock-active-prefix"></span><span id="dock-active-title">{currentDockTitle}</span></h2>
+        </div>
+      </div>
+      <div class="dock-shell">
+        <div class="dock-track" aria-label="K4 gallery all-page quick links">
+          <span id="dock-start" class="dock-anchor" aria-hidden="true"></span>
+          {sectionDockItems.map((item: any, idx: number) => {
+            const displayTitle = [item.title, item.subtitle].filter(Boolean).join(' ');
+            const distance = Math.abs(idx - dockCenterIndex);
+            const dockClass = [
+              'dock-card',
+              item.current ? 'is-center is-current' : '',
+              distance === 1 ? 'is-near' : '',
+              distance >= 3 ? 'is-far' : '',
+            ].filter(Boolean).join(' ');
+
+            return (
+              <a
+                class={dockClass}
+                href={item.href}
+                aria-current={item.current ? 'page' : undefined}
+                aria-label={item.current ? `Current collection: ${displayTitle}` : `Browse ${displayTitle}`}
+                data-dock-title={displayTitle}
+                data-current={item.current ? 'true' : undefined}
+              >
+                <div class="dock-tombstone">
+                  <img
+                    src={item.thumb}
+                    alt={`${displayTitle} tombstone link`}
+                    loading={item.current || distance <= 2 ? 'eager' : 'lazy'}
+                    width="140"
+                    height="160"
+                  />
+                </div>
+              </a>
+            );
+          })}
+          <span id="dock-end" class="dock-anchor" aria-hidden="true"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Current Collection Identity -->
+    <header class="collection-hero">
+      <h2>{commercialH1}</h2>
+      <p class="hero-deck">{commercialDeck}</p>
+      <p class="hero-copy">{collectionIntro}</p>
+    </header>
+
+    <span id="collection-browser" class="collection-browser-anchor" aria-hidden="true"></span>
+    <hr class="catalog-anchor-rule" />
+    <p class="print-options-heading">K4 Series and Limited Editions &middot; Fine Art Prints from {getFormattedLowestStandardPrintPrice()}</p>
+
+    <!-- Available Print Series -->
+    <section class="print-options" aria-labelledby="print-options-heading">
+      <div class="series-widget" aria-label="Standard K4 paper print series">
+        {standardPrintSeries.map((series) => (
+          <article class="series-tile" data-series-tile>
+            <button class="series-trigger" type="button" aria-label={`Show ${series.name} details`}>
+              <span class="series-symbol" aria-hidden="true">{series.symbol}</span>
+              <span>
+                <strong>{series.name}</strong>
+                <small>{series.subtitle}</small>
+              </span>
+            </button>
+            <div class="series-detail">
+              <p class="series-detail-copy">
+                <span class="series-detail-title">
+                  <span class="series-detail-symbol" aria-hidden="true">{series.symbol}</span>
+                  <strong>{series.name}:</strong>
+                </span>
+                <span>{series.collectorSummary}</span>
+              </p>
+              <div class="series-detail-footer">
+                <ul class="series-detail-sizes">
+                  {series.sizes.map((entry: any) => (
+                    <li>{entry.display}</li>
+                  ))}
+                </ul>
+                <a class="series-detail-link" href={series.learnMoreHref}>Learn more &rarr;</a>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <!-- Catalog Tools -->
+    <section class="catalog-tools" aria-labelledby="catalog-tools-heading">
+      <h2 id="catalog-tools-heading" class="catalog-tools-title">{gatewayCollectionName} Collection</h2>
+      <span class="catalog-tools-divider" aria-hidden="true">|</span>
+      <div class="series-sort" aria-label="Sort collection by print series">
+        <span class="series-sort-label">Sorting:</span>
+        <button class="series-sort-button is-active" type="button" data-series-sort="catalog" aria-pressed="true" title="Catalog order / all works">#/&#10045;</button>
+        <button class="series-sort-button" type="button" data-series-sort="foundation" aria-pressed="false" title="Foundation first">&#9733;</button>
+        <button class="series-sort-button" type="button" data-series-sort="chronicle" aria-pressed="false" title="Chronicle first">&#8984;</button>
+        <button class="series-sort-button" type="button" data-series-sort="legend" aria-pressed="false" title="Legend first">&#10070;</button>
+      </div>
+      <span class="catalog-tools-divider" aria-hidden="true">|</span>
+      <form class="jump-form" data-jump-form>
+        <label for="artwork-number">Jump to image #</label>
+        <input id="artwork-number" name="artwork-number" type="number" min="1" max={imageCount} inputmode="numeric" />
+        <button type="submit">Go</button>
+      </form>
+      <span class="catalog-tools-divider" aria-hidden="true">|</span>
+      <p class="catalog-tools-count" data-catalog-count>{imageCount} works</p>
+    </section>
+
+    <!-- Image Grid -->
+    <div class="ssr-grid" id="collection-grid">
+      {filteredGalleryData.map((item: any, idx: number) => {
+        // Use smallest sufficient size for 250px grid cards via proxy
+        const imageUrl = getProxySrc(item.id, 's');
+        const srcsetParts = [
+          `${getProxySrc(item.id, 's')} 400w`,
+          `${getProxySrc(item.id, 'm')} 600w`,
+          `${getProxySrc(item.id, 'l')} 1024w`
+        ].join(", ");
+        const linkUrl = `${contentBasePath}/${item.id}`;
+        const collectorNotesHref = `${linkUrl}#collector-notes`;
+        const title = cleanForDisplay(item.title);
+        
+        // âœ… Auto alt text: prioritize existing alt, then build from description/keywords
+        let altText: string;
+        if (item.alt) {
+          altText = cleanForDisplay(item.alt);
+        } else if (item.description) {
+          // Use first sentence of description (truncated)
+          const firstSentence = item.description.split(/[.!?]/)[0];
+          altText = cleanForDisplay(firstSentence.slice(0, 150));
+        } else if (item.keywords?.length > 0) {
+          // Build from keywords: "Western portrait: keyword1, keyword2, keyword3"
+          const topKeywords = item.keywords.slice(0, 4).join(", ");
+          altText = `Western fine art photograph: ${topKeywords}`;
+        } else {
+          altText = `Western cowboy fine art photograph: ${title} by Wayne Heim`;
+        }
+
+        const normalizedAltKey = altText.toLowerCase();
+        const previousAltCount = seenCardAltCounts.get(normalizedAltKey) || 0;
+        if (previousAltCount > 0) {
+          altText = `${altText.replace(/[.\s]*$/, "")} (${title} - artwork ${idx + 1}).`;
+        }
+        seenCardAltCounts.set(normalizedAltKey, previousAltCount + 1);
+        
+        const storyExcerpt = truncateStory(item.story || "");
+        const collectorNoteRaw =
+          item.notes ||
+          item.collectorNotes ||
+          item.collector_notes ||
+          item.description ||
+          item.story ||
+          "";
+        const collectorNoteTeaser = truncateWords(collectorNoteRaw, 30);
+        const cardSeries = getCardSeries(item);
+        const cardSeriesKeys = cardSeries.map((series: any) => series.key).join(' ');
+        const needsRangeMarker = idx > 0 && idx % 50 === 0;
+        const rangeStart = idx + 1;
+        const rangeEnd = Math.min(idx + 50, imageCount);
+
+        return (
+          <>
+            {needsRangeMarker && (
+              <div class="catalog-range-marker">
+                <span>Artworks {rangeStart}&ndash;{rangeEnd} of {imageCount}</span>
+                <a href="#top">Back to top</a>
+              </div>
+            )}
+            <div
+              class="ssr-card"
+              id={item.id}
+              data-artwork-number={idx + 1}
+              data-original-index={idx}
+              data-series={cardSeriesKeys}
+            >
+              <a href={linkUrl} class="ssr-card-link">
+                <img 
+                  class="ssr-card-image"
+                  src={imageUrl} 
+                  srcset={srcsetParts || undefined}
+                  sizes="(max-width: 520px) calc(100vw - 32px), (max-width: 768px) calc((100vw - 48px) / 2), 250px"
+                  alt={altText} 
+                  loading="lazy" 
+                  decoding="async"
+                  fetchpriority="low"
+                />
+                <div class="ssr-card-content">
+                  <div class="card-meta-row">
+                    <span class="card-number">Image {idx + 1} of {imageCount}</span>
+                    {cardSeries.length > 0 && (
+                      <span class="card-series-strip" aria-label="Available print series">
+                        {cardSeries.map((series: any, seriesIdx: number) => (
+                          <>
+                            <span
+                              class="card-series-icon"
+                              title={`${series.label} Series Member`}
+                              aria-label={`${series.label} Series Member`}
+                            >
+                              {series.icon}
+                            </span>
+                            {seriesIdx < cardSeries.length - 1 && <span class="card-series-separator" aria-hidden="true">|</span>}
+                          </>
+                        ))}
+                      </span>
+                    )}
+                  </div>
+                  <h3>{title}</h3>
+                  <p class="print-cue sr-only">Fine art print available</p>
+                  {storyExcerpt && <p class="story-excerpt">{storyExcerpt}</p>}
+                  <span class="card-cta">Explore Story | Order Fine Art Print &rarr;</span>
+                </div>
+              </a>
+              <button
+                type="button"
+                class="collector-notes-trigger"
+                data-notes-trigger
+                aria-label="View collector note preview"
+              >
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M2 6h4" />
+                  <path d="M2 10h4" />
+                  <path d="M2 14h4" />
+                  <path d="M2 18h4" />
+                  <rect width="16" height="20" x="4" y="2" rx="2" />
+                  <path d="M16 2v20" />
+                </svg>
+              </button>
+              <div class="collector-note-overlay" data-notes-overlay>
+                <p class="collector-note-kicker">Collector Note</p>
+                <p class="collector-note-teaser">{collectorNoteTeaser || "Collector note preview available for this artwork."}</p>
+                <a class="collector-note-link" href={collectorNotesHref}>View full collector notes &rarr;</a>
+              </div>
+            </div>
+          </>
+        );
+      })}
+    </div>
+
+    <ArchiveContext 
+      categoryUrl={archiveContext.categoryUrl || basePath} 
+      categoryName={archiveContext.categoryName || collectionName} 
+    />
+
+    <Footer />
+  </div>
+
+  <style>
+    body { background:#fff; color:#2a1f17; font-family:'Glegoo',serif; }
+    html { scroll-behavior:smooth; }
+    .all-page-header-frame { padding-top:22px; }
+    :global(.breadcrumb-text) {
+      max-width:min(560px, calc(50vw - 118px));
+      overflow:hidden;
+      text-overflow:ellipsis;
+      font-size:1rem;
+      letter-spacing:0;
+    }
+    :global(.breadcrumb-text a) {
+      color:inherit;
+      text-decoration:none;
+    }
+    :global(.breadcrumb-text a:hover) {
+      color:#85644b;
+    }
+    .gallery-index-wrapper { min-height:100vh; padding:12px 24px 24px; }
+
+    .breadcrumb-nav { text-align:center; margin-bottom:8px; font-family:'Glegoo',serif; }
+    .breadcrumb-list {
+      display:inline-flex; flex-wrap:wrap; justify-content:center;
+      gap:6px; list-style:none; padding:0; margin:0;
+      font-size:0.78rem; color:#7a6b5e;
+    }
+    .breadcrumb-list a { color:#85644b; text-decoration:none; transition:color 0.2s ease; }
+    .breadcrumb-list a:hover { color:#5a3e2b; }
+    .breadcrumb-list li::after { content:">"; margin:0 4px; color:#9b8b7f; }
+    .breadcrumb-list li:last-child::after { content:""; }
+
+    .collection-hero {
+      max-width:1280px;
+      margin:0 auto;
+      padding:44px 28px;
+      border-top:1px solid #dccfbe;
+      border-bottom:1px solid #dccfbe;
+      text-align:center;
+      background:transparent;
+    }
+    .collection-hero h2 {
+      margin:0;
+      font-size:clamp(1.85rem, 3.2vw, 2.75rem);
+      line-height:1.14;
+      color:#231a13;
+      font-weight:700;
+    }
+    .hero-deck {
+      max-width:1080px;
+      margin:14px auto 0;
+      color:#4f4034;
+      font-size:1.12rem;
+      line-height:1.8;
+    }
+    .hero-copy {
+      max-width:1080px;
+      margin:14px auto 0;
+      color:#3f3228;
+      font-size:.98rem;
+      line-height:1.75;
+    }
+    .collection-gateway {
+      max-width:1020px;
+      margin:8px auto 24px;
+      display:grid;
+      grid-template-columns:minmax(0, 1.25fr) minmax(220px, .75fr);
+      grid-template-areas:"copy art";
+      gap:56px;
+      align-items:center;
+      padding:18px 20px;
+      background:transparent;
+      border-top:1px solid #dccfbe;
+      border-bottom:1px solid #dccfbe;
+    }
+    .gateway-copy {
+      grid-area:copy;
+      min-width:0;
+      padding:8px 4px 8px 0;
+      max-width:38rem;
+    }
+    .gateway-kicker {
+      margin:0 0 10px;
+      color:#7a6047;
+      font-size:.76rem;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+    .gateway-brand {
+      margin:0 0 14px;
+      color:#231a13;
+      font-size:clamp(2rem, 3.8vw, 3.25rem);
+      line-height:1.02;
+      font-weight:700;
+      max-width:none;
+    }
+    .gateway-copy-text {
+      margin:0 0 12px;
+      color:#43362c;
+      font-size:.96rem;
+      line-height:1.72;
+      max-width:38rem;
+    }
+    .gateway-copy-text:last-child { margin-bottom:0; }
+    .gateway-artwork {
+      grid-area:art;
+      display:block;
+      width:min(100%, 460px);
+      justify-self:end;
+      margin-left:auto;
+      margin-right:6px;
+      text-decoration:none;
+      color:inherit;
+      position:relative;
+      z-index:1;
+      filter:drop-shadow(0 10px 16px rgba(0,0,0,.24));
+    }
+    .gateway-artwork-mat {
+      display:inline-block;
+      width:fit-content;
+      max-width:100%;
+      padding:10px;
+      background:#000;
+      border:1px solid #1b1b1b;
+      box-shadow:0 0 0 1px rgba(255,255,255,.02), 0 3px 12px rgba(0,0,0,.28);
+    }
+    .gateway-artwork img {
+      display:block;
+      width:clamp(304px, 37vw, 416px);
+      height:auto;
+      aspect-ratio:3 / 4;
+      object-fit:cover;
+      object-position:center 28%;
+      margin:0;
+      background:#fff;
+      border:4px solid #fff;
+      box-sizing:border-box;
+    }
+    .gateway-artwork:hover img,
+    .gateway-artwork:focus-visible img {
+      border-color:#b89b78;
+    }
+    .gateway-artwork:focus-visible {
+      outline:2px solid #b89b78;
+      outline-offset:3px;
+    }
+
+    .collection-dock {
+      position:relative;
+      max-width:1320px;
+      margin:14px auto 24px;
+      padding:14px 18px 18px;
+      background:#fff;
+      border-top:1px solid #d3c3b1;
+      border-bottom:1px solid #d3c3b1;
+      box-shadow:none;
+      overflow:hidden;
+    }
+    .collection-dock::before,
+    .collection-dock::after {
+      content:"";
+      position:absolute;
+      left:0;
+      right:0;
+      height:14px;
+      pointer-events:none;
+    }
+    .collection-dock::before {
+      top:0;
+      background:linear-gradient(90deg,
+        rgba(53, 40, 28, 0) 0%,
+        rgba(53, 40, 28, .5) 14%,
+        rgba(53, 40, 28, .5) 86%,
+        rgba(53, 40, 28, 0) 100%);
+      filter:blur(4px);
+      transform:translateY(-62%);
+    }
+    .collection-dock::after {
+      bottom:0;
+      background:linear-gradient(90deg,
+        rgba(53, 40, 28, 0) 0%,
+        rgba(53, 40, 28, .44) 14%,
+        rgba(53, 40, 28, .44) 86%,
+        rgba(53, 40, 28, 0) 100%);
+      filter:blur(4px);
+      transform:translateY(62%);
+    }
+    .dock-heading {
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+      margin-bottom:10px;
+      text-align:center;
+    }
+    .dock-heading p {
+      margin:0 0 6px;
+      color:#7a6047;
+      font-size:.78rem;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+    .dock-heading h2 {
+      margin:0;
+      color:#2f241b;
+      font-size:1.38rem;
+      line-height:1.35;
+      min-height:1.9em;
+    }
+    #dock-active-title {
+      color:#6d4d34;
+    }
+    .dock-mode-switch {
+      position:absolute;
+      right:12px;
+      top:10px;
+      color:#7a6047;
+      border:1px solid #d8c7b4;
+      background:rgba(255,253,249,.78);
+      padding:4px 8px;
+      font-size:.68rem;
+      line-height:1.2;
+      text-decoration:none;
+      border-radius:2px;
+    }
+    .dock-mode-switch:hover {
+      color:#2f2117;
+      border-color:#b89b78;
+      background:#fffaf4;
+    }
+    .dock-shell {
+      position:relative;
+    }
+    .dock-track {
+      display:flex;
+      align-items:flex-end;
+      justify-content:flex-start;
+      gap:6px;
+      min-height:102px;
+      padding:4px 28px 10px;
+      perspective:900px;
+      overflow-x:auto;
+      scroll-behavior:smooth;
+      scroll-snap-type:x proximity;
+      scrollbar-width:thin;
+      scrollbar-color:#b89b78 #efe6da;
+    }
+    .dock-track::-webkit-scrollbar {
+      height:8px;
+    }
+    .dock-track::-webkit-scrollbar-track {
+      background:#efe6da;
+    }
+    .dock-track::-webkit-scrollbar-thumb {
+      background:#b89b78;
+      border-radius:999px;
+    }
+    .dock-anchor {
+      flex:0 0 1px;
+      height:1px;
+    }
+    .dock-card {
+      flex:0 0 58px;
+      color:inherit;
+      text-decoration:none;
+      transform:translateY(5px) scale(.86);
+      opacity:.82;
+      transition:transform .24s ease, opacity .24s ease, filter .24s ease;
+      filter:saturate(.92);
+      text-align:center;
+      scroll-snap-align:center;
+    }
+    .dock-card.is-near {
+      flex-basis:64px;
+      transform:translateY(1px) scale(.94);
+      opacity:.9;
+    }
+    .dock-card.is-center {
+      flex-basis:78px;
+      transform:translateY(-3px) scale(1.04);
+      opacity:1;
+      filter:saturate(1.04);
+      z-index:2;
+    }
+    .dock-card.is-current .dock-tombstone {
+      border-color:#9b7451;
+      box-shadow:0 18px 38px rgba(48,34,23,.2);
+    }
+    .dock-card.is-current:hover,
+    .dock-card.is-current:focus-visible {
+      transform:translateY(-3px) scale(1.04);
+      cursor:default;
+    }
+    .dock-card.is-far {
+      transform:translateY(8px) scale(.8);
+      opacity:.68;
+    }
+    .dock-card:hover,
+    .dock-card:focus-visible {
+      transform:translateY(-6px) scale(1.02);
+      opacity:1;
+      filter:saturate(1.05);
+      outline:none;
+      z-index:3;
+    }
+    .dock-tombstone {
+      aspect-ratio:3.5 / 4;
+      position:relative;
+      background:#fffdf9;
+      border:1px solid #bda27c;
+      border-radius:0% 0% 25% 25% / 0% 0% 20% 20%;
+      box-shadow:
+        inset 0 -1px 1px rgba(255,255,255,.6),
+        inset 0 1px 2px rgba(0,0,0,.08),
+        0 10px 22px rgba(48,34,23,.13);
+      overflow:hidden;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .dock-tombstone img {
+      display:block;
+      width:100%;
+      height:100%;
+      aspect-ratio:3.5 / 4;
+      object-fit:cover;
+      object-position:center 15%;
+      background:#efe7dc;
+    }
+
+    .print-options {
+      position:relative;
+      width:min(1320px, calc(100% - 80px));
+      max-width:none;
+      margin:6px auto 22px;
+      padding:8px 18px;
+      border-top:1px solid #d3c3b1;
+      border-bottom:1px solid #d3c3b1;
+      background:#fff;
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.92),
+        0 12px 16px -14px rgba(48,34,23,.42);
+    }
+    .print-options::before,
+    .print-options::after {
+      content:"";
+      position:absolute;
+      left:-1px;
+      right:-1px;
+      z-index:0;
+      pointer-events:none;
+    }
+    .print-options::before {
+      top:-5px;
+      height:4px;
+      background:linear-gradient(90deg,
+        rgba(48,34,23,0) 0%,
+        rgba(48,34,23,.22) 10%,
+        rgba(48,34,23,.22) 90%,
+        rgba(48,34,23,0) 100%);
+      filter:blur(3px);
+    }
+    .print-options::after {
+      bottom:-5px;
+      height:7px;
+      background:linear-gradient(90deg,
+        rgba(48,34,23,0) 0%,
+        rgba(48,34,23,.18) 10%,
+        rgba(48,34,23,.18) 90%,
+        rgba(48,34,23,0) 100%);
+      filter:blur(5px);
+    }
+    .print-options-heading {
+      position:relative;
+      width:min(1320px, calc(100% - 80px));
+      max-width:none;
+      margin:22px auto 11px;
+      padding:0 18px;
+      box-sizing:border-box;
+      background:#fff;
+      color:#8f7f70;
+      font-size:.68rem;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      line-height:1;
+      transform:translateY(-5px);
+    }
+    .catalog-anchor-rule {
+      width:min(1400px, calc(100% - 68px));
+      margin:0 auto;
+      border:0;
+      border-top:1px solid #dfd0bd;
+      display:none;
+    }
+    .collection-browser-anchor {
+      display:block;
+      height:0;
+      scroll-margin-top:92px;
+    }
+    .series-widget {
+      position:relative;
+      z-index:1;
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:6px;
+      max-width:1180px;
+      margin:0 auto;
+    }
+    .series-tile {
+      position:relative;
+      border:1px solid #dfd0bd;
+      background:#f5f1ec;
+      color:#2f241b;
+      min-width:0;
+    }
+    .series-tile.is-active,
+    .series-tile:hover,
+    .series-tile:focus-within {
+      border-color:#b69570;
+      box-shadow:0 10px 22px rgba(48,34,23,.1);
+    }
+    .series-trigger {
+      width:100%;
+      border:0;
+      background:transparent;
+      color:inherit;
+      font-family:'Glegoo',serif;
+      text-align:center;
+      cursor:pointer;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:7px;
+      min-height:48px;
+      padding:6px 9px 5px;
+    }
+    .series-trigger:focus-visible {
+      outline:1px solid #9b7451;
+      outline-offset:-4px;
+    }
+    .series-symbol {
+      color:#85644b;
+      font-size:1rem;
+      line-height:1;
+      margin-top:0;
+      flex:0 0 auto;
+    }
+    .series-tile strong {
+      display:block;
+      color:#2f241b;
+      font-size:.86rem;
+      line-height:1.15;
+    }
+    .series-tile small {
+      display:block;
+      margin-top:1px;
+      color:#6b594b;
+      font-size:.68rem;
+      line-height:1.15;
+    }
+    .series-tile:hover .series-symbol,
+    .series-tile:focus-within .series-symbol,
+    .series-tile.is-active .series-symbol,
+    .series-tile:hover strong,
+    .series-tile:focus-within strong,
+    .series-tile.is-active strong {
+      color:#5d8fbc;
+    }
+    .series-detail {
+      position:absolute;
+      left:calc(50% - 6px);
+      top:calc(100% + 2px);
+      z-index:20;
+      width:min(320px, calc(100vw - 48px));
+      padding:12px 13px 11px;
+      border:1px solid #cdbba6;
+      background:#fffdf9;
+      box-shadow:0 18px 36px rgba(48,34,23,.18);
+      color:#4b3a2d;
+      font-size:.8rem;
+      line-height:1.55;
+      opacity:0;
+      visibility:hidden;
+      pointer-events:none;
+      transform:translate(-50%, 10px);
+      transition:opacity .18s ease, transform .18s ease, visibility .18s ease;
+    }
+    .series-tile:nth-child(1) .series-detail { left:-6px; transform:translate(0, 10px); }
+    .series-tile:nth-child(4) .series-detail { left:auto; right:6px; transform:translate(0, 10px); }
+    .series-tile.is-hover-ready .series-detail,
+    .series-tile.is-active .series-detail {
+      opacity:1;
+      visibility:visible;
+      pointer-events:auto;
+      transform:translate(-50%, 2px);
+    }
+    .series-tile:nth-child(1).is-hover-ready .series-detail,
+    .series-tile:nth-child(1).is-active .series-detail,
+    .series-tile:nth-child(4).is-hover-ready .series-detail,
+    .series-tile:nth-child(4).is-active .series-detail {
+      transform:translate(2px, 1px);
+    }
+    .series-detail p {
+      margin:0;
+    }
+    .series-detail-copy {
+      display:grid;
+      gap:8px;
+    }
+    .series-detail-title {
+      display:flex;
+      align-items:flex-start;
+      gap:8px;
+      color:#2f241b;
+    }
+    .series-detail-symbol {
+      color:#5d8fbc;
+      font-size:.95rem;
+      line-height:1.2;
+      flex:0 0 auto;
+    }
+    .series-detail-footer {
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:16px;
+      margin-top:10px;
+    }
+    .series-detail-sizes {
+      margin:10px 0 0;
+      padding:0;
+      list-style:none;
+      color:#2f241b;
+      font-size:.8rem;
+      font-weight:700;
+      flex:1 1 auto;
+      min-width:0;
+    }
+    .series-detail-sizes li + li {
+      margin-top:4px;
+    }
+    .series-detail-link {
+      display:inline-flex;
+      align-items:center;
+      justify-content:flex-end;
+      white-space:nowrap;
+      color:#85644b;
+      font-size:.78rem;
+      text-decoration:none;
+      border-bottom:1px solid rgba(133,100,75,.45);
+      flex:0 0 auto;
+    }
+    .catalog-tools {
+      width:min(1400px, calc(100% - 68px));
+      margin:14px auto 18px;
+      padding:6px 22px;
+      box-sizing:border-box;
+      display:grid;
+      grid-template-columns:auto auto auto 1fr auto 1fr auto;
+      align-items:center;
+      column-gap:18px;
+      row-gap:6px;
+      background:#f5f1ec;
+      border:1px solid #cec9c4;
+      overflow:hidden;
+    }
+    .catalog-tools-title {
+      margin:0;
+      color:#2f241b;
+      font-size:.98rem;
+      font-weight:700;
+      white-space:nowrap;
+      justify-self:start;
+      min-width:0;
+    }
+    .catalog-tools-count {
+      margin:0;
+      color:#6b594b;
+      font-size:.88rem;
+      white-space:nowrap;
+      justify-self:end;
+      min-width:0;
+    }
+    .catalog-tools-divider {
+      color:#b59d85;
+      font-size:.92rem;
+      line-height:1;
+      user-select:none;
+      justify-self:center;
+    }
+    .catalog-tools a {
+      color:#85644b;
+      font-size:.8rem;
+      text-decoration:none;
+      border-bottom:1px solid rgba(133,100,75,.45);
+    }
+    .series-sort {
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:5px;
+      min-width:0;
+      white-space:nowrap;
+    }
+    .series-sort-label {
+      color:#4b3a2d;
+      font-size:.86rem;
+    }
+    .series-sort-button {
+      min-width:25px;
+      height:24px;
+      padding:0 5px;
+      border:1px solid transparent;
+      background:transparent;
+      color:#6f9aab;
+      font-family:'Glegoo',serif;
+      font-size:.82rem;
+      line-height:1;
+      cursor:pointer;
+    }
+    .series-sort-button:hover,
+    .series-sort-button:focus-visible,
+    .series-sort-button.is-active {
+      border-color:#9db9c5;
+      background:#fffdf9;
+      color:#356f88;
+      outline:none;
+    }
+    .series-sort-button:disabled,
+    .series-sort-button.is-disabled {
+      color:#b9afa5;
+      opacity:.52;
+      cursor:not-allowed;
+      pointer-events:none;
+    }
+    .series-sort-button:disabled:hover,
+    .series-sort-button:disabled:focus-visible {
+      border-color:transparent;
+      background:transparent;
+      color:#b9afa5;
+      outline:none;
+    }
+    .jump-form {
+      display:flex;
+      align-items:center;
+      flex-wrap:nowrap;
+      gap:8px;
+      margin:0;
+      justify-self:center;
+      min-width:0;
+      max-width:100%;
+    }
+    .jump-form label {
+      color:#4b3a2d;
+      font-size:.88rem;
+      white-space:nowrap;
+      min-width:0;
+    }
+    .jump-form input {
+      width:58px;
+      max-width:100%;
+      padding:3px 7px;
+      border:1px solid #cdbba6;
+      background:#fffdf9;
+      color:#2f241b;
+      font-family:'Glegoo',serif;
+      font-size:.88rem;
+    }
+    .jump-form button {
+      padding:3px 11px;
+      border:1px solid #b89b78;
+      background:#fffdf9;
+      color:#5a3e2b;
+      font-family:'Glegoo',serif;
+      font-size:.88rem;
+      cursor:pointer;
+    }
+    .jump-form button:hover {
+      background:#fffaf4;
+    }
+
+    .ssr-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fill,minmax(245px,1fr));
+      gap:24px;
+      margin:34px auto 44px;
+      max-width:1400px;
+      padding:0 34px;
+      align-items:stretch;
+    }
+
+    .catalog-range-marker {
+      grid-column:1 / -1;
+      width:100%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      margin:12px 0 2px;
+      padding:9px 2px;
+      border-top:1px solid #dfd0bd;
+      color:#6b594b;
+      font-size:.82rem;
+    }
+    .catalog-range-marker a {
+      color:#85644b;
+      text-decoration:none;
+      border-bottom:1px solid rgba(133,100,75,.45);
+    }
+    :global(.catalog-range-marker) {
+      grid-column:1 / -1;
+      width:100%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      margin:12px 0 2px;
+      padding:9px 2px;
+      border-top:1px solid #dfd0bd;
+      color:#6b594b;
+      font-size:.82rem;
+    }
+    :global(.catalog-range-marker a) {
+      color:#85644b;
+      text-decoration:none;
+      border-bottom:1px solid rgba(133,100,75,.45);
+    }
+    .catalog-range-marker.series-sort-divider {
+      margin:18px 0 12px;
+      padding:12px 0 13px;
+      border-top:1px solid #9db9c5;
+      border-bottom:1px solid #d7cabc;
+      color:#4f6f7a;
+    }
+    .series-sort-divider-copy {
+      display:grid;
+      gap:2px;
+    }
+    .series-sort-divider strong {
+      display:block;
+      color:#2f5261;
+      font-size:.88rem;
+      margin-bottom:2px;
+    }
+    .series-sort-divider small {
+      display:block;
+      color:#6b594b;
+      font-size:.78rem;
+      line-height:1.35;
+    }
+    .series-sort-divider a {
+      font-weight:700;
+      text-decoration:underline;
+      text-underline-offset:2px;
+    }
+    :global(.catalog-range-marker.series-sort-divider) {
+      grid-column:1 / -1;
+      width:100%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      margin:18px 0 12px;
+      padding:12px 0 13px;
+      border-top:1px solid #9db9c5;
+      border-bottom:1px solid #d7cabc;
+      color:#4f6f7a;
+      font-size:.84rem;
+    }
+    :global(.series-sort-divider-copy) {
+      display:grid;
+      gap:3px;
+    }
+    :global(.series-sort-divider-copy strong) {
+      display:block;
+      color:#2f5261;
+      font-size:.88rem;
+      margin:0;
+    }
+    :global(.series-sort-divider-copy small) {
+      display:block;
+      color:#6b594b;
+      font-size:.78rem;
+      line-height:1.35;
+    }
+    :global(.series-sort-divider a) {
+      color:#85644b;
+      font-weight:700;
+      text-decoration:underline;
+      text-underline-offset:2px;
+      white-space:nowrap;
+    }
+
+    .ssr-card {
+      --card-overlap:82px;
+      position:relative;
+      isolation:isolate;
+      content-visibility:auto;
+      contain-intrinsic-size:520px;
+      border:1px solid #b46a5f;
+      border-radius:6px;
+      background:#fffdf9;
+      box-shadow:0 8px 22px rgba(48,34,23,.08);
+      overflow:hidden;
+      transition:border-color .32s ease, box-shadow .32s ease;
+    }
+    .sr-only {
+      position:absolute;
+      width:1px;
+      height:1px;
+      padding:0;
+      margin:-1px;
+      overflow:hidden;
+      clip:rect(0, 0, 0, 0);
+      white-space:nowrap;
+      border:0;
+    }
+
+    .ssr-card:hover,
+    .ssr-card:focus-within {
+      border-color:#a44a3f;
+      box-shadow:0 0 0 2px rgba(219, 72, 53, 0.5), 0 10px 24px rgba(48,34,23,.41);
+    }
+    .ssr-card.is-series-sort-match {
+      border-color:#6f9aab;
+      box-shadow:0 0 0 3px rgba(111,154,171,.68), 0 8px 22px rgba(48,34,23,.08);
+    }
+    .ssr-card.is-series-sort-match:hover,
+    .ssr-card.is-series-sort-match:focus-within {
+      border-color:#4f879e;
+      box-shadow:0 0 0 3px rgba(111,154,171,.88), 0 10px 24px rgba(48,34,23,.32);
+    }
+
+    .ssr-card-link {
+      display:flex;
+      flex-direction:column;
+      height:100%;
+      text-decoration:none;
+      color:inherit;
+      cursor:pointer;
+    }
+
+    .ssr-card-image {
+      display:block;
+      width:100%;
+      height:auto;
+      background:#efe7dc;
+      transition:filter .28s ease, opacity .28s ease;
+    }
+
+    .ssr-card:hover .ssr-card-image,
+    .ssr-card:focus-within .ssr-card-image {
+      filter:saturate(1.04) contrast(1.02);
+    }
+
+    .ssr-card-content {
+      display:flex;
+      flex-direction:column;
+      padding:14px 15px 16px;
+      min-height:172px;
+      height:252px;
+      overflow:hidden;
+      position:relative;
+      margin-top:calc(var(--card-overlap) * -1);
+      z-index:1;
+      background:#fffdf9;
+      border-top:1px solid #e6d9ca;
+      width:100%;
+      transition:transform .46s cubic-bezier(.22, 1, .36, 1);
+      transform:translateY(0);
+    }
+
+    .ssr-card:hover .ssr-card-content,
+    .ssr-card:focus-within .ssr-card-content {
+      transform:translateY(var(--card-overlap));
+      justify-content:flex-start;
+    }
+
+    .ssr-card-link:focus-visible {
+      outline:2px solid #b69570;
+      outline-offset:-2px;
+    }
+
+    .card-number {
+      font-size:.72rem;
+      color:#8a7562;
+      display:block;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+      white-space:nowrap;
+    }
+    .card-meta-row {
+      position:static;
+      display:block;
+      margin-bottom:6px;
+      padding-right:58px;
+      min-width:0;
+      transition:opacity .24s ease, transform .24s ease, max-height .24s ease, margin .24s ease;
+    }
+
+    .ssr-card-content h3 {
+      font-size:1rem;
+      line-height:1.35;
+      font-weight:700;
+      color:#2d2118;
+      margin:0 0 8px;
+      display:-webkit-box;
+      -webkit-box-orient:vertical;
+      -webkit-line-clamp:3;
+      overflow:hidden;
+      transition:opacity .24s ease, transform .24s ease, max-height .24s ease, margin .24s ease;
+    }
+    .card-series-strip {
+      display:flex;
+      position:absolute;
+      top:14px;
+      right:15px;
+      align-items:center;
+      justify-content:flex-end;
+      gap:2px;
+      color:#6f9aab;
+      font-size:.76rem;
+      line-height:1;
+      opacity:.78;
+      white-space:nowrap;
+      flex-wrap:nowrap;
+      flex:0 0 auto;
+    }
+    .card-series-icon {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-width:11px;
+    }
+    .card-series-separator {
+      color:#cdbba6;
+      font-size:.56rem;
+      opacity:.9;
+    }
+    .print-cue {
+      margin:0 0 10px;
+      color:#7b5c3e;
+      font-size:.86rem;
+      font-weight:700;
+      transition:opacity .24s ease, transform .24s ease, max-height .24s ease, margin .24s ease;
+    }
+    .story-excerpt {
+      color:#5d4b3e;
+      font-size:.84rem;
+      line-height:1.45;
+      margin:0 0 14px;
+      display:-webkit-box;
+      -webkit-box-orient:vertical;
+      -webkit-line-clamp:5;
+      overflow:hidden;
+      transition:opacity .24s ease, transform .24s ease, max-height .24s ease, margin .24s ease;
+    }
+    .card-number {
+      transition:opacity .24s ease, transform .24s ease, max-height .24s ease, margin .24s ease;
+    }
+    .card-cta {
+      margin-top:auto;
+      color:#85644b;
+      font-size:calc(.84rem - 1px);
+      letter-spacing:-.024em;
+      white-space:nowrap;
+      border-top:1px solid #e3d7c9;
+      padding-top:10px;
+    }
+    .ssr-card:hover .card-cta,
+    .ssr-card:focus-within .card-cta {
+      margin-top:0;
+    }
+    .ssr-card:hover .card-number,
+    .ssr-card:focus-within .card-number,
+    .ssr-card:hover .card-meta-row,
+    .ssr-card:focus-within .card-meta-row,
+    .ssr-card:hover .ssr-card-content h3,
+    .ssr-card:focus-within .ssr-card-content h3,
+    .ssr-card:hover .print-cue,
+    .ssr-card:focus-within .print-cue,
+    .ssr-card:hover .story-excerpt,
+    .ssr-card:focus-within .story-excerpt {
+      opacity:0;
+      transform:translateY(-6px);
+      max-height:0;
+      margin:0;
+      overflow:hidden;
+      pointer-events:none;
+    }
+    .collector-notes-trigger {
+      position:absolute;
+      top:10px;
+      right:10px;
+      z-index:4;
+      width:24px;
+      height:24px;
+      border:0;
+      border-radius:0;
+      background:transparent;
+      color:#3b8f4a;
+      opacity:.92;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      cursor:pointer;
+      transition:color .18s ease, opacity .18s ease;
+    }
+    .collector-notes-trigger::before {
+      content:"";
+      position:absolute;
+      top:50%;
+      left:50%;
+      width:18px;
+      height:22px;
+      transform:translate(-50%, -50%);
+      border:0;
+      border-radius:4px;
+      background:rgba(0,0,0,.72);
+      transition:background .18s ease, border-color .18s ease;
+      pointer-events:none;
+    }
+    .collector-notes-trigger svg {
+      position:relative;
+      z-index:1;
+      width:22px;
+      height:22px;
+    }
+    .collector-notes-trigger:hover,
+    .collector-notes-trigger:focus-visible {
+      color:#2f7a3d;
+      opacity:1;
+      outline:none;
+    }
+    .collector-notes-trigger:hover::before,
+    .collector-notes-trigger:focus-visible::before {
+      background:rgba(0,0,0,.72);
+    }
+    .collector-note-overlay {
+      position:absolute;
+      top:44px;
+      left:10px;
+      right:10px;
+      z-index:3;
+      padding:10px 11px;
+      border:1px solid rgba(188, 173, 158, .86);
+      border-radius:8px;
+      background:rgba(218, 209, 198, .96);
+      box-shadow:0 10px 22px rgba(35, 26, 19, .2);
+      opacity:0;
+      visibility:hidden;
+      pointer-events:none;
+      transform:translateY(4px);
+      transition:opacity .2s ease, transform .2s ease, visibility .2s ease;
+    }
+    .collector-note-kicker {
+      margin:0 0 4px;
+      color:#7a6047;
+      font-size:.66rem;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+    .collector-note-teaser {
+      margin:0;
+      color:#3f3228;
+      font-size:.75rem;
+      line-height:1.45;
+    }
+    .collector-note-link {
+      display:inline-block;
+      margin-top:7px;
+      color:#85644b;
+      font-size:.74rem;
+      text-decoration:none;
+      border-bottom:1px solid rgba(133,100,75,.45);
+    }
+    .ssr-card:has(.collector-notes-trigger:hover) .collector-note-overlay,
+    .ssr-card:has(.collector-notes-trigger:focus-visible) .collector-note-overlay,
+    .ssr-card.is-notes-open .collector-note-overlay {
+      opacity:1;
+      visibility:visible;
+      pointer-events:auto;
+      transform:translateY(0);
+    }
+    .ssr-card:has(.collector-notes-trigger:hover) .ssr-card-image,
+    .ssr-card:has(.collector-notes-trigger:focus-visible) .ssr-card-image,
+    .ssr-card.is-notes-open .ssr-card-image {
+      filter:saturate(.9) contrast(.96) brightness(.78);
+    }
+
+    @media (max-width: 980px) {
+      .collection-gateway {
+        grid-template-columns:1fr;
+        grid-template-areas:"art" "copy";
+        gap:14px;
+        align-items:start;
+        padding:14px 14px 16px;
+      }
+      .gateway-artwork {
+        width:100%;
+        justify-self:stretch;
+      }
+      .gateway-artwork-mat {
+        width:100%;
+        padding:11px;
+      }
+      .gateway-artwork img {
+        width:100%;
+      }
+      .series-widget {
+        grid-template-columns:repeat(2,minmax(0,1fr));
+      }
+      .series-detail {
+        width:min(300px, calc(100vw - 48px));
+      }
+      .dock-heading {
+        display:block;
+      }
+      .dock-mode-switch {
+        position:static;
+        display:inline-block;
+        margin-top:10px;
+      }
+      .collection-dock {
+        padding-left:0;
+        padding-right:0;
+      }
+      .dock-track {
+        overflow-x:auto;
+        scroll-snap-type:x proximity;
+        min-height:0;
+        padding:8px 24px 18px;
+      }
+      .dock-card,
+      .dock-card.is-near,
+      .dock-card.is-center,
+      .dock-card.is-far {
+        flex:0 0 72px;
+        transform:none;
+        opacity:1;
+        filter:none;
+        scroll-snap-align:center;
+      }
+      .dock-card:hover,
+      .dock-card:focus-visible {
+        transform:none;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .catalog-tools {
+        width:100%;
+        max-width:100%;
+        margin:14px 0 18px;
+        padding:8px 12px;
+        grid-template-columns:1fr;
+        column-gap:12px;
+        row-gap:6px;
+        justify-items:center;
+        text-align:center;
+      }
+      .catalog-tools-title,
+      .catalog-tools-count {
+        white-space:normal;
+        min-width:0;
+        align-self:center;
+      }
+      .catalog-tools-title {
+        grid-column:1 / -1;
+        font-size:.9rem;
+        line-height:1.2;
+        justify-self:center;
+        white-space:nowrap;
+      }
+      .catalog-tools-count {
+        grid-column:1;
+        grid-row:4;
+        font-size:.8rem;
+        white-space:nowrap;
+        justify-self:center;
+      }
+      .catalog-tools-divider {
+        display:none;
+      }
+      .jump-form {
+        width:auto;
+        max-width:100%;
+        grid-column:1;
+        grid-row:3;
+        justify-self:center;
+        display:flex;
+        align-items:center;
+        flex-wrap:nowrap;
+        gap:6px;
+      }
+      .series-sort {
+        grid-column:1;
+        grid-row:2;
+      }
+      .jump-form label,
+      .jump-form input,
+      .jump-form button {
+        min-width:0;
+        max-width:100%;
+        box-sizing:border-box;
+      }
+      .jump-form label {
+        font-size:.8rem;
+        width:auto;
+        white-space:nowrap;
+      }
+      .jump-form input {
+        width:56px;
+        padding:3px 5px;
+        font-size:.82rem;
+      }
+      .jump-form button {
+        width:auto;
+        padding:3px 9px;
+        font-size:.82rem;
+        justify-self:start;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .gallery-index-wrapper { padding:18px 12px; }
+      .collection-hero { padding:18px 18px 20px; }
+      .collection-gateway {
+        margin:12px auto 18px;
+        padding:12px 12px 14px;
+      }
+      .catalog-anchor-rule {
+        width:calc(100% - 32px);
+      }
+      .collector-notes-trigger {
+        width:38px;
+        height:38px;
+        top:8px;
+        right:8px;
+        opacity:.92;
+      }
+      .collector-notes-trigger svg {
+        width:20px;
+        height:20px;
+      }
+      .collector-note-overlay {
+        top:52px;
+      }
+      .catalog-tools {
+        padding:6px 10px;
+        column-gap:8px;
+      }
+      .print-options-heading {
+        margin:8px auto 2px;
+      }
+      .series-widget {
+        grid-template-columns:1fr;
+      }
+      .series-detail {
+        position:static;
+        width:auto;
+        margin:0 12px 12px 34px;
+        opacity:1;
+        visibility:visible;
+        pointer-events:auto;
+        transform:none;
+        display:none;
+        box-shadow:0 10px 22px rgba(48,34,23,.1);
+      }
+      .series-detail-footer {
+        align-items:flex-start;
+        gap:10px;
+      }
+      .series-tile.is-active .series-detail,
+      .series-tile.is-hover-ready .series-detail {
+        display:block;
+        transform:none;
+      }
+      .ssr-grid { padding:0 16px; gap:16px; }
+      .ssr-card-image {
+        width:100%;
+        height:auto;
+      }
+      .ssr-card-content {
+        display:flex;
+        flex-direction:column;
+        min-height:auto;
+        height:auto;
+        margin-top:0;
+        transform:none;
+        background:#fffdf9;
+        border-top:1px solid #e6d9ca;
+      }
+    }
+
+    @media (hover: none), (pointer: coarse) {
+      .ssr-card:hover .ssr-card-content,
+      .ssr-card:focus-within .ssr-card-content {
+        transform:none;
+      }
+      .ssr-card-link {
+        pointer-events:none;
+      }
+      .ssr-card-content {
+        pointer-events:auto;
+      }
+      .ssr-card:hover .card-number,
+      .ssr-card:focus-within .card-number,
+      .ssr-card:hover .card-meta-row,
+      .ssr-card:focus-within .card-meta-row,
+      .ssr-card:hover .ssr-card-content h3,
+      .ssr-card:focus-within .ssr-card-content h3,
+      .ssr-card:hover .print-cue,
+      .ssr-card:focus-within .print-cue,
+      .ssr-card:hover .story-excerpt,
+      .ssr-card:focus-within .story-excerpt {
+        opacity:1;
+        transform:none;
+        max-height:none;
+        overflow:visible;
+        pointer-events:auto;
+      }
+      .ssr-card:hover .card-meta-row,
+      .ssr-card:focus-within .card-meta-row {
+        margin-bottom:6px;
+      }
+      .ssr-card:hover .ssr-card-content h3,
+      .ssr-card:focus-within .ssr-card-content h3 {
+        margin:0 0 8px;
+      }
+      .ssr-card:hover .story-excerpt,
+      .ssr-card:focus-within .story-excerpt {
+        margin:0 0 14px;
+      }
+      .ssr-card:has(.collector-notes-trigger:hover):not(.is-notes-open) .collector-note-overlay,
+      .ssr-card:has(.collector-notes-trigger:focus-visible):not(.is-notes-open) .collector-note-overlay {
+        opacity:0;
+        visibility:hidden;
+        pointer-events:none;
+        transform:translateY(4px);
+      }
+      .ssr-card:has(.collector-notes-trigger:hover):not(.is-notes-open) .ssr-card-image,
+      .ssr-card:has(.collector-notes-trigger:focus-visible):not(.is-notes-open) .ssr-card-image {
+        filter:none;
+      }
+    }
+  </style>
+
+  <script is:inline>
+    (() => {
+      const titleNode = document.getElementById('dock-active-title');
+      const prefixNode = document.getElementById('dock-active-prefix');
+      const dockCards = Array.from(document.querySelectorAll('[data-dock-title]'));
+      if (!titleNode || dockCards.length === 0) return;
+
+      const current = dockCards.find((card) => card.getAttribute('aria-current') === 'page');
+      const fallbackTitle = titleNode.textContent || '';
+
+      const setDockTitle = (value, prefix = 'Browse') => {
+        if (prefixNode) prefixNode.textContent = prefix ? `${prefix} ` : '';
+        titleNode.textContent = value || fallbackTitle;
+      };
+
+      setDockTitle(fallbackTitle, '');
+      const centerCurrentCard = () => {
+        if (!current) return;
+        const track = current.closest('.dock-track');
+        if (!track) return;
+        const targetLeft = current.offsetLeft - (track.clientWidth - current.clientWidth) / 2;
+        const maxLeft = Math.max(0, track.scrollWidth - track.clientWidth);
+        track.scrollLeft = Math.max(0, Math.min(targetLeft, maxLeft));
+      };
+      requestAnimationFrame(() => requestAnimationFrame(centerCurrentCard));
+      window.addEventListener('load', centerCurrentCard, { once: true });
+      window.addEventListener('resize', centerCurrentCard);
+
+      dockCards.forEach((card) => {
+        if (card.getAttribute('data-current') === 'true') return;
+        card.addEventListener('mouseenter', () => setDockTitle(card.getAttribute('data-dock-title'), 'Browse'));
+        card.addEventListener('focus', () => setDockTitle(card.getAttribute('data-dock-title'), 'Browse'));
+      });
+
+      const dock = document.querySelector('.collection-dock');
+      dock?.addEventListener('mouseleave', () => setDockTitle(fallbackTitle, ''));
+      dock?.addEventListener('focusout', (event) => {
+        if (!dock.contains(event.relatedTarget)) setDockTitle(fallbackTitle, '');
+      });
+
+      const jumpForm = document.querySelector('[data-jump-form]');
+      jumpForm?.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const input = jumpForm.querySelector('input[name="artwork-number"]');
+        const rawValue = Number(input?.value || 0);
+        if (!Number.isFinite(rawValue) || rawValue < 1) return;
+        const target = document.querySelector(`[data-artwork-number="${Math.floor(rawValue)}"]`);
+        target?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    })();
+
+    (() => {
+      const grid = document.getElementById('collection-grid');
+      const sortButtons = Array.from(document.querySelectorAll('[data-series-sort]'));
+      const countNode = document.querySelector('[data-catalog-count]');
+      if (!grid || sortButtons.length === 0) return;
+
+      const originalNodes = Array.from(grid.children);
+      const cards = originalNodes.filter((node) => node.classList?.contains('ssr-card'));
+      const totalCount = cards.length;
+      const seriesMeta = {
+        foundation: { label: 'Foundation', symbol: '\u2605' },
+        chronicle: { label: 'Chronicle', symbol: '\u2318' },
+        legend: { label: 'Legend', symbol: '\u2756' },
+      };
+      const seriesCounts = Object.keys(seriesMeta).reduce((counts, key) => {
+        counts[key] = cards.filter((card) =>
+          String(card.dataset.series || '').split(/\s+/).includes(key)
+        ).length;
+        return counts;
+      }, {});
+
+      sortButtons.forEach((button) => {
+        const seriesKey = button.getAttribute('data-series-sort') || 'catalog';
+        if (seriesKey === 'catalog') return;
+        const count = seriesCounts[seriesKey] || 0;
+        if (count === 0) {
+          const meta = seriesMeta[seriesKey] || { label: 'Series' };
+          button.disabled = true;
+          button.classList.add('is-disabled');
+          button.setAttribute('aria-disabled', 'true');
+          button.setAttribute('title', `No ${meta.label} works in this collection`);
+        }
+      });
+
+      const clearSortState = () => {
+        cards.forEach((card) => card.classList.remove('is-series-sort-match'));
+      };
+
+      const setActiveButton = (activeKey) => {
+        sortButtons.forEach((button) => {
+          const isActive = button.getAttribute('data-series-sort') === activeKey;
+          button.classList.toggle('is-active', isActive);
+          button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+        });
+      };
+
+      const makeDivider = (seriesKey, matchCount) => {
+        const meta = seriesMeta[seriesKey] || { label: 'Selected', symbol: '' };
+        const divider = document.createElement('div');
+        divider.className = 'catalog-range-marker series-sort-divider';
+        divider.style.gridColumn = '1 / -1';
+        divider.setAttribute('data-series-sort-divider', 'true');
+        divider.innerHTML = `<span class="series-sort-divider-copy"><strong>End of ${meta.symbol} ${meta.label} Series Works</strong><small>Additional Series Works continue below in catalog order.</small></span><a href="#top">Back to top \u2191</a>`;
+        divider.dataset.matchCount = String(matchCount);
+        return divider;
+      };
+
+      const makeRangeMarker = (start, end, total, label = 'Artworks') => {
+        const marker = document.createElement('div');
+        marker.className = 'catalog-range-marker';
+        marker.style.gridColumn = '1 / -1';
+        marker.innerHTML = `<span>${label} ${start}&ndash;${end} of ${total}</span><a href="#top">Back to top</a>`;
+        return marker;
+      };
+
+      const withRangeMarkers = (cardList, total, label = 'Artworks') => {
+        const nodes = [];
+        cardList.forEach((card, idx) => {
+          if (idx > 0 && idx % 50 === 0) {
+            const rangeStart = idx + 1;
+            const rangeEnd = Math.min(idx + 50, total);
+            nodes.push(makeRangeMarker(rangeStart, rangeEnd, total, label));
+          }
+          nodes.push(card);
+        });
+        return nodes;
+      };
+
+      const withCatalogRangeMarkers = (cardList) => {
+        const nodes = [];
+        let activeGroup = 0;
+        cardList.forEach((card) => {
+          const artworkNumber = Number(card.dataset.artworkNumber || 0);
+          const group = Math.floor(Math.max(artworkNumber - 1, 0) / 50);
+          if (group > activeGroup) {
+            const rangeStart = group * 50 + 1;
+            const rangeEnd = Math.min(rangeStart + 49, totalCount);
+            nodes.push(makeRangeMarker(rangeStart, rangeEnd, totalCount));
+            activeGroup = group;
+          }
+          nodes.push(card);
+        });
+        return nodes;
+      };
+
+      const applySort = (seriesKey) => {
+        clearSortState();
+        setActiveButton(seriesKey);
+
+        if (seriesKey === 'catalog') {
+          grid.replaceChildren(...originalNodes);
+          if (countNode) countNode.textContent = `${totalCount} works`;
+          window.dispatchEvent(new Event('resize'));
+          return;
+        }
+
+        const matchingCards = cards.filter((card) =>
+          String(card.dataset.series || '').split(/\s+/).includes(seriesKey)
+        );
+        const remainingCards = cards.filter((card) => !matchingCards.includes(card));
+
+        matchingCards.forEach((card) => card.classList.add('is-series-sort-match'));
+        const divider = makeDivider(seriesKey, matchingCards.length);
+        grid.replaceChildren(
+          ...withRangeMarkers(matchingCards, matchingCards.length, 'Series works'),
+          divider,
+          ...withCatalogRangeMarkers(remainingCards)
+        );
+
+        const meta = seriesMeta[seriesKey] || { label: 'Selected' };
+        if (countNode) countNode.textContent = `${matchingCards.length} ${meta.label} \u00b7 ${totalCount} works`;
+        window.dispatchEvent(new Event('resize'));
+      };
+
+      sortButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          if (button.disabled) return;
+          applySort(button.getAttribute('data-series-sort') || 'catalog');
+        });
+      });
+    })();
+
+    (() => {
+      const cards = Array.from(document.querySelectorAll('.ssr-card'));
+      if (cards.length === 0) return;
+
+      const isDesktopHover = () =>
+        window.matchMedia('(min-width: 769px)').matches &&
+        window.matchMedia('(hover: hover)').matches &&
+        window.matchMedia('(pointer: fine)').matches;
+
+      const applyRowCropping = () => {
+        if (!isDesktopHover()) {
+          cards.forEach((card) => card.style.removeProperty('--card-overlap'));
+          return;
+        }
+
+        const measured = cards
+          .map((card) => {
+            const image = card.querySelector('.ssr-card-image');
+            if (!image) return null;
+            const imageHeight = image.getBoundingClientRect().height;
+            if (imageHeight <= 0) return null;
+            const top = Math.round(card.getBoundingClientRect().top);
+            return { card, imageHeight, top };
+          })
+          .filter(Boolean)
+          .sort((a, b) => a.top - b.top);
+
+        if (measured.length === 0) return;
+
+        const rows = [];
+        measured.forEach((item) => {
+          const row = rows[rows.length - 1];
+          if (!row || Math.abs(row.top - item.top) > 4) {
+            rows.push({ top: item.top, items: [item] });
+            return;
+          }
+          row.items.push(item);
+        });
+
+        rows.forEach((row) => {
+          const minImageHeight = Math.min(...row.items.map((item) => item.imageHeight));
+          row.items.forEach((item) => {
+            const overlap = Math.max(0, Math.round(item.imageHeight - minImageHeight));
+            item.card.style.setProperty('--card-overlap', `${overlap}px`);
+          });
+        });
+      };
+
+      let frame = 0;
+      const scheduleCropping = () => {
+        cancelAnimationFrame(frame);
+        frame = requestAnimationFrame(applyRowCropping);
+      };
+
+      if (isDesktopHover()) {
+        cards.forEach((card) => {
+          const image = card.querySelector('.ssr-card-image');
+          if (!image || image.complete) return;
+          image.addEventListener('load', scheduleCropping, { once: true });
+        });
+      }
+
+      window.addEventListener('resize', scheduleCropping);
+      window.addEventListener('load', scheduleCropping, { once: true });
+      scheduleCropping();
+    })();
+
+    (() => {
+      const tiles = Array.from(document.querySelectorAll('[data-series-tile]'));
+      if (tiles.length === 0) return;
+      const hoverDelay = 420;
+      const hoverTimers = new WeakMap();
+      const supportsDelayedHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+      const clearHoverTimer = (tile) => {
+        const timer = hoverTimers.get(tile);
+        if (timer) {
+          window.clearTimeout(timer);
+          hoverTimers.delete(tile);
+        }
+      };
+
+      const closeTiles = (except = null) => {
+        tiles.forEach((tile) => {
+          if (tile !== except) {
+            clearHoverTimer(tile);
+            tile.classList.remove('is-active', 'is-hover-ready');
+          }
+        });
+      };
+
+      tiles.forEach((tile) => {
+        const trigger = tile.querySelector('.series-trigger');
+        trigger?.addEventListener('click', (event) => {
+          event.stopPropagation();
+          clearHoverTimer(tile);
+          const willOpen = !tile.classList.contains('is-active');
+          closeTiles(tile);
+          tile.classList.remove('is-hover-ready');
+          tile.classList.toggle('is-active', willOpen);
+        });
+        tile.addEventListener('pointerenter', () => {
+          if (!supportsDelayedHover) return;
+          clearHoverTimer(tile);
+          hoverTimers.set(tile, window.setTimeout(() => {
+            closeTiles(tile);
+            tile.classList.add('is-hover-ready');
+          }, hoverDelay));
+        });
+        tile.addEventListener('pointerleave', () => {
+          clearHoverTimer(tile);
+          tile.classList.remove('is-hover-ready');
+        });
+        tile.addEventListener('focusout', (event) => {
+          if (!tile.contains(event.relatedTarget)) {
+            clearHoverTimer(tile);
+            tile.classList.remove('is-active', 'is-hover-ready');
+          }
+        });
+      });
+
+      document.addEventListener('click', (event) => {
+        if (!event.target.closest('[data-series-tile]')) closeTiles();
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') closeTiles();
+      });
+    })();
+
+    (() => {
+      const noteCards = Array.from(document.querySelectorAll('.ssr-card'));
+      const noteTriggers = Array.from(document.querySelectorAll('[data-notes-trigger]'));
+      if (noteCards.length === 0 || noteTriggers.length === 0) return;
+
+      const closeAll = (except = null) => {
+        noteCards.forEach((card) => {
+          if (card !== except) card.classList.remove('is-notes-open');
+        });
+      };
+
+      noteTriggers.forEach((trigger) => {
+        trigger.addEventListener('click', (event) => {
+          event.preventDefault();
+          event.stopPropagation();
+          const card = trigger.closest('.ssr-card');
+          if (!card) return;
+          const willOpen = !card.classList.contains('is-notes-open');
+          closeAll(card);
+          card.classList.toggle('is-notes-open', willOpen);
+        });
+      });
+
+      document.addEventListener('click', (event) => {
+        if (event.target.closest('[data-notes-trigger]') || event.target.closest('[data-notes-overlay]')) return;
+        closeAll();
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') closeAll();
+      });
+    })();
+
+  </script>
+
+</BaseLayout>

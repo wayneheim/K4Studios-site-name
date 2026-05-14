@@ -1,0 +1,36 @@
+---
+export const prerender = false;
+
+import CommercialCollectionAllPage from "@/components/all-pages/CommercialCollectionAllPage.astro";
+import { galleryData as rawGalleryData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs";
+import { entranceData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/ColorEntranceData.ts";
+import { buildWildWestAllPageDock } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/dock/buildWildWestAllPageDock.ts";
+import { getFormattedLowestStandardPrintPrice } from "@/data/pricing/printSeries.js";
+
+const basePath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color";
+const canonicalPath = `${basePath}/all`;
+const { sectionDockItems, dockCenterIndex } = buildWildWestAllPageDock({ currentKey: "wwii-machines-0", currentHref: canonicalPath });
+const breadcrumbHtml = ['<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Facing History</a>', '<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII">WWII</a>', '<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines">Men &amp; Machines</a>', `<a href="${basePath}">Color</a>`, 'Collection'].join(' | ');
+const breadcrumbStructuredItems = [
+  { href: "/Galleries", name: "Galleries" },
+  { href: "/Galleries/Painterly-Fine-Art-Photography", name: "Painterly Fine Art Photography" },
+  { href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History", name: "Facing History" },
+  { href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII", name: "WWII" },
+  { href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines", name: "WWII Men and Machines" },
+  { href: basePath, name: "Color" },
+];
+const copy = {
+  seoDescription: `Browse {imageCount} painterly color WWII Men and Machines fine art prints by Wayne Heim, with wartime vehicles, soldiers, collector notes, and print options from ${getFormattedLowestStandardPrintPrice()}.`,
+  indexDefinition: "This page presents the complete color archive of WWII Men and Machines by Wayne Heim. The collection gathers wartime vehicles, military equipment, soldiers, and mechanical presence shaped by painterly color.",
+  indexLinkNote: "All {imageCount} images link to individual image pages with full stories, metadata, and collector information.",
+  commercialH1: "WWII Men and Machines Fine Art Series",
+  commercialDeck: "A collection of painterly WWII vehicle, equipment, and soldier artwork by Wayne Heim.",
+  catalogEntranceTitle: "WWII Men and Machines Fine Art Prints",
+  catalogEntranceCopy: "Browse painterly World War II photography built around soldiers, vehicles, aircraft, equipment, and the machines of wartime.",
+  collectionIntro: "Browse the complete collection of color WWII Men and Machines images shaped by mechanical detail, wartime atmosphere, human scale, and history. Each artwork opens to its full story, collector notes, image metadata, and available print details.",
+  gatewayIntroCopy: `{imageCount} painterly color WWII Men and Machines photographs by Wayne Heim, available as archival fine art prints from ${getFormattedLowestStandardPrintPrice()}. Four edition tiers - open-edition studies to ultra-limited signed collector works - on fine art paper and Baltic Birch wood panels.`,
+  gatewaySupportingCopy: "Every image below is a wartime machine story in a single frame. Click any work to read the narrative, explore collector notes, and view print details.",
+};
+---
+
+<CommercialCollectionAllPage rawGalleryData={rawGalleryData} entranceData={entranceData} basePath={basePath} canonicalPath={canonicalPath} breadcrumbHtml={breadcrumbHtml} breadcrumbStructuredItems={breadcrumbStructuredItems} sectionDockItems={sectionDockItems} dockCenterIndex={dockCenterIndex} currentDockTitle="The WWII Color Men and Machines" archiveContext={{ categoryUrl: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines", categoryName: "WWII Men and Machines" }} identity={{ collectionName: "WWII Men and Machines", variantName: "Color", variantDescriptor: "color WWII Men and Machines", gatewayBrandLabel: "WWII Men and Machines Fine Art Prints - Color Collection" }} copy={copy} />

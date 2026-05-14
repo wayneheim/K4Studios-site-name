@@ -28,7 +28,7 @@ export const painterlyStory = [
   {
     subhead: "The One-Image Movie™ Approach",
     paragraphs: [
-      "Each painterly photograph is designed to function as a <strong>One-Image Movie™</strong> — a single frame carrying the emotional gravity of a larger, unseen story. A moment after something has happened. A breath before consequence arrives.",
+      "Each finished work is designed to function as a <strong>One-Image Movie™</strong> — a K4 Studios narrative-art experience where image, title, authored story, and viewer imagination work together. The photograph opens the scene. The words deepen the uncertainty. The viewer completes the final unwritten story.",
       "These images resist explanation. They are constructed to invite the viewer into participation — to complete the story rather than receive it."
     ]
   },

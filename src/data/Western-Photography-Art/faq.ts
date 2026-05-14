@@ -18,7 +18,8 @@
   {
     q: "What makes Wayne Heim\u2019s Western photography art distinctive?",
     a: [
-      "Wayne Heim\u2019s work applies a painterly photographic process\u2014tonal sculpting, layered textures, and restrained color grading\u2014to create Western images that sit at the intersection of painting and photography. Each image functions as a One-Image Movie\u2122: a single frame composed to carry the emotional weight of a longer story.",
+      "Wayne Heim\u2019s work applies a painterly photographic process\u2014tonal sculpting, layered textures, and restrained color grading\u2014to create Western images that sit at the intersection of painting and photography. Each finished work can become a One-Image Movie\u2122 \u2014 a K4 Studios narrative-art experience where image, title, authored story, and viewer imagination work together.",
+      "The photograph opens the scene. The words deepen the uncertainty. The viewer completes the final unwritten story.",
       "The process draws on decades of experience in medical illustration and fine art, producing a visual language that references the Western painting tradition while remaining grounded in photographic truth."
     ],
   },

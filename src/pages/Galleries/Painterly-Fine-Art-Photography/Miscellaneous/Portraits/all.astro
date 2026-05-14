@@ -1,0 +1,70 @@
+---
+export const prerender = false;
+
+import CommercialCollectionAllPage from "@/components/all-pages/CommercialCollectionAllPage.astro";
+import { galleryData as rawGalleryData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits.mjs";
+import { entranceData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/PortraitsEntranceData.ts";
+import { buildWildWestAllPageDock } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/dock/buildWildWestAllPageDock.ts";
+import { getFormattedLowestStandardPrintPrice } from "@/data/pricing/printSeries.js";
+
+const basePath = "/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits";
+const canonicalPath = `${basePath}/all`;
+
+const { sectionDockItems, dockCenterIndex } = buildWildWestAllPageDock({
+  currentKey: "misc-0",
+  currentHref: canonicalPath,
+});
+
+const breadcrumbHtml = [
+  '<a href="/Galleries/Painterly-Fine-Art-Photography">Painterly Fine Art Photography</a>',
+  '<a href="/Galleries/Painterly-Fine-Art-Photography/Miscellaneous">Miscellaneous</a>',
+  `<a href="${basePath}">Portraits</a>`,
+  'Collection',
+].join(' | ');
+
+const breadcrumbStructuredItems = [
+  { href: "/Galleries", name: "Galleries" },
+  { href: "/Galleries/Painterly-Fine-Art-Photography", name: "Painterly Fine Art Photography" },
+  { href: "/Galleries/Painterly-Fine-Art-Photography/Miscellaneous", name: "Miscellaneous" },
+  { href: basePath, name: "Portraits" },
+];
+
+const copy = {
+  seoDescription: `Browse {imageCount} painterly portrait fine art prints by Wayne Heim, with character studies, collector notes, and print options from ${getFormattedLowestStandardPrintPrice()}.`,
+  indexDefinition:
+    "This page presents the complete Miscellaneous Portraits archive by Wayne Heim. The collection gathers painterly character studies, candid portraits, posed portraits, and expressive human moments outside the larger themed galleries.",
+  indexLinkNote: "All {imageCount} images link to individual image pages with full stories, metadata, and collector information.",
+  commercialH1: "Painterly Portrait Fine Art Series",
+  commercialDeck: "A collection of painterly character portrait artwork by Wayne Heim.",
+  catalogEntranceTitle: "Painterly Portrait Fine Art Prints",
+  catalogEntranceCopy: "Browse fine art portrait photography built around character, expression, atmosphere, gesture, and the quiet story carried by a face.",
+  collectionIntro:
+    "Browse the complete collection of painterly portrait images shaped by expression, gesture, mood, and human presence. Each artwork opens to its full story, collector notes, image metadata, and available print details.",
+  gatewayCollectionName: "Miscellaneous Portraits",
+  gatewayIntroCopy: `{imageCount} painterly portrait photographs by Wayne Heim, available as archival fine art prints from ${getFormattedLowestStandardPrintPrice()}. Four edition tiers - open-edition studies to ultra-limited signed collector works - on fine art paper and Baltic Birch wood panels.`,
+  gatewaySupportingCopy: "Every image below is a character study in a single frame. Click any work to read the narrative, explore collector notes, and view print details.",
+};
+---
+
+<CommercialCollectionAllPage
+  rawGalleryData={rawGalleryData}
+  entranceData={entranceData}
+  basePath={basePath}
+  canonicalPath={canonicalPath}
+  breadcrumbHtml={breadcrumbHtml}
+  breadcrumbStructuredItems={breadcrumbStructuredItems}
+  sectionDockItems={sectionDockItems}
+  dockCenterIndex={dockCenterIndex}
+  currentDockTitle="Miscellaneous Painterly Portraits"
+  archiveContext={{
+    categoryUrl: "/Galleries/Painterly-Fine-Art-Photography/Miscellaneous",
+    categoryName: "Miscellaneous Portraits",
+  }}
+  identity={{
+    collectionName: "Miscellaneous Portraits",
+    variantName: "Portraits",
+    variantDescriptor: "painterly portrait",
+    gatewayBrandLabel: "Painterly Portrait Fine Art Prints - Miscellaneous Collection",
+  }}
+  copy={copy}
+/>

@@ -4,7 +4,7 @@ export const facingFAQ = [
     q: "What is the Facing History collection?",
     a: [
       "Facing History is Wayne Heim’s signature painterly fine art photography collection exploring America’s past through character-driven portraits and historically themed narrative scenes — including the Civil War, World War II, and the Roaring 20s.",
-      "Many images are crafted as <strong>One-Image Movies™</strong> — single, cinematic moments designed to feel like lost frames from larger stories. Each piece is researched, emotionally grounded, and created for collectors who value authentic <strong>historically themed fine art</strong>."
+      "Many finished works are crafted as <strong>One-Image Movies™</strong> — K4 Studios narrative-art experiences where image, title, authored story, and viewer imagination work together. The photograph opens the scene. The words deepen the uncertainty. The viewer completes the final unwritten story. Each piece is researched, emotionally grounded, and created for collectors who value authentic <strong>historically themed fine art</strong>."
     ],
   },
 

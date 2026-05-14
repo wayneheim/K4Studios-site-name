@@ -10,8 +10,34 @@ import { landingWestern as landscapeLocationLanding } from '@/data/Galleries/Pai
 import { landingWestern as landscapeThemeLanding } from '@/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/landingstones.ts';
 import { landingWestern as transportationLanding } from '@/data/Galleries/Painterly-Fine-Art-Photography/Transportation/landingstones.ts';
 import { landingWestern as miscLanding } from '@/data/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/landingstones.ts';
+import { landingWestern as engrainedLanding } from '@/data/Other/K4-Select-Series/Engrained/landingstones.ts';
 
 export type WildWestCurrentDockKey =
+  | 'civil-war-0'
+  | 'civil-war-1'
+  | 'cowboy-portraits-0'
+  | 'cowboy-portraits-1'
+  | 'roaring-20s-0'
+  | 'roaring-20s-1'
+  | 'wwii-portraits-0'
+  | 'wwii-portraits-1'
+  | 'wwii-machines-0'
+  | 'wwii-machines-1'
+  | 'wwii-war-0'
+  | 'wwii-war-1'
+  | 'transportation-0'
+  | 'transportation-1'
+  | 'transportation-2'
+  | 'misc-0'
+  | 'landscape-location-0'
+  | 'landscape-location-1'
+  | 'landscape-location-2'
+  | 'landscape-location-3'
+  | 'landscape-location-4'
+  | 'landscape-theme-0'
+  | 'landscape-theme-1'
+  | 'landscape-theme-2'
+  | 'engrained-0'
   | 'western-narrative-color'
   | 'western-narrative-bw'
   | 'na-portrait-color'
@@ -36,10 +62,12 @@ const toAllHref = (href = '') => {
   return `${cleanHref}/all`;
 };
 
+const withoutFragment = (href = '') => String(href).split('#')[0];
+
 const asDockItem = (stone: DockStone, overrides: Record<string, any> = {}) => ({
   ...stone,
   ...overrides,
-  href: overrides.href || stone.dockHref || toAllHref(stone.href),
+  href: withoutFragment(overrides.href || stone.dockHref || toAllHref(stone.href)),
   cue: overrides.current ? 'Current collection' : 'Browse collection ->',
 });
 
@@ -60,6 +88,7 @@ const baseDockEntries: DockEntry[] = [
   ...landscapeThemeLanding.tombstones.map((stone: DockStone, idx: number) => ({ key: `landscape-theme-${idx}`, stone })),
   ...transportationLanding.tombstones.map((stone: DockStone, idx: number) => ({ key: `transportation-${idx}`, stone })),
   ...miscLanding.tombstones.map((stone: DockStone, idx: number) => ({ key: `misc-${idx}`, stone })),
+  ...engrainedLanding.tombstones.map((stone: DockStone, idx: number) => ({ key: `engrained-${idx}`, stone })),
 ];
 
 const getDockLabelOverride = (key: string, stone: DockStone): { title: string; subtitle?: string } | null => {
@@ -88,7 +117,7 @@ const getDockLabelOverride = (key: string, stone: DockStone): { title: string; s
 export const buildWildWestAllPageDock = (options: BuildDockOptions) => {
   const { currentKey, currentHref } = options;
 
-  const sectionDockItems = baseDockEntries.map(({ key, stone }) => {
+  const orderedDockItems = baseDockEntries.map(({ key, stone }) => {
     const isCurrent = key === currentKey;
     const labelOverride = getDockLabelOverride(key, stone) || {};
     return asDockItem(stone, {
@@ -97,6 +126,16 @@ export const buildWildWestAllPageDock = (options: BuildDockOptions) => {
       href: isCurrent && currentHref ? currentHref : undefined,
     });
   });
+
+  const originalCurrentIndex = orderedDockItems.findIndex((item: any) => item.current);
+  const targetCenterIndex = Math.floor(orderedDockItems.length / 2);
+  const rotateStart = originalCurrentIndex >= 0
+    ? (originalCurrentIndex - targetCenterIndex + orderedDockItems.length) % orderedDockItems.length
+    : 0;
+  const sectionDockItems = [
+    ...orderedDockItems.slice(rotateStart),
+    ...orderedDockItems.slice(0, rotateStart),
+  ];
 
   const dockCenterIndex = sectionDockItems.findIndex((item: any) => item.current);
 

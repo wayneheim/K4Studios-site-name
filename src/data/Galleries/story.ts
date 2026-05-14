@@ -26,7 +26,7 @@ export const galleryStory = [
     paragraphs: [
       `Painterly fine art photography emphasizes narrative tension, atmosphere, and emotional presence. These images are shaped through controlled light, tonal restraint, and compositional discipline rooted in the Pictorialist tradition.`,
       
-      `The result is photography that feels remembered rather than recorded — images that exist in the space between moments, inviting the viewer to complete the story. Many of these works function as One-Image Movies™: single frames carrying the emotional weight of a larger, unseen narrative.`
+      `The result is photography that feels remembered rather than recorded — images that exist in the space between moments, inviting the viewer to complete the story. Many finished works function as One-Image Movies™: K4 Studios narrative-art experiences where image, title, authored story, and viewer imagination work together. The photograph opens the scene. The words deepen the uncertainty. The viewer completes the final unwritten story.`
     ]
   },
 

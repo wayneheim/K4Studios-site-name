@@ -86,7 +86,7 @@ export default function MobileStoryImages({ images = [], displayCount }) {
 
   return (
     <>
-      <style jsx global>{`
+      <style>{`
         .mobile-inline-img-wrapper {
           text-align: center;
           margin: 1.75rem auto 2.25rem;

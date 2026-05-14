@@ -451,8 +451,7 @@ const hasExplicitPageSchema = suppliedJsonLd.some((json) =>
   jsonContainsSchemaType(json, 'WebPage') || jsonContainsSchemaType(json, 'CollectionPage')
 );
 const normalizedAutoWebPageJSON = hasExplicitPageSchema ? null : normalizeK4Host(buildAutoWebPageSchema());
-const jsonLdScripts = [
-  JSON.stringify({
+const siteIdentityStructuredDataJSON = pathname === '/' ? JSON.stringify({
     "@context": "https://schema.org",
     "@graph": [
       {
@@ -490,7 +489,9 @@ const jsonLdScripts = [
         },
       },
     ],
-  }),
+  }) : null;
+const jsonLdScripts = [
+  siteIdentityStructuredDataJSON,
   normalizedAutoWebPageJSON,
   normalizedAutoImageJSON,
   normalizedStructuredDataJSON,

@@ -9,7 +9,7 @@ export default function LogoStatic() {
   return (
     <a href="/" className="logo-static">
       <img src="/images/K4Logo-web.webp" alt="K4 Studios" className="logo-img" />
-      <style jsx>{`
+      <style>{`
         .logo-static {
           position: absolute;
           left: 50%;

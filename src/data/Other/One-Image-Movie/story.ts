@@ -53,7 +53,7 @@ export const oneImageMoviePage = {
         "The viewer is required to complete the unwritten story."
       ],
       paragraphs: [
-        `When a One-Image Movie™ emerges, these conditions tend to be present. They are not ingredients or steps, but signs that the image has crossed a threshold and begun carrying more life than it can fully show. This is the same pressure toward implication that shapes <a href="/Narrative-Western-Art">Narrative Western Art</a>, where the story is carried as much by what the image withholds as by what it reveals.`
+        `When a One-Image Movie™ emerges, these conditions tend to be present. They are not a mechanical checklist, but signs that the full image-title-story-viewer relationship has begun carrying more life than it can fully show. This is the same pressure toward implication that shapes <a href="/Narrative-Western-Art">Narrative Western Art</a>, where the story is carried as much by what the image withholds as by what it reveals.`
       ]
     },
 

@@ -1,477 +1,74 @@
 ---
-export const prerender = true;
-/**
- * /all - Complete Gallery Index Page
- * 
- * This is the authoritative image index for this gallery.
- * Clean URL, distinct from the curated landing page.
- * Optimized for crawlability and SEO authority.
- */
-import Footer from "@/components/Footer.astro";
-import BaseLayout from "@/layouts/BaseLayout.astro";
-import ArchiveContext from "@/components/ArchiveContext.astro";
-import { getSemanticImageUrl } from "@/utils/imageProxy.js";
-import { getCollectionImageGalleryGraph } from "@/components/utils/getStructuredData.ts";
+export const prerender = false;
 
-// ✅ Direct import - no query params needed
+import CommercialCollectionAllPage from "@/components/all-pages/CommercialCollectionAllPage.astro";
 import { galleryData as rawGalleryData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs";
 import { entranceData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/ColorEntranceData.ts";
+import { buildWildWestAllPageDock } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/dock/buildWildWestAllPageDock.ts";
+import { getFormattedLowestStandardPrintPrice } from "@/data/pricing/printSeries.js";
 
-// ✅ Filter out ghosts and hidden (archived) images
-const galleryData = rawGalleryData.filter((img: any) => 
-  img.visibility !== "ghost" && 
-  img.visibility !== "hidden" && 
-  img.id !== "i-k4studios"
-);
-
-// ✅ Gallery metadata
-const galleryTitle = "Western Cowboy Portraits – Color";
-const gallerySubtitle = entranceData?.subtitle || "Painterly Fine Art Photography";
-const imageCount = galleryData.length;
-
-// ✅ Clean URL paths
 const basePath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color";
-const canonicalUrl = `https://www.k4studios.com${basePath}/all`;
-const parentUrl = `https://www.k4studios.com${basePath}`;
+const canonicalPath = `${basePath}/all`;
 
-// ✅ SEO-optimized title and description (factual, not poetic)
-const seoTitle = `Western Cowboy Portraits in Color | 147 Painterly Fine Art Images — Wayne Heim`;
-const seoDescription = `147 color cowboy portraits by Wayne Heim — painterly fine art photography of frontier life, Western characters, and the American West, each image a story-driven artwork.`;
+const breadcrumbHtml = [
+  '<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Facing History</a>',
+  '<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West">Wild West</a>',
+  '<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits">Western Cowboy Portraits</a>',
+  `<a href="${basePath}">Color</a>`,
+  'Collection',
+].join(' | ');
 
-// ✅ Genre definition (entity authority - what IS this type of photography)
-const genreDefinition = `Painterly Western Photography is a fine-art approach that draws from 19th-century pictorialism and painterly traditions, emphasizing tonal harmony, atmospheric light, and compositional restraint over literal realism.`;
-const genreBridge = `Wayne Heim's color work applies this approach to Western subject matter, using controlled palette, directional light, and narrative suggestion to create images that function as cinematic story fragments rather than documentary records. For the parent route that gathers the color and black-and-white proof pages, return to <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits" style="color:#85644b;">Western Cowboy Portraits</a>.`;
+const breadcrumbStructuredItems = [
+  { href: "/Galleries", name: "Galleries" },
+  { href: "/Galleries/Painterly-Fine-Art-Photography", name: "Painterly Fine Art Photography" },
+  { href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History", name: "Facing History" },
+  { href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West", name: "Wild West" },
+  { href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits", name: "Western Cowboy Portraits" },
+  { href: basePath, name: "Color" },
+];
 
-// ✅ Authoritative definition block (per Quill: scope, authorship, completeness)
-const indexDefinition = `This page presents the complete color archive of Western Cowboy Portraits by Wayne Heim. The collection documents frontier-era characters, working cowboys, and narrative moments drawn from Western history and lived reenactment—rendered in a painterly fine-art style.`;
-const indexLinkNote = `All ${imageCount} images link to individual image pages with full stories, metadata, and collector information.`;
-
-// ✅ Text cleaner for JSON-LD (escapes quotes for JSON)
-const cleanForJson = (val = "") =>
-  String(val)
-    .replace(/[\u0000-\u001F]+/g, " ")
-    .replace(/"/g, '\\"')
-    .replace(/\r?\n|\r/g, " ")
-    .trim();
-
-// ✅ Text cleaner for HTML display (preserves quotes)
-const cleanForDisplay = (val = "") =>
-  String(val)
-    .replace(/[\u0000-\u001F]+/g, " ")
-    .replace(/\r?\n|\r/g, " ")
-    .trim();
-
-// ✅ Truncate story text for cards (150 chars max per Quill)
-const truncateStory = (story: string, maxLen = 150) => {
-  if (!story) return "";
-  const cleaned = cleanForDisplay(story);
-  if (cleaned.length <= maxLen) return cleaned;
-  return cleaned.slice(0, maxLen).replace(/\s+\S*$/, "") + "…";
-};
-
-// ✅ Proxy URL helper - never expose SmugMug URLs to crawlers
-const getProxySrc = (id: string, size: string = 'l') => {
-  const image = galleryData.find((item: any) => item.id === id) || { id };
-  return getSemanticImageUrl(image, { galleryPath: basePath }, size);
-};
-
-// ✅ Pre-build per-image JSON-LD to avoid streaming issues
-const imageJsonLdMap = new Map();
-galleryData.forEach((item: any) => {
-  // Capped at 'l' to protect XL from bot discovery
-  const imageUrl = getProxySrc(item.id, 'l');
-  const linkUrl = `${basePath}/${item.id}`;
-  const fullUrl = `https://www.k4studios.com${linkUrl}`;
-  const title = cleanForJson(item.title);
-  const altText = item.alt 
-    ? cleanForJson(item.alt)
-    : `Western cowboy fine art photograph: ${title} – Wayne Heim`;
-  
-  imageJsonLdMap.set(item.id, JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "ImageObject",
-    name: title,
-    description: altText,
-    contentUrl: imageUrl,
-    url: fullUrl,
-    creditText: "© Wayne Heim – K4 Studios",
-    license: "https://www.k4studios.com/licensing",
-    creator: { "@type": "Person", name: "Wayne Heim" },
-    mainEntityOfPage: fullUrl
-  }));
+const { sectionDockItems, dockCenterIndex } = buildWildWestAllPageDock({
+  currentKey: "cowboy-portraits-0",
+  currentHref: canonicalPath,
 });
 
-// ✅ Pre-build JSON-LD to avoid streaming issues
-const collectionImageGalleryGraph = getCollectionImageGalleryGraph({
-  pageUrl: canonicalUrl,
-  name: `${galleryTitle} Collection`,
-  description: seoDescription,
-  images: galleryData,
-  basePath,
-});
-
-const structuredDataJson = JSON.stringify({
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebSite",
-      "@id": "https://www.k4studios.com/#website",
-      "name": "K4 Studios",
-      "url": "https://www.k4studios.com",
-      "publisher": { "@id": "https://www.k4studios.com/#organization" },
-      "inLanguage": "en"
-    },
-    {
-      "@type": "Organization",
-      "@id": "https://www.k4studios.com/#organization",
-      "name": "K4 Studios",
-      "url": "https://www.k4studios.com",
-      "logo": {
-        "@type": "ImageObject",
-        "@id": "https://www.k4studios.com/#logo",
-        "url": "https://www.k4studios.com/images/K4Logo-web-b.jpg",
-        "width": 512,
-        "height": 512
-      },
-      "founder": { "@id": "https://www.k4studios.com/#person" }
-    },
-    {
-      "@type": "CollectionPage",
-      "@id": canonicalUrl + "#collectionpage",
-      "name": galleryTitle + " Collection",
-      "url": canonicalUrl,
-      "description": seoDescription,
-      "isPartOf": { "@id": parentUrl + "#collection" },
-      "creator": { "@id": "https://www.k4studios.com/#person" },
-      "mainEntity": [
-        { "@id": canonicalUrl + "#imagegallery" },
-        { "@id": canonicalUrl + "#itemlist" }
-      ]
-    },
-    ...collectionImageGalleryGraph,
-    {
-      "@type": "BreadcrumbList",
-      "@id": canonicalUrl + "#breadcrumb",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "item": { "@id": "https://www.k4studios.com/", "name": "Home" } },
-        { "@type": "ListItem", "position": 2, "item": { "@id": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography", "name": "Painterly Fine Art" } },
-        { "@type": "ListItem", "position": 3, "item": { "@id": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History", "name": "Facing History" } },
-        { "@type": "ListItem", "position": 4, "item": { "@id": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits", "name": "Western Cowboy Portraits" } },
-        { "@type": "ListItem", "position": 5, "item": { "@id": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color", "name": "Color" } },
-        { "@type": "ListItem", "position": 6, "item": { "@id": canonicalUrl, "name": "Collection" } }
-      ]
-    }
-  ]
-}, null, 2);
+const copy = {
+  seoDescription: `Browse {imageCount} painterly color Western Cowboy Portraits fine art prints by Wayne Heim, with frontier character studies, collector notes, and print options from ${getFormattedLowestStandardPrintPrice()}.`,
+  indexDefinition:
+    "This page presents the complete color archive of Western Cowboy Portraits by Wayne Heim. The collection gathers frontier-era character studies, working cowboys, and Western portrait images shaped by warm light, weathered presence, and painterly atmosphere.",
+  indexLinkNote: "All {imageCount} images link to individual image pages with full stories, metadata, and collector information.",
+  printAvailabilityNote: `All works are available as fine art prints from ${getFormattedLowestStandardPrintPrice()}. Select images are also available in the Engrained Series - printed on Baltic Birch using a five-layer UV process - with pricing specific to each image.`,
+  commercialH1: "Western Cowboy Portrait Fine Art Series",
+  commercialDeck: "A collection of painterly Western portrait artwork by Wayne Heim.",
+  catalogEntranceTitle: "Western Portrait Fine Art Prints by Wayne Heim",
+  catalogEntranceCopy: "Browse painterly cowboy portrait photography built around character, light, posture, and the quiet weight of frontier life.",
+  collectionIntro:
+    "Browse the complete collection of color Western portrait images shaped by warmth, distance, dust, expression, and human presence. Each artwork opens to its full story, collector notes, image metadata, and available print details.",
+  gatewayCollectionName: "Western Cowboy Portraits",
+  gatewayIntroCopy: `{imageCount} painterly color Western cowboy portrait photographs by Wayne Heim, available as archival fine art prints from ${getFormattedLowestStandardPrintPrice()}. Four edition tiers - open-edition studies to ultra-limited signed collector works - on fine art paper and Baltic Birch wood panels.`,
+  gatewaySupportingCopy: "Every image below is a character study in a single frame. Click any work to read the narrative, explore collector notes, and view print details.",
+};
 ---
 
-<BaseLayout
-  title={seoTitle}
-  description={seoDescription}
-  meta={{ canonicalUrl, robots: "index, follow", descriptionMaxLength: 180, preserveDescriptionDashes: true, preserveTitleDashes: true }}
-  structuredDataJSON={structuredDataJson}
-  disableAutoBreadcrumbs={true}
->
-  <link href="https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&display=swap" rel="stylesheet" />
-
-  <div class="gallery-index-wrapper">
-    <div class="logo">
-      <a href="/" aria-label="Go to K4 Studios Homepage">
-        <img src="/images/K4Logo-web-b.jpg" alt="K4 Studios Logo" />
-      </a>
-    </div>
-
-    <!-- Breadcrumb (visual only - SEO handled by JSON-LD) -->
-    <nav aria-label="Breadcrumb" class="breadcrumb-nav">
-      <ol class="breadcrumb-list">
-        <li><a href="/Galleries/Painterly-Fine-Art-Photography">Painterly Fine Art</a></li>
-        <li><a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Facing History</a></li>
-        <li><a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits">Western Cowboy Portraits</a></li>
-        <li><a href={basePath}>Color</a></li>
-        <li>Collection</li>
-      </ol>
-    </nav>
-
-    <!-- Header with proper H1/H2 semantic hierarchy -->
-    <div class="header">
-      <h1>{galleryTitle} Collection ({imageCount} Images)</h1>
-      <h2>Painterly Western Fine Art & Story-Driven Frontier Imagery</h2>
-    </div>
-
-    <!-- Genre Definition (entity authority - what IS this type of photography) -->
-    <section class="genre-definition">
-      <figure class="iconic-anchor">
-        <img src={getProxySrc("i-ncFcHDM", "l")} alt="Painterly western cowboy portrait illustrating fine art color photography, narrative composition, and frontier-era character" />
-      </figure>
-      <div class="definition-text">
-        <p>{genreDefinition}</p>
-        <p set:html={genreBridge} />
-      </div>
-    </section>
-
-    <!-- Archive Definition Block (scope, authorship, completeness) -->
-    <section class="gallery-intro">
-      <p>{indexDefinition}</p>
-      <p>{indexLinkNote}</p>
-      <p class="usage-hint">Hover to preview. Click any image to view the full image page with story and metadata.</p>
-    </section>
-
-    <!-- Image Grid -->
-    <div class="ssr-grid">
-      {galleryData.map((item: any, idx: number) => {
-        // Use smallest sufficient size for 250px grid cards via proxy
-        const imageUrl = getProxySrc(item.id, 's');
-        const srcsetParts = [
-          `${getProxySrc(item.id, 's')} 400w`,
-          `${getProxySrc(item.id, 'm')} 600w`,
-          `${getProxySrc(item.id, 'l')} 1024w`
-        ].join(", ");
-        const linkUrl = `${basePath}/${item.id}`;
-        const title = cleanForDisplay(item.title);
-        
-        // ✅ Auto alt text: prioritize existing alt, then build from description/keywords
-        let altText: string;
-        if (item.alt) {
-          altText = cleanForDisplay(item.alt);
-        } else if (item.description) {
-          // Use first sentence of description (truncated)
-          const firstSentence = item.description.split(/[.!?]/)[0];
-          altText = cleanForDisplay(firstSentence.slice(0, 150));
-        } else if (item.keywords?.length > 0) {
-          // Build from keywords: "Western portrait: keyword1, keyword2, keyword3"
-          const topKeywords = item.keywords.slice(0, 4).join(", ");
-          altText = `Western fine art photograph: ${topKeywords}`;
-        } else {
-          altText = `Western cowboy fine art photograph: ${title} by Wayne Heim`;
-        }
-        
-        const storyExcerpt = truncateStory(item.story || "");
-
-        return (
-          <div class="ssr-card" id={item.id}>
-            <a href={linkUrl} class="ssr-card-link">
-              <img 
-                src={imageUrl} 
-                srcset={srcsetParts || undefined}
-                sizes="(max-width: 640px) 100vw, 250px"
-                alt={altText} 
-                title={altText} 
-                loading="lazy" 
-              />
-              <div class="ssr-card-content">
-                <span class="card-number">#{idx + 1}</span>
-                <h3>{title}</h3>
-                {storyExcerpt && <p>{storyExcerpt}</p>}
-              </div>
-            </a>
-          </div>
-        );
-      })}
-    </div>
-
-    <ArchiveContext 
-      categoryUrl="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits" 
-      categoryName="Western Cowboy Portraits" 
-    />
-
-    <Footer />
-  </div>
-
-  <style>
-    body { background:#fff; color:#2a1f17; font-family:'Glegoo',serif; }
-    .gallery-index-wrapper { min-height:100vh; padding:24px; }
-
-    .logo { display:flex; justify-content:center; margin:32px 0 16px; }
-    .logo a:hover { transform:scale(1.05); }
-    .logo img { width:100px; height:100px; border-radius:50%; box-shadow:0 4px 10px rgba(0,0,0,.2); }
-
-    .breadcrumb-nav { text-align:center; margin-bottom:8px; font-family:'Glegoo',serif; }
-    .breadcrumb-list {
-      display:inline-flex; flex-wrap:wrap; justify-content:center;
-      gap:6px; list-style:none; padding:0; margin:0;
-      font-size:0.9rem; color:#6a5747;
-    }
-    .breadcrumb-list a { color:#85644b; text-decoration:none; transition:color 0.2s ease; }
-    .breadcrumb-list a:hover { color:#5a3e2b; }
-    .breadcrumb-list li::after { content:"›"; margin:0 4px; color:#9b8b7f; }
-    .breadcrumb-list li:last-child::after { content:""; }
-
-    .header { text-align:center; background:#000; color:#fff; padding:16px; border-radius:8px; margin-bottom:24px; }
-    .header h1 { margin:0; font-size:1.5em; font-weight:700; }
-    .header h2 { margin:8px 0 0; font-size:1.1em; font-weight:400; font-style:italic; color:#ccc; }
-
-    .genre-definition { max-width:900px; margin:0 auto 20px; display:flex; align-items:flex-start; gap:24px; padding:20px 28px; background:#f9f7f5; border-left:3px solid #c9a227; border-radius:4px; }
-    .genre-definition .iconic-anchor { flex-shrink:0; margin:0; }
-    .genre-definition .iconic-anchor img { width:200px; height:auto; object-fit:contain; border-radius:6px; box-shadow:0 4px 12px rgba(0,0,0,0.15); }
-    .genre-definition .definition-text { flex:1; text-align:left; }
-    .genre-definition p { font-size:1rem; line-height:1.8; color:#4a3d32; margin:0 0 16px; }
-    .genre-definition p:last-child { margin-bottom:0; }
-    .genre-definition p:last-child { margin-bottom:0; }
-
-    /* Mobile: stack image above text */
-    @media (max-width: 768px) {
-      .genre-definition { flex-direction:column; align-items:center; padding:16px; gap:16px; }
-      .genre-definition .iconic-anchor { width:100%; text-align:center; }
-      .genre-definition .iconic-anchor img { width:min(280px, 80%); max-width:100%; display:block; margin:0 auto; }
-      .genre-definition .definition-text { text-align:center; }
-    }
-
-    .gallery-intro { max-width:900px; margin:0 auto 24px; text-align:center; }
-    .gallery-intro p { font-size:1rem; line-height:1.6; color:#3a2d24; margin:0 0 8px; }
-    .gallery-intro .usage-hint { font-size:0.9rem; color:#666; font-style:italic; margin-top:12px; }
-
-    .ssr-grid {
-      display:grid;
-      grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
-      gap:20px;
-      margin:30px auto;
-      max-width:1400px;
-      padding:0 40px;
-      align-items:stretch;
-    }
-
-    .ssr-card {
-      position:relative;
-      border:1px solid #ddd;
-      border-radius:8px;
-      background:#fff;
-      box-shadow:0 2px 5px rgba(0,0,0,.1);
-      overflow:hidden;
-      transition: box-shadow 0.5s ease-in-out, outline 0.3s ease-in-out, outline-offset 0.3s ease-in-out;
-      display:flex;
-      flex-direction:column;
-      outline: 3px solid transparent;
-      outline-offset: -3px;
-    }
-
-    .ssr-card.row-active {
-      box-shadow: 0 8px 20px rgba(0,0,0,.18);
-    }
-
-    .ssr-card.card-hovered {
-      outline-color: #c9a227;
-      box-shadow: 0 12px 28px rgba(0,0,0,.25);
-    }
-
-    .ssr-card-link {
-      display:flex;
-      flex-direction:column;
-      height:100%;
-      text-decoration:none;
-      color:inherit;
-      cursor:pointer;
-    }
-
-    .ssr-card img {
-      width:100%;
-      max-height:144px;
-      object-fit:cover;
-      object-position:center top;
-      transition: max-height 1.1s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .ssr-card.row-active img {
-      max-height:280px;
-    }
-
-    .ssr-card-content {
-      padding:10px 12px;
-      max-height:80px;
-      overflow:hidden;
-      transition: max-height 1.1s cubic-bezier(0.4, 0, 0.2, 1);
-      cursor:pointer;
-      user-select:none;
-    }
-
-    .ssr-card.row-active .ssr-card-content {
-      max-height:200px;
-    }
-
-    .card-number {
-      font-size:.75rem;
-      color:#888;
-      display:block;
-      margin-bottom:2px;
-    }
-
-    .ssr-card-content h3 { font-size:.95rem; font-weight:700; margin:0 0 5px; }
-    .ssr-card-content p { font-size:.85rem; line-height:1.2rem; margin:0; color:#5a4a3a; }
-
-    /* Mobile: show full image height since no hover available */
-    @media (max-width: 768px) {
-      .ssr-grid { padding:0 16px; gap:16px; }
-      .ssr-card img { max-height:none; height:auto; }
-      .ssr-card-content { max-height:none; }
-    }
-  </style>
-
-  <script is:inline>
-    (function () {
-      const grid = document.querySelector('.ssr-grid');
-      if (!grid) return;
-
-      const cards = Array.from(grid.querySelectorAll('.ssr-card'));
-      if (!cards.length) return;
-
-      let activeRowTop = null;
-      let hoveredCard = null;
-      let collapseTimer = null;
-      const ROW_TOLERANCE = 12;
-
-      function getRowTopForCard(card) {
-        return card.getBoundingClientRect().top;
-      }
-
-      function getRowCardsForTop(rowTop) {
-        return cards.filter((c) => Math.abs(c.getBoundingClientRect().top - rowTop) <= ROW_TOLERANCE);
-      }
-
-      function clearActiveRow() {
-        cards.forEach((c) => {
-          c.classList.remove('row-active');
-          c.classList.remove('card-hovered');
-        });
-        activeRowTop = null;
-        hoveredCard = null;
-      }
-
-      function setHoveredCard(card) {
-        if (hoveredCard === card) return;
-        if (hoveredCard) hoveredCard.classList.remove('card-hovered');
-        hoveredCard = card;
-        if (card) card.classList.add('card-hovered');
-      }
-
-      function setActiveRowByCard(card) {
-        if (!card) return;
-        setHoveredCard(card);
-        const rowTop = getRowTopForCard(card);
-        if (activeRowTop !== null && Math.abs(activeRowTop - rowTop) <= ROW_TOLERANCE) return;
-        activeRowTop = rowTop;
-        cards.forEach((c) => c.classList.remove('row-active'));
-        getRowCardsForTop(rowTop).forEach((c) => c.classList.add('row-active'));
-      }
-
-      function findCardForY(clientY) {
-        for (const c of cards) {
-          const rect = c.getBoundingClientRect();
-          if (clientY >= rect.top - ROW_TOLERANCE && clientY <= rect.bottom + ROW_TOLERANCE) return c;
-        }
-        return null;
-      }
-
-      grid.addEventListener('mousemove', (e) => {
-        clearTimeout(collapseTimer);
-        let card = e.target.closest('.ssr-card') || findCardForY(e.clientY);
-        if (card) setActiveRowByCard(card);
-      });
-
-      grid.addEventListener('mouseenter', () => clearTimeout(collapseTimer));
-      grid.addEventListener('mouseleave', () => {
-        collapseTimer = setTimeout(clearActiveRow, 180);
-      });
-
-      window.addEventListener('resize', clearActiveRow);
-    })();
-  </script>
-</BaseLayout>
+<CommercialCollectionAllPage
+  rawGalleryData={rawGalleryData}
+  entranceData={entranceData}
+  basePath={basePath}
+  canonicalPath={canonicalPath}
+  breadcrumbHtml={breadcrumbHtml}
+  breadcrumbStructuredItems={breadcrumbStructuredItems}
+  sectionDockItems={sectionDockItems}
+  dockCenterIndex={dockCenterIndex}
+  currentDockTitle="The Wild West Color Cowboy Portraits"
+  archiveContext={{
+    categoryUrl: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits",
+    categoryName: "Western Cowboy Portraits",
+  }}
+  identity={{
+    collectionName: "Western Cowboy Portraits",
+    variantName: "Color",
+    variantDescriptor: "color",
+    gatewayBrandLabel: "Western Cowboy Portraits Fine Art Prints - Color Collection",
+  }}
+  copy={copy}
+/>

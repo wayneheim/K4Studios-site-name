@@ -18,7 +18,8 @@ export const painterlyStory = [
 
     "That approach sits quietly in the lineage of pictorialist and narrative image-making, where light, gesture, and atmosphere carry meaning beyond the visible scene.",
 
-    "Every image here is a One-Image Movie™—a single, cinematic breath where time, memory, and myth hold still for just a moment. Painterly portraits. Historical figures. Landscapes that carry presence. Fragments of stories waiting to be completed.",
+    "Each finished work becomes a One-Image Movie™ — a K4 Studios narrative-art experience where image, title, authored story, and viewer imagination work together.",
+    "The photograph opens the scene. The words deepen the uncertainty. The viewer completes the final unwritten story.",
     "This is fine art photography for collectors who want more than décor—work that unfolds over time and asks something of the viewer."
   ]
   },

@@ -1,0 +1,915 @@
+---
+export const prerender = false;
+/**
+ * Native Americans / NA-Black-White all page
+ * Template-adapted from the Western Narratives color all page.
+ */
+import Footer from '@/components/Footer.astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ArchiveContext from '@/components/ArchiveContext.astro';
+import LandingHeader from '@/components/Landing-Header.jsx';
+import { getSemanticImageUrl } from '@/utils/imageProxy.js';
+import { getCollectionImageGalleryGraph } from '@/components/utils/getStructuredData.ts';
+import {
+  getAggregateOfferForCollection,
+  getHighestStandardPrintPrice,
+  getFormattedLowestStandardPrintPrice,
+  getLowestStandardPrintPrice,
+  getStandardPrintSeries,
+} from '@/data/pricing/printSeries.js';
+import { resolveImageCommerce } from '@/data/commerceResolver.js';
+
+import { galleryData as rawGalleryData } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White.mjs';
+import { galleryData as narrativeRawGalleryData } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs';
+import { entranceData } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/BWEntranceData.ts';
+import { buildWildWestAllPageDock } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/dock/buildWildWestAllPageDock.ts';
+
+const activeThemeSlug = Astro.url.searchParams.get('theme') || '';
+const isNaNarrativeTheme = activeThemeSlug === 'na-narrative-b-w-images';
+
+const sourceGalleryData = isNaNarrativeTheme ? narrativeRawGalleryData : rawGalleryData;
+const galleryData = sourceGalleryData.filter(
+  (img: any) => img.visibility !== 'ghost' && img.visibility !== 'hidden' && img.id !== 'i-k4studios'
+);
+
+const filteredGalleryData = activeThemeSlug
+  ? galleryData.filter((img: any) => Boolean(img?.themes?.[activeThemeSlug]))
+  : galleryData;
+
+const siteOrigin = 'https://www.k4studios.com';
+const pageBasePath = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White';
+const contentBasePath = isNaNarrativeTheme
+  ? '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White'
+  : pageBasePath;
+const canonicalQuery = isNaNarrativeTheme ? '?theme=na-narrative-b-w-images&view=grid' : '';
+const canonicalUrl = `${siteOrigin}${pageBasePath}/all${canonicalQuery}`;
+
+const collectionName = 'Native Americans';
+const variantName = isNaNarrativeTheme ? 'Black & White Narrative Works' : 'Black & White Portraits';
+const galleryTitle = `${collectionName} - ${variantName}`;
+const gallerySubtitle = entranceData?.subtitle || 'Painterly Fine Art Photography';
+const imageCount = filteredGalleryData.length;
+
+const seoTitle = isNaNarrativeTheme
+  ? `${collectionName} Narrative Fine Art Prints | K4 Studios`
+  : `${collectionName} Fine Art Prints | K4 Studios`;
+const seoDescription = isNaNarrativeTheme
+  ? `Browse ${imageCount} black and white Native American narrative fine art prints by Wayne Heim, with collector notes and print options from ${getFormattedLowestStandardPrintPrice()}.`
+  : `Browse ${imageCount} black and white ${collectionName.toLowerCase()} fine art prints by Wayne Heim, with collector notes and print options from ${getFormattedLowestStandardPrintPrice()}.`;
+
+const commercialH1 = isNaNarrativeTheme
+  ? 'Native American Black & White Narrative Fine Art Series'
+  : 'Native American Black & White Fine Art Series';
+const commercialDeck = isNaNarrativeTheme
+  ? 'A collection of monochrome Native American narrative artworks by Wayne Heim.'
+  : 'A collection of monochrome Native American portrait art by Wayne Heim.';
+const collectionIntro = isNaNarrativeTheme
+  ? 'Browse the complete black-and-white Native American narrative collection shaped by atmosphere, gesture, silence, and story pressure. Each artwork opens to its full story, collector notes, image metadata, and available print details.'
+  : 'Browse the complete black-and-white collection of Native American portrait images shaped by atmosphere, gesture, silence, and tonal structure. Each artwork opens to its full story, collector notes, image metadata, and available print details.';
+const gatewayCollectionName = collectionName;
+const gatewayIntroCopy = isNaNarrativeTheme
+  ? `${imageCount} painterly black-and-white Native American narrative fine art photographs by Wayne Heim, available as archival fine art prints from ${getFormattedLowestStandardPrintPrice()}. Four edition tiers - open-edition studies to ultra-limited signed collector works - on fine art paper and Baltic Birch wood panels.`
+  : `${imageCount} painterly black-and-white Native American fine art photographs by Wayne Heim, available as archival fine art prints from ${getFormattedLowestStandardPrintPrice()}. Four edition tiers - open-edition studies to ultra-limited signed collector works - on fine art paper and Baltic Birch wood panels.`;
+const gatewayBrandLabel = isNaNarrativeTheme
+  ? 'Native American Narrative Fine Art Prints - Black & White Collection'
+  : 'Native American Fine Art Prints - Black & White Collection';
+const gatewaySupportingCopy = 'Every image below is a complete story in a single frame. Click any work to read the narrative, explore collector notes, and view print details.';
+const catalogEntranceTitle = 'Story-Driven Fine Art Prints by Wayne Heim';
+const catalogEntranceCopy = 'Browse cinematic, painterly photography built as single-frame stories - artwork created for collectors who want more than decoration.';
+const printAvailabilityNote = `All works are available as fine art prints from ${getFormattedLowestStandardPrintPrice()}. Select images are also available in the Engrained Series - printed on Baltic Birch using a five-layer UV process - with pricing specific to each image.`;
+
+const breadcrumbHtml = [
+  '<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West">Wild West</a>',
+  '<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans">Native Americans</a>',
+  `<a href="${pageBasePath}">${isNaNarrativeTheme ? 'Black &amp; White Narrative Works' : 'Black &amp; White'}</a>`,
+  'Collection',
+].join(' | ');
+
+const { sectionDockItems, dockCenterIndex } = buildWildWestAllPageDock({
+  currentKey: isNaNarrativeTheme ? 'na-narrative-bw' : 'na-portrait-bw',
+  currentHref: `${pageBasePath}/all${canonicalQuery}`,
+});
+const naSectionLabel = isNaNarrativeTheme ? 'Narrative Works' : 'Portraits';
+const currentDockTitle = `Black and White Native American ${naSectionLabel}`;
+const standardPrintSeries = getStandardPrintSeries();
+
+const cleanForJson = (val = '') =>
+  String(val)
+    .replace(/[\u0000-\u001F]+/g, ' ')
+    .replace(/"/g, '\\"')
+    .replace(/\r?\n|\r/g, ' ')
+    .trim();
+
+const cleanForDisplay = (val = '') =>
+  String(val)
+    .replace(/[\u0000-\u001F]+/g, ' ')
+    .replace(/\r?\n|\r/g, ' ')
+    .trim();
+
+const truncateStory = (story: string, maxLen = 150) => {
+  if (!story) return '';
+  const cleaned = cleanForDisplay(story);
+  if (cleaned.length <= maxLen) return cleaned;
+  return cleaned.slice(0, maxLen).replace(/\s+\S*$/, '') + '…';
+};
+
+const truncateWords = (text: string, maxWords = 30) => {
+  const cleaned = cleanForDisplay(text);
+  if (!cleaned) return '';
+  const words = cleaned.split(/\s+/);
+  if (words.length <= maxWords) return cleaned;
+  return `${words.slice(0, maxWords).join(' ')}…`;
+};
+
+const getProxySrc = (id: string, size: string = 'l') => {
+  const image = filteredGalleryData.find((item: any) => item.id === id)
+    || galleryData.find((item: any) => item.id === id)
+    || { id };
+  return getSemanticImageUrl(image, { galleryPath: contentBasePath }, size);
+};
+
+const getCardSeries = (image: any) => {
+  const commerce = resolveImageCommerce({
+    image,
+    galleryPath: contentBasePath,
+    pageUrl: `${siteOrigin}${contentBasePath}/${image?.id || ''}`,
+  });
+  return commerce?.tiers || [];
+};
+
+const toAbsoluteK4Url = (url = '') => {
+  if (!url) return `${siteOrigin}/images/show-2t.webp`;
+  if (/^https?:\/\//i.test(url)) return url;
+  return `${siteOrigin}${url.startsWith('/') ? '' : '/'}${url}`;
+};
+
+const gatewayHeroItem = filteredGalleryData[0] || galleryData[0];
+const gatewayHeroTitle = cleanForDisplay(gatewayHeroItem?.title || galleryTitle);
+const gatewayHeroAlt = gatewayHeroItem?.alt
+  ? `${cleanForDisplay(gatewayHeroItem.alt).replace(/[.\s]*$/, '')}. Collection hero image.`
+  : `Fine art photograph by Wayne Heim: ${gatewayHeroTitle}`;
+const gatewayHeroHref = gatewayHeroItem ? `${contentBasePath}/${gatewayHeroItem.id}` : '#collection-grid';
+const gatewayHeroSrc = gatewayHeroItem ? getProxySrc(gatewayHeroItem.id, 'l') : '';
+const gatewayHeroSrcSet = gatewayHeroItem
+  ? `${getProxySrc(gatewayHeroItem.id, 'm')} 720w, ${getProxySrc(gatewayHeroItem.id, 'l')} 1200w`
+  : '';
+const seenCardAltCounts = new Map<string, number>();
+const fallbackSocialImage = '/images/show-2t.webp';
+const socialImage = gatewayHeroSrc || (filteredGalleryData[0] ? getProxySrc(filteredGalleryData[0].id, 'l') : '') || fallbackSocialImage;
+const socialImageUrl = toAbsoluteK4Url(socialImage);
+const socialImageAlt = `${collectionName} Fine Art Prints by Wayne Heim`;
+const lowestStandardPrintPrice = getLowestStandardPrintPrice();
+const highestStandardPrintPrice = getHighestStandardPrintPrice();
+const aggregateOffer = {
+  ...getAggregateOfferForCollection(imageCount),
+  lowPrice: lowestStandardPrintPrice,
+  highPrice: highestStandardPrintPrice,
+  offerCount: imageCount,
+};
+
+const imageJsonLdMap = new Map();
+filteredGalleryData.forEach((item: any) => {
+  const imageUrl = getProxySrc(item.id, 'l');
+  const linkUrl = `${contentBasePath}/${item.id}`;
+  const fullUrl = `https://www.k4studios.com${linkUrl}`;
+  const title = cleanForJson(item.title);
+  const altText = item.alt
+    ? cleanForJson(item.alt)
+    : `Native American black and white portrait fine art photograph: ${title} - Wayne Heim`;
+
+  imageJsonLdMap.set(item.id, JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'ImageObject',
+    name: title,
+    description: altText,
+    contentUrl: imageUrl,
+    url: fullUrl,
+    creditText: '© Wayne Heim - K4 Studios',
+    license: 'https://www.k4studios.com/licensing',
+    creator: { '@type': 'Person', name: 'Wayne Heim' },
+    mainEntityOfPage: fullUrl,
+  }));
+});
+
+const collectionImageGalleryGraph = getCollectionImageGalleryGraph({
+  pageUrl: canonicalUrl,
+  name: `${galleryTitle} Collection`,
+  description: seoDescription,
+  images: filteredGalleryData,
+  basePath: contentBasePath,
+});
+
+const structuredDataJson = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'CollectionPage',
+      '@id': canonicalUrl + '#webpage',
+      url: canonicalUrl,
+      name: seoTitle,
+      description: seoDescription,
+      inLanguage: 'en',
+      isPartOf: {
+        '@type': 'WebSite',
+        '@id': 'https://www.k4studios.com/#website',
+        name: 'K4 Studios',
+        url: 'https://www.k4studios.com/',
+        publisher: { '@id': 'https://www.k4studios.com/#organization' },
+      },
+      primaryImageOfPage: {
+        '@type': 'ImageObject',
+        url: socialImageUrl,
+        caption: seoTitle,
+      },
+      creator: { '@id': 'https://www.k4studios.com/#person' },
+      publisher: { '@id': 'https://www.k4studios.com/#organization' },
+      mainEntity: {
+        '@type': 'ImageGallery',
+        '@id': canonicalUrl + '#imagegallery',
+        name: seoTitle,
+        description: seoDescription,
+        creator: { '@id': 'https://www.k4studios.com/#person' },
+        publisher: { '@id': 'https://www.k4studios.com/#organization' },
+      },
+      offers: aggregateOffer,
+    },
+    ...collectionImageGalleryGraph,
+    {
+      '@type': 'BreadcrumbList',
+      '@id': canonicalUrl + '#breadcrumb',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, item: { '@id': 'https://www.k4studios.com/', name: 'Home' } },
+        { '@type': 'ListItem', position: 2, item: { '@id': 'https://www.k4studios.com/Galleries', name: 'Galleries' } },
+        { '@type': 'ListItem', position: 3, item: { '@id': 'https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography', name: 'Painterly Fine Art Photography' } },
+        { '@type': 'ListItem', position: 4, item: { '@id': 'https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History', name: 'Facing History' } },
+        { '@type': 'ListItem', position: 5, item: { '@id': 'https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West', name: 'Wild West' } },
+        { '@type': 'ListItem', position: 6, item: { '@id': 'https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans', name: 'Native Americans' } },
+        { '@type': 'ListItem', position: 7, item: { '@id': 'https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White', name: 'Black & White' } },
+        { '@type': 'ListItem', position: 8, item: { '@id': canonicalUrl, name: 'Collection' } },
+      ],
+    },
+  ],
+}, null, 2);
+
+const pageMeta = {
+  canonicalUrl,
+  robots: 'index, follow',
+  ogTitle: seoTitle,
+  ogDescription: seoDescription,
+  ogImage: socialImage,
+  ogImageAlt: socialImageAlt,
+  ogUrl: canonicalUrl,
+  twitterTitle: seoTitle,
+  twitterDescription: seoDescription,
+  twitterImage: socialImage,
+  twitterUrl: canonicalUrl,
+};
+---
+
+<BaseLayout title={seoTitle} description={seoDescription} meta={pageMeta} disableAutoBreadcrumbs={true}>
+  <script type="application/ld+json" set:html={structuredDataJson} />
+
+  <link href="https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&display=swap" rel="stylesheet" />
+
+  <LandingHeader client:load breadcrumb={breadcrumbHtml} />
+
+  <div class="gallery-index-wrapper" id="top">
+    <section class="collection-gateway catalog-entrance" aria-labelledby="gateway-heading">
+      <a class="gateway-artwork" href={gatewayHeroHref} aria-label={`Open artwork detail for ${gatewayHeroTitle}`}>
+        <span class="gateway-artwork-mat">
+          <img
+            src={gatewayHeroSrc}
+            srcset={gatewayHeroSrcSet || undefined}
+            sizes="(max-width: 768px) 100vw, (max-width: 1100px) 42vw, 480px"
+            alt={gatewayHeroAlt}
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+          />
+        </span>
+      </a>
+      <div class="gateway-copy">
+        <p class="gateway-kicker">K4 STUDIOS FINE ART PRINT CATALOG</p>
+        <p class="gateway-brand" id="gateway-heading">{gatewayBrandLabel}</p>
+        <p class="gateway-copy-text">{gatewayIntroCopy}</p>
+        <p class="gateway-copy-text">{gatewaySupportingCopy}</p>
+      </div>
+    </section>
+
+    <section class="collection-dock" aria-labelledby="collection-dock-heading">
+      <div class="dock-heading">
+        <div>
+          <h2 id="collection-dock-heading"><span id="dock-active-prefix"></span><span id="dock-active-title">{currentDockTitle}</span></h2>
+        </div>
+      </div>
+      <div class="dock-shell">
+        <div class="dock-track" aria-label="K4 gallery all-page quick links">
+          <span id="dock-start" class="dock-anchor" aria-hidden="true"></span>
+          {sectionDockItems.map((item: any, idx: number) => {
+            const displayTitle = [item.title, item.subtitle].filter(Boolean).join(' ');
+            const distance = Math.abs(idx - dockCenterIndex);
+            const dockClass = [
+              'dock-card',
+              item.current ? 'is-center is-current' : '',
+              distance === 1 ? 'is-near' : '',
+              distance >= 3 ? 'is-far' : '',
+            ].filter(Boolean).join(' ');
+
+            return (
+              <a
+                class={dockClass}
+                href={item.href}
+                aria-current={item.current ? 'page' : undefined}
+                aria-label={item.current ? `Current collection: ${displayTitle}` : `Browse ${displayTitle}`}
+                data-dock-title={displayTitle}
+                data-current={item.current ? 'true' : undefined}
+              >
+                <div class="dock-tombstone">
+                  <img
+                    src={item.thumb}
+                    alt={`${displayTitle} tombstone link`}
+                    loading={item.current || distance <= 2 ? 'eager' : 'lazy'}
+                    width="140"
+                    height="160"
+                  />
+                </div>
+              </a>
+            );
+          })}
+          <span id="dock-end" class="dock-anchor" aria-hidden="true"></span>
+        </div>
+      </div>
+    </section>
+
+    <header class="collection-hero">
+      <h2>{commercialH1}</h2>
+      <p class="hero-deck">{commercialDeck}</p>
+      <p class="hero-copy">{collectionIntro}</p>
+    </header>
+
+    <span id="collection-browser" class="collection-browser-anchor" aria-hidden="true"></span>
+    <hr class="catalog-anchor-rule" />
+    <p class="print-options-heading">K4 Series and Limited Editions · Fine Art Prints from {getFormattedLowestStandardPrintPrice()}</p>
+
+    <section class="print-options" aria-labelledby="print-options-heading">
+      <div class="series-widget" aria-label="Standard K4 paper print series">
+        {standardPrintSeries.map((series: any) => (
+          <article class="series-tile" data-series-tile>
+            <button class="series-trigger" type="button" aria-label={`Show ${series.name} details`}>
+              <span class="series-symbol" aria-hidden="true">{series.symbol}</span>
+              <span>
+                <strong>{series.name}</strong>
+                <small>{series.subtitle}</small>
+              </span>
+            </button>
+            <div class="series-detail">
+              <p><strong>{series.name}:</strong> {series.collectorSummary}</p>
+              <ul>
+                {series.sizes.map((entry: any) => (
+                  <li>{entry.display}</li>
+                ))}
+              </ul>
+              <a href={series.learnMoreHref}>Learn more →</a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="catalog-tools" aria-labelledby="catalog-tools-heading">
+      <h2 id="catalog-tools-heading" class="catalog-tools-title">{gatewayCollectionName} Collection</h2>
+      <span class="catalog-tools-divider" aria-hidden="true">|</span>
+      <form class="jump-form" data-jump-form>
+        <label for="artwork-number">Jump to artwork #</label>
+        <input id="artwork-number" name="artwork-number" type="number" min="1" max={imageCount} inputmode="numeric" />
+        <button type="submit">Go</button>
+      </form>
+      <span class="catalog-tools-divider" aria-hidden="true">|</span>
+      <p class="catalog-tools-count">{imageCount} works</p>
+    </section>
+
+    <div class="ssr-grid" id="collection-grid">
+      {filteredGalleryData.map((item: any, idx: number) => {
+        const imageUrl = getProxySrc(item.id, 's');
+        const srcsetParts = [
+          `${getProxySrc(item.id, 's')} 400w`,
+          `${getProxySrc(item.id, 'm')} 600w`,
+          `${getProxySrc(item.id, 'l')} 1024w`,
+        ].join(', ');
+        const linkUrl = `${contentBasePath}/${item.id}`;
+        const collectorNotesHref = `${linkUrl}#collector-notes`;
+        const title = cleanForDisplay(item.title);
+
+        let altText: string;
+        if (item.alt) {
+          altText = cleanForDisplay(item.alt);
+        } else if (item.description) {
+          const firstSentence = item.description.split(/[.!?]/)[0];
+          altText = cleanForDisplay(firstSentence.slice(0, 150));
+        } else if (item.keywords?.length > 0) {
+          const topKeywords = item.keywords.slice(0, 4).join(', ');
+          altText = `Native American black and white portrait fine art photograph: ${topKeywords}`;
+        } else {
+          altText = `Native American black and white portrait fine art photograph: ${title} by Wayne Heim`;
+        }
+
+        const normalizedAltKey = altText.toLowerCase();
+        const previousAltCount = seenCardAltCounts.get(normalizedAltKey) || 0;
+        if (previousAltCount > 0) {
+          altText = `${altText.replace(/[.\s]*$/, '')} (${title} - artwork ${idx + 1}).`;
+        }
+        seenCardAltCounts.set(normalizedAltKey, previousAltCount + 1);
+
+        const storyExcerpt = truncateStory(item.story || '');
+        const collectorNoteRaw = item.notes || item.collectorNotes || item.collector_notes || item.description || item.story || '';
+        const collectorNoteTeaser = truncateWords(collectorNoteRaw, 30);
+        const cardSeries = getCardSeries(item);
+        const needsRangeMarker = idx > 0 && idx % 50 === 0;
+        const rangeStart = idx + 1;
+        const rangeEnd = Math.min(idx + 50, imageCount);
+
+        return (
+          <>
+            {needsRangeMarker && (
+              <div class="catalog-range-marker">
+                <span>Artworks {rangeStart}–{rangeEnd} of {imageCount}</span>
+                <a href="#top">Back to top</a>
+              </div>
+            )}
+            <div class="ssr-card" id={item.id} data-artwork-number={idx + 1}>
+              <a href={linkUrl} class="ssr-card-link">
+                <img
+                  class="ssr-card-image"
+                  src={imageUrl}
+                  srcset={srcsetParts || undefined}
+                  sizes="(max-width: 640px) 100vw, 250px"
+                  alt={altText}
+                  loading="lazy"
+                />
+                <div class="ssr-card-content">
+                  <div class="card-meta-row">
+                    <span class="card-number">Image {idx + 1} of {imageCount}</span>
+                    {cardSeries.length > 0 && (
+                      <span class="card-series-strip" aria-label="Available print series">
+                        {cardSeries.map((series: any, seriesIdx: number) => (
+                          <>
+                            <span
+                              class="card-series-icon"
+                              title={`${series.label} Series Member`}
+                              aria-label={`${series.label} Series Member`}
+                            >
+                              {series.icon}
+                            </span>
+                            {seriesIdx < cardSeries.length - 1 && <span class="card-series-separator" aria-hidden="true">|</span>}
+                          </>
+                        ))}
+                      </span>
+                    )}
+                  </div>
+                  <h3>{title}</h3>
+                  <p class="print-cue sr-only">Fine art print available</p>
+                  {storyExcerpt && <p class="story-excerpt">{storyExcerpt}</p>}
+                  <span class="card-cta">Explore Story | Order Fine Art Print →</span>
+                </div>
+              </a>
+              <button
+                type="button"
+                class="collector-notes-trigger"
+                data-notes-trigger
+                aria-label="View collector note preview"
+              >
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M2 6h4" />
+                  <path d="M2 10h4" />
+                  <path d="M2 14h4" />
+                  <path d="M2 18h4" />
+                  <rect width="16" height="20" x="4" y="2" rx="2" />
+                  <path d="M16 2v20" />
+                </svg>
+              </button>
+              <div class="collector-note-overlay" data-notes-overlay>
+                <p class="collector-note-kicker">Collector Note</p>
+                <p class="collector-note-teaser">{collectorNoteTeaser || 'Collector note preview available for this artwork.'}</p>
+                <a class="collector-note-link" href={collectorNotesHref}>View full collector notes →</a>
+              </div>
+            </div>
+          </>
+        );
+      })}
+    </div>
+
+    <ArchiveContext
+      categoryUrl="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans"
+      categoryName="Native Americans"
+    />
+
+    <Footer />
+  </div>
+
+  <style>
+    body { background:#fff; color:#2a1f17; font-family:'Glegoo',serif; }
+    html { scroll-behavior:smooth; }
+    :global(.breadcrumb-text) { max-width:clamp(260px, 36vw, 560px); overflow:hidden; text-overflow:ellipsis; }
+    :global(.breadcrumb-text a) { color:inherit; text-decoration:none; }
+    :global(.breadcrumb-text a:hover) { color:#85644b; }
+    .gallery-index-wrapper { min-height:100vh; padding:12px 24px 24px; }
+
+    .collection-hero {
+      max-width:1280px;
+      margin:0 auto 20px;
+      padding:10px 28px 2px;
+      border-top:1px solid #dccfbe;
+      text-align:center;
+      background:transparent;
+    }
+    .collection-hero h2 { margin:0; font-size:clamp(1.85rem, 3.2vw, 2.75rem); line-height:1.14; color:#231a13; font-weight:700; }
+    .hero-deck { max-width:900px; margin:16px auto 0; color:#4f4034; font-size:1.12rem; line-height:1.8; }
+    .hero-copy { max-width:1080px; margin:16px auto 0; color:#3f3228; font-size:.98rem; line-height:1.75; }
+
+    .collection-gateway {
+      max-width:1020px; margin:8px auto 24px; display:grid; grid-template-columns:minmax(0, 1.25fr) minmax(220px, .75fr);
+      grid-template-areas:"copy art"; gap:56px; align-items:center; padding:18px 20px; background:transparent;
+      border-top:1px solid #dccfbe; border-bottom:1px solid #dccfbe;
+    }
+    .gateway-copy { grid-area:copy; min-width:0; padding:8px 4px 8px 0; max-width:38rem; }
+    .gateway-kicker { margin:0 0 10px; color:#7a6047; font-size:.76rem; letter-spacing:.08em; text-transform:uppercase; }
+    .gateway-brand { margin:0 0 14px; color:#231a13; font-size:clamp(2rem, 3.8vw, 3.25rem); line-height:1.02; font-weight:700; max-width:none; }
+    .gateway-copy-text { margin:0 0 12px; color:#43362c; font-size:.96rem; line-height:1.72; max-width:38rem; }
+    .gateway-copy-text:last-child { margin-bottom:0; }
+    .gateway-artwork { grid-area:art; display:block; width:min(100%, 460px); justify-self:end; margin-left:auto; margin-right:6px; text-decoration:none; color:inherit; position:relative; z-index:1; filter:drop-shadow(0 10px 16px rgba(0,0,0,.24)); }
+    .gateway-artwork-mat { display:inline-block; width:fit-content; max-width:100%; padding:10px; background:#000; border:1px solid #1b1b1b; box-shadow:0 0 0 1px rgba(255,255,255,.02), 0 3px 12px rgba(0,0,0,.28); }
+    .gateway-artwork img { display:block; width:clamp(304px, 37vw, 416px); height:auto; aspect-ratio:3 / 4; object-fit:cover; object-position:center 28%; margin:0; background:#fff; border:4px solid #fff; box-sizing:border-box; }
+    .gateway-artwork:hover img,
+    .gateway-artwork:focus-visible img { border-color:#b89b78; }
+    .gateway-artwork:focus-visible { outline:2px solid #b89b78; outline-offset:3px; }
+
+    .collection-dock { position:relative; max-width:1320px; margin:14px auto 24px; padding:14px 18px 18px; background:#fff; border-top:1px solid #d3c3b1; border-bottom:1px solid #d3c3b1; box-shadow:none; overflow:hidden; }
+    .collection-dock::before,
+    .collection-dock::after { content:""; position:absolute; left:0; right:0; height:14px; pointer-events:none; }
+    .collection-dock::before { top:0; background:linear-gradient(90deg, rgba(53, 40, 28, 0) 0%, rgba(53, 40, 28, .5) 14%, rgba(53, 40, 28, .5) 86%, rgba(53, 40, 28, 0) 100%); filter:blur(4px); transform:translateY(-62%); }
+    .collection-dock::after { bottom:0; background:linear-gradient(90deg, rgba(53, 40, 28, 0) 0%, rgba(53, 40, 28, .44) 14%, rgba(53, 40, 28, .44) 86%, rgba(53, 40, 28, 0) 100%); filter:blur(4px); transform:translateY(62%); }
+    .dock-heading { display:flex; align-items:flex-start; justify-content:center; margin-bottom:10px; text-align:center; }
+    .dock-heading p { margin:0 0 6px; color:#7a6047; font-size:.78rem; letter-spacing:.08em; text-transform:uppercase; }
+    .dock-heading h2 { margin:0; color:#2f241b; font-size:1.38rem; line-height:1.35; min-height:1.9em; }
+    #dock-active-title { color:#6d4d34; }
+    .dock-shell { position:relative; }
+    .dock-track { display:flex; align-items:flex-end; justify-content:flex-start; gap:6px; min-height:102px; padding:4px 28px 10px; perspective:900px; overflow-x:auto; scroll-behavior:smooth; scroll-snap-type:x proximity; scrollbar-width:thin; scrollbar-color:#b89b78 #efe6da; }
+    .dock-track::-webkit-scrollbar { height:8px; }
+    .dock-track::-webkit-scrollbar-track { background:#efe6da; }
+    .dock-track::-webkit-scrollbar-thumb { background:#b89b78; border-radius:999px; }
+    .dock-anchor { flex:0 0 1px; height:1px; }
+    .dock-card { flex:0 0 58px; color:inherit; text-decoration:none; transform:translateY(5px) scale(.86); opacity:.82; transition:transform .24s ease, opacity .24s ease, filter .24s ease; filter:saturate(.92); text-align:center; scroll-snap-align:center; }
+    .dock-card.is-near { flex-basis:64px; transform:translateY(1px) scale(.94); opacity:.9; }
+    .dock-card.is-center { flex-basis:78px; transform:translateY(-3px) scale(1.04); opacity:1; filter:saturate(1.04); z-index:2; }
+    .dock-card.is-current .dock-tombstone { border-color:#9b7451; box-shadow:0 18px 38px rgba(48,34,23,.2); }
+    .dock-card.is-current:hover,
+    .dock-card.is-current:focus-visible { transform:translateY(-3px) scale(1.04); cursor:default; }
+    .dock-card.is-far { transform:translateY(8px) scale(.8); opacity:.68; }
+    .dock-card:hover,
+    .dock-card:focus-visible { transform:translateY(-6px) scale(1.02); opacity:1; filter:saturate(1.05); outline:none; z-index:3; }
+    .dock-tombstone { aspect-ratio:3.5 / 4; position:relative; background:#fffdf9; border:1px solid #bda27c; border-radius:0% 0% 25% 25% / 0% 0% 20% 20%; box-shadow:inset 0 -1px 1px rgba(255,255,255,.6), inset 0 1px 2px rgba(0,0,0,.08), 0 10px 22px rgba(48,34,23,.13); overflow:hidden; display:flex; align-items:center; justify-content:center; }
+    .dock-tombstone img { display:block; width:100%; height:100%; aspect-ratio:3.5 / 4; object-fit:cover; object-position:center 15%; background:#efe7dc; }
+
+    .print-options { max-width:1180px; margin:6px auto 20px; padding:12px 18px 18px ; border-top:1px solid #d9c9b7; border-bottom:1px solid #d9c9b7; background:#fff; }
+    .print-options-heading { max-width:1180px; margin:28px auto 2px; padding:0 18px; background:#fff; color:#a79888; font-size:.68rem; letter-spacing:.08em; text-transform:uppercase; line-height:1; }
+    .catalog-anchor-rule { width:min(1400px, calc(100% - 68px)); margin:18px auto 0; border:0; border-top:1px solid #dfd0bd; }
+    .collection-browser-anchor { display:block; height:0; scroll-margin-top:92px; }
+    .series-widget { position:relative; display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:6px; }
+    .series-tile { position:relative; border:1px solid #dfd0bd; background:#f5f1ec; color:#2f241b; min-width:0; }
+    .series-tile.is-active,
+    .series-tile:hover,
+    .series-tile:focus-within { border-color:#b69570; box-shadow:0 10px 22px rgba(48,34,23,.1); }
+    .series-trigger { width:100%; border:0; background:transparent; color:inherit; font-family:'Glegoo',serif; text-align:center; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:7px; min-height:48px; padding:6px 9px 5px; }
+    .series-trigger:focus-visible { outline:1px solid #9b7451; outline-offset:-4px; }
+    .series-symbol { color:#85644b; font-size:1rem; line-height:1; margin-top:0; flex:0 0 auto; }
+    .series-tile strong { display:block; color:#2f241b; font-size:.86rem; line-height:1.15; }
+    .series-tile small { display:block; margin-top:1px; color:#6b594b; font-size:.68rem; line-height:1.15; }
+    .series-tile:hover .series-symbol,
+    .series-tile:focus-within .series-symbol,
+    .series-tile.is-active .series-symbol,
+    .series-tile:hover strong,
+    .series-tile:focus-within strong,
+    .series-tile.is-active strong { color:#5d8fbc; }
+    .series-detail { position:absolute; left:calc(50% - 6px); top:calc(100% + 2px); z-index:20; width:min(320px, calc(100vw - 48px)); padding:12px 13px 11px; border:1px solid #cdbba6; background:#fffdf9; box-shadow:0 18px 36px rgba(48,34,23,.18); color:#4b3a2d; font-size:.8rem; line-height:1.55; opacity:0; visibility:hidden; pointer-events:none; transform:translate(-50%, 10px); transition:opacity .18s ease, transform .18s ease, visibility .18s ease; }
+    .series-tile:nth-child(1) .series-detail { left:-6px; transform:translate(0, 10px); }
+    .series-tile:nth-child(4) .series-detail { left:auto; right:6px; transform:translate(0, 10px); }
+    .series-tile:hover .series-detail,
+    .series-tile:focus-within .series-detail,
+    .series-tile.is-active .series-detail { opacity:1; visibility:visible; pointer-events:auto; transform:translate(-50%, 2px); }
+    .series-tile:nth-child(1):hover .series-detail,
+    .series-tile:nth-child(1):focus-within .series-detail,
+    .series-tile:nth-child(1).is-active .series-detail,
+    .series-tile:nth-child(4):hover .series-detail,
+    .series-tile:nth-child(4):focus-within .series-detail,
+    .series-tile:nth-child(4).is-active .series-detail { transform:translate(2px, 1px); }
+    .series-detail p { margin:0; }
+    .series-detail ul { margin:10px 0 0; padding:0; list-style:none; color:#2f241b; font-size:.8rem; }
+    .series-detail li + li { margin-top:4px; }
+    .series-detail a { display:inline-block; margin-top:11px; color:#85644b; font-size:.78rem; text-decoration:none; border-bottom:1px solid rgba(133,100,75,.45); }
+    .catalog-tools { width:min(1400px, calc(100% - 68px)); margin:14px auto 18px; padding:6px 22px; box-sizing:border-box; display:grid; grid-template-columns:auto 1fr auto 1fr auto; align-items:center; column-gap:24px; row-gap:6px; background:#f5f1ec; border:1px solid #cec9c4; overflow:hidden; }
+    .catalog-tools-title { margin:0; color:#2f241b; font-size:.98rem; font-weight:700; white-space:nowrap; justify-self:start; min-width:0; }
+    .catalog-tools-count { margin:0; color:#6b594b; font-size:.88rem; white-space:nowrap; justify-self:end; min-width:0; }
+    .catalog-tools-divider { color:#b59d85; font-size:.92rem; line-height:1; user-select:none; justify-self:center; }
+    .jump-form { display:flex; align-items:center; flex-wrap:wrap; gap:10px; margin:0; justify-self:center; min-width:0; max-width:100%; }
+    .jump-form label { color:#4b3a2d; font-size:.88rem; white-space:nowrap; min-width:0; }
+    .jump-form input { width:88px; max-width:100%; padding:3px 7px; border:1px solid #cdbba6; background:#fffdf9; color:#2f241b; font-family:'Glegoo',serif; font-size:.88rem; }
+    .jump-form button { padding:3px 11px; border:1px solid #b89b78; background:#fffdf9; color:#5a3e2b; font-family:'Glegoo',serif; font-size:.88rem; cursor:pointer; }
+    .jump-form button:hover { background:#fffaf4; }
+
+    .ssr-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(245px,1fr)); gap:24px; margin:34px auto 44px; max-width:1400px; padding:0 34px; align-items:stretch; }
+    .catalog-range-marker { grid-column:1 / -1; display:flex; align-items:center; justify-content:space-between; gap:12px; margin:12px 0 2px; padding:9px 2px; border-top:1px solid #dfd0bd; color:#6b594b; font-size:.82rem; }
+    .catalog-range-marker a { color:#85644b; text-decoration:none; border-bottom:1px solid rgba(133,100,75,.45); }
+    .ssr-card { --card-overlap:82px; position:relative; isolation:isolate; border:1px solid #b46a5f; border-radius:6px; background:#fffdf9; box-shadow:0 8px 22px rgba(48,34,23,.08); overflow:hidden; transition:border-color .32s ease, box-shadow .32s ease; }
+    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0, 0, 0, 0); white-space:nowrap; border:0; }
+    .ssr-card:hover,
+    .ssr-card:focus-within { border-color:#a44a3f; box-shadow:0 0 0 2px rgba(219, 72, 53, 0.5), 0 10px 24px rgba(48,34,23,.41); }
+    .ssr-card-link { display:flex; flex-direction:column; height:100%; text-decoration:none; color:inherit; cursor:pointer; }
+    .ssr-card-image { display:block; width:100%; height:auto; background:#efe7dc; transition:filter .28s ease, opacity .28s ease; }
+    .ssr-card:hover .ssr-card-image,
+    .ssr-card:focus-within .ssr-card-image { filter:saturate(1.04) contrast(1.02); }
+    .ssr-card-content { display:flex; flex-direction:column; padding:14px 15px 16px; min-height:172px; height:252px; overflow:hidden; position:relative; margin-top:calc(var(--card-overlap) * -1); z-index:1; background:#fffdf9; border-top:1px solid #e6d9ca; width:100%; transition:transform .46s cubic-bezier(.22, 1, .36, 1); transform:translateY(0); }
+    .ssr-card:hover .ssr-card-content,
+    .ssr-card:focus-within .ssr-card-content { transform:translateY(var(--card-overlap)); justify-content:flex-start; }
+    .ssr-card-link:focus-visible { outline:2px solid #b69570; outline-offset:-2px; }
+    .card-number { font-size:.72rem; color:#8a7562; display:block; letter-spacing:.04em; text-transform:uppercase; white-space:nowrap; transition:opacity .24s ease, transform .24s ease, max-height .24s ease, margin .24s ease; }
+    .card-meta-row { position:static; display:block; margin-bottom:6px; padding-right:58px; min-width:0; transition:opacity .24s ease, transform .24s ease, max-height .24s ease, margin .24s ease; }
+    .ssr-card-content h3 { font-size:1rem; line-height:1.35; font-weight:700; color:#2d2118; margin:0 0 8px; display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:3; overflow:hidden; transition:opacity .24s ease, transform .24s ease, max-height .24s ease, margin .24s ease; }
+    .card-series-strip { display:flex; position:absolute; top:14px; right:15px; align-items:center; justify-content:flex-end; gap:2px; color:#6f9aab; font-size:.76rem; line-height:1; opacity:.78; white-space:nowrap; flex-wrap:nowrap; flex:0 0 auto; }
+    .card-series-icon { display:inline-flex; align-items:center; justify-content:center; min-width:11px; }
+    .card-series-separator { color:#cdbba6; font-size:.56rem; opacity:.9; }
+    .print-cue { margin:0 0 10px; color:#7b5c3e; font-size:.86rem; font-weight:700; transition:opacity .24s ease, transform .24s ease, max-height .24s ease, margin .24s ease; }
+    .story-excerpt { color:#5d4b3e; font-size:.84rem; line-height:1.45; margin:0 0 14px; display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:5; overflow:hidden; transition:opacity .24s ease, transform .24s ease, max-height .24s ease, margin .24s ease; }
+    .card-cta { margin-top:auto; color:#85644b; font-size:calc(.84rem - 1px); letter-spacing:-.024em; white-space:nowrap; border-top:1px solid #e3d7c9; padding-top:10px; }
+    .ssr-card:hover .card-cta,
+    .ssr-card:focus-within .card-cta { margin-top:0; }
+    .ssr-card:hover .card-number,
+    .ssr-card:focus-within .card-number,
+    .ssr-card:hover .card-meta-row,
+    .ssr-card:focus-within .card-meta-row,
+    .ssr-card:hover .ssr-card-content h3,
+    .ssr-card:focus-within .ssr-card-content h3,
+    .ssr-card:hover .print-cue,
+    .ssr-card:focus-within .print-cue,
+    .ssr-card:hover .story-excerpt,
+    .ssr-card:focus-within .story-excerpt { opacity:0; transform:translateY(-6px); max-height:0; margin:0; overflow:hidden; pointer-events:none; }
+    .collector-notes-trigger { position:absolute; top:10px; right:10px; z-index:4; width:24px; height:24px; border:0; border-radius:0; background:transparent; color:#3b8f4a; opacity:.92; display:flex; align-items:center; justify-content:center; cursor:pointer; transition:color .18s ease, opacity .18s ease; }
+    .collector-notes-trigger::before { content:""; position:absolute; top:50%; left:50%; width:18px; height:22px; transform:translate(-50%, -50%); border:0; border-radius:4px; background:rgba(0,0,0,.72); transition:background .18s ease, border-color .18s ease; pointer-events:none; }
+    .collector-notes-trigger svg { position:relative; z-index:1; width:22px; height:22px; }
+    .collector-notes-trigger:hover,
+    .collector-notes-trigger:focus-visible { color:#2f7a3d; opacity:1; outline:none; }
+    .collector-notes-trigger:hover::before,
+    .collector-notes-trigger:focus-visible::before { background:rgba(0,0,0,.72); }
+    .collector-note-overlay { position:absolute; top:44px; left:10px; right:10px; z-index:3; padding:10px 11px; border:1px solid rgba(188, 173, 158, .86); border-radius:8px; background:rgba(218, 209, 198, .96); box-shadow:0 10px 22px rgba(35, 26, 19, .2); opacity:0; visibility:hidden; pointer-events:none; transform:translateY(4px); transition:opacity .2s ease, transform .2s ease, visibility .2s ease; }
+    .collector-note-kicker { margin:0 0 4px; color:#7a6047; font-size:.66rem; letter-spacing:.08em; text-transform:uppercase; }
+    .collector-note-teaser { margin:0; color:#3f3228; font-size:.75rem; line-height:1.45; }
+    .collector-note-link { display:inline-block; margin-top:7px; color:#85644b; font-size:.74rem; text-decoration:none; border-bottom:1px solid rgba(133,100,75,.45); }
+    .ssr-card:has(.collector-notes-trigger:hover) .collector-note-overlay,
+    .ssr-card:has(.collector-notes-trigger:focus-visible) .collector-note-overlay,
+    .ssr-card.is-notes-open .collector-note-overlay { opacity:1; visibility:visible; pointer-events:auto; transform:translateY(0); }
+    .ssr-card:has(.collector-notes-trigger:hover) .ssr-card-image,
+    .ssr-card:has(.collector-notes-trigger:focus-visible) .ssr-card-image,
+    .ssr-card.is-notes-open .ssr-card-image { filter:saturate(.9) contrast(.96) brightness(.78); }
+
+    @media (max-width: 980px) {
+      .collection-gateway { grid-template-columns:1fr; grid-template-areas:"art" "copy"; gap:14px; align-items:start; padding:14px 14px 16px; }
+      .gateway-artwork { width:100%; justify-self:stretch; }
+      .gateway-artwork-mat { width:100%; padding:11px; }
+      .gateway-artwork img { width:100%; }
+      .series-widget { grid-template-columns:repeat(2,minmax(0,1fr)); }
+      .series-detail { width:min(300px, calc(100vw - 48px)); }
+      .dock-heading { display:block; }
+      .dock-mode-switch { position:static; display:inline-block; margin-top:10px; }
+      .collection-dock { padding-left:0; padding-right:0; }
+      .dock-track { overflow-x:auto; scroll-snap-type:x proximity; min-height:0; padding:8px 24px 18px; }
+      .dock-card,
+      .dock-card.is-near,
+      .dock-card.is-center,
+      .dock-card.is-far { flex:0 0 72px; transform:none; opacity:1; filter:none; scroll-snap-align:center; }
+      .dock-card:hover,
+      .dock-card:focus-visible { transform:none; }
+    }
+
+    @media (max-width: 900px) {
+      .catalog-tools { width:100%; max-width:100%; margin:14px 0 18px; padding:8px 12px; grid-template-columns:minmax(0, 1fr) auto; column-gap:12px; row-gap:6px; justify-items:center; text-align:center; }
+      .catalog-tools-title,
+      .catalog-tools-count { white-space:normal; min-width:0; align-self:center; }
+      .catalog-tools-title { grid-column:1 / -1; font-size:.9rem; line-height:1.2; justify-self:center; white-space:nowrap; }
+      .catalog-tools-count { grid-column:2; grid-row:2; font-size:.8rem; white-space:nowrap; justify-self:center; }
+      .catalog-tools-divider { display:none; }
+      .jump-form { width:auto; max-width:100%; grid-column:1; grid-row:2; justify-self:center; display:flex; align-items:center; flex-wrap:nowrap; gap:6px; }
+      .jump-form label,
+      .jump-form input,
+      .jump-form button { min-width:0; max-width:100%; box-sizing:border-box; }
+      .jump-form label { font-size:.8rem; width:auto; white-space:nowrap; }
+      .jump-form input { width:56px; padding:3px 5px; font-size:.82rem; }
+      .jump-form button { width:auto; padding:3px 9px; font-size:.82rem; justify-self:start; }
+    }
+
+    @media (max-width: 768px) {
+      .gallery-index-wrapper { padding:18px 12px; }
+      .collection-hero { padding:18px 18px 20px; }
+      .collection-gateway { margin:12px auto 18px; padding:12px 12px 14px; }
+      .catalog-anchor-rule { width:calc(100% - 32px); }
+      .collector-notes-trigger { width:38px; height:38px; top:8px; right:8px; opacity:.92; }
+      .collector-notes-trigger svg { width:20px; height:20px; }
+      .collector-note-overlay { top:52px; }
+      .catalog-tools { padding:6px 10px; column-gap:8px; }
+      .print-options-heading { margin:8px auto 2px; }
+      .series-widget { grid-template-columns:1fr; }
+      .series-detail { position:static; width:auto; margin:0 12px 12px 34px; opacity:1; visibility:visible; pointer-events:auto; transform:none; display:none; box-shadow:0 10px 22px rgba(48,34,23,.1); }
+      .series-tile.is-active .series-detail,
+      .series-tile:focus-within .series-detail { display:block; transform:none; }
+      .ssr-grid { padding:0 16px; gap:16px; }
+      .ssr-card-image { width:100%; height:auto; }
+      .ssr-card-content { display:flex; flex-direction:column; min-height:auto; height:auto; margin-top:-64px; transform:none; background:#fffdf9; border-top:1px solid #e6d9ca; }
+    }
+
+    @media (hover: none), (pointer: coarse) {
+      .ssr-card:hover .ssr-card-content,
+      .ssr-card:focus-within .ssr-card-content { transform:none; }
+    }
+  </style>
+
+  <script is:inline>
+    (() => {
+      const titleNode = document.getElementById('dock-active-title');
+      const prefixNode = document.getElementById('dock-active-prefix');
+      const dockCards = Array.from(document.querySelectorAll('[data-dock-title]'));
+      if (!titleNode || dockCards.length === 0) return;
+
+      const current = dockCards.find((card) => card.getAttribute('aria-current') === 'page');
+      const fallbackTitle = (titleNode.textContent || '').trim() || 'The Native American Black and White Stories';
+
+      const setDockTitle = (value, prefix = 'Browse') => {
+        if (prefixNode) prefixNode.textContent = prefix ? `${prefix} ` : '';
+        titleNode.textContent = value || fallbackTitle;
+      };
+
+      setDockTitle(fallbackTitle, '');
+      const centerCurrentCard = () => {
+        if (!current) return;
+        const track = current.closest('.dock-track');
+        if (!track) return;
+        const targetLeft = current.offsetLeft - (track.clientWidth - current.clientWidth) / 2;
+        const maxLeft = Math.max(0, track.scrollWidth - track.clientWidth);
+        track.scrollLeft = Math.max(0, Math.min(targetLeft, maxLeft));
+      };
+      requestAnimationFrame(() => requestAnimationFrame(centerCurrentCard));
+      window.addEventListener('load', centerCurrentCard, { once: true });
+      window.addEventListener('resize', centerCurrentCard);
+
+      dockCards.forEach((card) => {
+        if (card.getAttribute('data-current') === 'true') return;
+        card.addEventListener('mouseenter', () => setDockTitle(card.getAttribute('data-dock-title'), 'Browse'));
+        card.addEventListener('focus', () => setDockTitle(card.getAttribute('data-dock-title'), 'Browse'));
+      });
+
+      const dock = document.querySelector('.collection-dock');
+      dock?.addEventListener('mouseleave', () => setDockTitle(fallbackTitle, ''));
+      dock?.addEventListener('focusout', (event) => {
+        if (!dock.contains(event.relatedTarget)) setDockTitle(fallbackTitle, '');
+      });
+
+      const jumpForm = document.querySelector('[data-jump-form]');
+      jumpForm?.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const input = jumpForm.querySelector('input[name="artwork-number"]');
+        const rawValue = Number(input?.value || 0);
+        if (!Number.isFinite(rawValue) || rawValue < 1) return;
+        const target = document.querySelector(`[data-artwork-number="${Math.floor(rawValue)}"]`);
+        target?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    })();
+
+    (() => {
+      const cards = Array.from(document.querySelectorAll('.ssr-card'));
+      if (cards.length === 0) return;
+
+      const isDesktopHover = () =>
+        window.matchMedia('(min-width: 769px)').matches &&
+        window.matchMedia('(hover: hover)').matches &&
+        window.matchMedia('(pointer: fine)').matches;
+
+      const applyRowCropping = () => {
+        if (!isDesktopHover()) {
+          cards.forEach((card) => card.style.removeProperty('--card-overlap'));
+          return;
+        }
+
+        const measured = cards
+          .map((card) => {
+            const image = card.querySelector('.ssr-card-image');
+            if (!image) return null;
+            const imageHeight = image.getBoundingClientRect().height;
+            if (imageHeight <= 0) return null;
+            const top = Math.round(card.getBoundingClientRect().top);
+            return { card, imageHeight, top };
+          })
+          .filter(Boolean)
+          .sort((a, b) => a.top - b.top);
+
+        if (measured.length === 0) return;
+
+        const rows = [];
+        measured.forEach((item) => {
+          const row = rows[rows.length - 1];
+          if (!row || Math.abs(row.top - item.top) > 4) {
+            rows.push({ top: item.top, items: [item] });
+            return;
+          }
+          row.items.push(item);
+        });
+
+        rows.forEach((row) => {
+          const minImageHeight = Math.min(...row.items.map((item) => item.imageHeight));
+          row.items.forEach((item) => {
+            const overlap = Math.max(0, Math.round(item.imageHeight - minImageHeight));
+            item.card.style.setProperty('--card-overlap', `${overlap}px`);
+          });
+        });
+      };
+
+      let frame = 0;
+      const scheduleCropping = () => {
+        cancelAnimationFrame(frame);
+        frame = requestAnimationFrame(applyRowCropping);
+      };
+
+      cards.forEach((card) => {
+        const image = card.querySelector('.ssr-card-image');
+        if (!image || image.complete) return;
+        image.addEventListener('load', scheduleCropping, { once: true });
+      });
+
+      window.addEventListener('resize', scheduleCropping);
+      window.addEventListener('load', scheduleCropping, { once: true });
+      scheduleCropping();
+    })();
+
+    (() => {
+      const tiles = Array.from(document.querySelectorAll('[data-series-tile]'));
+      if (tiles.length === 0) return;
+
+      const closeTiles = (except = null) => {
+        tiles.forEach((tile) => {
+          if (tile !== except) tile.classList.remove('is-active');
+        });
+      };
+
+      tiles.forEach((tile) => {
+        const trigger = tile.querySelector('.series-trigger');
+        trigger?.addEventListener('click', (event) => {
+          event.stopPropagation();
+          const willOpen = !tile.classList.contains('is-active');
+          closeTiles(tile);
+          tile.classList.toggle('is-active', willOpen);
+        });
+        tile.addEventListener('mouseleave', () => tile.classList.remove('is-active'));
+        tile.addEventListener('focusout', (event) => {
+          if (!tile.contains(event.relatedTarget)) tile.classList.remove('is-active');
+        });
+      });
+
+      document.addEventListener('click', (event) => {
+        if (!event.target.closest('[data-series-tile]')) closeTiles();
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') closeTiles();
+      });
+    })();
+
+    (() => {
+      const noteCards = Array.from(document.querySelectorAll('.ssr-card'));
+      const noteTriggers = Array.from(document.querySelectorAll('[data-notes-trigger]'));
+      if (noteCards.length === 0 || noteTriggers.length === 0) return;
+
+      const closeAll = (except = null) => {
+        noteCards.forEach((card) => {
+          if (card !== except) card.classList.remove('is-notes-open');
+        });
+      };
+
+      noteTriggers.forEach((trigger) => {
+        trigger.addEventListener('click', (event) => {
+          event.preventDefault();
+          event.stopPropagation();
+          const card = trigger.closest('.ssr-card');
+          if (!card) return;
+          const willOpen = !card.classList.contains('is-notes-open');
+          closeAll(card);
+          card.classList.toggle('is-notes-open', willOpen);
+        });
+      });
+
+      document.addEventListener('click', (event) => {
+        if (event.target.closest('[data-notes-trigger]') || event.target.closest('[data-notes-overlay]')) return;
+        closeAll();
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') closeAll();
+      });
+    })();
+  </script>
+</BaseLayout>

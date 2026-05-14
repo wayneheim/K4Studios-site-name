@@ -35,7 +35,7 @@ export const westernFAQ = [
   {
     q: "What does One-Image Movie mean in this section?",
     a: [
-      `<strong>One-Image Movie™</strong> is Wayne’s way of describing an image that behaves like a larger chapter instead of a closed description. The frame suggests what came before, what might happen after, and what is emotionally at stake without spelling it all out.`,
+      `<strong>One-Image Movie™</strong> is Wayne’s name for a finished narrative-art experience where image, title, authored story, and viewer imagination work together. The photograph opens the scene. The words deepen the uncertainty. The viewer completes the final unwritten story.`,
       `That idea is central to the Wild West work because frontier history feels strongest when the viewer senses a larger life moving under the visible surface.`
     ],
   },

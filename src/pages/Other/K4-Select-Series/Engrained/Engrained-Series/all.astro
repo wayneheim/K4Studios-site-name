@@ -1,0 +1,78 @@
+---
+export const prerender = false;
+
+import CommercialCollectionAllPage from "@/components/all-pages/CommercialCollectionAllPage.astro";
+import { galleryData } from "@/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs";
+import { entranceData } from "@/data/Other/K4-Select-Series/Engrained/EngrainedSeriesEntranceData.ts";
+import { buildWildWestAllPageDock } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/dock/buildWildWestAllPageDock.ts";
+
+const basePath = "/Other/K4-Select-Series/Engrained/Engrained-Series";
+const canonicalPath = `${basePath}/all`;
+const rawGalleryData = [...galleryData].sort((a: any, b: any) => (a?.sortOrder ?? 0) - (b?.sortOrder ?? 0));
+
+const { sectionDockItems, dockCenterIndex } = buildWildWestAllPageDock({
+  currentKey: "engrained-0",
+  currentHref: canonicalPath,
+});
+
+const breadcrumbHtml = [
+  '<a href="/Galleries/Painterly-Fine-Art-Photography">Painterly Fine Art Photography</a>',
+  '<a href="/Other/K4-Select-Series">K4 Select Series</a>',
+  '<a href="/Other/K4-Select-Series/Engrained">Engrained</a>',
+  `<a href="${basePath}">Engrained Series</a>`,
+  'Series',
+].join(' | ');
+
+const breadcrumbStructuredItems = [
+  { href: "/Galleries", name: "Galleries" },
+  { href: "/Galleries/Painterly-Fine-Art-Photography", name: "Painterly Fine Art Photography" },
+  { href: "/Other/K4-Select-Series", name: "K4 Select Series" },
+  { href: "/Other/K4-Select-Series/Engrained", name: "Engrained" },
+  { href: basePath, name: "Engrained Series" },
+];
+
+const copy = {
+  seoDescription:
+    "Browse {imageCount} Engrained Series fine art wood prints by Wayne Heim, featuring painterly photography printed on Baltic Birch panels with collector notes, sizes, and individual pricing.",
+  indexDefinition:
+    "This page presents the complete Engrained Series archive by Wayne Heim. These painterly photographs are selected for direct printing on Baltic Birch wood panels, where image, grain, texture, and story become part of the finished collector object.",
+  indexLinkNote:
+    "All {imageCount} Engrained works link to individual image pages with full stories, metadata, collector notes, image size, and pricing details.",
+  printAvailabilityNote:
+    "Engrained works are limited wood-panel editions printed with a five-layer UV process on Baltic Birch. Sizes and pricing are specific to each image.",
+  commercialH1: "Engrained Fine Art Wood Print Series",
+  commercialDeck: "A collection of painterly fine art photography printed on Baltic Birch wood panels by Wayne Heim.",
+  catalogEntranceTitle: "Engrained Fine Art Wood Prints by Wayne Heim",
+  catalogEntranceCopy:
+    "Browse painterly Western, historical, and Americana photography selected for wood-panel presentation, where natural grain becomes part of the finished image.",
+  collectionIntro:
+    "Browse the complete Engrained Series of fine art wood prints shaped by story, grain, texture, and collector presentation. Each artwork opens to its full story, collector notes, image metadata, size, and pricing details.",
+  gatewayIntroCopy:
+    "{imageCount} Engrained Series fine art wood prints by Wayne Heim, featuring painterly photography printed on Baltic Birch panels with a layered UV process. Each work is individually sized, priced, and presented as a limited collector object.",
+  gatewaySupportingCopy:
+    "Every image below is a finished Engrained work. Click any piece to read the narrative, explore collector notes, and view wood print details.",
+};
+---
+
+<CommercialCollectionAllPage
+  rawGalleryData={rawGalleryData}
+  entranceData={entranceData}
+  basePath={basePath}
+  canonicalPath={canonicalPath}
+  breadcrumbHtml={breadcrumbHtml}
+  breadcrumbStructuredItems={breadcrumbStructuredItems}
+  sectionDockItems={sectionDockItems}
+  dockCenterIndex={dockCenterIndex}
+  currentDockTitle="The Engrained Fine Art Wood Print Series"
+  archiveContext={{
+    categoryUrl: "/Other/K4-Select-Series/Engrained",
+    categoryName: "Engrained Series",
+  }}
+  identity={{
+    collectionName: "Engrained Series",
+    variantName: "Wood Prints",
+    variantDescriptor: "Engrained fine art wood print",
+    gatewayBrandLabel: "Engrained Fine Art Wood Prints - Complete Collection",
+  }}
+  copy={copy}
+/>

@@ -51,7 +51,7 @@ export default function GalleryLandingHeader({ breadcrumb }) {
       </a>
 
       {/* — styles that belong only to LandingHeader — */}
-      <style jsx>{`
+      <style>{`
 
 
 .k4-watermark {

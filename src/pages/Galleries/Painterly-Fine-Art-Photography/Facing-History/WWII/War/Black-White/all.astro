@@ -1,0 +1,37 @@
+---
+export const prerender = false;
+
+import CommercialCollectionAllPage from "@/components/all-pages/CommercialCollectionAllPage.astro";
+import { galleryData as rawGalleryData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs";
+import { entranceData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/BWEntranceData.ts";
+import { buildWildWestAllPageDock } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/dock/buildWildWestAllPageDock.ts";
+import { getFormattedLowestStandardPrintPrice } from "@/data/pricing/printSeries.js";
+
+const basePath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White";
+const canonicalPath = `${basePath}/all`;
+const variantDescriptor = "black and white";
+const { sectionDockItems, dockCenterIndex } = buildWildWestAllPageDock({ currentKey: "wwii-war-1", currentHref: canonicalPath });
+const breadcrumbHtml = ['<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Facing History</a>', '<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII">WWII</a>', '<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War">Art of War</a>', `<a href="${basePath}">Black &amp; White</a>`, 'Collection'].join(' | ');
+const breadcrumbStructuredItems = [
+  { href: "/Galleries", name: "Galleries" },
+  { href: "/Galleries/Painterly-Fine-Art-Photography", name: "Painterly Fine Art Photography" },
+  { href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History", name: "Facing History" },
+  { href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII", name: "WWII" },
+  { href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War", name: "WWII Art of War" },
+  { href: basePath, name: "Black & White" },
+];
+const copy = {
+  seoDescription: `Browse {imageCount} ${variantDescriptor} WWII battle fine art prints by Wayne Heim, with combat scenes, wartime storytelling, collector notes, and print options from ${getFormattedLowestStandardPrintPrice()}.`,
+  indexDefinition: `This page presents the complete ${variantDescriptor} archive of The Art of War by Wayne Heim. The collection gathers WWII battle scenes, combat reenactment imagery, wartime action, and front-line storytelling shaped by tonal painterly atmosphere.`,
+  indexLinkNote: "All {imageCount} images open to individual artwork pages with full narrative context, metadata, and collector information.",
+  commercialH1: "WWII Art of War Fine Art Series",
+  commercialDeck: `A collection of painterly ${variantDescriptor} WWII battle and wartime storytelling artwork by Wayne Heim.`,
+  catalogEntranceTitle: "Black and White WWII Battle Fine Art Prints",
+  catalogEntranceCopy: "Browse monochrome World War II battle photography built around action, sacrifice, tension, atmosphere, and front-line story.",
+  collectionIntro: `Browse the complete collection of ${variantDescriptor} WWII Art of War images shaped by combat atmosphere, movement, smoke, tension, and consequence. Each artwork opens to its full story, collector notes, image metadata, and available print details.`,
+  gatewayIntroCopy: `{imageCount} painterly ${variantDescriptor} WWII battle photographs by Wayne Heim, available as archival fine art prints from ${getFormattedLowestStandardPrintPrice()}. Four edition tiers - open-edition studies to ultra-limited signed collector works - on fine art paper and Baltic Birch wood panels.`,
+  gatewaySupportingCopy: "Every image below is a wartime story in a single frame. Click any work to read the narrative, explore collector notes, and view print details.",
+};
+---
+
+<CommercialCollectionAllPage rawGalleryData={rawGalleryData} entranceData={entranceData} basePath={basePath} canonicalPath={canonicalPath} breadcrumbHtml={breadcrumbHtml} breadcrumbStructuredItems={breadcrumbStructuredItems} sectionDockItems={sectionDockItems} dockCenterIndex={dockCenterIndex} currentDockTitle="The WWII Black and White Art of War" archiveContext={{ categoryUrl: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War", categoryName: "WWII Art of War" }} identity={{ collectionName: "WWII Art of War", variantName: "Black & White", variantDescriptor: `${variantDescriptor} WWII battle`, gatewayBrandLabel: "WWII Art of War Fine Art Prints - Black & White Collection" }} copy={copy} />

@@ -203,7 +203,7 @@ export default function StoryShow({ images, startImageId, onExit, imageSize = 'x
 
   return createPortal(
     <>
-      <style jsx>{`
+      <style>{`
         /* Hide narrative on small landscape viewports (visual nicety only);
            logic-side already hides it for all phones via isMobileShort. */
         @media (orientation: landscape) and (max-width: 900px) {

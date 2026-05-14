@@ -1,0 +1,71 @@
+---
+export const prerender = false;
+
+import CommercialCollectionAllPage from "@/components/all-pages/CommercialCollectionAllPage.astro";
+import { galleryData as rawGalleryData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color.mjs";
+import { entranceData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/ColorEntranceData.ts";
+import { buildWildWestAllPageDock } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/dock/buildWildWestAllPageDock.ts";
+import { getFormattedLowestStandardPrintPrice } from "@/data/pricing/printSeries.js";
+
+const basePath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color";
+const canonicalPath = `${basePath}/all`;
+
+const breadcrumbHtml = [
+  '<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Facing History</a>',
+  '<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits">Roaring 20s Portraits</a>',
+  `<a href="${basePath}">Color</a>`,
+  'Collection',
+].join(' | ');
+
+const breadcrumbStructuredItems = [
+  { href: "/Galleries", name: "Galleries" },
+  { href: "/Galleries/Painterly-Fine-Art-Photography", name: "Painterly Fine Art Photography" },
+  { href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History", name: "Facing History" },
+  { href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits", name: "Roaring 20s Portraits" },
+  { href: basePath, name: "Color" },
+];
+
+const { sectionDockItems, dockCenterIndex } = buildWildWestAllPageDock({
+  currentKey: "roaring-20s-0",
+  currentHref: canonicalPath,
+});
+
+const copy = {
+  seoDescription: `Browse {imageCount} painterly color Roaring 20s portrait fine art prints by Wayne Heim, with Jazz Age characters, collector notes, and print options from ${getFormattedLowestStandardPrintPrice()}.`,
+  indexDefinition:
+    "This page presents the complete color archive of Roaring 20s Portraits by Wayne Heim. The collection gathers Jazz Age character studies, flappers, gangsters, G-men, speakeasy figures, and cinematic 1920s portraits shaped by painterly color.",
+  indexLinkNote: "All {imageCount} images link to individual image pages with full stories, metadata, and collector information.",
+  commercialH1: "Roaring 20s Portrait Fine Art Series",
+  commercialDeck: "A collection of painterly Jazz Age portrait artwork by Wayne Heim.",
+  catalogEntranceTitle: "Roaring 20s Fine Art Prints by Wayne Heim",
+  catalogEntranceCopy: "Browse painterly 1920s portrait photography built around character, gesture, atmosphere, and cinematic Jazz Age presence.",
+  collectionIntro:
+    "Browse the complete collection of color Roaring 20s portrait images shaped by speakeasy mood, Jazz Age style, character, gesture, and story. Each artwork opens to its full story, collector notes, image metadata, and available print details.",
+  gatewayCollectionName: "Roaring 20s Portraits",
+  gatewayIntroCopy: `{imageCount} painterly color Roaring 20s portrait photographs by Wayne Heim, available as archival fine art prints from ${getFormattedLowestStandardPrintPrice()}. Four edition tiers - open-edition studies to ultra-limited signed collector works - on fine art paper and Baltic Birch wood panels.`,
+  gatewaySupportingCopy: "Every image below is a Jazz Age character study in a single frame. Click any work to read the narrative, explore collector notes, and view print details.",
+};
+---
+
+<CommercialCollectionAllPage
+  rawGalleryData={rawGalleryData}
+  entranceData={entranceData}
+  basePath={basePath}
+  canonicalPath={canonicalPath}
+  breadcrumbHtml={breadcrumbHtml}
+  breadcrumbStructuredItems={breadcrumbStructuredItems}
+  sectionDockItems={sectionDockItems}
+  dockCenterIndex={dockCenterIndex}
+  currentDockTitle="The Roaring 20s Color Portraits"
+  archiveContext={{
+    categoryUrl: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits",
+    categoryName: "Roaring 20s Portraits",
+  }}
+  identity={{
+    collectionName: "Roaring 20s Portraits",
+    variantName: "Color",
+    variantDescriptor: "color Roaring 20s portrait",
+    gatewayBrandLabel: "Roaring 20s Portrait Fine Art Prints - Color Collection",
+  }}
+  copy={copy}
+/>

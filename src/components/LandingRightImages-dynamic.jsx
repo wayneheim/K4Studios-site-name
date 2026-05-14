@@ -137,7 +137,7 @@ export default function LandingRightImagesDynamic({
         );
       })}
 
-      <style jsx>{`
+      <style>{`
         .sidebar-thumbnails-dynamic {
           width: 100%;
           max-width: 260px;

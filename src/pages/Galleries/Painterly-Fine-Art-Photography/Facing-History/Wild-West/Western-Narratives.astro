@@ -182,7 +182,7 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${pa
                 <details class="mobile-themes-accordion responsive-theme-block" data-theme-block>
                   <summary>Featured Themes</summary>
                   <div class="themes-content">
-                    <ThemeBlock client:load galleryKey={dataSectionPath} />
+                    <ThemeBlock client:only="react" galleryKey={dataSectionPath} />
                   </div>
                 </details>
                 </>

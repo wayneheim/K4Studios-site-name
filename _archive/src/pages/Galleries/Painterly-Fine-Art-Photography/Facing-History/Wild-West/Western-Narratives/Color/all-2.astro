@@ -1,5 +1,5 @@
 ---
-export const prerender = true;
+export const prerender = false;
 /**
  * /all-2 - Experimental Commercial Collection Prototype
  * 
@@ -18,22 +18,12 @@ import {
   getLowestStandardPrintPrice,
   getStandardPrintSeries,
 } from "@/data/pricing/printSeries.js";
+import { resolveImageCommerce } from "@/data/commerceResolver.js";
 
 // ✅ Direct import - no query params needed
 import { galleryData as rawGalleryData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs";
 import { entranceData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/ColorEntranceData.ts";
-import { landingWestern as civilWarLanding } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/landingstones.ts";
-import { landingWestern as cowboyPortraitLanding } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/landingstones.ts";
-import { landingWestern as westernNarrativeLanding } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/landingstones.ts";
-import { landingWestern as nativeAmericanLanding } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/landingstones.ts";
-import { landingWestern as roaring20sLanding } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/landingstones.ts";
-import { landingWestern as wwiiPortraitLanding } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/landingstones.ts";
-import { landingWestern as wwiiMachineLanding } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/landingstones.ts";
-import { landingWestern as wwiiWarLanding } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/landingstones.ts";
-import { landingWestern as landscapeLocationLanding } from "@/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/landingstones.ts";
-import { landingWestern as landscapeThemeLanding } from "@/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/landingstones.ts";
-import { landingWestern as transportationLanding } from "@/data/Galleries/Painterly-Fine-Art-Photography/Transportation/landingstones.ts";
-import { landingWestern as miscLanding } from "@/data/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/landingstones.ts";
+import { buildWildWestAllPageDock } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/dock/buildWildWestAllPageDock.ts";
 
 // ✅ Filter out ghosts and hidden (archived) images
 const galleryData = rawGalleryData.filter((img: any) => 
@@ -41,6 +31,11 @@ const galleryData = rawGalleryData.filter((img: any) =>
   img.visibility !== "hidden" && 
   img.id !== "i-k4studios"
 );
+
+const activeThemeSlug = Astro.url.searchParams.get("theme") || "";
+const filteredGalleryData = activeThemeSlug
+  ? galleryData.filter((img: any) => Boolean(img?.themes?.[activeThemeSlug]))
+  : galleryData;
 
 const humanizeSegment = (segment = "") =>
   decodeURIComponent(String(segment || ""))
@@ -62,10 +57,11 @@ const collectionName = humanizeSegment(collectionSlug) || "Western Narratives";
 const variantName = humanizeSegment(variantSlug) || "Color";
 const galleryTitle = `${collectionName} - ${variantName}`;
 const gallerySubtitle = entranceData?.subtitle || "Painterly Fine Art Photography";
-const imageCount = galleryData.length;
+const imageCount = filteredGalleryData.length;
 
 // ✅ SEO-optimized title and description (factual, not poetic)
-const seoTitle = `${collectionName} Fine Art Prints | K4 Studios`;
+const gatewayBrandLabel = `${collectionName} Fine Art Prints - ${variantName} Collection`;
+const seoTitle = `${gatewayBrandLabel} | K4 Studios`;
 const seoDescription = `Browse ${imageCount} ${variantName.toLowerCase()} ${collectionName.toLowerCase()} fine art prints by Wayne Heim, with collector notes and print options from ${getFormattedLowestStandardPrintPrice()}.`;
 
 // ✅ Genre definition (entity authority - what IS this type of photography)
@@ -83,39 +79,24 @@ const gatewayCollectionName = collectionName;
 const gatewayIntroCopy = `${imageCount} painterly ${variantName.toLowerCase()} Western fine art photographs by Wayne Heim, available as archival fine art prints from ${getFormattedLowestStandardPrintPrice()}. Four edition tiers - open-edition studies to ultra-limited signed collector works - on fine art paper and Baltic Birch wood panels.`;
 const gatewaySupportingCopy = `Every image below is a complete story in a single frame. Click any work to read the narrative, explore collector notes, and view print details.`;
 const breadcrumbHtml = [
-  '<a href="/Galleries">Galleries</a>',
+  '<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West">Wild West</a>',
   '<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives">Western Narratives</a>',
   `<a href="${basePath}">Color</a>`,
   'Collection',
 ].join(' | ');
-const toAllHref = (href = "") => {
-  const cleanHref = String(href).split("?")[0].replace(/\/$/, "");
-  return `${cleanHref}/all`;
-};
-const asDockItem = (stone: any, overrides: Record<string, any> = {}) => ({
-  ...stone,
-  ...overrides,
-  href: overrides.href || stone.dockHref || toAllHref(stone.href),
-  cue: overrides.current ? "Current collection" : "Browse collection →",
+const { sectionDockItems, dockCenterIndex } = buildWildWestAllPageDock({
+  currentKey: "western-narrative-color",
+  currentHref: `${basePath}/all`,
 });
-const sectionDockItems = [
-  ...civilWarLanding.tombstones.map((stone: any) => asDockItem(stone)),
-  ...roaring20sLanding.tombstones.map((stone: any) => asDockItem(stone)),
-  ...wwiiPortraitLanding.tombstones.map((stone: any) => asDockItem(stone)),
-  ...wwiiMachineLanding.tombstones.map((stone: any) => asDockItem(stone)),
-  ...wwiiWarLanding.tombstones.map((stone: any) => asDockItem(stone)),
-  ...cowboyPortraitLanding.tombstones.slice(0, 2).map((stone: any) => asDockItem(stone)),
-  asDockItem(westernNarrativeLanding.tombstones[0], { href: prototypePath, current: true }),
-  asDockItem(westernNarrativeLanding.tombstones[1]),
-  ...nativeAmericanLanding.tombstones.slice(0, 2).map((stone: any) => asDockItem(stone)),
-  ...landscapeLocationLanding.tombstones.map((stone: any) => asDockItem(stone)),
-  ...landscapeThemeLanding.tombstones.map((stone: any) => asDockItem(stone)),
-  ...transportationLanding.tombstones.map((stone: any) => asDockItem(stone)),
-  ...miscLanding.tombstones.map((stone: any) => asDockItem(stone)),
-];
-const dockCenterIndex = sectionDockItems.findIndex((item) => item.current);
 const currentDockTitle = "The Wild West Color Narrative Stories";
-const standardPrintSeries = getStandardPrintSeries();
+const standardPrintSeries = getStandardPrintSeries() as Array<{
+  name: string;
+  subtitle: string;
+  collectorSummary: string;
+  symbol: string;
+  learnMoreHref: string;
+  sizes: Array<{ display: string }>;
+}>;
 
 // ✅ Text cleaner for JSON-LD (escapes quotes for JSON)
 const cleanForJson = (val = "") =>
@@ -150,8 +131,19 @@ const truncateWords = (text: string, maxWords = 30) => {
 
 // ✅ Proxy URL helper - never expose SmugMug URLs to crawlers
 const getProxySrc = (id: string, size: string = 'l') => {
-  const image = galleryData.find((item: any) => item.id === id) || { id };
+  const image = filteredGalleryData.find((item: any) => item.id === id)
+    || galleryData.find((item: any) => item.id === id)
+    || { id };
   return getSemanticImageUrl(image, { galleryPath: basePath }, size);
+};
+
+const getCardSeries = (image: any) => {
+  const commerce = resolveImageCommerce({
+    image,
+    galleryPath: basePath,
+    pageUrl: `${siteOrigin}${basePath}/${image?.id || ""}`,
+  });
+  return commerce?.tiers || [];
 };
 
 const toAbsoluteK4Url = (url = "") => {
@@ -160,7 +152,7 @@ const toAbsoluteK4Url = (url = "") => {
   return `${siteOrigin}${url.startsWith("/") ? "" : "/"}${url}`;
 };
 
-const gatewayHeroItem = galleryData[0];
+const gatewayHeroItem = filteredGalleryData[0] || galleryData[0];
 const gatewayHeroTitle = cleanForDisplay(gatewayHeroItem?.title || galleryTitle);
 const gatewayHeroAlt = gatewayHeroItem?.alt
   ? `${cleanForDisplay(gatewayHeroItem.alt).replace(/[.\s]*$/, "")}. Collection hero image.`
@@ -172,7 +164,7 @@ const gatewayHeroSrcSet = gatewayHeroItem
   : "";
 const seenCardAltCounts = new Map<string, number>();
 const fallbackSocialImage = "/images/show-2t.webp";
-const socialImage = gatewayHeroSrc || (galleryData[0] ? getProxySrc(galleryData[0].id, 'l') : "") || fallbackSocialImage;
+const socialImage = gatewayHeroSrc || (filteredGalleryData[0] ? getProxySrc(filteredGalleryData[0].id, 'l') : "") || fallbackSocialImage;
 const socialImageUrl = toAbsoluteK4Url(socialImage);
 const socialImageAlt = `${collectionName} Fine Art Prints by Wayne Heim`;
 const lowestStandardPrintPrice = getLowestStandardPrintPrice();
@@ -186,7 +178,7 @@ const aggregateOffer = {
 
 // ✅ Pre-build per-image JSON-LD to avoid streaming issues
 const imageJsonLdMap = new Map();
-galleryData.forEach((item: any) => {
+filteredGalleryData.forEach((item: any) => {
   // Capped at 'l' to protect XL from bot discovery
   const imageUrl = getProxySrc(item.id, 'l');
   const linkUrl = `${basePath}/${item.id}`;
@@ -215,7 +207,7 @@ const collectionImageGalleryGraph = getCollectionImageGalleryGraph({
   pageUrl: canonicalUrl,
   name: `${galleryTitle} Collection`,
   description: seoDescription,
-  images: galleryData,
+  images: filteredGalleryData,
   basePath,
 });
 
@@ -314,7 +306,7 @@ const pageMeta = {
       </a>
       <div class="gateway-copy">
         <p class="gateway-kicker">K4 STUDIOS FINE ART PRINT CATALOG</p>
-        <p class="gateway-brand" id="gateway-heading">Western Narrative Fine Art Prints — Color Collection</p>
+        <h1 class="gateway-brand" id="gateway-heading">{gatewayBrandLabel}</h1>
         <p class="gateway-copy-text">{gatewayIntroCopy}</p>
         <p class="gateway-copy-text">{gatewaySupportingCopy}</p>
       </div>
@@ -373,7 +365,8 @@ const pageMeta = {
       <p class="hero-copy">{collectionIntro}</p>
     </header>
 
-    <hr id="collection-browser" class="catalog-anchor-rule" />
+    <span id="collection-browser" class="collection-browser-anchor" aria-hidden="true"></span>
+    <hr class="catalog-anchor-rule" />
     <p class="print-options-heading">K4 Series and Limited Editions · Fine Art Prints from {getFormattedLowestStandardPrintPrice()}</p>
 
     <!-- Available Print Series -->
@@ -389,13 +382,21 @@ const pageMeta = {
               </span>
             </button>
             <div class="series-detail">
-              <p><strong>{series.name}:</strong> {series.collectorSummary}</p>
-              <ul>
-                {series.sizes.map((entry) => (
-                  <li>{entry.display}</li>
-                ))}
-              </ul>
-              <a href={series.learnMoreHref}>Learn more →</a>
+              <p class="series-detail-copy">
+                <span class="series-detail-title">
+                  <span class="series-detail-symbol" aria-hidden="true">{series.symbol}</span>
+                  <strong>{series.name}:</strong>
+                </span>
+                <span>{series.collectorSummary}</span>
+              </p>
+              <div class="series-detail-footer">
+                <ul class="series-detail-sizes">
+                  {series.sizes.map((entry: any) => (
+                    <li>{entry.display}</li>
+                  ))}
+                </ul>
+                <a class="series-detail-link" href={series.learnMoreHref}>Learn more →</a>
+              </div>
             </div>
           </article>
         ))}
@@ -406,18 +407,26 @@ const pageMeta = {
     <section class="catalog-tools" aria-labelledby="catalog-tools-heading">
       <h2 id="catalog-tools-heading" class="catalog-tools-title">{gatewayCollectionName} Collection</h2>
       <span class="catalog-tools-divider" aria-hidden="true">|</span>
+      <div class="series-sort" aria-label="Sort collection by print series">
+        <span class="series-sort-label">Sorting:</span>
+        <button class="series-sort-button is-active" type="button" data-series-sort="catalog" aria-pressed="true" title="Catalog order / all works">#/✽</button>
+        <button class="series-sort-button" type="button" data-series-sort="foundation" aria-pressed="false" title="Foundation first">★</button>
+        <button class="series-sort-button" type="button" data-series-sort="chronicle" aria-pressed="false" title="Chronicle first">⌘</button>
+        <button class="series-sort-button" type="button" data-series-sort="legend" aria-pressed="false" title="Legend first">❖</button>
+      </div>
+      <span class="catalog-tools-divider" aria-hidden="true">|</span>
       <form class="jump-form" data-jump-form>
-        <label for="artwork-number">Jump to artwork #</label>
+        <label for="artwork-number">Jump to image #</label>
         <input id="artwork-number" name="artwork-number" type="number" min="1" max={imageCount} inputmode="numeric" />
         <button type="submit">Go</button>
       </form>
       <span class="catalog-tools-divider" aria-hidden="true">|</span>
-      <p class="catalog-tools-count">{imageCount} works</p>
+      <p class="catalog-tools-count" data-catalog-count>{imageCount} works</p>
     </section>
 
     <!-- Image Grid -->
     <div class="ssr-grid" id="collection-grid">
-      {galleryData.map((item: any, idx: number) => {
+      {filteredGalleryData.map((item: any, idx: number) => {
         // Use smallest sufficient size for 250px grid cards via proxy
         const imageUrl = getProxySrc(item.id, 's');
         const srcsetParts = [
@@ -461,6 +470,8 @@ const pageMeta = {
           item.story ||
           "";
         const collectorNoteTeaser = truncateWords(collectorNoteRaw, 30);
+        const cardSeries = getCardSeries(item);
+        const cardSeriesKeys = cardSeries.map((series: any) => series.key).join(' ');
         const needsRangeMarker = idx > 0 && idx % 50 === 0;
         const rangeStart = idx + 1;
         const rangeEnd = Math.min(idx + 50, imageCount);
@@ -473,18 +484,44 @@ const pageMeta = {
                 <a href="#top">Back to top</a>
               </div>
             )}
-            <div class="ssr-card" id={item.id} data-artwork-number={idx + 1}>
+            <div
+              class="ssr-card"
+              id={item.id}
+              data-artwork-number={idx + 1}
+              data-original-index={idx}
+              data-series={cardSeriesKeys}
+            >
               <a href={linkUrl} class="ssr-card-link">
                 <img 
                   class="ssr-card-image"
                   src={imageUrl} 
                   srcset={srcsetParts || undefined}
-                  sizes="(max-width: 640px) 100vw, 250px"
+                  sizes="(max-width: 520px) calc(100vw - 32px), (max-width: 768px) calc((100vw - 48px) / 2), 250px"
                   alt={altText} 
                   loading="lazy" 
+                  decoding="async"
+                  fetchpriority="low"
                 />
                 <div class="ssr-card-content">
-                  <span class="card-number">Artwork {idx + 1} of {imageCount}</span>
+                  <div class="card-meta-row">
+                    <span class="card-number">Image {idx + 1} of {imageCount}</span>
+                    {cardSeries.length > 0 && (
+                      <span class="card-series-strip" aria-label="Available print series">
+                        {cardSeries.map((series: any, seriesIdx: number) => (
+                          <>
+                            <span
+                              class="card-series-icon"
+                              title={`${series.label} Series Member`}
+                              aria-label={`${series.label} Series Member`}
+                            >
+                              {series.icon}
+                            </span>
+                            {seriesIdx < cardSeries.length - 1 && <span class="card-series-separator" aria-hidden="true">|</span>}
+                          </>
+                        ))}
+                      </span>
+                    )}
+                  </div>
                   <h3>{title}</h3>
                   <p class="print-cue sr-only">Fine art print available</p>
                   {storyExcerpt && <p class="story-excerpt">{storyExcerpt}</p>}
@@ -850,23 +887,61 @@ const pageMeta = {
     }
 
     .print-options {
-      max-width:1180px;
-      margin:6px auto 20px;
-      padding:12px 18px 18px ;
-      border-top:1px solid #d9c9b7;
-      border-bottom:1px solid #d9c9b7;
+      position:relative;
+      width:min(1320px, calc(100% - 80px));
+      max-width:none;
+      margin:6px auto 22px;
+      padding:8px 18px;
+      border-top:1px solid #d3c3b1;
+      border-bottom:1px solid #d3c3b1;
       background:#fff;
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.92),
+        0 12px 16px -14px rgba(48,34,23,.42);
+    }
+    .print-options::before,
+    .print-options::after {
+      content:"";
+      position:absolute;
+      left:-1px;
+      right:-1px;
+      z-index:0;
+      pointer-events:none;
+    }
+    .print-options::before {
+      top:-5px;
+      height:4px;
+      background:linear-gradient(90deg,
+        rgba(48,34,23,0) 0%,
+        rgba(48,34,23,.22) 10%,
+        rgba(48,34,23,.22) 90%,
+        rgba(48,34,23,0) 100%);
+      filter:blur(3px);
+    }
+    .print-options::after {
+      bottom:-5px;
+      height:7px;
+      background:linear-gradient(90deg,
+        rgba(48,34,23,0) 0%,
+        rgba(48,34,23,.18) 10%,
+        rgba(48,34,23,.18) 90%,
+        rgba(48,34,23,0) 100%);
+      filter:blur(5px);
     }
     .print-options-heading {
-      max-width:1180px;
-      margin:28px auto 2px;
+      position:relative;
+      width:min(1320px, calc(100% - 80px));
+      max-width:none;
+      margin:22px auto 11px;
       padding:0 18px;
+      box-sizing:border-box;
       background:#fff;
-      color:#a79888;
+      color:#8f7f70;
       font-size:.68rem;
       letter-spacing:.08em;
       text-transform:uppercase;
       line-height:1;
+      transform:translateY(-5px);
     }
     .catalog-anchor-rule {
       width:min(1400px, calc(100% - 68px));
@@ -874,11 +949,19 @@ const pageMeta = {
       border:0;
       border-top:1px solid #dfd0bd;
     }
+    .collection-browser-anchor {
+      display:block;
+      height:0;
+      scroll-margin-top:92px;
+    }
     .series-widget {
       position:relative;
+      z-index:1;
       display:grid;
       grid-template-columns:repeat(4,minmax(0,1fr));
       gap:6px;
+      max-width:1180px;
+      margin:0 auto;
     }
     .series-tile {
       position:relative;
@@ -961,42 +1044,68 @@ const pageMeta = {
     }
     .series-tile:nth-child(1) .series-detail { left:-6px; transform:translate(0, 10px); }
     .series-tile:nth-child(4) .series-detail { left:auto; right:6px; transform:translate(0, 10px); }
-    .series-tile:hover .series-detail,
-    .series-tile:focus-within .series-detail,
+    .series-tile.is-hover-ready .series-detail,
     .series-tile.is-active .series-detail {
       opacity:1;
       visibility:visible;
       pointer-events:auto;
       transform:translate(-50%, 2px);
     }
-    .series-tile:nth-child(1):hover .series-detail,
-    .series-tile:nth-child(1):focus-within .series-detail,
+    .series-tile:nth-child(1).is-hover-ready .series-detail,
     .series-tile:nth-child(1).is-active .series-detail,
-    .series-tile:nth-child(4):hover .series-detail,
-    .series-tile:nth-child(4):focus-within .series-detail,
+    .series-tile:nth-child(4).is-hover-ready .series-detail,
     .series-tile:nth-child(4).is-active .series-detail {
       transform:translate(2px, 1px);
     }
     .series-detail p {
       margin:0;
     }
-    .series-detail ul {
+    .series-detail-copy {
+      display:grid;
+      gap:8px;
+    }
+    .series-detail-title {
+      display:flex;
+      align-items:flex-start;
+      gap:8px;
+      color:#2f241b;
+    }
+    .series-detail-symbol {
+      color:#5d8fbc;
+      font-size:.95rem;
+      line-height:1.2;
+      flex:0 0 auto;
+    }
+    .series-detail-footer {
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:16px;
+      margin-top:10px;
+    }
+    .series-detail-sizes {
       margin:10px 0 0;
       padding:0;
       list-style:none;
       color:#2f241b;
       font-size:.8rem;
+      font-weight:700;
+      flex:1 1 auto;
+      min-width:0;
     }
-    .series-detail li + li {
+    .series-detail-sizes li + li {
       margin-top:4px;
     }
-    .series-detail a {
-      display:inline-block;
-      margin-top:11px;
+    .series-detail-link {
+      display:inline-flex;
+      align-items:center;
+      justify-content:flex-end;
+      white-space:nowrap;
       color:#85644b;
       font-size:.78rem;
       text-decoration:none;
       border-bottom:1px solid rgba(133,100,75,.45);
+      flex:0 0 auto;
     }
     .catalog-tools {
       width:min(1400px, calc(100% - 68px));
@@ -1004,9 +1113,9 @@ const pageMeta = {
       padding:6px 22px;
       box-sizing:border-box;
       display:grid;
-      grid-template-columns:auto 1fr auto 1fr auto;
+      grid-template-columns:auto auto auto 1fr auto 1fr auto;
       align-items:center;
-      column-gap:24px;
+      column-gap:18px;
       row-gap:6px;
       background:#f5f1ec;
       border:1px solid #cec9c4;
@@ -1042,11 +1151,43 @@ const pageMeta = {
       text-decoration:none;
       border-bottom:1px solid rgba(133,100,75,.45);
     }
+    .series-sort {
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:5px;
+      min-width:0;
+      white-space:nowrap;
+    }
+    .series-sort-label {
+      color:#4b3a2d;
+      font-size:.86rem;
+    }
+    .series-sort-button {
+      min-width:25px;
+      height:24px;
+      padding:0 5px;
+      border:1px solid transparent;
+      background:transparent;
+      color:#6f9aab;
+      font-family:'Glegoo',serif;
+      font-size:.82rem;
+      line-height:1;
+      cursor:pointer;
+    }
+    .series-sort-button:hover,
+    .series-sort-button:focus-visible,
+    .series-sort-button.is-active {
+      border-color:#9db9c5;
+      background:#fffdf9;
+      color:#356f88;
+      outline:none;
+    }
     .jump-form {
       display:flex;
       align-items:center;
-      flex-wrap:wrap;
-      gap:10px;
+      flex-wrap:nowrap;
+      gap:8px;
       margin:0;
       justify-self:center;
       min-width:0;
@@ -1059,7 +1200,7 @@ const pageMeta = {
       min-width:0;
     }
     .jump-form input {
-      width:88px;
+      width:58px;
       max-width:100%;
       padding:3px 7px;
       border:1px solid #cdbba6;
@@ -1093,6 +1234,7 @@ const pageMeta = {
 
     .catalog-range-marker {
       grid-column:1 / -1;
+      width:100%;
       display:flex;
       align-items:center;
       justify-content:space-between;
@@ -1108,11 +1250,96 @@ const pageMeta = {
       text-decoration:none;
       border-bottom:1px solid rgba(133,100,75,.45);
     }
+    :global(.catalog-range-marker) {
+      grid-column:1 / -1;
+      width:100%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      margin:12px 0 2px;
+      padding:9px 2px;
+      border-top:1px solid #dfd0bd;
+      color:#6b594b;
+      font-size:.82rem;
+    }
+    :global(.catalog-range-marker a) {
+      color:#85644b;
+      text-decoration:none;
+      border-bottom:1px solid rgba(133,100,75,.45);
+    }
+    .catalog-range-marker.series-sort-divider {
+      margin:18px 0 12px;
+      padding:12px 0 13px;
+      border-top:1px solid #9db9c5;
+      border-bottom:1px solid #d7cabc;
+      color:#4f6f7a;
+    }
+    .series-sort-divider-copy {
+      display:grid;
+      gap:2px;
+    }
+    .series-sort-divider strong {
+      display:block;
+      color:#2f5261;
+      font-size:.88rem;
+      margin-bottom:2px;
+    }
+    .series-sort-divider small {
+      display:block;
+      color:#6b594b;
+      font-size:.78rem;
+      line-height:1.35;
+    }
+    .series-sort-divider a {
+      font-weight:700;
+      text-decoration:underline;
+      text-underline-offset:2px;
+    }
+    :global(.catalog-range-marker.series-sort-divider) {
+      grid-column:1 / -1;
+      width:100%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      margin:18px 0 12px;
+      padding:12px 0 13px;
+      border-top:1px solid #9db9c5;
+      border-bottom:1px solid #d7cabc;
+      color:#4f6f7a;
+      font-size:.84rem;
+    }
+    :global(.series-sort-divider-copy) {
+      display:grid;
+      gap:3px;
+    }
+    :global(.series-sort-divider-copy strong) {
+      display:block;
+      color:#2f5261;
+      font-size:.88rem;
+      margin:0;
+    }
+    :global(.series-sort-divider-copy small) {
+      display:block;
+      color:#6b594b;
+      font-size:.78rem;
+      line-height:1.35;
+    }
+    :global(.series-sort-divider a) {
+      color:#85644b;
+      font-weight:700;
+      text-decoration:underline;
+      text-underline-offset:2px;
+      white-space:nowrap;
+    }
 
     .ssr-card {
       --card-overlap:82px;
       position:relative;
       isolation:isolate;
+      content-visibility:auto;
+      contain-intrinsic-size:520px;
       border:1px solid #b46a5f;
       border-radius:6px;
       background:#fffdf9;
@@ -1136,6 +1363,15 @@ const pageMeta = {
     .ssr-card:focus-within {
       border-color:#a44a3f;
       box-shadow:0 0 0 2px rgba(219, 72, 53, 0.5), 0 10px 24px rgba(48,34,23,.41);
+    }
+    .ssr-card.is-series-sort-match {
+      border-color:#6f9aab;
+      box-shadow:0 0 0 3px rgba(111,154,171,.68), 0 8px 22px rgba(48,34,23,.08);
+    }
+    .ssr-card.is-series-sort-match:hover,
+    .ssr-card.is-series-sort-match:focus-within {
+      border-color:#4f879e;
+      box-shadow:0 0 0 3px rgba(111,154,171,.88), 0 10px 24px rgba(48,34,23,.32);
     }
 
     .ssr-card-link {
@@ -1192,9 +1428,17 @@ const pageMeta = {
       font-size:.72rem;
       color:#8a7562;
       display:block;
-      margin-bottom:6px;
       letter-spacing:.04em;
       text-transform:uppercase;
+      white-space:nowrap;
+    }
+    .card-meta-row {
+      position:static;
+      display:block;
+      margin-bottom:6px;
+      padding-right:58px;
+      min-width:0;
+      transition:opacity .24s ease, transform .24s ease, max-height .24s ease, margin .24s ease;
     }
 
     .ssr-card-content h3 {
@@ -1208,6 +1452,33 @@ const pageMeta = {
       -webkit-line-clamp:3;
       overflow:hidden;
       transition:opacity .24s ease, transform .24s ease, max-height .24s ease, margin .24s ease;
+    }
+    .card-series-strip {
+      display:flex;
+      position:absolute;
+      top:14px;
+      right:15px;
+      align-items:center;
+      justify-content:flex-end;
+      gap:2px;
+      color:#6f9aab;
+      font-size:.76rem;
+      line-height:1;
+      opacity:.78;
+      white-space:nowrap;
+      flex-wrap:nowrap;
+      flex:0 0 auto;
+    }
+    .card-series-icon {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-width:11px;
+    }
+    .card-series-separator {
+      color:#cdbba6;
+      font-size:.56rem;
+      opacity:.9;
     }
     .print-cue {
       margin:0 0 10px;
@@ -1245,6 +1516,8 @@ const pageMeta = {
     }
     .ssr-card:hover .card-number,
     .ssr-card:focus-within .card-number,
+    .ssr-card:hover .card-meta-row,
+    .ssr-card:focus-within .card-meta-row,
     .ssr-card:hover .ssr-card-content h3,
     .ssr-card:focus-within .ssr-card-content h3,
     .ssr-card:hover .print-cue,
@@ -1423,7 +1696,7 @@ const pageMeta = {
         max-width:100%;
         margin:14px 0 18px;
         padding:8px 12px;
-        grid-template-columns:minmax(0, 1fr) auto;
+        grid-template-columns:1fr;
         column-gap:12px;
         row-gap:6px;
         justify-items:center;
@@ -1443,8 +1716,8 @@ const pageMeta = {
         white-space:nowrap;
       }
       .catalog-tools-count {
-        grid-column:2;
-        grid-row:2;
+        grid-column:1;
+        grid-row:4;
         font-size:.8rem;
         white-space:nowrap;
         justify-self:center;
@@ -1456,12 +1729,16 @@ const pageMeta = {
         width:auto;
         max-width:100%;
         grid-column:1;
-        grid-row:2;
+        grid-row:3;
         justify-self:center;
         display:flex;
         align-items:center;
         flex-wrap:nowrap;
         gap:6px;
+      }
+      .series-sort {
+        grid-column:1;
+        grid-row:2;
       }
       .jump-form label,
       .jump-form input,
@@ -1533,8 +1810,12 @@ const pageMeta = {
         display:none;
         box-shadow:0 10px 22px rgba(48,34,23,.1);
       }
+      .series-detail-footer {
+        align-items:flex-start;
+        gap:10px;
+      }
       .series-tile.is-active .series-detail,
-      .series-tile:focus-within .series-detail {
+      .series-tile.is-hover-ready .series-detail {
         display:block;
         transform:none;
       }
@@ -1548,7 +1829,7 @@ const pageMeta = {
         flex-direction:column;
         min-height:auto;
         height:auto;
-        margin-top:-64px;
+        margin-top:0;
         transform:none;
         background:#fffdf9;
         border-top:1px solid #e6d9ca;
@@ -1559,6 +1840,51 @@ const pageMeta = {
       .ssr-card:hover .ssr-card-content,
       .ssr-card:focus-within .ssr-card-content {
         transform:none;
+      }
+      .ssr-card-link {
+        pointer-events:none;
+      }
+      .ssr-card-content {
+        pointer-events:auto;
+      }
+      .ssr-card:hover .card-number,
+      .ssr-card:focus-within .card-number,
+      .ssr-card:hover .card-meta-row,
+      .ssr-card:focus-within .card-meta-row,
+      .ssr-card:hover .ssr-card-content h3,
+      .ssr-card:focus-within .ssr-card-content h3,
+      .ssr-card:hover .print-cue,
+      .ssr-card:focus-within .print-cue,
+      .ssr-card:hover .story-excerpt,
+      .ssr-card:focus-within .story-excerpt {
+        opacity:1;
+        transform:none;
+        max-height:none;
+        overflow:visible;
+        pointer-events:auto;
+      }
+      .ssr-card:hover .card-meta-row,
+      .ssr-card:focus-within .card-meta-row {
+        margin-bottom:6px;
+      }
+      .ssr-card:hover .ssr-card-content h3,
+      .ssr-card:focus-within .ssr-card-content h3 {
+        margin:0 0 8px;
+      }
+      .ssr-card:hover .story-excerpt,
+      .ssr-card:focus-within .story-excerpt {
+        margin:0 0 14px;
+      }
+      .ssr-card:has(.collector-notes-trigger:hover):not(.is-notes-open) .collector-note-overlay,
+      .ssr-card:has(.collector-notes-trigger:focus-visible):not(.is-notes-open) .collector-note-overlay {
+        opacity:0;
+        visibility:hidden;
+        pointer-events:none;
+        transform:translateY(4px);
+      }
+      .ssr-card:has(.collector-notes-trigger:hover):not(.is-notes-open) .ssr-card-image,
+      .ssr-card:has(.collector-notes-trigger:focus-visible):not(.is-notes-open) .ssr-card-image {
+        filter:none;
       }
     }
   </style>
@@ -1579,7 +1905,17 @@ const pageMeta = {
       };
 
       setDockTitle(fallbackTitle, '');
-      current?.scrollIntoView({ behavior: 'auto', inline: 'center', block: 'nearest' });
+      const centerCurrentCard = () => {
+        if (!current) return;
+        const track = current.closest('.dock-track');
+        if (!track) return;
+        const targetLeft = current.offsetLeft - (track.clientWidth - current.clientWidth) / 2;
+        const maxLeft = Math.max(0, track.scrollWidth - track.clientWidth);
+        track.scrollLeft = Math.max(0, Math.min(targetLeft, maxLeft));
+      };
+      requestAnimationFrame(() => requestAnimationFrame(centerCurrentCard));
+      window.addEventListener('load', centerCurrentCard, { once: true });
+      window.addEventListener('resize', centerCurrentCard);
 
       dockCards.forEach((card) => {
         if (card.getAttribute('data-current') === 'true') return;
@@ -1601,6 +1937,118 @@ const pageMeta = {
         if (!Number.isFinite(rawValue) || rawValue < 1) return;
         const target = document.querySelector(`[data-artwork-number="${Math.floor(rawValue)}"]`);
         target?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    })();
+
+    (() => {
+      const grid = document.getElementById('collection-grid');
+      const sortButtons = Array.from(document.querySelectorAll('[data-series-sort]'));
+      const countNode = document.querySelector('[data-catalog-count]');
+      if (!grid || sortButtons.length === 0) return;
+
+      const originalNodes = Array.from(grid.children);
+      const cards = originalNodes.filter((node) => node.classList?.contains('ssr-card'));
+      const totalCount = cards.length;
+      const seriesMeta = {
+        foundation: { label: 'Foundation', symbol: '★' },
+        chronicle: { label: 'Chronicle', symbol: '⌘' },
+        legend: { label: 'Legend', symbol: '❖' },
+      };
+
+      const clearSortState = () => {
+        cards.forEach((card) => card.classList.remove('is-series-sort-match'));
+      };
+
+      const setActiveButton = (activeKey) => {
+        sortButtons.forEach((button) => {
+          const isActive = button.getAttribute('data-series-sort') === activeKey;
+          button.classList.toggle('is-active', isActive);
+          button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+        });
+      };
+
+      const makeDivider = (seriesKey, matchCount) => {
+        const meta = seriesMeta[seriesKey] || { label: 'Selected', symbol: '' };
+        const divider = document.createElement('div');
+        divider.className = 'catalog-range-marker series-sort-divider';
+        divider.style.gridColumn = '1 / -1';
+        divider.setAttribute('data-series-sort-divider', 'true');
+        divider.innerHTML = `<span class="series-sort-divider-copy"><strong>End of ${meta.symbol} ${meta.label} Series Works</strong><small>Additional Series Works continue below in catalog order.</small></span><a href="#top">Back to top ↑</a>`;
+        divider.dataset.matchCount = String(matchCount);
+        return divider;
+      };
+
+      const makeRangeMarker = (start, end, total, label = 'Artworks') => {
+        const marker = document.createElement('div');
+        marker.className = 'catalog-range-marker';
+        marker.style.gridColumn = '1 / -1';
+        marker.innerHTML = `<span>${label} ${start}–${end} of ${total}</span><a href="#top">Back to top</a>`;
+        return marker;
+      };
+
+      const withRangeMarkers = (cardList, total, label = 'Artworks') => {
+        const nodes = [];
+        cardList.forEach((card, idx) => {
+          if (idx > 0 && idx % 50 === 0) {
+            const rangeStart = idx + 1;
+            const rangeEnd = Math.min(idx + 50, total);
+            nodes.push(makeRangeMarker(rangeStart, rangeEnd, total, label));
+          }
+          nodes.push(card);
+        });
+        return nodes;
+      };
+
+      const withCatalogRangeMarkers = (cardList) => {
+        const nodes = [];
+        let activeGroup = 0;
+        cardList.forEach((card) => {
+          const artworkNumber = Number(card.dataset.artworkNumber || 0);
+          const group = Math.floor(Math.max(artworkNumber - 1, 0) / 50);
+          if (group > activeGroup) {
+            const rangeStart = group * 50 + 1;
+            const rangeEnd = Math.min(rangeStart + 49, totalCount);
+            nodes.push(makeRangeMarker(rangeStart, rangeEnd, totalCount));
+            activeGroup = group;
+          }
+          nodes.push(card);
+        });
+        return nodes;
+      };
+
+      const applySort = (seriesKey) => {
+        clearSortState();
+        setActiveButton(seriesKey);
+
+        if (seriesKey === 'catalog') {
+          grid.replaceChildren(...originalNodes);
+          if (countNode) countNode.textContent = `${totalCount} works`;
+          window.dispatchEvent(new Event('resize'));
+          return;
+        }
+
+        const matchingCards = cards.filter((card) =>
+          String(card.dataset.series || '').split(/\s+/).includes(seriesKey)
+        );
+        const remainingCards = cards.filter((card) => !matchingCards.includes(card));
+
+        matchingCards.forEach((card) => card.classList.add('is-series-sort-match'));
+        const divider = makeDivider(seriesKey, matchingCards.length);
+        grid.replaceChildren(
+          ...withRangeMarkers(matchingCards, matchingCards.length, 'Series works'),
+          divider,
+          ...withCatalogRangeMarkers(remainingCards)
+        );
+
+        const meta = seriesMeta[seriesKey] || { label: 'Selected' };
+        if (countNode) countNode.textContent = `${matchingCards.length} ${meta.label} · ${totalCount} works`;
+        window.dispatchEvent(new Event('resize'));
+      };
+
+      sortButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          applySort(button.getAttribute('data-series-sort') || 'catalog');
+        });
       });
     })();
 
@@ -1658,11 +2106,13 @@ const pageMeta = {
         frame = requestAnimationFrame(applyRowCropping);
       };
 
-      cards.forEach((card) => {
-        const image = card.querySelector('.ssr-card-image');
-        if (!image || image.complete) return;
-        image.addEventListener('load', scheduleCropping, { once: true });
-      });
+      if (isDesktopHover()) {
+        cards.forEach((card) => {
+          const image = card.querySelector('.ssr-card-image');
+          if (!image || image.complete) return;
+          image.addEventListener('load', scheduleCropping, { once: true });
+        });
+      }
 
       window.addEventListener('resize', scheduleCropping);
       window.addEventListener('load', scheduleCropping, { once: true });
@@ -1672,10 +2122,24 @@ const pageMeta = {
     (() => {
       const tiles = Array.from(document.querySelectorAll('[data-series-tile]'));
       if (tiles.length === 0) return;
+      const hoverDelay = 420;
+      const hoverTimers = new WeakMap();
+      const supportsDelayedHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+      const clearHoverTimer = (tile) => {
+        const timer = hoverTimers.get(tile);
+        if (timer) {
+          window.clearTimeout(timer);
+          hoverTimers.delete(tile);
+        }
+      };
 
       const closeTiles = (except = null) => {
         tiles.forEach((tile) => {
-          if (tile !== except) tile.classList.remove('is-active');
+          if (tile !== except) {
+            clearHoverTimer(tile);
+            tile.classList.remove('is-active', 'is-hover-ready');
+          }
         });
       };
 
@@ -1683,13 +2147,29 @@ const pageMeta = {
         const trigger = tile.querySelector('.series-trigger');
         trigger?.addEventListener('click', (event) => {
           event.stopPropagation();
+          clearHoverTimer(tile);
           const willOpen = !tile.classList.contains('is-active');
           closeTiles(tile);
+          tile.classList.remove('is-hover-ready');
           tile.classList.toggle('is-active', willOpen);
         });
-        tile.addEventListener('mouseleave', () => tile.classList.remove('is-active'));
+        tile.addEventListener('pointerenter', () => {
+          if (!supportsDelayedHover) return;
+          clearHoverTimer(tile);
+          hoverTimers.set(tile, window.setTimeout(() => {
+            closeTiles(tile);
+            tile.classList.add('is-hover-ready');
+          }, hoverDelay));
+        });
+        tile.addEventListener('pointerleave', () => {
+          clearHoverTimer(tile);
+          tile.classList.remove('is-hover-ready');
+        });
         tile.addEventListener('focusout', (event) => {
-          if (!tile.contains(event.relatedTarget)) tile.classList.remove('is-active');
+          if (!tile.contains(event.relatedTarget)) {
+            clearHoverTimer(tile);
+            tile.classList.remove('is-active', 'is-hover-ready');
+          }
         });
       });
 

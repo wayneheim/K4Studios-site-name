@@ -12,6 +12,7 @@
     "build:local:fast": "node scripts/build-local-fast.mjs",
     "sanitize:public-output": "node scripts/sanitize-public-output.cjs",
     "audit:canonical-host": "node scripts/audit-canonical-host.mjs",
+    "audit:all-schema": "node scripts/audit-all-page-schema.mjs",
     "build:astro:fast": "node scripts/build-astro-fast.mjs",
     "deploy:prebuilt": "netlify deploy --prod --dir=dist --site=0849dde2-1b6e-4016-b0f4-1d609f1b8283",
     "release:prebuilt": "npm run build && npm run deploy:prebuilt && npm run submit:indexnow",

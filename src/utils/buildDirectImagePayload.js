@@ -6,6 +6,10 @@ function isNavigableImage(img) {
   return Boolean(img?.id) && visibility !== "ghost" && visibility !== "hidden" && visibility !== "hide";
 }
 
+function sortByGalleryOrder(images) {
+  return [...images].sort((a, b) => (a?.sortOrder ?? 0) - (b?.sortOrder ?? 0));
+}
+
 function toDirectImage(entry, galleryPath) {
   if (!entry) return null;
 
@@ -35,7 +39,7 @@ function toDirectImage(entry, galleryPath) {
 }
 
 export function buildDirectImagePayload({ allImages, initialImageId, galleryPath, titleBase }) {
-  const navigableImages = Array.isArray(allImages) ? allImages.filter(isNavigableImage) : [];
+  const navigableImages = Array.isArray(allImages) ? sortByGalleryOrder(allImages.filter(isNavigableImage)) : [];
   const currentIndex = navigableImages.findIndex((img) => img.id === initialImageId);
   const currentImage = currentIndex >= 0 ? navigableImages[currentIndex] : null;
 
