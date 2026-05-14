@@ -14,6 +14,17 @@ import {
 import { resolveImageCommerce } from "@/data/commerceResolver.js";
 
 type BreadcrumbItem = { name: string; href: string };
+type GridSection = {
+  title: string;
+  slug?: string;
+  description?: string;
+  galleryPath: string;
+  allHref: string;
+  ctaLabel?: string;
+  ctaThumb?: string;
+  items: any[];
+  limit?: number;
+};
 
 const {
   rawGalleryData,
@@ -29,6 +40,9 @@ const {
   archiveContext = {},
   identity = {},
   copy = {},
+  faqItems = [],
+  gridSections = [],
+  dockVariant = "",
 } = Astro.props as {
   rawGalleryData: any[];
   entranceData?: any;
@@ -51,6 +65,9 @@ const {
     gatewayBrandLabel?: string;
   };
   copy?: Record<string, string>;
+  faqItems?: Array<{ q: string; a: string[] }>;
+  gridSections?: GridSection[];
+  dockVariant?: string;
 };
 
 // âœ… Filter out ghosts and hidden (archived) images
@@ -69,6 +86,12 @@ const humanizeSegment = (segment = "") =>
   decodeURIComponent(String(segment || ""))
     .replace(/-/g, " ")
     .trim();
+const slugify = (value = "") =>
+  String(value || "")
+    .toLowerCase()
+    .replace(/&/g, "and")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
 
 // âœ… Clean URL paths
 const siteOrigin = "https://www.k4studios.com";
@@ -123,6 +146,10 @@ const collectionIntroParagraphs = collectionIntro
 const gatewayCollectionName = formatCopy(copy.gatewayCollectionName || collectionName);
 const gatewayIntroCopy = formatCopy(copy.gatewayIntroCopy || `${imageCount} painterly ${variantName.toLowerCase()} ${collectionName.toLowerCase()} fine art photographs by Wayne Heim, available as archival fine art prints from ${getFormattedLowestStandardPrintPrice()}. Four edition tiers - open-edition studies to ultra-limited signed collector works - on fine art paper and Baltic Birch wood panels.`);
 const gatewaySupportingCopy = formatCopy(copy.gatewaySupportingCopy || `Every image below is a complete story in a single frame. Click any work to read the narrative, explore collector notes, and view print details.`);
+const gatewaySupportingParagraphs = gatewaySupportingCopy
+  .split(/\n{2,}/)
+  .map((paragraph) => paragraph.trim())
+  .filter(Boolean);
 const standardPrintSeries = getStandardPrintSeries() as Array<{
   name: string;
   subtitle: string;
@@ -171,11 +198,14 @@ const getProxySrc = (id: string, size: string = 'l') => {
   return getSemanticImageUrl(image, { galleryPath: contentBasePath }, size);
 };
 
-const getCardSeries = (image: any) => {
+const getSectionProxySrc = (image: any, galleryPath: string, size: string = 'l') =>
+  getSemanticImageUrl(image, { galleryPath }, size);
+
+const getCardSeries = (image: any, galleryPath = contentBasePath) => {
   const commerce = resolveImageCommerce({
     image,
-    galleryPath: contentBasePath,
-    pageUrl: `${siteOrigin}${contentBasePath}/${image?.id || ""}`,
+    galleryPath,
+    pageUrl: `${siteOrigin}${galleryPath}/${image?.id || ""}`,
   });
   return commerce?.tiers || [];
 };
@@ -216,11 +246,14 @@ const socialImageUrl = toAbsoluteK4Url(socialImage);
 const socialImageAlt = `${collectionName} Fine Art Prints by Wayne Heim`;
 const lowestStandardPrintPrice = getLowestStandardPrintPrice();
 const highestStandardPrintPrice = getHighestStandardPrintPrice();
+const aggregateOfferCount = copy.aggregateOfferCount || imageCount;
+const aggregateOfferLowPrice = copy.aggregateOfferLowPrice || lowestStandardPrintPrice;
+const aggregateOfferHighPrice = copy.aggregateOfferHighPrice || highestStandardPrintPrice;
 const aggregateOffer = {
   ...getAggregateOfferForCollection(imageCount),
-  lowPrice: lowestStandardPrintPrice,
-  highPrice: highestStandardPrintPrice,
-  offerCount: imageCount,
+  lowPrice: aggregateOfferLowPrice,
+  highPrice: aggregateOfferHighPrice,
+  offerCount: aggregateOfferCount,
   seller: { "@id": "https://www.k4studios.com/#organization" },
 };
 
@@ -281,7 +314,7 @@ const breadcrumbJsonItems = [
       "name": item.name,
     },
   })),
-  { "@type": "ListItem", "position": (breadcrumbStructuredItems || []).length + 2, "item": { "@id": canonicalUrl, "name": "Collection" } },
+  { "@type": "ListItem", "position": (breadcrumbStructuredItems || []).length + 2, "item": { "@id": canonicalUrl, "name": copy.breadcrumbCurrentName || collectionName } },
 ];
 
 const structuredDataJson = JSON.stringify({
@@ -353,6 +386,23 @@ const compactBreadcrumbHtml = breadcrumbHtml
   .replace(/Facing History/g, "FH")
   .replace(/>By (Location|Theme)</g, ">$1<")
   .replace(/\|\s*(?:Collection|Series)\s*$/, "");
+
+const faqSplitIndex = Math.ceil(faqItems.length / 2);
+const faqLeft = faqItems.slice(0, faqSplitIndex);
+const faqRight = faqItems.slice(faqSplitIndex);
+const normalizedGridSections = gridSections
+  .map((section) => ({
+    ...section,
+    slug: section.slug || slugify(section.title),
+    items: (section.items || []).filter((img: any) =>
+      img?.id &&
+      img.visibility !== "ghost" &&
+      img.visibility !== "hidden" &&
+      img.id !== "i-k4studios"
+    ),
+    limit: section.limit || 19,
+  }))
+  .filter((section) => section.items.length > 0);
 ---
 
 <BaseLayout title={seoTitle} description={seoDescription} meta={pageMeta} structuredDataJSON={structuredDataJson} disableAutoBreadcrumbs={true}>
@@ -383,12 +433,14 @@ const compactBreadcrumbHtml = breadcrumbHtml
         <p class="gateway-kicker">K4 STUDIOS FINE ART PRINT CATALOG</p>
         <h1 class="gateway-brand" id="gateway-heading">{gatewayBrandLabel}</h1>
         <p class="gateway-copy-text">{gatewayIntroCopy}</p>
-        <p class="gateway-copy-text">{gatewaySupportingCopy}</p>
+        {gatewaySupportingParagraphs.map((paragraph) => (
+          <p class="gateway-copy-text">{paragraph}</p>
+        ))}
       </div>
     </section>
 
     <!-- K4 Section Dock Prototype -->
-    <section class="collection-dock" aria-labelledby="collection-dock-heading">
+    <section class:list={["collection-dock", dockVariant === "wall-art" && "collection-dock--wall-art"]} aria-labelledby="collection-dock-heading">
       <div class="dock-heading">
         <div>
           <h2 id="collection-dock-heading"><span id="dock-active-prefix"></span><span id="dock-active-title">{currentDockTitle}</span></h2>
@@ -398,10 +450,15 @@ const compactBreadcrumbHtml = breadcrumbHtml
         <div class="dock-track" aria-label="K4 gallery all-page quick links">
           <span id="dock-start" class="dock-anchor" aria-hidden="true"></span>
           {sectionDockItems.map((item: any, idx: number) => {
+            if (item.separator) {
+              return <span class="dock-separator" role="separator" aria-label={item.label || "Related section divider"}></span>;
+            }
+
             const displayTitle = [item.title, item.subtitle].filter(Boolean).join(' ');
             const distance = Math.abs(idx - dockCenterIndex);
             const dockClass = [
               'dock-card',
+              item.dockRole ? `dock-card--${item.dockRole}` : '',
               item.current ? 'is-center is-current' : '',
               distance === 1 ? 'is-near' : '',
               distance >= 3 ? 'is-far' : '',
@@ -414,6 +471,7 @@ const compactBreadcrumbHtml = breadcrumbHtml
                 aria-current={item.current ? 'page' : undefined}
                 aria-label={item.current ? `Current collection: ${displayTitle}` : `Browse ${displayTitle}`}
                 data-dock-title={displayTitle}
+                data-dock-prefix={item.dockPrefix}
                 data-current={item.current ? 'true' : undefined}
               >
                 <div class="dock-tombstone">
@@ -441,7 +499,7 @@ const compactBreadcrumbHtml = breadcrumbHtml
         {collectionIntroParagraphs.map((paragraph, index) => (
           <>
             {index > 0 && <><br /><br /></>}
-            <span>{paragraph}</span>
+            <span set:html={paragraph}></span>
           </>
         ))}
       </p>
@@ -485,30 +543,32 @@ const compactBreadcrumbHtml = breadcrumbHtml
       </div>
     </section>
 
-    <!-- Catalog Tools -->
-    <section class="catalog-tools" aria-labelledby="catalog-tools-heading">
-      <h2 id="catalog-tools-heading" class="catalog-tools-title">{gatewayCollectionName} Collection</h2>
-      <span class="catalog-tools-divider" aria-hidden="true">|</span>
-      <div class="series-sort" aria-label="Sort collection by print series">
-        <span class="series-sort-label">Sorting:</span>
-        <button class="series-sort-button is-active" type="button" data-series-sort="catalog" aria-pressed="true" title="Catalog order / all works">#/&#10045;</button>
-        <button class="series-sort-button" type="button" data-series-sort="foundation" aria-pressed="false" title="Foundation first">&#9733;</button>
-        <button class="series-sort-button" type="button" data-series-sort="chronicle" aria-pressed="false" title="Chronicle first">&#8984;</button>
-        <button class="series-sort-button" type="button" data-series-sort="legend" aria-pressed="false" title="Legend first">&#10070;</button>
-      </div>
-      <span class="catalog-tools-divider" aria-hidden="true">|</span>
-      <form class="jump-form" data-jump-form>
-        <label for="artwork-number">Jump to image #</label>
-        <input id="artwork-number" name="artwork-number" type="number" min="1" max={imageCount} inputmode="numeric" />
-        <button type="submit">Go</button>
-      </form>
-      <span class="catalog-tools-divider" aria-hidden="true">|</span>
-      <p class="catalog-tools-count" data-catalog-count>{imageCount} works</p>
-    </section>
+    {normalizedGridSections.length === 0 && (
+      <>
+        <!-- Catalog Tools -->
+        <section class="catalog-tools" aria-labelledby="catalog-tools-heading">
+          <h2 id="catalog-tools-heading" class="catalog-tools-title">{gatewayCollectionName} Collection</h2>
+          <span class="catalog-tools-divider" aria-hidden="true">|</span>
+          <div class="series-sort" aria-label="Sort collection by print series">
+            <span class="series-sort-label">Sorting:</span>
+            <button class="series-sort-button is-active" type="button" data-series-sort="catalog" aria-pressed="true" title="Catalog order / all works">#/&#10045;</button>
+            <button class="series-sort-button" type="button" data-series-sort="foundation" aria-pressed="false" title="Foundation first">&#9733;</button>
+            <button class="series-sort-button" type="button" data-series-sort="chronicle" aria-pressed="false" title="Chronicle first">&#8984;</button>
+            <button class="series-sort-button" type="button" data-series-sort="legend" aria-pressed="false" title="Legend first">&#10070;</button>
+          </div>
+          <span class="catalog-tools-divider" aria-hidden="true">|</span>
+          <form class="jump-form" data-jump-form>
+            <label for="artwork-number">Jump to image #</label>
+            <input id="artwork-number" name="artwork-number" type="number" min="1" max={imageCount} inputmode="numeric" />
+            <button type="submit">Go</button>
+          </form>
+          <span class="catalog-tools-divider" aria-hidden="true">|</span>
+          <p class="catalog-tools-count" data-catalog-count>{imageCount} works</p>
+        </section>
 
-    <!-- Image Grid -->
-    <div class="ssr-grid" id="collection-grid">
-      {filteredGalleryData.map((item: any, idx: number) => {
+        <!-- Image Grid -->
+        <div class="ssr-grid" id="collection-grid">
+          {filteredGalleryData.map((item: any, idx: number) => {
         // Use smallest sufficient size for 250px grid cards via proxy
         const imageUrl = getProxySrc(item.id, 's');
         const srcsetParts = [
@@ -633,13 +693,227 @@ const compactBreadcrumbHtml = breadcrumbHtml
             </div>
           </>
         );
-      })}
-    </div>
+          })}
+        </div>
+      </>
+    )}
+
+    {normalizedGridSections.length > 0 && (
+      <div class="doorway-section-stack" id="collection-grid">
+        {normalizedGridSections.map((section, sectionIndex) => {
+          const visibleItems = section.items.slice(0, section.limit);
+          const sectionCount = section.items.length;
+
+          return (
+            <section class="doorway-gallery-section" id={`section-${section.slug}`} aria-labelledby={`doorway-section-heading-${sectionIndex + 1}`}>
+              <div class="doorway-section-heading">
+                <p class="doorway-section-kicker">Selected Western Wall Art - {sectionCount} in Series</p>
+                <h2 id={`doorway-section-heading-${sectionIndex + 1}`}>{section.title}</h2>
+                {section.description && <p>{section.description}</p>}
+              </div>
+
+              <div class="ssr-grid ssr-grid--doorway-section">
+                {visibleItems.map((item: any, idx: number) => {
+                  const imageUrl = getSectionProxySrc(item, section.galleryPath, 's');
+                  const srcsetParts = [
+                    `${getSectionProxySrc(item, section.galleryPath, 's')} 400w`,
+                    `${getSectionProxySrc(item, section.galleryPath, 'm')} 600w`,
+                    `${getSectionProxySrc(item, section.galleryPath, 'l')} 1024w`
+                  ].join(", ");
+                  const linkUrl = `${section.galleryPath}/${item.id}`;
+                  const collectorNotesHref = `${linkUrl}#collector-notes`;
+                  const title = cleanForDisplay(item.title);
+
+                  let altText: string;
+                  if (item.alt) {
+                    altText = cleanForDisplay(item.alt);
+                  } else if (item.description) {
+                    const firstSentence = item.description.split(/[.!?]/)[0];
+                    altText = cleanForDisplay(firstSentence.slice(0, 150));
+                  } else if (item.keywords?.length > 0) {
+                    const topKeywords = item.keywords.slice(0, 4).join(", ");
+                    altText = `Western wall art photograph: ${topKeywords}`;
+                  } else {
+                    altText = `Western wall art print: ${title} by Wayne Heim`;
+                  }
+
+                  const storyExcerpt = truncateStory(item.story || "");
+                  const collectorNoteRaw =
+                    item.notes ||
+                    item.collectorNotes ||
+                    item.collector_notes ||
+                    item.description ||
+                    item.story ||
+                    "";
+                  const collectorNoteTeaser = truncateWords(collectorNoteRaw, 30);
+                  const cardSeries = getCardSeries(item, section.galleryPath);
+                  const cardSeriesKeys = cardSeries.map((series: any) => series.key).join(' ');
+
+                  return (
+                    <div
+                      class="ssr-card"
+                      id={`${sectionIndex + 1}-${item.id}`}
+                      data-artwork-number={idx + 1}
+                      data-original-index={idx}
+                      data-series={cardSeriesKeys}
+                    >
+                      <a href={linkUrl} class="ssr-card-link">
+                        <img
+                          class="ssr-card-image"
+                          src={imageUrl}
+                          srcset={srcsetParts || undefined}
+                          sizes="(max-width: 520px) calc(100vw - 32px), (max-width: 768px) calc((100vw - 48px) / 2), 250px"
+                          alt={altText}
+                          loading="lazy"
+                          decoding="async"
+                          fetchpriority="low"
+                        />
+                        <div class="ssr-card-content">
+                          <div class="card-meta-row">
+                            <span class="card-number">Image {idx + 1} of {sectionCount}</span>
+                            {cardSeries.length > 0 && (
+                              <span class="card-series-strip" aria-label="Available print series">
+                                {cardSeries.map((series: any, seriesIdx: number) => (
+                                  <>
+                                    <span
+                                      class="card-series-icon"
+                                      title={`${series.label} Series Member`}
+                                      aria-label={`${series.label} Series Member`}
+                                    >
+                                      {series.icon}
+                                    </span>
+                                    {seriesIdx < cardSeries.length - 1 && <span class="card-series-separator" aria-hidden="true">|</span>}
+                                  </>
+                                ))}
+                              </span>
+                            )}
+                          </div>
+                          <h3>{title}</h3>
+                          <p class="print-cue sr-only">Fine art print available</p>
+                          {storyExcerpt && <p class="story-excerpt">{storyExcerpt}</p>}
+                          <span class="card-cta">Explore Story | Order Fine Art Print &rarr;</span>
+                        </div>
+                      </a>
+                      <button
+                        type="button"
+                        class="collector-notes-trigger"
+                        data-notes-trigger
+                        aria-label="View collector note preview"
+                      >
+                        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M2 6h4" />
+                          <path d="M2 10h4" />
+                          <path d="M2 14h4" />
+                          <path d="M2 18h4" />
+                          <rect width="16" height="20" x="4" y="2" rx="2" />
+                          <path d="M16 2v20" />
+                        </svg>
+                      </button>
+                      <div class="collector-note-overlay" data-notes-overlay>
+                        <p class="collector-note-kicker">Collector Note</p>
+                        <p class="collector-note-teaser">{collectorNoteTeaser || "Collector note preview available for this artwork."}</p>
+                        <a class="collector-note-link" href={collectorNotesHref}>View full collector notes &rarr;</a>
+                      </div>
+                    </div>
+                  );
+                })}
+
+                <a class="ssr-card doorway-collection-cta" href={section.allHref}>
+                  <span class="doorway-collection-cta__inner">
+                    {section.ctaThumb && (
+                      <span class="doorway-collection-cta__tombstone" aria-hidden="true">
+                        <img src={section.ctaThumb} alt="" loading="lazy" decoding="async" />
+                      </span>
+                    )}
+                    <span class="doorway-collection-cta__kicker">Full Collection</span>
+                    <strong>{section.ctaLabel || `See all ${section.title}`}</strong>
+                    <small>{sectionCount} works in this gallery</small>
+                  </span>
+                </a>
+              </div>
+            </section>
+          );
+        })}
+      </div>
+    )}
 
     <ArchiveContext 
       categoryUrl={archiveContext.categoryUrl || basePath} 
       categoryName={archiveContext.categoryName || collectionName} 
     />
+
+    {faqItems.length > 0 && (
+      <section class="faq-section pb-10" id="faq">
+        <div class="faq-shell">
+          <p class="faq-kicker">Collector Questions</p>
+          <h2 class="faq-title">{copy.faqTitle || "Western Wall Art FAQ"}</h2>
+
+          <div class="faq-columns">
+            <div class="faq-column faq-column--left">
+              <div class="faq-question-list" role="list">
+                {faqLeft.map((item: any, index: number) => (
+                  <button
+                    type="button"
+                    class="faq-question"
+                    data-faq-trigger
+                    data-faq-side="left"
+                    data-faq-target={`faq-left-${index}`}
+                    aria-expanded="false"
+                  >
+                    <span class="faq-question__text">{item.q}</span>
+                    <span class="faq-question__icon" aria-hidden="true">+</span>
+                  </button>
+                ))}
+              </div>
+
+              <div class="faq-answer-stack">
+                {faqLeft.map((item: any, index: number) => (
+                  <div id={`faq-left-${index}`} class="faq-answer" data-faq-panel data-faq-side="left" hidden>
+                    {item.a.map((paragraph: string) => <p set:html={paragraph} />)}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div class="faq-column faq-column--right">
+              <div class="faq-question-list" role="list">
+                {faqRight.map((item: any, index: number) => (
+                  <button
+                    type="button"
+                    class="faq-question"
+                    data-faq-trigger
+                    data-faq-side="right"
+                    data-faq-target={`faq-right-${index}`}
+                    aria-expanded="false"
+                  >
+                    <span class="faq-question__text">{item.q}</span>
+                    <span class="faq-question__icon" aria-hidden="true">+</span>
+                  </button>
+                ))}
+              </div>
+
+              <div class="faq-answer-stack">
+                {faqRight.map((item: any, index: number) => (
+                  <div id={`faq-right-${index}`} class="faq-answer" data-faq-panel data-faq-side="right" hidden>
+                    {item.a.map((paragraph: string) => <p set:html={paragraph} />)}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div class="faq-overlay faq-overlay--left" data-faq-overlay="left" hidden></div>
+            <div class="faq-overlay faq-overlay--right" data-faq-overlay="right" hidden></div>
+          </div>
+
+          <div class="faq-header-logo">
+            <a href="/" class="faq-header-logo__link" aria-label="Home">
+              <img src="/images/K4Logo-web.webp" alt="K4 Studios home" loading="lazy" decoding="async" />
+            </a>
+          </div>
+          <p class="faq-tagline">"History, lives, and hidden moments &mdash; experienced within a single frame."</p>
+        </div>
+      </section>
+    )}
 
     <Footer />
   </div>
@@ -906,6 +1180,15 @@ const compactBreadcrumbHtml = breadcrumbHtml
       flex:0 0 1px;
       height:1px;
     }
+    .dock-separator {
+      align-self:center;
+      flex:0 0 1px;
+      height:86px;
+      margin:0 11px 10px;
+      background:linear-gradient(180deg, rgba(181,157,133,0), rgba(138,103,72,.72) 22%, rgba(138,103,72,.72) 78%, rgba(181,157,133,0));
+      box-shadow:0 0 0 1px rgba(255,255,255,.55);
+      opacity:.9;
+    }
     .dock-card {
       flex:0 0 58px;
       color:inherit;
@@ -973,6 +1256,48 @@ const compactBreadcrumbHtml = breadcrumbHtml
       object-fit:cover;
       object-position:center 15%;
       background:#efe7dc;
+    }
+    .collection-dock--wall-art .dock-track {
+      justify-content:center;
+      min-height:116px;
+      overflow-x:visible;
+    }
+    .collection-dock--wall-art .dock-heading h2 {
+      transform:translateY(10px);
+    }
+    .collection-dock--wall-art .dock-card--core,
+    .collection-dock--wall-art .dock-card--core.is-near,
+    .collection-dock--wall-art .dock-card--core.is-center,
+    .collection-dock--wall-art .dock-card--core.is-far {
+      flex:0 0 78px;
+      margin-left:4px;
+      margin-right:4px;
+      transform:translateY(-3px) scale(1.04);
+      opacity:1;
+      filter:saturate(1.04);
+    }
+    .collection-dock--wall-art .dock-card--support,
+    .collection-dock--wall-art .dock-card--support.is-near,
+    .collection-dock--wall-art .dock-card--support.is-center,
+    .collection-dock--wall-art .dock-card--support.is-far {
+      flex:0 0 58px;
+      transform:translateY(8px) scale(.86);
+      opacity:.78;
+      filter:saturate(.88);
+    }
+    .collection-dock--wall-art .dock-card:hover,
+    .collection-dock--wall-art .dock-card:focus-visible {
+      transform:translateY(-7px) scale(1.06);
+    }
+    .collection-dock--wall-art .dock-card--support:hover,
+    .collection-dock--wall-art .dock-card--support:focus-visible {
+      transform:translateY(2px) scale(.96);
+      opacity:1;
+      filter:saturate(1);
+    }
+    .collection-dock--wall-art .dock-card.is-current .dock-tombstone {
+      border-color:#9b7451;
+      box-shadow:0 18px 38px rgba(48,34,23,.2);
     }
 
     .print-options {
@@ -1334,6 +1659,112 @@ const compactBreadcrumbHtml = breadcrumbHtml
       max-width:1400px;
       padding:0 34px;
       align-items:stretch;
+    }
+    .doorway-section-stack {
+      max-width:1440px;
+      margin:16px auto 44px;
+    }
+    .doorway-gallery-section {
+      margin:0 auto 54px;
+      scroll-margin-top:92px;
+    }
+    .doorway-section-heading {
+      width:min(1400px, calc(100% - 68px));
+      margin:0 auto 24px;
+      padding:24px 0 22px;
+      border-top:1px solid #dccfbe;
+      border-bottom:1px solid #dccfbe;
+      text-align:left;
+      box-sizing:border-box;
+    }
+    .doorway-section-kicker {
+      margin:0 0 8px;
+      color:#7a6047;
+      font-size:.72rem;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      font-weight:700;
+    }
+    .doorway-section-heading h2 {
+      margin:0;
+      color:#231a13;
+      font-size:clamp(1.65rem, 2.8vw, 2.35rem);
+      line-height:1.16;
+      font-weight:700;
+      text-wrap:balance;
+    }
+    .doorway-section-heading p:not(.doorway-section-kicker) {
+      max-width:none;
+      margin:12px 0 0;
+      color:#4f4034;
+      font-size:.96rem;
+      line-height:1.68;
+    }
+    .ssr-grid--doorway-section {
+      margin:0 auto;
+    }
+    .doorway-collection-cta {
+      min-height:390px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border:2px solid #b46a5f;
+      background:
+        linear-gradient(180deg, rgba(255,253,249,.97), rgba(245,241,236,.98));
+      text-decoration:none;
+      color:#2f241b;
+    }
+    .doorway-collection-cta:hover,
+    .doorway-collection-cta:focus-visible {
+      border-color:#9b7451;
+      box-shadow:0 0 0 2px rgba(155,116,81,.35), 0 10px 24px rgba(48,34,23,.22);
+      outline:none;
+    }
+    .doorway-collection-cta__inner {
+      display:grid;
+      gap:10px;
+      padding:28px;
+      text-align:center;
+      justify-items:center;
+    }
+    .doorway-collection-cta__tombstone {
+      position:relative;
+      width:86px;
+      aspect-ratio:3.5 / 4;
+      margin:0 auto 8px;
+      background:#fffdf9;
+      border:2px solid #bda27c;
+      border-radius:0 0 25% 25% / 0 0 20% 20%;
+      box-shadow:
+        inset 0 -1px 1px rgba(255,255,255,.6),
+        inset 0 1px 2px rgba(0,0,0,.08),
+        0 10px 22px rgba(48,34,23,.13);
+      overflow:hidden;
+      display:block;
+    }
+    .doorway-collection-cta__tombstone img {
+      display:block;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center 15%;
+      background:#efe7dc;
+    }
+    .doorway-collection-cta__kicker {
+      color:#7a6047;
+      font-size:.72rem;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+    .doorway-collection-cta strong {
+      color:#231a13;
+      font-size:1.3rem;
+      line-height:1.25;
+    }
+    .doorway-collection-cta small {
+      color:#6b594b;
+      font-size:.86rem;
+      line-height:1.4;
     }
 
     .catalog-range-marker {
@@ -1735,6 +2166,213 @@ const compactBreadcrumbHtml = breadcrumbHtml
       filter:saturate(.9) contrast(.96) brightness(.78);
     }
 
+    .faq-section {
+      max-width:1180px;
+      margin:0 auto;
+      padding:0 1rem 3.2rem;
+    }
+    .faq-shell {
+      background:rgba(255,255,255,.95);
+      border-radius:18px;
+      padding:1.25rem 1.2rem 2rem;
+    }
+    .faq-kicker {
+      margin:0 0 .45rem;
+      text-align:center;
+      font-size:.76rem;
+      font-weight:700;
+      letter-spacing:.09em;
+      text-transform:uppercase;
+      color:#5f3f27;
+    }
+    .faq-title {
+      margin:0 0 .95rem;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:.9rem;
+      width:min(1080px, calc(100vw - 5rem));
+      max-width:none;
+      position:relative;
+      left:50%;
+      transform:translateX(-50%);
+      font-size:1.5rem;
+      line-height:1.2;
+      color:#7c6250;
+      text-align:center;
+    }
+    .faq-title::before,
+    .faq-title::after {
+      content:"";
+      flex:1;
+      height:1px;
+      background:linear-gradient(90deg, rgba(121,98,78,.08), rgba(121,98,78,.35));
+    }
+    .faq-title::after {
+      background:linear-gradient(90deg, rgba(121,98,78,.35), rgba(121,98,78,.08));
+    }
+    .faq-columns {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:1.2rem;
+      position:relative;
+      min-height:21.5rem;
+    }
+    .faq-column {
+      min-width:0;
+      position:relative;
+      z-index:1;
+    }
+    .faq-column--right {
+      border-left:1px solid rgba(121,98,78,.15);
+      padding-left:1.5rem;
+    }
+    .faq-question-list {
+      display:flex;
+      flex-direction:column;
+      gap:1.12rem;
+    }
+    .faq-question {
+      width:100%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:.8rem;
+      border:1px solid rgba(121,98,78,.14);
+      background:rgba(255,255,255,.82);
+      border-radius:12px;
+      padding:.92rem .98rem;
+      text-align:left;
+      color:#31271f;
+      font-family:'Glegoo',serif;
+      font-size:.95rem;
+      line-height:1.4;
+      transition:border-color .2s ease, background .2s ease, transform .2s ease;
+      cursor:pointer;
+    }
+    .faq-question:hover {
+      border-color:rgba(121,98,78,.28);
+      background:rgba(252,248,242,.96);
+      transform:translateY(-1px);
+    }
+    .faq-question[aria-expanded="true"] {
+      border-color:rgba(123,74,40,.34);
+      background:rgba(255,255,255,.96);
+    }
+    .faq-question__text {
+      flex:1;
+    }
+    .faq-question__icon {
+      font-size:1.15rem;
+      line-height:1;
+      color:#7b4a28;
+      min-width:1rem;
+      text-align:center;
+    }
+    .faq-answer-stack {
+      display:none;
+    }
+    .faq-answer {
+      border:1px solid rgba(121,98,78,.14);
+      background:linear-gradient(180deg, rgba(255,255,255,.94), rgba(249,245,239,.96));
+      border-radius:14px;
+      padding:1rem 1rem .2rem;
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.5);
+    }
+    .faq-answer.is-open {
+      animation:faqFadeIn .2s ease;
+    }
+    .faq-answer p,
+    .faq-overlay__content p {
+      margin:0 0 .85rem;
+      font-size:.97rem;
+      line-height:1.68;
+      color:#433830;
+    }
+    .faq-answer a,
+    .faq-overlay__content a {
+      color:#8b5a2b;
+      text-decoration:underline;
+    }
+    .faq-overlay {
+      position:absolute;
+      top:0;
+      bottom:0;
+      z-index:3;
+      padding:20px;
+      border:2px solid rgba(180,120,68,.68);
+      background:linear-gradient(180deg, rgba(255,255,255,.97), rgba(249,245,239,.98));
+      border-radius:16px;
+      box-shadow:0 8px 18px rgba(52,38,26,.2);
+      overflow:auto;
+      box-sizing:border-box;
+    }
+    .faq-overlay--left {
+      left:0;
+      right:calc(50% + .75rem);
+    }
+    .faq-overlay--right {
+      left:calc(50% + .75rem);
+      right:0;
+    }
+    .faq-overlay.is-open {
+      animation:faqFadeIn .2s ease;
+    }
+    .faq-overlay__inner {
+      padding:1.1rem 1.35rem .55rem;
+    }
+    .faq-overlay__eyebrow {
+      margin:0 0 .45rem;
+      font-size:.72rem;
+      font-weight:700;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:#7b4a28;
+    }
+    .faq-overlay__title {
+      margin:0 0 .85rem;
+      font-size:1.16rem;
+      line-height:1.3;
+      color:#241b15;
+    }
+    .faq-header-logo {
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      margin-left:20px;
+      margin-top:12px;
+      margin-bottom:-20px;
+      user-select:none;
+    }
+    .faq-header-logo__link {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      text-decoration:none;
+    }
+    .faq-header-logo img {
+      width:75px;
+      height:75px;
+      border-radius:50%;
+      object-fit:cover;
+      opacity:.17;
+      filter:grayscale(10%);
+      display:block;
+    }
+    .faq-tagline {
+      margin:3.55rem auto 0;
+      text-align:center;
+      font-size:1.14rem;
+      line-height:1.55;
+      color:rgba(84,66,53,.6);
+      font-style:italic;
+      max-width:44rem;
+    }
+    @keyframes faqFadeIn {
+      from { opacity:0; transform:translateY(4px); }
+      to { opacity:1; transform:translateY(0); }
+    }
+
     @media (max-width: 980px) {
       .collection-gateway {
         grid-template-columns:1fr;
@@ -1778,6 +2416,15 @@ const compactBreadcrumbHtml = breadcrumbHtml
         min-height:0;
         padding:8px 24px 18px;
       }
+      .collection-dock--wall-art .dock-track {
+        justify-content:flex-start;
+        overflow-x:auto;
+        min-height:0;
+      }
+      .dock-separator {
+        height:72px;
+        margin:0 8px 8px;
+      }
       .dock-card,
       .dock-card.is-near,
       .dock-card.is-center,
@@ -1791,6 +2438,19 @@ const compactBreadcrumbHtml = breadcrumbHtml
       .dock-card:hover,
       .dock-card:focus-visible {
         transform:none;
+      }
+      .collection-dock--wall-art .dock-card--support,
+      .collection-dock--wall-art .dock-card--support.is-near,
+      .collection-dock--wall-art .dock-card--support.is-center,
+      .collection-dock--wall-art .dock-card--support.is-far,
+      .collection-dock--wall-art .dock-card--core,
+      .collection-dock--wall-art .dock-card--core.is-near,
+      .collection-dock--wall-art .dock-card--core.is-center,
+      .collection-dock--wall-art .dock-card--core.is-far {
+        flex:0 0 72px;
+        transform:none;
+        opacity:1;
+        filter:none;
       }
     }
 
@@ -1923,6 +2583,67 @@ const compactBreadcrumbHtml = breadcrumbHtml
         display:block;
         transform:none;
       }
+      .doorway-section-heading {
+        width:calc(100% - 32px);
+        padding:18px 18px 20px;
+        text-align:center;
+      }
+      .doorway-section-heading p:not(.doorway-section-kicker) {
+        margin-left:auto;
+        margin-right:auto;
+      }
+      .doorway-gallery-section {
+        margin-bottom:38px;
+      }
+      .doorway-collection-cta {
+        min-height:260px;
+      }
+      .faq-shell {
+        padding:1rem .85rem 1.2rem;
+      }
+      .faq-title {
+        width:auto;
+        left:auto;
+        transform:none;
+        font-size:1.28rem;
+        gap:.5rem;
+        word-break:break-word;
+      }
+      .faq-columns {
+        grid-template-columns:1fr;
+        position:static;
+        min-height:unset;
+        gap:.9rem;
+      }
+      .faq-column--right {
+        border-left:0;
+        border-top:1px solid rgba(121,98,78,.15);
+        padding-left:0;
+        padding-top:.95rem;
+      }
+      .faq-overlay {
+        position:static;
+        width:auto;
+        margin-top:.85rem;
+      }
+      .faq-mobile-answer {
+        margin-top:-.3rem;
+        margin-bottom:.25rem;
+      }
+      .faq-header-logo {
+        margin:.6rem auto 0;
+        margin-left:0;
+        margin-bottom:0;
+      }
+      .faq-header-logo img {
+        width:46px;
+        height:46px;
+      }
+      .faq-tagline {
+        font-size:.93rem;
+        line-height:1.48;
+        padding:0 .3rem;
+      }
       .ssr-grid { padding:0 16px; gap:16px; }
       .ssr-card-image {
         width:100%;
@@ -2023,8 +2744,8 @@ const compactBreadcrumbHtml = breadcrumbHtml
 
       dockCards.forEach((card) => {
         if (card.getAttribute('data-current') === 'true') return;
-        card.addEventListener('mouseenter', () => setDockTitle(card.getAttribute('data-dock-title'), 'Browse'));
-        card.addEventListener('focus', () => setDockTitle(card.getAttribute('data-dock-title'), 'Browse'));
+        card.addEventListener('mouseenter', () => setDockTitle(card.getAttribute('data-dock-title'), card.getAttribute('data-dock-prefix') ?? 'Browse'));
+        card.addEventListener('focus', () => setDockTitle(card.getAttribute('data-dock-title'), card.getAttribute('data-dock-prefix') ?? 'Browse'));
       });
 
       const dock = document.querySelector('.collection-dock');
@@ -2172,6 +2893,79 @@ const compactBreadcrumbHtml = breadcrumbHtml
         button.addEventListener('click', () => {
           if (button.disabled) return;
           applySort(button.getAttribute('data-series-sort') || 'catalog');
+        });
+      });
+    })();
+
+    (() => {
+      const faqTriggers = Array.from(document.querySelectorAll('[data-faq-trigger]'));
+      const faqPanels = Array.from(document.querySelectorAll('[data-faq-panel]'));
+      const faqOverlays = Array.from(document.querySelectorAll('[data-faq-overlay]'));
+      if (faqTriggers.length === 0) return;
+
+      const isMobileFaq = () => window.matchMedia('(max-width: 768px)').matches;
+
+      const closeAllFaqPanels = () => {
+        faqTriggers.forEach((trigger) => {
+          trigger.setAttribute('aria-expanded', 'false');
+          const icon = trigger.querySelector('.faq-question__icon');
+          if (icon) icon.textContent = '+';
+        });
+
+        faqPanels.forEach((panel) => {
+          panel.hidden = true;
+          panel.classList.remove('is-open');
+        });
+
+        faqOverlays.forEach((overlay) => {
+          overlay.hidden = true;
+          overlay.classList.remove('is-open');
+          overlay.innerHTML = '';
+        });
+
+        document.querySelectorAll('.faq-mobile-answer').forEach((node) => node.remove());
+      };
+
+      faqTriggers.forEach((trigger) => {
+        trigger.addEventListener('click', () => {
+          const targetId = trigger.getAttribute('data-faq-target');
+          const targetPanel = targetId ? document.getElementById(targetId) : null;
+          const triggerSide = trigger.getAttribute('data-faq-side');
+          const overlaySide = triggerSide === 'left' ? 'right' : 'left';
+          const overlay = document.querySelector(`[data-faq-overlay="${overlaySide}"]`);
+          const isOpen = trigger.getAttribute('aria-expanded') === 'true';
+          const mobileMode = isMobileFaq();
+
+          closeAllFaqPanels();
+          if (!targetPanel || isOpen) return;
+
+          trigger.setAttribute('aria-expanded', 'true');
+          const icon = trigger.querySelector('.faq-question__icon');
+          if (icon) icon.textContent = '-';
+          const questionText = trigger.querySelector('.faq-question__text')?.textContent || '';
+
+          if (mobileMode) {
+            const inlineAnswer = document.createElement('div');
+            inlineAnswer.className = 'faq-answer faq-mobile-answer is-open';
+            inlineAnswer.innerHTML = `
+              <p class="faq-overlay__eyebrow">Answer</p>
+              <h3 class="faq-overlay__title">${questionText}</h3>
+              <div class="faq-overlay__content">${targetPanel.innerHTML}</div>
+            `;
+            trigger.insertAdjacentElement('afterend', inlineAnswer);
+            return;
+          }
+
+          if (!overlay) return;
+          overlay.innerHTML = `
+            <div class="faq-overlay__inner">
+              <p class="faq-overlay__eyebrow">Answer</p>
+              <h3 class="faq-overlay__title">${questionText}</h3>
+              <div class="faq-overlay__content">${targetPanel.innerHTML}</div>
+            </div>
+          `;
+          overlay.hidden = false;
+          overlay.classList.add('is-open');
         });
       });
     })();

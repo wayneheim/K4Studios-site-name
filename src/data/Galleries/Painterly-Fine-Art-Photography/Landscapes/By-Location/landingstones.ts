@@ -36,6 +36,18 @@ function getRandomImage(galleryHref: string): string {
   return pick?.src || "/images/fallback.jpg";
 }
 
+function getImageByIndex(galleryHref: string, index: number): string {
+  const key = galleryHref.replace(/\/+$/, "").toLowerCase();
+  const images = galleryMap[key];
+
+  if (!images?.length) {
+    console.warn(`ðŸš« No match for: ${key}`);
+    return "/images/fallback.jpg";
+  }
+
+  return images[index]?.src || images[0]?.src || "/images/fallback.jpg";
+}
+
 // ───── Config: What to Show vs. Where to Look ─────
 const baseHref = "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location";
 
@@ -44,7 +56,7 @@ const regions = [
   { title: "Midwest", slug: "Midwest" },
   { title: "Northeast", slug: "Northeast" },
   { title: "The American South", slug: "South" }, // ← Example: custom display title
-  { title: "The American West", slug: "West" },   // ← Another custom title
+  { title: "The American West", slug: "West", thumbIndex: 2 },   // ← Another custom title
 ];
 
 // ───── Final Export ─────
@@ -54,14 +66,14 @@ export const landingWestern = {
   breadcrumb: `<a href="/Galleries/Painterly-Fine-Art-Photography" style="color: #444; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 10; transition: color 0.2s ease;" onmouseover="this.style.color='darkred'" onmouseout="this.style.color='#444'">Painterly Photography</a> 
     <a href="/Galleries/Painterly-Fine-Art-Photography/Landscapes" style="color: #444; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 10; transition: color 0.2s ease;" onmouseover="this.style.color='#006064'" onmouseout="this.style.color='#444'"> | Landscapes</a> | By Location`,
 
-tombstones: regions.map(({ title, slug }) => {
+tombstones: regions.map(({ title, slug, thumbIndex }) => {
   const dataPath = `${baseHref}/${slug}`;        // used for galleryMap lookup
   const href = `${dataPath}/Gallery`;            // actual link
 
   return {
     title,
     href,
-    thumb: getRandomImage(dataPath),
+    thumb: typeof thumbIndex === "number" ? getImageByIndex(dataPath, thumbIndex) : getRandomImage(dataPath),
   };
 }),
 };

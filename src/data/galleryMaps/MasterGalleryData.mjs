@@ -27063,7 +27063,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-M2fMMNQ/2/LfDfq66FQJ3x48J9MxXhjJPCvCTk5kDBzLWqR4LJ8/XL/_WHZ0315-Edit-2-Editf-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-M2fMMNQ/2/LfDfq66FQJ3x48J9MxXhjJPCvCTk5kDBzLWqR4LJ8/XL/_WHZ0315-Edit-2-Editf-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-M2fMMNQ/2/KbqZBRtD4L5mMZdK6BMNvdktVP8VzNNVwxVNSBN3m/S/_WHZ0315-Edit-2-Editf-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27076,7 +27076,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-62sCLX4/0/NPJHZwNzkVkhw9VVbB8m256KPXXrnzPNCjwjtrXC2/XL/_FWH7908-Edit-Edit-2-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-62sCLX4/0/NPJHZwNzkVkhw9VVbB8m256KPXXrnzPNCjwjtrXC2/XL/_FWH7908-Edit-Edit-2-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-62sCLX4/0/M4xsBDCb9DX96sz5GxPzpvQzSHPxgFm7ptDGLrRjb/S/_FWH7908-Edit-Edit-2-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27089,7 +27089,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Models-in-May/i-dxqkxdC/1/L3qthkKrtrb42C5kFTW7Kz5v8tDdBKbZfLLTpdRwN/XL/_WHZ0559-Edit-3-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Models-in-May/i-dxqkxdC/1/L3qthkKrtrb42C5kFTW7Kz5v8tDdBKbZfLLTpdRwN/XL/_WHZ0559-Edit-3-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Models-in-May/i-dxqkxdC/1/Lnk4Mhf7sc22sVHLDzLqw6WDdWJKKBdz7Kw3kxFRN/S/_WHZ0559-Edit-3-Edit-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27102,7 +27102,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Kj2CNt2/1/L75ncwMCKq8GMLm3TMdCfRPxDSR32Ht9gxV8XbSQ4/XL/_WHZ5744-Edit_pp-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Kj2CNt2/1/L75ncwMCKq8GMLm3TMdCfRPxDSR32Ht9gxV8XbSQ4/XL/_WHZ5744-Edit_pp-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Kj2CNt2/1/Kz6dsShBDQJwRCXLtkDSzxHZcDdkzzN5CVjhtxLjg/S/_WHZ5744-Edit_pp-Edit-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27115,7 +27115,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-dznf8sd/1/NcCdb2GV7GvSv2bgDcmDwS8ZSCLTQfQXSJZrFRGpW/XL/_WHZ5744-Edit_pp-Edit-2-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-dznf8sd/1/NcCdb2GV7GvSv2bgDcmDwS8ZSCLTQfQXSJZrFRGpW/XL/_WHZ5744-Edit_pp-Edit-2-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-dznf8sd/1/LjRs8362SPCzxXVzx3qL7NqfVGVb3JNZ2hWNtQpJk/S/_WHZ5744-Edit_pp-Edit-2-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27128,7 +27128,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-jZQtnjM/1/Lx84hNxFXsKSf3348MKDzhknPq7mxmWxGpm6BdKfQ/XL/_WHZ5744-Edit_pp-Edit-3-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-jZQtnjM/1/Lx84hNxFXsKSf3348MKDzhknPq7mxmWxGpm6BdKfQ/XL/_WHZ5744-Edit_pp-Edit-3-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-jZQtnjM/1/NMwQNPNXJL3BrkXVGPDNqGmh7D9cmG24SrrZ3tgKB/S/_WHZ5744-Edit_pp-Edit-3-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27141,7 +27141,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-dB6BX5J/0/KNgNck27g2CpfStLJdQzLWtf7GgxjK92Cd9DGPjmG/XL/_WHZ0434-Edit-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-dB6BX5J/0/KNgNck27g2CpfStLJdQzLWtf7GgxjK92Cd9DGPjmG/XL/_WHZ0434-Edit-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-dB6BX5J/0/MB2QLP2FRqdp8hkc55Rhb8mnvkhsxkHPvbkfS7B7d/S/_WHZ0434-Edit-Edit-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27154,7 +27154,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-LcWbnLw/0/LFR5DxGVkBn8Ff27XCjN9J3TRZw674HP9RG4zLjdp/L/_FWH7909-Enhanced-NR-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-LcWbnLw/0/Mf3tKcFksjTtXzMd86LTXZFB5KrthDJtjFs5xj5Mk/XL/_FWH7909-Enhanced-NR-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-LcWbnLw/0/MhZRdpjnR3dQZCTsWDZfBRQXvMjCwVN5xPMhj5gcr/S/_FWH7909-Enhanced-NR-Edit-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27167,7 +27167,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-bm2rnbd/1/KsdLtx29G4tQgwR4279fdVwsvzM9nxp69LsVLjnc8/L/_OLY2310-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-bm2rnbd/1/LD7rdd7LDrSwjwhgf2Cw2ggPbS3p5TdzTRbdhz2Jz/XL/_OLY2310-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-bm2rnbd/1/MqcxqCHnPZmDJFvHznqQPZ36c54Sd7q92ht87Xz7P/S/_OLY2310-Edit-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27180,7 +27180,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-hnKpM45/1/KNfXNSNcL5ZXs29SQNQxLGwTMmmZQmmm9fvVtgdSV/XL/_WHZ5747-Edit_pp-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-hnKpM45/1/KNfXNSNcL5ZXs29SQNQxLGwTMmmZQmmm9fvVtgdSV/XL/_WHZ5747-Edit_pp-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-hnKpM45/1/KT5tfzn6vGtJHFc6BKrcgKX3JW25HWbTzQ7sHqfdF/S/_WHZ5747-Edit_pp-Edit-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27193,7 +27193,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-w4HzscL/1/KTgkcJH7Xs84bZFHbcMLLKZ6633zcwSB3xJTkfpTp/XL/_WHZ5747-Edit_pp-Edit-3-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-w4HzscL/1/KTgkcJH7Xs84bZFHbcMLLKZ6633zcwSB3xJTkfpTp/XL/_WHZ5747-Edit_pp-Edit-3-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-w4HzscL/1/M8v53T2c3FpxsrdFx33QFPH8RPsPZv7RNXX68QmSn/S/_WHZ5747-Edit_pp-Edit-3-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27206,7 +27206,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-nJQjcFw/1/MKtjkJSLZDkt2KJdCWN4MMzZqnMsGTBggMdwDKMvq/XL/_WHZ5747-Edit_pp-Edit-3-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-nJQjcFw/1/MKtjkJSLZDkt2KJdCWN4MMzZqnMsGTBggMdwDKMvq/XL/_WHZ5747-Edit_pp-Edit-3-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-nJQjcFw/1/LZcHxxxmP7CTcpBGpLJZw6LxxfbcZhmtxtx3BPPwT/S/_WHZ5747-Edit_pp-Edit-3-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27219,7 +27219,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-zS4W8Xv/1/NCp4ftjFGhbrHvpstsRftrskfM2q3QCk3wqxXbrXM/XL/_WHZ5748-Edit_pp-Edit-3-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-zS4W8Xv/1/NCp4ftjFGhbrHvpstsRftrskfM2q3QCk3wqxXbrXM/XL/_WHZ5748-Edit_pp-Edit-3-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-zS4W8Xv/1/Mf6rKNfz3GPfKgdrnLqRGChvsrjs5b4cKKHZsNSsN/S/_WHZ5748-Edit_pp-Edit-3-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27232,7 +27232,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-3G3qWpd/1/LpsMrtjpWF5gbpGDWgQx3fmwGhW5d8kfwmn6JsbWw/XL/_WHZ5748-Edit_pp-Edit-4-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-3G3qWpd/1/LpsMrtjpWF5gbpGDWgQx3fmwGhW5d8kfwmn6JsbWw/XL/_WHZ5748-Edit_pp-Edit-4-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-3G3qWpd/1/LrR4MR54GnfjMDxqGjrqbkwtJgQpvtRQZDvz6tr4H/S/_WHZ5748-Edit_pp-Edit-4-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27245,7 +27245,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-6gKnQzb/1/M4mhJnBJTDWkKh4Q63gTsbRb2vfPgGJ4WRQ25w2Q3/XL/_WHZ5821-Edit-2-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-6gKnQzb/1/M4mhJnBJTDWkKh4Q63gTsbRb2vfPgGJ4WRQ25w2Q3/XL/_WHZ5821-Edit-2-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-6gKnQzb/1/KZNXRbd5TtmTCSrGdfGcxmbV54HRxPDswwQPFTTsH/S/_WHZ5821-Edit-2-Edit-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27258,7 +27258,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-KS6JFX5/1/KD7c6CfZB6dXSpcc8TNrcrPmrzx9dsc4sdLnRhph3/XL/_WHZ5758-Edit_pp-Edit-2-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-KS6JFX5/1/KD7c6CfZB6dXSpcc8TNrcrPmrzx9dsc4sdLnRhph3/XL/_WHZ5758-Edit_pp-Edit-2-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-KS6JFX5/1/LW2g945ZCM4SKgNtbncbVbdFGV2fbDLVKzZzh9RnJ/S/_WHZ5758-Edit_pp-Edit-2-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27271,7 +27271,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-qkB8tqZ/1/MqffLpCNH5d9smQTmDkFDBLKBHwmDjr5CqLRw88nk/XL/_WHZ5823-Edit-2-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-qkB8tqZ/1/MqffLpCNH5d9smQTmDkFDBLKBHwmDjr5CqLRw88nk/XL/_WHZ5823-Edit-2-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-qkB8tqZ/1/KFgRsGv3qxj3FpPVWx6FZ388fZ9RLXCwpxX5H2jGM/S/_WHZ5823-Edit-2-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27284,7 +27284,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-9DLMNFd/1/K7zM2mFBHvXc44nHjm9JFgmvZfkmFNSHhNfnrk33j/XL/_WHZ5796-Edit-3_pp-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-9DLMNFd/1/K7zM2mFBHvXc44nHjm9JFgmvZfkmFNSHhNfnrk33j/XL/_WHZ5796-Edit-3_pp-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-9DLMNFd/1/MLF9xrxZPgkcDD3Xpx6zL73jm3CPdG77Nfz3SFwbw/S/_WHZ5796-Edit-3_pp-Edit-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27297,7 +27297,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-6FXcvLm/1/LQ53HzVvzmBXRtXhDqVNKGfgrzB2K9LtB57gG2KQn/XL/_WHZ5796-Edit_pp-Edit-3-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-6FXcvLm/1/LQ53HzVvzmBXRtXhDqVNKGfgrzB2K9LtB57gG2KQn/XL/_WHZ5796-Edit_pp-Edit-3-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-6FXcvLm/1/M9VMw4d4BCt7463Q3Kp2Ft8c65jZMgL5FhkBM4Xgs/S/_WHZ5796-Edit_pp-Edit-3-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27310,7 +27310,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Emma/Travis/i-vxN3Fvd/0/MrXGMFbBZRt46dPBk8xnHkH7GbqL2J8zncnNDkvGv/XL/_WHZ6183-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Emma/Travis/i-vxN3Fvd/0/MrXGMFbBZRt46dPBk8xnHkH7GbqL2J8zncnNDkvGv/XL/_WHZ6183-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Emma/Travis/i-vxN3Fvd/0/KpFjD54jCC9FcS7BdR7Vk7wTwrpzKQnL43ZNCw4hN/S/_WHZ6183-Edit-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27323,7 +27323,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-pCSz9SV/1/L768xZc5C9q28MRz8sTSqjRvrqdXWkrTrMPZm9nX2/XL/_OL30950-Enhanced-Edit-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-pCSz9SV/1/L768xZc5C9q28MRz8sTSqjRvrqdXWkrTrMPZm9nX2/XL/_OL30950-Enhanced-Edit-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-pCSz9SV/1/MmqN5Gf7VZ6MNgk5z2jD4HM8j2tGw58Lxgr5N9brB/S/_OL30950-Enhanced-Edit-Edit-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27336,7 +27336,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-ZHnSfxf/6/KtZcg7F4XPPTD96HTR9zzbBBQjrpxDZkX5DFZjgnk/L/_O1H1390-Enhanced-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-ZHnSfxf/6/L6kHtD5TW6pDL7CKdCtmjm2Jd3grTQwzvHFVVP2FC/XL/_O1H1390-Enhanced-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-ZHnSfxf/6/KbmCBPQgXks32BpnZmWLdhN4jtDrNwGDXQzxgsZhL/S/_O1H1390-Enhanced-Edit-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27349,7 +27349,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-GqLkjtM/2/LfThpCPKxfmZRGPJHvq6vx6wmntXGCLFQ5cwqBXv4/L/_WHZ0389-Edit-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-GqLkjtM/2/LcgzmhF5XdTw8RNbHvPbXLH9cgcVmQMkRmQFkNZRh/XL/_WHZ0389-Edit-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-GqLkjtM/2/MZGn46bv2pqdXRm2DJ9tDPngz3t2DqcgpmfJw3BDV/S/_WHZ0389-Edit-Edit-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27362,7 +27362,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-4VgnHNv/3/MFRwWHzDbTBF6pfkKPQGkHWzt5pc22fdqJJDZWQTJ/L/_OLY2851-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-4VgnHNv/3/NcFXd8LGJGQftF855KbFkHSFPw2MS4msTRqwpFNrW/XL/_OLY2851-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-4VgnHNv/3/K8dDfGZQJvn98njnqr8Qh9cwSpTJ8dqSrZtmm54G5/S/_OLY2851-Edit-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27375,7 +27375,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-3sSNgVH/1/LbVbnq3sBMPGDzRTBWKCBg4Wt7DsRHJbCGJBsBf5L/XL/_WHZ0314-Edit-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-3sSNgVH/1/LbVbnq3sBMPGDzRTBWKCBg4Wt7DsRHJbCGJBsBf5L/XL/_WHZ0314-Edit-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-3sSNgVH/1/MpQMNbSZ6NJQFdjCHXnf9nSKScctTczwLRbhnq6cW/S/_WHZ0314-Edit-Edit-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27388,7 +27388,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Emma/Emma-pictures/i-MsjQLqX/0/L2h4DChFw66gsCSvdzZ3JLBb7bTs9FNfvQRQJrvW5/XL/_WHZ5760-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Emma/Emma-pictures/i-MsjQLqX/0/L2h4DChFw66gsCSvdzZ3JLBb7bTs9FNfvQRQJrvW5/XL/_WHZ5760-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Emma/Emma-pictures/i-MsjQLqX/0/KrjMrtvqtqgx3qJkKSk6W88FgWJPRdjpwrZKNq3hJ/S/_WHZ5760-Edit-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27401,7 +27401,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-Ts97g3J/0/NXz6nzWVRBGHSRBkBmZPrjVzM3DcGhTv4m5pmPp2m/XL/_WHZ0674-Edit-2-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-Ts97g3J/0/NXz6nzWVRBGHSRBkBmZPrjVzM3DcGhTv4m5pmPp2m/XL/_WHZ0674-Edit-2-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-Ts97g3J/0/LtDCx5WrCFcLhQrWjVvNmRRrZv2PTnWvnqpFQvRTT/S/_WHZ0674-Edit-2-Edit-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27414,7 +27414,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-dNRrCp8/0/MMg2MVGQXgBvKF46KQ4bhHqjHSr8xpcwN9G6d6WqR/XL/_WHZ0456-Edit-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-dNRrCp8/0/MMg2MVGQXgBvKF46KQ4bhHqjHSr8xpcwN9G6d6WqR/XL/_WHZ0456-Edit-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-dNRrCp8/0/MBrZcbCF5Xj9hsxqbBQss6DnBssGQcwLwZxD8tQwX/S/_WHZ0456-Edit-Edit-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27427,7 +27427,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-Gc98zst/0/MwHDhGgjXRgB4MchvMTS65sZzRFfDLdhqmmBBt9cH/L/_WHZ0513-Edit-Edit-3-2-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-Gc98zst/0/KRVPRZPPk7FH74BT8vBGsdRMnLFTZspGfTmMpQ6Dp/XL/_WHZ0513-Edit-Edit-3-2-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-Gc98zst/0/KvWtmWMTLRTF7hwBbQ8JvZsCpKkf6q2XTG87MXNsQ/S/_WHZ0513-Edit-Edit-3-2-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27440,7 +27440,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Samantha/Spring-2020/i-tzF4Sgz/0/MrPjfHJt8m5T2jKWNwRP3qLRgsZBXc6sTJn3WFtHf/XL/_WHZ5449-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Samantha/Spring-2020/i-tzF4Sgz/0/MrPjfHJt8m5T2jKWNwRP3qLRgsZBXc6sTJn3WFtHf/XL/_WHZ5449-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Samantha/Spring-2020/i-tzF4Sgz/0/M9xzVZcWN2fQCppRRwzWPmftpwhrh9fC43BZRfbFx/S/_WHZ5449-Edit-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27453,7 +27453,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Ivy-Pics/Ivy/i-fCwv683/1/KbDzpFsdmfnGrW356FqD3DL9tB7qBz5LZBk9f63PG/XL/_WHZ5523-Edit-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Ivy-Pics/Ivy/i-fCwv683/1/KbDzpFsdmfnGrW356FqD3DL9tB7qBz5LZBk9f63PG/XL/_WHZ5523-Edit-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Ivy-Pics/Ivy/i-fCwv683/1/NFLB2dBPDJfVkcRrpzzS2vzRc26bPPtcqdbZxgQxC/S/_WHZ5523-Edit-Edit-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27466,7 +27466,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Ivy-Pics/Ivy/i-6M79wHD/0/LLTP2QQ5pbZH6tcxxVLBgMsjJmMDcPXSZzLvhKRHn/L/_WHZ5532-Edit-2-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Ivy-Pics/Ivy/i-6M79wHD/0/LZjBxGSXdxdJpJV4sjZN35sdzc7TCjWJrdJgfntLb/XL/_WHZ5532-Edit-2-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Ivy-Pics/Ivy/i-6M79wHD/0/NJCXrwNDTwHcvg3sMGwCWHJPF93rNGTsCbf89WbK7/S/_WHZ5532-Edit-2-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27479,7 +27479,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Ivy-Pics/Ivy/i-jh3tbmr/0/KLtCcwCXnwR9KfZhCT23Dnj5fWz72FWD7rBQrgNQf/L/_WHZ5540-Edit-2-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Ivy-Pics/Ivy/i-jh3tbmr/0/KTKJLqhF45X2Bgg6fhFSfCCZNZTpKR4pkpjB3CrKz/XL/_WHZ5540-Edit-2-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Ivy-Pics/Ivy/i-jh3tbmr/0/Mpx2LvV974rkLpTXftmsGx9Tgxk5RnBfGSQ8nNQ2q/S/_WHZ5540-Edit-2-Edit-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27492,7 +27492,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Emma/Emma-pictures/i-MNt956R/0/KfBKs8fg6QMjqPFLH8PDp6bB7MSNQd2RQLZT58RMH/XL/_WHZ5833-Edit-3-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Emma/Emma-pictures/i-MNt956R/0/KfBKs8fg6QMjqPFLH8PDp6bB7MSNQd2RQLZT58RMH/XL/_WHZ5833-Edit-3-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Emma/Emma-pictures/i-MNt956R/0/M6SWMsXNjWjvt4VhfTFL9gsT2kCSPmNswmGnsFvLX/S/_WHZ5833-Edit-3-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27505,7 +27505,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-CM3MV6z/2/M8Lt89rqrHNPZhn9CLCCJqMvpMSVZdT7KqwGT83M4/XL/_WHK1346-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-CM3MV6z/2/M8Lt89rqrHNPZhn9CLCCJqMvpMSVZdT7KqwGT83M4/XL/_WHK1346-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-CM3MV6z/2/NGvZ2HDPDcMpWZHWGHg2srfZFfXrDBWZtnKmLJqBB/S/_WHK1346-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27518,7 +27518,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-SMfNpJq/3/LV4TrLxsS4DJrJf4X39q8rDbPZ6SgSpbNqtF7Sr89/L/_HF29401-Edit-2-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-SMfNpJq/3/MS8G4JGdXxBdJt9JpMN6h7JTTq2nwvrZMM2Q4WLzH/XL/_HF29401-Edit-2-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-SMfNpJq/3/Mq2DXpznc738hNCr95LzNfCLcmhpTbdPVFcFgHcwS/S/_HF29401-Edit-2-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27531,7 +27531,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-KNPxS4t/21/LWVCnDC4kht5rxsJrcdJ5SqsKN3t5pjHgRVnNhb2v/XL/_HF29403-Edit-Edit-2-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-KNPxS4t/21/LWVCnDC4kht5rxsJrcdJ5SqsKN3t5pjHgRVnNhb2v/XL/_HF29403-Edit-Edit-2-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-KNPxS4t/21/Khj85kHd9RqjxMxjCjg6W5hM7Nr53rvJLCWPKxsC5/S/_HF29403-Edit-Edit-2-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27544,7 +27544,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-NtMdSm4/3/LBFG7wDJJGGhrFnFdKw8vfs2z5M8khnfQCzbDZ3M6/L/_HF29406-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-NtMdSm4/3/NcvGJq58BkQKTBKfbsXLXqX6G4QCHjncs9DNPjh9C/XL/_HF29406-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-NtMdSm4/3/KQJNv5md4pGLVDMdrDrPjXwHXrLzxBXHGkW73GWhH/S/_HF29406-Edit-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27557,7 +27557,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-pr298mj/2/NPGHKcJgVfFFKPfxwqTdKjCK5TcbDxdzGhsbJW9Dp/L/_HF20177-Edit-2-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-pr298mj/2/MJcwVghFPGvmtrmv2CVkpbPKj9S2CCc3Fk5qZ8J76/XL/_HF20177-Edit-2-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-pr298mj/2/LhFQ88Mwhvbd5dQBnfmVXZ2Qgn5Mpm9hNn2jZzQqL/S/_HF20177-Edit-2-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27570,7 +27570,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-cXgzSFj/3/NFxH4CcWGQvFMkkLZ8d5Whb4XCGV5dpL3DVP6nZfz/L/_HF28860-Edit-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-cXgzSFj/3/MFwDVjgvNxDVx2wrnwQMQQt5kn7NjkbxGjDdCzGTd/XL/_HF28860-Edit-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-cXgzSFj/3/McBP2JhtFNL8BB9bP4PcpwXqNTvh2r5c8ckPxpLsD/S/_HF28860-Edit-Edit-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27583,7 +27583,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-ZM2SV3N/0/KdqbfpNj9XpcFSWw3JdCcNbLvFwvrpzsfrcc2ppp7/L/_HF28245-292-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-ZM2SV3N/0/KGVN4vzr5TVjd6DkDfnPzd6b7m8whd5Cxx66vRC4B/XL/_HF28245-292-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-ZM2SV3N/0/K3VStzDDvkcHjKL5hWCpt9Pp6B2Dd62NdZmjTsCLj/S/_HF28245-292-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27596,7 +27596,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-6Dr6FgF/0/MjNP2dmDxzssRHFZ6Qsxh5DVQ9pWc9GcQNTD5rVqL/L/_HF28496-300-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-6Dr6FgF/0/MBP64zxRsK4J9df8X99CWWGcTmj6XSDjPL4zDqzzj/XL/_HF28496-300-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-6Dr6FgF/0/L8RB9DZWBL7xRDLvfng7D9J26cQxrCNs38p6qZjQt/S/_HF28496-300-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27609,7 +27609,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-Nx9Z7rw/3/MhXzf4GCCsvH2dfkb3cXmBkLKtTWKXbS76WZmRtwM/L/_HF28830-Edit-2-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-Nx9Z7rw/3/MNdWSxKq3XQSMztkRHWqkw9L5PfLWgSDw2fzjjW5f/XL/_HF28830-Edit-2-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-Nx9Z7rw/3/NLr4GSdgP573ZmpDpvWsKkbTdmqVb9Qs6ZFHBkcMV/S/_HF28830-Edit-2-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27622,7 +27622,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-TDvjskf/2/Ng5PHfC9LGwN6jRdCPKJ62cnTvpMvwsWvhSK3hs9z/XL/_HF20134-Edit-2-Edit-2-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-TDvjskf/2/Ng5PHfC9LGwN6jRdCPKJ62cnTvpMvwsWvhSK3hs9z/XL/_HF20134-Edit-2-Edit-2-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-TDvjskf/2/KKHTKbmhXTxv98Jqs2mHd7QMHNtjFZfcqp9W6QB7K/S/_HF20134-Edit-2-Edit-2-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27635,7 +27635,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-PQzKJfr/3/KndbwZjzGP6wrtdp5v75m5BcprtnvkcSq5Lg3Q5gw/L/_HF20097-Edit-Edit-3-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-PQzKJfr/3/NQGCf9NvJTK8Z2NKzPkf8NJns727r6nwh5grJxjbn/XL/_HF20097-Edit-Edit-3-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-PQzKJfr/3/Kgcx7FFbMwRNCj2mJ6H7DnSJFRmDfJ63RVT3KNWCk/S/_HF20097-Edit-Edit-3-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27648,7 +27648,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Q4BHbm8/0/MHdwbLzNLJzpqgghkL6wMPpvLjGChxX4gZqRCrCTx/L/_HF29202-Edit-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Q4BHbm8/0/L2wNWZft23vsRvbchpCSptCFXZVhSk8pgzFGpsphs/XL/_HF29202-Edit-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Q4BHbm8/0/LGKvTvz8fRfj6GMzZWdWLLx6gGSWGpDPNxLVhx99h/S/_HF29202-Edit-Edit-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27661,7 +27661,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-SS4Fx5G/2/M28GMn7xfKcjFgFZXNmSw3h2PqqTFJ69Lj6rXMGwr/XL/_HF28564-Edit-Edit-3-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-SS4Fx5G/2/M28GMn7xfKcjFgFZXNmSw3h2PqqTFJ69Lj6rXMGwr/XL/_HF28564-Edit-Edit-3-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-SS4Fx5G/2/Mc7fQJgbTWxnZKP7CmDVsm9t9WDhCV5DW5zMT7bBQ/S/_HF28564-Edit-Edit-3-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27674,7 +27674,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-XdhCbrV/2/NJwq68zHmHk2VJf96jBnRLCpcLV7NcMsWPLvv83MX/L/_O1H0222-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-XdhCbrV/2/NfkSskWgXM62bSx3Tn34xTvBcJs7qJqNHHBM8Lvph/XL/_O1H0222-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-XdhCbrV/2/LRwMVrc7sVwMStTBSMPzDfGKcn4VFLg9dwLwG4bTJ/S/_O1H0222-Edit-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27687,7 +27687,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-FVGrjwJ/1/KPKS5RFpg9bJC5LgZ44Sc2RGhFdSrRctXbGXZqKGF/L/_O1H0370-Edit-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-FVGrjwJ/1/MZsPV27F2fLXQpPmQS6p6JX5bg2f7SkrrjPxMDcfB/XL/_O1H0370-Edit-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-FVGrjwJ/1/KPvP5gvpkSP4RZJV4jgpW8zrp6Qdm7bTkVNxKZVDz/S/_O1H0370-Edit-Edit-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27700,7 +27700,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-cPqr3Cc/2/NX4zgDJpDBfDfjsJVx65CsQgFNBgZZv7spMCBvvxV/XL/_O1H0374-Edit-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-cPqr3Cc/2/NX4zgDJpDBfDfjsJVx65CsQgFNBgZZv7spMCBvvxV/XL/_O1H0374-Edit-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-cPqr3Cc/2/NbKk4vKsnF24tfVNqvXDX2Fq8zTjsFFNB9kWpjjJj/S/_O1H0374-Edit-Edit-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27713,7 +27713,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-kK2jT4H/2/NPrt6tpwsZb2FbSzbJFLPQFCLx2qdvCPTZkwwGM6C/XL/_O1H0380-Edit-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-kK2jT4H/2/NPrt6tpwsZb2FbSzbJFLPQFCLx2qdvCPTZkwwGM6C/XL/_O1H0380-Edit-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-kK2jT4H/2/NGd63DsT4sFFf5gBx7F5CK8zxc4xRs4V9nXdK3QsS/S/_O1H0380-Edit-Edit-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27726,7 +27726,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-n3J8HGN/2/Ln3nkRzjsKv6Bps9k2PP9fLrMTrjtT9g6Dds4ZgWH/L/_O1H0540-Edit-Enhanced-Edit-2-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-n3J8HGN/2/MptQ88CqPB78xxps2MDxC2wT4jrZVGQVw2h92smZP/XL/_O1H0540-Edit-Enhanced-Edit-2-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-n3J8HGN/2/M6ZxWb9KBF69Bx4FLqQLkGTNbWX6Q74qXLHrtSHk2/S/_O1H0540-Edit-Enhanced-Edit-2-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27739,7 +27739,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-WbdF5pW/3/LnX84xP5JrVT3rBFvGTjNpgwPdtXksvpgTncVDsd4/XL/_HF20662-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-WbdF5pW/3/LnX84xP5JrVT3rBFvGTjNpgwPdtXksvpgTncVDsd4/XL/_HF20662-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-WbdF5pW/3/MrzJ4xRN5zQDMPxDnVVFXZ7WZBJSXHTTKk5K7wx3B/S/_HF20662-Edit-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27752,7 +27752,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-ScpmWwx/0/NNsPQGx6FRCpsKxVJhK4WnhCm3fpBHVtxFL6cZxd3/XL/_DSF7761-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-ScpmWwx/0/NNsPQGx6FRCpsKxVJhK4WnhCm3fpBHVtxFL6cZxd3/XL/_DSF7761-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-ScpmWwx/0/Mth4sprbMC5gmgkWwLmtM6nvsQHVV7FTMsdRcDvQ8/S/_DSF7761-Edit-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27765,7 +27765,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-HRWDPHP/1/M9ct6bFB48pCnZc4FfLGFTcjHSS4HGRb5wS4D3WtZ/XL/_ANA1071-Edit-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-HRWDPHP/1/M9ct6bFB48pCnZc4FfLGFTcjHSS4HGRb5wS4D3WtZ/XL/_ANA1071-Edit-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-HRWDPHP/1/KMwZz92mxN2n7WKmhKQgfMbBCSPgPbn5FRSrcg2dd/S/_ANA1071-Edit-Edit-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27778,7 +27778,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Z2dvTk4/2/Lhs4kjdhcThDvvCj2TtfBxzHqcCpqtXT3GWZkMb6w/L/_HF21507-Edit-2-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Z2dvTk4/2/KHZkGr3KsQFPLMNQMwvcmmLVpPMJG7m4QxbHFpZWk/XL/_HF21507-Edit-2-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Z2dvTk4/2/KJ43J3sCs39q5rPtChVMsz7VMKpckM7rK5XmqgdGV/S/_HF21507-Edit-2-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27791,7 +27791,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-vnTPDqx/2/LDj5vsPGKdBfpCrTZXjDksNnW929N45B7GCcjNgpT/L/_O1H0023-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-vnTPDqx/2/KZjBH26pKwtHk3JH9LdjwpXWLw5NXPM4cxQscc3tk/XL/_O1H0023-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-vnTPDqx/2/NjjhZJKN5BXX5jS9QvvXJ4T94WZFDT5Dm9RQpfN9z/S/_O1H0023-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27804,7 +27804,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-bRKCcWB/3/MFgSZqXWFP4XhWqn7RkncfDxLMdjQXW97tKGD8Xrh/XL/_O1H0308-Edit-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-bRKCcWB/3/MFgSZqXWFP4XhWqn7RkncfDxLMdjQXW97tKGD8Xrh/XL/_O1H0308-Edit-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-bRKCcWB/3/K9PWn6mg7jW7n5T7QG2wbRhx7gpHxP9QMMW8cJmqm/S/_O1H0308-Edit-Edit-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27817,7 +27817,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Qgfmc9Q/0/Kr37BMjT24SpRdJbfgvpdXnnCLczwXNMQVwQSKfTG/L/_HF28489-299-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Qgfmc9Q/0/LCBB9Zg6cfCDqCnW3WTn7mrvkvTnxd2bRzr8BF9LS/XL/_HF28489-299-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Qgfmc9Q/0/Kq2hzbxZwSMM34whhVWKBDrnrRDdhTK6SBWQLQ3LX/S/_HF28489-299-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27830,7 +27830,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-mbd2s8D/0/KwLf7xzQbDT2q8gfZH53LfwKqNVffNCGwpdGcPcJC/XL/Margaret%20Wilson%202d-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-mbd2s8D/0/KwLf7xzQbDT2q8gfZH53LfwKqNVffNCGwpdGcPcJC/XL/Margaret%20Wilson%202d-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-mbd2s8D/0/LmW5jgbpzW2PMzQMfJHRCwLSzjPsfV3HBLkgH5BJn/S/Margaret%20Wilson%202d-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27843,7 +27843,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-s5Dv9mW/0/LCMFSFKhQnKdRgmHcWM5R2N8tLFnq27XHgVc6xP7X/L/_HF27284-239-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-s5Dv9mW/0/M9vj9WXThDmQZnpb4M7NvW5Hc9HdnGGhRpqD3Gq9X/XL/_HF27284-239-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-s5Dv9mW/0/K7wjZMsmNMTGRTw8dWdNnsksvGVSvvpB76F58bk2X/S/_HF27284-239-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27856,7 +27856,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-JzWqxMX/0/MTN8kGkfQ6RnzT3BJVMxtxNsmR5jzP2zQCqf8mRtr/L/_HF29357-105-107-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-JzWqxMX/0/LWbJWLkf9PpXrSjc9xsd49HG8XPZ8Cf7GDnWGTBkJ/XL/_HF29357-105-107-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-JzWqxMX/0/KqbVCk23jMw3BPRhBjSrqSb5gFRG4KQW69P72dKMw/S/_HF29357-105-107-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27869,7 +27869,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Memorial-Adventure/Adventure-2023/i-pB5DwkQ/0/M3vPPRS8ddC5mqpqQxBtp6WDd7s9ZqftjHx8kj687/L/_O1H1372-Edit-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Memorial-Adventure/Adventure-2023/i-pB5DwkQ/0/LBwzJfh5PGhxmHpffJB2z8xRzjXwGC24q6v2g9QfZ/XL/_O1H1372-Edit-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Memorial-Adventure/Adventure-2023/i-pB5DwkQ/0/Mbf8cMLCFm7RHRrJXSxzhGX9JhgwS8GP53tHgcStj/S/_O1H1372-Edit-Edit-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -27882,7 +27882,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-v2mXzvd/1/MvnBZTwpNM4g76Dss82K7pvq3DVksjq8cBfjdKqx9/XL/_WHO4875-Edit-Edit-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-v2mXzvd/1/MvnBZTwpNM4g76Dss82K7pvq3DVksjq8cBfjdKqx9/XL/_WHO4875-Edit-Edit-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-v2mXzvd/1/KNMzhgCv5TX6K6TtX9JrBSg2mpFDPLphnFvq2jhVd/S/_WHO4875-Edit-Edit-Edit-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -76541,7 +76541,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-M2fMMNQ/2/LfDfq66FQJ3x48J9MxXhjJPCvCTk5kDBzLWqR4LJ8/XL/_WHZ0315-Edit-2-Editf-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-M2fMMNQ/2/LfDfq66FQJ3x48J9MxXhjJPCvCTk5kDBzLWqR4LJ8/XL/_WHZ0315-Edit-2-Editf-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-M2fMMNQ/2/KbqZBRtD4L5mMZdK6BMNvdktVP8VzNNVwxVNSBN3m/S/_WHZ0315-Edit-2-Editf-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -76554,7 +76554,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-62sCLX4/0/NPJHZwNzkVkhw9VVbB8m256KPXXrnzPNCjwjtrXC2/XL/_FWH7908-Edit-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-62sCLX4/0/NPJHZwNzkVkhw9VVbB8m256KPXXrnzPNCjwjtrXC2/XL/_FWH7908-Edit-Edit-2-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-62sCLX4/0/M4xsBDCb9DX96sz5GxPzpvQzSHPxgFm7ptDGLrRjb/S/_FWH7908-Edit-Edit-2-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -76567,7 +76567,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Models-in-May/i-dxqkxdC/1/L3qthkKrtrb42C5kFTW7Kz5v8tDdBKbZfLLTpdRwN/XL/_WHZ0559-Edit-3-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Models-in-May/i-dxqkxdC/1/L3qthkKrtrb42C5kFTW7Kz5v8tDdBKbZfLLTpdRwN/XL/_WHZ0559-Edit-3-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Models-in-May/i-dxqkxdC/1/Lnk4Mhf7sc22sVHLDzLqw6WDdWJKKBdz7Kw3kxFRN/S/_WHZ0559-Edit-3-Edit-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -76580,7 +76580,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Kj2CNt2/1/L75ncwMCKq8GMLm3TMdCfRPxDSR32Ht9gxV8XbSQ4/XL/_WHZ5744-Edit_pp-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Kj2CNt2/1/L75ncwMCKq8GMLm3TMdCfRPxDSR32Ht9gxV8XbSQ4/XL/_WHZ5744-Edit_pp-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Kj2CNt2/1/Kz6dsShBDQJwRCXLtkDSzxHZcDdkzzN5CVjhtxLjg/S/_WHZ5744-Edit_pp-Edit-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -76593,7 +76593,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-dznf8sd/1/NcCdb2GV7GvSv2bgDcmDwS8ZSCLTQfQXSJZrFRGpW/XL/_WHZ5744-Edit_pp-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-dznf8sd/1/NcCdb2GV7GvSv2bgDcmDwS8ZSCLTQfQXSJZrFRGpW/XL/_WHZ5744-Edit_pp-Edit-2-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-dznf8sd/1/LjRs8362SPCzxXVzx3qL7NqfVGVb3JNZ2hWNtQpJk/S/_WHZ5744-Edit_pp-Edit-2-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -76606,7 +76606,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-jZQtnjM/1/Lx84hNxFXsKSf3348MKDzhknPq7mxmWxGpm6BdKfQ/XL/_WHZ5744-Edit_pp-Edit-3-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-jZQtnjM/1/Lx84hNxFXsKSf3348MKDzhknPq7mxmWxGpm6BdKfQ/XL/_WHZ5744-Edit_pp-Edit-3-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-jZQtnjM/1/NMwQNPNXJL3BrkXVGPDNqGmh7D9cmG24SrrZ3tgKB/S/_WHZ5744-Edit_pp-Edit-3-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -76619,7 +76619,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-dB6BX5J/0/KNgNck27g2CpfStLJdQzLWtf7GgxjK92Cd9DGPjmG/XL/_WHZ0434-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-dB6BX5J/0/KNgNck27g2CpfStLJdQzLWtf7GgxjK92Cd9DGPjmG/XL/_WHZ0434-Edit-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-dB6BX5J/0/MB2QLP2FRqdp8hkc55Rhb8mnvkhsxkHPvbkfS7B7d/S/_WHZ0434-Edit-Edit-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -76632,7 +76632,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-LcWbnLw/0/LFR5DxGVkBn8Ff27XCjN9J3TRZw674HP9RG4zLjdp/L/_FWH7909-Enhanced-NR-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-LcWbnLw/0/Mf3tKcFksjTtXzMd86LTXZFB5KrthDJtjFs5xj5Mk/XL/_FWH7909-Enhanced-NR-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-LcWbnLw/0/MhZRdpjnR3dQZCTsWDZfBRQXvMjCwVN5xPMhj5gcr/S/_FWH7909-Enhanced-NR-Edit-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -76645,7 +76645,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-bm2rnbd/1/KsdLtx29G4tQgwR4279fdVwsvzM9nxp69LsVLjnc8/L/_OLY2310-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-bm2rnbd/1/LD7rdd7LDrSwjwhgf2Cw2ggPbS3p5TdzTRbdhz2Jz/XL/_OLY2310-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-bm2rnbd/1/MqcxqCHnPZmDJFvHznqQPZ36c54Sd7q92ht87Xz7P/S/_OLY2310-Edit-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -76658,7 +76658,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-hnKpM45/1/KNfXNSNcL5ZXs29SQNQxLGwTMmmZQmmm9fvVtgdSV/XL/_WHZ5747-Edit_pp-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-hnKpM45/1/KNfXNSNcL5ZXs29SQNQxLGwTMmmZQmmm9fvVtgdSV/XL/_WHZ5747-Edit_pp-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-hnKpM45/1/KT5tfzn6vGtJHFc6BKrcgKX3JW25HWbTzQ7sHqfdF/S/_WHZ5747-Edit_pp-Edit-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -76671,7 +76671,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-w4HzscL/1/KTgkcJH7Xs84bZFHbcMLLKZ6633zcwSB3xJTkfpTp/XL/_WHZ5747-Edit_pp-Edit-3-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-w4HzscL/1/KTgkcJH7Xs84bZFHbcMLLKZ6633zcwSB3xJTkfpTp/XL/_WHZ5747-Edit_pp-Edit-3-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-w4HzscL/1/M8v53T2c3FpxsrdFx33QFPH8RPsPZv7RNXX68QmSn/S/_WHZ5747-Edit_pp-Edit-3-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -76684,7 +76684,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-nJQjcFw/1/MKtjkJSLZDkt2KJdCWN4MMzZqnMsGTBggMdwDKMvq/XL/_WHZ5747-Edit_pp-Edit-3-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-nJQjcFw/1/MKtjkJSLZDkt2KJdCWN4MMzZqnMsGTBggMdwDKMvq/XL/_WHZ5747-Edit_pp-Edit-3-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-nJQjcFw/1/LZcHxxxmP7CTcpBGpLJZw6LxxfbcZhmtxtx3BPPwT/S/_WHZ5747-Edit_pp-Edit-3-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -76697,7 +76697,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-zS4W8Xv/1/NCp4ftjFGhbrHvpstsRftrskfM2q3QCk3wqxXbrXM/XL/_WHZ5748-Edit_pp-Edit-3-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-zS4W8Xv/1/NCp4ftjFGhbrHvpstsRftrskfM2q3QCk3wqxXbrXM/XL/_WHZ5748-Edit_pp-Edit-3-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-zS4W8Xv/1/Mf6rKNfz3GPfKgdrnLqRGChvsrjs5b4cKKHZsNSsN/S/_WHZ5748-Edit_pp-Edit-3-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -76710,7 +76710,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-3G3qWpd/1/LpsMrtjpWF5gbpGDWgQx3fmwGhW5d8kfwmn6JsbWw/XL/_WHZ5748-Edit_pp-Edit-4-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-3G3qWpd/1/LpsMrtjpWF5gbpGDWgQx3fmwGhW5d8kfwmn6JsbWw/XL/_WHZ5748-Edit_pp-Edit-4-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-3G3qWpd/1/LrR4MR54GnfjMDxqGjrqbkwtJgQpvtRQZDvz6tr4H/S/_WHZ5748-Edit_pp-Edit-4-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -76723,7 +76723,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-6gKnQzb/1/M4mhJnBJTDWkKh4Q63gTsbRb2vfPgGJ4WRQ25w2Q3/XL/_WHZ5821-Edit-2-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-6gKnQzb/1/M4mhJnBJTDWkKh4Q63gTsbRb2vfPgGJ4WRQ25w2Q3/XL/_WHZ5821-Edit-2-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-6gKnQzb/1/KZNXRbd5TtmTCSrGdfGcxmbV54HRxPDswwQPFTTsH/S/_WHZ5821-Edit-2-Edit-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -76736,7 +76736,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-KS6JFX5/1/KD7c6CfZB6dXSpcc8TNrcrPmrzx9dsc4sdLnRhph3/XL/_WHZ5758-Edit_pp-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-KS6JFX5/1/KD7c6CfZB6dXSpcc8TNrcrPmrzx9dsc4sdLnRhph3/XL/_WHZ5758-Edit_pp-Edit-2-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-KS6JFX5/1/LW2g945ZCM4SKgNtbncbVbdFGV2fbDLVKzZzh9RnJ/S/_WHZ5758-Edit_pp-Edit-2-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -76749,7 +76749,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-qkB8tqZ/1/MqffLpCNH5d9smQTmDkFDBLKBHwmDjr5CqLRw88nk/XL/_WHZ5823-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-qkB8tqZ/1/MqffLpCNH5d9smQTmDkFDBLKBHwmDjr5CqLRw88nk/XL/_WHZ5823-Edit-2-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-qkB8tqZ/1/KFgRsGv3qxj3FpPVWx6FZ388fZ9RLXCwpxX5H2jGM/S/_WHZ5823-Edit-2-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -76762,7 +76762,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-9DLMNFd/1/K7zM2mFBHvXc44nHjm9JFgmvZfkmFNSHhNfnrk33j/XL/_WHZ5796-Edit-3_pp-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-9DLMNFd/1/K7zM2mFBHvXc44nHjm9JFgmvZfkmFNSHhNfnrk33j/XL/_WHZ5796-Edit-3_pp-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-9DLMNFd/1/MLF9xrxZPgkcDD3Xpx6zL73jm3CPdG77Nfz3SFwbw/S/_WHZ5796-Edit-3_pp-Edit-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -76775,7 +76775,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-6FXcvLm/1/LQ53HzVvzmBXRtXhDqVNKGfgrzB2K9LtB57gG2KQn/XL/_WHZ5796-Edit_pp-Edit-3-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-6FXcvLm/1/LQ53HzVvzmBXRtXhDqVNKGfgrzB2K9LtB57gG2KQn/XL/_WHZ5796-Edit_pp-Edit-3-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-6FXcvLm/1/M9VMw4d4BCt7463Q3Kp2Ft8c65jZMgL5FhkBM4Xgs/S/_WHZ5796-Edit_pp-Edit-3-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -76788,7 +76788,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Emma/Travis/i-vxN3Fvd/0/MrXGMFbBZRt46dPBk8xnHkH7GbqL2J8zncnNDkvGv/XL/_WHZ6183-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Emma/Travis/i-vxN3Fvd/0/MrXGMFbBZRt46dPBk8xnHkH7GbqL2J8zncnNDkvGv/XL/_WHZ6183-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Emma/Travis/i-vxN3Fvd/0/KpFjD54jCC9FcS7BdR7Vk7wTwrpzKQnL43ZNCw4hN/S/_WHZ6183-Edit-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -76801,7 +76801,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-pCSz9SV/1/L768xZc5C9q28MRz8sTSqjRvrqdXWkrTrMPZm9nX2/XL/_OL30950-Enhanced-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-pCSz9SV/1/L768xZc5C9q28MRz8sTSqjRvrqdXWkrTrMPZm9nX2/XL/_OL30950-Enhanced-Edit-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-pCSz9SV/1/MmqN5Gf7VZ6MNgk5z2jD4HM8j2tGw58Lxgr5N9brB/S/_OL30950-Enhanced-Edit-Edit-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -76814,7 +76814,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-ZHnSfxf/6/KtZcg7F4XPPTD96HTR9zzbBBQjrpxDZkX5DFZjgnk/L/_O1H1390-Enhanced-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-ZHnSfxf/6/L6kHtD5TW6pDL7CKdCtmjm2Jd3grTQwzvHFVVP2FC/XL/_O1H1390-Enhanced-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-ZHnSfxf/6/KbmCBPQgXks32BpnZmWLdhN4jtDrNwGDXQzxgsZhL/S/_O1H1390-Enhanced-Edit-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -76827,7 +76827,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-GqLkjtM/2/LfThpCPKxfmZRGPJHvq6vx6wmntXGCLFQ5cwqBXv4/L/_WHZ0389-Edit-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-GqLkjtM/2/LcgzmhF5XdTw8RNbHvPbXLH9cgcVmQMkRmQFkNZRh/XL/_WHZ0389-Edit-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-GqLkjtM/2/MZGn46bv2pqdXRm2DJ9tDPngz3t2DqcgpmfJw3BDV/S/_WHZ0389-Edit-Edit-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -76840,7 +76840,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-4VgnHNv/3/MFRwWHzDbTBF6pfkKPQGkHWzt5pc22fdqJJDZWQTJ/L/_OLY2851-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-4VgnHNv/3/NcFXd8LGJGQftF855KbFkHSFPw2MS4msTRqwpFNrW/XL/_OLY2851-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-4VgnHNv/3/K8dDfGZQJvn98njnqr8Qh9cwSpTJ8dqSrZtmm54G5/S/_OLY2851-Edit-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -76853,7 +76853,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-3sSNgVH/1/LbVbnq3sBMPGDzRTBWKCBg4Wt7DsRHJbCGJBsBf5L/XL/_WHZ0314-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-3sSNgVH/1/LbVbnq3sBMPGDzRTBWKCBg4Wt7DsRHJbCGJBsBf5L/XL/_WHZ0314-Edit-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-3sSNgVH/1/MpQMNbSZ6NJQFdjCHXnf9nSKScctTczwLRbhnq6cW/S/_WHZ0314-Edit-Edit-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -76866,7 +76866,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Emma/Emma-pictures/i-MsjQLqX/0/L2h4DChFw66gsCSvdzZ3JLBb7bTs9FNfvQRQJrvW5/XL/_WHZ5760-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Emma/Emma-pictures/i-MsjQLqX/0/L2h4DChFw66gsCSvdzZ3JLBb7bTs9FNfvQRQJrvW5/XL/_WHZ5760-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Emma/Emma-pictures/i-MsjQLqX/0/KrjMrtvqtqgx3qJkKSk6W88FgWJPRdjpwrZKNq3hJ/S/_WHZ5760-Edit-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -76879,7 +76879,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-Ts97g3J/0/NXz6nzWVRBGHSRBkBmZPrjVzM3DcGhTv4m5pmPp2m/XL/_WHZ0674-Edit-2-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-Ts97g3J/0/NXz6nzWVRBGHSRBkBmZPrjVzM3DcGhTv4m5pmPp2m/XL/_WHZ0674-Edit-2-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-Ts97g3J/0/LtDCx5WrCFcLhQrWjVvNmRRrZv2PTnWvnqpFQvRTT/S/_WHZ0674-Edit-2-Edit-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -76892,7 +76892,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-dNRrCp8/0/MMg2MVGQXgBvKF46KQ4bhHqjHSr8xpcwN9G6d6WqR/XL/_WHZ0456-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-dNRrCp8/0/MMg2MVGQXgBvKF46KQ4bhHqjHSr8xpcwN9G6d6WqR/XL/_WHZ0456-Edit-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-dNRrCp8/0/MBrZcbCF5Xj9hsxqbBQss6DnBssGQcwLwZxD8tQwX/S/_WHZ0456-Edit-Edit-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -76905,7 +76905,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-Gc98zst/0/MwHDhGgjXRgB4MchvMTS65sZzRFfDLdhqmmBBt9cH/L/_WHZ0513-Edit-Edit-3-2-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-Gc98zst/0/KRVPRZPPk7FH74BT8vBGsdRMnLFTZspGfTmMpQ6Dp/XL/_WHZ0513-Edit-Edit-3-2-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-Gc98zst/0/KvWtmWMTLRTF7hwBbQ8JvZsCpKkf6q2XTG87MXNsQ/S/_WHZ0513-Edit-Edit-3-2-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -76918,7 +76918,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Samantha/Spring-2020/i-tzF4Sgz/0/MrPjfHJt8m5T2jKWNwRP3qLRgsZBXc6sTJn3WFtHf/XL/_WHZ5449-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Samantha/Spring-2020/i-tzF4Sgz/0/MrPjfHJt8m5T2jKWNwRP3qLRgsZBXc6sTJn3WFtHf/XL/_WHZ5449-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Samantha/Spring-2020/i-tzF4Sgz/0/M9xzVZcWN2fQCppRRwzWPmftpwhrh9fC43BZRfbFx/S/_WHZ5449-Edit-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -76931,7 +76931,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Ivy-Pics/Ivy/i-fCwv683/1/KbDzpFsdmfnGrW356FqD3DL9tB7qBz5LZBk9f63PG/XL/_WHZ5523-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Ivy-Pics/Ivy/i-fCwv683/1/KbDzpFsdmfnGrW356FqD3DL9tB7qBz5LZBk9f63PG/XL/_WHZ5523-Edit-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Ivy-Pics/Ivy/i-fCwv683/1/NFLB2dBPDJfVkcRrpzzS2vzRc26bPPtcqdbZxgQxC/S/_WHZ5523-Edit-Edit-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -76944,7 +76944,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Ivy-Pics/Ivy/i-6M79wHD/0/LLTP2QQ5pbZH6tcxxVLBgMsjJmMDcPXSZzLvhKRHn/L/_WHZ5532-Edit-2-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Ivy-Pics/Ivy/i-6M79wHD/0/LZjBxGSXdxdJpJV4sjZN35sdzc7TCjWJrdJgfntLb/XL/_WHZ5532-Edit-2-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Ivy-Pics/Ivy/i-6M79wHD/0/NJCXrwNDTwHcvg3sMGwCWHJPF93rNGTsCbf89WbK7/S/_WHZ5532-Edit-2-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -76957,7 +76957,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Ivy-Pics/Ivy/i-jh3tbmr/0/KLtCcwCXnwR9KfZhCT23Dnj5fWz72FWD7rBQrgNQf/L/_WHZ5540-Edit-2-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Ivy-Pics/Ivy/i-jh3tbmr/0/KTKJLqhF45X2Bgg6fhFSfCCZNZTpKR4pkpjB3CrKz/XL/_WHZ5540-Edit-2-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Ivy-Pics/Ivy/i-jh3tbmr/0/Mpx2LvV974rkLpTXftmsGx9Tgxk5RnBfGSQ8nNQ2q/S/_WHZ5540-Edit-2-Edit-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -76970,7 +76970,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Emma/Emma-pictures/i-MNt956R/0/KfBKs8fg6QMjqPFLH8PDp6bB7MSNQd2RQLZT58RMH/XL/_WHZ5833-Edit-3-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Emma/Emma-pictures/i-MNt956R/0/KfBKs8fg6QMjqPFLH8PDp6bB7MSNQd2RQLZT58RMH/XL/_WHZ5833-Edit-3-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Emma/Emma-pictures/i-MNt956R/0/M6SWMsXNjWjvt4VhfTFL9gsT2kCSPmNswmGnsFvLX/S/_WHZ5833-Edit-3-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -76983,7 +76983,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-CM3MV6z/2/M8Lt89rqrHNPZhn9CLCCJqMvpMSVZdT7KqwGT83M4/XL/_WHK1346-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-CM3MV6z/2/M8Lt89rqrHNPZhn9CLCCJqMvpMSVZdT7KqwGT83M4/XL/_WHK1346-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-CM3MV6z/2/NGvZ2HDPDcMpWZHWGHg2srfZFfXrDBWZtnKmLJqBB/S/_WHK1346-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -76996,7 +76996,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-SMfNpJq/3/LV4TrLxsS4DJrJf4X39q8rDbPZ6SgSpbNqtF7Sr89/L/_HF29401-Edit-2-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-SMfNpJq/3/MS8G4JGdXxBdJt9JpMN6h7JTTq2nwvrZMM2Q4WLzH/XL/_HF29401-Edit-2-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-SMfNpJq/3/Mq2DXpznc738hNCr95LzNfCLcmhpTbdPVFcFgHcwS/S/_HF29401-Edit-2-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -77009,7 +77009,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-KNPxS4t/21/LWVCnDC4kht5rxsJrcdJ5SqsKN3t5pjHgRVnNhb2v/XL/_HF29403-Edit-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-KNPxS4t/21/LWVCnDC4kht5rxsJrcdJ5SqsKN3t5pjHgRVnNhb2v/XL/_HF29403-Edit-Edit-2-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-KNPxS4t/21/Khj85kHd9RqjxMxjCjg6W5hM7Nr53rvJLCWPKxsC5/S/_HF29403-Edit-Edit-2-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -77022,7 +77022,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-NtMdSm4/3/LBFG7wDJJGGhrFnFdKw8vfs2z5M8khnfQCzbDZ3M6/L/_HF29406-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-NtMdSm4/3/NcvGJq58BkQKTBKfbsXLXqX6G4QCHjncs9DNPjh9C/XL/_HF29406-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-NtMdSm4/3/KQJNv5md4pGLVDMdrDrPjXwHXrLzxBXHGkW73GWhH/S/_HF29406-Edit-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -77035,7 +77035,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-pr298mj/2/NPGHKcJgVfFFKPfxwqTdKjCK5TcbDxdzGhsbJW9Dp/L/_HF20177-Edit-2-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-pr298mj/2/MJcwVghFPGvmtrmv2CVkpbPKj9S2CCc3Fk5qZ8J76/XL/_HF20177-Edit-2-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-pr298mj/2/LhFQ88Mwhvbd5dQBnfmVXZ2Qgn5Mpm9hNn2jZzQqL/S/_HF20177-Edit-2-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -77048,7 +77048,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-cXgzSFj/3/NFxH4CcWGQvFMkkLZ8d5Whb4XCGV5dpL3DVP6nZfz/L/_HF28860-Edit-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-cXgzSFj/3/MFwDVjgvNxDVx2wrnwQMQQt5kn7NjkbxGjDdCzGTd/XL/_HF28860-Edit-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-cXgzSFj/3/McBP2JhtFNL8BB9bP4PcpwXqNTvh2r5c8ckPxpLsD/S/_HF28860-Edit-Edit-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -77061,7 +77061,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-ZM2SV3N/0/KdqbfpNj9XpcFSWw3JdCcNbLvFwvrpzsfrcc2ppp7/L/_HF28245-292-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-ZM2SV3N/0/KGVN4vzr5TVjd6DkDfnPzd6b7m8whd5Cxx66vRC4B/XL/_HF28245-292-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-ZM2SV3N/0/K3VStzDDvkcHjKL5hWCpt9Pp6B2Dd62NdZmjTsCLj/S/_HF28245-292-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -77074,7 +77074,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-6Dr6FgF/0/MjNP2dmDxzssRHFZ6Qsxh5DVQ9pWc9GcQNTD5rVqL/L/_HF28496-300-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-6Dr6FgF/0/MBP64zxRsK4J9df8X99CWWGcTmj6XSDjPL4zDqzzj/XL/_HF28496-300-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-6Dr6FgF/0/L8RB9DZWBL7xRDLvfng7D9J26cQxrCNs38p6qZjQt/S/_HF28496-300-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -77087,7 +77087,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-Nx9Z7rw/3/MhXzf4GCCsvH2dfkb3cXmBkLKtTWKXbS76WZmRtwM/L/_HF28830-Edit-2-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-Nx9Z7rw/3/MNdWSxKq3XQSMztkRHWqkw9L5PfLWgSDw2fzjjW5f/XL/_HF28830-Edit-2-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-Nx9Z7rw/3/NLr4GSdgP573ZmpDpvWsKkbTdmqVb9Qs6ZFHBkcMV/S/_HF28830-Edit-2-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -77100,7 +77100,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-TDvjskf/2/Ng5PHfC9LGwN6jRdCPKJ62cnTvpMvwsWvhSK3hs9z/XL/_HF20134-Edit-2-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-TDvjskf/2/Ng5PHfC9LGwN6jRdCPKJ62cnTvpMvwsWvhSK3hs9z/XL/_HF20134-Edit-2-Edit-2-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-TDvjskf/2/KKHTKbmhXTxv98Jqs2mHd7QMHNtjFZfcqp9W6QB7K/S/_HF20134-Edit-2-Edit-2-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -77113,7 +77113,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-PQzKJfr/3/KndbwZjzGP6wrtdp5v75m5BcprtnvkcSq5Lg3Q5gw/L/_HF20097-Edit-Edit-3-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-PQzKJfr/3/NQGCf9NvJTK8Z2NKzPkf8NJns727r6nwh5grJxjbn/XL/_HF20097-Edit-Edit-3-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-PQzKJfr/3/Kgcx7FFbMwRNCj2mJ6H7DnSJFRmDfJ63RVT3KNWCk/S/_HF20097-Edit-Edit-3-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -77126,7 +77126,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Q4BHbm8/0/MHdwbLzNLJzpqgghkL6wMPpvLjGChxX4gZqRCrCTx/L/_HF29202-Edit-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Q4BHbm8/0/L2wNWZft23vsRvbchpCSptCFXZVhSk8pgzFGpsphs/XL/_HF29202-Edit-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Q4BHbm8/0/LGKvTvz8fRfj6GMzZWdWLLx6gGSWGpDPNxLVhx99h/S/_HF29202-Edit-Edit-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -77139,7 +77139,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-SS4Fx5G/2/M28GMn7xfKcjFgFZXNmSw3h2PqqTFJ69Lj6rXMGwr/XL/_HF28564-Edit-Edit-3-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-SS4Fx5G/2/M28GMn7xfKcjFgFZXNmSw3h2PqqTFJ69Lj6rXMGwr/XL/_HF28564-Edit-Edit-3-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-SS4Fx5G/2/Mc7fQJgbTWxnZKP7CmDVsm9t9WDhCV5DW5zMT7bBQ/S/_HF28564-Edit-Edit-3-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -77152,7 +77152,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-XdhCbrV/2/NJwq68zHmHk2VJf96jBnRLCpcLV7NcMsWPLvv83MX/L/_O1H0222-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-XdhCbrV/2/NfkSskWgXM62bSx3Tn34xTvBcJs7qJqNHHBM8Lvph/XL/_O1H0222-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-XdhCbrV/2/LRwMVrc7sVwMStTBSMPzDfGKcn4VFLg9dwLwG4bTJ/S/_O1H0222-Edit-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -77165,7 +77165,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-FVGrjwJ/1/KPKS5RFpg9bJC5LgZ44Sc2RGhFdSrRctXbGXZqKGF/L/_O1H0370-Edit-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-FVGrjwJ/1/MZsPV27F2fLXQpPmQS6p6JX5bg2f7SkrrjPxMDcfB/XL/_O1H0370-Edit-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-FVGrjwJ/1/KPvP5gvpkSP4RZJV4jgpW8zrp6Qdm7bTkVNxKZVDz/S/_O1H0370-Edit-Edit-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -77178,7 +77178,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-cPqr3Cc/2/NX4zgDJpDBfDfjsJVx65CsQgFNBgZZv7spMCBvvxV/XL/_O1H0374-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-cPqr3Cc/2/NX4zgDJpDBfDfjsJVx65CsQgFNBgZZv7spMCBvvxV/XL/_O1H0374-Edit-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-cPqr3Cc/2/NbKk4vKsnF24tfVNqvXDX2Fq8zTjsFFNB9kWpjjJj/S/_O1H0374-Edit-Edit-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -77191,7 +77191,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-kK2jT4H/2/NPrt6tpwsZb2FbSzbJFLPQFCLx2qdvCPTZkwwGM6C/XL/_O1H0380-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-kK2jT4H/2/NPrt6tpwsZb2FbSzbJFLPQFCLx2qdvCPTZkwwGM6C/XL/_O1H0380-Edit-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-kK2jT4H/2/NGd63DsT4sFFf5gBx7F5CK8zxc4xRs4V9nXdK3QsS/S/_O1H0380-Edit-Edit-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -77204,7 +77204,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-n3J8HGN/2/Ln3nkRzjsKv6Bps9k2PP9fLrMTrjtT9g6Dds4ZgWH/L/_O1H0540-Edit-Enhanced-Edit-2-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-n3J8HGN/2/MptQ88CqPB78xxps2MDxC2wT4jrZVGQVw2h92smZP/XL/_O1H0540-Edit-Enhanced-Edit-2-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-n3J8HGN/2/M6ZxWb9KBF69Bx4FLqQLkGTNbWX6Q74qXLHrtSHk2/S/_O1H0540-Edit-Enhanced-Edit-2-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -77217,7 +77217,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-WbdF5pW/3/LnX84xP5JrVT3rBFvGTjNpgwPdtXksvpgTncVDsd4/XL/_HF20662-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-WbdF5pW/3/LnX84xP5JrVT3rBFvGTjNpgwPdtXksvpgTncVDsd4/XL/_HF20662-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-WbdF5pW/3/MrzJ4xRN5zQDMPxDnVVFXZ7WZBJSXHTTKk5K7wx3B/S/_HF20662-Edit-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -77230,7 +77230,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-ScpmWwx/0/NNsPQGx6FRCpsKxVJhK4WnhCm3fpBHVtxFL6cZxd3/XL/_DSF7761-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-ScpmWwx/0/NNsPQGx6FRCpsKxVJhK4WnhCm3fpBHVtxFL6cZxd3/XL/_DSF7761-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-ScpmWwx/0/Mth4sprbMC5gmgkWwLmtM6nvsQHVV7FTMsdRcDvQ8/S/_DSF7761-Edit-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -77243,7 +77243,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-HRWDPHP/1/M9ct6bFB48pCnZc4FfLGFTcjHSS4HGRb5wS4D3WtZ/XL/_ANA1071-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-HRWDPHP/1/M9ct6bFB48pCnZc4FfLGFTcjHSS4HGRb5wS4D3WtZ/XL/_ANA1071-Edit-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-HRWDPHP/1/KMwZz92mxN2n7WKmhKQgfMbBCSPgPbn5FRSrcg2dd/S/_ANA1071-Edit-Edit-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -77256,7 +77256,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Z2dvTk4/2/Lhs4kjdhcThDvvCj2TtfBxzHqcCpqtXT3GWZkMb6w/L/_HF21507-Edit-2-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Z2dvTk4/2/KHZkGr3KsQFPLMNQMwvcmmLVpPMJG7m4QxbHFpZWk/XL/_HF21507-Edit-2-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Z2dvTk4/2/KJ43J3sCs39q5rPtChVMsz7VMKpckM7rK5XmqgdGV/S/_HF21507-Edit-2-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -77269,7 +77269,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-vnTPDqx/2/LDj5vsPGKdBfpCrTZXjDksNnW929N45B7GCcjNgpT/L/_O1H0023-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-vnTPDqx/2/KZjBH26pKwtHk3JH9LdjwpXWLw5NXPM4cxQscc3tk/XL/_O1H0023-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-vnTPDqx/2/NjjhZJKN5BXX5jS9QvvXJ4T94WZFDT5Dm9RQpfN9z/S/_O1H0023-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -77282,7 +77282,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-bRKCcWB/3/MFgSZqXWFP4XhWqn7RkncfDxLMdjQXW97tKGD8Xrh/XL/_O1H0308-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-bRKCcWB/3/MFgSZqXWFP4XhWqn7RkncfDxLMdjQXW97tKGD8Xrh/XL/_O1H0308-Edit-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-bRKCcWB/3/K9PWn6mg7jW7n5T7QG2wbRhx7gpHxP9QMMW8cJmqm/S/_O1H0308-Edit-Edit-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -77295,7 +77295,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Qgfmc9Q/0/Kr37BMjT24SpRdJbfgvpdXnnCLczwXNMQVwQSKfTG/L/_HF28489-299-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Qgfmc9Q/0/LCBB9Zg6cfCDqCnW3WTn7mrvkvTnxd2bRzr8BF9LS/XL/_HF28489-299-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Qgfmc9Q/0/Kq2hzbxZwSMM34whhVWKBDrnrRDdhTK6SBWQLQ3LX/S/_HF28489-299-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -77308,7 +77308,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-mbd2s8D/0/KwLf7xzQbDT2q8gfZH53LfwKqNVffNCGwpdGcPcJC/XL/Margaret%20Wilson%202d-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-mbd2s8D/0/KwLf7xzQbDT2q8gfZH53LfwKqNVffNCGwpdGcPcJC/XL/Margaret%20Wilson%202d-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-mbd2s8D/0/LmW5jgbpzW2PMzQMfJHRCwLSzjPsfV3HBLkgH5BJn/S/Margaret%20Wilson%202d-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -77321,7 +77321,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-s5Dv9mW/0/LCMFSFKhQnKdRgmHcWM5R2N8tLFnq27XHgVc6xP7X/L/_HF27284-239-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-s5Dv9mW/0/M9vj9WXThDmQZnpb4M7NvW5Hc9HdnGGhRpqD3Gq9X/XL/_HF27284-239-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-s5Dv9mW/0/K7wjZMsmNMTGRTw8dWdNnsksvGVSvvpB76F58bk2X/S/_HF27284-239-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -77334,7 +77334,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-JzWqxMX/0/MTN8kGkfQ6RnzT3BJVMxtxNsmR5jzP2zQCqf8mRtr/L/_HF29357-105-107-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-JzWqxMX/0/LWbJWLkf9PpXrSjc9xsd49HG8XPZ8Cf7GDnWGTBkJ/XL/_HF29357-105-107-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-JzWqxMX/0/KqbVCk23jMw3BPRhBjSrqSb5gFRG4KQW69P72dKMw/S/_HF29357-105-107-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -77347,7 +77347,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Memorial-Adventure/Adventure-2023/i-pB5DwkQ/0/M3vPPRS8ddC5mqpqQxBtp6WDd7s9ZqftjHx8kj687/L/_O1H1372-Edit-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Memorial-Adventure/Adventure-2023/i-pB5DwkQ/0/LBwzJfh5PGhxmHpffJB2z8xRzjXwGC24q6v2g9QfZ/XL/_O1H1372-Edit-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Memorial-Adventure/Adventure-2023/i-pB5DwkQ/0/Mbf8cMLCFm7RHRrJXSxzhGX9JhgwS8GP53tHgcStj/S/_O1H1372-Edit-Edit-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
@@ -77360,7 +77360,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-v2mXzvd/1/MvnBZTwpNM4g76Dss82K7pvq3DVksjq8cBfjdKqx9/XL/_WHO4875-Edit-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-v2mXzvd/1/MvnBZTwpNM4g76Dss82K7pvq3DVksjq8cBfjdKqx9/XL/_WHO4875-Edit-Edit-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-v2mXzvd/1/KNMzhgCv5TX6K6TtX9JrBSg2mpFDPLphnFvq2jhVd/S/_WHO4875-Edit-Edit-Edit-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
