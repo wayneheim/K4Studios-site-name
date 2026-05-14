@@ -237,13 +237,20 @@ const itemListElement = filteredGalleryData
   .filter((image: any) => image?.id)
   .map((image: any, index: number) => {
     const imagePageUrl = `${galleryBaseUrl}/${image.id}`;
+    const imageName = cleanForDisplay(image.title || image.id);
 
     return {
       "@type": "ListItem",
       "position": index + 1,
       "url": imagePageUrl,
-      "name": cleanForDisplay(image.title || image.id),
-      "item": { "@id": `${imagePageUrl}#image` },
+      "name": imageName,
+      "item": {
+        "@type": "ImageObject",
+        "@id": `${imagePageUrl}#image`,
+        "url": imagePageUrl,
+        "contentUrl": toAbsoluteK4Url(getProxySrc(image.id, 'l')),
+        "name": imageName,
+      },
     };
   });
 

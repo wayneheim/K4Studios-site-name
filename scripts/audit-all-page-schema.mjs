@@ -51,6 +51,7 @@ function usage() {
     "  8. lowPrice/highPrice match the shared pricing module",
     "  9. seller = https://www.k4studios.com/#organization",
     "  10. sampled image detail isPartOf matches galleryBaseUrl#imagegallery",
+    "  11. ItemList entries use inline ImageObject stubs with contentUrl",
   ].join("\n");
 }
 
@@ -179,6 +180,13 @@ async function auditPath({ origin, allPath }) {
 
   if (itemList) {
     addCheck(checks, "ItemList @id", itemList?.["@id"] === expectedItemListId, itemList?.["@id"]);
+    addCheck(checks, "ItemList numberOfItems integer", Number.isInteger(itemList?.numberOfItems), String(itemList?.numberOfItems));
+    const firstListItem = Array.isArray(itemList?.itemListElement) ? itemList.itemListElement[0] : null;
+    const firstListImage = firstListItem?.item;
+    addCheck(checks, "ListItem.item ImageObject", firstListImage?.["@type"] === "ImageObject", firstListImage?.["@type"]);
+    addCheck(checks, "ListItem.item @id", typeof firstListImage?.["@id"] === "string" && firstListImage["@id"].endsWith("#image"), firstListImage?.["@id"]);
+    addCheck(checks, "ListItem.item url", typeof firstListImage?.url === "string" && firstListImage.url.startsWith(`${galleryBaseUrl}/i-`), firstListImage?.url);
+    addCheck(checks, "ListItem.item contentUrl", typeof firstListImage?.contentUrl === "string" && firstListImage.contentUrl.startsWith(`${SITE_ORIGIN}/img/`), firstListImage?.contentUrl);
   }
 
   const firstImageId = firstImageIdFor(html, galleryBasePath);
