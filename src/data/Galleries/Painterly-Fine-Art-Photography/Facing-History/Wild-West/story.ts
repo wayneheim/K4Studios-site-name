@@ -37,7 +37,7 @@ export const westernStory = [
       
       `Art can carry atmosphere, imply consequence, and hold a larger story. Narrative artists like Charles M. Russell worked to keep the fading frontier alive in imagery, while other painters like Frederic Remington helped fix its drama, tension, and visual lore deep in the American imagination. Later artists, including Andrew Wyeth, proved that narrative weight could live as much in silence, restraint, and unanswered feeling as in action itself. While greats like Norman Rockwell revealed how narrative lives inside intimate human moments-expressions caught mid-thought, scenes interrupted, lives unfolding in quiet, unguarded fragments.`,
      
-      `This discipline has given rise to Wayne's <strong>One-Image Movie™</strong> concept: a single frame that implies a larger story because it holds the moment before, the moment after, and the emotional cost in between. `,
+      `This discipline has given rise to Wayne's <strong>One-Image Movie™</strong> concept: a finished narrative-art experience where image, title, authored story, and viewer imagination work together to hold the moment before, the moment after, and the emotional cost in between. `,
 
       `The goal becomes not to explain everything, but to leave enough implication alive that the image keeps opening the longer you stay with it. When married with his short narrative writings, the stillness of the moment further expands beyond the frame; context is upended or expanded, freeing the viewer’s mind to explore the why, the how, and the consequences that led them here. This now becomes the point the viewer makes the decision on where the story goes next.`,
 

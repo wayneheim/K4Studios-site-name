@@ -27,7 +27,8 @@
     subhead: "Character Over Archetype",
     paragraphs: [
       "The figures that appear here—cowboys, ranchers, frontier interpreters—are presented as individuals, not types. Expression carries more than action. A hand resting on worn leather carries more weight than a thrown rope. Stillness replaces spectacle.",
-      "Each portrait functions as a One-Image Movie\u2122—a single frame from a larger, unfinished narrative waiting to be completed by the viewer. Meaning emerges slowly, through return viewing, not immediate explanation.",
+      "Each portrait can function as a One-Image Movie\u2122—a K4 Studios narrative-art experience where image, title, authored story, and viewer imagination work together. Meaning emerges slowly, through return viewing, not immediate explanation.",
+      "The photograph opens the scene. The words deepen the uncertainty. The viewer completes the final unwritten story.",
       "That story-first dimension also places this work inside <a href=\"/Narrative-Western-Art\">Narrative Western Art</a>, where implied action, frontier tension, and painterly restraint matter as much as subject itself."
     ]
   },

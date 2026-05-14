@@ -34,7 +34,8 @@ export const westernArtStory = [
       "A steady gaze.",
       "A hand resting on worn saddle leather.",
       "Moments like these often carry more narrative power than any staged action.",
-      "Each photograph becomes a One-Image Movie™—a single frame suspended within a larger story that the viewer must complete.",
+      "Each finished work can become a One-Image Movie™—a K4 Studios narrative-art experience where image, title, authored story, and viewer imagination work together.",
+      "The photograph opens the scene. The words deepen the uncertainty. The viewer completes the final unwritten story.",
       "Western photography art exists to reveal the human foundations beneath the myth."
     ]
   },

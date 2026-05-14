@@ -19,7 +19,7 @@
     subhead: "Story Lives Inside the Frame",
     paragraphs: [
       "These photographs exist in the space between moments - after something has occurred, but before its consequence is revealed. A hand lowers. A gaze holds. Dust settles without fully giving up its motion.",
-      "This suspended narrative is the foundation of the One-Image Movie. Each photograph functions as a single cinematic frame, inviting the viewer to complete what it begins.",
+      "This suspended narrative is the doorway into the One-Image Movie. Each finished work becomes a narrative-art experience where image, title, authored story, and viewer imagination work together, inviting the viewer to complete what the scene begins.",
       "That method-centered storytelling also places this work inside <a href='/Narrative-Western-Art'>Narrative Western Art</a>, where painterly restraint and frontier atmosphere do as much narrative work as overt action."
     ]
   },
@@ -75,7 +75,7 @@
   {
     subhead: "Step Inside the Story",
     paragraphs: [
-      "Each photograph stands as a single frame from a larger, unfinished narrative - a One-Image Movie waiting for you to step inside.",
+      "Each finished work stands as a One-Image Movie waiting for you to step inside - a K4 Studios narrative-art experience where the photograph opens the scene, the words deepen the uncertainty, and the viewer completes the final unwritten story.",
       "Ready to explore the subjects themselves? <a href='/Western-Fine-Art-Photography'>Discover the Western Fine Art Photography collection</a>."
     ]
   }

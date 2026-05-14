@@ -2,8 +2,8 @@
 export const storyMeta = {
   "showTitle": "Lore & Legacy - Chapter 1",
   "prologueTitle": "Prologue: Where Legends Begin",
-  "openingParagraph": "The American West is often remembered through the names that became legend.\n\nBut legends were never born all at once.\nThey emerged slowly — from long rides, uneasy silences, and decisions made where no one was watching.\n\nThese images explore those moments.\n\nEach photograph is a single frame from a larger, unwritten story — a place where myth and memory meet, and where the viewer decides what comes next.",
-  "description": "A cinematic slideshow of painterly Western fine art photography by Wayne Heim exploring the myth, character, and presence of the American frontier. Each image acts as a single moment from an unwritten Western story.",
+  "openingParagraph": "The American West is often remembered through the names that became legend.\n\nBut legends were never born all at once.\nThey emerged slowly — from long rides, uneasy silences, and decisions made where no one was watching.\n\nThese images explore those moments.\n\nEach finished work opens an unwritten Western story — a place where myth and memory meet, and where the viewer helps decide what comes next.",
+  "description": "A cinematic slideshow of painterly Western fine art photography by Wayne Heim exploring the myth, character, and presence of the American frontier. Each finished work opens an unwritten Western story for the viewer to complete.",
   "keywords": "western fine art photography, painterly western photography, cowboy art photography, frontier storytelling, historical western art, cinematic western imagery",
   "alt": "Painterly Western fine art photography exploring the mythic moments and enduring figures of the American frontier.",
   "closingText": "Every photograph carries a fragment of the past — thank you for walking through this story. Continue exploring the gallery below.",

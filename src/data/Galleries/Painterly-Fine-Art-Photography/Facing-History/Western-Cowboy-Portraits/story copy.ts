@@ -87,7 +87,7 @@ export const westernStory = [
     subhead: "Own a Chapter of the American West",
     tagline: "The icon alone is a poster. The icon with its scaffolding is a story.",
     paragraphs: [
-      `Every image functions as a single frame from a larger, unseen story — deliberately unresolved. This is the <strong>One-Image Movie™</strong>: one frame that holds the whole architecture because it implies the moment before, the moment after, and the unnamed figure who never got the recognition but without whom the legend could not stand.`,
+      `Every finished work functions as a deliberately unresolved <strong>One-Image Movie™</strong> — a K4 Studios narrative-art experience where image, title, authored story, and viewer imagination work together. The photograph opens the scene. The words deepen the uncertainty. The viewer completes the final unwritten story.`,
       `Bring home not just a print, but the story behind the story — a piece of the hidden framework of the American West that continues every time you pass it.`
     ]
   }

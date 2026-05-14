@@ -19,7 +19,7 @@ export const westernFAQ = [
   {
     q: "What does One-Image Movie mean here?",
     a: [
-      `<strong>One-Image Movie™</strong> is Wayne's term for an image that behaves like a larger chapter rather than a closed description. The frame suggests what came before, what may follow, and what is emotionally at stake without spelling everything out.`,
+      `<strong>One-Image Movie™</strong> is Wayne's term for a finished narrative-art experience where image, title, authored story, and viewer imagination work together. The photograph opens the scene. The words deepen the uncertainty. The viewer completes the final unwritten story.`,
       `That idea is central to Western Narratives because the images are designed to keep opening in the viewer's mind rather than resolving immediately.`
     ],
   },

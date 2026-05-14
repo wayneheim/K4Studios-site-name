@@ -39,7 +39,7 @@ export const westernStory = [
       `Rooted strongly in this same storytelling DNA and shaped by a career spent as a <a href="https://heimmedicalart.com" target="_blank" rel="noopener">visual storyteller</a>, Wayne's approach has been honed around these same principles of composition, narration, implication, and emotional pull.`,
       `What connects them is not style, but instinct: the ability to suggest a larger story without needing to show all of it.`,
       `Wayne Heim’s work grows from that same narrative DNA. Shaped by a career spent as a <a href="https://heimmedicalart.com" target="_blank" rel="noopener">visual storyteller</a>, his approach is built around composition, implication, emotional pull, and a discipline of restraint-the understanding that what is withheld often carries as much weight as what is shown.`,
-      `That discipline led to his <strong>One-Image Movie™</strong> concept: a single frame that implies a larger story because it holds the moment before, the moment after, and the emotional cost in between.`,
+      `That discipline led to his <strong>One-Image Movie™</strong> concept: a finished narrative-art experience where image, title, authored story, and viewer imagination work together to hold the moment before, the moment after, and the emotional cost in between.`,
       `Often joined with his short, context-setting writings, the stillness and story foundin these images widens into something larger-freeing the viewer to explore the why, the how, and the consequences that led here, and where the story may go next.`,
       `You don’t have to be told. You just feel it. And once you see it, it becomes impossible to unsee the unfolding story before you.`
     ]

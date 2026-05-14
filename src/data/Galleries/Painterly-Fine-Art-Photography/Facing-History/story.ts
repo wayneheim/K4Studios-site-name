@@ -10,7 +10,7 @@ export const facingHistoryStory = [
       "Across the collection, history is treated not as static subject matter but as lived narrative, with each image opening outward into what came before the moment and what may follow after it.",
       "At its best, the work closes the distance between viewer and history until the past stops feeling observed and starts feeling present.",
       "For the category definition behind this work, see <a href=\"/Blog/what-is-historically-themed-photography\">What Is Historically Themed Photography?</a>.",
-      "Many portraits function as <strong>One-Image Movies™</strong> — single frames constructed with the emotional gravity of a complete story arc. A breath before a decision. A pause weighted with consequence. These are moments still in motion, inviting the viewer to step inside the narrative.",
+      "Many portraits function as <strong>One-Image Movies™</strong> — finished narrative-art experiences where image, title, authored story, and viewer imagination work together. A breath before a decision. A pause weighted with consequence. The photograph opens the scene. The words deepen the uncertainty. The viewer completes the final unwritten story.",
       "For collectors of painterly fine art, historically themed photography, history inspired portraiture, and story-rich living history imagery, Facing History offers a curated journey into worlds that feel both familiar and newly alive."
     ]
   },
@@ -62,7 +62,7 @@ export const facingHistoryStory = [
     paragraphs: [
       "The WWII series moves beyond documentation into story-driven wartime portraiture. Mud, machinery, fatigue, and quiet exchanges form the emotional language of these painterly WWII photographs.",
       "These are not archival World War II photographs; they are <a href=\"/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII\">WWII themed fine art photographs</a> created with living historians, period detail, painterly light, and narrative intent.",
-      "Each image holds the weight of an unseen film—intentional light, deliberate stillness, and gestures that speak louder than action. These portraits meditate on courage, fear, camaraderie, and survival.",
+      "Each image holds the weight of an unwritten story—intentional light, deliberate stillness, and gestures that speak louder than action. These portraits meditate on courage, fear, camaraderie, and survival.",
       "Ideal for collectors of WWII fine art photography, military history art, and historically themed imagery grounded in authenticity rather than spectacle."
     ],
     list: [

@@ -33,7 +33,8 @@
     subhead: "Character Over Archetype",
     paragraphs: [
       "The figures that appear here\u2014cowboys, ranchers, frontier individuals\u2014are presented not as archetypes, but as people. Expression, stillness, and bearing carry the story. A glance replaces gesture. A hand resting on a tool carries more weight than action.",
-      "These images resist simplification. Meaning emerges slowly, through familiarity and return viewing, rather than immediate explanation. Each photograph functions as a single frame from a larger, unfinished narrative\u2014a One-Image Movie\u2122 waiting to be completed by the viewer.",
+      "These images resist simplification. Meaning emerges slowly, through familiarity and return viewing, rather than immediate explanation. Each finished work can function as a One-Image Movie\u2122\u2014a K4 Studios narrative-art experience where image, title, authored story, and viewer imagination work together.",
+      "The photograph opens the scene. The words deepen the uncertainty. The viewer completes the final unwritten story.",
       "That same discipline continues beyond Western subject matter in <a href=\"/Galleries/Painterly-Fine-Art-Photography\">Painterly Fine Art Photography</a>, where the visual language carries across multiple narrative worlds."
     ]
   },

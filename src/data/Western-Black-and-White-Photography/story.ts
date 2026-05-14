@@ -43,7 +43,7 @@
     subhead: "Character Revealed",
     paragraphs: [
       "Without the distraction of color, character emerges with greater clarity. The texture of weathered skin, the quiet authority of a settled posture, the history written into hands and eyes—all become central rather than incidental.",
-      "Each portrait functions as a One-Image Movie\u2122—a single frame from a larger, unfinished narrative waiting to be completed by the viewer. These are individuals, not icons. Humanity revealed precisely because the image has been stripped to essentials."
+      "Each portrait can function as a One-Image Movie\u2122—a K4 Studios narrative-art experience where image, title, authored story, and viewer imagination work together. The photograph opens the scene. The words deepen the uncertainty. The viewer completes the final unwritten story. These are individuals, not icons. Humanity revealed precisely because the image has been stripped to essentials."
     ]
   },
 
