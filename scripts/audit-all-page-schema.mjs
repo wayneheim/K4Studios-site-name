@@ -165,6 +165,8 @@ async function auditPath({ origin, allPath }) {
   addCheck(checks, "CollectionPage @id", collectionPage?.["@id"] === expectedCollectionPageId, collectionPage?.["@id"]);
   addCheck(checks, "CollectionPage.mainEntity", collectionPage?.mainEntity?.["@id"] === expectedImageGalleryId, collectionPage?.mainEntity?.["@id"]);
   addCheck(checks, "ImageGallery @id", imageGallery?.["@id"] === expectedImageGalleryId, imageGallery?.["@id"]);
+  addCheck(checks, "ImageGallery.mainEntity ItemList", !itemList || imageGallery?.mainEntity?.["@id"] === expectedItemListId, imageGallery?.mainEntity?.["@id"]);
+  addCheck(checks, "no ImageGallery.hasPart ItemList", imageGallery?.hasPart?.["@id"] !== expectedItemListId, imageGallery?.hasPart?.["@id"]);
   addCheck(checks, "no /all#imagegallery", !html.includes("/all#imagegallery"));
   addCheck(checks, "one BreadcrumbList", breadcrumbCount === 1, String(breadcrumbCount));
   addCheck(checks, "AggregateOffer exists", collectionPage?.offers?.["@type"] === "AggregateOffer", collectionPage?.offers?.["@type"]);
