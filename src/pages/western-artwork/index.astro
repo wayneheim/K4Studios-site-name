@@ -1,66 +1,202 @@
 ---
 export const prerender = true;
 
-import KeywordLandingPage from '@/components/doorway/KeywordLandingPage.astro';
+import CommercialDoorwayAllPage from "@/components/doorway/CommercialDoorwayAllPage.astro";
+import { galleryData as cowboyColorData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs";
+import { galleryData as cowboyBlackWhiteData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs";
+import { galleryData as narrativeColorData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs";
+import { galleryData as narrativeBlackWhiteData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs";
+import { galleryData as westernLandscapeData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs";
+import { galleryData as mountainData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/Mountains.mjs";
+import { entranceData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/ColorEntranceData.ts";
+import { buildWesternArtworkDock } from "@/data/Western-Artwork/buildWesternArtworkDock.ts";
+import { westernArtworkFAQ } from "@/data/Western-Artwork/faq.ts";
+import { getFormattedLowestStandardPrintPrice } from "@/data/pricing/printSeries.js";
+import { landingWestern as landscapeLocationLanding } from "@/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/landingstones.ts";
+import { landingWestern as landscapeThemeLanding } from "@/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/landingstones.ts";
 
-import {
-  pagePath,
-  imageSectionPath,
-  gridBasePath,
-  galleryPaths,
-  landing,
-  breadcrumbItems,
-  storyBlocks,
-  explorationPaths,
-  featuredReadingTitle,
-  featuredReadingIntro,
-  featuredReadingItems,
-  collectionGroups,
-  gridImages,
-  collection,
-  faqSection,
-  faqItems,
-  pageMeta,
-  structuredAbout,
-  webPageAbout,
-  genre,
-  collectionAltPrefix,
-  hybridCarouselProps,
-} from '@/data/hybrid-hubs/western-artwork.ts';
+const pagePath = "/western-artwork";
+const basePath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color";
+const canonicalPath = pagePath;
 
-import { galleryData as cowboyColorGallery }
-  from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs';
+const rotateGallery = (items: any[] = [], offset = 0) => {
+  const cleanItems = items.filter((item: any) =>
+    item?.id &&
+    item.id !== "i-k4studios" &&
+    item.visibility !== "ghost" &&
+    item.visibility !== "hidden" &&
+    item.visibility !== "hide"
+  );
+  if (cleanItems.length === 0) return cleanItems;
+  const start = offset % cleanItems.length;
+  return [...cleanItems.slice(start), ...cleanItems.slice(0, start)];
+};
+
+const cowboyColorItems = rotateGallery(cowboyColorData, 17);
+const cowboyBlackWhiteItems = rotateGallery(cowboyBlackWhiteData, 23);
+const westernLandscapeItems = rotateGallery(westernLandscapeData, 11);
+const narrativeColorItems = rotateGallery(narrativeColorData, 203);
+const narrativeBlackWhiteItems = rotateGallery(narrativeBlackWhiteData, 109);
+const mountainItems = rotateGallery(mountainData, 7);
+const westernArtworkCount =
+  cowboyColorData.length +
+  cowboyBlackWhiteData.length +
+  westernLandscapeData.length +
+  narrativeColorData.length +
+  narrativeBlackWhiteData.length +
+  mountainData.length;
+
+const westernLandscapeTombstone = landscapeLocationLanding.tombstones.find((stone: any) =>
+  String(stone.href || "").includes("/Landscapes/By-Location/West/")
+)?.thumb;
+const mountainTombstone = landscapeThemeLanding.tombstones.find((stone: any) =>
+  String(stone.href || "").includes("/Landscapes/By-Theme/Mountains")
+)?.thumb;
+
+const breadcrumbHtml = [
+  '<a href="/">Wayne Heim</a>',
+  '<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West">Wild West</a>',
+  "Western Artwork",
+].join(" | ");
+
+const breadcrumbStructuredItems = [
+  { href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West", name: "Wild West" },
+];
+
+const { sectionDockItems, dockCenterIndex } = buildWesternArtworkDock();
+
+const gridSections = [
+  {
+    title: "Western Portrait Artwork - Color Cowboy Studies",
+    description: "Character-led Western artwork where weathered faces, posture, and painterly light carry the human side of the West.",
+    galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
+    allHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/all#collection-browser",
+    ctaLabel: "See the full Western portrait artwork collection",
+    ctaThumb: "/images/tombstones/cowboy-c-ts.jpg",
+    items: cowboyColorItems,
+    limit: 19,
+  },
+  {
+    title: "Western Landscape Artwork - Open Country and Western Light",
+    description: "Painterly Western landscape artwork for rooms that need open space, atmosphere, and the geography behind the frontier.",
+    galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery",
+    allHref: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/all#collection-browser",
+    ctaLabel: "See the full Western landscape artwork collection",
+    ctaThumb: westernLandscapeTombstone,
+    items: westernLandscapeItems,
+    limit: 19,
+  },
+  {
+    title: "Narrative Western Artwork - Frontier Scenes",
+    description: "Story-driven Western artwork where the visible moment carries tension, consequence, and an unfinished chapter.",
+    galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color",
+    allHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all#collection-browser",
+    ctaLabel: "See the full narrative Western artwork collection",
+    ctaThumb: "/img/i-B7ZSdfs/s.jpg",
+    items: narrativeColorItems,
+    limit: 19,
+  },
+  {
+    title: "Black and White Cowboy Artwork - Western Portrait Studies",
+    description: "Monochrome cowboy portrait artwork for collectors who want weathered character, tonal weight, and frontier restraint.",
+    galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White",
+    allHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/all#collection-browser",
+    ctaLabel: "See the full black and white cowboy artwork collection",
+    ctaThumb: "/images/tombstones/cowboy-bw-ts.jpg",
+    items: cowboyBlackWhiteItems,
+    limit: 19,
+  },
+  {
+    title: "Western Mountain Artwork - Painterly Mountain Prints",
+    description: "Mountain-driven Western artwork where scale, atmosphere, and landform become emotional structure rather than background.",
+    galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains",
+    allHref: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/all#collection-browser",
+    ctaLabel: "See the full Western mountain artwork collection",
+    ctaThumb: mountainTombstone,
+    items: mountainItems,
+    limit: 19,
+  },
+  {
+    title: "Black and White Narrative Western Artwork",
+    description: "Black and white frontier artwork where atmosphere, contrast, and tonal restraint carry the story further than color would.",
+    galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White",
+    allHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/all#collection-browser",
+    ctaLabel: "See the full black and white narrative Western artwork collection",
+    ctaThumb: "/img/i-kp5NHNw/s.jpg",
+    items: narrativeBlackWhiteItems,
+    limit: 19,
+  },
+];
+
+const commercialMiddleCopy = [
+  "Western artwork covers the full range of the American frontier - portrait character, open Western landscape, narrative frontier scene, monochrome atmosphere, and mountain presence. Start with the branch that fits the room or the collection.",
+  "Wayne Heim's Western artwork blends fine art photography, painterly finishing, and cinematic storytelling to create images rooted in frontier life, Western land, cowboy history, and the mythic American West.",
+  "These works are available as archival paper, canvas, metal, and wood presentations, with the Sketch Series opening at $25 and limited editions available for collectors who want provenance, permanence, and wall presence.",
+].join("\n\n");
+
+const copy = {
+  seoTitle: "Western Artwork - Fine Art Prints by Wayne Heim | K4 Studios",
+  seoDescription:
+    "Western artwork by Wayne Heim - cowboy portraits, frontier narratives, open landscapes, mountain scenes, and black and white studies. Archival prints from $25 through signed limited editions for living rooms, offices, lodges, and collector walls.",
+  indexDefinition:
+    "Wayne Heim's Western artwork includes color and black and white cowboy portraits, narrative frontier scenes, Western landscapes, and mountain artwork created as collector-grade fine art for homes, offices, lodges, and long-term display.",
+  indexLinkNote:
+    "This is the K4 route for broad Western artwork intent: western artwork, western themed art, western art prints, landscape artwork, mountain artwork, and painterly Western fine art.",
+  printAvailabilityNote: `Western artwork is available from ${getFormattedLowestStandardPrintPrice()} across archival paper, canvas, metal, and select wood presentations. Edition status and format options are shown on individual image pages.`,
+  commercialH1: "The Collection - Six Artwork Routes, 917 Works",
+  commercialDeck:
+    "Western portrait artwork, open-country landscapes, narrative frontier scenes, black and white studies, and mountain artwork - arranged so figure and land both have room to breathe.",
+  catalogEntranceTitle: "Western Artwork, Cowboy Portraits, Landscapes, and Frontier Scenes",
+  catalogEntranceCopy:
+    "Browse Western artwork, Western themed art, cowboy portrait work, black and white Western studies, narrative frontier scenes, Western landscapes, and mountain artwork created as collector-grade fine art.",
+  collectionIntro: commercialMiddleCopy,
+  breadcrumbCurrentName: "Western Artwork",
+  aggregateOfferLowPrice: "25",
+  aggregateOfferHighPrice: "5000",
+  aggregateOfferCount: String(westernArtworkCount),
+  gatewayCollectionName: "Western Artwork",
+  gatewayIntroCopy:
+    "Western artwork by Wayne Heim - color and black and white cowboy portraits, frontier narratives, open Western landscapes, mountain scenes, and story-driven imagery for homes, offices, lodges, ranch interiors, hospitality spaces, and collector walls.",
+  gatewaySupportingCopy:
+    "Each section is organized by subject - people or land - so you can compare the right Western artwork family before reading into the image story. The collection opens with the Sketch Series, 5x7 archival prints from $25, then scales through open-edition Foundation works, signed Chronicle editions, and ultra-limited Legend pieces for collectors who want provenance and permanence on the wall.\n\nClick into any section to compare prints, read the image story, and view collector and sizing details.",
+  gatewayKicker: "K4 Studios - Western Artwork Catalog",
+  gatewayHeroTitle: "Western Artwork by Wayne Heim",
+  gatewayHeroAlt:
+    "Painterly Western mountain artwork with open sky, landform, and collector-grade fine art atmosphere.",
+  gatewayHeroHref:
+    "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-zk7zXP3",
+  gatewayHeroSrc: "/img/i-zk7zXP3/l.jpg",
+  gatewayHeroSrcSet: "/img/i-zk7zXP3/m.jpg 720w, /img/i-zk7zXP3/l.jpg 1200w",
+  archiveContextCopy:
+    "Every work on this page is available as fine art - paper, canvas, metal, or wood - with the Sketch Series opening at $25. Click into any image to read the story, compare sizes, and view collector details. Questions about a specific piece? Reach Wayne directly at <a href='mailto:wayne@k4studios.com'>wayne@k4studios.com</a>.",
+  faqKicker: "Print & Collector Questions",
+  faqTitle: "Western Artwork FAQ",
+};
 ---
 
-<KeywordLandingPage
-  pagePath={pagePath}
-  imageSectionPath={imageSectionPath}
-  gridBasePath={gridBasePath}
-  galleryPaths={galleryPaths}
-  landing={landing}
-  breadcrumbItems={breadcrumbItems}
-  storyBlocks={storyBlocks}
-  faqItems={faqItems}
-  explorationIntro="Western Artwork Routes"
-  explorationPaths={explorationPaths}
-  featuredReadingTitle={featuredReadingTitle}
-  featuredReadingIntro={featuredReadingIntro}
-  featuredReadingItems={featuredReadingItems}
-  collectionGroups={collectionGroups}
-  gridImages={gridImages}
-  collection={collection}
-  faqSection={faqSection}
-  galleryData={cowboyColorGallery}
-  slides={[]}
-  meta={{
-    title: pageMeta.title,
-    description: pageMeta.description,
-    ogDescription: pageMeta.description,
+<CommercialDoorwayAllPage
+  rawGalleryData={cowboyColorItems}
+  entranceData={entranceData}
+  basePath={basePath}
+  contentBasePath={basePath}
+  canonicalPath={canonicalPath}
+  breadcrumbHtml={breadcrumbHtml}
+  breadcrumbStructuredItems={breadcrumbStructuredItems}
+  sectionDockItems={sectionDockItems}
+  dockCenterIndex={dockCenterIndex}
+  currentDockTitle="Western Artwork, Portraits, and Landscapes"
+  archiveContext={{
+    categoryUrl: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West",
+    categoryName: "Wild West",
   }}
-  structuredAbout={structuredAbout}
-  webPageAbout={webPageAbout}
-  genre={genre}
-  collectionAltPrefix={collectionAltPrefix}
-  heroVisualMode="hybridCarousel"
-  hybridCarouselProps={hybridCarouselProps}
+  identity={{
+    collectionName: "Western Artwork",
+    variantName: "Fine Art Prints",
+    variantDescriptor: "western artwork",
+    gatewayBrandLabel: "Western Artwork - Fine Art Prints by Wayne Heim",
+  }}
+  copy={copy}
+  faqItems={westernArtworkFAQ}
+  gridSections={gridSections}
+  dockVariant="wall-art"
 />

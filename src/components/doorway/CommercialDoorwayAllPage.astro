@@ -122,6 +122,21 @@ const formatCopy = (value = "") =>
     .replaceAll("{collectionName}", collectionName)
     .replaceAll("{collectionLower}", collectionName.toLowerCase())
     .replaceAll("{lowestPrintPrice}", getFormattedLowestStandardPrintPrice());
+const normalizedGridSections = gridSections
+  .map((section) => ({
+    ...section,
+    slug: section.slug || slugify(section.title),
+    items: (section.items || []).filter((img: any) =>
+      img?.id &&
+      img.visibility !== "ghost" &&
+      img.visibility !== "hidden" &&
+      img.id !== "i-k4studios"
+    ),
+    limit: section.limit || 19,
+  }))
+  .filter((section) => section.items.length > 0);
+const hasSectionedCatalog = normalizedGridSections.length > 0;
+const schemaImageGalleryId = hasSectionedCatalog ? `${canonicalUrl}#imagegallery` : imageGalleryId;
 
 // âœ… SEO-optimized title and description (factual, not poetic)
 const gatewayBrandLabel = identity.gatewayBrandLabel || `${collectionName} Fine Art Prints - ${variantName} Collection`;
@@ -143,7 +158,9 @@ const collectionIntroParagraphs = collectionIntro
   .split(/\n{2,}/)
   .map((paragraph) => paragraph.trim())
   .filter(Boolean);
+const gatewayKicker = formatCopy(copy.gatewayKicker || "K4 STUDIOS FINE ART PRINT CATALOG");
 const gatewayCollectionName = formatCopy(copy.gatewayCollectionName || collectionName);
+const gatewayBrandClass = String(copy.gatewayBrandClass || "").trim();
 const gatewayIntroCopy = formatCopy(copy.gatewayIntroCopy || `${imageCount} painterly ${variantName.toLowerCase()} ${collectionName.toLowerCase()} fine art photographs by Wayne Heim, available as archival fine art prints from ${getFormattedLowestStandardPrintPrice()}. Four edition tiers - open-edition studies to ultra-limited signed collector works - on fine art paper and Baltic Birch wood panels.`);
 const gatewaySupportingCopy = formatCopy(copy.gatewaySupportingCopy || `Every image below is a complete story in a single frame. Click any work to read the narrative, explore collector notes, and view print details.`);
 const gatewaySupportingParagraphs = gatewaySupportingCopy
@@ -283,10 +300,24 @@ filteredGalleryData.forEach((item: any) => {
   }));
 });
 
-const itemListElement = filteredGalleryData
-  .filter((image: any) => image?.id)
-  .map((image: any, index: number) => {
-    const imagePageUrl = `${galleryBaseUrl}/${image.id}`;
+const schemaListItems = hasSectionedCatalog
+  ? normalizedGridSections.flatMap((section) =>
+      section.items.map((image: any) => ({
+        image,
+        galleryPath: section.galleryPath,
+      }))
+    )
+  : filteredGalleryData.map((image: any) => ({
+      image,
+      galleryPath: contentBasePath,
+    }));
+
+const itemListElement = schemaListItems
+  .filter((entry: any) => entry.image?.id)
+  .map((entry: any, index: number) => {
+    const image = entry.image;
+    const imageBaseUrl = `${siteOrigin}${entry.galleryPath || contentBasePath}`;
+    const imagePageUrl = `${imageBaseUrl}/${image.id}`;
     const imageName = cleanForDisplay(image.title || image.id);
 
     return {
@@ -303,6 +334,21 @@ const itemListElement = filteredGalleryData
       },
     };
   });
+const stripHtml = (value = "") =>
+  String(value)
+    .replace(/<[^>]+>/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+const faqSchemaEntity = faqItems
+  .filter((item: any) => item?.q && Array.isArray(item.a) && item.a.length > 0)
+  .map((item: any) => ({
+    "@type": "Question",
+    "name": stripHtml(item.q),
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": stripHtml(item.a.join(" ")),
+    },
+  }));
 
 const breadcrumbJsonItems = [
   { "@type": "ListItem", "position": 1, "item": { "@id": `${siteOrigin}/`, "name": "Home" } },
@@ -337,14 +383,14 @@ const structuredDataJson = JSON.stringify({
       },
       "creator": { "@id": "https://www.k4studios.com/#person" },
       "publisher": { "@id": "https://www.k4studios.com/#organization" },
-      "mainEntity": { "@id": imageGalleryId },
+      "mainEntity": { "@id": schemaImageGalleryId },
       "offers": aggregateOffer
     },
     {
       "@type": "ImageGallery",
-      "@id": imageGalleryId,
-      "url": galleryBaseUrl,
-      "name": `${galleryTitle} Collection`,
+      "@id": schemaImageGalleryId,
+      "url": hasSectionedCatalog ? canonicalUrl : galleryBaseUrl,
+      "name": hasSectionedCatalog ? `${collectionName} Collection` : `${galleryTitle} Collection`,
       "description": seoDescription,
       "creator": { "@id": "https://www.k4studios.com/#person" },
       "publisher": { "@id": "https://www.k4studios.com/#organization" },
@@ -353,7 +399,7 @@ const structuredDataJson = JSON.stringify({
     {
       "@type": "ItemList",
       "@id": itemListId,
-      "name": `${galleryTitle} Image List`,
+      "name": hasSectionedCatalog ? `${collectionName} Image List` : `${galleryTitle} Image List`,
       "numberOfItems": itemListElement.length,
       "itemListOrder": "https://schema.org/ItemListOrderAscending",
       "itemListElement": itemListElement
@@ -362,7 +408,12 @@ const structuredDataJson = JSON.stringify({
       "@type": "BreadcrumbList",
       "@id": breadcrumbId,
       "itemListElement": breadcrumbJsonItems
-    }
+    },
+    ...(faqSchemaEntity.length > 0 ? [{
+      "@type": "FAQPage",
+      "@id": `${canonicalUrl}#faq`,
+      "mainEntity": faqSchemaEntity
+    }] : [])
   ]
 }, null, 2);
 
@@ -390,19 +441,6 @@ const compactBreadcrumbHtml = breadcrumbHtml
 const faqSplitIndex = Math.ceil(faqItems.length / 2);
 const faqLeft = faqItems.slice(0, faqSplitIndex);
 const faqRight = faqItems.slice(faqSplitIndex);
-const normalizedGridSections = gridSections
-  .map((section) => ({
-    ...section,
-    slug: section.slug || slugify(section.title),
-    items: (section.items || []).filter((img: any) =>
-      img?.id &&
-      img.visibility !== "ghost" &&
-      img.visibility !== "hidden" &&
-      img.id !== "i-k4studios"
-    ),
-    limit: section.limit || 19,
-  }))
-  .filter((section) => section.items.length > 0);
 ---
 
 <BaseLayout title={seoTitle} description={seoDescription} meta={pageMeta} structuredDataJSON={structuredDataJson} disableAutoBreadcrumbs={true}>
@@ -430,8 +468,8 @@ const normalizedGridSections = gridSections
         </span>
       </a>
       <div class="gateway-copy">
-        <p class="gateway-kicker">K4 STUDIOS FINE ART PRINT CATALOG</p>
-        <h1 class="gateway-brand" id="gateway-heading">{gatewayBrandLabel}</h1>
+        <p class="gateway-kicker">{gatewayKicker}</p>
+        <h1 class:list={["gateway-brand", gatewayBrandClass]} id="gateway-heading">{gatewayBrandLabel}</h1>
         <p class="gateway-copy-text">{gatewayIntroCopy}</p>
         {gatewaySupportingParagraphs.map((paragraph) => (
           <p class="gateway-copy-text">{paragraph}</p>
@@ -840,12 +878,13 @@ const normalizedGridSections = gridSections
     <ArchiveContext 
       categoryUrl={archiveContext.categoryUrl || basePath} 
       categoryName={archiveContext.categoryName || collectionName} 
+      copyHtml={copy.archiveContextCopy || ""}
     />
 
     {faqItems.length > 0 && (
       <section class="faq-section pb-10" id="faq">
         <div class="faq-shell">
-          <p class="faq-kicker">Collector Questions</p>
+          <p class="faq-kicker">{copy.faqKicker || "Collector Questions"}</p>
           <h2 class="faq-title">{copy.faqTitle || "Western Wall Art FAQ"}</h2>
 
           <div class="faq-columns">
@@ -1015,6 +1054,10 @@ const normalizedGridSections = gridSections
       line-height:1.02;
       font-weight:700;
       max-width:none;
+    }
+    .gateway-brand--compact {
+      font-size:clamp(1.94rem, 3.72vw, 3.18rem);
+      letter-spacing:-.016em;
     }
     .gateway-copy-text {
       margin:0 0 12px;

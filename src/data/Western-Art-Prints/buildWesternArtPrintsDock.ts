@@ -2,7 +2,6 @@ import { landingWestern as facingHistoryLanding } from "@/data/Galleries/Painter
 import { landingWestern as wildWestLanding } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/landingstones.ts";
 import { landingWestern as cowboyPortraitLanding } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/landingstones.ts";
 import { landingWestern as westernNarrativeLanding } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/landingstones.ts";
-import { landingWestern as landscapeLocationLanding } from "@/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/landingstones.ts";
 
 const withoutFragment = (href = "") => String(href).split("#")[0];
 const toAllHref = (href = "") => `${withoutFragment(href).replace(/\/$/, "")}/all#collection-browser`;
@@ -25,104 +24,86 @@ const supportItem = (title: string, href: string, thumb: string, subtitle = "") 
   dockPrefix: "",
 });
 
-const narrativeWomanRiderThumb = "/img/i-G7csptc/s.jpg";
-const narrativeJourneyThumb = "/img/i-4zxZQQ2/s.jpg";
-const cinematicWesternThumb = "/img/i-7VWX9vk/s.jpg";
+const westernFineArtThumb = "/img/i-gxMVNh3/s.jpg";
+const narrativeThumb = "/img/i-B7ZSdfs/s.jpg";
+const printOptionsThumb = "/images/tombstones/print-options-ts.webp";
+const engrainedThumb = "/images/tombstones/engrained-ts.jpg";
 const displayWesternArtThumb = "/img/i-44jcjTQ/s.jpg";
-const decorVsFineArtThumb = "/images/tombstones/traditional-ts.webp";
-const westernFineArtPhotographyThumb = "/img/i-gxMVNh3/s.jpg";
+const westernArtThumb = "/images/tombstones/traditional-ts.webp";
 
-export const buildWesternWallArtDock = () => {
-  const landscapeWest = landscapeLocationLanding.tombstones.find((stone: any) =>
-    String(stone.href || "").includes("/Landscapes/By-Location/West/")
-  );
+export const buildWesternArtPrintsDock = () => {
   const facingHistoryWildWest = facingHistoryLanding.tombstones.find((stone: any) =>
     String(stone.href || "").includes("/Facing-History/Wild-West")
   );
 
   const sectionDockItems = [
     supportItem(
-      "What Is Painterly Photography?",
-      "/Blog/what-is-painterly-photography",
-      "/images/tombstones/Painterly-ts.webp"
-    ),
-    supportItem(
       "What Is Western Fine Art Photography?",
       "/Blog/what-is-western-fine-art-photography",
-      westernFineArtPhotographyThumb
+      westernFineArtThumb
     ),
     supportItem(
-      "Narrative vs Traditional Western Art",
-      "/Blog/narrative-western-art-vs-traditional",
-      narrativeJourneyThumb
+      "What Makes a Fine Art Print Worth Owning?",
+      "/Blog/what-makes-a-fine-art-print-worth-owning",
+      printOptionsThumb
     ),
     supportItem(
-      "How to Display Western Art in a Modern Home Without Turning It Into a Theme Room",
-      "/Blog/how-to-display-western-art-in-a-modern-home",
-      displayWesternArtThumb
+      "Wood Prints vs Paper Prints",
+      "/Blog/wood-prints-vs-paper-prints",
+      engrainedThumb
     ),
-    asDockItem(facingHistoryLanding.tombstones[0], {
-      title: "Facing History",
-      href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History",
-      dockRole: "support",
-    }),
-    { separator: true, label: "Core Western wall art collections" },
+    supportItem(
+      "What Is Western Art?",
+      "/Blog/what-is-western-art",
+      westernArtThumb
+    ),
+    { separator: true, label: "Core Western art print collections" },
     asDockItem(westernNarrativeLanding.tombstones[0], {
-      title: "Western Narrative Color Art",
+      title: "Western Narrative Color Prints",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all#collection-browser",
-      thumb: narrativeWomanRiderThumb,
+      thumb: narrativeThumb,
       dockRole: "core",
     }),
     asDockItem(westernNarrativeLanding.tombstones[1], {
-      title: "Black and White Western Narrative Art",
+      title: "Black and White Western Narrative Prints",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/all#collection-browser",
       dockRole: "core",
     }),
-    asDockItem(landscapeWest || {}, {
-      title: "Western Landscape Wall Art",
-      href: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/all#collection-browser",
-      dockRole: "core",
-    }),
     asDockItem(cowboyPortraitLanding.tombstones[0], {
-      title: "Color Cowboy Wall Art",
+      title: "Color Cowboy Art Prints",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/all#collection-browser",
       dockRole: "core",
     }),
     asDockItem(cowboyPortraitLanding.tombstones[1], {
-      title: "Black and White Cowboy Portrait Art",
+      title: "Black and White Cowboy Art Prints",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/all#collection-browser",
       dockRole: "core",
     }),
-    { separator: true, label: "Western wall art context and collector notes" },
+    { separator: true, label: "Western art print context and collector notes" },
     asDockItem(facingHistoryWildWest || wildWestLanding.tombstones[0], {
       title: "Wild West",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West",
       dockRole: "support",
     }),
     supportItem(
-      "What Makes an Image Feel Cinematic?",
-      "/Blog/what-makes-an-image-feel-cinematic",
-      cinematicWesternThumb
+      "How to Display Western Art in a Modern Home Without Turning It Into a Theme Room",
+      "/Blog/how-to-display-western-art-in-a-modern-home",
+      displayWesternArtThumb
+    ),
+    supportItem(
+      "Narrative Western Art vs Traditional Western Art",
+      "/Blog/narrative-western-art-vs-traditional",
+      narrativeThumb
     ),
     supportItem(
       "Decor Art vs Fine Art: What Is the Difference?",
       "/Blog/decor-art-vs-fine-art",
-      decorVsFineArtThumb
-    ),
-    supportItem(
-      "What Makes a Fine Art Print Worth Owning?",
-      "/Blog/what-makes-a-fine-art-print-worth-owning",
-      "/images/tombstones/print-options-ts.webp"
-    ),
-    supportItem(
-      "Wood Prints vs Paper Prints",
-      "/Blog/wood-prints-vs-paper-prints",
-      "/images/tombstones/engrained-ts.jpg"
+      "/images/tombstones/traditional-ts.webp"
     ),
   ];
 
   return {
     sectionDockItems,
-    dockCenterIndex: sectionDockItems.findIndex((item: any) => item.title === "Western Landscape Wall Art"),
+    dockCenterIndex: sectionDockItems.findIndex((item: any) => item.title === "Western Narrative Color Prints"),
   };
 };

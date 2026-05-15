@@ -1,694 +1,182 @@
 ---
 export const prerender = true;
-import BaseLayout         from '@/layouts/BaseLayout.astro';
-import { getSemanticImageUrl, normalizeImageSrc } from "@/utils/imageProxy.js";
-import LandingHeader      from '@/components/Landing-Header.jsx';
-import TombstoneNav       from '@/components/TombstoneNav.jsx';
-import LandingRightImages from '@/components/LandingRightImages.jsx';
-import FAQAccordion       from '@/components/FAQAccordion.jsx';
-import SiteFooter         from '@/components/Footer.astro';
-import MobileStoryImages  from '@/components/MobileStoryImages.jsx';
-import StorySlider        from '@/components/StorySlider.tsx';
-import HybridBookCarousel from '@/components/hybrid/HybridBookCarousel.jsx';
-import { sanitizeForClient } from '@/components/utils/normalizeImage.ts';
 
-// Gallery data for story slider + thumbnails
-import { galleryData as cowboyColorDataFull }
-  from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs';
-import { galleryData as cowboyBWData }
-  from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs';
-import { galleryData as westernNarrativesColorData }
-  from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs';
-import { galleryData as cowboyNAData }
-  from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs';
-import { storySliderImageIds } from '@/data/storySlider.ts';
+import CommercialDoorwayAllPage from "@/components/doorway/CommercialDoorwayAllPage.astro";
+import { galleryData as cowboyColorData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs";
+import { galleryData as cowboyBlackWhiteData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs";
+import { galleryData as narrativeColorData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs";
+import { galleryData as narrativeBlackWhiteData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs";
+import { galleryData as nativeColorData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs";
+import { entranceData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/ColorEntranceData.ts";
+import { buildWesternPhotographyArtDock } from "@/data/Western-Photography-Art/buildWesternPhotographyArtDock.ts";
+import { westernArtFAQ } from "@/data/Western-Photography-Art/faq.ts";
+import { getFormattedLowestStandardPrintPrice } from "@/data/pricing/printSeries.js";
 
-import { getStructuredData, getBreadcrumbList } from '@/components/utils/getStructuredData.ts';
-import { getLandingMeta } from '@/data/landingMeta.ts';
-
-import { siteNav } from '@/data/siteNav.ts';
-import { getOrderedWesternGalleryPaths } from '@/data/carousel/westernRouting.ts';
-import { getFeatheredImages } from '@/components/utils/getFeatheredImages.ts';
-import { autoLinkKeywordsInText } from '@/components/utils/autoLinkKeywordsInText.ts';
-import { semantic as k4Semantic } from '@/data/semantic/K4-Sem.ts';
-import { westernArtistAttributionHtml } from '@/data/wayneEntity.js';
-
-// ✅ HUB-SCOPED DATA SOURCES
-import { landingWesternArt }
-  from '@/data/Western-Photography-Art/landingstones.ts';
-import { westernArtStory }
-  from '@/data/Western-Photography-Art/story.ts';
-import { westernArtFAQ }
-  from '@/data/Western-Photography-Art/faq.ts';
-
-import '@/styles/global.css';
-import '@/styles/oneupheader.css';
-
-// ----------------------
-// PATHS
-// ----------------------
 const pagePath = "/Western-Photography-Art";
-const openingDefinition = [
-  "Western photography art — often phrased as Western art photography — is authored photographic work that interprets the American West through deliberate artistic craft, narrative intent, and historical awareness. Rather than documenting the West as scenery or modern ranch life, Western photography art interprets the frontier itself—placing photography within the same visual tradition that shaped Western painting and illustration.",
-  "At its strongest, Western photography art moves beyond subject description and into story, suggesting what happened before the frame and what may follow after it.",
-  "In this tradition the camera becomes more than a recording device. Light, composition, atmosphere, and tone are shaped deliberately so a photograph carries the narrative gravity of a painting while remaining rooted in the authenticity of the photographic medium.",
-  "The result is work that explores the American West not as postcard scenery, but as lived history—the people, landscapes, and pressures that created the frontier world."
-];
+const basePath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color";
+const canonicalPath = pagePath;
 
-const signatureThesisLine = "Before the legend came the lives that built it.";
-
-// Real siteNav node for feathering + gallery pool + autolinking
-const imageSectionPath =
-  "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits";
-
-// ----------------------
-// CAROUSEL SLIDES (top 6 rated from Color gallery)
-// ----------------------
-const carouselGalleryBasePath =
-  "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color";
-
-function ensureAlt(img: any) {
-  const base = (img?.alt || img?.title || '').trim();
-  if (!base) return 'Painterly Western fine art photography by Wayne Heim';
-  if (!img?.alt) return `${base} — painterly Western fine art photography by Wayne Heim`;
-  return base;
-}
-
-const carouselSlides = cowboyColorDataFull
-  .filter((img: any) => img.visibility !== 'ghost' && img.id !== 'i-k4studios' && img.rating >= 4)
-  .sort((a: any, b: any) => a.sortOrder - b.sortOrder)
-  .slice(0, 6)
-  .map((img: any) => ({
-    id: img.id,
-    title: img.title,
-    alt: ensureAlt(img),
-    story: img.story || '',
-  }));
-
-// ----------------------
-// STORY SLIDER DATA
-// ----------------------
-const cowboyColorData = cowboyColorDataFull
-  .filter((img: any) => storySliderImageIds.includes(img.id))
-  .map((img: any) => ({ id: img.id, title: img.title, story: img.story }));
-
-// ----------------------
-// NAV HELPERS
-// ----------------------
-function findNavEntry(nav: any[], url: string): any | null {
-  for (const entry of nav) {
-    if (entry.href === url) return entry;
-    if (entry.children) {
-      const found = findNavEntry(entry.children, url);
-      if (found) return found;
-    }
-  }
-  return null;
-}
-
-const galleryPaths: string[] = getOrderedWesternGalleryPaths(imageSectionPath);
-
-// Load galleryData for those galleryPaths
-const allGalleryData = import.meta.glob('../../data/Galleries/**/*.mjs', { eager: true }) as any;
-const galleryDatas = galleryPaths.map((path) => {
-  const filePath = "../../data/Galleries" + path.replace(/^\/Galleries/, "") + ".mjs";
-  return allGalleryData[filePath]?.galleryData || [];
-});
-
-// Feathering
-const headingCount = westernArtStory.filter((block: any, i: number) => i > 0 && block.subhead).length;
-
-const landingDescription =
-  landingWesternArt.subtitle || '';
-
-const featheredImages = getFeatheredImages({
-  sectionPath: imageSectionPath,
-  headingCount: Math.max(headingCount, 9),
-  galleryDatas,
-  galleryPaths,
-  minRating: 3,
-  fallbackMin: 1,
-  poolMultiplier: 3
-});
-
-// ----------------------
-// STRUCTURED DATA
-// ----------------------
-const structuredData = getStructuredData({
-  type: "gallery",
-  data: {
-    title: landingWesternArt.title,
-    description: landingDescription,
-    url: `https://www.k4studios.com${pagePath}`,
-    keywords: landingWesternArt.keywords || [],
-    copyrightNotice: "© Wayne Heim",
-    about: [
-      { "@type": "Thing", name: "Western Photography Art" },
-      { "@type": "Thing", name: "American West Art" },
-      { "@type": "Thing", name: "Cowboy Portraiture" },
-      { "@type": "Thing", name: "Narrative Western Art" },
-      { "@type": "Thing", name: "Frontier Art Photography" },
-      { "@type": "Thing", name: "Western Art Tradition" },
-      { "@type": "Thing", name: "Painterly Photography" },
-    ],
-    genre: "Western Photography Art",
-  },
-  images: featheredImages,
-  defaults: {
-    copyrightNotice: "© Wayne Heim",
-    license: "https://www.k4studios.com/copyright",
-    acquireLicensePage: "https://www.k4studios.com/Other/Print-Options",
-    creditText: "Wayne Heim",
-    creatorName: "Wayne Heim",
-    creatorUrl: "https://www.k4studios.com/"
-  }
-});
-
-// ----------------------
-// BREADCRUMB STRUCTURED DATA
-// ----------------------
-const breadcrumbData = getBreadcrumbList([
-  { name: "Home", item: "https://www.k4studios.com/" },
-  { name: "Western Photography Art", item: `https://www.k4studios.com${pagePath}` },
-]);
-
-// ----------------------
-// FAQ STRUCTURED DATA
-// ----------------------
-const stripHtml = (text: string) => text.replace(/<[^>]*>/g, '').trim();
-
-const faqStructuredData = JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "@id": `https://www.k4studios.com${pagePath}#faq`,
-  mainEntity: westernArtFAQ.slice(0, 10).map((item: any) => ({
-    "@type": "Question",
-    name: item.q,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: stripHtml(Array.isArray(item.a) ? item.a.join(" ") : item.a),
-    },
-  })),
-}, null, 2);
-
-// ----------------------
-// WEBPAGE SCHEMA
-// ----------------------
-const webPageSchema = JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "@id": `https://www.k4studios.com${pagePath}#webpage`,
-  url: `https://www.k4studios.com${pagePath}`,
-  name: "Western Photography Art",
-  description: "Western photography art by Wayne Heim—also aligned with the term Western art photography—created through narrative intent, historical awareness, and deliberate artistic craft.",
-  inLanguage: "en",
-  isPartOf: {
-    "@type": "WebSite",
-    "@id": "https://www.k4studios.com/#website",
-    name: "K4 Studios",
-    url: "https://www.k4studios.com/"
-  },
-  about: [
-    { "@type": "Thing", name: "Western Photography Art" },
-    { "@type": "Thing", name: "Western Art Photography" },
-    { "@type": "Thing", name: "American West Photography Art" },
-    { "@type": "Thing", name: "Narrative Western Art" },
-    { "@type": "Thing", name: "Cowboy Art" },
-    { "@type": "Thing", name: "American Frontier Art" }
-  ],
-  author: { "@id": "https://www.k4studios.com/#person" },
-  creator: { "@id": "https://www.k4studios.com/#person" },
-  copyrightHolder: { "@id": "https://www.k4studios.com/#person" },
-  mainEntity: { "@id": `https://www.k4studios.com${pagePath}#imagegallery` },
-}, null, 2);
-
-// OG/Twitter image
-function makeAbsoluteUrl(src?: string) {
-  if (!src) return "";
-  if (src.startsWith("http://") || src.startsWith("https://")) return src;
-  return `https://www.k4studios.com${src.startsWith("/") ? src : "/" + src}`;
-}
-
-function getProxySrc(imageId: string, size: string = 'm'): string {
-  if (!imageId) return '';
-  return getSemanticImageUrl(imageId, {}, size);
-}
-
-const landingImg = featheredImages[0];
-const landingImgUrl = landingImg?.id ? makeAbsoluteUrl(getProxySrc(landingImg.id, 'l')) : '';
-
-const meta = getLandingMeta(pagePath, landingImgUrl);
-if (!meta.ogUrl) meta.ogUrl = `https://www.k4studios.com${pagePath}`;
-if (!meta.twitterUrl) meta.twitterUrl = `https://www.k4studios.com${pagePath}`;
-
-// ----------------------
-// DYNAMIC TOMBSTONE THUMBNAILS
-// ----------------------
-function getTombstoneThumbs(galleryData: any[]): string[] {
-  const validImages = galleryData
-    .filter((img: any) => img.id !== 'i-k4studios' && img.visibility !== 'ghost')
-    .slice(0, 10);
-  return validImages
-    .map((img: any) => img.id ? getProxySrc(img.id, 's') : '')
-    .filter((src: string) => src !== '');
-}
-
-const tombstoneGalleryMap: Record<string, any[]> = {
-  '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color': cowboyColorDataFull,
-  '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White': cowboyBWData,
-  '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color': westernNarrativesColorData,
-  '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color': cowboyNAData,
+const rotateGallery = (items: any[] = [], offset = 0) => {
+  const cleanItems = items.filter((item: any) =>
+    item?.id &&
+    item.id !== "i-k4studios" &&
+    item.visibility !== "ghost" &&
+    item.visibility !== "hidden" &&
+    item.visibility !== "hide"
+  );
+  if (cleanItems.length === 0) return cleanItems;
+  const start = offset % cleanItems.length;
+  return [...cleanItems.slice(start), ...cleanItems.slice(0, start)];
 };
 
-const tombstonesWithThumbs = landingWesternArt.tombstones.map((stone: any) => {
-  if (stone.thumb) {
-    const thumb = normalizeImageSrc(stone.thumb, 's');
-    return { ...stone, thumb, thumbs: [thumb] };
-  }
-  const galleryData = tombstoneGalleryMap[stone._thumbSource || stone.href];
-  const thumbs = galleryData ? getTombstoneThumbs(galleryData) : [];
-  return {
-    ...stone,
-    thumb: thumbs[0] || '',
-    thumbs,
-  };
-});
+const narrativeColorItems = rotateGallery(narrativeColorData, 171);
+const narrativeBlackWhiteItems = rotateGallery(narrativeBlackWhiteData, 93);
+const cowboyColorItems = rotateGallery(cowboyColorData, 111);
+const cowboyBlackWhiteItems = rotateGallery(cowboyBlackWhiteData, 71);
+const nativeColorItems = rotateGallery(nativeColorData, 12);
+const westernPhotographyArtCount =
+  narrativeColorData.length +
+  narrativeBlackWhiteData.length +
+  cowboyColorData.length +
+  cowboyBlackWhiteData.length +
+  nativeColorData.length;
+
+const breadcrumbHtml = [
+  '<a href="/">Wayne Heim</a>',
+  '<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Facing History</a>',
+  '<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West">Wild West</a>',
+  "Western Photography Art",
+].join(" | ");
+
+const breadcrumbStructuredItems = [
+  { href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History", name: "Facing History" },
+  { href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West", name: "Wild West" },
+];
+
+const { sectionDockItems, dockCenterIndex } = buildWesternPhotographyArtDock();
+
+const gridSections = [
+  {
+    title: "Western Photography Art - Color Frontier Narratives",
+    description: "Color Western photography art built around frontier atmosphere, painterly light, and story pressure that carries beyond the frame.",
+    galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color",
+    allHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all#collection-browser",
+    ctaLabel: "See the full color Western narrative art collection",
+    ctaThumb: "/img/i-B7ZSdfs/s.jpg",
+    items: narrativeColorItems,
+    limit: 19,
+  },
+  {
+    title: "Black and White Western Photography Art",
+    description: "Monochrome Western photography art where tonal restraint, old West atmosphere, and contrast carry the story.",
+    galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White",
+    allHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/all#collection-browser",
+    ctaLabel: "See the full black and white Western narrative art collection",
+    ctaThumb: "/img/i-kp5NHNw/s.jpg",
+    items: narrativeBlackWhiteItems,
+    limit: 19,
+  },
+  {
+    title: "Cowboy Photography Art - Color Western Portraits",
+    description: "Color cowboy photography art with painterly character, authored presence, and room-ready Western gravity.",
+    galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
+    allHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/all#collection-browser",
+    ctaLabel: "See the full color cowboy photography art collection",
+    ctaThumb: "/images/tombstones/cowboy-c-ts.jpg",
+    items: cowboyColorItems,
+    limit: 19,
+  },
+  {
+    title: "Black and White Cowboy Photography Art",
+    description: "Black and white cowboy photography art for collectors who want weathered character, tonal weight, and frontier restraint.",
+    galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White",
+    allHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/all#collection-browser",
+    ctaLabel: "See the full black and white cowboy photography art collection",
+    ctaThumb: "/images/tombstones/cowboy-bw-ts.jpg",
+    items: cowboyBlackWhiteItems,
+    limit: 19,
+  },
+  {
+    title: "Native American Western Photography Art",
+    description: "Historically grounded Native American portrait work shaped with painterly restraint, human presence, and authored respect.",
+    galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color",
+    allHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color/all#collection-browser",
+    ctaLabel: "See the full Native American Western photography art collection",
+    ctaThumb: "/img/i-LCspRF4/s.jpg",
+    items: nativeColorItems,
+    limit: 19,
+  },
+];
+
+const commercialMiddleCopy = [
+  "Western photography art names the place where photographic truth meets the older Western art tradition - where a camera-made image carries the authored presence of painting. Start with the subject family below: frontier narrative, cowboy portrait, monochrome atmosphere, or Native American portrait work.",
+  "K4 Studios treats the camera as the beginning, not the end. Wayne Heim's images are shaped through painterly process, tonal control, authored titles, and story structure so each finished work carries the presence of art rather than simple photographic record.",
+  "These works are available as archival paper, canvas, metal, and wood presentations, with the Sketch Series opening at $25 and limited editions available for collectors who want provenance, permanence, and wall presence.",
+].join("\n\n");
+
+const copy = {
+  seoTitle: "Western Photography Art - Fine Art Prints by Wayne Heim | K4 Studios",
+  seoDescription:
+    "Western photography art by Wayne Heim - frontier narratives, cowboy portraits, and Native American portrait work shaped through painterly process into collector-grade fine art. Archival prints from $25 through signed limited editions.",
+  indexDefinition:
+    "Western photography art is authored photographic work that interprets the American West through painterly craft, narrative intent, historical awareness, and collector-grade presentation.",
+  indexLinkNote:
+    "This is the K4 route for Western photography art, Western art photography, cowboy art photography, frontier photography art, and painterly Western fine art prints.",
+  printAvailabilityNote: `Western photography art is available from ${getFormattedLowestStandardPrintPrice()} across archival paper, canvas, metal, and select wood presentations. Edition status and format options are shown on individual image pages.`,
+  commercialH1: "The Collection - Five Subject Series, 840+ Works",
+  commercialDeck:
+    "Frontier narratives, cowboy portraits, Native American portrait work, and painterly Western photographs in color and black and white.",
+  catalogEntranceTitle: "Western Photography Art, Cowboy Portraits, and Frontier Stories",
+  catalogEntranceCopy:
+    "Browse Western photography art, Western art photography, cowboy portrait art, and narrative frontier imagery created as collector-grade fine art.",
+  collectionIntro: commercialMiddleCopy,
+  breadcrumbCurrentName: "Western Photography Art",
+  aggregateOfferLowPrice: "25",
+  aggregateOfferHighPrice: "5000",
+  aggregateOfferCount: String(westernPhotographyArtCount),
+  gatewayCollectionName: "Western Photography Art",
+  gatewayIntroCopy:
+    "Western photography art by Wayne Heim - frontier narratives, cowboy portraits, Western character studies, Native American portrait work, and story-driven imagery for homes, offices, lodges, ranch interiors, hospitality spaces, and collector walls.",
+  gatewaySupportingCopy:
+    "Each section is organized by subject and treatment - color or black and white - so you can compare the right Western art photography path before reading into the image story. The collection opens with the Sketch Series, 5x7 archival prints from $25, then scales through open-edition Foundation works, signed Chronicle editions, and ultra-limited Legend pieces for collectors who want provenance and permanence on the wall.\n\nClick into any section to compare prints, read the image story, and view collector and sizing details.",
+  gatewayKicker: "K4 Studios - Western Photography Art Catalog",
+  gatewayHeroTitle: "Western Photography Art by Wayne Heim",
+  gatewayHeroAlt:
+    "Native American rider in painterly Western photography art with open land, atmospheric sky, and authored fine art presence.",
+  gatewayHeroHref:
+    "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color/i-rRdrQBg",
+  gatewayHeroSrc: "/img/i-rRdrQBg/l.jpg",
+  gatewayHeroSrcSet: "/img/i-rRdrQBg/m.jpg 720w, /img/i-rRdrQBg/l.jpg 1200w",
+  archiveContextCopy:
+    "Every work on this page is available as fine art - paper, canvas, metal, or wood - with the Sketch Series opening at $25. Click into any image to read the story, compare sizes, and view collector details. Questions about a specific piece? Reach Wayne directly at <a href='mailto:wayne@k4studios.com'>wayne@k4studios.com</a>.",
+  faqKicker: "Print & Collector Questions",
+  faqTitle: "Western Photography Art FAQ",
+};
 ---
 
-<BaseLayout
-  title="Western Photography Art – Wayne Heim | K4 Studios"
-  structuredDataJSON={structuredData}
-  breadcrumbsJSON={breadcrumbData}
-  meta={meta}
->
-  <!-- FAQ Structured Data for rich snippets -->
-  <script type="application/ld+json" set:html={faqStructuredData} slot="head"></script>
-  <!-- WebPage Schema (subject authority) -->
-  <script type="application/ld+json" set:html={webPageSchema} slot="head"></script>
-
-  <!-- Article Structured Data for topical authority -->
-  <script type="application/ld+json" is:inline>
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Western Photography Art: Painterly Fine Art Photography Inspired by the American Frontier",
-    "author": {
-      "@type": "Person",
-      "name": "Wayne Heim"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "K4 Studios",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.k4studios.com/images/k4-logo.png"
-      }
-    },
-    "description": "Western photography art interprets the American West through deliberate artistic craft, narrative intent, and historical awareness—placing photography within the same visual tradition that shaped Western painting and illustration.",
-    "mainEntityOfPage": "https://www.k4studios.com/Western-Photography-Art"
-  }
-  </script>
-  
-  <main class="bg-[#ffffff] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
-    <div class="drawer-mode">
-      <LandingHeader client:load breadcrumb={landingWesternArt.breadcrumb} />
-    </div>
-
-    <div class="mobile-breadcrumb-wrapper">
-      <div class="mobile-breadcrumb" set:html={landingWesternArt.breadcrumb} />
-    </div>
-
-    <div class="w-full max-w-[1200px] mx-auto px-4">
-      <div class="hero-carousel-section reveal-on-scroll">
-        <HybridBookCarousel
-          client:load
-          slides={carouselSlides as unknown as never[]}
-          galleryBasePath={carouselGalleryBasePath}
-          kicker="One-Image Movie"
-          counterLabel="Story"
-        />
-      </div>
-    </div>
-
-    <section class="section-heading-wrap">
-      <div class="section-heading">
-        <h1 class="page-title fade-in reveal-on-scroll">{landingWesternArt.title}</h1>
-        <h2 class="page-subtitle fade-in reveal-on-scroll">{landingWesternArt.subtitle}</h2>
-        <div class="page-summary fade-in reveal-on-scroll">
-          {openingDefinition.map((paragraph) => (
-            <p>{paragraph}</p>
-          ))}
-          <p set:html={westernArtistAttributionHtml} />
-        </div>
-      </div>
-    </section>
-
-    <!-- Tombstones -->
-    <section class="collections-nav-section">
-      <h3 class="collections-heading fade-in reveal-on-scroll">Explore the Western Art Collection</h3>
-      <p class="page-context-link fade-in reveal-on-scroll" style="margin-top:0.5rem; margin-bottom:1rem; text-align:center;">
-        These collections show Western photography art at the point where subject becomes story.
-      </p>
-      <TombstoneNav client:load items={tombstonesWithThumbs} />
-    </section>
-
-    <section class="story-layout">
-      <div class="text-column">
-        <section class="story-section">
-          {westernArtStory.map((section: any, index: number) => (
-            <article class="story-block">
-              {section.title && (
-                <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths, k4Semantic, pagePath)} />
-              )}
-              {section.subhead && (
-                <h3 class="slide-in-left" set:html={autoLinkKeywordsInText(section.subhead, galleryDatas, featheredImages, galleryPaths, k4Semantic, pagePath)} />
-              )}
-              {section.tagline && (
-                <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInText(section.tagline, galleryDatas, featheredImages, galleryPaths, k4Semantic, pagePath)} />
-              )}
-
-              {section.paragraphs?.map((para: string) => (
-                <p
-                  class:list={[
-                    'reveal-on-scroll',
-                    para === signatureThesisLine && 'signature-thesis-line'
-                  ]}
-                  set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic, pagePath)}
-                />
-              ))}
-
-              {section.list && section.list.length > 0 && (
-                <ul>
-                  {section.list.map((item: string) => (
-                    <li class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, k4Semantic, pagePath)} />
-                  ))}
-                </ul>
-              )}
-
-              {/* Insert StorySlider after the intro section */}
-              {index === 0 && (
-                <div class="story-slider-wrapper reveal-on-scroll mt-6">
-                  <div class="story-slider-skeleton relative bg-[#f4f1ec] rounded-lg shadow-sm px-5 py-4 max-w-xl mx-auto border border-[#e0d9cf] mb-8 h-[240px] overflow-hidden opacity-90">
-                    <p class="text-[10px] uppercase tracking-[0.12em] text-[#a09080] mb-3">How Story Lives in These Images</p>
-                    <div class="animate-pulse">
-                      <div class="h-4 bg-[#e0d9cf] rounded w-3/4 mb-3"></div>
-                      <div class="h-3.5 bg-[#e0d9cf] rounded w-full mb-2"></div>
-                      <div class="h-3.5 bg-[#e0d9cf] rounded w-5/6 mb-2"></div>
-                      <div class="h-3.5 bg-[#e0d9cf] rounded w-4/6"></div>
-                    </div>
-                  </div>
-
-                  <StorySlider
-                    client:only="react"
-                    stories={cowboyColorData}
-                    galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-                    variant="secondary"
-                  />
-                </div>
-              )}
-
-              {section.subhead === "Character Over Spectacle" && (
-                <div class="story-chapter-divider reveal-on-scroll" aria-hidden="true"></div>
-              )}
-            </article>
-          ))}
-        </section>
-
-        <MobileStoryImages client:only="react" images={sanitizeForClient(featheredImages) as unknown as never[]} displayCount={headingCount} />
-      </div>
-
-      <div class="sidebar-column hidden md:block">
-        <div class="sample-fade reveal-on-scroll">
-          <LandingRightImages
-            client:load
-            heading="Collection Samples"
-            images={sanitizeForClient(featheredImages) as unknown as never[]}
-            displayCount={6}
-          />
-        </div>
-      </div>
-    </section>
-
-    <section class="pb-10">
-      <input type="checkbox" id="faq-toggle" class="more-toggle" />
-      <div class="truncate-container" style="min-height:0;">
-        <div class="truncate-text">
-          <FAQAccordion items={westernArtFAQ} />
-        </div>
-      </div>
-      <label for="faq-toggle" class="more-toggle-label"></label>
-    </section>
-
-    <SiteFooter class="pt-8 pb-12" />
-  </main>
-
-  <script is:inline>
-    document.addEventListener("DOMContentLoaded", () => {
-      const els = document.querySelectorAll(".reveal-on-scroll, .slide-in-left");
-      if ("IntersectionObserver" in window) {
-        const observer = new IntersectionObserver(entries => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("is-visible");
-              observer.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.15 });
-        els.forEach(el => observer.observe(el));
-      }
-
-      const faqToggle = document.getElementById("faq-toggle");
-      const truncateContainer = document.querySelector(".truncate-container");
-      if (truncateContainer && faqToggle) {
-        truncateContainer.addEventListener("click", (e) => {
-          const summaryClicked = e.target.closest("summary");
-          if (summaryClicked && !faqToggle.checked) faqToggle.checked = true;
-        });
-      }
-    });
-  </script>
-
-  <style>
-    ul { list-style-type: disc; padding-left: 1.25em; }
-    ul li { margin-top: 0.15em; margin-left: 1.5em; }
-    ul li::marker { margin-top: 0.15em; font-size: 1.2em; color: gray; }
-
-    @media (max-width: 768px) {
-      .section-heading .page-title { font-size: 1.5rem; line-height: 1.3; }
-      .section-heading .page-subtitle {
-        max-width: 42ch; margin-left: auto; margin-right: auto; text-align: center;
-        font-size: 1rem; line-height: 1.4; letter-spacing: -0.04em;
-      }
-      .section-heading-wrap { margin-top: 0.2rem; margin-bottom: 1rem; }
-      .sidebar-column { display: none; }
-      .story-section { letter-spacing: -0.03em; }
-      .story-block h2 {
-        letter-spacing: -0.05em;
-        font-size: 1.4rem !important;
-        margin-top: -0.59rem;
-        line-height: 1.15;
-      }
-    }
-
-    .fade-in {
-      opacity: 0; visibility: hidden; transform: translateY(1px);
-      transition: opacity 1.75s ease, transform 1.75s ease, visibility .5s linear 1.75s;
-    }
-    .fade-in.is-visible { opacity: 1; transform: translateY(0); visibility: visible; }
-    .page-title.fade-in { transition-delay: .2s; }
-
-    .section-heading-wrap { margin: -3.4rem 0 1.5rem; text-align: center; }
-    .section-heading .page-title { font-size: 2rem; margin-bottom: .4rem; }
-    .section-heading .page-subtitle { font-size: 1rem; font-weight: 500; color: #6d5b4a; opacity: .9; }
-
-    .story-section {
-      line-height: 1.3; padding: 2rem 1.5rem; max-width: 860px; margin: 0 auto;
-      font-family: 'Glegoo', serif;
-    }
-    .story-block { margin-bottom: 2.5rem; }
-    .story-block h2 { font-weight: 500; font-size: 1.65rem; margin-bottom: 0.55rem; }
-    .story-block h3 { font-weight: 500; font-size: 1.2rem; margin-top: -0.5rem; margin-bottom: -.025rem; color: #5a4a3b; }
-    .story-block .tagline { font-size: 1.05rem; font-weight: 500; margin-bottom: 1rem; color: #7a6250; }
-    .story-block p { line-height: 1.6; margin-bottom: 1rem; font-size: 1.01rem; }
-    .story-block p.signature-thesis-line {
-      margin: 1.25rem 0 1.15rem;
-      font-size: 1.18rem;
-      line-height: 1.35;
-      text-align: center;
-      font-weight: 600;
-      color: #4f3f31;
-      letter-spacing: -0.015em;
-    }
-    .story-block ul { padding-left: 1.4rem; margin-top: 0.5rem; }
-    .story-block li { margin-bottom: 0.5rem; font-size: 1rem; }
-
-    .page-subtitle.fade-in {
-      opacity: 0 !important;
-      transform: translateY(-12px);
-      visibility: hidden;
-      transition: opacity 1.1s ease-out, transform 1.1s ease-out, visibility 0s linear 1.1s;
-      transition-delay: 1s;
-    }
-    .page-subtitle.fade-in.is-visible {
-      opacity: 1 !important;
-      transform: translateY(0);
-      visibility: visible;
-      transition-delay: 1s;
-    }
-
-    .carousel-fade {
-      opacity: 0; transform: translateY(0px);
-      transition: opacity 1.5s ease-out, transform 1.5s ease-out;
-      transition-delay: 0.0s;
-      visibility: hidden;
-    }
-    .carousel-fade.is-visible { opacity: 1; transform: translateY(0); visibility: visible; }
-
-    .sample-fade {
-      opacity: 0; transform: translateY(0px);
-      transition: opacity 1.5s ease-out, transform 1.5s ease-out;
-      transition-delay: 0.2s;
-      visibility: hidden;
-      margin-top: -0.75rem;
-    }
-    .sample-fade.is-visible { opacity: 1; transform: translateY(0); visibility: visible; }
-
-    /* Page summary sentence */
-    .page-summary {
-      max-width: 900px;
-      margin: 0.6rem auto 0;
-      font-size: 1.02rem;
-      line-height: 1.55;
-      color: #6d5b4a;
-      font-family: 'Glegoo', serif;
-      text-align: center;
-      opacity: 0.92;
-    }
-    .page-summary p {
-      margin: 0 0 0.9rem;
-    }
-    .page-summary p:last-child {
-      margin-bottom: 0;
-    }
-    @media (max-width: 768px) {
-      .page-summary {
-        font-size: 0.98rem;
-        line-height: 1.42;
-        text-align: justify;
-        text-justify: inter-word;
-        max-width: 86%;
-        padding-left: 0;
-        padding-right: 0;
-        margin: 0.15rem auto 1.25rem;
-      }
-    }
-
-    /* Hero carousel section */
-    .hero-carousel-section {
-      max-width: 1200px;
-      margin: 0 auto 2rem;
-      padding: 0 1rem;
-      opacity: 0;
-      transform: translateY(12px);
-      transition: opacity 1.2s ease-out, transform 1.2s ease-out;
-      visibility: hidden;
-    }
-    .hero-carousel-section.is-visible {
-      opacity: 1;
-      transform: translateY(0);
-      visibility: visible;
-    }
-
-    /* Collections nav section (tombstones) */
-    .collections-nav-section {
-      padding: 1.75rem 0 1.5rem;
-      text-align: center;
-    }
-
-    /* Visual chapter break between narrative sections */
-    .story-chapter-divider {
-      max-width: 42ch;
-      margin: 2.25rem auto 1.25rem;
-      border-top: 1px solid #e0d9cf;
-      opacity: 0.9;
-    }
-    .collections-heading {
-      margin: 1.3rem auto 0.03rem;
-      font-size: 1.16rem;
-      line-height: 1.25;
-      font-weight: 700;
-      color: #8a7a6b;
-      font-family: 'Glegoo', serif;
-      text-align: center;
-      letter-spacing: -0.01em;
-    }
-    .collections-subheading {
-      margin: 0.1rem auto 0.2rem;
-      max-width: 52ch;
-      font-size: 0.98rem;
-      line-height: 1.45;
-      font-weight: 500;
-      color: #7a6a5c;
-      font-family: 'Glegoo', serif;
-      text-align: center;
-      opacity: 0.92;
-    }
-
-    /* TombstoneNav styling */
-    .collections-nav-section :global(.tombstone-nav) {
-      padding: 0.1rem 1rem 2rem;
-      margin: 0;
-    }
-    .collections-nav-section :global(.tombstone-divider) {
-      margin: 0.7rem auto 1.5rem;
-    }
-
-    /* Unified gateway behavior (all tiles go same place) */
-    .collections-nav-section :global(.tombstone-card) {
-      transition: box-shadow 0.28s ease-in-out !important;
-      box-shadow:
-        inset 0 -1px 1px rgba(255, 255, 255, 0.6),
-        inset 0 1px 2px rgba(0, 0, 0, 0.08),
-        0 8px 20px rgba(0, 0, 0, 0.1),
-        0 10px 26px rgba(0, 0, 0, 0),
-        0 0 0 2px rgba(189, 162, 124, 0);
-      transform: none;
-    }
-    .collections-nav-section :global(.tile:hover .tombstone-card) {
-      box-shadow:
-        inset 0 -1px 1px rgba(255, 255, 255, 0.6),
-        inset 0 1px 2px rgba(0, 0, 0, 0.08),
-        0 8px 20px rgba(0, 0, 0, 0.1),
-        0 10px 26px rgba(0, 0, 0, 0.28),
-        0 0 0 2px rgba(189, 162, 124, 0.38);
-      transform: none;
-    }
-    @media (hover: hover) and (pointer: fine) {
-      .collections-nav-section :global(.tile-grid:hover .tombstone-card) {
-        box-shadow:
-          inset 0 -1px 1px rgba(255, 255, 255, 0.6),
-          inset 0 1px 2px rgba(0, 0, 0, 0.08),
-          0 8px 20px rgba(0, 0, 0, 0.1),
-          0 10px 26px rgba(0, 0, 0, 0.28),
-          0 0 0 2px rgba(189, 162, 124, 0.38);
-        transform: none;
-      }
-    }
-    @media (hover: hover) and (pointer: fine) {
-      .collections-nav-section :global(.tile-grid:hover .tile) {
-        transform: none;
-        filter: none;
-      }
-      .collections-nav-section :global(.tile-grid:hover .tile:hover) {
-        transform: none;
-        filter: none;
-        z-index: auto;
-      }
-    }
-    @media (max-width: 768px) {
-      .collections-nav-section { padding-top: 1.55rem; }
-      .collections-heading { font-size: 1.03rem; margin: 0.95rem auto 0.05rem; }
-      .collections-subheading { font-size: 0.93rem; max-width: 30ch; margin: 0.1rem auto 0.25rem; }
-    }
-  </style>
-</BaseLayout>
+<CommercialDoorwayAllPage
+  rawGalleryData={narrativeColorItems}
+  entranceData={entranceData}
+  basePath={basePath}
+  contentBasePath={basePath}
+  canonicalPath={canonicalPath}
+  breadcrumbHtml={breadcrumbHtml}
+  breadcrumbStructuredItems={breadcrumbStructuredItems}
+  sectionDockItems={sectionDockItems}
+  dockCenterIndex={dockCenterIndex}
+  currentDockTitle="Western Photography Art and Frontier Fine Art"
+  archiveContext={{
+    categoryUrl: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West",
+    categoryName: "Wild West",
+  }}
+  identity={{
+    collectionName: "Western Photography Art",
+    variantName: "Western Art Photography",
+    variantDescriptor: "western photography art",
+    gatewayBrandLabel: "Western Photography Art - Western Art Photography by Wayne Heim",
+  }}
+  copy={copy}
+  faqItems={westernArtFAQ}
+  gridSections={gridSections}
+  dockVariant="wall-art"
+/>

@@ -1,8 +1,169 @@
 ---
-import ExactMatchWesternLanding from '@/components/seo/ExactMatchWesternLanding.astro';
-import { westernArtPrintsPage } from '@/data/exactMatchWesternPages.ts';
-
 export const prerender = true;
+
+import CommercialDoorwayAllPage from "@/components/doorway/CommercialDoorwayAllPage.astro";
+import { galleryData as cowboyColorData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs";
+import { galleryData as cowboyBlackWhiteData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs";
+import { galleryData as narrativeColorData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs";
+import { galleryData as narrativeBlackWhiteData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs";
+import { entranceData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/ColorEntranceData.ts";
+import { buildWesternArtPrintsDock } from "@/data/Western-Art-Prints/buildWesternArtPrintsDock.ts";
+import { westernArtPrintsFAQ } from "@/data/Western-Art-Prints/faq.ts";
+import { getFormattedLowestStandardPrintPrice } from "@/data/pricing/printSeries.js";
+
+const pagePath = "/western-art-prints";
+const basePath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color";
+const canonicalPath = pagePath;
+
+const rotateGallery = (items: any[] = [], offset = 0) => {
+  const cleanItems = items.filter((item: any) =>
+    item?.id &&
+    item.id !== "i-k4studios" &&
+    item.visibility !== "ghost" &&
+    item.visibility !== "hidden" &&
+    item.visibility !== "hide"
+  );
+  if (cleanItems.length === 0) return cleanItems;
+  const start = offset % cleanItems.length;
+  return [...cleanItems.slice(start), ...cleanItems.slice(0, start)];
+};
+
+const narrativeColorItems = rotateGallery(narrativeColorData, 118);
+const narrativeBlackWhiteItems = rotateGallery(narrativeBlackWhiteData, 61);
+const cowboyColorItems = rotateGallery(cowboyColorData, 73);
+const cowboyBlackWhiteItems = rotateGallery(cowboyBlackWhiteData, 49);
+const westernArtPrintsCount =
+  narrativeColorData.length +
+  narrativeBlackWhiteData.length +
+  cowboyColorData.length +
+  cowboyBlackWhiteData.length;
+
+const breadcrumbHtml = [
+  '<a href="/">Wayne Heim</a>',
+  '<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Facing History</a>',
+  '<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West">Wild West</a>',
+  "Western Art Prints",
+].join(" | ");
+
+const breadcrumbStructuredItems = [
+  { href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History", name: "Facing History" },
+  { href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West", name: "Wild West" },
+];
+
+const { sectionDockItems, dockCenterIndex } = buildWesternArtPrintsDock();
+
+const gridSections = [
+  {
+    title: "Western Art Prints - Color Frontier Scenes",
+    description: "Color Western narrative prints with frontier atmosphere, painterly light, and story-led presence for rooms and collectors.",
+    galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color",
+    allHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all#collection-browser",
+    ctaLabel: "See the full color Western narrative print collection",
+    ctaThumb: "/img/i-B7ZSdfs/s.jpg",
+    items: narrativeColorItems,
+    limit: 19,
+  },
+  {
+    title: "Black and White Western Art Prints",
+    description: "Monochrome Western narrative prints where tonal restraint, frontier atmosphere, and contrast carry the story.",
+    galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White",
+    allHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/all#collection-browser",
+    ctaLabel: "See the full black and white Western narrative print collection",
+    ctaThumb: "/img/i-kp5NHNw/s.jpg",
+    items: narrativeBlackWhiteItems,
+    limit: 19,
+  },
+  {
+    title: "Cowboy Art Prints - Color Western Portraits",
+    description: "Color cowboy portrait prints with painterly character, authored Western presence, and collector-ready print options.",
+    galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
+    allHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/all#collection-browser",
+    ctaLabel: "See the full color cowboy portrait print collection",
+    ctaThumb: "/images/tombstones/cowboy-c-ts.jpg",
+    items: cowboyColorItems,
+    limit: 19,
+  },
+  {
+    title: "Black and White Cowboy Art Prints",
+    description: "Black and white cowboy portrait prints for collectors who want tonal weight, weathered character, and frontier restraint.",
+    galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White",
+    allHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/all#collection-browser",
+    ctaLabel: "See the full black and white cowboy portrait print collection",
+    ctaThumb: "/images/tombstones/cowboy-bw-ts.jpg",
+    items: cowboyBlackWhiteItems,
+    limit: 19,
+  },
+];
+
+const commercialMiddleCopy = [
+  "Start with the print family. For story-led frontier scenes, begin with the color or black and white Western narrative sections below. For portrait-led Western art prints, continue into the cowboy portrait groupings.",
+  "Western art prints at K4 Studios bring cowboy portraits, frontier narratives, and painterly Western photography into a collector-grade print catalog. The page is built for buyers comparing authored Western work across subject, treatment, format, and room presence.",
+  "Each work begins as photography, then is shaped through Wayne Heim's painterly process into fine art with the mood, restraint, and presence of classic Western painting. Prints are available as archival paper, canvas, metal, and wood, with size and finish options inside each image page.",
+].join("\n\n");
+
+const copy = {
+  seoTitle: "Western Art Prints - Fine Art Prints by Wayne Heim | K4 Studios",
+  seoDescription:
+    "Western art prints by Wayne Heim - archival paper, canvas, metal, and wood. Frontier narratives, cowboy portraits, and painterly Western scenes from $25 through signed limited editions. For living rooms, offices, lodges, and collector walls.",
+  indexDefinition:
+    "Wayne Heim's Western art prints include frontier narrative scenes, cowboy portraits, black and white Western prints, and painterly character studies produced as collector-grade fine art prints.",
+  indexLinkNote:
+    "This is the K4 route for print-focused Western intent: Western art prints, Western fine art prints, cowboy art prints, and collector-ready painterly Western photography.",
+  printAvailabilityNote: `Western art prints are available from ${getFormattedLowestStandardPrintPrice()} across archival paper, canvas, metal, and select wood presentations. Edition status and format options are shown on individual image pages.`,
+  commercialH1: "The Collection - Four Print Series, 840+ Works",
+  commercialDeck:
+    "Frontier narratives, cowboy portraits, and painterly Western scenes in color and black and white - organized for print buyers, collectors, and interior decisions.",
+  catalogEntranceTitle: "Western Art Prints, Cowboy Prints, and Frontier Fine Art",
+  catalogEntranceCopy:
+    "Browse Western art prints, Western fine art prints, cowboy art prints, and narrative frontier scenes created as collector-grade fine art.",
+  collectionIntro: commercialMiddleCopy,
+  breadcrumbCurrentName: "Western Art Prints",
+  aggregateOfferLowPrice: "25",
+  aggregateOfferHighPrice: "5000",
+  aggregateOfferCount: String(westernArtPrintsCount),
+  gatewayCollectionName: "Western Art Prints",
+  gatewayIntroCopy:
+    "Western art prints by Wayne Heim - frontier narratives, cowboy portraits, Western character studies, and story-driven imagery for living rooms, offices, lodges, ranch interiors, hospitality spaces, and collector walls.",
+  gatewaySupportingCopy:
+    "Each section is organized by subject and treatment - color or black and white - so you can compare the right Western print family before reading into the image story. The collection opens with the Sketch Series, 5x7 archival prints from $25 - sized for shelves, desks, and introductory collecting. It scales through open-edition Foundation works, signed Chronicle editions with numbered certificates, and ultra-limited Legend pieces for collectors who want provenance and permanence on the wall.\n\nClick into any section to compare prints, read the image story, and view collector and sizing details.",
+  gatewayKicker: "K4 Studios - Western Fine Art Print Catalog",
+  gatewayHeroTitle: "Western Art Prints by Wayne Heim",
+  gatewayHeroAlt:
+    "Story-driven Western art print candidate with frontier narrative atmosphere and painterly fine art photography.",
+  gatewayHeroHref:
+    "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-5TtHV8g",
+  gatewayHeroSrc: "/img/i-5TtHV8g/l.jpg",
+  gatewayHeroSrcSet: "/img/i-5TtHV8g/m.jpg 720w, /img/i-5TtHV8g/l.jpg 1200w",
+  archiveContextCopy:
+    "Every work on this page is available as a fine art print - paper, canvas, metal, or wood - with the Sketch Series opening at $25. Click into any image to read the story, compare sizes, and view collector details. Questions about a specific piece? Reach Wayne directly at <a href='mailto:wayne@k4studios.com'>wayne@k4studios.com</a>.",
+  faqKicker: "Print & Collector Questions",
+  faqTitle: "Western Art Prints FAQ",
+};
 ---
 
-<ExactMatchWesternLanding page={westernArtPrintsPage} />
+<CommercialDoorwayAllPage
+  rawGalleryData={narrativeColorItems}
+  entranceData={entranceData}
+  basePath={basePath}
+  contentBasePath={basePath}
+  canonicalPath={canonicalPath}
+  breadcrumbHtml={breadcrumbHtml}
+  breadcrumbStructuredItems={breadcrumbStructuredItems}
+  sectionDockItems={sectionDockItems}
+  dockCenterIndex={dockCenterIndex}
+  currentDockTitle="Western Art Prints and Cowboy Portrait Prints"
+  archiveContext={{
+    categoryUrl: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West",
+    categoryName: "Wild West",
+  }}
+  identity={{
+    collectionName: "Western Art Prints",
+    variantName: "Fine Art Prints",
+    variantDescriptor: "western art prints",
+    gatewayBrandLabel: "Western Art Prints - Fine Art Prints by Wayne Heim",
+  }}
+  copy={copy}
+  faqItems={westernArtPrintsFAQ}
+  gridSections={gridSections}
+  dockVariant="wall-art"
+/>

@@ -2,7 +2,6 @@ import { landingWestern as facingHistoryLanding } from "@/data/Galleries/Painter
 import { landingWestern as wildWestLanding } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/landingstones.ts";
 import { landingWestern as cowboyPortraitLanding } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/landingstones.ts";
 import { landingWestern as westernNarrativeLanding } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/landingstones.ts";
-import { landingWestern as landscapeLocationLanding } from "@/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/landingstones.ts";
 
 const withoutFragment = (href = "") => String(href).split("#")[0];
 const toAllHref = (href = "") => `${withoutFragment(href).replace(/\/$/, "")}/all#collection-browser`;
@@ -25,36 +24,33 @@ const supportItem = (title: string, href: string, thumb: string, subtitle = "") 
   dockPrefix: "",
 });
 
-const narrativeWomanRiderThumb = "/img/i-G7csptc/s.jpg";
-const narrativeJourneyThumb = "/img/i-4zxZQQ2/s.jpg";
+const cowboyContextThumb = "/img/i-3SxncXS/s.jpg";
+const cowboyFineArtThumb = "/img/i-gxMVNh3/s.jpg";
+const narrativeWomanThumb = "/img/i-B7ZSdfs/s.jpg";
 const cinematicWesternThumb = "/img/i-7VWX9vk/s.jpg";
 const displayWesternArtThumb = "/img/i-44jcjTQ/s.jpg";
 const decorVsFineArtThumb = "/images/tombstones/traditional-ts.webp";
-const westernFineArtPhotographyThumb = "/img/i-gxMVNh3/s.jpg";
 
-export const buildWesternWallArtDock = () => {
-  const landscapeWest = landscapeLocationLanding.tombstones.find((stone: any) =>
-    String(stone.href || "").includes("/Landscapes/By-Location/West/")
-  );
+export const buildCowboyWallArtDock = () => {
   const facingHistoryWildWest = facingHistoryLanding.tombstones.find((stone: any) =>
     String(stone.href || "").includes("/Facing-History/Wild-West")
   );
 
   const sectionDockItems = [
     supportItem(
-      "What Is Painterly Photography?",
-      "/Blog/what-is-painterly-photography",
-      "/images/tombstones/Painterly-ts.webp"
+      "What Is Western Cowboy Art?",
+      "/Blog/what-is-western-cowboy-art",
+      cowboyContextThumb
     ),
     supportItem(
       "What Is Western Fine Art Photography?",
       "/Blog/what-is-western-fine-art-photography",
-      westernFineArtPhotographyThumb
+      cowboyFineArtThumb
     ),
     supportItem(
-      "Narrative vs Traditional Western Art",
-      "/Blog/narrative-western-art-vs-traditional",
-      narrativeJourneyThumb
+      "What Is Painterly Photography?",
+      "/Blog/what-is-painterly-photography",
+      "/images/tombstones/Painterly-ts.webp"
     ),
     supportItem(
       "How to Display Western Art in a Modern Home Without Turning It Into a Theme Room",
@@ -66,23 +62,7 @@ export const buildWesternWallArtDock = () => {
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History",
       dockRole: "support",
     }),
-    { separator: true, label: "Core Western wall art collections" },
-    asDockItem(westernNarrativeLanding.tombstones[0], {
-      title: "Western Narrative Color Art",
-      href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all#collection-browser",
-      thumb: narrativeWomanRiderThumb,
-      dockRole: "core",
-    }),
-    asDockItem(westernNarrativeLanding.tombstones[1], {
-      title: "Black and White Western Narrative Art",
-      href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/all#collection-browser",
-      dockRole: "core",
-    }),
-    asDockItem(landscapeWest || {}, {
-      title: "Western Landscape Wall Art",
-      href: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/all#collection-browser",
-      dockRole: "core",
-    }),
+    { separator: true, label: "Core cowboy wall art collections" },
     asDockItem(cowboyPortraitLanding.tombstones[0], {
       title: "Color Cowboy Wall Art",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/all#collection-browser",
@@ -93,12 +73,28 @@ export const buildWesternWallArtDock = () => {
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/all#collection-browser",
       dockRole: "core",
     }),
-    { separator: true, label: "Western wall art context and collector notes" },
+    asDockItem(westernNarrativeLanding.tombstones[0], {
+      title: "Narrative Cowboy Wall Art",
+      href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all#collection-browser",
+      thumb: narrativeWomanThumb,
+      dockRole: "core",
+    }),
+    asDockItem(westernNarrativeLanding.tombstones[1], {
+      title: "Black and White Narrative Cowboy Art",
+      href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/all#collection-browser",
+      dockRole: "core",
+    }),
+    { separator: true, label: "Cowboy wall art context and collector notes" },
     asDockItem(facingHistoryWildWest || wildWestLanding.tombstones[0], {
       title: "Wild West",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West",
       dockRole: "support",
     }),
+    supportItem(
+      "What Is Narrative Photography?",
+      "/Blog/what-is-narrative-photography",
+      narrativeWomanThumb
+    ),
     supportItem(
       "What Makes an Image Feel Cinematic?",
       "/Blog/what-makes-an-image-feel-cinematic",
@@ -110,11 +106,6 @@ export const buildWesternWallArtDock = () => {
       decorVsFineArtThumb
     ),
     supportItem(
-      "What Makes a Fine Art Print Worth Owning?",
-      "/Blog/what-makes-a-fine-art-print-worth-owning",
-      "/images/tombstones/print-options-ts.webp"
-    ),
-    supportItem(
       "Wood Prints vs Paper Prints",
       "/Blog/wood-prints-vs-paper-prints",
       "/images/tombstones/engrained-ts.jpg"
@@ -123,6 +114,6 @@ export const buildWesternWallArtDock = () => {
 
   return {
     sectionDockItems,
-    dockCenterIndex: sectionDockItems.findIndex((item: any) => item.title === "Western Landscape Wall Art"),
+    dockCenterIndex: sectionDockItems.findIndex((item: any) => item.title === "Color Cowboy Wall Art"),
   };
 };

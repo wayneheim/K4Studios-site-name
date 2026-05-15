@@ -23,18 +23,23 @@
 interface Props {
   categoryUrl: string;
   categoryName: string;
+  copyHtml?: string;
 }
 
-const { categoryUrl, categoryName } = Astro.props;
+const { categoryUrl, categoryName, copyHtml = "" } = Astro.props;
 ---
 
 <div class="archive-context">
-  <p>
-    This page presents the full collection for the 
-    <a href={categoryUrl}>{categoryName}</a> series.
-    For narrative context, historical intent, and artistic approach,
-    return to the main overview.
-  </p>
+  {copyHtml ? (
+    <p set:html={copyHtml}></p>
+  ) : (
+    <p>
+      This page presents the full collection for the
+      <a href={categoryUrl}>{categoryName}</a> series.
+      For narrative context, historical intent, and artistic approach,
+      return to the main overview.
+    </p>
+  )}
 </div>
 
 <style>

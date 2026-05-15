@@ -44,7 +44,21 @@ function getGitLastModifiedIso(absoluteFilePath) {
   }
 }
 
+function hasUncommittedChanges(absoluteFilePath) {
+  try {
+    const rel = path.relative(REPO_ROOT, absoluteFilePath).replace(/\\/g, '/');
+    const out = execSync(`git status --porcelain -- "${rel}"`, {
+      cwd: REPO_ROOT,
+      stdio: ['ignore', 'pipe', 'ignore']
+    }).toString().trim();
+    return Boolean(out);
+  } catch {
+    return false;
+  }
+}
+
 function getStableLastmodIso(absoluteFilePath, fallbackMtimeIso) {
+  if (hasUncommittedChanges(absoluteFilePath)) return fallbackMtimeIso;
   return getGitLastModifiedIso(absoluteFilePath) || fallbackMtimeIso;
 }
 

@@ -1,64 +1,166 @@
 ---
 export const prerender = true;
 
-import KeywordLandingPage from '@/components/doorway/KeywordLandingPage.astro';
+import CommercialDoorwayAllPage from "@/components/doorway/CommercialDoorwayAllPage.astro";
+import { galleryData as cowboyColorData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs";
+import { galleryData as cowboyBlackWhiteData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs";
+import { galleryData as narrativeColorData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs";
+import { galleryData as narrativeBlackWhiteData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs";
+import { entranceData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/ColorEntranceData.ts";
+import { buildCowboyWallArtDock } from "@/data/Cowboy-Wall-Art/buildCowboyWallArtDock.ts";
+import { getFormattedLowestStandardPrintPrice } from "@/data/pricing/printSeries.js";
+import { cowboyWallArtFAQ } from "@/data/Cowboy-Wall-Art/faq.ts";
 
-import {
-  pagePath,
-  imageSectionPath,
-  gridBasePath,
-  landing,
-  breadcrumbItems,
-  storyBlocks,
-  explorationPaths,
-  featuredReadingTitle,
-  featuredReadingIntro,
-  featuredReadingItems,
-  collectionGroups,
-  gridImages,
-  collection,
-  faqSection,
-  faqItems,
-  pageMeta,
-  structuredAbout,
-  webPageAbout,
-  genre,
-  collectionAltPrefix,
-  hybridCarouselProps,
-} from '@/data/hybrid-hubs/cowboy-wall-art-hub';
+const pagePath = "/cowboy-wall-art";
+const basePath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color";
+const canonicalPath = pagePath;
 
-import { galleryData as colorGallery }
-  from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs';
+const rotateGallery = (items: any[] = [], offset = 0) => {
+  const cleanItems = items.filter((item: any) => item?.id);
+  if (cleanItems.length === 0) return cleanItems;
+  const start = offset % cleanItems.length;
+  return [...cleanItems.slice(start), ...cleanItems.slice(0, start)];
+};
+
+const colorStartAfterId = cowboyColorData.findIndex((item: any) => item?.id === "i-HHxxcsM") + 1;
+const cowboyColorItems = rotateGallery(cowboyColorData, colorStartAfterId > 0 ? colorStartAfterId : 24);
+const cowboyBlackWhiteItems = rotateGallery(cowboyBlackWhiteData, 18);
+const narrativeColorItems = rotateGallery(narrativeColorData, 56);
+const narrativeBlackWhiteItems = rotateGallery(narrativeBlackWhiteData, 27);
+const cowboyWallArtCount =
+  cowboyColorData.length +
+  cowboyBlackWhiteData.length +
+  narrativeColorData.length +
+  narrativeBlackWhiteData.length;
+
+const breadcrumbHtml = [
+  '<a href="/">Wayne Heim</a>',
+  '<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West">Wild West</a>',
+  '<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits">Western Cowboy Portraits</a>',
+  "Cowboy Wall Art",
+].join(" | ");
+
+const breadcrumbStructuredItems = [
+  { href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West", name: "Wild West" },
+  { href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits", name: "Western Cowboy Portraits" },
+];
+
+const { sectionDockItems, dockCenterIndex } = buildCowboyWallArtDock();
+
+const gridSections = [
+  {
+    title: "Cowboy Wall Art - Color Western Portraits",
+    description: "Color portrait work with painterly light, weathered character, and the settled presence that holds a wall without demanding it.",
+    galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
+    allHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/all#collection-browser",
+    ctaLabel: "See the full color cowboy portrait collection",
+    ctaThumb: "/images/tombstones/cowboy-c-ts.jpg",
+    items: cowboyColorItems,
+    limit: 19,
+  },
+  {
+    title: "Black and White Cowboy Wall Art",
+    description: "Tonal portrait work for offices, lodges, ranch interiors, and any room where contrast carries more than color can.",
+    galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White",
+    allHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/all#collection-browser",
+    ctaLabel: "See the full black and white cowboy portrait collection",
+    ctaThumb: "/images/tombstones/cowboy-bw-ts.jpg",
+    items: cowboyBlackWhiteItems,
+    limit: 19,
+  },
+  {
+    title: "Narrative Cowboy Wall Art - Color Frontier Scenes",
+    description: "Color frontier scenes built around atmosphere, implication, and the pressure of a moment that has not finished yet.",
+    galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color",
+    allHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all#collection-browser",
+    ctaLabel: "See the full color Western narrative collection",
+    ctaThumb: "/img/i-B7ZSdfs/s.jpg",
+    items: narrativeColorItems,
+    limit: 19,
+  },
+  {
+    title: "Black and White Narrative Cowboy Art",
+    description: "Monochrome frontier narrative prints where tonal restraint and deep contrast carry the story further than color would.",
+    galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White",
+    allHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/all#collection-browser",
+    ctaLabel: "See the full black and white Western narrative collection",
+    ctaThumb: "/img/i-kp5NHNw/s.jpg",
+    items: narrativeBlackWhiteItems,
+    limit: 19,
+  },
+];
+
+const commercialMiddleCopy = [
+  "Start with the figure. For direct portrait presence - a weathered face, a deliberate stance, a character who holds the wall - begin with the color or black and white portrait sections. For work that leans cinematic, atmospheric, or story-driven, move into the narrative groupings below.",
+  "K4 Studios cowboy wall art is built for buyers who want more than generic Western decor. These prints bring portrait character, frontier atmosphere, and story-led imagery into a collector-grade catalog suited for living rooms, offices, lodges, ranch interiors, and hospitality spaces.",
+  "Each work begins as photography, then is shaped through Heim's painterly process into fine art with the mood, restraint, and presence of classic Western painting. Prints are available as archival paper, canvas, metal, and wood - with size and finish options inside each image page.",
+].join("\n\n");
+
+const copy = {
+  seoTitle: "Cowboy Wall Art - Western Cowboy Art Prints by Wayne Heim",
+  seoDescription:
+    "Cowboy wall art prints for homes, offices, lodges, and ranch interiors. Portrait and narrative Western art prints from $25 - archival, canvas, metal, and wood. 147 color portraits, 99 black and white, 454 narrative scenes, and more.",
+  indexDefinition:
+    "Wayne Heim's cowboy wall art includes cowboy portraits, narrative frontier scenes, black and white cowboy prints, and painterly Western character studies created as collector-grade fine art for real rooms and long-term display.",
+  indexLinkNote:
+    "This page is the commercial cowboy wall art route for K4 Studios: a practical starting point for collectors, homeowners, offices, lodge spaces, hospitality projects, and interior designers looking for cowboy artwork with more authorship than generic Western decor.",
+  printAvailabilityNote: `All works are available as fine art prints from ${getFormattedLowestStandardPrintPrice()}. Select images are also available in specialty presentations, including wood-based print options where available.`,
+  commercialH1: "The Collection - Four Print Series, 840+ Works",
+  commercialDeck:
+    "Portrait work, frontier character studies, and narrative Western scenes in color and black and white - organized for rooms, collectors, and interior decisions.",
+  catalogEntranceTitle: "Cowboy Wall Art, Cowboy Art Prints, and Western Portrait Work",
+  catalogEntranceCopy:
+    "Browse cowboy wall art, cowboy art prints, black and white cowboy portraits, and narrative frontier scenes created as collector-grade fine art for rooms with Western presence.",
+  collectionIntro: commercialMiddleCopy,
+  breadcrumbCurrentName: "Cowboy Wall Art",
+  aggregateOfferLowPrice: "25",
+  aggregateOfferHighPrice: "5000",
+  aggregateOfferCount: String(cowboyWallArtCount),
+  gatewayKicker: "K4 STUDIOS — WESTERN FINE ART PRINT CATALOG",
+  gatewayCollectionName: "Cowboy Wall Art",
+  gatewayIntroCopy:
+    "Cowboy wall art prints by Wayne Heim - portrait work, Western character studies, frontier scenes, and story-driven imagery for living rooms, offices, lodges, ranch interiors, hospitality spaces, and collector walls.",
+  gatewaySupportingCopy:
+    "Each section is organized by subject and treatment - color or black and white - so you can match the work to the room before reading into the image story.\n\nThe collection opens with the Sketch Series, 5×7 archival prints from $25 - sized for shelves, desks, and introductory collecting. It scales through open-edition Foundation works, signed Chronicle editions with numbered certificates, and ultra-limited Legend pieces for collectors who want provenance and permanence on the wall.\n\nClick into any section to compare prints, read the image story, and view collector and sizing details.",
+  gatewayBrandLabel: "Cowboy Wall Art - Western Cowboy Art Prints by Wayne Heim",
+  gatewayBrandClass: "gateway-brand--compact",
+  gatewayHeroTitle: "At Ease",
+  gatewayHeroAlt:
+    "Seasoned cowboy leaning on a fence with a relaxed posture, wearing a wide-brim hat and frontier clothing.",
+  gatewayHeroHref:
+    "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-5LTzhJ6",
+  gatewayHeroSrc: "/img/i-5LTzhJ6/l.jpg",
+  gatewayHeroSrcSet: "/img/i-5LTzhJ6/m.jpg 720w, /img/i-5LTzhJ6/l.jpg 1200w",
+  archiveContextCopy:
+    "Every work on this page is available as an archival fine art print - paper, canvas, metal, or wood - starting at $25. Click into any image to read the story, compare sizes, and view collector details. Questions about a specific piece? Reach Wayne directly at <a href='mailto:wayne@k4studios.com'>wayne@k4studios.com</a>.",
+  faqKicker: "Print & Collector Questions",
+  faqTitle: "Cowboy Wall Art FAQ",
+};
 ---
 
-<KeywordLandingPage
-  pagePath={pagePath}
-  imageSectionPath={imageSectionPath}
-  gridBasePath={gridBasePath}
-  landing={landing}
-  breadcrumbItems={breadcrumbItems}
-  storyBlocks={storyBlocks}
-  faqItems={faqItems}
-  explorationIntro="Explore Cowboy Wall Art"
-  explorationPaths={explorationPaths}
-  featuredReadingTitle={featuredReadingTitle}
-  featuredReadingIntro={featuredReadingIntro}
-  featuredReadingItems={featuredReadingItems}
-  collectionGroups={collectionGroups}
-  gridImages={gridImages}
-  collection={collection}
-  faqSection={faqSection}
-  galleryData={colorGallery}
-  slides={[]}
-  meta={{
-    title: pageMeta.title,
-    description: pageMeta.description,
-    ogDescription: pageMeta.description,
+<CommercialDoorwayAllPage
+  rawGalleryData={cowboyColorItems}
+  entranceData={entranceData}
+  basePath={basePath}
+  contentBasePath={basePath}
+  canonicalPath={canonicalPath}
+  breadcrumbHtml={breadcrumbHtml}
+  breadcrumbStructuredItems={breadcrumbStructuredItems}
+  sectionDockItems={sectionDockItems}
+  dockCenterIndex={dockCenterIndex}
+  currentDockTitle="Cowboy Wall Art and Western Cowboy Portrait Prints"
+  archiveContext={{
+    categoryUrl: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits",
+    categoryName: "Western Cowboy Portraits",
   }}
-  structuredAbout={structuredAbout}
-  webPageAbout={webPageAbout}
-  genre={genre}
-  collectionAltPrefix={collectionAltPrefix}
-  heroVisualMode="hybridCarousel"
-  hybridCarouselProps={hybridCarouselProps}
+  identity={{
+    collectionName: "Cowboy Wall Art",
+    variantName: "Western Cowboy Art Prints",
+    variantDescriptor: "cowboy wall art",
+    gatewayBrandLabel: "Cowboy Wall Art - Western Cowboy Art Prints by Wayne Heim",
+  }}
+  copy={copy}
+  faqItems={cowboyWallArtFAQ}
+  gridSections={gridSections}
+  dockVariant="wall-art"
 />
