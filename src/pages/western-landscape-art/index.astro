@@ -1,66 +1,242 @@
 ---
 export const prerender = true;
 
-import KeywordLandingPage from '@/components/doorway/KeywordLandingPage.astro';
+import CommercialDoorwayAllPage from "@/components/doorway/CommercialDoorwayAllPage.astro";
+import { galleryData as westernLocationData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs";
+import { galleryData as mountainData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/Mountains.mjs";
+import { galleryData as canadaData } from "@/data/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western.mjs";
+import { entranceData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/ColorEntranceData.ts";
+import { getFormattedLowestStandardPrintPrice } from "@/data/pricing/printSeries.js";
+import { faqItems as westernLandscapeArtFAQ } from "@/data/hybrid-hubs/western-landscape-art.ts";
 
-import {
-  pagePath,
-  imageSectionPath,
-  gridBasePath,
-  galleryPaths,
-  landing,
-  breadcrumbItems,
-  storyBlocks,
-  explorationPaths,
-  featuredReadingTitle,
-  featuredReadingIntro,
-  featuredReadingItems,
-  collectionGroups,
-  gridImages,
-  collection,
-  faqSection,
-  faqItems,
-  pageMeta,
-  structuredAbout,
-  webPageAbout,
-  genre,
-  collectionAltPrefix,
-  hybridCarouselProps,
-} from '@/data/hybrid-hubs/western-landscape-art.ts';
+const pagePath = "/western-landscape-art";
+const basePath = "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery";
+const canonicalPath = pagePath;
 
-import { galleryData as mountainsGallery }
-  from '@/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/Mountains.mjs';
+const rotateGallery = (items: any[] = [], offset = 0) => {
+  const cleanItems = items.filter((item: any) =>
+    item?.id &&
+    item.id !== "i-k4studios" &&
+    item.visibility !== "ghost" &&
+    item.visibility !== "hidden" &&
+    item.visibility !== "hide"
+  );
+  if (cleanItems.length === 0) return cleanItems;
+  const start = offset % cleanItems.length;
+  return [...cleanItems.slice(start), ...cleanItems.slice(0, start)];
+};
+
+const westernLocationItems = rotateGallery(westernLocationData, 0);
+const mountainItems = rotateGallery(mountainData, 0);
+const canadaItems = rotateGallery(canadaData, 0);
+
+const breadcrumbHtml = [
+  '<a href="/">Wayne Heim</a>',
+  '<a href="/Galleries/Painterly-Fine-Art-Photography/Landscapes">Landscapes</a>',
+  "Western Landscape Art",
+].join(" | ");
+
+const breadcrumbStructuredItems = [
+  { href: "/Galleries/Painterly-Fine-Art-Photography/Landscapes", name: "Landscapes" },
+];
+
+const supportDockItem = (title: string, href: string, thumb: string, subtitle = "") => ({
+  title,
+  subtitle,
+  href,
+  thumb,
+  cue: "Browse collection ->",
+  dockRole: "support",
+  dockPrefix: "",
+});
+
+const sectionDockItems = [
+  supportDockItem(
+    "Learn What Is Western Art",
+    "/Blog/what-is-western-art",
+    "/img/i-B7ZSdfs/s.jpg"
+  ),
+  supportDockItem(
+    "Learn What Makes a Fine Art Print Worth Owning",
+    "/Blog/what-makes-a-fine-art-print-worth-owning",
+    "/images/tombstones/print-options-ts.webp"
+  ),
+  supportDockItem(
+    "Compare Wood Prints and Paper Prints",
+    "/Blog/wood-prints-vs-paper-prints",
+    "/images/tombstones/engrained-ts.webp"
+  ),
+  supportDockItem(
+    "Learn What Is Painterly Photography",
+    "/Blog/what-is-painterly-photography",
+    "/images/tombstones/Painterly-ts.webp"
+  ),
+  { separator: true, label: "Core Western landscape art collections" },
+  {
+    title: "Western Location Landscapes",
+    href: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/all#collection-browser",
+    thumb: "/img/i-G6gftd8/s.jpg",
+    cue: "Browse collection ->",
+    dockRole: "core",
+    dockPrefix: "",
+  },
+  {
+    title: "Mountain Landscape Prints",
+    href: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/all#collection-browser",
+    thumb: "/img/i-b2hZptn/s.jpg",
+    cue: "Browse collection ->",
+    dockRole: "core",
+    dockPrefix: "",
+  },
+  {
+    title: "Western Canada Landscapes",
+    href: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western",
+    thumb: "/img/i-Nvn4r5N/s.jpg",
+    cue: "Browse collection ->",
+    dockRole: "core",
+    dockPrefix: "",
+  },
+  { separator: true, label: "Landscape routes and collector notes" },
+  supportDockItem(
+    "Explore Painterly Landscapes",
+    "/Galleries/Painterly-Fine-Art-Photography/Landscapes",
+    "/img/i-zk7zXP3/s.jpg"
+  ),
+  supportDockItem(
+    "Water and Waterfall Landscapes",
+    "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water",
+    "/img/i-sm7MXM4/s.jpg"
+  ),
+  supportDockItem(
+    "Learn How to Display Western Art at Home",
+    "/Blog/how-to-display-western-art-in-a-modern-home",
+    "/img/i-44jcjTQ/s.jpg"
+  ),
+  supportDockItem(
+    "Compare Decor Art and Fine Art",
+    "/Blog/decor-art-vs-fine-art",
+    "/images/tombstones/traditional-ts.webp"
+  ),
+  supportDockItem(
+    "Learn What Makes an Image Feel Cinematic",
+    "/Blog/what-makes-an-image-feel-cinematic",
+    "/img/i-WfrdxRR/s.jpg"
+  ),
+];
+const dockCenterIndex = sectionDockItems.findIndex((item: any) => item.title === "Mountain Landscape Prints");
+
+const gridSections = [
+  {
+    title: "Western Landscape Art - American West Locations",
+    description: "Painterly Western location landscapes built around open country, mountain distance, weather, and the quiet authority of the land.",
+    galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery",
+    allHref: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/all#collection-browser",
+    ctaLabel: "See the full Western landscape location collection",
+    ctaThumb: "/img/i-G6gftd8/s.jpg",
+    items: westernLocationItems,
+    limit: 19,
+  },
+  {
+    title: "Mountain Landscape Art Prints",
+    description: "Painterly mountain landscapes where peaks, weather, ridgelines, and distance give Western landscape art its scale and presence.",
+    galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains",
+    allHref: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/all#collection-browser",
+    ctaLabel: "See the full mountain landscape collection",
+    ctaThumb: "/img/i-b2hZptn/s.jpg",
+    items: mountainItems,
+    limit: 11,
+  },
+  {
+    title: "Canadian Rockies Landscape Art",
+    description: "Painterly Canadian Rockies landscape art from Banff, Jasper, alpine lakes, waterfalls, and the deep Rocky Mountain country that defines the northern frontier.",
+    galleryPath: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western",
+    allHref: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western",
+    ctaLabel: "See the full Western Canada landscape collection",
+    ctaThumb: "/img/i-Nvn4r5N/s.jpg",
+    items: canadaItems,
+    limit: 19,
+  },
+];
+
+const countLiveItems = (sections: typeof gridSections) =>
+  sections.reduce((total, section) => total + section.items.filter((item: any) =>
+    item?.id &&
+    item.id !== "i-k4studios" &&
+    item.visibility !== "ghost" &&
+    item.visibility !== "hidden" &&
+    item.visibility !== "hide"
+  ).length, 0);
+const westernLandscapeArtLiveCount = countLiveItems(gridSections);
+
+const commercialMiddleCopy = [
+  "Western landscape art at K4 Studios is built around place as presence: open country, mountain weather, Canadian Rockies distance, and the visual pressure of land that does more than sit behind the story.",
+  "Start with the American West location landscapes for open country and frontier atmosphere. Move into the mountain section for peak-and-weather presence and Teton scale. Continue into the Canada gallery for Banff, Jasper, waterfalls, alpine lakes, and the deep Rocky Mountain distance that no American West view quite matches.",
+  "Size, substrate, and edition details are inside each image page.",
+].join("\n\n");
+
+const copy = {
+  seoTitle: "Western Landscape Art - Fine Art Prints by Wayne Heim | K4 Studios",
+  seoDescription:
+    "Western landscape art prints by Wayne Heim - American West locations, painterly mountain views, waterfalls, and Canadian Rockies photography from $25 through signed limited editions. For living rooms, great rooms, lodges, and collector walls.",
+  indexDefinition:
+    "Wayne Heim's Western landscape art includes American West location landscapes, mountain landscape art prints, and Canadian Rockies photographs created as collector-grade fine art prints.",
+  indexLinkNote:
+    "This is the K4 commercial route for Western landscape art, Western landscape wall art, mountain landscape prints, and Canadian Rockies fine art photography.",
+  printAvailabilityNote: `Western landscape art prints are available from ${getFormattedLowestStandardPrintPrice()} across archival paper and select wood presentations. Edition status and format options are shown on individual image pages.`,
+  commercialH1: `The Collection - Three Landscape Series, ${westernLandscapeArtLiveCount} Works`,
+  commercialDeck:
+    `${westernLandscapeArtLiveCount} American West landscapes, painterly mountain views, and Canadian Rockies photographs - organized for collectors, rooms, lodges, and walls that need the weight of open country.`,
+  catalogEntranceTitle: "Western Landscape Art, Mountain Prints, and Canadian Rockies Fine Art",
+  catalogEntranceCopy:
+    "Browse Western landscape art prints, mountain landscape photography, American West location work, and Western Canada landscapes created as collector-grade fine art.",
+  collectionIntro: commercialMiddleCopy,
+  breadcrumbCurrentName: "Western Landscape Art",
+  aggregateOfferLowPrice: "25",
+  aggregateOfferHighPrice: "5000",
+  aggregateOfferCount: String(westernLandscapeArtLiveCount),
+  gatewayCollectionName: "Western Landscape Art",
+  gatewayIntroCopy:
+    "Western landscape art prints by Wayne Heim - open country, mountain weather, waterfall motion, and the quiet authority of Western land for living rooms, great rooms, offices, lodges, mountain homes, hospitality spaces, and collector walls.",
+  gatewaySupportingCopy:
+    `These works begin as photography, then are shaped into landscape fine art with atmosphere, tonal depth, and a strong sense of place. The collection opens with the Sketch Series, 5x7 archival prints from ${getFormattedLowestStandardPrintPrice()} - sized for shelves, desks, and introductory collecting. It scales through open-edition Foundation works, signed Chronicle editions with numbered certificates, and ultra-limited Legend pieces for collectors who want permanence on the wall.\n\nClick into any section to compare prints, read the image story, and view collector and sizing details.`,
+  gatewayKicker: "K4 Studios - Western Landscape Fine Art Print Catalog",
+  gatewayHeroTitle: "Western Landscape Art by Wayne Heim",
+  gatewayHeroAlt:
+    "Western landscape art print with open country, mountain distance, and painterly fine art atmosphere.",
+  gatewayHeroHref:
+    "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-G6gftd8",
+  gatewayHeroSrc: "/img/i-G6gftd8/m.jpg",
+  gatewayHeroSrcSet: "/img/i-G6gftd8/s.jpg 400w, /img/i-G6gftd8/m.jpg 720w",
+  archiveContextCopy:
+    "Every work on this page is available as a fine art print - with the Sketch Series opening at $25. Click into any image to read the story, compare print options, sizes, and collector details. Questions about a specific piece? Reach Wayne directly at <a href='mailto:wayne@k4studios.com'>wayne@k4studios.com</a>.",
+  faqKicker: "Print & Collector Questions",
+  faqTitle: "Western Landscape Art FAQ",
+};
 ---
 
-<KeywordLandingPage
-  pagePath={pagePath}
-  imageSectionPath={imageSectionPath}
-  gridBasePath={gridBasePath}
-  galleryPaths={galleryPaths}
-  landing={landing}
-  breadcrumbItems={breadcrumbItems}
-  storyBlocks={storyBlocks}
-  faqItems={faqItems}
-  explorationIntro="Western Landscape Discovery"
-  explorationPaths={explorationPaths}
-  featuredReadingTitle={featuredReadingTitle}
-  featuredReadingIntro={featuredReadingIntro}
-  featuredReadingItems={featuredReadingItems}
-  collectionGroups={collectionGroups}
-  gridImages={gridImages}
-  collection={collection}
-  faqSection={faqSection}
-  galleryData={mountainsGallery}
-  slides={[]}
-  meta={{
-    title: pageMeta.title,
-    description: pageMeta.description,
-    ogDescription: pageMeta.description,
+<CommercialDoorwayAllPage
+  rawGalleryData={westernLocationItems}
+  entranceData={entranceData}
+  basePath={basePath}
+  contentBasePath={basePath}
+  canonicalPath={canonicalPath}
+  breadcrumbHtml={breadcrumbHtml}
+  breadcrumbStructuredItems={breadcrumbStructuredItems}
+  sectionDockItems={sectionDockItems}
+  dockCenterIndex={dockCenterIndex}
+  currentDockTitle="Explore Western Landscape Art Collections"
+  archiveContext={{
+    categoryUrl: "/Galleries/Painterly-Fine-Art-Photography/Landscapes",
+    categoryName: "Landscapes",
   }}
-  structuredAbout={structuredAbout}
-  webPageAbout={webPageAbout}
-  genre={genre}
-  collectionAltPrefix={collectionAltPrefix}
-  heroVisualMode="hybridCarousel"
-  hybridCarouselProps={hybridCarouselProps}
+  identity={{
+    collectionName: "Western Landscape Art",
+    variantName: "Fine Art Prints",
+    variantDescriptor: "western landscape art",
+    gatewayBrandLabel: "Western Landscape Art - Fine Art Prints by Wayne Heim",
+  }}
+  copy={copy}
+  faqItems={westernLandscapeArtFAQ}
+  gridSections={gridSections}
+  dockVariant="wall-art"
 />

@@ -3,7 +3,7 @@ import Footer from "@/components/Footer.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import ArchiveContext from "@/components/ArchiveContext.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
-import { getSemanticImageUrl } from "@/utils/imageProxy.js";
+import { extractImageId, getSemanticImageUrl } from "@/utils/imageProxy.js";
 import {
   getAggregateOfferForCollection,
   getHighestStandardPrintPrice,
@@ -147,20 +147,30 @@ const cleanForDisplay = (val = "") =>
     .replace(/\r?\n|\r/g, " ")
     .trim();
 
-// âœ… Truncate story text for cards (150 chars max per Quill)
-const truncateStory = (story: string, maxLen = 150) => {
-  if (!story) return "";
-  const cleaned = cleanForDisplay(story);
-  if (cleaned.length <= maxLen) return cleaned;
-  return cleaned.slice(0, maxLen).replace(/\s+\S*$/, "") + "...";
+const hasDanglingEnding = (text = "") =>
+  /\b(?:a|an|and|as|at|between|by|for|from|in|into|of|on|or|the|through|to|under|with|without)\.?$/i.test(text.trim());
+
+const trimAtCleanWordBoundary = (text = "", maxLen = 150) => {
+  let trimmed = text.slice(0, maxLen).replace(/\s+\S*$/, "").trim();
+  trimmed = trimmed.replace(/\s+\b(?:a|an|and|as|at|between|by|for|from|in|into|of|on|or|the|through|to|under|with|without)$/i, "").trim();
+  return trimmed ? `${trimmed}…` : "";
 };
 
-const truncateWords = (text: string, maxWords = 30) => {
+const truncateExcerpt = (text: string, maxLen = 150) => {
   const cleaned = cleanForDisplay(text);
   if (!cleaned) return "";
-  const words = cleaned.split(/\s+/);
-  if (words.length <= maxWords) return cleaned;
-  return `${words.slice(0, maxWords).join(" ")}...`;
+  if (cleaned.length <= maxLen) return cleaned;
+
+  const limitSlice = cleaned.slice(0, maxLen + 1);
+  const sentenceMatches = [...limitSlice.matchAll(/[.!?](?=(?:["')\]]*)\s|(?:["')\]]*)$)/g)];
+  const sentenceEnd = sentenceMatches.at(-1)?.index;
+
+  if (sentenceEnd !== undefined && sentenceEnd >= 40) {
+    const sentenceExcerpt = limitSlice.slice(0, sentenceEnd + 1).trim();
+    if (!hasDanglingEnding(sentenceExcerpt)) return sentenceExcerpt;
+  }
+
+  return trimAtCleanWordBoundary(cleaned, maxLen);
 };
 
 // âœ… Proxy URL helper - never expose SmugMug URLs to crawlers
@@ -168,6 +178,21 @@ const getProxySrc = (id: string, size: string = 'l') => {
   const image = filteredGalleryData.find((item: any) => item.id === id)
     || galleryData.find((item: any) => item.id === id)
     || { id };
+  return getSemanticImageUrl(image, { galleryPath: contentBasePath }, size);
+};
+
+const forceImageSize = (src = "", size: string = 's') => {
+  const value = String(src || "");
+  if (!value) return "";
+  if (value.startsWith("/images/")) return value;
+
+  const imageId = extractImageId(value);
+  if (!imageId) return value;
+
+  const image = filteredGalleryData.find((item: any) => item.id === imageId)
+    || galleryData.find((item: any) => item.id === imageId)
+    || { id: imageId };
+
   return getSemanticImageUrl(image, { galleryPath: contentBasePath }, size);
 };
 
@@ -187,7 +212,7 @@ const toAbsoluteK4Url = (url = "") => {
 };
 
 const gatewayHeroItem = filteredGalleryData[0] || galleryData[0];
-const gatewayHeroOverrideSrc = formatCopy(copy.gatewayHeroSrc || "");
+const gatewayHeroOverrideSrc = forceImageSize(formatCopy(copy.gatewayHeroSrc || ""), 'm');
 const gatewayHeroTitle = cleanForDisplay(formatCopy(copy.gatewayHeroTitle || "") || gatewayHeroItem?.title || galleryTitle);
 const gatewayHeroAlt = copy.gatewayHeroAlt
   ? cleanForDisplay(formatCopy(copy.gatewayHeroAlt))
@@ -199,11 +224,11 @@ const gatewayHeroHref = copy.gatewayHeroHref
   : gatewayHeroItem
     ? `${contentBasePath}/${gatewayHeroItem.id}`
     : "#collection-grid";
-const gatewayHeroSrc = gatewayHeroOverrideSrc || (gatewayHeroItem ? getProxySrc(gatewayHeroItem.id, 'l') : "");
+const gatewayHeroSrc = gatewayHeroOverrideSrc || (gatewayHeroItem ? getProxySrc(gatewayHeroItem.id, 'm') : "");
 const gatewayHeroSrcSet = gatewayHeroOverrideSrc
-  ? formatCopy(copy.gatewayHeroSrcSet || "")
+  ? `${forceImageSize(gatewayHeroOverrideSrc, 's')} 400w, ${forceImageSize(gatewayHeroOverrideSrc, 'm')} 720w`
   : gatewayHeroItem
-  ? `${getProxySrc(gatewayHeroItem.id, 'm')} 720w, ${getProxySrc(gatewayHeroItem.id, 'l')} 1200w`
+  ? `${getProxySrc(gatewayHeroItem.id, 's')} 400w, ${getProxySrc(gatewayHeroItem.id, 'm')} 720w`
   : "";
 const gatewayHeroObjectPosition = formatCopy(copy.gatewayHeroObjectPosition || "center 28%");
 const gatewayHeroStyle = [
@@ -336,6 +361,7 @@ const structuredDataJson = JSON.stringify({
 const pageMeta = {
   canonicalUrl,
   robots: "index, follow",
+  descriptionMaxLength: copy.descriptionMaxLength || 190,
   ogTitle: seoTitle,
   ogDescription: seoDescription,
   ogImage: socialImage,
@@ -418,7 +444,7 @@ const compactBreadcrumbHtml = breadcrumbHtml
               >
                 <div class="dock-tombstone">
                   <img
-                    src={item.thumb}
+                    src={forceImageSize(item.thumb, 's')}
                     alt={`${displayTitle} tombstone link`}
                     loading={item.current || distance <= 2 ? 'eager' : 'lazy'}
                     width="140"
@@ -513,8 +539,7 @@ const compactBreadcrumbHtml = breadcrumbHtml
         const imageUrl = getProxySrc(item.id, 's');
         const srcsetParts = [
           `${getProxySrc(item.id, 's')} 400w`,
-          `${getProxySrc(item.id, 'm')} 600w`,
-          `${getProxySrc(item.id, 'l')} 1024w`
+          `${getProxySrc(item.id, 'm')} 600w`
         ].join(", ");
         const linkUrl = `${contentBasePath}/${item.id}`;
         const collectorNotesHref = `${linkUrl}#collector-notes`;
@@ -543,7 +568,7 @@ const compactBreadcrumbHtml = breadcrumbHtml
         }
         seenCardAltCounts.set(normalizedAltKey, previousAltCount + 1);
         
-        const storyExcerpt = truncateStory(item.story || "");
+        const storyExcerpt = truncateExcerpt(item.story || "", 150);
         const collectorNoteRaw =
           item.notes ||
           item.collectorNotes ||
@@ -551,7 +576,7 @@ const compactBreadcrumbHtml = breadcrumbHtml
           item.description ||
           item.story ||
           "";
-        const collectorNoteTeaser = truncateWords(collectorNoteRaw, 30);
+        const collectorNoteTeaser = truncateExcerpt(collectorNoteRaw, 190);
         const cardSeries = getCardSeries(item);
         const cardSeriesKeys = cardSeries.map((series: any) => series.key).join(' ');
         const needsRangeMarker = idx > 0 && idx % 50 === 0;
@@ -1513,7 +1538,7 @@ const compactBreadcrumbHtml = breadcrumbHtml
       background:#fffdf9;
       border-top:1px solid #e6d9ca;
       width:100%;
-      transition:transform .46s cubic-bezier(.22, 1, .36, 1);
+      transition:transform 3.7s cubic-bezier(.16, 1, .3, 1);
       transform:translateY(0);
     }
 
@@ -1521,6 +1546,7 @@ const compactBreadcrumbHtml = breadcrumbHtml
     .ssr-card:focus-within .ssr-card-content {
       transform:translateY(var(--card-overlap));
       justify-content:flex-start;
+      transition-duration:1.35s;
     }
 
     .ssr-card-link:focus-visible {
@@ -1542,7 +1568,7 @@ const compactBreadcrumbHtml = breadcrumbHtml
       margin-bottom:6px;
       padding-right:58px;
       min-width:0;
-      transition:opacity .24s ease, transform .24s ease, max-height .24s ease, margin .24s ease;
+      transition:opacity 2.2s ease, transform 2.2s ease, max-height 2.2s ease, margin 2.2s ease;
     }
 
     .ssr-card-content h3 {
@@ -1555,7 +1581,7 @@ const compactBreadcrumbHtml = breadcrumbHtml
       -webkit-box-orient:vertical;
       -webkit-line-clamp:3;
       overflow:hidden;
-      transition:opacity .24s ease, transform .24s ease, max-height .24s ease, margin .24s ease;
+      transition:opacity 2.2s ease, transform 2.2s ease, max-height 2.2s ease, margin 2.2s ease;
     }
     .card-series-strip {
       display:flex;
@@ -1589,7 +1615,7 @@ const compactBreadcrumbHtml = breadcrumbHtml
       color:#7b5c3e;
       font-size:.86rem;
       font-weight:700;
-      transition:opacity .24s ease, transform .24s ease, max-height .24s ease, margin .24s ease;
+      transition:opacity 2.2s ease, transform 2.2s ease, max-height 2.2s ease, margin 2.2s ease;
     }
     .story-excerpt {
       color:#5d4b3e;
@@ -1600,10 +1626,10 @@ const compactBreadcrumbHtml = breadcrumbHtml
       -webkit-box-orient:vertical;
       -webkit-line-clamp:5;
       overflow:hidden;
-      transition:opacity .24s ease, transform .24s ease, max-height .24s ease, margin .24s ease;
+      transition:opacity 2.2s ease, transform 2.2s ease, max-height 2.2s ease, margin 2.2s ease;
     }
     .card-number {
-      transition:opacity .24s ease, transform .24s ease, max-height .24s ease, margin .24s ease;
+      transition:opacity 2.2s ease, transform 2.2s ease, max-height 2.2s ease, margin 2.2s ease;
     }
     .card-cta {
       margin-top:auto;
@@ -1617,6 +1643,9 @@ const compactBreadcrumbHtml = breadcrumbHtml
     .ssr-card:hover .card-cta,
     .ssr-card:focus-within .card-cta {
       margin-top:0;
+      color:#a44a3f;
+      font-weight:800;
+      border-top-color:rgba(164,74,63,.42);
     }
     .ssr-card:hover .card-number,
     .ssr-card:focus-within .card-number,
@@ -1634,6 +1663,7 @@ const compactBreadcrumbHtml = breadcrumbHtml
       margin:0;
       overflow:hidden;
       pointer-events:none;
+      transition-duration:.8s;
     }
     .collector-notes-trigger {
       position:absolute;

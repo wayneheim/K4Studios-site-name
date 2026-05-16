@@ -8,13 +8,13 @@ export const westernArtworkFAQ = [
   {
     q: "Does Western themed art belong here too?",
     a: [
-      "Western themed art - decorative pieces built around frontier symbols like hats, horses, and desert horizons - is a different category. Wayne Heim's Western artwork is authored fine art: each image carries a named moment, a story, and a painterly treatment that separates it from surface-level Western theme decor. The work is built to hold a wall over time, not to fill a space with a look.",
+      "Western themed art - decorative pieces built around frontier symbols like hats, horses, and desert horizons - is a different category. Wayne Heim's Western artwork is authored fine art: each image carries a named moment, a story, and a painterly process that separates it from surface-level Western theme decor. The work is built to hold a wall over time, not to fill a space with a look.",
     ],
   },
   {
     q: "Can I buy the Western artwork shown here?",
     a: [
-      "Yes. Every work on this page is available as a fine art print - archival paper, canvas, metal, or wood - starting with the Sketch Series at $25. Click into any image to read the story, compare sizes, view edition status, and order. For help choosing a specific work or format, reach Wayne directly at <a href='mailto:wayne@k4studios.com'>wayne@k4studios.com</a>.",
+      "Yes. Every work on this page is available as a fine art print - starting with the Sketch Series at $25. Click into any image to read the story, compare print options, sizes, view edition status, and order. For help choosing a specific work or format, reach Wayne directly at <a href='mailto:wayne@k4studios.com'>wayne@k4studios.com</a>.",
     ],
   },
   {
@@ -26,7 +26,7 @@ export const westernArtworkFAQ = [
   {
     q: "What print formats are available for Western artwork?",
     a: [
-      "Every image is available as archival paper, canvas, metal, or wood - including the Engrained Series on Baltic Birch panels. The Sketch Series opens at $25. The Foundation Series moves into larger open-edition archival works. Chronicle editions are signed and numbered. Legend pieces are ultra-limited with collector provenance. Size and finish details are inside each image page.",
+      "Every image is available as archival paper or select wood presentation - including the Engrained Series on Baltic Birch panels. The Sketch Series opens at $25. The Foundation Series moves into larger open-edition archival works. Chronicle editions are signed and numbered. Legend pieces are ultra-limited with collector provenance. Size and finish details are inside each image page.",
     ],
   },
   {

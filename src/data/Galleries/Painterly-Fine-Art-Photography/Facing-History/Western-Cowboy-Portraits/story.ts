@@ -65,7 +65,7 @@ export const westernStory = [
       `The American West was never one note. Color carries warmth, distance, and atmosphere, while black and white strips everything down to structure, expression, and weight. Here you can explore the same world with different emotional weight.`
     ],
     list: [
-      `<strong><a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color">Color Western Cowboy Portraits</a>:</strong> Sun-warmed riders, dust in the air, and faces shaped by long light. The <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/all">complete color archive</a> keeps the full cowboy photography inventory visible.`,
+      `<strong><a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color">Color Western Cowboy Portraits</a>:</strong> Sun-warmed riders, dust in the air, and faces shaped by long light. The <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/all#collection-browser">complete color archive</a> keeps the full cowboy photography inventory visible.`,
       `<strong><a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White">Black & White Cowboy Portraits</a>:</strong> Quiet, stripped-down studies of form, expression, and presence. The parent <a href="/Western-Black-and-White-Photography">Western Black and White Photography</a> page gathers the broader black and white western art intent.`
     ]
   },

@@ -2323,7 +2323,7 @@ export const galleryData = [
       "wild west photography"
     ],
     "story": " - All right, children, settle down. Eyes up front - let's get one thing straight: life out here won't wait for anyone to catch up. You learn your sums, you learn your letters, and you learn to keep your word.\n\nWhen the bell rings, you'll step outside these walls, and the world won't be kind or patient. But if you remember this lesson, you'll carry something with you no storm or hard winter can take away.\n\nNow - who can tell me what comes next? - ",
-    "notes": "The painterly black and white treatment echoes early 20th-century documentary photography, immersing the viewer in an environment where every desk and chalk mark tells its own story. The teacher's commanding posture and period dress become symbols of authority and nurture - reminding us that survival on the frontier depended as much on learning as on grit. This piece pays tribute to the unsung educators of the American West, capturing the quiet heroism of those who shaped the next generation in uncertain times.",
+    "notes": "The painterly black-and-white finish echoes early 20th-century documentary photography, immersing the viewer in an environment where every desk and chalk mark tells its own story. The teacher's commanding posture and period dress become symbols of authority and nurture - reminding us that survival on the frontier depended as much on learning as on grit. This piece pays tribute to the unsung educators of the American West, capturing the quiet heroism of those who shaped the next generation in uncertain times.",
     "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White"

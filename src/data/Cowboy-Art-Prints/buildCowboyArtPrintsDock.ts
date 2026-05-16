@@ -27,7 +27,7 @@ const supportItem = (title: string, href: string, thumb: string, subtitle = "") 
 const cowboyContextThumb = "/img/i-3SxncXS/s.jpg";
 const painterlyThumb = "/images/tombstones/Painterly-ts.webp";
 const fineArtPrintThumb = "/images/tombstones/print-options-ts.webp";
-const engrainedThumb = "/images/tombstones/engrained-ts.jpg";
+const engrainedThumb = "/images/tombstones/engrained-ts.webp";
 const displayWesternArtThumb = "/img/i-44jcjTQ/s.jpg";
 const narrativeThumb = "/img/i-B7ZSdfs/s.jpg";
 
@@ -38,75 +38,81 @@ export const buildCowboyArtPrintsDock = () => {
 
   const sectionDockItems = [
     supportItem(
-      "What Makes a Fine Art Print Worth Owning?",
+      "Learn What Makes a Fine Art Print Worth Owning",
       "/Blog/what-makes-a-fine-art-print-worth-owning",
       fineArtPrintThumb
     ),
     supportItem(
-      "Wood Prints vs Paper Prints",
+      "Compare Wood Prints and Paper Prints",
       "/Blog/wood-prints-vs-paper-prints",
       engrainedThumb
     ),
     supportItem(
-      "What Is Western Cowboy Art?",
+      "Learn What Is Western Cowboy Art",
       "/Blog/what-is-western-cowboy-art",
       cowboyContextThumb
     ),
     supportItem(
-      "What Is Painterly Photography?",
+      "Learn What Is Painterly Photography",
       "/Blog/what-is-painterly-photography",
       painterlyThumb
     ),
     asDockItem(facingHistoryLanding.tombstones[0], {
-      title: "Facing History",
+      title: "Facing History Series",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History",
       dockRole: "support",
+      dockPrefix: "",
     }),
     { separator: true, label: "Core cowboy art print collections" },
     asDockItem(cowboyPortraitLanding.tombstones[0], {
-      title: "Color Cowboy Art Prints",
+      title: "Color Cowboy Portrait Prints",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/all#collection-browser",
       dockRole: "core",
+      dockPrefix: "",
     }),
     asDockItem(cowboyPortraitLanding.tombstones[1], {
-      title: "Black and White Cowboy Art Prints",
+      title: "Black and White Cowboy Portrait Prints",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/all#collection-browser",
       dockRole: "core",
+      dockPrefix: "",
     }),
     asDockItem(westernNarrativeLanding.tombstones[0], {
-      title: "Narrative Cowboy Art Prints",
+      title: "Color Western Narrative Prints",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all#collection-browser",
       thumb: narrativeThumb,
       dockRole: "core",
+      dockPrefix: "",
     }),
     asDockItem(westernNarrativeLanding.tombstones[1], {
-      title: "Black and White Narrative Prints",
+      title: "Black and White Western Narrative Prints",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/all#collection-browser",
       dockRole: "core",
+      dockPrefix: "",
     }),
     { separator: true, label: "Print context and collector notes" },
     asDockItem(facingHistoryWildWest || wildWestLanding.tombstones[0], {
-      title: "Wild West",
+      title: "Wild West Series",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West",
       dockRole: "support",
+      dockPrefix: "",
     }),
     supportItem(
-      "How to Display Western Art in a Modern Home Without Turning It Into a Theme Room",
+      "Learn How to Display Western Art at Home",
       "/Blog/how-to-display-western-art-in-a-modern-home",
       displayWesternArtThumb
     ),
     supportItem(
-      "Collecting Fine Art Photography: A Beginner's Guide",
+      "Start Collecting Fine Art Photography",
       "/Blog/collecting-fine-art-photography-beginners-guide",
       fineArtPrintThumb
     ),
     supportItem(
-      "One-Image Movie",
+      "Explore the One-Image Movie",
       "/Other/One-Image-Movie",
       narrativeThumb
     ),
     supportItem(
-      "Decor Art vs Fine Art: What Is the Difference?",
+      "Compare Decor Art and Fine Art",
       "/Blog/decor-art-vs-fine-art",
       "/images/tombstones/traditional-ts.webp"
     ),
@@ -114,6 +120,6 @@ export const buildCowboyArtPrintsDock = () => {
 
   return {
     sectionDockItems,
-    dockCenterIndex: sectionDockItems.findIndex((item: any) => item.title === "Color Cowboy Art Prints"),
+    dockCenterIndex: sectionDockItems.findIndex((item: any) => item.title === "Color Cowboy Portrait Prints"),
   };
 };

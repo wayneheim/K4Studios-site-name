@@ -29,7 +29,7 @@ export const storySections: DoorwayStorySection[] = [
     subhead: 'Made to Stay',
     paragraphs: [
       'Collector-grade prints need more than a strong image. They need materials that let the work stay strong over time.',
-      'At K4 Studios, options include archival paper, canvas, metal, and the <a href="/Other/K4-Select-Series/Engrained" style="color:#8b5a2b; text-decoration:underline;">Engrained Series</a> on Baltic Birch. Each piece is produced to order and signed by the artist.',
+      'At K4 Studios, options include archival paper and the <a href="/Other/K4-Select-Series/Engrained" style="color:#8b5a2b; text-decoration:underline;">Engrained Series</a> on Baltic Birch. Each piece is produced to order and signed by the artist.',
       'Format changes how the image lives in a room. The goal is not novelty. It is fit, tone, and long-term presence.',
     ],
   },
@@ -75,7 +75,7 @@ export const deepFaqItems: DoorwayDeepFaqItem[] = [
   {
     question: 'What print materials are available?',
     answers: [
-      'Archival paper, canvas, metal, and the <a href="/Other/K4-Select-Series/Engrained" style="color:#8b5a2b; text-decoration:underline;">Engrained Series</a> on Baltic Birch.',
+      'Archival paper and the <a href="/Other/K4-Select-Series/Engrained" style="color:#8b5a2b; text-decoration:underline;">Engrained Series</a> on Baltic Birch.',
       'Each changes the surface presence of the image and the way it lives in a room.',
     ],
   },

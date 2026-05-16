@@ -14,7 +14,7 @@ export const westernArtFAQ = [
   {
     q: "What makes Wayne Heim's Western photography art distinctive?",
     a: [
-      "Three things separate it from the broader category: the painterly process that shapes each image beyond straight photography, the narrative structure that gives every work a title and a story, and the treatment of figures as characters mid-story rather than posed subjects. The result carries the authenticity of photography and the authored presence of painting.",
+      "Three things separate it from the broader category: the painterly process that shapes each image beyond straight photography, the narrative structure that gives every work a title and a story, and the portrayal of figures as characters mid-story rather than posed subjects. The result carries the authenticity of photography and the authored presence of painting.",
     ],
   },
   {
@@ -38,7 +38,7 @@ export const westernArtFAQ = [
   {
     q: "What print formats are available for Western photography art?",
     a: [
-      "Every image is available as archival paper, canvas, metal, or wood - including the Engrained Series on Baltic Birch panels. The Sketch Series opens at $25. Signed Chronicle editions and ultra-limited Legend pieces are available for collectors who want provenance and permanence. Size and finish details are inside each image page.",
+      "Every image is available as archival paper or select wood presentation - including the Engrained Series on Baltic Birch panels. The Sketch Series opens at $25. Signed Chronicle editions and ultra-limited Legend pieces are available for collectors who want provenance and permanence. Size and finish details are inside each image page.",
     ],
   },
   {

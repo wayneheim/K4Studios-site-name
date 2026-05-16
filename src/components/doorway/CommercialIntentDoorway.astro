@@ -1,0 +1,24 @@
+---
+import CommercialDoorwayAllPage from "@/components/doorway/CommercialDoorwayAllPage.astro";
+
+const { config } = Astro.props;
+---
+
+<CommercialDoorwayAllPage
+  rawGalleryData={config.rawGalleryData}
+  entranceData={config.entranceData}
+  basePath={config.basePath}
+  contentBasePath={config.basePath}
+  canonicalPath={config.pagePath}
+  breadcrumbHtml={config.breadcrumbHtml}
+  breadcrumbStructuredItems={config.breadcrumbStructuredItems}
+  sectionDockItems={config.sectionDockItems}
+  dockCenterIndex={config.dockCenterIndex}
+  currentDockTitle={config.currentDockTitle}
+  archiveContext={config.archiveContext}
+  identity={config.identity}
+  copy={config.copy}
+  faqItems={config.faqItems}
+  gridSections={config.gridSections}
+  dockVariant="wall-art"
+/>

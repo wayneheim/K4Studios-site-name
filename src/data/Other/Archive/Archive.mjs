@@ -233,7 +233,7 @@ export const galleryData = [
  {
  "id": "i-vhGcpWV",
  "title": "You're Mine!",
- "description": "Two frontier figures sit together in a train car, their close posture, resting hands, and warm window light shaping a moment of quiet intimacy and mutual certainty. The softened treatment and enclosed setting give the scene the emotional pull of narrative Western art. \n\n© Wayne Heim",
+ "description": "Two frontier figures sit together in a train car, their close posture, resting hands, and warm window light shaping a moment of quiet intimacy and mutual certainty. The softened finish and enclosed setting give the scene the emotional pull of narrative Western art. \n\n© Wayne Heim",
  "alt": "A cowboy art scene of a man and woman seated together on a train, sharing a quiet, intimate moment in warm light.",
  "story": "He doesn't say it out loud.\nHe doesn't need to.\n\nThe way he leans in, the way her hand rests without asking-this is already decided. Not claimed loudly, not proven publicly. Just known. Whatever waits at the next stop can wait. This moment has already taken its seat.\n\nPossession here isn't force.\nIt's agreement.",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Pennsylvania-Cowboy-Weekend/i-vhGcpWV/1/MSmb8KF8hS428rMwgPNbSdBq4ZMvz76xjQpQ9qF45/XL/_O1H2805-Enhanced-NR-Edit-XL.jpg",
@@ -426,7 +426,7 @@ export const galleryData = [
  {
  "id": "i-wZ8Zn9p",
  "title": "The Ride In",
- "description": "A cowboy rides hard through drifting dust, the horse's lifted stride and forward lean shaping a scene of speed, pressure, and commitment. The black-and-white treatment and softened atmosphere give the image the cinematic force of painterly cowboy photography. \n\n© Wayne Heim",
+ "description": "A cowboy rides hard through drifting dust, the horse's lifted stride and forward lean shaping a scene of speed, pressure, and commitment. The black-and-white finish and softened atmosphere give the image the cinematic force of painterly cowboy photography. \n\n© Wayne Heim",
  "alt": "A rider charges forward on horseback through dust, rendered in black and white with a soft, driving sense of motion.",
  "story": "He commits before the dust does.\nBefore the horse feels it.\n\nMomentum takes over where doubt would slow him down. Leather snaps tight, ground disappears, and the space ahead narrows fast. Whatever waits at the end of this run won't be met cautiously-it will be met upright, moving, and decided.\n\nSome moments don't allow rehearsal.\nThey only allow arrival.",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wZ8Zn9p/0/KWGMVcwMzSpFvw6bStbvThF8H2pkSPJqvj9QJtgnS/XL/_HF26618-1000-Edit-XL.jpg",
@@ -466,7 +466,7 @@ export const galleryData = [
  "western cowboy wall art for collectors",
  "western painterly photography"
  ],
- "notes": "This work carries its impact through momentum rather than spectacle. Dust, posture, and forward motion compress the scene into a single act of commitment, giving the image both urgency and restraint.\n\nThe softened black-and-white treatment pushes the piece toward pictorialist atmosphere, where motion becomes emotional structure rather than mere action. What remains is a study in resolve, speed, and consequence.",
+ "notes": "This work carries its impact through momentum rather than spectacle. Dust, posture, and forward motion compress the scene into a single act of commitment, giving the image both urgency and restraint.\n\nThe softened black-and-white finish pushes the piece toward pictorialist atmosphere, where motion becomes emotional structure rather than mere action. What remains is a study in resolve, speed, and consequence.",
  "rating": 4,
  "visibility": "show",
  "archivedFrom": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
@@ -475,7 +475,7 @@ export const galleryData = [
  {
  "id": "i-r9xCmwz",
  "title": "Frontier Bearing",
- "description": "Centered in an empty frontier lane, a lone man stands in a long coat and broad hat, his still posture and weathered dress giving the portrait a quiet sense of permanence. The softened sepia treatment and spare surroundings lend the image the character of cowboy art shaped by presence rather than action. \n\n© Wayne Heim",
+ "description": "Centered in an empty frontier lane, a lone man stands in a long coat and broad hat, his still posture and weathered dress giving the portrait a quiet sense of permanence. The softened sepia finish and spare surroundings lend the image the character of cowboy art shaped by presence rather than action. \n\n© Wayne Heim",
  "alt": "A solitary frontier man stands facing forward on a dusty road near a log building, dressed in a long coat and hat with a calm, steady bearing.",
  "story": "He stands without adjusting himself.\nThe clothes already know where they belong.\n\nNothing about the moment asks for explanation. The coat hangs the way it has learned to hang. The ground answers his weight without question. Whatever comes next will come on its own terms, and he'll meet it the same way he meets everything else-upright, unhurried, unchanged.\n\nOut here, bearing isn't attitude.\nIt's record.",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-r9xCmwz/0/LjRXJS4CsfxPq4gWjCmfQsxrR9NGJV62ThJqhcrv8/L/_O2H2856-855-2-L.jpg",
@@ -786,7 +786,7 @@ export const galleryData = [
  "western cowboy art",
  "western fine art"
  ],
- "notes": "Preparation is the true subject here. Rather than pushing toward action, the image lingers in the quieter discipline that makes action possible. The turned back, the horse's patient stance, and the small adjustments of hand and leather all give the work a grounded authority built on habit rather than display.\n\nThe black-and-white treatment deepens that sense of work stripped to essentials. Without color to dramatize the scene, structure, posture, and relationship carry the meaning. The result is a Western image shaped by readiness, routine, and the unadorned honesty of labor that must be done before anything larger can begin.",
+ "notes": "Preparation is the true subject here. Rather than pushing toward action, the image lingers in the quieter discipline that makes action possible. The turned back, the horse's patient stance, and the small adjustments of hand and leather all give the work a grounded authority built on habit rather than display.\n\nThe black-and-white finish deepens that sense of work stripped to essentials. Without color to dramatize the scene, structure, posture, and relationship carry the meaning. The result is a Western image shaped by readiness, routine, and the unadorned honesty of labor that must be done before anything larger can begin.",
  "rating": 4,
  "visibility": "show",
  "archivedFrom": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
@@ -920,7 +920,7 @@ export const galleryData = [
  "western themed art",
  "western grit"
  ],
- "notes": "Ease is the true subject here. Nothing in the image feels tested or performed. The rider and horse occupy the frame with a settled confidence that only comes from repetition, trust, and the long accumulation of shared movement. That gives the portrait its authority. It is not about conquest or display, but about belonging fully inside a practiced rhythm.\n\nThe pale tonal treatment deepens that feeling by dissolving anything unnecessary. Dust, light, and softened edges turn the scene into a study of balance rather than event, allowing posture and relationship to carry the meaning. The result is a Western portrait shaped by familiarity, calm command, and the quiet mastery that no longer needs to announce itself.",
+ "notes": "Ease is the true subject here. Nothing in the image feels tested or performed. The rider and horse occupy the frame with a settled confidence that only comes from repetition, trust, and the long accumulation of shared movement. That gives the portrait its authority. It is not about conquest or display, but about belonging fully inside a practiced rhythm.\n\nThe pale tonal finish deepens that feeling by dissolving anything unnecessary. Dust, light, and softened edges turn the scene into a study of balance rather than event, allowing posture and relationship to carry the meaning. The result is a Western portrait shaped by familiarity, calm command, and the quiet mastery that no longer needs to announce itself.",
  "rating": 3,
  "visibility": "show",
  "archivedFrom": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
@@ -963,7 +963,7 @@ export const galleryData = [
  "western grit",
  "wild west painterly photography"
  ],
- "notes": "Endurance is carried here through bearing rather than drama. The figure does not resist the weather so much as inhabit it, and that distinction gives the image its authority. Her stance and lifted gaze suggest a familiarity with exposure, distance, and time-qualities that make the portrait feel earned rather than staged.\n\nThe fence plays an important structural role. It anchors the composition in frontier material culture while also extending the sense of boundary, land, and measure beyond the frame. Combined with the softened tonal treatment, the result is a Western portrait shaped by patience, resilience, and the quiet strength of someone who understands that constancy can be its own form of power.",
+ "notes": "Endurance is carried here through bearing rather than drama. The figure does not resist the weather so much as inhabit it, and that distinction gives the image its authority. Her stance and lifted gaze suggest a familiarity with exposure, distance, and time-qualities that make the portrait feel earned rather than staged.\n\nThe fence plays an important structural role. It anchors the composition in frontier material culture while also extending the sense of boundary, land, and measure beyond the frame. Combined with the softened tonal finish, the result is a Western portrait shaped by patience, resilience, and the quiet strength of someone who understands that constancy can be its own form of power.",
  "rating": 4,
  "visibility": "hidden",
  "archivedFrom": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
@@ -1168,7 +1168,7 @@ export const galleryData = [
  {
  "id": "i-ZDGhLps",
  "title": "He Didn't Miss",
- "description": "A cowboy braces in a wooded clearing as smoke bursts from his pistol, the angled stance and split-second discharge fixing the scene in a moment of violent consequence. The softened light and controlled treatment give the image the tension of painterly cowboy photography. \n\n© Wayne Heim",
+ "description": "A cowboy braces in a wooded clearing as smoke bursts from his pistol, the angled stance and split-second discharge fixing the scene in a moment of violent consequence. The softened light and controlled finish give the image the tension of painterly cowboy photography. \n\n© Wayne Heim",
  "alt": "A cowboy in a light hat fires a pistol in a forest clearing, smoke billowing from the shot as he twists through the motion.",
  "story": "The sound came first. \nToo sharp to mistake. Too final to reconsider.\n\nThere was no rush in the movement that followed-only decision. \nThe kind made long before the hand ever reaches for steel.\n\nBy the time the smoke cleared, it was already over. \nWhatever argument had existed before did not survive the moment.",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-ZDGhLps/8/MZjM4S68JXRX6tSHVWVKMJ65js7KDZLj2zjqwpqsJ/XL/cowboy%20photography%20_O1H2142-Edit-Edit-XL.jpg",
@@ -1194,7 +1194,7 @@ export const galleryData = [
  "rugged spirit",
  "outlaw portraits"
  ],
- "notes": "This piece is driven by consequence rather than spectacle. The twisting posture, burst of smoke, and compressed moment of discharge give the image its force, while the restrained treatment keeps it from slipping into mere action.\n\nIts strength lies in the balance between motion and control. What remains is a Western study of decision made visible, where atmosphere and timing carry as much weight as the shot itself.",
+ "notes": "This piece is driven by consequence rather than spectacle. The twisting posture, burst of smoke, and compressed moment of discharge give the image its force, while the restrained finish keeps it from slipping into mere action.\n\nIts strength lies in the balance between motion and control. What remains is a Western study of decision made visible, where atmosphere and timing carry as much weight as the shot itself.",
  "rating": 2,
  "visibility": "show",
  "archivedFrom": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
@@ -1435,7 +1435,7 @@ export const galleryData = [
  {
  "id": "i-CZrXGr9",
  "title": "Hold Fast",
- "description": "A bearded cowboy holds a rifle at the ready as smoke drifts across the frame, with dark clothing, gloved hands, and low light sharpening the scene's tension. The muted palette and atmospheric treatment give the portrait the controlled force of painterly cowboy photography. \n\n© Wayne Heim",
+ "description": "A bearded cowboy holds a rifle at the ready as smoke drifts across the frame, with dark clothing, gloved hands, and low light sharpening the scene's tension. The muted palette and atmospheric finish give the portrait the controlled force of painterly cowboy photography. \n\n© Wayne Heim",
  "alt": "A cowboy in a black hat aims a rifle through drifting smoke, his glipped hands and steady posture creating a tense frontier portrait.",
  "story": "The smoke hasn't settled yet. \nIt hangs where the last sound should be, thick enough to slow the breath, thin enough to see through.\n\nHe doesn't rush it. \nThe rifle is already where it needs to be, the weight familiar, the distance measured long before this moment arrived.\n\nWhatever happens next won't surprise him. \nThis is the pause he's learned to trust.",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-CZrXGr9/0/LSwgxBWB9SbK7k3Z3sBzJ22GNs5RJj5LN7Rdbm6ZV/XL/_HF26552-1358-XL.jpg",

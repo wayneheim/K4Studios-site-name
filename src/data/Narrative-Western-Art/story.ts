@@ -100,7 +100,7 @@ export const narrativeWesternArtStory = [
     paragraphs: [
       "Collectors are often drawn to narrative Western art because it rewards long viewing.",
       "The image does not exhaust itself at first glance. It opens gradually, revealing atmosphere, implication, and emotional weight over time.",
-      "At K4 Studios, these works are produced as limited edition archival prints on museum-grade paper, canvas, or <a href=\"/Other/K4-Select-Series/Engrained\">Engrained™</a> hardwood panels.",
+      "At K4 Studios, these works are produced as limited edition archival prints on museum-grade paper or <a href=\"/Other/K4-Select-Series/Engrained\">Engrained™</a> hardwood panels.",
       "Each edition is numbered, signed, and created for collectors who value visual storytelling as much as subject matter."
     ]
   },

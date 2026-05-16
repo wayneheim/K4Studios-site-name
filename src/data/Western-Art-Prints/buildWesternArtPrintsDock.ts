@@ -24,10 +24,10 @@ const supportItem = (title: string, href: string, thumb: string, subtitle = "") 
   dockPrefix: "",
 });
 
-const westernFineArtThumb = "/img/i-gxMVNh3/s.jpg";
+const historicalWesternPhotographyThumb = "/img/i-gxMVNh3/s.jpg";
 const narrativeThumb = "/img/i-B7ZSdfs/s.jpg";
 const printOptionsThumb = "/images/tombstones/print-options-ts.webp";
-const engrainedThumb = "/images/tombstones/engrained-ts.jpg";
+const engrainedThumb = "/images/tombstones/engrained-ts.webp";
 const displayWesternArtThumb = "/img/i-44jcjTQ/s.jpg";
 const westernArtThumb = "/images/tombstones/traditional-ts.webp";
 
@@ -38,22 +38,22 @@ export const buildWesternArtPrintsDock = () => {
 
   const sectionDockItems = [
     supportItem(
-      "What Is Western Fine Art Photography?",
-      "/Blog/what-is-western-fine-art-photography",
-      westernFineArtThumb
+      "Learn What Is Historical Western Photography",
+      "/Blog/what-is-historical-western-photography",
+      historicalWesternPhotographyThumb
     ),
     supportItem(
-      "What Makes a Fine Art Print Worth Owning?",
+      "Learn What Makes a Fine Art Print Worth Owning",
       "/Blog/what-makes-a-fine-art-print-worth-owning",
       printOptionsThumb
     ),
     supportItem(
-      "Wood Prints vs Paper Prints",
+      "Compare Wood Prints and Paper Prints",
       "/Blog/wood-prints-vs-paper-prints",
       engrainedThumb
     ),
     supportItem(
-      "What Is Western Art?",
+      "Learn What Is Western Art",
       "/Blog/what-is-western-art",
       westernArtThumb
     ),
@@ -63,40 +63,45 @@ export const buildWesternArtPrintsDock = () => {
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all#collection-browser",
       thumb: narrativeThumb,
       dockRole: "core",
+      dockPrefix: "",
     }),
     asDockItem(westernNarrativeLanding.tombstones[1], {
       title: "Black and White Western Narrative Prints",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/all#collection-browser",
       dockRole: "core",
+      dockPrefix: "",
     }),
     asDockItem(cowboyPortraitLanding.tombstones[0], {
-      title: "Color Cowboy Art Prints",
+      title: "Color Cowboy Portrait Prints",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/all#collection-browser",
       dockRole: "core",
+      dockPrefix: "",
     }),
     asDockItem(cowboyPortraitLanding.tombstones[1], {
-      title: "Black and White Cowboy Art Prints",
+      title: "Black and White Cowboy Portrait Prints",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/all#collection-browser",
       dockRole: "core",
+      dockPrefix: "",
     }),
     { separator: true, label: "Western art print context and collector notes" },
     asDockItem(facingHistoryWildWest || wildWestLanding.tombstones[0], {
-      title: "Wild West",
+      title: "Wild West Series",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West",
       dockRole: "support",
+      dockPrefix: "",
     }),
     supportItem(
-      "How to Display Western Art in a Modern Home Without Turning It Into a Theme Room",
+      "Learn How to Display Western Art at Home",
       "/Blog/how-to-display-western-art-in-a-modern-home",
       displayWesternArtThumb
     ),
     supportItem(
-      "Narrative Western Art vs Traditional Western Art",
+      "Compare Narrative and Traditional Western Art",
       "/Blog/narrative-western-art-vs-traditional",
       narrativeThumb
     ),
     supportItem(
-      "Decor Art vs Fine Art: What Is the Difference?",
+      "Compare Decor Art and Fine Art",
       "/Blog/decor-art-vs-fine-art",
       "/images/tombstones/traditional-ts.webp"
     ),

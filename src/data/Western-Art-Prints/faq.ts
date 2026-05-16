@@ -2,7 +2,7 @@ export const westernArtPrintsFAQ = [
   {
     q: "What types of Western art prints are available at K4 Studios?",
     a: [
-      "Four sections cover the full range - color and black and white cowboy portraits, and color and black and white frontier narrative scenes. Each section holds between 99 and 454 works, available as archival paper, canvas, metal, or wood prints from $25 through signed limited editions.",
+      "Four sections cover the full range - color and black and white cowboy portraits, and color and black and white frontier narrative scenes. Each section holds between 99 and 454 works, available as archival paper and select wood prints from $25 through signed limited editions.",
     ],
   },
   {
@@ -20,7 +20,7 @@ export const westernArtPrintsFAQ = [
   {
     q: "What print formats and materials are available?",
     a: [
-      "Every image is available as archival paper, canvas, metal, or wood. Wood options include the Engrained Series on Baltic Birch panels. Material choice affects how the work holds light and how it reads in a room. Size and finish details are inside each image page.",
+      "Every image is available as archival paper or select wood presentation. Wood options include the Engrained Series on Baltic Birch panels. Material choice affects how the work holds light and how it reads in a room. Size and finish details are inside each image page.",
     ],
   },
   {
@@ -44,7 +44,7 @@ export const westernArtPrintsFAQ = [
   {
     q: "Where should I start if I'm choosing a Western art print?",
     a: [
-      "Start with subject - portrait or narrative scene. Then choose treatment - color for warmth and painterly light, black and white for tonal contrast and old West atmosphere. Click into any image to read the story before deciding. For help choosing for a specific room, reach Wayne directly at <a href='mailto:wayne@k4studios.com'>wayne@k4studios.com</a>.",
+      "Start with subject - portrait or narrative scene. Then choose presentation - color for warmth and painterly light, black and white for tonal contrast and old West atmosphere. Click into any image to read the story before deciding. For help choosing for a specific room, reach Wayne directly at <a href='mailto:wayne@k4studios.com'>wayne@k4studios.com</a>.",
     ],
   },
   {

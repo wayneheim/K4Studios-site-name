@@ -72,11 +72,15 @@ const allPageAnchors: Record<string, string> = {
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color": "#collection-browser",
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White": "#collection-browser",
 };
+const getAllPageAnchor = (href: string) =>
+  href.startsWith('/Galleries/Painterly-Fine-Art-Photography/')
+    ? '#collection-browser'
+    : allPageAnchors[href] || '';
 const hasExactGalleryCollection = previewPath ? isGallerySourceHref(previewPath) : false;
 const resolvedPreviewPath = hasExactGalleryCollection ? resolveGallerySourceHref(previewPath) : null;
 const collectionLabel = resolvedPreviewPath ? getGalleryCollectionLabel(resolvedPreviewPath) : null;
 const allPageHref = resolvedPreviewPath
-  ? `${resolvedPreviewPath}/all${allPageAnchors[resolvedPreviewPath] || ''}`
+  ? `${resolvedPreviewPath}/all${getAllPageAnchor(resolvedPreviewPath)}`
   : null;
 const allPageLinkText = resolvedPreviewPath
   ? (galleriesWithAllPages[resolvedPreviewPath] || `Browse the full ${collectionLabel} collection`)

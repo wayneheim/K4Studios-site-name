@@ -48,6 +48,7 @@ import { themes } from "../data/themes/themes.mjs";
 import blogImageMap from "../data/blogImageMap.js";
 import { isWesternImagePath, westernImageAttributionText } from "../data/wayneEntity.js";
 import { getImageDimensions } from "../utils/getImageDimensions.js";
+import { extractImageId, getSemanticImageUrl } from "../utils/imageProxy.js";
 
 const ZoomOverlay = lazy(() => import("./ZoomOverlay.jsx"));
 const RebuiltScrollGrid = lazy(() => import("./RebuiltScrollGrid"));
@@ -108,6 +109,13 @@ function getProxySrc(imageId, size = 'm') {
   const validSizes = ['s', 'm', 'l', 'xl', 'src'];
   const safeSize = validSizes.includes(size) ? size : 'm';
   return `/img/${imageId}/${safeSize}.jpg`;
+}
+
+function getViewerDisplaySrc(image, galleryPath) {
+  if (!image) return '';
+  const imageId = image.id || extractImageId(image.src || image.srcL || image.srcM || image.srcS || '');
+  if (!imageId) return image.srcL || image.srcM || image.srcS || image.src || '';
+  return getSemanticImageUrl({ ...image, id: imageId }, { galleryPath }, 'l');
 }
 
 function buildCaptionExcerpt(description, minChars = 150, maxChars = 280) {
@@ -722,7 +730,7 @@ export default function ChapterGalleryBase({
   const currentImageData = galleryData[currentIndex] || null;
   const currentImageDimensions = getImageDimensions(currentImageData) || getValidImageDimensions(currentImageData);
   const currentDisplayImageUrl = currentImageData
-    ? currentImageData.src || getProxySrc(currentImageData.id, 'l')
+    ? getViewerDisplaySrc(currentImageData, basePath)
     : "";
   const [sisterMatch, setSisterMatch] = useState(() => {
     // Initial render: only use sitemapMatches (deterministic, same on server & client)
@@ -846,7 +854,7 @@ export default function ChapterGalleryBase({
     const metaName = widget.querySelector('meta[itemprop="name"]');
     const linkImage = widget.querySelector('link[itemprop="image"]');
     if (metaName) metaName.setAttribute('content', currentImage.title || currentImage.alt || '');
-    if (linkImage) linkImage.setAttribute('href', currentImage.src || getProxySrc(currentImage.id, 'l'));
+    if (linkImage) linkImage.setAttribute('href', getViewerDisplaySrc(currentImage, basePath) || getProxySrc(currentImage.id, 'l'));
     
     // Collapse widget when changing images
     widget.classList.remove('expanded');

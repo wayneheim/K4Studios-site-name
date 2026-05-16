@@ -59,15 +59,15 @@ type DockEntry = {
 
 const toAllHref = (href = '') => {
   const cleanHref = String(href).split('?')[0].replace(/\/$/, '');
-  return `${cleanHref}/all`;
+  return `${cleanHref}/all#collection-browser`;
 };
 
-const withoutFragment = (href = '') => String(href).split('#')[0];
+const withCollectionBrowserAnchor = (href = '') => `${String(href).split('#')[0]}#collection-browser`;
 
 const asDockItem = (stone: DockStone, overrides: Record<string, any> = {}) => ({
   ...stone,
   ...overrides,
-  href: withoutFragment(overrides.href || stone.dockHref || toAllHref(stone.href)),
+  href: withCollectionBrowserAnchor(overrides.href || stone.dockHref || toAllHref(stone.href)),
   cue: overrides.current ? 'Current collection' : 'Browse collection ->',
 });
 

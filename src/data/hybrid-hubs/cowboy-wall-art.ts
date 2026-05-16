@@ -350,7 +350,7 @@ export const faqItems = [
   {
     q: 'Can these works be collected beyond standard paper prints?',
     a: [
-      'Yes. Select works are available across archival paper, canvas, and other presentation routes depending on the image and series.',
+      'Yes. Select works are available across archival paper and select wood presentation routes depending on the image and series.',
     ],
   },
 ];

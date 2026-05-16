@@ -173,7 +173,7 @@ export const explorationPaths = [
     eyebrow: 'Collector Route',
     hideEyebrow: true,
     href: '/Other/Print-Options',
-    description: 'Compare archival paper, canvas, metal, and other presentation formats once the image itself has earned the space.',
+    description: 'Compare archival paper and select wood presentation formats once the image itself has earned the space.',
     cta: 'Compare formats -',
     accent: '#7b644e',
   },
@@ -324,49 +324,49 @@ export const faqItems = [
   {
     q: 'What does Western landscape art mean on this page?',
     a: [
-      'It means painterly landscape work from the American West where land, weather, reflection, and distance carry as much emotional weight as the subject label itself. The goal is not generic scenery, but authored Western landscape presence.',
+      'Western landscape art here means painterly fine art photography of American West and Canadian Rockies locations - open country, mountain weather, waterfall motion, alpine lakes, and the visual pressure of land that carries more than scenery. These are authored works with tonal depth and atmosphere, not travel or documentary photography.',
     ],
   },
   {
     q: 'Can Western landscape art work as wall art without becoming decor?',
     a: [
-      'Yes. The difference is whether the image still holds structure, atmosphere, and authorship after it enters the room. These works are selected as fine art western landscape prints first, with wall presence as the practical collector use.',
+      'Yes - when the image carries atmosphere rather than postcard shorthand. Wayne Heim\'s landscape work is built around place as presence: mountain weather, water movement, and the quiet authority of open country. A single strong landscape scaled for an anchor wall changes the atmosphere of a room without becoming generic Western theme decor.',
     ],
   },
   {
     q: 'Where should I start if I am choosing by print format or room fit?',
     a: [
-      'Use <a href="/Other/Print-Options">Print Options</a> for materials and formats, or compare the broader <a href="/Western-Wall-Art">Western Wall Art</a> route if you are deciding how Western art should function in a room.',
+      'Start with scale. Large-format mountain and Teton prints work best as anchor pieces in great rooms, lodge lobbies, and open-plan living spaces where the image needs to carry distance. Waterfall and water prints work well in smaller spaces where motion and tonal contrast matter more than scale. Paper and wood presentation options are inside each image page alongside size details.',
     ],
   },
   {
     q: 'Does this page also cover waterfall photography and mountain photography?',
     a: [
-      'Yes. This page is intentionally built to serve those adjacent searches together because the intent overlaps naturally. Visitors looking for Western landscape art are often also looking for painterly mountain photography, waterfall scenes, and Tetons or Rocky Mountain imagery.',
+      'Yes. Waterfall photography and mountain photography both land here as part of the Western landscape route. Water carries motion, reflection, and tonal contrast. Mountains carry scale, endurance, and peak-and-weather presence. Together they form the full range of Western landscape atmosphere available in the collection.',
     ],
   },
   {
     q: 'Are the Tetons and Rocky Mountains part of the collection?',
     a: [
-      'Yes. The mountain selections include Tetons and Rocky Mountain country, alongside other Western landscapes where scale, weather, and quiet atmosphere carry the frame.',
-    ],
-  },
-  {
-    q: 'Why is there one row per theme instead of color and black and white pairs?',
-    a: [
-      'Because these particular landscape source pools are color-only. The page is built around the real inventory so the structure stays honest and focused instead of forcing a format split that does not exist in the data.',
-    ],
-  },
-  {
-    q: 'Where should I go if I want the broader painterly landscape gallery?',
-    a: [
-      'Start with <a href="/Galleries/Painterly-Fine-Art-Photography/Landscapes">Painterly Landscapes</a> if you want the wider landscape route beyond these Western thematic clusters.',
+      'Yes. The Teton Range appears across multiple works in the American West section - Schwabacher Landing reflections, Jackson Lake sunrise, storm light on the peaks, and open country approaches. The Canadian Rockies section covers Banff, Jasper, alpine lakes, and waterfall country from the northern frontier. Both ranges are treated as emotional geography rather than travel markers.',
     ],
   },
   {
     q: 'Can I compare print materials before choosing a landscape image?',
     a: [
-      'Yes. Visit <a href="/Other/Print-Options">Print Options</a> to compare archival paper, canvas, metal, and related presentation formats after you have identified the image that belongs in the room.',
+      'Yes. Every image page lists available substrates - archival paper and select wood presentations including the Engrained Series Baltic Birch panels. For landscape work specifically, wood substrates can complement the tonal range of mountain and water imagery particularly well. Material details and size options are inside each image page. Questions about a specific piece? Reach Wayne at <a href="mailto:wayne@k4studios.com">wayne@k4studios.com</a>.',
+    ],
+  },
+  {
+    q: 'What size Western landscape art prints are available?',
+    a: [
+      'Prints range from 5x7 Sketch Series works through large-format statement pieces suited for great rooms, lodge lobbies, and open-plan living spaces. Landscape work scales particularly well - the wider the print, the more the distance and atmosphere of the image carry into the room. Size options vary by image and are listed inside each image page.',
+    ],
+  },
+  {
+    q: 'What is the difference between Western landscape art and standard landscape photography?',
+    a: [
+      'Standard landscape photography documents place and light. Wayne Heim\'s Western landscape art treats land as emotional structure - open country that shaped frontier life, mountains that carry endurance and scale, water that moves with consequence. The painterly process adds tonal depth and atmosphere that separates the work from documentary or travel photography.',
     ],
   },
 ];

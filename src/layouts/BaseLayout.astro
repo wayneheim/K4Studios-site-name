@@ -62,7 +62,6 @@ const normalizeMetaText = (value = '', options = {}) =>
   String(value || '')
     .replace(/<[^>]*>/g, ' ')
     .replace(options.preserveDashes ? /$^/g : /[\u2013\u2014]/g, ' - ')
-    .replace(/\u2026/g, '...')
     .replace(/\u00a9/g, '(c)')
     .replace(/\s+/g, ' ')
     .trim();
@@ -78,7 +77,7 @@ const trimAtWord = (text = '', maxLength = 160, options = {}) => {
     ? slice.slice(0, boundary)
     : normalized.slice(0, maxLength)).trim();
 
-  return `${trimmed}...`;
+  return `${trimmed}\u2026`;
 };
 
 const trimTitle = (text = '', maxLength = 95, options = {}) => {

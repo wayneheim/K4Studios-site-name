@@ -35,76 +35,82 @@ const nativeThumb = "/img/i-LCspRF4/s.jpg";
 export const buildWesternPhotographyArtDock = () => {
   const sectionDockItems = [
     supportItem(
-      "What Is Western Fine Art Photography?",
+      "Learn What Is Western Fine Art Photography",
       "/Blog/what-is-western-fine-art-photography",
       westernFineArtThumb
     ),
     supportItem(
-      "What Is Artistic Western Photography?",
+      "Learn What Is Artistic Western Photography",
       "/Blog/what-is-artistic-western-photography",
       artisticWesternThumb
     ),
     supportItem(
-      "What Is Painterly Photography?",
+      "Learn What Is Painterly Photography",
       "/Blog/what-is-painterly-photography",
       painterlyThumb
     ),
     supportItem(
-      "What Is Western Art?",
+      "Learn What Is Western Art",
       "/Blog/what-is-western-art",
       westernArtThumb
     ),
     { separator: true, label: "Core Western photography art collections" },
     asDockItem(westernNarrativeLanding.tombstones[0], {
-      title: "Western Narrative Photography Art",
+      title: "Western Narrative Photography Series",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all#collection-browser",
       thumb: narrativeThumb,
       dockRole: "core",
+      dockPrefix: "",
     }),
     asDockItem(westernNarrativeLanding.tombstones[1], {
-      title: "Black and White Western Narrative Art",
+      title: "Black and White Western Narrative Series",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/all#collection-browser",
       dockRole: "core",
+      dockPrefix: "",
     }),
     asDockItem(cowboyPortraitLanding.tombstones[0], {
-      title: "Cowboy Photography Art",
+      title: "Color Cowboy Photography Series",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/all#collection-browser",
       dockRole: "core",
+      dockPrefix: "",
     }),
     asDockItem(cowboyPortraitLanding.tombstones[1], {
-      title: "Black and White Cowboy Photography Art",
+      title: "Black and White Cowboy Photography Series",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/all#collection-browser",
       dockRole: "core",
+      dockPrefix: "",
     }),
     asDockItem(wildWestLanding.tombstones[1] || wildWestLanding.tombstones[0], {
-      title: "Native American Western Photography Art",
+      title: "Native American Western Photography Series",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color/all#collection-browser",
       thumb: nativeThumb,
       dockRole: "core",
+      dockPrefix: "",
     }),
     { separator: true, label: "Western photography art context" },
     asDockItem(wildWestLanding.tombstones[0], {
-      title: "Wild West",
+      title: "Wild West Series",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West",
       dockRole: "support",
+      dockPrefix: "",
     }),
     supportItem(
-      "Can Photography Be Narrative Western Art?",
+      "Learn How Photography Becomes Narrative Western Art",
       "/Blog/can-photography-be-narrative-western-art",
       narrativeThumb
     ),
     supportItem(
-      "What Makes an Image Feel Cinematic?",
+      "Learn What Makes an Image Feel Cinematic",
       "/Blog/what-makes-an-image-feel-cinematic",
       cinematicThumb
     ),
     supportItem(
-      "Decor Art vs Fine Art: What Is the Difference?",
+      "Compare Decor Art and Fine Art",
       "/Blog/decor-art-vs-fine-art",
       westernArtThumb
     ),
     supportItem(
-      "What Makes a Fine Art Print Worth Owning?",
+      "Learn What Makes a Fine Art Print Worth Owning",
       "/Blog/what-makes-a-fine-art-print-worth-owning",
       printOptionsThumb
     ),
@@ -112,6 +118,6 @@ export const buildWesternPhotographyArtDock = () => {
 
   return {
     sectionDockItems,
-    dockCenterIndex: sectionDockItems.findIndex((item: any) => item.title === "Black and White Western Narrative Art"),
+    dockCenterIndex: sectionDockItems.findIndex((item: any) => item.title === "Black and White Western Narrative Series"),
   };
 };

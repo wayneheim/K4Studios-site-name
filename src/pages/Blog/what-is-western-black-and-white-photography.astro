@@ -1,0 +1,675 @@
+---
+/**
+ * What Is Western Black and White Photography? - Cornerstone Definition Article
+ *
+ * Purpose: Own the definition layer for "Western Black and White Photography".
+ * Positions K4 as authority on monochrome Western photography as fine art discipline.
+ */
+export const prerender = true;
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getSemanticImageUrl } from "@/utils/imageProxy.js";
+import LandingHeader from "@/components/Landing-Header.jsx";
+import SiteFooter from "@/components/Footer.astro";
+import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
+import { getBreadcrumbList, getStructuredData } from "@/components/utils/getStructuredData.ts";
+
+import "@/styles/global.css";
+
+const sectionPath = "/Blog/what-is-western-black-and-white-photography";
+const canonicalUrl = "https://www.k4studios.com/Blog/what-is-western-black-and-white-photography";
+
+const COWBOY_BW_PATH = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White";
+const NARRATIVE_BW_PATH = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White";
+const NATIVE_BW_PATH = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White";
+
+// Proxy URL helper
+const getProxySrc = (id: string, size: string = "l") => getSemanticImageUrl(id, {}, size);
+const getAbsoluteProxySrc = (id: string, size: string = "l") => getSemanticImageUrl(id, {}, size, { absolute: true });
+
+const headerImage = {
+  id: "i-DJMTZ8z",
+  src: getProxySrc("i-DJMTZ8z", "l"),
+  alt: "Western black and white photography portrait with seated cowboy, tonal restraint, and frontier presence"
+};
+
+const image1 = {
+  id: "i-2GsTkqf",
+  src: getProxySrc("i-2GsTkqf", "l"),
+  alt: "Black and white cowboy portrait shaped by posture, shadow, and restrained Western atmosphere"
+};
+const image2 = {
+  id: "i-mqQxwNn",
+  src: getProxySrc("i-mqQxwNn", "l"),
+  alt: "Black and white Western narrative photograph with cowboy at window, rifle, shadow, and frontier tension"
+};
+const image3 = {
+  id: "i-Z54nXZm",
+  src: getProxySrc("i-Z54nXZm", "l"),
+  alt: "Black and white Native American portrait with smoke, profile, tonal quiet, and human presence"
+};
+
+const narrativeImage1 = {
+  id: "i-HfQ5NVR",
+  src: getProxySrc("i-HfQ5NVR", "l"),
+  alt: "Cowboy holding a tin cup beside a coffee pot at a frontier camp table in a black and white Western scene."
+};
+const narrativeImage2 = {
+  id: "i-mqQxwNn",
+  src: getProxySrc("i-mqQxwNn", "l"),
+  alt: "By a window, a cowboy holds a rifle and looks outward, partially lit in a black and white Western portrait."
+};
+const narrativeImage3 = {
+  id: "i-nZbDC9C",
+  src: getProxySrc("i-nZbDC9C", "l"),
+  alt: "Elder Native American man seated in profile, looking into the distance in a black and white portrait."
+};
+
+const pageTitle = "What Is Western Black and White Photography? | K4 Studios";
+const pageDescription = "Western black and white photography is not a filter choice. It is a structural decision that forces tone, contrast, and restraint to carry what color would otherwise handle - and what that means for fine art, collecting, and the Western portrait tradition.";
+
+const structuredImageUrls = [
+  getAbsoluteProxySrc(headerImage.id, "l"),
+  getAbsoluteProxySrc(image1.id, "l"),
+  getAbsoluteProxySrc(image2.id, "l"),
+  getAbsoluteProxySrc(image3.id, "l"),
+  getAbsoluteProxySrc(narrativeImage1.id, "l"),
+  getAbsoluteProxySrc(narrativeImage2.id, "l"),
+  getAbsoluteProxySrc(narrativeImage3.id, "l"),
+];
+
+const breadcrumbStructuredData = getBreadcrumbList(
+  [
+    { name: "Home", item: "https://www.k4studios.com" },
+    { name: "Western Art", item: "https://www.k4studios.com/Blog/what-is-western-art" },
+    { name: "Western Fine Art Photography", item: "https://www.k4studios.com/Blog/what-is-western-fine-art-photography" },
+    { name: "Western Black and White Photography", item: canonicalUrl },
+  ],
+  `${canonicalUrl}#breadcrumb`
+);
+
+const structuredData = getStructuredData({
+  type: "Article",
+  data: {
+    headline: "What Is Western Black and White Photography?",
+    description: pageDescription,
+    url: canonicalUrl,
+    image: structuredImageUrls,
+    copyrightNotice: "(c) Wayne Heim",
+    author: {
+      "@type": "Person",
+      name: "Wayne Heim"
+    },
+    datePublished: "2026-05-15",
+    articleSection: "Fine Art Photography",
+    definedTerm: {
+      name: "Western Black and White Photography",
+      description: pageDescription,
+    },
+    keywords: [
+      "western black and white photography",
+      "black and white cowboy photography",
+      "monochrome Western art",
+      "black and white cowboy portraits",
+      "black and white Native American portraits",
+      "western fine art photography"
+    ]
+  },
+  defaults: {
+    copyrightNotice: "(c) Wayne Heim",
+    license: "https://k4studios.com/copyright",
+    creditText: "Wayne Heim",
+    creatorName: "Wayne Heim",
+    creatorUrl: "https://k4studios.com/"
+  }
+});
+
+const meta = {
+  description: pageDescription,
+  keywords: "western black and white photography, black and white cowboy photography, monochrome Western art, black and white cowboy portraits, black and white Native American portraits, western fine art photography",
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogType: "article",
+  ogUrl: canonicalUrl,
+  ogImage: getAbsoluteProxySrc(headerImage.id, "l"),
+  twitterTitle: pageTitle,
+  twitterDescription: pageDescription,
+  twitterUrl: canonicalUrl,
+  twitterImage: getAbsoluteProxySrc(headerImage.id, "l"),
+  twitterCard: "summary_large_image"
+};
+
+const blogBreadcrumb = `Other > <a href='/Blog' style='color: inherit; text-decoration: none;' onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Blog</a> > Western Black and White Photography`;
+---
+
+<BaseLayout
+  title={pageTitle}
+  structuredDataJSON={structuredData}
+  breadcrumbsJSON={breadcrumbStructuredData}
+  meta={meta}
+>
+  <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
+    <div class="drawer-mode">
+      <LandingHeader client:load breadcrumb={blogBreadcrumb} />
+    </div>
+
+    <section style="width:100%; overflow:hidden; margin-bottom:0;">
+      <a href={COWBOY_BW_PATH}>
+        <div style="width:100%; height:460px; overflow:hidden; position:relative;">
+          <img
+            src={headerImage.src}
+            alt={headerImage.alt}
+            style="width:100%; height:100%; object-fit:cover; object-position:center 24%;"
+          />
+        </div>
+      </a>
+    </section>
+
+    <section style="text-align:center; padding:2rem 1rem 2rem;">
+      <h1 style="font-size:2.25rem; font-weight:700; margin-bottom:0.5rem; line-height:1.2;">
+        What Is Western Black and White Photography?
+      </h1>
+      <p style="font-size:0.95rem; color:#888; margin-top:0.75rem; letter-spacing:0.02em;">
+        Not a filter. Not a style. A structural decision that changes what the image has to earn.
+      </p>
+    </section>
+
+    <section class="early-examples-section">
+      <div class="early-examples-shell">
+        <p class="early-examples-kicker">See the Monochrome Standard</p>
+        <h2 class="early-examples-title">Western black and white photography begins when tone has to carry the whole image.</h2>
+        <p class="early-examples-intro">
+          Cowboy portraits, Western narratives, and Native American portrait work all change when color is removed. Shadow, posture, expression, and restraint become the image's structure.
+        </p>
+
+        <div class="early-examples-grid early-examples-grid--three">
+          <figure>
+            <a href={`${COWBOY_BW_PATH}/${image1.id}`}>
+              <img src={image1.src} alt={image1.alt} loading="eager" />
+            </a>
+            <figcaption>Posture and character without color warmth.</figcaption>
+          </figure>
+
+          <figure>
+            <a href={`${NARRATIVE_BW_PATH}/${image2.id}`}>
+              <img src={image2.src} alt={image2.alt} loading="lazy" />
+            </a>
+            <figcaption>Shadow and implication doing the work of color.</figcaption>
+          </figure>
+
+          <figure>
+            <a href={`${NATIVE_BW_PATH}/${image3.id}`}>
+              <img src={image3.src} alt={image3.alt} loading="lazy" />
+            </a>
+            <figcaption>Tonal quiet, heritage, and human presence.</figcaption>
+          </figure>
+        </div>
+
+        <a class="early-examples-cta" href="/Western-Black-and-White-Photography">
+          Explore Western Black and White Photography
+        </a>
+      </div>
+    </section>
+
+    <section class="story-section max-w-[860px] mx-auto px-4">
+      <article class="story-block space-y-4">
+
+        <p><strong>Western black and white photography</strong> is monochrome photography of the American West - cowboy portraits, frontier scenes, Native American portraits, Western landscapes, and historical subjects - created through tone, shadow, light, posture, and composition rather than color.</p>
+
+        <p>At its strongest, it is not a filter placed over a Western image. It is a structural choice. When color is removed, the photograph has to earn its atmosphere through form. A cowboy's posture matters more. A face carries more weight. Shadow becomes narrative. Silence becomes visible.</p>
+
+        <p>Black and white Western photography asks a harder question than color often does: what remains when warmth, sunset color, leather tones, blue sky, and decorative nostalgia are taken away?</p>
+
+        <p>If the image is strong, what remains is presence.</p>
+
+        <div class="section-heading-with-line">
+          <h2>Western Black and White Photography as Fine Art</h2>
+        </div>
+
+        <p>Western black and white photography includes many subjects: black and white cowboy portraits, frontier narrative scenes, monochrome Native American portraits, ranch life, Western landscapes, and <a href="/Blog/what-is-historically-themed-photography" style="color:#8b5a2b; text-decoration:underline;">historically themed photography</a> inspired by the American frontier.</p>
+
+        <p>But not all black and white Western photography is fine art.</p>
+
+        <p>Documentary cowboy photography records working life. It preserves ranch labor, rodeo culture, horses, gear, and the practical rhythm of the modern West.</p>
+
+        <p>Lifestyle Western photography often uses cowboy imagery as atmosphere - a mood, a look, a decor language.</p>
+
+        <p>Western black and white fine art photography does something different. The artist shapes the entire image: the scene, the light, the composition, the gesture, the tonal range, the atmosphere, and the final print. The subject matters, but the authorship matters just as much.</p>
+
+        <p>The test is simple: does the image reward return viewing?</p>
+
+        <p>A serious black and white Western photograph reveals more on the fifth look than it did on the first. It does not merely show the West. It holds it.</p>
+
+        <div class="section-heading-with-line">
+          <h2>What Monochrome Does to a Western Image</h2>
+        </div>
+
+        <p>Color gives Western photography immediate emotional language. It can carry the amber warmth of a frontier room, the red of dust and earth, the blue of mountain shadow, or the gold of late prairie light.</p>
+
+        <p>Black and white removes that shortcut.</p>
+
+        <p>Without color, the image must build its emotional force through structure. The fall of light across a weathered face. The weight of a hat brim in shadow. The stillness of a figure at a window. The distance between two people who may or may not trust each other.</p>
+
+        <p>That is why the strongest black and white Western images often feel more restrained, more serious, and more lasting than similar scenes in color. They have been stripped of their easiest tools. What remains has to carry everything.</p>
+
+        <p>In monochrome Western fine art, tone becomes the architecture of the image.</p>
+
+        <div class="section-heading-with-line">
+          <h2>Black and White Cowboy Portraits</h2>
+        </div>
+
+        <aside class="inline-art-callout inline-art-callout--right">
+          <a href={`${COWBOY_BW_PATH}/${image1.id}`}>
+            <img src={image1.src} alt={image1.alt} loading="lazy" />
+          </a>
+          <p>In monochrome, the face, posture, and fall of cloth become the story.</p>
+        </aside>
+
+        <p>The cowboy portrait is one of the strongest forms of Western black and white photography because the face, clothing, posture, and light have nowhere to hide.</p>
+
+        <p>In color, a cowboy portrait can rely on warmth: leather, denim, dust, sunset, skin tone, and atmosphere. In black and white, those comforts fall away. The viewer sees structure first.</p>
+
+        <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 1.5rem;">
+          <li style="margin-bottom:0.5rem;">The shape of the face</li>
+          <li style="margin-bottom:0.5rem;">The set of the shoulders</li>
+          <li style="margin-bottom:0.5rem;">The crease of a hat</li>
+          <li style="margin-bottom:0.5rem;">The way a coat hangs</li>
+          <li style="margin-bottom:0.5rem;">The direction of the eyes</li>
+          <li>The decision not yet made</li>
+        </ul>
+
+        <p>A strong black and white cowboy portrait is not only about the cowboy as an icon. It is about character under pressure. The best images suggest a life beyond the frame - what came before, what may happen next, and what the subject is not saying.</p>
+
+        <p>That is where black and white cowboy photography becomes more than Western imagery. It becomes psychological portraiture.</p>
+
+        <div class="section-heading-with-line">
+          <h2>Black and White Western Narrative Photography</h2>
+        </div>
+
+        <aside class="inline-art-callout inline-art-callout--left">
+          <a href={`${NARRATIVE_BW_PATH}/${narrativeImage2.id}`}>
+            <img src={narrativeImage2.src} alt={narrativeImage2.alt} loading="lazy" />
+          </a>
+          <p>Shadow, silence, and implication do the work color would otherwise do.</p>
+        </aside>
+
+        <p><a href="/Blog/what-is-narrative-photography" style="color:#8b5a2b; text-decoration:underline;">Western narrative photography</a> is built around implication. It does not simply present a cowboy, a frontier room, a rifle, a doorway, or a campfire. It suggests consequence.</p>
+
+        <p>Black and white deepens that pressure.</p>
+
+        <p>In a monochrome Western narrative, shadow becomes active. A dark room is not merely a dark room; it becomes withheld information. A figure at a window is not merely looking out; he may be waiting, remembering, listening, or deciding. The space between figures begins to matter as much as the figures themselves.</p>
+
+        <p>Color can sometimes make a scene generous. Black and white makes it exacting.</p>
+
+        <p>That is why monochrome works so well for story-driven Western fine art photography. It removes the decorative surface and leaves the viewer with the bones of the image: light, distance, gesture, silence, and tension.</p>
+
+        <p>In this kind of work, shadow and implication do the work that color would otherwise do.</p>
+
+        <div style="clear: both;"></div>
+
+        <div class="section-heading-with-line">
+          <h2>Native American Portraits in Black and White</h2>
+        </div>
+
+        <aside class="inline-art-callout inline-art-callout--right">
+          <a href={`${NATIVE_BW_PATH}/${narrativeImage3.id}`}>
+            <img src={narrativeImage3.src} alt={narrativeImage3.alt} loading="lazy" />
+          </a>
+          <p>Tonal restraint gives the portrait room to hold presence without nostalgia.</p>
+        </aside>
+
+        <p>Native American black and white portraits occupy a specific and important place within Western photography.</p>
+
+        <p>Historically, Native people were often photographed through an archival or ethnographic lens. Those early images became part of the visual record of the American West, but they also created distance between the viewer and the person being photographed.</p>
+
+        <p>Contemporary Native American black and white portraiture can do something different when handled with care and authorship. It can move away from nostalgia and toward presence.</p>
+
+        <p>Monochrome places emphasis on face, cloth, profile, gesture, and tonal quiet. It allows the portrait to hold dignity without spectacle and heritage without reducing the subject to costume or historical decoration.</p>
+
+        <p>At its best, this work is not about recreating the past. It is about allowing human presence to survive the weight of history.</p>
+
+        <div style="clear: both;"></div>
+
+        <div class="section-heading-with-line">
+          <h2>The Painterly Connection</h2>
+        </div>
+
+        <aside class="inline-art-callout inline-art-callout--left">
+          <a href={`${NARRATIVE_BW_PATH}/${narrativeImage1.id}`}>
+            <img src={narrativeImage1.src} alt={narrativeImage1.alt} loading="lazy" />
+          </a>
+          <p>Painterly monochrome is built in tone, not converted into tone later.</p>
+        </aside>
+
+        <p>Black and white Western photography has a natural connection to <a href="/Blog/what-is-painterly-photography" style="color:#8b5a2b; text-decoration:underline;">painterly photography</a> because both depend on structure, atmosphere, and controlled visual emphasis.</p>
+
+        <p>In color painterly photography, warmth, softened edges, and tonal richness may help create atmosphere. In black and white painterly photography, the work becomes more demanding. The image must be built in tonal relationships: deep shadow, controlled highlights, breathing midtones, and the careful placement of light.</p>
+
+        <p>This is where the painting tradition matters.</p>
+
+        <p>Chiaroscuro - the use of strong light and shadow to create form, drama, and depth - has long shaped portraiture and narrative art. In monochrome Western fine art photography, that tradition becomes especially visible. A face can emerge from darkness. A figure can be held by a narrow edge of light. A frontier interior can become almost theatrical without becoming artificial.</p>
+
+        <p>The strongest painterly black and white Western images do not feel converted from color.</p>
+
+        <p>They feel conceived in tone from the beginning.</p>
+
+        <div style="clear: both;"></div>
+
+        <div class="section-heading-with-line">
+          <h2>Color vs. Black and White Western Photography</h2>
+        </div>
+
+        <p>Western photography works powerfully in both color and black and white. The choice is not about which is better. It is about what the image needs.</p>
+
+        <p>Color can carry warmth, atmosphere, and immediate emotional invitation. It can make a Western scene feel alive with dust, light, weather, and place.</p>
+
+        <p>Black and white withholds that immediate warmth. It asks the viewer to read the image differently. Instead of responding first to color, the viewer responds to weight, structure, gesture, and tone.</p>
+
+        <p>Some Western images need color. Some need monochrome.</p>
+
+        <p>A golden prairie scene may need warmth. A psychological portrait may need restraint. A frontier narrative full of uncertainty may gain strength when color is removed. The artist's judgment is in knowing which treatment reveals the deeper truth of the image.</p>
+
+        <p>Black and white is not an absence of color.</p>
+
+        <p>It is a different kind of pressure.</p>
+
+        <div class="section-heading-with-line">
+          <h2>Black and White Western Wall Art for Collectors</h2>
+        </div>
+
+        <p>Black and white Western wall art holds a room differently than color Western art.</p>
+
+        <p>Color often warms a space. Monochrome anchors it.</p>
+
+        <p>A strong black and white cowboy portrait, frontier scene, or Native American portrait can bring gravity to a room without competing with furniture, architecture, or surrounding color. It creates contrast, restraint, and permanence. It can feel quiet from a distance and more complex up close.</p>
+
+        <p>For collectors, that matters.</p>
+
+        <p>Black and white Western fine art is not usually chosen for decoration alone. It is chosen for presence. These are images that live well over time because they do not give themselves away immediately. They ask to be revisited. They change with the room, with the light, and with the viewer's own attention.</p>
+
+        <p>For collectors who want the American West without easy nostalgia, black and white Western photography offers a more restrained and enduring register.</p>
+
+        <div class="section-heading-with-line">
+          <h2>Western Black and White Photography at K4 Studios</h2>
+        </div>
+
+        <p>At K4 Studios, Western black and white photography is approached as authored fine art. Each image is shaped through tone, composition, historical atmosphere, and narrative pressure rather than treated as a simple monochrome conversion.</p>
+
+        <p>The work includes black and white cowboy portraits, story-driven Western narratives, Native American portrait studies, frontier scenes, and painterly monochrome Western images created to hold attention beyond the first glance.</p>
+
+        <p>The goal is not to make the West look old.</p>
+
+        <p>The goal is to remove what is unnecessary until the image has to stand on structure, presence, and story.</p>
+
+        <p>Explore the collections:</p>
+
+        <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 1.5rem;">
+          <li style="margin-bottom:0.75rem;">
+            <a href="/Western-Black-and-White-Photography" style="color:#8b5a2b; font-weight:600; text-decoration:underline;">Western Black and White Photography</a> - The main monochrome Western fine art collection
+          </li>
+          <li style="margin-bottom:0.75rem;">
+            <a href={`${COWBOY_BW_PATH}/all#collection-browser`} style="color:#8b5a2b; font-weight:600; text-decoration:underline;">Black and White Cowboy Portraits</a> - Character-driven cowboy studies in tone, posture, and shadow
+          </li>
+          <li style="margin-bottom:0.75rem;">
+            <a href={`${NARRATIVE_BW_PATH}/all#collection-browser`} style="color:#8b5a2b; font-weight:600; text-decoration:underline;">Black and White Western Narratives</a> - Frontier scenes built around implication and unresolved story
+          </li>
+          <li style="margin-bottom:0.75rem;">
+            <a href={`${NATIVE_BW_PATH}/all#collection-browser`} style="color:#8b5a2b; font-weight:600; text-decoration:underline;">Black and White Native American Portraits</a> - Restrained portrait work shaped by presence, heritage, and tonal quiet
+          </li>
+        </ul>
+
+        <p>Black and white removes color.</p>
+
+        <p>What remains has to carry the whole image.</p>
+
+        <p>When it does, the result is not simply Western photography in monochrome.</p>
+
+        <p>It is the American frontier reduced to light, shadow, character, and consequence.</p>
+
+      </article>
+    </section>
+
+    <WesternDefinitions variant="definition" currentPage={16} />
+
+    <SiteFooter />
+  </main>
+</BaseLayout>
+
+<style>
+  .early-examples-section {
+    max-width: 1180px;
+    margin: 0 auto 2.25rem;
+    padding: 0 1rem;
+  }
+
+  .early-examples-shell {
+    background: rgba(255, 252, 247, 0.96);
+    border: 1px solid rgba(121, 98, 78, 0.16);
+    border-radius: 18px;
+    padding: 1.35rem 1.25rem 1.55rem;
+    box-shadow: 0 18px 34px rgba(52, 38, 26, 0.07);
+    text-align: center;
+  }
+
+  .early-examples-kicker {
+    margin: 0 0 0.45rem;
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: #7b4a28;
+  }
+
+  .early-examples-title {
+    margin: 0 auto 0.65rem;
+    max-width: 48rem;
+    font-size: clamp(1.25rem, 2.4vw, 1.65rem);
+    line-height: 1.25;
+    color: #241b15;
+  }
+
+  .early-examples-intro {
+    max-width: 52rem;
+    margin: 0 auto 1.1rem;
+    font-size: 0.98rem;
+    line-height: 1.6;
+    color: #4a3d34;
+  }
+
+  .early-examples-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.85rem;
+    margin: 1.15rem 0 1rem;
+  }
+
+  .early-examples-grid--three {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .early-examples-grid figure {
+    margin: 0;
+    min-width: 0;
+  }
+
+  .early-examples-grid figure a {
+    display: block;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #efe7dc;
+    border: 1px solid rgba(121, 98, 78, 0.14);
+    box-shadow: 0 8px 18px rgba(41, 30, 21, 0.06);
+  }
+
+  .early-examples-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    transition: transform 0.45s ease;
+  }
+
+  .early-examples-grid a:hover img {
+    transform: scale(1.035);
+  }
+
+  .early-examples-grid figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.78rem;
+    line-height: 1.35;
+    color: #6a5a4c;
+    font-style: italic;
+  }
+
+  .early-examples-cta {
+    display: inline-block;
+    margin-top: 0.35rem;
+    color: #7b4a28;
+    font-size: 0.92rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(123, 74, 40, 0.35);
+    padding-bottom: 0.12rem;
+  }
+
+  .early-examples-cta:hover {
+    color: #5f381e;
+    border-bottom-color: rgba(95, 56, 30, 0.55);
+  }
+
+  @media (max-width: 768px) {
+    .early-examples-section {
+      margin-bottom: 1.55rem;
+      padding: 0 0.75rem;
+    }
+
+    .early-examples-shell {
+      padding: 1rem 0.85rem 1.15rem;
+      border-radius: 14px;
+    }
+
+    .early-examples-title {
+      font-size: 1.18rem;
+    }
+
+    .early-examples-intro {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin-bottom: 0.85rem;
+    }
+
+    .early-examples-grid,
+    .early-examples-grid--three {
+      grid-template-columns: 1fr;
+      max-width: 360px;
+    }
+
+    .early-examples-grid figcaption {
+      font-size: 0.72rem;
+    }
+  }
+
+  .section-heading-with-line {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 0;
+  }
+  .section-heading-with-line::after {
+    content: '';
+    flex: 1;
+    height: 3px;
+    background: #d0d0d0;
+  }
+  .section-heading-with-line h2 {
+    margin: 0;
+    white-space: nowrap;
+  }
+  @media (max-width: 768px) {
+    .section-heading-with-line::after {
+      display: none;
+    }
+  }
+
+  .story-block p { margin-bottom: 1rem; font-size: clamp(1rem, 2.5vw, 1.125rem); }
+  .story-block h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+  }
+  .story-block ul { font-size: clamp(1rem, 2.5vw, 1.125rem); }
+  @media (max-width: 640px) {
+    .story-block p, .story-block ul { line-height: 1.6; }
+  }
+
+  .inline-art-callout {
+    width: min(320px, 42%);
+    margin: 0.35rem 0 1.4rem 1.9rem;
+    padding: 0.85rem;
+    border: 1px solid rgba(121, 98, 78, 0.16);
+    border-radius: 14px;
+    background: rgba(249, 247, 244, 0.92);
+    box-shadow: 0 12px 24px rgba(52, 38, 26, 0.06);
+  }
+  .inline-art-callout--right {
+    float: right;
+    margin-left: 2.1rem;
+  }
+  .inline-art-callout--left {
+    float: left;
+    margin: 0.35rem 2.1rem 1.4rem 0;
+  }
+  .inline-art-callout a {
+    display: block;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #efe7dc;
+  }
+  .inline-art-callout img {
+    width: 100%;
+    display: block;
+  }
+  .inline-art-callout p {
+    margin: 0.85rem 0 0;
+    font-size: 0.85rem;
+    color: #666;
+    font-style: italic;
+    line-height: 1.35;
+  }
+  @media (max-width: 860px) {
+    .inline-art-callout {
+      width: min(100%, 520px);
+      float: none;
+      margin: 1rem auto 1.25rem;
+    }
+  }
+  @media (max-width: 640px) {
+    .inline-art-callout {
+      width: 100%;
+      padding: 0.75rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    main {
+      overflow-x: hidden !important;
+      max-width: 100vw !important;
+    }
+    .story-section {
+      max-width: 100% !important;
+      overflow-x: hidden !important;
+    }
+    .section-heading-with-line h2 {
+      white-space: normal !important;
+      overflow-wrap: break-word !important;
+      word-wrap: break-word !important;
+    }
+  }
+</style>

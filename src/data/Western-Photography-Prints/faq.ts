@@ -14,7 +14,7 @@ export const westernPhotographyPrintsFAQ = [
   {
     q: "Can I compare print materials before choosing an image?",
     a: [
-      "Yes. Every image page lists available substrates - archival paper, canvas, metal, and wood including the Engrained Series Baltic Birch panels - alongside size options and finish details. Material choice affects how the work holds light and how it reads in a room. If you want guidance on a specific image or placement, reach Wayne directly at <a href='mailto:wayne@k4studios.com'>wayne@k4studios.com</a>.",
+      "Yes. Every image page lists available substrates - archival paper and select wood presentations including the Engrained Series Baltic Birch panels - alongside size options and finish details. Material choice affects how the work holds light and how it reads in a room. If you want guidance on a specific image or placement, reach Wayne directly at <a href='mailto:wayne@k4studios.com'>wayne@k4studios.com</a>.",
     ],
   },
   {

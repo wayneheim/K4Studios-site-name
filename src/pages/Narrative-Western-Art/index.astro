@@ -4,6 +4,7 @@ import BaseLayout         from '@/layouts/BaseLayout.astro';
 import { getSemanticImageUrl, normalizeImageSrc } from "@/utils/imageProxy.js";
 import LandingHeader      from '@/components/Landing-Header.jsx';
 import TombstoneNav       from '@/components/TombstoneNav.jsx';
+import CollectionDock     from '@/components/doorway/CollectionDock.astro';
 import LandingRightImages from '@/components/LandingRightImages.jsx';
 import FAQAccordion       from '@/components/FAQAccordion.jsx';
 import SiteFooter         from '@/components/Footer.astro';
@@ -196,6 +197,82 @@ const sidebarImageProps = {
   images: sidebarImagesClient,
   displayCount: 6,
 } as any;
+
+const narrativeDockItems = [
+  {
+    title: "See Narrative Western Art vs Traditional Western Art",
+    href: "/Blog/narrative-western-art-vs-traditional",
+    thumb: "/img/i-B7ZSdfs/s.jpg",
+    dockRole: "support",
+    dockPrefix: "",
+  },
+  {
+    title: "See What Makes an Image Feel Cinematic",
+    href: "/Blog/what-makes-an-image-feel-cinematic",
+    thumb: "/img/i-kp5NHNw/s.jpg",
+    dockRole: "support",
+    dockPrefix: "",
+  },
+  {
+    title: "See How Photography Becomes Narrative Western Art",
+    href: "/Blog/can-photography-be-narrative-western-art",
+    thumb: "/img/i-HfQ5NVR/s.jpg",
+    dockRole: "support",
+    dockPrefix: "",
+  },
+  {
+    separator: true,
+    label: "Core narrative Western art collections",
+  },
+  {
+    title: "Explore Western Storytelling Photography",
+    href: "/western-storytelling-photography",
+    thumb: "/img/i-B7ZSdfs/s.jpg",
+    dockRole: "core",
+    dockPrefix: "",
+  },
+  {
+    title: "Explore Color Western Narrative Prints",
+    href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all#collection-browser",
+    thumb: "/img/i-89qzJ6S/s.jpg",
+    dockRole: "core",
+    dockPrefix: "",
+  },
+  {
+    title: "Explore Black and White Western Narrative Prints",
+    href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/all#collection-browser",
+    thumb: "/img/i-mqQxwNn/s.jpg",
+    dockRole: "core",
+    dockPrefix: "",
+  },
+  {
+    separator: true,
+    label: "Related narrative routes",
+  },
+  {
+    title: "Explore What Is Narrative Photography",
+    href: "/Blog/what-is-narrative-photography",
+    thumb: "/img/i-qMQf7b6/s.jpg",
+    dockRole: "support",
+    dockPrefix: "",
+  },
+  {
+    title: "Explore What Is the One-Image Movie",
+    href: "/Other/One-Image-Movie",
+    thumb: "/img/i-6Ffpw9t/s.jpg",
+    dockRole: "support",
+    dockPrefix: "",
+  },
+  {
+    title: "Explore What Is Visual Storytelling in Photography",
+    href: "/Blog/what-is-visual-storytelling-in-photography",
+    thumb: "/img/i-5FX3W9r/s.jpg",
+    dockRole: "support",
+    dockPrefix: "",
+  },
+];
+
+const narrativeDockCenterIndex = narrativeDockItems.findIndex((item: any) => item.title === "Western Storytelling Photography");
 
 const structuredData = getStructuredData({
   type: "gallery",
@@ -468,6 +545,15 @@ const tombstonesWithThumbs = landingNarrativeWesternArt.tombstones.map((stone: a
       </div>
     </section>
 
+    <CollectionDock
+      id="narrative-western-art-dock"
+      items={narrativeDockItems}
+      currentTitle="Explore Narrative Western Art"
+      centerIndex={narrativeDockCenterIndex}
+      variant="wall-art"
+      ariaLabel="Narrative Western Art quick links"
+    />
+
     <section class="pb-10">
       <input type="checkbox" id="faq-toggle" class="more-toggle" />
       <div class="truncate-container" style="min-height:0;">
@@ -671,6 +757,7 @@ const tombstonesWithThumbs = landingNarrativeWesternArt.tombstones.map((stone: a
       border-top: 1px solid #e0d9cf;
       opacity: 0.9;
     }
+
     .collections-heading {
       margin: 1.3rem auto 0.03rem;
       font-size: 1.16rem;

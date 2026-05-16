@@ -315,7 +315,7 @@ export const faqItems = [
   {
     q: 'Can I buy the work shown here?',
     a: [
-      'Yes. The linked galleries and print routes open into purchasable works across archival paper, canvas, and selected specialty formats depending on the image.',
+      'Yes. The linked galleries and print routes open into purchasable works across archival paper and selected wood formats depending on the image.',
     ],
   },
   {

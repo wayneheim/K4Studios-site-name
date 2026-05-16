@@ -4,7 +4,7 @@ export const wallArtStory = [
     subhead: "Western art prints for homes, offices, lodges, and collector interiors.",
     paragraphs: [
       "Wayne Heim's Western wall art includes cowboy wall art, Western art prints, vintage Western art, Wild West scenes, Civil War art prints, and frontier landscapes created as collector-grade fine art for real rooms and long-term display.",
-      "This page is the commercial category route for K4 Studios: a practical starting point for collectors, homeowners, offices, lodge spaces, hospitality projects, and interior designers looking for Western wall decor with more authorship than generic inventory.",
+      "This page is a broad starting point for collectors, homeowners, offices, lodge spaces, hospitality projects, and interior designers looking for Western wall decor with more authorship than generic inventory.",
       "Browse by subject below, then continue into individual image pages, print options, or the more specialized Western artwork and cowboy art print routes."
     ],
   },
@@ -31,7 +31,7 @@ export const wallArtStory = [
   {
     subhead: "Print formats, scale, and placement",
     paragraphs: [
-      "Selected works are available as archival fine art prints, canvas, metal, and wood-based presentations through the <a href='/Other/Print-Options' style='color:#8b5a2b; text-decoration:underline;'>Print Options</a> path.",
+      "Selected works are available as archival fine art prints and wood-based presentations through the <a href='/Other/Print-Options' style='color:#8b5a2b; text-decoration:underline;'>Print Options</a> path.",
       "For warmer material presence, the <a href='/Other/K4-Select-Series/Engrained' style='color:#8b5a2b; text-decoration:underline;'>Engrained Series</a> prints selected images directly onto Baltic Birch wood panels. For project sourcing, see <a href='/Western-Wall-Art-for-Interior-Designers' style='color:#8b5a2b; text-decoration:underline;'>Western Wall Art for Interior Designers</a>.",
       "The best route is simple: choose the subject family first, open the image pages that hold attention, then compare material, size, and presentation options."
     ],

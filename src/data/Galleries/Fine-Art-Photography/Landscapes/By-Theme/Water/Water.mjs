@@ -1559,7 +1559,7 @@ export const galleryData = [
   {
     "id": "i-sB8KkPF",
     "title": "Kirkjufell Mountain  Photography by Wayne Heim",
-    "description": "Kirkjufell Mountain with waterfalls in the foreground. old time treatment becomes traditional fine art water photography in Iceland, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Kirkjufell Mountain with waterfalls in the foreground. An old-time finish becomes traditional fine art water photography in Iceland, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
     "alt": "Kirkjufell Mountain    Black and White photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-sB8KkPF/A",
     "keywords": [
@@ -1574,7 +1574,7 @@ export const galleryData = [
       "black and white",
       "k4 studios"
     ],
-    "story": "Kirkjufell Mountain with waterfalls in the foreground. ©Wayne Heim  old time treatment",
+    "story": "Kirkjufell Mountain with waterfalls in the foreground. ©Wayne Heim. Old-time finish.",
     "notes": "",
     "rating": 0,
     "galleries": [],

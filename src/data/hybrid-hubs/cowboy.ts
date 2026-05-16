@@ -153,7 +153,7 @@ export const collectorClose = {
 export const pageMeta = {
   title: 'Cowboy & Frontier Fine Art Prints for Collectors | K4 Studios',
   description:
-    'Collector-focused selection of cowboy, frontier, and narrative western art prints by Wayne Heim. Painterly limited-edition works on archival paper, canvas, and Engrained wood panels, built for exhibition and long-term collecting.',
+    'Collector-focused selection of cowboy, frontier, and narrative western art prints by Wayne Heim. Painterly limited-edition works on archival paper and Engrained wood panels, built for exhibition and long-term collecting.',
   ogImage: 'i-ncFcHDM',
 };
 

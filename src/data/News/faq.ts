@@ -35,7 +35,7 @@ export const facingFAQ = [
   {
     q: "Where can I buy prints?",
     a: [
-      "All images are available as fine art prints on paper, metal, or wood. You can <a href='/Other/Print-Options'>browse print options here</a> or shop directly from each gallery or image page.",
+      "All images are available as fine art prints on archival paper or select wood presentations. You can <a href='/Other/Print-Options'>browse print options here</a> or shop directly from each gallery or image page.",
       "Custom sizing, framing, and collector editions are also available—just <a href='/Contact'>get in touch</a> if you have a special request."
     ],
   },

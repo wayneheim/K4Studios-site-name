@@ -31,12 +31,6 @@ const cowboyColorItems = rotateGallery(cowboyColorData, 41);
 const cowboyBlackWhiteItems = rotateGallery(cowboyBlackWhiteData, 32);
 const narrativeColorItems = rotateGallery(narrativeColorData, 82);
 const narrativeBlackWhiteItems = rotateGallery(narrativeBlackWhiteData, 44);
-const cowboyArtPrintsCount =
-  cowboyColorData.length +
-  cowboyBlackWhiteData.length +
-  narrativeColorData.length +
-  narrativeBlackWhiteData.length;
-
 const breadcrumbHtml = [
   '<a href="/">Wayne Heim</a>',
   '<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West">Wild West</a>',
@@ -55,7 +49,7 @@ const faqItems = [
   {
     q: "What are cowboy art prints?",
     a: [
-      "Cowboy art prints are fine art reproductions of Western-themed imagery - portraits, frontier scenes, and narrative character studies - produced on archival paper, canvas, metal, or wood.",
+      "Cowboy art prints are fine art reproductions of Western-themed imagery - portraits, frontier scenes, and narrative character studies - produced as archival paper and select wood presentations.",
       "At K4 Studios, they begin as photography shaped through a painterly process into works with the mood and presence of classic Western painting rather than straight documentary photography.",
     ],
   },
@@ -90,7 +84,7 @@ const faqItems = [
   {
     q: "What print materials are available?",
     a: [
-      "Every image is available as archival paper, canvas, metal, or wood.",
+      "Every image is available as an archival paper or select wood presentation.",
       "Wood options include the Engrained Series on Baltic Birch panels, which adds grain texture and warmth to the image surface. Material choice affects how the work holds light and how it reads in a room - details are inside each image page.",
     ],
   },
@@ -131,7 +125,7 @@ const gridSections = [
     galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
     allHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/all#collection-browser",
     ctaLabel: "See the full color cowboy portrait print collection",
-    ctaThumb: "/images/tombstones/cowboy-c-ts.jpg",
+    ctaThumb: "/img/i-5FX3W9r/s.jpg",
     items: cowboyColorItems,
     limit: 19,
   },
@@ -141,7 +135,7 @@ const gridSections = [
     galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White",
     allHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/all#collection-browser",
     ctaLabel: "See the full black and white cowboy portrait print collection",
-    ctaThumb: "/images/tombstones/cowboy-bw-ts.jpg",
+    ctaThumb: "/images/tombstones/cowboy-bw-ts.webp",
     items: cowboyBlackWhiteItems,
     limit: 19,
   },
@@ -167,21 +161,31 @@ const gridSections = [
   },
 ];
 
+const countLiveItems = (sections: typeof gridSections) =>
+  sections.reduce((total, section) => total + section.items.filter((item: any) =>
+    item?.id &&
+    item.id !== "i-k4studios" &&
+    item.visibility !== "ghost" &&
+    item.visibility !== "hidden" &&
+    item.visibility !== "hide"
+  ).length, 0);
+const cowboyArtPrintsLiveCount = countLiveItems(gridSections);
+
 const commercialMiddleCopy = [
   "Start with the print. For portrait-led cowboy art prints, begin with the color or black and white portrait sections below. For work that carries more story, atmosphere, or frontier consequence, continue into the narrative print groupings.",
-  "Cowboy art prints at K4 Studios are built for buyers who want authored Western work in physical form: archival paper, canvas, metal, and wood options that let the image live with weight on the wall.",
+  "Cowboy art prints at K4 Studios are built for buyers who want authored Western work in physical form: archival paper and select wood options that let the image live with weight on the wall.",
   "Each work begins as photography, then is shaped through Heim's painterly process into fine art with the mood, restraint, and presence of classic Western painting. Size and finish options are available inside each image page.",
 ].join("\n\n");
 
 const copy = {
   seoTitle: "Cowboy Art Prints — Western Cowboy Photography Prints by Wayne Heim",
   seoDescription:
-    "Cowboy art prints by Wayne Heim — archival paper, canvas, metal, and wood. Portrait work, frontier scenes, and narrative Western photography from $25 through signed limited editions. For living rooms, offices, lodges, and collector walls.",
+    "Cowboy art prints by Wayne Heim - archival paper and select wood presentations. Portrait work, frontier scenes, and narrative Western photography from $25 through signed limited editions. For living rooms, offices, lodges, and collector walls.",
   indexDefinition:
     "Wayne Heim's cowboy art prints include color cowboy portraits, black and white cowboy prints, narrative frontier scenes, and painterly Western character studies produced as collector-grade fine art prints.",
   indexLinkNote:
     "This is the K4 route for print-focused intent: cowboy art prints, western cowboy art prints, cowboy artwork prints, and collector-ready cowboy photography prints.",
-  printAvailabilityNote: `Cowboy art prints are available from ${getFormattedLowestStandardPrintPrice()} across archival paper, canvas, metal, and select wood presentations. Edition status and format options are shown on individual image pages.`,
+  printAvailabilityNote: `Cowboy art prints are available from ${getFormattedLowestStandardPrintPrice()} across archival paper and select wood presentations. Edition status and format options are shown on individual image pages.`,
   commercialH1: "The Collection — Four Print Series, 840+ Works",
   commercialDeck:
     "Portrait prints, frontier character studies, and narrative Western scenes in color and black and white — organized for print buyers, collectors, and interior decisions.",
@@ -192,19 +196,19 @@ const copy = {
   breadcrumbCurrentName: "Cowboy Art Prints",
   aggregateOfferLowPrice: "25",
   aggregateOfferHighPrice: "5000",
-  aggregateOfferCount: String(cowboyArtPrintsCount),
+  aggregateOfferCount: String(cowboyArtPrintsLiveCount),
   gatewayKicker: "K4 STUDIOS — WESTERN FINE ART PRINT CATALOG",
   gatewayCollectionName: "Cowboy Art Prints",
   gatewayIntroCopy:
-    "Cowboy art prints by Wayne Heim — portrait work, Western character studies, frontier scenes, and story-driven imagery for living rooms, offices, lodges, ranch interiors, hospitality spaces, and collector walls.",
+    "Cowboy art prints by Wayne Heim, available as archival fine art prints ranging from the small-works introductory Sketch Series at $25 to the ultra-limited, large-format Legend Series for collectors seeking statement pieces with permanence and presence. Portrait work, Western character studies, frontier scenes, and story-driven imagery for living rooms, offices, lodges, ranch interiors, hospitality spaces, and collector walls.",
   gatewaySupportingCopy:
-    "Each section is organized by subject and treatment — color or black and white — so you can compare the right print family before reading into the image story.\n\nThe collection opens with the Sketch Series, 5×7 archival prints from $25 — sized for shelves, desks, and introductory collecting. It scales through open-edition Foundation works, signed Chronicle editions with numbered certificates, and ultra-limited Legend pieces for collectors who want provenance and permanence on the wall.\n\nClick into any section to compare prints, read the image story, and view collector and sizing details.",
+    "Each section is organized by subject, mood, and finish — color or black and white — so you can compare the right print family before reading into the image story.\n\nThe collection begins with the small-works Sketch Series, intimate 5×7 open edition pieces priced at $25 — sized for shelves, desks, and introductory collecting. It scales through open-edition Foundation works, signed Chronicle editions with numbered certificates, and ultra-limited Legend pieces for collectors who want provenance and permanence on the wall.\n\nClick into any section to compare prints, read the image story, and view collector and sizing details.",
   gatewayBrandLabel: "Cowboy Art Prints — Western Cowboy Photography Prints by Wayne Heim",
   gatewayHeroTitle: "Cowboy Art Prints by Wayne Heim",
   gatewayHeroAlt:
     "Painterly cowboy portrait used as the hero image for the Cowboy Art Prints page.",
   archiveContextCopy:
-    "Every work on this page is available as a fine art print — paper, canvas, metal, or wood — with the Sketch Series opening at $25. Click into any image to read the story, compare sizes, and view collector details. Questions about a specific piece? Reach Wayne directly at <a href='mailto:wayne@k4studios.com'>wayne@k4studios.com</a>.",
+    "Every work on this page is available as a fine art print - with the Sketch Series opening at $25. Click into any image to read the story, compare print options, sizes, and collector details. Questions about a specific piece? Reach Wayne directly at <a href='mailto:wayne@k4studios.com'>wayne@k4studios.com</a>.",
   faqKicker: "Print & Collector Questions",
   faqTitle: "Cowboy Art Prints FAQ",
 };
@@ -220,7 +224,7 @@ const copy = {
   breadcrumbStructuredItems={breadcrumbStructuredItems}
   sectionDockItems={sectionDockItems}
   dockCenterIndex={dockCenterIndex}
-  currentDockTitle="Cowboy Art Prints and Western Cowboy Portraits"
+  currentDockTitle="Explore Cowboy Art Print Collections"
   archiveContext={{
     categoryUrl: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits",
     categoryName: "Western Cowboy Portraits",

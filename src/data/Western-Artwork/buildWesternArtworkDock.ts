@@ -41,75 +41,82 @@ export const buildWesternArtworkDock = () => {
 
   const sectionDockItems = [
     supportItem(
-      "What Is Western Art?",
+      "Learn What Is Western Art",
       "/Blog/what-is-western-art",
       westernArtThumb
     ),
     supportItem(
-      "What Is Western Fine Art?",
+      "Learn What Is Western Fine Art",
       "/Blog/what-is-western-fine-art",
       westernArtThumb
     ),
     supportItem(
-      "What Is Painterly Photography?",
+      "Learn What Is Painterly Photography",
       "/Blog/what-is-painterly-photography",
       painterlyThumb
     ),
     supportItem(
-      "Narrative Western Art vs Traditional Western Art",
+      "Compare Narrative and Traditional Western Art",
       "/Blog/narrative-western-art-vs-traditional",
       narrativeThumb
     ),
     { separator: true, label: "Core Western artwork collections" },
     asDockItem(cowboyPortraitLanding.tombstones[0], {
-      title: "Western Portrait Artwork",
+      title: "Western Portrait Artwork Series",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/all#collection-browser",
       dockRole: "core",
+      dockPrefix: "",
     }),
     asDockItem(westernLandscape || landscapeLocationLanding.tombstones[0], {
-      title: "Western Landscape Artwork",
+      title: "Western Landscape Artwork Series",
       href: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/all#collection-browser",
       dockRole: "core",
+      dockPrefix: "",
     }),
     asDockItem(westernNarrativeLanding.tombstones[0], {
-      title: "Narrative Frontier Artwork",
+      title: "Narrative Frontier Artwork Series",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all#collection-browser",
       thumb: narrativeThumb,
       dockRole: "core",
+      dockPrefix: "",
     }),
     asDockItem(cowboyPortraitLanding.tombstones[1], {
-      title: "Black and White Cowboy Artwork",
+      title: "Black and White Cowboy Artwork Series",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/all#collection-browser",
       dockRole: "core",
+      dockPrefix: "",
     }),
     asDockItem(mountains || landscapeThemeLanding.tombstones[0], {
-      title: "Western Mountain Artwork",
+      title: "Western Mountain Artwork Series",
       href: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/all#collection-browser",
       dockRole: "core",
+      dockPrefix: "",
     }),
     asDockItem(westernNarrativeLanding.tombstones[1], {
-      title: "Black and White Narrative Artwork",
+      title: "Black and White Narrative Artwork Series",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/all#collection-browser",
       dockRole: "core",
+      dockPrefix: "",
     }),
     { separator: true, label: "Western artwork context and collector notes" },
     asDockItem(wildWestLanding.tombstones[0], {
-      title: "Wild West",
+      title: "Wild West Series",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West",
       dockRole: "support",
+      dockPrefix: "",
     }),
     supportItem(
-      "How to Display Western Art in a Modern Home Without Turning It Into a Theme Room",
+      "Learn How to Display Western Art at Home",
       "/Blog/how-to-display-western-art-in-a-modern-home",
       displayWesternArtThumb
     ),
     supportItem(
-      "Decor Art vs Fine Art: What Is the Difference?",
+      "Compare Decor Art and Fine Art",
       "/Blog/decor-art-vs-fine-art",
       westernArtThumb
     ),
     supportItem(
-      "What Makes a Fine Art Print Worth Owning?",
+      "Learn What Makes a Fine Art Print Worth Owning",
       "/Blog/what-makes-a-fine-art-print-worth-owning",
       printOptionsThumb
     ),
@@ -117,6 +124,6 @@ export const buildWesternArtworkDock = () => {
 
   return {
     sectionDockItems,
-    dockCenterIndex: sectionDockItems.findIndex((item: any) => item.title === "Western Landscape Artwork"),
+    dockCenterIndex: sectionDockItems.findIndex((item: any) => item.title === "Western Landscape Artwork Series"),
   };
 };

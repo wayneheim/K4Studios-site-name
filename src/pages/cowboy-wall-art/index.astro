@@ -27,22 +27,14 @@ const cowboyColorItems = rotateGallery(cowboyColorData, colorStartAfterId > 0 ? 
 const cowboyBlackWhiteItems = rotateGallery(cowboyBlackWhiteData, 18);
 const narrativeColorItems = rotateGallery(narrativeColorData, 56);
 const narrativeBlackWhiteItems = rotateGallery(narrativeBlackWhiteData, 27);
-const cowboyWallArtCount =
-  cowboyColorData.length +
-  cowboyBlackWhiteData.length +
-  narrativeColorData.length +
-  narrativeBlackWhiteData.length;
-
 const breadcrumbHtml = [
   '<a href="/">Wayne Heim</a>',
   '<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West">Wild West</a>',
-  '<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits">Western Cowboy Portraits</a>',
   "Cowboy Wall Art",
 ].join(" | ");
 
 const breadcrumbStructuredItems = [
   { href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West", name: "Wild West" },
-  { href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits", name: "Western Cowboy Portraits" },
 ];
 
 const { sectionDockItems, dockCenterIndex } = buildCowboyWallArtDock();
@@ -54,7 +46,7 @@ const gridSections = [
     galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
     allHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/all#collection-browser",
     ctaLabel: "See the full color cowboy portrait collection",
-    ctaThumb: "/images/tombstones/cowboy-c-ts.jpg",
+    ctaThumb: "/img/i-5FX3W9r/s.jpg",
     items: cowboyColorItems,
     limit: 19,
   },
@@ -64,7 +56,7 @@ const gridSections = [
     galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White",
     allHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/all#collection-browser",
     ctaLabel: "See the full black and white cowboy portrait collection",
-    ctaThumb: "/images/tombstones/cowboy-bw-ts.jpg",
+    ctaThumb: "/images/tombstones/cowboy-bw-ts.webp",
     items: cowboyBlackWhiteItems,
     limit: 19,
   },
@@ -90,16 +82,27 @@ const gridSections = [
   },
 ];
 
+const countLiveItems = (sections: typeof gridSections) =>
+  sections.reduce((total, section) => total + section.items.filter((item: any) =>
+    item?.id &&
+    item.id !== "i-k4studios" &&
+    item.visibility !== "ghost" &&
+    item.visibility !== "hidden" &&
+    item.visibility !== "hide"
+  ).length, 0);
+const cowboyWallArtLiveCount = countLiveItems(gridSections);
+
 const commercialMiddleCopy = [
   "Start with the figure. For direct portrait presence - a weathered face, a deliberate stance, a character who holds the wall - begin with the color or black and white portrait sections. For work that leans cinematic, atmospheric, or story-driven, move into the narrative groupings below.",
   "K4 Studios cowboy wall art is built for buyers who want more than generic Western decor. These prints bring portrait character, frontier atmosphere, and story-led imagery into a collector-grade catalog suited for living rooms, offices, lodges, ranch interiors, and hospitality spaces.",
-  "Each work begins as photography, then is shaped through Heim's painterly process into fine art with the mood, restraint, and presence of classic Western painting. Prints are available as archival paper, canvas, metal, and wood - with size and finish options inside each image page.",
+  "Each work begins as photography, then is shaped through Heim's painterly process into fine art with the mood, restraint, and presence of classic Western painting. Prints are available as archival paper and select wood presentations - with size and finish options inside each image page.",
 ].join("\n\n");
 
 const copy = {
   seoTitle: "Cowboy Wall Art - Western Cowboy Art Prints by Wayne Heim",
   seoDescription:
-    "Cowboy wall art prints for homes, offices, lodges, and ranch interiors. Portrait and narrative Western art prints from $25 - archival, canvas, metal, and wood. 147 color portraits, 99 black and white, 454 narrative scenes, and more.",
+    "Cowboy wall art prints by Wayne Heim for homes, offices, lodges, and ranch interiors. Portrait and narrative Western art prints from $25 through collector editions.",
+  descriptionMaxLength: "170",
   indexDefinition:
     "Wayne Heim's cowboy wall art includes cowboy portraits, narrative frontier scenes, black and white cowboy prints, and painterly Western character studies created as collector-grade fine art for real rooms and long-term display.",
   indexLinkNote:
@@ -115,13 +118,13 @@ const copy = {
   breadcrumbCurrentName: "Cowboy Wall Art",
   aggregateOfferLowPrice: "25",
   aggregateOfferHighPrice: "5000",
-  aggregateOfferCount: String(cowboyWallArtCount),
+  aggregateOfferCount: String(cowboyWallArtLiveCount),
   gatewayKicker: "K4 STUDIOS — WESTERN FINE ART PRINT CATALOG",
   gatewayCollectionName: "Cowboy Wall Art",
   gatewayIntroCopy:
-    "Cowboy wall art prints by Wayne Heim - portrait work, Western character studies, frontier scenes, and story-driven imagery for living rooms, offices, lodges, ranch interiors, hospitality spaces, and collector walls.",
+    "Cowboy wall art prints by Wayne Heim, available as archival fine art prints ranging from the small-works introductory Sketch Series at $25 to the ultra-limited, large-format Legend Series for collectors seeking statement pieces with permanence and presence. Portrait work, Western character studies, frontier scenes, and story-driven imagery for living rooms, offices, lodges, ranch interiors, hospitality spaces, and collector walls.",
   gatewaySupportingCopy:
-    "Each section is organized by subject and treatment - color or black and white - so you can match the work to the room before reading into the image story.\n\nThe collection opens with the Sketch Series, 5×7 archival prints from $25 - sized for shelves, desks, and introductory collecting. It scales through open-edition Foundation works, signed Chronicle editions with numbered certificates, and ultra-limited Legend pieces for collectors who want provenance and permanence on the wall.\n\nClick into any section to compare prints, read the image story, and view collector and sizing details.",
+    "Each section is organized by subject, mood, and finish - color or black and white - so you can match the work to the room before reading into the image story.\n\nThe collection begins with the small-works Sketch Series, intimate 5×7 open edition pieces priced at $25 - sized for shelves, desks, and introductory collecting. It scales through open-edition Foundation works, signed Chronicle editions with numbered certificates, and ultra-limited Legend pieces for collectors who want provenance and permanence on the wall.\n\nClick into any section to compare prints, read the image story, and view collector and sizing details.",
   gatewayBrandLabel: "Cowboy Wall Art - Western Cowboy Art Prints by Wayne Heim",
   gatewayBrandClass: "gateway-brand--compact",
   gatewayHeroTitle: "At Ease",
@@ -129,10 +132,10 @@ const copy = {
     "Seasoned cowboy leaning on a fence with a relaxed posture, wearing a wide-brim hat and frontier clothing.",
   gatewayHeroHref:
     "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-5LTzhJ6",
-  gatewayHeroSrc: "/img/i-5LTzhJ6/l.jpg",
-  gatewayHeroSrcSet: "/img/i-5LTzhJ6/m.jpg 720w, /img/i-5LTzhJ6/l.jpg 1200w",
+  gatewayHeroSrc: "/img/i-5LTzhJ6/m.jpg",
+  gatewayHeroSrcSet: "/img/i-5LTzhJ6/s.jpg 400w, /img/i-5LTzhJ6/m.jpg 720w",
   archiveContextCopy:
-    "Every work on this page is available as an archival fine art print - paper, canvas, metal, or wood - starting at $25. Click into any image to read the story, compare sizes, and view collector details. Questions about a specific piece? Reach Wayne directly at <a href='mailto:wayne@k4studios.com'>wayne@k4studios.com</a>.",
+    "Every work on this page is available as an archival fine art print - with the Sketch Series opening at $25. Click into any image to read the story, compare print options, sizes, and collector details. Questions about a specific piece? Reach Wayne directly at <a href='mailto:wayne@k4studios.com'>wayne@k4studios.com</a>.",
   faqKicker: "Print & Collector Questions",
   faqTitle: "Cowboy Wall Art FAQ",
 };
@@ -148,7 +151,7 @@ const copy = {
   breadcrumbStructuredItems={breadcrumbStructuredItems}
   sectionDockItems={sectionDockItems}
   dockCenterIndex={dockCenterIndex}
-  currentDockTitle="Cowboy Wall Art and Western Cowboy Portrait Prints"
+  currentDockTitle="Explore Cowboy Wall Art Collections"
   archiveContext={{
     categoryUrl: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits",
     categoryName: "Western Cowboy Portraits",

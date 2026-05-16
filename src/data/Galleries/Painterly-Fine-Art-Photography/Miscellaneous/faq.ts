@@ -26,7 +26,7 @@ export const facingFAQ = [
   {
     q: "Can I purchase prints from this collection?",
     a: [
-      `Absolutely. Every image in this gallery is available as a fine art print. Choose from archival paper, canvas, or Wayne’s signature <a href="/Other/K4-Select-Series/Engrained">Engrained wood-mounted prints</a>.`
+      `Absolutely. Every image in this gallery is available as a fine art print. Choose from archival paper or Wayne’s signature <a href="/Other/K4-Select-Series/Engrained">Engrained wood-mounted prints</a>.`
     ]
   },
   {

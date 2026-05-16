@@ -13,7 +13,7 @@
 
 interface Props {
   variant?: "index" | "definition" | "post";
-  currentPage?: number; // 1-15, used to highlight current page in definition variant
+  currentPage?: number; // 1-16, used to highlight current page in definition variant
 }
 
 const { variant = "post", currentPage } = Astro.props;
@@ -123,6 +123,13 @@ const cornerstonePages = [
     title: "What Is Historically Themed Photography?",
     description: "History as subject, story, and fine art interpretation",
     group: "disciplines"
+  },
+  {
+    number: 16,
+    href: "/Blog/what-is-western-black-and-white-photography",
+    title: "What Is Western Black and White Photography?",
+    description: "Monochrome as structure - tone, contrast, restraint, and collector presence",
+    group: "disciplines"
   }
 ];
 
@@ -199,6 +206,11 @@ const cornerstonePages = [
           <span class="num">8</span>
           <h3>What Is Cowboy Fine Art Photography?</h3>
           <p>Authored portraiture - craft, narrative, and psychological depth</p>
+        </a>
+        <a href="/Blog/what-is-western-black-and-white-photography" class="card">
+          <span class="num">16</span>
+          <h3>What Is Western Black and White Photography?</h3>
+          <p>Monochrome as structure - tone, contrast, restraint, and collector presence</p>
         </a>
         <a href="/Blog/what-is-historically-themed-photography" class="card">
           <span class="num">9</span>

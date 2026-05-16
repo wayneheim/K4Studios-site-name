@@ -1,9 +1,9 @@
 export const landingWallArt = {
-  // Western Wall Art - COMMERCIAL CATEGORY TEST HUB
+  // Western Wall Art collection hub
   title: "Western Wall Art",
   subtitle: "Western Art Prints, Cowboy Wall Art, and Frontier Fine Art for Homes, Offices, Lodges, and Collector Interiors",
 
-  // Keywords for structured data and semantic SEO (not meta keywords)
+  // Keywords for structured data and semantic relevance
   keywords: [
     "Western Wall Art",
     "western wall decor",
@@ -31,7 +31,7 @@ export const landingWallArt = {
   breadcrumb:
     `<a href="/" title="Home" style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;" onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Wayne Heim</a> | Western Wall Art`,
 
-  // Tombstones - commercial entry points for the A/B test
+  // Tombstones - collection entry points
   tombstones: [
     {
       title: "Cowboy Wall Art",
@@ -86,7 +86,7 @@ export const landingWallArt = {
     {
       title: "Fine Art on Wood - Engrained Series",
       href: "/Other/K4-Select-Series/Engrained",
-      thumb: "/images/tombstones/engrained-ts.jpg",
+      thumb: "/images/tombstones/engrained-ts.webp",
     },
   ],
 };

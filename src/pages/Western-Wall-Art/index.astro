@@ -40,7 +40,7 @@ const gridSections = [
     galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color",
     allHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all#collection-browser",
     ctaLabel: "See the full color Western narrative collection",
-    ctaThumb: "/images/tombstones/Cowboy-j-ts.webp",
+    ctaThumb: "/img/i-5FX3W9r/s.jpg",
     items: narrativeColorData,
     limit: 19,
   },
@@ -70,7 +70,7 @@ const gridSections = [
     galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
     allHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/all#collection-browser",
     ctaLabel: "See the full color cowboy portrait collection",
-    ctaThumb: "/images/tombstones/cowboy-c-ts.jpg",
+    ctaThumb: "/img/i-5FX3W9r/s.jpg",
     items: cowboyColorData,
     limit: 19,
   },
@@ -80,16 +80,25 @@ const gridSections = [
     galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White",
     allHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/all#collection-browser",
     ctaLabel: "See the full black and white cowboy portrait collection",
-    ctaThumb: "/images/tombstones/cowboy-bw-ts.jpg",
+    ctaThumb: "/images/tombstones/cowboy-bw-ts.webp",
     items: cowboyBlackWhiteData,
     limit: 19,
   },
 ];
 
+const countLiveItems = (sections: typeof gridSections) =>
+  sections.reduce((total, section) => total + section.items.filter((item: any) =>
+    item?.id &&
+    item.id !== "i-k4studios" &&
+    item.visibility !== "ghost" &&
+    item.visibility !== "hidden" &&
+    item.visibility !== "hide"
+  ).length, 0);
+const westernWallArtLiveCount = countLiveItems(gridSections);
+
 const commercialMiddleCopy = [
-  "Start with the room. For cowboy portraits and western character studies, begin with the <a href='#section-cowboy-art-prints-color-western-portraits'>Cowboy Wall Art</a> or <a href='#section-narrative-western-wall-art-color-frontier-scenes'>Color Western Narrative</a> sections below. For open country and mountain presence, go to <a href='#section-western-landscape-wall-art'>Western Landscape Wall Art</a>. For old West atmosphere and monochrome, use the <a href='#section-black-and-white-western-wall-art-narrative-prints'>Black and White</a> sections.",
-  "Wayne Heim's work brings cowboy wall art, Western art prints, vintage Western atmosphere, Wild West scenes, and frontier landscapes into a collector-grade print catalog for homes, offices, lodges, ranch interiors, and hospitality spaces. These works begin as photography, then are shaped through Heim's painterly process into fine art with the mood, restraint, and story presence often associated with classic Western paintings.",
-  "Selected pieces are available as archival paper, canvas, metal, and wood - including <a href='/Other/K4-Select-Series/Engrained'>Engrained Series</a> Baltic Birch panels. Size and finish options are inside each image page.",
+  "Much of the Western wall art sold online is built around surface style - a silhouette, a desert palette, a rustic theme. Wayne Heim's work begins somewhere else. These images are camera-captured and individually shaped through the eye of an award-winning medical illustrator and fine art photographer. The result is Western art with atmosphere, authorship, and story pressure - pieces that read as decor from across a room, then deepen into character, tension, and memory up close.",
+  "Fine art prints are available from $25, with options ranging from small Sketch Series studies to larger collector-grade works and Engrained Baltic Birch wood-panel statement pieces.",
 ].join("\n\n");
 
 const copy = {
@@ -99,9 +108,9 @@ const copy = {
   indexDefinition:
     "Wayne Heim's Western wall art includes cowboy wall art, Western art prints, vintage Western art, Wild West scenes, and frontier landscapes created as collector-grade fine art for real rooms and long-term display.",
   indexLinkNote:
-    wallArtStory[0]?.paragraphs?.[1] || "This page is the commercial category route for K4 Studios: a practical starting point for collectors, homeowners, offices, lodge spaces, hospitality projects, and interior designers looking for Western wall decor with more authorship than generic inventory.",
+    wallArtStory[0]?.paragraphs?.[1] || "This page is a broad starting point for collectors, homeowners, offices, lodge spaces, hospitality projects, and interior designers looking for Western wall decor with more authorship than generic inventory.",
   printAvailabilityNote: `All works are available as fine art prints from ${getFormattedLowestStandardPrintPrice()}. Select images are also available in the Engrained Series - printed on Baltic Birch using a five-layer UV process - with pricing specific to each image.`,
-  commercialH1: "The Collection — Five Print Series, 845 Works",
+  commercialH1: "The Collection — Five Print Series, 905 Works",
   commercialDeck:
     "Cowboy portraits, frontier landscapes, narrative Western scenes, and character studies — in color and black and white, organized for rooms, collectors, and interior decisions.",
   catalogEntranceTitle: "Western Art Prints, Cowboy Wall Art, and Frontier Fine Art",
@@ -111,12 +120,12 @@ const copy = {
   breadcrumbCurrentName: "Western Wall Art",
   aggregateOfferLowPrice: "25",
   aggregateOfferHighPrice: "5000",
-  aggregateOfferCount: "845",
+  aggregateOfferCount: String(westernWallArtLiveCount),
   gatewayCollectionName: "Western Wall Art",
   gatewayIntroCopy:
-    "Western wall art by Wayne Heim, available as archival fine art prints from $25. Cowboy portraits, frontier scenes, Western character studies, and story-driven artwork for homes, offices, lodges, hospitality spaces, and collector interiors.",
+    "Western wall art by Wayne Heim, available as archival fine art prints ranging from the small-works introductory Sketch Series at $25 to the ultra-limited, large-format Legend Series for collectors seeking statement pieces with permanence and presence. Cowboy portraits, frontier scenes, Western landscapes, black-and-white studies, and story-driven artwork for homes, offices, lodges, hospitality spaces, and collector interiors.",
   gatewaySupportingCopy:
-    "Each section below is organized by subject and treatment — color or black and white — so you can find the right piece for the room before reading into the work.\n\nThe collection opens with the Sketch Series, 5×7 archival prints from $25 — sized for shelves, desks, and introductory collecting. It scales through open-edition Foundation works, signed Chronicle editions with numbered certificates, and ultra-limited Legend pieces for collectors who want provenance and permanence on the wall.\n\nClick into any section to compare prints, read image stories, explore collector notes, and view print details.",
+    "These works begin as photography, then are shaped through Heim’s painterly process into Western fine art with atmosphere, authorship, and narrative weight — pieces that can read from across a room, then deepen into character, tension, and memory up close.\n\nThe collection begins with the small-works Sketch Series, intimate 5×7 open edition pieces priced at $25 — sized for shelves, desks, and introductory collecting. It scales through open-edition Foundation works, signed Chronicle editions with numbered certificates, and ultra-limited Legend pieces for collectors who want provenance and permanence on the wall.\n\nUse the collection links below to browse by subject, mood, and finish, then open any piece to compare prints, read image stories, explore collector notes, and view print details.",
   gatewayBrandLabel: "Western Wall Art - Fine Art Prints by Wayne Heim",
   faqTitle: "Western Wall Art FAQ",
 };
@@ -132,7 +141,7 @@ const copy = {
   breadcrumbStructuredItems={breadcrumbStructuredItems}
   sectionDockItems={sectionDockItems}
   dockCenterIndex={dockCenterIndex}
-  currentDockTitle="Western Wall Art and Cowboy Portrait Prints"
+  currentDockTitle="Explore Western Wall Art Collections"
   archiveContext={{
     categoryUrl: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits",
     categoryName: "Western Cowboy Portraits",

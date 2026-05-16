@@ -68,7 +68,7 @@ export const landingWestern: any = {
     {
       title: "Engrained Series",
       href: "/Other/K4-Select-Series/Engrained",
-      thumb: "/images/tombstones/engrained-ts.jpg",
+      thumb: "/images/tombstones/engrained-ts.webp",
     },
   ],
 };

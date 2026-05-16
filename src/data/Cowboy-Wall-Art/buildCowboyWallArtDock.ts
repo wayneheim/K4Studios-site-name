@@ -38,82 +38,88 @@ export const buildCowboyWallArtDock = () => {
 
   const sectionDockItems = [
     supportItem(
-      "What Is Western Cowboy Art?",
+      "Learn What Is Western Cowboy Art",
       "/Blog/what-is-western-cowboy-art",
       cowboyContextThumb
     ),
     supportItem(
-      "What Is Western Fine Art Photography?",
+      "Learn What Is Western Fine Art Photography",
       "/Blog/what-is-western-fine-art-photography",
       cowboyFineArtThumb
     ),
     supportItem(
-      "What Is Painterly Photography?",
+      "Learn What Is Painterly Photography",
       "/Blog/what-is-painterly-photography",
       "/images/tombstones/Painterly-ts.webp"
     ),
     supportItem(
-      "How to Display Western Art in a Modern Home Without Turning It Into a Theme Room",
+      "Learn How to Display Western Art at Home",
       "/Blog/how-to-display-western-art-in-a-modern-home",
       displayWesternArtThumb
     ),
     asDockItem(facingHistoryLanding.tombstones[0], {
-      title: "Facing History",
+      title: "Facing History Series",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History",
       dockRole: "support",
+      dockPrefix: "",
     }),
     { separator: true, label: "Core cowboy wall art collections" },
     asDockItem(cowboyPortraitLanding.tombstones[0], {
-      title: "Color Cowboy Wall Art",
+      title: "Color Cowboy Portrait Series",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/all#collection-browser",
       dockRole: "core",
+      dockPrefix: "",
     }),
     asDockItem(cowboyPortraitLanding.tombstones[1], {
-      title: "Black and White Cowboy Portrait Art",
+      title: "Black and White Cowboy Portrait Series",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/all#collection-browser",
       dockRole: "core",
+      dockPrefix: "",
     }),
     asDockItem(westernNarrativeLanding.tombstones[0], {
-      title: "Narrative Cowboy Wall Art",
+      title: "Color Western Narrative Series",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all#collection-browser",
       thumb: narrativeWomanThumb,
       dockRole: "core",
+      dockPrefix: "",
     }),
     asDockItem(westernNarrativeLanding.tombstones[1], {
-      title: "Black and White Narrative Cowboy Art",
+      title: "Black and White Western Narrative Series",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/all#collection-browser",
       dockRole: "core",
+      dockPrefix: "",
     }),
     { separator: true, label: "Cowboy wall art context and collector notes" },
     asDockItem(facingHistoryWildWest || wildWestLanding.tombstones[0], {
-      title: "Wild West",
+      title: "Wild West Series",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West",
       dockRole: "support",
+      dockPrefix: "",
     }),
     supportItem(
-      "What Is Narrative Photography?",
+      "Learn What Is Narrative Photography",
       "/Blog/what-is-narrative-photography",
       narrativeWomanThumb
     ),
     supportItem(
-      "What Makes an Image Feel Cinematic?",
+      "Learn What Makes an Image Feel Cinematic",
       "/Blog/what-makes-an-image-feel-cinematic",
       cinematicWesternThumb
     ),
     supportItem(
-      "Decor Art vs Fine Art: What Is the Difference?",
+      "Compare Decor Art and Fine Art",
       "/Blog/decor-art-vs-fine-art",
       decorVsFineArtThumb
     ),
     supportItem(
-      "Wood Prints vs Paper Prints",
+      "Compare Wood Prints and Paper Prints",
       "/Blog/wood-prints-vs-paper-prints",
-      "/images/tombstones/engrained-ts.jpg"
+      "/images/tombstones/engrained-ts.webp"
     ),
   ];
 
   return {
     sectionDockItems,
-    dockCenterIndex: sectionDockItems.findIndex((item: any) => item.title === "Color Cowboy Wall Art"),
+    dockCenterIndex: sectionDockItems.findIndex((item: any) => item.title === "Color Cowboy Portrait Series"),
   };
 };

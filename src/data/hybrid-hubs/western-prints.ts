@@ -164,7 +164,7 @@ export const explorationPaths = [
     eyebrow: 'Collector Route',
     hideEyebrow: true,
     href: '/Other/Print-Options',
-    description: 'Compare archival paper, canvas, metal, and presentation choices once the image itself has earned the space.',
+    description: 'Compare archival paper and select wood presentation choices once the image itself has earned the space.',
     cta: 'Compare formats -',
     accent: '#4d4037',
   },
@@ -351,7 +351,7 @@ export const faqItems = [
   {
     q: 'Can I compare print materials before choosing an image?',
     a: [
-      'Yes. The <a href="/Other/Print-Options">Print Options</a> page explains archival paper, canvas, metal, and related presentation choices so the format decision can follow the image decision.',
+      'Yes. The <a href="/Other/Print-Options">Print Options</a> page explains archival paper and select wood presentation choices so the format decision can follow the image decision.',
     ],
   },
 ];

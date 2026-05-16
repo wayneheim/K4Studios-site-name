@@ -8,7 +8,7 @@ export const cowboyWallArtFAQ = [
   {
     q: "What print formats are available?",
     a: [
-      "Every image is available as an archival paper print, canvas, metal, or wood presentation. Open-edition study prints start at $25. Signed limited editions and ultra-limited statement works carry certificates of authenticity and are sized for collector or statement-wall placement.",
+      "Every image is available as an archival paper print or select wood presentation. Open-edition study prints start at $25. Signed limited editions and ultra-limited statement works carry certificates of authenticity and are sized for collector or statement-wall placement.",
     ],
   },
   {
@@ -20,7 +20,7 @@ export const cowboyWallArtFAQ = [
   {
     q: "Where do I go to see the full cowboy portrait collection?",
     a: [
-      "The <a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits' style='color:#8b5a2b; text-decoration:underline;'>Western Cowboy Portraits</a> gallery holds the complete portrait series in both color and black and white - over 140 color works and 99 black and white. The narrative sections are separate and organized by scene type and treatment.",
+      "The <a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits' style='color:#8b5a2b; text-decoration:underline;'>Western Cowboy Portraits</a> gallery holds the complete portrait series in both color and black and white - over 140 color works and 99 black and white. The narrative sections are separate and organized by scene type, color, and black-and-white presentation.",
     ],
   },
   {

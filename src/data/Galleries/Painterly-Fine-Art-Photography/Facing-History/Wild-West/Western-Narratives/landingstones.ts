@@ -57,7 +57,7 @@ export const landingWestern = {
       title: "Color Narrative Stories",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color",
       dockHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all#collection-browser",
-      thumb: "/images/tombstones/Cowboy-j-ts.webp",
+      thumb: "/img/i-5FX3W9r/s.jpg",
     },
     {
       title: "Black & White Narrative Stories",

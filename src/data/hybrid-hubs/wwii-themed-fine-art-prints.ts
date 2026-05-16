@@ -166,7 +166,7 @@ export const explorationPaths = [
     eyebrow: 'Collector Route',
     hideEyebrow: true,
     href: '/Other/Print-Options',
-    description: 'Compare archival paper, canvas, metal, and related presentation formats before choosing a print.',
+    description: 'Compare archival paper and select wood presentation formats before choosing a print.',
     cta: 'Compare formats -',
     accent: '#7d634b',
   },

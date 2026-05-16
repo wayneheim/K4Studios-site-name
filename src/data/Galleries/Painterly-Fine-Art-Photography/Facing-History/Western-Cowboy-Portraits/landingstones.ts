@@ -59,17 +59,17 @@ export const landingWestern = {
     {
       title: "Color Western Portraits",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
-      thumb: "/images/tombstones/cowboy-c-ts.jpg",
+      thumb: "/img/i-5FX3W9r/s.jpg",
     },
     {
       title: "Black & White Western Portraits",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White",
-      thumb: "/images/tombstones/cowboy-bw-ts.jpg",
+      thumb: "/images/tombstones/cowboy-bw-ts.webp",
     },
     {
       title: "The Engrained Series — Western Art on Wood",
       href: "/Other/K4-Select-Series/Engrained",
-      thumb: "/images/tombstones/engrained-ts.jpg",
+      thumb: "/images/tombstones/engrained-ts.webp",
     },
   ]
 };

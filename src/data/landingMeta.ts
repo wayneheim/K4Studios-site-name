@@ -325,14 +325,14 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
       "Western Narratives – Wayne Heim",
     ogDescription:
       "Narrative Western photography by Wayne Heim: cinematic frontier images built around implication, atmosphere, and the pressure of the larger story beyond the frame.",
-    ogImage: "/images/tombstones/Cowboy-j-ts.webp",
+    ogImage: "/img/i-5FX3W9r/s.jpg",
     ogType: "website",
     twitterCard: "summary_large_image",
     twitterTitle:
       "Western Narratives – Narrative Western Photography",
     twitterDescription:
       "Narrative Western art and cinematic frontier photography by Wayne Heim.",
-    twitterImage: "/images/tombstones/Cowboy-j-ts.webp",
+    twitterImage: "/img/i-5FX3W9r/s.jpg",
     keywords: "narrative Western photography, Western narratives, narrative Western art, cinematic Western photography, Western storytelling photography, frontier narrative art, Wayne Heim",
   },
 
@@ -950,7 +950,7 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
   "/western-fine-art-photography-collection": {
     ogTitle: "Cowboy & Frontier Fine Art Prints for Collectors | K4 Studios",
     ogDescription:
-      "Collector-focused selection of cowboy and frontier fine art prints by Wayne Heim. Painterly limited-edition works on archival paper, canvas, and Engrained wood panels.",
+      "Collector-focused selection of cowboy and frontier fine art prints by Wayne Heim. Painterly limited-edition works on archival paper and Engrained wood panels.",
     ogImage: "/images/cowboy.webp",
     ogType: "website",
     twitterCard: "summary_large_image",

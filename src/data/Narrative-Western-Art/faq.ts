@@ -65,7 +65,7 @@ export const narrativeWesternArtFAQ = [
   {
     q: "What print formats are available for narrative Western art pieces?",
     a: [
-      "Works are available as limited edition archival prints on museum-grade paper, premium canvas, and Engrained™ hardwood panels.",
+      "Works are available as limited edition archival prints on museum-grade paper and Engrained™ hardwood panels.",
       "Each piece is numbered, signed, and produced for long-term collection."
     ],
   },

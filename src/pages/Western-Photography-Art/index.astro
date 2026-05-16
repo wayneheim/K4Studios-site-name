@@ -34,13 +34,6 @@ const narrativeBlackWhiteItems = rotateGallery(narrativeBlackWhiteData, 93);
 const cowboyColorItems = rotateGallery(cowboyColorData, 111);
 const cowboyBlackWhiteItems = rotateGallery(cowboyBlackWhiteData, 71);
 const nativeColorItems = rotateGallery(nativeColorData, 12);
-const westernPhotographyArtCount =
-  narrativeColorData.length +
-  narrativeBlackWhiteData.length +
-  cowboyColorData.length +
-  cowboyBlackWhiteData.length +
-  nativeColorData.length;
-
 const breadcrumbHtml = [
   '<a href="/">Wayne Heim</a>',
   '<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Facing History</a>',
@@ -82,7 +75,7 @@ const gridSections = [
     galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
     allHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/all#collection-browser",
     ctaLabel: "See the full color cowboy photography art collection",
-    ctaThumb: "/images/tombstones/cowboy-c-ts.jpg",
+    ctaThumb: "/img/i-5FX3W9r/s.jpg",
     items: cowboyColorItems,
     limit: 19,
   },
@@ -92,7 +85,7 @@ const gridSections = [
     galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White",
     allHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/all#collection-browser",
     ctaLabel: "See the full black and white cowboy photography art collection",
-    ctaThumb: "/images/tombstones/cowboy-bw-ts.jpg",
+    ctaThumb: "/images/tombstones/cowboy-bw-ts.webp",
     items: cowboyBlackWhiteItems,
     limit: 19,
   },
@@ -108,10 +101,20 @@ const gridSections = [
   },
 ];
 
+const countLiveItems = (sections: typeof gridSections) =>
+  sections.reduce((total, section) => total + section.items.filter((item: any) =>
+    item?.id &&
+    item.id !== "i-k4studios" &&
+    item.visibility !== "ghost" &&
+    item.visibility !== "hidden" &&
+    item.visibility !== "hide"
+  ).length, 0);
+const westernPhotographyArtLiveCount = countLiveItems(gridSections);
+
 const commercialMiddleCopy = [
   "Western photography art names the place where photographic truth meets the older Western art tradition - where a camera-made image carries the authored presence of painting. Start with the subject family below: frontier narrative, cowboy portrait, monochrome atmosphere, or Native American portrait work.",
   "K4 Studios treats the camera as the beginning, not the end. Wayne Heim's images are shaped through painterly process, tonal control, authored titles, and story structure so each finished work carries the presence of art rather than simple photographic record.",
-  "These works are available as archival paper, canvas, metal, and wood presentations, with the Sketch Series opening at $25 and limited editions available for collectors who want provenance, permanence, and wall presence.",
+  "These works are available as archival paper and select wood presentations, with the Sketch Series opening at $25 and limited editions available for collectors who want provenance, permanence, and wall presence.",
 ].join("\n\n");
 
 const copy = {
@@ -122,7 +125,7 @@ const copy = {
     "Western photography art is authored photographic work that interprets the American West through painterly craft, narrative intent, historical awareness, and collector-grade presentation.",
   indexLinkNote:
     "This is the K4 route for Western photography art, Western art photography, cowboy art photography, frontier photography art, and painterly Western fine art prints.",
-  printAvailabilityNote: `Western photography art is available from ${getFormattedLowestStandardPrintPrice()} across archival paper, canvas, metal, and select wood presentations. Edition status and format options are shown on individual image pages.`,
+  printAvailabilityNote: `Western photography art is available from ${getFormattedLowestStandardPrintPrice()} across archival paper and select wood presentations. Edition status and format options are shown on individual image pages.`,
   commercialH1: "The Collection - Five Subject Series, 840+ Works",
   commercialDeck:
     "Frontier narratives, cowboy portraits, Native American portrait work, and painterly Western photographs in color and black and white.",
@@ -133,22 +136,22 @@ const copy = {
   breadcrumbCurrentName: "Western Photography Art",
   aggregateOfferLowPrice: "25",
   aggregateOfferHighPrice: "5000",
-  aggregateOfferCount: String(westernPhotographyArtCount),
+  aggregateOfferCount: String(westernPhotographyArtLiveCount),
   gatewayCollectionName: "Western Photography Art",
   gatewayIntroCopy:
-    "Western photography art by Wayne Heim - frontier narratives, cowboy portraits, Western character studies, Native American portrait work, and story-driven imagery for homes, offices, lodges, ranch interiors, hospitality spaces, and collector walls.",
+    "Western photography art by Wayne Heim, available as archival fine art prints ranging from the small-works introductory Sketch Series at $25 to the ultra-limited, large-format Legend Series for collectors seeking statement pieces with permanence and presence. Frontier narratives, cowboy portraits, Western character studies, Native American portrait work, and story-driven imagery for homes, offices, lodges, ranch interiors, hospitality spaces, and collector walls.",
   gatewaySupportingCopy:
-    "Each section is organized by subject and treatment - color or black and white - so you can compare the right Western art photography path before reading into the image story. The collection opens with the Sketch Series, 5x7 archival prints from $25, then scales through open-edition Foundation works, signed Chronicle editions, and ultra-limited Legend pieces for collectors who want provenance and permanence on the wall.\n\nClick into any section to compare prints, read the image story, and view collector and sizing details.",
+    "Each section is organized by subject, mood, and finish - color or black and white - so you can compare the right Western art photography path before reading into the image story. The collection begins with the small-works Sketch Series, intimate 5×7 open edition pieces priced at $25, then scales through open-edition Foundation works, signed Chronicle editions, and ultra-limited Legend pieces for collectors who want provenance and permanence on the wall.\n\nClick into any section to compare prints, read the image story, and view collector and sizing details.",
   gatewayKicker: "K4 Studios - Western Photography Art Catalog",
   gatewayHeroTitle: "Western Photography Art by Wayne Heim",
   gatewayHeroAlt:
     "Native American rider in painterly Western photography art with open land, atmospheric sky, and authored fine art presence.",
   gatewayHeroHref:
     "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color/i-rRdrQBg",
-  gatewayHeroSrc: "/img/i-rRdrQBg/l.jpg",
-  gatewayHeroSrcSet: "/img/i-rRdrQBg/m.jpg 720w, /img/i-rRdrQBg/l.jpg 1200w",
+  gatewayHeroSrc: "/img/i-rRdrQBg/m.jpg",
+  gatewayHeroSrcSet: "/img/i-rRdrQBg/s.jpg 400w, /img/i-rRdrQBg/m.jpg 720w",
   archiveContextCopy:
-    "Every work on this page is available as fine art - paper, canvas, metal, or wood - with the Sketch Series opening at $25. Click into any image to read the story, compare sizes, and view collector details. Questions about a specific piece? Reach Wayne directly at <a href='mailto:wayne@k4studios.com'>wayne@k4studios.com</a>.",
+    "Every work on this page is available as fine art - with the Sketch Series opening at $25. Click into any image to read the story, compare print options, sizes, and collector details. Questions about a specific piece? Reach Wayne directly at <a href='mailto:wayne@k4studios.com'>wayne@k4studios.com</a>.",
   faqKicker: "Print & Collector Questions",
   faqTitle: "Western Photography Art FAQ",
 };
@@ -164,7 +167,7 @@ const copy = {
   breadcrumbStructuredItems={breadcrumbStructuredItems}
   sectionDockItems={sectionDockItems}
   dockCenterIndex={dockCenterIndex}
-  currentDockTitle="Western Photography Art and Frontier Fine Art"
+  currentDockTitle="Explore Western Photography Art Collections"
   archiveContext={{
     categoryUrl: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West",
     categoryName: "Wild West",

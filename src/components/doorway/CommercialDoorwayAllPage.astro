@@ -3,7 +3,7 @@ import Footer from "@/components/Footer.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import ArchiveContext from "@/components/ArchiveContext.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
-import { getSemanticImageUrl } from "@/utils/imageProxy.js";
+import { extractImageId, getSemanticImageUrl } from "@/utils/imageProxy.js";
 import {
   getAggregateOfferForCollection,
   getHighestStandardPrintPrice,
@@ -18,10 +18,15 @@ type GridSection = {
   title: string;
   slug?: string;
   description?: string;
+  timeZone?: string;
   galleryPath: string;
   allHref: string;
   ctaLabel?: string;
   ctaThumb?: string;
+  alternateCtaLabel?: string;
+  alternateCtaHref?: string;
+  alternateCtaKicker?: string;
+  alternateCtaCount?: string;
   items: any[];
   limit?: number;
 };
@@ -138,8 +143,13 @@ const normalizedGridSections = gridSections
 const hasSectionedCatalog = normalizedGridSections.length > 0;
 const schemaImageGalleryId = hasSectionedCatalog ? `${canonicalUrl}#imagegallery` : imageGalleryId;
 
-// âœ… SEO-optimized title and description (factual, not poetic)
+// âœ… Search-facing title and description (factual, not poetic)
 const gatewayBrandLabel = identity.gatewayBrandLabel || `${collectionName} Fine Art Prints - ${variantName} Collection`;
+const gatewayBrandLabelDisplay = formatCopy(gatewayBrandLabel);
+const gatewayBrandLabelLines = gatewayBrandLabelDisplay
+  .split(/\n+/)
+  .map((line) => line.trim())
+  .filter(Boolean);
 const seoTitle = formatCopy(copy.seoTitle || `${gatewayBrandLabel} | K4 Studios`);
 const seoDescription = formatCopy(copy.seoDescription || `Browse ${imageCount} ${variantDescriptor} ${collectionName.toLowerCase()} fine art prints by Wayne Heim, with collector notes and print options from ${getFormattedLowestStandardPrintPrice()}.`);
 
@@ -151,6 +161,8 @@ const indexLinkNote = formatCopy(copy.indexLinkNote || `All ${imageCount} images
 const printAvailabilityNote = formatCopy(copy.printAvailabilityNote || `All works are available as fine art prints from ${getFormattedLowestStandardPrintPrice()}. Select images are also available in the Engrained Series - printed on Baltic Birch using a five-layer UV process - with pricing specific to each image.`);
 const commercialH1 = formatCopy(copy.commercialH1 || `${collectionName} Fine Art Series`);
 const commercialDeck = formatCopy(copy.commercialDeck || `A collection of painterly fine art photography by Wayne Heim.`);
+const gridIntroTitle = formatCopy(copy.gridIntroTitle || "");
+const gridIntroCopy = formatCopy(copy.gridIntroCopy || "");
 const catalogEntranceTitle = formatCopy(copy.catalogEntranceTitle || `Story-Driven Fine Art Prints by Wayne Heim`);
 const catalogEntranceCopy = formatCopy(copy.catalogEntranceCopy || `Browse cinematic, painterly photography built as single-frame stories - artwork created for collectors who want more than decoration.`);
 const collectionIntro = formatCopy(copy.collectionIntro || `Browse the complete collection. Each artwork opens to its full story, collector notes, image metadata, and available print details.`);
@@ -191,20 +203,30 @@ const cleanForDisplay = (val = "") =>
     .replace(/\r?\n|\r/g, " ")
     .trim();
 
-// âœ… Truncate story text for cards (150 chars max per Quill)
-const truncateStory = (story: string, maxLen = 150) => {
-  if (!story) return "";
-  const cleaned = cleanForDisplay(story);
-  if (cleaned.length <= maxLen) return cleaned;
-  return cleaned.slice(0, maxLen).replace(/\s+\S*$/, "") + "...";
+const hasDanglingEnding = (text = "") =>
+  /\b(?:a|an|and|as|at|between|by|for|from|in|into|of|on|or|the|through|to|under|with|without)\.?$/i.test(text.trim());
+
+const trimAtCleanWordBoundary = (text = "", maxLen = 150) => {
+  let trimmed = text.slice(0, maxLen).replace(/\s+\S*$/, "").trim();
+  trimmed = trimmed.replace(/\s+\b(?:a|an|and|as|at|between|by|for|from|in|into|of|on|or|the|through|to|under|with|without)$/i, "").trim();
+  return trimmed ? `${trimmed}…` : "";
 };
 
-const truncateWords = (text: string, maxWords = 30) => {
+const truncateExcerpt = (text: string, maxLen = 150) => {
   const cleaned = cleanForDisplay(text);
   if (!cleaned) return "";
-  const words = cleaned.split(/\s+/);
-  if (words.length <= maxWords) return cleaned;
-  return `${words.slice(0, maxWords).join(" ")}...`;
+  if (cleaned.length <= maxLen) return cleaned;
+
+  const limitSlice = cleaned.slice(0, maxLen + 1);
+  const sentenceMatches = [...limitSlice.matchAll(/[.!?](?=(?:["')\]]*)\s|(?:["')\]]*)$)/g)];
+  const sentenceEnd = sentenceMatches.at(-1)?.index;
+
+  if (sentenceEnd !== undefined && sentenceEnd >= 40) {
+    const sentenceExcerpt = limitSlice.slice(0, sentenceEnd + 1).trim();
+    if (!hasDanglingEnding(sentenceExcerpt)) return sentenceExcerpt;
+  }
+
+  return trimAtCleanWordBoundary(cleaned, maxLen);
 };
 
 // âœ… Proxy URL helper - never expose SmugMug URLs to crawlers
@@ -217,6 +239,21 @@ const getProxySrc = (id: string, size: string = 'l') => {
 
 const getSectionProxySrc = (image: any, galleryPath: string, size: string = 'l') =>
   getSemanticImageUrl(image, { galleryPath }, size);
+
+const forceImageSize = (src = "", size: string = 's', galleryPath = contentBasePath) => {
+  const value = String(src || "");
+  if (!value) return "";
+  if (value.startsWith("/images/")) return value;
+
+  const imageId = extractImageId(value);
+  if (!imageId) return value;
+
+  const image = filteredGalleryData.find((item: any) => item.id === imageId)
+    || galleryData.find((item: any) => item.id === imageId)
+    || { id: imageId };
+
+  return getSemanticImageUrl(image, { galleryPath }, size);
+};
 
 const getCardSeries = (image: any, galleryPath = contentBasePath) => {
   const commerce = resolveImageCommerce({
@@ -234,7 +271,7 @@ const toAbsoluteK4Url = (url = "") => {
 };
 
 const gatewayHeroItem = filteredGalleryData[0] || galleryData[0];
-const gatewayHeroOverrideSrc = formatCopy(copy.gatewayHeroSrc || "");
+const gatewayHeroOverrideSrc = forceImageSize(formatCopy(copy.gatewayHeroSrc || ""), 'm');
 const gatewayHeroTitle = cleanForDisplay(formatCopy(copy.gatewayHeroTitle || "") || gatewayHeroItem?.title || galleryTitle);
 const gatewayHeroAlt = copy.gatewayHeroAlt
   ? cleanForDisplay(formatCopy(copy.gatewayHeroAlt))
@@ -246,11 +283,11 @@ const gatewayHeroHref = copy.gatewayHeroHref
   : gatewayHeroItem
     ? `${contentBasePath}/${gatewayHeroItem.id}`
     : "#collection-grid";
-const gatewayHeroSrc = gatewayHeroOverrideSrc || (gatewayHeroItem ? getProxySrc(gatewayHeroItem.id, 'l') : "");
+const gatewayHeroSrc = gatewayHeroOverrideSrc || (gatewayHeroItem ? getProxySrc(gatewayHeroItem.id, 'm') : "");
 const gatewayHeroSrcSet = gatewayHeroOverrideSrc
-  ? formatCopy(copy.gatewayHeroSrcSet || "")
+  ? `${forceImageSize(gatewayHeroOverrideSrc, 's')} 400w, ${forceImageSize(gatewayHeroOverrideSrc, 'm')} 720w`
   : gatewayHeroItem
-  ? `${getProxySrc(gatewayHeroItem.id, 'm')} 720w, ${getProxySrc(gatewayHeroItem.id, 'l')} 1200w`
+  ? `${getProxySrc(gatewayHeroItem.id, 's')} 400w, ${getProxySrc(gatewayHeroItem.id, 'm')} 720w`
   : "";
 const gatewayHeroObjectPosition = formatCopy(copy.gatewayHeroObjectPosition || "center 28%");
 const gatewayHeroStyle = [
@@ -420,6 +457,7 @@ const structuredDataJson = JSON.stringify({
 const pageMeta = {
   canonicalUrl,
   robots: "index, follow",
+  descriptionMaxLength: copy.descriptionMaxLength || 190,
   ogTitle: seoTitle,
   ogDescription: seoDescription,
   ogImage: socialImage,
@@ -469,7 +507,13 @@ const faqRight = faqItems.slice(faqSplitIndex);
       </a>
       <div class="gateway-copy">
         <p class="gateway-kicker">{gatewayKicker}</p>
-        <h1 class:list={["gateway-brand", gatewayBrandClass]} id="gateway-heading">{gatewayBrandLabel}</h1>
+        <h1 class:list={["gateway-brand", gatewayBrandClass]} id="gateway-heading">
+          {gatewayBrandLabelLines.length > 1
+            ? gatewayBrandLabelLines.map((line, index) => (
+                <><span>{line}</span>{index < gatewayBrandLabelLines.length - 1 && <br />}</>
+              ))
+            : gatewayBrandLabelDisplay}
+        </h1>
         <p class="gateway-copy-text">{gatewayIntroCopy}</p>
         {gatewaySupportingParagraphs.map((paragraph) => (
           <p class="gateway-copy-text">{paragraph}</p>
@@ -493,6 +537,7 @@ const faqRight = faqItems.slice(faqSplitIndex);
             }
 
             const displayTitle = [item.title, item.subtitle].filter(Boolean).join(' ');
+            const dockActionLabel = item.dockPrefix === "" ? displayTitle : `${item.dockPrefix || "Browse"} ${displayTitle}`;
             const distance = Math.abs(idx - dockCenterIndex);
             const dockClass = [
               'dock-card',
@@ -507,16 +552,16 @@ const faqRight = faqItems.slice(faqSplitIndex);
                 class={dockClass}
                 href={item.href}
                 aria-current={item.current ? 'page' : undefined}
-                aria-label={item.current ? `Current collection: ${displayTitle}` : `Browse ${displayTitle}`}
+                aria-label={item.current ? `Current collection: ${displayTitle}` : dockActionLabel}
                 data-dock-title={displayTitle}
                 data-dock-prefix={item.dockPrefix}
                 data-current={item.current ? 'true' : undefined}
               >
                 <div class="dock-tombstone">
                   <img
-                    src={item.thumb}
+                    src={forceImageSize(item.thumb, 's')}
                     alt={`${displayTitle} tombstone link`}
-                    loading={item.current || distance <= 2 ? 'eager' : 'lazy'}
+                    loading={item.current || distance <= 1 ? 'eager' : 'lazy'}
                     width="140"
                     height="160"
                   />
@@ -611,8 +656,7 @@ const faqRight = faqItems.slice(faqSplitIndex);
         const imageUrl = getProxySrc(item.id, 's');
         const srcsetParts = [
           `${getProxySrc(item.id, 's')} 400w`,
-          `${getProxySrc(item.id, 'm')} 600w`,
-          `${getProxySrc(item.id, 'l')} 1024w`
+          `${getProxySrc(item.id, 'm')} 600w`
         ].join(", ");
         const linkUrl = `${contentBasePath}/${item.id}`;
         const collectorNotesHref = `${linkUrl}#collector-notes`;
@@ -641,7 +685,7 @@ const faqRight = faqItems.slice(faqSplitIndex);
         }
         seenCardAltCounts.set(normalizedAltKey, previousAltCount + 1);
         
-        const storyExcerpt = truncateStory(item.story || "");
+        const storyExcerpt = truncateExcerpt(item.story || "", 150);
         const collectorNoteRaw =
           item.notes ||
           item.collectorNotes ||
@@ -649,7 +693,7 @@ const faqRight = faqItems.slice(faqSplitIndex);
           item.description ||
           item.story ||
           "";
-        const collectorNoteTeaser = truncateWords(collectorNoteRaw, 30);
+        const collectorNoteTeaser = truncateExcerpt(collectorNoteRaw, 190);
         const cardSeries = getCardSeries(item);
         const cardSeriesKeys = cardSeries.map((series: any) => series.key).join(' ');
         const needsRangeMarker = idx > 0 && idx % 50 === 0;
@@ -737,26 +781,32 @@ const faqRight = faqItems.slice(faqSplitIndex);
     )}
 
     {normalizedGridSections.length > 0 && (
-      <div class="doorway-section-stack" id="collection-grid">
+      <div class="catalog-section-stack" id="collection-grid">
+        {(gridIntroTitle || gridIntroCopy) && (
+          <section class="catalog-grid-intro" aria-labelledby="catalog-grid-intro-heading">
+            {gridIntroTitle && <h2 id="catalog-grid-intro-heading">{gridIntroTitle}</h2>}
+            {gridIntroCopy && <p>{gridIntroCopy}</p>}
+          </section>
+        )}
         {normalizedGridSections.map((section, sectionIndex) => {
           const visibleItems = section.items.slice(0, section.limit);
           const sectionCount = section.items.length;
 
           return (
-            <section class="doorway-gallery-section" id={`section-${section.slug}`} aria-labelledby={`doorway-section-heading-${sectionIndex + 1}`}>
-              <div class="doorway-section-heading">
-                <p class="doorway-section-kicker">Selected Western Wall Art - {sectionCount} in Series</p>
-                <h2 id={`doorway-section-heading-${sectionIndex + 1}`}>{section.title}</h2>
+            <section class="catalog-gallery-section" id={`section-${section.slug}`} aria-labelledby={`catalog-section-heading-${sectionIndex + 1}`}>
+              <div class="catalog-section-heading">
+                {section.timeZone && <p class="catalog-section-timezone">{section.timeZone}</p>}
+                <p class="catalog-section-kicker">Selected Western Wall Art - {sectionCount} in Series</p>
+                <h2 id={`catalog-section-heading-${sectionIndex + 1}`}>{section.title}</h2>
                 {section.description && <p>{section.description}</p>}
               </div>
 
-              <div class="ssr-grid ssr-grid--doorway-section">
+              <div class="ssr-grid ssr-grid--catalog-section">
                 {visibleItems.map((item: any, idx: number) => {
                   const imageUrl = getSectionProxySrc(item, section.galleryPath, 's');
                   const srcsetParts = [
                     `${getSectionProxySrc(item, section.galleryPath, 's')} 400w`,
-                    `${getSectionProxySrc(item, section.galleryPath, 'm')} 600w`,
-                    `${getSectionProxySrc(item, section.galleryPath, 'l')} 1024w`
+                    `${getSectionProxySrc(item, section.galleryPath, 'm')} 600w`
                   ].join(", ");
                   const linkUrl = `${section.galleryPath}/${item.id}`;
                   const collectorNotesHref = `${linkUrl}#collector-notes`;
@@ -775,7 +825,7 @@ const faqRight = faqItems.slice(faqSplitIndex);
                     altText = `Western wall art print: ${title} by Wayne Heim`;
                   }
 
-                  const storyExcerpt = truncateStory(item.story || "");
+                  const storyExcerpt = truncateExcerpt(item.story || "", 150);
                   const collectorNoteRaw =
                     item.notes ||
                     item.collectorNotes ||
@@ -783,7 +833,7 @@ const faqRight = faqItems.slice(faqSplitIndex);
                     item.description ||
                     item.story ||
                     "";
-                  const collectorNoteTeaser = truncateWords(collectorNoteRaw, 30);
+                  const collectorNoteTeaser = truncateExcerpt(collectorNoteRaw, 190);
                   const cardSeries = getCardSeries(item, section.galleryPath);
                   const cardSeriesKeys = cardSeries.map((series: any) => series.key).join(' ');
 
@@ -856,18 +906,38 @@ const faqRight = faqItems.slice(faqSplitIndex);
                   );
                 })}
 
-                <a class="ssr-card doorway-collection-cta" href={section.allHref}>
-                  <span class="doorway-collection-cta__inner">
-                    {section.ctaThumb && (
-                      <span class="doorway-collection-cta__tombstone" aria-hidden="true">
-                        <img src={section.ctaThumb} alt="" loading="lazy" decoding="async" />
-                      </span>
-                    )}
-                    <span class="doorway-collection-cta__kicker">Full Collection</span>
-                    <strong>{section.ctaLabel || `See all ${section.title}`}</strong>
-                    <small>{sectionCount} works in this gallery</small>
-                  </span>
-                </a>
+                {section.alternateCtaHref ? (
+                  <div class="ssr-card catalog-collection-cta catalog-collection-cta--split">
+                    <a class="catalog-collection-cta__inner catalog-collection-cta__primary" href={section.allHref}>
+                        {section.ctaThumb && (
+                          <span class="catalog-collection-cta__tombstone" aria-hidden="true">
+                            <img src={forceImageSize(section.ctaThumb, 's', section.galleryPath)} alt="" loading="lazy" decoding="async" />
+                          </span>
+                        )}
+                        <span class="catalog-collection-cta__kicker">Full Collection</span>
+                        <strong>{section.ctaLabel || `See all ${section.title}`}</strong>
+                        <small>{sectionCount} works in this gallery</small>
+                    </a>
+                    <a class="catalog-collection-cta__alternate" href={section.alternateCtaHref}>
+                      <span>{section.alternateCtaKicker || "Alternative View"}</span>
+                      <strong>{section.alternateCtaLabel || "See the black and white collection"}</strong>
+                      {section.alternateCtaCount && <small>{section.alternateCtaCount}</small>}
+                    </a>
+                  </div>
+                ) : (
+                  <a class="ssr-card catalog-collection-cta" href={section.allHref}>
+                    <span class="catalog-collection-cta__inner">
+                      {section.ctaThumb && (
+                        <span class="catalog-collection-cta__tombstone" aria-hidden="true">
+                          <img src={forceImageSize(section.ctaThumb, 's', section.galleryPath)} alt="" loading="lazy" decoding="async" />
+                        </span>
+                      )}
+                      <span class="catalog-collection-cta__kicker">Full Collection</span>
+                      <strong>{section.ctaLabel || `See all ${section.title}`}</strong>
+                      <small>{sectionCount} works in this gallery</small>
+                    </span>
+                  </a>
+                )}
               </div>
             </section>
           );
@@ -1007,18 +1077,20 @@ const faqRight = faqItems.slice(faqSplitIndex);
       overflow-wrap:normal;
     }
     .gallery-index-wrapper > .collection-hero .hero-deck {
-      max-width:1080px;
+      max-width:985px;
       margin:14px auto 0;
       color:#4f4034;
       font-size:1.12rem;
       line-height:1.8;
+      text-align:left;
     }
     .gallery-index-wrapper > .collection-hero .hero-copy {
-      max-width:1080px;
+      max-width:985px;
       margin:14px auto 0;
       color:#3f3228;
       font-size:.98rem;
       line-height:1.75;
+      text-align:left;
       text-wrap:pretty;
     }
     .collection-gateway {
@@ -1703,15 +1775,39 @@ const faqRight = faqItems.slice(faqSplitIndex);
       padding:0 34px;
       align-items:stretch;
     }
-    .doorway-section-stack {
+    .catalog-section-stack {
       max-width:1440px;
       margin:16px auto 44px;
     }
-    .doorway-gallery-section {
+    .catalog-grid-intro {
+      width:min(1400px, calc(100% - 68px));
+      margin:24px auto 10px;
+      padding:30px 0 18px;
+      border-top:1px solid #dccfbe;
+      text-align:center;
+      box-sizing:border-box;
+    }
+    .catalog-grid-intro h2 {
+      margin:0;
+      color:#8b3f23;
+      font-size:clamp(1.45rem, 2.35vw, 2rem);
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      font-weight:800;
+      line-height:1.16;
+    }
+    .catalog-grid-intro p {
+      margin:8px 0 0;
+      color:#8b3f23;
+      font-size:1rem;
+      line-height:1.62;
+      text-wrap:balance;
+    }
+    .catalog-gallery-section {
       margin:0 auto 54px;
       scroll-margin-top:92px;
     }
-    .doorway-section-heading {
+    .catalog-section-heading {
       width:min(1400px, calc(100% - 68px));
       margin:0 auto 24px;
       padding:24px 0 22px;
@@ -1720,7 +1816,7 @@ const faqRight = faqItems.slice(faqSplitIndex);
       text-align:left;
       box-sizing:border-box;
     }
-    .doorway-section-kicker {
+    .catalog-section-kicker {
       margin:0 0 8px;
       color:#7a6047;
       font-size:.72rem;
@@ -1728,7 +1824,15 @@ const faqRight = faqItems.slice(faqSplitIndex);
       text-transform:uppercase;
       font-weight:700;
     }
-    .doorway-section-heading h2 {
+    .catalog-section-timezone {
+      margin:0 0 6px;
+      color:#8b3f23;
+      font-size:.86rem;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      font-weight:700;
+    }
+    .catalog-section-heading h2 {
       margin:0;
       color:#231a13;
       font-size:clamp(1.65rem, 2.8vw, 2.35rem);
@@ -1736,17 +1840,17 @@ const faqRight = faqItems.slice(faqSplitIndex);
       font-weight:700;
       text-wrap:balance;
     }
-    .doorway-section-heading p:not(.doorway-section-kicker) {
+    .catalog-section-heading p:not(.catalog-section-kicker):not(.catalog-section-timezone) {
       max-width:none;
       margin:12px 0 0;
       color:#4f4034;
       font-size:.96rem;
       line-height:1.68;
     }
-    .ssr-grid--doorway-section {
+    .ssr-grid--catalog-section {
       margin:0 auto;
     }
-    .doorway-collection-cta {
+    .catalog-collection-cta {
       min-height:390px;
       display:flex;
       align-items:center;
@@ -1757,20 +1861,51 @@ const faqRight = faqItems.slice(faqSplitIndex);
       text-decoration:none;
       color:#2f241b;
     }
-    .doorway-collection-cta:hover,
-    .doorway-collection-cta:focus-visible {
+    .catalog-collection-cta--split {
+      display:grid;
+      grid-template-rows:minmax(0, 1fr) auto;
+      align-items:stretch;
+      justify-content:stretch;
+      padding:0;
+      overflow:hidden;
+    }
+    .catalog-collection-cta:hover,
+    .catalog-collection-cta:focus-visible {
       border-color:#9b7451;
       box-shadow:0 0 0 2px rgba(155,116,81,.35), 0 10px 24px rgba(48,34,23,.22);
       outline:none;
     }
-    .doorway-collection-cta__inner {
+    .catalog-collection-cta--split:hover,
+    .catalog-collection-cta--split:focus-within {
+      border-color:#9b7451;
+      box-shadow:0 0 0 2px rgba(155,116,81,.35), 0 10px 24px rgba(48,34,23,.22);
+    }
+    .catalog-collection-cta__inner {
       display:grid;
       gap:10px;
       padding:28px;
       text-align:center;
       justify-items:center;
     }
-    .doorway-collection-cta__tombstone {
+    .catalog-collection-cta__primary {
+      color:inherit;
+      text-decoration:none;
+    }
+    .catalog-collection-cta--split .catalog-collection-cta__primary {
+      display:grid;
+      gap:8px;
+      place-content:center;
+      justify-items:center;
+      min-height:255px;
+      padding:22px 24px 16px;
+    }
+    .catalog-collection-cta__primary:hover,
+    .catalog-collection-cta__primary:focus-visible,
+    .catalog-collection-cta__alternate:hover,
+    .catalog-collection-cta__alternate:focus-visible {
+      outline:none;
+    }
+    .catalog-collection-cta__tombstone {
       position:relative;
       width:86px;
       aspect-ratio:3.5 / 4;
@@ -1784,8 +1919,15 @@ const faqRight = faqItems.slice(faqSplitIndex);
         0 10px 22px rgba(48,34,23,.13);
       overflow:hidden;
       display:block;
+      transition:border-color .72s ease, box-shadow .72s ease, filter .72s ease;
     }
-    .doorway-collection-cta__tombstone img {
+    .catalog-collection-cta:hover .catalog-collection-cta__tombstone,
+    .catalog-collection-cta:focus-visible .catalog-collection-cta__tombstone,
+    .catalog-collection-cta--split:focus-within .catalog-collection-cta__tombstone {
+      border-color:#a44a3f;
+      box-shadow:0 0 0 2px rgba(164,74,63,.38), 0 10px 22px rgba(48,34,23,.22);
+    }
+    .catalog-collection-cta__tombstone img {
       display:block;
       width:100%;
       height:100%;
@@ -1793,21 +1935,53 @@ const faqRight = faqItems.slice(faqSplitIndex);
       object-position:center 15%;
       background:#efe7dc;
     }
-    .doorway-collection-cta__kicker {
+    .catalog-collection-cta__kicker {
       color:#7a6047;
       font-size:.72rem;
       letter-spacing:.08em;
       text-transform:uppercase;
     }
-    .doorway-collection-cta strong {
+    .catalog-collection-cta strong {
       color:#231a13;
       font-size:1.3rem;
       line-height:1.25;
     }
-    .doorway-collection-cta small {
+    .catalog-collection-cta small {
       color:#6b594b;
       font-size:.86rem;
       line-height:1.4;
+    }
+    .catalog-collection-cta__alternate {
+      display:grid;
+      gap:6px;
+      padding:16px 20px 18px;
+      border-top:1px solid rgba(122,96,71,.34);
+      background:linear-gradient(180deg, rgba(60,55,50,.04), rgba(36,32,29,.09));
+      color:#2f241b;
+      text-align:center;
+      text-decoration:none;
+    }
+    .catalog-collection-cta__alternate span {
+      color:#6b594b;
+      font-size:.66rem;
+      letter-spacing:.12em;
+      line-height:1.2;
+      text-transform:uppercase;
+      font-weight:700;
+    }
+    .catalog-collection-cta__alternate strong {
+      color:#2f241b;
+      font-size:1rem;
+      line-height:1.26;
+    }
+    .catalog-collection-cta__alternate small {
+      color:#6b594b;
+      font-size:.78rem;
+      line-height:1.3;
+    }
+    .catalog-collection-cta__alternate:hover,
+    .catalog-collection-cta__alternate:focus-visible {
+      background:linear-gradient(180deg, rgba(60,55,50,.08), rgba(36,32,29,.14));
     }
 
     .catalog-range-marker {
@@ -1987,7 +2161,7 @@ const faqRight = faqItems.slice(faqSplitIndex);
       background:#fffdf9;
       border-top:1px solid #e6d9ca;
       width:100%;
-      transition:transform .46s cubic-bezier(.22, 1, .36, 1);
+      transition:transform 3.7s cubic-bezier(.16, 1, .3, 1);
       transform:translateY(0);
     }
 
@@ -1995,6 +2169,7 @@ const faqRight = faqItems.slice(faqSplitIndex);
     .ssr-card:focus-within .ssr-card-content {
       transform:translateY(var(--card-overlap));
       justify-content:flex-start;
+      transition-duration:1.35s;
     }
 
     .ssr-card-link:focus-visible {
@@ -2016,7 +2191,7 @@ const faqRight = faqItems.slice(faqSplitIndex);
       margin-bottom:6px;
       padding-right:58px;
       min-width:0;
-      transition:opacity .24s ease, transform .24s ease, max-height .24s ease, margin .24s ease;
+      transition:opacity 2.2s ease, transform 2.2s ease, max-height 2.2s ease, margin 2.2s ease;
     }
 
     .ssr-card-content h3 {
@@ -2029,7 +2204,7 @@ const faqRight = faqItems.slice(faqSplitIndex);
       -webkit-box-orient:vertical;
       -webkit-line-clamp:3;
       overflow:hidden;
-      transition:opacity .24s ease, transform .24s ease, max-height .24s ease, margin .24s ease;
+      transition:opacity 2.2s ease, transform 2.2s ease, max-height 2.2s ease, margin 2.2s ease;
     }
     .card-series-strip {
       display:flex;
@@ -2063,7 +2238,7 @@ const faqRight = faqItems.slice(faqSplitIndex);
       color:#7b5c3e;
       font-size:.86rem;
       font-weight:700;
-      transition:opacity .24s ease, transform .24s ease, max-height .24s ease, margin .24s ease;
+      transition:opacity 2.2s ease, transform 2.2s ease, max-height 2.2s ease, margin 2.2s ease;
     }
     .story-excerpt {
       color:#5d4b3e;
@@ -2074,10 +2249,10 @@ const faqRight = faqItems.slice(faqSplitIndex);
       -webkit-box-orient:vertical;
       -webkit-line-clamp:5;
       overflow:hidden;
-      transition:opacity .24s ease, transform .24s ease, max-height .24s ease, margin .24s ease;
+      transition:opacity 2.2s ease, transform 2.2s ease, max-height 2.2s ease, margin 2.2s ease;
     }
     .card-number {
-      transition:opacity .24s ease, transform .24s ease, max-height .24s ease, margin .24s ease;
+      transition:opacity 2.2s ease, transform 2.2s ease, max-height 2.2s ease, margin 2.2s ease;
     }
     .card-cta {
       margin-top:auto;
@@ -2091,6 +2266,9 @@ const faqRight = faqItems.slice(faqSplitIndex);
     .ssr-card:hover .card-cta,
     .ssr-card:focus-within .card-cta {
       margin-top:0;
+      color:#a44a3f;
+      font-weight:800;
+      border-top-color:rgba(164,74,63,.42);
     }
     .ssr-card:hover .card-number,
     .ssr-card:focus-within .card-number,
@@ -2108,6 +2286,7 @@ const faqRight = faqItems.slice(faqSplitIndex);
       margin:0;
       overflow:hidden;
       pointer-events:none;
+      transition-duration:.8s;
     }
     .collector-notes-trigger {
       position:absolute;
@@ -2626,19 +2805,24 @@ const faqRight = faqItems.slice(faqSplitIndex);
         display:block;
         transform:none;
       }
-      .doorway-section-heading {
+      .catalog-section-heading {
         width:calc(100% - 32px);
         padding:18px 18px 20px;
         text-align:center;
       }
-      .doorway-section-heading p:not(.doorway-section-kicker) {
+      .catalog-grid-intro {
+        width:calc(100% - 32px);
+        padding:18px 18px 16px;
+        text-align:center;
+      }
+      .catalog-section-heading p:not(.catalog-section-kicker):not(.catalog-section-timezone) {
         margin-left:auto;
         margin-right:auto;
       }
-      .doorway-gallery-section {
+      .catalog-gallery-section {
         margin-bottom:38px;
       }
-      .doorway-collection-cta {
+      .catalog-collection-cta {
         min-height:260px;
       }
       .faq-shell {

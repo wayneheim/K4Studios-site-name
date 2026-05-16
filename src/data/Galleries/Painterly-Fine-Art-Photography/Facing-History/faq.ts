@@ -28,7 +28,7 @@ export const facingFAQ = [
     q: "Can I order prints from the Civil War, WWII, or Roaring 20s collections?",
     a: [
       "Yes. Every series within Facing History is available as collector-grade fine art prints, including Civil War portraits, WWII imagery, and Roaring 20s themed photography.",
-      "Presentation options include archival paper prints, aluminum, and select works in the <strong>Engrained Series</strong>, each crafted to preserve depth, texture, and cinematic presence."
+      "Presentation options include archival paper prints and select works in the <strong>Engrained Series</strong> on Baltic Birch. Canvas, aluminum, and specialty substrates are available as custom orders."
     ],
   },
 

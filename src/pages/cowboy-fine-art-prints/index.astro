@@ -1,8 +1,8 @@
 ---
-import ExactMatchWesternLanding from '@/components/seo/ExactMatchWesternLanding.astro';
-import { cowboyFineArtPrintsPage } from '@/data/exactMatchWesternPages.ts';
-
 export const prerender = true;
+
+import CommercialIntentDoorway from "@/components/doorway/CommercialIntentDoorway.astro";
+import { commercialIntentPages } from "@/data/doorway/commercialIntentPages.ts";
 ---
 
-<ExactMatchWesternLanding page={cowboyFineArtPrintsPage} />
+<CommercialIntentDoorway config={commercialIntentPages.cowboyFineArtPrints} />

@@ -27,7 +27,7 @@ export const wallArtFAQ = [
     q: "What subjects are available as Western wall art?",
     a: [
       "The collection includes cowboy portraits, Wild West narrative scenes, Civil War art, vintage Western art, Western landscapes, black and white Western photography, and historically themed fine art.",
-      "Use this page as the broad commercial route, then continue into the subject page that best matches the room, collector interest, or story direction.",
+      "Use this page as the broad starting point, then continue into the subject collection that best matches the room, collector interest, or story direction.",
     ],
   },
 
@@ -42,7 +42,7 @@ export const wallArtFAQ = [
   {
     q: "What print options are available?",
     a: [
-      "Multiple presentation formats are available, including archival paper prints, canvas, metal, and the <a href='/Other/K4-Select-Series/Engrained' style='color:#8b5a2b; text-decoration:underline;'>Engrained Series</a> printed directly onto Baltic Birch wood.",
+      "Multiple presentation formats are available, including archival paper prints and the <a href='/Other/K4-Select-Series/Engrained' style='color:#8b5a2b; text-decoration:underline;'>Engrained Series</a> printed directly onto Baltic Birch wood.",
       "<a href='/Other/Print-Options' style='color:#8b5a2b; text-decoration:underline;'>Explore print options here</a>.",
     ],
   },

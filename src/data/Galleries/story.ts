@@ -54,7 +54,7 @@ export const galleryStory = [
   {
     subhead: "From Image to Object",
     paragraphs: [
-      `Select works from both approaches are available in multiple fine art formats, including archival paper, metal, and the Engrained Series — images printed directly onto Baltic Birch where natural wood grain becomes part of the artwork.`,
+      `Select works from both approaches are available in multiple fine art formats, including archival paper and the Engrained Series — images printed directly onto Baltic Birch where natural wood grain becomes part of the artwork.`,
       
       `Regardless of approach, every piece is produced to museum-grade standards, signed, and intended for long-term collection.`
     ]

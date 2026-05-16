@@ -163,7 +163,7 @@ export const explorationPaths = [
     eyebrow: 'Collector Route',
     hideEyebrow: true,
     href: '/Other/Print-Options',
-    description: 'Compare archival paper, canvas, metal, and presentation choices once the right vintage-western image has been found.',
+    description: 'Compare archival paper and select wood presentation choices once the right vintage-western image has been found.',
     cta: 'Compare print formats -',
     accent: '#564a42',
   },
@@ -301,37 +301,49 @@ export const faqItems = [
   {
     q: 'What does vintage western art mean on this page?',
     a: [
-      'It means contemporary authored images that carry the atmosphere, costume world, restraint, and story pressure of the 1880s-era frontier. It does not mean literal antique art objects from the nineteenth century.',
+      'Vintage western art here means contemporary authored work that carries old-West atmosphere, period character, and frontier presence - not antique objects or faux-aged decor. The vintage quality comes from painterly tonal treatment, weathered human subjects, and narrative weight rooted in 1880s frontier life. These are collector-grade fine art prints, not reproductions of historical artifacts.',
     ],
   },
   {
     q: 'Is this page also meant for vintage cowboy art searches?',
     a: [
-      'Yes. The portrait branch and the narrative branch both support vintage cowboy art intent, but they do so with collector-grade work rather than novelty Western decor.',
+      'Yes. Vintage cowboy art, vintage western prints, old western art, and old west posters all land here intentionally - they describe the same emotional territory from different angles. The work covers all of it: single-figure cowboy portraits with period weathering, frontier narrative scenes with old-West tension, and black and white studies where tonal restraint carries the vintage atmosphere.',
     ],
   },
   {
-    q: 'Where should I go if I want the definition first?',
+    q: 'What separates vintage western art from generic Western decor?',
     a: [
-      'Use <a href="/old-western-art">Old Western Art</a> if you want the meaning and framing behind the term before you move into the buying path.',
+      'Authorship and atmosphere. Generic Western decor uses frontier symbols - hats, horses, desert horizons - as shorthand. Vintage western art at K4 Studios treats the period as emotional territory: weathered posture, consequence, human pressure, and the quiet weight of frontier life. The difference is whether the image holds attention or simply fills a wall.',
     ],
   },
   {
     q: 'Can I buy prints from the work shown here?',
     a: [
-      'Yes. The linked galleries open into purchasable works, and the print-options route helps compare formats once the right image has been chosen.',
+      'Yes. Every image is available as a fine art print - with the Sketch Series opening at $25. Signed Chronicle editions and ultra-limited Legend pieces are available for collectors who want provenance and permanence. Click into any image to read the story, compare print options, sizes, and view edition details. Questions about a specific piece? Reach Wayne directly at <a href="mailto:wayne@k4studios.com">wayne@k4studios.com</a>.',
     ],
   },
   {
-    q: 'Does this page cover vintage western prints and old west posters too?',
+    q: 'What print formats are available for vintage western art?',
     a: [
-      'Yes. Those searches usually describe the same collector path: Western imagery with old-West atmosphere that can live as a print or wall piece. This page keeps vintage western prints, vintage cowboy print, old western art, and old west posters together until there is enough evidence to split them.',
+      'Every image is available as archival paper or select wood presentation - including the Engrained Series on Baltic Birch panels, which adds grain texture that complements the period atmosphere of the work. The Sketch Series opens at $25. Foundation, Chronicle, and Legend Series scale through open editions, signed limited editions, and ultra-limited collector works. Details are inside each image page.',
     ],
   },
   {
-    q: 'How is this different from the Wild West Art page?',
+    q: 'What size vintage western art prints are available?',
     a: [
-      'Wild West Art is the broader discovery page. This page is narrower and more commercial, built for visitors who already know they want vintage western or old-West wall presence.',
+      'Prints range from 5x7 Sketch Series works - sized for shelves, desks, and introductory collecting - through large-format statement pieces for anchor walls. A single strong vintage portrait scaled for a statement wall carries more period presence than a grouped arrangement. Size options vary by image and are listed inside each image page.',
+    ],
+  },
+  {
+    q: 'Can vintage western art work in modern interiors?',
+    a: [
+      'Yes - particularly the black and white series. Tonal monochrome work with period atmosphere integrates well in modern, transitional, and minimalist rooms without reading as decorative Western theme. The restraint in the work - quiet posture, deep contrast, no visual noise - makes it compatible with clean contemporary spaces that need human weight on the wall.',
+    ],
+  },
+  {
+    q: 'What is the difference between vintage western art and traditional western painting?',
+    a: [
+      'Traditional western painting - Remington, Russell, the Taos School - builds from imagination, reference, and brushwork. Wayne Heim\'s vintage western art begins with real people in real frontier situations, then is shaped through a painterly photographic process into fine art with period atmosphere and tonal depth. The result carries the authenticity of documentary photography and the authored presence of classic Western painting.',
     ],
   },
 ];

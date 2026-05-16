@@ -1,0 +1,372 @@
+---
+import { extractImageId, getSemanticImageUrl } from "@/utils/imageProxy.js";
+
+const {
+  items = [],
+  currentTitle = "Explore Collections",
+  centerIndex = 0,
+  variant = "wall-art",
+  ariaLabel = "K4 gallery all-page quick links",
+  id = "collection-dock",
+} = Astro.props;
+
+const forceImageSize = (src = "", size: string = "s") => {
+  const value = String(src || "");
+  if (!value) return "";
+  if (value.startsWith("/images/")) return value;
+
+  const imageId = extractImageId(value);
+  if (!imageId) return value;
+
+  return getSemanticImageUrl({ id: imageId }, {}, size);
+};
+---
+
+<section id={id} class:list={["collection-dock", variant === "wall-art" && "collection-dock--wall-art"]} aria-labelledby={`${id}-heading`}>
+  <div class="dock-heading">
+    <div>
+      <h2 id={`${id}-heading`}><span class="dock-active-prefix"></span><span class="dock-active-title">{currentTitle}</span></h2>
+    </div>
+  </div>
+  <div class="dock-shell">
+    <div class="dock-track" aria-label={ariaLabel}>
+      <span id="dock-start" class="dock-anchor" aria-hidden="true"></span>
+      {items.map((item: any, idx: number) => {
+        if (item.separator) {
+          return <span class="dock-separator" role="separator" aria-label={item.label || "Related section divider"}></span>;
+        }
+
+        const displayTitle = [item.title, item.subtitle].filter(Boolean).join(" ");
+        const dockActionLabel = item.dockPrefix === "" ? displayTitle : `${item.dockPrefix || "Browse"} ${displayTitle}`;
+        const distance = Math.abs(idx - centerIndex);
+        const dockClass = [
+          "dock-card",
+          item.dockRole ? `dock-card--${item.dockRole}` : "",
+          item.current ? "is-center is-current" : "",
+          idx === centerIndex ? "is-center" : "",
+          distance === 1 ? "is-near" : "",
+          distance >= 3 ? "is-far" : "",
+        ].filter(Boolean).join(" ");
+
+        return (
+          <a
+            class={dockClass}
+            href={item.href}
+            aria-current={item.current ? "page" : undefined}
+            aria-label={item.current ? `Current collection: ${displayTitle}` : dockActionLabel}
+            data-dock-title={displayTitle}
+            data-dock-prefix={item.dockPrefix}
+            data-current={item.current ? "true" : undefined}
+          >
+            <div class="dock-tombstone">
+              <img
+                src={forceImageSize(item.thumb, "s")}
+                alt={`${displayTitle} tombstone link`}
+                loading={item.current || distance <= 1 ? "eager" : "lazy"}
+                width="140"
+                height="160"
+              />
+            </div>
+          </a>
+        );
+      })}
+      <span id="dock-end" class="dock-anchor" aria-hidden="true"></span>
+    </div>
+  </div>
+</section>
+
+<style>
+  .collection-dock {
+    position:relative;
+    width:min(1320px, calc(100% - 80px));
+    max-width:none;
+    margin:14px auto 24px;
+    padding:14px 18px 18px;
+    background:#fff;
+    border-top:1px solid #d3c3b1;
+    border-bottom:1px solid #d3c3b1;
+    box-shadow:none;
+    overflow:hidden;
+  }
+  .collection-dock::before,
+  .collection-dock::after {
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    height:14px;
+    pointer-events:none;
+  }
+  .collection-dock::before {
+    top:0;
+    background:linear-gradient(90deg, rgba(53, 40, 28, 0) 0%, rgba(53, 40, 28, .5) 14%, rgba(53, 40, 28, .5) 86%, rgba(53, 40, 28, 0) 100%);
+    filter:blur(4px);
+    transform:translateY(-62%);
+  }
+  .collection-dock::after {
+    bottom:0;
+    background:linear-gradient(90deg, rgba(53, 40, 28, 0) 0%, rgba(53, 40, 28, .44) 14%, rgba(53, 40, 28, .44) 86%, rgba(53, 40, 28, 0) 100%);
+    filter:blur(4px);
+    transform:translateY(62%);
+  }
+  .dock-heading {
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+    margin-bottom:10px;
+    text-align:center;
+  }
+  .dock-heading h2 {
+    margin:0;
+    color:#2f241b;
+    font-family:'Glegoo', serif;
+    font-weight:400;
+    font-size:1.38rem;
+    line-height:1.35;
+    min-height:1.9em;
+  }
+  .dock-active-title {
+    color:#6d4d34;
+  }
+  .dock-shell {
+    position:relative;
+  }
+  .dock-track {
+    display:flex;
+    align-items:flex-end;
+    justify-content:flex-start;
+    gap:6px;
+    min-height:102px;
+    padding:4px 28px 10px;
+    perspective:900px;
+    overflow-x:auto;
+    scroll-behavior:smooth;
+    scroll-snap-type:x proximity;
+    scrollbar-width:thin;
+    scrollbar-color:#b89b78 #efe6da;
+  }
+  .dock-track::-webkit-scrollbar {
+    height:8px;
+  }
+  .dock-track::-webkit-scrollbar-track {
+    background:#efe6da;
+  }
+  .dock-track::-webkit-scrollbar-thumb {
+    background:#b89b78;
+    border-radius:999px;
+  }
+  .dock-anchor {
+    flex:0 0 1px;
+    height:1px;
+  }
+  .dock-separator {
+    align-self:center;
+    flex:0 0 1px;
+    height:86px;
+    margin:0 11px 10px;
+    background:linear-gradient(180deg, rgba(181,157,133,0), rgba(138,103,72,.72) 22%, rgba(138,103,72,.72) 78%, rgba(181,157,133,0));
+    box-shadow:0 0 0 1px rgba(255,255,255,.55);
+    opacity:.9;
+  }
+  .dock-card {
+    flex:0 0 58px;
+    color:inherit;
+    text-decoration:none;
+    transform:translateY(5px) scale(.86);
+    opacity:.82;
+    transition:transform .24s ease, opacity .24s ease, filter .24s ease;
+    filter:saturate(.92);
+    text-align:center;
+    scroll-snap-align:center;
+  }
+  .dock-card.is-near {
+    flex-basis:64px;
+    transform:translateY(1px) scale(.94);
+    opacity:.9;
+  }
+  .dock-card.is-center {
+    flex-basis:78px;
+    transform:translateY(-3px) scale(1.04);
+    opacity:1;
+    filter:saturate(1.04);
+    z-index:2;
+  }
+  .dock-card.is-current .dock-tombstone {
+    border-color:#9b7451;
+    box-shadow:0 18px 38px rgba(48,34,23,.2);
+  }
+  .dock-card.is-current:hover,
+  .dock-card.is-current:focus-visible {
+    transform:translateY(-3px) scale(1.04);
+    cursor:default;
+  }
+  .dock-card.is-far {
+    transform:translateY(8px) scale(.8);
+    opacity:.68;
+  }
+  .dock-card:hover,
+  .dock-card:focus-visible {
+    transform:translateY(-6px) scale(1.02);
+    opacity:1;
+    filter:saturate(1.05);
+    outline:none;
+    z-index:3;
+  }
+  .dock-tombstone {
+    aspect-ratio:3.5 / 4;
+    position:relative;
+    background:#fffdf9;
+    border:1px solid #bda27c;
+    border-radius:0% 0% 25% 25% / 0% 0% 20% 20%;
+    box-shadow:
+      inset 0 -1px 1px rgba(255,255,255,.6),
+      inset 0 1px 2px rgba(0,0,0,.08),
+      0 10px 22px rgba(48,34,23,.13);
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .dock-tombstone img {
+    display:block;
+    width:100%;
+    height:100%;
+    aspect-ratio:3.5 / 4;
+    object-fit:cover;
+    object-position:center 15%;
+    background:#efe7dc;
+  }
+  .collection-dock--wall-art .dock-track {
+    justify-content:center;
+    min-height:116px;
+    overflow-x:visible;
+  }
+  .collection-dock--wall-art .dock-heading h2 {
+    transform:translateY(10px);
+  }
+  .collection-dock--wall-art .dock-card--core,
+  .collection-dock--wall-art .dock-card--core.is-near,
+  .collection-dock--wall-art .dock-card--core.is-center,
+  .collection-dock--wall-art .dock-card--core.is-far {
+    flex:0 0 78px;
+    margin-left:4px;
+    margin-right:4px;
+    transform:translateY(-3px) scale(1.04);
+    opacity:1;
+    filter:saturate(1.04);
+  }
+  .collection-dock--wall-art .dock-card--support,
+  .collection-dock--wall-art .dock-card--support.is-near,
+  .collection-dock--wall-art .dock-card--support.is-center,
+  .collection-dock--wall-art .dock-card--support.is-far {
+    flex:0 0 58px;
+    transform:translateY(8px) scale(.86);
+    opacity:.78;
+    filter:saturate(.88);
+  }
+  .collection-dock--wall-art .dock-card:hover,
+  .collection-dock--wall-art .dock-card:focus-visible {
+    transform:translateY(-7px) scale(1.06);
+  }
+  .collection-dock--wall-art .dock-card--support:hover,
+  .collection-dock--wall-art .dock-card--support:focus-visible {
+    transform:translateY(2px) scale(.96);
+    opacity:1;
+    filter:saturate(1);
+  }
+  .collection-dock--wall-art .dock-card.is-current .dock-tombstone {
+    border-color:#9b7451;
+    box-shadow:0 18px 38px rgba(48,34,23,.2);
+  }
+  @media (max-width: 768px) {
+    .collection-dock {
+      width:100%;
+      padding-left:0;
+      padding-right:0;
+    }
+    .dock-track {
+      overflow-x:auto;
+      scroll-snap-type:x proximity;
+      min-height:0;
+      padding:8px 24px 18px;
+    }
+    .collection-dock--wall-art .dock-track {
+      justify-content:flex-start;
+      overflow-x:auto;
+      min-height:0;
+    }
+    .dock-separator {
+      height:72px;
+      margin:0 8px 8px;
+    }
+    .dock-card,
+    .dock-card.is-near,
+    .dock-card.is-center,
+    .dock-card.is-far,
+    .collection-dock--wall-art .dock-card--support,
+    .collection-dock--wall-art .dock-card--support.is-near,
+    .collection-dock--wall-art .dock-card--support.is-center,
+    .collection-dock--wall-art .dock-card--support.is-far,
+    .collection-dock--wall-art .dock-card--core,
+    .collection-dock--wall-art .dock-card--core.is-near,
+    .collection-dock--wall-art .dock-card--core.is-center,
+    .collection-dock--wall-art .dock-card--core.is-far {
+      flex:0 0 72px;
+      transform:none;
+      opacity:1;
+      filter:none;
+      scroll-snap-align:center;
+    }
+    .dock-card:hover,
+    .dock-card:focus-visible {
+      transform:none;
+    }
+  }
+</style>
+
+<script define:vars={{ dockId: id }}>
+  (() => {
+    const dock = document.getElementById(dockId);
+    if (!dock?.classList?.contains("collection-dock")) return;
+
+    const titleNode = dock.querySelector(".dock-active-title");
+    const prefixNode = dock.querySelector(".dock-active-prefix");
+    const dockCards = Array.from(dock.querySelectorAll("[data-dock-title]"));
+    if (!titleNode || dockCards.length === 0) return;
+
+    const current = dockCards.find((card) => card.getAttribute("aria-current") === "page")
+      || dock.querySelector(".dock-card.is-center");
+    const fallbackTitle = titleNode.textContent || "";
+
+    const setDockTitle = (value, prefix = "Browse") => {
+      if (prefixNode) prefixNode.textContent = prefix ? `${prefix} ` : "";
+      titleNode.textContent = value || fallbackTitle;
+    };
+
+    setDockTitle(fallbackTitle, "");
+
+    const centerCurrentCard = () => {
+      if (!current) return;
+      const track = current.closest(".dock-track");
+      if (!track) return;
+      const targetLeft = current.offsetLeft - (track.clientWidth - current.clientWidth) / 2;
+      const maxLeft = Math.max(0, track.scrollWidth - track.clientWidth);
+      track.scrollLeft = Math.max(0, Math.min(targetLeft, maxLeft));
+    };
+
+    requestAnimationFrame(() => requestAnimationFrame(centerCurrentCard));
+    window.addEventListener("load", centerCurrentCard, { once: true });
+    window.addEventListener("resize", centerCurrentCard);
+
+    dockCards.forEach((card) => {
+      if (card.getAttribute("data-current") === "true") return;
+      card.addEventListener("mouseenter", () => setDockTitle(card.getAttribute("data-dock-title"), card.getAttribute("data-dock-prefix") ?? "Browse"));
+      card.addEventListener("focus", () => setDockTitle(card.getAttribute("data-dock-title"), card.getAttribute("data-dock-prefix") ?? "Browse"));
+    });
+
+    dock.addEventListener("mouseleave", () => setDockTitle(fallbackTitle, ""));
+    dock.addEventListener("focusout", (event) => {
+      if (!dock.contains(event.relatedTarget)) setDockTitle(fallbackTitle, "");
+    });
+  })();
+</script>

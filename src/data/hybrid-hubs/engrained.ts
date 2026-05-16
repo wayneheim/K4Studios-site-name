@@ -177,7 +177,7 @@ export const explorationPaths = [
     title: 'Print Options',
     eyebrow: 'Format Route',
     href: '/Other/Print-Options',
-    description: 'Compare Engrained against archival paper, canvas, and other presentation formats after identifying the image that belongs in the room.',
+    description: 'Compare Engrained against archival paper and other available presentation formats after identifying the image that belongs in the room.',
     cta: 'Compare print formats -',
     accent: '#5f4f43',
   },

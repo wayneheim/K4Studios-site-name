@@ -38,14 +38,6 @@ const westernLandscapeItems = rotateGallery(westernLandscapeData, 11);
 const narrativeColorItems = rotateGallery(narrativeColorData, 203);
 const narrativeBlackWhiteItems = rotateGallery(narrativeBlackWhiteData, 109);
 const mountainItems = rotateGallery(mountainData, 7);
-const westernArtworkCount =
-  cowboyColorData.length +
-  cowboyBlackWhiteData.length +
-  westernLandscapeData.length +
-  narrativeColorData.length +
-  narrativeBlackWhiteData.length +
-  mountainData.length;
-
 const westernLandscapeTombstone = landscapeLocationLanding.tombstones.find((stone: any) =>
   String(stone.href || "").includes("/Landscapes/By-Location/West/")
 )?.thumb;
@@ -72,7 +64,7 @@ const gridSections = [
     galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
     allHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/all#collection-browser",
     ctaLabel: "See the full Western portrait artwork collection",
-    ctaThumb: "/images/tombstones/cowboy-c-ts.jpg",
+    ctaThumb: "/img/i-5FX3W9r/s.jpg",
     items: cowboyColorItems,
     limit: 19,
   },
@@ -102,7 +94,7 @@ const gridSections = [
     galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White",
     allHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/all#collection-browser",
     ctaLabel: "See the full black and white cowboy artwork collection",
-    ctaThumb: "/images/tombstones/cowboy-bw-ts.jpg",
+    ctaThumb: "/images/tombstones/cowboy-bw-ts.webp",
     items: cowboyBlackWhiteItems,
     limit: 19,
   },
@@ -128,10 +120,20 @@ const gridSections = [
   },
 ];
 
+const countLiveItems = (sections: typeof gridSections) =>
+  sections.reduce((total, section) => total + section.items.filter((item: any) =>
+    item?.id &&
+    item.id !== "i-k4studios" &&
+    item.visibility !== "ghost" &&
+    item.visibility !== "hidden" &&
+    item.visibility !== "hide"
+  ).length, 0);
+const westernArtworkLiveCount = countLiveItems(gridSections);
+
 const commercialMiddleCopy = [
   "Western artwork covers the full range of the American frontier - portrait character, open Western landscape, narrative frontier scene, monochrome atmosphere, and mountain presence. Start with the branch that fits the room or the collection.",
   "Wayne Heim's Western artwork blends fine art photography, painterly finishing, and cinematic storytelling to create images rooted in frontier life, Western land, cowboy history, and the mythic American West.",
-  "These works are available as archival paper, canvas, metal, and wood presentations, with the Sketch Series opening at $25 and limited editions available for collectors who want provenance, permanence, and wall presence.",
+  "These works are available as archival paper and select wood presentations, with the Sketch Series opening at $25 and limited editions available for collectors who want provenance, permanence, and wall presence.",
 ].join("\n\n");
 
 const copy = {
@@ -142,7 +144,7 @@ const copy = {
     "Wayne Heim's Western artwork includes color and black and white cowboy portraits, narrative frontier scenes, Western landscapes, and mountain artwork created as collector-grade fine art for homes, offices, lodges, and long-term display.",
   indexLinkNote:
     "This is the K4 route for broad Western artwork intent: western artwork, western themed art, western art prints, landscape artwork, mountain artwork, and painterly Western fine art.",
-  printAvailabilityNote: `Western artwork is available from ${getFormattedLowestStandardPrintPrice()} across archival paper, canvas, metal, and select wood presentations. Edition status and format options are shown on individual image pages.`,
+  printAvailabilityNote: `Western artwork is available from ${getFormattedLowestStandardPrintPrice()} across archival paper and select wood presentations. Edition status and format options are shown on individual image pages.`,
   commercialH1: "The Collection - Six Artwork Routes, 917 Works",
   commercialDeck:
     "Western portrait artwork, open-country landscapes, narrative frontier scenes, black and white studies, and mountain artwork - arranged so figure and land both have room to breathe.",
@@ -153,22 +155,22 @@ const copy = {
   breadcrumbCurrentName: "Western Artwork",
   aggregateOfferLowPrice: "25",
   aggregateOfferHighPrice: "5000",
-  aggregateOfferCount: String(westernArtworkCount),
+  aggregateOfferCount: String(westernArtworkLiveCount),
   gatewayCollectionName: "Western Artwork",
   gatewayIntroCopy:
-    "Western artwork by Wayne Heim - color and black and white cowboy portraits, frontier narratives, open Western landscapes, mountain scenes, and story-driven imagery for homes, offices, lodges, ranch interiors, hospitality spaces, and collector walls.",
+    "Western artwork by Wayne Heim, available as archival fine art prints ranging from the small-works introductory Sketch Series at $25 to the ultra-limited, large-format Legend Series for collectors seeking statement pieces with permanence and presence. Color and black and white cowboy portraits, frontier narratives, open Western landscapes, mountain scenes, and story-driven imagery for homes, offices, lodges, ranch interiors, hospitality spaces, and collector walls.",
   gatewaySupportingCopy:
-    "Each section is organized by subject - people or land - so you can compare the right Western artwork family before reading into the image story. The collection opens with the Sketch Series, 5x7 archival prints from $25, then scales through open-edition Foundation works, signed Chronicle editions, and ultra-limited Legend pieces for collectors who want provenance and permanence on the wall.\n\nClick into any section to compare prints, read the image story, and view collector and sizing details.",
+    "Each section is organized by subject - people or land - so you can compare the right Western artwork family before reading into the image story. The collection begins with the small-works Sketch Series, intimate 5×7 open edition pieces priced at $25, then scales through open-edition Foundation works, signed Chronicle editions, and ultra-limited Legend pieces for collectors who want provenance and permanence on the wall.\n\nClick into any section to compare prints, read the image story, and view collector and sizing details.",
   gatewayKicker: "K4 Studios - Western Artwork Catalog",
   gatewayHeroTitle: "Western Artwork by Wayne Heim",
   gatewayHeroAlt:
     "Painterly Western mountain artwork with open sky, landform, and collector-grade fine art atmosphere.",
   gatewayHeroHref:
     "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-zk7zXP3",
-  gatewayHeroSrc: "/img/i-zk7zXP3/l.jpg",
-  gatewayHeroSrcSet: "/img/i-zk7zXP3/m.jpg 720w, /img/i-zk7zXP3/l.jpg 1200w",
+  gatewayHeroSrc: "/img/i-zk7zXP3/m.jpg",
+  gatewayHeroSrcSet: "/img/i-zk7zXP3/s.jpg 400w, /img/i-zk7zXP3/m.jpg 720w",
   archiveContextCopy:
-    "Every work on this page is available as fine art - paper, canvas, metal, or wood - with the Sketch Series opening at $25. Click into any image to read the story, compare sizes, and view collector details. Questions about a specific piece? Reach Wayne directly at <a href='mailto:wayne@k4studios.com'>wayne@k4studios.com</a>.",
+    "Every work on this page is available as fine art - with the Sketch Series opening at $25. Click into any image to read the story, compare print options, sizes, and collector details. Questions about a specific piece? Reach Wayne directly at <a href='mailto:wayne@k4studios.com'>wayne@k4studios.com</a>.",
   faqKicker: "Print & Collector Questions",
   faqTitle: "Western Artwork FAQ",
 };
@@ -184,7 +186,7 @@ const copy = {
   breadcrumbStructuredItems={breadcrumbStructuredItems}
   sectionDockItems={sectionDockItems}
   dockCenterIndex={dockCenterIndex}
-  currentDockTitle="Western Artwork, Portraits, and Landscapes"
+  currentDockTitle="Explore Western Artwork Collections"
   archiveContext={{
     categoryUrl: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West",
     categoryName: "Wild West",

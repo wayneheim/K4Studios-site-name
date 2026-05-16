@@ -275,39 +275,60 @@ export const faqSection = {
 
 export const faqItems = [
 	{
+		q: 'What is Western black and white photography?',
+		a: [
+			'Western black and white photography is fine art monochrome work rooted in the American frontier - cowboy portraits, narrative scenes, and historically grounded portrait work where tone, contrast, and restraint carry the image further than color would.',
+			'At K4 Studios it means authored work where removing color sharpens human presence rather than flattening it into style.',
+		],
+	},
+	{
 		q: 'Why does black and white work so well with Western portraiture?',
 		a: [
-			'Because it strips away decorative color cues and lets expression, cloth, weathering, and contrast carry more of the meaning. The image has to earn its atmosphere through structure.',
+			'Because it strips decorative color cues and forces expression, weathering, cloth, and contrast to carry the full weight of the image. The frame has to earn its atmosphere through structure alone.',
+			"In Wayne Heim's work that means posture, facial character, and tonal depth doing the work that color would otherwise handle - producing images with more lasting pressure on the wall.",
 		],
 	},
 	{
-		q: 'Is this page about monochrome style or monochrome storytelling?',
+		q: 'How are these prints different from standard black and white cowboy photography?',
 		a: [
-			'Storytelling. The black-and-white treatment matters here because it changes the emotional pressure of the image, not because it adds a period effect.',
+			"Standard B&W cowboy photography documents people and places. Wayne Heim's work treats the cowboy as a character under pressure - weathered, mid-story, carrying consequence.",
+			'The painterly process adds tonal sculpting and atmospheric depth beyond straight photography. Every image carries a title, a story, and an authored point of view.',
 		],
 	},
 	{
-		q: 'Why separate portrait, narrative, and Native American work?',
+		q: 'Can black and white Western prints work in modern interiors?',
 		a: [
-			'Because monochrome affects each body of work a little differently. Grouping them separately lets visitors feel those distinctions instead of reading everything as one undifferentiated archive.',
+			'Yes - particularly well. Tonal monochrome work integrates cleanly in modern, transitional, and minimalist rooms without reading as decorative Western theme.',
+			'A single strong B&W portrait in a clean space carries more weight than a grouped arrangement of color work.',
 		],
 	},
 	{
-		q: 'Where should I go if I want color as well?',
+		q: 'What print formats and sizes are available?',
 		a: [
-			'Move into <a href="/western-portrait-photography">Western Portrait Photography</a> or <a href="/western-fine-art-photography-collection">Western Fine Art Photography Collection</a> for paired color and black-and-white routes.',
+			'Every image is available as archival paper or wood fine art prints - including the Engrained Series on Baltic Birch panels, which adds grain texture that complements the tonal atmosphere of monochrome work.',
+			'The Sketch Series opens at $25. Size options and edition details are inside each image page.',
 		],
 	},
 	{
-		q: 'Can monochrome works still be collected as prints?',
+		q: 'Are these black and white Western prints available as limited editions?',
 		a: [
-			'Yes. Continue into <a href="/Western-Photography-Prints">Western Photography Prints</a> or <a href="/Other/Print-Options">Print Options</a> once the image choice is clear.',
+			'Yes. The Chronicle Series offers signed limited editions with numbered certificates of authenticity.',
+			'The Legend Series is ultra-limited - very small runs for collectors who want documented provenance and permanent wall placement. Open-edition works start at $25 with the Sketch Series.',
 		],
 	},
 	{
-		q: 'Does this page support the black and white western art term as well?',
+		q: 'What subjects are covered in this black and white Western collection?',
 		a: [
-			'Yes. The page is built to serve visitors looking for black and white Western art, black and white cowboy photography, and monochrome Western portrait work through one coherent route.',
+			'Three subject groups - cowboy portraits, frontier narrative scenes, and Native American portrait work.',
+			'Each responds differently to monochrome: portraits carry character through expression and weathering; narratives carry story through shadow, silence, and implication; Native American portraits carry presence through tone, cloth, and facial structure.',
+			'All three are organized as separate sections so collectors can feel those distinctions.',
+		],
+	},
+	{
+		q: "Where should I start if I'm choosing a black and white Western print?",
+		a: [
+			'Start with the cowboy portrait section for direct character presence and human gravity. Move into the narrative section for story-driven frontier atmosphere where shadow and implication do the work.',
+			'Continue into the Native American section for historically grounded portrait work with tonal quiet and restraint. Click into any image to read the story before deciding. For help with a specific room, reach Wayne at <a href="mailto:wayne@k4studios.com">wayne@k4studios.com</a>.',
 		],
 	},
 ];

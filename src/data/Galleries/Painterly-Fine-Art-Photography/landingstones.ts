@@ -57,7 +57,7 @@ export const landingWestern = {
     {
       title: "The Engrained Series — Fine Art on Wood",
       href: "/Other/K4-Select-Series/Engrained",
-      thumb: "/images/tombstones/engrained-ts.jpg",
+      thumb: "/images/tombstones/engrained-ts.webp",
     },
   ],
 };
