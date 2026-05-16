@@ -2,6 +2,7 @@
 import Footer from "@/components/Footer.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import ArchiveContext from "@/components/ArchiveContext.astro";
+import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import { extractImageId, getSemanticImageUrl } from "@/utils/imageProxy.js";
 import {
@@ -48,6 +49,7 @@ const {
   faqItems = [],
   gridSections = [],
   dockVariant = "",
+  layoutVariant = "",
 } = Astro.props as {
   rawGalleryData: any[];
   entranceData?: any;
@@ -73,6 +75,7 @@ const {
   faqItems?: Array<{ q: string; a: string[] }>;
   gridSections?: GridSection[];
   dockVariant?: string;
+  layoutVariant?: string;
 };
 
 // âœ… Filter out ghosts and hidden (archived) images
@@ -170,6 +173,38 @@ const collectionIntroParagraphs = collectionIntro
   .split(/\n{2,}/)
   .map((paragraph) => paragraph.trim())
   .filter(Boolean);
+const isCinematicConceptLayout = layoutVariant === "cinematic-concept";
+const catalogSectionKickerTemplate = String(copy.catalogSectionKicker || "Selected Western Wall Art - {sectionCount} in Series");
+const splitConceptCopy = (value = "") =>
+  formatCopy(value)
+    .split(/\n{2,}/)
+    .map((paragraph) => paragraph.trim())
+    .filter(Boolean);
+const conceptBlocks = [
+  {
+    title: formatCopy(copy.conceptBlock1Title || ""),
+    paragraphs: splitConceptCopy(copy.conceptBlock1Copy || ""),
+  },
+  {
+    title: formatCopy(copy.conceptBlock2Title || ""),
+    paragraphs: splitConceptCopy(copy.conceptBlock2Copy || ""),
+  },
+  {
+    title: formatCopy(copy.conceptBlock3Title || ""),
+    paragraphs: splitConceptCopy(copy.conceptBlock3Copy || ""),
+  },
+  {
+    title: formatCopy(copy.conceptBlock4Title || ""),
+    paragraphs: splitConceptCopy(copy.conceptBlock4Copy || ""),
+  },
+];
+const collectingKicker = formatCopy(copy.collectingKicker || "");
+const collectingTitle = formatCopy(copy.collectingTitle || "");
+const collectingParagraphs = splitConceptCopy(copy.collectingCopy || "");
+const archiveContextKicker = formatCopy(copy.archiveContextKicker || "");
+const archiveContextTitle = formatCopy(copy.archiveContextTitle || "");
+const archiveContextParagraphs = splitConceptCopy(copy.archiveContextCopy || "");
+const cornerstoneVariant = String(copy.cornerstoneVariant || "").trim();
 const gatewayKicker = formatCopy(copy.gatewayKicker || "K4 STUDIOS FINE ART PRINT CATALOG");
 const gatewayCollectionName = formatCopy(copy.gatewayCollectionName || collectionName);
 const gatewayBrandClass = String(copy.gatewayBrandClass || "").trim();
@@ -256,7 +291,7 @@ const forceImageSize = (src = "", size: string = 's', galleryPath = contentBaseP
 };
 
 const getCardSeries = (image: any, galleryPath = contentBasePath) => {
-  const commerce = resolveImageCommerce({
+  const commerce: any = resolveImageCommerce({
     image,
     galleryPath,
     pageUrl: `${siteOrigin}${galleryPath}/${image?.id || ""}`,
@@ -488,7 +523,7 @@ const faqRight = faqItems.slice(faqSplitIndex);
     <LandingHeader client:load breadcrumb={compactBreadcrumbHtml} />
   </div>
 
-  <div class="gallery-index-wrapper" id="top">
+  <div class:list={["gallery-index-wrapper", isCinematicConceptLayout && "cinematic-concept-page"]} id="top">
     <!-- K4 Studios Catalog Entrance -->
     <section class="collection-gateway catalog-entrance" aria-labelledby="gateway-heading">
       <a class="gateway-artwork" href={gatewayHeroHref} aria-label={`Open artwork detail for ${gatewayHeroTitle}`}>
@@ -522,6 +557,7 @@ const faqRight = faqItems.slice(faqSplitIndex);
     </section>
 
     <!-- K4 Section Dock Prototype -->
+    {!isCinematicConceptLayout && (
     <section class:list={["collection-dock", dockVariant === "wall-art" && "collection-dock--wall-art"]} aria-labelledby="collection-dock-heading">
       <div class="dock-heading">
         <div>
@@ -573,58 +609,65 @@ const faqRight = faqItems.slice(faqSplitIndex);
         </div>
       </div>
     </section>
+    )}
 
     <!-- Current Collection Identity -->
     <header class="collection-hero">
       <h2>{commercialH1}</h2>
       <p class="hero-deck">{commercialDeck}</p>
-      <p class="hero-copy">
-        {collectionIntroParagraphs.map((paragraph, index) => (
-          <>
-            {index > 0 && <><br /><br /></>}
-            <span set:html={paragraph}></span>
-          </>
-        ))}
-      </p>
+      {collectionIntroParagraphs.length > 0 && (
+        <p class="hero-copy">
+          {collectionIntroParagraphs.map((paragraph, index) => (
+            <>
+              {index > 0 && <><br /><br /></>}
+              <span set:html={paragraph}></span>
+            </>
+          ))}
+        </p>
+      )}
     </header>
 
     <span id="collection-browser" class="collection-browser-anchor" aria-hidden="true"></span>
     <hr class="catalog-anchor-rule" />
-    <p class="print-options-heading">K4 Series and Limited Editions &middot; Fine Art Prints from {getFormattedLowestStandardPrintPrice()}</p>
+    {!isCinematicConceptLayout && (
+      <>
+        <p class="print-options-heading">K4 Series and Limited Editions &middot; Fine Art Prints from {getFormattedLowestStandardPrintPrice()}</p>
 
-    <!-- Available Print Series -->
-    <section class="print-options" aria-labelledby="print-options-heading">
-      <div class="series-widget" aria-label="Standard K4 paper print series">
-        {standardPrintSeries.map((series) => (
-          <article class="series-tile" data-series-tile>
-            <button class="series-trigger" type="button" aria-label={`Show ${series.name} details`}>
-              <span class="series-symbol" aria-hidden="true">{series.symbol}</span>
-              <span>
-                <strong>{series.name}</strong>
-                <small>{series.subtitle}</small>
-              </span>
-            </button>
-            <div class="series-detail">
-              <p class="series-detail-copy">
-                <span class="series-detail-title">
-                  <span class="series-detail-symbol" aria-hidden="true">{series.symbol}</span>
-                  <strong>{series.name}:</strong>
-                </span>
-                <span>{series.collectorSummary}</span>
-              </p>
-              <div class="series-detail-footer">
-                <ul class="series-detail-sizes">
-                  {series.sizes.map((entry: any) => (
-                    <li>{entry.display}</li>
-                  ))}
-                </ul>
-                <a class="series-detail-link" href={series.learnMoreHref}>Learn more &rarr;</a>
-              </div>
-            </div>
-          </article>
-        ))}
-      </div>
-    </section>
+        <!-- Available Print Series -->
+        <section class="print-options" aria-labelledby="print-options-heading">
+          <div class="series-widget" aria-label="Standard K4 paper print series">
+            {standardPrintSeries.map((series) => (
+              <article class="series-tile" data-series-tile>
+                <button class="series-trigger" type="button" aria-label={`Show ${series.name} details`}>
+                  <span class="series-symbol" aria-hidden="true">{series.symbol}</span>
+                  <span>
+                    <strong>{series.name}</strong>
+                    <small>{series.subtitle}</small>
+                  </span>
+                </button>
+                <div class="series-detail">
+                  <p class="series-detail-copy">
+                    <span class="series-detail-title">
+                      <span class="series-detail-symbol" aria-hidden="true">{series.symbol}</span>
+                      <strong>{series.name}:</strong>
+                    </span>
+                    <span>{series.collectorSummary}</span>
+                  </p>
+                  <div class="series-detail-footer">
+                    <ul class="series-detail-sizes">
+                      {series.sizes.map((entry: any) => (
+                        <li>{entry.display}</li>
+                      ))}
+                    </ul>
+                    <a class="series-detail-link" href={series.learnMoreHref}>Learn more &rarr;</a>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      </>
+    )}
 
     {normalizedGridSections.length === 0 && (
       <>
@@ -791,18 +834,32 @@ const faqRight = faqItems.slice(faqSplitIndex);
         {normalizedGridSections.map((section, sectionIndex) => {
           const visibleItems = section.items.slice(0, section.limit);
           const sectionCount = section.items.length;
+          const conceptBlock = isCinematicConceptLayout ? conceptBlocks[sectionIndex] : null;
+          const sectionKicker = formatCopy(catalogSectionKickerTemplate)
+            .replaceAll("{sectionCount}", String(sectionCount))
+            .replaceAll("{sectionTitle}", section.title);
 
           return (
-            <section class="catalog-gallery-section" id={`section-${section.slug}`} aria-labelledby={`catalog-section-heading-${sectionIndex + 1}`}>
-              <div class="catalog-section-heading">
-                {section.timeZone && <p class="catalog-section-timezone">{section.timeZone}</p>}
-                <p class="catalog-section-kicker">Selected Western Wall Art - {sectionCount} in Series</p>
-                <h2 id={`catalog-section-heading-${sectionIndex + 1}`}>{section.title}</h2>
-                {section.description && <p>{section.description}</p>}
-              </div>
+            <>
+              {conceptBlock && (conceptBlock.title || conceptBlock.paragraphs.length > 0) && (
+                <section class="cinematic-concept-block" aria-labelledby={`cinematic-concept-${sectionIndex + 1}`}>
+                  {conceptBlock.title && <p id={`cinematic-concept-${sectionIndex + 1}`} class="cinematic-concept-block__kicker">{conceptBlock.title}</p>}
+                  {conceptBlock.paragraphs.map((paragraph) => (
+                    <p set:html={paragraph}></p>
+                  ))}
+                </section>
+              )}
 
-              <div class="ssr-grid ssr-grid--catalog-section">
-                {visibleItems.map((item: any, idx: number) => {
+              <section class="catalog-gallery-section" id={`section-${section.slug}`} aria-labelledby={`catalog-section-heading-${sectionIndex + 1}`}>
+                <div class="catalog-section-heading">
+                  {section.timeZone && <p class="catalog-section-timezone">{section.timeZone}</p>}
+                  <p class="catalog-section-kicker">{sectionKicker}</p>
+                  <h2 id={`catalog-section-heading-${sectionIndex + 1}`}>{section.title}</h2>
+                  {section.description && <p>{section.description}</p>}
+                </div>
+
+                <div class="ssr-grid ssr-grid--catalog-section">
+                  {visibleItems.map((item: any, idx: number) => {
                   const imageUrl = getSectionProxySrc(item, section.galleryPath, 's');
                   const srcsetParts = [
                     `${getSectionProxySrc(item, section.galleryPath, 's')} 400w`,
@@ -938,18 +995,144 @@ const faqRight = faqItems.slice(faqSplitIndex);
                     </span>
                   </a>
                 )}
-              </div>
-            </section>
+                </div>
+              </section>
+            </>
           );
         })}
+        {isCinematicConceptLayout && conceptBlocks.slice(normalizedGridSections.length).map((block, extraIndex) => (
+          (block.title || block.paragraphs.length > 0) && (
+            <section class="cinematic-concept-block cinematic-concept-block--bridge" aria-labelledby={`cinematic-concept-extra-${extraIndex + 1}`}>
+              {block.title && <p id={`cinematic-concept-extra-${extraIndex + 1}`} class="cinematic-concept-block__kicker">{block.title}</p>}
+              {block.paragraphs.map((paragraph) => (
+                <p set:html={paragraph}></p>
+              ))}
+            </section>
+          )
+        ))}
       </div>
     )}
 
-    <ArchiveContext 
-      categoryUrl={archiveContext.categoryUrl || basePath} 
-      categoryName={archiveContext.categoryName || collectionName} 
-      copyHtml={copy.archiveContextCopy || ""}
-    />
+    {isCinematicConceptLayout && (collectingTitle || collectingParagraphs.length > 0) && (
+      <section class="cinematic-collecting-section" aria-labelledby="cinematic-collecting-heading">
+        {collectingKicker && <p class="cinematic-collecting-section__kicker">{collectingKicker}</p>}
+        {collectingTitle && <h2 id="cinematic-collecting-heading">{collectingTitle}</h2>}
+        {collectingParagraphs.map((paragraph) => (
+          <p set:html={paragraph}></p>
+        ))}
+      </section>
+    )}
+
+    {isCinematicConceptLayout && (
+      <>
+        <p class="print-options-heading">K4 Series and Limited Editions &middot; Fine Art Prints from {getFormattedLowestStandardPrintPrice()}</p>
+
+        <section class="print-options" aria-labelledby="print-options-heading">
+          <div class="series-widget" aria-label="Standard K4 paper print series">
+            {standardPrintSeries.map((series) => (
+              <article class="series-tile" data-series-tile>
+                <button class="series-trigger" type="button" aria-label={`Show ${series.name} details`}>
+                  <span class="series-symbol" aria-hidden="true">{series.symbol}</span>
+                  <span>
+                    <strong>{series.name}</strong>
+                    <small>{series.subtitle}</small>
+                  </span>
+                </button>
+                <div class="series-detail">
+                  <p class="series-detail-copy">
+                    <span class="series-detail-title">
+                      <span class="series-detail-symbol" aria-hidden="true">{series.symbol}</span>
+                      <strong>{series.name}:</strong>
+                    </span>
+                    <span>{series.collectorSummary}</span>
+                  </p>
+                  <div class="series-detail-footer">
+                    <ul class="series-detail-sizes">
+                      {series.sizes.map((entry: any) => (
+                        <li>{entry.display}</li>
+                      ))}
+                    </ul>
+                    <a class="series-detail-link" href={series.learnMoreHref}>Learn more &rarr;</a>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      </>
+    )}
+
+    {isCinematicConceptLayout && archiveContextParagraphs.length > 0 && (
+      <section class="cinematic-closing-callout" aria-labelledby={archiveContextTitle ? "cinematic-closing-callout-heading" : undefined}>
+        {archiveContextKicker && <p class="cinematic-closing-callout__kicker">{archiveContextKicker}</p>}
+        {archiveContextTitle && <h2 id="cinematic-closing-callout-heading">{archiveContextTitle}</h2>}
+        {archiveContextParagraphs.map((paragraph) => (
+          <p set:html={paragraph}></p>
+        ))}
+      </section>
+    )}
+
+    {!isCinematicConceptLayout && (
+      <ArchiveContext
+        categoryUrl={archiveContext.categoryUrl || basePath}
+        categoryName={archiveContext.categoryName || collectionName}
+        copyHtml={copy.archiveContextCopy || ""}
+      />
+    )}
+
+    {isCinematicConceptLayout && (
+    <section class:list={["collection-dock", dockVariant === "wall-art" && "collection-dock--wall-art"]} aria-labelledby="collection-dock-heading">
+      <div class="dock-heading">
+        <div>
+          <h2 id="collection-dock-heading"><span id="dock-active-prefix"></span><span id="dock-active-title">{currentDockTitle}</span></h2>
+        </div>
+      </div>
+      <div class="dock-shell">
+        <div class="dock-track" aria-label="K4 gallery all-page quick links">
+          <span id="dock-start" class="dock-anchor" aria-hidden="true"></span>
+          {sectionDockItems.map((item: any, idx: number) => {
+            if (item.separator) {
+              return <span class="dock-separator" role="separator" aria-label={item.label || "Related section divider"}></span>;
+            }
+
+            const displayTitle = [item.title, item.subtitle].filter(Boolean).join(' ');
+            const dockActionLabel = item.dockPrefix === "" ? displayTitle : `${item.dockPrefix || "Browse"} ${displayTitle}`;
+            const distance = Math.abs(idx - dockCenterIndex);
+            const dockClass = [
+              'dock-card',
+              item.dockRole ? `dock-card--${item.dockRole}` : '',
+              item.current ? 'is-center is-current' : '',
+              distance === 1 ? 'is-near' : '',
+              distance >= 3 ? 'is-far' : '',
+            ].filter(Boolean).join(' ');
+
+            return (
+              <a
+                class={dockClass}
+                href={item.href}
+                aria-current={item.current ? 'page' : undefined}
+                aria-label={item.current ? `Current collection: ${displayTitle}` : dockActionLabel}
+                data-dock-title={displayTitle}
+                data-dock-prefix={item.dockPrefix}
+                data-current={item.current ? 'true' : undefined}
+              >
+                <div class="dock-tombstone">
+                  <img
+                    src={forceImageSize(item.thumb, 's')}
+                    alt={`${displayTitle} tombstone link`}
+                    loading={item.current || distance <= 1 ? 'eager' : 'lazy'}
+                    width="140"
+                    height="160"
+                  />
+                </div>
+              </a>
+            );
+          })}
+          <span id="dock-end" class="dock-anchor" aria-hidden="true"></span>
+        </div>
+      </div>
+    </section>
+    )}
 
     {faqItems.length > 0 && (
       <section class="faq-section pb-10" id="faq">
@@ -1024,13 +1207,38 @@ const faqRight = faqItems.slice(faqSplitIndex);
       </section>
     )}
 
+    {cornerstoneVariant && (
+      <section class="doorway-cornerstones">
+        <WesternDefinitions variant={cornerstoneVariant as "index" | "definition" | "post"} />
+      </section>
+    )}
+
     <Footer />
   </div>
 
   <style>
     body { background:#fff; color:#2a1f17; font-family:'Glegoo',serif; }
     html { scroll-behavior:smooth; }
-    .all-page-header-frame { padding-top:22px; }
+    .all-page-header-frame {
+      position:relative;
+      z-index:1200;
+      padding-top:22px;
+      overflow:visible;
+    }
+    @media (min-width:1025px) {
+      .all-page-header-frame :global(.nav-bar) {
+        display:flex !important;
+        position:relative !important;
+        transform:none !important;
+        opacity:1 !important;
+        visibility:visible !important;
+      }
+      .all-page-header-frame :global(.nav-item) {
+        opacity:1 !important;
+        transform:none !important;
+        animation:none !important;
+      }
+    }
     :global(.breadcrumb-text) {
       max-width:min(560px, calc(50vw - 118px));
       overflow:hidden;
@@ -1130,6 +1338,9 @@ const faqRight = faqItems.slice(faqSplitIndex);
     .gateway-brand--compact {
       font-size:clamp(1.94rem, 3.72vw, 3.18rem);
       letter-spacing:-.016em;
+    }
+    .cinematic-concept-page .gateway-brand {
+      letter-spacing:-.028em;
     }
     .gateway-copy-text {
       margin:0 0 12px;
@@ -1413,6 +1624,28 @@ const faqRight = faqItems.slice(faqSplitIndex);
     .collection-dock--wall-art .dock-card.is-current .dock-tombstone {
       border-color:#9b7451;
       box-shadow:0 18px 38px rgba(48,34,23,.2);
+    }
+    .cinematic-concept-page .collection-dock {
+      margin:8px auto 18px;
+      padding:18px 18px 14px;
+    }
+    .cinematic-concept-page .dock-heading {
+      margin-bottom:1px;
+      padding-top:7px;
+    }
+    .cinematic-concept-page .dock-heading h2 {
+      min-height:0;
+      font-size:1.14rem;
+      line-height:1.18;
+      color:#6d4d34;
+      transform:none;
+    }
+    .cinematic-concept-page .dock-track {
+      min-height:88px;
+      gap:18px;
+      padding-top:0;
+      padding-bottom:7px;
+      transform:translateY(-5px);
     }
 
     .print-options {
@@ -1802,6 +2035,95 @@ const faqRight = faqItems.slice(faqSplitIndex);
       font-size:1rem;
       line-height:1.62;
       text-wrap:balance;
+    }
+    .cinematic-concept-block {
+      width:min(1120px, calc(100% - 68px));
+      margin:14px auto 28px;
+      padding:34px 38px;
+      border-top:1px solid #dccfbe;
+      border-bottom:1px solid #dccfbe;
+      background:linear-gradient(180deg, rgba(255,252,247,.72), rgba(255,255,255,.92));
+      box-shadow:0 18px 34px rgba(48,34,24,.045);
+      box-sizing:border-box;
+    }
+    .cinematic-concept-block--bridge {
+      margin-top:4px;
+      margin-bottom:32px;
+    }
+    .cinematic-concept-block__kicker {
+      margin:0 0 18px;
+      color:transparent;
+      background-image:
+        linear-gradient(180deg, rgba(123,63,37,.98), rgba(80,45,29,.96)),
+        repeating-linear-gradient(108deg, rgba(255,255,255,.88) 0 1px, rgba(255,255,255,0) 1px 5px),
+        repeating-radial-gradient(circle at 12% 22%, rgba(255,255,255,.75) 0 1px, rgba(255,255,255,0) 1px 6px);
+      -webkit-background-clip:text;
+      background-clip:text;
+      font-size:clamp(1.05rem, 1.8vw, 1.45rem);
+      line-height:1.25;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      font-weight:800;
+      text-align:center;
+      text-shadow:0 1px 0 rgba(84,45,28,.14);
+      filter:contrast(1.08);
+    }
+    .cinematic-concept-block p:not(.cinematic-concept-block__kicker) {
+      max-width:820px;
+      margin:0 auto 16px;
+      color:#3f3228;
+      font-size:1.02rem;
+      line-height:1.84;
+      text-wrap:pretty;
+    }
+    .cinematic-concept-block p:last-child {
+      margin-bottom:0;
+    }
+    .cinematic-collecting-section,
+    .cinematic-closing-callout,
+    .doorway-cornerstones {
+      width:min(1120px, calc(100% - 68px));
+      margin:0 auto 28px;
+      box-sizing:border-box;
+    }
+    .cinematic-collecting-section,
+    .cinematic-closing-callout {
+      padding:30px 38px;
+      border-top:1px solid #dccfbe;
+      border-bottom:1px solid #dccfbe;
+      background:linear-gradient(180deg, rgba(255,252,247,.72), rgba(255,255,255,.92));
+      box-shadow:0 18px 34px rgba(48,34,24,.045);
+    }
+    .cinematic-collecting-section__kicker,
+    .cinematic-closing-callout__kicker {
+      margin:0 0 14px;
+      color:#7a6047;
+      font-size:.76rem;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+    .cinematic-collecting-section h2,
+    .cinematic-closing-callout h2 {
+      margin:0 0 16px;
+      color:#231a13;
+      font-size:clamp(1.42rem, 2.5vw, 2rem);
+      line-height:1.18;
+    }
+    .cinematic-collecting-section p:not(.cinematic-collecting-section__kicker),
+    .cinematic-closing-callout p:not(.cinematic-closing-callout__kicker) {
+      max-width:820px;
+      margin:0 0 14px;
+      color:#3f3228;
+      font-size:1rem;
+      line-height:1.82;
+      text-wrap:pretty;
+    }
+    .cinematic-collecting-section p:last-child,
+    .cinematic-closing-callout p:last-child {
+      margin-bottom:0;
+    }
+    .doorway-cornerstones {
+      padding-top:8px;
     }
     .catalog-gallery-section {
       margin:0 auto 54px;
@@ -2782,6 +3104,15 @@ const faqRight = faqItems.slice(faqSplitIndex);
       .print-options-heading {
         margin:8px auto 2px;
       }
+      .cinematic-collecting-section,
+      .cinematic-closing-callout,
+      .doorway-cornerstones {
+        width:min(100%, calc(100% - 20px));
+      }
+      .cinematic-collecting-section,
+      .cinematic-closing-callout {
+        padding:22px 18px;
+      }
       .series-widget {
         grid-template-columns:1fr;
       }
@@ -2814,6 +3145,14 @@ const faqRight = faqItems.slice(faqSplitIndex);
         width:calc(100% - 32px);
         padding:18px 18px 16px;
         text-align:center;
+      }
+      .cinematic-concept-block {
+        width:calc(100% - 32px);
+        padding:24px 18px;
+      }
+      .cinematic-concept-block p:not(.cinematic-concept-block__kicker) {
+        font-size:.96rem;
+        line-height:1.72;
       }
       .catalog-section-heading p:not(.catalog-section-kicker):not(.catalog-section-timezone) {
         margin-left:auto;

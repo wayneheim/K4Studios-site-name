@@ -23,8 +23,8 @@ export const americanWesternArtFAQ = [
   {
     q: "What print formats are available?",
     a: [
-      "American Western art prints from K4 Studios are available on museum-grade paper, premium canvas, and <a href='/Other/K4-Select-Series/Engrained'>Engrained™</a> hardwood panels.",
-      "That range gives collectors different entry points depending on scale, finish, and how they want the work to live in a space."
+      "American Western art prints from K4 Studios are available as archival paper or select wood fine art prints, including <a href='/Other/K4-Select-Series/Engrained'>Engrained™</a> Baltic Birch panels where offered.",
+      "Canvas, metal, and other specialty substrates are custom-order conversations rather than standard listed formats."
     ],
   },
   {

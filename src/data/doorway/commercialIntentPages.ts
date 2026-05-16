@@ -153,7 +153,7 @@ const sources = {
   cowboyColor: {
     key: "cowboyColor",
     title: "Color Cowboy Portrait Prints",
-    description: "Color cowboy portraits with painterly light, weathered character, and collector-ready Western presence.",
+    description: "Color cowboy portraits with painterly light, weathered character, and the frontier presence that carries the American Western tradition.",
     galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
     allHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/all#collection-browser",
     ctaLabel: "See the full color cowboy portrait collection",
@@ -220,6 +220,28 @@ const sources = {
     key: "narrativeBlackWhite",
     title: "Black and White Western Narrative Prints",
     description: "Monochrome frontier narrative prints where shadow, silence, and implication carry the story.",
+    galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White",
+    allHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/all#collection-browser",
+    ctaLabel: "See the full black and white Western narrative collection",
+    ctaThumb: "/img/i-mqQxwNn/s.jpg",
+    data: narrativeBlackWhiteData,
+    limit: 19,
+  },
+  cinematicNarrativeColor: {
+    key: "cinematicNarrativeColor",
+    title: "Cinematic Western Art — Color Frontier Narratives",
+    description: "Color frontier scenes where painterly atmosphere, warm light, and the deliberate incompleteness of the One-Image Movie pull the viewer past the frame's edge into the unwritten chapter beyond it.",
+    galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color",
+    allHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all#collection-browser",
+    ctaLabel: "See the full color Western narrative collection",
+    ctaThumb: "/img/i-B7ZSdfs/s.jpg",
+    data: narrativeColorData,
+    limit: 19,
+  },
+  cinematicNarrativeBlackWhite: {
+    key: "cinematicNarrativeBlackWhite",
+    title: "Cinematic Western Art — Black and White Frontier Narratives",
+    description: "Monochrome frontier scenes where shadow, silence, and the Hemingway iceberg — seven-eighths withheld — carry the story further than color ever could.",
     galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White",
     allHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/all#collection-browser",
     ctaLabel: "See the full black and white Western narrative collection",
@@ -552,12 +574,30 @@ function makePage({
   gridIntroCopy,
   gatewayIntroCopy,
   gatewaySupportingCopy,
+  gatewayKicker,
+  conceptBlock1Title,
+  conceptBlock1Copy,
+  conceptBlock2Title,
+  conceptBlock2Copy,
+  conceptBlock3Title,
+  conceptBlock3Copy,
+  conceptBlock4Title,
+  conceptBlock4Copy,
+  collectingKicker,
+  collectingTitle,
+  collectingCopy,
+  archiveContextKicker,
+  archiveContextTitle,
+  archiveContextCopy,
+  catalogSectionKicker,
+  cornerstoneVariant,
   currentDockTitle,
   categoryCrumb = { href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West", name: "Wild West" },
   offsets = {},
   limits = {},
   timeZones = {},
   alternates = {},
+  layoutVariant,
   dockCoreCount = 3,
   centerDock,
   faqItems,
@@ -585,12 +625,30 @@ function makePage({
   gridIntroCopy?: string;
   gatewayIntroCopy?: string;
   gatewaySupportingCopy?: string;
+  gatewayKicker?: string;
+  conceptBlock1Title?: string;
+  conceptBlock1Copy?: string;
+  conceptBlock2Title?: string;
+  conceptBlock2Copy?: string;
+  conceptBlock3Title?: string;
+  conceptBlock3Copy?: string;
+  conceptBlock4Title?: string;
+  conceptBlock4Copy?: string;
+  collectingKicker?: string;
+  collectingTitle?: string;
+  collectingCopy?: string;
+  archiveContextKicker?: string;
+  archiveContextTitle?: string;
+  archiveContextCopy?: string;
+  catalogSectionKicker?: string;
+  cornerstoneVariant?: string;
   currentDockTitle?: string;
   categoryCrumb?: { href: string; name: string };
   offsets?: Record<string, number>;
   limits?: Record<string, number>;
   timeZones?: Record<string, string>;
   alternates?: Record<string, { href: string; label: string; kicker?: string; count?: string }>;
+  layoutVariant?: string;
   dockCoreCount?: number;
   centerDock?: any[];
   faqItems?: Array<{ q: string; a: string[] }>;
@@ -599,14 +657,18 @@ function makePage({
   const liveCount = countLiveItems(gridSections);
   const coreDock = gridSections.slice(0, dockCoreCount).map((section) => sectionDock(section.title, section.allHref, section.ctaThumb));
   const centerDockItems = centerDock || coreDock;
-  const sectionDockItems = [
-    ...leftDock,
-    { separator: true, label: `Core ${label} collections` },
-    ...centerDockItems,
-    { separator: true, label: "Collector notes and related routes" },
-    ...rightDock,
-  ];
-  const dockCenterIndex = sectionDockItems.findIndex((item: any) => item.title === centerDockItems[0]?.title);
+  const sectionDockItems = centerDockItems.length > 0
+    ? [
+        ...leftDock,
+        { separator: true, label: `Core ${label} collections` },
+        ...centerDockItems,
+        { separator: true, label: "Collector notes and related routes" },
+        ...rightDock,
+      ]
+    : [...leftDock, ...rightDock];
+  const dockCenterIndex = centerDockItems.length > 0
+    ? sectionDockItems.findIndex((item: any) => item.title === centerDockItems[0]?.title)
+    : Math.floor(sectionDockItems.length / 2);
   const first = gridSections[0];
   const firstItem = cleanItems(first.items)[0] || {};
 
@@ -643,7 +705,7 @@ function makePage({
       gridIntroCopy,
       catalogEntranceTitle: `${label} by Wayne Heim`,
       catalogEntranceCopy: `Browse ${label.toLowerCase()} created as collector-grade fine art prints with image stories, sizing, edition, and presentation details.`,
-      collectionIntro: collectionIntro || [
+      collectionIntro: collectionIntro !== undefined ? collectionIntro : [
         `${label} at K4 Studios is built around authored Western imagery: ${subject}.`,
         "Start with the first collection section when you want the strongest subject match. Move through the adjacent sections to compare color, black and white, portrait, narrative, and room-direction options.",
         "Size, substrate, and edition details are inside each image page.",
@@ -655,19 +717,35 @@ function makePage({
       gatewayCollectionName: label,
       gatewayIntroCopy: gatewayIntroCopy || `${label} by Wayne Heim - ${subject} for living rooms, offices, lodges, ranch interiors, hospitality spaces, and collector walls.`,
       gatewaySupportingCopy: gatewaySupportingCopy || `These works begin as photography, then are shaped through Heim's painterly process into fine art with atmosphere, human presence, and collector-grade wall presence. The collection opens with the Sketch Series, 5x7 prints from ${getFormattedLowestStandardPrintPrice()} - sized for shelves, desks, and introductory collecting. It scales through open-edition Foundation works, signed Chronicle editions with numbered certificates, and ultra-limited Legend pieces for collectors who want permanence on the wall.\n\nClick into any section to compare prints, read the image story, and view collector and sizing details.`,
-      gatewayKicker: `K4 Studios - ${label} Catalog`,
+      gatewayKicker: gatewayKicker || `K4 Studios - ${label} Catalog`,
+      conceptBlock1Title,
+      conceptBlock1Copy,
+      conceptBlock2Title,
+      conceptBlock2Copy,
+      conceptBlock3Title,
+      conceptBlock3Copy,
+      conceptBlock4Title,
+      conceptBlock4Copy,
+      collectingKicker,
+      collectingTitle,
+      collectingCopy,
+      archiveContextKicker,
+      archiveContextTitle,
       gatewayHeroTitle: `${label} by Wayne Heim`,
       gatewayHeroAlt: `${label} hero image by Wayne Heim.`,
       gatewayHeroHref: `${heroPath}/${hero}`,
       gatewayHeroSrc: heroSrc || `/img/${hero}/m.jpg`,
       gatewayHeroSrcSet: heroSrc ? `${heroSrc} 720w` : `/img/${hero}/s.jpg 400w, /img/${hero}/m.jpg 720w`,
       gatewayHeroObjectPosition: heroObjectPosition || "center 28%",
-      archiveContextCopy: "Every work on this page is available as a fine art print - with the Sketch Series opening at $25. Click into any image to read the story, compare print options, sizes, and collector details. Questions about a specific piece? Reach Wayne directly at <a href='mailto:wayne@k4studios.com'>wayne@k4studios.com</a>.",
+      archiveContextCopy: archiveContextCopy ?? "Every work on this page is available as a fine art print - with the Sketch Series opening at $25. Click into any image to read the story, compare print options, sizes, and collector details. Questions about a specific piece? Reach Wayne directly at <a href='mailto:wayne@k4studios.com'>wayne@k4studios.com</a>.",
+      catalogSectionKicker,
+      cornerstoneVariant,
       faqKicker: "Print & Collector Questions",
       faqTitle: `${label} FAQ`,
     },
     faqItems: faqItems || faqFor(label, subject),
     gridSections,
+    layoutVariant,
   };
 }
 
@@ -678,6 +756,339 @@ const frontierCore = ["narrativeColor", "nativeColor", "cowboyColor", "narrative
 const interiorCore = ["cowboyColor", "landscapeWest", "mountains", "water"] as Array<keyof typeof sources>;
 
 export const commercialIntentPages = {
+  americanWesternArt: makePage({
+    pagePath: "/American-Western-Art",
+    label: "American Western Art",
+    title: "American Western Art - Fine Art Prints by Wayne Heim",
+    subject: "cowboy portraits, Native American portrait work, frontier narratives, and painterly Western art prints shaped by the American frontier",
+    sections: ["cowboyColor", "nativeColor", "narrativeColor", "cowboyBlackWhite", "nativeBlackWhite", "narrativeBlackWhite"],
+    hero: "i-LCspRF4",
+    heroPath: sources.narrativeColor.galleryPath,
+    leftDock: [
+      supportDock("Learn What Is Western Art", "/Blog/what-is-western-art", blogThumbs.westernArt),
+      supportDock("Explore Art of the American West", "/Art-of-the-American-West", "/img/i-89qzJ6S/s.jpg"),
+      supportDock("Learn What Is Cowboy Fine Art Photography", "/Blog/what-is-cowboy-fine-art-photography", blogThumbs.cowboy),
+      supportDock("Learn What Is Narrative Photography", "/Blog/what-is-narrative-photography", "/img/i-HfQ5NVR/s.jpg"),
+    ],
+    rightDock: [
+      supportDock("Learn Narrative Western Art vs Traditional Western Art", "/Blog/narrative-western-art-vs-traditional", "/img/i-LmpRvHw/s.jpg"),
+      supportDock("Learn What Is Western Cowboy Art", "/Blog/what-is-western-cowboy-art", "/img/i-7Mzzbvp/s.jpg"),
+      supportDock("Compare Decor Art and Fine Art", "/Blog/decor-art-vs-fine-art", blogThumbs.decor),
+      supportDock("Learn What Makes a Fine Art Print Worth Owning", "/Blog/what-makes-a-fine-art-print-worth-owning", blogThumbs.finePrint),
+    ],
+    dockCoreCount: 6,
+    currentDockTitle: "Explore American Western Art Collections",
+    archiveUrl: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West",
+    archiveName: "Wild West",
+    categoryCrumb: { href: "/Art-of-the-American-West", name: "Art of the American West" },
+    seoTitle: "American Western Art — Fine Art Prints by Wayne Heim | K4 Studios",
+    seoDescription: `American Western art prints by Wayne Heim — cowboy portraits, frontier narratives, and Indigenous portrait work in the tradition of Remington and Russell. Archival prints from ${getFormattedLowestStandardPrintPrice()} through signed limited editions for collector walls and rooms.`,
+    commercialH1: "The Collection — Five Series, 840+ Works",
+    deck: "Cowboy portraits, Native American portrait work, and frontier narrative scenes — American Western art organized for collectors, rooms, and the tradition behind the work.",
+    gatewayIntroCopy: "American Western art prints by Wayne Heim — cowboy portraits, Native American portrait work, frontier narratives, and story-driven Western imagery for living rooms, offices, lodges, ranch interiors, hospitality spaces, and collector walls.",
+    gatewaySupportingCopy: `These works begin as photography, then are shaped through Heim's painterly process into fine art with frontier character, human presence, and narrative weight. The collection opens with the Sketch Series, 5x7 prints from ${getFormattedLowestStandardPrintPrice()} - sized for shelves, desks, and introductory collecting. It scales through open-edition Foundation works, signed Chronicle editions with numbered certificates, and ultra-limited Legend pieces for collectors who want provenance and permanence on the wall.\n\nClick into any section to compare prints, read the image story, and view collector and sizing details.`,
+    collectionIntro: [
+      "American Western art at K4 Studios draws from the same visual lineage as Remington, Russell, and Wyeth — frontier character, human consequence, and the psychology of lives built before the legend — through a camera-based painterly process rather than paint and canvas. The subject is the same. The narrative intent is the same. The medium is different.",
+      "Start with the cowboy portrait sections when the work needs direct human presence and frontier character. Move into Native American portrait work when the Western story needs older ground, heritage, and quiet authority. Continue into the narrative sections when the wall calls for confrontation, aftermath, and story-led tension.",
+      "Size, substrate, and edition details are inside each image page.",
+    ].join("\n\n"),
+    faqItems: [
+      {
+        q: "What is American Western art on this page?",
+        a: [
+          "American Western art here means authored fine art prints rooted in the American frontier — cowboy portraits, frontier narrative scenes, and Indigenous portrait work shaped through a painterly photographic process into collector-grade imagery. Not decorative Western theme. Not mass-market prints. Authored work where every image carries a title, a story, and a named point of view.",
+        ],
+      },
+      {
+        q: "What subjects are featured in this American Western art collection?",
+        a: [
+          "Five subject series — color cowboy portraits, Native American color portrait work, color frontier narrative scenes, black and white cowboy portraits, and black and white frontier narrative scenes. Each series is organized separately so collectors can move directly into the subject and treatment that fits the room or the collection without sorting through unrelated work.",
+        ],
+      },
+      {
+        q: "How is this different from decorative Western wall art?",
+        a: [
+          "Decorative Western wall art uses frontier symbols — hats, horses, desert horizons — as shorthand for a look. Wayne Heim's American Western art treats the frontier as human territory: characters under pressure, stories mid-consequence, lives that earned the mythology rather than wearing it as costume. Every image carries a title, a story, and an authored point of view. The difference is whether the work holds a wall or simply fills it.",
+        ],
+      },
+      {
+        q: "Are these works available as fine art prints?",
+        a: [
+          `Yes. Every image on this page is available as a fine art print — archival paper or wood — with the Sketch Series opening at ${getFormattedLowestStandardPrintPrice()}. Click into any image to read the story, compare sizes, and view edition and collector details. Questions about a specific piece? Reach Wayne directly at wayne@k4studios.com.`,
+        ],
+      },
+      {
+        q: "What print formats are available?",
+        a: [
+          `Every image is available as archival paper or wood — including the Engrained Series on Baltic Birch panels where natural wood grain interacts with the image surface to deepen atmosphere and add material presence. The Sketch Series opens at ${getFormattedLowestStandardPrintPrice()}. Size and finish options are inside each image page.`,
+        ],
+      },
+      {
+        q: "Are the works signed or limited?",
+        a: [
+          `Selected works are offered as signed limited editions through the Chronicle Series — numbered certificates of authenticity included. The Legend Series is ultra-limited, very small runs for collectors who want documented provenance and permanent wall placement. Open-edition Sketch and Foundation works are available without edition constraints starting at ${getFormattedLowestStandardPrintPrice()}.`,
+        ],
+      },
+      {
+        q: "Where should I start if I am choosing by subject?",
+        a: [
+          "Start with the color cowboy portrait section for direct human presence and frontier character. Move into the Native American portrait section when the Western story needs older ground, heritage, and quiet authority. Continue into the frontier narrative sections — color first, then black and white — when the wall calls for story-driven atmosphere, confrontation, and unresolved consequence. Click into any image to read the story before deciding.",
+        ],
+      },
+      {
+        q: "What makes Wayne Heim's American Western art different from other Western artists?",
+        a: [
+          "Three things separate this work from other Western artists.",
+          "First, the painterly process — each image begins as photography then is shaped through tonal control, atmospheric finishing, and narrative structure into fine art with the presence of classic Western painting rather than straight documentation.",
+          "Second, the lineage — the work draws from the same visual tradition as Remington and Russell in subject and narrative intent. Remington didn't paint what happened. He painted the breath before the draw, the moment after the choice, the consequence still arriving. Russell did the same. Wayne Heim's work operates in that same register — not recording the West but telling its stories through implication, atmosphere, and the pressure of what hasn't resolved yet.",
+          "Third, the One-Image Movie architecture. Every work carries a title, an authored story, and a deliberate incompleteness — a moment held open so the viewer is pulled past the frame's edge into the unwritten chapter beyond it. The image doesn't explain itself. It asks the viewer to complete it. That is what Remington and Russell were doing in paint. That is what Wayne Heim is doing through the camera and the painterly process. No aggregator can build that. No stock library can either.",
+        ],
+      },
+    ],
+  }),
+  cinematicWesternArt: makePage({
+    pagePath: "/cinematic-western-art",
+    label: "Cinematic Western Art",
+    title: "Cinematic Western Art",
+    subject: "color and black and white frontier narrative scenes where withheld story, painterly light, and One-Image Movie structure carry cinematic Western pressure",
+    sections: ["cinematicNarrativeColor", "cinematicNarrativeBlackWhite"],
+    limits: {
+      cinematicNarrativeColor: 15,
+      cinematicNarrativeBlackWhite: 15,
+    },
+    hero: "i-LCspRF4",
+    heroPath: sources.narrativeColor.galleryPath,
+    layoutVariant: "cinematic-concept",
+    leftDock: [
+      supportDock("What Makes an Image Feel Cinematic?", "/Blog/what-makes-an-image-feel-cinematic", blogThumbs.cinematic),
+      supportDock("What Is Narrative Photography?", "/Blog/what-is-narrative-photography", "/img/i-HfQ5NVR/s.jpg"),
+      supportDock("Narrative Western Art vs Traditional Western Art", "/Blog/narrative-western-art-vs-traditional", "/img/i-LmpRvHw/s.jpg"),
+    ],
+    rightDock: [
+      supportDock("Can Photography Be Narrative Western Art?", "/Blog/can-photography-be-narrative-western-art", "/img/i-7Mzzbvp/s.jpg"),
+      supportDock("When the Medium Disappears", "/Blog/when-the-medium-disappears", "/img/i-qMQf7b6/s.jpg"),
+      supportDock("What Is the One-Image Movie?", "/Other/One-Image-Movie", "/img/i-B7ZSdfs/s.jpg"),
+    ],
+    dockCoreCount: 0,
+    centerDock: [],
+    currentDockTitle: "Narrative Story Library",
+    archiveUrl: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color",
+    archiveName: "Western Narratives",
+    categoryCrumb: { href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West", name: "Wild West" },
+    seoTitle: "Cinematic Western Art — Fine Art Prints by Wayne Heim | K4 Studios",
+    seoDescription: `Cinematic Western art in the tradition of Remington and Russell — not movie art, but the visual discipline that made the movies look the way they do. Frontier narrative prints where the viewer completes the story. The tradition continues. From ${getFormattedLowestStandardPrintPrice()}.`,
+    commercialH1: "The Collection — Two Narrative Series, 596 Works",
+    deck: "Color and black and white frontier narrative scenes where atmosphere, implication, and withheld story carry the cinematic pressure that Remington and Russell built into paint — and that Hollywood borrowed to build the Western film.",
+    gatewayKicker: "K4 Studios — Cinematic Western Art",
+    gatewayIntroCopy: "Not movie art. The tradition that made the movies look the way they do.",
+    gatewaySupportingCopy: `Search for "cinematic western art" and Google returns movie posters, film lists, and museum exhibitions about how Remington and Russell influenced Hollywood.\n\nThat is the right neighborhood. But it is looking backward.\n\nCinematic Western art is not a film genre and it is not a historical category. It is a living visual discipline — one that Remington and Russell established before Hollywood existed, that Hollywood borrowed wholesale, and that has been largely abandoned by the contemporary Western art world in favor of heroic spectacle and decorative frontier imagery.\n\nWayne Heim's work is a direct response to that abandonment. These are not photographs of Western subjects. They are authored narrative works built in the same tradition as Remington's A Misdeal — the painting so charged with unresolved story pressure that John Ford used it as a visual reference for decades of Western films. The withheld moment. The breath before the draw. The consequence still arriving.\n\nThat tradition didn't end with Remington. It just stopped being made.`,
+    archiveContextCopy: "Every work on this page is available as a fine art print — archival paper or wood — with the Sketch Series opening at $25. Click into any image to read the story, compare print options, sizes, and collector details. Questions about a specific piece? Reach Wayne directly at <a href='mailto:wayne@k4studios.com'>wayne@k4studios.com</a>.",
+    collectionIntro: "",
+    conceptBlock1Title: "The Tradition",
+    conceptBlock1Copy: `Remington and Russell were not painters of the West. They were narrative architects who used the West as their subject. Their most powerful images are not the ones that show you what the frontier looked like. They are the ones that make you feel what it was like to be inside a moment that hasn't finished yet.\n\nA Misdeal. A card game gone wrong. The gunman already in motion. The consequence still in the air. The viewer arrives after the trigger point and before the resolution — held in the pressure of what comes next, which the image refuses to show.\n\nJohn Ford studied Remington's paintings as storyboards. He wanted his films to have "the burned-out, brown look of a Remington painting." Spielberg collected Rockwell — fifty works — because, in his words, "He was always on my mind because I had a great deal of respect for how he could tell stories in a single frozen image. Entire stories."\n\nHollywood didn't invent the cinematic Western. It recognized something that painters had already built and borrowed it for the screen. The discipline of the withheld moment — the narrative pressure of a story held open rather than closed — was already fully developed in paint before a single frame of film was shot.\n\nThe color frontier narrative works below operate in that tradition. Each image holds a moment that refuses to close. Click into any image to read the authored story — and notice that the story deepens the uncertainty rather than resolving it.`,
+    conceptBlock2Title: "The Narrative Vacuum",
+    conceptBlock2Copy: `Walk through a major Western art auction today. Three hundred works. Paintings, bronzes, prints. Russell, Remington, the Taos painters — represented in the historical section, properly revered. Then the contemporary work. Landscapes of extraordinary technical skill. Portraits of dignity and presence. Cowboys rendered with photographic precision.\n\nBut the narrative is gone.\n\nContemporary Western art largely abandoned the discipline that made Russell and Remington matter — the unresolved moment, the story held in tension, the image that makes the viewer feel the weight of what isn't shown. What replaced it was heroic spectacle and decorative frontier imagery. Beautiful. Accomplished. And closed — images that deliver everything on first viewing and ask nothing in return.\n\nHemingway called his approach the iceberg theory. The dignity of movement comes from what is omitted. Seven-eighths of the story lives below the surface. What shows above the waterline is only what is needed to make the reader feel the full weight of what isn't shown. The key is that the writer knows the whole story — and chooses what single moment to show, trusting the submerged weight to press up through what is visible.\n\nRockwell understood the same principle in paint. His most powerful images are not the ones where everything is explained — they are the ones where a single interrupted gesture, a look caught mid-thought, or a pause before a decision reveals an entire interior world that the viewer constructs from their own experience.\n\nThe black and white narrative works below carry this principle in its most austere form. Without color warmth to lean on, the image must earn every response it produces through structure alone — shadow, silence, and the felt weight of what hasn't resolved.`,
+    conceptBlock3Title: "The One-Image Movie — Continuation, Not Homage",
+    conceptBlock3Copy: `Wayne Heim's One-Image Movie architecture is not an homage to Remington and Russell. It is a continuation of the same discipline through a different medium.\n\nEvery One-Image Movie is built to remain deliberately incomplete. The image opens the scene. The title turns the handle. The authored story lights the room — but does not close the door. The viewer steps through and completes the story with their own instinct, colored by their own life.\n\nThis is why no two people experience the same One-Image Movie in exactly the same way. The image reaches out. The viewer brings the rest. Memory, emotion, and lived history complete the circuit. The viewer is the final author of the story that lives beyond the frame's edge.\n\nCollectors who live with this work describe images as "scenes from a film I somehow remember" — moments that feel familiar before they can explain why. That is the signature of an image built to hold story pressure rather than deliver it.\n\nThese works are available as archival fine art prints — with the Sketch Series opening at ${getFormattedLowestStandardPrintPrice()}. The same narrative architecture lives in every edition, from the smallest shelf print to the ultra-limited Legend pieces built for permanent collector walls. The story doesn't scale with the size. It is fully present at every format.`,
+    faqItems: [
+      {
+        q: "What is cinematic Western art?",
+        a: [
+          "Cinematic Western art is not movie art or film-inspired illustration. It is the visual tradition that Remington and Russell established before Hollywood existed — where a single image carries the pressure of an unresolved story. A moment weighted with what came before and what is still arriving. Hollywood borrowed this visual language from Western painters. Wayne Heim's work continues it through a camera-based painterly process and the One-Image Movie architecture.",
+        ],
+      },
+      {
+        q: "Why does Google show movie results for this term?",
+        a: [
+          "Because cinema borrowed the visual language of Western painting so completely that the connection has been reversed in popular understanding. Remington and Russell were making cinematic images before cinema existed. John Ford studied Remington's paintings as visual references for his Western films. The cinematic Western didn't originate in Hollywood. It originated in paint — and in the discipline of leaving the story deliberately unresolved.",
+        ],
+      },
+      {
+        q: "What is the One-Image Movie and how does it relate to cinematic Western art?",
+        a: [
+          "The One-Image Movie is Wayne Heim's term for a narrative architecture where image, title, authored story, and deliberate incompleteness work together to pull the viewer past the frame's edge. The photograph opens the scene. The story deepens the uncertainty rather than resolving it. The viewer's own lived experience provides the resolution — differently every time. It is the same principle Remington used in A Misdeal — an open-ended moment so charged with story pressure that Hollywood used it as a storyboard for decades of Western films.",
+        ],
+      },
+      {
+        q: "How does the viewer become part of the story?",
+        a: [
+          "The image is deliberately incomplete. The authored story deepens the incompleteness rather than closing it. The viewer's instinct, memory, and lived experience complete the circuit — finishing the story in a way no two people do in exactly the same way. Hemingway called this the iceberg theory. Rockwell built it into his most powerful images. Wayne Heim builds it into the One-Image Movie architecture. The viewer is the final author of the story that lives beyond the frame.",
+        ],
+      },
+      {
+        q: "Why show only narrative sections on this page?",
+        a: [
+          "Cinematic Western art lives specifically in the narrative work — scenes built around consequence, implication, and story pressure rather than pure portrait character. Cowboy portraits carry their own cinematic quality, but they operate differently — through presence and atmosphere rather than unresolved narrative tension. This page stays with the narrative sections to keep the cinematic argument coherent and give collectors a clean route into the specific body of work that operates most fully in that register.",
+        ],
+      },
+      {
+        q: "Are these prints available as limited editions?",
+        a: [
+          `Yes. The Chronicle Series offers signed limited editions with numbered certificates of authenticity. The Legend Series is ultra-limited — very small runs for collectors who want documented provenance and permanent wall placement. The One-Image Movie architecture is fully present at every edition level, from the ${getFormattedLowestStandardPrintPrice()} Sketch Series through the ultra-limited Legend pieces. The story doesn't scale with the size.`,
+        ],
+      },
+      {
+        q: "Can cinematic Western art work in modern interiors?",
+        a: [
+          "Yes — and often more powerfully than conventional art. Because the One-Image Movie keeps opening rather than exhausting itself, it functions differently in a room over time. The story you complete today is different from the one you complete in six months. The black and white series integrates especially well in minimalist and contemporary spaces where tonal restraint and deep contrast provide the counterweight color work cannot.",
+        ],
+      },
+      {
+        q: "Where should I start if I'm new to this work?",
+        a: [
+          "Start with the color narrative section and read the story under the first image that stops you. Notice whether the story answers your questions or deepens them. If it deepens them — if you find yourself wondering what happened before the frame or what happens next — that's the One-Image Movie working. Move into the black and white section if you want that pressure without color warmth. For help choosing for a specific room, reach Wayne at wayne@k4studios.com.",
+        ],
+      },
+    ],
+  }),
+  artOfTheWest: makePage({
+    pagePath: "/Art-of-the-West",
+    label: "Art of the West",
+    title: "Art of the West",
+    subject: "frontier narratives, cowboy portraits, Native American portrait work, and Western landscapes carried as a living artistic tradition rather than decorative frontier imagery",
+    sections: ["narrativeColor", "cowboyColor", "nativeColor", "landscapeWest"],
+    limits: {
+      narrativeColor: 11,
+      cowboyColor: 11,
+      nativeColor: 11,
+      landscapeWest: 11,
+    },
+    hero: "i-B7ZSdfs",
+    heroPath: sources.narrativeColor.galleryPath,
+    layoutVariant: "cinematic-concept",
+    leftDock: [
+      supportDock("What Is Western Art?", "/Blog/what-is-western-art", blogThumbs.westernArt),
+      supportDock("Art of the American West", "/Art-of-the-American-West", "/img/i-89qzJ6S/s.jpg"),
+      supportDock("Narrative Western Art vs Traditional Western Art", "/Blog/narrative-western-art-vs-traditional", "/img/i-LmpRvHw/s.jpg"),
+    ],
+    rightDock: [
+      supportDock("What Is Painterly Photography?", "/Blog/what-is-painterly-photography", blogThumbs.painterly),
+      supportDock("What Makes a Fine Art Print Worth Owning?", "/Blog/what-makes-a-fine-art-print-worth-owning", blogThumbs.finePrint),
+      supportDock("What Is the One-Image Movie?", "/Other/One-Image-Movie", "/img/i-B7ZSdfs/s.jpg"),
+    ],
+    dockCoreCount: 0,
+    centerDock: [],
+    currentDockTitle: "Art of the West Reading Routes",
+    archiveUrl: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West",
+    archiveName: "Wild West",
+    categoryCrumb: { href: "/Blog/what-is-western-art", name: "Western Art" },
+    seoTitle: "Art of the West — Fine Art Prints by Wayne Heim | K4 Studios",
+    seoDescription: `Art of the west as a living practice — frontier narratives, cowboy portraits, Native American portrait work, and Western landscapes by Wayne Heim. The tradition continues. Prints from ${getFormattedLowestStandardPrintPrice()}.`,
+    commercialH1: "Four Working Routes Through the Tradition",
+    deck: "Frontier narratives, cowboy portraits, Native American portrait work, and Western landscapes organized as the living field behind the phrase.",
+    collectionIntro: "",
+    catalogSectionKicker: "{sectionCount} works in series",
+    gatewayKicker: "K4 STUDIOS — ART OF THE WEST",
+    gatewayIntroCopy: "Magazines write about it, museums preserve it and collectors carry it forward.",
+    gatewaySupportingCopy: `Search \"art of the west\" and you find magazines, museums, and galleries holding Remington, Russell, and Bierstadt in high regard. You find institutional definitions, curated collections, and the long historical record of Western fine art.
+
+All of that is the record of a tradition.
+
+But art of the west is also a literal phrase — and its literal meaning is larger than any magazine or museum can hold. It names the artistic field shaped by the American West itself: the land, the people who endured it, the histories that preceded and followed the frontier myth, and the long effort by serious artists to recover human weight from all of it.
+
+  * Wayne Heim and his unique painterly photography work was featured in Art of the West Magazine's March/April 2026 issue. This page is that work.`,
+    conceptBlock1Title: "WHAT THE PHRASE ORIGINALLY NAMED",
+    conceptBlock1Copy: `Before art of the west became a market category, it named something with philosophical weight — the serious artistic effort to understand the American West on its own terms rather than through legend alone.
+
+The West was not built by symbols. It created them. The rider on the horizon, the weathered face, the frontier town, the empty distance — all of these images came after real labor, risk, endurance, loss, and reinvention. Art of the West becomes serious when it remembers the human structure beneath the legend rather than trading in the legend itself.
+
+Remington understood this. His most powerful images are not the spectacular ones — the cavalry charges, the buffalo hunts rendered with technical bravado. They are the quiet ones. A single figure at dusk. A card game paused at the moment of decision. A rider crossing open ground toward something not yet visible. The consequence not yet arrived.
+
+Russell understood the same thing differently. His West was a place where people were trying to survive — Indigenous and settler, cowboy and laborer — under conditions that demanded more than spectacle could carry. The images that endure from both artists are the ones where the human structure beneath the legend is still visible.
+
+The frontier narrative works below are built in that register. Not the spectacular West. The pressured West — where something has already happened and something else is still arriving.`,
+    conceptBlock2Title: "THE TRADITION AND WHAT HAPPENED TO IT",
+    conceptBlock2Copy: `Walk through a major Western art auction today. The historical section holds the tradition intact — Russell, Remington, the Taos painters, Wyeth. Work where human consequence and narrative restraint carried the image beyond its subject.
+
+Then look at the contemporary section. Landscapes of extraordinary technical accomplishment. Portraits rendered with photographic precision. Cowboys and horses and open range captured at the peak of golden hour light.
+
+Beautiful. Accomplished. And largely closed — images that deliver everything on first viewing and ask nothing in return.
+
+The narrative discipline that made Russell and Remington matter — the withheld moment, the story held in tension, the image that presses the viewer to feel the weight of what isn't shown — largely disappeared from contemporary Western art. What replaced it was heroic spectacle and decorative frontier imagery dressed in the language of fine art.
+
+Spielberg collected fifty Rockwell paintings because, in his words, Rockwell had \"a great deal of respect for how he could tell stories in a single frozen image. Entire stories.\" That discipline — the Hemingway iceberg applied to paint and then to photography — is what Wayne Heim's cowboy portrait work attempts to carry forward.
+
+Not the icon. The person inside the icon. Not the hat and the horse and the horizon. The character who has lived long enough to carry the weather of a life in their face.`,
+    conceptBlock3Title: "THE WEST THE LEGEND EXCLUDED",
+    conceptBlock3Copy: `Art of the west is only a serious phrase when it acknowledges what the legend left out.
+
+The frontier myth was built around specific figures — the Anglo cowboy, the settler, the lawman, the outlaw. These figures are real and their stories matter. But the American West was never only their story. Indigenous nations had already shaped this land for thousands of years before the frontier arrived. Their presence, continuity, and cultural depth are not a footnote to Western art. They are its foundation.
+
+Russell knew this better than most of his contemporaries. He spent years among the Blackfoot people. His images of Indigenous life carry a witness quality that most frontier painters didn't attempt — not the noble savage of romantic imagination, but people living with the full complexity of their own cultural reality.
+
+The Native American portrait work at K4 Studios follows that discipline. These are not images of types or symbols. They are portraits of specific human presence — held with painterly restraint, authored respect, and the understanding that this story is older, deeper, and more continuous than the frontier myth that briefly overlaid it.
+
+Art of the west that excludes this ground is telling only part of the story. The part that was easier to mythologize.`,
+    conceptBlock4Title: "THE LAND AS EMOTIONAL GEOGRAPHY",
+    conceptBlock4Copy: `Bierstadt painted the Rockies as the equal of the European Alps — panoramic, sublime, overwhelming in scale. The West as spectacle. The land as argument for American grandeur.
+
+That tradition produced extraordinary images. It also produced a way of seeing Western landscape as scenery rather than as emotional territory — as backdrop for human stories rather than as active participant in them.
+
+The stronger Western landscape tradition treats the land differently. Not as scenery but as pressure — the geography that shaped every decision, tested every endurance, and outlasted every human attempt to master it. The Tetons don't announce themselves. They wait. Weather moves through mountain country without asking permission. Distance in the American West is not picturesque. It is a fact that changes how people think and what they can survive.
+
+Wayne Heim's landscape work attempts to hold that quality. Open country where the sky is not decoration but atmosphere. Mountains that carry scale and endurance rather than grandeur alone. Water that moves with consequence rather than beauty alone.
+
+Landscape as emotional geography. Not the West as backdrop. The West as the thing itself — shaping everything that happens in front of it.`,
+    collectingKicker: "The Collection",
+    collectingTitle: "The Collection — Four Print Series",
+    collectingCopy: `Art of the west as a living practice is available as fine art prints across four series.
+
+The Sketch Series opens at ${getFormattedLowestStandardPrintPrice()} — 5×7 archival prints sized for shelves, desks, and introductory collecting. The Foundation Series moves into larger open-edition archival works. The Chronicle Series offers signed limited editions with numbered certificates for collectors who want documented provenance. The Legend Series is ultra-limited — statement works for permanent collector walls.
+
+The tradition that Russell and Remington established and that serious Western collectors have been building around for generations is available as fine art prints. Starting at ${getFormattedLowestStandardPrintPrice()}. Built to last.`,
+    archiveContextCopy: "",
+    cornerstoneVariant: "post",
+    faqItems: [
+      {
+        q: "What is art of the west?",
+        a: [
+          "Art of the west names the serious artistic tradition rooted in the American West — its land, people, histories, and the long effort to recover human weight from the frontier legend. It includes painting, sculpture, and photography from the frontier period through today, covering cowboy portraits, Native American portrait work, frontier narratives, and Western landscapes. At K4 Studios it means authored fine art photography built in the tradition of Remington, Russell, and the Western narrative painters.",
+        ],
+      },
+      {
+        q: "What is the One-Image Movie and how does it relate to the Western art tradition?",
+        a: [
+          "The One-Image Movie is Wayne Heim's term for a narrative architecture where image, title, authored story, and deliberate incompleteness work together to pull the viewer past the frame's edge. It draws from the same discipline as Remington's most powerful paintings — the withheld moment, the story held in tension, the consequence not yet arrived. The medium is photography. The narrative intent is the same tradition.",
+        ],
+      },
+      {
+        q: "How does Wayne Heim's work relate to the Russell and Remington tradition?",
+        a: [
+          "Remington and Russell built the visual language of the American West around narrative restraint — the withheld moment, the story held in tension, the image that makes the viewer feel the weight of what isn't shown. Wayne Heim's work draws from that same discipline through a camera-based painterly process. The medium is different. The narrative intent and the authorship standard are the same.",
+        ],
+      },
+      {
+        q: "What subjects does this collection cover?",
+        a: [
+          "Four subject areas — frontier narrative scenes, cowboy portraits, Native American portrait work, and Western landscapes. Each carries a distinct emotional register while drawing from the same tradition of authored Western fine art. The full collection routes into deeper gallery pages for each subject.",
+        ],
+      },
+      {
+        q: "What makes this different from decorative Western art?",
+        a: [
+          "Decorative Western art uses frontier symbols as shorthand. Art of the west at K4 Studios treats the West as human territory — the land as emotional geography, the people as characters under pressure, the stories as unresolved narratives the viewer is asked to complete. Every image carries a title, an authored story, and a deliberate incompleteness that makes the work function differently on a wall over time.",
+        ],
+      },
+      {
+        q: "Are these prints available as limited editions?",
+        a: [
+          `Yes. The Chronicle Series offers signed limited editions with numbered certificates. The Legend Series is ultra-limited — very small runs for collectors who want documented provenance and permanent wall placement. Open-edition Sketch and Foundation works are available starting at ${getFormattedLowestStandardPrintPrice()}.`,
+        ],
+      },
+      {
+        q: "What print formats are available?",
+        a: [
+          "Every image is available as archival paper or wood — including the Engrained Series on Baltic Birch panels. The Engrained Series is particularly suited to Western subject matter — the natural wood grain adds material presence and a sense of permanence that complements the historical weight of the work. Size and edition details are inside each image page.",
+        ],
+      },
+      {
+        q: "Where should I start?",
+        a: [
+          `Start with the subject that carries the most personal weight. Frontier narrative for story-driven atmosphere where the One-Image Movie pulls you past the frame's edge. Cowboy portrait for direct human presence and frontier character. Native American portrait work for historically grounded restraint and deeper foundations. Western landscape for open country and emotional geography. The Sketch Series at ${getFormattedLowestStandardPrintPrice()} is the right entry point. For help choosing, reach Wayne at <a href='mailto:wayne@k4studios.com'>wayne@k4studios.com</a>.`,
+        ],
+      },
+    ],
+  }),
   wildWestArt: makePage({
     pagePath: "/wild-west-art",
     label: "Wild West Art",
