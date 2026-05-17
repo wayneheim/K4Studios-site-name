@@ -43,6 +43,18 @@ const siteUrl =
 
 const siteOrigin = siteUrl.origin;
 const canonicalOrigin = import.meta.env.PROD ? 'https://www.k4studios.com' : siteOrigin;
+const k4Person = {
+  '@type': 'Person',
+  '@id': 'https://www.k4studios.com/#person',
+  name: 'Wayne Heim',
+  url: 'https://www.k4studios.com/Other/Bio',
+};
+const k4Organization = {
+  '@type': 'Organization',
+  '@id': 'https://www.k4studios.com/#organization',
+  name: 'K4 Studios',
+  url: 'https://www.k4studios.com/',
+};
 
 const normalizeK4Host = (value) => {
   if (!value || typeof value !== 'string') return value;
@@ -331,7 +343,7 @@ const buildAutoWebPageSchema = () => {
       "@id": "https://www.k4studios.com/#website",
       name: "K4 Studios",
       url: "https://www.k4studios.com/",
-      publisher: { "@id": "https://www.k4studios.com/#organization" },
+      publisher: k4Organization,
     },
     primaryImageOfPage: ogImage
       ? {
@@ -340,8 +352,8 @@ const buildAutoWebPageSchema = () => {
           caption: ogAlt || finalTitle,
         }
       : undefined,
-    creator: { "@id": "https://www.k4studios.com/#person" },
-    publisher: { "@id": "https://www.k4studios.com/#organization" },
+    creator: k4Person,
+    publisher: k4Organization,
   };
 
   if (isGalleryRoute) {
@@ -350,8 +362,8 @@ const buildAutoWebPageSchema = () => {
       "@id": `${stripHash(canonicalUrl)}#imagegallery`,
       name: finalTitle,
       description: finalSeoDescription,
-      creator: { "@id": "https://www.k4studios.com/#person" },
-      publisher: { "@id": "https://www.k4studios.com/#organization" },
+      creator: k4Person,
+      publisher: k4Organization,
     };
   }
 
@@ -372,8 +384,8 @@ const buildAutoImageSchema = () => {
     contentUrl: ogImage || undefined,
     thumbnailUrl: twitterImage || ogImage || undefined,
     identifier: lastSegment,
-    creator: { "@id": "https://www.k4studios.com/#person" },
-    copyrightHolder: { "@id": "https://www.k4studios.com/#person" },
+    creator: k4Person,
+    copyrightHolder: k4Person,
     creditText: "Wayne Heim",
     copyrightNotice: "Copyright Wayne Heim, www.k4studios.com. All rights reserved.",
     license: "https://www.k4studios.com/licensing",

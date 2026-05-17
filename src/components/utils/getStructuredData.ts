@@ -134,13 +134,13 @@ const K4_PERSON_ID = "https://www.k4studios.com/#person";
 const K4_ORGANIZATION_ID = "https://www.k4studios.com/#organization";
 const K4_ORGANIZATION_URL = "https://www.k4studios.com/";
 const K4_ORGANIZATION_LOGO = "https://www.k4studios.com/images/K4Logo-web-c.webp";
-const K4_CREATOR_REF = { "@id": K4_PERSON_ID };
 const K4_CREATOR_PERSON = {
   "@type": "Person",
   "@id": K4_PERSON_ID,
   name: "Wayne Heim",
   url: "https://www.k4studios.com/Other/Bio",
 };
+const K4_CREATOR_REF = K4_CREATOR_PERSON;
 
 function buildArtworkOffer(data: any, fallbackAcquireLicensePage: string) {
   if (data?.commerce?.schema) {

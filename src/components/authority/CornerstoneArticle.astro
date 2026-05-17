@@ -50,6 +50,7 @@ interface SampleGroup {
 const {
   breadcrumb,
   title,
+  eyebrow = 'Western Art Guide',
   subtitle,
   summary,
   summaryParagraphs = [],
@@ -78,6 +79,7 @@ const {
 } = Astro.props as {
   breadcrumb: string;
   title: string;
+  eyebrow?: string;
   subtitle?: string;
   summary?: string;
   summaryParagraphs?: string[];
@@ -174,7 +176,7 @@ const normalizedSummaryParagraphs = summaryParagraphs.filter(Boolean);
 <article class="cornerstone-article">
   <header class="hero-shell">
     <div class="hero-copy">
-      <p class="eyebrow">Western Art Guide</p>
+      <p class="eyebrow">{eyebrow}</p>
       <h1>{title}</h1>
       {subtitle && <p class="subtitle" set:html={autoLinkContent(subtitle)} />}
       {normalizedSummaryParagraphs.length > 0 ? (

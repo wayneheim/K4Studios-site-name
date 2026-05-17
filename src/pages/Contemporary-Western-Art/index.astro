@@ -257,9 +257,9 @@ const webPageSchema = JSON.stringify({
     { "@type": "Thing", name: "Narrative Western Art" },
     { "@type": "Thing", name: "American Western Art" }
   ],
-  author: { "@id": "https://www.k4studios.com/#person" },
-  creator: { "@id": "https://www.k4studios.com/#person" },
-  copyrightHolder: { "@id": "https://www.k4studios.com/#person" },
+  author: { "@type": "Person", "@id": "https://www.k4studios.com/#person", name: "Wayne Heim", url: "https://www.k4studios.com/Other/Bio" },
+  creator: { "@type": "Person", "@id": "https://www.k4studios.com/#person", name: "Wayne Heim", url: "https://www.k4studios.com/Other/Bio" },
+  copyrightHolder: { "@type": "Person", "@id": "https://www.k4studios.com/#person", name: "Wayne Heim", url: "https://www.k4studios.com/Other/Bio" },
   mainEntity: { "@id": `https://www.k4studios.com${pagePath}#imagegallery` },
 }, null, 2);
 
