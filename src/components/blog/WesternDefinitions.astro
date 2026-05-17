@@ -7,13 +7,13 @@
  * 
  * Variants:
  * - "index"      → Full cornerstone card grid (Blog index page)
- * - "definition" → Numbered series nav (Definition pages 1-14)
+ * - "definition" → Numbered series nav (Definition pages 1-16)
  * - "post"       → Simple text link list (Regular blog posts)
  */
 
 interface Props {
   variant?: "index" | "definition" | "post";
-  currentPage?: number; // 1-16, used to highlight current page in definition variant
+  currentPage?: number; // 1-17, used to highlight current page in definition variant
 }
 
 const { variant = "post", currentPage } = Astro.props;
@@ -77,59 +77,66 @@ const cornerstonePages = [
   },
   {
     number: 9,
-    href: "/Blog/narrative-western-art-vs-traditional",
-    title: "Narrative Western Art vs Traditional Western Art",
-    description: "Where story, consequence, and lived experience separate from subject alone",
-    group: "narrative"
+    href: "/Blog/what-is-western-black-and-white-photography",
+    title: "What Is Western Black and White Photography?",
+    description: "Monochrome as structure - tone, contrast, restraint, and collector presence",
+    group: "disciplines"
   },
   {
     number: 10,
-    href: "/Blog/what-is-narrative-photography",
-    title: "What Is Narrative Photography?",
-    description: "Definition, structure, and why some photographs feel like lived moments",
-    group: "narrative"
-  },
-  {
-    number: 11,
-    href: "/Blog/what-makes-an-image-feel-cinematic",
-    title: "What Makes an Image Feel Cinematic?",
-    description: "Tension, implication, framing, and the felt presence of story",
-    group: "narrative"
-  },
-  {
-    number: 12,
-    href: "/Blog/can-photography-be-narrative-western-art",
-    title: "Can Photography Be Narrative Western Art?",
-    description: "Why medium does not determine narrative depth or artistic legitimacy",
-    group: "narrative"
-  },
-  {
-    number: 13,
-    href: "/Blog/narrative-vs-documentary-photography",
-    title: "Narrative vs Documentary Photography",
-    description: "How interpretation, implication, and record diverge inside the frame",
-    group: "narrative"
-  },
-  {
-    number: 14,
-    href: "/Blog/what-is-visual-storytelling-in-photography",
-    title: "What Is Visual Storytelling in Photography?",
-    description: "How a photograph moves beyond description and begins carrying story",
-    group: "narrative"
-  },
-  {
-    number: 15,
     href: "/Blog/what-is-historically-themed-photography",
     title: "What Is Historically Themed Photography?",
     description: "History as subject, story, and fine art interpretation",
     group: "disciplines"
   },
   {
+    number: 11,
+    href: "/Blog/narrative-western-art-vs-traditional",
+    title: "Narrative Western Art vs Traditional Western Art",
+    description: "Where story, consequence, and lived experience separate from subject alone",
+    group: "narrative"
+  },
+  {
+    number: 12,
+    href: "/Blog/what-is-narrative-photography",
+    title: "What Is Narrative Photography?",
+    description: "Definition, structure, and why some photographs feel like lived moments",
+    group: "narrative"
+  },
+  {
+    number: 13,
+    href: "/Blog/what-makes-an-image-feel-cinematic",
+    title: "What Makes an Image Feel Cinematic?",
+    description: "Tension, implication, framing, and the felt presence of story",
+    group: "narrative"
+  },
+  {
+    number: 14,
+    href: "/Blog/can-photography-be-narrative-western-art",
+    title: "Can Photography Be Narrative Western Art?",
+    description: "Why medium does not determine narrative depth or artistic legitimacy",
+    group: "narrative"
+  },
+  {
+    number: 15,
+    href: "/Blog/narrative-vs-documentary-photography",
+    title: "Narrative vs Documentary Photography",
+    description: "How interpretation, implication, and record diverge inside the frame",
+    group: "narrative"
+  },
+  {
     number: 16,
-    href: "/Blog/what-is-western-black-and-white-photography",
-    title: "What Is Western Black and White Photography?",
-    description: "Monochrome as structure - tone, contrast, restraint, and collector presence",
-    group: "disciplines"
+    href: "/Blog/what-is-visual-storytelling-in-photography",
+    title: "What Is Visual Storytelling in Photography?",
+    description: "How a photograph moves beyond description and begins carrying story",
+    group: "narrative"
+  },
+  {
+    number: 17,
+    href: "/Blog/what-is-cinematic-western-art",
+    title: "What Is Cinematic Western Art?",
+    description: "Story-driven Western fine art built from atmosphere, tension, and implied story",
+    group: "narrative"
   }
 ];
 
@@ -208,12 +215,12 @@ const cornerstonePages = [
           <p>Authored portraiture - craft, narrative, and psychological depth</p>
         </a>
         <a href="/Blog/what-is-western-black-and-white-photography" class="card">
-          <span class="num">16</span>
+          <span class="num">9</span>
           <h3>What Is Western Black and White Photography?</h3>
           <p>Monochrome as structure - tone, contrast, restraint, and collector presence</p>
         </a>
         <a href="/Blog/what-is-historically-themed-photography" class="card">
-          <span class="num">9</span>
+          <span class="num">10</span>
           <h3>What Is Historically Themed Photography?</h3>
           <p>History as subject, story, and fine art interpretation</p>
         </a>
@@ -231,34 +238,39 @@ const cornerstonePages = [
 
       <div class="cornerstone-grid">
         <a href="/Blog/narrative-western-art-vs-traditional" class="card">
-          <span class="num">10</span>
+          <span class="num">11</span>
           <h3>Narrative Western Art vs Traditional Western Art</h3>
           <p>Where story, consequence, and lived experience separate from subject alone</p>
         </a>
         <a href="/Blog/what-is-narrative-photography" class="card">
-          <span class="num">11</span>
+          <span class="num">12</span>
           <h3>What Is Narrative Photography?</h3>
           <p>Definition, structure, and why some photographs feel like lived moments</p>
         </a>
         <a href="/Blog/what-makes-an-image-feel-cinematic" class="card">
-          <span class="num">12</span>
+          <span class="num">13</span>
           <h3>What Makes an Image Feel Cinematic?</h3>
           <p>Tension, implication, framing, and the felt presence of story</p>
         </a>
         <a href="/Blog/can-photography-be-narrative-western-art" class="card">
-          <span class="num">13</span>
+          <span class="num">14</span>
           <h3>Can Photography Be Narrative Western Art?</h3>
           <p>Why medium does not determine narrative depth or artistic legitimacy</p>
         </a>
         <a href="/Blog/narrative-vs-documentary-photography" class="card">
-          <span class="num">14</span>
+          <span class="num">15</span>
           <h3>Narrative vs Documentary Photography</h3>
           <p>How interpretation, implication, and record diverge inside the frame</p>
         </a>
         <a href="/Blog/what-is-visual-storytelling-in-photography" class="card">
-          <span class="num">15</span>
+          <span class="num">16</span>
           <h3>What Is Visual Storytelling in Photography?</h3>
           <p>How a photograph moves beyond description and begins carrying story</p>
+        </a>
+        <a href="/Blog/what-is-cinematic-western-art" class="card">
+          <span class="num">17</span>
+          <h3>What Is Cinematic Western Art?</h3>
+          <p>Story-driven Western fine art built from atmosphere, tension, and implied story</p>
         </a>
       </div>
     </section>

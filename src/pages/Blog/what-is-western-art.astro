@@ -15,11 +15,12 @@ export const prerender = true;
 
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { getSemanticImageUrl } from "@/utils/imageProxy.js";
+import FAQAccordion from "@/components/FAQAccordion.jsx";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
 import WesternGuideNav from '@/components/authority/WesternGuideNav.astro';
-import { getBreadcrumbList, getStructuredData } from "@/components/utils/getStructuredData.ts";
+import { getBreadcrumbList, getFAQPageStructuredData, getStructuredData } from "@/components/utils/getStructuredData.ts";
 
 import "@/styles/global.css";
 
@@ -64,7 +65,44 @@ const image4 = {
 };
 
 const pageTitle = "What Is Western Art? History, Meaning, and Evolution";
-const pageDescription = "What is Western art? Explore its history, meaning, and evolution from frontier painting to contemporary Western fine art photography.";
+const pageDescription = "What is Western art? The American tradition, not European art history. Explore its history, meaning, and evolution from Remington and Russell through contemporary Western fine art photography.";
+
+const westernArtFaq = [
+  {
+    q: "What is Western art?",
+    a: "Western art is a visual tradition built around the landscapes, people, conflicts, and ideals of the American West. It is defined not by medium but by authorship, the artist's intent, composition, and engagement with the subject of the West. Its subjects include cowboys, frontier life, Native American portrait work, Western landscapes, and the historical and contemporary realities of life in the American West.",
+  },
+  {
+    q: "Is western art the same as European art history?",
+    a: "No. They share the word, but not the meaning. Western art in the art history context refers to the European painting tradition from ancient Greece through contemporary Europe. Western art in the American context refers to the visual tradition rooted in the American West, including cowboy portraits, frontier narratives, Indigenous portraiture, and Western landscapes. This article addresses the American tradition.",
+  },
+  {
+    q: "Who were the most important Western artists historically?",
+    a: "Frederic Remington and Charles M. Russell are foundational figures who established the visual language of the American West through frontier character, human consequence, and the narrative discipline of the withheld moment. Albert Bierstadt helped establish the landscape tradition. The Taos Society of Artists expanded the subject to include Indigenous life and New Mexico landscape. Norman Rockwell carried narrative Western sensibility into illustration with major influence on film and popular culture.",
+  },
+  {
+    q: "What defines Western art versus Western decor?",
+    a: "Western art is defined by authorship, intent, and compositional rigor. Western decor uses frontier symbols such as hats, horses, and desert horizons as shorthand for a look. What distinguishes art from decor is whether the work carries the artist's vision and rewards sustained viewing, or simply fills a space with familiar imagery.",
+  },
+  {
+    q: "Can photography be Western art?",
+    a: "Yes. The distinction between painting and photography as fine art mediums dissolved over the 20th century as institutions including MoMA, the Getty, and the Smithsonian elevated photography to equal footing with painting. What matters is not medium but authorship, whether the photographer brings intent, compositional discipline, and narrative depth to the subject.",
+  },
+  {
+    q: "What is the difference between Western art and frontier art?",
+    a: "Frontier art is a subset of Western art focused specifically on the frontier period, the late 19th century era of westward expansion, cattle drives, conflict, and settlement. Western art is broader, encompassing frontier history, contemporary ranch life, Indigenous cultural traditions, Western landscapes, and the ongoing meaning of the American West as subject and symbol.",
+  },
+  {
+    q: "Is Western art still being made today?",
+    a: "Yes. Contemporary Western artists work across painting, sculpture, and photography. Some continue the heroic tradition. Others explore modern ranch life, environmental tension, cultural identity, and the psychological weight of Western spaces. The subject has expanded, but the core themes of isolation, endurance, freedom, consequence, and land as both refuge and challenge remain central.",
+  },
+  {
+    q: "Where can I see contemporary Western art?",
+    a: "Major institutions including the National Cowboy and Western Heritage Museum, the Autry Museum of the American West, the Denver Art Museum's Petrie Institute, and the C.M. Russell Museum hold significant Western art collections. Contemporary Western fine art photography by Wayne Heim is available at K4 Studios through cowboy portraits, frontier narratives, Native American portrait work, and Western landscapes as archival fine art prints.",
+  },
+];
+
+const faqStructuredData = getFAQPageStructuredData(westernArtFaq, canonicalUrl);
 
 const structuredImageUrls = [
   getAbsoluteProxySrc(headerImages[2].id, "l"),
@@ -95,7 +133,7 @@ const structuredData = getStructuredData({
       name: "Wayne Heim"
     },
     datePublished: "2026-02-04",
-    dateModified: "2026-05-07",
+    dateModified: "2026-05-16",
     articleSection: "Art History",
     definedTerm: {
       name: "Western Art",
@@ -142,6 +180,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 <BaseLayout
   title={pageTitle}
   structuredDataJSON={structuredData}
+  extraStructuredDataJSON={faqStructuredData}
   breadcrumbsJSON={breadcrumbStructuredData}
   meta={meta}
 >
@@ -183,6 +222,10 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
     <!-- Article Content -->
     <section class="story-section max-w-[860px] mx-auto px-4">
       <article class="story-block space-y-4">
+
+        <div class="disambiguation-note">
+          <p><strong>A note on terminology:</strong> western art sometimes refers to the broader European artistic tradition: painting, sculpture, and architecture from ancient Greece through contemporary Europe. This article addresses Western art in the American sense, the visual tradition rooted in the landscapes, people, and history of the American West.</p>
+        </div>
 
         <!-- SECTION 1: Definition (THE ANCHOR) -->
         <p><strong>Western art</strong> is more than a style or a collection of familiar subjects. It is a visual language built around the landscapes, people, conflicts, and ideals of the American West. From early frontier paintings to contemporary photography, Western art reflects how each generation understands the land, the myth, and the reality behind it.</p>
@@ -331,7 +374,13 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
             <p>Yet beneath that mythology lies a deeper, quieter reality: the ordinary lives that held the frontier together. A growing number of contemporary Western artists are beginning to explore these overlooked narratives, shifting focus from legend to lived experience.</p>
 
+            <p>A quieter observation: walk through a major Western art auction today and something is absent. The technical accomplishment is extraordinary. The heroic imagery is impeccably rendered. But the narrative discipline that made Russell and Remington's most powerful images endure—the withheld moment, the story held in tension, the consequence still arriving—has largely disappeared from the contemporary Western canon.</p>
+
+            <p>What replaced it was spectacle and decorative frontier imagery dressed in the language of fine art. Beautiful. Accomplished. And closed: images that deliver everything on first viewing and ask nothing in return.</p>
+
             <p>Their work asks not only what the West looked like, but what it <em>felt</em> like to live there.</p>
+
+            <p>The quieter stories that contemporary Western art is beginning to recover are not just thematic expansions. They are a return to the narrative discipline the tradition was built on.</p>
 
             <p>This evolution does not erase the myth. It adds to it—expanding the Western tradition beyond spectacle and into reflection, ambiguity, and human experience.</p>
           </div>
@@ -371,6 +420,8 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
               <li style="margin-bottom:0.5rem;">Freedom and consequence</li>
               <li style="margin-bottom:0.5rem;">Land as both refuge and challenge</li>
             </ul>
+
+            <p>One contemporary approach worth noting is the <a href="/Other/One-Image-Movie" style="color:#8b5a2b; text-decoration:underline;">One-Image Movie</a>: a narrative architecture where a single photograph carries the pressure of an unresolved story, pulling the viewer past the frame's edge into the unwritten chapter beyond it. It draws from the same discipline as Remington's most powerful images, the withheld moment, the story held open rather than closed. The medium is photography. The narrative intent is the same tradition.</p>
 
             <p>Western art is no longer just about history. It is about the ongoing meaning of the West.</p>
 
@@ -430,6 +481,12 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
             <a href="/Galleries/Painterly-Fine-Art-Photography/Landscapes" style="color:#8b5a2b; font-weight:600; text-decoration:underline;">Western Landscapes</a> — The land as emotional environment
           </li>
         </ul>
+
+        <div class="section-heading-with-line">
+          <h2>Western Art FAQ</h2>
+        </div>
+
+        <FAQAccordion items={westernArtFaq} showHeading={false} />
 
       </article>
     </section>
@@ -528,6 +585,15 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
   /* Story block typography */
   .story-section { line-height: 1.7; }
+  .disambiguation-note {
+    margin: 0 0 1.75rem;
+    padding: 1rem 1.1rem;
+    background: #f5f1e8;
+    border-left: 4px solid #8b5a2b;
+    border-radius: 6px;
+    color: #3b342d;
+  }
+  .disambiguation-note p { margin: 0; }
   .story-block p { margin-bottom: 1rem; font-size: clamp(1rem, 2.5vw, 1.125rem); }
   .story-block h2 { 
     margin-top: 0;

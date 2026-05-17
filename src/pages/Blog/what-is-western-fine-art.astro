@@ -16,10 +16,11 @@ export const prerender = true;
 
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { getSemanticImageUrl } from "@/utils/imageProxy.js";
+import FAQAccordion from "@/components/FAQAccordion.jsx";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
-import { getBreadcrumbList, getStructuredData } from "@/components/utils/getStructuredData.ts";
+import { getBreadcrumbList, getFAQPageStructuredData, getStructuredData } from "@/components/utils/getStructuredData.ts";
 
 import "@/styles/global.css";
 
@@ -85,6 +86,31 @@ const nativeAmericanDeepImage = {
 
 const pageTitle = "What Is Western Fine Art? Definition, Meaning, and Why It Matters";
 const pageDescription = "What is Western fine art? Learn how authorship, intent, and compositional restraint distinguish it across painting, photography, sculpture, and other media.";
+
+const westernFineArtFaq = [
+  {
+    q: "What makes Western fine art different from Western art in general?",
+    a: "Western art is the broader visual tradition of the American West, including illustration, decor, film imagery, documentary work, and fine art. Western fine art is the authored core within that larger tradition. It is work shaped by intent, composition, narrative depth, and restraint rather than by subject matter alone.",
+  },
+  {
+    q: "Can Western photography qualify as Western fine art?",
+    a: "Yes. Photography can qualify as Western fine art when it meets the same threshold long applied to painting: authorial vision, compositional rigor, narrative restraint, and a serious engagement with the subject. The medium does not decide the category. The standard of authorship does.",
+  },
+  {
+    q: "Is Western fine art only about cowboys and frontier scenes?",
+    a: "No. Cowboy subjects are part of the tradition, but Western fine art also includes landscapes, Native American portraiture, frontier architecture, ranch life, and contemporary Western themes. What unifies the category is not a fixed set of icons, but the artist's ability to shape meaning through the subject of the West.",
+  },
+  {
+    q: "How is Western fine art different from Western decor?",
+    a: "Western decor uses familiar frontier imagery to create a look. Western fine art uses composition, intent, and authorship to create enduring artistic meaning. Decor fills space with recognizable symbols. Fine art rewards sustained viewing and holds up as part of a larger cultural tradition.",
+  },
+  {
+    q: "Why does the label Western fine art matter?",
+    a: "The label matters because it separates authored work from mass-market imagery, tourist art, and documentary-only treatment. For collectors, curators, and artists, that distinction affects how the work is valued, exhibited, collected, and understood within the broader history of Western art.",
+  },
+];
+
+const faqStructuredData = getFAQPageStructuredData(westernFineArtFaq, canonicalUrl);
 
 const structuredImageUrls = [
   getAbsoluteProxySrc(headerImage.id, "l"),
@@ -169,6 +195,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 <BaseLayout
   title={pageTitle}
   structuredDataJSON={structuredData}
+  extraStructuredDataJSON={faqStructuredData}
   breadcrumbsJSON={breadcrumbStructuredData}
   meta={meta}
 >
@@ -399,6 +426,8 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
         <p>And for artists, the distinction is existential. To be classified as fine art is to participate in a tradition rather than be dismissed by it.</p>
 
+        <p>For a deeper look at what that tradition actually is, its history, the figures who built it, and where it stands today, see <a href="/Blog/what-is-western-art" style="color:#8b5a2b; text-decoration:underline;">What Is Western Art?</a>.</p>
+
         <!-- SECTION 8: Explore -->
         <div class="section-heading-with-line">
           <h2>Explore Western Fine Art at K4 Studios</h2>
@@ -421,6 +450,12 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         </ul>
 
         <p>Each collection treats the West not as backdrop, but as subject—worthy of the same artistic seriousness applied to any other genre of fine art.</p>
+
+        <div class="section-heading-with-line">
+          <h2>Frequently Asked Questions</h2>
+        </div>
+
+        <FAQAccordion items={westernFineArtFaq} showHeading={false} />
 
       </article>
     </section>

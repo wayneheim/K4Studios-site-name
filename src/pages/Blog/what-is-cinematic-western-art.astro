@@ -1,0 +1,516 @@
+---
+export const prerender = true;
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getSemanticImageUrl } from "@/utils/imageProxy.js";
+import FAQAccordion from "@/components/FAQAccordion.jsx";
+import LandingHeader from "@/components/Landing-Header.jsx";
+import SiteFooter from "@/components/Footer.astro";
+import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
+import { getBreadcrumbList, getFAQPageStructuredData, getStructuredData } from "@/components/utils/getStructuredData.ts";
+
+import "@/styles/global.css";
+
+const sectionPath = "/Blog/what-is-cinematic-western-art";
+const canonicalUrl = `https://www.k4studios.com${sectionPath}`;
+
+const getProxySrc = (id: string, size: string = "l") => getSemanticImageUrl(id, {}, size);
+const getAbsoluteProxySrc = (id: string, size: string = "l") => getSemanticImageUrl(id, {}, size, { absolute: true });
+
+const headerImage = {
+  id: "i-LL2Gp5r",
+  src: getProxySrc("i-LL2Gp5r", "l"),
+  alt: "Cinematic Western narrative artwork with figures gathered before a halted night train"
+};
+
+const image1 = {
+  id: "i-DczpNpH",
+  src: getProxySrc("i-DczpNpH", "l"),
+  alt: "Western figure held in directional light with unresolved tension"
+};
+
+const image2 = {
+  id: "i-3SxncXS",
+  src: getProxySrc("i-3SxncXS", "l"),
+  alt: "Story-driven Western scene shaped by atmosphere, silence, and suspense"
+};
+
+const image3 = {
+  id: "i-gxMVNh3",
+  src: getProxySrc("i-gxMVNh3", "l"),
+  alt: "Painterly Western landscape carrying emotional pressure and cinematic atmosphere"
+};
+
+const pageTitle = "What Is Cinematic Western Art? Story-Driven Western Fine Art";
+const pageDescription = "Cinematic Western art uses light, composition, atmosphere, and implied story to turn the American West into a charged visual moment. Learn how it differs from traditional Western art and why K4 Studios calls many works One-Image Movies.";
+const ogTitle = "What Is Cinematic Western Art?";
+const ogDescription = "Cinematic Western art is not simply Western art that looks like a movie. It is story-driven Western fine art built from light, silence, atmosphere, gesture, and the unresolved human moment.";
+const keywordList = [
+  "cinematic western art",
+  "western fine art",
+  "narrative western art",
+  "story-driven western art",
+  "painterly western photography",
+  "western artwork",
+  "cowboy art",
+  "One-Image Movie",
+  "frontier art",
+  "American West art"
+];
+
+const cinematicWesternArtFaq = [
+  {
+    q: "What does cinematic Western art mean?",
+    a: "Cinematic Western art is Western art built with the visual language of film. It uses light, composition, atmosphere, character, and implied story to make the image feel like a charged moment from a larger narrative.",
+  },
+  {
+    q: "How is cinematic Western art different from traditional Western art?",
+    a: "Traditional Western art often focuses on recognizable subjects of the American West, such as cowboys, horses, frontier towns, ranch life, and open landscapes. Cinematic Western art may use those same subjects, but it emphasizes story, tension, silence, and the feeling of what happened before and what may happen next.",
+  },
+  {
+    q: "Is cinematic Western art the same as Western movie art?",
+    a: "No. Cinematic Western art is not simply art based on Western movies. It may draw from film language, but it can exist in painting, photography, illustration, or mixed media. The key is not the movie reference. The key is the sense of scene, atmosphere, and implied story.",
+  },
+  {
+    q: "Can photography be cinematic Western art?",
+    a: "Yes. A Western photograph can become cinematic Western art when it is shaped through composition, light, timing, atmosphere, and narrative restraint. The camera captures the scene, but the artist's choices determine whether the final work feels documentary, decorative, or cinematic.",
+  },
+  {
+    q: "What is a One-Image Movie?",
+    a: "A One-Image Movie is K4 Studios' term for a single artwork built to feel like part of a larger story. The image, title, written story, and viewer imagination work together, creating the feeling of a film contained in one frame.",
+  },
+];
+
+const faqStructuredData = getFAQPageStructuredData(cinematicWesternArtFaq, canonicalUrl);
+
+const structuredImageUrls = [
+  getAbsoluteProxySrc(headerImage.id, "l"),
+  getAbsoluteProxySrc(image1.id, "l"),
+  getAbsoluteProxySrc(image2.id, "l"),
+  getAbsoluteProxySrc(image3.id, "l"),
+];
+
+const breadcrumbStructuredData = getBreadcrumbList(
+  [
+    { name: "Home", item: "https://www.k4studios.com" },
+    { name: "Blog", item: "https://www.k4studios.com/Blog" },
+    { name: "Narrative & Story", item: "https://www.k4studios.com/Blog#narrative-story" },
+    { name: "What Is Cinematic Western Art?", item: canonicalUrl },
+  ],
+  `${canonicalUrl}#breadcrumb`
+);
+
+const structuredData = getStructuredData({
+  type: "BlogPosting",
+  data: {
+    headline: ogTitle,
+    description: "Cinematic Western art uses light, composition, atmosphere, and implied story to turn the American West into a charged visual moment.",
+    url: canonicalUrl,
+    image: structuredImageUrls,
+    copyrightNotice: "Copyright Wayne Heim",
+    author: {
+      "@type": "Person",
+      name: "Wayne Heim"
+    },
+    datePublished: "2026-05-16",
+    dateModified: "2026-05-16",
+    articleSection: "Narrative & Story",
+    keywords: keywordList,
+    about: [
+      { "@type": "Thing", name: "Cinematic Western art" }
+    ],
+    mentions: [
+      { "@type": "Thing", name: "Western fine art" },
+      { "@type": "Thing", name: "painterly photography" },
+      { "@type": "Thing", name: "narrative art" },
+      { "@type": "Thing", name: "One-Image Movie" },
+      { "@type": "Thing", name: "American West" }
+    ]
+  },
+  defaults: {
+    copyrightNotice: "Copyright Wayne Heim",
+    license: "https://www.k4studios.com/copyright",
+    creditText: "Wayne Heim",
+    creatorName: "Wayne Heim",
+    creatorUrl: "https://www.k4studios.com/"
+  }
+});
+
+const meta = {
+  description: pageDescription,
+  keywords: keywordList.join(", "),
+  ogTitle,
+  ogDescription,
+  ogType: "article",
+  ogUrl: canonicalUrl,
+  ogImage: getAbsoluteProxySrc(headerImage.id, "l"),
+  twitterTitle: ogTitle,
+  twitterDescription: ogDescription,
+  twitterUrl: canonicalUrl,
+  twitterImage: getAbsoluteProxySrc(headerImage.id, "l"),
+  twitterCard: "summary_large_image"
+};
+
+const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-decoration: none;' onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Blog</a> › What Is Cinematic Western Art?`;
+---
+
+<BaseLayout
+  title={pageTitle}
+  structuredDataJSON={structuredData}
+  extraStructuredDataJSON={faqStructuredData}
+  breadcrumbsJSON={breadcrumbStructuredData}
+  meta={meta}
+>
+  <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
+    <div class="drawer-mode">
+      <LandingHeader client:load breadcrumb={blogBreadcrumb} />
+    </div>
+
+    <section class="hero-image-wrap">
+      <img src={headerImage.src} alt={headerImage.alt} loading="eager" class="hero-image" />
+    </section>
+
+    <section style="text-align:center; padding:2rem 1rem 2rem;">
+      <h1 style="font-size:clamp(1.75rem, 5vw, 2.5rem); font-weight:700; margin-bottom:0.5rem; line-height:1.2;">
+        What Is Cinematic Western Art?
+      </h1>
+      <p style="font-size:clamp(1rem, 3vw, 1.25rem); color:#666; font-style:italic;">
+        Story-driven Western fine art built from light, silence, atmosphere, gesture, and unresolved consequence
+      </p>
+      <p style="font-size:0.95rem; color:#888; margin-top:0.75rem; letter-spacing:0.02em; max-width:48rem; margin-left:auto; margin-right:auto;">
+        Cinematic Western art is not simply Western art that looks like a movie. It is story-driven Western fine art built from light, silence, atmosphere, gesture, and the unresolved human moment.
+      </p>
+    </section>
+
+    <section class="story-section max-w-[860px] mx-auto px-4">
+      <article class="story-block space-y-4">
+        <p><strong>Cinematic Western art</strong> is Western art built with the visual and emotional language of film: composition, light, atmosphere, gesture, silence, and the feeling that a larger story exists just outside the frame.</p>
+
+        <p>It does not simply show the American West. It stages a moment.</p>
+
+        <p>A rider pauses before entering town. A figure stands in a doorway with more shadow behind him than road ahead. A woman looks away from the camera as if the real event has already happened. A lone cowboy holds still, but the image does not. It seems to lean forward. Something has happened. Something may happen next. The viewer is left inside the pause.</p>
+
+        <p>That is the heart of cinematic Western art.</p>
+
+        <p>It is not only about cowboys, horses, dust, frontier towns, wide skies, or weathered buildings. Those may be the visible materials. The deeper subject is consequence. Cinematic Western art turns the West into a scene charged with memory, pressure, character, and unresolved story.</p>
+
+        <div class="section-heading-with-line">
+          <h2>Cinematic Western Art Is Not Just Art That Looks Like a Movie</h2>
+        </div>
+
+        <p>The word "cinematic" is often used loosely. Sometimes it means dramatic lighting. Sometimes it means a wide frame, a color grade, or a scene that resembles a film still.</p>
+
+        <p>But cinematic Western art is not simply Western art with a movie look.</p>
+
+        <p>A truly cinematic image behaves like a scene. It gives the viewer enough visual information to enter the moment, but not enough to finish it. The image withholds. It implies a before and after. It makes the viewer feel that the frame is part of a larger story, even if that story is never fully explained.</p>
+
+        <p>That difference matters.</p>
+
+        <p>A traditional Western image may show a cowboy, a horse, a campfire, a mountain pass, or a frontier street. A cinematic Western image may contain those same things, but it arranges them around tension. The subject is no longer only "a cowboy." The subject becomes the decision, the silence, the distance between people, the light falling across a threshold, or the moment before action becomes irreversible.</p>
+
+        <p>Cinematic Western art asks a different question.</p>
+
+        <p><strong>Not simply:</strong> What is this?</p>
+
+        <p><strong>But:</strong> What is happening here?</p>
+
+        <div class="section-heading-with-line">
+          <h2>The Western Was Cinematic Before Cinema Claimed It</h2>
+        </div>
+
+        <p>The American West has always lived partly in reality and partly in image.</p>
+
+        <p>Long before film became the dominant visual language of the frontier, Western painters, illustrators, photographers, and storytellers were already shaping the West as drama. The great Western tradition did not merely record people and places. It arranged conflict, weather, movement, danger, labor, solitude, myth, survival, and moral pressure into memorable scenes.</p>
+
+        <p>Frederic Remington and Charles M. Russell helped define the visual mythology of the West through action, silhouette, gesture, and atmosphere. Their works often feel staged at the moment of greatest pressure: the charge, the chase, the warning, the standoff, the uneasy pause before violence or escape.</p>
+
+        <p>That is one reason their work still feels alive. They understood that a Western image gains power when it suggests motion beyond the frame.</p>
+
+        <p>The viewer does not only look at the horse, the rider, or the landscape. The viewer senses pursuit, danger, pride, fear, exhaustion, weather, and fate.</p>
+
+        <p>That is a cinematic instinct, even when the medium is paint.</p>
+
+        <p>The same principle runs through later forms of American visual storytelling. Norman Rockwell built entire human dramas into single-frame compositions. A face, a hand, a doorway, a table, or a glance could carry the emotional architecture of a larger story. Ernest Hemingway did something similar in prose through restraint and omission. He often left the deepest force of the story beneath the visible surface.</p>
+
+        <p>Cinematic Western art draws from this same family of ideas.</p>
+
+        <p>What is left unsaid can be as important as what is shown.</p>
+
+        <div class="section-heading-with-line">
+          <h2>The Single Frame as a Story Engine</h2>
+        </div>
+
+        <p>A cinematic Western image does not need to explain itself completely. In fact, its strength often depends on what it refuses to explain.</p>
+
+        <p>The viewer may not know exactly who the figure is, where he came from, what choice she has made, or what waits beyond the edge of the image. But the image must create enough pressure that the viewer wants to know.</p>
+
+        <p>That pressure is the story engine.</p>
+
+        <p>A strong cinematic Western image usually contains several of these qualities:</p>
+
+        <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 1.5rem;">
+          <li style="margin-bottom:0.5rem;">A clear visual stage.</li>
+          <li style="margin-bottom:0.5rem;">A figure or subject under some kind of emotional, moral, physical, or historical pressure.</li>
+          <li style="margin-bottom:0.5rem;">Light that does more than illuminate - it reveals, conceals, divides, or judges.</li>
+          <li style="margin-bottom:0.5rem;">Composition that directs the eye like a camera.</li>
+          <li style="margin-bottom:0.5rem;">Atmosphere that makes the scene feel lived in rather than merely arranged.</li>
+          <li style="margin-bottom:0.5rem;">A sense of before and after.</li>
+          <li style="margin-bottom:0.5rem;">A charged silence.</li>
+        </ul>
+
+        <p>That silence is important. Many cinematic Western images are not loud. They do not need a gunfight, a galloping horse, or a dramatic confrontation. Sometimes the most cinematic moment is the pause after the decision has already been made.</p>
+
+        <p>The viewer arrives late. Or too early.</p>
+
+        <p>Either way, the image is not finished.</p>
+
+        <div class="section-heading-with-line">
+          <h2>Cinematic Western Art vs. Traditional Western Art</h2>
+        </div>
+
+        <p>Traditional Western art often centers recognizable subjects of the American West: cowboys, horses, ranch life, frontier towns, Native people, soldiers, settlers, landscapes, wagons, tools, weather, and open country.</p>
+
+        <p>At its best, traditional Western art can be powerful, historically meaningful, and visually beautiful. It preserves identity, place, memory, and myth.</p>
+
+        <p>Cinematic Western art does not reject that tradition. It builds from it.</p>
+
+        <p>The difference is emphasis.</p>
+
+        <p>Traditional Western art may ask the viewer to admire the subject.</p>
+
+        <p>Cinematic Western art asks the viewer to enter the moment.</p>
+
+        <p>A cowboy portrait becomes more than a portrait when the posture suggests burden, defiance, regret, suspicion, or restraint. A frontier street becomes more than a setting when the light, distance, and arrangement of figures suggest something unresolved. A Western landscape becomes more than scenery when it feels like a witness to human passage, loss, or decision.</p>
+
+        <p>The cinematic image does not simply say, "This is the West."</p>
+
+        <p>It says, "Something happened here."</p>
+
+        <p>Or: "Something is about to."</p>
+
+        <div class="section-heading-with-line">
+          <h2>The Role of Light, Atmosphere, and Composition</h2>
+        </div>
+
+        <p>Cinematic Western art depends heavily on structure.</p>
+
+        <p>Light is not only decorative. It becomes a storytelling force.</p>
+
+        <p>A hard shaft of light through a doorway can separate safety from danger. A low evening glow can turn a rider into memory. A face half-hidden in shadow can suggest divided intent. Dust, smoke, weather, and darkness can make the scene feel less like an illustration of an idea and more like a remembered fragment of lived experience.</p>
+
+        <p>Composition also carries meaning.</p>
+
+        <p>Where a figure stands in the frame matters. What the figure faces matters. What is hidden matters. Empty space matters. The distance between two people may say more than their expressions. A doorway, fence line, street, window, or horizon can become a visual sentence.</p>
+
+        <p>In cinematic Western art, the frame is not a container.</p>
+
+        <p>It is part of the story.</p>
+
+        <p>The artist decides what the viewer may see, what must be withheld, and where the imagination is allowed to continue.</p>
+
+        <div class="example-images">
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${image1.id}`}>
+              <img src={image1.src} alt={image1.alt} loading="lazy" />
+            </a>
+            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
+              Directional light and gesture carrying consequence beyond the visible moment
+            </figcaption>
+          </figure>
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${image2.id}`}>
+              <img src={image2.src} alt={image2.alt} loading="lazy" />
+            </a>
+            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
+              Atmosphere and spacing turning a Western setup into an unresolved scene
+            </figcaption>
+          </figure>
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${image3.id}`}>
+              <img src={image3.src} alt={image3.alt} loading="lazy" />
+            </a>
+            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
+              Landscape treated as emotional structure rather than scenic background
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="section-heading-with-line">
+          <h2>Cinematic Western Photography</h2>
+        </div>
+
+        <p>Cinematic Western photography occupies a particularly interesting place in this tradition because the camera begins with reality.</p>
+
+        <p>The people, clothing, horses, buildings, dust, tools, landscapes, and light all exist in front of the lens. But the final artwork is not merely a document of what was there. Through timing, staging, composition, atmosphere, post-production, texture, tone, and restraint, the photograph can be shaped into something closer to narrative art.</p>
+
+        <p>This is especially true in <a href="/Painterly-Western-Photography" style="color:#8b5a2b; text-decoration:underline;">painterly Western photography</a>, where the image may begin as a camera-captured scene but is refined toward a more atmospheric, expressive, and timeless result.</p>
+
+        <p>The goal is not to make a photograph look artificially old. Nor is it simply to imitate painting.</p>
+
+        <p>The goal is to use the camera, the trained eye, and the artist's hand to create a Western image with the emotional gravity of a scene.</p>
+
+        <p>A cinematic Western photograph may still be truthful to the materials in front of the lens. But its deeper truth is not only documentary. It is narrative, psychological, and atmospheric.</p>
+
+        <p>It shows the West as something remembered, performed, inherited, questioned, and reimagined.</p>
+
+        <div class="section-heading-with-line">
+          <h2>The One-Image Movie&trade;</h2>
+        </div>
+
+        <p>At K4 Studios, many works are built around the idea of the <a href="/One-Image-Movie" style="color:#8b5a2b; text-decoration:underline;">One-Image Movie&trade;</a>.</p>
+
+        <p>A One-Image Movie is a single image designed to feel like part of a larger film the viewer has entered mid-scene. The artwork does not tell the whole story. It gives the viewer a charged moment, then leaves enough space for imagination to continue beyond the frame.</p>
+
+        <p>The image, title, story, and viewer participation work together.</p>
+
+        <p>The photograph provides the visible world.</p>
+
+        <p>The title opens a door.</p>
+
+        <p>The written story may deepen the tension, shift the emotional temperature, or suggest a hidden conflict.</p>
+
+        <p>But the viewer completes the scene.</p>
+
+        <p>That is where cinematic Western art becomes more than style. It becomes a participatory form of storytelling.</p>
+
+        <p>The artwork does not simply present a finished answer. It creates an encounter. Each viewer brings memory, instinct, suspicion, sympathy, fear, and imagination into the image. The story changes slightly depending on who is looking.</p>
+
+        <p>That is part of the power.</p>
+
+        <p>A cinematic Western image can feel familiar because it draws from the shared mythology of the West. But it can also feel personal because it leaves room for the viewer's own unfinished story to enter.</p>
+
+        <div class="section-heading-with-line">
+          <h2>Why Cinematic Western Art Matters Now</h2>
+        </div>
+
+        <p>The American West is one of the most overused visual languages in American culture.</p>
+
+        <p>Cowboys, saloons, horses, boots, guns, deserts, sunsets, and frontier towns can easily become decoration or cliche. The imagery is familiar enough that people may think they already know what it means before they have really looked.</p>
+
+        <p>Cinematic Western art slows that reaction down.</p>
+
+        <p>It asks the viewer to look again.</p>
+
+        <p>A cowboy is not only an icon. He may be tired, cornered, guilty, proud, afraid, or alone.</p>
+
+        <p>A frontier town is not only a nostalgic backdrop. It may be a place of judgment, survival, performance, danger, or fragile hope.</p>
+
+        <p>A Western portrait is not only a costume study. It may be a character caught between who they are, who they pretend to be, and what the world demands of them.</p>
+
+        <p>This is why cinematic Western art remains valuable. It gives the old visual language new pressure. It does not discard the myth of the West, but it refuses to leave the myth untouched.</p>
+
+        <p>It looks for the human structure underneath.</p>
+
+        <div class="section-heading-with-line">
+          <h2>Cinematic Western Art at K4 Studios</h2>
+        </div>
+
+        <p>K4 Studios approaches cinematic Western art through camera-captured scenes shaped with a painterly, narrative eye.</p>
+
+        <p>The work often begins with living historians, real locations, period clothing, frontier settings, and carefully observed light. But the final image is not meant to function only as reenactment photography or historical documentation.</p>
+
+        <p>The aim is to create Western fine art with atmosphere, authorship, and story pressure.</p>
+
+        <p>Some images lean toward quiet portraiture. Others feel like scenes from a lost film. Some are built around confrontation, some around absence, some around humor, loneliness, dignity, danger, or the strange theatrical weight of frontier life.</p>
+
+        <p>Together, they form a body of work rooted in the Western tradition but shaped for a contemporary viewer - one who understands movies, memory, photography, painting, myth, and the uneasy space between fact and story.</p>
+
+        <p>Cinematic Western art does not ask the viewer to simply admire the past.</p>
+
+        <p>It asks the viewer to enter it.</p>
+
+        <p>To wonder.</p>
+
+        <p>To suspect.</p>
+
+        <p>To finish the story.</p>
+
+        <div class="section-heading-with-line">
+          <h2>Explore Cinematic Western Art</h2>
+        </div>
+
+        <p>See how this idea takes form in K4 Studios' <a href="/cinematic-western-art" style="color:#8b5a2b; font-weight:600; text-decoration:underline;">cinematic Western art collection</a> - story-driven Western fine art photography shaped through light, atmosphere, character, and the unresolved moment.</p>
+
+        <p>Explore the primary collection context through <a href="/Western-Fine-Art-Photography" style="color:#8b5a2b; text-decoration:underline;">Western Fine Art Photography</a> and the craft approach through <a href="/Painterly-Western-Photography" style="color:#8b5a2b; text-decoration:underline;">Painterly Western Photography</a>.</p>
+
+        <div class="section-heading-with-line">
+          <h2>Related Reading</h2>
+        </div>
+
+        <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 2rem;">
+          <li style="margin-bottom:0.75rem;">
+            <a href="/Blog/what-is-painterly-photography" style="color:#8b5a2b; font-weight:600; text-decoration:underline;">What Is Painterly Photography?</a> - How photographic craft moves toward atmosphere and authorship
+          </li>
+          <li style="margin-bottom:0.75rem;">
+            <a href="/One-Image-Movie" style="color:#8b5a2b; text-decoration:underline;">What Is a One-Image Movie&trade;?</a> - The K4 Studios idea behind single images that feel like unfinished films
+          </li>
+          <li style="margin-bottom:0.75rem;">
+            <a href="/Painterly-Western-Photography" style="color:#8b5a2b; text-decoration:underline;">Explore Painterly Western Photography</a> - A craft-focused body of atmospheric Western work
+          </li>
+          <li style="margin-bottom:0.75rem;">
+            <a href="/Western-Fine-Art-Photography" style="color:#8b5a2b; text-decoration:underline;">Explore Western Fine Art Photography</a> - The broader collector-facing context for the finished work
+          </li>
+          <li style="margin-bottom:0.75rem;">
+            <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color" style="color:#8b5a2b; text-decoration:underline;">Western Narratives in Color</a> - A gallery where cinematic Western scenes stay open under pressure
+          </li>
+        </ul>
+
+        <div class="section-heading-with-line">
+          <h2>Frequently Asked Questions</h2>
+        </div>
+
+        <FAQAccordion items={cinematicWesternArtFaq} showHeading={false} />
+      </article>
+    </section>
+
+    <WesternDefinitions variant="definition" currentPage={17} />
+
+    <SiteFooter />
+  </main>
+
+  <style>
+    .story-section { line-height: 1.7; }
+    .story-block p { margin-bottom: 1rem; font-size: clamp(1rem, 2.5vw, 1.125rem); }
+    .story-block a { color: #8b5a2b; text-decoration: underline; }
+    .story-block h2 {
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+      font-size: clamp(1.25rem, 3vw, 1.5rem);
+      color: #1a1a1a;
+    }
+    .story-block ul { font-size: clamp(1rem, 2.5vw, 1.125rem); }
+    .hero-image-wrap {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    .hero-image {
+      display: block;
+      width: 100%;
+      height: clamp(220px, 34vw, 360px);
+      object-fit: cover;
+      object-position: center 48%;
+      border-radius: 12px;
+      margin-top: 1rem;
+    }
+    .example-images {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin: 1.5rem 0 2rem;
+    }
+    .example-images figure { margin: 0; }
+    .example-images img {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    @media (max-width: 768px) {
+      .example-images { grid-template-columns: 1fr; }
+      .story-section { padding-left: 1rem; padding-right: 1rem; }
+    }
+  </style>
+</BaseLayout>
