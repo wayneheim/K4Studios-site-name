@@ -107,6 +107,7 @@ const EXCLUDE_PATTERNS = [
   /^\/Galleries\/lightbox(?:\/|$)/i,
   /^\/Other\/Print-Options\/?$/i,
   /^\/Other\/Stories\/?$/i,
+  /^\/Other\/Stories(?:\/|$)/i,
   // Exclude test/draft pages
   /\/Builder-Test/i,
   /\/Test-Show/i,
@@ -463,7 +464,14 @@ export const sitemap: SitemapEntry[] = ${JSON.stringify(dedupedEntries, null, 2)
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&apos;');
 
-  const urlsXml = dedupedEntries.map((entry) => {
+  const BLOG_PATH_RE = /^https?:\/\/www\.k4studios\.com\/Blog(?:$|\/)/i;
+  const IMAGE_DETAIL_PATH_RE = /\/i-[A-Za-z0-9]+$/;
+  const standardEntries = dedupedEntries.filter((entry) => {
+    const loc = String(entry.loc || '');
+    return !BLOG_PATH_RE.test(loc) && !IMAGE_DETAIL_PATH_RE.test(loc);
+  });
+
+  const urlsXml = standardEntries.map((entry) => {
     const loc = `<loc>${xmlEscape(entry.loc)}</loc>`;
     const lastmod = entry.lastmod ? `<lastmod>${xmlEscape(entry.lastmod)}</lastmod>` : '';
     const changefreq = entry.changefreq ? `<changefreq>${xmlEscape(entry.changefreq)}</changefreq>` : '';
@@ -482,7 +490,6 @@ export const sitemap: SitemapEntry[] = ${JSON.stringify(dedupedEntries, null, 2)
   console.log(`Wrote static sitemap XML to ${path.relative(path.resolve(__dirname, '..'), publicSitemapPath)}`);
 
   // ── Blog sitemap ──────────────────────────────────────────────────────
-  const BLOG_PATH_RE = /^https?:\/\/www\.k4studios\.com\/Blog(?:$|\/)/i;
   const blogEntries = dedupedEntries.filter((e) => BLOG_PATH_RE.test(String(e.loc || '')));
 
   const blogUrlsXml = blogEntries.map((entry) => {

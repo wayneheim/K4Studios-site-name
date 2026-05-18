@@ -145,7 +145,7 @@ Disallow: /
 User-agent: GPTBot
 Disallow: /
 User-agent: OAI-Search
-Allow: /
+Disallow: /
 User-agent: Google-Extended
 Disallow: /
 User-agent: ClaudeBot
@@ -155,7 +155,7 @@ Disallow: /
 User-agent: CCBot
 Disallow: /
 User-agent: PerplexityBot
-Allow: /
+Disallow: /
 User-agent: Bytespider
 Disallow: /
 User-agent: Diffbot

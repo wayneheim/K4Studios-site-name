@@ -590,7 +590,9 @@ function resolveImageUrls(manifest, imageId, requestedSize) {
 
 async function proxyImage(smugMugUrl, request, size = null) {
   const imageResponse = await fetch(smugMugUrl, {
-    method: request.method === 'HEAD' ? 'HEAD' : 'GET',
+    // Search preview systems sometimes probe images with HEAD. Fetch the same
+    // upstream object as GET so HEAD inherits the stable image path and cache.
+    method: 'GET',
     headers: {
       Accept: request.headers.get("Accept") || "image/*",
       "User-Agent": "K4-Image-Proxy-Worker/1.0",
@@ -640,6 +642,16 @@ async function proxyImage(smugMugUrl, request, size = null) {
     response: new Response(imageResponse.body, { status: 200, headers }),
     meta: upstreamMeta,
   };
+}
+
+function adaptImageResponseForRequestMethod(response, request) {
+  if (request.method !== 'HEAD') return response;
+
+  return new Response(null, {
+    status: response.status,
+    statusText: response.statusText,
+    headers: response.headers
+  });
 }
 
 async function proxyImageWithFallback(smugMugUrls, request, size = null) {
@@ -849,6 +861,9 @@ function isCleanHtmlCrawlerUA(uaRaw) {
 
 function isImageQualityBypassUA(uaRaw) {
   const ua = String(uaRaw || '');
+  // Bing image crawlers have historically used fragile prefetch/image-quality paths.
+  // This UA bypass is intentionally broader than Google's, but verifiedBot remains
+  // the only unconditional trust signal.
   return /(bingbot|bingpreview|msnbot|bingimagesbot|adidxbot)/i.test(ua);
 }
 
@@ -1054,9 +1069,10 @@ async function handleImageRequest(request, ctx, env) {
   const canonicalUrl = new URL(request.url);
   canonicalUrl.pathname = `/img/${route.canonicalImageId}/${route.size}.jpg`;
   canonicalUrl.searchParams.set("__k4v", IMAGE_CACHE_KEY_VERSION);
-  const canonicalRequest = (canonicalUrl.pathname === url.pathname)
-    ? request
-    : new Request(canonicalUrl.toString(), request);
+  const canonicalRequest = new Request(canonicalUrl.toString(), {
+    method: 'GET',
+    headers: request.headers
+  });
 
   // Phase 1 Asset Protection: selective friction for suspected bulk harvesting.
   // Runs BEFORE cache lookup (so scraping isn't free) while preserving canonical cache keys.
@@ -1129,7 +1145,11 @@ async function handleImageRequest(request, ctx, env) {
             status: 429,
             headers: {
               'Cache-Control': 'no-store',
-              'Retry-After': '60'
+              'Retry-After': '60',
+              'X-Proxy-Origin': 'k4studios',
+              'X-K4-Block-Reason': 'harvester-friction',
+              'X-K4-Bot-Verified': String(cfVerifiedBot),
+              'X-K4-Discovery-Bypass': String(discoveryBypass)
             }
           });
         }
@@ -1178,7 +1198,7 @@ async function handleImageRequest(request, ctx, env) {
         const ua = request.headers.get("User-Agent") || '';
         const uaLower = ua.toLowerCase();
         const isCacheWarmer = uaLower.includes('k4-cache-warmer');
-        if (!isCacheWarmer && route.size === 'l') {
+        if (request.method === 'GET' && !isCacheWarmer && route.size === 'l') {
           const cookieHeader = request.headers.get('Cookie') || '';
           const vidCookieMatch = cookieHeader.match(/k4_vid=([^;]+)/);
           const visitorId = vidCookieMatch ? vidCookieMatch[1] : null;
@@ -1228,7 +1248,7 @@ async function handleImageRequest(request, ctx, env) {
         finalStatus: upgraded?.status || cached?.status || 200,
       });
 
-      return withFrictionDebugHeaders(upgraded, frictionDebug);
+      return withFrictionDebugHeaders(adaptImageResponseForRequestMethod(upgraded, request), frictionDebug);
     }
   } catch (e) {
     // Fail open on cache API issues.
@@ -1282,7 +1302,7 @@ async function handleImageRequest(request, ctx, env) {
         }
       }
 
-      if (!isCacheWarmer && route.size === 'l') {
+      if (request.method === 'GET' && !isCacheWarmer && route.size === 'l') {
         const referer = request.headers.get('Referer') || '';
         const { secFetchSite } = getFetchHints(request);
         const looksLikeSameSiteSubresource = secFetchSite === 'same-origin' || secFetchSite === 'same-site';
@@ -1366,7 +1386,7 @@ async function handleImageRequest(request, ctx, env) {
 
     // If the request URL was prefixed, we still serve the canonical bytes.
     // The response headers are already long-lived, so clients + edge can cache as well.
-    return withFrictionDebugHeaders(response, frictionDebug);
+    return withFrictionDebugHeaders(adaptImageResponseForRequestMethod(response, request), frictionDebug);
   } catch (err) {
     console.error("Image proxy error:", err);
     queueImageProxyFetchLog(ctx, env, request, {

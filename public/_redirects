@@ -11,6 +11,13 @@ https://k4studios.com/(.+)/$  https://www.k4studios.com/$1  301!
 /Other/Blog  /Blog  301
 /Other/Blog/*  /Blog/:splat  301
 
+# Canonical casing for high-value mixed-case routes
+/blog  /Blog  301!
+/blog/*  /Blog/:splat  301!
+/american-western-art  /American-Western-Art  301!
+/art-of-the-west  /Art-of-the-West  301!
+/art-of-the-american-west  /Art-of-the-American-West  301!
+
 # Picture Shows canonical path migration
 /Other/Stories  /Other/Show  301!
 /Other/Stories/*  /Other/Show/:splat  301!
