@@ -4797,6 +4797,44 @@ export const galleryData = [
     }
   },
   {
+    "id": "i-RRw2Tfr",
+    "title": "Frontier Life Cowboy",
+    "description": "Explore frontier life with Wayne Heim's western fine art. This rugged spirit piece conveys rustic charm, outlaw portraits, and frontier life, perfect for fans of western fine art.\n\n© Wayne Heim",
+    "alt": "A Western rider and horse pause along a rocky ridge in painterly Wild West photography.",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-RRw2Tfr/1/KQ4dV453DcJgz9GR4jX34vqXCDLh67Ld42TmSKv7m/XL/_WHO6275-934-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-RRw2Tfr/1/KQ4dV453DcJgz9GR4jX34vqXCDLh67Ld42TmSKv7m/XL/_WHO6275-934-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-RRw2Tfr/1/KphR2j8PbXDmSf3CQMP2P8ZmZv9GxGC4Rnwzc92D2/L/_WHO6275-934-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-RRw2Tfr/1/NNw6cxbhmhKvqKgWzwF5z8fqXXx63ZGgVMBBdHJ5B/M/_WHO6275-934-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-RRw2Tfr/1/MzzcxHFTqmbttTRzHbhKkJ3StWdw5Zksmh5GWkv8Z/S/_WHO6275-934-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-RRw2Tfr/A",
+    "keywords": [
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy",
+      "frontier life",
+      "western fine art",
+      "rugged spirit",
+      "rustic charm",
+      "outlaw portraits",
+      "wild west photography",
+      "frederic remington"
+    ],
+    "story": "This image embodies rugged spirit and wild west photography, captured by Wayne Heim in his signature style. It reflects frontier life, western fine art, and the open tension of the American West.\n\n© Wayne Heim",
+    "notes": "",
+    "rating": 4,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 135.5,
+    "themes": {
+      "sketches-of-legends": 109
+    }
+  },
+  {
     "id": "i-RT474Nz",
     "title": "The Long Reckoning",
     "description": "A rider pauses beside his saddled horse along a rugged rock ledge beneath a darkening sky. The wide landscape and brooding light emphasize scale, terrain, and quiet endurance in a scene rendered with the restrained atmosphere of painterly Western photography. As painterly Western photography, it links horse, rider, motion, and landscape to the larger doorway language of fine art Western photography. Its unresolved story structure makes it a natural fit for narrative Western art.\n\n© Wayne Heim",

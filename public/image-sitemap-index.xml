@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
-    <loc>https://www.k4studios.com/image-sitemap-cowboy.xml</loc>
-    <lastmod>2026-05-16T13:33:36.599Z</lastmod>
-  </sitemap>
-  <sitemap>
     <loc>https://www.k4studios.com/image-sitemap-wwii.xml</loc>
     <lastmod>2026-05-06T07:11:32.720Z</lastmod>
   </sitemap>
@@ -47,5 +43,9 @@
   <sitemap>
     <loc>https://www.k4studios.com/image-sitemap-engrained.xml</loc>
     <lastmod>2026-05-07T00:32:24.925Z</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.k4studios.com/image-sitemap-wild-west.xml</loc>
+    <lastmod>2026-05-19T19:23:04.495Z</lastmod>
   </sitemap>
 </sitemapindex>

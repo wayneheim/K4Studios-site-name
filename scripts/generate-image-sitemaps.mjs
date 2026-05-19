@@ -137,29 +137,71 @@ const SECTIONS = [
   // PAINTERLY FINE ART - FACING HISTORY
   // =============================================
   {
-    name: 'cowboy',
-    displayName: 'Western Cowboy Portraits and Wild West',
+    name: 'wild-west-cowboy-portraits-color',
+    displayName: 'Wild West - Western Cowboy Portraits Color',
+    indexName: 'wild-west',
+    indexDisplayName: 'Wild West Image Sitemaps',
     galleries: [
       {
         dataPath: '../src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs',
         urlBase: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color'
-      },
+      }
+    ]
+  },
+  {
+    name: 'wild-west-cowboy-portraits-black-white',
+    displayName: 'Wild West - Western Cowboy Portraits Black and White',
+    indexName: 'wild-west',
+    indexDisplayName: 'Wild West Image Sitemaps',
+    galleries: [
       {
         dataPath: '../src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs',
         urlBase: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White'
-      },
+      }
+    ]
+  },
+  {
+    name: 'wild-west-western-narratives-color',
+    displayName: 'Wild West - Western Narratives Color',
+    indexName: 'wild-west',
+    indexDisplayName: 'Wild West Image Sitemaps',
+    galleries: [
       {
         dataPath: '../src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs',
         urlBase: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color'
-      },
+      }
+    ]
+  },
+  {
+    name: 'wild-west-western-narratives-black-white',
+    displayName: 'Wild West - Western Narratives Black and White',
+    indexName: 'wild-west',
+    indexDisplayName: 'Wild West Image Sitemaps',
+    galleries: [
       {
         dataPath: '../src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs',
         urlBase: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White'
-      },
+      }
+    ]
+  },
+  {
+    name: 'wild-west-native-americans-color',
+    displayName: 'Wild West - Native Americans Color',
+    indexName: 'wild-west',
+    indexDisplayName: 'Wild West Image Sitemaps',
+    galleries: [
       {
         dataPath: '../src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs',
         urlBase: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color'
-      },
+      }
+    ]
+  },
+  {
+    name: 'wild-west-native-americans-black-white',
+    displayName: 'Wild West - Native Americans Black and White',
+    indexName: 'wild-west',
+    indexDisplayName: 'Wild West Image Sitemaps',
+    galleries: [
       {
         dataPath: '../src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White.mjs',
         urlBase: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White'
@@ -579,6 +621,7 @@ async function main() {
   console.log('🖼️  Generating Per-Section Image Sitemaps...\n');
 
   const sitemapIndex = [];
+  const nestedSitemapIndexes = new Map();
   const globalStats = {
     totalImages: 0,
     sections: {}
@@ -611,8 +654,19 @@ async function main() {
     const lastmodMs = Math.max(sectionLastmodMs || 0, sitemapFileMs || 0);
     const lastmod = lastmodMs > 0 ? new Date(lastmodMs).toISOString() : null;
 
-    // Track for index
-    sitemapIndex.push({ filename, count: entries.length, lastmod });
+    // Track for the root image sitemap index or a logical nested index.
+    const sitemapEntry = { filename, count: entries.length, lastmod };
+    if (section.indexName) {
+      const nestedIndex = nestedSitemapIndexes.get(section.indexName) || {
+        name: section.indexName,
+        displayName: section.indexDisplayName || section.indexName,
+        sitemaps: [],
+      };
+      nestedIndex.sitemaps.push(sitemapEntry);
+      nestedSitemapIndexes.set(section.indexName, nestedIndex);
+    } else {
+      sitemapIndex.push(sitemapEntry);
+    }
     globalStats.totalImages += entries.length;
     globalStats.sections[section.name] = {
       displayName: section.displayName,
@@ -626,6 +680,32 @@ async function main() {
       console.log(`   📷 ${shortPath}: ${count}`);
     }
     console.log(`   ✅ Total: ${entries.length} → ${filename}\n`);
+  }
+
+  for (const nestedIndex of nestedSitemapIndexes.values()) {
+    const filename = `image-sitemap-${nestedIndex.name}.xml`;
+    const indexXml = generateSitemapIndex(nestedIndex.sitemaps);
+    const indexPath = path.join(PUBLIC_DIR, filename);
+    await writeIfChanged(indexPath, indexXml);
+
+    let indexFileMs = 0;
+    try {
+      const indexStats = await stat(indexPath);
+      indexFileMs = indexStats.mtimeMs;
+    } catch {
+      // Ignore; fallback to child sitemap timestamps.
+    }
+
+    const childLastmodMs = nestedIndex.sitemaps
+      .map((sitemap) => Date.parse(sitemap.lastmod || ''))
+      .filter(Number.isFinite)
+      .reduce((max, ms) => Math.max(max, ms), 0);
+    const lastmodMs = Math.max(childLastmodMs, indexFileMs);
+    const lastmod = lastmodMs > 0 ? new Date(lastmodMs).toISOString() : null;
+    const count = nestedIndex.sitemaps.reduce((total, sitemap) => total + sitemap.count, 0);
+
+    sitemapIndex.push({ filename, count, lastmod });
+    console.log(`🗂️  ${nestedIndex.displayName}: ${nestedIndex.sitemaps.length} sitemaps, ${count} images → ${filename}\n`);
   }
 
   // Generate sitemap index

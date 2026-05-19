@@ -71,7 +71,8 @@ exports.handler = async (event) => {
   const galleryPath = imageIdMap[normalizedId];
   
   if (galleryPath) {
-    const redirectUrl = `${galleryPath}/${normalizedId}`;
+    const canonicalGalleryPath = Array.isArray(galleryPath) ? galleryPath[0] : galleryPath;
+    const redirectUrl = `${canonicalGalleryPath}/${normalizedId}`;
     console.log(`[smart-404-lookup] Found: ${redirectUrl}`);
     
     return {

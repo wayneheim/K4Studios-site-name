@@ -118,6 +118,7 @@ const EXCLUDE_PATTERNS = [
   /^\/Galleries\/Painterly-Fine-Art-Photography\/Facing-History\/Western-Cowboy-Portraits\/NA-Color(?:\/|$)/,
   /^\/Galleries\/Painterly-Fine-Art-Photography\/Facing-History\/Western-Cowboy-Portraits\/NA-Black-White(?:\/|$)/,
   /^\/Galleries\/Fine-Art-Photography\/Transportation\/Trains-Black-White(?:\/|$)/,
+  /(?:^|\/)[^/]*archiv(?:e|ed)[^/]*(?:\/|$)/i,
   /backup$/i,
   /copy$/i,
 ];
@@ -466,9 +467,10 @@ export const sitemap: SitemapEntry[] = ${JSON.stringify(dedupedEntries, null, 2)
 
   const BLOG_PATH_RE = /^https?:\/\/www\.k4studios\.com\/Blog(?:$|\/)/i;
   const IMAGE_DETAIL_PATH_RE = /\/i-[A-Za-z0-9]+$/;
+  const ARCHIVE_PAGE_PATH_RE = /(?:^|\/)[^/]*archiv(?:e|ed)[^/]*(?:\/|$)/i;
   const standardEntries = dedupedEntries.filter((entry) => {
     const loc = String(entry.loc || '');
-    return !BLOG_PATH_RE.test(loc) && !IMAGE_DETAIL_PATH_RE.test(loc);
+    return !BLOG_PATH_RE.test(loc) && !IMAGE_DETAIL_PATH_RE.test(loc) && !ARCHIVE_PAGE_PATH_RE.test(loc);
   });
 
   const urlsXml = standardEntries.map((entry) => {

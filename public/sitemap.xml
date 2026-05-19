@@ -655,12 +655,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/all-archived-pre-rollout</loc>
-    <lastmod>2026-05-13T15:17:51-04:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color</loc>
     <lastmod>2026-05-02T17:26:56-04:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -668,15 +662,9 @@
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all</loc>
-    <lastmod>2026-05-14T00:10:17-04:00</lastmod>
+    <lastmod>2026-05-18T05:50:27.706Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all-archived-pre-rollout</loc>
-    <lastmod>2026-05-13T15:17:51-04:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII</loc>
@@ -973,12 +961,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.k4studios.com/Landscape-Photography-Archive</loc>
-    <lastmod>2026-05-11T17:23:51-04:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.k4studios.com/licensing</loc>
     <lastmod>2026-01-31T11:04:26-05:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -1025,18 +1007,6 @@
     <lastmod>2026-05-14T00:18:20-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.k4studios.com/Other/Archive</loc>
-    <lastmod>2026-04-30T13:03:51-04:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.k4studios.com/Other/Archive/all</loc>
-    <lastmod>2026-05-15T21:31:39-04:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.k4studios.com/Other/Bio</loc>
@@ -1189,12 +1159,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.k4studios.com/Painterly-Landscape-Photography-Archive</loc>
-    <lastmod>2026-05-11T17:23:51-04:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.k4studios.com/Painterly-Western-Photography</loc>
     <lastmod>2026-05-15T21:31:39-04:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -1209,12 +1173,6 @@
   <url>
     <loc>https://www.k4studios.com/Pictorialist-Photography</loc>
     <lastmod>2026-05-11T12:28:58-04:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.k4studios.com/Portrait-Photography-Archive</loc>
-    <lastmod>2026-05-11T17:23:51-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1305,12 +1263,6 @@
   <url>
     <loc>https://www.k4studios.com/Western-Cowboy-Photography</loc>
     <lastmod>2026-05-15T21:31:39-04:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.k4studios.com/Western-Cowboy-Photography-Archive</loc>
-    <lastmod>2026-05-11T17:23:51-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1407,12 +1359,6 @@
   <url>
     <loc>https://www.k4studios.com/women-of-the-wild-west</loc>
     <lastmod>2026-05-15T21:31:39-04:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.k4studios.com/WWII-Photography-Archive</loc>
-    <lastmod>2026-05-11T17:23:51-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
