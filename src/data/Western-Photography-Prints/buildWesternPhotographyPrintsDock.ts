@@ -25,7 +25,7 @@ const supportItem = (title: string, href: string, thumb: string, subtitle = "") 
 
 const westernFineArtThumb = "/img/i-gxMVNh3/s.jpg";
 const painterlyThumb = "/images/tombstones/Painterly-ts.webp";
-const artisticWesternThumb = "/img/i-FfNxQVd/s.jpg";
+const artisticWesternThumb = "/img/i-7Mzzbvp/s.jpg";
 const narrativeThumb = "/img/i-B7ZSdfs/s.jpg";
 const printOptionsThumb = "/images/tombstones/print-options-ts.webp";
 const displayWesternArtThumb = "/img/i-44jcjTQ/s.jpg";
