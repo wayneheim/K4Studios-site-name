@@ -398,11 +398,19 @@ const itemListElement = schemaListItems
       "url": imagePageUrl,
       "name": imageName,
       "item": {
-        "@type": "ImageObject",
-        "@id": `${imagePageUrl}#image`,
-        "url": imagePageUrl,
-        "contentUrl": toAbsoluteK4Url(getProxySrc(image.id, 'l')),
+        "@type": "Product",
+        "@id": `${imagePageUrl}#product`,
         "name": imageName,
+        "image": toAbsoluteK4Url(getProxySrc(image.id, 'l')),
+        "url": imagePageUrl,
+        "offers": {
+          "@type": "Offer",
+          "price": String(lowestStandardPrintPrice),
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": imagePageUrl,
+          "seller": { "@id": "https://www.k4studios.com/#organization" },
+        },
       },
     };
   });
@@ -758,7 +766,14 @@ const faqRight = faqItems.slice(faqSplitIndex);
               data-original-index={idx}
               data-series={cardSeriesKeys}
             >
-              <a href={linkUrl} class="ssr-card-link">
+              <a
+                href={linkUrl}
+                class="ssr-card-link"
+                data-doorway-image-link
+                data-image-id={item.id}
+                data-gallery-id={contentBasePath}
+                data-artwork-number={idx + 1}
+              >
                 <img 
                   class="ssr-card-image"
                   src={imageUrl} 
@@ -838,6 +853,7 @@ const faqRight = faqItems.slice(faqSplitIndex);
           const sectionKicker = formatCopy(catalogSectionKickerTemplate)
             .replaceAll("{sectionCount}", String(sectionCount))
             .replaceAll("{sectionTitle}", section.title);
+          const sectionCtaAlt = `${section.ctaLabel || `See all ${section.title}`} thumbnail`;
 
           return (
             <>
@@ -902,7 +918,14 @@ const faqRight = faqItems.slice(faqSplitIndex);
                       data-original-index={idx}
                       data-series={cardSeriesKeys}
                     >
-                      <a href={linkUrl} class="ssr-card-link">
+                      <a
+                        href={linkUrl}
+                        class="ssr-card-link"
+                        data-doorway-image-link
+                        data-image-id={item.id}
+                        data-gallery-id={section.galleryPath}
+                        data-artwork-number={idx + 1}
+                      >
                         <img
                           class="ssr-card-image"
                           src={imageUrl}
@@ -968,7 +991,7 @@ const faqRight = faqItems.slice(faqSplitIndex);
                     <a class="catalog-collection-cta__inner catalog-collection-cta__primary" href={section.allHref}>
                         {section.ctaThumb && (
                           <span class="catalog-collection-cta__tombstone" aria-hidden="true">
-                            <img src={forceImageSize(section.ctaThumb, 's', section.galleryPath)} alt="" loading="lazy" decoding="async" />
+                            <img src={forceImageSize(section.ctaThumb, 's', section.galleryPath)} alt={sectionCtaAlt} loading="lazy" decoding="async" />
                           </span>
                         )}
                         <span class="catalog-collection-cta__kicker">Full Collection</span>
@@ -986,7 +1009,7 @@ const faqRight = faqItems.slice(faqSplitIndex);
                     <span class="catalog-collection-cta__inner">
                       {section.ctaThumb && (
                         <span class="catalog-collection-cta__tombstone" aria-hidden="true">
-                          <img src={forceImageSize(section.ctaThumb, 's', section.galleryPath)} alt="" loading="lazy" decoding="async" />
+                          <img src={forceImageSize(section.ctaThumb, 's', section.galleryPath)} alt={sectionCtaAlt} loading="lazy" decoding="async" />
                         </span>
                       )}
                       <span class="catalog-collection-cta__kicker">Full Collection</span>
@@ -2171,6 +2194,7 @@ const faqRight = faqItems.slice(faqSplitIndex);
     }
     .ssr-grid--catalog-section {
       margin:0 auto;
+      grid-template-columns:repeat(4,minmax(0,1fr));
     }
     .catalog-collection-cta {
       min-height:390px;
@@ -3161,6 +3185,9 @@ const faqRight = faqItems.slice(faqSplitIndex);
       .catalog-gallery-section {
         margin-bottom:38px;
       }
+      .ssr-grid--catalog-section {
+        grid-template-columns:repeat(2,minmax(0,1fr));
+      }
       .catalog-collection-cta {
         min-height:260px;
       }
@@ -3211,6 +3238,9 @@ const faqRight = faqItems.slice(faqSplitIndex);
         padding:0 .3rem;
       }
       .ssr-grid { padding:0 16px; gap:16px; }
+      .ssr-grid--catalog-section {
+        grid-template-columns:1fr;
+      }
       .ssr-card-image {
         width:100%;
         height:auto;
@@ -3604,6 +3634,41 @@ const faqRight = faqItems.slice(faqSplitIndex);
     })();
 
     (() => {
+      const links = Array.from(document.querySelectorAll('[data-doorway-image-link]'));
+      if (links.length === 0) return;
+
+      const trackDoorwayImageClick = (link) => {
+        const imageId = link.getAttribute('data-image-id') || null;
+        const galleryId = link.getAttribute('data-gallery-id') || window.location.pathname;
+        const artworkNumber = link.getAttribute('data-artwork-number') || null;
+        const context = {
+          galleryId,
+          imageId,
+          pageType: 'image',
+          trigger: 'commercial_doorway_grid',
+          sourceLayer: 'commercial_doorway_all_page',
+          artworkNumber,
+        };
+
+        if (typeof window.k4track === 'function') {
+          window.k4track('browse_all_image_click', context);
+        }
+        if (typeof window.k4emitActionPixel === 'function') {
+          window.k4emitActionPixel('browse_all_image_click', imageId, {
+            galleryId,
+            sourceLayer: 'doorway_browse_all_image_click_pixel_v1',
+            pageType: 'image',
+            trigger: 'commercial_doorway_grid',
+          });
+        }
+      };
+
+      links.forEach((link) => {
+        link.addEventListener('click', () => trackDoorwayImageClick(link), { capture: true });
+      });
+    })();
+
+    (() => {
       const tiles = Array.from(document.querySelectorAll('[data-series-tile]'));
       if (tiles.length === 0) return;
       const hoverDelay = 420;
@@ -3686,6 +3751,28 @@ const faqRight = faqItems.slice(faqSplitIndex);
           const willOpen = !card.classList.contains('is-notes-open');
           closeAll(card);
           card.classList.toggle('is-notes-open', willOpen);
+          if (willOpen) {
+            const link = card.querySelector('[data-doorway-image-link]');
+            const imageId = link?.getAttribute('data-image-id') || null;
+            const galleryId = link?.getAttribute('data-gallery-id') || window.location.pathname;
+            if (typeof window.k4track === 'function') {
+              window.k4track('collector_notes_open', {
+                galleryId,
+                imageId,
+                pageType: 'gallery',
+                trigger: 'commercial_doorway_card_notes',
+                sourceLayer: 'commercial_doorway_all_page',
+              });
+            }
+            if (typeof window.k4emitActionPixel === 'function') {
+              window.k4emitActionPixel('collector_notes_open', imageId, {
+                galleryId,
+                sourceLayer: 'doorway_collector_notes_open_pixel_v1',
+                pageType: 'gallery',
+                trigger: 'commercial_doorway_card_notes',
+              });
+            }
+          }
         });
       });
 

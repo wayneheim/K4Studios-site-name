@@ -1003,12 +1003,59 @@ function installPreNavImageLinkTracking(): void {
         if (url.origin !== window.location.origin) return;
 
         const imageId = getImageIdFromPath(url.pathname);
-        if (!imageId) return;
+        const galleryId = getGalleryIdFromPath(url.pathname);
 
-        // Emit before navigation completes (protects against unload drops).
-        trackEvent('chapter_view', { imageId, pageType: 'image', trigger: 'internal_link_click' });
-        if (isK4Debug()) {
-          trackEvent('k4_debug_chapter_emit', { imageId, pageType: 'image', trigger: 'internal_link_click' });
+        if (imageId) {
+          const sourceGalleryId = getGalleryIdFromPath(window.location.pathname);
+          const isSpecificCatalogClick =
+            Boolean(a.closest('[data-collection-image-link]')) ||
+            Boolean(a.closest('[data-doorway-image-link]'));
+
+          // Emit before navigation completes (protects against unload drops).
+          trackEvent('chapter_view', {
+            imageId,
+            galleryId: galleryId || sourceGalleryId,
+            pageType: 'image',
+            trigger: 'internal_link_click'
+          });
+
+          // Site/article/gallery preview image links did not always have a component-level
+          // click signal. Keep catalog grids on their more specific browse_all event.
+          if (!isSpecificCatalogClick) {
+            trackEvent('gallery_preview_click', {
+              imageId,
+              galleryId: galleryId || sourceGalleryId,
+              pageType: 'image',
+              trigger: 'internal_image_link_click',
+              sourceLayer: 'global_pre_nav_link_capture'
+            });
+            emitActionPixel('gallery_preview_click', imageId, {
+              galleryId: galleryId || sourceGalleryId,
+              pageType: 'image',
+              trigger: 'internal_image_link_click',
+              sourceLayer: 'global_gallery_preview_click_pixel_v1'
+            });
+          }
+
+          if (isK4Debug()) {
+            trackEvent('k4_debug_chapter_emit', { imageId, pageType: 'image', trigger: 'internal_link_click' });
+          }
+          return;
+        }
+
+        if (galleryId) {
+          trackEvent('gallery_explore_click', {
+            galleryId,
+            pageType: 'gallery',
+            trigger: 'internal_gallery_link_click',
+            sourceLayer: 'global_pre_nav_link_capture'
+          });
+          emitActionPixel('gallery_explore_click', null, {
+            galleryId,
+            pageType: 'gallery',
+            trigger: 'internal_gallery_link_click',
+            sourceLayer: 'global_gallery_explore_click_pixel_v1'
+          });
         }
       } catch {
         // never break navigation

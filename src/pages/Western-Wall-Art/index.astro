@@ -32,6 +32,7 @@ const { sectionDockItems, dockCenterIndex } = buildWesternWallArtDock();
 const westernLandscapeTombstone = landscapeLocationLanding.tombstones.find((stone: any) =>
   String(stone.href || "").includes("/Landscapes/By-Location/West/")
 )?.thumb;
+const catalogPreviewLimit = 15;
 
 const gridSections = [
   {
@@ -42,7 +43,7 @@ const gridSections = [
     ctaLabel: "See the full color Western narrative collection",
     ctaThumb: "/img/i-5FX3W9r/s.jpg",
     items: narrativeColorData,
-    limit: 19,
+    limit: catalogPreviewLimit,
   },
   {
     title: "Black and White Western Wall Art - Narrative Prints",
@@ -52,7 +53,7 @@ const gridSections = [
     ctaLabel: "See the full black and white Western narrative collection",
     ctaThumb: "/img/i-kp5NHNw/s.jpg",
     items: narrativeBlackWhiteData,
-    limit: 19,
+    limit: catalogPreviewLimit,
   },
   {
     title: "Western Landscape Wall Art",
@@ -62,7 +63,7 @@ const gridSections = [
     ctaLabel: "See the full Western landscape collection",
     ctaThumb: westernLandscapeTombstone,
     items: westernLandscapeData,
-    limit: 19,
+    limit: catalogPreviewLimit,
   },
   {
     title: "Cowboy Art Prints - Color Western Portraits",
@@ -72,7 +73,7 @@ const gridSections = [
     ctaLabel: "See the full color cowboy portrait collection",
     ctaThumb: "/img/i-5FX3W9r/s.jpg",
     items: cowboyColorData,
-    limit: 19,
+    limit: catalogPreviewLimit,
   },
   {
     title: "Black and White Cowboy Portrait Wall Art",
@@ -82,7 +83,7 @@ const gridSections = [
     ctaLabel: "See the full black and white cowboy portrait collection",
     ctaThumb: "/images/tombstones/cowboy-bw-ts.webp",
     items: cowboyBlackWhiteData,
-    limit: 19,
+    limit: catalogPreviewLimit,
   },
 ];
 
@@ -104,7 +105,8 @@ const commercialMiddleCopy = [
 const copy = {
   seoTitle: "Western Wall Art - Fine Art Prints by Wayne Heim | K4 Studios",
   seoDescription:
-    "Western wall art for collectors — cowboy portraits, frontier scenes, and narrative photography by Wayne Heim. Archival fine art prints from $25. Four edition tiers, signed by the artist.",
+    "Western wall art by Wayne Heim: cowboy portraits, frontier scenes, and Western landscape prints for homes, offices, lodges, and collectors.",
+  descriptionMaxLength: "155",
   indexDefinition:
     "Wayne Heim's Western wall art includes cowboy wall art, Western art prints, vintage Western art, Wild West scenes, and frontier landscapes created as collector-grade fine art for real rooms and long-term display.",
   indexLinkNote:

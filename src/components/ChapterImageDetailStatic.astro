@@ -303,8 +303,29 @@ const arrowRightSvg = `<svg aria-hidden="true" viewBox="0 0 24 24" class="w-4 h-
   }
 </style>
 
-<script is:inline>
+<script define:vars={{ imageId: image.id, galleryPath }}>
   (() => {
+    const trackAction = (eventName, extra = {}) => {
+      const context = {
+        galleryId: galleryPath,
+        imageId,
+        pageType: "image",
+        sourceLayer: "chapter_image_detail_static",
+        ...extra,
+      };
+      if (typeof window.k4track === "function") {
+        window.k4track(eventName, context);
+      }
+      if (typeof window.k4emitActionPixel === "function") {
+        window.k4emitActionPixel(eventName, context.imageId || imageId, {
+          galleryId: context.galleryId,
+          pageType: context.pageType,
+          sourceLayer: context.sourceLayer,
+          trigger: context.trigger || eventName,
+        });
+      }
+    };
+
     const zoomTrigger = document.querySelector("[data-static-zoom-trigger]");
     const overlay = document.querySelector("[data-static-zoom-overlay]");
     const zoomImage = document.querySelector("[data-static-zoom-image]");
@@ -324,6 +345,7 @@ const arrowRightSvg = `<svg aria-hidden="true" viewBox="0 0 24 24" class="w-4 h-
         overlay.classList.add("is-open");
         overlay.setAttribute("aria-hidden", "false");
         document.body.classList.add("static-zoom-open");
+        trackAction("xl_zoom", { trigger: "static_image_zoom", sourceLayer: "zoom_pixel_v1" });
       });
       closeButton.addEventListener("click", closeZoom);
       overlay.addEventListener("click", (event) => {
@@ -343,6 +365,11 @@ const arrowRightSvg = `<svg aria-hidden="true" viewBox="0 0 24 24" class="w-4 h-
         const targetId = targets[number - 1];
         const galleryPath = form.getAttribute("data-gallery-path") || "";
         if (targetId && galleryPath) {
+          trackAction("chapter_jump", {
+            imageId: targetId,
+            trigger: "static_jump_form",
+            sourceLayer: "chapter_image_detail_static",
+          });
           window.location.href = `${galleryPath}/${targetId}`;
         }
       });
@@ -354,8 +381,58 @@ const arrowRightSvg = `<svg aria-hidden="true" viewBox="0 0 24 24" class="w-4 h-
       notesButton.addEventListener("click", (event) => {
         event.preventDefault();
         event.stopPropagation();
-        details.open = !details.open;
+        const willOpen = !details.open;
+        details.open = willOpen;
+        if (willOpen) {
+          trackAction("collector_notes_open", { trigger: "static_notes_button" });
+        }
       });
     }
+
+    document.querySelectorAll("[data-prev-btn][href]").forEach((link) => {
+      link.addEventListener("click", () => {
+        const targetId = new URL(link.getAttribute("href"), window.location.href).pathname.split("/").pop();
+        trackAction("nav_prev", { imageId: targetId || imageId, trigger: "static_prev_button" });
+      }, { capture: true });
+    });
+
+    document.querySelectorAll("[data-next-btn][href]").forEach((link) => {
+      link.addEventListener("click", () => {
+        const targetId = new URL(link.getAttribute("href"), window.location.href).pathname.split("/").pop();
+        trackAction("nav_next", { imageId: targetId || imageId, trigger: "static_next_button" });
+      }, { capture: true });
+    });
+
+    document.querySelectorAll("[data-grid-btn][href]").forEach((link) => {
+      link.addEventListener("click", () => {
+        trackAction("grid_open", { trigger: "static_grid_button" });
+      }, { capture: true });
+    });
+
+    document.querySelectorAll("[data-exit-btn][href], [data-menu-btn][href]").forEach((link) => {
+      link.addEventListener("click", () => {
+        trackAction("exit_to_gallery", { trigger: "static_exit_button" });
+      }, { capture: true });
+    });
+
+    document.querySelectorAll("[data-cart-btn][href]").forEach((link) => {
+      link.addEventListener("click", () => {
+        trackAction("order_clicked", { trigger: "static_pricing_button" });
+      }, { capture: true });
+    });
+
+    document.querySelectorAll("[data-slideshow-btn][href]").forEach((link) => {
+      link.addEventListener("click", () => {
+        trackAction("slideshow_start", { trigger: "static_play_slideshow" });
+      }, { capture: true });
+    });
+
+    document.querySelectorAll(".more-about-image").forEach((detailsNode) => {
+      detailsNode.addEventListener("toggle", () => {
+        if (detailsNode.open) {
+          trackAction("more_info_open", { trigger: "static_more_about_toggle" });
+        }
+      });
+    });
   })();
 </script>

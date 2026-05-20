@@ -122,9 +122,9 @@ export const galleryData = [
   },
   {
     "id": "i-k9qB2jV",
-    "title": "Terms of Respect",
+    "title": "Authority in Window Light",
     "description": "A painterly 1920s fine art portrait of a formally dressed gentleman standing in warm window light, composed around stillness and authority. This Roaring 20s photography piece supports the Roaring 20s portraits collection with Jazz Age posture, period dress, and restrained historical portrait structure. As a roaring twenties art print, it emphasizes respect, hierarchy, and presence carried without spectacle.\n\n© Wayne Heim",
-    "alt": "Painterly 1920s fine art portrait of a formally dressed gentleman standing in warm window light, conveying quiet authority and restraint.",
+    "alt": "Formally dressed 1920s man standing beside a window in warm light, posed with restrained authority in a Roaring 20s portrait.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-k9qB2jV/A",
 
     "keywords": [
@@ -187,9 +187,9 @@ export const galleryData = [
   },
   {
     "id": "i-NVz5zk2",
-    "title": "Terms of Consideration",
+    "title": "A Decision in Stillness",
     "description": "A painterly 1920s fine art photography portrait of a seated gentleman in soft window light, composed with restraint and interior authority. This Roaring 20s photography piece strengthens the Roaring 20s portraits collection through Jazz Age character, historical portrait structure, and controlled tonal depth. As a roaring twenties art print, it asks the viewer to linger with posture, silence, and the weight of consideration.\n\n© Wayne Heim",
-    "alt": "Roaring 20s portrait of seated gentleman in soft window light",
+    "alt": "Seated 1920s gentleman turned toward soft window light, his posture and shadow creating a quiet Roaring 20s portrait.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-NVz5zk2/A",
 
     "keywords": [
@@ -220,9 +220,9 @@ export const galleryData = [
   },
   {
     "id": "i-9cZHdvB",
-    "title": "Terms of Order",
+    "title": "At the Porch Rail",
     "description": "A painterly Roaring 20s portrait of a man standing on a wooden porch, defined by posture, light, and social control. This 1920s fine art photography piece supports Roaring 20s photography authority through Jazz Age restraint, historical portrait clarity, and structured composition. As part of the Roaring 20s portraits collection, it reads as a roaring twenties art print about order, rank, and the decision held just outside speech.\n\n© Wayne Heim",
-    "alt": "Roaring twenties portrait of a man standing on a wooden porch in restrained, painterly light",
+    "alt": "1920s man in vest and tie standing at a wooden porch rail, framed by posts and warm directional light.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-9cZHdvB/A",
 
     "keywords": [
@@ -252,9 +252,9 @@ export const galleryData = [
   },
   {
     "id": "i-zrVCpMP",
-    "title": "Terms of Power",
+    "title": "The Cane at Rest",
     "description": "A painterly Roaring 20s portrait of a composed gentleman seated with a cane, shaped by directional light and quiet command. This 1920s fine art photography image strengthens the Roaring 20s portraits gallery through Jazz Age authority, period dress, and historical portrait structure. As a roaring twenties art print, it emphasizes power expressed through stillness, position, and social gravity rather than performance.\n\n© Wayne Heim",
-    "alt": "Roaring 20s fine art portrait of a composed gentleman seated with cane in painterly light",
+    "alt": "Composed 1920s gentleman seated with both hands resting on a cane, lit by a window in a restrained Jazz Age portrait.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-zrVCpMP/A",
 
     "keywords": [
@@ -417,9 +417,9 @@ export const galleryData = [
   },
   {
     "id": "i-mMXRvh4",
-    "title": "Terms of Agreement",
+    "title": "An Arrangement on the Porch",
     "description": "A painterly Roaring 20s fine art photograph of three men in period suits and hats gathered in discussion on a wooden porch. This 1920s fine art photography piece supports Roaring 20s portraits authority through Jazz Age negotiation, historical portrait storytelling, and controlled group composition. As a roaring twenties art print, it suggests business, agreement, and bootlegger-era tension without turning the moment into spectacle.\n\n© Wayne Heim",
-    "alt": "Painterly 1920s fine art photograph of three men in period suits and hats in discussion on a wooden porch at Old Bedford Village, evoking Roaring 20s business and bootlegger tension.",
+    "alt": "Three men in 1920s suits and hats gathered in quiet discussion on a wooden porch at Old Bedford Village.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-mMXRvh4/A",
 
     "keywords": [
@@ -440,7 +440,7 @@ export const galleryData = [
     ],
 
     "story": "“You understand what this means.”\n\nThe porch rail separates them from the street, but not from consequence. Hats tilt low. Voices stay measured. The old man keeps working his cloth into the leather, listening without looking up. Deals are never signed where everyone can see them.\n\nSome arrangements are spoken once and never repeated. After that, you’re simply bound to them.",
-    "notes": "“Terms of Agreement” functions through restraint rather than spectacle. The horizontal porch rail becomes both compositional anchor and psychological barrier, dividing public posture from private intent. The triangular positioning of the figures creates a quiet narrative tension — one speaks, one weighs, one listens.\n\nThe palette and softened atmosphere nod subtly to silent film era photography while maintaining modern painterly control. Like genre painters of the early 20th century who used everyday settings to imply larger social forces, this piece allows implication to carry the story. It rewards prolonged viewing — the kind where posture and distance begin to speak louder than words.",
+    "notes": "“An Arrangement on the Porch” functions through restraint rather than spectacle. The horizontal porch rail becomes both compositional anchor and psychological barrier, dividing public posture from private intent. The triangular positioning of the figures creates a quiet narrative tension — one speaks, one weighs, one listens.\n\nThe palette and softened atmosphere nod subtly to silent film era photography while maintaining modern painterly control. Like genre painters of the early 20th century who used everyday settings to imply larger social forces, this piece allows implication to carry the story. It rewards prolonged viewing — the kind where posture and distance begin to speak louder than words.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -698,9 +698,9 @@ export const galleryData = [
   },
   {
     "id": "i-PXj364M",
-    "title": "Terms of the Evening",
-    "description": "A painterly Roaring 20s portrait of a serious man in a dim interior doorway, shaped by side light, shadow, and consequence. This 1920s fine art photography piece supports Roaring 20s photography through Jazz Age atmosphere, speakeasy-era restraint, and historical portrait tension. As part of the Roaring 20s portraits collection, it reads as a roaring twenties art print about private terms, public masks, and what will be remembered differently tomorrow.\n\n© Wayne Heim",
-    "alt": "Roaring 20s portrait of a serious man in a dim interior doorway, lit from the side with a restrained, speakeasy-era mood",
+    "title": "Held in the Doorway",
+    "description": "A painterly Roaring 20s portrait of a serious man in a dim interior doorway, shaped by side light, shadow, and consequence. This 1920s fine art photography piece supports Roaring 20s photography through Jazz Age atmosphere, speakeasy-era restraint, and historical portrait tension. As part of the Roaring 20s portraits collection, it reads as a roaring twenties art print about private agreements, public masks, and what will be remembered differently tomorrow.\n\n© Wayne Heim",
+    "alt": "Serious 1920s man standing in a dim interior doorway, side-lit against shadow in a restrained speakeasy-era portrait.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-PXj364M/A",
 
     "keywords": [
@@ -720,7 +720,7 @@ export const galleryData = [
     ],
 
     "story": "He doesn’t move toward the light—he lets it come to him.\n\nOut there, the world is loud with talk and music and other people’s certainty. In here, the pauses do the negotiating.\n\nWhatever was agreed to tonight will be remembered differently tomorrow.",
-    "notes": "“Terms of the Evening” is built on restraint—light held back, gesture pared down, story implied rather than declared. The composition leans into early 20th-century portrait sensibilities: a controlled tonal range, a quiet figure-ground relationship, and a cinematic use of negative space that lets the viewer feel the room. The period costuming and setting function as a stage, but the real subject is psychological: the tension between what’s said and what’s understood. It’s an image designed to reward long looking, where the mood carries the narrative and the era becomes atmosphere rather than ornament.",
+    "notes": "“Held in the Doorway” is built on restraint—light held back, gesture pared down, story implied rather than declared. The composition leans into early 20th-century portrait sensibilities: a controlled tonal range, a quiet figure-ground relationship, and a cinematic use of negative space that lets the viewer feel the room. The period costuming and setting function as a stage, but the real subject is psychological: the tension between what’s said and what’s understood. It’s an image designed to reward long looking, where the mood carries the narrative and the era becomes atmosphere rather than ornament.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",

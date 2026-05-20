@@ -26,10 +26,10 @@ export const siteNav = [
           },
           {
             label: "Roaring 20s",
-            href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s",
+            href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits",
             children: [
-              { label: "Color", href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s/Color" },
-              { label: "Black & White", href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s/Black-White" }
+              { label: "Color", href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color" },
+              { label: "Black & White", href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White" }
             ]
           },
           {

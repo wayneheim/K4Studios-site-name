@@ -287,11 +287,19 @@ const itemListElement = filteredGalleryData
       "url": imagePageUrl,
       "name": imageName,
       "item": {
-        "@type": "ImageObject",
-        "@id": `${imagePageUrl}#image`,
-        "url": imagePageUrl,
-        "contentUrl": toAbsoluteK4Url(getProxySrc(image.id, 'l')),
+        "@type": "Product",
+        "@id": `${imagePageUrl}#product`,
         "name": imageName,
+        "image": toAbsoluteK4Url(getProxySrc(image.id, 'l')),
+        "url": imagePageUrl,
+        "offers": {
+          "@type": "Offer",
+          "price": String(lowestStandardPrintPrice),
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": imagePageUrl,
+          "seller": { "@id": "https://www.k4studios.com/#organization" },
+        },
       },
     };
   });
@@ -598,7 +606,14 @@ const compactBreadcrumbHtml = breadcrumbHtml
               data-original-index={idx}
               data-series={cardSeriesKeys}
             >
-              <a href={linkUrl} class="ssr-card-link">
+              <a
+                href={linkUrl}
+                class="ssr-card-link"
+                data-collection-image-link
+                data-image-id={item.id}
+                data-gallery-id={contentBasePath}
+                data-artwork-number={idx + 1}
+              >
                 <img 
                   class="ssr-card-image"
                   src={imageUrl} 
@@ -2274,6 +2289,41 @@ const compactBreadcrumbHtml = breadcrumbHtml
     })();
 
     (() => {
+      const links = Array.from(document.querySelectorAll('[data-collection-image-link]'));
+      if (links.length === 0) return;
+
+      const trackCollectionImageClick = (link) => {
+        const imageId = link.getAttribute('data-image-id') || null;
+        const galleryId = link.getAttribute('data-gallery-id') || window.location.pathname.replace(/\/all\/?$/, '');
+        const artworkNumber = link.getAttribute('data-artwork-number') || null;
+        const context = {
+          galleryId,
+          imageId,
+          pageType: 'image',
+          trigger: 'commercial_collection_grid',
+          sourceLayer: 'commercial_collection_all_page',
+          artworkNumber,
+        };
+
+        if (typeof window.k4track === 'function') {
+          window.k4track('browse_all_image_click', context);
+        }
+        if (typeof window.k4emitActionPixel === 'function') {
+          window.k4emitActionPixel('browse_all_image_click', imageId, {
+            galleryId,
+            sourceLayer: 'browse_all_image_click_pixel_v1',
+            pageType: 'image',
+            trigger: 'commercial_collection_grid',
+          });
+        }
+      };
+
+      links.forEach((link) => {
+        link.addEventListener('click', () => trackCollectionImageClick(link), { capture: true });
+      });
+    })();
+
+    (() => {
       const tiles = Array.from(document.querySelectorAll('[data-series-tile]'));
       if (tiles.length === 0) return;
       const hoverDelay = 420;
@@ -2356,6 +2406,28 @@ const compactBreadcrumbHtml = breadcrumbHtml
           const willOpen = !card.classList.contains('is-notes-open');
           closeAll(card);
           card.classList.toggle('is-notes-open', willOpen);
+          if (willOpen) {
+            const link = card.querySelector('[data-collection-image-link]');
+            const imageId = link?.getAttribute('data-image-id') || null;
+            const galleryId = link?.getAttribute('data-gallery-id') || window.location.pathname.replace(/\/all\/?$/, '');
+            if (typeof window.k4track === 'function') {
+              window.k4track('collector_notes_open', {
+                galleryId,
+                imageId,
+                pageType: 'gallery',
+                trigger: 'commercial_collection_card_notes',
+                sourceLayer: 'commercial_collection_all_page',
+              });
+            }
+            if (typeof window.k4emitActionPixel === 'function') {
+              window.k4emitActionPixel('collector_notes_open', imageId, {
+                galleryId,
+                sourceLayer: 'collector_notes_open_pixel_v1',
+                pageType: 'gallery',
+                trigger: 'commercial_collection_card_notes',
+              });
+            }
+          }
         });
       });
 
