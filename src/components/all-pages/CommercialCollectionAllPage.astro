@@ -173,6 +173,14 @@ const truncateExcerpt = (text: string, maxLen = 150) => {
   return trimAtCleanWordBoundary(cleaned, maxLen);
 };
 
+const truncateHardExcerpt = (text: string, maxLen = 100) => {
+  const cleaned = cleanForDisplay(text);
+  if (!cleaned) return "";
+  if (cleaned.length <= maxLen) return cleaned;
+  const wordSafe = cleaned.slice(0, maxLen).replace(/\s+\S*$/, "").trimEnd();
+  return `${wordSafe || cleaned.slice(0, maxLen).trimEnd()}...`;
+};
+
 // âœ… Proxy URL helper - never expose SmugMug URLs to crawlers
 const getProxySrc = (id: string, size: string = 'l') => {
   const image = filteredGalleryData.find((item: any) => item.id === id)
@@ -576,7 +584,9 @@ const compactBreadcrumbHtml = breadcrumbHtml
         }
         seenCardAltCounts.set(normalizedAltKey, previousAltCount + 1);
         
-        const storyExcerpt = truncateExcerpt(item.story || "", 150);
+        const storyExcerptLimit = idx < 50 ? 100 : 50;
+        const collectorNoteLimit = idx < 50 ? 150 : 25;
+        const storyExcerpt = truncateHardExcerpt(item.story || "", storyExcerptLimit);
         const collectorNoteRaw =
           item.notes ||
           item.collectorNotes ||
@@ -584,7 +594,7 @@ const compactBreadcrumbHtml = breadcrumbHtml
           item.description ||
           item.story ||
           "";
-        const collectorNoteTeaser = truncateExcerpt(collectorNoteRaw, 190);
+        const collectorNoteTeaser = truncateExcerpt(collectorNoteRaw, collectorNoteLimit);
         const cardSeries = getCardSeries(item);
         const cardSeriesKeys = cardSeries.map((series: any) => series.key).join(' ');
         const needsRangeMarker = idx > 0 && idx % 50 === 0;

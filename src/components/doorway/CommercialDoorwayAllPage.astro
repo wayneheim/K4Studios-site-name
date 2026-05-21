@@ -264,6 +264,24 @@ const truncateExcerpt = (text: string, maxLen = 150) => {
   return trimAtCleanWordBoundary(cleaned, maxLen);
 };
 
+const truncateStoryExcerpt = (text: string, maxLen = 100) => {
+  const cleaned = cleanForDisplay(text);
+  if (!cleaned) return "";
+  if (cleaned.length <= maxLen) return cleaned;
+  const wordSafe = cleaned.slice(0, maxLen).replace(/\s+\S*$/, "").trimEnd();
+  return `${wordSafe || cleaned.slice(0, maxLen).trimEnd()}...`;
+};
+
+const truncateBookendExcerpt = (text: string, headLen = 100, tailLen = 300) => {
+  const cleaned = cleanForDisplay(text);
+  if (!cleaned) return "";
+  const totalLen = headLen + tailLen;
+  if (cleaned.length <= totalLen) return cleaned;
+  const head = cleaned.slice(0, headLen).replace(/\s+\S*$/, "").trimEnd();
+  const tail = cleaned.slice(-tailLen).replace(/^\S+\s+/, "").trimStart();
+  return `${head || cleaned.slice(0, headLen).trimEnd()}\u00a0.\u00a0.\u00a0.\u00a0\u00a0${tail || cleaned.slice(-tailLen).trimStart()}`;
+};
+
 // âœ… Proxy URL helper - never expose SmugMug URLs to crawlers
 const getProxySrc = (id: string, size: string = 'l') => {
   const image = filteredGalleryData.find((item: any) => item.id === id)
@@ -620,8 +638,8 @@ const faqRight = faqItems.slice(faqSplitIndex);
     )}
 
     <!-- Current Collection Identity -->
-    <header class="collection-hero">
-      <h2>{commercialH1}</h2>
+    <section class="collection-hero" aria-labelledby="collection-hero-heading">
+      <h2 id="collection-hero-heading">{commercialH1}</h2>
       <p class="hero-deck">{commercialDeck}</p>
       {collectionIntroParagraphs.length > 0 && (
         <p class="hero-copy">
@@ -633,7 +651,7 @@ const faqRight = faqItems.slice(faqSplitIndex);
           ))}
         </p>
       )}
-    </header>
+    </section>
 
     <span id="collection-browser" class="collection-browser-anchor" aria-hidden="true"></span>
     <hr class="catalog-anchor-rule" />
@@ -736,15 +754,9 @@ const faqRight = faqItems.slice(faqSplitIndex);
         }
         seenCardAltCounts.set(normalizedAltKey, previousAltCount + 1);
         
-        const storyExcerpt = truncateExcerpt(item.story || "", 150);
-        const collectorNoteRaw =
-          item.notes ||
-          item.collectorNotes ||
-          item.collector_notes ||
-          item.description ||
-          item.story ||
-          "";
-        const collectorNoteTeaser = truncateExcerpt(collectorNoteRaw, 190);
+        const storyExcerpt = truncateStoryExcerpt(item.story || "", 100);
+        const collectorNoteRaw = item.description || "";
+        const collectorNoteTeaser = truncateBookendExcerpt(collectorNoteRaw, 100, 300);
         const cardSeries = getCardSeries(item);
         const cardSeriesKeys = cardSeries.map((series: any) => series.key).join(' ');
         const needsRangeMarker = idx > 0 && idx % 50 === 0;
@@ -814,21 +826,23 @@ const faqRight = faqItems.slice(faqSplitIndex);
                 type="button"
                 class="collector-notes-trigger"
                 data-notes-trigger
-                aria-label="View collector note preview"
+                aria-label="View image description preview"
               >
                 <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M2 6h4" />
-                  <path d="M2 10h4" />
-                  <path d="M2 14h4" />
-                  <path d="M2 18h4" />
-                  <rect width="16" height="20" x="4" y="2" rx="2" />
-                  <path d="M16 2v20" />
+                  <path d="M7 18v-6a5 5 0 0 1 10 0v6" />
+                  <path d="M5 21v-1a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v1" />
+                  <path d="M12 14v4" />
+                  <path d="M12 2v2" />
+                  <path d="M4.93 4.93 6.34 6.34" />
+                  <path d="M19.07 4.93 17.66 6.34" />
+                  <path d="M2 12h2" />
+                  <path d="M20 12h2" />
                 </svg>
               </button>
               <div class="collector-note-overlay" data-notes-overlay>
-                <p class="collector-note-kicker">Collector Note</p>
-                <p class="collector-note-teaser">{collectorNoteTeaser || "Collector note preview available for this artwork."}</p>
-                <a class="collector-note-link" href={collectorNotesHref}>View full collector notes &rarr;</a>
+                <p class="collector-note-kicker">Image Description</p>
+                <p class="collector-note-teaser">{collectorNoteTeaser || "Image description preview available for this artwork."}</p>
+                <a class="collector-note-link" href={collectorNotesHref}>View full image and details &rarr;</a>
               </div>
             </div>
           </>
@@ -898,15 +912,9 @@ const faqRight = faqItems.slice(faqSplitIndex);
                     altText = `Western wall art print: ${title} by Wayne Heim`;
                   }
 
-                  const storyExcerpt = truncateExcerpt(item.story || "", 150);
-                  const collectorNoteRaw =
-                    item.notes ||
-                    item.collectorNotes ||
-                    item.collector_notes ||
-                    item.description ||
-                    item.story ||
-                    "";
-                  const collectorNoteTeaser = truncateExcerpt(collectorNoteRaw, 190);
+                  const storyExcerpt = truncateStoryExcerpt(item.story || "", 100);
+                  const collectorNoteRaw = item.description || "";
+                  const collectorNoteTeaser = truncateBookendExcerpt(collectorNoteRaw, 100, 300);
                   const cardSeries = getCardSeries(item, section.galleryPath);
                   const cardSeriesKeys = cardSeries.map((series: any) => series.key).join(' ');
 
@@ -966,21 +974,23 @@ const faqRight = faqItems.slice(faqSplitIndex);
                         type="button"
                         class="collector-notes-trigger"
                         data-notes-trigger
-                        aria-label="View collector note preview"
+                        aria-label="View image description preview"
                       >
                         <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-                          <path d="M2 6h4" />
-                          <path d="M2 10h4" />
-                          <path d="M2 14h4" />
-                          <path d="M2 18h4" />
-                          <rect width="16" height="20" x="4" y="2" rx="2" />
-                          <path d="M16 2v20" />
+                          <path d="M7 18v-6a5 5 0 0 1 10 0v6" />
+                          <path d="M5 21v-1a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v1" />
+                          <path d="M12 14v4" />
+                          <path d="M12 2v2" />
+                          <path d="M4.93 4.93 6.34 6.34" />
+                          <path d="M19.07 4.93 17.66 6.34" />
+                          <path d="M2 12h2" />
+                          <path d="M20 12h2" />
                         </svg>
                       </button>
                       <div class="collector-note-overlay" data-notes-overlay>
-                        <p class="collector-note-kicker">Collector Note</p>
-                        <p class="collector-note-teaser">{collectorNoteTeaser || "Collector note preview available for this artwork."}</p>
-                        <a class="collector-note-link" href={collectorNotesHref}>View full collector notes &rarr;</a>
+                        <p class="collector-note-kicker">Image Description</p>
+                        <p class="collector-note-teaser">{collectorNoteTeaser || "Image description preview available for this artwork."}</p>
+                        <a class="collector-note-link" href={collectorNotesHref}>View full image and details &rarr;</a>
                       </div>
                     </div>
                   );
@@ -1290,7 +1300,7 @@ const faqRight = faqItems.slice(faqSplitIndex);
     .breadcrumb-list li:last-child::after { content:""; }
 
     .gallery-index-wrapper > .collection-hero {
-      max-width:1280px;
+      width:min(1020px, calc(100% - 80px));
       margin:0 auto;
       padding:44px 28px;
       border-top:1px solid #dccfbe;
@@ -2644,7 +2654,7 @@ const faqRight = faqItems.slice(faqSplitIndex);
       border:0;
       border-radius:0;
       background:transparent;
-      color:#3b8f4a;
+      color:#c08a1f;
       opacity:.92;
       display:flex;
       align-items:center;
@@ -2674,7 +2684,7 @@ const faqRight = faqItems.slice(faqSplitIndex);
     }
     .collector-notes-trigger:hover,
     .collector-notes-trigger:focus-visible {
-      color:#2f7a3d;
+      color:#dda52a;
       opacity:1;
       outline:none;
     }

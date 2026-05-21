@@ -1,0 +1,8 @@
+---
+export const prerender = true;
+
+import CommercialIntentDoorway from "@/components/doorway/CommercialIntentDoorway.astro";
+import { commercialIntentPages } from "@/data/doorway/commercialIntentPages.ts";
+---
+
+<CommercialIntentDoorway config={commercialIntentPages.blackAndWhiteCowboyPhotography} />

@@ -1,0 +1,277 @@
+---
+export const prerender = true;
+
+import CommercialDoorwayAllPage from "@/components/doorway/CommercialDoorwayAllPage.astro";
+import { galleryData as cowboyBlackWhiteData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs";
+import { galleryData as narrativeBlackWhiteData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs";
+import { galleryData as nativeBlackWhiteData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White.mjs";
+import { entranceData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/BWEntranceData.ts";
+import { getFormattedLowestStandardPrintPrice } from "@/data/pricing/printSeries.js";
+
+const pagePath = "/black-and-white-cowboy-photos";
+const basePath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White";
+const canonicalPath = pagePath;
+
+const rotateGallery = (items: any[] = [], offset = 0) => {
+  const cleanItems = items.filter((item: any) =>
+    item?.id &&
+    item.id !== "i-k4studios" &&
+    item.visibility !== "ghost" &&
+    item.visibility !== "hidden" &&
+    item.visibility !== "hide"
+  );
+  if (cleanItems.length === 0) return cleanItems;
+  const start = offset % cleanItems.length;
+  return [...cleanItems.slice(start), ...cleanItems.slice(0, start)];
+};
+
+const cowboyBlackWhiteItems = rotateGallery(cowboyBlackWhiteData, 0);
+const narrativeBlackWhiteItems = rotateGallery(narrativeBlackWhiteData, 0);
+const nativeBlackWhiteItems = rotateGallery(nativeBlackWhiteData, 0);
+
+const breadcrumbHtml = [
+  '<a href="/">Wayne Heim</a>',
+  '<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Facing History</a>',
+  '<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West">Wild West</a>',
+  "Black and White Cowboy Photos",
+].join(" | ");
+
+const breadcrumbStructuredItems = [
+  { href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History", name: "Facing History" },
+  { href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West", name: "Wild West" },
+];
+
+const supportDockItem = (title: string, href: string, thumb: string, subtitle = "") => ({
+  title,
+  subtitle,
+  href,
+  thumb,
+  cue: "Browse collection ->",
+  dockRole: "support",
+  dockPrefix: "",
+});
+
+const sectionDockItems = [
+  supportDockItem(
+    "Learn What Makes an Image Feel Cinematic",
+    "/Blog/what-makes-an-image-feel-cinematic",
+    "/img/i-kp5NHNw/s.jpg"
+  ),
+  supportDockItem(
+    "Learn What Is Narrative Photography",
+    "/Blog/what-is-narrative-photography",
+    "/img/i-HfQ5NVR/s.jpg"
+  ),
+  supportDockItem(
+    "Learn What Is Painterly Photography",
+    "/Blog/what-is-painterly-photography",
+    "/img/i-2GsTkqf/s.jpg"
+  ),
+  supportDockItem(
+    "Learn What Is Historical Western Photography",
+    "/Blog/what-is-historical-western-photography",
+    "/img/i-FnZ68h3/s.jpg"
+  ),
+  { separator: true, label: "Core black and white Western collections" },
+  {
+    title: "Black and White Cowboy Portraits",
+    href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/all#collection-browser",
+    thumb: "/img/i-DJMTZ8z/s.jpg",
+    cue: "Browse collection ->",
+    dockRole: "core",
+    dockPrefix: "",
+  },
+  {
+    title: "Black and White Western Narratives",
+    href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/all#collection-browser",
+    thumb: "/img/i-mqQxwNn/s.jpg",
+    cue: "Browse collection ->",
+    dockRole: "core",
+    dockPrefix: "",
+  },
+  {
+    title: "Black and White Native American Portraits",
+    href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White/all#collection-browser",
+    thumb: "/img/i-Z54nXZm/s.jpg",
+    cue: "Browse collection ->",
+    dockRole: "core",
+    dockPrefix: "",
+  },
+  { separator: true, label: "Collector notes and related routes" },
+  supportDockItem(
+    "Learn What Is Western Black and White Photography",
+    "/Blog/what-is-western-black-and-white-photography",
+    "/img/i-qMQf7b6/s.jpg"
+  ),
+  supportDockItem(
+    "Learn What Makes a Fine Art Print Worth Owning",
+    "/Blog/what-makes-a-fine-art-print-worth-owning",
+    "/images/tombstones/print-options-ts.webp"
+  ),
+  supportDockItem(
+    "Compare Wood Prints and Paper Prints",
+    "/Blog/wood-prints-vs-paper-prints",
+    "/images/tombstones/engrained-ts.webp"
+  ),
+  supportDockItem(
+    "Compare Decor Art and Fine Art",
+    "/Blog/decor-art-vs-fine-art",
+    "/img/i-44jcjTQ/s.jpg"
+  ),
+];
+const dockCenterIndex = sectionDockItems.findIndex((item: any) => item.title === "Black and White Western Narratives");
+
+const gridSections = [
+  {
+    title: "Black and White Western Narrative Photos",
+    description: "Frontier narrative scenes where shadow, silence, and the withheld moment carry the story further than color ever could.",
+    galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White",
+    allHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/all#collection-browser",
+    ctaLabel: "See the full black and white Western narrative collection",
+    ctaThumb: "/img/i-mqQxwNn/s.jpg",
+    items: narrativeBlackWhiteItems,
+    limit: 19,
+  },
+  {
+    title: "Black and White Cowboy Portrait Photos",
+    description: "Monochrome cowboy portraits where expression, weathering, and tonal restraint carry the frontier presence.",
+    galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White",
+    allHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/all#collection-browser",
+    ctaLabel: "See the full black and white cowboy portrait collection",
+    ctaThumb: "/img/i-DJMTZ8z/s.jpg",
+    items: cowboyBlackWhiteItems,
+    limit: 19,
+  },
+  {
+    title: "Black and White Native American Photos",
+    description: "Monochrome portrait studies where atmosphere, heritage, and quiet authority complete the collection.",
+    galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White",
+    allHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White/all#collection-browser",
+    ctaLabel: "See the full black and white Native American portrait collection",
+    ctaThumb: "/img/i-Z54nXZm/s.jpg",
+    items: nativeBlackWhiteItems,
+    limit: 19,
+  },
+];
+
+const countLiveItems = (sections: typeof gridSections) =>
+  sections.reduce((total, section) => total + section.items.filter((item: any) =>
+    item?.id &&
+    item.id !== "i-k4studios" &&
+    item.visibility !== "ghost" &&
+    item.visibility !== "hidden" &&
+    item.visibility !== "hide"
+  ).length, 0);
+const blackAndWhiteCowboyPhotosLiveCount = countLiveItems(gridSections);
+
+const commercialMiddleCopy = [
+  "Black and white cowboy photos at K4 Studios are built around restraint: faces, posture, weathered clothing, window light, frontier interiors, and the tonal pressure that remains when color is removed.",
+  "Start with the narrative section when the work needs old-West tension and story-led scenes. Move into the cowboy portrait section for human gravity and direct presence. Continue into the Native American portrait section for monochrome work shaped by atmosphere, heritage, and quiet authority.",
+  "Size, substrate, and edition details are inside each image page.",
+].join("\n\n");
+
+const copy = {
+  seoTitle: "Black and White Cowboy Photos – Fine Art Prints by Wayne Heim | K4 Studios",
+  seoDescription:
+    `Black and white cowboy photos by Wayne Heim — ${blackAndWhiteCowboyPhotosLiveCount} monochrome western works. Frontier narrative scenes, cowboy portraits, and Native American studies. Archival fine art prints from $25. Four edition tiers.`,
+  indexDefinition:
+    "Wayne Heim's black and white cowboy photos include monochrome Western narrative scenes, cowboy portraits, and painterly Native American portrait work created as collector-grade fine art prints.",
+  indexLinkNote:
+    "This is the K4 commercial route for black and white cowboy photos, black and white cowboy photography, monochrome Western art, and black and white Western wall art.",
+  printAvailabilityNote: `Black and white cowboy photo prints are available from ${getFormattedLowestStandardPrintPrice()} across archival paper and select wood presentations. Edition status and format options are shown on individual image pages.`,
+  commercialH1: `The Collection — Three Monochrome Series, ${blackAndWhiteCowboyPhotosLiveCount} Works`,
+  commercialDeck:
+    `${blackAndWhiteCowboyPhotosLiveCount} black and white western photographs — frontier narrative scenes, cowboy portraits, and Native American portrait studies organized for collectors, rooms, and tonal decisions.`,
+  catalogEntranceTitle: "Black and White Cowboy Photos, Frontier Narratives, and Monochrome Western Art",
+  catalogEntranceCopy:
+    "Browse black and white cowboy photo prints, monochrome frontier scenes, cowboy portraits, and Native American portrait work created as collector-grade fine art.",
+  collectionIntro: commercialMiddleCopy,
+  breadcrumbCurrentName: "Black and White Cowboy Photos",
+  aggregateOfferLowPrice: "25",
+  aggregateOfferHighPrice: "5000",
+  aggregateOfferCount: String(blackAndWhiteCowboyPhotosLiveCount),
+  gatewayCollectionName: "Black and White Cowboy Photos",
+  gatewayIntroCopy:
+    "Black and white cowboy photos by Wayne Heim — monochrome frontier narrative scenes, cowboy portraits, and Native American portrait work for living rooms, offices, lodges, ranch interiors, hospitality spaces, and collector walls.",
+  gatewaySupportingCopy:
+    `These works begin as photography, then are shaped through Heim's painterly process into fine art with tonal depth, human presence, and the atmospheric restraint that monochrome demands. The collection opens with the Sketch Series, 5x7 prints from ${getFormattedLowestStandardPrintPrice()} — sized for shelves, desks, and introductory collecting. It scales through open-edition Foundation works, signed Chronicle editions with numbered certificates of authenticity, and ultra-limited Legend pieces for collectors who want permanence on the wall.\n\nClick into any section to compare prints, read the image story, and view collector and sizing details.`,
+  gatewayKicker: "K4 STUDIOS — BLACK AND WHITE COWBOY PHOTOS",
+  gatewayHeroTitle: "Black and White Cowboy Photos by Wayne Heim",
+  gatewayHeroAlt:
+    "Black and white cowboy photography print with tonal restraint and painterly Western fine art presence.",
+  gatewayHeroHref:
+    "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/i-mqQxwNn",
+  gatewayHeroSrc: "/img/i-mqQxwNn/m.jpg",
+  gatewayHeroSrcSet: "/img/i-mqQxwNn/s.jpg 400w, /img/i-mqQxwNn/m.jpg 720w",
+  archiveContextCopy:
+    "Every work on this page is available as a fine art print - with the Sketch Series opening at $25. Click into any image to read the story, compare print options, sizes, and collector details. Questions about a specific piece? Reach Wayne directly at <a href='mailto:wayne@k4studios.com'>wayne@k4studios.com</a>.",
+  faqKicker: "Print & Collector Questions",
+  faqTitle: "Black and White Cowboy Photos — Print & Collector Questions",
+};
+
+const blackAndWhiteCowboyPhotosFAQ = [
+  {
+    q: "What black and white cowboy photos are available as fine art prints?",
+    a: [
+      `${blackAndWhiteCowboyPhotosLiveCount} monochrome western works — frontier narrative scenes, cowboy portraits, and Native American portrait studies by Wayne Heim. Available as museum-quality archival fine art prints from $25 through signed limited editions with certificate of authenticity.`,
+    ],
+  },
+  {
+    q: "Are these black and white cowboy photos limited editions?",
+    a: [
+      "The collection offers both open and limited editions. Sketch and Foundation Series are open-edition archival fine art prints from $25. Chronicle and Legend Series are signed limited edition prints — numbered with a certificate of authenticity — built for permanent collector walls.",
+    ],
+  },
+  {
+    q: "What sizes are available for black and white cowboy photo prints?",
+    a: [
+      "Sketch Series opens at 5x7 from $25. Foundation Series covers 8x10 and 11x14. Chronicle Series offers signed limited editions at 16x20 and 20x24. Legend Series offers ultra-limited works at 30x40 and 40x60. All available on archival fine art paper ready to frame, or Engrained Baltic Birch wood panels ready to hang.",
+    ],
+  },
+  {
+    q: "Are these black and white cowboy photos museum quality?",
+    a: [
+      "Yes. All prints are produced on museum-quality archival paper using archival inks for superior fade resistance and long-term stability. Signed limited edition Chronicle and Legend prints are numbered and accompanied by a certificate of authenticity.",
+    ],
+  },
+  {
+    q: "How do black and white cowboy photos work in modern interiors?",
+    a: [
+      "Monochrome western photos work in rooms where color prints would compete with existing palettes. Compatible with contemporary, transitional, lodge, ranch, and traditional interiors. Fine art paper prints are ready to frame. Engrained wood panel prints arrive ready to hang.",
+    ],
+  },
+  {
+    q: "Where should I start with black and white cowboy photo prints?",
+    a: [
+      "Start with the narrative section for frontier scenes with story tension. Move to the cowboy portrait section for direct human presence and character studies. The Sketch Series at $25 is the right entry point — museum-quality prints sized for shelves and introductory collecting.",
+    ],
+  },
+];
+---
+
+<CommercialDoorwayAllPage
+  rawGalleryData={narrativeBlackWhiteItems}
+  entranceData={entranceData}
+  basePath={basePath}
+  contentBasePath={basePath}
+  canonicalPath={canonicalPath}
+  breadcrumbHtml={breadcrumbHtml}
+  breadcrumbStructuredItems={breadcrumbStructuredItems}
+  sectionDockItems={sectionDockItems}
+  dockCenterIndex={dockCenterIndex}
+  currentDockTitle="Explore Black and White Cowboy Photo Collections"
+  archiveContext={{
+    categoryUrl: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West",
+    categoryName: "Wild West",
+  }}
+  identity={{
+    collectionName: "Black and White Cowboy Photos",
+    variantName: "Fine Art Prints",
+    variantDescriptor: "black and white cowboy photos",
+    gatewayBrandLabel: "Black and White Cowboy Photos – Fine Art Prints by Wayne Heim",
+  }}
+  copy={copy}
+  faqItems={blackAndWhiteCowboyPhotosFAQ}
+  gridSections={gridSections}
+  dockVariant="wall-art"
+/>
