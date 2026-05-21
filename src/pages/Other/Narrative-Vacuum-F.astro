@@ -1,0 +1,765 @@
+---
+export const prerender = true;
+
+import fs from "node:fs";
+import path from "node:path";
+import zlib from "node:zlib";
+import { TextDecoder } from "node:util";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import LandingHeader from "@/components/Landing-Header.jsx";
+import SiteFooter from "@/components/Footer.astro";
+import { getStructuredData } from "@/components/utils/getStructuredData.ts";
+import { getLandingMeta } from "@/data/landingMeta.ts";
+import { storyData as loreSamples } from "@/data/Other/Stories/Lore-and-Legacy-Show.mjs";
+import { galleryData as narrativeImages } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs";
+import "@/styles/global.css";
+
+const sectionPath = "/Other/Narrative-Vacuum-F";
+const canonicalUrl = `https://k4studios.com${sectionPath}`;
+const title = "Story, the Western Canon, and the Work of Wayne Heim";
+const subtitle = "The Narrative Vacuum";
+const deck =
+  "The full article version for comparison, paired with the complete sample-art set and stories prepared for editorial reference.";
+const articlePdf = "/data/narrative_vacuum_essay_WH.pdf";
+const samplesPdf = "/data/Heim%20Samples-annotated.pdf";
+const breadcrumb = "Other > Narrative Vacuum Full";
+
+const structuredData = getStructuredData({
+  type: "Article",
+  data: {
+    headline: `${title}: Full Version`,
+    description: deck,
+    url: canonicalUrl,
+    articleSection: "Narrative Western Art",
+    copyrightNotice: "(c) Wayne Heim",
+    author: {
+      "@type": "Person",
+      name: "Wayne Heim"
+    }
+  },
+  defaults: {
+    copyrightNotice: "(c) Wayne Heim",
+    license: "https://k4studios.com/copyright",
+    creditText: "Wayne Heim",
+    creatorName: "Wayne Heim",
+    creatorUrl: "https://k4studios.com/"
+  }
+});
+
+const meta = {
+  ...getLandingMeta(sectionPath, ""),
+  ogUrl: canonicalUrl,
+  ogTitle: `${title}: Full Version | K4 Studios`,
+  ogDescription: deck,
+  ogType: "article",
+  twitterUrl: canonicalUrl,
+  twitterTitle: `${title}: Full Version | K4 Studios`,
+  twitterDescription: deck,
+  twitterCard: "summary_large_image"
+};
+
+const cp1252Map: Record<string, string> = {
+  "\u0082": ",",
+  "\u0084": '"',
+  "\u0085": "...",
+  "\u0091": "'",
+  "\u0092": "'",
+  "\u0093": '"',
+  "\u0094": '"',
+  "\u0096": "-",
+  "\u0097": "-",
+  "\u0098": "~",
+  "\u0099": "(tm)"
+};
+
+const normalizePdfText = (value: string) =>
+  value
+    .replace(/[\u0080-\u009f]/g, (match) => cp1252Map[match] || "")
+    .replace(/\s+([,.;:!?])/g, "$1")
+    .replace(/\s+/g, " ")
+    .replace(/K4 Studios\s+-\s+Wayne Heim \| wayne@k4studios\.com \| k4studios\.com/g, "")
+    .trim();
+
+const decodeLiteralPdfString = (value: string, decoder: TextDecoder) => {
+  const literal = value
+    .slice(1, -1)
+    .replace(/\\([nrtbf()\\])/g, (_match, code) => {
+      const escapes: Record<string, string> = {
+        n: "\n",
+        r: "\r",
+        t: "\t",
+        b: "\b",
+        f: "\f",
+        "(": "(",
+        ")": ")",
+        "\\": "\\"
+      };
+      return escapes[code] || code;
+    })
+    .replace(/\\([0-7]{1,3})/g, (_match, octal) => String.fromCharCode(parseInt(octal, 8)));
+
+  return decoder.decode(Buffer.from(literal, "latin1"));
+};
+
+const extractPdfText = (relativePath: string) => {
+  const filePath = path.join(process.cwd(), relativePath);
+  const buffer = fs.readFileSync(filePath);
+  const source = buffer.toString("latin1");
+  const decoder = new TextDecoder("windows-1252");
+  const blocks: string[] = [];
+
+  for (const streamMatch of source.matchAll(/stream\r?\n([\s\S]*?)\r?\nendstream/g)) {
+    let inflated: Buffer;
+    try {
+      inflated = zlib.inflateSync(Buffer.from(streamMatch[1], "latin1"));
+    } catch {
+      continue;
+    }
+
+    const stream = inflated.toString("latin1");
+    const strings: string[] = [];
+    for (const textMatch of stream.matchAll(/\((?:\\.|[^\\()])*\)\s*Tj|\[(.*?)\]\s*TJ/gs)) {
+      if (textMatch[1]) {
+        for (const literalMatch of textMatch[1].matchAll(/\((?:\\.|[^\\()])*\)/g)) {
+          strings.push(literalMatch[0]);
+        }
+      } else {
+        strings.push(textMatch[0].replace(/\s*Tj$/, ""));
+      }
+    }
+
+    const block = normalizePdfText(strings.map((text) => decodeLiteralPdfString(text, decoder)).join(""));
+    if (block) {
+      blocks.push(block);
+    }
+  }
+
+  return normalizePdfText(blocks.join("\n\n"));
+};
+
+const headingPattern =
+  /(I\. The Question Worth Asking|II\. The Oldest Argument in the Room|III\. The Grammar of the Unfinished Moment|IV\. When the Icon Ate the Story|V\. The Work: One-Image Movies and the Armature Beneath the Legend|VI\. The Tradition Doesn.t Need to Be Replaced\. It Needs to Be Remembered\.|Selected Contextual References)/g;
+
+const chunkSentences = (body: string) => {
+  const directParagraphs = body
+    .split(/\n{2,}/)
+    .map((paragraph) => paragraph.trim())
+    .filter(Boolean);
+
+  const paragraphs = directParagraphs.length > 1 ? directParagraphs : [body.trim()];
+  return paragraphs.flatMap((paragraph) => {
+    if (paragraph.length < 1050) {
+      return [paragraph];
+    }
+
+    const sentences = paragraph
+      .split(/(?<=[.!?])\s+(?=(?:["A-Z0-9]|Selected|Russell|Remington|Wyeth|Rockwell|Heim|The|This|But|And|If|In|What|None|That|These|There)\b)/g)
+      .map((sentence) => sentence.trim())
+      .filter(Boolean);
+    const chunks: string[] = [];
+    for (let index = 0; index < sentences.length; index += 3) {
+      chunks.push(sentences.slice(index, index + 3).join(" "));
+    }
+    return chunks.length ? chunks : [paragraph];
+  });
+};
+
+const splitArticleSections = (articleText: string) => {
+  const matches = [...articleText.matchAll(headingPattern)];
+  const intro = matches[0] ? articleText.slice(0, matches[0].index).trim() : "";
+  const sections = matches.map((match, index) => {
+    const next = matches[index + 1];
+    const rawHeading = match[1];
+    const heading = rawHeading.replace("Doesn.t", "Doesn't");
+    const start = (match.index || 0) + rawHeading.length;
+    const end = next?.index ?? articleText.length;
+    return {
+      id: heading
+        .replace(/^[IVX]+\. /, "")
+        .replace(/[^a-zA-Z0-9]+/g, "-")
+        .replace(/^-|-$/g, "")
+        .toLowerCase(),
+      heading,
+      paragraphs: chunkSentences(articleText.slice(start, end).trim())
+    };
+  });
+
+  return {
+    intro: chunkSentences(intro),
+    sections
+  };
+};
+
+const article = splitArticleSections(extractPdfText("public/data/narrative_vacuum_essay_WH.pdf"));
+
+type SampleItem = {
+  id?: string;
+  title?: string;
+  alt?: string;
+  src?: string;
+  srcL?: string;
+  srcXL?: string;
+  story?: string;
+  notes?: string;
+  description?: string;
+  visibility?: string;
+};
+
+type ResolvedSample = SampleItem & {
+  displayTitle: string;
+  imageSrc: string;
+};
+
+const isResolvedSample = (sample: ResolvedSample | null): sample is ResolvedSample => Boolean(sample);
+
+const titleKey = (value = "") =>
+  String(value)
+    .toLowerCase()
+    .replace(/[\u201c\u201d"']/g, "")
+    .replace(/[\u2014\u2013-]/g, " ")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+
+const findSample = (label: string, aliases: string[] = []) => {
+  const keys = [label, ...aliases].map(titleKey);
+  const sources = [...(loreSamples as SampleItem[]), ...(narrativeImages as SampleItem[])];
+  return (
+    sources.find((sample) => keys.includes(titleKey(sample.title))) ||
+    sources.find((sample) => keys.some((key) => titleKey(sample.title).startsWith(key)))
+  );
+};
+
+const samplePlan = [
+  ["One Way Out"],
+  ["Special Delivery"],
+  ["Do You Hear Me Now?!", "Do you HEAR me now?!"],
+  ["Justified - or Damned: A Claustrophobic Consequence of Decisions", "Justified or Damned A Claustrophobic Consequence of Decisions", "Justified"],
+  ["Pinkerton's Grasp"],
+  ["Cough and Covenant"],
+  ["Lenore"],
+  ["Dust or Desperation"],
+  ["Till Death Do Us Part"],
+  ["Night Raid"],
+  ["Lifted"]
+];
+
+const samples = samplePlan
+  .map(([label, ...aliases]) => {
+    const sample = findSample(label, aliases);
+    return sample
+      ? {
+          ...sample,
+          displayTitle: label,
+          imageSrc: sample.srcL || sample.srcXL || sample.src || ""
+        }
+      : null;
+  })
+  .filter(isResolvedSample);
+
+const heroSample = samples.find((sample) => sample.displayTitle === "Lifted") || samples[0];
+if (heroSample?.imageSrc) {
+  meta.ogImage = heroSample.imageSrc;
+  meta.twitterImage = heroSample.imageSrc;
+}
+
+const textParagraphs = (value = "") =>
+  value
+    .split(/\n{2,}/)
+    .map((paragraph) => paragraph.trim())
+    .filter(Boolean);
+---
+
+<BaseLayout
+  title={`${title}: Full Version | K4 Studios`}
+  structuredDataJSON={structuredData}
+  meta={meta}
+>
+  <main class="narrative-vacuum-full-page">
+    <div class="drawer-mode">
+      <LandingHeader client:load breadcrumb={breadcrumb} />
+    </div>
+
+    <header class="nvf-hero">
+      <div class="nvf-hero-copy">
+        <p class="nvf-eyebrow">Full Comparison Draft</p>
+        <h1>{title}</h1>
+        <p class="nvf-subtitle">{subtitle}</p>
+        <p class="nvf-deck">{deck}</p>
+        <div class="nvf-hero-actions">
+          <a href="#full-text">Read full text</a>
+          <a href="#sample-art">View samples</a>
+        </div>
+      </div>
+      {heroSample?.imageSrc && (
+        <figure class="nvf-hero-image">
+          <img src={heroSample.imageSrc} alt={heroSample.alt || "Lifted by Wayne Heim"} />
+          <figcaption>Thesis image: <strong>{heroSample.displayTitle}</strong></figcaption>
+        </figure>
+      )}
+    </header>
+
+    <nav class="nvf-section-nav" aria-label="Narrative Vacuum full page sections">
+      {article.sections.map((section) => (
+        <a href={`#${section.id}`}>{section.heading.replace(/^[IVX]+\. /, "").replace("Selected Contextual References", "References")}</a>
+      ))}
+      <a href="#sample-art">Sample Art</a>
+      <a href="#downloads">Downloads</a>
+    </nav>
+
+    <article id="full-text" class="nvf-article">
+      {article.intro.length > 0 && (
+        <section class="nvf-intro">
+          {article.intro.map((paragraph) => (
+            <p>{paragraph}</p>
+          ))}
+        </section>
+      )}
+
+      {article.sections.map((section) => (
+        <section id={section.id} class="nvf-section">
+          <div class="nvf-section-heading">
+            <span>{section.heading.match(/^[IVX]+\./)?.[0] || "Ref."}</span>
+            <h2>{section.heading.replace(/^[IVX]+\. /, "")}</h2>
+          </div>
+          <div class="nvf-section-rule" aria-hidden="true"></div>
+          <div class="nvf-copy">
+            {section.paragraphs.map((paragraph) => (
+              <p>{paragraph}</p>
+            ))}
+          </div>
+        </section>
+      ))}
+    </article>
+
+    <section id="sample-art" class="nvf-samples" aria-labelledby="sample-art-heading">
+      <div class="nvf-samples-heading">
+        <p class="nvf-eyebrow">Editorial Sample Set</p>
+        <h2 id="sample-art-heading">Images and Stories from the Samples Document</h2>
+        <p>
+          The full comparison version includes every sample image in the packet, with the story text and critical notes carried into the article page.
+        </p>
+      </div>
+
+      <div class="nvf-sample-grid">
+        {samples.map((sample) => (
+          <article class:list={["nvf-sample-card", sample.displayTitle === "Lifted" && "nvf-sample-card-feature"]}>
+            {sample.imageSrc && <img src={sample.imageSrc} alt={sample.alt || sample.displayTitle} loading="lazy" />}
+            <div class="nvf-sample-copy">
+              <p class="nvf-sample-label">{sample.displayTitle === "Lifted" ? "Culmination" : "Sample Artwork"}</p>
+              <h3>{sample.displayTitle}</h3>
+              {(sample.story || sample.description) && (
+                <div class="nvf-sample-story">
+                  <h4>Story</h4>
+                  {textParagraphs(sample.story || sample.description).map((paragraph, index, paragraphs) => (
+                    <p>
+                      {paragraph}
+                      {index === paragraphs.length - 1 && sample.notes && (
+                        <span class="nvf-info-wrap">
+                          <button
+                            class="nvf-info-button"
+                            type="button"
+                            aria-label={`Annotation for ${sample.displayTitle}`}
+                          >
+                            i
+                          </button>
+                          <span class="nvf-info-popup" role="tooltip">
+                            {sample.notes}
+                          </span>
+                        </span>
+                      )}
+                    </p>
+                  ))}
+                </div>
+              )}
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section id="downloads" class="nvf-downloads" aria-labelledby="downloads-heading">
+      <div>
+        <h2 id="downloads-heading">Full Article and Editorial Samples</h2>
+        <p>
+          Download the source article PDF and the annotated sample-art packet for editorial use only.
+        </p>
+      </div>
+      <div class="nvf-download-actions">
+        <a href={articlePdf} download>Download full article</a>
+        <a href={samplesPdf} download>Download sample packet</a>
+      </div>
+    </section>
+
+    <SiteFooter class="pt-8 pb-12" />
+  </main>
+</BaseLayout>
+
+<style>
+  .narrative-vacuum-full-page {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: #fff;
+    color: #2c2c2c;
+    font-family: "Glegoo", serif;
+  }
+
+  .nvf-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(18rem, 28rem);
+    gap: clamp(2rem, 5vw, 4.25rem);
+    align-items: center;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: clamp(3rem, 7vw, 5.75rem) 1.5rem 2rem;
+  }
+
+  .nvf-eyebrow,
+  .nvf-sample-label {
+    margin: 0 0 0.7rem;
+    color: #8b5f1b;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+  }
+
+  .nvf-hero h1 {
+    margin: 0;
+    color: #2f261f;
+    font-size: clamp(2.65rem, 7vw, 5.4rem);
+    font-weight: 700;
+    line-height: 0.98;
+  }
+
+  .nvf-subtitle {
+    margin: 1rem 0 0;
+    color: #6a5c52;
+    font-size: clamp(1.05rem, 2vw, 1.35rem);
+    line-height: 1.45;
+  }
+
+  .nvf-deck {
+    max-width: 44rem;
+    margin: 1.5rem 0 0;
+    color: #4b443e;
+    font-size: 1.08rem;
+    line-height: 1.75;
+  }
+
+  .nvf-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.7rem;
+  }
+
+  .nvf-hero-actions a,
+  .nvf-download-actions a {
+    display: inline-flex;
+    justify-content: center;
+    border: 1px solid #3b342e;
+    color: #2f261f;
+    padding: 0.68rem 0.9rem;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+
+  .nvf-hero-actions a:hover,
+  .nvf-hero-actions a:focus-visible,
+  .nvf-download-actions a:hover,
+  .nvf-download-actions a:focus-visible {
+    color: #8b0000;
+    border-color: #8b0000;
+  }
+
+  .nvf-hero-image {
+    margin: 0;
+    overflow: hidden;
+  }
+
+  .nvf-hero-image img,
+  .nvf-sample-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .nvf-hero-image img {
+    width: 116%;
+    max-width: none;
+    margin-left: -8%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+  }
+
+  .nvf-hero-image figcaption {
+    margin-top: 0.75rem;
+    color: #6e6259;
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+
+  .nvf-section-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.35rem 0.65rem;
+    max-width: 940px;
+    margin: 0 auto 3rem;
+    padding: 0 1rem;
+  }
+
+  .nvf-section-nav a {
+    color: #4c4038;
+    border: 1px solid #ded7d0;
+    padding: 0.42rem 0.72rem;
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: border-color 0.2s ease, color 0.2s ease;
+  }
+
+  .nvf-section-nav a:hover,
+  .nvf-section-nav a:focus-visible {
+    border-color: #8b0000;
+    color: #8b0000;
+  }
+
+  .nvf-article {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0 clamp(1.25rem, 3vw, 2rem) 4rem;
+  }
+
+  .nvf-intro {
+    margin-bottom: clamp(2.5rem, 6vw, 4rem);
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e5ded7;
+  }
+
+  .nvf-section {
+    scroll-margin-top: 5rem;
+    margin-bottom: clamp(3rem, 7vw, 5rem);
+  }
+
+  .nvf-section-heading {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.9rem;
+    align-items: baseline;
+  }
+
+  .nvf-section-heading span {
+    color: #a09285;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  .nvf-section-heading h2 {
+    margin: 0;
+    color: #3b342e;
+    font-size: clamp(1.65rem, 3vw, 2.2rem);
+    font-weight: 700;
+    line-height: 1.25;
+  }
+
+  .nvf-section-rule {
+    height: 1px;
+    width: 100%;
+    margin: 1.05rem 0 1.65rem;
+    background: linear-gradient(90deg, #8b5f1b, rgba(139, 95, 27, 0.08));
+  }
+
+  .nvf-copy p,
+  .nvf-intro p {
+    margin: 0 0 1.2rem;
+    color: #37312c;
+    font-size: 1.04rem;
+    line-height: 1.72;
+  }
+
+  .nvf-samples {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem 4rem;
+  }
+
+  .nvf-samples-heading {
+    max-width: 780px;
+    margin-bottom: 2rem;
+  }
+
+  .nvf-samples-heading h2 {
+    margin: 0;
+    color: #3b342e;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    line-height: 1.2;
+  }
+
+  .nvf-samples-heading p {
+    margin: 1rem 0 0;
+    color: #5d524a;
+    font-size: 1.02rem;
+    line-height: 1.7;
+  }
+
+  .nvf-sample-grid {
+    display: grid;
+    gap: 2rem;
+  }
+
+  .nvf-sample-card {
+    display: grid;
+    grid-template-columns: minmax(18rem, 1fr) minmax(16rem, 0.72fr);
+    gap: clamp(1.2rem, 3vw, 2rem);
+    align-items: start;
+    padding: 1.25rem 0;
+    border-top: 1px solid #e5ded7;
+    border-bottom: 1px solid #e5ded7;
+  }
+
+  .nvf-sample-card-feature {
+    margin-top: 1rem;
+    border-top: 2px solid #8b5f1b;
+  }
+
+  .nvf-sample-card img {
+    width: 100%;
+    max-height: 520px;
+    object-fit: contain;
+  }
+
+  .nvf-sample-copy h3 {
+    margin: 0;
+    color: #2f261f;
+    font-size: clamp(1.45rem, 3vw, 2.15rem);
+    line-height: 1.2;
+  }
+
+  .nvf-sample-story,
+  .nvf-sample-notes {
+    margin-top: 1.4rem;
+    max-width: 24rem;
+  }
+
+  .nvf-sample-copy h4 {
+    margin: 0 0 0.6rem;
+    color: #8b5f1b;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .nvf-sample-copy p {
+    margin: 0 0 0.95rem;
+    color: #3f3731;
+    font-size: 0.92rem;
+    line-height: 1.5;
+  }
+
+  .nvf-info-wrap {
+    position: relative;
+    display: inline-flex;
+    margin-left: 0.35rem;
+    vertical-align: baseline;
+  }
+
+  .nvf-info-button {
+    display: inline-flex;
+    width: 1.15rem;
+    height: 1.15rem;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #8b5f1b;
+    border-radius: 999px;
+    background: #fff;
+    color: #8b5f1b;
+    cursor: help;
+    font: 700 0.72rem/1 Arial, sans-serif;
+  }
+
+  .nvf-info-popup {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 4;
+    width: min(34rem, 86vw);
+    max-height: min(34rem, 72vh);
+    overflow: auto;
+    padding: 1.15rem 1.25rem;
+    border: 1px solid #d9cfc4;
+    background: #fff;
+    box-shadow: 0 18px 42px rgba(47, 38, 31, 0.18);
+    color: #3f3731;
+    font-size: 0.92rem;
+    line-height: 1.62;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -48%);
+    transition: opacity 0.18s ease, transform 0.18s ease;
+    white-space: pre-line;
+  }
+
+  .nvf-info-wrap:hover .nvf-info-popup,
+  .nvf-info-button:focus-visible + .nvf-info-popup {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%);
+  }
+
+  .nvf-downloads {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 1.5rem;
+    align-items: end;
+    max-width: 960px;
+    margin: 0 auto 3rem;
+    padding: 2rem;
+    border-top: 2px solid #8b5f1b;
+    border-bottom: 1px solid #e5ded7;
+    background: #fbfaf8;
+  }
+
+  .nvf-downloads h2 {
+    margin: 0;
+    color: #3b342e;
+    font-size: 1.45rem;
+  }
+
+  .nvf-downloads p {
+    margin: 0.85rem 0 0;
+    color: #5d524a;
+    line-height: 1.65;
+  }
+
+  .nvf-download-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    min-width: 13rem;
+  }
+
+  @media (max-width: 900px) {
+    .nvf-hero,
+    .nvf-sample-card,
+    .nvf-downloads {
+      grid-template-columns: 1fr;
+    }
+
+    .nvf-hero-image {
+      max-width: 28rem;
+      margin-inline: auto;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .nvf-section-heading {
+      grid-template-columns: 1fr;
+      gap: 0.2rem;
+    }
+
+    .nvf-downloads {
+      padding: 1.4rem;
+    }
+  }
+</style>

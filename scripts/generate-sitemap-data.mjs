@@ -106,6 +106,7 @@ const EXCLUDE_PATTERNS = [
   /^\/500/,
   /^\/Galleries\/lightbox(?:\/|$)/i,
   /^\/Other\/Print-Options\/?$/i,
+  /^\/Other\/Narrative-Vacuum-F\/?$/i,
   /^\/Other\/Stories\/?$/i,
   /^\/Other\/Stories(?:\/|$)/i,
   // Exclude test/draft pages

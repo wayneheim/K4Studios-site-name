@@ -1,0 +1,950 @@
+---
+export const prerender = true;
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import LandingHeader from "@/components/Landing-Header.jsx";
+import SiteFooter from "@/components/Footer.astro";
+import { getStructuredData } from "@/components/utils/getStructuredData.ts";
+import { getLandingMeta } from "@/data/landingMeta.ts";
+import { storyData as loreSamples } from "@/data/Other/Stories/Lore-and-Legacy-Show.mjs";
+import { galleryData as narrativeImages } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs";
+import { getSemanticImageUrl } from "@/utils/imageProxy.js";
+import "@/styles/global.css";
+
+const sectionPath = "/Other/Narrative-Vacuum";
+const canonicalUrl = `https://k4studios.com${sectionPath}`;
+const previewPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color";
+
+const title = "Story, the Western Canon, and the Work of Wayne Heim";
+const deck =
+  "A critical framework for curators, collectors, and writers on unresolved images, viewer participation, and the armature beneath the Western legend.";
+
+const structuredData = getStructuredData({
+  type: "Article",
+  data: {
+    headline: title,
+    description: deck,
+    url: canonicalUrl,
+    articleSection: "Narrative Western Art",
+    copyrightNotice: "(c) Wayne Heim",
+    author: {
+      "@type": "Person",
+      name: "Wayne Heim"
+    }
+  },
+  defaults: {
+    copyrightNotice: "(c) Wayne Heim",
+    license: "https://k4studios.com/copyright",
+    creditText: "Wayne Heim",
+    creatorName: "Wayne Heim",
+    creatorUrl: "https://k4studios.com/"
+  }
+});
+
+const meta = {
+  ...getLandingMeta(sectionPath, ""),
+  ogUrl: canonicalUrl,
+  ogTitle: `${title} | K4 Studios`,
+  ogDescription: deck,
+  ogType: "article",
+  twitterUrl: canonicalUrl,
+  twitterTitle: `${title} | K4 Studios`,
+  twitterDescription: deck,
+  twitterCard: "summary_large_image"
+};
+
+type NarrativeImage = (typeof narrativeImages)[number];
+type StoryImage = (typeof loreSamples)[number];
+type ArtworkImage = NarrativeImage | StoryImage;
+type SampleCard = {
+  displayTitle: string;
+  image: ArtworkImage;
+  story: string;
+  notes: string;
+};
+
+const normalizeTitle = (value = "") =>
+  value
+    .replace(/[\u201c\u201d"']/g, "")
+    .trim()
+    .toLowerCase();
+const visibleNarrativeImages = narrativeImages.filter((image: NarrativeImage) => image.visibility !== "ghost");
+const visibleLoreSamples = loreSamples.filter((image: StoryImage) => image.visibility !== "ghost");
+const findGalleryArtwork = (imageTitle: string, preferredId?: string) =>
+  visibleNarrativeImages.find((image: NarrativeImage) => preferredId && image.id === preferredId) ||
+  visibleNarrativeImages.find((image: NarrativeImage) => normalizeTitle(image.title) === normalizeTitle(imageTitle));
+const findSampleArtwork = (imageTitle: string, preferredId?: string) =>
+  visibleLoreSamples.find((image: StoryImage) => preferredId && image.id === preferredId) ||
+  visibleLoreSamples.find((image: StoryImage) => normalizeTitle(image.title) === normalizeTitle(imageTitle));
+const findArtwork = (imageTitle: string, preferredId?: string, fallbackId?: string) =>
+  findSampleArtwork(imageTitle, preferredId) || findGalleryArtwork(imageTitle, fallbackId || preferredId);
+const titleKey = (value = "") =>
+  normalizeTitle(value)
+    .replace(/[\u2014\u2013-]/g, " ")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+const allArtworkSources = [...visibleLoreSamples, ...visibleNarrativeImages];
+const findEditorialSample = (label: string, aliases: string[] = [], preferredId?: string, fallbackId?: string) => {
+  const keys = [label, ...aliases].map(titleKey);
+  return (
+    allArtworkSources.find((image) => preferredId && image.id === preferredId) ||
+    allArtworkSources.find((image) => fallbackId && image.id === fallbackId) ||
+    allArtworkSources.find((image) => keys.includes(titleKey(image.title))) ||
+    allArtworkSources.find((image) => keys.some((key) => titleKey(image.title).startsWith(key)))
+  );
+};
+
+const artworks = [
+  {
+    title: "Lenore",
+    image: findArtwork("Lenore", undefined, "i-9BhX2Lj"),
+    note:
+      "A powerful portrait becomes more than a man and a gun once the story opens beneath it. The stillness turns haunted; the visible scene becomes only the surface of a larger pressure."
+  },
+  {
+    title: "Special Delivery",
+    image: findArtwork("Special Delivery", "i-J6Gdmr4", "i-LL2Gp5r"),
+    note:
+      "The train light, fog, and figures do not resolve the event. They implicate the viewer in a moment of power, hubris, and consequence before the outcome is named."
+  },
+  {
+    title: "Keeping the Line",
+    image: findGalleryArtwork("Keeping the Line", "i-vP7bLLc"),
+    note:
+      "The Western image is not only heroism at the ridge line. It is discipline, pressure, responsibility, and the ordinary work that keeps a fragile world from coming apart."
+  },
+  {
+    title: "Lifted",
+    image: findArtwork("Lifted", "i-svbQj25", "i-G7csptc"),
+    note:
+      "Placed near the end, Lifted becomes the essay's release point: not an escape from difficulty, but the culmination of it. The image turns endurance back toward the viewer."
+  }
+];
+
+const heroImage = artworks.find((entry) => entry.title === "Lifted")?.image || artworks[0]?.image;
+if (heroImage?.srcL || heroImage?.srcXL || heroImage?.src) {
+  meta.ogImage = heroImage.srcL || heroImage.srcXL || heroImage.src;
+  meta.twitterImage = meta.ogImage;
+} else if (heroImage?.id) {
+  meta.ogImage = getSemanticImageUrl(heroImage, { galleryPath: previewPath }, "l");
+  meta.twitterImage = meta.ogImage;
+}
+
+const imageSrc = (image?: ArtworkImage, size = "l") => {
+  if (!image) return "";
+  if (size === "xl" && image.srcXL) return image.srcXL;
+  if (image.srcL) return image.srcL;
+  if (image.srcXL) return image.srcXL;
+  if (image.src) return image.src;
+  return image.id ? getSemanticImageUrl(image, { galleryPath: previewPath }, size) : "";
+};
+
+const sectionLinks = [
+  ["question", "The Question"],
+  ["argument", "The Argument"],
+  ["grammar", "The Grammar"],
+  ["icon", "The Icon"],
+  ["work", "The Work"],
+  ["lifted", "Lifted"],
+  ["remembered", "Remembered"]
+];
+
+const samplePlan = [
+  {
+    label: "One Way Out",
+    preferredId: "i-8pfC4qn",
+    fallbackId: "i-7VWX9vk"
+  },
+  {
+    label: "Special Delivery",
+    preferredId: "i-J6Gdmr4",
+    fallbackId: "i-LL2Gp5r"
+  },
+  {
+    label: "Do You Hear Me Now?!",
+    aliases: ["Do you HEAR me now?!"],
+    preferredId: "i-5VmRqpZ"
+  },
+  {
+    label: "Justified - or Damned: A Claustrophobic Consequence of Decisions",
+    aliases: ["Justified or Damned A Claustrophobic Consequence of Decisions", "Justified"],
+    preferredId: "i-bVSh9xt",
+    fallbackId: "i-Wx5scCf"
+  },
+  {
+    label: "Pinkerton's Grasp",
+    preferredId: "i-gM5crmq"
+  },
+  {
+    label: "Cough and Covenant",
+    preferredId: "i-4QZ7HPR"
+  },
+  {
+    label: "Lenore",
+    fallbackId: "i-9BhX2Lj"
+  },
+  {
+    label: "Dust or Desperation",
+    fallbackId: "i-cFhZXJc"
+  },
+  {
+    label: "Till Death Do Us Part",
+    preferredId: "i-PnGsDQp",
+    fallbackId: "i-B7ZSdfs"
+  },
+  {
+    label: "Night Raid",
+    preferredId: "i-LdQzCRt"
+  },
+  {
+    label: "Lifted",
+    preferredId: "i-svbQj25",
+    fallbackId: "i-G7csptc"
+  }
+];
+
+const sampleCards = samplePlan
+  .map(({ label, aliases = [], preferredId, fallbackId }) => {
+    const image = findEditorialSample(label, aliases, preferredId, fallbackId);
+    if (!image) return null;
+    return {
+      displayTitle: label,
+      image,
+      story: image.story || image.description || "",
+      notes: image.notes || ""
+    };
+  })
+  .filter((sample): sample is SampleCard => Boolean(sample));
+
+const storyPreview = (value = "") =>
+  value
+    .split(/\n{2,}/)
+    .map((paragraph) => paragraph.trim())
+    .filter(Boolean);
+
+const isFinalClose = (sectionId: string, index: number, total: number) =>
+  sectionId === "remembered" && index === total - 1;
+
+const sampleByTitle = (title: string) => sampleCards.find((sample) => sample.displayTitle === title);
+const inlineSamplePlacements = {
+  question: [
+    { sample: sampleByTitle("One Way Out"), side: "right", before: 4 }
+  ],
+  argument: [
+    { sample: sampleByTitle("Lenore"), side: "left", before: 0 },
+    { sample: sampleByTitle("Pinkerton's Grasp"), side: "right", before: 3 }
+  ],
+  grammar: [
+    { sample: sampleByTitle("Special Delivery"), side: "right", before: 0 },
+    { sample: sampleByTitle("Cough and Covenant"), side: "left", before: 3 }
+  ],
+  icon: [
+    { sample: sampleByTitle("Do You Hear Me Now?!"), side: "left", before: 2 },
+    { sample: sampleByTitle("Justified - or Damned: A Claustrophobic Consequence of Decisions"), side: "right", before: 5 },
+    { sample: sampleByTitle("Night Raid"), side: "left", before: 7 }
+  ],
+  work: [
+    { sample: sampleByTitle("Dust or Desperation"), side: "right", before: 2 },
+    { sample: sampleByTitle("Till Death Do Us Part"), side: "left", before: 5 }
+  ]
+};
+
+const liftedSample = sampleByTitle("Lifted");
+
+const sections = [
+  {
+    id: "question",
+    kicker: "I.",
+    title: "The Question Worth Asking",
+    paragraphs: [
+      "The lone bison stands perfectly framed against an infinite sky - massive, still, an undisputed icon of Western power. Across the gallery, a rider sits horseback on a ridge, gaze pulled toward a distance only he can read. Around the corner, a cowboy and his horse pause against snow-capped mountains, golden light doing exactly what golden light is supposed to do.",
+      "The work is beautiful and technically accomplished. Horses rendered with anatomical precision. Light caught at the exact moment it breaks across open range. Faces weathered with the kind of detail that rewards close inspection.",
+      "But experience enough contemporary Western art displays and those descriptions begin to feel all too familiar. And they raise a question worth sitting with: how does a tradition so steeped in narrative complexity arrive at images this easy to receive?",
+      "The question is not whether Western art is still alive. It clearly is - celebrated, collected, institutionally preserved. The question is whether the structural language that built the tradition is still present in its living practice. Whether the grammar of the unresolved moment, the viewer as participant, the image that opens rather than closes, still has an active place in the canon that celebrates it.",
+      "The Western canon didn't always look like this.",
+      "Consider Charles Marion Russell's In Without Knocking, 1909. Cowboys on horseback forcing their way through the front door of a Montana saloon - cards and bottles already on the ground, chaos arriving faster than anyone can reckon with it. Russell chose not the standoff, not the gunshot, not the aftermath. He chose the half-second after the door explodes open and before anyone knows how it ends. You are now just as much a part of it as the man still holding his cards. Something is about to happen. Something already has. The image holds both at once and releases neither.",
+      "That is a different grammar entirely. One group of images delivers. The other implicates. One rewards the glance. The other demands participation - and rewards the viewer with something they didn't expect to find: themselves inside the story."
+    ]
+  },
+  {
+    id: "argument",
+    kicker: "II.",
+    title: "The Oldest Argument in the Room",
+    paragraphs: [
+      "This tension between the image that closes and the image that opens is not new. It is one of the oldest arguments in the history of visual art, and it arrived with particular force when the camera entered the room.",
+      "A camera, in its default state, records. It captures what stood before the lens with mechanical fidelity. Documentation can be precise and beautiful, but it leaves the viewer in a particular position: outside the image, receiving information, witness to a completed fact.",
+      "Art's highest function is different. It makes the viewer a participant. It leaves something unresolved. It creates the pressure of a human situation, then withholds enough of it that the viewer must complete the story with their own conscience and their own experience.",
+      "Pictorialism was the serious photographer's refusal to accept the camera as a closed loop. Light could be shaped. Atmosphere could be constructed. Composition could be authored toward emotional truth rather than documentary accuracy.",
+      "The brush does not automatically confer narrative intention. The camera does not automatically prevent it. The medium is not the argument. The method is."
+    ]
+  },
+  {
+    id: "grammar",
+    kicker: "III.",
+    title: "The Grammar of the Unfinished Moment",
+    paragraphs: [
+      "The open image did not begin with the American West. It is a structural principle so fundamental to human storytelling that it reappears across every serious narrative tradition in every century that has produced one.",
+      "Rembrandt did not light his subjects the way the world actually lit them. He made decisions. What falls in shadow is as deliberate as what is revealed - and what is withheld from the light is frequently where the story lives.",
+      "Hitchcock understood the same principle in suspense. Show the audience the bomb under the table and every ordinary conversation becomes unbearable. Spielberg extended it with the unseen shark in Jaws - most terrifying before it surfaces, because what the viewer imagines in the dark water is always more frightening than what any image can deliver.",
+      "Hemingway gave it literary form: the visible eighth of the iceberg gains its force from the seven-eighths submerged. The writer knows the complete story. The reader receives only what appears above the waterline. The pressure of everything below is felt in every sentence, in every omission, in every place where a lesser writer would have explained and Hemingway chose silence instead.",
+      "Russell and Remington did not invent this grammar. They inherited it, mastered it, and applied it to an American moment with such moral seriousness that the work became foundational. Russell spoke it with particular urgency because he had to - he was painting a world disappearing faster than he could record it. His images were not decorative records of a romantic past. They were dispatches. Invitations to step inside a moment and feel what that history may have actually been like.",
+      "He needed the viewer inside the story. A witness wasn't enough."
+    ]
+  },
+  {
+    id: "icon",
+    kicker: "IV.",
+    title: "When the Icon Ate the Story",
+    paragraphs: [
+      "Something happened to the Western image in the twentieth century that had nothing to do with art. It had to do with selling cigarettes.",
+      "The Marlboro Man arrived as one of the most successful acts of visual compression in American advertising history. A lone rider. Open range. The hat, the horse, the horizon. No story. No before or after. No unresolved human pressure. Just the silhouette of an idea - freedom, independence, masculine self-sufficiency - emptied of everything that made the western iconography meaningful in the first place. Designed not to be lived in, but to be recognized in three seconds and moved past.",
+      "When the most pervasive Western image of the twentieth century is engineered specifically to bypass sustained engagement, it leaves a mark on what the Western image is culturally understood to be. The template was set. And templates, once established, create gravity.",
+      "Collectors bring that template to galleries. Galleries learn what moves. Artists learn what galleries reward. Then the internet accelerated the loop - the image that reads in three seconds gets the response, while the image built for the long stay gets scrolled past.",
+      "The result is not cynicism. Most artists working seriously in the Western tradition love it genuinely. But the system creates a gravitational pull - toward the legible over the ambiguous, the iconic over the human, the image that performs Western-ness over the image that inhabits it.",
+      "Russell had no Marlboro Man. No template engineered for the confirmed feeling. His iconography was forged from witnessed lives, from lived stories, from the daily human texture of a world disappearing faster than any brush could follow. Waiting for a Chinook - the small watercolor he sent to a ranch owner in place of a written report on how the herd had survived the winter of 1886 - is not heroic. It is not iconic. It is a gaunt steer watched by wolves beneath a gray killing sky. Russell chose it over words because he believed the image would carry more truth than language could. That image would not anchor a billboard. It would make you feel what the winter actually cost.",
+      "What the contemporary canon has increasingly inherited is not Russell's method. It is his imagery - the visual vocabulary of the tradition - separated from the moral commitment that generated it. The icon without the story that made the icon matter.",
+      "Meanwhile, Hollywood kept going back to the well Russell drew from. Unforgiven dismantles the heroic gunfighter from the inside. Hell or High Water finds the same human pressure Russell found in the Judith Basin, transplanted into foreclosed ranches and failing banks. True Grit centers a fourteen-year-old girl as the moral conscience of a story the genre had always assigned to men - recovering exactly the kind of subject the tradition was built to tell. The filmmakers followed Russell. And in that divergence - quiet, gradual - an increasing portion of the western fine art canon drifted from the structural language that most distinguishes it at its greatest."
+    ]
+  },
+  {
+    id: "work",
+    kicker: "V.",
+    title: "The Work: One-Image Movies and the Armature Beneath the Legend",
+    paragraphs: [
+      "Wayne Heim's formal training is in medical illustration - a discipline built on the deliberate construction of a visual argument. Medical illustration begins with purpose: what must the viewer understand, feel, and remember? The image is built in service of those answers. Every element chosen. Nothing casual. Nothing incidental.",
+      "His raw photographs are the gesso - the prepared ground. The camera records the moment. The artist builds the argument. Light is shaped toward emotional truth. Atmosphere is constructed. Color, texture, and composition are moved in service of the narrative the image must carry.",
+      "The One-Image Movie is an integrated system: subject, image, title, and narrative fragment - four elements in deliberate relationship, each doing something the others cannot.",
+      "The subject anchors the work in the specific and the human - the people history moved too fast to name, the moments that had no audience, the lives the legend was built on and never credited. The image is the doorway. The title names the pressure without explaining it. The narrative writing is not a scene-setter. It is the looking glass.",
+      "Step through it and the image opens into a dimension that was always there. In Lenore, without the story, you have a powerful portrait of a man and his gun. With the story - Poe's architecture running silently beneath it - the stillness becomes the stillness of someone already lost. In Special Delivery, without the story, you have a cinematic image of figures in smoke and light. With the story, the Icarus myth surfaces beneath the frame and the light marking the foreground figure is no longer elevating him. It is marking him as a target.",
+      "The story never resolves the image. It deepens the responsibility of finding it. The space between what the image shows, what the writing implies, and what remains unresolved is where the viewer stops observing and starts living the story - built from their own loss, their own experience, their own understanding of what people are capable of.",
+      "That is not a feature of the system. That is its purpose."
+    ]
+  },
+  {
+    id: "lifted",
+    kicker: "",
+    title: "Lifted",
+    paragraphs: [
+      "After every difficult story. After every image of grief and consequence and moral weight. After the unnamed lives that held the legend up from beneath. After all of it - there is this.",
+      "A woman on horseback, eyes closed, face lifted into morning light. The land rising with her - treeline, ridge, pale sun - lifting her out of the dust and into something larger than herself. For a moment the world narrows to breath and balance, to the quiet weight of choosing what comes next.",
+      "And then there is the horse.",
+      "Looking straight through you. Not at the woman. At you. Breaking the fourth wall not with weapon or gesture but with witness. With quiet, steady, almost unbearable expectation.",
+      "What are you waiting for. You can do this too.",
+      "These are not couch paintings. They are Alice and the looking glass. The image is the glass. The story fragment is the frame around it. The viewer steps through and finds themselves inside a moment that was always - beneath its historical surface, beneath its western setting - about them. Their loss. Their endurance. Their version of what it costs to keep going."
+    ],
+    feature: "Lifted"
+  },
+  {
+    id: "remembered",
+    kicker: "VI.",
+    title: "The Tradition Doesn't Need to Be Replaced. It Needs to Be Remembered.",
+    paragraphs: [
+      "The works this essay moves through - Rembrandt's withheld shadow, Hitchcock's suspended dread, Hemingway's submerged eight-eighths, Wyeth's arrested frontier violence, Rockwell's open moral hinge, Russell's half-second before chaos finds its name - are not a history lesson. They are a demonstration. A single structural principle, operating across centuries and mediums, reappearing with the same insistence because it answers something fundamental about how human beings experience story.",
+      "The viewer must participate. The image must withhold. The loop must stay open.",
+      "The western canon can be reimagined. Every living tradition must be. But reimagining requires what Picasso understood when he spent years mastering classical realism before he dismantled it: you cannot abstract what you do not fully possess. You cannot distill a tradition you have not fully inhabited. Separate the icon from the armature and you don't get innovation. You get drift - the visual vocabulary of a tradition disconnected from the structural and moral foundation that gave that vocabulary its meaning.",
+      "What risks being forgotten is the armature. The people history moved too fast to record. The grief that had no audience. The sacrifice that built the legend without being written into it. The ordinary lives that made the iconic ones possible.",
+      "The ground has not disappeared. It is still there beneath the surface of the contemporary canon, alive in the works that still refuse to release you a century after they were made. It is waiting for artists willing to go back to it - not to reproduce what was done before, but to understand it completely enough to carry it forward into the present tense.",
+      "To remember, in other words, what the tradition was built to do.",
+      "The canon does not need to be replaced. It needs to be remembered."
+    ]
+  }
+];
+
+const articlePdf = "/data/narrative_vacuum_essay_WH.pdf";
+const samplesPdf = "/data/Heim%20Samples-annotated.pdf";
+const breadcrumb = "Other > Narrative Vacuum";
+---
+
+<BaseLayout
+  title={`${title} | K4 Studios`}
+  structuredDataJSON={structuredData}
+  meta={meta}
+>
+  <main class="narrative-vacuum-page">
+    <div class="drawer-mode">
+      <LandingHeader client:load breadcrumb={breadcrumb} />
+    </div>
+
+    <header class="nv-hero">
+      <div class="nv-hero-copy">
+        <p class="nv-eyebrow">Critical Framework</p>
+        <h1>{title}</h1>
+        <p class="nv-deck">{deck}</p>
+      </div>
+      {heroImage && (
+        <figure class="nv-hero-image">
+          <img src={imageSrc(heroImage, "l")} alt={heroImage.alt || "Lifted by Wayne Heim"} />
+          <figcaption>Featured sample: <strong>Lifted</strong></figcaption>
+        </figure>
+      )}
+    </header>
+
+    <nav class="nv-section-nav" aria-label="Narrative Vacuum sections">
+      {sectionLinks.map(([href, label]) => (
+        <a href={`#${href}`}>{label}</a>
+      ))}
+    </nav>
+
+    <article class="nv-article">
+      {sections.map((section) => {
+        const inlineSamples =
+          inlineSamplePlacements[section.id as keyof typeof inlineSamplePlacements]?.filter((entry) => entry.sample) || [];
+        if (section.id === "lifted" && liftedSample) {
+          return (
+            <section id={section.id} class="nv-section nv-section-feature">
+              <div class="nv-section-heading">
+                <h2>{section.title}</h2>
+              </div>
+              <div class="nv-section-rule" aria-hidden="true"></div>
+
+              <div class="nv-lifted-layout">
+                <figure class="nv-lifted-image">
+                  <img src={imageSrc(liftedSample.image, "l")} alt={liftedSample.image.alt || liftedSample.displayTitle} loading="lazy" />
+                </figure>
+                <div class="nv-copy nv-lifted-copy">
+                  {section.paragraphs.map((paragraph, index) => (
+                    <p class:list={[isFinalClose(section.id, index, section.paragraphs.length) && "nv-final-close"]}>
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
+              </div>
+
+              <blockquote class="nv-lifted-quote">
+                <span class="nv-lifted-quote-label">Image Story Fragment</span>
+                {storyPreview(liftedSample.story).map((paragraph, index, paragraphs) => (
+                  <p>
+                    {paragraph}
+                    {index === paragraphs.length - 1 && liftedSample.notes && (
+                      <span class="nv-info-wrap">
+                        <button
+                          class="nv-info-button"
+                          type="button"
+                          aria-label={`Annotation for ${liftedSample.displayTitle}`}
+                        >
+                          i
+                        </button>
+                        <span class="nv-info-popup" role="tooltip">
+                          {liftedSample.notes}
+                        </span>
+                      </span>
+                    )}
+                  </p>
+                ))}
+              </blockquote>
+            </section>
+          );
+        }
+
+        return (
+          <section id={section.id} class:list={["nv-section", section.feature && "nv-section-feature"]}>
+            <div class="nv-section-heading">
+              {section.kicker && <span>{section.kicker}</span>}
+              <h2>{section.title}</h2>
+            </div>
+            <div class="nv-section-rule" aria-hidden="true"></div>
+
+            <div class="nv-copy">
+              {section.paragraphs.map((paragraph, index) => (
+                <>
+                  {inlineSamples
+                    .filter((entry) => entry.before === index)
+                    .map((entry) => {
+                      const sample = entry.sample as SampleCard;
+                      return (
+                        <figure class:list={["nv-inline-sample", `nv-inline-sample-${entry.side}`]}>
+                          <img src={imageSrc(sample.image, "l")} alt={sample.image.alt || sample.displayTitle} loading="lazy" />
+                          <figcaption>
+                            <strong>{sample.displayTitle}</strong>
+                            <span>
+                              {storyPreview(sample.story).map((storyParagraph, storyIndex, storyParagraphs) => (
+                                <p>
+                                  {storyParagraph}
+                                  {storyIndex === storyParagraphs.length - 1 && sample.notes && (
+                                    <span class="nv-info-wrap">
+                                      <button
+                                        class="nv-info-button"
+                                        type="button"
+                                        aria-label={`Annotation for ${sample.displayTitle}`}
+                                      >
+                                        i
+                                      </button>
+                                      <span class="nv-info-popup" role="tooltip">
+                                        {sample.notes}
+                                      </span>
+                                    </span>
+                                  )}
+                                </p>
+                              ))}
+                            </span>
+                          </figcaption>
+                        </figure>
+                      );
+                    })}
+                  <p class:list={[isFinalClose(section.id, index, section.paragraphs.length) && "nv-final-close"]}>
+                    {paragraph}
+                  </p>
+                </>
+              ))}
+            </div>
+          </section>
+        );
+      })}
+
+      <aside class="nv-downloads" aria-labelledby="editorial-downloads">
+        <div>
+          <p class="nv-eyebrow">Editorial Use Only</p>
+          <h2 id="editorial-downloads">Download the Article and Sample Art</h2>
+          <p>
+            The full article PDF and annotated Heim sample-art packet are provided for editorial review, writing,
+            curatorial context, and press reference only.
+          </p>
+        </div>
+        <div class="nv-download-actions">
+          <a href={articlePdf} download>Full Article PDF</a>
+          <a href={samplesPdf} download>Annotated Sample Art PDF</a>
+        </div>
+      </aside>
+    </article>
+
+    <SiteFooter
+      previewImages={[]}
+      previewPath={previewPath}
+      title={title}
+      label=""
+      class="pt-8 pb-12"
+    />
+  </main>
+</BaseLayout>
+
+<style>
+  .narrative-vacuum-page {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: #fff;
+    color: #2c2c2c;
+    font-family: "Glegoo", serif;
+  }
+
+  .nv-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(18rem, 26rem);
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: center;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: clamp(3rem, 7vw, 5.75rem) 1.5rem 2rem;
+  }
+
+  .nv-eyebrow {
+    margin: 0 0 0.7rem;
+    color: #8b5f1b;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+  }
+
+  .nv-hero h1 {
+    margin: 0;
+    color: #2f261f;
+    font-size: clamp(2.65rem, 7vw, 5.4rem);
+    font-weight: 700;
+    line-height: 0.98;
+  }
+
+  .nv-subtitle {
+    margin: 1rem 0 0;
+    color: #6a5c52;
+    font-size: clamp(1.05rem, 2vw, 1.35rem);
+    line-height: 1.45;
+  }
+
+  .nv-deck {
+    max-width: 42rem;
+    margin: 1.5rem 0 0;
+    color: #4b443e;
+    font-size: 1.08rem;
+    line-height: 1.75;
+  }
+
+  .nv-hero-image {
+    margin: 0;
+    overflow: hidden;
+  }
+
+  .nv-hero-image img,
+  .nv-artwork img {
+    display: block;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 22px 56px rgba(47, 38, 31, 0.16);
+  }
+
+  .nv-hero-image img {
+    width: 116%;
+    max-width: none;
+    margin-left: -8%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+  }
+
+  .nv-hero-image figcaption,
+  .nv-artwork figcaption {
+    color: #6e6259;
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+
+  .nv-hero-image figcaption {
+    margin-top: 0.75rem;
+  }
+
+  .nv-section-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.35rem 0.65rem;
+    max-width: 860px;
+    margin: 0 auto 3rem;
+    padding: 0 1rem;
+  }
+
+  .nv-section-nav a {
+    color: #4c4038;
+    border: 1px solid #ded7d0;
+    padding: 0.42rem 0.72rem;
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: border-color 0.2s ease, color 0.2s ease;
+  }
+
+  .nv-section-nav a:hover,
+  .nv-section-nav a:focus-visible {
+    border-color: #8b0000;
+    color: #8b0000;
+  }
+
+  .nv-article {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0 clamp(1.25rem, 3vw, 2rem) 4rem;
+  }
+
+  .nv-section {
+    scroll-margin-top: 5rem;
+    margin-bottom: clamp(3rem, 7vw, 5rem);
+  }
+
+  .nv-section-heading {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.9rem;
+    align-items: baseline;
+  }
+
+  .nv-section-heading span {
+    color: #a09285;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  .nv-section-heading h2 {
+    margin: 0;
+    color: #3b342e;
+    font-size: clamp(1.65rem, 3vw, 2.2rem);
+    font-weight: 700;
+    line-height: 1.25;
+  }
+
+  .nv-section-rule {
+    height: 1px;
+    width: 100%;
+    margin: 1.05rem 0 1.65rem;
+    background: linear-gradient(90deg, #8b5f1b, rgba(139, 95, 27, 0.08));
+  }
+
+  .nv-copy p {
+    margin: 0 0 1.2rem;
+    color: #37312c;
+    font-size: 1.04rem;
+    line-height: 1.72;
+  }
+
+  .nv-copy .nv-final-close {
+    margin-top: 2.15rem;
+  }
+
+  .nv-copy::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+
+  .nv-inline-sample {
+    display: grid;
+    grid-template-columns: minmax(18rem, 1fr) minmax(16rem, 0.72fr);
+    gap: clamp(1.2rem, 3vw, 2rem);
+    align-items: start;
+    width: 100%;
+    margin: 1.6rem 0 1.8rem;
+    padding: 1.25rem 0;
+    border-top: 1px solid #e5ded7;
+    border-bottom: 1px solid #e5ded7;
+    color: #4a4038;
+  }
+
+  .nv-inline-sample-left {
+    grid-template-columns: minmax(18rem, 1fr) minmax(16rem, 0.72fr);
+  }
+
+  .nv-inline-sample-right {
+    grid-template-columns: minmax(16rem, 0.72fr) minmax(18rem, 1fr);
+  }
+
+  .nv-inline-sample-right img {
+    grid-column: 2;
+  }
+
+  .nv-inline-sample-right figcaption {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .nv-inline-sample img {
+    display: block;
+    width: 100%;
+    max-height: 420px;
+    object-fit: contain;
+    background: transparent;
+  }
+
+  .nv-inline-sample figcaption {
+    margin-top: 0;
+    max-width: 24rem;
+    color: #4a4038;
+    font-size: 0.92rem;
+    line-height: 1.5;
+  }
+
+  .nv-inline-sample figcaption strong {
+    display: block;
+    margin-bottom: 0.45rem;
+    color: #2f261f;
+    font-size: 0.95rem;
+    line-height: 1.25;
+  }
+
+  .nv-inline-sample figcaption span {
+    display: block;
+  }
+
+  .nv-inline-sample figcaption p {
+    margin: 0 0 0.62rem;
+    color: #4a4038;
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  .nv-info-wrap {
+    position: relative;
+    display: inline-flex;
+    margin-left: 0.35rem;
+    vertical-align: baseline;
+  }
+
+  .nv-info-button {
+    display: inline-flex;
+    width: 1.15rem;
+    height: 1.15rem;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #8b5f1b;
+    border-radius: 999px;
+    background: #fff;
+    color: #8b5f1b;
+    cursor: help;
+    font: 700 0.72rem/1 Arial, sans-serif;
+  }
+
+  .nv-info-popup {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 4;
+    width: min(34rem, 86vw);
+    max-height: min(34rem, 72vh);
+    overflow: auto;
+    padding: 1.15rem 1.25rem;
+    border: 1px solid #d9cfc4;
+    background: #fff;
+    box-shadow: 0 18px 42px rgba(47, 38, 31, 0.18);
+    color: #3f3731;
+    font-size: 0.92rem;
+    line-height: 1.62;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -48%);
+    transition: opacity 0.18s ease, transform 0.18s ease;
+    white-space: pre-line;
+  }
+
+  .nv-info-wrap:hover .nv-info-popup,
+  .nv-info-button:focus-visible + .nv-info-popup {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%);
+  }
+
+  .nv-lifted-layout {
+    display: grid;
+    grid-template-columns: minmax(20rem, 0.95fr) minmax(0, 1fr);
+    gap: clamp(1.6rem, 4vw, 2.5rem);
+    align-items: stretch;
+    margin-top: 1.5rem;
+  }
+
+  .nv-lifted-image {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  .nv-lifted-image img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: 100%;
+    max-height: none;
+  }
+
+  .nv-lifted-copy p:last-child {
+    margin-bottom: 0;
+  }
+
+  .nv-lifted-quote {
+    position: relative;
+    margin: clamp(1.7rem, 4vw, 2.5rem) 0 0;
+    padding: 1.4rem clamp(1.2rem, 3vw, 2rem);
+    border-left: 3px solid #8b5f1b;
+    background: #fbfaf8;
+    color: #3d342e;
+  }
+
+  .nv-lifted-quote-label {
+    display: block;
+    margin-bottom: 0.8rem;
+    color: #8b5f1b;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+  }
+
+  .nv-lifted-quote p {
+    margin: 0 0 0.9rem;
+    font-size: 0.98rem;
+    line-height: 1.5;
+  }
+
+  .nv-lifted-quote p:last-child {
+    margin-bottom: 0;
+  }
+
+  .nv-downloads {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 1.5rem;
+    align-items: end;
+    margin-top: 4rem;
+    padding: 2rem;
+    border-top: 2px solid #8b5f1b;
+    border-bottom: 1px solid #e5ded7;
+    background: #fbfaf8;
+  }
+
+  .nv-downloads h2 {
+    margin: 0;
+    color: #3b342e;
+    font-size: 1.45rem;
+  }
+
+  .nv-downloads p {
+    margin: 0.85rem 0 0;
+    color: #5d524a;
+    line-height: 1.65;
+  }
+
+  .nv-download-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    min-width: 13rem;
+  }
+
+  .nv-download-actions a {
+    display: inline-flex;
+    justify-content: center;
+    border: 1px solid #3b342e;
+    color: #2f261f;
+    padding: 0.68rem 0.9rem;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+
+  .nv-download-actions a:hover,
+  .nv-download-actions a:focus-visible {
+    color: #8b0000;
+    border-color: #8b0000;
+  }
+
+  @media (max-width: 860px) {
+    .nv-hero,
+    .nv-lifted-layout,
+    .nv-downloads {
+      grid-template-columns: 1fr;
+    }
+
+    .nv-hero-image {
+      max-width: 28rem;
+      margin-inline: auto;
+    }
+
+    .nv-lifted-image img {
+      height: auto;
+      max-height: 34rem;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .nv-section-heading {
+      grid-template-columns: 1fr;
+      gap: 0.2rem;
+    }
+
+    .nv-inline-sample,
+    .nv-inline-sample-left,
+    .nv-inline-sample-right {
+      display: grid;
+      grid-template-columns: 1fr;
+      width: 100%;
+      margin: 0 0 1.5rem;
+    }
+
+    .nv-inline-sample-right img,
+    .nv-inline-sample-right figcaption {
+      grid-column: auto;
+      grid-row: auto;
+    }
+
+    .nv-info-popup {
+      width: min(30rem, 86vw);
+    }
+
+    .nv-downloads {
+      padding: 1.4rem;
+    }
+  }
+</style>
