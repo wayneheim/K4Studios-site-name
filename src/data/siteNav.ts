@@ -690,13 +690,20 @@ export const siteNav = [
         "slug": "seeing",
         "type": "section"
       },
-        {
-          "label": "Narrative Art",
+      {
+        "label": "Narrative Art",
         "href": "/Other/Narrative-Art",
-          "code": "O-S5c",
-          "slug": "narrative-art",
-          "type": "section"
-        },
+        "code": "O-S5c",
+        "slug": "narrative-art",
+        "type": "section"
+      },
+      {
+        "label": "Narrative Vacuum",
+        "href": "/Other/Narrative-Vacuum",
+        "code": "O-S5d",
+        "slug": "narrative-vacuum",
+        "type": "section"
+      },
       {
         "label": "What Is a One-Image Movie?",
         "href": "/Other/One-Image-Movie",
