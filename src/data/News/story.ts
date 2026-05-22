@@ -15,7 +15,7 @@ export const painterlyStory = [
     awards: [
       {
         title: "Cheyenne Frontier Days™ Old West Museum",
-        note: "Western Spirit Juried Art Show & Sale (March–April 2026). Two works accepted into the Western Spirit Juried Art Show & Sale, the premier annual juried Western art exhibition of the Rocky Mountain region. The exhibition is held at the Cheyenne Frontier Days™ Old West Museum and includes painting, sculpture, mixed media, and fine art photography."
+        note: "Western Spirit Juried Art Show & Sale (March-April 2026). Two works accepted into the Western Spirit Juried Art Show & Sale, the premier annual juried Western art exhibition of the Rocky Mountain region. The exhibition is held at the Cheyenne Frontier Days™ Old West Museum and includes painting, sculpture, mixed media, and fine art photography. <a href=\"https://www.oldwestmuseum.org/western-spirit?page=7\" target=\"_blank\" rel=\"noopener\">View the exhibitor listing →</a>"
       },
       {
         title: "Great Western Art Show",
@@ -59,7 +59,9 @@ export const painterlyStory = [
   // ──────────────────────────────────────── 5: Press & Resources
   {
     subhead: "Press & Related Resources",
-    paragraphs: [      `<a href="https://aotw.com/2026/02/painterly-photography/" target="_blank" rel="noopener">Art of the West</a> recently featured Wayne Heim's painterly Western photography, exploring his "one-image movie" approach to storytelling and fine art photography (February 2026).`,      `<a href="https://www.atthefront.com/" target="_blank" rel="noopener">At The Front</a>: Supplier of historically accurate WWII reenacting equipment used by historical communities featured in Wayne Heim’s Facing History series.`
+    paragraphs: [
+      `<a href="https://aotw.com/2026/02/painterly-photography/" target="_blank" rel="noopener">Art of the West</a> featured Wayne Heim's painterly Western photography and painterly photography process in a February 2026 editorial exploring his "one-image movie" approach to narrative fine art photography and Western storytelling.`,
+      `<a href="https://www.atthefront.com/" target="_blank" rel="noopener">At The Front</a>: Supplier of historically accurate WWII reenacting equipment used by historical communities featured in Wayne Heim’s Facing History series.`
     ]
   },
 

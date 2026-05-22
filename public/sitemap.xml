@@ -38,19 +38,19 @@
   </url>
   <url>
     <loc>https://www.k4studios.com/black-and-white-cowboy-art</loc>
-    <lastmod>2026-05-20T20:20:52.102Z</lastmod>
+    <lastmod>2026-05-20T22:03:13-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.k4studios.com/black-and-white-cowboy-photography</loc>
-    <lastmod>2026-05-20T21:10:24.924Z</lastmod>
+    <lastmod>2026-05-20T22:03:13-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.k4studios.com/black-and-white-cowboy-photos</loc>
-    <lastmod>2026-05-20T21:59:17.893Z</lastmod>
+    <lastmod>2026-05-20T22:03:13-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1004,7 +1004,7 @@
   </url>
   <url>
     <loc>https://www.k4studios.com/News-Awards</loc>
-    <lastmod>2026-05-04T17:31:10-04:00</lastmod>
+    <lastmod>2026-05-21T03:52:53.614Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1053,6 +1053,12 @@
   <url>
     <loc>https://www.k4studios.com/Other/Narrative-Art</loc>
     <lastmod>2026-05-06T03:58:07-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.k4studios.com/Other/Narrative-Vacuum</loc>
+    <lastmod>2026-05-21T21:17:17.228Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

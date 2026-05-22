@@ -156,6 +156,8 @@ function mapRawEventToFamily(rawEvent) {
       return { eventFamily: 'gallery_action', eventAction: 'show_banner_audio', canonicalPageLoad: 0 };
     case 'browse_all_click':
       return { eventFamily: 'gallery_action', eventAction: 'browse_all', canonicalPageLoad: 0 };
+    case 'browse_all_image_click':
+      return { eventFamily: 'gallery_action', eventAction: 'browse_all_image_click', canonicalPageLoad: 0 };
     case 'gallery_explore_click':
       return { eventFamily: 'gallery_action', eventAction: 'explore', canonicalPageLoad: 0 };
     case 'exit_to_gallery':

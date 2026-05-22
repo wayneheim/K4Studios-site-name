@@ -8,6 +8,38 @@ const BUY_LINK_PATH_PREFIXES = ["/Galleries/", "/Other/Photo-Shoots/"];
 const BUY_LINK_SMUGMUG_HOST = "wayne-heim.smugmug.com";
 const STANDARD_SERIES = ["sketch", "foundation", "chronicle", "legend"];
 const ENGRAINED_PATH = "/Other/K4-Select-Series/Engrained/Engrained-Series";
+const K4_ORGANIZATION_ID = "https://www.k4studios.com/#organization";
+const SKETCH_SERIES_SHIPPING_USD = "6.99";
+
+export function getSketchOfferShippingDetails() {
+  return {
+    "@type": "OfferShippingDetails",
+    shippingRate: {
+      "@type": "MonetaryAmount",
+      value: SKETCH_SERIES_SHIPPING_USD,
+      currency: "USD",
+    },
+    shippingDestination: {
+      "@type": "DefinedRegion",
+      addressCountry: "US",
+    },
+    deliveryTime: {
+      "@type": "ShippingDeliveryTime",
+      handlingTime: {
+        "@type": "QuantitativeValue",
+        minValue: 0,
+        maxValue: 2,
+        unitCode: "DAY",
+      },
+      transitTime: {
+        "@type": "QuantitativeValue",
+        minValue: 3,
+        maxValue: 10,
+        unitCode: "DAY",
+      },
+    },
+  };
+}
 
 function normalizeBuyLink(buyLink) {
   if (typeof buyLink !== "string") return null;
@@ -234,6 +266,7 @@ function resolveStandardCommerce({ image, galleryPath, pageUrl }) {
     tiers,
     engrainedLink,
     schema: buildCommerceSchema({ pageUrl, offerPrices }),
+    merchantOffer: buildSketchMerchantOffer({ pageUrl, tiers }),
   };
 }
 
@@ -283,6 +316,30 @@ function buildCommerceSchema({ pageUrl, offerPrices }) {
     highPrice: Math.max(...prices),
     availability: "https://schema.org/InStock",
     seller: { "@id": "https://www.k4studios.com/#organization" },
+  };
+}
+
+function buildSketchMerchantOffer({ pageUrl, tiers }) {
+  const sketchTier = Array.isArray(tiers)
+    ? tiers.find((tier) => tier?.key === "sketch")
+    : null;
+  const prices = Array.isArray(sketchTier?.pricing)
+    ? sketchTier.pricing
+        .map((entry) => Number(entry?.price))
+        .filter((price) => Number.isFinite(price))
+    : [];
+
+  if (!sketchTier || prices.length === 0) return null;
+
+  return {
+    "@type": "Offer",
+    url: pageUrl,
+    price: Math.min(...prices),
+    priceCurrency: "USD",
+    availability: "https://schema.org/InStock",
+    itemCondition: "https://schema.org/NewCondition",
+    seller: { "@id": K4_ORGANIZATION_ID },
+    shippingDetails: getSketchOfferShippingDetails(),
   };
 }
 

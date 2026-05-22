@@ -77,16 +77,19 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
   },
 
   "/News-Awards": {
-    ogTitle: "News & Awards – Wayne Heim Fine Art Photography",
+    title: "Wayne Heim — Press, Awards & Exhibition Recognition | K4 Studios",
+    seoTitle: "Wayne Heim — Press, Awards & Exhibition Recognition | K4 Studios",
+    ogTitle: "Wayne Heim — Press, Awards & Exhibition Recognition | K4 Studios",
     ogDescription:
-      "Explore exhibitions, awards, publications, and recent features highlighting Wayne Heim’s western and historical fine art photography.",
+      "Press coverage, juried exhibition acceptances, and professional awards recognizing Wayne Heim's painterly Western photography and fine art photography at K4 Studios.",
     ogImage: "/og/news-awards.jpg",
     ogType: "website",
     twitterCard: "summary_large_image",
-    twitterTitle: "News & Awards – Wayne Heim",
+    twitterTitle: "Wayne Heim — Press, Awards & Exhibition Recognition | K4 Studios",
     twitterDescription:
-      "Latest awards, exhibitions, and media features for Wayne Heim’s fine art photography.",
+      "Press coverage, juried exhibition acceptances, and professional awards recognizing Wayne Heim's painterly Western photography and fine art photography at K4 Studios.",
     twitterImage: "/og/news-awards.jpg",
+    preserveTitleDashes: true,
   },
 
   "/Other/Print-Options": {
@@ -112,6 +115,32 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
       twitterTitle: "Wayne Heim’s One-Image Movies™ | K4 Studios",
       twitterDescription:
         "Wayne Heim’s One-Image Movies™ join image, title, authored writing, unresolved implication, and viewer participation into a finished narrative-art presentation.",
+    twitterImage: "/og/one-image-movie.jpg",
+  },
+
+  "/Other/Narrative-Vacuum": {
+    ogTitle: "The Narrative Vacuum | K4 Studios",
+    ogDescription:
+      "A long-form critical essay on story, the Western canon, unresolved images, and Wayne Heim's One-Image Movies.",
+    ogImage: "/og/one-image-movie.jpg",
+    ogType: "article",
+    twitterCard: "summary_large_image",
+    twitterTitle: "The Narrative Vacuum | K4 Studios",
+    twitterDescription:
+      "A critical framework for curators, collectors, and writers on Western narrative art, viewer participation, and the armature beneath the legend.",
+    twitterImage: "/og/one-image-movie.jpg",
+  },
+
+  "/Other/Narrative-Vacuum-F": {
+    ogTitle: "The Narrative Vacuum: Full Version | K4 Studios",
+    ogDescription:
+      "The full article version of The Narrative Vacuum, paired with all editorial sample images, stories, and notes for comparison.",
+    ogImage: "/og/one-image-movie.jpg",
+    ogType: "article",
+    twitterCard: "summary_large_image",
+    twitterTitle: "The Narrative Vacuum: Full Version | K4 Studios",
+    twitterDescription:
+      "A full comparison page for The Narrative Vacuum with the complete article and sample-art packet content.",
     twitterImage: "/og/one-image-movie.jpg",
   },
 

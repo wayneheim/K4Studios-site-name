@@ -250,7 +250,7 @@ const ogImage = toAbsoluteProxyUrl(rawOgImage, 'l');
 const ogImageSecureUrl = ogImage;
 
 const commerceOffer = meta.commerceOffer || null;
-const productPriceAmount = commerceOffer?.lowPrice;
+const productPriceAmount = commerceOffer?.price ?? commerceOffer?.lowPrice;
 const productPriceCurrency = commerceOffer?.priceCurrency || "USD";
 const productAvailability = commerceOffer?.availability
   ? String(commerceOffer.availability).replace(/^https?:\/\/schema\.org\//i, "").replace(/([a-z])([A-Z])/g, "$1 $2").toLowerCase()

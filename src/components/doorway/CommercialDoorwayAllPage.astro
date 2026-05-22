@@ -12,7 +12,7 @@ import {
   getLowestStandardPrintPrice,
   getStandardPrintSeries,
 } from "@/data/pricing/printSeries.js";
-import { resolveImageCommerce } from "@/data/commerceResolver.js";
+import { getSketchOfferShippingDetails, resolveImageCommerce } from "@/data/commerceResolver.js";
 
 type BreadcrumbItem = { name: string; href: string };
 type GridSection = {
@@ -272,6 +272,12 @@ const truncateStoryExcerpt = (text: string, maxLen = 100) => {
   return `${wordSafe || cleaned.slice(0, maxLen).trimEnd()}...`;
 };
 
+const buildSketchProductDescription = (image: any, imageName: string) => {
+  const imageSummary = truncateExcerpt(image?.description || image?.alt || "", 130);
+  const base = `${imageName} is offered as a Sketch Series fine art print by Wayne Heim through K4 Studios.`;
+  return imageSummary ? `${base} ${imageSummary}` : base;
+};
+
 const truncateBookendExcerpt = (text: string, headLen = 100, tailLen = 300) => {
   const cleaned = cleanForDisplay(text);
   if (!cleaned) return "";
@@ -417,17 +423,28 @@ const itemListElement = schemaListItems
       "name": imageName,
       "item": {
         "@type": "Product",
-        "@id": `${imagePageUrl}#product`,
-        "name": imageName,
+        "@id": `${imagePageUrl}#product-sketch`,
+        "name": `${imageName} - Sketch Series Print`,
         "image": toAbsoluteK4Url(getProxySrc(image.id, 'l')),
+        "description": buildSketchProductDescription(image, imageName),
+        "sku": `${image.id}-sketch`,
+        "brand": {
+          "@type": "Brand",
+          "name": "K4 Studios"
+        },
+        "category": "Fine Art Print",
         "url": imagePageUrl,
         "offers": {
           "@type": "Offer",
+          "@id": `${imagePageUrl}#offer-sketch`,
+          "name": "Sketch Series Print",
           "price": String(lowestStandardPrintPrice),
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
           "url": imagePageUrl,
           "seller": { "@id": "https://www.k4studios.com/#organization" },
+          "shippingDetails": getSketchOfferShippingDetails(),
         },
       },
     };

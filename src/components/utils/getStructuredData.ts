@@ -141,21 +141,97 @@ const K4_CREATOR_PERSON = {
   url: "https://www.k4studios.com/Other/Bio",
 };
 const K4_CREATOR_REF = K4_CREATOR_PERSON;
+const SKETCH_SERIES_PRICE = 25;
+const SKETCH_SERIES_SHIPPING_USD = "6.99";
+const SKETCH_SERIES_DESCRIPTION =
+  "Entry-level Sketch Series fine art print by Wayne Heim, offered as an accessible collector print from K4 Studios.";
 
-function buildArtworkOffer(data: any, fallbackAcquireLicensePage: string) {
-  if (data?.commerce?.schema) {
-    return data.commerce.schema;
+function getSketchTier(data: any) {
+  return Array.isArray(data?.commerce?.tiers)
+    ? data.commerce.tiers.find((tier: any) => tier?.key === "sketch")
+    : null;
+}
+
+function getSketchPrice(data: any): number {
+  const sketchTier = getSketchTier(data);
+  const prices = Array.isArray(sketchTier?.pricing)
+    ? sketchTier.pricing
+        .map((entry: any) => Number(entry?.price))
+        .filter((price: number) => Number.isFinite(price))
+    : [];
+
+  return prices.length > 0 ? Math.min(...prices) : SKETCH_SERIES_PRICE;
+}
+
+function shouldEmitSketchProduct(data: any): boolean {
+  if (!data?.id || !data?.commerce) return false;
+  if (data.noSketch === true) return false;
+
+  const commerceMode = String(data.commerce.mode || "").toLowerCase();
+  if (commerceMode === "engrained") {
+    return Array.isArray(data.availableSeries) && data.availableSeries.includes("sketch");
   }
 
-  const offerUrl = data?.buyLink || data?.offerUrl || getAcquireLicensePage(data, fallbackAcquireLicensePage);
-  if (!offerUrl) return undefined;
+  return Boolean(getSketchTier(data));
+}
+
+function buildSketchProductNode(data: any, imageUrl: string) {
+  if (!shouldEmitSketchProduct(data)) return null;
+
+  const pageUrl = data.pageUrl || data.url;
+  if (!pageUrl) return null;
+
+  const price = getSketchPrice(data);
 
   return {
-    "@type": "Offer",
-    url: offerUrl,
-    availability: "https://schema.org/InStock",
-    itemCondition: "https://schema.org/NewCondition",
-    seller: { "@id": K4_ORGANIZATION_ID },
+    "@type": "Product",
+    "@id": `${pageUrl}#product-sketch`,
+    name: `${data.title || "Fine Art Photograph"} - Sketch Series Print`,
+    image: imageUrl || undefined,
+    description: data.sketchDescription || SKETCH_SERIES_DESCRIPTION,
+    sku: `${data.id}-sketch`,
+    brand: { "@id": K4_ORGANIZATION_ID },
+    category: "Fine Art Print",
+    isRelatedTo: { "@id": `${pageUrl}#image` },
+    mainEntityOfPage: { "@type": "WebPage", "@id": pageUrl },
+    offers: {
+      "@type": "Offer",
+      "@id": `${pageUrl}#offer-sketch`,
+      name: "Sketch Series Print",
+      url: pageUrl,
+      price,
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+      itemCondition: "https://schema.org/NewCondition",
+      seller: { "@id": K4_ORGANIZATION_ID },
+      shippingDetails: {
+        "@type": "OfferShippingDetails",
+        shippingRate: {
+          "@type": "MonetaryAmount",
+          value: SKETCH_SERIES_SHIPPING_USD,
+          currency: "USD",
+        },
+        shippingDestination: {
+          "@type": "DefinedRegion",
+          addressCountry: "US",
+        },
+        deliveryTime: {
+          "@type": "ShippingDeliveryTime",
+          handlingTime: {
+            "@type": "QuantitativeValue",
+            minValue: 0,
+            maxValue: 2,
+            unitCode: "DAY",
+          },
+          transitTime: {
+            "@type": "QuantitativeValue",
+            minValue: 3,
+            maxValue: 10,
+            unitCode: "DAY",
+          },
+        },
+      },
+    },
   };
 }
 
@@ -443,7 +519,7 @@ export function getStructuredData({
     const artworkFields = inferArtworkSchemaFields(data);
     const obj: any = {
       "@context": "https://schema.org",
-      "@type": data?.commerce ? ["ImageObject", "VisualArtwork", "Product"] : ["ImageObject", "VisualArtwork"],
+      "@type": ["ImageObject", "VisualArtwork"],
       "@id": artworkPageUrl ? `${artworkPageUrl}#image` : (proxyUrl ? `${proxyUrl}#image` : undefined),
       name: data.title,
       description: data.description,
@@ -467,7 +543,6 @@ export function getStructuredData({
       ...(artworkFields.additionalType ? { additionalType: artworkFields.additionalType } : {}),
       about: buildContextualAbout(data),
       isAccessibleForFree: true,
-      offers: buildArtworkOffer(data, acquireLicensePage),
       ...(imagePublishedDate ? { datePublished: imagePublishedDate } : {}),
       ...(imageModifiedDate ? { dateModified: imageModifiedDate } : {}),
       inLanguage: "en",
@@ -501,7 +576,19 @@ export function getStructuredData({
     if (data.width) obj.width = data.width;
     if (data.height) obj.height = data.height;
 
-    return stringifySchema(obj);
+    const sketchProduct = buildSketchProductNode(data, proxyUrl);
+
+    if (!sketchProduct) {
+      return stringifySchema(obj);
+    }
+
+    return stringifySchema({
+      "@context": "https://schema.org",
+      "@graph": [
+        obj,
+        sketchProduct,
+      ],
+    });
   }
 
   /* ============================================================

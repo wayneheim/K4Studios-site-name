@@ -31,8 +31,7 @@ const sectionPath = "/News-Awards";
 const pagePath = "/News-Awards";
 // Use painterly galleries for sidebar images
 const gallerySectionPath = "/Galleries/Painterly-Fine-Art-Photography";
-const meta = getLandingMeta(gallerySectionPath);
-meta.seoDescription = "News, awards, juried exhibitions, and professional recognition for Wayne Heim and K4 Studios fine art photography.";
+const meta = getLandingMeta(pagePath);
 
 type AwardItem = { title: string; note: string };
 type StorySection = {
@@ -107,7 +106,7 @@ const structuredData = getStructuredData({
 ---
 
 <BaseLayout
-  title={`${landingWestern.title} – ${landingWestern.subtitle}`}
+  title="Wayne Heim — Press, Awards & Exhibition Recognition | K4 Studios"
   structuredDataJSON={structuredData}
   meta={meta}
 >

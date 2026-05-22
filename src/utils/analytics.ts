@@ -869,6 +869,7 @@ function trackDerivedViewsFromLocation(): void {
   lastTrackedPath = location.pathname;
 
   const path = window.location.pathname;
+  const isCollectionAllPage = /\/all\/?$/i.test(path);
 
   const imageId = getImageIdFromPath(path);
   if (imageId) {
@@ -882,6 +883,13 @@ function trackDerivedViewsFromLocation(): void {
     if (isK4Debug()) {
       trackEvent('k4_debug_chapter_emit', { imageId, pageType: 'image', trigger: 'derived_location' });
     }
+    return;
+  }
+
+  // Commercial /all collection pages are catalog pages, not leaf gallery
+  // landing pages. They already emit page_view/page_pixel and should not
+  // inflate gallery_landing_view.
+  if (isCollectionAllPage) {
     return;
   }
 
@@ -1010,6 +1018,23 @@ function installPreNavImageLinkTracking(): void {
           const isSpecificCatalogClick =
             Boolean(a.closest('[data-collection-image-link]')) ||
             Boolean(a.closest('[data-doorway-image-link]'));
+
+          if (isSpecificCatalogClick) {
+            const catalogGalleryId = sourceGalleryId || galleryId;
+            trackEvent('browse_all_image_click', {
+              imageId,
+              galleryId: catalogGalleryId,
+              pageType: 'image',
+              trigger: 'commercial_collection_grid',
+              sourceLayer: 'commercial_collection_all_page'
+            });
+            emitActionPixel('browse_all_image_click', imageId, {
+              galleryId: catalogGalleryId,
+              sourceLayer: 'browse_all_image_click_pixel_v1',
+              pageType: 'image',
+              trigger: 'commercial_collection_grid'
+            });
+          }
 
           // Emit before navigation completes (protects against unload drops).
           trackEvent('chapter_view', {
@@ -1240,9 +1265,13 @@ export function getGalleryIdFromPath(path?: string): string | null {
   
   if (!isGalleryPath) return null;
   
-  // Strip image detail suffix from the first image-id segment onward.
+  // Strip collection/catalog suffixes and image detail suffixes.
+  // /all pages need the parent gallery context for click attribution, but
+  // trackDerivedViewsFromLocation keeps them out of gallery_landing_view.
   // Handles /.../i-abc, /.../i-abc/, /.../i-abc/A, /.../i-abc/buy, etc.
-  let normalized = p.replace(/\/i-[a-zA-Z0-9_-]+(?:\/.*)?$/, '');
+  let normalized = p
+    .replace(/\/all\/?$/i, '')
+    .replace(/\/i-[a-zA-Z0-9_-]+(?:\/.*)?$/, '');
   
   // Strip trailing slash
   normalized = normalized.replace(/\/$/, '');
