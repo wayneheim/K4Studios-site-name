@@ -279,7 +279,7 @@ const textParagraphs = (value = "") =>
       <LandingHeader client:load breadcrumb={breadcrumb} />
     </div>
 
-    <header class="nvf-hero">
+    <div class="nvf-hero">
       <div class="nvf-hero-copy">
         <p class="nvf-eyebrow">Full Comparison Draft</p>
         <h1>{title}</h1>
@@ -296,7 +296,7 @@ const textParagraphs = (value = "") =>
           <figcaption>Thesis image: <strong>{heroSample.displayTitle}</strong></figcaption>
         </figure>
       )}
-    </header>
+    </div>
 
     <nav class="nvf-section-nav" aria-label="Narrative Vacuum full page sections">
       {article.sections.map((section) => (
