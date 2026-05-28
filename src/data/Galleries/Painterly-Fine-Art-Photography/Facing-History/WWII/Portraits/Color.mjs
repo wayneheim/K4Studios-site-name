@@ -1913,7 +1913,7 @@ export const galleryData = [
   },
   {
     "id": "i-RWPzxRs",
-    "title": "Heroic Portraits - Heroic Portraits",
+    "title": "Heroic Portraits",
     "description": "A painterly World War II photograph of a WWII soldier, defined by duty rather than spectacle. Wayne Heim's World War II fine art photography is grounded in historical respect and restraint, focusing on the individuals who carried the weight of global conflict rather than its spectacle. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-RWPzxRs/A",
@@ -1926,7 +1926,7 @@ export const galleryData = [
       "wwii photography",
       "greatest generation photos"
     ],
-    "story": "Heroic Portraits - Heroic Portraits — part of Wayne Heim's",
+    "story": "Heroic Portraits — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2046,7 +2046,7 @@ export const galleryData = [
   },
   {
     "id": "i-hMc8Dk7",
-    "title": "Heroic Portraits - Heroic Portraits",
+    "title": "Heroic Portraits",
     "description": "A painterly World War II photograph of a WWII soldier, defined by duty rather than spectacle. This image is part of Wayne Heim's World War II fine art photography, emphasizing service, sacrifice, and the quiet burden carried by those who lived through the war. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-hMc8Dk7/A",
@@ -2059,7 +2059,7 @@ export const galleryData = [
       "wartime portraits",
       "moments of connection"
     ],
-    "story": "Heroic Portraits - Heroic Portraits. Wayne Heim's approach to fine art photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the",
+    "story": "Heroic Portraits. Wayne Heim's approach to fine art photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2885,7 +2885,7 @@ export const galleryData = [
   },
   {
     "id": "i-CDBgVRL",
-    "title": "Moments Of Connection - Moments Of Connection",
+    "title": "Moments Of Connection",
     "description": "A painterly World War II photograph of a WWII soldier, defined by resolve rather than spectacle. Approaching World War II imagery with documentary discipline, Wayne Heim's work prioritizes memory, presence, and lived consequence over reenactment theatrics. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where purpose held steady when the world did not. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2019",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-CDBgVRL/A",
@@ -2897,7 +2897,7 @@ export const galleryData = [
       "wwii photography",
       "greatest generation photos"
     ],
-    "story": "Moments Of Connection - Moments Of Connection — part of Wayne Heim's",
+    "story": "Moments Of Connection — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],

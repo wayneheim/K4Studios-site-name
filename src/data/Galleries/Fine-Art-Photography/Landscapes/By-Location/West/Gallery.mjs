@@ -304,7 +304,7 @@ export const galleryData = [
   },
   {
     "id": "i-ckNQLBL",
-    "title": "Western Scenery Wall Art - Western Scenery Wall Art",
+    "title": "Western Scenery Wall Art",
     "description": "A Western landscape is shaped by open sky, mountain distance, and the quiet pull of terrain. This traditional western landscape photograph creates Western scenery wall art with a restrained sense of scale, atmosphere, and American West solitude.",
     "alt": "Wayne Heim's western scenery wall art artwork",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-ckNQLBL/3/ND3KnW9xnG65hZBBhz9HQFSv3ZP9T8MbfR9dBS4mk/XL/_WHZ9516-Edit-XL.jpg",
@@ -644,7 +644,7 @@ export const galleryData = [
       "ethereal landscapes",
       "feel every layer of it"
     ],
-    "story": "Wayne Heim's exploration of ethereal landscapes comes alive in this piece, showcasing feel every layer of it and feel every layer of it. A testament to feel every layer of it in fine art. ",
+    "story": "Wayne Heim's exploration of ethereal landscapes comes alive in this piece, showcasing feel every layer of it. A testament to feel every layer of it in fine art.",
     "notes": "",
     "rating": 3,
     "galleries": [],
@@ -815,7 +815,7 @@ export const galleryData = [
       "ethereal landscapes",
       "western landscape photography"
     ],
-    "story": "This image embodies feel every layer of it and feel every layer of it, captured by Wayne Heim in his signature style. It reflects feel every layer of it with a touch of ethereal landscapes. ",
+    "story": "This image embodies feel every layer of it, captured by Wayne Heim in his signature style. It reflects feel every layer of it with a touch of ethereal landscapes.",
     "notes": "",
     "rating": 3,
     "galleries": [],
@@ -922,7 +922,7 @@ export const galleryData = [
       "feel every layer of it",
       "western landscape photography"
     ],
-    "story": "Wayne Heim's exploration of ethereal landscapes comes alive in this piece, showcasing ethereal landscapes and ethereal landscapes. A testament to western landscape photography in fine art. ",
+    "story": "Wayne Heim's exploration of ethereal landscapes comes alive in this piece, showcasing ethereal landscapes. A testament to western landscape photography in fine art.",
     "notes": "",
     "rating": 5,
     "galleries": [],
@@ -1257,7 +1257,7 @@ export const galleryData = [
       "western landscape photography",
       "feel every layer of it"
     ],
-    "story": "Wayne Heim's exploration of ethereal landscapes comes alive in this piece, showcasing western landscape photography and western landscape photography. A testament to feel every layer of it in fine art. ",
+    "story": "Wayne Heim's exploration of ethereal landscapes comes alive in this piece, showcasing western landscape photography. A testament to feel every layer of it in fine art.",
     "notes": "",
     "rating": 4,
     "galleries": [],

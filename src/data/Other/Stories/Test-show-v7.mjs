@@ -30,7 +30,7 @@ export const storyData = [
   },
   {
     "id": "i-rH4MSZg",
-    "title": "Blue Ridge Painterly Landscapes And Blue Ridge Painterly Landscapes",
+    "title": "Blue Ridge Painterly Landscapes",
     "description": "Uncover blue ridge painterly landscapes through this blue ridge painterly landscapes from Wayne Heim. Showcasing southern landscape photography, blue ridge painterly landscapes, and blue ridge painterly landscapes, it's perfect for enthusiasts of blue ridge painterly landscapes. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery/i-rH4MSZg/A",
@@ -79,7 +79,7 @@ export const storyData = [
       "blue ridge painterly landscapes",
       "southern landscape photography"
     ],
-    "story": "This image embodies southern landscape photography and southern landscape photography, captured by Wayne Heim in his signature style. It reflects blue ridge painterly landscapes with a touch of southern landscape photography. © Wayne Heim",
+    "story": "This image embodies southern landscape photography, captured by Wayne Heim in his signature style. It reflects blue ridge painterly landscapes with a touch of southern landscape photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [

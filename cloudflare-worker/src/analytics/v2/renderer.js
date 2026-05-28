@@ -22,8 +22,8 @@ function humanizeCoreActionLabel(row) {
   const rawEventType = row?.raw_event_type || '';
   const rawSourceLayer = row?.raw_source_layer || '';
   const actionMap = {
-    order_clicked: 'Buy Button Click',
-    order_submitted: 'Order Submitted',
+    order_clicked: 'Pricing Button Open',
+    order_submitted: 'Order Button Click',
     open: 'Grid Open',
     image_click: 'Grid Image Click',
     next: 'Next Image',
@@ -73,7 +73,8 @@ function humanizeCoreActionLabel(row) {
   }
 
   const familyMap = {
-    buy_click: 'Buy Click',
+    buy_click: 'Pricing Button Open',
+    order_submit: 'Order Button Click',
     grid_action: 'Grid Action',
     gallery_action: 'Gallery Action',
     image_nav: 'Image Navigation',
@@ -103,7 +104,8 @@ function getFamilyColorClass(family) {
 
 function getFamilyDisplayLabel(family) {
   const familyMap = {
-    buy_click: 'Buy Button Clicks',
+    buy_click: 'Pricing Button Opens',
+    order_submit: 'Order Button Clicks',
     grid_action: 'Grid Actions',
     gallery_action: 'Gallery Actions',
     image_nav: 'Image Navigation',
@@ -263,7 +265,7 @@ export function renderDashboardV2({ summary, authHeader = '' }) {
     : 'Top 10 Images';
   const topImagesIntro = isSingleDayWindow
     ? 'All trusted images accessed in this calendar-day window. Buy-clicked images are pinned to the top and highlighted in green.'
-    : 'Most-active trusted image IDs from image views plus image-linked interactions. Buy-clicked images are pinned to the top and highlighted in green.';
+    : 'Most-active trusted image IDs from image views. Buy-clicked images are pinned to the top and highlighted in green.';
   const topImagesFootnote = isSingleDayWindow
     ? 'External/direct proxy image fetches and suspicious/internal-test sessions are excluded from this daily list.'
     : 'External/direct proxy image fetches and suspicious/internal-test sessions are excluded from this top-10 list.';
@@ -277,7 +279,7 @@ export function renderDashboardV2({ summary, authHeader = '' }) {
       ? `<img src="https://www.k4studios.com/img/${imageId}/s" alt="" loading="${index < 4 ? 'eager' : 'lazy'}" class="image-thumb">`
       : '<span class="image-thumb image-thumb-fallback">🖼</span>';
     const buyBadge = buyClicks > 0
-      ? `<span class="image-buy-badge">Buy ${buyClicks}</span>`
+      ? `<span class="image-buy-badge">Pricing ${buyClicks}</span>`
       : '';
     return `
       <a class="image-list-row${buyClicks > 0 ? ' image-list-row-buy' : ''}" href="${imageUrl}" target="_blank" rel="noopener">
@@ -541,7 +543,7 @@ export function renderDashboardV2({ summary, authHeader = '' }) {
       <div class="card card-compact">
         <div class="card-title-row">
           <h2>Top 10 Images</h2>
-          <span class="info-dot" data-tooltip="Most-active trusted image IDs from image views plus image-linked interactions. Buy-clicked images are pinned to the top and highlighted in green. External/direct proxy image fetches and suspicious/internal-test sessions are excluded from this list.">i</span>
+          <span class="info-dot" data-tooltip="Most-active trusted image IDs from image views. Buy-clicked images are pinned to the top and highlighted in green. External/direct proxy image fetches and suspicious/internal-test sessions are excluded from this list.">i</span>
         </div>
         <div class="scroll-panel">
           ${topTenImageRows.length ? topTenImageRows.join('') : '<p>No trusted image-linked activity yet.</p>'}

@@ -538,7 +538,7 @@ export const galleryData = [
       "autumn in new england",
       "The Northeast"
     ],
-    "story": "This image embodies autumn in new england and autumn in new england, captured by Wayne Heim in his signature style. It reflects The Northeast with a touch of see beauty in simplicity. © Wayne Heim",
+    "story": "This image embodies autumn in new england, captured by Wayne Heim in his signature style. It reflects The Northeast with a touch of see beauty in simplicity. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -635,7 +635,7 @@ export const galleryData = [
       "autumn in new england",
       "The Northeast"
     ],
-    "story": "This image embodies The Northeast and The Northeast, captured by Wayne Heim in his signature style. It reflects The Northeast with a touch of autumn in new england. © Wayne Heim",
+    "story": "This image embodies The Northeast, captured by Wayne Heim in his signature style. It reflects The Northeast with a touch of autumn in new england. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -735,7 +735,7 @@ export const galleryData = [
       "The Northeast",
       "autumn in new england"
     ],
-    "story": "Delving into autumn in new england, this work by Wayne Heim highlights see beauty in simplicity through see beauty in simplicity and see beauty in simplicity. A powerful statement in photography. © Wayne Heim",
+    "story": "Delving into autumn in new england, this work by Wayne Heim highlights see beauty in simplicity. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1076,7 +1076,7 @@ export const galleryData = [
       "autumn in new england",
       "The Northeast"
     ],
-    "story": "Wayne Heim's exploration of see beauty in simplicity comes alive in this piece, showcasing The Northeast and The Northeast. A testament to autumn in new england in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of see beauty in simplicity comes alive in this piece, showcasing The Northeast. A testament to autumn in new england in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1126,7 +1126,7 @@ export const galleryData = [
       "The Northeast",
       "see beauty in simplicity"
     ],
-    "story": "This image embodies see beauty in simplicity and see beauty in simplicity, captured by Wayne Heim in his signature style. It reflects autumn in new england with a touch of see beauty in simplicity. © Wayne Heim",
+    "story": "This image embodies see beauty in simplicity, captured by Wayne Heim in his signature style. It reflects autumn in new england with a touch of see beauty in simplicity. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1226,7 +1226,7 @@ export const galleryData = [
       "autumn in new england",
       "see beauty in simplicity"
     ],
-    "story": "Wayne Heim's exploration of autumn in new england comes alive in this piece, showcasing see beauty in simplicity and see beauty in simplicity. A testament to see beauty in simplicity in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of autumn in new england comes alive in this piece, showcasing see beauty in simplicity. A testament to see beauty in simplicity in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1275,7 +1275,7 @@ export const galleryData = [
       "autumn in new england",
       "The Northeast"
     ],
-    "story": "Wayne Heim's exploration of autumn in new england comes alive in this piece, showcasing autumn in new england and autumn in new england. A testament to The Northeast in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of autumn in new england comes alive in this piece, showcasing autumn in new england. A testament to The Northeast in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1325,7 +1325,7 @@ export const galleryData = [
       "see beauty in simplicity",
       "autumn in new england"
     ],
-    "story": "Delving into see beauty in simplicity, this work by Wayne Heim highlights autumn in new england through autumn in new england and autumn in new england. A powerful statement in photography. © Wayne Heim",
+    "story": "Delving into see beauty in simplicity, this work by Wayne Heim highlights autumn in new england. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1375,7 +1375,7 @@ export const galleryData = [
       "see beauty in simplicity",
       "The Northeast"
     ],
-    "story": "Delving into The Northeast, this work by Wayne Heim highlights autumn in new england through The Northeast and The Northeast. A powerful statement in photography. © Wayne Heim",
+    "story": "Delving into The Northeast, this work by Wayne Heim highlights autumn in new england through The Northeast. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1475,7 +1475,7 @@ export const galleryData = [
       "see beauty in simplicity",
       "autumn in new england"
     ],
-    "story": "This image embodies autumn in new england and autumn in new england, captured by Wayne Heim in his signature style. It reflects The Northeast with a touch of see beauty in simplicity. © Wayne Heim",
+    "story": "This image embodies autumn in new england, captured by Wayne Heim in his signature style. It reflects The Northeast with a touch of see beauty in simplicity. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1525,7 +1525,7 @@ export const galleryData = [
       "see beauty in simplicity",
       "autumn in new england"
     ],
-    "story": "Wayne Heim's exploration of see beauty in simplicity comes alive in this piece, showcasing autumn in new england and autumn in new england. A testament to see beauty in simplicity in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of see beauty in simplicity comes alive in this piece, showcasing autumn in new england. A testament to see beauty in simplicity in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1575,7 +1575,7 @@ export const galleryData = [
       "see beauty in simplicity",
       "autumn in new england"
     ],
-    "story": "Delving into see beauty in simplicity, this work by Wayne Heim highlights autumn in new england through autumn in new england and autumn in new england. A powerful statement in photography. © Wayne Heim",
+    "story": "Delving into see beauty in simplicity, this work by Wayne Heim highlights autumn in new england. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1625,7 +1625,7 @@ export const galleryData = [
       "see beauty in simplicity",
       "autumn in new england"
     ],
-    "story": "This image embodies autumn in new england and The Northeast, captured by Wayne Heim in his signature style. It reflects The Northeast with a touch of The Northeast. © Wayne Heim",
+    "story": "This image embodies autumn in new england and The Northeast, captured by Wayne Heim in his signature style. It reflects The Northeast. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1740,7 +1740,7 @@ export const galleryData = [
   },
   {
     "id": "i-7pG4nQv",
-    "title": "See Beauty In Simplicity And See Beauty In Simplicity",
+    "title": "See Beauty In Simplicity",
     "description": "Seeing beauty in simplicity becomes the center of this autumn landscape, where field, trees, and fall light form a quiet composition. This traditional fine art landscape photograph creates New England wall art with restrained Northeast atmosphere.",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-7pG4nQv/A",
@@ -1790,7 +1790,7 @@ export const galleryData = [
   },
   {
     "id": "i-DKPmrRN",
-    "title": "Autumn In New England - Autumn In New England",
+    "title": "Autumn In New England",
     "description": "Autumn in New England is rendered through seasonal landscape, where color and terrain create a quiet regional mood. This traditional fine art landscape photograph creates Northeast wall art shaped by fall color, rural land, and emotional restraint.",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-DKPmrRN/A",
@@ -1825,7 +1825,7 @@ export const galleryData = [
       "The Northeast",
       "see beauty in simplicity"
     ],
-    "story": "This image embodies autumn in new england and see beauty in simplicity, captured by Wayne Heim in his signature style. It reflects The Northeast with a touch of The Northeast. © Wayne Heim",
+    "story": "This image embodies autumn in new england and see beauty in simplicity, captured by Wayne Heim in his signature style. It reflects The Northeast. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1840,7 +1840,7 @@ export const galleryData = [
   },
   {
     "id": "i-gM4DZ97",
-    "title": "See Beauty In Simplicity - See Beauty In Simplicity",
+    "title": "See Beauty In Simplicity",
     "description": "A Northeast landscape study reduces the scene to light, land, and seasonal color. This traditional fine art landscape photograph creates New England wall art rooted in simplicity, autumn atmosphere, and the calm scale of rural terrain.",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-gM4DZ97/A",
@@ -1875,7 +1875,7 @@ export const galleryData = [
       "The Northeast",
       "autumn in new england"
     ],
-    "story": "This image embodies autumn in new england and The Northeast, captured by Wayne Heim in his signature style. It reflects autumn in new england with a touch of autumn in new england. © Wayne Heim",
+    "story": "This image embodies autumn in new england and The Northeast, captured by Wayne Heim in his signature style. It reflects autumn in new england. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1925,7 +1925,7 @@ export const galleryData = [
       "see beauty in simplicity",
       "The Northeast"
     ],
-    "story": "This image embodies The Northeast and see beauty in simplicity, captured by Wayne Heim in his signature style. It reflects autumn in new england with a touch of autumn in new england. © Wayne Heim",
+    "story": "This image embodies The Northeast and see beauty in simplicity, captured by Wayne Heim in his signature style. It reflects autumn in new england. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2024,7 +2024,7 @@ export const galleryData = [
       "The Northeast",
       "autumn in new england"
     ],
-    "story": "This image embodies The Northeast and autumn in new england, captured by Wayne Heim in his signature style. It reflects The Northeast with a touch of The Northeast. © Wayne Heim",
+    "story": "This image embodies The Northeast and autumn in new england, captured by Wayne Heim in his signature style. It reflects The Northeast. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2173,7 +2173,7 @@ export const galleryData = [
       "autumn in new england",
       "see beauty in simplicity"
     ],
-    "story": "This image embodies see beauty in simplicity and see beauty in simplicity, captured by Wayne Heim in his signature style. It reflects autumn in new england with a touch of see beauty in simplicity. © Wayne Heim",
+    "story": "This image embodies see beauty in simplicity, captured by Wayne Heim in his signature style. It reflects autumn in new england with a touch of see beauty in simplicity. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2223,7 +2223,7 @@ export const galleryData = [
       "see beauty in simplicity",
       "autumn in new england"
     ],
-    "story": "This image embodies The Northeast and The Northeast, captured by Wayne Heim in his signature style. It reflects autumn in new england with a touch of see beauty in simplicity. © Wayne Heim",
+    "story": "This image embodies The Northeast, captured by Wayne Heim in his signature style. It reflects autumn in new england with a touch of see beauty in simplicity. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2272,7 +2272,7 @@ export const galleryData = [
       "The Northeast",
       "autumn in new england"
     ],
-    "story": "This image embodies autumn in new england and The Northeast, captured by Wayne Heim in his signature style. It reflects autumn in new england with a touch of autumn in new england. © Wayne Heim",
+    "story": "This image embodies autumn in new england and The Northeast, captured by Wayne Heim in his signature style. It reflects autumn in new england. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2371,7 +2371,7 @@ export const galleryData = [
       "see beauty in simplicity",
       "autumn in new england"
     ],
-    "story": "Wayne Heim's exploration of see beauty in simplicity comes alive in this piece, showcasing see beauty in simplicity and see beauty in simplicity. A testament to autumn in new england in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of see beauty in simplicity comes alive in this piece, showcasing see beauty in simplicity. A testament to autumn in new england in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2435,7 +2435,7 @@ export const galleryData = [
       "see beauty in simplicity",
       "The Northeast"
     ],
-    "story": "Wayne Heim's exploration of see beauty in simplicity comes alive in this piece, showcasing The Northeast and The Northeast. A testament to The Northeast in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of see beauty in simplicity comes alive in this piece, showcasing The Northeast. A testament to The Northeast in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2467,7 +2467,7 @@ export const galleryData = [
       "see beauty in simplicity",
       "autumn in new england"
     ],
-    "story": "This image embodies The Northeast and The Northeast, captured by Wayne Heim in his signature style. It reflects autumn in new england with a touch of autumn in new england. © Wayne Heim",
+    "story": "This image embodies The Northeast, captured by Wayne Heim in his signature style. It reflects autumn in new england. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2499,7 +2499,7 @@ export const galleryData = [
       "see beauty in simplicity",
       "autumn in new england"
     ],
-    "story": "This image embodies The Northeast and The Northeast, captured by Wayne Heim in his signature style. It reflects autumn in new england with a touch of The Northeast. © Wayne Heim",
+    "story": "This image embodies The Northeast, captured by Wayne Heim in his signature style. It reflects autumn in new england with a touch of The Northeast. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],

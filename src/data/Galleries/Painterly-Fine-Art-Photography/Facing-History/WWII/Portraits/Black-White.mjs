@@ -2168,7 +2168,7 @@ export const galleryData = [
       "wartime portraits",
       "heroic portraits"
     ],
-    "story": "Wayne Heim's exploration of wartime portraits comes alive in this piece, showcasing heroic portraits and heroic portraits. A testament to wartime portraits in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of wartime portraits comes alive in this piece, showcasing heroic portraits. A testament to wartime portraits in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2232,7 +2232,7 @@ export const galleryData = [
       "wartime portraits",
       "greatest generation photos"
     ],
-    "story": "Wayne Heim's exploration of greatest generation photos comes alive in this piece, showcasing wwii photography and wwii photography. A testament to wwii photography in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of greatest generation photos comes alive in this piece, showcasing wwii photography. A testament to wwii photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2327,7 +2327,7 @@ export const galleryData = [
       "moments of connection",
       "wartime portraits"
     ],
-    "story": "Delving into greatest generation photos, this work by Wayne Heim highlights wartime portraits through wartime portraits and wartime portraits. A powerful statement in photography. © Wayne Heim",
+    "story": "Delving into greatest generation photos, this work by Wayne Heim highlights wartime portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2449,7 +2449,7 @@ export const galleryData = [
       "wartime portraits",
       "heroic portraits"
     ],
-    "story": "Delving into heroic portraits, this work by Wayne Heim highlights wartime portraits through wwii photography and wwii photography. A powerful statement in photography. © Wayne Heim",
+    "story": "Delving into heroic portraits, this work by Wayne Heim highlights wartime portraits through wwii photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2646,7 +2646,7 @@ export const galleryData = [
   },
   {
     "id": "i-TsQBmws",
-    "title": "Wwii Photography - Wwii Photography",
+    "title": "Wwii Photography",
     "description": "A monochrome World War II photograph of a WWII soldier, defined by duty rather than spectacle. Approaching World War II imagery with documentary discipline, Wayne Heim's work prioritizes memory, presence, and lived consequence over reenactment theatrics. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-TsQBmws/0/KmdmbGQSmHTkcbqZkChcqmsB2GF8NmgdmJbHWdP5G/XL/_HF25035-Edit-Edit-XL.jpg",
@@ -3016,7 +3016,7 @@ export const galleryData = [
       "moments of connection",
       "greatest generation photos"
     ],
-    "story": "Wayne Heim's exploration of greatest generation photos comes alive in this piece, showcasing wwii photography and wwii photography. A testament to wwii photography in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of greatest generation photos comes alive in this piece, showcasing wwii photography. A testament to wwii photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3075,7 +3075,7 @@ export const galleryData = [
       "greatest generation photos",
       "wwii photography"
     ],
-    "story": "Wayne Heim's exploration of wartime portraits comes alive in this piece, showcasing wwii photography and wwii photography. A testament to wartime portraits in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of wartime portraits comes alive in this piece, showcasing wwii photography. A testament to wartime portraits in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3109,7 +3109,7 @@ export const galleryData = [
       "wwii photography",
       "moments of connection"
     ],
-    "story": "Delving into wwii photography, this work by Wayne Heim highlights moments of connection through greatest generation photos and greatest generation photos. A powerful statement in photography. © Wayne Heim",
+    "story": "Delving into wwii photography, this work by Wayne Heim highlights moments of connection through greatest generation photos. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3203,7 +3203,7 @@ export const galleryData = [
       "heroic portraits",
       "moments of connection"
     ],
-    "story": "Delving into wwii photography, this work by Wayne Heim highlights heroic portraits through wartime portraits and wartime portraits. A powerful statement in photography. © Wayne Heim",
+    "story": "Delving into wwii photography, this work by Wayne Heim highlights heroic portraits through wartime portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3302,7 +3302,7 @@ export const galleryData = [
       "heroic portraits",
       "greatest generation photos"
     ],
-    "story": "Wayne Heim's exploration of moments of connection comes alive in this piece, showcasing heroic portraits and heroic portraits. A testament to greatest generation photos in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of moments of connection comes alive in this piece, showcasing heroic portraits. A testament to greatest generation photos in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3336,7 +3336,7 @@ export const galleryData = [
       "heroic portraits",
       "wartime portraits"
     ],
-    "story": "Wayne Heim's exploration of heroic portraits comes alive in this piece, showcasing heroic portraits and heroic portraits. A testament to wartime portraits in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of heroic portraits comes alive in this piece, showcasing heroic portraits. A testament to wartime portraits in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3430,7 +3430,7 @@ export const galleryData = [
       "greatest generation photos",
       "moments of connection"
     ],
-    "story": "Delving into wwii photography, this work by Wayne Heim highlights wwii photography through moments of connection and moments of connection. A powerful statement in photography. © Wayne Heim",
+    "story": "Delving into wwii photography, this work by Wayne Heim highlights wwii photography through moments of connection. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3461,7 +3461,7 @@ export const galleryData = [
       "wartime portraits",
       "heroic portraits"
     ],
-    "story": "Wayne Heim's exploration of wartime portraits comes alive in this piece, showcasing wwii photography and wwii photography. A testament to moments of connection in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of wartime portraits comes alive in this piece, showcasing wwii photography. A testament to moments of connection in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3725,7 +3725,7 @@ export const galleryData = [
       "heroic portraits",
       "wartime portraits"
     ],
-    "story": "Wayne Heim's exploration of greatest generation photos comes alive in this piece, showcasing wartime portraits and wartime portraits. A testament to moments of connection in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of greatest generation photos comes alive in this piece, showcasing wartime portraits. A testament to moments of connection in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3785,7 +3785,7 @@ export const galleryData = [
       "moments of connection",
       "wwii photography"
     ],
-    "story": "Wayne Heim's exploration of wwii photography comes alive in this piece, showcasing wartime portraits and wartime portraits. A testament to greatest generation photos in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of wwii photography comes alive in this piece, showcasing wartime portraits. A testament to greatest generation photos in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3818,7 +3818,7 @@ export const galleryData = [
       "wwii photography",
       "heroic portraits"
     ],
-    "story": "Delving into wwii photography, this work by Wayne Heim highlights wartime portraits through heroic portraits and heroic portraits. A powerful statement in photography. © Wayne Heim",
+    "story": "Delving into wwii photography, this work by Wayne Heim highlights wartime portraits through heroic portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3852,7 +3852,7 @@ export const galleryData = [
       "moments of connection",
       "wwii photography"
     ],
-    "story": "Wayne Heim's exploration of greatest generation photos comes alive in this piece, showcasing wwii photography and wwii photography. A testament to heroic portraits in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of greatest generation photos comes alive in this piece, showcasing wwii photography. A testament to heroic portraits in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3947,7 +3947,7 @@ export const galleryData = [
       "wwii photography",
       "heroic portraits"
     ],
-    "story": "Wayne Heim's exploration of wartime portraits comes alive in this piece, showcasing wwii photography and wwii photography. A testament to heroic portraits in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of wartime portraits comes alive in this piece, showcasing wwii photography. A testament to heroic portraits in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4382,7 +4382,7 @@ export const galleryData = [
   },
   {
     "id": "i-qcS6nhz",
-    "title": "Moments Of Connection - Moments Of Connection",
+    "title": "Moments Of Connection",
     "description": "A black and white World War II photograph of a WWII soldier, defined by resolve rather than spectacle. This image is part of Wayne Heim's World War II fine art photography, emphasizing service, sacrifice, and the quiet burden carried by those who lived through the war. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where purpose held steady when the world did not. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-qcS6nhz/0/K5kh2rLWVhsb4DPXh65GfQPvgfpxPrhnBmrGkpnrb/XL/_HF22589-XL.jpg",
@@ -4407,7 +4407,7 @@ export const galleryData = [
       "greatest generation photos",
       "wwii photography"
     ],
-    "story": "\"Moments Of Connection - Moments Of Connection\" — K4 Studios fine art. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the Facing History series by Wayne Heim.",
+    "story": "\"Moments Of Connection\" — K4 Studios fine art. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the Facing History series by Wayne Heim.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4710,7 +4710,7 @@ export const galleryData = [
   },
   {
     "id": "i-tHZG2Md",
-    "title": "Wwii Photography And Wwii Photography",
+    "title": "Wwii Photography",
     "description": "A black and white World War II photograph of a WWII soldier, defined by resolve rather than spectacle. Approaching World War II imagery with documentary discipline, Wayne Heim's work prioritizes memory, presence, and lived consequence over reenactment theatrics. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where purpose held steady when the world did not. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-tHZG2Md/0/MX886GmKSB2BHzZNDmr2DSkq8mQwF2pHMRfQvDz4j/XL/_HF23406-XL.jpg",
@@ -5023,7 +5023,7 @@ export const galleryData = [
       "wwii photography",
       "heroic portraits"
     ],
-    "story": "Delving into greatest generation photos, this work by Wayne Heim highlights heroic portraits through heroic portraits and heroic portraits. A powerful statement in photography. © Wayne Heim",
+    "story": "Delving into greatest generation photos, this work by Wayne Heim highlights heroic portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -5051,7 +5051,7 @@ export const galleryData = [
       "wwii photography",
       "greatest generation photos"
     ],
-    "story": "Wayne Heim's exploration of wwii photography comes alive in this piece, showcasing wartime portraits and wartime portraits. A testament to greatest generation photos in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of wwii photography comes alive in this piece, showcasing wartime portraits. A testament to greatest generation photos in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -5105,7 +5105,7 @@ export const galleryData = [
       "wartime portraits",
       "wwii photography"
     ],
-    "story": "Delving into moments of connection, this work by Wayne Heim highlights wwii photography through wartime portraits and wartime portraits. A powerful statement in photography. © Wayne Heim",
+    "story": "Delving into moments of connection, this work by Wayne Heim highlights wwii photography through wartime portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -5133,7 +5133,7 @@ export const galleryData = [
       "wwii photography",
       "wartime portraits"
     ],
-    "story": "Wayne Heim's exploration of wwii photography comes alive in this piece, showcasing heroic portraits and heroic portraits. A testament to wartime portraits in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of wwii photography comes alive in this piece, showcasing heroic portraits. A testament to wartime portraits in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -5243,7 +5243,7 @@ export const galleryData = [
       "wwii photography",
       "moments of connection"
     ],
-    "story": "Wayne Heim's exploration of moments of connection comes alive in this piece, showcasing heroic portraits and heroic portraits. A testament to heroic portraits in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of moments of connection comes alive in this piece, showcasing heroic portraits. A testament to heroic portraits in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -5298,7 +5298,7 @@ export const galleryData = [
       "wwii photography",
       "greatest generation photos"
     ],
-    "story": "Delving into wwii photography, this work by Wayne Heim highlights greatest generation photos through heroic portraits and heroic portraits. A powerful statement in photography. © Wayne Heim",
+    "story": "Delving into wwii photography, this work by Wayne Heim highlights greatest generation photos through heroic portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -5660,7 +5660,7 @@ export const galleryData = [
       "greatest generation photos",
       "moments of connection"
     ],
-    "story": "Delving into moments of connection, this work by Wayne Heim highlights wwii photography through greatest generation photos and greatest generation photos. A powerful statement in photography. © Wayne Heim",
+    "story": "Delving into moments of connection, this work by Wayne Heim highlights wwii photography through greatest generation photos. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -6327,7 +6327,7 @@ export const galleryData = [
       "moments of connection",
       "heroic portraits"
     ],
-    "story": "Delving into wartime portraits, this work by Wayne Heim highlights heroic portraits through moments of connection and moments of connection. A powerful statement in photography. © Wayne Heim",
+    "story": "Delving into wartime portraits, this work by Wayne Heim highlights heroic portraits through moments of connection. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],

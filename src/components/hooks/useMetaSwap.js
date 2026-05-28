@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { getProxySrc } from "../../utils/imageProxyCore.js";
+import { sanitizeRepeatedSeoCopy } from "../../utils/repetitiveSeoCopy";
 
 // optional: import your mojibake fixer if you want clean quotes/dashes
 // import fixMojibake from "../utils/fixMojibake";
@@ -54,13 +55,14 @@ export default function useMetaSwap(entry, baseTitle = "K4 Studios Gallery", ind
     }
 
     // --- Title ---
-    const chapterLabel = entry.title || `Chapter ${index + 1}`;
+    const chapterLabel = sanitizeRepeatedSeoCopy(entry.title || `Chapter ${index + 1}`);
+    const description = sanitizeRepeatedSeoCopy(entry.description || entry.story || "");
     document.title = `${chapterLabel} — ${baseTitle}`;
 
     // --- Standard + Open Graph ---
-    setMeta(`meta[name="description"]`, entry.description || entry.story || "");
+    setMeta(`meta[name="description"]`, description);
     setMeta(`meta[property="og:title"]`, chapterLabel);
-    setMeta(`meta[property="og:description"]`, entry.description || entry.story || "");
+    setMeta(`meta[property="og:description"]`, description);
     if (entry.id) {
       setMeta(`meta[property="og:image"]`, entry.src || getProxySrc(entry.id, 'l'));
     }

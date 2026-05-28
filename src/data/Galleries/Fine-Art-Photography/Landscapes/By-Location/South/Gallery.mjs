@@ -80,7 +80,7 @@ export const galleryData = [
       "traditional southern landscape photography",
       "southern landscape prints"
     ],
-    "story": "Wayne Heim's exploration of South – Light and Legacy comes alive in this piece, showcasing traditional southern landscape photography and traditional southern landscape photography. A testament to southern landscape prints in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of South – Light and Legacy comes alive in this piece, showcasing traditional southern landscape photography. A testament to southern landscape prints in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -153,7 +153,7 @@ export const galleryData = [
       "southern landscape prints",
       "traditional southern landscape photography"
     ],
-    "story": "Wayne Heim's exploration of southern landscape prints comes alive in this piece, showcasing southern landscape prints and southern landscape prints. A testament to southern landscape prints in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of southern landscape prints comes alive in this piece, showcasing southern landscape prints. A testament to southern landscape prints in fine art. © Wayne Heim",
     "notes": "",
     "rating": 4,
     "galleries": [],

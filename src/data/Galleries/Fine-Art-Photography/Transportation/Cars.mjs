@@ -144,7 +144,7 @@ export const galleryData = [
       "classic car photography",
       "painterly classic car photos for auto lovers"
     ],
-    "story": "Wayne Heim's exploration of painterly classic car photos for auto lovers comes alive in this piece, showcasing timeless automotive prints and timeless automotive prints. A testament to automotive art prints in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of painterly classic car photos for auto lovers comes alive in this piece, showcasing timeless automotive prints. A testament to automotive art prints in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1277,7 +1277,7 @@ export const galleryData = [
       "route 66 car photography prints",
       "automotive art prints"
     ],
-    "story": "Delving into route 66 car photography prints, this work by Wayne Heim highlights timeless automotive prints through automotive art prints and automotive art prints. A powerful statement in photography. © Wayne Heim",
+    "story": "Delving into route 66 car photography prints, this work by Wayne Heim highlights timeless automotive prints through automotive art prints. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1312,7 +1312,7 @@ export const galleryData = [
       "painterly classic car photos for auto lovers",
       "classic car photography"
     ],
-    "story": "Wayne Heim's exploration of automotive art prints comes alive in this piece, showcasing classic car photography and classic car photography. A testament to classic car art prints for enthusiasts in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of automotive art prints comes alive in this piece, showcasing classic car photography. A testament to classic car art prints for enthusiasts in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1383,7 +1383,7 @@ export const galleryData = [
       "automotive art prints",
       "timeless automotive prints"
     ],
-    "story": "This image embodies automotive art prints and classic car photography, captured by Wayne Heim in his signature style. It reflects timeless automotive prints with a touch of timeless automotive prints. © Wayne Heim",
+    "story": "This image embodies automotive art prints and classic car photography, captured by Wayne Heim in his signature style. It reflects timeless automotive prints. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1418,7 +1418,7 @@ export const galleryData = [
       "automotive art prints",
       "painterly classic car photos for auto lovers"
     ],
-    "story": "This image embodies timeless automotive prints and timeless automotive prints, captured by Wayne Heim in his signature style. It reflects automotive art prints with a touch of classic car art prints for enthusiasts. © Wayne Heim",
+    "story": "This image embodies timeless automotive prints, captured by Wayne Heim in his signature style. It reflects automotive art prints with a touch of classic car art prints for enthusiasts. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1487,7 +1487,7 @@ export const galleryData = [
       "classic car art prints for enthusiasts",
       "automotive art prints"
     ],
-    "story": "This image embodies automotive art prints and automotive art prints, captured by Wayne Heim in his signature style. It reflects classic car art prints for enthusiasts with a touch of automotive art prints. © Wayne Heim",
+    "story": "This image embodies automotive art prints, captured by Wayne Heim in his signature style. It reflects classic car art prints for enthusiasts with a touch of automotive art prints. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],

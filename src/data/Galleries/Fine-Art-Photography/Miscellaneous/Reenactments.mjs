@@ -33,7 +33,7 @@ export const galleryData = [
       "reenactment portraits",
       "living history art"
     ],
-    "story": "This image embodies living history art and reenactment portraits, captured by Wayne Heim in his signature style. It reflects living history art with a touch of living history art. © Wayne Heim",
+    "story": "This image embodies living history art and reenactment portraits, captured by Wayne Heim in his signature style. It reflects living history art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -871,7 +871,7 @@ export const galleryData = [
       "reenactor photography",
       "period costume photography"
     ],
-    "story": "Wayne Heim's exploration of historic reenactor prints comes alive in this piece, showcasing historic reenactor prints and historic reenactor prints. A testament to period costume photography in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of historic reenactor prints comes alive in this piece, showcasing historic reenactor prints. A testament to period costume photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1155,7 +1155,7 @@ export const galleryData = [
       "historic reenactor prints",
       "reenactor photography"
     ],
-    "story": "Wayne Heim's exploration of reenactor photography comes alive in this piece, showcasing period costume photography and period costume photography. A testament to reenactor photography in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of reenactor photography comes alive in this piece, showcasing period costume photography. A testament to reenactor photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1385,7 +1385,7 @@ export const galleryData = [
       "living history art",
       "historic reenactor prints"
     ],
-    "story": "This image embodies living history art and historic reenactor prints, captured by Wayne Heim in his signature style. It reflects reenactment portraits with a touch of reenactment portraits. © Wayne Heim",
+    "story": "This image embodies living history art and historic reenactor prints, captured by Wayne Heim in his signature style. It reflects reenactment portraits. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1437,7 +1437,7 @@ export const galleryData = [
       "reenactor photography",
       "reenactment portraits"
     ],
-    "story": "This image embodies reenactment portraits and historic reenactor prints, captured by Wayne Heim in his signature style. It reflects reenactment portraits with a touch of reenactment portraits. © Wayne Heim",
+    "story": "This image embodies reenactment portraits and historic reenactor prints, captured by Wayne Heim in his signature style. It reflects reenactment portraits. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1452,7 +1452,7 @@ export const galleryData = [
   },
   {
     "id": "i-dsjVXcN",
-    "title": "Period Costume Photography - Period Costume Photography",
+    "title": "Period Costume Photography",
     "description": "A reenactment portrait shaped by period costume, gesture, and atmosphere becomes fine art through light, posture, and the quiet visual language of D-Day Conneaut. This World War II reenactor photograph creates living history art rooted in reenactment portraits, period costume photography, and the human weight carried by historical memory.",
     "alt": "Young Resistance Fighter    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-dsjVXcN/A",
@@ -1512,7 +1512,7 @@ export const galleryData = [
       "period costume photography",
       "reenactment portraits"
     ],
-    "story": "This image embodies period costume photography and period costume photography, captured by Wayne Heim in his signature style. It reflects reenactment portraits with a touch of reenactment portraits. © Wayne Heim",
+    "story": "This image embodies period costume photography, captured by Wayne Heim in his signature style. It reflects reenactment portraits. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1639,7 +1639,7 @@ export const galleryData = [
       "reenactment portraits",
       "period costume photography"
     ],
-    "story": "This image embodies reenactment portraits and reenactment portraits, captured by Wayne Heim in his signature style. It reflects period costume photography with a touch of historic reenactor prints. © Wayne Heim",
+    "story": "This image embodies reenactment portraits, captured by Wayne Heim in his signature style. It reflects period costume photography with a touch of historic reenactor prints. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1665,7 +1665,7 @@ export const galleryData = [
       "reenactor photography",
       "reenactment portraits"
     ],
-    "story": "This image embodies reenactor photography and reenactor photography, captured by Wayne Heim in his signature style. It reflects living history art with a touch of reenactment portraits. © Wayne Heim",
+    "story": "This image embodies reenactor photography, captured by Wayne Heim in his signature style. It reflects living history art with a touch of reenactment portraits. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1690,7 +1690,7 @@ export const galleryData = [
       "living history art",
       "reenactment portraits"
     ],
-    "story": "This image embodies reenactor photography and reenactor photography, captured by Wayne Heim in his signature style. It reflects living history art with a touch of reenactment portraits. © Wayne Heim",
+    "story": "This image embodies reenactor photography, captured by Wayne Heim in his signature style. It reflects living history art with a touch of reenactment portraits. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1837,7 +1837,7 @@ export const galleryData = [
       "reenactor photography",
       "reenactment portraits"
     ],
-    "story": "This image embodies reenactor photography and reenactor photography, captured by Wayne Heim in his signature style. It reflects period costume photography with a touch of reenactor photography. © Wayne Heim",
+    "story": "This image embodies reenactor photography, captured by Wayne Heim in his signature style. It reflects period costume photography with a touch of reenactor photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2092,7 +2092,7 @@ export const galleryData = [
       "period costume photography",
       "historic reenactor prints"
     ],
-    "story": "This image embodies living history art and historic reenactor prints, captured by Wayne Heim in his signature style. It reflects historic reenactor prints with a touch of historic reenactor prints. © Wayne Heim",
+    "story": "This image embodies living history art and historic reenactor prints, captured by Wayne Heim in his signature style. It reflects historic reenactor prints. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2144,7 +2144,7 @@ export const galleryData = [
       "period costume photography",
       "historic reenactor prints"
     ],
-    "story": "This image embodies living history art and historic reenactor prints, captured by Wayne Heim in his signature style. It reflects living history art with a touch of living history art. © Wayne Heim",
+    "story": "This image embodies living history art and historic reenactor prints, captured by Wayne Heim in his signature style. It reflects living history art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2398,7 +2398,7 @@ export const galleryData = [
       "period costume photography",
       "historic reenactor prints"
     ],
-    "story": "This image embodies reenactment portraits and reenactment portraits, captured by Wayne Heim in his signature style. It reflects period costume photography with a touch of reenactment portraits. © Wayne Heim",
+    "story": "This image embodies reenactment portraits, captured by Wayne Heim in his signature style. It reflects period costume photography with a touch of reenactment portraits. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2423,7 +2423,7 @@ export const galleryData = [
       "reenactment portraits",
       "reenactor photography"
     ],
-    "story": "This image embodies period costume photography and reenactment portraits, captured by Wayne Heim in his signature style. It reflects reenactor photography with a touch of reenactor photography. © Wayne Heim",
+    "story": "This image embodies period costume photography and reenactment portraits, captured by Wayne Heim in his signature style. It reflects reenactor photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2474,7 +2474,7 @@ export const galleryData = [
       "living history art",
       "reenactor photography"
     ],
-    "story": "Wayne Heim's exploration of reenactor photography comes alive in this piece, showcasing reenactor photography and reenactor photography. A testament to historic reenactor prints in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of reenactor photography comes alive in this piece, showcasing reenactor photography. A testament to historic reenactor prints in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2489,7 +2489,7 @@ export const galleryData = [
   },
   {
     "id": "i-tBWpLHz",
-    "title": "Reenactor Photography And Reenactor Photography",
+    "title": "Reenactor Photography",
     "description": "A reenactment portrait shaped by period costume, gesture, and atmosphere becomes fine art through light, posture, and the quiet visual language of a living history setting. This historical reenactor photograph creates living history art rooted in reenactment portraits, period costume photography, and the human weight carried by historical memory.",
     "alt": "What Is That?   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-tBWpLHz/A",
@@ -2498,7 +2498,7 @@ export const galleryData = [
       "period costume photography",
       "living history art"
     ],
-    "story": "Delving into reenactor photography, this work by Wayne Heim highlights reenactor photography through living history art and living history art. A powerful statement in photography. © Wayne Heim",
+    "story": "Delving into reenactor photography, this work by Wayne Heim highlights reenactor photography through living history art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2673,7 +2673,7 @@ export const galleryData = [
       "living history art",
       "reenactment portraits"
     ],
-    "story": "Wayne Heim's exploration of historic reenactor prints comes alive in this piece, showcasing historic reenactor prints and historic reenactor prints. A testament to reenactment portraits in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of historic reenactor prints comes alive in this piece, showcasing historic reenactor prints. A testament to reenactment portraits in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2724,7 +2724,7 @@ export const galleryData = [
       "period costume photography",
       "reenactor photography"
     ],
-    "story": "Wayne Heim's exploration of historic reenactor prints comes alive in this piece, showcasing period costume photography and period costume photography. A testament to reenactor photography in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of historic reenactor prints comes alive in this piece, showcasing period costume photography. A testament to reenactor photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2774,7 +2774,7 @@ export const galleryData = [
       "reenactor photography",
       "period costume photography"
     ],
-    "story": "Delving into living history art, this work by Wayne Heim highlights period costume photography through living history art and living history art. A powerful statement in photography. © Wayne Heim",
+    "story": "Delving into living history art, this work by Wayne Heim highlights period costume photography through living history art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2824,7 +2824,7 @@ export const galleryData = [
       "reenactor photography",
       "living history art"
     ],
-    "story": "This image embodies living history art and reenactor photography, captured by Wayne Heim in his signature style. It reflects historic reenactor prints with a touch of historic reenactor prints. © Wayne Heim",
+    "story": "This image embodies living history art and reenactor photography, captured by Wayne Heim in his signature style. It reflects historic reenactor prints. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2850,7 +2850,7 @@ export const galleryData = [
       "reenactor photography",
       "reenactment portraits"
     ],
-    "story": "This image embodies reenactor photography and reenactor photography, captured by Wayne Heim in his signature style. It reflects living history art with a touch of reenactment portraits. © Wayne Heim",
+    "story": "This image embodies reenactor photography, captured by Wayne Heim in his signature style. It reflects living history art with a touch of reenactment portraits. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2875,7 +2875,7 @@ export const galleryData = [
       "reenactor photography",
       "reenactment portraits"
     ],
-    "story": "Wayne Heim's exploration of period costume photography comes alive in this piece, showcasing reenactor photography and reenactor photography. A testament to period costume photography in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of period costume photography comes alive in this piece, showcasing reenactor photography. A testament to period costume photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2952,7 +2952,7 @@ export const galleryData = [
       "reenactment portraits",
       "living history art"
     ],
-    "story": "This image embodies historic reenactor prints and historic reenactor prints, captured by Wayne Heim in his signature style. It reflects period costume photography with a touch of living history art. © Wayne Heim",
+    "story": "This image embodies historic reenactor prints, captured by Wayne Heim in his signature style. It reflects period costume photography with a touch of living history art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3018,7 +3018,7 @@ export const galleryData = [
   },
   {
     "id": "i-nPhWxjq",
-    "title": "Reenactment Portraits - Reenactment Portraits",
+    "title": "Reenactment Portraits",
     "description": "A reenactment portrait shaped by period costume, gesture, and atmosphere becomes fine art through light, posture, and the quiet visual language of D-Day Conneaut. This World War II reenactor photograph creates living history art rooted in reenactment portraits, period costume photography, and the human weight carried by historical memory.",
     "alt": "Parade Rest. Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-nPhWxjq/A",
@@ -3169,7 +3169,7 @@ export const galleryData = [
   },
   {
     "id": "i-9gF9rCs",
-    "title": "Reenactment Portraits - Reenactment Portraits",
+    "title": "Reenactment Portraits",
     "description": "A reenactment portrait shaped by period costume, gesture, and atmosphere becomes fine art through light, posture, and the quiet visual language of D-Day Conneaut. This World War II reenactor photograph creates living history art rooted in reenactment portraits, period costume photography, and the human weight carried by historical memory.",
     "alt": "Highly Decorated PFC   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-9gF9rCs/A",
@@ -3228,7 +3228,7 @@ export const galleryData = [
       "reenactor photography",
       "historic reenactor prints"
     ],
-    "story": "Wayne Heim's exploration of reenactor photography comes alive in this piece, showcasing reenactor photography and reenactor photography. A testament to historic reenactor prints in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of reenactor photography comes alive in this piece, showcasing reenactor photography. A testament to historic reenactor prints in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3278,7 +3278,7 @@ export const galleryData = [
       "historic reenactor prints",
       "reenactment portraits"
     ],
-    "story": "Delving into period costume photography, this work by Wayne Heim highlights reenactment portraits through historic reenactor prints and historic reenactor prints. A powerful statement in photography. © Wayne Heim",
+    "story": "Delving into period costume photography, this work by Wayne Heim highlights reenactment portraits through historic reenactor prints. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3563,7 +3563,7 @@ export const galleryData = [
       "period costume photography",
       "reenactment portraits"
     ],
-    "story": "This image embodies reenactment portraits and reenactment portraits, captured by Wayne Heim in his signature style. It reflects reenactment portraits with a touch of historic reenactor prints. © Wayne Heim",
+    "story": "This image embodies reenactment portraits, captured by Wayne Heim in his signature style. It reflects reenactment portraits with a touch of historic reenactor prints. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3720,7 +3720,7 @@ export const galleryData = [
       "living history art",
       "reenactment portraits"
     ],
-    "story": "This image embodies reenactment portraits and reenactment portraits, captured by Wayne Heim in his signature style. It reflects period costume photography with a touch of reenactment portraits. © Wayne Heim",
+    "story": "This image embodies reenactment portraits, captured by Wayne Heim in his signature style. It reflects period costume photography with a touch of reenactment portraits. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4002,7 +4002,7 @@ export const galleryData = [
       "living history art",
       "reenactment portraits"
     ],
-    "story": "Delving into period costume photography, this work by Wayne Heim highlights living history art through historic reenactor prints and historic reenactor prints. A powerful statement in photography. © Wayne Heim",
+    "story": "Delving into period costume photography, this work by Wayne Heim highlights living history art through historic reenactor prints. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4026,7 +4026,7 @@ export const galleryData = [
       "historic reenactor prints",
       "living history art"
     ],
-    "story": "Delving into living history art, this work by Wayne Heim highlights living history art through period costume photography and period costume photography. A powerful statement in photography. © Wayne Heim",
+    "story": "Delving into living history art, this work by Wayne Heim highlights living history art through period costume photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4128,7 +4128,7 @@ export const galleryData = [
       "reenactment portraits",
       "period costume photography"
     ],
-    "story": "This image embodies reenactor photography and reenactor photography, captured by Wayne Heim in his signature style. It reflects period costume photography with a touch of period costume photography. © Wayne Heim",
+    "story": "This image embodies reenactor photography, captured by Wayne Heim in his signature style. It reflects period costume photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4153,7 +4153,7 @@ export const galleryData = [
       "period costume photography",
       "living history art"
     ],
-    "story": "This image embodies reenactor photography and living history art, captured by Wayne Heim in his signature style. It reflects period costume photography with a touch of period costume photography. © Wayne Heim",
+    "story": "This image embodies reenactor photography and living history art, captured by Wayne Heim in his signature style. It reflects period costume photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4178,7 +4178,7 @@ export const galleryData = [
       "living history art",
       "period costume photography"
     ],
-    "story": "This image embodies living history art and living history art, captured by Wayne Heim in his signature style. It reflects period costume photography with a touch of reenactment portraits. © Wayne Heim",
+    "story": "This image embodies living history art, captured by Wayne Heim in his signature style. It reflects period costume photography with a touch of reenactment portraits. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4229,7 +4229,7 @@ export const galleryData = [
       "period costume photography",
       "reenactment portraits"
     ],
-    "story": "Wayne Heim's exploration of reenactment portraits comes alive in this piece, showcasing historic reenactor prints and historic reenactor prints. A testament to reenactment portraits in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of reenactment portraits comes alive in this piece, showcasing historic reenactor prints. A testament to reenactment portraits in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4356,7 +4356,7 @@ export const galleryData = [
       "reenactor photography",
       "reenactment portraits"
     ],
-    "story": "This image embodies reenactor photography and reenactor photography, captured by Wayne Heim in his signature style. It reflects reenactment portraits with a touch of reenactment portraits. © Wayne Heim",
+    "story": "This image embodies reenactor photography, captured by Wayne Heim in his signature style. It reflects reenactment portraits. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4617,7 +4617,7 @@ export const galleryData = [
       "living history art",
       "historic reenactor prints"
     ],
-    "story": "Delving into historic reenactor prints, this work by Wayne Heim highlights living history art through period costume photography and period costume photography. A powerful statement in photography. © Wayne Heim",
+    "story": "Delving into historic reenactor prints, this work by Wayne Heim highlights living history art through period costume photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],

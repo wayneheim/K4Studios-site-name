@@ -58,7 +58,7 @@ export const galleryData = [
   },
   {
     "id": "i-2S2ZbzK",
-    "title": "Timeless Automotive Prints - Timeless Automotive Prints",
+    "title": "Timeless Automotive Prints",
     "description": "A painterly fine art photograph of a vintage automobile on Route 66, defined by motion rather than nostalgia. Wayne Heim's fine art transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Tone and restraint shape a narrative grounded in invention and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
     "alt": "Wigwam Motel in Green",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars/i-2S2ZbzK/A",
@@ -288,7 +288,7 @@ export const galleryData = [
   },
   {
     "id": "i-9NHSnWK",
-    "title": "Painterly Classic Car Photos For Auto Lovers And Painterly Classic Car Photos For Auto Lovers",
+    "title": "Painterly Classic Car Photos For Auto Lovers",
     "description": "A painterly fine art photograph of a vintage automobile on Route 66, defined by motion rather than nostalgia. Wayne Heim's historic transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Tone and restraint shape a narrative grounded in invention and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars/i-9NHSnWK/A",

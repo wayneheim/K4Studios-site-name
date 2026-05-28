@@ -260,7 +260,7 @@ export const galleryData = [
       "steam engine art",
       "steam engine wall art for collectors"
     ],
-    "story": "Delving into steam engine art, this work by Wayne Heim highlights steam engine wall art for collectors through steam engine wall art for collectors and steam engine wall art for collectors. A powerful statement in photography. © Wayne Heim",
+    "story": "Delving into steam engine art, this work by Wayne Heim highlights steam engine wall art for collectors. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -297,7 +297,7 @@ export const galleryData = [
       "steam engine wall art for collectors",
       "steam engine art"
     ],
-    "story": "This image embodies steam engine art and vintage train photography for man cave, captured by Wayne Heim in his signature style. It reflects vintage train photography with a touch of vintage train photography. © Wayne Heim",
+    "story": "This image embodies steam engine art and vintage train photography for man cave, captured by Wayne Heim in his signature style. It reflects vintage train photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -442,7 +442,7 @@ export const galleryData = [
       "steam engine wall art for collectors",
       "steam engine art"
     ],
-    "story": "This image embodies vintage train photography for man cave and steam engine photography, captured by Wayne Heim in his signature style. It reflects steam engine wall art for collectors with a touch of steam engine wall art for collectors. © Wayne Heim",
+    "story": "This image embodies vintage train photography for man cave and steam engine photography, captured by Wayne Heim in his signature style. It reflects steam engine wall art for collectors. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -549,7 +549,7 @@ export const galleryData = [
       "steam engine wall art for collectors",
       "steam engine art"
     ],
-    "story": "Wayne Heim's exploration of steam engine wall art for collectors comes alive in this piece, showcasing steam engine wall art for collectors and steam engine wall art for collectors. A testament to steam engine art in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of steam engine wall art for collectors comes alive in this piece, showcasing steam engine wall art for collectors. A testament to steam engine art in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -801,7 +801,7 @@ export const galleryData = [
       "steam engine wall art for collectors",
       "vintage train photography for man cave"
     ],
-    "story": "Wayne Heim's exploration of steam engine wall art for collectors comes alive in this piece, showcasing vintage train photography for man cave and vintage train photography for man cave. A testament to steam engine wall art for collectors in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of steam engine wall art for collectors comes alive in this piece, showcasing vintage train photography for man cave. A testament to steam engine wall art for collectors in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -947,7 +947,7 @@ export const galleryData = [
       "steam engine art",
       "steam engine photography"
     ],
-    "story": "Wayne Heim's exploration of steam engine wall art for collectors comes alive in this piece, showcasing steam engine wall art for collectors and steam engine wall art for collectors. A testament to steam engine wall art for collectors in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of steam engine wall art for collectors comes alive in this piece, showcasing steam engine wall art for collectors. A testament to steam engine wall art for collectors in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],

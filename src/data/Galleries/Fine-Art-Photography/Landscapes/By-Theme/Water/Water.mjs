@@ -141,7 +141,7 @@ export const galleryData = [
       "painterly river scenes",
       "the truth of a moment"
     ],
-    "story": "This image embodies the truth of a moment and painterly river scenes, captured by Wayne Heim in his signature style. It reflects painterly river scenes with a touch of painterly river scenes. ",
+    "story": "This image embodies the truth of a moment and painterly river scenes, captured by Wayne Heim in his signature style. It reflects painterly river scenes.",
     "notes": "",
     "rating": 4,
     "galleries": [],
@@ -3270,7 +3270,7 @@ export const galleryData = [
       "waterfall landscape photography",
       "the truth of a moment"
     ],
-    "story": "This image embodies waterfall landscape photography and the truth of a moment, captured by Wayne Heim in his signature style. It reflects painterly river scenes with a touch of painterly river scenes. © Wayne Heim",
+    "story": "This image embodies waterfall landscape photography and the truth of a moment, captured by Wayne Heim in his signature style. It reflects painterly river scenes. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3342,7 +3342,7 @@ export const galleryData = [
       "painterly river scenes",
       "the truth of a moment"
     ],
-    "story": "Wayne Heim's exploration of waterfall landscape photography comes alive in this piece, showcasing painterly river scenes and painterly river scenes. A testament to the truth of a moment in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of waterfall landscape photography comes alive in this piece, showcasing painterly river scenes. A testament to the truth of a moment in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3393,7 +3393,7 @@ export const galleryData = [
   },
   {
     "id": "i-NGqssGX",
-    "title": "Waterfall Landscape Photography And Waterfall Landscape Photography",
+    "title": "Waterfall Landscape Photography",
     "description": "A waterfall landscape becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-NGqssGX/A",
@@ -4672,7 +4672,7 @@ export const galleryData = [
       "waterfall landscape photography",
       "painterly river scenes"
     ],
-    "story": "Delving into waterfall landscape photography, this work by Wayne Heim highlights painterly river scenes through waterfall landscape photography and waterfall landscape photography. A powerful statement in photography. © Wayne Heim",
+    "story": "Delving into waterfall landscape photography, this work by Wayne Heim highlights painterly river scenes through waterfall landscape photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4746,7 +4746,7 @@ export const galleryData = [
       "waterfall landscape photography",
       "the truth of a moment"
     ],
-    "story": "This image embodies the truth of a moment and waterfall landscape photography, captured by Wayne Heim in his signature style. It reflects painterly river scenes with a touch of painterly river scenes. © Wayne Heim",
+    "story": "This image embodies the truth of a moment and waterfall landscape photography, captured by Wayne Heim in his signature style. It reflects painterly river scenes. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4783,7 +4783,7 @@ export const galleryData = [
       "waterfall landscape photography",
       "the truth of a moment"
     ],
-    "story": "Wayne Heim's exploration of the truth of a moment comes alive in this piece, showcasing the truth of a moment and the truth of a moment. A testament to waterfall landscape photography in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of the truth of a moment comes alive in this piece, showcasing the truth of a moment. A testament to waterfall landscape photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4894,7 +4894,7 @@ export const galleryData = [
       "painterly river scenes",
       "waterfall landscape photography"
     ],
-    "story": "This image embodies waterfall landscape photography and waterfall landscape photography, captured by Wayne Heim in his signature style. It reflects painterly river scenes with a touch of waterfall landscape photography. © Wayne Heim",
+    "story": "This image embodies waterfall landscape photography, captured by Wayne Heim in his signature style. It reflects painterly river scenes with a touch of waterfall landscape photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4930,7 +4930,7 @@ export const galleryData = [
       "waterfall landscape photography",
       "the truth of a moment"
     ],
-    "story": "This image embodies waterfall landscape photography and waterfall landscape photography, captured by Wayne Heim in his signature style. It reflects the truth of a moment with a touch of waterfall landscape photography. © Wayne Heim",
+    "story": "This image embodies waterfall landscape photography, captured by Wayne Heim in his signature style. It reflects the truth of a moment with a touch of waterfall landscape photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -5041,7 +5041,7 @@ export const galleryData = [
       "painterly river scenes",
       "waterfall landscape photography"
     ],
-    "story": "Wayne Heim's exploration of waterfall landscape photography comes alive in this piece, showcasing the truth of a moment and the truth of a moment. A testament to painterly river scenes in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of waterfall landscape photography comes alive in this piece, showcasing the truth of a moment. A testament to painterly river scenes in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -5115,7 +5115,7 @@ export const galleryData = [
       "the truth of a moment",
       "painterly river scenes"
     ],
-    "story": "Delving into painterly river scenes, this work by Wayne Heim highlights painterly river scenes through the truth of a moment and the truth of a moment. A powerful statement in photography. © Wayne Heim",
+    "story": "Delving into painterly river scenes, this work by Wayne Heim highlights painterly river scenes through the truth of a moment. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -5769,7 +5769,7 @@ export const galleryData = [
       "painterly river scenes",
       "the truth of a moment"
     ],
-    "story": "This image embodies painterly river scenes and waterfall landscape photography, captured by Wayne Heim in his signature style. It reflects waterfall landscape photography with a touch of waterfall landscape photography. © Wayne Heim",
+    "story": "This image embodies painterly river scenes and waterfall landscape photography, captured by Wayne Heim in his signature style. It reflects waterfall landscape photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -5806,7 +5806,7 @@ export const galleryData = [
       "the truth of a moment",
       "painterly river scenes"
     ],
-    "story": "Delving into the truth of a moment, this work by Wayne Heim highlights the truth of a moment through painterly river scenes and painterly river scenes. A powerful statement in photography. © Wayne Heim",
+    "story": "Delving into the truth of a moment, this work by Wayne Heim highlights the truth of a moment through painterly river scenes. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -5880,7 +5880,7 @@ export const galleryData = [
       "waterfall landscape photography",
       "painterly river scenes"
     ],
-    "story": "Wayne Heim's exploration of the truth of a moment comes alive in this piece, showcasing the truth of a moment and the truth of a moment. A testament to painterly river scenes in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of the truth of a moment comes alive in this piece, showcasing the truth of a moment. A testament to painterly river scenes in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -6053,7 +6053,7 @@ export const galleryData = [
       "painterly river scenes",
       "the truth of a moment"
     ],
-    "story": "This image embodies painterly river scenes and waterfall landscape photography, captured by Wayne Heim in his signature style. It reflects the truth of a moment with a touch of the truth of a moment. © Wayne Heim",
+    "story": "This image embodies painterly river scenes and waterfall landscape photography, captured by Wayne Heim in his signature style. It reflects the truth of a moment. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -6530,7 +6530,7 @@ export const galleryData = [
   },
   {
     "id": "i-hpFHm3G",
-    "title": "Painterly River Scenes And Painterly River Scenes",
+    "title": "Painterly River Scenes",
     "description": "A waterfall landscape in Iceland becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
     "alt": "Berea Bridge = Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-hpFHm3G/A",
@@ -6565,7 +6565,7 @@ export const galleryData = [
   },
   {
     "id": "i-PV859RK",
-    "title": "The Truth Of A Moment - The Truth Of A Moment",
+    "title": "The Truth Of A Moment",
     "description": "A waterfall landscape in Vermont becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
     "alt": "Fine art landscape photography of Iceland in the Summer.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-PV859RK/A",
@@ -6620,7 +6620,7 @@ export const galleryData = [
       "the truth of a moment",
       "waterfall landscape photography"
     ],
-    "story": "Delving into painterly river scenes, this work by Wayne Heim highlights waterfall landscape photography through waterfall landscape photography and waterfall landscape photography. A powerful statement in photography. © Wayne Heim",
+    "story": "Delving into painterly river scenes, this work by Wayne Heim highlights waterfall landscape photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -7665,7 +7665,7 @@ export const galleryData = [
       "waterfall landscape photography",
       "the truth of a moment"
     ],
-    "story": "Wayne Heim's exploration of waterfall landscape photography comes alive in this piece, showcasing painterly river scenes and painterly river scenes. A testament to the truth of a moment in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of waterfall landscape photography comes alive in this piece, showcasing painterly river scenes. A testament to the truth of a moment in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],

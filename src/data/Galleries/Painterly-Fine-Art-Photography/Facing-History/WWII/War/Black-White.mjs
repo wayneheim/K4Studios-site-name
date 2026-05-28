@@ -1993,7 +1993,7 @@ export const galleryData = [
   },
   {
     "id": "i-Wd8cVgw",
-    "title": "War Zone Photography - War Zone Photography",
+    "title": "War Zone Photography",
     "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Approaching World War II imagery with documentary discipline, Wayne Heim's work prioritizes memory, presence, and lived consequence over reenactment theatrics. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-Wd8cVgw/A",
@@ -2005,7 +2005,7 @@ export const galleryData = [
       "Second World War",
       "WWII battlefield"
     ],
-    "story": "\"War Zone Photography - War Zone Photography\" — fine art photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the Facing History series by Wayne Heim.",
+    "story": "\"War Zone Photography\" — fine art photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the Facing History series by Wayne Heim.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2166,7 +2166,7 @@ export const galleryData = [
       "war zone photography",
       "WWII battlefield"
     ],
-    "story": "Wayne Heim's exploration of WWII battlefield comes alive in this piece, showcasing WWII battlefield and WWII battlefield. A testament to wwii artistic documentary in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of WWII battlefield comes alive in this piece, showcasing WWII battlefield. A testament to wwii artistic documentary in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2341,7 +2341,7 @@ export const galleryData = [
   },
   {
     "id": "i-VNXbdGD",
-    "title": "Wwii Artistic Documentary And Wwii Artistic Documentary",
+    "title": "Wwii Artistic Documentary",
     "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Approaching World War II imagery with documentary discipline, Wayne Heim's work prioritizes memory, presence, and lived consequence over reenactment theatrics. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-VNXbdGD/A",
@@ -2379,7 +2379,7 @@ export const galleryData = [
       "war zone photography",
       "battlefield moments"
     ],
-    "story": "Wayne Heim's exploration of WWII action art comes alive in this piece, showcasing battlefield moments and battlefield moments. A testament to wwii artistic documentary in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of WWII action art comes alive in this piece, showcasing battlefield moments. A testament to wwii artistic documentary in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2566,7 +2566,7 @@ export const galleryData = [
       "Second World War",
       "WWII battlefield"
     ],
-    "story": "Delving into Second World War, this work by Wayne Heim highlights WWII battlefield through WWII battlefield and WWII battlefield. A powerful statement in photography. © Wayne Heim",
+    "story": "Delving into Second World War, this work by Wayne Heim highlights WWII battlefield. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2700,7 +2700,7 @@ export const galleryData = [
       "wwii artistic documentary",
       "WWII action art"
     ],
-    "story": "Delving into WWII action art, this work by Wayne Heim highlights Second World War through WWII action art and WWII action art. A powerful statement in photography. © Wayne Heim",
+    "story": "Delving into WWII action art, this work by Wayne Heim highlights Second World War through WWII action art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2754,7 +2754,7 @@ export const galleryData = [
       "war zone photography",
       "battlefield moments"
     ],
-    "story": "Wayne Heim's exploration of WWII action art comes alive in this piece, showcasing WWII action art and WWII action art. A testament to WWII battlefield in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of WWII action art comes alive in this piece, showcasing WWII action art. A testament to WWII battlefield in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3379,7 +3379,7 @@ export const galleryData = [
       "Second World War",
       "battlefield moments"
     ],
-    "story": "This image embodies battlefield moments and battlefield moments, captured by Wayne Heim in his signature style. It reflects WWII action art with a touch of WWII action art. © Wayne Heim",
+    "story": "This image embodies battlefield moments, captured by Wayne Heim in his signature style. It reflects WWII action art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3517,7 +3517,7 @@ export const galleryData = [
       "Second World War",
       "WWII battlefield"
     ],
-    "story": "Wayne Heim's exploration of Second World War comes alive in this piece, showcasing WWII battlefield and WWII battlefield. A testament to war zone photography in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of Second World War comes alive in this piece, showcasing WWII battlefield. A testament to war zone photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],

@@ -9,11 +9,14 @@ const BUY_LINK_SMUGMUG_HOST = "wayne-heim.smugmug.com";
 const STANDARD_SERIES = ["sketch", "foundation", "chronicle", "legend"];
 const ENGRAINED_PATH = "/Other/K4-Select-Series/Engrained/Engrained-Series";
 const K4_ORGANIZATION_ID = "https://www.k4studios.com/#organization";
-const SKETCH_SERIES_SHIPPING_USD = "6.99";
+const SKETCH_SERIES_SHIPPING_USD = "15.00";
+const SKETCH_SERIES_SHIPPING_SERVICE = "SmugMug Standard Shipping";
 
 export function getSketchOfferShippingDetails() {
   return {
     "@type": "OfferShippingDetails",
+    name: SKETCH_SERIES_SHIPPING_SERVICE,
+    shippingLabel: SKETCH_SERIES_SHIPPING_SERVICE,
     shippingRate: {
       "@type": "MonetaryAmount",
       value: SKETCH_SERIES_SHIPPING_USD,

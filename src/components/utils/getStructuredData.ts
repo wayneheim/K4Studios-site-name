@@ -1,6 +1,7 @@
 // src/components/utils/getStructuredData.ts
 import { getSemanticImageUrl, USE_SEMANTIC_IMAGE_URLS } from "../../utils/imageProxy.js";
 import { themes } from "../../data/themes/themes.mjs";
+import { getSketchOfferShippingDetails } from "../../data/commerceResolver.js";
 
 // Helper to convert image to proxy URL (never expose SmugMug URLs in structured data)
 function getProxyUrl(img: any, size: string = 'l', sourcePrefix: string | null = null): string {
@@ -142,9 +143,23 @@ const K4_CREATOR_PERSON = {
 };
 const K4_CREATOR_REF = K4_CREATOR_PERSON;
 const SKETCH_SERIES_PRICE = 25;
-const SKETCH_SERIES_SHIPPING_USD = "6.99";
 const SKETCH_SERIES_DESCRIPTION =
   "Entry-level Sketch Series fine art print by Wayne Heim, offered as an accessible collector print from K4 Studios.";
+
+function buildSketchOfferNode(pageUrl: string, price = SKETCH_SERIES_PRICE) {
+  return {
+    "@type": "Offer",
+    "@id": `${pageUrl}#offer-sketch`,
+    name: "Sketch Series Print",
+    url: pageUrl,
+    price,
+    priceCurrency: "USD",
+    availability: "https://schema.org/InStock",
+    itemCondition: "https://schema.org/NewCondition",
+    seller: { "@id": K4_ORGANIZATION_ID },
+    shippingDetails: getSketchOfferShippingDetails(),
+  };
+}
 
 function getSketchTier(data: any) {
   return Array.isArray(data?.commerce?.tiers)
@@ -190,48 +205,15 @@ function buildSketchProductNode(data: any, imageUrl: string) {
     image: imageUrl || undefined,
     description: data.sketchDescription || SKETCH_SERIES_DESCRIPTION,
     sku: `${data.id}-sketch`,
-    brand: { "@id": K4_ORGANIZATION_ID },
+    brand: {
+      "@type": "Organization",
+      "@id": K4_ORGANIZATION_ID,
+      name: "K4 Studios",
+    },
     category: "Fine Art Print",
     isRelatedTo: { "@id": `${pageUrl}#image` },
     mainEntityOfPage: { "@type": "WebPage", "@id": pageUrl },
-    offers: {
-      "@type": "Offer",
-      "@id": `${pageUrl}#offer-sketch`,
-      name: "Sketch Series Print",
-      url: pageUrl,
-      price,
-      priceCurrency: "USD",
-      availability: "https://schema.org/InStock",
-      itemCondition: "https://schema.org/NewCondition",
-      seller: { "@id": K4_ORGANIZATION_ID },
-      shippingDetails: {
-        "@type": "OfferShippingDetails",
-        shippingRate: {
-          "@type": "MonetaryAmount",
-          value: SKETCH_SERIES_SHIPPING_USD,
-          currency: "USD",
-        },
-        shippingDestination: {
-          "@type": "DefinedRegion",
-          addressCountry: "US",
-        },
-        deliveryTime: {
-          "@type": "ShippingDeliveryTime",
-          handlingTime: {
-            "@type": "QuantitativeValue",
-            minValue: 0,
-            maxValue: 2,
-            unitCode: "DAY",
-          },
-          transitTime: {
-            "@type": "QuantitativeValue",
-            minValue: 3,
-            maxValue: 10,
-            unitCode: "DAY",
-          },
-        },
-      },
-    },
+    offers: buildSketchOfferNode(pageUrl, price),
   };
 }
 
@@ -736,6 +718,12 @@ export function getStructuredData({
       ...(data.keywords?.length ? { keywords: sanitizeKeywords(data.keywords) } : {}),
     };
 
+    if (data.about?.length) articleObj.about = data.about;
+    if (data.mentions?.length) articleObj.mentions = data.mentions;
+    if (data.citation) articleObj.citation = data.citation;
+    if (data.subjectOf) articleObj.subjectOf = data.subjectOf;
+    if (data.isPartOf) articleObj.isPartOf = data.isPartOf;
+
     // Add DefinedTerm schema if this is a definition page
     if (data.definedTerm) {
       articleObj.about = {
@@ -848,12 +836,14 @@ export function getCollectionImageGalleryGraph({
   description,
   images = [],
   basePath,
+  includeProductReferences = false,
 }: {
   pageUrl: string;
   name: string;
   description?: string;
-  images?: Array<{ id?: string; title?: string; description?: string; alt?: string }>;
+  images?: Array<{ id?: string; title?: string; name?: string; description?: string; alt?: string; noSketch?: boolean; filenameSlug?: string }>;
   basePath: string;
+  includeProductReferences?: boolean;
 }): any[] {
   const normalizedPageUrl = normalizeK4Url(pageUrl);
   const listId = `${normalizedPageUrl}#itemlist`;
@@ -865,18 +855,41 @@ export function getCollectionImageGalleryGraph({
     .map((image, index) => {
       const imagePageUrl = normalizeK4Url(`${normalizedBasePath}/${image.id}`);
       const imageName = image.title || image.id;
+      const imageUrl = getSemanticImageUrl(
+        { ...image, galleryUrl: normalizedBasePath },
+        { galleryPath: normalizedBasePath },
+        "l",
+        { absolute: true }
+      );
+      const item = includeProductReferences && image.noSketch !== true
+        ? {
+            "@type": "Product",
+            "@id": `${imagePageUrl}#product-sketch`,
+            name: `${imageName} - Sketch Series Print`,
+            url: imagePageUrl,
+            image: imageUrl || undefined,
+            description: image.description || image.alt || SKETCH_SERIES_DESCRIPTION,
+            sku: `${image.id}-sketch`,
+            brand: {
+              "@type": "Organization",
+              "@id": K4_ORGANIZATION_ID,
+              name: "K4 Studios",
+            },
+            offers: buildSketchOfferNode(imagePageUrl),
+          }
+        : {
+            "@type": "ImageObject",
+            "@id": `${imagePageUrl}#image`,
+            url: imagePageUrl,
+            name: imageName,
+            ...(image.description || image.alt ? { description: image.description || image.alt } : {}),
+          };
 
       return {
         "@type": "ListItem",
         position: index + 1,
         url: imagePageUrl,
-        item: {
-          "@type": "ImageObject",
-          "@id": `${imagePageUrl}#image`,
-          url: imagePageUrl,
-          name: imageName,
-          ...(image.description || image.alt ? { description: image.description || image.alt } : {}),
-        },
+        item,
       };
     });
 

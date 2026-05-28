@@ -1840,7 +1840,7 @@ export const galleryData = [
  "western cowboy art",
  "cowboy art"
  ],
- "story": "This image embodies historic western prints and cowboy artwork, captured by Wayne Heim in his signature style. It reflects western cowboy art with a touch of cowboy art. © Wayne Heim",
+ "story": "This image embodies historic western prints and cowboy artwork, captured by Wayne Heim in his signature style. It reflects western cowboy art. © Wayne Heim",
  "notes": "",
  "rating": 0,
  "galleries": [],

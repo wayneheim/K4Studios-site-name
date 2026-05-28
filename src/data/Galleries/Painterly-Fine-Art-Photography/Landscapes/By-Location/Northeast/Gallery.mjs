@@ -56,7 +56,7 @@ export const galleryData = [
   },
   {
     "id": "i-7LZhFkc",
-    "title": "See Beauty In Simplicity - See Beauty In Simplicity",
+    "title": "See Beauty In Simplicity",
     "description": "A painterly fine art landscape photograph set in the forests of New England, where a shallow stream flows over layered stone beneath autumn foliage. Rendered with deliberate restraint, the image favors texture, tonal harmony, and quiet balance over dramatic display.\n\nLight and composition guide the eye gently through the frame, allowing the scene to unfold slowly. Rather than documenting place, the work treats landscape as emotional geography—inviting reflection, patience, and stillness. Part of the New England painterly landscape photography series. © Wayne Heim",
     "alt": "Painterly forest stream flowing over stone in autumn New England, emphasizing quiet simplicity and natural stillness",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-7LZhFkc/A",

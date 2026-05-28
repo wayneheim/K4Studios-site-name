@@ -42,7 +42,7 @@ export const galleryData = [
       "steam engine art",
       "steam engine photography"
     ],
-    "story": "This image embodies vintage train photography for man cave and vintage train photography for man cave, captured by Wayne Heim in his signature style. It reflects vintage train photography for man cave with a touch of steam engine wall art for collectors. © Wayne Heim",
+    "story": "This image embodies vintage train photography for man cave, captured by Wayne Heim in his signature style. It reflects vintage train photography for man cave with a touch of steam engine wall art for collectors. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],

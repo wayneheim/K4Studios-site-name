@@ -623,7 +623,7 @@ export const galleryData = [
       "classic sunset scenery",
       "sunset photography"
     ],
-    "story": "This image embodies classic sunset scenery and classic sunset scenery, captured by Wayne Heim in his signature style. It reflects classic sunset scenery with a touch of classic sunset scenery. ",
+    "story": "This image embodies classic sunset scenery, captured by Wayne Heim in his signature style. It reflects classic sunset scenery.",
     "notes": "",
     "rating": 4,
     "galleries": [],
@@ -977,7 +977,7 @@ export const galleryData = [
   },
   {
     "id": "i-35gFhbt",
-    "title": "Painterly Mountain Art And Painterly Mountain Art",
+    "title": "Painterly Mountain Art",
     "description": "Painterly mountain art comes through in the softened atmosphere, layered terrain, and quiet scale of this landscape photograph. This traditional fine art image creates mountain wall art rooted in mood, landform, and the visual memory of place.",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-35gFhbt/A",
@@ -993,7 +993,7 @@ export const galleryData = [
       "painterly mountain art",
       "mountain landscape photography"
     ],
-    "story": "Wayne Heim's exploration of mountain landscape photography comes alive in this piece, showcasing mountain landscape photography and mountain landscape photography. A testament to mountain landscape photography in fine art. ",
+    "story": "Wayne Heim's exploration of mountain landscape photography comes alive in this piece, showcasing mountain landscape photography. A testament to mountain landscape photography in fine art.",
     "notes": "",
     "rating": 3,
     "galleries": [],

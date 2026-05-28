@@ -681,7 +681,7 @@ export async function getV2CanonicalSummary(env, { windowKey = 'today', excludeI
     env.DB.prepare(
       `SELECT image_id,
               MIN(page_path) AS page_path,
-              COUNT(*) AS views,
+              SUM(CASE WHEN event_family = 'image_view' THEN 1 ELSE 0 END) AS views,
               SUM(CASE WHEN event_family = 'buy_click' THEN 1 ELSE 0 END) AS buy_clicks
        FROM canonical_events_v2
        WHERE ${windowClause}
@@ -691,10 +691,12 @@ export async function getV2CanonicalSummary(env, { windowKey = 'today', excludeI
          AND session_id NOT IN (${suspiciousInternalShallowSessionSubquery})
         AND session_id NOT IN (${suspiciousDatacenterSessionSubquery})
          AND session_id NOT IN (${internalTestSessionSubquery})
+         AND ${canonicalViewerPredicate}
          ${viewerExcludedSessionSubquery ? `AND session_id NOT IN (${viewerExcludedSessionSubquery})` : ''}
          AND image_id IS NOT NULL
          AND (page_path IS NULL OR page_path LIKE '%/i-%' OR image_id LIKE 'i-%')
        GROUP BY image_id
+       HAVING views > 0 OR buy_clicks > 0
        ORDER BY buy_clicks DESC, views DESC, image_id ASC
        ${topImageLimitClause}`
     ).all(),

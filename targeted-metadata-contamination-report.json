@@ -1,0 +1,1170 @@
+{
+  "scannedFiles": 90,
+  "affectedFiles": 26,
+  "candidateFields": 275,
+  "totals": {
+    "title": 40,
+    "description": 9,
+    "alt": 0,
+    "story": 226
+  },
+  "severityCounts": {
+    "Severe": 8,
+    "Moderate": 7,
+    "Minor": 11
+  },
+  "report": [
+    {
+      "file": "src\\data\\Galleries\\Fine-Art-Photography\\Landscapes\\By-Location\\Midwest\\Gallery.mjs",
+      "fieldCounts": {
+        "title": 5,
+        "description": 0,
+        "alt": 0,
+        "story": 37
+      },
+      "total": 42,
+      "severity": "Severe",
+      "examples": [
+        {
+          "field": "story",
+          "path": "galleryData.1.story",
+          "matches": [
+            "midwest landscape photography and midwest landscape photography"
+          ],
+          "before": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography and midwest landscape photography. A testament to midwest landscape photography in fine art. © Wayne Heim",
+          "after": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography. A testament to midwest landscape photography in fine art. © Wayne Heim"
+        },
+        {
+          "field": "story",
+          "path": "galleryData.10.story",
+          "matches": [
+            "midwest landscape photography and midwest landscape photography"
+          ],
+          "before": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography through midwest landscape photography and midwest landscape photography. A powerful statement in photography. © Wayne Heim",
+          "after": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography. A powerful statement in photography. © Wayne Heim"
+        },
+        {
+          "field": "story",
+          "path": "galleryData.11.story",
+          "matches": [
+            "midwest landscape photography and midwest landscape photography"
+          ],
+          "before": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography through midwest landscape photography and midwest landscape photography. A powerful statement in photography. © Wayne Heim",
+          "after": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography. A powerful statement in photography. © Wayne Heim"
+        },
+        {
+          "field": "title",
+          "path": "galleryData.12.title",
+          "matches": [
+            "Midwest Landscape Photography - Midwest Landscape Photography"
+          ],
+          "before": "Midwest Landscape Photography - Midwest Landscape Photography",
+          "after": "Midwest Landscape Photography"
+        },
+        {
+          "field": "story",
+          "path": "galleryData.12.story",
+          "matches": [
+            "midwest landscape photography and midwest landscape photography",
+            "midwest landscape photography with a touch of midwest landscape photography"
+          ],
+          "before": "This image embodies midwest landscape photography and midwest landscape photography, captured by Wayne Heim in his signature style. It reflects midwest landscape photography with a touch of midwest landscape photography. © Wayne Heim",
+          "after": "This image embodies midwest landscape photography, captured by Wayne Heim in his signature style. It reflects midwest landscape photography. © Wayne Heim"
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Fine-Art-Photography\\Miscellaneous\\Reenactments.mjs",
+      "fieldCounts": {
+        "title": 4,
+        "description": 0,
+        "alt": 0,
+        "story": 35
+      },
+      "total": 39,
+      "severity": "Severe",
+      "examples": [
+        {
+          "field": "story",
+          "path": "galleryData.1.story",
+          "matches": [
+            "living history art with a touch of living history art"
+          ],
+          "before": "This image embodies living history art and reenactment portraits, captured by Wayne Heim in his signature style. It reflects living history art with a touch of living history art. © Wayne Heim",
+          "after": "This image embodies living history art and reenactment portraits, captured by Wayne Heim in his signature style. It reflects living history art. © Wayne Heim"
+        },
+        {
+          "field": "story",
+          "path": "galleryData.28.story",
+          "matches": [
+            "historic reenactor prints and historic reenactor prints"
+          ],
+          "before": "Wayne Heim's exploration of historic reenactor prints comes alive in this piece, showcasing historic reenactor prints and historic reenactor prints. A testament to period costume photography in fine art. © Wayne Heim",
+          "after": "Wayne Heim's exploration of historic reenactor prints comes alive in this piece, showcasing historic reenactor prints. A testament to period costume photography in fine art. © Wayne Heim"
+        },
+        {
+          "field": "story",
+          "path": "galleryData.38.story",
+          "matches": [
+            "period costume photography and period costume photography"
+          ],
+          "before": "Wayne Heim's exploration of reenactor photography comes alive in this piece, showcasing period costume photography and period costume photography. A testament to reenactor photography in fine art. © Wayne Heim",
+          "after": "Wayne Heim's exploration of reenactor photography comes alive in this piece, showcasing period costume photography. A testament to reenactor photography in fine art. © Wayne Heim"
+        },
+        {
+          "field": "story",
+          "path": "galleryData.46.story",
+          "matches": [
+            "reenactment portraits with a touch of reenactment portraits"
+          ],
+          "before": "This image embodies living history art and historic reenactor prints, captured by Wayne Heim in his signature style. It reflects reenactment portraits with a touch of reenactment portraits. © Wayne Heim",
+          "after": "This image embodies living history art and historic reenactor prints, captured by Wayne Heim in his signature style. It reflects reenactment portraits. © Wayne Heim"
+        },
+        {
+          "field": "story",
+          "path": "galleryData.48.story",
+          "matches": [
+            "reenactment portraits with a touch of reenactment portraits"
+          ],
+          "before": "This image embodies reenactment portraits and historic reenactor prints, captured by Wayne Heim in his signature style. It reflects reenactment portraits with a touch of reenactment portraits. © Wayne Heim",
+          "after": "This image embodies reenactment portraits and historic reenactor prints, captured by Wayne Heim in his signature style. It reflects reenactment portraits. © Wayne Heim"
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Painterly-Fine-Art-Photography\\Facing-History\\WWII\\Portraits\\Black-White.mjs",
+      "fieldCounts": {
+        "title": 3,
+        "description": 0,
+        "alt": 0,
+        "story": 26
+      },
+      "total": 29,
+      "severity": "Severe",
+      "examples": [
+        {
+          "field": "story",
+          "path": "galleryData.64.story",
+          "matches": [
+            "heroic portraits and heroic portraits"
+          ],
+          "before": "Wayne Heim's exploration of wartime portraits comes alive in this piece, showcasing heroic portraits and heroic portraits. A testament to wartime portraits in fine art. © Wayne Heim",
+          "after": "Wayne Heim's exploration of wartime portraits comes alive in this piece, showcasing heroic portraits. A testament to wartime portraits in fine art. © Wayne Heim"
+        },
+        {
+          "field": "story",
+          "path": "galleryData.66.story",
+          "matches": [
+            "wwii photography and wwii photography"
+          ],
+          "before": "Wayne Heim's exploration of greatest generation photos comes alive in this piece, showcasing wwii photography and wwii photography. A testament to wwii photography in fine art. © Wayne Heim",
+          "after": "Wayne Heim's exploration of greatest generation photos comes alive in this piece, showcasing wwii photography. A testament to wwii photography in fine art. © Wayne Heim"
+        },
+        {
+          "field": "story",
+          "path": "galleryData.69.story",
+          "matches": [
+            "wartime portraits and wartime portraits"
+          ],
+          "before": "Delving into greatest generation photos, this work by Wayne Heim highlights wartime portraits through wartime portraits and wartime portraits. A powerful statement in photography. © Wayne Heim",
+          "after": "Delving into greatest generation photos, this work by Wayne Heim highlights wartime portraits. A powerful statement in photography. © Wayne Heim"
+        },
+        {
+          "field": "story",
+          "path": "galleryData.73.story",
+          "matches": [
+            "wwii photography and wwii photography"
+          ],
+          "before": "Delving into heroic portraits, this work by Wayne Heim highlights wartime portraits through wwii photography and wwii photography. A powerful statement in photography. © Wayne Heim",
+          "after": "Delving into heroic portraits, this work by Wayne Heim highlights wartime portraits through wwii photography. A powerful statement in photography. © Wayne Heim"
+        },
+        {
+          "field": "title",
+          "path": "galleryData.80.title",
+          "matches": [
+            "Wwii Photography - Wwii Photography"
+          ],
+          "before": "Wwii Photography - Wwii Photography",
+          "after": "Wwii Photography"
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Painterly-Fine-Art-Photography\\Facing-History\\WWII\\War\\Color.mjs",
+      "fieldCounts": {
+        "title": 8,
+        "description": 3,
+        "alt": 0,
+        "story": 17
+      },
+      "total": 28,
+      "severity": "Severe",
+      "examples": [
+        {
+          "field": "story",
+          "path": "galleryData.60.story",
+          "matches": [
+            "WWII battlefield and WWII battlefield"
+          ],
+          "before": "Wayne Heim's exploration of WWII battlefield comes alive in this piece, showcasing WWII battlefield and WWII battlefield. A testament to battlefield moments in fine art. © Wayne Heim",
+          "after": "Wayne Heim's exploration of WWII battlefield comes alive in this piece, showcasing WWII battlefield. A testament to battlefield moments in fine art. © Wayne Heim"
+        },
+        {
+          "field": "description",
+          "path": "galleryData.61.description",
+          "matches": [
+            "WWII action art and WWII action art"
+          ],
+          "before": "Delve into battlefield moments via this battlefield moments by Wayne Heim. Highlighting Second World War through WWII action art and WWII action art, it's great for collectors interested in battlefield moments. © Wayne Heim",
+          "after": "Delve into battlefield moments via this battlefield moments by Wayne Heim. Highlighting Second World War through WWII action art, it's great for collectors interested in battlefield moments. © Wayne Heim"
+        },
+        {
+          "field": "description",
+          "path": "galleryData.71.description",
+          "matches": [
+            "WWII battlefield and WWII battlefield"
+          ],
+          "before": "Delve into battlefield moments via this Second World War by Wayne Heim. Highlighting WWII battlefield through WWII battlefield and WWII battlefield, it's great for collectors interested in battlefield moments. © Wayne Heim",
+          "after": "Delve into battlefield moments via this Second World War by Wayne Heim. Highlighting WWII battlefield, it's great for collectors interested in battlefield moments. © Wayne Heim"
+        },
+        {
+          "field": "story",
+          "path": "galleryData.89.story",
+          "matches": [
+            "WWII battlefield and WWII battlefield"
+          ],
+          "before": "This image embodies WWII battlefield and WWII battlefield, captured by Wayne Heim in his signature style. It reflects WWII action art with a touch of war zone photography. © Wayne Heim",
+          "after": "This image embodies WWII battlefield, captured by Wayne Heim in his signature style. It reflects WWII action art with a touch of war zone photography. © Wayne Heim"
+        },
+        {
+          "field": "description",
+          "path": "galleryData.90.description",
+          "matches": [
+            "WWII battlefield and WWII battlefield"
+          ],
+          "before": "Delve into battlefield moments via this war zone photography by Wayne Heim. Highlighting Second World War through WWII battlefield and WWII battlefield, it's great for collectors interested in battlefield moments. © Wayne Heim",
+          "after": "Delve into battlefield moments via this war zone photography by Wayne Heim. Highlighting Second World War through WWII battlefield, it's great for collectors interested in battlefield moments. © Wayne Heim"
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Fine-Art-Photography\\Landscapes\\By-Location\\Northeast\\Gallery.mjs",
+      "fieldCounts": {
+        "title": 3,
+        "description": 0,
+        "alt": 0,
+        "story": 24
+      },
+      "total": 27,
+      "severity": "Severe",
+      "examples": [
+        {
+          "field": "story",
+          "path": "galleryData.11.story",
+          "matches": [
+            "autumn in new england and autumn in new england"
+          ],
+          "before": "This image embodies autumn in new england and autumn in new england, captured by Wayne Heim in his signature style. It reflects The Northeast with a touch of see beauty in simplicity. © Wayne Heim",
+          "after": "This image embodies autumn in new england, captured by Wayne Heim in his signature style. It reflects The Northeast with a touch of see beauty in simplicity. © Wayne Heim"
+        },
+        {
+          "field": "story",
+          "path": "galleryData.13.story",
+          "matches": [
+            "The Northeast and The Northeast"
+          ],
+          "before": "This image embodies The Northeast and The Northeast, captured by Wayne Heim in his signature style. It reflects The Northeast with a touch of autumn in new england. © Wayne Heim",
+          "after": "This image embodies The Northeast, captured by Wayne Heim in his signature style. It reflects The Northeast with a touch of autumn in new england. © Wayne Heim"
+        },
+        {
+          "field": "story",
+          "path": "galleryData.15.story",
+          "matches": [
+            "see beauty in simplicity and see beauty in simplicity"
+          ],
+          "before": "Delving into autumn in new england, this work by Wayne Heim highlights see beauty in simplicity through see beauty in simplicity and see beauty in simplicity. A powerful statement in photography. © Wayne Heim",
+          "after": "Delving into autumn in new england, this work by Wayne Heim highlights see beauty in simplicity. A powerful statement in photography. © Wayne Heim"
+        },
+        {
+          "field": "story",
+          "path": "galleryData.22.story",
+          "matches": [
+            "The Northeast and The Northeast"
+          ],
+          "before": "Wayne Heim's exploration of see beauty in simplicity comes alive in this piece, showcasing The Northeast and The Northeast. A testament to autumn in new england in fine art. © Wayne Heim",
+          "after": "Wayne Heim's exploration of see beauty in simplicity comes alive in this piece, showcasing The Northeast. A testament to autumn in new england in fine art. © Wayne Heim"
+        },
+        {
+          "field": "story",
+          "path": "galleryData.23.story",
+          "matches": [
+            "see beauty in simplicity and see beauty in simplicity"
+          ],
+          "before": "This image embodies see beauty in simplicity and see beauty in simplicity, captured by Wayne Heim in his signature style. It reflects autumn in new england with a touch of see beauty in simplicity. © Wayne Heim",
+          "after": "This image embodies see beauty in simplicity, captured by Wayne Heim in his signature style. It reflects autumn in new england with a touch of see beauty in simplicity. © Wayne Heim"
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Fine-Art-Photography\\Portraits\\Reenactors.mjs",
+      "fieldCounts": {
+        "title": 3,
+        "description": 4,
+        "alt": 0,
+        "story": 20
+      },
+      "total": 27,
+      "severity": "Severe",
+      "examples": [
+        {
+          "field": "story",
+          "path": "galleryData.1.story",
+          "matches": [
+            "living history art with a touch of living history art"
+          ],
+          "before": "This image embodies historic reenactor prints and living history art, captured by Wayne Heim in his signature style. It reflects living history art with a touch of living history art. © Wayne Heim",
+          "after": "This image embodies historic reenactor prints and living history art, captured by Wayne Heim in his signature style. It reflects living history art. © Wayne Heim"
+        },
+        {
+          "field": "story",
+          "path": "galleryData.34.story",
+          "matches": [
+            "historic reenactor prints and historic reenactor prints"
+          ],
+          "before": "Wayne Heim's exploration of reenactment portraits comes alive in this piece, showcasing historic reenactor prints and historic reenactor prints. A testament to historic reenactor prints in fine art. © Wayne Heim",
+          "after": "Wayne Heim's exploration of reenactment portraits comes alive in this piece, showcasing historic reenactor prints. A testament to historic reenactor prints in fine art. © Wayne Heim"
+        },
+        {
+          "field": "story",
+          "path": "galleryData.42.story",
+          "matches": [
+            "historic reenactor prints and historic reenactor prints"
+          ],
+          "before": "Wayne Heim's exploration of living history art comes alive in this piece, showcasing historic reenactor prints and historic reenactor prints. A testament to historic reenactor prints in fine art. © Wayne Heim",
+          "after": "Wayne Heim's exploration of living history art comes alive in this piece, showcasing historic reenactor prints. A testament to historic reenactor prints in fine art. © Wayne Heim"
+        },
+        {
+          "field": "story",
+          "path": "galleryData.44.story",
+          "matches": [
+            "reenactor photography and reenactor photography"
+          ],
+          "before": "This image embodies reenactor photography and reenactor photography, captured by Wayne Heim in his signature style. It reflects reenactment portraits with a touch of reenactor photography. © Wayne Heim",
+          "after": "This image embodies reenactor photography, captured by Wayne Heim in his signature style. It reflects reenactment portraits with a touch of reenactor photography. © Wayne Heim"
+        },
+        {
+          "field": "story",
+          "path": "galleryData.47.story",
+          "matches": [
+            "reenactment portraits and reenactment portraits"
+          ],
+          "before": "This image embodies reenactment portraits and reenactment portraits, captured by Wayne Heim in his signature style. It reflects reenactor photography with a touch of historic reenactor prints. © Wayne Heim",
+          "after": "This image embodies reenactment portraits, captured by Wayne Heim in his signature style. It reflects reenactor photography with a touch of historic reenactor prints. © Wayne Heim"
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Fine-Art-Photography\\Landscapes\\By-Theme\\Water\\Water.mjs",
+      "fieldCounts": {
+        "title": 3,
+        "description": 0,
+        "alt": 0,
+        "story": 16
+      },
+      "total": 19,
+      "severity": "Severe",
+      "examples": [
+        {
+          "field": "story",
+          "path": "galleryData.4.story",
+          "matches": [
+            "painterly river scenes with a touch of painterly river scenes"
+          ],
+          "before": "This image embodies the truth of a moment and painterly river scenes, captured by Wayne Heim in his signature style. It reflects painterly river scenes with a touch of painterly river scenes. ",
+          "after": "This image embodies the truth of a moment and painterly river scenes, captured by Wayne Heim in his signature style. It reflects painterly river scenes."
+        },
+        {
+          "field": "story",
+          "path": "galleryData.104.story",
+          "matches": [
+            "painterly river scenes with a touch of painterly river scenes"
+          ],
+          "before": "This image embodies waterfall landscape photography and the truth of a moment, captured by Wayne Heim in his signature style. It reflects painterly river scenes with a touch of painterly river scenes. © Wayne Heim",
+          "after": "This image embodies waterfall landscape photography and the truth of a moment, captured by Wayne Heim in his signature style. It reflects painterly river scenes. © Wayne Heim"
+        },
+        {
+          "field": "story",
+          "path": "galleryData.106.story",
+          "matches": [
+            "painterly river scenes and painterly river scenes"
+          ],
+          "before": "Wayne Heim's exploration of waterfall landscape photography comes alive in this piece, showcasing painterly river scenes and painterly river scenes. A testament to the truth of a moment in fine art. © Wayne Heim",
+          "after": "Wayne Heim's exploration of waterfall landscape photography comes alive in this piece, showcasing painterly river scenes. A testament to the truth of a moment in fine art. © Wayne Heim"
+        },
+        {
+          "field": "title",
+          "path": "galleryData.108.title",
+          "matches": [
+            "Waterfall Landscape Photography And Waterfall Landscape Photography"
+          ],
+          "before": "Waterfall Landscape Photography And Waterfall Landscape Photography",
+          "after": "Waterfall Landscape Photography"
+        },
+        {
+          "field": "story",
+          "path": "galleryData.146.story",
+          "matches": [
+            "waterfall landscape photography and waterfall landscape photography"
+          ],
+          "before": "Delving into waterfall landscape photography, this work by Wayne Heim highlights painterly river scenes through waterfall landscape photography and waterfall landscape photography. A powerful statement in photography. © Wayne Heim",
+          "after": "Delving into waterfall landscape photography, this work by Wayne Heim highlights painterly river scenes through waterfall landscape photography. A powerful statement in photography. © Wayne Heim"
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Painterly-Fine-Art-Photography\\Facing-History\\WWII\\War\\Black-White.mjs",
+      "fieldCounts": {
+        "title": 2,
+        "description": 0,
+        "alt": 0,
+        "story": 8
+      },
+      "total": 10,
+      "severity": "Severe",
+      "examples": [
+        {
+          "field": "title",
+          "path": "galleryData.60.title",
+          "matches": [
+            "War Zone Photography - War Zone Photography"
+          ],
+          "before": "War Zone Photography - War Zone Photography",
+          "after": "War Zone Photography"
+        },
+        {
+          "field": "story",
+          "path": "galleryData.60.story",
+          "matches": [
+            "War Zone Photography - War Zone Photography"
+          ],
+          "before": "\"War Zone Photography - War Zone Photography\" — fine art photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the Facing History series by Wayne Heim.",
+          "after": "\"War Zone Photography\" — fine art photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the Facing History series by Wayne Heim."
+        },
+        {
+          "field": "story",
+          "path": "galleryData.66.story",
+          "matches": [
+            "WWII battlefield and WWII battlefield"
+          ],
+          "before": "Wayne Heim's exploration of WWII battlefield comes alive in this piece, showcasing WWII battlefield and WWII battlefield. A testament to wwii artistic documentary in fine art. © Wayne Heim",
+          "after": "Wayne Heim's exploration of WWII battlefield comes alive in this piece, showcasing WWII battlefield. A testament to wwii artistic documentary in fine art. © Wayne Heim"
+        },
+        {
+          "field": "title",
+          "path": "galleryData.73.title",
+          "matches": [
+            "Wwii Artistic Documentary And Wwii Artistic Documentary"
+          ],
+          "before": "Wwii Artistic Documentary And Wwii Artistic Documentary",
+          "after": "Wwii Artistic Documentary"
+        },
+        {
+          "field": "story",
+          "path": "galleryData.74.story",
+          "matches": [
+            "battlefield moments and battlefield moments"
+          ],
+          "before": "Wayne Heim's exploration of WWII action art comes alive in this piece, showcasing battlefield moments and battlefield moments. A testament to wwii artistic documentary in fine art. © Wayne Heim",
+          "after": "Wayne Heim's exploration of WWII action art comes alive in this piece, showcasing battlefield moments. A testament to wwii artistic documentary in fine art. © Wayne Heim"
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Fine-Art-Photography\\Landscapes\\By-Location\\International\\Iceland.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 0,
+        "alt": 0,
+        "story": 6
+      },
+      "total": 6,
+      "severity": "Moderate",
+      "examples": [
+        {
+          "field": "story",
+          "path": "galleryData.10.story",
+          "matches": [
+            "fantastic places with a touch of fantastic places"
+          ],
+          "before": "This image embodies painterly european landscapes and international landscape photography, captured by Wayne Heim in his signature style in Iceland. It reflects fantastic places with a touch of fantastic places. © Wayne Heim",
+          "after": "This image embodies painterly european landscapes and international landscape photography, captured by Wayne Heim in his signature style in Iceland. It reflects fantastic places. © Wayne Heim"
+        },
+        {
+          "field": "story",
+          "path": "galleryData.33.story",
+          "matches": [
+            "painterly european landscapes and painterly european landscapes"
+          ],
+          "before": "Wayne Heim's exploration of International – Across Borders comes alive in this piece, showcasing painterly european landscapes and painterly european landscapes from Iceland. A testament to painterly european landscapes in fine art. © Wayne Heim",
+          "after": "Wayne Heim's exploration of International – Across Borders comes alive in this piece, showcasing painterly european landscapes from Iceland. A testament to painterly european landscapes in fine art. © Wayne Heim"
+        },
+        {
+          "field": "story",
+          "path": "galleryData.35.story",
+          "matches": [
+            "painterly european landscapes and painterly european landscapes"
+          ],
+          "before": "This image embodies painterly european landscapes and painterly european landscapes, captured by Wayne Heim in his signature style in Iceland. It reflects international landscape photography with a touch of International – Across Borders. © Wayne Heim",
+          "after": "This image embodies painterly european landscapes, captured by Wayne Heim in his signature style in Iceland. It reflects international landscape photography with a touch of International – Across Borders. © Wayne Heim"
+        },
+        {
+          "field": "story",
+          "path": "galleryData.42.story",
+          "matches": [
+            "fantastic places and fantastic places"
+          ],
+          "before": "Wayne Heim's exploration of International – Across Borders comes alive in this piece, showcasing fantastic places and fantastic places from Iceland. A testament to fantastic places in fine art. © Wayne Heim",
+          "after": "Wayne Heim's exploration of International – Across Borders comes alive in this piece, showcasing fantastic places from Iceland. A testament to fantastic places in fine art. © Wayne Heim"
+        },
+        {
+          "field": "story",
+          "path": "galleryData.43.story",
+          "matches": [
+            "international landscape photography and international landscape photography"
+          ],
+          "before": "Delving into painterly european landscapes, this work by Wayne Heim highlights international landscape photography through international landscape photography and international landscape photography in Iceland. A powerful statement in photography. © Wayne Heim",
+          "after": "Delving into painterly european landscapes, this work by Wayne Heim highlights international landscape photography in Iceland. A powerful statement in photography. © Wayne Heim"
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Fine-Art-Photography\\Transportation\\Cars.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 0,
+        "alt": 0,
+        "story": 6
+      },
+      "total": 6,
+      "severity": "Moderate",
+      "examples": [
+        {
+          "field": "story",
+          "path": "galleryData.4.story",
+          "matches": [
+            "timeless automotive prints and timeless automotive prints"
+          ],
+          "before": "Wayne Heim's exploration of painterly classic car photos for auto lovers comes alive in this piece, showcasing timeless automotive prints and timeless automotive prints. A testament to automotive art prints in fine art. © Wayne Heim",
+          "after": "Wayne Heim's exploration of painterly classic car photos for auto lovers comes alive in this piece, showcasing timeless automotive prints. A testament to automotive art prints in fine art. © Wayne Heim"
+        },
+        {
+          "field": "story",
+          "path": "galleryData.39.story",
+          "matches": [
+            "automotive art prints and automotive art prints"
+          ],
+          "before": "Delving into route 66 car photography prints, this work by Wayne Heim highlights timeless automotive prints through automotive art prints and automotive art prints. A powerful statement in photography. © Wayne Heim",
+          "after": "Delving into route 66 car photography prints, this work by Wayne Heim highlights timeless automotive prints through automotive art prints. A powerful statement in photography. © Wayne Heim"
+        },
+        {
+          "field": "story",
+          "path": "galleryData.40.story",
+          "matches": [
+            "classic car photography and classic car photography"
+          ],
+          "before": "Wayne Heim's exploration of automotive art prints comes alive in this piece, showcasing classic car photography and classic car photography. A testament to classic car art prints for enthusiasts in fine art. © Wayne Heim",
+          "after": "Wayne Heim's exploration of automotive art prints comes alive in this piece, showcasing classic car photography. A testament to classic car art prints for enthusiasts in fine art. © Wayne Heim"
+        },
+        {
+          "field": "story",
+          "path": "galleryData.42.story",
+          "matches": [
+            "timeless automotive prints with a touch of timeless automotive prints"
+          ],
+          "before": "This image embodies automotive art prints and classic car photography, captured by Wayne Heim in his signature style. It reflects timeless automotive prints with a touch of timeless automotive prints. © Wayne Heim",
+          "after": "This image embodies automotive art prints and classic car photography, captured by Wayne Heim in his signature style. It reflects timeless automotive prints. © Wayne Heim"
+        },
+        {
+          "field": "story",
+          "path": "galleryData.43.story",
+          "matches": [
+            "timeless automotive prints and timeless automotive prints"
+          ],
+          "before": "This image embodies timeless automotive prints and timeless automotive prints, captured by Wayne Heim in his signature style. It reflects automotive art prints with a touch of classic car art prints for enthusiasts. © Wayne Heim",
+          "after": "This image embodies timeless automotive prints, captured by Wayne Heim in his signature style. It reflects automotive art prints with a touch of classic car art prints for enthusiasts. © Wayne Heim"
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Painterly-Fine-Art-Photography\\Facing-History\\WWII\\Portraits\\Color.mjs",
+      "fieldCounts": {
+        "title": 3,
+        "description": 0,
+        "alt": 0,
+        "story": 3
+      },
+      "total": 6,
+      "severity": "Moderate",
+      "examples": [
+        {
+          "field": "title",
+          "path": "galleryData.59.title",
+          "matches": [
+            "Heroic Portraits - Heroic Portraits"
+          ],
+          "before": "Heroic Portraits - Heroic Portraits",
+          "after": "Heroic Portraits"
+        },
+        {
+          "field": "story",
+          "path": "galleryData.59.story",
+          "matches": [
+            "Heroic Portraits - Heroic Portraits"
+          ],
+          "before": "Heroic Portraits - Heroic Portraits — part of Wayne Heim's",
+          "after": "Heroic Portraits — part of Wayne Heim's"
+        },
+        {
+          "field": "title",
+          "path": "galleryData.64.title",
+          "matches": [
+            "Heroic Portraits - Heroic Portraits"
+          ],
+          "before": "Heroic Portraits - Heroic Portraits",
+          "after": "Heroic Portraits"
+        },
+        {
+          "field": "story",
+          "path": "galleryData.64.story",
+          "matches": [
+            "Heroic Portraits - Heroic Portraits"
+          ],
+          "before": "Heroic Portraits - Heroic Portraits. Wayne Heim's approach to fine art photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the",
+          "after": "Heroic Portraits. Wayne Heim's approach to fine art photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the"
+        },
+        {
+          "field": "title",
+          "path": "galleryData.96.title",
+          "matches": [
+            "Moments Of Connection - Moments Of Connection"
+          ],
+          "before": "Moments Of Connection - Moments Of Connection",
+          "after": "Moments Of Connection"
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Painterly-Fine-Art-Photography\\Transportation\\Trains-Black-White.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 0,
+        "alt": 0,
+        "story": 6
+      },
+      "total": 6,
+      "severity": "Moderate",
+      "examples": [
+        {
+          "field": "story",
+          "path": "galleryData.7.story",
+          "matches": [
+            "steam engine wall art for collectors and steam engine wall art for collectors"
+          ],
+          "before": "Delving into steam engine art, this work by Wayne Heim highlights steam engine wall art for collectors through steam engine wall art for collectors and steam engine wall art for collectors. A powerful statement in photography. © Wayne Heim",
+          "after": "Delving into steam engine art, this work by Wayne Heim highlights steam engine wall art for collectors. A powerful statement in photography. © Wayne Heim"
+        },
+        {
+          "field": "story",
+          "path": "galleryData.8.story",
+          "matches": [
+            "vintage train photography with a touch of vintage train photography"
+          ],
+          "before": "This image embodies steam engine art and vintage train photography for man cave, captured by Wayne Heim in his signature style. It reflects vintage train photography with a touch of vintage train photography. © Wayne Heim",
+          "after": "This image embodies steam engine art and vintage train photography for man cave, captured by Wayne Heim in his signature style. It reflects vintage train photography. © Wayne Heim"
+        },
+        {
+          "field": "story",
+          "path": "galleryData.12.story",
+          "matches": [
+            "steam engine wall art for collectors with a touch of steam engine wall art for collectors"
+          ],
+          "before": "This image embodies vintage train photography for man cave and steam engine photography, captured by Wayne Heim in his signature style. It reflects steam engine wall art for collectors with a touch of steam engine wall art for collectors. © Wayne Heim",
+          "after": "This image embodies vintage train photography for man cave and steam engine photography, captured by Wayne Heim in his signature style. It reflects steam engine wall art for collectors. © Wayne Heim"
+        },
+        {
+          "field": "story",
+          "path": "galleryData.15.story",
+          "matches": [
+            "steam engine wall art for collectors and steam engine wall art for collectors"
+          ],
+          "before": "Wayne Heim's exploration of steam engine wall art for collectors comes alive in this piece, showcasing steam engine wall art for collectors and steam engine wall art for collectors. A testament to steam engine art in fine art. © Wayne Heim",
+          "after": "Wayne Heim's exploration of steam engine wall art for collectors comes alive in this piece, showcasing steam engine wall art for collectors. A testament to steam engine art in fine art. © Wayne Heim"
+        },
+        {
+          "field": "story",
+          "path": "galleryData.22.story",
+          "matches": [
+            "vintage train photography for man cave and vintage train photography for man cave"
+          ],
+          "before": "Wayne Heim's exploration of steam engine wall art for collectors comes alive in this piece, showcasing vintage train photography for man cave and vintage train photography for man cave. A testament to steam engine wall art for collectors in fine art. © Wayne Heim",
+          "after": "Wayne Heim's exploration of steam engine wall art for collectors comes alive in this piece, showcasing vintage train photography for man cave. A testament to steam engine wall art for collectors in fine art. © Wayne Heim"
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Fine-Art-Photography\\Landscapes\\By-Location\\West\\Gallery.mjs",
+      "fieldCounts": {
+        "title": 1,
+        "description": 0,
+        "alt": 0,
+        "story": 4
+      },
+      "total": 5,
+      "severity": "Moderate",
+      "examples": [
+        {
+          "field": "title",
+          "path": "galleryData.9.title",
+          "matches": [
+            "Western Scenery Wall Art - Western Scenery Wall Art"
+          ],
+          "before": "Western Scenery Wall Art - Western Scenery Wall Art",
+          "after": "Western Scenery Wall Art"
+        },
+        {
+          "field": "story",
+          "path": "galleryData.18.story",
+          "matches": [
+            "feel every layer of it and feel every layer of it"
+          ],
+          "before": "Wayne Heim's exploration of ethereal landscapes comes alive in this piece, showcasing feel every layer of it and feel every layer of it. A testament to feel every layer of it in fine art. ",
+          "after": "Wayne Heim's exploration of ethereal landscapes comes alive in this piece, showcasing feel every layer of it. A testament to feel every layer of it in fine art."
+        },
+        {
+          "field": "story",
+          "path": "galleryData.23.story",
+          "matches": [
+            "feel every layer of it and feel every layer of it"
+          ],
+          "before": "This image embodies feel every layer of it and feel every layer of it, captured by Wayne Heim in his signature style. It reflects feel every layer of it with a touch of ethereal landscapes. ",
+          "after": "This image embodies feel every layer of it, captured by Wayne Heim in his signature style. It reflects feel every layer of it with a touch of ethereal landscapes."
+        },
+        {
+          "field": "story",
+          "path": "galleryData.26.story",
+          "matches": [
+            "ethereal landscapes and ethereal landscapes"
+          ],
+          "before": "Wayne Heim's exploration of ethereal landscapes comes alive in this piece, showcasing ethereal landscapes and ethereal landscapes. A testament to western landscape photography in fine art. ",
+          "after": "Wayne Heim's exploration of ethereal landscapes comes alive in this piece, showcasing ethereal landscapes. A testament to western landscape photography in fine art."
+        },
+        {
+          "field": "story",
+          "path": "galleryData.36.story",
+          "matches": [
+            "western landscape photography and western landscape photography"
+          ],
+          "before": "Wayne Heim's exploration of ethereal landscapes comes alive in this piece, showcasing western landscape photography and western landscape photography. A testament to feel every layer of it in fine art. ",
+          "after": "Wayne Heim's exploration of ethereal landscapes comes alive in this piece, showcasing western landscape photography. A testament to feel every layer of it in fine art."
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Fine-Art-Photography\\Landscapes\\By-Theme\\Sunsets\\Sunsets.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 0,
+        "alt": 0,
+        "story": 5
+      },
+      "total": 5,
+      "severity": "Moderate",
+      "examples": [
+        {
+          "field": "story",
+          "path": "galleryData.2.story",
+          "matches": [
+            "sunset landscape photography and sunset landscape photography"
+          ],
+          "before": "Wayne Heim's exploration of sunset landscape photography comes alive in this piece, showcasing sunset landscape photography and sunset landscape photography. A testament to painterly sunset scenes in fine art. ",
+          "after": "Wayne Heim's exploration of sunset landscape photography comes alive in this piece, showcasing sunset landscape photography. A testament to painterly sunset scenes in fine art."
+        },
+        {
+          "field": "story",
+          "path": "galleryData.6.story",
+          "matches": [
+            "classic sunset scenery and classic sunset scenery",
+            "classic sunset scenery with a touch of classic sunset scenery"
+          ],
+          "before": "This image embodies classic sunset scenery and classic sunset scenery, captured by Wayne Heim in his signature style. It reflects classic sunset scenery with a touch of classic sunset scenery. ",
+          "after": "This image embodies classic sunset scenery, captured by Wayne Heim in his signature style. It reflects classic sunset scenery."
+        },
+        {
+          "field": "story",
+          "path": "galleryData.16.story",
+          "matches": [
+            "painterly sunset scenes and painterly sunset scenes"
+          ],
+          "before": "This image embodies painterly sunset scenes and painterly sunset scenes, captured by Wayne Heim in his signature style. It reflects painterly sunset scenes with a touch of sunset landscape photography. ",
+          "after": "This image embodies painterly sunset scenes, captured by Wayne Heim in his signature style. It reflects painterly sunset scenes with a touch of sunset landscape photography."
+        },
+        {
+          "field": "story",
+          "path": "galleryData.23.story",
+          "matches": [
+            "classic sunset scenery and classic sunset scenery"
+          ],
+          "before": "Delving into sunset photography, this work by Wayne Heim highlights classic sunset scenery through classic sunset scenery and classic sunset scenery. A powerful statement in photography. © Wayne Heim",
+          "after": "Delving into sunset photography, this work by Wayne Heim highlights classic sunset scenery. A powerful statement in photography. © Wayne Heim"
+        },
+        {
+          "field": "story",
+          "path": "galleryData.27.story",
+          "matches": [
+            "classic sunset scenery and classic sunset scenery"
+          ],
+          "before": "Delving into sunset photography, this work by Wayne Heim highlights sunset photography through classic sunset scenery and classic sunset scenery. A powerful statement in photography. © Wayne Heim",
+          "after": "Delving into sunset photography, this work by Wayne Heim highlights sunset photography through classic sunset scenery. A powerful statement in photography. © Wayne Heim"
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Fine-Art-Photography\\Transportation\\Trains.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 0,
+        "alt": 0,
+        "story": 3
+      },
+      "total": 3,
+      "severity": "Moderate",
+      "examples": [
+        {
+          "field": "story",
+          "path": "galleryData.12.story",
+          "matches": [
+            "steam engine wall art for collectors and steam engine wall art for collectors"
+          ],
+          "before": "Delving into steam engine photography, this work by Wayne Heim highlights vintage train photography for man cave through steam engine wall art for collectors and steam engine wall art for collectors. A powerful statement in photography. © Wayne Heim",
+          "after": "Delving into steam engine photography, this work by Wayne Heim highlights vintage train photography for man cave through steam engine wall art for collectors. A powerful statement in photography. © Wayne Heim"
+        },
+        {
+          "field": "story",
+          "path": "galleryData.17.story",
+          "matches": [
+            "steam engine wall art for collectors and steam engine wall art for collectors",
+            "vintage train photography with a touch of vintage train photography"
+          ],
+          "before": "This image embodies steam engine wall art for collectors and steam engine wall art for collectors, captured by Wayne Heim in his signature style. It reflects vintage train photography with a touch of vintage train photography. © Wayne Heim",
+          "after": "This image embodies steam engine wall art for collectors, captured by Wayne Heim in his signature style. It reflects vintage train photography. © Wayne Heim"
+        },
+        {
+          "field": "story",
+          "path": "galleryData.19.story",
+          "matches": [
+            "vintage train photography and vintage train photography"
+          ],
+          "before": "Delving into vintage train photography, this work by Wayne Heim highlights steam engine wall art for collectors through vintage train photography and vintage train photography for man cave. A powerful statement in photography. © Wayne Heim",
+          "after": "Delving into vintage train photography, this work by Wayne Heim highlights steam engine wall art for collectors through vintage train photography for man cave. A powerful statement in photography. © Wayne Heim"
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Fine-Art-Photography\\Landscapes\\By-Theme\\Mountains\\Mountains.mjs",
+      "fieldCounts": {
+        "title": 1,
+        "description": 0,
+        "alt": 0,
+        "story": 2
+      },
+      "total": 3,
+      "severity": "Minor",
+      "examples": [
+        {
+          "field": "story",
+          "path": "galleryData.20.story",
+          "matches": [
+            "classic sunset scenery and classic sunset scenery",
+            "classic sunset scenery with a touch of classic sunset scenery"
+          ],
+          "before": "This image embodies classic sunset scenery and classic sunset scenery, captured by Wayne Heim in his signature style. It reflects classic sunset scenery with a touch of classic sunset scenery. ",
+          "after": "This image embodies classic sunset scenery, captured by Wayne Heim in his signature style. It reflects classic sunset scenery."
+        },
+        {
+          "field": "title",
+          "path": "galleryData.32.title",
+          "matches": [
+            "Painterly Mountain Art And Painterly Mountain Art"
+          ],
+          "before": "Painterly Mountain Art And Painterly Mountain Art",
+          "after": "Painterly Mountain Art"
+        },
+        {
+          "field": "story",
+          "path": "galleryData.32.story",
+          "matches": [
+            "mountain landscape photography and mountain landscape photography"
+          ],
+          "before": "Wayne Heim's exploration of mountain landscape photography comes alive in this piece, showcasing mountain landscape photography and mountain landscape photography. A testament to mountain landscape photography in fine art. ",
+          "after": "Wayne Heim's exploration of mountain landscape photography comes alive in this piece, showcasing mountain landscape photography. A testament to mountain landscape photography in fine art."
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Fine-Art-Photography\\Landscapes\\By-Location\\South\\Gallery.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 0,
+        "alt": 0,
+        "story": 2
+      },
+      "total": 2,
+      "severity": "Minor",
+      "examples": [
+        {
+          "field": "story",
+          "path": "galleryData.2.story",
+          "matches": [
+            "traditional southern landscape photography and traditional southern landscape photography"
+          ],
+          "before": "Wayne Heim's exploration of South – Light and Legacy comes alive in this piece, showcasing traditional southern landscape photography and traditional southern landscape photography. A testament to southern landscape prints in fine art. © Wayne Heim",
+          "after": "Wayne Heim's exploration of South – Light and Legacy comes alive in this piece, showcasing traditional southern landscape photography. A testament to southern landscape prints in fine art. © Wayne Heim"
+        },
+        {
+          "field": "story",
+          "path": "galleryData.4.story",
+          "matches": [
+            "southern landscape prints and southern landscape prints"
+          ],
+          "before": "Wayne Heim's exploration of southern landscape prints comes alive in this piece, showcasing southern landscape prints and southern landscape prints. A testament to southern landscape prints in fine art. © Wayne Heim",
+          "after": "Wayne Heim's exploration of southern landscape prints comes alive in this piece, showcasing southern landscape prints. A testament to southern landscape prints in fine art. © Wayne Heim"
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Painterly-Fine-Art-Photography\\Transportation\\Cars.mjs",
+      "fieldCounts": {
+        "title": 2,
+        "description": 0,
+        "alt": 0,
+        "story": 0
+      },
+      "total": 2,
+      "severity": "Minor",
+      "examples": [
+        {
+          "field": "title",
+          "path": "galleryData.2.title",
+          "matches": [
+            "Timeless Automotive Prints - Timeless Automotive Prints"
+          ],
+          "before": "Timeless Automotive Prints - Timeless Automotive Prints",
+          "after": "Timeless Automotive Prints"
+        },
+        {
+          "field": "title",
+          "path": "galleryData.9.title",
+          "matches": [
+            "Painterly Classic Car Photos For Auto Lovers And Painterly Classic Car Photos For Auto Lovers"
+          ],
+          "before": "Painterly Classic Car Photos For Auto Lovers And Painterly Classic Car Photos For Auto Lovers",
+          "after": "Painterly Classic Car Photos For Auto Lovers"
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Other\\Stories\\Show-Test-4.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 1,
+        "alt": 0,
+        "story": 1
+      },
+      "total": 2,
+      "severity": "Minor",
+      "examples": [
+        {
+          "field": "description",
+          "path": "storyData.2.description",
+          "matches": [
+            "sunset landscape photography and sunset landscape photography"
+          ],
+          "before": "Delve into painterly sunset scenes via this painterly sunset scenes by Wayne Heim. Highlighting sunset landscape photography through sunset landscape photography and sunset landscape photography, it's great for collectors interested in painterly sunset scenes. © Wayne Heim",
+          "after": "Delve into painterly sunset scenes via this painterly sunset scenes by Wayne Heim. Highlighting sunset landscape photography, it's great for collectors interested in painterly sunset scenes. © Wayne Heim"
+        },
+        {
+          "field": "story",
+          "path": "storyData.2.story",
+          "matches": [
+            "sunset landscape photography and sunset landscape photography"
+          ],
+          "before": "Wayne Heim's exploration of sunset landscape photography comes alive in this piece, showcasing sunset landscape photography and sunset landscape photography. A testament to painterly sunset scenes in fine art. © Wayne Heim",
+          "after": "Wayne Heim's exploration of sunset landscape photography comes alive in this piece, showcasing sunset landscape photography. A testament to painterly sunset scenes in fine art. © Wayne Heim"
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Other\\Stories\\Test-show-v7.mjs",
+      "fieldCounts": {
+        "title": 1,
+        "description": 0,
+        "alt": 0,
+        "story": 1
+      },
+      "total": 2,
+      "severity": "Minor",
+      "examples": [
+        {
+          "field": "title",
+          "path": "storyData.1.title",
+          "matches": [
+            "Blue Ridge Painterly Landscapes And Blue Ridge Painterly Landscapes"
+          ],
+          "before": "Blue Ridge Painterly Landscapes And Blue Ridge Painterly Landscapes",
+          "after": "Blue Ridge Painterly Landscapes"
+        },
+        {
+          "field": "story",
+          "path": "storyData.2.story",
+          "matches": [
+            "southern landscape photography and southern landscape photography"
+          ],
+          "before": "This image embodies southern landscape photography and southern landscape photography, captured by Wayne Heim in his signature style. It reflects blue ridge painterly landscapes with a touch of southern landscape photography. © Wayne Heim",
+          "after": "This image embodies southern landscape photography, captured by Wayne Heim in his signature style. It reflects blue ridge painterly landscapes with a touch of southern landscape photography. © Wayne Heim"
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Fine-Art-Photography\\Landscapes\\By-Location\\International\\Newfoundland.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 0,
+        "alt": 0,
+        "story": 1
+      },
+      "total": 1,
+      "severity": "Minor",
+      "examples": [
+        {
+          "field": "story",
+          "path": "galleryData.1.story",
+          "matches": [
+            "international landscape photography and international landscape photography"
+          ],
+          "before": "This image embodies international landscape photography and international landscape photography, captured by Wayne Heim in his signature style in Newfoundland. It reflects painterly european landscapes with a touch of international landscape photography. © Wayne Heim",
+          "after": "This image embodies international landscape photography, captured by Wayne Heim in his signature style in Newfoundland. It reflects painterly european landscapes with a touch of international landscape photography. © Wayne Heim"
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Fine-Art-Photography\\Miscellaneous\\Wildlife.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 0,
+        "alt": 0,
+        "story": 1
+      },
+      "total": 1,
+      "severity": "Minor",
+      "examples": [
+        {
+          "field": "story",
+          "path": "galleryData.13.story",
+          "matches": [
+            "wildlife photography and wildlife photography"
+          ],
+          "before": "Wayne Heim's exploration of nature's beauty comes alive in this piece, showcasing wildlife photography and wildlife photography. A testament to wild animal art in fine art. © Wayne Heim",
+          "after": "Wayne Heim's exploration of nature's beauty comes alive in this piece, showcasing wildlife photography. A testament to wild animal art in fine art. © Wayne Heim"
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Fine-Art-Photography\\Portraits\\Black-White.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 0,
+        "alt": 0,
+        "story": 1
+      },
+      "total": 1,
+      "severity": "Minor",
+      "examples": [
+        {
+          "field": "story",
+          "path": "galleryData.64.story",
+          "matches": [
+            "cowboy art with a touch of cowboy art"
+          ],
+          "before": "This image embodies historic western prints and cowboy artwork, captured by Wayne Heim in his signature style. It reflects western cowboy art with a touch of cowboy art. © Wayne Heim",
+          "after": "This image embodies historic western prints and cowboy artwork, captured by Wayne Heim in his signature style. It reflects western cowboy art. © Wayne Heim"
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Painterly-Fine-Art-Photography\\Landscapes\\By-Location\\Northeast\\Gallery.mjs",
+      "fieldCounts": {
+        "title": 1,
+        "description": 0,
+        "alt": 0,
+        "story": 0
+      },
+      "total": 1,
+      "severity": "Minor",
+      "examples": [
+        {
+          "field": "title",
+          "path": "galleryData.2.title",
+          "matches": [
+            "See Beauty In Simplicity - See Beauty In Simplicity"
+          ],
+          "before": "See Beauty In Simplicity - See Beauty In Simplicity",
+          "after": "See Beauty In Simplicity"
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Painterly-Fine-Art-Photography\\Transportation\\Trains-Color.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 0,
+        "alt": 0,
+        "story": 1
+      },
+      "total": 1,
+      "severity": "Minor",
+      "examples": [
+        {
+          "field": "story",
+          "path": "galleryData.1.story",
+          "matches": [
+            "vintage train photography for man cave and vintage train photography for man cave"
+          ],
+          "before": "This image embodies vintage train photography for man cave and vintage train photography for man cave, captured by Wayne Heim in his signature style. It reflects vintage train photography for man cave with a touch of steam engine wall art for collectors. © Wayne Heim",
+          "after": "This image embodies vintage train photography for man cave, captured by Wayne Heim in his signature style. It reflects vintage train photography for man cave with a touch of steam engine wall art for collectors. © Wayne Heim"
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Other\\Archive\\Archive.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 1,
+        "alt": 0,
+        "story": 0
+      },
+      "total": 1,
+      "severity": "Minor",
+      "examples": [
+        {
+          "field": "description",
+          "path": "galleryData.3.description",
+          "matches": [
+            "reenactment portraits and reenactment portraits"
+          ],
+          "before": "Witness living history art in Wayne Heim's reenactment portraits. This image features historic reenactor prints with reenactment portraits and reenactment portraits, ideal for admirers of living history art. © Wayne Heim",
+          "after": "Witness living history art in Wayne Heim's reenactment portraits. This image features historic reenactor prints with reenactment portraits, ideal for admirers of living history art. © Wayne Heim"
+        }
+      ]
+    }
+  ]
+}

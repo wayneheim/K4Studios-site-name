@@ -1,0 +1,1914 @@
+{
+  "scannedFiles": 90,
+  "affectedFiles": 54,
+  "totals": {
+    "title": 41,
+    "description": 163,
+    "alt": 24,
+    "story": 332
+  },
+  "severityCounts": {
+    "Severe": 9,
+    "Moderate": 11,
+    "Minor": 34
+  },
+  "report": [
+    {
+      "file": "src\\data\\Galleries\\Painterly-Fine-Art-Photography\\Facing-History\\Wild-West\\Western-Narratives\\Black-White.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 81,
+        "alt": 6,
+        "story": 5
+      },
+      "totalMatches": 92,
+      "severity": "Severe",
+      "examples": [
+        {
+          "field": "description",
+          "path": "galleryData.1.description",
+          "text": "A black and white Western photography scene showing by a window, a cowboy holds a rifle and looks outward, partially lit in a black and white Western portrait. This fine art Western photography piece supports the Western Narratives gallery through frontier tension, armed restraint, and the cinematic storytelling language of the American frontier. As narrative Western art, it emphasizes posture, silence, and consequence more than spectacle or simple gunfight drama. © Wayne Heim",
+          "matches": [
+            "through frontier"
+          ]
+        },
+        {
+          "field": "description",
+          "path": "galleryData.4.description",
+          "text": "A black and white Western photography scene showing frontier gunman seated inside a log cabin loading cartridges into a revolver. This fine art Western photography piece supports the Western Narratives gallery through frontier tension, armed restraint, and the cinematic storytelling language of the American frontier. As narrative Western art, it emphasizes posture, silence, and consequence more than spectacle or simple gunfight drama. © Wayne Heim",
+          "matches": [
+            "through frontier"
+          ]
+        },
+        {
+          "field": "description",
+          "path": "galleryData.5.description",
+          "text": "A black and white Western photography scene showing shooter crouched behind a barrel firing a revolver, captured mid-shot in fine art Western photography. This fine art Western photography piece supports the Western Narratives gallery through frontier tension, armed restraint, and the cinematic storytelling language of the American frontier. As narrative Western art, it emphasizes posture, silence, and consequence more than spectacle or simple gunfight drama. © Wayne Heim",
+          "matches": [
+            "through frontier"
+          ]
+        },
+        {
+          "field": "description",
+          "path": "galleryData.6.description",
+          "text": "A black and white Western photography scene showing older cowboy standing on a wooden porch with a revolver in hand. This fine art Western photography piece supports the Western Narratives gallery through frontier tension, armed restraint, and the cinematic storytelling language of the American frontier. Its painterly photography approach supports the doorway-page language around authored Western imagery, not generic reenactment documentation. As narrative Western art, it emphasizes posture, silence, and consequence more than spectacle or simple gunfight drama. © Wayne Heim",
+          "matches": [
+            "through frontier"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Fine-Art-Photography\\Landscapes\\By-Location\\Midwest\\Gallery.mjs",
+      "fieldCounts": {
+        "title": 5,
+        "description": 0,
+        "alt": 0,
+        "story": 51
+      },
+      "totalMatches": 56,
+      "severity": "Severe",
+      "examples": [
+        {
+          "field": "story",
+          "path": "galleryData.1.story",
+          "text": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography and midwest landscape photography. A testament to midwest landscape photography in fine art. © Wayne Heim",
+          "matches": [
+            "midwest landscape photography and midwest landscape photography"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "galleryData.10.story",
+          "text": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography through midwest landscape photography and midwest landscape photography. A powerful statement in photography. © Wayne Heim",
+          "matches": [
+            "midwest landscape photography and midwest landscape photography",
+            "through midwest landscape photography"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "galleryData.11.story",
+          "text": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography through midwest landscape photography and midwest landscape photography. A powerful statement in photography. © Wayne Heim",
+          "matches": [
+            "midwest landscape photography and midwest landscape photography",
+            "through midwest landscape photography"
+          ]
+        },
+        {
+          "field": "title",
+          "path": "galleryData.12.title",
+          "text": "Midwest Landscape Photography - Midwest Landscape Photography",
+          "matches": [
+            "Midwest Landscape Photography - Midwest Landscape Photography"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Painterly-Fine-Art-Photography\\Facing-History\\WWII\\War\\Color.mjs",
+      "fieldCounts": {
+        "title": 8,
+        "description": 11,
+        "alt": 0,
+        "story": 29
+      },
+      "totalMatches": 48,
+      "severity": "Severe",
+      "examples": [
+        {
+          "field": "story",
+          "path": "galleryData.60.story",
+          "text": "Wayne Heim's exploration of WWII battlefield comes alive in this piece, showcasing WWII battlefield and WWII battlefield. A testament to battlefield moments in fine art. © Wayne Heim",
+          "matches": [
+            "WWII battlefield and WWII battlefield"
+          ]
+        },
+        {
+          "field": "description",
+          "path": "galleryData.61.description",
+          "text": "Delve into battlefield moments via this battlefield moments by Wayne Heim. Highlighting Second World War through WWII action art and WWII action art, it's great for collectors interested in battlefield moments. © Wayne Heim",
+          "matches": [
+            "WWII action art and WWII action art",
+            "through WWII action art"
+          ]
+        },
+        {
+          "field": "description",
+          "path": "galleryData.71.description",
+          "text": "Delve into battlefield moments via this Second World War by Wayne Heim. Highlighting WWII battlefield through WWII battlefield and WWII battlefield, it's great for collectors interested in battlefield moments. © Wayne Heim",
+          "matches": [
+            "WWII battlefield and WWII battlefield",
+            "through WWII battlefield"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "galleryData.78.story",
+          "text": "Delving into battlefield moments, this work by Wayne Heim highlights battlefield moments through WWII battlefield and WWII action art. A powerful statement in photography. © Wayne Heim",
+          "matches": [
+            "through WWII"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Painterly-Fine-Art-Photography\\Facing-History\\WWII\\Portraits\\Black-White.mjs",
+      "fieldCounts": {
+        "title": 3,
+        "description": 0,
+        "alt": 0,
+        "story": 40
+      },
+      "totalMatches": 43,
+      "severity": "Severe",
+      "examples": [
+        {
+          "field": "story",
+          "path": "galleryData.6.story",
+          "text": "The train moves, but he does not. Not in the way that matters. His body is carried forward by steel and schedule, yet his thoughts linger somewhere behind him — in places that will not fit neatly into a duffel bag.\n\nLight slips through the curtain in thin bands, touching his sleeve, the crease of his uniform, the edge of his hand. He watches it without expression. There is no celebration in the posture, no visible relief. Only distance measured in miles and memory.\n\nHome waits at the end of the line. But the ride itself is its own crossing — from who he was before the war, to whoever steps off when the train finally slows.",
+          "matches": [
+            "through the"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "galleryData.19.story",
+          "text": "He leaned closer to the set, though it hadn’t spoken in minutes.\n\nThe bunker held its breath with him — sandbags stacked against a world that would not stay still. Through the hiss and crackle, he searched for something human inside the noise.\n\nSometimes the silence lasted longer than the courage it took to wait through it.",
+          "matches": [
+            "Through the"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "galleryData.40.story",
+          "text": "Morning light slips through the window while the world carries on outside. Inside, routine becomes ritual — dishes washed, hands steady, thoughts elsewhere.\n\nSomewhere far away, history is loud. Here, it waits quietly between moments, in the space where ordinary life continues despite uncertainty.",
+          "matches": [
+            "through the"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "galleryData.64.story",
+          "text": "Wayne Heim's exploration of wartime portraits comes alive in this piece, showcasing heroic portraits and heroic portraits. A testament to wartime portraits in fine art. © Wayne Heim",
+          "matches": [
+            "heroic portraits and heroic portraits"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Fine-Art-Photography\\Miscellaneous\\Reenactments.mjs",
+      "fieldCounts": {
+        "title": 4,
+        "description": 0,
+        "alt": 0,
+        "story": 38
+      },
+      "totalMatches": 42,
+      "severity": "Severe",
+      "examples": [
+        {
+          "field": "story",
+          "path": "galleryData.22.story",
+          "text": "Delving into reenactor photography, this work by Wayne Heim highlights period costume photography through reenactor photography and historic reenactor prints. A powerful statement in photography. © Wayne Heim",
+          "matches": [
+            "through reenactor"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "galleryData.28.story",
+          "text": "Wayne Heim's exploration of historic reenactor prints comes alive in this piece, showcasing historic reenactor prints and historic reenactor prints. A testament to period costume photography in fine art. © Wayne Heim",
+          "matches": [
+            "historic reenactor prints and historic reenactor prints"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "galleryData.38.story",
+          "text": "Wayne Heim's exploration of reenactor photography comes alive in this piece, showcasing period costume photography and period costume photography. A testament to reenactor photography in fine art. © Wayne Heim",
+          "matches": [
+            "period costume photography and period costume photography"
+          ]
+        },
+        {
+          "field": "title",
+          "path": "galleryData.49.title",
+          "text": "Period Costume Photography - Period Costume Photography",
+          "matches": [
+            "Period Costume Photography - Period Costume Photography"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Painterly-Fine-Art-Photography\\Facing-History\\Wild-West\\Western-Narratives\\Color.mjs",
+      "fieldCounts": {
+        "title": 1,
+        "description": 20,
+        "alt": 8,
+        "story": 3
+      },
+      "totalMatches": 32,
+      "severity": "Severe",
+      "examples": [
+        {
+          "field": "description",
+          "path": "galleryData.5.description",
+          "text": "Two children burst into laughter as they race across a weathered porch, their footsteps echoing through the warm boards beneath them. Dusty afternoon light drifts through the posts and railings, wrapping the moment in a soft glow that feels both fleeting and timeless. The scene captures the untamed joy of childhood-those rare seconds when the world is nothing but motion, laughter, and the promise of another game waiting just ahead. As narrative Western art, it expands the gallery beyond cowboy myth into the emotional, domestic, and moral stakes of frontier life.\n\n© Wayne Heim",
+          "matches": [
+            "through the"
+          ]
+        },
+        {
+          "field": "alt",
+          "path": "galleryData.31.alt",
+          "text": "Solitary cowboy on horseback riding through a shallow river at dawn under a blue misty sky.",
+          "matches": [
+            "through a"
+          ]
+        },
+        {
+          "field": "description",
+          "path": "galleryData.39.description",
+          "text": "A cowboy charges across open ground as the rope rises into a wide spinning arc above him, horse and rider moving as one through the dust of the frontier. The moment captures the split second where instinct, training, and motion align. Rendered in warm Western tones and painterly texture, the image conveys the speed, skill, and kinetic grace that define classic cowboy horsemanship in narrative Western fine art photography. As painterly Western photography, it links horse, rider, motion, and landscape to the larger doorway language of fine art Western photography. Its unresolved story structure makes it a natural fit for narrative Western art.\n\n© Wayne Heim",
+          "matches": [
+            "through the"
+          ]
+        },
+        {
+          "field": "description",
+          "path": "galleryData.53.description",
+          "text": "A man sits beside a window inside a wooden room, holding a newspaper while turning his head toward the light. Sunlight streams through the curtain, illuminating his face and the paper in his hands while the rest of the room falls into shadow. Shelves and simple furnishings fade softly into the background as the quiet interior frames the moment. This painterly photography approach helps the image carry frontier life as human memory, not just action or Western spectacle. Its unresolved story structure makes it a natural fit for narrative Western art.\n\n© Wayne Heim",
+          "matches": [
+            "through the"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Fine-Art-Photography\\Portraits\\Reenactors.mjs",
+      "fieldCounts": {
+        "title": 3,
+        "description": 4,
+        "alt": 0,
+        "story": 23
+      },
+      "totalMatches": 30,
+      "severity": "Severe",
+      "examples": [
+        {
+          "field": "story",
+          "path": "galleryData.34.story",
+          "text": "Wayne Heim's exploration of reenactment portraits comes alive in this piece, showcasing historic reenactor prints and historic reenactor prints. A testament to historic reenactor prints in fine art. © Wayne Heim",
+          "matches": [
+            "historic reenactor prints and historic reenactor prints"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "galleryData.42.story",
+          "text": "Wayne Heim's exploration of living history art comes alive in this piece, showcasing historic reenactor prints and historic reenactor prints. A testament to historic reenactor prints in fine art. © Wayne Heim",
+          "matches": [
+            "historic reenactor prints and historic reenactor prints"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "galleryData.44.story",
+          "text": "This image embodies reenactor photography and reenactor photography, captured by Wayne Heim in his signature style. It reflects reenactment portraits with a touch of reenactor photography. © Wayne Heim",
+          "matches": [
+            "reenactor photography and reenactor photography"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "galleryData.47.story",
+          "text": "This image embodies reenactment portraits and reenactment portraits, captured by Wayne Heim in his signature style. It reflects reenactor photography with a touch of historic reenactor prints. © Wayne Heim",
+          "matches": [
+            "reenactment portraits and reenactment portraits"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Fine-Art-Photography\\Landscapes\\By-Location\\Northeast\\Gallery.mjs",
+      "fieldCounts": {
+        "title": 3,
+        "description": 1,
+        "alt": 0,
+        "story": 22
+      },
+      "totalMatches": 26,
+      "severity": "Severe",
+      "examples": [
+        {
+          "field": "story",
+          "path": "galleryData.11.story",
+          "text": "This image embodies autumn in new england and autumn in new england, captured by Wayne Heim in his signature style. It reflects The Northeast with a touch of see beauty in simplicity. © Wayne Heim",
+          "matches": [
+            "autumn in new england and autumn in new england"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "galleryData.13.story",
+          "text": "This image embodies The Northeast and The Northeast, captured by Wayne Heim in his signature style. It reflects The Northeast with a touch of autumn in new england. © Wayne Heim",
+          "matches": [
+            "The Northeast and The Northeast"
+          ]
+        },
+        {
+          "field": "description",
+          "path": "galleryData.14.description",
+          "text": "Autumn color moves through the landscape with the quiet richness associated with New England and the broader Northeast. This traditional fine art landscape photograph turns forest, terrain, and seasonal light into restrained autumn wall art.",
+          "matches": [
+            "through the"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "galleryData.15.story",
+          "text": "Delving into autumn in new england, this work by Wayne Heim highlights see beauty in simplicity through see beauty in simplicity and see beauty in simplicity. A powerful statement in photography. © Wayne Heim",
+          "matches": [
+            "see beauty in simplicity and see beauty in simplicity",
+            "through see beauty in simplicity"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Painterly-Fine-Art-Photography\\Facing-History\\WWII\\War\\Black-White.mjs",
+      "fieldCounts": {
+        "title": 2,
+        "description": 4,
+        "alt": 0,
+        "story": 18
+      },
+      "totalMatches": 24,
+      "severity": "Severe",
+      "examples": [
+        {
+          "field": "story",
+          "path": "galleryData.25.story",
+          "text": "The sky is louder than the guns.\n\nSmoke folds over itself, rising in dark columns that blot out distance and mercy alike. A lone figure moves through the churned sand, small against the violence overhead.\n\nThere is no shelter here — only forward.",
+          "matches": [
+            "through the"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "galleryData.42.story",
+          "text": "Someone shouts and the line suddenly rises.\n\nMen who moments ago were pressed flat into the dirt surge forward through the smoke, rifles up, boots slipping in the churned ground. The air fills with dust and shouted orders as the battlefield shifts from waiting to movement.\n\nFor a few breathless seconds, the only direction left is forward.",
+          "matches": [
+            "through the"
+          ]
+        },
+        {
+          "field": "description",
+          "path": "galleryData.44.description",
+          "text": "A black and white World War II battlefield image capturing soldiers moving cautiously through tall grass during a patrol across the landscape. The composition emphasizes the quiet tension found in many battlefield moments of the Second World War, where vigilance and awareness often mattered more than speed.\n\nPart of a broader body of WWII battle photography and war zone photography, the image blends documentary realism with a painterly atmosphere. The figures moving through the field reflect scenes from the front where soldiers advanced carefully through uncertain terrain during World War II. © Wayne Heim",
+          "matches": [
+            "through the"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "galleryData.44.story",
+          "text": "They move slowly through the tall grass, each step measured against the sound of the wind.\n\nHe pauses and glances back, eyes searching the field behind them while the man further up the line continues forward. In places like this, silence can mean safety… or something waiting just beyond the rise.\n\nFor now, the patrol moves on—quiet shadows crossing a battlefield that refuses to reveal what lies ahead.",
+          "matches": [
+            "through the"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Fine-Art-Photography\\Landscapes\\By-Theme\\Water\\Water.mjs",
+      "fieldCounts": {
+        "title": 3,
+        "description": 1,
+        "alt": 0,
+        "story": 15
+      },
+      "totalMatches": 19,
+      "severity": "Moderate",
+      "examples": [
+        {
+          "field": "story",
+          "path": "galleryData.106.story",
+          "text": "Wayne Heim's exploration of waterfall landscape photography comes alive in this piece, showcasing painterly river scenes and painterly river scenes. A testament to the truth of a moment in fine art. © Wayne Heim",
+          "matches": [
+            "painterly river scenes and painterly river scenes"
+          ]
+        },
+        {
+          "field": "title",
+          "path": "galleryData.108.title",
+          "text": "Waterfall Landscape Photography And Waterfall Landscape Photography",
+          "matches": [
+            "Waterfall Landscape Photography And Waterfall Landscape Photography"
+          ]
+        },
+        {
+          "field": "description",
+          "path": "galleryData.127.description",
+          "text": "Fall Stream - stream with little rapids flows through the Metro Parks turns moving water into traditional fine art landscape photography, with current, bank, and surrounding terrain shaping the frame. This painterly river scene creates water landscape wall art rooted in motion, reflection, and place.",
+          "matches": [
+            "through the"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "galleryData.146.story",
+          "text": "Delving into waterfall landscape photography, this work by Wayne Heim highlights painterly river scenes through waterfall landscape photography and waterfall landscape photography. A powerful statement in photography. © Wayne Heim",
+          "matches": [
+            "waterfall landscape photography and waterfall landscape photography",
+            "through waterfall landscape photography"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Fine-Art-Photography\\Landscapes\\By-Location\\International\\Iceland.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 4,
+        "alt": 0,
+        "story": 6
+      },
+      "totalMatches": 10,
+      "severity": "Moderate",
+      "examples": [
+        {
+          "field": "description",
+          "path": "galleryData.8.description",
+          "text": "Looking downriver from Gullfoss, this Iceland landscape photograph follows water as it moves through the gorge beyond the falls. The image blends Iceland waterfall photography, canyon structure, and traditional fine art landscape photography into wall art about motion, erosion, and time.",
+          "matches": [
+            "through the"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "galleryData.33.story",
+          "text": "Wayne Heim's exploration of International – Across Borders comes alive in this piece, showcasing painterly european landscapes and painterly european landscapes from Iceland. A testament to painterly european landscapes in fine art. © Wayne Heim",
+          "matches": [
+            "painterly european landscapes and painterly european landscapes"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "galleryData.35.story",
+          "text": "This image embodies painterly european landscapes and painterly european landscapes, captured by Wayne Heim in his signature style in Iceland. It reflects international landscape photography with a touch of International – Across Borders. © Wayne Heim",
+          "matches": [
+            "painterly european landscapes and painterly european landscapes"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "galleryData.42.story",
+          "text": "Wayne Heim's exploration of International – Across Borders comes alive in this piece, showcasing fantastic places and fantastic places from Iceland. A testament to fantastic places in fine art. © Wayne Heim",
+          "matches": [
+            "fantastic places and fantastic places"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Fine-Art-Photography\\Landscapes\\By-Location\\West\\Gallery.mjs",
+      "fieldCounts": {
+        "title": 1,
+        "description": 3,
+        "alt": 0,
+        "story": 6
+      },
+      "totalMatches": 10,
+      "severity": "Moderate",
+      "examples": [
+        {
+          "field": "story",
+          "path": "galleryData.8.story",
+          "text": "Delving into traditional western landscape photography, this work by Wayne Heim highlights Western skies through Western skies and western scenery wall art. A powerful statement in photography. © Wayne Heim",
+          "matches": [
+            "through Western"
+          ]
+        },
+        {
+          "field": "title",
+          "path": "galleryData.9.title",
+          "text": "Western Scenery Wall Art - Western Scenery Wall Art",
+          "matches": [
+            "Western Scenery Wall Art - Western Scenery Wall Art"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "galleryData.14.story",
+          "text": "Delving into mountain landscape photography, this work by Wayne Heim highlights painterly mountain art through mountain landscape photography and painterly mountain art. A powerful statement in photography. ",
+          "matches": [
+            "through mountain"
+          ]
+        },
+        {
+          "field": "description",
+          "path": "galleryData.16.description",
+          "text": "A peaceful river flows through the quiet Wyoming countryside, carrying stillness through the Western landscape. This traditional western landscape photograph creates wall art rooted in water, open land, and the calm atmosphere of the American West.",
+          "matches": [
+            "through the"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Fine-Art-Photography\\Transportation\\Cars.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 1,
+        "alt": 0,
+        "story": 8
+      },
+      "totalMatches": 9,
+      "severity": "Moderate",
+      "examples": [
+        {
+          "field": "story",
+          "path": "galleryData.4.story",
+          "text": "Wayne Heim's exploration of painterly classic car photos for auto lovers comes alive in this piece, showcasing timeless automotive prints and timeless automotive prints. A testament to automotive art prints in fine art. © Wayne Heim",
+          "matches": [
+            "timeless automotive prints and timeless automotive prints"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "galleryData.17.story",
+          "text": "Delving into route 66 art, this work by Wayne Heim highlights classic car art prints for enthusiasts through route 66 car photography prints and route 66 car photography prints. A powerful statement in photography. © Wayne Heim",
+          "matches": [
+            "through route"
+          ]
+        },
+        {
+          "field": "description",
+          "path": "galleryData.20.description",
+          "text": "A view through the driver's window reveals the center console gear shift, turning an interior detail into automotive fine art. This classic car photograph creates wall art rooted in cockpit design, mechanical touch, and the intimate experience of vintage driving.",
+          "matches": [
+            "through the"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "galleryData.36.story",
+          "text": "Delving into route 66 art, this work by Wayne Heim highlights classic car photography through route 66 art and route 66 art. A powerful statement in photography. © Wayne Heim",
+          "matches": [
+            "through route"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Painterly-Fine-Art-Photography\\Transportation\\Trains-Black-White.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 0,
+        "alt": 0,
+        "story": 9
+      },
+      "totalMatches": 9,
+      "severity": "Moderate",
+      "examples": [
+        {
+          "field": "story",
+          "path": "galleryData.7.story",
+          "text": "Delving into steam engine art, this work by Wayne Heim highlights steam engine wall art for collectors through steam engine wall art for collectors and steam engine wall art for collectors. A powerful statement in photography. © Wayne Heim",
+          "matches": [
+            "steam engine wall art for collectors and steam engine wall art for collectors",
+            "through steam engine wall art for collectors"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "galleryData.15.story",
+          "text": "Wayne Heim's exploration of steam engine wall art for collectors comes alive in this piece, showcasing steam engine wall art for collectors and steam engine wall art for collectors. A testament to steam engine art in fine art. © Wayne Heim",
+          "matches": [
+            "steam engine wall art for collectors and steam engine wall art for collectors"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "galleryData.16.story",
+          "text": "Delving into vintage train photography for man cave, this work by Wayne Heim highlights steam engine photography through steam engine wall art for collectors and steam engine photography. A powerful statement in photography. © Wayne Heim",
+          "matches": [
+            "through steam engine"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "galleryData.17.story",
+          "text": "Delving into steam engine wall art for collectors, this work by Wayne Heim highlights vintage train photography for man cave through steam engine wall art for collectors and steam engine art. A powerful statement in photography. © Wayne Heim",
+          "matches": [
+            "through steam engine"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Fine-Art-Photography\\Landscapes\\By-Theme\\Sunsets\\Sunsets.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 0,
+        "alt": 0,
+        "story": 8
+      },
+      "totalMatches": 8,
+      "severity": "Moderate",
+      "examples": [
+        {
+          "field": "story",
+          "path": "galleryData.2.story",
+          "text": "Wayne Heim's exploration of sunset landscape photography comes alive in this piece, showcasing sunset landscape photography and sunset landscape photography. A testament to painterly sunset scenes in fine art. ",
+          "matches": [
+            "sunset landscape photography and sunset landscape photography"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "galleryData.6.story",
+          "text": "This image embodies classic sunset scenery and classic sunset scenery, captured by Wayne Heim in his signature style. It reflects classic sunset scenery with a touch of classic sunset scenery. ",
+          "matches": [
+            "classic sunset scenery and classic sunset scenery"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "galleryData.7.story",
+          "text": "Delving into sunset landscape photography, this work by Wayne Heim highlights painterly sunset scenes through sunset landscape photography and painterly sunset scenes. A powerful statement in photography.",
+          "matches": [
+            "through sunset"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "galleryData.16.story",
+          "text": "This image embodies painterly sunset scenes and painterly sunset scenes, captured by Wayne Heim in his signature style. It reflects painterly sunset scenes with a touch of sunset landscape photography. ",
+          "matches": [
+            "painterly sunset scenes and painterly sunset scenes"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Fine-Art-Photography\\Transportation\\Trains.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 0,
+        "alt": 1,
+        "story": 6
+      },
+      "totalMatches": 7,
+      "severity": "Moderate",
+      "examples": [
+        {
+          "field": "alt",
+          "path": "galleryData.7.alt",
+          "text": "Steam locomotive rounding a curve through a wooded draw, trailing thick smoke under a gray sky.",
+          "matches": [
+            "through a"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "galleryData.12.story",
+          "text": "Delving into steam engine photography, this work by Wayne Heim highlights vintage train photography for man cave through steam engine wall art for collectors and steam engine wall art for collectors. A powerful statement in photography. © Wayne Heim",
+          "matches": [
+            "steam engine wall art for collectors and steam engine wall art for collectors",
+            "through steam engine wall art for collectors"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "galleryData.13.story",
+          "text": "Delving into steam engine art, this work by Wayne Heim highlights vintage train photography through vintage train photography for man cave and vintage train photography. A powerful statement in photography. © Wayne Heim",
+          "matches": [
+            "through vintage train photography"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "galleryData.17.story",
+          "text": "This image embodies steam engine wall art for collectors and steam engine wall art for collectors, captured by Wayne Heim in his signature style. It reflects vintage train photography with a touch of vintage train photography. © Wayne Heim",
+          "matches": [
+            "steam engine wall art for collectors and steam engine wall art for collectors"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Painterly-Fine-Art-Photography\\Landscapes\\By-Location\\West\\Gallery.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 3,
+        "alt": 1,
+        "story": 3
+      },
+      "totalMatches": 7,
+      "severity": "Moderate",
+      "examples": [
+        {
+          "field": "alt",
+          "path": "galleryData.10.alt",
+          "text": "Painterly photograph of a powerful Yellowstone waterfall cascading through a forested canyon after a storm, emphasizing motion, depth, and atmospheric light.",
+          "matches": [
+            "through a"
+          ]
+        },
+        {
+          "field": "description",
+          "path": "galleryData.11.description",
+          "text": "A painterly fine art photograph of a rustic western interior, shaped by stillness rather than activity. Light enters softly through a single window, settling across worn wood, simple furniture, and a checkerboard left mid-play. The composition emphasizes pause and presence — a moment suspended between labor and return. Texture, tone, and restraint guide the eye through a space where time slows and use becomes memory. Part of Wayne Heim’s Western American fine art photography series. © Wayne Heim",
+          "matches": [
+            "through a"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "galleryData.22.story",
+          "text": "The road knows exactly where it’s going.  \nTwo ruts, worn smooth by weather and return.\n\nThe house waits without signaling — not welcoming, not refusing — just present, as if arrival was always assumed. Wind moves through the grass the same way it always has.\n\nSome places don’t call you back.  \nThey simply remain.",
+          "matches": [
+            "through the"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "galleryData.48.story",
+          "text": "The storm has not fully left.\nIt has only loosened its grip.\n\nLight slips through the break just long enough to reveal the mountain’s shape — not as spectacle, but as presence. Snow, shadow, and cloud hold the land in a moment of suspension, where nothing moves quickly and nothing is resolved. The mountain waits, unchanged by the drama passing over it.",
+          "matches": [
+            "through the"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Painterly-Fine-Art-Photography\\Facing-History\\WWII\\Portraits\\Color.mjs",
+      "fieldCounts": {
+        "title": 3,
+        "description": 0,
+        "alt": 0,
+        "story": 3
+      },
+      "totalMatches": 6,
+      "severity": "Moderate",
+      "examples": [
+        {
+          "field": "title",
+          "path": "galleryData.59.title",
+          "text": "Heroic Portraits - Heroic Portraits",
+          "matches": [
+            "Heroic Portraits - Heroic Portraits"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "galleryData.59.story",
+          "text": "Heroic Portraits - Heroic Portraits — part of Wayne Heim's",
+          "matches": [
+            "Heroic Portraits - Heroic Portraits"
+          ]
+        },
+        {
+          "field": "title",
+          "path": "galleryData.64.title",
+          "text": "Heroic Portraits - Heroic Portraits",
+          "matches": [
+            "Heroic Portraits - Heroic Portraits"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "galleryData.64.story",
+          "text": "Heroic Portraits - Heroic Portraits. Wayne Heim's approach to fine art photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the",
+          "matches": [
+            "Heroic Portraits - Heroic Portraits"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Painterly-Fine-Art-Photography\\Transportation\\Trains-Color.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 0,
+        "alt": 0,
+        "story": 6
+      },
+      "totalMatches": 6,
+      "severity": "Moderate",
+      "examples": [
+        {
+          "field": "story",
+          "path": "galleryData.1.story",
+          "text": "This image embodies vintage train photography for man cave and vintage train photography for man cave, captured by Wayne Heim in his signature style. It reflects vintage train photography for man cave with a touch of steam engine wall art for collectors. © Wayne Heim",
+          "matches": [
+            "vintage train photography for man cave and vintage train photography for man cave"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "galleryData.13.story",
+          "text": "Steaming through the hills of Pennsylvania, Old Number 16 disrupts the still of a stormy, rainy day with its rhythmic chugging and belching smoke and steam.© Wayne Heim",
+          "matches": [
+            "through the"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "galleryData.15.story",
+          "text": "Smoky #16 steam engine passes through the draw of the hillside on it's way to the next town. © Wayne Heim",
+          "matches": [
+            "through the"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "galleryData.25.story",
+          "text": "Through the rain, the black steam engine navigates through the red buildings like black thread passing through the eye of a needle. © Wayne Heim",
+          "matches": [
+            "Through the",
+            "through the"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Painterly-Fine-Art-Photography\\Facing-History\\Western-Cowboy-Portraits\\Black-White.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 5,
+        "alt": 0,
+        "story": 0
+      },
+      "totalMatches": 5,
+      "severity": "Moderate",
+      "examples": [
+        {
+          "field": "description",
+          "path": "galleryData.16.description",
+          "text": "A mounted cowboy pauses on horseback while holding a rifle upright, surveying the distant landscape under an open Western sky. The image emphasizes watchfulness and experience through the visual language of Western fine art photography, isolating the figure against the horizon to highlight posture, readiness, and the quiet vigilance of frontier life. This black and white western photography scene uses horse, horizon, and posture to connect cowboy art, frontier vigilance, and painterly Western photography.\n\n© Wayne Heim",
+          "matches": [
+            "through the"
+          ]
+        },
+        {
+          "field": "description",
+          "path": "galleryData.27.description",
+          "text": "A woman stands inside a vintage train car holding a folded ticket, pausing as she looks across the aisle for an open seat. Soft window light filters through the carriage, illuminating the quiet interior and the moment of travel between destinations. The scene extends Western Cowboy Portraits beyond the saddle, using frontier-era rail travel, memory, and black and white Western photography to deepen the story of the American West.\n\n© Wayne Heim",
+          "matches": [
+            "through the"
+          ]
+        },
+        {
+          "field": "description",
+          "path": "galleryData.36.description",
+          "text": "Morning light spills through a cabin window as a frontier man pauses with a tin coffee mug in hand. The simple interior and soft haze suggest the early hours before the day's work begins. This black and white cowboy portrait supports the Western Cowboy Portraits collection with fine art Western photography, painterly restraint, and narrative Western art rooted in frontier character.\n\n© Wayne Heim",
+          "matches": [
+            "through a"
+          ]
+        },
+        {
+          "field": "description",
+          "path": "galleryData.68.description",
+          "text": "Moving through a softly blurred backdrop of trees and light, a figure advances with a rifle held upright. The wide-brimmed hat and layered clothing shape a clear silhouette, while the shallow depth of field keeps focus on the steady expression and forward motion. This black and white cowboy portrait supports the Western Cowboy Portraits collection with fine art Western photography, painterly restraint, and narrative Western art rooted in frontier character.\n\n© Wayne Heim",
+          "matches": [
+            "through a"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Fine-Art-Photography\\Landscapes\\By-Theme\\Mountains\\Mountains.mjs",
+      "fieldCounts": {
+        "title": 1,
+        "description": 1,
+        "alt": 0,
+        "story": 3
+      },
+      "totalMatches": 5,
+      "severity": "Minor",
+      "examples": [
+        {
+          "field": "story",
+          "path": "galleryData.1.story",
+          "text": "Delving into mountain landscape photography, this work by Wayne Heim highlights painterly mountain art through mountain landscape photography and painterly mountain art. A powerful statement in photography. ",
+          "matches": [
+            "through mountain"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "galleryData.20.story",
+          "text": "This image embodies classic sunset scenery and classic sunset scenery, captured by Wayne Heim in his signature style. It reflects classic sunset scenery with a touch of classic sunset scenery. ",
+          "matches": [
+            "classic sunset scenery and classic sunset scenery"
+          ]
+        },
+        {
+          "field": "description",
+          "path": "galleryData.27.description",
+          "text": "A road winds through the Icelandic countryside, drawing the eye into a broad mountain landscape of open land and northern atmosphere. This traditional fine art photograph creates Iceland mountain wall art rooted in movement, distance, and the quiet promise of the road.",
+          "matches": [
+            "through the"
+          ]
+        },
+        {
+          "field": "title",
+          "path": "galleryData.32.title",
+          "text": "Painterly Mountain Art And Painterly Mountain Art",
+          "matches": [
+            "Painterly Mountain Art And Painterly Mountain Art"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Fine-Art-Photography\\Portraits\\Black-White.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 0,
+        "alt": 0,
+        "story": 4
+      },
+      "totalMatches": 4,
+      "severity": "Minor",
+      "examples": [
+        {
+          "field": "story",
+          "path": "galleryData.23.story",
+          "text": "Delving into wild west photography, this work by Wayne Heim highlights frontier life through Western cowboys and western cowboy art. A powerful statement in photography. © Wayne Heim",
+          "matches": [
+            "through Western"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "galleryData.33.story",
+          "text": "Delving into wild west photography, this work by Wayne Heim highlights rugged spirit through western art and western landscapes fine art. A powerful statement in photography. © Wayne Heim",
+          "matches": [
+            "through western"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "galleryData.42.story",
+          "text": "Delving into frontier life, this work by Wayne Heim highlights cowboy painting art through cowboy artwork and cowboy portraits. A powerful statement in photography. © Wayne Heim",
+          "matches": [
+            "through cowboy"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "galleryData.55.story",
+          "text": "Delving into outlaw portraits, this work by Wayne Heim highlights western landscapes fine art through cowboy portraits and painterly cowboy portraits. A powerful statement in photography. © Wayne Heim",
+          "matches": [
+            "through cowboy portraits"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Painterly-Fine-Art-Photography\\Facing-History\\Western-Cowboy-Portraits\\Color.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 1,
+        "alt": 2,
+        "story": 1
+      },
+      "totalMatches": 4,
+      "severity": "Minor",
+      "examples": [
+        {
+          "field": "story",
+          "path": "galleryData.14.story",
+          "text": "She has learned not to lean into hope too early. News arrives when it arrives, and until then there is only posture, breath, and the discipline of waiting without rehearsal. Her hands rest where they always do. Her gaze holds steady-not searching the road, not turning away from it either. This is how frontier life teaches endurance: not through action, but through the ability to remain unchanged while the future decides what shape it will take.",
+          "matches": [
+            "through the"
+          ]
+        },
+        {
+          "field": "description",
+          "path": "galleryData.67.description",
+          "text": "A cowboy moves through a haze of dust, partially obscured as he works with a rope in hand. The image belongs to the language of cowboy portraits, where work, posture, and equipment speak to frontier life without needing overt action. Rendered as fine art Western photography with the texture of painterly Western photography, it carries the quiet strength collectors look for in Western wall art.\n\n© Wayne Heim",
+          "matches": [
+            "through a"
+          ]
+        },
+        {
+          "field": "alt",
+          "path": "galleryData.112.alt",
+          "text": "A white-bearded cowboy in a dark hat pauses at the entrance of a rustic building, seen through a softly layered foreground that gives the portrait a painterly haze.",
+          "matches": [
+            "through a"
+          ]
+        },
+        {
+          "field": "alt",
+          "path": "galleryData.138.alt",
+          "text": "Through a haze of pale smoke, a bearded man in a dark hat and coat stands with his profile turned slightly upward in a somber Western portrait.",
+          "matches": [
+            "Through a"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Painterly-Fine-Art-Photography\\Landscapes\\By-Location\\Northeast\\Gallery.mjs",
+      "fieldCounts": {
+        "title": 1,
+        "description": 2,
+        "alt": 0,
+        "story": 1
+      },
+      "totalMatches": 4,
+      "severity": "Minor",
+      "examples": [
+        {
+          "field": "title",
+          "path": "galleryData.2.title",
+          "text": "See Beauty In Simplicity - See Beauty In Simplicity",
+          "matches": [
+            "See Beauty In Simplicity - See Beauty In Simplicity"
+          ]
+        },
+        {
+          "field": "description",
+          "path": "galleryData.2.description",
+          "text": "A painterly fine art landscape photograph set in the forests of New England, where a shallow stream flows over layered stone beneath autumn foliage. Rendered with deliberate restraint, the image favors texture, tonal harmony, and quiet balance over dramatic display.\n\nLight and composition guide the eye gently through the frame, allowing the scene to unfold slowly. Rather than documenting place, the work treats landscape as emotional geography—inviting reflection, patience, and stillness. Part of the New England painterly landscape photography series. © Wayne Heim",
+          "matches": [
+            "through the"
+          ]
+        },
+        {
+          "field": "description",
+          "path": "galleryData.5.description",
+          "text": "A painterly fine art landscape photograph from the Northeast, capturing a narrow wooden crossing over a forest stream, surrounded by moss, stone, and filtered woodland light. Rather than documenting scenery, this work treats place as emotional geography — shaped by restraint, balance, and quiet intention.\n\nLight, tone, and composition guide the eye gently through the frame, allowing the viewer to experience the land as a moment of permission rather than destination. The image reflects a philosophy of seeing — where simplicity, patience, and attention reveal meaning over time. Part of Wayne Heim’s Northeast painterly landscape photography series. © Wayne Heim",
+          "matches": [
+            "through the"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "galleryData.5.story",
+          "text": "The path does not insist. It offers only enough space to continue.\n\nLight settles where it can, water moves where it must, and the forest neither invites nor refuses. You pass through because the land allows it — not because it asked you to.\n\nNothing here is grand. Nothing is wasted. The moment holds because it is small, deliberate, and complete.",
+          "matches": [
+            "through because"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Fine-Art-Photography\\Architecture\\Gallery.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 0,
+        "alt": 0,
+        "story": 3
+      },
+      "totalMatches": 3,
+      "severity": "Minor",
+      "examples": [
+        {
+          "field": "story",
+          "path": "galleryData.8.story",
+          "text": "Paint flakes from the wall, but the color still holds. Nets are folded, waiting for hands. The water moves just enough to rock the boat, tied off and patient. Morning sun leans in through the trees, lighting the kind of corner that belongs to no one in particular, yet feels like home.",
+          "matches": [
+            "through the"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "galleryData.9.story",
+          "text": "Sun slips through the chinks in the logs, catching the colors of the quilt. A cradle waits in the corner, still as the boards beneath it. Outside, you hear the low murmur of wind through the trees, the faint creak of the porch. Everything here is worn but steady — a room meant for rest, and for keeping close what matters most.",
+          "matches": [
+            "through the",
+            "through the"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Fine-Art-Photography\\Landscapes\\By-Theme\\Color\\Color.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 3,
+        "alt": 0,
+        "story": 0
+      },
+      "totalMatches": 3,
+      "severity": "Minor",
+      "examples": [
+        {
+          "field": "description",
+          "path": "galleryData.8.description",
+          "text": "Morning light filters through a Hocking Hills landscape, where trees, rock, and color gather into a quiet regional scene. This traditional fine art landscape photograph creates color wall art rooted in Ohio woodland atmosphere and the subtle beauty of natural light.",
+          "matches": [
+            "through a"
+          ]
+        },
+        {
+          "field": "description",
+          "path": "galleryData.26.description",
+          "text": "A Wyoming road bends through the landscape, inviting the viewer to wonder what waits beyond the curve. This traditional color landscape photograph creates Western wall art rooted in movement, road, distance, and the quiet pull of open country.",
+          "matches": [
+            "through the"
+          ]
+        },
+        {
+          "field": "description",
+          "path": "galleryData.27.description",
+          "text": "A peaceful river flows through the quiet Wyoming countryside, carrying stillness through the Western landscape. This traditional color landscape photograph creates wall art rooted in water, open land, and the calm atmosphere of the American West.",
+          "matches": [
+            "through the"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Painterly-Fine-Art-Photography\\Facing-History\\WWII\\Machines\\Black-White.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 2,
+        "alt": 1,
+        "story": 0
+      },
+      "totalMatches": 3,
+      "severity": "Minor",
+      "examples": [
+        {
+          "field": "description",
+          "path": "galleryData.8.description",
+          "text": "A WWII Sherman tank advances through a snow-covered landscape, its tracks cutting through frost and winter terrain during a cold-weather military operation. Captured as a black and white WWII fine art photograph, the scene highlights the presence of armored vehicles and battlefield machinery moving through harsh environmental conditions. The stark monochrome treatment emphasizes WWII military equipment, armored tanks, and the disciplined mechanical force that defined wartime ground operations during the Second World War.\n\n© Wayne Heim",
+          "matches": [
+            "through a"
+          ]
+        },
+        {
+          "field": "alt",
+          "path": "galleryData.8.alt",
+          "text": "Sherman tank moving through a snowy landscape during a WWII winter operation, leaving tracks in the frost.",
+          "matches": [
+            "through a"
+          ]
+        },
+        {
+          "field": "description",
+          "path": "galleryData.20.description",
+          "text": "“Hitching a Ride” is a black and white WWII fine art photograph from the Men & Machines B/W collection, exploring mechanical war art through contrast and composition. A battle-ready tank passes through a rural landscape, framed by a stationary medical vehicle and distant structures. Rendered in the tonal discipline of Black & White WWII Machines and WWII Military Equipment B/W, the image emphasizes Monochrome WWII Mechanized Might while anchoring machinery within an unexpectedly quiet setting shaped by history’s greatest conflicts. © Wayne Heim",
+          "matches": [
+            "through a"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Painterly-Fine-Art-Photography\\Transportation\\Cars.mjs",
+      "fieldCounts": {
+        "title": 2,
+        "description": 0,
+        "alt": 0,
+        "story": 1
+      },
+      "totalMatches": 3,
+      "severity": "Minor",
+      "examples": [
+        {
+          "field": "title",
+          "path": "galleryData.2.title",
+          "text": "Timeless Automotive Prints - Timeless Automotive Prints",
+          "matches": [
+            "Timeless Automotive Prints - Timeless Automotive Prints"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "galleryData.3.story",
+          "text": "Delving into route 66 art, this work by Wayne Heim highlights classic car photography through classic car photography and painterly classic car photos for auto lovers. A powerful statement in photography. © Wayne Heim",
+          "matches": [
+            "through classic car"
+          ]
+        },
+        {
+          "field": "title",
+          "path": "galleryData.9.title",
+          "text": "Painterly Classic Car Photos For Auto Lovers And Painterly Classic Car Photos For Auto Lovers",
+          "matches": [
+            "Painterly Classic Car Photos For Auto Lovers And Painterly Classic Car Photos For Auto Lovers"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Other\\K4-Select-Series\\Engrained\\Engrained-Series.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 1,
+        "alt": 1,
+        "story": 1
+      },
+      "totalMatches": 3,
+      "severity": "Minor",
+      "examples": [
+        {
+          "field": "description",
+          "path": "galleryData.22.description",
+          "text": "A frontier man tends a fevered companion by lamplight, turning care, covenant, and mortality into a quiet Western interior. This Engrained Print becomes fine art wood print through the pairing of warm painterly light and natural grain, giving the scene a tactile sense of brotherhood and sacrifice.",
+          "matches": [
+            "through the"
+          ]
+        },
+        {
+          "field": "alt",
+          "path": "galleryData.34.alt",
+          "text": "Bison walking through a grassy field with the Grand Tetons rising in the background under a colorful sky.",
+          "matches": [
+            "through a"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "galleryData.40.story",
+          "text": "Boot heels planted. Hand heavy on the Colt. The kind of lean that says he isn’t waiting—he’s choosing his moment.\n\nThe warmth of the afternoon pours through the doorway, but it doesn’t soften the air. Something’s about to shift.\n\nWhatever he’s up to— you already know it ain’t good.",
+          "matches": [
+            "through the"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Other\\Stories\\Show-Test-4.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 2,
+        "alt": 0,
+        "story": 1
+      },
+      "totalMatches": 3,
+      "severity": "Minor",
+      "examples": [
+        {
+          "field": "description",
+          "path": "storyData.2.description",
+          "text": "Delve into painterly sunset scenes via this painterly sunset scenes by Wayne Heim. Highlighting sunset landscape photography through sunset landscape photography and sunset landscape photography, it's great for collectors interested in painterly sunset scenes. © Wayne Heim",
+          "matches": [
+            "sunset landscape photography and sunset landscape photography",
+            "through sunset landscape photography"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "storyData.2.story",
+          "text": "Wayne Heim's exploration of sunset landscape photography comes alive in this piece, showcasing sunset landscape photography and sunset landscape photography. A testament to painterly sunset scenes in fine art. © Wayne Heim",
+          "matches": [
+            "sunset landscape photography and sunset landscape photography"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Fine-Art-Photography\\Landscapes\\By-Location\\International\\Canada-Western.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 2,
+        "alt": 0,
+        "story": 0
+      },
+      "totalMatches": 2,
+      "severity": "Minor",
+      "examples": [
+        {
+          "field": "description",
+          "path": "galleryData.17.description",
+          "text": "A road cuts through the Canadian Rockies in black and white, becoming a visual path into the vastness of Western Canada. This traditional fine art landscape photograph uses road, mountain, and tonal contrast to suggest movement, solitude, and the long pull of Banff and Jasper country.",
+          "matches": [
+            "through the"
+          ]
+        },
+        {
+          "field": "description",
+          "path": "galleryData.28.description",
+          "text": "Morning fog sweeps across Emerald Lake, moving through the trees and water like a veil over the Canadian Rockies. This traditional fine art landscape photograph from Yoho National Park emphasizes alpine stillness, soft weather, and the emotional pull of misty mountain light.",
+          "matches": [
+            "through the"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Fine-Art-Photography\\Landscapes\\By-Location\\South\\Gallery.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 0,
+        "alt": 0,
+        "story": 2
+      },
+      "totalMatches": 2,
+      "severity": "Minor",
+      "examples": [
+        {
+          "field": "story",
+          "path": "galleryData.2.story",
+          "text": "Wayne Heim's exploration of South – Light and Legacy comes alive in this piece, showcasing traditional southern landscape photography and traditional southern landscape photography. A testament to southern landscape prints in fine art. © Wayne Heim",
+          "matches": [
+            "traditional southern landscape photography and traditional southern landscape photography"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "galleryData.4.story",
+          "text": "Wayne Heim's exploration of southern landscape prints comes alive in this piece, showcasing southern landscape prints and southern landscape prints. A testament to southern landscape prints in fine art. © Wayne Heim",
+          "matches": [
+            "southern landscape prints and southern landscape prints"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Fine-Art-Photography\\Miscellaneous\\Wildlife.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 0,
+        "alt": 0,
+        "story": 2
+      },
+      "totalMatches": 2,
+      "severity": "Minor",
+      "examples": [
+        {
+          "field": "story",
+          "path": "galleryData.11.story",
+          "text": "Delving into animal kingdom, this work by Wayne Heim highlights wildlife photography through wildlife photography and wildlife art. A powerful statement in photography. © Wayne Heim",
+          "matches": [
+            "through wildlife"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "galleryData.13.story",
+          "text": "Wayne Heim's exploration of nature's beauty comes alive in this piece, showcasing wildlife photography and wildlife photography. A testament to wild animal art in fine art. © Wayne Heim",
+          "matches": [
+            "wildlife photography and wildlife photography"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Painterly-Fine-Art-Photography\\Facing-History\\Civil-War-Portraits\\Black-White.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 1,
+        "alt": 1,
+        "story": 0
+      },
+      "totalMatches": 2,
+      "severity": "Minor",
+      "examples": [
+        {
+          "field": "description",
+          "path": "galleryData.7.description",
+          "text": "A civilian figure moves through a smoky Civil War encampment with a case in hand, carrying purpose through a military space without wearing the uniform. This painterly Civil War photograph expands the Facing History narrative beyond soldiers, creating historically themed wall art about authority, vulnerability, and the non-combatant roles that moved quietly through war.",
+          "matches": [
+            "through a"
+          ]
+        },
+        {
+          "field": "alt",
+          "path": "galleryData.7.alt",
+          "text": "Painterly Civil War portrait of a civilian man in a top hat walking through a smoky military encampment carrying a case, rendered in soft sepia tones.",
+          "matches": [
+            "through a"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Painterly-Fine-Art-Photography\\Facing-History\\Civil-War-Portraits\\Color.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 1,
+        "alt": 0,
+        "story": 1
+      },
+      "totalMatches": 2,
+      "severity": "Minor",
+      "examples": [
+        {
+          "field": "story",
+          "path": "galleryData.1.story",
+          "text": "The air tastes of iron and damp earth. Hooves press forward into a world already disappearing, smoke folding the distance into something close and uncertain. I do not look back.\n\nOrders ride heavier than the saber at my side. Behind me, shapes blur—flag, men, the memory of a line that held. Ahead, only gray and the sound of breathing beneath me.\n\nHistory does not announce itself. It advances quietly, step by measured step, carried through the smoke by men who know the cost.",
+          "matches": [
+            "through the"
+          ]
+        },
+        {
+          "field": "description",
+          "path": "galleryData.16.description",
+          "text": "A well-dressed civilian moves through a Union encampment with travel bag in hand, carrying purpose instead of a rifle. This painterly Civil War photograph expands the story beyond battle, creating fine art around mobility, commerce, and civilian presence during the American Civil War.\n\n© Wayne Heim",
+          "matches": [
+            "through a"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Painterly-Fine-Art-Photography\\Facing-History\\Roaring-20s-Portraits\\Black-White.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 1,
+        "alt": 1,
+        "story": 0
+      },
+      "totalMatches": 2,
+      "severity": "Minor",
+      "examples": [
+        {
+          "field": "description",
+          "path": "galleryData.24.description",
+          "text": "A black and white Roaring 20s fine art portrait of a sharply dressed man speaking through a handheld megaphone against a stone wall. This 1920s fine art photography piece supports Roaring 20s portraits authority through public gesture, Jazz Age styling, and strong historical portrait structure. As roaring 20s photography, it creates a roaring twenties art print about voice, persuasion, and the need to be heard.\n\n© Wayne Heim",
+          "matches": [
+            "through a"
+          ]
+        },
+        {
+          "field": "alt",
+          "path": "galleryData.24.alt",
+          "text": "1920s man in suit and hat speaking through a megaphone against a stone wall in a black and white portrait.",
+          "matches": [
+            "through a"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Painterly-Fine-Art-Photography\\Landscapes\\By-Location\\Midwest\\Gallery.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 0,
+        "alt": 0,
+        "story": 2
+      },
+      "totalMatches": 2,
+      "severity": "Minor",
+      "examples": [
+        {
+          "field": "story",
+          "path": "galleryData.2.story",
+          "text": "The light doesn’t announce itself. It slips in quietly, threading its way through the trees, finding the path only after everything else has already gone still.\n\nThis is not a destination so much as a passage — a moment when the woods briefly allow you to pass through, if you’re willing to slow down enough to notice.\n\nNothing here asks for urgency. The path exists whether you walk it or not.",
+          "matches": [
+            "through the"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "galleryData.15.story",
+          "text": "It doesn’t arrive all at once.\n\nLight breaks through the weight of the sky in fragments — not as revelation, but as permission. The clouds hold their shape, heavy and unresolved, while the glow behind them reminds the land that even storms are layered, never singular.\n\nThis is not a sky in motion. It is a sky deciding.",
+          "matches": [
+            "through the"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Other\\Archive\\Archive.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 2,
+        "alt": 0,
+        "story": 0
+      },
+      "totalMatches": 2,
+      "severity": "Minor",
+      "examples": [
+        {
+          "field": "description",
+          "path": "galleryData.3.description",
+          "text": "Witness living history art in Wayne Heim's reenactment portraits. This image features historic reenactor prints with reenactment portraits and reenactment portraits, ideal for admirers of living history art. © Wayne Heim",
+          "matches": [
+            "reenactment portraits and reenactment portraits"
+          ]
+        },
+        {
+          "field": "description",
+          "path": "galleryData.32.description",
+          "text": "A rifle is drawn to shoulder as a man narrows his focus, sighting down the barrel with controlled stillness. Dust and light drift through the frame, softening the edges while holding attention on the act of aim. This Native American fine art photography portrait reflects heritage and tradition within the spirit of the American West. \n\n© Wayne Heim",
+          "matches": [
+            "through the"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Other\\Stories\\Outlaws-and-Bandits.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 0,
+        "alt": 1,
+        "story": 1
+      },
+      "totalMatches": 2,
+      "severity": "Minor",
+      "examples": [
+        {
+          "field": "alt",
+          "path": "storyData.2.alt",
+          "text": "Four mounted riders charging through the dust, guns drawn, in a dramatic outlaw pursuit across the dry Western landscape. Painterly fine art photograph by Wayne Heim.",
+          "matches": [
+            "through the"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "storyData.6.story",
+          "text": "Boot heels planted. Hand heavy on the Colt. The kind of lean that says he isn’t waiting—he’s choosing his moment.\n\nThe warmth of the afternoon pours through the doorway, but it doesn’t soften the air. Something’s about to shift.\n\nWhatever he’s up to— you already know it ain’t good.",
+          "matches": [
+            "through the"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Other\\Stories\\Test-show-v7.mjs",
+      "fieldCounts": {
+        "title": 1,
+        "description": 0,
+        "alt": 0,
+        "story": 1
+      },
+      "totalMatches": 2,
+      "severity": "Minor",
+      "examples": [
+        {
+          "field": "title",
+          "path": "storyData.1.title",
+          "text": "Blue Ridge Painterly Landscapes And Blue Ridge Painterly Landscapes",
+          "matches": [
+            "Blue Ridge Painterly Landscapes And Blue Ridge Painterly Landscapes"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "storyData.2.story",
+          "text": "This image embodies southern landscape photography and southern landscape photography, captured by Wayne Heim in his signature style. It reflects blue ridge painterly landscapes with a touch of southern landscape photography. © Wayne Heim",
+          "matches": [
+            "southern landscape photography and southern landscape photography"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Other\\Stories\\The-Cost-of-the-Journey.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 0,
+        "alt": 0,
+        "story": 2
+      },
+      "totalMatches": 2,
+      "severity": "Minor",
+      "examples": [
+        {
+          "field": "story",
+          "path": "storyData.3.story",
+          "text": "They moved like ghosts through the broken hills, each man reading the land in his own practiced way. A lifted hand, a shift of weight, a glance toward the treeline—signals shaped by hard miles and harder winters. \n\nFrom atop the sandstone ridge, the lookout caught the faintest motion in the distance, something just out of place. Below him, the others waited, breath slowed, senses sharpened. Whatever was coming, they’d face it together, the ridge at their back and the open world before them.",
+          "matches": [
+            "through the"
+          ]
+        },
+        {
+          "field": "story",
+          "path": "storyData.11.story",
+          "text": "“$3 for a whiskey?” is a painterly Western portrait alive with color, shadow, and saloon intrigue. A grizzled cowboy lifts his glass, eyes cutting through the haze and bokeh as he ponders the price of pleasure on a long frontier night. A tribute to hard-won comforts and the choices they demand, captured with cinematic style and wry humor.\n© Wayne Heim",
+          "matches": [
+            "through the"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Other\\Stories\\Western-Living-History.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 1,
+        "alt": 0,
+        "story": 1
+      },
+      "totalMatches": 2,
+      "severity": "Minor",
+      "examples": [
+        {
+          "field": "story",
+          "path": "storyData.8.story",
+          "text": "Delving into wild west photography, this work by Wayne Heim highlights western art through western fine art and western landscapes fine art. A powerful statement in photography. © Wayne Heim",
+          "matches": [
+            "through western"
+          ]
+        },
+        {
+          "field": "description",
+          "path": "storyMeta.description",
+          "text": "A cinematic journey through the people and passion keeping the spirit of the American West alive. Photographer Wayne Heim captures modern reenactors and living historians who preserve the grit, determination, and humanity behind the legend of the frontier.",
+          "matches": [
+            "through the"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Fine-Art-Photography\\Landscapes\\By-Location\\International\\Newfoundland.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 0,
+        "alt": 0,
+        "story": 1
+      },
+      "totalMatches": 1,
+      "severity": "Minor",
+      "examples": [
+        {
+          "field": "story",
+          "path": "galleryData.1.story",
+          "text": "This image embodies international landscape photography and international landscape photography, captured by Wayne Heim in his signature style in Newfoundland. It reflects painterly european landscapes with a touch of international landscape photography. © Wayne Heim",
+          "matches": [
+            "international landscape photography and international landscape photography"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Fine-Art-Photography\\Landscapes\\By-Location\\International\\The-Faroe-Islands.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 1,
+        "alt": 0,
+        "story": 0
+      },
+      "totalMatches": 1,
+      "severity": "Minor",
+      "examples": [
+        {
+          "field": "description",
+          "path": "galleryData.49.description",
+          "text": "A Faroe stream moves through the island landscape, adding water, line, and quiet motion to the rugged terrain. This traditional fine art landscape photograph creates Faroe Islands wall art from stream, slope, and North Atlantic weather.",
+          "matches": [
+            "through the"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Fine-Art-Photography\\Landscapes\\By-Theme\\Black-White\\Black-White.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 1,
+        "alt": 0,
+        "story": 0
+      },
+      "totalMatches": 1,
+      "severity": "Minor",
+      "examples": [
+        {
+          "field": "description",
+          "path": "galleryData.16.description",
+          "text": "The Grand Tetons peek through a barn doorway near Jackson Hole, Wyoming, turning shadowed structure into a frame for mountain distance. This black and white landscape photograph creates wall art rooted in rustic architecture, light, and the quiet reveal of place.",
+          "matches": [
+            "through a"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Painterly-Fine-Art-Photography\\Facing-History\\WWII\\Machines\\Color.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 0,
+        "alt": 0,
+        "story": 1
+      },
+      "totalMatches": 1,
+      "severity": "Minor",
+      "examples": [
+        {
+          "field": "story",
+          "path": "galleryData.42.story",
+          "text": "The engine is off, but no one relaxes.\n\nThrough the windshield, the men sit in a loose line before the tent, boots planted, rifles within reach. Conversation drifts, pauses, resumes — not about what’s coming, but about small things that keep the air steady. The frame of the vehicle turns the moment into something observed rather than entered.\n\nFrom this side of the glass, war feels distant. On the other side, they know how quickly distance disappears.",
+          "matches": [
+            "Through the"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Painterly-Fine-Art-Photography\\Landscapes\\By-Location\\International\\Gallery.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 0,
+        "alt": 1,
+        "story": 0
+      },
+      "totalMatches": 1,
+      "severity": "Minor",
+      "examples": [
+        {
+          "field": "alt",
+          "path": "galleryData.7.alt",
+          "text": "Painterly international landscape photograph of a glacial stream leading through a wide valley toward a distant waterfall under evening light, rendered in a cinematic European landscape art style.",
+          "matches": [
+            "through a"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Painterly-Fine-Art-Photography\\Landscapes\\By-Theme\\Mountains\\Mountains.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 1,
+        "alt": 0,
+        "story": 0
+      },
+      "totalMatches": 1,
+      "severity": "Minor",
+      "examples": [
+        {
+          "field": "description",
+          "path": "galleryData.3.description",
+          "text": "A painterly fine art photograph set in the Mountain West, where a lone bison moves through the foreground beneath the Grand Tetons. Rather than emphasizing spectacle, this image is shaped by weight, scale, and restraint. The relationship between animal and landscape becomes a measure of endurance — an ethereal western landscape where the mountains feel temporary and the subject feels permanent. Light, tone, and composition are controlled to slow the viewer, allowing the image to be felt layer by layer rather than consumed at a glance. © Wayne Heim",
+          "matches": [
+            "through the"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Galleries\\Painterly-Fine-Art-Photography\\Landscapes\\By-Theme\\Sunsets\\Sunsets.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 1,
+        "alt": 0,
+        "story": 0
+      },
+      "totalMatches": 1,
+      "severity": "Minor",
+      "examples": [
+        {
+          "field": "description",
+          "path": "galleryData.3.description",
+          "text": "A painterly fine art photograph set in the Mountain West, where a lone bison moves through the foreground beneath the Grand Tetons. Rather than emphasizing spectacle, this image is shaped by weight, scale, and restraint. The relationship between animal and landscape becomes a measure of endurance — an ethereal western landscape where the mountains feel temporary and the subject feels permanent. Light, tone, and composition are controlled to slow the viewer, allowing the image to be felt layer by layer rather than consumed at a glance. © Wayne Heim",
+          "matches": [
+            "through the"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Other\\Photo-Shoots\\Trains\\Trains26.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 1,
+        "alt": 0,
+        "story": 0
+      },
+      "totalMatches": 1,
+      "severity": "Minor",
+      "examples": [
+        {
+          "field": "description",
+          "path": "galleryData.7.description",
+          "text": "Smoky #16 steam engine passes through the draw of the hillside on it's way to the next town. © Wayne Heim",
+          "matches": [
+            "through the"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Other\\Stories\\Builder-Test-v3.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 0,
+        "alt": 0,
+        "story": 1
+      },
+      "totalMatches": 1,
+      "severity": "Minor",
+      "examples": [
+        {
+          "field": "story",
+          "path": "storyData.1.story",
+          "text": "Delving into mountain landscape photography, this work by Wayne Heim highlights painterly mountain art through mountain landscape photography and painterly mountain art. A powerful statement in photography. © Wayne Heim",
+          "matches": [
+            "through mountain"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Other\\Stories\\Lore-and-Legacy-Chapter-3.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 0,
+        "alt": 0,
+        "story": 1
+      },
+      "totalMatches": 1,
+      "severity": "Minor",
+      "examples": [
+        {
+          "field": "story",
+          "path": "storyData.9.story",
+          "text": "Boot heels planted. Hand heavy on the Colt. The kind of lean that says he isn’t waiting—he’s choosing his moment.\n\nThe warmth of the afternoon pours through the doorway, but it doesn’t soften the air. Something’s about to shift.\n\nWhatever he’s up to— you already know it ain’t good.",
+          "matches": [
+            "through the"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Other\\Stories\\Lore-and-Legacy-Show.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 0,
+        "alt": 0,
+        "story": 1
+      },
+      "totalMatches": 1,
+      "severity": "Minor",
+      "examples": [
+        {
+          "field": "story",
+          "path": "storyData.24.story",
+          "text": "Boot heels planted. Hand heavy on the Colt. The kind of lean that says he isn’t waiting—he’s choosing his moment.\n\nThe warmth of the afternoon pours through the doorway, but it doesn’t soften the air. Something’s about to shift.\n\nWhatever he’s up to— you already know it ain’t good.",
+          "matches": [
+            "through the"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "src\\data\\Other\\Stories\\Test-show-v5.mjs",
+      "fieldCounts": {
+        "title": 0,
+        "description": 0,
+        "alt": 0,
+        "story": 1
+      },
+      "totalMatches": 1,
+      "severity": "Minor",
+      "examples": [
+        {
+          "field": "story",
+          "path": "storyData.1.story",
+          "text": "Delving into mountain landscape photography, this work by Wayne Heim highlights painterly mountain art through mountain landscape photography and painterly mountain art. A powerful statement in photography. © Wayne Heim",
+          "matches": [
+            "through mountain"
+          ]
+        }
+      ]
+    }
+  ]
+}

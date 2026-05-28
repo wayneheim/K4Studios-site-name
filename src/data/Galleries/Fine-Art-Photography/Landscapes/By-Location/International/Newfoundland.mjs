@@ -32,7 +32,7 @@ export const galleryData = [
       "fantastic places",
       "international landscape photography"
     ],
-    "story": "This image embodies international landscape photography and international landscape photography, captured by Wayne Heim in his signature style in Newfoundland. It reflects painterly european landscapes with a touch of international landscape photography. © Wayne Heim",
+    "story": "This image embodies international landscape photography, captured by Wayne Heim in his signature style in Newfoundland. It reflects painterly european landscapes with a touch of international landscape photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],

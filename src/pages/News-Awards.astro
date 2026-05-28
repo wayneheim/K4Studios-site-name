@@ -29,6 +29,8 @@ import '@/styles/global.css';
 
 const sectionPath = "/News-Awards";
 const pagePath = "/News-Awards";
+const canonicalPageUrl = `https://www.k4studios.com${pagePath}`;
+const artOfTheWestFeatureUrl = "https://aotw.com/2026/02/painterly-photography/";
 // Use painterly galleries for sidebar images
 const gallerySectionPath = "/Galleries/Painterly-Fine-Art-Photography";
 const meta = getLandingMeta(pagePath);
@@ -89,8 +91,45 @@ const structuredData = getStructuredData({
   data: {
     headline: `${landingWestern.title} – ${landingWestern.subtitle}`,
     description: "Awards, juried exhibitions, and professional recognition for K4 Studios fine art photography by Wayne Heim.",
-    url: `https://k4studios.com${pagePath}`,
+    url: canonicalPageUrl,
+    articleSection: "News, Awards, and Press Recognition",
     keywords: landingKeywords,
+    about: [
+      { "@type": "Person", "@id": "https://www.k4studios.com/#person", name: "Wayne Heim" },
+      { "@type": "Thing", name: "painterly Western photography" },
+      { "@type": "Thing", name: "narrative Western art" },
+      { "@type": "Thing", name: "One-Image Movie" },
+      { "@type": "Thing", name: "historically themed photography" }
+    ],
+    mentions: [
+      {
+        "@type": "Organization",
+        "@id": "https://aotw.com/#organization",
+        name: "Art of the West",
+        url: "https://aotw.com/"
+      },
+      { "@type": "Occupation", name: "Medical Illustrator" },
+      { "@type": "Thing", name: "cinematic storytelling" }
+    ],
+    citation: artOfTheWestFeatureUrl,
+    subjectOf: {
+      "@type": "Article",
+      "@id": `${artOfTheWestFeatureUrl}#article`,
+      name: "Art of the West feature on Wayne Heim's painterly photography",
+      url: artOfTheWestFeatureUrl,
+      publisher: {
+        "@type": "Organization",
+        "@id": "https://aotw.com/#organization",
+        name: "Art of the West",
+        url: "https://aotw.com/"
+      },
+      about: [
+        { "@type": "Person", "@id": "https://www.k4studios.com/#person", name: "Wayne Heim" },
+        { "@type": "Thing", name: "painterly Western photography" },
+        { "@type": "Thing", name: "narrative fine art photography" },
+        { "@type": "Thing", name: "One-Image Movie" }
+      ]
+    },
     copyrightNotice: "© Wayne Heim"
   },
   images: featheredImages,
@@ -139,30 +178,45 @@ const structuredData = getStructuredData({
       <div class="text-column">
         <section class="story-section">
           {westernStorySections.map((section) => (
-            <article class="story-block">
-              {section.title && <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />}
-              {section.subhead && <h3 class="slide-in-left" set:html={autoLinkKeywordsInText(section.subhead, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />}
-              {section.tagline && <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInText(section.tagline, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />}
-              {section.paragraphs?.map((para) => (
-                <p class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
-              ))}
-              {section.awards && section.awards.length > 0 && (
-                <ul class="awards-list">
-                  {section.awards.map((award) => (
-                    <li class="reveal-on-scroll">
-                      <strong>{award.title}</strong>: <span set:html={autoLinkKeywordsInText(award.note, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
-                    </li>
-                  ))}
-                </ul>
+            <Fragment>
+              {section.subhead === "Press & Related Resources" && (
+                /* Future press cluster candidates: /Press/Art-of-the-West, /Press/Western-Art-and-Architecture */
+                <section class="story-block press-feature" aria-labelledby="art-of-the-west-feature">
+                  <h2 id="art-of-the-west-feature" class="slide-in-left">Featured in Art of the West</h2>
+                  <p class="reveal-on-scroll">
+                    <a href={artOfTheWestFeatureUrl} target="_blank" rel="noopener">Art of the West</a> featured Wayne Heim's painterly Western photography in an editorial context attentive to process, authorship, and narrative structure. The feature places the work within a broader Western art conversation where photography, painterly finish, and cinematic storytelling meet without losing historical restraint.
+                  </p>
+                  <p class="reveal-on-scroll">
+                    The article also notes the unusual path behind the work: Heim's background in medical illustration, with its discipline of visual clarity and anatomical precision, carried into narrative Western fine art photography. That crossover helps explain the One-Image Movie approach, where a single historically themed photograph is built to hold character, consequence, and an unresolved story within one frame.
+                  </p>
+                </section>
               )}
-              {section.list && section.list.length > 0 && (
-                <ul>
-                  {section.list.map((item) => (
-                    <li class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
-                  ))}
-                </ul>
-              )}
-            </article>
+
+              <article class="story-block">
+                {section.title && <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />}
+                {section.subhead && <h3 class="slide-in-left" set:html={autoLinkKeywordsInText(section.subhead, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />}
+                {section.tagline && <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInText(section.tagline, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />}
+                {section.paragraphs?.map((para) => (
+                  <p class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
+                ))}
+                {section.awards && section.awards.length > 0 && (
+                  <ul class="awards-list">
+                    {section.awards.map((award) => (
+                      <li class="reveal-on-scroll">
+                        <strong>{award.title}</strong>: <span set:html={autoLinkKeywordsInText(award.note, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                {section.list && section.list.length > 0 && (
+                  <ul>
+                    {section.list.map((item) => (
+                      <li class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
+                    ))}
+                  </ul>
+                )}
+              </article>
+            </Fragment>
           ))}
         </section>
 

@@ -45,7 +45,7 @@ export const galleryData = [
       "cowboy",
       "midwest landscape photography"
     ],
-    "story": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography and midwest landscape photography. A testament to midwest landscape photography in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography. A testament to midwest landscape photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -307,7 +307,7 @@ export const galleryData = [
       "cowboy",
       "midwest landscape photography"
     ],
-    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography through midwest landscape photography and midwest landscape photography. A powerful statement in photography. © Wayne Heim",
+    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -337,7 +337,7 @@ export const galleryData = [
       "cowboy",
       "midwest landscape photography"
     ],
-    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography through midwest landscape photography and midwest landscape photography. A powerful statement in photography. © Wayne Heim",
+    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -346,7 +346,7 @@ export const galleryData = [
   },
   {
     "id": "i-N3ShZHB",
-    "title": "Midwest Landscape Photography - Midwest Landscape Photography",
+    "title": "Midwest Landscape Photography",
     "description": "A winter Midwest landscape settles into stillness, with snow and bare trees giving the scene a restrained seasonal mood. This traditional fine art landscape photograph creates Ohio winter wall art rooted in quiet weather, muted light, and the emotional geography of familiar land.",
     "alt": "Fine art landscape photography capturing Black River West Falls in Elyria, Ohio.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Winter-2021/Winter-202021/i-N3ShZHB/2/LnCtQQBh79Lzdnns9fFPcQH3LzQz5bFZZVkDbWr5n/XL/_ANA0655-Edit-XL.jpg",
@@ -367,7 +367,7 @@ export const galleryData = [
       "cowboy",
       "midwest landscape photography"
     ],
-    "story": "This image embodies midwest landscape photography and midwest landscape photography, captured by Wayne Heim in his signature style. It reflects midwest landscape photography with a touch of midwest landscape photography. © Wayne Heim",
+    "story": "This image embodies midwest landscape photography, captured by Wayne Heim in his signature style. It reflects midwest landscape photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -397,7 +397,7 @@ export const galleryData = [
       "cowboy",
       "midwest landscape photography"
     ],
-    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography through midwest landscape photography and midwest landscape photography. A powerful statement in photography. © Wayne Heim",
+    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -427,7 +427,7 @@ export const galleryData = [
       "cowboy",
       "midwest landscape photography"
     ],
-    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography through midwest landscape photography and midwest landscape photography. A powerful statement in photography. © Wayne Heim",
+    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -457,7 +457,7 @@ export const galleryData = [
       "cowboy",
       "midwest landscape photography"
     ],
-    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography through midwest landscape photography and midwest landscape photography. A powerful statement in photography. © Wayne Heim",
+    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -487,7 +487,7 @@ export const galleryData = [
       "cowboy",
       "midwest landscape photography"
     ],
-    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography through midwest landscape photography and midwest landscape photography. A powerful statement in photography. © Wayne Heim",
+    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -517,7 +517,7 @@ export const galleryData = [
       "cowboy",
       "midwest landscape photography"
     ],
-    "story": "This image embodies midwest landscape photography and midwest landscape photography, captured by Wayne Heim in his signature style. It reflects midwest landscape photography with a touch of midwest landscape photography. © Wayne Heim",
+    "story": "This image embodies midwest landscape photography, captured by Wayne Heim in his signature style. It reflects midwest landscape photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -547,7 +547,7 @@ export const galleryData = [
       "cowboy",
       "midwest landscape photography"
     ],
-    "story": "This image embodies midwest landscape photography and midwest landscape photography, captured by Wayne Heim in his signature style. It reflects midwest landscape photography with a touch of midwest landscape photography. © Wayne Heim",
+    "story": "This image embodies midwest landscape photography, captured by Wayne Heim in his signature style. It reflects midwest landscape photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -556,7 +556,7 @@ export const galleryData = [
   },
   {
     "id": "i-2d2fgNW",
-    "title": "Midwest Landscape Photography - Midwest Landscape Photography",
+    "title": "Midwest Landscape Photography",
     "description": "A Hocking Hills landscape becomes a study in Midwest natural form, with rock, forest, and light creating a quiet regional atmosphere. This traditional fine art landscape photograph creates Ohio wall art rooted in geology, woodland silence, and the character of place.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-2d2fgNW/3/MjRrkkznf9LbBPX2wJ2qSg4H24PqJgpCLwRkg3dzN/XL/_ANA0936_tonemapped-XL.jpg",
@@ -577,7 +577,7 @@ export const galleryData = [
       "cowboy",
       "midwest landscape photography"
     ],
-    "story": "This image embodies midwest landscape photography and midwest landscape photography, captured by Wayne Heim in his signature style. It reflects midwest landscape photography with a touch of midwest landscape photography. © Wayne Heim",
+    "story": "This image embodies midwest landscape photography, captured by Wayne Heim in his signature style. It reflects midwest landscape photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -607,7 +607,7 @@ export const galleryData = [
       "cowboy",
       "midwest landscape photography"
     ],
-    "story": "This image embodies midwest landscape photography and midwest landscape photography, captured by Wayne Heim in his signature style. It reflects midwest landscape photography with a touch of midwest landscape photography. © Wayne Heim",
+    "story": "This image embodies midwest landscape photography, captured by Wayne Heim in his signature style. It reflects midwest landscape photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -637,7 +637,7 @@ export const galleryData = [
       "cowboy",
       "midwest landscape photography"
     ],
-    "story": "This image embodies midwest landscape photography and midwest landscape photography, captured by Wayne Heim in his signature style. It reflects midwest landscape photography with a touch of midwest landscape photography. © Wayne Heim",
+    "story": "This image embodies midwest landscape photography, captured by Wayne Heim in his signature style. It reflects midwest landscape photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -667,7 +667,7 @@ export const galleryData = [
       "cowboy",
       "midwest landscape photography"
     ],
-    "story": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography and midwest landscape photography. A testament to midwest landscape photography in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography. A testament to midwest landscape photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -726,7 +726,7 @@ export const galleryData = [
       "cowboy",
       "midwest landscape photography"
     ],
-    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography through midwest landscape photography and midwest landscape photography. A powerful statement in photography. © Wayne Heim",
+    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -756,7 +756,7 @@ export const galleryData = [
       "cowboy",
       "midwest landscape photography"
     ],
-    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography through midwest landscape photography and midwest landscape photography. A powerful statement in photography. © Wayne Heim",
+    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -786,7 +786,7 @@ export const galleryData = [
       "cowboy",
       "midwest landscape photography"
     ],
-    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography through midwest landscape photography and midwest landscape photography. A powerful statement in photography. © Wayne Heim",
+    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -795,7 +795,7 @@ export const galleryData = [
   },
   {
     "id": "i-kqQ26Rw",
-    "title": "Midwest Landscape Photography - Midwest Landscape Photography",
+    "title": "Midwest Landscape Photography",
     "description": "A Midwestern landscape is framed through the textures of Ohio woods and stone, turning familiar regional terrain into fine art. This traditional landscape photograph creates wall art rooted in Hocking Hills atmosphere, natural structure, and quiet seasonal light.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-kqQ26Rw/1/KQJFznnbbJjrLm6s9nvFdjJvvZNJHPn8bMxgtK9Mh/XL/_ANA1161-XL.jpg",
@@ -816,7 +816,7 @@ export const galleryData = [
       "cowboy",
       "midwest landscape photography"
     ],
-    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography through midwest landscape photography and midwest landscape photography. A powerful statement in photography. © Wayne Heim",
+    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -846,7 +846,7 @@ export const galleryData = [
       "cowboy",
       "midwest landscape photography"
     ],
-    "story": "This image embodies midwest landscape photography and midwest landscape photography, captured by Wayne Heim in his signature style. It reflects midwest landscape photography with a touch of midwest landscape photography. © Wayne Heim",
+    "story": "This image embodies midwest landscape photography, captured by Wayne Heim in his signature style. It reflects midwest landscape photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -876,7 +876,7 @@ export const galleryData = [
       "cowboy",
       "midwest landscape photography"
     ],
-    "story": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography and midwest landscape photography. A testament to midwest landscape photography in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography. A testament to midwest landscape photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -935,7 +935,7 @@ export const galleryData = [
       "cowboy",
       "midwest landscape photography"
     ],
-    "story": "This image embodies midwest landscape photography and midwest landscape photography, captured by Wayne Heim in his signature style. It reflects midwest landscape photography with a touch of midwest landscape photography. © Wayne Heim",
+    "story": "This image embodies midwest landscape photography, captured by Wayne Heim in his signature style. It reflects midwest landscape photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -965,7 +965,7 @@ export const galleryData = [
       "cowboy",
       "midwest landscape photography"
     ],
-    "story": "This image embodies midwest landscape photography and midwest landscape photography, captured by Wayne Heim in his signature style. It reflects midwest landscape photography with a touch of midwest landscape photography. © Wayne Heim",
+    "story": "This image embodies midwest landscape photography, captured by Wayne Heim in his signature style. It reflects midwest landscape photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -995,7 +995,7 @@ export const galleryData = [
       "cowboy",
       "midwest landscape photography"
     ],
-    "story": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography and midwest landscape photography. A testament to midwest landscape photography in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography. A testament to midwest landscape photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1025,7 +1025,7 @@ export const galleryData = [
       "cowboy",
       "midwest landscape photography"
     ],
-    "story": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography and midwest landscape photography. A testament to midwest landscape photography in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography. A testament to midwest landscape photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1055,7 +1055,7 @@ export const galleryData = [
       "cowboy",
       "midwest landscape photography"
     ],
-    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography through midwest landscape photography and midwest landscape photography. A powerful statement in photography. © Wayne Heim",
+    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1064,7 +1064,7 @@ export const galleryData = [
   },
   {
     "id": "i-9sP9Qxs",
-    "title": "Midwest Landscape Photography - Midwest Landscape Photography",
+    "title": "Midwest Landscape Photography",
     "description": "A quiet Midwestern landscape moment is shaped by land, weather, and restrained natural light. This traditional fine art landscape photograph creates regional wall art rooted in atmosphere, stillness, and the understated beauty of everyday places.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/photos/i-9sP9Qxs/0/NMnwwRKtm3NrBqPvjcJ6xGM4K39Cpq8JQcPQ5tSwn/XL/i-9sP9Qxs-XL.jpg",
@@ -1085,7 +1085,7 @@ export const galleryData = [
       "cowboy",
       "midwest landscape photography"
     ],
-    "story": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography and midwest landscape photography. A testament to midwest landscape photography in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography. A testament to midwest landscape photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1115,7 +1115,7 @@ export const galleryData = [
       "cowboy",
       "midwest landscape photography"
     ],
-    "story": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography and midwest landscape photography. A testament to midwest landscape photography in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography. A testament to midwest landscape photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1145,7 +1145,7 @@ export const galleryData = [
       "cowboy",
       "midwest landscape photography"
     ],
-    "story": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography and midwest landscape photography. A testament to midwest landscape photography in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography. A testament to midwest landscape photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1175,7 +1175,7 @@ export const galleryData = [
       "cowboy",
       "midwest landscape photography"
     ],
-    "story": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography and midwest landscape photography. A testament to midwest landscape photography in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography. A testament to midwest landscape photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1205,7 +1205,7 @@ export const galleryData = [
       "cowboy",
       "midwest landscape photography"
     ],
-    "story": "This image embodies midwest landscape photography and midwest landscape photography, captured by Wayne Heim in his signature style. It reflects midwest landscape photography with a touch of midwest landscape photography. © Wayne Heim",
+    "story": "This image embodies midwest landscape photography, captured by Wayne Heim in his signature style. It reflects midwest landscape photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1235,7 +1235,7 @@ export const galleryData = [
       "cowboy",
       "midwest landscape photography"
     ],
-    "story": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography and midwest landscape photography. A testament to midwest landscape photography in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography. A testament to midwest landscape photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1244,7 +1244,7 @@ export const galleryData = [
   },
   {
     "id": "i-kpzgc6N",
-    "title": "Midwest Landscape Photography And Midwest Landscape Photography",
+    "title": "Midwest Landscape Photography",
     "description": "A Midwestern landscape is shaped by open space, soft light, and the quiet structure of regional terrain. This traditional fine art landscape photograph creates wall art rooted in place, restraint, and the stillness that defines much of the Midwest.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-kpzgc6N/0/KjXVpFc7Fz3T84pRbVmbJv29nH2NJxfF24TJb6xs6/XL/_O1H1043-XL.jpg",
@@ -1265,7 +1265,7 @@ export const galleryData = [
       "cowboy",
       "midwest landscape photography"
     ],
-    "story": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography and midwest landscape photography. A testament to midwest landscape photography in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography. A testament to midwest landscape photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1295,7 +1295,7 @@ export const galleryData = [
       "cowboy",
       "midwest landscape photography"
     ],
-    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography through midwest landscape photography and midwest landscape photography. A powerful statement in photography. © Wayne Heim",
+    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1325,7 +1325,7 @@ export const galleryData = [
       "cowboy",
       "midwest landscape photography"
     ],
-    "story": "This image embodies midwest landscape photography and midwest landscape photography, captured by Wayne Heim in his signature style. It reflects midwest landscape photography with a touch of midwest landscape photography. © Wayne Heim",
+    "story": "This image embodies midwest landscape photography, captured by Wayne Heim in his signature style. It reflects midwest landscape photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1355,7 +1355,7 @@ export const galleryData = [
       "cowboy",
       "midwest landscape photography"
     ],
-    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography through midwest landscape photography and midwest landscape photography. A powerful statement in photography. © Wayne Heim",
+    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1385,7 +1385,7 @@ export const galleryData = [
       "cowboy",
       "midwest landscape photography"
     ],
-    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography through midwest landscape photography and midwest landscape photography. A powerful statement in photography. © Wayne Heim",
+    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1409,7 +1409,7 @@ export const galleryData = [
       "Pano",
       "midwest landscape photography"
     ],
-    "story": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography and midwest landscape photography. A testament to midwest landscape photography in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography. A testament to midwest landscape photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],

@@ -16,12 +16,35 @@ function rand(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
 }
 
+function normalizePhrase(phrase) {
+  return String(phrase || "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+}
+
 // Helper: get multiple random phrases
 function getUniquePhrases(phrases, count = 6) {
   const selected = [];
   if (!Array.isArray(phrases) || !phrases.length) return selected;
+
+  const dedupedPool = [];
+  const seen = new Set();
+  for (const phrase of phrases) {
+    const normalized = normalizePhrase(phrase);
+    if (!normalized || seen.has(normalized)) continue;
+    seen.add(normalized);
+    dedupedPool.push(phrase);
+  }
+
+  const pool = [...dedupedPool];
+  while (selected.length < count && pool.length) {
+    const index = Math.floor(Math.random() * pool.length);
+    selected.push(pool.splice(index, 1)[0]);
+  }
+
   while (selected.length < count) {
-    selected.push(rand(phrases));
+    selected.push(selected[selected.length - 1] || dedupedPool[0]);
   }
   return selected;
 }

@@ -64,7 +64,7 @@ export const storyData = [
  {
  "id": "i-VScCFDQ",
  "title": "Painterly Sunset Scenes In Fine Art",
- "description": "Delve into painterly sunset scenes via this painterly sunset scenes by Wayne Heim. Highlighting sunset landscape photography through sunset landscape photography and sunset landscape photography, it's great for collectors interested in painterly sunset scenes. © Wayne Heim",
+ "description": "Delve into painterly sunset scenes via this painterly sunset scenes by Wayne Heim. Highlighting sunset landscape photography, it's great for collectors interested in painterly sunset scenes. © Wayne Heim",
  "alt": "Grand Sunset Photography by Wayne Heim",
  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-VScCFDQ/A",
  "keywords": [
@@ -82,7 +82,7 @@ export const storyData = [
  "painterly sunset scenes",
  "sunset landscape photography"
  ],
- "story": "Wayne Heim's exploration of sunset landscape photography comes alive in this piece, showcasing sunset landscape photography and sunset landscape photography. A testament to painterly sunset scenes in fine art. © Wayne Heim",
+ "story": "Wayne Heim's exploration of sunset landscape photography comes alive in this piece, showcasing sunset landscape photography. A testament to painterly sunset scenes in fine art. © Wayne Heim",
  "notes": "",
  "rating": 0,
  "galleries": [

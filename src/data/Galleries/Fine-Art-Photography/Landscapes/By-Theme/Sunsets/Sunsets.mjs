@@ -74,7 +74,7 @@ export const galleryData = [
       "painterly sunset scenes",
       "sunset landscape photography"
     ],
-    "story": "Wayne Heim's exploration of sunset landscape photography comes alive in this piece, showcasing sunset landscape photography and sunset landscape photography. A testament to painterly sunset scenes in fine art. ",
+    "story": "Wayne Heim's exploration of sunset landscape photography comes alive in this piece, showcasing sunset landscape photography. A testament to painterly sunset scenes in fine art.",
     "notes": "",
     "rating": 4,
     "galleries": [],
@@ -210,7 +210,7 @@ export const galleryData = [
       "classic sunset scenery",
       "sunset photography"
     ],
-    "story": "This image embodies classic sunset scenery and classic sunset scenery, captured by Wayne Heim in his signature style. It reflects classic sunset scenery with a touch of classic sunset scenery. ",
+    "story": "This image embodies classic sunset scenery, captured by Wayne Heim in his signature style. It reflects classic sunset scenery.",
     "notes": "",
     "rating": 4,
     "galleries": [],
@@ -543,7 +543,7 @@ export const galleryData = [
       "sunset landscape photography",
       "painterly sunset scenes"
     ],
-    "story": "This image embodies painterly sunset scenes and painterly sunset scenes, captured by Wayne Heim in his signature style. It reflects painterly sunset scenes with a touch of sunset landscape photography. ",
+    "story": "This image embodies painterly sunset scenes, captured by Wayne Heim in his signature style. It reflects painterly sunset scenes with a touch of sunset landscape photography.",
     "notes": "",
     "rating": 4,
     "galleries": [],
@@ -772,7 +772,7 @@ export const galleryData = [
       "classic sunset scenery",
       "sunset photography"
     ],
-    "story": "Delving into sunset photography, this work by Wayne Heim highlights classic sunset scenery through classic sunset scenery and classic sunset scenery. A powerful statement in photography. © Wayne Heim",
+    "story": "Delving into sunset photography, this work by Wayne Heim highlights classic sunset scenery. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 4,
     "galleries": [],
@@ -904,7 +904,7 @@ export const galleryData = [
       "sunset photography",
       "classic sunset scenery"
     ],
-    "story": "Delving into sunset photography, this work by Wayne Heim highlights sunset photography through classic sunset scenery and classic sunset scenery. A powerful statement in photography. © Wayne Heim",
+    "story": "Delving into sunset photography, this work by Wayne Heim highlights sunset photography through classic sunset scenery. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 4,
     "galleries": [],

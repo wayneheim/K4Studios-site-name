@@ -16,13 +16,15 @@ import "@/styles/global.css";
 
 const sectionPath = "/Other/Narrative-Vacuum-F";
 const canonicalUrl = `https://k4studios.com${sectionPath}`;
-const title = "Story, the Western Canon, and the Work of Wayne Heim";
-const subtitle = "The Narrative Vacuum";
+const title = "The Narrative Vacuum";
+const subtitle = "Story, the Western Canon, and the Work of Wayne Heim";
 const deck =
-  "The full article version for comparison, paired with the complete sample-art set and stories prepared for editorial reference.";
+  "A critical framework for curators, collectors, and writers on unresolved images, viewer participation, and the armature beneath the Western legend.";
 const articlePdf = "/data/narrative_vacuum_essay_WH.pdf";
 const samplesPdf = "/data/Heim%20Samples-annotated.pdf";
 const breadcrumb = "Other > Narrative Vacuum Full";
+const previewPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color";
+const engrainedPath = "/Other/K4-Select-Series/Engrained/Engrained-Series";
 
 const structuredData = getStructuredData({
   type: "Article",
@@ -199,6 +201,7 @@ type SampleItem = {
   src?: string;
   srcL?: string;
   srcXL?: string;
+  buyLink?: string;
   story?: string;
   notes?: string;
   description?: string;
@@ -256,6 +259,20 @@ const samples = samplePlan
   })
   .filter(isResolvedSample);
 
+const sampleAlt = (sample: ResolvedSample) =>
+  sample.alt || sample.description?.split(/\n{2,}/)[0] || `${sample.displayTitle} by Wayne Heim`;
+const sampleHref = (sample: ResolvedSample) => {
+  if (!sample.id) return "";
+  const imagePath = `${sample.src || ""} ${sample.srcL || ""} ${sample.srcXL || ""} ${sample.buyLink || ""}`;
+  if (imagePath.includes("/Other/K4-Select-Series/Engrained/Engrained-Series/")) {
+    return `${engrainedPath}/${sample.id}`;
+  }
+  if ((narrativeImages as SampleItem[]).some((entry) => entry.id === sample.id)) {
+    return `${previewPath}/${sample.id}`;
+  }
+  return `${engrainedPath}/${sample.id}`;
+};
+
 const heroSample = samples.find((sample) => sample.displayTitle === "Lifted") || samples[0];
 if (heroSample?.imageSrc) {
   meta.ogImage = heroSample.imageSrc;
@@ -281,7 +298,7 @@ const textParagraphs = (value = "") =>
 
     <div class="nvf-hero">
       <div class="nvf-hero-copy">
-        <p class="nvf-eyebrow">Full Comparison Draft</p>
+        <p class="nvf-eyebrow">Critical Framework</p>
         <h1>{title}</h1>
         <p class="nvf-subtitle">{subtitle}</p>
         <p class="nvf-deck">{deck}</p>
@@ -292,7 +309,9 @@ const textParagraphs = (value = "") =>
       </div>
       {heroSample?.imageSrc && (
         <figure class="nvf-hero-image">
-          <img src={heroSample.imageSrc} alt={heroSample.alt || "Lifted by Wayne Heim"} />
+          <a href={sampleHref(heroSample)} aria-label={`Open ${heroSample.displayTitle} artwork detail page`}>
+            <img src={heroSample.imageSrc} alt={sampleAlt(heroSample)} />
+          </a>
           <figcaption>Thesis image: <strong>{heroSample.displayTitle}</strong></figcaption>
         </figure>
       )}
@@ -343,7 +362,11 @@ const textParagraphs = (value = "") =>
       <div class="nvf-sample-grid">
         {samples.map((sample) => (
           <article class:list={["nvf-sample-card", sample.displayTitle === "Lifted" && "nvf-sample-card-feature"]}>
-            {sample.imageSrc && <img src={sample.imageSrc} alt={sample.alt || sample.displayTitle} loading="lazy" />}
+            {sample.imageSrc && (
+              <a href={sampleHref(sample)} aria-label={`Open ${sample.displayTitle} artwork detail page`}>
+                <img src={sample.imageSrc} alt={sampleAlt(sample)} loading="lazy" />
+              </a>
+            )}
             <div class="nvf-sample-copy">
               <p class="nvf-sample-label">{sample.displayTitle === "Lifted" ? "Culmination" : "Sample Artwork"}</p>
               <h3>{sample.displayTitle}</h3>
@@ -476,6 +499,14 @@ const textParagraphs = (value = "") =>
   .nvf-hero-image {
     margin: 0;
     overflow: hidden;
+    background: #fff;
+  }
+
+  .nvf-hero-image a,
+  .nvf-sample-card > a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
   }
 
   .nvf-hero-image img,
@@ -486,15 +517,18 @@ const textParagraphs = (value = "") =>
   }
 
   .nvf-hero-image img {
-    width: 108%;
+    width: 120%;
     max-width: none;
-    margin-left: -4%;
+    margin-left: -10%;
     aspect-ratio: 4 / 5;
     object-fit: cover;
+    object-position: center center;
+    box-shadow: none;
   }
 
   .nvf-hero-image figcaption {
     margin-top: 0.75rem;
+    background: #fff;
     color: #6e6259;
     font-size: 0.92rem;
     line-height: 1.6;
@@ -642,6 +676,11 @@ const textParagraphs = (value = "") =>
     max-width: 24rem;
   }
 
+  .nvf-sample-story {
+    padding-left: 1.15rem;
+    border-left: 3px solid #8b5f1b;
+  }
+
   .nvf-sample-copy h4 {
     margin: 0 0 0.6rem;
     color: #8b5f1b;
@@ -744,6 +783,16 @@ const textParagraphs = (value = "") =>
     .nvf-sample-card,
     .nvf-downloads {
       grid-template-columns: 1fr;
+    }
+
+    .nvf-sample-card > a {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .nvf-sample-copy {
+      grid-column: 1;
+      grid-row: 2;
     }
 
     .nvf-hero-image {

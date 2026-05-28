@@ -1,6 +1,7 @@
 ---
 import { getCollectionContextEntry, buildCollectionContextStatement } from "@/data/semantic/collectionContext";
 import { getSemanticImageUrl } from "@/utils/imageProxy.js";
+import { sanitizeRepeatedSeoCopy } from "@/utils/repetitiveSeoCopy";
 
 interface Props {
   image: any;
@@ -53,9 +54,9 @@ function buildCaptionExcerpt(description = "", minChars = 150, maxChars = 280) {
 const imageUrl = getSemanticImageUrl(image, { galleryPath });
 const zoomImageUrl = getSemanticImageUrl(image, { galleryPath }, "xl");
 const alt = image?.alt || image?.title || "K4 Studios fine art photograph";
-const title = image?.title || alt;
-const story = image?.story || "";
-const description = image?.description || "";
+const title = sanitizeRepeatedSeoCopy(image?.title || alt);
+const story = sanitizeRepeatedSeoCopy(image?.story || "");
+const description = sanitizeRepeatedSeoCopy(image?.description || "");
 const notes = image?.notes || "";
 const caption = buildCaptionExcerpt(description);
 const prevHref = prevImage ? `${galleryPath}/${prevImage.id}` : "";

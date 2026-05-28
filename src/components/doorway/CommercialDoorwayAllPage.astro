@@ -6,10 +6,7 @@ import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import { extractImageId, getSemanticImageUrl } from "@/utils/imageProxy.js";
 import {
-  getAggregateOfferForCollection,
-  getHighestStandardPrintPrice,
   getFormattedLowestStandardPrintPrice,
-  getLowestStandardPrintPrice,
   getStandardPrintSeries,
 } from "@/data/pricing/printSeries.js";
 import { getSketchOfferShippingDetails, resolveImageCommerce } from "@/data/commerceResolver.js";
@@ -278,6 +275,25 @@ const buildSketchProductDescription = (image: any, imageName: string) => {
   return imageSummary ? `${base} ${imageSummary}` : base;
 };
 
+const buildSketchProductOffer = (image: any, imagePageUrl: string, galleryPath: string) => {
+  const commerce = resolveImageCommerce({
+    image,
+    galleryPath,
+    pageUrl: imagePageUrl,
+  });
+
+  return commerce?.merchantOffer || {
+    "@type": "Offer",
+    "url": imagePageUrl,
+    "price": 25,
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "itemCondition": "https://schema.org/NewCondition",
+    "seller": { "@id": "https://www.k4studios.com/#organization" },
+    "shippingDetails": getSketchOfferShippingDetails(),
+  };
+};
+
 const truncateBookendExcerpt = (text: string, headLen = 100, tailLen = 300) => {
   const cleaned = cleanForDisplay(text);
   if (!cleaned) return "";
@@ -357,18 +373,7 @@ const fallbackSocialImage = "/images/show-2t.webp";
 const socialImage = gatewayHeroSrc || (filteredGalleryData[0] ? getProxySrc(filteredGalleryData[0].id, 'l') : "") || fallbackSocialImage;
 const socialImageUrl = toAbsoluteK4Url(socialImage);
 const socialImageAlt = `${collectionName} Fine Art Prints by Wayne Heim`;
-const lowestStandardPrintPrice = getLowestStandardPrintPrice();
-const highestStandardPrintPrice = getHighestStandardPrintPrice();
-const aggregateOfferCount = copy.aggregateOfferCount || imageCount;
-const aggregateOfferLowPrice = copy.aggregateOfferLowPrice || lowestStandardPrintPrice;
-const aggregateOfferHighPrice = copy.aggregateOfferHighPrice || highestStandardPrintPrice;
-const aggregateOffer = {
-  ...getAggregateOfferForCollection(imageCount),
-  lowPrice: aggregateOfferLowPrice,
-  highPrice: aggregateOfferHighPrice,
-  offerCount: aggregateOfferCount,
-  seller: { "@id": "https://www.k4studios.com/#organization" },
-};
+const MAX_PRODUCT_SCHEMA_ITEMS = 48;
 
 // âœ… Pre-build per-image JSON-LD to avoid streaming issues
 const imageJsonLdMap = new Map();
@@ -407,9 +412,11 @@ const schemaListItems = hasSectionedCatalog
       image,
       galleryPath: contentBasePath,
     }));
+const schemaListItemCount = schemaListItems.filter((entry: any) => entry.image?.id).length;
 
 const itemListElement = schemaListItems
   .filter((entry: any) => entry.image?.id)
+  .slice(0, MAX_PRODUCT_SCHEMA_ITEMS)
   .map((entry: any, index: number) => {
     const image = entry.image;
     const imageBaseUrl = `${siteOrigin}${entry.galleryPath || contentBasePath}`;
@@ -425,27 +432,16 @@ const itemListElement = schemaListItems
         "@type": "Product",
         "@id": `${imagePageUrl}#product-sketch`,
         "name": `${imageName} - Sketch Series Print`,
+        "url": imagePageUrl,
         "image": toAbsoluteK4Url(getProxySrc(image.id, 'l')),
         "description": buildSketchProductDescription(image, imageName),
         "sku": `${image.id}-sketch`,
         "brand": {
-          "@type": "Brand",
+          "@type": "Organization",
+          "@id": "https://www.k4studios.com/#organization",
           "name": "K4 Studios"
         },
-        "category": "Fine Art Print",
-        "url": imagePageUrl,
-        "offers": {
-          "@type": "Offer",
-          "@id": `${imagePageUrl}#offer-sketch`,
-          "name": "Sketch Series Print",
-          "price": String(lowestStandardPrintPrice),
-          "priceCurrency": "USD",
-          "availability": "https://schema.org/InStock",
-          "itemCondition": "https://schema.org/NewCondition",
-          "url": imagePageUrl,
-          "seller": { "@id": "https://www.k4studios.com/#organization" },
-          "shippingDetails": getSketchOfferShippingDetails(),
-        },
+        "offers": buildSketchProductOffer(image, imagePageUrl, entry.galleryPath || contentBasePath),
       },
     };
   });
@@ -498,8 +494,7 @@ const structuredDataJson = JSON.stringify({
       },
       "creator": { "@id": "https://www.k4studios.com/#person" },
       "publisher": { "@id": "https://www.k4studios.com/#organization" },
-      "mainEntity": { "@id": schemaImageGalleryId },
-      "offers": aggregateOffer
+      "mainEntity": { "@id": schemaImageGalleryId }
     },
     {
       "@type": "ImageGallery",
@@ -515,7 +510,7 @@ const structuredDataJson = JSON.stringify({
       "@type": "ItemList",
       "@id": itemListId,
       "name": hasSectionedCatalog ? `${collectionName} Image List` : `${galleryTitle} Image List`,
-      "numberOfItems": itemListElement.length,
+      "numberOfItems": schemaListItemCount,
       "itemListOrder": "https://schema.org/ItemListOrderAscending",
       "itemListElement": itemListElement
     },

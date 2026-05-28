@@ -763,7 +763,7 @@ export const galleryData = [
       "International – Across Borders",
       "painterly european landscapes"
     ],
-    "story": "This image embodies painterly european landscapes and international landscape photography, captured by Wayne Heim in his signature style in Iceland. It reflects fantastic places with a touch of fantastic places. © Wayne Heim",
+    "story": "This image embodies painterly european landscapes and international landscape photography, captured by Wayne Heim in his signature style in Iceland. It reflects fantastic places. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2469,7 +2469,7 @@ export const galleryData = [
       "International – Across Borders",
       "painterly european landscapes"
     ],
-    "story": "Wayne Heim's exploration of International – Across Borders comes alive in this piece, showcasing painterly european landscapes and painterly european landscapes from Iceland. A testament to painterly european landscapes in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of International – Across Borders comes alive in this piece, showcasing painterly european landscapes from Iceland. A testament to painterly european landscapes in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2518,7 +2518,7 @@ export const galleryData = [
       "international landscape photography",
       "painterly european landscapes"
     ],
-    "story": "This image embodies painterly european landscapes and painterly european landscapes, captured by Wayne Heim in his signature style in Iceland. It reflects international landscape photography with a touch of International – Across Borders. © Wayne Heim",
+    "story": "This image embodies painterly european landscapes, captured by Wayne Heim in his signature style in Iceland. It reflects international landscape photography with a touch of International – Across Borders. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2755,7 +2755,7 @@ export const galleryData = [
       "painterly european landscapes",
       "fantastic places"
     ],
-    "story": "Wayne Heim's exploration of International – Across Borders comes alive in this piece, showcasing fantastic places and fantastic places from Iceland. A testament to fantastic places in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of International – Across Borders comes alive in this piece, showcasing fantastic places from Iceland. A testament to fantastic places in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2780,7 +2780,7 @@ export const galleryData = [
       "fantastic places",
       "painterly european landscapes"
     ],
-    "story": "Delving into painterly european landscapes, this work by Wayne Heim highlights international landscape photography through international landscape photography and international landscape photography in Iceland. A powerful statement in photography. © Wayne Heim",
+    "story": "Delving into painterly european landscapes, this work by Wayne Heim highlights international landscape photography in Iceland. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -5871,7 +5871,7 @@ export const galleryData = [
       "painterly european landscapes",
       "International – Across Borders"
     ],
-    "story": "This image embodies fantastic places and International – Across Borders, captured by Wayne Heim in his signature style in Iceland. It reflects painterly european landscapes with a touch of painterly european landscapes. © Wayne Heim",
+    "story": "This image embodies fantastic places and International – Across Borders, captured by Wayne Heim in his signature style in Iceland. It reflects painterly european landscapes. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],

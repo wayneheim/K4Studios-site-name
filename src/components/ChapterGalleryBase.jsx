@@ -49,6 +49,7 @@ import blogImageMap from "../data/blogImageMap.js";
 import { isWesternImagePath, westernImageAttributionText } from "../data/wayneEntity.js";
 import { getImageDimensions } from "../utils/getImageDimensions.js";
 import { extractImageId, getSemanticImageUrl } from "../utils/imageProxy.js";
+import { sanitizeRepeatedSeoCopy } from "../utils/repetitiveSeoCopy";
 
 const ZoomOverlay = lazy(() => import("./ZoomOverlay.jsx"));
 const RebuiltScrollGrid = lazy(() => import("./RebuiltScrollGrid"));
@@ -2221,10 +2222,12 @@ export default function ChapterGalleryBase({
 
                     {/* Title - styled chapter label + H1 for actual title */}
                     {(() => {
-                      const chapterTitle = galleryData[currentIndex]?.meta?.ogTitle ||
+                      const chapterTitle = sanitizeRepeatedSeoCopy(
+                        galleryData[currentIndex]?.meta?.ogTitle ||
                         galleryData[currentIndex]?.title ||
                         galleryData[currentIndex]?.alt ||
-                        titleBase;
+                        titleBase
+                      );
                       // Dynamic font size: shrink for long titles on mobile
                       const titleLength = chapterTitle?.length || 0;
                       const mobileTitleSize = titleLength > 40 ? '1.0rem' : titleLength > 30 ? '1.15rem' : '1.35rem';
@@ -2252,7 +2255,7 @@ export default function ChapterGalleryBase({
                     <section className="image-story" aria-labelledby={`image-story-heading-${currentId || 'default'}`}>
                       <h2 id={`image-story-heading-${currentId || 'default'}`} className="sr-only">Story</h2>
                       <p className="italic text-base mt-3 md:text-lg mb-4 leading-snug text-left">
-                        {galleryData[currentIndex]?.story}
+                        {sanitizeRepeatedSeoCopy(galleryData[currentIndex]?.story)}
                       </p>
                     </section>
 

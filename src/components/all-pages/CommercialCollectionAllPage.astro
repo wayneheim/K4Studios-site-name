@@ -5,10 +5,7 @@ import ArchiveContext from "@/components/ArchiveContext.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import { extractImageId, getSemanticImageUrl } from "@/utils/imageProxy.js";
 import {
-  getAggregateOfferForCollection,
-  getHighestStandardPrintPrice,
   getFormattedLowestStandardPrintPrice,
-  getLowestStandardPrintPrice,
   getStandardPrintSeries,
 } from "@/data/pricing/printSeries.js";
 import { getSketchOfferShippingDetails, resolveImageCommerce } from "@/data/commerceResolver.js";
@@ -187,6 +184,25 @@ const buildSketchProductDescription = (image: any, imageName: string) => {
   return imageSummary ? `${base} ${imageSummary}` : base;
 };
 
+const buildSketchProductOffer = (image: any, imagePageUrl: string) => {
+  const commerce = resolveImageCommerce({
+    image,
+    galleryPath: contentBasePath,
+    pageUrl: imagePageUrl,
+  });
+
+  return commerce?.merchantOffer || {
+    "@type": "Offer",
+    "url": imagePageUrl,
+    "price": 25,
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "itemCondition": "https://schema.org/NewCondition",
+    "seller": { "@id": "https://www.k4studios.com/#organization" },
+    "shippingDetails": getSketchOfferShippingDetails(),
+  };
+};
+
 // âœ… Proxy URL helper - never expose SmugMug URLs to crawlers
 const getProxySrc = (id: string, size: string = 'l') => {
   const image = filteredGalleryData.find((item: any) => item.id === id)
@@ -253,15 +269,7 @@ const fallbackSocialImage = "/images/show-2t.webp";
 const socialImage = gatewayHeroSrc || (filteredGalleryData[0] ? getProxySrc(filteredGalleryData[0].id, 'l') : "") || fallbackSocialImage;
 const socialImageUrl = toAbsoluteK4Url(socialImage);
 const socialImageAlt = `${collectionName} Fine Art Prints by Wayne Heim`;
-const lowestStandardPrintPrice = getLowestStandardPrintPrice();
-const highestStandardPrintPrice = getHighestStandardPrintPrice();
-const aggregateOffer = {
-  ...getAggregateOfferForCollection(imageCount),
-  lowPrice: lowestStandardPrintPrice,
-  highPrice: highestStandardPrintPrice,
-  offerCount: imageCount,
-  seller: { "@id": "https://www.k4studios.com/#organization" },
-};
+const MAX_PRODUCT_SCHEMA_ITEMS = 48;
 
 // âœ… Pre-build per-image JSON-LD to avoid streaming issues
 const imageJsonLdMap = new Map();
@@ -291,6 +299,7 @@ filteredGalleryData.forEach((item: any) => {
 
 const itemListElement = filteredGalleryData
   .filter((image: any) => image?.id)
+  .slice(0, MAX_PRODUCT_SCHEMA_ITEMS)
   .map((image: any, index: number) => {
     const imagePageUrl = `${galleryBaseUrl}/${image.id}`;
     const imageName = cleanForDisplay(image.title || image.id);
@@ -304,27 +313,16 @@ const itemListElement = filteredGalleryData
         "@type": "Product",
         "@id": `${imagePageUrl}#product-sketch`,
         "name": `${imageName} - Sketch Series Print`,
+        "url": imagePageUrl,
         "image": toAbsoluteK4Url(getProxySrc(image.id, 'l')),
         "description": buildSketchProductDescription(image, imageName),
         "sku": `${image.id}-sketch`,
         "brand": {
-          "@type": "Brand",
+          "@type": "Organization",
+          "@id": "https://www.k4studios.com/#organization",
           "name": "K4 Studios"
         },
-        "category": "Fine Art Print",
-        "url": imagePageUrl,
-        "offers": {
-          "@type": "Offer",
-          "@id": `${imagePageUrl}#offer-sketch`,
-          "name": "Sketch Series Print",
-          "price": String(lowestStandardPrintPrice),
-          "priceCurrency": "USD",
-          "availability": "https://schema.org/InStock",
-          "itemCondition": "https://schema.org/NewCondition",
-          "url": imagePageUrl,
-          "seller": { "@id": "https://www.k4studios.com/#organization" },
-          "shippingDetails": getSketchOfferShippingDetails(),
-        },
+        "offers": buildSketchProductOffer(image, imagePageUrl),
       },
     };
   });
@@ -362,8 +360,7 @@ const structuredDataJson = JSON.stringify({
       },
       "creator": { "@id": "https://www.k4studios.com/#person" },
       "publisher": { "@id": "https://www.k4studios.com/#organization" },
-      "mainEntity": { "@id": imageGalleryId },
-      "offers": aggregateOffer
+      "mainEntity": { "@id": imageGalleryId }
     },
     {
       "@type": "ImageGallery",
@@ -379,7 +376,7 @@ const structuredDataJson = JSON.stringify({
       "@type": "ItemList",
       "@id": itemListId,
       "name": `${galleryTitle} Image List`,
-      "numberOfItems": itemListElement.length,
+      "numberOfItems": filteredGalleryData.filter((image: any) => image?.id).length,
       "itemListOrder": "https://schema.org/ItemListOrderAscending",
       "itemListElement": itemListElement
     },

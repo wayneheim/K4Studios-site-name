@@ -370,7 +370,7 @@ export const galleryData = [
       "wildlife photography",
       "wild animal art"
     ],
-    "story": "Wayne Heim's exploration of nature's beauty comes alive in this piece, showcasing wildlife photography and wildlife photography. A testament to wild animal art in fine art. © Wayne Heim",
+    "story": "Wayne Heim's exploration of nature's beauty comes alive in this piece, showcasing wildlife photography. A testament to wild animal art in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],

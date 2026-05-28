@@ -14,8 +14,10 @@ import "@/styles/global.css";
 const sectionPath = "/Other/Narrative-Vacuum";
 const canonicalUrl = `https://k4studios.com${sectionPath}`;
 const previewPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color";
+const engrainedPath = "/Other/K4-Select-Series/Engrained/Engrained-Series";
 
-const title = "Story, the Western Canon, and the Work of Wayne Heim";
+const title = "The Narrative Vacuum";
+const subtitle = "Story, the Western Canon, and the Work of Wayne Heim";
 const deck =
   "A critical framework for curators, collectors, and writers on unresolved images, viewer participation, and the armature beneath the Western legend.";
 
@@ -137,6 +139,19 @@ const imageSrc = (image?: ArtworkImage, size = "l") => {
   if (image.srcXL) return image.srcXL;
   if (image.src) return image.src;
   return image.id ? getSemanticImageUrl(image, { galleryPath: previewPath }, size) : "";
+};
+const imageAlt = (image: ArtworkImage | undefined, fallback: string) =>
+  image?.alt || image?.description?.split(/\n{2,}/)[0] || `${fallback} by Wayne Heim`;
+const imageHref = (image?: ArtworkImage) => {
+  if (!image?.id) return "";
+  const imagePath = `${image.src || ""} ${image.srcL || ""} ${image.srcXL || ""} ${image.buyLink || ""}`;
+  if (imagePath.includes("/Other/K4-Select-Series/Engrained/Engrained-Series/")) {
+    return `${engrainedPath}/${image.id}`;
+  }
+  if (visibleNarrativeImages.some((entry) => entry.id === image.id)) {
+    return `${previewPath}/${image.id}`;
+  }
+  return `${engrainedPath}/${image.id}`;
 };
 
 const sectionLinks = [
@@ -317,7 +332,8 @@ const sections = [
       "The subject anchors the work in the specific and the human - the people history moved too fast to name, the moments that had no audience, the lives the legend was built on and never credited. The image is the doorway. The title names the pressure without explaining it. The narrative writing is not a scene-setter. It is the looking glass.",
       "Step through it and the image opens into a dimension that was always there. In Lenore, without the story, you have a powerful portrait of a man and his gun. With the story - Poe's architecture running silently beneath it - the stillness becomes the stillness of someone already lost. In Special Delivery, without the story, you have a cinematic image of figures in smoke and light. With the story, the Icarus myth surfaces beneath the frame and the light marking the foreground figure is no longer elevating him. It is marking him as a target.",
       "The story never resolves the image. It deepens the responsibility of finding it. The space between what the image shows, what the writing implies, and what remains unresolved is where the viewer stops observing and starts living the story - built from their own loss, their own experience, their own understanding of what people are capable of.",
-      "That is not a feature of the system. That is its purpose."
+      "That is not a feature of the system. That is its purpose.",
+      "Others are working in narrative western art. That is not the claim. What makes this work structurally different is that it distills the same activation principle that runs through the canon's greatest practitioners - Russell's unresolved half-second, Hemingway's submerged seven-eighths, Hitchcock's bomb beneath the table - into a single integrated system operating in a still image. The unresolved moment. The title that begins the story before the eye fully arrives. The narrative that grants permission to enter rather than observe. No single tradition - painting, literature, or cinema - combines all three. The One-Image Movie does. What the viewer constructs from their own experience, memory, and conscience then becomes the story - not a received one, but a lived one. That is the difference between an image that is looked at and an experience that assembles itself."
     ]
   },
   {
@@ -369,11 +385,14 @@ const breadcrumb = "Other > Narrative Vacuum";
       <div class="nv-hero-copy">
         <p class="nv-eyebrow">Critical Framework</p>
         <h1>{title}</h1>
+        <p class="nv-subtitle">{subtitle}</p>
         <p class="nv-deck">{deck}</p>
       </div>
       {heroImage && (
         <figure class="nv-hero-image">
-          <img src={imageSrc(heroImage, "l")} alt={heroImage.alt || "Lifted by Wayne Heim"} />
+          <a href={imageHref(heroImage)} aria-label={`Open ${heroImage.title || "Lifted"} artwork detail page`}>
+            <img src={imageSrc(heroImage, "l")} alt={imageAlt(heroImage, "Lifted")} />
+          </a>
           <figcaption>Featured sample: <strong>Lifted</strong></figcaption>
         </figure>
       )}
@@ -399,7 +418,9 @@ const breadcrumb = "Other > Narrative Vacuum";
 
               <div class="nv-lifted-layout">
                 <figure class="nv-lifted-image">
-                  <img src={imageSrc(liftedSample.image, "l")} alt={liftedSample.image.alt || liftedSample.displayTitle} loading="lazy" />
+                  <a href={imageHref(liftedSample.image)} aria-label={`Open ${liftedSample.displayTitle} artwork detail page`}>
+                    <img src={imageSrc(liftedSample.image, "l")} alt={imageAlt(liftedSample.image, liftedSample.displayTitle)} loading="lazy" />
+                  </a>
                 </figure>
                 <div class="nv-copy nv-lifted-copy">
                   {section.paragraphs.map((paragraph, index) => (
@@ -453,7 +474,9 @@ const breadcrumb = "Other > Narrative Vacuum";
                       const sample = entry.sample as SampleCard;
                       return (
                         <figure class:list={["nv-inline-sample", `nv-inline-sample-${entry.side}`]}>
-                          <img src={imageSrc(sample.image, "l")} alt={sample.image.alt || sample.displayTitle} loading="lazy" />
+                          <a href={imageHref(sample.image)} aria-label={`Open ${sample.displayTitle} artwork detail page`}>
+                            <img src={imageSrc(sample.image, "l")} alt={imageAlt(sample.image, sample.displayTitle)} loading="lazy" />
+                          </a>
                           <figcaption>
                             <strong>{sample.displayTitle}</strong>
                             <span>
@@ -571,6 +594,15 @@ const breadcrumb = "Other > Narrative Vacuum";
   .nv-hero-image {
     margin: 0;
     overflow: hidden;
+    background: #fff;
+  }
+
+  .nv-hero-image a,
+  .nv-lifted-image a,
+  .nv-inline-sample > a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
   }
 
   .nv-hero-image img,
@@ -582,11 +614,13 @@ const breadcrumb = "Other > Narrative Vacuum";
   }
 
   .nv-hero-image img {
-    width: 108%;
+    width: 120%;
     max-width: none;
-    margin-left: -4%;
+    margin-left: -10%;
     aspect-ratio: 4 / 5;
     object-fit: cover;
+    object-position: center center;
+    box-shadow: none;
   }
 
   .nv-hero-image figcaption,
@@ -598,6 +632,7 @@ const breadcrumb = "Other > Narrative Vacuum";
 
   .nv-hero-image figcaption {
     margin-top: 0.75rem;
+    background: #fff;
   }
 
   .nv-section-nav {
@@ -706,6 +741,10 @@ const breadcrumb = "Other > Narrative Vacuum";
     grid-column: 2;
   }
 
+  .nv-inline-sample-right > a {
+    grid-column: 2;
+  }
+
   .nv-inline-sample-right figcaption {
     grid-column: 1;
     grid-row: 1;
@@ -722,6 +761,8 @@ const breadcrumb = "Other > Narrative Vacuum";
   .nv-inline-sample figcaption {
     margin-top: 0;
     max-width: 24rem;
+    padding-left: 1.15rem;
+    border-left: 3px solid #8b5f1b;
     color: #4a4038;
     font-size: 0.92rem;
     line-height: 1.5;
@@ -730,7 +771,7 @@ const breadcrumb = "Other > Narrative Vacuum";
   .nv-inline-sample figcaption strong {
     display: block;
     margin-bottom: 0.45rem;
-    color: #2f261f;
+    color: #8b5f1b;
     font-size: 0.95rem;
     line-height: 1.25;
   }
@@ -809,6 +850,13 @@ const breadcrumb = "Other > Narrative Vacuum";
     display: flex;
     justify-content: center;
     align-items: stretch;
+  }
+
+  .nv-lifted-image a {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    height: 100%;
   }
 
   .nv-lifted-image img {
@@ -933,7 +981,19 @@ const breadcrumb = "Other > Narrative Vacuum";
       margin: 0 0 1.5rem;
     }
 
+    .nv-inline-sample > a {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .nv-inline-sample figcaption {
+      grid-column: 1;
+      grid-row: 2;
+      max-width: none;
+    }
+
     .nv-inline-sample-right img,
+    .nv-inline-sample-right > a,
     .nv-inline-sample-right figcaption {
       grid-column: auto;
       grid-row: auto;

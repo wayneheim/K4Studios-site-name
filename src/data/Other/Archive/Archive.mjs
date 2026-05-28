@@ -138,7 +138,7 @@ export const galleryData = [
  {
  "id": "i-QsNP7mR",
  "title": "Living History Art In Fine Art",
- "description": "Witness living history art in Wayne Heim's reenactment portraits. This image features historic reenactor prints with reenactment portraits and reenactment portraits, ideal for admirers of living history art. © Wayne Heim",
+ "description": "Witness living history art in Wayne Heim's reenactment portraits. This image features historic reenactor prints with reenactment portraits, ideal for admirers of living history art. © Wayne Heim",
  "alt": "Fine art image by Wayne Heim",
  "story": "Wayne Heim's exploration of period costume photography comes alive in this piece, showcasing reenactor photography and reenactment portraits. A testament to historic reenactor prints in fine art. © Wayne Heim",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-QsNP7mR/0/L2Zrf8tjpqjrB6JJh4W9RWpXwQvM66JPkfQ28MRSq/L/_O2H2798-853-L.jpg",

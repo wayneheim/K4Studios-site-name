@@ -51,7 +51,7 @@ export const painterlyStory = [
   {
     subhead: "Context",
     paragraphs: [
-      "Wayne’s painterly fine art photography spans Western portraiture, historical reenactment, narrative-driven Americana, and painterly landscape work. The images are authored as cinematic visual narratives, designed to reward sustained viewing and invite interpretation rather than provide resolution.",
+      "Wayne’s painterly fine art photography spans Western portraiture, historical reenactment, narrative Western photography, and painterly landscape work. The images are authored as cinematic visual narratives, designed to reward sustained viewing and invite interpretation rather than provide resolution.",
       "These recognitions reflect placement within juried environments that evaluate work on narrative coherence, presence, and long-term resonance rather than trend or novelty."
     ]
   },
@@ -60,7 +60,7 @@ export const painterlyStory = [
   {
     subhead: "Press & Related Resources",
     paragraphs: [
-      `<a href="https://aotw.com/2026/02/painterly-photography/" target="_blank" rel="noopener">Art of the West</a> featured Wayne Heim's painterly Western photography and painterly photography process in a February 2026 editorial exploring his "one-image movie" approach to narrative fine art photography and Western storytelling.`,
+      `<a href="https://aotw.com/2026/02/painterly-photography/" target="_blank" rel="noopener">Art of the West</a>: February 2026 editorial feature on Wayne Heim's painterly Western photography, One-Image Movie structure, and narrative fine art process.`,
       `<a href="https://www.atthefront.com/" target="_blank" rel="noopener">At The Front</a>: Supplier of historically accurate WWII reenacting equipment used by historical communities featured in Wayne Heim’s Facing History series.`
     ]
   },

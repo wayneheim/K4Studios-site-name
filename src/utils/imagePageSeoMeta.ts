@@ -8,6 +8,8 @@ export type ImageSeoMetaInput = {
   keywords?: string[] | string;
 };
 
+import { sanitizeRepeatedSeoCopy } from "@/utils/repetitiveSeoCopy";
+
 const DEFAULT_DESCRIPTOR = "Fine Art Photography";
 
 const COPYRIGHT_PATTERNS = [
@@ -17,7 +19,8 @@ const COPYRIGHT_PATTERNS = [
 ];
 
 export function cleanSeoText(value = "") {
-  return String(value || "")
+  return sanitizeRepeatedSeoCopy(
+    String(value || "")
     .replace(/Ã‚Â©|Â©/g, "©")
     .replace(/Ã¢â‚¬Â¦/g, "...")
     .replace(/Ã¢â‚¬â„¢/g, "'")
@@ -30,7 +33,8 @@ export function cleanSeoText(value = "") {
     .replace(/\bin\s+galleries\s+[^.]+/gi, "")
     .replace(/\s+/g, " ")
     .replace(/\s+([.,;:!?])/g, "$1")
-    .trim();
+    .trim()
+  );
 }
 
 export function truncateSeoDescription(value = "", max = 165) {
