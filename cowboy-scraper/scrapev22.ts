@@ -51,6 +51,27 @@ const SIZE_CONFIGS = [
   { name: "S",  field: "srcS",  width: 399,  height: 350 },
 ];
 
+function normalizeSmugMugSizeUrls(seedUrl: string): Pick<ImageRecord, "src" | "srcXL" | "srcL" | "srcM" | "srcS"> | null {
+  const match = seedUrl.match(
+    /^(https:\/\/photos\.smugmug\.com.+?\/i-[^/]+\/\d+\/)(?:[^/]+\/)?([A-Za-z0-9]+)\/(.+)-([A-Za-z0-9]+)\.(jpg|jpeg|png|webp)$/i
+  );
+
+  if (!match) {
+    return null;
+  }
+
+  const [, prefix, , fileStem, , extension] = match;
+  const build = (sizeCode: "XL" | "L" | "M" | "S") => `${prefix}${sizeCode}/${fileStem}-${sizeCode}.${extension}`;
+
+  return {
+    src: build("XL"),
+    srcXL: build("XL"),
+    srcL: build("L"),
+    srcM: build("M"),
+    srcS: build("S"),
+  };
+}
+
 // Load existing data from output file
 function loadExistingData(filePath: string): Map<string, ImageRecord> {
   const map = new Map<string, ImageRecord>();
@@ -265,10 +286,20 @@ async function main() {
         }
         
         const record = newData.get(id)!;
-        (record as any)[config.field] = item.imgSrc;
-        
-        if (config.name === "XL") {
-          record.src = item.imgSrc;
+        const normalizedUrls = normalizeSmugMugSizeUrls(item.imgSrc);
+
+        if (normalizedUrls) {
+          record.src = normalizedUrls.src;
+          record.srcXL = normalizedUrls.srcXL;
+          record.srcL = normalizedUrls.srcL;
+          record.srcM = normalizedUrls.srcM;
+          record.srcS = normalizedUrls.srcS;
+        } else {
+          (record as any)[config.field] = item.imgSrc;
+          
+          if (config.name === "XL") {
+            record.src = item.imgSrc;
+          }
         }
       }
     }

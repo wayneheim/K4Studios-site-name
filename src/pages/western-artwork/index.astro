@@ -60,7 +60,7 @@ const { sectionDockItems, dockCenterIndex } = buildWesternArtworkDock();
 const gridSections = [
   {
     title: "Western Portrait Artwork - Color Cowboy Studies",
-    description: "Character-led Western artwork where weathered faces, posture, and painterly light carry the human side of the West.",
+    description: "Character-led wall art where weathered faces, posture, and painterly light carry the human side of the West.",
     galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
     allHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/all#collection-browser",
     ctaLabel: "See the full Western portrait artwork collection",
@@ -79,11 +79,11 @@ const gridSections = [
     limit: 19,
   },
   {
-    title: "Narrative Western Artwork - Frontier Scenes",
-    description: "Story-driven Western artwork where the visible moment carries tension, consequence, and an unfinished chapter.",
+    title: "Narrative Frontier Artwork",
+    description: "Story-driven Western scenes where the visible moment carries tension, consequence, and an unfinished chapter.",
     galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color",
     allHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all#collection-browser",
-    ctaLabel: "See the full narrative Western artwork collection",
+    ctaLabel: "See the full narrative frontier collection",
     ctaThumb: "/img/i-B7ZSdfs/s.jpg",
     items: narrativeColorItems,
     limit: 19,
@@ -99,8 +99,8 @@ const gridSections = [
     limit: 19,
   },
   {
-    title: "Western Mountain Artwork - Painterly Mountain Prints",
-    description: "Mountain-driven Western artwork where scale, atmosphere, and landform become emotional structure rather than background.",
+    title: "Western Mountain Artwork - Painterly Mountain Studies",
+    description: "Mountain-driven pieces where scale, atmosphere, and landform become emotional structure rather than background.",
     galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains",
     allHref: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/all#collection-browser",
     ctaLabel: "See the full Western mountain artwork collection",
@@ -109,11 +109,11 @@ const gridSections = [
     limit: 19,
   },
   {
-    title: "Black and White Narrative Western Artwork",
+    title: "Black and White Frontier Scenes",
     description: "Black and white frontier artwork where atmosphere, contrast, and tonal restraint carry the story further than color would.",
     galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White",
     allHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/all#collection-browser",
-    ctaLabel: "See the full black and white narrative Western artwork collection",
+    ctaLabel: "See the full black and white narrative collection",
     ctaThumb: "/img/i-kp5NHNw/s.jpg",
     items: narrativeBlackWhiteItems,
     limit: 19,
@@ -131,26 +131,26 @@ const countLiveItems = (sections: typeof gridSections) =>
 const westernArtworkLiveCount = countLiveItems(gridSections);
 
 const commercialMiddleCopy = [
-  "Western artwork covers the full range of the American frontier - portrait character, open Western landscape, narrative frontier scene, monochrome atmosphere, and mountain presence. Start with the branch that fits the room or the collection.",
-  "Wayne Heim's Western artwork blends fine art photography, painterly finishing, and cinematic storytelling to create images rooted in frontier life, Western land, cowboy history, and the mythic American West.",
-  "These works are available as archival paper and select wood presentations, with the Sketch Series opening at $25 and limited editions available for collectors who want provenance, permanence, and wall presence.",
+  "Western artwork is a broad room and subject search before it is a print decision. It can mean cowboy pieces, landscape work, framed Western art, modern Western wall art, vintage-feeling frontier scenes, or one strong image that sets the tone of a living room, office, lodge, ranch home, or hospitality space.",
+  "Start by choosing the visual theme the room needs: a human figure, open country, narrative tension, black and white restraint, mountain scale, or an old-West story register. The sections below keep those choices separate so the page does not collapse into one generic Western decor grid.",
+  "Print format, size, and edition details live inside the individual image pages. This page is the artwork map: the place to decide what kind of Western subject belongs on the wall before choosing the exact presentation.",
 ].join("\n\n");
 
 const copy = {
-  seoTitle: "Western Artwork - Fine Art Prints by Wayne Heim | K4 Studios",
+  seoTitle: "Western Artwork - Cowboy, Landscape & Wall Art by Wayne Heim",
   seoDescription:
-    "Western artwork by Wayne Heim - cowboy portraits, frontier narratives, open landscapes, mountain scenes, and black and white studies. Archival prints from $25 through signed limited editions for living rooms, offices, lodges, and collector walls.",
+    "Western artwork by Wayne Heim for walls and rooms. Cowboy artwork, frontier scenes, Western landscapes, mountain art, black and white studies, framed art, and collector prints.",
   indexDefinition:
-    "Wayne Heim's Western artwork includes color and black and white cowboy portraits, narrative frontier scenes, Western landscapes, and mountain artwork created as collector-grade fine art for homes, offices, lodges, and long-term display.",
+    "Wayne Heim's catalog includes color and black and white cowboy portraits, narrative frontier scenes, Western landscapes, and mountain artwork created as collector-grade fine art for homes, offices, lodges, and long-term display.",
   indexLinkNote:
-    "This is the K4 route for broad Western artwork intent: western artwork, western themed art, western art prints, landscape artwork, mountain artwork, and painterly Western fine art.",
+    "This is the K4 route for broad Western art intent: artwork for walls, western themed art, western art prints, landscape artwork, mountain artwork, and painterly Western fine art.",
   printAvailabilityNote: `Western artwork is available from ${getFormattedLowestStandardPrintPrice()} across archival paper and select wood presentations. Edition status and format options are shown on individual image pages.`,
-  commercialH1: "The Collection - Six Artwork Routes, 917 Works",
+  commercialH1: "Western Artwork for Walls, Rooms, and Collector Spaces",
   commercialDeck:
-    "Western portrait artwork, open-country landscapes, narrative frontier scenes, black and white studies, and mountain artwork - arranged so figure and land both have room to breathe.",
+    "Six artwork routes, 917 works: cowboy figures, open-country landscapes, frontier scenes, black and white studies, mountain art, and Western themed wall pieces organized by room need and visual subject.",
   catalogEntranceTitle: "Western Artwork, Cowboy Portraits, Landscapes, and Frontier Scenes",
   catalogEntranceCopy:
-    "Browse Western artwork, Western themed art, cowboy portrait work, black and white Western studies, narrative frontier scenes, Western landscapes, and mountain artwork created as collector-grade fine art.",
+    "Browse Western themed art, cowboy portrait work, black and white Western studies, narrative frontier scenes, Western landscapes, and mountain artwork created as collector-grade fine art.",
   collectionIntro: commercialMiddleCopy,
   breadcrumbCurrentName: "Western Artwork",
   aggregateOfferLowPrice: "25",
@@ -158,9 +158,9 @@ const copy = {
   aggregateOfferCount: String(westernArtworkLiveCount),
   gatewayCollectionName: "Western Artwork",
   gatewayIntroCopy:
-    "Western artwork by Wayne Heim, available as archival fine art prints ranging from the small-works introductory Sketch Series at $25 to the ultra-limited, large-format Legend Series for collectors seeking statement pieces with permanence and presence. Color and black and white cowboy portraits, frontier narratives, open Western landscapes, mountain scenes, and story-driven imagery for homes, offices, lodges, ranch interiors, hospitality spaces, and collector walls.",
+    "Western artwork has to solve two problems at once: it has to feel like the West, and it has to hold the wall.",
   gatewaySupportingCopy:
-    "Each section is organized by subject - people or land - so you can compare the right Western artwork family before reading into the image story. The collection begins with the small-works Sketch Series, intimate 5×7 open edition pieces priced at $25, then scales through open-edition Foundation works, signed Chronicle editions, and ultra-limited Legend pieces for collectors who want provenance and permanence on the wall.\n\nClick into any section to compare prints, read the image story, and view collector and sizing details.",
+    "That is why the search result mixes product grids, framed wall art, canvas art, paintings, prints, cowboy pieces, landscapes, museums, and modern Western decor. The term is not narrow. It is a room-facing art search with a strong visual vocabulary: cowboy culture, the American frontier, Native American heritage, wildlife, open land, mountain distance, and the kind of work that makes a room feel Western without turning it into a theme set.\n\nWayne Heim's catalog is organized here by what the image does for the wall. Some works give the room a human anchor. Some open the room with landscape. Some bring old-West story pressure. Some remove color and rely on tone. Some give the wall scale through mountains and sky.\n\nUse this page when the search is still broad: artwork for a wall, artwork for a living room, modern Western artwork, vintage Western artwork, or a collector piece that needs more presence than mass-market decor.",
   gatewayKicker: "K4 Studios - Western Artwork Catalog",
   gatewayHeroTitle: "Western Artwork by Wayne Heim",
   gatewayHeroAlt:
@@ -170,7 +170,25 @@ const copy = {
   gatewayHeroSrc: "/img/i-zk7zXP3/m.jpg",
   gatewayHeroSrcSet: "/img/i-zk7zXP3/s.jpg 400w, /img/i-zk7zXP3/m.jpg 720w",
   archiveContextCopy:
-    "Every work on this page is available as fine art - with the Sketch Series opening at $25. Click into any image to read the story, compare print options, sizes, and collector details. Questions about a specific piece? Reach Wayne directly at <a href='mailto:wayne@k4studios.com'>wayne@k4studios.com</a>.",
+    "The K4 Studios catalog is organized by visual role: figure, land, story, tonal restraint, mountain scale, and old-West atmosphere. Open any image for story, sizing, presentation, and collector details. For help choosing artwork for a specific wall or room, contact Wayne at <a href='mailto:wayne@k4studios.com'>wayne@k4studios.com</a>.",
+  conceptBlock1Title: "The Human Anchor",
+  conceptBlock1Copy:
+    "A room often needs one figure before it needs more scenery. Cowboy portrait artwork gives the wall a human center: hat brim, posture, weathered clothing, and the quiet authority of a person who can hold space without bright color or decorative noise.",
+  conceptBlock2Title: "The Open Wall",
+  conceptBlock2Copy:
+    "Western landscape artwork works differently. It opens the wall outward. Land, sky, ridge lines, water, and distance create breathing room in spaces that already carry wood, leather, stone, metal, or heavy furniture.",
+  conceptBlock3Title: "The Frontier Scene",
+  conceptBlock3Copy:
+    "Narrative frontier art carries motion and consequence. These pieces are for rooms that can take a stronger story charge: old-West tension, mounted figures, dust, pursuit, pause, and the feeling that something happened just before the frame.",
+  conceptBlock4Title: "The Quieter Figure",
+  conceptBlock4Copy:
+    "Black and white Western work removes the color language and leaves structure. The figure becomes shape, light, shadow, texture, and expression. This is the better route when a room needs Western presence without a warm palette taking over.",
+  conceptBlock5Title: "The Landmark Scale",
+  conceptBlock5Copy:
+    "Mountain artwork gives the page its largest room register. These works use distance and elevation instead of character. They suit larger walls, lodge entries, offices, stair landings, and spaces where the West needs to arrive through landform rather than figure.",
+  conceptBlock6Title: "The Old-West Register",
+  conceptBlock6Copy:
+    "Black and white frontier scenes bring the vintage side of the West forward without becoming reproduction decor. The story still matters, but the surface is quieter: more memory, less spectacle.",
   faqKicker: "Print & Collector Questions",
   faqTitle: "Western Artwork FAQ",
 };
@@ -201,4 +219,5 @@ const copy = {
   faqItems={westernArtworkFAQ}
   gridSections={gridSections}
   dockVariant="wall-art"
+  layoutVariant="cinematic-concept-series-top"
 />

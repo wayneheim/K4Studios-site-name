@@ -5,6 +5,7 @@ export const historicalStory = [
     title: "What Is Historical Western Art?",
     paragraphs: [
       "Historical Western art is artwork that depicts the frontier era of the American West\u2014cowboys, settlers, Indigenous life, and the people who shaped the landscape long before modern Western culture emerged. It is a genre rooted not in the contemporary ranch or the rodeo arena, but in the 19th-century world that built the framework the modern West still stands upon.",
+      "This is the era where the icons were still forming. The cowboy hat had not yet settled into its modern movie shape. The frontier image had not yet become a logo. Dime novels, early illustration, cabinet-card photographs, and Western paintings were still turning lived experience into legend. Historical Western art belongs in that charged middle space between record and myth.",
       "At K4 Studios, that tradition takes the form of <a href='/Pictorialist-Photography'>painterly fine art photography</a>\u2014work that interprets the historical American West through sculpted light, narrative restraint, and the conviction that a photograph should carry the weight and intention of a painting.",
       "Here, \u2018Western art\u2019 refers to the American West\u2014frontier life, cowboys, and 19th-century Western history\u2014not European or Western civilization art traditions."
     ]
@@ -35,6 +36,7 @@ export const historicalStory = [
     subhead: "The People Who Built the Framework",
     paragraphs: [
       "Most Western imagery focuses on the cowboy as icon\u2014hat, horse, horizon. This work looks past the icon to the individual. The figures who appear here are not archetypes. They are the people who created the framework the modern West is built upon\u2014men and women whose labor, choices, and endurance shaped the frontier long before it became legend.",
+      "That is why period-correct feeling matters more than surface nostalgia. A modern hat, modern stance, or modern ranch polish can pull the image out of history. Historical Western art has to preserve the older silhouette of the West: practical clothing, guarded posture, frontier interiors, weathered tools, and faces that feel like they belong before the myth has finished forming.",
       "That distinction matters. These photographs tell specific stories: a reckoning outside a church, a doctor kneeling beside a wounded stranger, a woman standing her ground on a cabin porch. The history is personal, not panoramic."
     ]
   },

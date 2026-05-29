@@ -73,6 +73,9 @@
   font-size: 1.1rem;
   color: #2c2c2c;
   white-space: nowrap;
+  max-width: calc(50% - 72px);
+  overflow: hidden;
+  text-overflow: ellipsis;
   z-index: 3;
 }
 

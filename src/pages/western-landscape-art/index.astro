@@ -81,7 +81,7 @@ const sectionDockItems = [
     dockPrefix: "",
   },
   {
-    title: "Mountain Landscape Prints",
+    title: "Mountain Landscape Art",
     href: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/all#collection-browser",
     thumb: "/img/i-b2hZptn/s.jpg",
     cue: "Browse collection ->",
@@ -123,12 +123,12 @@ const sectionDockItems = [
     "/img/i-WfrdxRR/s.jpg"
   ),
 ];
-const dockCenterIndex = sectionDockItems.findIndex((item: any) => item.title === "Mountain Landscape Prints");
+const dockCenterIndex = sectionDockItems.findIndex((item: any) => item.title === "Mountain Landscape Art");
 
 const gridSections = [
   {
     title: "Western Landscape Art - American West Locations",
-    description: "Painterly Western location landscapes built around open country, mountain distance, weather, and the quiet authority of the land.",
+    description: "Start with American West landscapes when the wall needs air, horizon, weather, and the open-country pressure that makes the land feel active rather than scenic.",
     galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery",
     allHref: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/all#collection-browser",
     ctaLabel: "See the full Western landscape location collection",
@@ -137,8 +137,8 @@ const gridSections = [
     limit: 19,
   },
   {
-    title: "Mountain Landscape Art Prints",
-    description: "Painterly mountain landscapes where peaks, weather, ridgelines, and distance give Western landscape art its scale and presence.",
+    title: "Mountain Landscape Art",
+    description: "Move into mountain landscape art when the room needs vertical scale: ridgelines, weather, shadow, snow, and peak forms strong enough to hold tall walls and lodge architecture.",
     galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains",
     allHref: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/all#collection-browser",
     ctaLabel: "See the full mountain landscape collection",
@@ -148,7 +148,7 @@ const gridSections = [
   },
   {
     title: "Canadian Rockies Landscape Art",
-    description: "Painterly Canadian Rockies landscape art from Banff, Jasper, alpine lakes, waterfalls, and the deep Rocky Mountain country that defines the northern frontier.",
+    description: "Continue into the Canadian Rockies when the landscape needs a colder register: alpine lakes, waterfalls, northern distance, and Rocky Mountain country with a different kind of silence.",
     galleryPath: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western",
     allHref: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western",
     ctaLabel: "See the full Western Canada landscape collection",
@@ -170,22 +170,22 @@ const westernLandscapeArtLiveCount = countLiveItems(gridSections);
 
 const commercialMiddleCopy = [
   "Western landscape art at K4 Studios is built around place as presence: open country, mountain weather, Canadian Rockies distance, and the visual pressure of land that does more than sit behind the story.",
-  "Start with the American West location landscapes for open country and frontier atmosphere. Move into the mountain section for peak-and-weather presence and Teton scale. Continue into the Canada gallery for Banff, Jasper, waterfalls, alpine lakes, and the deep Rocky Mountain distance that no American West view quite matches.",
-  "Size, substrate, and edition details are inside each image page.",
+  "Start with American West location landscapes for horizon, atmosphere, and the scale of open country. Move into mountain landscape art when the wall needs height, weather, and architectural force. Continue into the Canada gallery for Banff, Jasper, alpine water, and the colder northern distance that no American West view quite matches.",
+  "Use the image pages to compare print format, scale, available editions, and the story attached to each landscape.",
 ].join("\n\n");
 
 const copy = {
-  seoTitle: "Western Landscape Art - Fine Art Prints by Wayne Heim | K4 Studios",
+  seoTitle: "Western Landscape Art - American West & Mountain Fine Art Prints",
   seoDescription:
-    "Western landscape art prints by Wayne Heim - American West locations, painterly mountain views, waterfalls, and Canadian Rockies photography from $25 through signed limited editions. For living rooms, great rooms, lodges, and collector walls.",
+    "Western landscape art prints by Wayne Heim. American West open country, mountain landscape prints, and Canadian Rockies fine art photography for homes, lodges, offices, and collector walls.",
   indexDefinition:
     "Wayne Heim's Western landscape art includes American West location landscapes, mountain landscape art prints, and Canadian Rockies photographs created as collector-grade fine art prints.",
   indexLinkNote:
     "This is the K4 commercial route for Western landscape art, Western landscape wall art, mountain landscape prints, and Canadian Rockies fine art photography.",
   printAvailabilityNote: `Western landscape art prints are available from ${getFormattedLowestStandardPrintPrice()} across archival paper and select wood presentations. Edition status and format options are shown on individual image pages.`,
-  commercialH1: `The Collection - Three Landscape Series, ${westernLandscapeArtLiveCount} Works`,
+  commercialH1: "Three Ways the Western Land Holds a Wall",
   commercialDeck:
-    `${westernLandscapeArtLiveCount} American West landscapes, painterly mountain views, and Canadian Rockies photographs - organized for collectors, rooms, lodges, and walls that need the weight of open country.`,
+    "{catalogImageCount} works across three landscape routes: American West open country, mountain landscape art, and Canadian Rockies photographs organized for rooms that need distance, scale, weather, and quiet authority.",
   catalogEntranceTitle: "Western Landscape Art, Mountain Prints, and Canadian Rockies Fine Art",
   catalogEntranceCopy:
     "Browse Western landscape art prints, mountain landscape photography, American West location work, and Western Canada landscapes created as collector-grade fine art.",
@@ -196,9 +196,19 @@ const copy = {
   aggregateOfferCount: String(westernLandscapeArtLiveCount),
   gatewayCollectionName: "Western Landscape Art",
   gatewayIntroCopy:
-    "Western landscape art prints by Wayne Heim - open country, mountain weather, waterfall motion, and the quiet authority of Western land for living rooms, great rooms, offices, lodges, mountain homes, hospitality spaces, and collector walls.",
+    "Western landscape art is not scenery when the land is doing real work.",
   gatewaySupportingCopy:
-    `These works begin as photography, then are shaped into landscape fine art with atmosphere, tonal depth, and a strong sense of place. The collection opens with the Sketch Series, 5x7 archival prints from ${getFormattedLowestStandardPrintPrice()} - sized for shelves, desks, and introductory collecting. It scales through open-edition Foundation works, signed Chronicle editions with numbered certificates, and ultra-limited Legend pieces for collectors who want permanence on the wall.\n\nClick into any section to compare prints, read the image story, and view collector and sizing details.`,
+    `A weak landscape photograph shows a beautiful place and stops there. A stronger Western landscape keeps acting after recognition. The horizon changes the pace of the room. Weather changes the emotional temperature. A mountain form gives a wall structure. Water and alpine distance alter the silence around the image.\n\nWayne Heim's Western landscape art begins with real terrain, then moves through a painterly finishing process that shapes atmosphere, tonal depth, edge, weather, and distance into finished fine art. The land is not a backdrop for a cowboy story. It is the pressure that makes the West feel like the West: scale, exposure, isolation, endurance, and the quiet authority of geography.\n\nFor collectors, designers, lodge owners, mountain homes, ranch interiors, offices, and hospitality spaces, landscape work solves a different problem than portrait or narrative art. It opens the room. Sketch Series prints begin at ${getFormattedLowestStandardPrintPrice()} for smaller placements; larger archival paper editions carry the wall; selected limited editions add signature, numbering, and certificate when a landscape needs collector permanence. Some images may also suit Signature Engrained Series natural Baltic Birch panels when the material surface strengthens the land's physical presence.`,
+  conceptBlock1Title: "THE LAND AS PRESSURE",
+  conceptBlock1Copy:
+    "Western landscape art begins where the land stops behaving like background. Open country is not empty. It creates exposure, distance, silence, and the feeling that the human story has to answer to something larger than itself.\n\nThe American West location landscapes below are the broadest expression of that idea: horizon, weather, fields, roads, ridges, and long views that give a room air without making the work feel decorative. They belong where the wall needs space to breathe.",
+  conceptBlock2Title: "THE VERTICAL WALL",
+  conceptBlock2Copy:
+    "Mountain landscape art solves a different visual problem. Open country stretches outward; mountains push upward. That makes them useful for fireplace walls, stairwells, great rooms, lodge entries, offices, and rooms where the architecture already has height.\n\nThe mountain works below are built around form, weather, ridgeline, snow, shadow, and distance. They carry scale without needing human figures, and they can make a large wall feel intentional rather than merely filled.",
+  conceptBlock3Title: "THE NORTHERN REGISTER",
+  conceptBlock3Copy:
+    "Canadian Rockies landscape art changes the temperature of the page. Banff, Jasper, alpine lakes, waterfalls, and northern mountain country carry a quieter, colder register than much of the American West.\n\nThese works are useful when the room needs landscape presence with more water, reflection, stone, and high-country silence. They still belong to the larger Western landscape conversation, but they arrive from a different edge of it.",
+  archiveContextTitle: "Browse the Western Landscape Art Collection",
   gatewayKicker: "K4 Studios - Western Landscape Fine Art Print Catalog",
   gatewayHeroTitle: "Western Landscape Art by Wayne Heim",
   gatewayHeroAlt:
@@ -208,7 +218,7 @@ const copy = {
   gatewayHeroSrc: "/img/i-G6gftd8/m.jpg",
   gatewayHeroSrcSet: "/img/i-G6gftd8/s.jpg 400w, /img/i-G6gftd8/m.jpg 720w",
   archiveContextCopy:
-    "Every work on this page is available as a fine art print - with the Sketch Series opening at $25. Click into any image to read the story, compare print options, sizes, and collector details. Questions about a specific piece? Reach Wayne directly at <a href='mailto:wayne@k4studios.com'>wayne@k4studios.com</a>.",
+    "Western landscape art at K4 Studios is organized by the kind of space the wall needs: American West horizon and atmosphere, mountain scale and weather, or Canadian Rockies water, stone, and northern distance.\n\nOpen any image to read its story, compare available sizes and print formats, and check edition details. Questions about a specific landscape, wall size, or room mockup? Contact wayne@k4studios.com.",
   faqKicker: "Print & Collector Questions",
   faqTitle: "Western Landscape Art FAQ",
 };
@@ -239,4 +249,5 @@ const copy = {
   faqItems={westernLandscapeArtFAQ}
   gridSections={gridSections}
   dockVariant="wall-art"
+  layoutVariant="cinematic-concept-series-top"
 />

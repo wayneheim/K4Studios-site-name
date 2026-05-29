@@ -53,6 +53,11 @@ export const buildCowboyArtPrintsDock = () => {
       cowboyContextThumb
     ),
     supportItem(
+      "Explore Western Cowboy Art",
+      "/western-cowboy-art",
+      narrativeThumb
+    ),
+    supportItem(
       "Learn What Is Painterly Photography",
       "/Blog/what-is-painterly-photography",
       painterlyThumb

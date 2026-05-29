@@ -46,7 +46,7 @@ const gridSections = [
     limit: catalogPreviewLimit,
   },
   {
-    title: "Black and White Western Wall Art - Narrative Prints",
+    title: "Black and White Western Wall Art - Narrative Scenes",
     description: "Monochrome Western narrative photographs for collectors who want stronger contrast, restraint, and old West atmosphere.",
     galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White",
     allHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/all#collection-browser",
@@ -66,7 +66,7 @@ const gridSections = [
     limit: catalogPreviewLimit,
   },
   {
-    title: "Cowboy Art Prints - Color Western Portraits",
+    title: "Cowboy Wall Art - Color Western Portraits",
     description: "Color cowboy portrait prints with painterly light, frontier character, and room-ready Western presence.",
     galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
     allHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/all#collection-browser",
@@ -103,18 +103,18 @@ const commercialMiddleCopy = [
 ].join("\n\n");
 
 const copy = {
-  seoTitle: "Western Wall Art - Fine Art Prints by Wayne Heim | K4 Studios",
+  seoTitle: "Western Wall Art - Cowboy, Frontier & Landscape Fine Art Prints",
   seoDescription:
-    "Western wall art by Wayne Heim: cowboy portraits, frontier scenes, and Western landscape prints for homes, offices, lodges, and collectors.",
+    "Western wall art by Wayne Heim for homes, offices, lodges, ranch interiors, and collector walls. Cowboy portraits, frontier scenes, and Western landscape fine art prints from $25.",
   descriptionMaxLength: "155",
   indexDefinition:
     "Wayne Heim's Western wall art includes cowboy wall art, Western art prints, vintage Western art, Wild West scenes, and frontier landscapes created as collector-grade fine art for real rooms and long-term display.",
   indexLinkNote:
     wallArtStory[0]?.paragraphs?.[1] || "This page is a broad starting point for collectors, homeowners, offices, lodge spaces, hospitality projects, and interior designers looking for Western wall decor with more authorship than generic inventory.",
   printAvailabilityNote: `All works are available as fine art prints from ${getFormattedLowestStandardPrintPrice()}. Select images are also available in the Engrained Series - printed on Baltic Birch using a five-layer UV process - with pricing specific to each image.`,
-  commercialH1: "The Collection — Five Print Series, 905 Works",
+  commercialH1: "Five Ways Western Art Earns the Wall",
   commercialDeck:
-    "Cowboy portraits, frontier landscapes, narrative Western scenes, and character studies — in color and black and white, organized for rooms, collectors, and interior decisions.",
+    "Five series, 905 works: cowboy portraits, frontier landscapes, narrative Western scenes, and character studies - in color and black and white, organized for rooms, collectors, and interior decisions.",
   catalogEntranceTitle: "Western Art Prints, Cowboy Wall Art, and Frontier Fine Art",
   catalogEntranceCopy:
     "Browse cowboy wall art, Western art prints, vintage Western art, Wild West scenes, and frontier landscapes created as collector-grade fine art for real rooms and long-term display.",
@@ -125,9 +125,29 @@ const copy = {
   aggregateOfferCount: String(westernWallArtLiveCount),
   gatewayCollectionName: "Western Wall Art",
   gatewayIntroCopy:
-    "Western wall art by Wayne Heim, available as archival fine art prints ranging from the small-works introductory Sketch Series at $25 to the ultra-limited, large-format Legend Series for collectors seeking statement pieces with permanence and presence. Cowboy portraits, frontier scenes, Western landscapes, black-and-white studies, and story-driven artwork for homes, offices, lodges, hospitality spaces, and collector interiors.",
+    "Western wall art has to do more than fill space. It has to give the room something to return to.",
   gatewaySupportingCopy:
     "These works begin as photography, then are shaped through Heim’s painterly process into Western fine art with atmosphere, authorship, and narrative weight — pieces that can read from across a room, then deepen into character, tension, and memory up close.\n\nThe collection begins with the small-works Sketch Series, intimate 5×7 open edition pieces priced at $25 — sized for shelves, desks, and introductory collecting. It scales through open-edition Foundation works, signed Chronicle editions with numbered certificates, and ultra-limited Legend pieces for collectors who want provenance and permanence on the wall.\n\nUse the collection links below to browse by subject, mood, and finish, then open any piece to compare prints, read image stories, explore collector notes, and view print details.",
+  gatewaySupportingCopy:
+    `A lot of Western wall decor stops at theme: horse, hat, mountain, sunset, saloon, dust. Those signs can make a room feel Western for a moment, but they rarely keep working after the first glance. Strong Western wall art needs more than recognition. It needs a subject with gravity, a mood that holds, and enough story pressure to make the image worth living with.\n\nWayne Heim's work begins as photography, then is shaped through a painterly process into Western fine art with atmosphere, authorship, and narrative weight. The result can read from across a room, then deepen into character, tension, landscape, and memory up close.\n\nFor wall use, the print ladder is intentionally flexible: Sketch Series pieces from ${getFormattedLowestStandardPrintPrice()} for shelves, groupings, and smaller rooms; archival paper editions for framed wall presence; selected signed Chronicle and Legend editions when the piece needs collector weight and a numbered certificate. Some images can also move onto natural Baltic Birch in the Signature Engrained Series when the wall calls for a more tactile Western object.`,
+  conceptBlock1Title: "THE WALL HAS TO HOLD",
+  conceptBlock1Copy:
+    "A wall can be filled by almost anything. A print that holds a wall has a different job. It gives the room a point of gravity without turning the space into a theme display.\n\nWestern narrative scenes work when the wall needs more than subject recognition. The strongest pieces carry a before and after: confrontation, departure, aftermath, weather, silence, or a decision that has not resolved yet. That pressure is what keeps the image alive after the room has absorbed the decor.",
+  conceptBlock2Title: "THE RESTRAINED VERSION",
+  conceptBlock2Copy:
+    "Black and white Western wall art changes the room by removing some of the immediate warmth that color provides. The image has to stand on tone, structure, face, distance, and shadow.\n\nUse monochrome narrative work when a wall needs gravity rather than color. It fits offices, studies, hallways, lodges, and collector rooms where the work should feel permanent, quieter, and less decorative.",
+  conceptBlock3Title: "THE ROOM NEEDS AIR",
+  conceptBlock3Copy:
+    "Western landscape wall art solves a different problem than portrait or narrative work. It gives the eye somewhere to travel. In rooms with heavy furniture, strong architecture, leather, stone, or wood, an open Western landscape can create distance and breathing room.\n\nThe best landscape print for a wall is not always the loudest image. Often it is the one with enough atmosphere, horizon, weather, or mountain structure to extend the room instead of competing with it.",
+  conceptBlock4Title: "THE HUMAN ANCHOR",
+  conceptBlock4Copy:
+    "Cowboy portrait wall art works because a person can anchor a room differently than a landscape can. A face, stance, hat brim, hand, coat, or look across the frame creates a direct human presence.\n\nThe risk is costume. Wayne Heim's cowboy portraits are built to move past type and into character: age, humor, fatigue, suspicion, confidence, and the guarded stillness of someone who carries a story without explaining it.",
+  conceptBlock5Title: "THE TONAL PORTRAIT",
+  conceptBlock5Copy:
+    "Black and white cowboy portraits are the most restrained portrait route on this page. They remove the comfort of Western color and leave the wall with face, posture, cloth, shadow, and tonal weight.\n\nThese works belong where the room needs character without extra warmth: offices, studies, lodge corridors, ranch interiors, or collector walls where the image should hold attention quietly over time.",
+  archiveContextTitle: "Browse the Western Wall Art Collection",
+  archiveContextCopy:
+    "Western wall art at K4 Studios is organized by what the wall needs first: narrative pressure, monochrome restraint, open landscape distance, color cowboy presence, or black and white portrait gravity.\n\nUse the image pages as the sizing and placement step: read the story, compare formats, check edition availability, and decide whether the piece should sit alone or work in a grouping. Questions about a specific wall or print size? Contact wayne@k4studios.com.",
   gatewayBrandLabel: "Western Wall Art - Fine Art Prints by Wayne Heim",
   faqTitle: "Western Wall Art FAQ",
 };
@@ -158,4 +178,5 @@ const copy = {
   faqItems={wallArtFAQ.slice(0, 8)}
   gridSections={gridSections}
   dockVariant="wall-art"
+  layoutVariant="cinematic-concept-series-top"
 />

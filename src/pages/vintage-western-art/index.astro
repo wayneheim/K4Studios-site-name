@@ -49,7 +49,7 @@ const { sectionDockItems, dockCenterIndex } = buildWesternArtPrintsDock();
 
 const gridSections = [
   {
-    title: "Black and White Vintage Cowboy Prints",
+    title: "Black and White Vintage Cowboy Portraits",
     description: "Black and white cowboy portraits for collectors who want old-West gravity, character, and tonal frontier restraint.",
     galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White",
     allHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/all#collection-browser",
@@ -59,7 +59,7 @@ const gridSections = [
     limit: 19,
   },
   {
-    title: "Vintage Cowboy Art - Color Portrait Prints",
+    title: "Vintage Cowboy Art - Color Portraits",
     description: "Color cowboy portrait prints with weathered character, frontier posture, and the painterly period presence that holds a room.",
     galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
     allHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/all#collection-browser",
@@ -69,7 +69,7 @@ const gridSections = [
     limit: 19,
   },
   {
-    title: "Old West Black and White Art Prints",
+    title: "Old West Black and White Art",
     description: "Monochrome frontier narrative prints where restraint, deep contrast, and old-West tension carry the vintage feeling further than color can.",
     galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White",
     allHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/all#collection-browser",
@@ -101,26 +101,26 @@ const countLiveItems = (sections: typeof gridSections) =>
 const vintageWesternArtLiveCount = countLiveItems(gridSections);
 
 const commercialMiddleCopy = [
-  "Vintage Western art at K4 Studios is contemporary authored work - built around old-West atmosphere, frontier character, and the emotional weight collectors mean when they search for vintage Western prints. Not antique objects. Not faux-aged decor. Images that carry the period without pretending to be from it.",
-  "Start with the narrative frontier scenes if you want old-West story, confrontation, and cinematic tension. Move into the cowboy portrait sections when the vintage feeling needs to rest on posture, weathering, personality, and human presence.",
-  "Size, substrate, and edition details are inside each image page.",
+  "Vintage Western art is less about age than about memory. It is the visual language of the West before the myth became polished: frontier towns, lonely riders, guarded faces, period clothing, rough interiors, dust, consequence, and the story pressure that later hardened into legend.",
+  "Start with the narrative scenes when the wall needs old-West imagination: the dime-novel charge, the frontier painting mood, the sense that something happened just before the image and something else is about to happen after it. Move into the cowboy portrait sections when the vintage feeling needs to live in face, hat, clothing, posture, and human presence.",
+  "These are contemporary K4 Studios works shaped for collectors who want the nostalgia and narrative pull of vintage Western paintings, old posters, and illustrated frontier stories without buying reproduction decor.",
 ].join("\n\n");
 
 const copy = {
   seoTitle: "Vintage Western Art - Fine Art Prints by Wayne Heim | K4 Studios",
   seoDescription:
-    "Vintage Western art prints by Wayne Heim - old-West atmosphere, frontier character, and period presence in color and black and white. Archival prints from $25 through signed limited editions. For living rooms, offices, lodges, and collector walls.",
+    "Vintage Western art by Wayne Heim. Old-West frontier scenes, vintage cowboy portraits, period styling, dime-novel atmosphere, and collector fine art prints from $25.",
   indexDefinition:
-    "Wayne Heim's vintage Western art includes old-West narrative scenes, vintage cowboy art, frontier portraits, black and white Western prints, and painterly Western artwork created as collector-grade fine art prints.",
+    "Wayne Heim's vintage-facing Western catalog includes old-West narrative scenes, cowboy character studies, frontier portraits, black and white Western prints, and painterly artwork created as collector-grade fine art prints.",
   indexLinkNote:
-    "This is the K4 commercial route for vintage Western art, vintage cowboy art, old Western art, old West posters, and frontier print searches that want old-West atmosphere rather than literal antique objects.",
-  printAvailabilityNote: `Vintage Western art prints are available from ${getFormattedLowestStandardPrintPrice()} across archival paper and select wood presentations. Edition status and format options are shown on individual image pages.`,
-  commercialH1: "The Collection - Vintage Western Art Prints",
+    "This is the K4 commercial route for old-West art, vintage cowboy art, old Western prints, old West posters, and frontier searches that want period atmosphere rather than literal antique objects.",
+  printAvailabilityNote: `Vintage Western prints are available from ${getFormattedLowestStandardPrintPrice()} across archival paper and select wood presentations. Edition status and format options are shown on individual image pages.`,
+  commercialH1: "Vintage Western Art, Old-West Stories, and Frontier Icons",
   commercialDeck:
-    "Old-West frontier scenes, vintage cowboy portraits, and painterly Western prints in color and black and white - organized for collectors and room decisions.",
+    "Four routes through {catalogImageCount} works: old-West frontier scenes, vintage cowboy portraits, black and white studies, and color narratives shaped around the era when Western legends were still being formed.",
   catalogEntranceTitle: "Vintage Western Art, Vintage Cowboy Prints, and Old West Fine Art",
   catalogEntranceCopy:
-    "Browse vintage Western art prints, old-West narrative scenes, vintage cowboy portraits, and frontier artwork created as collector-grade fine art.",
+    "Browse old-West narrative scenes, vintage cowboy portraits, black and white studies, and frontier artwork created as collector-grade fine art.",
   collectionIntro: commercialMiddleCopy,
   breadcrumbCurrentName: "Vintage Western Art",
   aggregateOfferLowPrice: "25",
@@ -128,19 +128,31 @@ const copy = {
   aggregateOfferCount: String(vintageWesternArtLiveCount),
   gatewayCollectionName: "Vintage Western Art",
   gatewayIntroCopy:
-    "Vintage Western art prints by Wayne Heim - frontier narratives, vintage cowboy portraits, black-and-white studies, and story-driven old-West imagery for living rooms, offices, lodges, ranch interiors, hospitality spaces, and collector walls.",
+    "Vintage Western art begins where history starts becoming legend.",
   gatewaySupportingCopy:
-    `These works begin as photography, then are shaped through Heim's painterly process into fine art with period atmosphere, human presence, and the narrative weight of the old West. The collection opens with the Sketch Series, 5x7 archival prints from ${getFormattedLowestStandardPrintPrice()} - sized for shelves, desks, and introductory collecting. It scales through open-edition Foundation works, signed Chronicle editions with numbered certificates, and ultra-limited Legend pieces for collectors who want provenance and permanence on the wall.\n\nClick into any section to compare prints, read the image story, and view collector and sizing details.`,
+    `The American Wild West was not born as a clean symbol. It was built out of settlement, conflict, ranching, railroads, mining towns, displacement, showmanship, dime-store novels, frontier illustration, and the people who became larger after the telling. The vintage pull comes from that crossing: part history, part memory, part theater, part truth.\n\nWayne Heim's work in this route is not antique reproduction and not modern cowboy decor dressed up with sepia. It is contemporary fine art built around period-correct styling, weathered character, old-West atmosphere, and the narrative charge of the era when the icons of the West were still being formed. The point is not to copy a vintage painting or a pulp cover. The point is to recover the imaginative pressure those images carried.\n\nSketch Series studies begin at ${getFormattedLowestStandardPrintPrice()}, with larger archival paper prints available through the standard K4 print structure. Selected Chronicle and Legend editions add signed numbering and a certificate of authenticity for collector walls.`,
   gatewayKicker: "K4 Studios - Vintage Western Fine Art Print Catalog",
   gatewayHeroTitle: "Vintage Western Art by Wayne Heim",
   gatewayHeroAlt:
-    "Black and white vintage cowboy portrait print with old-West atmosphere and painterly fine art photography.",
+    "Color frontier scene with old-West narrative atmosphere, vintage Western styling, and painterly collector wall presence.",
   gatewayHeroHref:
-    "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-FnZ68h3",
-  gatewayHeroSrc: "/img/i-FnZ68h3/m.jpg",
-  gatewayHeroSrcSet: "/img/i-FnZ68h3/s.jpg 400w, /img/i-FnZ68h3/m.jpg 720w",
+    "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-B7ZSdfs",
+  gatewayHeroSrc: "/img/i-B7ZSdfs/m.jpg",
+  gatewayHeroSrcSet: "/img/i-B7ZSdfs/s.jpg 400w, /img/i-B7ZSdfs/m.jpg 720w",
   archiveContextCopy:
-    "Every work on this page is available as a fine art print - with the Sketch Series opening at $25. Click into any image to read the story, compare print options, sizes, and collector details. Questions about a specific piece? Reach Wayne directly at <a href='mailto:wayne@k4studios.com'>wayne@k4studios.com</a>.",
+    "K4 Studios organizes this route by story register: black and white cowboy portraits, color cowboy portraits, monochrome old-West narratives, and color frontier scenes. Open any image for story, sizing, print path, and collector notes. Questions about a specific piece? Reach Wayne directly at <a href='mailto:wayne@k4studios.com'>wayne@k4studios.com</a>.",
+  conceptBlock1Title: "THE OLD-WEST FACE",
+  conceptBlock1Copy:
+    "Black and white cowboy portraits carry the oldest register on this page. Without color, the viewer reads hat, face, hand, cloth, light, and posture as period signals. The vintage effect comes from restraint, not from artificial aging.",
+  conceptBlock2Title: "THE PERIOD FIGURE",
+  conceptBlock2Copy:
+    "Color cowboy portraits bring the era forward through styling, light, and character. The goal is not a modern cowboy costume. It is a figure that feels closer to the 19th-century West, before the cowboy image became clean, branded, and familiar.",
+  conceptBlock3Title: "THE DIME-NOVEL SHADOW",
+  conceptBlock3Copy:
+    "Black and white frontier narratives lean toward the imagination of old posters, pulp covers, and dime-novel suspense. They hold back enough information that the viewer has to finish the scene.",
+  conceptBlock4Title: "THE FRONTIER STORY",
+  conceptBlock4Copy:
+    "Color frontier scenes carry the theatrical side of old-West art: dust, distance, warm light, mounted figures, and old-West tension. This is the route when the wall needs story before it needs portrait.",
   faqKicker: "Print & Collector Questions",
   faqTitle: "Vintage Western Art FAQ",
 };
@@ -171,4 +183,5 @@ const copy = {
   faqItems={vintageWesternArtFAQ}
   gridSections={gridSections}
   dockVariant="wall-art"
+  layoutVariant="cinematic-concept-series-top"
 />
