@@ -28,6 +28,19 @@ export const galleryDataMap   = {
       ]
     },
     {
+      "id": "i-kWVzc6g",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-kWVzc6g/0/S/_WHO0047-Edit-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-kWVzc6g/0/M/_WHO0047-Edit-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-kWVzc6g/0/L/_WHO0047-Edit-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-kWVzc6g/0/XL/_WHO0047-Edit-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-kWVzc6g/0/S/_WHO0047-Edit-S.jpg",
+      "rating": 0,
+      "visibility": "normal",
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
+      ]
+    },
+    {
       "id": "i-9q7BrTt",
       "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-9q7BrTt/0/LjJBRNNfTsqSKZzxksj4mzd76xfBbC237hw62XH3J/S/_HF20983-Edit-2-S.jpg",
       "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-9q7BrTt/0/KfX682WNCXWjSFK6ZZX3vSX8t3Cr2Lp38HFNZgFjN/M/_HF20983-Edit-2-M.jpg",
@@ -67,6 +80,19 @@ export const galleryDataMap   = {
       ]
     },
     {
+      "id": "i-vT7SdKj",
+      "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-vT7SdKj/1/LPgXmfgcprfKXSj3PvbTQhPhKsLZLVKpDSSXvfz8m/S/Water%20color%20portrait-S.jpg",
+      "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-vT7SdKj/1/McNdn2VX3m3NhmqTLMRqSD7wTxNpvkxbRzWMnJS5r/M/Water%20color%20portrait-M.jpg",
+      "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-vT7SdKj/1/KhRtQn6fC4JGQDthQfxTgFkQ4NH8Rwzj5xJm4JFmk/L/Water%20color%20portrait-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-vT7SdKj/1/Lrnnsch68MZ7Nfz5TsvDXNHSZcMwwTnZ6Hjb2MCmJ/XL/Water%20color%20portrait-XL.jpg",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-vT7SdKj/1/LPgXmfgcprfKXSj3PvbTQhPhKsLZLVKpDSSXvfz8m/S/Water%20color%20portrait-S.jpg",
+      "rating": 4,
+      "visibility": "show",
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
+      ]
+    },
+    {
       "id": "i-DJKJkMb",
       "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-DJKJkMb/0/KHnXXpCZbfH9R9BF35CLRrpJRSzdkmd7fkdxhwkHT/S/_O2H6822-Edit-Edit-Edit-S.jpg",
       "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-DJKJkMb/0/K5bVCwGZNszJLLffQ4r8jhHbcXHd7SJTC3qxJH7Tz/M/_O2H6822-Edit-Edit-Edit-M.jpg",
@@ -75,6 +101,71 @@ export const galleryDataMap   = {
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-DJKJkMb/0/KHnXXpCZbfH9R9BF35CLRrpJRSzdkmd7fkdxhwkHT/S/_O2H6822-Edit-Edit-Edit-S.jpg",
       "rating": 4,
       "visibility": "show",
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-QbSdKQS",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QbSdKQS/0/MPmHxZGFWDhdNJJz3Z4rsHV5xsBh5wjrfm7qsVvtb/S/_HF21408-Enhanced-NR-Edit-Edit-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QbSdKQS/0/LW3KCx9DMcbKrXNvmTjPfsJB8fwwSBFz49Qw8vtBC/M/_HF21408-Enhanced-NR-Edit-Edit-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QbSdKQS/0/KZ5dwMpjRHQMkG56qFsMWxrBNTxbNPGfgBmv2Zzqt/L/_HF21408-Enhanced-NR-Edit-Edit-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QbSdKQS/0/MmkHBFcCKSf3P9WJpxHL5bnGv9F6zbCBdBC2HgLLF/XL/_HF21408-Enhanced-NR-Edit-Edit-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QbSdKQS/0/MPmHxZGFWDhdNJJz3Z4rsHV5xsBh5wjrfm7qsVvtb/S/_HF21408-Enhanced-NR-Edit-Edit-S.jpg",
+      "rating": 4,
+      "visibility": "show",
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-thK6pDc",
+      "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-thK6pDc/0/MVZtq9DJhtsPQvTsB6Vp3ncBQHBN9gPv3Vsng2tJW/S/_HF22104-Edit-S.jpg",
+      "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-thK6pDc/0/NGcbNpzKPVH3xr6DBwM2jpLCD64kLPLcQGMDpj53z/M/_HF22104-Edit-M.jpg",
+      "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-thK6pDc/0/MtmKv53Gtq2QkS9fmXJ6GVJTFWTsk4Z7D8LM7JTHj/L/_HF22104-Edit-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-thK6pDc/0/MXkgpdxHNzfhVC87n7wsQLXpS5MB4z83L94XwvBbb/XL/_HF22104-Edit-XL.jpg",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-thK6pDc/0/MVZtq9DJhtsPQvTsB6Vp3ncBQHBN9gPv3Vsng2tJW/S/_HF22104-Edit-S.jpg",
+      "rating": 4,
+      "visibility": "show",
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-HJ2ZRPj",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-HJ2ZRPj/0/Nf7r7whd5SS8cCqPDM3S2d4X3C5jL3362wqPDFKtw/S/_HF21063-Edit-Edit-2-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-HJ2ZRPj/0/LdMFFKfdC3fKnktPwQXtLT2CttBNQxSp3pF55g22m/L/_HF21063-Edit-Edit-2-L.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-HJ2ZRPj/0/L7Wpnm6rBmHNj9Gk5DWwTbdRwtJCsBHVgXPKsTpjX/XL/_HF21063-Edit-Edit-2-XL.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-HJ2ZRPj/0/L7Wpnm6rBmHNj9Gk5DWwTbdRwtJCsBHVgXPKsTpjX/XL/_HF21063-Edit-Edit-2-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-HJ2ZRPj/0/Nf7r7whd5SS8cCqPDM3S2d4X3C5jL3362wqPDFKtw/S/_HF21063-Edit-Edit-2-S.jpg",
+      "rating": 4,
+      "visibility": "show",
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-fgb75Ts",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-fgb75Ts/0/NWcg5Qc2R3W7nznpnB9wLT3v9C44bssnVqKx6jTgb/S/_O2H0365-Enhanced-NR-Edit-Edit-2-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-fgb75Ts/0/KkKgHptVJkqxT64rM9Z2w6XCWr5NT648JFb66wHMz/L/_O2H0365-Enhanced-NR-Edit-Edit-2-L.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-fgb75Ts/0/K4HXgkzTKm2hcpgRrbncNp5WXH6N32CQvCNSKJ6n6/XL/_O2H0365-Enhanced-NR-Edit-Edit-2-XL.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-fgb75Ts/0/K4HXgkzTKm2hcpgRrbncNp5WXH6N32CQvCNSKJ6n6/XL/_O2H0365-Enhanced-NR-Edit-Edit-2-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-fgb75Ts/0/NWcg5Qc2R3W7nznpnB9wLT3v9C44bssnVqKx6jTgb/S/_O2H0365-Enhanced-NR-Edit-Edit-2-S.jpg",
+      "rating": 4,
+      "visibility": "show",
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-qjLp9Lf",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-qjLp9Lf/0/S/_HF23315-Edit-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-qjLp9Lf/0/M/_HF23315-Edit-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-qjLp9Lf/0/L/_HF23315-Edit-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-qjLp9Lf/0/XL/_HF23315-Edit-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-qjLp9Lf/0/S/_HF23315-Edit-S.jpg",
+      "rating": 0,
+      "visibility": "normal",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
       ]
@@ -93,12 +184,103 @@ export const galleryDataMap   = {
       ]
     },
     {
+      "id": "i-hM8SXCd",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-hM8SXCd/1/S/_WHO2013-Edit-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-hM8SXCd/1/M/_WHO2013-Edit-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-hM8SXCd/1/L/_WHO2013-Edit-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-hM8SXCd/1/XL/_WHO2013-Edit-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-hM8SXCd/1/S/_WHO2013-Edit-S.jpg",
+      "rating": 3,
+      "visibility": "normal",
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-Ng98bJK",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Ng98bJK/0/K98h3KTP88bWCNbpBPTC4hBcwQ47WvJvRv33cktWZ/S/_O2H6749-Enhanced-NR-Edit-2-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Ng98bJK/0/Lfj2V4fGWdw8VTtwbpfxLChBk5F9jzdMKvtD6TgJj/M/_O2H6749-Enhanced-NR-Edit-2-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Ng98bJK/0/K46tCJtmFxdTwsXjnSHhw2gRCJ7NR9pw3Ld8V276D/L/_O2H6749-Enhanced-NR-Edit-2-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Ng98bJK/0/MJ8WR8zbCVSD4XvGfcMwJ5rvCST88kvZ7NvrLvHms/XL/_O2H6749-Enhanced-NR-Edit-2-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Ng98bJK/0/K98h3KTP88bWCNbpBPTC4hBcwQ47WvJvRv33cktWZ/S/_O2H6749-Enhanced-NR-Edit-2-S.jpg",
+      "rating": 4,
+      "visibility": "show",
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-6rWdVVk",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-6rWdVVk/0/S/_WHO0013-Edit-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-6rWdVVk/0/M/_WHO0013-Edit-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-6rWdVVk/0/L/_WHO0013-Edit-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-6rWdVVk/0/XL/_WHO0013-Edit-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-6rWdVVk/0/S/_WHO0013-Edit-S.jpg",
+      "rating": 0,
+      "visibility": "normal",
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
+      ]
+    },
+    {
       "id": "i-fdtLTbW",
       "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-fdtLTbW/0/KsHdGCsvLHxbhzCsrhgqxfsnj7qtBWPNtRVtSwBvC/S/_HF21487-Enhanced-NR-Edit-S.jpg",
       "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-fdtLTbW/0/LDXRdxdgbbXSQgxgzKnm8xTH7fMRt9jHDtMbtfpkr/M/_HF21487-Enhanced-NR-Edit-M.jpg",
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-fdtLTbW/0/KX7W429mg924gRFdS9cVPrbKcp2MQmZjTJwpk4rHL/L/_HF21487-Enhanced-NR-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-fdtLTbW/0/KzVjVtqWBx2m9LgGZ8cMzLQ34jFRBLNXnPgqN9vTW/XL/_HF21487-Enhanced-NR-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-fdtLTbW/0/KsHdGCsvLHxbhzCsrhgqxfsnj7qtBWPNtRVtSwBvC/S/_HF21487-Enhanced-NR-Edit-S.jpg",
+      "rating": 4,
+      "visibility": "show",
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-VgGGG68",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-VgGGG68/0/MkcgfDcFPnwBJCrHtGVRD6WCDBnCQz7qDKHkVCTKM/S/_HF21372-Edit-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-VgGGG68/0/LtWkFkdgJnW9pQTwQgxqzTR7mqKtLbztMwPmZZzFt/L/_HF21372-Edit-L.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-VgGGG68/0/NQbG8hwcG26xj4sz3WRvJTbQFgsdx6FcrGf3wmZ9s/XL/_HF21372-Edit-XL.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-VgGGG68/0/NQbG8hwcG26xj4sz3WRvJTbQFgsdx6FcrGf3wmZ9s/XL/_HF21372-Edit-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-VgGGG68/0/MkcgfDcFPnwBJCrHtGVRD6WCDBnCQz7qDKHkVCTKM/S/_HF21372-Edit-S.jpg",
+      "rating": 4,
+      "visibility": "show",
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-kvCJ39n",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kvCJ39n/0/LWWmNFxZKbLWWcnHp3RM6cNvTbBCbwDvj7vWJRKhF/S/_O2H0296-Enhanced-NR-Edit-Edit-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kvCJ39n/0/KnWSW7TGnbNxGmRZh6Pv3N7KLhKBzvQr34G8WVqtC/M/_O2H0296-Enhanced-NR-Edit-Edit-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kvCJ39n/0/K57CkczJmvJkmdrfGqhM4PWqMMf2Smz4gqTZHCG9Z/L/_O2H0296-Enhanced-NR-Edit-Edit-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kvCJ39n/0/LM9BBkgsWjsFmZLsLqLxqMNnpcvhBHJGSVcG8WzKN/XL/_O2H0296-Enhanced-NR-Edit-Edit-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kvCJ39n/0/LWWmNFxZKbLWWcnHp3RM6cNvTbBCbwDvj7vWJRKhF/S/_O2H0296-Enhanced-NR-Edit-Edit-S.jpg",
+      "rating": 4,
+      "visibility": "show",
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-xxr9Tnb",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-xxr9Tnb/0/S/_WHO0216-Edit-Edit-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-xxr9Tnb/0/M/_WHO0216-Edit-Edit-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-xxr9Tnb/0/L/_WHO0216-Edit-Edit-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-xxr9Tnb/0/XL/_WHO0216-Edit-Edit-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-xxr9Tnb/0/S/_WHO0216-Edit-Edit-S.jpg",
+      "rating": 4,
+      "visibility": "normal",
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-f2DpvdK",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-f2DpvdK/0/Mh2HZwTzC7XctJS2SqVwb9vBbt5fnzR6TQ3mNNtjN/S/_O2H6907-Enhanced-NR-Edit-Edit-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-f2DpvdK/0/Kz5qQRNPKTGNQtdJQT3r7THmKDMvxdzr25hrMZhkW/M/_O2H6907-Enhanced-NR-Edit-Edit-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-f2DpvdK/0/KkPsf38fSbvXvVXQ582CqL7ZbN4wFTSqHWT3zd8rJ/L/_O2H6907-Enhanced-NR-Edit-Edit-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-f2DpvdK/0/LqcdH2sDTP5cVB4FGrtR76zr8SPKTxgRKJkBrZJw3/XL/_O2H6907-Enhanced-NR-Edit-Edit-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-f2DpvdK/0/Mh2HZwTzC7XctJS2SqVwb9vBbt5fnzR6TQ3mNNtjN/S/_O2H6907-Enhanced-NR-Edit-Edit-S.jpg",
       "rating": 4,
       "visibility": "show",
       "galleries": [
@@ -119,6 +301,32 @@ export const galleryDataMap   = {
       ]
     },
     {
+      "id": "i-kbpkRxp",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kbpkRxp/0/L8sV4QngF22gsdfTfQ7q7pSCFgRb3qsRSh9RnfVr5/S/_HF21069-Edit-2-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kbpkRxp/0/L2534qhDmj3rrWcLqRKKfvpsCLg88zQV3S7Z5LmRZ/L/_HF21069-Edit-2-L.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kbpkRxp/0/LdpW42Z6xFNZLbn6mV5ZG4kCWh8QbpVTdGrTcfPb9/XL/_HF21069-Edit-2-XL.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kbpkRxp/0/LdpW42Z6xFNZLbn6mV5ZG4kCWh8QbpVTdGrTcfPb9/XL/_HF21069-Edit-2-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kbpkRxp/0/L8sV4QngF22gsdfTfQ7q7pSCFgRb3qsRSh9RnfVr5/S/_HF21069-Edit-2-S.jpg",
+      "rating": 4,
+      "visibility": "show",
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-nDPs3J2",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-nDPs3J2/0/LDxTtRgTV5DzrHQmMCkkwJdS5hZSnHQLhMxbgxDWK/S/_O2H6690-Edit-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-nDPs3J2/0/Ndm9xtB4B9Lsn6wDn9qHjtJMTCvKQVT3Dq67VR5vM/L/_O2H6690-Edit-L.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-nDPs3J2/0/Ln9sBv5L63vTKPCJ3RHGRntDvw2f2DxqttwBq88M7/XL/_O2H6690-Edit-XL.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-nDPs3J2/0/Ln9sBv5L63vTKPCJ3RHGRntDvw2f2DxqttwBq88M7/XL/_O2H6690-Edit-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-nDPs3J2/0/LDxTtRgTV5DzrHQmMCkkwJdS5hZSnHQLhMxbgxDWK/S/_O2H6690-Edit-S.jpg",
+      "rating": 4,
+      "visibility": "show",
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
+      ]
+    },
+    {
       "id": "i-hD6jQZZ",
       "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-hD6jQZZ/0/MHbCZDBd2C9N2fBdp9s4ZDDG59KS4dJkHwX6C3Zpj/S/_HF20980-Edit-2-S.jpg",
       "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-hD6jQZZ/0/KTKQh5GWcgTdwPfRgSpJ4xq9tTMFx6qdRhq2CHcN2/L/_HF20980-Edit-2-L.jpg",
@@ -132,12 +340,25 @@ export const galleryDataMap   = {
       ]
     },
     {
-      "id": "i-9wj2BCw",
-      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-9wj2BCw/0/Mdd2DFc4978zjN3WHgwjX3cFqx3jWhQj9rDGBLzk7/S/_HF21520-Edit-2-S.jpg",
-      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-9wj2BCw/0/MfRnHT8ftpvHkPn6qGRFPWmMcgTCpgdq4bV4d7XCt/M/_HF21520-Edit-2-M.jpg",
-      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-9wj2BCw/0/L7jkVZk9Wn6FnMmpw98Tx48zrqdpJqzzSTmt8zqnz/L/_HF21520-Edit-2-L.jpg",
-      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-9wj2BCw/0/KpHXFJtVdGZ25NXNmwsjgRJfrXftWKXKdGn4PrcsF/XL/_HF21520-Edit-2-XL.jpg",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-9wj2BCw/0/Mdd2DFc4978zjN3WHgwjX3cFqx3jWhQj9rDGBLzk7/S/_HF21520-Edit-2-S.jpg",
+      "id": "i-ssCjgX8",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-ssCjgX8/0/S/_HF23324-Edit-3-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-ssCjgX8/0/M/_HF23324-Edit-3-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-ssCjgX8/0/L/_HF23324-Edit-3-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-ssCjgX8/0/XL/_HF23324-Edit-3-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-ssCjgX8/0/S/_HF23324-Edit-3-S.jpg",
+      "rating": 0,
+      "visibility": "normal",
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-8pvnqf5",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-8pvnqf5/0/NGHGrRXwMVXvf8nZSWzZt2dgTQ8Bj9dpGWLQkZj5S/S/_HF20923-Edit-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-8pvnqf5/0/Kcg7R5gTVM7fmWG2rBKCvcJgHPGNQWwFkRCVrbj5z/M/_HF20923-Edit-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-8pvnqf5/0/M4pKgbT6jwCD8NtFZFQrrz27zrMhL7xF4vtpf2Wtc/L/_HF20923-Edit-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-8pvnqf5/0/MpXfvDWVqMvT63G6hSswRNJQNCnCHS5trJ3nbBhM7/XL/_HF20923-Edit-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-8pvnqf5/0/NGHGrRXwMVXvf8nZSWzZt2dgTQ8Bj9dpGWLQkZj5S/S/_HF20923-Edit-S.jpg",
       "rating": 4,
       "visibility": "show",
       "galleries": [
@@ -151,19 +372,6 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-s785L8d/0/M6ZgxCxrV2LRTStFN7wT6TC9FS4WXHp6XwzhgT8g6/L/_HF21462-Edit-Edit-2-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-s785L8d/0/Lc56CrBZxnR3xvWFB3mSXcMGvgXgtQBzb4gVZhpXM/XL/_HF21462-Edit-Edit-2-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-s785L8d/0/M4qz4cVwBVh6JMBGfnb2vjkGsHWWCmNX7xMK9SmkH/S/_HF21462-Edit-Edit-2-S.jpg",
-      "rating": 4,
-      "visibility": "show",
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
-      ]
-    },
-    {
-      "id": "i-QsnR9mf",
-      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QsnR9mf/0/K3jKG3MGG2N7DSzh3Wd75HcwtwMWWQCpG3NQHN6Cj/S/_HF21458-Edit-S.jpg",
-      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QsnR9mf/0/KpKJtDtKfbMmGHQFWkg987pVQ6rjhkRRJDZR5RnKJ/L/_HF21458-Edit-L.jpg",
-      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QsnR9mf/0/NWXSgZxp8ZBhZmdKpRQccT7XCJzVD3Jw86q6FWsQC/XL/_HF21458-Edit-XL.jpg",
-      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QsnR9mf/0/NWXSgZxp8ZBhZmdKpRQccT7XCJzVD3Jw86q6FWsQC/XL/_HF21458-Edit-XL.jpg",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QsnR9mf/0/K3jKG3MGG2N7DSzh3Wd75HcwtwMWWQCpG3NQHN6Cj/S/_HF21458-Edit-S.jpg",
       "rating": 4,
       "visibility": "show",
       "galleries": [
@@ -197,58 +405,6 @@ export const galleryDataMap   = {
       ]
     },
     {
-      "id": "i-kvCJ39n",
-      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kvCJ39n/0/LWWmNFxZKbLWWcnHp3RM6cNvTbBCbwDvj7vWJRKhF/S/_O2H0296-Enhanced-NR-Edit-Edit-S.jpg",
-      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kvCJ39n/0/KnWSW7TGnbNxGmRZh6Pv3N7KLhKBzvQr34G8WVqtC/M/_O2H0296-Enhanced-NR-Edit-Edit-M.jpg",
-      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kvCJ39n/0/K57CkczJmvJkmdrfGqhM4PWqMMf2Smz4gqTZHCG9Z/L/_O2H0296-Enhanced-NR-Edit-Edit-L.jpg",
-      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kvCJ39n/0/LM9BBkgsWjsFmZLsLqLxqMNnpcvhBHJGSVcG8WzKN/XL/_O2H0296-Enhanced-NR-Edit-Edit-XL.jpg",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kvCJ39n/0/LWWmNFxZKbLWWcnHp3RM6cNvTbBCbwDvj7vWJRKhF/S/_O2H0296-Enhanced-NR-Edit-Edit-S.jpg",
-      "rating": 4,
-      "visibility": "show",
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
-      ]
-    },
-    {
-      "id": "i-VgGGG68",
-      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-VgGGG68/0/MkcgfDcFPnwBJCrHtGVRD6WCDBnCQz7qDKHkVCTKM/S/_HF21372-Edit-S.jpg",
-      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-VgGGG68/0/LtWkFkdgJnW9pQTwQgxqzTR7mqKtLbztMwPmZZzFt/L/_HF21372-Edit-L.jpg",
-      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-VgGGG68/0/NQbG8hwcG26xj4sz3WRvJTbQFgsdx6FcrGf3wmZ9s/XL/_HF21372-Edit-XL.jpg",
-      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-VgGGG68/0/NQbG8hwcG26xj4sz3WRvJTbQFgsdx6FcrGf3wmZ9s/XL/_HF21372-Edit-XL.jpg",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-VgGGG68/0/MkcgfDcFPnwBJCrHtGVRD6WCDBnCQz7qDKHkVCTKM/S/_HF21372-Edit-S.jpg",
-      "rating": 4,
-      "visibility": "show",
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
-      ]
-    },
-    {
-      "id": "i-nDPs3J2",
-      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-nDPs3J2/0/LDxTtRgTV5DzrHQmMCkkwJdS5hZSnHQLhMxbgxDWK/S/_O2H6690-Edit-S.jpg",
-      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-nDPs3J2/0/Ndm9xtB4B9Lsn6wDn9qHjtJMTCvKQVT3Dq67VR5vM/L/_O2H6690-Edit-L.jpg",
-      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-nDPs3J2/0/Ln9sBv5L63vTKPCJ3RHGRntDvw2f2DxqttwBq88M7/XL/_O2H6690-Edit-XL.jpg",
-      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-nDPs3J2/0/Ln9sBv5L63vTKPCJ3RHGRntDvw2f2DxqttwBq88M7/XL/_O2H6690-Edit-XL.jpg",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-nDPs3J2/0/LDxTtRgTV5DzrHQmMCkkwJdS5hZSnHQLhMxbgxDWK/S/_O2H6690-Edit-S.jpg",
-      "rating": 4,
-      "visibility": "show",
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
-      ]
-    },
-    {
-      "id": "i-QbSdKQS",
-      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QbSdKQS/0/MPmHxZGFWDhdNJJz3Z4rsHV5xsBh5wjrfm7qsVvtb/S/_HF21408-Enhanced-NR-Edit-Edit-S.jpg",
-      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QbSdKQS/0/LW3KCx9DMcbKrXNvmTjPfsJB8fwwSBFz49Qw8vtBC/M/_HF21408-Enhanced-NR-Edit-Edit-M.jpg",
-      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QbSdKQS/0/KZ5dwMpjRHQMkG56qFsMWxrBNTxbNPGfgBmv2Zzqt/L/_HF21408-Enhanced-NR-Edit-Edit-L.jpg",
-      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QbSdKQS/0/MmkHBFcCKSf3P9WJpxHL5bnGv9F6zbCBdBC2HgLLF/XL/_HF21408-Enhanced-NR-Edit-Edit-XL.jpg",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QbSdKQS/0/MPmHxZGFWDhdNJJz3Z4rsHV5xsBh5wjrfm7qsVvtb/S/_HF21408-Enhanced-NR-Edit-Edit-S.jpg",
-      "rating": 4,
-      "visibility": "show",
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
-      ]
-    },
-    {
       "id": "i-RpVqXBB",
       "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-RpVqXBB/0/KJvDTPdnFmgqckxZn63hGnRbh85HTQqRgJZHjws7K/S/_O2H6798-Edit-S.jpg",
       "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-RpVqXBB/0/KTcjTCQwp8SkcDpmkBFPrnBVZKzdfLPWJ79JGQqQ9/M/_O2H6798-Edit-M.jpg",
@@ -268,6 +424,32 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-zmbvK99/0/Njg6cLGvJnrQx264D6cxck2BTG73w25b2pQXT5b5H/L/_O2H6871-Enhanced-NR-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-zmbvK99/0/KmQq2rShMVZWMRd5cjRrpjMhJJXjQFRB9zgWJcksj/XL/_O2H6871-Enhanced-NR-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-zmbvK99/0/LQ9pXsqq5stP2V97ss4bMrPZLmsTqdT5mKbWcTN6G/S/_O2H6871-Enhanced-NR-Edit-S.jpg",
+      "rating": 4,
+      "visibility": "show",
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-mvXJpHF",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-mvXJpHF/0/MNsCzGhff73NwRTR2NcnJMpVdJBKCkxP2xTZDCLMd/S/_HF21543-Edit-2-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-mvXJpHF/0/L9Rj2Nj6LMGZrNRGzvLgCGNkrHLwCqBrG4BTzgFVq/M/_HF21543-Edit-2-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-mvXJpHF/0/LZ5HKFJmLP7cJfvfFdfBFqzFJpSRsH4fWVhV59rPJ/L/_HF21543-Edit-2-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-mvXJpHF/0/K8Tq9WxgNJXJfFGQt8c8Rv5J8STNHrNkGMMqDgpzJ/XL/_HF21543-Edit-2-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-mvXJpHF/0/MNsCzGhff73NwRTR2NcnJMpVdJBKCkxP2xTZDCLMd/S/_HF21543-Edit-2-S.jpg",
+      "rating": 4,
+      "visibility": "show",
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-767CNKX",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-767CNKX/0/NgXqPd2XQCvVC5ttvffz3Z9nC5w34WWcGCTnvdWHX/S/_HF20972-Edit-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-767CNKX/0/LNGgzKT8B6vvVxc2fVHHj6khsnF6QBT4WWm6GhLZH/M/_HF20972-Edit-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-767CNKX/0/NRgvR2FXBvrMcF7pnrfZ429TZRmdSNC2dMpt4HSqD/L/_HF20972-Edit-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-767CNKX/0/KVZNtRnDPktzWW4cN2g7WgZvn6D7vvqxF43LBvhp8/XL/_HF20972-Edit-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-767CNKX/0/NgXqPd2XQCvVC5ttvffz3Z9nC5w34WWcGCTnvdWHX/S/_HF20972-Edit-S.jpg",
       "rating": 4,
       "visibility": "show",
       "galleries": [
@@ -353,6 +535,19 @@ export const galleryDataMap   = {
       ]
     },
     {
+      "id": "i-vqdKfnX",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-vqdKfnX/1/MMZwq9xXTWJ39htpXbnXGFVd88DFxFwHhnHFqMShW/S/_O2H6866-Enhanced-NR-Edit-2-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-vqdKfnX/1/LXLmDNxQ3ZWW4SXvmVrgM8PfR7dGtX44XSSWfJv49/M/_O2H6866-Enhanced-NR-Edit-2-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-vqdKfnX/1/Mn4PxmChFg9dPkJbwbzR8fb3PVpQ9gxSPvL2Ht3ph/L/_O2H6866-Enhanced-NR-Edit-2-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-vqdKfnX/1/LrrjS4pPTPscnBmtQzfvxKmvBGsQzTBMSLxfnJB2J/XL/_O2H6866-Enhanced-NR-Edit-2-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-vqdKfnX/1/MMZwq9xXTWJ39htpXbnXGFVd88DFxFwHhnHFqMShW/S/_O2H6866-Enhanced-NR-Edit-2-S.jpg",
+      "rating": 4,
+      "visibility": "show",
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
+      ]
+    },
+    {
       "id": "i-VZL9dTs",
       "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-VZL9dTs/2/LVFf7CqbCS9SQ5WBzVvgvzZD8Kt9jK3ZjCkbg35wj/S/_HF20945-Edit-S.jpg",
       "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-VZL9dTs/2/NZ5NvFD7mkq2g8DBwnzj6w9gRDRLCkKBFn7hDFBbv/L/_HF20945-Edit-L.jpg",
@@ -379,32 +574,6 @@ export const galleryDataMap   = {
       ]
     },
     {
-      "id": "i-R53CkVb",
-      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-R53CkVb/0/MVjjXvP2BRLhDxbKRPggcVFMDG6hfg7ddfLkNrJNV/S/_O2H6822-Edit-Edit-Edit-2-2-S.jpg",
-      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-R53CkVb/0/KRMzVdpTMJHCHrkGSNj8cQtmQsJ4Pmrt29ww2fXL8/M/_O2H6822-Edit-Edit-Edit-2-2-M.jpg",
-      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-R53CkVb/0/MB6M7PTgkdfKJbcWCwsCGzb39sHXPSz7FThrRGVxS/L/_O2H6822-Edit-Edit-Edit-2-2-L.jpg",
-      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-R53CkVb/0/Lf7xfjvBbGhW3zQZk5Rs6QdfSxNqtB2fFS2PPZmQT/XL/_O2H6822-Edit-Edit-Edit-2-2-XL.jpg",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-R53CkVb/0/MVjjXvP2BRLhDxbKRPggcVFMDG6hfg7ddfLkNrJNV/S/_O2H6822-Edit-Edit-Edit-2-2-S.jpg",
-      "rating": 4,
-      "visibility": "show",
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
-      ]
-    },
-    {
-      "id": "i-Ng98bJK",
-      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Ng98bJK/0/K98h3KTP88bWCNbpBPTC4hBcwQ47WvJvRv33cktWZ/S/_O2H6749-Enhanced-NR-Edit-2-S.jpg",
-      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Ng98bJK/0/Lfj2V4fGWdw8VTtwbpfxLChBk5F9jzdMKvtD6TgJj/M/_O2H6749-Enhanced-NR-Edit-2-M.jpg",
-      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Ng98bJK/0/K46tCJtmFxdTwsXjnSHhw2gRCJ7NR9pw3Ld8V276D/L/_O2H6749-Enhanced-NR-Edit-2-L.jpg",
-      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Ng98bJK/0/MJ8WR8zbCVSD4XvGfcMwJ5rvCST88kvZ7NvrLvHms/XL/_O2H6749-Enhanced-NR-Edit-2-XL.jpg",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Ng98bJK/0/K98h3KTP88bWCNbpBPTC4hBcwQ47WvJvRv33cktWZ/S/_O2H6749-Enhanced-NR-Edit-2-S.jpg",
-      "rating": 4,
-      "visibility": "show",
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
-      ]
-    },
-    {
       "id": "i-4vsb9Qp",
       "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-4vsb9Qp/0/LxLfn6mcjBnjDH9hcGsNpVsN8dgzrF9zTZvrGMpfd/S/_O2H6730-Edit-S.jpg",
       "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-4vsb9Qp/0/Kqwt23jZLwkXLGHZZWDP6524Sh3m69jpJB9ZVgmPG/L/_O2H6730-Edit-L.jpg",
@@ -418,38 +587,12 @@ export const galleryDataMap   = {
       ]
     },
     {
-      "id": "i-f2DpvdK",
-      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-f2DpvdK/0/Mh2HZwTzC7XctJS2SqVwb9vBbt5fnzR6TQ3mNNtjN/S/_O2H6907-Enhanced-NR-Edit-Edit-S.jpg",
-      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-f2DpvdK/0/Kz5qQRNPKTGNQtdJQT3r7THmKDMvxdzr25hrMZhkW/M/_O2H6907-Enhanced-NR-Edit-Edit-M.jpg",
-      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-f2DpvdK/0/KkPsf38fSbvXvVXQ582CqL7ZbN4wFTSqHWT3zd8rJ/L/_O2H6907-Enhanced-NR-Edit-Edit-L.jpg",
-      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-f2DpvdK/0/LqcdH2sDTP5cVB4FGrtR76zr8SPKTxgRKJkBrZJw3/XL/_O2H6907-Enhanced-NR-Edit-Edit-XL.jpg",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-f2DpvdK/0/Mh2HZwTzC7XctJS2SqVwb9vBbt5fnzR6TQ3mNNtjN/S/_O2H6907-Enhanced-NR-Edit-Edit-S.jpg",
-      "rating": 4,
-      "visibility": "show",
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
-      ]
-    },
-    {
       "id": "i-2pHXbPq",
       "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-2pHXbPq/0/MrH9WSjswqLFBQwS9BKGDnQwL5BLp8gr8CnGRrcHg/S/_HF21237-Edit-S.jpg",
       "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-2pHXbPq/0/Mw3vZfdTb8m4bCPvv7D9HXqmMVDDPcdzS8vV7gptG/M/_HF21237-Edit-M.jpg",
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-2pHXbPq/0/Lb5WHn5knT8psJgXQJjT9tdD3FNZzZk2hV3hGL5Gs/L/_HF21237-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-2pHXbPq/0/MS6Q2tq98j6cQ2zxL7kbdbCK6JW6jZxrcqPKP3Q67/XL/_HF21237-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-2pHXbPq/0/MrH9WSjswqLFBQwS9BKGDnQwL5BLp8gr8CnGRrcHg/S/_HF21237-Edit-S.jpg",
-      "rating": 4,
-      "visibility": "show",
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
-      ]
-    },
-    {
-      "id": "i-mvXJpHF",
-      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-mvXJpHF/0/MNsCzGhff73NwRTR2NcnJMpVdJBKCkxP2xTZDCLMd/S/_HF21543-Edit-2-S.jpg",
-      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-mvXJpHF/0/L9Rj2Nj6LMGZrNRGzvLgCGNkrHLwCqBrG4BTzgFVq/M/_HF21543-Edit-2-M.jpg",
-      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-mvXJpHF/0/LZ5HKFJmLP7cJfvfFdfBFqzFJpSRsH4fWVhV59rPJ/L/_HF21543-Edit-2-L.jpg",
-      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-mvXJpHF/0/K8Tq9WxgNJXJfFGQt8c8Rv5J8STNHrNkGMMqDgpzJ/XL/_HF21543-Edit-2-XL.jpg",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-mvXJpHF/0/MNsCzGhff73NwRTR2NcnJMpVdJBKCkxP2xTZDCLMd/S/_HF21543-Edit-2-S.jpg",
       "rating": 4,
       "visibility": "show",
       "galleries": [
@@ -483,38 +626,12 @@ export const galleryDataMap   = {
       ]
     },
     {
-      "id": "i-vT7SdKj",
-      "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-vT7SdKj/1/LPgXmfgcprfKXSj3PvbTQhPhKsLZLVKpDSSXvfz8m/S/Water%20color%20portrait-S.jpg",
-      "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-vT7SdKj/1/McNdn2VX3m3NhmqTLMRqSD7wTxNpvkxbRzWMnJS5r/M/Water%20color%20portrait-M.jpg",
-      "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-vT7SdKj/1/KhRtQn6fC4JGQDthQfxTgFkQ4NH8Rwzj5xJm4JFmk/L/Water%20color%20portrait-L.jpg",
-      "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-vT7SdKj/1/Lrnnsch68MZ7Nfz5TsvDXNHSZcMwwTnZ6Hjb2MCmJ/XL/Water%20color%20portrait-XL.jpg",
-      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-vT7SdKj/1/LPgXmfgcprfKXSj3PvbTQhPhKsLZLVKpDSSXvfz8m/S/Water%20color%20portrait-S.jpg",
-      "rating": 4,
-      "visibility": "show",
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
-      ]
-    },
-    {
-      "id": "i-kbpkRxp",
-      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kbpkRxp/0/L8sV4QngF22gsdfTfQ7q7pSCFgRb3qsRSh9RnfVr5/S/_HF21069-Edit-2-S.jpg",
-      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kbpkRxp/0/L2534qhDmj3rrWcLqRKKfvpsCLg88zQV3S7Z5LmRZ/L/_HF21069-Edit-2-L.jpg",
-      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kbpkRxp/0/LdpW42Z6xFNZLbn6mV5ZG4kCWh8QbpVTdGrTcfPb9/XL/_HF21069-Edit-2-XL.jpg",
-      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kbpkRxp/0/LdpW42Z6xFNZLbn6mV5ZG4kCWh8QbpVTdGrTcfPb9/XL/_HF21069-Edit-2-XL.jpg",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kbpkRxp/0/L8sV4QngF22gsdfTfQ7q7pSCFgRb3qsRSh9RnfVr5/S/_HF21069-Edit-2-S.jpg",
-      "rating": 4,
-      "visibility": "show",
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
-      ]
-    },
-    {
-      "id": "i-HJ2ZRPj",
-      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-HJ2ZRPj/0/Nf7r7whd5SS8cCqPDM3S2d4X3C5jL3362wqPDFKtw/S/_HF21063-Edit-Edit-2-S.jpg",
-      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-HJ2ZRPj/0/LdMFFKfdC3fKnktPwQXtLT2CttBNQxSp3pF55g22m/L/_HF21063-Edit-Edit-2-L.jpg",
-      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-HJ2ZRPj/0/L7Wpnm6rBmHNj9Gk5DWwTbdRwtJCsBHVgXPKsTpjX/XL/_HF21063-Edit-Edit-2-XL.jpg",
-      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-HJ2ZRPj/0/L7Wpnm6rBmHNj9Gk5DWwTbdRwtJCsBHVgXPKsTpjX/XL/_HF21063-Edit-Edit-2-XL.jpg",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-HJ2ZRPj/0/Nf7r7whd5SS8cCqPDM3S2d4X3C5jL3362wqPDFKtw/S/_HF21063-Edit-Edit-2-S.jpg",
+      "id": "i-9wj2BCw",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-9wj2BCw/0/Mdd2DFc4978zjN3WHgwjX3cFqx3jWhQj9rDGBLzk7/S/_HF21520-Edit-2-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-9wj2BCw/0/MfRnHT8ftpvHkPn6qGRFPWmMcgTCpgdq4bV4d7XCt/M/_HF21520-Edit-2-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-9wj2BCw/0/L7jkVZk9Wn6FnMmpw98Tx48zrqdpJqzzSTmt8zqnz/L/_HF21520-Edit-2-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-9wj2BCw/0/KpHXFJtVdGZ25NXNmwsjgRJfrXftWKXKdGn4PrcsF/XL/_HF21520-Edit-2-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-9wj2BCw/0/Mdd2DFc4978zjN3WHgwjX3cFqx3jWhQj9rDGBLzk7/S/_HF21520-Edit-2-S.jpg",
       "rating": 4,
       "visibility": "show",
       "galleries": [
@@ -548,103 +665,12 @@ export const galleryDataMap   = {
       ]
     },
     {
-      "id": "i-WCW5QvM",
-      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-WCW5QvM/0/MfnjHWdbNfLPZQkS9PLxMn4kpxZZc8Nv2HSwkkzxj/S/_HF21057-Edit-S.jpg",
-      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-WCW5QvM/0/MrgkCBSgWBpSPK5Qn3Zs7tgxRNGjFWdrDVWzc6rGz/L/_HF21057-Edit-L.jpg",
-      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-WCW5QvM/0/L96MG5fBcFh8TZnkPsSQkS6Z494jVgWGsQxg8FgHj/XL/_HF21057-Edit-XL.jpg",
-      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-WCW5QvM/0/L96MG5fBcFh8TZnkPsSQkS6Z494jVgWGsQxg8FgHj/XL/_HF21057-Edit-XL.jpg",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-WCW5QvM/0/MfnjHWdbNfLPZQkS9PLxMn4kpxZZc8Nv2HSwkkzxj/S/_HF21057-Edit-S.jpg",
-      "rating": 4,
-      "visibility": "show",
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
-      ]
-    },
-    {
-      "id": "i-pBz9L9p",
-      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-pBz9L9p/0/KXGdC7PbXckj9Wq98LhzNqJR9jDLQcSVjQdm8qZvT/S/_HF21051-Edit-S.jpg",
-      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-pBz9L9p/0/L88TbVGkQ57NCDcfjCMNds5SVjccNtdDP6GL69WjX/L/_HF21051-Edit-L.jpg",
-      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-pBz9L9p/0/KrzrL7RMrpQjPXFkxDHGCzcCKMpfbBQBV5x9hJh8h/XL/_HF21051-Edit-XL.jpg",
-      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-pBz9L9p/0/KrzrL7RMrpQjPXFkxDHGCzcCKMpfbBQBV5x9hJh8h/XL/_HF21051-Edit-XL.jpg",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-pBz9L9p/0/KXGdC7PbXckj9Wq98LhzNqJR9jDLQcSVjQdm8qZvT/S/_HF21051-Edit-S.jpg",
-      "rating": 4,
-      "visibility": "show",
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
-      ]
-    },
-    {
-      "id": "i-hpRQLLm",
-      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-hpRQLLm/0/NcMCjPSQ9Cb2wLqw44KFQTKcFr7PX4n7D83NMLcNq/S/_HF21055-Edit-S.jpg",
-      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-hpRQLLm/0/KTFvJ3XC5NNjwxXxQwxHHPnXVHgsxRdrLm57T39rZ/L/_HF21055-Edit-L.jpg",
-      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-hpRQLLm/0/NSFDNPP3hRwjxQRz6XZpBCm8QKT5JXGvZRgmwZqRL/XL/_HF21055-Edit-XL.jpg",
-      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-hpRQLLm/0/NSFDNPP3hRwjxQRz6XZpBCm8QKT5JXGvZRgmwZqRL/XL/_HF21055-Edit-XL.jpg",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-hpRQLLm/0/NcMCjPSQ9Cb2wLqw44KFQTKcFr7PX4n7D83NMLcNq/S/_HF21055-Edit-S.jpg",
-      "rating": 4,
-      "visibility": "show",
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
-      ]
-    },
-    {
-      "id": "i-xKkVXbj",
-      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-xKkVXbj/0/L6Wkjqxtt5Cm33P8CtQ3hZsTWJ7zgRbTQRCQzxkNX/S/_HF21043-Enhanced-NR-Edit-S.jpg",
-      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-xKkVXbj/0/KP2ZtWcPHP7SbdgGRgLtzTrt5sLkFZ5Kp25FB2CSN/L/_HF21043-Enhanced-NR-Edit-L.jpg",
-      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-xKkVXbj/0/M4FKK2SVRbNj3vZwQQSD5H7GhWK8t2c87tVMHbR3B/XL/_HF21043-Enhanced-NR-Edit-XL.jpg",
-      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-xKkVXbj/0/M4FKK2SVRbNj3vZwQQSD5H7GhWK8t2c87tVMHbR3B/XL/_HF21043-Enhanced-NR-Edit-XL.jpg",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-xKkVXbj/0/L6Wkjqxtt5Cm33P8CtQ3hZsTWJ7zgRbTQRCQzxkNX/S/_HF21043-Enhanced-NR-Edit-S.jpg",
-      "rating": 4,
-      "visibility": "show",
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
-      ]
-    },
-    {
-      "id": "i-fgb75Ts",
-      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-fgb75Ts/0/NWcg5Qc2R3W7nznpnB9wLT3v9C44bssnVqKx6jTgb/S/_O2H0365-Enhanced-NR-Edit-Edit-2-S.jpg",
-      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-fgb75Ts/0/KkKgHptVJkqxT64rM9Z2w6XCWr5NT648JFb66wHMz/L/_O2H0365-Enhanced-NR-Edit-Edit-2-L.jpg",
-      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-fgb75Ts/0/K4HXgkzTKm2hcpgRrbncNp5WXH6N32CQvCNSKJ6n6/XL/_O2H0365-Enhanced-NR-Edit-Edit-2-XL.jpg",
-      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-fgb75Ts/0/K4HXgkzTKm2hcpgRrbncNp5WXH6N32CQvCNSKJ6n6/XL/_O2H0365-Enhanced-NR-Edit-Edit-2-XL.jpg",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-fgb75Ts/0/NWcg5Qc2R3W7nznpnB9wLT3v9C44bssnVqKx6jTgb/S/_O2H0365-Enhanced-NR-Edit-Edit-2-S.jpg",
-      "rating": 4,
-      "visibility": "show",
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
-      ]
-    },
-    {
-      "id": "i-RJprr78",
-      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-RJprr78/0/KWGrH3zjpG9Q3TJmfZ5fN49pVLfQ8J7Vjq8MLn8K8/S/_HF20974-Edit-S.jpg",
-      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-RJprr78/0/MRK682Pnx3thBnn8rqsW6BTtzGwB4sWKxXkTwmwPm/L/_HF20974-Edit-L.jpg",
-      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-RJprr78/0/KcfxtwLSVpT2rcf2NL6mNVCXRCqHtHQQqqKWxwBL5/XL/_HF20974-Edit-XL.jpg",
-      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-RJprr78/0/KcfxtwLSVpT2rcf2NL6mNVCXRCqHtHQQqqKWxwBL5/XL/_HF20974-Edit-XL.jpg",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-RJprr78/0/KWGrH3zjpG9Q3TJmfZ5fN49pVLfQ8J7Vjq8MLn8K8/S/_HF20974-Edit-S.jpg",
-      "rating": 4,
-      "visibility": "show",
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
-      ]
-    },
-    {
-      "id": "i-Pw9Tzzf",
-      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Pw9Tzzf/0/NKC5vjTRNXPWJBwLBFz5ZFCh33KK4vbcrs3vqFPwB/S/_O2H0307-Enhanced-NR-Edit-S.jpg",
-      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Pw9Tzzf/0/LHzWDzpPc5SKGntkBH99fMHphP2rfnW6fH5gs7FsC/M/_O2H0307-Enhanced-NR-Edit-M.jpg",
-      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Pw9Tzzf/0/KTGRmPX4zpJtszFqFFT97wtPKX8WRX3M3BD4z8SPg/L/_O2H0307-Enhanced-NR-Edit-L.jpg",
-      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Pw9Tzzf/0/KpNWHbpDJcFBjv8zQzSp7wcvpSvXrGq6xXf4xq2Vn/XL/_O2H0307-Enhanced-NR-Edit-XL.jpg",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Pw9Tzzf/0/NKC5vjTRNXPWJBwLBFz5ZFCh33KK4vbcrs3vqFPwB/S/_O2H0307-Enhanced-NR-Edit-S.jpg",
-      "rating": 4,
-      "visibility": "show",
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
-      ]
-    },
-    {
-      "id": "i-767CNKX",
-      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-767CNKX/0/NgXqPd2XQCvVC5ttvffz3Z9nC5w34WWcGCTnvdWHX/S/_HF20972-Edit-S.jpg",
-      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-767CNKX/0/LNGgzKT8B6vvVxc2fVHHj6khsnF6QBT4WWm6GhLZH/M/_HF20972-Edit-M.jpg",
-      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-767CNKX/0/NRgvR2FXBvrMcF7pnrfZ429TZRmdSNC2dMpt4HSqD/L/_HF20972-Edit-L.jpg",
-      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-767CNKX/0/KVZNtRnDPktzWW4cN2g7WgZvn6D7vvqxF43LBvhp8/XL/_HF20972-Edit-XL.jpg",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-767CNKX/0/NgXqPd2XQCvVC5ttvffz3Z9nC5w34WWcGCTnvdWHX/S/_HF20972-Edit-S.jpg",
+      "id": "i-gd64pg2",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-gd64pg2/3/Lfx5M5rjjz46nBh8hvcp8BNXQ8SSg65dTF4Z8fDV5/S/_W3H4016b-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-gd64pg2/3/LXtvP3Zkc9ksKr9rgXgQnW4Xk9Wc9S34CDN7Xp7qJ/L/_W3H4016b-L.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-gd64pg2/3/KNrBBCTV6djXp5ptFkHVqscMm9Kg4kKWgbVLVSDkW/XL/_W3H4016b-XL.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-gd64pg2/3/KNrBBCTV6djXp5ptFkHVqscMm9Kg4kKWgbVLVSDkW/XL/_W3H4016b-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-gd64pg2/3/Lfx5M5rjjz46nBh8hvcp8BNXQ8SSg65dTF4Z8fDV5/S/_W3H4016b-S.jpg",
       "rating": 4,
       "visibility": "show",
       "galleries": [
@@ -658,6 +684,45 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-SbcnJ6G/0/Mc3RN5jJWM8jbrPZgxSF9xC9hF9WC9bmPHPcbhcZD/XL/_HF20968-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-SbcnJ6G/0/Mc3RN5jJWM8jbrPZgxSF9xC9hF9WC9bmPHPcbhcZD/XL/_HF20968-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-SbcnJ6G/0/NfmcbWrprJxWSmQp4qtrkh3MZt3fzsWXn2nq9nHHP/S/_HF20968-Edit-S.jpg",
+      "rating": 4,
+      "visibility": "show",
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-WCW5QvM",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-WCW5QvM/0/MfnjHWdbNfLPZQkS9PLxMn4kpxZZc8Nv2HSwkkzxj/S/_HF21057-Edit-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-WCW5QvM/0/MrgkCBSgWBpSPK5Qn3Zs7tgxRNGjFWdrDVWzc6rGz/L/_HF21057-Edit-L.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-WCW5QvM/0/L96MG5fBcFh8TZnkPsSQkS6Z494jVgWGsQxg8FgHj/XL/_HF21057-Edit-XL.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-WCW5QvM/0/L96MG5fBcFh8TZnkPsSQkS6Z494jVgWGsQxg8FgHj/XL/_HF21057-Edit-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-WCW5QvM/0/MfnjHWdbNfLPZQkS9PLxMn4kpxZZc8Nv2HSwkkzxj/S/_HF21057-Edit-S.jpg",
+      "rating": 4,
+      "visibility": "show",
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-QsnR9mf",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QsnR9mf/0/K3jKG3MGG2N7DSzh3Wd75HcwtwMWWQCpG3NQHN6Cj/S/_HF21458-Edit-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QsnR9mf/0/KpKJtDtKfbMmGHQFWkg987pVQ6rjhkRRJDZR5RnKJ/L/_HF21458-Edit-L.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QsnR9mf/0/NWXSgZxp8ZBhZmdKpRQccT7XCJzVD3Jw86q6FWsQC/XL/_HF21458-Edit-XL.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QsnR9mf/0/NWXSgZxp8ZBhZmdKpRQccT7XCJzVD3Jw86q6FWsQC/XL/_HF21458-Edit-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QsnR9mf/0/K3jKG3MGG2N7DSzh3Wd75HcwtwMWWQCpG3NQHN6Cj/S/_HF21458-Edit-S.jpg",
+      "rating": 4,
+      "visibility": "show",
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-pBz9L9p",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-pBz9L9p/0/KXGdC7PbXckj9Wq98LhzNqJR9jDLQcSVjQdm8qZvT/S/_HF21051-Edit-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-pBz9L9p/0/L88TbVGkQ57NCDcfjCMNds5SVjccNtdDP6GL69WjX/L/_HF21051-Edit-L.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-pBz9L9p/0/KrzrL7RMrpQjPXFkxDHGCzcCKMpfbBQBV5x9hJh8h/XL/_HF21051-Edit-XL.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-pBz9L9p/0/KrzrL7RMrpQjPXFkxDHGCzcCKMpfbBQBV5x9hJh8h/XL/_HF21051-Edit-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-pBz9L9p/0/KXGdC7PbXckj9Wq98LhzNqJR9jDLQcSVjQdm8qZvT/S/_HF21051-Edit-S.jpg",
       "rating": 4,
       "visibility": "show",
       "galleries": [
@@ -691,12 +756,12 @@ export const galleryDataMap   = {
       ]
     },
     {
-      "id": "i-thK6pDc",
-      "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-thK6pDc/0/MVZtq9DJhtsPQvTsB6Vp3ncBQHBN9gPv3Vsng2tJW/S/_HF22104-Edit-S.jpg",
-      "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-thK6pDc/0/NGcbNpzKPVH3xr6DBwM2jpLCD64kLPLcQGMDpj53z/M/_HF22104-Edit-M.jpg",
-      "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-thK6pDc/0/MtmKv53Gtq2QkS9fmXJ6GVJTFWTsk4Z7D8LM7JTHj/L/_HF22104-Edit-L.jpg",
-      "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-thK6pDc/0/MXkgpdxHNzfhVC87n7wsQLXpS5MB4z83L94XwvBbb/XL/_HF22104-Edit-XL.jpg",
-      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-thK6pDc/0/MVZtq9DJhtsPQvTsB6Vp3ncBQHBN9gPv3Vsng2tJW/S/_HF22104-Edit-S.jpg",
+      "id": "i-xKkVXbj",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-xKkVXbj/0/L6Wkjqxtt5Cm33P8CtQ3hZsTWJ7zgRbTQRCQzxkNX/S/_HF21043-Enhanced-NR-Edit-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-xKkVXbj/0/KP2ZtWcPHP7SbdgGRgLtzTrt5sLkFZ5Kp25FB2CSN/L/_HF21043-Enhanced-NR-Edit-L.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-xKkVXbj/0/M4FKK2SVRbNj3vZwQQSD5H7GhWK8t2c87tVMHbR3B/XL/_HF21043-Enhanced-NR-Edit-XL.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-xKkVXbj/0/M4FKK2SVRbNj3vZwQQSD5H7GhWK8t2c87tVMHbR3B/XL/_HF21043-Enhanced-NR-Edit-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-xKkVXbj/0/L6Wkjqxtt5Cm33P8CtQ3hZsTWJ7zgRbTQRCQzxkNX/S/_HF21043-Enhanced-NR-Edit-S.jpg",
       "rating": 4,
       "visibility": "show",
       "galleries": [
@@ -704,12 +769,12 @@ export const galleryDataMap   = {
       ]
     },
     {
-      "id": "i-vqdKfnX",
-      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-vqdKfnX/1/MMZwq9xXTWJ39htpXbnXGFVd88DFxFwHhnHFqMShW/S/_O2H6866-Enhanced-NR-Edit-2-S.jpg",
-      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-vqdKfnX/1/LXLmDNxQ3ZWW4SXvmVrgM8PfR7dGtX44XSSWfJv49/M/_O2H6866-Enhanced-NR-Edit-2-M.jpg",
-      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-vqdKfnX/1/Mn4PxmChFg9dPkJbwbzR8fb3PVpQ9gxSPvL2Ht3ph/L/_O2H6866-Enhanced-NR-Edit-2-L.jpg",
-      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-vqdKfnX/1/LrrjS4pPTPscnBmtQzfvxKmvBGsQzTBMSLxfnJB2J/XL/_O2H6866-Enhanced-NR-Edit-2-XL.jpg",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-vqdKfnX/1/MMZwq9xXTWJ39htpXbnXGFVd88DFxFwHhnHFqMShW/S/_O2H6866-Enhanced-NR-Edit-2-S.jpg",
+      "id": "i-RJprr78",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-RJprr78/0/KWGrH3zjpG9Q3TJmfZ5fN49pVLfQ8J7Vjq8MLn8K8/S/_HF20974-Edit-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-RJprr78/0/MRK682Pnx3thBnn8rqsW6BTtzGwB4sWKxXkTwmwPm/L/_HF20974-Edit-L.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-RJprr78/0/KcfxtwLSVpT2rcf2NL6mNVCXRCqHtHQQqqKWxwBL5/XL/_HF20974-Edit-XL.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-RJprr78/0/KcfxtwLSVpT2rcf2NL6mNVCXRCqHtHQQqqKWxwBL5/XL/_HF20974-Edit-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-RJprr78/0/KWGrH3zjpG9Q3TJmfZ5fN49pVLfQ8J7Vjq8MLn8K8/S/_HF20974-Edit-S.jpg",
       "rating": 4,
       "visibility": "show",
       "galleries": [
@@ -717,12 +782,12 @@ export const galleryDataMap   = {
       ]
     },
     {
-      "id": "i-gd64pg2",
-      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-gd64pg2/3/Lfx5M5rjjz46nBh8hvcp8BNXQ8SSg65dTF4Z8fDV5/S/_W3H4016b-S.jpg",
-      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-gd64pg2/3/LXtvP3Zkc9ksKr9rgXgQnW4Xk9Wc9S34CDN7Xp7qJ/L/_W3H4016b-L.jpg",
-      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-gd64pg2/3/KNrBBCTV6djXp5ptFkHVqscMm9Kg4kKWgbVLVSDkW/XL/_W3H4016b-XL.jpg",
-      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-gd64pg2/3/KNrBBCTV6djXp5ptFkHVqscMm9Kg4kKWgbVLVSDkW/XL/_W3H4016b-XL.jpg",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-gd64pg2/3/Lfx5M5rjjz46nBh8hvcp8BNXQ8SSg65dTF4Z8fDV5/S/_W3H4016b-S.jpg",
+      "id": "i-Pw9Tzzf",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Pw9Tzzf/0/NKC5vjTRNXPWJBwLBFz5ZFCh33KK4vbcrs3vqFPwB/S/_O2H0307-Enhanced-NR-Edit-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Pw9Tzzf/0/LHzWDzpPc5SKGntkBH99fMHphP2rfnW6fH5gs7FsC/M/_O2H0307-Enhanced-NR-Edit-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Pw9Tzzf/0/KTGRmPX4zpJtszFqFFT97wtPKX8WRX3M3BD4z8SPg/L/_O2H0307-Enhanced-NR-Edit-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Pw9Tzzf/0/KpNWHbpDJcFBjv8zQzSp7wcvpSvXrGq6xXf4xq2Vn/XL/_O2H0307-Enhanced-NR-Edit-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Pw9Tzzf/0/NKC5vjTRNXPWJBwLBFz5ZFCh33KK4vbcrs3vqFPwB/S/_O2H0307-Enhanced-NR-Edit-S.jpg",
       "rating": 4,
       "visibility": "show",
       "galleries": [
@@ -730,12 +795,25 @@ export const galleryDataMap   = {
       ]
     },
     {
-      "id": "i-8pvnqf5",
-      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-8pvnqf5/0/NGHGrRXwMVXvf8nZSWzZt2dgTQ8Bj9dpGWLQkZj5S/S/_HF20923-Edit-S.jpg",
-      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-8pvnqf5/0/Kcg7R5gTVM7fmWG2rBKCvcJgHPGNQWwFkRCVrbj5z/M/_HF20923-Edit-M.jpg",
-      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-8pvnqf5/0/M4pKgbT6jwCD8NtFZFQrrz27zrMhL7xF4vtpf2Wtc/L/_HF20923-Edit-L.jpg",
-      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-8pvnqf5/0/MpXfvDWVqMvT63G6hSswRNJQNCnCHS5trJ3nbBhM7/XL/_HF20923-Edit-XL.jpg",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-8pvnqf5/0/NGHGrRXwMVXvf8nZSWzZt2dgTQ8Bj9dpGWLQkZj5S/S/_HF20923-Edit-S.jpg",
+      "id": "i-hpRQLLm",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-hpRQLLm/0/NcMCjPSQ9Cb2wLqw44KFQTKcFr7PX4n7D83NMLcNq/S/_HF21055-Edit-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-hpRQLLm/0/KTFvJ3XC5NNjwxXxQwxHHPnXVHgsxRdrLm57T39rZ/L/_HF21055-Edit-L.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-hpRQLLm/0/NSFDNPP3hRwjxQRz6XZpBCm8QKT5JXGvZRgmwZqRL/XL/_HF21055-Edit-XL.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-hpRQLLm/0/NSFDNPP3hRwjxQRz6XZpBCm8QKT5JXGvZRgmwZqRL/XL/_HF21055-Edit-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-hpRQLLm/0/NcMCjPSQ9Cb2wLqw44KFQTKcFr7PX4n7D83NMLcNq/S/_HF21055-Edit-S.jpg",
+      "rating": 4,
+      "visibility": "show",
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-R53CkVb",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-R53CkVb/0/MVjjXvP2BRLhDxbKRPggcVFMDG6hfg7ddfLkNrJNV/S/_O2H6822-Edit-Edit-Edit-2-2-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-R53CkVb/0/KRMzVdpTMJHCHrkGSNj8cQtmQsJ4Pmrt29ww2fXL8/M/_O2H6822-Edit-Edit-Edit-2-2-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-R53CkVb/0/MB6M7PTgkdfKJbcWCwsCGzb39sHXPSz7FThrRGVxS/L/_O2H6822-Edit-Edit-Edit-2-2-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-R53CkVb/0/Lf7xfjvBbGhW3zQZk5Rs6QdfSxNqtB2fFS2PPZmQT/XL/_O2H6822-Edit-Edit-Edit-2-2-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-R53CkVb/0/MVjjXvP2BRLhDxbKRPggcVFMDG6hfg7ddfLkNrJNV/S/_O2H6822-Edit-Edit-Edit-2-2-S.jpg",
       "rating": 4,
       "visibility": "show",
       "galleries": [
@@ -49573,6 +49651,19 @@ export const allImages        = [
     ]
   },
   {
+    "id": "i-kWVzc6g",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-kWVzc6g/0/S/_WHO0047-Edit-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-kWVzc6g/0/M/_WHO0047-Edit-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-kWVzc6g/0/L/_WHO0047-Edit-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-kWVzc6g/0/XL/_WHO0047-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-kWVzc6g/0/S/_WHO0047-Edit-S.jpg",
+    "rating": 0,
+    "visibility": "normal",
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
+    ]
+  },
+  {
     "id": "i-9q7BrTt",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-9q7BrTt/0/LjJBRNNfTsqSKZzxksj4mzd76xfBbC237hw62XH3J/S/_HF20983-Edit-2-S.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-9q7BrTt/0/KfX682WNCXWjSFK6ZZX3vSX8t3Cr2Lp38HFNZgFjN/M/_HF20983-Edit-2-M.jpg",
@@ -49612,6 +49703,19 @@ export const allImages        = [
     ]
   },
   {
+    "id": "i-vT7SdKj",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-vT7SdKj/1/LPgXmfgcprfKXSj3PvbTQhPhKsLZLVKpDSSXvfz8m/S/Water%20color%20portrait-S.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-vT7SdKj/1/McNdn2VX3m3NhmqTLMRqSD7wTxNpvkxbRzWMnJS5r/M/Water%20color%20portrait-M.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-vT7SdKj/1/KhRtQn6fC4JGQDthQfxTgFkQ4NH8Rwzj5xJm4JFmk/L/Water%20color%20portrait-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-vT7SdKj/1/Lrnnsch68MZ7Nfz5TsvDXNHSZcMwwTnZ6Hjb2MCmJ/XL/Water%20color%20portrait-XL.jpg",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-vT7SdKj/1/LPgXmfgcprfKXSj3PvbTQhPhKsLZLVKpDSSXvfz8m/S/Water%20color%20portrait-S.jpg",
+    "rating": 4,
+    "visibility": "show",
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
+    ]
+  },
+  {
     "id": "i-DJKJkMb",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-DJKJkMb/0/KHnXXpCZbfH9R9BF35CLRrpJRSzdkmd7fkdxhwkHT/S/_O2H6822-Edit-Edit-Edit-S.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-DJKJkMb/0/K5bVCwGZNszJLLffQ4r8jhHbcXHd7SJTC3qxJH7Tz/M/_O2H6822-Edit-Edit-Edit-M.jpg",
@@ -49620,6 +49724,71 @@ export const allImages        = [
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-DJKJkMb/0/KHnXXpCZbfH9R9BF35CLRrpJRSzdkmd7fkdxhwkHT/S/_O2H6822-Edit-Edit-Edit-S.jpg",
     "rating": 4,
     "visibility": "show",
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-QbSdKQS",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QbSdKQS/0/MPmHxZGFWDhdNJJz3Z4rsHV5xsBh5wjrfm7qsVvtb/S/_HF21408-Enhanced-NR-Edit-Edit-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QbSdKQS/0/LW3KCx9DMcbKrXNvmTjPfsJB8fwwSBFz49Qw8vtBC/M/_HF21408-Enhanced-NR-Edit-Edit-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QbSdKQS/0/KZ5dwMpjRHQMkG56qFsMWxrBNTxbNPGfgBmv2Zzqt/L/_HF21408-Enhanced-NR-Edit-Edit-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QbSdKQS/0/MmkHBFcCKSf3P9WJpxHL5bnGv9F6zbCBdBC2HgLLF/XL/_HF21408-Enhanced-NR-Edit-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QbSdKQS/0/MPmHxZGFWDhdNJJz3Z4rsHV5xsBh5wjrfm7qsVvtb/S/_HF21408-Enhanced-NR-Edit-Edit-S.jpg",
+    "rating": 4,
+    "visibility": "show",
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-thK6pDc",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-thK6pDc/0/MVZtq9DJhtsPQvTsB6Vp3ncBQHBN9gPv3Vsng2tJW/S/_HF22104-Edit-S.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-thK6pDc/0/NGcbNpzKPVH3xr6DBwM2jpLCD64kLPLcQGMDpj53z/M/_HF22104-Edit-M.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-thK6pDc/0/MtmKv53Gtq2QkS9fmXJ6GVJTFWTsk4Z7D8LM7JTHj/L/_HF22104-Edit-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-thK6pDc/0/MXkgpdxHNzfhVC87n7wsQLXpS5MB4z83L94XwvBbb/XL/_HF22104-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-thK6pDc/0/MVZtq9DJhtsPQvTsB6Vp3ncBQHBN9gPv3Vsng2tJW/S/_HF22104-Edit-S.jpg",
+    "rating": 4,
+    "visibility": "show",
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-HJ2ZRPj",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-HJ2ZRPj/0/Nf7r7whd5SS8cCqPDM3S2d4X3C5jL3362wqPDFKtw/S/_HF21063-Edit-Edit-2-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-HJ2ZRPj/0/LdMFFKfdC3fKnktPwQXtLT2CttBNQxSp3pF55g22m/L/_HF21063-Edit-Edit-2-L.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-HJ2ZRPj/0/L7Wpnm6rBmHNj9Gk5DWwTbdRwtJCsBHVgXPKsTpjX/XL/_HF21063-Edit-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-HJ2ZRPj/0/L7Wpnm6rBmHNj9Gk5DWwTbdRwtJCsBHVgXPKsTpjX/XL/_HF21063-Edit-Edit-2-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-HJ2ZRPj/0/Nf7r7whd5SS8cCqPDM3S2d4X3C5jL3362wqPDFKtw/S/_HF21063-Edit-Edit-2-S.jpg",
+    "rating": 4,
+    "visibility": "show",
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-fgb75Ts",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-fgb75Ts/0/NWcg5Qc2R3W7nznpnB9wLT3v9C44bssnVqKx6jTgb/S/_O2H0365-Enhanced-NR-Edit-Edit-2-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-fgb75Ts/0/KkKgHptVJkqxT64rM9Z2w6XCWr5NT648JFb66wHMz/L/_O2H0365-Enhanced-NR-Edit-Edit-2-L.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-fgb75Ts/0/K4HXgkzTKm2hcpgRrbncNp5WXH6N32CQvCNSKJ6n6/XL/_O2H0365-Enhanced-NR-Edit-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-fgb75Ts/0/K4HXgkzTKm2hcpgRrbncNp5WXH6N32CQvCNSKJ6n6/XL/_O2H0365-Enhanced-NR-Edit-Edit-2-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-fgb75Ts/0/NWcg5Qc2R3W7nznpnB9wLT3v9C44bssnVqKx6jTgb/S/_O2H0365-Enhanced-NR-Edit-Edit-2-S.jpg",
+    "rating": 4,
+    "visibility": "show",
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-qjLp9Lf",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-qjLp9Lf/0/S/_HF23315-Edit-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-qjLp9Lf/0/M/_HF23315-Edit-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-qjLp9Lf/0/L/_HF23315-Edit-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-qjLp9Lf/0/XL/_HF23315-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-qjLp9Lf/0/S/_HF23315-Edit-S.jpg",
+    "rating": 0,
+    "visibility": "normal",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
     ]
@@ -49638,12 +49807,103 @@ export const allImages        = [
     ]
   },
   {
+    "id": "i-hM8SXCd",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-hM8SXCd/1/S/_WHO2013-Edit-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-hM8SXCd/1/M/_WHO2013-Edit-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-hM8SXCd/1/L/_WHO2013-Edit-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-hM8SXCd/1/XL/_WHO2013-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-hM8SXCd/1/S/_WHO2013-Edit-S.jpg",
+    "rating": 3,
+    "visibility": "normal",
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-Ng98bJK",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Ng98bJK/0/K98h3KTP88bWCNbpBPTC4hBcwQ47WvJvRv33cktWZ/S/_O2H6749-Enhanced-NR-Edit-2-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Ng98bJK/0/Lfj2V4fGWdw8VTtwbpfxLChBk5F9jzdMKvtD6TgJj/M/_O2H6749-Enhanced-NR-Edit-2-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Ng98bJK/0/K46tCJtmFxdTwsXjnSHhw2gRCJ7NR9pw3Ld8V276D/L/_O2H6749-Enhanced-NR-Edit-2-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Ng98bJK/0/MJ8WR8zbCVSD4XvGfcMwJ5rvCST88kvZ7NvrLvHms/XL/_O2H6749-Enhanced-NR-Edit-2-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Ng98bJK/0/K98h3KTP88bWCNbpBPTC4hBcwQ47WvJvRv33cktWZ/S/_O2H6749-Enhanced-NR-Edit-2-S.jpg",
+    "rating": 4,
+    "visibility": "show",
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-6rWdVVk",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-6rWdVVk/0/S/_WHO0013-Edit-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-6rWdVVk/0/M/_WHO0013-Edit-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-6rWdVVk/0/L/_WHO0013-Edit-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-6rWdVVk/0/XL/_WHO0013-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-6rWdVVk/0/S/_WHO0013-Edit-S.jpg",
+    "rating": 0,
+    "visibility": "normal",
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
+    ]
+  },
+  {
     "id": "i-fdtLTbW",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-fdtLTbW/0/KsHdGCsvLHxbhzCsrhgqxfsnj7qtBWPNtRVtSwBvC/S/_HF21487-Enhanced-NR-Edit-S.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-fdtLTbW/0/LDXRdxdgbbXSQgxgzKnm8xTH7fMRt9jHDtMbtfpkr/M/_HF21487-Enhanced-NR-Edit-M.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-fdtLTbW/0/KX7W429mg924gRFdS9cVPrbKcp2MQmZjTJwpk4rHL/L/_HF21487-Enhanced-NR-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-fdtLTbW/0/KzVjVtqWBx2m9LgGZ8cMzLQ34jFRBLNXnPgqN9vTW/XL/_HF21487-Enhanced-NR-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-fdtLTbW/0/KsHdGCsvLHxbhzCsrhgqxfsnj7qtBWPNtRVtSwBvC/S/_HF21487-Enhanced-NR-Edit-S.jpg",
+    "rating": 4,
+    "visibility": "show",
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-VgGGG68",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-VgGGG68/0/MkcgfDcFPnwBJCrHtGVRD6WCDBnCQz7qDKHkVCTKM/S/_HF21372-Edit-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-VgGGG68/0/LtWkFkdgJnW9pQTwQgxqzTR7mqKtLbztMwPmZZzFt/L/_HF21372-Edit-L.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-VgGGG68/0/NQbG8hwcG26xj4sz3WRvJTbQFgsdx6FcrGf3wmZ9s/XL/_HF21372-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-VgGGG68/0/NQbG8hwcG26xj4sz3WRvJTbQFgsdx6FcrGf3wmZ9s/XL/_HF21372-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-VgGGG68/0/MkcgfDcFPnwBJCrHtGVRD6WCDBnCQz7qDKHkVCTKM/S/_HF21372-Edit-S.jpg",
+    "rating": 4,
+    "visibility": "show",
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-kvCJ39n",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kvCJ39n/0/LWWmNFxZKbLWWcnHp3RM6cNvTbBCbwDvj7vWJRKhF/S/_O2H0296-Enhanced-NR-Edit-Edit-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kvCJ39n/0/KnWSW7TGnbNxGmRZh6Pv3N7KLhKBzvQr34G8WVqtC/M/_O2H0296-Enhanced-NR-Edit-Edit-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kvCJ39n/0/K57CkczJmvJkmdrfGqhM4PWqMMf2Smz4gqTZHCG9Z/L/_O2H0296-Enhanced-NR-Edit-Edit-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kvCJ39n/0/LM9BBkgsWjsFmZLsLqLxqMNnpcvhBHJGSVcG8WzKN/XL/_O2H0296-Enhanced-NR-Edit-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kvCJ39n/0/LWWmNFxZKbLWWcnHp3RM6cNvTbBCbwDvj7vWJRKhF/S/_O2H0296-Enhanced-NR-Edit-Edit-S.jpg",
+    "rating": 4,
+    "visibility": "show",
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-xxr9Tnb",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-xxr9Tnb/0/S/_WHO0216-Edit-Edit-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-xxr9Tnb/0/M/_WHO0216-Edit-Edit-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-xxr9Tnb/0/L/_WHO0216-Edit-Edit-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-xxr9Tnb/0/XL/_WHO0216-Edit-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-xxr9Tnb/0/S/_WHO0216-Edit-Edit-S.jpg",
+    "rating": 4,
+    "visibility": "normal",
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-f2DpvdK",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-f2DpvdK/0/Mh2HZwTzC7XctJS2SqVwb9vBbt5fnzR6TQ3mNNtjN/S/_O2H6907-Enhanced-NR-Edit-Edit-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-f2DpvdK/0/Kz5qQRNPKTGNQtdJQT3r7THmKDMvxdzr25hrMZhkW/M/_O2H6907-Enhanced-NR-Edit-Edit-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-f2DpvdK/0/KkPsf38fSbvXvVXQ582CqL7ZbN4wFTSqHWT3zd8rJ/L/_O2H6907-Enhanced-NR-Edit-Edit-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-f2DpvdK/0/LqcdH2sDTP5cVB4FGrtR76zr8SPKTxgRKJkBrZJw3/XL/_O2H6907-Enhanced-NR-Edit-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-f2DpvdK/0/Mh2HZwTzC7XctJS2SqVwb9vBbt5fnzR6TQ3mNNtjN/S/_O2H6907-Enhanced-NR-Edit-Edit-S.jpg",
     "rating": 4,
     "visibility": "show",
     "galleries": [
@@ -49664,6 +49924,32 @@ export const allImages        = [
     ]
   },
   {
+    "id": "i-kbpkRxp",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kbpkRxp/0/L8sV4QngF22gsdfTfQ7q7pSCFgRb3qsRSh9RnfVr5/S/_HF21069-Edit-2-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kbpkRxp/0/L2534qhDmj3rrWcLqRKKfvpsCLg88zQV3S7Z5LmRZ/L/_HF21069-Edit-2-L.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kbpkRxp/0/LdpW42Z6xFNZLbn6mV5ZG4kCWh8QbpVTdGrTcfPb9/XL/_HF21069-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kbpkRxp/0/LdpW42Z6xFNZLbn6mV5ZG4kCWh8QbpVTdGrTcfPb9/XL/_HF21069-Edit-2-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kbpkRxp/0/L8sV4QngF22gsdfTfQ7q7pSCFgRb3qsRSh9RnfVr5/S/_HF21069-Edit-2-S.jpg",
+    "rating": 4,
+    "visibility": "show",
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-nDPs3J2",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-nDPs3J2/0/LDxTtRgTV5DzrHQmMCkkwJdS5hZSnHQLhMxbgxDWK/S/_O2H6690-Edit-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-nDPs3J2/0/Ndm9xtB4B9Lsn6wDn9qHjtJMTCvKQVT3Dq67VR5vM/L/_O2H6690-Edit-L.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-nDPs3J2/0/Ln9sBv5L63vTKPCJ3RHGRntDvw2f2DxqttwBq88M7/XL/_O2H6690-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-nDPs3J2/0/Ln9sBv5L63vTKPCJ3RHGRntDvw2f2DxqttwBq88M7/XL/_O2H6690-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-nDPs3J2/0/LDxTtRgTV5DzrHQmMCkkwJdS5hZSnHQLhMxbgxDWK/S/_O2H6690-Edit-S.jpg",
+    "rating": 4,
+    "visibility": "show",
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
+    ]
+  },
+  {
     "id": "i-hD6jQZZ",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-hD6jQZZ/0/MHbCZDBd2C9N2fBdp9s4ZDDG59KS4dJkHwX6C3Zpj/S/_HF20980-Edit-2-S.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-hD6jQZZ/0/KTKQh5GWcgTdwPfRgSpJ4xq9tTMFx6qdRhq2CHcN2/L/_HF20980-Edit-2-L.jpg",
@@ -49677,12 +49963,25 @@ export const allImages        = [
     ]
   },
   {
-    "id": "i-9wj2BCw",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-9wj2BCw/0/Mdd2DFc4978zjN3WHgwjX3cFqx3jWhQj9rDGBLzk7/S/_HF21520-Edit-2-S.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-9wj2BCw/0/MfRnHT8ftpvHkPn6qGRFPWmMcgTCpgdq4bV4d7XCt/M/_HF21520-Edit-2-M.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-9wj2BCw/0/L7jkVZk9Wn6FnMmpw98Tx48zrqdpJqzzSTmt8zqnz/L/_HF21520-Edit-2-L.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-9wj2BCw/0/KpHXFJtVdGZ25NXNmwsjgRJfrXftWKXKdGn4PrcsF/XL/_HF21520-Edit-2-XL.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-9wj2BCw/0/Mdd2DFc4978zjN3WHgwjX3cFqx3jWhQj9rDGBLzk7/S/_HF21520-Edit-2-S.jpg",
+    "id": "i-ssCjgX8",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-ssCjgX8/0/S/_HF23324-Edit-3-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-ssCjgX8/0/M/_HF23324-Edit-3-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-ssCjgX8/0/L/_HF23324-Edit-3-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-ssCjgX8/0/XL/_HF23324-Edit-3-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Civil-War/i-ssCjgX8/0/S/_HF23324-Edit-3-S.jpg",
+    "rating": 0,
+    "visibility": "normal",
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-8pvnqf5",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-8pvnqf5/0/NGHGrRXwMVXvf8nZSWzZt2dgTQ8Bj9dpGWLQkZj5S/S/_HF20923-Edit-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-8pvnqf5/0/Kcg7R5gTVM7fmWG2rBKCvcJgHPGNQWwFkRCVrbj5z/M/_HF20923-Edit-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-8pvnqf5/0/M4pKgbT6jwCD8NtFZFQrrz27zrMhL7xF4vtpf2Wtc/L/_HF20923-Edit-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-8pvnqf5/0/MpXfvDWVqMvT63G6hSswRNJQNCnCHS5trJ3nbBhM7/XL/_HF20923-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-8pvnqf5/0/NGHGrRXwMVXvf8nZSWzZt2dgTQ8Bj9dpGWLQkZj5S/S/_HF20923-Edit-S.jpg",
     "rating": 4,
     "visibility": "show",
     "galleries": [
@@ -49696,19 +49995,6 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-s785L8d/0/M6ZgxCxrV2LRTStFN7wT6TC9FS4WXHp6XwzhgT8g6/L/_HF21462-Edit-Edit-2-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-s785L8d/0/Lc56CrBZxnR3xvWFB3mSXcMGvgXgtQBzb4gVZhpXM/XL/_HF21462-Edit-Edit-2-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-s785L8d/0/M4qz4cVwBVh6JMBGfnb2vjkGsHWWCmNX7xMK9SmkH/S/_HF21462-Edit-Edit-2-S.jpg",
-    "rating": 4,
-    "visibility": "show",
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
-    ]
-  },
-  {
-    "id": "i-QsnR9mf",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QsnR9mf/0/K3jKG3MGG2N7DSzh3Wd75HcwtwMWWQCpG3NQHN6Cj/S/_HF21458-Edit-S.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QsnR9mf/0/KpKJtDtKfbMmGHQFWkg987pVQ6rjhkRRJDZR5RnKJ/L/_HF21458-Edit-L.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QsnR9mf/0/NWXSgZxp8ZBhZmdKpRQccT7XCJzVD3Jw86q6FWsQC/XL/_HF21458-Edit-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QsnR9mf/0/NWXSgZxp8ZBhZmdKpRQccT7XCJzVD3Jw86q6FWsQC/XL/_HF21458-Edit-XL.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QsnR9mf/0/K3jKG3MGG2N7DSzh3Wd75HcwtwMWWQCpG3NQHN6Cj/S/_HF21458-Edit-S.jpg",
     "rating": 4,
     "visibility": "show",
     "galleries": [
@@ -49742,58 +50028,6 @@ export const allImages        = [
     ]
   },
   {
-    "id": "i-kvCJ39n",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kvCJ39n/0/LWWmNFxZKbLWWcnHp3RM6cNvTbBCbwDvj7vWJRKhF/S/_O2H0296-Enhanced-NR-Edit-Edit-S.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kvCJ39n/0/KnWSW7TGnbNxGmRZh6Pv3N7KLhKBzvQr34G8WVqtC/M/_O2H0296-Enhanced-NR-Edit-Edit-M.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kvCJ39n/0/K57CkczJmvJkmdrfGqhM4PWqMMf2Smz4gqTZHCG9Z/L/_O2H0296-Enhanced-NR-Edit-Edit-L.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kvCJ39n/0/LM9BBkgsWjsFmZLsLqLxqMNnpcvhBHJGSVcG8WzKN/XL/_O2H0296-Enhanced-NR-Edit-Edit-XL.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kvCJ39n/0/LWWmNFxZKbLWWcnHp3RM6cNvTbBCbwDvj7vWJRKhF/S/_O2H0296-Enhanced-NR-Edit-Edit-S.jpg",
-    "rating": 4,
-    "visibility": "show",
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
-    ]
-  },
-  {
-    "id": "i-VgGGG68",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-VgGGG68/0/MkcgfDcFPnwBJCrHtGVRD6WCDBnCQz7qDKHkVCTKM/S/_HF21372-Edit-S.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-VgGGG68/0/LtWkFkdgJnW9pQTwQgxqzTR7mqKtLbztMwPmZZzFt/L/_HF21372-Edit-L.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-VgGGG68/0/NQbG8hwcG26xj4sz3WRvJTbQFgsdx6FcrGf3wmZ9s/XL/_HF21372-Edit-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-VgGGG68/0/NQbG8hwcG26xj4sz3WRvJTbQFgsdx6FcrGf3wmZ9s/XL/_HF21372-Edit-XL.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-VgGGG68/0/MkcgfDcFPnwBJCrHtGVRD6WCDBnCQz7qDKHkVCTKM/S/_HF21372-Edit-S.jpg",
-    "rating": 4,
-    "visibility": "show",
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
-    ]
-  },
-  {
-    "id": "i-nDPs3J2",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-nDPs3J2/0/LDxTtRgTV5DzrHQmMCkkwJdS5hZSnHQLhMxbgxDWK/S/_O2H6690-Edit-S.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-nDPs3J2/0/Ndm9xtB4B9Lsn6wDn9qHjtJMTCvKQVT3Dq67VR5vM/L/_O2H6690-Edit-L.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-nDPs3J2/0/Ln9sBv5L63vTKPCJ3RHGRntDvw2f2DxqttwBq88M7/XL/_O2H6690-Edit-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-nDPs3J2/0/Ln9sBv5L63vTKPCJ3RHGRntDvw2f2DxqttwBq88M7/XL/_O2H6690-Edit-XL.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-nDPs3J2/0/LDxTtRgTV5DzrHQmMCkkwJdS5hZSnHQLhMxbgxDWK/S/_O2H6690-Edit-S.jpg",
-    "rating": 4,
-    "visibility": "show",
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
-    ]
-  },
-  {
-    "id": "i-QbSdKQS",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QbSdKQS/0/MPmHxZGFWDhdNJJz3Z4rsHV5xsBh5wjrfm7qsVvtb/S/_HF21408-Enhanced-NR-Edit-Edit-S.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QbSdKQS/0/LW3KCx9DMcbKrXNvmTjPfsJB8fwwSBFz49Qw8vtBC/M/_HF21408-Enhanced-NR-Edit-Edit-M.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QbSdKQS/0/KZ5dwMpjRHQMkG56qFsMWxrBNTxbNPGfgBmv2Zzqt/L/_HF21408-Enhanced-NR-Edit-Edit-L.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QbSdKQS/0/MmkHBFcCKSf3P9WJpxHL5bnGv9F6zbCBdBC2HgLLF/XL/_HF21408-Enhanced-NR-Edit-Edit-XL.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QbSdKQS/0/MPmHxZGFWDhdNJJz3Z4rsHV5xsBh5wjrfm7qsVvtb/S/_HF21408-Enhanced-NR-Edit-Edit-S.jpg",
-    "rating": 4,
-    "visibility": "show",
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
-    ]
-  },
-  {
     "id": "i-RpVqXBB",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-RpVqXBB/0/KJvDTPdnFmgqckxZn63hGnRbh85HTQqRgJZHjws7K/S/_O2H6798-Edit-S.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-RpVqXBB/0/KTcjTCQwp8SkcDpmkBFPrnBVZKzdfLPWJ79JGQqQ9/M/_O2H6798-Edit-M.jpg",
@@ -49813,6 +50047,32 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-zmbvK99/0/Njg6cLGvJnrQx264D6cxck2BTG73w25b2pQXT5b5H/L/_O2H6871-Enhanced-NR-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-zmbvK99/0/KmQq2rShMVZWMRd5cjRrpjMhJJXjQFRB9zgWJcksj/XL/_O2H6871-Enhanced-NR-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-zmbvK99/0/LQ9pXsqq5stP2V97ss4bMrPZLmsTqdT5mKbWcTN6G/S/_O2H6871-Enhanced-NR-Edit-S.jpg",
+    "rating": 4,
+    "visibility": "show",
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-mvXJpHF",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-mvXJpHF/0/MNsCzGhff73NwRTR2NcnJMpVdJBKCkxP2xTZDCLMd/S/_HF21543-Edit-2-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-mvXJpHF/0/L9Rj2Nj6LMGZrNRGzvLgCGNkrHLwCqBrG4BTzgFVq/M/_HF21543-Edit-2-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-mvXJpHF/0/LZ5HKFJmLP7cJfvfFdfBFqzFJpSRsH4fWVhV59rPJ/L/_HF21543-Edit-2-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-mvXJpHF/0/K8Tq9WxgNJXJfFGQt8c8Rv5J8STNHrNkGMMqDgpzJ/XL/_HF21543-Edit-2-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-mvXJpHF/0/MNsCzGhff73NwRTR2NcnJMpVdJBKCkxP2xTZDCLMd/S/_HF21543-Edit-2-S.jpg",
+    "rating": 4,
+    "visibility": "show",
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-767CNKX",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-767CNKX/0/NgXqPd2XQCvVC5ttvffz3Z9nC5w34WWcGCTnvdWHX/S/_HF20972-Edit-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-767CNKX/0/LNGgzKT8B6vvVxc2fVHHj6khsnF6QBT4WWm6GhLZH/M/_HF20972-Edit-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-767CNKX/0/NRgvR2FXBvrMcF7pnrfZ429TZRmdSNC2dMpt4HSqD/L/_HF20972-Edit-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-767CNKX/0/KVZNtRnDPktzWW4cN2g7WgZvn6D7vvqxF43LBvhp8/XL/_HF20972-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-767CNKX/0/NgXqPd2XQCvVC5ttvffz3Z9nC5w34WWcGCTnvdWHX/S/_HF20972-Edit-S.jpg",
     "rating": 4,
     "visibility": "show",
     "galleries": [
@@ -49898,6 +50158,19 @@ export const allImages        = [
     ]
   },
   {
+    "id": "i-vqdKfnX",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-vqdKfnX/1/MMZwq9xXTWJ39htpXbnXGFVd88DFxFwHhnHFqMShW/S/_O2H6866-Enhanced-NR-Edit-2-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-vqdKfnX/1/LXLmDNxQ3ZWW4SXvmVrgM8PfR7dGtX44XSSWfJv49/M/_O2H6866-Enhanced-NR-Edit-2-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-vqdKfnX/1/Mn4PxmChFg9dPkJbwbzR8fb3PVpQ9gxSPvL2Ht3ph/L/_O2H6866-Enhanced-NR-Edit-2-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-vqdKfnX/1/LrrjS4pPTPscnBmtQzfvxKmvBGsQzTBMSLxfnJB2J/XL/_O2H6866-Enhanced-NR-Edit-2-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-vqdKfnX/1/MMZwq9xXTWJ39htpXbnXGFVd88DFxFwHhnHFqMShW/S/_O2H6866-Enhanced-NR-Edit-2-S.jpg",
+    "rating": 4,
+    "visibility": "show",
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
+    ]
+  },
+  {
     "id": "i-VZL9dTs",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-VZL9dTs/2/LVFf7CqbCS9SQ5WBzVvgvzZD8Kt9jK3ZjCkbg35wj/S/_HF20945-Edit-S.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-VZL9dTs/2/NZ5NvFD7mkq2g8DBwnzj6w9gRDRLCkKBFn7hDFBbv/L/_HF20945-Edit-L.jpg",
@@ -49924,32 +50197,6 @@ export const allImages        = [
     ]
   },
   {
-    "id": "i-R53CkVb",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-R53CkVb/0/MVjjXvP2BRLhDxbKRPggcVFMDG6hfg7ddfLkNrJNV/S/_O2H6822-Edit-Edit-Edit-2-2-S.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-R53CkVb/0/KRMzVdpTMJHCHrkGSNj8cQtmQsJ4Pmrt29ww2fXL8/M/_O2H6822-Edit-Edit-Edit-2-2-M.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-R53CkVb/0/MB6M7PTgkdfKJbcWCwsCGzb39sHXPSz7FThrRGVxS/L/_O2H6822-Edit-Edit-Edit-2-2-L.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-R53CkVb/0/Lf7xfjvBbGhW3zQZk5Rs6QdfSxNqtB2fFS2PPZmQT/XL/_O2H6822-Edit-Edit-Edit-2-2-XL.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-R53CkVb/0/MVjjXvP2BRLhDxbKRPggcVFMDG6hfg7ddfLkNrJNV/S/_O2H6822-Edit-Edit-Edit-2-2-S.jpg",
-    "rating": 4,
-    "visibility": "show",
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
-    ]
-  },
-  {
-    "id": "i-Ng98bJK",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Ng98bJK/0/K98h3KTP88bWCNbpBPTC4hBcwQ47WvJvRv33cktWZ/S/_O2H6749-Enhanced-NR-Edit-2-S.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Ng98bJK/0/Lfj2V4fGWdw8VTtwbpfxLChBk5F9jzdMKvtD6TgJj/M/_O2H6749-Enhanced-NR-Edit-2-M.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Ng98bJK/0/K46tCJtmFxdTwsXjnSHhw2gRCJ7NR9pw3Ld8V276D/L/_O2H6749-Enhanced-NR-Edit-2-L.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Ng98bJK/0/MJ8WR8zbCVSD4XvGfcMwJ5rvCST88kvZ7NvrLvHms/XL/_O2H6749-Enhanced-NR-Edit-2-XL.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Ng98bJK/0/K98h3KTP88bWCNbpBPTC4hBcwQ47WvJvRv33cktWZ/S/_O2H6749-Enhanced-NR-Edit-2-S.jpg",
-    "rating": 4,
-    "visibility": "show",
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
-    ]
-  },
-  {
     "id": "i-4vsb9Qp",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-4vsb9Qp/0/LxLfn6mcjBnjDH9hcGsNpVsN8dgzrF9zTZvrGMpfd/S/_O2H6730-Edit-S.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-4vsb9Qp/0/Kqwt23jZLwkXLGHZZWDP6524Sh3m69jpJB9ZVgmPG/L/_O2H6730-Edit-L.jpg",
@@ -49963,38 +50210,12 @@ export const allImages        = [
     ]
   },
   {
-    "id": "i-f2DpvdK",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-f2DpvdK/0/Mh2HZwTzC7XctJS2SqVwb9vBbt5fnzR6TQ3mNNtjN/S/_O2H6907-Enhanced-NR-Edit-Edit-S.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-f2DpvdK/0/Kz5qQRNPKTGNQtdJQT3r7THmKDMvxdzr25hrMZhkW/M/_O2H6907-Enhanced-NR-Edit-Edit-M.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-f2DpvdK/0/KkPsf38fSbvXvVXQ582CqL7ZbN4wFTSqHWT3zd8rJ/L/_O2H6907-Enhanced-NR-Edit-Edit-L.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-f2DpvdK/0/LqcdH2sDTP5cVB4FGrtR76zr8SPKTxgRKJkBrZJw3/XL/_O2H6907-Enhanced-NR-Edit-Edit-XL.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-f2DpvdK/0/Mh2HZwTzC7XctJS2SqVwb9vBbt5fnzR6TQ3mNNtjN/S/_O2H6907-Enhanced-NR-Edit-Edit-S.jpg",
-    "rating": 4,
-    "visibility": "show",
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
-    ]
-  },
-  {
     "id": "i-2pHXbPq",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-2pHXbPq/0/MrH9WSjswqLFBQwS9BKGDnQwL5BLp8gr8CnGRrcHg/S/_HF21237-Edit-S.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-2pHXbPq/0/Mw3vZfdTb8m4bCPvv7D9HXqmMVDDPcdzS8vV7gptG/M/_HF21237-Edit-M.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-2pHXbPq/0/Lb5WHn5knT8psJgXQJjT9tdD3FNZzZk2hV3hGL5Gs/L/_HF21237-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-2pHXbPq/0/MS6Q2tq98j6cQ2zxL7kbdbCK6JW6jZxrcqPKP3Q67/XL/_HF21237-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-2pHXbPq/0/MrH9WSjswqLFBQwS9BKGDnQwL5BLp8gr8CnGRrcHg/S/_HF21237-Edit-S.jpg",
-    "rating": 4,
-    "visibility": "show",
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
-    ]
-  },
-  {
-    "id": "i-mvXJpHF",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-mvXJpHF/0/MNsCzGhff73NwRTR2NcnJMpVdJBKCkxP2xTZDCLMd/S/_HF21543-Edit-2-S.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-mvXJpHF/0/L9Rj2Nj6LMGZrNRGzvLgCGNkrHLwCqBrG4BTzgFVq/M/_HF21543-Edit-2-M.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-mvXJpHF/0/LZ5HKFJmLP7cJfvfFdfBFqzFJpSRsH4fWVhV59rPJ/L/_HF21543-Edit-2-L.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-mvXJpHF/0/K8Tq9WxgNJXJfFGQt8c8Rv5J8STNHrNkGMMqDgpzJ/XL/_HF21543-Edit-2-XL.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-mvXJpHF/0/MNsCzGhff73NwRTR2NcnJMpVdJBKCkxP2xTZDCLMd/S/_HF21543-Edit-2-S.jpg",
     "rating": 4,
     "visibility": "show",
     "galleries": [
@@ -50028,38 +50249,12 @@ export const allImages        = [
     ]
   },
   {
-    "id": "i-vT7SdKj",
-    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-vT7SdKj/1/LPgXmfgcprfKXSj3PvbTQhPhKsLZLVKpDSSXvfz8m/S/Water%20color%20portrait-S.jpg",
-    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-vT7SdKj/1/McNdn2VX3m3NhmqTLMRqSD7wTxNpvkxbRzWMnJS5r/M/Water%20color%20portrait-M.jpg",
-    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-vT7SdKj/1/KhRtQn6fC4JGQDthQfxTgFkQ4NH8Rwzj5xJm4JFmk/L/Water%20color%20portrait-L.jpg",
-    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-vT7SdKj/1/Lrnnsch68MZ7Nfz5TsvDXNHSZcMwwTnZ6Hjb2MCmJ/XL/Water%20color%20portrait-XL.jpg",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-vT7SdKj/1/LPgXmfgcprfKXSj3PvbTQhPhKsLZLVKpDSSXvfz8m/S/Water%20color%20portrait-S.jpg",
-    "rating": 4,
-    "visibility": "show",
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
-    ]
-  },
-  {
-    "id": "i-kbpkRxp",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kbpkRxp/0/L8sV4QngF22gsdfTfQ7q7pSCFgRb3qsRSh9RnfVr5/S/_HF21069-Edit-2-S.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kbpkRxp/0/L2534qhDmj3rrWcLqRKKfvpsCLg88zQV3S7Z5LmRZ/L/_HF21069-Edit-2-L.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kbpkRxp/0/LdpW42Z6xFNZLbn6mV5ZG4kCWh8QbpVTdGrTcfPb9/XL/_HF21069-Edit-2-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kbpkRxp/0/LdpW42Z6xFNZLbn6mV5ZG4kCWh8QbpVTdGrTcfPb9/XL/_HF21069-Edit-2-XL.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kbpkRxp/0/L8sV4QngF22gsdfTfQ7q7pSCFgRb3qsRSh9RnfVr5/S/_HF21069-Edit-2-S.jpg",
-    "rating": 4,
-    "visibility": "show",
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
-    ]
-  },
-  {
-    "id": "i-HJ2ZRPj",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-HJ2ZRPj/0/Nf7r7whd5SS8cCqPDM3S2d4X3C5jL3362wqPDFKtw/S/_HF21063-Edit-Edit-2-S.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-HJ2ZRPj/0/LdMFFKfdC3fKnktPwQXtLT2CttBNQxSp3pF55g22m/L/_HF21063-Edit-Edit-2-L.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-HJ2ZRPj/0/L7Wpnm6rBmHNj9Gk5DWwTbdRwtJCsBHVgXPKsTpjX/XL/_HF21063-Edit-Edit-2-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-HJ2ZRPj/0/L7Wpnm6rBmHNj9Gk5DWwTbdRwtJCsBHVgXPKsTpjX/XL/_HF21063-Edit-Edit-2-XL.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-HJ2ZRPj/0/Nf7r7whd5SS8cCqPDM3S2d4X3C5jL3362wqPDFKtw/S/_HF21063-Edit-Edit-2-S.jpg",
+    "id": "i-9wj2BCw",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-9wj2BCw/0/Mdd2DFc4978zjN3WHgwjX3cFqx3jWhQj9rDGBLzk7/S/_HF21520-Edit-2-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-9wj2BCw/0/MfRnHT8ftpvHkPn6qGRFPWmMcgTCpgdq4bV4d7XCt/M/_HF21520-Edit-2-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-9wj2BCw/0/L7jkVZk9Wn6FnMmpw98Tx48zrqdpJqzzSTmt8zqnz/L/_HF21520-Edit-2-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-9wj2BCw/0/KpHXFJtVdGZ25NXNmwsjgRJfrXftWKXKdGn4PrcsF/XL/_HF21520-Edit-2-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-9wj2BCw/0/Mdd2DFc4978zjN3WHgwjX3cFqx3jWhQj9rDGBLzk7/S/_HF21520-Edit-2-S.jpg",
     "rating": 4,
     "visibility": "show",
     "galleries": [
@@ -50093,103 +50288,12 @@ export const allImages        = [
     ]
   },
   {
-    "id": "i-WCW5QvM",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-WCW5QvM/0/MfnjHWdbNfLPZQkS9PLxMn4kpxZZc8Nv2HSwkkzxj/S/_HF21057-Edit-S.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-WCW5QvM/0/MrgkCBSgWBpSPK5Qn3Zs7tgxRNGjFWdrDVWzc6rGz/L/_HF21057-Edit-L.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-WCW5QvM/0/L96MG5fBcFh8TZnkPsSQkS6Z494jVgWGsQxg8FgHj/XL/_HF21057-Edit-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-WCW5QvM/0/L96MG5fBcFh8TZnkPsSQkS6Z494jVgWGsQxg8FgHj/XL/_HF21057-Edit-XL.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-WCW5QvM/0/MfnjHWdbNfLPZQkS9PLxMn4kpxZZc8Nv2HSwkkzxj/S/_HF21057-Edit-S.jpg",
-    "rating": 4,
-    "visibility": "show",
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
-    ]
-  },
-  {
-    "id": "i-pBz9L9p",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-pBz9L9p/0/KXGdC7PbXckj9Wq98LhzNqJR9jDLQcSVjQdm8qZvT/S/_HF21051-Edit-S.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-pBz9L9p/0/L88TbVGkQ57NCDcfjCMNds5SVjccNtdDP6GL69WjX/L/_HF21051-Edit-L.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-pBz9L9p/0/KrzrL7RMrpQjPXFkxDHGCzcCKMpfbBQBV5x9hJh8h/XL/_HF21051-Edit-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-pBz9L9p/0/KrzrL7RMrpQjPXFkxDHGCzcCKMpfbBQBV5x9hJh8h/XL/_HF21051-Edit-XL.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-pBz9L9p/0/KXGdC7PbXckj9Wq98LhzNqJR9jDLQcSVjQdm8qZvT/S/_HF21051-Edit-S.jpg",
-    "rating": 4,
-    "visibility": "show",
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
-    ]
-  },
-  {
-    "id": "i-hpRQLLm",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-hpRQLLm/0/NcMCjPSQ9Cb2wLqw44KFQTKcFr7PX4n7D83NMLcNq/S/_HF21055-Edit-S.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-hpRQLLm/0/KTFvJ3XC5NNjwxXxQwxHHPnXVHgsxRdrLm57T39rZ/L/_HF21055-Edit-L.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-hpRQLLm/0/NSFDNPP3hRwjxQRz6XZpBCm8QKT5JXGvZRgmwZqRL/XL/_HF21055-Edit-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-hpRQLLm/0/NSFDNPP3hRwjxQRz6XZpBCm8QKT5JXGvZRgmwZqRL/XL/_HF21055-Edit-XL.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-hpRQLLm/0/NcMCjPSQ9Cb2wLqw44KFQTKcFr7PX4n7D83NMLcNq/S/_HF21055-Edit-S.jpg",
-    "rating": 4,
-    "visibility": "show",
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
-    ]
-  },
-  {
-    "id": "i-xKkVXbj",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-xKkVXbj/0/L6Wkjqxtt5Cm33P8CtQ3hZsTWJ7zgRbTQRCQzxkNX/S/_HF21043-Enhanced-NR-Edit-S.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-xKkVXbj/0/KP2ZtWcPHP7SbdgGRgLtzTrt5sLkFZ5Kp25FB2CSN/L/_HF21043-Enhanced-NR-Edit-L.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-xKkVXbj/0/M4FKK2SVRbNj3vZwQQSD5H7GhWK8t2c87tVMHbR3B/XL/_HF21043-Enhanced-NR-Edit-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-xKkVXbj/0/M4FKK2SVRbNj3vZwQQSD5H7GhWK8t2c87tVMHbR3B/XL/_HF21043-Enhanced-NR-Edit-XL.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-xKkVXbj/0/L6Wkjqxtt5Cm33P8CtQ3hZsTWJ7zgRbTQRCQzxkNX/S/_HF21043-Enhanced-NR-Edit-S.jpg",
-    "rating": 4,
-    "visibility": "show",
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
-    ]
-  },
-  {
-    "id": "i-fgb75Ts",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-fgb75Ts/0/NWcg5Qc2R3W7nznpnB9wLT3v9C44bssnVqKx6jTgb/S/_O2H0365-Enhanced-NR-Edit-Edit-2-S.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-fgb75Ts/0/KkKgHptVJkqxT64rM9Z2w6XCWr5NT648JFb66wHMz/L/_O2H0365-Enhanced-NR-Edit-Edit-2-L.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-fgb75Ts/0/K4HXgkzTKm2hcpgRrbncNp5WXH6N32CQvCNSKJ6n6/XL/_O2H0365-Enhanced-NR-Edit-Edit-2-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-fgb75Ts/0/K4HXgkzTKm2hcpgRrbncNp5WXH6N32CQvCNSKJ6n6/XL/_O2H0365-Enhanced-NR-Edit-Edit-2-XL.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-fgb75Ts/0/NWcg5Qc2R3W7nznpnB9wLT3v9C44bssnVqKx6jTgb/S/_O2H0365-Enhanced-NR-Edit-Edit-2-S.jpg",
-    "rating": 4,
-    "visibility": "show",
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
-    ]
-  },
-  {
-    "id": "i-RJprr78",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-RJprr78/0/KWGrH3zjpG9Q3TJmfZ5fN49pVLfQ8J7Vjq8MLn8K8/S/_HF20974-Edit-S.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-RJprr78/0/MRK682Pnx3thBnn8rqsW6BTtzGwB4sWKxXkTwmwPm/L/_HF20974-Edit-L.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-RJprr78/0/KcfxtwLSVpT2rcf2NL6mNVCXRCqHtHQQqqKWxwBL5/XL/_HF20974-Edit-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-RJprr78/0/KcfxtwLSVpT2rcf2NL6mNVCXRCqHtHQQqqKWxwBL5/XL/_HF20974-Edit-XL.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-RJprr78/0/KWGrH3zjpG9Q3TJmfZ5fN49pVLfQ8J7Vjq8MLn8K8/S/_HF20974-Edit-S.jpg",
-    "rating": 4,
-    "visibility": "show",
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
-    ]
-  },
-  {
-    "id": "i-Pw9Tzzf",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Pw9Tzzf/0/NKC5vjTRNXPWJBwLBFz5ZFCh33KK4vbcrs3vqFPwB/S/_O2H0307-Enhanced-NR-Edit-S.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Pw9Tzzf/0/LHzWDzpPc5SKGntkBH99fMHphP2rfnW6fH5gs7FsC/M/_O2H0307-Enhanced-NR-Edit-M.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Pw9Tzzf/0/KTGRmPX4zpJtszFqFFT97wtPKX8WRX3M3BD4z8SPg/L/_O2H0307-Enhanced-NR-Edit-L.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Pw9Tzzf/0/KpNWHbpDJcFBjv8zQzSp7wcvpSvXrGq6xXf4xq2Vn/XL/_O2H0307-Enhanced-NR-Edit-XL.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Pw9Tzzf/0/NKC5vjTRNXPWJBwLBFz5ZFCh33KK4vbcrs3vqFPwB/S/_O2H0307-Enhanced-NR-Edit-S.jpg",
-    "rating": 4,
-    "visibility": "show",
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
-    ]
-  },
-  {
-    "id": "i-767CNKX",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-767CNKX/0/NgXqPd2XQCvVC5ttvffz3Z9nC5w34WWcGCTnvdWHX/S/_HF20972-Edit-S.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-767CNKX/0/LNGgzKT8B6vvVxc2fVHHj6khsnF6QBT4WWm6GhLZH/M/_HF20972-Edit-M.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-767CNKX/0/NRgvR2FXBvrMcF7pnrfZ429TZRmdSNC2dMpt4HSqD/L/_HF20972-Edit-L.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-767CNKX/0/KVZNtRnDPktzWW4cN2g7WgZvn6D7vvqxF43LBvhp8/XL/_HF20972-Edit-XL.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-767CNKX/0/NgXqPd2XQCvVC5ttvffz3Z9nC5w34WWcGCTnvdWHX/S/_HF20972-Edit-S.jpg",
+    "id": "i-gd64pg2",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-gd64pg2/3/Lfx5M5rjjz46nBh8hvcp8BNXQ8SSg65dTF4Z8fDV5/S/_W3H4016b-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-gd64pg2/3/LXtvP3Zkc9ksKr9rgXgQnW4Xk9Wc9S34CDN7Xp7qJ/L/_W3H4016b-L.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-gd64pg2/3/KNrBBCTV6djXp5ptFkHVqscMm9Kg4kKWgbVLVSDkW/XL/_W3H4016b-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-gd64pg2/3/KNrBBCTV6djXp5ptFkHVqscMm9Kg4kKWgbVLVSDkW/XL/_W3H4016b-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-gd64pg2/3/Lfx5M5rjjz46nBh8hvcp8BNXQ8SSg65dTF4Z8fDV5/S/_W3H4016b-S.jpg",
     "rating": 4,
     "visibility": "show",
     "galleries": [
@@ -50203,6 +50307,45 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-SbcnJ6G/0/Mc3RN5jJWM8jbrPZgxSF9xC9hF9WC9bmPHPcbhcZD/XL/_HF20968-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-SbcnJ6G/0/Mc3RN5jJWM8jbrPZgxSF9xC9hF9WC9bmPHPcbhcZD/XL/_HF20968-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-SbcnJ6G/0/NfmcbWrprJxWSmQp4qtrkh3MZt3fzsWXn2nq9nHHP/S/_HF20968-Edit-S.jpg",
+    "rating": 4,
+    "visibility": "show",
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-WCW5QvM",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-WCW5QvM/0/MfnjHWdbNfLPZQkS9PLxMn4kpxZZc8Nv2HSwkkzxj/S/_HF21057-Edit-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-WCW5QvM/0/MrgkCBSgWBpSPK5Qn3Zs7tgxRNGjFWdrDVWzc6rGz/L/_HF21057-Edit-L.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-WCW5QvM/0/L96MG5fBcFh8TZnkPsSQkS6Z494jVgWGsQxg8FgHj/XL/_HF21057-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-WCW5QvM/0/L96MG5fBcFh8TZnkPsSQkS6Z494jVgWGsQxg8FgHj/XL/_HF21057-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-WCW5QvM/0/MfnjHWdbNfLPZQkS9PLxMn4kpxZZc8Nv2HSwkkzxj/S/_HF21057-Edit-S.jpg",
+    "rating": 4,
+    "visibility": "show",
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-QsnR9mf",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QsnR9mf/0/K3jKG3MGG2N7DSzh3Wd75HcwtwMWWQCpG3NQHN6Cj/S/_HF21458-Edit-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QsnR9mf/0/KpKJtDtKfbMmGHQFWkg987pVQ6rjhkRRJDZR5RnKJ/L/_HF21458-Edit-L.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QsnR9mf/0/NWXSgZxp8ZBhZmdKpRQccT7XCJzVD3Jw86q6FWsQC/XL/_HF21458-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QsnR9mf/0/NWXSgZxp8ZBhZmdKpRQccT7XCJzVD3Jw86q6FWsQC/XL/_HF21458-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QsnR9mf/0/K3jKG3MGG2N7DSzh3Wd75HcwtwMWWQCpG3NQHN6Cj/S/_HF21458-Edit-S.jpg",
+    "rating": 4,
+    "visibility": "show",
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-pBz9L9p",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-pBz9L9p/0/KXGdC7PbXckj9Wq98LhzNqJR9jDLQcSVjQdm8qZvT/S/_HF21051-Edit-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-pBz9L9p/0/L88TbVGkQ57NCDcfjCMNds5SVjccNtdDP6GL69WjX/L/_HF21051-Edit-L.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-pBz9L9p/0/KrzrL7RMrpQjPXFkxDHGCzcCKMpfbBQBV5x9hJh8h/XL/_HF21051-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-pBz9L9p/0/KrzrL7RMrpQjPXFkxDHGCzcCKMpfbBQBV5x9hJh8h/XL/_HF21051-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-pBz9L9p/0/KXGdC7PbXckj9Wq98LhzNqJR9jDLQcSVjQdm8qZvT/S/_HF21051-Edit-S.jpg",
     "rating": 4,
     "visibility": "show",
     "galleries": [
@@ -50236,12 +50379,12 @@ export const allImages        = [
     ]
   },
   {
-    "id": "i-thK6pDc",
-    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-thK6pDc/0/MVZtq9DJhtsPQvTsB6Vp3ncBQHBN9gPv3Vsng2tJW/S/_HF22104-Edit-S.jpg",
-    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-thK6pDc/0/NGcbNpzKPVH3xr6DBwM2jpLCD64kLPLcQGMDpj53z/M/_HF22104-Edit-M.jpg",
-    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-thK6pDc/0/MtmKv53Gtq2QkS9fmXJ6GVJTFWTsk4Z7D8LM7JTHj/L/_HF22104-Edit-L.jpg",
-    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-thK6pDc/0/MXkgpdxHNzfhVC87n7wsQLXpS5MB4z83L94XwvBbb/XL/_HF22104-Edit-XL.jpg",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-thK6pDc/0/MVZtq9DJhtsPQvTsB6Vp3ncBQHBN9gPv3Vsng2tJW/S/_HF22104-Edit-S.jpg",
+    "id": "i-xKkVXbj",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-xKkVXbj/0/L6Wkjqxtt5Cm33P8CtQ3hZsTWJ7zgRbTQRCQzxkNX/S/_HF21043-Enhanced-NR-Edit-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-xKkVXbj/0/KP2ZtWcPHP7SbdgGRgLtzTrt5sLkFZ5Kp25FB2CSN/L/_HF21043-Enhanced-NR-Edit-L.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-xKkVXbj/0/M4FKK2SVRbNj3vZwQQSD5H7GhWK8t2c87tVMHbR3B/XL/_HF21043-Enhanced-NR-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-xKkVXbj/0/M4FKK2SVRbNj3vZwQQSD5H7GhWK8t2c87tVMHbR3B/XL/_HF21043-Enhanced-NR-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-xKkVXbj/0/L6Wkjqxtt5Cm33P8CtQ3hZsTWJ7zgRbTQRCQzxkNX/S/_HF21043-Enhanced-NR-Edit-S.jpg",
     "rating": 4,
     "visibility": "show",
     "galleries": [
@@ -50249,12 +50392,12 @@ export const allImages        = [
     ]
   },
   {
-    "id": "i-vqdKfnX",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-vqdKfnX/1/MMZwq9xXTWJ39htpXbnXGFVd88DFxFwHhnHFqMShW/S/_O2H6866-Enhanced-NR-Edit-2-S.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-vqdKfnX/1/LXLmDNxQ3ZWW4SXvmVrgM8PfR7dGtX44XSSWfJv49/M/_O2H6866-Enhanced-NR-Edit-2-M.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-vqdKfnX/1/Mn4PxmChFg9dPkJbwbzR8fb3PVpQ9gxSPvL2Ht3ph/L/_O2H6866-Enhanced-NR-Edit-2-L.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-vqdKfnX/1/LrrjS4pPTPscnBmtQzfvxKmvBGsQzTBMSLxfnJB2J/XL/_O2H6866-Enhanced-NR-Edit-2-XL.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-vqdKfnX/1/MMZwq9xXTWJ39htpXbnXGFVd88DFxFwHhnHFqMShW/S/_O2H6866-Enhanced-NR-Edit-2-S.jpg",
+    "id": "i-RJprr78",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-RJprr78/0/KWGrH3zjpG9Q3TJmfZ5fN49pVLfQ8J7Vjq8MLn8K8/S/_HF20974-Edit-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-RJprr78/0/MRK682Pnx3thBnn8rqsW6BTtzGwB4sWKxXkTwmwPm/L/_HF20974-Edit-L.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-RJprr78/0/KcfxtwLSVpT2rcf2NL6mNVCXRCqHtHQQqqKWxwBL5/XL/_HF20974-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-RJprr78/0/KcfxtwLSVpT2rcf2NL6mNVCXRCqHtHQQqqKWxwBL5/XL/_HF20974-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-RJprr78/0/KWGrH3zjpG9Q3TJmfZ5fN49pVLfQ8J7Vjq8MLn8K8/S/_HF20974-Edit-S.jpg",
     "rating": 4,
     "visibility": "show",
     "galleries": [
@@ -50262,12 +50405,12 @@ export const allImages        = [
     ]
   },
   {
-    "id": "i-gd64pg2",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-gd64pg2/3/Lfx5M5rjjz46nBh8hvcp8BNXQ8SSg65dTF4Z8fDV5/S/_W3H4016b-S.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-gd64pg2/3/LXtvP3Zkc9ksKr9rgXgQnW4Xk9Wc9S34CDN7Xp7qJ/L/_W3H4016b-L.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-gd64pg2/3/KNrBBCTV6djXp5ptFkHVqscMm9Kg4kKWgbVLVSDkW/XL/_W3H4016b-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-gd64pg2/3/KNrBBCTV6djXp5ptFkHVqscMm9Kg4kKWgbVLVSDkW/XL/_W3H4016b-XL.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-gd64pg2/3/Lfx5M5rjjz46nBh8hvcp8BNXQ8SSg65dTF4Z8fDV5/S/_W3H4016b-S.jpg",
+    "id": "i-Pw9Tzzf",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Pw9Tzzf/0/NKC5vjTRNXPWJBwLBFz5ZFCh33KK4vbcrs3vqFPwB/S/_O2H0307-Enhanced-NR-Edit-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Pw9Tzzf/0/LHzWDzpPc5SKGntkBH99fMHphP2rfnW6fH5gs7FsC/M/_O2H0307-Enhanced-NR-Edit-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Pw9Tzzf/0/KTGRmPX4zpJtszFqFFT97wtPKX8WRX3M3BD4z8SPg/L/_O2H0307-Enhanced-NR-Edit-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Pw9Tzzf/0/KpNWHbpDJcFBjv8zQzSp7wcvpSvXrGq6xXf4xq2Vn/XL/_O2H0307-Enhanced-NR-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Pw9Tzzf/0/NKC5vjTRNXPWJBwLBFz5ZFCh33KK4vbcrs3vqFPwB/S/_O2H0307-Enhanced-NR-Edit-S.jpg",
     "rating": 4,
     "visibility": "show",
     "galleries": [
@@ -50275,12 +50418,25 @@ export const allImages        = [
     ]
   },
   {
-    "id": "i-8pvnqf5",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-8pvnqf5/0/NGHGrRXwMVXvf8nZSWzZt2dgTQ8Bj9dpGWLQkZj5S/S/_HF20923-Edit-S.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-8pvnqf5/0/Kcg7R5gTVM7fmWG2rBKCvcJgHPGNQWwFkRCVrbj5z/M/_HF20923-Edit-M.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-8pvnqf5/0/M4pKgbT6jwCD8NtFZFQrrz27zrMhL7xF4vtpf2Wtc/L/_HF20923-Edit-L.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-8pvnqf5/0/MpXfvDWVqMvT63G6hSswRNJQNCnCHS5trJ3nbBhM7/XL/_HF20923-Edit-XL.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-8pvnqf5/0/NGHGrRXwMVXvf8nZSWzZt2dgTQ8Bj9dpGWLQkZj5S/S/_HF20923-Edit-S.jpg",
+    "id": "i-hpRQLLm",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-hpRQLLm/0/NcMCjPSQ9Cb2wLqw44KFQTKcFr7PX4n7D83NMLcNq/S/_HF21055-Edit-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-hpRQLLm/0/KTFvJ3XC5NNjwxXxQwxHHPnXVHgsxRdrLm57T39rZ/L/_HF21055-Edit-L.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-hpRQLLm/0/NSFDNPP3hRwjxQRz6XZpBCm8QKT5JXGvZRgmwZqRL/XL/_HF21055-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-hpRQLLm/0/NSFDNPP3hRwjxQRz6XZpBCm8QKT5JXGvZRgmwZqRL/XL/_HF21055-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-hpRQLLm/0/NcMCjPSQ9Cb2wLqw44KFQTKcFr7PX4n7D83NMLcNq/S/_HF21055-Edit-S.jpg",
+    "rating": 4,
+    "visibility": "show",
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-R53CkVb",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-R53CkVb/0/MVjjXvP2BRLhDxbKRPggcVFMDG6hfg7ddfLkNrJNV/S/_O2H6822-Edit-Edit-Edit-2-2-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-R53CkVb/0/KRMzVdpTMJHCHrkGSNj8cQtmQsJ4Pmrt29ww2fXL8/M/_O2H6822-Edit-Edit-Edit-2-2-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-R53CkVb/0/MB6M7PTgkdfKJbcWCwsCGzb39sHXPSz7FThrRGVxS/L/_O2H6822-Edit-Edit-Edit-2-2-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-R53CkVb/0/Lf7xfjvBbGhW3zQZk5Rs6QdfSxNqtB2fFS2PPZmQT/XL/_O2H6822-Edit-Edit-Edit-2-2-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-R53CkVb/0/MVjjXvP2BRLhDxbKRPggcVFMDG6hfg7ddfLkNrJNV/S/_O2H6822-Edit-Edit-Edit-2-2-S.jpg",
     "rating": 4,
     "visibility": "show",
     "galleries": [

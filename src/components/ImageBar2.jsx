@@ -60,9 +60,9 @@ const allCarousels = import.meta.glob([
 ], { eager: true });
 
 /**
- * @param {{ slides?: any[]; pageContext?: any; showTrim?: boolean }} props
+ * @param {{ slides?: any[]; pageContext?: any }} props
  */
-export default function ImageBar2({ slides = [], pageContext: propPageContext = null, showTrim = true } = {}) {
+export default function ImageBar2({ slides = [], pageContext: propPageContext = null } = {}) {
   const trackRef = useRef(null);
   const [finalSlides, setFinalSlides] = useState(slides ?? []);
   // Duplicate slides for infinite scroll effect - done in React state, not DOM manipulation
@@ -169,8 +169,6 @@ export default function ImageBar2({ slides = [], pageContext: propPageContext = 
     >
       {/* Wipe curtain - slides right to reveal carousel */}
       <div className="carousel-curtain" aria-hidden="true" />
-      {showTrim && <div className="carousel-trim carousel-trim--top" aria-hidden="true" />}
-      {showTrim && <div className="carousel-trim carousel-trim--bottom" aria-hidden="true" />}
       
       <meta itemProp="name" content="Fine Art Gallery Carousel" />
       <meta itemProp="creator" content="K4 Studios" />

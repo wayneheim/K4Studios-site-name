@@ -70,42 +70,6 @@
 .carousel::before{ left:0;  background:linear-gradient(to right, #ffffff 0%, #ffffff00 100%);}
 .carousel::after { right:0; background:linear-gradient(to left , #ffffff 0%, #ffffff00 100%);}
 
-.carousel-trim {
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 15px;
-  pointer-events: none;
-  z-index: 16;
-  opacity: 0;
-  transition: opacity 0.3s ease-out 1.6s;
-}
-.carousel.carousel-ready .carousel-trim {
-  opacity: 1;
-}
-.carousel-trim--top {
-  top: 5px;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(255,255,255,0.32) 0 13.333%,
-    transparent 13.333% 46.667%,
-    rgba(255,255,255,0.48) 46.667% 60%,
-    transparent 60% 86.667%,
-    rgba(255,255,255,0.66) 86.667% 100%
-  );
-}
-.carousel-trim--bottom {
-  bottom: 18px;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(255,255,255,0.66) 0 13.333%,
-    transparent 13.333% 40%,
-    rgba(255,255,255,0.48) 40% 53.333%,
-    transparent 53.333% 86.667%,
-    rgba(255,255,255,0.32) 86.667% 100%
-  );
-}
-
 /* ————— track ————— */
 .carousel-track{
   display:flex;
@@ -157,9 +121,6 @@
       margin-bottom: -25px!important;
       margin-top: 20px!important;
       min-height:200px; /* Reserve space to prevent CLS on mobile */
-  }
-  .carousel-trim {
-    display: none;
   }
 }
 

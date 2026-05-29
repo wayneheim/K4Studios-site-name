@@ -47,6 +47,57 @@ function prettyLabelFromPath(fullPath) {
   return `[${rootName}] ${segs.join(" / ")}`;
 }
 
+async function loadGalleryDataFresh(selectedPath, fallbackLoader) {
+  const cacheBust = `_t=${Date.now()}`;
+  const freshPath = `${selectedPath}${selectedPath.includes("?") ? "&" : "?"}${cacheBust}`;
+
+  try {
+    const mod = await import(/* @vite-ignore */ freshPath);
+    if (Array.isArray(mod)) return mod;
+    if (Array.isArray(mod?.galleryData)) return mod.galleryData;
+    if (Array.isArray(mod?.default)) return mod.default;
+  } catch (error) {
+    console.warn(`[GalleryDataSwapper] Fresh import failed for ${selectedPath}; falling back to module map.`, error);
+  }
+
+  if (typeof fallbackLoader !== "function") return [];
+
+  const mod = await fallbackLoader();
+  if (Array.isArray(mod)) return mod;
+  if (Array.isArray(mod?.galleryData)) return mod.galleryData;
+  if (Array.isArray(mod?.default)) return mod.default;
+  return [];
+}
+
+async function loadGalleryDataFromServer(selectedPath, fallbackLoader) {
+  try {
+    const datasetPath = selectedPath.replace(/^\//, "");
+    const url = `/.netlify/functions/updateGalleryItem?datasetPath=${encodeURIComponent(datasetPath)}&_t=${Date.now()}`;
+    const res = await fetch(url, { cache: "no-store" });
+    if (!res.ok) throw new Error(await res.text());
+    const data = await res.json();
+    if (Array.isArray(data?.items)) return data.items;
+  } catch (error) {
+    console.warn(`[GalleryDataSwapper] Server load failed for ${selectedPath}; falling back to module import.`, error);
+  }
+
+  return loadGalleryDataFresh(selectedPath, fallbackLoader);
+}
+
+function orderGalleryItems(arr) {
+  const realItems = arr.filter((d) => d?.id !== "i-k4studios");
+
+  realItems.sort((a, b) => {
+    const ao = typeof a.sortOrder === "number" ? a.sortOrder : Infinity;
+    const bo = typeof b.sortOrder === "number" ? b.sortOrder : Infinity;
+    return ao - bo;
+  });
+
+  const shown = realItems.filter((d) => String(d.visibility).toLowerCase() !== "hidden");
+  const hidden = realItems.filter((d) => String(d.visibility).toLowerCase() === "hidden");
+  return shown.concat(hidden);
+}
+
 // --- Visibility helpers (matching GalleryOrderer)
 function isHidden(d) { return d && String(d.visibility).toLowerCase() === "hidden"; }
 
@@ -173,37 +224,15 @@ export default function GalleryDataSwapper({ datasetPath = "" }) {
     let cancelled = false;
     async function load() {
       if (!selectedPath) return;
-      const mod = await modules[selectedPath]();
-      const arr = Array.isArray(mod)
-        ? mod
-        : Array.isArray(mod?.galleryData)
-        ? mod.galleryData
-        : Array.isArray(mod?.default)
-        ? mod.default
-        : [];
+      const arr = await loadGalleryDataFromServer(selectedPath, modules[selectedPath]);
 
       if (cancelled) return;
 
-      // --- Normalize and order like Orderer ---
-      const realItems = arr.filter((d) => d?.id !== "i-k4studios");
-
-      // sort by sortOrder if present; fallback to array order
-      realItems.sort((a, b) => {
-        const ao = typeof a.sortOrder === "number" ? a.sortOrder : Infinity;
-        const bo = typeof b.sortOrder === "number" ? b.sortOrder : Infinity;
-        return ao - bo;
-      });
-
-      // Move hidden items to end
-      const shown = realItems.filter((d) => String(d.visibility).toLowerCase() !== "hidden");
-      const hidden = realItems.filter((d) => String(d.visibility).toLowerCase() === "hidden");
-      const ordered = shown.concat(hidden);
-
-      setItems(ordered);
+      setItems(orderGalleryItems(arr));
     }
     load();
     return () => { cancelled = true; };
-  }, [selectedPath]);
+  }, [selectedPath, modules]);
 
   // --- Multi-select and popup states
   const [selectedIds, setSelectedIds] = useState([]);
@@ -221,6 +250,12 @@ export default function GalleryDataSwapper({ datasetPath = "" }) {
   const [isGenerating, setIsGenerating] = useState(false);
   const [restoreData, setRestoreData] = useState(null);
   const [showRestorePopup, setShowRestorePopup] = useState(false);
+
+  async function refreshItems(pathOverride = selectedPath) {
+    if (!pathOverride) return;
+    const arr = await loadGalleryDataFromServer(pathOverride, modules[pathOverride]);
+    setItems(orderGalleryItems(arr));
+  }
 
   // --- Handlers
   function handleImageClick(e, id) {
@@ -264,9 +299,13 @@ export default function GalleryDataSwapper({ datasetPath = "" }) {
   }
 
   // --- Handle context menu click ---
-  function handleGenerateDataClick() {
+  async function handleGenerateDataClick() {
     setContextMenu({ visible: false, x: 0, y: 0 });
-    setShowGenDataConfirm(true);
+    const proceed = window.confirm(
+      "Generate smart metadata for the selected image(s)?\n\nThis will replace title, description, story, alt, and keywords."
+    );
+    if (!proceed) return;
+    await handleConfirmGenerateData();
   }
 
   // --- Confirm generation ---
@@ -287,10 +326,8 @@ export default function GalleryDataSwapper({ datasetPath = "" }) {
     }
 
     if (updatedItems.length > 0) {
-      setItems((prev) =>
-        prev.map((i) => updatedItems.find((u) => u.id === i.id) || i)
-      );
       setShowGenDataConfirm(false);
+      await refreshItems();
       setShowSavedModal(true);
     }
 
@@ -317,7 +354,9 @@ export default function GalleryDataSwapper({ datasetPath = "" }) {
     const updatedItems = [];
     
     for (const item of itemsToUpdate) {
-      const newTitle = generateTitleFromSem(item);
+      const newTitle = item.id === currentTitleItem.id
+        ? (generatedTitle || generateTitleFromSem(item))
+        : generateTitleFromSem(item);
       if (newTitle && newTitle !== item.title) {
         const updated = { ...item, title: newTitle, autoTitle: true };
         const ok = await saveUpdatedItemToServer(updated);
@@ -328,12 +367,17 @@ export default function GalleryDataSwapper({ datasetPath = "" }) {
     }
     
     if (updatedItems.length > 0) {
-      setItems(prev => prev.map(item => 
-        updatedItems.find(u => u.id === item.id) || item
-      ));
       setShowTitleGen(false);
+      setCurrentTitleItem(null);
+      setGeneratedTitle("");
+      await refreshItems();
       setShowSavedModal(true);
+      return;
     }
+
+    setShowTitleGen(false);
+    setCurrentTitleItem(null);
+    setGeneratedTitle("");
   }
 
   // --- Handle restore from backup file ---
@@ -440,6 +484,7 @@ export default function GalleryDataSwapper({ datasetPath = "" }) {
 
   async function saveUpdatedItemToServer(item) {
     if (!selectedPath || !item?.id) return false;
+    const noteValue = item.collectorNotes ?? item.notes ?? "";
     const payload = {
       datasetPath: selectedPath.replace(/^\//, ""),
       id: item.id,
@@ -448,7 +493,8 @@ export default function GalleryDataSwapper({ datasetPath = "" }) {
         alt: item.alt ?? "",
         description: item.description ?? "",
         story: item.story ?? "",
-        notes: item.notes ?? "",
+        notes: noteValue,
+        collectorNotes: noteValue,
         // include rating so star selection persists
         rating: typeof item.rating === "number" ? item.rating : undefined,
         keywords: Array.isArray(item.keywords)
@@ -459,6 +505,7 @@ export default function GalleryDataSwapper({ datasetPath = "" }) {
               .filter(Boolean),
         autoGenerated: item.autoGenerated || false,
         autoTitle: item.autoTitle || false,
+        contentSource: item.contentSource ?? (item.autoGenerated ? "ai" : undefined),
         visibility: item.visibility ?? "",
       },
     };
@@ -489,10 +536,10 @@ export default function GalleryDataSwapper({ datasetPath = "" }) {
           const { visibility, ...rest } = item;
           return rest; // remove visibility to "show"
         })();
-
     const ok = await saveUpdatedItemToServer(updated);
     if (ok) {
-      setItems(arr => arr.map(it => it.id === id ? updated : it));
+
+      await refreshItems();
 
       // Sync with Archive: hiding → add to Archive, showing → hide in Archive
       try {
@@ -986,9 +1033,7 @@ export default function GalleryDataSwapper({ datasetPath = "" }) {
             const updated = { ...editData };
             const ok = await saveUpdatedItemToServer(updated);
             if (ok) {
-              setItems((arr) =>
-                arr.map((i) => (i.id === updated.id ? updated : i))
-              );
+              await refreshItems();
               setEditPopupOpen(false);
               setShowSavedModal(true);
             }
@@ -1322,11 +1367,7 @@ export default function GalleryDataSwapper({ datasetPath = "" }) {
             const okA = await saveUpdatedItemToServer(a);
             const okB = await saveUpdatedItemToServer(b);
             if (okA || okB) {
-              setItems((arr) =>
-                arr.map((i) =>
-                  i.id === a.id ? a : i.id === b.id ? b : i
-                )
-              );
+              await refreshItems();
               setAdjustPopupOpen(false);
               setShowSavedModal(true);
             }
@@ -1472,40 +1513,6 @@ export default function GalleryDataSwapper({ datasetPath = "" }) {
                 }}
               >
                 Replace All Matching
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* --- Generate Data Confirmation Modal --- */}
-      {showGenDataConfirm && (
-        <div
-          className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/40 backdrop-blur-sm"
-          style={{ fontFamily: "'Glegoo', serif" }}
-        >
-          <div
-            className="bg-white rounded-lg shadow-xl px-8 py-6 text-center max-w-sm w-full"
-            style={{ border: "1px solid #b7a78f" }}
-          >
-            <h2 className="text-lg font-semibold mb-2">Generate Smart Metadata?</h2>
-            <p className="text-gray-700 mb-5">
-              All displayed text (<strong>title, description, story, alt, and
-              keywords</strong>) will be replaced with randomized keyword-fed wording.
-            </p>
-            <div className="flex justify-center gap-3">
-              <button
-                onClick={() => setShowGenDataConfirm(false)}
-                className="px-5 py-2 rounded-md border border-gray-400 bg-gray-100 hover:bg-gray-200 transition"
-              >
-                Cancel
-              </button>
-              <button
-                disabled={isGenerating}
-                onClick={handleConfirmGenerateData}
-                className="px-5 py-2 rounded-md border border-gray-700 bg-[#d4c4b5] hover:bg-[#c3b29e] transition font-semibold"
-              >
-                {isGenerating ? "Generating..." : "OK"}
               </button>
             </div>
           </div>
