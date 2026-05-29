@@ -625,9 +625,183 @@ const faqFor = (label: string, subject: string) => [
     ],
   },
   {
+    q: "Are limited editions signed and numbered?",
+    a: [
+      "Yes. Chronicle and Legend limited editions are individually signed and numbered. Each limited edition includes a certificate of authenticity so collectors have documented edition status and provenance for the work.",
+    ],
+  },
+  {
+    q: "How do I choose a size for a room?",
+    a: [
+      "Start with the wall, viewing distance, and whether the piece needs to anchor the room or work as part of a grouping. Smaller Sketch Series pieces suit shelves, studies, and intimate placements. Larger archival prints work better for fireplaces, entries, offices, lodge walls, and statement rooms.",
+    ],
+  },
+  {
     q: `Where should I start when choosing ${label}?`,
     a: [
       "Start with the center collection links in the dock or the first grid section on the page. Choose by subject first, then open individual works to compare story, scale, and collector details.",
+    ],
+  },
+  {
+    q: "Can I ask about placement or mockups?",
+    a: [
+      "Yes. If you are choosing for a specific wall, room, lodge, office, ranch home, or hospitality project, contact Wayne at wayne@k4studios.com with the wall dimensions and a room photo for sizing guidance or a complimentary mockup.",
+    ],
+  },
+];
+
+const westernInteriorDesignFaq = [
+  {
+    q: "What kind of Western art works best in interior design?",
+    a: [
+      "Start with what the room needs: a human anchor, a horizon, vertical scale, or a softer visual pause. Cowboy portraits bring presence; Western landscapes create breathing room; mountain prints reinforce tall architecture; water studies calm heavier rooms.",
+    ],
+  },
+  {
+    q: "What does this art pair with in a room?",
+    a: [
+      "Western interior design art pairs especially well with warm wood, leather, stone, linen, black metal, iron, aged beams, neutral upholstery, and lodge or ranch-house architecture. In cleaner contemporary rooms, use fewer pieces and let one strong portrait or landscape carry the Western note.",
+    ],
+  },
+  {
+    q: "Are these archival fine art prints?",
+    a: [
+      `Yes. Works are produced as archival fine art prints, with Sketch Series studies beginning at ${getFormattedLowestStandardPrintPrice()} and larger formats available for framed wall placement. Select images may also be offered as Engrained natural Baltic Birch panels when the material surface supports the room.`,
+    ],
+  },
+  {
+    q: "Are limited editions signed and numbered?",
+    a: [
+      "Yes. Chronicle and Legend limited editions are individually signed and numbered. Each limited edition includes a certificate of authenticity for provenance and collector documentation.",
+    ],
+  },
+  {
+    q: "How do I choose size for a living room, lodge, or office?",
+    a: [
+      "For a main wall, choose a size large enough to read from the primary seating or entry point. Smaller Sketch Series works suit shelves, studies, and groupings. Fireplaces, lodge entries, conference rooms, and ranch-house great rooms usually need a larger print or a grouped set.",
+    ],
+  },
+  {
+    q: "Can I get help choosing art for a specific room?",
+    a: [
+      "Yes. Send a room photo, wall dimensions, and any finish constraints to wayne@k4studios.com. Wayne can help narrow the subject, size, and format, including a complimentary mockup when useful.",
+    ],
+  },
+];
+
+const rusticInteriorDesignFaq = [
+  {
+    q: "Why does the Engrained Series fit rustic Western interiors?",
+    a: [
+      "The Engrained Series uses natural Baltic Birch panels, so the material surface becomes part of the design decision. In rooms with wood beams, stone, leather, iron, and lodge textures, the panel feels closer to the material world of the room than a purely framed paper print.",
+    ],
+  },
+  {
+    q: "Does every image on this page come as Engrained wood art?",
+    a: [
+      "No. The full collection includes archival fine art prints, with Engrained natural Baltic Birch panels available on selected images. When offered, the wood grain is selectively woven into the image so each panel has a one-of-a-kind surface character.",
+    ],
+  },
+  {
+    q: "What rooms does rustic Western art work best in?",
+    a: [
+      "Rustic Western art works well in lodges, ranch homes, cabins, fireplaces, great rooms, dining rooms, hospitality spaces, and offices with warm material character. It pairs naturally with raw wood, stone, leather, wool, iron, warm neutrals, and heavier architectural surfaces.",
+    ],
+  },
+  {
+    q: "Are the limited editions signed and certified?",
+    a: [
+      "Yes. Signed Chronicle and Legend editions are individually numbered and include a certificate of authenticity. Edition availability is shown on each image page.",
+    ],
+  },
+  {
+    q: "Should I choose paper or wood for a rustic room?",
+    a: [
+      "Choose archival paper when the room needs a framed, refined presentation. Choose Engrained Baltic Birch when the artwork should feel more object-based, tactile, and materially connected to the room.",
+    ],
+  },
+  {
+    q: "Can you help with sizing for a lodge or ranch wall?",
+    a: [
+      "Yes. Send wall dimensions and a room photo to wayne@k4studios.com. Larger rustic rooms often need more scale than expected because stone, beams, and dark furnishings visually outweigh small artwork.",
+    ],
+  },
+];
+
+const modernInteriorDesignFaq = [
+  {
+    q: "What makes Western art work in a modern interior?",
+    a: [
+      "Restraint. A modern Western room usually works best when one strong image carries the subject instead of many small theme cues. Black and white portraits, open landscapes, and edited color pieces can add Western identity without clutter.",
+    ],
+  },
+  {
+    q: "What finishes and palettes pair well with modern Western art?",
+    a: [
+      "These works pair well with clean white or warm neutral walls, pale wood, black metal, stone, glass, linen, leather, and uncluttered furniture. Monochrome pieces are especially useful when the room already has enough warmth or texture.",
+    ],
+  },
+  {
+    q: "Are these prints archival?",
+    a: [
+      `Yes. Works are available as archival fine art prints, with Sketch Series studies beginning at ${getFormattedLowestStandardPrintPrice()} and larger paper editions available for framed modern wall placement.`,
+    ],
+  },
+  {
+    q: "Are signed limited editions available?",
+    a: [
+      "Selected works are available as signed Chronicle or Legend editions. These limited editions are individually numbered and include a certificate of authenticity.",
+    ],
+  },
+  {
+    q: "Should modern rooms use color or black and white Western art?",
+    a: [
+      "Use black and white when the room needs structure, restraint, and tonal authority. Use color when the space needs a controlled warm note or a single human figure to soften the room.",
+    ],
+  },
+  {
+    q: "Can I request help choosing a modern Western print?",
+    a: [
+      "Yes. Send a room photo, wall dimensions, and palette notes to wayne@k4studios.com. A complimentary room mockup can help confirm whether the piece should be monochrome, landscape, portrait, or a controlled color accent.",
+    ],
+  },
+];
+
+const designerWallArtFaq = [
+  {
+    q: "How should interior designers specify Western wall art?",
+    a: [
+      "Specify by project need first: human anchor, narrative statement, open-country spacing, mountain scale, or calming water. Then confirm size, substrate, color temperature, and whether the piece needs open edition flexibility or signed limited edition provenance.",
+    ],
+  },
+  {
+    q: "What materials and furnishings do these pieces pair with?",
+    a: [
+      "The work can pair with leather, wood, stone, linen, wool, iron, black metal, warm neutrals, and contemporary clean-wall spaces. The density depends on the room: rustic projects can carry more texture, while modern rooms usually need fewer, stronger pieces.",
+    ],
+  },
+  {
+    q: "What print formats are available for projects?",
+    a: [
+      "Most project selections begin with archival paper prints for framed installation. Selected works are available as Signature Engrained Series natural Baltic Birch panels when the project needs a more tactile, object-based Western surface.",
+    ],
+  },
+  {
+    q: "Are signed limited editions available for client projects?",
+    a: [
+      "Yes. Selected Chronicle and Legend editions are individually signed and numbered, with certificate of authenticity included. These are useful when a project requires provenance, collector value, or a more permanent statement piece.",
+    ],
+  },
+  {
+    q: "Can K4 help with sizing or room mockups?",
+    a: [
+      "Yes. Send wall dimensions, room photos, and project context to wayne@k4studios.com. Wayne can help narrow subject, scale, and format, and can provide a complimentary mockup when it will help the decision.",
+    ],
+  },
+  {
+    q: "How do I avoid making a room feel too themed?",
+    a: [
+      "Use fewer, stronger images. Pair a Western subject with restraint in the rest of the room, or choose landscape and black and white work when the space already contains leather, wood, stone, or other strong Western materials.",
     ],
   },
 ];
@@ -813,6 +987,7 @@ function makePage({
       gatewayCollectionName: label,
       gatewayIntroCopy: gatewayIntroCopy || `${label} by Wayne Heim - ${subject} for living rooms, offices, lodges, ranch interiors, hospitality spaces, and collector walls.`,
       gatewaySupportingCopy: gatewaySupportingCopy || `These works begin as photography, then are shaped through Heim's painterly process into fine art with atmosphere, human presence, and collector-grade wall presence. The collection opens with the Sketch Series, 5x7 prints from ${getFormattedLowestStandardPrintPrice()} - sized for shelves, desks, and introductory collecting. It scales through open-edition Foundation works, signed Chronicle editions with numbered certificates, and ultra-limited Legend pieces for collectors who want permanence on the wall.\n\nClick into any section to compare prints, read the image story, and view collector and sizing details.`,
+      trustBarCopy: "Archival fine art prints produced to order by K4 Studios. Chronicle and Legend limited editions are individually signed and numbered, with certificate of authenticity included.",
       gatewayKicker: gatewayKicker || `K4 Studios - ${label} Catalog`,
       conceptBlock1Title,
       conceptBlock1Copy,
@@ -1748,6 +1923,7 @@ The tradition that Russell and Remington established and that serious Western co
     archiveContextTitle: "Browse the Rustic Western Interior Design Art Collection",
     archiveContextCopy:
       "Rustic Western interior design art at K4 Studios is organized by what a material-heavy room needs first: a unique Engrained wood-panel option, human presence, frontier story, tonal restraint, open country, or mountain scale.\n\nFor rustic rooms, the image page is where material choice matters most: paper for framed placement, or selected Signature Engrained Series natural Baltic Birch panels when visible grain belongs beside stone, leather, raw wood, lodge architecture, and ranch interiors. The grain lines become part of the storytelling surface, making every Engrained print physically unique. Not sure what size or format works for your space? Contact wayne@k4studios.com for a complimentary room mockup.",
+    faqItems: rusticInteriorDesignFaq,
   }),
   wwiiThemedFineArtPrints: makePage({
     pagePath: "/WWII-Themed-Fine-Art-Prints",
@@ -2013,6 +2189,7 @@ The tradition that Russell and Remington established and that serious Western co
     archiveContextTitle: "Browse the Western Interior Design Art Collection",
     archiveContextCopy:
       "Western interior design art at K4 Studios is organized by what the room needs first: human presence, open country, mountain scale, or water and reflection.\n\nUse the individual image pages as the specification step: read the story, compare sizes and print formats, check edition availability, and decide whether the piece should anchor a wall, open the room, reinforce the architecture, or soften the space. Not sure what size works for your space? Contact wayne@k4studios.com for a complimentary room mockup.",
+    faqItems: westernInteriorDesignFaq,
   }),
   modernWesternInteriorDesignArt: makePage({
     pagePath: "/Modern-Western-Interior-Design-Art",
@@ -2071,6 +2248,7 @@ The tradition that Russell and Remington established and that serious Western co
     archiveContextTitle: "Browse Modern Western Interior Design Art",
     archiveContextCopy:
       "Modern Western interior design art at K4 Studios is organized around restraint: monochrome human presence, open landscapes, mountain scale, and selective color. Open any image for story, sizes, print options, and edition details. For room mockups, contact wayne@k4studios.com.",
+    faqItems: modernInteriorDesignFaq,
   }),
   cowboyThemedArtwork: makePage({
     pagePath: "/cowboy-themed-artwork",
@@ -3397,5 +3575,6 @@ The tradition that Russell and Remington established and that serious Western co
     archiveContextTitle: "Browse Western Wall Art for Interior Designers",
     archiveContextCopy:
       "Western wall art for interior designers at K4 Studios is organized by project need: human anchor, narrative statement, open-country spacing, mountain scale, or water and reflection.\n\nUse the individual image pages to choose the practical presentation: archival paper for framed installations, selected signed limited editions when a project needs provenance, or Signature Engrained Series natural Baltic Birch panels when the room needs a more object-based rustic surface. Need help choosing size, subject, or format for a room? Contact wayne@k4studios.com for a complimentary mockup.",
+    faqItems: designerWallArtFaq,
   }),
 };
