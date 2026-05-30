@@ -46,6 +46,18 @@ status = 200
 force = true
 
 [[redirects]]
+from = "/dl/nv-article"
+to = "/.netlify/functions/pdf-download?doc=nv-article"
+status = 200
+force = true
+
+[[redirects]]
+from = "/dl/nv-samples"
+to = "/.netlify/functions/pdf-download?doc=nv-samples"
+status = 200
+force = true
+
+[[redirects]]
 from = "/__k4serp"
 to = "https://k4-image-proxy.wayneheim.workers.dev/__k4serp"
 status = 200

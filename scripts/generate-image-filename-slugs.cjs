@@ -15,6 +15,13 @@ const SOURCE_ROOTS = [
   path.join(__dirname, '../public/data'),
 ];
 const GHOST_IMAGE_ID = 'i-k4studios';
+const PLACEHOLDER_TITLE_SLUGS = new Set([
+  'untitled',
+  'untitled-photo',
+  'untitled-image',
+  'image',
+  'photo',
+]);
 
 function slugify(value, fallback = 'image') {
   const slug = String(value || '')
@@ -76,6 +83,10 @@ function isIdFallback(imageId, slug) {
   return String(slug || '').toLowerCase() === slugify(imageId.replace(/^i-/i, ''), 'image');
 }
 
+function isPlaceholderSlug(slug) {
+  return PLACEHOLDER_TITLE_SLUGS.has(String(slug || '').toLowerCase());
+}
+
 function collectTitleSlugsFromSource() {
   const titleById = {};
   const files = SOURCE_ROOTS.flatMap((root) => walkFiles(root)).sort();
@@ -95,7 +106,10 @@ function collectTitleSlugsFromSource() {
 
       const title = unescapeStringLiteral(match[2]);
       if (!title) continue;
-      titleById[imageId] = slugify(title, imageId.replace(/^i-/i, '') || 'image');
+      const slug = slugify(title, imageId.replace(/^i-/i, '') || 'image');
+      if (isPlaceholderSlug(slug)) continue;
+      if (titleById[imageId] && !isPlaceholderSlug(titleById[imageId])) continue;
+      titleById[imageId] = slug;
     }
   }
 
@@ -112,12 +126,16 @@ function generateImageFilenameSlugs() {
   let added = 0;
   let preserved = 0;
   let repairedIdFallbacks = 0;
+  let repairedPlaceholders = 0;
 
   for (const [imageId, slug] of Object.entries(sourceSlugs)) {
     if (next[imageId]) {
       if (isIdFallback(imageId, next[imageId]) && slug !== next[imageId]) {
         next[imageId] = slug;
         repairedIdFallbacks++;
+      } else if (isPlaceholderSlug(next[imageId]) && !isPlaceholderSlug(slug) && slug !== next[imageId]) {
+        next[imageId] = slug;
+        repairedPlaceholders++;
       } else {
         preserved++;
       }
@@ -135,6 +153,7 @@ function generateImageFilenameSlugs() {
   console.log(`- ${Object.keys(sourceSlugs).length} titled image IDs found`);
   console.log(`- ${preserved} existing slugs preserved`);
   console.log(`- ${repairedIdFallbacks} ID fallback slugs repaired`);
+  console.log(`- ${repairedPlaceholders} placeholder slugs repaired`);
   console.log(`- ${added} new slugs added`);
   console.log(`- Written to ${path.relative(process.cwd(), OUTPUT_PATH)}`);
 }

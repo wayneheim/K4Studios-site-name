@@ -103,6 +103,20 @@ function extractImageSlugPhraseByPath(source) {
 
 const imageSlugPhraseByPath = loadImageSlugPhraseByPath();
 const imageFilenameSlugs = loadImageFilenameSlugs();
+const PLACEHOLDER_IMAGE_TITLES = new Set([
+  'untitled',
+  'untitled photo',
+  'untitled image',
+  'image',
+  'photo',
+]);
+const PLACEHOLDER_IMAGE_SLUGS = new Set([
+  'untitled',
+  'untitled-photo',
+  'untitled-image',
+  'image',
+  'photo',
+]);
 
 function getFallbackPhraseFromGalleryPath(galleryPath) {
   const parts = String(galleryPath || '').replace(/\/+$/, '').split('/').filter(Boolean);
@@ -115,8 +129,15 @@ function getFallbackPhraseFromGalleryPath(galleryPath) {
 }
 
 function getSemanticImageUrl(image, urlBase) {
+  const registrySlug = imageFilenameSlugs[image?.id] || '';
+  const title = String(image?.title || image?.name || '').trim();
+  const imageTitleSlug = (!registrySlug || PLACEHOLDER_IMAGE_SLUGS.has(String(registrySlug).toLowerCase()))
+    && title
+    && !PLACEHOLDER_IMAGE_TITLES.has(title.toLowerCase())
+    ? slugifyImageSegment(title, '')
+    : '';
   const titleSlug = slugifyImageSegment(
-    imageFilenameSlugs[image?.id] || image?.filenameSlug || image?.title || image?.name,
+    image?.filenameSlug || imageTitleSlug || registrySlug,
     String(image?.id || '').replace(/^i-/i, '') || 'image'
   );
   const normalizedBase = String(urlBase || '').replace(/\/+$/, '');

@@ -177,6 +177,7 @@ const collectionIntroParagraphs = collectionIntro
 const trustBarCopy = formatCopy(copy.trustBarCopy || "");
 const isCinematicConceptSeriesTopLayout = layoutVariant === "cinematic-concept-series-top";
 const isCinematicConceptLayout = layoutVariant === "cinematic-concept" || isCinematicConceptSeriesTopLayout;
+const isCowboyArtPrintsPage = canonicalPath === "/cowboy-art-prints";
 const showDockBeforeCatalog = !isCinematicConceptLayout || isCinematicConceptSeriesTopLayout;
 const showDockAfterCatalog = isCinematicConceptLayout && !isCinematicConceptSeriesTopLayout;
 const showSeriesBeforeCatalog = !isCinematicConceptLayout || isCinematicConceptSeriesTopLayout;
@@ -455,7 +456,7 @@ const itemListElement = schemaListItems
         "description": buildSketchProductDescription(image, imageName),
         "sku": `${image.id}-sketch`,
         "brand": {
-          "@type": "Organization",
+          "@type": "Brand",
           "@id": "https://www.k4studios.com/#organization",
           "name": "K4 Studios"
         },
@@ -581,7 +582,7 @@ const faqRight = faqItems.slice(faqSplitIndex);
     <LandingHeader client:load breadcrumb={compactBreadcrumbHtml} />
   </div>
 
-  <div class:list={["gallery-index-wrapper", isCinematicConceptLayout && "cinematic-concept-page", isCinematicConceptSeriesTopLayout && "cinematic-concept-series-top-page"]} id="top">
+  <div class:list={["gallery-index-wrapper", isCinematicConceptLayout && "cinematic-concept-page", isCinematicConceptSeriesTopLayout && "cinematic-concept-series-top-page", isCowboyArtPrintsPage && "cowboy-art-prints-page"]} id="top">
     <!-- K4 Studios Catalog Entrance -->
     <section class="collection-gateway catalog-entrance" aria-labelledby="gateway-heading">
       <a class="gateway-artwork" href={gatewayHeroHref} aria-label={`Open artwork detail for ${gatewayHeroTitle}`}>
@@ -3327,6 +3328,9 @@ const faqRight = faqItems.slice(faqSplitIndex);
       .ssr-grid { padding:0 16px; gap:16px; }
       .ssr-grid--catalog-section {
         grid-template-columns:1fr;
+      }
+      .cowboy-art-prints-page .ssr-grid--catalog-section {
+        grid-template-columns:repeat(2,minmax(0,1fr));
       }
       .ssr-card-image {
         width:100%;

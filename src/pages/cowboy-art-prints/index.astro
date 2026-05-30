@@ -120,8 +120,8 @@ const faqItems = [
 
 const gridSections = [
   {
-    title: "Cowboy Art Prints - Color Western Portraits",
-    description: "Color cowboy art prints with painterly light, frontier character, and collector-ready room presence.",
+    title: "Color Cowboy Portrait Art Prints",
+    description: "Color portrait prints where painterly light, posture, and frontier character give the figure enough presence to carry a room.",
     galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
     allHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/all#collection-browser",
     ctaLabel: "See the full color cowboy portrait print collection",
@@ -130,8 +130,8 @@ const gridSections = [
     limit: 19,
   },
   {
-    title: "Black and White Cowboy Art Prints",
-    description: "Black and white cowboy prints where tonal restraint, weathered faces, and frontier contrast carry the work.",
+    title: "Black and White Cowboy Portrait Prints",
+    description: "Monochrome cowboy portrait prints built around tonal contrast, weathered faces, hat-brim shadow, and old-West restraint.",
     galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White",
     allHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/all#collection-browser",
     ctaLabel: "See the full black and white cowboy portrait print collection",
@@ -140,8 +140,8 @@ const gridSections = [
     limit: 19,
   },
   {
-    title: "Narrative Cowboy Art Prints - Color Frontier Scenes",
-    description: "Color frontier and cowboy scenes shaped as print-ready narrative Western artwork for collectors and rooms.",
+    title: "Color Western Narrative Art Prints",
+    description: "Color frontier scenes and story-led Western artwork where the print is chosen for atmosphere, movement, and the unfinished moment.",
     galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color",
     allHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all#collection-browser",
     ctaLabel: "See the full color Western narrative print collection",
@@ -150,8 +150,8 @@ const gridSections = [
     limit: 19,
   },
   {
-    title: "Black and White Narrative Cowboy Prints",
-    description: "Monochrome frontier narrative prints where deep contrast and atmosphere give the story its staying power.",
+    title: "Black and White Frontier Narrative Prints",
+    description: "Monochrome narrative prints where contrast, silence, and withheld story give the image its staying power.",
     galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White",
     allHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/all#collection-browser",
     ctaLabel: "See the full black and white Western narrative print collection",
@@ -172,43 +172,58 @@ const countLiveItems = (sections: typeof gridSections) =>
 const cowboyArtPrintsLiveCount = countLiveItems(gridSections);
 
 const commercialMiddleCopy = [
-  "Start with the print. For portrait-led cowboy art prints, begin with the color or black and white portrait sections below. For work that carries more story, atmosphere, or frontier consequence, continue into the narrative print groupings.",
-  "Cowboy art prints at K4 Studios are built for buyers who want authored Western work in physical form: archival paper and select wood options that let the image live with weight on the wall.",
-  "Each work begins as photography, then is shaped through Heim's painterly process into fine art with the mood, restraint, and presence of classic Western painting. Size and finish options are available inside each image page.",
+  "This print catalog is organized by the way the work lives on a wall. Portrait sections lead with character and human gravity. Narrative sections carry more implied action, weather, silence, and story.",
+  "For a single anchor piece, begin with the portrait work: one face, one figure, one point of pressure. For hallways, offices, lodge walls, ranch homes, and hospitality spaces where the wall needs sequence rather than a single statement, the narrative sections give the collection more movement.",
+  `Across the page, ${cowboyArtPrintsLiveCount} works are available as fine art prints. Size, substrate, edition status, image story, and collector notes are inside each image page.`,
 ].join("\n\n");
 
 const copy = {
-  seoTitle: "Cowboy Art Prints — Western Cowboy Photography Prints by Wayne Heim",
+  seoTitle: "Cowboy Art Prints - Western Cowboy Artwork Prints by Wayne Heim",
   seoDescription:
-    "Cowboy art prints by Wayne Heim - archival paper and select wood presentations. Portrait work, frontier scenes, and narrative Western photography from $25 through signed limited editions. For living rooms, offices, lodges, and collector walls.",
+    "Cowboy art prints by Wayne Heim. Western cowboy portraits, frontier narrative artwork, black and white prints, archival paper editions, and signed limited editions from $25.",
   indexDefinition:
     "Wayne Heim's cowboy art prints include color cowboy portraits, black and white cowboy prints, narrative frontier scenes, and painterly Western character studies produced as collector-grade fine art prints.",
   indexLinkNote:
     "This is the K4 route for print-focused intent: cowboy art prints, western cowboy art prints, cowboy artwork prints, and collector-ready cowboy photography prints.",
   printAvailabilityNote: `Cowboy art prints are available from ${getFormattedLowestStandardPrintPrice()} across archival paper and select wood presentations. Edition status and format options are shown on individual image pages.`,
-  commercialH1: "The Collection — Four Print Series, 840+ Works",
+  commercialH1: "Browse Cowboy Art Prints",
   commercialDeck:
-    "Portrait prints, frontier character studies, and narrative Western scenes in color and black and white — organized for print buyers, collectors, and interior decisions.",
+    `${cowboyArtPrintsLiveCount} cowboy portrait prints, frontier scenes, black and white Western artwork, and color narrative pieces organized for print buyers, collectors, and room-scale decisions.`,
   catalogEntranceTitle: "Cowboy Art Prints, Western Cowboy Prints, and Frontier Artwork",
   catalogEntranceCopy:
     "Browse cowboy art prints, western cowboy art prints, black and white cowboy prints, and narrative frontier scenes created as collector-grade fine art.",
   collectionIntro: commercialMiddleCopy,
+  trustBarCopy:
+    "Archival fine art prints are produced to order by K4 Studios. Chronicle and Legend limited editions are individually hand signed and numbered, with certificate of authenticity included.",
+  catalogSectionKicker: "Cowboy print section - {sectionCount} works",
   breadcrumbCurrentName: "Cowboy Art Prints",
   aggregateOfferLowPrice: "25",
   aggregateOfferHighPrice: "5000",
   aggregateOfferCount: String(cowboyArtPrintsLiveCount),
-  gatewayKicker: "K4 STUDIOS — WESTERN FINE ART PRINT CATALOG",
+  gatewayKicker: "K4 STUDIOS - WESTERN FINE ART PRINT CATALOG",
   gatewayCollectionName: "Cowboy Art Prints",
   gatewayIntroCopy:
-    "Cowboy art prints by Wayne Heim, available as archival fine art prints ranging from the small-works introductory Sketch Series at $25 to the ultra-limited, large-format Legend Series for collectors seeking statement pieces with permanence and presence. Portrait work, Western character studies, frontier scenes, and story-driven imagery for living rooms, offices, lodges, ranch interiors, hospitality spaces, and collector walls.",
+    "A cowboy print has to survive the room after the hat, horse, and Western theme have done their first work.",
   gatewaySupportingCopy:
-    "Each section is organized by subject, mood, and finish — color or black and white — so you can compare the right print family before reading into the image story.\n\nThe collection begins with the small-works Sketch Series, intimate 5×7 open edition pieces priced at $25 — sized for shelves, desks, and introductory collecting. It scales through open-edition Foundation works, signed Chronicle editions with numbered certificates, and ultra-limited Legend pieces for collectors who want provenance and permanence on the wall.\n\nClick into any section to compare prints, read the image story, and view collector and sizing details.",
-  gatewayBrandLabel: "Cowboy Art Prints — Western Cowboy Photography Prints by Wayne Heim",
+    "Plenty of cowboy art prints decorate a wall for a season. The stronger ones keep asking for a second look because the figure has weight, the light has purpose, and the story feels unfinished. Wayne Heim's print work is built around that difference: not cowboy imagery as filler, but Western character and frontier atmosphere made physical as art.\n\nThese works begin with real people, real light, and real Western subjects, then move through Heim's painterly finishing process until the image carries the presence of Western painting without losing the specificity of the original moment. Portraits hold through expression and posture. Narrative scenes hold through tension, distance, and what the frame refuses to explain.\n\nThe collection is available as archival fine art prints, from the open-edition Sketch Series starting at $25 through signed Chronicle and Legend limited editions. Select works may also be offered as natural Baltic Birch Engrained panels when the wood surface strengthens the historical character of the piece.",
+  gatewayBrandLabel: "Cowboy Art Prints - Western Cowboy Artwork Prints by Wayne Heim",
   gatewayHeroTitle: "Cowboy Art Prints by Wayne Heim",
   gatewayHeroAlt:
     "Painterly cowboy portrait used as the hero image for the Cowboy Art Prints page.",
   archiveContextCopy:
-    "Every work on this page is available as a fine art print - with the Sketch Series opening at $25. Click into any image to read the story, compare print options, sizes, and collector details. Questions about a specific piece? Reach Wayne directly at <a href='mailto:wayne@k4studios.com'>wayne@k4studios.com</a>.",
+    "Cowboy prints work best when the image is chosen for the wall, not only for the subject. Warm wood, leather, stone, iron, linen, and neutral contemporary rooms can all carry Western artwork when the piece has tonal discipline and enough visual weight. For a narrow wall or shelf grouping, begin with smaller Sketch Series works. For a living room, office, lodge entry, or ranch interior, move into Foundation, Chronicle, or Legend sizes that can anchor the space independently.\n\nEvery work on this page is available as a fine art print - with the Sketch Series opening at $25. Click into any image to read the story, compare print options, sizes, and collector details. Questions about a specific piece? Reach Wayne directly at <a href='mailto:wayne@k4studios.com'>wayne@k4studios.com</a>.",
+  conceptBlock1Title: "PORTRAIT AS PRESENCE",
+  conceptBlock1Copy:
+    "Color cowboy portrait prints are the warmest entry point into the collection. They carry skin tone, worn fabric, dust, sun, and the small color notes that make a Western figure feel physically present.\n\nUse this section when the wall needs a human subject with direct gravity: a study, office, lodge room, ranch house hallway, or hospitality space where the art should feel lived-in rather than decorative.",
+  conceptBlock2Title: "WHEN COLOR STEPS BACK",
+  conceptBlock2Copy:
+    "Black and white cowboy prints shift the buying decision from palette to structure. The face, hat brim, coat edge, hand, and posture have to do the work without warm color carrying the mood.\n\nThis section is strongest for rooms with stone, dark wood, leather, black metal, or clean contemporary neutrals where tonal contrast reads clearly from across the room.",
+  conceptBlock3Title: "THE STORY WALL",
+  conceptBlock3Copy:
+    "Narrative Western prints are chosen differently than portraits. The figure may not look directly at the viewer. The scene may withhold the event. The value is in the implied story: what happened before the frame, what might happen next, and why the moment feels charged.\n\nColor narrative work gives designers and collectors a broader room language: movement, atmosphere, historic styling, and enough warmth to connect with wood, textile, and leather surfaces.",
+  conceptBlock4Title: "RESTRAINT AND FRONTIER MOOD",
+  conceptBlock4Copy:
+    "Black and white narrative prints are the quietest section of the page. They work through shadow, distance, silhouette, weather, and the pressure of an unresolved scene.\n\nChoose this group when the wall needs old-West atmosphere without color competition. These pieces pair especially well with restrained interiors, gallery walls, office spaces, and rooms where the art should carry mood rather than theme.",
   faqKicker: "Print & Collector Questions",
   faqTitle: "Cowboy Art Prints FAQ",
 };
@@ -239,4 +254,5 @@ const copy = {
   faqItems={faqItems}
   gridSections={gridSections}
   dockVariant="wall-art"
+  layoutVariant="cinematic-concept-series-top"
 />

@@ -1533,6 +1533,9 @@ export async function getEventBreakdown(env, filters) {
       'browse_all_click',
       'order_clicked',
       'collector_notes_open',
+      'nv_bottom_reached',
+      'nv_pdf_download_article',
+      'nv_pdf_download_samples',
       'cowboy_jump',
       'exit_to_gallery',
       'gallery_explore_click',
@@ -1564,18 +1567,38 @@ export async function getEventBreakdown(env, filters) {
     ];
     const trackedListSql = trackedEvents.map(e => `'${e}'`).join(', ');
     const eventsQuery = `
-      SELECT
-        e.event_type AS event,
-        COUNT(*) AS count
-      FROM canonical_classified_events e
-      WHERE ${where}
-        ${qualify(ipClause)}
-        ${qualify(safeBotClause)}
-        ${qualify(chardonClause)}
-        AND ${notCacheWarmer('e')}
-        AND COALESCE(e.is_bot, 0) = 0
-        AND e.event_type IN (${trackedListSql})
-      GROUP BY e.event_type
+      WITH canonical_events AS (
+        SELECT
+          e.event_type AS event,
+          COUNT(*) AS count
+        FROM canonical_classified_events e
+        WHERE ${where}
+          ${qualify(ipClause)}
+          ${qualify(safeBotClause)}
+          ${qualify(chardonClause)}
+          AND ${notCacheWarmer('e')}
+          AND COALESCE(e.is_bot, 0) = 0
+          AND e.event_type IN (${trackedListSql.replace("'nv_bottom_reached',", '')})
+        GROUP BY e.event_type
+      ),
+      nv_bottom_reached AS (
+        SELECT
+          'nv_bottom_reached' AS event,
+          COUNT(*) AS count
+        FROM classified_events e
+        WHERE ${where}
+          ${qualify(ipClause)}
+          ${qualify(safeBotClause)}
+          ${qualify(chardonClause)}
+          AND ${notCacheWarmer('e')}
+          AND COALESCE(e.is_bot, 0) = 0
+          AND e.event_type = 'action_pixel'
+          AND e.source_layer = 'scroll_100_nv_bottom_v1'
+          AND LOWER(COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))) LIKE '/other/narrative-vacuum%'
+      )
+      SELECT event, count FROM canonical_events
+      UNION ALL
+      SELECT event, count FROM nv_bottom_reached
       ORDER BY count DESC
     `;
 

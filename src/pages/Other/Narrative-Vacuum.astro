@@ -366,8 +366,8 @@ const sections = [
   }
 ];
 
-const articlePdf = "/data/narrative_vacuum_essay_WH.pdf";
-const samplesPdf = "/data/Heim%20Samples-annotated.pdf";
+const articlePdf = "/dl/nv-article";
+const samplesPdf = "/dl/nv-samples";
 const breadcrumb = "Other > Narrative Vacuum";
 ---
 
@@ -528,6 +528,8 @@ const breadcrumb = "Other > Narrative Vacuum";
           <a href={samplesPdf} download>Annotated Sample Art PDF</a>
         </div>
       </aside>
+
+      <div id="nv-bottom-sentinel" aria-hidden="true"></div>
     </article>
 
     <SiteFooter
@@ -538,6 +540,76 @@ const breadcrumb = "Other > Narrative Vacuum";
       class="pt-8 pb-12"
     />
   </main>
+
+  <script is:inline>
+    (() => {
+      if (typeof window === "undefined") return;
+      if (window.location.pathname !== "/Other/Narrative-Vacuum") return;
+
+      const sentinel = document.getElementById("nv-bottom-sentinel");
+      if (!sentinel) return;
+
+      const storageKey = "k4_nv_bottom_reached_v1";
+      let fired = false;
+
+      const fireBottomReached = () => {
+        if (fired) return;
+        fired = true;
+
+        try {
+          if (sessionStorage.getItem(storageKey) === "1") return;
+          sessionStorage.setItem(storageKey, "1");
+        } catch {
+          // Ignore storage failures and still emit best-effort analytics.
+        }
+
+        if (typeof window.k4emitActionPixel === "function") {
+          window.k4emitActionPixel("scroll_100", null, {
+            pageType: "other",
+            sourceLayer: "scroll_100_nv_bottom_v1",
+            trigger: "bottom_sentinel"
+          });
+        }
+
+        if (typeof window.k4track === "function") {
+          window.k4track("scroll_100", {
+            pageType: "other",
+            trigger: "bottom_sentinel"
+          });
+        }
+      };
+
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            if (entries.some((entry) => entry.isIntersecting)) {
+              observer.disconnect();
+              fireBottomReached();
+            }
+          },
+          {
+            root: null,
+            threshold: 0.1
+          }
+        );
+
+        observer.observe(sentinel);
+        return;
+      }
+
+      const onScroll = () => {
+        const doc = document.documentElement;
+        const remaining = doc.scrollHeight - (window.scrollY + window.innerHeight);
+        if (remaining <= 10) {
+          window.removeEventListener("scroll", onScroll);
+          fireBottomReached();
+        }
+      };
+
+      window.addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
+    })();
+  </script>
 </BaseLayout>
 
 <style>
@@ -946,6 +1018,11 @@ const breadcrumb = "Other > Narrative Vacuum";
   .nv-download-actions a:focus-visible {
     color: #8b0000;
     border-color: #8b0000;
+  }
+
+  #nv-bottom-sentinel {
+    width: 100%;
+    height: 1px;
   }
 
   @media (max-width: 860px) {

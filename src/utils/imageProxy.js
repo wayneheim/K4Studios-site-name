@@ -23,6 +23,20 @@ export const USE_SEMANTIC_IMAGE_URLS = true;
 
 const VALID_SIZES = ['s', 'm', 'l', 'xl', 'src'];
 const DEFAULT_IMAGE_SLUG_PHRASE = 'k4-fine-art-photography';
+const PLACEHOLDER_IMAGE_TITLES = new Set([
+  'untitled',
+  'untitled photo',
+  'untitled image',
+  'image',
+  'photo',
+]);
+const PLACEHOLDER_IMAGE_SLUGS = new Set([
+  'untitled',
+  'untitled-photo',
+  'untitled-image',
+  'image',
+  'photo',
+]);
 
 // Keep runtime source first-party by default. Local/dev environments can set
 // PUBLIC_IMAGE_PROXY_ORIGIN when they need to target a direct proxy origin.
@@ -121,6 +135,21 @@ export function slugifyImageSegment(value, fallback = 'image') {
   return slug || fallback;
 }
 
+function getMeaningfulImageSlug(image, registrySlug = '') {
+  if (image && typeof image === 'object' && image.filenameSlug) {
+    return image.filenameSlug;
+  }
+
+  if (!image || typeof image !== 'object') return '';
+  if (registrySlug && !PLACEHOLDER_IMAGE_SLUGS.has(String(registrySlug).toLowerCase())) {
+    return registrySlug;
+  }
+
+  const title = String(image.title || image.name || '').trim();
+  if (!title || PLACEHOLDER_IMAGE_TITLES.has(title.toLowerCase())) return '';
+  return slugifyImageSegment(title, '');
+}
+
 function getFallbackPhraseFromGalleryPath(galleryPath) {
   const normalizedPath = normalizeGalleryPath(galleryPath);
   const parts = normalizedPath.split('/').filter(Boolean);
@@ -200,9 +229,8 @@ export function getSemanticImageUrl(image, galleryContext = {}, sizeOrOptions = 
   );
 
   const titleSlug = slugifyImageSegment(
-    (typeof image === 'object' && image.filenameSlug) ||
-      imageFilenameSlugs[imageId] ||
-      (typeof image === 'object' ? (image.title || image.name) : ''),
+    getMeaningfulImageSlug(image, imageFilenameSlugs[imageId]) ||
+      imageFilenameSlugs[imageId],
     String(imageId).replace(/^i-/i, '') || 'image'
   );
   const phrase = slugifyImageSegment(

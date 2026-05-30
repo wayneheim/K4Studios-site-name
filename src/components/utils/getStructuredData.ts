@@ -206,7 +206,7 @@ function buildSketchProductNode(data: any, imageUrl: string) {
     description: data.sketchDescription || SKETCH_SERIES_DESCRIPTION,
     sku: `${data.id}-sketch`,
     brand: {
-      "@type": "Organization",
+      "@type": "Brand",
       "@id": K4_ORGANIZATION_ID,
       name: "K4 Studios",
     },
@@ -871,7 +871,7 @@ export function getCollectionImageGalleryGraph({
             description: image.description || image.alt || SKETCH_SERIES_DESCRIPTION,
             sku: `${image.id}-sketch`,
             brand: {
-              "@type": "Organization",
+              "@type": "Brand",
               "@id": K4_ORGANIZATION_ID,
               name: "K4 Studios",
             },
