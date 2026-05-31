@@ -856,7 +856,10 @@ const faqRight = faqItems.slice(faqSplitIndex);
                   <h3>{title}</h3>
                   <p class="print-cue sr-only">Fine art print available</p>
                   {storyExcerpt && <p class="story-excerpt">{storyExcerpt}</p>}
-                  <span class="card-cta">Explore Story | Order Fine Art Print &rarr;</span>
+                  <span class="card-cta">
+                    <span class="card-cta-desktop">Explore Story | Order Fine Art Print &rarr;</span>
+                    <span class="card-cta-mobile">Explore Story | Order</span>
+                  </span>
                 </div>
               </a>
               <button
@@ -1004,7 +1007,10 @@ const faqRight = faqItems.slice(faqSplitIndex);
                           <h3>{title}</h3>
                           <p class="print-cue sr-only">Fine art print available</p>
                           {storyExcerpt && <p class="story-excerpt">{storyExcerpt}</p>}
-                          <span class="card-cta">Explore Story | Order Fine Art Print &rarr;</span>
+                          <span class="card-cta">
+                            <span class="card-cta-desktop">Explore Story | Order Fine Art Print &rarr;</span>
+                            <span class="card-cta-mobile">Explore Story | Order</span>
+                          </span>
                         </div>
                       </a>
                       <button
@@ -2691,6 +2697,9 @@ const faqRight = faqItems.slice(faqSplitIndex);
       border-top:1px solid #e3d7c9;
       padding-top:10px;
     }
+    .card-cta-mobile {
+      display:none;
+    }
     .ssr-card:hover .card-cta,
     .ssr-card:focus-within .card-cta {
       margin-top:0;
@@ -3345,6 +3354,12 @@ const faqRight = faqItems.slice(faqSplitIndex);
         transform:none;
         background:#fffdf9;
         border-top:1px solid #e6d9ca;
+      }
+      .card-cta-desktop {
+        display:none;
+      }
+      .card-cta-mobile {
+        display:inline;
       }
     }
 
