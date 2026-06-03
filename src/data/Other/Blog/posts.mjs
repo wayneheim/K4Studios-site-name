@@ -1,6 +1,14 @@
 export const posts = [
   {
     type: "inside-frame",
+    slug: "paying-forward-through-story",
+    title: "Inside the Frame: Paying Forward Through Story",
+    date: "2026-06-03",
+    excerpt: "A conversation with Quill about remembrance, listening, and the way stories move through Wayne Heim's Western fine art photography.",
+    cover: "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-4QZ7HPR/0/MpSmVrKGCdnmLV7LMM66NnwKfhmGhrD4MLgJwmNCD/M/Cough%20and%20Covenant%2016%20x%2020%20copy-M.jpg"
+  },
+  {
+    type: "inside-frame",
     slug: "armature-beneath-the-legend",
     title: "Inside the Frame: Armature Beneath the Legend",
     date: "2026-04-09",

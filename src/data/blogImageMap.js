@@ -7,6 +7,8 @@
  * Add new entries here when a new conversation post goes live.
  */
 const blogImageMap = {
+  "i-4QZ7HPR": { url: "/Blog/paying-forward-through-story", title: "Paying Forward Through Story" },
+  "i-HBRmWg4": { url: "/Blog/paying-forward-through-story", title: "Paying Forward Through Story" },
   "i-svbQj25": { url: "/Blog/armature-beneath-the-legend", title: "Armature Beneath the Legend" },
   "i-CD6rgtF": { url: "/Blog/high-ground-justice",          title: "High Ground Justice" },
   "i-cFhZXJc": { url: "/Blog/dust-or-desperation",          title: "Dust or Desperation" },
