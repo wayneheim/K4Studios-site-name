@@ -175,8 +175,10 @@ export default function EngrainedOrderModal({ isOpen, onClose, image, trackEvent
             onClick={(event) => event.stopPropagation()}
           >
             <div className="p-6 relative">
-              <div className="mb-4 text-center">
-                <h2 className="text-xl font-bold text-gray-800">More About This Image</h2>
+              <div className="mb-4 flex items-center gap-3">
+                <div className="h-0.5 flex-1 bg-gradient-to-r from-transparent to-gray-400/35" />
+                <h2 className="text-base font-bold text-gray-800/75 whitespace-nowrap">Order Options</h2>
+                <div className="h-0.5 flex-1 bg-gradient-to-l from-transparent to-gray-400/35" />
               </div>
 
               <div className="space-y-4">
@@ -187,6 +189,11 @@ export default function EngrainedOrderModal({ isOpen, onClose, image, trackEvent
                     className="w-full max-w-48 mx-auto rounded-lg shadow-md"
                   />
                   <h3 className="text-lg font-semibold text-gray-800 mt-3">{image.title}</h3>
+                  {image.oneImageMovie && (
+                    <p className="text-xs text-[#8a3d2b] mt-1">
+                      A One-Image Movie™ work by Wayne Heim
+                    </p>
+                  )}
                 </div>
 
                 <div className="bg-gray-50 p-4 rounded-lg">

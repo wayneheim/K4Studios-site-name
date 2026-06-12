@@ -583,7 +583,7 @@ westernPhotographyPrintsHub: {
 
 cowboyWallArtCommercialHub: {
   path: "/cowboy-wall-art",
-  def: "The commercial route for cowboy wall art and decor-facing cowboy artwork, positioning Wayne Heim's painterly cowboy photography as collector-grade work for rooms and display.",
+  def: "Cowboy wall art and decor-facing cowboy artwork, positioning Wayne Heim's painterly cowboy photography as collector-grade work for rooms and display.",
   fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
   landingPhrases: [
     { phrase: "cowboy paintings", rating: 5, use: true, link: "/cowboy-wall-art" },
@@ -631,7 +631,7 @@ cowboyFineArtPrintsCommercialHub: {
 
 westernCowboyArtCommercialHub: {
   path: "/western-cowboy-art",
-  def: "The exact-match commercial route for Western cowboy art by Wayne Heim, centered on painterly cowboy portraiture, frontier character, Western story, and collector-focused fine art print paths.",
+  def: "Western cowboy art by Wayne Heim, centered on painterly cowboy portraiture, frontier character, Western story, and collector-focused fine art print paths.",
   fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
   landingPhrases: [
     { phrase: "western cowboy art", rating: 7, use: true, link: "/western-cowboy-art" },
@@ -709,7 +709,7 @@ oldWestPicturesCommercialHub: {
 
 vintageWesternArtCommercialHub: {
   path: "/vintage-western-art",
-  def: "The commercial route for vintage Western art, vintage cowboy art, old western art, old west art, and vintage Western prints by Wayne Heim.",
+  def: "Vintage Western art, vintage cowboy art, old western art, old west art, and vintage Western prints by Wayne Heim.",
   fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
   landingPhrases: [
     { phrase: "vintage western art", rating: 6, use: true, link: "/vintage-western-art" },

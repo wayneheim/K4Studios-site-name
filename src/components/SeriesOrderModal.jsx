@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { CircleX, Info } from "lucide-react";
-import { SERIES_DEFINITIONS, SERIES_ICONS, getEffectiveSeries, getSeriesPricingList, fetchPricingConfig, loadSeriesRegistry, getExcludeSizesFromRegistry } from "../data/seriesDefinitions.js";
+import { SERIES_DEFINITIONS, SERIES_ICONS, getEffectiveSeries, getSeriesPricingList, fetchPricingConfig, loadSeriesRegistry, getExcludeSizesFromRegistry, isOneImageMovieFromRegistry } from "../data/seriesDefinitions.js";
 import { getSpecialtyPrintSeries } from "../data/pricing/printSeries.js";
 import { normalizeImageSrc } from "../utils/imageProxyCore.js";
 
@@ -276,6 +276,7 @@ export default function SeriesOrderModal({ isOpen, onClose, image, trackEvent })
   // Wait for registry to load before computing series (prevents SSR mismatch showing only "sketch")
   const effectiveSeries = seriesRegistry ? getEffectiveSeries(image, seriesRegistry) : [];
   const excludeSizes = seriesRegistry ? getExcludeSizesFromRegistry(image?.id, seriesRegistry) : {};
+  const oneImageMovie = Boolean(image?.oneImageMovie || (seriesRegistry && isOneImageMovieFromRegistry(image?.id, seriesRegistry)));
 
   const buyLinkHref = normalizeBuyLink(image?.buyLink);
   const shouldUseBuyLink = (seriesKey) => (seriesKey === "sketch" || seriesKey === "foundation") && !!buyLinkHref;
@@ -320,8 +321,10 @@ export default function SeriesOrderModal({ isOpen, onClose, image, trackEvent })
             </AnimatePresence>
 
             {/* Header */}
-            <div className="mb-2 text-center">
-              <h2 className="text-lg font-bold text-gray-800">Order Options</h2>
+            <div className="mb-2 flex items-center gap-3">
+              <div className="h-0.5 flex-1 bg-gradient-to-r from-transparent to-gray-400/35" />
+              <h2 className="text-base font-bold text-gray-800/75 whitespace-nowrap">Order Options</h2>
+              <div className="h-0.5 flex-1 bg-gradient-to-l from-transparent to-gray-400/35" />
             </div>
 
             {/* Image Preview */}
@@ -332,8 +335,13 @@ export default function SeriesOrderModal({ isOpen, onClose, image, trackEvent })
                 className="w-full max-w-32 mx-auto rounded-lg shadow-md"
               />
               <h3 className="text-sm font-semibold text-gray-800 mt-2">{image.title}</h3>
+              {oneImageMovie && (
+                <p className="text-xs text-[#8a3d2b] mt-1">
+                  A One-Image Movie™ work by Wayne Heim
+                </p>
+              )}
               <p className="text-xs text-gray-500 italic mt-1">
-                This image is available in the following collector formats:
+                Available as printed photographs in the following formats:
               </p>
             </div>
 

@@ -181,10 +181,11 @@ export function resolveImageSpecificDescriptor(input: ImageSeoMetaInput) {
 
   const rules: Array<{ terms: string[]; descriptor: string; when?: boolean }> = [
     { terms: ["buffalo soldier", "buffalo soldiers"], descriptor: "Buffalo Soldier Western Art", when: isWesternContext },
+    { terms: ["native american", "indigenous", "warrior"], descriptor: "Native American Western Fine Art", when: isWesternContext },
+    { terms: ["frontier scout", "scout tracking", "western tracker", "tracking", "faint tracks"], descriptor: "Western Tracking Narrative Art", when: isWesternContext },
     { terms: ["sheriff", "marshal", "lawman"], descriptor: "Old West Lawman Art", when: isWesternContext },
     { terms: ["outlaw", "wanted", "gunfight"], descriptor: "Outlaw Western Narrative Art", when: isWesternContext },
     { terms: ["rancher", "herd"], descriptor: "Western Rancher Portrait Photography", when: isWesternContext },
-    { terms: ["native american", "warrior", "scout"], descriptor: "Native American Western Fine Art", when: isWesternContext },
     { terms: ["locomotive", "train", "steam"], descriptor: "Fine Art Train Photography", when: isTransportationContext },
     { terms: ["automobile", "car", "truck"], descriptor: "Fine Art Automobile Photography", when: isTransportationContext },
   ];
@@ -206,7 +207,7 @@ export function getImagePageSeoMeta(input: ImageSeoMetaInput) {
     resolveGallerySeoDescriptor(input.galleryPath) ||
     DEFAULT_DESCRIPTOR;
 
-  const pageTitle = `${artworkTitle} | ${descriptor} | K4`;
+  const pageTitle = `${artworkTitle} | ${descriptor} | Wayne Heim`;
   const fallbackDescription = input.alt
     ? `${artworkTitle} is part of Wayne Heim's ${descriptor.toLowerCase()} collection at K4 Studios. ${input.alt}`
     : `${artworkTitle} is part of Wayne Heim's ${descriptor.toLowerCase()} collection at K4 Studios.`;

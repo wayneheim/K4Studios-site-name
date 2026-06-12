@@ -61,7 +61,7 @@ const forceImageSize = (src = "", size: string = "s") => {
             <div class="dock-tombstone">
               <img
                 src={forceImageSize(item.thumb, "s")}
-                alt={`${displayTitle} tombstone link`}
+                alt=""
                 loading={item.current || distance <= 1 ? "eager" : "lazy"}
                 width="140"
                 height="160"

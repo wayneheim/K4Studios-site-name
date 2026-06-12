@@ -9,7 +9,7 @@ const BUY_LINK_SMUGMUG_HOST = "wayne-heim.smugmug.com";
 const STANDARD_SERIES = ["sketch", "foundation", "chronicle", "legend"];
 const ENGRAINED_PATH = "/Other/K4-Select-Series/Engrained/Engrained-Series";
 const K4_ORGANIZATION_ID = "https://www.k4studios.com/#organization";
-const SKETCH_SERIES_SHIPPING_USD = "15.00";
+const SKETCH_SERIES_SHIPPING_USD = "9.99";
 const SKETCH_SERIES_SHIPPING_SERVICE = "SmugMug Standard Shipping";
 
 export function getSketchOfferShippingDetails() {
@@ -30,14 +30,14 @@ export function getSketchOfferShippingDetails() {
       "@type": "ShippingDeliveryTime",
       handlingTime: {
         "@type": "QuantitativeValue",
-        minValue: 0,
-        maxValue: 2,
+        minValue: 2,
+        maxValue: 5,
         unitCode: "DAY",
       },
       transitTime: {
         "@type": "QuantitativeValue",
         minValue: 3,
-        maxValue: 10,
+        maxValue: 7,
         unitCode: "DAY",
       },
     },
@@ -192,6 +192,7 @@ function findEngrainedForPaperImage(imageId) {
 function resolveStandardCommerce({ image, galleryPath, pageUrl }) {
   const seriesId = findSeriesId(image?.id, galleryPath);
   const series = seriesId ? seriesRegistry.series?.[seriesId] : null;
+  const oneImageMovie = Boolean(series?.oneImageMovie || image?.oneImageMovie);
   const registryTiers = Array.isArray(series?.tiers) ? series.tiers : [];
   const fallbackTiers = Array.isArray(image?.availableSeries) ? image.availableSeries : [];
   const tierSet = new Set(registryTiers.length > 0 ? registryTiers : fallbackTiers);
@@ -266,6 +267,7 @@ function resolveStandardCommerce({ image, galleryPath, pageUrl }) {
     pageUrl,
     currency: "USD",
     seriesId,
+    oneImageMovie,
     tiers,
     engrainedLink,
     schema: buildCommerceSchema({ pageUrl, offerPrices }),
@@ -291,6 +293,7 @@ function resolveEngrainedCommerce({ image, pageUrl }) {
     imageTitle: image?.title || "",
     pageUrl,
     currency: "USD",
+    oneImageMovie: Boolean(image?.oneImageMovie),
     engrained: {
       label: "Engrained Series",
       imageSize: image?.imageSize || null,

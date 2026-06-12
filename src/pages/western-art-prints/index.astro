@@ -14,6 +14,15 @@ import { getFormattedLowestStandardPrintPrice } from "@/data/pricing/printSeries
 const pagePath = "/western-art-prints";
 const basePath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color";
 const canonicalPath = pagePath;
+const beyondFrameVideoWidget = {
+  videoSlug: "only-path-forward",
+  kicker: "Frontier stories come alive.",
+  label: "60 seconds: Beyond the frame.",
+  compact: true,
+  withRules: true,
+  ctaWidth: "17rem",
+  ruleWidth: "100%",
+};
 
 const rotateGallery = (items: any[] = [], offset = 0) => {
   const cleanItems = items.filter((item: any) =>
@@ -112,7 +121,7 @@ const copy = {
   indexDefinition:
     "Wayne Heim's print catalog includes frontier narrative scenes, cowboy portraits, black and white Western prints, and painterly character studies produced as collector-grade fine art.",
   indexLinkNote:
-    "This is the K4 route for print-focused Western intent: wall prints, Western fine art prints, cowboy art prints, and collector-ready painterly Western work.",
+    "Explore wall prints, Western fine art prints, cowboy art prints, and collector-ready painterly Western work with print format and room presence in mind.",
   printAvailabilityNote: `Western prints are available from ${getFormattedLowestStandardPrintPrice()} across archival paper and select wood presentations. Edition status and format options are shown on individual image pages.`,
   commercialH1: "Western Art Prints for Walls, Rooms, and Collectors",
   commercialDeck:
@@ -129,7 +138,7 @@ const copy = {
   gatewayIntroCopy:
     "A Western print is not just an image of the West. It is a format decision for a wall.",
   gatewaySupportingCopy:
-    "The SERP is almost entirely print-buying intent: framed wall art, canvas prints, giclee-style reproductions, paper posters, ready-to-hang pieces, black and white options, large Western prints, sale pricing, and room-specific searches like living room or wall decor.\n\nThis page is built around that buying sequence. Choose the print family first, then the subject. A frontier narrative print carries story. A black and white Western print adds restraint. A cowboy portrait print gives the wall a figure. A monochrome cowboy print adds vintage gravity without requiring a literal antique reproduction.\n\nWayne Heim's work is offered through K4 Studios as archival print paths with image stories, sizing, edition, and presentation details inside each image page. The goal is not to overwhelm a buyer with every Western subject at once; it is to make the print decision legible.",
+    "Western art prints can mean framed wall art, canvas-style decor, paper posters, ready-to-hang pieces, black and white options, large Western prints, or room-specific wall decor. The stronger choice begins with the print family, then the subject. A frontier narrative print carries story. A black and white Western print adds restraint. A cowboy portrait print gives the wall a figure. A monochrome cowboy print adds vintage gravity without requiring a literal antique reproduction.\n\nWayne Heim's work is offered through K4 Studios as archival print paths with image stories, sizing, edition, and presentation details inside each image page. The goal is not to overwhelm a buyer with every Western subject at once; it is to make the print decision legible.",
   gatewayKicker: "K4 Studios - Western Art Print Catalog",
   gatewayHeroTitle: "Western Art Prints by Wayne Heim",
   gatewayHeroAlt:
@@ -181,6 +190,7 @@ const copy = {
   copy={copy}
   faqItems={westernArtPrintsFAQ}
   gridSections={gridSections}
+  gatewayVideoWidget={beyondFrameVideoWidget}
   dockVariant="wall-art"
   layoutVariant="cinematic-concept-series-top"
 />

@@ -219,6 +219,7 @@ const cleanedGridImages = (gridImages || [])
             class="dw-faq-question"
             data-dw-faq-trigger
             data-dw-faq-target={`dw-faq-${index}`}
+            aria-controls={`dw-faq-${index}`}
             aria-expanded="false"
           >
             <span class="dw-faq-question__text">{item.question}</span>
@@ -229,7 +230,7 @@ const cleanedGridImages = (gridImages || [])
 
       <div class="dw-faq-answer-stack">
         {cleanedDeepFaq.map((item, index) => (
-          <div id={`dw-faq-${index}`} class="dw-faq-answer" data-dw-faq-panel hidden>
+          <div id={`dw-faq-${index}`} class="dw-faq-answer" data-dw-faq-panel aria-hidden="true">
             {item.answers.map((a) => (
               <p set:html={a} />
             ))}
@@ -254,6 +255,7 @@ const cleanedGridImages = (gridImages || [])
             class="dw-faq-question"
             data-dw-faq-trigger
             data-dw-faq-target={`dw-faq-${index}`}
+            aria-controls={`dw-faq-${index}`}
             aria-expanded="false"
           >
             <span class="dw-faq-question__text">{item.question}</span>
@@ -264,7 +266,7 @@ const cleanedGridImages = (gridImages || [])
 
       <div class="dw-faq-answer-stack">
         {cleanedLegacyFaq.map((item, index) => (
-          <div id={`dw-faq-${index}`} class="dw-faq-answer" data-dw-faq-panel hidden>
+          <div id={`dw-faq-${index}`} class="dw-faq-answer" data-dw-faq-panel aria-hidden="true">
             <p>{item.answer}</p>
           </div>
         ))}
@@ -322,6 +324,7 @@ const cleanedGridImages = (gridImages || [])
 
     // FAQ toggle (inline accordion)
     var triggers = document.querySelectorAll("[data-dw-faq-trigger]");
+    var panels = document.querySelectorAll("[data-dw-faq-panel]");
     triggers.forEach(function (trigger) {
       trigger.addEventListener("click", function () {
         var targetId = trigger.getAttribute("data-dw-faq-target");
@@ -334,11 +337,17 @@ const cleanedGridImages = (gridImages || [])
           var ic = t.querySelector(".dw-faq-question__icon");
           if (ic) ic.textContent = "+";
         });
+        panels.forEach(function (p) {
+          p.setAttribute("aria-hidden", "true");
+          p.classList.remove("is-open");
+        });
         document.querySelectorAll(".dw-faq-inline-answer").forEach(function (n) { n.remove(); });
 
         if (!panel || isOpen) return;
 
         trigger.setAttribute("aria-expanded", "true");
+        panel.setAttribute("aria-hidden", "false");
+        panel.classList.add("is-open");
         var icon = trigger.querySelector(".dw-faq-question__icon");
         if (icon) icon.textContent = "\u2212";
 

@@ -32,6 +32,7 @@ function humanizeCoreActionLabel(row) {
     back_to_start: 'Back To Start',
     audio_toggle: 'Story Narration Toggle',
     slider_click: 'Story Slide Click',
+    frontier_video_click: 'Frontier Story Video',
     xl_zoom: 'XL Zoom',
     more_info_open: 'More Info',
     collector_notes_open: 'Collector Notes',

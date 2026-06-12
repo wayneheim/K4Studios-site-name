@@ -127,13 +127,13 @@ export const storyBlocks = [
     subhead: 'What the stronger cowboy pages already prove',
     paragraphs: [
       'The K4 pages that already rank around cowboy and black-and-white Western terms are not noisy commercial pages. They let portraiture, atmosphere, and historical pressure do the heavy lifting, then route visitors into the right galleries.',
-      'That means this page should borrow from the cleaner wall-art and narrative models, not try to out-catalog a marketplace result.',
+      'That calls for a cleaner wall-art and narrative presentation rather than trying to out-catalog a marketplace result.',
     ],
   },
   {
     subhead: 'What this page is really selling',
     paragraphs: [
-      'At the surface it is cowboy wall art. Underneath, it is a route into Western Cowboy Portraits, story-driven Western photography, and collector-grade print presentation. The page should reveal that deeper system instead of burying it under quantity.',
+      'At the surface it is cowboy wall art. Underneath, it opens into Western Cowboy Portraits, story-driven Western photography, and collector-grade print presentation, revealing the deeper structure instead of burying it under quantity.',
       'That is why the lower sections favor selected works, grouped collection previews, and supporting reading over endless grid expansion.',
     ],
   },

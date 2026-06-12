@@ -166,6 +166,16 @@ export function getExcludeSizesFromRegistry(imageId, registry = registryCache) {
   return series?.excludeSizes || {};
 }
 
+export function getSeriesRecordFromRegistry(imageId, registry = registryCache) {
+  const seriesId = getSeriesIdFromRegistry(imageId, registry);
+  if (!seriesId) return null;
+  return registry.series?.[seriesId] || null;
+}
+
+export function isOneImageMovieFromRegistry(imageId, registry = registryCache) {
+  return Boolean(getSeriesRecordFromRegistry(imageId, registry)?.oneImageMovie);
+}
+
 // Helper to get effective series for an image (includes sketch by default)
 // Now reads from seriesRegistry instead of image.availableSeries
 export function getEffectiveSeries(image, registry = registryCache) {

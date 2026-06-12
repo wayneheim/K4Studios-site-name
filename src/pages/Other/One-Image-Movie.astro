@@ -10,6 +10,7 @@ import { getLandingMeta } from "@/data/landingMeta.ts";
 
 import { oneImageMoviePage } from "@/data/Other/One-Image-Movie/story.ts";
 import { galleryData as painterlyImages } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs";
+import { galleryData as westernNarrativeImages } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs";
 import { autoLinkKeywordsInText } from "@/components/utils/autoLinkKeywordsInText.ts";
 import { semantic as k4Semantic } from "@/data/semantic/K4-Sem.ts";
 import {
@@ -96,8 +97,8 @@ function shuffleArray<T>(arr: T[]): T[] {
     .map(({ value }) => value);
 }
 
-const visibleImages = painterlyImages.filter(img => img.visibility !== "ghost");
-const galleryBasePath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color";
+const visibleImages = westernNarrativeImages.filter(img => img.visibility !== "ghost");
+const galleryBasePath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color";
 const previewImages = shuffleArray(visibleImages).slice(0, 6).map(img => ({
   ...img,
   galleryPath: galleryBasePath.replace(/^\//, "") // remove leading slash for BlogGalleryPreviewStrip
@@ -222,30 +223,34 @@ const breadcrumbData = getBreadcrumbList([
       <LandingHeader client:load breadcrumb="Other › One-Image Movie" />
     </div>
 
-    <!-- Page Header -->
-    <section class="section-heading-wrap" style="margin: 2.5rem 0 3.25rem;">
-      <div class="section-heading">
-        <h1 class="page-title" style="font-family: 'Glegoo', serif; font-size: 2.2rem; font-weight: 600; letter-spacing: -0.02em;">
-          {oneImageMoviePage.title}
-        </h1>
-        <h2 class="page-subtitle" style="font-family: 'Glegoo', serif; font-size: 1.1rem; font-weight: 400; color: #8b6914; margin-top: 0.75rem;">
-          {oneImageMoviePage.subtitle}
-        </h2>
-      </div>
-    </section>
-
     <!-- One-Image Movie Visual Concept Bridge -->
     <section class="one-image-movie-bridge">
       <div class="one-image-movie-bridge__shell">
+        <div class="one-image-movie-bridge__heading">
+          <h1>{oneImageMoviePage.title}</h1>
+          <h2>{oneImageMoviePage.subtitle}</h2>
+        </div>
 
         <a href={topConceptImage.href} class="one-image-movie-hero">
           <img src={topConceptImage.src} alt={topConceptImage.alt} loading="eager" />
         </a>
 
         <div class="one-image-movie-bridge__text">
-          <h2>Wayne Heim’s One-Image Movies™ do not end at the image. <br>They open into the viewer.</h2>
-          <p>The photograph starts the scene, but title, authored writing, atmosphere, unresolved implication, and the viewer’s own lived experience complete the final unwritten story. That is where the movie begins to move.
-          </p>
+          <p class="one-image-movie-bridge__poem">A still photograph captures a moment.<br />A film unfolds time.</p>
+          <p class="one-image-movie-bridge__question">A One-Image Movie™ asks whether a single image can do both.</p>
+          <p class="one-image-movie-bridge__explain">Wayne Heim’s One-Image Movies™ combine image, title, atmosphere, and authored writing to create unresolved narrative stills. The viewer is not handed a finished meaning. They are invited into the moment — to wonder what came before, what happens next, and what the image asks them to carry forward.</p>
+          <p class="one-image-movie-bridge__doorway">The image opens the door.<br />The title turns the handle.<br />The writing lights the room.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="one-image-movie-mechanism">
+      <div class="one-image-movie-mechanism__shell">
+        <h2>Not Captions. A Narrative Mechanism.</h2>
+        <div class="one-image-movie-mechanism__copy">
+          <p>In a One-Image Movie™, the title and writing are not decorations added after the fact. They are part of how the image works.</p>
+          <p class="one-image-movie-mechanism__steps">The photograph creates the scene.<br />The title introduces tension.<br />The writing widens the frame.</p>
+          <p>Together, they create a narrative space the viewer has to complete through memory, instinct, emotion, and lived experience.</p>
         </div>
       </div>
     </section>
@@ -319,7 +324,7 @@ const breadcrumbData = getBreadcrumbList([
   <style>
     .one-image-movie-bridge {
       max-width: 1180px;
-      margin: -3.25rem auto 3rem;
+      margin: 2.5rem auto 2.35rem;
       padding: 0 1rem;
     }
 
@@ -327,24 +332,35 @@ const breadcrumbData = getBreadcrumbList([
       background: rgba(255, 252, 247, 0.96);
       border: 1px solid rgba(121, 98, 78, 0.16);
       border-radius: 20px;
-      padding: 1.35rem 1.25rem 1.65rem;
+      padding: 2rem 1.25rem 2.25rem;
       box-shadow: 0 18px 34px rgba(52, 38, 26, 0.07);
       text-align: center;
     }
 
-    .one-image-movie-bridge__kicker {
-      margin: 0 0 0.75rem;
-      font-size: 0.74rem;
-      font-weight: 700;
-      letter-spacing: 0.11em;
-      text-transform: uppercase;
-      color: #7b4a28;
+    .one-image-movie-bridge__heading {
+      margin: 0 auto 1.35rem;
+    }
+
+    .one-image-movie-bridge__heading h1 {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      line-height: 1.1;
+      color: #302820;
+      font-weight: 600;
+    }
+
+    .one-image-movie-bridge__heading h2 {
+      margin: 0.55rem 0 0;
+      font-size: clamp(1rem, 2.1vw, 1.18rem);
+      line-height: 1.35;
+      color: #8b6914;
+      font-weight: 400;
     }
 
     .one-image-movie-hero {
       display: block;
       max-width: 860px;
-      margin: 0 auto 1.1rem;
+      margin: 0 auto 1.45rem;
       overflow: hidden;
       border-radius: 16px;
       background: #efe7dc;
@@ -361,16 +377,8 @@ const breadcrumbData = getBreadcrumbList([
     }
 
     .one-image-movie-bridge__text {
-      max-width: 760px;
-      margin: 0 auto 1.2rem;
-    }
-
-    .one-image-movie-bridge__text h2 {
-      margin: 0 0 0.55rem;
-      font-size: clamp(1.35rem, 2.4vw, 1.85rem);
-      line-height: 1.25;
-      color: #241b15;
-      font-weight: 600;
+      max-width: 800px;
+      margin: 0 auto;
     }
 
     .one-image-movie-bridge__text p {
@@ -378,6 +386,90 @@ const breadcrumbData = getBreadcrumbList([
       font-size: 1rem;
       line-height: 1.62;
       color: #4a3d34;
+    }
+
+    .one-image-movie-bridge__text p + p {
+      margin-top: 1rem;
+    }
+
+    .one-image-movie-bridge__poem,
+    .one-image-movie-bridge__question,
+    .one-image-movie-bridge__doorway {
+      text-align: center;
+    }
+
+    .one-image-movie-bridge__poem {
+      font-size: 1.05rem !important;
+      color: #3f342b !important;
+    }
+
+    .one-image-movie-bridge__question {
+      color: #2f251e !important;
+      font-weight: 500;
+    }
+
+    .one-image-movie-bridge__explain {
+      max-width: 680px;
+      margin: 1.25rem auto 0 !important;
+      padding: 1.05rem 1.15rem;
+      border-top: 1px solid rgba(121, 98, 78, 0.13);
+      border-bottom: 1px solid rgba(121, 98, 78, 0.13);
+      text-align: left;
+      color: #5b4d43 !important;
+    }
+
+    .one-image-movie-bridge__doorway {
+      color: #382c22 !important;
+      font-size: 1.02rem !important;
+      line-height: 1.75 !important;
+    }
+
+    .one-image-movie-mechanism {
+      max-width: 960px;
+      margin: 0 auto 3rem;
+      padding: 0 1rem;
+    }
+
+    .one-image-movie-mechanism__shell {
+      background: rgba(249, 247, 244, 0.86);
+      border: 1px solid rgba(121, 98, 78, 0.14);
+      border-radius: 16px;
+      padding: 1.55rem clamp(1.1rem, 4vw, 2rem);
+      box-shadow: 0 12px 26px rgba(52, 38, 26, 0.045);
+    }
+
+    .one-image-movie-mechanism h2 {
+      margin: 0 0 0.95rem;
+      text-align: center;
+      color: #302820;
+      font-size: clamp(1.35rem, 2.6vw, 1.75rem);
+      line-height: 1.25;
+      font-weight: 500;
+    }
+
+    .one-image-movie-mechanism__copy {
+      max-width: 690px;
+      margin: 0 auto;
+    }
+
+    .one-image-movie-mechanism__copy p {
+      margin: 0;
+      color: #51443a;
+      font-size: 1rem;
+      line-height: 1.62;
+      text-align: left;
+    }
+
+    .one-image-movie-mechanism__copy p + p {
+      margin-top: 0.95rem;
+    }
+
+    .one-image-movie-mechanism__steps {
+      padding: 0.9rem 1rem;
+      border-left: 3px solid rgba(139, 105, 20, 0.42);
+      background: rgba(255, 252, 247, 0.75);
+      color: #34291f !important;
+      line-height: 1.75 !important;
     }
 
     .story-block::after {
@@ -444,18 +536,36 @@ const breadcrumbData = getBreadcrumbList([
 
     @media (max-width: 768px) {
       .one-image-movie-bridge {
-        margin: -4.25rem auto 2rem;
+        margin: 1.4rem auto 1.6rem;
         padding: 0 0.75rem;
       }
 
       .one-image-movie-bridge__shell {
-        padding: 1rem 0.85rem 1.2rem;
+        padding: 1.25rem 0.85rem 1.45rem;
         border-radius: 16px;
+      }
+
+      .one-image-movie-bridge__heading {
+        margin-bottom: 1rem;
       }
 
       .one-image-movie-hero img {
         height: 300px;
         object-position: center 42%;
+      }
+
+      .one-image-movie-bridge__explain {
+        padding: 0.85rem 0;
+      }
+
+      .one-image-movie-mechanism {
+        margin-bottom: 2.15rem;
+        padding: 0 0.75rem;
+      }
+
+      .one-image-movie-mechanism__shell {
+        padding: 1.2rem 1rem;
+        border-radius: 14px;
       }
 
       .inline-art-callout {
@@ -464,26 +574,18 @@ const breadcrumbData = getBreadcrumbList([
         margin: 1rem auto 1.25rem;
       }
 
-      .one-image-movie-bridge__text h2 {
-        font-size: 1.22rem;
-      }
-
       .one-image-movie-bridge__text p {
         font-size: 0.93rem;
         line-height: 1.55;
       }
 
+      .one-image-movie-mechanism__copy p {
+        font-size: 0.94rem;
+      }
+
       .inline-art-callout {
         width: 100%;
         padding: 0.75rem;
-      }
-
-      .page-subtitle {
-        padding-left: 1.5rem !important;
-        padding-right: 1.5rem !important;
-        letter-spacing: -0.03em !important;
-        white-space: nowrap !important;
-        font-size: 1rem !important;
       }
     }
   </style>

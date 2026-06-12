@@ -115,7 +115,7 @@ export const storyBlocks = [
 	{
 		subhead: 'Why this term needs its own route',
 		paragraphs: [
-			'Visitors searching black and white Western work are often looking for a different emotional register: less decorative warmth, more tension, more character, more consequence. The page should reflect that by staying more severe, more selective, and more tonally focused.',
+			'Visitors searching black and white Western work are often looking for a different emotional register: less decorative warmth, more tension, more character, more consequence. The selection stays severe, selective, and tonally focused.',
 			'That is why the grouped previews below stay monochrome-only. They make the differences between portraiture, narrative work, and Native American studies readable without diluting the term with unrelated color imagery.',
 		],
 	},

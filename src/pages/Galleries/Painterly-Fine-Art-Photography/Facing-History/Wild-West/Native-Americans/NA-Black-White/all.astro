@@ -46,12 +46,13 @@ const { sectionDockItems, dockCenterIndex } = buildWildWestAllPageDock({
   currentKey,
   currentHref: canonicalPath,
 });
+const lowestStandardPrintPrice = getFormattedLowestStandardPrintPrice();
 
 const copy = isNaNarrativeTheme
   ? {
       seoTitle: "Black and White Native American Narrative Photography | Fine Art Prints | K4 Studios",
       seoDescription:
-        "Browse {imageCount} black and white Native American narrative fine art prints by Wayne Heim. Monochrome Wild West photography of frontier life, presence, and story from the small-works \"Sketch Series\" at $25.",
+        `Browse {imageCount} black and white Native American narrative fine art prints by Wayne Heim. Monochrome Wild West photography of frontier life, presence, and story from the small-works "Sketch Series" at ${lowestStandardPrintPrice}.`,
       indexDefinition:
         `This page presents the complete ${variantDescriptor} Native American narrative selection from Western Narratives by Wayne Heim. These story-driven works are filtered from the larger monochrome narrative archive and gathered here around Indigenous presence, frontier context, and painterly visual storytelling.`,
       indexLinkNote: "All {imageCount} images open to their original Western Narratives artwork pages with full stories, metadata, and collector information.",
@@ -60,13 +61,13 @@ const copy = isNaNarrativeTheme
       collectionIntro:
         "Browse this curated black and white collection of Native American narrative photography — Wild West scenes shaped by tonal restraint, atmosphere, gesture, and story pressure. Monochrome strips the frame to its essentials — light, shadow, presence, and the quiet tension of the American frontier. Each image is a painterly study in dignity, continuity, and human depth. Every artwork opens to its full story, collector notes, image metadata, and available print details.\n\nFor the full Native American narrative collection in color, see the color gallery.",
       gatewayIntroCopy:
-        "{imageCount} black and white Native American narrative fine art prints by Wayne Heim, available as fine art prints from the small-works \"Sketch Series\" at $25 through ultra-limited signed collector editions. A curated monochrome collection — painterly Wild West photography shaped by atmosphere, gesture, tonal restraint, and the story pressure of the American frontier. Four edition tiers — open-edition studies to ultra-limited signed collector works — on fine art paper and Baltic Birch wood panels.",
+        `{imageCount} black and white Native American narrative fine art prints by Wayne Heim, available as fine art prints from the small-works "Sketch Series" at ${lowestStandardPrintPrice} through ultra-limited signed collector editions. A curated monochrome collection — painterly Wild West photography shaped by atmosphere, gesture, tonal restraint, and the story pressure of the American frontier. Four edition tiers — open-edition studies to ultra-limited signed collector works — on fine art paper and Baltic Birch wood panels.`,
       gatewaySupportingCopy: "Click any work to read the full narrative, explore collector notes, and view print details.",
     }
   : {
       seoTitle: "Black and White Native American Portrait Photography | Fine Art Prints | K4 Studios",
       seoDescription:
-        "Browse {imageCount} black and white Native American portrait fine art prints by Wayne Heim. Monochrome painterly studies of presence, dignity, and the American West from the small-works \"Sketch Series\" at $25.",
+        `Browse {imageCount} black and white Native American portrait fine art prints by Wayne Heim. Monochrome painterly studies of presence, dignity, and the American West from the small-works "Sketch Series" at ${lowestStandardPrintPrice}.`,
       indexDefinition:
         `This page presents the complete ${variantDescriptor} Native American portrait archive by Wayne Heim. The collection distills presence, heritage, identity, gesture, and quiet human force into tonal painterly portrait studies.`,
       indexLinkNote: "All {imageCount} images open to individual artwork pages with full narrative context, metadata, and collector information.",
@@ -75,7 +76,7 @@ const copy = isNaNarrativeTheme
       collectionIntro:
         "Browse this curated black and white collection of Native American portrait photography — {imageCount} images shaped by tonal restraint, atmosphere, gesture, and the quiet force of human presence. Monochrome strips the frame to its essentials — light, shadow, expression, and dignity. Each artwork opens to its full story, collector notes, image metadata, and available print details.\n\nFor the full Native American portrait collection in color, see the color gallery. Native American subjects also appear throughout the Western Narratives collection.",
       gatewayIntroCopy:
-        "{imageCount} black and white Native American portrait fine art prints by Wayne Heim, available as fine art prints from the small-works \"Sketch Series\" at $25 through ultra-limited signed collector editions. A curated monochrome selection — each image a painterly study of presence, dignity, atmosphere, and tonal depth. Four edition tiers — open-edition studies to ultra-limited signed collector works — on fine art paper and Baltic Birch wood panels.",
+        `{imageCount} black and white Native American portrait fine art prints by Wayne Heim, available as fine art prints from the small-works "Sketch Series" at ${lowestStandardPrintPrice} through ultra-limited signed collector editions. A curated monochrome selection — each image a painterly study of presence, dignity, atmosphere, and tonal depth. Four edition tiers — open-edition studies to ultra-limited signed collector works — on fine art paper and Baltic Birch wood panels.`,
       gatewaySupportingCopy:
         "Click any work to read the full narrative, explore collector notes, and view print details. For the broader Native American portrait collection see the color gallery.",
     };

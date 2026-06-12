@@ -18,6 +18,15 @@ import { landingWestern as landscapeThemeLanding } from "@/data/Galleries/Painte
 const pagePath = "/western-artwork";
 const basePath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color";
 const canonicalPath = pagePath;
+const beyondFrameVideoWidget = {
+  videoSlug: "only-path-forward",
+  kicker: "Frontier stories come alive.",
+  label: "60 seconds: Beyond the frame.",
+  compact: true,
+  withRules: true,
+  ctaWidth: "17rem",
+  ruleWidth: "100%",
+};
 
 const rotateGallery = (items: any[] = [], offset = 0) => {
   const cleanItems = items.filter((item: any) =>
@@ -133,7 +142,7 @@ const westernArtworkLiveCount = countLiveItems(gridSections);
 const commercialMiddleCopy = [
   "Western artwork is a broad room and subject search before it is a print decision. It can mean cowboy pieces, landscape work, framed Western art, modern Western wall art, vintage-feeling frontier scenes, or one strong image that sets the tone of a living room, office, lodge, ranch home, or hospitality space.",
   "Start by choosing the visual theme the room needs: a human figure, open country, narrative tension, black and white restraint, mountain scale, or an old-West story register. The sections below keep those choices separate so the page does not collapse into one generic Western decor grid.",
-  "Print format, size, and edition details live inside the individual image pages. This page is the artwork map: the place to decide what kind of Western subject belongs on the wall before choosing the exact presentation.",
+  "Print format, size, and edition details live inside the individual image pages. Start by deciding what kind of Western subject belongs on the wall, then choose the exact presentation.",
 ].join("\n\n");
 
 const copy = {
@@ -143,7 +152,7 @@ const copy = {
   indexDefinition:
     "Wayne Heim's catalog includes color and black and white cowboy portraits, narrative frontier scenes, Western landscapes, and mountain artwork created as collector-grade fine art for homes, offices, lodges, and long-term display.",
   indexLinkNote:
-    "This is the K4 route for broad Western art intent: artwork for walls, western themed art, western art prints, landscape artwork, mountain artwork, and painterly Western fine art.",
+    "Explore artwork for walls, western themed art, western art prints, landscape artwork, mountain artwork, and painterly Western fine art in one broad Western collection path.",
   printAvailabilityNote: `Western artwork is available from ${getFormattedLowestStandardPrintPrice()} across archival paper and select wood presentations. Edition status and format options are shown on individual image pages.`,
   commercialH1: "Western Artwork for Walls, Rooms, and Collector Spaces",
   commercialDeck:
@@ -218,6 +227,7 @@ const copy = {
   copy={copy}
   faqItems={westernArtworkFAQ}
   gridSections={gridSections}
+  gatewayVideoWidget={beyondFrameVideoWidget}
   dockVariant="wall-art"
   layoutVariant="cinematic-concept-series-top"
 />

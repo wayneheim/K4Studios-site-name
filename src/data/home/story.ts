@@ -1,7 +1,7 @@
 export const painterlyStory = [
   /* 1: Opening — The Stage, Not the Surface */
   {
- tagline: "Embrace the Past. Live the Story.",
+ tagline: "Narrative fine art photography shaped by history, atmosphere, and imagination.",
   subhead: "Fine Art Photography Where Every Frame Tells a Story",
   paragraphs: [
     "There are photographs—then there are moments that refuse to sit still.",
@@ -76,7 +76,7 @@ export const painterlyStory = [
     subhead: "The K4 Philosophy",
     paragraphs: [
       "Painterly realism. Cinematic depth. Myth made visible.",
-      "Every piece Wayne Heim creates is built on three pillars:"
+      "Every piece Wayne Heim creates is built on four pillars:"
     ],
     list: [
       "Painterly Fine Art Photography — textures and tones shaped like brushstrokes born from light.",

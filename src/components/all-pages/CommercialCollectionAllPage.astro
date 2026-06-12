@@ -475,7 +475,7 @@ const compactBreadcrumbHtml = breadcrumbHtml
                 <div class="dock-tombstone">
                   <img
                     src={forceImageSize(item.thumb, 's')}
-                    alt={`${displayTitle} tombstone link`}
+                    alt=""
                     loading={item.current || distance <= 2 ? 'eager' : 'lazy'}
                     width="140"
                     height="160"
@@ -1998,7 +1998,11 @@ const compactBreadcrumbHtml = breadcrumbHtml
         display:block;
         transform:none;
       }
-      .ssr-grid { padding:0 16px; gap:16px; }
+      .ssr-grid {
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        padding:0 16px;
+        gap:16px;
+      }
       .ssr-card-image {
         width:100%;
         height:auto;
@@ -2022,12 +2026,18 @@ const compactBreadcrumbHtml = breadcrumbHtml
     }
 
     @media (hover: none), (pointer: coarse) {
+      .ssr-card:hover,
+      .ssr-card:focus-within {
+        border-color:#b46a5f;
+        box-shadow:0 8px 22px rgba(48,34,23,.08);
+      }
       .ssr-card:hover .ssr-card-content,
       .ssr-card:focus-within .ssr-card-content {
         transform:none;
       }
       .ssr-card-link {
-        pointer-events:none;
+        pointer-events:auto;
+        touch-action:manipulation;
       }
       .ssr-card-content {
         pointer-events:auto;

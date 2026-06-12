@@ -88,7 +88,7 @@ const SPECIALTY_SERIES = [
 
 const getPricingSource = (pricingData) => pricingData || pricingConfig.pricing || {};
 
-const displaySize = (size) => String(size).replace(/\s*x\s*/i, " × ");
+const displaySize = (size) => String(size).replace(/\s*x\s*/i, " x ");
 
 export function formatPrice(price) {
   if (price === null || price === undefined || price === "") return "Call";
@@ -153,6 +153,37 @@ export function getHighestStandardPrintPrice(pricingData) {
 
 export function getFormattedLowestStandardPrintPrice(pricingData) {
   return formatPrice(getLowestStandardPrintPrice(pricingData));
+}
+
+export function getSeriesDisplaySizeList(seriesKey, pricingData, excludeSizes = null) {
+  return getSeriesPricingEntries(seriesKey, pricingData, excludeSizes)
+    .map((entry) => entry.displaySize)
+    .join(" and ");
+}
+
+export function getLowestSeriesPrintPrice(seriesKey, pricingData, excludeSizes = null) {
+  const prices = getSeriesPricingEntries(seriesKey, pricingData, excludeSizes)
+    .map((entry) => Number(entry.price))
+    .filter((price) => Number.isFinite(price));
+
+  return Math.min(...prices);
+}
+
+export function getFormattedLowestSeriesPrintPrice(seriesKey, pricingData, excludeSizes = null) {
+  return formatPrice(getLowestSeriesPrintPrice(seriesKey, pricingData, excludeSizes));
+}
+
+export function getFormattedSeriesPrintPriceRange(seriesKey, pricingData, excludeSizes = null) {
+  const prices = getSeriesPricingEntries(seriesKey, pricingData, excludeSizes)
+    .map((entry) => Number(entry.price))
+    .filter((price) => Number.isFinite(price));
+
+  if (prices.length === 0) return "";
+
+  const low = Math.min(...prices);
+  const high = Math.max(...prices);
+
+  return low === high ? formatPrice(low) : `${formatPrice(low)} to ${formatPrice(high)}`;
 }
 
 export function getAggregateOfferForCollection(imageCount) {

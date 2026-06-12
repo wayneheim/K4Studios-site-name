@@ -170,6 +170,8 @@ function mapRawEventToFamily(rawEvent) {
       return { eventFamily: 'story_action', eventAction: 'audio_toggle', canonicalPageLoad: 0 };
     case 'story_slider_click':
       return { eventFamily: 'story_action', eventAction: 'slider_click', canonicalPageLoad: 0 };
+    case 'frontier_story_video_widget_click':
+      return { eventFamily: 'story_action', eventAction: 'frontier_video_click', canonicalPageLoad: 0 };
     case 'guide_open':
       return { eventFamily: 'guide_action', eventAction: 'open', canonicalPageLoad: 0 };
     case 'guide_close':

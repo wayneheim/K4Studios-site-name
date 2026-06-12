@@ -1,6 +1,6 @@
 export const oneImageMoviePage = {
-  title: "What Is a One-Image Movie™?",
-  subtitle: "Wayne Heim’s K4 Studios Narrative-Art Format",
+  title: "One-Image Movies™",
+  subtitle: "A Contemporary System for Narrative Still Imagery",
 
   sections: [
     // 1. OPENING
@@ -74,7 +74,7 @@ export const oneImageMoviePage = {
       subhead: "The Literary Engine Behind the One-Image Movie™",
       paragraphs: [
         `A One-Image Movie™ is not the photograph alone. It is the relationship between the photograph, the title, the written story, and the viewer’s own interpretation. Remove any one of those elements and the format changes.`,
-        `The image opens the door. The title turns the handle. The writing lights the room. The viewer decides what happened before and what happens next. These narratives do not explain the image; they activate it, deepening uncertainty and emotional investment rather than closing the scene.`,
+        `These narratives do not explain the image; they activate it, deepening uncertainty and emotional investment rather than closing the scene.`,
         `This story-first philosophy ensures that every One-Image Movie™ functions like a psychological portal. The viewer is no longer a passive observer; they become the final participant in a viewer-completed story. The artwork becomes a collaboration between artist and audience, a finished narrative-art presentation fused with the oxygen of imagination.`
       ]
     },

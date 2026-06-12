@@ -11,6 +11,15 @@ import { getFormattedLowestStandardPrintPrice } from "@/data/pricing/printSeries
 const pagePath = "/black-and-white-cowboy-photos";
 const basePath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White";
 const canonicalPath = pagePath;
+const beyondFrameVideoWidget = {
+  videoSlug: "only-path-forward",
+  kicker: "Frontier stories come alive.",
+  label: "60 seconds: Beyond the frame.",
+  compact: true,
+  withRules: true,
+  ctaWidth: "17rem",
+  ruleWidth: "100%",
+};
 
 const rotateGallery = (items: any[] = [], offset = 0) => {
   const cleanItems = items.filter((item: any) =>
@@ -177,7 +186,7 @@ const copy = {
   indexDefinition:
     "Wayne Heim's black and white cowboy photos include monochrome Western narrative scenes, cowboy portraits, and painterly Native American portrait work created as collector-grade fine art prints.",
   indexLinkNote:
-    "This is the K4 commercial route for black and white cowboy photos, black and white cowboy photography, monochrome Western art, and black and white Western wall art.",
+    "Explore black and white cowboy photos, black and white cowboy photography, monochrome Western art, and black and white Western wall art with a collector-focused eye.",
   printAvailabilityNote: `Black and white cowboy photo prints are available from ${getFormattedLowestStandardPrintPrice()} across archival paper and select wood presentations. Edition status and format options are shown on individual image pages.`,
   commercialH1: `The Collection — Three Monochrome Series, ${blackAndWhiteCowboyPhotosLiveCount} Works`,
   commercialDeck:
@@ -273,5 +282,6 @@ const blackAndWhiteCowboyPhotosFAQ = [
   copy={copy}
   faqItems={blackAndWhiteCowboyPhotosFAQ}
   gridSections={gridSections}
+  gatewayVideoWidget={beyondFrameVideoWidget}
   dockVariant="wall-art"
 />

@@ -118,24 +118,24 @@ export const hybridCarouselProps = {
 export const storyBlocks = [
   {
     title: 'Western Photography Prints',
-    subhead: 'A print page should feel curated, not piled high.',
+    subhead: 'Curated Western prints with room presence.',
     paragraphs: [
-      'Western photography prints should not behave like a crowded storefront. The stronger move is to name the kind of work being offered, show a restrained sample, and let the visitor feel where the deeper story actually lives.',
-      'That matters here because the winning K4 pages in search are not generic catalog pages. They are cleaner hybrid pages and gallery endpoints that frame the work through atmosphere, narrative pressure, and authorship before asking for commitment.',
+      'Western photography prints should feel considered before they feel extensive. A restrained selection lets the subject, atmosphere, and print presence come forward without reducing the work to inventory.',
+      'Wayne Heim\'s Western prints are organized around atmosphere, narrative pressure, and authorship, so the image has time to establish why it belongs on the wall before format and edition decisions enter the conversation.',
     ],
   },
   {
     subhead: 'What makes these Western prints different',
     paragraphs: [
       'These prints are built from cowboy portraits, Wild West narratives, and historically grounded images that keep atmosphere and consequence active on the wall. They are not just Western subjects translated into product language.',
-      'The page therefore works best when it behaves as a Trojan horse: it satisfies print intent at the surface, then reveals the deeper visual system underneath.',
+      'The print path begins with familiar Western subjects, then opens into the deeper visual structure underneath: painterly light, restrained tone, character, implication, and the feeling that the frame belongs to a larger story.',
     ],
   },
   {
-    subhead: 'Where the page should send the visitor',
+    subhead: 'Where to continue',
     paragraphs: [
-      'Some visitors need a clean wall-art path. Others need the narrative bridge that explains why the work feels cinematic or unresolved. Others are ready for formats and collector options. This page should open those routes without turning into all of them at once.',
-      'That is why the sample below stays selective and the lower sections push into Western Wall Art, Western Storytelling Photography, and print-format decisions instead of dumping the full archive up front.',
+      'Some collectors begin with room placement. Others respond first to the narrative charge of the image. Others are ready to compare formats and editions. The sections below keep those paths distinct without crowding the first choice.',
+      'Start with the selected works, then continue into Western Wall Art, Western Storytelling Photography, or print-format decisions when the image itself has earned a closer look.',
     ],
   },
 ];
@@ -210,7 +210,7 @@ export const gridImages = [
 export const collection = {
   kicker: 'Selected Works',
   title: 'Selected Western Photography Prints',
-  intro: 'Three collection groupings with paired color and black-and-white rows, built to feel curated while still giving visitors a clear path deeper into each body of work.',
+  intro: 'Three collection groupings with paired color and black-and-white rows, curated to show the breadth of the work while giving each body of images room to breathe.',
 };
 
 export const collectionGroups = [
@@ -327,7 +327,7 @@ export const faqItems = [
   {
     q: 'Why show only a smaller selection on this page?',
     a: [
-      'Because this page works better as a curated entry point. A selective group of images keeps the work feeling intentional, then the linked paths carry visitors deeper into the right collections.',
+      'A selective group of images keeps the work feeling intentional, then the linked paths carry visitors deeper into the right collections.',
     ],
   },
   {
@@ -339,7 +339,7 @@ export const faqItems = [
   {
     q: 'Where should I go if I want the cleaner wall-art path?',
     a: [
-      'Start with <a href="/Western-Wall-Art">Western Wall Art</a> if your intent is primarily about how the work lives in a room. It keeps the interface cleaner while still routing into the deeper K4 system.',
+      'Start with <a href="/Western-Wall-Art">Western Wall Art</a> if your interest is primarily how the work lives in a room, then return to the individual artwork pages for story, size, and edition details.',
     ],
   },
   {

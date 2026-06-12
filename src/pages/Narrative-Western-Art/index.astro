@@ -6,6 +6,7 @@ import LandingHeader      from '@/components/Landing-Header.jsx';
 import TombstoneNav       from '@/components/TombstoneNav.jsx';
 import CollectionDock     from '@/components/doorway/CollectionDock.astro';
 import LandingRightImages from '@/components/LandingRightImages.jsx';
+import VideoStoryWidget   from '@/components/VideoStoryWidget.astro';
 import FAQAccordion       from '@/components/FAQAccordion.jsx';
 import SiteFooter         from '@/components/Footer.astro';
 import MobileStoryImages  from '@/components/MobileStoryImages.jsx';
@@ -197,6 +198,15 @@ const sidebarImageProps = {
   images: sidebarImagesClient,
   displayCount: 6,
 } as any;
+const beyondFrameVideoWidget = {
+  videoSlug: "only-path-forward",
+  kicker: "Frontier stories come alive.",
+  label: "60 seconds: Beyond the frame.",
+  compact: true,
+  withRules: true,
+  ctaWidth: "17rem",
+  ruleWidth: "100%",
+};
 
 const narrativeDockItems = [
   {
@@ -539,6 +549,9 @@ const tombstonesWithThumbs = landingNarrativeWesternArt.tombstones.map((stone: a
       </div>
 
       <div class="sidebar-column hidden md:block">
+        <div class="sidebar-video-widget reveal-on-scroll">
+          <VideoStoryWidget {...beyondFrameVideoWidget} />
+        </div>
         <div class="sample-fade reveal-on-scroll">
           <LandingRightImages client:load {...sidebarImageProps} />
         </div>
@@ -686,6 +699,20 @@ const tombstonesWithThumbs = landingNarrativeWesternArt.tombstones.map((stone: a
       margin-top: -0.75rem;
     }
     .sample-fade.is-visible { opacity: 1; transform: translateY(0); visibility: visible; }
+
+    .sidebar-video-widget {
+      opacity: 0;
+      transform: translateY(0px);
+      transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+      transition-delay: 0.1s;
+      visibility: hidden;
+      margin: -0.5rem 0 1.25rem;
+    }
+    .sidebar-video-widget.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+      visibility: visible;
+    }
 
     .page-summary {
       max-width: 900px;

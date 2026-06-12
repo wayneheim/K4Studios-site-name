@@ -14,6 +14,15 @@ import { cowboyWallArtFAQ } from "@/data/Cowboy-Wall-Art/faq.ts";
 const pagePath = "/cowboy-wall-art";
 const basePath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color";
 const canonicalPath = pagePath;
+const beyondFrameVideoWidget = {
+  videoSlug: "only-path-forward",
+  kicker: "Frontier stories come alive.",
+  label: "60 seconds: Beyond the frame.",
+  compact: true,
+  withRules: true,
+  ctaWidth: "17rem",
+  ruleWidth: "100%",
+};
 
 const rotateGallery = (items: any[] = [], offset = 0) => {
   const cleanItems = items.filter((item: any) => item?.id);
@@ -106,7 +115,7 @@ const copy = {
   indexDefinition:
     "Wayne Heim's cowboy wall art includes cowboy portraits, narrative frontier scenes, black and white cowboy prints, and painterly Western character studies created as collector-grade fine art for real rooms and long-term display.",
   indexLinkNote:
-    "This page is the commercial cowboy wall art route for K4 Studios: a practical starting point for collectors, homeowners, offices, lodge spaces, hospitality projects, and interior designers looking for cowboy artwork with more authorship than generic Western decor.",
+    "Cowboy wall art at K4 Studios gives collectors, homeowners, offices, lodge spaces, hospitality projects, and interior designers a practical starting point for cowboy artwork with more authorship than generic Western decor.",
   printAvailabilityNote: `All works are available as fine art prints from ${getFormattedLowestStandardPrintPrice()}. Select images are also available in specialty presentations, including wood-based print options where available.`,
   commercialH1: "The Collection - Four Print Series, 840+ Works",
   commercialDeck:
@@ -165,5 +174,6 @@ const copy = {
   copy={copy}
   faqItems={cowboyWallArtFAQ}
   gridSections={gridSections}
+  gatewayVideoWidget={beyondFrameVideoWidget}
   dockVariant="wall-art"
 />

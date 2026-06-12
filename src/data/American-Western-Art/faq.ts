@@ -3,7 +3,7 @@ export const americanWesternArtFAQ = [
     q: "What is American Western art?",
     a: [
       "American Western art is the broader commercial and collecting category for work centered on the people, landscapes, and frontier stories of the American West.",
-      "This page is built as the browse-led route into that work. If you want the historical explainer behind the phrase itself, continue into <a href='/Art-of-the-American-West'>Art of the American West</a>."
+      "Use this collection to browse the artwork itself. For the historical explainer behind the phrase, continue into <a href='/Art-of-the-American-West'>Art of the American West</a>."
     ],
   },
   {
@@ -52,7 +52,7 @@ export const americanWesternArtFAQ = [
     q: "Where should I start if I want the historical explainer instead of the browse page?",
     a: [
       "Start with <a href='/Art-of-the-American-West'>Art of the American West</a> if you want the definition-led, historical explanation of the field.",
-      "This page is designed for browsing, comparing, and collecting the work rather than for carrying the full historical argument."
+      "This collection is designed for browsing, comparing, and collecting the work rather than for carrying the full historical argument."
     ],
   },
 ];

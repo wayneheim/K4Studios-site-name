@@ -81,8 +81,8 @@ export const landingWestern = {
       subtitle: "B/W",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White/all?theme=na-narrative-b-w-images&view=grid#collection-browser",
       dockHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White/all?theme=na-narrative-b-w-images&view=grid#collection-browser",
-      imageId: "i-Z54nXZm",
-      thumb: "/img/i-Z54nXZm/s.jpg",
+      imageId: "i-nZbDC9C",
+      thumb: "/img/i-nZbDC9C/s.jpg",
     },
   ]
 };

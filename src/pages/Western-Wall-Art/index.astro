@@ -17,6 +17,15 @@ import { landingWestern as landscapeLocationLanding } from "@/data/Galleries/Pai
 const pagePath = "/Western-Wall-Art";
 const basePath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color";
 const canonicalPath = pagePath;
+const beyondFrameVideoWidget = {
+  videoSlug: "only-path-forward",
+  kicker: "Frontier stories come alive.",
+  label: "60 seconds: Beyond the frame.",
+  compact: true,
+  withRules: true,
+  ctaWidth: "17rem",
+  ruleWidth: "100%",
+};
 
 const breadcrumbHtml = [
   '<a href="/">Wayne Heim</a>',
@@ -179,6 +188,7 @@ const copy = {
   copy={copy}
   faqItems={wallArtFAQ.slice(0, 8)}
   gridSections={gridSections}
+  gatewayVideoWidget={beyondFrameVideoWidget}
   dockVariant="wall-art"
   layoutVariant="cinematic-concept-series-top"
 />

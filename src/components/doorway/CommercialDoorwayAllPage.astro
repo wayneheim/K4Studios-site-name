@@ -4,6 +4,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import ArchiveContext from "@/components/ArchiveContext.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
+import VideoStoryWidget from "@/components/VideoStoryWidget.astro";
 import { extractImageId, getSemanticImageUrl } from "@/utils/imageProxy.js";
 import {
   getFormattedLowestStandardPrintPrice,
@@ -28,6 +29,17 @@ type GridSection = {
   items: any[];
   limit?: number;
 };
+type GatewayVideoWidget = {
+  videoSlug?: string;
+  youtubeId?: string;
+  kicker?: string;
+  label?: string;
+  title?: string;
+  compact?: boolean;
+  withRules?: boolean;
+  ctaWidth?: string;
+  ruleWidth?: string;
+};
 
 const {
   rawGalleryData,
@@ -45,6 +57,7 @@ const {
   copy = {},
   faqItems = [],
   gridSections = [],
+  gatewayVideoWidget = null,
   dockVariant = "",
   layoutVariant = "",
 } = Astro.props as {
@@ -71,6 +84,7 @@ const {
   copy?: Record<string, string>;
   faqItems?: Array<{ q: string; a: string[] }>;
   gridSections?: GridSection[];
+  gatewayVideoWidget?: GatewayVideoWidget | null;
   dockVariant?: string;
   layoutVariant?: string;
 };
@@ -177,7 +191,6 @@ const collectionIntroParagraphs = collectionIntro
 const trustBarCopy = formatCopy(copy.trustBarCopy || "");
 const isCinematicConceptSeriesTopLayout = layoutVariant === "cinematic-concept-series-top";
 const isCinematicConceptLayout = layoutVariant === "cinematic-concept" || isCinematicConceptSeriesTopLayout;
-const isCowboyArtPrintsPage = canonicalPath === "/cowboy-art-prints";
 const showDockBeforeCatalog = !isCinematicConceptLayout || isCinematicConceptSeriesTopLayout;
 const showDockAfterCatalog = isCinematicConceptLayout && !isCinematicConceptSeriesTopLayout;
 const showSeriesBeforeCatalog = !isCinematicConceptLayout || isCinematicConceptSeriesTopLayout;
@@ -582,23 +595,28 @@ const faqRight = faqItems.slice(faqSplitIndex);
     <LandingHeader client:load breadcrumb={compactBreadcrumbHtml} />
   </div>
 
-  <div class:list={["gallery-index-wrapper", isCinematicConceptLayout && "cinematic-concept-page", isCinematicConceptSeriesTopLayout && "cinematic-concept-series-top-page", isCowboyArtPrintsPage && "cowboy-art-prints-page"]} id="top">
+  <div class:list={["gallery-index-wrapper", isCinematicConceptLayout && "cinematic-concept-page", isCinematicConceptSeriesTopLayout && "cinematic-concept-series-top-page"]} id="top">
     <!-- K4 Studios Catalog Entrance -->
     <section class="collection-gateway catalog-entrance" aria-labelledby="gateway-heading">
-      <a class="gateway-artwork" href={gatewayHeroHref} aria-label={`Open artwork detail for ${gatewayHeroTitle}`}>
-        <span class="gateway-artwork-mat">
-          <img
-            src={gatewayHeroSrc}
-            srcset={gatewayHeroSrcSet || undefined}
-            sizes="(max-width: 768px) 100vw, (max-width: 1100px) 42vw, 480px"
-            alt={gatewayHeroAlt}
-            style={gatewayHeroStyle}
-            loading="eager"
-            fetchpriority="high"
-            decoding="async"
-          />
-        </span>
-      </a>
+      <div class="gateway-artwork-column">
+        <a class="gateway-artwork" href={gatewayHeroHref} aria-label={`Open artwork detail for ${gatewayHeroTitle}`}>
+          <span class="gateway-artwork-mat">
+            <img
+              src={gatewayHeroSrc}
+              srcset={gatewayHeroSrcSet || undefined}
+              sizes="(max-width: 768px) 100vw, (max-width: 1100px) 42vw, 480px"
+              alt={gatewayHeroAlt}
+              style={gatewayHeroStyle}
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
+            />
+          </span>
+        </a>
+        {gatewayVideoWidget && (
+          <VideoStoryWidget class="gateway-video-widget" {...gatewayVideoWidget} />
+        )}
+      </div>
       <div class="gateway-copy">
         <p class="gateway-kicker">{gatewayKicker}</p>
         <h1 class:list={["gateway-brand", gatewayBrandClass]} id="gateway-heading">
@@ -655,7 +673,7 @@ const faqRight = faqItems.slice(faqSplitIndex);
                 <div class="dock-tombstone">
                   <img
                     src={forceImageSize(item.thumb, 's')}
-                    alt={`${displayTitle} tombstone link`}
+                    alt=""
                     loading={item.current || distance <= 1 ? 'eager' : 'lazy'}
                     width="140"
                     height="160"
@@ -1195,7 +1213,7 @@ const faqRight = faqItems.slice(faqSplitIndex);
                 <div class="dock-tombstone">
                   <img
                     src={forceImageSize(item.thumb, 's')}
-                    alt={`${displayTitle} tombstone link`}
+                    alt=""
                     loading={item.current || distance <= 1 ? 'eager' : 'lazy'}
                     width="140"
                     height="160"
@@ -1226,6 +1244,7 @@ const faqRight = faqItems.slice(faqSplitIndex);
                     data-faq-trigger
                     data-faq-side="left"
                     data-faq-target={`faq-left-${index}`}
+                    aria-controls={`faq-left-${index}`}
                     aria-expanded="false"
                   >
                     <span class="faq-question__text">{item.q}</span>
@@ -1236,7 +1255,7 @@ const faqRight = faqItems.slice(faqSplitIndex);
 
               <div class="faq-answer-stack">
                 {faqLeft.map((item: any, index: number) => (
-                  <div id={`faq-left-${index}`} class="faq-answer" data-faq-panel data-faq-side="left" hidden>
+                  <div id={`faq-left-${index}`} class="faq-answer" data-faq-panel data-faq-side="left" aria-hidden="true">
                     {item.a.map((paragraph: string) => <p set:html={paragraph} />)}
                   </div>
                 ))}
@@ -1252,6 +1271,7 @@ const faqRight = faqItems.slice(faqSplitIndex);
                     data-faq-trigger
                     data-faq-side="right"
                     data-faq-target={`faq-right-${index}`}
+                    aria-controls={`faq-right-${index}`}
                     aria-expanded="false"
                   >
                     <span class="faq-question__text">{item.q}</span>
@@ -1262,7 +1282,7 @@ const faqRight = faqItems.slice(faqSplitIndex);
 
               <div class="faq-answer-stack">
                 {faqRight.map((item: any, index: number) => (
-                  <div id={`faq-right-${index}`} class="faq-answer" data-faq-panel data-faq-side="right" hidden>
+                  <div id={`faq-right-${index}`} class="faq-answer" data-faq-panel data-faq-side="right" aria-hidden="true">
                     {item.a.map((paragraph: string) => <p set:html={paragraph} />)}
                   </div>
                 ))}
@@ -1426,13 +1446,21 @@ const faqRight = faqItems.slice(faqSplitIndex);
       max-width:38rem;
     }
     .gateway-copy-text:last-child { margin-bottom:0; }
-    .gateway-artwork {
+    .gateway-artwork-column {
       grid-area:art;
-      display:block;
-      width:min(100%, 460px);
+      display:grid;
+      justify-items:center;
+      align-self:center;
       justify-self:end;
+      gap:14px;
+      width:min(100%, 460px);
       margin-left:auto;
       margin-right:6px;
+    }
+    .gateway-artwork {
+      display:block;
+      width:fit-content;
+      max-width:100%;
       text-decoration:none;
       color:inherit;
       position:relative;
@@ -1467,6 +1495,13 @@ const faqRight = faqItems.slice(faqSplitIndex);
     .gateway-artwork:focus-visible {
       outline:2px solid #b89b78;
       outline-offset:3px;
+    }
+    .gateway-artwork-column :global(.gateway-video-widget) {
+      margin:.15rem 0 0;
+      max-width:300px;
+    }
+    .gateway-artwork-column :global(.gateway-video-widget .narrative-video-cta) {
+      box-shadow:0 8px 20px rgba(35,26,19,.08);
     }
 
     .collection-dock {
@@ -3040,9 +3075,15 @@ const faqRight = faqItems.slice(faqSplitIndex);
         align-items:start;
         padding:14px 14px 16px;
       }
+      .gateway-artwork-column {
+        width:100%;
+        justify-self:stretch;
+        margin:0;
+      }
       .gateway-artwork {
         width:100%;
         justify-self:stretch;
+        text-align:center;
       }
       .gateway-artwork-mat {
         width:100%;
@@ -3334,11 +3375,12 @@ const faqRight = faqItems.slice(faqSplitIndex);
         line-height:1.48;
         padding:0 .3rem;
       }
-      .ssr-grid { padding:0 16px; gap:16px; }
-      .ssr-grid--catalog-section {
-        grid-template-columns:1fr;
+      .ssr-grid {
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        padding:0 16px;
+        gap:16px;
       }
-      .cowboy-art-prints-page .ssr-grid--catalog-section {
+      .ssr-grid--catalog-section {
         grid-template-columns:repeat(2,minmax(0,1fr));
       }
       .ssr-card-image {
@@ -3364,12 +3406,18 @@ const faqRight = faqItems.slice(faqSplitIndex);
     }
 
     @media (hover: none), (pointer: coarse) {
+      .ssr-card:hover,
+      .ssr-card:focus-within {
+        border-color:#b46a5f;
+        box-shadow:0 8px 22px rgba(48,34,23,.08);
+      }
       .ssr-card:hover .ssr-card-content,
       .ssr-card:focus-within .ssr-card-content {
         transform:none;
       }
       .ssr-card-link {
-        pointer-events:none;
+        pointer-events:auto;
+        touch-action:manipulation;
       }
       .ssr-card-content {
         pointer-events:auto;
@@ -3615,7 +3663,7 @@ const faqRight = faqItems.slice(faqSplitIndex);
         });
 
         faqPanels.forEach((panel) => {
-          panel.hidden = true;
+          panel.setAttribute('aria-hidden', 'true');
           panel.classList.remove('is-open');
         });
 
@@ -3642,6 +3690,8 @@ const faqRight = faqItems.slice(faqSplitIndex);
           if (!targetPanel || isOpen) return;
 
           trigger.setAttribute('aria-expanded', 'true');
+          targetPanel.setAttribute('aria-hidden', 'false');
+          targetPanel.classList.add('is-open');
           const icon = trigger.querySelector('.faq-question__icon');
           if (icon) icon.textContent = '-';
           const questionText = trigger.querySelector('.faq-question__text')?.textContent || '';

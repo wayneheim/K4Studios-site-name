@@ -609,7 +609,7 @@ export const cowboyArtworkPrintsPage = {
     {
       h2: 'Cowboy Artwork Prints for Collectors',
       paragraphs: [
-        'This page should lean commercial, but not cheap. Cowboy artwork prints at K4 Studios are framed as collectible works: image-led, series-aware, and connected to archival presentation rather than generic poster language.',
+        'Cowboy artwork prints at K4 Studios are framed as collectible works: image-led, series-aware, and connected to archival presentation rather than generic poster language.',
         'The print is not an afterthought. It is part of how the work is encountered, lived with, and collected.',
       ],
     },
@@ -666,7 +666,7 @@ export const cowboyArtworkPrintsPage = {
 
 export const westernCowboyArtPage = {
   path: '/western-cowboy-art',
-  title: 'Western Cowboy Art | K4 Studios',
+  title: 'Western Cowboy Art | Fine Art Prints by Wayne Heim',
   h1: 'Western Cowboy Art',
   metaDescription:
     'Western cowboy art by Wayne Heim, blending painterly photography, cowboy portraiture, frontier character, Western story, and collector-focused fine art print paths.',
@@ -971,7 +971,7 @@ export const westernArtPrintsPage = {
   metaDescription:
     'Western art prints by Wayne Heim, including painterly cowboy portraits, frontier narratives, Native American portrait work, collector series, and limited-edition fine art print paths.',
   intro:
-    'Western art prints by Wayne Heim bring cowboy portraits, frontier narratives, Native American portrait work, and painterly Western scenes into a collector-focused print context. This page is built for buyers looking for Western art with series depth, limited-edition language, and fine art presentation.',
+    'Western art prints by Wayne Heim bring cowboy portraits, frontier narratives, Native American portrait work, and painterly Western scenes into a collector-focused print context for buyers looking for Western art with series depth, limited-edition language, and fine art presentation.',
   breadcrumbLabel: 'Western Art Prints',
   schemaAbout: [
     'Western Art Prints',

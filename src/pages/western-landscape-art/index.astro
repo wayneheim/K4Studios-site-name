@@ -12,6 +12,15 @@ import { faqItems as westernLandscapeArtFAQ } from "@/data/hybrid-hubs/western-l
 const pagePath = "/western-landscape-art";
 const basePath = "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery";
 const canonicalPath = pagePath;
+const beyondFrameVideoWidget = {
+  videoSlug: "only-path-forward",
+  kicker: "Frontier stories come alive.",
+  label: "60 seconds: Beyond the frame.",
+  compact: true,
+  withRules: true,
+  ctaWidth: "17rem",
+  ruleWidth: "100%",
+};
 
 const rotateGallery = (items: any[] = [], offset = 0) => {
   const cleanItems = items.filter((item: any) =>
@@ -181,7 +190,7 @@ const copy = {
   indexDefinition:
     "Wayne Heim's Western landscape art includes American West location landscapes, mountain landscape art prints, and Canadian Rockies photographs created as collector-grade fine art prints.",
   indexLinkNote:
-    "This is the K4 commercial route for Western landscape art, Western landscape wall art, mountain landscape prints, and Canadian Rockies fine art photography.",
+    "Explore Western landscape art, Western landscape wall art, mountain landscape prints, and Canadian Rockies fine art photography shaped for rooms, collectors, and quiet scale.",
   printAvailabilityNote: `Western landscape art prints are available from ${getFormattedLowestStandardPrintPrice()} across archival paper and select wood presentations. Edition status and format options are shown on individual image pages.`,
   commercialH1: "Three Ways the Western Land Holds a Wall",
   commercialDeck:
@@ -248,6 +257,7 @@ const copy = {
   copy={copy}
   faqItems={westernLandscapeArtFAQ}
   gridSections={gridSections}
+  gatewayVideoWidget={beyondFrameVideoWidget}
   dockVariant="wall-art"
   layoutVariant="cinematic-concept-series-top"
 />

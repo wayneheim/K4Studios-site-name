@@ -1848,6 +1848,13 @@ async function getStatePixelTestRoaring20s(env, filters) {
           FROM raw_events r
           WHERE ${qualifiedDateClauseRaw}
             AND r.event_type IN ('state_pixel', 'action_pixel')
+            AND r.source_layer = 'frontier_story_video_widget_click_pixel_v1'
+        ) AS frontier_story_video_widget_click_pixel_v1_hits,
+        (
+          SELECT COUNT(*)
+          FROM raw_events r
+          WHERE ${qualifiedDateClauseRaw}
+            AND r.event_type IN ('state_pixel', 'action_pixel')
             AND r.source_layer = 'order_clicked_pixel_v1'
         ) AS order_clicked_pixel_v1_hits,
         (
@@ -2235,6 +2242,7 @@ async function getStatePixelTestRoaring20s(env, filters) {
       scroll_100_pixel_v1_hits: Number(summaryRow?.scroll_100_pixel_v1_hits || 0),
       cowboy_jump_pixel_v1_hits: Number(summaryRow?.cowboy_jump_pixel_v1_hits || 0),
       picture_shows_jump_pixel_v1_hits: Number(summaryRow?.picture_shows_jump_pixel_v1_hits || 0),
+      frontier_story_video_widget_click_pixel_v1_hits: Number(summaryRow?.frontier_story_video_widget_click_pixel_v1_hits || 0),
       order_clicked_pixel_v1_hits: Number(summaryRow?.order_clicked_pixel_v1_hits || 0),
       series_info_pixel_v1_hits: Number(summaryRow?.series_info_pixel_v1_hits || 0),
       more_info_open_pixel_v1_hits: Number(summaryRow?.more_info_open_pixel_v1_hits || 0),
@@ -2306,6 +2314,7 @@ async function getStatePixelTestRoaring20s(env, filters) {
       scroll_100_pixel_v1_hits: 0,
       cowboy_jump_pixel_v1_hits: 0,
       picture_shows_jump_pixel_v1_hits: 0,
+      frontier_story_video_widget_click_pixel_v1_hits: 0,
       order_clicked_pixel_v1_hits: 0,
       series_info_pixel_v1_hits: 0,
       more_info_open_pixel_v1_hits: 0,
@@ -2357,6 +2366,7 @@ async function getEventBreakdown(env, filters) {
       "collector_notes_open",
       "cowboy_jump",
       "picture_shows_jump",
+      "frontier_story_video_widget_click",
       "exit_to_gallery",
       "gallery_explore_click",
       "gallery_preview_click",
@@ -4747,6 +4757,9 @@ function renderDashboard({
   const spScroll100V1Hits = Number(sp.scroll_100_pixel_v1_hits || 0);
   const spCowboyJumpV1Hits = Number(sp.cowboy_jump_pixel_v1_hits || 0);
   const spPictureShowsJumpV1Hits = Number(sp.picture_shows_jump_pixel_v1_hits || 0);
+  const spFrontierStoryVideoWidgetClickV1Hits = Number(
+    sp.frontier_story_video_widget_click_pixel_v1_hits || 0
+  );
   const spOrderClickedV1Hits = Number(sp.order_clicked_pixel_v1_hits || 0);
   const spSeriesInfoV1Hits = Number(sp.series_info_pixel_v1_hits || 0);
   const spMoreInfoOpenV1Hits = Number(sp.more_info_open_pixel_v1_hits || 0);
@@ -4802,6 +4815,7 @@ function renderDashboard({
     spScroll100V1Hits,
     spCowboyJumpV1Hits,
     spPictureShowsJumpV1Hits,
+    spFrontierStoryVideoWidgetClickV1Hits,
     spOrderClickedV1Hits,
     spSeriesInfoV1Hits,
     spMoreInfoOpenV1Hits,
@@ -5023,6 +5037,7 @@ function renderDashboard({
     more_info_open: "More Info",
     cowboy_jump: "Cowboy Jump",
     picture_shows_jump: "Picture Shows Jump",
+    frontier_story_video_widget_click: "Frontier Story Video",
     exit_to_gallery: "Exit to Gallery",
     gallery_explore_click: "Gallery Explore Click",
     gallery_preview_click: "Gallery Preview Click",
@@ -5086,6 +5101,7 @@ function renderDashboard({
     "browse_all_image_click",
     "cowboy_jump",
     "picture_shows_jump",
+    "frontier_story_video_widget_click",
     "order_clicked",
     "series_info",
     "collector_notes_open",
@@ -8714,6 +8730,7 @@ const CANONICAL_TRACKED_EVENTS = /* @__PURE__ */ new Set([
   "collector_notes_open",
   "cowboy_jump",
   "picture_shows_jump",
+  "frontier_story_video_widget_click",
   "exit_to_gallery",
   "gallery_explore_click",
   "gallery_preview_click",
@@ -8749,6 +8766,7 @@ const CANONICAL_TRACKED_EVENTS = /* @__PURE__ */ new Set([
 const PIXEL_LAYER_TO_CANONICAL_EVENT = {
   cowboy_jump_pixel_v1: "cowboy_jump",
   picture_shows_jump_pixel_v1: "picture_shows_jump",
+  frontier_story_video_widget_click_pixel_v1: "frontier_story_video_widget_click",
   more_info_open_pixel_v1: "more_info_open",
   order_clicked_pixel_v1: "order_clicked",
   order_submitted_pixel_v1: "order_submitted",
@@ -9688,6 +9706,7 @@ const PIXEL_LAYER_BY_ACTION = {
   grid_show_previous: "grid_show_previous_pixel_v1",
   cowboy_jump: "cowboy_jump_pixel_v1",
   picture_shows_jump: "picture_shows_jump_pixel_v1",
+  frontier_story_video_widget_click: "frontier_story_video_widget_click_pixel_v1",
   order_clicked: "order_clicked_pixel_v1",
   order_submitted: "order_submitted_pixel_v1",
   series_info: "series_info_pixel_v1",

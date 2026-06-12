@@ -77,6 +77,7 @@ export const galleryData = [
     "price": "$1650",
     "linkedImageId": "i-8Ddjt5W",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    "oneImageMovie": true,
     yearCreated: "2026"
   },
   {
@@ -141,6 +142,7 @@ export const galleryData = [
     "price": "$1650",
     "linkedImageId": "i-Vr8vzjt",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    "oneImageMovie": true,
     yearCreated: "2026"
   },
   {
@@ -213,6 +215,7 @@ export const galleryData = [
     "price": "$2200",
     "linkedImageId": "i-LL2Gp5r",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    "oneImageMovie": true,
     yearCreated: "2026"
   },
   {
@@ -277,6 +280,7 @@ export const galleryData = [
     "price": "$1100",
     "linkedImageId": "i-rfFBRQM",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    "oneImageMovie": true,
     yearCreated: "2026"
   },
   {
@@ -341,6 +345,7 @@ export const galleryData = [
     "price": "$1850",
     "linkedImageId": "i-B7ZSdfs",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    "oneImageMovie": true,
     yearCreated: "2026"
   },
   {
@@ -407,6 +412,7 @@ export const galleryData = [
     "price": "$1650",
     "linkedImageId": "i-T7TFJX2",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    "oneImageMovie": true,
     yearCreated: "2026"
   },
   {
@@ -480,6 +486,7 @@ export const galleryData = [
     "price": "$1100",
     "linkedImageId": "i-kQfftQ2",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    "oneImageMovie": true,
     yearCreated: "2026"
   },
   {
@@ -546,6 +553,7 @@ export const galleryData = [
     "price": "$3750",
     "linkedImageId": "i-7VWX9vk",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    "oneImageMovie": true,
     yearCreated: "2026"
   },
   {
@@ -612,6 +620,7 @@ export const galleryData = [
     "price": "$2200",
     "linkedImageId": "i-trZrk2w",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    "oneImageMovie": true,
     yearCreated: "2026"
   },
   {
@@ -689,6 +698,7 @@ export const galleryData = [
     "price": "$6600",
     "linkedImageId": "i-c5K798H",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    "oneImageMovie": true,
     yearCreated: "2026"
   },
   {
@@ -757,6 +767,7 @@ export const galleryData = [
     "price": "$1100",
     "linkedImageId": "i-hMXZ8Xh",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    "oneImageMovie": true,
     yearCreated: "2026"
   },
   {
@@ -834,6 +845,7 @@ export const galleryData = [
     "price": "$2000",
     "linkedImageId": "i-qVZ9m7j",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    "oneImageMovie": true,
     yearCreated: "2026"
   },
   {
@@ -911,6 +923,7 @@ export const galleryData = [
     "price": "$1100",
     "linkedImageId": "i-TLDkd5q",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    "oneImageMovie": true,
     yearCreated: "2026"
   },
   {
@@ -979,6 +992,7 @@ export const galleryData = [
     "price": "$2000",
     "linkedImageId": "i-G7csptc",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    "oneImageMovie": true,
     yearCreated: "2026"
   },
   {
@@ -1043,6 +1057,7 @@ export const galleryData = [
     "price": "$5900",
     "linkedImageId": "i-7Mzzbvp",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    "oneImageMovie": true,
     yearCreated: "2026"
   },
   {
@@ -1107,6 +1122,7 @@ export const galleryData = [
     "price": "$3750",
     "linkedImageId": "i-Wx5scCf",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    "oneImageMovie": true,
     yearCreated: "2026"
   },
   {
@@ -1173,6 +1189,7 @@ export const galleryData = [
     "price": "$3300",
     "linkedImageId": "i-6Ffpw9t",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    "oneImageMovie": true,
     yearCreated: "2026"
   },
   {
@@ -1240,6 +1257,7 @@ export const galleryData = [
     "price": "$1650",
     "linkedImageId": "i-jcLJT4J",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    "oneImageMovie": true,
     yearCreated: "2026"
   },
   {
@@ -1303,6 +1321,7 @@ export const galleryData = [
     "price": "$1650",
     "linkedImageId": "i-bq4FKvX",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    "oneImageMovie": true,
     yearCreated: "2026"
   },
   {
@@ -1371,6 +1390,7 @@ export const galleryData = [
     "price": "$3500",
     "linkedImageId": "i-Nn7scqm",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    "oneImageMovie": true,
     yearCreated: "2026"
   },
   {
@@ -1454,6 +1474,7 @@ export const galleryData = [
     "price": "$1850",
     "linkedImageId": "i-LCspRF4",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    "oneImageMovie": true,
     yearCreated: "2026"
   },
   {
@@ -1519,6 +1540,7 @@ export const galleryData = [
     "price": "$1100",
     "linkedImageId": "i-HBRmWg4",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    "oneImageMovie": true,
     yearCreated: "2026"
   },
   {
@@ -1588,6 +1610,7 @@ export const galleryData = [
     "price": "$1650",
     "linkedImageId": "i-RsLmsLZ",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    "oneImageMovie": true,
     yearCreated: "2026"
   },
   {
@@ -1655,6 +1678,7 @@ export const galleryData = [
     "price": "$2600",
     "linkedImageId": "i-89qzJ6S",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    "oneImageMovie": true,
     yearCreated: "2026"
   },
   {
@@ -1720,6 +1744,7 @@ export const galleryData = [
     "price": "$1650",
     "linkedImageId": "i-MHGPvcs",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    "oneImageMovie": true,
     yearCreated: "2026"
   },
   {
@@ -1828,6 +1853,7 @@ export const galleryData = [
     "price": "$1650",
     "linkedImageId": "i-w3JBvXs",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    "oneImageMovie": true,
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-ZWDpsxz/0/LvVxvbCTpKt69jMcqPT3vG69p67sBbB3J36vd9th9/XL/Settler-Wave-Goodbye-ws-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-ZWDpsxz/0/NKZz3d7Bfwpp5cT3nFP4C3TZxtSvf7G9R2rLfj7Xn/L/Settler-Wave-Goodbye-ws-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-ZWDpsxz/0/KsmcFvq4XCz3JCW2p5KFw9TjrXFCpNT6KpcDxSqpp/M/Settler-Wave-Goodbye-ws-M.jpg",
@@ -2353,6 +2379,7 @@ export const galleryData = [
     "price": "$4200",
     "linkedImageId": "i-bfKMXS9",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    "oneImageMovie": true,
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-VrbD648/0/KF5gjQGvpDZKGH2zjdFck6qN8rvkT9bDxpMSKQ7Gc/L/Cowobys-3-Amigos-ws-L.jpg",
     "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-VrbD648/0/KF5gjQGvpDZKGH2zjdFck6qN8rvkT9bDxpMSKQ7Gc/L/Cowobys-3-Amigos-ws-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-VrbD648/0/KvkdbDk3JFVr8kGdTCLcz92gXdszJWsWd63c2JxKZ/M/Cowobys-3-Amigos-ws-M.jpg",
@@ -2417,6 +2444,7 @@ export const galleryData = [
     "price": "$4500",
     "linkedImageId": "i-fCG2nm8",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    "oneImageMovie": true,
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-PkspRGs/1/LjvFwbXnQRwbctDDs3dJFqfzbBDtd2GdT9tXXLSBZ/L/Cowboys-3-Wise-Men-ws-L.jpg",
     "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-PkspRGs/1/LjvFwbXnQRwbctDDs3dJFqfzbBDtd2GdT9tXXLSBZ/L/Cowboys-3-Wise-Men-ws-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-PkspRGs/1/KvPZXRBHmC3Zjg2bdrGx7NLrPr2BWFtLzKkpCGZWz/M/Cowboys-3-Wise-Men-ws-M.jpg",
@@ -2479,6 +2507,7 @@ export const galleryData = [
     "price": "$3300",
     "linkedImageId": "i-JKnW497",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    "oneImageMovie": true,
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hntD8Vp/0/KfZQJgLfWZGBqr722Sx5w8kQNDZxtf84KPc8wkSVB/XL/Cowboy-Wounded-ws-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hntD8Vp/0/NdP6cThHzQ5dVs6WRpQ82q8QBf5gt6QcZrTQRmQS3/L/Cowboy-Wounded-ws-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hntD8Vp/0/Nf4x2SSj6p4JpWSFX7LLNzbnc7qWnrQnbTM2VtJKV/M/Cowboy-Wounded-ws-M.jpg",
@@ -2541,6 +2570,7 @@ export const galleryData = [
     "price": "$2000",
     "linkedImageId": "i-mLPgSpC",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    "oneImageMovie": true,
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-ZNTzTJ7/3/KV3BpbhWj7QtFnT5N9dn95VHRKsjFBnkGqDQBgRrR/XL/Cowboy-Up-to-No-Good-ws-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-ZNTzTJ7/3/NWCDB323rQJpDHx69Bkh3QRrQq2fzvN2H2VQ3qw8V/L/Cowboy-Up-to-No-Good-ws-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-ZNTzTJ7/3/LcVhKbckVNzdbxpc3BnhcL68BNRKn7kKPZwBNpwrJ/M/Cowboy-Up-to-No-Good-ws-M.jpg",
@@ -2621,6 +2651,7 @@ export const galleryData = [
     "price": "$3300",
     "linkedImageId": "i-44jcjTQ",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    "oneImageMovie": true,
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-thTwwHZ/0/KPwwNzqMrZKHKJx9Rdbkpqtms4vk9h47HNpXDLZbM/XL/Cowboy-Over-My-Dead-Body-ws-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-thTwwHZ/0/NJTK9NLVkFmC363QpsBwRZHhN5jX6sp4GQXVfkNT4/L/Cowboy-Over-My-Dead-Body-ws-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-thTwwHZ/0/Kn8mwk9ZfkXVPJ9LHvW9F5Gv9jFM3RLHpBnkX5HJm/M/Cowboy-Over-My-Dead-Body-ws-M.jpg",
@@ -2757,6 +2788,7 @@ export const galleryData = [
     "price": "$1100",
     "linkedImageId": "i-5FX3W9r",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    "oneImageMovie": true,
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-mrHbrNb/1/LbqMbBr4kLmw66c7wjNsWqrKMjdgdNNM7BTqBjGHN/XL/Cowboy-Morning-Joe-ws-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-mrHbrNb/1/NVbhMPnCV2rBJjpt9gH8LbrKvDXRhZChB8Bzv72Zs/L/Cowboy-Morning-Joe-ws-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-mrHbrNb/1/NHR8mdtDfqt5hCJLVLhdtwV7k9SpPfGB5trFXkMHw/M/Cowboy-Morning-Joe-ws-M.jpg",
@@ -2819,6 +2851,7 @@ export const galleryData = [
     "price": "$3300",
     "linkedImageId": "i-ncFcHDM",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    "oneImageMovie": true,
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Shpfdbm/1/LGTGD9gkJhccGn5jCcPGtLWr9jsjs3jsHrXnsSQwG/XL/Cowboy-Long-Goodbye-ws-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Shpfdbm/1/LmgxDzGwJMMQ7ZL4B2VwHPkvxk5czvhhxnT57rRTD/L/Cowboy-Long-Goodbye-ws-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Shpfdbm/1/MZHpkqRGBghNLCNhHPrDs2x8HCsrnmrR3n73Z2z29/M/Cowboy-Long-Goodbye-ws-M.jpg",
@@ -2873,6 +2906,7 @@ export const galleryData = [
     "price": "$1600",
     "linkedImageId": "i-fM9qmKW",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    "oneImageMovie": true,
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-8hMzqz2/1/KdvncNHvpJwcp5wsk8kjb2kpcrJfV9vjNXCJJzxvd/XL/Cowboy-Just-a-Sip-ws-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-8hMzqz2/1/M5WnXvzbtsVp4k86ZWMCngDDTG9C5knFfqjwMCp6s/L/Cowboy-Just-a-Sip-ws-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-8hMzqz2/1/KtmrhjmQjnfWtq7zJsk6cPgdVrqbP2LkdJVvHTFDt/M/Cowboy-Just-a-Sip-ws-M.jpg",
@@ -2929,6 +2963,7 @@ export const galleryData = [
     "price": "$800",
     "linkedImageId": "i-pNSX6cp",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    "oneImageMovie": true,
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-JfqzrnN/2/NJGkNn4VCmq9MR4qhphkJM6B5mJDFjVTcmMgGRBCt/XL/Cowboy-Hired-Gun-ws-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-JfqzrnN/2/LGFbwW8vq2jtKH6HxNdpTxMg3Vk6dxZRkgtXzTgwg/L/Cowboy-Hired-Gun-ws-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-JfqzrnN/2/LfG9WgBxwPCWrfhHdq4vhPSSRz55GJvgpbrBD3tSd/M/Cowboy-Hired-Gun-ws-M.jpg",

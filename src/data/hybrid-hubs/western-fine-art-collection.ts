@@ -117,17 +117,17 @@ export const hybridCarouselProps = {
 export const storyBlocks = [
 	{
 		title: 'Western Fine Art Photography Collection',
-		subhead: 'This page should behave like a curated survey, not a warehouse.',
+		subhead: 'A curated survey of the Western body of work.',
 		paragraphs: [
-			'A Western fine art photography collection page has to help visitors feel the logic of the work before it asks them to process quantity. When it turns into an oversized catalog, the authored quality of the images gets lost under too many near-simultaneous choices.',
-			'The stronger move is to show a disciplined sample, define the visual system underneath it, and then route people into the right bodies of work: portraits, narrative scenes, monochrome studies, and print-facing pages.',
+			'A Western fine art photography collection should help visitors feel the logic of the work before asking them to process quantity. When a selection becomes too crowded, the authored quality of the images can disappear under too many simultaneous choices.',
+			'This collection starts with a disciplined sample, then opens into the major bodies of work: portraits, narrative scenes, monochrome studies, and collector-facing print pages.',
 		],
 	},
 	{
-		subhead: 'Why this term still matters beside the authority page',
+		subhead: 'Why the collection belongs together',
 		paragraphs: [
-			'The main Western Fine Art Photography page carries authority. This collection page is narrower and more tactical. It is designed to satisfy visitors who want to see the work organized as a collectible body without dropping them into a giant legacy layout.',
-			'That makes it a useful testing ground for the cleaner hybrid pattern: enough definition to orient the viewer, enough curation to preserve tone, and enough routing to move them deeper without noise.',
+			'The broader Western Fine Art Photography page explains the medium, lineage, and larger field around the work. This collection view stays closer to the artwork itself, gathering the pieces as a collectible body with a clear sense of shape and progression.',
+			'The result is enough context to orient the viewer, enough curation to preserve tone, and enough movement to continue into the right gallery without turning the page into a wall of thumbnails.',
 		],
 	},
 	{
@@ -151,9 +151,9 @@ export const explorationPaths = [
 	},
 	{
 		title: 'Western Fine Art Photography',
-		eyebrow: 'Primary Authority Page',
+		eyebrow: 'Broader Context',
 		href: '/Western-Fine-Art-Photography',
-		description: 'Open the main authority page where the broader definition, lineage, and larger body of work sit behind this cleaner collection-facing route.',
+		description: 'Open the broader Western fine art photography guide for the definition, lineage, and larger body of work behind this curated collection.',
 		cta: 'Open the main Western fine art page -',
 		accent: '#7b4a28',
 		featured: true,
@@ -320,7 +320,7 @@ export const faqItems = [
 	{
 		q: 'How is this different from the main Western Fine Art Photography page?',
 		a: [
-			'The main page carries broader authority and legacy context. This collection page is narrower and more curated, built to test a cleaner route into the work without carrying all of that older page structure.',
+			'The main page carries broader authority and legacy context. This collection page is narrower and more curated, giving visitors a cleaner way to see the work as a collectible body before moving into individual galleries or print options.',
 		],
 	},
 	{
@@ -332,13 +332,13 @@ export const faqItems = [
 	{
 		q: 'Is this page meant more for discovery or for collecting?',
 		a: [
-			'Both, but in sequence. It works first as a discovery page, then routes visitors into <a href="/Western-Photography-Prints">Western Photography Prints</a> or <a href="/Other/Print-Options">Print Options</a> once collecting intent becomes explicit.',
+			'Both, but in sequence. It begins with discovery, then leads into <a href="/Western-Photography-Prints">Western Photography Prints</a> or <a href="/Other/Print-Options">Print Options</a> once collecting intent becomes explicit.',
 		],
 	},
 	{
 		q: 'Does this page still support the broader Western fine art photography term?',
 		a: [
-			'Yes. It targets the collection-facing version of that term while the main authority page handles the broader definition and field-level framing.',
+			'Yes. It focuses on the collection-facing version of that term, while the broader Western Fine Art Photography guide carries the definition, lineage, and field-level framing.',
 		],
 	},
 	{

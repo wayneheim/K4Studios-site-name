@@ -310,7 +310,7 @@ export const doorwayPages: DoorwayPage[] = [
     introParagraph:
       'Western wall art is art displayed in interior spaces using Western subjects, tone, and visual language. At its best, it does not stop at style cues; it brings authored image structure and emotional continuity into the room.',
     expansionParagraphs: [
-      'In K4\'s lane, Western wall art works as a Trojan Horse category: it answers interior search intent while guiding viewers toward stronger work built on painterly light, cinematic restraint, and narrative presence. The room benefit remains, but the artistic standard rises.',
+      'In K4\'s lane, Western wall art begins with room intent, then opens toward stronger work built on painterly light, cinematic restraint, and narrative presence. The room benefit remains, but the artistic standard rises.',
       'That shift helps separate collectible wall art from interchangeable decor prints. The best pieces carry human tension and story logic that keep them active as art, not just accessories.',
     ],
     faqItems: [
@@ -483,7 +483,7 @@ export const doorwayPages: DoorwayPage[] = [
     introParagraph:
       'Rustic cowboy wall art is Western art selected for warm, textured interiors that lean on frontier character. The strongest versions keep rustic atmosphere while still functioning as authored art, not commodity decor.',
     expansionParagraphs: [
-      'For K4, this is a Trojan Horse category: meet interior intent first, then move toward painterly and narrative distinctions that make the work collectible. The room reads rustic, but the image carries deeper structure.',
+      'For K4, this category begins with interior intent, then moves toward painterly and narrative distinctions that make the work collectible. The room reads rustic, but the image carries deeper structure.',
       'That balance helps buyers avoid interchangeable motif prints. A stronger rustic cowboy piece still holds emotional and compositional depth after the design trend cycle moves on.',
     ],
     faqItems: [

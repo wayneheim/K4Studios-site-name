@@ -525,6 +525,7 @@ const safeHybridCarouselProps = hybridCarouselProps
                   data-faq-trigger
                   data-faq-side="left"
                   data-faq-target={`faq-left-${index}`}
+                  aria-controls={`faq-left-${index}`}
                   aria-expanded="false"
                 >
                   <span class="faq-question__text">{item.q}</span>
@@ -535,7 +536,7 @@ const safeHybridCarouselProps = hybridCarouselProps
 
             <div class="faq-answer-stack">
               {faqLeft.map((item: KeywordLandingFaqItem, index: number) => (
-                <div id={`faq-left-${index}`} class="faq-answer" data-faq-panel data-faq-side="left" hidden>
+                <div id={`faq-left-${index}`} class="faq-answer" data-faq-panel data-faq-side="left" aria-hidden="true">
                   {item.a.map((paragraph: string) => (
                     <p set:html={paragraph} />
                   ))}
@@ -553,6 +554,7 @@ const safeHybridCarouselProps = hybridCarouselProps
                   data-faq-trigger
                   data-faq-side="right"
                   data-faq-target={`faq-right-${index}`}
+                  aria-controls={`faq-right-${index}`}
                   aria-expanded="false"
                 >
                   <span class="faq-question__text">{item.q}</span>
@@ -563,7 +565,7 @@ const safeHybridCarouselProps = hybridCarouselProps
 
             <div class="faq-answer-stack">
               {faqRight.map((item: KeywordLandingFaqItem, index: number) => (
-                <div id={`faq-right-${index}`} class="faq-answer" data-faq-panel data-faq-side="right" hidden>
+                <div id={`faq-right-${index}`} class="faq-answer" data-faq-panel data-faq-side="right" aria-hidden="true">
                   {item.a.map((paragraph: string) => (
                     <p set:html={paragraph} />
                   ))}
@@ -616,7 +618,7 @@ const safeHybridCarouselProps = hybridCarouselProps
         });
 
         faqPanels.forEach((panel) => {
-          panel.hidden = true;
+          panel.setAttribute('aria-hidden', 'true');
           panel.classList.remove('is-open');
         });
 
@@ -643,6 +645,8 @@ const safeHybridCarouselProps = hybridCarouselProps
           if (!targetPanel || isOpen) return;
 
           trigger.setAttribute('aria-expanded', 'true');
+          targetPanel.setAttribute('aria-hidden', 'false');
+          targetPanel.classList.add('is-open');
           const icon = trigger.querySelector('.faq-question__icon');
           if (icon) icon.textContent = '−';
 

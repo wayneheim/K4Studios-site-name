@@ -15,6 +15,15 @@ import { getFormattedLowestStandardPrintPrice } from "@/data/pricing/printSeries
 const pagePath = "/Western-Photography-Art";
 const basePath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color";
 const canonicalPath = pagePath;
+const beyondFrameVideoWidget = {
+  videoSlug: "only-path-forward",
+  kicker: "Frontier stories come alive.",
+  label: "60 seconds: Beyond the frame.",
+  compact: true,
+  withRules: true,
+  ctaWidth: "17rem",
+  ruleWidth: "100%",
+};
 
 const rotateGallery = (items: any[] = [], offset = 0) => {
   const cleanItems = items.filter((item: any) =>
@@ -124,7 +133,7 @@ const copy = {
   indexDefinition:
     "Western photography art is authored photographic work that interprets the American West through painterly craft, narrative intent, historical awareness, and collector-grade presentation.",
   indexLinkNote:
-    "This is the K4 route for Western photography art, Western art photography, cowboy art photography, frontier photography art, and painterly Western fine art prints.",
+    "Explore Western photography art, Western art photography, cowboy art photography, frontier photography art, and painterly Western fine art prints in one curated collection.",
   printAvailabilityNote: `Western photography art is available from ${getFormattedLowestStandardPrintPrice()} across archival paper and select wood presentations. Edition status and format options are shown on individual image pages.`,
   commercialH1: "Five Branches of Western Photography as Art",
   commercialDeck:
@@ -197,6 +206,7 @@ const copy = {
   copy={copy}
   faqItems={westernArtFAQ}
   gridSections={gridSections}
+  gatewayVideoWidget={beyondFrameVideoWidget}
   dockVariant="wall-art"
   layoutVariant="cinematic-concept-series-top"
 />

@@ -1,5 +1,7 @@
 ---
-const { titleLines, imageSrc, imageLink, imageAlt = "Seeing", essayNumber, tightTracking = false } = Astro.props;
+import NarrativeAudioButton from "@/components/NarrativeAudioButton.jsx";
+
+const { titleLines, imageSrc, imageLink, imageAlt = "Seeing", essayNumber, tightTracking = false, audioSrc = "", audioVolume = 0.3 } = Astro.props;
 ---
 
 <section class="seeing-hero-wrap">
@@ -18,13 +20,18 @@ const { titleLines, imageSrc, imageLink, imageAlt = "Seeing", essayNumber, tight
       </h1>
     </div>
 
-    <div class="seeing-hero-image">
-      {imageLink ? (
-        <a href={imageLink} target="_blank" rel="noopener noreferrer">
+    <div class="seeing-hero-media">
+      <div class="seeing-hero-image">
+        {imageLink ? (
+          <a href={imageLink} target="_blank" rel="noopener noreferrer">
+            <img src={imageSrc} alt={imageAlt} />
+          </a>
+        ) : (
           <img src={imageSrc} alt={imageAlt} />
-        </a>
-      ) : (
-        <img src={imageSrc} alt={imageAlt} />
+        )}
+      </div>
+      {audioSrc && (
+        <NarrativeAudioButton client:load src={audioSrc} title={imageAlt} volume={audioVolume} />
       )}
     </div>
   </div>
@@ -69,12 +76,16 @@ const { titleLines, imageSrc, imageLink, imageAlt = "Seeing", essayNumber, tight
     opacity: 0.7;
   }
 
+  .seeing-hero-media {
+    position: relative;
+    flex-shrink: 0;
+  }
+
   .seeing-hero-image {
     width: 160px;
     height: 160px;
     border-radius: 9999px;
     overflow: hidden;
-    flex-shrink: 0;
   }
 
   .seeing-hero-image img {
@@ -83,6 +94,39 @@ const { titleLines, imageSrc, imageLink, imageAlt = "Seeing", essayNumber, tight
     object-fit: cover;
     object-position: 50% 35%;
     display: block;
+  }
+
+  :global(.narrative-audio-button) {
+    position: absolute;
+    right: -0.65rem;
+    bottom: 0.35rem;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 9999px;
+    border: 1px solid rgba(95, 66, 48, 0.45);
+    background: rgba(255, 255, 255, 0.94);
+    color: #8b4513;
+    box-shadow: 0 0.3rem 0.9rem rgba(42, 31, 23, 0.22);
+    cursor: pointer;
+    transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  }
+
+  :global(.narrative-audio-button:hover),
+  :global(.narrative-audio-button.is-playing) {
+    background: #f7efe7;
+    border-color: rgba(139, 69, 19, 0.75);
+    color: #6f3210;
+    transform: translateY(-1px);
+  }
+
+  :global(.narrative-audio-button svg) {
+    width: 1.25rem;
+    height: 1.25rem;
+    stroke-width: 2.4;
   }
 
   @media (max-width: 768px) {
@@ -98,6 +142,11 @@ const { titleLines, imageSrc, imageLink, imageAlt = "Seeing", essayNumber, tight
 
     .seeing-hero-title {
       text-align: center;
+    }
+
+    :global(.narrative-audio-button) {
+      right: 0.1rem;
+      bottom: 0.1rem;
     }
   }
 </style>

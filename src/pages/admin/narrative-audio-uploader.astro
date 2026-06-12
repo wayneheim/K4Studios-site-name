@@ -1,0 +1,327 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+const narrativeEssays = [
+  { slug: "the-story-we-expect-to-be-told", title: "The Story We Expect to Be Told" },
+  { slug: "the-moment-that-refuses-to-finish", title: "The Moment That Refuses to Finish" },
+  { slug: "who-owns-the-story", title: "Who Owns the Story" },
+  { slug: "the-image-that-asks-something-of-you", title: "The Image That Asks Something of You" },
+  { slug: "the-story-that-isnt-finished", title: "The Story That Isn't Finished" },
+];
+---
+
+<BaseLayout title="Narrative Art Audio Uploader">
+  <main class="audio-uploader">
+    <header class="uploader-header">
+      <p class="eyebrow">Admin utility</p>
+      <h1>Narrative Art Audio Uploader</h1>
+      <p>
+        Upload MP3 narrations to Cloudflare R2. These target the URLs already wired into the five Narrative Art pages.
+      </p>
+    </header>
+
+    <section class="upload-panel" data-audio-uploader>
+      <div class="field-row">
+        <label for="folder">R2 folder</label>
+        <input id="folder" name="folder" value="NarrativeArt" autocomplete="off" />
+      </div>
+
+      <div class="essay-list">
+        {narrativeEssays.map((essay) => (
+          <article class="essay-upload-row" data-slug={essay.slug}>
+            <div>
+              <h2>{essay.title}</h2>
+              <code>https://media.k4studios.com/NarrativeArt/{essay.slug}.mp3</code>
+            </div>
+            <input type="file" accept="audio/mpeg,.mp3" aria-label={`Choose audio for ${essay.title}`} />
+            <button type="button" data-upload>Upload</button>
+            <p class="status" data-status>Waiting for file.</p>
+            <div class="result" hidden>
+              <input readonly data-url />
+              <button type="button" data-copy>Copy</button>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <div class="bulk-actions">
+        <button type="button" data-upload-all>Upload selected files</button>
+        <button type="button" data-copy-all>Copy all URLs</button>
+      </div>
+
+      <textarea class="all-urls" data-all-urls readonly aria-label="Uploaded audio URLs"></textarea>
+    </section>
+  </main>
+</BaseLayout>
+
+<script>
+  const toBase64FromArrayBuffer = (arrayBuffer) => {
+    const bytes = new Uint8Array(arrayBuffer);
+    const chunkSize = 0x8000;
+    let binary = "";
+    for (let index = 0; index < bytes.length; index += chunkSize) {
+      binary += String.fromCharCode(...bytes.subarray(index, index + chunkSize));
+    }
+    return btoa(binary);
+  };
+
+  const uploader = document.querySelector("[data-audio-uploader]");
+  const folderInput = uploader?.querySelector("#folder");
+  const allUrls = uploader?.querySelector("[data-all-urls]");
+
+  const getRows = () => Array.from(uploader?.querySelectorAll("[data-slug]") || []);
+
+  const setStatus = (row, message, tone = "") => {
+    const status = row.querySelector("[data-status]");
+    if (!status) return;
+    status.textContent = message;
+    status.dataset.tone = tone;
+  };
+
+  const refreshAllUrls = () => {
+    if (!allUrls) return;
+    const urls = getRows()
+      .map((row) => row.querySelector("[data-url]")?.value?.trim())
+      .filter(Boolean);
+    allUrls.value = urls.join("\n");
+  };
+
+  const uploadRow = async (row) => {
+    const fileInput = row.querySelector("input[type='file']");
+    const file = fileInput?.files?.[0];
+    const slug = row.dataset.slug;
+    const folder = folderInput?.value?.trim().replace(/^\/+|\/+$/g, "") || "NarrativeArt";
+
+    if (!file || !slug) {
+      setStatus(row, "Choose an MP3 first.", "warn");
+      return null;
+    }
+
+    if (!/\.mp3$/i.test(file.name)) {
+      setStatus(row, "Use an MP3 export so the page URL and file type match.", "warn");
+      return null;
+    }
+
+    const destKey = `${folder}/${slug}.mp3`;
+    setStatus(row, `Uploading ${file.name}...`);
+
+    const contentBase64 = toBase64FromArrayBuffer(await file.arrayBuffer());
+    const response = await fetch(`/.netlify/functions/uploadToR2?destKey=${encodeURIComponent(destKey)}`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        destKey,
+        contentBase64,
+        contentType: file.type || "audio/mpeg",
+        payloadType: "audio",
+      }),
+    });
+
+    let payload = {};
+    try {
+      payload = await response.json();
+    } catch {
+      payload = {};
+    }
+
+    if (!response.ok || !payload.url) {
+      throw new Error(payload.error || `Upload failed with ${response.status}`);
+    }
+
+    const result = row.querySelector(".result");
+    const urlInput = row.querySelector("[data-url]");
+    if (result) result.hidden = false;
+    if (urlInput) urlInput.value = payload.url;
+    setStatus(row, "Uploaded.", "success");
+    refreshAllUrls();
+    return payload.url;
+  };
+
+  uploader?.addEventListener("click", async (event) => {
+    const target = event.target;
+    if (!(target instanceof HTMLElement)) return;
+
+    const row = target.closest("[data-slug]");
+
+    if (target.matches("[data-upload]") && row) {
+      target.setAttribute("disabled", "true");
+      try {
+        await uploadRow(row);
+      } catch (error) {
+        setStatus(row, error instanceof Error ? error.message : "Upload failed.", "error");
+      } finally {
+        target.removeAttribute("disabled");
+      }
+    }
+
+    if (target.matches("[data-copy]") && row) {
+      const url = row.querySelector("[data-url]")?.value || "";
+      await navigator.clipboard.writeText(url);
+      setStatus(row, "Copied URL.", "success");
+    }
+
+    if (target.matches("[data-upload-all]")) {
+      target.setAttribute("disabled", "true");
+      for (const uploadRowEl of getRows()) {
+        if (uploadRowEl.querySelector("input[type='file']")?.files?.length) {
+          try {
+            await uploadRow(uploadRowEl);
+          } catch (error) {
+            setStatus(uploadRowEl, error instanceof Error ? error.message : "Upload failed.", "error");
+          }
+        }
+      }
+      target.removeAttribute("disabled");
+    }
+
+    if (target.matches("[data-copy-all]") && allUrls) {
+      refreshAllUrls();
+      await navigator.clipboard.writeText(allUrls.value);
+    }
+  });
+</script>
+
+<style>
+  .audio-uploader {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+    color: #2c2c2c;
+    font-family: "Glegoo", serif;
+  }
+
+  .uploader-header {
+    margin-bottom: 2rem;
+  }
+
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: #8b4513;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    margin: 0 0 0.7rem;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.1;
+  }
+
+  .upload-panel {
+    display: grid;
+    gap: 1.25rem;
+  }
+
+  .field-row {
+    display: grid;
+    gap: 0.4rem;
+    max-width: 24rem;
+  }
+
+  label,
+  h2 {
+    font-weight: 700;
+  }
+
+  input,
+  textarea,
+  button {
+    font: inherit;
+  }
+
+  input,
+  textarea {
+    border: 1px solid #d4c8bd;
+    border-radius: 6px;
+    padding: 0.65rem 0.75rem;
+    background: #fff;
+  }
+
+  .essay-list {
+    display: grid;
+    gap: 0.85rem;
+  }
+
+  .essay-upload-row {
+    display: grid;
+    grid-template-columns: minmax(18rem, 1fr) minmax(13rem, 18rem) auto;
+    gap: 0.8rem;
+    align-items: center;
+    border: 1px solid #e4ddd5;
+    border-radius: 8px;
+    padding: 1rem;
+    background: #fffdfb;
+  }
+
+  .essay-upload-row h2 {
+    margin: 0 0 0.3rem;
+    font-size: 1rem;
+  }
+
+  code {
+    display: block;
+    color: #6a5c52;
+    font-size: 0.78rem;
+    overflow-wrap: anywhere;
+  }
+
+  button {
+    border: 1px solid #8b4513;
+    border-radius: 6px;
+    padding: 0.58rem 0.8rem;
+    background: #8b4513;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  button:disabled {
+    opacity: 0.55;
+    cursor: wait;
+  }
+
+  .status {
+    grid-column: 1 / -1;
+    margin: 0;
+    color: #6a5c52;
+    font-size: 0.9rem;
+  }
+
+  .status[data-tone="success"] {
+    color: #256029;
+  }
+
+  .status[data-tone="warn"],
+  .status[data-tone="error"] {
+    color: #9d1f12;
+  }
+
+  .result {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.6rem;
+  }
+
+  .bulk-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .all-urls {
+    min-height: 8rem;
+    resize: vertical;
+  }
+
+  @media (max-width: 760px) {
+    .essay-upload-row {
+      grid-template-columns: 1fr;
+    }
+
+    .result {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

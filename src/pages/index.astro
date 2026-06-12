@@ -10,6 +10,7 @@ import FeaturedCollection from '../components/FeaturedCollection.astro';
 import FAQAccordion       from '../components/FAQAccordion.jsx';
 import SiteFooter         from '../components/Footer.astro';
 import MobileStoryImages  from '../components/MobileStoryImages.jsx';
+import VideoStoryWidget   from '../components/VideoStoryWidget.astro';
 
 import { getFAQPageStructuredData, getStructuredData } from '../components/utils/getStructuredData.ts';
 import { getLandingMeta }    from '../data/landingMeta.ts';
@@ -193,7 +194,17 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://k4studios.com/";
                 {section.subhead && <h3 class="slide-in-left" set:html={autoLinkKeywordsInText(section.subhead, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />}
                 {section.tagline && <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInText(section.tagline, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />}
                 {section.paragraphs?.map((para, i) => (
-                  <p class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
+                  <>
+                    <p class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
+                    {section.subhead?.includes("Western Frontier") && i === section.paragraphs.length - 1 && (
+                      <VideoStoryWidget
+                        class="reveal-on-scroll"
+                        videoSlug="only-path-forward"
+                        kicker="Frontier stories come alive."
+                        label="60 seconds: Beyond the frame."
+                      />
+                    )}
+                  </>
                 ))}
                 {section.list && section.list.length > 0 && (
                   <ul>
@@ -252,7 +263,6 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://k4studios.com/";
 
     <SiteFooter class="pt-8 pb-12" />
   </main>
-
   <script is:inline>
     document.addEventListener("DOMContentLoaded", () => {
       // Reveal-on-scroll logic (NO .carousel-fade here)

@@ -127,7 +127,7 @@ export const storyBlocks = [
   {
     subhead: 'Why this term needs a curated route',
     paragraphs: [
-      'Visitors searching Western portraits are often looking for several related things at once: cowboy portraiture, black and white Western studies, and historically grounded portrait work with more gravity than decor. This page should separate those paths without making the interface feel commercial or overbuilt.',
+      'Visitors searching Western portraits are often looking for several related things at once: cowboy portraiture, black and white Western studies, and historically grounded portrait work with more gravity than decor. The collection separates those paths without making the experience feel commercial or overbuilt.',
       'That is why the page stays selective up front, then opens into grouped portrait lanes below instead of dumping the whole archive in one flat wall.',
     ],
   },

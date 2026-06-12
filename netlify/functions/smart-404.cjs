@@ -35,6 +35,60 @@ function normalizePath(path) {
   return trimmed.length > 1 ? trimmed.replace(/\/+$/g, '') : trimmed;
 }
 
+const LEGACY_PHOTOGRAPHY_GALLERY_PREFIXES = [
+  ['/Photography-Galleries/Painterly-Photography/Historical-Themed-Fine-Art-Photography/WWII-Themed-Fine-Art-Photography/Men-and-Machines-Fine-Art-Photography/Men-and-Machines-Black-and-White', '/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White'],
+  ['/Photography-Galleries/Painterly-Photography/Historical-Themed-Fine-Art-Photography/WWII-Themed-Fine-Art-Photography/Men-and-Machines-Fine-Art-Photography/Men-and-Machines', '/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color'],
+  ['/Photography-Galleries/Painterly-Photography/Historical-Themed-Fine-Art-Photography/WWII-Themed-Fine-Art-Photography/Men-and-Machines-Fine-Art-Photography', '/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines'],
+  ['/Photography-Galleries/Painterly-Photography/Facing-History-Photography/WWII-Themed-Fine-Art-Photography/Men-and-Machines-Fine-Art-Photography', '/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines'],
+  ['/Photography-Galleries/Painterly-Photography/Historical-Themed-Fine-Art-Photography/WWII-Themed-Fine-Art-Photography/Art-of-War-Fine-Art-Photography/The-Art-of-War-WWII-Reenactment-Photography', '/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War'],
+  ['/Photography-Galleries/Painterly-Photography/Historical-Themed-Fine-Art-Photography/WWII-Themed-Fine-Art-Photography/Art-of-War-Fine-Art-Photography/Art-of-War-Archive', '/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War'],
+  ['/Photography-Galleries/Painterly-Photography/Facing-History-Photography/WWII-Themed-Fine-Art-Photography/Art-of-War-Fine-Art-Photography/Art-of-War-Archive', '/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War'],
+  ['/Photography-Galleries/Painterly-Photography/Facing-History-Photography/WWII-Themed-Fine-Art-Photography/Art-of-War-Fine-Art-Photography', '/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War'],
+  ['/Photography-Galleries/Painterly-Photography/Historical-Themed-Fine-Art-Photography/WWII-Themed-Fine-Art-Photography/Art-of-War-Fine-Art-Photography', '/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War'],
+  ['/Photography-Galleries/Painterly-Photography/Historical-Themed-Fine-Art-Photography/WWII-Themed-Fine-Art-Photography/WWII-Fine-Art-Portrait-Photography/World-War-II-Black-and-White', '/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White'],
+  ['/Photography-Galleries/Painterly-Photography/Historical-Themed-Fine-Art-Photography/WWII-Themed-Fine-Art-Photography/WWII-Fine-Art-Portrait-Photography/WWII-Fine-Art-Portraits', '/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color'],
+  ['/Photography-Galleries/Painterly-Photography/Fine-Art-Portraits/WWII-Themed-Fine-Art-Photography/Men-and-Machines/Men-and-Machines-Black-and-White', '/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White'],
+  ['/Photography-Galleries/Painterly-Photography/Historical-Themed-Fine-Art-Photography/WWII-Themed-Fine-Art-Photography', '/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII'],
+  ['/Photography-Galleries/Painterly-Photography/Facing-History-Photography/WWII-Themed-Fine-Art-Photography', '/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII'],
+  ['/Photography-Galleries/Painterly-Photography/Historical-Themed-Fine-Art-Photography/Civil-War-Portrait-Fine-Art-Photography/Civil-War-Themed-Color-Fine-Art-Photographs', '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color'],
+  ['/Photography-Galleries/Painterly-Photography/Historical-Themed-Fine-Art-Photography/Civil-War-Portrait-Fine-Art-Photography/Civil-War-Themed-BW-Fine-Art-Photographs', '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White'],
+  ['/Photography-Galleries/Painterly-Photography/Historical-Themed-Fine-Art-Photography/Civil-War-Portrait-Fine-Art-Photography', '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits'],
+  ['/Photography-Galleries/Painterly-Photography/Historical-Themed-Fine-Art-Photography/Roaring-20s-Themed-Fine-Art-Portrait-Photography/Roaring-20s-Themed-Color-Fine-Art-Photographs', '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color'],
+  ['/Photography-Galleries/Painterly-Photography/Historical-Themed-Fine-Art-Photography/Roaring-20s-Themed-Fine-Art-Portrait-Photography/Roaring-20s-Themed-BW-Fine-Art-Photographs', '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White'],
+  ['/Photography-Galleries/Painterly-Photography/Historical-Themed-Fine-Art-Photography/Roaring-20s-Themed-Fine-Art-Portrait-Photography', '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits'],
+  ['/Photography-Galleries/Painterly-Photography/Historical-Themed-Fine-Art-Photography/Western-Themed-Fine-Art-Photography/Western-BW-Portrait-Fine-Art-Photography', '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White'],
+  ['/Photography-Galleries/Painterly-Photography/Historical-Themed-Fine-Art-Photography/Western-Themed-Fine-Art-Photography/Western-Fine-Art-Photography', '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color'],
+  ['/Photography-Galleries/Painterly-Photography/Historical-Themed-Fine-Art-Photography/Western-Themed-Fine-Art-Photography', '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West'],
+  ['/Photography-Galleries/Painterly-Photography/Historical-Themed-Fine-Art-Photography', '/Galleries/Painterly-Fine-Art-Photography/Facing-History'],
+  ['/Photography-Galleries/Painterly-Photography/Transportation-Themed-Fine-Art-Photography/Transportation-Trains-Color', '/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color'],
+  ['/Photography-Galleries/Painterly-Photography/Transportation-Themed-Fine-Art-Photography/Transportation-Trains-BW', '/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White'],
+  ['/Photography-Galleries/Painterly-Photography/Transportation-Themed-Fine-Art-Photography', '/Galleries/Painterly-Fine-Art-Photography/Transportation'],
+  ['/Photography-Galleries/Painterly-Photography/Miscellaneous-Fine-Art-Photography/Portraits-Painterly', '/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits'],
+  ['/Photography-Galleries/Painterly-Photography/Painterly-Landscape-Fine-Art-Photography', '/Galleries/Painterly-Fine-Art-Photography/Landscapes'],
+  ['/Photography-Galleries/Painterly-Photography', '/Galleries/Painterly-Fine-Art-Photography'],
+  ['/Photography-Galleries/Traditional-Photos/Landscapes-Gallery/Location/Landscapes-International/The-Faroe-Islands', '/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands'],
+  ['/Photography-Galleries/Traditional-Photos/Landscapes-Gallery/Location/Landscapes-Northeast/North-East', '/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery'],
+  ['/Photography-Galleries/Fine-Art-Photography/Landscapes-Gallery/Location/Landscapes-Northeast/North-East', '/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery'],
+  ['/Photography-Galleries/Fine-Art-Photography/Landscapes-Gallery/Location', '/Galleries/Fine-Art-Photography/Landscapes/By-Location'],
+  ['/Photography-Galleries/Traditional-Photos/Landscapes-Gallery', '/Galleries/Fine-Art-Photography/Landscapes'],
+  ['/Photography-Galleries/Traditional-Photos/Portraits-and-People-Fine-Art-Photography', '/Galleries/Fine-Art-Photography/Portraits'],
+  ['/Photography-Galleries/Traditional-Photos/Transportation-Themed-Fine-Art-Photography', '/Galleries/Fine-Art-Photography/Transportation'],
+  ['/Photography-Galleries/Traditional-Photos', '/Galleries/Fine-Art-Photography'],
+  ['/Photography-Galleries', '/Galleries']
+].sort((a, b) => b[0].length - a[0].length);
+
+function getLegacyPhotographyGalleryRedirect(pathname) {
+  const normalized = normalizePath(pathname);
+  const lower = normalized.toLowerCase();
+  for (const [legacyPrefix, target] of LEGACY_PHOTOGRAPHY_GALLERY_PREFIXES) {
+    const legacyLower = legacyPrefix.toLowerCase();
+    if (lower === legacyLower || lower.startsWith(`${legacyLower}/`)) {
+      return target;
+    }
+  }
+  return '';
+}
+
 function getParentGalleryPath(pathname) {
   let normalized = normalizePath(pathname);
 
@@ -351,8 +405,28 @@ exports.handler = async (event) => {
   }
 
   // Non-image legacy requests should not blind-redirect deprecated
-  // Photography-Galleries paths. Only image-detail URLs get rematched.
+  // Photography-Galleries paths. Known legacy folders map to current hubs.
   if (!imageId) {
+    const legacyRedirect = getLegacyPhotographyGalleryRedirect(requestedPath);
+    if (legacyRedirect) {
+      console.log(`[smart-404] Legacy Photography-Galleries folder redirect: ${requestedPath} -> ${legacyRedirect}`);
+      await logSmart404EdgeEvent({
+        outcome: 'legacy_gallery_relocated',
+        path: requestedPath,
+        imageId: null,
+        reason: 'legacy-gallery-relocated'
+      });
+      return {
+        statusCode: 301,
+        headers: {
+          'Location': `${legacyRedirect}${passthroughQuery}`,
+          'Cache-Control': 'public, max-age=31536000',
+          'X-Smart-404': 'legacy-gallery-relocated'
+        },
+        body: ''
+      };
+    }
+
     console.log(`[smart-404] No image ID found, passing to 404`);
     await logSmart404EdgeEvent({
       outcome: 'no_image_id',

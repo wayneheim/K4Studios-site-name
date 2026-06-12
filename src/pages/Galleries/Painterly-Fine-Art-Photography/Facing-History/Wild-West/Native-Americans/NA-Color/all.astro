@@ -45,12 +45,13 @@ const { sectionDockItems, dockCenterIndex } = buildWildWestAllPageDock({
   currentKey,
   currentHref: canonicalPath,
 });
+const lowestStandardPrintPrice = getFormattedLowestStandardPrintPrice();
 
 const copy = isNaNarrativeTheme
   ? {
       seoTitle: "Color Native American Narrative Art Prints | Wild West Fine Art Photography | K4 Studios",
       seoDescription:
-        "Browse {imageCount} color Native American narrative fine art prints by Wayne Heim. Painterly Wild West photography of frontier life, presence, and story from the small-works \"Sketch Series\" at $25. Collector notes on every image.",
+        `Browse {imageCount} color Native American narrative fine art prints by Wayne Heim. Painterly Wild West photography of frontier life, presence, and story from the small-works "Sketch Series" at ${lowestStandardPrintPrice}. Collector notes on every image.`,
       indexDefinition:
         "This page presents the complete color Native American narrative selection from Western Narratives by Wayne Heim. These story-driven works are filtered from the larger narrative archive and gathered here around Indigenous presence, frontier context, and painterly visual storytelling.",
       indexLinkNote: "All {imageCount} images open to their original Western Narratives artwork pages with full stories, metadata, and collector information.",
@@ -59,13 +60,13 @@ const copy = isNaNarrativeTheme
       collectionIntro:
         "Browse the complete color collection of Native American narrative photography — Wild West scenes shaped by atmosphere, gesture, silence, and story pressure. Figures on horseback, frontier encounters, open country, and the quiet tension of lives lived at the edge of the American West. Each image is a painterly narrative built around presence, dignity, and human depth. Every artwork opens to its full story, collector notes, image metadata, and available print details.",
       gatewayIntroCopy:
-        "{imageCount} color Native American narrative fine art prints by Wayne Heim, available as fine art prints from the small-works \"Sketch Series\" at $25 through ultra-limited signed collector editions. Painterly Wild West photography shaped by frontier life, atmosphere, gesture, and the story pressure of the American West — every image a complete narrative in a single frame. Four edition tiers — open-edition studies to ultra-limited signed collector works — on fine art paper and Baltic Birch wood panels.",
+        `{imageCount} color Native American narrative fine art prints by Wayne Heim, available as fine art prints from the small-works "Sketch Series" at ${lowestStandardPrintPrice} through ultra-limited signed collector editions. Painterly Wild West photography shaped by frontier life, atmosphere, gesture, and the story pressure of the American West — every image a complete narrative in a single frame. Four edition tiers — open-edition studies to ultra-limited signed collector works — on fine art paper and Baltic Birch wood panels.`,
       gatewaySupportingCopy: "Click any work to read the full narrative, explore collector notes, and view print details.",
     }
   : {
       seoTitle: "Native American Portrait Photography | Color Fine Art Prints | K4 Studios",
       seoDescription:
-        "Browse {imageCount} color Native American portrait fine art prints by Wayne Heim. Painterly Wild West photography of presence, dignity, and the American frontier from the small-works \"Sketch Series\" at $25.",
+        `Browse {imageCount} color Native American portrait fine art prints by Wayne Heim. Painterly Wild West photography of presence, dignity, and the American frontier from the small-works "Sketch Series" at ${lowestStandardPrintPrice}.`,
       indexDefinition:
         "This page presents the complete color Native American portrait archive by Wayne Heim. The collection gathers painterly images shaped by presence, heritage, identity, gesture, and quiet human force.",
       indexLinkNote: "All {imageCount} images link to individual image pages with full stories, metadata, and collector information.",
@@ -74,7 +75,7 @@ const copy = isNaNarrativeTheme
       collectionIntro:
         "Browse the complete color collection of Native American portrait photography — figures shaped by atmosphere, gesture, silence, and the quiet force of presence. Each portrait is a painterly study in dignity, continuity, and the human depth of the American West. Every artwork opens to its full story, collector notes, image metadata, and available print details.",
       gatewayIntroCopy:
-        "{imageCount} color Native American portrait fine art prints by Wayne Heim, available as fine art prints from the small-works \"Sketch Series\" at $25 through ultra-limited signed collector editions. Painterly Wild West photography shaped by presence, dignity, atmosphere, and the quiet force of the American frontier. Four edition tiers — open-edition studies to ultra-limited signed collector works — on fine art paper and Baltic Birch wood panels.",
+        `{imageCount} color Native American portrait fine art prints by Wayne Heim, available as fine art prints from the small-works "Sketch Series" at ${lowestStandardPrintPrice} through ultra-limited signed collector editions. Painterly Wild West photography shaped by presence, dignity, atmosphere, and the quiet force of the American frontier. Four edition tiers — open-edition studies to ultra-limited signed collector works — on fine art paper and Baltic Birch wood panels.`,
       gatewaySupportingCopy: "Click any work to read the full narrative, explore collector notes, and view print details.",
     };
 ---

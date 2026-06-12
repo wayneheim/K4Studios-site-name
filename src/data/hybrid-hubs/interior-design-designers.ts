@@ -172,7 +172,7 @@ export const thesis = {
   body: [
     'Specifier-ready western wall art for interior designers, residential project teams, lodge properties, and boutique hospitality interiors.',
     'Design projects rarely fail on taste-they fail on placement, scale, sequence, and the handoff between concept board and approved artwork package.',
-    'This page is built for interior teams sourcing western wall art for interior designers: artwork selected for entry statements, focal walls, transition zones, guest suites, corridors, and supporting moments across multi-room plans.',
+    'Interior teams sourcing western wall art for designers can browse artwork selected for entry statements, focal walls, transition zones, guest suites, corridors, and supporting moments across multi-room plans.',
     'Each piece is constructed to carry visual weight without overpowering the space-allowing designers to control tone, pacing, and narrative presence across a project.',
     'Use this as a working layer between concept direction and final install-where selections move from mood board to specification with clearer sizing, material, and placement decisions.',
   ],

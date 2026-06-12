@@ -32,10 +32,12 @@ function bgColorFor(sortOrder: number) {
     <div class="fixed inset-0 z-[10000] bg-black bg-opacity-50 flex items-center justify-center p-4">
       <div class="bg-white rounded-lg shadow-xl max-w-md w-full min-h-[520px] max-h-[90vh] overflow-y-auto">
         <div class="p-4 relative">
-          <div class="mb-2 text-center">
-            <h2 class="text-lg font-bold text-gray-800">
-              {commerce.mode === "engrained" ? "More About This Image" : "Order Options"}
+          <div class="mb-2 flex items-center gap-3">
+            <div class="h-0.5 flex-1 bg-gradient-to-r from-transparent to-gray-400/35"></div>
+            <h2 class="text-base font-bold text-gray-800/75 whitespace-nowrap">
+              Order Options
             </h2>
+            <div class="h-0.5 flex-1 bg-gradient-to-l from-transparent to-gray-400/35"></div>
           </div>
 
           <div class="text-center mb-3">
@@ -43,9 +45,14 @@ function bgColorFor(sortOrder: number) {
               <img src={imageSrc} alt={image?.title || "K4 Studios fine art photograph"} class="w-full max-w-32 mx-auto rounded-lg shadow-md" loading="lazy" />
             )}
             <h3 class="text-sm font-semibold text-gray-800 mt-2">{image?.title}</h3>
+            {commerce.oneImageMovie && (
+              <p class="text-xs text-[#8a3d2b] mt-1">
+                A One-Image Movie™ work by Wayne Heim
+              </p>
+            )}
             {commerce.mode === "standard" && (
               <p class="text-xs text-gray-500 italic mt-1">
-                This image is available in the following collector formats:
+                Available as printed photographs in the following formats:
               </p>
             )}
           </div>
@@ -158,6 +165,12 @@ function bgColorFor(sortOrder: number) {
               <span class="font-semibold text-gray-600">* Production Notes *</span>
               <br />
               Standard paper prints include a 1-2 inch archival border. Sizes listed reflect the maximum dimension. Secondary dimension will scale proportionately to preserve the image's actual aspect ratio.
+              {commerce.mode === "standard" && (
+                <>
+                  <br />
+                  U.S. Sketch Series shipping is estimated at $9.99 for a single print. Actual shipping is finalized at checkout based on quantity, finish, and delivery method.
+                </>
+              )}
             </p>
           </div>
         </div>

@@ -1,0 +1,86 @@
+---
+import VideoModalCta from "@/components/VideoModalCta.jsx";
+import { videos } from "@/data/videos/videoRegistry";
+
+interface Props {
+  videoSlug?: string;
+  youtubeId?: string;
+  kicker?: string;
+  label?: string;
+  title?: string;
+  compact?: boolean;
+  withRules?: boolean;
+  ctaWidth?: string;
+  ruleWidth?: string;
+  class?: string;
+}
+
+const {
+  videoSlug = "only-path-forward",
+  youtubeId: youtubeIdProp = "",
+  kicker = "Frontier stories come alive.",
+  label = "60 seconds: Beyond the frame.",
+  title: titleProp = "",
+  compact = true,
+  withRules = true,
+  ctaWidth = "28rem",
+  ruleWidth = "100%",
+  class: className = "",
+} = Astro.props;
+
+const video = videos.find((entry) => entry.slug === videoSlug);
+const youtubeId = youtubeIdProp || video?.youtubeId || "";
+const title = titleProp || video?.title || "K4 Studios video";
+---
+
+{youtubeId && (
+  <section
+    class:list={["video-story-widget", { "video-story-widget--ruled": withRules }, className]}
+    style={`--video-story-widget-cta-width: ${ctaWidth}; --video-story-widget-rule-width: ${ruleWidth};`}
+    aria-label={title}
+  >
+    <VideoModalCta
+      client:load
+      youtubeId={youtubeId}
+      label={label}
+      kicker={kicker}
+      title={title}
+      compact={compact}
+    />
+  </section>
+)}
+
+<style>
+  .video-story-widget {
+    display: grid;
+    justify-items: center;
+    width: 100%;
+    margin: 1.5rem 0 0.75rem;
+  }
+
+  .video-story-widget--ruled {
+    gap: 1rem;
+  }
+
+  .video-story-widget--ruled::before,
+  .video-story-widget--ruled::after {
+    content: "";
+    display: block;
+    width: var(--video-story-widget-rule-width);
+    height: 1px;
+    background: rgba(59, 52, 46, 0.18);
+  }
+
+  .video-story-widget :global(.narrative-video-cta) {
+    width: min(100%, var(--video-story-widget-cta-width));
+    border-radius: 8px;
+  }
+
+  .video-story-widget :global(.narrative-video-cta-kicker) {
+    text-align: center;
+  }
+
+  .video-story-widget :global(.narrative-video-cta-kicker--inset) {
+    margin-bottom: 0.15rem;
+  }
+</style>

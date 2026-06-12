@@ -132,7 +132,7 @@ export const storyBlocks = [
     subhead: 'Vintage does not have to mean hollow',
     paragraphs: [
       'Vintage western art often gets reduced to distressed surfaces and familiar tropes. Better Wild West artwork keeps the age and atmosphere, but restores the human stakes. A pause before violence. A weathered face. A railroad confrontation. A quiet portrait that feels older than the label wrapped around it.',
-      'This page therefore brings together narrative frontier scenes, old-West portraiture, and deeper historical foundations. It lets the visitor start with the phrase Wild West art and then discover whether they really want a definition page, a print-buying page, or the deeper frontier galleries themselves.',
+      'This collection therefore brings together narrative frontier scenes, old-West portraiture, and deeper historical foundations. It lets the visitor start with the phrase Wild West art and then discover whether they are looking for historical context, collector-ready prints, or the deeper frontier galleries themselves.',
     ],
   },
   {

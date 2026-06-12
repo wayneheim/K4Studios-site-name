@@ -5,9 +5,11 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
 import SeeingHero from "@/components/SeeingHero.astro";
+import VideoModalCta from "@/components/VideoModalCta.jsx";
 import { getStructuredData } from "@/components/utils/getStructuredData.ts";
 import { getLandingMeta } from "@/data/landingMeta.ts";
 import { essays } from "@/data/Other/Narrative-Art/essays.mjs";
+import { videos } from "@/data/videos/videoRegistry";
 import { galleryData as narrativeImages } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs";
 import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import "@/styles/global.css";
@@ -38,6 +40,9 @@ const typedSections = sections as EssaySection[];
 const sectionPath = `/Other/Narrative-Art/${slug}`;
 const canonicalUrl = `https://k4studios.com${sectionPath}`;
 const previewPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color";
+const onlyPathForwardVideo = videos.find((video) => video.slug === "only-path-forward");
+const onlyPathForwardYoutubeId = onlyPathForwardVideo?.youtubeId ?? "";
+const showVideoCta = slug === "the-story-that-isnt-finished" && onlyPathForwardYoutubeId;
 
 type NarrativeImage = (typeof narrativeImages)[number];
 
@@ -100,6 +105,8 @@ const breadcrumb = `Other › <a href='/Other/Narrative-Art' style='color: inher
       imageLink={heroImage?.buyLink}
       imageAlt={heroImage?.alt || title}
       essayNumber={essayNumber}
+      audioSrc={essay.audioSrc}
+      audioVolume={essay.audioVolume}
     />
 
     <section class="max-w-3xl mx-auto px-4 pb-4 text-center">
@@ -126,6 +133,17 @@ const breadcrumb = `Other › <a href='/Other/Narrative-Art' style='color: inher
         )}
       </div>
     </section>
+
+    {showVideoCta && (
+      <section class="narrative-video-cta-wrap" aria-label="Related video">
+        <VideoModalCta
+          client:load
+          youtubeId={onlyPathForwardYoutubeId}
+          label="60 Seconds… Beyond the Frame"
+          title={onlyPathForwardVideo?.title || "Only Path Forward"}
+        />
+      </section>
+    )}
 
     <nav style="text-align: center; padding: 3rem 1rem 2rem; font-family: 'Glegoo', serif;">
       <div style="display: inline-flex; align-items: center; gap: 0.75rem; font-size: 2rem; font-weight: 700; letter-spacing: 0.05em;">
@@ -161,10 +179,12 @@ const breadcrumb = `Other › <a href='/Other/Narrative-Art' style='color: inher
 
 <style>
   .essay-subtitle {
-    font-size: 1.05rem;
-    color: #6a5c52;
+    font-size: clamp(1.25rem, 2vw, 1.45rem);
+    font-weight: 600;
+    line-height: 1.45;
+    color: #3b342e;
     margin: 0;
-    max-width: 34rem;
+    max-width: 760px;
     margin-inline: auto;
   }
 
@@ -186,5 +206,15 @@ const breadcrumb = `Other › <a href='/Other/Narrative-Art' style='color: inher
 
   .prose a:hover {
     color: #5c0000;
+  }
+
+  .narrative-video-cta-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 760px;
+    margin: 2.75rem auto 0;
+    padding: 0 1.5rem;
+    gap: 0.45rem;
   }
 </style>

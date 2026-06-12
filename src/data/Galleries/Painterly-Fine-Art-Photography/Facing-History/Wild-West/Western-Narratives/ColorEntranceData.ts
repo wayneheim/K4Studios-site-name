@@ -33,10 +33,10 @@ export const entranceData = {
     `Every image in this gallery is created on location and built around story pressure rather than spectacle. Wayne Heim's painterly fine-art methods merge illustrative toning, classical composition, and atmospheric Western light to produce narrative fragments that feel already in motion. Many images include Collector Notes that unpack composition, implication, artistic lineage, and the One-Image Movie storytelling principles guiding the work.<br><br>This gallery sits inside Wayne Heim's broader <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West" style="color:#85644b; text-decoration:underline; transition:color 0.2s;" onmouseover="this.style.color='#a74219'" onmouseout="this.style.color='#85644b'">Wild West</a> body of work and focuses specifically on color narrative images where atmosphere, gesture, and silence carry as much weight as action.`,
 
   image: {
-    id: "i-44jcjTQ",
-    src: "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-44jcjTQ/3/MgTD8rSCgsDJVpFJp8MMrqrC5fFZGT7qHBHjvjbGR/XL/cowboy%20art%20_O1H0384-Edit-2-Edit-2-Edit-2-XL.jpg",
-    alt: "Color Western narrative photograph by Wayne Heim",
-    caption: "Color Western narrative photograph by Wayne Heim",
+    id: "i-LCspRF4",
+    src: "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LCspRF4/0/NdFPjwxFk9TVWwmmBc3Z5tcGjkws6fspS9RFBcTjr/XL/_HF22770-953-954-XL.jpg",
+    alt: "Cowboy standing beside a frontier wagon at sunset in a color Western narrative photograph by Wayne Heim",
+    caption: "Day in Review - color Western narrative photograph by Wayne Heim",
   },
 
   breadcrumb:

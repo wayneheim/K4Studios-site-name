@@ -57,7 +57,8 @@ export const landingWestern = {
       title: "Color Narrative Stories",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color",
       dockHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all#collection-browser",
-      thumb: "/img/i-5FX3W9r/s.jpg",
+      imageId: "i-LCspRF4",
+      thumb: "/img/i-LCspRF4/s.jpg",
     },
     {
       title: "Black & White Narrative Stories",
@@ -65,6 +66,22 @@ export const landingWestern = {
       dockHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/all#collection-browser",
       imageId: "i-kp5NHNw",
       thumb: "/img/i-kp5NHNw/s.jpg",
+    },
+    {
+      title: "Native American",
+      subtitle: "Color Narratives",
+      href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color?theme=na-narrative-color-images&view=grid",
+      dockHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color?theme=na-narrative-color-images&view=grid",
+      imageId: "i-7hD9CCh",
+      thumb: "/img/i-7hD9CCh/s.jpg",
+    },
+    {
+      title: "Native American",
+      subtitle: "B/W Narratives",
+      href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White?theme=na-narrative-b-w-images&view=grid",
+      dockHref: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White?theme=na-narrative-b-w-images&view=grid",
+      imageId: "i-7vSccct",
+      thumb: "/img/i-7vSccct/s.jpg",
     },
   ]
 };

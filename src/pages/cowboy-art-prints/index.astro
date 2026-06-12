@@ -13,6 +13,15 @@ import { getFormattedLowestStandardPrintPrice } from "@/data/pricing/printSeries
 const pagePath = "/cowboy-art-prints";
 const basePath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color";
 const canonicalPath = pagePath;
+const beyondFrameVideoWidget = {
+  videoSlug: "only-path-forward",
+  kicker: "Frontier stories come alive.",
+  label: "60 seconds: Beyond the frame.",
+  compact: true,
+  withRules: true,
+  ctaWidth: "17rem",
+  ruleWidth: "100%",
+};
 
 const rotateGallery = (items: any[] = [], offset = 0) => {
   const cleanItems = items.filter((item: any) =>
@@ -184,7 +193,7 @@ const copy = {
   indexDefinition:
     "Wayne Heim's cowboy art prints include color cowboy portraits, black and white cowboy prints, narrative frontier scenes, and painterly Western character studies produced as collector-grade fine art prints.",
   indexLinkNote:
-    "This is the K4 route for print-focused intent: cowboy art prints, western cowboy art prints, cowboy artwork prints, and collector-ready cowboy photography prints.",
+    "Explore cowboy art prints, western cowboy art prints, cowboy artwork prints, and collector-ready cowboy photography prints shaped for wall presence and long viewing.",
   printAvailabilityNote: `Cowboy art prints are available from ${getFormattedLowestStandardPrintPrice()} across archival paper and select wood presentations. Edition status and format options are shown on individual image pages.`,
   commercialH1: "Browse Cowboy Art Prints",
   commercialDeck:
@@ -253,6 +262,7 @@ const copy = {
   copy={copy}
   faqItems={faqItems}
   gridSections={gridSections}
+  gatewayVideoWidget={beyondFrameVideoWidget}
   dockVariant="wall-art"
   layoutVariant="cinematic-concept-series-top"
 />
