@@ -351,6 +351,30 @@ export async function getV2CanonicalSummary(env, { windowKey = 'today', excludeI
     WHEN referrer_host LIKE '%www.k4studios.com%' OR referrer_host = 'k4studios.com' THEN 'K4 Internal'
     ELSE referrer_host
   END`;
+  const rawReferrerHostExpression = `CASE
+    WHEN referer LIKE 'http://%' OR referer LIKE 'https://%' THEN
+      substr(
+        substr(referer, instr(referer, '://') + 3),
+        1,
+        CASE
+          WHEN instr(substr(referer, instr(referer, '://') + 3), '/') > 0 THEN instr(substr(referer, instr(referer, '://') + 3), '/') - 1
+          ELSE length(substr(referer, instr(referer, '://') + 3))
+        END
+      )
+    ELSE NULL
+  END`;
+  const rawSourceLabelExpression = `CASE
+    WHEN ${rawReferrerHostExpression} IS NULL OR ${rawReferrerHostExpression} = '' THEN 'Direct / Unknown'
+    WHEN lower(${rawReferrerHostExpression}) LIKE 'localhost:%' OR lower(${rawReferrerHostExpression}) = 'localhost' THEN 'Internal Test'
+    WHEN lower(${rawReferrerHostExpression}) LIKE '%edge.k4studios.com%' THEN 'Internal Test'
+    WHEN ${rawReferrerHostExpression} LIKE '%google.%' THEN 'Google'
+    WHEN ${rawReferrerHostExpression} LIKE '%bing.%' THEN 'Bing'
+    WHEN ${rawReferrerHostExpression} LIKE '%pinterest.%' THEN 'Pinterest'
+    WHEN ${rawReferrerHostExpression} LIKE '%t.co%' OR ${rawReferrerHostExpression} LIKE '%twitter.%' OR ${rawReferrerHostExpression} LIKE '%x.com%' THEN 'Twitter/X'
+    WHEN lower(${rawReferrerHostExpression}) = 'facebook.com' OR lower(${rawReferrerHostExpression}) LIKE '%.facebook.com' OR lower(${rawReferrerHostExpression}) = 'fb.com' OR lower(${rawReferrerHostExpression}) LIKE '%.fb.com' THEN 'Facebook'
+    WHEN ${rawReferrerHostExpression} LIKE '%www.k4studios.com%' OR ${rawReferrerHostExpression} = 'k4studios.com' THEN 'K4 Internal'
+    ELSE ${rawReferrerHostExpression}
+  END`;
   const qualifiedExternalSessionPredicate = `(
     COALESCE(sf.engaged_event_count, 0) > 0
     OR COALESCE(sf.event_count, 0) >= 2
@@ -428,15 +452,15 @@ export async function getV2CanonicalSummary(env, { windowKey = 'today', excludeI
               AND session_id NOT IN (SELECT session_id FROM internal_test_sessions)${trustedSessionFactExclusionClause}
               AND ${canonicalViewerPredicate}) AS image_views,
          (SELECT COUNT(*)
-          FROM canonical_events_v2
-          WHERE ${windowClause}
-            AND diagnostic_class = 'external_direct_image_fetch'
-            AND ${canonicalViewerPredicate}) AS direct_image_fetches,
+          FROM raw_events
+          WHERE ${rawWindowClause}
+            AND lower(COALESCE(event_type, '')) = 'direct_image'
+            AND lower(COALESCE(source, '')) = 'proxy'${rawViewerExclusionClause}) AS direct_image_fetches,
          (SELECT COUNT(*)
-          FROM canonical_events_v2
-          WHERE ${windowClause}
-            AND metric_scope = 'diagnostic'
-            AND ${canonicalViewerPredicate}) AS proxy_image_views,
+          FROM raw_events
+          WHERE ${rawWindowClause}
+            AND lower(COALESCE(event_type, '')) = 'direct_image'
+            AND lower(COALESCE(source, '')) = 'proxy'${rawViewerExclusionClause}) AS proxy_image_views,
          (SELECT COUNT(*)
           FROM canonical_events_v2
           WHERE ${windowClause} AND event_family = 'buy_click'
@@ -702,24 +726,13 @@ export async function getV2CanonicalSummary(env, { windowKey = 'today', excludeI
     ).all(),
     env.DB.prepare(
       `SELECT
-         CASE
-           WHEN referrer_host IS NULL OR referrer_host = '' THEN 'Direct / Unknown'
-           WHEN lower(referrer_host) LIKE 'localhost:%' OR lower(referrer_host) = 'localhost' THEN 'Internal Test'
-           WHEN lower(referrer_host) LIKE '%edge.k4studios.com%' THEN 'Internal Test'
-           WHEN referrer_host LIKE '%google.%' THEN 'Google'
-           WHEN referrer_host LIKE '%bing.%' THEN 'Bing'
-           WHEN referrer_host LIKE '%pinterest.%' THEN 'Pinterest'
-           WHEN referrer_host LIKE '%t.co%' OR referrer_host LIKE '%twitter.%' OR referrer_host LIKE '%x.com%' THEN 'Twitter/X'
-           WHEN ${facebookHostCaseCondition} THEN 'Facebook'
-           WHEN referrer_host LIKE '%www.k4studios.com%' OR referrer_host = 'k4studios.com' THEN 'K4 Internal'
-           ELSE referrer_host
-         END AS source_label,
+         ${rawSourceLabelExpression} AS source_label,
          COUNT(*) AS views
-       FROM canonical_events_v2
-       WHERE ${windowClause}
-         AND event_family = 'image_view'
-         AND metric_scope = 'diagnostic'
-         AND ${canonicalViewerPredicate}
+       FROM raw_events
+       WHERE ${rawWindowClause}
+         AND lower(COALESCE(event_type, '')) = 'direct_image'
+         AND lower(COALESCE(source, '')) = 'proxy'
+         ${rawViewerExclusionClause}
        GROUP BY source_label
        ORDER BY views DESC, source_label ASC
        LIMIT 10`

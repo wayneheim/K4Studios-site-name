@@ -363,43 +363,8 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://k4studios.com/";
       }
     }
 
-    function emitLorePixel(config, trigger) {
-      if (!config) return;
-      if (typeof window.k4ShouldSuppressAnalytics === 'function' && window.k4ShouldSuppressAnalytics()) return;
-
-      const params = new URLSearchParams({
-        t: 'action',
-        e: config.action,
-        v: String(Date.now()),
-        g: config.galleryId,
-        pt: config.pageType,
-        sl: config.sourceLayer,
-        th: config.theme,
-        tr: trigger || '',
-        path: window.location.pathname
-      });
-
-      const sessionId = getLoreSessionId();
-      if (sessionId) params.set('sid', sessionId);
-
-      const pixelUrl = `https://edge.k4studios.com/_state?${params.toString()}`;
-      if (typeof fetch === 'function') {
-        fetch(pixelUrl, {
-          method: 'GET',
-          keepalive: true,
-          cache: 'no-store',
-          credentials: 'include'
-        }).catch(() => {
-          const image = new Image();
-          image.referrerPolicy = 'same-origin';
-          image.src = pixelUrl;
-        });
-        return;
-      }
-
-      const image = new Image();
-      image.referrerPolicy = 'same-origin';
-      image.src = pixelUrl;
+    function emitLorePixel() {
+      // Pixel parity testing is retired; the regular k4track event is the home source of truth.
     }
 
     function emitTrackingEvent(eventName, extra = {}) {
@@ -459,19 +424,6 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://k4studios.com/";
     }
 
     document.addEventListener('DOMContentLoaded', () => {
-      try {
-        if (window.location.pathname === '/' && typeof window.k4track === 'function') {
-          window.k4track('pilot_home_page_view', {
-            pageType: 'landing',
-            sourceLayer: 'pilot_home_v1_page_view',
-            theme: 'pilot_home_v1',
-            trigger: 'shadow_test'
-          });
-        }
-      } catch (_) {
-        // best-effort only
-      }
-
       const firePixel = (element) => {
         const pixelKey = element.getAttribute('data-k4-pixel');
         const trigger = element.getAttribute('data-k4-trigger') || null;

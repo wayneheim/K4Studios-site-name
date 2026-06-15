@@ -209,6 +209,14 @@ export function canonicalizeRawEventV2(rawEvent) {
     };
   }
 
+  if (String(rawEvent?.event_type || '').trim() === 'direct_image' && rawEvent?.source === 'proxy') {
+    return {
+      accepted: false,
+      reason: 'diagnostic_direct_image_raw_only',
+      rawEventType: rawEvent?.event_type || null
+    };
+  }
+
   const pagePath = normalizePath(rawEvent?.page || rawEvent?.page_path || rawEvent?.target_id);
   const imageId = inferImageId(rawEvent);
   const referrerParts = getReferrerParts(rawEvent?.referer);

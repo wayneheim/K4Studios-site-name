@@ -365,6 +365,7 @@ const SKIP_NEXT_GALLERY_LANDING_TTL_MS = 12000;
 const EVENT_SAMPLE_RATES: Record<string, number> = {
   site_content_view: 0.5
 };
+const ENABLE_REDUNDANT_PIXEL_PARITY = false;
 
 function markSkipNextGalleryLanding(galleryId?: string | null): void {
   if (typeof window === 'undefined') return;
@@ -666,6 +667,11 @@ export function emitActionPixel(action: string, imageId: string | null = null, c
   if (shouldSuppressClientAnalytics()) return;
 
   try {
+    const pixelType = context.pixelType || 'action';
+    if (!ENABLE_REDUNDANT_PIXEL_PARITY && pixelType !== 'image') {
+      return;
+    }
+
     const pagePath = window.location.pathname;
     const inferredImageId = imageId ?? getImageIdFromPath(pagePath);
     const inferredGalleryId = context.galleryId ?? getGalleryIdFromPath(pagePath);
@@ -679,7 +685,6 @@ export function emitActionPixel(action: string, imageId: string | null = null, c
             : 'other'
     );
 
-    const pixelType = context.pixelType || 'action';
     const layer = context.sourceLayer || DEFAULT_PIXEL_LAYER_BY_ACTION[action] || `${action}_pixel_v1`;
     const params = new URLSearchParams({
       t: pixelType,
