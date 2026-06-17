@@ -1,0 +1,808 @@
+---
+export const prerender = true;
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+const pageTitle = "Stories of the Frontier and Old West at Old Bedford Village";
+const pageDescription =
+  "A demo story page for Old Bedford Village Wild West Weekend, built around frontier history, living historians, and Wayne Heim's K4 Studios artwork.";
+const pagePath = "/OBV-Wild-West";
+const canonicalUrl = `https://www.k4studios.com${pagePath}`;
+
+const heroImage = "/img/i-Dw6Z8ff/xl.jpg";
+
+const storyParagraphs = [
+  "The West did not start in the West.",
+  "Long before the cowboy became an icon, before Hollywood turned the frontier into legend, the story began in places much like Old Bedford Village.",
+  "Small towns. Hard roads. Working hands. Families chasing a better life with no promise they would find one.",
+  "The West was built by people willing to risk comfort, certainty, and sometimes everything they owned on a dream just beyond the horizon. It was shaped by grit, sacrifice, faith, invention, disappointment, and the stubborn belief that tomorrow might still be worth the trouble.",
+  "Each fall, Old Bedford Village brings those stories to life during Wild West Weekend, where living historians, reenactors, artists, artisans, photographers, and storytellers gather among the cabins, shops, and streets of the village to remember the human side of frontier life.",
+  "Because the Old West was more than gunfights, outlaws, and cattle rustling.",
+  "It was long days and hard choices. Neighbors helping neighbors. A little luck meaning the difference between getting through the winter and not. It was blacksmiths and doctors, teachers and traders, families and faith, chores and medicine, railroads and cattle, loss and laughter, ambition and survival.",
+  "Every small town had a part to play. Every crossroads became one more turn in the larger story of American expansion. Places like Old Bedford Village help us understand that the legends of the West were not born fully formed. They were built from the lives of ordinary people whose names history often forgot.",
+  "During Wild West Weekend, visitors can step into that world.",
+  "Learn about the cattle trade. Hear how railroads changed the country. Watch artisans work. Meet living historians who study the clothing, tools, weapons, crafts, and daily lives of the period. See artists and storytellers interpret the frontier not as a distant myth, but as a living story still worth telling.",
+  "And maybe along the way, you will find answers to questions you did not know you had.",
+];
+
+const questions = [
+  "Did the alphabet always have 26 letters?",
+  'Why do they call the cowboy hat a "ten-gallon hat"?',
+  "Was Wild Bill Hickok a real person?",
+  "What did a horseshoe cost?",
+  "What did school, medicine, work, and family life look like on the frontier?",
+];
+
+const k4ProfileImages = [
+  {
+    src: "/img/i-KVxkXrV/m.jpg",
+    href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-KVxkXrV",
+    alt: "Rescue Mission 2, Western narrative fine art photography by Wayne Heim.",
+  },
+  {
+    src: "/img/i-fCG2nm8/m.jpg",
+    href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-fCG2nm8",
+    alt: "Three Amigos, Western cowboy conference fine art photography by Wayne Heim.",
+  },
+  {
+    src: "/img/i-jcLJT4J/m.jpg",
+    href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-jcLJT4J",
+    alt: "For Better or Worse, Western narrative fine art photography by Wayne Heim.",
+  },
+  {
+    src: "/img/i-nLKscbQ/m.jpg",
+    href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-nLKscbQ",
+    alt: "Measured by Hand, Western narrative fine art photography by Wayne Heim.",
+  },
+  {
+    src: "/img/i-mbND55n/m.jpg",
+    href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-mbND55n",
+    alt: "In the Crossfire, Western narrative fine art photography by Wayne Heim.",
+  },
+  {
+    src: "/img/i-WD9ZmGH/m.jpg",
+    href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-WD9ZmGH",
+    alt: "Keeping the Peace, Western narrative fine art photography by Wayne Heim.",
+  },
+];
+
+const meta = {
+  title: pageTitle,
+  description: pageDescription,
+  canonicalUrl,
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogImage: heroImage,
+  ogUrl: canonicalUrl,
+  twitterTitle: pageTitle,
+  twitterDescription: pageDescription,
+  twitterImage: heroImage,
+  twitterCard: "summary_large_image",
+  robots: "noindex, follow",
+};
+---
+
+<BaseLayout title={pageTitle} meta={meta}>
+  <main class="obv-page">
+    <svg class="svg-filter-defs" width="0" height="0" aria-hidden="true" focusable="false">
+      <defs>
+        <filter
+          id="obv-hero-sharpen"
+          x="0"
+          y="0"
+          width="100%"
+          height="100%"
+          color-interpolation-filters="sRGB"
+        >
+          <feConvolveMatrix
+            order="3"
+            kernelMatrix="0 -0.18 0 -0.18 1.72 -0.18 0 -0.18 0"
+            preserveAlpha="true"
+          />
+        </filter>
+      </defs>
+    </svg>
+
+    <header class="obv-site-header" aria-label="Old Bedford Village demo header">
+      <a class="obv-brand" href="https://oldbedfordvillage.com/" aria-label="Old Bedford Village home">
+        <span class="brand-emblem" aria-hidden="true">
+          <span>OBV</span>
+        </span>
+        <span class="brand-text">
+          <span>Old Bedford</span>
+          <strong>Village</strong>
+        </span>
+      </a>
+      <nav class="obv-nav" aria-label="Demo page navigation">
+        <a href="https://oldbedfordvillage.com/">Home</a>
+        <a href="https://oldbedfordvillage.com/events/">Events</a>
+        <a href="https://oldbedfordvillage.com/the-village/">The Village</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-image-wrap">
+        <img
+          src={heroImage}
+          alt="Painterly frontier scene used as a placeholder for Old Bedford Village Wild West Weekend imagery."
+          loading="eager"
+        />
+      </div>
+      <div class="hero-copy">
+        <p class="eyebrow">Wild West Weekend</p>
+        <h1>Stories of the Frontier and Old West at Old Bedford Village</h1>
+        <p class="deck">
+          Step into the streets, cabins, shops, and working stories that helped turn ordinary frontier lives into American legend.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="https://oldbedfordvillage.com/events/">View OBV Events</a>
+          <a class="button secondary" href="#frontier-stories">Read the Story</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="frontier-stories" class="story-layout">
+      <article class="story-copy" aria-label="Stories of the Frontier and Old West">
+        {storyParagraphs.map((paragraph) => <p>{paragraph}</p>)}
+      </article>
+
+      <aside class="feature-panel" aria-label="Wild West Weekend highlights">
+        <figure class="feature-panel-image">
+          <img
+            src="/img/i-5LTzhJ6/l.jpg"
+            alt="Placeholder cowboy portrait for the Old Bedford Village Wild West Weekend page."
+            loading="lazy"
+          />
+          <figcaption>A face from the frontier.</figcaption>
+        </figure>
+        <div class="feature-panel-copy">
+          <h2>Discover</h2>
+          <ul>
+            <li>How cattle trade shaped frontier work</li>
+            <li>Why railroads changed towns and travel</li>
+            <li>Blacksmiths, artisans, and working trades</li>
+            <li>Living historians, reenactors, and storytellers</li>
+            <li>Clothing, tools, weapons, and daily life</li>
+          </ul>
+        </div>
+        <figure class="feature-panel-image feature-panel-image-secondary">
+          <img
+            src="/img/i-B7ZSdfs/l.jpg"
+            alt="Placeholder Western narrative image for Old Bedford Village visitor stories."
+            loading="lazy"
+          />
+          <figcaption>Where legend meets place.</figcaption>
+        </figure>
+        <div class="event-date event-date-sidebar" aria-label="Wild West Weekend event dates">
+          <span>September</span>
+          <strong>19 &amp; 20</strong>
+        </div>
+      </aside>
+    </section>
+
+    <section class="question-section" aria-label="Questions visitors may discover">
+      <div class="question-heading">
+        <span class="section-kicker">Bring Your Curiosity</span>
+        <h2>Questions the frontier still knows how to ask</h2>
+      </div>
+      <div class="question-grid">
+        {questions.map((question) => (
+          <div class="question-card">
+            <p>{question}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="closing-invite" aria-label="Old Bedford Village invitation">
+      <div class="closing-copy">
+        <p class="waiting">Echoes from a frontier that still has something to say.</p>
+        <p>
+          Bring the kids. Bring your curiosity. Bring that part of you that still wants to know what life was really like before the stories became legends.
+        </p>
+        <p>
+          Old Bedford Village invites you to walk the streets, meet the storytellers, and experience the unnamed lives that history built its legends on.
+        </p>
+        <p>
+          Stand where work, hardship, invention, and hope once shaped the road west.
+        </p>
+        <p class="come-hear">An adventure of discovery awaits.</p>
+      </div>
+      <a
+        class="closing-image-link"
+        href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-rhqqrfz"
+        aria-label="View this Western narrative fine art photograph by Wayne Heim"
+      >
+        <img
+          src="/img/i-rhqqrfz/l.jpg"
+          alt="Placeholder Western reenactment image for Old Bedford Village Wild West Weekend."
+          loading="lazy"
+        />
+      </a>
+    </section>
+
+    <section class="k4-credit" aria-label="Frontier stories through art">
+      <div class="k4-credit-copy">
+        <span class="section-kicker">Frontier Stories Through Art</span>
+        <h2>Old Bedford Village as a living storytelling location</h2>
+        <p>
+          Old Bedford Village has also served as a storytelling location for nationally recognized artist and photographer Wayne Heim of K4 Studios, whose camera-captured painterly Western images are created with living historians during real historical reenactments.
+        </p>
+        <p>
+          His work uses the setting, people, clothing, and atmosphere of places like Old Bedford Village to create narrative fine art images that feel less like simple photographs and more like moments pulled from an unwritten film.
+        </p>
+        <a class="button primary" href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West">
+          Explore Wayne Heim's Western Narrative Fine Art Photography at K4Studios.com
+        </a>
+      </div>
+      <div class="k4-image-grid">
+        {k4ProfileImages.map((image) => (
+          <a href={image.href} aria-label={image.alt}>
+            <img src={image.src} alt={image.alt} loading="lazy" />
+          </a>
+        ))}
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  :global(body) {
+    margin: 0;
+    background: #f5f1e6;
+  }
+
+  .obv-page {
+    --obv-green: #005b3a;
+    --obv-green-dark: #003f2b;
+    --obv-leaf: #8fbb61;
+    --obv-gold: #b6aa70;
+    --obv-paper: #f5f1e6;
+    --obv-ink: #21352b;
+    --obv-rust: #8d4e2f;
+    min-height: 100vh;
+    background: var(--obv-paper);
+    color: var(--obv-ink);
+    font-family: Georgia, "Times New Roman", serif;
+  }
+
+  .svg-filter-defs {
+    position: absolute;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .obv-site-header {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    min-height: 86px;
+    padding: 0.65rem clamp(1rem, 4vw, 4rem);
+    background: var(--obv-green);
+    border-bottom: 2px solid var(--obv-gold);
+  }
+
+  .obv-brand,
+  .obv-nav a,
+  .button {
+    text-decoration: none;
+  }
+
+  .obv-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.85rem;
+    color: #eff8e8;
+  }
+
+  .brand-emblem {
+    display: grid;
+    width: 70px;
+    height: 46px;
+    place-items: center;
+    border: 2px solid var(--obv-gold);
+    border-radius: 50%;
+    color: var(--obv-leaf);
+    font-family: Arial, sans-serif;
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 0;
+  }
+
+  .brand-text {
+    display: grid;
+    line-height: 0.9;
+    text-transform: uppercase;
+  }
+
+  .brand-text span {
+    color: var(--obv-leaf);
+    font-size: clamp(1rem, 2vw, 1.5rem);
+  }
+
+  .brand-text strong {
+    color: #f7fff2;
+    font-size: clamp(1.2rem, 2.4vw, 1.85rem);
+    font-weight: 500;
+  }
+
+  .obv-nav {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.7rem, 3vw, 2.5rem);
+    font-family: Arial, sans-serif;
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .obv-nav a {
+    color: #f5ffe7;
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.04fr) minmax(20rem, 0.96fr);
+    min-height: calc(100vh - 86px);
+    background:
+      linear-gradient(90deg, rgba(0, 63, 43, 0.92), rgba(0, 91, 58, 0.72)),
+      var(--obv-green);
+    color: white;
+  }
+
+  .hero-image-wrap {
+    min-height: 31rem;
+    overflow: hidden;
+  }
+
+  .hero img,
+  .feature-panel img,
+  .closing-invite img,
+  .k4-image-grid img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero-image-wrap img {
+    filter: url("#obv-hero-sharpen") contrast(1.04) saturate(1.02);
+    object-position: 42% center;
+  }
+
+  .feature-panel img,
+  .closing-invite img,
+  .k4-image-grid img {
+    border-radius: 8px;
+  }
+
+  .hero-copy {
+    align-self: center;
+    padding: clamp(2rem, 6vw, 5.5rem);
+  }
+
+  .eyebrow,
+  .section-kicker {
+    display: block;
+    color: var(--obv-leaf);
+    font-family: Arial, sans-serif;
+    font-size: 0.82rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .hero h1,
+  .question-heading h2,
+  .k4-credit h2 {
+    margin: 0;
+    line-height: 0.98;
+    letter-spacing: 0;
+  }
+
+  .hero h1 {
+    max-width: 11ch;
+    margin-top: 0.9rem;
+    font-size: clamp(3.1rem, 7vw, 7.4rem);
+    font-weight: 500;
+  }
+
+  .deck {
+    max-width: 38rem;
+    margin: 1.4rem 0 0;
+    color: #edf7e7;
+    font-size: clamp(1.15rem, 2.1vw, 1.65rem);
+    line-height: 1.45;
+  }
+
+  .event-date {
+    display: inline-grid;
+    gap: 0.1rem;
+    margin-top: 1rem;
+    padding: 0.75rem 0.9rem;
+    color: #f7fff2;
+    border: 2px solid var(--obv-gold);
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.04em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .event-date span {
+    color: var(--obv-leaf);
+    font-size: 0.75rem;
+    font-weight: 900;
+  }
+
+  .event-date strong {
+    font-size: clamp(1.45rem, 3vw, 2.35rem);
+    line-height: 1;
+  }
+
+  .event-date-sidebar {
+    justify-self: center;
+    margin-top: 0.25rem;
+    color: var(--obv-green-dark);
+    background: rgba(255, 250, 240, 0.78);
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 2rem;
+  }
+
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 0.75rem 1.1rem;
+    border: 2px solid currentColor;
+    border-radius: 2px;
+    font-family: Arial, sans-serif;
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  .button.primary {
+    background: var(--obv-gold);
+    border-color: var(--obv-gold);
+    color: #143225;
+  }
+
+  .button.secondary {
+    color: #f5ffe7;
+  }
+
+  .story-layout,
+  .question-section,
+  .closing-invite,
+  .k4-credit {
+    width: min(1180px, calc(100% - 2rem));
+    margin-inline: auto;
+  }
+
+  .question-heading h2,
+  .k4-credit h2 {
+    margin-top: 0.55rem;
+    color: var(--obv-green-dark);
+    font-size: clamp(2.2rem, 5vw, 4.8rem);
+    font-weight: 500;
+  }
+
+  .story-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(18rem, 24rem);
+    gap: clamp(2rem, 5vw, 4rem);
+    padding: clamp(3rem, 7vw, 6rem) 0;
+  }
+
+  .story-copy {
+    max-width: 760px;
+  }
+
+  .story-copy p,
+  .closing-copy p,
+  .k4-credit-copy p {
+    margin: 0 0 1.25rem;
+    font-size: clamp(1.04rem, 1.7vw, 1.28rem);
+    line-height: 1.72;
+  }
+
+  .story-copy p:first-child {
+    color: var(--obv-rust);
+    font-size: clamp(1.65rem, 3vw, 2.65rem);
+    line-height: 1.08;
+    white-space: nowrap;
+  }
+
+  .feature-panel {
+    align-self: start;
+    display: grid;
+    gap: 1.55rem;
+  }
+
+  .feature-panel-image {
+    margin: 0;
+  }
+
+  .feature-panel-image img {
+    aspect-ratio: 4 / 5;
+    height: auto;
+  }
+
+  .feature-panel-image figcaption {
+    margin-top: 0.55rem;
+    color: rgba(33, 53, 43, 0.78);
+    font-family: Arial, sans-serif;
+    font-size: 0.9rem;
+    font-style: italic;
+    line-height: 1.45;
+    text-align: center;
+  }
+
+  .feature-panel-copy {
+    padding: 1.25rem;
+    background: #fffaf0;
+    border-left: 4px solid var(--obv-gold);
+  }
+
+  .feature-panel-copy h2 {
+    margin: 0;
+    color: var(--obv-green-dark);
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    font-weight: 500;
+    line-height: 1;
+    text-align: center;
+  }
+
+  .feature-panel-image-secondary img {
+    aspect-ratio: 4 / 3;
+  }
+
+  .feature-panel ul {
+    display: grid;
+    gap: 0.65rem;
+    margin: 1.1rem 0 0;
+    padding-left: 1.1rem;
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  .feature-panel li {
+    white-space: nowrap;
+  }
+
+  .question-section {
+    padding: clamp(2.5rem, 6vw, 5rem) 0;
+    border-top: 1px solid rgba(0, 91, 58, 0.22);
+    border-bottom: 1px solid rgba(0, 91, 58, 0.22);
+  }
+
+  .question-heading {
+    max-width: 760px;
+  }
+
+  .question-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 0.85rem;
+    margin-top: 2rem;
+  }
+
+  .question-card {
+    min-height: 7.75rem;
+    padding: 1rem 1.05rem;
+    background: var(--obv-green-dark);
+    color: #f7fff2;
+    border-top: 5px solid var(--obv-gold);
+  }
+
+  .question-card p {
+    margin: 0;
+    font-size: clamp(1rem, 1.4vw, 1.2rem);
+    line-height: 1.35;
+  }
+
+  .closing-invite {
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: center;
+    padding: clamp(3rem, 7vw, 6rem) 0;
+  }
+
+  .closing-copy {
+    max-width: 680px;
+  }
+
+  .waiting,
+  .come-hear {
+    color: var(--obv-green-dark);
+    font-size: clamp(1.5rem, 3vw, 2.6rem) !important;
+    line-height: 1.12 !important;
+  }
+
+  .come-hear {
+    color: var(--obv-rust);
+    font-size: clamp(1.35rem, 2.45vw, 2.2rem) !important;
+    white-space: nowrap;
+  }
+
+  .closing-invite img {
+    aspect-ratio: 5 / 4;
+    height: auto;
+    border: 10px solid #fffaf0;
+    box-shadow: 0 18px 50px rgba(33, 53, 43, 0.18);
+  }
+
+  .closing-image-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .closing-image-link:focus-visible {
+    outline: 3px solid var(--obv-rust);
+    outline-offset: 4px;
+    border-radius: 10px;
+  }
+
+  .k4-credit {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(16rem, 0.95fr);
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: center;
+    margin-bottom: clamp(3rem, 6vw, 5rem);
+    padding: clamp(2rem, 5vw, 4rem);
+    background: #fffaf0;
+    border-top: 8px solid var(--obv-green);
+  }
+
+  .k4-credit .button {
+    max-width: 33rem;
+    text-align: center;
+  }
+
+  .k4-credit-copy {
+    opacity: 0.7;
+  }
+
+  .k4-image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+
+  .k4-image-grid a {
+    display: block;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #eadfc7;
+  }
+
+  .k4-image-grid a:focus-visible {
+    outline: 3px solid var(--obv-rust);
+    outline-offset: 3px;
+  }
+
+  .k4-image-grid img {
+    aspect-ratio: 1 / 1;
+    height: 100%;
+    transition: transform 900ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .k4-image-grid a:nth-child(3) img {
+    object-position: center 28%;
+  }
+
+  .k4-image-grid a:nth-child(6) img {
+    object-position: center 38%;
+  }
+
+  .k4-image-grid a:nth-child(5) img {
+    object-position: 28% center;
+  }
+
+  .k4-image-grid a:hover img {
+    transform: scale(1.035);
+  }
+
+  @media (max-width: 920px) {
+    .obv-site-header,
+    .story-layout,
+    .closing-invite,
+    .k4-credit {
+      grid-template-columns: 1fr;
+    }
+
+    .obv-site-header {
+      position: relative;
+    }
+
+    .obv-nav {
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .hero {
+      grid-template-columns: 1fr;
+    }
+
+    .hero-image-wrap {
+      min-height: 45vh;
+      order: 2;
+    }
+
+    .hero-copy {
+      order: 1;
+    }
+
+    .hero h1 {
+      max-width: 12ch;
+    }
+
+    .question-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .feature-panel li {
+      white-space: normal;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .obv-site-header {
+      align-items: flex-start;
+      padding: 0.9rem 1rem;
+    }
+
+    .obv-nav {
+      overflow-x: auto;
+      justify-content: flex-start;
+      padding-bottom: 0.2rem;
+    }
+
+    .brand-emblem {
+      width: 58px;
+      height: 38px;
+    }
+
+    .hero-copy {
+      padding: 2rem 1rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.75rem, 16vw, 4.2rem);
+    }
+
+    .question-grid,
+    .k4-image-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .question-card {
+      min-height: 8rem;
+    }
+
+    .story-copy p:first-child {
+      white-space: normal;
+    }
+
+    .come-hear {
+      white-space: normal;
+    }
+  }
+</style>

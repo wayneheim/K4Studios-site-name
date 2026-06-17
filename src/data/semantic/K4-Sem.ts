@@ -645,12 +645,25 @@ westernCowboyArtCommercialHub: {
 
 cowboyThemedArtworkCommercialHub: {
   path: "/cowboy-themed-artwork",
-  def: "The theme-intent route for cowboy themed artwork, translating decor-style search language into Wayne Heim's painterly cowboy photography, Western portrait collections, and fine art print options.",
+  def: "The theme-intent route for cowboy themed artwork, translating decor-style search language into Wayne Heim's cowboy art, Western portrait collections, and fine art print options without overloading the page with photo intent.",
   fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
   landingPhrases: [
     { phrase: "cowboy themed artwork", rating: 7, use: true, link: "/cowboy-themed-artwork" },
     { phrase: "cowboy themed art", rating: 6, use: true, link: "/cowboy-themed-artwork" },
     { phrase: "western themed artwork", rating: 5, use: true, link: "/cowboy-themed-artwork" },
+  ],
+  imagePhrases: []
+},
+
+cowboyThemedPhotographyCommercialHub: {
+  path: "/cowboy-themed-photography",
+  def: "The photo-intent route for cowboy themed photography, cowboy themed photos, camera-origin Western cowboy portraits, black and white cowboy studies, and story-driven fine art photo prints by Wayne Heim.",
+  fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
+  landingPhrases: [
+    { phrase: "cowboy themed photography", rating: 7, use: true, link: "/cowboy-themed-photography" },
+    { phrase: "cowboy themed photos", rating: 6, use: true, link: "/cowboy-themed-photography" },
+    { phrase: "cowboy photography prints", rating: 5, use: true, link: "/cowboy-themed-photography" },
+    { phrase: "western cowboy photo prints", rating: 5, use: true, link: "/cowboy-themed-photography" },
   ],
   imagePhrases: []
 },

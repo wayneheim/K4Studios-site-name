@@ -24,6 +24,9 @@ https://k4studios.com/(.+)/$  https://www.k4studios.com/$1  301!
 
 # Canonicalize Engrained image URLs to SmugMug-mirroring structure:
 #   /Other/K4-Select-Series/Engrained/Engrained-Series/i-XXXX
+# Legacy K4 Select Series folders now consolidate to the Engrained doorway.
+^/Other/K4-Select-Series/Series-[0-9]+$  /Engrained  301!
+^/Other/K4-Select-Series/Series-[0-9]+/(.*)$  /Engrained  301!
 # Collapse duplicated Engrained segments observed in crawler traffic.
 ^/Other/K4-Select-Series/Engrained/Engrained-Series/Engrained/Engrained-Series/(i-[^/]+)$  /Other/K4-Select-Series/Engrained/Engrained-Series/$1  301!
 ^/Other/K4-Select-Series/Engrained/Engrained-Series/Engrained/Engrained-Series/(i-[^/]+)/(.*)$  /Other/K4-Select-Series/Engrained/Engrained-Series/$1/$2  301!

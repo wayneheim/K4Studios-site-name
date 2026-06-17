@@ -1723,6 +1723,56 @@ async function handleGatewayRequest(request, env) {
 
 const OUR_DOMAINS = ['k4studios.com', 'www.k4studios.com'];
 const MAX_RANK = 50; // Search depth for sparkline scaling
+const DOORWAY_SERP_TITLE_TERMS = [
+  "American Western Art",
+  "Art of the West",
+  "Black and White Cowboy Art",
+  "Black and White Cowboy Photography",
+  "Black and White Cowboy Photos",
+  "Cinematic Western Art",
+  "Cowboy Art Prints",
+  "Cowboy Artwork Prints",
+  "Cowboy Fine Art Photography",
+  "Cowboy Fine Art Prints",
+  "Cowboy Painterly Fine Art Photography",
+  "Cowboy Pictures",
+  "Cowboy Themed Artwork",
+  "Cowboy Wall Art",
+  "Fine Art Photography of the American West",
+  "Historical Fine Art Photography Collection",
+  "Modern Western Interior Design Art",
+  "Old West Pictures",
+  "Old Western Art",
+  "Painterly Western Photography",
+  "Rustic Western Interior Design Art",
+  "Vintage Cowboy Art",
+  "Vintage Western Art",
+  "Western Art Photography",
+  "Western Art Prints",
+  "Western Artwork",
+  "Western Black and White Photography",
+  "Western Cowboy Art",
+  "Western Cowboy Photography",
+  "Western Cowboy Pictures",
+  "Western Fine Art Photography",
+  "Western Fine Art Photography Collection",
+  "Western Frontier Art",
+  "Western Interior Design Art",
+  "Western Landscape Art",
+  "Western Photography Art",
+  "Western Photography Prints",
+  "Western Photos",
+  "Western Portrait Photography",
+  "Western Storytelling Photography",
+  "Western Wall Art",
+  "Western Wall Art for Interior Designers",
+  "Wild West Art",
+  "Women of the Wild West",
+  "WWII Themed Fine Art Prints"
+];
+const DOORWAY_SERP_TITLE_TERM_SET = new Set(
+  DOORWAY_SERP_TITLE_TERMS.map((term) => term.toLowerCase())
+);
 
 // Escape HTML to prevent XSS
 function escapeHtml(s='') {
@@ -2058,7 +2108,14 @@ async function handleSerpLaunch(request, env) {
       todayMap[r.keyword][r.engine] = r.our_rank;
     }
     
-    const keywordCards = kwList.map((kw, idx) => {
+    const doorwayTitleList = kwList.filter((kw) =>
+      DOORWAY_SERP_TITLE_TERM_SET.has(String(kw.keyword || '').toLowerCase())
+    );
+    const primaryKeywordList = kwList.filter((kw) =>
+      !DOORWAY_SERP_TITLE_TERM_SET.has(String(kw.keyword || '').toLowerCase())
+    );
+
+    const renderKeywordCard = (kw, idx) => {
       const encoded = encodeURIComponent(kw.keyword);
       const safeKw = escapeHtml(kw.keyword);
       const todayData = todayMap[kw.keyword] || {};
@@ -2095,7 +2152,27 @@ async function handleSerpLaunch(request, env) {
           </div>
         </div>
       `;
-    }).join('');
+    };
+
+    const primaryKeywordCards = primaryKeywordList
+      .map((kw, idx) => renderKeywordCard(kw, idx))
+      .join('');
+    const doorwayTitleCards = doorwayTitleList
+      .map((kw, idx) => renderKeywordCard(kw, primaryKeywordList.length + idx))
+      .join('');
+    const keywordCards = [
+      primaryKeywordCards,
+      doorwayTitleCards ? `
+        <div class="section-divider">
+          <div>
+            <span class="section-kicker">Doorway Page Names</span>
+            <strong>Search the doorway page name keyword phrases</strong>
+          </div>
+          <span>${doorwayTitleList.length} titles</span>
+        </div>
+        ${doorwayTitleCards}
+      ` : ''
+    ].filter(Boolean).join('');
 
     const html = `<!DOCTYPE html>
 <html lang="en">
@@ -2121,6 +2198,38 @@ async function handleSerpLaunch(request, env) {
       border-radius: 10px;
       padding: 20px;
       margin-bottom: 15px;
+    }
+    .section-divider {
+      margin: 34px 0 18px;
+      padding: 14px 16px;
+      border-top: 1px solid #444;
+      border-bottom: 1px solid #333;
+      background: #202020;
+      color: #ddd;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+    }
+    .section-divider strong {
+      display: block;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 700;
+    }
+    .section-divider span {
+      color: #888;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+    .section-divider .section-kicker {
+      display: block;
+      color: #4a9eff;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 3px;
     }
     .kw-header {
       display: flex;

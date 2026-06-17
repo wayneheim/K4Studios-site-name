@@ -1,0 +1,441 @@
+---
+export const prerender = true;
+import BaseLayout    from "@/layouts/BaseLayout.astro";
+import { getSemanticImageUrl } from "@/utils/imageProxy.js";
+import BlogJsonLd    from "@/components/blog/BlogJsonLd.astro";
+import LandingHeader from "@/components/Landing-Header.jsx";
+import SiteFooter    from "@/components/Footer.astro";
+import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
+import { getStructuredData, getBlogBreadcrumbList } from "@/components/utils/getStructuredData.ts";
+import { getLandingMeta } from "@/data/landingMeta.ts";
+import { autoLinkKeywordsInText } from "@/components/utils/autoLinkKeywordsInText.ts";
+import { semantic as k4Semantic } from "@/data/semantic/K4-Sem.ts";
+import {
+  galleryDataMap,
+  allImages
+} from "@/data/galleryMaps/MasterGalleryData.mjs";
+import { galleryData as painterlyImages } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs";
+import { galleryData as civilWarColor } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs";
+import { galleryData as civilWarBW } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs";
+import { galleryData as roaring20sColor } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color.mjs";
+import { galleryData as roaring20sBW } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White.mjs";
+import { galleryData as wwiiPortraitsColor } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs";
+import { galleryData as wwiiPortraitsBW } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White.mjs";
+import "@/styles/global.css";
+
+const sectionPath = "/Blog/off-the-paper";
+
+const getProxySrc = (id: string, size: string = "l") => getSemanticImageUrl(id, {}, size);
+const getAbsoluteProxySrc = (id: string, size: string = "l") => getSemanticImageUrl(id, {}, size, { absolute: true });
+
+const coverImageId = "i-LLdZzQW";
+const coverImage = getProxySrc(coverImageId, "l");
+const coverImageAbsolute = getAbsoluteProxySrc(coverImageId, "l");
+
+const pageTitle = "Off the Paper";
+const fullTitle = "Off the Paper | Outside the Lines";
+const pageDescription = "An Outside the Lines essay on art, gatekeeping, originality, visual storytelling, and the work that refuses to stay inside approved categories.";
+const coverImageAlt = "Tall Tale Stories - a cowboy holding court and spinning a good yarn in a painterly Western fine art scene.";
+
+const structuredData = getStructuredData({
+  type: "BlogPosting",
+  data: {
+    headline: fullTitle,
+    description: pageDescription,
+    url: `https://k4studios.com${sectionPath}`,
+    copyrightNotice: "© Wayne Heim",
+    author: {
+      "@type": "Person",
+      name: "Wayne Heim"
+    },
+    datePublished: "2026-06-16",
+    image: coverImageAbsolute,
+    articleSection: "Art Essays",
+    keywords: [
+      "Outside the Lines",
+      "fine art photography",
+      "painterly photography",
+      "visual storytelling",
+      "Western narrative art",
+      "One-Image Movie",
+      "art gatekeeping",
+      "Wayne Heim"
+    ],
+    wordCount: 2600
+  },
+  defaults: {
+    copyrightNotice: "© Wayne Heim",
+    license: "https://k4studios.com/copyright",
+    creditText: "Wayne Heim",
+    creatorName: "Wayne Heim",
+    creatorUrl: "https://k4studios.com/"
+  }
+});
+
+const breadcrumbsJSON = getBlogBreadcrumbList({
+  title: pageTitle,
+  url: `https://k4studios.com${sectionPath}`
+});
+
+const meta = {
+  ...getLandingMeta(sectionPath, coverImageAbsolute),
+  title: fullTitle,
+  seoTitle: fullTitle,
+  description: pageDescription,
+  ogUrl: `https://k4studios.com${sectionPath}`,
+  ogTitle: fullTitle,
+  ogDescription: pageDescription,
+  ogImage: coverImageAbsolute,
+  ogImageAlt: coverImageAlt,
+  ogType: "article",
+  twitterUrl: `https://k4studios.com${sectionPath}`,
+  twitterTitle: fullTitle,
+  twitterDescription: pageDescription,
+  twitterImage: coverImageAbsolute,
+  twitterCard: "summary_large_image"
+};
+
+function shuffleArray<T>(arr: T[]): T[] {
+  return arr
+    .map(value => ({ value, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ value }) => value);
+}
+
+const allGalleryImages = [
+  ...painterlyImages.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color" })),
+  ...civilWarColor.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color" })),
+  ...civilWarBW.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White" })),
+  ...roaring20sColor.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color" })),
+  ...roaring20sBW.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White" })),
+  ...wwiiPortraitsColor.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color" })),
+  ...wwiiPortraitsBW.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White" }))
+].filter(img => img.visibility !== "ghost");
+
+const previewImages = shuffleArray(allGalleryImages).slice(0, 6);
+const previewPath = "/Galleries";
+
+const galleryDatas = Object.values(galleryDataMap).flat();
+const featheredImages = allImages.filter(img => (img as any).visibility !== "ghost").slice(0, 12);
+const galleryPaths = Object.keys(galleryDataMap);
+
+const linkKeywords = (text: string) =>
+  autoLinkKeywordsInText(text, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname);
+
+const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-decoration: none;' onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Blog</a> › Off the Paper`;
+---
+
+<BaseLayout
+  title={fullTitle}
+  breadcrumbsJSON={breadcrumbsJSON}
+  meta={meta}
+>
+  <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
+    <div class="drawer-mode">
+      <LandingHeader client:load breadcrumb={blogBreadcrumb} />
+    </div>
+
+    <section style="text-align:center; padding:3rem 0 2rem;">
+      <h1 style="font-size:3rem; font-weight:700; margin-bottom:0.5rem;">Off the Paper</h1>
+      <p style="font-size:1.5rem; color:#4a4a4a;">Outside the Lines</p>
+    </section>
+
+    <section class="cover-wrap">
+      <a
+        href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-LLdZzQW"
+        class="cover-link"
+        onmouseenter="this.querySelector('img').style.boxShadow='0 0 0 2px rgba(255,255,255,0.85), 0 4px 15px 4px rgba(134,134,134,0.85)'"
+        onmouseleave="this.querySelector('img').style.boxShadow='none'"
+      >
+        <img
+          src={coverImage}
+          alt={coverImageAlt}
+          class="cover-image"
+        />
+        <div class="cover-caption">Click for details</div>
+      </a>
+      <hr class="intro-rule" />
+    </section>
+
+    <section class="story-section max-w-[860px] mx-auto px-4">
+      <BlogJsonLd json={structuredData}>
+      <article class="story-block space-y-4">
+
+        <p set:html={linkKeywords(`When did the safety of familiarity begin to outweigh the power of originality?`)} />
+        <p set:html={linkKeywords(`That question keeps following me.`)} />
+        <p set:html={linkKeywords(`Through art shows. Through submission guidelines. Through rooms full of beautiful things that somehow ask very little of the viewer.`)} />
+        <p set:html={linkKeywords(`Through algorithms that learn what we liked yesterday and quietly feed it back to us tomorrow with a slightly different hat.`)} />
+        <p set:html={linkKeywords(`Categories begin as a way to organize the room. A way to help people understand what they are looking at.`)} />
+        <p set:html={linkKeywords(`Then over time, the convenience becomes a rule. The rule becomes a standard. The standard becomes a wall.`)} />
+        <p set:html={linkKeywords(`And before long, the work that feels most alive is the work hardest to place.`)} />
+        <p set:html={linkKeywords(`The art world says it wants originality. But often what is rewarded is recognition.`)} />
+        <p set:html={linkKeywords(`The familiar shape. The familiar mood. The familiar medium behaving in a familiar way.`)} />
+        <p set:html={linkKeywords(`Different enough to feel fresh. Not different enough to make the room nervous.`)} />
+
+        <hr />
+
+        <p set:html={linkKeywords(`<strong>Every class had one.</strong>`)} />
+        <p set:html={linkKeywords(`While the rest of us carefully traced inside the printed borders - keeping the sky blue, the grass green, the lines respected - Billy was over in the corner with six crayons, paper peeled off, rubbing them sideways with his shoe.`)} />
+        <p set:html={linkKeywords(`No lines. No borders. No apology.`)} />
+        <p set:html={linkKeywords(`The teacher was not impressed.`)} />
+        <p set:html={linkKeywords(`Billy got redirected. Corrected. Gently steered back toward the lines where the gold stars lived.`)} />
+        <p set:html={linkKeywords(`The rest of us learned something that day. Not about coloring. About compliance.`)} />
+        <p set:html={linkKeywords(`Here is the question nobody thought to ask: When did Billy stop being the poster child for artistic exploration and start becoming the thing we quietly redirected?`)} />
+        <p set:html={linkKeywords(`When did Billy stop being the point?`)} />
+
+        <hr />
+
+        <p set:html={linkKeywords(`Art has always had a Billy problem.`)} />
+        <p set:html={linkKeywords(`Not because artists lack discipline. Not because craft does not matter. But because every generation builds a room and then slowly, quietly, begins to mistake the walls for the point.`)} />
+        <p set:html={linkKeywords(`It happens nearly the same way every time.`)} />
+        <p set:html={linkKeywords(`A new form arrives. It threatens the existing order. The existing order resists. Rules get written. Categories get enforced. Gold stars get handed to the work that stays where it is told.`)} />
+        <p set:html={linkKeywords(`The work that does not gets redirected to the corner. Or rejected at the door. Or handed back with a note explaining which category it actually belongs in.`)} />
+        <p set:html={linkKeywords(`But Billy is not the problem art needs to correct.`)} />
+        <p set:html={linkKeywords(`<strong>Billy is the antidote.</strong>`)} />
+        <p set:html={linkKeywords(`To formula. To algorithmic sameness. To the quiet pressure to make work that can be recognized before it has a chance to be felt.`)} />
+        <p set:html={linkKeywords(`Because algorithms do not reward wonder. They reward pattern.`)} />
+        <p set:html={linkKeywords(`The already proven. The already clicked. The already understood.`)} />
+        <p set:html={linkKeywords(`And when art starts thinking that way too, originality begins arriving as an inconvenience. Not because it lacks value. Because it interrupts the machinery.`)} />
+        <p set:html={linkKeywords(`Billy interrupts the machinery. That is why he matters.`)} />
+        <p set:html={linkKeywords(`He reminds us that the line was never the destination.`)} />
+        <p set:html={linkKeywords(`The line was just where somebody else stopped imagining.`)} />
+
+        <hr />
+
+        <p set:html={linkKeywords(`Art is not the only place this happens.`)} />
+        <p set:html={linkKeywords(`Every field has its Billy problem. Science has its gatekeepers. Business has its gatekeepers. Technology has its gatekeepers. Every established room develops a memory of how things are supposed to work.`)} />
+        <p set:html={linkKeywords(`The question is whether the room can still recognize the thing that might change it.`)} />
+        <p set:html={linkKeywords(`The computer mouse did not become important because it looked inevitable.`)} />
+        <p set:html={linkKeywords(`It became important because someone looked at the relationship between a human hand and a machine and asked a different question.`)} />
+        <p set:html={linkKeywords(`<strong>Why does it have to work that way?</strong>`)} />
+        <p set:html={linkKeywords(`That is the Billy question.`)} />
+        <p set:html={linkKeywords(`Not how do we make this fit the current model. Not how do we explain this using the language we already have. Not which approved category does this belong in.`)} />
+        <p set:html={linkKeywords(`But why does it have to work that way?`)} />
+        <p set:html={linkKeywords(`That question has changed science. It has changed technology. It has changed business. It has changed how we see, build, move, communicate, and imagine.`)} />
+        <p set:html={linkKeywords(`But art is a stranger battlefield.`)} />
+        <p set:html={linkKeywords(`Because in art, the gatekeeper's judgment often becomes the credential. The curator's taste becomes the institution. The judge's uncertainty becomes the rejection. The category becomes the doorway.`)} />
+        <p set:html={linkKeywords(`There is no data to appeal to. No utility that can prove the work useful. No market mechanism that immediately overrules the person holding the gold stars.`)} />
+        <p set:html={linkKeywords(`Which makes the next question almost too uncomfortable to ask out loud.`)} />
+        <p set:html={linkKeywords(`Have we become too formulaic in our definition of what is acceptable? Too precise in our definition of what is sellable?`)} />
+        <p set:html={linkKeywords(`Because the moment art optimizes for sellable, it stops asking why the hell not and starts asking what worked last time.`)} />
+        <p set:html={linkKeywords(`That is not a Billy question. That is a teacher question.`)} />
+
+        <hr />
+
+        <p set:html={linkKeywords(`We have been here before. Exactly here.`)} />
+        <p set:html={linkKeywords(`It was called Pictorialism.`)} />
+        <p set:html={linkKeywords(`In the late 19th and early 20th century, painterly fine art photography was fighting for its life as a serious art form. Painters dismissed it as mechanical. A technical process. A trick of chemistry and light.`)} />
+        <p set:html={linkKeywords(`Where was the hand? Where was the labor? Where was the artist?`)} />
+        <p set:html={linkKeywords(`Photography answered in the language the room already respected.`)} />
+        <p set:html={linkKeywords(`Soft focus. Atmosphere. Manipulation. Handwork on the negative.`)} />
+        <p set:html={linkKeywords(`The Pictorialists colored outside the lines of what photography was supposed to be, supposed to do, and supposed to say. They treated the photograph as raw material for the message, not the message itself.`)} />
+        <p set:html={linkKeywords(`Then another argument rose up.`)} />
+        <p set:html={linkKeywords(`Enough.`)} />
+        <p set:html={linkKeywords(`Photography does not need to imitate painting to be art. It needs to become fully and unapologetically itself.`)} />
+        <p set:html={linkKeywords(`That argument won. Eventually.`)} />
+        <p set:html={linkKeywords(`After decades of institutional resistance. After galleries refused the work. After established voices dismissed it as novelty. After the rules held for as long as rules can hold against an idea whose time had come.`)} />
+        <p set:html={linkKeywords(`The battle is settled history now.`)} />
+        <p set:html={linkKeywords(`Nobody defends the old gatekeepers anymore. Everyone agrees the work that transcended the medium rules was the work that lasted.`)} />
+        <p set:html={linkKeywords(`Everyone agrees. In retrospect.`)} />
+        <p set:html={linkKeywords(`But settled battles have a way of fooling us. They make us think the lesson was learned. Usually, it was only relocated.`)} />
+
+        <hr />
+
+        <p set:html={linkKeywords(`The defensive posture that painting once held against photography - this is mechanical, this requires no real craft, this is not art - photography eventually inherited.`)} />
+        <p set:html={linkKeywords(`Pulled it on like a hand-me-down coat. Wore it with the same conviction.`)} />
+        <p set:html={linkKeywords(`The medium that broke the rules became the medium that enforced them.`)} />
+        <p set:html={linkKeywords(`Straight out of camera. Minimal processing. Authentic. Pure. Real photography.`)} />
+        <p set:html={linkKeywords(`A new academy. New rules. New gatekeepers. New gold stars for staying inside the lines.`)} />
+        <p set:html={linkKeywords(`And painting?`)} />
+        <p set:html={linkKeywords(`Painting quietly absorbed photographic seeing so completely that the brush became a slower lens.`)} />
+        <p set:html={linkKeywords(`Photo reference. Projected images. Hyperrealism. Composited scenes. The painter's eye increasingly trained on what a camera captures rather than what imagination constructs.`)} />
+        <p set:html={linkKeywords(`Breathtaking craft. Stunning technique.`)} />
+        <p set:html={linkKeywords(`But somewhere in that process, the walls of the room became the point again.`)} />
+        <p set:html={linkKeywords(`So here we are.`)} />
+        <p set:html={linkKeywords(`One discipline fighting to stay pure from manipulation. Another fighting to stay faithful to the reference. Both building walls around their containers.`)} />
+        <p set:html={linkKeywords(`Both writing prospectuses full of words like innovative and new vision and reimagining while the submission rules quietly protect the familiar.`)} />
+        <p set:html={linkKeywords(`The vocabulary of liberation. The architecture of protection.`)} />
+
+        <hr />
+
+        <p set:html={linkKeywords(`Western art has its own version of this.`)} />
+        <p set:html={linkKeywords(`The tradition was born around story. Around the unresolved moment. Around the rider turning in the saddle, the smoke hanging in the air, the glance before the draw, the silence after the thing has already happened but before anyone knows what it means.`)} />
+        <p set:html={linkKeywords(`Russell understood that. Remington understood that.`)} />
+        <p set:html={linkKeywords(`The best Western narrative art was never simply about depicting the West.`)} />
+        <p set:html={linkKeywords(`It was about setting a fuse in the viewer's imagination and walking away before it burned down.`)} />
+        <p set:html={linkKeywords(`Then, over time, the rooms got cleaner. The shows got better organized. The categories got more precise. The prospectuses got more careful. The definitions got easier to defend.`)} />
+        <p set:html={linkKeywords(`And somewhere in all that useful order, something slipped out the back door.`)} />
+        <p set:html={linkKeywords(`Not the craft. The question.`)} />
+        <p set:html={linkKeywords(`Walk the floors of enough shows. Read enough prospectuses. Submit enough work to enough categories. A pattern emerges that is difficult to unsee once you have seen it.`)} />
+        <p set:html={linkKeywords(`The shows that most loudly celebrate breaking boundaries are often the most precise about which boundaries may be broken.`)} />
+        <p set:html={linkKeywords(`Different is welcome. Provided it is the right kind of different. Provided it stays inside the lines.`)} />
+
+        <hr />
+
+        <p set:html={linkKeywords(`But every so often, the room forgets its own rules.`)} />
+        <p set:html={linkKeywords(`A seasoned curator looks at work that does not quite fit the available categories. Not because the work is careless. Not because it lacks craft. But because it is asking a different question than the categories were built to answer.`)} />
+        <p set:html={linkKeywords(`He looks for a long moment.`)} />
+        <p set:html={linkKeywords(`Then he says:`)} />
+        <p set:html={linkKeywords(`<strong>This isn't just photography. This is Art.</strong>`)} />
+        <p set:html={linkKeywords(`Same work. Different room. Different eyes. Different answer.`)} />
+        <p set:html={linkKeywords(`That is not a story about validation. It is a story about seeing.`)} />
+        <p set:html={linkKeywords(`He did not say, this is acceptable photography. He did not say, this is close enough to painting. He did not try to rescue the work by moving it from one container into another.`)} />
+        <p set:html={linkKeywords(`He saw past the container.`)} />
+        <p set:html={linkKeywords(`He saw what the work was doing.`)} />
+        <p set:html={linkKeywords(`That distinction matters.`)} />
+        <p set:html={linkKeywords(`Because the deepest question is not whether a piece fits inside photography, painting, illustration, digital art, Western art, contemporary art, or any other carefully labeled room.`)} />
+        <p set:html={linkKeywords(`The deeper question is this:`)} />
+        <p set:html={linkKeywords(`<strong>What happens to the viewer?</strong>`)} />
+        <p set:html={linkKeywords(`Does the work sit there waiting to be admired? Or does it reach out and make the viewer responsible for something?`)} />
+        <p set:html={linkKeywords(`That is where the old lines begin to fail.`)} />
+        <p set:html={linkKeywords(`Because there is a kind of image that does not simply ask to be seen. It asks to be completed.`)} />
+
+        <hr />
+
+        <p set:html={linkKeywords(`The Western narrative tradition, at its best, was never passive.`)} />
+        <p set:html={linkKeywords(`Russell did not merely paint scenes. He built situations. He left doors open. He gave the viewer enough information to feel the danger, but not enough to escape the question.`)} />
+        <p set:html={linkKeywords(`Remington understood the weight of the next second. His figures often live on the edge of consequence. A horse about to break. A rider about to turn. A man about to decide who he is.`)} />
+        <p set:html={linkKeywords(`The story lives in the gap.`)} />
+        <p set:html={linkKeywords(`Not before. Not after.`)} />
+        <p set:html={linkKeywords(`In the suspended place where the viewer has to lean forward.`)} />
+        <p set:html={linkKeywords(`That gap is not an accident. It is the point.`)} />
+        <p set:html={linkKeywords(`That is the place I am working in.`)} />
+        <p set:html={linkKeywords(`A single constructed frame. A real person. A real place. A camera-captured moment shaped through painterly process. A title that does not explain the image, but opens a door inside it. A short narrative primer that hands the viewer a thread and lets them pull.`)} />
+        <p set:html={linkKeywords(`Not admiration. Participation.`)} />
+        <p set:html={linkKeywords(`There is a difference.`)} />
+        <p set:html={linkKeywords(`Admiration is what you give a technically beautiful thing. You can respect it. You can appreciate it. You can nod and move on.`)} />
+        <p set:html={linkKeywords(`The transaction is complete.`)} />
+        <p set:html={linkKeywords(`Participation is different.`)} />
+        <p set:html={linkKeywords(`Participation means the work is not finished without you.`)} />
+        <p set:html={linkKeywords(`The image holds the match. You bring the fire.`)} />
+        <p set:html={linkKeywords(`That is not just outside the lines. That is off the paper entirely.`)} />
+
+        <hr />
+
+        <p set:html={linkKeywords(`Most work answers.`)} />
+        <p set:html={linkKeywords(`It presents itself. Explains itself. Completes itself. It stands in the room and waits to be approved.`)} />
+        <p set:html={linkKeywords(`But the work that stays with us usually does something more unsettling.`)} />
+        <p set:html={linkKeywords(`It asks.`)} />
+        <p set:html={linkKeywords(`It leaves something unresolved.`)} />
+        <p set:html={linkKeywords(`It gives the viewer a burden. A question. A silence. A decision.`)} />
+        <p set:html={linkKeywords(`That is what the lines were never designed to hold.`)} />
+        <p set:html={linkKeywords(`Not because the lines are evil. Not because categories have no purpose. Not because craft and discipline do not matter.`)} />
+        <p set:html={linkKeywords(`They matter deeply.`)} />
+        <p set:html={linkKeywords(`But they are not the destination. They are the vehicle.`)} />
+        <p set:html={linkKeywords(`And when the vehicle becomes the destination, the art stops moving.`)} />
+
+        <hr />
+
+        <p set:html={linkKeywords(`In 1890, the explanation was this is just a mechanical process.`)} />
+        <p set:html={linkKeywords(`In 1910, it was this is not proper photography.`)} />
+        <p set:html={linkKeywords(`In 2026, it is this must be AI.`)} />
+        <p set:html={linkKeywords(`The vocabulary keeps changing. The move is always the same.`)} />
+        <p set:html={linkKeywords(`And here is where it gets uncomfortable.`)} />
+        <p set:html={linkKeywords(`We have built systems - in art, in algorithms, in institutions, in culture - that are so precisely tuned to reward the familiar that genuine surprise has become almost unclassifiable.`)} />
+        <p set:html={linkKeywords(`Billy has become so far outside the expected that the only available explanation is a machine.`)} />
+        <p set:html={linkKeywords(`Think about what that means.`)} />
+        <p set:html={linkKeywords(`We have optimized so thoroughly for what works, what sells, what fits the category, what earns the gold star, that when something arrives that none of those systems can process, we assume it could not have come from a human being.`)} />
+        <p set:html={linkKeywords(`We have made human creativity look like artificial intelligence.`)} />
+        <p set:html={linkKeywords(`Not because the work is inhuman. Because our rooms have become that small.`)} />
+        <p set:html={linkKeywords(`Without Billy at the table, the only thing left to surprise us might just be AI.`)} />
+        <p set:html={linkKeywords(`And unlike Billy, AI does not know why it is coloring outside the lines. It just does not know where they are.`)} />
+
+        <hr />
+
+        <p set:html={linkKeywords(`Billy did not know he was making an argument.`)} />
+        <p set:html={linkKeywords(`He was not rebelling against the institution of coloring pages. He was not writing a manifesto on creative freedom.`)} />
+        <p set:html={linkKeywords(`He was just following the only question that made sense to him.`)} />
+        <p set:html={linkKeywords(`<strong>Why does it have to work that way?</strong>`)} />
+        <p set:html={linkKeywords(`Art was supposed to be the place where that question never stopped being asked.`)} />
+        <p set:html={linkKeywords(`Not as rebellion. As birthright.`)} />
+        <p set:html={linkKeywords(`The One-Image Movie is my answer to that question.`)} />
+        <p set:html={linkKeywords(`Not just a photograph. Not quite a painting. Not an illustration pretending to be either.`)} />
+        <p set:html={linkKeywords(`A story suspended inside a single frame, waiting for the viewer to step close enough to finish it.`)} />
+        <p set:html={linkKeywords(`You do not just see it.`)} />
+        <p set:html={linkKeywords(`<strong>You complete it.</strong>`)} />
+
+        <h3>About the Artist</h3>
+        <p set:html={linkKeywords(`Wayne Heim is a fine art photographer and medical illustrator whose painterly Western work lives in the gap between disciplines - too painterly for photography shows, too photographic for painting shows, and too interested in story to stay politely inside the lines.`)} />
+
+        <p><a href="/Galleries" class="text-[#8b0000] hover:underline">Explore the work at K4 Studios</a> | <a href="/One-Image-Movie" class="text-[#8b0000] hover:underline">Learn about the One-Image Movie</a></p>
+      </article>
+      </BlogJsonLd>
+    </section>
+
+    <WesternDefinitions variant="post" />
+
+    <SiteFooter
+      previewImages={previewImages}
+      previewPath={previewPath}
+      title={fullTitle}
+      label="Explore Galleries"
+      class="pt-12 pb-12"
+    />
+  </main>
+
+  <style>
+    .cover-wrap {
+      max-width: 760px;
+      margin: 0 auto 1.5rem;
+      padding: 0 1rem;
+      text-align: center;
+    }
+
+    .cover-link {
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    .cover-image {
+      width: min(100%, 560px);
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      border-radius: 10px;
+      transition: box-shadow .3s;
+    }
+
+    .cover-caption {
+      font-size: 0.95rem;
+      color: #888;
+      text-align: right;
+      margin-top: 0.25rem;
+    }
+
+    .intro-rule {
+      border: 0;
+      border-top: 1px solid #e5ded5;
+      margin: 2rem auto 0;
+      max-width: 420px;
+    }
+
+    .story-section {
+      line-height: 1.6;
+    }
+
+    .story-block p {
+      margin-bottom: 0.85rem;
+    }
+
+    .story-block h3 {
+      margin-top: 1.6rem;
+      margin-bottom: 0.6rem;
+      font-weight: 700;
+    }
+
+    .story-block hr {
+      border: 0;
+      border-top: 1px solid #e5ded5;
+      margin: 2rem auto;
+      max-width: 420px;
+    }
+
+    @media (max-width: 820px) {
+      .cover-link {
+        max-width: 100%;
+        margin: 0 auto;
+      }
+    }
+  </style>
+</BaseLayout>

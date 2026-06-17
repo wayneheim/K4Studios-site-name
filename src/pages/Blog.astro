@@ -104,7 +104,18 @@ const foundationalEssay = {
   initial: "E",
 };
 
+const outsideLinesEssay = {
+  type: "outside-lines",
+  href: "/Blog/off-the-paper",
+  title: "Off the Paper",
+  date: "2026-06-16",
+  excerpt: "An Outside the Lines essay on art, gatekeeping, originality, visual storytelling, and the work that refuses to stay inside approved categories.",
+  chip: "Outside the Lines",
+  initial: "O",
+};
+
 const seeingEssays = [
+  outsideLinesEssay,
   foundationalEssay,
   ...seeingEssaysData.map((essay, index) => ({
     type: "seeing",

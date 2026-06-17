@@ -832,6 +832,7 @@ const frontierStoryVideoWidget = {
 
 const frontierStoryWidgetPagePaths = new Set([
   "/American-Western-Art",
+  "/Contemporary-Western-Art",
   "/cinematic-western-art",
   "/black-and-white-cowboy-art",
   "/black-and-white-cowboy-photography",
@@ -843,10 +844,12 @@ const frontierStoryWidgetPagePaths = new Set([
   "/women-of-the-wild-west",
   "/Western-Frontier-Art",
   "/cowboy-themed-artwork",
+  "/cowboy-themed-photography",
   "/cowboy-artwork-prints",
   "/Fine-Art-Photography-of-the-American-West",
   "/Western-Cowboy-Photography",
   "/western-cowboy-art",
+  "/1800s-cowboy-art",
   "/western-cowboy-pictures",
   "/Cowboy-Fine-Art-Photography",
   "/cowboy-fine-art-prints",
@@ -1233,6 +1236,141 @@ export const commercialIntentPages = {
           "First, the painterly process — each image begins as photography then is shaped through tonal control, atmospheric finishing, and narrative structure into fine art with the presence of classic Western painting rather than straight documentation.",
           "Second, the lineage — the work draws from the same visual tradition as Remington and Russell in subject and narrative intent. Remington didn't paint what happened. He painted the breath before the draw, the moment after the choice, the consequence still arriving. Russell did the same. Wayne Heim's work operates in that same register — not recording the West but telling its stories through implication, atmosphere, and the pressure of what hasn't resolved yet.",
           "Third, the One-Image Movie architecture. Every work carries a title, an authored story, and a deliberate incompleteness — a moment held open so the viewer is pulled past the frame's edge into the unwritten chapter beyond it. The image doesn't explain itself. It asks the viewer to complete it. That is what Remington and Russell were doing in paint. That is what Wayne Heim is doing through the camera and the painterly process. No aggregator can build that. No stock library can either.",
+        ],
+      },
+    ],
+  }),
+  contemporaryWesternArt: makePage({
+    pagePath: "/Contemporary-Western-Art",
+    label: "Contemporary Western Art",
+    title: "Contemporary Western Art - Story-Driven Fine Art Prints by Wayne Heim",
+    subject: "present-day Western fine art, camera-based painterly photography, historical frontier storytelling, contemporary cowboy portraiture, Native American portrait work, and Western narratives that reimagine the West through reflection on the past",
+    sections: ["narrativeColor", "cowboyColor", "nativeColor", "narrativeBlackWhite", "cowboyBlackWhite", "landscapeWest"],
+    hero: "i-LCspRF4",
+    heroPath: sources.narrativeColor.galleryPath,
+    leftDock: [
+      supportDock("Explore 1800s Cowboy Art", "/1800s-cowboy-art", "/img/i-LCspRF4/s.jpg"),
+      supportDock("Learn What Is Western Art", "/Blog/what-is-western-art", blogThumbs.westernArt),
+      supportDock("Learn What Is Artistic Western Photography", "/Blog/what-is-artistic-western-photography", "/img/i-qMQf7b6/s.jpg"),
+      supportDock("Learn What Is Narrative Photography", "/Blog/what-is-narrative-photography", "/img/i-HfQ5NVR/s.jpg"),
+    ],
+    centerDock: [
+      sectionDock("Contemporary Western Narrative Art", "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all#collection-browser", "/img/i-B7ZSdfs/s.jpg"),
+      sectionDock("Contemporary Cowboy Portrait Art", "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/all#collection-browser", "/img/i-5FX3W9r/s.jpg"),
+      sectionDock("Native Presence in Contemporary Western Art", "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color/all#collection-browser", "/img/i-qLzRgbS/s.jpg"),
+      sectionDock("Black and White Western Narratives", "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/all#collection-browser", "/img/i-mqQxwNn/s.jpg"),
+    ],
+    rightDock: [
+      supportDock("Explore Western Storytelling Photography", "/western-storytelling-photography", "/img/i-HfQ5NVR/s.jpg"),
+      supportDock("Explore Western Photography Art", "/Western-Photography-Art", "/img/i-qMQf7b6/s.jpg"),
+      supportDock("Explore Narrative Western Art", "/Narrative-Western-Art", "/img/i-B7ZSdfs/s.jpg"),
+      supportDock("Compare Narrative and Traditional Western Art", "/Blog/narrative-western-art-vs-traditional", "/img/i-LmpRvHw/s.jpg"),
+    ],
+    dockCoreCount: 6,
+    layoutVariant: "cinematic-concept-series-top",
+    currentDockTitle: "Explore Contemporary Western Art Collections",
+    categoryCrumb: { href: "/Art-of-the-West", name: "Art of the West" },
+    archiveUrl: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West",
+    archiveName: "Wild West",
+    seoTitle: "Contemporary Western Art - Story-Driven Prints by Wayne Heim",
+    seoDescription:
+      `Contemporary Western art by Wayne Heim. Camera-based painterly Western fine art, cowboy portraits, frontier narratives, Native American portrait work, and historical storytelling prints from ${sketchPrintPrice}.`,
+    commercialH1: "Contemporary Western Art With History Still Inside It",
+    deck:
+      "Six routes, {catalogImageCount} works: contemporary Western narratives, cowboy portraits, Native American portrait work, black and white story pieces, tonal cowboy studies, and Western landscapes shaped through painterly photography and historical storytelling.",
+    gatewayKicker: "K4 Studios - Contemporary Western Art by Wayne Heim",
+    gatewayIntroCopy:
+      "Contemporary Western art should do more than rearrange old icons in a new palette.",
+    gatewaySupportingCopy:
+      `The contemporary Western art market is full of strong painting, bright abstraction, Pop Western imagery, modern cowboys, decorative wall products, and polished nostalgia. Some of it is beautiful. Much of it is instantly recognizable. But recognition is not the same as story.\n\nWayne Heim works in a rarer lane: contemporary Western fine art built from photography as the foundational element, then carried through a painterly process into images that behave like story-driven art rather than straight documentation. The camera keeps the work grounded in real bodies, real light, real period detail, and the authority of a specific moment. The painterly finish shapes that evidence into atmosphere, restraint, and narrative pressure.\n\nThis is contemporary Western art as a return to the roots of the tradition, not a retreat into nostalgia. Remington and Russell mattered because their strongest images had bones beneath the icon: consequence, character, withheld story, and the feeling that the viewer had arrived in the middle of something. K4 Studios brings that discipline forward through modern photographic craft, asking the West to carry human weight again.\n\nThese are not modern rodeo pictures and not cowboy symbols arranged as decor. They are reimaginings of the West through reflection on the past: old stories given present-tense form, historic atmosphere translated through contemporary tools, and collector-grade prints for viewers who want Western art with more than surface myth. Sketch Series studies begin at ${getFormattedLowestStandardPrintPrice()}, with larger archival prints and selected signed limited editions available for permanent collector walls.`,
+    collectionIntro: "",
+    gridIntroTitle: "",
+    gridIntroCopy: "",
+    titles: {
+      narrativeColor: "Contemporary Western Narrative Art",
+      cowboyColor: "Contemporary Cowboy Portrait Art",
+      nativeColor: "Native Presence in Contemporary Western Art",
+      narrativeBlackWhite: "Black and White Contemporary Western Narratives",
+      cowboyBlackWhite: "Tonal Contemporary Cowboy Art",
+      landscapeWest: "Contemporary Western Landscape Art",
+    },
+    descriptions: {
+      narrativeColor:
+        "Start with color narrative work when contemporary Western art needs story, atmosphere, implication, and the unresolved frontier moment rather than icon-only nostalgia.",
+      cowboyColor:
+        "Contemporary cowboy portraits bring the figure forward as a person first: face, posture, clothing, weather, and character shaped through camera-based painterly craft.",
+      nativeColor:
+        "Native American portrait work gives the contemporary Western page deeper historical ground and living presence, widening the field beyond cowboy shorthand.",
+      narrativeBlackWhite:
+        "Black and white Western narratives strip away color and ask shadow, gesture, silence, and structure to carry the story pressure.",
+      cowboyBlackWhite:
+        "Tonal cowboy portraits work against easy nostalgia by reducing the image to face, fabric, posture, and the psychological weight of the figure.",
+      landscapeWest:
+        "Contemporary Western landscape art keeps the land active: not background scenery, but distance, weather, scale, and emotional geography.",
+    },
+    conceptBlock1Title: "CONTEMPORARY DOES NOT MEAN ROOTLESS",
+    conceptBlock1Copy:
+      "Contemporary Western art is strongest when it knows what it is continuing. The point is not to abandon Remington, Russell, Catlin, Curtis, the Taos painters, ranch photography, frontier illustration, or the old storytelling structures that shaped the Western imagination. The point is to carry those concerns into a living medium.\n\nWayne Heim's route begins with photography, but photography is not used as mere documentation. It is the foundation: the real subject, the real light, the real physical evidence. From there, painterly finishing, title, story, and restraint turn the image into contemporary Western art with history still inside it.",
+    conceptBlock2Title: "THE WEST REIMAGINED THROUGH THE PAST",
+    conceptBlock2Copy:
+      "A lot of contemporary Western art reimagines the West by changing the surface: brighter color, flatter shape, modern design language, abstract cowboys, Pop Western attitude. That can be valid, but it often leaves the story hollow.\n\nK4 Studios reimagines the West by going backward into the bones of the tradition: the unresolved moment, the working body, the old room, the guarded face, the land as pressure, the historical object that still carries consequence. The result is modern because the medium and authorship are contemporary. It is Western because the image still answers to memory, labor, myth, and cost.",
+    conceptBlock3Title: "THE CONTEMPORARY COWBOY AS PERSON",
+    conceptBlock3Copy:
+      "The cowboy is one of the most overused icons in American visual culture. Hat, horse, horizon, dust, silhouette. The viewer recognizes the category before seeing the person.\n\nContemporary Western art has to push past that recognition. These portraits use photography to keep the subject specific, then painterly structure to slow the viewer down. The goal is not a modern cowboy symbol. It is a person carrying the pressure that made the symbol matter in the first place.",
+    conceptBlock4Title: "THE WEST WAS NEVER ONLY COWBOY MYTH",
+    conceptBlock4Copy:
+      "Any contemporary Western artist working seriously with history has to widen the field. Native American presence is not an accessory to the Western story and not a historical prop. It is part of the ground beneath the entire genre.\n\nThe Native portrait work below keeps this page from becoming a cowboy-only route. It brings continuity, heritage, displacement, authority, and living presence into the contemporary Western conversation.",
+    conceptBlock5Title: "BLACK AND WHITE AS DISCIPLINE",
+    conceptBlock5Copy:
+      "Black and white Western work is not simply a vintage effect. It is a discipline. Remove color and the image has to survive on structure: light, shadow, gesture, distance, face, and the tension of what the frame refuses to explain.\n\nThat is why monochrome belongs inside contemporary Western art. It strips away decorative warmth and leaves the bones visible. If the story still holds there, the image has earned its place.",
+    conceptBlock6Title: "LAND, MEMORY, AND THE PRESENT TENSE",
+    conceptBlock6Copy:
+      "The West is not just a figure in a hat. It is land large enough to change the figure. Contemporary Western landscape art gives the page distance, weather, scale, and silence - the environmental pressure that shaped the stories in the first place.\n\nTogether, these routes position Wayne Heim as a contemporary Western artist using photography as foundational evidence and painterly storytelling as the finished language. The medium is present tense. The roots run backward. The work asks Western art to have meat on its bones again.",
+    archiveContextTitle: "Browse Contemporary Western Art by Wayne Heim",
+    archiveContextCopy:
+      "Contemporary Western art at K4 Studios is organized by six routes: color frontier narratives, contemporary cowboy portraits, Native American portrait work, black and white Western narratives, tonal cowboy portraits, and Western landscape art.\n\nOpen any image to read its story, compare print sizes, review edition options, and choose whether the work belongs as a small Sketch Series study, a larger archival wall print, or a signed limited edition collector piece. Questions about a specific contemporary Western print? Contact Wayne at wayne@k4studios.com.",
+    faqTitle: "Contemporary Western Art FAQ",
+    faqItems: [
+      {
+        q: "What is contemporary Western art?",
+        a: [
+          "Contemporary Western art is present-day art that interprets the American West through current visual language, modern mediums, and contemporary authorship while remaining connected to Western subject matter, history, landscape, and myth.",
+        ],
+      },
+      {
+        q: "What makes Wayne Heim a contemporary Western artist?",
+        a: [
+          "Wayne Heim uses photography as the foundational element in story-driven Western fine art. The work begins with camera-based evidence, then moves through painterly finishing, title, narrative writing, and deliberate incompleteness so the image carries history, character, and story rather than simple documentation.",
+        ],
+      },
+      {
+        q: "How is this different from modern cowboy decor or rodeo photography?",
+        a: [
+          "The work is not built around modern rodeo action or decorative cowboy icons. It is rooted in historical storytelling, old-West atmosphere, portrait presence, Native American portrait work, and the unresolved narrative tradition of Western art.",
+        ],
+      },
+      {
+        q: "Can photography be contemporary Western art?",
+        a: [
+          "Yes. Photography becomes contemporary Western art when it is used with authorship, composition, narrative intent, and interpretive craft. At K4 Studios, the camera grounds the work in real presence, while the painterly process carries it into finished fine art.",
+        ],
+      },
+      {
+        q: "Why does this page connect contemporary art with the past?",
+        a: [
+          "Because Western art loses depth when it becomes only icons and nostalgia. This page treats the past as the root system: Remington and Russell's storytelling discipline, old photographic memory, frontier labor, Native presence, and the land as pressure. The work is contemporary because those roots are reinterpreted through present-day photographic craft.",
+        ],
+      },
+      {
+        q: "Are these contemporary Western artworks available as prints?",
+        a: [
+          `Yes. The works open to individual image pages with story, sizing, format, and edition details. Sketch Series prints begin at ${getFormattedLowestStandardPrintPrice()}, with larger archival paper prints and selected signed limited editions available for collector walls.`,
+        ],
+      },
+      {
+        q: "Where should I go next if I want the narrative side of the work?",
+        a: [
+          "Start with <a href='/western-storytelling-photography'>Western Storytelling Photography</a>, <a href='/Narrative-Western-Art'>Narrative Western Art</a>, or <a href='/Other/One-Image-Movie'>The One-Image Movie</a> for the clearest explanation of how image, title, story, and viewer participation work together.",
         ],
       },
     ],
@@ -2383,6 +2521,94 @@ The tradition that Russell and Remington established and that serious Western co
     archiveContextCopy:
       "Cowboy themed artwork at K4 Studios is organized by how much signal the room needs: color portraits, black and white portraits, story scenes, or monochrome Western scenes. Open any image for story, print options, sizing, and edition details.",
   }),
+  cowboyThemedPhotography: makePage({
+    pagePath: "/cowboy-themed-photography",
+    label: "Cowboy Themed Photography",
+    title: "Cowboy Themed Photography - Fine Art Prints by Wayne Heim",
+    subject: "cowboy themed photography, Western cowboy photos, cowboy portrait photography, black and white cowboy studies, and story-driven cowboy images shaped as fine art prints",
+    sections: cowboyCore,
+    hero: "i-5FX3W9r",
+    heroPath: sources.cowboyColor.galleryPath,
+    leftDock: [
+      supportDock("Explore Western Cowboy Photography", "/Western-Cowboy-Photography", "/img/i-5FX3W9r/s.jpg"),
+      supportDock("Explore Cowboy Pictures", "/cowboy-pictures", "/img/i-k4b6c5b/s.jpg"),
+      supportDock("Explore Black and White Cowboy Photos", "/black-and-white-cowboy-photos", "/img/i-mqQxwNn/s.jpg"),
+      supportDock("Learn What Is Cowboy Fine Art Photography", "/Blog/what-is-cowboy-fine-art-photography", blogThumbs.cowboy),
+    ],
+    rightDock: [
+      supportDock("Explore Cowboy Themed Artwork", "/cowboy-themed-artwork", "/img/i-SBjhvGf/s.jpg"),
+      supportDock("Explore Cowboy Art Prints", "/cowboy-art-prints", "/img/i-5FX3W9r/s.jpg"),
+      supportDock("Explore Western Cowboy Pictures", "/western-cowboy-pictures", "/img/i-QWcX7JT/s.jpg"),
+      supportDock("Learn What Is Painterly Photography", "/Blog/what-is-painterly-photography", blogThumbs.painterly),
+    ],
+    dockCoreCount: 4,
+    layoutVariant: "cinematic-concept-series-top",
+    commercialH1: "Cowboy Themed Photography That Starts With the Photograph",
+    seoTitle: "Cowboy Themed Photography - Western Cowboy Photo Prints",
+    seoDescription:
+      `Cowboy themed photography by Wayne Heim. Western cowboy photos, cowboy portrait photography, black and white cowboy studies, and story-driven fine art prints from ${sketchPrintPrice}.`,
+    deck:
+      "Four photography routes, {catalogImageCount} works: color cowboy portraits, black and white cowboy studies, color frontier scenes, and monochrome Western stories for collectors who want the cowboy subject grounded in photographic presence.",
+    gatewayKicker: "K4 Studios - Cowboy Themed Photography",
+    gatewayIntroCopy:
+      "Cowboy themed photography should begin with a real photographed presence, not only a familiar hat.",
+    gatewaySupportingCopy:
+      `There is a useful split here. Cowboy themed artwork is the broader wall-art category: paintings, prints, illustrations, framed pieces, and decor searches. Cowboy themed photography is narrower. It asks for a camera-origin image first, then judges whether that photograph has enough character, atmosphere, and finish to live as fine art.\n\nWayne Heim's work belongs in that second conversation because the photographic foundation is not hidden. Faces, horses, clothing, light, weather, gesture, and location give the image its evidence. Painterly finishing gives the finished print its Western art presence without turning the subject into a generic icon.\n\nThis page is for buyers using photo language: cowboy photos, cowboy photography, Western cowboy photography, black and white cowboy photos, and story-driven photographic prints. Sketch Series studies begin at ${getFormattedLowestStandardPrintPrice()}, with larger archival paper prints and selected signed editions available when the image needs to hold a permanent wall.`,
+    collectionIntro: "",
+    gridIntroTitle: "",
+    gridIntroCopy: "",
+    titles: {
+      cowboyColor: "Color Cowboy Themed Photography",
+      cowboyBlackWhite: "Black and White Cowboy Themed Photography",
+      narrativeColor: "Western Cowboy Photo Stories",
+      narrativeBlackWhite: "Monochrome Cowboy Photo Stories",
+    },
+    descriptions: {
+      cowboyColor:
+        "Start with color cowboy themed photography when the room needs a real human subject, warm Western light, and the photographic detail behind the finished print.",
+      cowboyBlackWhite:
+        "Black and white cowboy themed photography keeps the subject close to the older photographic record through tone, face, fabric, shadow, and restraint.",
+      narrativeColor:
+        "Western cowboy photo stories move beyond portrait signal into scene, action, weather, and the feeling that a larger frontier story is underway.",
+      narrativeBlackWhite:
+        "Monochrome cowboy photo stories use shadow, dust, gesture, and quiet space when the image needs old-West memory rather than decorative color.",
+    },
+    conceptBlock1Title: "THE PHOTO SIGNAL",
+    conceptBlock1Copy:
+      "Searchers who type photography or photos are usually asking for a different proof than buyers who type artwork. They want the subject to feel camera-based: a real face, real clothing, real light, real posture, and enough physical detail to keep the image from becoming pure illustration.",
+    conceptBlock2Title: "THE OLD RECORD",
+    conceptBlock2Copy:
+      "Black and white cowboy photography carries a direct line back to historic Western photographs. These works are not archive reproductions, but they use tone, shadow, and photographic restraint to keep the cowboy subject rooted in visual memory.",
+    conceptBlock3Title: "THE STORY PHOTOGRAPH",
+    conceptBlock3Copy:
+      "The strongest cowboy photographs are rarely only portraits. They suggest a before and after: a rider entering the frame, a room going quiet, a trail opening, a decision hanging in the light. That narrative pressure is what moves a photograph toward art.",
+    conceptBlock4Title: "THE BRIDGE TO ART",
+    conceptBlock4Copy:
+      "Photography and artwork do meet, but the order matters. On this page, the image begins as photography and becomes collectible Western art through authorship, finish, print presentation, and story. That keeps the page honest to photo intent while still supporting fine art buyers.",
+    archiveContextTitle: "Browse Cowboy Themed Photography",
+    archiveContextCopy:
+      "Cowboy themed photography at K4 Studios is organized by photographic use: color cowboy portraits, black and white studies, color Western photo stories, and monochrome frontier narratives. Open any image for story, print options, sizing, and edition details.",
+    faqItems: [
+      {
+        q: "Is cowboy themed photography different from cowboy themed artwork?",
+        a: [
+          "Yes. Cowboy themed photography starts with a photographed subject and a camera-origin image. Cowboy themed artwork is the broader category that can include paintings, illustrations, decor prints, canvas wall art, and photographic art.",
+        ],
+      },
+      {
+        q: "Are these cowboy photos or digital paintings?",
+        a: [
+          "Wayne Heim's finished works begin with photographic source material and are shaped through painterly finishing, tonal control, color, atmosphere, and print presentation. The result is photography-based Western fine art.",
+        ],
+      },
+      {
+        q: "Where should I start if I want cowboy photos for a wall?",
+        a: [
+          "Start with color cowboy themed photography for warmth and character, black and white cowboy photography for restraint, or Western cowboy photo stories when the room needs narrative rather than a simple cowboy portrait.",
+        ],
+      },
+    ],
+  }),
   cowboyArtworkPrints: makePage({
     pagePath: "/cowboy-artwork-prints",
     label: "Cowboy Artwork Prints",
@@ -2664,6 +2890,137 @@ The tradition that Russell and Remington established and that serious Western co
         q: "Does this page include cowboy art prints?",
         a: [
           "Yes. The works shown here are offered as fine art prints, with individual image pages listing story, sizing, edition, and presentation details.",
+        ],
+      },
+    ],
+  }),
+  eighteenHundredsCowboyArt: makePage({
+    pagePath: "/1800s-cowboy-art",
+    label: "1800s Cowboy Art",
+    title: "1800s Cowboy Art - Old West Fine Art Prints by Wayne Heim",
+    subject: "old-West cowboy imagery, frontier narrative scenes, historical Western portrait work, Native American presence, black and white cowboy studies, and contemporary fine art prints rooted in the visual storytelling tradition of the 1800s American West",
+    sections: ["narrativeColor", "cowboyColor", "cowboyBlackWhite", "narrativeBlackWhite", "nativeColor", "nativeBlackWhite"],
+    hero: "i-LCspRF4",
+    heroPath: sources.narrativeColor.galleryPath,
+    leftDock: [
+      supportDock("Learn What Is Western Cowboy Art", "/Blog/what-is-western-cowboy-art", "/img/i-7Mzzbvp/s.jpg"),
+      supportDock("Learn What Is Historical Western Photography", "/Blog/what-is-historical-western-photography", blogThumbs.historical),
+      supportDock("Explore Art of the West", "/Art-of-the-West", blogThumbs.westernArt),
+      supportDock("Explore Authentic Cowboy Life", "/authentic-cowboy-life", "/img/i-5FX3W9r/s.jpg"),
+    ],
+    centerDock: [
+      sectionDock("Color Old West Narrative Art", "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all#collection-browser", "/img/i-B7ZSdfs/s.jpg"),
+      sectionDock("1800s Cowboy Portrait Art", "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/all#collection-browser", "/img/i-5FX3W9r/s.jpg"),
+      sectionDock("Black and White Cowboy Art", "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/all#collection-browser", "/img/i-DJMTZ8z/s.jpg"),
+      sectionDock("Old West Black and White Narratives", "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/all#collection-browser", "/img/i-mqQxwNn/s.jpg"),
+    ],
+    rightDock: [
+      supportDock("Explore Vintage Western Art", "/vintage-western-art", "/img/i-FnZ68h3/s.jpg"),
+      supportDock("Explore Old Western Art", "/old-western-art", "/img/i-W73hxx4/s.jpg"),
+      supportDock("Explore Old West Pictures", "/old-west-pictures", "/img/i-k4b6c5b/s.jpg"),
+      supportDock("Explore Western Storytelling Photography", "/western-storytelling-photography", "/img/i-HfQ5NVR/s.jpg"),
+    ],
+    dockCoreCount: 6,
+    layoutVariant: "cinematic-concept-series-top",
+    seoTitle: "1800s Cowboy Art - Old West Fine Art Prints by Wayne Heim",
+    seoDescription:
+      `1800s cowboy art by Wayne Heim. Old West cowboy portraits, frontier narrative scenes, black and white studies, Native American portrait work, and historical Western fine art prints from ${sketchPrintPrice}.`,
+    commercialH1: "1800s Cowboy Art, Old West Memory, and Frontier Storytelling",
+    deck:
+      "Six historical Western routes, {catalogImageCount} works: old-West narrative scenes, cowboy portraits, black and white cowboy studies, monochrome frontier stories, and Native American portrait work for collectors searching 1800s cowboy art with more authority than reproduction decor.",
+    gatewayKicker: "K4 Studios - 1800s Cowboy Art and Old West Fine Art Prints",
+    gatewayIntroCopy:
+      "1800s cowboy art is not a costume category. It is the visual memory of the West before the legend hardened.",
+    gatewaySupportingCopy:
+      `Searches around 1800s cowboy art pull several intentions into one place: Frederic Remington and Charles M. Russell, old West paintings, historical cowboy pictures, vaquero imagery, black and white frontier photographs, Western art museums, and buyers looking for prints that feel rooted in the original Western storytelling tradition.\n\nThat history matters because the cowboy did not begin as modern rodeo spectacle or decorative ranch branding. The 19th-century cowboy entered art through labor, risk, horse culture, open-range life, racial and cultural overlap, newspaper illustration, frontier painting, early photography, and later the mythmaking that turned working lives into American legend.\n\nWayne Heim's work is contemporary, but the intent is historical: painterly fine art photography shaped around old-West character, unresolved narrative, tonal restraint, and the remembered pressure of the frontier. These are not modern rodeo pics. They are collector-grade Western prints built to keep narrative storytelling art alive - the cowboy as person, the West as memory, and the image as a doorway into what happened before and what may still be arriving.\n\nSketch Series studies begin at ${getFormattedLowestStandardPrintPrice()}, with larger archival paper prints and selected signed Chronicle and Legend editions available for permanent collector walls. Some historically charged images may also be offered on natural Baltic Birch through the Signature Engrained Series, where the material surface strengthens the old-West register.`,
+    collectionIntro: "",
+    gridIntroTitle: "",
+    gridIntroCopy: "",
+    titles: {
+      narrativeColor: "1800s Cowboy Art - Color Frontier Narratives",
+      cowboyColor: "Old West Cowboy Portrait Art",
+      cowboyBlackWhite: "Black and White 1800s Cowboy Art",
+      narrativeBlackWhite: "Old West Black and White Narrative Art",
+      nativeColor: "Native American Portrait Work in the Western Tradition",
+      nativeBlackWhite: "Black and White Native American Portrait Studies",
+    },
+    descriptions: {
+      narrativeColor:
+        "Start with color frontier narratives when 1800s cowboy art needs action, consequence, landscape, riders, and the unresolved story pressure associated with classic Western painting.",
+      cowboyColor:
+        "Color cowboy portraits bring the old-West figure forward through face, posture, clothing, horse culture, weathered character, and painterly light.",
+      cowboyBlackWhite:
+        "Black and white cowboy art answers the historical-photo side of the search: tonal restraint, brim shadow, worn fabric, face, hand, and memory rather than bright modern spectacle.",
+      narrativeBlackWhite:
+        "Monochrome frontier narratives carry the old-West story register with shadow, silence, gesture, and the feeling that the scene belongs to a larger chapter.",
+      nativeColor:
+        "Native American portrait work widens the 1800s Western art route beyond cowboy shorthand, adding heritage, presence, and the deeper historical ground beneath the frontier legend.",
+      nativeBlackWhite:
+        "Black and white Native American portraits are the stillest historical register here, where cloth, face, tone, and quiet authority carry more weight than action.",
+    },
+    conceptBlock1Title: "THE 1800S WESTERN CANON",
+    conceptBlock1Copy:
+      "The strongest 1800s cowboy art searches point back to the canon: Remington, Russell, working cowboys, vaqueros, horses, cattle work, frontier violence, Native presence, and the open range becoming memory. The subject is bigger than a cowboy on a wall. It is the moment when labor, documentation, illustration, and myth started feeding one another.\n\nRemington gave the Western image speed, action, and the charged half-second before consequence. Russell gave it lived experience, humor, weather, story, and the authority of a man who knew ranch life from inside the saddle. Together they helped turn the cowboy from a worker into an enduring art subject.",
+    conceptBlock2Title: "THE COWBOY BEFORE RODEO",
+    conceptBlock2Copy:
+      "The 1800s cowboy was not a modern performance figure. He was part of a working world: cattle drives, open ranges, long weather, horse skill, risk, boredom, isolation, and a complicated cultural inheritance that included Mexican vaquero traditions as well as Anglo ranching and frontier settlement.\n\nThat is why this page leans into portrait and narrative rather than spectacle. A useful cowboy image should carry work, pressure, character, and story before it carries entertainment. These color portraits are built for that older register.",
+    conceptBlock3Title: "THE HISTORICAL PHOTOGRAPHIC SIGNAL",
+    conceptBlock3Copy:
+      "Late-1800s and early-1900s cowboy photographs gave the West a different kind of authority. They were often anonymous, practical, monochrome, and imperfect, but they preserved posture, clothing, tack, rooms, wagons, faces, and the physical reality behind the legend.\n\nThe black and white cowboy works below are not archival reproductions. They use that historical photographic signal as a discipline: less color, fewer distractions, more dependence on face, tone, fabric, shadow, and the human weight inside the figure.",
+    conceptBlock4Title: "THE UNFINISHED OLD WEST STORY",
+    conceptBlock4Copy:
+      "Classic Western art holds because it often refuses to finish the story. A rider is leaving. A gun has not yet fired. A card game has gone wrong. A figure waits at a doorway. The viewer stands between cause and consequence.\n\nThat unresolved structure is what Wayne Heim carries forward through painterly photography. The monochrome narrative works below are built as old-West memory rather than simple illustration: shadow, gesture, silence, and a story that asks the viewer to complete what the frame withholds.",
+    conceptBlock5Title: "THE WEST WAS NEVER ONE STORY",
+    conceptBlock5Copy:
+      "A history-tagged cowboy page has to include the deeper frontier field or it becomes only nostalgia. Native American portrait work changes the moral and visual scale of the page. It brings heritage, displacement, endurance, authority, and presence into the same visual conversation that cowboy art too often narrows.\n\nThese works do not sit beside the cowboy subject as decoration. They are part of the foundation underneath the entire Western art tradition.",
+    conceptBlock6Title: "REMEMBERING THE OLD WEST WITHOUT COPYING IT",
+    conceptBlock6Copy:
+      "The goal is not to imitate 1800s painting or reproduce old photographs. It is to keep the storytelling function alive. The old Western masters mattered because their images made viewers feel a larger world pressing beyond the frame.\n\nWayne Heim's work continues that function through a camera-based painterly process: historical subjects, period atmosphere, authored titles, image stories, and deliberate incompleteness. The result is contemporary Western fine art rooted in the foundation of old-West storytelling rather than modern rodeo documentation or mass-market cowboy decor.",
+    archiveContextTitle: "Browse 1800s Cowboy Art and Old West Fine Art Prints",
+    archiveContextCopy:
+      "1800s cowboy art at K4 Studios is organized by historical register: color frontier narratives, old-West cowboy portraits, black and white cowboy studies, monochrome narrative scenes, Native American portrait work, and black and white Native American portraits.\n\nOpen any image to read the story, compare print sizes, review edition options, and decide whether the piece belongs as a small Sketch Series study, a larger archival wall print, or a signed limited edition collector work. Questions about a specific old-West print? Contact Wayne at wayne@k4studios.com.",
+    faqTitle: "1800s Cowboy Art FAQ",
+    faqItems: [
+      {
+        q: "What is 1800s cowboy art?",
+        a: [
+          "1800s cowboy art refers to artwork rooted in the 19th-century American West: working cowboys, vaqueros, open-range life, horses, cattle work, frontier scenes, Native presence, and the visual storytelling tradition later shaped by artists such as Frederic Remington and Charles M. Russell.",
+        ],
+      },
+      {
+        q: "Is this page selling antique 1800s paintings?",
+        a: [
+          "No. These are contemporary fine art prints by Wayne Heim. The page is history-rooted, not antique inventory. The work draws from old-West atmosphere, painterly Western tradition, black and white historical memory, and narrative frontier storytelling.",
+        ],
+      },
+      {
+        q: "How does this connect to Remington and Russell?",
+        a: [
+          "Remington and Russell helped establish the cowboy as a serious Western art subject through action, story, character, and the unresolved frontier moment. Wayne Heim's work continues that storytelling discipline through painterly fine art photography rather than oil painting or bronze sculpture.",
+        ],
+      },
+      {
+        q: "Why include Native American portraits on a cowboy art page?",
+        a: [
+          "Because the 1800s American West was never only a cowboy story. Native American presence, history, displacement, endurance, and portrait tradition belong to the same frontier field. Including those works gives the page historical depth instead of reducing the West to one mythology.",
+        ],
+      },
+      {
+        q: "Are these modern rodeo pictures?",
+        a: [
+          "No. This page is not built around modern rodeo photography. It focuses on old-West character, frontier narrative, historical atmosphere, black and white tonal memory, and the legends of the West as storytelling material.",
+        ],
+      },
+      {
+        q: "Can I buy these as fine art prints?",
+        a: [
+          `Yes. The works open to individual image pages with story, sizing, format, and edition details. Sketch Series prints begin at ${getFormattedLowestStandardPrintPrice()}, with larger archival paper prints and selected signed limited editions available for collector walls.`,
+        ],
+      },
+      {
+        q: "Where should I go next if I want related old-West pages?",
+        a: [
+          "Use <a href='/vintage-western-art'>Vintage Western Art</a> for the broader old-West print route, <a href='/old-west-pictures'>Old West Pictures</a> for image-led historical search intent, and <a href='/western-storytelling-photography'>Western Storytelling Photography</a> for the narrative side of the work.",
         ],
       },
     ],

@@ -6,6 +6,7 @@ const npxCmd = process.platform === 'win32' ? 'npx.cmd' : 'npx';
 const maxOldSpaceSize = process.env.K4_BUILD_HEAP_MB || '24576';
 const uvThreadpoolSize = process.env.UV_THREADPOOL_SIZE || String(Math.min(32, Math.max(4, os.cpus().length)));
 const astroBuildConcurrency = process.env.ASTRO_BUILD_CONCURRENCY || String(Math.min(16, Math.max(2, Math.floor(os.cpus().length / 2))));
+const kwlinkBuildSeed = process.env.K4_KWLINK_BUILD_SEED || new Date().toISOString();
 
 function run(command, args, options = {}) {
   const label = options.label || [command, ...args].join(' ');
@@ -68,6 +69,7 @@ async function main() {
       NODE_OPTIONS: `--max-old-space-size=${maxOldSpaceSize}`,
       UV_THREADPOOL_SIZE: uvThreadpoolSize,
       ASTRO_BUILD_CONCURRENCY: astroBuildConcurrency,
+      K4_KWLINK_BUILD_SEED: kwlinkBuildSeed,
     },
   });
 

@@ -2,9 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.k4studios.com/</loc>
-    <lastmod>2026-06-15T16:46:49.939Z</lastmod>
+    <lastmod>2026-06-15T13:07:20-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.k4studios.com/1800s-cowboy-art</loc>
+    <lastmod>2026-06-16T14:57:45.996Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.k4studios.com/American-Western-Art</loc>
@@ -74,7 +80,7 @@
   </url>
   <url>
     <loc>https://www.k4studios.com/Contemporary-Western-Art</loc>
-    <lastmod>2026-05-16T21:01:29-04:00</lastmod>
+    <lastmod>2026-06-16T15:24:43.220Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -129,6 +135,12 @@
   <url>
     <loc>https://www.k4studios.com/cowboy-themed-artwork</loc>
     <lastmod>2026-05-15T21:31:39-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.k4studios.com/cowboy-themed-photography</loc>
+    <lastmod>2026-06-16T15:36:51.340Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

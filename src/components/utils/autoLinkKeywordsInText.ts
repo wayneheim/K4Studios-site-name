@@ -7,6 +7,15 @@ import {
   allImages
 } from '@data/galleryMaps/MasterGalleryData.mjs';
 
+const kwlinkRuntimeEnv = (globalThis as any).process?.env || {};
+const KWLINK_BUILD_SEED = String(
+  kwlinkRuntimeEnv.K4_KWLINK_BUILD_SEED ||
+  kwlinkRuntimeEnv.NETLIFY_BUILD_ID ||
+  kwlinkRuntimeEnv.CF_PAGES_COMMIT_SHA ||
+  kwlinkRuntimeEnv.COMMIT_REF ||
+  new Date().toISOString()
+);
+
 const CANONICAL_LINK_MAP: Record<string, string> = {
   'authentic cowboy life': '/authentic-cowboy-life',
   'artistic western photography': '/Blog/what-is-artistic-western-photography',
@@ -55,7 +64,7 @@ const CANONICAL_LINK_MAP: Record<string, string> = {
   'cowboy wall art': '/cowboy-wall-art',
   'cowboy artwork': '/cowboy-wall-art',
   'cowboy paintings': '/cowboy-wall-art',
-  'cowboy photos': '/cowboy-wall-art',
+  'cowboy photos': '/cowboy-pictures',
   'cowboy pictures': '/cowboy-pictures',
   'cowboy picture': '/cowboy-pictures',
   'cowboy images': '/cowboy-pictures',
@@ -67,6 +76,8 @@ const CANONICAL_LINK_MAP: Record<string, string> = {
   'limited edition cowboy prints': '/cowboy-fine-art-prints',
   'cowboy themed artwork': '/cowboy-themed-artwork',
   'cowboy themed art': '/cowboy-themed-artwork',
+  'cowboy themed photography': '/cowboy-themed-photography',
+  'cowboy themed photos': '/cowboy-themed-photography',
   'western themed artwork': '/cowboy-themed-artwork',
   'western cowboy pictures': '/western-cowboy-pictures',
   'wild west cowboy pictures': '/western-cowboy-pictures',
@@ -353,6 +364,10 @@ function pickDeterministic<T>(items: T[], seed: string): T | undefined {
   return items[hashToIndex(seed, items.length)];
 }
 
+function pickBuildRotating<T>(items: T[], seed: string): T | undefined {
+  return pickDeterministic(items, `${KWLINK_BUILD_SEED}|${seed}`);
+}
+
 export function autoLinkKeywordsInText(
   html: string,
   _galleryDatas: any[],
@@ -542,7 +557,7 @@ export function autoLinkKeywordsInText(
         if (filtered.length) poolEntries = filtered;
 
         if (poolEntries.length) {
-          const pick = pickDeterministic(poolEntries, `${currentPath}|${lc}|image`);
+          const pick = pickBuildRotating(poolEntries, `${currentPath}|${lc}|image`);
           if (!pick) continue;
           const base = pick.galleryKey.startsWith('/')
             ? pick.galleryKey
@@ -559,7 +574,7 @@ export function autoLinkKeywordsInText(
         // Exclude Archive images from universal pool
         let pool = allImages.filter((img: any) => !exclude.has(img.id) && isVisibleImage(img) && !isArchiveImage(img));
         if (!pool.length) pool = allImages.filter((img: any) => isVisibleImage(img) && !isArchiveImage(img));
-        const pick = pickDeterministic(pool, `${currentPath}|${lc}|universal`);
+        const pick = pickBuildRotating(pool, `${currentPath}|${lc}|universal`);
         if (!pick) continue;
         const pickedImage = pick as any;
         const secRaw = String(pickedImage.galleries?.[0] || '').replace(/^\/+/, '');
@@ -626,7 +641,7 @@ export function autoLinkKeywordsInText(
             const filtered2 = poolEntries2.filter(e => !exclude.has(e.img.id));
             if (filtered2.length) poolEntries2 = filtered2;
             if (poolEntries2.length) {
-              const pick2 = pickDeterministic(poolEntries2, `${currentPath}|${lc}|${syn}|syn`);
+              const pick2 = pickBuildRotating(poolEntries2, `${currentPath}|${lc}|${syn}|syn`);
               if (!pick2) continue;
               const base2 = pick2.galleryKey.startsWith('/')
                 ? pick2.galleryKey

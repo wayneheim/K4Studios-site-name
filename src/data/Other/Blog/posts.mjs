@@ -1,5 +1,13 @@
 export const posts = [
   {
+    type: "outside-lines",
+    slug: "off-the-paper",
+    title: "Off the Paper",
+    date: "2026-06-16",
+    excerpt: "An Outside the Lines essay on art, gatekeeping, originality, visual storytelling, and the work that refuses to stay inside approved categories.",
+    cover: "/img/i-LLdZzQW/m.jpg"
+  },
+  {
     type: "inside-frame",
     slug: "paying-forward-through-story",
     title: "Inside the Frame: Paying Forward Through Story",
