@@ -30,19 +30,30 @@ import '../../../styles/global.css';
 
 const sectionPath = "/Other/K4-Select-Series/Engrained";
 const mobileCount = westernStory.filter((block, i) => i > 0 && block.subhead).length;
+const sideImageCount = Math.max(0, mobileCount - 1);
 
 const featheredImages = getSideImagesOther({
   sectionPath,
-  headingCount: mobileCount,
+  headingCount: sideImageCount,
   excludeIds: new Set(),
 });
 
-// Desktop sidebar: always 5 samples
-const featheredImagesSidebar = featheredImages.slice(0, 6);
+// Desktop sidebar: one fewer sample to lighten page load.
+const featheredImagesSidebar = featheredImages.slice(0, sideImageCount);
 const faqStructuredData = getFAQPageStructuredData(facingFAQ, "https://k4studios.com/Other/K4-Select-Series/Engrained");
+const pageMeta = {
+  description:
+    "Engrained by Wayne Heim transforms painterly Western, WWII, Civil War, landscape, and historical fine art photography into handcrafted wood pieces where image, grain, and story become one.",
+  ogTitle: "Engrained Series | Painterly Fine Art Photography Printed Into Wood",
+  ogDescription:
+    "Engrained by Wayne Heim transforms painterly Western, WWII, Civil War, landscape, and historical fine art photography into handcrafted wood pieces where image, grain, and story become one.",
+  twitterTitle: "Engrained Series | Painterly Fine Art Photography Printed Into Wood",
+  twitterDescription:
+    "Engrained by Wayne Heim transforms painterly Western, WWII, Civil War, landscape, and historical fine art photography into handcrafted wood pieces where image, grain, and story become one.",
+};
 ---
 
-<BaseLayout title={`${landingWestern.title} – ${landingWestern.subtitle}`} extraStructuredDataJSON={faqStructuredData}>
+<BaseLayout title="Engrained Series | Painterly Fine Art Photography Printed Into Wood" meta={pageMeta} extraStructuredDataJSON={faqStructuredData}>
   <main class="bg-[#ffffff] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
     <div class="drawer-mode">
       <LandingHeader client:load breadcrumb={landingWestern.breadcrumb} />
@@ -109,11 +120,19 @@ const faqStructuredData = getFAQPageStructuredData(facingFAQ, "https://k4studios
     <LandingRightImages
       client:load
       heading="Collection Samples"
-      images={sanitizeForClient(featheredImages.slice(0, 5))}
+      images={sanitizeForClient(featheredImagesSidebar)}
     />
   </div>
 </div>
 
+      </section>
+
+      <section class="collector-cta reveal-on-scroll" aria-labelledby="engrained-collection-cta">
+        <h2 id="engrained-collection-cta">Explore the Engrained Collection</h2>
+        <p>
+          Discover painterly fine art stories printed into wood, where natural grain and historical imagery meet in one-of-a-kind handcrafted pieces.
+        </p>
+        <a href="/Other/K4-Select-Series/Engrained/Engrained-Series" class="collector-cta-button">Browse Engrained Works</a>
       </section>
 
 <section class="pb-10">
@@ -371,6 +390,47 @@ ul li::marker {
 .carousel-fade.is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.collector-cta {
+  max-width: 760px;
+  margin: 0 auto 3rem;
+  padding: 2rem 1.5rem 2.25rem;
+  text-align: center;
+}
+
+.collector-cta h2 {
+  font-family: 'Glegoo', serif;
+  font-size: 1.65rem;
+  margin-bottom: 0.7rem;
+  color: #2c2c2c;
+}
+
+.collector-cta p {
+  max-width: 58ch;
+  margin: 0 auto 1.25rem;
+  line-height: 1.6;
+  color: #4d443c;
+}
+
+.collector-cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.75rem 1.15rem;
+  border: 1px solid #5a4a3b;
+  color: #2c2c2c;
+  text-decoration: none;
+  font-family: 'Glegoo', serif;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.collector-cta-button:hover,
+.collector-cta-button:focus-visible {
+  background: #5a4a3b;
+  color: #fff;
 }
 
 

@@ -4,7 +4,7 @@ export const slides = [
     src: "/images/Untitled-1_0000_2-coffee.jpg.jpg",
     href: "/Other/K4-Select-Series/Engrained/Engrained-Series",
     alt: "Engrained wood print mockup with a coffee still life",
-    description: "Engrained wood print mockup showing a coffee still life on Baltic birch."
+    description: "Engrained wood art mockup showing a coffee still life on a natural wood surface."
   },
   {
     title: "Church Panel",
