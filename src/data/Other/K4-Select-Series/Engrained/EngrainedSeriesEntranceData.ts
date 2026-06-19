@@ -37,5 +37,5 @@ export const entranceData = {
     alt: "Civil War Union soldier on horseback, Engrained wood print by Wayne Heim",
     caption: "\"Hero’s Ride – Engrained Series by Wayne Heim\"",
   },
-  breadcrumb: "K4 Select Series | Engrained Series",
+  breadcrumb: `<a href="/Other/K4-Select-Series/Engrained" style="color: inherit; text-decoration: none;">Engrained Series</a>`,
 };
