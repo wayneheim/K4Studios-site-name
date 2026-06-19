@@ -277,10 +277,10 @@ export default function HybridBookCarousel({
           line-height: 1.65;
           color: #4a4038;
           margin: 0 0 1.5rem;
-          max-height: 10.5em;
+          max-height: 3.3em;
           overflow: hidden;
           display: -webkit-box;
-          -webkit-line-clamp: 6;
+          -webkit-line-clamp: 2;
           -webkit-box-orient: vertical;
         }
 
@@ -364,8 +364,8 @@ export default function HybridBookCarousel({
           }
           .hybrid-book-story {
             font-size: 0.9rem;
-            -webkit-line-clamp: 4;
-            max-height: 7em;
+            -webkit-line-clamp: 2;
+            max-height: 3.2em;
           }
           .hybrid-book-arrow {
             width: 34px;

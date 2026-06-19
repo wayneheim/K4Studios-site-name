@@ -100,65 +100,46 @@ function buildHybridSlides(items: any[], count: number, fallbackStory: string, o
   }));
 }
 
+const visibleById = new Map(visible.map((item: any) => [item.id, item]));
+
+function storyIntro(item: any) {
+  const source = String(item?.story || item?.description || '').trim();
+  return source
+    .split(/\n\s*\n/)
+    .find(Boolean)
+    ?.replace(/\s+/g, ' ')
+    .trim() || item?.description || '';
+}
+
+function localSlide(imageId: string, src: string, fallback: any = {}) {
+  const item: any = visibleById.get(imageId) || {};
+  return {
+    id: item.id,
+    title: item.title || fallback.title || 'Featured Work',
+    alt: ensureAlt(item, fallback.alt || 'Engrained wood print by Wayne Heim'),
+    src,
+    story: storyIntro(item) || fallback.story || '',
+    href: item.id ? `${engrainedPath}/${item.id}` : engrainedPath,
+  };
+}
+
 const localEngrainedCarouselSlides = [
-  {
-    title: 'Coffee on Wood',
-    alt: 'Engrained wood print mockup with a coffee still life',
-    src: '/images/Untitled-1_0000_2-coffee.jpg.jpg',
-    story: 'A quiet still life becomes tactile once the image and birch surface start working together.',
-  },
-  {
-    title: 'Church Panel',
-    alt: 'Engrained wood print mockup featuring a small church scene',
-    src: '/images/Untitled-1_0001_3%20church.jpg.jpg',
-    story: 'Architectural lines, weathered light, and wood grain meet as one physical object.',
-  },
-  {
-    title: 'Fence Line',
-    alt: 'Engrained wood print mockup featuring a fence scene',
-    src: '/images/Untitled-1_0003_4%20fence.jpg.jpg',
-    story: 'The grain gives the open fence line a worn, grounded presence that paper cannot quite imitate.',
-  },
-  {
-    title: 'Sign Panel',
-    alt: 'Engrained wood print mockup featuring a sign scene',
-    src: '/images/Untitled-1_0008_4sign.jpg.jpg',
-    story: 'A simple sign study turns into a material statement, with the surface carrying part of the age.',
-  },
-  {
-    title: 'Buffalo Study',
-    alt: 'Engrained wood print mockup featuring a buffalo image',
-    src: '/images/Untitled-1_0009_5%20buffy.jpg.jpg',
-    story: 'The animal form and natural panel texture reinforce each other with a rugged, organic weight.',
-  },
-  {
-    title: 'Barn Panel',
-    alt: 'Engrained wood print mockup featuring a barn scene',
-    src: '/images/Untitled-1_0013_9-barn.jpg.jpg',
-    story: 'Barn wood, field light, and birch grain echo each other until the print feels built into the surface.',
-  },
-  {
-    title: 'Puff Panel',
-    alt: 'Engrained wood print mockup featuring a puff landscape scene',
-    src: '/images/Untitled-1_0014_10b%20puff.jpg.jpg',
-    story: 'Soft atmosphere sits against visible grain, turning the panel into a layered landscape object.',
-  },
-  {
-    title: 'Lake Panel',
-    alt: 'Engrained wood print mockup featuring a lake scene',
-    src: '/images/Untitled-1_0016_11%20lake.jpg.jpg',
-    story: 'Water, reflection, and wood grain create a calm surface where image and material stay visible.',
-  },
+  localSlide('i-mrHbrNb', '/images/Untitled-1_0000_2-coffee.jpg.jpg'),
+  localSlide('i-C58KMqF', '/images/Untitled-1_0001_3%20church.jpg.jpg'),
+  localSlide('i-5VmRqpZ', '/images/Untitled-1_0003_4%20fence.jpg.jpg'),
+  localSlide('i-wV53528', '/images/Untitled-1_0008_4sign.jpg.jpg'),
+  localSlide('i-4cdDwZt', '/images/Untitled-1_0009_5%20buffy.jpg.jpg'),
+  localSlide('i-hVBkc7Q', '/images/Untitled-1_0013_9-barn.jpg.jpg'),
+  localSlide('i-b4wG4vh', '/images/Untitled-1_0014_10b%20puff.jpg.jpg'),
+  localSlide('i-NQ5tCTb', '/images/Untitled-1_0016_11%20lake.jpg.jpg'),
   {
     title: 'Framed Engrained Mockup',
     alt: 'Framed Engrained wood print mockup set',
     src: '/images/Untitled-1_0018_Frame_Mockup_Set_16_11%20cod.jpg.jpg',
     story: 'A finished presentation view shows the Engrained idea as a display-ready wall piece.',
+    href: engrainedPath,
   },
-].map((slide) => ({
-  ...slide,
-  href: engrainedPath,
-}));
+];
 
 export const pagePath = '/Engrained';
 export const imageSectionPath = engrainedPath;

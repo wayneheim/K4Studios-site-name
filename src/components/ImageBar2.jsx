@@ -13,8 +13,13 @@ import { warmImage } from "../utils/warmImage";
  * All URLs go through /img/{id}/{size} proxy to hide SmugMug URLs.
  */
 const getGalleryPathFromImageHref = (href = "") => String(href || "").replace(/\/i-[a-zA-Z0-9-]+\/?$/, "");
+const isLocalPublicImage = (src = "") => typeof src === "string" && src.startsWith("/images/");
 
 function getCarouselSrc(s) {
+  if (isLocalPublicImage(s.src)) {
+    return s.src;
+  }
+
   // Use proxy URL - request M size for faster loading
   if (s.id) {
     return getSemanticImageUrl(s, { galleryPath: s.galleryPath || getGalleryPathFromImageHref(s.href) }, 'm');
@@ -24,6 +29,10 @@ function getCarouselSrc(s) {
 }
 
 function getCarouselSrcset(s) {
+  if (isLocalPublicImage(s.src)) {
+    return undefined;
+  }
+
   // Use proxy srcset if we have an image ID
   if (s.id) {
     return getSemanticImageSrcset(s, { galleryPath: s.galleryPath || getGalleryPathFromImageHref(s.href) });
