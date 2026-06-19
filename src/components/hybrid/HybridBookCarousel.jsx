@@ -96,7 +96,7 @@ export default function HybridBookCarousel({
         <div className={`hybrid-book-image${fading ? " is-fading" : ""}`}>
           <a href={chapterLink} aria-label={`View "${current.title}"`}>
             <img
-              src={getSemanticImageUrl(current, { galleryPath: getGalleryPathFromImageHref(current.href) || galleryBasePath })}
+              src={current.src || getSemanticImageUrl(current, { galleryPath: getGalleryPathFromImageHref(current.href) || galleryBasePath })}
               alt={current.alt || current.title}
               width="960"
               height="640"

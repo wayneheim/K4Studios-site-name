@@ -100,6 +100,66 @@ function buildHybridSlides(items: any[], count: number, fallbackStory: string, o
   }));
 }
 
+const localEngrainedCarouselSlides = [
+  {
+    title: 'Coffee on Wood',
+    alt: 'Engrained wood print mockup with a coffee still life',
+    src: '/images/Untitled-1_0000_2-coffee.jpg.jpg',
+    story: 'A quiet still life becomes tactile once the image and birch surface start working together.',
+  },
+  {
+    title: 'Church Panel',
+    alt: 'Engrained wood print mockup featuring a small church scene',
+    src: '/images/Untitled-1_0001_3%20church.jpg.jpg',
+    story: 'Architectural lines, weathered light, and wood grain meet as one physical object.',
+  },
+  {
+    title: 'Fence Line',
+    alt: 'Engrained wood print mockup featuring a fence scene',
+    src: '/images/Untitled-1_0003_4%20fence.jpg.jpg',
+    story: 'The grain gives the open fence line a worn, grounded presence that paper cannot quite imitate.',
+  },
+  {
+    title: 'Sign Panel',
+    alt: 'Engrained wood print mockup featuring a sign scene',
+    src: '/images/Untitled-1_0008_4sign.jpg.jpg',
+    story: 'A simple sign study turns into a material statement, with the surface carrying part of the age.',
+  },
+  {
+    title: 'Buffalo Study',
+    alt: 'Engrained wood print mockup featuring a buffalo image',
+    src: '/images/Untitled-1_0009_5%20buffy.jpg.jpg',
+    story: 'The animal form and natural panel texture reinforce each other with a rugged, organic weight.',
+  },
+  {
+    title: 'Barn Panel',
+    alt: 'Engrained wood print mockup featuring a barn scene',
+    src: '/images/Untitled-1_0013_9-barn.jpg.jpg',
+    story: 'Barn wood, field light, and birch grain echo each other until the print feels built into the surface.',
+  },
+  {
+    title: 'Puff Panel',
+    alt: 'Engrained wood print mockup featuring a puff landscape scene',
+    src: '/images/Untitled-1_0014_10b%20puff.jpg.jpg',
+    story: 'Soft atmosphere sits against visible grain, turning the panel into a layered landscape object.',
+  },
+  {
+    title: 'Lake Panel',
+    alt: 'Engrained wood print mockup featuring a lake scene',
+    src: '/images/Untitled-1_0016_11%20lake.jpg.jpg',
+    story: 'Water, reflection, and wood grain create a calm surface where image and material stay visible.',
+  },
+  {
+    title: 'Framed Engrained Mockup',
+    alt: 'Framed Engrained wood print mockup set',
+    src: '/images/Untitled-1_0018_Frame_Mockup_Set_16_11%20cod.jpg.jpg',
+    story: 'A finished presentation view shows the Engrained idea as a display-ready wall piece.',
+  },
+].map((slide) => ({
+  ...slide,
+  href: engrainedPath,
+}));
+
 export const pagePath = '/Engrained';
 export const imageSectionPath = engrainedPath;
 export const gridBasePath = engrainedPath;
@@ -126,11 +186,7 @@ export const breadcrumbItems = [
 ];
 
 export const hybridCarouselProps = {
-  slides: [
-    ...buildHybridSlides(portraitItems, 2, 'Wood-grain portrait work where history stays visible through the surface.'),
-    ...buildHybridSlides(narrativeItems, 2, 'Frontier stories printed into wood so atmosphere and material deepen together.'),
-    ...buildHybridSlides(landscapeItems, 2, 'Landscape works where grain reads like time moving through weather and stone.'),
-  ],
+  slides: localEngrainedCarouselSlides,
   galleryBasePath: engrainedPath,
   kicker: 'Selected Wood Prints',
   counterLabel: 'Panel',

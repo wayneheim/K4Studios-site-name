@@ -59,12 +59,16 @@ export function sanitizeForClient<T extends ImageVariants>(images: T[]): Partial
 }
 
 export function sanitizeCarouselForClient<T extends ImageVariants>(images: T[]): Partial<T>[] {
+  const safeLocalSrc = (src?: string) =>
+    typeof src === 'string' && src.startsWith('/images/') ? src : undefined;
+
   return images.map(img => ({
     id: img.id,
     title: img.title,
     alt: img.alt,
     href: img.href,
     galleryPath: img.galleryPath,
+    src: safeLocalSrc(img.src),
     description: img.description,
     keywords: img.keywords,
     story: img.story,
