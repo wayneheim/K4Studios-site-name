@@ -122,6 +122,164 @@ const galleryPaths = Object.keys(galleryDataMap);
 const linkKeywords = (text: string) =>
   autoLinkKeywordsInText(text, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname);
 
+const storySegments = [
+  `When did the safety of familiarity begin to outweigh the power of originality?`,
+  `That question keeps following me. Through art shows, through submission guidelines, through rooms full of beautiful things that somehow ask very little of the viewer. Through algorithms that learn what we liked yesterday and quietly feed it back to us tomorrow with a slightly different hat.`,
+  `Categories begin as a way to organize the room. A way to help people understand what they are looking at. Then over time, the convenience becomes a rule. The rule becomes a standard. The standard becomes a wall. And before long, the work that feels most alive is the work hardest to place.`,
+  `The art world says it wants originality. But often what is rewarded is recognition. The familiar shape. The familiar mood. The familiar medium behaving in a familiar way. Different enough to feel fresh. Not different enough to make the room nervous.`,
+  "__HR__",
+  `<strong>Every class had one.</strong>`,
+  `While the rest of us carefully traced inside the printed borders - keeping the sky blue, the grass green, the lines respected - Billy was over in the corner with six crayons, paper peeled off, rubbing them sideways with his shoe.`,
+  `No lines. No borders. No apology.`,
+  `The teacher was not impressed.`,
+  `Billy got redirected. Corrected. Gently steered back toward the lines where the gold stars lived.`,
+  `The rest of us learned something that day. Not about coloring. About compliance.`,
+  `Here is the question nobody thought to ask: When did Billy stop being the poster child for artistic exploration and start becoming the thing we quietly redirected?`,
+  `When did Billy stop being the point?`,
+  "__HR__",
+  `Art has always had a Billy problem.`,
+  `Not because artists lack discipline. Not because craft does not matter. But because every generation builds a room and then slowly, quietly, begins to mistake the walls for the point.`,
+  `It happens nearly the same way every time.`,
+  `A new form arrives. It threatens the existing order. The existing order resists. Rules get written. Categories get enforced. Gold stars get handed to the work that stays where it is told. No risk of redirection to the corner, no rejection at the door, no handing it back with a note explaining which category it actually belongs in.`,
+  `But Billy is not the problem art needs to correct.`,
+  `<strong>Billy is the antidote.</strong>`,
+  `"Billy" is the antidote to formula, to algorithmic sameness, to the quiet pressure to make work that can be recognized before it has a chance to be felt.`,
+  `Because algorithms do not reward wonder. They reward pattern. The already proven. The already clicked. The already understood.`,
+  `And when art starts thinking that way too, originality begins arriving as an inconvenience. Not because it lacks value. Because it interrupts the machinery.`,
+  `Billy interrupts the machinery. That is why he matters. He reminds us that the line was never the destination. The line was just where somebody else stopped imagining.`,
+  "__HR__",
+  `Art is not the only place this happens.`,
+  `Every field has its Billy problem. Science has its gatekeepers. Business has its gatekeepers. Technology has its gatekeepers. Every established room develops a memory of how things are supposed to work.`,
+  `The question is whether the room can still recognize the thing that might change it.`,
+  `The future does not always arrive with applause.`,
+  `Sometimes it sits on a shelf. Sometimes it waits in a lab.`,
+  `Sometimes it takes seventeen years and someone speaking up and saying "Why the hell not!" as it did with the Xerox Star in 1981. And even then, it takes someone else looking again - Apple with the Lisa, then the Macintosh - before the idea begins to feel obvious.`,
+  `That is the part we forget.`,
+  `The mouse did not become important because everyone recognized it immediately.`,
+  `<strong>Why does it have to work that way?</strong>`,
+  `That is the Billy question.`,
+  `And maybe it is the core of creativity itself. Not how do we make this fit the current model. Not how do we explain this using the language we already have. Not which approved category does this belong in, but why does it have to work that way?`,
+  `That question has moved the chains in every field.`,
+  `Copernicus asked it and moved the earth out of the center of the universe.`,
+  `Leonardo asked it and refused to separate art from anatomy, invention from observation, beauty from mechanics.`,
+  `Einstein asked it and bent the straight lines of time and space.`,
+  `Steve Jobs asked it and saw that a computer did not have to feel like a machine. It could become something ordinary people could enter.`,
+  `Elon Musk asks it in rockets, cars, healthcare, satellites, and systems everyone else had learned to accept as too expensive, too fixed, too slow, too impossible.`,
+  `Different fields.`,
+  `Different centuries.`,
+  `Same dangerous question.`,
+  `Why this way? Why not another? Why is the line here?`,
+  `But art is a stranger battlefield.`,
+  `Because in art, the gatekeeper's judgment often becomes the credential. The curator's taste becomes the institution. The judge's uncertainty becomes the rejection. The category becomes the doorway. There is no data to appeal to. No utility that can prove the work useful. No market mechanism that immediately overrules the person holding the gold stars.`,
+  `Which makes the next question almost too uncomfortable to ask out loud.`,
+  `Have we become too formulaic in our definition of what is acceptable? Too precise in our definition of what is sellable?`,
+  `Because the moment art optimizes for sellable, it stops asking why the hell not and starts asking what worked last time.`,
+  `That is not a Billy question. That is a teacher question.`,
+  "__HR__",
+  `We have been here before.`,
+  `In the late 19th and early 20th century, photography was still fighting to be taken seriously as art. Painters dismissed it as mechanical. A technical process. A trick of chemistry and light.`,
+  `Where was the hand? Where was the labor? Where was the artist?`,
+  `Pictorialism rose inside that argument.`,
+  `Soft focus. Atmosphere. Manipulation. Handwork on the negative. Images made to carry mood, feeling, memory, and suggestion rather than simple documentation.`,
+  `The Pictorialists treated the photograph as raw material for the message, not the message itself.`,
+  `In one sense, they helped photography argue its way into the room.`,
+  `But then another argument began.`,
+  `Once photography started earning its place as art, a new set of rules arrived from inside the medium itself. Photography should not imitate painting. Photography should be direct. Photography should be sharp, clean, honest, modern, and fully itself.`,
+  `The push for legitimacy slowly became a push for purity. And purity, once it enters the room, has a way of drawing lines.`,
+  `This is the part that matters.`,
+  `The gatekeeping did not disappear when photography became accepted as art, it relocated.`,
+  `First, the question was whether photography could be art at all. Then the question became what kind of photography was allowed to be art.`,
+  `That is why Pictorialism still matters here. Because it reminds us that the language of protection can sound very noble while it is building the next wall.`,
+  "__HR__",
+  `The defensive posture that painting once held against photography - this is mechanical, this requires no real craft, this is not art - photography eventually inherited.`,
+  `Pulled it on like a hand-me-down coat. Wore it with the same conviction.`,
+  `The medium that broke the rules became the medium that enforced them.`,
+  `Straight out of camera. Minimal processing. Authentic. Pure. Real photography.`,
+  `A new academy. New rules. New gatekeepers. New gold stars for staying inside the lines.`,
+  `And painting?`,
+  `Painting quietly absorbed photographic seeing so completely that the brush became a slower lens.`,
+  `Photo reference. Projected images. Hyperrealism. Composited scenes. The painter's eye increasingly trained on what a camera captures rather than what imagination constructs.`,
+  `Breathtaking craft. Stunning technique.`,
+  `But somewhere in that process, the walls of the room became the point again.`,
+  `So here we are.`,
+  `One discipline fighting to stay pure from manipulation. Another fighting to stay faithful to the reference. Both building walls around their containers.`,
+  `Both writing prospectuses full of words like innovative and new vision and reimagining while the submission rules quietly protect the familiar.`,
+  `The vocabulary of liberation. The architecture of protection.`,
+  "__HR__",
+  `Western art has its own version of this.`,
+  `The tradition was born around story. Around the unresolved moment. Around the rider turning in the saddle, the smoke hanging in the air, the glance before the draw, the silence after the thing has already happened but before anyone knows what it means.`,
+  `Russell understood that. Remington understood that.`,
+  `The best Western narrative art was never simply about depicting the West.`,
+  `It was about setting a fuse in the viewer's imagination and walking away before it burned down.`,
+  `Then, over time, the rooms got cleaner. The shows got better organized. The categories got more precise. The prospectuses got more careful. The definitions got easier to defend.`,
+  `And somewhere in all that useful order, something slipped out the back door.`,
+  `Not the craft. The question.`,
+  `Walk the floors of enough shows. Read enough prospectuses. Submit enough work to enough categories. A pattern emerges that is difficult to unsee once you have seen it.`,
+  `The shows that most loudly celebrate breaking boundaries are often the most precise about which boundaries may be broken.`,
+  `Different is welcome. Provided it is the right kind of different. Provided it stays inside the lines.`,
+  "__HR__",
+  `But every so often, the room forgets its own rules.`,
+  `A seasoned curator looks at work that does not quite fit the available categories. Not because the work is careless. Not because it lacks craft. But because it is asking a different question than the categories were built to answer.`,
+  `He looks for a long moment.`,
+  `Then he says:`,
+  `<strong>This isn't just photography. This is Art.</strong>`,
+  `Same work. Different room. Different eyes. Different answer.`,
+  `That is not a story about validation. It is a story about seeing.`,
+  `He did not say, this is acceptable photography. He did not say, this is close enough to painting. He did not try to rescue the work by moving it from one container into another.`,
+  `He saw past the container.`,
+  `He saw what the work was doing.`,
+  `That distinction matters.`,
+  `Because the deepest question is not whether a piece fits inside photography, painting, illustration, digital art, Western art, contemporary art, or any other carefully labeled room.`,
+  `The deeper question is this:`,
+  `<strong>What happens to the viewer?</strong>`,
+  `Does the work sit there waiting to be admired? Or does it reach out and make the viewer responsible for something?`,
+  `That is where the old lines begin to fail.`,
+  `Because there is a kind of image that does not simply ask to be seen. It asks to be completed.`,
+  "__HR__",
+  `The Western narrative tradition, at its best, was never passive.`,
+  `Russell did not merely paint scenes. He built situations. He left doors open. He gave the viewer enough information to feel the danger, but not enough to escape the question.`,
+  `Remington understood the weight of the next second. His figures often live on the edge of consequence. A horse about to break. A rider about to turn. A man about to decide who he is.`,
+  `The story lives in the gap. Not before. Not after. In the suspended place where the viewer has to lean forward.`,
+  `That gap is not an accident. It is the point.`,
+  `That is the place I am working in.`,
+  `A single constructed frame. A real person. A real place. A camera-captured moment shaped through painterly process. A title that does not explain the image, but opens a door inside it. A short narrative primer that hands the viewer a thread and lets them pull.`,
+  `Not admiration. Participation.`,
+  `There is a difference.`,
+  `Admiration is what you give a technically beautiful thing. You can respect it. You can appreciate it. You can nod and move on. The transaction is complete.`,
+  `Participation is different. Participation means the work is not finished without you. The image holds the match. You bring the fire.`,
+  `That is not just outside the lines. That is off the paper entirely.`,
+  "__HR__",
+  `Most work answers.`,
+  `It presents itself. Explains itself. Completes itself. It stands in the room and waits to be approved. But the work that stays with us usually does something more unsettling.`,
+  `It asks. It leaves something unresolved. It gives the viewer a burden. A question. A silence. A decision.`,
+  `That is what the lines were never designed to hold. Not because the lines are evil. Not because categories have no purpose. Not because craft and discipline do not matter.`,
+  `They matter deeply.`,
+  `But they are not the destination. They are the vehicle. And when the vehicle becomes the destination, the art stops moving.`,
+  "__HR__",
+  `In 1890, the explanation was this is just a mechanical process.`,
+  `In 1910, it was this is not proper photography.`,
+  `In 2026, it is this must be AI.`,
+  `The vocabulary keeps changing. The move is always the same.`,
+  `And here is where it gets uncomfortable.`,
+  `We have built systems - in art, in algorithms, in institutions, in culture - that are so precisely tuned to reward the familiar that genuine surprise has become almost unclassifiable.`,
+  `Billy has become so far outside the expected that the only available explanation is a machine.`,
+  `Think about what that means.`,
+  `We have optimized so thoroughly for what works, what sells, what fits the category, what earns the gold star, that when something arrives that none of those systems can process, we assume it could not have come from a human being.`,
+  `We have made human creativity look like artificial intelligence.`,
+  `Not because the work is inhuman. Because our rooms have become that small.`,
+  `Without Billy at the table, the only thing left to surprise us might just be AI.`,
+  `And unlike Billy, AI does not know why it is coloring outside the lines. It just does not know where they are.`,
+  "__HR__",
+  `Billy did not know he was making an argument. He was not rebelling against the institution of coloring pages. He was not writing a manifesto on creative freedom. He was just following the only question that made sense to him.`,
+  `<strong>Why does it have to work that way?</strong>`,
+  `Art was supposed to be the place where that question never stopped being asked.`,
+  `Not as rebellion. As birthright.`,
+  `The One-Image Movie is my answer to that question.`,
+  `Not just a photograph. Not quite a painting. Not an illustration pretending to be either.`,
+  `A story suspended inside a single frame, waiting for the viewer to step close enough to finish it.`,
+  `You do not just see it.`,
+  `<strong>You complete it.</strong>`,
+];
 const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-decoration: none;' onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Blog</a> › Off the Paper`;
 ---
 
@@ -160,200 +318,11 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
     <section class="story-section max-w-[860px] mx-auto px-4">
       <BlogJsonLd json={structuredData}>
       <article class="story-block space-y-4">
-
-        <p set:html={linkKeywords(`When did the safety of familiarity begin to outweigh the power of originality?`)} />
-        <p set:html={linkKeywords(`That question keeps following me.`)} />
-        <p set:html={linkKeywords(`Through art shows. Through submission guidelines. Through rooms full of beautiful things that somehow ask very little of the viewer.`)} />
-        <p set:html={linkKeywords(`Through algorithms that learn what we liked yesterday and quietly feed it back to us tomorrow with a slightly different hat.`)} />
-        <p set:html={linkKeywords(`Categories begin as a way to organize the room. A way to help people understand what they are looking at.`)} />
-        <p set:html={linkKeywords(`Then over time, the convenience becomes a rule. The rule becomes a standard. The standard becomes a wall.`)} />
-        <p set:html={linkKeywords(`And before long, the work that feels most alive is the work hardest to place.`)} />
-        <p set:html={linkKeywords(`The art world says it wants originality. But often what is rewarded is recognition.`)} />
-        <p set:html={linkKeywords(`The familiar shape. The familiar mood. The familiar medium behaving in a familiar way.`)} />
-        <p set:html={linkKeywords(`Different enough to feel fresh. Not different enough to make the room nervous.`)} />
-
-        <hr />
-
-        <p set:html={linkKeywords(`<strong>Every class had one.</strong>`)} />
-        <p set:html={linkKeywords(`While the rest of us carefully traced inside the printed borders - keeping the sky blue, the grass green, the lines respected - Billy was over in the corner with six crayons, paper peeled off, rubbing them sideways with his shoe.`)} />
-        <p set:html={linkKeywords(`No lines. No borders. No apology.`)} />
-        <p set:html={linkKeywords(`The teacher was not impressed.`)} />
-        <p set:html={linkKeywords(`Billy got redirected. Corrected. Gently steered back toward the lines where the gold stars lived.`)} />
-        <p set:html={linkKeywords(`The rest of us learned something that day. Not about coloring. About compliance.`)} />
-        <p set:html={linkKeywords(`Here is the question nobody thought to ask: When did Billy stop being the poster child for artistic exploration and start becoming the thing we quietly redirected?`)} />
-        <p set:html={linkKeywords(`When did Billy stop being the point?`)} />
-
-        <hr />
-
-        <p set:html={linkKeywords(`Art has always had a Billy problem.`)} />
-        <p set:html={linkKeywords(`Not because artists lack discipline. Not because craft does not matter. But because every generation builds a room and then slowly, quietly, begins to mistake the walls for the point.`)} />
-        <p set:html={linkKeywords(`It happens nearly the same way every time.`)} />
-        <p set:html={linkKeywords(`A new form arrives. It threatens the existing order. The existing order resists. Rules get written. Categories get enforced. Gold stars get handed to the work that stays where it is told.`)} />
-        <p set:html={linkKeywords(`The work that does not gets redirected to the corner. Or rejected at the door. Or handed back with a note explaining which category it actually belongs in.`)} />
-        <p set:html={linkKeywords(`But Billy is not the problem art needs to correct.`)} />
-        <p set:html={linkKeywords(`<strong>Billy is the antidote.</strong>`)} />
-        <p set:html={linkKeywords(`To formula. To algorithmic sameness. To the quiet pressure to make work that can be recognized before it has a chance to be felt.`)} />
-        <p set:html={linkKeywords(`Because algorithms do not reward wonder. They reward pattern.`)} />
-        <p set:html={linkKeywords(`The already proven. The already clicked. The already understood.`)} />
-        <p set:html={linkKeywords(`And when art starts thinking that way too, originality begins arriving as an inconvenience. Not because it lacks value. Because it interrupts the machinery.`)} />
-        <p set:html={linkKeywords(`Billy interrupts the machinery. That is why he matters.`)} />
-        <p set:html={linkKeywords(`He reminds us that the line was never the destination.`)} />
-        <p set:html={linkKeywords(`The line was just where somebody else stopped imagining.`)} />
-
-        <hr />
-
-        <p set:html={linkKeywords(`Art is not the only place this happens.`)} />
-        <p set:html={linkKeywords(`Every field has its Billy problem. Science has its gatekeepers. Business has its gatekeepers. Technology has its gatekeepers. Every established room develops a memory of how things are supposed to work.`)} />
-        <p set:html={linkKeywords(`The question is whether the room can still recognize the thing that might change it.`)} />
-        <p set:html={linkKeywords(`The computer mouse did not become important because it looked inevitable.`)} />
-        <p set:html={linkKeywords(`It became important because someone looked at the relationship between a human hand and a machine and asked a different question.`)} />
-        <p set:html={linkKeywords(`<strong>Why does it have to work that way?</strong>`)} />
-        <p set:html={linkKeywords(`That is the Billy question.`)} />
-        <p set:html={linkKeywords(`Not how do we make this fit the current model. Not how do we explain this using the language we already have. Not which approved category does this belong in.`)} />
-        <p set:html={linkKeywords(`But why does it have to work that way?`)} />
-        <p set:html={linkKeywords(`That question has changed science. It has changed technology. It has changed business. It has changed how we see, build, move, communicate, and imagine.`)} />
-        <p set:html={linkKeywords(`But art is a stranger battlefield.`)} />
-        <p set:html={linkKeywords(`Because in art, the gatekeeper's judgment often becomes the credential. The curator's taste becomes the institution. The judge's uncertainty becomes the rejection. The category becomes the doorway.`)} />
-        <p set:html={linkKeywords(`There is no data to appeal to. No utility that can prove the work useful. No market mechanism that immediately overrules the person holding the gold stars.`)} />
-        <p set:html={linkKeywords(`Which makes the next question almost too uncomfortable to ask out loud.`)} />
-        <p set:html={linkKeywords(`Have we become too formulaic in our definition of what is acceptable? Too precise in our definition of what is sellable?`)} />
-        <p set:html={linkKeywords(`Because the moment art optimizes for sellable, it stops asking why the hell not and starts asking what worked last time.`)} />
-        <p set:html={linkKeywords(`That is not a Billy question. That is a teacher question.`)} />
-
-        <hr />
-
-        <p set:html={linkKeywords(`We have been here before. Exactly here.`)} />
-        <p set:html={linkKeywords(`It was called Pictorialism.`)} />
-        <p set:html={linkKeywords(`In the late 19th and early 20th century, painterly fine art photography was fighting for its life as a serious art form. Painters dismissed it as mechanical. A technical process. A trick of chemistry and light.`)} />
-        <p set:html={linkKeywords(`Where was the hand? Where was the labor? Where was the artist?`)} />
-        <p set:html={linkKeywords(`Photography answered in the language the room already respected.`)} />
-        <p set:html={linkKeywords(`Soft focus. Atmosphere. Manipulation. Handwork on the negative.`)} />
-        <p set:html={linkKeywords(`The Pictorialists colored outside the lines of what photography was supposed to be, supposed to do, and supposed to say. They treated the photograph as raw material for the message, not the message itself.`)} />
-        <p set:html={linkKeywords(`Then another argument rose up.`)} />
-        <p set:html={linkKeywords(`Enough.`)} />
-        <p set:html={linkKeywords(`Photography does not need to imitate painting to be art. It needs to become fully and unapologetically itself.`)} />
-        <p set:html={linkKeywords(`That argument won. Eventually.`)} />
-        <p set:html={linkKeywords(`After decades of institutional resistance. After galleries refused the work. After established voices dismissed it as novelty. After the rules held for as long as rules can hold against an idea whose time had come.`)} />
-        <p set:html={linkKeywords(`The battle is settled history now.`)} />
-        <p set:html={linkKeywords(`Nobody defends the old gatekeepers anymore. Everyone agrees the work that transcended the medium rules was the work that lasted.`)} />
-        <p set:html={linkKeywords(`Everyone agrees. In retrospect.`)} />
-        <p set:html={linkKeywords(`But settled battles have a way of fooling us. They make us think the lesson was learned. Usually, it was only relocated.`)} />
-
-        <hr />
-
-        <p set:html={linkKeywords(`The defensive posture that painting once held against photography - this is mechanical, this requires no real craft, this is not art - photography eventually inherited.`)} />
-        <p set:html={linkKeywords(`Pulled it on like a hand-me-down coat. Wore it with the same conviction.`)} />
-        <p set:html={linkKeywords(`The medium that broke the rules became the medium that enforced them.`)} />
-        <p set:html={linkKeywords(`Straight out of camera. Minimal processing. Authentic. Pure. Real photography.`)} />
-        <p set:html={linkKeywords(`A new academy. New rules. New gatekeepers. New gold stars for staying inside the lines.`)} />
-        <p set:html={linkKeywords(`And painting?`)} />
-        <p set:html={linkKeywords(`Painting quietly absorbed photographic seeing so completely that the brush became a slower lens.`)} />
-        <p set:html={linkKeywords(`Photo reference. Projected images. Hyperrealism. Composited scenes. The painter's eye increasingly trained on what a camera captures rather than what imagination constructs.`)} />
-        <p set:html={linkKeywords(`Breathtaking craft. Stunning technique.`)} />
-        <p set:html={linkKeywords(`But somewhere in that process, the walls of the room became the point again.`)} />
-        <p set:html={linkKeywords(`So here we are.`)} />
-        <p set:html={linkKeywords(`One discipline fighting to stay pure from manipulation. Another fighting to stay faithful to the reference. Both building walls around their containers.`)} />
-        <p set:html={linkKeywords(`Both writing prospectuses full of words like innovative and new vision and reimagining while the submission rules quietly protect the familiar.`)} />
-        <p set:html={linkKeywords(`The vocabulary of liberation. The architecture of protection.`)} />
-
-        <hr />
-
-        <p set:html={linkKeywords(`Western art has its own version of this.`)} />
-        <p set:html={linkKeywords(`The tradition was born around story. Around the unresolved moment. Around the rider turning in the saddle, the smoke hanging in the air, the glance before the draw, the silence after the thing has already happened but before anyone knows what it means.`)} />
-        <p set:html={linkKeywords(`Russell understood that. Remington understood that.`)} />
-        <p set:html={linkKeywords(`The best Western narrative art was never simply about depicting the West.`)} />
-        <p set:html={linkKeywords(`It was about setting a fuse in the viewer's imagination and walking away before it burned down.`)} />
-        <p set:html={linkKeywords(`Then, over time, the rooms got cleaner. The shows got better organized. The categories got more precise. The prospectuses got more careful. The definitions got easier to defend.`)} />
-        <p set:html={linkKeywords(`And somewhere in all that useful order, something slipped out the back door.`)} />
-        <p set:html={linkKeywords(`Not the craft. The question.`)} />
-        <p set:html={linkKeywords(`Walk the floors of enough shows. Read enough prospectuses. Submit enough work to enough categories. A pattern emerges that is difficult to unsee once you have seen it.`)} />
-        <p set:html={linkKeywords(`The shows that most loudly celebrate breaking boundaries are often the most precise about which boundaries may be broken.`)} />
-        <p set:html={linkKeywords(`Different is welcome. Provided it is the right kind of different. Provided it stays inside the lines.`)} />
-
-        <hr />
-
-        <p set:html={linkKeywords(`But every so often, the room forgets its own rules.`)} />
-        <p set:html={linkKeywords(`A seasoned curator looks at work that does not quite fit the available categories. Not because the work is careless. Not because it lacks craft. But because it is asking a different question than the categories were built to answer.`)} />
-        <p set:html={linkKeywords(`He looks for a long moment.`)} />
-        <p set:html={linkKeywords(`Then he says:`)} />
-        <p set:html={linkKeywords(`<strong>This isn't just photography. This is Art.</strong>`)} />
-        <p set:html={linkKeywords(`Same work. Different room. Different eyes. Different answer.`)} />
-        <p set:html={linkKeywords(`That is not a story about validation. It is a story about seeing.`)} />
-        <p set:html={linkKeywords(`He did not say, this is acceptable photography. He did not say, this is close enough to painting. He did not try to rescue the work by moving it from one container into another.`)} />
-        <p set:html={linkKeywords(`He saw past the container.`)} />
-        <p set:html={linkKeywords(`He saw what the work was doing.`)} />
-        <p set:html={linkKeywords(`That distinction matters.`)} />
-        <p set:html={linkKeywords(`Because the deepest question is not whether a piece fits inside photography, painting, illustration, digital art, Western art, contemporary art, or any other carefully labeled room.`)} />
-        <p set:html={linkKeywords(`The deeper question is this:`)} />
-        <p set:html={linkKeywords(`<strong>What happens to the viewer?</strong>`)} />
-        <p set:html={linkKeywords(`Does the work sit there waiting to be admired? Or does it reach out and make the viewer responsible for something?`)} />
-        <p set:html={linkKeywords(`That is where the old lines begin to fail.`)} />
-        <p set:html={linkKeywords(`Because there is a kind of image that does not simply ask to be seen. It asks to be completed.`)} />
-
-        <hr />
-
-        <p set:html={linkKeywords(`The Western narrative tradition, at its best, was never passive.`)} />
-        <p set:html={linkKeywords(`Russell did not merely paint scenes. He built situations. He left doors open. He gave the viewer enough information to feel the danger, but not enough to escape the question.`)} />
-        <p set:html={linkKeywords(`Remington understood the weight of the next second. His figures often live on the edge of consequence. A horse about to break. A rider about to turn. A man about to decide who he is.`)} />
-        <p set:html={linkKeywords(`The story lives in the gap.`)} />
-        <p set:html={linkKeywords(`Not before. Not after.`)} />
-        <p set:html={linkKeywords(`In the suspended place where the viewer has to lean forward.`)} />
-        <p set:html={linkKeywords(`That gap is not an accident. It is the point.`)} />
-        <p set:html={linkKeywords(`That is the place I am working in.`)} />
-        <p set:html={linkKeywords(`A single constructed frame. A real person. A real place. A camera-captured moment shaped through painterly process. A title that does not explain the image, but opens a door inside it. A short narrative primer that hands the viewer a thread and lets them pull.`)} />
-        <p set:html={linkKeywords(`Not admiration. Participation.`)} />
-        <p set:html={linkKeywords(`There is a difference.`)} />
-        <p set:html={linkKeywords(`Admiration is what you give a technically beautiful thing. You can respect it. You can appreciate it. You can nod and move on.`)} />
-        <p set:html={linkKeywords(`The transaction is complete.`)} />
-        <p set:html={linkKeywords(`Participation is different.`)} />
-        <p set:html={linkKeywords(`Participation means the work is not finished without you.`)} />
-        <p set:html={linkKeywords(`The image holds the match. You bring the fire.`)} />
-        <p set:html={linkKeywords(`That is not just outside the lines. That is off the paper entirely.`)} />
-
-        <hr />
-
-        <p set:html={linkKeywords(`Most work answers.`)} />
-        <p set:html={linkKeywords(`It presents itself. Explains itself. Completes itself. It stands in the room and waits to be approved.`)} />
-        <p set:html={linkKeywords(`But the work that stays with us usually does something more unsettling.`)} />
-        <p set:html={linkKeywords(`It asks.`)} />
-        <p set:html={linkKeywords(`It leaves something unresolved.`)} />
-        <p set:html={linkKeywords(`It gives the viewer a burden. A question. A silence. A decision.`)} />
-        <p set:html={linkKeywords(`That is what the lines were never designed to hold.`)} />
-        <p set:html={linkKeywords(`Not because the lines are evil. Not because categories have no purpose. Not because craft and discipline do not matter.`)} />
-        <p set:html={linkKeywords(`They matter deeply.`)} />
-        <p set:html={linkKeywords(`But they are not the destination. They are the vehicle.`)} />
-        <p set:html={linkKeywords(`And when the vehicle becomes the destination, the art stops moving.`)} />
-
-        <hr />
-
-        <p set:html={linkKeywords(`In 1890, the explanation was this is just a mechanical process.`)} />
-        <p set:html={linkKeywords(`In 1910, it was this is not proper photography.`)} />
-        <p set:html={linkKeywords(`In 2026, it is this must be AI.`)} />
-        <p set:html={linkKeywords(`The vocabulary keeps changing. The move is always the same.`)} />
-        <p set:html={linkKeywords(`And here is where it gets uncomfortable.`)} />
-        <p set:html={linkKeywords(`We have built systems - in art, in algorithms, in institutions, in culture - that are so precisely tuned to reward the familiar that genuine surprise has become almost unclassifiable.`)} />
-        <p set:html={linkKeywords(`Billy has become so far outside the expected that the only available explanation is a machine.`)} />
-        <p set:html={linkKeywords(`Think about what that means.`)} />
-        <p set:html={linkKeywords(`We have optimized so thoroughly for what works, what sells, what fits the category, what earns the gold star, that when something arrives that none of those systems can process, we assume it could not have come from a human being.`)} />
-        <p set:html={linkKeywords(`We have made human creativity look like artificial intelligence.`)} />
-        <p set:html={linkKeywords(`Not because the work is inhuman. Because our rooms have become that small.`)} />
-        <p set:html={linkKeywords(`Without Billy at the table, the only thing left to surprise us might just be AI.`)} />
-        <p set:html={linkKeywords(`And unlike Billy, AI does not know why it is coloring outside the lines. It just does not know where they are.`)} />
-
-        <hr />
-
-        <p set:html={linkKeywords(`Billy did not know he was making an argument.`)} />
-        <p set:html={linkKeywords(`He was not rebelling against the institution of coloring pages. He was not writing a manifesto on creative freedom.`)} />
-        <p set:html={linkKeywords(`He was just following the only question that made sense to him.`)} />
-        <p set:html={linkKeywords(`<strong>Why does it have to work that way?</strong>`)} />
-        <p set:html={linkKeywords(`Art was supposed to be the place where that question never stopped being asked.`)} />
-        <p set:html={linkKeywords(`Not as rebellion. As birthright.`)} />
-        <p set:html={linkKeywords(`The One-Image Movie is my answer to that question.`)} />
-        <p set:html={linkKeywords(`Not just a photograph. Not quite a painting. Not an illustration pretending to be either.`)} />
-        <p set:html={linkKeywords(`A story suspended inside a single frame, waiting for the viewer to step close enough to finish it.`)} />
-        <p set:html={linkKeywords(`You do not just see it.`)} />
-        <p set:html={linkKeywords(`<strong>You complete it.</strong>`)} />
-
+        {storySegments.map((segment) => (
+          segment === "__HR__"
+            ? <hr />
+            : <p set:html={linkKeywords(segment)} />
+        ))}
         <h3>About the Artist</h3>
         <p set:html={linkKeywords(`Wayne Heim is a fine art photographer and medical illustrator whose painterly Western work lives in the gap between disciplines - too painterly for photography shows, too photographic for painting shows, and too interested in story to stay politely inside the lines.`)} />
 

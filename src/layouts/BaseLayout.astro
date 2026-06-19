@@ -586,6 +586,103 @@ const jsonLdScripts = [
         margin: 0 auto;
         padding: 0;
       }
+
+      .k4-collection-loading {
+        position: fixed;
+        inset: 0;
+        z-index: 2147483000;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+        background: rgba(17, 12, 8, 0.72);
+        color: #fff8ee;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity 160ms ease, visibility 160ms ease;
+      }
+
+      .k4-collection-loading.is-active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+
+      .k4-collection-loading__panel {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        max-width: min(92vw, 420px);
+        padding: 16px 18px;
+        border: 1px solid rgba(255, 248, 238, 0.24);
+        border-radius: 8px;
+        background: rgba(34, 24, 16, 0.9);
+        box-shadow: 0 18px 44px rgba(0, 0, 0, 0.32);
+      }
+
+      .k4-collection-loading__hourglass {
+        position: relative;
+        width: 26px;
+        height: 34px;
+        flex: 0 0 auto;
+        border-top: 3px solid #e9c986;
+        border-bottom: 3px solid #e9c986;
+        animation: k4-hourglass-turn 1.2s ease-in-out infinite;
+      }
+
+      .k4-collection-loading__hourglass::before,
+      .k4-collection-loading__hourglass::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        width: 0;
+        height: 0;
+        transform: translateX(-50%);
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+      }
+
+      .k4-collection-loading__hourglass::before {
+        top: 4px;
+        border-top: 11px solid rgba(233, 201, 134, 0.85);
+      }
+
+      .k4-collection-loading__hourglass::after {
+        bottom: 4px;
+        border-bottom: 11px solid rgba(233, 201, 134, 0.38);
+      }
+
+      .k4-collection-loading__copy {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        min-width: 0;
+      }
+
+      .k4-collection-loading__copy strong {
+        font-size: 0.98rem;
+        line-height: 1.25;
+        font-weight: 700;
+      }
+
+      .k4-collection-loading__copy span {
+        font-size: 0.82rem;
+        line-height: 1.35;
+        color: rgba(255, 248, 238, 0.78);
+      }
+
+      @keyframes k4-hourglass-turn {
+        0%, 72% { transform: rotate(0deg); }
+        100% { transform: rotate(180deg); }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .k4-collection-loading,
+        .k4-collection-loading__hourglass {
+          transition: none;
+          animation: none;
+        }
+      }
     </style>
 
     <!-- Microsoft Clarity - heatmaps & session recordings (deferred to not block render) -->
@@ -709,6 +806,15 @@ const jsonLdScripts = [
   </head>
 
   <body>
+    <div class="k4-collection-loading" id="k4-collection-loading" role="status" aria-live="polite" aria-hidden="true">
+      <div class="k4-collection-loading__panel">
+        <span class="k4-collection-loading__hourglass" aria-hidden="true"></span>
+        <span class="k4-collection-loading__copy">
+          <strong>Curating collection...</strong>
+          <span>Loading the complete gallery.</span>
+        </span>
+      </div>
+    </div>
     <div class="page-container">
       <slot />
     </div>
@@ -720,6 +826,67 @@ const jsonLdScripts = [
       </filter>
     </svg>
 
+    <script>
+      (function () {
+        var overlay = document.getElementById('k4-collection-loading');
+        if (!overlay) return;
+
+        function isModifiedClick(event) {
+          return event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey;
+        }
+
+        function shouldShowCollectionLoader(anchor) {
+          if (!anchor || !anchor.href) return false;
+          if (anchor.target && anchor.target.toLowerCase() !== '_self') return false;
+          if (anchor.hasAttribute('download')) return false;
+
+          var destination;
+          try {
+            destination = new URL(anchor.href, window.location.href);
+          } catch (e) {
+            return false;
+          }
+
+          if (destination.origin !== window.location.origin) return false;
+          if (!/\/all\/?$/i.test(destination.pathname)) return false;
+
+          var current = new URL(window.location.href);
+          var sameDocument =
+            current.pathname === destination.pathname &&
+            current.search === destination.search &&
+            current.hash !== destination.hash;
+          if (sameDocument) return false;
+
+          return true;
+        }
+
+        function showCollectionLoader() {
+          overlay.classList.add('is-active');
+          overlay.setAttribute('aria-hidden', 'false');
+        }
+
+        document.addEventListener('click', function (event) {
+          if (isModifiedClick(event)) return;
+
+          var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+          if (!shouldShowCollectionLoader(anchor)) return;
+
+          showCollectionLoader();
+          event.preventDefault();
+
+          window.requestAnimationFrame(function () {
+            window.setTimeout(function () {
+              window.location.href = anchor.href;
+            }, 60);
+          });
+        }, true);
+
+        window.addEventListener('pageshow', function () {
+          overlay.classList.remove('is-active');
+          overlay.setAttribute('aria-hidden', 'true');
+        });
+      })();
+    </script>
 
   </body>
 </html>

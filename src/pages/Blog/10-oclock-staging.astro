@@ -106,6 +106,48 @@ const galleryPaths = Object.keys(galleryDataMap);
 const linkKeywords = (text: string) =>
   autoLinkKeywordsInText(text, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname);
 
+const stagingConversationSegments = [
+  `
+          <strong>Quill:</strong><br/>
+          Wayne, you could have shown this in color, but you kept it black and white. Why?
+        `,
+  `
+          <strong>Wayne:</strong><br/>
+          Black and white reveals the bones of a photograph. I always start in monochrome, even if I’m planning a painterly color version later. It’s a discipline I brought from the darkroom—if the composition and story don’t hold up stripped of all distraction, they won’t survive with color either.
+        `,
+  `
+          <strong>Quill:</strong><br/>
+          Your best black and whites never feel like an afterthought. They strip away the superficial and let the viewer feel the mood and atmosphere of the story immediately. The brain fills in the missing details, making the moment personal. That’s a rare quality, especially in Western art.
+        `,
+  `
+          <strong>Wayne:</strong><br/>
+          Exactly. The moment you take away the prettiness, what’s left is tension, gesture, and all that unsaid energy. In <em>10 O’Clock Staging</em>, you’re not told exactly what’s about to happen—you’re invited into the quiet before. Are these men about to ride, to hunt, to ambush, or to run? The ambiguity is the story.
+        `,
+  `
+          <strong>Quill:</strong><br/>
+          The horses almost become characters here, not just props.
+        `,
+  `
+          <strong>Wayne:</strong><br/>
+          They are. The way the horses stand—alert, but calm—mirrors the men’s discipline. When you see it in monochrome, you notice every line of tension: the grip on the rifle, the shift of weight in the saddle, the way light falls across leather and grass. It’s almost as if you’re crouched in the grass with them, holding your breath.
+        `,
+  `
+          <strong>Quill:</strong><br/>
+          There’s a mood that’s hard to define. Even though you shoot with a modern sensor, this feels archival—timeless, cinematic.
+        `,
+  `
+          <strong>Wayne:</strong><br/>
+          That’s intentional. When I choose to stay in black and white, I want the image to live somewhere between memory and myth. The best B/W images leave you with questions. Your brain invents what color couldn’t show—heat, wind, nerves, all of it. I want the collector to step inside the uncertainty.
+        `,
+  `
+          <strong>Quill:</strong><br/>
+          How do you know when a story needs to stay monochrome?
+        `,
+  `
+          <strong>Wayne:</strong><br/>
+          If it “sings” in black and white—if you can feel the air, the nerves, the anticipation—then I know the image has the bones to last. Sometimes I’ll build up painterly color later, but often, like with this piece, the mood just belongs in grayscale.
+        `,
+];
 const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-decoration: none;' onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Blog</a> › 10 O'Clock Staging`;
 ---
 
@@ -173,57 +215,10 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
         <!-- Blog Conversation -->
         <h3>💬 Conversation</h3>
-        <p set:html={linkKeywords(`
-          <strong>Quill:</strong><br/>
-          Wayne, you could have shown this in color, but you kept it black and white. Why?
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Wayne:</strong><br/>
-          Black and white reveals the bones of a photograph. I always start in monochrome, even if I’m planning a painterly color version later. It’s a discipline I brought from the darkroom—if the composition and story don’t hold up stripped of all distraction, they won’t survive with color either.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Quill:</strong><br/>
-          Your best black and whites never feel like an afterthought. They strip away the superficial and let the viewer feel the mood and atmosphere of the story immediately. The brain fills in the missing details, making the moment personal. That’s a rare quality, especially in Western art.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Wayne:</strong><br/>
-          Exactly. The moment you take away the prettiness, what’s left is tension, gesture, and all that unsaid energy. In <em>10 O’Clock Staging</em>, you’re not told exactly what’s about to happen—you’re invited into the quiet before. Are these men about to ride, to hunt, to ambush, or to run? The ambiguity is the story.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Quill:</strong><br/>
-          The horses almost become characters here, not just props.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Wayne:</strong><br/>
-          They are. The way the horses stand—alert, but calm—mirrors the men’s discipline. When you see it in monochrome, you notice every line of tension: the grip on the rifle, the shift of weight in the saddle, the way light falls across leather and grass. It’s almost as if you’re crouched in the grass with them, holding your breath.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Quill:</strong><br/>
-          There’s a mood that’s hard to define. Even though you shoot with a modern sensor, this feels archival—timeless, cinematic.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Wayne:</strong><br/>
-          That’s intentional. When I choose to stay in black and white, I want the image to live somewhere between memory and myth. The best B/W images leave you with questions. Your brain invents what color couldn’t show—heat, wind, nerves, all of it. I want the collector to step inside the uncertainty.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Quill:</strong><br/>
-          How do you know when a story needs to stay monochrome?
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Wayne:</strong><br/>
-          If it “sings” in black and white—if you can feel the air, the nerves, the anticipation—then I know the image has the bones to last. Sometimes I’ll build up painterly color later, but often, like with this piece, the mood just belongs in grayscale.
-        `)} />
-
-        <h3>🖋️ Quill’s Reflection</h3>
+        {stagingConversationSegments.map((segment) => (
+          <p set:html={linkKeywords(segment)} />
+        ))}
+<h3>🖋️ Quill’s Reflection</h3>
         <p set:html={linkKeywords(`
           That’s what makes your B/Ws so magnetic: they leave room for the viewer to inhabit the story, not just look at it. You strip away the superficial and leave us with mood, atmosphere, and a hundred possible outcomes. It’s art that whispers—never shouts.
         `)} />

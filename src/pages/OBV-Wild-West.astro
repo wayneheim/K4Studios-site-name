@@ -84,26 +84,7 @@ const meta = {
 
 <BaseLayout title={pageTitle} meta={meta}>
   <main class="obv-page">
-    <svg class="svg-filter-defs" width="0" height="0" aria-hidden="true" focusable="false">
-      <defs>
-        <filter
-          id="obv-hero-sharpen"
-          x="0"
-          y="0"
-          width="100%"
-          height="100%"
-          color-interpolation-filters="sRGB"
-        >
-          <feConvolveMatrix
-            order="3"
-            kernelMatrix="0 -0.18 0 -0.18 1.72 -0.18 0 -0.18 0"
-            preserveAlpha="true"
-          />
-        </filter>
-      </defs>
-    </svg>
-
-    <header class="obv-site-header" aria-label="Old Bedford Village demo header">
+    <div class="obv-site-header" role="banner" aria-label="Old Bedford Village demo header">
       <a class="obv-brand" href="https://oldbedfordvillage.com/" aria-label="Old Bedford Village home">
         <span class="brand-emblem" aria-hidden="true">
           <span>OBV</span>
@@ -118,7 +99,7 @@ const meta = {
         <a href="https://oldbedfordvillage.com/events/">Events</a>
         <a href="https://oldbedfordvillage.com/the-village/">The Village</a>
       </nav>
-    </header>
+    </div>
 
     <section class="hero">
       <div class="hero-image-wrap">
@@ -247,9 +228,20 @@ const meta = {
 </BaseLayout>
 
 <style>
+  :global(html),
   :global(body) {
     margin: 0;
-    background: #f5f1e6;
+    background: #f5f1e6 !important;
+  }
+
+  :global(body) {
+    margin-top: 0 !important;
+  }
+
+  :global(.page-container) {
+    background: #f5f1e6 !important;
+    max-width: none !important;
+    padding: 0 !important;
   }
 
   .obv-page {
@@ -264,12 +256,6 @@ const meta = {
     background: var(--obv-paper);
     color: var(--obv-ink);
     font-family: Georgia, "Times New Roman", serif;
-  }
-
-  .svg-filter-defs {
-    position: absolute;
-    pointer-events: none;
-    overflow: hidden;
   }
 
   .obv-site-header {
@@ -371,7 +357,7 @@ const meta = {
   }
 
   .hero-image-wrap img {
-    filter: url("#obv-hero-sharpen") contrast(1.04) saturate(1.02);
+    filter: contrast(1.05) saturate(1.02);
     object-position: 42% center;
   }
 

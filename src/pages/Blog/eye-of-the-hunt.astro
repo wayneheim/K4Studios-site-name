@@ -105,6 +105,22 @@ const galleryPaths = Object.keys(galleryDataMap);
 const linkKeywords = (text: string) =>
   autoLinkKeywordsInText(text, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname);
 
+const eyeConversationSegments = [
+  `<strong>Quill:</strong> When you composed this, were you thinking of mutual gaze — that idea that the subject isn’t being observed but is observing us?`,
+  `<strong>Wayne:</strong> Most of these images from reenactments are action scenes rather than posed. I sometimes give small prompts and watch what happens — that’s part of the magic. Other times, I’m purely observing. I’m the hunter, watching for that fleeting moment.`,
+  `<strong>Quill:</strong> There’s incredible symmetry between the two figures — almost a mirrored focus. Was that intentional or something that appeared later?`,
+  `<strong>Wayne:</strong> It’s my sixth sense, I guess. Comes from years of photographing action — watching everything and nothing at once. Sometimes you can see it before it happens.`,
+  `<strong>Quill:</strong> You’ve talked about balancing realism and restraint. How did you decide where to stop the painterly treatment here?`,
+  `<strong>Wayne:</strong> It varies per image. Some need more painterly work to set the energy — through color, or lack of it. This one didn’t. Everything funneled toward that single eye — being seen, being found out. Once that happens, you can’t look away.`,
+  `<strong>Quill:</strong> This is one of your most intimate portrayals of Native subjects. What does respectful representation mean here?`,
+  `<strong>Wayne:</strong> It’s a fine line. I’m careful not to over-direct. I want them to show me what feels natural — not what Hollywood taught us. Authenticity happens when you stop telling and start watching.`,
+  `<strong>Quill:</strong> You’ve said “the West is a mirror, not a myth.” Who does this mirror reflect more — the hunter, or the viewer?`,
+  `<strong>Wayne:</strong> Western themes — struggle, grit, exploration — are timeless. People connect to the romantic myth, but I want them to go deeper. When they see themselves in that tension or calm, maybe it speaks to their own struggles or healing.`,
+  `<strong>Quill:</strong> This piece has tension but no violence, stillness but no peace. What does that say about the human condition?`,
+  `<strong>Wayne:</strong> We all hide in the shadows until someone sees us for who we are. That’s the gut-check moment — what do you do when there’s no hiding?`,
+  `<strong>Quill:</strong> If a viewer stood beside you on that shoot, what would you want them to know?`,
+  `<strong>Wayne:</strong> Be in the moment. Watch for the story — always the story. The real magic comes in those hidden sub-stories. That’s where the eyes have it.`,
+];
 const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-decoration: none;' onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Blog</a> › Eye of the Hunt`;
 ---
 
@@ -171,29 +187,10 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
         <!-- Conversation -->
         <h3>💬 Conversation</h3>
-        <p set:html={linkKeywords(`<strong>Quill:</strong> When you composed this, were you thinking of mutual gaze — that idea that the subject isn’t being observed but is observing us?`)} />
-        <p set:html={linkKeywords(`<strong>Wayne:</strong> Most of these images from reenactments are action scenes rather than posed. I sometimes give small prompts and watch what happens — that’s part of the magic. Other times, I’m purely observing. I’m the hunter, watching for that fleeting moment.`)} />
-
-        <p set:html={linkKeywords(`<strong>Quill:</strong> There’s incredible symmetry between the two figures — almost a mirrored focus. Was that intentional or something that appeared later?`)} />
-        <p set:html={linkKeywords(`<strong>Wayne:</strong> It’s my sixth sense, I guess. Comes from years of photographing action — watching everything and nothing at once. Sometimes you can see it before it happens.`)} />
-
-        <p set:html={linkKeywords(`<strong>Quill:</strong> You’ve talked about balancing realism and restraint. How did you decide where to stop the painterly treatment here?`)} />
-        <p set:html={linkKeywords(`<strong>Wayne:</strong> It varies per image. Some need more painterly work to set the energy — through color, or lack of it. This one didn’t. Everything funneled toward that single eye — being seen, being found out. Once that happens, you can’t look away.`)} />
-
-        <p set:html={linkKeywords(`<strong>Quill:</strong> This is one of your most intimate portrayals of Native subjects. What does respectful representation mean here?`)} />
-        <p set:html={linkKeywords(`<strong>Wayne:</strong> It’s a fine line. I’m careful not to over-direct. I want them to show me what feels natural — not what Hollywood taught us. Authenticity happens when you stop telling and start watching.`)} />
-
-        <p set:html={linkKeywords(`<strong>Quill:</strong> You’ve said “the West is a mirror, not a myth.” Who does this mirror reflect more — the hunter, or the viewer?`)} />
-        <p set:html={linkKeywords(`<strong>Wayne:</strong> Western themes — struggle, grit, exploration — are timeless. People connect to the romantic myth, but I want them to go deeper. When they see themselves in that tension or calm, maybe it speaks to their own struggles or healing.`)} />
-
-        <p set:html={linkKeywords(`<strong>Quill:</strong> This piece has tension but no violence, stillness but no peace. What does that say about the human condition?`)} />
-        <p set:html={linkKeywords(`<strong>Wayne:</strong> We all hide in the shadows until someone sees us for who we are. That’s the gut-check moment — what do you do when there’s no hiding?`)} />
-
-        <p set:html={linkKeywords(`<strong>Quill:</strong> If a viewer stood beside you on that shoot, what would you want them to know?`)} />
-        <p set:html={linkKeywords(`<strong>Wayne:</strong> Be in the moment. Watch for the story — always the story. The real magic comes in those hidden sub-stories. That’s where the eyes have it.`)} />
-
-        <!-- Expert Commentary -->
-        <h3>🎨 On Painterly Photography and the Language of Story</h3>
+        {eyeConversationSegments.map((segment) => (
+          <p set:html={linkKeywords(segment)} />
+        ))}
+<h3>🎨 On Painterly Photography and the Language of Story</h3>
         <p set:html={linkKeywords(`<strong>Quill:</strong> When people hear “painterly photography,” they often imagine imitation. But in fine-art terms, it’s emotional translation — the pursuit of light, tone, and gesture that painting explored for centuries. Heim’s painterly work borrows painting’s moral grammar. Like Wyeth or Remington, he uses atmosphere to guide empathy, light to shape judgment, and restraint to invite participation. It lets viewers forget they’re seeing a modern photograph and experience something timeless — between dream and memory.`)} />
         <p set:html={linkKeywords(`<strong>Wayne:</strong> Exactly. Painterly photography isn’t about pretending to be paint — it’s about using photographic tools to reach that emotional register. Light becomes my pigment; the lens my brush. By softening or shaping texture, I’m removing distraction, not detail. The goal is to help people forget the modern world — to just live inside the story.`)} />
 

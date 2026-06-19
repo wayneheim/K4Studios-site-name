@@ -115,6 +115,199 @@ const galleryPaths = Object.keys(galleryDataMap);
 const linkKeywords = (text: string) =>
   autoLinkKeywordsInText(text, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname);
 
+const conversationSegments = [
+  `
+          <strong>Quill:</strong> Wayne, you've been circling something lately that feels bigger than just one image. This idea of what sits beneath the Western legend. What are you seeing there?
+        `,
+  `
+          <strong>Wayne:</strong><br/><br/>
+          I think we've been trained to see the West through its icons.<br/><br/>
+          The gunslinger.<br/>
+          The lawman.<br/>
+          The rider on the horizon.<br/><br/>
+          The dime-store version of it.<br/><br/>
+          And I get it — I love that stuff too. It's part of the mythology.<br/><br/>
+          But that's not the whole story. Not even close.
+        `,
+  `
+          <strong>Quill:</strong> So what's missing?
+        `,
+  `
+          <strong>Wayne:</strong><br/><br/>
+          Context.<br/><br/>
+          Everything that made those figures possible.<br/><br/>
+          The cook who stretched six cans of beans to get them to Laramie before snowfall.<br/>
+          The mothers doing the wash, tending the children, holding everything together.<br/>
+          The men doing the kind of work that never gets written down.<br/><br/>
+          Endless cogs in the wheel of history… just keeping the wheels moving.<br/><br/>
+          Their struggles.<br/>
+          Their sacrifices.<br/>
+          Their determination.<br/><br/>
+          That's the part that gets left out.
+        `,
+  `
+          <strong>Quill:</strong> You used the word armature earlier. That stuck with me.
+        `,
+  `
+          <strong>Wayne:</strong><br/><br/>
+          Yeah. That's the best way I can describe it.<br/><br/>
+          We talk about the legend like it stands on its own.<br/><br/>
+          Like it just is.<br/><br/>
+          But it doesn't.<br/><br/>
+          It has a structure beneath it. A hidden framework that supports everything we recognize as the West.<br/><br/>
+          That's the armature.<br/><br/>
+          That's where the real stories live.
+        `,
+  `
+          <strong>Quill:</strong> So the legend is the surface… and the armature is what made it possible.
+        `,
+  `
+          <strong>Wayne:</strong><br/><br/>
+          Exactly.<br/><br/>
+          If you strip that away, all you've got left is a pose. A silhouette. Something that looks right — but doesn't carry much.<br/><br/>
+          History wasn't built by symbols.<br/>
+          It created symbols.<br/><br/>
+          History is built from the actions and stories of people most of us will never know the names of.
+        `,
+  `
+          <strong>Quill:</strong> Why do you think we default to the icons?
+        `,
+  `
+          <strong>Wayne:</strong><br/><br/>
+          Because they're clean.<br/><br/>
+          We like to simplify. It's safer that way.<br/><br/>
+          They're easy to understand. Easy to package. Easy to repeat.<br/><br/>
+          Less need for reflection.<br/><br/>
+          Hollywood — even when it gets closer to hardship, loss, and drama — still orbits the hero. Just in a more romantic way.<br/><br/>
+          I'm not saying there's no place for heroes.<br/><br/>
+          I'm just saying if you want to understand — to feel — you have to pull back the curtain and see what's underneath.
+        `,
+  `
+          <strong>Quill:</strong> So even when the tone changes, the center doesn't.
+        `,
+  `
+          <strong>Wayne:</strong><br/><br/>
+          Exactly.<br/><br/>
+          We're still pointing at the same figure and saying, that's the story.<br/><br/>
+          I just try to give people a richer one.<br/><br/>
+          To get them to step inside and imagine what it might have been like to stand in those shoes…<br/>
+          to make those decisions…<br/>
+          to carry those sacrifices.<br/><br/>
+          To learn something about history — and maybe something about themselves.
+        `,
+  `
+          <strong>Quill:</strong> Then what is the real story?
+        `,
+  `
+          <strong>Wayne:</strong><br/><br/>
+          The structure beneath the legend.<br/><br/>
+          The people who carried it.<br/><br/>
+          The ones who didn't get the painting.<br/>
+          Didn't get the credit.<br/>
+          Didn't get remembered.<br/><br/>
+          The Western spirit is every bit — if not more — about them as it is about the iconic characters we grew up with.<br/><br/>
+          Not because they matter more…<br/><br/>
+          …but because you can't have one without the other.
+        `,
+  `
+          <strong>Quill:</strong> That shifts the meaning of “Western spirit.”
+        `,
+  `
+          <strong>Wayne:</strong><br/><br/>
+          It should.<br/><br/>
+          Because when people talk about it, they talk about grit, toughness, resilience…<br/><br/>
+          …but they attach it to the icon.<br/><br/>
+          The reality is — it lived everywhere.<br/><br/>
+          In endurance.<br/>
+          In repetition.<br/>
+          In people getting knocked down and getting back up again.<br/><br/>
+          Over and over.
+        `,
+  `
+          <strong>Quill:</strong> That sounds less like myth… and more like something you recognize in real life.
+        `,
+  `
+          <strong>Wayne:</strong><br/><br/>
+          That's the point.<br/><br/>
+          These aren't just stories to be impressed by.<br/><br/>
+          They're stories to learn from.<br/>
+          To respect.<br/>
+          To carry forward.
+        `,
+  `
+          <strong>Quill:</strong> Carry forward how?
+        `,
+  `
+          <strong>Wayne:</strong><br/><br/>
+          By letting them become part of your own armature.<br/><br/>
+          That's what matters to me.<br/><br/>
+          If these people could endure what they did — uncertainty, loss, hardship — and still keep going…<br/><br/>
+          then what are we waiting for?
+        `,
+  `
+          <strong>Quill:</strong> That's a different energy than how Western imagery is usually received.
+        `,
+  `
+          <strong>Wayne:</strong><br/><br/>
+          Yeah.<br/><br/>
+          Because I'm not trying to make dark images just to shock people.<br/><br/>
+          I'm not saying, “look how hard this was.”<br/><br/>
+          I'm reframing that whole glass-half-empty conversation.
+        `,
+  `
+          <strong>Quill:</strong> Into what?
+        `,
+  `
+          <strong>Wayne:</strong><br/><br/>
+          Into:<br/><br/>
+          “You can do this too.”
+        `,
+  `
+          <strong>Quill:</strong> That's a powerful turn.
+        `,
+  `
+          <strong>Wayne:</strong><br/><br/>
+          It is.<br/><br/>
+          Because once you stop looking at these people as distant history — and start seeing them as everyday human beings who figured out how to keep going —<br/><br/>
+          you realize something.<br/><br/>
+          They're not that different from us.<br/><br/>
+          They're examples.
+        `,
+  `
+          <strong>Quill:</strong> So the work isn't just about preserving the past.
+        `,
+  `
+          <strong>Wayne:</strong><br/><br/>
+          Not entirely.<br/><br/>
+          It's about using the past to build something in the present.<br/><br/>
+          To remind people what's possible.<br/><br/>
+          To show them what it looks like to get kicked in the teeth a dozen times…<br/>
+          and still stand back up.
+        `,
+  `
+          <strong>Quill:</strong> And your images… where do they sit in all of this?
+        `,
+  `
+          <strong>Wayne:</strong><br/><br/>
+          They're not there to decorate the legend.<br/><br/>
+          They're there to push you underneath it.<br/><br/>
+          To make you feel that structure.<br/><br/>
+          To ask:<br/><br/>
+          What did this life cost?<br/>
+          What held this moment up?<br/>
+          What's still happening outside the frame?
+        `,
+  `
+          <strong>Quill:</strong> That's where the weight comes from.
+        `,
+  `
+          <strong>Wayne:</strong><br/><br/>
+          Exactly.<br/><br/>
+          Without that, it's just a picture.<br/><br/>
+          With it…<br/><br/>
+          it becomes something you carry.
+        `,
+];
 const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-decoration: none;' onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Blog</a> › Armature Beneath the Legend`;
 ---
 
@@ -171,230 +364,9 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
       <article class="story-block space-y-4">
 
         <h3>💬 Conversation</h3>
-
-        <p set:html={linkKeywords(`
-          <strong>Quill:</strong> Wayne, you've been circling something lately that feels bigger than just one image. This idea of what sits beneath the Western legend. What are you seeing there?
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Wayne:</strong><br/><br/>
-          I think we've been trained to see the West through its icons.<br/><br/>
-          The gunslinger.<br/>
-          The lawman.<br/>
-          The rider on the horizon.<br/><br/>
-          The dime-store version of it.<br/><br/>
-          And I get it — I love that stuff too. It's part of the mythology.<br/><br/>
-          But that's not the whole story. Not even close.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Quill:</strong> So what's missing?
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Wayne:</strong><br/><br/>
-          Context.<br/><br/>
-          Everything that made those figures possible.<br/><br/>
-          The cook who stretched six cans of beans to get them to Laramie before snowfall.<br/>
-          The mothers doing the wash, tending the children, holding everything together.<br/>
-          The men doing the kind of work that never gets written down.<br/><br/>
-          Endless cogs in the wheel of history… just keeping the wheels moving.<br/><br/>
-          Their struggles.<br/>
-          Their sacrifices.<br/>
-          Their determination.<br/><br/>
-          That's the part that gets left out.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Quill:</strong> You used the word armature earlier. That stuck with me.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Wayne:</strong><br/><br/>
-          Yeah. That's the best way I can describe it.<br/><br/>
-          We talk about the legend like it stands on its own.<br/><br/>
-          Like it just is.<br/><br/>
-          But it doesn't.<br/><br/>
-          It has a structure beneath it. A hidden framework that supports everything we recognize as the West.<br/><br/>
-          That's the armature.<br/><br/>
-          That's where the real stories live.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Quill:</strong> So the legend is the surface… and the armature is what made it possible.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Wayne:</strong><br/><br/>
-          Exactly.<br/><br/>
-          If you strip that away, all you've got left is a pose. A silhouette. Something that looks right — but doesn't carry much.<br/><br/>
-          History wasn't built by symbols.<br/>
-          It created symbols.<br/><br/>
-          History is built from the actions and stories of people most of us will never know the names of.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Quill:</strong> Why do you think we default to the icons?
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Wayne:</strong><br/><br/>
-          Because they're clean.<br/><br/>
-          We like to simplify. It's safer that way.<br/><br/>
-          They're easy to understand. Easy to package. Easy to repeat.<br/><br/>
-          Less need for reflection.<br/><br/>
-          Hollywood — even when it gets closer to hardship, loss, and drama — still orbits the hero. Just in a more romantic way.<br/><br/>
-          I'm not saying there's no place for heroes.<br/><br/>
-          I'm just saying if you want to understand — to feel — you have to pull back the curtain and see what's underneath.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Quill:</strong> So even when the tone changes, the center doesn't.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Wayne:</strong><br/><br/>
-          Exactly.<br/><br/>
-          We're still pointing at the same figure and saying, that's the story.<br/><br/>
-          I just try to give people a richer one.<br/><br/>
-          To get them to step inside and imagine what it might have been like to stand in those shoes…<br/>
-          to make those decisions…<br/>
-          to carry those sacrifices.<br/><br/>
-          To learn something about history — and maybe something about themselves.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Quill:</strong> Then what is the real story?
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Wayne:</strong><br/><br/>
-          The structure beneath the legend.<br/><br/>
-          The people who carried it.<br/><br/>
-          The ones who didn't get the painting.<br/>
-          Didn't get the credit.<br/>
-          Didn't get remembered.<br/><br/>
-          The Western spirit is every bit — if not more — about them as it is about the iconic characters we grew up with.<br/><br/>
-          Not because they matter more…<br/><br/>
-          …but because you can't have one without the other.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Quill:</strong> That shifts the meaning of “Western spirit.”
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Wayne:</strong><br/><br/>
-          It should.<br/><br/>
-          Because when people talk about it, they talk about grit, toughness, resilience…<br/><br/>
-          …but they attach it to the icon.<br/><br/>
-          The reality is — it lived everywhere.<br/><br/>
-          In endurance.<br/>
-          In repetition.<br/>
-          In people getting knocked down and getting back up again.<br/><br/>
-          Over and over.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Quill:</strong> That sounds less like myth… and more like something you recognize in real life.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Wayne:</strong><br/><br/>
-          That's the point.<br/><br/>
-          These aren't just stories to be impressed by.<br/><br/>
-          They're stories to learn from.<br/>
-          To respect.<br/>
-          To carry forward.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Quill:</strong> Carry forward how?
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Wayne:</strong><br/><br/>
-          By letting them become part of your own armature.<br/><br/>
-          That's what matters to me.<br/><br/>
-          If these people could endure what they did — uncertainty, loss, hardship — and still keep going…<br/><br/>
-          then what are we waiting for?
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Quill:</strong> That's a different energy than how Western imagery is usually received.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Wayne:</strong><br/><br/>
-          Yeah.<br/><br/>
-          Because I'm not trying to make dark images just to shock people.<br/><br/>
-          I'm not saying, “look how hard this was.”<br/><br/>
-          I'm reframing that whole glass-half-empty conversation.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Quill:</strong> Into what?
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Wayne:</strong><br/><br/>
-          Into:<br/><br/>
-          “You can do this too.”
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Quill:</strong> That's a powerful turn.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Wayne:</strong><br/><br/>
-          It is.<br/><br/>
-          Because once you stop looking at these people as distant history — and start seeing them as everyday human beings who figured out how to keep going —<br/><br/>
-          you realize something.<br/><br/>
-          They're not that different from us.<br/><br/>
-          They're examples.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Quill:</strong> So the work isn't just about preserving the past.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Wayne:</strong><br/><br/>
-          Not entirely.<br/><br/>
-          It's about using the past to build something in the present.<br/><br/>
-          To remind people what's possible.<br/><br/>
-          To show them what it looks like to get kicked in the teeth a dozen times…<br/>
-          and still stand back up.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Quill:</strong> And your images… where do they sit in all of this?
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Wayne:</strong><br/><br/>
-          They're not there to decorate the legend.<br/><br/>
-          They're there to push you underneath it.<br/><br/>
-          To make you feel that structure.<br/><br/>
-          To ask:<br/><br/>
-          What did this life cost?<br/>
-          What held this moment up?<br/>
-          What's still happening outside the frame?
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Quill:</strong> That's where the weight comes from.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Wayne:</strong><br/><br/>
-          Exactly.<br/><br/>
-          Without that, it's just a picture.<br/><br/>
-          With it…<br/><br/>
-          it becomes something you carry.
-        `)} />
-
+        {conversationSegments.map((segment) => (
+          <p set:html={linkKeywords(segment)} />
+        ))}
         <h3>🖋️ Quill's Reflection</h3>
 
         <p set:html={linkKeywords(`

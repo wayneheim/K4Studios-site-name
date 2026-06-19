@@ -106,6 +106,119 @@ const galleryPaths = Object.keys(galleryDataMap);
 const linkKeywords = (text: string) =>
   autoLinkKeywordsInText(text, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname);
 
+const hearingConversationSegments = [
+  `
+          <strong>Quill:</strong><br/>
+          Not all images sound the same.
+        `,
+  `
+          <strong>Wayne:</strong><br/>
+          That's an odd way to start.
+        `,
+  `
+          <strong>Quill:</strong><br/>
+          I know. But stay with me.
+        `,
+  `
+          You've taken a pretty unusual approach with some of your work. You pair certain images with short pieces of writing — not full stories, not explanations — and you leave a lot unsaid. You don't tell the viewer what happened before or what comes next. You operate in ambiguity. Suggestion. Just enough to orient someone… and then you step back.
+        `,
+  `
+          You force the viewer to complete the rest of the story themselves.
+        `,
+  `
+          <strong>Wayne:</strong><br/>
+          That's always been intentional. Once you explain too much, the image stops being theirs.
+        `,
+  `
+          But it's not just a philosophy — it's built directly into how the work is presented.
+        `,
+  `
+          Each image is paired with its story in a very minimal, art-first, story-second format. No heavy captions. The image leads. The text follows quietly. They're meant to be encountered together, not separately.
+        `,
+  `
+          <strong>Quill:</strong><br/>
+          So the ambiguity isn't just in the writing — it's structural.
+        `,
+  `
+          <strong>Wayne:</strong><br/>
+          Exactly. The presentation itself resists over-explanation. You're meant to arrive at the image first, sit with it, and then let the story gently nudge your attention — not redirect it.
+        `,
+  `
+          It's very different from traditional photography presentation, where text often explains what you're looking at, where it was taken, or why it matters.
+        `,
+  `
+          <strong>Quill:</strong><br/>
+          This feels closer to a book experience.
+        `,
+  `
+          <strong>Wayne:</strong><br/>
+          That's how I think about it — a kind of digital coffee-table book. Image and story live on the same page, but neither dominates. You can linger, reread, move on, or come back later — at your own pace.
+        `,
+  `
+          <strong>Quill:</strong><br/>
+          That's what caught my attention. Because there's something else that functions cognitively in almost the same way.
+        `,
+  `
+          <strong>Wayne:</strong><br/>
+          Let me guess.
+        `,
+  `
+          <strong>Quill:</strong><br/>
+          Music.
+        `,
+  `
+          Not all music — but storyteller music. The kind of songs that don't spell everything out. They give you a character, a moment, a posture in the world… and then they trust you to fill in the rest.
+        `,
+  `
+          Those songs don't resolve cleanly. They imply history. They leave space. They don't rush to meaning.
+        `,
+  `
+          And when I started thinking about it, your images — especially when paired with restrained text — behave in a very similar way.
+        `,
+  `
+          <strong>Wayne:</strong><br/>
+          I've always thought of the writing as a way to tune the image. Not to explain it. More like adjusting pitch or key.
+        `,
+  `
+          <strong>Quill:</strong><br/>
+          That tracks. The writing doesn't advance a plot. It doesn't clarify action. It sharpens a feeling and then gets out of the way.
+        `,
+  `
+          Which is exactly how those kinds of songs work.
+        `,
+  `
+          <strong>Wayne:</strong><br/>
+          What's strange is that once I started working this way, it became harder and harder to separate the two in my own mind. The image alone feels unfinished. The text alone feels unanchored.
+        `,
+  `
+          <strong>Quill:</strong><br/>
+          That's an important observation.
+        `,
+  `
+          Because it suggests the work isn't really image plus story anymore.
+        `,
+  `
+          It's a single experience built out of two elements.
+        `,
+  `
+          <strong>Wayne:</strong><br/>
+          Which creates a whole new set of presentation problems I'm not ready to solve yet.
+        `,
+  `
+          <strong>Quill:</strong><br/>
+          (laughs)<br/>
+          Fair. But it also explains why people tend to linger longer than they expect to. Why they don't summarize what they're seeing so much as describe how it felt.
+        `,
+  `
+          <strong>Wayne:</strong><br/>
+          They rarely say, "This is what's happening."<br/>
+          They say things like, "This reminds me of…" or "This stayed with me."
+        `,
+  `
+          <strong>Quill:</strong><br/>
+          Which brings us to the medical-illustrator side of your brain.
+        `,
+];
 const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-decoration: none;' onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Blog</a> › Hearing the Art`;
 ---
 
@@ -164,149 +277,10 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         <p set:html={linkKeywords(`<em>Some images want to be decoded. Some want to be witnessed. And some — maybe — want to be listened to. In this episode, Quill and Wayne explore how pairing images with restrained, lyrical text elicits an experience closer to listening to music than to viewing traditional photography. Not images that explain themselves — but images that invite the viewer to bring their own history, memory, and meaning into the frame.</em>`)} />
 
         <h3>💬 Conversation</h3>
-
-        <p set:html={linkKeywords(`
-          <strong>Quill:</strong><br/>
-          Not all images sound the same.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Wayne:</strong><br/>
-          That's an odd way to start.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Quill:</strong><br/>
-          I know. But stay with me.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          You've taken a pretty unusual approach with some of your work. You pair certain images with short pieces of writing — not full stories, not explanations — and you leave a lot unsaid. You don't tell the viewer what happened before or what comes next. You operate in ambiguity. Suggestion. Just enough to orient someone… and then you step back.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          You force the viewer to complete the rest of the story themselves.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Wayne:</strong><br/>
-          That's always been intentional. Once you explain too much, the image stops being theirs.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          But it's not just a philosophy — it's built directly into how the work is presented.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          Each image is paired with its story in a very minimal, art-first, story-second format. No heavy captions. The image leads. The text follows quietly. They're meant to be encountered together, not separately.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Quill:</strong><br/>
-          So the ambiguity isn't just in the writing — it's structural.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Wayne:</strong><br/>
-          Exactly. The presentation itself resists over-explanation. You're meant to arrive at the image first, sit with it, and then let the story gently nudge your attention — not redirect it.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          It's very different from traditional photography presentation, where text often explains what you're looking at, where it was taken, or why it matters.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Quill:</strong><br/>
-          This feels closer to a book experience.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Wayne:</strong><br/>
-          That's how I think about it — a kind of digital coffee-table book. Image and story live on the same page, but neither dominates. You can linger, reread, move on, or come back later — at your own pace.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Quill:</strong><br/>
-          That's what caught my attention. Because there's something else that functions cognitively in almost the same way.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Wayne:</strong><br/>
-          Let me guess.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Quill:</strong><br/>
-          Music.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          Not all music — but storyteller music. The kind of songs that don't spell everything out. They give you a character, a moment, a posture in the world… and then they trust you to fill in the rest.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          Those songs don't resolve cleanly. They imply history. They leave space. They don't rush to meaning.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          And when I started thinking about it, your images — especially when paired with restrained text — behave in a very similar way.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Wayne:</strong><br/>
-          I've always thought of the writing as a way to tune the image. Not to explain it. More like adjusting pitch or key.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Quill:</strong><br/>
-          That tracks. The writing doesn't advance a plot. It doesn't clarify action. It sharpens a feeling and then gets out of the way.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          Which is exactly how those kinds of songs work.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Wayne:</strong><br/>
-          What's strange is that once I started working this way, it became harder and harder to separate the two in my own mind. The image alone feels unfinished. The text alone feels unanchored.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Quill:</strong><br/>
-          That's an important observation.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          Because it suggests the work isn't really image plus story anymore.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          It's a single experience built out of two elements.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Wayne:</strong><br/>
-          Which creates a whole new set of presentation problems I'm not ready to solve yet.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Quill:</strong><br/>
-          (laughs)<br/>
-          Fair. But it also explains why people tend to linger longer than they expect to. Why they don't summarize what they're seeing so much as describe how it felt.
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Wayne:</strong><br/>
-          They rarely say, "This is what's happening."<br/>
-          They say things like, "This reminds me of…" or "This stayed with me."
-        `)} />
-
-        <p set:html={linkKeywords(`
-          <strong>Quill:</strong><br/>
-          Which brings us to the medical-illustrator side of your brain.
-        `)} />
-
-        <h3>🔬 Nerd Alert <span style="font-weight:400; font-size:0.9rem;">(short and optional)</span></h3>
+        {hearingConversationSegments.map((segment) => (
+          <p set:html={linkKeywords(segment)} />
+        ))}
+<h3>🔬 Nerd Alert <span style="font-weight:400; font-size:0.9rem;">(short and optional)</span></h3>
 
         <p set:html={linkKeywords(`
           <strong>Wayne:</strong><br/>

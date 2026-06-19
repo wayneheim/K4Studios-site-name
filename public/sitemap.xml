@@ -8,7 +8,7 @@
   </url>
   <url>
     <loc>https://www.k4studios.com/1800s-cowboy-art</loc>
-    <lastmod>2026-06-16T14:57:45.996Z</lastmod>
+    <lastmod>2026-06-16T21:47:31-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -80,7 +80,7 @@
   </url>
   <url>
     <loc>https://www.k4studios.com/Contemporary-Western-Art</loc>
-    <lastmod>2026-06-16T15:24:43.220Z</lastmod>
+    <lastmod>2026-06-16T21:47:31-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -140,7 +140,7 @@
   </url>
   <url>
     <loc>https://www.k4studios.com/cowboy-themed-photography</loc>
-    <lastmod>2026-06-16T15:36:51.340Z</lastmod>
+    <lastmod>2026-06-16T21:47:31-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1017,6 +1017,12 @@
   <url>
     <loc>https://www.k4studios.com/News-Awards</loc>
     <lastmod>2026-05-28T11:43:25-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.k4studios.com/OBV-Wild-West</loc>
+    <lastmod>2026-06-17T01:56:45.241Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
