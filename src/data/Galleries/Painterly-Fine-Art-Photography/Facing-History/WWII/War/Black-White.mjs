@@ -28,7 +28,6 @@ export const galleryData = [
     "description": "A black and white World War II battle photography image capturing the violent immediacy of a beach landing during the Second World War. This WWII combat photography piece reflects the raw tension of wartime action photography, rendered with documentary realism and painterly tonal control. Rooted in historical reenactment and battlefield moments, the composition embodies war zone photography where motion, weight, and consequence converge — an artistic documentary study of WWII battle photography and scenes from the front. © Wayne Heim",
     "alt": "World War II soldier landing on beach under fire in black and white battle photograph",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-p8JdtJM/A",
-
     "keywords": [
       "black and white photography",
       "WWII battle photography",
@@ -41,7 +40,6 @@ export const galleryData = [
       "historical reenactment photography",
       "wartime action photography"
     ],
-
     "story": "The water was colder than he expected.\n\nSound fractured into pieces — surf, shouting, metal striking stone. Training dissolved into instinct somewhere between the boat and the sand.\n\nHe didn’t look back. There was only forward now.",
     "notes": "The diagonal thrust of the figure against the horizontal break of surf creates immediate visual tension. The low vantage point and compressed tonal range heighten the sensation of weight — gear, water, responsibility — bearing down at once.\n\nIn the lineage of war photography and action-driven narrative art, this piece balances documentary grit with compositional restraint. The monochrome treatment strips distraction, allowing movement, posture, and environment to define the psychological intensity of the moment.",
     "rating": 4,
@@ -54,7 +52,7 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-2010/i-p8JdtJM/5/LbVfXtT34jNbg9GPTZVNvP8FsG9bVPPGSSPdh2gmt/M/_IGP6535-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-2010/i-p8JdtJM/5/NgGsLDRCxJh7pWkr4BXHrctpQ7h8B8BrxhT4ndbjt/S/_IGP6535-Edit-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-F33M327",
@@ -62,7 +60,6 @@ export const galleryData = [
     "description": "A black and white World War II battle photography image capturing a battlefield medic rushing forward under fire. This WWII combat photography piece reflects the urgency and sacrifice woven into wartime action photography, rendered with documentary realism and controlled monochrome tonality. Rooted in historical reenactment and scenes from the front, the composition embodies war zone photography where battlefield moments reveal not only conflict, but courage — an artistic documentary study of WWII battle photography and Second World War heroism. © Wayne Heim",
     "alt": "World War II medic running toward wounded soldier in black and white battlefield photograph",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-F33M327/A",
-
     "keywords": [
       "black and white photography",
       "WWII battle photography",
@@ -75,7 +72,6 @@ export const galleryData = [
       "Second World War",
       "historical reenactment photography"
     ],
-
     "story": "“Medic!”\n\nThe word cut through smoke and surf, sharper than gunfire. He didn’t hesitate — only shifted the weight on his shoulder and moved toward the sound.\n\nFear could wait. Someone else couldn’t.",
     "notes": "The rear vantage point draws the viewer into the action, positioning us behind the advancing figures rather than safely observing from afar. The diagonal movement across uneven ground builds kinetic tension while maintaining compositional balance.\n\nWithin the lineage of classic war photography, this piece highlights a different form of heroism — the courage that runs toward danger rather than away from it. The restrained monochrome palette heightens contrast and clarity, allowing gesture, posture, and urgency to define the emotional core of the image.",
     "rating": 4,
@@ -88,7 +84,7 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-F33M327/3/Kjd6LC6jd9KTM3SRvt3hN2TNGRKWNRnx7v2H9rv7Z/M/_IMG8831-M.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-F33M327/3/KGrWj5TFk8MwQ8pVdHkDNCMvBb5m25v2JBVsddmXj/S/_IMG8831-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-74wg6VQ",
@@ -96,7 +92,6 @@ export const galleryData = [
     "description": "A black and white World War II battle photography image capturing a squad leader directing his men during a beach assault. This WWII combat photography piece reflects the urgency and controlled chaos of wartime action photography, rendered in documentary-style monochrome with painterly tonal restraint. Rooted in historical reenactment and scenes from the front, the composition embodies war zone photography where battlefield moments reveal split-second decisions that shape survival — an artistic documentary study of WWII battle photography and Second World War combat leadership. © Wayne Heim",
     "alt": "World War II soldier pointing forward and shouting orders during beach battle in black and white photograph",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-74wg6VQ/A",
-
     "keywords": [
       "black and white photography",
       "WWII battle photography",
@@ -109,7 +104,6 @@ export const galleryData = [
       "Second World War",
       "historical reenactment photography"
     ],
-
     "story": "“Go! Move now!”\n\nThe command tore through the noise — sharp, urgent, absolute. Sand kicked up around them as hesitation disappeared into instinct.\n\nThere wasn’t time to argue. Only time to act.",
     "notes": "The extended arm forms a decisive diagonal that drives the viewer’s eye beyond the frame, reinforcing momentum and directional force. The crouched figures and angular beach obstacles create compressed spatial tension, amplifying urgency within the composition.\n\nIn the tradition of classic war imagery, this piece centers on command under pressure. Leadership is depicted not as abstraction, but as a single, charged gesture — a moment where clarity must overpower chaos. The restrained monochrome palette heightens contrast and drama, emphasizing motion, grit, and consequence.",
     "rating": 4,
@@ -122,7 +116,7 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-74wg6VQ/3/LB4LF9LcPkW2tXcxQKRTgTSqmfMhSZL9s8KHnFS8t/L/_IMG6226-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-74wg6VQ/3/MCVntdzfwXNqhjJMLdrRssZdXXdZsZkXjX6d6g6fh/S/_IMG6226-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-xs6MWcM",
@@ -130,7 +124,6 @@ export const galleryData = [
     "description": "A black and white World War II resistance portrait capturing a French Resistance fighter moving through concealment. This WWII battle photography image reflects the covert tension of wartime action photography, rendered in restrained monochrome with documentary realism. Rooted in historical reenactment and scenes from the front, the composition embodies war zone photography where battlefield moments unfold in secrecy rather than spectacle — an artistic documentary study of WWII combat photography and the quiet defiance of the Second World War. © Wayne Heim",
     "alt": "World War II French Resistance woman crouching with rifle in black and white wartime photograph",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-xs6MWcM/A",
-
     "keywords": [
       "black and white photography",
       "WWII combat photography",
@@ -143,7 +136,6 @@ export const galleryData = [
       "WWII artistic documentary",
       "historical reenactment photography"
     ],
-
     "story": "She wasn’t meant to be seen.\n\nEvery snapped twig sounded louder than gunfire. Every breath had to be measured, quiet, controlled.\n\nThe message wasn’t written on paper. It was written in what she was willing to risk.",
     "notes": "The elevated vantage point creates vulnerability and tension, positioning the subject within textured foreground grasses that partially obscure and protect her at once. The diagonal of the rifle introduces directional force while maintaining compositional balance.\n\nWithin the lineage of classic war photography, this piece explores resistance as quiet resolve rather than overt spectacle. The restrained monochrome palette heightens contrast and atmosphere, allowing posture, concealment, and psychological intensity to define the narrative weight.",
     "rating": 4,
@@ -156,7 +148,7 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-xs6MWcM/4/Kqhwt8NHLQ7nGnSdWqCHWxVv9NS6F7vMFFSn4BsvK/M/_IMG1173-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-xs6MWcM/4/L3QtdW5qktPRw5p4CgXJxc2cs7dgp9MMtVGhbCDr6/S/_IMG1173-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-4Gk8HRG",
@@ -164,7 +156,6 @@ export const galleryData = [
     "description": "A black and white World War II battle photography image capturing a landing craft captain guiding his vessel toward the invasion shore. This WWII combat photography piece reflects the disciplined tension of wartime action photography, rendered in high-contrast monochrome with documentary realism and painterly tonal control. Rooted in historical reenactment and scenes from the front, the composition embodies war zone photography where battlefield moments begin long before boots touch sand — an artistic documentary study of WWII battle photography and Second World War naval leadership. © Wayne Heim",
     "alt": "World War II landing craft captain steering boat during beach invasion in black and white photograph",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-4Gk8HRG/A",
-
     "keywords": [
       "black and white photography",
       "WWII battle photography",
@@ -177,7 +168,6 @@ export const galleryData = [
       "WWII artistic documentary",
       "historical reenactment photography"
     ],
-
     "story": "The horizon didn’t answer questions.\n\nWind pressed against canvas and steel while the engine beneath his boots carried them forward. There was no ceremony in it — just distance closing, second by second.\n\nHe kept his hands steady on the wheel. The shore would come soon enough.",
     "notes": "The low vantage point elevates the captain into a monumental figure against a dramatic sky, reinforcing authority and composure. The circular geometry of the wheel contrasts with the vertical flag and horizon line, creating structural tension within the frame.\n\nWithin the lineage of classic war photography, this piece explores command before collision — the calm authority that precedes chaos. The restrained monochrome palette intensifies contrast and scale, allowing posture, environment, and forward motion to define the narrative weight of the crossing.",
     "rating": 4,
@@ -190,7 +180,7 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-4Gk8HRG/4/LFgsKQkxBFTRf5RTnBg96PR4tw4Ns9k9jPtpC8WKP/M/_WEH0736-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-4Gk8HRG/4/Kq3QGzWLg2szFxHbKGgkHxghkGxw9tNjmKVggtWvB/S/_WEH0736-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-2Pwm8vt",
@@ -198,7 +188,6 @@ export const galleryData = [
     "description": "A black and white World War II battle photography image capturing soldiers inside a landing craft just before the beach assault. This WWII combat photography piece reflects the compressed tension of wartime action photography, rendered in high-contrast monochrome with documentary realism and painterly tonal control. Rooted in historical reenactment and scenes from the front, the composition embodies war zone photography where battlefield moments are defined as much by anticipation as by impact — an artistic documentary study of WWII battle photography and the psychological weight of the Second World War. © Wayne Heim",
     "alt": "World War II soldiers inside landing craft moments before beach assault in black and white photograph",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-2Pwm8vt/A",
-
     "keywords": [
       "black and white photography",
       "WWII battle photography",
@@ -211,7 +200,6 @@ export const galleryData = [
       "Second World War",
       "historical reenactment photography"
     ],
-
     "story": "No one spoke now.\n\nThe shouting from moments ago had fallen into something tighter — breath held, jaws set, hands gripping canvas and steel. The boat rocked, but their eyes did not.\n\nIn a few seconds, the world would open up. For now, it was only this narrow space and what each man carried inside it.",
     "notes": "The tight framing and layered positioning of figures create a claustrophobic compression that mirrors the emotional pressure of the moment. Foreground faces anchor the viewer while background gestures — a shout, a braced arm — introduce kinetic tension within the confined space.\n\nIn the lineage of classic war photography, this piece explores the threshold between movement and consequence. The restrained monochrome palette heightens contrast and expression, allowing posture, gaze, and proximity to carry the narrative weight before the ramp drops.",
     "rating": 4,
@@ -224,7 +212,7 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-2Pwm8vt/4/KWXV8cb6LKRNBzLKbDMrCjBtKSnPtQkmSsTWRm9c4/L/_IMG6140-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-2Pwm8vt/4/MmcC5wQzvsg3S27Bz4bRCTDNKcBvmLD8qjKPNsFhh/S/_IMG6140-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-wdnJQwf",
@@ -232,7 +220,6 @@ export const galleryData = [
     "description": "A black and white World War II battle photography image capturing the instant a landing craft ramp drops onto the surf. This WWII combat photography piece reflects the explosive transition from anticipation to action, rendered in high-contrast monochrome with documentary realism and painterly tonal control. Rooted in historical reenactment and scenes from the front, the composition embodies war zone photography where battlefield moments are defined by motion, weight, and consequence — an artistic documentary study of WWII battle photography and the opening seconds of the Second World War beach assault. © Wayne Heim",
     "alt": "World War II soldiers stepping off landing craft ramp into surf in black and white photograph",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-wdnJQwf/A",
-
     "keywords": [
       "black and white photography",
       "WWII battle photography",
@@ -245,7 +232,6 @@ export const galleryData = [
       "Second World War",
       "historical reenactment photography"
     ],
-
     "story": "The steel door slammed into the water.\n\nLight flooded in where darkness had held them moments before. The world narrowed to noise, spray, and the sudden command to move.\n\nThere was no more waiting. Only the first step.",
     "notes": "The low, interior vantage point places the viewer inside the craft, looking outward as light fractures across water and steel. The diagonal lines of helmets, rifles, and ramp slats create directional momentum that pulls the eye toward the breaking surf.\n\nIn the lineage of classic war imagery, this piece isolates the precise threshold between safety and exposure. The restrained monochrome palette heightens contrast and texture, allowing movement, structure, and environmental force to define the narrative weight of the landing.",
     "rating": 4,
@@ -258,7 +244,7 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-wdnJQwf/5/KFQbgDNspnpqr8FGv7zGLkq5vKDcdm4DQvWgzBNr7/M/WWII%20reenactment%20photo_IMG6149-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-wdnJQwf/5/Ltd47LFg3bvCbcMNqdg5XVPZvQKSLzFFgx4GjZtS8/S/WWII%20reenactment%20photo_IMG6149-Edit-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-wW9pC74",
@@ -266,7 +252,6 @@ export const galleryData = [
     "description": "A black and white World War II battle photography image capturing a medic tending to a wounded soldier while others provide cover. This WWII combat photography piece reflects the layered tension of wartime action photography, rendered in restrained monochrome with documentary realism and painterly tonal depth. Rooted in historical reenactment and scenes from the front, the composition embodies war zone photography where battlefield moments reveal not only conflict, but brotherhood — an artistic documentary study of WWII battle photography and the human cost of the Second World War. © Wayne Heim",
     "alt": "World War II medic treating wounded soldier while comrades provide cover in black and white photograph",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-wW9pC74/A",
-
     "keywords": [
       "black and white photography",
       "WWII battle photography",
@@ -279,7 +264,6 @@ export const galleryData = [
       "Second World War",
       "historical reenactment photography"
     ],
-
     "story": "“Stay with me,” the medic said — not loudly, just close.\n\nRifles lifted over him, forming a wall of resolve while hands worked quickly in the dirt and smoke. The world had narrowed to one body on the ground and the men who refused to leave it.\n\nBullets could wait. He couldn’t.",
     "notes": "The circular composition draws the eye inward to the wounded figure, encircled by protective forms that create both visual shelter and narrative focus. The raised rifle introduces directional tension while the medic’s bent posture anchors the emotional center of the frame.\n\nIn the lineage of classic war photography, this piece explores collective courage rather than individual heroics. The restrained monochrome palette intensifies texture and contrast, allowing gesture, proximity, and protective instinct to define the emotional gravity of the moment.",
     "rating": 4,
@@ -292,7 +276,7 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-wW9pC74/5/MprMwVPZMX4brsjZ2HXwQ3GZDcj4xHdzJdvq74kjb/M/_W3H4307-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-wW9pC74/5/K79XQFLRt8WCBRZ7KTHDR4L6crFvbSx5xr4hHpzkF/S/_W3H4307-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-NZ3HttB",
@@ -300,7 +284,6 @@ export const galleryData = [
     "description": "A powerful black and white World War II battle photography image capturing a combat medic tending to a wounded soldier on the field. This WWII combat photography scene reflects the human cost behind battlefield moments, rendered in documentary-style monochrome with painterly tonal control. Rooted in historical reenactment and scenes from the front, the composition embodies war zone photography where courage is measured not in advance, but in compassion. A striking example of WWII battle photography and wartime action photography from the Second World War. © Wayne Heim",
     "alt": "World War II combat medic treating wounded soldier on battlefield in black and white photograph",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-NZ3HttB/A",
-
     "keywords": [
       "black and white photography",
       "WWII battle photography",
@@ -313,7 +296,6 @@ export const galleryData = [
       "Second World War",
       "historical reenactment photography"
     ],
-
     "story": "He didn’t ask where it hurt.\n\nHe was already there — knees in the dirt, hands steady, voice low against the ringing chaos. Somewhere behind them the battle still clawed at the air, but here, in this small patch of ground, the war narrowed to breath and blood.\n\n“Stay with me,” he said. And for a moment, that was enough.",
     "notes": "The composition isolates the medic and the wounded soldier against open ground, creating emotional intimacy within a vast field of implied danger. The fallen helmet in the background functions as quiet symbolism — vulnerability displaced, protection momentarily abandoned.\n\nThrough restrained monochrome and controlled tonal range, the image shifts focus from spectacle to service. Rather than dramatizing combat, it honors the unseen act of preservation — a visual meditation on duty, sacrifice, and the fragile space between life and loss.",
     "rating": 4,
@@ -326,7 +308,7 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-NZ3HttB/4/MS46FtwDf8SPMKCb3qNbDRHQTVw9NmqHwr4kJPqkC/M/_W3H4494-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-NZ3HttB/4/L3vLpp4qSP3TSShHCWtMj6sGxjch3VLqD9qpv2cjj/S/_W3H4494-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-RQDpTBd",
@@ -334,7 +316,6 @@ export const galleryData = [
     "description": "A commanding black and white World War II battle photography image capturing Commonwealth troops advancing during a historical reenactment. This WWII combat photography scene embodies battlefield moments and wartime action photography through strong directional movement and expressive gesture. Rendered in documentary-style monochrome with painterly tonal contrast, the composition reflects war zone photography rooted in the Second World War tradition. A striking example of WWII battle photography and scenes from the front that highlight leadership, resolve, and collective momentum. © Wayne Heim",
     "alt": "Commonwealth World War II troops advancing forward during reenactment in black and white photograph",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-RQDpTBd/A",
-
     "keywords": [
       "black and white photography",
       "WWII battle photography",
@@ -347,7 +328,6 @@ export const galleryData = [
       "Second World War",
       "historical reenactment photography"
     ],
-
     "story": "He didn’t shout it once.\n\nHe kept saying it — the word carried on breath and command, cutting through doubt before it could root. Around him, boots tightened their grip on the earth, rifles steadied, shoulders squared.\n\nForward meant fear could come too.\nIt just wasn’t allowed to lead.",
     "notes": "The raised arm creates a strong diagonal vector, pulling the eye across the formation and establishing directional authority within the frame. Faces vary in expression — determination, tension, focus — forming a layered study of collective will rather than a single heroic figure.\n\nThe monochrome treatment enhances uniform texture and light contrast, emphasizing structure and movement over spectacle. The image operates within the lineage of classic wartime documentary photography while maintaining a painterly compositional discipline — advancing not just physically, but narratively.",
     "rating": 4,
@@ -360,7 +340,7 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-RQDpTBd/3/L5MPG4t54sFCFm535MR4pvbmQXmPhdS76GK3KGjss/M/_WHZ3907-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-RQDpTBd/3/LWBBgzPHsnthhqTDZwxwLtWzwrRZMvLB7BzXmPVGs/S/_WHZ3907-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-wvPXPbw",
@@ -368,7 +348,6 @@ export const galleryData = [
     "description": "A contemplative black and white World War II fine art photograph portraying a solitary WWII soldier in quiet aftermath. This WWII artistic documentary image shifts from battlefield spectacle to emotional consequence, reflecting the introspective side of war zone photography. Rendered with painterly tonal restraint and historical sensitivity, the composition highlights posture, uniform detail, and stillness to convey memory and endurance. Part of a broader WWII battle photography and scenes from the front series rooted in the Second World War and historical reenactment photography. © Wayne Heim",
     "alt": "Solitary World War II soldier standing in quiet aftermath portrait in black and white photograph",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-wvPXPbw/A",
-
     "keywords": [
       "black and white photography",
       "WWII artistic documentary",
@@ -381,7 +360,6 @@ export const galleryData = [
       "Second World War",
       "historical reenactment photography"
     ],
-
     "story": "The noise had already passed.\n\nWhat lingered wasn’t smoke or shouting — it was weight. The kind that settles into the shoulders and stays there long after the rifles fall quiet. He stood because that’s what you do when the moment ends and the meaning begins.\n\nNot victory. Not defeat.\n\nJust standing… after.",
     "notes": "The vertical composition emphasizes isolation and dignity, allowing negative space to function as psychological terrain rather than physical environment. The soldier’s stance — upright yet restrained — suggests endurance more than triumph.\n\nThrough controlled monochrome and textured surface treatment, the image recalls early twentieth-century pictorial traditions while remaining grounded in documentary realism. It is less about action than consequence — a study in presence, memory, and the quiet gravity that follows conflict.",
     "rating": 4,
@@ -394,7 +372,7 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-wvPXPbw/2/LXGMzNwHcTDk87NxnFbMxvZDJfPHRsWjhPPqgC6Mp/L/_WHZ8084-Editb-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-wvPXPbw/2/NNG2sf8ZPKF6gLTXS9MnfH3pjn2Gg2qf7q79Pxv3V/S/_WHZ8084-Editb-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-xkztczt",
@@ -402,7 +380,6 @@ export const galleryData = [
     "description": "A dramatic black and white World War II battle photography image capturing a WWII soldier advancing through a snow-covered battlefield. This WWII combat photography scene embodies battlefield moments and wartime action photography set against the stark intensity of winter. Rendered with painterly tonal restraint and documentary realism, the composition reflects war zone photography rooted in the Second World War tradition. A powerful example of WWII battle photography and scenes from the front, emphasizing motion, endurance, and the psychological weight of winter warfare. © Wayne Heim",
     "alt": "World War II soldier advancing through snowy battlefield in black and white winter combat photograph",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-xkztczt/A",
-
     "keywords": [
       "black and white photography",
       "WWII battle photography",
@@ -416,7 +393,6 @@ export const galleryData = [
       "Second World War",
       "historical reenactment photography"
     ],
-
     "story": "Cold stole the feeling from his hands long before fear could.\n\nSnow swallowed the sound of boots and breath, turning the world into something distant and merciless. The rifle felt heavier in winter — not from steel, but from knowing what waited beyond the trees.\n\nThere is no cover in white. Only movement. And so he ran.",
     "notes": "The forward momentum of the figure contrasts sharply with the vertical stillness of the surrounding trees, creating visual tension between motion and environment. Snow functions not merely as setting but as atmosphere — flattening depth while amplifying isolation.\n\nThrough restrained monochrome and textured overlay, the image evokes classic winter campaign photography while maintaining painterly compositional control. It is less about spectacle and more about endurance — a study of movement against indifference, where landscape becomes both adversary and witness.",
     "rating": 4,
@@ -429,7 +405,7 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-xkztczt/2/KLwggS4m8RTwM5RsFZ5PZNnjBXHN63stMJLn42DxH/M/DSCF0611-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-xkztczt/2/MdJjVBRBC5VvWt7s9f9tmwwC6t6P9FxtDxfgqJsGC/S/DSCF0611-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-drjN6Mh",
@@ -437,7 +413,6 @@ export const galleryData = [
     "description": "A commanding black and white World War II battle photography image capturing a soldier signaling the advance along a windswept shoreline. This WWII combat photography scene reflects battlefield moments and scenes from the front, rendered with painterly tonal depth and documentary realism. The raised arm establishes motion and leadership within the composition, embodying wartime action photography rooted in the Second World War tradition. A striking example of WWII battle photography and war zone photography grounded in historical reenactment. © Wayne Heim",
     "alt": "World War II soldier signaling advance on beach during black and white battlefield reenactment photograph",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-drjN6Mh/A",
-
     "keywords": [
       "black and white photography",
       "WWII battle photography",
@@ -451,7 +426,6 @@ export const galleryData = [
       "Second World War",
       "historical reenactment photography"
     ],
-
     "story": "He didn’t look back.\n\nThe shoreline stretched behind him, but his hand cut forward through the air — a line drawn in certainty. Around him, rifles lifted, breath steadied, boots prepared to follow where the gesture led.\n\nIn war, direction is everything. And someone has to choose it.",
     "notes": "The extended arm creates a decisive diagonal that anchors the composition and pulls the viewer’s gaze toward the unseen objective. The shoreline and sky provide layered depth, balancing human urgency against open landscape.\n\nRendered in restrained monochrome, the image echoes classic wartime reportage while maintaining painterly compositional control. Leadership becomes the central theme — not loud or theatrical, but directional, embodied in a single gesture that defines momentum and consequence.",
     "rating": 4,
@@ -464,7 +438,7 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-drjN6Mh/2/L28rdrXDDB2rpWrcn333JgFqGFRq4VVndM7t7BDLZ/M/_OWH0586-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-drjN6Mh/2/LKMNPNSnDfZX8nxRXnszwthNrVBVWDtQm95DXvHQx/S/_OWH0586-Edit-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-c8WPctp",
@@ -472,7 +446,6 @@ export const galleryData = [
     "description": "A stark black and white World War II battle photography image capturing a WWII soldier running across exposed terrain under open sky. This WWII combat photography scene embodies battlefield moments and wartime action photography where vulnerability and momentum collide. Rendered with painterly tonal restraint and documentary realism, the composition reflects war zone photography rooted in the Second World War tradition. A compelling example of WWII battle photography and scenes from the front, emphasizing exposure, movement, and the psychological tension of open ground. © Wayne Heim",
     "alt": "World War II soldier running across exposed battlefield terrain in black and white combat photograph",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-c8WPctp/A",
-
     "keywords": [
       "black and white photography",
       "WWII battle photography",
@@ -486,7 +459,6 @@ export const galleryData = [
       "Second World War",
       "historical reenactment photography"
     ],
-
     "story": "There was nowhere to disappear.\n\nNo tree line close enough. No wall high enough. Just open ground and the distance between here and survival. The wind pressed against his coat as if trying to hold him back.\n\nBut standing still was worse.\n\nSo he ran straight through the empty.",
     "notes": "The figure occupies the central vertical axis, amplifying the sense of isolation against the vast negative space of sky and field. This compositional openness intensifies vulnerability while reinforcing forward motion.\n\nThrough restrained monochrome and textured surface treatment, the image evokes classic wartime reportage while maintaining painterly discipline. It is a study in risk and resolve — a moment where movement itself becomes both shield and necessity.",
     "rating": 4,
@@ -499,7 +471,7 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-c8WPctp/2/L5HFhBvgLnVzmbhbLS5dWrLWV7zz4jMgK6ZgC4DdQ/L/_OWH0600-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-c8WPctp/2/MmmBSN3sssRPs5gPvFK8GFDj8nWGPHxSBvMSVqrDL/S/_OWH0600-Edit-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-qTKSmBD",
@@ -507,7 +479,6 @@ export const galleryData = [
     "description": "A striking black and white World War II battle photography image capturing a WWII soldier advancing across open terrain toward the horizon. This WWII combat photography scene embodies battlefield moments and war zone photography defined by exposure and forward motion. Rendered with painterly tonal restraint and documentary realism, the composition emphasizes negative space, distance, and psychological tension. A compelling example of WWII battle photography and scenes from the front, rooted in the Second World War and historical reenactment photography tradition. © Wayne Heim",
     "alt": "World War II soldier running across open battlefield toward horizon in black and white combat photograph",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-qTKSmBD/A",
-
     "keywords": [
       "black and white photography",
       "WWII battle photography",
@@ -521,7 +492,6 @@ export const galleryData = [
       "Second World War",
       "historical reenactment photography"
     ],
-
     "story": "The horizon offered no promise — only distance.\n\nEach stride cut a mark across the open ground, a thin line between where he had been and where he needed to be. There was no cover to lean into, no shadow to claim.\n\nJust the line ahead… and the will to cross it.",
     "notes": "The composition isolates the figure against expansive sky and barren ground, amplifying vulnerability through negative space. The horizon line becomes both literal and symbolic — a threshold separating safety from consequence.\n\nThrough restrained monochrome and textured surface treatment, the image recalls classic wartime reportage while maintaining painterly control of tone and balance. It is a study in exposure and resolve — where movement across open terrain becomes an act of commitment rather than spectacle.",
     "rating": 4,
@@ -534,7 +504,7 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-qTKSmBD/2/Mxs7KJFvVThscxJgsmnJbQMz9Pkzg3MkgstHNxst2/L/_WHK6013-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-qTKSmBD/2/KvFmQT7WmgK6ntJ3bCmg49mcxNWLV3b9HddbZtNM6/S/_WHK6013-Edit-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-VcqWqCD",
@@ -542,7 +512,6 @@ export const galleryData = [
     "description": "A powerful black and white World War II battle photography image capturing WWII soldiers advancing from the shoreline toward open terrain. This WWII combat photography scene reflects battlefield moments and wartime action photography rooted in the Second World War. Rendered with painterly tonal restraint and documentary realism, the composition emphasizes forward motion, exposure, and collective resolve. A compelling example of WWII battle photography and war zone photography, grounded in historical reenactment and scenes from the front. © Wayne Heim",
     "alt": "World War II soldiers pushing inland from beach during black and white battlefield reenactment photograph",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-VcqWqCD/A",
-
     "keywords": [
       "black and white photography",
       "WWII battle photography",
@@ -556,7 +525,6 @@ export const galleryData = [
       "Second World War",
       "historical reenactment photography"
     ],
-
     "story": "The shoreline was behind them now.\n\nSand gave way to harder ground, but the weight didn’t lift. Each stride carried more than gear — it carried the order to keep moving, no matter what followed from the water.\n\nThere is a moment when landing becomes commitment. This was it.",
     "notes": "The staggered positioning of the figures creates depth and directional flow, guiding the viewer’s eye from foreground momentum to distant uncertainty. Negative space behind them reinforces the transition from landing to engagement.\n\nThrough restrained monochrome and textured surface treatment, the image recalls classic wartime reportage while maintaining painterly compositional discipline. It captures the psychological shift from arrival to advance — a study in commitment, movement, and the irreversible step beyond the shore.",
     "rating": 4,
@@ -569,7 +537,7 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-VcqWqCD/2/LdSjgxNGwD88LQhR2bj9vT5BjTgfP8SPJvjrR6M2P/L/_WHK6017-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-VcqWqCD/2/MkbCw43GZW54gQPD8BCWDK39JLzF8PCT5RfJztVB7/S/_WHK6017-Edit-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-rDdbFnP",
@@ -577,7 +545,6 @@ export const galleryData = [
     "description": "A contemplative black and white World War II battle photography image capturing a WWII soldier holding position beneath an expansive sky. This WWII combat photography scene reflects battlefield moments and war zone photography grounded in restraint rather than spectacle. Rendered with painterly tonal depth and documentary realism, the composition balances open horizon with grounded posture. A powerful example of WWII battle photography and scenes from the front, rooted in the Second World War and historical reenactment photography tradition. © Wayne Heim",
     "alt": "World War II soldier crouched in grass holding rifle under wide sky in black and white battlefield photograph",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-rDdbFnP/A",
-
     "keywords": [
       "black and white photography",
       "WWII battle photography",
@@ -591,7 +558,6 @@ export const galleryData = [
       "Second World War",
       "historical reenactment photography"
     ],
-
     "story": "The sky was too wide for comfort.\n\nHe crouched into the grass, rifle angled, breath measured against the open air above him. Somewhere beyond the dunes, movement would begin again — but not yet.\n\nFor now, steadiness was the order.",
     "notes": "The composition contrasts grounded human presence with vast negative sky, amplifying vulnerability through scale. The diagonal of the rifle stabilizes the frame, anchoring the figure within open terrain.\n\nThrough restrained monochrome and textured surface treatment, the image evokes classic wartime reportage while maintaining painterly compositional control. It is a study in tension held rather than released — where stillness becomes its own form of courage.",
     "rating": 4,
@@ -604,7 +570,7 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-rDdbFnP/2/KN6qgJJxbCKdpTj63xZCD8L53q7fpBDVf9wWfNLSK/M/_OWH0697-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-rDdbFnP/2/KDSqHm69P8RfxFnZ8JHvFG7qcM6nnx22RFRLwjF9J/S/_OWH0697-Edit-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-pBsM4NR",
@@ -612,7 +578,6 @@ export const galleryData = [
     "description": "A dramatic black and white World War II battle photography image capturing WWII soldiers scanning the horizon from a dune position. This WWII combat photography scene reflects battlefield moments and war zone photography defined by anticipation rather than action. Rendered with painterly tonal restraint and documentary realism, the composition balances layered figures against open sky and distant shoreline. A compelling example of WWII battle photography and scenes from the front, rooted in the Second World War and historical reenactment photography tradition. © Wayne Heim",
     "alt": "World War II soldiers watching the horizon from dune position in black and white battlefield photograph",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-pBsM4NR/A",
-
     "keywords": [
       "black and white photography",
       "WWII battle photography",
@@ -626,7 +591,6 @@ export const galleryData = [
       "Second World War",
       "historical reenactment photography"
     ],
-
     "story": "They weren’t looking at the sky.\n\nThey were looking through it — past the dunes, past the wind, toward whatever would rise first. Rifles rested in steady hands, but it was the waiting that tightened their grip.\n\nThe horizon doesn’t move. Men do.",
     "notes": "The staggered positioning of the figures creates depth and visual rhythm, guiding the eye from foreground profile to distant shoreline. The horizon line functions as both spatial boundary and narrative threshold.\n\nThrough restrained monochrome and textured surface treatment, the image evokes classic wartime reportage while maintaining painterly compositional discipline. It is a study in anticipation — where stillness carries as much tension as movement.",
     "rating": 4,
@@ -639,7 +603,7 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-pBsM4NR/2/KLjLGhX39MhBKhZxB6CXnMwsTh6PRHLrs7mQMGS9V/L/_OWH0699-Edit-2-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-pBsM4NR/2/NFh6QtsW6CCzwFWs4C2Qz7KcR4srd8wn39WjMfQ6k/S/_OWH0699-Edit-2-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-9vvLmPk",
@@ -647,7 +611,6 @@ export const galleryData = [
     "description": "A dramatic black and white World War II battle photography image capturing WWII soldiers advancing across open ground under threat. This WWII battle photography scene reflects battlefield moments defined by exposure, movement, and resolve. Rendered in a painterly monochrome style, the composition balances motion in the foreground with tension in the rear guard, evoking scenes from the front during the Second World War. A compelling example of WWII combat photography and war zone photography rooted in historical reenactment and fine art storytelling. © Wayne Heim",
     "alt": "WWII soldiers advancing across open sand under fire in black and white battlefield photograph",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-9vvLmPk/A",
-
     "keywords": [
       "black and white photography",
       "WWII battle photography",
@@ -661,7 +624,6 @@ export const galleryData = [
       "Second World War",
       "historical reenactment photography"
     ],
-
     "story": "There is no straight line across a battlefield — only the next piece of ground.\n\nHe moves low, breath tight in his chest, boots sinking into sand that offers no shelter. Behind him, another figure drops to a knee, scanning, waiting for the crack that hasn’t come yet.\n\nForward is the only direction that makes sense.",
     "notes": "The forward-driving diagonal of the lead figure creates urgency, while the kneeling soldier introduces a counterpoint of restraint. This compositional tension — motion versus vigilance — mirrors the psychological rhythm of combat itself.\n\nTextured edges and tonal restraint soften spectacle into memory, aligning the image with classic wartime reportage while elevating it through fine art discipline and narrative control.",
     "rating": 4,
@@ -674,7 +636,7 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-9vvLmPk/2/NLF87BXRJBJnNf2FWQShT9LrWZmGBpwvcWCtrR9bT/M/_OWH0732-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-9vvLmPk/2/LfgmN5RtpnVmmrSWwFhvHVBMK5LGHb9htWMHdTStM/S/_OWH0732-Edit-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-xdQMPhx",
@@ -682,7 +644,6 @@ export const galleryData = [
     "description": "A powerful black and white World War II battle photography image capturing a WWII machine gun crew operating through dense battlefield smoke. This WWII combat photography scene reflects battlefield moments shaped by tension, obscured vision, and coordinated resolve. Rendered in a restrained monochrome style, the composition emphasizes the mass of the weapon against a haze-filled landscape, evoking scenes from the front during the Second World War. A striking example of WWII battle photography and war zone photography rooted in historical reenactment and fine art documentary storytelling. © Wayne Heim",
     "alt": "WWII machine gun crew operating through battlefield smoke in black and white war zone photograph",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-xdQMPhx/A",
-
     "keywords": [
       "black and white photography",
       "WWII battle photography",
@@ -696,7 +657,6 @@ export const galleryData = [
       "Second World War",
       "historical reenactment photography"
     ],
-
     "story": "The smoke rolls in thick enough to swallow names.\n\nHe stands braced behind the weight of steel, shoulders squared, eyes narrowed toward something no one else can see yet. The man beside him leans forward, listening for a signal that may already be too late.\n\nIn the white of it all, sound becomes direction.",
     "notes": "The composition anchors on the heavy geometry of the machine gun, contrasted against the dissolving atmosphere of smoke. This interplay between solidity and diffusion heightens the psychological tension of the moment.\n\nTonal restraint and surface texture recall classic wartime reportage while elevating the image into fine art territory — where machinery, men, and memory converge within a single frame.",
     "rating": 4,
@@ -709,15 +669,14 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-xdQMPhx/2/LDTZ8DtShCWq8hQJRfpC4DqtNZNzQQ7tP8jLTrCzZ/L/_WHK6104-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-xdQMPhx/2/MvFx38bmgPV6vkQrnsmM4qXSGZPdrh5hrdQnb7pwv/S/_WHK6104-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-JtGX2Jj",
     "title": "Hands of Mercy",
-    "description": "A powerful black and white World War II battle photography image capturing a medic tending to a wounded WWII soldier in the aftermath of combat. This WWII battle photography scene reflects battlefield moments defined by sacrifice, service, and quiet resolve rather than spectacle. Rendered with painterly tonal restraint, the composition emphasizes human gesture and contact, evoking scenes from the front during the Second World War. A compelling example of WWII combat photography and war zone photography rooted in historical reenactment and fine art documentary storytelling. © Wayne Heim",
+    "description": "A powerful black and white World War II battle photography image capturing a medic tending to a wounded WWII soldier in the aftermath of combat. This WWII battle photography scene reflects battlefield moments defined by sacrifice, service, and quiet resolve rather than spectacle. Rendered with painterly tonal restraint, the composition emphasizes human gesture and contact, evoking scenes from the front during the Second World War. © Wayne Heim",
     "alt": "WWII medic tending to wounded soldier on battlefield in black and white war zone photograph",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-JtGX2Jj/A",
-
     "keywords": [
       "black and white photography",
       "WWII battle photography",
@@ -731,7 +690,6 @@ export const galleryData = [
       "Second World War",
       "historical reenactment photography"
     ],
-
     "story": "The noise has moved on.\n\nWhat remains is breath — counted, guarded, borrowed one second at a time. He kneels in the dirt, hands steady not because he is calm, but because they must be.\n\nWar asks for everything. Mercy answers anyway.",
     "notes": "The triangular arrangement of the figures anchors the composition at the point of touch, drawing the eye directly to the act of care. Light isolates hands and faces against a subdued ground, transforming urgency into intimacy.\n\nThrough restrained monochrome and textured surface treatment, the image aligns with classic wartime reportage while elevating the scene into fine art. It is a study in humanity under pressure — where compassion becomes the central act of courage.",
     "rating": 4,
@@ -744,15 +702,14 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-JtGX2Jj/2/MbNjFC7Smgbs7TsGnDtqPxGGrdb8WptcGkzRGBLrz/L/_OWH0068-Edit-2-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-JtGX2Jj/2/KbrZ7WpZBtkwn6rTnfn7Gq8Wc5gm564n6gjSPPCb5/S/_OWH0068-Edit-2-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-zhXRRQJ",
     "title": "Carried from the Line",
-    "description": "A powerful black and white World War II battle photography image capturing WWII soldiers carrying a wounded comrade from the battlefield. This WWII battle photography scene reflects battlefield moments defined by endurance, brotherhood, and sacrifice rather than spectacle. Rendered with painterly tonal restraint, the composition emphasizes physical weight and human connection, evoking scenes from the front during the Second World War. A compelling example of WWII combat photography and war zone photography rooted in historical reenactment and fine art documentary storytelling. © Wayne Heim",
+    "description": "A powerful black and white World War II battle photography image capturing WWII soldiers carrying a wounded comrade from the battlefield. This WWII battle photography scene reflects battlefield moments defined by endurance, brotherhood, and sacrifice rather than spectacle. Rendered with painterly tonal restraint, the composition emphasizes physical weight and human connection, evoking scenes from the front during the Second World War. © Wayne Heim",
     "alt": "WWII soldiers carrying wounded comrade across rocky battlefield in black and white war zone photograph",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-zhXRRQJ/A",
-
     "keywords": [
       "black and white photography",
       "WWII battle photography",
@@ -766,7 +723,6 @@ export const galleryData = [
       "Second World War",
       "historical reenactment photography"
     ],
-
     "story": "They do not speak.\n\nThere is only the shift of weight, the careful lift, the unsteady rhythm of boots over stone. One man carries the rifle. Another carries what matters more.\n\nThe line is behind them now.",
     "notes": "The composition centers on the physical act of lifting, drawing the eye to hands, straps, and the tension in fabric. The framing compresses space, intensifying the sense of burden and shared effort.\n\nThrough restrained monochrome and documentary discipline, the image aligns with classic wartime reportage while elevating the scene into fine art. It is a study in loyalty under pressure — where strength is measured by who you refuse to leave behind.",
     "rating": 4,
@@ -779,15 +735,14 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-zhXRRQJ/2/MnQqZT6F9SmgNnzPCQhk4JGnPLwqr4ftMsCM59Cfk/M/_OWH0096-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-zhXRRQJ/2/LsBmRNJxB2sJX8mGh2DqSc2C69ss3n8KkfxcD3z7j/S/_OWH0096-Edit-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-v6mfR3M",
     "title": "Stay With Me",
-    "description": "A powerful black and white World War II battle photography image capturing a WWII soldier tending to a wounded comrade on the battlefield. This WWII battle photography scene reflects battlefield moments defined by urgency, sacrifice, and human connection rather than spectacle. Rendered with painterly tonal restraint, the composition draws focus to physical contact and shared struggle, evoking scenes from the front during the Second World War. A compelling example of WWII combat photography and war zone photography rooted in historical reenactment and fine art documentary storytelling. © Wayne Heim",
+    "description": "A powerful black and white World War II battle photography image capturing a WWII soldier tending to a wounded comrade on the battlefield. This WWII battle photography scene reflects battlefield moments defined by urgency, sacrifice, and human connection rather than spectacle. Rendered with painterly tonal restraint, the composition draws focus to physical contact and shared struggle, evoking scenes from the front during the Second World War. © Wayne Heim",
     "alt": "WWII soldier kneeling over wounded comrade on battlefield in black and white war zone photograph",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-v6mfR3M/A",
-
     "keywords": [
       "black and white photography",
       "WWII battle photography",
@@ -801,7 +756,6 @@ export const galleryData = [
       "Second World War",
       "historical reenactment photography"
     ],
-
     "story": "“Stay with me.”\n\nHe leans close, voice low, as if the world might listen in. One hand presses down, the other steadies a shoulder that no longer answers the way it should.\n\nBreath is fragile here.",
     "notes": "The downward diagonal of the kneeling figure creates a visual gravity that centers the narrative at the point of contact. Light isolates the faces and hands, intensifying the emotional core without theatrical excess.\n\nThrough restrained monochrome and textured surface treatment, the image aligns with the tradition of wartime reportage while elevating the moment into fine art. It is a study in proximity — where presence becomes the final act of resistance.",
     "rating": 4,
@@ -814,15 +768,14 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-v6mfR3M/2/Ld2JqCx4WFmxt6NkMwBBwbF9vVS2cxQRDb4vv8G3m/M/_WHK7895-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-v6mfR3M/2/NZ7VpCXLRhG7Q96BbDPmLjLmwMvmt87bWBfCFGCPR/S/_WHK7895-Edit-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-wDQZ8SZ",
     "title": "No Man Walks Alone",
-    "description": "A powerful black and white World War II battle photography image capturing two WWII soldiers moving together across the battlefield, one supporting the other. This WWII battle photography scene reflects battlefield moments defined by endurance, brotherhood, and shared burden rather than spectacle. Rendered with painterly tonal restraint, the composition emphasizes physical connection and forward motion, evoking scenes from the front during the Second World War. A compelling example of WWII combat photography and war zone photography rooted in historical reenactment and fine art documentary storytelling. © Wayne Heim",
+    "description": "A powerful black and white World War II battle photography image capturing two WWII soldiers moving together across the battlefield, one supporting the other. This WWII battle photography scene reflects battlefield moments defined by endurance, brotherhood, and shared burden rather than spectacle. Rendered with painterly tonal restraint, the composition emphasizes physical connection and forward motion, evoking scenes from the front during the Second World War. © Wayne Heim",
     "alt": "WWII soldiers supporting each other while moving across battlefield in black and white war zone photograph",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-wDQZ8SZ/A",
-
     "keywords": [
       "black and white photography",
       "WWII battle photography",
@@ -836,7 +789,6 @@ export const galleryData = [
       "Second World War",
       "historical reenactment photography"
     ],
-
     "story": "He doesn’t ask for help.\n\nIt is simply there — an arm over the shoulder, a grip firm enough to hold but not to shame. They move as one uneven shape across the dust, breath syncing without a word.\n\nForward is easier when someone takes half the weight.",
     "notes": "The intertwined silhouettes create a single visual mass, reinforcing the theme of shared burden. The diagonal movement across the frame suggests progress despite strain, while light isolates the figures against a subdued ground.\n\nThrough restrained monochrome and textured surface treatment, the image aligns with the tradition of wartime reportage while elevating the moment into fine art. It is a study in solidarity — where survival is measured in inches taken together.",
     "rating": 4,
@@ -849,7 +801,7 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-wDQZ8SZ/2/NNWVK5KZp87TgqfxgLB9fCnZ6vcVtPbkDwv9QqQLt/M/_WHK7967-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-wDQZ8SZ/2/KMJkBnSdQcggLg337fMNL9sbHdrKgdPKBMN5qZ9hM/S/_WHK7967-Edit-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-VCqzrtn",
@@ -857,7 +809,6 @@ export const galleryData = [
     "description": "A dramatic black and white World War II battle photography image capturing a solitary WWII soldier advancing beneath a rising column of smoke on the battlefield. This WWII battle photography scene reflects battlefield moments defined by exposure, scale, and raw atmosphere rather than spectacle. Rendered with painterly tonal restraint, the composition contrasts the vast, smoke-filled sky against the grounded human figure, evoking scenes from the front during the Second World War. A striking example of WWII combat photography and war zone photography rooted in historical reenactment and fine art documentary storytelling. © Wayne Heim",
     "alt": "WWII soldier advancing across sandy battlefield beneath large smoke plume in black and white war zone photograph",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-VCqzrtn/A",
-
     "keywords": [
       "black and white photography",
       "WWII battle photography",
@@ -871,7 +822,6 @@ export const galleryData = [
       "Second World War",
       "historical reenactment photography"
     ],
-
     "story": "The sky is louder than the guns.\n\nSmoke folds over itself, rising in dark columns that blot out distance and mercy alike. A lone figure moves through the churned sand, small against the violence overhead.\n\nThere is no shelter here — only forward.",
     "notes": "The sweeping horizontal expanse of sand grounds the composition while the towering smoke column commands the upper frame, creating a powerful contrast of scale. The lone figure becomes a focal point of resilience within overwhelming atmosphere.\n\nThrough restrained monochrome and cinematic framing, the image echoes classic wartime reportage while elevating the scene into fine art. It is a study in vulnerability and resolve — where the sky itself feels engaged in the conflict.",
     "rating": 4,
@@ -884,15 +834,14 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-VCqzrtn/2/NGfbpcnRRGrHbx85L3Jh8kXBSKzDs4Hpk4bwpd7Sx/M/_WHK9845-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-VCqzrtn/2/L5bRvTBbF8SxNDxDfNQ5zwpgpbSwWTrCwWV2QsMJc/S/_WHK9845-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-Zbv6GQz",
     "title": "Through the Chaos",
-    "description": "A dynamic black and white World War II battle photography image capturing a WWII soldier advancing through battlefield chaos under fire. This WWII battle photography scene reflects battlefield moments defined by motion, urgency, and fragmented perception rather than spectacle. Rendered with painterly tonal restraint, the composition isolates the forward-driving figure against blurred forms and airborne debris, evoking scenes from the front during the Second World War. A compelling example of WWII combat photography and war zone photography rooted in historical reenactment and fine art documentary storytelling. © Wayne Heim",
+    "description": "A dynamic black and white World War II battle photography image capturing a WWII soldier advancing through battlefield chaos under fire. This WWII battle photography scene reflects battlefield moments defined by motion, urgency, and fragmented perception rather than spectacle. Rendered with painterly tonal restraint, the composition isolates the forward-driving figure against blurred forms and airborne debris, evoking scenes from the front during the Second World War. © Wayne Heim",
     "alt": "WWII soldier advancing through chaotic battlefield scene in black and white war zone photograph",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-Zbv6GQz/A",
-
     "keywords": [
       "black and white photography",
       "WWII battle photography",
@@ -906,7 +855,6 @@ export const galleryData = [
       "Second World War",
       "historical reenactment photography"
     ],
-
     "story": "The ground won’t stay still.\n\nSand lifts, men shout, steel flashes past in blurs that barely register. He bends into it anyway — one step, then another, boots carving a path through confusion.\n\nForward is the only shape that makes sense.",
     "notes": "The central figure anchors the frame with a strong diagonal lean, creating momentum against a field of blurred motion. Background silhouettes and airborne dust heighten the sense of instability, amplifying the psychological intensity of the advance.\n\nThrough restrained monochrome and controlled depth of field, the image echoes classic wartime reportage while elevating the moment into fine art. It is a study in resolve under pressure — where movement itself becomes the narrative.",
     "rating": 4,
@@ -919,15 +867,14 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-Zbv6GQz/2/NRwB7gsqjszJbmwfVFKwBnK7jkw4ZRQxsgjvZHbnX/M/_WHK0158-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-Zbv6GQz/2/KrkPHrvdVz9B5jJzxZ6FQMMjB6Ntb9Q4fLSSHdXZS/S/_WHK0158-Edit-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-wQTdr8b",
     "title": "Holding the Ridge",
-    "description": "A dramatic black and white World War II battle photography image capturing WWII soldiers positioned along a sand ridge under active artillery fire. This WWII battle photography scene reflects battlefield moments defined by tension, coordination, and defensive resolve rather than spectacle. Rendered with painterly tonal restraint, the composition layers crouched figures against a smoking artillery emplacement, evoking scenes from the front during the Second World War. A compelling example of WWII combat photography and war zone photography rooted in historical reenactment and fine art documentary storytelling. © Wayne Heim",
+    "description": "A dramatic black and white World War II battle photography image capturing WWII soldiers positioned along a sand ridge under active artillery fire. This WWII battle photography scene reflects battlefield moments defined by tension, coordination, and defensive resolve rather than spectacle. Rendered with painterly tonal restraint, the composition layers crouched figures against a smoking artillery emplacement, evoking scenes from the front during the Second World War. © Wayne Heim",
     "alt": "WWII soldiers holding sand ridge position under artillery fire in black and white war zone photograph",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-wQTdr8b/A",
-
     "keywords": [
       "black and white photography",
       "WWII battle photography",
@@ -941,7 +888,6 @@ export const galleryData = [
       "Second World War",
       "historical reenactment photography"
     ],
-
     "story": "They press into the earth as if it might answer back.\n\nHelmets low, rifles angled toward a horizon that never stays quiet. The gun behind them coughs smoke into the sky, each blast a reminder that the ridge is both shield and target.\n\nFor now, this ground is theirs.",
     "notes": "The horizontal sweep of the ridge anchors the composition, while the vertical plume of smoke introduces a counterforce that disrupts the calm of the line. This structural tension reinforces the precarious nature of their position.\n\nThrough restrained monochrome and layered depth, the image echoes classic wartime reportage while elevating the moment into fine art. It is a study in defensive endurance — where holding ground becomes its own act of courage.",
     "rating": 4,
@@ -954,15 +900,14 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-wQTdr8b/2/K9Qd4pBTVRFf7HMbVfPQ7v6RL724mhNpdx32sr3JZ/M/_WHK0746-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-wQTdr8b/2/KtVrn7nXptVbXB6fwfV34rms5QdTx9qVXXPm6LKb6/S/_WHK0746-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-Q8VzmZb",
     "title": "Holding the Ridge",
-    "description": "A dramatic black and white World War II battle photography image capturing WWII soldiers positioned along a sand ridge under active artillery fire. This WWII battle photography scene reflects battlefield moments defined by tension, coordination, and defensive resolve rather than spectacle. Rendered with painterly tonal restraint, the composition layers crouched figures against a smoking artillery emplacement, evoking scenes from the front during the Second World War. A compelling example of WWII combat photography and war zone photography rooted in historical reenactment and fine art documentary storytelling. © Wayne Heim",
+    "description": "A dramatic black and white World War II battle photography image capturing WWII soldiers positioned along a sand ridge under active artillery fire. This WWII battle photography scene reflects battlefield moments defined by tension, coordination, and defensive resolve rather than spectacle. Rendered with painterly tonal restraint, the composition layers crouched figures against a smoking artillery emplacement, evoking scenes from the front during the Second World War. © Wayne Heim",
     "alt": "WWII soldiers holding sand ridge position under artillery fire in black and white war zone photograph",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-Q8VzmZb/A",
-
     "keywords": [
       "black and white photography",
       "WWII battle photography",
@@ -976,7 +921,6 @@ export const galleryData = [
       "Second World War",
       "historical reenactment photography"
     ],
-
     "story": "They press into the earth as if it might answer back.\n\nHelmets low, rifles angled toward a horizon that never stays quiet. The gun behind them coughs smoke into the sky, each blast a reminder that the ridge is both shield and target.\n\nFor now, this ground is theirs.",
     "notes": "The horizontal sweep of the ridge anchors the composition, while the vertical plume of smoke introduces a counterforce that disrupts the calm of the line. This structural tension reinforces the precarious nature of their position.\n\nThrough restrained monochrome and layered depth, the image echoes classic wartime reportage while elevating the moment into fine art. It is a study in defensive endurance — where holding ground becomes its own act of courage.",
     "rating": 4,
@@ -989,15 +933,14 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-Q8VzmZb/1/LvxJp98h5V8sXq2ZwCKc7brcc62qGVv9w46sDM8R9/M/_WHK0746-M.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-Q8VzmZb/1/LJtcG5qqNGL5FjTJm7PgC3GtN7kPhPm5MmrcQnx7h/S/_WHK0746-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-XQnNv53",
     "title": "Brace for Recoil",
-    "description": "A powerful black and white World War II battle photography image capturing WWII soldiers bracing behind an artillery gun moments before firing. This WWII battle photography scene reflects battlefield moments defined by anticipation, force, and coordinated effort rather than spectacle. Rendered with painterly tonal restraint, the composition emphasizes physical tension and grounded stance, evoking scenes from the front during the Second World War. A compelling example of WWII combat photography and war zone photography rooted in historical reenactment and fine art documentary storytelling. © Wayne Heim",
+    "description": "A powerful black and white World War II battle photography image capturing WWII soldiers bracing behind an artillery gun moments before firing. This WWII battle photography scene reflects battlefield moments defined by anticipation, force, and coordinated effort rather than spectacle. Rendered with painterly tonal restraint, the composition emphasizes physical tension and grounded stance, evoking scenes from the front during the Second World War. © Wayne Heim",
     "alt": "WWII soldiers bracing behind artillery cannon before firing in black and white battlefield photograph",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-XQnNv53/A",
-
     "keywords": [
       "black and white photography",
       "WWII battle photography",
@@ -1011,7 +954,6 @@ export const galleryData = [
       "Second World War",
       "historical reenactment photography"
     ],
-
     "story": "They lean into the weight of it.\n\nHands tighten, boots grind into sand, shoulders square against what’s coming. The barrel points toward a distance none of them can measure.\n\nThe earth will answer back.",
     "notes": "The low vantage point reinforces the mass of the artillery piece, anchoring the composition in weight and gravity. The diagonal thrust of the barrel contrasts with the grounded stance of the soldiers, creating structural tension before the implied blast.\n\nThrough restrained monochrome and textured surface treatment, the image aligns with classic wartime reportage while elevating the moment into fine art. It is a study in controlled force — where anticipation becomes as powerful as the shot itself.",
     "rating": 4,
@@ -1024,7 +966,7 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-XQnNv53/2/MvW3jVT7tvGsN7R7b7kBRXKwhdC29JB3khqhxXg3X/L/_WHK0960-Edit-2-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-XQnNv53/2/NZwtBQWSJw8QnCzkPRfBsk9C6rCPVHPSLvXrjkN3m/S/_WHK0960-Edit-2-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-65CBsn3",
@@ -1032,7 +974,6 @@ export const galleryData = [
     "description": "A dramatic black and white World War II battle photography image capturing WWII soldiers advancing behind armored support on a smoke-filled battlefield. This scene from the front reflects authentic WWII combat photography rooted in movement, tension, and coordinated advance rather than spectacle. The composition emphasizes layered depth — infantry in the foreground, armor pressing forward — evoking war zone photography defined by presence and consequence. A powerful example of WWII action art and wartime action photography within a historically grounded fine art documentary approach. © Wayne Heim",
     "alt": "WWII soldiers advancing behind tank in black and white battlefield photograph",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-65CBsn3/A",
-
     "keywords": [
       "black and white photography",
       "WWII battle photography",
@@ -1046,7 +987,6 @@ export const galleryData = [
       "Second World War",
       "historical reenactment photography"
     ],
-
     "story": "The tank moves first.\n\nThey follow in its shadow, boots sinking into churned sand, rifles low but ready. No one looks back. The noise behind them is already swallowed by the next command forward.\n\nWhatever waits ahead will not wait long.",
     "notes": "The structural layering — infantry framed against advancing armor — creates both physical and psychological depth. The tank anchors the composition as mass and momentum, while the soldiers’ forward lean carries the narrative line into the unseen distance.\n\nRendered in restrained monochrome, the image balances documentary immediacy with painterly control. It is not spectacle that defines the scene, but direction — the quiet inevitability of men moving toward the fireline together.",
     "rating": 4,
@@ -1059,7 +999,7 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-65CBsn3/2/MPHRrTKdsPv6XVBFMHMsz8jbnLH34bkGgWspqqHwt/L/_WHK0997-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-65CBsn3/2/NDRFL8n5GbKchzhGDz7ThZZk97CXZd2GSmGG4GxWp/S/_WHK0997-Edit-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-krDJb3M",
@@ -1067,7 +1007,6 @@ export const galleryData = [
     "description": "A commanding black and white World War II battle photography image capturing WWII soldiers positioned behind artillery, sighted toward a distant treeline. This WWII battle photography scene reflects battlefield moments defined by discipline, alignment, and anticipation rather than spectacle. The composition draws the eye along the artillery barrel into the open field, evoking war zone photography grounded in tension and measured force. A powerful example of WWII combat photography and wartime action photography within a historically rooted fine art documentary approach. © Wayne Heim",
     "alt": "WWII soldiers aiming artillery cannon across open field in black and white battlefield photograph",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-krDJb3M/A",
-
     "keywords": [
       "black and white photography",
       "WWII battle photography",
@@ -1081,7 +1020,6 @@ export const galleryData = [
       "Second World War",
       "historical reenactment photography"
     ],
-
     "story": "They steady the barrel and lean into the earth.\n\nNo one speaks. The horizon holds its breath as the treeline waits in the distance, silent and unmoving.\n\nWhen the order comes, the silence will break — but this moment, balanced on the edge, belongs to them.",
     "notes": "The centered artillery piece creates a strong axial composition, directing both visual and psychological tension straight through the frame. The open landscape contrasts with the mass of the gun, reinforcing the weight of impending force.\n\nThrough restrained monochrome tonality and textured atmosphere, the image channels the lineage of classic wartime reportage while maintaining painterly control. It is a study in alignment — men, machine, and intention fixed along a single line of fire.",
     "rating": 4,
@@ -1094,7 +1032,7 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-krDJb3M/2/LvLK6hHVn56Nmb4vqSDbqbPX8wpZM7Kx5hKP7rKqN/L/_WHK1043-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-krDJb3M/2/Lb4KSfzWndzsHzrP57bKBpktVmB67W33kPmBNtcv4/S/_WHK1043-Edit-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-3Cq3WxQ",
@@ -1102,7 +1040,6 @@ export const galleryData = [
     "description": "A striking black and white World War II battle photography image capturing WWII soldiers advancing from the beachhead into thick smoke. This WWII battle photography scene reflects scenes from the front defined by movement, uncertainty, and resolve rather than spectacle. The layered composition — a soldier rising in the foreground while others fade into haze — evokes authentic war zone photography and wartime action photography rooted in historical reenactment. A powerful example of WWII combat photography and WWII artistic documentary within a fine art approach to Second World War imagery. © Wayne Heim",
     "alt": "WWII soldiers advancing through smoke on beachhead in black and white battlefield photograph",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-3Cq3WxQ/A",
-
     "keywords": [
       "black and white photography",
       "WWII battle photography",
@@ -1116,7 +1053,6 @@ export const galleryData = [
       "Second World War",
       "historical reenactment photography"
     ],
-
     "story": "The shoreline is already gone.\n\nFigures dissolve ahead of him, swallowed by the haze as sand gives way to something harder inland. He rises, hesitates only long enough to steady his breath, then steps forward.\n\nWhatever waits beyond the smoke will know they came.",
     "notes": "The atmospheric density functions as both veil and narrative device, dissolving figures into tonal gradients that echo classic wartime reportage while maintaining painterly restraint. The foreground soldier anchors the composition in human scale against the abstraction of smoke.\n\nThis piece embodies transitional tension — the moment between exposure and engagement. It is less about spectacle and more about the quiet courage required to walk into what cannot be seen.",
     "rating": 4,
@@ -1129,7 +1065,7 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-3Cq3WxQ/1/KV3St5KvwkqpCJ5rNntknzDr3cc9Q8DZRtWHDW8R5/M/_WHK1109-M.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-3Cq3WxQ/1/LzSVFrqST6G5FZJPM2z6Dnj6zx3cs5V2NjbJMNdM2/S/_WHK1109-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-fgksDHK",
@@ -1137,7 +1073,6 @@ export const galleryData = [
     "description": "A dramatic black and white World War II battle photography image capturing WWII soldiers advancing uphill across rugged terrain. This WWII battle photography scene reflects battlefield moments defined by elevation, exposure, and resolve rather than spectacle. Shot from a low vantage point, the composition emphasizes upward motion against an open sky, evoking scenes from the front rooted in WWII combat photography and war zone photography. A compelling example of WWII action art and WWII artistic documentary within a historically grounded fine art approach to Second World War imagery. © Wayne Heim",
     "alt": "WWII soldiers advancing uphill with rifles against open sky in black and white battlefield photograph",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-fgksDHK/A",
-
     "keywords": [
       "black and white photography",
       "WWII battle photography",
@@ -1152,7 +1087,6 @@ export const galleryData = [
       "Second World War",
       "historical reenactment photography"
     ],
-
     "story": "They don’t look down.\n\nBoots dig into the slope, hands reach forward, rifles angled toward a sky that offers no cover. The wind presses against them, but they press harder.\n\nHigher ground is never given. It is taken.",
     "notes": "The low perspective intensifies the incline, transforming the hill into both physical and symbolic challenge. Figures are silhouetted against sky, creating a dynamic contrast between grounded effort and open expanse.\n\nThrough restrained monochrome tonality and textured atmosphere, the image aligns with classic wartime visual language while elevating the moment into fine art. It is a study in ascent — where determination defines the horizon.",
     "rating": 4,
@@ -1165,7 +1099,7 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-fgksDHK/4/MRTRKXbVkHbxhvpFrVw96hNL7rtDdxZqfJPbDB7d5/M/P8180665-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-fgksDHK/4/KhLXngLRFswJ5NWcJkVLGGF9pRGNCcwBzhPgbW3rJ/S/P8180665-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-w43Z2Td",
@@ -1173,7 +1107,6 @@ export const galleryData = [
     "description": "A striking black and white World War II battle photography image capturing a WWII soldier emerging through dense smoke beside armored machinery marked with the Allied star. This WWII battle photography scene reflects battlefield moments defined by atmosphere, obscurity, and presence rather than spectacle. The composition balances abstraction and clarity — smoke dissolving into form — evoking authentic war zone photography and WWII artistic documentary rooted in historical reenactment. A powerful example of WWII combat photography and WWII action art within a restrained fine art approach to Second World War imagery. © Wayne Heim",
     "alt": "WWII soldier emerging from smoke beside armored vehicle marked with Allied star in black and white photograph",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-w43Z2Td/A",
-
     "keywords": [
       "black and white photography",
       "WWII battle photography",
@@ -1187,7 +1120,6 @@ export const galleryData = [
       "Second World War",
       "historical reenactment photography"
     ],
-
     "story": "At first there is only smoke.\n\nThen a shape. A helmet. The faint outline of a man moving through what should have hidden him. The machine beneath him bears its mark, steady and unmoved.\n\nWar rarely announces itself. It simply appears — out of the haze.",
     "notes": "The vertical framing intensifies the upward movement of smoke, creating a painterly veil that both conceals and reveals the figure. The stark tonal contrast between the white haze and dark machinery introduces tension between fragility and force.\n\nBy allowing atmosphere to dominate form, the image aligns with the legacy of classic wartime reportage while elevating it through compositional restraint. It is a study in emergence — where identity and intention materialize from obscurity.",
     "rating": 4,
@@ -1200,7 +1132,7 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-w43Z2Td/3/KrVJ8jjF5kV8JggR6NRH75M8c6sCVRx48JwF25JSS/L/_OLY3071-2-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-w43Z2Td/3/MzNkPxKtBgWQRp4hp8hszVsMFzx3gvW9pQm7MQ5c8/S/_OLY3071-2-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-SkGBCPg",
@@ -1208,7 +1140,6 @@ export const galleryData = [
     "description": "A dramatic black and white World War II battle photography image capturing a WWII artillery gun firing through a cloud of dense smoke. This WWII battle photography scene reflects battlefield moments defined by force, atmosphere, and immediacy rather than spectacle. The composition centers the cannon barrel emerging through the haze, evoking powerful war zone photography and wartime action photography rooted in historical reenactment. A compelling example of WWII combat photography and WWII action art presented within a restrained fine art documentary approach to Second World War imagery. © Wayne Heim",
     "alt": "WWII artillery cannon firing through heavy smoke in black and white battlefield photograph",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-SkGBCPg/A",
-
     "keywords": [
       "black and white photography",
       "WWII battle photography",
@@ -1223,7 +1154,6 @@ export const galleryData = [
       "Second World War",
       "historical reenactment photography"
     ],
-
     "story": "For a moment the world disappears.\n\nSmoke pours forward, swallowing steel, sky, and the man behind the barrel. Only the dark mouth of the gun remains — a single point where silence just ended.\n\nSomewhere beyond the haze, the message is already arriving.",
     "notes": "The composition isolates the artillery barrel at the center of a dense atmospheric field, allowing smoke and negative space to dominate the frame. This visual restraint transforms the moment of discharge into an abstract study of force and presence.\n\nBy reducing the scene to steel, smoke, and silhouette, the image echoes the language of classic wartime imagery while maintaining painterly control. It is a study in impact — the instant where silence gives way to thunder.",
     "rating": 4,
@@ -1236,7 +1166,7 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-SkGBCPg/3/LqrGLJtNs3DRh347hsxWrs7rPn9RBLRFV98xZJSZ3/M/_OLY3077-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-SkGBCPg/3/LrMkGQ8jZw4W8tFtJRDxPzxzP6tJnDcBqZwvW9zfq/S/_OLY3077-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-jbhq74R",
@@ -1244,7 +1174,6 @@ export const galleryData = [
     "description": "A dramatic black and white World War II battlefield photograph capturing soldiers pinned down on a beach under fire during a WWII combat scene. The low perspective emphasizes the vulnerability of troops caught in the open while steel beach obstacles and distant figures fill the chaotic horizon. This powerful example of WWII battle photography reflects the tension and immediacy of wartime action photography and scenes from the front, rendered in a fine art documentary style that evokes the atmosphere of historic war zone photography and Second World War imagery. © Wayne Heim",
     "alt": "WWII soldiers pinned down on a beach under fire in dramatic black and white battlefield photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-jbhq74R/A",
-
     "keywords": [
       "black and white photography",
       "WWII battle photography",
@@ -1259,7 +1188,6 @@ export const galleryData = [
       "Second World War",
       "historical reenactment photography"
     ],
-
     "story": "There’s nowhere to run.\n\nThe sand offers no cover, the sky offers no mercy, and every few seconds the air snaps with another round tearing past. So they press lower, closer to the earth, waiting for the moment when waiting becomes impossible.\n\nSoon someone will have to move.",
     "notes": "The composition places the viewer at ground level with the soldiers, compressing the frame so that sand, gear, and bodies dominate the foreground while the battlefield chaos stretches into the distance. This perspective creates an immediate sense of exposure and vulnerability.\n\nThe leaning steel beach obstacles and scattered figures across the horizon form a jagged visual rhythm that guides the eye through the frame, echoing the disordered geometry of wartime landscapes. The result is a restrained yet cinematic study of tension, capturing the suspended moment between survival and movement.",
     "rating": 4,
@@ -1272,7 +1200,7 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-jbhq74R/3/M3kRGcxZXbzZrSxqRzBMvz4HTxjd8t4qnBNgfPs3B/M/_OLY3273-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-jbhq74R/3/MtDjzS9d3SJcT6KsMtNZ2RjrHdRwJthzrDNfj6NWm/S/_OLY3273-Edit-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-ZvrLLHG",
@@ -1280,7 +1208,6 @@ export const galleryData = [
     "description": "A black and white World War II battlefield portrait capturing a soldier advancing low across the sand, rifle forward as he moves through the tension of combat. The image reflects the lived immediacy of the Second World War battlefield, where instinct and momentum carried soldiers through moments measured in yards.\n\nPart of a larger body of WWII battle photography and historical war zone photography, the composition emphasizes posture, determination, and battlefield moments rather than spectacle. This piece blends documentary realism with painterly restraint, placing the viewer directly inside a scene from the front. © Wayne Heim",
     "alt": "WWII soldier crawling low across sandy battlefield with rifle during World War II combat scene",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-ZvrLLHG/A",
-
     "keywords": [
       "Second World War",
       "The Art of War",
@@ -1293,7 +1220,6 @@ export const galleryData = [
       "WWII action art",
       "wwii artistic documentary"
     ],
-
     "story": "“Keep low!” someone shouts behind him, but he’s already there, chest pressed into the sand, rifle forward, inching across ground that suddenly feels far too open.\n\nHe flashes a quick grin anyway. Not because it’s funny… but because sometimes the only way forward is to pretend the next few yards belong to you.\n\nAhead, the line is moving. And if he keeps low long enough, he might just make it there.",
     "notes": "This image centers on motion under pressure — a soldier pressed into the terrain as he advances across exposed ground. The composition draws on the visual language of classic wartime photography while introducing painterly tonal control that softens the line between documentation and historical fine art.\n\nRather than depicting a climactic moment, the scene captures the quieter rhythm of battlefield movement — the small, deliberate yards gained while the larger battle unfolds beyond the frame. The result is a cinematic wartime portrait grounded in human resolve.",
     "rating": 4,
@@ -1306,7 +1232,7 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-ZvrLLHG/3/KGpLsdN8FwCSZGVPML6qk6fk3DzpXPTDk8ZBBtvmG/M/P8191709-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-ZvrLLHG/3/KR6Sb89DTbq4XmZqRCj8SbMxrXxzkWjbjcbvHc2Ng/S/P8191709-Edit-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-szFGDLB",
@@ -1314,7 +1240,6 @@ export const galleryData = [
     "description": "A dramatic black and white battlefield silhouette capturing a soldier advancing across the chaos of the Second World War. The towering figure in the foreground contrasts with soldiers crouched low behind him, creating a powerful moment drawn from the tension and urgency of WWII battle photography.\n\nThe composition emphasizes battlefield moments rather than spectacle, blending documentary realism with painterly shadow and contrast. As part of a broader body of war zone photography and WWII artistic documentary work, the image reflects the human scale of combat within the vast machinery of the Second World War. © Wayne Heim",
     "alt": "Silhouette of WWII soldier stepping forward on battlefield with other soldiers low behind him during World War II combat scene",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-szFGDLB/A",
-
     "keywords": [
       "Second World War",
       "The Art of War",
@@ -1327,7 +1252,6 @@ export const galleryData = [
       "WWII action art",
       "wwii artistic documentary"
     ],
-
     "story": "He rises just long enough to move.\n\nFor a moment his shadow stretches across the sand, towering above the others still pressed low to the ground. Bullets crack somewhere ahead, but hesitation would be worse.\n\nSo he steps forward anyway—one more silhouette against the smoke, moving into the fight.",
     "notes": "This composition relies on contrast and scale to create a cinematic wartime moment. The silhouetted soldier dominates the frame, transforming an ordinary movement across the battlefield into an almost mythic figure advancing through smoke and shadow.\n\nThe layered positioning of soldiers in the foreground and background evokes the visual rhythm often seen in historic war photography, while the painterly treatment of light and texture elevates the scene beyond documentary record into a contemplative study of courage, momentum, and the quiet seconds before contact.",
     "rating": 4,
@@ -1340,7 +1264,7 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-szFGDLB/3/LtrgWW9R4m3sc5jWrbcgxck4qZsvwwbwNT3CdjZq4/M/P8191721-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-szFGDLB/3/K2vcrdqLz8gVKRqShcdGZCTp9d4mzzj6Kr6qZ9LCL/S/P8191721-Edit-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-fnsQQdz",
@@ -1348,7 +1272,6 @@ export const galleryData = [
     "description": "A striking black and white World War II battlefield image capturing the silhouette of a soldier stepping forward above a machine gun team locked into position below. The composition emphasizes scale and movement, transforming a fleeting battlefield moment into a dramatic study of momentum during the Second World War.\n\nBlending documentary realism with painterly contrast and shadow, the image highlights the layered tension of wartime action. Part of a larger body of WWII battle photography and war zone photography, the scene reflects the human dimension of combat within the broader machinery of the war. © Wayne Heim",
     "alt": "Silhouette of WWII soldier stepping forward above machine gun team on smoky battlefield during World War II combat scene",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-fnsQQdz/A",
-
     "keywords": [
       "Second World War",
       "The Art of War",
@@ -1361,7 +1284,6 @@ export const galleryData = [
       "WWII action art",
       "wwii artistic documentary"
     ],
-
     "story": "He rises from the smoke just long enough to move.\n\nBelow him the machine gun team stays low, feeding belts and watching the horizon while the next push begins. The ground trembles with distant fire, but hesitation has already been left behind.\n\nSo he steps forward anyway—one more figure crossing the thin line between cover and open ground.",
     "notes": "The power of this composition lies in its use of scale and silhouette. The towering soldier in the foreground transforms a simple battlefield movement into a symbolic passage across the landscape of war, while the machine gun crew anchors the lower frame with grounded realism.\n\nThe interplay of shadow, smoke, and layered figures evokes the visual language of historic wartime imagery while embracing the painterly treatment that defines this body of work. The result is a cinematic WWII battlefield moment that balances immediacy with mythic presence.",
     "rating": 4,
@@ -1374,7 +1296,7 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-fnsQQdz/3/Lfd3VBMhGPbQq986C7Q58LNRd3jN5FpXngxgQjJxv/M/P8191726-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-fnsQQdz/3/LgwwJcXg2KKzJkQ4vppRVfMkH8BwTRr6QpsnNrDKR/S/P8191726-Edit-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-bNFcCpd",
@@ -1382,7 +1304,6 @@ export const galleryData = [
     "description": "A black and white World War II battlefield portrait capturing a soldier sighting down his rifle while another watches the horizon behind him. The composition pulls the viewer directly into the tension of frontline combat, where every movement slows and the battlefield compresses into a single line of focus.\n\nPart of a broader body of WWII battle photography and war zone photography, the image emphasizes concentration and anticipation rather than spectacle. Through restrained light and documentary realism, the photograph reflects the quiet intensity found in many battlefield moments across the Second World War. © Wayne Heim",
     "alt": "WWII soldier aiming rifle from sandy battlefield position with another soldier watching behind him during World War II combat scene",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-bNFcCpd/A",
-
     "keywords": [
       "Second World War",
       "The Art of War",
@@ -1395,7 +1316,6 @@ export const galleryData = [
       "WWII action art",
       "wwii artistic documentary"
     ],
-
     "story": "He settles into the sand and draws the rifle tight against his shoulder.\n\nThe world narrows to a thin line down the barrel. Wind, smoke, shouted orders somewhere behind him—all of it fades as he steadies his breath and waits for the moment to reveal itself.\n\nBeside him another soldier watches the same horizon, both of them fixed on a point only they can see.",
     "notes": "This composition centers on the psychological stillness that precedes action. The soldier’s eye aligned with the rifle creates a direct visual path through the frame, drawing the viewer into the same narrow focus experienced on the battlefield.\n\nThe secondary figure behind him expands the narrative, suggesting coordination and shared vigilance along the front. With its restrained tonal palette and intimate perspective, the image reflects the tradition of classic wartime photography while embracing the painterly treatment that defines this historical series.",
     "rating": 4,
@@ -1408,7 +1328,7 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-bNFcCpd/3/KmNH55vpJDNLnSVs4K7P4LpL7dSJPSdFq3F4kCDbQ/M/P8191763-Edit-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-bNFcCpd/3/NGv88CVMctbKt2kFN3G9cF253HQbJDCZ8HLTPmGmk/S/P8191763-Edit-Edit-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-wM6zgrQ",
@@ -1416,7 +1336,6 @@ export const galleryData = [
     "description": "A black and white World War II battlefield image capturing a medic tending to a wounded soldier in the midst of combat. The scene highlights a quieter side of the Second World War, where battlefield moments were not only defined by fighting, but by the urgent acts of care that unfolded between soldiers under fire.\n\nPart of a broader body of WWII battle photography and war zone photography, the composition emphasizes the humanity found within wartime action. Through restrained light and documentary realism, the image reflects the role of medics and the fragile seconds that shaped countless scenes from the front during the Second World War. © Wayne Heim",
     "alt": "WWII medic treating wounded soldier on battlefield during World War II combat scene",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-wM6zgrQ/A",
-
     "keywords": [
       "Second World War",
       "The Art of War",
@@ -1429,7 +1348,6 @@ export const galleryData = [
       "WWII action art",
       "wwii artistic documentary"
     ],
-
     "story": "The noise of the battlefield fades the moment he kneels.\n\nDust clings to the wounded soldier’s uniform as the medic works quickly, hands steady despite the chaos somewhere beyond the ridge. A bandage, a word, a steady grip on the shoulder—small things that suddenly mean everything.\n\nFor a moment the war shrinks to just two men in the dirt, one fighting to hold on while the other refuses to let go.",
     "notes": "This composition focuses on the human dimension of war rather than the mechanics of battle. The medic leaning over the wounded soldier creates a quiet focal point that contrasts with the unseen violence surrounding them.\n\nThe restrained black and white palette and intimate framing evoke the visual language of historic wartime photography, emphasizing compassion, urgency, and the fragile moments that unfolded behind the front lines. The result is a cinematic wartime portrait centered on service, care, and the shared burden carried by those on the battlefield.",
     "rating": 4,
@@ -1442,7 +1360,7 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-wM6zgrQ/3/LsfjF9Q7hPSwXRR96pwVRzv2xsq4DFJDNXL4xbgkR/L/_OLY3864-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-wM6zgrQ/3/MtLRPz9FrzJCCL53zXrZck5Df6BtDMN9c8kHLppzv/S/_OLY3864-Edit-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-cHZFshj",
@@ -1450,7 +1368,6 @@ export const galleryData = [
     "description": "A dramatic black and white World War II battlefield image capturing soldiers advancing through smoke as others remain low along the line. The composition conveys the exact moment when hesitation gives way to movement, a surge forward that defined countless battlefield moments during the Second World War.\n\nPart of a broader body of WWII battle photography and war zone photography, the image blends documentary realism with painterly atmosphere. Through light, motion, and layered figures, the photograph reflects the tension and urgency found in scenes from the front during World War II. © Wayne Heim",
     "alt": "WWII soldiers advancing through smoke while others remain low during World War II battlefield assault scene",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-cHZFshj/A",
-
     "keywords": [
       "Second World War",
       "The Art of War",
@@ -1463,7 +1380,6 @@ export const galleryData = [
       "WWII action art",
       "wwii artistic documentary"
     ],
-
     "story": "Someone shouts and the line suddenly rises.\n\nMen who moments ago were pressed flat into the dirt surge forward through the smoke, rifles up, boots slipping in the churned ground. The air fills with dust and shouted orders as the battlefield shifts from waiting to movement.\n\nFor a few breathless seconds, the only direction left is forward.",
     "notes": "This composition captures the precise instant when a battlefield shifts from stillness to action. The leading soldier moving forward anchors the frame while others remain low behind him, creating a layered visual rhythm that reflects the coordinated surge of an advancing line.\n\nThe interplay of smoke, movement, and silhouette evokes the visual language of historic wartime imagery while embracing a painterly treatment of light and texture. The result is a cinematic WWII battlefield scene that emphasizes momentum, duty, and the fragile seconds when a line of soldiers commits to moving forward.",
     "rating": 4,
@@ -1476,7 +1392,7 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-cHZFshj/3/NF7jv5h3XxmrdkJxpFvW9wVw7jKVdfLSn7ZgNrxXD/L/_WHK2497-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-cHZFshj/3/KtppF2p8PgzLFXs2mHnLC4Tkcx5426jwLsxZJSVft/S/_WHK2497-Edit-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-3w8Kpzz",
@@ -1484,7 +1400,6 @@ export const galleryData = [
     "description": "A black and white World War II battlefield image capturing a soldier walking past beach obstacles with a launcher resting across his shoulders. The scene reflects the stark landscape of the Second World War battlefield, where soldiers moved through shattered defenses and open ground in the aftermath of combat.\n\nPart of a larger body of WWII battle photography and war zone photography, the composition emphasizes service, endurance, and the quiet burden carried by soldiers across the battlefield. Through restrained light and documentary realism, the image evokes one of the countless battlefield moments that defined scenes from the front during World War II. © Wayne Heim",
     "alt": "WWII soldier walking past beach obstacles carrying launcher across shoulders on World War II battlefield",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-3w8Kpzz/A",
-
     "keywords": [
       "Second World War",
       "The Art of War",
@@ -1497,7 +1412,6 @@ export const galleryData = [
       "WWII action art",
       "wwii artistic documentary"
     ],
-
     "story": "The fighting has moved somewhere beyond the smoke.\n\nHe pauses only long enough to shift the launcher across his shoulders, boots sinking slightly into the churned sand. Around him the iron obstacles stand crooked against the horizon, silent reminders of what this beach demanded.\n\nThen he walks forward again—because stopping was never part of the plan.",
     "notes": "This composition centers on the solitary figure moving through a battlefield landscape shaped by steel and sand. The soldier carrying the launcher across his shoulders creates a strong horizontal line that contrasts with the angular beach obstacles surrounding him.\n\nThe restrained black and white palette and open space emphasize the emotional weight of the scene. Rather than depicting combat itself, the image reflects the endurance required to move forward after the moment of battle, capturing a quiet but powerful expression of duty during the Second World War.",
     "rating": 4,
@@ -1510,7 +1424,7 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-3w8Kpzz/4/NRKDgS9DKfmD2ZVDx9z7xpHGF4z9gbMLtTL66fp58/L/_OLY4043-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-3w8Kpzz/4/KwhsVvrVkWs3fNNw89pc4KNZH5D6k6c5zxgtbnh8c/S/_OLY4043-Edit-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-xkntcRq",
@@ -1518,7 +1432,6 @@ export const galleryData = [
     "description": "A black and white World War II battlefield image capturing soldiers moving cautiously through tall grass during a patrol across the landscape. The composition emphasizes the quiet tension found in many battlefield moments of the Second World War, where vigilance and awareness often mattered more than speed.\n\nPart of a broader body of WWII battle photography and war zone photography, the image blends documentary realism with a painterly atmosphere. The figures moving through the field reflect scenes from the front where soldiers advanced carefully through uncertain terrain during World War II. © Wayne Heim",
     "alt": "WWII soldiers moving cautiously through tall grass during battlefield patrol in World War II combat scene",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-xkntcRq/A",
-
     "keywords": [
       "Second World War",
       "The Art of War",
@@ -1531,7 +1444,6 @@ export const galleryData = [
       "WWII action art",
       "wwii artistic documentary"
     ],
-
     "story": "They move slowly through the tall grass, each step measured against the sound of the wind.\n\nHe pauses and glances back, eyes searching the field behind them while the man further up the line continues forward. In places like this, silence can mean safety… or something waiting just beyond the rise.\n\nFor now, the patrol moves on—quiet shadows crossing a battlefield that refuses to reveal what lies ahead.",
     "notes": "This composition focuses on the quieter rhythm of wartime movement rather than the clash of combat. The lead soldier’s glance over his shoulder introduces a subtle tension, suggesting unseen threats beyond the edge of the frame.\n\nThe layered grasses and dramatic sky create a natural stage for the figures as they cross the field, echoing the visual language of classic wartime imagery. The result is a contemplative battlefield study that captures vigilance, uncertainty, and the careful progress of soldiers moving through hostile ground.",
     "rating": 4,
@@ -1544,7 +1456,7 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-xkntcRq/1/LJLrXS36HRwLnGjGmChXfnJnZGfCFZGfBcgVPhcC4/M/_PEN0887-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-xkntcRq/1/MRLWpGrPJNgbc84MZXc3Qfb8Hkkqgw2pPCNVT9Sm7/S/_PEN0887-Edit-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-4DvQwz5",
@@ -1552,7 +1464,6 @@ export const galleryData = [
     "description": "A black and white World War II battlefield image capturing a medic rushing across open ground to reach the wounded. The composition highlights the urgency and courage required of those who served on the front lines of aid during the Second World War, where medics often moved directly into danger to save lives.\n\nPart of a broader body of WWII battle photography and war zone photography, the image emphasizes the human side of battlefield moments. Through restrained light and documentary realism, the photograph reflects the quiet heroism found in scenes from the front during World War II. © Wayne Heim",
     "alt": "WWII medic running across battlefield wearing Red Cross armband during World War II combat scene",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-4DvQwz5/A",
-
     "keywords": [
       "Second World War",
       "The Art of War",
@@ -1565,7 +1476,6 @@ export const galleryData = [
       "WWII action art",
       "wwii artistic documentary"
     ],
-
     "story": "Someone shouts for a medic.\n\nShe doesn’t hesitate. Across the open ground she moves quickly, eyes fixed ahead while the wind pulls at her coat and the red cross on her arm catches the light.\n\nSomewhere beyond the rise a soldier is waiting—and she intends to reach him.",
     "notes": "This composition centers on motion and purpose. The medic moving quickly across the field creates a strong directional energy through the frame, reinforcing the urgency that defined many acts of battlefield care during the war.\n\nThe simplicity of the landscape and the clarity of the Red Cross armband place the viewer directly inside the narrative. Rather than depicting combat itself, the image captures the courage required to move toward danger when someone else’s life depends on it.",
     "rating": 4,
@@ -1578,7 +1488,7 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-4DvQwz5/1/L55bxjZbdq4rGK4w98GxWnM3Lv8nxjnj3KQzdW8sc/M/_OLY2237-Edit-3-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-4DvQwz5/1/NZZt5njP8k9QggKdzmx3v9p5M7zqkJHsCWgGfTwQB/S/_OLY2237-Edit-3-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-frBvQp7",
@@ -1586,7 +1496,6 @@ export const galleryData = [
     "description": "A dramatic black and white World War II battlefield image capturing a soldier moving forward through smoke and chaos during combat. The composition reflects the urgency and determination of infantry advancing toward the fight, embodying the tension found in battlefield moments across the Second World War.\n\nPart of a powerful body of WWII battle photography and war zone photography, the scene emphasizes movement, resolve, and the human experience inside wartime action. This image reflects the raw atmosphere of Scenes from the Front, where soldiers moved into uncertainty with discipline and courage. © Wayne Heim",
     "alt": "WWII soldier advancing through battlefield smoke during Second World War combat scene",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-frBvQp7/A",
-
     "keywords": [
       "Second World War",
       "The Art of War",
@@ -1599,7 +1508,6 @@ export const galleryData = [
       "WWII action art",
       "wwii artistic documentary"
     ],
-
     "story": "The order had already been given. There was no hesitation now.\n\nHe pushes forward through the smoke, boots tearing across the ground as the rifle hangs ready in his hands. Somewhere ahead the line is forming again—men finding cover, officers shouting through the chaos, the fight pulling everyone forward whether they’re ready or not.\n\nThere’s only one direction left to go.",
     "notes": "The strength of this composition lies in its sense of forward motion. The soldier cutting through the frame against the textured smoke creates a strong directional narrative that pulls the viewer directly into the action.\n\nRather than focusing on spectacle, the image emphasizes momentum and resolve. The restrained black and white treatment reinforces the documentary character of the moment while maintaining the cinematic tension that defines many iconic scenes from World War II imagery.",
     "rating": 4,
@@ -1612,7 +1520,7 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-frBvQp7/1/NNNn8q9DpQhjSf8MBS7xhHHRz48ZVf3nsDm9HTKTB/M/_OLY8775-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-frBvQp7/1/LkFgZZxFhbSLnnRbpWtKFP78gfPwf5SsdFLM6zgtX/S/_OLY8775-Edit-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-z7QmfM5",
@@ -1620,7 +1528,6 @@ export const galleryData = [
     "description": "A black and white World War II photograph showing soldiers boarding landing craft along the shoreline, preparing to move toward an uncertain horizon. The scene captures the quiet discipline of troops forming up before departure, a moment of transition between shore and battlefield during the Second World War.\n\nPart of a broader collection of WWII battle photography and war zone photography, the image reflects the restrained tension found in many battlefield moments before the fighting begins. The composition emphasizes collective movement and anticipation, echoing scenes from the front where soldiers stepped toward the unknown with steady resolve. © Wayne Heim",
     "alt": "WWII soldiers boarding landing craft from shoreline during Second World War military embarkation",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-z7QmfM5/A",
-
     "keywords": [
       "Second World War",
       "The Art of War",
@@ -1633,7 +1540,6 @@ export const galleryData = [
       "WWII action art",
       "wwii artistic documentary"
     ],
-
     "story": "No one speaks much.\n\nBoots scrape against the planks as the line moves forward, rifles slung, packs heavy with everything a man might need—or never use again. The water waits just beyond the ramp, quiet and endless.\n\nSomewhere across that gray horizon is the place they’ve been sent to fight.",
     "notes": "The power of this composition comes from the quiet organization of the troops as they move toward the waiting boats. The repeated forms of helmets, packs, and rifles create a visual rhythm that reinforces the collective nature of wartime movement.\n\nThe distant horizon and open water provide a symbolic counterbalance to the tightly grouped soldiers, suggesting the uncertainty of what lies ahead. The restrained black and white treatment supports the documentary tone while preserving the cinematic weight of the moment.",
     "rating": 4,
@@ -1646,7 +1552,7 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-z7QmfM5/0/NFgcwZfM5xQwZ8vt27TMvncmmQ3ntLZPGx5Wcf3bX/M/_PEN0758-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-z7QmfM5/0/Mh8DFPFrPRw7btqGKCWHwXkhz86J5zTxH8BRrCnbD/S/_PEN0758-Edit-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-kvdDsK8",
@@ -1654,7 +1560,6 @@ export const galleryData = [
     "description": "A powerful black and white World War II photograph showing American soldiers boarding a landing craft as they prepare to cross the water toward combat. The moment captures the quiet determination of troops moving from shore to sea, a transition that defined countless battlefield moments during the Second World War.\n\nPart of a broader body of WWII battle photography and war zone photography, the image emphasizes collective movement and resolve. Scenes like this represent the disciplined advance of soldiers heading toward uncertain ground, embodying the tension and courage found in Scenes from the Front during WWII. © Wayne Heim",
     "alt": "WWII soldiers boarding landing craft during Second World War beach embarkation",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-kvdDsK8/A",
-
     "keywords": [
       "Second World War",
       "The Art of War",
@@ -1667,7 +1572,6 @@ export const galleryData = [
       "WWII action art",
       "wwii artistic documentary"
     ],
-
     "story": "The ramp creaks under the weight of boots and gear.\n\nOne by one they step forward, packs tight against their shoulders, rifles hanging ready at their sides. No one looks behind them now. The shore is already slipping away beneath their feet.\n\nWhatever waits across the water, they’re going to meet it head-on.",
     "notes": "This composition draws its strength from the perspective behind the soldiers as they move toward the landing craft. The viewer stands almost within the formation, reinforcing the shared momentum of the group as they step toward the waiting boat.\n\nThe layered repetition of packs, helmets, and rifles creates a strong visual rhythm that underscores the collective nature of military movement. The water beyond the ramp becomes a symbolic threshold—marking the point where preparation ends and the uncertainty of war truly begins.",
     "rating": 4,
@@ -1680,7 +1584,7 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-kvdDsK8/0/LcjTwHmmFxLQvH5njHHC68LGTNcTgRdBDMvMjHmkk/M/_PEN0762-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-kvdDsK8/0/MjwPJxxTKqfPB69PgsbrPxs9L7Gk2k5XQtRCkkkvd/S/_PEN0762-Edit-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-jsJGz2c",
@@ -1688,7 +1592,6 @@ export const galleryData = [
     "description": "A dramatic black and white World War II image showing soldiers packed inside a landing craft moments before reaching the shore. The lowered ramp and tense posture of the troops capture the anticipation that defined countless battlefield moments during the Second World War.\n\nPart of a broader body of WWII battle photography and war zone photography, the composition reflects the tension and urgency found in Scenes from the Front. The image emphasizes the human experience inside wartime action, where soldiers prepared to step directly from the landing craft into the uncertainty of combat. © Wayne Heim",
     "alt": "WWII soldiers inside landing craft with ramp lowered moments before reaching shore",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-jsJGz2c/A",
-
     "keywords": [
       "Second World War",
       "The Art of War",
@@ -1701,7 +1604,6 @@ export const galleryData = [
       "WWII action art",
       "wwii artistic documentary"
     ],
-
     "story": "The ramp has dropped, but no one moves yet.\n\nThe boat rocks against the water as the men tighten their grips on rifles and straps. One soldier points toward the shoreline ahead, shouting over the wind and engine noise, trying to be heard above the pounding surf.\n\nIn just a few seconds, the waiting will be over.",
     "notes": "The strength of this image comes from the confined space of the landing craft and the collective focus of the soldiers as they prepare for the next moment. The lowered ramp forms a visual gateway that pulls the viewer directly into the scene.\n\nThe open water and distant horizon contrast with the tightly grouped soldiers, heightening the sense of anticipation. It is a quiet but powerful depiction of the final seconds before action, where preparation gives way to the reality of the battlefield.",
     "rating": 4,
@@ -1714,7 +1616,7 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-jsJGz2c/1/Lj8Wk74pBrMq63JcKCFRd8dnPVpPBwqSvWpRHb7Q6/M/_PEN0791-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-jsJGz2c/1/KRNkZ5RpLKfFM8vZRQqMtV6BVbb47dHwRhgbg3VF8/S/_PEN0791-Edit-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-fLNLCcT",
@@ -1722,7 +1624,6 @@ export const galleryData = [
     "description": "A striking black and white World War II image capturing a soldier directing his unit while standing inside a landing craft just before reaching shore. The gesture of the raised arm and pointed finger conveys leadership and urgency, reflecting the decisive moments that defined battlefield movements during the Second World War.\n\nPart of a broader body of WWII battle photography and war zone photography, the scene highlights the tension and coordination required during amphibious landings. Images like this reveal the human side of wartime action, where commands and quick decisions shaped the outcome of scenes from the front. © Wayne Heim",
     "alt": "WWII soldier pointing forward while directing troops inside landing craft during amphibious assault",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-fLNLCcT/A",
-
     "keywords": [
       "Second World War",
       "The Art of War",
@@ -1735,7 +1636,6 @@ export const galleryData = [
       "WWII action art",
       "wwii artistic documentary"
     ],
-
     "story": "The boat rocks against the water as the ramp drops and the wind cuts across the open sea.\n\nAt the front, one soldier lifts his arm and points toward the shoreline ahead, his voice lost somewhere between the surf and the engine. Behind him the others watch, waiting for the signal that will send them moving.\n\nIn a moment, everyone will follow the direction of that single hand.",
     "notes": "The commanding gesture at the center of the frame becomes the focal point of the entire composition. The raised arm and extended finger create a clear visual line that leads the viewer through the scene and toward the unseen shore.\n\nThe soldiers positioned behind the leader reinforce the narrative of coordinated movement, while the open water surrounding the craft heightens the sense of exposure and anticipation. The photograph captures a moment where direction and resolve converge just before action begins.",
     "rating": 4,
@@ -1748,12 +1648,12 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-fLNLCcT/1/L9HmgkHBXcmTCqtJJ5KVmhJQXD6Z6Cc555Zf6FPVG/M/_PEN0798-Edit-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-fLNLCcT/1/NVL9phLNXMtTLBVpvRVrjHGPTRvpL2LHWHjTx2Znw/S/_PEN0798-Edit-Edit-S.jpg",
     "srcOriginal": "",
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-K7WCpBX",
     "title": "Capturing WWII Battlefield",
-    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Wayne Heim's World War II fine art photography is grounded in historical respect and restraint, focusing on the individuals who carried the weight of global conflict rather than its spectacle. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
+    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-K7WCpBX/A",
     "keywords": [
@@ -1781,7 +1681,7 @@ export const galleryData = [
   {
     "id": "i-8rZ67C2",
     "title": "Exploring Battlefield Moments",
-    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Approaching World War II imagery with documentary discipline, Wayne Heim's work prioritizes memory, presence, and lived consequence over reenactment theatrics. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
+    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-8rZ67C2/A",
     "keywords": [
@@ -1808,7 +1708,7 @@ export const galleryData = [
   {
     "id": "i-tfMnxdj",
     "title": "The Essence Of Battlefield Moments",
-    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Wayne Heim's World War II fine art photography is grounded in historical respect and restraint, focusing on the individuals who carried the weight of global conflict rather than its spectacle. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
+    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-tfMnxdj/A",
     "keywords": [
@@ -1862,7 +1762,7 @@ export const galleryData = [
   {
     "id": "i-q9gwvwQ",
     "title": "Battlefield Moments - Wwii Artistic Documentary",
-    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. This image is part of Wayne Heim's World War II fine art photography, emphasizing service, sacrifice, and the quiet burden carried by those who lived through the war. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
+    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-q9gwvwQ/A",
     "keywords": [
@@ -1888,7 +1788,7 @@ export const galleryData = [
   {
     "id": "i-XpbzZrt",
     "title": "Capturing War Zone Photography",
-    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Approaching World War II imagery with documentary discipline, Wayne Heim's work prioritizes memory, presence, and lived consequence over reenactment theatrics. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
+    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-XpbzZrt/A",
     "keywords": [
@@ -1914,7 +1814,7 @@ export const galleryData = [
   {
     "id": "i-LD3zdft",
     "title": "WWII Action Art Study",
-    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Wayne Heim's World War II fine art photography is grounded in historical respect and restraint, focusing on the individuals who carried the weight of global conflict rather than its spectacle. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
+    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-LD3zdft/A",
     "keywords": [
@@ -1941,7 +1841,7 @@ export const galleryData = [
   {
     "id": "i-TD5LPgq",
     "title": "Capturing WWII Battlefield",
-    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. This image is part of Wayne Heim's World War II fine art photography, emphasizing service, sacrifice, and the quiet burden carried by those who lived through the war. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
+    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-TD5LPgq/A",
     "keywords": [
@@ -1968,7 +1868,7 @@ export const galleryData = [
   {
     "id": "i-5MnLKFh",
     "title": "Battlefield Moments Moment",
-    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. This image is part of Wayne Heim's World War II fine art photography, emphasizing service, sacrifice, and the quiet burden carried by those who lived through the war. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
+    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-5MnLKFh/A",
     "keywords": [
@@ -1994,7 +1894,7 @@ export const galleryData = [
   {
     "id": "i-Wd8cVgw",
     "title": "War Zone Photography",
-    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Approaching World War II imagery with documentary discipline, Wayne Heim's work prioritizes memory, presence, and lived consequence over reenactment theatrics. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
+    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-Wd8cVgw/A",
     "keywords": [
@@ -2048,7 +1948,7 @@ export const galleryData = [
   {
     "id": "i-vWJbD8P",
     "title": "Battlefield Moments Portrait",
-    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Wayne Heim's World War II fine art photography is grounded in historical respect and restraint, focusing on the individuals who carried the weight of global conflict rather than its spectacle. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
+    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-vWJbD8P/A",
     "keywords": [
@@ -2102,7 +2002,7 @@ export const galleryData = [
   {
     "id": "i-pzzqZGt",
     "title": "Battlefield Moments And WWII Battlefield",
-    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. This image is part of Wayne Heim's World War II fine art photography, emphasizing service, sacrifice, and the quiet burden carried by those who lived through the war. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
+    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-pzzqZGt/A",
     "keywords": [
@@ -2129,7 +2029,7 @@ export const galleryData = [
   {
     "id": "i-3Cd579Z",
     "title": "Wwii Artistic Documentary - Second World War",
-    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Approaching World War II imagery with documentary discipline, Wayne Heim's work prioritizes memory, presence, and lived consequence over reenactment theatrics. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
+    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-3Cd579Z/A",
     "keywords": [
@@ -2156,7 +2056,7 @@ export const galleryData = [
   {
     "id": "i-Vh94vfV",
     "title": "Wwii Artistic Documentary Study",
-    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Wayne Heim's World War II fine art photography is grounded in historical respect and restraint, focusing on the individuals who carried the weight of global conflict rather than its spectacle. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
+    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-Vh94vfV/A",
     "keywords": [
@@ -2182,7 +2082,7 @@ export const galleryData = [
   {
     "id": "i-NBppNcg",
     "title": "Exploring Wwii Artistic Documentary",
-    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Approaching World War II imagery with documentary discipline, Wayne Heim's work prioritizes memory, presence, and lived consequence over reenactment theatrics. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
+    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-NBppNcg/A",
     "keywords": [
@@ -2209,7 +2109,7 @@ export const galleryData = [
   {
     "id": "i-ZCbRRsN",
     "title": "Wwii Artistic Documentary - WWII Battlefield",
-    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. This image is part of Wayne Heim's World War II fine art photography, emphasizing service, sacrifice, and the quiet burden carried by those who lived through the war. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
+    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-ZCbRRsN/A",
     "keywords": [
@@ -2262,7 +2162,7 @@ export const galleryData = [
   {
     "id": "i-H5XJjj2",
     "title": "Battlefield Moments Moment",
-    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Wayne Heim's World War II fine art photography is grounded in historical respect and restraint, focusing on the individuals who carried the weight of global conflict rather than its spectacle. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
+    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-H5XJjj2/A",
     "keywords": [
@@ -2288,7 +2188,7 @@ export const galleryData = [
   {
     "id": "i-dkfbg4H",
     "title": "Wwii Artistic Documentary Portrait",
-    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. This image is part of Wayne Heim's World War II fine art photography, emphasizing service, sacrifice, and the quiet burden carried by those who lived through the war. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
+    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-dkfbg4H/A",
     "keywords": [
@@ -2342,7 +2242,7 @@ export const galleryData = [
   {
     "id": "i-VNXbdGD",
     "title": "Wwii Artistic Documentary",
-    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Approaching World War II imagery with documentary discipline, Wayne Heim's work prioritizes memory, presence, and lived consequence over reenactment theatrics. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
+    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-VNXbdGD/A",
     "keywords": [
@@ -2368,7 +2268,7 @@ export const galleryData = [
   {
     "id": "i-Gt24qgS",
     "title": "Wwii Artistic Documentary In Fine Art",
-    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Approaching World War II imagery with documentary discipline, Wayne Heim's work prioritizes memory, presence, and lived consequence over reenactment theatrics. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
+    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-Gt24qgS/A",
     "keywords": [
@@ -2395,7 +2295,7 @@ export const galleryData = [
   {
     "id": "i-69rmhkz",
     "title": "Exploring WWII Action Art",
-    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Wayne Heim's World War II fine art photography is grounded in historical respect and restraint, focusing on the individuals who carried the weight of global conflict rather than its spectacle. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
+    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-69rmhkz/A",
     "keywords": [
@@ -2422,7 +2322,7 @@ export const galleryData = [
   {
     "id": "i-TqwNVLm",
     "title": "War Zone Photography And Second World War",
-    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Wayne Heim's World War II fine art photography is grounded in historical respect and restraint, focusing on the individuals who carried the weight of global conflict rather than its spectacle. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
+    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-TqwNVLm/A",
     "keywords": [
@@ -2449,7 +2349,7 @@ export const galleryData = [
   {
     "id": "i-hSXXXmd",
     "title": "WWII Battlefield Portrait",
-    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. This image is part of Wayne Heim's World War II fine art photography, emphasizing service, sacrifice, and the quiet burden carried by those who lived through the war. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
+    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim '23",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-hSXXXmd/A",
     "keywords": [
@@ -2475,7 +2375,7 @@ export const galleryData = [
   {
     "id": "i-M4Tzhkn",
     "title": "Exploring Wwii Artistic Documentary",
-    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. This image is part of Wayne Heim's World War II fine art photography, emphasizing service, sacrifice, and the quiet burden carried by those who lived through the war. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
+    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim '23",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-M4Tzhkn/A",
     "keywords": [
@@ -2555,7 +2455,7 @@ export const galleryData = [
   {
     "id": "i-XkPp2M9",
     "title": "The Essence Of War Zone Photography",
-    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Approaching World War II imagery with documentary discipline, Wayne Heim's work prioritizes memory, presence, and lived consequence over reenactment theatrics. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
+    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim '23",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-XkPp2M9/A",
     "keywords": [
@@ -2582,7 +2482,7 @@ export const galleryData = [
   {
     "id": "i-kFB5dxv",
     "title": "Wwii Artistic Documentary Portrait",
-    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Wayne Heim's World War II fine art photography is grounded in historical respect and restraint, focusing on the individuals who carried the weight of global conflict rather than its spectacle. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
+    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim '23",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-kFB5dxv/A",
     "keywords": [
@@ -2610,7 +2510,7 @@ export const galleryData = [
   {
     "id": "i-752SgTm",
     "title": "Second World War Portrait",
-    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. This image is part of Wayne Heim's World War II fine art photography, emphasizing service, sacrifice, and the quiet burden carried by those who lived through the war. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
+    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-752SgTm/A",
     "keywords": [
@@ -2637,7 +2537,7 @@ export const galleryData = [
   {
     "id": "i-xwTrk8M",
     "title": "Wwii Artistic Documentary - WWII Action Art",
-    "description": "A monochrome World War II photograph of a WWII soldier, defined by resolve rather than spectacle. Approaching World War II imagery with documentary discipline, Wayne Heim's work prioritizes memory, presence, and lived consequence over reenactment theatrics. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where purpose held steady when the world did not. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
+    "description": "A monochrome World War II photograph of a WWII soldier, defined by resolve rather than spectacle. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where purpose held steady when the world did not. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-xwTrk8M/A",
     "keywords": [
@@ -2690,7 +2590,7 @@ export const galleryData = [
   {
     "id": "i-fTGjHKh",
     "title": "War Zone Photography And Second World War",
-    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Wayne Heim's World War II fine art photography is grounded in historical respect and restraint, focusing on the individuals who carried the weight of global conflict rather than its spectacle. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
+    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-fTGjHKh/A",
     "keywords": [
@@ -2716,7 +2616,7 @@ export const galleryData = [
   {
     "id": "i-wWwVmQG",
     "title": "Capturing Second World War",
-    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. This image is part of Wayne Heim's World War II fine art photography, emphasizing service, sacrifice, and the quiet burden carried by those who lived through the war. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
+    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-wWwVmQG/A",
     "keywords": [
@@ -2743,7 +2643,7 @@ export const galleryData = [
   {
     "id": "i-3t683PB",
     "title": "WWII Action Art Study",
-    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Approaching World War II imagery with documentary discipline, Wayne Heim's work prioritizes memory, presence, and lived consequence over reenactment theatrics. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
+    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-3t683PB/A",
     "keywords": [
@@ -2770,7 +2670,7 @@ export const galleryData = [
   {
     "id": "i-jgkD4tQ",
     "title": "Second World War Portrait",
-    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Approaching World War II imagery with documentary discipline, Wayne Heim's work prioritizes memory, presence, and lived consequence over reenactment theatrics. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
+    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-jgkD4tQ/A",
     "keywords": [
@@ -2824,7 +2724,7 @@ export const galleryData = [
   {
     "id": "i-LwmWNNd",
     "title": "Battlefield Moments - Wwii Artistic Documentary",
-    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Wayne Heim's World War II fine art photography is grounded in historical respect and restraint, focusing on the individuals who carried the weight of global conflict rather than its spectacle. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
+    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-LwmWNNd/A",
     "keywords": [
@@ -2850,7 +2750,7 @@ export const galleryData = [
   {
     "id": "i-pntwtPC",
     "title": "WWII Action Art Study",
-    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. This image is part of Wayne Heim's World War II fine art photography, emphasizing service, sacrifice, and the quiet burden carried by those who lived through the war. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
+    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-pntwtPC/A",
     "keywords": [
@@ -2928,7 +2828,7 @@ export const galleryData = [
   {
     "id": "i-S8Z9pr4",
     "title": "Battlefield Moments Portrait",
-    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Approaching World War II imagery with documentary discipline, Wayne Heim's work prioritizes memory, presence, and lived consequence over reenactment theatrics. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
+    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-S8Z9pr4/A",
     "keywords": [
@@ -3015,7 +2915,7 @@ export const galleryData = [
   {
     "id": "i-k3k976G",
     "title": "Battlefield Moments - WWII Battlefield",
-    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Wayne Heim's World War II fine art photography is grounded in historical respect and restraint, focusing on the individuals who carried the weight of global conflict rather than its spectacle. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
+    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-k3k976G/A",
     "keywords": [
@@ -3050,7 +2950,7 @@ export const galleryData = [
   {
     "id": "i-8JM8jfL",
     "title": "Wwii Artistic Documentary - WWII Battlefield",
-    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Wayne Heim's World War II fine art photography is grounded in historical respect and restraint, focusing on the individuals who carried the weight of global conflict rather than its spectacle. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
+    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-8JM8jfL/A",
     "keywords": [
@@ -3258,7 +3158,7 @@ export const galleryData = [
   {
     "id": "i-dwCG8Mx",
     "title": "War Zone Photography In Fine Art",
-    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. This image is part of Wayne Heim's World War II fine art photography, emphasizing service, sacrifice, and the quiet burden carried by those who lived through the war. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
+    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "Woman Reenactor   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-dwCG8Mx/A",
     "keywords": [
@@ -3292,7 +3192,7 @@ export const galleryData = [
   {
     "id": "i-648v5jr",
     "title": "Battlefield Moments Portrait",
-    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. This image is part of Wayne Heim's World War II fine art photography, emphasizing service, sacrifice, and the quiet burden carried by those who lived through the war. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
+    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2016",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-648v5jr/A",
     "keywords": [
@@ -3327,7 +3227,7 @@ export const galleryData = [
   {
     "id": "i-sLVb5sJ",
     "title": "Wwii Artistic Documentary Portrait",
-    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Approaching World War II imagery with documentary discipline, Wayne Heim's work prioritizes memory, presence, and lived consequence over reenactment theatrics. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
+    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-sLVb5sJ/A",
     "keywords": [
@@ -3395,7 +3295,7 @@ export const galleryData = [
   {
     "id": "i-tgmq9D9",
     "title": "Fine Art War Zone Photography",
-    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Approaching World War II imagery with documentary discipline, Wayne Heim's work prioritizes memory, presence, and lived consequence over reenactment theatrics. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
+    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-tgmq9D9/A",
     "keywords": [
@@ -3429,7 +3329,7 @@ export const galleryData = [
   {
     "id": "i-z3k6ZDH",
     "title": "War Zone Photography Moment",
-    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Wayne Heim's World War II fine art photography is grounded in historical respect and restraint, focusing on the individuals who carried the weight of global conflict rather than its spectacle. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
+    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-z3k6ZDH/A",
     "keywords": [
@@ -3533,7 +3433,7 @@ export const galleryData = [
   {
     "id": "i-Ztdkx4R",
     "title": "WWII Action Art In Fine Art",
-    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Wayne Heim's World War II fine art photography is grounded in historical respect and restraint, focusing on the individuals who carried the weight of global conflict rather than its spectacle. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
+    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-Ztdkx4R/A",
     "keywords": [
@@ -3568,7 +3468,7 @@ export const galleryData = [
   {
     "id": "i-tdzdbQH",
     "title": "The Essence Of Wwii Artistic Documentary",
-    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. This image is part of Wayne Heim's World War II fine art photography, emphasizing service, sacrifice, and the quiet burden carried by those who lived through the war. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
+    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-tdzdbQH/A",
     "keywords": [

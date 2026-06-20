@@ -421,7 +421,7 @@ force = true
 
 [[redirects]]
 from = "/black-and-white-western-photos*"
-to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+to = "/Western-Black-and-White-Photography"
 status = 301
 force = true
 

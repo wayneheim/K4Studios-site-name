@@ -25,32 +25,6 @@ const {
   nextImage = null,
 } = Astro.props;
 
-function cleanText(value = "") {
-  return String(value || "").replace(/\s+/g, " ").trim();
-}
-
-function buildCaptionExcerpt(description = "", minChars = 150, maxChars = 280) {
-  const text = cleanText(description);
-  if (!text) return "";
-  if (text.length <= maxChars) return text;
-
-  const boundedText = text.slice(0, maxChars + 1);
-  const sentenceBoundaryMatches = [...boundedText.matchAll(/[.!?](?=\s|$)/g)];
-  const preferredBoundary = sentenceBoundaryMatches
-    .map((match) => match.index)
-    .filter((idx) => typeof idx === "number" && idx >= minChars)
-    .pop();
-
-  let cutIndex = typeof preferredBoundary === "number" ? preferredBoundary + 1 : -1;
-  if (cutIndex === -1) {
-    const safeSlice = boundedText.slice(0, maxChars);
-    const lastSpace = safeSlice.lastIndexOf(" ");
-    cutIndex = lastSpace > minChars ? lastSpace : maxChars;
-  }
-
-  return `${text.slice(0, cutIndex).trim()}...`;
-}
-
 const imageUrl = getSemanticImageUrl(image, { galleryPath });
 const zoomImageUrl = getSemanticImageUrl(image, { galleryPath }, "xl");
 const alt = image?.alt || image?.title || "K4 Studios fine art photograph";
@@ -58,7 +32,6 @@ const title = sanitizeRepeatedSeoCopy(image?.title || alt);
 const story = sanitizeRepeatedSeoCopy(image?.story || "");
 const description = sanitizeRepeatedSeoCopy(image?.description || "");
 const notes = image?.notes || "";
-const caption = buildCaptionExcerpt(description);
 const prevHref = prevImage ? `${galleryPath}/${prevImage.id}` : "";
 const nextHref = nextImage ? `${galleryPath}/${nextImage.id}` : "";
 const jumpTargets = (images.length ? images : [image])
@@ -123,13 +96,6 @@ const arrowRightSvg = `<svg aria-hidden="true" viewBox="0 0 24 24" class="w-4 h-
               </div>
             </div>
           </div>
-          {caption && (
-            <figcaption class="mx-auto mt-2 mb-2 px-3" style="max-width:500px" itemprop="caption">
-              <p class="image-caption" style="text-align:center;font-style:italic;margin-top:0.25rem;margin-bottom:0;font-size:0.74rem;line-height:1.35;color:#9ca3af;opacity:1;min-height:2.7em;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">
-                "{caption}"
-              </p>
-            </figcaption>
-          )}
         </figure>
 
         <div class="flex items-center justify-center gap-2 mb-1 mt-4">

@@ -119,41 +119,6 @@ function getViewerDisplaySrc(image, galleryPath) {
   return getSemanticImageUrl({ ...image, id: imageId }, { galleryPath }, 'l');
 }
 
-function buildCaptionExcerpt(description, minChars = 150, maxChars = 280) {
-  if (!description || typeof description !== "string") {
-    return { text: "", truncated: false };
-  }
-
-  const cleanText = description.replace(/\s+/g, " ").trim();
-  if (!cleanText) {
-    return { text: "", truncated: false };
-  }
-
-  if (cleanText.length <= maxChars) {
-    return { text: cleanText, truncated: false };
-  }
-
-  const boundedText = cleanText.slice(0, maxChars + 1);
-
-  // Prefer ending at a sentence break after minChars when possible
-  const sentenceBoundaryMatches = [...boundedText.matchAll(/[.!?](?=\s|$)/g)];
-  const preferredBoundary = sentenceBoundaryMatches
-    .map((m) => m.index)
-    .filter((idx) => typeof idx === "number" && idx >= minChars)
-    .pop();
-
-  let cutIndex = typeof preferredBoundary === "number" ? preferredBoundary + 1 : -1;
-
-  if (cutIndex === -1) {
-    const safeSlice = boundedText.slice(0, maxChars);
-    const lastSpace = safeSlice.lastIndexOf(" ");
-    cutIndex = lastSpace > minChars ? lastSpace : maxChars;
-  }
-
-  const text = cleanText.slice(0, cutIndex).trim();
-  return { text, truncated: cutIndex < cleanText.length };
-}
-
 /* =========================================================
    Helper function to find section landing page from siteNav
    ========================================================= */
@@ -1090,13 +1055,6 @@ export default function ChapterGalleryBase({
   const shouldSwapMeta = hasEnteredChapters && viewMode === "flip";
   useMetaSwap(entry, titleBase, currentIndex, shouldSwapMeta);
 
-  const imageCaptionExcerpt = useMemo(() => {
-    const description = galleryData[currentIndex]?.description;
-    const minChars = isMobile ? 115 : 150;
-    const maxChars = isMobile ? 200 : 280;
-    return buildCaptionExcerpt(description, minChars, maxChars);
-  }, [galleryData, currentIndex, isMobile]);
-
   // Clean URL if intro visible
   useEffect(() => {
     const introEl = document.getElementById("intro-section");
@@ -1673,31 +1631,6 @@ export default function ChapterGalleryBase({
                       {/* Removed absolute-positioned mobile arrows; moved to row near slideshow */}
                     </div>
 
-                    {/* Subtle caption excerpt (from "More about this image" description) */}
-                    {imageCaptionExcerpt?.text && (
-                      <figcaption className="mx-auto mt-2 mb-2 px-3" style={{ maxWidth: isMobile ? '390px' : '500px' }} itemProp="caption">
-                        <p
-                          className="image-caption"
-                          style={{
-                            textAlign: 'center',
-                            fontStyle: 'italic',
-                            marginTop: '0.25rem',
-                            marginBottom: 0,
-                            fontSize: isMobile ? '0.66rem' : '0.74rem',
-                            lineHeight: '1.35',
-                            color: '#9ca3af',
-                            opacity: 1,
-                            minHeight: '2.7em',
-                            display: '-webkit-box',
-                            WebkitLineClamp: 2,
-                            WebkitBoxOrient: 'vertical',
-                            overflow: 'hidden'
-                          }}
-                        >
-                          “{imageCaptionExcerpt.text}{imageCaptionExcerpt.truncated ? '...' : ''}”
-                        </p>
-                      </figcaption>
-                    )}
                     </figure>
 
                     {/* Unified Nav Row + Guide trigger */}

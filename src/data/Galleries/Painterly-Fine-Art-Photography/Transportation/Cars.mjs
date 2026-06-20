@@ -25,7 +25,7 @@ export const galleryData = [
   {
     "id": "i-QgkMVvX",
     "title": "Painterly Classic Car Photos For Auto Lovers Portrait",
-    "description": "A painterly fine art photograph of a vintage automobile on Route 66, defined by motion rather than nostalgia. Wayne Heim's vintage transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Tone and restraint shape a narrative grounded in invention and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A painterly fine art photograph of a vintage automobile on Route 66, defined by motion rather than nostalgia. Wayne Heim's vintage transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
     "alt": "Route 66 Wigwam Motel: Painterly Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars/i-QgkMVvX/A",
     "keywords": [
@@ -59,7 +59,7 @@ export const galleryData = [
   {
     "id": "i-2S2ZbzK",
     "title": "Timeless Automotive Prints",
-    "description": "A painterly fine art photograph of a vintage automobile on Route 66, defined by motion rather than nostalgia. Wayne Heim's fine art transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Tone and restraint shape a narrative grounded in invention and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A painterly fine art photograph of a vintage automobile on Route 66, defined by motion rather than nostalgia. Wayne Heim's fine art transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
     "alt": "Wigwam Motel in Green",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars/i-2S2ZbzK/A",
     "keywords": [
@@ -93,7 +93,7 @@ export const galleryData = [
   {
     "id": "i-SPVGpxw",
     "title": "Capturing Timeless Automotive Prints",
-    "description": "A painterly fine art photograph of a vintage automobile on Route 66, defined by motion rather than nostalgia. Wayne Heim's historic transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Tone and restraint shape a narrative grounded in invention and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A painterly fine art photograph of a vintage automobile on Route 66, defined by motion rather than nostalgia. Wayne Heim's historic transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
     "alt": "Route 66 Wigwam Motel: Painterly Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars/i-SPVGpxw/A",
     "keywords": [
@@ -126,7 +126,7 @@ export const galleryData = [
   {
     "id": "i-7dRzH7F",
     "title": "Capturing Timeless Automotive Prints",
-    "description": "A painterly fine art photograph of a vintage automobile on Route 66, defined by motion rather than nostalgia. Wayne Heim's vintage transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Tone and restraint shape a narrative grounded in invention and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A painterly fine art photograph of a vintage automobile on Route 66, defined by motion rather than nostalgia. Wayne Heim's vintage transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
     "alt": "Route 66 Wigwam Motel: Painterly Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars/i-7dRzH7F/A",
     "keywords": [
@@ -160,7 +160,7 @@ export const galleryData = [
   {
     "id": "i-cgh854F",
     "title": "Automotive Art Prints - Route 66 Art",
-    "description": "A painterly fine art photograph of a vintage automobile on Route 66, defined by motion rather than nostalgia. Wayne Heim's fine art transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Tone and restraint shape a narrative grounded in invention and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A painterly fine art photograph of a vintage automobile on Route 66, defined by motion rather than nostalgia. Wayne Heim's fine art transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
     "alt": "Route 66 Desota: Painterly Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars/i-cgh854F/A",
     "keywords": [
@@ -195,7 +195,7 @@ export const galleryData = [
   {
     "id": "i-Dqn5vGG",
     "title": "Waiting for his fair.",
-    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Wayne Heim's historic transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Tone and restraint shape a narrative grounded in invention and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Wayne Heim's historic transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars/i-Dqn5vGG/A",
     "keywords": [
@@ -224,7 +224,7 @@ export const galleryData = [
   {
     "id": "i-ZGNLtgd",
     "title": "Truck & Train Painterly Photography",
-    "description": "A painterly fine art photograph of a steam engine, defined by motion rather than nostalgia. Wayne Heim's vintage transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Tone and restraint shape a narrative grounded in invention and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A painterly fine art photograph of a steam engine, defined by motion rather than nostalgia. Wayne Heim's vintage transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
     "alt": "Waiting for his fair.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars/i-ZGNLtgd/A",
     "keywords": [
@@ -253,7 +253,7 @@ export const galleryData = [
   {
     "id": "i-wkRb273",
     "title": "The Essence Of Route 66 Car Photography Prints",
-    "description": "A painterly fine art photograph of a vintage truck, defined by motion rather than nostalgia. Wayne Heim's fine art transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Tone and restraint shape a narrative grounded in invention and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A painterly fine art photograph of a vintage truck, defined by motion rather than nostalgia. Wayne Heim's fine art transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
     "alt": "Truck & Train Painterly Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars/i-wkRb273/A",
     "keywords": [
@@ -289,7 +289,7 @@ export const galleryData = [
   {
     "id": "i-9NHSnWK",
     "title": "Painterly Classic Car Photos For Auto Lovers",
-    "description": "A painterly fine art photograph of a vintage automobile on Route 66, defined by motion rather than nostalgia. Wayne Heim's historic transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Tone and restraint shape a narrative grounded in invention and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A painterly fine art photograph of a vintage automobile on Route 66, defined by motion rather than nostalgia. Wayne Heim's historic transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars/i-9NHSnWK/A",
     "keywords": [

@@ -25,7 +25,7 @@ export const galleryData = [
   {
     "id": "i-XhWrKdZ",
     "title": "Painterly River Scenes Moment",
-    "description": "A waterfall landscape becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "A waterfall landscape becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Kirkjufell  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-XhWrKdZ/A",
     "keywords": [
@@ -92,7 +92,7 @@ export const galleryData = [
   {
     "id": "i-84LZftr",
     "title": "Upper Yellowstone Falls.",
-    "description": "Upper Yellowstone waterfall after the storm becomes traditional fine art water photography in Yellowstone National Park, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Upper Yellowstone waterfall after the storm becomes traditional fine art water photography in Yellowstone National Park, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Strasbourg - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-84LZftr/A",
     "keywords": [
@@ -123,7 +123,7 @@ export const galleryData = [
   {
     "id": "i-SxbNjWC",
     "title": "The Essence Of Waterfall Landscape Photography",
-    "description": "A waterfall landscape becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "A waterfall landscape becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Upper Yellowstone Falls.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-SxbNjWC/A",
     "keywords": [
@@ -158,7 +158,7 @@ export const galleryData = [
   {
     "id": "i-B7S6VwV",
     "title": "Chrystal Mill - Black and White",
-    "description": "Old Crystal Mill watching over the river below. One of Colorado's finest locations turns moving water into traditional fine art landscape photography, with current, bank, and surrounding terrain shaping the frame. This painterly river scene creates water landscape wall art rooted in motion, reflection, and place.",
+    "description": "Old Crystal Mill watching over the river below. One of Colorado's finest locations turns moving water into traditional fine art landscape photography, with current, bank, and surrounding terrain shaping the frame.",
     "alt": "Iceland Waterfall.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-B7S6VwV/A",
     "keywords": [
@@ -189,7 +189,7 @@ export const galleryData = [
   {
     "id": "i-jMzCqw2",
     "title": "Flying over Fairport Lighthouse     Photography by Wayne Heim",
-    "description": "Flock of geese seem to be heading south as they pass over the Fairport Lighthouse on Lake Erie becomes traditional fine art water photography in Fairport Harbor, Ohio, where still surface, shoreline, and atmosphere create the image’s quiet pull. This water landscape photograph creates wall art rooted in reflection, distance, and the calm of open water.",
+    "description": "Flock of geese seem to be heading south as they pass over the Fairport Lighthouse on Lake Erie becomes traditional fine art water photography in Fairport Harbor, Ohio, where still surface, shoreline, and atmosphere create the image’s quiet pull.",
     "alt": "Chrystal Mill - Black and White",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-jMzCqw2/A",
     "keywords": [
@@ -221,7 +221,7 @@ export const galleryData = [
   {
     "id": "i-nVDRCrB",
     "title": "Buffalo Bill Reservoir at sunset.",
-    "description": "Photograph of the Buffalo Bill Reservoir in Wyoming at sunset becomes traditional fine art water photography, where still surface, shoreline, and atmosphere create the image’s quiet pull. This water landscape photograph creates wall art rooted in reflection, distance, and the calm of open water.",
+    "description": "Photograph of the Buffalo Bill Reservoir in Wyoming at sunset becomes traditional fine art water photography, where still surface, shoreline, and atmosphere create the image’s quiet pull.",
     "alt": "Flying over Fairport Lighthouse     Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-nVDRCrB/A",
     "keywords": [
@@ -252,7 +252,7 @@ export const galleryData = [
   {
     "id": "i-8hwfnGn",
     "title": "\"Meandering MountainStream\". Photography by Wayne Heim",
-    "description": "\"Meandering Stream\". Black and white landscape photography of mountain stream, clouds and trees along \"Mormon Row\", just north of Jackson Hole Wyoming turns moving water into traditional fine art landscape photography, with current, bank, and surrounding terrain shaping the frame. This painterly river scene creates water landscape wall art rooted in motion, reflection, and place.",
+    "description": "\"Meandering Stream\". Black and white landscape photography of mountain stream, clouds and trees along \"Mormon Row\", just north of Jackson Hole Wyoming turns moving water into traditional fine art landscape photography, with current, bank, and surrounding terrain shaping the frame.",
     "alt": "Deserted Barn photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-8hwfnGn/A",
     "keywords": [
@@ -283,7 +283,7 @@ export const galleryData = [
   {
     "id": "i-vcmfFCM",
     "title": "Middle Falls. Photography by Wayne Heim",
-    "description": "\"Middle Falls'. Black and White photo of the Middle Waterfalls at Letchworth State Park becomes traditional fine art water photography in Letchworth State Park, New York, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "\"Middle Falls'. Black and White photo of the Middle Waterfalls at Letchworth State Park becomes traditional fine art water photography in Letchworth State Park, New York, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Snowy Bend. Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-vcmfFCM/A",
     "keywords": [
@@ -313,7 +313,7 @@ export const galleryData = [
   {
     "id": "i-tF8fFm4",
     "title": "\"Snowcaps\".  B/W Photography by Wayne Heim.",
-    "description": "\"Snowcaps.\" B/w nature photo of snow covered rocks in stream in Wyoming turns moving water into traditional fine art landscape photography, with current, bank, and surrounding terrain shaping the frame. This painterly river scene creates water landscape wall art rooted in motion, reflection, and place.",
+    "description": "\"Snowcaps.\" B/w nature photo of snow covered rocks in stream in Wyoming turns moving water into traditional fine art landscape photography, with current, bank, and surrounding terrain shaping the frame.",
     "alt": "Puff.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-tF8fFm4/A",
     "keywords": [
@@ -344,7 +344,7 @@ export const galleryData = [
   {
     "id": "i-rh75LzX",
     "title": "Tiny Bubbles  Photography by Wayne Heim",
-    "description": "Tiny Bubbles - waves producing frothy bubbles come in on shore of Lake Erie as sunset in the west becomes traditional fine art water photography, where still surface, shoreline, and atmosphere create the image’s quiet pull. This water landscape photograph creates wall art rooted in reflection, distance, and the calm of open water.",
+    "description": "Tiny Bubbles - waves producing frothy bubbles come in on shore of Lake Erie as sunset in the west becomes traditional fine art water photography, where still surface, shoreline, and atmosphere create the image’s quiet pull.",
     "alt": "\"Snowcaps\".  B/W Photography by Wayne Heim.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-rh75LzX/A",
     "keywords": [
@@ -376,7 +376,7 @@ export const galleryData = [
   {
     "id": "i-HzMDDcG",
     "title": "Walk to the Light House . Photography by Wayne Heim",
-    "description": "Walk to the Lighthouse - rocky seawall leads the the Fairport Harbor Lighthouse in Ohio places a lighthouse within the larger water landscape in Fairport Harbor, Ohio, balancing structure, shoreline, and weather. This traditional fine art photograph creates coastal wall art rooted in navigation, water, and the authority of a landmark by the shore.",
+    "description": "Walk to the Lighthouse - rocky seawall leads the the Fairport Harbor Lighthouse in Ohio places a lighthouse within the larger water landscape in Fairport Harbor, Ohio, balancing structure, shoreline, and weather.",
     "alt": "Tiny Bubbles  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-HzMDDcG/A",
     "keywords": [
@@ -408,7 +408,7 @@ export const galleryData = [
   {
     "id": "i-rjmZMZt",
     "title": "Gullfloss  Black & White Photography by Wayne Heim",
-    "description": "A more wide open view of Gullfoss in Iceland becomes traditional fine art water landscape photography, shaped by water, light, and surrounding terrain. This painterly water scene creates wall art rooted in reflection, atmosphere, and the quiet presence of place.",
+    "description": "A more wide open view of Gullfoss in Iceland becomes traditional fine art water landscape photography, shaped by water, light, and surrounding terrain.",
     "alt": "Walk to the Light House . Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-rjmZMZt/A",
     "keywords": [
@@ -440,7 +440,7 @@ export const galleryData = [
   {
     "id": "i-769JJbV",
     "title": "Kirkjufellfloss  Black & White Photography",
-    "description": "A side view of Kirkjufellsfoss in Iceland becomes traditional fine art water landscape photography, shaped by water, light, and surrounding terrain. This painterly water scene creates wall art rooted in reflection, atmosphere, and the quiet presence of place.",
+    "description": "A side view of Kirkjufellsfoss in Iceland becomes traditional fine art water landscape photography, shaped by water, light, and surrounding terrain.",
     "alt": "Gullfloss  Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-769JJbV/A",
     "keywords": [
@@ -472,7 +472,7 @@ export const galleryData = [
   {
     "id": "i-vTD9xH2",
     "title": "Mount Hood at Sunset  Photo by Wayne Heim",
-    "description": "Mount Hood at Sunset. Mt Hood in Oregon as the sun is going down. Trillium lake is in the foreground and you can see snow cats grooming the slopes of the mountain becomes traditional fine art water photography in Mount Hood, Oregon, where still surface, shoreline, and atmosphere create the image’s quiet pull. This water landscape photograph creates wall art rooted in reflection, distance, and the calm of open water.",
+    "description": "Mount Hood at Sunset. Mt Hood in Oregon as the sun is going down. Trillium lake is in the foreground and you can see snow cats grooming the slopes of the mountain becomes traditional fine art water photography in Mount Hood, Oregon, where still surface, shoreline, and atmosphere create the image’s quiet pull.",
     "alt": "Field at Sunset     Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-vTD9xH2/A",
     "keywords": [
@@ -505,7 +505,7 @@ export const galleryData = [
   {
     "id": "i-BfZH6vR",
     "title": "River Mountain View -   Black and White Photography by Wayne Heim",
-    "description": "A view of the Grand teton mountains as seen from a nearby river turns moving water into traditional fine art landscape photography in Wyoming, with current, bank, and surrounding terrain shaping the frame. This painterly river scene creates water landscape wall art rooted in motion, reflection, and place.",
+    "description": "A view of the Grand teton mountains as seen from a nearby river turns moving water into traditional fine art landscape photography in Wyoming, with current, bank, and surrounding terrain shaping the frame.",
     "alt": "Sunset on the Hood(V)  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-BfZH6vR/A",
     "keywords": [
@@ -536,7 +536,7 @@ export const galleryData = [
   {
     "id": "i-qphwtVw",
     "title": "Angel Veil. Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Watkins Glen, New York becomes traditional fine art water landscape photography, shaped by water, light, and surrounding terrain. This painterly water scene creates wall art rooted in reflection, atmosphere, and the quiet presence of place.",
+    "description": "Fine art landscape photography of Watkins Glen, New York becomes traditional fine art water landscape photography, shaped by water, light, and surrounding terrain.",
     "alt": "River Mountain View -   Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-qphwtVw/A",
     "keywords": [
@@ -567,7 +567,7 @@ export const galleryData = [
   {
     "id": "i-GTDMD9v",
     "title": "Conneaut Lighthouse   Photography by Wayne Heim",
-    "description": "Angry waves at the Lighthouse at Conneaut harbor in Ohio places a lighthouse within the larger water landscape in Conneaut Harbor, Ohio, balancing structure, shoreline, and weather. This traditional fine art photograph creates coastal wall art rooted in navigation, water, and the authority of a landmark by the shore.",
+    "description": "Angry waves at the Lighthouse at Conneaut harbor in Ohio places a lighthouse within the larger water landscape in Conneaut Harbor, Ohio, balancing structure, shoreline, and weather.",
     "alt": "Angel Veil. Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-GTDMD9v/A",
     "keywords": [
@@ -598,7 +598,7 @@ export const galleryData = [
   {
     "id": "i-BBDdJHb",
     "title": "Coast of Faroe 3   Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands becomes traditional fine art seascape photography, shaped by shoreline, water, and weather. This water landscape photograph creates coastal wall art rooted in movement, texture, and the meeting of land and sea.",
+    "description": "Fine art landscape photography of the Faroe Islands becomes traditional fine art seascape photography, shaped by shoreline, water, and weather.",
     "alt": "Conneaut Lighthouse   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-BBDdJHb/A",
     "keywords": [
@@ -629,7 +629,7 @@ export const galleryData = [
   {
     "id": "i-d28cHrD",
     "title": "Tall Falls    Photography by Wayne Heim",
-    "description": "Beautiful waterfall cascades down hillside in Multnomah Falls. Columbia River Gorge. Oregon becomes traditional fine art water photography in Multnomah Falls, Oregon, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Beautiful waterfall cascades down hillside in Multnomah Falls. Columbia River Gorge. Oregon becomes traditional fine art water photography in Multnomah Falls, Oregon, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Coast of Faroe 3   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-d28cHrD/A",
     "keywords": [
@@ -660,7 +660,7 @@ export const galleryData = [
   {
     "id": "i-BzsKZNR",
     "title": "Canoe s for Rent.    Photography by Wayne Heim",
-    "description": "Canoe s for Rent brings boats and water into traditional fine art landscape photography in Glacier National Park, Montana, giving the scene a clear maritime rhythm. This water landscape photograph creates wall art rooted in harbor life, reflection, and working shores.",
+    "description": "Canoe s for Rent brings boats and water into traditional fine art landscape photography in Glacier National Park, Montana, giving the scene a clear maritime rhythm.",
     "alt": "Tall Falls    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-BzsKZNR/A",
     "keywords": [
@@ -722,7 +722,7 @@ export const galleryData = [
   {
     "id": "i-jpptgFS",
     "title": "Stormy Cape  Photography by Wayne Heim",
-    "description": "Stormy Cape becomes traditional fine art seascape photography in Newfoundland, Canada, shaped by shoreline, water, and weather. This water landscape photograph creates coastal wall art rooted in movement, texture, and the meeting of land and sea.",
+    "description": "Stormy Cape becomes traditional fine art seascape photography in Newfoundland, Canada, shaped by shoreline, water, and weather.",
     "alt": "Canal Balcony - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-jpptgFS/A",
     "keywords": [
@@ -753,7 +753,7 @@ export const galleryData = [
   {
     "id": "i-hNxQgK3",
     "title": "Water Falls in Park  Black & White Photography by Wayne Heim",
-    "description": "Cascading waterfalls flow in a stream full of rocks becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Cascading waterfalls flow in a stream full of rocks becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Stormy Cape  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-hNxQgK3/A",
     "keywords": [
@@ -784,7 +784,7 @@ export const galleryData = [
   {
     "id": "i-fGW57XR",
     "title": "Waterfalls in Mill Creek   Photography by Wayne Heim",
-    "description": "Waterfalls in Mill Creek becomes traditional fine art water photography in Mill Creek MetroParks, Ohio, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Waterfalls in Mill Creek becomes traditional fine art water photography in Mill Creek MetroParks, Ohio, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Water Falls in Park  Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-fGW57XR/A",
     "keywords": [
@@ -815,7 +815,7 @@ export const galleryData = [
   {
     "id": "i-d6pmNSC",
     "title": "Gullfloss   Black & White Photography by Wayne Heim",
-    "description": "Close up view of Gullfoss waterfall in Iceland becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Close up view of Gullfoss waterfall in Iceland becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Waterfalls in Mill Creek   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-d6pmNSC/A",
     "keywords": [
@@ -846,7 +846,7 @@ export const galleryData = [
   {
     "id": "i-zKFhFwm",
     "title": "Closer to the Falls    black and White Photography by Wayne Heim",
-    "description": "Close up view of one of Iceland's many waterfalls becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Close up view of one of Iceland's many waterfalls becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Gullfloss   Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-zKFhFwm/A",
     "keywords": [
@@ -877,7 +877,7 @@ export const galleryData = [
   {
     "id": "i-4b73W23",
     "title": "Close to St John's       Photography by Wayne Heim",
-    "description": "Close to St John's becomes traditional fine art seascape photography in Newfoundland, Canada, shaped by shoreline, water, and weather. This water landscape photograph creates coastal wall art rooted in movement, texture, and the meeting of land and sea.",
+    "description": "Close to St John's becomes traditional fine art seascape photography in Newfoundland, Canada, shaped by shoreline, water, and weather.",
     "alt": "Closer to the Falls    black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-4b73W23/A",
     "keywords": [
@@ -908,7 +908,7 @@ export const galleryData = [
   {
     "id": "i-hbpLcDk",
     "title": "Cotton Candy   Photography by Wayne Heim",
-    "description": "Clouds hang over the sea like cotton candy becomes traditional fine art seascape photography, shaped by shoreline, water, and weather. This water landscape photograph creates coastal wall art rooted in movement, texture, and the meeting of land and sea.",
+    "description": "Clouds hang over the sea like cotton candy becomes traditional fine art seascape photography, shaped by shoreline, water, and weather.",
     "alt": "Close to St John's       Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-hbpLcDk/A",
     "keywords": [
@@ -939,7 +939,7 @@ export const galleryData = [
   {
     "id": "i-zhtZj7N",
     "title": "Shark at the Falls   Photography by Wayne Heim",
-    "description": "Debris at the base of the falls looks like a shark lying on its back becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Debris at the base of the falls looks like a shark lying on its back becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Cotton Candy   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-zhtZj7N/A",
     "keywords": [
@@ -970,7 +970,7 @@ export const galleryData = [
   {
     "id": "i-2tDDPr7",
     "title": "Securing the Line   Photography by Wayne Heim",
-    "description": "Deck hand secures line during the Parade of Tall Ships entering Cleveland Harbor on Lake Erie becomes traditional fine art water photography, where still surface, shoreline, and atmosphere create the image’s quiet pull. This water landscape photograph creates wall art rooted in reflection, distance, and the calm of open water.",
+    "description": "Deck hand secures line during the Parade of Tall Ships entering Cleveland Harbor on Lake Erie becomes traditional fine art water photography, where still surface, shoreline, and atmosphere create the image’s quiet pull.",
     "alt": "Shark at the Falls   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-2tDDPr7/A",
     "keywords": [
@@ -1001,7 +1001,7 @@ export const galleryData = [
   {
     "id": "i-9R79MVB",
     "title": "Approach to Lighthouse(V)    Photography by Wayne Heim",
-    "description": "Fairport Lighthouse at the mouth of the Grand River on Lake Erie turns moving water into traditional fine art landscape photography in Fairport Harbor, Ohio, with current, bank, and surrounding terrain shaping the frame. This painterly river scene creates water landscape wall art rooted in motion, reflection, and place.",
+    "description": "Fairport Lighthouse at the mouth of the Grand River on Lake Erie turns moving water into traditional fine art landscape photography in Fairport Harbor, Ohio, with current, bank, and surrounding terrain shaping the frame.",
     "alt": "Securing the Line   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-9R79MVB/A",
     "keywords": [
@@ -1032,7 +1032,7 @@ export const galleryData = [
   {
     "id": "i-dQPHNF9",
     "title": "Fall in Letchworth  Photography by Wayne Heim",
-    "description": "Fall in Letchworth becomes traditional fine art water landscape photography in Letchworth State Park, New York, shaped by water, light, and surrounding terrain. This painterly water scene creates wall art rooted in reflection, atmosphere, and the quiet presence of place.",
+    "description": "Fall in Letchworth becomes traditional fine art water landscape photography in Letchworth State Park, New York, shaped by water, light, and surrounding terrain.",
     "alt": "Approach to Lighthouse(V)    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-dQPHNF9/A",
     "keywords": [
@@ -1063,7 +1063,7 @@ export const galleryData = [
   {
     "id": "i-2fQqHxW",
     "title": "Falls before the Bridge   Photography by Wayne Heim",
-    "description": "Fall in the river in Berea Ohio as the flow under bridge becomes traditional fine art water photography in Berea, Ohio, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Fall in the river in Berea Ohio as the flow under bridge becomes traditional fine art water photography in Berea, Ohio, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Fall in Letchworth  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-2fQqHxW/A",
     "keywords": [
@@ -1094,7 +1094,7 @@ export const galleryData = [
   {
     "id": "i-2pwdXXJ",
     "title": "Fishing Boats in Faroe   Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands brings boats and water into traditional fine art landscape photography, giving the scene a clear maritime rhythm. This water landscape photograph creates wall art rooted in harbor life, reflection, and working shores.",
+    "description": "Fine art landscape photography of the Faroe Islands brings boats and water into traditional fine art landscape photography, giving the scene a clear maritime rhythm.",
     "alt": "Falls before the Bridge   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-2pwdXXJ/A",
     "keywords": [
@@ -1125,7 +1125,7 @@ export const galleryData = [
   {
     "id": "i-7bDfPwf",
     "title": "Boats  Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands brings boats and water into traditional fine art landscape photography, giving the scene a clear maritime rhythm. This water landscape photograph creates wall art rooted in harbor life, reflection, and working shores.",
+    "description": "Fine art landscape photography of the Faroe Islands brings boats and water into traditional fine art landscape photography, giving the scene a clear maritime rhythm.",
     "alt": "Fishing Boats in Faroe   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-7bDfPwf/A",
     "keywords": [
@@ -1156,7 +1156,7 @@ export const galleryData = [
   {
     "id": "i-pGmvKSB",
     "title": "Over Flight   Photography by Wayne Heim",
-    "description": "Flock of Geese fly over the mouth of the Grand River on Lake Erie turns moving water into traditional fine art landscape photography, with current, bank, and surrounding terrain shaping the frame. This painterly river scene creates water landscape wall art rooted in motion, reflection, and place.",
+    "description": "Flock of Geese fly over the mouth of the Grand River on Lake Erie turns moving water into traditional fine art landscape photography, with current, bank, and surrounding terrain shaping the frame.",
     "alt": "Boats  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-pGmvKSB/A",
     "keywords": [
@@ -1187,7 +1187,7 @@ export const galleryData = [
   {
     "id": "i-dFpB9q5",
     "title": "Godafoss  Black & White Photography by Wayne Heim",
-    "description": "Godafoss is one of the smaller waterfalls in Iceland known for its beauty becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Godafoss is one of the smaller waterfalls in Iceland known for its beauty becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Over Flight   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-dFpB9q5/A",
     "keywords": [
@@ -1218,7 +1218,7 @@ export const galleryData = [
   {
     "id": "i-MhCq8Qk",
     "title": "Going to Lunch   Photography by Wayne Heim",
-    "description": "Fine art landscape & architectural photography of the Alps, Venice, Murano and Burano, Italy becomes traditional fine art water landscape photography in Venice, Italy, shaped by water, light, and surrounding terrain. This painterly water scene creates wall art rooted in reflection, atmosphere, and the quiet presence of place.",
+    "description": "Fine art landscape & architectural photography of the Alps, Venice, Murano and Burano, Italy becomes traditional fine art water landscape photography in Venice, Italy, shaped by water, light, and surrounding terrain.",
     "alt": "Godafoss  Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-MhCq8Qk/A",
     "keywords": [
@@ -1249,7 +1249,7 @@ export const galleryData = [
   {
     "id": "i-CpzLgtc",
     "title": "Gondolas at Rest    Photography by Wayne Heim",
-    "description": "Fine art landscape & architectural photography of the Alps, Venice, Murano and Burano, Italy brings boats and water into traditional fine art landscape photography in Venice, Italy, giving the scene a clear maritime rhythm. This water landscape photograph creates wall art rooted in harbor life, reflection, and working shores.",
+    "description": "Fine art landscape & architectural photography of the Alps, Venice, Murano and Burano, Italy brings boats and water into traditional fine art landscape photography in Venice, Italy, giving the scene a clear maritime rhythm.",
     "alt": "Going to Lunch   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-CpzLgtc/A",
     "keywords": [
@@ -1280,7 +1280,7 @@ export const galleryData = [
   {
     "id": "i-NcmRLfC",
     "title": "Secluded Waterfall    Photography by Wayne Heim",
-    "description": "Beautiful waterfall secluded is the forest of the Smokie Mountains becomes traditional fine art water photography in Smoky Mountains, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Beautiful waterfall secluded is the forest of the Smokie Mountains becomes traditional fine art water photography in Smoky Mountains, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Gondolas at Rest    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-NcmRLfC/A",
     "keywords": [
@@ -1311,7 +1311,7 @@ export const galleryData = [
   {
     "id": "i-hVvx83K",
     "title": "Heading Out   Photography by Wayn Heim",
-    "description": "Heading Out -- flock of geese wing their way out over the water at the harbor entrance in Fairport Harbor, Ohio places a lighthouse within the larger water landscape, balancing structure, shoreline, and weather. This traditional fine art photograph creates coastal wall art rooted in navigation, water, and the authority of a landmark by the shore.",
+    "description": "Heading Out -- flock of geese wing their way out over the water at the harbor entrance in Fairport Harbor, Ohio places a lighthouse within the larger water landscape, balancing structure, shoreline, and weather.",
     "alt": "Secluded Waterfall    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-hVvx83K/A",
     "keywords": [
@@ -1342,7 +1342,7 @@ export const galleryData = [
   {
     "id": "i-xLRF9pS",
     "title": "Fighting the Waves   Photography by Wayne Heim",
-    "description": "Iceberg on shore fights against the battering waves on Iceland's coast becomes traditional fine art seascape photography, shaped by shoreline, water, and weather. This water landscape photograph creates coastal wall art rooted in movement, texture, and the meeting of land and sea.",
+    "description": "Iceberg on shore fights against the battering waves on Iceland's coast becomes traditional fine art seascape photography, shaped by shoreline, water, and weather.",
     "alt": "Heading Out   Photography by Wayn Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-xLRF9pS/A",
     "keywords": [
@@ -1373,7 +1373,7 @@ export const galleryData = [
   {
     "id": "i-w9Hk7c3",
     "title": "Coming Ashore    Photography by Wayne Heim",
-    "description": "Icebergs look like they are coming ashore in Iceland becomes traditional fine art seascape photography, shaped by shoreline, water, and weather. This water landscape photograph creates coastal wall art rooted in movement, texture, and the meeting of land and sea.",
+    "description": "Icebergs look like they are coming ashore in Iceland becomes traditional fine art seascape photography, shaped by shoreline, water, and weather.",
     "alt": "Fighting the Waves   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-w9Hk7c3/A",
     "keywords": [
@@ -1404,7 +1404,7 @@ export const galleryData = [
   {
     "id": "i-NcT4vCM",
     "title": "Keilir Lower    Black & White Photography by Wayne Heim",
-    "description": "Icelandic waterfall flowing from the rocks of Iceland becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Icelandic waterfall flowing from the rocks of Iceland becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Coming Ashore    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-NcT4vCM/A",
     "keywords": [
@@ -1435,7 +1435,7 @@ export const galleryData = [
   {
     "id": "i-dT6fKnc",
     "title": "Yellowstone Hotspots   Photography by Wayne Heim",
-    "description": "Geyser pools at Yellowstone National Park in Wyoming becomes traditional fine art water landscape photography, shaped by water, light, and surrounding terrain. This painterly water scene creates wall art rooted in reflection, atmosphere, and the quiet presence of place.",
+    "description": "Geyser pools at Yellowstone National Park in Wyoming becomes traditional fine art water landscape photography, shaped by water, light, and surrounding terrain.",
     "alt": "Keilir Lower    Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-dT6fKnc/A",
     "keywords": [
@@ -1466,7 +1466,7 @@ export const galleryData = [
   {
     "id": "i-VMGBjHW",
     "title": "Hidden Bridge    Photography by Wayne Heim",
-    "description": "Hidden Bridge turns moving water into traditional fine art landscape photography in Mill Creek MetroParks, Ohio, with current, bank, and surrounding terrain shaping the frame. This painterly river scene creates water landscape wall art rooted in motion, reflection, and place.",
+    "description": "Hidden Bridge turns moving water into traditional fine art landscape photography in Mill Creek MetroParks, Ohio, with current, bank, and surrounding terrain shaping the frame.",
     "alt": "Yellowstone Hotspots   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-VMGBjHW/A",
     "keywords": [
@@ -1497,7 +1497,7 @@ export const galleryData = [
   {
     "id": "i-zLXHHCN",
     "title": "Rock Going Swimming  Photography by Wayne Heim",
-    "description": "Rock Going Swimming becomes traditional fine art seascape photography in Newfoundland, Canada, shaped by shoreline, water, and weather. This water landscape photograph creates coastal wall art rooted in movement, texture, and the meeting of land and sea.",
+    "description": "Rock Going Swimming becomes traditional fine art seascape photography in Newfoundland, Canada, shaped by shoreline, water, and weather.",
     "alt": "Hidden Bridge    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-zLXHHCN/A",
     "keywords": [
@@ -1528,7 +1528,7 @@ export const galleryData = [
   {
     "id": "i-hJgwV5X",
     "title": "Kirkjufell Mountain    Black and White photography by Wayne Heim",
-    "description": "Kirkjufell Mountain with waterfalls in the foreground. (b/w) becomes traditional fine art water photography in Iceland, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Kirkjufell Mountain with waterfalls in the foreground. (b/w) becomes traditional fine art water photography in Iceland, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Rock Going Swimming  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-hJgwV5X/A",
     "keywords": [
@@ -1559,7 +1559,7 @@ export const galleryData = [
   {
     "id": "i-sB8KkPF",
     "title": "Kirkjufell Mountain  Photography by Wayne Heim",
-    "description": "Kirkjufell Mountain with waterfalls in the foreground. An old-time finish becomes traditional fine art water photography in Iceland, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Kirkjufell Mountain with waterfalls in the foreground. An old-time finish becomes traditional fine art water photography in Iceland, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Kirkjufell Mountain    Black and White photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-sB8KkPF/A",
     "keywords": [
@@ -1590,7 +1590,7 @@ export const galleryData = [
   {
     "id": "i-8CNn2ms",
     "title": "Kirkjufell  Photography by Wayne Heim",
-    "description": "Kirkjufell Mountain with waterfalls in the foreground. (color) becomes traditional fine art water photography in Iceland, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Kirkjufell Mountain with waterfalls in the foreground. (color) becomes traditional fine art water photography in Iceland, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Kirkjufell Mountain  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-8CNn2ms/A",
     "keywords": [
@@ -1652,7 +1652,7 @@ export const galleryData = [
   {
     "id": "i-XV5CXk6",
     "title": "Lone Boat - Photography by Wayne Heim",
-    "description": "Fine art landscape & architectural photography of the Alps, Venice, Murano and Burano, Italy brings boats and water into traditional fine art landscape photography in Venice, Italy, giving the scene a clear maritime rhythm. This water landscape photograph creates wall art rooted in harbor life, reflection, and working shores.",
+    "description": "Fine art landscape & architectural photography of the Alps, Venice, Murano and Burano, Italy brings boats and water into traditional fine art landscape photography in Venice, Italy, giving the scene a clear maritime rhythm.",
     "alt": "Little Strasbourg - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-XV5CXk6/A",
     "keywords": [
@@ -1683,7 +1683,7 @@ export const galleryData = [
   {
     "id": "i-QFpd2x4",
     "title": "Looking Outward   Black and White Photography",
-    "description": "Fine art landscape photography of the Faroe Islands becomes traditional fine art water landscape photography, shaped by water, light, and surrounding terrain. This painterly water scene creates wall art rooted in reflection, atmosphere, and the quiet presence of place.",
+    "description": "Fine art landscape photography of the Faroe Islands becomes traditional fine art water landscape photography, shaped by water, light, and surrounding terrain.",
     "alt": "Lone Boat - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-QFpd2x4/A",
     "keywords": [
@@ -1714,7 +1714,7 @@ export const galleryData = [
   {
     "id": "i-bgwcgXg",
     "title": "Below the Falls  Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Watkins Glen, New York becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Fine art landscape photography of Watkins Glen, New York becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Looking Outward   Black and White Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-bgwcgXg/A",
     "keywords": [
@@ -1745,7 +1745,7 @@ export const galleryData = [
   {
     "id": "i-qXc8XpL",
     "title": "Lynx  - Photography by Wayne Heim",
-    "description": "Lynx - the Tall Ship Lynx sails on Lake Erie in a visit to Cleveland, Ohio becomes traditional fine art water photography, where still surface, shoreline, and atmosphere create the image’s quiet pull. This water landscape photograph creates wall art rooted in reflection, distance, and the calm of open water.",
+    "description": "Lynx - the Tall Ship Lynx sails on Lake Erie in a visit to Cleveland, Ohio becomes traditional fine art water photography, where still surface, shoreline, and atmosphere create the image’s quiet pull.",
     "alt": "Below the Falls  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-qXc8XpL/A",
     "keywords": [
@@ -1776,7 +1776,7 @@ export const galleryData = [
   {
     "id": "i-WdNbPqX",
     "title": "Berea Bridge  1   Photography by Wayne Heim",
-    "description": "Many arches of the Berea Bridge brings boats and water into traditional fine art landscape photography in Berea, Ohio, giving the scene a clear maritime rhythm. This water landscape photograph creates wall art rooted in harbor life, reflection, and working shores.",
+    "description": "Many arches of the Berea Bridge brings boats and water into traditional fine art landscape photography in Berea, Ohio, giving the scene a clear maritime rhythm.",
     "alt": "Lynx  - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-WdNbPqX/A",
     "keywords": [
@@ -1807,7 +1807,7 @@ export const galleryData = [
   {
     "id": "i-fxNXk2L",
     "title": "Mentor Lighthouse - Black and White Photography by Wayne Heim",
-    "description": "Mentor Lighthouse - also called the West Fairport Lighthouse at the mouth of the Grand River in Ohio turns moving water into traditional fine art landscape photography in Fairport Harbor, Ohio, with current, bank, and surrounding terrain shaping the frame. This painterly river scene creates water landscape wall art rooted in motion, reflection, and place.",
+    "description": "Mentor Lighthouse - also called the West Fairport Lighthouse at the mouth of the Grand River in Ohio turns moving water into traditional fine art landscape photography in Fairport Harbor, Ohio, with current, bank, and surrounding terrain shaping the frame.",
     "alt": "Berea Bridge  1   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-fxNXk2L/A",
     "keywords": [
@@ -1838,7 +1838,7 @@ export const galleryData = [
   {
     "id": "i-jn6w2tL",
     "title": "Faroe Islands 2  Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands becomes traditional fine art water landscape photography, shaped by water, light, and surrounding terrain. This painterly water scene creates wall art rooted in reflection, atmosphere, and the quiet presence of place.",
+    "description": "Fine art landscape photography of the Faroe Islands becomes traditional fine art water landscape photography, shaped by water, light, and surrounding terrain.",
     "alt": "Mentor Lighthouse - Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-jn6w2tL/A",
     "keywords": [
@@ -1869,7 +1869,7 @@ export const galleryData = [
   {
     "id": "i-QXKpsCV",
     "title": "Falls Bridge    Photography by Wayne Heim",
-    "description": "Observation bridge at Multnomah Falls. Columbia River Gorge. Oregon becomes traditional fine art water photography in Multnomah Falls, Oregon, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Observation bridge at Multnomah Falls. Columbia River Gorge. Oregon becomes traditional fine art water photography in Multnomah Falls, Oregon, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Faroe Islands 2  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-QXKpsCV/A",
     "keywords": [
@@ -1900,7 +1900,7 @@ export const galleryData = [
   {
     "id": "i-7k6tvvL",
     "title": "Beached   Photography by Wayne Heim",
-    "description": "A coast landscape in Newfoundland, Canada becomes traditional fine art seascape photography, shaped by shoreline, water, and weather. This water landscape photograph creates coastal wall art rooted in movement, texture, and the meeting of land and sea.",
+    "description": "A coast landscape in Newfoundland, Canada becomes traditional fine art seascape photography, shaped by shoreline, water, and weather.",
     "alt": "Falls Bridge    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-7k6tvvL/A",
     "keywords": [
@@ -1931,7 +1931,7 @@ export const galleryData = [
   {
     "id": "i-sfdNcst",
     "title": "The Essence Of Painterly River Scenes",
-    "description": "A waterfall landscape becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "A waterfall landscape becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Beached   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-sfdNcst/A",
     "keywords": [
@@ -1965,7 +1965,7 @@ export const galleryData = [
   {
     "id": "i-cXx8mjF",
     "title": "Waterfall in Iceland  Photography by Wayne Heim",
-    "description": "One of the many waterfalls in Iceland becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "One of the many waterfalls in Iceland becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "OLYMPUS DIGITAL CAMERA",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-cXx8mjF/A",
     "keywords": [
@@ -1996,7 +1996,7 @@ export const galleryData = [
   {
     "id": "i-5Jcmr7n",
     "title": "Sunset on  the Hood(H)    Photography by Wayne Heim",
-    "description": "A view of Mt. Hood at sunset with the lights of the snow cats on the mountain side becomes traditional fine art water landscape photography in Mount Hood, Oregon, shaped by water, light, and surrounding terrain. This painterly water scene creates wall art rooted in reflection, atmosphere, and the quiet presence of place.",
+    "description": "A view of Mt. Hood at sunset with the lights of the snow cats on the mountain side becomes traditional fine art water landscape photography in Mount Hood, Oregon, shaped by water, light, and surrounding terrain.",
     "alt": "Waterfall in Iceland  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-5Jcmr7n/A",
     "keywords": [
@@ -2027,7 +2027,7 @@ export const galleryData = [
   {
     "id": "i-ffMkqcf",
     "title": "Misty Waterfall   Photography by Wayne Heim",
-    "description": "One of the many waterfalls in Iceland becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "One of the many waterfalls in Iceland becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Sunset on  the Hood(H)    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-ffMkqcf/A",
     "keywords": [
@@ -2058,7 +2058,7 @@ export const galleryData = [
   {
     "id": "i-kpHk9bS",
     "title": "Little Waterfall   Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Iceland in the Fall becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Fine art landscape photography of Iceland in the Fall becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Misty Waterfall   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-kpHk9bS/A",
     "keywords": [
@@ -2089,7 +2089,7 @@ export const galleryData = [
   {
     "id": "i-bQ5rkvz",
     "title": "Faroe Waterfall   Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Fine art landscape photography of the Faroe Islands becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Little Waterfall   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-bQ5rkvz/A",
     "keywords": [
@@ -2120,7 +2120,7 @@ export const galleryData = [
   {
     "id": "i-HZfr8Pp",
     "title": "Misty Waterfall 2   Photography by Wayne Heim",
-    "description": "Panoramic view of one on Iceland's waterfalls becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Panoramic view of one on Iceland's waterfalls becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Faroe Waterfall   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-HZfr8Pp/A",
     "keywords": [
@@ -2151,7 +2151,7 @@ export const galleryData = [
   {
     "id": "i-K6gmDTQ",
     "title": "Reaching for the Heavens  Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands becomes traditional fine art water landscape photography, shaped by water, light, and surrounding terrain. This painterly water scene creates wall art rooted in reflection, atmosphere, and the quiet presence of place.",
+    "description": "Fine art landscape photography of the Faroe Islands becomes traditional fine art water landscape photography, shaped by water, light, and surrounding terrain.",
     "alt": "Misty Waterfall 2   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-K6gmDTQ/A",
     "keywords": [
@@ -2182,7 +2182,7 @@ export const galleryData = [
   {
     "id": "i-PTKKNJK",
     "title": "Glen Waterfall  Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Watkins Glen, New York becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Fine art landscape photography of Watkins Glen, New York becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Reaching for the Heavens  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-PTKKNJK/A",
     "keywords": [
@@ -2213,7 +2213,7 @@ export const galleryData = [
   {
     "id": "i-LgrdsMQ",
     "title": "Rio    Black and White Photography by Wayne Heim",
-    "description": "Rio de Janerio in Brazil becomes traditional fine art water photography in Rio de Janeiro, Brazil, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Rio de Janerio in Brazil becomes traditional fine art water photography in Rio de Janeiro, Brazil, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Glen Waterfall  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-LgrdsMQ/A",
     "keywords": [
@@ -2244,7 +2244,7 @@ export const galleryData = [
   {
     "id": "i-HP6hJm4",
     "title": "Rocks in Fall  Photography by Wayne Heim",
-    "description": "Rocks in Fall - stream flows through downed trees and rock in Metro Park turns moving water into traditional fine art landscape photography in Ohio Metroparks, with current, bank, and surrounding terrain shaping the frame. This painterly river scene creates water landscape wall art rooted in motion, reflection, and place.",
+    "description": "Rocks in Fall - stream flows through downed trees and rock in Metro Park turns moving water into traditional fine art landscape photography in Ohio Metroparks, with current, bank, and surrounding terrain shaping the frame.",
     "alt": "Rio    Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-HP6hJm4/A",
     "keywords": [
@@ -2275,7 +2275,7 @@ export const galleryData = [
   {
     "id": "i-6kJRDSJ",
     "title": "Seawall in Fairport.  Photography by Wayne Heim",
-    "description": "Seawall in Fairport - seawall leading to the lighthouse in Fairport, Ohio places a lighthouse within the larger water landscape in Fairport Harbor, Ohio, balancing structure, shoreline, and weather. This traditional fine art photograph creates coastal wall art rooted in navigation, water, and the authority of a landmark by the shore.",
+    "description": "Seawall in Fairport - seawall leading to the lighthouse in Fairport, Ohio places a lighthouse within the larger water landscape in Fairport Harbor, Ohio, balancing structure, shoreline, and weather.",
     "alt": "Rocks in Fall  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-6kJRDSJ/A",
     "keywords": [
@@ -2306,7 +2306,7 @@ export const galleryData = [
   {
     "id": "i-sX47tNp",
     "title": "Sunset Reflections - Photography by Wayne Heim",
-    "description": "Shadows of trees reflect in pond as sunset behind them becomes traditional fine art water photography, where still surface, shoreline, and atmosphere create the image’s quiet pull. This water landscape photograph creates wall art rooted in reflection, distance, and the calm of open water.",
+    "description": "Shadows of trees reflect in pond as sunset behind them becomes traditional fine art water photography, where still surface, shoreline, and atmosphere create the image’s quiet pull.",
     "alt": "Seawall in Fairport.  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-sX47tNp/A",
     "keywords": [
@@ -2337,7 +2337,7 @@ export const galleryData = [
   {
     "id": "i-6SVzMTv",
     "title": "Faroe Shelters  3   Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands becomes traditional fine art water landscape photography, shaped by water, light, and surrounding terrain. This painterly water scene creates wall art rooted in reflection, atmosphere, and the quiet presence of place.",
+    "description": "Fine art landscape photography of the Faroe Islands becomes traditional fine art water landscape photography, shaped by water, light, and surrounding terrain.",
     "alt": "Sunset Reflections - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-6SVzMTv/A",
     "keywords": [
@@ -2368,7 +2368,7 @@ export const galleryData = [
   {
     "id": "i-kcgmSq6",
     "title": "Mountain Lake  Photography by Wayne Heim",
-    "description": "Mountain Lake becomes traditional fine art water photography in Glacier National Park, Montana, where still surface, shoreline, and atmosphere create the image’s quiet pull. This water landscape photograph creates wall art rooted in reflection, distance, and the calm of open water.",
+    "description": "Mountain Lake becomes traditional fine art water photography in Glacier National Park, Montana, where still surface, shoreline, and atmosphere create the image’s quiet pull.",
     "alt": "Faroe Shelters  3   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-kcgmSq6/A",
     "keywords": [
@@ -2399,7 +2399,7 @@ export const galleryData = [
   {
     "id": "i-PbBpwRz",
     "title": "Little Stream    Photography by Wayne Heim",
-    "description": "Little Stream turns moving water into traditional fine art landscape photography in Letchworth State Park, New York, with current, bank, and surrounding terrain shaping the frame. This painterly river scene creates water landscape wall art rooted in motion, reflection, and place.",
+    "description": "Little Stream turns moving water into traditional fine art landscape photography in Letchworth State Park, New York, with current, bank, and surrounding terrain shaping the frame.",
     "alt": "Mountain Lake  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-PbBpwRz/A",
     "keywords": [
@@ -2430,7 +2430,7 @@ export const galleryData = [
   {
     "id": "i-DTwrn3n",
     "title": "Side Falls    Photography by Wayne Heim",
-    "description": "Small waterfalls flows into area of larger falls becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Small waterfalls flows into area of larger falls becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Little Stream    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-DTwrn3n/A",
     "keywords": [
@@ -2461,7 +2461,7 @@ export const galleryData = [
   {
     "id": "i-dkBvtw9",
     "title": "Tinkers Creek - Photography by Wayne Heim",
-    "description": "SOLD - Tinkers Creek - view of the Berea Bridge from below the falls in Berea Ohio. Call for ordering options becomes traditional fine art water photography in Berea, Ohio, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "SOLD - Tinkers Creek - view of the Berea Bridge from below the falls in Berea Ohio. Call for ordering options becomes traditional fine art water photography in Berea, Ohio, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Side Falls    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-dkBvtw9/A",
     "keywords": [
@@ -2492,7 +2492,7 @@ export const galleryData = [
   {
     "id": "i-d9wMKtJ",
     "title": "Rundown      Photography by Wayne Heim",
-    "description": "Fine art landscape & architectural photography of the Alps, Venice, Murano and Burano, Italy becomes traditional fine art water landscape photography in Venice, Italy, shaped by water, light, and surrounding terrain. This painterly water scene creates wall art rooted in reflection, atmosphere, and the quiet presence of place.",
+    "description": "Fine art landscape & architectural photography of the Alps, Venice, Murano and Burano, Italy becomes traditional fine art water landscape photography in Venice, Italy, shaped by water, light, and surrounding terrain.",
     "alt": "Tinkers Creek - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-d9wMKtJ/A",
     "keywords": [
@@ -2523,7 +2523,7 @@ export const galleryData = [
   {
     "id": "i-gHjq9S9",
     "title": "Canyon Stream   Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Watkins Glen, New York turns moving water into traditional fine art landscape photography, with current, bank, and surrounding terrain shaping the frame. This painterly river scene creates water landscape wall art rooted in motion, reflection, and place.",
+    "description": "Fine art landscape photography of Watkins Glen, New York turns moving water into traditional fine art landscape photography, with current, bank, and surrounding terrain shaping the frame.",
     "alt": "Rundown      Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-gHjq9S9/A",
     "keywords": [
@@ -2554,7 +2554,7 @@ export const galleryData = [
   {
     "id": "i-6NKTKgw",
     "title": "Sunset Rays on the Village",
-    "description": "Fine art landscape sunset photograph of the Faroe Islands becomes traditional fine art water landscape photography, shaped by water, light, and surrounding terrain. This painterly water scene creates wall art rooted in reflection, atmosphere, and the quiet presence of place.",
+    "description": "Fine art landscape sunset photograph of the Faroe Islands becomes traditional fine art water landscape photography, shaped by water, light, and surrounding terrain.",
     "alt": "Canyon Stream   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-6NKTKgw/A",
     "keywords": [
@@ -2585,7 +2585,7 @@ export const galleryData = [
   {
     "id": "i-mspb6K6",
     "title": "Rushing Water  Black and White Photography by Wayne Heim",
-    "description": "Swollen river races with water have heavy rains. w turns moving water into traditional fine art landscape photography, with current, bank, and surrounding terrain shaping the frame. This painterly river scene creates water landscape wall art rooted in motion, reflection, and place.",
+    "description": "Swollen river races with water have heavy rains. w turns moving water into traditional fine art landscape photography, with current, bank, and surrounding terrain shaping the frame.",
     "alt": "Sunset Rays on the Village",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-mspb6K6/A",
     "keywords": [
@@ -2616,7 +2616,7 @@ export const galleryData = [
   {
     "id": "i-zvSVN2x",
     "title": "Lynx in Harbor   Photography by Wayne Heim",
-    "description": "Tall ship Lynx sails in to Cleveland Harbor show a great skyline behind it places a lighthouse within the larger water landscape in Cleveland, Ohio, balancing structure, shoreline, and weather. This traditional fine art photograph creates coastal wall art rooted in navigation, water, and the authority of a landmark by the shore.",
+    "description": "Tall ship Lynx sails in to Cleveland Harbor show a great skyline behind it places a lighthouse within the larger water landscape in Cleveland, Ohio, balancing structure, shoreline, and weather.",
     "alt": "Rushing Water  Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-zvSVN2x/A",
     "keywords": [
@@ -2647,7 +2647,7 @@ export const galleryData = [
   {
     "id": "i-N9LmP3j",
     "title": "Flags a Flying  Black and White Photography by Wayne Heim",
-    "description": "Tall ship with all flags flying as it enters Cleveland Harbor on Lake Erie becomes traditional fine art water photography, where still surface, shoreline, and atmosphere create the image’s quiet pull. This water landscape photograph creates wall art rooted in reflection, distance, and the calm of open water.",
+    "description": "Tall ship with all flags flying as it enters Cleveland Harbor on Lake Erie becomes traditional fine art water photography, where still surface, shoreline, and atmosphere create the image’s quiet pull.",
     "alt": "Lynx in Harbor   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-N9LmP3j/A",
     "keywords": [
@@ -2678,7 +2678,7 @@ export const galleryData = [
   {
     "id": "i-hmB6HFt",
     "title": "Angry Waves on Ice   Photography by Wayne Heim",
-    "description": "The angry sea batters the chunks of ice in the waters off Iceland becomes traditional fine art seascape photography, shaped by shoreline, water, and weather. This water landscape photograph creates coastal wall art rooted in movement, texture, and the meeting of land and sea.",
+    "description": "The angry sea batters the chunks of ice in the waters off Iceland becomes traditional fine art seascape photography, shaped by shoreline, water, and weather.",
     "alt": "Flags a Flying  Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-hmB6HFt/A",
     "keywords": [
@@ -2709,7 +2709,7 @@ export const galleryData = [
   {
     "id": "i-R5CQpXg",
     "title": "The Grand  Peak   Photography by Wayne Heim",
-    "description": "The Grand the highest peak in the Grand Teton Mountains becomes traditional fine art water landscape photography in Yellowstone National Park, shaped by water, light, and surrounding terrain. This painterly water scene creates wall art rooted in reflection, atmosphere, and the quiet presence of place.",
+    "description": "The Grand the highest peak in the Grand Teton Mountains becomes traditional fine art water landscape photography in Yellowstone National Park, shaped by water, light, and surrounding terrain.",
     "alt": "Angry Waves on Ice   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-R5CQpXg/A",
     "keywords": [
@@ -2740,7 +2740,7 @@ export const galleryData = [
   {
     "id": "i-QZc2RsH",
     "title": "Faroe Island 3    Photography  by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands becomes traditional fine art water landscape photography, shaped by water, light, and surrounding terrain. This painterly water scene creates wall art rooted in reflection, atmosphere, and the quiet presence of place.",
+    "description": "Fine art landscape photography of the Faroe Islands becomes traditional fine art water landscape photography, shaped by water, light, and surrounding terrain.",
     "alt": "The Grand  Peak   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-QZc2RsH/A",
     "keywords": [
@@ -2771,7 +2771,7 @@ export const galleryData = [
   {
     "id": "i-r2MwGcQ",
     "title": "Upper Mills Falls   Photography by Wayne heim",
-    "description": "Upper Mills Falls becomes traditional fine art water photography in Mill Creek MetroParks, Ohio, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Upper Mills Falls becomes traditional fine art water photography in Mill Creek MetroParks, Ohio, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Faroe Island 3    Photography  by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-r2MwGcQ/A",
     "keywords": [
@@ -2802,7 +2802,7 @@ export const galleryData = [
   {
     "id": "i-rQDRZP2",
     "title": "Tower Bridge - Photography by Wayne Heim",
-    "description": "Tower Bridge - popular view of the Tower Bridge from across the Thames River in London, England turns moving water into traditional fine art landscape photography, with current, bank, and surrounding terrain shaping the frame. This painterly river scene creates water landscape wall art rooted in motion, reflection, and place.",
+    "description": "Tower Bridge - popular view of the Tower Bridge from across the Thames River in London, England turns moving water into traditional fine art landscape photography, with current, bank, and surrounding terrain shaping the frame.",
     "alt": "Upper Mills Falls   Photography by Wayne heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-rQDRZP2/A",
     "keywords": [
@@ -2833,7 +2833,7 @@ export const galleryData = [
   {
     "id": "i-kvxfbSH",
     "title": "Arms into the Sea  Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands becomes traditional fine art seascape photography, shaped by shoreline, water, and weather. This water landscape photograph creates coastal wall art rooted in movement, texture, and the meeting of land and sea.",
+    "description": "Fine art landscape photography of the Faroe Islands becomes traditional fine art seascape photography, shaped by shoreline, water, and weather.",
     "alt": "Tower Bridge - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-kvxfbSH/A",
     "keywords": [
@@ -2864,7 +2864,7 @@ export const galleryData = [
   {
     "id": "i-GmFFsFL",
     "title": "Dueling Falls    Photography by Wayne Heim",
-    "description": "Two waterfalls flow over same rocks becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Two waterfalls flow over same rocks becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Arms into the Sea  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-GmFFsFL/A",
     "keywords": [
@@ -2926,7 +2926,7 @@ export const galleryData = [
   {
     "id": "i-fsmXzLW",
     "title": "Venice Flowers",
-    "description": "Fine art landscape & architectural photography of the Alps, Venice, Murano and Burano, Italy becomes traditional fine art water landscape photography in Venice, Italy, shaped by water, light, and surrounding terrain. This painterly water scene creates wall art rooted in reflection, atmosphere, and the quiet presence of place.",
+    "description": "Fine art landscape & architectural photography of the Alps, Venice, Murano and Burano, Italy becomes traditional fine art water landscape photography in Venice, Italy, shaped by water, light, and surrounding terrain.",
     "alt": "Venice Canal - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-fsmXzLW/A",
     "keywords": [
@@ -2957,7 +2957,7 @@ export const galleryData = [
   {
     "id": "i-Jhzph7p",
     "title": "Grand Canyon of the East.  Photography by Wayne Heim",
-    "description": "Grand Canyon of the East becomes traditional fine art water landscape photography in Letchworth State Park, New York, shaped by water, light, and surrounding terrain. This painterly water scene creates wall art rooted in reflection, atmosphere, and the quiet presence of place.",
+    "description": "Grand Canyon of the East becomes traditional fine art water landscape photography in Letchworth State Park, New York, shaped by water, light, and surrounding terrain.",
     "alt": "Venice Flowers",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Jhzph7p/A",
     "keywords": [
@@ -2988,7 +2988,7 @@ export const galleryData = [
   {
     "id": "i-D3vBXTM",
     "title": "Shadow Reflections     Photography by Wayne Heim",
-    "description": "Waning sunset casts reflection of trees in the water becomes traditional fine art water landscape photography, shaped by water, light, and surrounding terrain. This painterly water scene creates wall art rooted in reflection, atmosphere, and the quiet presence of place.",
+    "description": "Waning sunset casts reflection of trees in the water becomes traditional fine art water landscape photography, shaped by water, light, and surrounding terrain.",
     "alt": "Grand Canyon of the East.  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-D3vBXTM/A",
     "keywords": [
@@ -3019,7 +3019,7 @@ export const galleryData = [
   {
     "id": "i-N3tD58d",
     "title": "Flowing to the Sun in Iceland   Photography by Wayne Heim",
-    "description": "Water flowing out to sea in the sunset scene of Iceland becomes traditional fine art seascape photography, shaped by shoreline, water, and weather. This water landscape photograph creates coastal wall art rooted in movement, texture, and the meeting of land and sea.",
+    "description": "Water flowing out to sea in the sunset scene of Iceland becomes traditional fine art seascape photography, shaped by shoreline, water, and weather.",
     "alt": "Shadow Reflections     Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-N3tD58d/A",
     "keywords": [
@@ -3052,7 +3052,7 @@ export const galleryData = [
   {
     "id": "i-wQbPWRb",
     "title": "Out of the Hillside   Photography by Wayne Heim",
-    "description": "Waterfall appears to flow out of the hillside in Iceland becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Waterfall appears to flow out of the hillside in Iceland becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Flowing to the Sun in Iceland   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-wQbPWRb/A",
     "keywords": [
@@ -3085,7 +3085,7 @@ export const galleryData = [
   {
     "id": "i-n22Pjjd",
     "title": "Waterfall to the Sea  Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Fine art landscape photography of the Faroe Islands becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Out of the Hillside   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-n22Pjjd/A",
     "keywords": [
@@ -3118,7 +3118,7 @@ export const galleryData = [
   {
     "id": "i-388rDcL",
     "title": "Out of the Rocks   Photography by Wayne Heim",
-    "description": "Waterfall in Iceland flows out of the rocks on mountain side becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Waterfall in Iceland flows out of the rocks on mountain side becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Waterfall to the Sea  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-388rDcL/A",
     "keywords": [
@@ -3151,7 +3151,7 @@ export const galleryData = [
   {
     "id": "i-xbVp2GS",
     "title": "Ravine Waterfalls   Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Watkins Glen, New York becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Fine art landscape photography of Watkins Glen, New York becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Out of the Rocks   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-xbVp2GS/A",
     "keywords": [
@@ -3184,7 +3184,7 @@ export const galleryData = [
   {
     "id": "i-LDhHKV5",
     "title": "Watkins Peaceful  Falls . Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Watkins Glen, New York becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Fine art landscape photography of Watkins Glen, New York becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Ravine Waterfalls   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-LDhHKV5/A",
     "keywords": [
@@ -3217,7 +3217,7 @@ export const galleryData = [
   {
     "id": "i-Cpxtcp3",
     "title": "Big Splash in Iceland    Photography by Wayne Heim",
-    "description": "Waves crash against the rocks on the coast of Iceland becomes traditional fine art seascape photography, shaped by shoreline, water, and weather. This water landscape photograph creates coastal wall art rooted in movement, texture, and the meeting of land and sea.",
+    "description": "Waves crash against the rocks on the coast of Iceland becomes traditional fine art seascape photography, shaped by shoreline, water, and weather.",
     "alt": "Watkins Peaceful  Falls . Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Cpxtcp3/A",
     "keywords": [
@@ -3250,7 +3250,7 @@ export const galleryData = [
   {
     "id": "i-kqQ26Rw",
     "title": "Fine Art Painterly River Scenes",
-    "description": "A waterfall landscape becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "A waterfall landscape becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Big Splash in Iceland    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-kqQ26Rw/A",
     "keywords": [
@@ -3286,7 +3286,7 @@ export const galleryData = [
   {
     "id": "i-8hzdpxL",
     "title": "Exploring Painterly River Scenes",
-    "description": "A waterfall landscape becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "A waterfall landscape becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-8hzdpxL/A",
     "keywords": [
@@ -3322,7 +3322,7 @@ export const galleryData = [
   {
     "id": "i-Fr454qG",
     "title": "The Essence Of Waterfall Landscape Photography",
-    "description": "A waterfall landscape becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "A waterfall landscape becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Fr454qG/A",
     "keywords": [
@@ -3358,7 +3358,7 @@ export const galleryData = [
   {
     "id": "i-rm2GNVm",
     "title": "The Essence Of The Truth Of A Moment",
-    "description": "A waterfall landscape becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "A waterfall landscape becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-rm2GNVm/A",
     "keywords": [
@@ -3394,7 +3394,7 @@ export const galleryData = [
   {
     "id": "i-NGqssGX",
     "title": "Waterfall Landscape Photography",
-    "description": "A waterfall landscape becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "A waterfall landscape becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-NGqssGX/A",
     "keywords": [
@@ -3430,7 +3430,7 @@ export const galleryData = [
   {
     "id": "i-S5VXSLg",
     "title": "Canyon Walk  Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Watkins Glen, New York becomes traditional fine art water landscape photography, shaped by water, light, and surrounding terrain. This painterly water scene creates wall art rooted in reflection, atmosphere, and the quiet presence of place.",
+    "description": "Fine art landscape photography of Watkins Glen, New York becomes traditional fine art water landscape photography, shaped by water, light, and surrounding terrain.",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-S5VXSLg/A",
     "keywords": [
@@ -3463,7 +3463,7 @@ export const galleryData = [
   {
     "id": "i-nfC5sqV",
     "title": "Dueling Falls.  Photography by Wayne Heim",
-    "description": "Dueling Falls - waterfalls on Chagrin River becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Dueling Falls - waterfalls on Chagrin River becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Canyon Walk  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-nfC5sqV/A",
     "keywords": [
@@ -3496,7 +3496,7 @@ export const galleryData = [
   {
     "id": "i-J9MbKXc",
     "title": "Rushing Falls - Black & White Photography by Wayne Heim",
-    "description": "Rushing Falls - rain swollen stream produces rushing falls becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Rushing Falls - rain swollen stream produces rushing falls becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Dueling Falls.  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-J9MbKXc/A",
     "keywords": [
@@ -3529,7 +3529,7 @@ export const galleryData = [
   {
     "id": "i-crsCCbk",
     "title": "Dueling Falls 2   Photography by Wayne Heim",
-    "description": "Dueling Waterfalls created by slab rock in the middle. Another view of the Chagrin River in Ohio becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Dueling Waterfalls created by slab rock in the middle. Another view of the Chagrin River in Ohio becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Rushing Falls - Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-crsCCbk/A",
     "keywords": [
@@ -3562,7 +3562,7 @@ export const galleryData = [
   {
     "id": "i-nVCwPRj",
     "title": "Rushing Berea Falls    Photography by Wayne Heim",
-    "description": "Little falls rush over the rocks in the river in Berea Metro Parks becomes traditional fine art water photography in Berea, Ohio, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Little falls rush over the rocks in the river in Berea Metro Parks becomes traditional fine art water photography in Berea, Ohio, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Dueling Falls 2   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-nVCwPRj/A",
     "keywords": [
@@ -3595,7 +3595,7 @@ export const galleryData = [
   {
     "id": "i-qBQrF2V",
     "title": "Paradise. Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Watkins Glen, New York becomes traditional fine art water landscape photography, shaped by water, light, and surrounding terrain. This painterly water scene creates wall art rooted in reflection, atmosphere, and the quiet presence of place.",
+    "description": "Fine art landscape photography of Watkins Glen, New York becomes traditional fine art water landscape photography, shaped by water, light, and surrounding terrain.",
     "alt": "Rushing Berea Falls    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-qBQrF2V/A",
     "keywords": [
@@ -3628,7 +3628,7 @@ export const galleryData = [
   {
     "id": "i-FH9Hz8S",
     "title": "Rushing Rapids. Photography by Wayne Heim",
-    "description": "Rushing Rapids- Churning water of rapids turns moving water into traditional fine art landscape photography, with current, bank, and surrounding terrain shaping the frame. This painterly river scene creates water landscape wall art rooted in motion, reflection, and place.",
+    "description": "Rushing Rapids- Churning water of rapids turns moving water into traditional fine art landscape photography, with current, bank, and surrounding terrain shaping the frame.",
     "alt": "Paradise. Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-FH9Hz8S/A",
     "keywords": [
@@ -3661,7 +3661,7 @@ export const galleryData = [
   {
     "id": "i-7zGDNJf",
     "title": "Mount Hood at Sunset  Photo by Wayne Heim",
-    "description": "Mount Hood at Sunset. Mt Hood in Oregon as the sun is going down. Trillium lake is in the foreground and you can see snow cats grooming the slopes of the mountain becomes traditional fine art water photography in Mount Hood, Oregon, where still surface, shoreline, and atmosphere create the image’s quiet pull. This water landscape photograph creates wall art rooted in reflection, distance, and the calm of open water.",
+    "description": "Mount Hood at Sunset. Mt Hood in Oregon as the sun is going down. Trillium lake is in the foreground and you can see snow cats grooming the slopes of the mountain becomes traditional fine art water photography in Mount Hood, Oregon, where still surface, shoreline, and atmosphere create the image’s quiet pull.",
     "alt": "Rushing Rapids. Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-7zGDNJf/A",
     "keywords": [
@@ -3694,7 +3694,7 @@ export const galleryData = [
   {
     "id": "i-8tvnHvW",
     "title": "Green Lagoon  Photography by Wayne Heim",
-    "description": "Green Lagoon, quiet secluded lagoon in wooded area of Smokie Mountains becomes traditional fine art water photography in Smoky Mountains, where still surface, shoreline, and atmosphere create the image’s quiet pull. This water landscape photograph creates wall art rooted in reflection, distance, and the calm of open water.",
+    "description": "Green Lagoon, quiet secluded lagoon in wooded area of Smokie Mountains becomes traditional fine art water photography in Smoky Mountains, where still surface, shoreline, and atmosphere create the image’s quiet pull.",
     "alt": "Mount Hood at Sunset  Photo by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-8tvnHvW/A",
     "keywords": [
@@ -3727,7 +3727,7 @@ export const galleryData = [
   {
     "id": "i-QGSJxwc",
     "title": "Watkins Glen Canyon. Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Watkins Glen, New York becomes traditional fine art water landscape photography, shaped by water, light, and surrounding terrain. This painterly water scene creates wall art rooted in reflection, atmosphere, and the quiet presence of place.",
+    "description": "Fine art landscape photography of Watkins Glen, New York becomes traditional fine art water landscape photography, shaped by water, light, and surrounding terrain.",
     "alt": "Green Lagoon  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-QGSJxwc/A",
     "keywords": [
@@ -3760,7 +3760,7 @@ export const galleryData = [
   {
     "id": "i-ZzfQpTX",
     "title": "Breakers  Photography by Wayne Heim",
-    "description": "A coast landscape in Newfoundland, Canada becomes traditional fine art seascape photography, shaped by shoreline, water, and weather. This water landscape photograph creates coastal wall art rooted in movement, texture, and the meeting of land and sea.",
+    "description": "A coast landscape in Newfoundland, Canada becomes traditional fine art seascape photography, shaped by shoreline, water, and weather.",
     "alt": "Watkins Glen Canyon. Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-ZzfQpTX/A",
     "keywords": [
@@ -3793,7 +3793,7 @@ export const galleryData = [
   {
     "id": "i-ZPSdpnH",
     "title": "St John's Lighthouse  Photography by Wayne Heim",
-    "description": "A view of St John's lighthouse in Newfoundland places a lighthouse within the larger water landscape in Newfoundland, Canada, balancing structure, shoreline, and weather. This traditional fine art photograph creates coastal wall art rooted in navigation, water, and the authority of a landmark by the shore.",
+    "description": "A view of St John's lighthouse in Newfoundland places a lighthouse within the larger water landscape in Newfoundland, Canada, balancing structure, shoreline, and weather.",
     "alt": "Breakers  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-ZPSdpnH/A",
     "keywords": [
@@ -3826,7 +3826,7 @@ export const galleryData = [
   {
     "id": "i-X35gPrM",
     "title": "Canal Boat   Photography by Wayne Heim",
-    "description": "Fine art landscape & architectural photography of the Alps, Venice, Murano and Burano, Italy brings boats and water into traditional fine art landscape photography in Venice, Italy, giving the scene a clear maritime rhythm. This water landscape photograph creates wall art rooted in harbor life, reflection, and working shores.",
+    "description": "Fine art landscape & architectural photography of the Alps, Venice, Murano and Burano, Italy brings boats and water into traditional fine art landscape photography in Venice, Italy, giving the scene a clear maritime rhythm.",
     "alt": "St John's Lighthouse  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-X35gPrM/A",
     "keywords": [
@@ -3859,7 +3859,7 @@ export const galleryData = [
   {
     "id": "i-CGFb5Cs",
     "title": "Getting Closer   Photography by Wayne Heim",
-    "description": "Getting Closer becomes traditional fine art water photography in Lake Erie, where still surface, shoreline, and atmosphere create the image’s quiet pull. This water landscape photograph creates wall art rooted in reflection, distance, and the calm of open water.",
+    "description": "Getting Closer becomes traditional fine art water photography in Lake Erie, where still surface, shoreline, and atmosphere create the image’s quiet pull.",
     "alt": "Canal Boat   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-CGFb5Cs/A",
     "keywords": [
@@ -3892,7 +3892,7 @@ export const galleryData = [
   {
     "id": "i-3cMpkdH",
     "title": "Mill House   Photography by Wayne Heim",
-    "description": "Mill House turns moving water into traditional fine art landscape photography in Mill Creek MetroParks, Ohio, with current, bank, and surrounding terrain shaping the frame. This painterly river scene creates water landscape wall art rooted in motion, reflection, and place.",
+    "description": "Mill House turns moving water into traditional fine art landscape photography in Mill Creek MetroParks, Ohio, with current, bank, and surrounding terrain shaping the frame.",
     "alt": "Getting Closer   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-3cMpkdH/A",
     "keywords": [
@@ -3925,7 +3925,7 @@ export const galleryData = [
   {
     "id": "i-CFrvwKD",
     "title": "Illusion at Sunset   Photography by Wayne heim",
-    "description": "Optical illusion of lake and sunset becomes traditional fine art water photography, where still surface, shoreline, and atmosphere create the image’s quiet pull. This water landscape photograph creates wall art rooted in reflection, distance, and the calm of open water.",
+    "description": "Optical illusion of lake and sunset becomes traditional fine art water photography, where still surface, shoreline, and atmosphere create the image’s quiet pull.",
     "alt": "Mill House   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-CFrvwKD/A",
     "keywords": [
@@ -3958,7 +3958,7 @@ export const galleryData = [
   {
     "id": "i-ZZgRqGG",
     "title": "Over the Edge   Photography by Wayne Heim",
-    "description": "One of the many water falls flowing in Ohio rivers becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "One of the many water falls flowing in Ohio rivers becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Illusion at Sunset   Photography by Wayne heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-ZZgRqGG/A",
     "keywords": [
@@ -3991,7 +3991,7 @@ export const galleryData = [
   {
     "id": "i-T3SRpvm",
     "title": "Gone Fishing - Photography by Wayne Heim",
-    "description": "Gone Fishing - view of one of the covered bridges in Conneaut, Ohio with a man fishing in the stream turns moving water into traditional fine art landscape photography in Conneaut Harbor, Ohio, with current, bank, and surrounding terrain shaping the frame. This painterly river scene creates water landscape wall art rooted in motion, reflection, and place.",
+    "description": "Gone Fishing - view of one of the covered bridges in Conneaut, Ohio with a man fishing in the stream turns moving water into traditional fine art landscape photography in Conneaut Harbor, Ohio, with current, bank, and surrounding terrain shaping the frame.",
     "alt": "Over the Edge   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-T3SRpvm/A",
     "keywords": [
@@ -4024,7 +4024,7 @@ export const galleryData = [
   {
     "id": "i-N5kKwLn",
     "title": "Fall Stream - Photography by Wayne Heim",
-    "description": "Fall Stream - stream with little rapids flows through the Metro Parks turns moving water into traditional fine art landscape photography, with current, bank, and surrounding terrain shaping the frame. This painterly river scene creates water landscape wall art rooted in motion, reflection, and place.",
+    "description": "Fall Stream - stream with little rapids flows through the Metro Parks turns moving water into traditional fine art landscape photography, with current, bank, and surrounding terrain shaping the frame.",
     "alt": "Gone Fishing - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-N5kKwLn/A",
     "keywords": [
@@ -4057,7 +4057,7 @@ export const galleryData = [
   {
     "id": "i-6mVwQ85",
     "title": "Looks Like Ice   Black & White Photography by Wayne Heim",
-    "description": "Angle of photograph makes white water look like ice as it flows by. Black & white view becomes traditional fine art water landscape photography, shaped by water, light, and surrounding terrain. This painterly water scene creates wall art rooted in reflection, atmosphere, and the quiet presence of place.",
+    "description": "Angle of photograph makes white water look like ice as it flows by. Black & white view becomes traditional fine art water landscape photography, shaped by water, light, and surrounding terrain.",
     "alt": "Fall Stream - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-6mVwQ85/A",
     "keywords": [
@@ -4090,7 +4090,7 @@ export const galleryData = [
   {
     "id": "i-SFZKKFt",
     "title": "Dueling Falls closer   Photography by Wayne Heim",
-    "description": "Dueling Waterfalls created by slab rock in the middle. Another view of the Chagrin River in Ohio . loser view becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Dueling Waterfalls created by slab rock in the middle. Another view of the Chagrin River in Ohio. loser view becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Looks Like Ice   Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-SFZKKFt/A",
     "keywords": [
@@ -4123,7 +4123,7 @@ export const galleryData = [
   {
     "id": "i-WmfkrcW",
     "title": "Mentor Lighthouse      Black & White Photography by Wayne  Heim",
-    "description": "Lighthouse in Black & White - view of the Fairport AHarbor Lighthouse on Lake Erie becomes traditional fine art water photography in Fairport Harbor, Ohio, where still surface, shoreline, and atmosphere create the image’s quiet pull. This water landscape photograph creates wall art rooted in reflection, distance, and the calm of open water.",
+    "description": "Lighthouse in Black & White - view of the Fairport AHarbor Lighthouse on Lake Erie becomes traditional fine art water photography in Fairport Harbor, Ohio, where still surface, shoreline, and atmosphere create the image’s quiet pull.",
     "alt": "Dueling Falls closer   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-WmfkrcW/A",
     "keywords": [
@@ -4156,7 +4156,7 @@ export const galleryData = [
   {
     "id": "i-v27kDnS",
     "title": "Is It Ice?   Photography by Wayne Heim",
-    "description": "Reflections in the water appear like sheets of ice below the water fall becomes traditional fine art water landscape photography in Berea, Ohio, shaped by water, light, and surrounding terrain. This painterly water scene creates wall art rooted in reflection, atmosphere, and the quiet presence of place.",
+    "description": "Reflections in the water appear like sheets of ice below the water fall becomes traditional fine art water landscape photography in Berea, Ohio, shaped by water, light, and surrounding terrain.",
     "alt": "Mentor Lighthouse      Black & White Photography by Wayne  Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-v27kDnS/A",
     "keywords": [
@@ -4189,7 +4189,7 @@ export const galleryData = [
   {
     "id": "i-SFHZKkz",
     "title": "Faroe Waves 3   Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands becomes traditional fine art seascape photography, shaped by shoreline, water, and weather. This water landscape photograph creates coastal wall art rooted in movement, texture, and the meeting of land and sea.",
+    "description": "Fine art landscape photography of the Faroe Islands becomes traditional fine art seascape photography, shaped by shoreline, water, and weather.",
     "alt": "Is It Ice?   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-SFHZKkz/A",
     "keywords": [
@@ -4222,7 +4222,7 @@ export const galleryData = [
   {
     "id": "i-6q5gXJP",
     "title": "Faroe Waves 4   Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands becomes traditional fine art seascape photography, shaped by shoreline, water, and weather. This water landscape photograph creates coastal wall art rooted in movement, texture, and the meeting of land and sea.",
+    "description": "Fine art landscape photography of the Faroe Islands becomes traditional fine art seascape photography, shaped by shoreline, water, and weather.",
     "alt": "Faroe Waves 3   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-6q5gXJP/A",
     "keywords": [
@@ -4255,7 +4255,7 @@ export const galleryData = [
   {
     "id": "i-zSqxXtw",
     "title": "Faroe Waves  5    Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands becomes traditional fine art seascape photography, shaped by shoreline, water, and weather. This water landscape photograph creates coastal wall art rooted in movement, texture, and the meeting of land and sea.",
+    "description": "Fine art landscape photography of the Faroe Islands becomes traditional fine art seascape photography, shaped by shoreline, water, and weather.",
     "alt": "Faroe Waves 4   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-zSqxXtw/A",
     "keywords": [
@@ -4288,7 +4288,7 @@ export const galleryData = [
   {
     "id": "i-m2wzGs2",
     "title": "Crashing Waves in Faroes 3    Black and White Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands becomes traditional fine art seascape photography, shaped by shoreline, water, and weather. This water landscape photograph creates coastal wall art rooted in movement, texture, and the meeting of land and sea.",
+    "description": "Fine art, black & white, landscape photography of the Faroe Islands becomes traditional fine art seascape photography, shaped by shoreline, water, and weather.",
     "alt": "Faroe Waves  5    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-m2wzGs2/A",
     "keywords": [
@@ -4321,7 +4321,7 @@ export const galleryData = [
   {
     "id": "i-wSx559f",
     "title": "Faroe Waves 6   Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands becomes traditional fine art seascape photography, shaped by shoreline, water, and weather. This water landscape photograph creates coastal wall art rooted in movement, texture, and the meeting of land and sea.",
+    "description": "Fine art landscape photography of the Faroe Islands becomes traditional fine art seascape photography, shaped by shoreline, water, and weather.",
     "alt": "Crashing Waves in Faroes 3    Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-wSx559f/A",
     "keywords": [
@@ -4354,7 +4354,7 @@ export const galleryData = [
   {
     "id": "i-fGsWc5H",
     "title": "Crashing Waves in Faroes 2   Black and White Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands becomes traditional fine art seascape photography, shaped by shoreline, water, and weather. This water landscape photograph creates coastal wall art rooted in movement, texture, and the meeting of land and sea.",
+    "description": "Fine art, black & white, landscape photography of the Faroe Islands becomes traditional fine art seascape photography, shaped by shoreline, water, and weather.",
     "alt": "Faroe Waves 6   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-fGsWc5H/A",
     "keywords": [
@@ -4387,7 +4387,7 @@ export const galleryData = [
   {
     "id": "i-6HH4L3v",
     "title": "Faroe Waves 7   Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands becomes traditional fine art seascape photography, shaped by shoreline, water, and weather. This water landscape photograph creates coastal wall art rooted in movement, texture, and the meeting of land and sea.",
+    "description": "Fine art landscape photography of the Faroe Islands becomes traditional fine art seascape photography, shaped by shoreline, water, and weather.",
     "alt": "Crashing Waves in Faroes 2   Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-6HH4L3v/A",
     "keywords": [
@@ -4420,7 +4420,7 @@ export const galleryData = [
   {
     "id": "i-Wf6337s",
     "title": "Little Steeple in the Faroe Islands    Photography by Wayne Heim",
-    "description": "Fine art landscape photography of the Faroe Islands becomes traditional fine art water landscape photography, shaped by water, light, and surrounding terrain. This painterly water scene creates wall art rooted in reflection, atmosphere, and the quiet presence of place.",
+    "description": "Fine art landscape photography of the Faroe Islands becomes traditional fine art water landscape photography, shaped by water, light, and surrounding terrain.",
     "alt": "Faroe Waves 7   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Wf6337s/A",
     "keywords": [
@@ -4453,7 +4453,7 @@ export const galleryData = [
   {
     "id": "i-FxL2Ktq",
     "title": "Waves Crash in the Faroes       Black and White Photography by Wayne Heim",
-    "description": "Fine art, black & white, landscape photography of the Faroe Islands becomes traditional fine art seascape photography, shaped by shoreline, water, and weather. This water landscape photograph creates coastal wall art rooted in movement, texture, and the meeting of land and sea.",
+    "description": "Fine art, black & white, landscape photography of the Faroe Islands becomes traditional fine art seascape photography, shaped by shoreline, water, and weather.",
     "alt": "Little Steeple in the Faroe Islands    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-FxL2Ktq/A",
     "keywords": [
@@ -4486,7 +4486,7 @@ export const galleryData = [
   {
     "id": "i-JdTbNvz",
     "title": "Goðafoss Waterfall at sunset in Iceland",
-    "description": "Goðafoss Waterfall at sunset in Iceland becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Goðafoss Waterfall at sunset in Iceland becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Waves Crash in the Faroes       Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-JdTbNvz/A",
     "keywords": [
@@ -4519,7 +4519,7 @@ export const galleryData = [
   {
     "id": "i-GGmGhkv",
     "title": "Goðafoss - Iceland waterfall sunset.",
-    "description": "Goðafoss - Iceland waterfall sunset becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Goðafoss - Iceland waterfall sunset becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Goðafoss Waterfall at sunset in Iceland",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-GGmGhkv/A",
     "keywords": [
@@ -4552,7 +4552,7 @@ export const galleryData = [
   {
     "id": "i-rWFC3dL",
     "title": "Goðafoss waterfall Iceland",
-    "description": "Goðafoss waterfall Iceland becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Goðafoss waterfall Iceland becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Goðafoss - Iceland waterfall sunset.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-rWFC3dL/A",
     "keywords": [
@@ -4585,7 +4585,7 @@ export const galleryData = [
   {
     "id": "i-VN5gQB3",
     "title": "Meeting of the Falls   Photography by Wayne Heim",
-    "description": "Two waterfalls in the Chagrin River seem to meet as the flow over the rocks becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Two waterfalls in the Chagrin River seem to meet as the flow over the rocks becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Goðafoss waterfall Iceland",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-VN5gQB3/A",
     "keywords": [
@@ -4618,7 +4618,7 @@ export const galleryData = [
   {
     "id": "i-fGKx3B6",
     "title": "Ru   Black & White Photography by Wayne Heim",
-    "description": "Rushing Rapids- Berea Falls churning water of rapids in black & White becomes traditional fine art water photography in Berea, Ohio, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Rushing Rapids- Berea Falls churning water of rapids in black & White becomes traditional fine art water photography in Berea, Ohio, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Meeting of the Falls   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-fGKx3B6/A",
     "keywords": [
@@ -4652,7 +4652,7 @@ export const galleryData = [
   {
     "id": "i-GvZBLcv",
     "title": "Waterfall Landscape Photography In Fine Art",
-    "description": "A waterfall landscape in Berea, Ohio becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "A waterfall landscape in Berea, Ohio becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Ru   Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-GvZBLcv/A",
     "keywords": [
@@ -4688,7 +4688,7 @@ export const galleryData = [
   {
     "id": "i-LR3Vr2N",
     "title": "Capturing The Truth Of A Moment",
-    "description": "A waterfall landscape becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "A waterfall landscape becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-LR3Vr2N/A",
     "keywords": [
@@ -4725,7 +4725,7 @@ export const galleryData = [
   {
     "id": "i-N3ShZHB",
     "title": "Fine Art Painterly River Scenes",
-    "description": "A waterfall landscape becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "A waterfall landscape becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Fine art landscape photography capturing Black River West Falls in Elyria, Ohio.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-N3ShZHB/A",
     "keywords": [
@@ -4762,7 +4762,7 @@ export const galleryData = [
   {
     "id": "i-KFLXt4D",
     "title": "The Essence Of Painterly River Scenes",
-    "description": "A waterfall landscape becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "A waterfall landscape becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-KFLXt4D/A",
     "keywords": [
@@ -4799,7 +4799,7 @@ export const galleryData = [
   {
     "id": "i-ScMsR8H",
     "title": "The Essence Of Waterfall Landscape Photography",
-    "description": "A waterfall landscape becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "A waterfall landscape becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-ScMsR8H/A",
     "keywords": [
@@ -4836,7 +4836,7 @@ export const galleryData = [
   {
     "id": "i-VScCFDQ",
     "title": "Exploring Waterfall Landscape Photography",
-    "description": "A waterfall landscape in Berea, Ohio becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "A waterfall landscape in Berea, Ohio becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-VScCFDQ/A",
     "keywords": [
@@ -4873,7 +4873,7 @@ export const galleryData = [
   {
     "id": "i-3jXg4hf",
     "title": "Fine Art The Truth Of A Moment",
-    "description": "A waterfall landscape in Berea, Ohio becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "A waterfall landscape in Berea, Ohio becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-3jXg4hf/A",
     "keywords": [
@@ -4910,7 +4910,7 @@ export const galleryData = [
   {
     "id": "i-jgkhwcs",
     "title": "Waterfall Landscape Photography Landscape",
-    "description": "A waterfall landscape in Vermont becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "A waterfall landscape in Vermont becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-jgkhwcs/A",
     "keywords": [
@@ -4946,7 +4946,7 @@ export const galleryData = [
   {
     "id": "i-sRRJHVz",
     "title": "The Truth Of A Moment Landscape",
-    "description": "A waterfall landscape in Vermont becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "A waterfall landscape in Vermont becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-sRRJHVz/A",
     "keywords": [
@@ -4983,7 +4983,7 @@ export const galleryData = [
   {
     "id": "i-7pG4nQv",
     "title": "The Essence Of Waterfall Landscape Photography",
-    "description": "A waterfall landscape in Vermont becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "A waterfall landscape in Vermont becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-7pG4nQv/A",
     "keywords": [
@@ -5020,7 +5020,7 @@ export const galleryData = [
   {
     "id": "i-DKPmrRN",
     "title": "Fine Art The Truth Of A Moment",
-    "description": "A waterfall landscape in Vermont becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "A waterfall landscape in Vermont becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-DKPmrRN/A",
     "keywords": [
@@ -5057,7 +5057,7 @@ export const galleryData = [
   {
     "id": "i-T3fx2pT",
     "title": "Capturing Painterly River Scenes",
-    "description": "A waterfall landscape in Vermont becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "A waterfall landscape in Vermont becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-T3fx2pT/A",
     "keywords": [
@@ -5094,7 +5094,7 @@ export const galleryData = [
   {
     "id": "i-5RjNxDr",
     "title": "Waterfall Landscape Photography Study",
-    "description": "A waterfall landscape in Vermont becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "A waterfall landscape in Vermont becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-5RjNxDr/A",
     "keywords": [
@@ -5131,7 +5131,7 @@ export const galleryData = [
   {
     "id": "i-Wkmt5Jm",
     "title": "Pine Trees Along the Lake Edge",
-    "description": "Pine Trees Along the Lake Edge becomes traditional fine art water photography in Emerald Lake, where still surface, shoreline, and atmosphere create the image’s quiet pull. This water landscape photograph creates wall art rooted in reflection, distance, and the calm of open water.",
+    "description": "Pine Trees Along the Lake Edge becomes traditional fine art water photography in Emerald Lake, where still surface, shoreline, and atmosphere create the image’s quiet pull.",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Wkmt5Jm/A",
     "keywords": [
@@ -5165,7 +5165,7 @@ export const galleryData = [
   {
     "id": "i-ScxVg7H",
     "title": "Sunrise at Emerald Lake Lodge in British Columbia",
-    "description": "Sunrise at Emerald Lake Lodge in British Columbia becomes traditional fine art water photography, where still surface, shoreline, and atmosphere create the image’s quiet pull. This water landscape photograph creates wall art rooted in reflection, distance, and the calm of open water.",
+    "description": "Sunrise at Emerald Lake Lodge in British Columbia becomes traditional fine art water photography, where still surface, shoreline, and atmosphere create the image’s quiet pull.",
     "alt": "Pine Trees Along the Lake Edge",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-ScxVg7H/A",
     "keywords": [
@@ -5199,7 +5199,7 @@ export const galleryData = [
   {
     "id": "i-dBd5pHx",
     "title": "Morning Fog at Emerald Lake",
-    "description": "Morning Fog at Emerald Lake becomes traditional fine art water photography, where still surface, shoreline, and atmosphere create the image’s quiet pull. This water landscape photograph creates wall art rooted in reflection, distance, and the calm of open water.",
+    "description": "Morning Fog at Emerald Lake becomes traditional fine art water photography, where still surface, shoreline, and atmosphere create the image’s quiet pull.",
     "alt": "Sunrise at Emerald Lake Lodge in British Columbia",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-dBd5pHx/A",
     "keywords": [
@@ -5233,7 +5233,7 @@ export const galleryData = [
   {
     "id": "i-86Nsnnc",
     "title": "Landslide and Mountain Peaks Reflecting on Emerald Lake",
-    "description": "Landslide and Mountain Peaks Reflecting on Emerald Lake becomes traditional fine art water photography, where still surface, shoreline, and atmosphere create the image’s quiet pull. This water landscape photograph creates wall art rooted in reflection, distance, and the calm of open water.",
+    "description": "Landslide and Mountain Peaks Reflecting on Emerald Lake becomes traditional fine art water photography, where still surface, shoreline, and atmosphere create the image’s quiet pull.",
     "alt": "Morning Fog at Emerald Lake",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-86Nsnnc/A",
     "keywords": [
@@ -5267,7 +5267,7 @@ export const galleryData = [
   {
     "id": "i-Nvn4r5N",
     "title": "Sunset on Emerald Lake and the Lodge",
-    "description": "Sunset on Emerald Lake and the Lodge becomes traditional fine art water photography, where still surface, shoreline, and atmosphere create the image’s quiet pull. This water landscape photograph creates wall art rooted in reflection, distance, and the calm of open water.",
+    "description": "Sunset on Emerald Lake and the Lodge becomes traditional fine art water photography, where still surface, shoreline, and atmosphere create the image’s quiet pull.",
     "alt": "Landslide and Mountain Peaks Reflecting on Emerald Lake",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Nvn4r5N/A",
     "keywords": [
@@ -5301,7 +5301,7 @@ export const galleryData = [
   {
     "id": "i-rPXvXBk",
     "title": "Rock Ledges of Athabasca Falls",
-    "description": "Rock Ledges of Athabasca Falls becomes traditional fine art water photography in Emerald Lake, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Rock Ledges of Athabasca Falls becomes traditional fine art water photography in Emerald Lake, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Sunset on Emerald Lake and the Lodge",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-rPXvXBk/A",
     "keywords": [
@@ -5335,7 +5335,7 @@ export const galleryData = [
   {
     "id": "i-g6pX48d",
     "title": "The Milky Way Over Sunwapta Falls",
-    "description": "The Milky Way Over Sunwapta Falls becomes traditional fine art water photography in Emerald Lake, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "The Milky Way Over Sunwapta Falls becomes traditional fine art water photography in Emerald Lake, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Rock Ledges of Athabasca Falls",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-g6pX48d/A",
     "keywords": [
@@ -5369,7 +5369,7 @@ export const galleryData = [
   {
     "id": "i-h8WQFDs",
     "title": "Standing on the Ice-Covered Moraine Lake in Banff National Park",
-    "description": "Standing on the Ice-Covered Moraine Lake in Banff National Park becomes traditional fine art water photography in Emerald Lake, where still surface, shoreline, and atmosphere create the image’s quiet pull. This water landscape photograph creates wall art rooted in reflection, distance, and the calm of open water.",
+    "description": "Standing on the Ice-Covered Moraine Lake in Banff National Park becomes traditional fine art water photography in Emerald Lake, where still surface, shoreline, and atmosphere create the image’s quiet pull.",
     "alt": "The Milky Way Over Sunwapta Falls",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-h8WQFDs/A",
     "keywords": [
@@ -5403,7 +5403,7 @@ export const galleryData = [
   {
     "id": "i-vfxQXDw",
     "title": "Evidence of Landslides on the Mountains",
-    "description": "Evidence of Landslides on the Mountains becomes traditional fine art water photography in Emerald Lake, where still surface, shoreline, and atmosphere create the image’s quiet pull. This water landscape photograph creates wall art rooted in reflection, distance, and the calm of open water.",
+    "description": "Evidence of Landslides on the Mountains becomes traditional fine art water photography in Emerald Lake, where still surface, shoreline, and atmosphere create the image’s quiet pull.",
     "alt": "Standing on the Ice-Covered Moraine Lake in Banff National Park",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-vfxQXDw/A",
     "keywords": [
@@ -5437,7 +5437,7 @@ export const galleryData = [
   {
     "id": "i-SChqMBC",
     "title": "A Storm Rolling in at Emerald Lake",
-    "description": "A Storm Rolling in at Emerald Lake becomes traditional fine art water photography, where still surface, shoreline, and atmosphere create the image’s quiet pull. This water landscape photograph creates wall art rooted in reflection, distance, and the calm of open water.",
+    "description": "A Storm Rolling in at Emerald Lake becomes traditional fine art water photography, where still surface, shoreline, and atmosphere create the image’s quiet pull.",
     "alt": "Evidence of Landslides on the Mountains",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-SChqMBC/A",
     "keywords": [
@@ -5471,7 +5471,7 @@ export const galleryData = [
   {
     "id": "i-MmGfvfX",
     "title": "The Canadian Rockies from the Edge of Emerald Lake",
-    "description": "The Canadian Rockies from the Edge of Emerald Lake becomes traditional fine art water photography, where still surface, shoreline, and atmosphere create the image’s quiet pull. This water landscape photograph creates wall art rooted in reflection, distance, and the calm of open water.",
+    "description": "The Canadian Rockies from the Edge of Emerald Lake becomes traditional fine art water photography, where still surface, shoreline, and atmosphere create the image’s quiet pull.",
     "alt": "A Storm Rolling in at Emerald Lake",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-MmGfvfX/A",
     "keywords": [
@@ -5505,7 +5505,7 @@ export const galleryData = [
   {
     "id": "i-93dnGFW",
     "title": "An Eerie, Foggy Morning at Emerald Lake Lodge",
-    "description": "An Eerie, Foggy Morning at Emerald Lake Lodge becomes traditional fine art water photography, where still surface, shoreline, and atmosphere create the image’s quiet pull. This water landscape photograph creates wall art rooted in reflection, distance, and the calm of open water.",
+    "description": "An Eerie, Foggy Morning at Emerald Lake Lodge becomes traditional fine art water photography, where still surface, shoreline, and atmosphere create the image’s quiet pull.",
     "alt": "The Canadian Rockies from the Edge of Emerald Lake",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-93dnGFW/A",
     "keywords": [
@@ -5539,7 +5539,7 @@ export const galleryData = [
   {
     "id": "i-d4pjWhk",
     "title": "Morning Fog Sweeping Across Emerald Lake",
-    "description": "Morning Fog Sweeping Across Emerald Lake becomes traditional fine art water photography, where still surface, shoreline, and atmosphere create the image’s quiet pull. This water landscape photograph creates wall art rooted in reflection, distance, and the calm of open water.",
+    "description": "Morning Fog Sweeping Across Emerald Lake becomes traditional fine art water photography, where still surface, shoreline, and atmosphere create the image’s quiet pull.",
     "alt": "An Eerie, Foggy Morning at Emerald Lake Lodge",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-d4pjWhk/A",
     "keywords": [
@@ -5573,7 +5573,7 @@ export const galleryData = [
   {
     "id": "i-XQmGrxd",
     "title": "The Sun Breaking Through a Foggy Morning",
-    "description": "The Sun Breaking Through a Foggy Morning becomes traditional fine art water photography in Emerald Lake, where still surface, shoreline, and atmosphere create the image’s quiet pull. This water landscape photograph creates wall art rooted in reflection, distance, and the calm of open water.",
+    "description": "The Sun Breaking Through a Foggy Morning becomes traditional fine art water photography in Emerald Lake, where still surface, shoreline, and atmosphere create the image’s quiet pull.",
     "alt": "Morning Fog Sweeping Across Emerald Lake",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-XQmGrxd/A",
     "keywords": [
@@ -5607,7 +5607,7 @@ export const galleryData = [
   {
     "id": "i-G8SjQHw",
     "title": "Fog Rolling in Over the Pier of Emerald Lake",
-    "description": "Fog Rolling in Over the Pier of Emerald Lake becomes traditional fine art water photography, where still surface, shoreline, and atmosphere create the image’s quiet pull. This water landscape photograph creates wall art rooted in reflection, distance, and the calm of open water.",
+    "description": "Fog Rolling in Over the Pier of Emerald Lake becomes traditional fine art water photography, where still surface, shoreline, and atmosphere create the image’s quiet pull.",
     "alt": "The Sun Breaking Through a Foggy Morning",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-G8SjQHw/A",
     "keywords": [
@@ -5641,7 +5641,7 @@ export const galleryData = [
   {
     "id": "i-MWfpZWw",
     "title": "Pine Trees Reflecting on Emerald Lake",
-    "description": "Pine Trees Reflecting on Emerald Lake becomes traditional fine art water photography, where still surface, shoreline, and atmosphere create the image’s quiet pull. This water landscape photograph creates wall art rooted in reflection, distance, and the calm of open water.",
+    "description": "Pine Trees Reflecting on Emerald Lake becomes traditional fine art water photography, where still surface, shoreline, and atmosphere create the image’s quiet pull.",
     "alt": "Fog Rolling in Over the Pier of Emerald Lake",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-MWfpZWw/A",
     "keywords": [
@@ -5675,7 +5675,7 @@ export const galleryData = [
   {
     "id": "i-BqLgwDV",
     "title": "The Essence Of Waterfall Landscape Photography",
-    "description": "A waterfall landscape becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "A waterfall landscape becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Pine Trees Reflecting on Emerald Lake",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-BqLgwDV/A",
     "keywords": [
@@ -5711,7 +5711,7 @@ export const galleryData = [
   {
     "id": "i-9Tfz9Nk",
     "title": "The Truth Of A Moment Study",
-    "description": "A waterfall landscape becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "A waterfall landscape becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-9Tfz9Nk/A",
     "keywords": [
@@ -5748,7 +5748,7 @@ export const galleryData = [
   {
     "id": "i-QnWtwx3",
     "title": "Waterfall Landscape Photography - Painterly River Scenes",
-    "description": "A waterfall landscape becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "A waterfall landscape becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-QnWtwx3/A",
     "keywords": [
@@ -5785,7 +5785,7 @@ export const galleryData = [
   {
     "id": "i-R6q57Rs",
     "title": "The Essence Of Waterfall Landscape Photography",
-    "description": "A waterfall landscape in Iceland becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "A waterfall landscape in Iceland becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-R6q57Rs/A",
     "keywords": [
@@ -5822,7 +5822,7 @@ export const galleryData = [
   {
     "id": "i-RWr4ppX",
     "title": "The Essence Of The Truth Of A Moment",
-    "description": "A waterfall landscape becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "A waterfall landscape becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Collection of the Best Iceland fine art landscape photography.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-RWr4ppX/A",
     "keywords": [
@@ -5859,7 +5859,7 @@ export const galleryData = [
   {
     "id": "i-jJpmmzj",
     "title": "The Truth Of A Moment And Waterfall Landscape Photography",
-    "description": "A waterfall landscape in Montana becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "A waterfall landscape in Montana becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-jJpmmzj/A",
     "keywords": [
@@ -5896,7 +5896,7 @@ export const galleryData = [
   {
     "id": "i-NPKG2Mz",
     "title": "Emerald Lake Lodge at Night",
-    "description": "Emerald Lake Lodge at Night becomes traditional fine art water photography, where still surface, shoreline, and atmosphere create the image’s quiet pull. This water landscape photograph creates wall art rooted in reflection, distance, and the calm of open water.",
+    "description": "Emerald Lake Lodge at Night becomes traditional fine art water photography, where still surface, shoreline, and atmosphere create the image’s quiet pull.",
     "alt": "Fine art landscape photography of Glacier National Park and Montana.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-NPKG2Mz/A",
     "keywords": [
@@ -5930,7 +5930,7 @@ export const galleryData = [
   {
     "id": "i-5rfQTgH",
     "title": "Behind the Falls 2  Photography by Wayne Heim",
-    "description": "Photo from behind one of the many waterfalls in Iceland becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Photo from behind one of the many waterfalls in Iceland becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Emerald Lake Lodge at Night",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-5rfQTgH/A",
     "keywords": [
@@ -5964,7 +5964,7 @@ export const galleryData = [
   {
     "id": "i-x4ZHpcB",
     "title": "Road to the Water  Photography by Wayne Heim",
-    "description": "Road winds down to the water becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Road winds down to the water becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Behind the Falls 2  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-x4ZHpcB/A",
     "keywords": [
@@ -5998,7 +5998,7 @@ export const galleryData = [
   {
     "id": "i-bVZTc34",
     "title": "Shelter  In Faroe    Photography by Wayne Heim",
-    "description": "Shelter situated on the edge of the water in Faroe Islands becomes traditional fine art water landscape photography, shaped by water, light, and surrounding terrain. This painterly water scene creates wall art rooted in reflection, atmosphere, and the quiet presence of place.",
+    "description": "Shelter situated on the edge of the water in Faroe Islands becomes traditional fine art water landscape photography, shaped by water, light, and surrounding terrain.",
     "alt": "Road to the Water  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-bVZTc34/A",
     "keywords": [
@@ -6032,7 +6032,7 @@ export const galleryData = [
   {
     "id": "i-GbJTFrX",
     "title": "Fine Art Waterfall Landscape Photography",
-    "description": "A waterfall landscape becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "A waterfall landscape becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Shelter  In Faroe    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-GbJTFrX/A",
     "keywords": [
@@ -6069,7 +6069,7 @@ export const galleryData = [
   {
     "id": "i-d97Lvs5",
     "title": "Fighting the Waves    Photography by Wayne Heim",
-    "description": "Iceberg on shore fights against the battering waves on Iceland's coast becomes traditional fine art seascape photography, shaped by shoreline, water, and weather. This water landscape photograph creates coastal wall art rooted in movement, texture, and the meeting of land and sea.",
+    "description": "Iceberg on shore fights against the battering waves on Iceland's coast becomes traditional fine art seascape photography, shaped by shoreline, water, and weather.",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-d97Lvs5/A",
     "keywords": [
@@ -6103,7 +6103,7 @@ export const galleryData = [
   {
     "id": "i-9rpxxN9",
     "title": "Into the Sea  Photography by Wayne Heim",
-    "description": "Waterfall flows down to the sea in the Faroes becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Waterfall flows down to the sea in the Faroes becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Fighting the Waves    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-9rpxxN9/A",
     "keywords": [
@@ -6137,7 +6137,7 @@ export const galleryData = [
   {
     "id": "i-VrhMdzV",
     "title": "Seaside Pasture     Photography by Wayne Heim",
-    "description": "Small pasture sets by the water in Newfoundland becomes traditional fine art seascape photography in Newfoundland, Canada, shaped by shoreline, water, and weather. This water landscape photograph creates coastal wall art rooted in movement, texture, and the meeting of land and sea.",
+    "description": "Small pasture sets by the water in Newfoundland becomes traditional fine art seascape photography in Newfoundland, Canada, shaped by shoreline, water, and weather.",
     "alt": "Into the Sea  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-VrhMdzV/A",
     "keywords": [
@@ -6171,7 +6171,7 @@ export const galleryData = [
   {
     "id": "i-pnp5Z79",
     "title": "Purple Waterfall",
-    "description": "Scene from Iceland becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Scene from Iceland becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Seaside Pasture     Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-pnp5Z79/A",
     "keywords": [
@@ -6205,7 +6205,7 @@ export const galleryData = [
   {
     "id": "i-jCWwbVC",
     "title": "Iceland Coast  Photography by Wayne Heim",
-    "description": "Rugged coast of Iceland under a darkening sky becomes traditional fine art seascape photography, shaped by shoreline, water, and weather. This water landscape photograph creates coastal wall art rooted in movement, texture, and the meeting of land and sea.",
+    "description": "Rugged coast of Iceland under a darkening sky becomes traditional fine art seascape photography, shaped by shoreline, water, and weather.",
     "alt": "Purple Waterfall",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-jCWwbVC/A",
     "keywords": [
@@ -6239,7 +6239,7 @@ export const galleryData = [
   {
     "id": "i-MrcXxgX",
     "title": "Jokulsarlon Glacier Lagoon  Photography by Wayne Heim",
-    "description": "Lagoon created by the Jokulsarlon Glacier becomes traditional fine art water photography in Iceland, where still surface, shoreline, and atmosphere create the image’s quiet pull. This water landscape photograph creates wall art rooted in reflection, distance, and the calm of open water.",
+    "description": "Lagoon created by the Jokulsarlon Glacier becomes traditional fine art water photography in Iceland, where still surface, shoreline, and atmosphere create the image’s quiet pull.",
     "alt": "Iceland Coast  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-MrcXxgX/A",
     "keywords": [
@@ -6273,7 +6273,7 @@ export const galleryData = [
   {
     "id": "i-WTzWmSr",
     "title": "Getting Close   Photography by Wayne Heim",
-    "description": "A view of Skogafoss in close so you feel the spray becomes traditional fine art water photography in Iceland, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "A view of Skogafoss in close so you feel the spray becomes traditional fine art water photography in Iceland, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Jokulsarlon Glacier Lagoon  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-WTzWmSr/A",
     "keywords": [
@@ -6307,7 +6307,7 @@ export const galleryData = [
   {
     "id": "i-qTZBmxD",
     "title": "Skogafoss Waterfall From a Far   Photography by Wayne Heim",
-    "description": "View of the Skogafoss waterfall from a distance becomes traditional fine art water photography in Iceland, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "View of the Skogafoss waterfall from a distance becomes traditional fine art water photography in Iceland, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Getting Close   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-qTZBmxD/A",
     "keywords": [
@@ -6339,7 +6339,7 @@ export const galleryData = [
   {
     "id": "i-mKkQhqC",
     "title": "Full View of Kirkjufellsfoss    Photography by Wayne Heim",
-    "description": "Full view of the Kirkjufellsfoss area, waterfall, mountain, river in Iceland becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Full view of the Kirkjufellsfoss area, waterfall, mountain, river in Iceland becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Skogafoss Waterfall From a Far   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-mKkQhqC/A",
     "keywords": [
@@ -6371,7 +6371,7 @@ export const galleryData = [
   {
     "id": "i-dG5zDPC",
     "title": "Kirkjufells Mountain  Photography by Wayne Heim",
-    "description": "Kirkjufellsfoss waterfall flows before the jutting mountain becomes traditional fine art water photography in Iceland, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Kirkjufellsfoss waterfall flows before the jutting mountain becomes traditional fine art water photography in Iceland, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Full View of Kirkjufellsfoss    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-dG5zDPC/A",
     "keywords": [
@@ -6403,7 +6403,7 @@ export const galleryData = [
   {
     "id": "i-wmVjBm8",
     "title": "Waterfall Bridge   Photography by Wayne Heim",
-    "description": "Small foot bridge spans a water fall in Iceland becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Small foot bridge spans a water fall in Iceland becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Kirkjufells Mountain  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-wmVjBm8/A",
     "keywords": [
@@ -6435,7 +6435,7 @@ export const galleryData = [
   {
     "id": "i-B8MhZMS",
     "title": "Faroe Coast  Photography by Wayne Heim",
-    "description": "Mist hangs over the rugged coast of the Faroe Islands becomes traditional fine art seascape photography, shaped by shoreline, water, and weather. This water landscape photograph creates coastal wall art rooted in movement, texture, and the meeting of land and sea.",
+    "description": "Mist hangs over the rugged coast of the Faroe Islands becomes traditional fine art seascape photography, shaped by shoreline, water, and weather.",
     "alt": "Waterfall Bridge   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-B8MhZMS/A",
     "keywords": [
@@ -6467,7 +6467,7 @@ export const galleryData = [
   {
     "id": "i-8t6Gg8h",
     "title": "Looking Up at Watkins Glen   Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Watkins Glen, New York becomes traditional fine art water landscape photography, shaped by water, light, and surrounding terrain. This painterly water scene creates wall art rooted in reflection, atmosphere, and the quiet presence of place.",
+    "description": "Fine art landscape photography of Watkins Glen, New York becomes traditional fine art water landscape photography, shaped by water, light, and surrounding terrain.",
     "alt": "Faroe Coast  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-8t6Gg8h/A",
     "keywords": [
@@ -6499,7 +6499,7 @@ export const galleryData = [
   {
     "id": "i-3mbhR5S",
     "title": "Berea Bridge = Photography by Wayne Heim",
-    "description": "Berea Bridge - scene in the Metroparks of Cleveland, Ohio shows arches of bridge spanning the Rocky River turns moving water into traditional fine art landscape photography, with current, bank, and surrounding terrain shaping the frame. This painterly river scene creates water landscape wall art rooted in motion, reflection, and place.",
+    "description": "Berea Bridge - scene in the Metroparks of Cleveland, Ohio shows arches of bridge spanning the Rocky River turns moving water into traditional fine art landscape photography, with current, bank, and surrounding terrain shaping the frame.",
     "alt": "Looking Up at Watkins Glen   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-3mbhR5S/A",
     "keywords": [
@@ -6531,7 +6531,7 @@ export const galleryData = [
   {
     "id": "i-hpFHm3G",
     "title": "Painterly River Scenes",
-    "description": "A waterfall landscape in Iceland becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "A waterfall landscape in Iceland becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Berea Bridge = Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-hpFHm3G/A",
     "keywords": [
@@ -6566,7 +6566,7 @@ export const galleryData = [
   {
     "id": "i-PV859RK",
     "title": "The Truth Of A Moment",
-    "description": "A waterfall landscape in Vermont becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "A waterfall landscape in Vermont becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Fine art landscape photography of Iceland in the Summer.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-PV859RK/A",
     "keywords": [
@@ -6601,7 +6601,7 @@ export const galleryData = [
   {
     "id": "i-hVB6Pxq",
     "title": "Exploring Painterly River Scenes",
-    "description": "A waterfall landscape in Vermont becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "A waterfall landscape in Vermont becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-hVB6Pxq/A",
     "keywords": [
@@ -6636,7 +6636,7 @@ export const galleryData = [
   {
     "id": "i-Bm9GTTT",
     "title": "Waterfall Landscape Photography - Painterly River Scenes",
-    "description": "A waterfall landscape becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "A waterfall landscape becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Bm9GTTT/A",
     "keywords": [
@@ -6671,7 +6671,7 @@ export const galleryData = [
   {
     "id": "i-Fz6B7bw",
     "title": "Seawall in Fairport-2.  Photography by Wayne Heim",
-    "description": "Seawall in Fairport - seawall leading to the lighthouse in Fairport, Ohio places a lighthouse within the larger water landscape in Fairport Harbor, Ohio, balancing structure, shoreline, and weather. This traditional fine art photograph creates coastal wall art rooted in navigation, water, and the authority of a landmark by the shore.",
+    "description": "Seawall in Fairport - seawall leading to the lighthouse in Fairport, Ohio places a lighthouse within the larger water landscape in Fairport Harbor, Ohio, balancing structure, shoreline, and weather.",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Fz6B7bw/A",
     "keywords": [
@@ -6703,7 +6703,7 @@ export const galleryData = [
   {
     "id": "i-6brnssc",
     "title": "Cotton Candy    Photography by Wayne Heim",
-    "description": "Clouds hang like cotton candy over the sea off Iceland becomes traditional fine art seascape photography, shaped by shoreline, water, and weather. This water landscape photograph creates coastal wall art rooted in movement, texture, and the meeting of land and sea.",
+    "description": "Clouds hang like cotton candy over the sea off Iceland becomes traditional fine art seascape photography, shaped by shoreline, water, and weather.",
     "alt": "Seawall in Fairport-2.  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-6brnssc/A",
     "keywords": [
@@ -6735,7 +6735,7 @@ export const galleryData = [
   {
     "id": "i-VtTWVJf",
     "title": "Boat Houses   Photography by Wayne Heim",
-    "description": "Boat Houses on the shore of the Faroe Islands becomes traditional fine art seascape photography, shaped by shoreline, water, and weather. This water landscape photograph creates coastal wall art rooted in movement, texture, and the meeting of land and sea.",
+    "description": "Boat Houses on the shore of the Faroe Islands becomes traditional fine art seascape photography, shaped by shoreline, water, and weather.",
     "alt": "Cotton Candy    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-VtTWVJf/A",
     "keywords": [
@@ -6767,7 +6767,7 @@ export const galleryData = [
   {
     "id": "i-6Vj6H86",
     "title": "Long View of Letchworth Canyon   Black & White Photography by Wayne Heim",
-    "description": "Long View of Letchworth Canyon becomes traditional fine art water landscape photography in Letchworth State Park, New York, shaped by water, light, and surrounding terrain. This painterly water scene creates wall art rooted in reflection, atmosphere, and the quiet presence of place.",
+    "description": "Long View of Letchworth Canyon becomes traditional fine art water landscape photography in Letchworth State Park, New York, shaped by water, light, and surrounding terrain.",
     "alt": "Boat Houses   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-6Vj6H86/A",
     "keywords": [
@@ -6799,7 +6799,7 @@ export const galleryData = [
   {
     "id": "i-BZZRZwC",
     "title": "Around the Bend. Black and White Photography by Wayne Heim",
-    "description": "Around the Bend. Black and White becomes traditional fine art water landscape photography in Letchworth State Park, New York, shaped by water, light, and surrounding terrain. This painterly water scene creates wall art rooted in reflection, atmosphere, and the quiet presence of place.",
+    "description": "Around the Bend. Black and White becomes traditional fine art water landscape photography in Letchworth State Park, New York, shaped by water, light, and surrounding terrain.",
     "alt": "Long View of Letchworth Canyon   Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-BZZRZwC/A",
     "keywords": [
@@ -6831,7 +6831,7 @@ export const galleryData = [
   {
     "id": "i-zdsdnTv",
     "title": "One Falls in Letchworth  Black & White Photography by Wayne Heim",
-    "description": "One Falls in Letchworth becomes traditional fine art water photography in Letchworth State Park, New York, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "One Falls in Letchworth becomes traditional fine art water photography in Letchworth State Park, New York, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Around the Bend. Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-zdsdnTv/A",
     "keywords": [
@@ -6895,7 +6895,7 @@ export const galleryData = [
   {
     "id": "i-f9xQRZJ",
     "title": "Flowing Falls    Photography by Wayne HEim",
-    "description": "Flowing Falls becomes traditional fine art water photography in Letchworth State Park, New York, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Flowing Falls becomes traditional fine art water photography in Letchworth State Park, New York, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "B & W Bridge  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-f9xQRZJ/A",
     "keywords": [
@@ -6927,7 +6927,7 @@ export const galleryData = [
   {
     "id": "i-KVgw4cV",
     "title": "Log Above Falls  Bllack & White Photography by Wayne Heim",
-    "description": "Log Above Falls Bllack & White becomes traditional fine art water photography in Letchworth State Park, New York, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Log Above Falls Bllack & White becomes traditional fine art water photography in Letchworth State Park, New York, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Flowing Falls    Photography by Wayne HEim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-KVgw4cV/A",
     "keywords": [
@@ -6959,7 +6959,7 @@ export const galleryData = [
   {
     "id": "i-cLWCRPG",
     "title": "Gentle Falls - Black & White Photography by Wayne Heim",
-    "description": "Gentle Falls - gently flowing water cascades over rocks in a stream located in the Metroparks becomes traditional fine art water photography in Ohio Metroparks, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Gentle Falls - gently flowing water cascades over rocks in a stream located in the Metroparks becomes traditional fine art water photography in Ohio Metroparks, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Log Above Falls  Bllack & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-cLWCRPG/A",
     "keywords": [
@@ -6991,7 +6991,7 @@ export const galleryData = [
   {
     "id": "i-7Wshb7S",
     "title": "Metro Falls - Black & White Photography by Wayne Heim",
-    "description": "Metro Falls - one of the many waterfalls in the Ohio Metro Park system becomes traditional fine art water photography in Ohio Metroparks, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Metro Falls - one of the many waterfalls in the Ohio Metro Park system becomes traditional fine art water photography in Ohio Metroparks, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Gentle Falls - Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-7Wshb7S/A",
     "keywords": [
@@ -7023,7 +7023,7 @@ export const galleryData = [
   {
     "id": "i-9rhB5Vr",
     "title": "Gentle Falls Too - Black & White Photography by Wayne Heim",
-    "description": "Gentle Falls Too - side view of gently cascading falls in the Metroparks becomes traditional fine art water photography in Ohio Metroparks, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Gentle Falls Too - side view of gently cascading falls in the Metroparks becomes traditional fine art water photography in Ohio Metroparks, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Metro Falls - Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-9rhB5Vr/A",
     "keywords": [
@@ -7055,7 +7055,7 @@ export const galleryData = [
   {
     "id": "i-MTB6xvk",
     "title": "Falls in the Glen - Black & White Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Watkins Glen, New York becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Fine art landscape photography of Watkins Glen, New York becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Gentle Falls Too - Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-MTB6xvk/A",
     "keywords": [
@@ -7087,7 +7087,7 @@ export const galleryData = [
   {
     "id": "i-P2MJv28",
     "title": "Stream to the Tetons  Black and White Photography by Wayne Heim",
-    "description": "Stream with the Teton Mountains in the background turns moving water into traditional fine art landscape photography in Yellowstone National Park, with current, bank, and surrounding terrain shaping the frame. This painterly river scene creates water landscape wall art rooted in motion, reflection, and place.",
+    "description": "Stream with the Teton Mountains in the background turns moving water into traditional fine art landscape photography in Yellowstone National Park, with current, bank, and surrounding terrain shaping the frame.",
     "alt": "Falls in the Glen - Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-P2MJv28/A",
     "keywords": [
@@ -7119,7 +7119,7 @@ export const galleryData = [
   {
     "id": "i-9BJXt7k",
     "title": "Kirkfell Mountain    Black & White Photography by Wayne Heim",
-    "description": "Kirkfell Mountain with waterfalls in the foreground becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Kirkfell Mountain with waterfalls in the foreground becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Stream to the Tetons  Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-9BJXt7k/A",
     "keywords": [
@@ -7151,7 +7151,7 @@ export const galleryData = [
   {
     "id": "i-736PQff",
     "title": "Gullfoss Waterfall   Black & White Photography by Wayne Heim",
-    "description": "Gullfoss waterfall fills canyon with mist and spray . One of Iceland's famous attractions becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Gullfoss waterfall fills canyon with mist and spray. One of Iceland's famous attractions becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Kirkfell Mountain    Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-736PQff/A",
     "keywords": [
@@ -7183,7 +7183,7 @@ export const galleryData = [
   {
     "id": "i-BcfMhpJ",
     "title": "Side View of Kirkjufellfoss  Black and White Photography by Wayne Heim",
-    "description": "Side view of the Kirkjufellfoss waterfall in Iceland becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Side view of the Kirkjufellfoss waterfall in Iceland becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Gullfoss Waterfall   Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-BcfMhpJ/A",
     "keywords": [
@@ -7215,7 +7215,7 @@ export const galleryData = [
   {
     "id": "i-BcKsHPB",
     "title": "Skogarfoss Waterfalls  Black & White Photography by Wayne Heim",
-    "description": "Skógafoss waterfall one of Iceland's most famous becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Skógafoss waterfall one of Iceland's most famous becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Side View of Kirkjufellfoss  Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-BcKsHPB/A",
     "keywords": [
@@ -7247,7 +7247,7 @@ export const galleryData = [
   {
     "id": "i-GQj3L9p",
     "title": "Closer Skogarfoss  Black and White Photography by Wayne Heim",
-    "description": "A close view of the Skógafoss waterfall but not so close that you get wet becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "A close view of the Skógafoss waterfall but not so close that you get wet becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Skogarfoss Waterfalls  Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-GQj3L9p/A",
     "keywords": [
@@ -7279,7 +7279,7 @@ export const galleryData = [
   {
     "id": "i-qJt7BwZ",
     "title": "Godafoss   Black and White Photography by Wayne Heim",
-    "description": "Godafoss is one of the many waterfalls in Iceland becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "Godafoss is one of the many waterfalls in Iceland becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Closer Skogarfoss  Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-qJt7BwZ/A",
     "keywords": [
@@ -7311,7 +7311,7 @@ export const galleryData = [
   {
     "id": "i-t9xpbJg",
     "title": "Behind the Falls    Black and White Photography by Wayne Heim",
-    "description": "View from behind one of Iceland's many waterfalls becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "View from behind one of Iceland's many waterfalls becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Godafoss   Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-t9xpbJg/A",
     "keywords": [
@@ -7343,7 +7343,7 @@ export const galleryData = [
   {
     "id": "i-3LqFBdB",
     "title": "Black & White Photo of Mountain Peaks on a Foggy Morning",
-    "description": "Black & White Photo of Mountain Peaks on a Foggy Morning becomes traditional fine art water photography in Emerald Lake, where still surface, shoreline, and atmosphere create the image’s quiet pull. This water landscape photograph creates wall art rooted in reflection, distance, and the calm of open water.",
+    "description": "Black & White Photo of Mountain Peaks on a Foggy Morning becomes traditional fine art water photography in Emerald Lake, where still surface, shoreline, and atmosphere create the image’s quiet pull.",
     "alt": "Behind the Falls    Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-3LqFBdB/A",
     "keywords": [
@@ -7375,7 +7375,7 @@ export const galleryData = [
   {
     "id": "i-gx8rvz5",
     "title": "Black & White Photo of Fog Over Emerald Lake",
-    "description": "Black & White Photo of Fog Over Emerald Lake becomes traditional fine art water photography, where still surface, shoreline, and atmosphere create the image’s quiet pull. This water landscape photograph creates wall art rooted in reflection, distance, and the calm of open water.",
+    "description": "Black & White Photo of Fog Over Emerald Lake becomes traditional fine art water photography, where still surface, shoreline, and atmosphere create the image’s quiet pull.",
     "alt": "Black & White Photo of Mountain Peaks on a Foggy Morning",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-gx8rvz5/A",
     "keywords": [
@@ -7407,7 +7407,7 @@ export const galleryData = [
   {
     "id": "i-MXJNMMn",
     "title": "Black & White Photo of Fog Resting Over Emerald Lake",
-    "description": "Black & White Photo of Fog Resting Over Emerald Lake becomes traditional fine art water photography, where still surface, shoreline, and atmosphere create the image’s quiet pull. This water landscape photograph creates wall art rooted in reflection, distance, and the calm of open water.",
+    "description": "Black & White Photo of Fog Resting Over Emerald Lake becomes traditional fine art water photography, where still surface, shoreline, and atmosphere create the image’s quiet pull.",
     "alt": "Black & White Photo of Fog Over Emerald Lake",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-MXJNMMn/A",
     "keywords": [
@@ -7439,7 +7439,7 @@ export const galleryData = [
   {
     "id": "i-dvccHH3",
     "title": "The Essence Of Painterly River Scenes",
-    "description": "A waterfall landscape becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "A waterfall landscape becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Black & White Photo of Fog Resting Over Emerald Lake",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-dvccHH3/A",
     "keywords": [
@@ -7474,7 +7474,7 @@ export const galleryData = [
   {
     "id": "i-GQNxX9S",
     "title": "Waterfall Landscape Photography Moment",
-    "description": "A waterfall landscape becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "A waterfall landscape becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-GQNxX9S/A",
     "keywords": [
@@ -7509,7 +7509,7 @@ export const galleryData = [
   {
     "id": "i-vz9W2wM",
     "title": "Painterly River Scenes Moment",
-    "description": "A waterfall landscape becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "A waterfall landscape becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-vz9W2wM/A",
     "keywords": [
@@ -7544,7 +7544,7 @@ export const galleryData = [
   {
     "id": "i-xP2GvWW",
     "title": "Rushing Rapids - Black & White Photography by Wayne Hein",
-    "description": "Rushing Rapids - rushing water on one of the rivers in the Metro Parks turns moving water into traditional fine art landscape photography, with current, bank, and surrounding terrain shaping the frame. This painterly river scene creates water landscape wall art rooted in motion, reflection, and place.",
+    "description": "Rushing Rapids - rushing water on one of the rivers in the Metro Parks turns moving water into traditional fine art landscape photography, with current, bank, and surrounding terrain shaping the frame.",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-xP2GvWW/A",
     "keywords": [
@@ -7576,7 +7576,7 @@ export const galleryData = [
   {
     "id": "i-Zpwjr25",
     "title": "Waterfall Landscape Photography Moment",
-    "description": "A waterfall landscape becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "A waterfall landscape becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Rushing Rapids - Black & White Photography by Wayne Hein",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Zpwjr25/A",
     "keywords": [
@@ -7611,7 +7611,7 @@ export const galleryData = [
   {
     "id": "i-9pskTBh",
     "title": "Capturing Painterly River Scenes",
-    "description": "A waterfall landscape becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "A waterfall landscape becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-9pskTBh/A",
     "keywords": [
@@ -7646,7 +7646,7 @@ export const galleryData = [
   {
     "id": "i-Kf2LS9q",
     "title": "Fine Art Painterly River Scenes",
-    "description": "A waterfall landscape becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene. This waterfall landscape photograph creates wall art rooted in motion, texture, and the quiet force of water.",
+    "description": "A waterfall landscape becomes traditional fine art water photography, with falling water, rock, and atmosphere carrying the scene.",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Kf2LS9q/A",
     "keywords": [
@@ -7681,7 +7681,7 @@ export const galleryData = [
   {
     "id": "i-LP5x7MS",
     "title": "Haystack Rock  Potography by Wayne Heim",
-    "description": "Hazy morning at Cannon Beach - Haystack Rock. Oregon becomes traditional fine art seascape photography in Cannon Beach, Oregon, shaped by shoreline, water, and weather. This water landscape photograph creates coastal wall art rooted in movement, texture, and the meeting of land and sea.",
+    "description": "Hazy morning at Cannon Beach - Haystack Rock. Oregon becomes traditional fine art seascape photography in Cannon Beach, Oregon, shaped by shoreline, water, and weather.",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-LP5x7MS/A",
     "keywords": [

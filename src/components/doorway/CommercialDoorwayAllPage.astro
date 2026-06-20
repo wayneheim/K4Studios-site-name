@@ -40,6 +40,10 @@ type GatewayVideoWidget = {
   ctaWidth?: string;
   ruleWidth?: string;
 };
+type AuthorityItem = {
+  label?: string;
+  text: string;
+};
 
 const {
   rawGalleryData,
@@ -81,7 +85,7 @@ const {
     variantDescriptor?: string;
     gatewayBrandLabel?: string;
   };
-  copy?: Record<string, string>;
+  copy?: Record<string, any>;
   faqItems?: Array<{ q: string; a: string[] }>;
   gridSections?: GridSection[];
   gatewayVideoWidget?: GatewayVideoWidget | null;
@@ -243,6 +247,44 @@ const gatewaySupportingParagraphs = gatewaySupportingCopy
   .split(/\n{2,}/)
   .map((paragraph) => paragraph.trim())
   .filter(Boolean);
+const defaultAuthorityItems: AuthorityItem[] = [
+  {
+    label: "Editorial recognition",
+    text: "Featured by Art of the West in a 2026 editorial on painterly Western photography, One-Image Movies, and narrative fine art process.",
+  },
+  {
+    label: "Juried Western exhibition",
+    text: "Two works accepted into the 2026 Western Spirit Juried Art Show & Sale at the Cheyenne Frontier Days Old West Museum.",
+  },
+  {
+    label: "Western Art Week",
+    text: "Accepted exhibitor in the 2026 Great Western Art Show during Western Art Week in Great Falls, Montana.",
+  },
+  {
+    label: "Artist background",
+    text: "Award-winning medical illustrator with a BFA from the Cleveland Institute of Art, bringing disciplined visual structure to the photographic work.",
+  },
+];
+const authorityItems = (Array.isArray(copy.authorityItems) ? copy.authorityItems : defaultAuthorityItems)
+  .map((item: AuthorityItem | string) => {
+    if (typeof item === "string") {
+      return { text: formatCopy(item) };
+    }
+
+    return {
+      label: item?.label ? formatCopy(item.label) : "",
+      text: item?.text ? formatCopy(item.text) : "",
+    };
+  })
+  .filter((item: AuthorityItem) => item.text);
+const showAuthorityPanel = copy.showAuthorityPanel !== false && authorityItems.length > 0;
+const authorityKicker = formatCopy(copy.authorityKicker || "Final Notes");
+const authorityTitle = formatCopy(copy.authorityTitle || "About the artist behind the work");
+const authorityIntro = formatCopy(copy.authorityIntro || "Wayne Heim's painterly Western photography is grounded in decades of visual storytelling as a fine art photographer and award-winning medical illustrator, with peer-reviewed exhibition and editorial recognition in Western art contexts.");
+const authorityPrimaryHref = String(copy.authorityPrimaryHref || "/News-Awards");
+const authorityPrimaryLabel = formatCopy(copy.authorityPrimaryLabel || "View press, awards, and exhibitions");
+const authoritySecondaryHref = String(copy.authoritySecondaryHref || "/Other/Bio");
+const authoritySecondaryLabel = formatCopy(copy.authoritySecondaryLabel || "About Wayne Heim");
 const standardPrintSeries = getStandardPrintSeries() as Array<{
   name: string;
   subtitle: string;
@@ -679,6 +721,7 @@ const faqRight = faqItems.slice(faqSplitIndex);
                     height="160"
                   />
                 </div>
+                <span class="sr-only">{item.current ? `Current collection: ${displayTitle}` : dockActionLabel}</span>
               </a>
             );
           })}
@@ -1219,6 +1262,7 @@ const faqRight = faqItems.slice(faqSplitIndex);
                     height="160"
                   />
                 </div>
+                <span class="sr-only">{item.current ? `Current collection: ${displayTitle}` : dockActionLabel}</span>
               </a>
             );
           })}
@@ -1226,6 +1270,28 @@ const faqRight = faqItems.slice(faqSplitIndex);
         </div>
       </div>
     </section>
+    )}
+
+    {showAuthorityPanel && (
+      <section class="artist-authority" aria-labelledby="artist-authority-heading">
+        <div class="artist-authority__copy">
+          <p class="artist-authority__kicker">{authorityKicker}</p>
+          <h2 id="artist-authority-heading">{authorityTitle}</h2>
+          <p>{authorityIntro}</p>
+          <div class="artist-authority__links">
+            <a href={authorityPrimaryHref}>{authorityPrimaryLabel}</a>
+            <a href={authoritySecondaryHref}>{authoritySecondaryLabel}</a>
+          </div>
+        </div>
+        <ul class="artist-authority__list" aria-label="Wayne Heim recognition and credentials">
+          {authorityItems.map((item: AuthorityItem) => (
+            <li>
+              {item.label && <strong>{item.label}</strong>}
+              <span>{item.text}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
     )}
 
     {faqItems.length > 0 && (
@@ -1502,6 +1568,94 @@ const faqRight = faqItems.slice(faqSplitIndex);
     }
     .gateway-artwork-column :global(.gateway-video-widget .narrative-video-cta) {
       box-shadow:0 8px 20px rgba(35,26,19,.08);
+    }
+
+    .artist-authority {
+      width:min(100%, 1020px);
+      margin:0 auto 24px;
+      padding:18px 20px 20px;
+      display:grid;
+      grid-template-columns:minmax(0, .86fr) minmax(0, 1.14fr);
+      gap:28px;
+      align-items:start;
+      border-top:1px solid #dccfbe;
+      border-bottom:1px solid #dccfbe;
+      background:#fbfaf8;
+      color:#332820;
+    }
+    .artist-authority__copy {
+      min-width:0;
+    }
+    .artist-authority__kicker {
+      margin:0 0 8px;
+      color:#7a6047;
+      font-size:.73rem;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+    .artist-authority h2 {
+      margin:0;
+      color:#241b14;
+      font-size:clamp(1.35rem, 2.2vw, 2rem);
+      line-height:1.12;
+      font-weight:700;
+      text-wrap:balance;
+    }
+    .artist-authority p {
+      margin:12px 0 0;
+      color:#44362b;
+      font-size:.94rem;
+      line-height:1.68;
+      max-width:39rem;
+    }
+    .artist-authority__links {
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px 16px;
+      margin-top:14px;
+      font-size:.84rem;
+      line-height:1.35;
+    }
+    .artist-authority__links a {
+      color:#6b3f23;
+      text-decoration:none;
+      border-bottom:1px solid rgba(107,63,35,.34);
+    }
+    .artist-authority__links a:hover,
+    .artist-authority__links a:focus-visible {
+      color:#3b2112;
+      border-bottom-color:currentColor;
+    }
+    .artist-authority__list {
+      list-style:none;
+      margin:0;
+      padding:0;
+      display:grid;
+      gap:10px;
+    }
+    .artist-authority__list li {
+      display:grid;
+      grid-template-columns:minmax(9.4rem, .42fr) minmax(0, 1fr);
+      gap:12px;
+      padding:0 0 10px;
+      border-bottom:1px solid rgba(151,124,96,.22);
+      color:#44362b;
+      font-size:.88rem;
+      line-height:1.58;
+    }
+    .artist-authority__list li:last-child {
+      padding-bottom:0;
+      border-bottom:0;
+    }
+    .artist-authority__list strong {
+      color:#2d2118;
+      font-size:.76rem;
+      line-height:1.35;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+    }
+    .artist-authority__list span {
+      min-width:0;
     }
 
     .collection-dock {
@@ -3092,6 +3246,10 @@ const faqRight = faqItems.slice(faqSplitIndex);
       .gateway-artwork img {
         width:100%;
       }
+      .artist-authority {
+        grid-template-columns:1fr;
+        gap:18px;
+      }
       .series-widget {
         grid-template-columns:repeat(2,minmax(0,1fr));
       }
@@ -3235,6 +3393,17 @@ const faqRight = faqItems.slice(faqSplitIndex);
       .collection-gateway {
         margin:12px auto 18px;
         padding:12px 12px 14px;
+      }
+      .artist-authority {
+        margin:0 auto 18px;
+        padding:16px 14px 18px;
+      }
+      .artist-authority__links {
+        gap:8px 14px;
+      }
+      .artist-authority__list li {
+        grid-template-columns:1fr;
+        gap:4px;
       }
       .catalog-anchor-rule {
         width:calc(100% - 32px);

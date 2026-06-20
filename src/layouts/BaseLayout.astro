@@ -126,13 +126,16 @@ const normalizeDescription = (text = '', fallback = '', minimumLength = 110, max
 const titleTextOptions = { preserveDashes: meta.preserveTitleDashes === true };
 const galleryTitle = meta.seoTitle || title || meta.title || meta.ogTitle || 'K4 Studios - Fine Art Photography';
 let pageTitle = isImagePage
-  ? (preloadImage?.title || meta.ogTitle || meta.ogImageTitle || galleryTitle)
+  ? (meta.seoTitle || title || meta.title || meta.ogTitle || meta.twitterTitle || meta.ogImageTitle || preloadImage?.title || galleryTitle)
   : galleryTitle;
 
 // Remove HTML & redundant separators
-const cleanTitleBase = normalizeMetaText(pageTitle || '', titleTextOptions)
-  .replace(/\s*\|\s*Wayne Heim.*$/gi, '')
-  .trim();
+const normalizedTitleBase = normalizeMetaText(pageTitle || '', titleTextOptions);
+const cleanTitleBase = isImagePage
+  ? normalizedTitleBase.trim()
+  : normalizedTitleBase
+      .replace(/\s*\|\s*Wayne Heim.*$/gi, '')
+      .trim();
 const cleanTitle = isImagePage
   ? cleanTitleBase
   : trimTitle(cleanTitleBase, 95, titleTextOptions);
@@ -257,7 +260,7 @@ const productAvailability = commerceOffer?.availability
   : null;
 const ogType = meta.ogType || (isImagePage && commerceOffer ? "product" : (isImagePage ? "article" : "website"));
 
-const twitterTitle = meta.twitterTitle || finalTitle;
+const twitterTitle = isImagePage ? finalTitle : (meta.twitterTitle || finalTitle);
 const twitterImage = toAbsoluteProxyUrl(meta.twitterImage || rawOgImage, 'l');
 const twitterUrl = ensureAbsoluteUrl(meta.twitterUrl || ogUrl);
 

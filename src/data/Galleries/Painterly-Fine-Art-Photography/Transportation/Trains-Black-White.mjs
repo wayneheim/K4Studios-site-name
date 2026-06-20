@@ -25,7 +25,7 @@ export const galleryData = [
   {
     "id": "i-FrDFN7V",
     "title": "Fine Art Steam Engine Photography",
-    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Wayne Heim's vintage transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Light and structure shape a narrative rooted in transition, industry, and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-FrDFN7V/A",
     "keywords": [
@@ -62,7 +62,7 @@ export const galleryData = [
   {
     "id": "i-n6PjStj",
     "title": "Steam Engine Wall Art For Collectors In Fine Art",
-    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Wayne Heim's fine art transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Light and structure shape a narrative rooted in transition, industry, and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-n6PjStj/A",
     "keywords": [
@@ -98,7 +98,7 @@ export const galleryData = [
   {
     "id": "i-SfsCh3W",
     "title": "Creature of the darkness.",
-    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Wayne Heim's historic transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Light and structure shape a narrative rooted in transition, industry, and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-SfsCh3W/A",
     "keywords": [
@@ -130,7 +130,7 @@ export const galleryData = [
   {
     "id": "i-n6ktVfH",
     "title": "The Essence Of Vintage Train Photography For Man Cave",
-    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Wayne Heim's vintage transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Light and structure shape a narrative rooted in transition, industry, and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
     "alt": "Creature of the darkness.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-n6ktVfH/A",
     "keywords": [
@@ -167,7 +167,7 @@ export const galleryData = [
   {
     "id": "i-jwzQrKx",
     "title": "Steam Engine Art In Fine Art",
-    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Wayne Heim's fine art transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Light and structure shape a narrative rooted in transition, industry, and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-jwzQrKx/A",
     "keywords": [
@@ -204,7 +204,7 @@ export const galleryData = [
   {
     "id": "i-ML26tVm",
     "title": "Steam Engine Art Portrait",
-    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Wayne Heim's historic transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Light and structure shape a narrative rooted in transition, industry, and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-ML26tVm/A",
     "keywords": [
@@ -240,7 +240,7 @@ export const galleryData = [
   {
     "id": "i-JNBbHjN",
     "title": "Vintage Train Photography Moment",
-    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Wayne Heim's vintage transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Light and structure shape a narrative rooted in transition, industry, and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-JNBbHjN/A",
     "keywords": [
@@ -276,7 +276,7 @@ export const galleryData = [
   {
     "id": "i-NXqvv7J",
     "title": "Exploring Vintage Train Photography",
-    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Wayne Heim's fine art transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Light and structure shape a narrative rooted in transition, industry, and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-NXqvv7J/A",
     "keywords": [
@@ -313,7 +313,7 @@ export const galleryData = [
   {
     "id": "i-Lj6wfwt",
     "title": "Exploring Steam Engine Wall Art For Collectors",
-    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Wayne Heim's historic transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Light and structure shape a narrative rooted in transition, industry, and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-Lj6wfwt/A",
     "keywords": [
@@ -348,7 +348,7 @@ export const galleryData = [
   {
     "id": "i-CGvLHjK",
     "title": "Steam Engine Wall Art For Collectors Portrait",
-    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Wayne Heim's vintage transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Light and structure shape a narrative rooted in transition, industry, and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-CGvLHjK/A",
     "keywords": [
@@ -385,7 +385,7 @@ export const galleryData = [
   {
     "id": "i-wGGSxJM",
     "title": "Vintage Train Photography In Fine Art",
-    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Wayne Heim's fine art transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Light and structure shape a narrative rooted in transition, industry, and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-wGGSxJM/A",
     "keywords": [
@@ -421,7 +421,7 @@ export const galleryData = [
   {
     "id": "i-cBxjW3V",
     "title": "The Essence Of Vintage Train Photography For Man Cave",
-    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Wayne Heim's historic transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Light and structure shape a narrative rooted in transition, industry, and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-cBxjW3V/A",
     "keywords": [
@@ -458,7 +458,7 @@ export const galleryData = [
   {
     "id": "i-VRcx6Vb",
     "title": "Capturing Steam Engine Art",
-    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Wayne Heim's vintage transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Light and structure shape a narrative rooted in transition, industry, and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-VRcx6Vb/A",
     "keywords": [
@@ -494,7 +494,7 @@ export const galleryData = [
   {
     "id": "i-n492NmH",
     "title": "Exploring Steam Engine Wall Art For Collectors",
-    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Wayne Heim's fine art transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Light and structure shape a narrative rooted in transition, industry, and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-n492NmH/A",
     "keywords": [
@@ -530,7 +530,7 @@ export const galleryData = [
   {
     "id": "i-gtHP556",
     "title": "Fine Art Steam Engine Photography",
-    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Wayne Heim's historic transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Light and structure shape a narrative rooted in transition, industry, and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-gtHP556/A",
     "keywords": [
@@ -565,7 +565,7 @@ export const galleryData = [
   {
     "id": "i-jxpPrSQ",
     "title": "Steam Engine Art - Vintage Train Photography",
-    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Wayne Heim's vintage transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Light and structure shape a narrative rooted in transition, industry, and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-jxpPrSQ/A",
     "keywords": [
@@ -602,7 +602,7 @@ export const galleryData = [
   {
     "id": "i-hHdRfWJ",
     "title": "Steam Engine Wall Art For Collectors Moment",
-    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Wayne Heim's fine art transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Light and structure shape a narrative rooted in transition, industry, and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-hHdRfWJ/A",
     "keywords": [
@@ -637,7 +637,7 @@ export const galleryData = [
   {
     "id": "i-vQSzph5",
     "title": "Fine Art Vintage Train Photography For Man Cave",
-    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Wayne Heim's historic transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Light and structure shape a narrative rooted in transition, industry, and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-vQSzph5/A",
     "keywords": [
@@ -673,7 +673,7 @@ export const galleryData = [
   {
     "id": "i-4NQdjBP",
     "title": "Fine Art Vintage Train Photography For Man Cave",
-    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Wayne Heim's vintage transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Light and structure shape a narrative rooted in transition, industry, and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-4NQdjBP/A",
     "keywords": [
@@ -709,7 +709,7 @@ export const galleryData = [
   {
     "id": "i-nbZ2kwd",
     "title": "Steam Engine Wall Art For Collectors Study",
-    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Wayne Heim's fine art transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Light and structure shape a narrative rooted in transition, industry, and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-nbZ2kwd/A",
     "keywords": [
@@ -745,7 +745,7 @@ export const galleryData = [
   {
     "id": "i-MTqWVJ8",
     "title": "Steam Engine Wall Art For Collectors Portrait",
-    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Wayne Heim's historic transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Light and structure shape a narrative rooted in transition, industry, and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-MTqWVJ8/A",
     "keywords": [
@@ -781,7 +781,7 @@ export const galleryData = [
   {
     "id": "i-jbScHR5",
     "title": "Capturing Steam Engine Photography",
-    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Wayne Heim's vintage transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Light and structure shape a narrative rooted in transition, industry, and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-jbScHR5/A",
     "keywords": [
@@ -817,7 +817,7 @@ export const galleryData = [
   {
     "id": "i-BMTswCg",
     "title": "Vintage Train Photography Moment",
-    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Wayne Heim's fine art transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Light and structure shape a narrative rooted in transition, industry, and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-BMTswCg/A",
     "keywords": [
@@ -854,7 +854,7 @@ export const galleryData = [
   {
     "id": "i-CbbTFst",
     "title": "Vintage Train Photography In Fine Art",
-    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Wayne Heim's historic transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Light and structure shape a narrative rooted in transition, industry, and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-CbbTFst/A",
     "keywords": [
@@ -890,7 +890,7 @@ export const galleryData = [
   {
     "id": "i-MSGcRLk",
     "title": "The Essence Of Steam Engine Art",
-    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Wayne Heim's vintage transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Light and structure shape a narrative rooted in transition, industry, and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-MSGcRLk/A",
     "keywords": [
@@ -927,7 +927,7 @@ export const galleryData = [
   {
     "id": "i-Qk22N2c",
     "title": "Vintage Train Photography Moment",
-    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Wayne Heim's fine art transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Light and structure shape a narrative rooted in transition, industry, and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-Qk22N2c/A",
     "keywords": [
@@ -963,7 +963,7 @@ export const galleryData = [
   {
     "id": "i-FcdDxxw",
     "title": "Capturing Steam Engine Wall Art For Collectors",
-    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Wayne Heim's historic transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Light and structure shape a narrative rooted in transition, industry, and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-FcdDxxw/A",
     "keywords": [
@@ -999,7 +999,7 @@ export const galleryData = [
   {
     "id": "i-QdcLZLF",
     "title": "Vintage Train Photography For Man Cave - Vintage Train Photography",
-    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Wayne Heim's vintage transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Light and structure shape a narrative rooted in transition, industry, and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-QdcLZLF/A",
     "keywords": [
@@ -1036,7 +1036,7 @@ export const galleryData = [
   {
     "id": "i-nSnCQtj",
     "title": "Vintage Train Photography Portrait",
-    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Wayne Heim's fine art transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Light and structure shape a narrative rooted in transition, industry, and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-nSnCQtj/A",
     "keywords": [
@@ -1072,7 +1072,7 @@ export const galleryData = [
   {
     "id": "i-CBkjbnq",
     "title": "Steam Engine Wall Art For Collectors And Steam Engine Photography",
-    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Wayne Heim's historic transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Light and structure shape a narrative rooted in transition, industry, and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
+    "description": "A painterly fine art photograph of a steam locomotive, defined by motion rather than nostalgia. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-CBkjbnq/A",
     "keywords": [
