@@ -527,6 +527,7 @@ export function getStructuredData({
       isAccessibleForFree: true,
       ...(imagePublishedDate ? { datePublished: imagePublishedDate } : {}),
       ...(imageModifiedDate ? { dateModified: imageModifiedDate } : {}),
+      ...(data.commerce?.schema ? { offers: data.commerce.schema } : {}),
       inLanguage: "en",
       mainEntityOfPage: { "@type": "WebPage", "@id": data.pageUrl || data.url },
     };

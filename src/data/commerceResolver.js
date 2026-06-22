@@ -320,6 +320,7 @@ function buildCommerceSchema({ pageUrl, offerPrices }) {
     priceCurrency: "USD",
     lowPrice: Math.min(...prices),
     highPrice: Math.max(...prices),
+    offerCount: prices.length,
     availability: "https://schema.org/InStock",
     seller: { "@id": "https://www.k4studios.com/#organization" },
   };

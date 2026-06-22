@@ -516,6 +516,7 @@ export const sitemap: SitemapEntry[] = ${JSON.stringify(dedupedEntries, null, 2)
   const childSitemaps = [
     'sitemap.xml',
     'blog-sitemap.xml',
+    'product-sitemap.xml',
     'image-sitemap-index.xml',
   ];
 

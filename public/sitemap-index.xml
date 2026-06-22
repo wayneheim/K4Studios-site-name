@@ -2,14 +2,18 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
     <loc>https://www.k4studios.com/sitemap.xml</loc>
-    <lastmod>2026-06-20T21:35:06.870Z</lastmod>
+    <lastmod>2026-06-22T16:51:12.229Z</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://www.k4studios.com/blog-sitemap.xml</loc>
-    <lastmod>2026-06-20T21:35:06.872Z</lastmod>
+    <lastmod>2026-06-22T16:51:12.232Z</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.k4studios.com/product-sitemap.xml</loc>
+    <lastmod>2026-06-22T16:50:33.896Z</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://www.k4studios.com/image-sitemap-index.xml</loc>
-    <lastmod>2026-06-20T21:32:25.122Z</lastmod>
+    <lastmod>2026-06-22T16:31:28.065Z</lastmod>
   </sitemap>
 </sitemapindex>

@@ -7,8 +7,8 @@
   "scripts": {
     "dev": "astro dev --host",
     "dev:netlify": "netlify dev",
-    "build": "npm run gen:master-data && npm run gen:image-filename-slugs && npm run gen:prefetch-map && npm run gen:image-id-map && npm run gen:image-sitemaps && npm run gen:sitemap && npm run gen:sitemap:matches && npm run gen:story-slider && npm run gen:image-manifest && npm run copy:pricing && npm run copy:series-data && npm run gen:engrained-data && npm run build:astro:fast && node scripts/warm-image-cache.mjs && npx cpx \"_redirects\" dist/ && npm run sanitize:public-output && npm run audit:canonical-host",
-    "build:fast": "npm run gen:master-data && npm run gen:image-filename-slugs && npm run gen:prefetch-map && npm run gen:image-id-map && npm run gen:image-sitemaps && npm run gen:sitemap && npm run gen:sitemap:matches && npm run gen:story-slider && npm run gen:image-manifest && npm run copy:pricing && npm run copy:series-data && npm run gen:engrained-data && npm run build:astro:fast && npx cpx \"_redirects\" dist/ && npm run sanitize:public-output && npm run audit:canonical-host",
+    "build": "npm run gen:master-data && npm run gen:image-filename-slugs && npm run gen:prefetch-map && npm run gen:image-id-map && npm run gen:image-sitemaps && npm run gen:merchant-products && npm run gen:sitemap && npm run gen:sitemap:matches && npm run gen:story-slider && npm run gen:image-manifest && npm run copy:pricing && npm run copy:series-data && npm run gen:engrained-data && npm run build:astro:fast && node scripts/warm-image-cache.mjs && npx cpx \"_redirects\" dist/ && npm run sanitize:public-output && npm run audit:canonical-host",
+    "build:fast": "npm run gen:master-data && npm run gen:image-filename-slugs && npm run gen:prefetch-map && npm run gen:image-id-map && npm run gen:image-sitemaps && npm run gen:merchant-products && npm run gen:sitemap && npm run gen:sitemap:matches && npm run gen:story-slider && npm run gen:image-manifest && npm run copy:pricing && npm run copy:series-data && npm run gen:engrained-data && npm run build:astro:fast && npx cpx \"_redirects\" dist/ && npm run sanitize:public-output && npm run audit:canonical-host",
     "build:local:fast": "node scripts/build-local-fast.mjs",
     "sanitize:public-output": "node scripts/sanitize-public-output.cjs",
     "audit:canonical-host": "node scripts/audit-canonical-host.mjs",
@@ -31,6 +31,7 @@
     "gen:image-id-map": "node scripts/generate-image-id-map.cjs",
     "gen:sitemap": "node scripts/generate-sitemap-data.mjs",
     "gen:image-sitemaps": "node scripts/generate-image-sitemaps.mjs",
+    "gen:merchant-products": "node scripts/generate-merchant-products.mjs",
     "gen:sitemap:matches": "node scripts/generate-sitemap-matches.mjs",
     "gen:story-slider": "node scripts/generate-story-slider-data.cjs",
     "audit:local:historically-themed": "node scripts/audit-local-page.mjs http://127.0.0.1:8787/Blog/what-is-historically-themed-photography",
