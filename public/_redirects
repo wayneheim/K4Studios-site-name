@@ -18,6 +18,13 @@ https://k4studios.com/(.+)/$  https://www.k4studios.com/$1  301!
 /art-of-the-west  /Art-of-the-West  301!
 /art-of-the-american-west  /Art-of-the-American-West  301!
 
+# Stale Native Americans image-ID typo seen in crawlers.
+/img/i-WfRwfqM/*  /img/i-WfRwfpM/:splat  301!
+/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color/i-WfRwfqM  /Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color/i-WfRwfpM  301!
+
+# Canonical grid index for crawler-discovered view-state URL.
+/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White view=grid  /Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/all?  301!
+
 # Picture Shows canonical path migration
 /Other/Stories  /Other/Show  301!
 /Other/Stories/*  /Other/Show/:splat  301!

@@ -284,7 +284,7 @@ export default function HomeCarousel() {
             <a href={s.href} title={isDuplicate ? undefined : altText} aria-label={isDuplicate ? undefined : altText} tabIndex={isDuplicate ? -1 : undefined} onClick={isDuplicate ? undefined : (event) => handleTrackedNavigation(event, s.href, () => trackHomeHeroNavigation(s.href, s.id || null))}>
               <img
                 src={s.id ? getCarouselImageSrc(s, 's') : (s.srcS || s.src)}
-                alt={isDuplicate ? "" : altText}
+                alt={altText}
                 itemProp="contentUrl"
                 loading={s.loading}
                 fetchpriority={s.fetchpriority}

@@ -84,6 +84,7 @@ const usedEntranceData = {
 const siteBase = import.meta.env.SITE || "https://www.k4studios.com";
 const pathOnly = Astro.url.pathname;
 const baseGalleryUrl = `${siteBase}${previewPath.replace(/\/$/, "")}`;
+const hasActiveThemeFilter = Astro.url.searchParams.has("theme");
 const hasActiveQueryFilter = Astro.url.searchParams.has("theme") || Astro.url.searchParams.has("view");
 const canonicalUrl = hasActiveQueryFilter
   ? baseGalleryUrl
@@ -166,7 +167,7 @@ const ogAlt = selectedImage?.alt || selectedImage?.title || fixMojibake(usedEntr
 const meta = {
   canonicalUrl,
   description: pageDescription,
-  robots: hasActiveQueryFilter ? "noindex, follow" : undefined,
+  robots: hasActiveThemeFilter ? "noindex, follow" : "index, follow",
   keywords: currentImage?.keywords 
     ? (Array.isArray(currentImage.keywords) ? currentImage.keywords.join(', ') : currentImage.keywords)
     : undefined,

@@ -1,5 +1,6 @@
 ---
 import { extractImageId, getSemanticImageUrl } from "@/utils/imageProxy.js";
+import { getArtworkAltForImageSource } from "@/utils/imageAltLookup";
 
 const {
   items = [],
@@ -37,6 +38,7 @@ const forceImageSize = (src = "", size: string = "s") => {
         }
 
         const displayTitle = [item.title, item.subtitle].filter(Boolean).join(" ");
+        const imageAlt = getArtworkAltForImageSource(item.thumb, displayTitle);
         const dockActionLabel = item.dockPrefix === "" ? displayTitle : `${item.dockPrefix || "Browse"} ${displayTitle}`;
         const distance = Math.abs(idx - centerIndex);
         const dockClass = [
@@ -61,7 +63,7 @@ const forceImageSize = (src = "", size: string = "s") => {
             <div class="dock-tombstone">
               <img
                 src={forceImageSize(item.thumb, "s")}
-                alt=""
+                alt={imageAlt}
                 loading={item.current || distance <= 1 ? "eager" : "lazy"}
                 width="140"
                 height="160"

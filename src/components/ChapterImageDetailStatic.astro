@@ -31,9 +31,12 @@ const alt = image?.alt || image?.title || "K4 Studios fine art photograph";
 const title = sanitizeRepeatedSeoCopy(image?.title || alt);
 const story = sanitizeRepeatedSeoCopy(image?.story || "");
 const description = sanitizeRepeatedSeoCopy(image?.description || "");
+const storyHeading = `${title} Story`;
+const descriptionHeading = `About ${title}`;
 const notes = image?.notes || "";
 const prevHref = prevImage ? `${galleryPath}/${prevImage.id}` : "";
 const nextHref = nextImage ? `${galleryPath}/${nextImage.id}` : "";
+const collectionHref = `${galleryPath.replace(/\/$/, "")}/all`;
 const jumpTargets = (images.length ? images : [image])
   .map((entry) => entry?.id)
   .filter(Boolean);
@@ -118,7 +121,7 @@ const arrowRightSvg = `<svg aria-hidden="true" viewBox="0 0 24 24" class="w-4 h-
                 <span set:html={arrowRightSvg} />
               </button>
             </form>
-            <a href={`${galleryPath}?view=grid`} aria-label="View Grid Mode" title="View Grid Mode" class="md:hidden flex items-center justify-center gap-1 transition-colors" style="color:#84766d;opacity:0.65" data-grid-btn>
+            <a href={collectionHref} aria-label="View Grid Mode" title="View Grid Mode" class="md:hidden flex items-center justify-center gap-1 transition-colors" style="color:#84766d;opacity:0.65" data-grid-btn>
               <span set:html={gridSvg} />
               <span class="text-xs" style="color:#84766d;opacity:0.5">- All</span>
             </a>
@@ -127,7 +130,7 @@ const arrowRightSvg = `<svg aria-hidden="true" viewBox="0 0 24 24" class="w-4 h-
             <a href={galleryPath} class="inline-flex items-center justify-center w-8 h-8 border border-gray-300 bg-white text-gray-300 rounded-full shadow-sm hover:bg-gray-700 hover:text-gray-200 hover:border-red-200 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-gray-400 transition-colors cursor-pointer" aria-label="Exit Chapter View" title="Exit Viewer" data-exit-btn set:html={circleXSvg} />
           </div>
         </div>
-        <a href={`${galleryPath}?view=grid`} class="group my-3 inline-flex items-center gap-2 rounded-full px-3 py-1 border border-gray-200 hover:border-red-300 shadow-sm transition-colors" style="letter-spacing:.02em;background-color:rgba(240,238,233,.85)" aria-label="Play K4 Slideshow" title="Play K4 Story Show" data-slideshow-btn>
+        <a href={collectionHref} class="group my-3 inline-flex items-center gap-2 rounded-full px-3 py-1 border border-gray-200 hover:border-red-300 shadow-sm transition-colors" style="letter-spacing:.02em;background-color:rgba(240,238,233,.85)" aria-label="Play K4 Slideshow" title="Play K4 Story Show" data-slideshow-btn>
           <span class="inline-flex items-center justify-center w-4 h-4 text-gray-400 group-hover:text-red-700 transition-colors">▶</span>
           <span class="text-sm font-medium text-gray-400 group-hover:text-gray-500 transition-colors">Play Show</span>
         </a>
@@ -149,7 +152,7 @@ const arrowRightSvg = `<svg aria-hidden="true" viewBox="0 0 24 24" class="w-4 h-
 
         {story && (
           <section class="image-story" aria-labelledby={`image-story-heading-${image.id}`}>
-            <h2 id={`image-story-heading-${image.id}`} class="sr-only">Story</h2>
+            <h2 id={`image-story-heading-${image.id}`} class="sr-only">{storyHeading}</h2>
             <p class="italic text-base mt-3 md:text-lg mb-4 leading-snug text-left">{story}</p>
           </section>
         )}
@@ -163,7 +166,7 @@ const arrowRightSvg = `<svg aria-hidden="true" viewBox="0 0 24 24" class="w-4 h-
             <div class="details-content" style="font-size:0.9rem;line-height:1.7;padding-top:0.5rem;border-top:1px dashed rgba(200, 190, 180, 0.4);text-align:left">
               {description && (
                 <section class="image-description" aria-labelledby={`image-description-heading-${image.id}`}>
-                  <h2 id={`image-description-heading-${image.id}`} class="sr-only">About this image</h2>
+                  <h2 id={`image-description-heading-${image.id}`} class="sr-only">{descriptionHeading}</h2>
                   <p itemprop="description" style="margin:0 0 1rem">{description}</p>
                 </section>
               )}
@@ -194,7 +197,7 @@ const arrowRightSvg = `<svg aria-hidden="true" viewBox="0 0 24 24" class="w-4 h-
               <span set:html={chevronLeftSvg} />
             </span>
           )}
-          <a href={`${galleryPath}?view=grid`} class="bg-gray-100 w-11 h-11 rounded-full shadow flex items-center justify-center border border-gray-200 hover:border-gray-300 transition-colors" title="Index View" aria-label="Grid View" data-grid-btn="true">
+          <a href={collectionHref} class="bg-gray-100 w-11 h-11 rounded-full shadow flex items-center justify-center border border-gray-200 hover:border-gray-300 transition-colors" title="Index View" aria-label="Grid View" data-grid-btn="true">
             <span set:html={gridSvg} />
             <span class="sr-only">Grid View</span>
           </a>

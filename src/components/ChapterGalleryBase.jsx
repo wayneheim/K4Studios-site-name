@@ -733,10 +733,17 @@ export default function ChapterGalleryBase({
   const nextHref = basePath && currentIndex < galleryData.length - 1
     ? (nextImage ? `${basePath}/${nextImage.id}` : "#")
     : null;
-  const gridHref = basePath
-    ? `${basePath}${themeSlug ? `?theme=${encodeURIComponent(themeSlug)}&view=grid` : '?view=grid'}`
+  const collectionHref = basePath ? `${basePath.replace(/\/$/, "")}/all` : null;
+  const gridHref = collectionHref
+    ? `${collectionHref}${themeSlug ? `?theme=${encodeURIComponent(themeSlug)}&view=grid#collection-browser` : ''}`
     : null;
   const exitHref = basePath || null;
+  const currentChapterTitle = sanitizeRepeatedSeoCopy(
+    galleryData[currentIndex]?.meta?.ogTitle ||
+    galleryData[currentIndex]?.title ||
+    galleryData[currentIndex]?.alt ||
+    titleBase
+  );
   const [isLandscapeMobile, setIsLandscapeMobile] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [windowWidth, setWindowWidth] = useState(1200);
@@ -2155,12 +2162,7 @@ export default function ChapterGalleryBase({
 
                     {/* Title - styled chapter label + H1 for actual title */}
                     {(() => {
-                      const chapterTitle = sanitizeRepeatedSeoCopy(
-                        galleryData[currentIndex]?.meta?.ogTitle ||
-                        galleryData[currentIndex]?.title ||
-                        galleryData[currentIndex]?.alt ||
-                        titleBase
-                      );
+                      const chapterTitle = currentChapterTitle;
                       // Dynamic font size: shrink for long titles on mobile
                       const titleLength = chapterTitle?.length || 0;
                       const mobileTitleSize = titleLength > 40 ? '1.0rem' : titleLength > 30 ? '1.15rem' : '1.35rem';
@@ -2186,7 +2188,7 @@ export default function ChapterGalleryBase({
 
                     {/* Story */}
                     <section className="image-story" aria-labelledby={`image-story-heading-${currentId || 'default'}`}>
-                      <h2 id={`image-story-heading-${currentId || 'default'}`} className="sr-only">Story</h2>
+                      <h2 id={`image-story-heading-${currentId || 'default'}`} className="sr-only">{currentChapterTitle} Story</h2>
                       <p className="italic text-base mt-3 md:text-lg mb-4 leading-snug text-left">
                         {sanitizeRepeatedSeoCopy(galleryData[currentIndex]?.story)}
                       </p>
@@ -2253,7 +2255,7 @@ export default function ChapterGalleryBase({
                         }}>
                           {galleryData[currentIndex]?.description && (
                             <section className="image-description" aria-labelledby={`image-description-heading-${currentId || 'default'}`}>
-                              <h2 id={`image-description-heading-${currentId || 'default'}`} className="sr-only">About this image</h2>
+                              <h2 id={`image-description-heading-${currentId || 'default'}`} className="sr-only">About {currentChapterTitle}</h2>
                               <p itemProp="description" style={{ margin: '0 0 1rem' }}>
                                 {galleryData[currentIndex].description}
                               </p>

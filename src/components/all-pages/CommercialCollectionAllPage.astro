@@ -4,6 +4,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import ArchiveContext from "@/components/ArchiveContext.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import { extractImageId, getSemanticImageUrl } from "@/utils/imageProxy.js";
+import { getArtworkAltForImageSource } from "@/utils/imageAltLookup";
 import {
   getFormattedLowestStandardPrintPrice,
   getStandardPrintSeries,
@@ -455,6 +456,7 @@ const compactBreadcrumbHtml = breadcrumbHtml
           <span id="dock-start" class="dock-anchor" aria-hidden="true"></span>
           {sectionDockItems.map((item: any, idx: number) => {
             const displayTitle = [item.title, item.subtitle].filter(Boolean).join(' ');
+            const imageAlt = getArtworkAltForImageSource(item.thumb, displayTitle);
             const distance = Math.abs(idx - dockCenterIndex);
             const dockClass = [
               'dock-card',
@@ -475,7 +477,7 @@ const compactBreadcrumbHtml = breadcrumbHtml
                 <div class="dock-tombstone">
                   <img
                     src={forceImageSize(item.thumb, 's')}
-                    alt=""
+                    alt={imageAlt}
                     loading={item.current || distance <= 2 ? 'eager' : 'lazy'}
                     width="140"
                     height="160"

@@ -100,15 +100,15 @@ function getParentGalleryPath(pathname: string): string {
   return normalized.replace(/\/[iI]-[A-Za-z0-9-]+$/, '');
 }
 
-function isFilteredGalleryView(url: URL): boolean {
-  return url.searchParams.has('theme') || url.searchParams.has('view');
+function isThemeFilteredGalleryView(url: URL): boolean {
+  return url.searchParams.has('theme');
 }
 
 function isHtmlResponse(response: Response): boolean {
   return (response.headers.get('content-type') || '').toLowerCase().includes('text/html');
 }
 
-async function addFilteredGalleryNoindex(response: Response): Promise<Response> {
+async function addThemeFilteredGalleryNoindex(response: Response): Promise<Response> {
   if (!isHtmlResponse(response)) return response;
 
   const html = await response.text();
@@ -172,9 +172,9 @@ function pickCanonicalGalleryPath(requestedPath: string, candidates: string[]): 
 export default async function smart404Edge(request: Request, context: { next: () => Promise<Response> }) {
   const url = new URL(request.url);
   const pathname = normalizePath(url.pathname);
-  const shouldNoindexFilteredView =
+  const shouldNoindexThemeFilteredView =
     request.method === 'GET' &&
-    isFilteredGalleryView(url) &&
+    isThemeFilteredGalleryView(url) &&
     !extractImageId(pathname);
 
   if (!/^\/(?:Galleries|galleries|Other|other|Photography-Galleries)\//.test(pathname)) {
@@ -189,7 +189,7 @@ export default async function smart404Edge(request: Request, context: { next: ()
     }
 
     const response = await context.next();
-    return shouldNoindexFilteredView ? addFilteredGalleryNoindex(response) : response;
+    return shouldNoindexThemeFilteredView ? addThemeFilteredGalleryNoindex(response) : response;
   }
 
   try {
@@ -197,7 +197,7 @@ export default async function smart404Edge(request: Request, context: { next: ()
     const rawPaths = imageIdMap[imageId];
     if (!rawPaths) {
       const response = await context.next();
-      return shouldNoindexFilteredView ? addFilteredGalleryNoindex(response) : response;
+      return shouldNoindexThemeFilteredView ? addThemeFilteredGalleryNoindex(response) : response;
     }
 
     const canonicalPaths = (Array.isArray(rawPaths) ? rawPaths : [rawPaths])
@@ -205,7 +205,7 @@ export default async function smart404Edge(request: Request, context: { next: ()
       .filter(Boolean);
     if (canonicalPaths.length === 0) {
       const response = await context.next();
-      return shouldNoindexFilteredView ? addFilteredGalleryNoindex(response) : response;
+      return shouldNoindexThemeFilteredView ? addThemeFilteredGalleryNoindex(response) : response;
     }
 
     const matchingGalleryPath = findMatchingGalleryPath(pathname, canonicalPaths);
@@ -216,24 +216,24 @@ export default async function smart404Edge(request: Request, context: { next: ()
       }
 
       const response = await context.next();
-      return shouldNoindexFilteredView ? addFilteredGalleryNoindex(response) : response;
+      return shouldNoindexThemeFilteredView ? addThemeFilteredGalleryNoindex(response) : response;
     }
 
     const canonicalGalleryPath = pickCanonicalGalleryPath(pathname, canonicalPaths);
     if (!canonicalGalleryPath) {
       const response = await context.next();
-      return shouldNoindexFilteredView ? addFilteredGalleryNoindex(response) : response;
+      return shouldNoindexThemeFilteredView ? addThemeFilteredGalleryNoindex(response) : response;
     }
 
     const canonicalUrlPath = `${canonicalGalleryPath}/${imageId}`;
     if (canonicalUrlPath.toLowerCase() === pathname.toLowerCase()) {
       const response = await context.next();
-      return shouldNoindexFilteredView ? addFilteredGalleryNoindex(response) : response;
+      return shouldNoindexThemeFilteredView ? addThemeFilteredGalleryNoindex(response) : response;
     }
 
     return Response.redirect(`${url.origin}${canonicalUrlPath}${url.search}`, 301);
   } catch (_error) {
     const response = await context.next();
-    return shouldNoindexFilteredView ? addFilteredGalleryNoindex(response) : response;
+    return shouldNoindexThemeFilteredView ? addThemeFilteredGalleryNoindex(response) : response;
   }
 }

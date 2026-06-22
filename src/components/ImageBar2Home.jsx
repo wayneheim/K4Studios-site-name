@@ -83,7 +83,7 @@ export default function ImageBar2Home() {
             <a href={s.href} title={isDuplicate ? undefined : imageAlt} aria-label={isDuplicate ? undefined : imageAlt} tabIndex={isDuplicate ? -1 : undefined}>
               <img
                 src={s.id ? getHomeImageSrc(s, 's') : (s.srcS || s.src)}
-                alt={isDuplicate ? "" : imageAlt}
+                alt={imageAlt}
                 itemProp="contentUrl"
                 loading={s.loading}
                 fetchpriority={s.fetchpriority}

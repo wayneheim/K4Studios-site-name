@@ -6,6 +6,7 @@ import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import VideoStoryWidget from "@/components/VideoStoryWidget.astro";
 import { extractImageId, getSemanticImageUrl } from "@/utils/imageProxy.js";
+import { getArtworkAltForImageSource } from "@/utils/imageAltLookup";
 import {
   getFormattedLowestStandardPrintPrice,
   getStandardPrintSeries,
@@ -692,6 +693,7 @@ const faqRight = faqItems.slice(faqSplitIndex);
             }
 
             const displayTitle = [item.title, item.subtitle].filter(Boolean).join(' ');
+            const imageAlt = getArtworkAltForImageSource(item.thumb, displayTitle);
             const dockActionLabel = item.dockPrefix === "" ? displayTitle : `${item.dockPrefix || "Browse"} ${displayTitle}`;
             const distance = Math.abs(idx - dockCenterIndex);
             const dockClass = [
@@ -715,7 +717,7 @@ const faqRight = faqItems.slice(faqSplitIndex);
                 <div class="dock-tombstone">
                   <img
                     src={forceImageSize(item.thumb, 's')}
-                    alt=""
+                    alt={imageAlt}
                     loading={item.current || distance <= 1 ? 'eager' : 'lazy'}
                     width="140"
                     height="160"
@@ -1233,6 +1235,7 @@ const faqRight = faqItems.slice(faqSplitIndex);
             }
 
             const displayTitle = [item.title, item.subtitle].filter(Boolean).join(' ');
+            const imageAlt = getArtworkAltForImageSource(item.thumb, displayTitle);
             const dockActionLabel = item.dockPrefix === "" ? displayTitle : `${item.dockPrefix || "Browse"} ${displayTitle}`;
             const distance = Math.abs(idx - dockCenterIndex);
             const dockClass = [
@@ -1256,7 +1259,7 @@ const faqRight = faqItems.slice(faqSplitIndex);
                 <div class="dock-tombstone">
                   <img
                     src={forceImageSize(item.thumb, 's')}
-                    alt=""
+                    alt={imageAlt}
                     loading={item.current || distance <= 1 ? 'eager' : 'lazy'}
                     width="140"
                     height="160"
