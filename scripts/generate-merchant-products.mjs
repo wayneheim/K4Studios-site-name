@@ -144,6 +144,10 @@ function getSemanticImageUrl(image, galleryPath) {
   return `${SITE_URL}/img/${image.id}/${titleSlug}-${phrase}.jpg`;
 }
 
+function getMerchantImageUrl(image) {
+  return `${SITE_URL}/img/${image.id}/l.jpg`;
+}
+
 function sourceFileToGalleryPath(filePath) {
   const rel = path.relative(DATA_DIR, filePath).replace(/\\/g, "/").replace(/\.mjs$/i, "");
   const parts = rel.split("/").filter(Boolean);
@@ -260,7 +264,7 @@ function inferProductDescription(image) {
 function buildProductItem({ image, galleryPath, link }) {
   if (image?.noSketch === true) return null;
 
-  const imageLink = getSemanticImageUrl(image, galleryPath);
+  const imageLink = getMerchantImageUrl(image);
   const title = inferProductTitle(image);
   const description = inferProductDescription(image);
   const productType = inferProductType(galleryPath);
