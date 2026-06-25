@@ -24,6 +24,7 @@ import { themes } from "@/data/themes/themes.mjs";
 import { warmImage } from "../utils/warmImage";
 import { getSemanticImageUrl } from "../utils/imageProxy";
 import { trackEvent, emitActionPixel } from "../utils/analytics";
+import { getGalleryDoorwayLink } from "../data/galleryDoorwayLinks.js";
 
 /* ---------------------------------------------------------
    Check if gallery has matching themes
@@ -157,6 +158,7 @@ export default function GalleryInfo({
   // Then explicit path, then entranceData.galleryPath, then URL fallback (legacy)
   const baseHref = galleryKey || path || entranceData?.galleryPath || clientPath;
   const trimmedBase = baseHref.replace(/\/$/, "");
+  const galleryDoorwayLink = getGalleryDoorwayLink(trimmedBase);
 
   // Resolve gallery data from the key using allModules (client-safe)
   // galleryKey is a string that survives Astro→React serialization
@@ -347,7 +349,7 @@ export default function GalleryInfo({
               }}
           />
           {!!entranceData?.details && (
-            <details>
+            <details style={{ marginTop: "0.75rem" }}>
               <summary>
                 <span className="arrow-icon">▶</span> More
                 about this gallery
@@ -356,6 +358,40 @@ export default function GalleryInfo({
                 className="mt-2 text-base"
                 dangerouslySetInnerHTML={{ __html: entranceData.details }}
               />
+              {galleryDoorwayLink && (
+                <a
+                  href={galleryDoorwayLink.href}
+                  className="gallery-doorway-link"
+                  onClick={() => {
+                    trackEvent("gallery_doorway_click", {
+                      galleryId: trimmedBase || null,
+                      pageType: "gallery",
+                      trigger: "more_about_gallery_closing_link",
+                      doorwayHref: galleryDoorwayLink.href,
+                      doorwayTheme: galleryDoorwayLink.theme,
+                    });
+                    emitActionPixel("gallery_doorway_click", null, {
+                      galleryId: trimmedBase || null,
+                      sourceLayer: "gallery_doorway_click_pixel_v1",
+                      pageType: "gallery",
+                      trigger: "more_about_gallery_closing_link",
+                    });
+                  }}
+                  style={{
+                    display: "block",
+                    marginTop: "1rem",
+                    paddingTop: "0.75rem",
+                    borderTop: "1px dashed rgba(200, 190, 180, 0.4)",
+                    fontSize: "0.82rem",
+                    color: "#7b1e1e",
+                    textDecoration: "none",
+                    fontFamily: "'Glegoo', serif",
+                    textAlign: "left",
+                  }}
+                >
+                  {galleryDoorwayLink.label}
+                </a>
+              )}
             </details>
           )}
         </motion.div>

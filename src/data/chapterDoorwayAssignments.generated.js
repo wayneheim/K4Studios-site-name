@@ -29,17 +29,17 @@ export const chapterDoorwayAssignments = {
   "i-pvFgTr4": {
     "theme": "civilWar",
     "href": "/Civil-War-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-vT7SdKj": {
     "theme": "civilWar",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-DJKJkMb": {
     "theme": "civilWar",
     "href": "/Historical-Reenactment-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-QbSdKQS": {
     "theme": "civilWar",
@@ -69,17 +69,17 @@ export const chapterDoorwayAssignments = {
   "i-nWsP2r2": {
     "theme": "civilWar",
     "href": "/Western-Black-and-White-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-hM8SXCd": {
     "theme": "civilWar",
     "href": "/Western-Photography-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-Ng98bJK": {
     "theme": "civilWar",
     "href": "/Civil-War-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-6rWdVVk": {
     "theme": "civilWar",
@@ -109,17 +109,17 @@ export const chapterDoorwayAssignments = {
   "i-f2DpvdK": {
     "theme": "civilWar",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-CGRD3jF": {
     "theme": "civilWar",
     "href": "/Historical-Reenactment-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-kbpkRxp": {
     "theme": "civilWar",
     "href": "/Western-Black-and-White-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-nDPs3J2": {
     "theme": "civilWar",
@@ -149,17 +149,17 @@ export const chapterDoorwayAssignments = {
   "i-WRw5xs7": {
     "theme": "civilWar",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-tvs5pD9": {
     "theme": "civilWar",
     "href": "/Civil-War-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-RpVqXBB": {
     "theme": "civilWar",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-zmbvK99": {
     "theme": "civilWar",
@@ -189,17 +189,17 @@ export const chapterDoorwayAssignments = {
   "i-R5L4KXL": {
     "theme": "civilWar",
     "href": "/Historical-Reenactment-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-Lkzzxqv": {
     "theme": "civilWar",
     "href": "/Western-Black-and-White-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-3M3Jd8c": {
     "theme": "civilWar",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-6FVGsWM": {
     "theme": "civilWar",
@@ -229,17 +229,17 @@ export const chapterDoorwayAssignments = {
   "i-2pHXbPq": {
     "theme": "civilWar",
     "href": "/Civil-War-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-ZMt9t8J": {
     "theme": "civilWar",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-96shbfB": {
     "theme": "civilWar",
     "href": "/Historical-Reenactment-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-9wj2BCw": {
     "theme": "civilWar",
@@ -269,17 +269,17 @@ export const chapterDoorwayAssignments = {
   "i-WCW5QvM": {
     "theme": "civilWar",
     "href": "/Western-Black-and-White-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-QsnR9mf": {
     "theme": "civilWar",
     "href": "/Western-Photography-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-pBz9L9p": {
     "theme": "civilWar",
     "href": "/Civil-War-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-VK8Vmjh": {
     "theme": "civilWar",
@@ -309,17 +309,17 @@ export const chapterDoorwayAssignments = {
   "i-hpRQLLm": {
     "theme": "civilWar",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-R53CkVb": {
     "theme": "civilWar",
     "href": "/Historical-Reenactment-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-834cDZ8": {
     "theme": "civilWar",
     "href": "/Western-Black-and-White-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-GqDJLmF": {
     "theme": "civilWar",
@@ -349,17 +349,17 @@ export const chapterDoorwayAssignments = {
   "i-dWHn77W": {
     "theme": "civilWar",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-5jfqH53": {
     "theme": "civilWar",
     "href": "/Civil-War-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-qSgZ7zD": {
     "theme": "civilWar",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-qkhr8Nv": {
     "theme": "civilWar",
@@ -389,17 +389,17 @@ export const chapterDoorwayAssignments = {
   "i-4xLxQpk": {
     "theme": "civilWar",
     "href": "/Historical-Reenactment-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-gF8ZqQS": {
     "theme": "civilWar",
     "href": "/Western-Black-and-White-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-bcHKgfx": {
     "theme": "civilWar",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-bCzTRRB": {
     "theme": "civilWar",
@@ -429,17 +429,17 @@ export const chapterDoorwayAssignments = {
   "i-q5tM4bH": {
     "theme": "civilWar",
     "href": "/Civil-War-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-WDPZRGD": {
     "theme": "civilWar",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-ScfTV48": {
     "theme": "civilWar",
     "href": "/Historical-Reenactment-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-CvnVxzQ": {
     "theme": "civilWar",
@@ -489,17 +489,17 @@ export const chapterDoorwayAssignments = {
   "i-bfKMXS9": {
     "theme": "western",
     "href": "/old-west-pictures",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-4zxZQQ2": {
     "theme": "western",
     "href": "/vintage-western-art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-89qzJ6S": {
     "theme": "western",
     "href": "/wild-west-art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-7VWX9vk": {
     "theme": "western",
@@ -529,17 +529,17 @@ export const chapterDoorwayAssignments = {
   "i-NdQnj6P": {
     "theme": "western",
     "href": "/western-photos",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-G7csptc": {
     "theme": "western",
     "href": "/cowboy-pictures",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-r5Pb7zJ": {
     "theme": "western",
     "href": "/western-cowboy-pictures",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-RsLmsLZ": {
     "theme": "western",
@@ -569,17 +569,17 @@ export const chapterDoorwayAssignments = {
   "i-trZrk2w": {
     "theme": "western",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-HBRmWg4": {
     "theme": "western",
     "href": "/Western-Wall-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-MHGPvcs": {
     "theme": "western",
     "href": "/western-cowboy-art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-fM9qmKW": {
     "theme": "western",
@@ -609,17 +609,17 @@ export const chapterDoorwayAssignments = {
   "i-9BhX2Lj": {
     "theme": "western",
     "href": "/vintage-western-art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-46kWCqc": {
     "theme": "western",
     "href": "/wild-west-art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-NDnxRkx": {
     "theme": "western",
     "href": "/Western-Frontier-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-Vr8vzjt": {
     "theme": "western",
@@ -649,17 +649,17 @@ export const chapterDoorwayAssignments = {
   "i-n5BfXBm": {
     "theme": "western",
     "href": "/cowboy-pictures",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-4XLSsnC": {
     "theme": "western",
     "href": "/western-cowboy-pictures",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-fCG2nm8": {
     "theme": "western",
     "href": "/cowboy-art-prints",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-MMmDhV2": {
     "theme": "western",
@@ -689,17 +689,17 @@ export const chapterDoorwayAssignments = {
   "i-QWcX7JT": {
     "theme": "western",
     "href": "/Western-Wall-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-6Ffpw9t": {
     "theme": "western",
     "href": "/western-cowboy-art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-5FX3W9r": {
     "theme": "western",
     "href": "/Narrative-Western-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-X4SH26N": {
     "theme": "western",
@@ -729,17 +729,17 @@ export const chapterDoorwayAssignments = {
   "i-DwVBJb3": {
     "theme": "western",
     "href": "/wild-west-art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-zHvS5jz": {
     "theme": "western",
     "href": "/Western-Frontier-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-QB4jLsH": {
     "theme": "western",
     "href": "/American-Western-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-5TGTZ9P": {
     "theme": "western",
@@ -769,17 +769,17 @@ export const chapterDoorwayAssignments = {
   "i-7GcQw6R": {
     "theme": "western",
     "href": "/western-cowboy-pictures",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-ShhCNkX": {
     "theme": "western",
     "href": "/cowboy-art-prints",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-f4MSxpP": {
     "theme": "western",
     "href": "/cowboy-fine-art-prints",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-xqZwcZh": {
     "theme": "western",
@@ -809,17 +809,17 @@ export const chapterDoorwayAssignments = {
   "i-TLDkd5q": {
     "theme": "western",
     "href": "/western-cowboy-art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-VDLVwqr": {
     "theme": "western",
     "href": "/Narrative-Western-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-NKdPDCg": {
     "theme": "western",
     "href": "/Western-Black-and-White-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-Rx5gLJz": {
     "theme": "western",
@@ -849,17 +849,17 @@ export const chapterDoorwayAssignments = {
   "i-5HpSkgR": {
     "theme": "western",
     "href": "/Western-Frontier-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-wfqSGcV": {
     "theme": "western",
     "href": "/American-Western-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-JKnW497": {
     "theme": "western",
     "href": "/western-artwork",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-7dCKHjg": {
     "theme": "western",
@@ -889,17 +889,17 @@ export const chapterDoorwayAssignments = {
   "i-T7TFJX2": {
     "theme": "western",
     "href": "/cowboy-art-prints",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-5VZVzTR": {
     "theme": "western",
     "href": "/cowboy-fine-art-prints",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-v4vRSb8": {
     "theme": "western",
     "href": "/Western-Cowboy-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-sTnckb6": {
     "theme": "western",
@@ -929,17 +929,17 @@ export const chapterDoorwayAssignments = {
   "i-gj4hHmL": {
     "theme": "western",
     "href": "/Narrative-Western-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-RRw2Tfr": {
     "theme": "western",
     "href": "/Western-Black-and-White-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-RT474Nz": {
     "theme": "western",
     "href": "/Cowboy-Fine-Art-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-M2WdKTL": {
     "theme": "western",
@@ -969,17 +969,17 @@ export const chapterDoorwayAssignments = {
   "i-vFrxmXD": {
     "theme": "western",
     "href": "/American-Western-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-mdz2QGr": {
     "theme": "western",
     "href": "/western-artwork",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-LBSWzcj": {
     "theme": "western",
     "href": "/western-art-prints",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-xmJ87ZT": {
     "theme": "western",
@@ -1009,17 +1009,17 @@ export const chapterDoorwayAssignments = {
   "i-FVHm8VJ": {
     "theme": "western",
     "href": "/cowboy-fine-art-prints",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-7Jzf69b": {
     "theme": "western",
     "href": "/Western-Cowboy-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-vGkvhmq": {
     "theme": "western",
     "href": "/Cowboy-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-DGtgJJJ": {
     "theme": "western",
@@ -1049,17 +1049,17 @@ export const chapterDoorwayAssignments = {
   "i-8CfzGMc": {
     "theme": "western",
     "href": "/Western-Black-and-White-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-6GQxb97": {
     "theme": "western",
     "href": "/Cowboy-Fine-Art-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-6pLTtkL": {
     "theme": "western",
     "href": "/american-wild-west",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-8JSdTGz": {
     "theme": "western",
@@ -1089,17 +1089,17 @@ export const chapterDoorwayAssignments = {
   "i-JM7kNVv": {
     "theme": "western",
     "href": "/western-artwork",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-rMkQnM6": {
     "theme": "western",
     "href": "/western-art-prints",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-8Ld2ZHQ": {
     "theme": "western",
     "href": "/Western-Photography-Prints",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-mHpH7rZ": {
     "theme": "western",
@@ -1129,17 +1129,17 @@ export const chapterDoorwayAssignments = {
   "i-vpt6C9V": {
     "theme": "western",
     "href": "/Western-Cowboy-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-V5WcTqg": {
     "theme": "western",
     "href": "/Cowboy-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-Cg4ZB72": {
     "theme": "western",
     "href": "/western-portrait-photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-9bgtdzf": {
     "theme": "western",
@@ -1169,17 +1169,17 @@ export const chapterDoorwayAssignments = {
   "i-SPTNHnP": {
     "theme": "western",
     "href": "/Cowboy-Fine-Art-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-FsLKLp3": {
     "theme": "western",
     "href": "/american-wild-west",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-sBDTm7k": {
     "theme": "western",
     "href": "/old-west-pictures",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-dwk4K8v": {
     "theme": "western",
@@ -1209,17 +1209,17 @@ export const chapterDoorwayAssignments = {
   "i-dqdZcnX": {
     "theme": "western",
     "href": "/western-art-prints",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-6G4PBd8": {
     "theme": "western",
     "href": "/Western-Photography-Prints",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-HHxxcsM": {
     "theme": "western",
     "href": "/western-photos",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-NBsQ59h": {
     "theme": "western",
@@ -1249,17 +1249,17 @@ export const chapterDoorwayAssignments = {
   "i-GjZfMXj": {
     "theme": "western",
     "href": "/Cowboy-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-MDrw6sD": {
     "theme": "western",
     "href": "/western-portrait-photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-3ppJNtd": {
     "theme": "western",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-bkjkPfH": {
     "theme": "western",
@@ -1289,17 +1289,17 @@ export const chapterDoorwayAssignments = {
   "i-Khb37pn": {
     "theme": "western",
     "href": "/american-wild-west",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-R2JG4bd": {
     "theme": "western",
     "href": "/old-west-pictures",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-fTHtL25": {
     "theme": "western",
     "href": "/vintage-western-art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-8VPQmkW": {
     "theme": "western",
@@ -1329,17 +1329,17 @@ export const chapterDoorwayAssignments = {
   "i-kBNpRtm": {
     "theme": "western",
     "href": "/Western-Photography-Prints",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-zXnjqZZ": {
     "theme": "western",
     "href": "/western-photos",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-nLKscbQ": {
     "theme": "western",
     "href": "/cowboy-pictures",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-jLSNwCT": {
     "theme": "western",
@@ -1369,17 +1369,17 @@ export const chapterDoorwayAssignments = {
   "i-kh6KWS9": {
     "theme": "western",
     "href": "/western-portrait-photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-R3CqrBr": {
     "theme": "western",
     "href": "/Western-Photography-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-bN9mRH6": {
     "theme": "western",
     "href": "/Western-Wall-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-XsdNV9s": {
     "theme": "western",
@@ -1409,17 +1409,17 @@ export const chapterDoorwayAssignments = {
   "i-cF2kLFP": {
     "theme": "western",
     "href": "/old-west-pictures",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-XR9PZT5": {
     "theme": "western",
     "href": "/vintage-western-art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-2Z3ZvJS": {
     "theme": "western",
     "href": "/wild-west-art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-trM4FpR": {
     "theme": "western",
@@ -1449,17 +1449,17 @@ export const chapterDoorwayAssignments = {
   "i-qzGSQz7": {
     "theme": "western",
     "href": "/western-photos",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-dwVgbxR": {
     "theme": "western",
     "href": "/cowboy-pictures",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-GBvFP8Q": {
     "theme": "western",
     "href": "/western-cowboy-pictures",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-WD9ZmGH": {
     "theme": "western",
@@ -1489,17 +1489,17 @@ export const chapterDoorwayAssignments = {
   "i-Lk79jNj": {
     "theme": "western",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-SPd5h6X": {
     "theme": "western",
     "href": "/Western-Wall-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-2Cj8j9W": {
     "theme": "western",
     "href": "/western-cowboy-art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-7Kwv8vc": {
     "theme": "western",
@@ -1529,17 +1529,17 @@ export const chapterDoorwayAssignments = {
   "i-4jRzBgC": {
     "theme": "western",
     "href": "/vintage-western-art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-S2sZdJB": {
     "theme": "western",
     "href": "/wild-west-art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-3V4rCN8": {
     "theme": "western",
     "href": "/Western-Frontier-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-8g6m7tf": {
     "theme": "western",
@@ -1569,17 +1569,17 @@ export const chapterDoorwayAssignments = {
   "i-xMk6ZJ9": {
     "theme": "western",
     "href": "/cowboy-pictures",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-rC7SvgP": {
     "theme": "western",
     "href": "/western-cowboy-pictures",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-s79JnZ2": {
     "theme": "western",
     "href": "/cowboy-art-prints",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-SBjhvGf": {
     "theme": "western",
@@ -1609,17 +1609,17 @@ export const chapterDoorwayAssignments = {
   "i-fJ9WQSS": {
     "theme": "western",
     "href": "/Western-Wall-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-2pRkNng": {
     "theme": "western",
     "href": "/western-cowboy-art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-vrc7KkJ": {
     "theme": "western",
     "href": "/Narrative-Western-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-48jGpLt": {
     "theme": "western",
@@ -1649,17 +1649,17 @@ export const chapterDoorwayAssignments = {
   "i-rGpCKkW": {
     "theme": "western",
     "href": "/wild-west-art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-b7HtD4R": {
     "theme": "western",
     "href": "/Western-Frontier-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-SrcM3ZN": {
     "theme": "western",
     "href": "/American-Western-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-3vrhwQ9": {
     "theme": "western",
@@ -1689,17 +1689,17 @@ export const chapterDoorwayAssignments = {
   "i-J3dh2p4": {
     "theme": "western",
     "href": "/western-cowboy-pictures",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-jDmnnrm": {
     "theme": "western",
     "href": "/cowboy-art-prints",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-PxNFNhQ": {
     "theme": "western",
     "href": "/cowboy-fine-art-prints",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-jXC3shm": {
     "theme": "western",
@@ -1729,17 +1729,17 @@ export const chapterDoorwayAssignments = {
   "i-WNLSRQf": {
     "theme": "western",
     "href": "/western-cowboy-art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-7DZfRCN": {
     "theme": "western",
     "href": "/Narrative-Western-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-8Ddjt5W": {
     "theme": "western",
     "href": "/Western-Black-and-White-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-VhHKttr": {
     "theme": "western",
@@ -1769,17 +1769,17 @@ export const chapterDoorwayAssignments = {
   "i-LjBc6N6": {
     "theme": "western",
     "href": "/Western-Frontier-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-qJtstjP": {
     "theme": "western",
     "href": "/American-Western-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-gXvDSdm": {
     "theme": "western",
     "href": "/western-artwork",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-9Bpj29K": {
     "theme": "western",
@@ -1809,17 +1809,17 @@ export const chapterDoorwayAssignments = {
   "i-QNLd2xZ": {
     "theme": "western",
     "href": "/cowboy-art-prints",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-2s2LtQp": {
     "theme": "western",
     "href": "/cowboy-fine-art-prints",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-z9Pfbc5": {
     "theme": "western",
     "href": "/Western-Cowboy-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-9LC3ZrM": {
     "theme": "western",
@@ -1849,17 +1849,17 @@ export const chapterDoorwayAssignments = {
   "i-4G9GB3b": {
     "theme": "western",
     "href": "/Narrative-Western-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-CmHHjwV": {
     "theme": "western",
     "href": "/Western-Black-and-White-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-9Qt4nh7": {
     "theme": "western",
     "href": "/Cowboy-Fine-Art-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-bhXQ8Hx": {
     "theme": "western",
@@ -1889,17 +1889,17 @@ export const chapterDoorwayAssignments = {
   "i-G9kSt8Q": {
     "theme": "western",
     "href": "/American-Western-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-vP7bLLc": {
     "theme": "western",
     "href": "/western-artwork",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-Q3Qm4f2": {
     "theme": "western",
     "href": "/western-art-prints",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-rTwWXgw": {
     "theme": "western",
@@ -1929,17 +1929,17 @@ export const chapterDoorwayAssignments = {
   "i-7PMm6sZ": {
     "theme": "western",
     "href": "/cowboy-fine-art-prints",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-LBrd53F": {
     "theme": "western",
     "href": "/Western-Cowboy-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-6QFpvwm": {
     "theme": "western",
     "href": "/Cowboy-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-xhZhRpL": {
     "theme": "western",
@@ -1969,17 +1969,17 @@ export const chapterDoorwayAssignments = {
   "i-Z3sHLGx": {
     "theme": "western",
     "href": "/Western-Black-and-White-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-N8PLGR4": {
     "theme": "western",
     "href": "/Cowboy-Fine-Art-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-ps4qwgF": {
     "theme": "western",
     "href": "/american-wild-west",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-KgkW54w": {
     "theme": "western",
@@ -2009,17 +2009,17 @@ export const chapterDoorwayAssignments = {
   "i-cRmVc3S": {
     "theme": "western",
     "href": "/western-artwork",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-9fVdg3D": {
     "theme": "western",
     "href": "/western-art-prints",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-9frbWfJ": {
     "theme": "western",
     "href": "/Western-Photography-Prints",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-QHN52S6": {
     "theme": "western",
@@ -2049,17 +2049,17 @@ export const chapterDoorwayAssignments = {
   "i-3Gjqpvz": {
     "theme": "western",
     "href": "/Western-Cowboy-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-F6KMqpf": {
     "theme": "western",
     "href": "/Cowboy-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-WMs24Db": {
     "theme": "western",
     "href": "/western-portrait-photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-DfmB2Hv": {
     "theme": "western",
@@ -2089,17 +2089,17 @@ export const chapterDoorwayAssignments = {
   "i-Fx7pPGJ": {
     "theme": "western",
     "href": "/Cowboy-Fine-Art-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-pN58VX3": {
     "theme": "western",
     "href": "/american-wild-west",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-66qXms3": {
     "theme": "western",
     "href": "/old-west-pictures",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-cmH2bkC": {
     "theme": "western",
@@ -2129,17 +2129,17 @@ export const chapterDoorwayAssignments = {
   "i-qwPBrns": {
     "theme": "western",
     "href": "/western-art-prints",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-vcX6WLC": {
     "theme": "western",
     "href": "/Western-Photography-Prints",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-DqNGjc2": {
     "theme": "western",
     "href": "/western-photos",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-Z7vtvZg": {
     "theme": "western",
@@ -2169,17 +2169,17 @@ export const chapterDoorwayAssignments = {
   "i-GSQ3KDN": {
     "theme": "western",
     "href": "/Cowboy-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-FkPcsBV": {
     "theme": "western",
     "href": "/western-portrait-photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-WBDjhsD": {
     "theme": "western",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-92mpb3g": {
     "theme": "western",
@@ -2209,17 +2209,17 @@ export const chapterDoorwayAssignments = {
   "i-BzFqL6f": {
     "theme": "western",
     "href": "/american-wild-west",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-JsN8MfX": {
     "theme": "western",
     "href": "/old-west-pictures",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-mfNsJNb": {
     "theme": "western",
     "href": "/vintage-western-art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-CgjNZB5": {
     "theme": "western",
@@ -2249,17 +2249,17 @@ export const chapterDoorwayAssignments = {
   "i-zN6f785": {
     "theme": "western",
     "href": "/Western-Photography-Prints",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-7VSrLtw": {
     "theme": "western",
     "href": "/western-photos",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-KK8RzH7": {
     "theme": "western",
     "href": "/cowboy-pictures",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-3Wh6vt9": {
     "theme": "western",
@@ -2289,17 +2289,17 @@ export const chapterDoorwayAssignments = {
   "i-BpW5dbj": {
     "theme": "western",
     "href": "/western-portrait-photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-KBXKqD5": {
     "theme": "western",
     "href": "/Western-Photography-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-sH4qBFd": {
     "theme": "western",
     "href": "/Western-Wall-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-xNB7ZSk": {
     "theme": "western",
@@ -2329,17 +2329,17 @@ export const chapterDoorwayAssignments = {
   "i-N9XLKc8": {
     "theme": "western",
     "href": "/old-west-pictures",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-MZjsFRB": {
     "theme": "western",
     "href": "/vintage-western-art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-hcXLMwK": {
     "theme": "western",
     "href": "/wild-west-art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-jqZzRpS": {
     "theme": "western",
@@ -2369,17 +2369,17 @@ export const chapterDoorwayAssignments = {
   "i-459nCWS": {
     "theme": "western",
     "href": "/western-photos",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-KJsmT8q": {
     "theme": "western",
     "href": "/cowboy-pictures",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-6wMDxdF": {
     "theme": "western",
     "href": "/western-cowboy-pictures",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-HbGN76v": {
     "theme": "western",
@@ -2409,17 +2409,17 @@ export const chapterDoorwayAssignments = {
   "i-6XC3VfC": {
     "theme": "western",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-Fjhdhf2": {
     "theme": "western",
     "href": "/Western-Wall-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-MFksKj9": {
     "theme": "western",
     "href": "/western-cowboy-art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-psMRwPB": {
     "theme": "western",
@@ -2449,17 +2449,17 @@ export const chapterDoorwayAssignments = {
   "i-79P6kHT": {
     "theme": "western",
     "href": "/vintage-western-art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-Zt47sk7": {
     "theme": "western",
     "href": "/wild-west-art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-9DLx78V": {
     "theme": "western",
     "href": "/Western-Frontier-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-dXDLH7c": {
     "theme": "western",
@@ -2489,17 +2489,17 @@ export const chapterDoorwayAssignments = {
   "i-m2dqhjT": {
     "theme": "western",
     "href": "/cowboy-pictures",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-r9dGJJx": {
     "theme": "western",
     "href": "/western-cowboy-pictures",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-s3f9DST": {
     "theme": "western",
     "href": "/cowboy-art-prints",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-zqZPZF6": {
     "theme": "western",
@@ -2529,17 +2529,17 @@ export const chapterDoorwayAssignments = {
   "i-67qk8zR": {
     "theme": "western",
     "href": "/Western-Wall-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-5j2Knmb": {
     "theme": "western",
     "href": "/western-cowboy-art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-R7jg62J": {
     "theme": "western",
     "href": "/Narrative-Western-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-7hD9CCh": {
     "theme": "western",
@@ -2569,17 +2569,17 @@ export const chapterDoorwayAssignments = {
   "i-h679dhn": {
     "theme": "western",
     "href": "/wild-west-art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-Gk8bBLn": {
     "theme": "western",
     "href": "/Western-Frontier-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-LwWLjbH": {
     "theme": "western",
     "href": "/American-Western-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-qnRRJK2": {
     "theme": "western",
@@ -2609,17 +2609,17 @@ export const chapterDoorwayAssignments = {
   "i-KtmPcCf": {
     "theme": "western",
     "href": "/western-cowboy-pictures",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-zZJbbHG": {
     "theme": "western",
     "href": "/cowboy-art-prints",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-6NQ6hQZ": {
     "theme": "western",
     "href": "/cowboy-fine-art-prints",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-Ns73cwK": {
     "theme": "western",
@@ -2649,17 +2649,17 @@ export const chapterDoorwayAssignments = {
   "i-V96Rgmj": {
     "theme": "western",
     "href": "/western-cowboy-art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-FBQjX95": {
     "theme": "western",
     "href": "/Narrative-Western-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-QNdCxKN": {
     "theme": "western",
     "href": "/Western-Black-and-White-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-sGW55ch": {
     "theme": "western",
@@ -2699,17 +2699,17 @@ export const chapterDoorwayAssignments = {
   "i-WfRwfpM": {
     "theme": "nativeAmerican",
     "href": "/Western-Photography-Prints",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-bvn9Rmz": {
     "theme": "nativeAmerican",
     "href": "/western-photos",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-thpSjMG": {
     "theme": "nativeAmerican",
     "href": "/wild-west-art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-rRdrQBg": {
     "theme": "nativeAmerican",
@@ -2734,17 +2734,17 @@ export const chapterDoorwayAssignments = {
   "i-gL3Nnth": {
     "theme": "western",
     "href": "/Western-Frontier-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-mqQxwNn": {
     "theme": "western",
     "href": "/American-Western-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-HfQ5NVR": {
     "theme": "western",
     "href": "/western-artwork",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-nZbDC9C": {
     "theme": "nativeAmerican",
@@ -2779,17 +2779,17 @@ export const chapterDoorwayAssignments = {
   "i-dZKzBBQ": {
     "theme": "western",
     "href": "/cowboy-art-prints",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-GSk4JS8": {
     "theme": "western",
     "href": "/cowboy-fine-art-prints",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-cGDk6Nc": {
     "theme": "western",
     "href": "/Western-Cowboy-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-qwFCjLp": {
     "theme": "western",
@@ -2819,17 +2819,17 @@ export const chapterDoorwayAssignments = {
   "i-dLDF4Q6": {
     "theme": "western",
     "href": "/Narrative-Western-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-ffzG95X": {
     "theme": "western",
     "href": "/Western-Black-and-White-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-FnZ68h3": {
     "theme": "western",
     "href": "/Cowboy-Fine-Art-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-2VTWJ3R": {
     "theme": "western",
@@ -2859,17 +2859,17 @@ export const chapterDoorwayAssignments = {
   "i-TzGJNJz": {
     "theme": "western",
     "href": "/American-Western-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-kxnK2MM": {
     "theme": "western",
     "href": "/western-artwork",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-DLnxMgZ": {
     "theme": "western",
     "href": "/western-art-prints",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-N77wcxb": {
     "theme": "western",
@@ -2899,17 +2899,17 @@ export const chapterDoorwayAssignments = {
   "i-kp6HLCx": {
     "theme": "western",
     "href": "/cowboy-fine-art-prints",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-4s2pK5Z": {
     "theme": "western",
     "href": "/Western-Cowboy-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-RK9HRjR": {
     "theme": "western",
     "href": "/Cowboy-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-MpBPrZK": {
     "theme": "western",
@@ -2939,17 +2939,17 @@ export const chapterDoorwayAssignments = {
   "i-dc76hpJ": {
     "theme": "western",
     "href": "/Western-Black-and-White-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-BBZjZD6": {
     "theme": "western",
     "href": "/Cowboy-Fine-Art-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-xfqTp8K": {
     "theme": "western",
     "href": "/american-wild-west",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-hMJZN2m": {
     "theme": "western",
@@ -2979,17 +2979,17 @@ export const chapterDoorwayAssignments = {
   "i-BQw2kzC": {
     "theme": "western",
     "href": "/western-artwork",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-N3S92fb": {
     "theme": "western",
     "href": "/western-art-prints",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-PvHHPSq": {
     "theme": "western",
     "href": "/Western-Photography-Prints",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-d7DbWRC": {
     "theme": "western",
@@ -3019,17 +3019,17 @@ export const chapterDoorwayAssignments = {
   "i-Bfms6gj": {
     "theme": "western",
     "href": "/Western-Cowboy-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-6mQrB7h": {
     "theme": "western",
     "href": "/Cowboy-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-KWLFPL9": {
     "theme": "western",
     "href": "/western-portrait-photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-nd3Wr3d": {
     "theme": "western",
@@ -3059,17 +3059,17 @@ export const chapterDoorwayAssignments = {
   "i-w3n5cvx": {
     "theme": "western",
     "href": "/Cowboy-Fine-Art-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-2tXvL9T": {
     "theme": "western",
     "href": "/american-wild-west",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-863RbPv": {
     "theme": "western",
     "href": "/old-west-pictures",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-Pd3vWBk": {
     "theme": "western",
@@ -3099,17 +3099,17 @@ export const chapterDoorwayAssignments = {
   "i-m3DqTjX": {
     "theme": "western",
     "href": "/western-art-prints",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-GzcBLWP": {
     "theme": "western",
     "href": "/Western-Photography-Prints",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-L29gZ2Q": {
     "theme": "western",
     "href": "/western-photos",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-Gqw3s5s": {
     "theme": "western",
@@ -3139,17 +3139,17 @@ export const chapterDoorwayAssignments = {
   "i-5qMPjFM": {
     "theme": "western",
     "href": "/Cowboy-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-cxmJsHf": {
     "theme": "western",
     "href": "/western-portrait-photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-dTzLRVW": {
     "theme": "western",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-KNRMjjD": {
     "theme": "western",
@@ -3179,17 +3179,17 @@ export const chapterDoorwayAssignments = {
   "i-rZpSGr2": {
     "theme": "western",
     "href": "/american-wild-west",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-4sbVfhW": {
     "theme": "western",
     "href": "/old-west-pictures",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-7zpT5Hs": {
     "theme": "western",
     "href": "/vintage-western-art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-Xm6WSP3": {
     "theme": "western",
@@ -3219,17 +3219,17 @@ export const chapterDoorwayAssignments = {
   "i-RKgJWdw": {
     "theme": "western",
     "href": "/Western-Photography-Prints",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-sGtzTtH": {
     "theme": "western",
     "href": "/western-photos",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-shXMJQg": {
     "theme": "western",
     "href": "/cowboy-pictures",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-gvxp8b8": {
     "theme": "western",
@@ -3259,17 +3259,17 @@ export const chapterDoorwayAssignments = {
   "i-6wdPMth": {
     "theme": "western",
     "href": "/western-portrait-photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-GtR9WBH": {
     "theme": "western",
     "href": "/Western-Photography-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-FhwDm6k": {
     "theme": "western",
     "href": "/Western-Wall-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-FKmvVCn": {
     "theme": "western",
@@ -3299,17 +3299,17 @@ export const chapterDoorwayAssignments = {
   "i-5xcvjQJ": {
     "theme": "western",
     "href": "/old-west-pictures",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-Q9ddntR": {
     "theme": "western",
     "href": "/vintage-western-art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-6xL8p7Z": {
     "theme": "western",
     "href": "/wild-west-art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-smMGtDZ": {
     "theme": "western",
@@ -3339,17 +3339,17 @@ export const chapterDoorwayAssignments = {
   "i-vnbxvkh": {
     "theme": "western",
     "href": "/western-photos",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-NrDBPzM": {
     "theme": "western",
     "href": "/cowboy-pictures",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-sh8X4Vg": {
     "theme": "western",
     "href": "/western-cowboy-pictures",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-pmdsNRZ": {
     "theme": "western",
@@ -3379,17 +3379,17 @@ export const chapterDoorwayAssignments = {
   "i-BJWt4zd": {
     "theme": "western",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-NNXnThw": {
     "theme": "western",
     "href": "/Western-Wall-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-MTX8mmk": {
     "theme": "western",
     "href": "/western-cowboy-art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-xsqsCKz": {
     "theme": "western",
@@ -3419,17 +3419,17 @@ export const chapterDoorwayAssignments = {
   "i-tZhtz8w": {
     "theme": "western",
     "href": "/vintage-western-art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-nKHmkvM": {
     "theme": "western",
     "href": "/wild-west-art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-9vczZrF": {
     "theme": "western",
     "href": "/Western-Frontier-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-5GRFtKB": {
     "theme": "western",
@@ -3459,17 +3459,17 @@ export const chapterDoorwayAssignments = {
   "i-T6bD4w7": {
     "theme": "western",
     "href": "/cowboy-pictures",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-Mm3jXFH": {
     "theme": "western",
     "href": "/western-cowboy-pictures",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-Dthbn8K": {
     "theme": "western",
     "href": "/cowboy-art-prints",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-8cXqSjj": {
     "theme": "western",
@@ -3499,17 +3499,17 @@ export const chapterDoorwayAssignments = {
   "i-5LTzhJ6": {
     "theme": "western",
     "href": "/Western-Wall-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-7K9GG9z": {
     "theme": "western",
     "href": "/western-cowboy-art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-bxsRc6q": {
     "theme": "western",
     "href": "/Narrative-Western-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-GK7Trs9": {
     "theme": "western",
@@ -3539,17 +3539,17 @@ export const chapterDoorwayAssignments = {
   "i-7V4VjNm": {
     "theme": "western",
     "href": "/wild-west-art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-TgkwSbh": {
     "theme": "western",
     "href": "/Western-Frontier-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-BtCH5S3": {
     "theme": "western",
     "href": "/American-Western-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-9q5B7FX": {
     "theme": "western",
@@ -3579,17 +3579,17 @@ export const chapterDoorwayAssignments = {
   "i-76Fjxvs": {
     "theme": "western",
     "href": "/western-cowboy-pictures",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-RMTbDRs": {
     "theme": "western",
     "href": "/cowboy-art-prints",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-PDVZhtZ": {
     "theme": "western",
     "href": "/cowboy-fine-art-prints",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-Ns6ZkrF": {
     "theme": "western",
@@ -3619,17 +3619,17 @@ export const chapterDoorwayAssignments = {
   "i-CFT7PJM": {
     "theme": "western",
     "href": "/western-cowboy-art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-DK48RWj": {
     "theme": "western",
     "href": "/Narrative-Western-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-pHhRGL6": {
     "theme": "western",
     "href": "/Western-Black-and-White-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-sVrtDx8": {
     "theme": "western",
@@ -3659,17 +3659,17 @@ export const chapterDoorwayAssignments = {
   "i-rdf8JpZ": {
     "theme": "western",
     "href": "/Western-Frontier-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-kjWmdVL": {
     "theme": "western",
     "href": "/American-Western-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-549JVNk": {
     "theme": "western",
     "href": "/western-artwork",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-5XC2cj5": {
     "theme": "western",
@@ -3699,17 +3699,17 @@ export const chapterDoorwayAssignments = {
   "i-Nm9DNhq": {
     "theme": "western",
     "href": "/cowboy-art-prints",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-pcP7hcf": {
     "theme": "western",
     "href": "/cowboy-fine-art-prints",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-95vTrrv": {
     "theme": "western",
     "href": "/Western-Cowboy-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-cKL7kjn": {
     "theme": "western",
@@ -3739,17 +3739,17 @@ export const chapterDoorwayAssignments = {
   "i-3nZvZTj": {
     "theme": "western",
     "href": "/Narrative-Western-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-w6bDSqM": {
     "theme": "western",
     "href": "/Western-Black-and-White-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-Q5gq9MD": {
     "theme": "western",
     "href": "/Cowboy-Fine-Art-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-nbvxtrR": {
     "theme": "western",
@@ -3779,17 +3779,17 @@ export const chapterDoorwayAssignments = {
   "i-KXLmcXW": {
     "theme": "western",
     "href": "/American-Western-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-sLtTp4m": {
     "theme": "western",
     "href": "/western-artwork",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-vgZ8twt": {
     "theme": "western",
     "href": "/western-art-prints",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-73WFHzh": {
     "theme": "western",
@@ -3819,17 +3819,17 @@ export const chapterDoorwayAssignments = {
   "i-2GsTkqf": {
     "theme": "western",
     "href": "/cowboy-fine-art-prints",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-W73hxx4": {
     "theme": "western",
     "href": "/Western-Cowboy-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-727jVkX": {
     "theme": "western",
     "href": "/Cowboy-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-KL9t3Xg": {
     "theme": "western",
@@ -3859,17 +3859,17 @@ export const chapterDoorwayAssignments = {
   "i-Sbr5tSx": {
     "theme": "western",
     "href": "/Western-Black-and-White-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-RLZFsxp": {
     "theme": "western",
     "href": "/Cowboy-Fine-Art-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-CdpCkV4": {
     "theme": "western",
     "href": "/american-wild-west",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-R7VTGwJ": {
     "theme": "western",
@@ -3899,17 +3899,17 @@ export const chapterDoorwayAssignments = {
   "i-TpqkCVk": {
     "theme": "western",
     "href": "/western-artwork",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-8PxNHDD": {
     "theme": "western",
     "href": "/western-art-prints",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-sz7RwkR": {
     "theme": "western",
     "href": "/Western-Photography-Prints",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-SrPqX7H": {
     "theme": "western",
@@ -3939,17 +3939,17 @@ export const chapterDoorwayAssignments = {
   "i-RdsBKX8": {
     "theme": "western",
     "href": "/Western-Cowboy-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-8NZ2XjP": {
     "theme": "western",
     "href": "/Cowboy-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-dm5pNmb": {
     "theme": "western",
     "href": "/western-portrait-photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-vHWM5g8": {
     "theme": "western",
@@ -3979,17 +3979,17 @@ export const chapterDoorwayAssignments = {
   "i-TM27hkq": {
     "theme": "western",
     "href": "/Cowboy-Fine-Art-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-s5XTxBL": {
     "theme": "western",
     "href": "/american-wild-west",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-LZNLWf9": {
     "theme": "western",
     "href": "/old-west-pictures",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-grR3fmV": {
     "theme": "western",
@@ -4019,17 +4019,17 @@ export const chapterDoorwayAssignments = {
   "i-BQ2vH4C": {
     "theme": "western",
     "href": "/western-art-prints",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-TJbNP4k": {
     "theme": "western",
     "href": "/Western-Photography-Prints",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-sJDHsjN": {
     "theme": "western",
     "href": "/western-photos",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-JFt3T2W": {
     "theme": "western",
@@ -4059,17 +4059,17 @@ export const chapterDoorwayAssignments = {
   "i-MSnkjq2": {
     "theme": "western",
     "href": "/Cowboy-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-45kXhng": {
     "theme": "western",
     "href": "/western-portrait-photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-k2GK8bz": {
     "theme": "western",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-5rV2pQS": {
     "theme": "western",
@@ -4099,17 +4099,17 @@ export const chapterDoorwayAssignments = {
   "i-s5VRFGH": {
     "theme": "western",
     "href": "/american-wild-west",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-w3rxmgg": {
     "theme": "western",
     "href": "/old-west-pictures",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-f47g8KM": {
     "theme": "western",
     "href": "/vintage-western-art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-wdDHfpn": {
     "theme": "western",
@@ -4139,17 +4139,17 @@ export const chapterDoorwayAssignments = {
   "i-28HMKqF": {
     "theme": "western",
     "href": "/Western-Photography-Prints",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-xLcb2sZ": {
     "theme": "western",
     "href": "/western-photos",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-hcXpx9m": {
     "theme": "western",
     "href": "/cowboy-pictures",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-6Mqqssm": {
     "theme": "western",
@@ -4179,17 +4179,17 @@ export const chapterDoorwayAssignments = {
   "i-Tv9qCJB": {
     "theme": "western",
     "href": "/western-portrait-photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-X8DBDJS": {
     "theme": "western",
     "href": "/Western-Photography-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-NMWM9tP": {
     "theme": "western",
     "href": "/Western-Wall-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-xZdZmQs": {
     "theme": "western",
@@ -4219,17 +4219,17 @@ export const chapterDoorwayAssignments = {
   "i-LrfWmg7": {
     "theme": "western",
     "href": "/old-west-pictures",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-C9Q7sKR": {
     "theme": "western",
     "href": "/vintage-western-art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-Z7G9xfp": {
     "theme": "western",
     "href": "/wild-west-art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-5fQjwcv": {
     "theme": "western",
@@ -4269,17 +4269,17 @@ export const chapterDoorwayAssignments = {
   "i-sDZFJ6t": {
     "theme": "nativeAmerican",
     "href": "/Western-Black-and-White-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-4Wsxmqv": {
     "theme": "nativeAmerican",
     "href": "/western-art-prints",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-Z8pZLnt": {
     "theme": "nativeAmerican",
     "href": "/Western-Photography-Prints",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-gQmqxZJ": {
     "theme": "nativeAmerican",
@@ -4309,17 +4309,17 @@ export const chapterDoorwayAssignments = {
   "i-vP6ZvBw": {
     "theme": "nativeAmerican",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-StJWnTh": {
     "theme": "nativeAmerican",
     "href": "/Western-Photography-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-JbWnV3V": {
     "theme": "nativeAmerican",
     "href": "/Western-Black-and-White-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-9FCHdBp": {
     "theme": "nativeAmerican",
@@ -4374,17 +4374,17 @@ export const chapterDoorwayAssignments = {
   "i-NVz5zk2": {
     "theme": "roaring20s",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-9cZHdvB": {
     "theme": "roaring20s",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-zrVCpMP": {
     "theme": "roaring20s",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-rxnpqCQ": {
     "theme": "roaring20s",
@@ -4414,17 +4414,17 @@ export const chapterDoorwayAssignments = {
   "i-k2W3gQV": {
     "theme": "roaring20s",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-m7STjq2": {
     "theme": "roaring20s",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-K6mDKMn": {
     "theme": "roaring20s",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-QBKhZS2": {
     "theme": "roaring20s",
@@ -4454,17 +4454,17 @@ export const chapterDoorwayAssignments = {
   "i-MhMbDtL": {
     "theme": "roaring20s",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-7rWrmHq": {
     "theme": "roaring20s",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-jRPgZj3": {
     "theme": "roaring20s",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-Dc7Xpdw": {
     "theme": "roaring20s",
@@ -4494,17 +4494,17 @@ export const chapterDoorwayAssignments = {
   "i-tpvJWLm": {
     "theme": "roaring20s",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-Pt7whDS": {
     "theme": "roaring20s",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-nDfspwn": {
     "theme": "roaring20s",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-rWLJL2v": {
     "theme": "roaring20s",
@@ -4534,17 +4534,17 @@ export const chapterDoorwayAssignments = {
   "i-7dksHnz": {
     "theme": "roaring20s",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-cpRfZ8j": {
     "theme": "roaring20s",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-KdGdjFZ": {
     "theme": "roaring20s",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-fNTTW43": {
     "theme": "roaring20s",
@@ -4574,17 +4574,17 @@ export const chapterDoorwayAssignments = {
   "i-jQCkBDs": {
     "theme": "roaring20s",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-sjtz7Fj": {
     "theme": "roaring20s",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-zgNxHdz": {
     "theme": "roaring20s",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-4p3fBxJ": {
     "theme": "wwii",
@@ -4614,17 +4614,17 @@ export const chapterDoorwayAssignments = {
   "i-MLbJfVV": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-dMQWS6q": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-3X9JbcF": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-3fWjF7C": {
     "theme": "wwii",
@@ -4654,17 +4654,17 @@ export const chapterDoorwayAssignments = {
   "i-sLWpzr4": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-4t3Dmz8": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-MPZNDSF": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-cn9672v": {
     "theme": "wwii",
@@ -4694,17 +4694,17 @@ export const chapterDoorwayAssignments = {
   "i-2BMfpZf": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-Xc9QF2n": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-fK4qZB4": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-z3JjLSG": {
     "theme": "wwii",
@@ -4734,17 +4734,17 @@ export const chapterDoorwayAssignments = {
   "i-8PsVxCC": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-mHJNQXW": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-GcGX4Ln": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-SWPCd35": {
     "theme": "wwii",
@@ -4774,17 +4774,17 @@ export const chapterDoorwayAssignments = {
   "i-hKN7Rxx": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-R2mpKNb": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-jhgDbcf": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-LwQQVjp": {
     "theme": "wwii",
@@ -4814,17 +4814,17 @@ export const chapterDoorwayAssignments = {
   "i-nhm5CRf": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-hHVDKC9": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-tNQj34J": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-V695Dp6": {
     "theme": "wwii",
@@ -4854,17 +4854,17 @@ export const chapterDoorwayAssignments = {
   "i-Vrmx6xQ": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-7z6hDdR": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-w8SFWQT": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-kFG6fSc": {
     "theme": "wwii",
@@ -4894,17 +4894,17 @@ export const chapterDoorwayAssignments = {
   "i-Tfg5j96": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-n3N8NRr": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-N9sBgRs": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-59zQzXC": {
     "theme": "wwii",
@@ -4934,17 +4934,17 @@ export const chapterDoorwayAssignments = {
   "i-hwZmvKw": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-cnKRrrH": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-NBvV5CH": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-gbcTnJp": {
     "theme": "wwii",
@@ -4974,17 +4974,17 @@ export const chapterDoorwayAssignments = {
   "i-cFcMB2h": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-NPkLTtP": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-3gH2xgz": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-dBLHKzn": {
     "theme": "wwii",
@@ -5014,17 +5014,17 @@ export const chapterDoorwayAssignments = {
   "i-qtpJ9Rc": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-7GhbvWS": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-nDF3Jmx": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-XPk7zrk": {
     "theme": "wwii",
@@ -5054,17 +5054,17 @@ export const chapterDoorwayAssignments = {
   "i-pvpwdBx": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-xJ2ncLF": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-rh4WHJh": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-x3ZPvH9": {
     "theme": "wwii",
@@ -5094,17 +5094,17 @@ export const chapterDoorwayAssignments = {
   "i-NzVgz27": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-QdTk3tx": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-qrfsSnK": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-6GXtnFS": {
     "theme": "wwii",
@@ -5134,17 +5134,17 @@ export const chapterDoorwayAssignments = {
   "i-mZhwrsq": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-X6K2nTX": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-x66BqR2": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-pcgbbVD": {
     "theme": "wwii",
@@ -5174,17 +5174,17 @@ export const chapterDoorwayAssignments = {
   "i-LPGK6GQ": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-DBhHNsx": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-xfVsJSw": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-ZsvXGsZ": {
     "theme": "wwii",
@@ -5214,17 +5214,17 @@ export const chapterDoorwayAssignments = {
   "i-cn52Pv8": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-qD8wNrk": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-8fG4Cw6": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-n3DfmhH": {
     "theme": "wwii",
@@ -5254,17 +5254,17 @@ export const chapterDoorwayAssignments = {
   "i-mgtzMfv": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-HpjgX48": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-DtGgkq6": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-PJjLRDx": {
     "theme": "wwii",
@@ -5294,17 +5294,17 @@ export const chapterDoorwayAssignments = {
   "i-22hf958": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-dSCsqSC": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-RFpMwFx": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-N2gT9Qw": {
     "theme": "wwii",
@@ -5334,17 +5334,17 @@ export const chapterDoorwayAssignments = {
   "i-2LZq7Wn": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-wzkNsnZ": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-hn3SFCW": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-LN9Tdvr": {
     "theme": "wwii",
@@ -5374,17 +5374,17 @@ export const chapterDoorwayAssignments = {
   "i-qjLpZPg": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-ggLrXkW": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-qpX8Gxp": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-XSB5fVp": {
     "theme": "wwii",
@@ -5414,17 +5414,17 @@ export const chapterDoorwayAssignments = {
   "i-ZrS6Hpm": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-8QK8f9C": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-n9FrVQG": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-BHDwMmG": {
     "theme": "wwii",
@@ -5454,17 +5454,17 @@ export const chapterDoorwayAssignments = {
   "i-hPDVVf4": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-mRcjcQx": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-29bkHrX": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-XXnPLmQ": {
     "theme": "wwii",
@@ -5494,17 +5494,17 @@ export const chapterDoorwayAssignments = {
   "i-H73gQ4P": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-GdMFBGc": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-gRqMNCH": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-Cw72C3b": {
     "theme": "wwii",
@@ -5534,17 +5534,17 @@ export const chapterDoorwayAssignments = {
   "i-J7nsQtj": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-ST6R4S3": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-32xbMtQ": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-GtX9w4B": {
     "theme": "wwii",
@@ -5574,17 +5574,17 @@ export const chapterDoorwayAssignments = {
   "i-xs6MWcM": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-4Gk8HRG": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-2Pwm8vt": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-wdnJQwf": {
     "theme": "wwii",
@@ -5614,17 +5614,17 @@ export const chapterDoorwayAssignments = {
   "i-xkztczt": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-drjN6Mh": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-c8WPctp": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-qTKSmBD": {
     "theme": "wwii",
@@ -5654,17 +5654,17 @@ export const chapterDoorwayAssignments = {
   "i-xdQMPhx": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-JtGX2Jj": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-zhXRRQJ": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-v6mfR3M": {
     "theme": "wwii",
@@ -5694,17 +5694,17 @@ export const chapterDoorwayAssignments = {
   "i-Q8VzmZb": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-XQnNv53": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-65CBsn3": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-krDJb3M": {
     "theme": "wwii",
@@ -5734,17 +5734,17 @@ export const chapterDoorwayAssignments = {
   "i-jbhq74R": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-ZvrLLHG": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-szFGDLB": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-fnsQQdz": {
     "theme": "wwii",
@@ -5774,17 +5774,17 @@ export const chapterDoorwayAssignments = {
   "i-xkntcRq": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-4DvQwz5": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-frBvQp7": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-z7QmfM5": {
     "theme": "wwii",
@@ -5814,17 +5814,17 @@ export const chapterDoorwayAssignments = {
   "i-8rZ67C2": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-tfMnxdj": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-64t3cFv": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-q9gwvwQ": {
     "theme": "wwii",
@@ -5854,17 +5854,17 @@ export const chapterDoorwayAssignments = {
   "i-Wd8cVgw": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-cC29XgQ": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-vWJbD8P": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-TFGwMrt": {
     "theme": "wwii",
@@ -5894,17 +5894,17 @@ export const chapterDoorwayAssignments = {
   "i-ZCbRRsN": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-srT6jwR": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-H5XJjj2": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-dkfbg4H": {
     "theme": "wwii",
@@ -5934,17 +5934,17 @@ export const chapterDoorwayAssignments = {
   "i-TqwNVLm": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-hSXXXmd": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-M4Tzhkn": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-LSqMCph": {
     "theme": "wwii",
@@ -5974,17 +5974,17 @@ export const chapterDoorwayAssignments = {
   "i-xwTrk8M": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-GkpGWvT": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-fTGjHKh": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-wWwVmQG": {
     "theme": "wwii",
@@ -6014,17 +6014,17 @@ export const chapterDoorwayAssignments = {
   "i-pntwtPC": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-jVK5Lqc": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-MphpdF8": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-S8Z9pr4": {
     "theme": "wwii",
@@ -6054,17 +6054,17 @@ export const chapterDoorwayAssignments = {
   "i-PSjtQTf": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-tBTrxTg": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-nkQQ5zR": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-gVFkfHb": {
     "theme": "wwii",
@@ -6094,17 +6094,17 @@ export const chapterDoorwayAssignments = {
   "i-sLVb5sJ": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-rmzHh2j": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-tgmq9D9": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-z3k6ZDH": {
     "theme": "wwii",
@@ -6134,17 +6134,17 @@ export const chapterDoorwayAssignments = {
   "i-rBtrrtx": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-wRxHNc4": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-LMvspP9": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-fmd9mTF": {
     "theme": "wwii",
@@ -6174,17 +6174,17 @@ export const chapterDoorwayAssignments = {
   "i-h6zMQW8": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-vsx5t6W": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-snvP87s": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-Cwv4Sf2": {
     "theme": "wwii",
@@ -6214,17 +6214,17 @@ export const chapterDoorwayAssignments = {
   "i-sr9WMcn": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-kX8Wksp": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-pd3hvNk": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-ttDPKwH": {
     "theme": "wwii",
@@ -6254,17 +6254,17 @@ export const chapterDoorwayAssignments = {
   "i-BNVxGWx": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-HwgrDkM": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-NdnMjDd": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-S3XQ9VZ": {
     "theme": "wwii",
@@ -6294,17 +6294,17 @@ export const chapterDoorwayAssignments = {
   "i-8RsnRLj": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-B6rBNj5": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-jGXWq3f": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-FMDBqqF": {
     "theme": "wwii",
@@ -6334,17 +6334,17 @@ export const chapterDoorwayAssignments = {
   "i-rhM88g4": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-GwTMZZK": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-t6xx8Cq": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-qrSVhmS": {
     "theme": "wwii",
@@ -6374,17 +6374,17 @@ export const chapterDoorwayAssignments = {
   "i-F2WkVxc": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-JgPqTqV": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-wRbqxRm": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-QpWNnWp": {
     "theme": "wwii",
@@ -6414,17 +6414,17 @@ export const chapterDoorwayAssignments = {
   "i-597XdNX": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-whNr3dr": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-Bwd2kfT": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-vVTBSzp": {
     "theme": "wwii",
@@ -6454,17 +6454,17 @@ export const chapterDoorwayAssignments = {
   "i-WbRFtsn": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-7MTPDt4": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-R69W3Cs": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-K2qMML6": {
     "theme": "wwii",
@@ -6494,17 +6494,17 @@ export const chapterDoorwayAssignments = {
   "i-m3CWsjq": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-dhFcdtJ": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-L7zCNR2": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-h3gzd8X": {
     "theme": "wwii",
@@ -6534,17 +6534,17 @@ export const chapterDoorwayAssignments = {
   "i-s3QvQMQ": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-ctQFzW3": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-6zntx9R": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-9Cf3prX": {
     "theme": "wwii",
@@ -6574,17 +6574,17 @@ export const chapterDoorwayAssignments = {
   "i-f5TPN83": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-8QXD4Cq": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-JnmQDPd": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-wFV22SQ": {
     "theme": "wwii",
@@ -6614,17 +6614,17 @@ export const chapterDoorwayAssignments = {
   "i-LcWVBPt": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-RPHDKxF": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-pX6JVNs": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-sGQLsK8": {
     "theme": "wwii",
@@ -6654,17 +6654,17 @@ export const chapterDoorwayAssignments = {
   "i-V5dwLbs": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-mtXJmf8": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-3NCLt4s": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-kFMq3s4": {
     "theme": "wwii",
@@ -6694,17 +6694,17 @@ export const chapterDoorwayAssignments = {
   "i-jzFxhks": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-CFxRg4Q": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-NB2VdMF": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-SVVwgdB": {
     "theme": "wwii",
@@ -6734,17 +6734,17 @@ export const chapterDoorwayAssignments = {
   "i-rpdHJRT": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-bmNF7xF": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-8GPzCR2": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-4RqT5V2": {
     "theme": "wwii",
@@ -6774,17 +6774,17 @@ export const chapterDoorwayAssignments = {
   "i-g7XMbW7": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-bmQp8CX": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-Zz2XVGJ": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-9Cz4fTQ": {
     "theme": "wwii",
@@ -6814,17 +6814,17 @@ export const chapterDoorwayAssignments = {
   "i-tjk6VD8": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-LbxWb4H": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-tW6nVS9": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-HHFdrzt": {
     "theme": "wwii",
@@ -6854,17 +6854,17 @@ export const chapterDoorwayAssignments = {
   "i-CDWgXBG": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-RWPzxRs": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-xqk3VG4": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-PxMMkLH": {
     "theme": "wwii",
@@ -6894,17 +6894,17 @@ export const chapterDoorwayAssignments = {
   "i-gkTrvFt": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-6bPGKw2": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-MG2RBSQ": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-nVVdKFm": {
     "theme": "wwii",
@@ -6934,17 +6934,17 @@ export const chapterDoorwayAssignments = {
   "i-Q8VN9bH": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-T98FKCW": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-szkNqt6": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-T5fkjsj": {
     "theme": "wwii",
@@ -6974,17 +6974,17 @@ export const chapterDoorwayAssignments = {
   "i-2smx37v": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-G4zzN4T": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-S5mtbjv": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-tw6hmdK": {
     "theme": "wwii",
@@ -7014,17 +7014,17 @@ export const chapterDoorwayAssignments = {
   "i-Nd7Vrz3": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-d2r8RCH": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-JHFfSb5": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-pW5QhL2": {
     "theme": "wwii",
@@ -7054,17 +7054,17 @@ export const chapterDoorwayAssignments = {
   "i-rbD26QQ": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-r55b7nc": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-4cLQTsM": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-jtPB9ts": {
     "theme": "wwii",
@@ -7094,17 +7094,17 @@ export const chapterDoorwayAssignments = {
   "i-DZ3rJcP": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-327k6C2": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-MLg7CFF": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-LwBQW6J": {
     "theme": "wwii",
@@ -7134,17 +7134,17 @@ export const chapterDoorwayAssignments = {
   "i-x93RMKM": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-JkxBMK9": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-zp32Q9X": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-CHKFmcm": {
     "theme": "wwii",
@@ -7174,17 +7174,17 @@ export const chapterDoorwayAssignments = {
   "i-dznf8sd": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-w4HzscL": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-3G3qWpd": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-KS6JFX5": {
     "theme": "wwii",
@@ -7214,17 +7214,17 @@ export const chapterDoorwayAssignments = {
   "i-J5P7HTB": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-7FwpMPD": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-LhVX3Qt": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-3kHSr6x": {
     "theme": "wwii",
@@ -7254,17 +7254,17 @@ export const chapterDoorwayAssignments = {
   "i-KHwLvpT": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-6JwKG4S": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-jFZMg3C": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-WgTb7t4": {
     "theme": "wwii",
@@ -7294,17 +7294,17 @@ export const chapterDoorwayAssignments = {
   "i-mLhqPHZ": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-pBMmvMZ": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-tz4T7z9": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-drvkqnM": {
     "theme": "wwii",
@@ -7334,17 +7334,17 @@ export const chapterDoorwayAssignments = {
   "i-8ZC4vFq": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-Bjdz3R9": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-tKfhjQv": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-M9DgWmr": {
     "theme": "wwii",
@@ -7374,17 +7374,17 @@ export const chapterDoorwayAssignments = {
   "i-BBHzSFk": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-6sP3zMj": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-5jcG5nN": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-KZzHbBS": {
     "theme": "wwii",
@@ -7414,17 +7414,17 @@ export const chapterDoorwayAssignments = {
   "i-QXLhzGj": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-mdfNg9Z": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-PFt82WZ": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-8b8wbkc": {
     "theme": "wwii",
@@ -7454,17 +7454,17 @@ export const chapterDoorwayAssignments = {
   "i-Lwg8bsX": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-sLQtWvL": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-RxjLXGM": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-54Q8sSJ": {
     "theme": "wwii",
@@ -7494,17 +7494,17 @@ export const chapterDoorwayAssignments = {
   "i-3VCCKd2": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-LkpNVPS": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-FfQhchB": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-8wkL7qZ": {
     "theme": "wwii",
@@ -7534,17 +7534,17 @@ export const chapterDoorwayAssignments = {
   "i-CnJvwVq": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-CwZ2zTV": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-vKxJbtv": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-7kBK9mH": {
     "theme": "wwii",
@@ -7574,17 +7574,17 @@ export const chapterDoorwayAssignments = {
   "i-3KQX5zn": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-6RrzKF3": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-pTT7Zcr": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-LBzsXH4": {
     "theme": "wwii",
@@ -7614,17 +7614,17 @@ export const chapterDoorwayAssignments = {
   "i-5PbVZPJ": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-djZrQxQ": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-xZqZvVd": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-dppZCKv": {
     "theme": "wwii",
@@ -7654,17 +7654,17 @@ export const chapterDoorwayAssignments = {
   "i-XBTNVg3": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-tJfJDvb": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-7SHGcw8": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-fKf5KdW": {
     "theme": "wwii",
@@ -7694,17 +7694,17 @@ export const chapterDoorwayAssignments = {
   "i-MZNSN6J": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-9rr8bpL": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-gvqmdxw": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-xcS3GZ7": {
     "theme": "wwii",
@@ -7734,17 +7734,17 @@ export const chapterDoorwayAssignments = {
   "i-Qhffvx2": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-LM9wCk4": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-Zwr4qQH": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-gFJb9TS": {
     "theme": "wwii",
@@ -7774,17 +7774,17 @@ export const chapterDoorwayAssignments = {
   "i-nKHdrd2": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-SQVsGPT": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-GJv5z55": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-W4QXPzk": {
     "theme": "wwii",
@@ -7814,17 +7814,17 @@ export const chapterDoorwayAssignments = {
   "i-Q7JSC7M": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-F6c4Dcc": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-SD38LDB": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-wzQLFp3": {
     "theme": "wwii",
@@ -7854,17 +7854,17 @@ export const chapterDoorwayAssignments = {
   "i-drxhXH8": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-Lt7xx85": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-w8M7GcW": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-jjMqqvv": {
     "theme": "wwii",
@@ -7894,17 +7894,17 @@ export const chapterDoorwayAssignments = {
   "i-5s2jXNd": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-Tz34hmg": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-BtMwcTh": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-6VtVvBq": {
     "theme": "wwii",
@@ -7934,17 +7934,17 @@ export const chapterDoorwayAssignments = {
   "i-hZ3rsGq": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-4LZ6Bkr": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-VRP9HFP": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-zKMhfHj": {
     "theme": "wwii",
@@ -7974,17 +7974,17 @@ export const chapterDoorwayAssignments = {
   "i-dqCtL9c": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-4mHkJZh": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-Ht39nrT": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-7vjjbpb": {
     "theme": "wwii",
@@ -8014,17 +8014,17 @@ export const chapterDoorwayAssignments = {
   "i-xJ4RNCj": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-P3gPGJW": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-4Rk9G7c": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-q9Rj7kr": {
     "theme": "wwii",
@@ -8054,17 +8054,17 @@ export const chapterDoorwayAssignments = {
   "i-KmgzqNw": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-S4Wxx5b": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-FVMGJbM": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-R8kLR6g": {
     "theme": "wwii",
@@ -8094,17 +8094,17 @@ export const chapterDoorwayAssignments = {
   "i-Q7N8Pfj": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-8qH4gfS": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-GmBz5Ng": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-rLdK3vp": {
     "theme": "wwii",
@@ -8134,17 +8134,17 @@ export const chapterDoorwayAssignments = {
   "i-dgqm4xT": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-pQ7JG3f": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-ZWc3HmC": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-wgF5ZwK": {
     "theme": "wwii",
@@ -8174,17 +8174,17 @@ export const chapterDoorwayAssignments = {
   "i-PbcZFSf": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-NdrPvnQ": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-qm9X87m": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-2Q7wvmR": {
     "theme": "wwii",
@@ -8214,17 +8214,17 @@ export const chapterDoorwayAssignments = {
   "i-M9cq3qz": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-nfM7qLs": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-zqzcBZm": {
     "theme": "wwii",
     "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-CJmshF2": {
     "theme": "wwii",
@@ -8259,17 +8259,17 @@ export const chapterDoorwayAssignments = {
   "i-7GCDqcW": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-NH5PD4M": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-Rspf84k": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-GGmGhkv": {
     "theme": "landscapes",
@@ -8299,17 +8299,17 @@ export const chapterDoorwayAssignments = {
   "i-VPBt3XG": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-xfBNqVW": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-gvz3xGb": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-WSVMnGx": {
     "theme": "landscapes",
@@ -8339,17 +8339,17 @@ export const chapterDoorwayAssignments = {
   "i-HP6hJm4": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-GmFFsFL": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-WdNbPqX": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-fccqTrW": {
     "theme": "landscapes",
@@ -8379,17 +8379,17 @@ export const chapterDoorwayAssignments = {
   "i-pd6dZCP": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-VHMgr5J": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-QsskjT5": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-f56454D": {
     "theme": "landscapes",
@@ -8419,17 +8419,17 @@ export const chapterDoorwayAssignments = {
   "i-SCMFzP3": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-84Cqc8J": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-pg6hdsZ": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-fgkX7Jn": {
     "theme": "landscapes",
@@ -8459,17 +8459,17 @@ export const chapterDoorwayAssignments = {
   "i-Jstk9Gx": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-NkNwLM6": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-nqpGhhX": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-cKsdqTs": {
     "theme": "landscapes",
@@ -8499,17 +8499,17 @@ export const chapterDoorwayAssignments = {
   "i-qrS5Ggc": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-bqnctgw": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-XzhTJPf": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-G6gftd8": {
     "theme": "landscapes",
@@ -8539,17 +8539,17 @@ export const chapterDoorwayAssignments = {
   "i-jWDDpC4": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-6PzCQW9": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-N226DMX": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-NHkKNbH": {
     "theme": "landscapes",
@@ -8579,17 +8579,17 @@ export const chapterDoorwayAssignments = {
   "i-NHPCPhP": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-WfrdxRR": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-HzFGjBR": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-7SvxcWm": {
     "theme": "landscapes",
@@ -8619,17 +8619,17 @@ export const chapterDoorwayAssignments = {
   "i-ZsFmtdj": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-52czKPJ": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-cqrzRwc": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-QHBqC4b": {
     "theme": "landscapes",
@@ -8659,17 +8659,17 @@ export const chapterDoorwayAssignments = {
   "i-hwnwhJT": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-GNWVmdp": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-H4dtMQ5": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-qL6vZqs": {
     "theme": "landscapes",
@@ -8699,17 +8699,17 @@ export const chapterDoorwayAssignments = {
   "i-JqwF5sW": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-n5Kt6x3": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-shVs3RQ": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-MmtQ2p8": {
     "theme": "landscapes",
@@ -8739,17 +8739,17 @@ export const chapterDoorwayAssignments = {
   "i-73H3wLV": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-zk7zXP3": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-b2hZptn": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-HCm7ssN": {
     "theme": "landscapes",
@@ -8779,17 +8779,17 @@ export const chapterDoorwayAssignments = {
   "i-xTQqpTT": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-fvR6xh7": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-b6dRFxv": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-KKkLwvR": {
     "theme": "landscapes",
@@ -8819,17 +8819,17 @@ export const chapterDoorwayAssignments = {
   "i-RwCs5gt": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-r3Kq9B4": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-5DbNvHj": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-pB9zzmW": {
     "theme": "landscapes",
@@ -8859,17 +8859,17 @@ export const chapterDoorwayAssignments = {
   "i-RRFGZvS": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-TgVv6SZ": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-JdTbNvz": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-VzhZFL7": {
     "theme": "transportation",
@@ -8899,17 +8899,17 @@ export const chapterDoorwayAssignments = {
   "i-3FrzPRt": {
     "theme": "transportation",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-DgSG4Ht": {
     "theme": "transportation",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-rP2QhwJ": {
     "theme": "transportation",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-PT5GqfP": {
     "theme": "transportation",
@@ -8939,17 +8939,17 @@ export const chapterDoorwayAssignments = {
   "i-8VgD3bQ": {
     "theme": "transportation",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-C6DBCqz": {
     "theme": "transportation",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-jsGFv5C": {
     "theme": "transportation",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-dSBHv7x": {
     "theme": "transportation",
@@ -8979,17 +8979,17 @@ export const chapterDoorwayAssignments = {
   "i-VRjSsM6": {
     "theme": "transportation",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-6CqjzJ3": {
     "theme": "transportation",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-86HKcF6": {
     "theme": "transportation",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-vDCmHDx": {
     "theme": "transportation",
@@ -9019,17 +9019,17 @@ export const chapterDoorwayAssignments = {
   "i-DsKrDFM": {
     "theme": "transportation",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-5S7fJtQ": {
     "theme": "transportation",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-679fHqX": {
     "theme": "transportation",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-45tHJJR": {
     "theme": "transportation",
@@ -9059,17 +9059,17 @@ export const chapterDoorwayAssignments = {
   "i-3nPnmnQ": {
     "theme": "transportation",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-srgN25v": {
     "theme": "transportation",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-BkcSBK6": {
     "theme": "transportation",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-6zk8Vt5": {
     "theme": "transportation",
@@ -9099,17 +9099,17 @@ export const chapterDoorwayAssignments = {
   "i-FrDFN7V": {
     "theme": "transportation",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-n6PjStj": {
     "theme": "transportation",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-SfsCh3W": {
     "theme": "transportation",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-n6ktVfH": {
     "theme": "transportation",
@@ -9139,17 +9139,17 @@ export const chapterDoorwayAssignments = {
   "i-Lj6wfwt": {
     "theme": "transportation",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-CGvLHjK": {
     "theme": "transportation",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-wGGSxJM": {
     "theme": "transportation",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-cBxjW3V": {
     "theme": "transportation",
@@ -9179,17 +9179,17 @@ export const chapterDoorwayAssignments = {
   "i-hHdRfWJ": {
     "theme": "transportation",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-vQSzph5": {
     "theme": "transportation",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-4NQdjBP": {
     "theme": "transportation",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-nbZ2kwd": {
     "theme": "transportation",
@@ -9219,17 +9219,17 @@ export const chapterDoorwayAssignments = {
   "i-MSGcRLk": {
     "theme": "transportation",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-Qk22N2c": {
     "theme": "transportation",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-FcdDxxw": {
     "theme": "transportation",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-QdcLZLF": {
     "theme": "transportation",
@@ -9259,17 +9259,17 @@ export const chapterDoorwayAssignments = {
   "i-SPVGpxw": {
     "theme": "transportation",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-7dRzH7F": {
     "theme": "transportation",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-cgh854F": {
     "theme": "transportation",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-wkRb273": {
     "theme": "transportation",
@@ -9309,17 +9309,17 @@ export const chapterDoorwayAssignments = {
   "i-dB6BX5J": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-LcWbnLw": {
     "theme": "portraits",
     "href": "/western-portrait-photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-bm2rnbd": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-hnKpM45": {
     "theme": "portraits",
@@ -9349,17 +9349,17 @@ export const chapterDoorwayAssignments = {
   "i-pCSz9SV": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-ZHnSfxf": {
     "theme": "portraits",
     "href": "/western-portrait-photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-GqLkjtM": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-4VgnHNv": {
     "theme": "portraits",
@@ -9389,17 +9389,17 @@ export const chapterDoorwayAssignments = {
   "i-Gc98zst": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-tzF4Sgz": {
     "theme": "portraits",
     "href": "/western-portrait-photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-fCwv683": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-6M79wHD": {
     "theme": "portraits",
@@ -9429,17 +9429,17 @@ export const chapterDoorwayAssignments = {
   "i-KNPxS4t": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-NtMdSm4": {
     "theme": "portraits",
     "href": "/western-portrait-photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-pr298mj": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-cXgzSFj": {
     "theme": "portraits",
@@ -9469,17 +9469,17 @@ export const chapterDoorwayAssignments = {
   "i-PQzKJfr": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-Q4BHbm8": {
     "theme": "portraits",
     "href": "/western-portrait-photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-SS4Fx5G": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-XdhCbrV": {
     "theme": "portraits",
@@ -9509,17 +9509,17 @@ export const chapterDoorwayAssignments = {
   "i-WbdF5pW": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-ScpmWwx": {
     "theme": "portraits",
     "href": "/western-portrait-photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-HRWDPHP": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-Z2dvTk4": {
     "theme": "portraits",
@@ -9549,17 +9549,17 @@ export const chapterDoorwayAssignments = {
   "i-s5Dv9mW": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-JzWqxMX": {
     "theme": "portraits",
     "href": "/western-portrait-photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-pB5DwkQ": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-v2mXzvd": {
     "theme": "portraits",
@@ -9594,17 +9594,17 @@ export const chapterDoorwayAssignments = {
   "i-Wkmt5Jm": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-WHdcCJt": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-BQzssgZ": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-gr9Wk8W": {
     "theme": "landscapes",
@@ -9634,17 +9634,17 @@ export const chapterDoorwayAssignments = {
   "i-g6pX48d": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-wGPKrn9": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-tV4GpBb": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-VWxTZH4": {
     "theme": "landscapes",
@@ -9674,17 +9674,17 @@ export const chapterDoorwayAssignments = {
   "i-dBd5pHx": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-MWfpZWw": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-G8SjQHw": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-ChMPCf2": {
     "theme": "landscapes",
@@ -9714,17 +9714,17 @@ export const chapterDoorwayAssignments = {
   "i-MmGfvfX": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-WM6RF9v": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-VcX798j": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-vfxQXDw": {
     "theme": "landscapes",
@@ -9754,17 +9754,17 @@ export const chapterDoorwayAssignments = {
   "i-8fp2dv2": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-vGqmqRv": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-XFfkRMj": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-d7Lpt4h": {
     "theme": "landscapes",
@@ -9794,17 +9794,17 @@ export const chapterDoorwayAssignments = {
   "i-X48TWHK": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-wSSQBMx": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-kvxfbSH": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-swc5Gjw": {
     "theme": "landscapes",
@@ -9834,17 +9834,17 @@ export const chapterDoorwayAssignments = {
   "i-zG7QGxD": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-NNPr3tv": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-4xwHLKT": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-dTscGvh": {
     "theme": "landscapes",
@@ -9874,17 +9874,17 @@ export const chapterDoorwayAssignments = {
   "i-3zX2HFQ": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-5x6QThQ": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-hwcm6hw": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-NwtcFR6": {
     "theme": "landscapes",
@@ -9914,17 +9914,17 @@ export const chapterDoorwayAssignments = {
   "i-2hM9WmS": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-zfDT2n9": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-m44WWcP": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-4cmkwMH": {
     "theme": "landscapes",
@@ -9954,17 +9954,17 @@ export const chapterDoorwayAssignments = {
   "i-g92RtVZ": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-GtHXZzZ": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-Mr6swzM": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-6ksmdC9": {
     "theme": "landscapes",
@@ -9994,17 +9994,17 @@ export const chapterDoorwayAssignments = {
   "i-sqBFkqC": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-jsKpN4G": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-8PwBb78": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-G4wkRxM": {
     "theme": "landscapes",
@@ -10034,17 +10034,17 @@ export const chapterDoorwayAssignments = {
   "i-pd5cVMb": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-szBvk3H": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-gGV3jHF": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-bQ5rkvz": {
     "theme": "landscapes",
@@ -10074,17 +10074,17 @@ export const chapterDoorwayAssignments = {
   "i-SpQjFwx": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-dzSgp9g": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-qH4KKbv": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-tv9cmjM": {
     "theme": "landscapes",
@@ -10114,17 +10114,17 @@ export const chapterDoorwayAssignments = {
   "i-SFHZKkz": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-6q5gXJP": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-zSqxXtw": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-m2wzGs2": {
     "theme": "landscapes",
@@ -10154,17 +10154,17 @@ export const chapterDoorwayAssignments = {
   "i-6NKTKgw": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-FxL2Ktq": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-Wf6337s": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-vwPNvvL": {
     "theme": "landscapes",
@@ -10194,17 +10194,17 @@ export const chapterDoorwayAssignments = {
   "i-s62pCtc": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-65H69Vz": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-Gw8K6Vh": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-RRX5LQb": {
     "theme": "landscapes",
@@ -10234,17 +10234,17 @@ export const chapterDoorwayAssignments = {
   "i-7Tj6R33": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-zD48j45": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-hxLj9xB": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-xrXKTpD": {
     "theme": "landscapes",
@@ -10274,17 +10274,17 @@ export const chapterDoorwayAssignments = {
   "i-FZXJX87": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-gdBhfG8": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-T8MJpbv": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-kL2NfSk": {
     "theme": "landscapes",
@@ -10314,17 +10314,17 @@ export const chapterDoorwayAssignments = {
   "i-7QtRc47": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-sdWVBzH": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-LXSxjwP": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-tfFVDTm": {
     "theme": "landscapes",
@@ -10354,17 +10354,17 @@ export const chapterDoorwayAssignments = {
   "i-j4PxV9D": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-X2gSwwB": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-SfChdG7": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-RSbm8WZ": {
     "theme": "landscapes",
@@ -10394,17 +10394,17 @@ export const chapterDoorwayAssignments = {
   "i-CNhJtLS": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-9jfFZxt": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-rMTRD6x": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-bb6zG8J": {
     "theme": "landscapes",
@@ -10434,17 +10434,17 @@ export const chapterDoorwayAssignments = {
   "i-vZC2GK7": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-C42pbCN": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-f82Jczr": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-gBPsDtv": {
     "theme": "landscapes",
@@ -10474,17 +10474,17 @@ export const chapterDoorwayAssignments = {
   "i-f4pz8mB": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-JzJQ9fz": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-rbB747M": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-VZtrKd5": {
     "theme": "landscapes",
@@ -10514,17 +10514,17 @@ export const chapterDoorwayAssignments = {
   "i-HqpbFxF": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-xjv9Dv9": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-VWcV6vv": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-Sm5wgc8": {
     "theme": "landscapes",
@@ -10554,17 +10554,17 @@ export const chapterDoorwayAssignments = {
   "i-hz2cL2D": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-Z83L9NS": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-hRwVLbb": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-tnFbsvM": {
     "theme": "landscapes",
@@ -10594,17 +10594,17 @@ export const chapterDoorwayAssignments = {
   "i-tM7nXPd": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-gvhHBMm": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-c3RK5G4": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-KVnLdHz": {
     "theme": "landscapes",
@@ -10634,17 +10634,17 @@ export const chapterDoorwayAssignments = {
   "i-JnGs2kd": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-ZzQrBnX": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-6GxGFH8": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-95Sm25K": {
     "theme": "landscapes",
@@ -10674,17 +10674,17 @@ export const chapterDoorwayAssignments = {
   "i-pzm8nxG": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-N84vx6j": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-3kpwVkG": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-KVJCjJ8": {
     "theme": "landscapes",
@@ -10714,17 +10714,17 @@ export const chapterDoorwayAssignments = {
   "i-jvKjdZd": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-GxjLPhS": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-rWFC3dL": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-8qwrBSd": {
     "theme": "landscapes",
@@ -10754,17 +10754,17 @@ export const chapterDoorwayAssignments = {
   "i-PMB2nk4": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-5TtKShN": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-QfHn5BW": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-HG9sdF8": {
     "theme": "landscapes",
@@ -10794,17 +10794,17 @@ export const chapterDoorwayAssignments = {
   "i-jpptgFS": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-KJ8CCgP": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-4DspwhB": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-S4NsS8J": {
     "theme": "landscapes",
@@ -10834,17 +10834,17 @@ export const chapterDoorwayAssignments = {
   "i-MrMvnZL": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-rkfH3Nc": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-BTPWxsz": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-HCG5PRx": {
     "theme": "landscapes",
@@ -10874,17 +10874,17 @@ export const chapterDoorwayAssignments = {
   "i-BFBxLHw": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-HskLV54": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-j3wMxB9": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-5JKmkZd": {
     "theme": "landscapes",
@@ -10914,17 +10914,17 @@ export const chapterDoorwayAssignments = {
   "i-vcmfFCM": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-b3F54M6": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-3dZtNxv": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-VbL6CF7": {
     "theme": "landscapes",
@@ -10954,17 +10954,17 @@ export const chapterDoorwayAssignments = {
   "i-LR3Vr2N": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-N3ShZHB": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-V92SWJF": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-KFLXt4D": {
     "theme": "landscapes",
@@ -10994,17 +10994,17 @@ export const chapterDoorwayAssignments = {
   "i-2d2fgNW": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-Vm7vR4f": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-FGWfXBM": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-jd8JMK2": {
     "theme": "landscapes",
@@ -11034,17 +11034,17 @@ export const chapterDoorwayAssignments = {
   "i-8hzdpxL": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-p2Hdrmc": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-nxp4vKr": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-4rJVZLg": {
     "theme": "landscapes",
@@ -11074,17 +11074,17 @@ export const chapterDoorwayAssignments = {
   "i-jt8P6Wg": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-Sv7gsQB": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-f6BHPxK": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-8hTCKbn": {
     "theme": "landscapes",
@@ -11114,17 +11114,17 @@ export const chapterDoorwayAssignments = {
   "i-43SfvFJ": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-8RHD2km": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-Mtm6Htz": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-6Vj6H86": {
     "theme": "landscapes",
@@ -11154,17 +11154,17 @@ export const chapterDoorwayAssignments = {
   "i-xbVp2GS": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-QGSJxwc": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-vqC5jTC": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-dT6fKnc": {
     "theme": "landscapes",
@@ -11194,17 +11194,17 @@ export const chapterDoorwayAssignments = {
   "i-BqKXR7D": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-MGNfc8z": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-f4Jq6NZ": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-MwLgJL5": {
     "theme": "landscapes",
@@ -11234,17 +11234,17 @@ export const chapterDoorwayAssignments = {
   "i-2MmTpqQ": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-h7Rcxmr": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-wqjGgt4": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-4WL9kr6": {
     "theme": "landscapes",
@@ -11274,17 +11274,17 @@ export const chapterDoorwayAssignments = {
   "i-Qdgw4G5": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-sRRJHVz": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-2PC8CL2": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-HqXtbrD": {
     "theme": "landscapes",
@@ -11314,17 +11314,17 @@ export const chapterDoorwayAssignments = {
   "i-T3fx2pT": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-DmxFbF6": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-VDnpX3W": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-wTXh9Lv": {
     "theme": "landscapes",
@@ -11354,17 +11354,17 @@ export const chapterDoorwayAssignments = {
   "i-WqnXv6B": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-mgSFMf3": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-D7VJ3Nh": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-6gXJFDR": {
     "theme": "landscapes",
@@ -11394,17 +11394,17 @@ export const chapterDoorwayAssignments = {
   "i-qpPKnkk": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-6jZxx8J": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-vXBVBKJ": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-8tvnHvW": {
     "theme": "landscapes",
@@ -11434,17 +11434,17 @@ export const chapterDoorwayAssignments = {
   "i-ZRMbMjx": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-2xDqgqS": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-R5CQpXg": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-VRxrHwD": {
     "theme": "landscapes",
@@ -11474,17 +11474,17 @@ export const chapterDoorwayAssignments = {
   "i-QNqpz9W": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-5vvB6PH": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-NRsfsrH": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-hmsrXK6": {
     "theme": "landscapes",
@@ -11514,17 +11514,17 @@ export const chapterDoorwayAssignments = {
   "i-fgtQxKW": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-sbMQznL": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-dwvGWVf": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-vMNKH96": {
     "theme": "landscapes",
@@ -11554,17 +11554,17 @@ export const chapterDoorwayAssignments = {
   "i-4Bf2zsv": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-SSw3qvn": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-cSFvwcM": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-8XNRjZF": {
     "theme": "landscapes",
@@ -11594,17 +11594,17 @@ export const chapterDoorwayAssignments = {
   "i-cgSjPmT": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-tF8fFm4": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-R5vHcxf": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-HgQBk3g": {
     "theme": "landscapes",
@@ -11634,17 +11634,17 @@ export const chapterDoorwayAssignments = {
   "i-wxLBqLg": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-4SmFT2v": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-XVdVWhm": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-jb5HQM7": {
     "theme": "landscapes",
@@ -11674,17 +11674,17 @@ export const chapterDoorwayAssignments = {
   "i-PmxqLBs": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-PVbJdpj": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-X99RLdm": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-S6m4mR2": {
     "theme": "landscapes",
@@ -11714,17 +11714,17 @@ export const chapterDoorwayAssignments = {
   "i-2Jr5X8d": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-Bdbf3L9": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-WmSkQXV": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-VBDWkZV": {
     "theme": "landscapes",
@@ -11754,17 +11754,17 @@ export const chapterDoorwayAssignments = {
   "i-fCx77HN": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-xBJqD6x": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-PPSGJGr": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-Nj2t7F2": {
     "theme": "landscapes",
@@ -11794,17 +11794,17 @@ export const chapterDoorwayAssignments = {
   "i-M8FrQGL": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-WvsDG8b": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-pVWz7xc": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-sTCJ5dz": {
     "theme": "landscapes",
@@ -11834,17 +11834,17 @@ export const chapterDoorwayAssignments = {
   "i-MXKDnVL": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-74rc8wb": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-98c9sG9": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-WJvRGjn": {
     "theme": "landscapes",
@@ -11874,17 +11874,17 @@ export const chapterDoorwayAssignments = {
   "i-gsFcMFJ": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-2DcTtvw": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-xVS6dxc": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-Mf7gmw7": {
     "theme": "landscapes",
@@ -11914,17 +11914,17 @@ export const chapterDoorwayAssignments = {
   "i-35gFhbt": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-Qs5qL2f": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-2znG97v": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-BzsKZNR": {
     "theme": "landscapes",
@@ -11954,17 +11954,17 @@ export const chapterDoorwayAssignments = {
   "i-B7S6VwV": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-jMzCqw2": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-nVDRCrB": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-rh75LzX": {
     "theme": "landscapes",
@@ -11994,17 +11994,17 @@ export const chapterDoorwayAssignments = {
   "i-BfZH6vR": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-qphwtVw": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-GTDMD9v": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-d28cHrD": {
     "theme": "landscapes",
@@ -12034,17 +12034,17 @@ export const chapterDoorwayAssignments = {
   "i-zKFhFwm": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-hbpLcDk": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-zhtZj7N": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-2tDDPr7": {
     "theme": "landscapes",
@@ -12074,17 +12074,17 @@ export const chapterDoorwayAssignments = {
   "i-dFpB9q5": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-MhCq8Qk": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-CpzLgtc": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-NcmRLfC": {
     "theme": "landscapes",
@@ -12114,17 +12114,17 @@ export const chapterDoorwayAssignments = {
   "i-VMGBjHW": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-hJgwV5X": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-sB8KkPF": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-8CNn2ms": {
     "theme": "landscapes",
@@ -12154,17 +12154,17 @@ export const chapterDoorwayAssignments = {
   "i-fxNXk2L": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-jn6w2tL": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-QXKpsCV": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-sfdNcst": {
     "theme": "landscapes",
@@ -12194,17 +12194,17 @@ export const chapterDoorwayAssignments = {
   "i-HZfr8Pp": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-K6gmDTQ": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-PTKKNJK": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-6kJRDSJ": {
     "theme": "landscapes",
@@ -12234,17 +12234,17 @@ export const chapterDoorwayAssignments = {
   "i-DTwrn3n": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-dkBvtw9": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-d9wMKtJ": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-mspb6K6": {
     "theme": "landscapes",
@@ -12274,17 +12274,17 @@ export const chapterDoorwayAssignments = {
   "i-rQDRZP2": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-7VD9zVJ": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-fsmXzLW": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-Jhzph7p": {
     "theme": "landscapes",
@@ -12314,17 +12314,17 @@ export const chapterDoorwayAssignments = {
   "i-388rDcL": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-LDhHKV5": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-Cpxtcp3": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-Fr454qG": {
     "theme": "landscapes",
@@ -12354,17 +12354,17 @@ export const chapterDoorwayAssignments = {
   "i-crsCCbk": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-nVCwPRj": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-qBQrF2V": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-FH9Hz8S": {
     "theme": "landscapes",
@@ -12394,17 +12394,17 @@ export const chapterDoorwayAssignments = {
   "i-CFrvwKD": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-ZZgRqGG": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-T3SRpvm": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-N5kKwLn": {
     "theme": "landscapes",
@@ -12434,17 +12434,17 @@ export const chapterDoorwayAssignments = {
   "i-VScCFDQ": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-3jXg4hf": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-rPXvXBk": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-SChqMBC": {
     "theme": "landscapes",
@@ -12474,17 +12474,17 @@ export const chapterDoorwayAssignments = {
   "i-R6q57Rs": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-jJpmmzj": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-NPKG2Mz": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-5rfQTgH": {
     "theme": "landscapes",
@@ -12514,17 +12514,17 @@ export const chapterDoorwayAssignments = {
   "i-9rpxxN9": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-VrhMdzV": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-pnp5Z79": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-jCWwbVC": {
     "theme": "landscapes",
@@ -12554,17 +12554,17 @@ export const chapterDoorwayAssignments = {
   "i-dG5zDPC": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-wmVjBm8": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-B8MhZMS": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-8t6Gg8h": {
     "theme": "landscapes",
@@ -12594,17 +12594,17 @@ export const chapterDoorwayAssignments = {
   "i-Fz6B7bw": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-6brnssc": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-VtTWVJf": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-zdsdnTv": {
     "theme": "landscapes",
@@ -12634,17 +12634,17 @@ export const chapterDoorwayAssignments = {
   "i-9rhB5Vr": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-MTB6xvk": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-9BJXt7k": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-736PQff": {
     "theme": "landscapes",
@@ -12674,17 +12674,17 @@ export const chapterDoorwayAssignments = {
   "i-t9xpbJg": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-gx8rvz5": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-MXJNMMn": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-dvccHH3": {
     "theme": "landscapes",
@@ -12714,17 +12714,17 @@ export const chapterDoorwayAssignments = {
   "i-9pskTBh": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-Kf2LS9q": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-LP5x7MS": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-XmVfrdk": {
     "theme": "landscapes",
@@ -12754,17 +12754,17 @@ export const chapterDoorwayAssignments = {
   "i-NSj5zsB": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-ZNSFtRg": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-QNc3gRK": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-bKgqLF7": {
     "theme": "landscapes",
@@ -12794,17 +12794,17 @@ export const chapterDoorwayAssignments = {
   "i-VhDJfhj": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-XFRSBrL": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-83tPbLW": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-nxGfZNp": {
     "theme": "landscapes",
@@ -12834,17 +12834,17 @@ export const chapterDoorwayAssignments = {
   "i-HSgTpdm": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-JDqV2sQ": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-v33BRwG": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-GH3g3bV": {
     "theme": "landscapes",
@@ -12874,17 +12874,17 @@ export const chapterDoorwayAssignments = {
   "i-J6CS9dN": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-4S3C7Hx": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-ZgXTnCV": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-sNtN8KK": {
     "theme": "landscapes",
@@ -12914,17 +12914,17 @@ export const chapterDoorwayAssignments = {
   "i-32QwpNJ": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-c8XWk8P": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-vjBFwm7": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-cJDBjjD": {
     "theme": "landscapes",
@@ -12954,17 +12954,17 @@ export const chapterDoorwayAssignments = {
   "i-RFkJ7Jz": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-XXszFrn": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-sBk6VHd": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-4QFPzCL": {
     "theme": "landscapes",
@@ -12994,17 +12994,17 @@ export const chapterDoorwayAssignments = {
   "i-K6dkwFH": {
     "theme": "landscapes",
     "href": "/western-landscape-art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-VtCT6nZ": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-L5tx3bd": {
     "theme": "landscapes",
     "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-GnD9h8S": {
     "theme": "landscapes",
@@ -13044,17 +13044,17 @@ export const chapterDoorwayAssignments = {
   "i-xZBJLVP": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-qW6L7dN": {
     "theme": "portraits",
     "href": "/western-portrait-photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-rQKZKdQ": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-Dv73Z9Z": {
     "theme": "portraits",
@@ -13084,17 +13084,17 @@ export const chapterDoorwayAssignments = {
   "i-63nPPxF": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-n9WGTPS": {
     "theme": "portraits",
     "href": "/western-portrait-photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-bTt8gx5": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-vbphs5v": {
     "theme": "portraits",
@@ -13124,17 +13124,17 @@ export const chapterDoorwayAssignments = {
   "i-NCMRvhT": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-6GkqmLJ": {
     "theme": "portraits",
     "href": "/western-portrait-photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-M3F8SJn": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-5kwfBPg": {
     "theme": "portraits",
@@ -13164,17 +13164,17 @@ export const chapterDoorwayAssignments = {
   "i-T8CQBwG": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-SN7LTzk": {
     "theme": "portraits",
     "href": "/western-portrait-photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-kwZN26x": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-7LWGsvH": {
     "theme": "portraits",
@@ -13204,17 +13204,17 @@ export const chapterDoorwayAssignments = {
   "i-7HGrjRd": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-WThMvLG": {
     "theme": "portraits",
     "href": "/western-portrait-photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-dRqZjmK": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-nbBGhv6": {
     "theme": "portraits",
@@ -13244,17 +13244,17 @@ export const chapterDoorwayAssignments = {
   "i-GLhK6TT": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-5FHtCVg": {
     "theme": "portraits",
     "href": "/western-portrait-photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-dQbG65F": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-g9njn76": {
     "theme": "portraits",
@@ -13284,17 +13284,17 @@ export const chapterDoorwayAssignments = {
   "i-TdvK9cd": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-Gf48H98": {
     "theme": "portraits",
     "href": "/western-portrait-photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-z8JXFZ2": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-TzLS9r7": {
     "theme": "portraits",
@@ -13324,17 +13324,17 @@ export const chapterDoorwayAssignments = {
   "i-9WzBrqT": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-PtmDWWS": {
     "theme": "portraits",
     "href": "/western-portrait-photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-nZX8jLD": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-BJxw3Dz": {
     "theme": "portraits",
@@ -13364,17 +13364,17 @@ export const chapterDoorwayAssignments = {
   "i-RTj9HSn": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-Dq6HwJp": {
     "theme": "portraits",
     "href": "/western-portrait-photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-Q4JpqnD": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-bVC4M8w": {
     "theme": "portraits",
@@ -13404,17 +13404,17 @@ export const chapterDoorwayAssignments = {
   "i-m4hMSXM": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-HTN4w9V": {
     "theme": "portraits",
     "href": "/western-portrait-photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-ztNRLR6": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-VFWQsdm": {
     "theme": "portraits",
@@ -13444,17 +13444,17 @@ export const chapterDoorwayAssignments = {
   "i-bfMNVrv": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-ZGmLsjg": {
     "theme": "portraits",
     "href": "/western-portrait-photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-DNCNfvk": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-PNs7bP5": {
     "theme": "portraits",
@@ -13484,17 +13484,17 @@ export const chapterDoorwayAssignments = {
   "i-QqDQz8x": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-RR4b3rG": {
     "theme": "portraits",
     "href": "/western-portrait-photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-rZFNBqH": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-b7FN4Nx": {
     "theme": "portraits",
@@ -13524,17 +13524,17 @@ export const chapterDoorwayAssignments = {
   "i-QQGxbsp": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-pgzRbqs": {
     "theme": "portraits",
     "href": "/western-portrait-photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-8JSFvtM": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-xnx9RzR": {
     "theme": "portraits",
@@ -13564,17 +13564,17 @@ export const chapterDoorwayAssignments = {
   "i-v4rqtKD": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-9bZ5Jvm": {
     "theme": "portraits",
     "href": "/western-portrait-photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-LwdHptZ": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-hjmBkbt": {
     "theme": "portraits",
@@ -13604,17 +13604,17 @@ export const chapterDoorwayAssignments = {
   "i-KVf62F2": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-HZWL29h": {
     "theme": "portraits",
     "href": "/western-portrait-photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-W7CFHMJ": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-6dXLqcb": {
     "theme": "portraits",
@@ -13644,17 +13644,17 @@ export const chapterDoorwayAssignments = {
   "i-Q9FtWZH": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-2KDvpNm": {
     "theme": "portraits",
     "href": "/western-portrait-photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-krZ5VMv": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-47ZthJv": {
     "theme": "portraits",
@@ -13684,17 +13684,17 @@ export const chapterDoorwayAssignments = {
   "i-ft5fC69": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-pk47rW4": {
     "theme": "portraits",
     "href": "/western-portrait-photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-QR9ctvg": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-k7s8Zg4": {
     "theme": "portraits",
@@ -13724,17 +13724,17 @@ export const chapterDoorwayAssignments = {
   "i-qfk69f2": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-f8CRdFh": {
     "theme": "portraits",
     "href": "/western-portrait-photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-bsQkK6z": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-k5t6JSt": {
     "theme": "portraits",
@@ -13764,17 +13764,17 @@ export const chapterDoorwayAssignments = {
   "i-kr4C6mL": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-8ShsBMH": {
     "theme": "portraits",
     "href": "/western-portrait-photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-TDvHhm3": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-CJcQsxw": {
     "theme": "portraits",
@@ -13804,17 +13804,17 @@ export const chapterDoorwayAssignments = {
   "i-qTWkrsx": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-XdNc5xz": {
     "theme": "portraits",
     "href": "/western-portrait-photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-KSjJXBB": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-GmFFNMG": {
     "theme": "portraits",
@@ -13844,17 +13844,17 @@ export const chapterDoorwayAssignments = {
   "i-bMSrCFg": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-7f7NnQg": {
     "theme": "portraits",
     "href": "/western-portrait-photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-ZkL52bP": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-sZDB6pL": {
     "theme": "portraits",
@@ -13884,17 +13884,17 @@ export const chapterDoorwayAssignments = {
   "i-qfT8Lmh": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-s5wsLGN": {
     "theme": "portraits",
     "href": "/western-portrait-photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-kvfSCpN": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-pqBnWFd": {
     "theme": "portraits",
@@ -13924,17 +13924,17 @@ export const chapterDoorwayAssignments = {
   "i-39mSbkS": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-fjmNj9W": {
     "theme": "portraits",
     "href": "/western-portrait-photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-7rkr8Z6": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-XNtPzD7": {
     "theme": "portraits",
@@ -13964,17 +13964,17 @@ export const chapterDoorwayAssignments = {
   "i-kBjb67r": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-r6sLgbF": {
     "theme": "portraits",
     "href": "/western-portrait-photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-2mLnKzM": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-XGxmxvJ": {
     "theme": "portraits",
@@ -14004,17 +14004,17 @@ export const chapterDoorwayAssignments = {
   "i-54pbbvZ": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-t9JXs5s": {
     "theme": "portraits",
     "href": "/western-portrait-photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-9Nxnvfb": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-KFt8HPV": {
     "theme": "portraits",
@@ -14044,17 +14044,17 @@ export const chapterDoorwayAssignments = {
   "i-SQLp9tD": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-hF6kxcd": {
     "theme": "portraits",
     "href": "/western-portrait-photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-XncvD6D": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-wm9Z2Mw": {
     "theme": "portraits",
@@ -14084,17 +14084,17 @@ export const chapterDoorwayAssignments = {
   "i-P5C9sqm": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-gsQ8mdb": {
     "theme": "portraits",
     "href": "/western-portrait-photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-hNb2Pxn": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-Fps6pmx": {
     "theme": "portraits",
@@ -14124,17 +14124,17 @@ export const chapterDoorwayAssignments = {
   "i-kcMTXwj": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-VS9Dwjj": {
     "theme": "portraits",
     "href": "/western-portrait-photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-jvX9wRM": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-VFBgL3h": {
     "theme": "portraits",
@@ -14164,17 +14164,17 @@ export const chapterDoorwayAssignments = {
   "i-w9C8ZWP": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-b3jMQNM": {
     "theme": "portraits",
     "href": "/western-portrait-photography",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-364tqsH": {
     "theme": "portraits",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-vbVkS8z": {
     "theme": "transportation",
@@ -14194,17 +14194,17 @@ export const chapterDoorwayAssignments = {
   "i-DJqFfsq": {
     "theme": "transportation",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-VGdpvbh": {
     "theme": "transportation",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-G9v9NvL": {
     "theme": "transportation",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-X3Cn7X9": {
     "theme": "transportation",
@@ -14234,17 +14234,17 @@ export const chapterDoorwayAssignments = {
   "i-PfrKwt2": {
     "theme": "transportation",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-NjL3FKh": {
     "theme": "transportation",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-Q347VzH": {
     "theme": "transportation",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-cQfBvZN": {
     "theme": "transportation",
@@ -14274,17 +14274,17 @@ export const chapterDoorwayAssignments = {
   "i-VJSqCHx": {
     "theme": "transportation",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-mJXkGHp": {
     "theme": "transportation",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-L4hPXbq": {
     "theme": "transportation",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-XW8VLHx": {
     "theme": "transportation",
@@ -14314,17 +14314,17 @@ export const chapterDoorwayAssignments = {
   "i-SjhNDgV": {
     "theme": "transportation",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-knwvmNV": {
     "theme": "transportation",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-gpKrXBm": {
     "theme": "transportation",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-SbCkpwH": {
     "theme": "transportation",
@@ -14354,17 +14354,17 @@ export const chapterDoorwayAssignments = {
   "i-fr3rcbb": {
     "theme": "transportation",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-336zMPt": {
     "theme": "transportation",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-V8xzMjq": {
     "theme": "transportation",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-mT37fhN": {
     "theme": "transportation",
@@ -14394,17 +14394,17 @@ export const chapterDoorwayAssignments = {
   "i-JdXPPpF": {
     "theme": "transportation",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-ZpwKrbj": {
     "theme": "transportation",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-jXXqmN2": {
     "theme": "transportation",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-rtPVxVG": {
     "theme": "transportation",
@@ -14434,17 +14434,17 @@ export const chapterDoorwayAssignments = {
   "i-NSJhpSV": {
     "theme": "transportation",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-j3jLH4h": {
     "theme": "transportation",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-rT9Kp2K": {
     "theme": "transportation",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-PrdZP4Z": {
     "theme": "transportation",
@@ -14474,17 +14474,17 @@ export const chapterDoorwayAssignments = {
   "i-6gP4DrL": {
     "theme": "transportation",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-SDtQKgL": {
     "theme": "transportation",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-WhRvxFT": {
     "theme": "transportation",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-mN4NQNP": {
     "theme": "transportation",
@@ -14514,17 +14514,17 @@ export const chapterDoorwayAssignments = {
   "i-QFBWthj": {
     "theme": "transportation",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-Bj2CzZB": {
     "theme": "transportation",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-GfVVjJz": {
     "theme": "transportation",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-VXDQLcR": {
     "theme": "transportation",
@@ -14554,17 +14554,17 @@ export const chapterDoorwayAssignments = {
   "i-ZRfqtVk": {
     "theme": "transportation",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-Hs3n5dS": {
     "theme": "transportation",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-HtkF9rx": {
     "theme": "transportation",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-3x7rZ6g": {
     "theme": "transportation",
@@ -14594,17 +14594,17 @@ export const chapterDoorwayAssignments = {
   "i-DXWW75L": {
     "theme": "transportation",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-sTRwRwB": {
     "theme": "transportation",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-Sv2QJHR": {
     "theme": "transportation",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-n69gkSP": {
     "theme": "transportation",
@@ -14634,17 +14634,17 @@ export const chapterDoorwayAssignments = {
   "i-t2FVBZ3": {
     "theme": "transportation",
     "href": "/Western-Photography-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-h6rHCkZ": {
     "theme": "transportation",
     "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-3k97mkw": {
     "theme": "transportation",
     "href": "/Western-Photography-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-hFfHm2C": {
     "theme": "transportation",
@@ -14699,17 +14699,17 @@ export const chapterDoorwayAssignments = {
   "i-nmDtVXP": {
     "theme": "engrained",
     "href": "/Western-Wall-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-gM5crmq": {
     "theme": "engrained",
     "href": "/Engrained",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-8pfC4qn": {
     "theme": "engrained",
     "href": "/Western-Wall-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-LdQzCRt": {
     "theme": "engrained",
@@ -14739,17 +14739,17 @@ export const chapterDoorwayAssignments = {
   "i-svbQj25": {
     "theme": "engrained",
     "href": "/Western-Wall-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-rxQn29x": {
     "theme": "engrained",
     "href": "/Engrained",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-bVSh9xt": {
     "theme": "engrained",
     "href": "/Western-Wall-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-vhmHCCM": {
     "theme": "engrained",
@@ -14779,17 +14779,17 @@ export const chapterDoorwayAssignments = {
   "i-4QZ7HPR": {
     "theme": "engrained",
     "href": "/Western-Wall-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-jL4Gk5N": {
     "theme": "engrained",
     "href": "/Engrained",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-BmwzGg4": {
     "theme": "engrained",
     "href": "/Western-Wall-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-wX39m6G": {
     "theme": "engrained",
@@ -14819,17 +14819,17 @@ export const chapterDoorwayAssignments = {
   "i-C58KMqF": {
     "theme": "engrained",
     "href": "/Western-Wall-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-NQ5tCTb": {
     "theme": "engrained",
     "href": "/Engrained",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-xF7p92v": {
     "theme": "engrained",
     "href": "/Western-Wall-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-b4wG4vh": {
     "theme": "engrained",
@@ -14859,17 +14859,17 @@ export const chapterDoorwayAssignments = {
   "i-PkspRGs": {
     "theme": "engrained",
     "href": "/Western-Wall-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-hntD8Vp": {
     "theme": "engrained",
     "href": "/Engrained",
-    "frameIndex": 6
+    "frameIndex": 1
   },
   "i-ZNTzTJ7": {
     "theme": "engrained",
     "href": "/Western-Wall-Art",
-    "frameIndex": 7
+    "frameIndex": 2
   },
   "i-thTwwHZ": {
     "theme": "engrained",
@@ -14899,12 +14899,12 @@ export const chapterDoorwayAssignments = {
   "i-JfqzrnN": {
     "theme": "engrained",
     "href": "/Western-Wall-Art",
-    "frameIndex": 5
+    "frameIndex": 0
   },
   "i-xqbdC8P": {
     "theme": "engrained",
     "href": "/Engrained",
-    "frameIndex": 6
+    "frameIndex": 1
   }
 };
 
@@ -14921,7 +14921,7 @@ export const chapterDoorwayCursors = {
 };
 
 export const chapterDoorwayAssignmentMeta = {
-  "generatedAt": "2026-06-25T19:51:49.476Z",
+  "generatedAt": "2026-06-25T20:35:39.341Z",
   "assignedCount": 2981,
   "themeCounts": {
     "nativeAmerican": 29,

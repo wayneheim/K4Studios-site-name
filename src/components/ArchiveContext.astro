@@ -24,9 +24,17 @@ interface Props {
   categoryUrl: string;
   categoryName: string;
   copyHtml?: string;
+  doorwayHref?: string;
+  doorwayLabel?: string;
 }
 
-const { categoryUrl, categoryName, copyHtml = "" } = Astro.props;
+const {
+  categoryUrl,
+  categoryName,
+  copyHtml = "",
+  doorwayHref = "",
+  doorwayLabel = "",
+} = Astro.props;
 ---
 
 <div class="archive-context">
@@ -38,6 +46,11 @@ const { categoryUrl, categoryName, copyHtml = "" } = Astro.props;
       <a href={categoryUrl}>{categoryName}</a> series.
       For narrative context, historical intent, and artistic approach,
       return to the main overview.
+      {doorwayHref && doorwayLabel && (
+        <>
+          {" "}For broader context, <a href={doorwayHref}>{doorwayLabel}</a>.
+        </>
+      )}
     </p>
   )}
 </div>

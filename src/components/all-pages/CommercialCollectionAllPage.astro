@@ -3,6 +3,7 @@ import Footer from "@/components/Footer.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import ArchiveContext from "@/components/ArchiveContext.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
+import { getGalleryDoorwayLink } from "@/data/galleryDoorwayLinks.js";
 import { extractImageId, getSemanticImageUrl } from "@/utils/imageProxy.js";
 import { getArtworkAltForImageSource } from "@/utils/imageAltLookup";
 import {
@@ -122,6 +123,10 @@ const gatewayCollectionName = formatCopy(copy.gatewayCollectionName || collectio
 const gatewayIntroCopy = formatCopy(copy.gatewayIntroCopy || `${imageCount} painterly ${variantName.toLowerCase()} ${collectionName.toLowerCase()} fine art photographs by Wayne Heim, available as archival fine art prints from ${getFormattedLowestStandardPrintPrice()}. Four edition tiers - open-edition studies to ultra-limited signed collector works - on fine art paper and Baltic Birch wood panels.`);
 const gatewaySubhead = formatCopy(copy.gatewaySubhead || "");
 const gatewaySupportingCopy = formatCopy(copy.gatewaySupportingCopy || `Every image below is a complete story in a single frame. Click any work to read the narrative, explore collector notes, and view print details.`);
+const allPageDoorwayLink = getGalleryDoorwayLink(basePath);
+const allPageDoorwayLabel = allPageDoorwayLink
+  ? `explore more insight on ${allPageDoorwayLink.term}`
+  : "";
 const standardPrintSeries = getStandardPrintSeries() as Array<{
   name: string;
   subtitle: string;
@@ -710,6 +715,8 @@ const compactBreadcrumbHtml = breadcrumbHtml
     <ArchiveContext 
       categoryUrl={archiveContext.categoryUrl || basePath} 
       categoryName={archiveContext.categoryName || collectionName} 
+      doorwayHref={allPageDoorwayLink?.href || ""}
+      doorwayLabel={allPageDoorwayLabel}
     />
 
     <Footer />

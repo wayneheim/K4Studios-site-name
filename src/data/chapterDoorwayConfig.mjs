@@ -6,6 +6,14 @@ export const chapterDoorwayFrames = [
   "See more on [Term] ->",
 ];
 
+export const galleryDoorwayFrames = [
+  "What is [Term]? ->",
+  "Explore more insight on [Term] ->",
+  "Learn more about [Term] ->",
+  "Explore context on [Term] ->",
+  "Understand [Term] ->",
+];
+
 export const chapterDoorwayThemes = [
   {
     key: "nativeAmerican",
