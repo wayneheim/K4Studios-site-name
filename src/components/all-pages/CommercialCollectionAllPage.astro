@@ -120,6 +120,7 @@ const collectionIntroParagraphs = collectionIntro
   .filter(Boolean);
 const gatewayCollectionName = formatCopy(copy.gatewayCollectionName || collectionName);
 const gatewayIntroCopy = formatCopy(copy.gatewayIntroCopy || `${imageCount} painterly ${variantName.toLowerCase()} ${collectionName.toLowerCase()} fine art photographs by Wayne Heim, available as archival fine art prints from ${getFormattedLowestStandardPrintPrice()}. Four edition tiers - open-edition studies to ultra-limited signed collector works - on fine art paper and Baltic Birch wood panels.`);
+const gatewaySubhead = formatCopy(copy.gatewaySubhead || "");
 const gatewaySupportingCopy = formatCopy(copy.gatewaySupportingCopy || `Every image below is a complete story in a single frame. Click any work to read the narrative, explore collector notes, and view print details.`);
 const standardPrintSeries = getStandardPrintSeries() as Array<{
   name: string;
@@ -439,6 +440,7 @@ const compactBreadcrumbHtml = breadcrumbHtml
       <div class="gateway-copy">
         <p class="gateway-kicker">K4 STUDIOS FINE ART PRINT CATALOG</p>
         <h1 class="gateway-brand" id="gateway-heading">{gatewayBrandLabel}</h1>
+        {gatewaySubhead && <p class="gateway-subhead">{gatewaySubhead}</p>}
         <p class="gateway-copy-text">{gatewayIntroCopy}</p>
         <p class="gateway-copy-text">{gatewaySupportingCopy}</p>
       </div>
@@ -810,6 +812,15 @@ const compactBreadcrumbHtml = breadcrumbHtml
       line-height:1.02;
       font-weight:700;
       max-width:none;
+    }
+    .gateway-subhead {
+      margin:0 0 14px;
+      color:#6d4a31;
+      font-size:.98rem;
+      line-height:1.45;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:0;
     }
     .gateway-copy-text {
       margin:0 0 12px;

@@ -90,6 +90,17 @@ force = true
 regex = true
 
 ##############################
+# Cluster 2 consolidation
+# Lowercase /western-art-photography was a stray generated doorway.
+# Keep /Western-Photography-Art as the intentional bridge spoke.
+##############################
+[[redirects]]
+from = "/western-art-photography"
+to = "/Western-Fine-Art-Photography"
+status = 301
+force = true
+
+##############################
 # ✅ URL Case Normalization (prevents duplicate content)
 # Redirect lowercase /galleries/ to proper-case /Galleries/
 # These are free CDN-level redirects, not function invocations

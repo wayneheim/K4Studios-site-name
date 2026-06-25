@@ -1818,8 +1818,8 @@ export const galleryData = [
   {
     "id": "i-WCW5QvM",
     "title": "Just Thinking of You",
-    "description": "A Confederate soldier holds a rare unguarded smile, turning the Civil War portrait toward memory, attachment, and the thought of someone at home. This painterly Civil War fine art photograph creates a quieter Faces of Conflict study rooted in tenderness beneath uniform.\n\n© Wayne Heim",
-    "alt": "Painterly American Civil War portrait of a Confederate soldier smiling softly while thinking of someone at home, rendered in warm, cinematic light.",
+    "description": "A Civil War reenactor holds a rare unguarded smile, turning the historical portrait toward memory, attachment, and the thought of someone at home. This painterly Civil War fine art photograph creates a quieter Faces of Conflict study rooted in tenderness beneath uniform.\n\n© Wayne Heim",
+    "alt": "Painterly American Civil War portrait of a reenactor smiling softly while thinking of someone at home, rendered in warm, cinematic light.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-WCW5QvM/0/L96MG5fBcFh8TZnkPsSQkS6Z494jVgWGsQxg8FgHj/XL/_HF21057-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-WCW5QvM/0/L96MG5fBcFh8TZnkPsSQkS6Z494jVgWGsQxg8FgHj/XL/_HF21057-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-WCW5QvM/0/L96MG5fBcFh8TZnkPsSQkS6Z494jVgWGsQxg8FgHj/XL/_HF21057-Edit-XL.jpg",

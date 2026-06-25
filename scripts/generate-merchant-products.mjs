@@ -34,6 +34,7 @@ const SKETCH_SERIES_PRICE_USD = "25.00 USD";
 const SKETCH_SERIES_SIZE = "5 x 7 in";
 const MAX_DESCRIPTION_LENGTH = 5000;
 const MAX_TITLE_LENGTH = 150;
+const ENGRAINED_SERIES_PATH_PATTERN = /\/Other\/K4-Select-Series\/Engrained\/Engrained-Series(?:\/|$)/i;
 
 function xmlEscape(value = "") {
   return String(value)
@@ -261,8 +262,61 @@ function inferProductDescription(image) {
   return trimAtWord(combined, MAX_DESCRIPTION_LENGTH);
 }
 
+function inferEngrainedProductTitle(image) {
+  const title = cleanText(image?.title || image?.alt || image?.id || "Engrained Fine Art Print");
+  const withSeries = /\b(engrained|wood print|print|prints)\b/i.test(title)
+    ? title
+    : `${title} - Engrained Series Fine Art Wood Print`;
+  return trimAtWord(withSeries, MAX_TITLE_LENGTH);
+}
+
+function inferEngrainedProductDescription(image) {
+  const description = cleanText(image?.description || image?.alt || image?.story || "");
+  const base = description || `${cleanText(image?.title || "Fine art photograph")} by Wayne Heim, offered as an Engrained Series fine art wood print from K4 Studios.`;
+  const suffix = "Engrained Series works are finished fine art prints on Baltic Birch wood panels by Wayne Heim from K4 Studios.";
+  const combined = base.toLowerCase().includes("engrained series") ? base : `${base} ${suffix}`;
+  return trimAtWord(combined, MAX_DESCRIPTION_LENGTH);
+}
+
+function moneyToMerchantPrice(value) {
+  const numeric = Number(String(value || "").replace(/[^0-9.]/g, ""));
+  if (!Number.isFinite(numeric) || numeric <= 0) return "";
+  return `${numeric.toFixed(2)} USD`;
+}
+
+function buildEngrainedProductItem({ image, galleryPath, link }) {
+  const price = moneyToMerchantPrice(image?.price);
+  if (!price) return null;
+
+  const imageLink = getMerchantImageUrl(image);
+  const title = inferEngrainedProductTitle(image);
+  const description = inferEngrainedProductDescription(image);
+  const productType = inferProductType(galleryPath);
+  const size = cleanText(image?.imageSize || "") || "Engrained Series wood panel";
+
+  return {
+    id: `${image.id}-engrained`,
+    title,
+    description,
+    link,
+    imageLink,
+    availability: "in_stock",
+    price,
+    condition: "new",
+    brand: "K4 Studios",
+    mpn: `${image.id}-engrained`,
+    identifierExists: "no",
+    productType,
+    googleProductCategory: GOOGLE_PRODUCT_CATEGORY,
+    size,
+  };
+}
+
 function buildProductItem({ image, galleryPath, link }) {
   if (image?.noSketch === true) return null;
+  if (ENGRAINED_SERIES_PATH_PATTERN.test(galleryPath)) {
+    return buildEngrainedProductItem({ image, galleryPath, link });
+  }
 
   const imageLink = getMerchantImageUrl(image);
   const title = inferProductTitle(image);

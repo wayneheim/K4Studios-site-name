@@ -856,7 +856,6 @@ const frontierStoryWidgetPagePaths = new Set([
   "/cowboy-painterly-fine-art-photography",
   "/old-west-pictures",
   "/Painterly-Western-Photography",
-  "/western-art-photography",
   "/Western-Fine-Art-Photography",
   "/western-fine-art-photography-collection",
   "/western-photos",
@@ -1107,7 +1106,7 @@ export const commercialIntentPages = {
   americanWesternArt: makePage({
     pagePath: "/American-Western-Art",
     label: "American Western Art",
-    title: "American Western Art - Fine Art Prints by Wayne Heim",
+    title: "American Western Art Prints - Fine Art by Wayne Heim",
     subject: "cowboy portraits, Native American portrait work, frontier narratives, and painterly Western art prints shaped by the American frontier",
     sections: ["cowboyColor", "nativeColor", "narrativeColor", "cowboyBlackWhite", "nativeBlackWhite", "narrativeBlackWhite"],
     hero: "i-LCspRF4",
@@ -1125,7 +1124,7 @@ export const commercialIntentPages = {
       supportDock("Learn What Makes a Fine Art Print Worth Owning", "/Blog/what-makes-a-fine-art-print-worth-owning", blogThumbs.finePrint),
     ],
     dockCoreCount: 6,
-    currentDockTitle: "Explore American Western Art Collections",
+    currentDockTitle: "Explore American Western Art Print Collections",
     archiveUrl: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West",
     archiveName: "Wild West",
     categoryCrumb: { href: "/Art-of-the-American-West", name: "Art of the American West" },
@@ -1135,14 +1134,14 @@ export const commercialIntentPages = {
       "Size, substrate, and edition details are inside each image page.",
     ].join("\n\n"),
     layoutVariant: "cinematic-concept-series-top",
-    seoTitle: "American Western Art - Cowboy, Frontier & Native Portrait Prints",
-    seoDescription: `American Western art by Wayne Heim - cowboy portraits, frontier narratives, and Native American portrait work shaped through painterly photographic craft. Prints from ${getFormattedLowestStandardPrintPrice()} through signed limited editions.`,
-    commercialH1: "American Western Art as a Living Frontier Tradition",
-    deck: "Six routes, {catalogImageCount} works: cowboy portraits, Native American portrait work, and frontier narratives in color and black and white, organized around the human and historical weight of the American West.",
+    seoTitle: "American Western Art Prints - Cowboy, Frontier & Native Portraits",
+    seoDescription: `American Western art prints by Wayne Heim - cowboy portraits, frontier narratives, and Native American portrait work shaped through painterly photographic craft. Prints from ${getFormattedLowestStandardPrintPrice()} through signed limited editions.`,
+    commercialH1: "American Western Art Prints for Collectors",
+    deck: "Six print routes, {catalogImageCount} works: cowboy portraits, Native American portrait work, and frontier narratives in color and black and white, organized for collectors around the human and historical weight of the American West.",
     gatewayIntroCopy:
       "American Western art is not one image of the West. It is the argument over what the West means when the myth is stripped back to people, land, history, and consequence.",
     gatewaySupportingCopy:
-      `The American West gave artists a subject larger than scenery: frontier labor, Indigenous presence, migration, loss, endurance, distance, and the hardening of real lives into national legend. The best American Western art does not simply repeat the cowboy, the horse, or the horizon. It asks what those figures cost, what histories stand behind them, and why the image still holds.\n\nWayne Heim's work enters that tradition through photography, but it does not stop at photographic record. The finished images are shaped through painterly control, tonal restraint, and narrative structure so the work can sit beside the older Western art conversation while remaining rooted in the specificity of a camera-made moment.\n\nSketch Series studies begin at ${getFormattedLowestStandardPrintPrice()}, with archival paper prints, selected signed limited editions, and some Engrained natural Baltic Birch panels available when the material surface strengthens the historical register of the piece.`,
+      `The American West gave artists a subject larger than scenery: frontier labor, Indigenous presence, migration, loss, endurance, distance, and the hardening of real lives into national legend. The best American Western art does not simply repeat the cowboy, the horse, or the horizon. It asks what those figures cost, what histories stand behind them, and why the image still holds.\n\nWayne Heim's work enters that tradition through photography, but it does not stop at photographic record. This page is the collector route into that work: American Western art prints shaped through painterly control, tonal restraint, and narrative structure so the work can sit beside the older Western art conversation while remaining rooted in the specificity of a camera-made moment.\n\nSketch Series studies begin at ${getFormattedLowestStandardPrintPrice()}, with archival paper prints, selected signed limited editions, and some Engrained natural Baltic Birch panels available when the material surface strengthens the historical register of the piece.`,
     titles: {
       cowboyColor: "Color Cowboy Portrait Art",
       nativeColor: "Native American Western Portrait Art",
@@ -1183,14 +1182,14 @@ export const commercialIntentPages = {
     conceptBlock6Title: "THE UNRESOLVED FRONTIER",
     conceptBlock6Copy:
       "Black and white narrative scenes end the route in the withheld moment: shadow, distance, silence, and a story that continues after the viewer leaves the frame.",
-    archiveContextTitle: "Browse American Western Art",
+    archiveContextTitle: "Browse American Western Art Prints",
     archiveContextCopy:
-      "American Western art at K4 Studios is organized by six routes: color cowboy portrait art, Native American portrait work, color frontier narratives, black and white cowboy portraits, black and white Native American studies, and black and white narrative scenes. Open any image for story, print options, sizing, and edition details.",
+      "American Western art prints at K4 Studios are organized by six routes: color cowboy portrait art, Native American portrait work, color frontier narratives, black and white cowboy portraits, black and white Native American studies, and black and white narrative scenes. Open any image for story, print options, sizing, and edition details.",
     faqItems: [
       {
-        q: "What is American Western art on this page?",
+        q: "What are American Western art prints on this page?",
         a: [
-          "American Western art here means authored fine art prints rooted in the American frontier — cowboy portraits, frontier narrative scenes, and Indigenous portrait work shaped through a painterly photographic process into collector-grade imagery. Not decorative Western theme. Not mass-market prints. Authored work where every image carries a title, a story, and a named point of view.",
+          "American Western art prints here means authored fine art prints rooted in the American frontier — cowboy portraits, frontier narrative scenes, and Indigenous portrait work shaped through a painterly photographic process into collector-grade imagery. Not decorative Western theme. Not mass-market prints. Authored work where every image carries a title, a story, and a named point of view.",
         ],
       },
       {
@@ -1594,7 +1593,7 @@ export const commercialIntentPages = {
     gatewayKicker: "K4 STUDIOS — BLACK AND WHITE COWBOY PHOTOGRAPHY",
     gatewayIntroCopy: "Not monochrome for atmosphere. Monochrome because color would lie.",
     gatewaySupportingCopy: `Search "black and white cowboy photography" and the results divide cleanly into two categories. Stock photography — cowboys in hats, riders at sunset, rope work and rodeo, images made to be licensed and placed. And fine art western photography — Jess Lee, Stoecklein, a handful of others — images made to be lived with. The gap between those two categories is not technical. It is intentional.\n\nWayne Heim's black and white cowboy photography begins as photography and is then shaped through a painterly process that removes the documentary surface — the sharpness, the photographic clarity, the sense of captured moment — and replaces it with tonal depth, atmospheric restraint, and the visual weight that monochrome demands. The result carries human presence in the way painted Western portraiture does, while retaining what only a camera can capture — the specific person, the specific moment, the specific weight of a real face in real light.\n\nThese are museum-quality archival fine art prints. Open-edition studies from ${sketchPrintPrice} through signed limited edition fine art prints with numbered certificates of authenticity. Fine art paper prints are ready to frame. Engrained Baltic Birch wood panel editions arrive ready to hang.`,
-    archiveContextCopy: `Every work on this page is available as a fine art print — archival paper or wood — with the Sketch Series opening at ${sketchPrintPrice}. Click into any image to read the story, compare print options, sizes, and collector details. Questions about a specific piece? Reach Wayne directly at <a href='mailto:wayne@k4studios.com'>wayne@k4studios.com</a>.`,
+    archiveContextCopy: `Every work on this page is available as a fine art print — archival paper or wood — with the Sketch Series opening at ${sketchPrintPrice}. For the full crawlable browse set, open the <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/all#collection-browser">black and white cowboy photos</a> gallery. Click into any image to read the story, compare print options, sizes, and collector details. Questions about a specific piece? Reach Wayne directly at <a href='mailto:wayne@k4studios.com'>wayne@k4studios.com</a>.`,
     collectionIntro: "",
     gridIntroTitle: "The Collection",
     gridIntroCopy: "Black and white cowboy photography at K4 Studios is built around restraint: faces, posture, weathered clothing, window light, frontier interiors, and the tonal pressure that remains when color is removed.\n\nStart with the cowboy portrait section when the work needs human gravity and direct presence. Move into the narrative section for old-West tension and story-led scenes. Continue into the Native American portrait section for monochrome work shaped by atmosphere, heritage, and quiet authority.\n\nSize, substrate, and edition details are inside each image page.",
@@ -2797,7 +2796,7 @@ The tradition that Russell and Remington established and that serious Western co
     conceptBlock4Title: "THE HISTORICAL REGISTER",
     conceptBlock4Copy: "When cowboy photography moves into monochrome narrative, it comes closest to the historical imagination: old West photographs, ranch records, rodeo images, and the visual memory of a frontier already receding.\n\nThe black and white Western narrative works below are not documentary archives, but they use the authority of monochrome to make the scene feel remembered rather than staged.",
     archiveContextTitle: "Browse the Western Cowboy Photography Collection",
-    archiveContextCopy: "Use this page when the photographic medium matters: start with color cowboy portraits for character, black and white portraits for tonal authority, color frontier scenes for cinematic motion, or monochrome narratives for historical atmosphere. Each image page includes story, sizing, print presentation, and edition details.",
+    archiveContextCopy: "Use this page when the photographic medium matters: start with color cowboy portraits for character, black and white portraits for tonal authority, color frontier scenes for cinematic motion, or monochrome narratives for historical atmosphere. For the broader medium-level route behind <a href=\"/Western-Fine-Art-Photography\">photography western</a> searches and the wider <a href=\"/Western-Fine-Art-Photography\">western photographer</a> comparison, continue into Western Fine Art Photography. Each image page includes story, sizing, print presentation, and edition details.",
     faqItems: [
       {
         q: "What is Western cowboy photography?",
@@ -3156,7 +3155,7 @@ The tradition that Russell and Remington established and that serious Western co
       "Monochrome narrative work gives cowboy fine art photography its slowest register. These pieces hold because they leave space for the viewer to complete the story.",
     archiveContextTitle: "Browse Cowboy Fine Art Photography",
     archiveContextCopy:
-      "Cowboy fine art photography at K4 Studios is organized by treatment: color portrait, black and white portrait, color frontier scene, and monochrome narrative. Open any image for the authored story, print sizes, formats, and edition details.",
+      "Cowboy fine art photography at K4 Studios is organized by treatment: color portrait, black and white portrait, color frontier scene, and monochrome narrative. For the broader medium-level context behind <a href=\"/Western-Fine-Art-Photography\">photography western</a> searches and the larger <a href=\"/Western-Fine-Art-Photography\">western photographer</a> comparison, continue into Western Fine Art Photography. Open any image for the authored story, print sizes, formats, and edition details.",
   }),
   cowboyFineArtPrints: makePage({
     pagePath: "/cowboy-fine-art-prints",
@@ -3378,69 +3377,6 @@ The tradition that Russell and Remington established and that serious Western co
       supportDock("Compare Wood Prints and Paper Prints", "/Blog/wood-prints-vs-paper-prints", blogThumbs.woodPaper),
     ],
     dockCoreCount: 4,
-  }),
-  westernArtPhotography: makePage({
-    pagePath: "/western-art-photography",
-    label: "Western Art Photography",
-    title: "Western Art Photography - Fine Art Prints by Wayne Heim",
-    subject: "Western art photography, cowboy portraits, frontier stories, Native American portrait work, and Western landscapes",
-    sections: ["narrativeColor", "cowboyColor", "nativeColor", "landscapeWest"],
-    hero: "i-B7ZSdfs",
-    heroPath: sources.narrativeColor.galleryPath,
-    leftDock: blogDock.standardLeft,
-    rightDock: [
-      supportDock("Explore Western Fine Art Photography", "/Western-Fine-Art-Photography", "/img/i-5FX3W9r/s.jpg"),
-      supportDock("Explore Painterly Western Photography", "/Painterly-Western-Photography", "/img/i-QWcX7JT/s.jpg"),
-      supportDock("Explore Western Landscape Art", "/western-landscape-art", "/img/i-zk7zXP3/s.jpg"),
-      supportDock("Learn What Makes a Fine Art Print Worth Owning", "/Blog/what-makes-a-fine-art-print-worth-owning", blogThumbs.finePrint),
-    ],
-    dockCoreCount: 4,
-    layoutVariant: "cinematic-concept-series-top",
-    seoTitle: "Western Art Photography - Cowboy, Frontier & Landscape Prints",
-    seoDescription:
-      "Western art photography by Wayne Heim. Cowboy portraits, frontier narratives, Native American portrait work, and Western landscapes shaped as collector-grade fine art prints.",
-    commercialH1: "Western Art Photography Inside the Western Art Tradition",
-    deck:
-      "Four series, {catalogImageCount} works: cowboy portraits, frontier story scenes, Native American portrait work, and Western landscapes where photography is treated as authored Western art.",
-    gatewayKicker: "K4 Studios - Western Art Photography",
-    gatewayIntroCopy:
-      "A Western photograph is not art just because the subject wears a hat, rides a horse, or stands under a big sky.",
-    gatewaySupportingCopy:
-      `A camera can record a cowboy, a horse, a mountain, a weathered face, or a frontier scene without making art. The art begins when the photograph takes on the responsibilities of the Western tradition: authorship, composition, atmosphere, historical awareness, and a reason for the viewer to stay after the subject has been recognized.\n\nThis is the distinction the search often misses. A Western photograph can be documentary, commercial, stock, lifestyle, historical, or decorative. An authored art photograph has to organize the subject into something finished enough to live with: light shaped toward meaning, posture carrying character, landscape holding emotional scale, and the frame withholding just enough story that the image keeps working on the wall.\n\nWayne Heim's work stays photographic at the source, but the finished image moves into the older Western art conversation through painterly control, narrative restraint, and collector-grade print presentation. Sketch Series studies begin at ${getFormattedLowestStandardPrintPrice()}, with larger archival paper prints and selected signed limited editions available for permanent collector walls.`,
-    collectionIntro: "",
-    gridIntroTitle: "",
-    gridIntroCopy: "",
-    titles: {
-      narrativeColor: "Western Art Photography - Frontier Narratives",
-      cowboyColor: "Western Art Photography - Cowboy Portraits",
-      nativeColor: "Western Art Photography - Native American Portraits",
-      landscapeWest: "Western Art Photography - Landscape Studies",
-    },
-    descriptions: {
-      narrativeColor:
-        "Start with frontier story scenes when the photograph needs to behave most like Western art: staged around tension, atmosphere, and the unresolved moment rather than simple record.",
-      cowboyColor:
-        "Cowboy portraits give the category its human anchor. These works depend on face, posture, clothing, light, and character instead of the cowboy as quick visual shorthand.",
-      nativeColor:
-        "Native American portrait work keeps this route connected to deeper historical presence, heritage, and authority beyond the cowboy-centered myth.",
-      landscapeWest:
-        "Western landscapes widen the page into land, weather, distance, and silence. These works show why the Western subject is never only human; the land itself carries part of the story.",
-    },
-    conceptBlock1Title: "THE PHOTOGRAPH AS WESTERN ART",
-    conceptBlock1Copy:
-      "The frontier narrative works below are the clearest answer to the phrase. They use photographic source material, but the finished image behaves more like a Western painting or film still: the story is present, but not completed for the viewer.",
-    conceptBlock2Title: "THE COWBOY PAST THE SIGNAL",
-    conceptBlock2Copy:
-      "Cowboy portraits are easy to recognize and easy to flatten. A serious Western art photograph has to move past hat, horse, and costume. The person has to carry enough gravity that the image remains interesting after the Western signal has done its job.",
-    conceptBlock3Title: "THE HISTORICAL COUNTERWEIGHT",
-    conceptBlock3Copy:
-      "Western art loses authority when it reduces the West to a cowboy-only story. Native American portrait work gives this photography route a necessary counterweight: stillness, heritage, dignity, and historical presence.",
-    conceptBlock4Title: "THE LAND THAT SHAPES THE STORY",
-    conceptBlock4Copy:
-      "Landscape is not filler in the photographic branch of Western art. It is the pressure system around the figures: distance, exposure, weather, water, dust, mountain, and open country. The land explains why the people in the other sections carry the weight they do.",
-    archiveContextTitle: "Browse Western Art Photography Prints",
-    archiveContextCopy:
-      "K4 Studios organizes this page around four collector routes: frontier narrative scenes, cowboy portraits, Native American portrait work, and Western landscapes. Open any image for story, sizing, print path, and edition details. Questions about a specific piece? Contact wayne@k4studios.com.",
   }),
   westernFineArtPhotography: makePage({
     pagePath: "/Western-Fine-Art-Photography",
@@ -3765,7 +3701,7 @@ The tradition that Russell and Remington established and that serious Western co
     heroPath: sources.cowboyColor.galleryPath,
     leftDock: blogDock.standardLeft,
     rightDock: [
-      supportDock("Explore Western Art Photography", "/western-art-photography", "/img/i-B7ZSdfs/s.jpg"),
+      supportDock("Explore Western Photography Art", "/Western-Photography-Art", "/img/i-B7ZSdfs/s.jpg"),
       supportDock("Explore Western Portrait Photography", "/western-portrait-photography", "/img/i-5FX3W9r/s.jpg"),
       supportDock("Explore Western Storytelling Photography", "/western-storytelling-photography", "/img/i-HfQ5NVR/s.jpg"),
       supportDock("Compare Decor Art and Fine Art", "/Blog/decor-art-vs-fine-art", blogThumbs.decor),
@@ -3810,7 +3746,7 @@ The tradition that Russell and Remington established and that serious Western co
       "Landscape photos answer a different version of the search. Sometimes the visitor is looking for the West as place: open country, horizon, weather, mountain distance, and the physical scale that shaped the people inside the story.\n\nThese images give the collection room to breathe and offer a path for visitors who want Western atmosphere without a figure dominating the frame.",
     archiveContextTitle: "Browse the Western Photos Collection",
     archiveContextCopy:
-      "Western photos at K4 Studios are organized by four discovery routes: cowboy portraits, frontier narrative scenes, Native American portrait work, and Western landscapes.\n\nUse this page to narrow the visual direction, then open the image that feels right for the details that matter: story, subject, size, print format, and whether the work belongs as a casual study or a collector piece. Questions about a specific Western photo? Contact wayne@k4studios.com.",
+      "Western photos at K4 Studios are organized by four discovery routes: cowboy portraits, frontier narrative scenes, Native American portrait work, and Western landscapes.\n\nUse this page to narrow the visual direction. If the subject is monochrome cowboy portraiture, browse the full <a href=\"/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/all#collection-browser\">black and white cowboy photos</a> gallery, then open the image that feels right for the details that matter: story, subject, size, print format, and whether the work belongs as a casual study or a collector piece. Questions about a specific Western photo? Contact wayne@k4studios.com.",
   }),
   westernPortraitPhotography: makePage({
     pagePath: "/western-portrait-photography",

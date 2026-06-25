@@ -568,6 +568,19 @@ westernPrintsCommercialHub: {
   imagePhrases: []
 },
 
+americanWesternArtPrintsHub: {
+  path: "/American-Western-Art",
+  def: "The collector-facing route for American Western art prints by Wayne Heim, gathering cowboy portraits, Native American portrait work, and frontier narratives as archival fine art prints.",
+  fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
+  landingPhrases: [
+    { phrase: "american western art prints", rating: 6, use: true, link: "/American-Western-Art" },
+    { phrase: "american western art for sale", rating: 5, use: true, link: "/American-Western-Art" },
+    { phrase: "american western fine art prints", rating: 5, use: true, link: "/American-Western-Art" },
+    { phrase: "american western cowboy art prints", rating: 4, use: true, link: "/American-Western-Art" },
+  ],
+  imagePhrases: []
+},
+
 westernPhotographyPrintsHub: {
   path: "/Western-Photography-Prints",
   def: "The print-specific route for Western photography prints by Wayne Heim, presenting cowboy portraits, Wild West narratives, and historically grounded Western images as collector-grade fine art prints.",

@@ -847,13 +847,13 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
   },
 
   "/American-Western-Art": {
-    ogTitle: "American Western Art | Collector Prints, Cowboy Portraits & Frontier Narratives – Wayne Heim",
+    ogTitle: "American Western Art Prints | Cowboy Portraits & Frontier Narratives – Wayne Heim",
     ogDescription:
       "Browse American Western art by Wayne Heim: collector-focused cowboy portraits, Indigenous portrait work, and frontier narrative scenes offered as museum-quality fine art prints.",
     ogImage: "/images/cowboy.webp",
     ogType: "website",
     twitterCard: "summary_large_image",
-    twitterTitle: "American Western Art | Collector Prints & Frontier Narratives",
+    twitterTitle: "American Western Art Prints | Collector Prints & Frontier Narratives",
     twitterDescription:
       "Collector-focused American Western art by Wayne Heim. Browse cowboy portraits, Indigenous portrait work, and frontier narratives as fine art prints.",
     twitterImage: "/images/cowboy.webp",

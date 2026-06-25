@@ -46,6 +46,7 @@ import { siteNav } from "../data/siteNav.js";
 import { useImageFallbackRedirect } from "./utils/useImageFallbackRedirect.js";
 import { themes } from "../data/themes/themes.mjs";
 import blogImageMap from "../data/blogImageMap.js";
+import { getChapterDoorwayLink } from "../data/chapterDoorwayLinks.js";
 import { isWesternImagePath, westernImageAttributionText } from "../data/wayneEntity.js";
 import { getImageDimensions } from "../utils/getImageDimensions.js";
 import { extractImageId, getSemanticImageUrl } from "../utils/imageProxy.js";
@@ -694,6 +695,7 @@ export default function ChapterGalleryBase({
   // Sister link logic - use state to avoid SSR/client mismatch
   const currentImageId = galleryData[currentIndex]?.id;
   const currentImageData = galleryData[currentIndex] || null;
+  const chapterDoorwayLink = getChapterDoorwayLink(currentImageData, basePath);
   const currentImageDimensions = getImageDimensions(currentImageData) || getValidImageDimensions(currentImageData);
   const currentDisplayImageUrl = currentImageData
     ? getViewerDisplaySrc(currentImageData, basePath)
@@ -2344,6 +2346,44 @@ export default function ChapterGalleryBase({
                             );
                           })()}
                           
+                          {chapterDoorwayLink && (
+                            <a
+                              href={chapterDoorwayLink.href}
+                              className="chapter-doorway-link"
+                              onClick={() => track("chapter_doorway_click", {
+                                imageId: galleryData[currentIndex]?.id,
+                                pageType: 'image',
+                                trigger: 'more_about_closing_link',
+                                doorwayHref: chapterDoorwayLink.href,
+                                doorwayTheme: chapterDoorwayLink.theme,
+                              })}
+                              style={{
+                                display: 'block',
+                                marginTop: '1rem',
+                                paddingTop: '0.75rem',
+                                borderTop: '1px dashed rgba(200, 190, 180, 0.4)',
+                                fontSize: '0.82rem',
+                                color: '#7b1e1e',
+                                textDecoration: 'none',
+                                fontFamily: "'Glegoo', serif",
+                                textAlign: 'right'
+                              }}
+                            >
+                              {chapterDoorwayLink.label}
+                            </a>
+                          )}
+
+                          {chapterDoorwayLink && (
+                            <hr
+                              aria-hidden="true"
+                              style={{
+                                margin: '0.75rem 0 0.6rem',
+                                border: 0,
+                                borderTop: '1px dashed rgba(200, 190, 180, 0.4)'
+                              }}
+                            />
+                          )}
+
                           {/* Cross-image discovery - uses sitemapMatches as an anti-orphan crawl mesh */}
                           {(() => {
                             const currentId = galleryData[currentIndex]?.id;
@@ -2392,6 +2432,7 @@ export default function ChapterGalleryBase({
                               </a>
                             );
                           })()}
+
                         </div>
                       </details>
                       </>

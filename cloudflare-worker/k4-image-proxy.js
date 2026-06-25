@@ -62,7 +62,8 @@ const MANIFEST_URL = "https://www.k4studios.com/image-manifest.json?v=20260529-c
 const SMUGMUG_ORIGIN = "https://photos.smugmug.com";
 const IMAGE_ID_MAP_URL = "https://www.k4studios.com/imageIdMap.json?v=20260529-civil-war-26-spring";
 const MANIFEST_CACHE_TTL = 3600; // seconds
-const IMAGE_CACHE_KEY_VERSION = "20260429-smugmug-paths";
+const IMAGE_CACHE_KEY_VERSION = "20260624-merchant-jpeg";
+const UPSTREAM_IMAGE_ACCEPT = "image/jpeg,image/png,image/gif;q=0.9,*/*;q=0.5";
 
 // --------------------
 // SIZE FALLBACK CHAINS
@@ -594,7 +595,9 @@ async function proxyImage(smugMugUrl, request, size = null) {
     // upstream object as GET so HEAD inherits the stable image path and cache.
     method: 'GET',
     headers: {
-      Accept: request.headers.get("Accept") || "image/*",
+      // Keep /img/*.jpg deterministic and Merchant Center-safe. Forwarding the
+      // requester Accept header allows SmugMug to return WebP behind JPG URLs.
+      Accept: UPSTREAM_IMAGE_ACCEPT,
       "User-Agent": "K4-Image-Proxy-Worker/1.0",
       ...(request.headers.get("Referer") && { Referer: request.headers.get("Referer") })
     },

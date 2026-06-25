@@ -74,6 +74,12 @@ $tables = @(
     Notes = 'Primary raw event log'
   },
   [pscustomobject]@{
+    Name = 'canonical_events'
+    DateColumn = 'ts'
+    OrderBy = 'id'
+    Notes = 'Canonical event dedupe log'
+  },
+  [pscustomobject]@{
     Name = 'canonical_events_v2'
     DateColumn = 'occurred_at'
     OrderBy = 'id'
@@ -146,8 +152,8 @@ ORDER BY 1;
     $exportSql = @"
 SELECT *
 FROM $($table.Name)
-WHERE $($table.DateColumn) >= '$bucketDate'
-  AND $($table.DateColumn) < '$bucketEnd'
+WHERE datetime($($table.DateColumn)) >= datetime('$bucketDate')
+  AND datetime($($table.DateColumn)) < datetime('$bucketEnd')
 ORDER BY $($table.OrderBy);
 "@
 

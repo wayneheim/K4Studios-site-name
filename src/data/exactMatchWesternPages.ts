@@ -745,7 +745,7 @@ export const westernCowboyArtPage = {
   themeLinks: [
     { href: '/western-cowboy-pictures', label: 'Western Cowboy Pictures' },
     { href: '/Western-Cowboy-Photography', label: 'Western Cowboy Photography' },
-    { href: '/American-Western-Art', label: 'American Western Art' },
+    { href: '/American-Western-Art', label: 'American Western Art Prints' },
     ...westernThemeLinks,
   ],
   faqItems: [
@@ -1043,7 +1043,7 @@ export const westernArtPrintsPage = {
     { href: '/Other/K4-Select-Series/Engrained', label: 'Engrained Collector Series' },
   ],
   themeLinks: [
-    { href: '/American-Western-Art', label: 'American Western Art' },
+    { href: '/American-Western-Art', label: 'American Western Art Prints' },
     { href: '/Western-Fine-Art-Photography', label: 'Western Fine Art Photography' },
     { href: '/cowboy-art-prints', label: 'Cowboy Art Prints' },
     { href: '/cowboy-artwork-prints', label: 'Cowboy Artwork Prints' },

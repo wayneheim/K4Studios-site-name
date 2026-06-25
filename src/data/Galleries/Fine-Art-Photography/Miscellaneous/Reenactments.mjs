@@ -3605,9 +3605,9 @@ export const galleryData = [
   },
   {
     "id": "i-3KnZChF",
-    "title": "I Hold Her Proudly  Photography by Wayne Heim",
-    "description": "Young Civil War reenactor carries the Confederate flag proudly. This Civil War reenactment photograph creates living history art rooted in period costume photography, human gesture, and Wayne Heim's restrained sense of narrative detail.",
-    "alt": "Confederate Soldiers on the March     Photography by Wayne Heim",
+    "title": "Civil War Living History Standard Photography by Wayne Heim",
+    "description": "A young Civil War reenactor carries a period battle flag during a living history event. This Civil War reenactment photograph creates living history art rooted in period costume photography, human gesture, and Wayne Heim's restrained sense of narrative detail.",
+    "alt": "Civil War reenactors on the march in a living history scene photographed by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-3KnZChF/A",
     "keywords": [
       "wayne heim",
@@ -3621,7 +3621,7 @@ export const galleryData = [
       "hale farm 2015",
       "k4 studios"
     ],
-    "story": "Young Civil War reenactor carries the Confederate flag proudly. ©Wayne Heim",
+    "story": "A young Civil War reenactor carries a period battle flag during a living history event. ©Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
