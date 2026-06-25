@@ -345,7 +345,7 @@ const meta = {
           <h2 class="gallery-landing-subtitle">{fixMojibake(usedEntranceData.subtitle)}</h2>
         )}
         <GalleryInfo 
-          client:only="react" 
+          client:load
           galleryKey={galleryPath}
           entranceData={{
             ...usedEntranceData,

@@ -14,6 +14,7 @@ import {
   getGalleryCollectionLabel,
   resolveGallerySourceHref,
 } from "@/utils/galleryCollectionNav.ts";
+import { getGalleryDoorwayLink } from "@/data/galleryDoorwayLinks.js";
 import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import { getCollectionImageGalleryGraph } from "@/components/utils/getStructuredData.ts";
 
@@ -119,6 +120,10 @@ const imageCount = galleryData.length;
 const basePath = galleryHref;
 const canonicalUrl = `https://www.k4studios.com${basePath}/all`;
 const parentUrl = `https://www.k4studios.com${basePath}`;
+const allPageDoorwayLink = getGalleryDoorwayLink(basePath);
+const allPageDoorwayLabel = allPageDoorwayLink
+  ? `explore more insight on ${allPageDoorwayLink.term}`
+  : "";
 
 // ✅ Build gallery title from breadcrumb
 const galleryTitle = breadcrumbLabels.slice(-2).join(' – '); // Last 2 levels
@@ -651,6 +656,20 @@ const heroImage = galleryData[0];
       </div>
     )}
 
+    <section class="archive-context">
+      <p>
+        This page presents the full collection for the
+        <a href={basePath}>{galleryLabel}</a> series.
+        For narrative context, historical intent, and artistic approach,
+        return to the main overview.
+        {allPageDoorwayLink && allPageDoorwayLabel && (
+          <>
+            {" "}For broader context, <a href={allPageDoorwayLink.href}>{allPageDoorwayLabel}</a>.
+          </>
+        )}
+      </p>
+    </section>
+
     <Footer />
   </div>
 
@@ -749,6 +768,35 @@ const heroImage = galleryData[0];
 
     .empty-gallery { text-align:center; padding:60px 20px; }
     .empty-gallery a { color:#85644b; }
+
+    .archive-context {
+      max-width:900px;
+      margin:24px auto;
+      padding:16px 24px;
+      text-align:center;
+      font-family:'Glegoo',serif;
+      font-size:0.95rem;
+      line-height:1.6;
+      color:#4a3d33;
+      background:#f9f7f5;
+      border-radius:6px;
+      border:1px solid #e8e4e0;
+    }
+
+    .archive-context p {
+      margin:0;
+    }
+
+    .archive-context a {
+      color:#85644b;
+      text-decoration:none;
+      font-weight:600;
+    }
+
+    .archive-context a:hover {
+      color:#5a3e2b;
+      text-decoration:underline;
+    }
 
     .ssr-grid {
       display:grid;
