@@ -304,7 +304,7 @@ export const faqItems = [
 ];
 
 export const pageMeta = {
-  title: 'WWII Themed Fine Art Prints | World War II Inspired Wall Art by Wayne Heim - K4 Studios',
+  title: 'WWII Themed Fine Art Prints | World War II Inspired Wall Art by Wayne Heim',
   description: 'WWII themed fine art prints by Wayne Heim: contemporary World War II inspired wall art created with living historians, period detail, painterly light, and narrative intent.',
 };
 

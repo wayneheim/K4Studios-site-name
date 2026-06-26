@@ -95,7 +95,7 @@ export const doorwayPages: DoorwayPage[] = [
     active: false,
     slug: 'what-is-western-art',
     h1: 'What Is Western Art?',
-    metaTitle: 'What Is Western Art? | K4 Studios',
+    metaTitle: 'What Is Western Art? - Wayne Heim',
     metaDescription:
       'A clear definition of Western art through subject, structure, and story, with a path into K4 Studios Wild West work.',
     introParagraph:
@@ -127,7 +127,7 @@ export const doorwayPages: DoorwayPage[] = [
     active: false,
     slug: 'what-is-painterly-photography',
     h1: 'What Is Painterly Photography?',
-    metaTitle: 'What Is Painterly Photography? | K4 Studios',
+    metaTitle: 'What Is Painterly Photography? - Wayne Heim',
     metaDescription:
       'Understand painterly photography as authored light, tone, and atmosphere, not filters, in the K4 Studios Western context.',
     introParagraph:
@@ -159,7 +159,7 @@ export const doorwayPages: DoorwayPage[] = [
     active: false,
     slug: 'narrative-western-art',
     h1: 'What Is Narrative Western Art?',
-    metaTitle: 'What Is Narrative Western Art? | K4 Studios',
+    metaTitle: 'What Is Narrative Western Art? - Wayne Heim',
     metaDescription:
       'A concise definition of narrative Western art and how K4 frames story, tension, and implied sequence in still imagery.',
     introParagraph:
@@ -194,7 +194,7 @@ export const doorwayPages: DoorwayPage[] = [
     active: false,
     slug: 'western-fine-art-photography',
     h1: 'Western Fine Art Photography',
-    metaTitle: 'Western Fine Art Photography | K4 Studios',
+    metaTitle: 'Western Fine Art Photography - Wayne Heim',
     metaDescription:
       'Western fine art photography defined through authored composition, painterly atmosphere, and narrative intent.',
     introParagraph:
@@ -226,7 +226,7 @@ export const doorwayPages: DoorwayPage[] = [
     active: false,
     slug: 'cinematic-western-art',
     h1: 'What Makes Western Art Feel Cinematic?',
-    metaTitle: 'What Makes Western Art Feel Cinematic? | K4 Studios',
+    metaTitle: 'What Makes Western Art Feel Cinematic? - Wayne Heim',
     metaDescription:
       'A direct explanation of cinematic Western art in still images through implication, atmosphere, and narrative pressure.',
     introParagraph:
@@ -265,7 +265,7 @@ export const doorwayPages: DoorwayPage[] = [
     active: false,
     slug: 'cowboy-art-prints',
     h1: 'Cowboy Art Prints',
-    metaTitle: 'Cowboy Art Prints | K4 Studios',
+    metaTitle: 'Cowboy Art Prints - Wayne Heim',
     metaDescription:
       'Cowboy art prints with a collector-facing focus on authored story, painterly atmosphere, and long-term visual depth.',
     introParagraph:
@@ -304,7 +304,7 @@ export const doorwayPages: DoorwayPage[] = [
     active: false,
     slug: 'western-wall-art',
     h1: 'Western Wall Art',
-    metaTitle: 'Western Wall Art | K4 Studios',
+    metaTitle: 'Western Wall Art - Wayne Heim',
     metaDescription:
       'Western wall art defined for buyers who want more than decor: painterly atmosphere, narrative clarity, and collector depth.',
     introParagraph:
@@ -336,7 +336,7 @@ export const doorwayPages: DoorwayPage[] = [
     active: false,
     slug: 'western-storytelling-photography',
     h1: 'Western Storytelling Photography',
-    metaTitle: 'Western Storytelling Photography | K4 Studios',
+    metaTitle: 'Western Storytelling Photography - Wayne Heim',
     metaDescription:
       'Western storytelling photography defined through implied narrative, painterly-cinematic restraint, and frontier human stakes.',
     introParagraph:
@@ -375,7 +375,7 @@ export const doorwayPages: DoorwayPage[] = [
     active: false,
     slug: 'cinematic-cowboy-photography',
     h1: 'Cinematic Cowboy Photography',
-    metaTitle: 'Cinematic Cowboy Photography | K4 Studios',
+    metaTitle: 'Cinematic Cowboy Photography - Wayne Heim',
     metaDescription:
       'Cinematic cowboy photography focused on narrative tension, painterly light, and human structure beneath frontier myth.',
     introParagraph:
@@ -407,7 +407,7 @@ export const doorwayPages: DoorwayPage[] = [
     active: false,
     slug: 'cowboy-storytelling-art',
     h1: 'Cowboy Storytelling Art',
-    metaTitle: 'Cowboy Storytelling Art | K4 Studios',
+    metaTitle: 'Cowboy Storytelling Art - Wayne Heim',
     metaDescription:
       'Cowboy storytelling art focused on frontier character, implied narrative, and painterly-cinematic structure.',
     introParagraph:
@@ -442,7 +442,7 @@ export const doorwayPages: DoorwayPage[] = [
     active: false,
     slug: 'western-action-photography',
     h1: 'Western Action Photography',
-    metaTitle: 'Western Action Photography | K4 Studios',
+    metaTitle: 'Western Action Photography - Wayne Heim',
     metaDescription:
       'Western action photography focused on tension, implied movement, and story-driven frontier moments.',
     introParagraph:
@@ -477,7 +477,7 @@ export const doorwayPages: DoorwayPage[] = [
     active: false,
     slug: 'rustic-cowboy-wall-art',
     h1: 'Rustic Cowboy Wall Art',
-    metaTitle: 'Rustic Cowboy Wall Art | K4 Studios',
+    metaTitle: 'Rustic Cowboy Wall Art - Wayne Heim',
     metaDescription:
       'Rustic cowboy wall art for decor intent that pivots to narrative, painterly, and collector-facing Western work.',
     introParagraph:

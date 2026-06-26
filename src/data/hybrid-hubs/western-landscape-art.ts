@@ -372,7 +372,7 @@ export const faqItems = [
 ];
 
 export const pageMeta = {
-  title: 'Western Landscape Art Prints | Mountain, Waterfall and Western Wall Art by Wayne Heim - K4 Studios',
+  title: 'Western Landscape Art Prints | Mountain, Waterfall and Western Wall Art by Wayne Heim',
   description: 'Western landscape art prints by Wayne Heim featuring painterly mountain wall art, waterfall fine art prints, Tetons, Rocky Mountain views, and Western sunset landscapes.',
 };
 

@@ -349,7 +349,7 @@ export const faqItems = [
 ];
 
 export const pageMeta = {
-  title: 'Vintage Western Art | Vintage Cowboy Art Prints by Wayne Heim – K4 Studios',
+  title: 'Vintage Western Art | Vintage Cowboy Art Prints by Wayne Heim',
   description: 'Vintage western art by Wayne Heim featuring vintage cowboy art, vintage western prints, old western art, old west posters, and painterly frontier prints for collectors.',
 };
 

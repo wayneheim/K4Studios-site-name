@@ -356,7 +356,7 @@ export const faqItems = [
 ];
 
 export const pageMeta = {
-	title: 'Western Fine Art Photography Collection | Curated Painterly Western Work – K4 Studios',
+	title: 'Western Fine Art Photography Collection - Wayne Heim',
 	description: 'A curated Western fine art photography collection by Wayne Heim, linking cowboy portraiture, narrative Western imagery, Native American portrait work, and collector-facing print routes.',
 };
 

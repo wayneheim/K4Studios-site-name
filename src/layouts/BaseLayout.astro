@@ -124,7 +124,7 @@ const normalizeDescription = (text = '', fallback = '', minimumLength = 110, max
 
 // Titles
 const titleTextOptions = { preserveDashes: meta.preserveTitleDashes === true };
-const galleryTitle = meta.seoTitle || title || meta.title || meta.ogTitle || 'K4 Studios - Fine Art Photography';
+const galleryTitle = meta.seoTitle || title || meta.title || meta.ogTitle || 'Fine Art Photography - Wayne Heim';
 let pageTitle = isImagePage
   ? (meta.seoTitle || title || meta.title || meta.ogTitle || meta.twitterTitle || meta.ogImageTitle || preloadImage?.title || galleryTitle)
   : galleryTitle;
@@ -344,7 +344,7 @@ const buildAutoWebPageSchema = () => {
     isPartOf: {
       "@type": "WebSite",
       "@id": "https://www.k4studios.com/#website",
-      name: "K4 Studios",
+      name: "Wayne Heim - K4 Studios",
       url: "https://www.k4studios.com/",
       publisher: k4Organization,
     },
@@ -559,7 +559,7 @@ const jsonLdScripts = [
     {commerceOffer && <meta property="product:price:currency" content={productPriceCurrency} />}
     {commerceOffer && productAvailability && <meta property="product:availability" content={productAvailability} />}
     <meta property="og:url" content={ogUrl} />
-    <meta property="og:site_name" content="K4 Studios – Fine Art Photography" />
+    <meta property="og:site_name" content="Wayne Heim - K4 Studios" />
     <meta property="og:locale" content="en_US" />
 
     <meta name="twitter:card" content={twitterCard} />

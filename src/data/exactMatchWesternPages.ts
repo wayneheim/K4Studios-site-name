@@ -88,7 +88,7 @@ const westernThemeLinks = [
 
 export const westernPainterlyFineArtPhotographyPage = {
   path: '/western-painterly-fine-art-photography',
-  title: 'Western Painterly Fine Art Photography | K4 Studios',
+  title: 'Western Painterly Fine Art Photography - Wayne Heim',
   h1: 'Western Painterly Fine Art Photography',
   metaDescription:
     'Western painterly fine art photography by Wayne Heim, blending camera-based realism, painterly atmosphere, cinematic composition, and Western storytelling into collectible fine art prints.',
@@ -181,7 +181,7 @@ export const westernPainterlyFineArtPhotographyPage = {
 
 export const cowboyPainterlyFineArtPhotographyPage = {
   path: '/cowboy-painterly-fine-art-photography',
-  title: 'Cowboy Painterly Fine Art Photography | K4 Studios',
+  title: 'Cowboy Painterly Fine Art Photography - Wayne Heim',
   h1: 'Cowboy Painterly Fine Art Photography',
   metaDescription:
     'Cowboy painterly fine art photography by Wayne Heim, featuring cinematic cowboy portraits, frontier scenes, Western storytelling, and collectible camera-based fine art prints.',
@@ -271,7 +271,7 @@ export const cowboyPainterlyFineArtPhotographyPage = {
 
 export const cowboyPicturesPage = {
   path: '/cowboy-pictures',
-  title: 'Cowboy Pictures & Cowboy Photos | K4 Studios',
+  title: 'Cowboy Pictures & Cowboy Photos - Wayne Heim',
   h1: 'Cowboy Pictures and Cowboy Photos',
   metaDescription:
     'Cowboy pictures and cowboy photos by Wayne Heim, presented as painterly Western fine art photography, collectible cowboy portraits, frontier scenes, and story-driven prints.',
@@ -371,7 +371,7 @@ export const cowboyPicturesPage = {
 
 export const westernCowboyPicturesPage = {
   path: '/western-cowboy-pictures',
-  title: 'Western Cowboy Pictures | K4 Studios',
+  title: 'Western Cowboy Pictures - Wayne Heim',
   h1: 'Western Cowboy Pictures',
   metaDescription:
     'Western cowboy pictures by Wayne Heim: painterly cowboy portraits, frontier scenes, Western narratives, and collectible fine art photography prints.',
@@ -466,7 +466,7 @@ export const westernCowboyPicturesPage = {
 
 export const oldWestPicturesPage = {
   path: '/old-west-pictures',
-  title: 'Old West Pictures | K4 Studios',
+  title: 'Old West Pictures - Wayne Heim',
   h1: 'Old West Pictures',
   metaDescription:
     'Old West pictures by Wayne Heim featuring painterly frontier scenes, cowboy characters, Western narratives, historical atmosphere, and collectible fine art prints.',
@@ -566,7 +566,7 @@ export const oldWestPicturesPage = {
 
 export const cowboyArtworkPrintsPage = {
   path: '/cowboy-artwork-prints',
-  title: 'Cowboy Artwork Prints | K4 Studios',
+  title: 'Cowboy Artwork Prints - Wayne Heim',
   h1: 'Cowboy Artwork Prints',
   metaDescription:
     'Cowboy artwork prints by Wayne Heim: painterly Western photography, collector-focused cowboy portraits, limited-edition print language, and series-based fine art presentation.',
@@ -766,7 +766,7 @@ export const westernCowboyArtPage = {
 
 export const cowboyFineArtPrintsPage = {
   path: '/cowboy-fine-art-prints',
-  title: 'Cowboy Fine Art Prints | K4 Studios',
+  title: 'Cowboy Fine Art Prints - Wayne Heim',
   h1: 'Cowboy Fine Art Prints',
   metaDescription:
     'Cowboy fine art prints by Wayne Heim: painterly Western cowboy portraits, collector series, archival print options, limited-edition language, and fine art presentation.',
@@ -866,7 +866,7 @@ export const cowboyFineArtPrintsPage = {
 
 export const cowboyThemedArtworkPage = {
   path: '/cowboy-themed-artwork',
-  title: 'Cowboy Themed Artwork | K4 Studios',
+  title: 'Cowboy Themed Artwork - Wayne Heim',
   h1: 'Cowboy Themed Artwork',
   metaDescription:
     'Cowboy themed artwork by Wayne Heim, using painterly Western photography, frontier portraiture, cowboy subjects, and collector-focused fine art print presentation.',
@@ -966,7 +966,7 @@ export const cowboyThemedArtworkPage = {
 
 export const westernArtPrintsPage = {
   path: '/western-art-prints',
-  title: 'Western Art Prints | K4 Studios',
+  title: 'Western Art Prints - Wayne Heim',
   h1: 'Western Art Prints',
   metaDescription:
     'Western art prints by Wayne Heim, including painterly cowboy portraits, frontier narratives, Native American portrait work, collector series, and limited-edition fine art print paths.',

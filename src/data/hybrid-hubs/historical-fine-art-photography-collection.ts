@@ -487,7 +487,7 @@ export const faqItems = [
 ];
 
 export const pageMeta = {
-  title: 'Facing History Series | Historically Themed Fine Art Photography by Wayne Heim - K4 Studios',
+  title: 'Facing History Series | Historically Themed Fine Art Photography by Wayne Heim',
   description: 'The Facing History Series by Wayne Heim is a historically themed fine art photography collection moving through Wild West, Civil War, World War II, and Roaring Twenties work shaped by story, atmosphere, and historical memory.',
 };
 

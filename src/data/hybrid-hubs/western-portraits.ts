@@ -357,7 +357,7 @@ export const faqItems = [
 ];
 
 export const pageMeta = {
-  title: 'Western Portrait Photography | Character-Driven Cowboy and Frontier Portraits – K4 Studios',
+  title: 'Western Portrait Photography | Character-Driven Cowboy and Frontier Portraits - Wayne Heim',
   description: 'Western portrait photography by Wayne Heim presented as a curated route into cowboy portraits, Native American portrait work, and black-and-white Western character studies.',
 };
 

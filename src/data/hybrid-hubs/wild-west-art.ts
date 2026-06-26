@@ -383,7 +383,7 @@ export const faqItems = [
 ];
 
 export const pageMeta = {
-  title: 'Wild West Art | Frontier Artwork by Wayne Heim – K4 Studios',
+  title: 'Wild West Art | Frontier Artwork by Wayne Heim',
   description: 'Wild West art by Wayne Heim featuring frontier artwork, wild west photos, old west art, cowboy imagery, painterly photography, and cinematic scenes of the American West.',
 };
 

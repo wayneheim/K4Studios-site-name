@@ -356,7 +356,7 @@ export const faqItems = [
 ];
 
 export const pageMeta = {
-  title: 'Cowboy Wall Art | Curated Story-Driven Western Wall Art – K4 Studios',
+  title: 'Cowboy Wall Art | Curated Story-Driven Western Wall Art - Wayne Heim',
   description: 'Cowboy wall art by Wayne Heim presented as a curated entry into cowboy portraiture, atmosphere, narrative Western work, and collector-facing print routes rather than generic decor inventory.',
 };
 

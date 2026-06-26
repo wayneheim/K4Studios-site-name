@@ -77,15 +77,15 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
   },
 
   "/News-Awards": {
-    title: "Wayne Heim — Press, Awards & Exhibition Recognition | K4 Studios",
-    seoTitle: "Wayne Heim — Press, Awards & Exhibition Recognition | K4 Studios",
-    ogTitle: "Wayne Heim — Press, Awards & Exhibition Recognition | K4 Studios",
+    title: "Wayne Heim — Press, Awards & Exhibition Recognition",
+    seoTitle: "Wayne Heim — Press, Awards & Exhibition Recognition",
+    ogTitle: "Wayne Heim — Press, Awards & Exhibition Recognition",
     ogDescription:
       "Press coverage, juried exhibition acceptances, and professional awards recognizing Wayne Heim's painterly Western photography and fine art photography at K4 Studios.",
     ogImage: "/og/news-awards.jpg",
     ogType: "website",
     twitterCard: "summary_large_image",
-    twitterTitle: "Wayne Heim — Press, Awards & Exhibition Recognition | K4 Studios",
+    twitterTitle: "Wayne Heim — Press, Awards & Exhibition Recognition",
     twitterDescription:
       "Press coverage, juried exhibition acceptances, and professional awards recognizing Wayne Heim's painterly Western photography and fine art photography at K4 Studios.",
     twitterImage: "/og/news-awards.jpg",
@@ -112,33 +112,33 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
     ogImage: "/og/one-image-movie.jpg",
     ogType: "article",
     twitterCard: "summary_large_image",
-      twitterTitle: "Wayne Heim’s One-Image Movies™ | K4 Studios",
+      twitterTitle: "Wayne Heim’s One-Image Movies™",
       twitterDescription:
         "Wayne Heim’s One-Image Movies™ join image, title, authored writing, unresolved implication, and viewer participation into a finished narrative-art presentation.",
     twitterImage: "/og/one-image-movie.jpg",
   },
 
   "/Other/Narrative-Vacuum": {
-    ogTitle: "The Narrative Vacuum | K4 Studios",
+    ogTitle: "The Narrative Vacuum - Wayne Heim",
     ogDescription:
       "A long-form critical essay on story, the Western canon, unresolved images, and Wayne Heim's One-Image Movies.",
     ogImage: "/og/one-image-movie.jpg",
     ogType: "article",
     twitterCard: "summary_large_image",
-    twitterTitle: "The Narrative Vacuum | K4 Studios",
+    twitterTitle: "The Narrative Vacuum - Wayne Heim",
     twitterDescription:
       "A critical framework for curators, collectors, and writers on Western narrative art, viewer participation, and the armature beneath the legend.",
     twitterImage: "/og/one-image-movie.jpg",
   },
 
   "/Other/Narrative-Vacuum-F": {
-    ogTitle: "The Narrative Vacuum: Full Version | K4 Studios",
+    ogTitle: "The Narrative Vacuum: Full Version - Wayne Heim",
     ogDescription:
       "The full article version of The Narrative Vacuum, paired with all editorial sample images, stories, and notes for comparison.",
     ogImage: "/og/one-image-movie.jpg",
     ogType: "article",
     twitterCard: "summary_large_image",
-    twitterTitle: "The Narrative Vacuum: Full Version | K4 Studios",
+    twitterTitle: "The Narrative Vacuum: Full Version - Wayne Heim",
     twitterDescription:
       "A full comparison page for The Narrative Vacuum with the complete article and sample-art packet content.",
     twitterImage: "/og/one-image-movie.jpg",
@@ -193,7 +193,7 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
   },
 
   "/Other/Series": {
-    ogTitle: "Editions & Series – How the Work Is Offered | K4 Studios",
+    ogTitle: "Editions & Series – How the Work Is Offered - Wayne Heim",
     ogDescription:
       "Explore how images at K4 Studios evolve across editions, materials, and narrative forms—from intimate Sketch studies to signed Legend statement works.",
     ogImage: "/images/editions-hero.webp",
@@ -962,7 +962,7 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
   },
 
   "/Western-Photography-Art": {
-    ogTitle: "Western Photography Art – Wayne Heim | K4 Studios",
+    ogTitle: "Western Photography Art – Wayne Heim",
     ogDescription:
       "Western photography art by Wayne Heim, also aligned with the term Western art photography. Authored frontier photography built through narrative intent, historical awareness, and painterly craft.",
     ogImage: "/images/cowboy.webp",
@@ -977,7 +977,7 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
 
   // ✅ HYBRID AUTHORITY–COMMERCE HUB — Collector onboarding page
   "/western-fine-art-photography-collection": {
-    ogTitle: "Cowboy & Frontier Fine Art Prints for Collectors | K4 Studios",
+    ogTitle: "Cowboy & Frontier Fine Art Prints for Collectors - Wayne Heim",
     ogDescription:
       "Collector-focused selection of cowboy and frontier fine art prints by Wayne Heim. Painterly limited-edition works on archival paper and Engrained wood panels.",
     ogImage: "/images/cowboy.webp",

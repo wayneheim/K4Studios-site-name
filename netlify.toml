@@ -670,6 +670,12 @@ force = true
 
 # Pictorialist legacy path → new standalone page
 [[redirects]]
+from = "/Complete-Black-and-White-Western-Photos"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/all"
+status = 301
+force = true
+
+[[redirects]]
 from = "/Galleries/Painterly-Fine-Art-Photography/Pictorialist"
 to = "/Pictorialist-Photography"
 status = 301

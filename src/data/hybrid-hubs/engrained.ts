@@ -367,7 +367,7 @@ export const faqItems = [
 ];
 
 export const pageMeta = {
-  title: 'Engrained Series | Western Art on Wood by Wayne Heim – K4 Studios',
+  title: 'Engrained Series | Western Art on Wood by Wayne Heim',
   description: 'Engrained wood prints by Wayne Heim blending Baltic birch grain with painterly Western portraits, frontier stories, and atmospheric landscapes.',
 };
 
