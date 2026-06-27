@@ -129,7 +129,7 @@ function MasterImageLinkModal({ isOpen, onClose, onSelect, currentLinkedId, curr
           ) : (
             /* Image Grid */
             <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-3">
-              {galleryImages.filter(img => img.visibility !== "hidden" && img.visibility !== "ghost").map((img) => {
+              {galleryImages.filter(img => img.visibility !== "hidden" && !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(img.visibility ?? 'show').trim().toLowerCase())).map((img) => {
                 const isCurrentlyLinked = currentLinkedId === img.id;
                 const thumbSrc = img.srcS || img.srcM || img.src || "";
                 return (

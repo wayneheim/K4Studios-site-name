@@ -6,7 +6,7 @@ import { galleryData as bwGallery } from './Black-White.mjs';
 // --- Universal filter for visible images ---
 function filterGalleryImages(images) {
   return images.filter(
-    img => img.id !== 'i-k4studios' && (!img.visibility || img.visibility !== 'ghost')
+    img => img.id !== 'i-k4studios' && (!img.visibility || !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(img.visibility ?? 'show').trim().toLowerCase()))
   );
 }
 

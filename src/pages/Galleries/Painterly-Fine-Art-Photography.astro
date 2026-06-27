@@ -124,7 +124,7 @@ const landingImgUrl = landingImg?.id ? makeAbsoluteUrl(getProxySrc(landingImg.id
 const meta = getLandingMeta(sectionPath, landingImgUrl);
 if (!meta.ogUrl)      meta.ogUrl      = `https://k4studios.com${sectionPath}`;
 if (!meta.twitterUrl) meta.twitterUrl = `https://k4studios.com${sectionPath}`;
-meta.seoDescription = "Explore Wayne Heim's painterly fine art photography galleries, from Western cowboy stories and historical portraits to landscapes, trains, cars, and collector prints.";
+meta.seoDescription = "Painterly fine art photography by Wayne Heim, from Western cowboy stories and historical portraits to landscapes, trains, cars, and collector prints.";
 
 // Featured Collection image (i-7Mzzbvp - "Last Hand" - unmistakably Western)
 const featuredCollectionImage = {
@@ -334,6 +334,7 @@ const featuredCollectionImage = {
             collectionName="Western Cowboy Portraits"
             trackingId="Cowboy_Jump_Painterly"
             itemCount={250}
+            emitStructuredData={false}
           />
         </div>
         

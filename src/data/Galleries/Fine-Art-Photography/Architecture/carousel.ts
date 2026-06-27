@@ -15,7 +15,7 @@ for (const filePath in modules) {
   const mod = modules[filePath];
   const data = mod.galleryData || (mod.default && mod.default.galleryData);
   if (Array.isArray(data)) {
-    galleryData = data.filter(img => img.id !== 'i-k4studios' && img.visibility !== 'ghost');
+    galleryData = data.filter(img => img.id !== 'i-k4studios' && !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(img.visibility ?? 'show').trim().toLowerCase()));
     break;
   }
 }

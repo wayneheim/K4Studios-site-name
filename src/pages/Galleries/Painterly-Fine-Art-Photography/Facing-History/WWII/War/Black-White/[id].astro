@@ -14,7 +14,7 @@ import { galleryData } from '@/data/Galleries/Painterly-Fine-Art-Photography/Fac
 // Generate static paths for all visible images at build time
 export async function getStaticPaths() {
   return galleryData
-    .filter(img => img.visibility !== 'hidden' && img.visibility !== 'hide' && img.visibility !== 'ghost' && img.id !== 'i-k4studios')
+    .filter(img => img.visibility !== 'hidden' && img.visibility !== 'hide' && !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(img.visibility ?? 'show').trim().toLowerCase()) && img.id !== 'i-k4studios')
     .map(img => ({ params: { id: img.id } }));
 }
 

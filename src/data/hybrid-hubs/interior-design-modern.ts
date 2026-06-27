@@ -32,7 +32,7 @@ const interiorSignals = [
 ];
 
 function isVisible(img: any) {
-  return img && img.id && img.id !== 'i-k4studios' && img.visibility !== 'ghost' && img.visibility !== 'hidden';
+  return img && img.id && img.id !== 'i-k4studios' && !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(img.visibility ?? 'show').trim().toLowerCase()) && img.visibility !== 'hidden';
 }
 
 function rankByEditorialOrder(a: any, b: any) {

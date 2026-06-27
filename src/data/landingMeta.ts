@@ -2,6 +2,7 @@ type LandingMetaEntry = {
   title?: string;
   seoTitle?: string;
   ogTitle: string;
+  seoDescription?: string;
   ogDescription: string;
   ogImage: string;
   ogType?: string;
@@ -11,6 +12,8 @@ type LandingMetaEntry = {
   twitterImage: string;
   keywords?: string;
   descriptionMaxLength?: number;
+  preserveTitleExact?: boolean;
+  preserveTitleDashes?: boolean;
   preserveDescriptionDashes?: boolean;
   preserveDescriptionExact?: boolean;
 };
@@ -18,7 +21,7 @@ type LandingMetaEntry = {
 export const landingMetaDB: Record<string, LandingMetaEntry> = {
   "/": {
     title: "Wayne Heim – Western & Painterly Fine Art Photography",
-    seoTitle: "Wayne Heim – Western & Painterly Fine Art Photography",
+    seoTitle: "Painterly Western Fine Art Photography | Wayne Heim — K4 Studios",
     ogTitle: "Wayne Heim – Western & Painterly Fine Art Photography",
     ogDescription:
       "Painterly and traditional fine art photography by Wayne Heim, featuring Western stories, historical portraits, landscapes, and narrative collector prints.",
@@ -31,11 +34,13 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
       "Painterly and traditional fine art photography by Wayne Heim, featuring Western stories, historical portraits, landscapes, and narrative collector prints.",
     twitterImage: "/og/painterly.jpg",
     keywords: "Wayne Heim, Western fine art photography, painterly photography, cowboy portraits, fine art prints, Western art, historical photography, K4 Studios",
+    preserveTitleExact: true,
+    preserveTitleDashes: true,
   },
 
   "/index": {
     title: "Wayne Heim – Western & Painterly Fine Art Photography",
-    seoTitle: "Wayne Heim – Western & Painterly Fine Art Photography",
+    seoTitle: "Painterly Western Fine Art Photography | Wayne Heim — K4 Studios",
     ogTitle: "Wayne Heim – Western & Painterly Fine Art Photography",
     ogDescription:
       "Painterly and traditional fine art photography by Wayne Heim, featuring Western stories, historical portraits, landscapes, and narrative collector prints.",
@@ -48,6 +53,8 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
       "Painterly and traditional fine art photography by Wayne Heim, featuring Western stories, historical portraits, landscapes, and narrative collector prints.",
     twitterImage: "/og/painterly.jpg",
     keywords: "Wayne Heim, Western fine art photography, painterly photography, cowboy portraits, fine art prints, Western art, historical photography, K4 Studios",
+    preserveTitleExact: true,
+    preserveTitleDashes: true,
   },
 
   "/Contact": {
@@ -267,6 +274,8 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
       "Facing History | Historically Themed Fine Art Photography by Wayne Heim",
     ogDescription:
       "Historically themed fine art photography by Wayne Heim, interpreting the Western frontier, Civil War, WWII, and Roaring 20s through researched detail, real subjects, painterly craft, and story-driven visual narrative.",
+    seoDescription:
+      "Historically themed fine art photography by Wayne Heim, spanning the Western frontier, Civil War, WWII, and Roaring 20s through painterly narrative.",
     ogImage: "/og/facing-history.jpg",
     ogType: "website",
     twitterCard: "summary_large_image",
@@ -348,39 +357,45 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
   },
 
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives": {
-    title: "Western Narratives - Wayne Heim",
-    seoTitle: "Western Narratives - Wayne Heim",
+    title: "Western Narrative Photography | Painterly Fine Art of the American West",
+    seoTitle: "Western Narrative Photography | Painterly Fine Art of the American West",
     ogTitle:
-      "Western Narratives – Wayne Heim",
+      "Western Narrative Photography | Painterly Fine Art of the American West",
     ogDescription:
-      "Narrative Western photography by Wayne Heim: cinematic frontier images built around implication, atmosphere, and the pressure of the larger story beyond the frame.",
+      "Narrative Western photography by Wayne Heim — cinematic frontier images built around implication, atmosphere, and story pressure beyond the frame.",
     ogImage: "/img/i-5FX3W9r/s.jpg",
     ogType: "website",
     twitterCard: "summary_large_image",
     twitterTitle:
-      "Western Narratives – Narrative Western Photography",
+      "Western Narrative Photography | Painterly Fine Art of the American West",
     twitterDescription:
-      "Narrative Western art and cinematic frontier photography by Wayne Heim.",
+      "Narrative Western photography by Wayne Heim — cinematic frontier images built around implication, atmosphere, and story pressure beyond the frame.",
     twitterImage: "/img/i-5FX3W9r/s.jpg",
     keywords: "narrative Western photography, Western narratives, narrative Western art, cinematic Western photography, Western storytelling photography, frontier narrative art, Wayne Heim",
+    descriptionMaxLength: 155,
+    preserveDescriptionDashes: true,
+    preserveDescriptionExact: true,
   },
 
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans": {
-    title: "Native American Portraits - Wayne Heim",
-    seoTitle: "Native American Portraits - Wayne Heim",
+    title: "Native American Fine Art Photography | Painterly Portraits by Wayne Heim",
+    seoTitle: "Native American Fine Art Photography | Painterly Portraits by Wayne Heim",
     ogTitle:
-      "Native American Portraits – Wayne Heim",
+      "Native American Fine Art Photography | Painterly Portraits by Wayne Heim",
     ogDescription:
-      "Native American fine art photography by Wayne Heim: painterly portraits in color and black and white shaped by presence, heritage, identity, and lived humanity.",
+      "Native American fine art photography by Wayne Heim — painterly portraits in color and black and white, shaped by presence and lived identity.",
     ogImage: "/img/i-qLzRgbS/l.jpg",
     ogType: "website",
     twitterCard: "summary_large_image",
     twitterTitle:
-      "Native American Portraits – Wayne Heim",
+      "Native American Fine Art Photography | Painterly Portraits by Wayne Heim",
     twitterDescription:
-      "Painterly Native American portraits in color and black and white by Wayne Heim.",
+      "Native American fine art photography by Wayne Heim — painterly portraits in color and black and white, shaped by presence and lived identity.",
     twitterImage: "/img/i-qLzRgbS/l.jpg",
     keywords: "Native American fine art photography, Native American portraits, Indigenous portrait photography, painterly Native American portraits, Native American black and white photography, Native American color portrait photography, Indigenous fine art photography, Wayne Heim",
+    descriptionMaxLength: 155,
+    preserveDescriptionDashes: true,
+    preserveDescriptionExact: true,
   },
 
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color": {
@@ -499,6 +514,8 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
       "Painterly Landscapes by Location – Photography by Wayne Heim",
     ogDescription:
       "Explore painterly landscapes by region—West, Midwest, Northeast, South, and international vistas rendered with fine art depth.",
+    seoDescription:
+      "Explore painterly landscape photography by location: Western, Midwest, Northeast, South, and international fine art images by Wayne Heim.",
     ogImage: "/og/landscapes-location.jpg",
     ogType: "website",
     twitterCard: "summary_large_image",
@@ -629,18 +646,23 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
   },
 
   "/Galleries/Painterly-Fine-Art-Photography/Transportation": {
+    title:
+      "Transportation Fine Art Photography | Trains & Classic Cars by Wayne Heim",
+    seoTitle:
+      "Transportation Fine Art Photography | Trains & Classic Cars by Wayne Heim",
     ogTitle:
-      "Transportation Fine Art Photography – Trains, Cars & Boats by Wayne Heim",
+      "Transportation Fine Art Photography | Trains & Classic Cars by Wayne Heim",
     ogDescription:
-      "Painterly transportation photography—vintage trains, classic cars, warbirds, and boats captured as fine art prints.",
+      "Painterly transportation photography of vintage trains and classic cars by Wayne Heim, created as fine art prints with story, motion, and Americana.",
     ogImage: "/og/transportation.jpg",
     ogType: "website",
     twitterCard: "summary_large_image",
-    twitterTitle: "Transportation Art – Photography by Wayne Heim",
+    twitterTitle:
+      "Transportation Fine Art Photography | Trains & Classic Cars by Wayne Heim",
     twitterDescription:
-      "Painterly fine art photography of trains, cars, aircraft, and boats by Wayne Heim.",
+      "Painterly fine art photography of vintage trains and classic cars by Wayne Heim.",
     twitterImage: "/og/transportation.jpg",
-    keywords: "transportation photography, train photography, vintage car photography, warbird photography, fine art transportation, classic car art, Wayne Heim",
+    keywords: "transportation photography, train photography, vintage car photography, fine art transportation, classic car art, steam locomotive photography, Wayne Heim",
   },
 
   "/Galleries/Painterly-Fine-Art-Photography/Miscellaneous": {
@@ -1150,6 +1172,7 @@ export function getLandingMeta(path: string, imageOverride?: string) {
     title: baseMeta.title || baseMeta.seoTitle || baseMeta.ogTitle,
     seoTitle: baseMeta.seoTitle || baseMeta.title || baseMeta.ogTitle,
     ogTitle: baseMeta.ogTitle,
+    seoDescription: baseMeta.seoDescription,
     ogDescription: uniqueDesc,
     ogImage: imageOverride || baseMeta.ogImage,
     ogType: baseMeta.ogType || "website",
@@ -1162,6 +1185,8 @@ export function getLandingMeta(path: string, imageOverride?: string) {
     description: uniqueDesc,
     keywords: baseMeta.keywords || "",
     descriptionMaxLength: baseMeta.descriptionMaxLength,
+    preserveTitleExact: baseMeta.preserveTitleExact === true,
+    preserveTitleDashes: baseMeta.preserveTitleDashes === true,
     preserveDescriptionDashes: baseMeta.preserveDescriptionDashes === true,
   };
 }

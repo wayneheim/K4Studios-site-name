@@ -76,6 +76,15 @@ const structuredData = getStructuredData({
     description: landingWestern.subtitle || landingWestern.description,
     url: `https://k4studios.com${sectionPath}`,
     keywords: landingWestern.keywords || [],
+    genre: "Fine Art Portrait Photography",
+    about: [
+      { "@type": "Thing", name: "Fine Art Portrait Photography" },
+      { "@type": "Thing", name: "Painterly Portrait Photography" },
+      { "@type": "Thing", name: "Wedding Fine Art Photography" },
+      { "@type": "Thing", name: "Candid Portrait Photography" },
+      { "@type": "Thing", name: "Character Study Photography" },
+      { "@type": "Thing", name: "Painterly Fine Art Photography" },
+    ],
     copyrightNotice: "© Wayne Heim"
   },
   images: featheredImages,

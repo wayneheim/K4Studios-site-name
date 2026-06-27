@@ -133,7 +133,9 @@ let pageTitle = isImagePage
 const normalizedTitleBase = normalizeMetaText(pageTitle || '', titleTextOptions);
 const cleanTitleBase = isImagePage
   ? normalizedTitleBase.trim()
-  : normalizedTitleBase
+  : meta.preserveTitleExact === true
+    ? normalizedTitleBase.trim()
+    : normalizedTitleBase
       .replace(/\s*\|\s*Wayne Heim.*$/gi, '')
       .trim();
 const cleanTitle = isImagePage

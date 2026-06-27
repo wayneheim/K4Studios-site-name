@@ -110,7 +110,7 @@ const rawGalleryData = mod?.galleryData || mod?.default || [];
 
 // ✅ Filter out ghosts and hidden (archived) images
 const galleryData = rawGalleryData.filter((img: any) => 
-  img.visibility !== "ghost" && 
+  !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(img.visibility ?? 'show').trim().toLowerCase()) && 
   img.visibility !== "hidden" && 
   img.id !== "i-k4studios"
 );

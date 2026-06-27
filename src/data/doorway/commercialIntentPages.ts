@@ -67,7 +67,7 @@ const cleanItems = (items: any[] = []) =>
   items.filter((item: any) =>
     item?.id &&
     item.id !== "i-k4studios" &&
-    item.visibility !== "ghost" &&
+    !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(item.visibility ?? 'show').trim().toLowerCase()) &&
     item.visibility !== "hidden" &&
     item.visibility !== "hide"
   );

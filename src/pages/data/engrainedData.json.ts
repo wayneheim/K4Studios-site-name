@@ -4,7 +4,7 @@ import { galleryData } from "../../data/Other/K4-Select-Series/Engrained/Engrain
 export async function GET() {
   // Transform to the format expected by SeriesOrderModal
   const items = galleryData
-    .filter(item => item.id !== "i-k4studios" && item.visibility !== "ghost")
+    .filter(item => item.id !== "i-k4studios" && !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(item.visibility ?? 'show').trim().toLowerCase()))
     .map(item => ({
       id: item.id,
       title: item.title,

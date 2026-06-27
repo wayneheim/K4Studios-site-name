@@ -19,7 +19,7 @@ const pageDescription = 'Explore the masters of American Western art through fro
 
 function topRated(data: any[], count: number, skip = 0) {
   return (data || [])
-    .filter((img: any) => img.id !== 'i-k4studios' && img.visibility !== 'ghost' && (img.rating || 0) >= 4)
+    .filter((img: any) => img.id !== 'i-k4studios' && !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(img.visibility ?? 'show').trim().toLowerCase()) && (img.rating || 0) >= 4)
     .sort((a: any, b: any) => a.sortOrder - b.sortOrder)
     .slice(skip, skip + count);
 }
@@ -35,7 +35,7 @@ function findImage(data: any[], id: string) {
 function topRatedExcludingTitles(data: any[], count: number, excludedTitles: string[], skip = 0) {
   const excluded = new Set(excludedTitles.map((title) => title.toLowerCase()));
   return (data || [])
-    .filter((img: any) => img.id !== 'i-k4studios' && img.visibility !== 'ghost' && (img.rating || 0) >= 4)
+    .filter((img: any) => img.id !== 'i-k4studios' && !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(img.visibility ?? 'show').trim().toLowerCase()) && (img.rating || 0) >= 4)
     .filter((img: any) => !excluded.has(String(img.title || '').toLowerCase()))
     .sort((a: any, b: any) => a.sortOrder - b.sortOrder)
     .slice(skip, skip + count);

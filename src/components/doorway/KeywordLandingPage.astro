@@ -200,7 +200,7 @@ const faqRight = faqItems.slice(faqSplitIndex);
 const gridImages = dedupeGridItems(providedGridImages?.length
   ? providedGridImages
   : (galleryData || [])
-      .filter((item: any) => item.id !== 'i-k4studios' && item.visibility !== 'ghost' && item.visibility !== 'hidden')
+      .filter((item: any) => item.id !== 'i-k4studios' && !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(item.visibility ?? 'show').trim().toLowerCase()) && item.visibility !== 'hidden')
       .slice(0, 12)
 );
 

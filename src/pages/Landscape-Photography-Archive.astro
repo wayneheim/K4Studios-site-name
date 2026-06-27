@@ -25,7 +25,7 @@ import { galleryData as west } from "@/data/Galleries/Fine-Art-Photography/Lands
 import { galleryData as water } from "@/data/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs";
 
 // Filter out ghosts
-const filterGhosts = (data: any[]) => data.filter((img: any) => img.visibility !== "ghost" && img.id !== "i-k4studios").length;
+const filterGhosts = (data: any[]) => data.filter((img: any) => !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(img.visibility ?? 'show').trim().toLowerCase()) && img.id !== "i-k4studios").length;
 
 const icelandCount = filterGhosts(iceland);
 const faroeCount = filterGhosts(faroeIslands);

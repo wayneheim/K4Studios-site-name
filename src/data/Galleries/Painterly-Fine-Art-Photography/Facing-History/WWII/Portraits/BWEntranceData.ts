@@ -6,7 +6,7 @@ import { galleryData } from "./Black-White.mjs";
 // ======= Dynamic Featured Image Logic ======= //
 // Filter out ghosts, sort by rating DESC, break ties by newest
 const previewPool = galleryData
-  .filter(img => img.visibility !== "ghost" && img.id !== "i-k4studios")
+  .filter(img => !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(img.visibility ?? 'show').trim().toLowerCase()) && img.id !== "i-k4studios")
   .sort((a, b) =>
     (b.rating || 0) - (a.rating || 0) ||
     (b.date || "").localeCompare(a.date || "")

@@ -246,7 +246,7 @@ if (!meta.twitterUrl) meta.twitterUrl = `https://k4studios.com${pagePath}`;
 // ----------------------
 function getTombstoneThumbs(galleryData: any[]): string[] {
   const validImages = galleryData
-    .filter((img: any) => img.id !== 'i-k4studios' && img.visibility !== 'ghost')
+    .filter((img: any) => img.id !== 'i-k4studios' && !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(img.visibility ?? 'show').trim().toLowerCase()))
     .slice(0, 10);
   return validImages
     .map((img: any) => img.id ? getProxySrc(img.id, 's') : '')

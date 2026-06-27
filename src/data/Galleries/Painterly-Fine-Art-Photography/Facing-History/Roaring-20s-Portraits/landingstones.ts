@@ -1,5 +1,5 @@
 export const landingWestern = {
-  title: "1920s Portraits",
+  title: "Roaring 20s Portraits - Jazz Age Painterly Fine Art Photography",
   subtitle: "Roaring 20s and Jazz Age Character Photography by Wayne Heim",
   description:
     "Painterly fine art portraits of flappers, gangsters, G-men, and speakeasy characters — the Roaring 20s reimagined as cinematic, story-driven artwork by Wayne Heim.",

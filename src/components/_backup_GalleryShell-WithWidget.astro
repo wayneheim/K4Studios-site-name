@@ -45,9 +45,9 @@ const { breadcrumb, entranceData = {}, initialImageId } = Astro.props;
 const isGhost = !initialImageId || initialImageId === "i-k4studios";
 const currentImage = isGhost
   ? null
-  : allImages.find((img) => img.id === initialImageId && img.visibility !== "ghost");
+  : allImages.find((img) => img.id === initialImageId && !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(img.visibility ?? 'show').trim().toLowerCase()));
 
-const previewImages = allImages.filter((img) => img.visibility !== "ghost").slice(0, 8);
+const previewImages = allImages.filter((img) => !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(img.visibility ?? 'show').trim().toLowerCase())).slice(0, 8);
 const previewPath =
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color";
 
@@ -57,7 +57,7 @@ const singlePreviewImage =
     : null;
 
 const currentIndex = allImages.findIndex(
-  (img) => img.id === initialImageId && img.visibility !== "ghost"
+  (img) => img.id === initialImageId && !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(img.visibility ?? 'show').trim().toLowerCase())
 );
 const forcedImage = currentIndex >= 0 ? allImages[currentIndex] : singlePreviewImage;
 const selectedImage = currentImage || forcedImage;

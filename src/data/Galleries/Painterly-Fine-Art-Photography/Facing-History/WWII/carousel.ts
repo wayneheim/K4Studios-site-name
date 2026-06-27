@@ -36,7 +36,7 @@ function filterGalleryImages(images) {
   return images.filter(
     img =>
       img.id !== 'i-k4studios' &&
-      (!img.visibility || img.visibility !== 'ghost')
+      (!img.visibility || !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(img.visibility ?? 'show').trim().toLowerCase()))
   );
 }
 

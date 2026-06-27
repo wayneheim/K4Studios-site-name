@@ -34,6 +34,12 @@ export interface PreviewPool {
 const POOL_SIZE = 12;
 const STRIP_SIZE = 6;
 const HERO_POSITION = 6; // 7th image (0-indexed)
+const HIDDEN_VISIBILITY = new Set(['hidden', 'hide', 'ghost', 'non', 'none', '']);
+
+function isPublicVisibleImage(img: PreviewImage): boolean {
+  const visibility = String(img?.visibility ?? 'show').trim().toLowerCase();
+  return Boolean(img?.id) && img.id !== 'i-k4studios' && !HIDDEN_VISIBILITY.has(visibility);
+}
 
 /**
  * Seeded shuffle - deterministic per gallery path
@@ -69,8 +75,8 @@ function seededShuffle<T>(arr: T[], seed: string): T[] {
  * @returns PreviewPool with strip images, hero, and fallbacks
  */
 export function getPreviewPool(images: PreviewImage[], galleryPath: string): PreviewPool {
-  // Filter out ghost images
-  const validImages = images.filter(img => img.visibility !== 'ghost');
+  // Filter out any image hidden from public display.
+  const validImages = images.filter(isPublicVisibleImage);
   
   // Apply seeded shuffle and take first 12
   const pool = seededShuffle(validImages, galleryPath).slice(0, POOL_SIZE);

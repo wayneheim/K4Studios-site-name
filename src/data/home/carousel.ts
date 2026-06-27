@@ -9,6 +9,13 @@ const sortedFilePaths = Object.keys(allModules).sort();
 
 // Your 3 hero cowboy image IDs (webp sources)
 const staticLcpIds = ['i-ncFcHDM', 'i-KtmPcCf', 'i-rqk5Kdk'];
+const HIDDEN_VISIBILITY = new Set(['hidden', 'hide', 'ghost', 'non', 'none', '']);
+
+function isPublicVisibleImage(img) {
+  if (!img || img.id === 'i-k4studios') return false;
+  const visibility = String(img.visibility ?? 'show').trim().toLowerCase();
+  return !HIDDEN_VISIBILITY.has(visibility);
+}
 
 // Map hero IDs to their .webp image paths in /public/images
 const heroWebpSrcs = {
@@ -135,8 +142,7 @@ for (const filePath of sortedFilePaths) {
   const data = getGalleryData(mod);
   if (!Array.isArray(data) || data.length === 0) continue;
   const visible = data.filter(img =>
-    img.id !== 'i-k4studios' &&
-    img.visibility !== 'ghost' &&
+    isPublicVisibleImage(img) &&
     !staticLcpIds.includes(img.id)
   );
   if (visible.length === 0) continue;

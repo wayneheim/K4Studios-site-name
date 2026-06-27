@@ -149,7 +149,7 @@ export default function BrowseAllGrid({
   // ✅ Filter out ghosts and hidden images, then sort by sortOrder
   const visibleImages = allImages
     .filter(
-      (img) => img.visibility !== 'ghost' && img.visibility !== 'hidden' && img.id !== 'i-k4studios'
+      (img) => !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(img.visibility ?? 'show').trim().toLowerCase()) && img.visibility !== 'hidden' && img.id !== 'i-k4studios'
     )
     .sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0));
   

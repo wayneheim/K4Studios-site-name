@@ -10,7 +10,7 @@ const STANDARD_SERIES = ["sketch", "foundation", "chronicle", "legend"];
 const ENGRAINED_PATH = "/Other/K4-Select-Series/Engrained/Engrained-Series";
 const K4_ORGANIZATION_ID = "https://www.k4studios.com/#organization";
 const SKETCH_SERIES_SHIPPING_USD = "9.99";
-const SKETCH_SERIES_SHIPPING_SERVICE = "SmugMug Standard Shipping";
+const SKETCH_SERIES_SHIPPING_SERVICE = "Standard Shipping";
 
 export function getSketchOfferShippingDetails() {
   return {
@@ -186,7 +186,7 @@ function getInStockCount(inventory = {}) {
 }
 
 function findEngrainedForPaperImage(imageId) {
-  return engrainedGalleryData.find((item) => item?.linkedImageId === imageId && item.visibility !== "ghost") || null;
+  return engrainedGalleryData.find((item) => item?.linkedImageId === imageId && !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(item.visibility ?? 'show').trim().toLowerCase())) || null;
 }
 
 function resolveStandardCommerce({ image, galleryPath, pageUrl }) {

@@ -89,7 +89,7 @@ function shuffleArray<T>(arr: T[]): T[] {
 }
 
 const allGalleryImages = painterlyImages
-  .filter(img => img.visibility !== "ghost")
+  .filter(img => !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(img.visibility ?? 'show').trim().toLowerCase()))
   .map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color" }));
 
 const previewImages = shuffleArray(allGalleryImages).slice(0, 6);

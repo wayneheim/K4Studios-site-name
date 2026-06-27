@@ -43,6 +43,12 @@ function ensureImageId(id: string) {
 function normalize(path: string) {
   return path.replace(/\/+$/, '').toLowerCase();
 }
+const hiddenVisibility = new Set(['hidden', 'hide', 'ghost', 'non', 'none', '']);
+function isVisibleImage(img: any) {
+  if (!img?.id || img.id === 'i-k4studios') return false;
+  const visibility = String(img.visibility ?? 'show').trim().toLowerCase();
+  return !hiddenVisibility.has(visibility);
+}
 function stripSlashes(s: string) {
   return s.replace(/^\/+|\/+$/g, '');
 }
@@ -156,7 +162,7 @@ function collectFromMasterMap(branchBase: string): any[] {
     if (key.startsWith(normBranch)) {
       const arr = galleryDataMap[rawKey] || [];
       for (const img of arr) {
-        if (!img?.id || img.visibility === 'ghost' || img.id === 'i-k4studios') continue;
+        if (!isVisibleImage(img)) continue;
         const canonical = Array.isArray(img.galleries) && img.galleries.length ? img.galleries[0] : `/${rawKey}`;
         out.push({ ...img, canonicalGallery: canonical });
       }
@@ -182,7 +188,7 @@ function collectFromMjs(branchBase: string): any[] {
     const key = normalize(href);
     const arr = mjsDatasets[key] || [];
     for (const img of arr) {
-      if (!img?.id || img.visibility === 'ghost' || img.id === 'i-k4studios') continue;
+      if (!isVisibleImage(img)) continue;
       out.push(img);
     }
   }

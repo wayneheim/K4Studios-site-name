@@ -86,7 +86,7 @@ function ensureAlt(img: any) {
 
 function topRated(data: any[], count: number, skipCount: number = 0) {
   return data
-    .filter((img: any) => img.visibility !== 'ghost' && img.id !== 'i-k4studios' && img.rating >= 4)
+    .filter((img: any) => !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(img.visibility ?? 'show').trim().toLowerCase()) && img.id !== 'i-k4studios' && img.rating >= 4)
     .sort((a: any, b: any) => a.sortOrder - b.sortOrder)
     .slice(skipCount, skipCount + count);
 }
@@ -380,7 +380,7 @@ if (!meta.twitterUrl) meta.twitterUrl = `https://www.k4studios.com${pagePath}`;
 
 function getTombstoneThumbs(galleryData: any[]): string[] {
   const validImages = galleryData
-    .filter((img: any) => img.id !== 'i-k4studios' && img.visibility !== 'ghost')
+    .filter((img: any) => img.id !== 'i-k4studios' && !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(img.visibility ?? 'show').trim().toLowerCase()))
     .slice(0, 10);
   return validImages
     .map((img: any) => img.id ? getProxySrc(img.id, 's') : '')

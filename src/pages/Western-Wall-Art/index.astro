@@ -100,7 +100,7 @@ const countLiveItems = (sections: typeof gridSections) =>
   sections.reduce((total, section) => total + section.items.filter((item: any) =>
     item?.id &&
     item.id !== "i-k4studios" &&
-    item.visibility !== "ghost" &&
+    !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(item.visibility ?? 'show').trim().toLowerCase()) &&
     item.visibility !== "hidden" &&
     item.visibility !== "hide"
   ).length, 0);

@@ -36,7 +36,7 @@ function withGalleryPath(data: any[], galleryPath: string) {
 
 function topRated(data: any[], count: number, skip = 0) {
   return (data || [])
-    .filter((img: any) => img.id !== 'i-k4studios' && img.visibility !== 'ghost' && (img.rating || 0) >= 4)
+    .filter((img: any) => img.id !== 'i-k4studios' && !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(img.visibility ?? 'show').trim().toLowerCase()) && (img.rating || 0) >= 4)
     .sort((a: any, b: any) => (a.sortOrder ?? 0) - (b.sortOrder ?? 0))
     .slice(skip, skip + count);
 }

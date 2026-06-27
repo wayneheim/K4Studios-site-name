@@ -14910,7 +14910,7 @@ export const chapterDoorwayAssignments = {
 
 export const chapterDoorwayCursors = {
   "nativeAmerican": 29,
-  "western": 748,
+  "western": 749,
   "civilWar": 92,
   "wwii": 729,
   "roaring20s": 48,
@@ -14921,7 +14921,7 @@ export const chapterDoorwayCursors = {
 };
 
 export const chapterDoorwayAssignmentMeta = {
-  "generatedAt": "2026-06-26T17:03:10.318Z",
+  "generatedAt": "2026-06-27T17:15:13.609Z",
   "assignedCount": 2981,
   "themeCounts": {
     "nativeAmerican": 29,

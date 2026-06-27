@@ -15,7 +15,7 @@ import { galleryData as bwData } from "@/data/Galleries/Fine-Art-Photography/Por
 import { galleryData as reenactorsData } from "@/data/Galleries/Fine-Art-Photography/Portraits/Reenactors.mjs";
 
 // Filter out ghosts
-const filterGhosts = (data: any[]) => data.filter((img: any) => img.visibility !== "ghost" && img.id !== "i-k4studios").length;
+const filterGhosts = (data: any[]) => data.filter((img: any) => !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(img.visibility ?? 'show').trim().toLowerCase()) && img.id !== "i-k4studios").length;
 
 const colorCount = filterGhosts(colorData);
 const bwCount = filterGhosts(bwData);

@@ -279,7 +279,8 @@ const pageDescription =
       (currentImage?.story && sanitizeRepeatedSeoCopy(fixMojibake(currentImage.story))) ||
       (currentImage?.alt && sanitizeRepeatedSeoCopy(fixMojibake(currentImage.alt))) ||
       baseFallbackDescription
-    : (usedEntranceData?.description && sanitizeRepeatedSeoCopy(fixMojibake(usedEntranceData.description))) ||
+    : (usedEntranceData?.metaDescription && sanitizeRepeatedSeoCopy(fixMojibake(usedEntranceData.metaDescription))) ||
+      (usedEntranceData?.description && sanitizeRepeatedSeoCopy(fixMojibake(usedEntranceData.description))) ||
       (usedEntranceData?.subtitle && sanitizeRepeatedSeoCopy(fixMojibake(usedEntranceData.subtitle))) ||
       baseFallbackDescription;
 

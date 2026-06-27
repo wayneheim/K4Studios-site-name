@@ -17,11 +17,18 @@ const vm = require('vm');
 
 // Hero image IDs that are always available (pre-optimized .webp versions)
 const HERO_IDS = ['i-ncFcHDM', 'i-KtmPcCf', 'i-rqk5Kdk'];
+const HIDDEN_VISIBILITY = new Set(['hidden', 'hide', 'ghost', 'non', 'none', '']);
 const HERO_WEBP_SRCS = {
   'i-ncFcHDM': '/images/i-ncFcHDM.webp',
   'i-KtmPcCf': '/images/i-KtmPcCf.webp',
   'i-rqk5Kdk': '/images/i-rqk5Kdk.webp'
 };
+
+function isPublicVisibleImage(img) {
+  if (!img || img.id === 'i-k4studios') return false;
+  const visibility = String(img.visibility ?? 'show').trim().toLowerCase();
+  return !HIDDEN_VISIBILITY.has(visibility);
+}
 
 const WESTERN_POOL_PATHS = [
   '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits',
@@ -227,9 +234,7 @@ function buildPoolRoundRobin(sources, maxImages, excludeIds = new Set()) {
     const filePath = hrefToFilePath(source.href);
     const images = readGalleryMjs(filePath)
       .filter(img => 
-        img.id && 
-        img.id !== 'i-k4studios' && 
-        img.visibility !== 'ghost' &&
+        isPublicVisibleImage(img) &&
         !excludeIds.has(img.id)
       )
       .sort((a, b) => (b.rating || 0) - (a.rating || 0)); // Higher ratings first

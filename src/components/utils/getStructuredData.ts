@@ -217,8 +217,10 @@ function buildSketchProductNode(data: any, imageUrl: string) {
   };
 }
 
+type AboutTerm = { "@type": string; name: string; sameAs?: string | string[] };
+
 function addAboutTerm(
-  terms: Array<{ "@type": string; name: string }>,
+  terms: AboutTerm[],
   seen: Set<string>,
   type: "Thing" | "Place",
   name: string
@@ -235,7 +237,7 @@ function buildContextualAbout(data: any, fallback = DEFAULT_GALLERY_ABOUT) {
   const explicitAbout = normalizeExplicitAbout(data?.schemaAbout || data?.semanticAbout || data?.about);
   if (explicitAbout.length > 0) return explicitAbout;
 
-  const terms: Array<{ "@type": string; name: string }> = [];
+  const terms: AboutTerm[] = [];
   const seen = new Set<string>();
   const pathText = [
     data?.url,
@@ -373,10 +375,10 @@ function inferArtworkSchemaFields(data: any) {
   };
 }
 
-function normalizeExplicitAbout(value: any): Array<{ "@type": string; name: string }> {
+function normalizeExplicitAbout(value: any): AboutTerm[] {
   if (!Array.isArray(value)) return [];
 
-  const terms: Array<{ "@type": string; name: string }> = [];
+  const terms: AboutTerm[] = [];
   const seen = new Set<string>();
 
   for (const item of value) {
@@ -388,7 +390,22 @@ function normalizeExplicitAbout(value: any): Array<{ "@type": string; name: stri
     if (!item || typeof item !== "object") continue;
     const name = typeof item.name === "string" ? item.name : "";
     const type = item["@type"] === "Place" ? "Place" : "Thing";
-    addAboutTerm(terms, seen, type, name);
+    const cleanName = name.trim();
+    if (!cleanName) continue;
+    const key = `${type}:${cleanName.toLowerCase()}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+
+    const term: AboutTerm = { "@type": type, name: cleanName };
+    if (typeof item.sameAs === "string" && item.sameAs.trim()) {
+      term.sameAs = item.sameAs.trim();
+    } else if (Array.isArray(item.sameAs)) {
+      const sameAs = item.sameAs
+        .filter((entry: any) => typeof entry === "string" && entry.trim())
+        .map((entry: string) => entry.trim());
+      if (sameAs.length > 0) term.sameAs = sameAs;
+    }
+    terms.push(term);
   }
 
   return terms;

@@ -73,6 +73,14 @@ const galleryDatas = galleryPaths.map(path => {
 const headingCount = westernStory.filter((block, i) => i > 0 && block.subhead).length;
 // Pool 3x more images for client-side rotation variety
 const featheredImages = getFeatheredImages({ sectionPath, headingCount, galleryDatas, galleryPaths, poolMultiplier: 3 });
+const cowboyPortraitsSchemaAbout = [
+  { "@type": "Thing", name: "Western Cowboy Portraits" },
+  { "@type": "Thing", name: "Cowboy Fine Art Photography" },
+  { "@type": "Thing", name: "Western Fine Art Photography" },
+  { "@type": "Thing", name: "Painterly Western Photography" },
+  { "@type": "Thing", name: "Western Portrait Photography" },
+  { "@type": "Thing", name: "Americana Photography" },
+];
 
 // Structured data for gallery landing
 const structuredData = getStructuredData({
@@ -82,6 +90,8 @@ const structuredData = getStructuredData({
     description: landingWestern.subtitle || landingWestern.description,
     url: `https://k4studios.com${sectionPath}`,
     keywords: landingWestern.keywords || [],
+    genre: "Western Fine Art Photography",
+    about: cowboyPortraitsSchemaAbout,
     copyrightNotice: "© Wayne Heim"
   },
   images: featheredImages,

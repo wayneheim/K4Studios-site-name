@@ -45,6 +45,8 @@ interface Props {
   trackingEvent?: string;
   /** Optional: append arrow to CTA label */
   appendArrow?: boolean;
+  /** Optional: emit CollectionPage JSON-LD for this featured destination */
+  emitStructuredData?: boolean;
 }
 
 const {
@@ -58,7 +60,8 @@ const {
   hideOnMobile = false,
   trackingId,
   trackingEvent = 'cowboy_jump',
-  appendArrow = true
+  appendArrow = true,
+  emitStructuredData = true
 } = Astro.props;
 
 // Use trackingId if provided, otherwise fall back to collectionName
@@ -161,8 +164,9 @@ const structuredData = JSON.stringify({
   class:list={["featured-collection-widget", { "hide-mobile": hideOnMobile }]}
   aria-label={`Featured: ${collectionName}`}
 >
-  <!-- Embedded structured data -->
-  <script type="application/ld+json" set:html={structuredData} />
+  {emitStructuredData && (
+    <script type="application/ld+json" set:html={structuredData} />
+  )}
   
   <a href={ctaLink} class="fc-link" aria-label={`${ctaText} – ${collectionName}`}>
     <div class:list={["fc-mat", { "fc-mat--contain": image.fit === 'contain' }]}>

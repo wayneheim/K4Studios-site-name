@@ -19,7 +19,7 @@ function cleanItems(data: any[]) {
   return (data || [])
     .filter((item: any) => item && typeof item.id === 'string')
     .filter((item: any) => item.id !== 'i-k4studios')
-    .filter((item: any) => item.visibility !== 'ghost' && item.visibility !== 'hidden' && item.visibility !== 'hide')
+    .filter((item: any) => !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(item.visibility ?? 'show').trim().toLowerCase()) && item.visibility !== 'hidden' && item.visibility !== 'hide')
     .sort((a: any, b: any) => (a.sortOrder ?? 0) - (b.sortOrder ?? 0));
 }
 

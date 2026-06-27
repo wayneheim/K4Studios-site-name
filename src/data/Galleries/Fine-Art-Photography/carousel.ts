@@ -50,7 +50,7 @@ for (const filePath in allModules) {
   const data = getGalleryData(mod);
   if (!Array.isArray(data) || data.length === 0) continue;
   // Filter out ghost and placeholder images
-  const visible = data.filter(img => img.id !== 'i-k4studios' && img.visibility !== 'ghost');
+  const visible = data.filter(img => img.id !== 'i-k4studios' && !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(img.visibility ?? 'show').trim().toLowerCase()));
   if (visible.length === 0) continue;
   // Include only traditional section
   if (filePath.includes('/Fine-Art-Photography/')) {

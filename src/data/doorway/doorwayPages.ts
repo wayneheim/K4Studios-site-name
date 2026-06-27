@@ -63,7 +63,7 @@ function selectHeroImages(
     .filter((item) => item && typeof item.id === 'string')
     .filter((item) => /^i-[A-Za-z0-9]+$/.test(item.id))
     .filter((item) => item.id !== 'i-k4studios')
-    .filter((item) => item.visibility !== 'ghost' && item.visibility !== 'hidden' && item.visibility !== 'hide')
+    .filter((item) => !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(item.visibility ?? 'show').trim().toLowerCase()) && item.visibility !== 'hidden' && item.visibility !== 'hide')
     .sort((a, b) => (a.sortOrder ?? 0) - (b.sortOrder ?? 0))
     .slice(offset, offset + count)
     .map((item) => ({

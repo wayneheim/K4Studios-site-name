@@ -71,7 +71,7 @@ for (const source of gallerySources) {
   if (!mod) continue;
   const data = getGalleryData(mod);
   if (!Array.isArray(data) || data.length === 0) continue;
-  const visible = data.filter(img => img.id !== 'i-k4studios' && img.visibility !== 'ghost');
+  const visible = data.filter(img => img.id !== 'i-k4studios' && !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(img.visibility ?? 'show').trim().toLowerCase()));
   if (visible.length === 0) continue;
   galleryImages.push(shuffle([...visible]));
   galleryPaths.push(source.href);

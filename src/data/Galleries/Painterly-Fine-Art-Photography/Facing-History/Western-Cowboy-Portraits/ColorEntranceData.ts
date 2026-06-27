@@ -1,6 +1,8 @@
 export const entranceData = {
   title: "Color Western Portraits — Painterly Fine Art Photography",
   subtitle: "Warm light, weathered presence, and stories carried just beneath the surface",
+  metaDescription:
+    "Color Western portraits by Wayne Heim, painterly cowboy photography shaped by warm light, frontier character, and the quiet pressure of story.",
 
   keywords: [
     "cowboy fine art photography",

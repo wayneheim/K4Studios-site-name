@@ -10,7 +10,7 @@ export const westernStory = [
       `Within K4's broader <a href="/Blog/what-is-historically-themed-photography">historically themed photography</a> framework, the World War II work is contemporary fine art built from research, real subjects, period detail, and visual storytelling.`,
       `These are not archival World War II photographs. They are contemporary WWII-themed fine art photographs created with living historians, period detail, painterly light, and narrative intent—images built to feel remembered, not merely recorded.`,
       `These images move beyond documentation. Mud-splattered armor, weary faces, quiet exchanges, and the geometry of steel all become part of a larger narrative about duty, survival, and human resilience under pressure.`,
-      `Each image here works through the logic of the <strong>One-Image Movie™</strong> — a finished narrative-art experience where image, title, authored story, and viewer imagination work together, keeping unresolved narrative powerfully present.`,
+      `Each image here works through the logic of the <a href="/Other/One-Image-Movie"><strong>One-Image Movie™</strong></a> — a finished narrative-art experience where image, title, authored story, and viewer imagination work together, keeping unresolved narrative powerfully present.`,
       `The result is WWII fine art photography that asks the viewer to do more than look. It asks the viewer to stand inside the moment and feel the cost of it.`
     ]
   },

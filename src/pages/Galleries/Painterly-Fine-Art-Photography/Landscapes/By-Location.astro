@@ -100,6 +100,15 @@ const structuredData = getStructuredData({
     description: landingWestern.subtitle || landingWestern.description,
     url: `https://k4studios.com${sectionPath}`,
     keywords: landingWestern.keywords || [],
+    genre: "Fine Art Landscape Photography",
+    about: [
+      { "@type": "Thing", name: "Fine Art Landscape Photography" },
+      { "@type": "Thing", name: "Painterly Landscape Photography" },
+      { "@type": "Thing", name: "International Landscape Photography" },
+      { "@type": "Thing", name: "Western Landscape Photography" },
+      { "@type": "Thing", name: "Midwest Landscape Photography" },
+      { "@type": "Thing", name: "New England Landscape Photography" },
+    ],
     copyrightNotice: "© Wayne Heim"
   },
   images: featheredImages,

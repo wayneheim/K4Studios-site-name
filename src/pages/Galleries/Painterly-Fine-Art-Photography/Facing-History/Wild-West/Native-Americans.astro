@@ -63,7 +63,7 @@ const galleryDatas = [cowboyNADataFull];
 
 const nativeAmericanCarouselBasePath = nativeAmericanColorPath;
 const nativeAmericanCarouselSlides = cowboyNADataFull
-  .filter((img: any) => img.id !== 'i-k4studios' && img.visibility !== 'ghost')
+  .filter((img: any) => img.id !== 'i-k4studios' && !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(img.visibility ?? 'show').trim().toLowerCase()))
   .sort((a: any, b: any) => (b.rating ?? 0) - (a.rating ?? 0))
   .slice(0, 12)
   .map((img: any) => ({
@@ -82,6 +82,14 @@ const featheredImages = getFeatheredImages({
   galleryPaths: ['', '', nativeAmericanColorPath],
   poolMultiplier: 3,
 });
+const nativeAmericansSchemaAbout = [
+  { "@type": "Thing", name: "Native American Fine Art Photography" },
+  { "@type": "Thing", name: "Indigenous Fine Art Photography" },
+  { "@type": "Thing", name: "Painterly Native American Portraits" },
+  { "@type": "Thing", name: "Native American Wall Art" },
+  { "@type": "Thing", name: "Western Fine Art Photography" },
+  { "@type": "Thing", name: "Historical Portraiture" },
+];
 
 // Structured data for gallery landing
 const structuredData = getStructuredData({
@@ -91,6 +99,8 @@ const structuredData = getStructuredData({
     description: landingWestern.subtitle,
     url: `https://k4studios.com${nativeAmericansPath}`,
     keywords: landingWestern.keywords || [],
+    genre: "Native American Fine Art Photography",
+    about: nativeAmericansSchemaAbout,
     copyrightNotice: "© Wayne Heim"
   },
   images: featheredImages,

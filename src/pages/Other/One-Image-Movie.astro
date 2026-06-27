@@ -83,7 +83,7 @@ const structuredData = getStructuredData({
 });
 
 // Use first painterly image as OG image
-const landingImg = painterlyImages.find(img => img.visibility !== "ghost");
+const landingImg = painterlyImages.find(img => !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(img.visibility ?? 'show').trim().toLowerCase()));
 const landingImgUrl = landingImg?.id ? `https://www.k4studios.com${getProxySrc(landingImg.id, 'l')}` : '';
 const meta = getLandingMeta(sectionPath, landingImgUrl);
 if (!meta.ogUrl)      meta.ogUrl      = `https://k4studios.com${sectionPath}`;
@@ -97,7 +97,7 @@ function shuffleArray<T>(arr: T[]): T[] {
     .map(({ value }) => value);
 }
 
-const visibleImages = westernNarrativeImages.filter(img => img.visibility !== "ghost");
+const visibleImages = westernNarrativeImages.filter(img => !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(img.visibility ?? 'show').trim().toLowerCase()));
 const galleryBasePath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color";
 const previewImages = shuffleArray(visibleImages).slice(0, 6).map(img => ({
   ...img,

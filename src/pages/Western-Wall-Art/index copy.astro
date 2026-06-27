@@ -65,7 +65,7 @@ const featheredImages = getFeatheredImages({
 // Pass full pool to component for client-side rotation
 
 const westernCollectionItemCount = galleryDatas.reduce((total, galleryData) => {
-  return total + galleryData.filter((img: any) => img.id !== 'i-k4studios' && img.visibility !== 'ghost').length;
+  return total + galleryData.filter((img: any) => img.id !== 'i-k4studios' && !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(img.visibility ?? 'show').trim().toLowerCase())).length;
 }, 0);
 
 const clientFeatheredImages = sanitizeForClient(featheredImages) as unknown as never[];
@@ -188,7 +188,7 @@ const featuredCollectionImage = {
 // ----------------------
 function getTombstoneThumbs(galleryData: any[]): string[] {
   const validImages = galleryData
-    .filter((img: any) => img.id !== 'i-k4studios' && img.visibility !== 'ghost')
+    .filter((img: any) => img.id !== 'i-k4studios' && !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(img.visibility ?? 'show').trim().toLowerCase()))
     .slice(0, 10);
   return validImages
     .map((img: any) => img.id ? getProxySrc(img.id, 's') : '')

@@ -1,4 +1,4 @@
-﻿---
+---
 import Footer from "@/components/Footer.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import ArchiveContext from "@/components/ArchiveContext.astro";
@@ -94,9 +94,9 @@ const {
   layoutVariant?: string;
 };
 
-// âœ… Filter out ghosts and hidden (archived) images
+// ✅ Filter out ghosts and hidden (archived) images
 const galleryData = rawGalleryData.filter((img: any) => 
-  img.visibility !== "ghost" && 
+  !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(img.visibility ?? 'show').trim().toLowerCase()) && 
   img.visibility !== "hidden" && 
   img.id !== "i-k4studios"
 );
@@ -117,7 +117,7 @@ const slugify = (value = "") =>
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
 
-// âœ… Clean URL paths
+// ✅ Clean URL paths
 const siteOrigin = "https://www.k4studios.com";
 const contentBasePath = configuredContentBasePath || basePath;
 const canonicalPath = configuredCanonicalPath || `${basePath}/all`;
@@ -128,7 +128,7 @@ const imageGalleryId = `${galleryBaseUrl}#imagegallery`;
 const itemListId = `${canonicalUrl}#itemlist`;
 const breadcrumbId = `${canonicalUrl}#breadcrumb`;
 
-// âœ… Gallery metadata
+// ✅ Gallery metadata
 const collectionSlug = basePath.split("/").filter(Boolean).at(-2) || "Western-Narratives";
 const variantSlug = basePath.split("/").filter(Boolean).at(-1) || "Color";
 const collectionName = identity.collectionName || humanizeSegment(collectionSlug) || "Western Narratives";
@@ -153,7 +153,7 @@ const normalizedGridSections = gridSections
     slug: section.slug || slugify(section.title),
     items: (section.items || []).filter((img: any) =>
       img?.id &&
-      img.visibility !== "ghost" &&
+      !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(img.visibility ?? 'show').trim().toLowerCase()) &&
       img.visibility !== "hidden" &&
       img.id !== "i-k4studios"
     ),
@@ -166,7 +166,7 @@ const catalogImageCount = hasSectionedCatalog
   : imageCount;
 const schemaImageGalleryId = hasSectionedCatalog ? `${canonicalUrl}#imagegallery` : imageGalleryId;
 
-// âœ… Search-facing title and description (factual, not poetic)
+// ✅ Search-facing title and description (factual, not poetic)
 const gatewayBrandLabel = identity.gatewayBrandLabel || `${collectionName} Fine Art Prints - ${variantName} Collection`;
 const gatewayBrandLabelDisplay = formatCopy(gatewayBrandLabel);
 const gatewayBrandLabelLines = gatewayBrandLabelDisplay
@@ -176,9 +176,9 @@ const gatewayBrandLabelLines = gatewayBrandLabelDisplay
 const seoTitle = formatCopy(copy.seoTitle || `${gatewayBrandLabel} - Wayne Heim`);
 const seoDescription = formatCopy(copy.seoDescription || `Browse ${imageCount} ${variantDescriptor} ${collectionName.toLowerCase()} fine art prints by Wayne Heim, with collector notes and print options from ${getFormattedLowestStandardPrintPrice()}.`);
 
-// âœ… Genre definition (entity authority - what IS this type of photography)
+// ✅ Genre definition (entity authority - what IS this type of photography)
 
-// âœ… Authoritative definition block (per Quill: scope, authorship, completeness)
+// ✅ Authoritative definition block (per Quill: scope, authorship, completeness)
 const indexDefinition = formatCopy(copy.indexDefinition || `This page presents the complete ${variantName.toLowerCase()} archive of ${collectionName} by Wayne Heim.`);
 const indexLinkNote = formatCopy(copy.indexLinkNote || `All ${imageCount} images link to individual image pages with full stories, metadata, and collector information.`);
 const printAvailabilityNote = formatCopy(copy.printAvailabilityNote || `All works are available as fine art prints from ${getFormattedLowestStandardPrintPrice()}. Select images are also available in the Engrained Series - printed on Baltic Birch using a five-layer UV process - with pricing specific to each image.`);
@@ -295,7 +295,7 @@ const standardPrintSeries = getStandardPrintSeries() as Array<{
   sizes: Array<{ display: string }>;
 }>;
 
-// âœ… Text cleaner for JSON-LD (escapes quotes for JSON)
+// ✅ Text cleaner for JSON-LD (escapes quotes for JSON)
 const cleanForJson = (val = "") =>
   String(val)
     .replace(/[\u0000-\u001F]+/g, " ")
@@ -303,7 +303,7 @@ const cleanForJson = (val = "") =>
     .replace(/\r?\n|\r/g, " ")
     .trim();
 
-// âœ… Text cleaner for HTML display (preserves quotes)
+// ✅ Text cleaner for HTML display (preserves quotes)
 const cleanForDisplay = (val = "") =>
   String(val)
     .replace(/[\u0000-\u001F]+/g, " ")
@@ -316,7 +316,7 @@ const hasDanglingEnding = (text = "") =>
 const trimAtCleanWordBoundary = (text = "", maxLen = 150) => {
   let trimmed = text.slice(0, maxLen).replace(/\s+\S*$/, "").trim();
   trimmed = trimmed.replace(/\s+\b(?:a|an|and|as|at|between|by|for|from|in|into|of|on|or|the|through|to|under|with|without)$/i, "").trim();
-  return trimmed ? `${trimmed}…` : "";
+  return trimmed ? `${trimmed}�` : "";
 };
 
 const truncateExcerpt = (text: string, maxLen = 150) => {
@@ -379,7 +379,7 @@ const truncateBookendExcerpt = (text: string, headLen = 100, tailLen = 300) => {
   return `${head || cleaned.slice(0, headLen).trimEnd()}\u00a0.\u00a0.\u00a0.\u00a0\u00a0${tail || cleaned.slice(-tailLen).trimStart()}`;
 };
 
-// âœ… Proxy URL helper - never expose SmugMug URLs to crawlers
+// ✅ Proxy URL helper - never expose SmugMug URLs to crawlers
 const getProxySrc = (id: string, size: string = 'l') => {
   const image = filteredGalleryData.find((item: any) => item.id === id)
     || galleryData.find((item: any) => item.id === id)
@@ -450,7 +450,7 @@ const socialImageUrl = toAbsoluteK4Url(socialImage);
 const socialImageAlt = `${collectionName} Fine Art Prints by Wayne Heim`;
 const MAX_PRODUCT_SCHEMA_ITEMS = 48;
 
-// âœ… Pre-build per-image JSON-LD to avoid streaming issues
+// ✅ Pre-build per-image JSON-LD to avoid streaming issues
 const imageJsonLdMap = new Map();
 filteredGalleryData.forEach((item: any) => {
   // Capped at 'l' to protect XL from bot discovery
@@ -831,7 +831,7 @@ const faqRight = faqItems.slice(faqSplitIndex);
         const collectorNotesHref = `${linkUrl}#collector-notes`;
         const title = cleanForDisplay(item.title);
         
-        // âœ… Auto alt text: prioritize existing alt, then build from description/keywords
+        // ✅ Auto alt text: prioritize existing alt, then build from description/keywords
         let altText: string;
         if (item.alt) {
           altText = cleanForDisplay(item.alt);

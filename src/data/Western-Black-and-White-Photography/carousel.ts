@@ -44,7 +44,7 @@ function toSlide(img: any, path: string, idx: number, loading = "lazy") {
 
 // Build pool from B/W gallery only
 const bwPool = gallerySources.map(({ data, path }) => {
-  const visible = (data || []).filter((img: any) => img.id !== 'i-k4studios' && img.visibility !== 'ghost');
+  const visible = (data || []).filter((img: any) => img.id !== 'i-k4studios' && !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(img.visibility ?? 'show').trim().toLowerCase()));
   return { images: buildRankedPool(visible), path };
 }).filter(pool => pool.images.length > 0);
 

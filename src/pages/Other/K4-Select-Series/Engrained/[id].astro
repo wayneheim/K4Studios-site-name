@@ -17,7 +17,7 @@ export async function getStaticPaths() {
       (img) =>
         img.visibility !== 'hidden' &&
         img.visibility !== 'hide' &&
-        img.visibility !== 'ghost' &&
+        !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(img.visibility ?? 'show').trim().toLowerCase()) &&
         img.id !== 'i-k4studios'
     )
     .map((img) => ({ params: { id: img.id } }));

@@ -30,7 +30,7 @@ const naGalleryPath =
 function topRated(data: any[], count: number, skip: string[] = []) {
   return data
     .filter((item: any) =>
-      item.visibility !== 'ghost' &&
+      !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(item.visibility ?? 'show').trim().toLowerCase()) &&
       item.id !== 'i-k4studios' &&
       item.rating >= 4 &&
       !skip.includes(item.id)

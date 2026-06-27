@@ -126,7 +126,7 @@ async function fetchEngrainedCrosslink(imageId) {
   // Helper to parse response and find linked item
   const findLinkedItem = (data) => {
     const linked = (data.items || []).find(
-      item => item.linkedImageId === imageId && item.visibility !== "ghost"
+      item => item.linkedImageId === imageId && !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(item.visibility ?? 'show').trim().toLowerCase())
     );
     if (linked) {
       const inv = linked.inventory || {};

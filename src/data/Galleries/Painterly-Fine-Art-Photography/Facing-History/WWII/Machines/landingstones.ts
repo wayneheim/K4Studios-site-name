@@ -6,7 +6,7 @@ function filterGalleryImages(images) {
   return images.filter(
     img =>
       img.id !== 'i-k4studios' &&
-      (!img.visibility || img.visibility !== 'ghost')
+      (!img.visibility || !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(img.visibility ?? 'show').trim().toLowerCase()))
   );
 }
 
@@ -23,11 +23,11 @@ const colorImg = pickRandom(colorPool);
 const bwImg = pickRandom(bwPool);
 
 export const landingWestern = {
-  title: "The WWII: Men and Machines",
+  title: "Men & Machines - WWII Military Vehicle Photography in Painterly Fine Art",
   subtitle: "Painterly WWII Men and Machines Themed Photography by Wayne Heim",
      breadcrumb: 
   `<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History" style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;" onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Facing History</a> |
-  <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII" style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;" onmouseover="this.style.color='Olive'" onmouseout="this.style.color='inherit'">WWII</a> | Men & Machines`,
+  <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII" style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;" onmouseover="this.style.color='olive'" onmouseout="this.style.color='inherit'">WWII</a> | Men & Machines`,
 
   tombstones: [
     {

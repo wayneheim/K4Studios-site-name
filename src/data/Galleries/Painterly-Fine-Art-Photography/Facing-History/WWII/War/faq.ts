@@ -10,7 +10,7 @@ export const westernFAQ = [
     q: "Are the subjects real veterans or reenactors?",
     a: [
       `The subjects are highly dedicated reenactors, historians, and performers who bring WWII history to life through authentic uniforms, gear, and settings.`,
-      `They’re part of the <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Art-of-War-WWII">Art of War series</a>, and their lived-in portrayals offer a powerful connection to the past.`
+      `They’re part of the <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War">Art of War series</a>, and their lived-in portrayals offer a powerful connection to the past.`
     ],
   },
   {
@@ -23,7 +23,7 @@ export const westernFAQ = [
   {
     q: "Are prints available in black and white or color?",
     a: [
-      `Yes. The collection includes both <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Art-of-War-WWII/Black-White">black & white</a> and color prints.`,
+      `Yes. The collection includes both <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White">black & white</a> and color prints.`,
       `Black and white emphasizes contrast and timeless character, while color adds warmth and vintage atmosphere, both rendered with the painterly aesthetic.`
     ],
   },
@@ -50,7 +50,7 @@ export const westernFAQ = [
   {
     q: "How do I purchase a print from the Art of War collection?",
     a: [
-      `Browse the full collection at the <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Art-of-War-WWII">Art of War WWII gallery</a>, where each image page lists available sizes and finishes.`,
+      `Browse the full collection at the <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War">Art of War WWII gallery</a>, where each image page lists available sizes and finishes.`,
       `For custom commissions, collector editions, or curated installations, please <a href="/Contact">contact Wayne directly</a>.`
     ],
   },

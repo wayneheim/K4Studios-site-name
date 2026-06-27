@@ -222,8 +222,12 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
   // Determine default volume: 30% for ambient, 50% for score, 70% for mixed/individual audio
   const defaultVolume = useMemo(() => {
     if (globalAudioSrc && filteredData.length > 0) {
-      // Check if any non-ghost images have individual audio (exclude system intro slides)
-      const hasIndividualAudio = filteredData.some(img => img?.audioSrc && img?.visibility !== 'ghost');
+      // Check if any public images have individual audio (exclude system intro slides)
+      const hiddenVisibility = new Set(['hidden', 'hide', 'ghost', 'non', 'none', '']);
+      const hasIndividualAudio = filteredData.some(img => {
+        const visibility = String(img?.visibility ?? 'show').trim().toLowerCase();
+        return img?.audioSrc && !hiddenVisibility.has(visibility);
+      });
 
       if (hasIndividualAudio) {
         // Stories with individual content audio default to 70%

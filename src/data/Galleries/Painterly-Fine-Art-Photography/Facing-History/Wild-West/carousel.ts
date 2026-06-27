@@ -17,7 +17,7 @@ for (const filePath in modules) {
   const data = mod.galleryData || (mod.default && mod.default.galleryData);
   if (!Array.isArray(data)) continue;
   // Filter out ghost and placeholder images
-  const visible = data.filter(img => img.id !== 'i-k4studios' && img.visibility !== 'ghost');
+  const visible = data.filter(img => img.id !== 'i-k4studios' && !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(img.visibility ?? 'show').trim().toLowerCase()));
   if (visible.length === 0) continue;
   // Extract subfolder name from file path for path building (exclude .mjs extension)
   const match = filePath.match(/Wild-West\/?([^/]*?)(?:\.mjs)?$/);

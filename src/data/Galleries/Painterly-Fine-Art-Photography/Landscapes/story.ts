@@ -11,7 +11,10 @@ export const westernStory = [
 
   // ─────────────────────────────── 2 — THEMES HEADER
   {
-    subhead: "Painterly Landscapes by Theme — Find the Scene That Speaks to You"
+    subhead: "Painterly Landscapes by Theme — Find the Scene That Speaks to You",
+    paragraphs: [
+      `Explore painterly landscapes by subject, from mountain ranges and waterfalls to open skies, wildlife, and quiet passages of light shaped by mood rather than documentation.`,
+    ]
   },
 
   // ─────────────────────────────── 3 — MOUNTAINS
@@ -42,7 +45,10 @@ export const westernStory = [
 
   // ─────────────────────────────── 5 — LOCATIONS HEADER
   {
-    subhead: "Landscapes by Location — Travel the World Through Painterly Fine Art"
+    subhead: "Landscapes by Location — Travel the World Through Painterly Fine Art",
+    paragraphs: [
+      `Browse landscape photography by place, including Western landscapes, Midwestern quiet, Northeast atmosphere, Southern terrain, and international scenes from Iceland, the Faroe Islands, Canada, and beyond.`,
+    ]
   },
 
   // ─────────────────────────────── 6 — WESTERN

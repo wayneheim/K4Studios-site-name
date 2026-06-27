@@ -16,7 +16,13 @@ interface Props {
 
 const { images, limit = 6, label = "Explore Galleries" } = Astro.props;
 
-const visibleImages = images.filter(img => img.visibility !== "ghost").slice(0, limit);
+const HIDDEN_VISIBILITY = new Set(["hidden", "hide", "ghost", "non", "none", ""]);
+const visibleImages = images
+  .filter((img) => {
+    const visibility = String(img.visibility ?? "show").trim().toLowerCase();
+    return img.id !== "i-k4studios" && !HIDDEN_VISIBILITY.has(visibility);
+  })
+  .slice(0, limit);
 const middleIndex = Math.floor(visibleImages.length / 2);
 ---
 

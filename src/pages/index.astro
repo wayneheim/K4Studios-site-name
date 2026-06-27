@@ -80,6 +80,20 @@ const pictureShowsWidgetImage = {
   fit: "contain" as const
 };
 
+const homepageSchemaAbout = [
+  { "@type": "Thing", name: "Painterly Fine Art Photography" },
+  { "@type": "Thing", name: "Painterly Western Photography" },
+  { "@type": "Thing", name: "Western Fine Art Photography" },
+  { "@type": "Thing", name: "Narrative Western Art" },
+  { "@type": "Thing", name: "Cowboy Art" },
+  {
+    "@type": "Thing",
+    name: "Pictorialism",
+    sameAs: "https://en.wikipedia.org/wiki/Pictorialism",
+  },
+  { "@type": "Thing", name: "Historically Themed Photography" },
+];
+
 // ----------------------
 // Structured Data
 // ----------------------
@@ -90,6 +104,7 @@ const structuredData = getStructuredData({
     description: landingWestern.subtitle || landingWestern.description,
     url: `https://k4studios.com/`,
     keywords: landingWestern.keywords || [],
+    about: homepageSchemaAbout,
     copyrightNotice: "© Wayne Heim"
   },
   images: featheredImages,

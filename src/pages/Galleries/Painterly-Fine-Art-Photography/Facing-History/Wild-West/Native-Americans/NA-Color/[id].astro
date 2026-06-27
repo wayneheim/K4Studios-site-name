@@ -9,7 +9,7 @@ import { getLandingMeta } from '@data/landingMeta.ts';
 
 export async function getStaticPaths() {
   return galleryData
-    .filter((img: any) => img.visibility !== 'hidden' && img.visibility !== 'hide' && img.visibility !== 'ghost' && img.id !== 'i-k4studios')
+    .filter((img: any) => img.visibility !== 'hidden' && img.visibility !== 'hide' && !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(img.visibility ?? 'show').trim().toLowerCase()) && img.id !== 'i-k4studios')
     .map((img: any) => ({ params: { id: img.id } }));
 }
 

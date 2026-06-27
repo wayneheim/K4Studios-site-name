@@ -48,7 +48,7 @@ const westernCollectionMeta: Record<string, { name: string; description: string 
 };
 
 function getVisibleImageCount(galleryData: any[]): number {
-  return galleryData.filter((img: any) => img.visibility !== "ghost" && img.id !== "i-k4studios").length;
+  return galleryData.filter((img: any) => !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(img.visibility ?? 'show').trim().toLowerCase()) && img.id !== "i-k4studios").length;
 }
 
 const subCollections = getOrderedWesternGalleryPaths(preferredWesternPath).map((path) => {
