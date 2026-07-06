@@ -6,7 +6,7 @@ function getBlogPostingStructuredData({ data, images = [], defaults = {} }) {
   const {
     copyrightNotice = "© Wayne Heim, k4studios.com. All rights reserved.",
     creatorName = "Wayne Heim",
-    creatorUrl = "https://k4studios.com/",
+    creatorUrl = "https://www.k4studios.com/",
     creatorSameAs = [],
     organizationSameAs = [],
   } = defaults;

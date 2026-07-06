@@ -102,7 +102,7 @@ const structuredData = getStructuredData({
   data: {
     title: landingWestern.title,
     description: landingWestern.subtitle || landingWestern.description,
-    url: `https://k4studios.com/`,
+    url: `https://www.k4studios.com/`,
     keywords: landingWestern.keywords || [],
     about: homepageSchemaAbout,
     copyrightNotice: "© Wayne Heim"
@@ -110,14 +110,14 @@ const structuredData = getStructuredData({
   images: featheredImages,
   defaults: {
     copyrightNotice: "© Wayne Heim",
-    license: "https://k4studios.com/copyright",
-    acquireLicensePage: "https://k4studios.com/Other/Print-Options",
+    license: "https://www.k4studios.com/copyright",
+    acquireLicensePage: "https://www.k4studios.com/Other/Print-Options",
     creditText: "Wayne Heim",
     creatorName: "Wayne Heim",
-    creatorUrl: "https://k4studios.com/"
+    creatorUrl: "https://www.k4studios.com/"
   }
 });
-const faqStructuredData = getFAQPageStructuredData(facingFAQ, "https://k4studios.com/");
+const faqStructuredData = getFAQPageStructuredData(facingFAQ, "https://www.k4studios.com/");
 
 // ----------------------
 // NEW: dynamic OG/Twitter image
@@ -125,15 +125,15 @@ const faqStructuredData = getFAQPageStructuredData(facingFAQ, "https://k4studios
 function makeAbsoluteUrl(src?: string) {
   if (!src) return "";
   if (src.startsWith("http://") || src.startsWith("https://")) return src;
-  return `https://k4studios.com${src.startsWith("/") ? src : "/" + src}`;
+  return `https://www.k4studios.com${src.startsWith("/") ? src : "/" + src}`;
 }
 
 const landingImg    = featheredImages[0];   // pick first feathered image for stability
 const landingImgUrl = landingImg?.id ? makeAbsoluteUrl(getProxySrc(landingImg.id, 'l')) : '';
 
 const meta = getLandingMeta(sectionPath, landingImgUrl);
-if (!meta.ogUrl)      meta.ogUrl      = "https://k4studios.com/";
-if (!meta.twitterUrl) meta.twitterUrl = "https://k4studios.com/";
+if (!meta.ogUrl)      meta.ogUrl      = "https://www.k4studios.com/";
+if (!meta.twitterUrl) meta.twitterUrl = "https://www.k4studios.com/";
 ---
 
 <BaseLayout

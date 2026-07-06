@@ -38,7 +38,7 @@ const structuredData = getStructuredData({
     title: oneImageMoviePage.title,
     headline: oneImageMoviePage.title,
     description: "Wayne Heim’s One-Image Movies™ are finished narrative-art presentations built from photographic image, title, authored poetic writing, unresolved implication, and viewer participation. The final movie is minted in the viewer’s mind.",
-    url: `https://k4studios.com${sectionPath}`,
+    url: `https://www.k4studios.com${sectionPath}`,
     articleSection: "Fine Art Photography Concepts",
     keywords: [
       "One-Image Movie",
@@ -56,7 +56,7 @@ const structuredData = getStructuredData({
     definedTerm: {
       name: "One-Image Movie",
       description: "Wayne Heim’s One-Image Movies™ name a specific K4 Studios narrative-art format where photographic image, title, authored writing, atmosphere, unresolved implication, and viewer participation operate together. The final unwritten story is completed in the viewer’s mind.",
-      termSet: "https://k4studios.com/Glossary"
+      termSet: "https://www.k4studios.com/Glossary"
     },
     faqItems: [
       {
@@ -75,10 +75,10 @@ const structuredData = getStructuredData({
   },
   defaults: {
     copyrightNotice: "© Wayne Heim",
-    license: "https://k4studios.com/copyright",
+    license: "https://www.k4studios.com/copyright",
     creditText: "Wayne Heim",
     creatorName: "Wayne Heim",
-    creatorUrl: "https://k4studios.com/"
+    creatorUrl: "https://www.k4studios.com/"
   }
 });
 
@@ -86,8 +86,8 @@ const structuredData = getStructuredData({
 const landingImg = painterlyImages.find(img => !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(img.visibility ?? 'show').trim().toLowerCase()));
 const landingImgUrl = landingImg?.id ? `https://www.k4studios.com${getProxySrc(landingImg.id, 'l')}` : '';
 const meta = getLandingMeta(sectionPath, landingImgUrl);
-if (!meta.ogUrl)      meta.ogUrl      = `https://k4studios.com${sectionPath}`;
-if (!meta.twitterUrl) meta.twitterUrl = `https://k4studios.com${sectionPath}`;
+if (!meta.ogUrl)      meta.ogUrl      = `https://www.k4studios.com${sectionPath}`;
+if (!meta.twitterUrl) meta.twitterUrl = `https://www.k4studios.com${sectionPath}`;
 
 // Prepare gallery preview images
 function shuffleArray<T>(arr: T[]): T[] {
@@ -205,9 +205,9 @@ const bodyConceptImages = [
 
 // Breadcrumb structured data
 const breadcrumbData = getBreadcrumbList([
-  { name: "Home", item: "https://k4studios.com/" },
-  { name: "Other", item: "https://k4studios.com/Other" },
-  { name: "What Is a One-Image Movie?", item: `https://k4studios.com${sectionPath}` }
+  { name: "Home", item: "https://www.k4studios.com/" },
+  { name: "Other", item: "https://www.k4studios.com/Other" },
+  { name: "What Is a One-Image Movie?", item: `https://www.k4studios.com${sectionPath}` }
 ]);
 
 ---

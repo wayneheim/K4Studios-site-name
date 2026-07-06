@@ -326,14 +326,14 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
       "Western Cowboy Portraits | Cowboy Photography by Wayne Heim",
     ogDescription:
       "Explore Western cowboy portraits and cowboy photography by Wayne Heim: painterly fine art portraits, frontier characters, Old West figures, and collector prints.",
-    ogImage: "https://k4studios.com/img/i-7Mzzbvp/l.jpg",
+    ogImage: "https://www.k4studios.com/img/i-7Mzzbvp/l.jpg",
     ogType: "website",
     twitterCard: "summary_large_image",
     twitterTitle:
       "Western Cowboy Portraits | Cowboy Photography by Wayne Heim",
     twitterDescription:
       "Painterly cowboy portraits, frontier character studies, and fine art photography of the American West.",
-    twitterImage: "https://k4studios.com/img/i-7Mzzbvp/l.jpg",
+    twitterImage: "https://www.k4studios.com/img/i-7Mzzbvp/l.jpg",
     keywords: "Western cowboy portraits, cowboy photography, cowboy portrait photography, Western portrait photography, cowboy portraits, Western cowboy photography, fine art cowboy photography, Old West photography, frontier portraits, Wayne Heim",
   },
 

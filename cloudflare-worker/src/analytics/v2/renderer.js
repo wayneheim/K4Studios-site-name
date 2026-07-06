@@ -154,6 +154,8 @@ export function renderDashboardV2({ summary, authHeader = '' }) {
   const topSitePages = summary?.topSitePages || [];
   const topImages = summary?.topImages || [];
   const externalSources = summary?.externalSources || [];
+  const rawSessionGeography = summary?.rawSessionGeography || [];
+  const adMarketGeography = summary?.adMarketGeography || [];
   const sessionGeography = summary?.sessionGeography || [];
   const imageViewGeography = summary?.imageViewGeography || [];
   const entrySourceRawMix = summary?.entrySourceRawMix || [];
@@ -592,6 +594,20 @@ export function renderDashboardV2({ summary, authHeader = '' }) {
         <p class="subtle">Location for trusted session-backed canonical page loads only. External/direct fetch traffic plus suspicious internal-shallow and datacenter-like sessions are excluded.</p>
         <div class="scroll-panel" style="max-height: 360px; margin-top: 8px;">
           ${sessionGeography.length ? sessionGeography.map((row) => `<div class="list-row"><span>${row.geo_label}</span><strong>${row.sessions}</strong></div>`).join('') : '<p>No session geography in this window.</p>'}
+        </div>
+      </div>
+      <div class="card">
+        <h2>Raw Browser Geography</h2>
+        <p class="subtle">One first canonical page load per browser session before trusted-session exclusions. Use this for Microsoft Clarity-style city comparisons.</p>
+        <div class="scroll-panel" style="max-height: 360px; margin-top: 8px;">
+          ${rawSessionGeography.length ? rawSessionGeography.map((row) => `<div class="list-row"><span>${row.geo_label}</span><strong>${row.sessions}</strong></div>`).join('') : '<p>No raw browser geography in this window.</p>'}
+        </div>
+      </div>
+      <div class="card">
+        <h2>US Ad-Market Geography</h2>
+        <p class="subtle">US city/region browser sessions after datacenter-like and internal-test filtering. Use this to judge regional ad delivery.</p>
+        <div class="scroll-panel" style="max-height: 360px; margin-top: 8px;">
+          ${adMarketGeography.length ? adMarketGeography.map((row) => `<div class="list-row"><span>${row.geo_label}</span><strong>${row.sessions}</strong></div>`).join('') : '<p>No US ad-market geography in this window.</p>'}
         </div>
       </div>
       <div class="card">

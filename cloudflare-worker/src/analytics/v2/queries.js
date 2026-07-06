@@ -320,6 +320,7 @@ export async function getV2CanonicalSummary(env, { windowKey = 'today', excludeI
                 AND session_id NOT IN (SELECT session_id FROM viewer_excluded_sessions)` : '';
   const rawViewerExclusionClause = buildRawFilterExclusionClause(filterState);
   const canonicalViewerPredicate = buildCanonicalRawFilterPredicate(filterState);
+  const canonicalViewerPredicateAliased = buildCanonicalRawFilterPredicate(filterState, 'e');
   const facebookHostCaseCondition = `(lower(referrer_host) = 'facebook.com' OR lower(referrer_host) LIKE '%.facebook.com' OR lower(referrer_host) = 'fb.com' OR lower(referrer_host) LIKE '%.fb.com')`;
   const geoLabelExpression = `CASE
     WHEN json_extract(metadata_json, '$.city') IS NOT NULL AND trim(json_extract(metadata_json, '$.city')) <> '' THEN
@@ -338,6 +339,7 @@ export async function getV2CanonicalSummary(env, { windowKey = 'today', excludeI
     WHEN json_extract(metadata_json, '$.country') IS NOT NULL AND trim(json_extract(metadata_json, '$.country')) <> '' THEN json_extract(metadata_json, '$.country')
     ELSE 'Unknown'
   END`;
+  const geoLabelExpressionAliased = geoLabelExpression.replace(/\bmetadata_json\b/g, 'e.metadata_json');
   const sourceLabelExpression = `CASE
     WHEN referrer_host IS NULL OR trim(referrer_host) = '' THEN 'Direct / Unknown'
     WHEN lower(referrer_host) LIKE 'localhost:%' OR lower(referrer_host) = 'localhost' THEN 'Internal Test'
@@ -390,7 +392,7 @@ export async function getV2CanonicalSummary(env, { windowKey = 'today', excludeI
   )`;
   const topImageLimitClause = (window.key === 'today' || window.key === 'yesterday') ? '' : 'LIMIT 10';
 
-  const [refreshStatus, counts, families, interactionActions, topEntryPages, topSitePages, topImages, externalSources, sessionGeography, imageViewGeography, entrySourceRawMix, entrySourceTrustedMix, entrySourceQualifiedMix, pageKeyCoverageMix, pageKeyTransitionMix, pageKeyActorStats, firstImageHopMix, firstImagePathMix, suspiciousSessionGeography, suspiciousDatacenterSessionGeography, internalReentryMix] = await Promise.all([
+  const [refreshStatus, counts, families, interactionActions, topEntryPages, topSitePages, topImages, externalSources, rawSessionGeography, adMarketGeography, sessionGeography, imageViewGeography, entrySourceRawMix, entrySourceTrustedMix, entrySourceQualifiedMix, pageKeyCoverageMix, pageKeyTransitionMix, pageKeyActorStats, firstImageHopMix, firstImagePathMix, suspiciousSessionGeography, suspiciousDatacenterSessionGeography, internalReentryMix] = await Promise.all([
     getV2RefreshStatus(env),
     env.DB.prepare(
       `WITH suspicious_internal_shallow AS (
@@ -736,6 +738,56 @@ export async function getV2CanonicalSummary(env, { windowKey = 'today', excludeI
        GROUP BY source_label
        ORDER BY views DESC, source_label ASC
        LIMIT 10`
+    ).all(),
+    env.DB.prepare(
+      `WITH landing_rows AS (
+         SELECT
+           session_id,
+           ${geoLabelExpression} AS geo_label,
+           ROW_NUMBER() OVER (PARTITION BY session_id ORDER BY occurred_at ASC, id ASC) AS rn
+         FROM canonical_events_v2
+         WHERE ${windowClause}
+           AND canonical_page_load = 1
+           AND metric_scope = 'primary'
+           AND session_id IS NOT NULL
+           AND is_bot = 0
+           AND ${canonicalViewerPredicate}
+       )
+       SELECT geo_label, COUNT(*) AS sessions
+       FROM landing_rows
+       WHERE rn = 1
+       GROUP BY geo_label
+       ORDER BY sessions DESC, geo_label ASC
+       LIMIT 10`
+    ).all(),
+    env.DB.prepare(
+      `WITH landing_rows AS (
+         SELECT
+           e.session_id,
+           ${geoLabelExpressionAliased} AS geo_label,
+           ROW_NUMBER() OVER (PARTITION BY e.session_id ORDER BY e.occurred_at ASC, e.id ASC) AS rn
+         FROM canonical_events_v2 e
+         LEFT JOIN session_facts_v2 sf ON sf.session_id = e.session_id
+         WHERE ${windowClause.replace(/\boccurred_at\b/g, 'e.occurred_at')}
+           AND e.canonical_page_load = 1
+           AND e.metric_scope = 'primary'
+           AND e.session_id IS NOT NULL
+           AND e.is_bot = 0
+           AND ${canonicalViewerPredicateAliased}
+           AND UPPER(trim(COALESCE(json_extract(e.metadata_json, '$.country'), ''))) IN ('US', 'USA', 'UNITED STATES', 'UNITED STATES OF AMERICA')
+           AND (
+             trim(COALESCE(json_extract(e.metadata_json, '$.city'), '')) <> ''
+             OR trim(COALESCE(json_extract(e.metadata_json, '$.region'), '')) <> ''
+           )
+           AND COALESCE(sf.is_suspicious_datacenter_shallow, 0) = 0
+           AND lower(COALESCE(sf.source_family, '')) <> 'internal test'
+       )
+       SELECT geo_label, COUNT(*) AS sessions
+       FROM landing_rows
+       WHERE rn = 1
+       GROUP BY geo_label
+       ORDER BY sessions DESC, geo_label ASC
+       LIMIT 25`
     ).all(),
     env.DB.prepare(
       `WITH landing_rows AS (
@@ -1131,6 +1183,8 @@ export async function getV2CanonicalSummary(env, { windowKey = 'today', excludeI
     topSitePages: topSitePages?.results || [],
     topImages: topImages?.results || [],
     externalSources: externalSources?.results || [],
+    rawSessionGeography: rawSessionGeography?.results || [],
+    adMarketGeography: adMarketGeography?.results || [],
     sessionGeography: sessionGeography?.results || [],
     imageViewGeography: imageViewGeography?.results || [],
     entrySourceRawMix: entrySourceRawMix?.results || [],

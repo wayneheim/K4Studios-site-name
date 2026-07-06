@@ -42,7 +42,7 @@ const structuredData = getStructuredData({
   data: {
     headline: fullTitle,
     description: pageDescription,
-    url: `https://k4studios.com${sectionPath}`,
+    url: `https://www.k4studios.com${sectionPath}`,
     copyrightNotice: "© Wayne Heim",
     author: {
       "@type": "Person",
@@ -65,16 +65,16 @@ const structuredData = getStructuredData({
   },
   defaults: {
     copyrightNotice: "© Wayne Heim",
-    license: "https://k4studios.com/copyright",
+    license: "https://www.k4studios.com/copyright",
     creditText: "Wayne Heim",
     creatorName: "Wayne Heim",
-    creatorUrl: "https://k4studios.com/"
+    creatorUrl: "https://www.k4studios.com/"
   }
 });
 
 const breadcrumbsJSON = getBlogBreadcrumbList({
   title: pageTitle,
-  url: `https://k4studios.com${sectionPath}`
+  url: `https://www.k4studios.com${sectionPath}`
 });
 
 const meta = {
@@ -82,13 +82,13 @@ const meta = {
   title: fullTitle,
   seoTitle: fullTitle,
   description: pageDescription,
-  ogUrl: `https://k4studios.com${sectionPath}`,
+  ogUrl: `https://www.k4studios.com${sectionPath}`,
   ogTitle: fullTitle,
   ogDescription: pageDescription,
   ogImage: coverImageAbsolute,
   ogImageAlt: coverImageAlt,
   ogType: "article",
-  twitterUrl: `https://k4studios.com${sectionPath}`,
+  twitterUrl: `https://www.k4studios.com${sectionPath}`,
   twitterTitle: fullTitle,
   twitterDescription: pageDescription,
   twitterImage: coverImageAbsolute,

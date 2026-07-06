@@ -83,7 +83,7 @@ const structuredData = getStructuredData({
   data: {
     title: landingWestern.title,
     description: landingWestern.subtitle,
-    url: `https://k4studios.com${pagePath}`,
+    url: `https://www.k4studios.com${pagePath}`,
     keywords: landingWestern.keywords || [],
     genre: "Western Fine Art Photography",
     about: westernNarrativesSchemaAbout,
@@ -92,14 +92,14 @@ const structuredData = getStructuredData({
   images: featheredImages,
   defaults: {
     copyrightNotice: "© Wayne Heim",
-    license: "https://k4studios.com/copyright",
-    acquireLicensePage: "https://k4studios.com/Other/Print-Options",
+    license: "https://www.k4studios.com/copyright",
+    acquireLicensePage: "https://www.k4studios.com/Other/Print-Options",
     creditText: "Wayne Heim",
     creatorName: "Wayne Heim",
-    creatorUrl: "https://k4studios.com/"
+    creatorUrl: "https://www.k4studios.com/"
   }
 });
-const faqStructuredData = getFAQPageStructuredData(westernFAQ, `https://k4studios.com${pagePath}`);
+const faqStructuredData = getFAQPageStructuredData(westernFAQ, `https://www.k4studios.com${pagePath}`);
 const themeStructuredData = getThemeItemListStructuredData(dataSectionPath);
 
 // ----------------------
@@ -108,7 +108,7 @@ const themeStructuredData = getThemeItemListStructuredData(dataSectionPath);
 function makeAbsoluteUrl(src) {
   if (!src) return "";
   if (src.startsWith("http://") || src.startsWith("https://")) return src;
-  return `https://k4studios.com${src.startsWith("/") ? src : "/" + src}`;
+  return `https://www.k4studios.com${src.startsWith("/") ? src : "/" + src}`;
 }
 
 // Proxy URL helper - ensures SmugMug URLs never appear in SSR HTML
@@ -123,8 +123,8 @@ const landingImgUrl = landingImg?.id ? makeAbsoluteUrl(getProxySrc(landingImg.id
 
 // Use landing meta with dynamic override
 const landingMeta = getLandingMeta(pagePath, landingImgUrl);
-if (!landingMeta.ogUrl) landingMeta.ogUrl = `https://k4studios.com${pagePath}`;
-if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${pagePath}`;
+if (!landingMeta.ogUrl) landingMeta.ogUrl = `https://www.k4studios.com${pagePath}`;
+if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://www.k4studios.com${pagePath}`;
 ---
 
 <!-- ✅ Inject JSON-LD in the head BEFORE layout, with set:html -->

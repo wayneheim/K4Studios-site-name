@@ -36,7 +36,7 @@ const structuredData = (getStructuredData as any)({
   data: {
     name: "Inside the Frame",
     description: "Conversations with Quill about layered storytelling, composition, and painterly photography.",
-    url: `https://k4studios.com${sectionPath}`,
+    url: `https://www.k4studios.com${sectionPath}`,
     copyrightNotice: "© Wayne Heim",
     author: {
       "@type": "Person",
@@ -47,16 +47,16 @@ const structuredData = (getStructuredData as any)({
       headline: p.title,
       datePublished: p.date,
       description: p.excerpt,
-      image: `https://k4studios.com${normalizeImageSrc(p.cover, 'l')}`,
-      url: `https://k4studios.com/Blog/${p.slug}`
+      image: `https://www.k4studios.com${normalizeImageSrc(p.cover, 'l')}`,
+      url: `https://www.k4studios.com/Blog/${p.slug}`
     }))
   },
   defaults: {
     copyrightNotice: "© Wayne Heim",
-    license: "https://k4studios.com/copyright",
+    license: "https://www.k4studios.com/copyright",
     creditText: "Wayne Heim",
     creatorName: "Wayne Heim",
-    creatorUrl: "https://k4studios.com/"
+    creatorUrl: "https://www.k4studios.com/"
   }
 });
 
@@ -66,8 +66,8 @@ const ogImageUrl = getSemanticImageUrl("i-LCspRF4", {}, "l", { absolute: true })
 const meta = getLandingMeta(sectionPath);
 meta.ogImage = ogImageUrl;
 meta.twitterImage = ogImageUrl;
-if (!meta.ogUrl)      meta.ogUrl      = `https://k4studios.com${sectionPath}`;
-if (!meta.twitterUrl) meta.twitterUrl = `https://k4studios.com${sectionPath}`;
+if (!meta.ogUrl)      meta.ogUrl      = `https://www.k4studios.com${sectionPath}`;
+if (!meta.twitterUrl) meta.twitterUrl = `https://www.k4studios.com${sectionPath}`;
 
 // Prepare gallery preview images from multiple painterly galleries
 function shuffleArray<T>(arr: T[]): T[] {

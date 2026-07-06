@@ -21,7 +21,7 @@ const __dirname = path.dirname(__filename);
 
 const ZONE_ID = process.env.CF_ZONE_ID;
 const API_TOKEN = process.env.CF_API_TOKEN;
-const BASE_URL = 'https://k4studios.com';
+const BASE_URL = 'https://www.k4studios.com';
 const SIZES = ['s', 'm', 'l', 'xl'];
 
 // ============================================================================

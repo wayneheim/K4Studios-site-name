@@ -1,3 +1,17 @@
+# Canonical host redirects: apex/http variants should land on HTTPS www in one hop.
+http://k4studios.com/  https://www.k4studios.com/  301!
+https://k4studios.com/  https://www.k4studios.com/  301!
+http://www.k4studios.com/  https://www.k4studios.com/  301!
+
+# Old ivfolio entry point now maps directly to the current Painterly galleries hub.
+http://k4studios.com/scripts/ivfolio/portfolio.asp  https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography  301!
+https://k4studios.com/scripts/ivfolio/portfolio.asp  https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography  301!
+/scripts/ivfolio/portfolio.asp  /Galleries/Painterly-Fine-Art-Photography  301!
+
+http://k4studios.com/*  https://www.k4studios.com/:splat  301!
+https://k4studios.com/*  https://www.k4studios.com/:splat  301!
+http://www.k4studios.com/*  https://www.k4studios.com/:splat  301!
+
 # Collapse apex + trailing slash to canonical www no-slash in one hop
 https://k4studios.com/(.+)/$  https://www.k4studios.com/$1  301!
 

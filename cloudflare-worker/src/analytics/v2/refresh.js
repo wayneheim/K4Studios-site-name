@@ -1,4 +1,4 @@
-import { DATACENTER_ASNS, DATACENTER_PREFIXES } from '../../shared/constants.js';
+import { DATACENTER_ASNS, DATACENTER_CITIES, DATACENTER_PREFIXES } from '../../shared/constants.js';
 import { canonicalizeRawEventV2 } from './canonical.js';
 import { getV2SchemaStatus } from './queries.js';
 
@@ -15,6 +15,7 @@ const GEO_TRUST_ESTABLISHED_COUNTRIES = [
   'NL', 'NO', 'PL', 'PT', 'RO', 'SE', 'SI', 'SK', 'SM', 'VA'
 ];
 const GEO_TRUST_LOW_CONFIDENCE_COUNTRIES = ['HK', 'ID', 'IN', 'SG', 'VN'];
+const GEO_TRUST_US_COUNTRY_VALUES = ['US', 'USA', 'UNITED STATES', 'UNITED STATES OF AMERICA'];
 
 function hasAutomationUaSignal(ua) {
   const normalizedUa = String(ua || '').toLowerCase();
@@ -51,8 +52,29 @@ function buildNumericInSql(expr, values) {
   return `${expr} IN (${numericValues.join(', ')})`;
 }
 
-function buildGeoTrustScoreSql(countryExpr) {
+function buildKnownDatacenterCitySql(cityExpr) {
+  return `UPPER(trim(COALESCE(${cityExpr}, ''))) IN (${toSqlInList(DATACENTER_CITIES.map((city) => city.toUpperCase()))})`;
+}
+
+function buildCountryMatchSql(countryExpr, values) {
+  return `UPPER(trim(COALESCE(${countryExpr}, ''))) IN (${toSqlInList(values)})`;
+}
+
+function buildHasGeoLocalitySql(regionExpr, cityExpr) {
+  return `(
+    trim(COALESCE(${regionExpr}, '')) <> ''
+    OR trim(COALESCE(${cityExpr}, '')) <> ''
+  )`;
+}
+
+function buildGeoTrustScoreSql(countryExpr, regionExpr = 'NULL', cityExpr = 'NULL') {
+  const isUsCountry = buildCountryMatchSql(countryExpr, GEO_TRUST_US_COUNTRY_VALUES);
+  const hasLocality = buildHasGeoLocalitySql(regionExpr, cityExpr);
+  const isKnownDatacenterCity = buildKnownDatacenterCitySql(cityExpr);
+
   return `CASE
+    WHEN ${isKnownDatacenterCity} THEN 1
+    WHEN ${isUsCountry} AND ${hasLocality} THEN 5
     WHEN UPPER(COALESCE(${countryExpr}, '')) IN (${toSqlInList(GEO_TRUST_CORE_COUNTRIES)}) THEN 4
     WHEN UPPER(COALESCE(${countryExpr}, '')) IN (${toSqlInList(GEO_TRUST_ESTABLISHED_COUNTRIES)}) THEN 3
     WHEN UPPER(COALESCE(${countryExpr}, '')) IN (${toSqlInList(GEO_TRUST_LOW_CONFIDENCE_COUNTRIES)}) THEN 1
@@ -61,8 +83,14 @@ function buildGeoTrustScoreSql(countryExpr) {
   END`;
 }
 
-function buildGeoTrustTierSql(countryExpr) {
+function buildGeoTrustTierSql(countryExpr, regionExpr = 'NULL', cityExpr = 'NULL') {
+  const isUsCountry = buildCountryMatchSql(countryExpr, GEO_TRUST_US_COUNTRY_VALUES);
+  const hasLocality = buildHasGeoLocalitySql(regionExpr, cityExpr);
+  const isKnownDatacenterCity = buildKnownDatacenterCitySql(cityExpr);
+
   return `CASE
+    WHEN ${isKnownDatacenterCity} THEN 'datacenter-city'
+    WHEN ${isUsCountry} AND ${hasLocality} THEN 'us-locality'
     WHEN UPPER(COALESCE(${countryExpr}, '')) IN (${toSqlInList(GEO_TRUST_CORE_COUNTRIES)}) THEN 'core'
     WHEN UPPER(COALESCE(${countryExpr}, '')) IN (${toSqlInList(GEO_TRUST_ESTABLISHED_COUNTRIES)}) THEN 'established'
     WHEN UPPER(COALESCE(${countryExpr}, '')) IN (${toSqlInList(GEO_TRUST_LOW_CONFIDENCE_COUNTRIES)}) THEN 'low'
@@ -280,10 +308,32 @@ async function materializeCanonicalRowsFromRawBatch(env, rawRows, previousLastPr
 
 async function rebuildSessionFactsV2(env) {
   const landingCountryExpr = `json_extract(landing.metadata_json, '$.country')`;
+  const landingRegionExpr = `json_extract(landing.metadata_json, '$.region')`;
+  const landingCityExpr = `json_extract(landing.metadata_json, '$.city')`;
   const metadataCountryExpr = `json_extract(metadata_json, '$.country')`;
-  const landingGeoTrustScoreSql = buildGeoTrustScoreSql(landingCountryExpr);
-  const landingGeoTrustTierSql = buildGeoTrustTierSql(landingCountryExpr);
-  const metadataGeoTrustScoreSql = buildGeoTrustScoreSql(metadataCountryExpr);
+  const metadataRegionExpr = `json_extract(metadata_json, '$.region')`;
+  const metadataCityExpr = `json_extract(metadata_json, '$.city')`;
+  const landingGeoTrustScoreSql = buildGeoTrustScoreSql(landingCountryExpr, landingRegionExpr, landingCityExpr);
+  const landingGeoTrustTierSql = buildGeoTrustTierSql(landingCountryExpr, landingRegionExpr, landingCityExpr);
+  const metadataGeoTrustScoreSql = buildGeoTrustScoreSql(metadataCountryExpr, metadataRegionExpr, metadataCityExpr);
+  const landingProtectedUsLocalitySql = `(
+    ${landingGeoTrustScoreSql} >= 5
+    AND COALESCE(bot_context.has_datacenter_ip_signal, 0) = 0
+    AND COALESCE(bot_context.has_ashburn_signal, 0) = 0
+    AND NOT (
+      COALESCE(bot_context.has_high_risk_bot_signal, 0) = 1
+      AND COALESCE(bot_context.has_automation_ua_signal, 0) = 1
+    )
+  )`;
+  const metadataProtectedUsLocalitySql = `(
+    ${metadataGeoTrustScoreSql} >= 5
+    AND COALESCE(CAST(json_extract(metadata_json, '$.datacenter_ip_signal') AS INTEGER), 0) = 0
+    AND COALESCE(CAST(json_extract(metadata_json, '$.ashburn_signal') AS INTEGER), 0) = 0
+    AND NOT (
+      COALESCE(CAST(json_extract(metadata_json, '$.high_risk_bot_signal') AS INTEGER), 0) = 1
+      AND COALESCE(CAST(json_extract(metadata_json, '$.automation_ua_signal') AS INTEGER), 0) = 1
+    )
+  )`;
   const datacenterIpPrefixSql = buildStartsWithSql(`COALESCE(raw.ip_hash, '')`, DATACENTER_PREFIXES);
   const datacenterAsnSql = buildNumericInSql(`COALESCE(raw.cf_asn, 0)`, DATACENTER_ASNS);
   await env.DB.prepare(`DELETE FROM session_facts_v2`).run();
@@ -381,6 +431,7 @@ async function rebuildSessionFactsV2(env) {
           AND landing.referrer_host IS NOT NULL
           AND lower(landing.referrer_host) LIKE '%k4studios.com%'
           AND COALESCE(landing.referrer_path, '') = '/'
+          AND NOT ${landingProtectedUsLocalitySql}
           AND (
             (
               aggregated.canonical_page_loads = 1
@@ -514,6 +565,7 @@ async function rebuildSessionFactsV2(env) {
        WHEN COALESCE(CAST(json_extract(metadata_json, '$.non_image_engagement_count') AS INTEGER), engaged_event_count) = 0
         AND lower(COALESCE(source_family, '')) = 'k4 internal'
         AND COALESCE(json_extract(metadata_json, '$.referrer_path'), '') = '/'
+        AND NOT ${metadataProtectedUsLocalitySql}
         AND (
           (
             canonical_page_loads = 1

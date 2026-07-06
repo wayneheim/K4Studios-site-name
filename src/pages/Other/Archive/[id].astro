@@ -33,7 +33,7 @@ function makeAbsoluteUrl(src) {
   if (src.startsWith("http://") || src.startsWith("https://")) {
     return src;
   }
-  return `https://k4studios.com${src.startsWith("/") ? src : "/" + src}`;
+  return `https://www.k4studios.com${src.startsWith("/") ? src : "/" + src}`;
 }
 
 const imgUrl = imageData ? makeAbsoluteUrl(imageData.src) : "";

@@ -79,7 +79,7 @@ const structuredData = getStructuredData({
   data: {
     title: landingWallArt.title,
     description: landingWallArt.subtitle,
-    url: `https://k4studios.com${pagePath}`,
+    url: `https://www.k4studios.com${pagePath}`,
     keywords: landingWallArt.keywords || [],
     copyrightNotice: "© Wayne Heim",
     about: [
@@ -94,18 +94,18 @@ const structuredData = getStructuredData({
   images: featheredImages,
   defaults: {
     copyrightNotice: "© Wayne Heim",
-    license: "https://k4studios.com/copyright",
-    acquireLicensePage: "https://k4studios.com/Other/Print-Options",
+    license: "https://www.k4studios.com/copyright",
+    acquireLicensePage: "https://www.k4studios.com/Other/Print-Options",
     creditText: "Wayne Heim",
     creatorName: "Wayne Heim",
-    creatorUrl: "https://k4studios.com/"
+    creatorUrl: "https://www.k4studios.com/"
   }
 });
 
 // Breadcrumb
 const breadcrumbData = getBreadcrumbList([
-  { name: "Home", item: "https://k4studios.com/" },
-  { name: "Western Wall Art", item: `https://k4studios.com${pagePath}` },
+  { name: "Home", item: "https://www.k4studios.com/" },
+  { name: "Western Wall Art", item: `https://www.k4studios.com${pagePath}` },
 ]);
 
 // FAQ Structured Data
@@ -114,7 +114,7 @@ const stripHtml = (text: string) => text.replace(/<[^>]*>/g, '').trim();
 const faqStructuredData = JSON.stringify({
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "@id": `https://k4studios.com${pagePath}#faq`,
+  "@id": `https://www.k4studios.com${pagePath}#faq`,
   mainEntity: wallArtFAQ.slice(0, 10).map((item: any) => ({
     "@type": "Question",
     name: item.q,
@@ -129,16 +129,16 @@ const faqStructuredData = JSON.stringify({
 const webPageSchema = JSON.stringify({
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": `https://k4studios.com${pagePath}#webpage`,
-  url: `https://k4studios.com${pagePath}`,
+  "@id": `https://www.k4studios.com${pagePath}#webpage`,
+  url: `https://www.k4studios.com${pagePath}`,
   name: "Western Wall Art",
   description: "Western wall art by Wayne Heim featuring museum-quality cowboy fine art prints, vintage western photography, and collector editions.",
   inLanguage: "en",
   isPartOf: {
     "@type": "WebSite",
-    "@id": "https://k4studios.com/#website",
+    "@id": "https://www.k4studios.com/#website",
     name: "K4 Studios",
-    url: "https://k4studios.com/"
+    url: "https://www.k4studios.com/"
   },
   about: [
     { "@type": "Thing", name: "Western Wall Art" },
@@ -150,7 +150,7 @@ const webPageSchema = JSON.stringify({
   author: { "@type": "Person", "@id": "https://www.k4studios.com/#person", name: "Wayne Heim", url: "https://www.k4studios.com/Other/Bio" },
   creator: { "@type": "Person", "@id": "https://www.k4studios.com/#person", name: "Wayne Heim", url: "https://www.k4studios.com/Other/Bio" },
   copyrightHolder: { "@type": "Person", "@id": "https://www.k4studios.com/#person", name: "Wayne Heim", url: "https://www.k4studios.com/Other/Bio" },
-  mainEntity: { "@id": `https://k4studios.com${pagePath}#imagegallery` },
+  mainEntity: { "@id": `https://www.k4studios.com${pagePath}#imagegallery` },
 }, null, 2);
 
 // OG/Twitter image - use proxy URLs to avoid exposing SmugMug
@@ -162,14 +162,14 @@ function getProxySrc(imageId: string, size: string = 'm'): string {
 function makeAbsoluteUrl(src?: string) {
   if (!src) return "";
   if (src.startsWith("http://") || src.startsWith("https://")) return src;
-  return `https://k4studios.com${src.startsWith("/") ? src : "/" + src}`;
+  return `https://www.k4studios.com${src.startsWith("/") ? src : "/" + src}`;
 }
 const landingImg = featheredImages[0];
 const landingImgUrl = landingImg?.id ? makeAbsoluteUrl(getProxySrc(landingImg.id, 'l')) : '';
 
 const meta = getLandingMeta(pagePath, landingImgUrl);
-if (!meta.ogUrl) meta.ogUrl = `https://k4studios.com${pagePath}`;
-if (!meta.twitterUrl) meta.twitterUrl = `https://k4studios.com${pagePath}`;
+if (!meta.ogUrl) meta.ogUrl = `https://www.k4studios.com${pagePath}`;
+if (!meta.twitterUrl) meta.twitterUrl = `https://www.k4studios.com${pagePath}`;
 
 // Featured Collection image (i-7Mzzbvp - "Last Hand" - unmistakably Western)
 // Note: FeaturedCollection component caps at L internally, XL never exposed

@@ -31,6 +31,8 @@ const sectionPath = "/News-Awards";
 const pagePath = "/News-Awards";
 const canonicalPageUrl = `https://www.k4studios.com${pagePath}`;
 const artOfTheWestFeatureUrl = "https://aotw.com/2026/02/painterly-photography/";
+const sviNewsFeatureUrl = "https://svinews.com/2026/top-featured/120533/wayne-heims-art-brings-the-old-west-home/";
+const facingHistoryUrl = "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History";
 // Use painterly galleries for sidebar images
 const gallerySectionPath = "/Galleries/Painterly-Fine-Art-Photography";
 const meta = getLandingMeta(pagePath);
@@ -108,38 +110,66 @@ const structuredData = getStructuredData({
         name: "Art of the West",
         url: "https://aotw.com/"
       },
+      {
+        "@type": "Organization",
+        "@id": "https://svinews.com/#organization",
+        name: "SVI News",
+        url: "https://svinews.com/"
+      },
       { "@type": "Occupation", name: "Medical Illustrator" },
       { "@type": "Thing", name: "cinematic storytelling" }
     ],
-    citation: artOfTheWestFeatureUrl,
-    subjectOf: {
-      "@type": "Article",
-      "@id": `${artOfTheWestFeatureUrl}#article`,
-      name: "Art of the West feature on Wayne Heim's painterly photography",
-      url: artOfTheWestFeatureUrl,
-      publisher: {
-        "@type": "Organization",
-        "@id": "https://aotw.com/#organization",
-        name: "Art of the West",
-        url: "https://aotw.com/"
+    citation: [artOfTheWestFeatureUrl, sviNewsFeatureUrl],
+    subjectOf: [
+      {
+        "@type": "Article",
+        "@id": `${artOfTheWestFeatureUrl}#article`,
+        name: "Art of the West feature on Wayne Heim's painterly photography",
+        url: artOfTheWestFeatureUrl,
+        publisher: {
+          "@type": "Organization",
+          "@id": "https://aotw.com/#organization",
+          name: "Art of the West",
+          url: "https://aotw.com/"
+        },
+        about: [
+          { "@type": "Person", "@id": "https://www.k4studios.com/#person", name: "Wayne Heim" },
+          { "@type": "Thing", name: "painterly Western photography" },
+          { "@type": "Thing", name: "narrative fine art photography" },
+          { "@type": "Thing", name: "One-Image Movie" }
+        ]
       },
-      about: [
-        { "@type": "Person", "@id": "https://www.k4studios.com/#person", name: "Wayne Heim" },
-        { "@type": "Thing", name: "painterly Western photography" },
-        { "@type": "Thing", name: "narrative fine art photography" },
-        { "@type": "Thing", name: "One-Image Movie" }
-      ]
-    },
+      {
+        "@type": "NewsArticle",
+        "@id": `${sviNewsFeatureUrl}#article`,
+        name: "SVI News feature on Wayne Heim's Western artwork",
+        url: sviNewsFeatureUrl,
+        datePublished: "2026-06-26",
+        publisher: {
+          "@type": "Organization",
+          "@id": "https://svinews.com/#organization",
+          name: "SVI News",
+          url: "https://svinews.com/"
+        },
+        about: [
+          { "@type": "Person", "@id": "https://www.k4studios.com/#person", name: "Wayne Heim" },
+          { "@type": "Organization", "@id": "https://www.k4studios.com/#organization", name: "K4 Studios" },
+          { "@type": "Thing", name: "Western fine art photography" },
+          { "@type": "Thing", name: "Star Valley" },
+          { "@type": "Thing", name: "historical storytelling" }
+        ]
+      }
+    ],
     copyrightNotice: "© Wayne Heim"
   },
   images: featheredImages,
   defaults: {
     copyrightNotice: "© Wayne Heim",
-    license: "https://k4studios.com/copyright",
-    acquireLicensePage: "https://k4studios.com/Other/Print-Options",
+    license: "https://www.k4studios.com/copyright",
+    acquireLicensePage: "https://www.k4studios.com/Other/Print-Options",
     creditText: "Wayne Heim",
     creatorName: "Wayne Heim",
-    creatorUrl: "https://k4studios.com/"
+    creatorUrl: "https://www.k4studios.com/"
   }
 });
 ---
@@ -181,15 +211,31 @@ const structuredData = getStructuredData({
             <Fragment>
               {section.subhead === "Press & Related Resources" && (
                 /* Future press cluster candidates: /Press/Art-of-the-West, /Press/Western-Art-and-Architecture */
-                <section class="story-block press-feature" aria-labelledby="art-of-the-west-feature">
-                  <h2 id="art-of-the-west-feature" class="slide-in-left">Featured in Art of the West</h2>
-                  <p class="reveal-on-scroll">
-                    <a href={artOfTheWestFeatureUrl} target="_blank" rel="noopener">Art of the West</a> featured Wayne Heim's painterly Western photography in an editorial context attentive to process, authorship, and narrative structure. The feature places the work within a broader Western art conversation where photography, painterly finish, and cinematic storytelling meet without losing historical restraint.
-                  </p>
-                  <p class="reveal-on-scroll">
-                    The article also notes the unusual path behind the work: Heim's background in medical illustration, with its discipline of visual clarity and anatomical precision, carried into narrative Western fine art photography. That crossover helps explain the One-Image Movie approach, where a single historically themed photograph is built to hold character, consequence, and an unresolved story within one frame.
-                  </p>
-                </section>
+                <>
+                  <article class="story-block press-feature" aria-labelledby="svi-news-feature">
+                    <h2 id="svi-news-feature" class="slide-in-left">SVI News Features Wayne Heim's Western Artwork</h2>
+                    <p class="press-date reveal-on-scroll">June 26, 2026</p>
+                    <p class="reveal-on-scroll">
+                      SVI News recently featured Wayne Heim and K4 Studios in an article about Wayne's Western fine art photography, his Star Valley roots, and the historical storytelling behind the work.
+                    </p>
+                    <p class="reveal-on-scroll">
+                      <a href={sviNewsFeatureUrl} target="_blank" rel="noopener">Read the SVI News feature</a>
+                    </p>
+                    <p class="reveal-on-scroll">
+                      Explore the <a href={facingHistoryUrl}>Western fine art photography and Facing History collection</a> that inspired the feature.
+                    </p>
+                  </article>
+
+                  <article class="story-block press-feature" aria-labelledby="art-of-the-west-feature">
+                    <h2 id="art-of-the-west-feature" class="slide-in-left">Featured in Art of the West</h2>
+                    <p class="reveal-on-scroll">
+                      <a href={artOfTheWestFeatureUrl} target="_blank" rel="noopener">Art of the West</a> featured Wayne Heim's painterly Western photography in an editorial context attentive to process, authorship, and narrative structure. The feature places the work within a broader Western art conversation where photography, painterly finish, and cinematic storytelling meet without losing historical restraint.
+                    </p>
+                    <p class="reveal-on-scroll">
+                      The article also notes the unusual path behind the work: Heim's background in medical illustration, with its discipline of visual clarity and anatomical precision, carried into narrative Western fine art photography. That crossover helps explain the One-Image Movie approach, where a single historically themed photograph is built to hold character, consequence, and an unresolved story within one frame.
+                    </p>
+                  </article>
+                </>
               )}
 
               <article class="story-block">
@@ -409,6 +455,13 @@ ul li::marker {
       line-height: 1.6;
       margin-bottom: 1rem;
       font-size: 1.01rem;
+    }
+
+    .press-date {
+      color: #7a6250;
+      font-size: 0.95rem !important;
+      margin-top: -0.15rem;
+      margin-bottom: 0.65rem !important;
     }
 
     .story-block ul {

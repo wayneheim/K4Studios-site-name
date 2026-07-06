@@ -135,7 +135,7 @@ const structuredData = getStructuredData({
   data: {
     title: landingHistorical.title,
     description: landingHistorical.subtitle || "Historically themed Western fine art photography by Wayne Heim",
-    url: `https://k4studios.com${pagePath}`,
+    url: `https://www.k4studios.com${pagePath}`,
     keywords: landingHistorical.keywords || [],
     copyrightNotice: "© Wayne Heim",
     about: [
@@ -151,11 +151,11 @@ const structuredData = getStructuredData({
   images: featheredImages,
   defaults: {
     copyrightNotice: "© Wayne Heim",
-    license: "https://k4studios.com/copyright",
-    acquireLicensePage: "https://k4studios.com/Other/Print-Options",
+    license: "https://www.k4studios.com/copyright",
+    acquireLicensePage: "https://www.k4studios.com/Other/Print-Options",
     creditText: "Wayne Heim",
     creatorName: "Wayne Heim",
-    creatorUrl: "https://k4studios.com/"
+    creatorUrl: "https://www.k4studios.com/"
   }
 });
 
@@ -163,8 +163,8 @@ const structuredData = getStructuredData({
 // BREADCRUMB STRUCTURED DATA
 // ----------------------
 const breadcrumbData = getBreadcrumbList([
-  { name: "Home", item: "https://k4studios.com/" },
-  { name: "Historical Western Art", item: `https://k4studios.com${pagePath}` },
+  { name: "Home", item: "https://www.k4studios.com/" },
+  { name: "Historical Western Art", item: `https://www.k4studios.com${pagePath}` },
 ]);
 
 // ----------------------
@@ -175,7 +175,7 @@ const stripHtml = (text: string) => text.replace(/<[^>]*>/g, '').trim();
 const faqStructuredData = JSON.stringify({
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "@id": `https://k4studios.com${pagePath}#faq`,
+  "@id": `https://www.k4studios.com${pagePath}#faq`,
   mainEntity: historicalFAQ.slice(0, 10).map((item: any) => ({
     "@type": "Question",
     name: item.q,
@@ -192,16 +192,16 @@ const faqStructuredData = JSON.stringify({
 const webPageSchema = JSON.stringify({
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": `https://k4studios.com${pagePath}#webpage`,
-  url: `https://k4studios.com${pagePath}`,
+  "@id": `https://www.k4studios.com${pagePath}#webpage`,
+  url: `https://www.k4studios.com${pagePath}`,
   name: "Historical Western Art",
   description: "Historically themed Western fine art photography by Wayne Heim — not modern ranch imagery — using narrative, painterly composition to explore the psychological lives of the American frontier.",
   inLanguage: "en",
   isPartOf: {
     "@type": "WebSite",
-    "@id": "https://k4studios.com/#website",
+    "@id": "https://www.k4studios.com/#website",
     name: "K4 Studios",
-    url: "https://k4studios.com/"
+    url: "https://www.k4studios.com/"
   },
   about: [
     { "@type": "Thing", name: "American West Art" },
@@ -217,14 +217,14 @@ const webPageSchema = JSON.stringify({
   author: { "@type": "Person", "@id": "https://www.k4studios.com/#person", name: "Wayne Heim", url: "https://www.k4studios.com/Other/Bio" },
   creator: { "@type": "Person", "@id": "https://www.k4studios.com/#person", name: "Wayne Heim", url: "https://www.k4studios.com/Other/Bio" },
   copyrightHolder: { "@type": "Person", "@id": "https://www.k4studios.com/#person", name: "Wayne Heim", url: "https://www.k4studios.com/Other/Bio" },
-  mainEntity: { "@id": `https://k4studios.com${pagePath}#imagegallery` },
+  mainEntity: { "@id": `https://www.k4studios.com${pagePath}#imagegallery` },
 }, null, 2);
 
 // OG/Twitter image: first feathered image
 function makeAbsoluteUrl(src?: string) {
   if (!src) return "";
   if (src.startsWith("http://") || src.startsWith("https://")) return src;
-  return `https://k4studios.com${src.startsWith("/") ? src : "/" + src}`;
+  return `https://www.k4studios.com${src.startsWith("/") ? src : "/" + src}`;
 }
 
 // Proxy URL helper
@@ -238,8 +238,8 @@ const landingImgUrl = landingImg?.id ? makeAbsoluteUrl(getProxySrc(landingImg.id
 
 // ✅ Meta should be keyed to the HUB PAGE
 const meta = getLandingMeta(pagePath, landingImgUrl);
-if (!meta.ogUrl) meta.ogUrl = `https://k4studios.com${pagePath}`;
-if (!meta.twitterUrl) meta.twitterUrl = `https://k4studios.com${pagePath}`;
+if (!meta.ogUrl) meta.ogUrl = `https://www.k4studios.com${pagePath}`;
+if (!meta.twitterUrl) meta.twitterUrl = `https://www.k4studios.com${pagePath}`;
 
 // ----------------------
 // TOMBSTONE THUMBNAILS (dynamic pools, frontier funnel preserved)
@@ -293,9 +293,9 @@ const tombstonesWithThumbs = landingHistorical.tombstones.map((stone: any) => {
     "@type": "Article",
     "headline": "Historical Western Art: Art Depicting the Frontier Era of the American West",
     "description": "Historical Western art is artwork that depicts the frontier era of the American West—cowboys, settlers, Indigenous life, and the people who shaped the landscape long before modern Western culture emerged.",
-    "author": { "@type": "Person", "name": "Wayne Heim", "url": "https://k4studios.com/" },
-    "publisher": { "@type": "Organization", "name": "K4 Studios", "url": "https://k4studios.com/" },
-    "mainEntityOfPage": "https://k4studios.com/Historical-Western-Art",
+    "author": { "@type": "Person", "name": "Wayne Heim", "url": "https://www.k4studios.com/" },
+    "publisher": { "@type": "Organization", "name": "K4 Studios", "url": "https://www.k4studios.com/" },
+    "mainEntityOfPage": "https://www.k4studios.com/Historical-Western-Art",
     "datePublished": "2025-06-01",
     "dateModified": "2026-03-05"
   }

@@ -38,7 +38,7 @@ type EssaySection = {
 const typedSections = sections as EssaySection[];
 
 const sectionPath = `/Other/Narrative-Art/${slug}`;
-const canonicalUrl = `https://k4studios.com${sectionPath}`;
+const canonicalUrl = `https://www.k4studios.com${sectionPath}`;
 const previewPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color";
 const onlyPathForwardVideo = videos.find((video) => video.slug === "only-path-forward");
 const onlyPathForwardYoutubeId = onlyPathForwardVideo?.youtubeId ?? "";
@@ -67,10 +67,10 @@ const structuredData = getStructuredData({
   },
   defaults: {
     copyrightNotice: "© Wayne Heim",
-    license: "https://k4studios.com/copyright",
+    license: "https://www.k4studios.com/copyright",
     creditText: "Wayne Heim",
     creatorName: "Wayne Heim",
-    creatorUrl: "https://k4studios.com/"
+    creatorUrl: "https://www.k4studios.com/"
   }
 });
 

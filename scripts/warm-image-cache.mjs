@@ -29,9 +29,9 @@ const __dirname = path.dirname(__filename);
 
 const WARM_INTERVAL_HOURS = 6;
 const LAST_WARM_PATH = path.join(__dirname, '.image-warm-last.json');
-const MANIFEST_URL = 'https://k4studios.com/image-manifest.json';
+const MANIFEST_URL = 'https://www.k4studios.com/image-manifest.json';
 const CAROUSEL_POOLS_PATH = path.join(__dirname, '..', 'public', 'carouselPools.json');
-const BASE_URL = 'https://k4studios.com';
+const BASE_URL = 'https://www.k4studios.com';
 
 // Concurrency control
 const BATCH_SIZE = 10;

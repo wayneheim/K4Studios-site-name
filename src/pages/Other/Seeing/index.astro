@@ -16,7 +16,7 @@ const structuredData = getStructuredData({
   data: {
     headline: "Seeing",
     description: "A small collection of essays on visual literacy — how images carry meaning, why some endure, and how to look without relying on categories or labels.",
-    url: `https://k4studios.com${sectionPath}`,
+    url: `https://www.k4studios.com${sectionPath}`,
     copyrightNotice: "© Wayne Heim",
     author: {
       "@type": "Person",
@@ -25,16 +25,16 @@ const structuredData = getStructuredData({
   },
   defaults: {
     copyrightNotice: "© Wayne Heim",
-    license: "https://k4studios.com/copyright",
+    license: "https://www.k4studios.com/copyright",
     creditText: "Wayne Heim",
     creatorName: "Wayne Heim",
-    creatorUrl: "https://k4studios.com/"
+    creatorUrl: "https://www.k4studios.com/"
   }
 });
 
 const meta = getLandingMeta(sectionPath, "");
-if (!meta.ogUrl) meta.ogUrl = `https://k4studios.com${sectionPath}`;
-if (!meta.twitterUrl) meta.twitterUrl = `https://k4studios.com${sectionPath}`;
+if (!meta.ogUrl) meta.ogUrl = `https://www.k4studios.com${sectionPath}`;
+if (!meta.twitterUrl) meta.twitterUrl = `https://www.k4studios.com${sectionPath}`;
 meta.ogTitle = "Seeing — Visual Literacy Essays";
 meta.ogDescription = "A small collection of essays on visual literacy — how images carry meaning, why some endure, and how to look without relying on categories or labels.";
 meta.twitterTitle = "Seeing — Visual Literacy Essays";
