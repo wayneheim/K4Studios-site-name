@@ -1,0 +1,638 @@
+---
+export const prerender = true;
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import LandingHeader from "@/components/Landing-Header.jsx";
+import SiteFooter from "@/components/Footer.astro";
+import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
+import { getStructuredData } from "@/components/utils/getStructuredData.ts";
+import { getSemanticImageUrl } from "@/utils/imageProxy.js";
+import { storyData as loreSamples } from "@/data/Other/Stories/Lore-and-Legacy-Show.mjs";
+import { galleryData as narrativeImages } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs";
+import "@/styles/global.css";
+
+const sectionPath = "/Other/Better-Mousetrap";
+const canonicalUrl = `https://www.k4studios.com${sectionPath}`;
+const title = "The Better Mousetrap";
+const subtitle = "How a practical question about making images matter became a search for art that gives the viewer something back.";
+const description =
+  "A foundational Wayne Heim essay on painterly photography, One-Image Movies, unresolved narrative art, and the search for images that ask more from the viewer.";
+
+type NarrativeImage = (typeof narrativeImages)[number];
+type StoryImage = (typeof loreSamples)[number];
+type ArtworkImage = NarrativeImage | StoryImage;
+
+const visibleNarrativeImages = narrativeImages.filter((image: NarrativeImage) => image.visibility !== "ghost");
+const visibleLoreSamples = loreSamples.filter((image: StoryImage) => image.visibility !== "ghost");
+const allArtworkSources = [...visibleLoreSamples, ...visibleNarrativeImages];
+
+const normalizeTitle = (value = "") =>
+  value
+    .replace(/[\u201c\u201d"']/g, "")
+    .trim()
+    .toLowerCase();
+
+const titleKey = (value = "") =>
+  normalizeTitle(value)
+    .replace(/[\u2014\u2013-]/g, " ")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+
+const findArtwork = (label: string, preferredId?: string) => {
+  const key = titleKey(label);
+  return (
+    allArtworkSources.find((image) => preferredId && image.id === preferredId) ||
+    allArtworkSources.find((image) => titleKey(image.title) === key) ||
+    allArtworkSources.find((image) => titleKey(image.title).startsWith(key))
+  );
+};
+
+const narrativePath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color";
+const engrainedPath = "/Other/K4-Select-Series/Engrained/Engrained-Series";
+
+const imageSrc = (image?: ArtworkImage, size = "l") => {
+  if (!image?.id) return "";
+  return getSemanticImageUrl(image.id, {}, size);
+};
+
+const imageHref = (image?: ArtworkImage) => {
+  if (!image?.id) return "";
+  if (visibleNarrativeImages.some((entry) => entry.id === image.id)) {
+    return `${narrativePath}/${image.id}`;
+  }
+  return `${engrainedPath}/${image.id}`;
+};
+
+const imageAlt = (image: ArtworkImage | undefined, fallback: string) =>
+  image?.alt || image?.description?.split(/\n{2,}/)[0] || `${fallback} by Wayne Heim`;
+
+const storyPreview = (value = "", limit = 2) =>
+  value
+    .split(/\n{2,}/)
+    .map((paragraph) => paragraph.trim())
+    .filter(Boolean)
+    .slice(0, limit);
+
+const samples = [
+  {
+    key: "over-my-dead-body",
+    title: "Over My Dead Body: Frontier Stand-off",
+    image: findArtwork("Over My Dead Body: Frontier Stand-off", "i-44jcjTQ"),
+    label: "The unresolved standoff",
+    note: "The confrontation is already underway, but the image withholds the verdict and makes the viewer stand inside the tension."
+  },
+  {
+    key: "trail-hardened",
+    title: "Trail Hardened",
+    image: findArtwork("Trail Hardened", "i-mpfG8XF"),
+    label: "The weary tenderness",
+    note: "Firelight and exhaustion turn the image toward trust, making the viewer feel the quiet cost of the journey."
+  },
+  {
+    key: "days-ride-to-spearfish",
+    title: "It's Just a One Day Ride to Spearfish. What Could Possibly Go Wrong?",
+    image: findArtwork("It's Just a One Day Ride to Spearfish. What Could Possibly Go Wrong?", "i-5Md3dQ3"),
+    label: "The fragile promise",
+    note: "A simple reassurance carries the weight of everything unsaid, letting affection and worry hold the story open."
+  },
+  {
+    key: "color-of-conviction",
+    title: "Color of Conviction",
+    image: findArtwork("Color of Conviction", "i-RsLmsLZ"),
+    label: "The quiet burden",
+    note: "The landscape, figure, and posture carry meaning without declaring it, leaving room for memory and doubt to do their work."
+  },
+  {
+    key: "this-is-where-i-stand",
+    title: "This Is Where I Stand",
+    image: findArtwork("This Is Where I Stand", "i-Vr8vzjt"),
+    label: "The boundary line",
+    note: "Resolve becomes the story engine. The viewer is invited to ask what forced this person to arrive at this point."
+  },
+  {
+    key: "three-wise-men",
+    title: "Three Wise Men",
+    image: findArtwork("Three Wise Men", "i-bfKMXS9"),
+    label: "The shared held breath",
+    note: "Three figures hold the line together, creating a wider stage where posture, spacing, and silence carry the unresolved story."
+  }
+].filter((sample) => sample.image);
+
+const heroSample = samples.find((sample) => sample.key === "over-my-dead-body") || samples[0];
+
+const sections = [
+  {
+    id: "what-if",
+    title: "What If",
+    paragraphs: [
+      "What if the world was not flat? What if women could vote? What if you could travel faster than on horseback? What if, instead of accepting fate as handed to us, we went in search of something more, something to call our own? What if we went West?",
+      "What if.",
+      "Those two words have been the launching point of so many discoveries, adventures, and untold sleepless nights, and quite frankly, the two words that have gotten me into more hot water than I care to admit.",
+      "The same words sent pioneers, inventors, and dreamers pushing into the unknown, headstrong and looking for answers, launching journeys well beyond the scope of anything they had imagined in the first place.",
+      "These six letters have been a cornerstone and underlying current of my life for as long as I can remember. So when I began my own Western adventure, it seemed almost serendipity that this, too, began with those same two words.",
+      "What if you could change how art speaks to people?",
+      "What if art could work differently?",
+      "What if a piece of art could ask more from a viewer?",
+      "What if art took you places, places you have never been, or places you might not expect to go?",
+      "What if art could tell you something about yourself in the process?"
+    ]
+  },
+  {
+    id: "billy",
+    title: "Billy and the Gatekeepers",
+    paragraphs: [
+      "At the heart of it sits Billy.",
+      "A child in the corner coloring with six crayons at once, looking up in confusion as the teacher proclaims, \"Everyone needs to stay in the lines, Billy.\"",
+      "To which every Billy replies: What if you did not?",
+      "A simple two-word defiant gesture of refusing to accept things at face value. Refusing to accept \"because that is the way things are done\" as explanation or purpose.",
+      "The same two words behind discovery, invention, exploration, and art.",
+      "This became the heart of my quest, my journey of discovery into the great frontier of Western art and narrative storytelling.",
+      "Billy has always had teachers. The rule enforcers. Enforcers of rules that are meant to define and protect us, but often morph into guarding the gates and protecting themselves. Controlled by the gatekeepers. The ones who decide what counts, what medium is legitimate, what rules must be followed to get a gold star.",
+      "In photography's early days, the established fine art community dismissed it. Not real art, they said. Just a mechanical copy of what the eye sees. No soul. No craft. No vision.",
+      "And yet today, many of those same disciplines often painstakingly reproduce, almost verbatim, what the camera shows them.",
+      "The gate moved.",
+      "Gatekeepers just do not like to mention it when it does.",
+      "Art was never meant to only be about how it is made or what it is made of. At its foundation, it was designed to be about what it does. What it asks. What it carries. What it says.",
+      "Composition. Design. Structure. Story. Key principles.",
+      "The medium the artist chooses is the vehicle.",
+      "When we ask what a vehicle can carry instead of what it is called, the frontier can begin to open again."
+    ]
+  },
+  {
+    id: "mousetrap",
+    title: "The Better Mousetrap Question",
+    sampleKey: "trail-hardened",
+    paragraphs: [
+      "My own version of that frontier began in a place a lot less romantic than I would like to admit.",
+      "It started with what I thought was a simple question: How do you get a person to connect more deeply with an image? Could I make it personal? Could I get someone so far inside an image that they could not stop thinking about it? Could not walk away from it?",
+      "Because if I could crack that nut, I could sell anything.",
+      "That better mousetrap question.",
+      "Not exactly the kind of thing artists are supposed to admit out loud, but there it is.",
+      "This is a discovery story. One that explores what we call art, how each medium has its own gates and rules, and how to get art to do something different.",
+      "To ask something more.",
+      "How do you build a form of static art that does not feel static? Something real enough to relate to, but artistic enough to be beautiful.",
+      "Not so painterly and expressive that it gets romanticized into something safe. Yet inviting enough to hold attention, while staying unresolved enough to invoke real questions.",
+      "Open enough to demand resolution, but timeless enough to allow people to apply their own experiences and memories nearly two hundred years later.",
+      "So, in my moment of solidarity with all the little Billys, I boldly answered: Why the hell not?",
+      "Followed quickly by: How the heck am I going to do that?"
+    ]
+  },
+  {
+    id: "fork",
+    title: "Stick a Fork in the Road",
+    paragraphs: [
+      "Like every road of discovery, at some point you reach a fork.",
+      "Once I started exploring the hows and whys of works that have the biggest impact on people, the stories, the art, literature, movies, personal experiences, memories, relationships, something began to surface.",
+      "No one thing could do it all.",
+      "The fork became the question itself:",
+      "What if there was a way to string the best parts together into a single piece?",
+      "What if images became more valuable to the viewer, not in price, but in what they gave back in return?",
+      "What started as a commercial \"how do I build a better mousetrap\" question became an artistic journey into a different kind of thing entirely."
+    ]
+  },
+  {
+    id: "autopsy",
+    title: "The Autopsy",
+    sampleKey: "days-ride-to-spearfish",
+    paragraphs: [
+      "What makes things tick.",
+      "At the risk of drifting somewhere between a confession of discovery and a lecture on theory, I began an artistic autopsy, if you will.",
+      "Like Leonardo dissecting bodies to understand how they worked so he could paint better figures, or an engineer taking apart a machine to see how the pieces interact, I needed to dissect these forms to see what made them tick.",
+      "What about each of them caused people to become emotionally connected?",
+      "Why do people detach from their own lives and become willing to step inside a moment or story playing out before them?",
+      "Take the most visceral reactions, the moments when a person is most connected to what they are viewing. When they attach to a fictional character or event.",
+      "In film, people are asked to believe in something so deeply that they cry for a victim, root for the underdog, scream at the TV, or wince at the unknown that waits around the corner.",
+      "In music, the listener is made to feel the loss of the sailors, to see the bell toll and the storm on the lake in Gordon Lightfoot's \"Wreck of the Edmund Fitzgerald.\"",
+      "In literature, how does Poe illustrate the haunting portrait of someone slowly going mad?",
+      "What I found was interesting.",
+      "Each medium or form possessed a different and sometimes unique set of limitations. Limitations that prevented every one of them from fully doing the exact thing I was trying to achieve, though I had not even realized what that was yet."
+    ]
+  },
+  {
+    id: "limits",
+    title: "What Each Medium Could Carry",
+    sampleKey: "color-of-conviction",
+    paragraphs: [
+      "A song can make you see something it never shows you. A bell ringing in the dark.",
+      "Lightfoot never shows the Edmund Fitzgerald going down. He gives you the hour. The cook. The meal that will not be served. The bell.",
+      "Somewhere between those details, the listener's own mind follows the ship into the dark Lake Superior waters.",
+      "But a song walks a specific path and has no physical image. It can make you chase a picture, but it cannot further its message by handing you one to step into.",
+      "Literature can do the same thing with a closed door, a letter never opened, a character who looks away instead of answering. The reader feels the shape of what is missing and begins filling the silence with something of their own.",
+      "But what literature asks for is time. Pages. Trust. Duration. A willingness to build the image slowly inside your own head.",
+      "Cinema can gather sound, light, motion, faces, music, and time into one experience that takes us down a path. A good film makes strangers matter in minutes. It makes a room breathe. It makes us feel a life we never lived.",
+      "But much like music and literature, it also controls the trip. It tells us when to look, when to fear, what to hate, when to soften, what to understand.",
+      "Definition is the cog that keeps the story wheel turning. It shepherds us with facts and answers, and in doing so, it decides which road we walk and how fast.",
+      "Paintings can blend nostalgia and reality openly. They can turn facts of what may have been into gesture, memory, symbols, icons, and dreams. But in the process, the medium often announces itself before the moment gets a word in.",
+      "When you look at an oil painting, the first thing that registers is \"nice painting.\" The human mind likes to classify what it is looking at.",
+      "\"This is an oil painting.\"",
+      "\"This is a beautiful watercolor of...\"",
+      "Unlike other narrative works, the mind sees brushwork first. The sheen of oil. The bloom of watercolor. It already knows it is looking at a created thing.",
+      "An artistic interpretation. One step back from reality.",
+      "The brain has already filed it as art, tradition, nostalgia, before the story underneath has had a chance to speak. You are already in the \"this is art\" bucket, a bucket fixed by definitions and ideals of how it is supposed to work.",
+      "Photography presents the mind of the viewer with something none of the others can quite fake: witness.",
+      "Even when staged, shaped, or transformed, some part of the mind still registers that something stood before the lens.",
+      "Where painting is meant to be an interpretation, photography is gated by the rules of reality.",
+      "A body was there. A face was there. A hand, a horse, a road, a sky.",
+      "That belief arrives before the mind has time to argue with itself.",
+      "In this way, photography becomes too literal. Too much evidence. Too much proof. The viewer's mind accepts that something happened in front of the camera, limiting the viewer's ability to exit the present, step inside, and explore why it mattered.",
+      "The Apollo 13 problem.",
+      "What if we put things together in a different way?",
+      "Forget the rules. Forget the gates.",
+      "What if, through engagement and discovery, art was able to ask more and give more? What if we took things that were never really meant to work together and assembled them into something new?",
+      "Could we make them work as a unit?"
+    ]
+  },
+  {
+    id: "through-glass",
+    title: "Through the Looking Glass",
+    sampleKey: "this-is-where-i-stand",
+    paragraphs: [
+      "Much of my work is historically based narrative art. I work with reenactors and living historians.",
+      "As a photographic subject, there is no shortage of images produced by people attending these events. Many are technically excellent, beautifully exposed, carefully cropped, capturing exact moments they witnessed.",
+      "But the gates and rules of \"photography is something real that happened\" wall off the journey into the moment. The human brain takes over and says: This is a nice picture of a reenactment. People putting on a show.",
+      "I wanted something different from my work.",
+      "Could I get people to engage and feel for the people like a movie? To wonder in the unspoken like literature? To feel the implied weight of a song?",
+      "I needed reality, ambiguity, artistic interpretation, story, context, and the invitation of wanting to know more, all in a way that let people let go of the present and step into the movie playing out before them in a single image.",
+      "I needed to figure out how to reassemble the parts discovered in my autopsy and see if I could reach my goal.",
+      "To get people to slow down. To detach from their lives. To inquire. To wonder. To become engaged enough to mentally step through the looking glass and into the image.",
+      "Into the moment.",
+      "The goal was no longer just admiration.",
+      "It was to get people to experience something.",
+      "Something they had a part in."
+    ]
+  },
+  {
+    id: "painterly",
+    title: "What the Painterly Process Does",
+    paragraphs: [
+      "For some time now, my photography has become what I would call painterly. As a medical illustrator for over 35 years, I always assumed it was just my, as my mom used to say, \"you cannot leave well enough alone,\" approach to the problem.",
+      "But in this journey, I came to the conclusion that making them painterly does not just make them look different.",
+      "It breaks the reality of the moment just enough to do real cognitive work.",
+      "While leaving enough photographic base to ground them in the realism of something lived, the painterly approach gives the viewer's mind permission to step inside the moment and explore.",
+      "Because my images do not fit into any real bucket, the viewer is left with only one option:",
+      "Push deeper into the image to try to discover what they are looking at.",
+      "That lack of definition, that straddling of the line, becomes the thread that pulls a viewer further in. Past the easy answer. Into the space where the image refuses to fully explain itself.",
+      "Like Alice, they have to go looking.",
+      "That is where discovery begins."
+    ]
+  },
+  {
+    id: "one-image-movies",
+    title: "The One-Image Movie",
+    sampleKey: "three-wise-men",
+    paragraphs: [
+      "What if the point was not to tell the person what to think at all?",
+      "What if, instead of having each image cleanly answer the questions for the viewer, instead of closing the loop, I left it open?",
+      "What if the viewer was the one who figured out where the story came from and where it was going to go next?",
+      "The human mind hates the unresolved. It wants a closed loop. The questions answered.",
+      "By leaning into the unresolved, could I turn the limitation of what a still image could contain into the solution?",
+      "A bridge.",
+      "Each of what I now affectionately call my One-Image Movies is an unresolved moment.",
+      "A character or place in time constructed to draw your attention and start your journey. But the why, the how you got there, the moral struggle, the lessons being taught or learned are hinted at in the image, but not answered.",
+      "Each image is paired with a scene-setting title to deepen the draw and accompanied by a short writing, a clue to what exists outside of the frame, in the mind of the people in it.",
+      "Clues to where they might be going or what they might be running from.",
+      "Seeds to the story, not answers.",
+      "The image offers the frame. The title opens the door. The writing leaves a few footprints beyond it.",
+      "And then the viewer brings the rest."
+    ]
+  },
+  {
+    id: "paid-forward",
+    title: "Giving History a Way to Pay Forward",
+    paragraphs: [
+      "The story grows past the edge of the frame. Not because I filled in every answer, but because the viewer brings something I never could: their own memory, losses, instincts, and \"what would I do\" answers.",
+      "Like the image of the bell tolling or the angry sea, or the events that led to this moment, once the viewer steps into the image, what finishes the story is no longer limited to what I put there.",
+      "It becomes theirs, built for reasons that belong entirely to their own life.",
+      "That is where the work leaves the fully resolved behind.",
+      "What started out as a question of how to make something harder to walk away from became my own Alice's discovery of stepping through the looking glass, where, in the end, she finds out more about herself in the process.",
+      "My stories become a framework for discovery, not a destination.",
+      "A form of historical currency paid forward to every viewer.",
+      "The stories of the West are full of lessons. The impossible feats and great sacrifices. The people history moved too fast to name.",
+      "What if art could carry those stories forward, not by lecturing, not by explaining, but by leaving just enough room for the person standing in front of the image to step inside and find something of themselves there?",
+      "My work is not about standing over people with a moral in my hand.",
+      "It is about planting a seed of discovery.",
+      "Quietly creating the conditions and letting the viewer put the pieces together.",
+      "Because the missing ingredient was not simply another technique.",
+      "It was what we ask of the viewer.",
+      "And when we trust the viewer enough to let them step through, history can do something more than instruct.",
+      "It can return as meaning, memory, and reflection, not as a lecture, but as something personally found.",
+      "Giving history a way to keep paying its lessons forward."
+    ]
+  }
+];
+
+const structuredData = getStructuredData({
+  type: "Article",
+  data: {
+    headline: title,
+    description,
+    url: canonicalUrl,
+    articleSection: "Fine Art Photography Concepts",
+    copyrightNotice: "(c) Wayne Heim",
+    author: {
+      "@type": "Person",
+      name: "Wayne Heim"
+    },
+    keywords: [
+      "The Better Mousetrap",
+      "One-Image Movie",
+      "painterly photography",
+      "narrative Western art",
+      "visual storytelling",
+      "Wayne Heim",
+      "K4 Studios"
+    ]
+  },
+  defaults: {
+    copyrightNotice: "(c) Wayne Heim",
+    license: "https://www.k4studios.com/copyright",
+    creditText: "Wayne Heim",
+    creatorName: "Wayne Heim",
+    creatorUrl: "https://www.k4studios.com/"
+  }
+});
+
+const ogImage = heroSample?.image ? `https://www.k4studios.com${imageSrc(heroSample.image, "l")}` : "/og/one-image-movie.jpg";
+const meta = {
+  description,
+  keywords: "The Better Mousetrap, One-Image Movie, painterly photography, narrative Western art, visual storytelling, Wayne Heim",
+  ogTitle: `${title} - Wayne Heim`,
+  ogDescription: description,
+  ogType: "article",
+  ogUrl: canonicalUrl,
+  ogImage,
+  twitterTitle: `${title} - Wayne Heim`,
+  twitterDescription: description,
+  twitterUrl: canonicalUrl,
+  twitterImage: ogImage,
+  twitterCard: "summary_large_image",
+  preserveTitleDashes: true,
+  preserveDescriptionDashes: true
+};
+
+const breadcrumb = "Other > The Better Mousetrap";
+---
+
+<BaseLayout
+  title={`${title} - Wayne Heim`}
+  structuredDataJSON={structuredData}
+  meta={meta}
+>
+  <main class="better-mousetrap-page">
+    <div class="drawer-mode">
+      <LandingHeader client:load breadcrumb={breadcrumb} />
+    </div>
+
+    <section class="bm-hero">
+      <div class="bm-hero-copy">
+        <p class="bm-eyebrow">Foundational Writing</p>
+        <h1>{title}</h1>
+        <p class="bm-subtitle">{subtitle}</p>
+      </div>
+      {heroSample?.image && (
+        <figure class="bm-hero-image">
+          <a href={imageHref(heroSample.image)} aria-label={`Open ${heroSample.title} artwork detail page`}>
+            <img src={imageSrc(heroSample.image, "l")} alt={imageAlt(heroSample.image, heroSample.title)} />
+          </a>
+          <figcaption>{heroSample.title}</figcaption>
+        </figure>
+      )}
+    </section>
+
+    <article class="bm-article">
+      {sections.map((section) => {
+        const sample = samples.find((entry) => entry.key === (section as any).sampleKey);
+        return (
+          <section id={section.id} class="bm-section">
+            <header class="bm-section-heading">
+              <h2>{section.title}</h2>
+            </header>
+            <div class="bm-section-rule" aria-hidden="true"></div>
+
+            {sample?.image && (
+              <figure class="bm-inline-sample">
+                <a href={imageHref(sample.image)} aria-label={`Open ${sample.title} artwork detail page`}>
+                  <img src={imageSrc(sample.image, "l")} alt={imageAlt(sample.image, sample.title)} loading="lazy" />
+                </a>
+                <figcaption>
+                  <strong>{sample.title}</strong>
+                  <span>{sample.label}</span>
+                  <p>{sample.note}</p>
+                  {storyPreview(sample.image.story || sample.image.description || "", 2).map((paragraph) => (
+                    <blockquote>{paragraph}</blockquote>
+                  ))}
+                </figcaption>
+              </figure>
+            )}
+
+            <div class="bm-copy">
+              {section.paragraphs.map((paragraph) => (
+                <p>{paragraph}</p>
+              ))}
+            </div>
+          </section>
+        );
+      })}
+    </article>
+
+    <WesternDefinitions variant="definition" />
+
+    <SiteFooter
+      previewImages={[]}
+      previewPath={narrativePath}
+      title={title}
+      label=""
+      class="pt-8 pb-12"
+    />
+  </main>
+</BaseLayout>
+
+<style>
+  .better-mousetrap-page {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: #fff;
+    color: #2c2c2c;
+    font-family: "Glegoo", serif;
+  }
+
+  .bm-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(17rem, 21rem);
+    gap: clamp(1.5rem, 4vw, 3rem);
+    align-items: center;
+    max-width: 920px;
+    margin: 0 auto;
+    padding: clamp(3rem, 7vw, 5.75rem) 1.5rem 2rem;
+  }
+
+  .bm-eyebrow {
+    margin: 0 0 0.75rem;
+    color: #8b5f1b;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .bm-hero h1 {
+    margin: 0;
+    max-width: 12ch;
+    color: #2a221c;
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 700;
+    line-height: 0.98;
+  }
+
+  .bm-subtitle {
+    max-width: 42rem;
+    margin: 1.25rem 0 0;
+    color: #5e5148;
+    font-size: clamp(1.05rem, 2vw, 1.35rem);
+    line-height: 1.55;
+  }
+
+  .bm-hero-image {
+    margin: 0;
+  }
+
+  .bm-hero-image a,
+  .bm-inline-sample a {
+    display: block;
+    background: #1d1712;
+  }
+
+  .bm-hero-image img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+  }
+
+  .bm-hero-image figcaption {
+    margin-top: 0.65rem;
+    color: #7a6f66;
+    font-size: 0.83rem;
+    text-align: center;
+  }
+
+  .bm-article {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 0 1.5rem 2rem;
+  }
+
+  .bm-section {
+    clear: both;
+    padding: 2.15rem 0 1.35rem;
+  }
+
+  .bm-section-heading {
+    display: flex;
+    gap: 0.8rem;
+    align-items: baseline;
+  }
+
+  .bm-section-heading h2 {
+    margin: 0;
+    color: #332821;
+    font-size: clamp(1.55rem, 3vw, 2.3rem);
+    font-weight: 600;
+    line-height: 1.18;
+  }
+
+  .bm-section-rule {
+    height: 1px;
+    margin: 0.75rem 0 1.35rem;
+    background: linear-gradient(90deg, rgba(139, 95, 27, 0.35), rgba(139, 95, 27, 0));
+  }
+
+  .bm-copy p {
+    margin: 0 0 1.1rem;
+    color: #342c26;
+    font-size: 1.04rem;
+    line-height: 1.78;
+  }
+
+  .bm-inline-sample {
+    float: right;
+    width: min(21rem, 45%);
+    margin: 0.25rem 0 1.2rem 1.5rem;
+    border: 1px solid #ded3c7;
+    background: #fbf7f1;
+  }
+
+  .bm-inline-sample:nth-of-type(even) {
+    float: left;
+    margin: 0.25rem 1.5rem 1.2rem 0;
+  }
+
+  .bm-inline-sample img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+
+  .bm-inline-sample figcaption {
+    padding: 0.9rem;
+    color: #4a3e35;
+    font-size: 0.86rem;
+    line-height: 1.5;
+  }
+
+  .bm-inline-sample strong,
+  .bm-inline-sample span {
+    display: block;
+  }
+
+  .bm-inline-sample strong {
+    color: #2e261f;
+    font-size: 1rem;
+  }
+
+  .bm-inline-sample span {
+    margin: 0.1rem 0 0.45rem;
+    color: #8b5f1b;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .bm-inline-sample p {
+    margin: 0 0 0.65rem;
+  }
+
+  .bm-inline-sample blockquote {
+    margin: 0.7rem 0 0;
+    padding-left: 0.75rem;
+    border-left: 2px solid #c9b79e;
+    color: #5e5148;
+    font-size: 0.82rem;
+    font-style: italic;
+  }
+
+  @media (max-width: 820px) {
+    .bm-hero {
+      grid-template-columns: 1fr;
+      padding-top: 2.25rem;
+    }
+
+    .bm-hero h1 {
+      max-width: none;
+      font-size: clamp(2.6rem, 15vw, 4.6rem);
+    }
+
+    .bm-hero-image img {
+      aspect-ratio: 16 / 10;
+    }
+
+    .bm-inline-sample,
+    .bm-inline-sample:nth-of-type(even) {
+      float: none;
+      width: 100%;
+      margin: 0 0 1.4rem;
+    }
+  }
+</style>

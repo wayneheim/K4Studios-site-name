@@ -649,11 +649,11 @@ export const siteNav = [
       ]
     },
     {
-      "label": "News & Awards",
-      "href": "/News-Awards",
-      "code": "O-S1",
-      "slug": "news--awards",
-      "type": "collection"
+      "label": "Picture Shows",
+      "href": "/Other/Shows",
+      "code": "O-S6",
+      "slug": "shows",
+      "type": "section"
     },
     {
       "label": "Series & Editions",
@@ -663,98 +663,68 @@ export const siteNav = [
       "type": "collection"
     },
     {
+      "label": "News & Awards",
+      "href": "/News-Awards",
+      "code": "O-S1",
+      "slug": "news--awards",
+      "type": "collection"
+    },
+    {
+      "label": "Blog",
+      "href": "/Blog",
+      "code": "O-S5",
+      "slug": "blog",
+      "type": "section"
+    },
+    {
+      "label": "Videos",
+      "href": "/Videos",
+      "code": "O-S5v",
+      "slug": "videos",
+      "type": "section"
+    },
+    {
+      "label": "What Is a One-Image Movie?",
+      "href": "/Other/One-Image-Movie",
+      "code": "O-S5a",
+      "slug": "one-image-movie",
+      "type": "section"
+    },
+    {
       "label": "Historical Reenactment Photography",
       "href": "/Historical-Reenactment-Photography",
       "code": "O-S3",
       "slug": "historical-reenactment-photography",
       "type": "collection"
     },
-      {
-        "label": "Blog",
-        "href": "/Blog",
-        "code": "O-S5",
-        "slug": "blog",
-        "type": "section"
-      },
-      {
-        "label": "Videos",
-        "href": "/Videos",
-        "code": "O-S5v",
-        "slug": "videos",
-        "type": "section"
-      },
-      {
-        "label": "Seeing",
-        "href": "/Other/Seeing",
-        "code": "O-S5b",
-        "slug": "seeing",
-        "type": "section"
-      },
-      {
-        "label": "Narrative Art",
-        "href": "/Other/Narrative-Art",
-        "code": "O-S5c",
-        "slug": "narrative-art",
-        "type": "section"
-      },
-      {
-        "label": "Narrative Vacuum",
-        "href": "/Other/Narrative-Vacuum",
-        "code": "O-S5d",
-        "slug": "narrative-vacuum",
-        "type": "section"
-      },
-      {
-        "label": "What Is a One-Image Movie?",
-        "href": "/Other/One-Image-Movie",
-        "code": "O-S5a",
-        "slug": "one-image-movie",
-        "type": "section"
-      },
-      {
-        "label": "Picture Shows",
-        "href": "/Other/Shows",
-        "code": "O-S6",
-        "slug": "shows",
-        "type": "section"
-      },
-      {
-        "label": "Interior Design Art",
-        "href": "/Western-Interior-Design-Art",
-        "code": "O-S7",
-        "slug": "interior-design-art",
-        "type": "collection",
-        "children": [
-          {
-            "label": "Western Interior Design Art",
-            "href": "/Western-Interior-Design-Art",
-            "code": "O-S7-Ss1",
-            "slug": "western-interior-design-art",
-            "type": "section"
-          },
-          {
-            "label": "Modern Western Interior Design Art",
-            "href": "/Modern-Western-Interior-Design-Art",
-            "code": "O-S7-Ss2",
-            "slug": "modern-western-interior-design-art",
-            "type": "section"
-          },
-          {
-            "label": "Rustic Western Interior Design Art",
-            "href": "/Rustic-Western-Interior-Design-Art",
-            "code": "O-S7-Ss3",
-            "slug": "rustic-western-interior-design-art",
-            "type": "section"
-          },
-          {
-            "label": "Western Wall Art for Interior Designers",
-            "href": "/Western-Wall-Art-for-Interior-Designers",
-            "code": "O-S7-Ss4",
-            "slug": "western-wall-art-for-interior-designers",
-            "type": "section"
-          }
-        ]
-      },
+    {
+      "label": "The Better Mousetrap",
+      "href": "/Other/Better-Mousetrap",
+      "code": "O-S5m",
+      "slug": "better-mousetrap",
+      "type": "section"
+    },
+    {
+      "label": "Seeing",
+      "href": "/Other/Seeing",
+      "code": "O-S5b",
+      "slug": "seeing",
+      "type": "section"
+    },
+    {
+      "label": "Narrative Art",
+      "href": "/Other/Narrative-Art",
+      "code": "O-S5c",
+      "slug": "narrative-art",
+      "type": "section"
+    },
+    {
+      "label": "Narrative Vacuum",
+      "href": "/Other/Narrative-Vacuum",
+      "code": "O-S5d",
+      "slug": "narrative-vacuum",
+      "type": "section"
+    },
     
   ],
   "code": "O",
