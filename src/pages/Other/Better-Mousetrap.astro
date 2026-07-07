@@ -70,7 +70,7 @@ const storyPreview = (value = "", limit = 2) =>
   value
     .split(/\n{2,}/)
     .map((paragraph) => paragraph.trim())
-    .filter(Boolean)
+    .filter((paragraph) => paragraph && !/(?:©|Â©|\(c\)|copyright)/i.test(paragraph))
     .slice(0, limit);
 
 const samples = [
@@ -125,9 +125,9 @@ const sections = [
     id: "what-if",
     title: "What If",
     paragraphs: [
-      "What if the world was not flat? What if women could vote? What if you could travel faster than on horseback? What if, instead of accepting fate as handed to us, we went in search of something more, something to call our own? What if we went West?",
+      "What if the world wasn't flat? What if women could vote? What if you could travel faster than on horseback? What if, instead of accepting fate as handed to us, we went in search of something more, something to call our own? What if we went West?",
       "What if.",
-      "Those two words have been the launching point of so many discoveries, adventures, and untold sleepless nights, and quite frankly, the two words that have gotten me into more hot water than I care to admit.",
+      "Those two words have been the launching point of so many discoveries, adventures, and untold sleepless nights — and quite frankly, the two words that have gotten me into more hot water than I care to admit.",
       "The same words sent pioneers, inventors, and dreamers pushing into the unknown, headstrong and looking for answers, launching journeys well beyond the scope of anything they had imagined in the first place.",
       "These six letters have been a cornerstone and underlying current of my life for as long as I can remember. So when I began my own Western adventure, it seemed almost serendipity that this, too, began with those same two words.",
       "What if you could change how art speaks to people?",
@@ -143,19 +143,19 @@ const sections = [
     paragraphs: [
       "At the heart of it sits Billy.",
       "A child in the corner coloring with six crayons at once, looking up in confusion as the teacher proclaims, \"Everyone needs to stay in the lines, Billy.\"",
-      "To which every Billy replies: What if you did not?",
-      "A simple two-word defiant gesture of refusing to accept things at face value. Refusing to accept \"because that is the way things are done\" as explanation or purpose.",
+      "To which every Billy replies: What if you didn't?",
+      "A simple two-word defiant gesture of refusing to accept things at face value. Refusing to accept \"because that's the way things are done\" as explanation or purpose.",
       "The same two words behind discovery, invention, exploration, and art.",
       "This became the heart of my quest, my journey of discovery into the great frontier of Western art and narrative storytelling.",
       "Billy has always had teachers. The rule enforcers. Enforcers of rules that are meant to define and protect us, but often morph into guarding the gates and protecting themselves. Controlled by the gatekeepers. The ones who decide what counts, what medium is legitimate, what rules must be followed to get a gold star.",
       "In photography's early days, the established fine art community dismissed it. Not real art, they said. Just a mechanical copy of what the eye sees. No soul. No craft. No vision.",
       "And yet today, many of those same disciplines often painstakingly reproduce, almost verbatim, what the camera shows them.",
       "The gate moved.",
-      "Gatekeepers just do not like to mention it when it does.",
-      "Art was never meant to only be about how it is made or what it is made of. At its foundation, it was designed to be about what it does. What it asks. What it carries. What it says.",
+      "Gatekeepers just don't like to mention it when it does.",
+      "Art was never meant to only be about how it's made or what it's made of. At its foundation, it was designed to be about what it does. What it asks. What it carries. What it says.",
       "Composition. Design. Structure. Story. Key principles.",
       "The medium the artist chooses is the vehicle.",
-      "When we ask what a vehicle can carry instead of what it is called, the frontier can begin to open again."
+      "When we ask what a vehicle can carry instead of what it's called, the frontier can begin to open again."
     ]
   },
   {
@@ -163,14 +163,14 @@ const sections = [
     title: "The Better Mousetrap Question",
     sampleKey: "trail-hardened",
     paragraphs: [
-      "My own version of that frontier began in a place a lot less romantic than I would like to admit.",
-      "It started with what I thought was a simple question: How do you get a person to connect more deeply with an image? Could I make it personal? Could I get someone so far inside an image that they could not stop thinking about it? Could not walk away from it?",
+      "My own version of that frontier began in a place a lot less romantic than I'd like to admit.",
+      "It started with what I thought was a simple question: How do you get a person to connect more deeply with an image? Could I make it personal? Could I get someone so far inside an image that they couldn't stop thinking about it? Couldn't walk away from it?",
       "Because if I could crack that nut, I could sell anything.",
       "That better mousetrap question.",
       "Not exactly the kind of thing artists are supposed to admit out loud, but there it is.",
       "This is a discovery story. One that explores what we call art, how each medium has its own gates and rules, and how to get art to do something different.",
       "To ask something more.",
-      "How do you build a form of static art that does not feel static? Something real enough to relate to, but artistic enough to be beautiful.",
+      "How do you build a form of static art that doesn't feel static? Something real enough to relate to, but artistic enough to be beautiful.",
       "Not so painterly and expressive that it gets romanticized into something safe. Yet inviting enough to hold attention, while staying unresolved enough to invoke real questions.",
       "Open enough to demand resolution, but timeless enough to allow people to apply their own experiences and memories nearly two hundred years later.",
       "So, in my moment of solidarity with all the little Billys, I boldly answered: Why the hell not?",
@@ -214,21 +214,21 @@ const sections = [
     sampleKey: "color-of-conviction",
     paragraphs: [
       "A song can make you see something it never shows you. A bell ringing in the dark.",
-      "Lightfoot never shows the Edmund Fitzgerald going down. He gives you the hour. The cook. The meal that will not be served. The bell.",
+      "Lightfoot never shows the Edmund Fitzgerald going down. He gives you the hour. The cook. The meal that won't be served. The bell.",
       "Somewhere between those details, the listener's own mind follows the ship into the dark Lake Superior waters.",
-      "But a song walks a specific path and has no physical image. It can make you chase a picture, but it cannot further its message by handing you one to step into.",
-      "Literature can do the same thing with a closed door, a letter never opened, a character who looks away instead of answering. The reader feels the shape of what is missing and begins filling the silence with something of their own.",
+      "But a song walks a specific path and has no physical image. It can make you chase a picture, but it can't further its message by handing you one to step into.",
+      "Literature can do the same thing with a closed door, a letter never opened, a character who looks away instead of answering. The reader feels the shape of what's missing and begins filling the silence with something of their own.",
       "But what literature asks for is time. Pages. Trust. Duration. A willingness to build the image slowly inside your own head.",
       "Cinema can gather sound, light, motion, faces, music, and time into one experience that takes us down a path. A good film makes strangers matter in minutes. It makes a room breathe. It makes us feel a life we never lived.",
       "But much like music and literature, it also controls the trip. It tells us when to look, when to fear, what to hate, when to soften, what to understand.",
       "Definition is the cog that keeps the story wheel turning. It shepherds us with facts and answers, and in doing so, it decides which road we walk and how fast.",
       "Paintings can blend nostalgia and reality openly. They can turn facts of what may have been into gesture, memory, symbols, icons, and dreams. But in the process, the medium often announces itself before the moment gets a word in.",
-      "When you look at an oil painting, the first thing that registers is \"nice painting.\" The human mind likes to classify what it is looking at.",
+      "When you look at an oil painting, the first thing that registers is \"nice painting.\" The human mind likes to classify what it's looking at.",
       "\"This is an oil painting.\"",
       "\"This is a beautiful watercolor of...\"",
-      "Unlike other narrative works, the mind sees brushwork first. The sheen of oil. The bloom of watercolor. It already knows it is looking at a created thing.",
+      "Unlike other narrative works, the mind sees brushwork first. The sheen of oil. The bloom of watercolor. It already knows it's looking at a created thing.",
       "An artistic interpretation. One step back from reality.",
-      "The brain has already filed it as art, tradition, nostalgia, before the story underneath has had a chance to speak. You are already in the \"this is art\" bucket, a bucket fixed by definitions and ideals of how it is supposed to work.",
+      "The brain has already filed it as art, tradition, nostalgia, before the story underneath has had a chance to speak. You're already in the \"this is art\" bucket, a bucket fixed by definitions and ideals of how it's supposed to work.",
       "Photography presents the mind of the viewer with something none of the others can quite fake: witness.",
       "Even when staged, shaped, or transformed, some part of the mind still registers that something stood before the lens.",
       "Where painting is meant to be an interpretation, photography is gated by the rules of reality.",
@@ -243,16 +243,16 @@ const sections = [
     ]
   },
   {
-    id: "through-glass",
-    title: "Through the Looking Glass",
+    id: "reenactor-problem",
+    title: "The Reenactor Problem",
     sampleKey: "this-is-where-i-stand",
     paragraphs: [
       "Much of my work is historically based narrative art. I work with reenactors and living historians.",
-      "As a photographic subject, there is no shortage of images produced by people attending these events. Many are technically excellent, beautifully exposed, carefully cropped, capturing exact moments they witnessed.",
+      "As a photographic subject, there's no shortage of images produced by people attending these events. Many are technically excellent, beautifully exposed, carefully cropped, capturing exact moments they witnessed.",
       "But the gates and rules of \"photography is something real that happened\" wall off the journey into the moment. The human brain takes over and says: This is a nice picture of a reenactment. People putting on a show.",
       "I wanted something different from my work.",
       "Could I get people to engage and feel for the people like a movie? To wonder in the unspoken like literature? To feel the implied weight of a song?",
-      "I needed reality, ambiguity, artistic interpretation, story, context, and the invitation of wanting to know more, all in a way that let people let go of the present and step into the movie playing out before them in a single image.",
+      "I needed reality, ambiguity, artistic interpretation, story, context, and the invitation of wanting to know more — all in a way that let people let go of the present and step into the movie playing out before them in a single image.",
       "I needed to figure out how to reassemble the parts discovered in my autopsy and see if I could reach my goal.",
       "To get people to slow down. To detach from their lives. To inquire. To wonder. To become engaged enough to mentally step through the looking glass and into the image.",
       "Into the moment.",
@@ -265,15 +265,15 @@ const sections = [
     id: "painterly",
     title: "What the Painterly Process Does",
     paragraphs: [
-      "For some time now, my photography has become what I would call painterly. As a medical illustrator for over 35 years, I always assumed it was just my, as my mom used to say, \"you cannot leave well enough alone,\" approach to the problem.",
-      "But in this journey, I came to the conclusion that making them painterly does not just make them look different.",
+      "For some time now, my photography has become what I would call painterly. As a medical illustrator for over 35 years, I always assumed it was just my — as my mom used to say, \"you can't leave well enough alone\" — approach to the problem.",
+      "But in this journey, I came to the conclusion that making them painterly doesn't just make them look different.",
       "It breaks the reality of the moment just enough to do real cognitive work.",
       "While leaving enough photographic base to ground them in the realism of something lived, the painterly approach gives the viewer's mind permission to step inside the moment and explore.",
-      "Because my images do not fit into any real bucket, the viewer is left with only one option:",
+      "Because my images don't fit into any real bucket, the viewer is left with only one option:",
       "Push deeper into the image to try to discover what they are looking at.",
       "That lack of definition, that straddling of the line, becomes the thread that pulls a viewer further in. Past the easy answer. Into the space where the image refuses to fully explain itself.",
       "Like Alice, they have to go looking.",
-      "That is where discovery begins."
+      "That's where discovery begins."
     ]
   },
   {
@@ -281,7 +281,7 @@ const sections = [
     title: "The One-Image Movie",
     sampleKey: "three-wise-men",
     paragraphs: [
-      "What if the point was not to tell the person what to think at all?",
+      "What if the point wasn't to tell the person what to think at all?",
       "What if, instead of having each image cleanly answer the questions for the viewer, instead of closing the loop, I left it open?",
       "What if the viewer was the one who figured out where the story came from and where it was going to go next?",
       "The human mind hates the unresolved. It wants a closed loop. The questions answered.",
@@ -298,24 +298,24 @@ const sections = [
   },
   {
     id: "paid-forward",
-    title: "Giving History a Way to Pay Forward",
+    title: "Giving History a Way to Pay Its Lessons Forward",
     paragraphs: [
       "The story grows past the edge of the frame. Not because I filled in every answer, but because the viewer brings something I never could: their own memory, losses, instincts, and \"what would I do\" answers.",
       "Like the image of the bell tolling or the angry sea, or the events that led to this moment, once the viewer steps into the image, what finishes the story is no longer limited to what I put there.",
       "It becomes theirs, built for reasons that belong entirely to their own life.",
-      "That is where the work leaves the fully resolved behind.",
+      "That's where the work leaves the fully resolved behind.",
       "What started out as a question of how to make something harder to walk away from became my own Alice's discovery of stepping through the looking glass, where, in the end, she finds out more about herself in the process.",
       "My stories become a framework for discovery, not a destination.",
       "A form of historical currency paid forward to every viewer.",
       "The stories of the West are full of lessons. The impossible feats and great sacrifices. The people history moved too fast to name.",
       "What if art could carry those stories forward, not by lecturing, not by explaining, but by leaving just enough room for the person standing in front of the image to step inside and find something of themselves there?",
-      "My work is not about standing over people with a moral in my hand.",
-      "It is about planting a seed of discovery.",
+      "My work isn't about standing over people with a moral in my hand.",
+      "It's about planting a seed of discovery.",
       "Quietly creating the conditions and letting the viewer put the pieces together.",
-      "Because the missing ingredient was not simply another technique.",
+      "Because the missing ingredient wasn't simply another technique.",
       "It was what we ask of the viewer.",
       "And when we trust the viewer enough to let them step through, history can do something more than instruct.",
-      "It can return as meaning, memory, and reflection, not as a lecture, but as something personally found.",
+      "It can return as meaning, memory, and reflection — not as a lecture, but as something personally found.",
       "Giving history a way to keep paying its lessons forward."
     ]
   }
@@ -606,9 +606,10 @@ const breadcrumb = "Other > The Better Mousetrap";
 
   .bm-inline-sample blockquote {
     margin: 0.7rem 0 0;
-    padding-left: 0.75rem;
-    border-left: 2px solid #c9b79e;
-    color: #5e5148;
+    padding: 0.7rem 0.8rem 0.75rem;
+    border-left: 3px solid #a17024;
+    background: #f7f2eb;
+    color: #4f4036;
     font-size: 0.82rem;
     font-style: italic;
   }
