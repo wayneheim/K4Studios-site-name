@@ -405,7 +405,16 @@ const breadcrumb = "Other > The Better Mousetrap";
         return (
           <section id={section.id} class="bm-section">
             <header class="bm-section-heading">
-              <h2>{section.title}</h2>
+              <h2>
+                {section.id === "paid-forward" ? (
+                  <>
+                    Giving History a Way to<br />
+                    Pay Its Lessons Forward
+                  </>
+                ) : (
+                  section.title
+                )}
+              </h2>
             </header>
             <div class="bm-section-rule" aria-hidden="true"></div>
 
@@ -427,7 +436,16 @@ const breadcrumb = "Other > The Better Mousetrap";
 
             <div class="bm-copy">
               {section.paragraphs.map((paragraph) => (
-                <p>{paragraph}</p>
+                <p
+                  class={
+                    paragraph.startsWith("It can return as meaning, memory, and reflection") ||
+                    paragraph.startsWith("And when we trust the viewer enough to let them step through")
+                      ? "bm-tight-line"
+                      : undefined
+                  }
+                >
+                  {paragraph}
+                </p>
               ))}
             </div>
           </section>
@@ -552,6 +570,10 @@ const breadcrumb = "Other > The Better Mousetrap";
     color: #342c26;
     font-size: 1.04rem;
     line-height: 1.78;
+  }
+
+  .bm-copy p.bm-tight-line {
+    letter-spacing: -0.006em;
   }
 
   .bm-inline-sample {
