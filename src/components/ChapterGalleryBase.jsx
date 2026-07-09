@@ -740,6 +740,53 @@ export default function ChapterGalleryBase({
   const gridHref = normalizedBasePath
     ? `${normalizedBasePath}?${themeSlug ? `theme=${encodeURIComponent(themeSlug)}&` : ''}view=grid`
     : null;
+  const relatedImageHref = (() => {
+    if (!currentImageId) return null;
+
+    const match = sitemapMatches.find(m => m.a.includes(currentImageId));
+    let relatedUrl = match?.b || null;
+
+    if (!relatedUrl && basePath) {
+      const fullPath = `${basePath}/${currentImageId}`;
+      relatedUrl = getSisterGalleryPath(fullPath);
+    }
+
+    if (!relatedUrl) return null;
+
+    return relatedUrl.startsWith('http')
+      ? new URL(relatedUrl).pathname
+      : relatedUrl;
+  })();
+  const journeyLinkStyle = {
+    color: '#5f1713',
+    textDecoration: 'none',
+    transition: 'color 0.18s ease, text-decoration-color 0.18s ease, opacity 0.18s ease',
+    textUnderlineOffset: '0.18em'
+  };
+  const journeyLinkHoverHandlers = {
+    onMouseEnter: (e) => {
+      e.currentTarget.style.color = '#35100d';
+      e.currentTarget.style.textDecoration = 'underline';
+      e.currentTarget.style.textDecorationColor = 'rgba(53, 16, 13, 0.7)';
+      e.currentTarget.style.opacity = '1';
+    },
+    onMouseLeave: (e) => {
+      e.currentTarget.style.color = '#5f1713';
+      e.currentTarget.style.textDecoration = 'none';
+      e.currentTarget.style.textDecorationColor = 'transparent';
+      e.currentTarget.style.opacity = '1';
+    },
+    onFocus: (e) => {
+      e.currentTarget.style.color = '#35100d';
+      e.currentTarget.style.textDecoration = 'underline';
+      e.currentTarget.style.textDecorationColor = 'rgba(53, 16, 13, 0.7)';
+    },
+    onBlur: (e) => {
+      e.currentTarget.style.color = '#5f1713';
+      e.currentTarget.style.textDecoration = 'none';
+      e.currentTarget.style.textDecorationColor = 'transparent';
+    }
+  };
   const exitHref = basePath || null;
   const currentChapterTitle = sanitizeRepeatedSeoCopy(
     galleryData[currentIndex]?.meta?.ogTitle ||
@@ -2346,47 +2393,142 @@ export default function ChapterGalleryBase({
                               </a>
                             );
                           })()}
-                          
-                          {chapterDoorwayLink && (
-                            <a
-                              href={chapterDoorwayLink.href}
-                              className="chapter-doorway-link"
-                              onClick={() => track("chapter_doorway_click", {
-                                imageId: galleryData[currentIndex]?.id,
-                                pageType: 'image',
-                                trigger: 'more_about_closing_link',
-                                doorwayHref: chapterDoorwayLink.href,
-                                doorwayTheme: chapterDoorwayLink.theme,
-                              })}
+
+                          {(chapterDoorwayLink || collectionHref || relatedImageHref) && (
+                            <nav
+                              className="image-journey-footer"
+                              aria-label="Related image navigation"
                               style={{
-                                display: 'block',
                                 marginTop: '1rem',
-                                paddingTop: '0.75rem',
-                                borderTop: '1px dashed rgba(200, 190, 180, 0.4)',
-                                fontSize: '0.82rem',
-                                color: '#7b1e1e',
-                                textDecoration: 'none',
-                                fontFamily: "'Glegoo', serif",
-                                textAlign: 'right'
+                                fontFamily: "'Glegoo', serif"
                               }}
                             >
-                              {chapterDoorwayLink.label}
-                            </a>
-                          )}
-
-                          {chapterDoorwayLink && (
-                            <hr
-                              aria-hidden="true"
-                              style={{
-                                margin: '0.75rem 0 0.6rem',
-                                border: 0,
-                                borderTop: '1px dashed rgba(200, 190, 180, 0.4)'
-                              }}
-                            />
+                              <div
+                                style={{
+                                  fontSize: '0.62rem',
+                                  color: '#9d9087',
+                                  letterSpacing: '0.11em',
+                                  textTransform: 'uppercase',
+                                  lineHeight: '1',
+                                  marginBottom: '0.45rem'
+                                }}
+                              >
+                                Expand Your Journey
+                              </div>
+                              <div
+                                style={{
+                                  display: 'flex',
+                                  flexDirection: 'column',
+                                  alignItems: 'center',
+                                  gap: '0.45rem',
+                                  marginLeft: 'auto',
+                                  padding: '0.65rem 0 0.6rem',
+                                  borderTop: '1px dashed rgba(200, 190, 180, 0.4)',
+                                  borderBottom: '1px dashed rgba(200, 190, 180, 0.4)',
+                                  width: '100%'
+                                }}
+                              >
+                                {chapterDoorwayLink && (
+                                  <a
+                                    href={chapterDoorwayLink.href}
+                                    className="chapter-doorway-link"
+                                    {...journeyLinkHoverHandlers}
+                                    onClick={() => track("chapter_doorway_click", {
+                                      imageId: galleryData[currentIndex]?.id,
+                                      pageType: 'image',
+                                      trigger: 'more_about_closing_link',
+                                      doorwayHref: chapterDoorwayLink.href,
+                                      doorwayTheme: chapterDoorwayLink.theme,
+                                    })}
+                                    style={{
+                                      ...journeyLinkStyle,
+                                      fontSize: '0.82rem',
+                                      textAlign: 'center',
+                                      alignSelf: 'center'
+                                    }}
+                                  >
+                                    {chapterDoorwayLink.label}
+                                  </a>
+                                )}
+                              {(collectionHref || relatedImageHref) && (
+                                <>
+                                <div
+                                  aria-hidden="true"
+                                  style={{
+                                    width: '100%',
+                                    borderTop: '1px dashed rgba(200, 190, 180, 0.32)'
+                                  }}
+                                />
+                                <div
+                                  style={{
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                    alignItems: 'center',
+                                    gap: '0.55rem',
+                                    flexWrap: 'wrap',
+                                    fontSize: '0.75rem'
+                                  }}
+                                >
+                                  {collectionHref && (
+                                    <a
+                                      href={collectionHref}
+                                      className="collection-archive-link"
+                                      {...journeyLinkHoverHandlers}
+                                      onClick={() => track("collection_archive_click", {
+                                        imageId: galleryData[currentIndex]?.id,
+                                        pageType: 'image',
+                                        trigger: 'more_about_archive_link',
+                                        collectionHref,
+                                      })}
+                                      style={{
+                                        ...journeyLinkStyle
+                                      }}
+                                    >
+                                      {"<- Complete Gallery"}
+                                    </a>
+                                  )}
+                                  {collectionHref && relatedImageHref && (
+                                    <span
+                                      aria-hidden="true"
+                                      style={{
+                                        color: '#8f7d72',
+                                        margin: '0 0.35rem'
+                                      }}
+                                    >
+                                      ||
+                                    </span>
+                                  )}
+                                  {relatedImageHref && (
+                                    <a
+                                      href={relatedImageHref}
+                                      className="cross-image-discovery-link"
+                                      aria-label="Explore another image from the K4 Studios collection"
+                                      {...journeyLinkHoverHandlers}
+                                      onClick={() => {
+                                        track("sister_image_click", { imageId: currentImageId, pageType: 'image', trigger: 'explore_more_photos' });
+                                        emitActionPixel("sister_image_click", currentImageId, {
+                                          sourceLayer: "sister_image_click_pixel_v1",
+                                          pageType: "image",
+                                          trigger: "explore_more_photos"
+                                        });
+                                      }}
+                                      style={{
+                                        ...journeyLinkStyle,
+                                        textAlign: 'right'
+                                      }}
+                                    >
+                                      Explore More Photos {"->"}
+                                    </a>
+                                  )}
+                                </div>
+                                </>
+                              )}
+                              </div>
+                            </nav>
                           )}
 
                           {/* Cross-image discovery - uses sitemapMatches as an anti-orphan crawl mesh */}
-                          {(() => {
+                          {false && (() => {
                             const currentId = galleryData[currentIndex]?.id;
                             if (!currentId) return null;
                             
