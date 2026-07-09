@@ -38,6 +38,33 @@ const introBlurb = [
   "Every image in this work begins from the same place: a moment left incomplete, so the viewer has room to finish it. What follows is one way of navigating that body of work - grouped not by subject alone, but by the different questions each collection asks of the person looking. Start wherever pulls at you. The through-line will still be there when you arrive.",
 ];
 
+const guidePages = [
+  {
+    href: "/Blog/what-is-western-art",
+    label: "What Is Western Art?",
+  },
+  {
+    href: "/Blog/what-is-western-fine-art-photography",
+    label: "What Is Western Fine Art Photography?",
+  },
+  {
+    href: "/Blog/what-is-painterly-photography",
+    label: "What Is Painterly Photography?",
+  },
+  {
+    href: "/Blog/what-is-narrative-photography",
+    label: "What Is Narrative Photography?",
+  },
+  {
+    href: "/Blog/what-is-cinematic-western-art",
+    label: "What Is Cinematic Western Art?",
+  },
+  {
+    href: "/Blog/what-is-western-black-and-white-photography",
+    label: "What Is Western Black and White Photography?",
+  },
+];
+
 const clusterMeta: Record<DoorwayClusterId, { eyebrow: string; heading: string; blurb: string[] }> = {
   D: {
     eyebrow: "Cluster D",
@@ -177,6 +204,25 @@ const structuredData = {
             </nav>
           </section>
         ))}
+
+        <section class="collections-cluster collections-guides" aria-labelledby="collections-guides-heading">
+          <div class="collections-cluster__text">
+            <p class="collections-cluster__eyebrow">Guides</p>
+            <h3 id="collections-guides-heading">Understanding the Work</h3>
+            <div class="collections-cluster__copy-slot" data-copy-slot="guides-blurb">
+              <p>
+                These short cornerstone guides define the ideas behind the collections: Western art, painterly photography,
+                narrative structure, cinematic framing, and the role of black and white in the finished work.
+              </p>
+            </div>
+          </div>
+
+          <nav class="collections-cluster__links" aria-label="Western art and photography guide pages">
+            {guidePages.map((page) => (
+              <a href={page.href}>{page.label}</a>
+            ))}
+          </nav>
+        </section>
       </div>
     </section>
   </main>
