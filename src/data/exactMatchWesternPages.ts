@@ -435,7 +435,7 @@ export const westernCowboyPicturesPage = {
   collectorEyebrow: 'Western Cowboy Archive',
   collectorHeading: 'Browse Western Cowboy Pictures by Collection',
   collectorText:
-    'Use this page as a simple visual doorway into Wayne Heim\'s Western cowboy archive: color portraits, black and white studies, narrative scenes, and selected fine art prints built for collectors.',
+    'Use this page as a simple visual entry into Wayne Heim\'s Western cowboy archive: color portraits, black and white studies, narrative scenes, and selected fine art prints built for collectors.',
   printLinks: [
     { href: '/Western-Photography-Prints', label: 'Western photography prints' },
     { href: '/cowboy-art-prints', label: 'Cowboy art prints' },
@@ -459,7 +459,7 @@ export const westernCowboyPicturesPage = {
     },
     {
       q: 'How is this page different from the Western Cowboy Photography hub?',
-      a: ['This page is a direct commercial doorway for picture-search intent. The broader hub carries more category authority and deeper explanatory structure.'],
+      a: ['This page is a direct visual route for picture-search intent. The broader hub carries more category authority and deeper explanatory structure.'],
     },
   ],
 };
@@ -871,7 +871,7 @@ export const cowboyThemedArtworkPage = {
   metaDescription:
     'Cowboy themed artwork by Wayne Heim, using painterly Western photography, frontier portraiture, cowboy subjects, and collector-focused fine art print presentation.',
   intro:
-    'Cowboy themed artwork can sound like decor language, but K4 Studios uses it as a doorway into stronger Western fine art. Wayne Heim\'s cowboy images are built from real photographic subjects, painterly atmosphere, and narrative restraint.',
+    'Cowboy themed artwork can sound like decor language, but K4 Studios uses it as an entry point into stronger Western fine art. Wayne Heim\'s cowboy images are built from real photographic subjects, painterly atmosphere, and narrative restraint.',
   breadcrumbLabel: 'Cowboy Themed Artwork',
   schemaAbout: [
     'Cowboy Themed Artwork',
@@ -921,7 +921,7 @@ export const cowboyThemedArtworkPage = {
       ],
     },
     {
-      h2: 'A Browse Doorway into Cowboy Fine Art',
+      h2: 'A Browse Route into Cowboy Fine Art',
       paragraphs: [
         'This page links into cowboy portraits, cowboy fine art prints, Western cowboy art, and print options so theme-based visitors can move naturally toward the collection.',
       ],
@@ -1030,7 +1030,7 @@ export const westernArtPrintsPage = {
   collectorEyebrow: 'Collector Print Entry',
   collectorHeading: 'Western Art Prints, Limited Editions, and Series',
   collectorText:
-    'Use this page as a print-first doorway into K4 Studios: Western narratives, cowboy portraits, Native American portrait work, series context, limited-edition language, and archival presentation for collectors.',
+    'Use this page as a print-first entry into K4 Studios: Western narratives, cowboy portraits, Native American portrait work, series context, limited-edition language, and archival presentation for collectors.',
   printLinks: [
     { href: '/Western-Photography-Prints', label: 'Western photography prints' },
     { href: '/Other/Print-Options', label: 'Fine art print options' },

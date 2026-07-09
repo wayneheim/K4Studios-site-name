@@ -98,7 +98,7 @@ export const videos: K4Video[] = [
     thumbnailAlt: "Vertical Western fine art photography Short titled Only Path Forward.",
     dek: "A short-form companion to Only Path Forward, built as a vertical Western story fragment from painterly fine art photography.",
     description:
-      "This K4 Studios Short carries the Only Path Forward story into a vertical reel format, using painterly Western photography, rhythm, and suggestion to create a compact One-Image Movie style moment. It is designed as a fast story doorway into Wayne Heim's larger Western fine art photography work.",
+      "This K4 Studios Short carries the Only Path Forward story into a vertical reel format, using painterly Western photography, rhythm, and suggestion to create a compact One-Image Movie style moment. It is designed as a fast story entry into Wayne Heim's larger Western fine art photography work.",
     relatedLinks: [
       { label: "Full Only Path Forward Video", href: "/Videos/only-path-forward" },
       { label: "What Is a One-Image Movie?", href: "/Other/One-Image-Movie" },

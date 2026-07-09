@@ -6,7 +6,7 @@ export const storySections: DoorwayStorySection[] = [
     paragraphs: [
       'The frame holds because it refuses to settle. A before and after are both present, but neither is handed to you.',
       'In <a href="/wayne-heim-western-fine-art-photography" style="color:#8b5a2b; text-decoration:underline;">Wayne Heim\'s</a> work, gesture, spacing, and directional light carry that pressure without drifting into illustration or explanation.',
-      'That is the doorway into the <em>One-Image Movie</em>: the image starts the scene, but title, authored writing, atmosphere, and viewer participation keep it moving in the viewer\'s head.',
+      'That is the entry into the <em>One-Image Movie</em>: the image starts the scene, but title, authored writing, atmosphere, and viewer participation keep it moving in the viewer\'s head.',
     ],
   },
   {

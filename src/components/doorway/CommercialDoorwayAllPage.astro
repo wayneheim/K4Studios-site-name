@@ -884,7 +884,7 @@ const faqRight = faqItems.slice(faqSplitIndex);
               <a
                 href={linkUrl}
                 class="ssr-card-link"
-                data-doorway-image-link
+                data-context-image-link
                 data-image-id={item.id}
                 data-gallery-id={contentBasePath}
                 data-artwork-number={idx + 1}
@@ -1035,7 +1035,7 @@ const faqRight = faqItems.slice(faqSplitIndex);
                       <a
                         href={linkUrl}
                         class="ssr-card-link"
-                        data-doorway-image-link
+                        data-context-image-link
                         data-image-id={item.id}
                         data-gallery-id={section.galleryPath}
                         data-artwork-number={idx + 1}
@@ -3967,7 +3967,7 @@ const faqRight = faqItems.slice(faqSplitIndex);
     })();
 
     (() => {
-      const links = Array.from(document.querySelectorAll('[data-doorway-image-link]'));
+      const links = Array.from(document.querySelectorAll('[data-context-image-link]'));
       if (links.length === 0) return;
 
       const trackDoorwayImageClick = (link) => {
@@ -4085,7 +4085,7 @@ const faqRight = faqItems.slice(faqSplitIndex);
           closeAll(card);
           card.classList.toggle('is-notes-open', willOpen);
           if (willOpen) {
-            const link = card.querySelector('[data-doorway-image-link]');
+            const link = card.querySelector('[data-context-image-link]');
             const imageId = link?.getAttribute('data-image-id') || null;
             const galleryId = link?.getAttribute('data-gallery-id') || window.location.pathname;
             if (typeof window.k4track === 'function') {

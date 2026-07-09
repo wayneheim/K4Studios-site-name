@@ -697,7 +697,7 @@ cowboyPicturesCommercialHub: {
 
 westernPhotosCommercialHub: {
   path: "/western-photos",
-  def: "The plain-language visual doorway for Western photos and Western pictures by Wayne Heim, routing broad image-search visitors into cowboy portraits, frontier scenes, landscapes, black and white work, and deeper K4 collector paths.",
+  def: "The plain-language visual entry for Western photos and Western pictures by Wayne Heim, routing broad image-search visitors into cowboy portraits, frontier scenes, landscapes, black and white work, and deeper K4 collector paths.",
   fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
   landingPhrases: [
     { phrase: "western photos", rating: 7, use: true, link: "/western-photos" },

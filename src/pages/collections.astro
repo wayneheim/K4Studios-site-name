@@ -67,42 +67,42 @@ const guidePages = [
 
 const clusterMeta: Record<DoorwayClusterId, { eyebrow: string; heading: string; blurb: string[] }> = {
   D: {
-    eyebrow: "Cluster D",
+    eyebrow: "Western Art",
     heading: "Western Art & Cowboy Artwork",
     blurb: [
       "The most direct entry point into the work: cowboys, horses, open country, rendered with the same narrative grammar that carried Russell and Remington. This is where the argument starts - that a single frame can hold a story most artists now need a series to tell.",
     ],
   },
   A: {
-    eyebrow: "Cluster A",
+    eyebrow: "Historical West",
     heading: "Historical & Vintage West",
     blurb: [
       "The 1800s frontier as lived-in history rather than backdrop - worn hands, weathered structures, the particular light of a country before it was settled. These pieces lean on research and reenactment as much as photography, built alongside historians and living-history collaborators to get the details right.",
     ],
   },
   B: {
-    eyebrow: "Cluster B",
+    eyebrow: "Interiors",
     heading: "Western Interior Design",
     blurb: [
       "Where the work leaves the gallery wall and enters a room. These collections are organized around scale, palette, and mood - rustic, modern, or somewhere between - for anyone building a space around a single, considered piece rather than filling it with decoration.",
     ],
   },
   C: {
-    eyebrow: "Cluster C",
+    eyebrow: "Photography",
     heading: "Western Photography Collections",
     blurb: [
       'For viewers thinking about the medium itself, not just the subject. This is the deepest cluster in the archive - portraiture, storytelling technique, and the fine-art print process each get their own vantage point on how a photograph earns the word "art."',
     ],
   },
   E: {
-    eyebrow: "Cluster E",
+    eyebrow: "Tonal Work",
     heading: "Black & White and Painterly Western Work",
     blurb: [
       "Color removed, or paint-layered until the photograph stops announcing itself as one. Both approaches do the same work from different directions: pulling the image further from documentation and closer to memory.",
     ],
   },
   F: {
-    eyebrow: "Cluster F",
+    eyebrow: "Special Subjects",
     heading: "Special Subject Collections",
     blurb: [
       "Two collections that stand apart from the rest by focus rather than by form: the women who shaped the frontier as fully as the men usually pictured in it, and the fine art record of WWII, where the same narrative instinct is turned toward a different chapter of history. Neither fits neatly into the other groupings above - that's exactly why they get their own room.",
@@ -126,25 +126,91 @@ const clusters: ClusterShell[] = relatedCollectionsClusterOrder.map((clusterId) 
 });
 
 const breadcrumbHtml = '<a href="/">Home</a> | <span>Collections</span>';
-const title = "Collections - K4 Studios";
+const title = "Western Art Collections - K4 Studios";
 const description =
-  "Working shell for the K4 Studios collections hub, organizing Western fine art doorway collections into thematic groups.";
+  "Browse K4 Studios Western art collections by subject, style, and purpose, including cowboy art, historical Western photography, interior design art, black and white work, and guide pages.";
+const siteUrl = "https://www.k4studios.com";
+const pageUrl = `${siteUrl}/collections`;
+const toAbsoluteUrl = (href: string) => href.startsWith("http") ? href : `${siteUrl}${href}`;
 const heroImage = { id: "i-DJMTZ8z" };
 const heroImageContext = { galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White" };
 const heroSrc = getSemanticImageUrl(heroImage, heroImageContext, "m");
 const heroSrcSet = `${getSemanticImageUrl(heroImage, heroImageContext, "s")} 400w, ${heroSrc} 720w`;
+const collectionListItems = clusters.flatMap((cluster) => cluster.pages).map((page, index) => ({
+  "@type": "ListItem",
+  position: index + 1,
+  name: page.label,
+  url: toAbsoluteUrl(page.href),
+}));
+const guideListItems = guidePages.map((page, index) => ({
+  "@type": "ListItem",
+  position: index + 1,
+  name: page.label,
+  url: toAbsoluteUrl(page.href),
+}));
 const structuredData = {
   "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "@id": "https://www.k4studios.com/collections#collectionpage",
-  url: "https://www.k4studios.com/collections",
-  name: "Collections",
-  isPartOf: {
-    "@type": "WebSite",
-    "@id": "https://www.k4studios.com/#website",
-    name: "K4 Studios",
-    url: "https://www.k4studios.com/",
-  },
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      name: "K4 Studios",
+      url: `${siteUrl}/`,
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${pageUrl}#breadcrumb`,
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: `${siteUrl}/`,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Western Art Collections",
+          item: pageUrl,
+        },
+      ],
+    },
+    {
+      "@type": "ItemList",
+      "@id": `${pageUrl}#collection-list`,
+      name: "K4 Studios Western Art Collection Pages",
+      itemListOrder: "https://schema.org/ItemListOrderAscending",
+      numberOfItems: collectionListItems.length,
+      itemListElement: collectionListItems,
+    },
+    {
+      "@type": "ItemList",
+      "@id": `${pageUrl}#guide-list`,
+      name: "Western Art and Photography Guide Pages",
+      itemListOrder: "https://schema.org/ItemListOrderAscending",
+      numberOfItems: guideListItems.length,
+      itemListElement: guideListItems,
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": `${pageUrl}#collectionpage`,
+      url: pageUrl,
+      name: "Western Art Collections",
+      description,
+      isPartOf: {
+        "@id": `${siteUrl}/#website`,
+      },
+      breadcrumb: {
+        "@id": `${pageUrl}#breadcrumb`,
+      },
+      mainEntity: {
+        "@id": `${pageUrl}#collection-list`,
+      },
+      hasPart: {
+        "@id": `${pageUrl}#guide-list`,
+      },
+    },
+  ],
 };
 ---
 
@@ -182,22 +248,22 @@ const structuredData = {
 
     <section class="collections-index" aria-labelledby="collections-index-heading">
       <div class="collections-index__heading">
-        <p>Doorway Collection Groups</p>
+        <p>Collection Groups</p>
         <h2 id="collections-index-heading">Browse by Collection Family</h2>
       </div>
 
-      <div class="collections-clusters">
+      <div class="collections-groups">
         {clusters.map((cluster) => (
-          <section class="collections-cluster" aria-labelledby={`collections-cluster-${cluster.id}`}>
-            <div class="collections-cluster__text">
-              <p class="collections-cluster__eyebrow">{cluster.eyebrow}</p>
-              <h3 id={`collections-cluster-${cluster.id}`}>{cluster.heading}</h3>
-              <div class="collections-cluster__copy-slot" data-copy-slot={`cluster-${cluster.id.toLowerCase()}-blurb`}>
+          <section class="collections-group" aria-labelledby={`collections-group-${cluster.id}`}>
+            <div class="collections-group__text">
+              <p class="collections-group__eyebrow">{cluster.eyebrow}</p>
+              <h3 id={`collections-group-${cluster.id}`}>{cluster.heading}</h3>
+              <div class="collections-group__copy-slot" data-copy-slot={`group-${cluster.id.toLowerCase()}-blurb`}>
                 {cluster.blurb.map((paragraph) => <p>{paragraph}</p>)}
               </div>
             </div>
 
-            <nav class="collections-cluster__links" aria-label={`${cluster.heading} pages`}>
+            <nav class="collections-group__links" aria-label={`${cluster.heading} pages`}>
               {cluster.pages.map((page) => (
                 <a href={page.href}>{page.label}</a>
               ))}
@@ -205,11 +271,11 @@ const structuredData = {
           </section>
         ))}
 
-        <section class="collections-cluster collections-guides" aria-labelledby="collections-guides-heading">
-          <div class="collections-cluster__text">
-            <p class="collections-cluster__eyebrow">Guides</p>
+        <section class="collections-group collections-guides" aria-labelledby="collections-guides-heading">
+          <div class="collections-group__text">
+            <p class="collections-group__eyebrow">Guides</p>
             <h3 id="collections-guides-heading">Understanding the Work</h3>
-            <div class="collections-cluster__copy-slot" data-copy-slot="guides-blurb">
+            <div class="collections-group__copy-slot" data-copy-slot="guides-blurb">
               <p>
                 These short cornerstone guides define the ideas behind the collections: Western art, painterly photography,
                 narrative structure, cinematic framing, and the role of black and white in the finished work.
@@ -217,7 +283,7 @@ const structuredData = {
             </div>
           </div>
 
-          <nav class="collections-cluster__links" aria-label="Western art and photography guide pages">
+          <nav class="collections-group__links" aria-label="Western art and photography guide pages">
             {guidePages.map((page) => (
               <a href={page.href}>{page.label}</a>
             ))}
@@ -269,7 +335,7 @@ const structuredData = {
 
   .collections-gateway__kicker,
   .collections-index__heading p,
-  .collections-cluster__eyebrow {
+  .collections-group__eyebrow {
     margin:0 0 10px;
     color:#7a6047;
     font-size:.76rem;
@@ -286,7 +352,7 @@ const structuredData = {
   }
 
   .collections-gateway__copy-slot,
-  .collections-cluster__copy-slot {
+  .collections-group__copy-slot {
     min-height:5.25rem;
     padding:12px 0;
     border-top:1px solid rgba(122,96,71,.24);
@@ -295,7 +361,7 @@ const structuredData = {
   }
 
   .collections-gateway__copy-slot p,
-  .collections-cluster__copy-slot p {
+  .collections-group__copy-slot p {
     margin:0 0 10px;
     color:#43362c;
     font-size:.94rem;
@@ -304,7 +370,7 @@ const structuredData = {
   }
 
   .collections-gateway__copy-slot p:last-child,
-  .collections-cluster__copy-slot p:last-child {
+  .collections-group__copy-slot p:last-child {
     margin-bottom:0;
   }
 
@@ -351,12 +417,12 @@ const structuredData = {
     line-height:1.12;
   }
 
-  .collections-clusters {
+  .collections-groups {
     display:grid;
     gap:18px;
   }
 
-  .collections-cluster {
+  .collections-group {
     display:grid;
     grid-template-columns:minmax(0, .96fr) minmax(260px, 1.04fr);
     gap:28px;
@@ -365,20 +431,20 @@ const structuredData = {
     border-bottom:1px solid #dccfbe;
   }
 
-  .collections-cluster h3 {
+  .collections-group h3 {
     margin:0 0 14px;
     color:#241b14;
     font-size:clamp(1.25rem, 2vw, 1.72rem);
     line-height:1.18;
   }
 
-  .collections-cluster__links {
+  .collections-group__links {
     display:grid;
     grid-template-columns:repeat(2, minmax(0, 1fr));
     gap:10px;
   }
 
-  .collections-cluster__links a {
+  .collections-group__links a {
     display:flex;
     align-items:center;
     min-height:3.25rem;
@@ -392,8 +458,8 @@ const structuredData = {
     box-shadow:0 1px 0 rgba(255,255,255,.65) inset;
   }
 
-  .collections-cluster__links a:hover,
-  .collections-cluster__links a:focus-visible {
+  .collections-group__links a:hover,
+  .collections-group__links a:focus-visible {
     color:#1f1711;
     border-color:#9d7651;
     background:#fff;
@@ -425,14 +491,14 @@ const structuredData = {
       padding:0;
     }
 
-    .collections-cluster {
+    .collections-group {
       grid-template-columns:1fr;
       gap:18px;
     }
   }
 
   @media (max-width: 560px) {
-    .collections-cluster__links {
+    .collections-group__links {
       grid-template-columns:1fr;
     }
   }

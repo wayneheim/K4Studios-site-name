@@ -5,9 +5,9 @@ export const oneImageMoviePage = {
   sections: [
     // 1. OPENING
     {
-      subhead: "The Doorway Into the Form",
+      subhead: "The Entry Into the Form",
       paragraphs: [
-        `<strong>What Is a One-Image Movie™?</strong><br />A One-Image Movie™ may first appear to be a single photograph charged with enough narrative weight to feel like a whole story pressing through one frame. That is the doorway into the form — but not the whole experience.`,
+        `<strong>What Is a One-Image Movie™?</strong><br />A One-Image Movie™ may first appear to be a single photograph charged with enough narrative weight to feel like a whole story pressing through one frame. That is the entry into the form — but not the whole experience.`,
         `Wayne Heim’s One-Image Movies™ are finished narrative-art presentations built from a photographic image, title, authored poetic writing, unresolved implication, and viewer participation. The image does not deliver a closed story. The title and writing do not explain it away. Together, they provide the charged pieces of an unwritten scene.`,
         `The final “movie” is assembled in the viewer’s mind. Memory, instinct, emotion, and lived experience become part of the work, shaping a story no two viewers complete in exactly the same way.`,
         `A narrative photograph can suggest a story. A Wayne Heim One-Image Movie™ asks the viewer to help complete one.`,

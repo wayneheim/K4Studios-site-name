@@ -109,7 +109,7 @@ export const storyBlocks = [
 		subhead: 'Monochrome works when it removes noise, not life.',
 		paragraphs: [
 			'Western black and white photography matters when tone, gesture, and atmosphere carry more weight without color than they would with it. The removal of color should sharpen the human presence in the frame, not flatten it into style.',
-			'That is why the stronger monochrome pages in this cluster are not generic black-and-white galleries. They keep portraiture, narrative pressure, and historical gravity visible inside the tonal structure, with the <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White">black and white Western portrait gallery</a> and its <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/all">complete black and white cowboy archive</a> acting as the proof set behind this parent page.',
+			'That is why the stronger monochrome pages in this group are not generic black-and-white galleries. They keep portraiture, narrative pressure, and historical gravity visible inside the tonal structure, with the <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White">black and white Western portrait gallery</a> and its <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/all">complete black and white cowboy archive</a> acting as the proof set behind this parent page.',
 		],
 	},
 	{

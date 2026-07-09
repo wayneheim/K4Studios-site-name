@@ -1022,7 +1022,7 @@ function installPreNavImageLinkTracking(): void {
           const sourceGalleryId = getGalleryIdFromPath(window.location.pathname);
           const isSpecificCatalogClick =
             Boolean(a.closest('[data-collection-image-link]')) ||
-            Boolean(a.closest('[data-doorway-image-link]'));
+            Boolean(a.closest('[data-context-image-link]'));
 
           if (isSpecificCatalogClick) {
             const catalogGalleryId = sourceGalleryId || galleryId;
