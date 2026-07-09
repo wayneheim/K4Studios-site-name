@@ -5,6 +5,7 @@ import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter    from "@/components/Footer.astro";
 import StorySlider   from "@/components/StorySlider.tsx";
+import EssayClusterLinks from "@/components/EssayClusterLinks.astro";
 import { getStructuredData, getBreadcrumbList } from "@/components/utils/getStructuredData.ts";
 import { getLandingMeta } from "@/data/landingMeta.ts";
 
@@ -311,6 +312,8 @@ const breadcrumbData = getBreadcrumbList([
         ))}
       </div>
     </section>
+
+    <EssayClusterLinks currentPath={sectionPath} />
 
     <SiteFooter 
       previewImages={previewImages}

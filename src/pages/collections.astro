@@ -1,0 +1,393 @@
+---
+export const prerender = true;
+
+import Footer from "@/components/Footer.astro";
+import LandingHeader from "@/components/Landing-Header.jsx";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getSemanticImageUrl } from "@/utils/imageProxy.js";
+import {
+  relatedCollectionsBySlug,
+  relatedCollectionsClusterOrder,
+  type DoorwayClusterId,
+} from "@/data/doorway/relatedCollections.ts";
+import { commercialIntentPages } from "@/data/doorway/commercialIntentPages.ts";
+
+type ClusterShell = {
+  id: DoorwayClusterId;
+  eyebrow: string;
+  heading: string;
+  blurb: string[];
+  pages: Array<{
+    href: string;
+    label: string;
+  }>;
+};
+
+const pageByPath = Object.values(commercialIntentPages).reduce<Record<string, any>>((lookup, page: any) => {
+  lookup[page.pagePath] = page;
+  return lookup;
+}, {});
+
+const fallbackLabel = (slug: string) =>
+  slug
+    .replace(/^\//, "")
+    .replace(/-/g, " ")
+    .replace(/\b\w/g, (letter) => letter.toUpperCase());
+
+const introBlurb = [
+  "Every image in this work begins from the same place: a moment left incomplete, so the viewer has room to finish it. What follows is one way of navigating that body of work - grouped not by subject alone, but by the different questions each collection asks of the person looking. Start wherever pulls at you. The through-line will still be there when you arrive.",
+];
+
+const clusterMeta: Record<DoorwayClusterId, { eyebrow: string; heading: string; blurb: string[] }> = {
+  D: {
+    eyebrow: "Cluster D",
+    heading: "Western Art & Cowboy Artwork",
+    blurb: [
+      "The most direct entry point into the work: cowboys, horses, open country, rendered with the same narrative grammar that carried Russell and Remington. This is where the argument starts - that a single frame can hold a story most artists now need a series to tell.",
+    ],
+  },
+  A: {
+    eyebrow: "Cluster A",
+    heading: "Historical & Vintage West",
+    blurb: [
+      "The 1800s frontier as lived-in history rather than backdrop - worn hands, weathered structures, the particular light of a country before it was settled. These pieces lean on research and reenactment as much as photography, built alongside historians and living-history collaborators to get the details right.",
+    ],
+  },
+  B: {
+    eyebrow: "Cluster B",
+    heading: "Western Interior Design",
+    blurb: [
+      "Where the work leaves the gallery wall and enters a room. These collections are organized around scale, palette, and mood - rustic, modern, or somewhere between - for anyone building a space around a single, considered piece rather than filling it with decoration.",
+    ],
+  },
+  C: {
+    eyebrow: "Cluster C",
+    heading: "Western Photography Collections",
+    blurb: [
+      'For viewers thinking about the medium itself, not just the subject. This is the deepest cluster in the archive - portraiture, storytelling technique, and the fine-art print process each get their own vantage point on how a photograph earns the word "art."',
+    ],
+  },
+  E: {
+    eyebrow: "Cluster E",
+    heading: "Black & White and Painterly Western Work",
+    blurb: [
+      "Color removed, or paint-layered until the photograph stops announcing itself as one. Both approaches do the same work from different directions: pulling the image further from documentation and closer to memory.",
+    ],
+  },
+  F: {
+    eyebrow: "Cluster F",
+    heading: "Special Subject Collections",
+    blurb: [
+      "Two collections that stand apart from the rest by focus rather than by form: the women who shaped the frontier as fully as the men usually pictured in it, and the fine art record of WWII, where the same narrative instinct is turned toward a different chapter of history. Neither fits neatly into the other groupings above - that's exactly why they get their own room.",
+    ],
+  },
+};
+
+const clusters: ClusterShell[] = relatedCollectionsClusterOrder.map((clusterId) => {
+  const pages = Object.entries(relatedCollectionsBySlug)
+    .filter(([, entry]) => entry.clusterId === clusterId)
+    .map(([slug]) => ({
+      href: slug,
+      label: pageByPath[slug]?.label || fallbackLabel(slug),
+    }));
+
+  return {
+    id: clusterId,
+    ...clusterMeta[clusterId],
+    pages,
+  };
+});
+
+const breadcrumbHtml = '<a href="/">Home</a> | <span>Collections</span>';
+const title = "Collections - K4 Studios";
+const description =
+  "Working shell for the K4 Studios collections hub, organizing Western fine art doorway collections into thematic groups.";
+const heroImage = { id: "i-DJMTZ8z" };
+const heroImageContext = { galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White" };
+const heroSrc = getSemanticImageUrl(heroImage, heroImageContext, "m");
+const heroSrcSet = `${getSemanticImageUrl(heroImage, heroImageContext, "s")} 400w, ${heroSrc} 720w`;
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": "https://www.k4studios.com/collections#collectionpage",
+  url: "https://www.k4studios.com/collections",
+  name: "Collections",
+  isPartOf: {
+    "@type": "WebSite",
+    "@id": "https://www.k4studios.com/#website",
+    name: "K4 Studios",
+    url: "https://www.k4studios.com/",
+  },
+};
+---
+
+<BaseLayout title={title} description={description} structuredDataJSON={JSON.stringify(structuredData)} disableAutoBreadcrumbs={true}>
+  <link href="https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&display=swap" rel="stylesheet" />
+
+  <div class="collections-header-frame">
+    <LandingHeader client:load breadcrumb={breadcrumbHtml} />
+  </div>
+
+  <main class="collections-shell" id="top">
+    <section class="collections-gateway" aria-labelledby="collections-heading">
+      <div class="collections-gateway__copy">
+        <p class="collections-gateway__kicker">K4 Studios Collections</p>
+        <h1 id="collections-heading">Collections</h1>
+        <div class="collections-gateway__copy-slot" data-copy-slot="hub-intro">
+          {introBlurb.map((paragraph) => <p>{paragraph}</p>)}
+        </div>
+      </div>
+
+      <div class="collections-gateway__art" aria-hidden="true">
+        <span class="collections-gateway__mat">
+          <img
+            src={heroSrc}
+            srcset={heroSrcSet}
+            sizes="(max-width: 768px) 82vw, 360px"
+            alt=""
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+          />
+        </span>
+      </div>
+    </section>
+
+    <section class="collections-index" aria-labelledby="collections-index-heading">
+      <div class="collections-index__heading">
+        <p>Doorway Collection Groups</p>
+        <h2 id="collections-index-heading">Browse by Collection Family</h2>
+      </div>
+
+      <div class="collections-clusters">
+        {clusters.map((cluster) => (
+          <section class="collections-cluster" aria-labelledby={`collections-cluster-${cluster.id}`}>
+            <div class="collections-cluster__text">
+              <p class="collections-cluster__eyebrow">{cluster.eyebrow}</p>
+              <h3 id={`collections-cluster-${cluster.id}`}>{cluster.heading}</h3>
+              <div class="collections-cluster__copy-slot" data-copy-slot={`cluster-${cluster.id.toLowerCase()}-blurb`}>
+                {cluster.blurb.map((paragraph) => <p>{paragraph}</p>)}
+              </div>
+            </div>
+
+            <nav class="collections-cluster__links" aria-label={`${cluster.heading} pages`}>
+              {cluster.pages.map((page) => (
+                <a href={page.href}>{page.label}</a>
+              ))}
+            </nav>
+          </section>
+        ))}
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  :global(body) {
+    background:#fff;
+  }
+
+  .collections-header-frame {
+    position:relative;
+    z-index:20;
+  }
+
+  .collections-shell {
+    font-family:"Glegoo", Georgia, serif;
+    color:#2c241d;
+    background:#fff;
+    padding:20px 16px 64px;
+  }
+
+  .collections-gateway {
+    width:min(100%, 1020px);
+    margin:8px auto 28px;
+    padding:18px 20px;
+    display:grid;
+    grid-template-columns:minmax(0, 1.25fr) minmax(220px, .75fr);
+    grid-template-areas:"copy art";
+    gap:56px;
+    align-items:center;
+    border-top:1px solid #dccfbe;
+    border-bottom:1px solid #dccfbe;
+  }
+
+  .collections-gateway__copy {
+    grid-area:copy;
+    min-width:0;
+    max-width:38rem;
+    padding:8px 4px 8px 0;
+  }
+
+  .collections-gateway__kicker,
+  .collections-index__heading p,
+  .collections-cluster__eyebrow {
+    margin:0 0 10px;
+    color:#7a6047;
+    font-size:.76rem;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+  }
+
+  .collections-gateway h1 {
+    margin:0 0 16px;
+    color:#231a13;
+    font-size:clamp(2rem, 3.8vw, 3.25rem);
+    line-height:1.02;
+    font-weight:700;
+  }
+
+  .collections-gateway__copy-slot,
+  .collections-cluster__copy-slot {
+    min-height:5.25rem;
+    padding:12px 0;
+    border-top:1px solid rgba(122,96,71,.24);
+    border-bottom:1px solid rgba(122,96,71,.16);
+    background:#fff;
+  }
+
+  .collections-gateway__copy-slot p,
+  .collections-cluster__copy-slot p {
+    margin:0 0 10px;
+    color:#43362c;
+    font-size:.94rem;
+    line-height:1.72;
+    text-wrap:pretty;
+  }
+
+  .collections-gateway__copy-slot p:last-child,
+  .collections-cluster__copy-slot p:last-child {
+    margin-bottom:0;
+  }
+
+  .collections-gateway__art {
+    grid-area:art;
+    justify-self:end;
+    width:min(100%, 380px);
+    filter:drop-shadow(0 10px 16px rgba(0,0,0,.22));
+  }
+
+  .collections-gateway__mat {
+    display:block;
+    padding:10px;
+    background:#080706;
+    border:1px solid #1b1b1b;
+  }
+
+  .collections-gateway__mat img {
+    display:block;
+    width:100%;
+    aspect-ratio:3 / 4;
+    object-fit:cover;
+    object-position:center 28%;
+    border:4px solid #fff;
+    background:#fff;
+  }
+
+  .collections-index {
+    width:min(100%, 1020px);
+    margin:0 auto;
+    padding:10px 20px 0;
+  }
+
+  .collections-index__heading {
+    margin:0 0 18px;
+    padding:20px 0 18px;
+    border-bottom:1px solid #dccfbe;
+  }
+
+  .collections-index__heading h2 {
+    margin:0;
+    color:#231a13;
+    font-size:clamp(1.55rem, 2.4vw, 2.2rem);
+    line-height:1.12;
+  }
+
+  .collections-clusters {
+    display:grid;
+    gap:18px;
+  }
+
+  .collections-cluster {
+    display:grid;
+    grid-template-columns:minmax(0, .96fr) minmax(260px, 1.04fr);
+    gap:28px;
+    align-items:start;
+    padding:24px 0;
+    border-bottom:1px solid #dccfbe;
+  }
+
+  .collections-cluster h3 {
+    margin:0 0 14px;
+    color:#241b14;
+    font-size:clamp(1.25rem, 2vw, 1.72rem);
+    line-height:1.18;
+  }
+
+  .collections-cluster__links {
+    display:grid;
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    gap:10px;
+  }
+
+  .collections-cluster__links a {
+    display:flex;
+    align-items:center;
+    min-height:3.25rem;
+    padding:11px 13px;
+    color:#2f241c;
+    text-decoration:none;
+    font-size:.88rem;
+    line-height:1.35;
+    border:1px solid rgba(122,96,71,.28);
+    background:#fff;
+    box-shadow:0 1px 0 rgba(255,255,255,.65) inset;
+  }
+
+  .collections-cluster__links a:hover,
+  .collections-cluster__links a:focus-visible {
+    color:#1f1711;
+    border-color:#9d7651;
+    background:#fff;
+    outline:none;
+  }
+
+  @media (max-width: 820px) {
+    .collections-shell {
+      padding:14px 12px 48px;
+    }
+
+    .collections-gateway {
+      grid-template-columns:1fr;
+      grid-template-areas:"art" "copy";
+      gap:24px;
+      padding:16px 0 20px;
+    }
+
+    .collections-gateway__art {
+      justify-self:center;
+      width:min(82vw, 340px);
+    }
+
+    .collections-gateway__copy {
+      padding:0;
+    }
+
+    .collections-index {
+      padding:0;
+    }
+
+    .collections-cluster {
+      grid-template-columns:1fr;
+      gap:18px;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .collections-cluster__links {
+      grid-template-columns:1fr;
+    }
+  }
+</style>

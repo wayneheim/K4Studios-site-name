@@ -4,6 +4,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import ArchiveContext from "@/components/ArchiveContext.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
+import RelatedCollections from "@/components/doorway/RelatedCollections.astro";
 import VideoStoryWidget from "@/components/VideoStoryWidget.astro";
 import { extractImageId, getSemanticImageUrl } from "@/utils/imageProxy.js";
 import { getArtworkAltForImageSource } from "@/utils/imageAltLookup";
@@ -65,6 +66,7 @@ const {
   gatewayVideoWidget = null,
   dockVariant = "",
   layoutVariant = "",
+  relatedCollectionsSlug = "",
 } = Astro.props as {
   rawGalleryData: any[];
   entranceData?: any;
@@ -92,6 +94,7 @@ const {
   gatewayVideoWidget?: GatewayVideoWidget | null;
   dockVariant?: string;
   layoutVariant?: string;
+  relatedCollectionsSlug?: string;
 };
 
 // ✅ Filter out ghosts and hidden (archived) images
@@ -1377,6 +1380,8 @@ const faqRight = faqItems.slice(faqSplitIndex);
         <WesternDefinitions variant={cornerstoneVariant as "index" | "definition" | "post"} />
       </section>
     )}
+
+    {relatedCollectionsSlug && <RelatedCollections slug={relatedCollectionsSlug} />}
 
     <Footer />
   </div>

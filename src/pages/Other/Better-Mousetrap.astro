@@ -5,6 +5,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
+import EssayClusterLinks from "@/components/EssayClusterLinks.astro";
 import { getStructuredData } from "@/components/utils/getStructuredData.ts";
 import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import { storyData as loreSamples } from "@/data/Other/Stories/Lore-and-Legacy-Show.mjs";
@@ -453,6 +454,13 @@ const breadcrumb = "Other > The Better Mousetrap";
       })}
     </article>
 
+    <aside class="bm-related-callout">
+      <p><strong>More about the artist:</strong> Read <a href="/Other/Bio">Wayne Heim's full bio</a>.</p>
+      <p><strong>Related:</strong> <a href="/Other/One-Image-Movie">What Is a One-Image Movie&trade;?</a> &middot; <a href="/Other/Narrative-Vacuum">The Narrative Vacuum</a></p>
+    </aside>
+
+    <EssayClusterLinks currentPath={sectionPath} />
+
     <WesternDefinitions variant="definition" />
 
     <SiteFooter
@@ -634,6 +642,30 @@ const breadcrumb = "Other > The Better Mousetrap";
     color: #4f4036;
     font-size: 0.82rem;
     font-style: italic;
+  }
+
+  .bm-related-callout {
+    max-width: 860px;
+    margin: 1.25rem auto 0;
+    padding: 1.2rem 1.5rem;
+    border-left: 3px solid rgba(139, 95, 27, 0.42);
+    background: #fbf7f1;
+    color: #342c26;
+  }
+
+  .bm-related-callout p {
+    margin: 0;
+    line-height: 1.65;
+  }
+
+  .bm-related-callout p + p {
+    margin-top: 0.55rem;
+  }
+
+  .bm-related-callout a {
+    color: #762f1f;
+    text-decoration: underline;
+    text-underline-offset: 0.12em;
   }
 
   @media (max-width: 820px) {

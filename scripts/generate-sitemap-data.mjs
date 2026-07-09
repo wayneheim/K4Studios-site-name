@@ -14,6 +14,7 @@ const PAGES_DIR = path.resolve(__dirname, '..', 'src', 'pages');
 const REPO_ROOT = path.resolve(__dirname, '..');
 const MASTER_GALLERY_DATA_FILE = path.resolve(__dirname, '..', 'src', 'data', 'galleryMaps', 'MasterGalleryData.mjs');
 const DOORWAY_REGISTRY_FILE = path.resolve(__dirname, '..', 'src', 'data', 'doorway', 'doorwayPages.ts');
+const COMMERCIAL_INTENT_DOORWAY_FILE = path.resolve(__dirname, '..', 'src', 'data', 'doorway', 'commercialIntentPages.ts');
 const SITE_NAV_FILE = path.resolve(__dirname, '..', 'src', 'data', 'siteNav.js');
 const VIDEO_REGISTRY_FILE = path.resolve(__dirname, '..', 'src', 'data', 'videos', 'videoRegistry.ts');
 const DYNAMIC_ALL_ROUTE_FILE = path.resolve(__dirname, '..', 'src', 'pages', '[...gallery]', 'all.astro');
@@ -306,6 +307,41 @@ async function loadActiveDoorwayRoutes() {
   return entries;
 }
 
+async function loadCommercialIntentDoorwayRoutes() {
+  const entries = [];
+
+  try {
+    const source = await readFile(COMMERCIAL_INTENT_DOORWAY_FILE, 'utf8');
+    const fileStats = await stat(COMMERCIAL_INTENT_DOORWAY_FILE);
+    const lastmod = getStableLastmodIso(COMMERCIAL_INTENT_DOORWAY_FILE, fileStats.mtime.toISOString());
+
+    const pagePathRegex = /pagePath:\s*['"]([^'"]+)['"]/g;
+    const paths = new Set();
+    let match;
+
+    while ((match = pagePathRegex.exec(source)) !== null) {
+      const urlPath = String(match[1] || '').trim().replace(/\/+$/, '');
+      if (urlPath.startsWith('/')) paths.add(urlPath || '/');
+    }
+
+    for (const urlPath of paths) {
+      entries.push({
+        loc: SITE_URL + urlPath,
+        lastmod,
+        changefreq: getChangeFreq(urlPath),
+        priority: getPriority(urlPath),
+      });
+    }
+
+    console.log(`Generated ${entries.length} commercial intent doorway route entries`);
+  } catch (err) {
+    console.error('Error loading commercial intent doorway routes:', err.message);
+    console.error(err.stack);
+  }
+
+  return entries;
+}
+
 async function loadVideoDetailRoutes() {
   const entries = [];
 
@@ -359,7 +395,7 @@ async function loadDynamicAllCollectionRoutes() {
     function extractGallerySources(items) {
       const results = [];
       for (const item of items || []) {
-        if (item?.type === 'gallery-source' && typeof item.href === 'string') {
+        if (!item?.hidden && item?.type === 'gallery-source' && typeof item.href === 'string') {
           results.push(item.href);
         }
         if (Array.isArray(item?.children) && item.children.length) {
@@ -420,11 +456,14 @@ async function main() {
   // Get active doorway pages from the doorway registry
   const doorwayEntries = await loadActiveDoorwayRoutes();
 
+  // Get commercial intent doorway pages from their registry
+  const commercialDoorwayEntries = await loadCommercialIntentDoorwayRoutes();
+
   // Get dedicated video detail pages from the video registry
   const videoEntries = await loadVideoDetailRoutes();
   
   // Combine and deduplicate
-  const allEntries = [...staticEntries, ...dynamicEntries, ...dynamicAllEntries, ...doorwayEntries, ...videoEntries];
+  const allEntries = [...commercialDoorwayEntries, ...staticEntries, ...dynamicEntries, ...dynamicAllEntries, ...doorwayEntries, ...videoEntries];
   const dedupedEntries = Array.from(new Map(allEntries.map((entry) => [entry.loc, entry])).values());
   
   // Sort for stable output (by URL)
@@ -455,6 +494,7 @@ export const sitemap: SitemapEntry[] = ${JSON.stringify(dedupedEntries, null, 2)
   console.log(`  - ${dynamicEntries.length} dynamic gallery pages`);
   console.log(`  - ${dynamicAllEntries.length} dynamic collection pages`);
   console.log(`  - ${doorwayEntries.length} active doorway pages`);
+  console.log(`  - ${commercialDoorwayEntries.length} commercial intent doorway pages`);
   console.log(`  - ${videoEntries.length} video detail pages`);
 
   // Also emit a static public/sitemap.xml so `/sitemap.xml` works even when deploying

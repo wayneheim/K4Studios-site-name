@@ -8,6 +8,7 @@ import LandingRightImages from '../../components/LandingRightImages.jsx';
 import FAQAccordion       from '../../components/FAQAccordion.jsx';
 import SiteFooter         from '../../components/Footer.astro';
 import MobileStoryImages  from '../../components/MobileStoryImages.jsx';
+import EssayClusterLinks  from '../../components/EssayClusterLinks.astro';
 import { getLandingMeta } from '../../data/landingMeta.ts';
 import { getFAQPageStructuredData } from '../../components/utils/getStructuredData.ts';
 
@@ -255,6 +256,12 @@ const faqStructuredData = getFAQPageStructuredData(facingFAQ, "https://www.k4stu
             </article>
           ))}
         </section>
+
+        <EssayClusterLinks
+          currentPath={pagePath}
+          heading="For More on the Ideas Behind the Work"
+          intro="The Better Mousetrap, The Narrative Vacuum, Armature Beneath the Legend, and Paying Forward Through Story."
+        />
 
         <MobileStoryImages client:only="react" images={sanitizeForClient(featheredImages)} displayCount={headingCount} />
       </div>

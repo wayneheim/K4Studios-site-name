@@ -52,6 +52,7 @@ export const painterlyStory = [
     subhead: "Context",
     paragraphs: [
       "Wayne’s painterly fine art photography spans Western portraiture, historical reenactment, narrative Western photography, and painterly landscape work. The images are authored as cinematic visual narratives, designed to reward sustained viewing and invite interpretation rather than provide resolution.",
+      "Heim grew up in Star Valley, Wyoming &mdash; a background reflected in the SVI News feature above &mdash; before building a 35-year career as a certified medical illustrator that now informs his narrative fine art photography.",
       "These recognitions reflect placement within juried environments that evaluate work on narrative coherence, presence, and long-term resonance rather than trend or novelty."
     ]
   },

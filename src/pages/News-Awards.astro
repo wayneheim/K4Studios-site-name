@@ -8,6 +8,7 @@ import LandingRightImages from '@/components/LandingRightImages.jsx';
 // import FAQAccordion       from '@/components/FAQAccordion.jsx';
 import SiteFooter         from '@/components/Footer.astro';
 import MobileStoryImages  from '@/components/MobileStoryImages.jsx';
+import EssayClusterLinks  from '@/components/EssayClusterLinks.astro';
 import { getStructuredData } from '@/components/utils/getStructuredData.ts';
 import { getLandingMeta } from '@/data/landingMeta.ts';
 
@@ -262,8 +263,23 @@ const structuredData = getStructuredData({
                   </ul>
                 )}
               </article>
+
+              {section.subhead === "Press & Related Resources" && (
+                <article class="story-block">
+                  <h3 class="slide-in-left">Essays &amp; Critical Writing</h3>
+                  <p class="reveal-on-scroll">
+                    For the ideas and argument behind the work: <a href="/Other/Better-Mousetrap">The Better Mousetrap</a> traces the origin of the One-Image Movie&trade; concept. <a href="/Other/Narrative-Vacuum">The Narrative Vacuum</a> argues that the storytelling tradition of Russell and Remington went quiet in contemporary Western art. <a href="/Blog/armature-beneath-the-legend">Armature Beneath the Legend</a> and <a href="/Blog/paying-forward-through-story">Paying Forward Through Story</a> trace that argument back to personal history.
+                  </p>
+                </article>
+              )}
             </Fragment>
           ))}
+
+          <EssayClusterLinks
+            currentPath="/Other/Bio"
+            heading="Related Artist Essays"
+            intro="A short path into the writing behind Wayne Heim's narrative fine art photography."
+          />
         </section>
 
         <MobileStoryImages client:only="react" images={sanitizeForClient(featheredImages)} displayCount={headingCount} />

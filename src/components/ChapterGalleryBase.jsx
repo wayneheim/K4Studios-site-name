@@ -735,9 +735,10 @@ export default function ChapterGalleryBase({
   const nextHref = basePath && currentIndex < galleryData.length - 1
     ? (nextImage ? `${basePath}/${nextImage.id}` : "#")
     : null;
-  const collectionHref = basePath ? `${basePath.replace(/\/$/, "")}/all` : null;
-  const gridHref = collectionHref
-    ? `${collectionHref}${themeSlug ? `?theme=${encodeURIComponent(themeSlug)}&view=grid#collection-browser` : ''}`
+  const normalizedBasePath = basePath ? basePath.replace(/\/$/, "") : null;
+  const collectionHref = normalizedBasePath ? `${normalizedBasePath}/all` : null;
+  const gridHref = normalizedBasePath
+    ? `${normalizedBasePath}?${themeSlug ? `theme=${encodeURIComponent(themeSlug)}&` : ''}view=grid`
     : null;
   const exitHref = basePath || null;
   const currentChapterTitle = sanitizeRepeatedSeoCopy(

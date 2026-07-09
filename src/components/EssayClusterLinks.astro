@@ -1,0 +1,100 @@
+---
+import { getEssayClusterLinks } from "@/data/essayClusterLinks.js";
+
+const {
+  currentPath,
+  heading = "Related Reading",
+  intro = "Continue through the essay cluster:",
+  limit = 3,
+} = Astro.props;
+
+const links = getEssayClusterLinks(currentPath, limit);
+---
+
+{links.length > 0 && (
+  <aside class="essay-cluster-links" aria-labelledby="essay-cluster-heading">
+    <p class="essay-cluster-links__eyebrow">K4 Studios Essays</p>
+    <h2 id="essay-cluster-heading">{heading}</h2>
+    {intro && <p class="essay-cluster-links__intro">{intro}</p>}
+    <ul>
+      {links.map((link) => (
+        <li>
+          <a href={link.href}>{link.title}</a>
+          <span>{link.description}</span>
+        </li>
+      ))}
+    </ul>
+  </aside>
+)}
+
+<style>
+  .essay-cluster-links {
+    max-width: 860px;
+    margin: 2.25rem auto 2.5rem;
+    padding: 1.35rem 1.5rem;
+    border-top: 1px solid rgba(119, 94, 72, 0.28);
+    border-bottom: 1px solid rgba(119, 94, 72, 0.16);
+    background: rgba(250, 247, 242, 0.55);
+    color: #342c26;
+    font-family: "Glegoo", serif;
+  }
+
+  .essay-cluster-links__eyebrow {
+    margin: 0 0 0.3rem;
+    color: #7d6551;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .essay-cluster-links h2 {
+    margin: 0;
+    color: #30251d;
+    font-size: 1.35rem;
+    line-height: 1.25;
+  }
+
+  .essay-cluster-links__intro {
+    margin: 0.7rem 0 0;
+    color: #55483d;
+    line-height: 1.6;
+  }
+
+  .essay-cluster-links ul {
+    display: grid;
+    gap: 0.8rem;
+    margin: 1rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .essay-cluster-links li {
+    margin: 0;
+  }
+
+  .essay-cluster-links a,
+  .essay-cluster-links span {
+    display: block;
+  }
+
+  .essay-cluster-links a {
+    color: #762f1f;
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(118, 47, 31, 0.28);
+    width: fit-content;
+  }
+
+  .essay-cluster-links a:hover,
+  .essay-cluster-links a:focus-visible {
+    border-bottom-color: rgba(118, 47, 31, 0.7);
+  }
+
+  .essay-cluster-links span {
+    margin-top: 0.18rem;
+    color: #5a4f47;
+    font-size: 0.93rem;
+    line-height: 1.5;
+  }
+</style>

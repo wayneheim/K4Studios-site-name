@@ -921,6 +921,7 @@ function makePage({
   dockCoreCount = 3,
   centerDock,
   faqItems,
+  relatedCollectionsSlug,
 }: {
   pagePath: string;
   label: string;
@@ -990,6 +991,7 @@ function makePage({
   dockCoreCount?: number;
   centerDock?: any[];
   faqItems?: Array<{ q: string; a: string[] }>;
+  relatedCollectionsSlug?: string;
 }) {
   const gridSections = buildSections(sections, { offsets, limits, timeZones, titles, descriptions, alternates });
   const liveCount = countLiveItems(gridSections);
@@ -1093,6 +1095,7 @@ function makePage({
     gridSections,
     gatewayVideoWidget: resolvedGatewayVideoWidget,
     layoutVariant,
+    relatedCollectionsSlug,
   };
 }
 
@@ -1105,6 +1108,7 @@ const interiorCore = ["cowboyColor", "landscapeWest", "mountains", "water"] as A
 export const commercialIntentPages = {
   americanWesternArt: makePage({
     pagePath: "/American-Western-Art",
+    relatedCollectionsSlug: "/American-Western-Art",
     label: "American Western Art",
     title: "American Western Art Prints - Fine Art by Wayne Heim",
     subject: "cowboy portraits, Native American portrait work, frontier narratives, and painterly Western art prints shaped by the American frontier",
@@ -1241,6 +1245,7 @@ export const commercialIntentPages = {
   }),
   contemporaryWesternArt: makePage({
     pagePath: "/Contemporary-Western-Art",
+    relatedCollectionsSlug: "/Contemporary-Western-Art",
     label: "Contemporary Western Art",
     title: "Contemporary Western Art - Story-Driven Fine Art Prints by Wayne Heim",
     subject: "present-day Western fine art, camera-based painterly photography, historical frontier storytelling, contemporary cowboy portraiture, Native American portrait work, and Western narratives that reimagine the West through reflection on the past",
@@ -1471,6 +1476,7 @@ export const commercialIntentPages = {
   }),
   blackAndWhiteCowboyArt: makePage({
     pagePath: "/black-and-white-cowboy-art",
+    relatedCollectionsSlug: "/black-and-white-cowboy-art",
     label: "Black and White Cowboy Art",
     title: "Black and White Cowboy Art",
     subject: "black and white cowboy portraits, frontier narrative scenes, and Native American portrait studies shaped through tonal restraint and painterly Western atmosphere",
@@ -1558,6 +1564,7 @@ export const commercialIntentPages = {
   }),
   blackAndWhiteCowboyPhotography: makePage({
     pagePath: "/black-and-white-cowboy-photography",
+    relatedCollectionsSlug: "/black-and-white-cowboy-photography",
     label: "Black and White Cowboy Photography",
     title: "Black and White Cowboy Photography",
     subject: "black and white cowboy portraits, frontier narrative scenes, and Native American portrait studies shaped through tonal restraint and painterly Western atmosphere",
@@ -1645,6 +1652,7 @@ export const commercialIntentPages = {
   }),
   artOfTheWest: makePage({
     pagePath: "/Art-of-the-West",
+    relatedCollectionsSlug: "/Art-of-the-West",
     label: "Art of the West",
     title: "Art of the West",
     subject: "frontier narratives, cowboy portraits, Native American portrait work, and Western landscapes carried as a living artistic tradition rather than decorative frontier imagery",
@@ -1793,6 +1801,7 @@ The tradition that Russell and Remington established and that serious Western co
   }),
   wildWestArt: makePage({
     pagePath: "/wild-west-art",
+    relatedCollectionsSlug: "/wild-west-art",
     label: "Wild West Art",
     title: "Wild West Art - Fine Art Prints by Wayne Heim",
     subject: "frontier narrative scenes, cowboy portraits, Native American portrait work, and old-West imagery shaped beyond costume and cliche",
@@ -1873,6 +1882,7 @@ The tradition that Russell and Remington established and that serious Western co
   }),
   cowboyPictures: makePage({
     pagePath: "/cowboy-pictures",
+    relatedCollectionsSlug: "/cowboy-pictures",
     label: "Cowboy Pictures",
     title: "Cowboy Pictures - Western Fine Art Prints by Wayne Heim",
     subject: "cowboy portraits, cowboy photos, frontier character studies, and Western images made for print buyers",
@@ -1930,6 +1940,7 @@ The tradition that Russell and Remington established and that serious Western co
   }),
   oldWesternArt: makePage({
     pagePath: "/old-western-art",
+    relatedCollectionsSlug: "/old-western-art",
     label: "Old Western Art",
     title: "Old Western Art - Fine Art Prints by Wayne Heim",
     subject: "old-West cowboy portraits, frontier scenes, vintage atmosphere, and narrative Western imagery",
@@ -1998,6 +2009,7 @@ The tradition that Russell and Remington established and that serious Western co
   }),
   vintageCowboyArt: makePage({
     pagePath: "/vintage-cowboy-art",
+    relatedCollectionsSlug: "/vintage-cowboy-art",
     label: "Vintage Cowboy Art",
     title: "Vintage Cowboy Art - Fine Art Prints by Wayne Heim",
     subject: "weathered cowboy portraits, old-West atmosphere, black and white studies, and vintage Western character",
@@ -2066,6 +2078,7 @@ The tradition that Russell and Remington established and that serious Western co
   }),
   rusticWesternInteriorDesignArt: makePage({
     pagePath: "/Rustic-Western-Interior-Design-Art",
+    relatedCollectionsSlug: "/Rustic-Western-Interior-Design-Art",
     label: "Rustic Western Interior Design Art",
     title: "Rustic Western Interior Design Art - Fine Art Prints by Wayne Heim",
     subject: "Engrained natural Baltic Birch panel editions, Western portraits, frontier narrative scenes, landscapes, and mountain prints selected for rustic rooms",
@@ -2134,6 +2147,7 @@ The tradition that Russell and Remington established and that serious Western co
   }),
   wwiiThemedFineArtPrints: makePage({
     pagePath: "/WWII-Themed-Fine-Art-Prints",
+    relatedCollectionsSlug: "/WWII-Themed-Fine-Art-Prints",
     label: "WWII Themed Fine Art Prints",
     title: "WWII Themed Fine Art Prints - Wayne Heim",
     subject: "World War II inspired war scenes, military machines, portraits, and historically themed fine art prints shaped around memory rather than spectacle",
@@ -2210,6 +2224,7 @@ The tradition that Russell and Remington established and that serious Western co
   }),
   womenOfTheWildWest: makePage({
     pagePath: "/women-of-the-wild-west",
+    relatedCollectionsSlug: "/women-of-the-wild-west",
     label: "Women of the American West",
     title: "Women of the American West - Fine Art Prints by Wayne Heim",
     subject: "frontier women, Western portraiture, old-West stories, and character-driven fine art prints where women carry the emotional center of the West",
@@ -2271,6 +2286,7 @@ The tradition that Russell and Remington established and that serious Western co
   }),
   westernFrontierArt: makePage({
     pagePath: "/Western-Frontier-Art",
+    relatedCollectionsSlug: "/Western-Frontier-Art",
     label: "Western Frontier Art",
     title: "Western Frontier Art - Fine Art Prints by Wayne Heim",
     subject: "frontier narratives, cowboy portraits, Native American portrait work, and American West atmosphere",
@@ -2339,6 +2355,7 @@ The tradition that Russell and Remington established and that serious Western co
   }),
   westernInteriorDesignArt: makePage({
     pagePath: "/Western-Interior-Design-Art",
+    relatedCollectionsSlug: "/Western-Interior-Design-Art",
     label: "Western Interior Design Art",
     title: "Western Interior Design Art - Fine Art Prints by Wayne Heim",
     subject: "Western wall art, cowboy portraits, landscape prints, and collector works selected for rooms",
@@ -2400,6 +2417,7 @@ The tradition that Russell and Remington established and that serious Western co
   }),
   modernWesternInteriorDesignArt: makePage({
     pagePath: "/Modern-Western-Interior-Design-Art",
+    relatedCollectionsSlug: "/Modern-Western-Interior-Design-Art",
     label: "Modern Western Interior Design Art",
     title: "Modern Western Interior Design Art - Fine Art Prints by Wayne Heim",
     subject: "restrained Western portraits, monochrome work, landscapes, and art choices for modern interiors",
@@ -2459,6 +2477,7 @@ The tradition that Russell and Remington established and that serious Western co
   }),
   cowboyThemedArtwork: makePage({
     pagePath: "/cowboy-themed-artwork",
+    relatedCollectionsSlug: "/cowboy-themed-artwork",
     label: "Cowboy Themed Artwork",
     title: "Cowboy Themed Artwork - Fine Art Prints by Wayne Heim",
     subject: "cowboy themed portraits, Western character studies, frontier scenes, and print-ready cowboy artwork",
@@ -2522,6 +2541,7 @@ The tradition that Russell and Remington established and that serious Western co
   }),
   cowboyThemedPhotography: makePage({
     pagePath: "/cowboy-themed-photography",
+    relatedCollectionsSlug: "/cowboy-themed-photography",
     label: "Cowboy Themed Photography",
     title: "Cowboy Themed Photography - Fine Art Prints by Wayne Heim",
     subject: "cowboy themed photography, Western cowboy photos, cowboy portrait photography, black and white cowboy studies, and story-driven cowboy images shaped as fine art prints",
@@ -2610,6 +2630,7 @@ The tradition that Russell and Remington established and that serious Western co
   }),
   cowboyArtworkPrints: makePage({
     pagePath: "/cowboy-artwork-prints",
+    relatedCollectionsSlug: "/cowboy-artwork-prints",
     label: "Cowboy Artwork Prints",
     title: "Cowboy Artwork Prints - Fine Art Prints by Wayne Heim",
     subject: "cowboy artwork, Western portrait prints, black and white cowboy studies, and frontier narrative prints",
@@ -2673,6 +2694,7 @@ The tradition that Russell and Remington established and that serious Western co
   }),
   americanWestFineArtPhotography: makePage({
     pagePath: "/Fine-Art-Photography-of-the-American-West",
+    relatedCollectionsSlug: "/Fine-Art-Photography-of-the-American-West",
     label: "Fine Art Photography of the American West",
     title: "Fine Art Photography of the American West - Wayne Heim",
     subject: "American West portraits, frontier narratives, Native American portrait work, and Western landscapes",
@@ -2750,6 +2772,7 @@ The tradition that Russell and Remington established and that serious Western co
   }),
   westernCowboyPhotography: makePage({
     pagePath: "/Western-Cowboy-Photography",
+    relatedCollectionsSlug: "/Western-Cowboy-Photography",
     label: "Western Cowboy Photography",
     title: "Western Cowboy Photography by Wayne Heim",
     subject: "Western cowboy photography shaped from historical documentation, ranch-life portraiture, cinematic light, black and white studies, and modern fine art printmaking",
@@ -2820,6 +2843,7 @@ The tradition that Russell and Remington established and that serious Western co
   }),
   westernCowboyArt: makePage({
     pagePath: "/western-cowboy-art",
+    relatedCollectionsSlug: "/western-cowboy-art",
     label: "Western Cowboy Art",
     title: "Western Cowboy Art by Wayne Heim",
     subject: "cowboy artwork shaped around Western figures, horses, frontier scenes, action, landscape, print collecting, and the wider tradition of cowboy paintings and Western wall art",
@@ -2895,6 +2919,7 @@ The tradition that Russell and Remington established and that serious Western co
   }),
   eighteenHundredsCowboyArt: makePage({
     pagePath: "/1800s-cowboy-art",
+    relatedCollectionsSlug: "/1800s-cowboy-art",
     label: "1800s Cowboy Art",
     title: "1800s Cowboy Art - Old West Fine Art Prints by Wayne Heim",
     subject: "old-West cowboy imagery, frontier narrative scenes, historical Western portrait work, Native American presence, black and white cowboy studies, and contemporary fine art prints rooted in the visual storytelling tradition of the 1800s American West",
@@ -3026,6 +3051,7 @@ The tradition that Russell and Remington established and that serious Western co
   }),
   westernCowboyPictures: makePage({
     pagePath: "/western-cowboy-pictures",
+    relatedCollectionsSlug: "/western-cowboy-pictures",
     label: "Western Cowboy Pictures",
     title: "Western Cowboy Pictures by Wayne Heim",
     subject: "Western cowboy pictures shaped from broad image search into authored cowboy portraits, old-West scenes, color Western imagery, and black and white frontier pictures",
@@ -3096,6 +3122,7 @@ The tradition that Russell and Remington established and that serious Western co
   }),
   cowboyFineArtPhotography: makePage({
     pagePath: "/Cowboy-Fine-Art-Photography",
+    relatedCollectionsSlug: "/Cowboy-Fine-Art-Photography",
     label: "Cowboy Fine Art Photography",
     title: "Cowboy Fine Art Photography - Fine Art Prints by Wayne Heim",
     subject: "authored cowboy portraits, black and white cowboy studies, and frontier character work shaped for fine art print collectors",
@@ -3159,6 +3186,7 @@ The tradition that Russell and Remington established and that serious Western co
   }),
   cowboyFineArtPrints: makePage({
     pagePath: "/cowboy-fine-art-prints",
+    relatedCollectionsSlug: "/cowboy-fine-art-prints",
     label: "Cowboy Fine Art Prints",
     title: "Cowboy Fine Art Prints - Fine Art Prints by Wayne Heim",
     subject: "cowboy portrait prints, black and white cowboy work, and story-driven Western cowboy images for collector walls",
@@ -3290,6 +3318,7 @@ The tradition that Russell and Remington established and that serious Western co
   }),
   oldWestPictures: makePage({
     pagePath: "/old-west-pictures",
+    relatedCollectionsSlug: "/old-west-pictures",
     label: "Old West Pictures",
     title: "Old West Pictures - Fine Art Prints by Wayne Heim",
     subject: "old-West pictures, vintage frontier atmosphere, cowboy portraits, and Western narrative scenes",
@@ -3380,6 +3409,7 @@ The tradition that Russell and Remington established and that serious Western co
   }),
   westernFineArtPhotography: makePage({
     pagePath: "/Western-Fine-Art-Photography",
+    relatedCollectionsSlug: "/Western-Fine-Art-Photography",
     label: "Western Fine Art Photography",
     title: "Western Fine Art Photography by Wayne Heim",
     subject: "authored Western fine art photography across working West portraits, frontier narratives, Native American portrait work, and American West landscapes",
@@ -3430,6 +3460,7 @@ The tradition that Russell and Remington established and that serious Western co
   }),
   westernFineArtPhotographyCollection: makePage({
     pagePath: "/western-fine-art-photography-collection",
+    relatedCollectionsSlug: "/western-fine-art-photography-collection",
     label: "Western Fine Art Photography Collection",
     title: "Western Fine Art Photography Collection by Wayne Heim",
     subject: "a curated Western fine art photography collection for subject-first browsing, gallery wall planning, and collector comparison",
@@ -3488,6 +3519,7 @@ The tradition that Russell and Remington established and that serious Western co
   }),
   historicalFineArtPhotographyCollection: makePage({
     pagePath: "/historical-fine-art-photography-collection",
+    relatedCollectionsSlug: "/historical-fine-art-photography-collection",
     label: "Historical Fine Art Photography Collection",
     title: "Historical Fine Art Photography Collection\nby Wayne Heim",
     subject: "painterly historical fine art photography across the American frontier, Civil War, World War II, and Roaring Twenties portrait work",
@@ -3693,6 +3725,7 @@ The tradition that Russell and Remington established and that serious Western co
   }),
   westernPhotos: makePage({
     pagePath: "/western-photos",
+    relatedCollectionsSlug: "/western-photos",
     label: "Western Photos",
     title: "Western Photos - Fine Art Prints by Wayne Heim",
     subject: "Western photos shaped as fine art prints, including cowboy portraits, frontier scenes, Native American portrait work, and open-country landscapes for visual discovery",
@@ -3750,6 +3783,7 @@ The tradition that Russell and Remington established and that serious Western co
   }),
   westernPortraitPhotography: makePage({
     pagePath: "/western-portrait-photography",
+    relatedCollectionsSlug: "/western-portrait-photography",
     label: "Western Portrait Photography",
     title: "Western Portrait Photography - Fine Art Prints by Wayne Heim",
     subject: "Western portrait photography, cowboy portraits, Native American portrait work, and black and white character studies",
@@ -3812,6 +3846,7 @@ The tradition that Russell and Remington established and that serious Western co
   }),
   westernStorytellingPhotography: makePage({
     pagePath: "/western-storytelling-photography",
+    relatedCollectionsSlug: "/western-storytelling-photography",
     label: "Western Storytelling Photography",
     title: "Western Storytelling Photography - Fine Art Prints by Wayne Heim",
     subject: "Western narrative scenes, frontier storytelling, cinematic cowboy images, and old-West moments where a single frame carries a before and after",
@@ -3874,6 +3909,7 @@ The tradition that Russell and Remington established and that serious Western co
   }),
   westernWallArtForInteriorDesigners: makePage({
     pagePath: "/Western-Wall-Art-for-Interior-Designers",
+    relatedCollectionsSlug: "/Western-Wall-Art-for-Interior-Designers",
     label: "Western Wall Art for Interior Designers",
     title: "Western Wall Art for Interior Designers - Fine Art Prints by Wayne Heim",
     subject: "Western wall art selected for interior designers, including portraits, frontier narrative pieces, landscapes, mountain prints, and room-scaled collector works for project sourcing",

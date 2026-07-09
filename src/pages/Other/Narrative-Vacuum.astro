@@ -4,6 +4,7 @@ export const prerender = true;
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
+import EssayClusterLinks from "@/components/EssayClusterLinks.astro";
 import { getStructuredData } from "@/components/utils/getStructuredData.ts";
 import { getLandingMeta } from "@/data/landingMeta.ts";
 import { storyData as loreSamples } from "@/data/Other/Stories/Lore-and-Legacy-Show.mjs";
@@ -531,6 +532,8 @@ const breadcrumb = "Other > Narrative Vacuum";
 
       <div id="nv-bottom-sentinel" aria-hidden="true"></div>
     </article>
+
+    <EssayClusterLinks currentPath={sectionPath} />
 
     <SiteFooter
       previewImages={[]}

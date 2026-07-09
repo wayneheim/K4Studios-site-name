@@ -725,6 +725,13 @@ export const siteNav = [
       "slug": "narrative-vacuum",
       "type": "section"
     },
+    {
+      "label": "Collections",
+      "href": "/collections",
+      "code": "O-S7",
+      "slug": "collections",
+      "type": "section"
+    },
     
   ],
   "code": "O",

@@ -1,0 +1,852 @@
+{
+  "scannedHtmlFiles": 4078,
+  "doorwayTargets": 36,
+  "allPageTargets": 54,
+  "doorwaysWithNoNonImageInboundLinks": 2,
+  "allPagesWithNoNonImageInboundLinks": 0,
+  "weakestDoorways": [
+    {
+      "target": "/black-and-white-cowboy-art",
+      "totalLinks": 0,
+      "uniqueSourcePages": 0,
+      "nonImageSourcePages": 0,
+      "imageSourcePages": 0,
+      "allSourcePages": 0,
+      "doorwaySourcePages": 0,
+      "sampleNonImageSources": []
+    },
+    {
+      "target": "/cowboy-themed-photography",
+      "totalLinks": 0,
+      "uniqueSourcePages": 0,
+      "nonImageSourcePages": 0,
+      "imageSourcePages": 0,
+      "allSourcePages": 0,
+      "doorwaySourcePages": 0,
+      "sampleNonImageSources": []
+    },
+    {
+      "target": "/1800s-cowboy-art",
+      "totalLinks": 1,
+      "uniqueSourcePages": 1,
+      "nonImageSourcePages": 1,
+      "imageSourcePages": 0,
+      "allSourcePages": 0,
+      "doorwaySourcePages": 1,
+      "sampleNonImageSources": [
+        "/Contemporary-Western-Art"
+      ]
+    },
+    {
+      "target": "/black-and-white-cowboy-photography",
+      "totalLinks": 1,
+      "uniqueSourcePages": 1,
+      "nonImageSourcePages": 1,
+      "imageSourcePages": 0,
+      "allSourcePages": 0,
+      "doorwaySourcePages": 0,
+      "sampleNonImageSources": [
+        "/black-and-white-cowboy-photos"
+      ]
+    },
+    {
+      "target": "/Modern-Western-Interior-Design-Art",
+      "totalLinks": 1,
+      "uniqueSourcePages": 1,
+      "nonImageSourcePages": 1,
+      "imageSourcePages": 0,
+      "allSourcePages": 0,
+      "doorwaySourcePages": 1,
+      "sampleNonImageSources": [
+        "/Western-Wall-Art-for-Interior-Designers"
+      ]
+    },
+    {
+      "target": "/Rustic-Western-Interior-Design-Art",
+      "totalLinks": 1,
+      "uniqueSourcePages": 1,
+      "nonImageSourcePages": 1,
+      "imageSourcePages": 0,
+      "allSourcePages": 0,
+      "doorwaySourcePages": 1,
+      "sampleNonImageSources": [
+        "/Western-Wall-Art-for-Interior-Designers"
+      ]
+    },
+    {
+      "target": "/western-fine-art-photography-collection",
+      "totalLinks": 1,
+      "uniqueSourcePages": 1,
+      "nonImageSourcePages": 1,
+      "imageSourcePages": 0,
+      "allSourcePages": 0,
+      "doorwaySourcePages": 1,
+      "sampleNonImageSources": [
+        "/Western-Fine-Art-Photography"
+      ]
+    },
+    {
+      "target": "/Western-Wall-Art-for-Interior-Designers",
+      "totalLinks": 2,
+      "uniqueSourcePages": 1,
+      "nonImageSourcePages": 1,
+      "imageSourcePages": 0,
+      "allSourcePages": 0,
+      "doorwaySourcePages": 0,
+      "sampleNonImageSources": [
+        "/Western-Wall-Art/index copy"
+      ]
+    },
+    {
+      "target": "/cowboy-painterly-fine-art-photography",
+      "totalLinks": 3,
+      "uniqueSourcePages": 2,
+      "nonImageSourcePages": 2,
+      "imageSourcePages": 0,
+      "allSourcePages": 0,
+      "doorwaySourcePages": 0,
+      "sampleNonImageSources": [
+        "/Galleries/Painterly-Fine-Art-Photography",
+        "/Glossary"
+      ]
+    },
+    {
+      "target": "/vintage-cowboy-art",
+      "totalLinks": 2,
+      "uniqueSourcePages": 2,
+      "nonImageSourcePages": 2,
+      "imageSourcePages": 0,
+      "allSourcePages": 0,
+      "doorwaySourcePages": 2,
+      "sampleNonImageSources": [
+        "/cowboy-painterly-fine-art-photography",
+        "/old-western-art"
+      ]
+    },
+    {
+      "target": "/old-west-pictures",
+      "totalLinks": 41,
+      "uniqueSourcePages": 39,
+      "nonImageSourcePages": 2,
+      "imageSourcePages": 37,
+      "allSourcePages": 0,
+      "doorwaySourcePages": 1,
+      "sampleNonImageSources": [
+        "/1800s-cowboy-art",
+        "/Glossary"
+      ]
+    },
+    {
+      "target": "/cowboy-themed-artwork",
+      "totalLinks": 4,
+      "uniqueSourcePages": 3,
+      "nonImageSourcePages": 3,
+      "imageSourcePages": 0,
+      "allSourcePages": 0,
+      "doorwaySourcePages": 2,
+      "sampleNonImageSources": [
+        "/Glossary",
+        "/cowboy-artwork-prints",
+        "/cowboy-themed-photography"
+      ]
+    },
+    {
+      "target": "/cowboy-fine-art-prints",
+      "totalLinks": 36,
+      "uniqueSourcePages": 35,
+      "nonImageSourcePages": 3,
+      "imageSourcePages": 32,
+      "allSourcePages": 0,
+      "doorwaySourcePages": 2,
+      "sampleNonImageSources": [
+        "/Cowboy-Fine-Art-Photography",
+        "/Glossary",
+        "/cowboy-painterly-fine-art-photography"
+      ]
+    },
+    {
+      "target": "/Art-of-the-West",
+      "totalLinks": 4,
+      "uniqueSourcePages": 4,
+      "nonImageSourcePages": 4,
+      "imageSourcePages": 0,
+      "allSourcePages": 0,
+      "doorwaySourcePages": 2,
+      "sampleNonImageSources": [
+        "/1800s-cowboy-art",
+        "/Contemporary-Western-Art",
+        "/Engrained",
+        "/Masters-of-American-Western-Art"
+      ]
+    },
+    {
+      "target": "/cowboy-artwork-prints",
+      "totalLinks": 5,
+      "uniqueSourcePages": 4,
+      "nonImageSourcePages": 4,
+      "imageSourcePages": 0,
+      "allSourcePages": 0,
+      "doorwaySourcePages": 3,
+      "sampleNonImageSources": [
+        "/Glossary",
+        "/cowboy-fine-art-prints",
+        "/cowboy-themed-artwork",
+        "/western-cowboy-art"
+      ]
+    },
+    {
+      "target": "/old-western-art",
+      "totalLinks": 4,
+      "uniqueSourcePages": 4,
+      "nonImageSourcePages": 4,
+      "imageSourcePages": 0,
+      "allSourcePages": 0,
+      "doorwaySourcePages": 4,
+      "sampleNonImageSources": [
+        "/1800s-cowboy-art",
+        "/old-west-pictures",
+        "/vintage-cowboy-art",
+        "/wild-west-art"
+      ]
+    }
+  ],
+  "weakestAllPages": [
+    {
+      "target": "/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars/all",
+      "totalLinks": 21,
+      "uniqueSourcePages": 10,
+      "nonImageSourcePages": 1,
+      "imageSourcePages": 9,
+      "allSourcePages": 0,
+      "doorwaySourcePages": 0,
+      "sampleNonImageSources": [
+        "/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars"
+      ]
+    },
+    {
+      "target": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets/all",
+      "totalLinks": 27,
+      "uniqueSourcePages": 13,
+      "nonImageSourcePages": 1,
+      "imageSourcePages": 12,
+      "allSourcePages": 0,
+      "doorwaySourcePages": 0,
+      "sampleNonImageSources": [
+        "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
+      ]
+    },
+    {
+      "target": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/all",
+      "totalLinks": 35,
+      "uniqueSourcePages": 17,
+      "nonImageSourcePages": 1,
+      "imageSourcePages": 16,
+      "allSourcePages": 0,
+      "doorwaySourcePages": 0,
+      "sampleNonImageSources": [
+        "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
+      ]
+    },
+    {
+      "target": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery/all",
+      "totalLinks": 35,
+      "uniqueSourcePages": 17,
+      "nonImageSourcePages": 1,
+      "imageSourcePages": 16,
+      "allSourcePages": 0,
+      "doorwaySourcePages": 0,
+      "sampleNonImageSources": [
+        "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery"
+      ]
+    },
+    {
+      "target": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery/all",
+      "totalLinks": 41,
+      "uniqueSourcePages": 20,
+      "nonImageSourcePages": 1,
+      "imageSourcePages": 19,
+      "allSourcePages": 0,
+      "doorwaySourcePages": 0,
+      "sampleNonImageSources": [
+        "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
+      ]
+    },
+    {
+      "target": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/all",
+      "totalLinks": 45,
+      "uniqueSourcePages": 22,
+      "nonImageSourcePages": 1,
+      "imageSourcePages": 21,
+      "allSourcePages": 0,
+      "doorwaySourcePages": 0,
+      "sampleNonImageSources": [
+        "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
+      ]
+    },
+    {
+      "target": "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/all",
+      "totalLinks": 63,
+      "uniqueSourcePages": 31,
+      "nonImageSourcePages": 1,
+      "imageSourcePages": 30,
+      "allSourcePages": 0,
+      "doorwaySourcePages": 0,
+      "sampleNonImageSources": [
+        "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White"
+      ]
+    },
+    {
+      "target": "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/all",
+      "totalLinks": 93,
+      "uniqueSourcePages": 46,
+      "nonImageSourcePages": 1,
+      "imageSourcePages": 45,
+      "allSourcePages": 0,
+      "doorwaySourcePages": 0,
+      "sampleNonImageSources": [
+        "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White"
+      ]
+    },
+    {
+      "target": "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/all",
+      "totalLinks": 93,
+      "uniqueSourcePages": 46,
+      "nonImageSourcePages": 1,
+      "imageSourcePages": 45,
+      "allSourcePages": 0,
+      "doorwaySourcePages": 0,
+      "sampleNonImageSources": [
+        "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color"
+      ]
+    },
+    {
+      "target": "/Other/K4-Select-Series/Engrained/Engrained-Series/all",
+      "totalLinks": 97,
+      "uniqueSourcePages": 48,
+      "nonImageSourcePages": 1,
+      "imageSourcePages": 47,
+      "allSourcePages": 0,
+      "doorwaySourcePages": 0,
+      "sampleNonImageSources": [
+        "/Other/K4-Select-Series/Engrained/Engrained-Series"
+      ]
+    },
+    {
+      "target": "/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/all",
+      "totalLinks": 131,
+      "uniqueSourcePages": 65,
+      "nonImageSourcePages": 1,
+      "imageSourcePages": 64,
+      "allSourcePages": 0,
+      "doorwaySourcePages": 0,
+      "sampleNonImageSources": [
+        "/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
+      ]
+    },
+    {
+      "target": "/Galleries/Fine-Art-Photography/Transportation/Trains/all",
+      "totalLinks": 46,
+      "uniqueSourcePages": 22,
+      "nonImageSourcePages": 2,
+      "imageSourcePages": 20,
+      "allSourcePages": 0,
+      "doorwaySourcePages": 0,
+      "sampleNonImageSources": [
+        "/Galleries/Fine-Art-Photography/Transportation/Trains",
+        "/Galleries/Fine-Art-Photography/Transportation/Trains-Black-White"
+      ]
+    },
+    {
+      "target": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/all",
+      "totalLinks": 46,
+      "uniqueSourcePages": 23,
+      "nonImageSourcePages": 2,
+      "imageSourcePages": 21,
+      "allSourcePages": 0,
+      "doorwaySourcePages": 1,
+      "sampleNonImageSources": [
+        "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color",
+        "/historical-fine-art-photography-collection"
+      ]
+    },
+    {
+      "target": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/all",
+      "totalLinks": 58,
+      "uniqueSourcePages": 29,
+      "nonImageSourcePages": 2,
+      "imageSourcePages": 27,
+      "allSourcePages": 0,
+      "doorwaySourcePages": 1,
+      "sampleNonImageSources": [
+        "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White",
+        "/historical-fine-art-photography-collection"
+      ]
+    },
+    {
+      "target": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/all",
+      "totalLinks": 64,
+      "uniqueSourcePages": 32,
+      "nonImageSourcePages": 2,
+      "imageSourcePages": 30,
+      "allSourcePages": 0,
+      "doorwaySourcePages": 1,
+      "sampleNonImageSources": [
+        "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White",
+        "/historical-fine-art-photography-collection"
+      ]
+    },
+    {
+      "target": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/all",
+      "totalLinks": 130,
+      "uniqueSourcePages": 65,
+      "nonImageSourcePages": 2,
+      "imageSourcePages": 63,
+      "allSourcePages": 0,
+      "doorwaySourcePages": 1,
+      "sampleNonImageSources": [
+        "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color",
+        "/historical-fine-art-photography-collection"
+      ]
+    },
+    {
+      "target": "/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife/all",
+      "totalLinks": 31,
+      "uniqueSourcePages": 16,
+      "nonImageSourcePages": 3,
+      "imageSourcePages": 13,
+      "allSourcePages": 2,
+      "doorwaySourcePages": 0,
+      "sampleNonImageSources": [
+        "/Galleries/Fine-Art-Photography/Miscellaneous/Pets/all",
+        "/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/all",
+        "/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife"
+      ]
+    },
+    {
+      "target": "/Galleries/Fine-Art-Photography/Miscellaneous/Pets/all",
+      "totalLinks": 47,
+      "uniqueSourcePages": 24,
+      "nonImageSourcePages": 3,
+      "imageSourcePages": 21,
+      "allSourcePages": 2,
+      "doorwaySourcePages": 0,
+      "sampleNonImageSources": [
+        "/Galleries/Fine-Art-Photography/Miscellaneous/Pets",
+        "/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/all",
+        "/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife/all"
+      ]
+    },
+    {
+      "target": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/all",
+      "totalLinks": 55,
+      "uniqueSourcePages": 27,
+      "nonImageSourcePages": 3,
+      "imageSourcePages": 24,
+      "allSourcePages": 0,
+      "doorwaySourcePages": 2,
+      "sampleNonImageSources": [
+        "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water",
+        "/Western-Interior-Design-Art",
+        "/Western-Wall-Art-for-Interior-Designers"
+      ]
+    },
+    {
+      "target": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/all",
+      "totalLinks": 110,
+      "uniqueSourcePages": 55,
+      "nonImageSourcePages": 3,
+      "imageSourcePages": 52,
+      "allSourcePages": 0,
+      "doorwaySourcePages": 2,
+      "sampleNonImageSources": [
+        "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White",
+        "/WWII-Themed-Fine-Art-Prints",
+        "/historical-fine-art-photography-collection"
+      ]
+    }
+  ],
+  "strongestDoorways": [
+    {
+      "target": "/Western-Fine-Art-Photography",
+      "totalLinks": 4436,
+      "uniqueSourcePages": 3977,
+      "nonImageSourcePages": 253,
+      "imageSourcePages": 3724,
+      "allSourcePages": 26,
+      "doorwaySourcePages": 35,
+      "sampleNonImageSources": [
+        "/",
+        "/1800s-cowboy-art",
+        "/404",
+        "/American-Western-Art",
+        "/Art-of-the-American-West",
+        "/Art-of-the-West",
+        "/Blog",
+        "/Blog/10-oclock-staging"
+      ]
+    },
+    {
+      "target": "/Fine-Art-Photography-of-the-American-West",
+      "totalLinks": 677,
+      "uniqueSourcePages": 671,
+      "nonImageSourcePages": 43,
+      "imageSourcePages": 628,
+      "allSourcePages": 8,
+      "doorwaySourcePages": 3,
+      "sampleNonImageSources": [
+        "/Art-of-the-American-West",
+        "/Blog/what-is-western-art",
+        "/Civil-War-Art",
+        "/Cowboy-Photography",
+        "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland",
+        "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/all",
+        "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland",
+        "/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
+      ]
+    },
+    {
+      "target": "/Western-Cowboy-Photography",
+      "totalLinks": 78,
+      "uniqueSourcePages": 49,
+      "nonImageSourcePages": 15,
+      "imageSourcePages": 34,
+      "allSourcePages": 0,
+      "doorwaySourcePages": 5,
+      "sampleNonImageSources": [
+        "/Blog/high-ground-justice",
+        "/Cowboy-Fine-Art-Photography",
+        "/Cowboy-Photography",
+        "/Galleries/Painterly-Fine-Art-Photography/Facing-History",
+        "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits",
+        "/Galleries/Painterly-Fine-Art-Photography/Landscapes",
+        "/Glossary",
+        "/Masters-of-American-Western-Art"
+      ]
+    },
+    {
+      "target": "/Painterly-Western-Photography",
+      "totalLinks": 20,
+      "uniqueSourcePages": 15,
+      "nonImageSourcePages": 15,
+      "imageSourcePages": 0,
+      "allSourcePages": 0,
+      "doorwaySourcePages": 1,
+      "sampleNonImageSources": [
+        "/",
+        "/Blog/what-is-cinematic-western-art",
+        "/Blog/what-is-cowboy-fine-art-photography",
+        "/Blog/what-is-painterly-photography",
+        "/Blog/what-is-western-cowboy-art",
+        "/Blog/what-is-western-fine-art-photography",
+        "/Cowboy-Photography",
+        "/Galleries"
+      ]
+    },
+    {
+      "target": "/Cowboy-Fine-Art-Photography",
+      "totalLinks": 63,
+      "uniqueSourcePages": 52,
+      "nonImageSourcePages": 14,
+      "imageSourcePages": 38,
+      "allSourcePages": 0,
+      "doorwaySourcePages": 2,
+      "sampleNonImageSources": [
+        "/",
+        "/Blog/what-is-cowboy-fine-art-photography",
+        "/Cowboy-Photography",
+        "/Engrained",
+        "/Galleries",
+        "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits",
+        "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White",
+        "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West"
+      ]
+    },
+    {
+      "target": "/western-cowboy-art",
+      "totalLinks": 54,
+      "uniqueSourcePages": 49,
+      "nonImageSourcePages": 12,
+      "imageSourcePages": 37,
+      "allSourcePages": 0,
+      "doorwaySourcePages": 2,
+      "sampleNonImageSources": [
+        "/",
+        "/Blog/what-is-western-cowboy-art",
+        "/Cowboy-Photography",
+        "/Galleries",
+        "/Galleries/Painterly-Fine-Art-Photography/Facing-History",
+        "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color",
+        "/Glossary",
+        "/Western-Cowboy-Photography"
+      ]
+    },
+    {
+      "target": "/western-photos",
+      "totalLinks": 53,
+      "uniqueSourcePages": 53,
+      "nonImageSourcePages": 11,
+      "imageSourcePages": 42,
+      "allSourcePages": 0,
+      "doorwaySourcePages": 0,
+      "sampleNonImageSources": [
+        "/Blog",
+        "/Blog/paying-forward-through-story",
+        "/Engrained",
+        "/Galleries/Fine-Art-Photography/Landscapes",
+        "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits",
+        "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West",
+        "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives",
+        "/Galleries/Painterly-Fine-Art-Photography/Landscapes"
+      ]
+    },
+    {
+      "target": "/American-Western-Art",
+      "totalLinks": 61,
+      "uniqueSourcePages": 49,
+      "nonImageSourcePages": 11,
+      "imageSourcePages": 38,
+      "allSourcePages": 0,
+      "doorwaySourcePages": 0,
+      "sampleNonImageSources": [
+        "/Art-of-the-American-West",
+        "/Blog/what-is-western-art",
+        "/Civil-War-Art",
+        "/Cowboy-Photography",
+        "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color",
+        "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White",
+        "/Masters-of-American-Western-Art",
+        "/Narrative-Western-Art"
+      ]
+    },
+    {
+      "target": "/Western-Frontier-Art",
+      "totalLinks": 48,
+      "uniqueSourcePages": 47,
+      "nonImageSourcePages": 11,
+      "imageSourcePages": 36,
+      "allSourcePages": 0,
+      "doorwaySourcePages": 2,
+      "sampleNonImageSources": [
+        "/Art-of-the-American-West",
+        "/Blog/what-is-western-art",
+        "/Civil-War-Art",
+        "/Cowboy-Photography",
+        "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans",
+        "/Historical-Western-Art",
+        "/Masters-of-American-Western-Art",
+        "/Photography-in-Western-Art"
+      ]
+    },
+    {
+      "target": "/wild-west-art",
+      "totalLinks": 57,
+      "uniqueSourcePages": 48,
+      "nonImageSourcePages": 10,
+      "imageSourcePages": 38,
+      "allSourcePages": 0,
+      "doorwaySourcePages": 7,
+      "sampleNonImageSources": [
+        "/Civil-War-Art",
+        "/Fine-Art-Photography-of-the-American-West",
+        "/Western-Frontier-Art",
+        "/Western-Wall-Art/index copy",
+        "/american-wild-west",
+        "/old-west-pictures",
+        "/old-western-art",
+        "/western-fine-art-photography-collection"
+      ]
+    }
+  ],
+  "strongestAllPages": [
+    {
+      "target": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all",
+      "totalLinks": 969,
+      "uniqueSourcePages": 488,
+      "nonImageSourcePages": 43,
+      "imageSourcePages": 445,
+      "allSourcePages": 0,
+      "doorwaySourcePages": 30,
+      "sampleNonImageSources": [
+        "/1800s-cowboy-art",
+        "/American-Western-Art",
+        "/Art-of-the-West",
+        "/Contemporary-Western-Art",
+        "/Cowboy-Fine-Art-Photography",
+        "/Fine-Art-Photography-of-the-American-West",
+        "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color",
+        "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all-archived-pre-rollout"
+      ]
+    },
+    {
+      "target": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/all",
+      "totalLinks": 360,
+      "uniqueSourcePages": 182,
+      "nonImageSourcePages": 43,
+      "imageSourcePages": 139,
+      "allSourcePages": 0,
+      "doorwaySourcePages": 32,
+      "sampleNonImageSources": [
+        "/1800s-cowboy-art",
+        "/American-Western-Art",
+        "/Art-of-the-West",
+        "/Contemporary-Western-Art",
+        "/Cowboy-Fine-Art-Photography",
+        "/Fine-Art-Photography-of-the-American-West",
+        "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits",
+        "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "target": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/all",
+      "totalLinks": 356,
+      "uniqueSourcePages": 182,
+      "nonImageSourcePages": 41,
+      "imageSourcePages": 141,
+      "allSourcePages": 0,
+      "doorwaySourcePages": 26,
+      "sampleNonImageSources": [
+        "/1800s-cowboy-art",
+        "/American-Western-Art",
+        "/Blog/what-is-western-black-and-white-photography",
+        "/Contemporary-Western-Art",
+        "/Cowboy-Fine-Art-Photography",
+        "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White",
+        "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/all-archived-pre-rollout",
+        "/Narrative-Western-Art"
+      ]
+    },
+    {
+      "target": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/all",
+      "totalLinks": 272,
+      "uniqueSourcePages": 138,
+      "nonImageSourcePages": 39,
+      "imageSourcePages": 99,
+      "allSourcePages": 0,
+      "doorwaySourcePages": 26,
+      "sampleNonImageSources": [
+        "/1800s-cowboy-art",
+        "/American-Western-Art",
+        "/Blog/what-is-western-black-and-white-photography",
+        "/Contemporary-Western-Art",
+        "/Cowboy-Fine-Art-Photography",
+        "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White",
+        "/Modern-Western-Interior-Design-Art",
+        "/Western-Black-and-White-Photography"
+      ]
+    },
+    {
+      "target": "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/all",
+      "totalLinks": 99,
+      "uniqueSourcePages": 59,
+      "nonImageSourcePages": 21,
+      "imageSourcePages": 38,
+      "allSourcePages": 20,
+      "doorwaySourcePages": 0,
+      "sampleNonImageSources": [
+        "/Galleries/Fine-Art-Photography/Architecture/Gallery/all",
+        "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western",
+        "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/all",
+        "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/all",
+        "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/all",
+        "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/all",
+        "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/all",
+        "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/all"
+      ]
+    },
+    {
+      "target": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color/all",
+      "totalLinks": 79,
+      "uniqueSourcePages": 42,
+      "nonImageSourcePages": 18,
+      "imageSourcePages": 24,
+      "allSourcePages": 0,
+      "doorwaySourcePages": 13,
+      "sampleNonImageSources": [
+        "/1800s-cowboy-art",
+        "/American-Western-Art",
+        "/Art-of-the-West",
+        "/Contemporary-Western-Art",
+        "/Fine-Art-Photography-of-the-American-West",
+        "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans",
+        "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color",
+        "/Painterly-Western-Photography"
+      ]
+    },
+    {
+      "target": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/all",
+      "totalLinks": 153,
+      "uniqueSourcePages": 77,
+      "nonImageSourcePages": 14,
+      "imageSourcePages": 63,
+      "allSourcePages": 0,
+      "doorwaySourcePages": 11,
+      "sampleNonImageSources": [
+        "/Art-of-the-West",
+        "/Contemporary-Western-Art",
+        "/Fine-Art-Photography-of-the-American-West",
+        "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery",
+        "/Modern-Western-Interior-Design-Art",
+        "/Painterly-Western-Photography",
+        "/Rustic-Western-Interior-Design-Art",
+        "/Western-Fine-Art-Photography"
+      ]
+    },
+    {
+      "target": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White/all",
+      "totalLinks": 31,
+      "uniqueSourcePages": 19,
+      "nonImageSourcePages": 14,
+      "imageSourcePages": 5,
+      "allSourcePages": 0,
+      "doorwaySourcePages": 7,
+      "sampleNonImageSources": [
+        "/1800s-cowboy-art",
+        "/American-Western-Art",
+        "/Blog/what-is-western-black-and-white-photography",
+        "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans",
+        "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White",
+        "/Western-Black-and-White-Photography",
+        "/Western-Cowboy-Photography-Archive",
+        "/black-and-white-cowboy-art"
+      ]
+    },
+    {
+      "target": "/Galleries/Fine-Art-Photography/Portraits/Color/all",
+      "totalLinks": 102,
+      "uniqueSourcePages": 56,
+      "nonImageSourcePages": 12,
+      "imageSourcePages": 44,
+      "allSourcePages": 11,
+      "doorwaySourcePages": 0,
+      "sampleNonImageSources": [
+        "/Galleries/Fine-Art-Photography/Architecture/Gallery/all",
+        "/Galleries/Fine-Art-Photography/Miscellaneous/Pets/all",
+        "/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/all",
+        "/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife/all",
+        "/Galleries/Fine-Art-Photography/Portraits/Black-White/all",
+        "/Galleries/Fine-Art-Photography/Portraits/Color",
+        "/Galleries/Fine-Art-Photography/Portraits/Reenactors/all",
+        "/Galleries/Fine-Art-Photography/Transportation/Boats/all"
+      ]
+    },
+    {
+      "target": "/Galleries/Fine-Art-Photography/Transportation/Boats/all",
+      "totalLinks": 38,
+      "uniqueSourcePages": 24,
+      "nonImageSourcePages": 12,
+      "imageSourcePages": 12,
+      "allSourcePages": 11,
+      "doorwaySourcePages": 0,
+      "sampleNonImageSources": [
+        "/Galleries/Fine-Art-Photography/Architecture/Gallery/all",
+        "/Galleries/Fine-Art-Photography/Miscellaneous/Pets/all",
+        "/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/all",
+        "/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife/all",
+        "/Galleries/Fine-Art-Photography/Portraits/Black-White/all",
+        "/Galleries/Fine-Art-Photography/Portraits/Color/all",
+        "/Galleries/Fine-Art-Photography/Portraits/Reenactors/all",
+        "/Galleries/Fine-Art-Photography/Transportation/Boats"
+      ]
+    }
+  ]
+}

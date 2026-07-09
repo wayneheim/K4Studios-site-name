@@ -6,6 +6,7 @@ import BlogJsonLd    from "@/components/blog/BlogJsonLd.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter    from "@/components/Footer.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
+import EssayClusterLinks from "@/components/EssayClusterLinks.astro";
 import { getStructuredData, getBlogBreadcrumbList } from "@/components/utils/getStructuredData.ts";
 import { getLandingMeta } from "@/data/landingMeta.ts";
 import { autoLinkKeywordsInText } from "@/components/utils/autoLinkKeywordsInText.ts";
@@ -401,6 +402,8 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
     </section>
 
     <WesternDefinitions variant="post" />
+
+    <EssayClusterLinks currentPath={sectionPath} />
 
     <SiteFooter
       previewImages={previewImages}
