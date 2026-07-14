@@ -503,7 +503,7 @@ export default function GalleryOrderer({ datasetPath = "" }) {
   }
 
   // Save to server (Netlify function) – send FULL ARRAY so visibility persists
-  async function saveOrderHere() {
+  async function saveOrderHere({ reload = true } = {}) {
     if (!backupMade) { alert("Please create a backup first."); return; }
     if (!selectedPath) return;
 
@@ -550,7 +550,8 @@ export default function GalleryOrderer({ datasetPath = "" }) {
       note("Saved order/visibility in-place");
       setDirty(false);
       // Refresh page AFTER syncArchive completes (not before!)
-      window.location.reload();
+      if (reload) window.location.reload();
+      return true;
     } catch (err) {
       alert("Server save failed. Falling back to download.\n\n" + err.message);
       const filename = datasetPathClean.split("/").pop() || "gallery.mjs";
@@ -558,6 +559,7 @@ export default function GalleryOrderer({ datasetPath = "" }) {
       downloadText(text, filename);
       note(`Downloaded → ${filename}`);
       setDirty(false);
+      return false;
     }
   }
 
@@ -656,7 +658,10 @@ export default function GalleryOrderer({ datasetPath = "" }) {
     if (action === 'move' && dirty) {
       const proceed = window.confirm('You have unsaved changes. Do you want to save before moving? Click OK to save, Cancel to discard changes and continue.');
       if (proceed) {
-        await saveOrderHere();
+        // Keep this page alive until the transfer completes. Reloading during
+        // this save can abort the follow-up request that removes the source.
+        const saved = await saveOrderHere({ reload: false });
+        if (!saved) return;
       } else {
         setDirty(false);
       }
@@ -742,7 +747,8 @@ export default function GalleryOrderer({ datasetPath = "" }) {
       setItems((currentItems) => currentItems.filter((it) => !actionIdSet.has(it.id)));
       setBackupData((currentData) => currentData?.filter((it) => !actionIdSet.has(it.id)) ?? currentData);
       setSelectedIds((currentSelected) => currentSelected.filter((id) => !actionIdSet.has(id)));
-      setDirty(true);
+      // Both files were already persisted by the transfer endpoint.
+      setDirty(false);
     }
 
     const movedCount = actionItems.length;

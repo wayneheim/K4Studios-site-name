@@ -8214,5 +8214,955 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cxmJsHf/2/MzSKZj2kdkvpFHhSkN9bt6HDj8sqtp3Wf5nZxR2Z2/S/_HF27565-Edit-2-2-S.jpg",
     "srcOriginal": "",
     "first_seen": "2026-01-22"
+  },
+  {
+    "id": "i-Mr2S4WL",
+    "title": "Upscaled with Gigapixel v8.4.4. 1093x1626 =&gt; 6558x9756 (6x) @ 300 ppi Model: RecoveryV2, detail: 1",
+    "description": "Upscaled with Gigapixel v8.4.4. 1093x1626 => 6558x9756 (6x) @ 300 ppi Model: RecoveryV2, detail: 1",
+    "alt": "Upscaled with Gigapixel v8.4.4. 1093x1626 =&gt; 6558x9756 (6x) @ 300 ppi Model: RecoveryV2, detail: 1",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Mr2S4WL/0/XL/_HF26494-1519-1520-1521-1522-1712-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Mr2S4WL/0/XL/_HF26494-1519-1520-1521-1522-1712-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Mr2S4WL/0/L/_HF26494-1519-1520-1521-1522-1712-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Mr2S4WL/0/M/_HF26494-1519-1520-1521-1522-1712-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Mr2S4WL/0/S/_HF26494-1519-1520-1521-1522-1712-S.jpg",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Mr2S4WL/A",
+    "keywords": [
+      "HF26494",
+      "1519",
+      "1520",
+      "1521",
+      "1522",
+      "1712"
+    ],
+    "story": "",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/South-Dakota"
+    ],
+    "visibility": "normal",
+    "sortOrder": 320,
+    "first_seen": "2026-07-14"
+  },
+  {
+    "id": "i-WkMCB7b",
+    "title": "Upscaled with Gigapixel v8.4.4. 1093x1626 =&gt; 6558x9756 (6x) @ 300 ppi Model: RecoveryV2, detail: 1",
+    "description": "Upscaled with Gigapixel v8.4.4. 1093x1626 => 6558x9756 (6x) @ 300 ppi Model: RecoveryV2, detail: 1",
+    "alt": "Upscaled with Gigapixel v8.4.4. 1093x1626 =&gt; 6558x9756 (6x) @ 300 ppi Model: RecoveryV2, detail: 1",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WkMCB7b/0/XL/_HF26494-1519-1520-1521-1522-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WkMCB7b/0/XL/_HF26494-1519-1520-1521-1522-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WkMCB7b/0/L/_HF26494-1519-1520-1521-1522-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WkMCB7b/0/M/_HF26494-1519-1520-1521-1522-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WkMCB7b/0/S/_HF26494-1519-1520-1521-1522-S.jpg",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WkMCB7b/A",
+    "keywords": [
+      "HF26494",
+      "1519",
+      "1520",
+      "1521",
+      "1522"
+    ],
+    "story": "",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/South-Dakota"
+    ],
+    "visibility": "normal",
+    "sortOrder": 321,
+    "first_seen": "2026-07-14"
+  },
+  {
+    "id": "i-WbBDgFM",
+    "title": "Untitled photo",
+    "description": "",
+    "alt": "Untitled photo",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WbBDgFM/0/XL/_HF26232-1141-1711-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WbBDgFM/0/XL/_HF26232-1141-1711-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WbBDgFM/0/L/_HF26232-1141-1711-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WbBDgFM/0/M/_HF26232-1141-1711-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WbBDgFM/0/S/_HF26232-1141-1711-S.jpg",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WbBDgFM/A",
+    "keywords": [
+      "HF26232",
+      "1141",
+      "1711"
+    ],
+    "story": "",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/South-Dakota"
+    ],
+    "visibility": "normal",
+    "sortOrder": 322,
+    "first_seen": "2026-07-14"
+  },
+  {
+    "id": "i-4PVgsBK",
+    "title": "Untitled photo",
+    "description": "",
+    "alt": "Untitled photo",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4PVgsBK/0/XL/_HF25096-1727-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4PVgsBK/0/XL/_HF25096-1727-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4PVgsBK/0/L/_HF25096-1727-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4PVgsBK/0/M/_HF25096-1727-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4PVgsBK/0/S/_HF25096-1727-S.jpg",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4PVgsBK/A",
+    "keywords": [
+      "HF25096",
+      "1727"
+    ],
+    "story": "",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/South-Dakota"
+    ],
+    "visibility": "normal",
+    "sortOrder": 323,
+    "first_seen": "2026-07-14"
+  },
+  {
+    "id": "i-Vhv8w9H",
+    "title": "Upscaled with Gigapixel v8.4.4. 3110x2253 =&gt; 10500x7607 (3.37621x) @ 300 ppi Model: RecoveryXL, denoise: 1, decompression: 0, sharpen: , sharpen: 0, sharpen: 1 Face recovery version: 2, strength: 0.57, creativity: 0 (Realistic), selectedFaces: 1",
+    "description": "Upscaled with Gigapixel v8.4.4. 3110x2253 => 10500x7607 (3.37621x) @ 300 ppi Model: RecoveryXL, denoise: 1, decompression: 0, sharpen: , sharpen: 0, sharpen: 1 Face recovery version: 2, strength: 0.57, creativity: 0 (Realistic), selectedFaces: 1",
+    "alt": "Upscaled with Gigapixel v8.4.4. 3110x2253 =&gt; 10500x7607 (3.37621x) @ 300 ppi Model: RecoveryXL, denoise: 1, decompression: 0, sharpen: , sharpen: 0, sharpen: 1 Face recovery version: 2, strength: 0.57, creativity: 0 (Realistic), selectedFaces: 1",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Vhv8w9H/1/XL/_WHO6352-1722-1723-1730-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Vhv8w9H/1/XL/_WHO6352-1722-1723-1730-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Vhv8w9H/1/L/_WHO6352-1722-1723-1730-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Vhv8w9H/1/M/_WHO6352-1722-1723-1730-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Vhv8w9H/1/S/_WHO6352-1722-1723-1730-S.jpg",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Vhv8w9H/A",
+    "keywords": [],
+    "story": "",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/South-Dakota"
+    ],
+    "visibility": "normal",
+    "sortOrder": 324,
+    "first_seen": "2026-07-14"
+  },
+  {
+    "id": "i-99sTMBF",
+    "title": "Upscaled with Gigapixel v8.4.4. 3110x2253 =&gt; 10500x7607 (3.37621x) @ 300 ppi Model: RecoveryXL, denoise: 1, decompression: 0, sharpen: , sharpen: 0, sharpen: 1 Face recovery version: 2, strength: 0.57, creativity: 0 (Realistic), selectedFaces: 1",
+    "description": "Upscaled with Gigapixel v8.4.4. 3110x2253 => 10500x7607 (3.37621x) @ 300 ppi Model: RecoveryXL, denoise: 1, decompression: 0, sharpen: , sharpen: 0, sharpen: 1 Face recovery version: 2, strength: 0.57, creativity: 0 (Realistic), selectedFaces: 1",
+    "alt": "Upscaled with Gigapixel v8.4.4. 3110x2253 =&gt; 10500x7607 (3.37621x) @ 300 ppi Model: RecoveryXL, denoise: 1, decompression: 0, sharpen: , sharpen: 0, sharpen: 1 Face recovery version: 2, strength: 0.57, creativity: 0 (Realistic), selectedFaces: 1",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-99sTMBF/0/XL/_WHO6352-1722-1723-1726-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-99sTMBF/0/XL/_WHO6352-1722-1723-1726-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-99sTMBF/0/L/_WHO6352-1722-1723-1726-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-99sTMBF/0/M/_WHO6352-1722-1723-1726-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-99sTMBF/0/S/_WHO6352-1722-1723-1726-2-S.jpg",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-99sTMBF/A",
+    "keywords": [
+      "WHO6352",
+      "1722",
+      "1723",
+      "1726"
+    ],
+    "story": "",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/South-Dakota"
+    ],
+    "visibility": "normal",
+    "sortOrder": 325,
+    "first_seen": "2026-07-14"
+  },
+  {
+    "id": "i-g2x5F67",
+    "title": "Upscaled with Gigapixel v8.4.4. 3110x2253 =&gt; 10500x7607 (3.37621x) @ 300 ppi Model: RecoveryXL, denoise: 1, decompression: 0, sharpen: , sharpen: 0, sharpen: 1 Face recovery version: 2, strength: 0.57, creativity: 0 (Realistic), selectedFaces: 1",
+    "description": "Upscaled with Gigapixel v8.4.4. 3110x2253 => 10500x7607 (3.37621x) @ 300 ppi Model: RecoveryXL, denoise: 1, decompression: 0, sharpen: , sharpen: 0, sharpen: 1 Face recovery version: 2, strength: 0.57, creativity: 0 (Realistic), selectedFaces: 1",
+    "alt": "Upscaled with Gigapixel v8.4.4. 3110x2253 =&gt; 10500x7607 (3.37621x) @ 300 ppi Model: RecoveryXL, denoise: 1, decompression: 0, sharpen: , sharpen: 0, sharpen: 1 Face recovery version: 2, strength: 0.57, creativity: 0 (Realistic), selectedFaces: 1",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-g2x5F67/0/XL/_WHO6352-1722-1723-1725-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-g2x5F67/0/XL/_WHO6352-1722-1723-1725-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-g2x5F67/0/L/_WHO6352-1722-1723-1725-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-g2x5F67/0/M/_WHO6352-1722-1723-1725-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-g2x5F67/0/S/_WHO6352-1722-1723-1725-S.jpg",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-g2x5F67/A",
+    "keywords": [
+      "WHO6352",
+      "1722",
+      "1723",
+      "1725"
+    ],
+    "story": "",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/South-Dakota"
+    ],
+    "visibility": "normal",
+    "sortOrder": 326,
+    "first_seen": "2026-07-14"
+  },
+  {
+    "id": "i-67j96vq",
+    "title": "Upscaled with Gigapixel v8.4.4. 3064x2073 =&gt; 10500x7104 (3.42689x) @ 300 ppi Model: RecoveryV2, detail: 0.71 Face recovery version: 2, strength: 0.31, creativity: 0 (Realistic), selectedFaces: 1",
+    "description": "Upscaled with Gigapixel v8.4.4. 3064x2073 => 10500x7104 (3.42689x) @ 300 ppi Model: RecoveryV2, detail: 0.71 Face recovery version: 2, strength: 0.31, creativity: 0 (Realistic), selectedFaces: 1",
+    "alt": "Upscaled with Gigapixel v8.4.4. 3064x2073 =&gt; 10500x7104 (3.42689x) @ 300 ppi Model: RecoveryV2, detail: 0.71 Face recovery version: 2, strength: 0.31, creativity: 0 (Realistic), selectedFaces: 1",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-67j96vq/0/XL/_WHO5016-1714-1718-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-67j96vq/0/XL/_WHO5016-1714-1718-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-67j96vq/0/L/_WHO5016-1714-1718-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-67j96vq/0/M/_WHO5016-1714-1718-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-67j96vq/0/S/_WHO5016-1714-1718-S.jpg",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-67j96vq/A",
+    "keywords": [
+      "WHO5016",
+      "1714",
+      "1718"
+    ],
+    "story": "",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/South-Dakota"
+    ],
+    "visibility": "normal",
+    "sortOrder": 327,
+    "first_seen": "2026-07-14"
+  },
+  {
+    "id": "i-mG5sCCF",
+    "title": "Upscaled with Gigapixel v8.4.4. 2538x3384 =&gt; 7614x10152 (3x) @ 300 ppi Model: RecoveryV2, detail: 0.69 Face recovery version: 2, strength: 1, creativity: 1 (Creative), selectedFaces: 1",
+    "description": "Upscaled with Gigapixel v8.4.4. 2538x3384 => 7614x10152 (3x) @ 300 ppi Model: RecoveryV2, detail: 0.69 Face recovery version: 2, strength: 1, creativity: 1 (Creative), selectedFaces: 1",
+    "alt": "Upscaled with Gigapixel v8.4.4. 2538x3384 =&gt; 7614x10152 (3x) @ 300 ppi Model: RecoveryV2, detail: 0.69 Face recovery version: 2, strength: 1, creativity: 1 (Creative), selectedFaces: 1",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-mG5sCCF/0/XL/_WHO5000-1567-1580-1708-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-mG5sCCF/0/XL/_WHO5000-1567-1580-1708-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-mG5sCCF/0/L/_WHO5000-1567-1580-1708-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-mG5sCCF/0/M/_WHO5000-1567-1580-1708-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-mG5sCCF/0/S/_WHO5000-1567-1580-1708-S.jpg",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-mG5sCCF/A",
+    "keywords": [
+      "WHO5000",
+      "1567",
+      "1580",
+      "1708"
+    ],
+    "story": "",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/South-Dakota"
+    ],
+    "visibility": "normal",
+    "sortOrder": 328,
+    "first_seen": "2026-07-14"
+  },
+  {
+    "id": "i-XmhTdjF",
+    "title": "Upscaled with Gigapixel v8.4.4. 2538x3384 =&gt; 7614x10152 (3x) @ 300 ppi Model: RecoveryV2, detail: 0.69 Face recovery version: 2, strength: 1, creativity: 1 (Creative), selectedFaces: 1",
+    "description": "Upscaled with Gigapixel v8.4.4. 2538x3384 => 7614x10152 (3x) @ 300 ppi Model: RecoveryV2, detail: 0.69 Face recovery version: 2, strength: 1, creativity: 1 (Creative), selectedFaces: 1",
+    "alt": "Upscaled with Gigapixel v8.4.4. 2538x3384 =&gt; 7614x10152 (3x) @ 300 ppi Model: RecoveryV2, detail: 0.69 Face recovery version: 2, strength: 1, creativity: 1 (Creative), selectedFaces: 1",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-XmhTdjF/2/XL/_WHO5000-1567-1580-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-XmhTdjF/2/XL/_WHO5000-1567-1580-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-XmhTdjF/2/L/_WHO5000-1567-1580-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-XmhTdjF/2/M/_WHO5000-1567-1580-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-XmhTdjF/2/S/_WHO5000-1567-1580-S.jpg",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-XmhTdjF/A",
+    "keywords": [],
+    "story": "",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/South-Dakota"
+    ],
+    "visibility": "normal",
+    "sortOrder": 329,
+    "first_seen": "2026-07-14"
+  },
+  {
+    "id": "i-p8tcGNm",
+    "title": "Upscaled with Gigapixel v8.4.4. 4643x3482 =&gt; 9285x6963 (1.99978x) @ 300 ppi Model: RecoveryV2, detail: 1 Face recovery version: 2, strength: 0.86, creativity: 0 (Realistic), selectedFaces: 1",
+    "description": "Upscaled with Gigapixel v8.4.4. 4643x3482 => 9285x6963 (1.99978x) @ 300 ppi Model: RecoveryV2, detail: 1 Face recovery version: 2, strength: 0.86, creativity: 0 (Realistic), selectedFaces: 1",
+    "alt": "Upscaled with Gigapixel v8.4.4. 4643x3482 =&gt; 9285x6963 (1.99978x) @ 300 ppi Model: RecoveryV2, detail: 1 Face recovery version: 2, strength: 0.86, creativity: 0 (Realistic), selectedFaces: 1",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-p8tcGNm/0/XL/_WHO9370-1640-1641-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-p8tcGNm/0/XL/_WHO9370-1640-1641-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-p8tcGNm/0/L/_WHO9370-1640-1641-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-p8tcGNm/0/M/_WHO9370-1640-1641-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-p8tcGNm/0/S/_WHO9370-1640-1641-S.jpg",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-p8tcGNm/A",
+    "keywords": [
+      "WHO9370",
+      "1640",
+      "1641"
+    ],
+    "story": "",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/South-Dakota"
+    ],
+    "visibility": "normal",
+    "sortOrder": 330,
+    "first_seen": "2026-07-14"
+  },
+  {
+    "id": "i-vmMfszQ",
+    "title": "Untitled photo",
+    "description": "",
+    "alt": "Untitled photo",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vmMfszQ/0/XL/_HF22771-1628-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vmMfszQ/0/XL/_HF22771-1628-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vmMfszQ/0/L/_HF22771-1628-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vmMfszQ/0/M/_HF22771-1628-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vmMfszQ/0/S/_HF22771-1628-2-S.jpg",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vmMfszQ/A",
+    "keywords": [
+      "HF22771",
+      "1628"
+    ],
+    "story": "",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/South-Dakota"
+    ],
+    "visibility": "normal",
+    "sortOrder": 331,
+    "first_seen": "2026-07-14"
+  },
+  {
+    "id": "i-4dnFJRg",
+    "title": "Untitled photo",
+    "description": "",
+    "alt": "Untitled photo",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4dnFJRg/0/XL/_HF22771-1628-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4dnFJRg/0/XL/_HF22771-1628-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4dnFJRg/0/L/_HF22771-1628-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4dnFJRg/0/M/_HF22771-1628-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4dnFJRg/0/S/_HF22771-1628-S.jpg",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4dnFJRg/A",
+    "keywords": [
+      "HF22771",
+      "1628"
+    ],
+    "story": "",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/South-Dakota"
+    ],
+    "visibility": "normal",
+    "sortOrder": 332,
+    "first_seen": "2026-07-14"
+  },
+  {
+    "id": "i-s3gWRxq",
+    "title": "Untitled photo",
+    "description": "",
+    "alt": "Untitled photo",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-s3gWRxq/0/XL/_WHO7240-16352-1653-171333-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-s3gWRxq/0/XL/_WHO7240-16352-1653-171333-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-s3gWRxq/0/L/_WHO7240-16352-1653-171333-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-s3gWRxq/0/M/_WHO7240-16352-1653-171333-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-s3gWRxq/0/S/_WHO7240-16352-1653-171333-S.jpg",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-s3gWRxq/A",
+    "keywords": [
+      "WHO7240",
+      "16352",
+      "1653",
+      "171333"
+    ],
+    "story": "",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/South-Dakota"
+    ],
+    "visibility": "normal",
+    "sortOrder": 333,
+    "first_seen": "2026-07-14"
+  },
+  {
+    "id": "i-jRxNbgX",
+    "title": "Untitled photo",
+    "description": "",
+    "alt": "Untitled photo",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-jRxNbgX/0/XL/_WHO7240-16352-1653-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-jRxNbgX/0/XL/_WHO7240-16352-1653-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-jRxNbgX/0/L/_WHO7240-16352-1653-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-jRxNbgX/0/M/_WHO7240-16352-1653-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-jRxNbgX/0/S/_WHO7240-16352-1653-S.jpg",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-jRxNbgX/A",
+    "keywords": [
+      "WHO7240",
+      "16352",
+      "1653"
+    ],
+    "story": "",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/South-Dakota"
+    ],
+    "visibility": "normal",
+    "sortOrder": 334,
+    "first_seen": "2026-07-14"
+  },
+  {
+    "id": "i-hxR4xVv",
+    "title": "Untitled photo",
+    "description": "",
+    "alt": "Untitled photo",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-hxR4xVv/0/XL/_HF22377-Pano-1617-1632-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-hxR4xVv/0/XL/_HF22377-Pano-1617-1632-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-hxR4xVv/0/L/_HF22377-Pano-1617-1632-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-hxR4xVv/0/M/_HF22377-Pano-1617-1632-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-hxR4xVv/0/S/_HF22377-Pano-1617-1632-S.jpg",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-hxR4xVv/A",
+    "keywords": [
+      "HF22377",
+      "Pano",
+      "1617",
+      "1632"
+    ],
+    "story": "",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/South-Dakota"
+    ],
+    "visibility": "normal",
+    "sortOrder": 335,
+    "first_seen": "2026-07-14"
+  },
+  {
+    "id": "i-xpv7z8j",
+    "title": "Untitled photo",
+    "description": "",
+    "alt": "Untitled photo",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xpv7z8j/0/XL/_HF22377-Pano-1617-1631-1634-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xpv7z8j/0/XL/_HF22377-Pano-1617-1631-1634-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xpv7z8j/0/L/_HF22377-Pano-1617-1631-1634-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xpv7z8j/0/M/_HF22377-Pano-1617-1631-1634-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xpv7z8j/0/S/_HF22377-Pano-1617-1631-1634-S.jpg",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xpv7z8j/A",
+    "keywords": [
+      "HF22377",
+      "Pano",
+      "1617",
+      "1631",
+      "1634"
+    ],
+    "story": "",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/South-Dakota"
+    ],
+    "visibility": "normal",
+    "sortOrder": 336,
+    "first_seen": "2026-07-14"
+  },
+  {
+    "id": "i-xjFL2Pb",
+    "title": "Untitled photo",
+    "description": "",
+    "alt": "Untitled photo",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xjFL2Pb/0/XL/_HF22377-Pano-1617-1631-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xjFL2Pb/0/XL/_HF22377-Pano-1617-1631-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xjFL2Pb/0/L/_HF22377-Pano-1617-1631-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xjFL2Pb/0/M/_HF22377-Pano-1617-1631-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xjFL2Pb/0/S/_HF22377-Pano-1617-1631-S.jpg",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xjFL2Pb/A",
+    "keywords": [
+      "HF22377",
+      "Pano",
+      "1617",
+      "1631"
+    ],
+    "story": "",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/South-Dakota"
+    ],
+    "visibility": "normal",
+    "sortOrder": 337,
+    "first_seen": "2026-07-14"
+  },
+  {
+    "id": "i-3NNTv7n",
+    "title": "Upscaled with Gigapixel v8.4.4. 6729x4615 =&gt; 13458x9230 (2x) @ 300 ppi Model: RecoveryV2, detail: 1 Face recovery version: 2, strength: 0.89, creativity: 0 (Realistic), selectedFaces: 0",
+    "description": "Upscaled with Gigapixel v8.4.4. 6729x4615 => 13458x9230 (2x) @ 300 ppi Model: RecoveryV2, detail: 1 Face recovery version: 2, strength: 0.89, creativity: 0 (Realistic), selectedFaces: 0",
+    "alt": "Upscaled with Gigapixel v8.4.4. 6729x4615 =&gt; 13458x9230 (2x) @ 300 ppi Model: RecoveryV2, detail: 1 Face recovery version: 2, strength: 0.89, creativity: 0 (Realistic), selectedFaces: 0",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3NNTv7n/0/XL/_HF22225-1581-1587-1589-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3NNTv7n/0/XL/_HF22225-1581-1587-1589-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3NNTv7n/0/L/_HF22225-1581-1587-1589-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3NNTv7n/0/M/_HF22225-1581-1587-1589-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3NNTv7n/0/S/_HF22225-1581-1587-1589-2-S.jpg",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3NNTv7n/A",
+    "keywords": [
+      "HF22225",
+      "1581",
+      "1587",
+      "1589"
+    ],
+    "story": "",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/South-Dakota"
+    ],
+    "visibility": "normal",
+    "sortOrder": 338,
+    "first_seen": "2026-07-14"
+  },
+  {
+    "id": "i-VNxbb8k",
+    "title": "Upscaled with Gigapixel v8.4.4. 6729x4615 =&gt; 13458x9230 (2x) @ 300 ppi Model: RecoveryV2, detail: 1 Face recovery version: 2, strength: 0.89, creativity: 0 (Realistic), selectedFaces: 0",
+    "description": "Upscaled with Gigapixel v8.4.4. 6729x4615 => 13458x9230 (2x) @ 300 ppi Model: RecoveryV2, detail: 1 Face recovery version: 2, strength: 0.89, creativity: 0 (Realistic), selectedFaces: 0",
+    "alt": "Upscaled with Gigapixel v8.4.4. 6729x4615 =&gt; 13458x9230 (2x) @ 300 ppi Model: RecoveryV2, detail: 1 Face recovery version: 2, strength: 0.89, creativity: 0 (Realistic), selectedFaces: 0",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VNxbb8k/0/XL/_HF22225-1581-1587-1589-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VNxbb8k/0/XL/_HF22225-1581-1587-1589-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VNxbb8k/0/L/_HF22225-1581-1587-1589-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VNxbb8k/0/M/_HF22225-1581-1587-1589-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VNxbb8k/0/S/_HF22225-1581-1587-1589-S.jpg",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VNxbb8k/A",
+    "keywords": [
+      "HF22225",
+      "1581",
+      "1587",
+      "1589"
+    ],
+    "story": "",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/South-Dakota"
+    ],
+    "visibility": "normal",
+    "sortOrder": 339,
+    "first_seen": "2026-07-14"
+  },
+  {
+    "id": "i-vJgKthL",
+    "title": "Untitled photo",
+    "description": "",
+    "alt": "Untitled photo",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vJgKthL/3/XL/_WHO0929-1603-1604-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vJgKthL/3/XL/_WHO0929-1603-1604-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vJgKthL/3/L/_WHO0929-1603-1604-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vJgKthL/3/M/_WHO0929-1603-1604-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vJgKthL/3/S/_WHO0929-1603-1604-S.jpg",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vJgKthL/A",
+    "keywords": [],
+    "story": "",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/South-Dakota"
+    ],
+    "visibility": "normal",
+    "sortOrder": 340,
+    "first_seen": "2026-07-14"
+  },
+  {
+    "id": "i-vrMcKJj",
+    "title": "Untitled photo",
+    "description": "",
+    "alt": "Untitled photo",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vrMcKJj/1/XL/_WHO0224-1523-1524-1526-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vrMcKJj/1/XL/_WHO0224-1523-1524-1526-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vrMcKJj/1/L/_WHO0224-1523-1524-1526-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vrMcKJj/1/M/_WHO0224-1523-1524-1526-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vrMcKJj/1/S/_WHO0224-1523-1524-1526-S.jpg",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vrMcKJj/A",
+    "keywords": [],
+    "story": "",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/South-Dakota"
+    ],
+    "visibility": "normal",
+    "sortOrder": 341,
+    "first_seen": "2026-07-14"
+  },
+  {
+    "id": "i-8sbM3rt",
+    "title": "Upscaled with Gigapixel v8.4.4. 1818x2545 =&gt; 7272x10180 (4x) @ 300 ppi Model: RecoveryV2, detail: 1 Face recovery version: 2, strength: 0.91, creativity: 0 (Realistic), selectedFaces: 1",
+    "description": "Upscaled with Gigapixel v8.4.4. 1818x2545 => 7272x10180 (4x) @ 300 ppi Model: RecoveryV2, detail: 1 Face recovery version: 2, strength: 0.91, creativity: 0 (Realistic), selectedFaces: 1",
+    "alt": "Upscaled with Gigapixel v8.4.4. 1818x2545 =&gt; 7272x10180 (4x) @ 300 ppi Model: RecoveryV2, detail: 1 Face recovery version: 2, strength: 0.91, creativity: 0 (Realistic), selectedFaces: 1",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-8sbM3rt/0/XL/_WHO4681-1583-1586-1709-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-8sbM3rt/0/XL/_WHO4681-1583-1586-1709-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-8sbM3rt/0/L/_WHO4681-1583-1586-1709-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-8sbM3rt/0/M/_WHO4681-1583-1586-1709-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-8sbM3rt/0/S/_WHO4681-1583-1586-1709-S.jpg",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-8sbM3rt/A",
+    "keywords": [
+      "WHO4681",
+      "1583",
+      "1586",
+      "1709"
+    ],
+    "story": "",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/South-Dakota"
+    ],
+    "visibility": "normal",
+    "sortOrder": 342,
+    "first_seen": "2026-07-14"
+  },
+  {
+    "id": "i-rcb3ZfN",
+    "title": "Upscaled with Gigapixel v8.4.4. 1818x2545 =&gt; 7272x10180 (4x) @ 300 ppi Model: RecoveryV2, detail: 1 Face recovery version: 2, strength: 0.91, creativity: 0 (Realistic), selectedFaces: 1",
+    "description": "Upscaled with Gigapixel v8.4.4. 1818x2545 => 7272x10180 (4x) @ 300 ppi Model: RecoveryV2, detail: 1 Face recovery version: 2, strength: 0.91, creativity: 0 (Realistic), selectedFaces: 1",
+    "alt": "Upscaled with Gigapixel v8.4.4. 1818x2545 =&gt; 7272x10180 (4x) @ 300 ppi Model: RecoveryV2, detail: 1 Face recovery version: 2, strength: 0.91, creativity: 0 (Realistic), selectedFaces: 1",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rcb3ZfN/0/XL/_WHO4681-1583-1586-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rcb3ZfN/0/XL/_WHO4681-1583-1586-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rcb3ZfN/0/L/_WHO4681-1583-1586-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rcb3ZfN/0/M/_WHO4681-1583-1586-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rcb3ZfN/0/S/_WHO4681-1583-1586-S.jpg",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rcb3ZfN/A",
+    "keywords": [
+      "WHO4681",
+      "1583",
+      "1586"
+    ],
+    "story": "",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/South-Dakota"
+    ],
+    "visibility": "normal",
+    "sortOrder": 343,
+    "first_seen": "2026-07-14"
+  },
+  {
+    "id": "i-hS4nH7p",
+    "title": "Upscaled with Gigapixel v8.4.4. 1818x2545 =&gt; 7272x10180 (4x) @ 300 ppi Model: RecoveryV2, detail: 1 Face recovery version: 2, strength: 0.91, creativity: 0 (Realistic), selectedFaces: 1",
+    "description": "Upscaled with Gigapixel v8.4.4. 1818x2545 => 7272x10180 (4x) @ 300 ppi Model: RecoveryV2, detail: 1 Face recovery version: 2, strength: 0.91, creativity: 0 (Realistic), selectedFaces: 1",
+    "alt": "Upscaled with Gigapixel v8.4.4. 1818x2545 =&gt; 7272x10180 (4x) @ 300 ppi Model: RecoveryV2, detail: 1 Face recovery version: 2, strength: 0.91, creativity: 0 (Realistic), selectedFaces: 1",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-hS4nH7p/1/XL/_WHO4681-1583-1585-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-hS4nH7p/1/XL/_WHO4681-1583-1585-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-hS4nH7p/1/L/_WHO4681-1583-1585-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-hS4nH7p/1/M/_WHO4681-1583-1585-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-hS4nH7p/1/S/_WHO4681-1583-1585-S.jpg",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-hS4nH7p/A",
+    "keywords": [],
+    "story": "",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/South-Dakota"
+    ],
+    "visibility": "normal",
+    "sortOrder": 344,
+    "first_seen": "2026-07-14"
+  },
+  {
+    "id": "i-sCp6srZ",
+    "title": "Untitled photo",
+    "description": "",
+    "alt": "Untitled photo",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sCp6srZ/0/XL/_WHO4245-Edit-1566-1576-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sCp6srZ/0/XL/_WHO4245-Edit-1566-1576-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sCp6srZ/0/L/_WHO4245-Edit-1566-1576-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sCp6srZ/0/M/_WHO4245-Edit-1566-1576-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sCp6srZ/0/S/_WHO4245-Edit-1566-1576-S.jpg",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sCp6srZ/A",
+    "keywords": [
+      "WHO4245",
+      "1566",
+      "1576"
+    ],
+    "story": "",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/South-Dakota"
+    ],
+    "visibility": "normal",
+    "sortOrder": 345,
+    "first_seen": "2026-07-14"
+  },
+  {
+    "id": "i-k7QLhp7",
+    "title": "Untitled photo",
+    "description": "",
+    "alt": "Untitled photo",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-k7QLhp7/0/XL/_WHO3736-1702-1703-1704-1706-1707-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-k7QLhp7/0/XL/_WHO3736-1702-1703-1704-1706-1707-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-k7QLhp7/0/L/_WHO3736-1702-1703-1704-1706-1707-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-k7QLhp7/0/M/_WHO3736-1702-1703-1704-1706-1707-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-k7QLhp7/0/S/_WHO3736-1702-1703-1704-1706-1707-S.jpg",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-k7QLhp7/A",
+    "keywords": [
+      "WHO3736",
+      "1702",
+      "1703",
+      "1704",
+      "1706",
+      "1707"
+    ],
+    "story": "",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/South-Dakota"
+    ],
+    "visibility": "normal",
+    "sortOrder": 346,
+    "first_seen": "2026-07-14"
+  },
+  {
+    "id": "i-wCzNMg3",
+    "title": "Untitled photo",
+    "description": "",
+    "alt": "Untitled photo",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wCzNMg3/0/XL/_WHO3482-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wCzNMg3/0/XL/_WHO3482-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wCzNMg3/0/L/_WHO3482-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wCzNMg3/0/M/_WHO3482-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wCzNMg3/0/S/_WHO3482-Edit-Edit-S.jpg",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wCzNMg3/A",
+    "keywords": [
+      "WHO3482"
+    ],
+    "story": "",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/South-Dakota"
+    ],
+    "visibility": "normal",
+    "sortOrder": 347,
+    "first_seen": "2026-07-14"
+  },
+  {
+    "id": "i-m6WKrNG",
+    "title": "Untitled photo",
+    "description": "",
+    "alt": "Untitled photo",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-m6WKrNG/0/XL/_WHO3156-1699-1700-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-m6WKrNG/0/XL/_WHO3156-1699-1700-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-m6WKrNG/0/L/_WHO3156-1699-1700-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-m6WKrNG/0/M/_WHO3156-1699-1700-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-m6WKrNG/0/S/_WHO3156-1699-1700-S.jpg",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-m6WKrNG/A",
+    "keywords": [
+      "WHO3156",
+      "1699",
+      "1700"
+    ],
+    "story": "",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/South-Dakota"
+    ],
+    "visibility": "normal",
+    "sortOrder": 348,
+    "first_seen": "2026-07-14"
+  },
+  {
+    "id": "i-c2JW8XZ",
+    "title": "Untitled photo",
+    "description": "",
+    "alt": "Untitled photo",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-c2JW8XZ/0/XL/_WHO3087-1695-1698-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-c2JW8XZ/0/XL/_WHO3087-1695-1698-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-c2JW8XZ/0/L/_WHO3087-1695-1698-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-c2JW8XZ/0/M/_WHO3087-1695-1698-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-c2JW8XZ/0/S/_WHO3087-1695-1698-S.jpg",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-c2JW8XZ/A",
+    "keywords": [
+      "WHO3087",
+      "1695",
+      "1698"
+    ],
+    "story": "",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/South-Dakota"
+    ],
+    "visibility": "normal",
+    "sortOrder": 349,
+    "first_seen": "2026-07-14"
+  },
+  {
+    "id": "i-BxK562q",
+    "title": "Upscaled with Gigapixel v8.4.4. 2905x1954 =&gt; 9285x6245 (3.19621x) @ 300 ppi Model: RecoveryXL, denoise: 1, decompression: 0, sharpen: , sharpen: 0, sharpen: 1 Face recovery version: 2, strength: 0.86, creativity: 0 (Realistic), selectedFaces: 1",
+    "description": "Upscaled with Gigapixel v8.4.4. 2905x1954 => 9285x6245 (3.19621x) @ 300 ppi Model: RecoveryXL, denoise: 1, decompression: 0, sharpen: , sharpen: 0, sharpen: 1 Face recovery version: 2, strength: 0.86, creativity: 0 (Realistic), selectedFaces: 1",
+    "alt": "Upscaled with Gigapixel v8.4.4. 2905x1954 =&gt; 9285x6245 (3.19621x) @ 300 ppi Model: RecoveryXL, denoise: 1, decompression: 0, sharpen: , sharpen: 0, sharpen: 1 Face recovery version: 2, strength: 0.86, creativity: 0 (Realistic), selectedFaces: 1",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-BxK562q/0/XL/_WHO3011-1689-1690-1691-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-BxK562q/0/XL/_WHO3011-1689-1690-1691-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-BxK562q/0/L/_WHO3011-1689-1690-1691-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-BxK562q/0/M/_WHO3011-1689-1690-1691-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-BxK562q/0/S/_WHO3011-1689-1690-1691-S.jpg",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-BxK562q/A",
+    "keywords": [
+      "WHO3011",
+      "1689",
+      "1690",
+      "1691"
+    ],
+    "story": "",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/South-Dakota"
+    ],
+    "visibility": "normal",
+    "sortOrder": 350,
+    "first_seen": "2026-07-14"
+  },
+  {
+    "id": "i-2Xw7qGL",
+    "title": "Upscaled with Gigapixel v8.4.4. 5184x3722 =&gt; 9285x6666 (1.79109x) @ 300 ppi Model: High Fidelity V2, denoise: 0.62, sharpen: 1, decompression: 0.06",
+    "description": "Upscaled with Gigapixel v8.4.4. 5184x3722 => 9285x6666 (1.79109x) @ 300 ppi Model: High Fidelity V2, denoise: 0.62, sharpen: 1, decompression: 0.06",
+    "alt": "Upscaled with Gigapixel v8.4.4. 5184x3722 =&gt; 9285x6666 (1.79109x) @ 300 ppi Model: High Fidelity V2, denoise: 0.62, sharpen: 1, decompression: 0.06",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-2Xw7qGL/1/XL/_WHO2501-1668-1677-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-2Xw7qGL/1/XL/_WHO2501-1668-1677-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-2Xw7qGL/1/L/_WHO2501-1668-1677-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-2Xw7qGL/1/M/_WHO2501-1668-1677-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-2Xw7qGL/1/S/_WHO2501-1668-1677-S.jpg",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-2Xw7qGL/A",
+    "keywords": [],
+    "story": "",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/South-Dakota"
+    ],
+    "visibility": "normal",
+    "sortOrder": 351,
+    "first_seen": "2026-07-14"
+  },
+  {
+    "id": "i-Jn5Jd8S",
+    "title": "Untitled photo",
+    "description": "",
+    "alt": "Untitled photo",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Jn5Jd8S/0/XL/_HF28206-1657-1658-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Jn5Jd8S/0/XL/_HF28206-1657-1658-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Jn5Jd8S/0/L/_HF28206-1657-1658-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Jn5Jd8S/0/M/_HF28206-1657-1658-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Jn5Jd8S/0/S/_HF28206-1657-1658-S.jpg",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Jn5Jd8S/A",
+    "keywords": [
+      "HF28206",
+      "1657",
+      "1658"
+    ],
+    "story": "",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/South-Dakota"
+    ],
+    "visibility": "normal",
+    "sortOrder": 352,
+    "first_seen": "2026-07-14"
+  },
+  {
+    "id": "i-8Gs57P9",
+    "title": "Untitled photo",
+    "description": "",
+    "alt": "Untitled photo",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-8Gs57P9/0/XL/_HF26927-1614-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-8Gs57P9/0/XL/_HF26927-1614-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-8Gs57P9/0/L/_HF26927-1614-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-8Gs57P9/0/M/_HF26927-1614-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-8Gs57P9/0/S/_HF26927-1614-2-S.jpg",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-8Gs57P9/A",
+    "keywords": [
+      "HF26927",
+      "1614"
+    ],
+    "story": "",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/South-Dakota"
+    ],
+    "visibility": "normal",
+    "sortOrder": 353,
+    "first_seen": "2026-07-14"
+  },
+  {
+    "id": "i-f6rgrSr",
+    "title": "Untitled photo",
+    "description": "",
+    "alt": "Untitled photo",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-f6rgrSr/1/XL/_HF26927-1614-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-f6rgrSr/1/XL/_HF26927-1614-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-f6rgrSr/1/L/_HF26927-1614-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-f6rgrSr/1/M/_HF26927-1614-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-f6rgrSr/1/S/_HF26927-1614-S.jpg",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-f6rgrSr/A",
+    "keywords": [],
+    "story": "",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/South-Dakota"
+    ],
+    "visibility": "normal",
+    "sortOrder": 354,
+    "first_seen": "2026-07-14"
+  },
+  {
+    "id": "i-HKGtS4N",
+    "title": "Upscaled with Gigapixel v8.4.4. 3139x2242 =&gt; 9000x6428 (2.86716x) @ 300 ppi Model: RecoveryXL, denoise: 1, decompression: 0, sharpen: , sharpen: 0, sharpen: 1 Face recovery version: 2, strength: 0.96, creativity: 0 (Realistic), selectedFaces: 1",
+    "description": "Upscaled with Gigapixel v8.4.4. 3139x2242 => 9000x6428 (2.86716x) @ 300 ppi Model: RecoveryXL, denoise: 1, decompression: 0, sharpen: , sharpen: 0, sharpen: 1 Face recovery version: 2, strength: 0.96, creativity: 0 (Realistic), selectedFaces: 1",
+    "alt": "Upscaled with Gigapixel v8.4.4. 3139x2242 =&gt; 9000x6428 (2.86716x) @ 300 ppi Model: RecoveryXL, denoise: 1, decompression: 0, sharpen: , sharpen: 0, sharpen: 1 Face recovery version: 2, strength: 0.96, creativity: 0 (Realistic), selectedFaces: 1",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-HKGtS4N/0/XL/_WHO1428-1606-1609-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-HKGtS4N/0/XL/_WHO1428-1606-1609-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-HKGtS4N/0/L/_WHO1428-1606-1609-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-HKGtS4N/0/M/_WHO1428-1606-1609-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-HKGtS4N/0/S/_WHO1428-1606-1609-S.jpg",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-HKGtS4N/A",
+    "keywords": [
+      "WHO1428",
+      "1606",
+      "1609"
+    ],
+    "story": "",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/South-Dakota"
+    ],
+    "visibility": "normal",
+    "sortOrder": 355,
+    "first_seen": "2026-07-14"
+  },
+  {
+    "id": "i-cfW89QP",
+    "title": "Untitled photo",
+    "description": "",
+    "alt": "Untitled photo",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cfW89QP/0/XL/_WHO3736-1702-1703-1704-1706-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cfW89QP/0/XL/_WHO3736-1702-1703-1704-1706-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cfW89QP/0/L/_WHO3736-1702-1703-1704-1706-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cfW89QP/0/M/_WHO3736-1702-1703-1704-1706-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cfW89QP/0/S/_WHO3736-1702-1703-1704-1706-S.jpg",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cfW89QP/A",
+    "keywords": [
+      "WHO3736",
+      "1702",
+      "1703",
+      "1704",
+      "1706"
+    ],
+    "story": "",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/South-Dakota"
+    ],
+    "visibility": "normal",
+    "sortOrder": 356,
+    "first_seen": "2026-07-14"
   }
 ];

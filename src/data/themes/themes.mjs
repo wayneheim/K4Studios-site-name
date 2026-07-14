@@ -190,10 +190,10 @@ export const themes = [
     "dataset": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
     "description": "Color images rooted in Native American narrative, where presence, posture, and moment carry the story. These painterly photographs draw from living history to explore identity, resilience, and the human reality beneath the legend.",
     "visible": true,
-    "imageCount": 46,
+    "imageCount": 67,
     "firstImage": "i-7hD9CCh",
     "createdAt": "2026-04-14T17:44:19.021Z",
-    "updatedAt": "2026-04-14T17:44:19.021Z"
+    "updatedAt": "2026-07-14T03:37:27.504Z"
   },
   {
     "name": "NA Narrative B/W Images",

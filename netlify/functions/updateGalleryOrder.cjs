@@ -259,6 +259,17 @@ exports.handler = async (event) => {
         mode === "move" ? writeGalleryArray(sourceAbsPath, updatedSource) : Promise.resolve(sourceArr),
       ]);
 
+      if (mode === "move") {
+        const remainingIds = new Set(sourceFinal.filter(isReal).map((item) => item.id));
+        const notRemoved = transferItems
+          .map((item) => item.id)
+          .filter((id) => remainingIds.has(id));
+
+        if (notRemoved.length > 0) {
+          throw new Error(`Move verification failed; source still contains: ${notRemoved.join(", ")}`);
+        }
+      }
+
       return {
         statusCode: 200,
         headers: { "Content-Type": "application/json" },
