@@ -69,6 +69,9 @@ async function main() {
   const urls = [];
   for (const [galleryPath, images] of Object.entries(galleryDataMap)) {
     for (const image of images) {
+      const visibility = String(image?.visibility ?? '').trim().toLowerCase();
+      if (visibility !== 'show' && visibility !== 'normal') continue;
+      if (!image?.id || String(image.id).trim().toLowerCase() === 'i-k4studios') continue;
       const url = `https://www.k4studios.com${galleryPath}/${image.id}`;
       urls.push(url);
     }

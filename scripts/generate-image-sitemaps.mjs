@@ -51,7 +51,7 @@ async function writeIfChanged(filePath, content) {
 
 function isHiddenImage(image) {
   const visibility = String(image?.visibility || '').toLowerCase().trim();
-  if (visibility === 'ghost' || visibility === 'hidden' || visibility === 'hide') return true;
+  if (visibility !== 'show' && visibility !== 'normal') return true;
   if (isGhostImageId(image?.id)) return true;
 
   // Various flags used across data sets

@@ -28,7 +28,6 @@ const EXCLUDED_FILES = new Set(["MasterGalleryData.mjs"]);
 const ARCHIVE_DATA_DIRS = new Set([
   path.join(DATA_DIR, "Other", "Photo-Shoots").toLowerCase(),
 ]);
-const HIDDEN_VISIBILITY = new Set(["hidden", "hide", "ghost", "non", "none"]);
 const GOOGLE_PRODUCT_CATEGORY = "Arts & Entertainment > Hobbies & Creative Arts > Artwork";
 const SKETCH_SERIES_PRICE_USD = "25.00 USD";
 const SKETCH_SERIES_SIZE = "5 x 7 in";
@@ -62,8 +61,8 @@ function trimAtWord(value = "", maxLength = 160) {
 }
 
 function isHiddenImage(image) {
-  const visibility = String(image?.visibility ?? "show").trim().toLowerCase();
-  if (HIDDEN_VISIBILITY.has(visibility)) return true;
+  const visibility = String(image?.visibility ?? "").trim().toLowerCase();
+  if (visibility !== "show" && visibility !== "normal") return true;
   if (String(image?.id || "").trim().toLowerCase() === GHOST_IMAGE_ID) return true;
   if (image?.hidden === true) return true;
   if (image?.show === false) return true;

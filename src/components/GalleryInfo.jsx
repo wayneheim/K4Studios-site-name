@@ -128,7 +128,7 @@ function pickFirstRealImage(arr) {
         img.id &&
         img.id !== "i-k4studios" &&
         (img.sortOrder ?? 0) !== -1 &&
-        !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(img.visibility ?? 'show').trim().toLowerCase())
+        ['show', 'normal'].includes(String(img.visibility ?? '').trim().toLowerCase())
     )
     .sort(
       (a, b) =>
@@ -169,7 +169,7 @@ export default function GalleryInfo({
   // Use a deterministic hero image so the landing page keeps a stable identity
   const heroImage = useMemo(() => {
     const pool = (galleryData || []).filter(
-      img => img?.id && img.id !== "i-k4studios" && !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(img.visibility ?? 'show').trim().toLowerCase())
+      img => img?.id && img.id !== "i-k4studios" && ['show', 'normal'].includes(String(img.visibility ?? '').trim().toLowerCase())
     );
     if (!pool.length) return null;
     return pickFirstRealImage(pool) || pool[0];

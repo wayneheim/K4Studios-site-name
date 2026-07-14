@@ -17,14 +17,13 @@ const MASTER_DATA_PATH = path.join(ROOT, "src/data/galleryMaps/MasterGalleryData
 const OUTPUT_PATH = path.join(ROOT, "src/data/chapterDoorwayAssignments.generated.js");
 const GALLERY_OUTPUT_PATH = path.join(ROOT, "src/data/galleryDoorwayAssignments.generated.js");
 
-const HIDDEN_VISIBILITY = new Set(["hidden", "non", "none", ""]);
 const GHOST_IMAGE_ID = "i-k4studios";
 
 function isVisibleImage(img) {
   if (!img?.id) return false;
   if (String(img.id).trim().toLowerCase() === GHOST_IMAGE_ID) return false;
-  const visibility = String(img.visibility || "show").trim().toLowerCase();
-  return !HIDDEN_VISIBILITY.has(visibility);
+  const visibility = String(img.visibility ?? "").trim().toLowerCase();
+  return visibility === "show" || visibility === "normal";
 }
 
 function cleanAssignment(assignment, frameCount = chapterDoorwayFrames.length) {

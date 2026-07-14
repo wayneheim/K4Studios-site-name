@@ -526,9 +526,12 @@ export default function ChapterGalleryBase({
   
   const altText = `${sectionDisplayTitle} – Painterly Fine Art Photography by Wayne Heim`;
   const titleText = altText;
-  // Filter out ghost + hidden items
+  // Public gallery items must opt in explicitly. Legacy "normal" remains public.
   const isGhost  = (e) => e && e.id === "i-k4studios";
-  const isHidden = (e) => e?.visibility === "hidden" || e?.show === false || e?.hidden === true;
+  const isHidden = (e) => {
+    const visibility = String(e?.visibility ?? "").trim().toLowerCase();
+    return (visibility !== "show" && visibility !== "normal") || e?.show === false || e?.hidden === true;
+  };
 
   // Check for theme filter in URL query params - hydration-safe
   const [themeSlug, setThemeSlug] = useState(null);

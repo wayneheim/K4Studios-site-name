@@ -46,7 +46,10 @@ for (const [galleryPath, images] of Object.entries(galleryDataMap)) {
   if (galleryPath.includes('/Other/Archive')) continue;
   
   // Get first 9 visible images
-  const visibleImages = images.filter(img => img.visibility !== 'hide');
+  const visibleImages = images.filter((img) => {
+    const visibility = String(img?.visibility ?? '').trim().toLowerCase();
+    return visibility === 'show' || visibility === 'normal';
+  });
   const first9 = visibleImages.slice(0, 9).map(img => img.id);
   
   if (first9.length > 0) {

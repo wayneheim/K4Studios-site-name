@@ -30,7 +30,11 @@ function pickImage(d = {}) {
 
 function isGhost(d) { return d && d.id === "i-k4studios"; }
 function isRealItem(d) { return d && !isGhost(d); }
-function isHidden(d) { return d && String(d.visibility).toLowerCase() === "hidden"; }
+function isHidden(d) {
+  if (!d) return true;
+  const visibility = String(d.visibility ?? "").trim().toLowerCase();
+  return visibility !== "show" && visibility !== "normal";
+}
 
 function normalizeSmartPunctuation(value) {
   return typeof value === "string"
@@ -422,10 +426,7 @@ export default function GalleryOrderer({ datasetPath = "" }) {
     setItems(arr =>
       arr.map(it =>
         it.id === id
-          ? (wantHidden ? { ...it, visibility: "hidden" } : (() => {
-              const { visibility, ...rest } = it;
-              return rest; // remove visibility to "show"
-            })())
+          ? (wantHidden ? { ...it, visibility: "hidden" } : { ...it, visibility: "show" })
           : it
       )
     );

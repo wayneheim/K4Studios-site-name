@@ -17,7 +17,6 @@ const vm = require('vm');
 
 // Hero image IDs that are always available (pre-optimized .webp versions)
 const HERO_IDS = ['i-ncFcHDM', 'i-KtmPcCf', 'i-rqk5Kdk'];
-const HIDDEN_VISIBILITY = new Set(['hidden', 'hide', 'ghost', 'non', 'none', '']);
 const HERO_WEBP_SRCS = {
   'i-ncFcHDM': '/images/i-ncFcHDM.webp',
   'i-KtmPcCf': '/images/i-KtmPcCf.webp',
@@ -26,8 +25,8 @@ const HERO_WEBP_SRCS = {
 
 function isPublicVisibleImage(img) {
   if (!img || img.id === 'i-k4studios') return false;
-  const visibility = String(img.visibility ?? 'show').trim().toLowerCase();
-  return !HIDDEN_VISIBILITY.has(visibility);
+  const visibility = String(img.visibility ?? '').trim().toLowerCase();
+  return visibility === 'show' || visibility === 'normal';
 }
 
 const WESTERN_POOL_PATHS = [

@@ -5106,7 +5106,7 @@ export const galleryData = [
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White"
     ],
-    "visibility": "",
+    "visibility": "show",
     "sortOrder": 134
   },
   {

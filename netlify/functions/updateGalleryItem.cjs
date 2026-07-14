@@ -286,7 +286,7 @@ exports.handler = async (event) => {
       }
     }
 
-    // visibility ("hidden" to hide; falsy/empty -> remove prop to show)
+    // visibility is explicit: "show" is public; blank/missing is private.
     if (Object.prototype.hasOwnProperty.call(patch, "visibility")) {
       const v = patch.visibility;
       const existing = getProp(target, "visibility");

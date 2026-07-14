@@ -93,13 +93,17 @@ function orderGalleryItems(arr) {
     return ao - bo;
   });
 
-  const shown = realItems.filter((d) => String(d.visibility).toLowerCase() !== "hidden");
-  const hidden = realItems.filter((d) => String(d.visibility).toLowerCase() === "hidden");
+  const shown = realItems.filter((d) => !isHidden(d));
+  const hidden = realItems.filter((d) => isHidden(d));
   return shown.concat(hidden);
 }
 
 // --- Visibility helpers (matching GalleryOrderer)
-function isHidden(d) { return d && String(d.visibility).toLowerCase() === "hidden"; }
+function isHidden(d) {
+  if (!d) return true;
+  const visibility = String(d.visibility ?? "").trim().toLowerCase();
+  return visibility !== "show" && visibility !== "normal";
+}
 
 /* ---------- Star Rating (1–5) ---------- */
 function StarRating({ value = 0, onChange }) {
@@ -530,12 +534,9 @@ export default function GalleryDataSwapper({ datasetPath = "" }) {
     const item = items.find(it => it.id === id);
     if (!item) return;
 
-    const updated = wantHidden 
+    const updated = wantHidden
       ? { ...item, visibility: "hidden" }
-      : (() => {
-          const { visibility, ...rest } = item;
-          return rest; // remove visibility to "show"
-        })();
+      : { ...item, visibility: "show" };
     const ok = await saveUpdatedItemToServer(updated);
     if (ok) {
 
@@ -671,7 +672,7 @@ export default function GalleryDataSwapper({ datasetPath = "" }) {
               background: "#fff",
               overflow: "hidden",
               boxShadow: "0 1px 2px rgba(0,0,0,0.06)",
-              ...(String(item.visibility).toLowerCase() === "hidden"
+              ...(isHidden(item)
                 ? { opacity: 0.5, filter: "grayscale(0.3)" }
                 : null),
             }}
@@ -718,7 +719,7 @@ export default function GalleryDataSwapper({ datasetPath = "" }) {
                 H
               </button>
             </div>
-            {String(item.visibility).toLowerCase() === "hidden" && (
+            {isHidden(item) && (
               <span style={{ position: "absolute", top: 8, left: 8, fontSize: 11, padding: "2px 6px", borderRadius: 4, background: "#fef9c3", border: "1px solid #fde68a", color: "#92400e" }}>
                 Hidden
               </span>

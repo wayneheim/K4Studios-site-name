@@ -53,11 +53,9 @@ const DESIRED_RANK_BY_KEY = Object.freeze({
   src: SIZE_RANK.XL
 });
 
-const HIDDEN_VISIBILITY = new Set(['hidden', 'hide', 'ghost', 'non', 'none']);
-
 function isHiddenImage(item) {
-  const visibility = String(item?.visibility ?? 'show').trim().toLowerCase();
-  return HIDDEN_VISIBILITY.has(visibility);
+  const visibility = String(item?.visibility ?? '').trim().toLowerCase();
+  return visibility !== 'show' && visibility !== 'normal';
 }
 
 function detectUrlSizeRank(url) {

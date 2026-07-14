@@ -3,7 +3,7 @@ import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 
 function isNavigableImage(img) {
   const visibility = String(img?.visibility || "").toLowerCase().trim();
-  return Boolean(img?.id) && visibility !== "ghost" && visibility !== "hidden" && visibility !== "hide";
+  return Boolean(img?.id) && (visibility === "show" || visibility === "normal");
 }
 
 function sortByGalleryOrder(images) {

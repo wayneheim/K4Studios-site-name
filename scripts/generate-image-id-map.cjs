@@ -25,12 +25,9 @@ const OUTPUT_PATH_SRC = path.join(__dirname, '../src/data/imageIdMap.json');
 const OUTPUT_PATH_PUBLIC = path.join(__dirname, '../public/imageIdMap.json');
 const GHOST_IMAGE_ID = 'i-k4studios';
 
-// Values that mean "hidden" (not including "ghost" which is different)
-const HIDDEN_VISIBILITY = ['hidden', 'non', 'none', ''];
-
-function isHidden(visibility) {
-  const val = (visibility || 'show').toLowerCase().trim();
-  return HIDDEN_VISIBILITY.includes(val);
+function isVisible(visibility) {
+  const val = String(visibility ?? '').toLowerCase().trim();
+  return val === 'show' || val === 'normal';
 }
 
 function isGhostImageId(id) {
@@ -62,7 +59,7 @@ async function generateImageIdMap() {
       }
       
       // Skip hidden/ghost images - they should not be canonical redirect targets.
-      if (isHidden(img.visibility)) {
+      if (!isVisible(img.visibility)) {
         hiddenCount++;
         continue;
       }

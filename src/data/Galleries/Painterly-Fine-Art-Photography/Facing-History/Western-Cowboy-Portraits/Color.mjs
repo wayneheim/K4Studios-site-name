@@ -68,7 +68,7 @@ export const galleryData = [
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
-    "visibility": "",
+    "visibility": "show",
     "sortOrder": 0,
     "themes": {
       "sketches-of-legends": 0

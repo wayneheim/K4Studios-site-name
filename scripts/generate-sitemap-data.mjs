@@ -21,11 +21,9 @@ const DYNAMIC_ALL_ROUTE_FILE = path.resolve(__dirname, '..', 'src', 'pages', '[.
 
 const GHOST_IMAGE_ID = 'i-k4studios';
 const IMAGE_ID_REGEX = /^i-[A-Za-z0-9]+$/;
-const HIDDEN_VISIBILITY = new Set(['hidden', 'hide', 'ghost', 'non', 'none', '']);
-
 function isHiddenImage(img) {
-  const visibility = String(img?.visibility ?? 'show').trim().toLowerCase();
-  return HIDDEN_VISIBILITY.has(visibility);
+  const visibility = String(img?.visibility ?? '').trim().toLowerCase();
+  return visibility !== 'show' && visibility !== 'normal';
 }
 
 function isGhostImageId(id) {

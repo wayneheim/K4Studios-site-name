@@ -133,7 +133,10 @@ function isGhostImageId(id) {
       srcXL:    img.srcXL || '',
       src:      img.srcS || img.srcM || img.srcL || img.srcXL || img.src || '',
       rating:   img.rating,
-      visibility: img.visibility || 'show', // Track visibility for smart-404 filtering
+      // Blank/missing visibility is private. Preserve the legacy "normal" alias as public.
+      visibility: String(img.visibility ?? '').trim().toLowerCase() === 'normal'
+        ? 'show'
+        : String(img.visibility ?? '').trim().toLowerCase(),
       galleries: [ href.replace(/^\//, '') ]
     }));
   }

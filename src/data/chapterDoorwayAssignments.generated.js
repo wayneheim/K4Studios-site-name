@@ -581,11 +581,6 @@ export const chapterDoorwayAssignments = {
     "href": "/western-cowboy-art",
     "frameIndex": 2
   },
-  "i-fM9qmKW": {
-    "theme": "western",
-    "href": "/Narrative-Western-Art",
-    "frameIndex": 0
-  },
   "i-hMXZ8Xh": {
     "theme": "western",
     "href": "/Western-Black-and-White-Photography",
@@ -661,11 +656,6 @@ export const chapterDoorwayAssignments = {
     "href": "/cowboy-art-prints",
     "frameIndex": 2
   },
-  "i-MMmDhV2": {
-    "theme": "western",
-    "href": "/cowboy-fine-art-prints",
-    "frameIndex": 0
-  },
   "i-5Md3dQ3": {
     "theme": "western",
     "href": "/Western-Cowboy-Photography",
@@ -736,11 +726,6 @@ export const chapterDoorwayAssignments = {
     "href": "/Western-Frontier-Art",
     "frameIndex": 1
   },
-  "i-QB4jLsH": {
-    "theme": "western",
-    "href": "/American-Western-Art",
-    "frameIndex": 2
-  },
   "i-5TGTZ9P": {
     "theme": "western",
     "href": "/western-artwork",
@@ -810,11 +795,6 @@ export const chapterDoorwayAssignments = {
     "theme": "western",
     "href": "/western-cowboy-art",
     "frameIndex": 0
-  },
-  "i-VDLVwqr": {
-    "theme": "western",
-    "href": "/Narrative-Western-Art",
-    "frameIndex": 1
   },
   "i-NKdPDCg": {
     "theme": "western",
@@ -1621,11 +1601,6 @@ export const chapterDoorwayAssignments = {
     "href": "/Narrative-Western-Art",
     "frameIndex": 2
   },
-  "i-48jGpLt": {
-    "theme": "western",
-    "href": "/Western-Black-and-White-Photography",
-    "frameIndex": 0
-  },
   "i-WSQrZ3M": {
     "theme": "western",
     "href": "/Cowboy-Fine-Art-Photography",
@@ -1975,11 +1950,6 @@ export const chapterDoorwayAssignments = {
     "theme": "western",
     "href": "/Cowboy-Fine-Art-Photography",
     "frameIndex": 1
-  },
-  "i-ps4qwgF": {
-    "theme": "western",
-    "href": "/american-wild-west",
-    "frameIndex": 2
   },
   "i-KgkW54w": {
     "theme": "western",
@@ -2386,11 +2356,6 @@ export const chapterDoorwayAssignments = {
     "href": "/cowboy-art-prints",
     "frameIndex": 0
   },
-  "i-c4xWGxj": {
-    "theme": "western",
-    "href": "/cowboy-fine-art-prints",
-    "frameIndex": 1
-  },
   "i-bhH8xbr": {
     "theme": "western",
     "href": "/Western-Cowboy-Photography",
@@ -2460,11 +2425,6 @@ export const chapterDoorwayAssignments = {
     "theme": "western",
     "href": "/Western-Frontier-Art",
     "frameIndex": 2
-  },
-  "i-dXDLH7c": {
-    "theme": "western",
-    "href": "/American-Western-Art",
-    "frameIndex": 0
   },
   "i-DK8t88F": {
     "theme": "western",
@@ -3651,11 +3611,6 @@ export const chapterDoorwayAssignments = {
     "href": "/vintage-western-art",
     "frameIndex": 3
   },
-  "i-XLXGHT9": {
-    "theme": "western",
-    "href": "/wild-west-art",
-    "frameIndex": 4
-  },
   "i-rdf8JpZ": {
     "theme": "western",
     "href": "/Western-Frontier-Art",
@@ -3671,16 +3626,6 @@ export const chapterDoorwayAssignments = {
     "href": "/western-artwork",
     "frameIndex": 2
   },
-  "i-5XC2cj5": {
-    "theme": "western",
-    "href": "/western-art-prints",
-    "frameIndex": 0
-  },
-  "i-RrRPTZP": {
-    "theme": "western",
-    "href": "/Western-Photography-Prints",
-    "frameIndex": 1
-  },
   "i-7dQdHmC": {
     "theme": "western",
     "href": "/western-photos",
@@ -3690,11 +3635,6 @@ export const chapterDoorwayAssignments = {
     "theme": "western",
     "href": "/cowboy-pictures",
     "frameIndex": 3
-  },
-  "i-3HM43Zv": {
-    "theme": "western",
-    "href": "/western-cowboy-pictures",
-    "frameIndex": 4
   },
   "i-Nm9DNhq": {
     "theme": "western",
@@ -3751,11 +3691,6 @@ export const chapterDoorwayAssignments = {
     "href": "/Cowboy-Fine-Art-Photography",
     "frameIndex": 2
   },
-  "i-nbvxtrR": {
-    "theme": "western",
-    "href": "/american-wild-west",
-    "frameIndex": 0
-  },
   "i-DWW5wHT": {
     "theme": "western",
     "href": "/old-west-pictures",
@@ -3770,11 +3705,6 @@ export const chapterDoorwayAssignments = {
     "theme": "western",
     "href": "/wild-west-art",
     "frameIndex": 3
-  },
-  "i-4pVqPVw": {
-    "theme": "western",
-    "href": "/Western-Frontier-Art",
-    "frameIndex": 4
   },
   "i-KXLmcXW": {
     "theme": "western",
@@ -14921,11 +14851,11 @@ export const chapterDoorwayCursors = {
 };
 
 export const chapterDoorwayAssignmentMeta = {
-  "generatedAt": "2026-07-09T16:03:10.334Z",
-  "assignedCount": 2981,
+  "generatedAt": "2026-07-14T00:56:25.921Z",
+  "assignedCount": 2967,
   "themeCounts": {
     "nativeAmerican": 29,
-    "western": 748,
+    "western": 734,
     "civilWar": 92,
     "wwii": 729,
     "roaring20s": 48,
@@ -14935,7 +14865,7 @@ export const chapterDoorwayAssignmentMeta = {
     "engrained": 47
   },
   "skipped": {
-    "noTheme": 227,
+    "noTheme": 224,
     "noDoorways": 0
   }
 };

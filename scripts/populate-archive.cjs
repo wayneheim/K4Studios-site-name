@@ -18,12 +18,9 @@ const ARCHIVE_PATH = path.join(__dirname, '../src/data/Other/Archive/Archive.mjs
 // Backup pattern to skip
 const BACKUP_PATTERN = /[-_\s](copy|backup)(\d*|[-_\s].*)?\.[^.]+$/i;
 
-// Hidden visibility values
-const HIDDEN_VISIBILITY = ['hidden', 'non', 'none', ''];
-
 function isHidden(visibility) {
-  const val = (visibility || 'show').toLowerCase().trim();
-  return HIDDEN_VISIBILITY.includes(val);
+  const val = String(visibility ?? '').toLowerCase().trim();
+  return val !== 'show' && val !== 'normal';
 }
 
 function isBackupFile(filePath) {

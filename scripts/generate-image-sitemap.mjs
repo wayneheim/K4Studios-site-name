@@ -20,7 +20,7 @@ function isGhostImageId(id) {
 
 function isHiddenImage(image) {
   const visibility = String(image?.visibility || '').toLowerCase().trim();
-  if (visibility === 'ghost' || visibility === 'hidden' || visibility === 'hide') return true;
+  if (visibility !== 'show' && visibility !== 'normal') return true;
   if (isGhostImageId(image?.id)) return true;
   if (image?.hidden === true) return true;
   if (image?.show === false) return true;

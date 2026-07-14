@@ -136,7 +136,7 @@ export const galleryData = [
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color"
     ],
-    "visibility": "",
+    "visibility": "show",
     "sortOrder": 1,
     "themes": {
       "sketches-of-legends": 0
@@ -18706,7 +18706,7 @@ export const galleryData = [
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color"
     ],
-    "visibility": "",
+    "visibility": "show",
     "sortOrder": 409,
     "themes": {
       "aces-smoke-whiskey": 46,

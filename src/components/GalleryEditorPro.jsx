@@ -1910,18 +1910,16 @@ ${collectorNotes}`;
   // ---- NEW: Show/Hide toggle ----
   async function toggleVisibility() {
     if (!backupMade || !selectedPath || !current) return;
-    const next = current.visibility === "hidden" ? "" : "hidden";
+    const currentVisibility = String(current.visibility ?? "").trim().toLowerCase();
+    const isCurrentlyPublic = currentVisibility === "show" || currentVisibility === "normal";
+    const next = isCurrentlyPublic ? "hidden" : "show";
 
     // optimistic UI: data
     setData((arr) => {
       const i = arr.findIndex((d) => d.id === current.id);
       if (i === -1) return arr;
       const copy = [...arr];
-      if (next) copy[i] = { ...copy[i], visibility: next };
-      else {
-        const { visibility, ...rest } = copy[i];
-        copy[i] = rest;
-      }
+      copy[i] = { ...copy[i], visibility: next };
       writeDraft(copy);
       return copy;
     });
@@ -1930,9 +1928,7 @@ ${collectorNotes}`;
       Array.isArray(full)
         ? full.map((item) => {
             if (!item || item.id !== current.id) return item;
-            if (next) return { ...item, visibility: next };
-            const { visibility, ...rest } = item;
-            return rest;
+            return { ...item, visibility: next };
           })
         : full
     );

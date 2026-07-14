@@ -89,7 +89,7 @@ function seededShuffle<T>(arr: T[], seed: string): T[] {
 // These 12 are what get warmed - client picks 6 from them for variety
 const POOL_SIZE = 12;
 const candidatePool = seededShuffle(
-  images.filter(img => !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(img.visibility ?? 'show').trim().toLowerCase())),
+  images.filter(img => ['show', 'normal'].includes(String(img.visibility ?? '').trim().toLowerCase())),
   resolvedBaseUrl
 ).slice(0, POOL_SIZE);
 
