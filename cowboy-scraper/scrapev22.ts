@@ -53,15 +53,16 @@ const SIZE_CONFIGS = [
 
 function normalizeSmugMugSizeUrls(seedUrl: string): Pick<ImageRecord, "src" | "srcXL" | "srcL" | "srcM" | "srcS"> | null {
   const match = seedUrl.match(
-    /^(https:\/\/photos\.smugmug\.com.+?\/i-[^/]+\/\d+\/)(?:[^/]+\/)?([A-Za-z0-9]+)\/(.+)-([A-Za-z0-9]+)\.(jpg|jpeg|png|webp)$/i
+    /^(https:\/\/photos\.smugmug\.com.+?\/i-[^/]+\/\d+\/)(?:([^/]+)\/)?([A-Za-z0-9]+)\/(.+)-([A-Za-z0-9]+)\.(jpg|jpeg|png|webp)$/i
   );
 
   if (!match) {
     return null;
   }
 
-  const [, prefix, , fileStem, , extension] = match;
-  const build = (sizeCode: "XL" | "L" | "M" | "S") => `${prefix}${sizeCode}/${fileStem}-${sizeCode}.${extension}`;
+  const [, prefix, signature, , fileStem, , extension] = match;
+  const signedPrefix = signature ? `${prefix}${signature}/` : prefix;
+  const build = (sizeCode: "XL" | "L" | "M" | "S") => `${signedPrefix}${sizeCode}/${fileStem}-${sizeCode}.${extension}`;
 
   return {
     src: build("XL"),
