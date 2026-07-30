@@ -17,7 +17,7 @@ export const facingFAQ = [
     q: "What’s Wayne’s background in art and illustration?",
     a: [
       "Wayne is an **award-winning medical illustrator** with a BFA from the Cleveland Institute of Art. He’s spent decades distilling anatomy and surgical detail into visuals for doctors and patients — a world where accuracy is everything and storytelling saves lives.",
-      "That background taught him discipline, lighting, and visual hierarchy — all of which now inform his painterly photography. It’s a rare blend of scientific precision and artistic instinct."
+      "That background taught him discipline, lighting, and visual hierarchy — all of which now inform his painterly photography. But where medical illustration aims for one correct meaning, his Western work aims that same precision at something harder: a frame exact enough that every viewer finds a different, personal one inside it."
     ],
   },
   {
