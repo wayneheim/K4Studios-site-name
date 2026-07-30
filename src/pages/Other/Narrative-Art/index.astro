@@ -127,6 +127,20 @@ const essayCards = essays.map((essay, index) => {
 </BaseLayout>
 
 <style>
+  .section-heading-wrap {
+    margin: 2rem 0 1.75rem;
+    text-align: center;
+  }
+
+  .section-heading {
+    margin: 0;
+  }
+
+  .section-heading .page-title {
+    margin: 0;
+    line-height: 1.2;
+  }
+
   .narrative-card-grid {
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -248,6 +262,14 @@ const essayCards = essays.map((essay, index) => {
   }
 
   @media (max-width: 520px) {
+    .section-heading-wrap {
+      margin: 1.25rem 0 1.5rem;
+    }
+
+    .section-heading .page-title {
+      font-size: 1.75rem;
+    }
+
     .narrative-card-grid {
       grid-template-columns: 1fr;
       max-width: 18rem;
