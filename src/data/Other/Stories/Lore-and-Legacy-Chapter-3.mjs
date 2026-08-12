@@ -123,7 +123,7 @@ export const storyData = [
     },
     "contentSource": "ai",
     "first_seen": "2026-01-22",
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": "18\" X 30\"",
     "price": "$1850",
     "linkedImageId": "i-LCspRF4",
@@ -185,7 +185,7 @@ export const storyData = [
     },
     "contentSource": "ai",
     "first_seen": "2026-01-22",
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": "16\" X 20\"",
     "price": "$1100",
     "linkedImageId": "i-HBRmWg4",
@@ -250,7 +250,7 @@ export const storyData = [
     },
     "contentSource": "ai",
     "first_seen": "2026-01-22",
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": "16\" X 24\"",
     "price": "$1650",
     "linkedImageId": "i-RsLmsLZ",
@@ -316,7 +316,7 @@ export const storyData = [
     },
     "contentSource": "human",
     "first_seen": "2026-01-22",
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": "34\" X 20\"",
     "price": "$2600",
     "linkedImageId": "i-89qzJ6S",
@@ -377,7 +377,7 @@ export const storyData = [
     },
     "contentSource": "ai",
     "first_seen": "2026-01-22",
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": "16\" x 24\"",
     "price": "$1650",
     "linkedImageId": "i-MHGPvcs",
@@ -433,7 +433,7 @@ export const storyData = [
       "lore-and-legacy": 31
     },
     "contentSource": "ai",
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": "20\" × 24\"",
     "price": "$1650",
     "linkedImageId": "i-w3JBvXs",
@@ -492,7 +492,7 @@ export const storyData = [
     "themes": {
       "lore-and-legacy": 6
     },
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": "40\" × 30\"",
     "price": "$4500",
     "linkedImageId": "i-fCG2nm8",
@@ -551,7 +551,7 @@ export const storyData = [
     "themes": {
       "lore-and-legacy": 20
     },
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": "24\" × 36\"",
     "price": "$3300",
     "linkedImageId": "i-JKnW497",
@@ -610,7 +610,7 @@ export const storyData = [
     "themes": {
       "lore-and-legacy": 16
     },
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": "16\" × 36\"",
     "price": "$2000",
     "linkedImageId": "i-mLPgSpC",
@@ -687,7 +687,7 @@ export const storyData = [
     "themes": {
       "lore-and-legacy": 22
     },
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": "24\" × 36\"",
     "price": "$3300",
     "linkedImageId": "i-44jcjTQ",
@@ -746,7 +746,7 @@ export const storyData = [
       "lore-and-legacy": 30
     },
     "contentSource": "ai",
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": "16\" × 36\"",
     "price": "$2000",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Spk5gdH/8/MmjhWHz9gsBVmXmJRjHjhdntvnrd3L7cfMHQVkgtT/XL/Cowboy-One-Last-Look-ws-XL.jpg",
@@ -817,7 +817,7 @@ export const storyData = [
     "themes": {
       "lore-and-legacy": 24
     },
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": "12\" × 24\"",
     "price": "$1100",
     "linkedImageId": "i-5FX3W9r",
@@ -876,7 +876,7 @@ export const storyData = [
       "lore-and-legacy": 26
     },
     "contentSource": "ai",
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": "24\" × 36\"",
     "price": "$3300",
     "linkedImageId": "i-ncFcHDM",

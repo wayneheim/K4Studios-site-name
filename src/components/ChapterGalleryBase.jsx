@@ -2795,7 +2795,7 @@ export default function ChapterGalleryBase({
 
 Each piece transforms the natural grain of the wood into an integral part of the artwork, creating depth and warmth impossible to achieve on traditional media. The result is a one-of-a-kind presentation where every grain tells its own story alongside Wayne's vision.
 
-Limited to editions of 50 or fewer, Engrained pieces arrive ready to hang with a float mount presentation on 0.5" thick birch panels.
+Limited to numbered editions of 5 (+1 Artist Proof), Engrained pieces arrive ready to hang with a float mount presentation on 0.5" thick birch panels.
               </div>
               <div className="flex justify-end mt-4">
                 <button

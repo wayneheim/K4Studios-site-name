@@ -461,9 +461,19 @@ export const chapterDoorwayAssignments = {
     "href": "/historical-fine-art-photography-collection",
     "frameIndex": 3
   },
+  "i-xpv7z8j": {
+    "theme": "western",
+    "href": "/western-photos",
+    "frameIndex": 4
+  },
   "i-LCspRF4": {
     "theme": "western",
     "href": "/western-cowboy-art",
+    "frameIndex": 0
+  },
+  "i-jRxNbgX": {
+    "theme": "western",
+    "href": "/cowboy-pictures",
     "frameIndex": 0
   },
   "i-ncFcHDM": {
@@ -480,6 +490,11 @@ export const chapterDoorwayAssignments = {
     "theme": "western",
     "href": "/Cowboy-Fine-Art-Photography",
     "frameIndex": 3
+  },
+  "i-cfW89QP": {
+    "theme": "western",
+    "href": "/western-cowboy-pictures",
+    "frameIndex": 1
   },
   "i-gxMVNh3": {
     "theme": "western",
@@ -506,6 +521,11 @@ export const chapterDoorwayAssignments = {
     "href": "/Western-Frontier-Art",
     "frameIndex": 0
   },
+  "i-XmhTdjF": {
+    "theme": "western",
+    "href": "/cowboy-art-prints",
+    "frameIndex": 2
+  },
   "i-44jcjTQ": {
     "theme": "western",
     "href": "/American-Western-Art",
@@ -526,6 +546,11 @@ export const chapterDoorwayAssignments = {
     "href": "/Western-Photography-Prints",
     "frameIndex": 4
   },
+  "i-fM9qmKW": {
+    "theme": "western",
+    "href": "/cowboy-fine-art-prints",
+    "frameIndex": 3
+  },
   "i-NdQnj6P": {
     "theme": "western",
     "href": "/western-photos",
@@ -541,15 +566,35 @@ export const chapterDoorwayAssignments = {
     "href": "/western-cowboy-pictures",
     "frameIndex": 2
   },
+  "i-BxK562q": {
+    "theme": "western",
+    "href": "/Western-Cowboy-Photography",
+    "frameIndex": 4
+  },
   "i-RsLmsLZ": {
     "theme": "western",
     "href": "/cowboy-art-prints",
+    "frameIndex": 0
+  },
+  "i-Vhv8w9H": {
+    "theme": "western",
+    "href": "/Cowboy-Photography",
     "frameIndex": 0
   },
   "i-Wx5scCf": {
     "theme": "western",
     "href": "/cowboy-fine-art-prints",
     "frameIndex": 1
+  },
+  "i-2Xw7qGL": {
+    "theme": "western",
+    "href": "/western-portrait-photography",
+    "frameIndex": 1
+  },
+  "i-m6WKrNG": {
+    "theme": "western",
+    "href": "/Western-Photography-Art",
+    "frameIndex": 2
   },
   "i-rfFBRQM": {
     "theme": "western",
@@ -574,6 +619,11 @@ export const chapterDoorwayAssignments = {
   "i-HBRmWg4": {
     "theme": "western",
     "href": "/Western-Wall-Art",
+    "frameIndex": 1
+  },
+  "i-5j2Knmb": {
+    "theme": "western",
+    "href": "/western-cowboy-art",
     "frameIndex": 1
   },
   "i-MHGPvcs": {
@@ -616,6 +666,11 @@ export const chapterDoorwayAssignments = {
     "href": "/Western-Frontier-Art",
     "frameIndex": 2
   },
+  "i-67j96vq": {
+    "theme": "western",
+    "href": "/Western-Wall-Art",
+    "frameIndex": 3
+  },
   "i-Vr8vzjt": {
     "theme": "western",
     "href": "/American-Western-Art",
@@ -655,6 +710,11 @@ export const chapterDoorwayAssignments = {
     "theme": "western",
     "href": "/cowboy-art-prints",
     "frameIndex": 2
+  },
+  "i-MMmDhV2": {
+    "theme": "western",
+    "href": "/western-cowboy-art",
+    "frameIndex": 4
   },
   "i-5Md3dQ3": {
     "theme": "western",
@@ -706,6 +766,16 @@ export const chapterDoorwayAssignments = {
     "href": "/american-wild-west",
     "frameIndex": 2
   },
+  "i-mLPgSpC": {
+    "theme": "western",
+    "href": "/Western-Photography-Prints",
+    "frameIndex": 2
+  },
+  "i-DwVBJb3": {
+    "theme": "western",
+    "href": "/wild-west-art",
+    "frameIndex": 0
+  },
   "i-5rq7gcD": {
     "theme": "western",
     "href": "/old-west-pictures",
@@ -716,15 +786,15 @@ export const chapterDoorwayAssignments = {
     "href": "/vintage-western-art",
     "frameIndex": 4
   },
-  "i-DwVBJb3": {
-    "theme": "western",
-    "href": "/wild-west-art",
-    "frameIndex": 0
-  },
   "i-zHvS5jz": {
     "theme": "western",
     "href": "/Western-Frontier-Art",
     "frameIndex": 1
+  },
+  "i-QB4jLsH": {
+    "theme": "western",
+    "href": "/Narrative-Western-Art",
+    "frameIndex": 0
   },
   "i-5TGTZ9P": {
     "theme": "western",
@@ -735,11 +805,6 @@ export const chapterDoorwayAssignments = {
     "theme": "western",
     "href": "/western-art-prints",
     "frameIndex": 1
-  },
-  "i-mLPgSpC": {
-    "theme": "western",
-    "href": "/Western-Photography-Prints",
-    "frameIndex": 2
   },
   "i-pNSX6cp": {
     "theme": "western",
@@ -795,6 +860,11 @@ export const chapterDoorwayAssignments = {
     "theme": "western",
     "href": "/western-cowboy-art",
     "frameIndex": 0
+  },
+  "i-VDLVwqr": {
+    "theme": "western",
+    "href": "/Western-Black-and-White-Photography",
+    "frameIndex": 1
   },
   "i-NKdPDCg": {
     "theme": "western",
@@ -906,15 +976,15 @@ export const chapterDoorwayAssignments = {
     "href": "/western-cowboy-art",
     "frameIndex": 4
   },
+  "i-8Ddjt5W": {
+    "theme": "western",
+    "href": "/Western-Black-and-White-Photography",
+    "frameIndex": 2
+  },
   "i-gj4hHmL": {
     "theme": "western",
     "href": "/Narrative-Western-Art",
     "frameIndex": 0
-  },
-  "i-RRw2Tfr": {
-    "theme": "western",
-    "href": "/Western-Black-and-White-Photography",
-    "frameIndex": 1
   },
   "i-RT474Nz": {
     "theme": "western",
@@ -1196,20 +1266,10 @@ export const chapterDoorwayAssignments = {
     "href": "/Western-Photography-Prints",
     "frameIndex": 1
   },
-  "i-HHxxcsM": {
-    "theme": "western",
-    "href": "/western-photos",
-    "frameIndex": 2
-  },
   "i-NBsQ59h": {
     "theme": "western",
     "href": "/cowboy-pictures",
     "frameIndex": 0
-  },
-  "i-CgCxXGG": {
-    "theme": "western",
-    "href": "/western-cowboy-pictures",
-    "frameIndex": 1
   },
   "i-TtXPkVK": {
     "theme": "western",
@@ -1486,6 +1546,11 @@ export const chapterDoorwayAssignments = {
     "href": "/Narrative-Western-Art",
     "frameIndex": 0
   },
+  "i-SBjhvGf": {
+    "theme": "western",
+    "href": "/cowboy-fine-art-prints",
+    "frameIndex": 0
+  },
   "i-QGCQt7M": {
     "theme": "western",
     "href": "/Western-Black-and-White-Photography",
@@ -1495,11 +1560,6 @@ export const chapterDoorwayAssignments = {
     "theme": "western",
     "href": "/Cowboy-Fine-Art-Photography",
     "frameIndex": 2
-  },
-  "i-n8TX2qS": {
-    "theme": "western",
-    "href": "/american-wild-west",
-    "frameIndex": 3
   },
   "i-tVxgfZN": {
     "theme": "western",
@@ -1526,11 +1586,6 @@ export const chapterDoorwayAssignments = {
     "href": "/American-Western-Art",
     "frameIndex": 0
   },
-  "i-S5zV9h4": {
-    "theme": "western",
-    "href": "/western-artwork",
-    "frameIndex": 1
-  },
   "i-HZK96qf": {
     "theme": "western",
     "href": "/western-art-prints",
@@ -1545,6 +1600,11 @@ export const chapterDoorwayAssignments = {
     "theme": "western",
     "href": "/western-photos",
     "frameIndex": 4
+  },
+  "i-CNrD7G7": {
+    "theme": "western",
+    "href": "/American-Western-Art",
+    "frameIndex": 3
   },
   "i-xMk6ZJ9": {
     "theme": "western",
@@ -1561,11 +1621,6 @@ export const chapterDoorwayAssignments = {
     "href": "/cowboy-art-prints",
     "frameIndex": 2
   },
-  "i-SBjhvGf": {
-    "theme": "western",
-    "href": "/cowboy-fine-art-prints",
-    "frameIndex": 0
-  },
   "i-WzTZ6Jv": {
     "theme": "western",
     "href": "/Western-Cowboy-Photography",
@@ -1581,6 +1636,11 @@ export const chapterDoorwayAssignments = {
     "href": "/western-portrait-photography",
     "frameIndex": 3
   },
+  "i-J3dh2p4": {
+    "theme": "western",
+    "href": "/western-cowboy-pictures",
+    "frameIndex": 0
+  },
   "i-XnW7ZD5": {
     "theme": "western",
     "href": "/Western-Photography-Art",
@@ -1594,6 +1654,11 @@ export const chapterDoorwayAssignments = {
   "i-2pRkNng": {
     "theme": "western",
     "href": "/western-cowboy-art",
+    "frameIndex": 1
+  },
+  "i-2s2LtQp": {
+    "theme": "western",
+    "href": "/cowboy-fine-art-prints",
     "frameIndex": 1
   },
   "i-vrc7KkJ": {
@@ -1651,6 +1716,11 @@ export const chapterDoorwayAssignments = {
     "href": "/Western-Photography-Prints",
     "frameIndex": 2
   },
+  "i-S5zV9h4": {
+    "theme": "western",
+    "href": "/western-artwork",
+    "frameIndex": 1
+  },
   "i-sPkKGnX": {
     "theme": "western",
     "href": "/western-photos",
@@ -1661,15 +1731,10 @@ export const chapterDoorwayAssignments = {
     "href": "/cowboy-pictures",
     "frameIndex": 4
   },
-  "i-J3dh2p4": {
+  "i-LjBc6N6": {
     "theme": "western",
-    "href": "/western-cowboy-pictures",
+    "href": "/Western-Frontier-Art",
     "frameIndex": 0
-  },
-  "i-jDmnnrm": {
-    "theme": "western",
-    "href": "/cowboy-art-prints",
-    "frameIndex": 1
   },
   "i-PxNFNhQ": {
     "theme": "western",
@@ -1711,11 +1776,6 @@ export const chapterDoorwayAssignments = {
     "href": "/Narrative-Western-Art",
     "frameIndex": 1
   },
-  "i-8Ddjt5W": {
-    "theme": "western",
-    "href": "/Western-Black-and-White-Photography",
-    "frameIndex": 2
-  },
   "i-VhHKttr": {
     "theme": "western",
     "href": "/Cowboy-Fine-Art-Photography",
@@ -1741,10 +1801,10 @@ export const chapterDoorwayAssignments = {
     "href": "/wild-west-art",
     "frameIndex": 4
   },
-  "i-LjBc6N6": {
+  "i-drTwKMw": {
     "theme": "western",
-    "href": "/Western-Frontier-Art",
-    "frameIndex": 0
+    "href": "/western-cowboy-pictures",
+    "frameIndex": 4
   },
   "i-qJtstjP": {
     "theme": "western",
@@ -1771,25 +1831,20 @@ export const chapterDoorwayAssignments = {
     "href": "/western-photos",
     "frameIndex": 2
   },
+  "i-jDmnnrm": {
+    "theme": "western",
+    "href": "/cowboy-art-prints",
+    "frameIndex": 1
+  },
   "i-V9Jx8D8": {
     "theme": "western",
     "href": "/cowboy-pictures",
     "frameIndex": 3
   },
-  "i-drTwKMw": {
-    "theme": "western",
-    "href": "/western-cowboy-pictures",
-    "frameIndex": 4
-  },
   "i-QNLd2xZ": {
     "theme": "western",
     "href": "/cowboy-art-prints",
     "frameIndex": 0
-  },
-  "i-2s2LtQp": {
-    "theme": "western",
-    "href": "/cowboy-fine-art-prints",
-    "frameIndex": 1
   },
   "i-z9Pfbc5": {
     "theme": "western",
@@ -1836,6 +1891,16 @@ export const chapterDoorwayAssignments = {
     "href": "/Cowboy-Fine-Art-Photography",
     "frameIndex": 2
   },
+  "i-pZDmzdq": {
+    "theme": "western",
+    "href": "/cowboy-pictures",
+    "frameIndex": 1
+  },
+  "i-KgkW54w": {
+    "theme": "western",
+    "href": "/old-west-pictures",
+    "frameIndex": 0
+  },
   "i-bhXQ8Hx": {
     "theme": "western",
     "href": "/american-wild-west",
@@ -1871,21 +1936,6 @@ export const chapterDoorwayAssignments = {
     "href": "/western-artwork",
     "frameIndex": 1
   },
-  "i-Q3Qm4f2": {
-    "theme": "western",
-    "href": "/western-art-prints",
-    "frameIndex": 2
-  },
-  "i-rTwWXgw": {
-    "theme": "western",
-    "href": "/Western-Photography-Prints",
-    "frameIndex": 0
-  },
-  "i-2jfdQGw": {
-    "theme": "western",
-    "href": "/western-photos",
-    "frameIndex": 1
-  },
   "i-mn8RKLL": {
     "theme": "western",
     "href": "/cowboy-pictures",
@@ -1910,16 +1960,6 @@ export const chapterDoorwayAssignments = {
     "theme": "western",
     "href": "/Western-Cowboy-Photography",
     "frameIndex": 1
-  },
-  "i-6QFpvwm": {
-    "theme": "western",
-    "href": "/Cowboy-Photography",
-    "frameIndex": 2
-  },
-  "i-xhZhRpL": {
-    "theme": "western",
-    "href": "/western-portrait-photography",
-    "frameIndex": 0
   },
   "i-T7Sjp7D": {
     "theme": "western",
@@ -1946,16 +1986,6 @@ export const chapterDoorwayAssignments = {
     "href": "/Western-Black-and-White-Photography",
     "frameIndex": 0
   },
-  "i-N8PLGR4": {
-    "theme": "western",
-    "href": "/Cowboy-Fine-Art-Photography",
-    "frameIndex": 1
-  },
-  "i-KgkW54w": {
-    "theme": "western",
-    "href": "/old-west-pictures",
-    "frameIndex": 0
-  },
   "i-PzwsgTk": {
     "theme": "western",
     "href": "/vintage-western-art",
@@ -1975,6 +2005,11 @@ export const chapterDoorwayAssignments = {
     "theme": "western",
     "href": "/American-Western-Art",
     "frameIndex": 4
+  },
+  "i-sCp6srZ": {
+    "theme": "western",
+    "href": "/Cowboy-Fine-Art-Photography",
+    "frameIndex": 2
   },
   "i-cRmVc3S": {
     "theme": "western",
@@ -1996,15 +2031,15 @@ export const chapterDoorwayAssignments = {
     "href": "/western-photos",
     "frameIndex": 0
   },
-  "i-pZDmzdq": {
-    "theme": "western",
-    "href": "/cowboy-pictures",
-    "frameIndex": 1
-  },
   "i-Zp9288b": {
     "theme": "western",
     "href": "/western-cowboy-pictures",
     "frameIndex": 2
+  },
+  "i-2jfdQGw": {
+    "theme": "western",
+    "href": "/western-photos",
+    "frameIndex": 1
   },
   "i-Vd5VW3L": {
     "theme": "western",
@@ -2056,11 +2091,6 @@ export const chapterDoorwayAssignments = {
     "href": "/Western-Black-and-White-Photography",
     "frameIndex": 4
   },
-  "i-Fx7pPGJ": {
-    "theme": "western",
-    "href": "/Cowboy-Fine-Art-Photography",
-    "frameIndex": 0
-  },
   "i-pN58VX3": {
     "theme": "western",
     "href": "/american-wild-west",
@@ -2085,11 +2115,6 @@ export const chapterDoorwayAssignments = {
     "theme": "western",
     "href": "/Western-Frontier-Art",
     "frameIndex": 2
-  },
-  "i-CNrD7G7": {
-    "theme": "western",
-    "href": "/American-Western-Art",
-    "frameIndex": 3
   },
   "i-CgTvzgP": {
     "theme": "western",
@@ -2161,6 +2186,11 @@ export const chapterDoorwayAssignments = {
     "href": "/western-cowboy-art",
     "frameIndex": 1
   },
+  "i-sDZFJ6t": {
+    "theme": "nativeAmerican",
+    "href": "/Western-Black-and-White-Photography",
+    "frameIndex": 0
+  },
   "i-CmScKnv": {
     "theme": "western",
     "href": "/Narrative-Western-Art",
@@ -2190,6 +2220,11 @@ export const chapterDoorwayAssignments = {
     "theme": "western",
     "href": "/vintage-western-art",
     "frameIndex": 2
+  },
+  "i-Fx7pPGJ": {
+    "theme": "western",
+    "href": "/Cowboy-Fine-Art-Photography",
+    "frameIndex": 0
   },
   "i-CgjNZB5": {
     "theme": "western",
@@ -2221,10 +2256,10 @@ export const chapterDoorwayAssignments = {
     "href": "/Western-Photography-Prints",
     "frameIndex": 0
   },
-  "i-7VSrLtw": {
+  "i-rcb3ZfN": {
     "theme": "western",
-    "href": "/western-photos",
-    "frameIndex": 1
+    "href": "/american-wild-west",
+    "frameIndex": 3
   },
   "i-KK8RzH7": {
     "theme": "western",
@@ -2271,15 +2306,10 @@ export const chapterDoorwayAssignments = {
     "href": "/Western-Wall-Art",
     "frameIndex": 2
   },
-  "i-xNB7ZSk": {
+  "i-6wMDxdF": {
     "theme": "western",
-    "href": "/western-cowboy-art",
-    "frameIndex": 0
-  },
-  "i-b2k3Wd5": {
-    "theme": "western",
-    "href": "/Narrative-Western-Art",
-    "frameIndex": 1
+    "href": "/western-cowboy-pictures",
+    "frameIndex": 2
   },
   "i-8rcVT5Z": {
     "theme": "western",
@@ -2346,11 +2376,6 @@ export const chapterDoorwayAssignments = {
     "href": "/cowboy-pictures",
     "frameIndex": 1
   },
-  "i-6wMDxdF": {
-    "theme": "western",
-    "href": "/western-cowboy-pictures",
-    "frameIndex": 2
-  },
   "i-HbGN76v": {
     "theme": "western",
     "href": "/cowboy-art-prints",
@@ -2360,11 +2385,6 @@ export const chapterDoorwayAssignments = {
     "theme": "western",
     "href": "/Western-Cowboy-Photography",
     "frameIndex": 2
-  },
-  "i-sxTV2KH": {
-    "theme": "western",
-    "href": "/Cowboy-Photography",
-    "frameIndex": 3
   },
   "i-wHspqpJ": {
     "theme": "western",
@@ -2401,14 +2421,24 @@ export const chapterDoorwayAssignments = {
     "href": "/Cowboy-Fine-Art-Photography",
     "frameIndex": 2
   },
+  "i-sxTV2KH": {
+    "theme": "western",
+    "href": "/Cowboy-Photography",
+    "frameIndex": 3
+  },
   "i-jGrpdg5": {
     "theme": "western",
     "href": "/american-wild-west",
     "frameIndex": 3
   },
-  "i-kNXVsdd": {
+  "i-JkFT62C": {
     "theme": "western",
     "href": "/old-west-pictures",
+    "frameIndex": 2
+  },
+  "i-z4M6gCv": {
+    "theme": "western",
+    "href": "/Western-Photography-Art",
     "frameIndex": 4
   },
   "i-79P6kHT": {
@@ -2416,85 +2446,35 @@ export const chapterDoorwayAssignments = {
     "href": "/vintage-western-art",
     "frameIndex": 0
   },
-  "i-Zt47sk7": {
+  "i-Tcg3LZS": {
     "theme": "western",
-    "href": "/wild-west-art",
-    "frameIndex": 1
-  },
-  "i-9DLx78V": {
-    "theme": "western",
-    "href": "/Western-Frontier-Art",
+    "href": "/Cowboy-Photography",
     "frameIndex": 2
-  },
-  "i-DK8t88F": {
-    "theme": "western",
-    "href": "/western-artwork",
-    "frameIndex": 1
-  },
-  "i-7Gh7Gq5": {
-    "theme": "western",
-    "href": "/western-art-prints",
-    "frameIndex": 2
-  },
-  "i-2t65dGM": {
-    "theme": "western",
-    "href": "/Western-Photography-Prints",
-    "frameIndex": 3
-  },
-  "i-8X7hMPk": {
-    "theme": "western",
-    "href": "/western-photos",
-    "frameIndex": 4
   },
   "i-m2dqhjT": {
     "theme": "western",
     "href": "/cowboy-pictures",
     "frameIndex": 0
   },
-  "i-r9dGJJx": {
+  "i-7VSrLtw": {
     "theme": "western",
-    "href": "/western-cowboy-pictures",
+    "href": "/western-photos",
     "frameIndex": 1
-  },
-  "i-s3f9DST": {
-    "theme": "western",
-    "href": "/cowboy-art-prints",
-    "frameIndex": 2
-  },
-  "i-zqZPZF6": {
-    "theme": "western",
-    "href": "/cowboy-fine-art-prints",
-    "frameIndex": 0
-  },
-  "i-xgqQnWv": {
-    "theme": "western",
-    "href": "/Western-Cowboy-Photography",
-    "frameIndex": 1
-  },
-  "i-Tcg3LZS": {
-    "theme": "western",
-    "href": "/Cowboy-Photography",
-    "frameIndex": 2
-  },
-  "i-kvNsMGB": {
-    "theme": "western",
-    "href": "/western-portrait-photography",
-    "frameIndex": 3
-  },
-  "i-z4M6gCv": {
-    "theme": "western",
-    "href": "/Western-Photography-Art",
-    "frameIndex": 4
   },
   "i-67qk8zR": {
     "theme": "western",
     "href": "/Western-Wall-Art",
     "frameIndex": 0
   },
-  "i-5j2Knmb": {
+  "i-2t65dGM": {
     "theme": "western",
-    "href": "/western-cowboy-art",
-    "frameIndex": 1
+    "href": "/Western-Photography-Prints",
+    "frameIndex": 3
+  },
+  "i-9DLx78V": {
+    "theme": "western",
+    "href": "/Western-Frontier-Art",
+    "frameIndex": 2
   },
   "i-R7jg62J": {
     "theme": "western",
@@ -2666,6 +2646,11 @@ export const chapterDoorwayAssignments = {
     "href": "/western-photos",
     "frameIndex": 1
   },
+  "i-NgkC4Zt": {
+    "theme": "nativeAmerican",
+    "href": "/American-Western-Art",
+    "frameIndex": 2
+  },
   "i-thpSjMG": {
     "theme": "nativeAmerican",
     "href": "/wild-west-art",
@@ -2675,11 +2660,6 @@ export const chapterDoorwayAssignments = {
     "theme": "nativeAmerican",
     "href": "/american-wild-west",
     "frameIndex": 0
-  },
-  "i-JkFT62C": {
-    "theme": "western",
-    "href": "/old-west-pictures",
-    "frameIndex": 2
   },
   "i-c98L2bs": {
     "theme": "western",
@@ -2695,6 +2675,286 @@ export const chapterDoorwayAssignments = {
     "theme": "western",
     "href": "/Western-Frontier-Art",
     "frameIndex": 0
+  },
+  "i-QkvssHD": {
+    "theme": "western",
+    "href": "/old-west-pictures",
+    "frameIndex": 4
+  },
+  "i-MvZxkQh": {
+    "theme": "western",
+    "href": "/western-photos",
+    "frameIndex": 4
+  },
+  "i-qCNGgfg": {
+    "theme": "western",
+    "href": "/cowboy-pictures",
+    "frameIndex": 3
+  },
+  "i-fkMpXJf": {
+    "theme": "western",
+    "href": "/vintage-western-art",
+    "frameIndex": 0
+  },
+  "i-khNrbjG": {
+    "theme": "western",
+    "href": "/wild-west-art",
+    "frameIndex": 1
+  },
+  "i-vRBRpfk": {
+    "theme": "western",
+    "href": "/Western-Frontier-Art",
+    "frameIndex": 2
+  },
+  "i-vJgKthL": {
+    "theme": "western",
+    "href": "/American-Western-Art",
+    "frameIndex": 3
+  },
+  "i-TWsj2NX": {
+    "theme": "western",
+    "href": "/western-artwork",
+    "frameIndex": 4
+  },
+  "i-549JVNk": {
+    "theme": "western",
+    "href": "/western-artwork",
+    "frameIndex": 2
+  },
+  "i-73WFHzh": {
+    "theme": "western",
+    "href": "/Western-Photography-Prints",
+    "frameIndex": 0
+  },
+  "i-6vszqTK": {
+    "theme": "western",
+    "href": "/western-cowboy-art",
+    "frameIndex": 1
+  },
+  "i-7vSccct": {
+    "theme": "western",
+    "href": "/Narrative-Western-Art",
+    "frameIndex": 4
+  },
+  "i-fJmGF7N": {
+    "theme": "western",
+    "href": "/vintage-western-art",
+    "frameIndex": 3
+  },
+  "i-vc6XQPf": {
+    "theme": "western",
+    "href": "/western-portrait-photography",
+    "frameIndex": 4
+  },
+  "i-r3Kq9B4": {
+    "theme": "western",
+    "href": "/western-art-prints",
+    "frameIndex": 0
+  },
+  "i-Z8pZLnt": {
+    "theme": "nativeAmerican",
+    "href": "/Western-Photography-Prints",
+    "frameIndex": 2
+  },
+  "i-g2x5F67": {
+    "theme": "western",
+    "href": "/Western-Photography-Prints",
+    "frameIndex": 1
+  },
+  "i-JbWnV3V": {
+    "theme": "nativeAmerican",
+    "href": "/Western-Black-and-White-Photography",
+    "frameIndex": 2
+  },
+  "i-StJWnTh": {
+    "theme": "nativeAmerican",
+    "href": "/Western-Photography-Art",
+    "frameIndex": 1
+  },
+  "i-SzHJVxh": {
+    "theme": "western",
+    "href": "/western-photos",
+    "frameIndex": 2
+  },
+  "i-4PVgsBK": {
+    "theme": "western",
+    "href": "/cowboy-pictures",
+    "frameIndex": 3
+  },
+  "i-PQhLX4w": {
+    "theme": "western",
+    "href": "/western-cowboy-pictures",
+    "frameIndex": 4
+  },
+  "i-zt2btJ7": {
+    "theme": "nativeAmerican",
+    "href": "/Western-Photography-Art",
+    "frameIndex": 4
+  },
+  "i-4Wsxmqv": {
+    "theme": "nativeAmerican",
+    "href": "/western-art-prints",
+    "frameIndex": 1
+  },
+  "i-FzCLS97": {
+    "theme": "western",
+    "href": "/cowboy-art-prints",
+    "frameIndex": 0
+  },
+  "i-T6bD4w7": {
+    "theme": "western",
+    "href": "/cowboy-pictures",
+    "frameIndex": 0
+  },
+  "i-rdf8JpZ": {
+    "theme": "western",
+    "href": "/Western-Frontier-Art",
+    "frameIndex": 0
+  },
+  "i-XLXGHT9": {
+    "theme": "western",
+    "href": "/cowboy-fine-art-prints",
+    "frameIndex": 1
+  },
+  "i-fCSxt3j": {
+    "theme": "nativeAmerican",
+    "href": "/american-wild-west",
+    "frameIndex": 2
+  },
+  "i-Jn5Jd8S": {
+    "theme": "western",
+    "href": "/Western-Cowboy-Photography",
+    "frameIndex": 2
+  },
+  "i-cKL7kjn": {
+    "theme": "western",
+    "href": "/Cowboy-Photography",
+    "frameIndex": 0
+  },
+  "i-xW97k2g": {
+    "theme": "western",
+    "href": "/Western-Photography-Art",
+    "frameIndex": 2
+  },
+  "i-3nZvZTj": {
+    "theme": "western",
+    "href": "/Narrative-Western-Art",
+    "frameIndex": 0
+  },
+  "i-vP6ZvBw": {
+    "theme": "nativeAmerican",
+    "href": "/Western-Fine-Art-Photography",
+    "frameIndex": 0
+  },
+  "i-vrMcKJj": {
+    "theme": "western",
+    "href": "/Cowboy-Photography",
+    "frameIndex": 3
+  },
+  "i-c2JW8XZ": {
+    "theme": "western",
+    "href": "/western-portrait-photography",
+    "frameIndex": 4
+  },
+  "i-3NNTv7n": {
+    "theme": "western",
+    "href": "/Western-Photography-Art",
+    "frameIndex": 0
+  },
+  "i-Cq3rbHT": {
+    "theme": "nativeAmerican",
+    "href": "/Western-Fine-Art-Photography",
+    "frameIndex": 3
+  },
+  "i-kVr4LnG": {
+    "theme": "nativeAmerican",
+    "href": "/wild-west-art",
+    "frameIndex": 1
+  },
+  "i-B3mmMvb": {
+    "theme": "nativeAmerican",
+    "href": "/American-Western-Art",
+    "frameIndex": 4
+  },
+  "i-WkMCB7b": {
+    "theme": "western",
+    "href": "/Western-Wall-Art",
+    "frameIndex": 1
+  },
+  "i-wCzNMg3": {
+    "theme": "western",
+    "href": "/western-cowboy-art",
+    "frameIndex": 2
+  },
+  "i-p8tcGNm": {
+    "theme": "western",
+    "href": "/Narrative-Western-Art",
+    "frameIndex": 3
+  },
+  "i-4dnFJRg": {
+    "theme": "western",
+    "href": "/Western-Black-and-White-Photography",
+    "frameIndex": 4
+  },
+  "i-Mr2S4WL": {
+    "theme": "western",
+    "href": "/Cowboy-Fine-Art-Photography",
+    "frameIndex": 0
+  },
+  "i-WbBDgFM": {
+    "theme": "western",
+    "href": "/american-wild-west",
+    "frameIndex": 1
+  },
+  "i-k7QLhp7": {
+    "theme": "western",
+    "href": "/old-west-pictures",
+    "frameIndex": 2
+  },
+  "i-mG5sCCF": {
+    "theme": "western",
+    "href": "/vintage-western-art",
+    "frameIndex": 3
+  },
+  "i-s3gWRxq": {
+    "theme": "western",
+    "href": "/wild-west-art",
+    "frameIndex": 4
+  },
+  "i-8sbM3rt": {
+    "theme": "western",
+    "href": "/Western-Frontier-Art",
+    "frameIndex": 0
+  },
+  "i-48jGpLt": {
+    "theme": "western",
+    "href": "/American-Western-Art",
+    "frameIndex": 1
+  },
+  "i-c4xWGxj": {
+    "theme": "western",
+    "href": "/western-artwork",
+    "frameIndex": 2
+  },
+  "i-dXDLH7c": {
+    "theme": "western",
+    "href": "/western-art-prints",
+    "frameIndex": 3
+  },
+  "i-f6rgrSr": {
+    "theme": "western",
+    "href": "/Western-Photography-Prints",
+    "frameIndex": 4
+  },
+  "i-HKGtS4N": {
+    "theme": "western",
+    "href": "/western-photos",
+    "frameIndex": 0
+  },
+  "i-hS4nH7p": {
+    "theme": "western",
+    "href": "/cowboy-pictures",
+    "frameIndex": 1
   },
   "i-mqQxwNn": {
     "theme": "western",
@@ -2891,11 +3151,6 @@ export const chapterDoorwayAssignments = {
     "href": "/western-cowboy-art",
     "frameIndex": 3
   },
-  "i-7vSccct": {
-    "theme": "western",
-    "href": "/Narrative-Western-Art",
-    "frameIndex": 4
-  },
   "i-dc76hpJ": {
     "theme": "western",
     "href": "/Western-Black-and-White-Photography",
@@ -3012,8 +3267,8 @@ export const chapterDoorwayAssignments = {
     "frameIndex": 3
   },
   "i-8NsWqJQ": {
-    "theme": "western",
-    "href": "/Western-Black-and-White-Photography",
+    "theme": "nativeAmerican",
+    "href": "/vintage-western-art",
     "frameIndex": 4
   },
   "i-w3n5cvx": {
@@ -3115,11 +3370,6 @@ export const chapterDoorwayAssignments = {
     "theme": "western",
     "href": "/Western-Wall-Art",
     "frameIndex": 0
-  },
-  "i-6vszqTK": {
-    "theme": "western",
-    "href": "/western-cowboy-art",
-    "frameIndex": 1
   },
   "i-Dh8nT9S": {
     "theme": "western",
@@ -3331,14 +3581,9 @@ export const chapterDoorwayAssignments = {
     "href": "/Cowboy-Photography",
     "frameIndex": 3
   },
-  "i-vc6XQPf": {
-    "theme": "western",
-    "href": "/western-portrait-photography",
-    "frameIndex": 4
-  },
   "i-BJWt4zd": {
-    "theme": "western",
-    "href": "/Western-Photography-Art",
+    "theme": "nativeAmerican",
+    "href": "/American-Western-Art",
     "frameIndex": 0
   },
   "i-NNXnThw": {
@@ -3406,20 +3651,40 @@ export const chapterDoorwayAssignments = {
     "href": "/western-art-prints",
     "frameIndex": 2
   },
+  "i-VNxbb8k": {
+    "theme": "western",
+    "href": "/western-cowboy-pictures",
+    "frameIndex": 2
+  },
+  "i-7d3jWrb": {
+    "theme": "western",
+    "href": "/Western-Frontier-Art",
+    "frameIndex": 3
+  },
+  "i-fhnpqP8": {
+    "theme": "western",
+    "href": "/Western-Frontier-Art",
+    "frameIndex": 1
+  },
+  "i-99sTMBF": {
+    "theme": "nativeAmerican",
+    "href": "/Western-Fine-Art-Photography",
+    "frameIndex": 1
+  },
+  "i-8Gs57P9": {
+    "theme": "western",
+    "href": "/cowboy-art-prints",
+    "frameIndex": 3
+  },
+  "i-vmMfszQ": {
+    "theme": "western",
+    "href": "/cowboy-fine-art-prints",
+    "frameIndex": 4
+  },
   "i-6xn5rMd": {
     "theme": "western",
     "href": "/Western-Photography-Prints",
     "frameIndex": 3
-  },
-  "i-MvZxkQh": {
-    "theme": "western",
-    "href": "/western-photos",
-    "frameIndex": 4
-  },
-  "i-T6bD4w7": {
-    "theme": "western",
-    "href": "/cowboy-pictures",
-    "frameIndex": 0
   },
   "i-Mm3jXFH": {
     "theme": "western",
@@ -3435,6 +3700,16 @@ export const chapterDoorwayAssignments = {
     "theme": "western",
     "href": "/cowboy-fine-art-prints",
     "frameIndex": 0
+  },
+  "i-HHxxcsM": {
+    "theme": "western",
+    "href": "/western-photos",
+    "frameIndex": 2
+  },
+  "i-CgCxXGG": {
+    "theme": "western",
+    "href": "/western-cowboy-pictures",
+    "frameIndex": 1
   },
   "i-TVSQHzg": {
     "theme": "western",
@@ -3500,6 +3775,11 @@ export const chapterDoorwayAssignments = {
     "theme": "western",
     "href": "/wild-west-art",
     "frameIndex": 0
+  },
+  "i-n8TX2qS": {
+    "theme": "western",
+    "href": "/american-wild-west",
+    "frameIndex": 3
   },
   "i-TgkwSbh": {
     "theme": "western",
@@ -3606,14 +3886,14 @@ export const chapterDoorwayAssignments = {
     "href": "/old-west-pictures",
     "frameIndex": 2
   },
-  "i-fJmGF7N": {
+  "i-Q3Qm4f2": {
     "theme": "western",
-    "href": "/vintage-western-art",
-    "frameIndex": 3
+    "href": "/western-art-prints",
+    "frameIndex": 2
   },
-  "i-rdf8JpZ": {
+  "i-rTwWXgw": {
     "theme": "western",
-    "href": "/Western-Frontier-Art",
+    "href": "/Western-Photography-Prints",
     "frameIndex": 0
   },
   "i-kjWmdVL": {
@@ -3621,20 +3901,15 @@ export const chapterDoorwayAssignments = {
     "href": "/American-Western-Art",
     "frameIndex": 1
   },
-  "i-549JVNk": {
+  "i-N8PLGR4": {
     "theme": "western",
-    "href": "/western-artwork",
-    "frameIndex": 2
+    "href": "/Cowboy-Fine-Art-Photography",
+    "frameIndex": 1
   },
   "i-7dQdHmC": {
     "theme": "western",
     "href": "/western-photos",
     "frameIndex": 2
-  },
-  "i-qCNGgfg": {
-    "theme": "western",
-    "href": "/cowboy-pictures",
-    "frameIndex": 3
   },
   "i-Nm9DNhq": {
     "theme": "western",
@@ -3651,20 +3926,10 @@ export const chapterDoorwayAssignments = {
     "href": "/Western-Cowboy-Photography",
     "frameIndex": 2
   },
-  "i-cKL7kjn": {
-    "theme": "western",
-    "href": "/Cowboy-Photography",
-    "frameIndex": 0
-  },
   "i-tKZ2wgt": {
     "theme": "western",
     "href": "/western-portrait-photography",
     "frameIndex": 1
-  },
-  "i-xW97k2g": {
-    "theme": "western",
-    "href": "/Western-Photography-Art",
-    "frameIndex": 2
   },
   "i-KKncPg5": {
     "theme": "western",
@@ -3675,11 +3940,6 @@ export const chapterDoorwayAssignments = {
     "theme": "western",
     "href": "/western-cowboy-art",
     "frameIndex": 4
-  },
-  "i-3nZvZTj": {
-    "theme": "western",
-    "href": "/Narrative-Western-Art",
-    "frameIndex": 0
   },
   "i-w6bDSqM": {
     "theme": "western",
@@ -3701,6 +3961,16 @@ export const chapterDoorwayAssignments = {
     "href": "/vintage-western-art",
     "frameIndex": 2
   },
+  "i-kNXVsdd": {
+    "theme": "western",
+    "href": "/old-west-pictures",
+    "frameIndex": 4
+  },
+  "i-Zt47sk7": {
+    "theme": "western",
+    "href": "/wild-west-art",
+    "frameIndex": 1
+  },
   "i-5LnXk2k": {
     "theme": "western",
     "href": "/wild-west-art",
@@ -3716,15 +3986,15 @@ export const chapterDoorwayAssignments = {
     "href": "/western-artwork",
     "frameIndex": 1
   },
+  "i-zqZPZF6": {
+    "theme": "western",
+    "href": "/cowboy-fine-art-prints",
+    "frameIndex": 0
+  },
   "i-vgZ8twt": {
     "theme": "western",
     "href": "/western-art-prints",
     "frameIndex": 2
-  },
-  "i-73WFHzh": {
-    "theme": "western",
-    "href": "/Western-Photography-Prints",
-    "frameIndex": 0
   },
   "i-GRPQRdL": {
     "theme": "western",
@@ -3745,6 +4015,11 @@ export const chapterDoorwayAssignments = {
     "theme": "western",
     "href": "/cowboy-art-prints",
     "frameIndex": 4
+  },
+  "i-rXJDPtr": {
+    "theme": "western",
+    "href": "/Western-Cowboy-Photography",
+    "frameIndex": 0
   },
   "i-2GsTkqf": {
     "theme": "western",
@@ -3815,11 +4090,6 @@ export const chapterDoorwayAssignments = {
     "theme": "western",
     "href": "/wild-west-art",
     "frameIndex": 2
-  },
-  "i-7d3jWrb": {
-    "theme": "western",
-    "href": "/Western-Frontier-Art",
-    "frameIndex": 3
   },
   "i-PSkctsq": {
     "theme": "western",
@@ -4046,11 +4316,6 @@ export const chapterDoorwayAssignments = {
     "href": "/wild-west-art",
     "frameIndex": 0
   },
-  "i-fhnpqP8": {
-    "theme": "western",
-    "href": "/Western-Frontier-Art",
-    "frameIndex": 1
-  },
   "i-Bpq96Kr": {
     "theme": "western",
     "href": "/American-Western-Art",
@@ -4181,75 +4446,20 @@ export const chapterDoorwayAssignments = {
     "href": "/western-art-prints",
     "frameIndex": 3
   },
-  "i-NgkC4Zt": {
-    "theme": "nativeAmerican",
-    "href": "/American-Western-Art",
-    "frameIndex": 2
-  },
-  "i-Cq3rbHT": {
-    "theme": "nativeAmerican",
-    "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 3
-  },
-  "i-zt2btJ7": {
-    "theme": "nativeAmerican",
-    "href": "/Western-Photography-Art",
-    "frameIndex": 4
-  },
-  "i-sDZFJ6t": {
-    "theme": "nativeAmerican",
+  "i-RRw2Tfr": {
+    "theme": "western",
     "href": "/Western-Black-and-White-Photography",
-    "frameIndex": 0
-  },
-  "i-4Wsxmqv": {
-    "theme": "nativeAmerican",
-    "href": "/western-art-prints",
     "frameIndex": 1
-  },
-  "i-Z8pZLnt": {
-    "theme": "nativeAmerican",
-    "href": "/Western-Photography-Prints",
-    "frameIndex": 2
   },
   "i-gQmqxZJ": {
     "theme": "nativeAmerican",
     "href": "/western-photos",
     "frameIndex": 0
   },
-  "i-kVr4LnG": {
-    "theme": "nativeAmerican",
-    "href": "/wild-west-art",
-    "frameIndex": 1
-  },
-  "i-fCSxt3j": {
-    "theme": "nativeAmerican",
-    "href": "/american-wild-west",
-    "frameIndex": 2
-  },
   "i-7CjNq8p": {
     "theme": "nativeAmerican",
     "href": "/vintage-western-art",
     "frameIndex": 3
-  },
-  "i-B3mmMvb": {
-    "theme": "nativeAmerican",
-    "href": "/American-Western-Art",
-    "frameIndex": 4
-  },
-  "i-vP6ZvBw": {
-    "theme": "nativeAmerican",
-    "href": "/Western-Fine-Art-Photography",
-    "frameIndex": 0
-  },
-  "i-StJWnTh": {
-    "theme": "nativeAmerican",
-    "href": "/Western-Photography-Art",
-    "frameIndex": 1
-  },
-  "i-JbWnV3V": {
-    "theme": "nativeAmerican",
-    "href": "/Western-Black-and-White-Photography",
-    "frameIndex": 2
   },
   "i-9FCHdBp": {
     "theme": "nativeAmerican",
@@ -8750,11 +8960,6 @@ export const chapterDoorwayAssignments = {
     "theme": "landscapes",
     "href": "/western-landscape-art",
     "frameIndex": 0
-  },
-  "i-r3Kq9B4": {
-    "theme": "landscapes",
-    "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 1
   },
   "i-5DbNvHj": {
     "theme": "landscapes",
@@ -14839,8 +15044,8 @@ export const chapterDoorwayAssignments = {
 };
 
 export const chapterDoorwayCursors = {
-  "nativeAmerican": 29,
-  "western": 749,
+  "nativeAmerican": 32,
+  "western": 801,
   "civilWar": 92,
   "wwii": 729,
   "roaring20s": 48,
@@ -14851,15 +15056,15 @@ export const chapterDoorwayCursors = {
 };
 
 export const chapterDoorwayAssignmentMeta = {
-  "generatedAt": "2026-07-14T00:56:25.921Z",
-  "assignedCount": 2967,
+  "generatedAt": "2026-08-11T19:55:36.972Z",
+  "assignedCount": 3008,
   "themeCounts": {
-    "nativeAmerican": 29,
-    "western": 734,
+    "nativeAmerican": 32,
+    "western": 773,
     "civilWar": 92,
     "wwii": 729,
     "roaring20s": 48,
-    "landscapes": 819,
+    "landscapes": 818,
     "transportation": 181,
     "portraits": 288,
     "engrained": 47

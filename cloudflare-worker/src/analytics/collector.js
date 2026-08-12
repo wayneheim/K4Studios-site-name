@@ -196,6 +196,18 @@ function normalizePageKey(raw) {
   return /^[a-z0-9_:-]+$/.test(value) ? value : null;
 }
 
+function normalizeOptionalText(raw, maxLength = 512) {
+  if (typeof raw !== 'string') return null;
+  const value = raw.trim();
+  return value ? value.slice(0, maxLength) : null;
+}
+
+function normalizeEngagedMs(raw) {
+  const value = Number(raw);
+  if (!Number.isFinite(value) || value < 0) return null;
+  return Math.min(Math.round(value), 24 * 60 * 60 * 1000);
+}
+
 function getAllowedOrigin(request) {
   const origin = request?.headers?.get?.('Origin') || null;
   if (!origin) return 'https://www.k4studios.com';
@@ -271,6 +283,17 @@ export async function handleTrackRequest(request, env, ctx) {
       page_type = null,
       theme = null,
       referrer: clientReferrer = null,
+      entry_referrer = null,
+      document_referrer = null,
+      previous_page = null,
+      utm_source = null,
+      utm_medium = null,
+      utm_campaign = null,
+      utm_content = null,
+      utm_term = null,
+      navigation_type = null,
+      page_instance_id = null,
+      engaged_ms = null,
       page_path = null,
       event_ts_ms = null,  // Client timestamp for timing analysis
       event_order = null   // Event sequence within session
@@ -280,6 +303,17 @@ export async function handleTrackRequest(request, env, ctx) {
       ? (page_path.startsWith('/') ? page_path : ('/' + page_path))
       : null;
     const normalizedPageKey = normalizePageKey(page_key) || resolvePilotPageKey(normalizedPagePath);
+    const normalizedEntryReferrer = normalizeOptionalText(entry_referrer || clientReferrer, 2048);
+    const normalizedDocumentReferrer = normalizeOptionalText(document_referrer, 2048);
+    const normalizedPreviousPage = normalizeOptionalText(previous_page, 1024);
+    const normalizedUtmSource = normalizeOptionalText(utm_source, 255);
+    const normalizedUtmMedium = normalizeOptionalText(utm_medium, 255);
+    const normalizedUtmCampaign = normalizeOptionalText(utm_campaign, 255);
+    const normalizedUtmContent = normalizeOptionalText(utm_content, 255);
+    const normalizedUtmTerm = normalizeOptionalText(utm_term, 255);
+    const normalizedNavigationType = normalizeOptionalText(navigation_type, 32);
+    const normalizedPageInstanceId = normalizeOptionalText(page_instance_id, 128);
+    const normalizedEngagedMs = normalizeEngagedMs(engaged_ms);
 
     // Event is required
     if (!event) {
@@ -333,7 +367,9 @@ export async function handleTrackRequest(request, env, ctx) {
 
     // Store the raw edge referrer URL directly (for SQL LIKE matching)
     // normalizeReferrer is kept as fallback for old normalized cookie values
-    const bestReferrer = edgeReferrer || clientReferrer;
+    // The client value is session-scoped and is reset with the 30-minute
+    // session boundary. The edge cookie remains a fallback for older clients.
+    const bestReferrer = normalizedEntryReferrer || edgeReferrer || null;
     const referrer = bestReferrer || "unknown";
 
     // V2 Architecture: All events go directly to raw_events.
@@ -380,8 +416,19 @@ export async function handleTrackRequest(request, env, ctx) {
       pageKey: normalizedPageKey,
       // Use the client-reported page_path for easier SQL grouping.
       page: normalizedPagePath || null,
-      // Preserve the best external referrer (edge cookie beats client hint).
-      refererOverride: bestReferrer || null
+      // Preserve the legacy entry-referrer column during the additive rollout.
+      refererOverride: bestReferrer || null,
+      entryReferrer: bestReferrer,
+      documentReferrer: normalizedDocumentReferrer,
+      previousPage: normalizedPreviousPage,
+      utmSource: normalizedUtmSource,
+      utmMedium: normalizedUtmMedium,
+      utmCampaign: normalizedUtmCampaign,
+      utmContent: normalizedUtmContent,
+      utmTerm: normalizedUtmTerm,
+      navigationType: normalizedNavigationType,
+      pageInstanceId: normalizedPageInstanceId,
+      engagedMs: normalizedEngagedMs
     }));
 
     const headers = applyCors(new Headers(), request, 'POST');

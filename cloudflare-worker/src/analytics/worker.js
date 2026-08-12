@@ -2873,19 +2873,50 @@ async function getSessionMetrics(env, filters) {
       )
     `;
     const durationQuery = `
-      SELECT ROUND(AVG(duration_seconds), 0) as avg_duration
-      FROM (
-        SELECT 
-          ${sessionKey} as session_key,
-          (JULIANDAY(MAX(e.ts)) - JULIANDAY(MIN(e.ts))) * 86400 as duration_seconds
+      WITH base AS (
+        SELECT
+          ${sessionKey} AS session_key,
+          e.ts,
+          e.page_instance_id,
+          e.page,
+          e.target_id,
+          e.engaged_ms
         FROM human_population hp
         JOIN classified_events e ON e.visitor_id = hp.visitor_id
         WHERE ${where}
           AND e.source = 'js'
           AND e.visitor_id IS NOT NULL
+      ),
+      observed AS (
+        SELECT
+          session_key,
+          (JULIANDAY(MAX(ts)) - JULIANDAY(MIN(ts))) * 86400 AS observed_seconds
+        FROM base
         GROUP BY session_key
         HAVING COUNT(*) > 1
+      ),
+      active_pages AS (
+        SELECT
+          session_key,
+          COALESCE(NULLIF(page_instance_id, ''), COALESCE(NULLIF(page, ''), target_id, 'unknown')) AS page_instance,
+          MAX(engaged_ms) AS engaged_ms
+        FROM base
+        WHERE engaged_ms IS NOT NULL
+        GROUP BY session_key, page_instance
+      ),
+      active_sessions AS (
+        SELECT session_key, SUM(engaged_ms) AS engaged_ms
+        FROM active_pages
+        GROUP BY session_key
       )
+      SELECT ROUND(AVG(
+        CASE
+          WHEN COALESCE(a.engaged_ms, 0) > 0 THEN a.engaged_ms / 1000.0
+          ELSE o.observed_seconds
+        END
+      ), 0) AS avg_duration
+      FROM observed o
+      LEFT JOIN active_sessions a ON a.session_key = o.session_key
     `;
     const peakHoursQuery = `
       SELECT 
@@ -3665,7 +3696,10 @@ async function getEntryAnalysis(env, filters) {
             WHEN SUBSTR(COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')), 1, 1) = '/' THEN COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))
             ELSE '/' || COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))
           END AS page_path,
-          e.referer AS referrer,
+          COALESCE(NULLIF(e.entry_referrer, ''), e.referer) AS referrer,
+          e.utm_source,
+          e.utm_medium,
+          e.utm_campaign,
           e.ua AS ua,
           e.ts
         FROM human_population hp
@@ -3690,9 +3724,24 @@ async function getEntryAnalysis(env, filters) {
           session_key,
           page_path,
           referrer,
+          utm_source,
+          utm_medium,
+          utm_campaign,
           ua,
           ROW_NUMBER() OVER (PARTITION BY session_key ORDER BY ts ASC) AS rn
         FROM js_page_events
+      ),
+      classified_hits AS (
+        SELECT
+          session_key,
+          page_path,
+          CASE
+            WHEN COALESCE(NULLIF(utm_medium, ''), '') = 'email' THEN 'email'
+            WHEN COALESCE(NULLIF(utm_source, ''), '') != '' THEN LOWER(utm_source)
+            ELSE ${classifyRefSourceSql("referrer")}
+          END AS ref_source
+        FROM first_hits
+        WHERE rn = 1
       ),
       not_found_hits AS (
         SELECT DISTINCT
@@ -3716,17 +3765,18 @@ async function getEntryAnalysis(env, filters) {
       )
       SELECT
         page_path,
+        ref_source,
         'J' AS source_kind,
         COUNT(*) AS sessions
-      FROM first_hits
-      WHERE rn = 1
+      FROM classified_hits
+      WHERE 1 = 1
         AND NOT EXISTS (
           SELECT 1
           FROM not_found_hits nf
-          WHERE nf.session_key = first_hits.session_key
-            AND nf.page_path = first_hits.page_path
+          WHERE nf.session_key = classified_hits.session_key
+            AND nf.page_path = classified_hits.page_path
         )
-      GROUP BY page_path
+      GROUP BY page_path, ref_source
       ORDER BY sessions DESC, page_path ASC
       LIMIT 25
     `;
@@ -5881,7 +5931,7 @@ function renderDashboard({
     <div class="pulse-stat">
       <span class="value" style="color:#22d3ee;">${avgDurationFormatted}</span>
       <span class="label">Avg Time <span class="info-icon">i</span></span>
-      <div class="tooltip">Average session duration (first to last event). Only counts sessions with 2+ events. For art browsing, 2+ min is good engagement.</div>
+      <div class="tooltip">Average active time when page-visibility engagement is available; otherwise falls back to first-to-last event time. Only counts sessions with 2+ events.</div>
     </div>
     <div class="pulse-stat">
       <span class="value" style="color: ${bounceRate > 60 ? "#ef4444" : bounceRate > 40 ? "#f59e0b" : "#10b981"};">${bounceRate}%</span>
@@ -7113,8 +7163,8 @@ function renderDashboard({
 
     <div class="section" style="order: 3;">
       <div class="section-header">
-        <h3>Top 25 Entry Pages (JS First-Touch)</h3>
-        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Ranks first-hit entries from JS page_view sequences using a session key. This panel is JS-first and does not currently blend pixel entry sessions.</div></span>
+        <h3>Top 25 Entry Pages &amp; Sources (JS First-Touch)</h3>
+        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Ranks the first JS page_view in each session. Campaign parameters take priority; otherwise the session entry referrer is classified. This is entry attribution, not a page-by-page navigation trail.</div></span>
       </div>
       ${entryPages.length === 0 ? '<p style="color:#666">No data yet</p>' : `
       <div style="max-height: 320px; overflow: auto; padding-right: 0; padding-left: 0;">
@@ -7124,7 +7174,7 @@ function renderDashboard({
             <col style="width: 34px;">
             <col style="width: 46px;">
           </colgroup>
-          <tr><th style="padding-left:6px;padding-right:4px;">Page</th><th style="text-align:center;padding-left:4px;padding-right:4px;">F</th><th style="text-align:right;padding-left:4px;padding-right:4px;">Ses</th></tr>
+          <tr><th style="padding-left:6px;padding-right:4px;">Page</th><th style="text-align:center;padding-left:4px;padding-right:4px;" title="Session entry source">Src</th><th style="text-align:right;padding-left:4px;padding-right:4px;">Ses</th></tr>
           ${entryPages.slice(0, 25).map((p) => {
     const rawPath = String(p.page_path || "/");
     const fullPath = rawPath.startsWith("/") ? rawPath : `/${rawPath}`;
@@ -7154,6 +7204,7 @@ function renderDashboard({
       facebook: "\u{1F4D8}",
       instagram: "\u{1F4F7}",
       linkedin: "\u{1F4BC}",
+      email: "\u2709\uFE0F",
       duckduckgo: "\u{1F986}",
       direct: "\u{1F517}",
       internal: "\u{1F504}",
@@ -7839,6 +7890,7 @@ function renderInspectPage({
     facebook: "\u{1F4D8}",
     instagram: "\u{1F4F7}",
     linkedin: "\u{1F4BC}",
+    email: "\u2709\uFE0F",
     duckduckgo: "\u{1F986}",
     direct: "\u{1F517}",
     internal: "\u{1F504}",
@@ -7901,7 +7953,7 @@ function renderInspectPage({
       <h2>Recent Sessions</h2>
       ${safeSessions.length === 0 ? '<div class="muted">No sessions found for this location in the selected window.</div>' : `
       <table>
-        <tr><th>Last</th><th>Dur</th><th>Entry</th><th>From</th><th>Evts</th><th>Session</th></tr>
+        <tr><th>Last</th><th>Dur</th><th>Entry</th><th>Entry source</th><th>Evts</th><th>Session</th></tr>
         ${safeSessions.map((s) => {
     const sid = String(s.session_id || "");
     const isSel = selectedSessionId && sid && sid === selectedSessionId;
@@ -7909,16 +7961,20 @@ function renderInspectPage({
     const shortEntry = entry.length > 44 ? "..." + entry.slice(-41) : entry;
     const ref = String(s.ref_source || "unattributed");
     const refIcon = refIcons[ref] || "\u{1F512}";
+    const campaign = [s.utm_source, s.utm_medium, s.utm_campaign].filter(Boolean).join(" / ");
     const evts = Number(s.events || 0);
     const last = String(s.last_ts || "");
     const dur = fmtDur(s.duration_s);
+    const durationTitle = Number(s.engaged_ms || 0) > 0
+      ? `Active time; observed span ${fmtDur(s.observed_duration_s)}`
+      : "Observed first-to-last event span";
     const shortSid = sid ? sid.slice(0, 8) : "";
     const href = buildInspectUrl(sid);
     return `<tr class="${isSel ? "row-selected" : ""}">
             <td class="mono">${last}</td>
-            <td>${dur}</td>
+            <td title="${durationTitle}">${dur}</td>
             <td title="${entry}"><a href="${href}">\u{1F4C4} ${shortEntry}</a></td>
-            <td title="${ref}">${refIcon}</td>
+            <td title="${campaign || `Session entry source: ${ref}`}">${refIcon}</td>
             <td>${evts}</td>
             <td class="mono"><a href="${href}">${shortSid}</a></td>
           </tr>`;
@@ -7940,7 +7996,15 @@ function renderInspectPage({
     const metaParts = [];
     if (e.img_size) metaParts.push(String(e.img_size));
     if (e.ref_type) metaParts.push(String(e.ref_type));
-    if (e.referer) metaParts.push(String(e.referer));
+    if (e.previous_page) metaParts.push(`prev=${String(e.previous_page)}`);
+    if (e.document_referrer) metaParts.push(`doc=${String(e.document_referrer)}`);
+    if (e.entry_referrer) metaParts.push(`entry=${String(e.entry_referrer)}`);
+    if (e.utm_source || e.utm_medium || e.utm_campaign) {
+      metaParts.push(`campaign=${[e.utm_source, e.utm_medium, e.utm_campaign].filter(Boolean).join("/")}`);
+    }
+    if (Number(e.engaged_ms) >= 0 && e.engaged_ms !== null && e.engaged_ms !== "") {
+      metaParts.push(`active=${(Number(e.engaged_ms) / 1e3).toFixed(1)}s`);
+    }
     const meta = metaParts.join(" \xB7 ");
     return `<tr>
             <td class="mono">${ts}</td>
@@ -8480,26 +8544,54 @@ async function handleInspectRequest(request, env) {
   }
   const where = parts.length ? parts.map((p) => `(${p})`).join(" AND ") : "1=1";
   const sessionsQuery = `
-    WITH session_events AS (
+    WITH base_events AS (
+      SELECT e.*
+      FROM human_population hp
+      JOIN classified_events e ON e.visitor_id = hp.visitor_id
+      WHERE ${where}
+    ),
+    session_events AS (
       SELECT
         e.session_id,
         MIN(e.ts) AS first_ts,
         MAX(e.ts) AS last_ts,
-        CAST((julianday(MAX(e.ts)) - julianday(MIN(e.ts))) * 86400 AS INTEGER) AS duration_s,
+        CAST((julianday(MAX(e.ts)) - julianday(MIN(e.ts))) * 86400 AS INTEGER) AS observed_duration_s,
         COUNT(*) AS events
-      FROM human_population hp
-      JOIN classified_events e ON e.visitor_id = hp.visitor_id
-      WHERE ${where}
+      FROM base_events e
       GROUP BY e.session_id
     ),
+    active_pages AS (
+      SELECT
+        session_id,
+        COALESCE(NULLIF(page_instance_id, ''), COALESCE(NULLIF(page, ''), target_id, 'unknown')) AS page_instance,
+        MAX(engaged_ms) AS engaged_ms
+      FROM base_events
+      WHERE engaged_ms IS NOT NULL
+      GROUP BY session_id, page_instance
+    ),
+    active_sessions AS (
+      SELECT session_id, SUM(engaged_ms) AS engaged_ms
+      FROM active_pages
+      GROUP BY session_id
+    ),
     entry_pages AS (
-      SELECT session_id, visitor_id, page_path AS entry_page, referer AS entry_referer
+      SELECT
+        session_id,
+        visitor_id,
+        page_path AS entry_page,
+        effective_entry_referrer AS entry_referer,
+        utm_source,
+        utm_medium,
+        utm_campaign
       FROM (
         SELECT
           e.session_id,
           e.visitor_id,
           COALESCE(NULLIF(e.page, ''), e.target_id) AS page_path,
-          e.referer,
+          COALESCE(NULLIF(e.entry_referrer, ''), e.referer) AS effective_entry_referrer,
+          e.utm_source,
+          e.utm_medium,
+          e.utm_campaign,
           ROW_NUMBER() OVER (PARTITION BY e.session_id ORDER BY e.ts ASC) AS rn
         FROM human_population hp
         JOIN classified_events e ON e.visitor_id = hp.visitor_id
@@ -8514,13 +8606,26 @@ async function handleInspectRequest(request, env) {
       ep.visitor_id,
       se.first_ts,
       se.last_ts,
-      se.duration_s,
+      CASE
+        WHEN COALESCE(a.engaged_ms, 0) > 0 THEN CAST(ROUND(a.engaged_ms / 1000.0) AS INTEGER)
+        ELSE se.observed_duration_s
+      END AS duration_s,
+      se.observed_duration_s,
+      a.engaged_ms,
       se.events,
       ep.entry_page,
       ep.entry_referer,
-      ${classifyRefSourceSql("ep.entry_referer")} AS ref_source
+      ep.utm_source,
+      ep.utm_medium,
+      ep.utm_campaign,
+      CASE
+        WHEN COALESCE(NULLIF(ep.utm_medium, ''), '') = 'email' THEN 'email'
+        WHEN COALESCE(NULLIF(ep.utm_source, ''), '') != '' THEN LOWER(ep.utm_source)
+        ELSE ${classifyRefSourceSql("ep.entry_referer")}
+      END AS ref_source
     FROM session_events se
     LEFT JOIN entry_pages ep ON ep.session_id = se.session_id
+    LEFT JOIN active_sessions a ON a.session_id = se.session_id
     ORDER BY se.last_ts DESC
     LIMIT ${limit}
   `;
@@ -8555,7 +8660,13 @@ async function handleInspectRequest(request, env) {
         e.target_id,
         e.img_size,
         e.ref_type,
-        SUBSTR(COALESCE(e.referer, ''), 1, 160) AS referer
+        SUBSTR(COALESCE(e.entry_referrer, e.referer, ''), 1, 160) AS entry_referrer,
+        SUBSTR(COALESCE(e.document_referrer, ''), 1, 160) AS document_referrer,
+        SUBSTR(COALESCE(e.previous_page, ''), 1, 160) AS previous_page,
+        e.utm_source,
+        e.utm_medium,
+        e.utm_campaign,
+        e.engaged_ms
       FROM human_population hp
       JOIN classified_events e ON e.visitor_id = hp.visitor_id
       WHERE ${where}
@@ -8575,7 +8686,7 @@ async function handleInspectRequest(request, env) {
           target_id: "",
           img_size: "",
           ref_type: "",
-          referer: `Timeline query failed: ${e.message}`
+          entry_referrer: `Timeline query failed: ${e.message}`
         }
       ];
     }
@@ -8949,7 +9060,18 @@ async function logRawEvent(env, eventType, targetId, request, extras = {}) {
       inferred = null,
       inferredFrom = null,
       assetSource = null,
-      ogPlatform: ogPlatformFromExtras = null
+      ogPlatform: ogPlatformFromExtras = null,
+      entryReferrer = null,
+      documentReferrer = null,
+      previousPage = null,
+      utmSource = null,
+      utmMedium = null,
+      utmCampaign = null,
+      utmContent = null,
+      utmTerm = null,
+      navigationType = null,
+      pageInstanceId = null,
+      engagedMs = null
     } = extras;
     let ogPlatform = ogPlatformFromExtras;
     if ((ogPlatform === null || ogPlatform === void 0) && assetSource === "og") {
@@ -8999,10 +9121,22 @@ async function logRawEvent(env, eventType, targetId, request, extras = {}) {
       { name: "inferred", value: inferred },
       { name: "inferred_from", value: inferredFrom },
       { name: "asset_source", value: assetSource },
-      { name: "og_platform", value: ogPlatform }
+      { name: "og_platform", value: ogPlatform },
+      { name: "entry_referrer", value: entryReferrer },
+      { name: "document_referrer", value: documentReferrer },
+      { name: "previous_page", value: previousPage },
+      { name: "utm_source", value: utmSource },
+      { name: "utm_medium", value: utmMedium },
+      { name: "utm_campaign", value: utmCampaign },
+      { name: "utm_content", value: utmContent },
+      { name: "utm_term", value: utmTerm },
+      { name: "navigation_type", value: navigationType },
+      { name: "page_instance_id", value: pageInstanceId },
+      { name: "engaged_ms", value: engagedMs }
     ].filter((o) => o.value !== null && o.value !== void 0);
     const missingColumnRegex = /no such column:\s*([a-zA-Z0-9_]+)/i;
-    for (let attempt = 0; attempt < 5; attempt++) {
+    const maxAttempts = optional.length + 2;
+    for (let attempt = 0; attempt < maxAttempts; attempt++) {
       try {
         const columns = baseColumns.concat(optional.map((o) => o.name));
         const values = baseValues.concat(optional.map((o) => o.value));
@@ -9474,6 +9608,20 @@ function normalizePageKey(raw) {
 }
 __name(normalizePageKey, "normalizePageKey");
 __name2(normalizePageKey, "normalizePageKey");
+function normalizeOptionalText(raw, maxLength = 512) {
+  if (typeof raw !== "string") return null;
+  const value = raw.trim();
+  return value ? value.slice(0, maxLength) : null;
+}
+__name(normalizeOptionalText, "normalizeOptionalText");
+__name2(normalizeOptionalText, "normalizeOptionalText");
+function normalizeEngagedMs(raw) {
+  const value = Number(raw);
+  if (!Number.isFinite(value) || value < 0) return null;
+  return Math.min(Math.round(value), 24 * 60 * 60 * 1e3);
+}
+__name(normalizeEngagedMs, "normalizeEngagedMs");
+__name2(normalizeEngagedMs, "normalizeEngagedMs");
 function makeSidSetCookieHeader(requestUrl, sessionId) {
   if (!sessionId) return null;
   let hostname = "";
@@ -9484,7 +9632,7 @@ function makeSidSetCookieHeader(requestUrl, sessionId) {
   }
   const domainAttr = hostname.endsWith("k4studios.com") ? "; Domain=.k4studios.com" : "";
   const value = encodeURIComponent(String(sessionId));
-  return `k4_sid=${value}; Path=/; SameSite=Lax; Secure${domainAttr}`;
+  return `k4_sid=${value}; Path=/; Max-Age=1800; SameSite=Lax; Secure${domainAttr}`;
 }
 __name(makeSidSetCookieHeader, "makeSidSetCookieHeader");
 __name2(makeSidSetCookieHeader, "makeSidSetCookieHeader");
@@ -9565,6 +9713,17 @@ async function handleTrackRequest(request, env, ctx) {
       page_type = null,
       theme = null,
       referrer: clientReferrer = null,
+      entry_referrer = null,
+      document_referrer = null,
+      previous_page = null,
+      utm_source = null,
+      utm_medium = null,
+      utm_campaign = null,
+      utm_content = null,
+      utm_term = null,
+      navigation_type = null,
+      page_instance_id = null,
+      engaged_ms = null,
       page_path = null,
       event_ts_ms = null,
       // Client timestamp for timing analysis
@@ -9573,6 +9732,17 @@ async function handleTrackRequest(request, env, ctx) {
     } = body;
     const normalizedPagePath = typeof page_path === "string" && page_path ? page_path.startsWith("/") ? page_path : "/" + page_path : null;
     const normalizedPageKey = normalizePageKey(page_key) || resolvePilotPageKey(normalizedPagePath);
+    const normalizedEntryReferrer = normalizeOptionalText(entry_referrer || clientReferrer, 2048);
+    const normalizedDocumentReferrer = normalizeOptionalText(document_referrer, 2048);
+    const normalizedPreviousPage = normalizeOptionalText(previous_page, 1024);
+    const normalizedUtmSource = normalizeOptionalText(utm_source, 255);
+    const normalizedUtmMedium = normalizeOptionalText(utm_medium, 255);
+    const normalizedUtmCampaign = normalizeOptionalText(utm_campaign, 255);
+    const normalizedUtmContent = normalizeOptionalText(utm_content, 255);
+    const normalizedUtmTerm = normalizeOptionalText(utm_term, 255);
+    const normalizedNavigationType = normalizeOptionalText(navigation_type, 32);
+    const normalizedPageInstanceId = normalizeOptionalText(page_instance_id, 128);
+    const normalizedEngagedMs = normalizeEngagedMs(engaged_ms);
     if (!event) {
       const headers2 = applyNoStore(
         new Headers({ "Content-Type": "text/plain" })
@@ -9611,7 +9781,7 @@ async function handleTrackRequest(request, env, ctx) {
     const visitorId = existingVisitorId || mintedVisitorId;
     const sidCookie = readCookieValue(cookieHeader, "k4_sid");
     const bestSessionId = session_id || sidCookie || null;
-    const bestReferrer = edgeReferrer || clientReferrer;
+    const bestReferrer = normalizedEntryReferrer || edgeReferrer || null;
     const referrer = bestReferrer || "unknown";
     const normalizeGalleryTargetId = /* @__PURE__ */ __name2((path) => {
       if (typeof path !== "string") return null;
@@ -9656,8 +9826,19 @@ async function handleTrackRequest(request, env, ctx) {
         pageKey: normalizedPageKey,
         // Use the client-reported page_path for easier SQL grouping.
         page: normalizedPagePath || null,
-        // Preserve the best external referrer (edge cookie beats client hint).
-        refererOverride: bestReferrer || null
+        // Preserve the legacy entry-referrer column during the additive rollout.
+        refererOverride: bestReferrer || null,
+        entryReferrer: bestReferrer,
+        documentReferrer: normalizedDocumentReferrer,
+        previousPage: normalizedPreviousPage,
+        utmSource: normalizedUtmSource,
+        utmMedium: normalizedUtmMedium,
+        utmCampaign: normalizedUtmCampaign,
+        utmContent: normalizedUtmContent,
+        utmTerm: normalizedUtmTerm,
+        navigationType: normalizedNavigationType,
+        pageInstanceId: normalizedPageInstanceId,
+        engagedMs: normalizedEngagedMs
       })
     );
     const sidSetCookie = makeSidSetCookieHeader(request.url, bestSessionId);

@@ -58,7 +58,7 @@ export const seriesStory = [
     ],
     list: [
       "Signed and numbered",
-      "Limited edition of 100 per image",
+      "Limited edition of 50 per image",
       "Larger formats than Foundation",
       "Upgraded fine art paper"
     ]
@@ -73,7 +73,7 @@ export const seriesStory = [
     ],
     list: [
       "Signed and numbered",
-      "Limited edition of 12 per image",
+      "Limited edition of 25 per image",
       "Monumental sizes only",
       "Signature museum-grade paper"
     ]
@@ -84,11 +84,12 @@ export const seriesStory = [
     paragraphs: [
       "Engrained works fuse image and material into a single object. Printed directly into hand-selected Baltic Birch using a custom 5-layer UV process, the grain of the wood becomes inseparable from the story itself.",
       "Unlike conventional wood prints that flatten or overpower with solid ink, the Engrained process selectively controls where white underlayer is applied — allowing the natural grain to show through and participate in the final composition. Each knot, swirl, and texture adds meaning and warmth, creating a visual and tactile dialogue between image and material.",
-      "Because every panel carries its own unique grain pattern, no two Engrained pieces are ever truly identical — even within the same edition. The wood doesn't just hold the image; it becomes part of it."
+      "Because every panel carries its own unique grain pattern, no two Engrained pieces are ever truly identical — even within the same edition. The wood doesn't just hold the image; it becomes part of it.",
+      "Some legacy Engrained works were originally designated as editions of 50. Those editions have now been permanently closed early and capped at five numbered works per image. Existing /50 markings remain part of each work's documented history and do not indicate that additional numbered works will be produced. One Artist Proof may exist outside the numbered edition."
     ],
     list: [
       "Signed and numbered",
-      "Limited edition of 50 per image",
+      "Limited edition of 5 per image (+1 Artist Proof)",
       "Material-defined formats",
       "May exist alongside Chronicle or Legends paper editions"
     ]

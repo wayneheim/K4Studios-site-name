@@ -2,6 +2,7 @@ import pricingConfig from "./pricingConfig.json";
 import seriesRegistry from "./seriesRegistry.json";
 import { galleryData as engrainedGalleryData } from "./Other/K4-Select-Series/Engrained/Engrained-Series.mjs";
 import { SERIES_DEFINITIONS } from "./seriesDefinitions.js";
+import { getEffectiveSeries } from "./seriesAvailability.js";
 
 const FIRST_PARTY_BUY_LINK_HOSTS = new Set(["k4studios.com", "www.k4studios.com"]);
 const BUY_LINK_PATH_PREFIXES = ["/Galleries/", "/Other/Photo-Shoots/"];
@@ -193,11 +194,7 @@ function resolveStandardCommerce({ image, galleryPath, pageUrl }) {
   const seriesId = findSeriesId(image?.id, galleryPath);
   const series = seriesId ? seriesRegistry.series?.[seriesId] : null;
   const oneImageMovie = Boolean(series?.oneImageMovie || image?.oneImageMovie);
-  const registryTiers = Array.isArray(series?.tiers) ? series.tiers : [];
-  const fallbackTiers = Array.isArray(image?.availableSeries) ? image.availableSeries : [];
-  const tierSet = new Set(registryTiers.length > 0 ? registryTiers : fallbackTiers);
-
-  if (!image?.noSketch) tierSet.add("sketch");
+  const tierSet = new Set(getEffectiveSeries(image, series));
 
   const tiers = STANDARD_SERIES
     .filter((seriesKey) => tierSet.has(seriesKey) && SERIES_DEFINITIONS[seriesKey])

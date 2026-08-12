@@ -250,8 +250,8 @@ export default function PricingEditorModal({ isOpen, onClose }) {
     descriptions: {
       sketch: "Open edition proof prints on archival matte paper.",
       foundation: "Open edition archival prints in collector-friendly sizes.",
-      chronicle: "Limited edition of 100, unsigned, museum-quality archival print.",
-      legend: "Ultra-limited edition of 12, signed, museum-grade canvas.",
+      chronicle: "Limited edition of 50, unsigned, museum-quality archival print.",
+      legend: "Ultra-limited edition of 25, signed, museum-grade canvas.",
     },
     cardCopy: {
       sketch: "Open edition study prints — intimate, immediate, and tactile.\nA quiet entry point into the work.",

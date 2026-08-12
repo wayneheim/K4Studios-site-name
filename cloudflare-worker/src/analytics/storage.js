@@ -322,7 +322,18 @@ async function logRawEvent(env, eventType, targetId, request, extras = {}) {
       inferred = null,
       inferredFrom = null,
       assetSource = null,
-      ogPlatform: ogPlatformFromExtras = null
+      ogPlatform: ogPlatformFromExtras = null,
+      entryReferrer = null,
+      documentReferrer = null,
+      previousPage = null,
+      utmSource = null,
+      utmMedium = null,
+      utmCampaign = null,
+      utmContent = null,
+      utmTerm = null,
+      navigationType = null,
+      pageInstanceId = null,
+      engagedMs = null
     } = extras;
 
     let ogPlatform = ogPlatformFromExtras;
@@ -383,11 +394,23 @@ async function logRawEvent(env, eventType, targetId, request, extras = {}) {
       { name: 'inferred', value: inferred },
       { name: 'inferred_from', value: inferredFrom },
       { name: 'asset_source', value: assetSource },
-      { name: 'og_platform', value: ogPlatform }
+      { name: 'og_platform', value: ogPlatform },
+      { name: 'entry_referrer', value: entryReferrer },
+      { name: 'document_referrer', value: documentReferrer },
+      { name: 'previous_page', value: previousPage },
+      { name: 'utm_source', value: utmSource },
+      { name: 'utm_medium', value: utmMedium },
+      { name: 'utm_campaign', value: utmCampaign },
+      { name: 'utm_content', value: utmContent },
+      { name: 'utm_term', value: utmTerm },
+      { name: 'navigation_type', value: navigationType },
+      { name: 'page_instance_id', value: pageInstanceId },
+      { name: 'engaged_ms', value: engagedMs }
     ].filter(o => o.value !== null && o.value !== undefined);
 
     const missingColumnRegex = /no such column:\s*([a-zA-Z0-9_]+)/i;
-    for (let attempt = 0; attempt < 5; attempt++) {
+    const maxAttempts = optional.length + 2;
+    for (let attempt = 0; attempt < maxAttempts; attempt++) {
       try {
         const columns = baseColumns.concat(optional.map(o => o.name));
         const values = baseValues.concat(optional.map(o => o.value));

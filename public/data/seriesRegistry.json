@@ -1,7 +1,7 @@
 {
   "_meta": {
     "version": "2.0",
-    "lastUpdated": "2026-07-13T00:31:26.660Z",
+    "lastUpdated": "2026-07-14T03:34:43.443Z",
     "editionDataMigrated": "2025-12-27T01:58:37.244Z",
     "lastSyncFrom": "Engrained-Series.mjs",
     "oneImageMovieMarkedAt": "2026-06-05T16:24:54.142Z"
@@ -2110,7 +2110,31 @@
     "i-6gnqGf4:/src/data/Galleries/Fine-Art-Photography/Portraits/Black-White.mjs": "s-Rv5tgF4",
     "i-DFqr488:/src/data/Galleries/Fine-Art-Photography/Portraits/Black-White.mjs": "s-zG4N5g8",
     "i-QQGxbsp:/src/data/Galleries/Fine-Art-Photography/Portraits/Black-White.mjs": "s-Gb5MQHp",
-    "i-pgzRbqs:/src/data/Galleries/Fine-Art-Photography/Portraits/Black-White.mjs": "s-VxRgrxE"
+    "i-pgzRbqs:/src/data/Galleries/Fine-Art-Photography/Portraits/Black-White.mjs": "s-VxRgrxE",
+    "i-xpv7z8j:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": "s-XrXW5Tb",
+    "i-jRxNbgX:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": "s-L9DYZ66",
+    "i-XmhTdjF:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": "s-79ByMzW",
+    "i-Vhv8w9H:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": "s-bgWVxjE",
+    "i-m6WKrNG:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": "s-c9KnKN3",
+    "i-67j96vq:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": "s-QbS4KWj",
+    "i-sCp6srZ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": "s-ccQePPb",
+    "i-9DLx78V:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": "s-K7B5EVV",
+    "i-khNrbjG:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": "s-zsnmyXk",
+    "i-vJgKthL:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": "s-m4puhxq",
+    "i-g2x5F67:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": "s-GrzYChx",
+    "i-StJWnTh:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": "s-bfAeq3K",
+    "i-SzHJVxh:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": "s-GA2zR3c",
+    "i-4PVgsBK:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": "s-KEmD9f9",
+    "i-PQhLX4w:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": "s-Yvbnh5j",
+    "i-FzCLS97:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": "s-k4HTXrR",
+    "i-xW97k2g:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": "s-NZwu8yQ",
+    "i-vP6ZvBw:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": "s-zX43xZW",
+    "i-vrMcKJj:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": "s-FvsYWs6",
+    "i-3NNTv7n:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": "s-KneMWkw",
+    "i-hS4nH7p:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": "s-P3bKmYK",
+    "i-cfW89QP:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": "s-ef5JsSS",
+    "i-BxK562q:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": "s-me9r2ae",
+    "i-2Xw7qGL:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": "s-VuBakf5"
   },
   "series": {
     "s-BB65wHk": {
@@ -24053,7 +24077,8 @@
     "s-K7B5EVV": {
       "primaryImageId": "i-9DLx78V",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "She Keeps Walking",
       "src": "/img/i-9DLx78V/l.jpg",
@@ -24063,10 +24088,20 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
           "title": "She Keeps Walking",
           "src": "/img/i-9DLx78V/l.jpg"
+        },
+        {
+          "imageId": "i-9DLx78V",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
+          "title": "She Keeps Walking",
+          "src": "/img/i-9DLx78V/l.jpg"
         }
       ],
-      "linkedCount": 1,
-      "excludeSizes": {},
+      "linkedCount": 2,
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2025-12-23T01:19:44.627Z",
       "oneImageMovie": true
     },
@@ -26444,7 +26479,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "He Stands Ready",
+      "title": "Armed with Tradition",
       "src": "/img/i-StJWnTh/l.jpg",
       "occurrences": [
         {
@@ -26452,10 +26487,20 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs",
           "title": "He Stands Ready",
           "src": "/img/i-StJWnTh/l.jpg"
+        },
+        {
+          "imageId": "i-StJWnTh",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
+          "title": "Armed with Tradition",
+          "src": "/img/i-StJWnTh/l.jpg"
         }
       ],
-      "linkedCount": 1,
-      "excludeSizes": {},
+      "linkedCount": 2,
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2025-12-23T01:36:18.961Z",
       "oneImageMovie": true
     },
@@ -28909,9 +28954,10 @@
     "s-zX43xZW": {
       "primaryImageId": "i-vP6ZvBw",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
-      "title": "Bearing the Morning",
+      "title": "Fine Art Frontier Cowboy",
       "src": "/img/i-vP6ZvBw/l.jpg",
       "occurrences": [
         {
@@ -28919,9 +28965,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs",
           "title": "Bearing the Morning",
           "src": "/img/i-vP6ZvBw/l.jpg"
+        },
+        {
+          "imageId": "i-vP6ZvBw",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
+          "title": "Fine Art Frontier Cowboy",
+          "src": "/img/i-vP6ZvBw/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {},
       "createdAt": "2026-01-15T22:59:48.992Z",
       "oneImageMovie": true
@@ -29282,9 +29334,10 @@
     "s-NZwu8yQ": {
       "primaryImageId": "i-xW97k2g",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
-      "title": "Working Cowboy",
+      "title": "Cowboy Artwork In Fine Art",
       "src": "/img/i-xW97k2g/l.jpg",
       "occurrences": [
         {
@@ -29292,10 +29345,20 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
           "title": "Working Cowboy",
           "src": "/img/i-xW97k2g/l.jpg"
+        },
+        {
+          "imageId": "i-xW97k2g",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
+          "title": "Cowboy Artwork In Fine Art",
+          "src": "/img/i-xW97k2g/l.jpg"
         }
       ],
-      "linkedCount": 1,
-      "excludeSizes": {},
+      "linkedCount": 2,
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-01-16T20:30:12.447Z",
       "oneImageMovie": true
     },
@@ -51357,6 +51420,473 @@
       "excludeSizes": {},
       "yearCreated": "",
       "createdAt": "2026-07-13T00:30:28.826Z"
+    },
+    "s-XrXW5Tb": {
+      "primaryImageId": "i-xpv7z8j",
+      "tiers": [
+        "sketch",
+        "foundation",
+        "chronicle",
+        "legend"
+      ],
+      "title": "Land of Promise and Threat",
+      "src": "/img/i-xpv7z8j/l.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-xpv7z8j",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
+          "title": "Land of Promise and Threat",
+          "src": "/img/i-xpv7z8j/l.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "2026",
+      "createdAt": "2026-07-14T02:43:11.610Z"
+    },
+    "s-L9DYZ66": {
+      "primaryImageId": "i-jRxNbgX",
+      "tiers": [
+        "sketch",
+        "foundation",
+        "chronicle"
+      ],
+      "title": "With Reverence and Intent",
+      "src": "/img/i-jRxNbgX/l.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-jRxNbgX",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
+          "title": "With Reverence and Intent",
+          "src": "/img/i-jRxNbgX/l.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "2026",
+      "createdAt": "2026-07-14T02:45:20.497Z"
+    },
+    "s-79ByMzW": {
+      "primaryImageId": "i-XmhTdjF",
+      "tiers": [
+        "sketch",
+        "foundation",
+        "chronicle"
+      ],
+      "title": "Standing Watch",
+      "src": "/img/i-XmhTdjF/l.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-XmhTdjF",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
+          "title": "Standing Watch",
+          "src": "/img/i-XmhTdjF/l.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "2026",
+      "createdAt": "2026-07-14T02:45:41.357Z"
+    },
+    "s-bgWVxjE": {
+      "primaryImageId": "i-Vhv8w9H",
+      "tiers": [
+        "sketch",
+        "chronicle"
+      ],
+      "title": "Of One Mind and Body",
+      "src": "/img/i-Vhv8w9H/l.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-Vhv8w9H",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
+          "title": "Of One Mind and Body",
+          "src": "/img/i-Vhv8w9H/l.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "2026",
+      "createdAt": "2026-07-14T02:46:01.698Z"
+    },
+    "s-c9KnKN3": {
+      "primaryImageId": "i-m6WKrNG",
+      "tiers": [
+        "sketch",
+        "foundation",
+        "chronicle"
+      ],
+      "title": "Sheltered in a Notion of Safety",
+      "src": "/img/i-m6WKrNG/l.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-m6WKrNG",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
+          "title": "Sheltered in a Notion of Safety",
+          "src": "/img/i-m6WKrNG/l.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {
+        "chronicle": [
+          "20\" x 24\""
+        ]
+      },
+      "yearCreated": "2026",
+      "createdAt": "2026-07-14T02:47:09.430Z"
+    },
+    "s-QbS4KWj": {
+      "primaryImageId": "i-67j96vq",
+      "tiers": [
+        "sketch",
+        "foundation",
+        "chronicle"
+      ],
+      "title": "What Is It, Boy?",
+      "src": "/img/i-67j96vq/l.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-67j96vq",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
+          "title": "What Is It, Boy?",
+          "src": "/img/i-67j96vq/l.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {
+        "chronicle": [
+          "20\" x 24\""
+        ]
+      },
+      "yearCreated": "2026",
+      "createdAt": "2026-07-14T02:47:39.587Z"
+    },
+    "s-ccQePPb": {
+      "primaryImageId": "i-sCp6srZ",
+      "tiers": [
+        "sketch",
+        "foundation",
+        "chronicle"
+      ],
+      "title": "Unfinished Business",
+      "src": "/img/i-sCp6srZ/l.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-sCp6srZ",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
+          "title": "Unfinished Business",
+          "src": "/img/i-sCp6srZ/l.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {
+        "chronicle": [
+          "20\" x 24\""
+        ]
+      },
+      "yearCreated": "2026",
+      "createdAt": "2026-07-14T02:52:15.839Z"
+    },
+    "s-zsnmyXk": {
+      "primaryImageId": "i-khNrbjG",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Cowboy Portraits Study",
+      "src": "/img/i-khNrbjG/l.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-khNrbjG",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
+          "title": "Cowboy Portraits Study",
+          "src": "/img/i-khNrbjG/l.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
+      "yearCreated": "",
+      "createdAt": "2026-07-14T02:54:59.955Z"
+    },
+    "s-m4puhxq": {
+      "primaryImageId": "i-vJgKthL",
+      "tiers": [
+        "sketch",
+        "foundation",
+        "chronicle"
+      ],
+      "title": "Beyond the Feathered Edge",
+      "src": "/img/i-vJgKthL/l.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-vJgKthL",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
+          "title": "Beyond the Feathered Edge",
+          "src": "/img/i-vJgKthL/l.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {
+        "chronicle": [
+          "20\" x 24\""
+        ]
+      },
+      "yearCreated": "2026",
+      "createdAt": "2026-07-14T02:55:10.972Z"
+    },
+    "s-GrzYChx": {
+      "primaryImageId": "i-g2x5F67",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Of One Mind and Body #2",
+      "src": "/img/i-g2x5F67/l.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-g2x5F67",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
+          "title": "Of One Mind and Body #2",
+          "src": "/img/i-g2x5F67/l.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "createdAt": "2026-07-14T02:55:38.381Z"
+    },
+    "s-GA2zR3c": {
+      "primaryImageId": "i-SzHJVxh",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "A Pause Beneath the Pines",
+      "src": "/img/i-SzHJVxh/l.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-SzHJVxh",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
+          "title": "A Pause Beneath the Pines",
+          "src": "/img/i-SzHJVxh/l.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-07-14T02:55:58.187Z"
+    },
+    "s-KEmD9f9": {
+      "primaryImageId": "i-4PVgsBK",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Beyond the Next Rise",
+      "src": "/img/i-4PVgsBK/l.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-4PVgsBK",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
+          "title": "Beyond the Next Rise",
+          "src": "/img/i-4PVgsBK/l.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
+      "yearCreated": "2026",
+      "createdAt": "2026-07-14T02:56:04.418Z"
+    },
+    "s-Yvbnh5j": {
+      "primaryImageId": "i-PQhLX4w",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Ready for What Comes",
+      "src": "/img/i-PQhLX4w/l.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-PQhLX4w",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
+          "title": "Ready for What Comes",
+          "src": "/img/i-PQhLX4w/l.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
+      "yearCreated": "",
+      "createdAt": "2026-07-14T02:56:14.762Z"
+    },
+    "s-k4HTXrR": {
+      "primaryImageId": "i-FzCLS97",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Cowboy Artwork Moment",
+      "src": "/img/i-FzCLS97/l.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-FzCLS97",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
+          "title": "Cowboy Artwork Moment",
+          "src": "/img/i-FzCLS97/l.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
+      "yearCreated": "",
+      "createdAt": "2026-07-14T02:56:23.554Z"
+    },
+    "s-FvsYWs6": {
+      "primaryImageId": "i-vrMcKJj",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Untitled photo",
+      "src": "/img/i-vrMcKJj/l.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-vrMcKJj",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
+          "title": "Untitled photo",
+          "src": "/img/i-vrMcKJj/l.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-07-14T02:56:42.296Z"
+    },
+    "s-KneMWkw": {
+      "primaryImageId": "i-3NNTv7n",
+      "tiers": [
+        "sketch",
+        "foundation",
+        "chronicle"
+      ],
+      "title": "A Difference of Opinion",
+      "src": "/img/i-3NNTv7n/l.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-3NNTv7n",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
+          "title": "A Difference of Opinion",
+          "src": "/img/i-3NNTv7n/l.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {
+        "chronicle": [
+          "20\" x 24\""
+        ]
+      },
+      "yearCreated": "2026",
+      "createdAt": "2026-07-14T02:56:46.107Z"
+    },
+    "s-P3bKmYK": {
+      "primaryImageId": "i-hS4nH7p",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Riding Into the Reckoning #2",
+      "src": "/img/i-hS4nH7p/l.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-hS4nH7p",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
+          "title": "Riding Into the Reckoning #2",
+          "src": "/img/i-hS4nH7p/l.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "createdAt": "2026-07-14T03:10:51.956Z"
+    },
+    "s-ef5JsSS": {
+      "primaryImageId": "i-cfW89QP",
+      "tiers": [
+        "sketch",
+        "foundation",
+        "chronicle"
+      ],
+      "title": "Signal from the Ridge",
+      "src": "/img/i-cfW89QP/l.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-cfW89QP",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
+          "title": "Signal from the Ridge",
+          "src": "/img/i-cfW89QP/l.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "2026",
+      "createdAt": "2026-07-14T03:31:49.328Z"
+    },
+    "s-me9r2ae": {
+      "primaryImageId": "i-BxK562q",
+      "tiers": [
+        "sketch",
+        "foundation",
+        "chronicle"
+      ],
+      "title": "A Reach of Faith",
+      "src": "/img/i-BxK562q/l.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-BxK562q",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
+          "title": "A Reach of Faith",
+          "src": "/img/i-BxK562q/l.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "2026",
+      "createdAt": "2026-07-14T03:33:19.622Z"
+    },
+    "s-VuBakf5": {
+      "primaryImageId": "i-2Xw7qGL",
+      "tiers": [
+        "sketch",
+        "foundation",
+        "chronicle"
+      ],
+      "title": "Upscaled with Gigapixel v8.4.4. 5184x3722 =&gt; 9285x6666 (1.79109x) @ 300 ppi Model: High Fidelity V2, denoise: 0.62, sharpen: 1, decompression: 0.06",
+      "src": "/img/i-2Xw7qGL/l.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-2Xw7qGL",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
+          "title": "Upscaled with Gigapixel v8.4.4. 5184x3722 =&gt; 9285x6666 (1.79109x) @ 300 ppi Model: High Fidelity V2, denoise: 0.62, sharpen: 1, decompression: 0.06",
+          "src": "/img/i-2Xw7qGL/l.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {
+        "chronicle": [
+          "20\" x 24\""
+        ]
+      },
+      "yearCreated": "2026",
+      "createdAt": "2026-07-14T03:34:39.887Z"
     }
   }
 }

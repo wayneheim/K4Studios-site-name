@@ -423,7 +423,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
     <div class="pulse-stat">
       <span class="value" style="color:#22d3ee;">⏱️ ${avgDurationFormatted}</span>
       <span class="label">Avg Time <span class="info-icon">i</span></span>
-      <div class="tooltip">Average session duration (first to last event). Only counts sessions with 2+ events. For art browsing, 2+ min is good engagement.</div>
+      <div class="tooltip">Average active time when page-visibility engagement is available; otherwise falls back to first-to-last event time. Only counts sessions with 2+ events.</div>
     </div>
     <div class="pulse-stat">
       <span class="value" style="color:#10b981">${s.pct_navigated || 0}%</span>
@@ -820,18 +820,19 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
 
     <div class="section">
       <div class="section-header">
-        <h3>🔎 Top Entry Pages</h3>
-        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">First page visited in each session. Aggregated by page path only and counted once per session.</div></span>
+        <h3>🔎 Top Entry Pages &amp; Sources</h3>
+        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">First page visited in each session. Campaign parameters take priority; otherwise the session entry referrer is classified. This is not a page-by-page navigation trail.</div></span>
       </div>
       ${entryPages.length === 0 ? '<p style="color:#666">No data yet</p>' : `
       <table>
-        <tr><th>Page</th><th>S</th><th>Sess</th></tr>
+        <tr><th>Page</th><th>Src</th><th>Sess</th></tr>
         ${entryPages.slice(0, 25).map(p => {
           const isImage = p.page_path.includes('/i-');
           const shortPath = p.page_path.length > 30 ? '...' + p.page_path.slice(-27) : p.page_path;
           const pageIcon = isImage ? '🖼️' : '📄';
-          const sourceKind = String(p.source_kind || 'J').toUpperCase() === 'P' ? 'P' : 'J';
-          return `<tr><td title="${p.page_path}">${pageIcon} ${shortPath}</td><td title="${sourceKind === 'P' ? 'Pixel' : 'JavaScript'}" style="text-align:center;color:${sourceKind === 'P' ? '#f59e0b' : '#60a5fa'};font-weight:700;">${sourceKind}</td><td>${p.sessions}</td></tr>`;
+          const sourceIcons = { email: '✉️', google_search: '🔍', google_images: '🖼️', bing_search: '🅱️', bing_images: '🖼️', pinterest: '📌', facebook: '📘', instagram: '📷', linkedin: '💼', direct: '🔗', internal: '🔄', unattributed: '🔒' };
+          const refSource = String(p.ref_source || 'unattributed');
+          return `<tr><td title="${p.page_path}">${pageIcon} ${shortPath}</td><td title="Session entry source: ${refSource}" style="text-align:center;">${sourceIcons[refSource] || '🔒'}</td><td>${p.sessions}</td></tr>`;
         }).join('')}
       </table>
       `}

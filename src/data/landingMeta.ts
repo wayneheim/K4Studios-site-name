@@ -86,16 +86,19 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
   "/News-Awards": {
     title: "Wayne Heim — Press, Awards & Exhibition Recognition",
     seoTitle: "Wayne Heim — Press, Awards & Exhibition Recognition",
+    seoDescription:
+      "Press features, awards, juried exhibitions, and professional recognition for Wayne Heim’s narrative Western fine art photography and K4 Studios.",
     ogTitle: "Wayne Heim — Press, Awards & Exhibition Recognition",
     ogDescription:
-      "Press coverage, juried exhibition acceptances, and professional awards recognizing Wayne Heim's painterly Western photography and fine art photography at K4 Studios.",
+      "Press features, awards, juried exhibitions, and professional recognition for Wayne Heim’s narrative Western fine art photography and K4 Studios.",
     ogImage: "/og/news-awards.jpg",
     ogType: "website",
     twitterCard: "summary_large_image",
     twitterTitle: "Wayne Heim — Press, Awards & Exhibition Recognition",
     twitterDescription:
-      "Press coverage, juried exhibition acceptances, and professional awards recognizing Wayne Heim's painterly Western photography and fine art photography at K4 Studios.",
+      "Press features, awards, juried exhibitions, and professional recognition for Wayne Heim’s narrative Western fine art photography and K4 Studios.",
     twitterImage: "/og/news-awards.jpg",
+    preserveDescriptionExact: true,
     preserveTitleDashes: true,
   },
 

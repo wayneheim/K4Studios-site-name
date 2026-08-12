@@ -118,26 +118,54 @@ export async function handleInspectRequest(request, env) {
   const where = parts.length ? parts.map(p => `(${p})`).join(' AND ') : '1=1';
 
   const sessionsQuery = `
-    WITH session_events AS (
+    WITH base_events AS (
+      SELECT e.*
+      FROM human_population hp
+      JOIN classified_events e ON e.visitor_id = hp.visitor_id
+      WHERE ${where}
+    ),
+    session_events AS (
       SELECT
         e.session_id,
         MIN(e.ts) AS first_ts,
         MAX(e.ts) AS last_ts,
-        CAST((julianday(MAX(e.ts)) - julianday(MIN(e.ts))) * 86400 AS INTEGER) AS duration_s,
+        CAST((julianday(MAX(e.ts)) - julianday(MIN(e.ts))) * 86400 AS INTEGER) AS observed_duration_s,
         COUNT(*) AS events
-      FROM human_population hp
-      JOIN classified_events e ON e.visitor_id = hp.visitor_id
-      WHERE ${where}
+      FROM base_events e
       GROUP BY e.session_id
     ),
+    active_pages AS (
+      SELECT
+        session_id,
+        COALESCE(NULLIF(page_instance_id, ''), COALESCE(NULLIF(page, ''), target_id, 'unknown')) AS page_instance,
+        MAX(engaged_ms) AS engaged_ms
+      FROM base_events
+      WHERE engaged_ms IS NOT NULL
+      GROUP BY session_id, page_instance
+    ),
+    active_sessions AS (
+      SELECT session_id, SUM(engaged_ms) AS engaged_ms
+      FROM active_pages
+      GROUP BY session_id
+    ),
     entry_pages AS (
-      SELECT session_id, visitor_id, page_path AS entry_page, referer AS entry_referer
+      SELECT
+        session_id,
+        visitor_id,
+        page_path AS entry_page,
+        effective_entry_referrer AS entry_referer,
+        utm_source,
+        utm_medium,
+        utm_campaign
       FROM (
         SELECT
           e.session_id,
           e.visitor_id,
           COALESCE(NULLIF(e.page, ''), e.target_id) AS page_path,
-          e.referer,
+          COALESCE(NULLIF(e.entry_referrer, ''), e.referer) AS effective_entry_referrer,
+          e.utm_source,
+          e.utm_medium,
+          e.utm_campaign,
           ROW_NUMBER() OVER (PARTITION BY e.session_id ORDER BY e.ts ASC) AS rn
         FROM human_population hp
         JOIN classified_events e ON e.visitor_id = hp.visitor_id
@@ -152,13 +180,26 @@ export async function handleInspectRequest(request, env) {
       ep.visitor_id,
       se.first_ts,
       se.last_ts,
-      se.duration_s,
+      CASE
+        WHEN COALESCE(a.engaged_ms, 0) > 0 THEN CAST(ROUND(a.engaged_ms / 1000.0) AS INTEGER)
+        ELSE se.observed_duration_s
+      END AS duration_s,
+      se.observed_duration_s,
+      a.engaged_ms,
       se.events,
       ep.entry_page,
       ep.entry_referer,
-      ${classifyRefSourceSql('ep.entry_referer')} AS ref_source
+      ep.utm_source,
+      ep.utm_medium,
+      ep.utm_campaign,
+      CASE
+        WHEN COALESCE(NULLIF(ep.utm_medium, ''), '') = 'email' THEN 'email'
+        WHEN COALESCE(NULLIF(ep.utm_source, ''), '') != '' THEN LOWER(ep.utm_source)
+        ELSE ${classifyRefSourceSql('ep.entry_referer')}
+      END AS ref_source
     FROM session_events se
     LEFT JOIN entry_pages ep ON ep.session_id = se.session_id
+    LEFT JOIN active_sessions a ON a.session_id = se.session_id
     ORDER BY se.last_ts DESC
     LIMIT ${limit}
   `;
@@ -194,7 +235,13 @@ export async function handleInspectRequest(request, env) {
         e.target_id,
         e.img_size,
         e.ref_type,
-        SUBSTR(COALESCE(e.referer, ''), 1, 160) AS referer
+        SUBSTR(COALESCE(e.entry_referrer, e.referer, ''), 1, 160) AS entry_referrer,
+        SUBSTR(COALESCE(e.document_referrer, ''), 1, 160) AS document_referrer,
+        SUBSTR(COALESCE(e.previous_page, ''), 1, 160) AS previous_page,
+        e.utm_source,
+        e.utm_medium,
+        e.utm_campaign,
+        e.engaged_ms
       FROM human_population hp
       JOIN classified_events e ON e.visitor_id = hp.visitor_id
       WHERE ${where}
@@ -207,7 +254,7 @@ export async function handleInspectRequest(request, env) {
       const tRes = await env.DB.prepare(timelineQuery).all();
       timeline = tRes?.results || [];
     } catch (e) {
-      timeline = [{ ts: '', event_type: 'error', page_path: '', target_id: '', img_size: '', ref_type: '', referer: `Timeline query failed: ${e.message}` }];
+      timeline = [{ ts: '', event_type: 'error', page_path: '', target_id: '', img_size: '', ref_type: '', entry_referrer: `Timeline query failed: ${e.message}` }];
     }
   }
 

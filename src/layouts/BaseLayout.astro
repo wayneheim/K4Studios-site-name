@@ -776,20 +776,33 @@ const jsonLdScripts = [
 
           var currentHost = (location.hostname || '').toLowerCase();
           var referrerHost = getReferrerHost();
+          var now = Date.now();
+          var sessionTimeoutSeconds = 30 * 60;
+          var sessionTimeoutMs = sessionTimeoutSeconds * 1000;
           var shouldRotateProdSession = currentHost.endsWith('k4studios.com')
             && currentHost !== 'edge.k4studios.com'
             && (referrerHost === 'edge.k4studios.com' || referrerHost === 'localhost' || referrerHost.indexOf('localhost:') === 0);
 
           var sid = readCookie('k4_sid');
-          if (!shouldRotateProdSession && !sid) {
+          var lastActivityRaw = readCookie('k4_session_last_activity') || sessionStorage.getItem('k4_session_last_activity');
+          var lastActivity = Number(lastActivityRaw || 0);
+          var sessionExpired = !!lastActivity && (now - lastActivity > sessionTimeoutMs);
+          if (!shouldRotateProdSession && !sessionExpired && !sid) {
             sid = sessionStorage.getItem('k4_session_id');
           }
-          if (shouldRotateProdSession || !sid) {
+          var rotatedSession = shouldRotateProdSession || sessionExpired || !sid;
+          if (rotatedSession) {
             sid = randomId();
           }
           if (sid) {
             sessionStorage.setItem('k4_session_id', sid);
-            sessionStorage.removeItem('k4_event_order');
+            sessionStorage.setItem('k4_session_last_activity', String(now));
+            if (rotatedSession) {
+              sessionStorage.removeItem('k4_event_order');
+              sessionStorage.removeItem('k4_entry_referrer');
+              sessionStorage.removeItem('k4_campaign_attribution');
+              sessionStorage.removeItem('k4_previous_page');
+            }
           }
 
           var vid = readCookie('k4_vid');
@@ -811,7 +824,8 @@ const jsonLdScripts = [
           }
 
           if (sid) {
-            document.cookie = 'k4_sid=' + encodeURIComponent(sid) + '; Path=/; SameSite=Lax; Secure' + domainAttr;
+            document.cookie = 'k4_sid=' + encodeURIComponent(sid) + '; Path=/; Max-Age=' + sessionTimeoutSeconds + '; SameSite=Lax; Secure' + domainAttr;
+            document.cookie = 'k4_session_last_activity=' + encodeURIComponent(String(now)) + '; Path=/; Max-Age=' + sessionTimeoutSeconds + '; SameSite=Lax; Secure' + domainAttr;
           }
           if (vid) {
             document.cookie = 'k4_vid=' + encodeURIComponent(vid) + '; Path=/; Max-Age=31536000; SameSite=Lax; Secure' + domainAttr;

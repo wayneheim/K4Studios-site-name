@@ -8,6 +8,7 @@ import {
   getSeriesIcons,
   getSeriesPricingEntries,
 } from "./pricing/printSeries.js";
+import { getEffectiveSeries as resolveEffectiveSeries } from "./seriesAvailability.js";
 
 // Series Icons — Unicode symbols for each series level
 // Helper to format price for display
@@ -176,20 +177,8 @@ export function isOneImageMovieFromRegistry(imageId, registry = registryCache) {
   return Boolean(getSeriesRecordFromRegistry(imageId, registry)?.oneImageMovie);
 }
 
-// Helper to get effective series for an image (includes sketch by default)
+// Helper to get effective series for an image (includes Sketch and Foundation by default)
 // Now reads from seriesRegistry instead of image.availableSeries
 export function getEffectiveSeries(image, registry = registryCache) {
-  // Get tiers from registry first, fall back to image.availableSeries for backward compat
-  let series = getSeriesTiersFromRegistry(image?.id, registry);
-  if (series.length === 0 && image?.availableSeries) {
-    // Backward compatibility: if not in registry, check image property
-    series = [...image.availableSeries];
-  }
-  
-  // Sketch is ALWAYS included unless explicitly suppressed
-  if (!image?.noSketch && !series.includes("sketch")) {
-    series = ["sketch", ...series];
-  }
-  // Filter out engrained — it has its own modal
-  return series.filter(s => s !== "engrained");
+  return resolveEffectiveSeries(image, getSeriesRecordFromRegistry(image?.id, registry));
 }

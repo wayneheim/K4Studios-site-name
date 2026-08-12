@@ -4,7 +4,7 @@ import React, { useState, useEffect, useMemo, useCallback } from "react";
 import { createPortal } from "react-dom";
 
 // Edition size for all Engrained prints
-const EDITION_SIZE = 50;
+const EDITION_SIZE = 5;
 
 /* ---------- MasterImageLinkModal ---------- */
 function MasterImageLinkModal({ isOpen, onClose, onSelect, currentLinkedId, currentLinkedPath }) {
@@ -730,7 +730,7 @@ export default function EngrainedStatusPanel({ current, backupMade, onUpdate, on
       // Initialize local price/size from current item's .mjs data
       setLocalImageSize(current.imageSize || "");
       setLocalPrice(current.price || "");
-      setLocalEditionSize(current.editionSize || 50);
+      setLocalEditionSize(current.editionSize || EDITION_SIZE);
       setLocalYearCreated(current.yearCreated || "");
       setPendingChanges(false);
       setMasterImage(null); // Only clear when switching images, not on every update
@@ -1022,9 +1022,12 @@ export default function EngrainedStatusPanel({ current, backupMade, onUpdate, on
           min={1}
           max={999}
           value={localEditionSize}
-          onChange={(e) => { setLocalEditionSize(parseInt(e.target.value) || 50); setPendingChanges(true); }}
+          onChange={(e) => { setLocalEditionSize(parseInt(e.target.value) || EDITION_SIZE); setPendingChanges(true); }}
           className="w-24 px-3 py-2 bg-white rounded border border-teal-200 text-sm"
         />
+        <p className="mt-1 text-xs text-teal-700/70">
+          Numbered inventory only; +1 Artist Proof is excluded from inventory counts.
+        </p>
       </div>
 
       {/* Year Created */}

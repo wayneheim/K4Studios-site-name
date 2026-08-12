@@ -17,6 +17,7 @@ import { getSideImages } from '@/components/utils/getSideImages.ts';
 import { sanitizeForClient } from '@/components/utils/normalizeImage.ts';
 import { autoLinkKeywordsInText } from '@/components/utils/autoLinkKeywordsInText.ts';
 import { semantic as k4Semantic } from '@/data/semantic/K4-Sem.ts';
+import { getSemanticImageSrcset, getSemanticImageUrl } from '@/utils/imageProxy.js';
 
 import { landingWestern } from '@/data/News/landingstones.ts';
 import { painterlyStory as westernStory } from '@/data/News/story.ts';
@@ -32,8 +33,14 @@ const sectionPath = "/News-Awards";
 const pagePath = "/News-Awards";
 const canonicalPageUrl = `https://www.k4studios.com${pagePath}`;
 const artOfTheWestFeatureUrl = "https://aotw.com/2026/02/painterly-photography/";
+const treasureStateFeatureUrl = "https://fliphtml5.com/atiy/bqqh/21/";
 const sviNewsFeatureUrl = "https://svinews.com/2026/top-featured/120533/wayne-heims-art-brings-the-old-west-home/";
 const facingHistoryUrl = "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History";
+const nightRaidGalleryPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color";
+const nightRaidUrl = `${nightRaidGalleryPath}/i-trZrk2w`;
+const nightRaidImage = { id: "i-trZrk2w", title: "Night Raid" };
+const nightRaidImageSrc = getSemanticImageUrl(nightRaidImage, { galleryPath: nightRaidGalleryPath }, "l");
+const nightRaidImageSrcset = getSemanticImageSrcset(nightRaidImage, { galleryPath: nightRaidGalleryPath });
 // Use painterly galleries for sidebar images
 const gallerySectionPath = "/Galleries/Painterly-Fine-Art-Photography";
 const meta = getLandingMeta(pagePath);
@@ -120,8 +127,39 @@ const structuredData = getStructuredData({
       { "@type": "Occupation", name: "Medical Illustrator" },
       { "@type": "Thing", name: "cinematic storytelling" }
     ],
-    citation: [artOfTheWestFeatureUrl, sviNewsFeatureUrl],
+    citation: [treasureStateFeatureUrl, artOfTheWestFeatureUrl, sviNewsFeatureUrl],
     subjectOf: [
+      {
+        "@type": "NewsArticle",
+        "@id": `${treasureStateFeatureUrl}#article`,
+        headline: "“Night Raid” Featured with Buffalo Soldiers History in Treasure State Lifestyles",
+        datePublished: "2026-07-29",
+        author: {
+          "@type": "Person",
+          "@id": "https://www.k4studios.com/#person",
+          name: "Wayne Heim"
+        },
+        about: [
+          "Night Raid",
+          "Buffalo Soldiers",
+          "Western art",
+          "Narrative fine art photography"
+        ],
+        isPartOf: {
+          "@type": "PublicationIssue",
+          issueNumber: "6",
+          isPartOf: {
+            "@type": "PublicationVolume",
+            volumeNumber: "22",
+            isPartOf: {
+              "@type": "Periodical",
+              name: "Treasure State Lifestyles Montana"
+            }
+          }
+        },
+        citation: treasureStateFeatureUrl,
+        url: canonicalPageUrl
+      },
       {
         "@type": "Article",
         "@id": `${artOfTheWestFeatureUrl}#article`,
@@ -213,6 +251,49 @@ const structuredData = getStructuredData({
               {section.subhead === "Press & Related Resources" && (
                 /* Future press cluster candidates: /Press/Art-of-the-West, /Press/Western-Art-and-Architecture */
                 <>
+                  <article class="story-block press-feature treasure-state-feature" aria-labelledby="treasure-state-feature">
+                    <h2 id="treasure-state-feature" class="slide-in-left">“Night Raid” Featured with Buffalo Soldiers History in Treasure State Lifestyles</h2>
+                    <p class="press-date reveal-on-scroll">
+                      <time datetime="2026-07-29">July 29, 2026</time>
+                    </p>
+
+                    <figure class="news-feature-image reveal-on-scroll">
+                      <img
+                        src={nightRaidImageSrc}
+                        srcset={nightRaidImageSrcset}
+                        sizes="(max-width: 767px) calc(100vw - 3rem), 740px"
+                        alt="Night Raid by Wayne Heim, depicting two mounted Buffalo Soldiers keeping watch in the darkness"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <figcaption>
+                        <em>Night Raid</em> by Wayne Heim, featured in Volume 22, Issue 6 of <em>Treasure State Lifestyles Montana</em>.
+                      </figcaption>
+                    </figure>
+
+                    <p class="reveal-on-scroll">
+                      Wayne Heim’s narrative Western artwork <em>Night Raid</em> appears as the lead image for a Buffalo Soldiers history feature in Volume 22, Issue 6 of <em>Treasure State Lifestyles Montana</em>.
+                    </p>
+                    <p class="reveal-on-scroll">
+                      Presented with Heim’s original short narrative, the published artwork uses a single unresolved moment to suggest the vigilance, uncertainty, and often-underrepresented experiences of the Black soldiers who served throughout the American West.
+                    </p>
+                    <blockquote class="reveal-on-scroll">
+                      <p>
+                        Shadows slip across stone. Who will blink first—the men or the night? One ear to the dark, one eye on the sky. Quiet breath, steady hands—tonight, the West holds its secrets close.
+                      </p>
+                    </blockquote>
+                    <p class="news-links reveal-on-scroll">
+                      <a href={treasureStateFeatureUrl} target="_blank" rel="noopener noreferrer">
+                        View the published feature on page 21 →
+                      </a>
+                    </p>
+                    <p class="news-links reveal-on-scroll">
+                      <a href={nightRaidUrl}>
+                        Explore <em>Night Raid</em> and Wayne Heim’s narrative Western artwork →
+                      </a>
+                    </p>
+                  </article>
+
                   <article class="story-block press-feature" aria-labelledby="svi-news-feature">
                     <h2 id="svi-news-feature" class="slide-in-left">SVI News Features Wayne Heim's Western Artwork</h2>
                     <p class="press-date reveal-on-scroll">June 26, 2026</p>
@@ -478,6 +559,40 @@ ul li::marker {
       font-size: 0.95rem !important;
       margin-top: -0.15rem;
       margin-bottom: 0.65rem !important;
+    }
+
+    .news-feature-image {
+      margin: 1.35rem 0 1.45rem;
+      max-width: 100%;
+    }
+
+    .news-feature-image img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+    }
+
+    .news-feature-image figcaption {
+      color: #6d6258;
+      font-size: 0.88rem;
+      line-height: 1.5;
+      margin-top: 0.55rem;
+    }
+
+    .treasure-state-feature blockquote {
+      border-left: 2px solid #b8aa9d;
+      color: #4f463f;
+      margin: 1.25rem 0 1.35rem;
+      padding: 0.05rem 0 0.05rem 1.15rem;
+    }
+
+    .treasure-state-feature blockquote p {
+      margin-bottom: 0;
+    }
+
+    .treasure-state-feature .news-links + .news-links {
+      margin-top: -0.35rem;
     }
 
     .story-block ul {

@@ -3,12 +3,12 @@
     "version": "1.0",
     "description": "Edition state database - source of truth for edition counts and sales",
     "warning": "DO NOT manually edit sold counts. Use EditorPro or admin tools.",
-    "lastUpdated": "2026-05-09T18:02:05.024Z"
+    "lastUpdated": "2026-08-11T19:25:46.801Z"
   },
   "i-ncFcHDM:chronicle": {
     "imageId": "i-ncFcHDM",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-16T23:07:04.797Z",
@@ -20,7 +20,7 @@
   "i-ncFcHDM:legend": {
     "imageId": "i-ncFcHDM",
     "series": "legend",
-    "editionLimit": 12,
+    "editionLimit": 25,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-17T01:12:38.212Z"
@@ -28,7 +28,7 @@
   "i-ncFcHDM:engrained": {
     "imageId": "i-ncFcHDM",
     "series": "engrained",
-    "editionLimit": 50,
+    "editionLimit": 5,
     "printed": 1,
     "sold": 1,
     "released": true,
@@ -37,7 +37,7 @@
   "i-xqbdC8P:engrained": {
     "imageId": "i-xqbdC8P",
     "series": "engrained",
-    "editionLimit": 50,
+    "editionLimit": 5,
     "printed": 1,
     "sold": 1,
     "released": true,
@@ -46,7 +46,7 @@
   "i-JfqzrnN:engrained": {
     "imageId": "i-JfqzrnN",
     "series": "engrained",
-    "editionLimit": 50,
+    "editionLimit": 5,
     "printed": 1,
     "sold": 0,
     "released": true,
@@ -55,7 +55,7 @@
   "i-8hMzqz2:engrained": {
     "imageId": "i-8hMzqz2",
     "series": "engrained",
-    "editionLimit": 50,
+    "editionLimit": 5,
     "printed": 2,
     "sold": 1,
     "released": true,
@@ -64,7 +64,7 @@
   "i-Shpfdbm:engrained": {
     "imageId": "i-Shpfdbm",
     "series": "engrained",
-    "editionLimit": 50,
+    "editionLimit": 5,
     "printed": 1,
     "sold": 0,
     "released": true,
@@ -73,7 +73,7 @@
   "i-mrHbrNb:engrained": {
     "imageId": "i-mrHbrNb",
     "series": "engrained",
-    "editionLimit": 50,
+    "editionLimit": 5,
     "printed": 1,
     "sold": 0,
     "released": true,
@@ -82,7 +82,7 @@
   "i-Spk5gdH:engrained": {
     "imageId": "i-Spk5gdH",
     "series": "engrained",
-    "editionLimit": 50,
+    "editionLimit": 5,
     "printed": 3,
     "sold": 2,
     "released": true,
@@ -91,7 +91,7 @@
   "i-thTwwHZ:engrained": {
     "imageId": "i-thTwwHZ",
     "series": "engrained",
-    "editionLimit": 50,
+    "editionLimit": 5,
     "printed": 2,
     "sold": 1,
     "released": true,
@@ -100,7 +100,7 @@
   "i-ZNTzTJ7:engrained": {
     "imageId": "i-ZNTzTJ7",
     "series": "engrained",
-    "editionLimit": 50,
+    "editionLimit": 5,
     "printed": 1,
     "sold": 0,
     "released": true,
@@ -109,7 +109,7 @@
   "i-hntD8Vp:engrained": {
     "imageId": "i-hntD8Vp",
     "series": "engrained",
-    "editionLimit": 50,
+    "editionLimit": 5,
     "printed": 1,
     "sold": 0,
     "released": true,
@@ -118,7 +118,7 @@
   "i-PkspRGs:engrained": {
     "imageId": "i-PkspRGs",
     "series": "engrained",
-    "editionLimit": 50,
+    "editionLimit": 5,
     "printed": 1,
     "sold": 0,
     "released": true,
@@ -127,7 +127,7 @@
   "i-VrbD648:engrained": {
     "imageId": "i-VrbD648",
     "series": "engrained",
-    "editionLimit": 50,
+    "editionLimit": 5,
     "printed": 1,
     "sold": 1,
     "released": true,
@@ -136,7 +136,7 @@
   "i-6rWZnHP:engrained": {
     "imageId": "i-6rWZnHP",
     "series": "engrained",
-    "editionLimit": 50,
+    "editionLimit": 5,
     "printed": 1,
     "sold": 0,
     "released": true,
@@ -145,7 +145,7 @@
   "i-VGxwS5N:engrained": {
     "imageId": "i-VGxwS5N",
     "series": "engrained",
-    "editionLimit": 50,
+    "editionLimit": 5,
     "printed": 3,
     "sold": 2,
     "released": true,
@@ -154,7 +154,7 @@
   "i-4cdDwZt:engrained": {
     "imageId": "i-4cdDwZt",
     "series": "engrained",
-    "editionLimit": 50,
+    "editionLimit": 5,
     "printed": 1,
     "sold": 1,
     "released": true,
@@ -163,7 +163,7 @@
   "i-b4wG4vh:engrained": {
     "imageId": "i-b4wG4vh",
     "series": "engrained",
-    "editionLimit": 50,
+    "editionLimit": 5,
     "printed": 1,
     "sold": 0,
     "released": true,
@@ -172,7 +172,7 @@
   "i-xF7p92v:engrained": {
     "imageId": "i-xF7p92v",
     "series": "engrained",
-    "editionLimit": 50,
+    "editionLimit": 5,
     "printed": 2,
     "sold": 0,
     "released": true,
@@ -181,7 +181,7 @@
   "i-NQ5tCTb:engrained": {
     "imageId": "i-NQ5tCTb",
     "series": "engrained",
-    "editionLimit": 50,
+    "editionLimit": 5,
     "printed": 1,
     "sold": 0,
     "released": true,
@@ -190,7 +190,7 @@
   "i-C58KMqF:engrained": {
     "imageId": "i-C58KMqF",
     "series": "engrained",
-    "editionLimit": 50,
+    "editionLimit": 5,
     "printed": 1,
     "sold": 0,
     "released": true,
@@ -199,7 +199,7 @@
   "i-Prk5NPT:engrained": {
     "imageId": "i-Prk5NPT",
     "series": "engrained",
-    "editionLimit": 50,
+    "editionLimit": 5,
     "printed": 1,
     "sold": 0,
     "released": true,
@@ -208,7 +208,7 @@
   "i-hVBkc7Q:engrained": {
     "imageId": "i-hVBkc7Q",
     "series": "engrained",
-    "editionLimit": 50,
+    "editionLimit": 5,
     "printed": 1,
     "sold": 0,
     "released": true,
@@ -217,7 +217,7 @@
   "i-ZWDpsxz:engrained": {
     "imageId": "i-ZWDpsxz",
     "series": "engrained",
-    "editionLimit": 50,
+    "editionLimit": 5,
     "printed": 1,
     "sold": 0,
     "released": true,
@@ -226,7 +226,7 @@
   "i-44jcjTQ:chronicle": {
     "imageId": "i-44jcjTQ",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-17T23:16:49.796Z"
@@ -234,7 +234,7 @@
   "i-44jcjTQ:legend": {
     "imageId": "i-44jcjTQ",
     "series": "legend",
-    "editionLimit": 12,
+    "editionLimit": 25,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-17T23:25:55.649Z"
@@ -242,7 +242,7 @@
   "i-B7ZSdfs:chronicle": {
     "imageId": "i-B7ZSdfs",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-17T23:34:43.870Z"
@@ -250,7 +250,7 @@
   "i-bq4FKvX:chronicle": {
     "imageId": "i-bq4FKvX",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-17T23:35:00.408Z"
@@ -258,7 +258,7 @@
   "i-Wx5scCf:chronicle": {
     "imageId": "i-Wx5scCf",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-17T23:35:28.213Z"
@@ -266,7 +266,7 @@
   "i-rfFBRQM:chronicle": {
     "imageId": "i-rfFBRQM",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-17T23:36:29.486Z"
@@ -274,7 +274,7 @@
   "i-r5Pb7zJ:chronicle": {
     "imageId": "i-r5Pb7zJ",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-17T23:37:23.715Z"
@@ -282,7 +282,7 @@
   "i-bfKMXS9:chronicle": {
     "imageId": "i-bfKMXS9",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-17T23:37:55.493Z"
@@ -290,7 +290,7 @@
   "i-bfKMXS9:legend": {
     "imageId": "i-bfKMXS9",
     "series": "legend",
-    "editionLimit": 12,
+    "editionLimit": 25,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-17T23:37:56.217Z"
@@ -298,7 +298,7 @@
   "i-trZrk2w:chronicle": {
     "imageId": "i-trZrk2w",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-17T23:38:11.158Z"
@@ -306,7 +306,7 @@
   "i-fM9qmKW:chronicle": {
     "imageId": "i-fM9qmKW",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-17T23:38:26.280Z"
@@ -314,7 +314,7 @@
   "i-MHGPvcs:legend": {
     "imageId": "i-MHGPvcs",
     "series": "legend",
-    "editionLimit": 12,
+    "editionLimit": 25,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-17T23:38:34.589Z"
@@ -322,7 +322,7 @@
   "i-MHGPvcs:chronicle": {
     "imageId": "i-MHGPvcs",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-17T23:38:36.676Z"
@@ -330,7 +330,7 @@
   "i-7VWX9vk:chronicle": {
     "imageId": "i-7VWX9vk",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-17T23:38:44.910Z"
@@ -338,7 +338,7 @@
   "i-CD6rgtF:chronicle": {
     "imageId": "i-CD6rgtF",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-17T23:40:03.735Z"
@@ -346,7 +346,7 @@
   "i-fCG2nm8:chronicle": {
     "imageId": "i-fCG2nm8",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-17T23:40:13.463Z"
@@ -354,7 +354,7 @@
   "i-c5K798H:chronicle": {
     "imageId": "i-c5K798H",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-17T23:41:06.496Z"
@@ -362,7 +362,7 @@
   "i-c5K798H:legend": {
     "imageId": "i-c5K798H",
     "series": "legend",
-    "editionLimit": 12,
+    "editionLimit": 25,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-17T23:41:18.812Z"
@@ -370,7 +370,7 @@
   "i-k4b6c5b:chronicle": {
     "imageId": "i-k4b6c5b",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-17T23:41:28.412Z"
@@ -378,7 +378,7 @@
   "i-VDLVwqr:chronicle": {
     "imageId": "i-VDLVwqr",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-17T23:41:48.094Z"
@@ -386,7 +386,7 @@
   "i-HBRmWg4:chronicle": {
     "imageId": "i-HBRmWg4",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-17T23:42:04.420Z"
@@ -394,7 +394,7 @@
   "i-mLPgSpC:chronicle": {
     "imageId": "i-mLPgSpC",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-17T23:42:11.094Z"
@@ -402,7 +402,7 @@
   "i-hMXZ8Xh:chronicle": {
     "imageId": "i-hMXZ8Xh",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-17T23:42:17.589Z"
@@ -410,7 +410,7 @@
   "i-qVZ9m7j:chronicle": {
     "imageId": "i-qVZ9m7j",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-17T23:42:46.331Z"
@@ -418,7 +418,7 @@
   "i-JKnW497:chronicle": {
     "imageId": "i-JKnW497",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-17T23:42:52.775Z"
@@ -426,7 +426,7 @@
   "i-gL3Nnth:chronicle": {
     "imageId": "i-gL3Nnth",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-17T23:44:22.534Z"
@@ -434,7 +434,7 @@
   "i-T6bD4w7:chronicle": {
     "imageId": "i-T6bD4w7",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-17T23:46:47.316Z"
@@ -442,7 +442,7 @@
   "i-TLDkd5q:chronicle": {
     "imageId": "i-TLDkd5q",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-17T23:47:34.534Z"
@@ -450,7 +450,7 @@
   "i-mdz2QGr:chronicle": {
     "imageId": "i-mdz2QGr",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-17T23:48:22.261Z"
@@ -458,7 +458,7 @@
   "i-pNSX6cp:chronicle": {
     "imageId": "i-pNSX6cp",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-18T00:00:20.976Z"
@@ -466,7 +466,7 @@
   "i-G7csptc:chronicle": {
     "imageId": "i-G7csptc",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-18T00:00:58.456Z"
@@ -474,7 +474,7 @@
   "i-cKFv3th:chronicle": {
     "imageId": "i-cKFv3th",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-18T00:01:06.427Z"
@@ -482,7 +482,7 @@
   "i-2Z3ZvJS:legend": {
     "imageId": "i-2Z3ZvJS",
     "series": "legend",
-    "editionLimit": 12,
+    "editionLimit": 25,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-18T00:07:25.487Z"
@@ -490,7 +490,7 @@
   "i-2Z3ZvJS:chronicle": {
     "imageId": "i-2Z3ZvJS",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-18T00:07:29.948Z"
@@ -498,7 +498,7 @@
   "i-spjF4Zd:chronicle": {
     "imageId": "i-spjF4Zd",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-18T00:11:00.432Z"
@@ -506,7 +506,7 @@
   "i-RdTR7GD:chronicle": {
     "imageId": "i-RdTR7GD",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-18T00:14:33.015Z"
@@ -514,7 +514,7 @@
   "i-J3dh2p4:chronicle": {
     "imageId": "i-J3dh2p4",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-18T00:17:22.423Z"
@@ -522,7 +522,7 @@
   "i-5fm7Hhr:chronicle": {
     "imageId": "i-5fm7Hhr",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-18T00:17:45.925Z"
@@ -530,7 +530,7 @@
   "i-gxMVNh3:chronicle": {
     "imageId": "i-gxMVNh3",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T04:45:53.564Z"
@@ -538,7 +538,7 @@
   "i-VVwZ7gM:chronicle": {
     "imageId": "i-VVwZ7gM",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T04:46:02.350Z"
@@ -546,7 +546,7 @@
   "i-5rq7gcD:chronicle": {
     "imageId": "i-5rq7gcD",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T04:47:07.497Z"
@@ -554,7 +554,7 @@
   "i-k4b6c5b:legend": {
     "imageId": "i-k4b6c5b",
     "series": "legend",
-    "editionLimit": 12,
+    "editionLimit": 25,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T04:48:02.839Z"
@@ -562,7 +562,7 @@
   "i-RsLmsLZ:chronicle": {
     "imageId": "i-RsLmsLZ",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T05:55:09.315Z"
@@ -570,7 +570,7 @@
   "i-LCspRF4:chronicle": {
     "imageId": "i-LCspRF4",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T05:55:18.998Z"
@@ -578,7 +578,7 @@
   "i-4zxZQQ2:chronicle": {
     "imageId": "i-4zxZQQ2",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T05:55:33.457Z"
@@ -586,7 +586,7 @@
   "i-kQfftQ2:chronicle": {
     "imageId": "i-kQfftQ2",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T05:55:55.687Z"
@@ -594,7 +594,7 @@
   "i-7Mzzbvp:chronicle": {
     "imageId": "i-7Mzzbvp",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T05:56:45.596Z"
@@ -602,7 +602,7 @@
   "i-dsqgfVj:chronicle": {
     "imageId": "i-dsqgfVj",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T05:57:15.192Z"
@@ -610,7 +610,7 @@
   "i-rhvQkwh:chronicle": {
     "imageId": "i-rhvQkwh",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T05:58:15.309Z"
@@ -618,7 +618,7 @@
   "i-zHvS5jz:chronicle": {
     "imageId": "i-zHvS5jz",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T05:58:20.746Z"
@@ -626,7 +626,7 @@
   "i-WxQjxQS:chronicle": {
     "imageId": "i-WxQjxQS",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T05:59:45.770Z"
@@ -634,7 +634,7 @@
   "i-hrmrhT3:chronicle": {
     "imageId": "i-hrmrhT3",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T05:59:53.136Z"
@@ -642,7 +642,7 @@
   "i-Rx5gLJz:chronicle": {
     "imageId": "i-Rx5gLJz",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:00:03.525Z"
@@ -650,7 +650,7 @@
   "i-wfqSGcV:chronicle": {
     "imageId": "i-wfqSGcV",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:00:11.892Z"
@@ -658,7 +658,7 @@
   "i-CzWxpvV:chronicle": {
     "imageId": "i-CzWxpvV",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:00:39.981Z"
@@ -666,7 +666,7 @@
   "i-sTnckb6:chronicle": {
     "imageId": "i-sTnckb6",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:00:46.040Z"
@@ -674,7 +674,7 @@
   "i-mpfG8XF:chronicle": {
     "imageId": "i-mpfG8XF",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:01:04.875Z"
@@ -682,7 +682,7 @@
   "i-pXs6Fhx:chronicle": {
     "imageId": "i-pXs6Fhx",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:01:17.943Z"
@@ -690,7 +690,7 @@
   "i-T7TFJX2:chronicle": {
     "imageId": "i-T7TFJX2",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:01:27.772Z"
@@ -698,7 +698,7 @@
   "i-KVxkXrV:chronicle": {
     "imageId": "i-KVxkXrV",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:01:34.753Z"
@@ -706,7 +706,7 @@
   "i-6Ffpw9t:chronicle": {
     "imageId": "i-6Ffpw9t",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:01:52.928Z"
@@ -714,7 +714,7 @@
   "i-Dw6Z8ff:chronicle": {
     "imageId": "i-Dw6Z8ff",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:02:00.172Z"
@@ -722,7 +722,7 @@
   "i-LLdZzQW:chronicle": {
     "imageId": "i-LLdZzQW",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:02:16.514Z"
@@ -730,7 +730,7 @@
   "i-ZRFr8hd:chronicle": {
     "imageId": "i-ZRFr8hd",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:02:31.305Z"
@@ -738,7 +738,7 @@
   "i-P8B2zJj:chronicle": {
     "imageId": "i-P8B2zJj",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:02:38.048Z"
@@ -746,7 +746,7 @@
   "i-gF8j3Jz:chronicle": {
     "imageId": "i-gF8j3Jz",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:02:47.993Z"
@@ -754,7 +754,7 @@
   "i-8BbMZjs:chronicle": {
     "imageId": "i-8BbMZjs",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:03:01.073Z"
@@ -762,7 +762,7 @@
   "i-xmJ87ZT:chronicle": {
     "imageId": "i-xmJ87ZT",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:03:04.680Z"
@@ -770,7 +770,7 @@
   "i-DwVBJb3:chronicle": {
     "imageId": "i-DwVBJb3",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:03:08.311Z"
@@ -778,7 +778,7 @@
   "i-FVHm8VJ:chronicle": {
     "imageId": "i-FVHm8VJ",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:03:43.645Z"
@@ -786,7 +786,7 @@
   "i-ZKCtdPV:chronicle": {
     "imageId": "i-ZKCtdPV",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:05:30.762Z"
@@ -794,7 +794,7 @@
   "i-w3JBvXs:chronicle": {
     "imageId": "i-w3JBvXs",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:05:59.134Z"
@@ -802,7 +802,7 @@
   "i-bN9mRH6:chronicle": {
     "imageId": "i-bN9mRH6",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:07:43.776Z"
@@ -810,7 +810,7 @@
   "i-5BtMrfM:chronicle": {
     "imageId": "i-5BtMrfM",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:07:56.814Z"
@@ -818,7 +818,7 @@
   "i-XsdNV9s:chronicle": {
     "imageId": "i-XsdNV9s",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:08:05.991Z"
@@ -826,7 +826,7 @@
   "i-hrghzzx:chronicle": {
     "imageId": "i-hrghzzx",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:08:43.319Z"
@@ -834,7 +834,7 @@
   "i-6dHrd9m:chronicle": {
     "imageId": "i-6dHrd9m",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:08:50.728Z"
@@ -842,7 +842,7 @@
   "i-dnxxDXH:chronicle": {
     "imageId": "i-dnxxDXH",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:09:53.049Z"
@@ -850,7 +850,7 @@
   "i-PDVZhtZ:chronicle": {
     "imageId": "i-PDVZhtZ",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:09:57.242Z"
@@ -858,7 +858,7 @@
   "i-tWx3N8c:chronicle": {
     "imageId": "i-tWx3N8c",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:10:05.291Z"
@@ -866,7 +866,7 @@
   "i-hKcrxwf:chronicle": {
     "imageId": "i-hKcrxwf",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:10:49.570Z"
@@ -874,7 +874,7 @@
   "i-xMk6ZJ9:chronicle": {
     "imageId": "i-xMk6ZJ9",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:11:11.349Z"
@@ -882,7 +882,7 @@
   "i-NzMs3RH:chronicle": {
     "imageId": "i-NzMs3RH",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:13:25.242Z"
@@ -890,7 +890,7 @@
   "i-jXC3shm:chronicle": {
     "imageId": "i-jXC3shm",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:13:42.297Z"
@@ -898,7 +898,7 @@
   "i-2s2LtQp:chronicle": {
     "imageId": "i-2s2LtQp",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:14:58.146Z"
@@ -906,7 +906,7 @@
   "i-4G9GB3b:chronicle": {
     "imageId": "i-4G9GB3b",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:15:13.754Z"
@@ -914,7 +914,7 @@
   "i-LjBc6N6:chronicle": {
     "imageId": "i-LjBc6N6",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:15:27.473Z"
@@ -922,7 +922,7 @@
   "i-kk6DvMJ:chronicle": {
     "imageId": "i-kk6DvMJ",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:15:42.344Z"
@@ -930,7 +930,7 @@
   "i-CmHHjwV:chronicle": {
     "imageId": "i-CmHHjwV",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:15:46.071Z"
@@ -938,7 +938,7 @@
   "i-drTwKMw:chronicle": {
     "imageId": "i-drTwKMw",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:16:01.157Z"
@@ -946,7 +946,7 @@
   "i-3V4rCN8:chronicle": {
     "imageId": "i-3V4rCN8",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:16:27.967Z"
@@ -954,7 +954,7 @@
   "i-msZxHgR:chronicle": {
     "imageId": "i-msZxHgR",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:16:39.112Z"
@@ -962,7 +962,7 @@
   "i-mn8RKLL:chronicle": {
     "imageId": "i-mn8RKLL",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:16:45.577Z"
@@ -970,7 +970,7 @@
   "i-7PMm6sZ:chronicle": {
     "imageId": "i-7PMm6sZ",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:17:02.910Z"
@@ -978,7 +978,7 @@
   "i-9frbWfJ:chronicle": {
     "imageId": "i-9frbWfJ",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:17:06.984Z"
@@ -986,7 +986,7 @@
   "i-3vxbnpZ:chronicle": {
     "imageId": "i-3vxbnpZ",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:17:13.080Z"
@@ -994,7 +994,7 @@
   "i-vP7bLLc:chronicle": {
     "imageId": "i-vP7bLLc",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:17:22.942Z"
@@ -1002,7 +1002,7 @@
   "i-G9kSt8Q:chronicle": {
     "imageId": "i-G9kSt8Q",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:17:38.888Z"
@@ -1010,7 +1010,7 @@
   "i-ps4qwgF:chronicle": {
     "imageId": "i-ps4qwgF",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:17:56.311Z"
@@ -1018,7 +1018,7 @@
   "i-6QFpvwm:chronicle": {
     "imageId": "i-6QFpvwm",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:18:48.025Z"
@@ -1026,7 +1026,7 @@
   "i-h6SnLK4:chronicle": {
     "imageId": "i-h6SnLK4",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:19:01.337Z"
@@ -1034,7 +1034,7 @@
   "i-JcHKH5f:chronicle": {
     "imageId": "i-JcHKH5f",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:19:09.938Z"
@@ -1042,7 +1042,7 @@
   "i-cRmVc3S:chronicle": {
     "imageId": "i-cRmVc3S",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:19:21.078Z"
@@ -1050,7 +1050,7 @@
   "i-WMs24Db:chronicle": {
     "imageId": "i-WMs24Db",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:20:15.904Z"
@@ -1058,7 +1058,7 @@
   "i-r4TQwkx:chronicle": {
     "imageId": "i-r4TQwkx",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:20:25.850Z"
@@ -1066,7 +1066,7 @@
   "i-DfmB2Hv:chronicle": {
     "imageId": "i-DfmB2Hv",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:20:56.960Z"
@@ -1074,7 +1074,7 @@
   "i-r3Kq9B4:chronicle": {
     "imageId": "i-r3Kq9B4",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:21:27.649Z"
@@ -1082,7 +1082,7 @@
   "i-Fx7pPGJ:chronicle": {
     "imageId": "i-Fx7pPGJ",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:21:31.264Z"
@@ -1090,7 +1090,7 @@
   "i-66qXms3:chronicle": {
     "imageId": "i-66qXms3",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:21:58.056Z"
@@ -1098,7 +1098,7 @@
   "i-cFhZXJc:chronicle": {
     "imageId": "i-cFhZXJc",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:26:49.436Z"
@@ -1106,7 +1106,7 @@
   "i-7dCKHjg:chronicle": {
     "imageId": "i-7dCKHjg",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:26:57.040Z"
@@ -1114,7 +1114,7 @@
   "i-Sc9hZGs:chronicle": {
     "imageId": "i-Sc9hZGs",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:34:50.106Z"
@@ -1122,7 +1122,7 @@
   "i-NdQnj6P:chronicle": {
     "imageId": "i-NdQnj6P",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:35:05.100Z"
@@ -1130,7 +1130,7 @@
   "i-JkFT62C:chronicle": {
     "imageId": "i-JkFT62C",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:35:15.838Z"
@@ -1138,7 +1138,7 @@
   "i-Nn7scqm:chronicle": {
     "imageId": "i-Nn7scqm",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:36:36.933Z"
@@ -1146,7 +1146,7 @@
   "i-9BhX2Lj:chronicle": {
     "imageId": "i-9BhX2Lj",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:37:20.639Z"
@@ -1154,7 +1154,7 @@
   "i-4XLSsnC:chronicle": {
     "imageId": "i-4XLSsnC",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:37:35.512Z"
@@ -1162,7 +1162,7 @@
   "i-MMmDhV2:chronicle": {
     "imageId": "i-MMmDhV2",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:37:45.073Z"
@@ -1170,7 +1170,7 @@
   "i-5VZVzTR:chronicle": {
     "imageId": "i-5VZVzTR",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:39:54.236Z"
@@ -1178,7 +1178,7 @@
   "i-BGmFfF5:chronicle": {
     "imageId": "i-BGmFfF5",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:43:16.365Z"
@@ -1186,7 +1186,7 @@
   "i-4bn8bBz:chronicle": {
     "imageId": "i-4bn8bBz",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:43:27.582Z"
@@ -1194,7 +1194,7 @@
   "i-v4vRSb8:chronicle": {
     "imageId": "i-v4vRSb8",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:44:07.848Z"
@@ -1202,7 +1202,7 @@
   "i-RT474Nz:chronicle": {
     "imageId": "i-RT474Nz",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:44:11.348Z"
@@ -1210,7 +1210,7 @@
   "i-f4MSxpP:chronicle": {
     "imageId": "i-f4MSxpP",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:46:34.635Z"
@@ -1218,7 +1218,7 @@
   "i-5TGTZ9P:chronicle": {
     "imageId": "i-5TGTZ9P",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:48:02.365Z"
@@ -1226,7 +1226,7 @@
   "i-7mFGRtw:chronicle": {
     "imageId": "i-7mFGRtw",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:48:12.663Z"
@@ -1234,7 +1234,7 @@
   "i-xqZwcZh:chronicle": {
     "imageId": "i-xqZwcZh",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:48:35.959Z"
@@ -1242,7 +1242,7 @@
   "i-QB4jLsH:chronicle": {
     "imageId": "i-QB4jLsH",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:48:42.117Z"
@@ -1250,7 +1250,7 @@
   "i-5HpSkgR:chronicle": {
     "imageId": "i-5HpSkgR",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:49:22.664Z"
@@ -1258,7 +1258,7 @@
   "i-5FX3W9r:chronicle": {
     "imageId": "i-5FX3W9r",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:49:36.052Z"
@@ -1266,7 +1266,7 @@
   "i-7GcQw6R:chronicle": {
     "imageId": "i-7GcQw6R",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:49:44.991Z"
@@ -1274,7 +1274,7 @@
   "i-PM4d3g3:chronicle": {
     "imageId": "i-PM4d3g3",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:49:50.864Z"
@@ -1282,7 +1282,7 @@
   "i-gj4hHmL:chronicle": {
     "imageId": "i-gj4hHmL",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:49:57.733Z"
@@ -1290,7 +1290,7 @@
   "i-MF3xPCZ:chronicle": {
     "imageId": "i-MF3xPCZ",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:50:09.912Z"
@@ -1298,7 +1298,7 @@
   "i-NKdPDCg:chronicle": {
     "imageId": "i-NKdPDCg",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:50:15.299Z"
@@ -1306,7 +1306,7 @@
   "i-jcLJT4J:chronicle": {
     "imageId": "i-jcLJT4J",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:50:20.812Z"
@@ -1314,7 +1314,7 @@
   "i-M2WdKTL:chronicle": {
     "imageId": "i-M2WdKTL",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:50:29.361Z"
@@ -1322,7 +1322,7 @@
   "i-vFrxmXD:chronicle": {
     "imageId": "i-vFrxmXD",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:50:33.420Z"
@@ -1330,7 +1330,7 @@
   "i-ML9dbMj:chronicle": {
     "imageId": "i-ML9dbMj",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:51:04.324Z"
@@ -1338,7 +1338,7 @@
   "i-ZPmj5Wk:chronicle": {
     "imageId": "i-ZPmj5Wk",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:51:27.593Z"
@@ -1346,7 +1346,7 @@
   "i-b3vCXwR:chronicle": {
     "imageId": "i-b3vCXwR",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:51:30.308Z"
@@ -1354,7 +1354,7 @@
   "i-dNgct6r:chronicle": {
     "imageId": "i-dNgct6r",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:51:32.903Z"
@@ -1362,7 +1362,7 @@
   "i-7Jzf69b:chronicle": {
     "imageId": "i-7Jzf69b",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:51:47.208Z"
@@ -1370,7 +1370,7 @@
   "i-k6jGzSq:chronicle": {
     "imageId": "i-k6jGzSq",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:51:49.764Z"
@@ -1378,7 +1378,7 @@
   "i-GG7mgqM:chronicle": {
     "imageId": "i-GG7mgqM",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:51:52.749Z"
@@ -1386,7 +1386,7 @@
   "i-vP376vx:chronicle": {
     "imageId": "i-vP376vx",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:51:56.018Z"
@@ -1394,7 +1394,7 @@
   "i-8CfzGMc:chronicle": {
     "imageId": "i-8CfzGMc",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:52:00.167Z"
@@ -1402,7 +1402,7 @@
   "i-sBDTm7k:chronicle": {
     "imageId": "i-sBDTm7k",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:53:17.793Z"
@@ -1410,7 +1410,7 @@
   "i-TtXPkVK:chronicle": {
     "imageId": "i-TtXPkVK",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:53:42.859Z"
@@ -1418,7 +1418,7 @@
   "i-Cg4ZB72:chronicle": {
     "imageId": "i-Cg4ZB72",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:53:45.865Z"
@@ -1426,7 +1426,7 @@
   "i-3ppJNtd:chronicle": {
     "imageId": "i-3ppJNtd",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:54:29.202Z"
@@ -1434,7 +1434,7 @@
   "i-MnX4pxX:chronicle": {
     "imageId": "i-MnX4pxX",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:54:31.733Z"
@@ -1442,7 +1442,7 @@
   "i-xr5chJG:chronicle": {
     "imageId": "i-xr5chJG",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:54:48.161Z"
@@ -1450,7 +1450,7 @@
   "i-vTp98Z6:chronicle": {
     "imageId": "i-vTp98Z6",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:57:16.852Z"
@@ -1458,7 +1458,7 @@
   "i-7V4VjNm:chronicle": {
     "imageId": "i-7V4VjNm",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:57:23.108Z"
@@ -1466,7 +1466,7 @@
   "i-gs6X2P7:chronicle": {
     "imageId": "i-gs6X2P7",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:57:31.531Z"
@@ -1474,7 +1474,7 @@
   "i-7Kwv8vc:chronicle": {
     "imageId": "i-7Kwv8vc",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:57:58.066Z"
@@ -1482,7 +1482,7 @@
   "i-HZK96qf:chronicle": {
     "imageId": "i-HZK96qf",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T06:58:18.150Z"
@@ -1490,7 +1490,7 @@
   "i-9LC3ZrM:chronicle": {
     "imageId": "i-9LC3ZrM",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:01:25.817Z"
@@ -1498,7 +1498,7 @@
   "i-V9Jx8D8:chronicle": {
     "imageId": "i-V9Jx8D8",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:01:35.088Z"
@@ -1506,7 +1506,7 @@
   "i-6wMDxdF:chronicle": {
     "imageId": "i-6wMDxdF",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:02:52.552Z"
@@ -1514,7 +1514,7 @@
   "i-Q2cHRkn:chronicle": {
     "imageId": "i-Q2cHRkn",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:03:04.191Z"
@@ -1522,7 +1522,7 @@
   "i-S9PzB6d:chronicle": {
     "imageId": "i-S9PzB6d",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:03:08.662Z"
@@ -1530,7 +1530,7 @@
   "i-bhXQ8Hx:chronicle": {
     "imageId": "i-bhXQ8Hx",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:03:23.564Z"
@@ -1538,7 +1538,7 @@
   "i-FNSvKZz:chronicle": {
     "imageId": "i-FNSvKZz",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:03:34.040Z"
@@ -1546,7 +1546,7 @@
   "i-LBrd53F:chronicle": {
     "imageId": "i-LBrd53F",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:05:10.388Z"
@@ -1554,7 +1554,7 @@
   "i-Zp9288b:chronicle": {
     "imageId": "i-Zp9288b",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:05:22.073Z"
@@ -1562,7 +1562,7 @@
   "i-cJLTQfD:chronicle": {
     "imageId": "i-cJLTQfD",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:05:25.486Z"
@@ -1570,7 +1570,7 @@
   "i-FVZTmxz:chronicle": {
     "imageId": "i-FVZTmxz",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:06:45.161Z"
@@ -1578,7 +1578,7 @@
   "i-F6KMqpf:chronicle": {
     "imageId": "i-F6KMqpf",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:06:56.395Z"
@@ -1586,7 +1586,7 @@
   "i-FkPcsBV:chronicle": {
     "imageId": "i-FkPcsBV",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:08:15.499Z"
@@ -1594,7 +1594,7 @@
   "i-C5Zh8Ld:chronicle": {
     "imageId": "i-C5Zh8Ld",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:08:32.344Z"
@@ -1602,7 +1602,7 @@
   "i-bJ9LJtg:chronicle": {
     "imageId": "i-bJ9LJtg",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:08:46.858Z"
@@ -1610,7 +1610,7 @@
   "i-zN6f785:chronicle": {
     "imageId": "i-zN6f785",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:09:23.086Z"
@@ -1618,7 +1618,7 @@
   "i-Txh4c8k:chronicle": {
     "imageId": "i-Txh4c8k",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:11:52.048Z"
@@ -1626,7 +1626,7 @@
   "i-kxnK2MM:chronicle": {
     "imageId": "i-kxnK2MM",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:12:00.144Z"
@@ -1634,7 +1634,7 @@
   "i-kp5NHNw:chronicle": {
     "imageId": "i-kp5NHNw",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:12:03.619Z"
@@ -1642,7 +1642,7 @@
   "i-HfQ5NVR:chronicle": {
     "imageId": "i-HfQ5NVR",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:12:07.384Z"
@@ -1650,7 +1650,7 @@
   "i-qMQf7b6:chronicle": {
     "imageId": "i-qMQf7b6",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:12:10.317Z"
@@ -1658,7 +1658,7 @@
   "i-GSk4JS8:chronicle": {
     "imageId": "i-GSk4JS8",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:12:14.824Z"
@@ -1666,7 +1666,7 @@
   "i-k5zmxS5:chronicle": {
     "imageId": "i-k5zmxS5",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:12:18.620Z"
@@ -1674,7 +1674,7 @@
   "i-FXNxqTK:chronicle": {
     "imageId": "i-FXNxqTK",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:12:21.663Z"
@@ -1682,7 +1682,7 @@
   "i-dZKzBBQ:chronicle": {
     "imageId": "i-dZKzBBQ",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:12:30.859Z"
@@ -1690,7 +1690,7 @@
   "i-cGDk6Nc:chronicle": {
     "imageId": "i-cGDk6Nc",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:12:36.942Z"
@@ -1698,7 +1698,7 @@
   "i-qwFCjLp:chronicle": {
     "imageId": "i-qwFCjLp",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:12:40.318Z"
@@ -1706,7 +1706,7 @@
   "i-SwhsL2h:chronicle": {
     "imageId": "i-SwhsL2h",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:12:47.419Z"
@@ -1714,7 +1714,7 @@
   "i-W73hxx4:chronicle": {
     "imageId": "i-W73hxx4",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:12:50.238Z"
@@ -1722,7 +1722,7 @@
   "i-FnZ68h3:chronicle": {
     "imageId": "i-FnZ68h3",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:12:53.051Z"
@@ -1730,7 +1730,7 @@
   "i-zTWQkqD:chronicle": {
     "imageId": "i-zTWQkqD",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:12:56.149Z"
@@ -1738,7 +1738,7 @@
   "i-dLDF4Q6:chronicle": {
     "imageId": "i-dLDF4Q6",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:12:58.909Z"
@@ -1746,7 +1746,7 @@
   "i-JvnhWXr:chronicle": {
     "imageId": "i-JvnhWXr",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:13:02.023Z"
@@ -1754,7 +1754,7 @@
   "i-rqk5Kdk:chronicle": {
     "imageId": "i-rqk5Kdk",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:13:05.291Z"
@@ -1762,7 +1762,7 @@
   "i-DLnxMgZ:chronicle": {
     "imageId": "i-DLnxMgZ",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:14:04.730Z"
@@ -1770,7 +1770,7 @@
   "i-KL9t3Xg:chronicle": {
     "imageId": "i-KL9t3Xg",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:14:18.134Z"
@@ -1778,7 +1778,7 @@
   "i-HjTFKJ7:chronicle": {
     "imageId": "i-HjTFKJ7",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:14:32.353Z"
@@ -1786,7 +1786,7 @@
   "i-kp6HLCx:chronicle": {
     "imageId": "i-kp6HLCx",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:14:35.517Z"
@@ -1794,7 +1794,7 @@
   "i-KgKZZxg:chronicle": {
     "imageId": "i-KgKZZxg",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:14:42.615Z"
@@ -1802,7 +1802,7 @@
   "i-wS6x5S5:chronicle": {
     "imageId": "i-wS6x5S5",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:14:52.198Z"
@@ -1810,7 +1810,7 @@
   "i-DQHK8FK:chronicle": {
     "imageId": "i-DQHK8FK",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:14:58.760Z"
@@ -1818,7 +1818,7 @@
   "i-4s2pK5Z:chronicle": {
     "imageId": "i-4s2pK5Z",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:15:02.571Z"
@@ -1826,7 +1826,7 @@
   "i-LrfWmg7:chronicle": {
     "imageId": "i-LrfWmg7",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:15:13.753Z"
@@ -1834,7 +1834,7 @@
   "i-xfqTp8K:chronicle": {
     "imageId": "i-xfqTp8K",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:15:17.497Z"
@@ -1842,7 +1842,7 @@
   "i-bLHTNNg:chronicle": {
     "imageId": "i-bLHTNNg",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:15:22.948Z"
@@ -1850,7 +1850,7 @@
   "i-dc76hpJ:chronicle": {
     "imageId": "i-dc76hpJ",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:15:43.581Z"
@@ -1858,7 +1858,7 @@
   "i-MpBPrZK:chronicle": {
     "imageId": "i-MpBPrZK",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:15:47.086Z"
@@ -1866,7 +1866,7 @@
   "i-ffzG95X:chronicle": {
     "imageId": "i-ffzG95X",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:15:50.467Z"
@@ -1874,7 +1874,7 @@
   "i-Z7G9xfp:chronicle": {
     "imageId": "i-Z7G9xfp",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:16:16.491Z"
@@ -1882,7 +1882,7 @@
   "i-wpFH7zn:chronicle": {
     "imageId": "i-wpFH7zn",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:16:20.438Z"
@@ -1890,7 +1890,7 @@
   "i-t79qS8x:chronicle": {
     "imageId": "i-t79qS8x",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:16:34.319Z"
@@ -1898,7 +1898,7 @@
   "i-hrx5g4S:chronicle": {
     "imageId": "i-hrx5g4S",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:16:38.625Z"
@@ -1906,7 +1906,7 @@
   "i-x2xNvsM:chronicle": {
     "imageId": "i-x2xNvsM",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:16:52.942Z"
@@ -1914,7 +1914,7 @@
   "i-53b8wQ2:chronicle": {
     "imageId": "i-53b8wQ2",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:17:03.022Z"
@@ -1922,7 +1922,7 @@
   "i-qpF8JQN:chronicle": {
     "imageId": "i-qpF8JQN",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:17:30.016Z"
@@ -1930,7 +1930,7 @@
   "i-6mQrB7h:chronicle": {
     "imageId": "i-6mQrB7h",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:17:33.453Z"
@@ -1938,7 +1938,7 @@
   "i-RKgJWdw:chronicle": {
     "imageId": "i-RKgJWdw",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:18:01.164Z"
@@ -1946,7 +1946,7 @@
   "i-tZhtz8w:chronicle": {
     "imageId": "i-tZhtz8w",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:18:19.854Z"
@@ -1954,7 +1954,7 @@
   "i-D2fQjDQ:chronicle": {
     "imageId": "i-D2fQjDQ",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:18:23.844Z"
@@ -1962,7 +1962,7 @@
   "i-sz7RwkR:chronicle": {
     "imageId": "i-sz7RwkR",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:18:45.804Z"
@@ -1970,7 +1970,7 @@
   "i-L29gZ2Q:chronicle": {
     "imageId": "i-L29gZ2Q",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:19:00.205Z"
@@ -1978,7 +1978,7 @@
   "i-mBMhRpJ:chronicle": {
     "imageId": "i-mBMhRpJ",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:19:20.081Z"
@@ -1986,7 +1986,7 @@
   "i-CdpCkV4:chronicle": {
     "imageId": "i-CdpCkV4",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:19:23.253Z"
@@ -1994,7 +1994,7 @@
   "i-v3xhPgB:chronicle": {
     "imageId": "i-v3xhPgB",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:19:26.780Z"
@@ -2002,7 +2002,7 @@
   "i-5fQjwcv:chronicle": {
     "imageId": "i-5fQjwcv",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:19:37.280Z"
@@ -2010,7 +2010,7 @@
   "i-8rx6BzZ:chronicle": {
     "imageId": "i-8rx6BzZ",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:19:56.237Z"
@@ -2018,7 +2018,7 @@
   "i-JFt3T2W:chronicle": {
     "imageId": "i-JFt3T2W",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:20:05.996Z"
@@ -2026,7 +2026,7 @@
   "i-N3S92fb:chronicle": {
     "imageId": "i-N3S92fb",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:22:32.786Z"
@@ -2034,7 +2034,7 @@
   "i-Gqw3s5s:chronicle": {
     "imageId": "i-Gqw3s5s",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:22:36.776Z"
@@ -2042,7 +2042,7 @@
   "i-xMjhQVd:chronicle": {
     "imageId": "i-xMjhQVd",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:22:40.796Z"
@@ -2050,7 +2050,7 @@
   "i-RLZFsxp:chronicle": {
     "imageId": "i-RLZFsxp",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:22:44.104Z"
@@ -2058,7 +2058,7 @@
   "i-RLZFsxp:legend": {
     "imageId": "i-RLZFsxp",
     "series": "legend",
-    "editionLimit": 12,
+    "editionLimit": 25,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:22:48.506Z"
@@ -2066,7 +2066,7 @@
   "i-45kXhng:chronicle": {
     "imageId": "i-45kXhng",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:23:00.673Z"
@@ -2074,7 +2074,7 @@
   "i-qJLHBWD:chronicle": {
     "imageId": "i-qJLHBWD",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:23:58.461Z"
@@ -2082,7 +2082,7 @@
   "i-Dh8nT9S:chronicle": {
     "imageId": "i-Dh8nT9S",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:24:02.318Z"
@@ -2090,7 +2090,7 @@
   "i-vnbxvkh:chronicle": {
     "imageId": "i-vnbxvkh",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:24:31.455Z"
@@ -2098,7 +2098,7 @@
   "i-FKmvVCn:chronicle": {
     "imageId": "i-FKmvVCn",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:24:39.794Z"
@@ -2106,7 +2106,7 @@
   "i-6rCCMf9:chronicle": {
     "imageId": "i-6rCCMf9",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:24:52.236Z"
@@ -2114,7 +2114,7 @@
   "i-7SDqg5R:chronicle": {
     "imageId": "i-7SDqg5R",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:25:18.216Z"
@@ -2122,7 +2122,7 @@
   "i-6xL8p7Z:chronicle": {
     "imageId": "i-6xL8p7Z",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:25:34.884Z"
@@ -2130,7 +2130,7 @@
   "i-m3DqTjX:chronicle": {
     "imageId": "i-m3DqTjX",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:29:38.929Z"
@@ -2138,7 +2138,7 @@
   "i-Xm6WSP3:chronicle": {
     "imageId": "i-Xm6WSP3",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:29:43.451Z"
@@ -2146,7 +2146,7 @@
   "i-smMGtDZ:chronicle": {
     "imageId": "i-smMGtDZ",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:29:54.653Z"
@@ -2154,7 +2154,7 @@
   "i-sh8X4Vg:chronicle": {
     "imageId": "i-sh8X4Vg",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:30:01.518Z"
@@ -2162,7 +2162,7 @@
   "i-RRB2hNj:chronicle": {
     "imageId": "i-RRB2hNj",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:30:05.345Z"
@@ -2170,7 +2170,7 @@
   "i-mqQxwNn:chronicle": {
     "imageId": "i-mqQxwNn",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:30:16.069Z"
@@ -2178,7 +2178,7 @@
   "i-6wdPMth:chronicle": {
     "imageId": "i-6wdPMth",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:30:27.628Z"
@@ -2186,7 +2186,7 @@
   "i-pmdsNRZ:chronicle": {
     "imageId": "i-pmdsNRZ",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:30:30.605Z"
@@ -2194,7 +2194,7 @@
   "i-PvHHPSq:chronicle": {
     "imageId": "i-PvHHPSq",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:30:34.069Z"
@@ -2202,7 +2202,7 @@
   "i-J5qRTMq:chronicle": {
     "imageId": "i-J5qRTMq",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:30:40.068Z"
@@ -2210,7 +2210,7 @@
   "i-dFdV442:chronicle": {
     "imageId": "i-dFdV442",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:30:46.814Z"
@@ -2218,7 +2218,7 @@
   "i-FqBfMJG:chronicle": {
     "imageId": "i-FqBfMJG",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:30:50.855Z"
@@ -2226,7 +2226,7 @@
   "i-G7vCDcw:chronicle": {
     "imageId": "i-G7vCDcw",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:30:53.907Z"
@@ -2234,7 +2234,7 @@
   "i-Pd3vWBk:chronicle": {
     "imageId": "i-Pd3vWBk",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:30:56.930Z"
@@ -2242,7 +2242,7 @@
   "i-nnV6qtS:chronicle": {
     "imageId": "i-nnV6qtS",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:31:02.203Z"
@@ -2250,7 +2250,7 @@
   "i-phBP9Mt:chronicle": {
     "imageId": "i-phBP9Mt",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-20T07:31:09.394Z"
@@ -2258,7 +2258,7 @@
   "i-sTCJ5dz:chronicle": {
     "imageId": "i-sTCJ5dz",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:05:29.510Z"
@@ -2266,7 +2266,7 @@
   "i-8hwfnGn:chronicle": {
     "imageId": "i-8hwfnGn",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:08:05.310Z"
@@ -2274,7 +2274,7 @@
   "i-8XNRjZF:chronicle": {
     "imageId": "i-8XNRjZF",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:08:42.371Z"
@@ -2282,7 +2282,7 @@
   "i-PVbJdpj:chronicle": {
     "imageId": "i-PVbJdpj",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:08:49.054Z"
@@ -2290,7 +2290,7 @@
   "i-74rc8wb:chronicle": {
     "imageId": "i-74rc8wb",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:08:54.715Z"
@@ -2298,7 +2298,7 @@
   "i-xZH95Bj:chronicle": {
     "imageId": "i-xZH95Bj",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:09:03.055Z"
@@ -2306,7 +2306,7 @@
   "i-Bdbf3L9:chronicle": {
     "imageId": "i-Bdbf3L9",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:09:06.393Z"
@@ -2314,7 +2314,7 @@
   "i-98c9sG9:chronicle": {
     "imageId": "i-98c9sG9",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:09:09.949Z"
@@ -2322,7 +2322,7 @@
   "i-fsmXzLW:chronicle": {
     "imageId": "i-fsmXzLW",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:09:52.756Z"
@@ -2330,7 +2330,7 @@
   "i-fszvgmq:chronicle": {
     "imageId": "i-fszvgmq",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:09:59.543Z"
@@ -2338,7 +2338,7 @@
   "i-d9wMKtJ:chronicle": {
     "imageId": "i-d9wMKtJ",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:10:07.734Z"
@@ -2346,7 +2346,7 @@
   "i-QkG3vmv:chronicle": {
     "imageId": "i-QkG3vmv",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:10:12.568Z"
@@ -2354,7 +2354,7 @@
   "i-3R8rc7C:chronicle": {
     "imageId": "i-3R8rc7C",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:10:15.821Z"
@@ -2362,7 +2362,7 @@
   "i-3R8rc7C:legend": {
     "imageId": "i-3R8rc7C",
     "series": "legend",
-    "editionLimit": 12,
+    "editionLimit": 25,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:10:16.413Z"
@@ -2370,7 +2370,7 @@
   "i-VX7fW9d:chronicle": {
     "imageId": "i-VX7fW9d",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:10:32.821Z"
@@ -2378,7 +2378,7 @@
   "i-DRBBHkV:chronicle": {
     "imageId": "i-DRBBHkV",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:10:35.814Z"
@@ -2386,7 +2386,7 @@
   "i-JxKNknz:chronicle": {
     "imageId": "i-JxKNknz",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:10:46.627Z"
@@ -2394,7 +2394,7 @@
   "i-dkBvtw9:chronicle": {
     "imageId": "i-dkBvtw9",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:10:53.767Z"
@@ -2402,7 +2402,7 @@
   "i-dkBvtw9:legend": {
     "imageId": "i-dkBvtw9",
     "series": "legend",
-    "editionLimit": 12,
+    "editionLimit": 25,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:10:56.213Z"
@@ -2410,7 +2410,7 @@
   "i-DKjkHL6:chronicle": {
     "imageId": "i-DKjkHL6",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:11:25.081Z"
@@ -2418,7 +2418,7 @@
   "i-BHDHLVB:chronicle": {
     "imageId": "i-BHDHLVB",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:11:48.073Z"
@@ -2426,7 +2426,7 @@
   "i-FTxZTPq:chronicle": {
     "imageId": "i-FTxZTPq",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:11:51.434Z"
@@ -2434,7 +2434,7 @@
   "i-3jzjDGJ:chronicle": {
     "imageId": "i-3jzjDGJ",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:11:55.450Z"
@@ -2442,7 +2442,7 @@
   "i-hR2z9FK:chronicle": {
     "imageId": "i-hR2z9FK",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:11:58.823Z"
@@ -2450,7 +2450,7 @@
   "i-4p3VpcQ:chronicle": {
     "imageId": "i-4p3VpcQ",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:12:12.704Z"
@@ -2458,7 +2458,7 @@
   "i-HzMDDcG:chronicle": {
     "imageId": "i-HzMDDcG",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:12:32.099Z"
@@ -2466,7 +2466,7 @@
   "i-54qW72n:chronicle": {
     "imageId": "i-54qW72n",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:12:39.508Z"
@@ -2474,7 +2474,7 @@
   "i-7wvRTpR:chronicle": {
     "imageId": "i-7wvRTpR",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:12:42.633Z"
@@ -2482,7 +2482,7 @@
   "i-Cm3LPhJ:chronicle": {
     "imageId": "i-Cm3LPhJ",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:12:47.282Z"
@@ -2490,7 +2490,7 @@
   "i-tZLkQzn:chronicle": {
     "imageId": "i-tZLkQzn",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:12:50.338Z"
@@ -2498,7 +2498,7 @@
   "i-7wLkrSR:chronicle": {
     "imageId": "i-7wLkrSR",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:12:56.613Z"
@@ -2506,7 +2506,7 @@
   "i-7VD9zVJ:chronicle": {
     "imageId": "i-7VD9zVJ",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:13:18.208Z"
@@ -2514,7 +2514,7 @@
   "i-Vt563w6:chronicle": {
     "imageId": "i-Vt563w6",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:13:24.572Z"
@@ -2522,7 +2522,7 @@
   "i-RFCHLhg:chronicle": {
     "imageId": "i-RFCHLhg",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:13:36.939Z"
@@ -2530,7 +2530,7 @@
   "i-mTV4SXC:chronicle": {
     "imageId": "i-mTV4SXC",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:13:49.740Z"
@@ -2538,7 +2538,7 @@
   "i-KHbCmS4:chronicle": {
     "imageId": "i-KHbCmS4",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:14:01.245Z"
@@ -2546,7 +2546,7 @@
   "i-HwrRpsv:chronicle": {
     "imageId": "i-HwrRpsv",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:14:28.390Z"
@@ -2554,7 +2554,7 @@
   "i-jtJR9Qz:chronicle": {
     "imageId": "i-jtJR9Qz",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:14:40.568Z"
@@ -2562,7 +2562,7 @@
   "i-32QwpNJ:chronicle": {
     "imageId": "i-32QwpNJ",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:14:43.744Z"
@@ -2570,7 +2570,7 @@
   "i-X99RLdm:chronicle": {
     "imageId": "i-X99RLdm",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:15:23.734Z"
@@ -2578,7 +2578,7 @@
   "i-3dZtNxv:chronicle": {
     "imageId": "i-3dZtNxv",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:15:36.771Z"
@@ -2586,7 +2586,7 @@
   "i-RBTGb7k:chronicle": {
     "imageId": "i-RBTGb7k",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:15:42.797Z"
@@ -2594,7 +2594,7 @@
   "i-8LMkTQg:chronicle": {
     "imageId": "i-8LMkTQg",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:15:49.948Z"
@@ -2602,7 +2602,7 @@
   "i-P2MJv28:chronicle": {
     "imageId": "i-P2MJv28",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:54:51.989Z"
@@ -2610,7 +2610,7 @@
   "i-2xDqgqS:chronicle": {
     "imageId": "i-2xDqgqS",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:54:59.344Z"
@@ -2618,7 +2618,7 @@
   "i-dT6fKnc:chronicle": {
     "imageId": "i-dT6fKnc",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:55:10.842Z"
@@ -2626,7 +2626,7 @@
   "i-dT6fKnc:legend": {
     "imageId": "i-dT6fKnc",
     "series": "legend",
-    "editionLimit": 12,
+    "editionLimit": 25,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:55:11.443Z"
@@ -2634,7 +2634,7 @@
   "i-p3wwjCQ:chronicle": {
     "imageId": "i-p3wwjCQ",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:55:15.401Z"
@@ -2642,7 +2642,7 @@
   "i-dt57xrq:chronicle": {
     "imageId": "i-dt57xrq",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:55:28.988Z"
@@ -2650,7 +2650,7 @@
   "i-F3tf9C4:chronicle": {
     "imageId": "i-F3tf9C4",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:55:34.470Z"
@@ -2658,7 +2658,7 @@
   "i-9Zv7LRm:chronicle": {
     "imageId": "i-9Zv7LRm",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:55:40.209Z"
@@ -2666,7 +2666,7 @@
   "i-9Zv7LRm:legend": {
     "imageId": "i-9Zv7LRm",
     "series": "legend",
-    "editionLimit": 12,
+    "editionLimit": 25,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:55:43.662Z"
@@ -2674,7 +2674,7 @@
   "i-QNqpz9W:chronicle": {
     "imageId": "i-QNqpz9W",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:55:47.031Z"
@@ -2682,7 +2682,7 @@
   "i-5vvB6PH:chronicle": {
     "imageId": "i-5vvB6PH",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:55:50.792Z"
@@ -2690,7 +2690,7 @@
   "i-NRsfsrH:chronicle": {
     "imageId": "i-NRsfsrH",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:55:54.082Z"
@@ -2698,7 +2698,7 @@
   "i-NRsfsrH:legend": {
     "imageId": "i-NRsfsrH",
     "series": "legend",
-    "editionLimit": 12,
+    "editionLimit": 25,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T00:56:01.736Z"
@@ -2706,7 +2706,7 @@
   "i-4SmFT2v:chronicle": {
     "imageId": "i-4SmFT2v",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T02:12:19.870Z"
@@ -2714,7 +2714,7 @@
   "i-46kWCqc:chronicle": {
     "imageId": "i-46kWCqc",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T03:46:54.853Z"
@@ -2722,7 +2722,7 @@
   "i-9wQL5tH:chronicle": {
     "imageId": "i-9wQL5tH",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T03:47:03.237Z"
@@ -2730,7 +2730,7 @@
   "i-5Md3dQ3:chronicle": {
     "imageId": "i-5Md3dQ3",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T03:47:21.115Z"
@@ -2738,7 +2738,7 @@
   "i-X4SH26N:chronicle": {
     "imageId": "i-X4SH26N",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T03:47:30.131Z"
@@ -2746,7 +2746,7 @@
   "i-NDnxRkx:chronicle": {
     "imageId": "i-NDnxRkx",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T03:47:33.193Z"
@@ -2754,7 +2754,7 @@
   "i-5TtHV8g:chronicle": {
     "imageId": "i-5TtHV8g",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T03:48:08.503Z"
@@ -2762,7 +2762,7 @@
   "i-3SxncXS:chronicle": {
     "imageId": "i-3SxncXS",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T03:48:17.705Z"
@@ -2770,7 +2770,7 @@
   "i-c98L2bs:chronicle": {
     "imageId": "i-c98L2bs",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T03:48:39.993Z"
@@ -2779,7 +2779,7 @@
     "imageId": "s-4we8p8T",
     "originalImageId": "i-ncFcHDM",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:01:59.952Z"
@@ -2788,7 +2788,7 @@
     "imageId": "s-MX5HjpH",
     "originalImageId": "i-RsLmsLZ",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:05:09.995Z"
@@ -2797,7 +2797,7 @@
     "imageId": "s-VMjACB5",
     "originalImageId": "i-44jcjTQ",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:05:34.297Z"
@@ -2806,7 +2806,7 @@
     "imageId": "s-VMjACB5",
     "originalImageId": "i-44jcjTQ",
     "series": "legend",
-    "editionLimit": 12,
+    "editionLimit": 25,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:05:34.836Z"
@@ -2814,7 +2814,7 @@
   "i-VScCFDQ:chronicle": {
     "imageId": "i-VScCFDQ",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:20:13.163Z"
@@ -2822,7 +2822,7 @@
   "i-kcvnCvz:chronicle": {
     "imageId": "i-kcvnCvz",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:20:22.372Z"
@@ -2830,7 +2830,7 @@
   "i-3jXg4hf:chronicle": {
     "imageId": "i-3jXg4hf",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:20:26.001Z"
@@ -2838,7 +2838,7 @@
   "i-XmVfrdk:chronicle": {
     "imageId": "i-XmVfrdk",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:20:29.453Z"
@@ -2846,7 +2846,7 @@
   "i-mcrrSZ2:chronicle": {
     "imageId": "i-mcrrSZ2",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:20:33.975Z"
@@ -2854,7 +2854,7 @@
   "i-zrvTR9s:chronicle": {
     "imageId": "i-zrvTR9s",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:20:48.149Z"
@@ -2862,7 +2862,7 @@
   "i-2qqHRQ6:chronicle": {
     "imageId": "i-2qqHRQ6",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:20:52.598Z"
@@ -2870,7 +2870,7 @@
   "i-hVvx83K:chronicle": {
     "imageId": "i-hVvx83K",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:21:01.337Z"
@@ -2878,7 +2878,7 @@
   "i-rWFC3dL:chronicle": {
     "imageId": "i-rWFC3dL",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:21:18.055Z"
@@ -2886,7 +2886,7 @@
   "i-6NKTKgw:chronicle": {
     "imageId": "i-6NKTKgw",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:21:21.354Z"
@@ -2894,7 +2894,7 @@
   "i-f4Jq6NZ:chronicle": {
     "imageId": "i-f4Jq6NZ",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:21:32.662Z"
@@ -2902,7 +2902,7 @@
   "i-MwLgJL5:chronicle": {
     "imageId": "i-MwLgJL5",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:21:36.069Z"
@@ -2910,7 +2910,7 @@
   "i-MwLgJL5:legend": {
     "imageId": "i-MwLgJL5",
     "series": "legend",
-    "editionLimit": 12,
+    "editionLimit": 25,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:21:41.401Z"
@@ -2918,7 +2918,7 @@
   "i-vSFBSgr:chronicle": {
     "imageId": "i-vSFBSgr",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:21:45.490Z"
@@ -2926,7 +2926,7 @@
   "i-NSj5zsB:chronicle": {
     "imageId": "i-NSj5zsB",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:21:50.530Z"
@@ -2934,7 +2934,7 @@
   "i-NSj5zsB:legend": {
     "imageId": "i-NSj5zsB",
     "series": "legend",
-    "editionLimit": 12,
+    "editionLimit": 25,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:21:51.137Z"
@@ -2942,7 +2942,7 @@
   "i-QNc3gRK:chronicle": {
     "imageId": "i-QNc3gRK",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:22:09.094Z"
@@ -2950,7 +2950,7 @@
   "i-sTCJ5dz:legend": {
     "imageId": "i-sTCJ5dz",
     "series": "legend",
-    "editionLimit": 12,
+    "editionLimit": 25,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:22:52.060Z"
@@ -2958,7 +2958,7 @@
   "i-WgGWH9C:chronicle": {
     "imageId": "i-WgGWH9C",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:22:56.921Z"
@@ -2967,7 +2967,7 @@
     "imageId": "s-tYpzbbh",
     "originalImageId": "i-7zGDNJf",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:23:34.594Z"
@@ -2975,7 +2975,7 @@
   "i-LgrdsMQ:chronicle": {
     "imageId": "i-LgrdsMQ",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:24:23.643Z"
@@ -2983,7 +2983,7 @@
   "i-xVS6dxc:chronicle": {
     "imageId": "i-xVS6dxc",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:24:51.522Z"
@@ -2991,7 +2991,7 @@
   "i-Mf7gmw7:chronicle": {
     "imageId": "i-Mf7gmw7",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:24:55.227Z"
@@ -2999,7 +2999,7 @@
   "i-ZfJzXjP:chronicle": {
     "imageId": "i-ZfJzXjP",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:24:58.795Z"
@@ -3007,7 +3007,7 @@
   "i-ZfJzXjP:legend": {
     "imageId": "i-ZfJzXjP",
     "series": "legend",
-    "editionLimit": 12,
+    "editionLimit": 25,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:24:59.778Z"
@@ -3015,7 +3015,7 @@
   "i-tM7nXPd:chronicle": {
     "imageId": "i-tM7nXPd",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:25:03.741Z"
@@ -3023,7 +3023,7 @@
   "i-XhWrKdZ:chronicle": {
     "imageId": "i-XhWrKdZ",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:26:07.910Z"
@@ -3031,7 +3031,7 @@
   "i-84LZftr:chronicle": {
     "imageId": "i-84LZftr",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:26:16.902Z"
@@ -3039,7 +3039,7 @@
   "i-SxbNjWC:chronicle": {
     "imageId": "i-SxbNjWC",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:26:20.781Z"
@@ -3047,7 +3047,7 @@
   "i-B7S6VwV:chronicle": {
     "imageId": "i-B7S6VwV",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:26:25.505Z"
@@ -3055,7 +3055,7 @@
   "i-B7S6VwV:legend": {
     "imageId": "i-B7S6VwV",
     "series": "legend",
-    "editionLimit": 12,
+    "editionLimit": 25,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:26:31.222Z"
@@ -3063,7 +3063,7 @@
   "i-jMzCqw2:chronicle": {
     "imageId": "i-jMzCqw2",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:26:35.135Z"
@@ -3071,7 +3071,7 @@
   "i-nVDRCrB:chronicle": {
     "imageId": "i-nVDRCrB",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:26:39.332Z"
@@ -3079,7 +3079,7 @@
   "i-vcmfFCM:chronicle": {
     "imageId": "i-vcmfFCM",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:26:45.616Z"
@@ -3087,7 +3087,7 @@
   "i-769JJbV:chronicle": {
     "imageId": "i-769JJbV",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:27:03.628Z"
@@ -3095,7 +3095,7 @@
   "i-vTD9xH2:chronicle": {
     "imageId": "i-vTD9xH2",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:27:08.917Z"
@@ -3103,7 +3103,7 @@
   "i-BfZH6vR:chronicle": {
     "imageId": "i-BfZH6vR",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:27:17.984Z"
@@ -3111,7 +3111,7 @@
   "i-qphwtVw:chronicle": {
     "imageId": "i-qphwtVw",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:27:21.232Z"
@@ -3119,7 +3119,7 @@
   "i-BBDdJHb:chronicle": {
     "imageId": "i-BBDdJHb",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:27:28.402Z"
@@ -3127,7 +3127,7 @@
   "i-d28cHrD:chronicle": {
     "imageId": "i-d28cHrD",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:27:32.339Z"
@@ -3135,7 +3135,7 @@
   "i-jpptgFS:chronicle": {
     "imageId": "i-jpptgFS",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:27:43.483Z"
@@ -3143,7 +3143,7 @@
   "i-zKFhFwm:chronicle": {
     "imageId": "i-zKFhFwm",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:28:03.276Z"
@@ -3151,7 +3151,7 @@
   "i-zKFhFwm:legend": {
     "imageId": "i-zKFhFwm",
     "series": "legend",
-    "editionLimit": 12,
+    "editionLimit": 25,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:28:08.031Z"
@@ -3159,7 +3159,7 @@
   "i-hbpLcDk:chronicle": {
     "imageId": "i-hbpLcDk",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:28:14.529Z"
@@ -3167,7 +3167,7 @@
   "i-9R79MVB:chronicle": {
     "imageId": "i-9R79MVB",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:28:25.431Z"
@@ -3175,7 +3175,7 @@
   "i-2pwdXXJ:chronicle": {
     "imageId": "i-2pwdXXJ",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:28:36.770Z"
@@ -3183,7 +3183,7 @@
   "i-7bDfPwf:chronicle": {
     "imageId": "i-7bDfPwf",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:28:40.103Z"
@@ -3191,7 +3191,7 @@
   "i-pGmvKSB:chronicle": {
     "imageId": "i-pGmvKSB",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:28:43.598Z"
@@ -3199,7 +3199,7 @@
   "i-dFpB9q5:chronicle": {
     "imageId": "i-dFpB9q5",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:28:47.752Z"
@@ -3207,7 +3207,7 @@
   "i-xLRF9pS:chronicle": {
     "imageId": "i-xLRF9pS",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:29:06.727Z"
@@ -3215,7 +3215,7 @@
   "i-zLXHHCN:chronicle": {
     "imageId": "i-zLXHHCN",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:29:32.768Z"
@@ -3223,7 +3223,7 @@
   "i-hJgwV5X:chronicle": {
     "imageId": "i-hJgwV5X",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:29:36.318Z"
@@ -3231,7 +3231,7 @@
   "i-sB8KkPF:chronicle": {
     "imageId": "i-sB8KkPF",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:29:40.179Z"
@@ -3239,7 +3239,7 @@
   "i-hmsrXK6:chronicle": {
     "imageId": "i-hmsrXK6",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:31:10.554Z"
@@ -3247,7 +3247,7 @@
   "i-bddbzmJ:chronicle": {
     "imageId": "i-bddbzmJ",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:31:19.374Z"
@@ -3255,7 +3255,7 @@
   "i-fgtQxKW:chronicle": {
     "imageId": "i-fgtQxKW",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:31:29.597Z"
@@ -3263,7 +3263,7 @@
   "i-dwvGWVf:chronicle": {
     "imageId": "i-dwvGWVf",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:31:35.853Z"
@@ -3271,7 +3271,7 @@
   "i-vMNKH96:chronicle": {
     "imageId": "i-vMNKH96",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:31:39.386Z"
@@ -3279,7 +3279,7 @@
   "i-Ggkxvm8:chronicle": {
     "imageId": "i-Ggkxvm8",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:31:53.793Z"
@@ -3287,7 +3287,7 @@
   "i-Ggkxvm8:legend": {
     "imageId": "i-Ggkxvm8",
     "series": "legend",
-    "editionLimit": 12,
+    "editionLimit": 25,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:31:57.721Z"
@@ -3295,7 +3295,7 @@
   "i-dGJDdP2:chronicle": {
     "imageId": "i-dGJDdP2",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:32:01.338Z"
@@ -3303,7 +3303,7 @@
   "i-dGJDdP2:legend": {
     "imageId": "i-dGJDdP2",
     "series": "legend",
-    "editionLimit": 12,
+    "editionLimit": 25,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:32:01.825Z"
@@ -3311,7 +3311,7 @@
   "i-WWng23V:chronicle": {
     "imageId": "i-WWng23V",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:32:05.124Z"
@@ -3319,7 +3319,7 @@
   "i-4Bf2zsv:chronicle": {
     "imageId": "i-4Bf2zsv",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:32:08.914Z"
@@ -3327,7 +3327,7 @@
   "i-SSw3qvn:chronicle": {
     "imageId": "i-SSw3qvn",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:32:12.820Z"
@@ -3335,7 +3335,7 @@
   "i-SSw3qvn:legend": {
     "imageId": "i-SSw3qvn",
     "series": "legend",
-    "editionLimit": 12,
+    "editionLimit": 25,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:32:17.186Z"
@@ -3343,7 +3343,7 @@
   "i-cSFvwcM:chronicle": {
     "imageId": "i-cSFvwcM",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:32:23.628Z"
@@ -3351,7 +3351,7 @@
   "i-cSFvwcM:legend": {
     "imageId": "i-cSFvwcM",
     "series": "legend",
-    "editionLimit": 12,
+    "editionLimit": 25,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:32:24.417Z"
@@ -3359,7 +3359,7 @@
   "i-TTLmLd3:chronicle": {
     "imageId": "i-TTLmLd3",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:32:28.976Z"
@@ -3367,7 +3367,7 @@
   "i-cRWPFSz:chronicle": {
     "imageId": "i-cRWPFSz",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:32:44.497Z"
@@ -3375,7 +3375,7 @@
   "i-R5vHcxf:chronicle": {
     "imageId": "i-R5vHcxf",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:33:00.205Z"
@@ -3383,7 +3383,7 @@
   "i-vh7p4gv:chronicle": {
     "imageId": "i-vh7p4gv",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:33:11.088Z"
@@ -3391,7 +3391,7 @@
   "i-WmSkQXV:chronicle": {
     "imageId": "i-WmSkQXV",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:34:25.573Z"
@@ -3399,7 +3399,7 @@
   "i-VBDWkZV:chronicle": {
     "imageId": "i-VBDWkZV",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:34:28.894Z"
@@ -3407,7 +3407,7 @@
   "i-mvV5gWN:chronicle": {
     "imageId": "i-mvV5gWN",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:34:36.390Z"
@@ -3415,7 +3415,7 @@
   "i-RhMjXGk:chronicle": {
     "imageId": "i-RhMjXGk",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:34:39.883Z"
@@ -3423,7 +3423,7 @@
   "i-7FnMfnx:chronicle": {
     "imageId": "i-7FnMfnx",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:34:43.933Z"
@@ -3431,7 +3431,7 @@
   "i-BXnLp72:chronicle": {
     "imageId": "i-BXnLp72",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:34:47.832Z"
@@ -3439,7 +3439,7 @@
   "i-vsFH6hj:chronicle": {
     "imageId": "i-vsFH6hj",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:35:09.911Z"
@@ -3447,7 +3447,7 @@
   "i-7S934Ld:chronicle": {
     "imageId": "i-7S934Ld",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:35:14.539Z"
@@ -3455,7 +3455,7 @@
   "i-NdL9dGW:chronicle": {
     "imageId": "i-NdL9dGW",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:35:18.787Z"
@@ -3463,7 +3463,7 @@
   "i-wxLBqLg:chronicle": {
     "imageId": "i-wxLBqLg",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T04:56:25.157Z"
@@ -3471,7 +3471,7 @@
   "i-TTLmLd3:legend": {
     "imageId": "i-TTLmLd3",
     "series": "legend",
-    "editionLimit": 12,
+    "editionLimit": 25,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T06:05:42.843Z"
@@ -3479,7 +3479,7 @@
   "i-sFJ4hBz:chronicle": {
     "imageId": "i-sFJ4hBz",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T06:41:57.688Z"
@@ -3487,7 +3487,7 @@
   "i-Bdbf3L9:legend": {
     "imageId": "i-Bdbf3L9",
     "series": "legend",
-    "editionLimit": 12,
+    "editionLimit": 25,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T06:42:06.755Z"
@@ -3495,7 +3495,7 @@
   "i-xBJqD6x:chronicle": {
     "imageId": "i-xBJqD6x",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T06:42:31.655Z"
@@ -3503,7 +3503,7 @@
   "i-b3F54M6:chronicle": {
     "imageId": "i-b3F54M6",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T07:10:59.835Z"
@@ -3511,7 +3511,7 @@
   "i-VbL6CF7:chronicle": {
     "imageId": "i-VbL6CF7",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T07:11:07.703Z"
@@ -3519,7 +3519,7 @@
   "i-VN5gQB3:chronicle": {
     "imageId": "i-VN5gQB3",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T07:11:14.102Z"
@@ -3527,7 +3527,7 @@
   "i-fGKx3B6:chronicle": {
     "imageId": "i-fGKx3B6",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T07:11:17.414Z"
@@ -3535,7 +3535,7 @@
   "i-GvZBLcv:chronicle": {
     "imageId": "i-GvZBLcv",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T07:11:24.210Z"
@@ -3543,7 +3543,7 @@
   "i-V92SWJF:chronicle": {
     "imageId": "i-V92SWJF",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T07:11:38.071Z"
@@ -3551,7 +3551,7 @@
   "i-KFLXt4D:chronicle": {
     "imageId": "i-KFLXt4D",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T07:11:43.321Z"
@@ -3559,7 +3559,7 @@
   "i-KG32NV6:chronicle": {
     "imageId": "i-KG32NV6",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T07:11:51.768Z"
@@ -3567,7 +3567,7 @@
   "i-c4qSzm6:chronicle": {
     "imageId": "i-c4qSzm6",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T07:12:03.443Z"
@@ -3575,7 +3575,7 @@
   "i-FGWfXBM:chronicle": {
     "imageId": "i-FGWfXBM",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T07:12:12.398Z"
@@ -3583,7 +3583,7 @@
   "i-VHMgr5J:chronicle": {
     "imageId": "i-VHMgr5J",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T07:12:19.312Z"
@@ -3591,7 +3591,7 @@
   "i-ScMsR8H:chronicle": {
     "imageId": "i-ScMsR8H",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T07:12:27.038Z"
@@ -3599,7 +3599,7 @@
   "i-rm2GNVm:chronicle": {
     "imageId": "i-rm2GNVm",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T07:12:33.588Z"
@@ -3607,7 +3607,7 @@
   "i-kqQ26Rw:chronicle": {
     "imageId": "i-kqQ26Rw",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T07:12:36.608Z"
@@ -3615,7 +3615,7 @@
   "i-4rJVZLg:chronicle": {
     "imageId": "i-4rJVZLg",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T07:13:38.381Z"
@@ -3623,7 +3623,7 @@
   "i-jrGJSbH:chronicle": {
     "imageId": "i-jrGJSbH",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T07:13:42.294Z"
@@ -3631,7 +3631,7 @@
   "i-72t3jbT:chronicle": {
     "imageId": "i-72t3jbT",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T07:13:48.048Z"
@@ -3639,7 +3639,7 @@
   "i-HmSt4wB:chronicle": {
     "imageId": "i-HmSt4wB",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T07:13:52.418Z"
@@ -3647,7 +3647,7 @@
   "i-jt8P6Wg:chronicle": {
     "imageId": "i-jt8P6Wg",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T07:13:59.972Z"
@@ -3655,7 +3655,7 @@
   "i-Sv7gsQB:chronicle": {
     "imageId": "i-Sv7gsQB",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T07:14:04.531Z"
@@ -3663,7 +3663,7 @@
   "i-f6BHPxK:chronicle": {
     "imageId": "i-f6BHPxK",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T07:14:07.877Z"
@@ -3671,7 +3671,7 @@
   "i-Mtm6Htz:chronicle": {
     "imageId": "i-Mtm6Htz",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T07:14:32.884Z"
@@ -3679,7 +3679,7 @@
   "i-rH4MSZg:chronicle": {
     "imageId": "i-rH4MSZg",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T15:16:22.831Z"
@@ -3687,7 +3687,7 @@
   "i-ZBbxVgZ:chronicle": {
     "imageId": "i-ZBbxVgZ",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T15:19:08.606Z"
@@ -3695,7 +3695,7 @@
   "i-S6m4mR2:chronicle": {
     "imageId": "i-S6m4mR2",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T15:42:08.561Z"
@@ -3703,7 +3703,7 @@
   "i-Nj2t7F2:chronicle": {
     "imageId": "i-Nj2t7F2",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T15:44:49.491Z"
@@ -3711,7 +3711,7 @@
   "i-hVB6Pxq:chronicle": {
     "imageId": "i-hVB6Pxq",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T17:21:27.270Z"
@@ -3719,7 +3719,7 @@
   "i-P7pMnQ9:chronicle": {
     "imageId": "i-P7pMnQ9",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T17:22:58.500Z"
@@ -3727,7 +3727,7 @@
   "i-7zGDNJf:chronicle": {
     "imageId": "i-7zGDNJf",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T17:23:59.469Z"
@@ -3735,7 +3735,7 @@
   "i-tF8fFm4:chronicle": {
     "imageId": "i-tF8fFm4",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T17:32:14.029Z"
@@ -3743,7 +3743,7 @@
   "i-xVS6dxc:legend": {
     "imageId": "i-xVS6dxc",
     "series": "legend",
-    "editionLimit": 12,
+    "editionLimit": 25,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T18:55:02.824Z"
@@ -3751,7 +3751,7 @@
   "i-wnBw2xt:chronicle": {
     "imageId": "i-wnBw2xt",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T18:55:25.895Z"
@@ -3759,7 +3759,7 @@
   "i-7d3jWrb:chronicle": {
     "imageId": "i-7d3jWrb",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T19:04:02.358Z"
@@ -3767,7 +3767,7 @@
   "i-FnZ68h3:legend": {
     "imageId": "i-FnZ68h3",
     "series": "legend",
-    "editionLimit": 12,
+    "editionLimit": 25,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T19:05:15.963Z"
@@ -3775,7 +3775,7 @@
   "i-M95HTNH:chronicle": {
     "imageId": "i-M95HTNH",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T19:06:20.867Z"
@@ -3783,7 +3783,7 @@
   "i-2VTWJ3R:chronicle": {
     "imageId": "i-2VTWJ3R",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T19:06:25.174Z"
@@ -3791,7 +3791,7 @@
   "i-tbctTrL:chronicle": {
     "imageId": "i-tbctTrL",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T19:06:30.017Z"
@@ -3799,7 +3799,7 @@
   "i-N77wcxb:chronicle": {
     "imageId": "i-N77wcxb",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T19:06:49.137Z"
@@ -3807,7 +3807,7 @@
   "i-RMdScDd:chronicle": {
     "imageId": "i-RMdScDd",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T19:06:57.858Z"
@@ -3815,7 +3815,7 @@
   "i-DJMTZ8z:chronicle": {
     "imageId": "i-DJMTZ8z",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T19:07:10.766Z"
@@ -3823,7 +3823,7 @@
   "i-dTxwFN4:chronicle": {
     "imageId": "i-dTxwFN4",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T19:08:03.784Z"
@@ -3831,7 +3831,7 @@
   "i-C9Q7sKR:chronicle": {
     "imageId": "i-C9Q7sKR",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T19:08:10.034Z"
@@ -3839,7 +3839,7 @@
   "i-RdsBKX8:chronicle": {
     "imageId": "i-RdsBKX8",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T19:09:03.576Z"
@@ -3847,7 +3847,7 @@
   "i-nd3Wr3d:chronicle": {
     "imageId": "i-nd3Wr3d",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T19:10:34.822Z"
@@ -3855,7 +3855,7 @@
   "i-6z4gpF7:chronicle": {
     "imageId": "i-6z4gpF7",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T19:11:43.123Z"
@@ -3863,7 +3863,7 @@
   "i-TM27hkq:chronicle": {
     "imageId": "i-TM27hkq",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T19:11:46.110Z"
@@ -3871,7 +3871,7 @@
   "i-SrPqX7H:chronicle": {
     "imageId": "i-SrPqX7H",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T19:12:20.759Z"
@@ -3879,7 +3879,7 @@
   "i-Gqw3s5s:legend": {
     "imageId": "i-Gqw3s5s",
     "series": "legend",
-    "editionLimit": 12,
+    "editionLimit": 25,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T19:16:17.283Z"
@@ -3887,7 +3887,7 @@
   "i-PvHHPSq:legend": {
     "imageId": "i-PvHHPSq",
     "series": "legend",
-    "editionLimit": 12,
+    "editionLimit": 25,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T19:22:44.723Z"
@@ -3895,7 +3895,7 @@
   "i-nnV6qtS:legend": {
     "imageId": "i-nnV6qtS",
     "series": "legend",
-    "editionLimit": 12,
+    "editionLimit": 25,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T19:23:41.093Z"
@@ -3903,7 +3903,7 @@
   "i-B7ZSdfs:legend": {
     "imageId": "i-B7ZSdfs",
     "series": "legend",
-    "editionLimit": 12,
+    "editionLimit": 25,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T21:29:50.471Z"
@@ -3911,7 +3911,7 @@
   "i-r5Pb7zJ:legend": {
     "imageId": "i-r5Pb7zJ",
     "series": "legend",
-    "editionLimit": 12,
+    "editionLimit": 25,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T21:30:51.820Z"
@@ -3919,7 +3919,7 @@
   "i-NxjDRLV:chronicle": {
     "imageId": "i-NxjDRLV",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T21:32:20.276Z"
@@ -3927,7 +3927,7 @@
   "i-7Mzzbvp:legend": {
     "imageId": "i-7Mzzbvp",
     "series": "legend",
-    "editionLimit": 12,
+    "editionLimit": 25,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T21:38:42.253Z"
@@ -3935,7 +3935,7 @@
   "i-rfFBRQM:legend": {
     "imageId": "i-rfFBRQM",
     "series": "legend",
-    "editionLimit": 12,
+    "editionLimit": 25,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T21:38:49.464Z"
@@ -3943,7 +3943,7 @@
   "i-DczpNpH:chronicle": {
     "imageId": "i-DczpNpH",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T21:40:39.518Z"
@@ -3951,7 +3951,7 @@
   "i-tBPfdxS:chronicle": {
     "imageId": "i-tBPfdxS",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T21:41:12.862Z"
@@ -3959,7 +3959,7 @@
   "i-QWcX7JT:chronicle": {
     "imageId": "i-QWcX7JT",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T21:42:30.115Z"
@@ -3967,7 +3967,7 @@
   "i-n5BfXBm:chronicle": {
     "imageId": "i-n5BfXBm",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T21:44:47.578Z"
@@ -3975,7 +3975,7 @@
   "i-trZrk2w:legend": {
     "imageId": "i-trZrk2w",
     "series": "legend",
-    "editionLimit": 12,
+    "editionLimit": 25,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T21:44:52.701Z"
@@ -3983,7 +3983,7 @@
   "i-fM9qmKW:legend": {
     "imageId": "i-fM9qmKW",
     "series": "legend",
-    "editionLimit": 12,
+    "editionLimit": 25,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T21:45:05.265Z"
@@ -3991,7 +3991,7 @@
   "i-ShhCNkX:chronicle": {
     "imageId": "i-ShhCNkX",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T21:45:36.637Z"
@@ -3999,7 +3999,7 @@
   "i-KBNSftv:chronicle": {
     "imageId": "i-KBNSftv",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T21:48:54.227Z"
@@ -4007,7 +4007,7 @@
   "i-z3wvMkB:chronicle": {
     "imageId": "i-z3wvMkB",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T21:53:58.748Z"
@@ -4015,7 +4015,7 @@
   "i-JM7kNVv:chronicle": {
     "imageId": "i-JM7kNVv",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T21:55:08.799Z"
@@ -4023,7 +4023,7 @@
   "i-rMkQnM6:chronicle": {
     "imageId": "i-rMkQnM6",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T21:55:20.257Z"
@@ -4031,7 +4031,7 @@
   "i-8zFZ3jn:chronicle": {
     "imageId": "i-8zFZ3jn",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T21:55:55.929Z"
@@ -4039,7 +4039,7 @@
   "i-6GQxb97:chronicle": {
     "imageId": "i-6GQxb97",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T21:56:01.509Z"
@@ -4047,7 +4047,7 @@
   "i-zv8VJBg:chronicle": {
     "imageId": "i-zv8VJBg",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T21:56:06.881Z"
@@ -4055,7 +4055,7 @@
   "i-8JSdTGz:chronicle": {
     "imageId": "i-8JSdTGz",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T21:56:12.252Z"
@@ -4063,7 +4063,7 @@
   "i-J8Tr628:chronicle": {
     "imageId": "i-J8Tr628",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T21:57:15.358Z"
@@ -4071,7 +4071,7 @@
   "i-xXQ3gDM:chronicle": {
     "imageId": "i-xXQ3gDM",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T21:57:38.140Z"
@@ -4079,7 +4079,7 @@
   "i-V5WcTqg:chronicle": {
     "imageId": "i-V5WcTqg",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T21:57:47.935Z"
@@ -4087,7 +4087,7 @@
   "i-PPJ9GKf:chronicle": {
     "imageId": "i-PPJ9GKf",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T21:58:19.067Z"
@@ -4095,7 +4095,7 @@
   "i-dqdZcnX:chronicle": {
     "imageId": "i-dqdZcnX",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T21:58:43.242Z"
@@ -4103,7 +4103,7 @@
   "i-8VPQmkW:chronicle": {
     "imageId": "i-8VPQmkW",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T21:59:57.993Z"
@@ -4111,7 +4111,7 @@
   "i-fTHtL25:chronicle": {
     "imageId": "i-fTHtL25",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T22:00:05.000Z"
@@ -4119,7 +4119,7 @@
   "i-52tTd9G:chronicle": {
     "imageId": "i-52tTd9G",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T22:00:33.796Z"
@@ -4127,7 +4127,7 @@
   "i-bkjkPfH:chronicle": {
     "imageId": "i-bkjkPfH",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T22:00:52.099Z"
@@ -4135,7 +4135,7 @@
   "i-kh6KWS9:chronicle": {
     "imageId": "i-kh6KWS9",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T22:01:42.127Z"
@@ -4143,7 +4143,7 @@
   "i-cF2kLFP:chronicle": {
     "imageId": "i-cF2kLFP",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T22:01:49.520Z"
@@ -4151,7 +4151,7 @@
   "i-XR9PZT5:chronicle": {
     "imageId": "i-XR9PZT5",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T22:01:58.774Z"
@@ -4159,7 +4159,7 @@
   "i-qXd5779:chronicle": {
     "imageId": "i-qXd5779",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T22:02:14.078Z"
@@ -4167,7 +4167,7 @@
   "i-GH7H4LC:chronicle": {
     "imageId": "i-GH7H4LC",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T22:02:55.798Z"
@@ -4175,7 +4175,7 @@
   "i-xZkmnnx:chronicle": {
     "imageId": "i-xZkmnnx",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T22:03:29.102Z"
@@ -4183,7 +4183,7 @@
   "i-7Kwv8vc:legend": {
     "imageId": "i-7Kwv8vc",
     "series": "legend",
-    "editionLimit": 12,
+    "editionLimit": 25,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T22:04:55.288Z"
@@ -4191,7 +4191,7 @@
   "i-8g6m7tf:chronicle": {
     "imageId": "i-8g6m7tf",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T22:05:34.439Z"
@@ -4199,7 +4199,7 @@
   "i-V5djX4B:chronicle": {
     "imageId": "i-V5djX4B",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T22:05:44.121Z"
@@ -4207,7 +4207,7 @@
   "i-s79JnZ2:chronicle": {
     "imageId": "i-s79JnZ2",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T22:06:01.156Z"
@@ -4215,7 +4215,7 @@
   "i-8W7jxkN:chronicle": {
     "imageId": "i-8W7jxkN",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T22:06:50.583Z"
@@ -4223,7 +4223,7 @@
   "i-5T9mQqT:chronicle": {
     "imageId": "i-5T9mQqT",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T22:19:15.575Z"
@@ -4231,7 +4231,7 @@
   "i-sPkKGnX:chronicle": {
     "imageId": "i-sPkKGnX",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T22:20:20.633Z"
@@ -4239,7 +4239,7 @@
   "i-WNLSRQf:chronicle": {
     "imageId": "i-WNLSRQf",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T22:21:21.433Z"
@@ -4247,7 +4247,7 @@
   "i-VhHKttr:chronicle": {
     "imageId": "i-VhHKttr",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T22:21:59.490Z"
@@ -4255,7 +4255,7 @@
   "i-9Bpj29K:chronicle": {
     "imageId": "i-9Bpj29K",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T22:22:32.819Z"
@@ -4263,7 +4263,7 @@
   "i-sLL3pQG:chronicle": {
     "imageId": "i-sLL3pQG",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T22:30:02.784Z"
@@ -4271,7 +4271,7 @@
   "i-6pLTtkL:chronicle": {
     "imageId": "i-6pLTtkL",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T22:52:47.040Z"
@@ -4279,7 +4279,7 @@
   "i-FpH3LXf:chronicle": {
     "imageId": "i-FpH3LXf",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T22:54:04.359Z"
@@ -4287,7 +4287,7 @@
   "i-GjZfMXj:chronicle": {
     "imageId": "i-GjZfMXj",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T22:59:21.391Z"
@@ -4295,7 +4295,7 @@
   "i-jLSNwCT:chronicle": {
     "imageId": "i-jLSNwCT",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T23:00:21.180Z"
@@ -4303,7 +4303,7 @@
   "i-R2JG4bd:chronicle": {
     "imageId": "i-R2JG4bd",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T23:00:49.126Z"
@@ -4311,7 +4311,7 @@
   "i-gQ7GZ5s:chronicle": {
     "imageId": "i-gQ7GZ5s",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T23:01:27.578Z"
@@ -4319,7 +4319,7 @@
   "i-zW6Zb4W:chronicle": {
     "imageId": "i-zW6Zb4W",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T23:04:36.610Z"
@@ -4327,7 +4327,7 @@
   "i-MB2KXB3:chronicle": {
     "imageId": "i-MB2KXB3",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-22T23:14:15.771Z"
@@ -4335,7 +4335,7 @@
   "i-XLXGHT9:chronicle": {
     "imageId": "i-XLXGHT9",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-23T01:12:25.861Z"
@@ -4343,7 +4343,7 @@
   "i-69qsFwx:chronicle": {
     "imageId": "i-69qsFwx",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-23T01:30:41.492Z"
@@ -4351,7 +4351,7 @@
   "i-qLzRgbS:chronicle": {
     "imageId": "i-qLzRgbS",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-23T01:30:48.570Z"
@@ -4359,7 +4359,7 @@
   "i-rRdrQBg:chronicle": {
     "imageId": "i-rRdrQBg",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-23T01:30:58.777Z"
@@ -4367,7 +4367,7 @@
   "i-6NQ6hQZ:chronicle": {
     "imageId": "i-6NQ6hQZ",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-23T01:31:05.849Z"
@@ -4375,7 +4375,7 @@
   "i-zjtVmT8:chronicle": {
     "imageId": "i-zjtVmT8",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-23T01:31:17.046Z"
@@ -4383,7 +4383,7 @@
   "i-QNdCxKN:chronicle": {
     "imageId": "i-QNdCxKN",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-23T01:31:48.368Z"
@@ -4391,7 +4391,7 @@
   "i-vJSCrqC:chronicle": {
     "imageId": "i-vJSCrqC",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-23T01:32:18.161Z"
@@ -4399,7 +4399,7 @@
   "i-vJSCrqC:legend": {
     "imageId": "i-vJSCrqC",
     "series": "legend",
-    "editionLimit": 12,
+    "editionLimit": 25,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-23T01:32:20.205Z"
@@ -4407,7 +4407,7 @@
   "i-bxDjH9c:chronicle": {
     "imageId": "i-bxDjH9c",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-23T01:32:39.214Z"
@@ -4415,7 +4415,7 @@
   "i-4Wsxmqv:chronicle": {
     "imageId": "i-4Wsxmqv",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-23T01:32:57.421Z"
@@ -4423,7 +4423,7 @@
   "i-V96Rgmj:chronicle": {
     "imageId": "i-V96Rgmj",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-23T01:33:09.558Z"
@@ -4431,7 +4431,7 @@
   "i-h679dhn:chronicle": {
     "imageId": "i-h679dhn",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-23T01:33:19.081Z"
@@ -4439,7 +4439,7 @@
   "i-zt2btJ7:chronicle": {
     "imageId": "i-zt2btJ7",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-23T01:33:29.468Z"
@@ -4447,7 +4447,7 @@
   "i-NgkC4Zt:chronicle": {
     "imageId": "i-NgkC4Zt",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-23T01:33:35.902Z"
@@ -4455,7 +4455,7 @@
   "i-zZJbbHG:chronicle": {
     "imageId": "i-zZJbbHG",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-23T01:33:44.419Z"
@@ -4463,7 +4463,7 @@
   "i-sDZFJ6t:chronicle": {
     "imageId": "i-sDZFJ6t",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-23T01:33:53.004Z"
@@ -4471,7 +4471,7 @@
   "i-4Hz6D7k:chronicle": {
     "imageId": "i-4Hz6D7k",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-23T01:34:09.565Z"
@@ -4479,7 +4479,7 @@
   "i-Z8pZLnt:chronicle": {
     "imageId": "i-Z8pZLnt",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-23T01:34:26.154Z"
@@ -4487,7 +4487,7 @@
   "i-67Qt8WM:chronicle": {
     "imageId": "i-67Qt8WM",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-23T01:34:41.897Z"
@@ -4495,7 +4495,7 @@
   "i-KG7ZwXT:chronicle": {
     "imageId": "i-KG7ZwXT",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-23T01:35:00.815Z"
@@ -4503,7 +4503,7 @@
   "i-nZbDC9C:chronicle": {
     "imageId": "i-nZbDC9C",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-23T01:35:16.212Z"
@@ -4511,7 +4511,7 @@
   "i-hHVb4vC:chronicle": {
     "imageId": "i-hHVb4vC",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-23T01:35:54.257Z"
@@ -4519,7 +4519,7 @@
   "i-tfZTHXq:chronicle": {
     "imageId": "i-tfZTHXq",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-23T01:36:02.146Z"
@@ -4527,7 +4527,7 @@
   "i-z4mTWBb:chronicle": {
     "imageId": "i-z4mTWBb",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-23T01:36:09.968Z"
@@ -4535,7 +4535,7 @@
   "i-7hD9CCh:chronicle": {
     "imageId": "i-7hD9CCh",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-23T01:36:57.913Z"
@@ -4543,7 +4543,7 @@
   "i-7hD9CCh:legend": {
     "imageId": "i-7hD9CCh",
     "series": "legend",
-    "editionLimit": 12,
+    "editionLimit": 25,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-23T01:37:03.527Z"
@@ -4551,7 +4551,7 @@
   "i-R7jg62J:chronicle": {
     "imageId": "i-R7jg62J",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-23T01:37:31.955Z"
@@ -4559,7 +4559,7 @@
   "i-5j2Knmb:legend": {
     "imageId": "i-5j2Knmb",
     "series": "legend",
-    "editionLimit": 12,
+    "editionLimit": 25,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-23T01:37:47.960Z"
@@ -4567,7 +4567,7 @@
   "i-5j2Knmb:chronicle": {
     "imageId": "i-5j2Knmb",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-23T01:37:48.433Z"
@@ -4575,7 +4575,7 @@
   "i-qFwnr64:chronicle": {
     "imageId": "i-qFwnr64",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-23T01:39:09.620Z"
@@ -4583,7 +4583,7 @@
   "i-whbHxkn:chronicle": {
     "imageId": "i-whbHxkn",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-23T01:39:28.087Z"
@@ -4591,7 +4591,7 @@
   "i-9FCHdBp:chronicle": {
     "imageId": "i-9FCHdBp",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-23T01:39:37.414Z"
@@ -4599,7 +4599,7 @@
   "i-LmpRvHw:chronicle": {
     "imageId": "i-LmpRvHw",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-23T01:39:47.671Z"
@@ -4607,7 +4607,7 @@
   "i-WfRwfpM:chronicle": {
     "imageId": "i-WfRwfpM",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-23T01:39:58.678Z"
@@ -4615,7 +4615,7 @@
   "i-thpSjMG:chronicle": {
     "imageId": "i-thpSjMG",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-23T01:40:07.370Z"
@@ -4623,7 +4623,7 @@
   "i-7vSccct:chronicle": {
     "imageId": "i-7vSccct",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-23T01:41:30.705Z"
@@ -4631,7 +4631,7 @@
   "i-RwCs5gt:chronicle": {
     "imageId": "i-RwCs5gt",
     "series": "chronicle",
-    "editionLimit": 100,
+    "editionLimit": 50,
     "sold": 0,
     "released": true,
     "firstReleaseDate": "2025-12-23T01:41:56.213Z"
@@ -4639,7 +4639,7 @@
   "i-HZVV8J2:engrained": {
     "imageId": "i-HZVV8J2",
     "series": "engrained",
-    "editionLimit": 50,
+    "editionLimit": 5,
     "sold": 0,
     "printed": 1,
     "soldBySize": {},
@@ -4650,7 +4650,7 @@
   "i-wX39m6G:engrained": {
     "imageId": "i-wX39m6G",
     "series": "engrained",
-    "editionLimit": 50,
+    "editionLimit": 5,
     "sold": 0,
     "printed": 1,
     "soldBySize": {},
@@ -4661,7 +4661,7 @@
   "i-BmwzGg4:engrained": {
     "imageId": "i-BmwzGg4",
     "series": "engrained",
-    "editionLimit": 50,
+    "editionLimit": 5,
     "sold": 0,
     "printed": 1,
     "soldBySize": {},
@@ -4672,7 +4672,7 @@
   "i-4QZ7HPR:engrained": {
     "imageId": "i-4QZ7HPR",
     "series": "engrained",
-    "editionLimit": 50,
+    "editionLimit": 5,
     "sold": 0,
     "printed": 1,
     "soldBySize": {},
@@ -4683,7 +4683,7 @@
   "i-gM5crmq:engrained": {
     "imageId": "i-gM5crmq",
     "series": "engrained",
-    "editionLimit": 50,
+    "editionLimit": 5,
     "sold": 0,
     "printed": 1,
     "soldBySize": {},
@@ -4694,7 +4694,7 @@
   "i-nmDtVXP:engrained": {
     "imageId": "i-nmDtVXP",
     "series": "engrained",
-    "editionLimit": 50,
+    "editionLimit": 5,
     "sold": 0,
     "printed": 1,
     "soldBySize": {},
@@ -4705,7 +4705,7 @@
   "i-jL4Gk5N:engrained": {
     "imageId": "i-jL4Gk5N",
     "series": "engrained",
-    "editionLimit": 50,
+    "editionLimit": 5,
     "sold": 0,
     "printed": 1,
     "soldBySize": {},
@@ -4716,7 +4716,7 @@
   "i-swWgKsW:engrained": {
     "imageId": "i-swWgKsW",
     "series": "engrained",
-    "editionLimit": 50,
+    "editionLimit": 5,
     "sold": 0,
     "printed": 1,
     "soldBySize": {},
@@ -4727,7 +4727,7 @@
   "i-5VmRqpZ:engrained": {
     "imageId": "i-5VmRqpZ",
     "series": "engrained",
-    "editionLimit": 50,
+    "editionLimit": 5,
     "sold": 0,
     "printed": 1,
     "soldBySize": {},
@@ -4738,7 +4738,7 @@
   "i-hCk9fs9:engrained": {
     "imageId": "i-hCk9fs9",
     "series": "engrained",
-    "editionLimit": 50,
+    "editionLimit": 5,
     "sold": 0,
     "printed": 1,
     "soldBySize": {},
@@ -4749,7 +4749,7 @@
   "i-4pQCmVZ:engrained": {
     "imageId": "i-4pQCmVZ",
     "series": "engrained",
-    "editionLimit": 50,
+    "editionLimit": 5,
     "sold": 0,
     "printed": 1,
     "soldBySize": {},
@@ -4760,7 +4760,7 @@
   "i-vhmHCCM:engrained": {
     "imageId": "i-vhmHCCM",
     "series": "engrained",
-    "editionLimit": 50,
+    "editionLimit": 5,
     "sold": 0,
     "printed": 1,
     "soldBySize": {},
@@ -4771,7 +4771,7 @@
   "i-bVSh9xt:engrained": {
     "imageId": "i-bVSh9xt",
     "series": "engrained",
-    "editionLimit": 50,
+    "editionLimit": 5,
     "sold": 0,
     "printed": 1,
     "soldBySize": {},
@@ -4782,7 +4782,7 @@
   "i-rxQn29x:engrained": {
     "imageId": "i-rxQn29x",
     "series": "engrained",
-    "editionLimit": 50,
+    "editionLimit": 5,
     "sold": 0,
     "printed": 1,
     "soldBySize": {},
@@ -4793,7 +4793,7 @@
   "i-svbQj25:engrained": {
     "imageId": "i-svbQj25",
     "series": "engrained",
-    "editionLimit": 50,
+    "editionLimit": 5,
     "sold": 0,
     "printed": 1,
     "soldBySize": {},
@@ -4804,7 +4804,7 @@
   "i-zdvVgqx:engrained": {
     "imageId": "i-zdvVgqx",
     "series": "engrained",
-    "editionLimit": 50,
+    "editionLimit": 5,
     "sold": 0,
     "printed": 1,
     "soldBySize": {},
@@ -4815,7 +4815,7 @@
   "i-wV53528:engrained": {
     "imageId": "i-wV53528",
     "series": "engrained",
-    "editionLimit": 50,
+    "editionLimit": 5,
     "sold": 0,
     "printed": 1,
     "soldBySize": {},
@@ -4826,7 +4826,7 @@
   "i-B8sDF3M:engrained": {
     "imageId": "i-B8sDF3M",
     "series": "engrained",
-    "editionLimit": 50,
+    "editionLimit": 5,
     "sold": 0,
     "printed": 1,
     "soldBySize": {},
@@ -4837,7 +4837,7 @@
   "i-LdQzCRt:engrained": {
     "imageId": "i-LdQzCRt",
     "series": "engrained",
-    "editionLimit": 50,
+    "editionLimit": 5,
     "sold": 0,
     "printed": 1,
     "soldBySize": {},
@@ -4848,7 +4848,7 @@
   "i-8pfC4qn:engrained": {
     "imageId": "i-8pfC4qn",
     "series": "engrained",
-    "editionLimit": 50,
+    "editionLimit": 5,
     "sold": 0,
     "printed": 1,
     "soldBySize": {},
@@ -4859,7 +4859,7 @@
   "i-PnGsDQp:engrained": {
     "imageId": "i-PnGsDQp",
     "series": "engrained",
-    "editionLimit": 50,
+    "editionLimit": 5,
     "sold": 0,
     "printed": 1,
     "soldBySize": {},
@@ -4870,7 +4870,7 @@
   "i-G8gfsL5:engrained": {
     "imageId": "i-G8gfsL5",
     "series": "engrained",
-    "editionLimit": 50,
+    "editionLimit": 5,
     "sold": 0,
     "printed": 1,
     "soldBySize": {},
@@ -4881,7 +4881,7 @@
   "i-J6Gdmr4:engrained": {
     "imageId": "i-J6Gdmr4",
     "series": "engrained",
-    "editionLimit": 50,
+    "editionLimit": 5,
     "sold": 0,
     "printed": 1,
     "soldBySize": {},
@@ -4892,7 +4892,7 @@
   "i-x6rrj3V:engrained": {
     "imageId": "i-x6rrj3V",
     "series": "engrained",
-    "editionLimit": 50,
+    "editionLimit": 5,
     "sold": 0,
     "printed": 1,
     "soldBySize": {},
@@ -4903,7 +4903,7 @@
   "i-Lk9XZKB:engrained": {
     "imageId": "i-Lk9XZKB",
     "series": "engrained",
-    "editionLimit": 50,
+    "editionLimit": 5,
     "sold": 0,
     "printed": 1,
     "soldBySize": {},
@@ -4914,7 +4914,7 @@
   "i-gFTwXkq:engrained": {
     "imageId": "i-gFTwXkq",
     "series": "engrained",
-    "editionLimit": 50,
+    "editionLimit": 5,
     "sold": 0,
     "printed": 1,
     "soldBySize": {},

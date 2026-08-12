@@ -9,6 +9,14 @@ const EDGE_ANALYTICS_ORIGIN = 'https://edge.k4studios.com';
 const TRACK_ENDPOINT = `${EDGE_ANALYTICS_ORIGIN}/__k4e`;
 const VISITOR_STORAGE_KEY = 'k4_vid';
 const VISITOR_WINDOW_KEY = '__K4_VISITOR_ID';
+const SESSION_TIMEOUT_MS = 30 * 60 * 1000;
+const SESSION_TIMEOUT_SECONDS = Math.floor(SESSION_TIMEOUT_MS / 1000);
+const SESSION_ID_KEY = 'k4_session_id';
+const SESSION_LAST_ACTIVITY_KEY = 'k4_session_last_activity';
+const ENTRY_REFERRER_KEY = 'k4_entry_referrer';
+const CAMPAIGN_ATTRIBUTION_KEY = 'k4_campaign_attribution';
+const PREVIOUS_PAGE_KEY = 'k4_previous_page';
+const PAGE_INSTANCE_ID = safeRandomId();
 
 let inMemorySessionId: string | null = null;
 let inMemoryVisitorId: string | null = null;
@@ -44,15 +52,28 @@ function shouldRotateSessionForProdEntry(): boolean {
     || referrerHostname.startsWith('localhost:');
 }
 
-function persistSessionId(sessionId: string): string {
-  inMemorySessionId = sessionId;
+function clearSessionAttribution(): void {
   try {
-    sessionStorage.setItem('k4_session_id', sessionId);
     sessionStorage.removeItem('k4_event_order');
+    sessionStorage.removeItem(ENTRY_REFERRER_KEY);
+    sessionStorage.removeItem(CAMPAIGN_ATTRIBUTION_KEY);
+    sessionStorage.removeItem(PREVIOUS_PAGE_KEY);
   } catch {
     // ignore
   }
-  setK4Cookie('k4_sid', sessionId);
+}
+
+function persistSessionId(sessionId: string, now: number, rotated = false): string {
+  inMemorySessionId = sessionId;
+  try {
+    sessionStorage.setItem(SESSION_ID_KEY, sessionId);
+    sessionStorage.setItem(SESSION_LAST_ACTIVITY_KEY, String(now));
+  } catch {
+    // ignore
+  }
+  if (rotated) clearSessionAttribution();
+  setK4Cookie('k4_sid', sessionId, SESSION_TIMEOUT_SECONDS);
+  setK4Cookie('k4_session_last_activity', String(now), SESSION_TIMEOUT_SECONDS);
   return sessionId;
 }
 
@@ -120,44 +141,53 @@ function getBuildId(): string | null {
   return typeof w.__K4_BUILD_ID === 'string' ? w.__K4_BUILD_ID : null;
 }
 
-// Session ID persists for the browser session
+function parseActivityTimestamp(raw: string | null): number | null {
+  if (!raw) return null;
+  const value = Number(raw);
+  return Number.isFinite(value) && value > 0 ? value : null;
+}
+
+// Session ID rotates after 30 minutes without a tracked event.
 function getSessionId(): string {
   if (typeof window === 'undefined') return '';
 
+  const now = Date.now();
   if (shouldRotateSessionForProdEntry()) {
-    return persistSessionId(safeRandomId());
+    return persistSessionId(safeRandomId(), now, true);
   }
 
-  const cookieSessionId = getCookie('k4_sid');
-  if (cookieSessionId) {
-    return persistSessionId(cookieSessionId);
-  }
-
-  // Prefer sessionStorage (best for session continuity), but never crash if unavailable.
+  let storedSessionId: string | null = null;
+  let storedLastActivity: number | null = null;
   try {
-    let sessionId = sessionStorage.getItem('k4_session_id');
-    if (!sessionId) {
-      sessionId = safeRandomId();
-      return persistSessionId(sessionId);
-    }
-    return persistSessionId(sessionId);
+    storedSessionId = sessionStorage.getItem(SESSION_ID_KEY);
+    storedLastActivity = parseActivityTimestamp(sessionStorage.getItem(SESSION_LAST_ACTIVITY_KEY));
   } catch {
-    // Fallback: keep stable ID for this JS runtime.
-    if (!inMemorySessionId) {
-      return persistSessionId(safeRandomId());
-    }
-    return inMemorySessionId;
+    // ignore
   }
+
+  const sessionId = getCookie('k4_sid') || storedSessionId || inMemorySessionId;
+  const lastActivity = parseActivityTimestamp(getCookie('k4_session_last_activity')) || storedLastActivity;
+
+  // Accept a legacy session with no activity marker once, then begin rolling expiry.
+  if (sessionId && (lastActivity === null || now - lastActivity <= SESSION_TIMEOUT_MS)) {
+    return persistSessionId(sessionId, now);
+  }
+
+  return persistSessionId(safeRandomId(), now, true);
 }
 
 // Event order counter - increments per session to track event sequence
 function getNextEventOrder(): number {
   if (typeof window === 'undefined') return 0;
-  
-  const current = parseInt(sessionStorage.getItem('k4_event_order') || '0', 10);
-  const next = current + 1;
-  sessionStorage.setItem('k4_event_order', next.toString());
-  return next;
+
+  try {
+    const current = parseInt(sessionStorage.getItem('k4_event_order') || '0', 10);
+    const next = current + 1;
+    sessionStorage.setItem('k4_event_order', next.toString());
+    return next;
+  } catch {
+    return 0;
+  }
 }
 
 // Read cookies written by the browser-side bridge.
@@ -282,17 +312,102 @@ function syncClarityIdentity(): void {
 function getEntryReferrer(): string | null {
   if (typeof window === 'undefined') return null;
 
-  // Use cached sessionStorage value when available so SPA navigation and later
-  // beacons keep the original external entry source for the tab.
-  const cached = sessionStorage.getItem('k4_entry_referrer');
-  if (cached !== null) {
-    return cached || null;
-  }
+  try {
+    // Use cached sessionStorage value when available so later events retain the
+    // original source without confusing it with the immediate document referrer.
+    const cached = sessionStorage.getItem(ENTRY_REFERRER_KEY);
+    if (cached !== null) {
+      return cached || null;
+    }
 
-  // Last resort: document.referrer (least reliable)
-  const entryReferrer = document.referrer || '';
-  sessionStorage.setItem('k4_entry_referrer', entryReferrer);
-  return entryReferrer || null;
+    const entryReferrer = document.referrer || '';
+    sessionStorage.setItem(ENTRY_REFERRER_KEY, entryReferrer);
+    return entryReferrer || null;
+  } catch {
+    return document.referrer || null;
+  }
+}
+
+interface CampaignAttribution {
+  utm_source: string | null;
+  utm_medium: string | null;
+  utm_campaign: string | null;
+  utm_content: string | null;
+  utm_term: string | null;
+}
+
+function getCampaignAttribution(): CampaignAttribution {
+  const empty: CampaignAttribution = {
+    utm_source: null,
+    utm_medium: null,
+    utm_campaign: null,
+    utm_content: null,
+    utm_term: null
+  };
+  if (typeof window === 'undefined') return empty;
+
+  try {
+    const cached = sessionStorage.getItem(CAMPAIGN_ATTRIBUTION_KEY);
+    if (cached) {
+      return { ...empty, ...JSON.parse(cached) };
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const current: CampaignAttribution = {
+      utm_source: params.get('utm_source'),
+      utm_medium: params.get('utm_medium'),
+      utm_campaign: params.get('utm_campaign'),
+      utm_content: params.get('utm_content'),
+      utm_term: params.get('utm_term')
+    };
+    const hasCurrentCampaign = Object.values(current).some(Boolean);
+    if (hasCurrentCampaign) {
+      sessionStorage.setItem(CAMPAIGN_ATTRIBUTION_KEY, JSON.stringify(current));
+      return current;
+    }
+
+    return empty;
+  } catch {
+    return empty;
+  }
+}
+
+function getPreviousPage(): string | null {
+  try {
+    return sessionStorage.getItem(PREVIOUS_PAGE_KEY);
+  } catch {
+    return null;
+  }
+}
+
+function rememberPage(pagePath: string): void {
+  try {
+    sessionStorage.setItem(PREVIOUS_PAGE_KEY, pagePath);
+  } catch {
+    // ignore
+  }
+}
+
+function getNavigationType(): string | null {
+  try {
+    const entry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming | undefined;
+    return entry?.type || null;
+  } catch {
+    return null;
+  }
+}
+
+function getAttributionPayload() {
+  const entryReferrer = getEntryReferrer();
+  return {
+    referrer: entryReferrer,
+    entry_referrer: entryReferrer,
+    document_referrer: (typeof document !== 'undefined') ? (document.referrer || null) : null,
+    previous_page: getPreviousPage(),
+    navigation_type: getNavigationType(),
+    page_instance_id: PAGE_INSTANCE_ID,
+    ...getCampaignAttribution()
+  };
 }
 
 interface TrackContext {
@@ -582,11 +697,10 @@ export function trackEvent(event: string, context: TrackContext = {}): void {
 
   try {
 
-  // Use the ORIGINAL entry referrer for the session (not current document.referrer)
-  const entryReferrer = getEntryReferrer();
-
   // Capture current page path
   const pagePath = window.location.pathname;
+  const sessionId = getSessionId();
+  const attribution = getAttributionPayload();
 
   // Robust defaults: infer context from URL if caller didn't pass it.
   const inferredImageId = context.imageId ?? getImageIdFromPath(pagePath);
@@ -631,7 +745,7 @@ export function trackEvent(event: string, context: TrackContext = {}): void {
   }
 
   const payload = JSON.stringify({
-    session_id: getSessionId(),
+    session_id: sessionId,
     visitor_id: getVisitorId() || null,
     event,
     gallery_id: inferredGalleryId || null,
@@ -640,16 +754,18 @@ export function trackEvent(event: string, context: TrackContext = {}): void {
     page_type: inferredPageType || null,
     theme: context.theme || null,
     trigger: context.trigger || null,
-    referrer: entryReferrer,
+    ...attribution,
     page_path: pagePath,
     host: (typeof window !== 'undefined') ? window.location.host : null,
-    document_referrer: (typeof document !== 'undefined') ? (document.referrer || null) : null,
     build: getBuildId(),
     event_ts_ms: Date.now(),        // Client timestamp for timing analysis
     event_order: getNextEventOrder() // Event sequence within session
   });
 
   sendTrackingPayload(payload, event);
+  if (event === 'page_view') {
+    rememberPage(pagePath);
+  }
 
   } catch (e) {
     if (isK4Debug()) {
@@ -1126,6 +1242,36 @@ let currentPageContext: {
 } | null = null;
 
 let sessionExitFired = false;
+let engagedMs = 0;
+let visibleSinceMs: number | null = (typeof document !== 'undefined' && document.visibilityState !== 'hidden')
+  ? Date.now()
+  : null;
+
+function captureEngagedMs(): number {
+  const now = Date.now();
+  if (visibleSinceMs !== null) {
+    engagedMs += Math.max(0, now - visibleSinceMs);
+    visibleSinceMs = null;
+  }
+  return Math.round(engagedMs);
+}
+
+function buildPageLifecyclePayload(event: 'page_engagement' | 'session_exit'): string | null {
+  if (!currentPageContext) return null;
+  return JSON.stringify({
+    session_id: getSessionId(),
+    visitor_id: getVisitorId() || null,
+    event,
+    gallery_id: currentPageContext.galleryId,
+    image_id: currentPageContext.imageId,
+    page_type: currentPageContext.pageType,
+    page_path: currentPageContext.pagePath,
+    engaged_ms: captureEngagedMs(),
+    ...getAttributionPayload(),
+    event_ts_ms: Date.now(),
+    event_order: getNextEventOrder()
+  });
+}
 
 /**
  * Update the current page context - call this on navigation
@@ -1160,19 +1306,14 @@ export function updatePageContext(): void {
 function fireSessionExit(): void {
   if (sessionExitFired || !currentPageContext) return;
   sessionExitFired = true;
-  
-  const payload = JSON.stringify({
-    session_id: getSessionId(),
-    event: 'session_exit',
-    gallery_id: currentPageContext.galleryId,
-    image_id: currentPageContext.imageId,
-    page_type: currentPageContext.pageType,
-    page_path: currentPageContext.pagePath,
-    event_ts_ms: Date.now(),
-    event_order: getNextEventOrder()
-  });
-  
-  sendTrackingPayload(payload, 'session_exit');
+
+  const payload = buildPageLifecyclePayload('session_exit');
+  if (payload) sendTrackingPayload(payload, 'session_exit');
+}
+
+function reportPageEngagement(): void {
+  const payload = buildPageLifecyclePayload('page_engagement');
+  if (payload) sendTrackingPayload(payload, 'page_engagement');
 }
 
 // Set up session exit listeners
@@ -1180,10 +1321,13 @@ if (typeof window !== 'undefined') {
   // Update context on initial load
   updatePageContext();
   
-  // Fire on visibility change (tab close, navigate away)
+  // Record active time whenever the page becomes hidden. The pagehide event
+  // remains the single source of the exit row, avoiding duplicate exit counts.
   document.addEventListener('visibilitychange', () => {
     if (document.visibilityState === 'hidden') {
-      fireSessionExit();
+      reportPageEngagement();
+    } else if (visibleSinceMs === null) {
+      visibleSinceMs = Date.now();
     }
   });
   

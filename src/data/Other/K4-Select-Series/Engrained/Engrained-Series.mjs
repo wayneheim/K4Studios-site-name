@@ -72,7 +72,7 @@ export const galleryData = [
 
     "contentSource": "ai",
     "first_seen": "2026-01-22",
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": `16" X 24"`,
     "price": "$1650",
     "linkedImageId": "i-8Ddjt5W",
@@ -137,7 +137,7 @@ export const galleryData = [
 
     "contentSource": "ai",
     "first_seen": "2026-01-22",
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": `18" X 24"`,
     "price": "$1650",
     "linkedImageId": "i-Vr8vzjt",
@@ -210,7 +210,7 @@ export const galleryData = [
 
     "contentSource": "ai",
     "first_seen": "2026-01-22",
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": `30" X 20"`,
     "price": "$2200",
     "linkedImageId": "i-LL2Gp5r",
@@ -275,7 +275,7 @@ export const galleryData = [
 
     "contentSource": "ai",
     "first_seen": "2026-01-22",
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": `16" X 20"`,
     "price": "$1100",
     "linkedImageId": "i-rfFBRQM",
@@ -340,7 +340,7 @@ export const galleryData = [
 
     "contentSource": "ai",
     "first_seen": "2026-01-22",
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": `18" X 30"`,
     "price": "$1850",
     "linkedImageId": "i-B7ZSdfs",
@@ -407,7 +407,7 @@ export const galleryData = [
 
     "contentSource": "ai",
     "first_seen": "2026-01-22",
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": `18" X 24"`,
     "price": "$1650",
     "linkedImageId": "i-T7TFJX2",
@@ -481,7 +481,7 @@ export const galleryData = [
 
     "contentSource": "ai",
     "first_seen": "2026-01-22",
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": `16" X 20"`,
     "price": "$1100",
     "linkedImageId": "i-kQfftQ2",
@@ -548,7 +548,7 @@ export const galleryData = [
 
     "contentSource": "ai",
     "first_seen": "2026-01-22",
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": `36" X 26"`,
     "price": "$3750",
     "linkedImageId": "i-7VWX9vk",
@@ -615,7 +615,7 @@ export const galleryData = [
 
     "contentSource": "ai",
     "first_seen": "2026-01-22",
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": `30" X 22"`,
     "price": "$2200",
     "linkedImageId": "i-trZrk2w",
@@ -693,7 +693,7 @@ export const galleryData = [
 
     "contentSource": "ai",
     "first_seen": "2026-01-22",
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": `30" X 50"`,
     "price": "$6600",
     "linkedImageId": "i-c5K798H",
@@ -762,7 +762,7 @@ export const galleryData = [
 
     "contentSource": "ai",
     "first_seen": "2026-01-22",
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": `16" X 20"`,
     "price": "$1100",
     "linkedImageId": "i-hMXZ8Xh",
@@ -840,7 +840,7 @@ export const galleryData = [
 
     "contentSource": "ai",
     "first_seen": "2026-01-22",
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": `16" X 36"`,
     "price": "$2000",
     "linkedImageId": "i-qVZ9m7j",
@@ -918,7 +918,7 @@ export const galleryData = [
 
     "contentSource": "ai",
     "first_seen": "2026-01-22",
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": `16" X 20"`,
     "price": "$1100",
     "linkedImageId": "i-TLDkd5q",
@@ -987,7 +987,7 @@ export const galleryData = [
 
     "contentSource": "ai",
     "first_seen": "2026-01-22",
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": `16" X 36"`,
     "price": "$2000",
     "linkedImageId": "i-G7csptc",
@@ -1052,7 +1052,7 @@ export const galleryData = [
 
     "contentSource": "ai",
     "first_seen": "2026-01-22",
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": `42" X 30"`,
     "price": "$5900",
     "linkedImageId": "i-7Mzzbvp",
@@ -1117,7 +1117,7 @@ export const galleryData = [
 
     "contentSource": "ai",
     "first_seen": "2026-01-22",
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": `36" X 26"`,
     "price": "$3750",
     "linkedImageId": "i-Wx5scCf",
@@ -1184,7 +1184,7 @@ export const galleryData = [
 
     "contentSource": "ai",
     "first_seen": "2026-01-22",
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": `24" X 36"`,
     "price": "$3300",
     "linkedImageId": "i-6Ffpw9t",
@@ -1252,7 +1252,7 @@ export const galleryData = [
 
     "contentSource": "ai",
     "first_seen": "2026-01-22",
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": `16" X 24"`,
     "price": "$1650",
     "linkedImageId": "i-jcLJT4J",
@@ -1316,7 +1316,7 @@ export const galleryData = [
 
     "contentSource": "ai",
     "first_seen": "2026-01-22",
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": `16" X 24"`,
     "price": "$1650",
     "linkedImageId": "i-bq4FKvX",
@@ -1385,7 +1385,7 @@ export const galleryData = [
 
     "contentSource": "ai",
     "first_seen": "2026-01-22",
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": `42" X 20"`,
     "price": "$3500",
     "linkedImageId": "i-Nn7scqm",
@@ -1469,7 +1469,7 @@ export const galleryData = [
 
     "contentSource": "ai",
     "first_seen": "2026-01-22",
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": `18" X 30"`,
     "price": "$1850",
     "linkedImageId": "i-LCspRF4",
@@ -1535,7 +1535,7 @@ export const galleryData = [
 
     "contentSource": "ai",
     "first_seen": "2026-01-22",
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": `16" X 20"`,
     "price": "$1100",
     "linkedImageId": "i-HBRmWg4",
@@ -1605,7 +1605,7 @@ export const galleryData = [
 
     "contentSource": "ai",
     "first_seen": "2026-01-22",
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": `16" X 24"`,
     "price": "$1650",
     "linkedImageId": "i-RsLmsLZ",
@@ -1673,7 +1673,7 @@ export const galleryData = [
 
     "contentSource": "ai",
     "first_seen": "2026-01-22",
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": `34" X 20"`,
     "price": "$2600",
     "linkedImageId": "i-89qzJ6S",
@@ -1739,7 +1739,7 @@ export const galleryData = [
 
     "contentSource": "ai",
     "first_seen": "2026-01-22",
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": `16" x 24"`,
     "price": "$1650",
     "linkedImageId": "i-MHGPvcs",
@@ -1788,7 +1788,7 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 21,
     "first_seen": "2026-01-22",
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": `12" × 36"`,
     "price": "$800",
     "linkedImageId": "i-4cLQTsM",
@@ -1848,7 +1848,7 @@ export const galleryData = [
     },
 
     "contentSource": "ai",
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": `20" × 24"`,
     "price": "$1650",
     "linkedImageId": "i-w3JBvXs",
@@ -1904,7 +1904,7 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 19,
     "contentSource": "ai",
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": `40" × 22"`,
     "price": "$3000",
     "linkedImageId": "i-6PzCQW9",
@@ -1953,7 +1953,7 @@ export const galleryData = [
 
     "visibility": "show",
     "sortOrder": 18,
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": `12" × 24"`,
     "price": "$1100",
     "linkedImageId": "i-Q2NXpjG",
@@ -2004,7 +2004,7 @@ export const galleryData = [
 
     "visibility": "show",
     "sortOrder": 17,
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": `20" × 30"`,
     "price": "$2200",
     "linkedImageId": "i-6VQKFs5",
@@ -2054,7 +2054,7 @@ export const galleryData = [
 
     "visibility": "show",
     "sortOrder": 16,
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": `24" × 36"`,
     "price": "$3300",
     "linkedImageId": "i-N226DMX",
@@ -2110,7 +2110,7 @@ export const galleryData = [
 
     "visibility": "show",
     "sortOrder": 15,
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": `24" × 36"`,
     "price": "$3000",
     "linkedImageId": "i-JqwF5sW",
@@ -2159,7 +2159,7 @@ export const galleryData = [
 
     "visibility": "show",
     "sortOrder": 14,
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": `20" × 40"`,
     "price": "$2900",
     "linkedImageId": "i-jWDDpC4",
@@ -2216,7 +2216,7 @@ export const galleryData = [
 
     "visibility": "show",
     "sortOrder": 13,
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": `12" × 24"`,
     "price": "$1100",
     "linkedImageId": "i-8JHmjF9",
@@ -2266,7 +2266,7 @@ export const galleryData = [
 
     "visibility": "show",
     "sortOrder": 12,
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": `12" × 36"`,
     "price": "$1650",
     "linkedImageId": "i-b6dRFxv",
@@ -2317,7 +2317,7 @@ export const galleryData = [
 
     "visibility": "show",
     "sortOrder": 11,
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": `40" × 24"`,
     "price": "$3200",
     "linkedImageId": "i-73H3wLV",
@@ -2374,7 +2374,7 @@ export const galleryData = [
 
     "visibility": "show",
     "sortOrder": 10,
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": `40" × 30"`,
     "price": "$4200",
     "linkedImageId": "i-bfKMXS9",
@@ -2439,7 +2439,7 @@ export const galleryData = [
       "lore-and-legacy": 6
     },
 
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": `40" × 30"`,
     "price": "$4500",
     "linkedImageId": "i-fCG2nm8",
@@ -2502,7 +2502,7 @@ export const galleryData = [
       "lore-and-legacy": 20
     },
 
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": `24" × 36"`,
     "price": "$3300",
     "linkedImageId": "i-JKnW497",
@@ -2565,7 +2565,7 @@ export const galleryData = [
       "lore-and-legacy": 16
     },
 
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": `16" × 36"`,
     "price": "$2000",
     "linkedImageId": "i-mLPgSpC",
@@ -2646,7 +2646,7 @@ export const galleryData = [
       "lore-and-legacy": 22
     },
 
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": `24" × 36"`,
     "price": "$3300",
     "linkedImageId": "i-44jcjTQ",
@@ -2709,7 +2709,7 @@ export const galleryData = [
     },
 
     "contentSource": "ai",
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": `16" × 36"`,
     "price": "$2000",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Spk5gdH/8/MmjhWHz9gsBVmXmJRjHjhdntvnrd3L7cfMHQVkgtT/XL/Cowboy-One-Last-Look-ws-XL.jpg",
@@ -2783,7 +2783,7 @@ export const galleryData = [
       "lore-and-legacy": 24
     },
 
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": `12" × 24"`,
     "price": "$1100",
     "linkedImageId": "i-5FX3W9r",
@@ -2846,7 +2846,7 @@ export const galleryData = [
     },
 
     "contentSource": "ai",
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": `24" × 36"`,
     "price": "$3300",
     "linkedImageId": "i-ncFcHDM",
@@ -2901,7 +2901,7 @@ export const galleryData = [
 
     "visibility": "show",
     "sortOrder": 2,
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": `24" × 36"`,
     "price": "$1600",
     "linkedImageId": "i-fM9qmKW",
@@ -2958,7 +2958,7 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 1,
     "contentSource": "ai",
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": `12" × 36"`,
     "price": "$800",
     "linkedImageId": "i-pNSX6cp",
@@ -3014,7 +3014,7 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 0,
     "contentSource": "ai",
-    "editionSize": 50,
+    "editionSize": 5,
     "imageSize": `20" × 24"`,
     "price": "$1600",
     "linkedImageId": "i-xhX479V",

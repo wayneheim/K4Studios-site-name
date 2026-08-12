@@ -5,6 +5,10 @@ import EngrainedStatusPanel from "./EngrainedStatusPanel.jsx";
 import SectionKeywordSuggestions from "./SectionKeywordSuggestions.jsx";
 import { generateSmartMetadata } from "../utils/autoTextGenerator.mjs";
 import { normalizeImageSrc } from "../utils/imageProxy.js";
+import {
+  getConfiguredSeries,
+  getEffectiveSeries as resolveEffectiveSeries,
+} from "../data/seriesAvailability.js";
 
 /* ---------- config: add more roots here if needed ---------- */
 const DATA_ROOTS = [
@@ -208,8 +212,8 @@ const btnBlue = "bg-blue-300 border-blue-700 text-black";
 const SERIES_DEFINITIONS = {
   sketch: { label: "Sketch", limit: null, description: "Open edition, 5×7 only" },
   foundation: { label: "Foundation", limit: null, description: "Open edition, larger formats" },
-  chronicle: { label: "Chronicle", limit: 100, description: "Limited edition of 100" },
-  legend: { label: "Legend", limit: 12, description: "Limited edition of 12" },
+  chronicle: { label: "Chronicle", limit: 50, description: "Limited edition of 50" },
+  legend: { label: "Legend", limit: 25, description: "Limited edition of 25" },
 };
 
 /* ---------- Available Sizes per Series (from pricingConfig.json) ---------- */
@@ -223,12 +227,13 @@ const SERIES_SIZES = {
 
 /* ---------- Series Resolution Logic ---------- */
 function getEffectiveSeries(image) {
-  const series = image?.availableSeries ? [...image.availableSeries] : [];
-  // Sketch is ALWAYS included unless explicitly suppressed
-  if (!image?.noSketch && !series.includes("sketch")) {
-    series.unshift("sketch");
-  }
-  return series;
+  return resolveEffectiveSeries(image);
+}
+
+function getStoredSeriesTiers(image) {
+  const baseTiers = getConfiguredSeries(image)
+    .filter(t => ["foundation", "chronicle", "legend"].includes(t));
+  return image?.noSketch ? baseTiers : ["sketch", ...baseTiers];
 }
 
 /* ---------- Per-Size Edition Tracker (P/S/I boxes for each size) ---------- */
@@ -495,7 +500,8 @@ function SeriesStatusPanel({ current, backupMade, onUpdate, onSave, onOpenPricin
       onUpdate("noSketch", !current.noSketch);
       setPendingSeriesChange(true);
     } else {
-      const currentSeries = current.availableSeries || [];
+      const currentSeries = getConfiguredSeries(current)
+        .filter(s => ["foundation", "chronicle", "legend"].includes(s));
       let newSeries;
       if (currentSeries.includes(seriesKey)) {
         newSeries = currentSeries.filter(s => s !== seriesKey);
@@ -599,8 +605,7 @@ function SeriesStatusPanel({ current, backupMade, onUpdate, onSave, onOpenPricin
       
       // NOW register the series (saves tiers + excludeSizes)
       // This write to seriesRegistry.json will trigger HMR, but P/S is already saved
-      const baseTiers = (current.availableSeries || []).filter(t => ["foundation", "chronicle", "legend"].includes(t));
-      const storedTiers = current.noSketch ? baseTiers : ["sketch", ...baseTiers];
+      const storedTiers = getStoredSeriesTiers(current);
       
       const regRes = await fetch("/.netlify/functions/seriesRegistry", {
         method: "POST",
@@ -1065,15 +1070,14 @@ export default function GalleryEditorPro() {
               
               // Only hydrate foundation/chronicle/legend - sketch status comes from .mjs noSketch field
               const availableSeries = tiers.filter(t => ["foundation", "chronicle", "legend"].includes(t));
-              if (availableSeries.length > 0) {
-                return { 
-                  ...img, 
-                  availableSeries,
-                  _seriesId: seriesId, // Track for display
-                  _excludeSizes: excludeSizes, // Hydrate excludeSizes from registry
-                  _needsResave: foundInOtherGallery 
-                };
-              }
+              return {
+                ...img,
+                availableSeries,
+                _hasSeriesOverride: true,
+                _seriesId: seriesId, // Track for display
+                _excludeSizes: excludeSizes, // Hydrate excludeSizes from registry
+                _needsResave: foundInOtherGallery
+              };
             }
             return img;
           });
@@ -1488,8 +1492,7 @@ ${collectorNotes}`;
       if (!res.ok) throw new Error(await res.text());
       
       // Register series (same logic as saveImageById)
-      const baseTiers = (updatedItem.availableSeries || []).filter(t => ["foundation", "chronicle", "legend"].includes(t));
-      const storedTiers = updatedItem.noSketch ? baseTiers : ["sketch", ...baseTiers];
+      const storedTiers = getStoredSeriesTiers(updatedItem);
       try {
         await fetch("/.netlify/functions/seriesRegistry", {
           method: "POST",
@@ -1632,8 +1635,7 @@ ${collectorNotes}`;
       // Register series (all tiers including sketch, skip if batch already handled it)
       if (!options.skipSeriesRegistration) {
         // Build tiers: foundation/chronicle/legend from availableSeries, plus sketch if not disabled
-        const baseTiers = (imageData.availableSeries || []).filter(t => ["foundation", "chronicle", "legend"].includes(t));
-        const storedTiers = imageData.noSketch ? baseTiers : ["sketch", ...baseTiers];
+        const storedTiers = getStoredSeriesTiers(imageData);
         // Always call register to update tiers (including removing limited tiers)
         try {
           await fetch("/.netlify/functions/seriesRegistry", {
@@ -1708,8 +1710,7 @@ ${collectorNotes}`;
       const img = data.find(d => d.id === id);
       if (img) {
         // Build tiers: foundation/chronicle/legend from availableSeries, plus sketch if not disabled
-        const baseTiers = (img.availableSeries || []).filter(t => ["foundation", "chronicle", "legend"].includes(t));
-        const storedTiers = img.noSketch ? baseTiers : ["sketch", ...baseTiers];
+        const storedTiers = getStoredSeriesTiers(img);
         // Always include in batch - server will handle updates including tier removals
         seriesBatch.push({
           imageId: img.id,
@@ -1848,8 +1849,7 @@ ${collectorNotes}`;
       
       // Register series (all tiers including sketch)
       // Build tiers: foundation/chronicle/legend from availableSeries, plus sketch if not disabled
-      const baseTiers = (current.availableSeries || []).filter(t => ["foundation", "chronicle", "legend"].includes(t));
-      const storedTiers = current.noSketch ? baseTiers : ["sketch", ...baseTiers];
+      const storedTiers = getStoredSeriesTiers(current);
       if (storedTiers.length > 0) {
         try {
           await fetch("/.netlify/functions/seriesRegistry", {

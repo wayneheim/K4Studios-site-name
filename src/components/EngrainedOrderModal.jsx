@@ -209,7 +209,12 @@ export default function EngrainedOrderModal({ isOpen, onClose, image, trackEvent
                       if (editionSize || imageSize || price || availability || shipping) {
                         return (
                           <div className="space-y-1">
-                            {editionSize && <p style={{ color: "#1b1a19" }}>• Limited Edition: {editionSize}</p>}
+                            {editionSize && (
+                              <p style={{ color: "#1b1a19" }}>
+                                • Limited Edition: {editionSize}
+                                <span className="text-xs text-gray-500"> (+1 Artist Proof)</span>
+                              </p>
+                            )}
                             {imageSize && <p style={{ color: "#1b1a19" }}>• Size: {imageSize}</p>}
                             {price && <p style={{ color: "#1b1a19" }}>• Price: {price}</p>}
                             {availability && <p style={{ color: "#1b1a19" }}>• Availability: {availability}</p>}
@@ -226,7 +231,12 @@ export default function EngrainedOrderModal({ isOpen, onClose, image, trackEvent
                       if (pricingMatches && pricingMatches.length > 0) {
                         return (
                           <div className="space-y-1">
-                            {limitedEdition && <p style={{ color: "#1b1a19" }}>• Limited Edition: {limitedEdition[1]}</p>}
+                            {limitedEdition && (
+                              <p style={{ color: "#1b1a19" }}>
+                                • Limited Edition: {limitedEdition[1]}
+                                <span className="text-xs text-gray-500"> (+1 Artist Proof)</span>
+                              </p>
+                            )}
                             {sizeMatches && sizeMatches.length > 0 && (
                               <p style={{ color: "#1b1a19" }}>• Size: {sizeMatches[0].replace(/x/g, " × ")}</p>
                             )}
@@ -246,6 +256,9 @@ export default function EngrainedOrderModal({ isOpen, onClose, image, trackEvent
                       );
                     })()}
                   </div>
+                  <p className="mt-3 border-t border-gray-200 pt-2 text-xs italic leading-relaxed text-gray-500">
+                    * Legacy Engrained editions originally designated /50 are now permanently capped at five numbered works per image.
+                  </p>
                 </div>
 
                 <div className="p-4 rounded-lg" style={{ backgroundColor: "#cfd1c8ff" }}>
