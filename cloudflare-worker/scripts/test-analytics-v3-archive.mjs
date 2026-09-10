@@ -53,6 +53,8 @@ assert.equal(summary.counts.email_clicks, 1, 'email order clicks should roll up 
 assert.ok(summary.actions.some((row) => row.label === 'Order clicked — SmugMug' && row.count === 1), 'SmugMug clicks should appear in Actions');
 assert.ok(summary.actions.some((row) => row.label === 'Order clicked — email' && row.count === 1), 'email clicks should appear in Actions');
 assert.ok(html.includes('SmugMug: 1') && html.includes('Email: 1'), 'image rows should show both order destinations');
+assert.ok(html.includes('class="page-link" href="https://www.k4studios.com/" target="_blank" rel="noopener noreferrer"'), 'entry and site page rows should link to K4 in a new tab');
+assert.ok(html.includes("font:15px/1.45 'Glegoo',serif"), 'dashboard should use the K4 Glegoo typeface');
 assert.ok(!html.includes('harvester_friction'), 'diagnostic data must not be embedded in the initial report');
 assert.ok(html.includes('Load diagnostics'), 'manual diagnostic gate must be present');
 assert.ok(html.includes('Update with new rows'), 'cursor update control must be present');
