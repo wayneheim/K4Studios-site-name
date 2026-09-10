@@ -6,7 +6,8 @@ export const V3_CORE_EVENT_TYPES = Object.freeze([
   'browse_all_image_click', 'gallery_explore_click', 'exit_to_gallery',
   'theme_click', 'all_list_click', 'story_audio_toggle', 'story_slider_click',
   'frontier_story_video_widget_click', 'guide_open', 'guide_close', 'guide_done',
-  'guide_click_outside', 'order_clicked', 'order_submitted', 'xl_zoom',
+  'guide_click_outside', 'order_clicked', 'order_submitted',
+  'order_smugmug_clicked', 'order_email_clicked', 'xl_zoom',
   'series_info', 'more_info_open', 'collector_notes_open', 'slideshow_start'
 ]);
 
@@ -61,7 +62,9 @@ export function getV3AcquisitionLabel(referer) {
 
 export function getV3ActionLabel(type) {
   return ({
-    order_clicked: 'Pricing opened', order_submitted: 'Order submitted',
+    order_clicked: 'Pricing opened', order_submitted: 'Order choice clicked (legacy)',
+    order_smugmug_clicked: 'Order clicked — SmugMug',
+    order_email_clicked: 'Order clicked — email',
     grid_open: 'Grid opened', grid_image_click: 'Grid image clicked',
     gallery_preview_click: 'Gallery preview clicked', gallery_hero_click: 'Gallery hero clicked',
     browse_all_click: 'Browse all clicked', browse_all_image_click: 'Browse-all image clicked',
@@ -77,7 +80,7 @@ export function getV3ActionLabel(type) {
 }
 
 export function getV3ActionGroup(type) {
-  if (['order_clicked', 'order_submitted'].includes(type)) return 'Commerce';
+  if (['order_clicked', 'order_submitted', 'order_smugmug_clicked', 'order_email_clicked'].includes(type)) return 'Commerce';
   if (type.startsWith('grid_')) return 'Grid';
   if (type.startsWith('gallery_') || ['browse_all_click', 'browse_all_image_click', 'theme_click', 'all_list_click', 'exit_to_gallery'].includes(type)) return 'Gallery';
   if (['nav_next', 'nav_prev', 'sister_image_click', 'cowboy_jump', 'picture_shows_jump', 'presentation_last_image_back_to_start'].includes(type)) return 'Image navigation';
@@ -129,12 +132,14 @@ export function buildV3RollupBatch(rows) {
     const day = easternDay(row.ts);
     if (!day) continue;
     accepted += 1;
-    const metric = daily.get(day) || { day, pageViews: 0, imageViews: 0, pricingOpens: 0, orderSubmits: 0, coreEvents: 0 };
+    const metric = daily.get(day) || { day, pageViews: 0, imageViews: 0, pricingOpens: 0, orderSubmits: 0, smugmugClicks: 0, emailClicks: 0, coreEvents: 0 };
     metric.coreEvents += 1;
     if (row.event_type === 'page_view') metric.pageViews += 1;
     if (row.event_type === 'chapter_view') metric.imageViews += 1;
     if (row.event_type === 'order_clicked') metric.pricingOpens += 1;
     if (row.event_type === 'order_submitted') metric.orderSubmits += 1;
+    if (row.event_type === 'order_smugmug_clicked') metric.smugmugClicks += 1;
+    if (row.event_type === 'order_email_clicked') metric.emailClicks += 1;
     daily.set(day, metric);
 
     const engaged = V3_ENGAGEMENT_EVENT_TYPES.has(row.event_type) ? 1 : 0;
@@ -159,13 +164,15 @@ export function buildV3RollupBatch(rows) {
     if (row.event_type === 'page_view') {
       incrementDimension('page', normalizeV3Path(row.page) || 'Unknown page');
     }
-    if (row.event_type === 'chapter_view' || row.event_type === 'order_clicked') {
+    if (['chapter_view', 'order_clicked', 'order_smugmug_clicked', 'order_email_clicked'].includes(row.event_type)) {
       const imageId = row.target_id || 'Unknown image';
       const pagePath = normalizeV3Path(row.page);
       const imageKey = `${day}\u0000${imageId}\u0000${pagePath || ''}`;
-      const image = images.get(imageKey) || { views: 0, pricingOpens: 0 };
+      const image = images.get(imageKey) || { views: 0, pricingOpens: 0, smugmugClicks: 0, emailClicks: 0 };
       if (row.event_type === 'chapter_view') image.views += 1;
       if (row.event_type === 'order_clicked') image.pricingOpens += 1;
+      if (row.event_type === 'order_smugmug_clicked') image.smugmugClicks += 1;
+      if (row.event_type === 'order_email_clicked') image.emailClicks += 1;
       images.set(imageKey, image);
     }
     if (row.event_type === 'chapter_view') {
@@ -189,7 +196,8 @@ export function buildV3RollupBatch(rows) {
     visitors: [...visitors].map((key) => { const [day, visitorId] = split(key); return { day, visitorId }; }),
     images: [...images].map(([key, counts]) => { const [day, imageId, pagePath] = split(key); return {
       day, imageId, pagePath: pagePath || null,
-      count: counts.views, pricingOpens: counts.pricingOpens
+      count: counts.views, pricingOpens: counts.pricingOpens,
+      smugmugClicks: counts.smugmugClicks, emailClicks: counts.emailClicks
     }; })
   };
 }
@@ -227,18 +235,22 @@ export function summarizeV3Rollup(batch, label = 'Archive sample') {
       sessions: new Set(batch.sessions.map((row) => row.sessionId)).size,
       page_views: sum('pageViews'), image_views: sum('imageViews'),
       engaged_sessions: new Set(batch.sessions.filter((row) => row.engaged).map((row) => row.sessionId)).size,
-      pricing_opens: sum('pricingOpens'), order_submits: sum('orderSubmits')
+      pricing_opens: sum('pricingOpens'), order_submits: sum('orderSubmits'),
+      smugmug_clicks: sum('smugmugClicks'), email_clicks: sum('emailClicks')
     },
     topPages: top('page', 10),
     topImages: (() => {
       const all = batch.images.map((row) => ({
         label: row.imageId, imageId: row.imageId, pagePath: row.pagePath,
-        count: row.count, pricingOpens: row.pricingOpens
+        count: row.count, pricingOpens: row.pricingOpens,
+        smugmugClicks: row.smugmugClicks, emailClicks: row.emailClicks
       }));
       const selected = new Map(all.filter((row) => row.count > 0)
         .sort((a, b) => b.count - a.count).slice(0, 25)
         .map((row) => [row.imageId, row]));
       all.filter((row) => row.pricingOpens > 0).forEach((row) => selected.set(row.imageId, row));
+      all.filter((row) => row.smugmugClicks > 0 || row.emailClicks > 0)
+        .forEach((row) => selected.set(row.imageId, row));
       return [...selected.values()].sort((a, b) => (b.count - a.count)
         || (b.pricingOpens - a.pricingOpens) || a.imageId.localeCompare(b.imageId));
     })(),

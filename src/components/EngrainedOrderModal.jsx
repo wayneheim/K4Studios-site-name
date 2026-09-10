@@ -285,7 +285,10 @@ export default function EngrainedOrderModal({ isOpen, onClose, image, trackEvent
                       event.currentTarget.style.background = "linear-gradient(to bottom, #92400e 0%, #78350f 100%)";
                     }}
                     onClick={() => {
-                      trackEvent?.("order_submitted");
+                      trackEvent?.("order_email_clicked", {
+                        imageId: image?.id,
+                        trigger: "email"
+                      });
                     }}
                   >
                     <span>Contact Us to Order</span>

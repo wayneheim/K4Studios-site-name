@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { readdir, readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { buildV3RollupBatch, summarizeV3Rollup } from '../src/analytics/v3/model.js';
+import { buildV3RollupBatch, isV3CoreEvent, summarizeV3Rollup } from '../src/analytics/v3/model.js';
 import { renderDashboardV3 } from '../src/analytics/v3/renderer.js';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
@@ -15,6 +15,16 @@ for (const file of files) {
   const payload = JSON.parse(await readFile(path.join(archiveDir, file), 'utf8'));
   for (const result of payload) rows.push(...(result?.results || []));
 }
+
+const browserRow = rows.find((row) => isV3CoreEvent(row));
+assert.ok(browserRow, 'archive must contain a confirmed browser row for order-action fixtures');
+const fixtureImageId = 'i-orderTrackingTest';
+const fixturePage = `/Galleries/Test/${fixtureImageId}`;
+const nextId = Math.max(...rows.map((row) => Number(row?.id || 0))) + 1;
+rows.push(
+  { ...browserRow, id: nextId, event_type: 'order_smugmug_clicked', target_id: fixtureImageId, page: fixturePage },
+  { ...browserRow, id: nextId + 1, event_type: 'order_email_clicked', target_id: fixtureImageId, page: fixturePage }
+);
 
 const rollup = buildV3RollupBatch(rows);
 const summary = summarizeV3Rollup(rollup, `${files.length}-day archived sample`);
@@ -38,6 +48,11 @@ assert.ok(summary.imageGeography.length > 0, 'archive should produce image-viewe
 assert.ok(summary.imageGeography.some((row) => row.imageViews > 0), 'image geography should include view totals');
 assert.ok(summary.topImages.some((row) => row.pagePath), 'image rows should retain clickable page paths');
 assert.ok(html.includes('pricing-opened'), 'priced images should restore the green V2 highlight');
+assert.equal(summary.counts.smugmug_clicks, 1, 'SmugMug order clicks should roll up separately');
+assert.equal(summary.counts.email_clicks, 1, 'email order clicks should roll up separately');
+assert.ok(summary.actions.some((row) => row.label === 'Order clicked — SmugMug' && row.count === 1), 'SmugMug clicks should appear in Actions');
+assert.ok(summary.actions.some((row) => row.label === 'Order clicked — email' && row.count === 1), 'email clicks should appear in Actions');
+assert.ok(html.includes('SmugMug: 1') && html.includes('Email: 1'), 'image rows should show both order destinations');
 assert.ok(!html.includes('harvester_friction'), 'diagnostic data must not be embedded in the initial report');
 assert.ok(html.includes('Load diagnostics'), 'manual diagnostic gate must be present');
 assert.ok(html.includes('Update with new rows'), 'cursor update control must be present');

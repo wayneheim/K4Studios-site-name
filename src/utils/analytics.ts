@@ -443,6 +443,8 @@ const DEFAULT_PIXEL_LAYER_BY_ACTION: Record<string, string> = {
   picture_shows_jump: 'picture_shows_jump_pixel_v1',
   order_clicked: 'order_clicked_pixel_v1',
   order_submitted: 'order_submitted_pixel_v1',
+  order_smugmug_clicked: 'order_smugmug_clicked_pixel_v1',
+  order_email_clicked: 'order_email_clicked_pixel_v1',
   series_info: 'series_info_pixel_v1',
   more_info_open: 'more_info_open_pixel_v1',
   sister_image_click: 'sister_image_click_pixel_v1',

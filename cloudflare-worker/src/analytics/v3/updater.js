@@ -71,15 +71,17 @@ function buildWriteStatements(env, rollup, previousCursor, updateToken) {
   for (const group of chunks(rollup.daily)) {
     statements.push(env.DB.prepare(`
       INSERT INTO analytics_v3_daily_metrics
-        (day,page_views,image_views,pricing_opens,order_submits,core_events)
-      VALUES ${valuesSql(group.length, 6)}
+        (day,page_views,image_views,pricing_opens,order_submits,smugmug_clicks,email_clicks,core_events)
+      VALUES ${valuesSql(group.length, 8)}
       ON CONFLICT(day) DO UPDATE SET
         page_views=page_views+excluded.page_views,
         image_views=image_views+excluded.image_views,
         pricing_opens=pricing_opens+excluded.pricing_opens,
         order_submits=order_submits+excluded.order_submits,
+        smugmug_clicks=smugmug_clicks+excluded.smugmug_clicks,
+        email_clicks=email_clicks+excluded.email_clicks,
         core_events=core_events+excluded.core_events
-    `).bind(...group.flatMap((row) => [row.day, row.pageViews, row.imageViews, row.pricingOpens, row.orderSubmits, row.coreEvents])));
+    `).bind(...group.flatMap((row) => [row.day, row.pageViews, row.imageViews, row.pricingOpens, row.orderSubmits, row.smugmugClicks, row.emailClicks, row.coreEvents])));
   }
 
   for (const group of chunks(rollup.dimensions)) {
@@ -117,12 +119,14 @@ function buildWriteStatements(env, rollup, previousCursor, updateToken) {
 
   for (const group of chunks(rollup.images)) {
     statements.push(env.DB.prepare(`
-      INSERT INTO analytics_v3_daily_images (day,image_id,page_path,count,pricing_opens)
-      VALUES ${valuesSql(group.length, 5)}
+      INSERT INTO analytics_v3_daily_images (day,image_id,page_path,count,pricing_opens,smugmug_clicks,email_clicks)
+      VALUES ${valuesSql(group.length, 7)}
       ON CONFLICT(day,image_id,page_path) DO UPDATE SET
         count=count+excluded.count,
-        pricing_opens=pricing_opens+excluded.pricing_opens
-    `).bind(...group.flatMap((row) => [row.day, row.imageId, row.pagePath || '', row.count, row.pricingOpens || 0])));
+        pricing_opens=pricing_opens+excluded.pricing_opens,
+        smugmug_clicks=smugmug_clicks+excluded.smugmug_clicks,
+        email_clicks=email_clicks+excluded.email_clicks
+    `).bind(...group.flatMap((row) => [row.day, row.imageId, row.pagePath || '', row.count, row.pricingOpens || 0, row.smugmugClicks || 0, row.emailClicks || 0])));
   }
 
   statements.push(env.DB.prepare(`

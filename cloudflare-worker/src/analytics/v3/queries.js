@@ -54,7 +54,9 @@ export async function getV3CoreSummary(env, { windowKey = 'today', now = new Dat
       SELECT COALESCE(SUM(page_views),0) AS page_views,
         COALESCE(SUM(image_views),0) AS image_views,
         COALESCE(SUM(pricing_opens),0) AS pricing_opens,
-        COALESCE(SUM(order_submits),0) AS order_submits
+        COALESCE(SUM(order_submits),0) AS order_submits,
+        COALESCE(SUM(smugmug_clicks),0) AS smugmug_clicks,
+        COALESCE(SUM(email_clicks),0) AS email_clicks
       FROM analytics_v3_daily_metrics WHERE day BETWEEN ? AND ?
     `).bind(...bounds),
     env.DB.prepare(`
@@ -90,16 +92,18 @@ export async function getV3CoreSummary(env, { windowKey = 'today', now = new Dat
     env.DB.prepare(`
       WITH grouped AS MATERIALIZED (
         SELECT image_id,MAX(NULLIF(page_path,'')) page_path,SUM(count) count,
-          SUM(pricing_opens) pricing_opens
+          SUM(pricing_opens) pricing_opens,
+          SUM(smugmug_clicks) smugmug_clicks,
+          SUM(email_clicks) email_clicks
         FROM analytics_v3_daily_images WHERE day BETWEEN ? AND ?
         GROUP BY image_id
       ), top_viewed AS (
         SELECT image_id FROM grouped WHERE count>0
         ORDER BY count DESC,image_id LIMIT 25
       )
-      SELECT image_id,page_path,count,pricing_opens FROM grouped
-      WHERE pricing_opens>0 OR image_id IN (SELECT image_id FROM top_viewed)
-      ORDER BY count DESC,pricing_opens DESC,image_id
+      SELECT image_id,page_path,count,pricing_opens,smugmug_clicks,email_clicks FROM grouped
+      WHERE pricing_opens>0 OR smugmug_clicks>0 OR email_clicks>0 OR image_id IN (SELECT image_id FROM top_viewed)
+      ORDER BY count DESC,pricing_opens DESC,(smugmug_clicks+email_clicks) DESC,image_id
     `).bind(...bounds),
     env.DB.prepare('SELECT last_raw_event_id, last_event_ts, updated_at FROM analytics_v3_state WHERE singleton=1')
   ]);
@@ -123,12 +127,14 @@ export async function getV3CoreSummary(env, { windowKey = 'today', now = new Dat
       sessions: Number(people.sessions || 0),
       engaged_sessions: Number(people.engaged_sessions || 0),
       page_views: Number(totals.page_views || 0), image_views: Number(totals.image_views || 0),
-      pricing_opens: Number(totals.pricing_opens || 0), order_submits: Number(totals.order_submits || 0)
+      pricing_opens: Number(totals.pricing_opens || 0), order_submits: Number(totals.order_submits || 0),
+      smugmug_clicks: Number(totals.smugmug_clicks || 0), email_clicks: Number(totals.email_clicks || 0)
     },
     topPages: top('page', 10),
     topImages: rows(imageResult).map((row) => ({
       label: row.image_id, imageId: row.image_id, pagePath: row.page_path || null,
-      count: Number(row.count || 0), pricingOpens: Number(row.pricing_opens || 0)
+      count: Number(row.count || 0), pricingOpens: Number(row.pricing_opens || 0),
+      smugmugClicks: Number(row.smugmug_clicks || 0), emailClicks: Number(row.email_clicks || 0)
     })),
     entryPages: topSession('entry_page', 25), acquisition: topSession('entry_source', 10),
     visitorGeography: topSession('visitor_geo', 20),

@@ -9,7 +9,8 @@ function renderCards(counts) {
   return [
     ['Visitors', counts?.visitors], ['Sessions', counts?.sessions], ['Page loads', counts?.page_views],
     ['Image views', counts?.image_views], ['Engaged sessions', counts?.engaged_sessions],
-    ['Pricing opens', counts?.pricing_opens], ['Orders submitted', counts?.order_submits]
+    ['Pricing opens', counts?.pricing_opens], ['SmugMug order clicks', counts?.smugmug_clicks],
+    ['Email order clicks', counts?.email_clicks]
   ].map(([label, value]) => `<article class="card"><span>${label}</span><strong>${formatNumber(value)}</strong></article>`).join('');
 }
 
@@ -27,7 +28,10 @@ function renderImages(title, rows) {
     const href = `https://www.k4studios.com${pagePath}`;
     const thumb = `https://www.k4studios.com/img/${encodeURIComponent(imageId)}/s`;
     const priced = Number(row.pricingOpens || 0) > 0;
-    return `<a class="image-row${priced ? ' pricing-opened' : ''}" href="${escapeHtml(href)}" target="_blank" rel="noopener"><img src="${escapeHtml(thumb)}" alt="" loading="${index < 4 ? 'eager' : 'lazy'}"><span><strong>${escapeHtml(imageId)}</strong><small title="${escapeHtml(pagePath)}">${escapeHtml(pagePath)}</small>${priced ? '<em>Pricing opened</em>' : ''}</span><b>${formatNumber(row.count)}</b></a>`;
+    const smugmugClicks = Number(row.smugmugClicks || 0);
+    const emailClicks = Number(row.emailClicks || 0);
+    const orderBadges = `${smugmugClicks ? `<em class="smugmug-order">SmugMug: ${formatNumber(smugmugClicks)}</em>` : ''}${emailClicks ? `<em class="email-order">Email: ${formatNumber(emailClicks)}</em>` : ''}`;
+    return `<a class="image-row${priced ? ' pricing-opened' : ''}" href="${escapeHtml(href)}" target="_blank" rel="noopener"><img src="${escapeHtml(thumb)}" alt="" loading="${index < 4 ? 'eager' : 'lazy'}"><span><strong>${escapeHtml(imageId)}</strong><small title="${escapeHtml(pagePath)}">${escapeHtml(pagePath)}</small>${priced ? `<em>Pricing: ${formatNumber(row.pricingOpens)}</em>` : ''}${orderBadges}</span><b>${formatNumber(row.count)}</b></a>`;
   }).join('') : '<p class="empty">No image activity in this window.</p>';
   return `<section class="panel"><h2>${escapeHtml(title)}</h2><div class="image-list">${body}</div></section>`;
 }

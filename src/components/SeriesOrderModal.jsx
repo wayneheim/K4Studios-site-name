@@ -284,6 +284,13 @@ export default function SeriesOrderModal({ isOpen, onClose, image, trackEvent })
     if (shouldUseBuyLink(seriesKey)) return buyLinkHref;
     return buildMailtoLink(image, seriesKey, seriesDef, editionNumber, size, price);
   };
+  const trackOrderChoice = (seriesKey) => {
+    const destination = shouldUseBuyLink(seriesKey) ? "smugmug" : "email";
+    trackEvent?.(`order_${destination}_clicked`, {
+      imageId: image?.id,
+      trigger: destination
+    });
+  };
 
   // Filter to only series we have definitions for, then sort by sortOrder
   const displaySeries = effectiveSeries
@@ -434,9 +441,7 @@ export default function SeriesOrderModal({ isOpen, onClose, image, trackEvent })
                               onMouseLeave={(e) => {
                                 e.currentTarget.style.background = "linear-gradient(to bottom, #64748b 0%, #475469 100%)";
                               }}
-                              onClick={() => {
-                                trackEvent?.("order_submitted");
-                              }}
+                              onClick={() => trackOrderChoice(seriesKey)}
                             >
                               <span>{size}: ${price.toLocaleString()}</span>
                               <span className="flex items-center gap-2">
@@ -465,9 +470,7 @@ export default function SeriesOrderModal({ isOpen, onClose, image, trackEvent })
                             onMouseLeave={(e) => {
                               e.currentTarget.style.background = "linear-gradient(to bottom, #64748b 0%, #475469 100%)";
                             }}
-                            onClick={() => {
-                              trackEvent?.("order_submitted");
-                            }}
+                            onClick={() => trackOrderChoice(seriesKey)}
                           >
                             {def.buttonLabel}
                           </a>
@@ -526,7 +529,10 @@ export default function SeriesOrderModal({ isOpen, onClose, image, trackEvent })
                     e.currentTarget.style.background = "linear-gradient(to bottom, #92400e 0%, #78350f 100%)";
                   }}
                   onClick={() => {
-                    trackEvent?.("order_submitted");
+                    trackEvent?.("order_email_clicked", {
+                      imageId: image?.id,
+                      trigger: "email"
+                    });
                   }}
                 >
                   <span>Contact Us to Order</span>
