@@ -75,7 +75,8 @@ export default function SiteNavMenuHome({ forceMobile = false }) {
 
   function MenuBranch({ node, depth = 0, delay = 0, reset, forceMobile = false, mounted = false, isMobileViewport = false }) {
     const [expanded, setExpanded] = useState(false);
-    const hasKids = node.children?.length > 0;
+    const visibleChildren = node.children?.filter((child) => !child.hidden) ?? [];
+    const hasKids = visibleChildren.length > 0;
 
     useEffect(() => setExpanded(false), [reset]);
 
@@ -178,7 +179,7 @@ export default function SiteNavMenuHome({ forceMobile = false }) {
             data-depth={depth}
             style={{ zIndex: 1000 + depth * 5 }}
           >
-            {node.children.map((kid) => (
+            {visibleChildren.map((kid) => (
               <MenuBranch
                 key={kid.label}
                 node={kid}

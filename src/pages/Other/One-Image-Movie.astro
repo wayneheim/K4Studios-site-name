@@ -6,6 +6,7 @@ import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter    from "@/components/Footer.astro";
 import StorySlider   from "@/components/StorySlider.tsx";
 import EssayClusterLinks from "@/components/EssayClusterLinks.astro";
+import EssayContextLink from "@/components/EssayContextLink.astro";
 import { getStructuredData, getBreadcrumbList } from "@/components/utils/getStructuredData.ts";
 import { getLandingMeta } from "@/data/landingMeta.ts";
 
@@ -312,6 +313,8 @@ const breadcrumbData = getBreadcrumbList([
         ))}
       </div>
     </section>
+
+    <EssayContextLink text="Why the camera is only the beginning—and how the artistic process reveals the voice hidden inside a moment." />
 
     <EssayClusterLinks currentPath={sectionPath} />
 

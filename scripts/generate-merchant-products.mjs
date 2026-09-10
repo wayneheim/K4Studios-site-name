@@ -28,12 +28,16 @@ const EXCLUDED_FILES = new Set(["MasterGalleryData.mjs"]);
 const ARCHIVE_DATA_DIRS = new Set([
   path.join(DATA_DIR, "Other", "Photo-Shoots").toLowerCase(),
 ]);
-const GOOGLE_PRODUCT_CATEGORY = "Arts & Entertainment > Hobbies & Creative Arts > Artwork";
+// Google's most specific taxonomy category for physical art prints.
+// Prefer the stable numeric ID so these offers aren't misclassified as
+// photography or other creative services.
+const GOOGLE_PRODUCT_CATEGORY = "500044";
 const SKETCH_SERIES_PRICE_USD = "25.00 USD";
 const SKETCH_SERIES_SIZE = "5 x 7 in";
 const MAX_DESCRIPTION_LENGTH = 5000;
 const MAX_TITLE_LENGTH = 150;
 const ENGRAINED_SERIES_PATH_PATTERN = /\/Other\/K4-Select-Series\/Engrained\/Engrained-Series(?:\/|$)/i;
+const ARCHIVE_GALLERY_PATH_PATTERN = /^\/Other\/Archive(?:\/|$)/i;
 
 function xmlEscape(value = "") {
   return String(value)
@@ -182,6 +186,9 @@ function buildCanonicalRoutes() {
   const routes = new Map();
   for (const [galleryPath, images] of Object.entries(galleryDataMap || {})) {
     if (!String(galleryPath || "").startsWith("/") || !Array.isArray(images)) continue;
+    // Archived images are intentionally withdrawn from active galleries and
+    // may no longer have a public image asset. Never advertise them as stock.
+    if (ARCHIVE_GALLERY_PATH_PATTERN.test(galleryPath)) continue;
     for (const image of images) {
       const id = typeof image?.id === "string" ? image.id : "";
       if (!id.startsWith("i-") || id === GHOST_IMAGE_ID || isHiddenImage(image)) continue;
@@ -313,8 +320,12 @@ function buildEngrainedProductItem({ image, galleryPath, link }) {
 
 function buildProductItem({ image, galleryPath, link }) {
   if (image?.noSketch === true) return null;
+  if (ARCHIVE_GALLERY_PATH_PATTERN.test(galleryPath)) return null;
+  // Engrained works are custom inquiry orders, not products that can complete
+  // checkout online. Merchant Center requires advertised in-stock products to
+  // be directly purchasable, so keep them out of this feed.
   if (ENGRAINED_SERIES_PATH_PATTERN.test(galleryPath)) {
-    return buildEngrainedProductItem({ image, galleryPath, link });
+    return null;
   }
 
   const imageLink = getMerchantImageUrl(image);

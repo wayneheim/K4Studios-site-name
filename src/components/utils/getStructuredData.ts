@@ -1,7 +1,7 @@
 // src/components/utils/getStructuredData.ts
 import { getSemanticImageUrl, USE_SEMANTIC_IMAGE_URLS } from "../../utils/imageProxy.js";
 import { themes } from "../../data/themes/themes.mjs";
-import { getSketchOfferShippingDetails } from "../../data/commerceResolver.js";
+import { getK4MerchantReturnPolicy, getSketchOfferShippingDetails } from "../../data/commerceResolver.js";
 
 // Helper to convert image to proxy URL (never expose SmugMug URLs in structured data)
 function getProxyUrl(img: any, size: string = 'l', sourcePrefix: string | null = null): string {
@@ -158,6 +158,7 @@ function buildSketchOfferNode(pageUrl: string, price = SKETCH_SERIES_PRICE) {
     itemCondition: "https://schema.org/NewCondition",
     seller: { "@id": K4_ORGANIZATION_ID },
     shippingDetails: getSketchOfferShippingDetails(),
+    hasMerchantReturnPolicy: getK4MerchantReturnPolicy(),
   };
 }
 

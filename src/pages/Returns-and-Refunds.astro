@@ -1,0 +1,151 @@
+---
+export const prerender = true;
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SiteFooter from "@/components/Footer.astro";
+
+const policyUrl = "https://www.k4studios.com/Returns-and-Refunds";
+const lastUpdated = "August 20, 2026";
+
+const structuredData = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": `${policyUrl}#webpage`,
+      url: policyUrl,
+      name: "Return and Refund Policy | K4 Studios",
+      description: "Return, refund, replacement, and order-problem policies for K4 Studios fine art prints.",
+      isPartOf: { "@id": "https://www.k4studios.com/#website" },
+      about: { "@id": "https://www.k4studios.com/#organization" },
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.k4studios.com/#organization",
+      name: "K4 Studios",
+      url: "https://www.k4studios.com/",
+      hasMerchantReturnPolicy: {
+        "@type": "MerchantReturnPolicy",
+        "@id": `${policyUrl}#policy`,
+        applicableCountry: "US",
+        returnPolicyCountry: "US",
+        returnPolicyCategory: "https://schema.org/MerchantReturnNotPermitted",
+        merchantReturnLink: policyUrl,
+      },
+    },
+  ],
+});
+---
+
+<BaseLayout
+  title="Return and Refund Policy | K4 Studios"
+  description="Return, refund, replacement, and order-problem policies for K4 Studios fine art prints."
+  structuredDataJSON={structuredData}
+  meta={{
+    description: "Return, refund, replacement, and order-problem policies for K4 Studios fine art prints.",
+    canonicalUrl: policyUrl,
+  }}
+>
+  <main class="policy-page">
+    <article>
+      <p class="eyebrow">K4 Studios order policies</p>
+      <h1>Return and Refund Policy</h1>
+      <p class="updated">Last updated: {lastUpdated}</p>
+
+      <p>
+        K4 Studios offers made-to-order fine art. Because each print or artwork is produced for the purchaser, all sales are final.
+      </p>
+
+      <section aria-labelledby="custom-orders">
+        <h2 id="custom-orders">Returns and refunds</h2>
+        <p>
+          Physical print orders, including Engrained wood works and special finishes, are made to order. We do not accept returns or exchanges and do not issue refunds for a change of mind, preference, sizing choice, or other buyer-remorse reason.
+        </p>
+      </section>
+
+      <section aria-labelledby="order-problems">
+        <h2 id="order-problems">Damage, defects, incorrect items, or delivery problems</h2>
+        <p>
+          If an order arrives damaged, defective, or materially different from what was ordered—or if there is a delivery problem—please contact us promptly after delivery or the expected delivery date. Include the order information, a description of the problem, and photographs of the item and packaging when relevant.
+        </p>
+        <p>
+          We will review the circumstances and work with you toward an appropriate resolution. Depending on the issue, that may include correcting the order, arranging a replacement or reprint, working with the carrier, or issuing a refund when appropriate. Please do not ship an item back unless K4 Studios or the fulfillment provider first supplies return instructions.
+        </p>
+      </section>
+
+      <section aria-labelledby="changes-cancellations">
+        <h2 id="changes-cancellations">Changes and cancellations</h2>
+        <p>
+          Contact us as soon as possible if an order needs to be changed or canceled. Because production may begin quickly, changes and cancellations cannot be guaranteed once an order has entered production.
+        </p>
+      </section>
+
+      <section aria-labelledby="contact-policy">
+        <h2 id="contact-policy">Contact</h2>
+        <p>
+          Email <a href="mailto:wayneheim@aol.com">wayneheim@aol.com</a> or use the <a href="/Contact">contact page</a>. Include your name, order details, and the nature of the problem so we can respond efficiently.
+        </p>
+      </section>
+    </article>
+  </main>
+  <SiteFooter />
+</BaseLayout>
+
+<style>
+  .policy-page {
+    max-width: 760px;
+    margin: 3rem auto 1rem;
+    padding: 0 1.25rem;
+    color: #2e2e2e;
+    font-family: "Glegoo", serif;
+  }
+  article {
+    padding: clamp(1.5rem, 4vw, 3rem);
+    border: 1px solid #e6ded5;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+  }
+  .eyebrow {
+    margin: 0 0 0.4rem;
+    color: #85644b;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+  }
+  h1 {
+    margin: 0;
+    color: #49382b;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    line-height: 1.2;
+  }
+  .updated {
+    margin: 0.45rem 0 1.75rem;
+    color: #766b63;
+    font-size: 0.82rem;
+  }
+  section {
+    margin-top: 1.8rem;
+    padding-top: 1.35rem;
+    border-top: 1px solid #eee7e0;
+  }
+  h2 {
+    margin: 0 0 0.7rem;
+    color: #5f4635;
+    font-size: 1.2rem;
+    line-height: 1.35;
+  }
+  p {
+    margin: 0.75rem 0;
+    line-height: 1.75;
+  }
+  a {
+    color: #6f351f;
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+  }
+  a:hover {
+    color: #421c0e;
+  }
+</style>

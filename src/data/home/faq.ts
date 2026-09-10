@@ -57,12 +57,12 @@ export const facingFAQ = [
     ],
   },
 
-  /* 7 — Commissions */
+  /* 7 — Additional Print Options */
   {
-    q: "Do you accept commissions or custom themed photography projects?",
+    q: "Are additional print options available?",
     a: [
-      "Yes. Wayne works selectively with collectors, families, reenactment groups, designers, and organizations to create custom painterly or Western themed photography projects.",
-      "Each commission is approached as a narrative collaboration. If you have a story to bring to life, <a href=\"/Contact\">reach out here</a>."
+      "Yes. In addition to the 5 × 7 Sketch Series print available online, selected images may be offered as larger archival paper prints, limited editions, or Engrained Baltic Birch prints.",
+      "Contact Wayne to discuss available physical print sizes, finishes, and current inventory."
     ],
   },
 

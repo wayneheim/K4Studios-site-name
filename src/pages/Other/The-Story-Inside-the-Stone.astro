@@ -1,0 +1,120 @@
+---
+export const prerender = true;
+
+import EssayPageShell from "@/components/EssayPageShell.astro";
+import { getSemanticImageUrl } from "@/utils/imageProxy.js";
+import { galleryData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs";
+
+const title = "The Story Inside the Stone";
+const seoTitle = "The Story Inside the Stone | Narrative Art & Painterly Photography | K4 Studios";
+const subtitle = "A Subtractive Approach to Narrative Art";
+const canonicalPath = "/Other/The-Story-Inside-the-Stone";
+const canonicalUrl = `https://www.k4studios.com${canonicalPath}`;
+const description = "Wayne Heim explores his subtractive approach to narrative art—using photography as raw material, then shaping light, color, composition and detail to reveal the story hidden within the moment.";
+const galleryPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color";
+
+const artwork = (id: string) => galleryData.find((image) => image.id === id);
+const hero = artwork("i-xpv7z8j");
+const processImage = artwork("i-LCspRF4");
+const authoredImage = artwork("i-ncFcHDM");
+const imageHref = (image: any) => `${galleryPath}/${image.id}`;
+const imageSrc = (image: any) => getSemanticImageUrl(image.id, {}, "l");
+
+const relatedEssays = [
+  { title: "Narrative Art", description: "How visual storytelling moves beyond documentation.", href: "/Other/Narrative-Art" },
+  { title: "Narrative Vacuum", description: "Why unanswered space inside an image invites the viewer into the story.", href: "/Other/Narrative-Vacuum" },
+  { title: "What Is a One-Image Movie?", description: "How one image can suggest what happened before and what happens next.", href: "/Other/One-Image-Movie" },
+];
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": `${canonicalUrl}#article`,
+  headline: title,
+  description,
+  url: canonicalUrl,
+  author: { "@type": "Person", name: "Wayne Heim", url: "https://www.k4studios.com/Other/Bio" },
+  publisher: { "@type": "Organization", name: "K4 Studios", url: "https://www.k4studios.com/" },
+  about: ["narrative art", "painterly photography", "visual storytelling", "authored photography"],
+  isPartOf: { "@type": "CollectionPage", name: "Essays & Writings", url: "https://www.k4studios.com/Other/Essays-Writings" },
+};
+---
+
+<EssayPageShell
+  title={title}
+  seoTitle={seoTitle}
+  subtitle={subtitle}
+  description={description}
+  canonicalPath={canonicalPath}
+  heroArtwork={hero && { src: imageSrc(hero), href: imageHref(hero), alt: hero.alt, title: hero.title }}
+  relatedEssays={relatedEssays}
+  bottomCta={{ label: "Explore Painterly Fine Art", href: "/Galleries/Painterly-Fine-Art-Photography" }}
+  structuredData={structuredData}
+>
+  <div slot="lead" class="essay-lead">
+    <p>Photography has long carried a particular criticism: that the camera finds a moment rather than creates one.</p>
+    <p>There is truth in that.</p>
+    <p>But what happens when the photograph captured in the camera is not the finished artwork? What happens when capture is merely the beginning?</p>
+  </div>
+
+  <section class="essay-section">
+    <h2>Capture Is Not the Destination</h2>
+    <p>A camera is extraordinarily good at describing what stood before it. It records surfaces, distances, accidents, and details with an authority that can make the resulting frame feel complete. That fidelity is photography’s great power. It can also become its limit.</p>
+    <p>For me, the in-camera photograph is evidence of an encounter, not the final statement about it. It holds the subject, the gesture, and the conditions from which the work can grow. The finished artwork begins when I decide what that moment is truly about—and what in the frame prevents us from feeling it.</p>
+    <blockquote class="essay-pull-quote">My photographs may begin with reality, but they are not intended to end there.</blockquote>
+  </section>
+
+  <section class="essay-section">
+    <h2>The Same Starting Line</h2>
+    <p>Painters, sculptors, illustrators, and photographers begin in much the same place: with intent. We choose subject matter, reference, point of view, composition, and the idea we hope the work can carry. The materials differ, but the artistic problem is shared.</p>
+    <p>A painter may begin with a blank surface and add until the image appears. A photographer begins with a crowded surface—with everything the lens was capable of seeing. The work is no less authored because the starting material came through a camera. Authorship lives in the decisions that follow.</p>
+  </section>
+
+  <section class="essay-section">
+    <h2>The Subtractive Process</h2>
+    {processImage && (
+      <figure class="essay-artwork">
+        <a href={imageHref(processImage)}><img src={imageSrc(processImage)} alt={processImage.alt} loading="lazy" /></a>
+        <figcaption><strong>{processImage.title}</strong> — the recorded scene shaped toward atmosphere, restraint, and interior weight.</figcaption>
+      </figure>
+    )}
+    <p>Michelangelo’s familiar description of sculpture offers the clearest analogy: the figure already exists within the stone, and the sculptor’s task is to remove what does not belong.</p>
+    <blockquote class="essay-pull-quote">The raw capture is my block of marble.</blockquote>
+    <p>I work by clearing away the visual noise that competes with the meaning of the scene. A distracting object may disappear. An unnecessary detail may fall into shadow. Light can be redirected, color restrained, texture softened, and the balance of forms altered until the image begins to speak with one voice.</p>
+    <p>This is not subtraction for the sake of polish. Each removal is a narrative decision. The question is always the same: does this element deepen the experience, or does it pull the viewer away from it?</p>
+  </section>
+
+  <section class="essay-section">
+    <h2>Reality of the Emotion</h2>
+    <p>Literal accuracy can tell us what a moment looked like. It cannot guarantee that we will understand what the moment felt like—or why it should matter after the moment has passed.</p>
+    <blockquote class="essay-pull-quote">Where others may pursue the reality of the moment, I am pursuing the reality of the emotion.</blockquote>
+    <div class="essay-cascade">The experience.<br />The tension.<br />The unanswered question.<br />The human story hidden inside the scene.</div>
+    <p>Painterly photography gives me the freedom to shape those invisible conditions. The goal is not to escape reality, but to concentrate it—to carry the viewer past a record of appearances and toward the emotional truth that made the image worth creating.</p>
+  </section>
+
+  <section class="essay-section">
+    <h2>Authored Moments</h2>
+    {authoredImage && (
+      <figure class="essay-artwork essay-artwork--left">
+        <a href={imageHref(authoredImage)}><img src={imageSrc(authoredImage)} alt={authoredImage.alt} loading="lazy" /></a>
+        <figcaption><strong>{authoredImage.title}</strong> — a moment designed to leave the decisive event beyond the edge of the frame.</figcaption>
+      </figure>
+    )}
+    <p>Historical storytelling makes this distinction especially important. I cannot return to the nineteenth-century West and wait for the right instant to reveal itself. The past must be approached through research, imagination, construction, collaboration, and interpretation.</p>
+    <p>Costume, setting, weather, gesture, and light establish the world. Yet historical detail alone does not make a story. The scene must be built around human pressure: a choice already made, a consequence approaching, a silence between people, or a question the frame refuses to answer.</p>
+    <p>That is the difference between merely finding a photograph and authoring an image. The raw materials may come from the visible world, but their final relationship is deliberate. Each decision serves the experience the artwork is asking the viewer to enter.</p>
+  </section>
+
+  <section class="essay-section">
+    <h2>Giving the Moment a Voice</h2>
+    <p>The subtractive process ends when nothing incidental is left competing with the emotional center of the work. What survives is not simply a cleaner photograph. It is a more concentrated invitation.</p>
+    <blockquote class="essay-pull-quote">The camera gives me the raw material. The artistic process decides what survives.</blockquote>
+    <p>Light, color, texture, title, and narrative all become parts of a single structure. Together they give the moment what the raw capture could not provide on its own: a voice.</p>
+    <p class="essay-final-line">The story that was hidden in plain sight, waiting for someone to clear away enough noise for it to be heard.</p>
+  </section>
+</EssayPageShell>
+
+<style>
+  :global(.essay-final-line) { max-width: 34rem; margin: 3rem auto 1rem !important; color: #2f251e !important; font-size: clamp(1.18rem, 2.6vw, 1.5rem) !important; font-style: italic; line-height: 1.75 !important; text-align: center; }
+  :global(.essay-artwork strong) { color: #332821; }
+</style>

@@ -446,7 +446,7 @@
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Color/all</loc>
-    <lastmod>2026-05-06T17:42:04-04:00</lastmod>
+    <lastmod>2026-09-06T19:10:09.840Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -560,7 +560,7 @@
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/all</loc>
-    <lastmod>2026-05-06T21:13:55-04:00</lastmod>
+    <lastmod>2026-09-06T19:10:02.570Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -926,7 +926,7 @@
   </url>
   <url>
     <loc>https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/all</loc>
-    <lastmod>2026-06-20T19:49:18-04:00</lastmod>
+    <lastmod>2026-09-06T19:10:17.107Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1022,7 +1022,7 @@
   </url>
   <url>
     <loc>https://www.k4studios.com/News-Awards</loc>
-    <lastmod>2026-08-01T03:47:55.632Z</lastmod>
+    <lastmod>2026-08-11T20:57:11-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1063,6 +1063,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.k4studios.com/Other/Expeditions</loc>
+    <lastmod>2026-09-07T02:12:39.573Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.k4studios.com/Other/K4-Select-Series/Engrained</loc>
     <lastmod>2026-07-06T15:10:46-04:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -1076,7 +1082,7 @@
   </url>
   <url>
     <loc>https://www.k4studios.com/Other/K4-Select-Series/Engrained/Engrained-Series/all</loc>
-    <lastmod>2026-08-11T19:26:04.235Z</lastmod>
+    <lastmod>2026-08-11T20:57:11-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -1148,7 +1154,7 @@
   </url>
   <url>
     <loc>https://www.k4studios.com/Other/Series</loc>
-    <lastmod>2026-08-11T19:54:42.250Z</lastmod>
+    <lastmod>2026-08-11T20:57:11-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1227,6 +1233,12 @@
   <url>
     <loc>https://www.k4studios.com/Pictorialist-Photography</loc>
     <lastmod>2026-05-29T16:43:11-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.k4studios.com/Returns-and-Refunds</loc>
+    <lastmod>2026-09-06T01:12:46.877Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

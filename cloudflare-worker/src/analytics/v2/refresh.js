@@ -15,6 +15,13 @@ const GEO_TRUST_ESTABLISHED_COUNTRIES = [
   'NL', 'NO', 'PL', 'PT', 'RO', 'SE', 'SI', 'SK', 'SM', 'VA'
 ];
 const GEO_TRUST_LOW_CONFIDENCE_COUNTRIES = ['HK', 'ID', 'IN', 'SG', 'VN'];
+
+// Analytics-only datacenter signals. Keep these separate from the shared
+// ingestion gate so raw browser geography can still expose crawler waves.
+const ANALYTICS_DATACENTER_ASNS = [
+  ...DATACENTER_ASNS,
+  45102 // Alibaba Cloud Singapore distributed browser crawler
+];
 const GEO_TRUST_US_COUNTRY_VALUES = ['US', 'USA', 'UNITED STATES', 'UNITED STATES OF AMERICA'];
 
 function hasAutomationUaSignal(ua) {
@@ -335,7 +342,7 @@ async function rebuildSessionFactsV2(env) {
     )
   )`;
   const datacenterIpPrefixSql = buildStartsWithSql(`COALESCE(raw.ip_hash, '')`, DATACENTER_PREFIXES);
-  const datacenterAsnSql = buildNumericInSql(`COALESCE(raw.cf_asn, 0)`, DATACENTER_ASNS);
+  const datacenterAsnSql = buildNumericInSql(`COALESCE(raw.cf_asn, 0)`, ANALYTICS_DATACENTER_ASNS);
   await env.DB.prepare(`DELETE FROM session_facts_v2`).run();
   await env.DB.prepare(
     `WITH ordered AS (
@@ -470,6 +477,7 @@ async function rebuildSessionFactsV2(env) {
         WHEN aggregated.non_image_engagement_count = 0
          AND (
            aggregated.canonical_page_loads = 1
+           OR (aggregated.canonical_page_loads = 2 AND aggregated.event_count <= 3)
            OR (aggregated.canonical_page_loads = 0 AND aggregated.event_count <= 3)
          )
           AND (
@@ -546,6 +554,7 @@ async function rebuildSessionFactsV2(env) {
        WHEN COALESCE(CAST(json_extract(metadata_json, '$.non_image_engagement_count') AS INTEGER), engaged_event_count) = 0
         AND (
           canonical_page_loads = 1
+          OR (canonical_page_loads = 2 AND event_count <= 3)
           OR (canonical_page_loads = 0 AND event_count <= 3)
         )
         AND (

@@ -555,6 +555,11 @@ export default function SeriesOrderModal({ isOpen, onClose, image, trackEvent })
                 <br />
                 Standard paper prints include a 1–2 inch archival border. Sizes listed reflect the maximum dimension. Secondary dimension will scale proportionately to preserve the image's actual aspect ratio.
               </p>
+              <p className="mt-2 text-xs text-center">
+                <a href="/Returns-and-Refunds" className="text-[#6f351f] underline hover:no-underline">
+                  Return &amp; refund policy
+                </a>
+              </p>
             </div>
 
             {/* Close button - top right */}

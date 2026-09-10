@@ -4,7 +4,8 @@ import "../styles/minimenu.css"; // Reuse existing styles for now
 
 function MenuBranch({ node, depth = 0 }) {
   const [expanded, setExpanded] = useState(false);
-  const hasChildren = node.children?.length > 0;
+  const visibleChildren = node.children?.filter((child) => !child.hidden) ?? [];
+  const hasChildren = visibleChildren.length > 0;
 
   const toggleExpand = (e) => {
     if (hasChildren) {
@@ -46,7 +47,7 @@ function MenuBranch({ node, depth = 0 }) {
 
       {hasChildren && (
         <div className={depth === 0 ? "dropdown-panel" : "submenu"} data-depth={depth}>
-          {node.children.map((child) => (
+          {visibleChildren.map((child) => (
             <MenuBranch key={child.label} node={child} depth={depth + 1} />
           ))}
         </div>
@@ -58,7 +59,7 @@ function MenuBranch({ node, depth = 0 }) {
 export default function MiniButtonBar() {
   return (
     <div className="mini-buttonbar-wrapper force-mobile-menu">
-      {siteNav.map((root) => (
+      {siteNav.filter((root) => !root.hidden).map((root) => (
         <MenuBranch key={root.label} node={root} />
       ))}
     </div>

@@ -98,3 +98,22 @@ The Worker:
 5. Resolves size with fallback
 6. Fetches from SmugMug
 7. Returns bytes (never redirects)
+
+## Incident Timeline (2026-09-03)
+
+- Purpose: stabilize D1 quota pressure (rows_written + rows_read) and reduce bot image traversal abuse.
+- Deploy 1: analytics worker `23ac0a37-597a-429f-8310-f18bc0fc6523`
+      - Restored datacenter ASN filtering for Tencent ASN `132203` in analytics synthetic-traffic suppression.
+- Deploy 2: image proxy worker `bae913ba-1d37-40f5-92b7-501520152cfc`
+      - Added anonymous rapid image-traversal friction/blocking logic for `/img/*` (verified bots exempt).
+- Deploy 3: analytics worker `398c564d-0ac7-4d95-ab5f-8c8e263e2795`
+      - Reduced V2 dashboard read multiplier: auto-refresh is now opt-in (`refresh=1` or `V2_DASHBOARD_AUTO_REFRESH=true`), and auto batch is conservative.
+
+Validation note:
+- `V2_DASHBOARD_AUTO_REFRESH` is currently not present in production deployment metadata, so default behavior is no auto-refresh unless explicitly requested.
+
+Decision note (anti-scrape direction):
+- Do not add CAPTCHA/visible challenges in this phase.
+- Preferred strategy is progressive slowing/friction for suspected scraper traversal on image routes.
+- Keep explicit exemptions for verified search engines and normal human sessions.
+- Validate current 2026-09-03 fixes with next-day quota metrics before layering additional friction changes.

@@ -598,7 +598,7 @@ export function renderDashboardV2({ summary, authHeader = '' }) {
       </div>
       <div class="card">
         <h2>Raw Browser Geography</h2>
-        <p class="subtle">One first canonical page load per browser session before trusted-session exclusions. Use this for Microsoft Clarity-style city comparisons.</p>
+        <p class="subtle">One first canonical page load per browser session with bot, internal-test, and suspicious shallow datacenter/internal sessions excluded. Use this for Microsoft Clarity-style city comparisons.</p>
         <div class="scroll-panel" style="max-height: 360px; margin-top: 8px;">
           ${rawSessionGeography.length ? rawSessionGeography.map((row) => `<div class="list-row"><span>${row.geo_label}</span><strong>${row.sessions}</strong></div>`).join('') : '<p>No raw browser geography in this window.</p>'}
         </div>

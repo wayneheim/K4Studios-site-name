@@ -4,6 +4,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
+import EssayContextLink from "@/components/EssayContextLink.astro";
 import { getStructuredData } from "@/components/utils/getStructuredData.ts";
 import { getLandingMeta } from "@/data/landingMeta.ts";
 import { narrativeArtLanding } from "@/data/Other/Narrative-Art/story.ts";
@@ -115,6 +116,8 @@ const essayCards = essays.map((essay, index) => {
         ))}
       </ol>
     </section>
+
+    <EssayContextLink text="A foundational statement on the subtractive process behind Wayne Heim’s narrative art." />
 
     <SiteFooter
       previewImages={[]}

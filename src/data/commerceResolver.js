@@ -12,6 +12,18 @@ const ENGRAINED_PATH = "/Other/K4-Select-Series/Engrained/Engrained-Series";
 const K4_ORGANIZATION_ID = "https://www.k4studios.com/#organization";
 const SKETCH_SERIES_SHIPPING_USD = "9.99";
 const SKETCH_SERIES_SHIPPING_SERVICE = "Standard Shipping";
+const K4_RETURN_POLICY_URL = "https://www.k4studios.com/Returns-and-Refunds";
+
+export function getK4MerchantReturnPolicy() {
+  return {
+    "@type": "MerchantReturnPolicy",
+    "@id": `${K4_RETURN_POLICY_URL}#policy`,
+    applicableCountry: "US",
+    returnPolicyCountry: "US",
+    returnPolicyCategory: "https://schema.org/MerchantReturnNotPermitted",
+    merchantReturnLink: K4_RETURN_POLICY_URL,
+  };
+}
 
 export function getSketchOfferShippingDetails() {
   return {

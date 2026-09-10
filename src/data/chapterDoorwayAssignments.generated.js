@@ -15056,7 +15056,7 @@ export const chapterDoorwayCursors = {
 };
 
 export const chapterDoorwayAssignmentMeta = {
-  "generatedAt": "2026-08-11T19:55:36.972Z",
+  "generatedAt": "2026-09-07T02:12:53.369Z",
   "assignedCount": 3008,
   "themeCounts": {
     "nativeAmerican": 32,

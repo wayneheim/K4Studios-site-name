@@ -4,6 +4,11 @@
   handleDashboardV2RefreshRequest
 } from "./v2/route.js";
 import {
+  handleDashboardV3Request,
+  handleDashboardV3UpdateRequest,
+  handleDashboardV3DiagnosticsRequest
+} from "./v3/route.js";
+import {
   handleLegacyPatternPageRequest,
   handleLegacyPatternOverrideRequest
 } from "./v2/legacy-patterns.js";
@@ -102,7 +107,8 @@ var DATACENTER_ASNS = [
   8075,
   15169,
   396982,
-  13335
+  13335,
+  132203
 ];
 var TRUSTED_TEST_IPS = /* @__PURE__ */ new Set([
   "184.56.48.57"
@@ -10658,24 +10664,48 @@ var worker_default = {
       return new Response(null, { status: 204, headers: applyNoStore(new Headers()) });
     }
     if (url.pathname === "/__k4stats-v2") {
+      if (url.searchParams.get("legacy") !== "1") {
+        return Response.redirect(`${url.origin}/__k4stats-v3`, 302);
+      }
       return handleDashboardV2Request(request, env, ctx);
     }
     if (url.pathname === "/__k4stats-v2/legacy-patterns") {
+      if (url.searchParams.get("legacy") !== "1") {
+        return Response.redirect(`${url.origin}/__k4stats-v3`, 302);
+      }
       return handleLegacyPatternPageRequest(request, env, ctx);
     }
     if (url.pathname === "/__k4stats-v2/legacy-patterns/override" && request.method === "POST") {
       return handleLegacyPatternOverrideRequest(request, env, ctx);
     }
     if (url.pathname === "/__k4stats-v2/debug") {
+      if (url.searchParams.get("legacy") !== "1") {
+        return Response.redirect(`${url.origin}/__k4stats-v3`, 302);
+      }
       return handleDashboardV2DebugRequest(request, env, ctx);
     }
     if (url.pathname === "/__k4stats-v2/refresh" && request.method === "POST") {
       return handleDashboardV2RefreshRequest(request, env, ctx);
     }
+    if (url.pathname === "/__k4stats-v3") {
+      return handleDashboardV3Request(request, env, ctx);
+    }
+    if (url.pathname === "/__k4stats-v3/update" && request.method === "POST") {
+      return handleDashboardV3UpdateRequest(request, env, ctx);
+    }
+    if (url.pathname === "/__k4stats-v3/diagnostics") {
+      return handleDashboardV3DiagnosticsRequest(request, env, ctx);
+    }
     if (url.pathname === "/__k4stats") {
+      if (url.searchParams.get("legacy") !== "1") {
+        return Response.redirect(`${url.origin}/__k4stats-v3`, 302);
+      }
       return handleDashboardRequest2(request, env, ctx);
     }
     if (url.pathname === "/__k4stats/inspect") {
+      if (url.searchParams.get("legacy") !== "1") {
+        return Response.redirect(`${url.origin}/__k4stats-v3`, 302);
+      }
       return handleInspectRequest(request, env, ctx);
     }
     if (url.pathname === "/__k4stats/export") {

@@ -54,6 +54,11 @@ const k4Organization = {
   '@id': 'https://www.k4studios.com/#organization',
   name: 'K4 Studios',
   url: 'https://www.k4studios.com/',
+  hasMerchantReturnPolicy: {
+    '@type': 'MerchantReturnPolicy',
+    '@id': 'https://www.k4studios.com/Returns-and-Refunds#policy',
+    merchantReturnLink: 'https://www.k4studios.com/Returns-and-Refunds',
+  },
 };
 
 const normalizeK4Host = (value) => {
@@ -502,6 +507,14 @@ const siteIdentityStructuredDataJSON = pathname === '/' ? JSON.stringify({
           url: "https://www.k4studios.com/images/K4Logo-web-c.webp",
           width: 512,
           height: 512,
+        },
+        hasMerchantReturnPolicy: {
+          "@type": "MerchantReturnPolicy",
+          "@id": "https://www.k4studios.com/Returns-and-Refunds#policy",
+          applicableCountry: "US",
+          returnPolicyCountry: "US",
+          returnPolicyCategory: "https://schema.org/MerchantReturnNotPermitted",
+          merchantReturnLink: "https://www.k4studios.com/Returns-and-Refunds",
         },
       },
     ],

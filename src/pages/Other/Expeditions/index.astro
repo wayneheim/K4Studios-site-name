@@ -1,0 +1,445 @@
+---
+export const prerender = true;
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import LandingHeader from "@/components/Landing-Header.jsx";
+import SiteFooter from "@/components/Footer.astro";
+import { expeditions } from "@/data/Other/Expeditions/shoots";
+import "@/styles/global.css";
+
+const canonicalUrl = "https://www.k4studios.com/Other/Expeditions";
+const pageTitle = "Photography Expeditions & Field Galleries | K4 Studios";
+const pageDescription =
+  "Explore photography from K4 Studios expeditions, including Western, historical, railroad, landscape, and other field galleries.";
+
+const meta = {
+  seoTitle: pageTitle,
+  preserveTitleExact: true,
+  seoDescription: pageDescription,
+  canonicalUrl,
+  ogUrl: canonicalUrl,
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogType: "website",
+  robots: "index, follow",
+};
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": `${canonicalUrl}#webpage`,
+  url: canonicalUrl,
+  name: "K4 Expeditions",
+  description: pageDescription,
+  isPartOf: {
+    "@type": "WebSite",
+    "@id": "https://www.k4studios.com/#website",
+    name: "K4 Studios",
+    url: "https://www.k4studios.com/",
+  },
+  mainEntity: {
+    "@type": "ItemList",
+    name: "K4 Studios expedition galleries",
+    numberOfItems: expeditions.length,
+    itemListElement: expeditions.map((shoot, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: shoot.title,
+      description: shoot.description,
+    })),
+  },
+};
+
+const breadcrumbData = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.k4studios.com/" },
+    { "@type": "ListItem", position: 2, name: "Other", item: "https://www.k4studios.com/Other" },
+    { "@type": "ListItem", position: 3, name: "Expeditions", item: canonicalUrl },
+  ],
+};
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  meta={meta}
+  structuredDataJSON={structuredData}
+  breadcrumbsJSON={breadcrumbData}
+>
+  <main class="photoshoots-page">
+    <div class="photoshoots-shell">
+      <div class="drawer-mode">
+        <LandingHeader client:load breadcrumb="Other &rsaquo; Expeditions" />
+      </div>
+
+      <section class="photoshoots-hero" aria-labelledby="expeditions-title">
+        <p class="eyebrow">K4 Studios Fieldwork</p>
+        <h1 id="expeditions-title">K4 Expeditions</h1>
+        <p class="subtitle">Photography Galleries from K4 Studios Expeditions</p>
+        <div class="hero-rule" aria-hidden="true"><span></span></div>
+
+        <div class="intro-copy">
+          <p>
+            Each K4 expedition produces a much broader body of photography than ultimately appears in the
+            permanent fine-art collection. These galleries provide access to portraits, scenes, and images
+            created during individual photographic productions.
+          </p>
+          <p>
+            Participants, collectors, and visitors can explore and purchase photographs directly from each
+            expedition gallery while the larger body of work remains available as an archive.
+          </p>
+          <p>
+            From these expeditions, selected photographs may later be further developed through title,
+            narrative, and editioning and become part of the permanent K4 Studios fine-art collection.
+          </p>
+        </div>
+      </section>
+
+      <section class="shoot-index" aria-labelledby="shoot-index-title">
+        <div class="index-heading">
+          <p class="eyebrow">Expedition Galleries</p>
+          <h2 id="shoot-index-title">Explore the Expeditions</h2>
+        </div>
+
+        <div class="shoot-grid">
+          {expeditions.map((shoot, index) => (
+            <article class="shoot-card">
+              <div class="card-media">
+                {shoot.image ? (
+                  <img src={shoot.image} alt={shoot.imageAlt || shoot.title} loading="lazy" />
+                ) : (
+                  <div class="image-placeholder" aria-hidden="true">
+                    <span class="placeholder-year">{shoot.year}</span>
+                    <span class="placeholder-mark">K4</span>
+                    <span class="placeholder-line"></span>
+                    <span class="placeholder-caption">Expedition Gallery</span>
+                  </div>
+                )}
+                <span class="card-number">{String(index + 1).padStart(2, "0")}</span>
+              </div>
+
+              <div class="card-body">
+                <p class="card-status">{shoot.status}</p>
+                <h3>{shoot.title}</h3>
+                {shoot.formerName && <p class="former-name">{shoot.formerName}</p>}
+                <p class="card-description">{shoot.description}</p>
+                <a
+                  class="gallery-link"
+                  href={shoot.galleryUrl}
+                  target="_blank"
+                  rel="nofollow noopener noreferrer"
+                  aria-label={`View the expedition gallery for ${shoot.title} (opens in a new tab)`}
+                >
+                  <span>View Expedition Gallery</span>
+                  <span aria-hidden="true">&rarr;</span>
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <aside class="collection-note" aria-labelledby="collection-note-title">
+        <div>
+          <p class="eyebrow">Expedition to Collection</p>
+          <h2 id="collection-note-title">Expedition Galleries and the K4 Fine-Art Collection</h2>
+        </div>
+        <div class="distinction-grid">
+          <div>
+            <h3>Expedition Gallery</h3>
+            <p>
+              The broader body of photography created during the expedition, including portraits, scenes,
+              and images available to participants, collectors, and visitors. Selected print sizes and
+              editions may be offered directly from these galleries.
+            </p>
+          </div>
+          <span class="distinction-arrow" aria-hidden="true">&rarr;</span>
+          <div>
+            <h3>K4 Fine-Art Collection</h3>
+            <p>
+              A smaller group of works selected from the expedition and developed into K4's permanent body
+              of narrative fine art through final curation, title, story, and editioning.
+            </p>
+          </div>
+        </div>
+        <p class="collection-continuity">
+          <span aria-hidden="true">*</span> An image may remain available in its expedition gallery even after a finished version enters the
+          permanent collection.
+        </p>
+      </aside>
+    </div>
+
+    <SiteFooter
+      title="K4 Studios Photography Expeditions"
+      label="Explore K4 Studios"
+      class="pt-8 pb-12"
+    />
+  </main>
+
+  <style>
+    .photoshoots-page {
+      min-height: 100vh;
+      overflow-x: hidden;
+      color: #2d2924;
+      background: #fff;
+      font-family: "Glegoo", serif;
+    }
+
+    .photoshoots-shell {
+      width: min(1200px, calc(100% - 2rem));
+      margin: 0 auto;
+    }
+
+    .photoshoots-hero {
+      max-width: none;
+      margin: clamp(1.25rem, 3vw, 2.5rem) auto clamp(4rem, 8vw, 7rem);
+      padding: clamp(2.25rem, 5vw, 2rem);
+      border-radius: 20px;
+      border-top: 6px solid #e7dfd6;
+      border-bottom: 4px solid #e7dfd6;
+      background: #ffffff;
+      text-align: center;
+    }
+
+    .eyebrow {
+      margin: 0 0 0.75rem;
+      color: #8a6031;
+      font-size: 0.71rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .photoshoots-hero h1 {
+      margin: 0;
+      color: #26211c;
+      font-family: "Glegoo", serif;
+      font-size: clamp(2.75rem, 7vw, 5.6rem);
+      font-weight: 700;
+      letter-spacing: -0.035em;
+      line-height: 0.98;
+    }
+
+    .subtitle {
+      margin: 1.1rem 0 0;
+      color: #76695b;
+      font-size: clamp(0.92rem, 2vw, 1.15rem);
+      letter-spacing: 0.025em;
+    }
+
+    .hero-rule {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: min(360px, 70%);
+      height: 1px;
+      margin: 2rem auto 2.35rem;
+      background: #d8cbb9;
+    }
+
+    .hero-rule span {
+      width: 6px;
+      height: 6px;
+      border: 1px solid #9c7544;
+      background: #eee8de;
+      transform: rotate(45deg);
+    }
+
+    .intro-copy {
+      max-width: 900px;
+      margin: 0 auto;
+      color: #514a42;
+      font-size: clamp(0.96rem, 1.6vw, 1.08rem);
+      line-height: 1.85;
+      text-align: left;
+    }
+
+    .intro-copy p { margin: 0 0 1rem; }
+
+    .shoot-index { margin-bottom: clamp(4rem, 9vw, 8rem); }
+
+    .index-heading {
+      max-width: 900px;
+      margin-right: auto;
+      margin-bottom: 1.75rem;
+      margin-left: auto;
+      border-bottom: 1px solid #cabda9;
+    }
+
+    .index-heading h2,
+    .collection-note h2 {
+      margin: 0 0 1.25rem;
+      font-family: "Glegoo", serif;
+      font-size: clamp(1.9rem, 4vw, 3rem);
+      font-weight: 400;
+      line-height: 1.15;
+    }
+
+    .shoot-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: clamp(1.25rem, 3vw, 2.4rem);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .shoot-card {
+      position: relative;
+      overflow: hidden;
+      border: 2px solid #d8cdbf;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 14px 34px rgba(50, 39, 27, 0.12);
+      transition: transform 520ms ease, border-color 520ms ease, box-shadow 520ms ease;
+    }
+
+    .shoot-card:hover {
+      transform: translateY(-4px);
+      border-color: #a44a3f;
+      box-shadow: 0 0 0 2px rgba(164, 74, 63, 0.38), 0 20px 42px rgba(50, 39, 27, 0.16);
+      transition-duration: 180ms;
+    }
+
+    .shoot-card:focus-within {
+      border-color: #a44a3f;
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(164, 74, 63, 0.38), 0 20px 42px rgba(50, 39, 27, 0.16);
+    }
+
+    .card-media {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: #332d27;
+    }
+
+    .card-media img { width: 100%; height: 100%; object-fit: cover; }
+
+    .image-placeholder {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-content: center;
+      color: #eee4d5;
+      background:
+        linear-gradient(115deg, transparent 0 47%, rgba(232, 213, 184, 0.09) 47.2% 48%, transparent 48.2%),
+        radial-gradient(circle at 68% 35%, rgba(191, 145, 81, 0.32), transparent 26%),
+        linear-gradient(135deg, #221f1c, #554638);
+      text-align: center;
+    }
+
+    .image-placeholder::after {
+      position: absolute;
+      right: -5%;
+      bottom: -24%;
+      left: -5%;
+      height: 52%;
+      border-radius: 50% 50% 0 0;
+      background: #1c1a18;
+      content: "";
+      transform: rotate(-3deg);
+    }
+
+    .placeholder-year { font-size: 0.67rem; letter-spacing: 0.34em; }
+    .placeholder-mark { margin: 0.15rem 0; font-family: "Glegoo", serif; font-size: clamp(2.8rem, 8vw, 5.5rem); line-height: 1; }
+    .placeholder-line { width: 5rem; height: 1px; margin: 0 auto 0.5rem; background: #b78b52; }
+    .placeholder-caption { font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase; }
+
+    .card-number {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+    }
+
+    .card-body { display: flex; min-height: 275px; padding: clamp(1.35rem, 3vw, 2rem); flex-direction: column; }
+    .card-status { margin: 0 0 0.8rem; color: #936536; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; }
+    .card-body h3 { margin: 0; color: #2a251f; font-family: "Glegoo", serif; font-size: clamp(1.55rem, 3vw, 2.15rem); font-weight: 400; line-height: 1.16; }
+    .former-name { margin: 0.4rem 0 0; color: #897a69; font-size: 0.78rem; font-style: italic; }
+    .card-description { margin: 1.15rem 0 1.75rem; color: #5a5148; font-size: 0.91rem; line-height: 1.7; }
+
+    .gallery-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-top: auto;
+      padding-top: 1rem;
+      border-top: 1px solid #e0d7cb;
+      color: #714a24;
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .gallery-link::after {
+      position: absolute;
+      inset: 0;
+      content: "";
+    }
+
+    .gallery-link span:last-child { font-size: 1.2rem; transition: transform 160ms ease; }
+    .gallery-link:hover span:last-child, .gallery-link:focus-visible span:last-child { transform: translateX(4px); }
+    .gallery-link:focus-visible { outline: none; }
+
+    .collection-note {
+      margin: 0 auto clamp(5rem, 9vw, 8rem);
+      padding: clamp(1.75rem, 5vw, 3.5rem);
+      border-top: 3px solid #5b4631;
+      border-radius: 20px;
+      background: #eee8de;
+    }
+
+    .collection-note > div:first-child { max-width: 760px; }
+
+    .distinction-grid {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: clamp(1rem, 3vw, 2.5rem);
+      align-items: center;
+      margin-top: 1.5rem;
+      padding-top: 1.75rem;
+      border-top: 1px solid #c9b9a4;
+    }
+
+    .distinction-grid h3 { margin: 0 0 0.65rem; color: #493724; font-family: "Glegoo", serif; font-size: 1.15rem; font-weight: 400; }
+    .distinction-grid p { margin: 0; color: #5e554b; font-size: 0.84rem; line-height: 1.75; }
+    .distinction-arrow { color: #a07849; font-size: 1.7rem; }
+
+    .collection-continuity {
+      margin: 2.5rem 0 0;
+      padding-top: 1.75rem;
+      border-top: 1px solid #c9b9a4;
+      color: #695e52;
+      font-size: 0.9rem;
+      font-style: italic;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    .collection-continuity span {
+      color: #8a6031;
+      font-weight: 700;
+    }
+
+    @media (max-width: 720px) {
+      .photoshoots-shell { width: min(100% - 1.25rem, 1200px); }
+      .photoshoots-hero { margin-top: 1.25rem; text-align: left; }
+      .hero-rule { justify-content: flex-start; width: 100%; }
+      .shoot-grid { grid-template-columns: 1fr; }
+      .card-body { min-height: 0; }
+      .distinction-grid { grid-template-columns: 1fr; }
+      .distinction-arrow { transform: rotate(90deg); transform-origin: center; justify-self: start; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .shoot-card, .gallery-link span:last-child { transition: none; }
+    }
+  </style>
+</BaseLayout>

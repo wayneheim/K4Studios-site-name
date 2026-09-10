@@ -99,7 +99,7 @@ export default function MobileMiniDrawer({ onClose }) {
 
         {/* Nav menu */}
         <div className="mini-drawer-nav">
-          {siteNav.map((node, i) => (
+          {siteNav.filter((node) => !node.hidden).map((node, i) => (
             <MenuBranch
               key={node.label}
               node={node}

@@ -82,7 +82,7 @@ export const galleryData = [
  {
  "id": "i-kPXCbrd",
  "title": "Oh No! Photography by Wayne Heim",
- "description": "A woman reacts with surprise during a portrait session, turning expression and timing into the center of the image. This color fine art portrait creates wall art rooted in personality, humor, and the unscripted spark that makes a photograph feel alive.",
+ "description": "A woman reacts with surprise in a candid moment, turning expression and timing into the center of the image. This color fine art portrait creates wall art rooted in personality, humor, and the unscripted spark that makes a photograph feel alive.",
  "alt": "Wayne Heim – Fine Art Photography",
  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-kPXCbrd/A",
  "keywords": [
@@ -95,7 +95,7 @@ export const galleryData = [
  "wedding photos",
  "k4 studios"
  ],
- "story": "Woman surprised in photoshoot.\n ©Wayne Heim",
+ "story": "A woman caught in a surprised candid moment.\n ©Wayne Heim",
  "notes": "",
  "rating": 0,
  "galleries": [],

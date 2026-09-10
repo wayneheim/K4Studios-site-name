@@ -35,13 +35,18 @@ function withNoCache(headersInit = {}) {
 }
 
 async function autoRefreshDashboardV2(url, env) {
-  if (url.searchParams.get('refresh') === '0') {
+  const refreshParam = url.searchParams.get('refresh');
+  const envAutoRefresh = String(env?.V2_DASHBOARD_AUTO_REFRESH || '').toLowerCase() === 'true';
+  const shouldRefresh = refreshParam === '1' || (refreshParam !== '0' && envAutoRefresh);
+
+  if (!shouldRefresh) {
     return null;
   }
 
   try {
     return await refreshV2Drain(env, {
-      batchSize: 1000,
+      // Keep auto-refresh intentionally conservative to protect D1 read budget.
+      batchSize: 250,
       maxBatches: 1,
       forceRebuildFacts: false
     });

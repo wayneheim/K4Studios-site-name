@@ -9,7 +9,8 @@ export default function MenuBranch({
   index = 0,
 }) {
   const [expanded, setExpanded] = useState(false);
-  const hasKids = Array.isArray(node.children) && node.children.length > 0;
+  const visibleChildren = node.children?.filter((child) => !child.hidden) ?? [];
+  const hasKids = visibleChildren.length > 0;
 
   useEffect(() => {
     setExpanded(false);
@@ -87,7 +88,7 @@ export default function MenuBranch({
 
       {hasKids && expanded && (
         <div className="mini-submenu">
-          {node.children.map((child, i) => (
+          {visibleChildren.map((child, i) => (
             <MenuBranch
               key={child.label}
               node={child}

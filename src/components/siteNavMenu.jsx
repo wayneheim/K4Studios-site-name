@@ -65,7 +65,8 @@ export default function SiteNavMenu({ forceMobile = false }) {
 
   function MenuBranch({ node, depth = 0, delay = 0, reset, forceBranchMobile = false }) {
     const [expanded, setExpanded] = useState(false);
-    const hasKids = node.children?.length > 0;
+    const visibleChildren = node.children?.filter((child) => !child.hidden) ?? [];
+    const hasKids = visibleChildren.length > 0;
     const isDrawerView = forceBranchMobile || mobileOpen;
 
     useEffect(() => setExpanded(false), [reset]);
@@ -166,7 +167,7 @@ export default function SiteNavMenu({ forceMobile = false }) {
             data-depth={depth}
             style={{ zIndex: 1000 + depth * 5 }}
           >
-            {node.children.map((kid) => (
+            {visibleChildren.map((kid) => (
               <MenuBranch
                 key={kid.label}
                 node={kid}

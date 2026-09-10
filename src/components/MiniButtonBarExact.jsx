@@ -5,7 +5,8 @@ import "../styles/minimenu.css";
 
 function ButtonBranch({ node, depth = 0, reset }) {
   const [expanded, setExpanded] = useState(false);
-  const hasKids = node.children?.length > 0;
+  const visibleChildren = node.children?.filter((child) => !child.hidden) ?? [];
+  const hasKids = visibleChildren.length > 0;
 
   useEffect(() => setExpanded(false), [reset]);
 
@@ -46,7 +47,7 @@ function ButtonBranch({ node, depth = 0, reset }) {
 
       {hasKids && (
         <div className={depth === 0 ? "dropdown-panel" : "submenu"} data-depth={depth}>
-          {node.children.map((child) => (
+          {visibleChildren.map((child) => (
             <ButtonBranch key={child.label} node={child} depth={depth + 1} reset={reset} />
           ))}
         </div>
@@ -65,7 +66,7 @@ export default function MiniButtonBarExact() {
   return (
     <div className="drawer-container force-mobile-menu">
       <div className="drawer-body">
-        {siteNav.map((item, i) => (
+        {siteNav.filter((item) => !item.hidden).map((item, i) => (
           <ButtonBranch key={item.label} node={item} delay={i * 0.1} reset={resetSignal} />
         ))}
       </div>

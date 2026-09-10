@@ -747,8 +747,8 @@ export const galleryData = [
   },
   {
     "id": "i-vztmrNx",
-    "title": "A Quiet Commission",
-    "description": `An older Union officer sits in quiet reflection, the weight of command carried in posture, gaze, and controlled silence. This painterly Civil War portrait creates fine art wall art rooted in 19th-century photographic tradition, command, and the commissions men continue to bear long after the shouting stops.`,
+    "title": "A Quiet Command",
+    "description": `An older Union officer sits in quiet reflection, the weight of command carried in posture, gaze, and controlled silence. This painterly Civil War portrait creates fine art wall art rooted in 19th-century photographic tradition, command, and the burdens men continue to bear long after the shouting stops.`,
     "alt": "Black and white Civil War portrait of an older Union officer seated in quiet reflection, fine art photography by Wayne Heim.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-vztmrNx/A",
 
@@ -766,8 +766,8 @@ export const galleryData = [
       "Facing History fine art photography"
     ],
 
-    "story": "The orders are no longer shouted. The smoke has thinned, the drums have fallen silent, and the field is somewhere behind him now. Still, he sits as if waiting to be called again — posture steady, gaze fixed on something only he can see.\n\nRank once meant movement, command, consequence. Now it feels heavier than the brass at his collar. Memory lingers in the set of his jaw, in the quiet between breaths, in the hand that has learned the cost of raising it.\n\nNot every commission is written on paper. Some are carried long after the war has ended — borne in silence, in bearing, in the simple refusal to forget.",
-    "notes": "“A Quiet Commission” stands in dialogue with the tonal gravitas of Mathew Brady’s wartime portraiture while embracing the painterly structure of classical figure studies. The softened vignette isolates the subject much like a Remington study would isolate a cavalry officer — not in action, but in aftermath. The composition favors psychological presence over narrative movement, allowing collectors to engage with the unseen history carried in posture and gaze.\n\nThis work embodies Wayne Heim’s approach to Civil War art: historically grounded, narratively restrained, and built with the compositional clarity of both photography and illustration. It rewards sustained viewing, revealing subtle shifts in light and expression that echo the long memory of command.",
+    "story": "The orders are no longer shouted. The smoke has thinned, the drums have fallen silent, and the field is somewhere behind him now. Still, he sits as if waiting to be called again — posture steady, gaze fixed on something only he can see.\n\nRank once meant movement, command, consequence. Now it feels heavier than the brass at his collar. Memory lingers in the set of his jaw, in the quiet between breaths, in the hand that has learned the cost of raising it.\n\nNot every burden is visible. Some are carried long after the war has ended — borne in silence, in bearing, in the simple refusal to forget.",
+    "notes": "“A Quiet Command” stands in dialogue with the tonal gravitas of Mathew Brady’s wartime portraiture while embracing the painterly structure of classical figure studies. The softened vignette isolates the subject much like a Remington study would isolate a cavalry officer — not in action, but in aftermath. The composition favors psychological presence over narrative movement, allowing collectors to engage with the unseen history carried in posture and gaze.\n\nThis work embodies Wayne Heim’s approach to Civil War art: historically grounded, narratively restrained, and built with the compositional clarity of both photography and illustration. It rewards sustained viewing, revealing subtle shifts in light and expression that echo the long memory of command.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",

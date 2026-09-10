@@ -291,6 +291,12 @@ export default function EngrainedOrderModal({ isOpen, onClose, image, trackEvent
                     <span>Contact Us to Order</span>
                     {hasInventory && <span className="text-xs text-green-200/90 font-normal italic">· Quick ship available</span>}
                   </a>
+                  <a
+                    href="/Returns-and-Refunds"
+                    className="block mt-3 text-xs text-[#6f351f] underline hover:no-underline"
+                  >
+                    Return &amp; refund policy
+                  </a>
                 </div>
 
                 {(paperAlternativeLoading || paperAlternative) && (

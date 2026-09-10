@@ -1,0 +1,195 @@
+---
+export const prerender = true;
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import LandingHeader from "@/components/Landing-Header.jsx";
+import SiteFooter from "@/components/Footer.astro";
+import "@/styles/global.css";
+
+const canonicalUrl = "https://www.k4studios.com/Other/Essays-Writings";
+const pageTitle = "Essays & Writings | Wayne Heim";
+const pageDescription =
+  "Essays and writings by Wayne Heim on narrative art, visual storytelling, historical photography, and the ideas behind the work.";
+
+const writings = [
+  {
+    title: "The Story Inside the Stone",
+    href: "/Other/The-Story-Inside-the-Stone",
+    description: "A subtractive approach to narrative art and authored photography.",
+  },
+  {
+    title: "Narrative Art",
+    href: "/Other/Narrative-Art",
+    description: "Essays on narrative art and visual storytelling.",
+  },
+  {
+    title: "Narrative Vacuum",
+    href: "/Other/Narrative-Vacuum",
+    description: "An essay on the space left when visual storytelling falls silent.",
+  },
+  {
+    title: "Seeing",
+    href: "/Other/Seeing",
+    description: "Essays about visual literacy and learning how to look.",
+  },
+  {
+    title: "Historical Reenactment Photography",
+    href: "/Historical-Reenactment-Photography",
+    description: "Writing and photography rooted in the interpretation of history.",
+  },
+  {
+    title: "The Better Mousetrap",
+    href: "/Other/Better-Mousetrap",
+    description: "The ideas behind the One-Image Movie and narrative image-making.",
+  },
+];
+
+const meta = {
+  seoTitle: pageTitle,
+  preserveTitleExact: true,
+  seoDescription: pageDescription,
+  canonicalUrl,
+  ogUrl: canonicalUrl,
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogType: "website",
+  robots: "index, follow",
+};
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": `${canonicalUrl}#webpage`,
+  url: canonicalUrl,
+  name: "Essays & Writings",
+  description: pageDescription,
+  mainEntity: {
+    "@type": "ItemList",
+    numberOfItems: writings.length,
+    itemListElement: writings.map((writing, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: writing.title,
+      url: `https://www.k4studios.com${writing.href}`,
+    })),
+  },
+};
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  meta={meta}
+  structuredDataJSON={structuredData}
+>
+  <main class="writings-page">
+    <div class="drawer-mode">
+      <LandingHeader client:load breadcrumb="Other &rsaquo; Essays &amp; Writings" />
+    </div>
+
+    <header class="writings-intro">
+      <p class="eyebrow">Wayne Heim</p>
+      <h1>Essays &amp; Writings</h1>
+      <p>{pageDescription}</p>
+    </header>
+
+    <section class="writing-list" aria-label="Essays and writings">
+      {writings.map((writing, index) => (
+        <a class="writing-link" href={writing.href}>
+          <span class="writing-number">{String(index + 1).padStart(2, "0")}</span>
+          <span>
+            <strong>{writing.title}</strong>
+            <small>{writing.description}</small>
+          </span>
+          <span class="writing-arrow" aria-hidden="true">&rsaquo;</span>
+        </a>
+      ))}
+    </section>
+
+    <SiteFooter previewImages={[]} previewPath="/Galleries" title="Essays & Writings" label="" />
+  </main>
+</BaseLayout>
+
+<style>
+  .writings-page {
+    min-height: 100vh;
+    background: #fff;
+    color: #2c2c2c;
+    font-family: "Glegoo", serif;
+  }
+
+  .writings-intro,
+  .writing-list {
+    width: min(46rem, calc(100% - 2rem));
+    margin-inline: auto;
+  }
+
+  .writings-intro {
+    padding: 4rem 0 2.25rem;
+    text-align: center;
+  }
+
+  .eyebrow {
+    margin: 0 0 0.5rem;
+    color: #8b7355;
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    margin: 0 0 1rem;
+    font-size: clamp(2rem, 5vw, 3.25rem);
+    font-weight: 500;
+  }
+
+  .writings-intro > p:last-child {
+    max-width: 39rem;
+    margin: 0 auto;
+    line-height: 1.75;
+    color: #5d554d;
+  }
+
+  .writing-list {
+    display: grid;
+    border-top: 1px solid #cbbfac;
+    margin-bottom: 4rem;
+  }
+
+  .writing-link {
+    display: grid;
+    grid-template-columns: 2.5rem 1fr auto;
+    gap: 1rem;
+    align-items: center;
+    padding: 1.15rem 0;
+    border-bottom: 1px solid #cbbfac;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .writing-link:hover strong,
+  .writing-link:focus-visible strong {
+    color: #7a1f12;
+  }
+
+  .writing-number,
+  .writing-arrow {
+    color: #9b8b78;
+  }
+
+  .writing-link strong,
+  .writing-link small {
+    display: block;
+  }
+
+  .writing-link strong {
+    font-size: 1.05rem;
+    font-weight: 500;
+  }
+
+  .writing-link small {
+    margin-top: 0.25rem;
+    color: #70675e;
+    line-height: 1.5;
+  }
+</style>

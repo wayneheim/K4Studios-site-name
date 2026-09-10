@@ -6,7 +6,8 @@ import "../styles/mini-NavMenu.css";
 /* ---------- Recursive branch (drawer subtree) ---------- */
 function MenuBranch({ node, depth = 0, delay = 0, reset }) {
   const [expanded, setExpanded] = useState(false);
-  const hasKids = node.children?.length > 0;
+  const visibleChildren = node.children?.filter((child) => !child.hidden) ?? [];
+  const hasKids = visibleChildren.length > 0;
 
   /* collapse branch when drawer closes */
   useEffect(() => setExpanded(false), [reset]);
@@ -60,7 +61,7 @@ function MenuBranch({ node, depth = 0, delay = 0, reset }) {
           data-depth={depth}
           style={{ zIndex: 1000 + depth * 5 }}
         >
-          {node.children.map((kid) => (
+          {visibleChildren.map((kid) => (
             <MenuBranch
               key={kid.label}
               node={kid}
@@ -200,7 +201,7 @@ export default function GalleryNavMenuMini({ hideDefaultHamburger = false }) {
               </div>
 
               <div className="drawer-body">
-                {siteNav.map((root, i) => (
+                {siteNav.filter((root) => !root.hidden).map((root, i) => (
                   <MenuBranch
                     key={root.label}
                     node={root}

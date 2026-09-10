@@ -631,6 +631,7 @@ export const siteNav = [
       "code": "O-S4",
       "slug": "engrained-series",
       "type": "collection",
+      "hidden": true,
       "children": [
         {
           "label": "Engrained Series",
@@ -653,6 +654,13 @@ export const siteNav = [
       "href": "/Other/Shows",
       "code": "O-S6",
       "slug": "shows",
+      "type": "section"
+    },
+    {
+      "label": "Expeditions",
+      "href": "/Other/Expeditions",
+      "code": "O-S6p",
+      "slug": "expeditions",
       "type": "section"
     },
     {
@@ -684,45 +692,61 @@ export const siteNav = [
       "type": "section"
     },
     {
+      "label": "Essays & Writings",
+      "href": "/Other/Essays-Writings",
+      "code": "O-S5e",
+      "slug": "essays-writings",
+      "type": "collection",
+      "children": [
+        {
+          "label": "The Story Inside the Stone",
+          "href": "/Other/The-Story-Inside-the-Stone",
+          "code": "O-S5e-Ss1",
+          "slug": "the-story-inside-the-stone",
+          "type": "section"
+        },
+        {
+          "label": "Narrative Art",
+          "href": "/Other/Narrative-Art",
+          "code": "O-S5c",
+          "slug": "narrative-art",
+          "type": "section"
+        },
+        {
+          "label": "Narrative Vacuum",
+          "href": "/Other/Narrative-Vacuum",
+          "code": "O-S5d",
+          "slug": "narrative-vacuum",
+          "type": "section"
+        },
+        {
+          "label": "Seeing",
+          "href": "/Other/Seeing",
+          "code": "O-S5b",
+          "slug": "seeing",
+          "type": "section"
+        },
+        {
+          "label": "Historical Reenactment Photography",
+          "href": "/Historical-Reenactment-Photography",
+          "code": "O-S3",
+          "slug": "historical-reenactment-photography",
+          "type": "collection"
+        },
+        {
+          "label": "The Better Mousetrap",
+          "href": "/Other/Better-Mousetrap",
+          "code": "O-S5m",
+          "slug": "better-mousetrap",
+          "type": "section"
+        }
+      ]
+    },
+    {
       "label": "What Is a One-Image Movie?",
       "href": "/Other/One-Image-Movie",
       "code": "O-S5a",
       "slug": "one-image-movie",
-      "type": "section"
-    },
-    {
-      "label": "Historical Reenactment Photography",
-      "href": "/Historical-Reenactment-Photography",
-      "code": "O-S3",
-      "slug": "historical-reenactment-photography",
-      "type": "collection"
-    },
-    {
-      "label": "The Better Mousetrap",
-      "href": "/Other/Better-Mousetrap",
-      "code": "O-S5m",
-      "slug": "better-mousetrap",
-      "type": "section"
-    },
-    {
-      "label": "Seeing",
-      "href": "/Other/Seeing",
-      "code": "O-S5b",
-      "slug": "seeing",
-      "type": "section"
-    },
-    {
-      "label": "Narrative Art",
-      "href": "/Other/Narrative-Art",
-      "code": "O-S5c",
-      "slug": "narrative-art",
-      "type": "section"
-    },
-    {
-      "label": "Narrative Vacuum",
-      "href": "/Other/Narrative-Vacuum",
-      "code": "O-S5d",
-      "slug": "narrative-vacuum",
       "type": "section"
     },
     {

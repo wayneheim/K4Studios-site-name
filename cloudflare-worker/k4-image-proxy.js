@@ -110,6 +110,16 @@ let botFrictionEnabledCache = true;
 let botFrictionEnabledCacheTime = 0;
 let imageProxyFetchLogTableInitPromise = null;
 
+// Best-effort in-memory crawl guard for anonymous rapid image traversal.
+// This is intentionally lightweight and only targets suspicious image-page hopping.
+const RAPID_IMAGE_WINDOW_MS = 120000;
+const RAPID_IMAGE_SOFT_THRESHOLD = 5;
+const RAPID_IMAGE_HARD_THRESHOLD = 8;
+const RAPID_IMAGE_BLOCK_MS = 600000;
+const RAPID_IMAGE_DELAY_MS = 900;
+const RAPID_IMAGE_STATE_MAX = 5000;
+let rapidImageTraversalState = new Map();
+
 const MICROSOFT_BOT_ASNS = new Set([8075]);
 
 async function ensureImageProxyFetchLogTable(env) {
@@ -971,6 +981,78 @@ async function getAndMarkUniqueImagesPerMinute(ctx, { ipHash, canonicalImageId }
   return { uniquePerMinute: count, isNewUnique };
 }
 
+function getRapidImageTraversalDecision(request, route, ipHash, visitorId, cfVerifiedBot) {
+  if (!ipHash || !route?.canonicalImageId) return { action: 'allow', distinctCount: 0, retryAfter: 0 };
+  if (cfVerifiedBot) return { action: 'allow', distinctCount: 0, retryAfter: 0 };
+  if (request.method !== 'GET') return { action: 'allow', distinctCount: 0, retryAfter: 0 };
+  if (String(route.size || '').toLowerCase() !== 'l') return { action: 'allow', distinctCount: 0, retryAfter: 0 };
+  if (visitorId) return { action: 'allow', distinctCount: 0, retryAfter: 0 };
+
+  const referer = request.headers.get('Referer') || '';
+  let refererUrl = null;
+  try {
+    refererUrl = referer ? new URL(referer) : null;
+  } catch {
+    refererUrl = null;
+  }
+
+  const refererHost = (refererUrl?.hostname || '').toLowerCase();
+  const refererPath = refererUrl?.pathname || '';
+  const isInternalImageReferer =
+    refererHost.endsWith('k4studios.com') &&
+    /\/(Galleries|Other)\/.*\/[iI]-[a-zA-Z0-9-]+\/?$/.test(refererPath);
+
+  if (!isInternalImageReferer) return { action: 'allow', distinctCount: 0, retryAfter: 0 };
+
+  const now = Date.now();
+  let state = rapidImageTraversalState.get(ipHash);
+  if (!state) {
+    state = {
+      windowStart: now,
+      blockedUntil: 0,
+      images: new Set()
+    };
+  }
+
+  if (state.blockedUntil && now < state.blockedUntil) {
+    const retryAfter = Math.max(1, Math.ceil((state.blockedUntil - now) / 1000));
+    rapidImageTraversalState.set(ipHash, state);
+    return { action: 'block', distinctCount: state.images.size, retryAfter };
+  }
+
+  if (now - state.windowStart > RAPID_IMAGE_WINDOW_MS) {
+    state.windowStart = now;
+    state.images = new Set();
+    state.blockedUntil = 0;
+  }
+
+  state.images.add(route.canonicalImageId);
+  const distinctCount = state.images.size;
+
+  if (distinctCount >= RAPID_IMAGE_HARD_THRESHOLD) {
+    state.blockedUntil = now + RAPID_IMAGE_BLOCK_MS;
+    rapidImageTraversalState.set(ipHash, state);
+    return { action: 'block', distinctCount, retryAfter: Math.ceil(RAPID_IMAGE_BLOCK_MS / 1000) };
+  }
+
+  rapidImageTraversalState.set(ipHash, state);
+
+  // Periodic, bounded pruning so the map can't grow forever.
+  if (rapidImageTraversalState.size > RAPID_IMAGE_STATE_MAX) {
+    const cutoff = now - Math.max(RAPID_IMAGE_WINDOW_MS, RAPID_IMAGE_BLOCK_MS);
+    for (const [key, value] of rapidImageTraversalState.entries()) {
+      const lastRelevant = Math.max(Number(value.windowStart || 0), Number(value.blockedUntil || 0));
+      if (lastRelevant < cutoff) rapidImageTraversalState.delete(key);
+    }
+  }
+
+  if (distinctCount >= RAPID_IMAGE_SOFT_THRESHOLD) {
+    return { action: 'delay', distinctCount, retryAfter: 0 };
+  }
+
+  return { action: 'allow', distinctCount, retryAfter: 0 };
+}
+
 async function handleImageRequest(request, ctx, env) {
   const url = new URL(request.url);
   const route = parseImageRoute(url.pathname);
@@ -1036,6 +1118,7 @@ async function handleImageRequest(request, ctx, env) {
   const ip = request.headers.get("CF-Connecting-IP") || 
              request.headers.get("X-Forwarded-For")?.split(",")[0]?.trim();
   const ipHash = hashIP(ip);
+  const visitorIdFromCookie = getVisitorIdFromRequest(request);
 
   const cfVerifiedBot = Boolean(request.cf?.botManagement?.verifiedBot);
   const bypassImageControls = shouldBypassImageControls(env, request, ua);
@@ -1088,11 +1171,48 @@ async function handleImageRequest(request, ctx, env) {
     botFrictionEnabled,
     suspect: false,
     uniquePerMinute: null,
+    rapidDistinctImages: null,
     delayMs: null,
     action: 'none'
   };
   try {
     if (request.method === 'GET') {
+      const rapidTraversal = getRapidImageTraversalDecision(
+        request,
+        route,
+        ipHash,
+        visitorIdFromCookie,
+        cfVerifiedBot
+      );
+      frictionDebug.rapidDistinctImages = rapidTraversal.distinctCount;
+      if (rapidTraversal.action === 'block') {
+        frictionDebug.action = 'rapid-block';
+        queueImageProxyFetchLog(ctx, env, request, {
+          requesterInfo,
+          imageId: route.canonicalImageId,
+          imgSize: route.size,
+          assetSource: route.assetSource,
+          cacheStatus: 'rapid-traversal-block',
+          upstreamStatus: 429,
+          finalStatus: 429,
+        });
+        return new Response('Too Many Requests', {
+          status: 429,
+          headers: {
+            'Cache-Control': 'no-store',
+            'Retry-After': String(rapidTraversal.retryAfter || 60),
+            'X-Proxy-Origin': 'k4studios',
+            'X-K4-Block-Reason': 'rapid-image-traversal',
+            'X-K4-Bot-Verified': String(cfVerifiedBot)
+          }
+        });
+      }
+      if (rapidTraversal.action === 'delay') {
+        frictionDebug.action = 'rapid-delay';
+        frictionDebug.delayMs = RAPID_IMAGE_DELAY_MS;
+        await sleep(RAPID_IMAGE_DELAY_MS);
+      }
+
       const discoveryBypass = bypassImageControls;
       const effectiveAsn = frictionTest?.asn ?? request.cf?.asn;
       const flags = getSuspicionFlags({ request, asn: effectiveAsn, ua });
@@ -1114,7 +1234,16 @@ async function handleImageRequest(request, ctx, env) {
         // This is intentionally independent of the Hide Bots toggle.
         const frictionAction = uniquePerMinute >= 40 ? '429' : 'delay';
         frictionDebug.action = frictionAction;
-        if (env?.DB) {
+        // Write-budget guardrail:
+        // keep milestone/block telemetry but avoid writing one row per frictioned request.
+        const shouldLogFrictionEvent =
+          frictionAction === '429' ||
+          uniquePerMinute === 5 ||
+          uniquePerMinute === 10 ||
+          uniquePerMinute === 20 ||
+          uniquePerMinute === 30 ||
+          uniquePerMinute === 40;
+        if (env?.DB && shouldLogFrictionEvent) {
           ctx.waitUntil(
             logArtView(
               env,

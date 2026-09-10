@@ -11,6 +11,11 @@ export {
   handleDashboardV2DebugRequest,
   handleDashboardV2RefreshRequest
 } from './v2/route.js';
+export {
+  handleDashboardV3Request,
+  handleDashboardV3UpdateRequest,
+  handleDashboardV3DiagnosticsRequest
+} from './v3/route.js';
 
 // Collector — classifiers + guarded storage writers + track handler
 export {

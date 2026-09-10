@@ -751,6 +751,10 @@ export async function getV2CanonicalSummary(env, { windowKey = 'today', excludeI
            AND metric_scope = 'primary'
            AND session_id IS NOT NULL
            AND is_bot = 0
+           AND session_id NOT IN (${suspiciousInternalShallowSessionSubquery})
+           AND session_id NOT IN (${suspiciousDatacenterSessionSubquery})
+           AND session_id NOT IN (${internalTestSessionSubquery})
+           ${viewerExcludedSessionSubquery ? `AND session_id NOT IN (${viewerExcludedSessionSubquery})` : ''}
            AND ${canonicalViewerPredicate}
        )
        SELECT geo_label, COUNT(*) AS sessions
