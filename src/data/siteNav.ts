@@ -727,13 +727,6 @@ export const siteNav = [
           "type": "section"
         },
         {
-          "label": "Historical Reenactment Photography",
-          "href": "/Historical-Reenactment-Photography",
-          "code": "O-S3",
-          "slug": "historical-reenactment-photography",
-          "type": "collection"
-        },
-        {
           "label": "The Better Mousetrap",
           "href": "/Other/Better-Mousetrap",
           "code": "O-S5m",
@@ -741,6 +734,13 @@ export const siteNav = [
           "type": "section"
         }
       ]
+    },
+    {
+      "label": "Historical Reenactment Photography",
+      "href": "/Historical-Reenactment-Photography",
+      "code": "O-S3",
+      "slug": "historical-reenactment-photography",
+      "type": "collection"
     },
     {
       "label": "What Is a One-Image Movie?",
