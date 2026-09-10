@@ -201,7 +201,7 @@ function stripNestedTags(html: string): { cleaned: string; changed: boolean } {
 
   // ✅ Allow only the first <html>
   let seenHtml = false;
-  html = html.replace(/<html[^>]*>/gi, (m) => {
+  html = html.replace(/<html\b[^>]*>/gi, (m) => {
     if (seenHtml) {
       changed = true;
       return "";
@@ -219,7 +219,9 @@ function stripNestedTags(html: string): { cleaned: string; changed: boolean } {
 
   // ✅ Allow only the first <head>
   let seenHead = false;
-  html = html.replace(/<head[^>]*>/gi, (m) => {
+  // The word boundary is essential: without it, <header> is mistaken for
+  // another <head> and its opening tag is removed from production HTML.
+  html = html.replace(/<head\b[^>]*>/gi, (m) => {
     if (seenHead) {
       changed = true;
       return "";
@@ -237,7 +239,7 @@ function stripNestedTags(html: string): { cleaned: string; changed: boolean } {
 
   // ✅ Allow only the first <body>
   let seenBody = false;
-  html = html.replace(/<body[^>]*>/gi, (m) => {
+  html = html.replace(/<body\b[^>]*>/gi, (m) => {
     if (seenBody) {
       changed = true;
       return "";
@@ -257,7 +259,7 @@ function stripNestedTags(html: string): { cleaned: string; changed: boolean } {
   // body-level <link> and <style> tags into <head>.
   const bodyLinks: string[] = [];
   const bodyStyles: string[] = [];
-  html = html.replace(/<body[\s\S]*?<\/body>/gi, (bodyBlock) => {
+  html = html.replace(/<body\b[\s\S]*?<\/body>/gi, (bodyBlock) => {
     const cleaned = bodyBlock
       .replace(/<title[\s\S]*?<\/title>/gi, "")
       .replace(/<meta[^>]*>/gi, "")
