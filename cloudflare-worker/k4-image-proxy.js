@@ -58,7 +58,7 @@ import {
 
 // Cache-bust parameter to avoid waiting on Cloudflare's cached manifest after deploys.
 // Update this when you need the worker to pick up a newly deployed manifest immediately.
-const MANIFEST_URL = "https://www.k4studios.com/image-manifest.json?v=20260714-artist-ride-signed";
+const MANIFEST_URL = "https://www.k4studios.com/image-manifest.json?v=20260924-getting-past";
 const SMUGMUG_ORIGIN = "https://photos.smugmug.com";
 const IMAGE_ID_MAP_URL = "https://www.k4studios.com/imageIdMap.json?v=20260714-artist-ride-signed";
 const MANIFEST_CACHE_TTL = 3600; // seconds
