@@ -1,16 +1,40 @@
 ---
-export const prerender = true;
+export const prerender = false;
 
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import ExpeditionExploreMore from "@/components/ExpeditionExploreMore.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
 import { expeditions } from "@/data/Other/Expeditions/shoots";
+import { getPublicSmugMugGalleryPage } from "@/lib/smugmug";
 import "@/styles/global.css";
+
+Astro.response.headers.set(
+  "Cache-Control",
+  "public, max-age=0, s-maxage=60, stale-while-revalidate=30",
+);
+
+const previewResults = await Promise.allSettled(
+  expeditions.map(async (shoot) => {
+    const gallery = await getPublicSmugMugGalleryPage({
+      nickname: "wayne-heim",
+      galleryPath: new URL(shoot.galleryUrl).pathname,
+      page: 1,
+      pageSize: 1,
+      includePrices: false,
+    });
+
+    return [shoot.slug, gallery.images[0]] as const;
+  }),
+);
+const expeditionPreviews = new Map(
+  previewResults.flatMap((result) => result.status === "fulfilled" ? [result.value] : []),
+);
 
 const canonicalUrl = "https://www.k4studios.com/Other/Expeditions";
 const pageTitle = "Photography Expeditions & Field Galleries | K4 Studios";
 const pageDescription =
-  "Explore photography from K4 Studios expeditions, including Western, historical, railroad, landscape, and other field galleries.";
+  "Explore working K4 Studios Expedition Galleries and photographs available at special pre-release pricing before selected works enter the finished fine-art collection.";
 
 const meta = {
   seoTitle: pageTitle,
@@ -46,6 +70,13 @@ const structuredData = {
       position: index + 1,
       name: shoot.title,
       description: shoot.description,
+      item: {
+        "@type": "CollectionPage",
+        "@id": `https://www.k4studios.com/Other/Expeditions/${shoot.slug}#webpage`,
+        url: `https://www.k4studios.com/Other/Expeditions/${shoot.slug}`,
+        name: shoot.title,
+        description: shoot.description,
+      },
     })),
   },
 };
@@ -65,13 +96,16 @@ const breadcrumbData = {
   title={pageTitle}
   description={pageDescription}
   meta={meta}
-  structuredDataJSON={structuredData}
-  breadcrumbsJSON={breadcrumbData}
+  structuredDataJSON={JSON.stringify(structuredData)}
+  breadcrumbsJSON={JSON.stringify(breadcrumbData)}
 >
   <main class="photoshoots-page">
     <div class="photoshoots-shell">
       <div class="drawer-mode">
-        <LandingHeader client:load breadcrumb="Other &rsaquo; Expeditions" />
+        <LandingHeader
+          client:load
+          breadcrumb="<a href='/Other' style='color: inherit; text-decoration: none;'>Other</a> &rsaquo; Expeditions"
+        />
       </div>
 
       <section class="photoshoots-hero" aria-labelledby="expeditions-title">
@@ -82,17 +116,18 @@ const breadcrumbData = {
 
         <div class="intro-copy">
           <p>
-            Each K4 expedition produces a much broader body of photography than ultimately appears in the
-            permanent fine-art collection. These galleries provide access to portraits, scenes, and images
-            created during individual photographic productions.
+            Each K4 expedition produces a much broader body of photography than ultimately enters the
+            permanent fine-art collection.
           </p>
           <p>
-            Participants, collectors, and visitors can explore and purchase photographs directly from each
-            expedition gallery while the larger body of work remains available as an archive.
+            These Expedition Galleries offer participants, families, collectors, and visitors an early look
+            at that work, with selected photographs available at special <strong>Pre-Release Pricing</strong>
+            while they remain in the gallery.
           </p>
           <p>
-            From these expeditions, selected photographs may later be further developed through title,
-            narrative, and editioning and become part of the permanent K4 Studios fine-art collection.
+            As certain images reveal a larger story, they may be selected for further development through
+            final curation, title, narrative, and editioning. When an image enters the permanent K4 Studios
+            fine-art collection, it leaves the Expedition Gallery and Pre-Release Pricing ends.
           </p>
         </div>
       </section>
@@ -104,11 +139,25 @@ const breadcrumbData = {
         </div>
 
         <div class="shoot-grid">
-          {expeditions.map((shoot, index) => (
+          {expeditions.map((shoot, index) => {
+            const apiPreview = expeditionPreviews.get(shoot.slug);
+            const previewSrc = apiPreview?.thumbnailUrl || shoot.image;
+            const previewAlt = apiPreview
+              ? `Newest pre-release photograph from ${shoot.title}`
+              : shoot.imageAlt || shoot.title;
+
+            return (
             <article class="shoot-card">
               <div class="card-media">
-                {shoot.image ? (
-                  <img src={shoot.image} alt={shoot.imageAlt || shoot.title} loading="lazy" />
+                {previewSrc ? (
+                  <img
+                    src={previewSrc}
+                    alt={previewAlt}
+                    width={apiPreview?.width}
+                    height={apiPreview?.height}
+                    loading="lazy"
+                    decoding="async"
+                  />
                 ) : (
                   <div class="image-placeholder" aria-hidden="true">
                     <span class="placeholder-year">{shoot.year}</span>
@@ -127,17 +176,16 @@ const breadcrumbData = {
                 <p class="card-description">{shoot.description}</p>
                 <a
                   class="gallery-link"
-                  href={shoot.galleryUrl}
-                  target="_blank"
-                  rel="nofollow noopener noreferrer"
-                  aria-label={`View the expedition gallery for ${shoot.title} (opens in a new tab)`}
+                  href={`/Other/Expeditions/${shoot.slug}`}
+                  aria-label={`View the expedition gallery for ${shoot.title}`}
                 >
                   <span>View Expedition Gallery</span>
                   <span aria-hidden="true">&rarr;</span>
                 </a>
               </div>
             </article>
-          ))}
+            );
+          })}
         </div>
       </section>
 
@@ -147,28 +195,29 @@ const breadcrumbData = {
           <h2 id="collection-note-title">Expedition Galleries and the K4 Fine-Art Collection</h2>
         </div>
         <div class="distinction-grid">
-          <div>
+          <section class="collection-stage expedition-stage">
+            <p class="stage-label">Pre-Release Stage</p>
             <h3>Expedition Gallery</h3>
-            <p>
-              The broader body of photography created during the expedition, including portraits, scenes,
-              and images available to participants, collectors, and visitors. Selected print sizes and
-              editions may be offered directly from these galleries.
-            </p>
-          </div>
+            <ul>
+              <li>Broader body of work</li>
+              <li>Special Pre-Release Pricing</li>
+              <li>Accessible keepsake prints in selected sizes</li>
+            </ul>
+          </section>
           <span class="distinction-arrow" aria-hidden="true">&rarr;</span>
-          <div>
-            <h3>K4 Fine-Art Collection</h3>
-            <p>
-              A smaller group of works selected from the expedition and developed into K4's permanent body
-              of narrative fine art through final curation, title, story, and editioning.
-            </p>
-          </div>
+          <section class="collection-stage finished-stage">
+            <p class="stage-label">Graduated Stage</p>
+            <h3>Selected for K4 Collection</h3>
+            <ul>
+              <li>Image leaves the Expedition Gallery</li>
+              <li>Final title, story, and finishing</li>
+              <li>Standard K4 editions and pricing</li>
+            </ul>
+          </section>
         </div>
-        <p class="collection-continuity">
-          <span aria-hidden="true">*</span> An image may remain available in its expedition gallery even after a finished version enters the
-          permanent collection.
-        </p>
       </aside>
+
+      <ExpeditionExploreMore rotationKey="expeditions-index" />
     </div>
 
     <SiteFooter
@@ -400,33 +449,37 @@ const breadcrumbData = {
 
     .distinction-grid {
       display: grid;
-      grid-template-columns: 1fr auto 1fr;
-      gap: clamp(1rem, 3vw, 2.5rem);
-      align-items: center;
+      grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+      gap: clamp(1rem, 2.5vw, 2rem);
+      align-items: stretch;
       margin-top: 1.5rem;
       padding-top: 1.75rem;
       border-top: 1px solid #c9b9a4;
     }
 
-    .distinction-grid h3 { margin: 0 0 0.65rem; color: #493724; font-family: "Glegoo", serif; font-size: 1.15rem; font-weight: 400; }
-    .distinction-grid p { margin: 0; color: #5e554b; font-size: 0.84rem; line-height: 1.75; }
-    .distinction-arrow { color: #a07849; font-size: 1.7rem; }
-
-    .collection-continuity {
-      margin: 2.5rem 0 0;
-      padding-top: 1.75rem;
-      border-top: 1px solid #c9b9a4;
-      color: #695e52;
-      font-size: 0.9rem;
-      font-style: italic;
-      line-height: 1.7;
-      text-align: center;
+    .collection-stage {
+      padding: clamp(1.25rem, 3vw, 2rem);
+      border: 1px solid #c9b9a4;
+      background: rgba(255, 255, 255, 0.48);
     }
 
-    .collection-continuity span {
-      color: #8a6031;
+    .collection-stage.finished-stage {
+      border-color: #8d7357;
+      background: #f8f5f0;
+    }
+
+    .collection-stage .stage-label {
+      margin: 0 0 0.45rem;
+      color: #936536;
+      font-size: 0.66rem;
       font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
     }
+
+    .distinction-grid h3 { margin: 0 0 0.8rem; color: #493724; font-family: "Glegoo", serif; font-size: 1.25rem; font-weight: 400; }
+    .distinction-grid ul { display: grid; gap: 0.4rem; margin: 0; padding-left: 1.2rem; color: #5e554b; font-size: 0.86rem; line-height: 1.65; }
+    .distinction-arrow { align-self: center; justify-self: center; color: #a07849; font-size: 1.8rem; line-height: 1; }
 
     @media (max-width: 720px) {
       .photoshoots-shell { width: min(100% - 1.25rem, 1200px); }
@@ -435,7 +488,7 @@ const breadcrumbData = {
       .shoot-grid { grid-template-columns: 1fr; }
       .card-body { min-height: 0; }
       .distinction-grid { grid-template-columns: 1fr; }
-      .distinction-arrow { transform: rotate(90deg); transform-origin: center; justify-self: start; }
+      .distinction-arrow { transform: rotate(90deg); }
     }
 
     @media (prefers-reduced-motion: reduce) {

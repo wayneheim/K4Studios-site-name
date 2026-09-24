@@ -33,14 +33,15 @@ function getLikeAnalyticsIds() {
 }
 
 export default function LikeButton({ imageId, pageTitle }) {
-  const [liked, setLiked] = useState(false);
+  const [likedState, setLikedState] = useState({ imageId: null, liked: false });
   const [hasMounted, setHasMounted] = useState(false);
+  const liked = likedState.imageId === imageId && likedState.liked;
 
   useEffect(() => {
     setHasMounted(true);
     try {
       const likedImages = JSON.parse(localStorage.getItem("k4-liked-images") || "[]");
-      setLiked(likedImages.includes(imageId));
+      setLikedState({ imageId, liked: likedImages.includes(imageId) });
     } catch (err) {
       console.error("Failed to parse liked images from localStorage:", err);
     }
@@ -60,7 +61,7 @@ export default function LikeButton({ imageId, pageTitle }) {
 
     if (!isLiked) {
       // Liking (turn ON)
-      setLiked(true);
+      setLikedState({ imageId, liked: true });
       localStorage.setItem("k4-liked-images", JSON.stringify([...likedImages, imageId]));
 
       // Always send the like to the server for logging, but only notify once per browser/image.
@@ -103,7 +104,7 @@ export default function LikeButton({ imageId, pageTitle }) {
     } else {
       // Unliking (turn OFF, remove from UI, don't touch notified list)
       console.log("[LikeButton] Unliking image");
-      setLiked(false);
+      setLikedState({ imageId, liked: false });
       const updatedImages = likedImages.filter((id) => id !== imageId);
       localStorage.setItem("k4-liked-images", JSON.stringify(updatedImages));
     }

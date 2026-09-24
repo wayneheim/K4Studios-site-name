@@ -1,0 +1,178 @@
+---
+const wildWestPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West";
+const { rotationKey = Astro.url.pathname } = Astro.props;
+
+const relatedReadingPool = [
+  {
+    href: "/Blog/what-is-western-art",
+    title: "What Is Western Art?",
+    description: "Explore the history, meaning, and continuing tradition of art shaped by the American West.",
+  },
+  {
+    href: "/Blog/what-is-western-fine-art-photography",
+    title: "What Is Western Fine Art Photography?",
+    description: "See how photographic craft, interpretation, and artistic intent transform an image into fine art.",
+  },
+  {
+    href: "/Blog/can-photography-be-narrative-western-art",
+    title: "Can Photography Be Narrative Western Art?",
+    description: "Consider how a single photograph can carry character, tension, atmosphere, and story.",
+  },
+  {
+    href: "/Blog/what-is-western-fine-art",
+    title: "What Is Western Fine Art?",
+    description: "Look beyond subject matter to the craft, intention, and interpretation that give Western work lasting artistic value.",
+  },
+  {
+    href: "/Blog/what-is-cinematic-western-art",
+    title: "What Is Cinematic Western Art?",
+    description: "Explore the use of light, staging, atmosphere, and visual tension in contemporary Western storytelling.",
+  },
+  {
+    href: "/Blog/narrative-western-art-vs-traditional",
+    title: "Narrative vs. Traditional Western Art",
+    description: "Compare story-driven Western imagery with more traditional approaches to frontier subjects and scenes.",
+  },
+  {
+    href: "/Photography-in-Western-Art",
+    title: "Photography in Western Art",
+    description: "Follow photography's role in recording, interpreting, and reshaping how the American West is seen.",
+  },
+];
+
+const dayKey = new Date().toISOString().slice(0, 10);
+const seed = `${rotationKey}:${dayKey}`.split("").reduce(
+  (value, character) => ((value * 31) + character.charCodeAt(0)) >>> 0,
+  0,
+);
+const startIndex = seed % relatedReadingPool.length;
+const relatedReading = [0, 2, 4].map(
+  (offset) => relatedReadingPool[(startIndex + offset) % relatedReadingPool.length],
+);
+---
+
+<aside class="expedition-explore" aria-labelledby="expedition-explore-title">
+  <div class="explore-heading">
+    <p>Continue Exploring</p>
+    <h2 id="expedition-explore-title">More to Explore</h2>
+  </div>
+
+  <div class="explore-grid">
+    <a class="explore-card explore-card-featured" href={wildWestPath}>
+      <span class="card-type">Collection</span>
+      <h3>Browse More of the Wild West Collection</h3>
+      <p>Discover finished K4 works drawn from cowboy life, frontier history, and the enduring stories of the American West.</p>
+      <span class="card-link">Explore the collection <span aria-hidden="true">&rarr;</span></span>
+    </a>
+
+    {relatedReading.map((link) => (
+      <a class="explore-card" href={link.href}>
+        <span class="card-type">Related Reading</span>
+        <h3>{link.title}</h3>
+        <p>{link.description}</p>
+        <span class="card-link">Read the article <span aria-hidden="true">&rarr;</span></span>
+      </a>
+    ))}
+  </div>
+</aside>
+
+<style>
+  .expedition-explore {
+    width: min(1200px, 100%);
+    margin: clamp(4rem, 8vw, 7rem) auto 2rem;
+    padding: clamp(2rem, 4vw, 3.25rem);
+    border-top: 1px solid #ddd4ca;
+    border-bottom: 1px solid #ddd4ca;
+    color: #302b26;
+    background: #faf8f5;
+    font-family: "Glegoo", serif;
+  }
+
+  .explore-heading {
+    margin-bottom: 1.75rem;
+    text-align: center;
+  }
+
+  .explore-heading > p,
+  .card-type {
+    margin: 0 0 0.55rem;
+    color: #8a6031;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .explore-heading h2 {
+    margin: 0;
+    font-family: "Glegoo", serif;
+    font-size: clamp(1.55rem, 3vw, 2.3rem);
+    font-weight: 400;
+  }
+
+  .explore-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .explore-card {
+    display: flex;
+    min-height: 190px;
+    padding: 1.5rem;
+    border: 1px solid #ddd4ca;
+    flex-direction: column;
+    color: inherit;
+    background: #fff;
+    text-decoration: none;
+    transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+  }
+
+  .explore-card:hover,
+  .explore-card:focus-visible {
+    border-color: #a98567;
+    box-shadow: 0 8px 24px rgba(54, 42, 31, 0.09);
+    transform: translateY(-2px);
+  }
+
+  .explore-card-featured {
+    border-color: #ad8a6d;
+    background: #f2e9df;
+  }
+
+  .explore-card h3 {
+    margin: 0;
+    font-family: "Glegoo", serif;
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  .explore-card p {
+    margin: 0.75rem 0 1.2rem;
+    color: #6d645b;
+    font-size: 0.82rem;
+    line-height: 1.65;
+  }
+
+  .card-link {
+    margin-top: auto;
+    color: #75441f;
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+
+  @media (max-width: 680px) {
+    .expedition-explore {
+      padding: 1.5rem 1rem;
+    }
+
+    .explore-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .explore-card {
+      min-height: 0;
+    }
+  }
+</style>

@@ -33,4 +33,15 @@ export const expeditions: Expedition[] = [
     galleryUrl: "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Fiddlers-Green-26-E",
     status: "Expedition Gallery",
   },
+  {
+    title: "OBV Wild West 2026",
+    year: 2026,
+    slug: "obv-wild-west-2026",
+    description:
+      "Western historical portraits, scenes, and photography created during the 2026 OBV Wild West expedition at Old Bedford Village in Pennsylvania.",
+    galleryUrl:
+      "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-2026/OBV-Wild-West-2026-Expedition",
+    status: "Expedition Gallery",
+    location: "Old Bedford Village, Pennsylvania",
+  },
 ];

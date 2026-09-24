@@ -1,0 +1,20 @@
+---
+export const prerender = false;
+
+import ExpeditionGalleryPage from "@/components/ExpeditionGalleryPage.astro";
+import { expeditions } from "@/data/Other/Expeditions/shoots";
+
+const expedition = expeditions.find((entry) => entry.slug === Astro.params.slug);
+
+if (!expedition) {
+  return Astro.redirect("/404", 302);
+}
+
+// Keep browsers from retaining old pricing while allowing brief edge reuse.
+Astro.response.headers.set(
+  "Cache-Control",
+  "public, max-age=0, s-maxage=60, stale-while-revalidate=30",
+);
+---
+
+<ExpeditionGalleryPage expedition={expedition} />

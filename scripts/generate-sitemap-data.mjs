@@ -17,6 +17,7 @@ const DOORWAY_REGISTRY_FILE = path.resolve(__dirname, '..', 'src', 'data', 'door
 const COMMERCIAL_INTENT_DOORWAY_FILE = path.resolve(__dirname, '..', 'src', 'data', 'doorway', 'commercialIntentPages.ts');
 const SITE_NAV_FILE = path.resolve(__dirname, '..', 'src', 'data', 'siteNav.js');
 const VIDEO_REGISTRY_FILE = path.resolve(__dirname, '..', 'src', 'data', 'videos', 'videoRegistry.ts');
+const EXPEDITIONS_REGISTRY_FILE = path.resolve(__dirname, '..', 'src', 'data', 'Other', 'Expeditions', 'shoots.ts');
 const DYNAMIC_ALL_ROUTE_FILE = path.resolve(__dirname, '..', 'src', 'pages', '[...gallery]', 'all.astro');
 
 const GHOST_IMAGE_ID = 'i-k4studios';
@@ -114,6 +115,7 @@ const EXCLUDE_PATTERNS = [
   /\/Test-show/i,
   /\/demo-show/i,
   /\/Template\//i,
+  /^\/Other\/Expeditions\/echoes-api-test\/?$/i,
   /^\/Other\/Historical-Reenactment-Photography\/?$/,
   /^\/Galleries\/Painterly-Fine-Art-Photography\/Facing-History\/Western-Cowboy-Portraits\/NA-Color(?:\/|$)/,
   /^\/Galleries\/Painterly-Fine-Art-Photography\/Facing-History\/Western-Cowboy-Portraits\/NA-Black-White(?:\/|$)/,
@@ -122,6 +124,26 @@ const EXCLUDE_PATTERNS = [
   /backup$/i,
   /copy$/i,
 ];
+
+async function loadDynamicExpeditionRoutes() {
+  try {
+    const source = await readFile(EXPEDITIONS_REGISTRY_FILE, 'utf8');
+    const lastmod = await getFileLastmodIso(EXPEDITIONS_REGISTRY_FILE);
+    const slugs = [...source.matchAll(/\bslug:\s*["']([^"']+)["']/g)]
+      .map((match) => match[1]?.trim())
+      .filter(Boolean);
+
+    return [...new Set(slugs)].map((slug) => ({
+      loc: `${SITE_URL}/Other/Expeditions/${slug}`,
+      lastmod,
+      changefreq: 'weekly',
+      priority: 0.6,
+    }));
+  } catch (error) {
+    console.error('Error loading Expedition routes:', error.message);
+    return [];
+  }
+}
 
 // Priority rules based on path depth and type
 function getPriority(urlPath) {
@@ -459,9 +481,12 @@ async function main() {
 
   // Get dedicated video detail pages from the video registry
   const videoEntries = await loadVideoDetailRoutes();
+
+  // Get live SmugMug-backed Expedition detail pages from their registry
+  const expeditionEntries = await loadDynamicExpeditionRoutes();
   
   // Combine and deduplicate
-  const allEntries = [...commercialDoorwayEntries, ...staticEntries, ...dynamicEntries, ...dynamicAllEntries, ...doorwayEntries, ...videoEntries];
+  const allEntries = [...commercialDoorwayEntries, ...staticEntries, ...dynamicEntries, ...dynamicAllEntries, ...doorwayEntries, ...videoEntries, ...expeditionEntries];
   const dedupedEntries = Array.from(new Map(allEntries.map((entry) => [entry.loc, entry])).values());
   
   // Sort for stable output (by URL)
@@ -494,6 +519,7 @@ export const sitemap: SitemapEntry[] = ${JSON.stringify(dedupedEntries, null, 2)
   console.log(`  - ${doorwayEntries.length} active doorway pages`);
   console.log(`  - ${commercialDoorwayEntries.length} commercial intent doorway pages`);
   console.log(`  - ${videoEntries.length} video detail pages`);
+  console.log(`  - ${expeditionEntries.length} Expedition detail pages`);
 
   // Also emit a static public/sitemap.xml so `/sitemap.xml` works even when deploying
   // prebuilt artifacts without SSR/function bundles.
