@@ -699,6 +699,13 @@ export const siteNav = [
       "type": "collection",
       "children": [
         {
+          "label": "Getting Past",
+          "href": "/Other/Getting-Past",
+          "code": "O-S5e-Ss0",
+          "slug": "getting-past",
+          "type": "section"
+        },
+        {
           "label": "The Story Inside the Stone",
           "href": "/Other/The-Story-Inside-the-Stone",
           "code": "O-S5e-Ss1",

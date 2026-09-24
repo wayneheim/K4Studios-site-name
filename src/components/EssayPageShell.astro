@@ -28,6 +28,11 @@ interface Props {
   relatedEssays?: RelatedEssay[];
   bottomCta?: { label: string; href: string };
   structuredData?: Record<string, unknown>;
+  robots?: string;
+  ogImage?: string;
+  ogImageAlt?: string;
+  ogImageWidth?: number;
+  ogImageHeight?: number;
 }
 
 const {
@@ -41,7 +46,14 @@ const {
   relatedEssays = [],
   bottomCta,
   structuredData,
+  robots = "index, follow",
+  ogImage,
+  ogImageAlt,
+  ogImageWidth,
+  ogImageHeight,
 } = Astro.props;
+
+const hasHeroMedia = Boolean(heroArtwork) || Astro.slots.has("hero-media");
 
 const canonicalUrl = `https://www.k4studios.com${canonicalPath}`;
 const meta = {
@@ -53,17 +65,26 @@ const meta = {
   ogTitle: seoTitle,
   ogDescription: description,
   ogType: "article",
-  robots: "index, follow",
+  robots,
+  ogImage,
+  ogImageAlt,
+  ogImageWidth,
+  ogImageHeight,
 };
 ---
 
-<BaseLayout title={title} description={description} meta={meta} structuredDataJSON={structuredData}>
+<BaseLayout
+  title={title}
+  description={description}
+  meta={meta}
+  structuredDataJSON={structuredData ? JSON.stringify(structuredData) : undefined}
+>
   <main class="essay-shell">
     <div class="drawer-mode">
       <LandingHeader client:load breadcrumb={`Other > Essays & Writings > ${title}`} />
     </div>
 
-    <header class:list={["essay-hero", !heroArtwork && "essay-hero--text-only"]}>
+    <header class:list={["essay-hero", !hasHeroMedia && "essay-hero--text-only"]}>
       <div class="essay-hero__copy">
         <p class="essay-eyebrow">{eyebrow}</p>
         <h1>{title}</h1>
@@ -82,6 +103,7 @@ const meta = {
           {heroArtwork.title && <figcaption>{heroArtwork.title}</figcaption>}
         </figure>
       )}
+      {!heroArtwork && <slot name="hero-media" />}
     </header>
 
     <article class="essay-body"><slot /></article>

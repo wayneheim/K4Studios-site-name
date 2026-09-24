@@ -1,0 +1,184 @@
+---
+export const prerender = true;
+
+import EssayPageShell from "@/components/EssayPageShell.astro";
+import EssayArtworkPlaceholder from "@/components/EssayArtworkPlaceholder.astro";
+
+const title = "Getting Past";
+const seoTitle = "Getting Past | Wayne Heim Western Fine Art";
+const subtitle = "Who Decides Where the Worlds Meet";
+const canonicalPath = "/Other/Getting-Past";
+const canonicalUrl = `https://www.k4studios.com${canonicalPath}`;
+const heroHref = "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Fiddlers-Green-26-E/i-kKcx52H/Buy";
+const heroSrc = "/images/getting-past-web.jpg";
+const heroImageUrl = `https://www.k4studios.com${heroSrc}`;
+const heroAlt = "A woman in period dress sits beside her belongings on a grassy rise beneath a cloud-filled sky.";
+const willingAnotherTomorrowHref = "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Fiddlers-Green-26-E/i-M3fXnkq/buy";
+const willingAnotherTomorrowSrc = "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Fiddlers-Green-26-E/i-M3fXnkq/1/Kv59w2rmr9RrdJtj2FxPxrRF3vVFzRnNjpxM6BqCV/L/_WHO1071-Edit-Edit-L.jpg";
+const willingAnotherTomorrowAlt = "Three women in period dresses stand with their backs to the viewer, looking across a rugged Western landscape.";
+const description =
+  "Wayne Heim on Getting Past, a painterly Western image of a frontier woman who decides where two worlds meet—and the women beneath the Western legend.";
+
+const relatedEssays = [
+  {
+    title: "Narrative Vacuum",
+    description: "Why unanswered space invites the viewer into the story.",
+    href: "/Other/Narrative-Vacuum",
+  },
+  {
+    title: "What Is a One-Image Movie?",
+    description: "How one image can suggest what happened before and what happens next.",
+    href: "/Other/One-Image-Movie",
+  },
+];
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": `${canonicalUrl}#article`,
+  headline: title,
+  alternativeHeadline: subtitle,
+  description,
+  url: canonicalUrl,
+  mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
+  author: { "@type": "Person", name: "Wayne Heim", url: "https://www.k4studios.com/Other/Bio" },
+  publisher: { "@type": "Organization", name: "K4 Studios", url: "https://www.k4studios.com/" },
+  image: {
+    "@type": "ImageObject",
+    url: heroImageUrl,
+    contentUrl: heroImageUrl,
+    width: 675,
+    height: 900,
+    caption: heroAlt,
+    creator: { "@type": "Person", name: "Wayne Heim", url: "https://www.k4studios.com/Other/Bio" },
+  },
+  inLanguage: "en",
+  about: [
+    "Western fine art photography",
+    "Western narrative art",
+    "women of the American West",
+    "frontier women",
+    "Pictorialism",
+    "visual storytelling",
+    "narrative art",
+  ],
+  isPartOf: {
+    "@id": "https://www.k4studios.com/Other/Essays-Writings#webpage",
+    name: "Essays & Writings",
+    url: "https://www.k4studios.com/Other/Essays-Writings",
+  },
+};
+---
+
+<EssayPageShell
+  title={title}
+  seoTitle={seoTitle}
+  subtitle={subtitle}
+  description={description}
+  canonicalPath={canonicalPath}
+  eyebrow="Image Essay"
+  relatedEssays={relatedEssays}
+  bottomCta={{ label: "Explore Western Narratives", href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives" }}
+  structuredData={structuredData}
+  robots="noindex, follow"
+  ogImage={heroImageUrl}
+  ogImageAlt={heroAlt}
+  ogImageWidth={675}
+  ogImageHeight={900}
+>
+  <div slot="lead" class="essay-lead">
+    <p>The promise was always somewhere beyond the horizon. Open country. A fresh beginning. A chance to build something where little existed before.</p>
+    <p>Getting there was another matter. Mud. Fever. Bad water. Empty barrels. Miles measured against what remained in the wagon and how much farther determination could carry it.</p>
+  </div>
+
+  {/* GETTING PAST — local watermark-free web image.
+      TODO: Replace the Expedition /Buy destination with the permanent K4 gallery href when promoted. */}
+  <EssayArtworkPlaceholder
+    slot="hero-media"
+    title="Getting Past"
+    placement="hero"
+    src={heroSrc}
+    href={heroHref}
+    alt={heroAlt}
+    maxWidth="28.125rem"
+  />
+
+  <section class="essay-section essay-section--opening">
+    <p>Two different Wests. One hangs almost weightless above the horizon—soft, open, barely defined. The other claws its way across the foreground. Tangled. Broken. Dark. The rough underbelly of a journey rarely mentioned in the promise.</p>
+    <p>And between them, a woman has taken a seat. Properly dressed. Belongings beside her. Posture intact. Whatever the country demanded along the way, it didn't get everything.</p>
+    <p>Then comes the shadow. It falls from beneath her and drives deep into the rough ground below—a foot, a stake, perhaps a line holding one world against the other. She isn't caught between them.</p>
+    <blockquote class="essay-pull-quote"><strong>Only she decides where the two worlds meet.</strong></blockquote>
+  </section>
+
+  <section class="essay-section" id="the-other-kind-of-power">
+    <h2>The Other Kind of Power</h2>
+    <p>Power in the West is easy to recognize. A badge. A gun. A herd. A name on a deed. But some power never needed a title.</p>
+    <p>Everyone knows someone like her.</p>
+    <p>Maybe she ran the office. The name on the door belonged to somebody else, but nothing happened without getting past her desk. She knew what mattered, what could wait, who needed attention and who was wasting everyone's time.</p>
+    <p>Maybe she ran the house. God help anyone who walked in and tried to change things.</p>
+    <p>Move her back a century and the details change, but not necessarily the job.</p>
+    <p>How much flour is left? Which child has the fever? What can wait until spring? Who can be trusted? What gets sold? What gets saved? What absolutely has to happen before morning?</p>
+    <p>The West could be spectacularly indifferent to whether anyone was prepared for the question. Someone still had to answer it.</p>
+    <p>No title. No monument. Just the quiet authority of knowing what needs to happen next.</p>
+  </section>
+
+  <section class="essay-section" id="what-the-journey-didnt-take">
+    <h2>What the Journey Didn't Take</h2>
+    <p>Her dress matters. Not because it is pretty. Not because it tells the viewer what year this might be. Because after everything represented by that rough ground below, she is still wearing it.</p>
+    <p>The journey may have taken comfort. Money. Certainty. Perhaps people. It did not get her standards. There is something almost defiant in that.</p>
+    <p>The country could demand adaptation without being allowed to decide who she became. Civilization wasn't simply something waiting at the end of the trail. Sometimes it was carried there—in trunks, in habits, in expectations, in the stubborn refusal to surrender one more thing than absolutely necessary.</p>
+    <p>She has crawled her way to the top of the drama and taken a seat. From there, she sees it all.</p>
+  </section>
+
+  <section class="essay-section" id="getting-past">
+    <h2>Getting Past</h2>
+    <p>Two words. No subject. No object. That leaves some room.</p>
+    <p>Getting past <em>her</em>. Getting past <em>it</em>—whatever waits in that dark ground below. Getting past what happened. Getting past what was lost.</p>
+    <p>There is even an older sense hiding in the phrase. Getting past as getting by. Managing. Making do. Finding enough of whatever remains to get through one more day.</p>
+    <p>And then there is the tense. Not <em>got</em> past. <strong>Getting.</strong> Still happening. Whatever she crossed, she may still be crossing.</p>
+  </section>
+
+  <section class="essay-section" id="the-armature-beneath-the-legend">
+    <h2>The Armature Beneath the Legend</h2>
+    <p>Women keep appearing where the Western story gets difficult. Not necessarily at the moment history would choose to remember. Often immediately afterward.</p>
+    <p>When the supplies are disappearing. When another ridge reveals another hundred miles. When the promise at the end of the journey begins looking suspiciously different from the promise that started it. When someone dies. When someone gets sick. When morning arrives anyway.</p>
+    <p>In <em>Willing Another Tomorrow</em>, another woman looks across an impossible stretch of country and somehow has to manufacture enough hope to continue. Not just for herself. For the people beside her.</p>
+    <p>Forward. Always forward. Another tomorrow served.</p>
+
+    {/* WILLING ANOTHER TOMORROW — Expedition image supplied at L size only.
+        TODO: Replace with the permanent K4 gallery href/source when promoted. */}
+    <EssayArtworkPlaceholder
+      title="Willing Another Tomorrow"
+      placement="inline"
+      side="left"
+      aspectRatio="3 / 4"
+      src={willingAnotherTomorrowSrc}
+      href={willingAnotherTomorrowHref}
+      alt={willingAnotherTomorrowAlt}
+      crop
+      objectPosition="center center"
+    />
+
+    <p>The woman on this hill feels farther along the same road. The cost has already been paid. The rough country is behind her—or mostly behind her—and somehow she has come through intact enough to sit above it. That difference matters.</p>
+    <p>One woman is still finding the strength to continue. The other has become part of what makes continuation possible.</p>
+    <p>History has plenty of room for the rancher, the lawman, the gunfighter and the names written across deeds. It remembers less about the people who knew where everything was.</p>
+    <p>Who stretched what remained. Who absorbed the bad news. Who kept the children moving. Who put a hand on someone's shoulder and said whatever needed saying—or perhaps said nothing at all.</p>
+    <p>Take those people away and something happens to the larger stories. They begin to collapse.</p>
+    <blockquote class="essay-pull-quote essay-pull-quote--clear"><strong>They are the armature beneath the legend.</strong></blockquote>
+  </section>
+
+  <section class="essay-section" id="where-the-worlds-meet">
+    <h2>Where the Worlds Meet</h2>
+    <p>So there she sits. Maybe she's resting. Maybe she's waiting for someone. Maybe the journey has only paused long enough for her to decide what comes next.</p>
+    <p>Maybe the shadow means nothing more than the sun was behind her. Good. The picture doesn't need the question settled.</p>
+    <p>But the divide remains. Rough country below. Open promise above. And a woman sitting precisely where one becomes the other.</p>
+    <p>The shadow reaches backward into everything she crossed. Her gaze reaches somewhere beyond the frame.</p>
+    <p>Whatever is still out there, it hasn't gotten past her yet.</p>
+    <p>Or she hasn't finished getting past it.</p>
+  </section>
+</EssayPageShell>
+
+<style>
+  :global(.essay-section--opening) { padding-top: 1rem; }
+  :global(.essay-pull-quote--clear) { clear: both; }
+</style>

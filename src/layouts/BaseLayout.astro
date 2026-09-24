@@ -199,8 +199,8 @@ const socialDescription =
 // ✅ OG / Twitter image setup
 let rawOgImage;
 let ogAlt;
-let ogWidth = preloadImage?.width || "1600";
-let ogHeight = preloadImage?.height || "1200";
+let ogWidth = meta.ogImageWidth || preloadImage?.width || "1600";
+let ogHeight = meta.ogImageHeight || preloadImage?.height || "1200";
 
 if (isImagePage && preloadImage?.src) {
   rawOgImage = preloadImage.src;

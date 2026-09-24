@@ -1,4 +1,14 @@
 export const essayClusterPages = {
+  "/Other/Getting-Past": {
+    title: "Getting Past",
+    description: "An image essay about a frontier woman, a cast shadow, and who decides where two worlds meet.",
+    related: ["/Other/Narrative-Vacuum", "/Other/One-Image-Movie"],
+  },
+  "/Other/The-Story-Inside-the-Stone": {
+    title: "The Story Inside the Stone",
+    description: "A subtractive approach to narrative art and authored photography.",
+    related: ["/Other/Narrative-Vacuum", "/Other/Getting-Past", "/Other/One-Image-Movie"],
+  },
   "/Other/Bio": {
     title: "Wayne Heim Bio",
     description: "The artist background behind K4 Studios, from Star Valley roots to medical illustration and narrative fine art photography.",
