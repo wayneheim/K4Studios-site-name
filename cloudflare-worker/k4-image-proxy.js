@@ -1612,7 +1612,7 @@ function buildMerchantSketchSchemaHandler(variantUrl, productSchema) {
       }
 
       const baseName = String(schema.name || 'Fine Art Photograph')
-        .replace(/\s*-\s*Sketch Series Print\s*$/i, '')
+        .replace(/\s*-\s*(?:Sketch Series Print|Open Edition 5 x 7 Physical Photographic Print)\s*$/i, '')
         .trim();
       schema['@id'] = `${variantUrl}#product-sketch`;
       schema.name = `${baseName} - Open Edition 5 x 7 Physical Photographic Print`;

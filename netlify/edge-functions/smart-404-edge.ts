@@ -32,7 +32,7 @@ function rewriteSketchProductSchema(html: string, variantUrl: string): string {
       try {
         const schema = JSON.parse(json);
         const baseName = String(schema.name || 'Fine Art Photograph')
-          .replace(/\s*-\s*Sketch Series Print\s*$/i, '')
+          .replace(/\s*-\s*(?:Sketch Series Print|Open Edition 5 x 7 Physical Photographic Print)\s*$/i, '')
           .trim();
         schema['@id'] = `${variantUrl}#product-sketch`;
         schema.name = `${baseName} - Open Edition 5 x 7 Physical Photographic Print`;
