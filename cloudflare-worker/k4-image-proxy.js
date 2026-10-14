@@ -1657,6 +1657,17 @@ async function handleMerchantSketchPage(request, env, ctx, route) {
     return await createBranded404Response(request);
   }
 
+  // Preserve the base image route's canonical-gallery redirect while retaining
+  // the Merchant suffix. Do not serve correct content at an incorrect gallery URL.
+  const resolvedBaseUrl = new URL(baseResponse.url);
+  const normalizedResolvedPath = resolvedBaseUrl.pathname.replace(/\/+$/g, '');
+  const normalizedRequestedBasePath = route.basePath.replace(/\/+$/g, '');
+  if (normalizedResolvedPath.toLowerCase() !== normalizedRequestedBasePath.toLowerCase()) {
+    const canonicalSketchUrl = new URL(`${normalizedResolvedPath}-sketch`, requestUrl.origin);
+    canonicalSketchUrl.search = requestUrl.search;
+    return Response.redirect(canonicalSketchUrl.toString(), 301);
+  }
+
   const sourceHtml = await baseResponse.text();
   const checkoutUrl = getMarkedAttribute(sourceHtml, 'data-k4-sketch-checkout');
   const productSchema = getMarkedSchema(sourceHtml, 'sketch-product');

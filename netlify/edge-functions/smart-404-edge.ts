@@ -76,6 +76,16 @@ async function renderMerchantSketchVariant(request: Request, pathname: string): 
     return new Response('Not Found', { status: 404, headers: { 'X-Robots-Tag': 'noindex' } });
   }
 
+  // The ordinary image route already knows how to repair an image placed under
+  // the wrong gallery. Preserve that canonical correction instead of silently
+  // following it and serving the Merchant variant at a non-canonical URL.
+  const resolvedBaseUrl = new URL(baseResponse.url);
+  if (normalizePath(resolvedBaseUrl.pathname).toLowerCase() !== normalizePath(basePath).toLowerCase()) {
+    const requestUrl = new URL(request.url);
+    const canonicalSketchPath = `${normalizePath(resolvedBaseUrl.pathname)}-sketch`;
+    return Response.redirect(`${requestUrl.origin}${canonicalSketchPath}${requestUrl.search}`, 301);
+  }
+
   const sourceHtml = await baseResponse.text();
   if (!hasApprovedSketchCheckout(sourceHtml)) {
     return new Response('Not Found', { status: 404, headers: { 'X-Robots-Tag': 'noindex' } });

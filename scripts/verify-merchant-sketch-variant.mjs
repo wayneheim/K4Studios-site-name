@@ -54,6 +54,21 @@ try {
     console.log(JSON.stringify({ url, finalUrl: page.url(), contentChecks, imageBox, pricingBox, orderVisible, zoomOpen, pageErrors }));
     await page.close();
   }
+
+  const misplacedUrl = 'https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-zwNxLnH-sketch';
+  const expectedCanonicalUrl = `${baseUrl}-sketch`;
+  const redirectPage = await browser.newPage();
+  const redirectResponse = await redirectPage.goto(misplacedUrl, { waitUntil: 'networkidle', timeout: 120_000 });
+  if (redirectPage.url() !== expectedCanonicalUrl) {
+    throw new Error(`Merchant smart-404 failed: expected ${expectedCanonicalUrl}, got ${redirectPage.url()}`);
+  }
+  console.log(JSON.stringify({
+    misplacedUrl,
+    finalUrl: redirectPage.url(),
+    finalStatus: redirectResponse?.status(),
+    redirected: redirectResponse?.request().redirectedFrom() !== null,
+  }));
+  await redirectPage.close();
 } finally {
   await browser.close();
 }
