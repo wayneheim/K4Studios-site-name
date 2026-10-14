@@ -1539,6 +1539,170 @@ async function handleImageRequest(request, ctx, env) {
 // --------------------
 // IMAGE PAGE POLICY
 // --------------------
+const PUBLIC_SITE_ORIGIN = 'https://www.k4studios.com';
+
+function parseMerchantSketchRoute(pathname) {
+  const match = String(pathname || '').match(/^(.*\/)(i-[a-zA-Z0-9]+)-sketch\/?$/i);
+  if (!match) return null;
+
+  return {
+    basePath: `${match[1]}${match[2]}`,
+    imageId: match[2],
+  };
+}
+
+function decodeHtmlAttribute(value) {
+  return String(value || '')
+    .replace(/&amp;/g, '&')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&#x([0-9a-f]+);/gi, (_, code) => String.fromCodePoint(parseInt(code, 16)))
+    .replace(/&#(\d+);/g, (_, code) => String.fromCodePoint(parseInt(code, 10)))
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>');
+}
+
+function getMarkedAttribute(html, attributeName) {
+  const escapedName = String(attributeName).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const match = String(html || '').match(new RegExp(`${escapedName}="([^"]*)"`, 'i'));
+  return match ? decodeHtmlAttribute(match[1]) : '';
+}
+
+function getMarkedSchema(html, label) {
+  const escapedLabel = String(label).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const match = String(html || '').match(
+    new RegExp(`<script[^>]*data-k4-schema="${escapedLabel}"[^>]*>([\\s\\S]*?)<\\/script>`, 'i')
+  );
+  if (!match) return null;
+
+  try {
+    return JSON.parse(match[1]);
+  } catch (_) {
+    return null;
+  }
+}
+
+function isApprovedSketchCheckout(rawUrl) {
+  try {
+    const checkoutUrl = new URL(rawUrl);
+    return checkoutUrl.protocol === 'https:' && checkoutUrl.hostname === 'wayne-heim.smugmug.com';
+  } catch (_) {
+    return false;
+  }
+}
+
+function setMetaContent(value) {
+  return {
+    element(element) {
+      element.setAttribute('content', String(value || ''));
+    },
+  };
+}
+
+function buildMerchantSketchSchemaHandler(variantUrl, productSchema) {
+  return {
+    element(element) {
+      const schema = productSchema && typeof productSchema === 'object'
+        ? JSON.parse(JSON.stringify(productSchema))
+        : null;
+
+      if (!schema) {
+        element.remove();
+        return;
+      }
+
+      const baseName = String(schema.name || 'Fine Art Photograph')
+        .replace(/\s*-\s*Sketch Series Print\s*$/i, '')
+        .trim();
+      schema['@id'] = `${variantUrl}#product-sketch`;
+      schema.name = `${baseName} - Open Edition 5 x 7 Physical Photographic Print`;
+      schema.description = 'A finished, open-edition 5 x 7 physical photographic paper print. The buyer receives a tangible print shipped to the delivery address.';
+      schema.mainEntityOfPage = { '@type': 'WebPage', '@id': variantUrl };
+      delete schema.isRelatedTo;
+
+      if (schema.offers && typeof schema.offers === 'object') {
+        schema.offers['@id'] = `${variantUrl}#offer-sketch`;
+        schema.offers.name = 'Open Edition 5 x 7 Physical Photographic Print';
+        schema.offers.url = variantUrl;
+      }
+
+      const serialized = JSON.stringify(schema).replace(/</g, '\\u003c');
+      element.setInnerContent(serialized, { html: true });
+    },
+  };
+}
+
+async function handleMerchantSketchPage(request, env, ctx, route) {
+  if (!['GET', 'HEAD'].includes(request.method)) {
+    return new Response('Method Not Allowed', {
+      status: 405,
+      headers: { Allow: 'GET, HEAD', 'Cache-Control': 'no-store' },
+    });
+  }
+
+  const requestUrl = new URL(request.url);
+  const baseUrl = new URL(route.basePath, PUBLIC_SITE_ORIGIN);
+  baseUrl.pathname = route.basePath;
+  baseUrl.search = '';
+
+  const baseRequest = new Request(baseUrl.toString(), {
+    method: 'GET',
+    headers: request.headers,
+    redirect: 'follow',
+  });
+  const baseResponse = await fetch(baseRequest);
+  const contentType = baseResponse.headers.get('Content-Type') || '';
+
+  if (!baseResponse.ok || !contentType.toLowerCase().includes('text/html')) {
+    return await createBranded404Response(request);
+  }
+
+  const sourceHtml = await baseResponse.text();
+  const checkoutUrl = getMarkedAttribute(sourceHtml, 'data-k4-sketch-checkout');
+  const productSchema = getMarkedSchema(sourceHtml, 'sketch-product');
+
+  if (!isApprovedSketchCheckout(checkoutUrl) || !productSchema) {
+    return await createBranded404Response(request);
+  }
+
+  const variantUrl = `${PUBLIC_SITE_ORIGIN}${requestUrl.pathname}`;
+
+  const headers = new Headers(baseResponse.headers);
+  headers.delete('Content-Length');
+  headers.set('Content-Type', 'text/html; charset=utf-8');
+  headers.set('Cache-Control', 'public, max-age=300, s-maxage=3600');
+  headers.set('X-K4-Merchant-Variant', 'sketch');
+
+  const htmlResponse = new Response(sourceHtml, {
+    status: 200,
+    headers,
+  });
+
+  const transformed = new HTMLRewriter()
+    .on('script[data-k4-schema="artwork-license"]', {
+      element(element) { element.remove(); },
+    })
+    .on('script[data-k4-schema="sketch-product"]', buildMerchantSketchSchemaHandler(variantUrl, productSchema))
+    .on('button[title="View Collector Notes"], button[title="Hide Collector Notes"]', {
+      element(element) { element.remove(); },
+    })
+    .on('[data-k4-merchant-strip]', {
+      element(element) { element.remove(); },
+    })
+    .on('meta[property="og:url"]', setMetaContent(variantUrl))
+    .on('meta[name="twitter:url"]', setMetaContent(variantUrl))
+    .on('link[rel="canonical"]', {
+      element(element) { element.setAttribute('href', variantUrl); },
+    })
+    .transform(htmlResponse);
+
+  if (request.method === 'HEAD') {
+    return new Response(null, { status: 200, headers: transformed.headers });
+  }
+
+  return transformed;
+}
+
 function isImagePageRoute(pathname) {
   return /\/(Galleries|galleries|Other|other|Photography-Galleries)\/.*\/[iI]-[a-zA-Z0-9-]+\/?$/.test(pathname);
 }
@@ -3178,6 +3342,16 @@ export default {
     // - Reject unknown /i-xxxxx URLs outside known namespaces as crawler probes (cheap 404, no slash-normalization).
     const path = url.pathname;
     const lowerPath = path.toLowerCase();
+
+    // Merchant Center gets a purpose-built physical Sketch product page without
+    // duplicating the static Astro build. This is URL-based, not bot-based: every
+    // visitor receives the same transformed response for an allowlisted -sketch URL.
+    // It must run before generic image-id validation because the origin only has
+    // the base /i-xxxxx page.
+    const merchantSketchRoute = parseMerchantSketchRoute(path);
+    if (merchantSketchRoute) {
+      return handleMerchantSketchPage(request, env, ctx, merchantSketchRoute);
+    }
 
     // Zone firewall parity: reject PHP probes before any origin, proxy, or
     // analytics work. K4 has no PHP routes, so these are always hostile/noise.

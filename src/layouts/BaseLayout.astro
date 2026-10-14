@@ -18,6 +18,7 @@ try {
 const {
   title = 'Gallery',
   structuredDataJSON,
+  structuredDataEntries = [],
   breadcrumbsJSON,
   extraStructuredDataJSON,
   meta = {},
@@ -426,7 +427,14 @@ const inferMimeType = (url) => {
 const ogImageType = meta.ogImageType || inferMimeType(ogImage) || 'image/jpeg';
 const twitterCard = meta.twitterCard || (twitterImage ? 'summary_large_image' : 'summary');
 const normalizedStructuredDataJSON = normalizeK4Host(structuredDataJSON);
-const normalizedAutoImageJSON = !normalizedStructuredDataJSON ? normalizeK4Host(buildAutoImageSchema()) : null;
+const normalizedStructuredDataEntries = (Array.isArray(structuredDataEntries) ? structuredDataEntries : [])
+  .map((entry) => ({
+    label: String(entry?.label || '').replace(/[^a-z0-9_-]/gi, ''),
+    json: normalizeK4Host(entry?.json),
+  }))
+  .filter((entry) => entry.json);
+const hasSuppliedPrimarySchema = Boolean(normalizedStructuredDataJSON || normalizedStructuredDataEntries.length);
+const normalizedAutoImageJSON = !hasSuppliedPrimarySchema ? normalizeK4Host(buildAutoImageSchema()) : null;
 const normalizedBreadcrumbsJSON = disableAutoBreadcrumbs ? null : normalizeK4Host(breadcrumbsJSON || buildAutoBreadcrumbs());
 const normalizedExtraStructuredDataJSON = Array.isArray(extraStructuredDataJSON)
   ? extraStructuredDataJSON.map(normalizeK4Host)
@@ -465,6 +473,7 @@ const jsonContainsSchemaType = (json, typeName) => {
 
 const suppliedJsonLd = [
   normalizedStructuredDataJSON,
+  ...normalizedStructuredDataEntries.map((entry) => entry.json),
   normalizedBreadcrumbsJSON,
   ...normalizedExtraStructuredDataJSON,
 ].filter(Boolean);
@@ -520,15 +529,19 @@ const siteIdentityStructuredDataJSON = pathname === '/' ? JSON.stringify({
     ],
   }) : null;
 const jsonLdScripts = [
-  siteIdentityStructuredDataJSON,
-  normalizedAutoWebPageJSON,
-  normalizedAutoImageJSON,
-  normalizedStructuredDataJSON,
-  normalizedBreadcrumbsJSON,
-  ...normalizedExtraStructuredDataJSON,
+  { json: siteIdentityStructuredDataJSON },
+  { json: normalizedAutoWebPageJSON },
+  { json: normalizedAutoImageJSON },
+  { json: normalizedStructuredDataJSON },
+  ...normalizedStructuredDataEntries,
+  { json: normalizedBreadcrumbsJSON },
+  ...normalizedExtraStructuredDataJSON.map((json) => ({ json })),
 ]
-  .filter(Boolean)
-  .map((json) => `<script type="application/ld+json">${json}</script>`)
+  .filter((entry) => entry.json)
+  .map((entry) => {
+    const marker = entry.label ? ` data-k4-schema="${entry.label}"` : '';
+    return `<script type="application/ld+json"${marker}>${entry.json}</script>`;
+  })
   .join('\n');
 ---
 

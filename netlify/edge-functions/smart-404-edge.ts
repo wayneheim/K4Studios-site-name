@@ -1,5 +1,108 @@
 type ImageIdMap = Record<string, string[] | string>;
 
+const PUBLIC_SITE_ORIGIN = 'https://www.k4studios.com';
+
+function decodeHtmlAttribute(value: string): string {
+  return String(value || '')
+    .replace(/&amp;/g, '&')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&#x([0-9a-f]+);/gi, (_match, code) => String.fromCodePoint(parseInt(code, 16)))
+    .replace(/&#(\d+);/g, (_match, code) => String.fromCodePoint(parseInt(code, 10)))
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>');
+}
+
+function hasApprovedSketchCheckout(html: string): boolean {
+  const match = html.match(/data-k4-sketch-checkout="([^"]+)"/i);
+  if (!match) return false;
+
+  try {
+    const checkout = new URL(decodeHtmlAttribute(match[1]));
+    return checkout.protocol === 'https:' && checkout.hostname === 'wayne-heim.smugmug.com';
+  } catch {
+    return false;
+  }
+}
+
+function rewriteSketchProductSchema(html: string, variantUrl: string): string {
+  return html.replace(
+    /(<script[^>]*data-k4-schema="sketch-product"[^>]*>)([\s\S]*?)(<\/script>)/i,
+    (_match, open, json, close) => {
+      try {
+        const schema = JSON.parse(json);
+        const baseName = String(schema.name || 'Fine Art Photograph')
+          .replace(/\s*-\s*Sketch Series Print\s*$/i, '')
+          .trim();
+        schema['@id'] = `${variantUrl}#product-sketch`;
+        schema.name = `${baseName} - Open Edition 5 x 7 Physical Photographic Print`;
+        schema.description = 'A finished, open-edition 5 x 7 physical photographic paper print. The buyer receives a tangible print shipped to the delivery address.';
+        schema.mainEntityOfPage = { '@type': 'WebPage', '@id': variantUrl };
+        delete schema.isRelatedTo;
+        if (schema.offers && typeof schema.offers === 'object') {
+          schema.offers['@id'] = `${variantUrl}#offer-sketch`;
+          schema.offers.name = 'Open Edition 5 x 7 Physical Photographic Print';
+          schema.offers.url = variantUrl;
+        }
+        return `${open}${JSON.stringify(schema).replace(/</g, '\\u003c')}${close}`;
+      } catch {
+        return _match;
+      }
+    }
+  );
+}
+
+function stripMerchantEditorialPanels(html: string): string {
+  return html
+    .replace(/<button\b(?=[^>]*\btitle="(?:View|Hide) Collector Notes")[^>]*>[\s\S]*?<\/button>\s*/gi, '')
+    .replace(/<section\b(?=[^>]*\bdata-k4-merchant-strip="collector-notes")[^>]*>[\s\S]*?<\/section>\s*/gi, '')
+    .replace(/<a\b(?=[^>]*\bdata-k4-merchant-strip="featured-blog-link")[^>]*>[\s\S]*?<\/a>\s*/gi, '')
+    .replace(/<nav\b(?=[^>]*\bdata-k4-merchant-strip="related-navigation")[^>]*>[\s\S]*?<\/nav>\s*/gi, '');
+}
+
+async function renderMerchantSketchVariant(request: Request, pathname: string): Promise<Response> {
+  if (!['GET', 'HEAD'].includes(request.method)) {
+    return new Response('Method Not Allowed', { status: 405, headers: { Allow: 'GET, HEAD' } });
+  }
+
+  const basePath = pathname.replace(/-sketch$/i, '');
+  const baseResponse = await fetch(`${PUBLIC_SITE_ORIGIN}${basePath}`, {
+    method: 'GET',
+    headers: request.headers,
+    redirect: 'follow',
+  });
+  const contentType = baseResponse.headers.get('content-type') || '';
+  if (!baseResponse.ok || !contentType.toLowerCase().includes('text/html')) {
+    return new Response('Not Found', { status: 404, headers: { 'X-Robots-Tag': 'noindex' } });
+  }
+
+  const sourceHtml = await baseResponse.text();
+  if (!hasApprovedSketchCheckout(sourceHtml)) {
+    return new Response('Not Found', { status: 404, headers: { 'X-Robots-Tag': 'noindex' } });
+  }
+
+  const variantUrl = `${PUBLIC_SITE_ORIGIN}${pathname}`;
+  let html = sourceHtml.replace(
+    /<script[^>]*data-k4-schema="artwork-license"[^>]*>[\s\S]*?<\/script>\s*/i,
+    ''
+  );
+  html = rewriteSketchProductSchema(html, variantUrl);
+  html = stripMerchantEditorialPanels(html);
+  html = html
+    .replace(/(<link\s+rel="canonical"\s+href=")[^"]*(")/i, `$1${variantUrl}$2`)
+    .replace(/(<meta\s+property="og:url"\s+content=")[^"]*(")/i, `$1${variantUrl}$2`)
+    .replace(/(<meta\s+name="twitter:url"\s+content=")[^"]*(")/i, `$1${variantUrl}$2`);
+
+  const headers = new Headers(baseResponse.headers);
+  headers.delete('content-length');
+  headers.set('content-type', 'text/html; charset=utf-8');
+  headers.set('cache-control', 'no-store');
+  headers.set('X-K4-Merchant-Variant', 'sketch-physical-product');
+
+  if (request.method === 'HEAD') return new Response(null, { status: 200, headers });
+  return new Response(html, { status: 200, headers });
+}
+
 let imageIdMapCache: ImageIdMap | null = null;
 let imageIdMapPromise: Promise<ImageIdMap> | null = null;
 
@@ -179,6 +282,12 @@ export default async function smart404Edge(request: Request, context: { next: ()
 
   if (!/^\/(?:Galleries|galleries|Other|other|Photography-Galleries)\//.test(pathname)) {
     return context.next();
+  }
+
+  // Astro does not generate duplicate -sketch pages. Transform only the labeled
+  // schema blocks while preserving the normal page markup and hydration.
+  if (/\/i-[A-Za-z0-9]+-sketch$/i.test(pathname)) {
+    return renderMerchantSketchVariant(request, pathname);
   }
 
   const imageId = extractImageId(pathname);

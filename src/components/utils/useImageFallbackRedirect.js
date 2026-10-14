@@ -8,7 +8,8 @@ export function useImageFallbackRedirect(galleryData) {
     const match = path.match(/\/(i-[a-zA-Z0-9_-]+)$/);
     if (!match) return; // Not an image detail page, do nothing
 
-    const imageId = match[1];
+    // Merchant Center's -sketch URL is a presentation variant of the same image.
+    const imageId = match[1].replace(/-sketch$/i, '');
     // Case-insensitive comparison to handle URL case variations
     const imageIdLower = imageId.toLowerCase();
     const found = galleryData.some((e) => e && e.id && e.id.toLowerCase() === imageIdLower);

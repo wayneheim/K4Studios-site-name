@@ -144,13 +144,13 @@ const K4_CREATOR_PERSON = {
 const K4_CREATOR_REF = K4_CREATOR_PERSON;
 const SKETCH_SERIES_PRICE = 25;
 const SKETCH_SERIES_DESCRIPTION =
-  "Entry-level Sketch Series fine art print by Wayne Heim, offered as an accessible collector print from K4 Studios.";
+  "A finished, open-edition 5 x 7 physical photographic paper print. The buyer receives a tangible print shipped to the delivery address.";
 
 function buildSketchOfferNode(pageUrl: string, price = SKETCH_SERIES_PRICE) {
   return {
     "@type": "Offer",
     "@id": `${pageUrl}#offer-sketch`,
-    name: "Sketch Series Print",
+    name: "Open Edition 5 x 7 Physical Photographic Print",
     url: pageUrl,
     price,
     priceCurrency: "USD",
@@ -202,7 +202,7 @@ function buildSketchProductNode(data: any, imageUrl: string) {
   return {
     "@type": "Product",
     "@id": `${pageUrl}#product-sketch`,
-    name: `${data.title || "Fine Art Photograph"} - Sketch Series Print`,
+    name: `${data.title || "Fine Art Photograph"} - Open Edition 5 x 7 Physical Photographic Print`,
     image: imageUrl || undefined,
     description: data.sketchDescription || SKETCH_SERIES_DESCRIPTION,
     sku: `${data.id}-sketch`,
@@ -212,7 +212,6 @@ function buildSketchProductNode(data: any, imageUrl: string) {
       name: "K4 Studios",
     },
     category: "Fine Art Print",
-    isRelatedTo: { "@id": `${pageUrl}#image` },
     mainEntityOfPage: { "@type": "WebPage", "@id": pageUrl },
     offers: buildSketchOfferNode(pageUrl, price),
   };
@@ -884,10 +883,10 @@ export function getCollectionImageGalleryGraph({
         ? {
             "@type": "Product",
             "@id": `${imagePageUrl}#product-sketch`,
-            name: `${imageName} - Sketch Series Print`,
+            name: `${imageName} - Open Edition 5 x 7 Physical Photographic Print`,
             url: imagePageUrl,
             image: imageUrl || undefined,
-            description: image.description || image.alt || SKETCH_SERIES_DESCRIPTION,
+            description: SKETCH_SERIES_DESCRIPTION,
             sku: `${image.id}-sketch`,
             brand: {
               "@type": "Brand",

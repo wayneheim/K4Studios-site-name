@@ -212,6 +212,44 @@ const imageStructuredData = currentImage
       images: previewImages,
     });
 
+function splitImageSchema(json: string | undefined) {
+  if (!json) return [];
+
+  try {
+    const parsed = JSON.parse(json);
+    const graph = Array.isArray(parsed?.["@graph"]) ? parsed["@graph"] : null;
+    if (!graph) {
+      return [{ label: "artwork-license", json }];
+    }
+
+    return graph.map((node: any) => {
+      const types = Array.isArray(node?.["@type"]) ? node["@type"] : [node?.["@type"]];
+      const isProduct = types.includes("Product");
+      return {
+        label: isProduct ? "sketch-product" : "artwork-license",
+        json: JSON.stringify({
+          "@context": parsed["@context"] || "https://schema.org",
+          ...node,
+        }),
+      };
+    });
+  } catch {
+    return [{ label: "artwork-license", json }];
+  }
+}
+
+const imageStructuredDataEntries = currentImage
+  ? splitImageSchema(imageStructuredData)
+  : [];
+
+const sketchTier = imageCommerce?.mode === "standard"
+  ? imageCommerce.tiers?.find((tier: any) => tier?.key === "sketch")
+  : null;
+const sketchCheckout = sketchTier?.pricing?.find((entry: any) => entry?.external && /^https:\/\//i.test(entry?.orderUrl || ""));
+const sketchCheckoutUrl = sketchCheckout?.orderUrl || null;
+const sketchPrice = Number.isFinite(Number(sketchCheckout?.price)) ? Number(sketchCheckout.price) : null;
+const sketchSize = sketchCheckout?.size || null;
+
 /** ---------------------------------------------------------------
  * Breadcrumb JSON-LD (image pages only)
  * Derives hierarchy from galleryPath segments so Bing can
@@ -327,7 +365,14 @@ const meta = {
 
 ---
 
-<BaseLayout title={pageTitle} meta={meta} structuredDataJSON={imageStructuredData} breadcrumbsJSON={breadcrumbsJSON} extraStructuredDataJSON={webPageStructuredData}>
+<BaseLayout
+  title={pageTitle}
+  meta={meta}
+  structuredDataJSON={currentImage ? undefined : imageStructuredData}
+  structuredDataEntries={imageStructuredDataEntries}
+  breadcrumbsJSON={breadcrumbsJSON}
+  extraStructuredDataJSON={webPageStructuredData}
+>
   <main id="gallery-content" class="flex-grow relative">
     {/* Header */}
     {!skipIntro && (
@@ -365,8 +410,14 @@ const meta = {
       style={skipIntro ? "display: block;" : "display: none;"}
       itemscope={currentImage ? true : undefined}
       itemtype={currentImage ? "https://schema.org/ImageObject https://schema.org/VisualArtwork" : undefined}
+      data-k4-image-page={currentImage ? "true" : undefined}
+      data-k4-sketch-checkout={sketchCheckoutUrl || undefined}
+      data-k4-sketch-price={sketchPrice ?? undefined}
+      data-k4-sketch-size={sketchSize || undefined}
     >
-      <slot name="chapter-viewer" />
+      <div data-k4-gallery-island style="display:contents">
+        <slot name="chapter-viewer" />
+      </div>
       {currentImage && imageCommerce && (
         <ImageCommerceModalStatic commerce={imageCommerce} image={currentImage} galleryPath={previewPath} />
       )}

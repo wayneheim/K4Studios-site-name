@@ -59,6 +59,8 @@ const EngrainedOrderModal = lazy(() => import("./EngrainedOrderModal.jsx"));
 const SeriesOrderModal = lazy(() => import("./SeriesOrderModal.jsx"));
 const SeriesInfoPopup = lazy(() => import("./SeriesInfoPopup.jsx"));
 
+const normalizeRoutedImageId = (value) => String(value || '').replace(/-sketch$/i, '');
+
 function GalleryImageFrame({
   plain = false,
   frameKey,
@@ -469,11 +471,16 @@ export default function ChapterGalleryBase({
   }, []);
 
   // Edition context for SEO uniqueness - use basePath for SSR-safe initial render
-  const [clientPath, setClientPath] = useState((basePath || "").toLowerCase());
+  const [clientPath, setClientPath] = useState(() =>
+    typeof window !== "undefined"
+      ? window.location.pathname.toLowerCase()
+      : (basePath || "").toLowerCase()
+  );
   useEffect(() => {
     setClientPath(window.location.pathname.toLowerCase());
   }, []);
   const path = clientPath;
+  const isMerchantSketchVariant = /\/i-[a-z0-9]+-sketch\/?$/i.test(path);
   const collectionContextEntry =
     getCollectionContextEntry(basePath) || getCollectionContextEntry(clientPath);
   const collectionContextStatement = collectionContextEntry
@@ -974,7 +981,7 @@ export default function ChapterGalleryBase({
   useEffect(() => {
     if (!galleryData.length) return;
     const match = window.location.pathname.match(/\/(i-[a-zA-Z0-9_-]+)$/);
-    const idFromURL = match ? match[1] : initialImageId;
+    const idFromURL = normalizeRoutedImageId(match ? match[1] : initialImageId);
     if (idFromURL) {
       // Case-insensitive comparison to handle URL case variations
       const idFromURLLower = idFromURL.toLowerCase();
@@ -1014,7 +1021,9 @@ export default function ChapterGalleryBase({
     // Don't push URL when viewing grid via ?view=grid (shared theme links)
     if (viewMode === "grid") return;
     if (!imageId || (!hasEnteredChapters && !alreadyOnImage) || !basePath) return;
-    const newUrl = `${basePath}/${imageId}`;
+    const merchantMatch = window.location.pathname.match(/\/(i-[a-zA-Z0-9]+)-sketch$/i);
+    const preserveMerchantVariant = merchantMatch && merchantMatch[1].toLowerCase() === imageId.toLowerCase();
+    const newUrl = `${basePath}/${imageId}${preserveMerchantVariant ? '-sketch' : ''}`;
     if (window.location.pathname !== newUrl) window.history.pushState(null, "", newUrl);
   }, [currentIndex, hasEnteredChapters, basePath, galleryData, viewMode]);
 
@@ -1132,7 +1141,7 @@ export default function ChapterGalleryBase({
     const handlePopState = () => {
       const pathname = window.location.pathname;
       const match = pathname.match(/\/(i-[a-zA-Z0-9_-]+)/);
-      const id = match ? match[1] : null;
+      const id = match ? normalizeRoutedImageId(match[1]) : null;
       const header = document.getElementById("header-section");
       const intro = document.getElementById("intro-section");
       const chapter = document.getElementById("chapter-section");
@@ -1553,7 +1562,7 @@ export default function ChapterGalleryBase({
                             </span>
                           )}
                           {/* Desktop Collector Notes button absolutely positioned outside/right of image edge */}
-                          {!isMobile && galleryData[currentIndex]?.notes?.trim() && (
+                          {!isMerchantSketchVariant && !isMobile && galleryData[currentIndex]?.notes?.trim() && (
                             <button
                               ref={notesBtnRef}
                               type="button"
@@ -1667,7 +1676,7 @@ export default function ChapterGalleryBase({
                           })()}
                         </div>
                         {/* Desktop Collector Notes panel - borrows content from widget */}
-                        {!isMobile && galleryData[currentIndex]?.notes?.trim() && (
+                        {!isMerchantSketchVariant && !isMobile && galleryData[currentIndex]?.notes?.trim() && (
                             <div
                               className="desktop-only-element w-96 border border-gray-300 rounded shadow-2xl p-5 text-sm text-gray-800"
                               style={{
@@ -1724,7 +1733,7 @@ export default function ChapterGalleryBase({
                       )}
 
                       {/* Notes (mobile) - First item on mobile */}
-                      {galleryData[currentIndex]?.notes && isMobile && (
+                      {!isMerchantSketchVariant && galleryData[currentIndex]?.notes && isMobile && (
                         <button
                           ref={notesBtnRef}
                           type="button"
@@ -2124,7 +2133,7 @@ export default function ChapterGalleryBase({
                     )}
 
                     {/* Collector Notes Panel (mobile) - borrows content from widget */}
-                    {galleryData[currentIndex]?.notes && isMobile && (
+                    {!isMerchantSketchVariant && galleryData[currentIndex]?.notes && isMobile && (
       <div
         className="w-full mx-auto mt-2 mb-[6px] border border-gray-300 rounded shadow p-4 text-sm text-gray-800 text-left"
         style={{ 
@@ -2265,7 +2274,7 @@ export default function ChapterGalleryBase({
                             
                             // Warm sister link image immediately on panel open
                             // User reading time (5-10s) provides the warm window naturally
-                            if (currentId) {
+                            if (currentId && !isMerchantSketchVariant) {
                               // Find sister match for this image
                               const match = sitemapMatches.find(m => m.a.includes(currentId));
                               let sisterUrl = match?.b || null;
@@ -2347,11 +2356,12 @@ export default function ChapterGalleryBase({
                               {westernImageAttributionText}
                             </p>
                           )}
-                          {galleryData[currentIndex]?.notes && (
+                          {!isMerchantSketchVariant && galleryData[currentIndex]?.notes && (
                             <section 
                               id={`canonical-notes-${galleryData[currentIndex]?.id || 'default'}`}
                               className="notes-section"
                               data-notes-canonical="true"
+                              data-k4-merchant-strip="collector-notes"
                               aria-labelledby={`collector-notes-heading-${currentId || 'default'}`}
                               style={{
                                 marginTop: '1rem',
@@ -2379,12 +2389,14 @@ export default function ChapterGalleryBase({
 
                           {/* Featured in blog — links image → conversation post */}
                           {(() => {
+                            if (isMerchantSketchVariant) return null;
                             const currentId = galleryData[currentIndex]?.id;
                             const blog = currentId && blogImageMap[currentId];
                             if (!blog) return null;
                             return (
                               <a
                                 href={blog.url}
+                                data-k4-merchant-strip="featured-blog-link"
                                 onClick={() => track("blog_link_click", { imageId: currentId, pageType: 'image', trigger: 'featured_in_blog' })}
                                 style={{
                                   display: 'block',
@@ -2402,9 +2414,10 @@ export default function ChapterGalleryBase({
                             );
                           })()}
 
-                          {(chapterDoorwayLink || collectionHref || relatedImageHref) && (
+                          {!isMerchantSketchVariant && (chapterDoorwayLink || collectionHref || relatedImageHref) && (
                             <nav
                               className="image-journey-footer"
+                              data-k4-merchant-strip="related-navigation"
                               aria-label="Related image navigation"
                               style={{
                                 marginTop: '1rem',

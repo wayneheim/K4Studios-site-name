@@ -152,6 +152,17 @@ function getMerchantImageUrl(image) {
   return `${SITE_URL}/img/${image.id}/l.jpg`;
 }
 
+function getDirectSketchCheckoutUrl(value, imageId) {
+  try {
+    const url = new URL(String(value || "").trim());
+    if (url.protocol !== "https:" || url.hostname !== "wayne-heim.smugmug.com") return "";
+    if (!url.pathname.includes(`/${imageId}/`)) return "";
+    return url.toString();
+  } catch {
+    return "";
+  }
+}
+
 function sourceFileToGalleryPath(filePath) {
   const rel = path.relative(DATA_DIR, filePath).replace(/\\/g, "/").replace(/\.mjs$/i, "");
   const parts = rel.split("/").filter(Boolean);
@@ -253,19 +264,19 @@ function inferProductType(galleryPath = "") {
 }
 
 function inferProductTitle(image) {
-  const title = cleanText(image?.title || image?.alt || image?.id || "Fine Art Photograph");
-  const withSeries = /\b(print|prints|sketch series)\b/i.test(title)
-    ? title
-    : `${title} - Sketch Series Fine Art Print`;
-  return trimAtWord(withSeries, MAX_TITLE_LENGTH);
+  const subject = cleanText(image?.alt || image?.title || image?.id || "Fine Art Photograph")
+    .replace(/\s+by Wayne Heim\s*$/i, "")
+    .replace(/\s+-\s+(?:Sketch Series )?(?:Fine Art )?Print\s*$/i, "")
+    .trim();
+  return trimAtWord(`Open Edition 5 x 7 Physical Photographic Print - ${subject}`, MAX_TITLE_LENGTH);
 }
 
 function inferProductDescription(image) {
-  const description = cleanText(image?.description || image?.alt || image?.story || "");
-  const base = description || `${cleanText(image?.title || "Fine art photograph")} by Wayne Heim, offered as a Sketch Series fine art print from K4 Studios.`;
-  const suffix = "Sketch Series prints are open edition 5 x 7 fine art prints by Wayne Heim from K4 Studios.";
-  const combined = base.toLowerCase().includes("sketch series") ? base : `${base} ${suffix}`;
-  return trimAtWord(combined, MAX_DESCRIPTION_LENGTH);
+  const subject = cleanText(image?.alt || image?.title || "Fine art photograph");
+  return trimAtWord(
+    `${subject}. This is a finished, open-edition 5 x 7 physical photographic paper print from K4 Studios. The buyer receives a tangible print shipped to the delivery address.`,
+    MAX_DESCRIPTION_LENGTH
+  );
 }
 
 function inferEngrainedProductTitle(image) {
@@ -328,6 +339,12 @@ function buildProductItem({ image, galleryPath, link }) {
     return null;
   }
 
+  // Only advertise products whose canonical landing page can expose a real,
+  // direct SmugMug checkout for this exact image. Email/inquiry fallbacks are
+  // deliberately ineligible for Merchant Center.
+  const checkoutUrl = getDirectSketchCheckoutUrl(image?.buyLink, image?.id);
+  if (!checkoutUrl) return null;
+
   const imageLink = getMerchantImageUrl(image);
   const title = inferProductTitle(image);
   const description = inferProductDescription(image);
@@ -337,7 +354,7 @@ function buildProductItem({ image, galleryPath, link }) {
     id: `${image.id}-sketch`,
     title,
     description,
-    link,
+    link: `${link}-sketch`,
     imageLink,
     availability: "in_stock",
     price: SKETCH_SERIES_PRICE_USD,
@@ -385,7 +402,7 @@ function renderMerchantFeed(products) {
   <channel>
     <title>K4 Studios Fine Art Prints</title>
     <link>${SITE_URL}/</link>
-    <description>Sketch Series fine art print products from K4 Studios by Wayne Heim.</description>
+    <description>Finished open-edition physical photographic paper prints from K4 Studios.</description>
 ${renderedItems}
   </channel>
 </rss>
