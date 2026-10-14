@@ -263,8 +263,25 @@ function inferProductType(galleryPath = "") {
   return cleaned || "Fine Art Photography";
 }
 
+function isCopyrightOnlyText(value) {
+  return /^(?:\(c\)|©|copyright)\s*(?:wayne\s+heim)?(?:\s*['’]?\d{2,4})?$/i.test(cleanText(value));
+}
+
+function inferProductSubject(image) {
+  const title = cleanText(image?.title || "");
+  if (title && !isCopyrightOnlyText(title)) return title;
+
+  const alt = cleanText(image?.alt || "");
+  if (alt && !isCopyrightOnlyText(alt)) return alt;
+
+  const descriptionLead = cleanText(image?.description || "").split(/[.!?]/, 1)[0].trim();
+  if (descriptionLead) return descriptionLead;
+
+  return cleanText(image?.id || "Fine Art Photograph");
+}
+
 function inferProductTitle(image) {
-  const subject = cleanText(image?.alt || image?.title || image?.id || "Fine Art Photograph")
+  const subject = inferProductSubject(image)
     .replace(/\s+by Wayne Heim\s*$/i, "")
     .replace(/\s+-\s+(?:Sketch Series )?(?:Fine Art )?Print\s*$/i, "")
     .trim();
@@ -272,7 +289,7 @@ function inferProductTitle(image) {
 }
 
 function inferProductDescription(image) {
-  const subject = cleanText(image?.alt || image?.title || "Fine art photograph");
+  const subject = inferProductSubject(image);
   return trimAtWord(
     `${subject}. This is a finished, open-edition 5 x 7 physical photographic paper print from K4 Studios. The buyer receives a tangible print shipped to the delivery address.`,
     MAX_DESCRIPTION_LENGTH
