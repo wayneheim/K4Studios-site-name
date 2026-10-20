@@ -490,10 +490,16 @@ const siteIdentityStructuredDataJSON = pathname === '/' ? JSON.stringify({
         name: "Wayne Heim",
         url: "https://www.k4studios.com/Other/Bio",
         image: "https://www.k4studios.com/images/Bio-Heim.jpg",
-        jobTitle: "Western Fine Art Photographer, Fine Art Photographer, and Medical Illustrator",
+        jobTitle: ["Western Artist", "Fine Art Photographer", "Medical Illustrator"],
         worksFor: { "@id": "https://www.k4studios.com/#organization" },
         brand: { "@id": "https://www.k4studios.com/#organization" },
+        sameAs: [
+          "https://www.instagram.com/k4studios/",
+        ],
         knowsAbout: [
+          "Western art",
+          "Art of the American West",
+          "narrative Western art",
           "Western fine art photography",
           "painterly photography",
           "cowboy photography",

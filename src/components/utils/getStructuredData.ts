@@ -2,6 +2,7 @@
 import { getSemanticImageUrl, USE_SEMANTIC_IMAGE_URLS } from "../../utils/imageProxy.js";
 import { themes } from "../../data/themes/themes.mjs";
 import { getK4MerchantReturnPolicy, getSketchOfferShippingDetails } from "../../data/commerceResolver.js";
+import { siteNav } from "../../data/siteNav.ts";
 
 // Helper to convert image to proxy URL (never expose SmugMug URLs in structured data)
 function getProxyUrl(img: any, size: string = 'l', sourcePrefix: string | null = null): string {
@@ -320,19 +321,72 @@ function imagePathText(data: any): string {
     .toLowerCase();
 }
 
+function getArtworkNavTaxonomy(data: any): string {
+  const candidatePaths = [
+    data?.galleryUrl,
+    data?.collectionContext?.collectionUrl,
+    data?.pageUrl,
+    data?.url,
+  ]
+    .filter(Boolean)
+    .map((value) => {
+      try {
+        return new URL(String(value), K4_ORGANIZATION_URL).pathname.replace(/\/$/, "").toLowerCase();
+      } catch {
+        return String(value).split(/[?#]/, 1)[0].replace(/\/$/, "").toLowerCase();
+      }
+    });
+
+  let bestMatch = { hrefLength: -1, labels: [] as string[] };
+
+  const visit = (nodes: any[], ancestors: string[] = []) => {
+    for (const node of nodes || []) {
+      const labels = node?.label ? [...ancestors, String(node.label)] : ancestors;
+      const href = typeof node?.href === "string" ? node.href.replace(/\/$/, "").toLowerCase() : "";
+      const matches = href && candidatePaths.some((path) => path === href || path.startsWith(`${href}/`));
+
+      if (matches && href.length > bestMatch.hrefLength) {
+        bestMatch = { hrefLength: href.length, labels };
+      }
+
+      if (Array.isArray(node?.children)) visit(node.children, labels);
+    }
+  };
+
+  visit(siteNav as any[]);
+  return bestMatch.labels.join(" ").toLowerCase();
+}
+
 function inferArtworkSchemaFields(data: any) {
   const text = imagePathText(data);
+  const navTaxonomy = getArtworkNavTaxonomy(data);
+  const taxonomyOrText = navTaxonomy || text;
   const isEngrained = /engrained|wood print|wood panel|baltic birch/.test(text);
   const isPainterly = /painterly-fine-art-photography|painterly/.test(text);
   const isBlackWhite = /black-white|black white|black & white|monochrome|\bbw\b/.test(text);
-  const isWesternNarrative = /western-narratives|narrative western|narrative photography/.test(text);
-  const isCowboy = /western-cowboy-portraits|cowboy/.test(text);
-  const isNativeAmerican = /native-americans|native american/.test(text);
-  const isCivilWar = /civil-war|civil war/.test(text);
-  const isWwii = /wwii|world war ii|wartime/.test(text);
-  const isLandscape = /landscape|landscapes|water|mountain|sunset|iceland|faroe|newfoundland|canada-western/.test(text);
-  const isPortrait = /portrait|portraits|reenactor/.test(text);
-  const isTransportation = /transportation|cars|trains|planes|boats|classic car|route 66/.test(text);
+  const isWesternCollection = /wild west|western narratives|western portraits/.test(taxonomyOrText);
+  const isWesternNarrative = /western narratives/.test(taxonomyOrText) || (!navTaxonomy && /western-narratives|narrative western/.test(text));
+  const isCowboy = navTaxonomy
+    ? /western portraits/.test(navTaxonomy)
+    : /western-cowboy-portraits|cowboy/.test(text);
+  const isNativeAmerican = navTaxonomy
+    ? /native americans/.test(navTaxonomy)
+    : /native-americans|native american/.test(text);
+  const isWesternArtwork = navTaxonomy
+    ? isWesternCollection
+    : isWesternCollection || isWesternNarrative || isCowboy || /western art|western fine art|american west|wild west|frontier art/.test(text);
+  const isCivilWar = /civil war/.test(taxonomyOrText) || (!navTaxonomy && /civil-war/.test(text));
+  const isWwii = /\bwwii\b|world war ii/.test(taxonomyOrText) || (!navTaxonomy && /wartime/.test(text));
+  const isRoaringTwenties = /roaring 20s portraits/.test(taxonomyOrText) || (!navTaxonomy && /roaring[ -]?(?:20s|twenties)/.test(text));
+  const isLandscape = navTaxonomy
+    ? /landscape|landscapes/.test(navTaxonomy)
+    : /landscape|landscapes|water|mountain|sunset|iceland|faroe|newfoundland|canada-western/.test(text);
+  const isPortrait = navTaxonomy
+    ? /portrait|portraits|reenactors/.test(navTaxonomy)
+    : /portrait|portraits|reenactor/.test(text);
+  const isTransportation = navTaxonomy
+    ? /transportation/.test(navTaxonomy)
+    : /transportation|cars|trains|planes|boats|classic car|route 66/.test(text);
 
   let artMedium = "Fine art photography";
   if (isEngrained) {
@@ -353,10 +407,25 @@ function inferArtworkSchemaFields(data: any) {
   if (isWesternNarrative) addGenre("Narrative photography");
   if (isCowboy) addGenre("Cowboy art");
   if (isNativeAmerican) addGenre("Native American historical art");
-  if (isCivilWar) addGenre("Civil War art");
-  if (isWwii) addGenre("WWII art");
-  if (isCowboy || isNativeAmerican || isWesternNarrative) addGenre("Western fine art photography");
-  if (isCivilWar || isWwii || isNativeAmerican) addGenre("Historical fine art photography");
+  if (isCivilWar) {
+    addGenre("Civil War art");
+    addGenre("Civil War fine art photography");
+  }
+  if (isWwii) {
+    addGenre("WWII art");
+    addGenre("WWII fine art photography");
+  }
+  if (isRoaringTwenties) {
+    addGenre("Roaring Twenties art");
+    addGenre("Roaring Twenties fine art photography");
+  }
+  if (isWesternArtwork) {
+    addGenre("Western art");
+    addGenre("Western fine art photography");
+  }
+  if (isWesternArtwork || isCivilWar || isWwii || isRoaringTwenties || isNativeAmerican) {
+    addGenre("Historical fine art photography");
+  }
   if (isTransportation && genre.length === 0) addGenre("Fine art photography");
   if (genre.length === 0) addGenre("Fine art photography");
 
@@ -366,11 +435,16 @@ function inferArtworkSchemaFields(data: any) {
       ? "One-Image Movie"
       : undefined);
 
+  const explicitGenres = (Array.isArray(data?.genre) ? data.genre : [data?.genre])
+    .filter((value) => typeof value === "string" && value.trim())
+    .map((value) => value.trim());
+  const resolvedGenres = [...new Set([...explicitGenres, ...genre])];
+
   return {
     artform: data?.artform || "Photograph",
     artMedium: data?.artMedium || artMedium,
     artworkSurface: data?.artworkSurface || (isEngrained ? "Baltic birch wood panel" : undefined),
-    genre: data?.genre || (genre.length === 1 ? genre[0] : genre),
+    genre: resolvedGenres.length === 1 ? resolvedGenres[0] : resolvedGenres,
     additionalType,
   };
 }
