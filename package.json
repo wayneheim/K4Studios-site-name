@@ -7,11 +7,12 @@
   "scripts": {
     "dev": "astro dev --host",
     "dev:netlify": "netlify dev",
-    "build": "npm run gen:master-data && npm run gen:chapter-doorway-links && npm run gen:image-filename-slugs && npm run gen:prefetch-map && npm run gen:image-id-map && npm run gen:image-sitemaps && npm run gen:merchant-products && npm run gen:sitemap && npm run gen:sitemap:matches && npm run gen:story-slider && npm run gen:image-manifest && npm run copy:pricing && npm run copy:series-data && npm run gen:engrained-data && npm run build:astro:fast && node scripts/warm-image-cache.mjs && npx cpx \"_redirects\" dist/ && npm run sanitize:public-output && npm run audit:canonical-host",
-    "build:fast": "npm run gen:master-data && npm run gen:chapter-doorway-links && npm run gen:image-filename-slugs && npm run gen:prefetch-map && npm run gen:image-id-map && npm run gen:image-sitemaps && npm run gen:merchant-products && npm run gen:sitemap && npm run gen:sitemap:matches && npm run gen:story-slider && npm run gen:image-manifest && npm run copy:pricing && npm run copy:series-data && npm run gen:engrained-data && npm run build:astro:fast && npx cpx \"_redirects\" dist/ && npm run sanitize:public-output && npm run audit:canonical-host",
+    "build": "npm run gen:master-data && npm run gen:chapter-doorway-links && npm run gen:image-filename-slugs && npm run gen:prefetch-map && npm run gen:image-id-map && npm run gen:image-sitemaps && npm run gen:merchant-products && npm run gen:sitemap && npm run gen:sitemap:matches && npm run gen:story-slider && npm run gen:image-manifest && npm run gen:commerce-fulfillment-links && npm run gen:commerce-collector-notes && npm run copy:pricing && npm run copy:series-data && npm run gen:engrained-data && npm run build:astro:fast && node scripts/warm-image-cache.mjs && npx cpx \"_redirects\" dist/ && npm run sanitize:public-output && npm run audit:canonical-host && npm run audit:public-smugmug-links",
+    "build:fast": "npm run gen:master-data && npm run gen:chapter-doorway-links && npm run gen:image-filename-slugs && npm run gen:prefetch-map && npm run gen:image-id-map && npm run gen:image-sitemaps && npm run gen:merchant-products && npm run gen:sitemap && npm run gen:sitemap:matches && npm run gen:story-slider && npm run gen:image-manifest && npm run gen:commerce-fulfillment-links && npm run gen:commerce-collector-notes && npm run copy:pricing && npm run copy:series-data && npm run gen:engrained-data && npm run build:astro:fast && npx cpx \"_redirects\" dist/ && npm run sanitize:public-output && npm run audit:canonical-host && npm run audit:public-smugmug-links",
     "build:local:fast": "node scripts/build-local-fast.mjs",
     "sanitize:public-output": "node scripts/sanitize-public-output.cjs",
     "audit:canonical-host": "node scripts/audit-canonical-host.mjs",
+    "audit:public-smugmug-links": "node scripts/audit-public-smugmug-links.mjs",
     "audit:all-schema": "node scripts/audit-all-page-schema.mjs",
     "build:astro:fast": "node scripts/build-astro-fast.mjs",
     "deploy:prebuilt": "netlify deploy --prod --dir=dist --site=0849dde2-1b6e-4016-b0f4-1d609f1b8283",
@@ -28,6 +29,8 @@
     "gen:chapter-doorway-links": "node scripts/generate-chapter-doorway-assignments.mjs",
     "gen:image-filename-slugs": "node scripts/generate-image-filename-slugs.cjs",
     "gen:image-manifest": "node scripts/generate-image-manifest.cjs",
+    "gen:commerce-fulfillment-links": "node scripts/generate-commerce-fulfillment-links.mjs",
+    "gen:commerce-collector-notes": "node scripts/generate-commerce-collector-notes.mjs",
     "gen:prefetch-map": "node scripts/generate-gallery-prefetch-map.cjs",
     "gen:image-id-map": "node scripts/generate-image-id-map.cjs",
     "gen:sitemap": "node scripts/generate-sitemap-data.mjs",
@@ -39,7 +42,8 @@
     "populate-archive": "node scripts/populate-archive.cjs",
     "preview": "npm run build && wrangler dev",
     "deploy": "npm run build && wrangler deploy",
-    "cf-typegen": "wrangler types"
+    "cf-typegen": "wrangler types",
+    "test:commerce": "node --test cloudflare-commerce/test/quote.test.js"
   },
   "repository": {
     "type": "git",

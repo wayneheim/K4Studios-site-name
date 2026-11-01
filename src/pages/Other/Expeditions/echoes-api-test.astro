@@ -1,0 +1,19 @@
+---
+export const prerender = false;
+
+import ExpeditionGalleryPage from "@/components/ExpeditionGalleryPage.astro";
+import { expeditions } from "@/data/Other/Expeditions/shoots";
+
+const expedition = expeditions.find((entry) => entry.slug === "echoes-of-the-west-2026");
+
+if (!expedition) {
+  throw new Error("Echoes of the West expedition configuration is missing.");
+}
+
+Astro.response.headers.set(
+  "Cache-Control",
+  "public, max-age=0, s-maxage=60, stale-while-revalidate=30",
+);
+---
+
+<ExpeditionGalleryPage expedition={expedition} testMode />

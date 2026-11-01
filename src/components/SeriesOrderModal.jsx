@@ -5,6 +5,9 @@ import { CircleX, Info } from "lucide-react";
 import { SERIES_DEFINITIONS, SERIES_ICONS, getEffectiveSeries, getSeriesPricingList, fetchPricingConfig, loadSeriesRegistry, getExcludeSizesFromRegistry, isOneImageMovieFromRegistry } from "../data/seriesDefinitions.js";
 import { getSpecialtyPrintSeries } from "../data/pricing/printSeries.js";
 import { normalizeImageSrc } from "../utils/imageProxyCore.js";
+import MerchantSketchOrderModal from "./commerce/MerchantSketchOrderModal.jsx";
+import CollectionOrderModal from "./commerce/CollectionOrderModal.jsx";
+import { shouldUseNativeCollectionCart, shouldUseNativeMerchantCart } from "../config/commerce.js";
 
 // Import config at build time as fallback (auto-synced, no manual copy needed)
 import pricingConfigFallback from "../data/pricingConfig.json";
@@ -134,9 +137,11 @@ async function fetchEngrainedCrosslink(imageId) {
       return {
         engrainedId: linked.id,
         title: linked.title,
+        description: linked.description,
         url: `/Other/K4-Select-Series/Engrained/Engrained-Series/${linked.id}`,
         price: linked.price,
         imageSize: linked.imageSize,
+        editionSize: linked.editionSize,
         inStock: inStock,
         hasInventory: inStock > 0
       };
@@ -196,38 +201,20 @@ function buildEngrainedMailtoLink(image, engrainedLink) {
   return `mailto:info@k4studios.com?subject=${subject}&body=${encodeURIComponent(body)}`;
 }
 
-const FIRST_PARTY_BUY_LINK_HOSTS = new Set(["k4studios.com", "www.k4studios.com"]);
-const BUY_LINK_PATH_PREFIXES = ["/Galleries/", "/Other/Photo-Shoots/"];
-const BUY_LINK_SMUGMUG_HOST = "wayne-heim.smugmug.com";
-
-// Legacy gallery data still contains first-party /A links; normalize them so we never emit broken internal buy URLs.
+// Legacy gallery data may still contain old SmugMug or first-party /A checkout links.
+// Never expose those destinations in the public order interface; the native K4 cart owns checkout.
 function normalizeBuyLink(buyLink) {
   if (typeof buyLink !== "string") return null;
 
   const trimmed = buyLink.trim();
   if (!trimmed) return null;
 
-  const normalizeUrl = (url) => {
-    if (!FIRST_PARTY_BUY_LINK_HOSTS.has(url.hostname)) {
-      return url.toString();
-    }
-
-    const hasSupportedPath = BUY_LINK_PATH_PREFIXES.some((prefix) => url.pathname.startsWith(prefix));
-    if (!hasSupportedPath || !url.pathname.endsWith("/A")) {
-      return null;
-    }
-
-    url.protocol = "https:";
-    url.hostname = BUY_LINK_SMUGMUG_HOST;
-    return url.toString();
-  };
-
   try {
-    if (trimmed.startsWith("/")) {
-      return normalizeUrl(new URL(trimmed, "https://www.k4studios.com"));
-    }
-
-    return normalizeUrl(new URL(trimmed));
+    const url = new URL(trimmed, "https://www.k4studios.com");
+    const hostname = url.hostname.toLowerCase();
+    if (hostname === "k4studios.com" || hostname === "www.k4studios.com") return null;
+    if (hostname === "smugmug.com" || hostname.endsWith(".smugmug.com")) return null;
+    return url.toString();
   } catch {
     return null;
   }
@@ -270,6 +257,17 @@ export default function SeriesOrderModal({ isOpen, onClose, image, trackEvent })
 
   if (!isOpen || !image) return null;
 
+  if (shouldUseNativeMerchantCart()) {
+    return (
+      <MerchantSketchOrderModal
+        isOpen={isOpen}
+        onClose={onClose}
+        image={image}
+        trackEvent={trackEvent}
+      />
+    );
+  }
+
   // Derived loading state: we're loading if modal is open but data hasn't been fetched yet
   const loading = !dataLoaded;
 
@@ -296,6 +294,25 @@ export default function SeriesOrderModal({ isOpen, onClose, image, trackEvent })
   const displaySeries = effectiveSeries
     .filter((s) => SERIES_DEFINITIONS[s])
     .sort((a, b) => (SERIES_DEFINITIONS[a].sortOrder || 99) - (SERIES_DEFINITIONS[b].sortOrder || 99));
+
+  if (shouldUseNativeCollectionCart(image?.id)) {
+    return (
+      <CollectionOrderModal
+        isOpen={isOpen}
+        onClose={onClose}
+        image={image}
+        trackEvent={trackEvent}
+        loading={loading}
+        displaySeries={displaySeries}
+        excludeSizes={excludeSizes}
+        editionStates={editionStates}
+        cardCopy={cardCopy}
+        infoCopy={infoCopy}
+        oneImageMovie={oneImageMovie}
+        engrainedLink={engrainedLink}
+      />
+    );
+  }
 
   return (
     <AnimatePresence>

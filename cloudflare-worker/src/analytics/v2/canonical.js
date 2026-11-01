@@ -182,6 +182,8 @@ function mapRawEventToFamily(rawEvent) {
       return { eventFamily: 'guide_action', eventAction: 'click_outside', canonicalPageLoad: 0 };
     case 'order_clicked':
       return { eventFamily: 'buy_click', eventAction: 'order_clicked', canonicalPageLoad: 0 };
+    case 'order_smugmug_clicked':
+      return { eventFamily: 'buy_click', eventAction: 'order_smugmug_clicked', canonicalPageLoad: 0 };
     case 'order_submitted':
       return { eventFamily: 'order_submit', eventAction: 'order_submitted', canonicalPageLoad: 0 };
     case 'xl_zoom':
@@ -194,6 +196,10 @@ function mapRawEventToFamily(rawEvent) {
       return { eventFamily: 'engagement_hint', eventAction: 'collector_notes_open', canonicalPageLoad: 0 };
     case 'slideshow_start':
       return { eventFamily: 'engagement_hint', eventAction: 'slideshow_start', canonicalPageLoad: 0 };
+    case 'slideshow_nav_next':
+      return { eventFamily: 'image_nav', eventAction: 'slideshow_next', canonicalPageLoad: 0 };
+    case 'slideshow_nav_prev':
+      return { eventFamily: 'image_nav', eventAction: 'slideshow_prev', canonicalPageLoad: 0 };
     default:
       return null;
   }

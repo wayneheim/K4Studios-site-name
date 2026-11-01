@@ -77,15 +77,16 @@ https://k4studios.com/(.+)/$  https://www.k4studios.com/$1  301!
 # 410 tells search engines to de-index and stop crawling.
 # =============================================================================
 
-# Legacy Photo-Shoots paths now canonicalized to SmugMug archive root
+# Legacy Photo-Shoots image IDs recover through smart-404. Collection-level
+# service/download routes are retired so crawlers cannot enter the old store.
 /Other/*/i-:id  /.netlify/functions/smart-404?id=:id&path=/Other/:splat/i-:id  404!
 /Other/*/i-:id/A  /.netlify/functions/smart-404?id=:id&path=/Other/:splat/i-:id/A  404!
-/Other/Photo-Shoots  https://wayne-heim.smugmug.com/Other/Photo-Shoots  301!
-/Other/Photo-Shoots/*  https://wayne-heim.smugmug.com/Other/Photo-Shoots  301!
-/Other/Photo-Shoots-and-Themes/*  https://wayne-heim.smugmug.com/Other/Photo-Shoots  301!
-/Is-Winter/*  https://wayne-heim.smugmug.com/Other/Photo-Shoots  301!
-/Photoshootsandevents/*  https://wayne-heim.smugmug.com/Other/Photo-Shoots  301!
-/Scheduled-Shoots/*  https://wayne-heim.smugmug.com/Other/Photo-Shoots  301!
+/Other/Photo-Shoots  /410.html  410!
+/Other/Photo-Shoots/*  /410.html  410!
+/Other/Photo-Shoots-and-Themes/*  /410.html  410!
+/Is-Winter/*  /410.html  410!
+/Photoshootsandevents/*  /410.html  410!
+/Scheduled-Shoots/*  /410.html  410!
 
 # Legacy Photography-Galleries paths (old SmugMug structure)
 # Route all legacy requests through smart-404 for deterministic recovery.
@@ -155,8 +156,6 @@ https://k4studios.com/(.+)/$  https://www.k4studios.com/$1  301!
 /Color-back2/Color%20fixed/*   /Color/:splat   301!
 /Color-back2/Color fixed/*   /Color/:splat   301!
 /Color-back2/*   /Color/:splat   301!
-/Other/Print-Options  /Other/Series  301
-
 # Redirect gallery folders missing /Gallery suffix → canonical /Gallery path
 # Fine-Art-Photography By-Location (force! because .astro landing pages exist at bare paths)
 /Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest    /Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery    301!
@@ -186,7 +185,7 @@ https://k4studios.com/(.+)/$  https://www.k4studios.com/$1  301!
 /Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Black-White  /Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White  301!
 /Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Black-White/*  /Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White/:splat  301!
 
-*/Photoshootsandevents/*  https://wayne-heim.smugmug.com/Other/Photo-Shoots  301!
+*/Photoshootsandevents/*  /410.html  410!
 /data/system/*  /410.html  410
 
 # Legacy SmugMug frame/slideshow URLs

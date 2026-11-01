@@ -5,6 +5,7 @@ DELETE FROM analytics_v3_daily_sessions;
 DELETE FROM analytics_v3_daily_visitors;
 DELETE FROM analytics_v3_daily_dimensions;
 DELETE FROM analytics_v3_daily_images;
+DELETE FROM analytics_v3_daily_image_geography;
 UPDATE analytics_v3_state
 SET last_raw_event_id=0, last_event_ts=NULL, update_token=NULL,
     update_started_at=NULL, updated_at=CURRENT_TIMESTAMP

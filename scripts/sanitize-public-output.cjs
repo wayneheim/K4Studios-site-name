@@ -6,6 +6,10 @@ const ROOT = path.join(__dirname, '..');
 const TARGET_DIRS = ['dist'];
 
 const REPLACEMENTS = [
+  // Public pages and client bundles must never send a shopper or crawler to the
+  // legacy SmugMug storefront. Preserve the path as a first-party K4 URL; the
+  // private fulfillment registry is deployed separately to the commerce worker.
+  [/https:\/\/wayne-heim\.smugmug\.com/g, 'https://www.k4studios.com'],
   [/https:\/\/wayne-heim\.smugmug\.com\/Other\/Photo-Shoots-and-Themes/g, 'https://wayne-heim.smugmug.com/Other/Photo%2DShoots-and-Themes'],
   [/https:\/\/wayne-heim\.smugmug\.com\/Other\/Photo-Shoots/g, 'https://wayne-heim.smugmug.com/Other/Photo%2DShoots'],
   [/\/Other\/Photo-Shoots-and-Themes/g, '/Other/Photo%2DShoots-and-Themes'],
@@ -13,6 +17,7 @@ const REPLACEMENTS = [
 ];
 
 const SEARCH_STRINGS = [
+  'https://wayne-heim.smugmug.com',
   'https://wayne-heim.smugmug.com/Other/Photo-Shoots-and-Themes',
   'https://wayne-heim.smugmug.com/Other/Photo-Shoots',
   '/Other/Photo-Shoots-and-Themes',
@@ -32,6 +37,9 @@ const TEXT_EXTENSIONS = new Set([
 
 function shouldScan(filePath) {
   if (path.basename(filePath) === 'image-manifest.json') return false;
+  // Keep legacy redirect targets intact; this file is routing configuration,
+  // not customer-visible page or client code.
+  if (path.basename(filePath) === '_redirects') return false;
   return TEXT_EXTENSIONS.has(path.extname(filePath).toLowerCase());
 }
 

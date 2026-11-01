@@ -1,11 +1,13 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import ExpeditionLikeButton from "@/components/ExpeditionLikeButton.jsx";
+import ExpeditionOrderModal from "@/components/commerce/ExpeditionOrderModal.jsx";
 import ExpeditionExploreMore from "@/components/ExpeditionExploreMore.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
 import { getPublicSmugMugGalleryPage } from "@/lib/smugmug";
 import type { Expedition } from "@/data/Other/Expeditions/shoots";
+import { getExpeditionProducts } from "@/data/commerce/catalog.js";
 import "@/styles/global.css";
 
 const { expedition, testMode = false } = Astro.props as {
@@ -15,6 +17,8 @@ const { expedition, testMode = false } = Astro.props as {
 const galleryPath = new URL(expedition.galleryUrl).pathname;
 const PAGE_SIZE = 24;
 const copyrightYear = new Date().getFullYear();
+const expeditionProducts = getExpeditionProducts(expedition.slug);
+const commerceApiBase = String(import.meta.env.PUBLIC_K4_COMMERCE_API_BASE || "").replace(/\/$/, "");
 const requestedPage = Number.parseInt(Astro.url.searchParams.get("page") || "1", 10);
 const page = Number.isFinite(requestedPage) && requestedPage > 0 ? requestedPage : 1;
 
@@ -43,11 +47,6 @@ const formatPrice = (price: number, currency: string) => new Intl.NumberFormat("
   currency: currency || "USD",
   maximumFractionDigits: Number.isInteger(price) ? 0 : 2,
 }).format(price);
-const priceSizeAreas = gallery
-  ? [...new Set(gallery.prices.map((option) => option.width * option.height))].sort((a, b) => a - b)
-  : [];
-const priceTier = (width: number, height: number) =>
-  Math.min(5, Math.max(1, priceSizeAreas.indexOf(width * height) + 1));
 const reverseImageNumber = (index: number) => gallery
   ? gallery.total - ((gallery.page - 1) * gallery.pageSize + index)
   : 0;
@@ -117,7 +116,7 @@ const breadcrumbHtml = `<a href='/Other' style='color: inherit; text-decoration:
   structuredDataJSON={structuredData ? JSON.stringify(structuredData) : undefined}
   breadcrumbsJSON={breadcrumbData ? JSON.stringify(breadcrumbData) : undefined}
 >
-  <main class="poc-page">
+  <main class="poc-page" data-commerce-api-base={commerceApiBase}>
     <div class="poc-shell">
       <LandingHeader
         client:load
@@ -155,7 +154,7 @@ const breadcrumbHtml = `<a href='/Other' style='color: inherit; text-decoration:
         </section>
       ) : (
         <>
-          {gallery && gallery.prices.length > 0 && (
+          {gallery && expeditionProducts.length > 0 && (
             <section class="gallery-pricing" aria-labelledby="gallery-pricing-title">
               <div class="pricing-heading">
                 <h2 id="gallery-pricing-title">Expedition Prints</h2>
@@ -167,20 +166,18 @@ const breadcrumbHtml = `<a href='/Other' style='color: inherit; text-decoration:
                 </p>
               </div>
               <ul class="price-grid">
-                {gallery.prices.map((option, index) => (
+                {expeditionProducts.map((option, index) => (
                   <li
                     class:list={[
-                      `price-tier-${priceTier(option.width, option.height)}`,
+                      `price-tier-${index + 1}`,
                       {
-                        "price-tier-start": index > 0 &&
-                          gallery.prices[index - 1].width * gallery.prices[index - 1].height !==
-                            option.width * option.height,
+                        "price-tier-start": index === 1 || index === 3,
                       },
                     ]}
                   >
-                    <span class="price-product">{option.productName}</span>
+                    <span class="price-product">{option.size} Print</span>
                     <span class="price-finish">{option.finish}</span>
-                    <strong>{formatPrice(option.price, option.currency)}</strong>
+                    <strong data-expedition-price={option.productKey.replace(`expedition-${expedition.slug}-`, "")}>{formatPrice(option.unitPrice, option.currency)}</strong>
                   </li>
                 ))}
               </ul>
@@ -236,7 +233,6 @@ const breadcrumbHtml = `<a href='/Other' style='color: inherit; text-decoration:
                   data-large-src={image.srcL}
                   data-image-id={image.key}
                   data-title={`Image ${reverseImageNumber(index)}`}
-                  data-order-url={image.orderUrl}
                   aria-label={`Preview Image ${reverseImageNumber(index)} from ${expedition.title}`}
                 >
                   <span class="image-frame">
@@ -355,18 +351,18 @@ const breadcrumbHtml = `<a href='/Other' style='color: inherit; text-decoration:
           To view more images from this gallery, return to the grid and choose the next page to view
           the next group.
         </p>
-        <a
+        <button
+          type="button"
           class="order-link"
           data-lightbox-order
-          href="#"
-          target="_blank"
-          rel="nofollow noopener noreferrer"
         >
           Order Prints <span aria-hidden="true">&rarr;</span>
-        </a>
+        </button>
       </div>
     </div>
   </dialog>
+
+  <ExpeditionOrderModal client:load expeditionSlug={expedition.slug} expeditionTitle={expedition.title} />
 
   <div class="image-protection-message" data-image-protection role="status" aria-live="polite">
     This photograph is copyright protected. Please use the ordering options for authorized prints.
@@ -483,9 +479,6 @@ const breadcrumbHtml = `<a href='/Other' style='color: inherit; text-decoration:
 
       updatePreviewImage(button.dataset.largeSrc || "", title);
       if (dialogTitle) dialogTitle.textContent = title;
-      if (dialogOrder instanceof HTMLAnchorElement) {
-        dialogOrder.href = button.dataset.orderUrl || "#";
-      }
       if (imageCounter) {
         imageCounter.textContent = `${activeIndex + 1} of ${previewButtons.length}`;
       }
@@ -554,11 +547,38 @@ const breadcrumbHtml = `<a href='/Other' style='color: inherit; text-decoration:
     });
     slideshowButton?.addEventListener("click", toggleSlideshow);
     dialogOrder?.addEventListener("click", () => {
-      trackExpeditionEvent("order_smugmug_clicked", {
+      const button = previewButtons[activeIndex];
+      if (!(button instanceof HTMLElement)) return;
+      if (dialog instanceof HTMLDialogElement && dialog.open) dialog.close();
+      window.dispatchEvent(new CustomEvent("k4:expedition-order-open", {
+        detail: {
+          id: imageIdAt(activeIndex),
+          title: button.dataset.title || "Expedition photograph",
+          src: button.dataset.largeSrc || "",
+        },
+      }));
+      trackExpeditionEvent("order_native_cart_opened", {
         index: activeIndex,
         trigger: "expedition_order_prints",
       });
     });
+
+    const commerceApiBase = document.querySelector("[data-commerce-api-base]")?.getAttribute("data-commerce-api-base") || "";
+    if (commerceApiBase) {
+      fetch(`${commerceApiBase}/config`, { cache: "no-store" })
+        .then((response) => response.ok ? response.json() : null)
+        .then((config) => {
+          const prices = config?.expeditionPricesCents;
+          if (!prices) return;
+          document.querySelectorAll("[data-expedition-price]").forEach((node) => {
+            const cents = Number(prices[node.getAttribute("data-expedition-price")]);
+            if (Number.isInteger(cents) && cents > 0) {
+              node.textContent = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 }).format(cents / 100);
+            }
+          });
+        })
+        .catch(() => {});
+    }
 
     paginationLinks.forEach((link) => {
       link.addEventListener("click", () => {

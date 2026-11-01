@@ -13,16 +13,13 @@ function decodeHtmlAttribute(value: string): string {
     .replace(/&gt;/g, '>');
 }
 
-function hasApprovedSketchCheckout(html: string): boolean {
-  const match = html.match(/data-k4-sketch-checkout="([^"]+)"/i);
-  if (!match) return false;
+function hasApprovedSketchProduct(html: string): boolean {
+  const priceMatch = html.match(/data-k4-sketch-price="([^"]+)"/i);
+  const sizeMatch = html.match(/data-k4-sketch-size="([^"]+)"/i);
+  if (!priceMatch || !sizeMatch) return false;
 
-  try {
-    const checkout = new URL(decodeHtmlAttribute(match[1]));
-    return checkout.protocol === 'https:' && checkout.hostname === 'wayne-heim.smugmug.com';
-  } catch {
-    return false;
-  }
+  const price = Number(decodeHtmlAttribute(priceMatch[1]));
+  return Number.isFinite(price) && price > 0 && Boolean(decodeHtmlAttribute(sizeMatch[1]).trim());
 }
 
 function rewriteSketchProductSchema(html: string, variantUrl: string): string {
@@ -60,13 +57,27 @@ function stripMerchantEditorialPanels(html: string): string {
     .replace(/<nav\b(?=[^>]*\bdata-k4-merchant-strip="related-navigation")[^>]*>[\s\S]*?<\/nav>\s*/gi, '');
 }
 
+function stripPublicSmugMugCheckoutReferences(html: string, variantUrl: string): string {
+  // The base artwork response still contains legacy lab-order URLs in hidden
+  // fallback markup and serialized hydration props. Merchant pages use K4's
+  // native cart, so none of those public SmugMug checkout references belong in
+  // the transformed response. Keep the private fulfillment map server-side for
+  // Wayne's order email, but make the customer/crawler response K4-only.
+  return html
+    .replace(/\sdata-k4-sketch-checkout="[^"]*"/gi, '')
+    .replace(/https:\/\/wayne-heim\.smugmug\.com\/[^"'\\\s<&]+/gi, variantUrl);
+}
+
 async function renderMerchantSketchVariant(request: Request, pathname: string): Promise<Response> {
   if (!['GET', 'HEAD'].includes(request.method)) {
     return new Response('Method Not Allowed', { status: 405, headers: { Allow: 'GET, HEAD' } });
   }
 
+  const requestUrl = new URL(request.url);
+  const isLocalPreview = ['localhost', '127.0.0.1'].includes(requestUrl.hostname);
+  const sourceOrigin = isLocalPreview ? requestUrl.origin : PUBLIC_SITE_ORIGIN;
   const basePath = pathname.replace(/-sketch$/i, '');
-  const baseResponse = await fetch(`${PUBLIC_SITE_ORIGIN}${basePath}`, {
+  const baseResponse = await fetch(`${sourceOrigin}${basePath}`, {
     method: 'GET',
     headers: request.headers,
     redirect: 'follow',
@@ -81,23 +92,23 @@ async function renderMerchantSketchVariant(request: Request, pathname: string): 
   // following it and serving the Merchant variant at a non-canonical URL.
   const resolvedBaseUrl = new URL(baseResponse.url);
   if (normalizePath(resolvedBaseUrl.pathname).toLowerCase() !== normalizePath(basePath).toLowerCase()) {
-    const requestUrl = new URL(request.url);
     const canonicalSketchPath = `${normalizePath(resolvedBaseUrl.pathname)}-sketch`;
     return Response.redirect(`${requestUrl.origin}${canonicalSketchPath}${requestUrl.search}`, 301);
   }
 
   const sourceHtml = await baseResponse.text();
-  if (!hasApprovedSketchCheckout(sourceHtml)) {
+  if (!hasApprovedSketchProduct(sourceHtml)) {
     return new Response('Not Found', { status: 404, headers: { 'X-Robots-Tag': 'noindex' } });
   }
 
-  const variantUrl = `${PUBLIC_SITE_ORIGIN}${pathname}`;
+  const variantUrl = `${sourceOrigin}${pathname}`;
   let html = sourceHtml.replace(
     /<script[^>]*data-k4-schema="artwork-license"[^>]*>[\s\S]*?<\/script>\s*/i,
     ''
   );
   html = rewriteSketchProductSchema(html, variantUrl);
   html = stripMerchantEditorialPanels(html);
+  html = stripPublicSmugMugCheckoutReferences(html, variantUrl);
   html = html
     .replace(/(<link\s+rel="canonical"\s+href=")[^"]*(")/i, `$1${variantUrl}$2`)
     .replace(/(<meta\s+property="og:url"\s+content=")[^"]*(")/i, `$1${variantUrl}$2`)

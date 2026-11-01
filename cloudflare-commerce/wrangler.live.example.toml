@@ -1,0 +1,21 @@
+name = "k4-commerce-live"
+main = "src/index.js"
+compatibility_date = "2026-10-29"
+
+[vars]
+PAYPAL_ENV = "live"
+# Keep both switches false until the live PayPal app, webhook, D1 database,
+# shipping rules, and tax rules have all been independently verified.
+CHECKOUT_ENABLED = "false"
+LIVE_CONFIGURATION_APPROVED = "false"
+ALLOWED_ORIGINS = "https://www.k4studios.com,https://k4studios.com"
+ORDER_EMAIL_ENDPOINT = "https://www.k4studios.com/.netlify/functions/order-email"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "k4-commerce-live"
+database_id = "REPLACE_WITH_LIVE_D1_DATABASE_ID"
+migrations_dir = "migrations"
+
+[triggers]
+crons = ["*/5 * * * *"]

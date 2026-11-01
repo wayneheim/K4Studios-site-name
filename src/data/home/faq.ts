@@ -53,7 +53,7 @@ export const facingFAQ = [
     q: "Where can I buy prints?",
     a: [
       "All images are available as fine art prints on archival paper or select wood presentations. You can <a href=\"/Other/Print-Options\">view print options here</a> or purchase directly from any gallery or image page.",
-      "Collector editions, custom sizing, framing guidance, and Engrained wood prints are available. For tailored requests, <a href=\"/Contact\">contact Wayne here</a>."
+      "Collector editions, framing options, and finishes are available — see <a href=\"/Other/Print-Options\">Print Materials &amp; Finishes</a> for details."
     ],
   },
 
@@ -62,7 +62,7 @@ export const facingFAQ = [
     q: "Are additional print options available?",
     a: [
       "Yes. In addition to the 5 × 7 Sketch Series print available online, selected images may be offered as larger archival paper prints, limited editions, or Engrained Baltic Birch prints.",
-      "Contact Wayne to discuss available physical print sizes, finishes, and current inventory."
+      "Print sizes, finishes, and current availability are listed on the <a href=\"/Other/Print-Options\">Print Materials &amp; Finishes</a> page."
     ],
   },
 

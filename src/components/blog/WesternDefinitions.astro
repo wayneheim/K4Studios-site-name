@@ -306,10 +306,47 @@ const cornerstonePages = [
         </span>
       ))}
     </div>
+    <button type="button" class="definitions-toggle" aria-expanded="false" hidden>Show more</button>
   </section>
 )}
 
+<script>
+  document.querySelectorAll<HTMLElement>('.definition-links').forEach(section => {
+    const row = section.querySelector<HTMLElement>('.definition-row');
+    const button = section.querySelector<HTMLButtonElement>('.definitions-toggle');
+    if (!row || !button) return;
+    section.classList.add('definitions-collapsed');
+    button.hidden = false;
+    button.addEventListener('click', () => {
+      const expanded = button.getAttribute('aria-expanded') !== 'true';
+      button.setAttribute('aria-expanded', String(expanded));
+      button.textContent = expanded ? 'Show less' : 'Show more';
+      section.classList.toggle('definitions-collapsed', !expanded);
+    });
+    row.addEventListener('focusin', event => {
+      const target = event.target as HTMLElement;
+      if (target.getBoundingClientRect().bottom > row.getBoundingClientRect().bottom) {
+        section.classList.remove('definitions-collapsed');
+        button.setAttribute('aria-expanded', 'true');
+        button.textContent = 'Show less';
+      }
+    });
+  });
+</script>
+
 <style>
+  .definitions-collapsed .definition-row {
+    max-height: 5.5rem;
+    overflow: hidden;
+  }
+
+  .definitions-toggle {
+    margin-top: 0.75rem;
+    color: #8b5a2b;
+    font-size: 0.9rem;
+    text-decoration: underline;
+    cursor: pointer;
+  }
   /* ========================================
      INDEX VARIANT — Cornerstone Card Grid
      ======================================== */
@@ -538,6 +575,7 @@ const cornerstonePages = [
   }
 
   .definition-row {
+    line-height: 1.5rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

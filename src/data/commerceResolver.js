@@ -10,7 +10,7 @@ const BUY_LINK_SMUGMUG_HOST = "wayne-heim.smugmug.com";
 const STANDARD_SERIES = ["sketch", "foundation", "chronicle", "legend"];
 const ENGRAINED_PATH = "/Other/K4-Select-Series/Engrained/Engrained-Series";
 const K4_ORGANIZATION_ID = "https://www.k4studios.com/#organization";
-const SKETCH_SERIES_SHIPPING_USD = "9.99";
+const SKETCH_SERIES_SHIPPING_USD = "10.00";
 const SKETCH_SERIES_SHIPPING_SERVICE = "Standard Shipping";
 const K4_RETURN_POLICY_URL = "https://www.k4studios.com/Returns-and-Refunds";
 

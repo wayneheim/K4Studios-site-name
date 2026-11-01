@@ -6,6 +6,7 @@
 
 # --- Global default rules ---
 User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=no, use=reference
 Disallow: /admin/
 Disallow: /api/
 Disallow: /Api/
@@ -144,8 +145,8 @@ Disallow: /
 # --- Explicit AI / LLM / dataset crawlers (blocked) ---
 User-agent: GPTBot
 Disallow: /
-User-agent: OAI-Search
-Disallow: /
+User-agent: OAI-SearchBot
+Allow: /
 User-agent: Google-Extended
 Disallow: /
 User-agent: ClaudeBot

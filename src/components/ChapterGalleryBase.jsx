@@ -51,6 +51,7 @@ import { isWesternImagePath, westernImageAttributionText } from "../data/wayneEn
 import { getImageDimensions } from "../utils/getImageDimensions.js";
 import { extractImageId, getSemanticImageUrl } from "../utils/imageProxy.js";
 import { sanitizeRepeatedSeoCopy } from "../utils/repetitiveSeoCopy";
+import { shouldUseNativeCollectionCart, shouldUseNativeMerchantCart } from "../config/commerce.js";
 
 const ZoomOverlay = lazy(() => import("./ZoomOverlay.jsx"));
 const RebuiltScrollGrid = lazy(() => import("./RebuiltScrollGrid"));
@@ -458,6 +459,7 @@ export default function ChapterGalleryBase({
   // Load series registry immediately so series badges reflect assigned tiers on first page load.
   const hasDirectGalleryLoader = Boolean(directImagePayload?.currentImage && typeof loadFullGallery === "function");
   const [seriesRegistry, setSeriesRegistry] = useState(null);
+  const [nativeMerchantCartEnabled, setNativeMerchantCartEnabled] = useState(false);
   useEffect(() => {
     let cancelled = false;
 
@@ -468,6 +470,10 @@ export default function ChapterGalleryBase({
     return () => {
       cancelled = true;
     };
+  }, []);
+
+  useEffect(() => {
+    setNativeMerchantCartEnabled(shouldUseNativeMerchantCart());
   }, []);
 
   // Edition context for SEO uniqueness - use basePath for SSR-safe initial render
@@ -1350,6 +1356,8 @@ export default function ChapterGalleryBase({
   prevIndex.current = currentIndex;
 
   const currentId = galleryData[currentIndex]?.id;
+  const nativeCollectionCartEnabled = shouldUseNativeCollectionCart(currentId, clientPath);
+  const nativeOrderCartEnabled = nativeMerchantCartEnabled || nativeCollectionCartEnabled;
 
   // Add this near other useState/useEffect hooks inside ChapterGalleryBase
   const [showThemePopover, setShowThemePopover] = useState(false);
@@ -1558,7 +1566,7 @@ export default function ChapterGalleryBase({
                           />
                           {currentImageData && (
                             <span className="image-price-signature">
-                              © W. Heim | Fine art prints from $25
+                              ©Wayne Heim
                             </span>
                           )}
                           {/* Desktop Collector Notes button absolutely positioned outside/right of image edge */}
@@ -1633,9 +1641,12 @@ export default function ChapterGalleryBase({
                             
                             // For normal galleries: show standard series icons
                             const effectiveSeries = getEffectiveSeries(currentImage, seriesRegistry);
-                            const displaySeries = effectiveSeries
+                            const availableSeries = effectiveSeries
                               .filter(s => SERIES_DEFINITIONS[s] && s !== "engrained")
                               .sort((a, b) => (SERIES_DEFINITIONS[a].sortOrder || 99) - (SERIES_DEFINITIONS[b].sortOrder || 99));
+                            const displaySeries = isMerchantSketchVariant
+                              ? availableSeries.slice(0, 1)
+                              : availableSeries;
                             
                             if (displaySeries.length === 0) return null;
                             
@@ -1909,7 +1920,7 @@ export default function ChapterGalleryBase({
                       {/* Pricing button */}
                       <button
                         data-cart-btn
-                        title={isEngrainedSeries ? "Click to see pricing" : "Click to see pricing and editions"}
+                        title={nativeOrderCartEnabled ? "Order this physical print" : (isEngrainedSeries ? "Click to see pricing" : "Click to see pricing and editions")}
                           className={`inline-flex items-center justify-center h-8 rounded-full text-[11px] font-semibold tracking-tight leading-none shadow transition border border-gray-300 hover:border-red-200 ${isMobile ? "px-2 min-w-[48px]" : "px-2.5 min-w-[68px]"}`}
                         style={{ backgroundColor: "#bbb6b1", color: "#ffffff" }}
                         onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#76807b")}
@@ -1926,7 +1937,7 @@ export default function ChapterGalleryBase({
                           });
                         }}
                       >
-                        {isMobile ? "Price" : "Pricing"}
+                        {nativeOrderCartEnabled ? "Order" : (isMobile ? "Price" : "Pricing")}
                       </button>
 
                       {/* Exit - Desktop only (mobile exit is in top bar) */}
@@ -1964,9 +1975,12 @@ export default function ChapterGalleryBase({
                     {isMobile && (() => {
                       const currentImage = galleryData[currentIndex];
                       const effectiveSeries = getEffectiveSeries(currentImage, seriesRegistry);
-                      const displaySeries = effectiveSeries
+                      const availableSeries = effectiveSeries
                         .filter(s => SERIES_DEFINITIONS[s] && s !== "engrained")
                         .sort((a, b) => (SERIES_DEFINITIONS[a].sortOrder || 99) - (SERIES_DEFINITIONS[b].sortOrder || 99));
+                      const displaySeries = isMerchantSketchVariant
+                        ? availableSeries.slice(0, 1)
+                        : availableSeries;
                       
                       if (displaySeries.length === 0) return null;
                       
@@ -2782,6 +2796,7 @@ export default function ChapterGalleryBase({
             }}
             scrollToSeries={seriesInfoScrollTo}
             activeSeries={getEffectiveSeries(galleryData[currentIndex], seriesRegistry).filter(s => s !== "engrained")}
+            displaySeries={isMerchantSketchVariant ? ["sketch"] : undefined}
           />
         </Suspense>
       )}

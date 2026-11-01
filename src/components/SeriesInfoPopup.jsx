@@ -10,8 +10,11 @@ import pricingConfigFallback from "../data/pricingConfig.json";
 // Series order for display (excludes engrained which has its own flow)
 const DISPLAY_SERIES = ["sketch", "foundation", "chronicle", "legend"];
 
-export default function SeriesInfoPopup({ isOpen, onClose, scrollToSeries = null, activeSeries = [], infoCopy = null }) {
+export default function SeriesInfoPopup({ isOpen, onClose, scrollToSeries = null, activeSeries = [], infoCopy = null, displaySeries = DISPLAY_SERIES }) {
   const contentRef = useRef(null);
+  const visibleSeries = Array.isArray(displaySeries) && displaySeries.length > 0
+    ? displaySeries.filter((seriesKey) => SERIES_DEFINITIONS[seriesKey])
+    : DISPLAY_SERIES;
 
   // Get info copy from props or fallback
   const getInfoCopy = () => infoCopy || pricingConfigFallback.infoCopy || {};
@@ -65,7 +68,7 @@ export default function SeriesInfoPopup({ isOpen, onClose, scrollToSeries = null
             <div className="sticky top-0 z-10 bg-stone-500 px-3 py-1 flex items-center justify-between">
               {/* Icon Navigation - white icons on dark bar with | separators */}
               <div className="flex items-center">
-                {DISPLAY_SERIES.map((seriesKey, index) => {
+                {visibleSeries.map((seriesKey, index) => {
                   const def = SERIES_DEFINITIONS[seriesKey];
                   const isActive = activeSeries.includes(seriesKey);
                   return (
@@ -78,7 +81,7 @@ export default function SeriesInfoPopup({ isOpen, onClose, scrollToSeries = null
                       >
                         {def.icon || SERIES_ICONS[seriesKey]}
                       </button>
-                      {index < DISPLAY_SERIES.length - 1 && (
+                      {index < visibleSeries.length - 1 && (
                         <span className="text-stone-400 text-sm mx-1">|</span>
                       )}
                     </div>
@@ -108,7 +111,7 @@ export default function SeriesInfoPopup({ isOpen, onClose, scrollToSeries = null
                 scrollbarColor: '#d6d3d1 transparent'  // stone-300 thumb on transparent track
               }}
             >
-              {DISPLAY_SERIES.map((seriesKey) => {
+              {visibleSeries.map((seriesKey) => {
                 const def = SERIES_DEFINITIONS[seriesKey];
                 const info = copy[seriesKey];
 
@@ -130,7 +133,7 @@ export default function SeriesInfoPopup({ isOpen, onClose, scrollToSeries = null
                     </div>
 
                     {/* Divider (except last) */}
-                    {seriesKey !== DISPLAY_SERIES[DISPLAY_SERIES.length - 1] && (
+                    {seriesKey !== visibleSeries[visibleSeries.length - 1] && (
                       <div className="mt-6 border-b border-stone-200" />
                     )}
                   </section>

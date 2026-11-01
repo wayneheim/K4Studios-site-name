@@ -1,0 +1,16 @@
+# PayPal Developer Dashboard SANDBOX application credentials only.
+PAYPAL_CLIENT_ID=""
+PAYPAL_CLIENT_SECRET=""
+PAYPAL_WEBHOOK_ID=""
+
+# Shared HMAC secret used between this Worker and order-email.cjs.
+ORDER_EMAIL_SHARED_SECRET=""
+
+# Long random token entered into the local admin page. Keep private.
+COMMERCE_ADMIN_TOKEN=""
+
+# Explicitly test-only configuration. Rates are integer basis points.
+# SANDBOX_TAX_RULES_JSON='{"mode":"sandbox","label":"SANDBOX TEST TAX RULES — NOT FOR LIVE SALES","version":"sandbox-tax-local-v1","defaultRule":{"rateBasisPoints":0,"taxShipping":false,"label":"No sandbox collection rule configured"},"jurisdictions":{"OH":{"rateBasisPoints":675,"taxShipping":true,"label":"Geauga County, Ohio sandbox test rate (6.75%)"}}}'
+
+# Test shipping amounts are integer cents, charged once per fulfillment group.
+# SANDBOX_SHIPPING_RULES_JSON='{"mode":"sandbox","label":"SANDBOX TEST SHIPPING — NOT FOR LIVE SALES","version":"sandbox-shipping-local-v1","groupRatesCents":{"smugmug-manual":1000,"k4-manual":3500,"engrained":15000}}'

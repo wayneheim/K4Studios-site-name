@@ -8,7 +8,8 @@ export const V3_CORE_EVENT_TYPES = Object.freeze([
   'frontier_story_video_widget_click', 'guide_open', 'guide_close', 'guide_done',
   'guide_click_outside', 'order_clicked', 'order_submitted',
   'order_smugmug_clicked', 'order_email_clicked', 'xl_zoom',
-  'series_info', 'more_info_open', 'collector_notes_open', 'slideshow_start'
+  'series_info', 'more_info_open', 'collector_notes_open', 'slideshow_start',
+  'slideshow_nav_next', 'slideshow_nav_prev'
 ]);
 
 export const V3_ENGAGEMENT_EVENT_TYPES = new Set(V3_CORE_EVENT_TYPES.filter((type) => type !== 'page_view'));
@@ -75,7 +76,8 @@ export function getV3ActionLabel(type) {
     story_slider_click: 'Story slide clicked',
     frontier_story_video_widget_click: 'Story video clicked', xl_zoom: 'XL zoom opened',
     series_info: 'Series information opened', more_info_open: 'More information opened',
-    collector_notes_open: 'Collector notes opened', slideshow_start: 'Slideshow started'
+    collector_notes_open: 'Collector notes opened', slideshow_start: 'Slideshow started',
+    slideshow_nav_next: 'Slideshow image advance', slideshow_nav_prev: 'Slideshow previous image'
   })[type] || null;
 }
 
@@ -83,7 +85,7 @@ export function getV3ActionGroup(type) {
   if (['order_clicked', 'order_submitted', 'order_smugmug_clicked', 'order_email_clicked'].includes(type)) return 'Commerce';
   if (type.startsWith('grid_')) return 'Grid';
   if (type.startsWith('gallery_') || ['browse_all_click', 'browse_all_image_click', 'theme_click', 'all_list_click', 'exit_to_gallery'].includes(type)) return 'Gallery';
-  if (['nav_next', 'nav_prev', 'sister_image_click', 'cowboy_jump', 'picture_shows_jump', 'presentation_last_image_back_to_start'].includes(type)) return 'Image navigation';
+  if (['nav_next', 'nav_prev', 'slideshow_nav_next', 'slideshow_nav_prev', 'sister_image_click', 'cowboy_jump', 'picture_shows_jump', 'presentation_last_image_back_to_start'].includes(type)) return 'Image navigation';
   if (type.startsWith('story_') || type === 'frontier_story_video_widget_click') return 'Story';
   if (type.startsWith('guide_')) return 'Guide';
   if (['xl_zoom', 'series_info', 'more_info_open', 'collector_notes_open', 'slideshow_start'].includes(type)) return 'Engagement';
@@ -93,10 +95,53 @@ export function getV3ActionGroup(type) {
 export function getV3GeoLabel(row) {
   const city = String(row?.city || '').trim();
   const region = String(row?.region || '').trim();
-  const country = String(row?.country || '').trim();
-  if (city) return `${city}${region ? `, ${region}` : country ? `, ${country}` : ''}`;
-  if (region) return `${region}${country ? `, ${country}` : ''}`;
+  const country = String(row?.country || '').trim().toUpperCase();
+  // Keep the country in the compact label even when a region is available.
+  // The V3 renderer can then group locations without querying raw events.
+  if (city) return [city, region, country].filter(Boolean).join(', ');
+  if (region) return [region, country].filter(Boolean).join(', ');
   return country || null;
+}
+
+export function getV3DeviceLabel(userAgent) {
+  const value = String(userAgent || '').toLowerCase();
+  if (/android/.test(value)) return 'Android';
+  // Modern iPads can identify as Macintosh while still including Mobile.
+  if (/iphone|ipad|ipod/.test(value) || (/macintosh/.test(value) && /mobile/.test(value))) return 'Apple mobile';
+  if (/windows/.test(value)) return 'Windows';
+  if (/macintosh|mac os x/.test(value)) return 'Mac';
+  return 'Other';
+}
+
+export function getV3ExpeditionActionLabel(pagePath, eventType) {
+  const path = normalizeV3Path(pagePath);
+  const prefix = '/Other/Expeditions/';
+  if (!path?.startsWith(prefix)) return null;
+
+  const slug = path.slice(prefix.length).split('/')[0];
+  if (!slug || slug === 'echoes-api-test') return null;
+
+  const expeditionName = ({
+    'echoes-of-the-west-2026': 'Echoes of the West 2026',
+    'fiddlers-green-2026': 'Fiddlers Green 2026',
+    'obv-wild-west-2026': 'OBV Wild West 2026'
+  })[slug] || slug.split('-')
+    .filter(Boolean)
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+  const action = ({
+    grid_image_click: 'Photograph opened',
+    nav_next: 'Next photograph',
+    nav_prev: 'Previous photograph',
+    slideshow_start: 'Slideshow started',
+    slideshow_nav_next: 'Slideshow auto-advance',
+    slideshow_nav_prev: 'Slideshow previous photograph',
+    order_smugmug_clicked: 'Order Prints clicked',
+    grid_show_more: 'Next gallery page',
+    grid_show_previous: 'Previous gallery page'
+  })[eventType];
+
+  return action ? `${expeditionName} | ${action}` : null;
 }
 
 export function isV3CoreEvent(row) {
@@ -118,6 +163,7 @@ export function buildV3RollupBatch(rows) {
   const sessions = new Map();
   const visitors = new Set();
   const images = new Map();
+  const imageGeography = new Map();
   let accepted = 0;
   let lastRawEventId = 0;
   let lastEventTs = null;
@@ -146,16 +192,29 @@ export function buildV3RollupBatch(rows) {
     const sessionKey = `${day}\u0000${row.session_id}`;
     const session = sessions.get(sessionKey) || {
       day, sessionId: row.session_id, visitorId: row.visitor_id, engaged: 0,
-      landingPage: null, entrySource: null, visitorGeo: null, imageGeo: null
+      landingPage: null, entrySource: null, visitorGeo: null, imageGeo: null,
+      entryIsImageFallback: 0, pageViewCount: 0, siteDevice: null, imageDevice: null
     };
     session.engaged = Math.max(session.engaged, engaged);
-    if (row.event_type === 'page_view' && !session.landingPage) {
-      session.landingPage = normalizeV3Path(row.page) || 'Unknown page';
-      session.entrySource = getV3AcquisitionLabel(row.entry_referrer || row.referer);
-      session.visitorGeo = getV3GeoLabel(row);
+    if (row.event_type === 'page_view') {
+      session.pageViewCount += 1;
+      if (!session.siteDevice) session.siteDevice = getV3DeviceLabel(row.ua);
+      if (!session.landingPage || session.entryIsImageFallback) {
+        session.landingPage = normalizeV3Path(row.page) || 'Unknown page';
+        session.entrySource = getV3AcquisitionLabel(row.entry_referrer || row.referer);
+        session.visitorGeo = getV3GeoLabel(row);
+        session.entryIsImageFallback = 0;
+      }
     }
-    if (row.event_type === 'chapter_view' && !session.imageGeo) {
-      session.imageGeo = getV3GeoLabel(row);
+    if (row.event_type === 'chapter_view') {
+      if (!session.imageGeo) session.imageGeo = getV3GeoLabel(row);
+      if (!session.imageDevice) session.imageDevice = getV3DeviceLabel(row.ua);
+      if (!session.landingPage) {
+        session.landingPage = normalizeV3Path(row.page) || 'Unknown page';
+        session.entrySource = getV3AcquisitionLabel(row.entry_referrer || row.referer);
+        session.visitorGeo = getV3GeoLabel(row);
+        session.entryIsImageFallback = 1;
+      }
     }
     sessions.set(sessionKey, session);
     visitors.add(`${day}\u0000${row.visitor_id}`);
@@ -177,9 +236,16 @@ export function buildV3RollupBatch(rows) {
     }
     if (row.event_type === 'chapter_view') {
       incrementDimension('image_geo_views', getV3GeoLabel(row) || 'Unknown location');
+      const imageId = row.target_id || 'Unknown image';
+      const country = String(row.country || '').trim().toUpperCase();
+      const region = String(row.region || '').trim();
+      const city = String(row.city || '').trim();
+      addCount(imageGeography, `${day}\u0000${imageId}\u0000${country}\u0000${region}\u0000${city}`);
     }
     const action = getV3ActionLabel(row.event_type);
     if (action) incrementDimension('action', action);
+    const expeditionAction = getV3ExpeditionActionLabel(row.page, row.event_type);
+    if (expeditionAction) incrementDimension('expedition_action', expeditionAction);
     const actionGroup = getV3ActionGroup(row.event_type);
     if (actionGroup) incrementDimension('action_group', actionGroup);
   }
@@ -198,7 +264,11 @@ export function buildV3RollupBatch(rows) {
       day, imageId, pagePath: pagePath || null,
       count: counts.views, pricingOpens: counts.pricingOpens,
       smugmugClicks: counts.smugmugClicks, emailClicks: counts.emailClicks
-    }; })
+    }; }),
+    imageGeography: [...imageGeography].map(([key, count]) => {
+      const [day, imageId, country, region, city] = split(key);
+      return { day, imageId, country, region, city, count };
+    })
   };
 }
 
@@ -220,25 +290,50 @@ export function summarizeV3Rollup(batch, label = 'Archive sample') {
   const topDistinctVisitors = (field, limit, predicate = () => true) => {
     const merged = new Map();
     batch.sessions.filter(predicate).forEach((row) => {
-      if (!row[field]) return;
-      if (!merged.has(row[field])) merged.set(row[field], new Set());
-      merged.get(row[field]).add(row.visitorId || row.sessionId);
+      const value = typeof field === 'function' ? field(row) : row[field];
+      if (!value) return;
+      if (!merged.has(value)) merged.set(value, new Set());
+      merged.get(value).add(row.visitorId || row.sessionId);
     });
     return [...merged].map(([itemLabel, visitors]) => ({ label: itemLabel, count: visitors.size }))
       .sort((a, b) => (b.count - a.count) || a.label.localeCompare(b.label)).slice(0, limit);
   };
+  const fallbackPageCount = batch.sessions.filter((row) => row.entryIsImageFallback && !row.pageViewCount).length;
+  const topPagesWithFallback = (() => {
+    const merged = new Map(top('page', Number.MAX_SAFE_INTEGER).map((row) => [row.label, row.count]));
+    batch.sessions.filter((row) => row.entryIsImageFallback && !row.pageViewCount)
+      .forEach((row) => addCount(merged, row.landingPage));
+    return [...merged].map(([itemLabel, count]) => ({ label: itemLabel, count }))
+      .sort((a, b) => (b.count - a.count) || a.label.localeCompare(b.label)).slice(0, 10);
+  })();
+  const entryNavigation = (() => {
+    const grouped = new Map();
+    batch.sessions.forEach((row) => {
+      if (!row.landingPage) return;
+      const item = grouped.get(row.landingPage) || { label: row.landingPage, entries: 0, continued: 0, chapters: 0 };
+      item.entries += 1;
+      if (row.pageViewCount >= 2) item.continued += 1;
+      if (row.imageDevice || row.imageGeo) item.chapters += 1;
+      grouped.set(row.landingPage, item);
+    });
+    return [...grouped.values()].sort((a, b) => {
+      if (a.label === '/' && b.label !== '/') return -1;
+      if (b.label === '/' && a.label !== '/') return 1;
+      return (b.entries - a.entries) || a.label.localeCompare(b.label);
+    }).slice(0, 5);
+  })();
   return {
     window: { key: 'archive', label },
     state: { lastRawEventId: batch.lastRawEventId, lastEventTs: batch.lastEventTs },
     counts: {
       visitors: new Set(batch.visitors.map((row) => row.visitorId)).size,
       sessions: new Set(batch.sessions.map((row) => row.sessionId)).size,
-      page_views: sum('pageViews'), image_views: sum('imageViews'),
+      page_views: sum('pageViews') + fallbackPageCount, image_views: sum('imageViews'),
       engaged_sessions: new Set(batch.sessions.filter((row) => row.engaged).map((row) => row.sessionId)).size,
       pricing_opens: sum('pricingOpens'), order_submits: sum('orderSubmits'),
       smugmug_clicks: sum('smugmugClicks'), email_clicks: sum('emailClicks')
     },
-    topPages: top('page', 10),
+    topPages: topPagesWithFallback,
     topImages: (() => {
       const all = batch.images.map((row) => ({
         label: row.imageId, imageId: row.imageId, pagePath: row.pagePath,
@@ -251,18 +346,33 @@ export function summarizeV3Rollup(batch, label = 'Archive sample') {
       all.filter((row) => row.pricingOpens > 0).forEach((row) => selected.set(row.imageId, row));
       all.filter((row) => row.smugmugClicks > 0 || row.emailClicks > 0)
         .forEach((row) => selected.set(row.imageId, row));
-      return [...selected.values()].sort((a, b) => (b.count - a.count)
+      const geoByImage = new Map();
+      batch.imageGeography.forEach((row) => {
+        if (!geoByImage.has(row.imageId)) geoByImage.set(row.imageId, new Map());
+        const key = `${row.country}\u0000${row.region}\u0000${row.city}`;
+        addCount(geoByImage.get(row.imageId), key, row.count);
+      });
+      return [...selected.values()].map((row) => {
+        const dominant = [...(geoByImage.get(row.imageId) || new Map())]
+          .sort((a, b) => (b[1] - a[1]) || a[0].localeCompare(b[0]))[0];
+        if (!dominant) return row;
+        const [country, region, city] = dominant[0].split('\u0000');
+        return { ...row, dominantGeo: getV3GeoLabel({ country, region, city }), dominantGeoViews: dominant[1] };
+      }).sort((a, b) => (b.count - a.count)
         || (b.pricingOpens - a.pricingOpens) || a.imageId.localeCompare(b.imageId));
     })(),
-    entryPages: topSessionField('landingPage', 25),
+    entryPages: topSessionField('landingPage', 25), entryNavigation,
     acquisition: topSessionField('entrySource', 10),
-    visitorGeography: topDistinctVisitors('visitorGeo', 20),
+    visitorGeography: topDistinctVisitors((row) => row.visitorGeo || row.imageGeo, 20),
+    siteDevices: topDistinctVisitors('siteDevice', 5, (row) => Boolean(row.siteDevice)),
+    imageDevices: topDistinctVisitors('imageDevice', 5, (row) => Boolean(row.imageDevice)),
     imageGeography: (() => {
       const viewCounts = new Map(top('image_geo_views', Number.MAX_SAFE_INTEGER)
         .map((row) => [row.label, row.count]));
       return topDistinctVisitors('imageGeo', 20, (row) => Boolean(row.imageGeo))
         .map((row) => ({ ...row, imageViews: viewCounts.get(row.label) || 0 }));
     })(),
+    expeditionActions: top('expedition_action', 30),
     actionGroups: top('action_group', 10), actions: top('action', 20),
     population: { scanned: batch.scanned, accepted: batch.accepted }
   };

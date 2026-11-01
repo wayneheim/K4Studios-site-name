@@ -49,16 +49,19 @@ function rows(result) {
 export async function getV3CoreSummary(env, { windowKey = 'today', now = new Date() } = {}) {
   const window = getV3Window(windowKey, now);
   const bounds = [window.startDay, window.endDay];
-  const [metricResult, peopleResult, dimensionResult, sessionBreakdownResult, imageResult, stateResult] = await env.DB.batch([
+  const [metricResult, peopleResult, dimensionResult, sessionBreakdownResult, entryNavigationResult, deviceBreakdownResult, imageResult, stateResult] = await env.DB.batch([
     env.DB.prepare(`
-      SELECT COALESCE(SUM(page_views),0) AS page_views,
+      SELECT COALESCE(SUM(page_views),0) + (
+          SELECT COUNT(*) FROM analytics_v3_daily_sessions
+          WHERE day BETWEEN ? AND ? AND entry_is_image_fallback=1 AND page_view_count=0
+        ) AS page_views,
         COALESCE(SUM(image_views),0) AS image_views,
         COALESCE(SUM(pricing_opens),0) AS pricing_opens,
         COALESCE(SUM(order_submits),0) AS order_submits,
         COALESCE(SUM(smugmug_clicks),0) AS smugmug_clicks,
         COALESCE(SUM(email_clicks),0) AS email_clicks
       FROM analytics_v3_daily_metrics WHERE day BETWEEN ? AND ?
-    `).bind(...bounds),
+    `).bind(...bounds, ...bounds),
     env.DB.prepare(`
       SELECT
         (SELECT COUNT(DISTINCT visitor_id) FROM analytics_v3_daily_visitors WHERE day BETWEEN ? AND ?) AS visitors,
@@ -66,15 +69,25 @@ export async function getV3CoreSummary(env, { windowKey = 'today', now = new Dat
         (SELECT COUNT(DISTINCT session_id) FROM analytics_v3_daily_sessions WHERE day BETWEEN ? AND ? AND engaged=1) AS engaged_sessions
     `).bind(...bounds, ...bounds, ...bounds),
     env.DB.prepare(`
-      SELECT dimension, label, SUM(count) AS count
-      FROM analytics_v3_daily_dimensions
-      WHERE day BETWEEN ? AND ? AND dimension IN ('page','action','action_group','image_geo_views')
-      GROUP BY dimension, label
-      ORDER BY dimension, count DESC
-    `).bind(...bounds),
+      WITH compact AS (
+        SELECT dimension,label,SUM(count) count
+        FROM analytics_v3_daily_dimensions
+        WHERE day BETWEEN ? AND ? AND dimension IN ('page','action','action_group','image_geo_views','expedition_action')
+        GROUP BY dimension,label
+      ), fallback_pages AS (
+        SELECT 'page' dimension,landing_page label,COUNT(*) count
+        FROM analytics_v3_daily_sessions
+        WHERE day BETWEEN ? AND ? AND entry_is_image_fallback=1 AND page_view_count=0 AND landing_page IS NOT NULL
+        GROUP BY landing_page
+      ), combined AS (
+        SELECT * FROM compact UNION ALL SELECT * FROM fallback_pages
+      )
+      SELECT dimension,label,SUM(count) count FROM combined
+      GROUP BY dimension,label ORDER BY dimension,count DESC
+    `).bind(...bounds, ...bounds),
     env.DB.prepare(`
       WITH scoped AS MATERIALIZED (
-        SELECT landing_page,entry_source,visitor_id,visitor_geo,image_geo
+        SELECT landing_page,entry_source,visitor_id,visitor_geo,image_geo,site_device,image_device
         FROM analytics_v3_daily_sessions WHERE day BETWEEN ? AND ?
       )
       SELECT 'entry_page' kind,landing_page label,COUNT(*) count FROM scoped
@@ -83,12 +96,35 @@ export async function getV3CoreSummary(env, { windowKey = 'today', now = new Dat
       SELECT 'entry_source',entry_source,COUNT(*) FROM scoped
         WHERE entry_source IS NOT NULL GROUP BY entry_source
       UNION ALL
-      SELECT 'visitor_geo',visitor_geo,COUNT(DISTINCT visitor_id) FROM scoped
-        WHERE visitor_geo IS NOT NULL GROUP BY visitor_geo
+      SELECT 'visitor_geo',COALESCE(visitor_geo,image_geo),COUNT(DISTINCT visitor_id) FROM scoped
+        WHERE COALESCE(visitor_geo,image_geo) IS NOT NULL GROUP BY COALESCE(visitor_geo,image_geo)
       UNION ALL
       SELECT 'image_geo',image_geo,COUNT(DISTINCT visitor_id) FROM scoped
         WHERE image_geo IS NOT NULL GROUP BY image_geo
     `).bind(...bounds),
+    env.DB.prepare(`
+      WITH progression AS (
+        SELECT landing_page label,
+          COUNT(*) entries,
+          SUM(CASE WHEN page_view_count >= 2 THEN 1 ELSE 0 END) continued,
+          SUM(CASE WHEN image_device IS NOT NULL OR image_geo IS NOT NULL THEN 1 ELSE 0 END) chapters
+        FROM analytics_v3_daily_sessions
+        WHERE day BETWEEN ? AND ? AND landing_page IS NOT NULL
+        GROUP BY landing_page
+      )
+      SELECT label,entries,continued,chapters FROM progression
+      ORDER BY CASE WHEN label='/' THEN 0 ELSE 1 END,entries DESC,label
+      LIMIT 5
+    `).bind(...bounds),
+    env.DB.prepare(`
+      SELECT 'site_device' kind,site_device label,COUNT(DISTINCT visitor_id) count
+      FROM analytics_v3_daily_sessions
+      WHERE day BETWEEN ? AND ? AND site_device IS NOT NULL GROUP BY site_device
+      UNION ALL
+      SELECT 'image_device',image_device,COUNT(DISTINCT visitor_id)
+      FROM analytics_v3_daily_sessions
+      WHERE day BETWEEN ? AND ? AND image_device IS NOT NULL GROUP BY image_device
+    `).bind(...bounds, ...bounds),
     env.DB.prepare(`
       WITH grouped AS MATERIALIZED (
         SELECT image_id,MAX(NULLIF(page_path,'')) page_path,SUM(count) count,
@@ -100,18 +136,28 @@ export async function getV3CoreSummary(env, { windowKey = 'today', now = new Dat
       ), top_viewed AS (
         SELECT image_id FROM grouped WHERE count>0
         ORDER BY count DESC,image_id LIMIT 25
+      ), image_geo_grouped AS MATERIALIZED (
+        SELECT image_id,country,region,city,SUM(count) geo_views
+        FROM analytics_v3_daily_image_geography WHERE day BETWEEN ? AND ?
+        GROUP BY image_id,country,region,city
+      ), image_geo_ranked AS (
+        SELECT image_id,country,region,city,geo_views,
+          ROW_NUMBER() OVER (PARTITION BY image_id ORDER BY geo_views DESC,country,region,city) geo_rank
+        FROM image_geo_grouped
       )
-      SELECT image_id,page_path,count,pricing_opens,smugmug_clicks,email_clicks FROM grouped
-      WHERE pricing_opens>0 OR smugmug_clicks>0 OR email_clicks>0 OR image_id IN (SELECT image_id FROM top_viewed)
-      ORDER BY count DESC,pricing_opens DESC,(smugmug_clicks+email_clicks) DESC,image_id
-    `).bind(...bounds),
+      SELECT g.image_id,g.page_path,g.count,g.pricing_opens,g.smugmug_clicks,g.email_clicks,
+        x.country dominant_country,x.region dominant_region,x.city dominant_city,x.geo_views
+      FROM grouped g LEFT JOIN image_geo_ranked x ON x.image_id=g.image_id AND x.geo_rank=1
+      WHERE g.pricing_opens>0 OR g.smugmug_clicks>0 OR g.email_clicks>0 OR g.image_id IN (SELECT image_id FROM top_viewed)
+      ORDER BY g.count DESC,g.pricing_opens DESC,(g.smugmug_clicks+g.email_clicks) DESC,g.image_id
+    `).bind(...bounds, ...bounds),
     env.DB.prepare('SELECT last_raw_event_id, last_event_ts, updated_at FROM analytics_v3_state WHERE singleton=1')
   ]);
 
   const totals = rows(metricResult)[0] || {};
   const people = rows(peopleResult)[0] || {};
   const dimensionRows = rows(dimensionResult);
-  const sessionRows = rows(sessionBreakdownResult);
+  const sessionRows = [...rows(sessionBreakdownResult), ...rows(deviceBreakdownResult)];
   const top = (dimension, limit) => dimensionRows.filter((row) => row.dimension === dimension)
     .slice(0, limit).map((row) => ({ label: row.label, count: Number(row.count || 0) }));
   const topSession = (kind, limit) => sessionRows.filter((row) => row.kind === kind)
@@ -134,13 +180,24 @@ export async function getV3CoreSummary(env, { windowKey = 'today', now = new Dat
     topImages: rows(imageResult).map((row) => ({
       label: row.image_id, imageId: row.image_id, pagePath: row.page_path || null,
       count: Number(row.count || 0), pricingOpens: Number(row.pricing_opens || 0),
-      smugmugClicks: Number(row.smugmug_clicks || 0), emailClicks: Number(row.email_clicks || 0)
+      smugmugClicks: Number(row.smugmug_clicks || 0), emailClicks: Number(row.email_clicks || 0),
+      dominantGeo: [row.dominant_city, row.dominant_region, row.dominant_country].filter(Boolean).join(', ') || null,
+      dominantGeoViews: Number(row.geo_views || 0)
     })),
-    entryPages: topSession('entry_page', 25), acquisition: topSession('entry_source', 10),
+    entryPages: topSession('entry_page', 25),
+    entryNavigation: rows(entryNavigationResult).map((row) => ({
+      label: row.label,
+      entries: Number(row.entries || 0),
+      continued: Number(row.continued || 0),
+      chapters: Number(row.chapters || 0)
+    })),
+    acquisition: topSession('entry_source', 10),
     visitorGeography: topSession('visitor_geo', 20),
+    siteDevices: topSession('site_device', 5), imageDevices: topSession('image_device', 5),
     imageGeography: topSession('image_geo', 20).map((row) => ({
       ...row, imageViews: imageViewGeoCounts.get(row.label) || 0
     })),
+    expeditionActions: top('expedition_action', 30),
     actionGroups: top('action_group', 10), actions: top('action', 25)
   };
 }

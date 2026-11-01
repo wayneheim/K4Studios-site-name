@@ -1,0 +1,17 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import CommerceAdminPage from "@components/commerce/CommerceAdminPage.jsx";
+
+const meta = {
+  seoTitle: "Commerce Administration | K4 Studios",
+  seoDescription: "Private K4 Studios commerce reporting.",
+  robots: "noindex, nofollow, noarchive",
+  canonical: false,
+  ogType: "website",
+};
+---
+
+<BaseLayout title="Commerce Administration | K4 Studios" meta={meta} disableAutoBreadcrumbs={true}>
+  <CommerceAdminPage client:load />
+</BaseLayout>
+

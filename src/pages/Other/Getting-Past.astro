@@ -9,12 +9,10 @@ const seoTitle = "Getting Past | Wayne Heim Western Fine Art";
 const subtitle = "Who Decides Where the Worlds Meet";
 const canonicalPath = "/Other/Getting-Past";
 const canonicalUrl = `https://www.k4studios.com${canonicalPath}`;
-const heroHref = "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Fiddlers-Green-26-E/i-kKcx52H/Buy";
 const heroSrc = "/images/getting-past-web.jpg";
 const heroImageUrl = `https://www.k4studios.com${heroSrc}`;
 const heroAlt = "A woman in period dress sits beside her belongings on a grassy rise beneath a cloud-filled sky.";
-const willingAnotherTomorrowHref = "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Fiddlers-Green-26-E/i-M3fXnkq/buy";
-const willingAnotherTomorrowSrc = "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Fiddlers-Green-26-E/i-M3fXnkq/1/Kv59w2rmr9RrdJtj2FxPxrRF3vVFzRnNjpxM6BqCV/L/_WHO1071-Edit-Edit-L.jpg";
+const willingAnotherTomorrowSrc = "/img/i-M3fXnkq/l.jpg";
 const willingAnotherTomorrowAlt = "Three women in period dresses stand with their backs to the viewer, looking across a rugged Western landscape.";
 const description =
   "Wayne Heim on Getting Past, a painterly Western image of a frontier woman who decides where two worlds meet—and the women beneath the Western legend.";
@@ -92,13 +90,12 @@ const structuredData = {
   </div>
 
   {/* GETTING PAST — local watermark-free web image.
-      TODO: Replace the Expedition /Buy destination with the permanent K4 gallery href when promoted. */}
+      It intentionally has no external purchase link until it enters a K4 gallery. */}
   <EssayArtworkPlaceholder
     slot="hero-media"
     title="Getting Past"
     placement="hero"
     src={heroSrc}
-    href={heroHref}
     alt={heroAlt}
     maxWidth="28.125rem"
   />
@@ -153,7 +150,6 @@ const structuredData = {
       side="left"
       aspectRatio="3 / 4"
       src={willingAnotherTomorrowSrc}
-      href={willingAnotherTomorrowHref}
       alt={willingAnotherTomorrowAlt}
       crop
       objectPosition="center center"

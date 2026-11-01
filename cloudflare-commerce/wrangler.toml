@@ -1,0 +1,25 @@
+name = "k4-commerce-sandbox"
+main = "src/index.js"
+compatibility_date = "2026-10-29"
+
+[vars]
+PAYPAL_ENV = "sandbox"
+CHECKOUT_ENABLED = "true"
+ALLOWED_ORIGINS = "http://localhost:8888,http://127.0.0.1:8888,https://www.k4studios.com,https://k4studios.com"
+ORDER_EMAIL_ENDPOINT = "https://www.k4studios.com/.netlify/functions/order-email"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "k4-commerce-sandbox"
+# Local development uses this placeholder. Replace it with the dedicated D1
+# database UUID before the first sandbox deployment.
+database_id = "b59568c8-a6de-43d4-8cf0-9d6ef881dc0f"
+migrations_dir = "migrations"
+
+[dev]
+port = 8791
+local_protocol = "http"
+
+[triggers]
+crons = ["*/5 * * * *"]
+

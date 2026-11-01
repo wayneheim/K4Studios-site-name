@@ -20,7 +20,7 @@ again until the displayed timestamp is current.
 
 The initial page contains page loads, sessions, visitors, engaged sessions,
 image views, the top 25 entry pages, top 10 site pages, accessed images with
-clickable thumbnails (highlighted green when pricing was opened), visitor geography, image-viewer geography, entry
+clickable thumbnails (highlighted green when pricing was opened), visitor geography, image-viewer geography, site visitor devices, image-viewer devices, entry
 sources, and core actions grouped by purpose. These all read the compact V3
 tables; opening the report never scans the raw event table.
 
@@ -40,13 +40,16 @@ metrics and remain available in diagnostics.
 1. Apply `migrations/2026-09-04-add-analytics-v3-rollups.sql` to a new database.
 2. Apply `migrations/2026-09-05-extend-analytics-v3-core-reports.sql`.
 3. Apply `migrations/2026-09-07-add-analytics-v3-image-pricing.sql`.
-4. Deploy the analytics Worker.
-5. For an existing V3 installation, run
+4. Apply `migrations/2026-10-21-add-analytics-v3-image-geography.sql`.
+5. Apply `migrations/2026-10-21-add-analytics-v3-entry-fallback.sql`.
+6. Apply `migrations/2026-10-28-add-analytics-v3-device-breakdown.sql`.
+7. Deploy the analytics Worker.
+8. For an existing V3 installation, run
    `scripts/reset-analytics-v3-rollups-for-enrichment.sql` once. This clears
    only the disposable V3 summaries so they can be regenerated with entry,
    geography, and image facts; it does not delete raw history or V2 data.
-6. Open `/__k4stats-v3` and incrementally catch up the 30-day window.
-7. After validation, retire the V2 rebuild route and remove redundant raw-event
+9. Open `/__k4stats-v3` and incrementally catch up the 30-day window.
+10. After validation, retire the V2 rebuild route and remove redundant raw-event
    indexes in a separate, reversible migration.
 
 ## Offline validation

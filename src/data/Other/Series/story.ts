@@ -116,7 +116,7 @@ export const seriesStory = [
     paragraphs: [
       "Materials are not selected à la carte. Each series is paired with papers, substrates, and production methods chosen to support its scale, intent, and longevity.",
       "Chronicle and Legend works are produced on museum-grade fine art papers. Engrained works are fused directly into Baltic Birch, creating a finished object rather than a mounted print.",
-      "In rare cases, custom material considerations may be discussed for select commissions or institutional placements. These decisions are made collaboratively and intentionally — never as a menu option."
+      "In rare cases, alternate materials are available for institutional or large-scale placements. Contact us for details."
     ]
   }
 ];

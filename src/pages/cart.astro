@@ -1,0 +1,17 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import NativeCartPage from "@components/commerce/NativeCartPage.jsx";
+
+const meta = {
+  seoTitle: "Your Collection Cart | K4 Studios",
+  seoDescription: "Review physical fine art prints selected from the K4 Studios collection.",
+  robots: "noindex, nofollow",
+  canonical: false,
+  ogType: "website",
+};
+---
+
+<BaseLayout title="Your Collection Cart | K4 Studios" meta={meta} disableAutoBreadcrumbs={true}>
+  <NativeCartPage client:load />
+</BaseLayout>
+

@@ -407,7 +407,7 @@ force = true
 
 [[redirects]]
 from = "/Other/K4-Select-Series/Series-{1,2}"
-to = "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Series-:splat"
+to = "/Other/Series"
 status = 301
 force = true
 
@@ -431,14 +431,14 @@ force = true
 
 [[redirects]]
 from = "/Other/Photo-Shoots"
-to = "https://wayne-heim.smugmug.com/Other/Photo-Shoots"
-status = 301
+to = "/410.html"
+status = 410
 force = true
 
 [[redirects]]
 from = "/Other/Photo-Shoots/*"
-to = "https://wayne-heim.smugmug.com/Other/Photo-Shoots"
-status = 301
+to = "/410.html"
+status = 410
 force = true
 
 ## Malformed duplicated gallery segments are crawl debt, not valid rematch candidates.
@@ -712,11 +712,11 @@ to = "/.netlify/functions/smart-404?id=:id&path=/Photography-Galleries/:splat/i-
 status = 404
 force = true
 
-# --- Photoshoots and Events → SmugMug archive ---
+# --- Retired photoshoot/service archive ---
 [[redirects]]
 from = "/Photoshootsandevents/*"
-to = "https://wayne-heim.smugmug.com/Other/Photo-Shoots/:splat"
-status = 301
+to = "/410.html"
+status = 410
 force = true
 
 # --- Legacy Fine-Art-Photography duplicates ---
@@ -745,10 +745,10 @@ to = "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Internati
 status = 301
 force = true
 
-# K4 Select Series → SmugMug
+# K4 Select Series → current K4 editions page
 [[redirects]]
 from = "/Galleries/K4-Select-Series/*"
-to = "https://wayne-heim.smugmug.com/Other/K4-Select-Series/:splat"
+to = "/Other/Series"
 status = 301
 force = true
 
