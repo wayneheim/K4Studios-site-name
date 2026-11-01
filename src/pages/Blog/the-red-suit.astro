@@ -1,0 +1,468 @@
+---
+export const prerender = true;
+import BaseLayout    from "@/layouts/BaseLayout.astro";
+import BlogJsonLd    from "@/components/blog/BlogJsonLd.astro";
+import LandingHeader from "@/components/Landing-Header.jsx";
+import SiteFooter    from "@/components/Footer.astro";
+import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
+import EssayClusterLinks from "@/components/EssayClusterLinks.astro";
+import { getStructuredData, getBlogBreadcrumbList } from "@/components/utils/getStructuredData.ts";
+import { getLandingMeta } from "@/data/landingMeta.ts";
+import { autoLinkKeywordsInText } from "@/components/utils/autoLinkKeywordsInText.ts";
+import { semantic as k4Semantic } from "@/data/semantic/K4-Sem.ts";
+import {
+  galleryDataMap,
+  allImages
+} from "@/data/galleryMaps/MasterGalleryData.mjs";
+import { galleryData as painterlyImages } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs";
+import { galleryData as civilWarColor } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs";
+import { galleryData as civilWarBW } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs";
+import { galleryData as roaring20sColor } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color.mjs";
+import { galleryData as roaring20sBW } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White.mjs";
+import { galleryData as wwiiPortraitsColor } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs";
+import { galleryData as wwiiPortraitsBW } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White.mjs";
+import "@/styles/global.css";
+
+const sectionPath = "/Blog/the-red-suit";
+
+const coverImageAbsolute = "https://www.k4studios.com/images/Heim-med1.jpg";
+
+const description = "A conversation with Quill about craft, medium, and the moment viewers stop inspecting how an image was made and step into its story.";
+
+const structuredData = getStructuredData({
+  type: "BlogPosting",
+  data: {
+    headline: "Inside the Frame: The Red Suit",
+    description,
+    url: `https://www.k4studios.com${sectionPath}`,
+    copyrightNotice: "(c) Wayne Heim",
+    author: {
+      "@type": "Person",
+      name: "Wayne Heim"
+    },
+    datePublished: "2026-09-17",
+    image: coverImageAbsolute,
+    articleSection: "Western Fine Art Photography",
+    keywords: ["painterly photography", "visual storytelling", "Western narrative art", "One-Image Movies", "artistic medium", "Wayne Heim", "Inside the Frame"],
+    wordCount: 1451
+  },
+  defaults: {
+    copyrightNotice: "(c) Wayne Heim",
+    license: "https://www.k4studios.com/copyright",
+    creditText: "Wayne Heim",
+    creatorName: "Wayne Heim",
+    creatorUrl: "https://www.k4studios.com/"
+  }
+});
+
+const breadcrumbsJSON = getBlogBreadcrumbList({
+  title: "Inside the Frame: The Red Suit",
+  url: `https://www.k4studios.com${sectionPath}`
+});
+
+const meta = {
+  ...getLandingMeta(sectionPath, coverImageAbsolute),
+  title: "The Red Suit — Wayne Heim",
+  seoTitle: "The Red Suit — Wayne Heim",
+  description,
+  preserveTitleDashes: true,
+  ogUrl: `https://www.k4studios.com${sectionPath}`,
+  ogTitle: "Inside the Frame: The Red Suit",
+  ogDescription: description,
+  ogImage: coverImageAbsolute,
+  ogImageAlt: "Medical illustration by Wayne Heim showing spinal and pelvic anatomy with fixation hardware.",
+  ogType: "article",
+  twitterUrl: `https://www.k4studios.com${sectionPath}`,
+  twitterTitle: "Inside the Frame: The Red Suit",
+  twitterDescription: description,
+  twitterImage: coverImageAbsolute,
+  twitterCard: "summary_large_image"
+};
+
+function shuffleArray<T>(arr: T[]): T[] {
+  return arr
+    .map(value => ({ value, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ value }) => value);
+}
+
+const allGalleryImages = [
+  ...painterlyImages.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color" })),
+  ...civilWarColor.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color" })),
+  ...civilWarBW.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White" })),
+  ...roaring20sColor.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color" })),
+  ...roaring20sBW.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White" })),
+  ...wwiiPortraitsColor.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color" })),
+  ...wwiiPortraitsBW.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White" }))
+].filter(img => !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(img.visibility ?? 'show').trim().toLowerCase()));
+
+const previewImages = shuffleArray(allGalleryImages).slice(0, 6);
+const previewPath = "/Galleries";
+
+const galleryDatas = Object.values(galleryDataMap).flat();
+const featheredImages = allImages.filter(img => (img as any).visibility !== "ghost").slice(0, 12);
+const galleryPaths = Object.keys(galleryDataMap);
+
+const linkKeywords = (text: string) =>
+  autoLinkKeywordsInText(text, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname);
+
+const blogBreadcrumb = `Other > <a href='/Blog' style='color: inherit; text-decoration: none;' onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Blog</a> > The Red Suit`;
+---
+
+<BaseLayout
+  title="Inside the Frame: The Red Suit"
+  breadcrumbsJSON={breadcrumbsJSON}
+  meta={meta}
+>
+  <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
+    <div class="drawer-mode">
+      <LandingHeader client:load breadcrumb={blogBreadcrumb} />
+    </div>
+
+    <section style="text-align:center; padding:3rem 0;">
+      <h1 style="font-size:3rem; font-weight:700; margin-bottom:0.5rem;">The Red Suit</h1>
+      <p style="font-size:1.5rem; color:#4a4a4a;">Inside the Frame - Ep: 12</p>
+    </section>
+
+    <section class="story-section max-w-[860px] mx-auto px-4">
+      <BlogJsonLd json={structuredData}>
+      <article class="story-block space-y-4">
+
+        <p set:html={linkKeywords("<em>Inside the Frame — A Conversation with Quill</em>")} />
+
+        <p set:html={linkKeywords("Every once in a while I think I should just paint the damn things.")} />
+
+        <p set:html={linkKeywords("Not because I want to abandon photography. Mostly because there are moments when I wonder whether painting one of my Western images would finally settle the question: photography, painting, mixed media, digital art—what exactly is it?")} />
+
+        <p set:html={linkKeywords("After thirty-five years as a medical illustrator, drawing or painting isn't some mysterious skill sitting on the other side of a wall. I spent a career rendering skin, bone, tissue, metal, fluids, light, and texture convincingly enough that the viewer stopped thinking about the illustration and started understanding what it was there to explain.")} />
+
+        <p set:html={linkKeywords("So yes, I could paint one. The more interesting question is why I would.")} />
+
+        <figure class="medical-illustrations">
+          <div class="medical-illustrations-row">
+            <a href="/images/Heim-med1.jpg" aria-label="View spinal fixation illustration at full size">
+              <img src="/images/Heim-med1.jpg" alt="Wayne Heim medical illustration of spinal and pelvic anatomy with fixation rods and screws." width="625" height="720" loading="lazy" />
+            </a>
+            <a href="/images/Heim-med2.jpg" aria-label="View needle procedure illustration at full size">
+              <img src="/images/Heim-med2.jpg" alt="Wayne Heim medical illustration showing a needle procedure within the chest, with translucent anatomy and branching vessels." width="984" height="720" loading="lazy" />
+            </a>
+            <a href="/images/Heim-med3.jpg" aria-label="View heart valve illustration at full size">
+              <img src="/images/Heim-med3.jpg" alt="Wayne Heim medical illustration of a balloon catheter positioned within a heart valve." width="623" height="720" loading="lazy" />
+            </a>
+          </div>
+          <figcaption>Medical illustrations by Wayne Heim. Click an image to enlarge it.</figcaption>
+        </figure>
+
+        <h3>Conversation</h3>
+
+        <p set:html={linkKeywords("<strong>Quill:</strong> You know saying, “I could paint these,” sounds a little arrogant.")} />
+
+        <p set:html={linkKeywords("<strong>Wayne:</strong> I spent thirty-five years as a medical illustrator. I think I've earned a small allowance.")} />
+
+        <p set:html={linkKeywords("<strong>Quill:</strong> Fair enough. So why not paint one?")} />
+
+        <p set:html={linkKeywords("<strong>Wayne:</strong> Because I'm not sure what I'd be adding. I'd probably work very hard to make the painting feel much like the image already does. Same light. Same composition. Same story. Same attempt to create that place somewhere between reality and memory.")} />
+
+        <p set:html={linkKeywords("And maybe I'd enjoy painting it. I probably would.")} />
+
+        <p set:html={linkKeywords("But if the real reason I picked up the brush was simply to demonstrate that I could, then the exercise would be more about proving the craft than developing the idea. I've already spent thirty-five years proving craft.")} />
+
+        <p set:html={linkKeywords("As a medical illustrator, that was part of the job. Someone came to me with something that needed to be explained, taught, revealed, or understood, and I used whatever skill I had to make that happen.")} />
+
+        <p set:html={linkKeywords("Fine art is different for me. For perhaps the first time in my working life, nobody is handing me the message. I get to decide what the image is trying to say.")} />
+
+        <p set:html={linkKeywords("<strong>Quill:</strong> So this isn't really about painting versus photography.")} />
+
+        <p set:html={linkKeywords("<strong>Wayne:</strong> Not at all. There are painters whose technical ability leaves me staring at the canvas wondering how the hell they did it. I love that stuff. Craft is part of what made me an artist in the first place.")} />
+
+        <p set:html={linkKeywords("And every artist gets to decide what they want from their work. Beauty may be the goal. Capturing an iconic Western moment may be the goal. Technical mastery may be the goal. Making something people simply want to live with may be the goal. God knows artists have to make a living too.")} />
+
+        <p set:html={linkKeywords("I've just reached a different place in my own life. After thirty-five years of making images primarily to communicate something for somebody else, I don't want my own work to stop at “Look what I can do.”")} />
+
+        <p set:html={linkKeywords("I want people to find out what I have to say.")} />
+
+        <p set:html={linkKeywords("<strong>Quill:</strong> But technique still matters.")} />
+
+        <p set:html={linkKeywords("<strong>Wayne:</strong> Enormously. You can't make careless work and then complain that people failed to find the brilliant idea buried underneath it. Execution matters. Presentation matters. Craft matters.")} />
+
+        <p set:html={linkKeywords("Think of it like a job interview. You have to show up looking like you belong in the room. Maybe your suit is wool. Mine is cotton. Yours is custom tailored. Mine came from somewhere else entirely. But assuming we both look like we came prepared, five minutes into the interview I hope nobody is still thinking about our suits. I hope they're listening to what we have to say.")} />
+
+        <p set:html={linkKeywords("<strong>Quill:</strong> So medium is the suit.")} />
+
+        <p set:html={linkKeywords("<strong>Wayne:</strong> Partly. Oil. Charcoal. Photography. Bronze. Wood. They aren't interchangeable. Each has its own language and affects the experience.")} />
+
+        <p set:html={linkKeywords("But eventually I want the medium to carry you into the work rather than stand between you and it.")} />
+
+        <p set:html={linkKeywords("<strong>Quill:</strong> Unless somebody wears a bright red suit.")} />
+
+        <p set:html={linkKeywords("<strong>Wayne:</strong> Exactly. Now everybody notices the suit.")} />
+
+        <p set:html={linkKeywords("And maybe it is spectacular. Perfectly tailored. Beautifully made. Impossible not to look at. You leave the interview saying, “Remember that guy in the red suit?”")} />
+
+        <p set:html={linkKeywords("Nothing wrong with that. The suit may deserve admiration. But what if what the guy had to say was actually more interesting?")} />
+
+        <p set:html={linkKeywords("<strong>Quill:</strong> You're talking about virtuosity becoming the subject.")} />
+
+        <p set:html={linkKeywords("<strong>Wayne:</strong> Sometimes. You see a pencil drawing and the first response is, “I can't believe that's pencil.” Or a painting and people crowd close to study the brushwork. Or a photograph and everyone wants to know the camera or lens.")} />
+
+        <p set:html={linkKeywords("Those are legitimate pleasures. I do the same thing. But I don't want the process to be the last thing someone remembers about my work.")} />
+
+        <p set:html={linkKeywords("<strong>Quill:</strong> Because then we're still talking about the suit.")} />
+
+        <p set:html={linkKeywords("<strong>Wayne:</strong> Right.")} />
+
+        <p set:html={linkKeywords("My best work seems to happen when people stop trying to decide whether they're looking at a photograph or a painting. At first they may ask. Then they look closer. Then, with the strongest pieces, something changes.")} />
+
+        <p set:html={linkKeywords("They stop asking. Not because I've fooled them, but because something else became more interesting.")} />
+
+        <p set:html={linkKeywords("<strong>Quill:</strong> The story.")} />
+
+        <p set:html={linkKeywords("<strong>Wayne:</strong> Exactly.")} />
+
+        <p set:html={linkKeywords("The questions change. Instead of “Is this a photograph?” “How much Photoshop is involved?” “Were these models?” “Was this staged?” it becomes: “Where is everybody?” “Why is that rider alone?” “What is she looking at?” “What just happened?” “What happens next?”")} />
+
+        <p set:html={linkKeywords("That's the moment I'm after.")} />
+
+        <p set:html={linkKeywords("They've stopped inspecting how I got to the interview and started listening to what I came to say.")} />
+
+        <p set:html={linkKeywords("<strong>Quill:</strong> Some people genuinely care how something was made.")} />
+
+        <p set:html={linkKeywords("<strong>Wayne:</strong> So do I.")} />
+
+        <p set:html={linkKeywords("Process is fascinating. I can spend far too long studying how somebody handled an edge, built a surface, controlled light, or solved a composition.")} />
+
+        <p set:html={linkKeywords("What I'm talking about is the moment when process becomes a substitute for encountering the work.")} />
+
+        <p set:html={linkKeywords("I want the light to stop you. I want the composition to pull you closer. I want the treatment of the image to create a world you want to enter. But all of that is the handshake.")} />
+
+        <p set:html={linkKeywords("It isn't the conversation.")} />
+
+        <p set:html={linkKeywords("<strong>Quill:</strong> So what is?")} />
+
+        <p set:html={linkKeywords("<strong>Wayne:</strong> Story. Human behavior. History. Ambiguity. Consequence. The second before something happens and the second after.")} />
+
+        <p set:html={linkKeywords("That's really the idea behind the One-Image Movies. The image isn't supposed to finish the story. It's supposed to make the viewer begin one.")} />
+
+        <p set:html={linkKeywords("Which is probably why the category matters less and less to me once the work is actually on the wall. Call it photography. Painterly photography. Photographic art. Whatever helps us find the right door.")} />
+
+        <p set:html={linkKeywords("Then come inside.")} />
+
+        <p set:html={linkKeywords("<strong>Quill:</strong> Easy to say when sometimes the label determines whether the door opens.")} />
+
+        <p set:html={linkKeywords("<strong>Wayne:</strong> That's the difficult part.")} />
+
+        <p set:html={linkKeywords("Categories are useful. Shows need them. Museums need them. Collectors need them. Websites certainly need them.")} />
+
+        <p set:html={linkKeywords("I'm not arguing that we erase the lines. <a href=\"/Blog/off-the-paper\">Poor Billy and his coloring book</a> already got us into enough trouble there.")} />
+
+        <p set:html={linkKeywords("<strong>Quill:</strong> Billy again.")} />
+
+        <p set:html={linkKeywords("<strong>Wayne:</strong> Apparently he's become our resident art theorist.")} />
+
+        <p set:html={linkKeywords("The problem isn't that the lines exist. It's when we become so interested in the lines that we stop looking at what Billy drew.")} />
+
+        <p set:html={linkKeywords("And that's why I'm not convinced painting one of these simply to prove a point would solve much. Maybe I walk into the room wearing the familiar wool suit and everybody immediately knows where to place me. Fine.")} />
+
+        <p set:html={linkKeywords("But what have we really learned? That I can wear wool? I already knew that.")} />
+
+        <p set:html={linkKeywords("The more interesting possibility is that I walk in wearing a well-tailored cotton suit, sit beside the guy in wool, and five minutes later nobody cares because the conversation became more interesting than either suit.")} />
+
+        <p set:html={linkKeywords("<strong>Quill:</strong> So success isn't making the medium disappear.")} />
+
+        <p set:html={linkKeywords("<strong>Wayne:</strong> No. It's making the medium stop being the most interesting thing about the work.")} />
+
+        <p set:html={linkKeywords("If somebody walks away saying, “Those photographs really looked like paintings,” that's nice. But it's not enough.")} />
+
+        <p set:html={linkKeywords("I'd rather they walk away saying, “I keep wondering what happened to that woman,” or, “Something about that rider is still bothering me.”")} />
+
+        <p set:html={linkKeywords("Now the picture followed them home.")} />
+
+        <p set:html={linkKeywords("That's the job.")} />
+
+        <h3>Final Thought</h3>
+
+        <p set:html={linkKeywords("A good suit matters. It tells the room you came prepared. It carries craftsmanship, history, personality, and intent.")} />
+
+        <p set:html={linkKeywords("But sooner or later, you have to sit down and talk.")} />
+
+        <p set:html={linkKeywords("That's where I want the work to live—not in the argument over wool or cotton, and not in admiration of the stitching.")} />
+
+        <p set:html={linkKeywords("I want the image to earn its way into the room and then make the room forget how it arrived.")} />
+
+        <p set:html={linkKeywords("Because when the viewer stops asking whether it's a photograph or a painting, they may finally notice the rider, the empty camp, the woman standing where they didn't expect her to stand. They begin wondering about the moment that happened just before the frame—and the one waiting just beyond it.")} />
+
+        <p set:html={linkKeywords("They step into the picture.")} />
+
+        <p set:html={linkKeywords("And if that happens, maybe I wore the right suit after all.")} />
+
+        <h3>About the Artist</h3>
+
+        <p set:html={linkKeywords(`Wayne Heim is a fine art photographer and certified medical illustrator. His painterly storytelling explores Western mythology, historical reenactment, emotional memory, and the human structures beneath familiar legends. He blends light, composition, and narrative tension to create images that feel lived in, story-rich, and lasting.`)} />
+
+        <p><a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color" class="text-[#8b0000] hover:underline">Explore Western Narrative Photography</a> | <a href="/Other/K4-Select-Series/Engrained" class="text-[#8b0000] hover:underline">See the Engrained Series</a></p>
+
+      </article>
+      </BlogJsonLd>
+    </section>
+
+    <WesternDefinitions variant="post" />
+
+    <EssayClusterLinks currentPath={sectionPath} />
+
+    <SiteFooter
+      previewImages={previewImages}
+      previewPath={previewPath}
+      title="Inside the Frame: The Red Suit"
+      label="Explore Galleries"
+      class="pt-8 pb-12"
+    />
+  </main>
+
+  <dialog id="medical-image-viewer" aria-label="Medical illustration enlarged">
+    <button type="button" class="viewer-close" aria-label="Close enlarged image">?</button>
+    <img class="viewer-image" alt="" />
+  </dialog>
+
+  <script>
+    const viewer = document.querySelector<HTMLDialogElement>('#medical-image-viewer');
+    const enlargedImage = viewer?.querySelector<HTMLImageElement>('.viewer-image');
+    if (viewer && enlargedImage) {
+      let previousOverflow = '';
+      document.querySelectorAll<HTMLAnchorElement>('.medical-illustrations-row a').forEach(link => {
+        link.addEventListener('click', event => {
+          event.preventDefault();
+          enlargedImage.src = link.href;
+          enlargedImage.alt = link.querySelector('img')?.alt ?? '';
+          previousOverflow = document.body.style.overflow;
+          document.body.style.overflow = 'hidden';
+          viewer.showModal();
+        });
+      });
+      viewer.querySelector('.viewer-close')?.addEventListener('click', () => viewer.close());
+      viewer.addEventListener('click', event => {
+        if (event.target === viewer) viewer.close();
+      });
+      viewer.addEventListener('close', () => {
+        document.body.style.overflow = previousOverflow;
+      });
+      viewer.dataset.ready = 'true';
+    }
+  </script>
+
+  <style>
+    .medical-illustrations {
+      --illustration-width: min(900px, calc((100vw - 3rem) * 0.75));
+      width: var(--illustration-width);
+      max-width: none;
+      margin: 2rem 0 2rem 50%;
+      transform: translateX(-50%);
+    }
+
+    .medical-illustrations-row {
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+      align-items: stretch;
+    }
+
+    .medical-illustrations-row a {
+      display: block;
+      min-width: 0;
+      cursor: zoom-in;
+      border-radius: 4px;
+    }
+
+    .medical-illustrations-row a:focus-visible {
+      outline: 2px solid #8b0000;
+      outline-offset: 4px;
+    }
+
+    .medical-illustrations-row img {
+      display: block;
+      width: auto;
+      height: calc((var(--illustration-width) - 1.5rem) / 3.1);
+      max-width: 100%;
+      object-fit: contain;
+      border-radius: 4px;
+    }
+
+    .medical-illustrations figcaption {
+      margin-top: 0.75rem;
+      color: #666;
+      font-size: 0.85rem;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .medical-illustrations-row {
+        flex-direction: column;
+        align-items: center;
+        max-width: 420px;
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .medical-illustrations-row img {
+        height: min(225px, calc(var(--illustration-width) / 1.367));
+      }
+    }
+
+    #medical-image-viewer {
+      position: fixed;
+      inset: 0;
+      width: 100vw;
+      max-width: 100vw;
+      height: 100dvh;
+      max-height: 100dvh;
+      margin: 0;
+      padding: 4rem 1rem 1rem;
+      border: 0;
+      background: rgba(0, 0, 0, 0.94);
+    }
+
+    #medical-image-viewer[open] {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #medical-image-viewer::backdrop {
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    .viewer-image {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    .viewer-close {
+      position: absolute;
+      top: 0.75rem;
+      right: 1rem;
+      width: 44px;
+      height: 44px;
+      color: white;
+      background: #333;
+      border-radius: 50%;
+      font-size: 2rem;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    .story-section {
+      line-height: 1.6;
+    }
+
+    .story-block p {
+      margin-bottom: 0.85rem;
+    }
+
+    .story-block h3 {
+      margin-top: 1.6rem;
+      margin-bottom: 0.6rem;
+      font-weight: 700;
+    }
+  </style>
+</BaseLayout>
