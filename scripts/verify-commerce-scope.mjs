@@ -2,6 +2,7 @@ import { chromium } from "playwright";
 
 const expeditionUrl = "https://www.k4studios.com/Other/Expeditions/echoes-of-the-west-2026";
 const regularUrl = "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-kWVzc6g";
+const engrainedUrl = "https://www.k4studios.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Lk9XZKB";
 
 const browser = await chromium.launch({ headless: true });
 const page = await browser.newPage();
@@ -46,7 +47,32 @@ try {
     throw new Error(`Mixed-cart preview failed: ${JSON.stringify(previewHealth)}`);
   }
 
-  console.log(JSON.stringify({ ok: true, expeditionProducts: 5, regularProducts: regularCount, previewHealth }, null, 2));
+  await page.goto(engrainedUrl, { waitUntil: "networkidle", timeout: 60000 });
+  await page.getByRole("button", { name: "Order", exact: true }).click();
+  const engrainedModal = page.locator("[data-k4-native-collection-cart]");
+  await engrainedModal.waitFor({ timeout: 15000 });
+  const engrainedText = await engrainedModal.innerText();
+  if (!engrainedText.includes('16" x 24"') || !engrainedText.includes("$1,650.00")) {
+    throw new Error("Direct Engrained modal did not preserve the artwork-specific size and price.");
+  }
+  if (engrainedText.includes("Contact Us to Order") || await engrainedModal.locator('a[href^="mailto:"]').count()) {
+    throw new Error("Direct Engrained modal still exposes the legacy email-to-order flow.");
+  }
+  const engrainedButtons = engrainedModal.getByRole("button", { name: /Add to Cart/i });
+  if (await engrainedButtons.count() !== 1) {
+    throw new Error(`Expected one direct Engrained product; found ${await engrainedButtons.count()}.`);
+  }
+  await engrainedButtons.click();
+
+  console.log(JSON.stringify({
+    ok: true,
+    expeditionProducts: 5,
+    regularProducts: regularCount,
+    engrainedProducts: 1,
+    engrainedSize: '16" x 24"',
+    engrainedPrice: "$1,650.00",
+    previewHealth,
+  }, null, 2));
 } finally {
   await browser.close();
 }

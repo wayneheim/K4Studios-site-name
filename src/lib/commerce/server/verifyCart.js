@@ -43,7 +43,7 @@ function getVerifiedProduct(rawItem, imageId) {
   if (standardProduct) return { product: standardProduct, engrainedRecord: null };
 
   const engrainedRecord = engrainedData?.items?.find((item) => (
-    item?.linkedImageId === imageId
+    (item?.linkedImageId === imageId || item?.id === imageId)
     && rawItem?.productKey === `engrained-${item.id}`
     && !["hidden", "hide", "ghost", "non", "none", ""].includes(String(item?.visibility ?? "show").trim().toLowerCase())
   ));

@@ -174,33 +174,6 @@ async function fetchEngrainedCrosslink(imageId) {
   return null;
 }
 
-// Build mailto link for Engrained inquiry
-function buildEngrainedMailtoLink(image, engrainedLink) {
-  const subject = encodeURIComponent(`Order Inquiry: ${image.title || "Image"} — Engrained Series`);
-  
-  let body = `Hello,\n\nI am interested in ordering:\n\n`;
-  body += `Image: ${image.title || "N/A"}\n`;
-  body += `Image ID: ${image.id || "N/A"}\n`;
-  body += `Series: Engrained (Baltic Birch Wood Print)\n`;
-  
-  if (engrainedLink.imageSize) {
-    body += `Size: ${engrainedLink.imageSize}`;
-    if (engrainedLink.price) {
-      body += ` (${engrainedLink.price})`;
-    }
-    body += `\n`;
-  }
-  
-  body += `\nPlease provide ordering information.\n\n`;
-  body += `---\n`;
-  body += `Your Name:\n`;
-  body += `Preferred Contact (email or phone):\n`;
-  body += `---\n\n`;
-  body += `Thank you!`;
-  
-  return `mailto:info@k4studios.com?subject=${subject}&body=${encodeURIComponent(body)}`;
-}
-
 // Legacy gallery data may still contain old SmugMug or first-party /A checkout links.
 // Never expose those destinations in the public order interface; the native K4 cart owns checkout.
 function normalizeBuyLink(buyLink) {
@@ -529,9 +502,9 @@ export default function SeriesOrderModal({ isOpen, onClose, image, trackEvent })
                   </p>
                 )}
                 
-                {/* Contact button - same style as Chronicle/Legend */}
+                {/* The dedicated Engrained page owns its artwork-specific cart item. */}
                 <a
-                  href={buildEngrainedMailtoLink(image, engrainedLink)}
+                  href={engrainedLink.url}
                   className="inline-flex items-center justify-center gap-2 w-full text-center px-3 py-2 text-white rounded text-sm transition-all font-medium"
                   style={{
                     background: "linear-gradient(to bottom, #92400e 0%, #78350f 100%)",
@@ -545,14 +518,9 @@ export default function SeriesOrderModal({ isOpen, onClose, image, trackEvent })
                   onMouseLeave={(e) => {
                     e.currentTarget.style.background = "linear-gradient(to bottom, #92400e 0%, #78350f 100%)";
                   }}
-                  onClick={() => {
-                    trackEvent?.("order_email_clicked", {
-                      imageId: image?.id,
-                      trigger: "email"
-                    });
-                  }}
+                  onClick={() => trackEvent?.("engrained_order_page_clicked", { imageId: image?.id })}
                 >
-                  <span>Contact Us to Order</span>
+                  <span>Order Engrained Print</span>
                   {engrainedLink.hasInventory && (
                     <span className="text-xs text-green-200/90 font-normal italic">· Quick ship available</span>
                   )}

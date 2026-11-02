@@ -28,12 +28,20 @@ for (const file of files) {
   if (/\.js$/i.test(file) && /wayne-heim\.smugmug\.com/i.test(content)) {
     violations.push(`${relative}: public JavaScript contains the legacy SmugMug site hostname`);
   }
+
+  if (/Contact Us to Order/i.test(content)) {
+    violations.push(`${relative}: public output contains the legacy Contact Us to Order flow`);
+  }
+
+  if (/mailto:info@k4studios\.com\?subject=Order(?:%20|\s)Inquiry/i.test(content)) {
+    violations.push(`${relative}: public output contains a legacy email-to-order destination`);
+  }
 }
 
 if (violations.length) {
-  console.error(`Public SmugMug link audit failed (${violations.length} finding${violations.length === 1 ? "" : "s"}):`);
+  console.error(`Public checkout-link audit failed (${violations.length} finding${violations.length === 1 ? "" : "s"}):`);
   for (const violation of violations) console.error(`- ${violation}`);
   process.exit(1);
 }
 
-console.log(`Public SmugMug link audit passed across ${files.length} rendered HTML, JavaScript, and XML files.`);
+console.log(`Public checkout-link audit passed across ${files.length} rendered HTML, JavaScript, and XML files.`);

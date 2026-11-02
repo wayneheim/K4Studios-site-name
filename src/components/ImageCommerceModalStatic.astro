@@ -76,19 +76,16 @@ function bgColorFor(sortOrder: number) {
                   <p class="text-xs text-gray-600 mb-2 whitespace-pre-line leading-relaxed">{tier.description}</p>
                   <div class="space-y-1.5">
                     {tier.pricing.map((entry: any) => (
-                      <a
-                        href={entry.orderUrl}
-                        target={entry.external ? "_blank" : undefined}
-                        rel={entry.external ? "nofollow noopener noreferrer" : undefined}
-                        class="flex items-center justify-between w-full px-3 py-2 text-white rounded text-sm transition-all font-medium"
+                      <div
+                        class="flex items-center justify-between w-full px-3 py-2 text-white rounded text-sm font-medium"
                         style="background:linear-gradient(to bottom, #64748b 0%, #516474ff 100%);box-shadow:0 2px 4px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.3);border:1px solid #334155;text-shadow:0 1px 1px rgba(0,0,0,0.2)"
                       >
                         <span>{entry.size}: ${entry.price.toLocaleString()}</span>
                         <span class="flex items-center gap-2">
                           {entry.quickShip && <span class="text-xs text-green-200/80 font-normal italic">Quick ship</span>}
-                          <span class="text-xs font-semibold uppercase tracking-wide">Order</span>
+                          <span class="text-xs font-semibold uppercase tracking-wide">Physical print</span>
                         </span>
-                      </a>
+                      </div>
                     ))}
                   </div>
                 </div>
@@ -113,14 +110,13 @@ function bgColorFor(sortOrder: number) {
                   {commerce.engrainedLink.price && <span>{commerce.engrainedLink.price}</span>}
                 </p>
               )}
-              <a
-                href={commerce.engrainedLink.orderUrl}
-                class="inline-flex items-center justify-center gap-2 w-full text-center px-3 py-2 text-white rounded text-sm transition-all font-medium"
+              <div
+                class="inline-flex items-center justify-center gap-2 w-full text-center px-3 py-2 text-white rounded text-sm font-medium"
                 style="background:linear-gradient(to bottom, #92400e 0%, #78350f 100%);box-shadow:0 2px 4px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.15);border:1px solid #78350f;text-shadow:0 1px 1px rgba(0,0,0,0.3)"
               >
-                <span>Contact Us to Order</span>
+                <span>Available through secure online checkout</span>
                 {commerce.engrainedLink.inStock && <span class="text-xs text-green-200/90 font-normal italic">- Quick ship available</span>}
-              </a>
+              </div>
               <a href={commerce.engrainedLink.galleryUrl} class="block mt-2 text-center text-xs text-amber-700 hover:text-amber-900 underline">
                 View in Engrained Gallery -&gt;
               </a>
@@ -148,14 +144,13 @@ function bgColorFor(sortOrder: number) {
                 </p>
               </div>
               <div class="text-center mt-4">
-                <a
-                  href={commerce.engrained.orderUrl}
-                  class="inline-flex items-center justify-center gap-2 w-full max-w-xs px-4 py-2.5 text-white rounded text-sm transition-all font-medium"
+                <div
+                  class="inline-flex items-center justify-center gap-2 w-full max-w-xs px-4 py-2.5 text-white rounded text-sm font-medium"
                   style="background:linear-gradient(to bottom, #92400e 0%, #78350f 100%);box-shadow:0 2px 4px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.15);border:1px solid #78350f;text-shadow:0 1px 1px rgba(0,0,0,0.3)"
                 >
-                  <span>Contact Us to Order</span>
+                  <span>Available through secure online checkout</span>
                   {commerce.engrained.hasInventory && <span class="text-xs text-green-200/90 font-normal italic">- Quick ship available</span>}
-                </a>
+                </div>
               </div>
             </>
           )}

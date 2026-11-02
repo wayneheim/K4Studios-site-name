@@ -4,9 +4,6 @@ import { galleryData as engrainedGalleryData } from "./Other/K4-Select-Series/En
 import { SERIES_DEFINITIONS } from "./seriesDefinitions.js";
 import { getEffectiveSeries } from "./seriesAvailability.js";
 
-const FIRST_PARTY_BUY_LINK_HOSTS = new Set(["k4studios.com", "www.k4studios.com"]);
-const BUY_LINK_PATH_PREFIXES = ["/Galleries/", "/Other/Photo-Shoots/"];
-const BUY_LINK_SMUGMUG_HOST = "wayne-heim.smugmug.com";
 const STANDARD_SERIES = ["sketch", "foundation", "chronicle", "legend"];
 const ENGRAINED_PATH = "/Other/K4-Select-Series/Engrained/Engrained-Series";
 const K4_ORGANIZATION_ID = "https://www.k4studios.com/#organization";
@@ -55,96 +52,6 @@ export function getSketchOfferShippingDetails() {
       },
     },
   };
-}
-
-function normalizeBuyLink(buyLink) {
-  if (typeof buyLink !== "string") return null;
-
-  const trimmed = buyLink.trim();
-  if (!trimmed) return null;
-
-  const normalizeUrl = (url) => {
-    if (!FIRST_PARTY_BUY_LINK_HOSTS.has(url.hostname)) {
-      return url.toString();
-    }
-
-    const hasSupportedPath = BUY_LINK_PATH_PREFIXES.some((prefix) => url.pathname.startsWith(prefix));
-    if (!hasSupportedPath || !url.pathname.endsWith("/A")) {
-      return null;
-    }
-
-    url.protocol = "https:";
-    url.hostname = BUY_LINK_SMUGMUG_HOST;
-    return url.toString();
-  };
-
-  try {
-    if (trimmed.startsWith("/")) {
-      return normalizeUrl(new URL(trimmed, "https://www.k4studios.com"));
-    }
-
-    return normalizeUrl(new URL(trimmed));
-  } catch {
-    return null;
-  }
-}
-
-function buildMailtoLink(image, seriesKey, seriesDef, editionNumber, selectedSize = null, price = null) {
-  const subject = encodeURIComponent(`Order Inquiry: ${image?.title || "Image"} - ${seriesDef.label} Series`);
-
-  let body = "Hello,\n\nI am interested in ordering:\n\n";
-  body += `Image: ${image?.title || "N/A"}\n`;
-  body += `Image ID: ${image?.id || "N/A"}\n`;
-  body += `Series: ${seriesDef.label}\n`;
-
-  if (selectedSize) {
-    body += `Size: ${selectedSize}`;
-    if (price) {
-      body += ` ($${Number(price).toLocaleString()})`;
-    }
-    body += "\n";
-  }
-
-  if (seriesDef.showEdition && editionNumber !== undefined) {
-    body += `Edition: ${editionNumber + 1} of ${seriesDef.editionLimit}\n`;
-  }
-
-  body += "\nPlease provide ordering information.\n\n";
-  body += "---\n";
-  body += "Your Name:\n";
-  body += "Preferred Contact (email or phone):\n";
-  body += "---\n\n";
-  body += "Thank you!";
-
-  return `mailto:info@k4studios.com?subject=${subject}&body=${encodeURIComponent(body)}`;
-}
-
-function buildEngrainedMailtoLink(image, engrainedLink = null) {
-  const subject = encodeURIComponent(`Order Inquiry: ${image?.title || "Image"} - Engrained Series`);
-
-  let body = "Hello,\n\nI am interested in ordering:\n\n";
-  body += `Image: ${image?.title || "N/A"}\n`;
-  body += `Image ID: ${image?.id || "N/A"}\n`;
-  body += "Series: Engrained (Baltic Birch Wood Print)\n";
-
-  const imageSize = engrainedLink?.imageSize || image?.imageSize;
-  const price = engrainedLink?.price || image?.price;
-  if (imageSize) {
-    body += `Size: ${imageSize}`;
-    if (price) body += ` (${price})`;
-    body += "\n";
-  } else if (price) {
-    body += `Price: ${price}\n`;
-  }
-
-  body += "\nPlease provide ordering information.\n\n";
-  body += "---\n";
-  body += "Your Name:\n";
-  body += "Preferred Contact (email or phone):\n";
-  body += "---\n\n";
-  body += "Thank you!";
-
-  return `mailto:info@k4studios.com?subject=${subject}&body=${encodeURIComponent(body)}`;
 }
 
 function pathToDatasetPath(galleryPath = "") {
@@ -216,9 +123,6 @@ function resolveStandardCommerce({ image, galleryPath, pageUrl }) {
       const sold = editionState?.sold ?? Object.values(editionState?.soldBySize || {}).reduce((sum, value) => sum + (value || 0), 0);
       const remaining = def.showEdition && def.editionLimit ? Math.max(0, def.editionLimit - sold) : null;
       const pricing = getSeriesPricingList(seriesKey, series?.excludeSizes || {});
-      const buyLinkHref = normalizeBuyLink(image?.buyLink);
-      const shouldUseBuyLink = (seriesKey === "sketch" || seriesKey === "foundation") && !!buyLinkHref;
-
       return {
         key: seriesKey,
         label: def.label,
@@ -238,10 +142,6 @@ function resolveStandardCommerce({ image, galleryPath, pageUrl }) {
           return {
             ...entry,
             quickShip,
-            orderUrl: shouldUseBuyLink
-              ? buyLinkHref
-              : buildMailtoLink(image, seriesKey, def, sold, entry.size, entry.price),
-            external: shouldUseBuyLink,
           };
         }),
       };
@@ -262,7 +162,6 @@ function resolveStandardCommerce({ image, galleryPath, pageUrl }) {
         availability: engrained.availability || null,
         inStock: getInStockCount(engrained.inventory || {}) > 0,
         galleryUrl: `${ENGRAINED_PATH}/${engrained.id}`,
-        orderUrl: buildEngrainedMailtoLink(image, engrained),
       }
     : null;
 
@@ -312,7 +211,6 @@ function resolveEngrainedCommerce({ image, pageUrl }) {
       availability: image?.availability || null,
       shipping: image?.shipping || null,
       hasInventory,
-      orderUrl: buildEngrainedMailtoLink(image),
       paperUrl,
     },
     schema: buildCommerceSchema({ pageUrl, offerPrices }),
