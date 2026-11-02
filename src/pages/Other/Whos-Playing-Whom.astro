@@ -1,0 +1,727 @@
+---
+export const prerender = true;
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import LandingHeader from "@/components/Landing-Header.jsx";
+import SiteFooter from "@/components/Footer.astro";
+import { getBreadcrumbList, getStructuredData } from "@/components/utils/getStructuredData.ts";
+import "@/styles/global.css";
+
+const sectionPath = "/Other/Whos-Playing-Whom";
+const canonicalUrl = `https://www.k4studios.com${sectionPath}`;
+const title = "Who's Playing Whom?";
+const description =
+  "Four unresolved moments become four different stories in this interactive One-Image Movie experiment by Wayne Heim.";
+const imageBase = "/images";
+
+const artworks = {
+  1: { title: "Lessons", alt: "A woman kisses a gentleman seated at a piano" },
+  2: { title: "The Window", alt: "Martha stands near a window while a man watches from outside" },
+  3: { title: "Off Key", alt: "A gentleman at a piano looks toward someone beyond the instrument" },
+  4: { title: "The Observer", alt: "A man watches from a shadowed doorway" }
+} as const;
+
+type ArtworkId = keyof typeof artworks;
+
+const artworkSrc = (id: ArtworkId) => `${imageBase}/Lesson ${id}.jpg`;
+
+const stories = [
+  {
+    title: "The Unfortunate Admirer",
+    paragraphs: [
+      "Poor fella. He's watched Martha from the doorway for weeks, waiting for the courage to make his intentions known. And now some smooth-talking gentleman with a pipe and an apparent interest in piano lessons has beaten him to it.",
+      "Judging by that kiss, rather convincingly."
+    ],
+    close: "Courage, or the failure to summon it. Once again, the invisible handcuffs that leave a hopeful heart <strong>chained to the sidelines.</strong>",
+    order: [4, 2, 1, 3] as ArtworkId[],
+    caption: "The observer takes center stage. Select any image to examine it.",
+    transition: [
+      "But is that what we're seeing?",
+      "Take another look. The unresolved nature of the moment, coupled with your own imagination, can lead to an entirely different story."
+    ]
+  },
+  {
+    title: "A Rather Uncharitable Arrangement",
+    quote: "“Look at her, old boy. Eating right out of your hand. Another lesson or two and we'll have what we came for. Keep up the charm. I'll keep an eye on things.”",
+    paragraphs: [
+      "Two gentlemen. One comfortable household. And a widow whose trust may be worth considerably more than the price of a piano lesson."
+    ],
+    order: [3, 4, 1, 2] as ArtworkId[],
+    caption: "The piano man leads. Has his attention acquired a different meaning?",
+    transition: ["Poor Martha. Or have we mistaken the mark?"]
+  },
+  {
+    title: "Just as We Planned, Martha",
+    quote: "“Just like we planned, Marth. Stick with the plan and this will all be over soon. All those weeks enduring his wretched overtures, a small price to pay. Eye on the prize, my dear.”",
+    paragraphs: [
+      "A widow's patience. A gentleman's confidence. An arrangement whose true price has yet to be collected."
+    ],
+    order: [2, 1, 4, 3] as ArtworkId[],
+    caption: "The window becomes the center of the story. Same moment, different alliance.",
+    transition: ["But what if the man at the piano isn't the intended victim?"]
+  },
+  {
+    title: "An Audience of One",
+    quote: "“We have him right where we want him, Martha. Look at him watching, hoping. I can feel the jealousy seeping from his pores. It won't be long now. He's about to break.”",
+    paragraphs: [
+      "A stolen kiss. A carefully chosen audience. Sometimes the most convincing performance is the one nobody realizes they're watching."
+    ],
+    order: [1, 3, 4, 2] as ArtworkId[],
+    caption: "Now the kiss leads. Perhaps the observer is the one being played.",
+    transition: [
+      "We thought we were peering into a private moment through the piano's dark, keyhole-like frame. But perhaps the key to discovering the most convincing performance is that it was always meant to be seen.",
+      "Or perhaps Martha has been writing a different script entirely."
+    ]
+  }
+];
+
+const structuredData = getStructuredData({
+  type: "Article",
+  data: {
+    headline: title,
+    description,
+    url: canonicalUrl,
+    articleSection: "One-Image Movie",
+    copyrightNotice: "© Wayne Heim",
+    author: { "@type": "Person", name: "Wayne Heim" },
+    image: `https://www.k4studios.com${artworkSrc(1)}`
+  },
+  defaults: {
+    copyrightNotice: "© Wayne Heim",
+    license: "https://www.k4studios.com/copyright",
+    creditText: "Wayne Heim",
+    creatorName: "Wayne Heim",
+    creatorUrl: "https://www.k4studios.com/"
+  }
+});
+
+const breadcrumbs = getBreadcrumbList([
+  { name: "Home", item: "https://www.k4studios.com/" },
+  { name: "Other", item: "https://www.k4studios.com/Other" },
+  { name: "Essays & Writings", item: "https://www.k4studios.com/Other/Essays-Writings" },
+  { name: title, item: canonicalUrl }
+]);
+
+const meta = {
+  canonicalUrl,
+  ogUrl: canonicalUrl,
+  ogTitle: `${title} | K4 Studios`,
+  ogDescription: description,
+  ogType: "article",
+  ogImage: artworkSrc(1),
+  ogImageAlt: "Lessons by Wayne Heim",
+  ogImageWidth: "504",
+  ogImageHeight: "672",
+  twitterCard: "summary_large_image",
+  twitterTitle: `${title} | K4 Studios`,
+  twitterDescription: description,
+  twitterImage: artworkSrc(1),
+  robots: "index, follow, noai, noimageai"
+};
+---
+
+<BaseLayout
+  title={`${title} | K4 Studios`}
+  description={description}
+  structuredDataJSON={structuredData}
+  breadcrumbsJSON={breadcrumbs}
+  meta={meta}
+>
+  <main id="oim-v4">
+    <div class="drawer-mode oim-site-header">
+      <LandingHeader client:load breadcrumb="Other › Essays & Writings › Who's Playing Whom?" />
+    </div>
+
+    <section class="opening wrap" aria-labelledby="lessons-title">
+      <div class="opening-copy">
+        <div class="plaque-rule" aria-hidden="true"><span></span></div>
+        <p class="eyebrow">One-Image Movie</p>
+        <h2 id="lessons-title">Lessons</h2>
+        <div class="poem">
+          <p>Teaching. Playing. Playing along?</p>
+          <p>Or simply the act of being played.</p>
+          <p>A reckoning of a past-due moment.</p>
+        </div>
+        <div class="plaque-rule" aria-hidden="true"><span></span></div>
+      </div>
+      <figure class="mat">
+        <img src={artworkSrc(1)} alt={artworks[1].alt} width="504" height="672" fetchpriority="high" />
+      </figure>
+    </section>
+
+    <section class="tan article-title">
+      <div class="article-head wrap">
+        <h1>{title}</h1>
+        <p class="sub">A single image. An unresolved moment. More questions than answers.</p>
+      </div>
+    </section>
+
+    <section class="intro-showcase">
+      <div class="prose introduction">
+        <p>What came before? What happens next? What might be hiding in plain sight? These are unresolved images that offer a glimpse into a moment. A moment where your imagination is invited to fill in the spaces with memories, experiences, suspicions, hopes or consequences. Each resulting story thus becoming uniquely your own.</p>
+        <p>That's the invitation offered by Wayne Heim's Narrative art and his <strong>One-Image Movies</strong>: artwork that asks more than admiration, it asks participation. But what happens when one of these stories encounters another? When open narratives overlap like lost chapters of a book, each allowed to change meaning and context, altering the story you thought you knew?</p>
+        <h2>Consider, for a Moment...</h2>
+        <p>A quiet afternoon in a rather ordinary house. A frontier town, 1884. A piano. A gentleman. A lady named Martha.</p>
+        <p>A little music. A little affection. Perhaps the beginning of something wonderful. Nothing terribly unusual. Or so it would seem.</p>
+        <p>A first kiss? One long overdue? A familiar expression of affection? A perfectly delightful interpretation. But what if other workes exist in the series? Would they clarify the story, complicate it or simply stand as individual moments on their own?</p>
+      </div>
+
+      <div class="slideshow-section" aria-label="Three more moments from the house">
+        <div class="slidebox">
+          <div
+            class="slide-stage"
+            id="slideStage"
+            role="button"
+            tabindex="0"
+            aria-label="Pause or resume slideshow. Use the left and right arrow keys to browse."
+          >
+            <img id="slideA" class="current" src={artworkSrc(3)} alt={artworks[3].alt} />
+            <img id="slideB" alt="" />
+            <span class="hover-pause-indicator" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M8 6v12M16 6v12" /></svg>
+            </span>
+          </div>
+          <div class="controls">
+            <button id="slidePrev" class="slide-arrow" type="button" aria-label="Previous image">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14.5 6-6 6 6 6" /></svg>
+            </button>
+            <span id="slideLabel" aria-live="polite">Off Key</span>
+            <button id="slideNext" class="slide-arrow" type="button" aria-label="Next image">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9.5 6 6 6-6 6" /></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="prose scenario-intro">
+      <p>Four moments. Three people. One rather interesting household. The same characters, seen from different corners of a story that refuses to settle.</p>
+          </div>
+
+    {stories.map((story) => (
+      <section class="story">
+        <div class="story-feature">
+          <div class="story-text">
+            <h2>{story.title}</h2>
+            {story.quote && <p class="quotation">{story.quote}</p>}
+            {story.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+            {story.close && <p set:html={story.close} />}
+            <div class="story-transition">
+              <hr aria-hidden="true" />
+              {story.transition.map((paragraph, index) => (
+                <p class:list={[index === story.transition.length - 1 && "hinge"]}>{paragraph}</p>
+              ))}
+            </div>
+          </div>
+
+          <figure class="story-art">
+            <button
+              class="story-art-mat"
+              type="button"
+              data-open={story.order[0]}
+              aria-label={`Enlarge ${artworks[story.order[0]].title}`}
+            >
+              <img
+                class="story-lead-image"
+                src={artworkSrc(story.order[0])}
+                alt={artworks[story.order[0]].alt}
+                data-default={story.order[0]}
+                loading="lazy"
+              />
+            </button>
+            <figcaption>{story.caption}</figcaption>
+          </figure>
+        </div>
+
+        <div class="evidence-strip" aria-label={`Review the four images for ${story.title}`}>
+          {story.order.map((id) => (
+            <button
+              type="button"
+              data-preview={id}
+              aria-label={`Temporarily show ${artworks[id].title} in the large frame`}
+            >
+              <img src={artworkSrc(id)} alt={artworks[id].alt} loading="lazy" />
+              <span>{artworks[id].title}</span>
+            </button>
+          ))}
+        </div>
+      </section>
+    ))}
+
+    <section class="conclusion tan">
+      <div class="prose">
+        <h2>The Curious Business of Being Certain</h2>
+        <p>We began with a kiss. Somehow we've turned an innocent afternoon into a romance, a rivalry, a conspiracy, and perhaps something altogether more sinister.</p>
+        <p>Not one image changed. Not a gesture, a glance, or that little smile at the piano. Yet the story kept changing. Perhaps you believed one version. Perhaps you imagined something none of these little movies considered.</p>
+        <p>You've given these people histories, motives, desires, and consequences. The images offered the moment; you supplied the life beyond the frame.</p>
+        <p>That is the <strong>Narrative Vacuum</strong> within a One-Image Movie. It does not demand the artist's one correct ending. It invites you into the uncertainty.</p>
+        <p>Unresolved narrative asks something more than admiration: <strong>participation</strong>. Your memories, experiences, and imagination make the story partly yours.</p>
+        <p>The image remains the same. <strong>But the movie keeps changing.</strong></p>
+        <p class="turn">Because when a story remains unresolved... there's always more to tell.</p>
+      </div>
+    </section>
+
+    <section class="reveal-gate" aria-labelledby="reveal-heading">
+      <h2 id="reveal-heading">Think you've figured out who's playing whom?</h2>
+      <button class="main" id="revealBtn" type="button" aria-controls="finalPanel" aria-expanded="false">
+        Reveal one final lesson
+      </button>
+      <div id="finalPanel" role="region" aria-labelledby="finalTitle" tabindex="-1" hidden>
+        <div id="finalArt"></div>
+        <h2 id="finalTitle">The Final Lesson</h2>
+        <p>Well now...</p>
+        <p>Seems there's still more to this story than meets the eye.</p>
+        <p>This is the narrative fine art of Wayne Heim. Art that asks more of us. Art that changes with every viewing, every person, every experience brought into the moment. Each encounter offering another possibility, another discovery, another adventure waiting beyond the frame.</p>
+        <p>Because the story doesn't end where the image does. It continues through the imagination of those willing to step inside.</p>
+        <p>And as for Martha...</p>
+        <p class="endline"><strong>Never underestimate the Lessons of a good woman.</strong></p>
+        <aside class="final-cta" aria-labelledby="final-cta-title">
+          <p class="final-cta-eyebrow">Explore more from K4 Studios</p>
+          <h3 id="final-cta-title">Every Image Has a Story. What's Yours?</h3>
+          <p>Discover how Wayne Heim's One-Image Movies invite you beyond the frame, or explore the collection of camera-captured narrative fine art.</p>
+          <div class="final-cta-actions">
+            <a class="final-cta-primary" href="/Other/One-Image-Movie">Discover the One-Image Movie</a>
+            <a class="final-cta-secondary" href="/">Explore the Fine Art Collection</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <p class="copyright">Wayne Heim · K4 Studios · Camera-Captured Narrative Fine Art</p>
+
+    <div id="lightbox" role="dialog" aria-modal="true" aria-label="Artwork enlarged" hidden>
+      <button id="closeBox" type="button" aria-label="Close enlarged image">×</button>
+      <img id="lightboxImage" alt="" />
+    </div>
+
+    <SiteFooter previewImages={[]} previewPath="" title={title} label="" />
+  </main>
+
+  <script is:inline>
+    (() => {
+      const root = document.getElementById("oim-v4");
+      if (!root || root.dataset.ready === "true") return;
+      root.dataset.ready = "true";
+
+      const names = { 1: "Lessons", 2: "The Window", 3: "Off Key", 4: "The Observer" };
+      const alts = {
+        1: "A woman kisses a gentleman seated at a piano",
+        2: "Martha stands near a window while a man watches from outside",
+        3: "A gentleman at a piano looks toward someone beyond the instrument",
+        4: "A man watches from a shadowed doorway"
+      };
+      const src = (id) => `/images/Lesson ${id}.jpg`;
+      const reducedQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+      const reduced = reducedQuery.matches;
+
+      const ids = [3, 2, 4];
+      const stage = root.querySelector("#slideStage");
+      const currentImage = root.querySelector("#slideA");
+      const incomingImage = root.querySelector("#slideB");
+      const label = root.querySelector("#slideLabel");
+      const hasHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+      let index = 0;
+      let paused = true;
+      let hovering = false;
+      let hasEntered = false;
+      let timer = null;
+      let transitionTimer = null;
+      let transitioning = false;
+
+      const clearTimer = () => {
+        if (timer !== null) window.clearTimeout(timer);
+        timer = null;
+      };
+
+      const updateControls = () => {
+        label.textContent = names[ids[index]];
+        stage.setAttribute("aria-pressed", String(paused));
+      };
+
+      const schedule = () => {
+        clearTimer();
+        if (!paused && !hovering && !transitioning) {
+          timer = window.setTimeout(() => changeSlide(1), 4500);
+        }
+      };
+
+      const changeSlide = (step) => {
+        if (transitioning) return;
+        clearTimer();
+        const nextIndex = (index + step + ids.length) % ids.length;
+        const nextId = ids[nextIndex];
+        transitioning = true;
+        incomingImage.className = "";
+        incomingImage.src = src(nextId);
+        incomingImage.alt = alts[nextId];
+        void incomingImage.offsetWidth;
+        incomingImage.className = "incoming";
+
+        const finish = () => {
+          currentImage.src = incomingImage.src;
+          currentImage.alt = incomingImage.alt;
+          currentImage.className = "current";
+          incomingImage.className = "";
+          incomingImage.removeAttribute("src");
+          incomingImage.alt = "";
+          index = nextIndex;
+          transitioning = false;
+          transitionTimer = null;
+          updateControls();
+          schedule();
+        };
+
+        if (reduced) finish();
+        else transitionTimer = window.setTimeout(finish, 1500);
+      };
+
+      const setPaused = (value) => {
+        paused = value;
+        updateControls();
+        if (paused) clearTimer();
+        else schedule();
+      };
+
+      if (hasHover) {
+        stage.addEventListener("mouseenter", () => {
+          hovering = true;
+          stage.classList.add("is-hover-paused");
+          clearTimer();
+        });
+        stage.addEventListener("mouseleave", () => {
+          hovering = false;
+          stage.classList.remove("is-hover-paused");
+          schedule();
+        });
+      }
+
+      stage.addEventListener("click", () => {
+        if (!hasHover) setPaused(!paused);
+      });
+      stage.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          setPaused(!paused);
+        } else if (event.key === "ArrowLeft") {
+          event.preventDefault();
+          changeSlide(-1);
+        } else if (event.key === "ArrowRight") {
+          event.preventDefault();
+          changeSlide(1);
+        }
+      });
+      root.querySelector("#slidePrev").addEventListener("click", () => changeSlide(-1));
+      root.querySelector("#slideNext").addEventListener("click", () => changeSlide(1));
+
+      if (!reduced && "IntersectionObserver" in window) {
+        const observer = new IntersectionObserver((entries) => {
+          if (entries.some((entry) => entry.isIntersecting) && !hasEntered) {
+            hasEntered = true;
+            setPaused(false);
+            observer.disconnect();
+          }
+        }, { threshold: 0.35 });
+        observer.observe(stage);
+      }
+      updateControls();
+
+      root.querySelectorAll(".story").forEach((storySection) => {
+        const leadImage = storySection.querySelector(".story-lead-image");
+        const leadButton = storySection.querySelector(".story-art-mat");
+        const previewButtons = [...storySection.querySelectorAll("[data-preview]")];
+        if (!leadImage || !leadButton || previewButtons.length === 0) return;
+
+        const defaultId = Number(leadImage.dataset.default);
+        let currentId = defaultId;
+        let swapTimer = null;
+        const swapDelay = reduced ? 0 : 220;
+
+        const updatePreviewState = (id) => {
+          previewButtons.forEach((button) => {
+            if (Number(button.dataset.preview) === id) button.setAttribute("aria-current", "true");
+            else button.removeAttribute("aria-current");
+          });
+        };
+
+        const showPreview = (id, immediate = false) => {
+          if (!names[id]) return;
+          if (swapTimer !== null) window.clearTimeout(swapTimer);
+
+          if (immediate) {
+            currentId = id;
+            leadImage.src = src(id);
+            leadImage.alt = alts[id];
+            leadButton.dataset.open = String(id);
+            leadButton.setAttribute("aria-label", `Enlarge ${names[id]}`);
+            updatePreviewState(id);
+            return;
+          }
+
+          if (id === currentId) {
+            leadImage.classList.remove("is-swapping");
+            return;
+          }
+
+          leadImage.classList.add("is-swapping");
+          swapTimer = window.setTimeout(() => {
+            currentId = id;
+            leadImage.src = src(id);
+            leadImage.alt = alts[id];
+            leadButton.dataset.open = String(id);
+            leadButton.setAttribute("aria-label", `Enlarge ${names[id]}`);
+            updatePreviewState(id);
+            swapTimer = null;
+            window.requestAnimationFrame(() => leadImage.classList.remove("is-swapping"));
+          }, swapDelay);
+        };
+
+        previewButtons.forEach((button) => {
+          const id = Number(button.dataset.preview);
+          button.addEventListener("mouseenter", () => showPreview(id));
+          button.addEventListener("mouseleave", () => showPreview(defaultId));
+          button.addEventListener("focus", () => showPreview(id));
+          button.addEventListener("blur", () => showPreview(defaultId));
+          button.addEventListener("click", () => showPreview(id));
+        });
+        showPreview(defaultId, true);
+      });
+
+      const lightbox = root.querySelector("#lightbox");
+      const lightboxImage = root.querySelector("#lightboxImage");
+      const closeButton = root.querySelector("#closeBox");
+      let priorFocus = null;
+
+      const closeLightbox = () => {
+        lightbox.hidden = true;
+        lightboxImage.removeAttribute("src");
+        lightboxImage.alt = "";
+        document.body.classList.remove("oim-lightbox-open");
+        if (priorFocus instanceof HTMLElement) priorFocus.focus();
+      };
+
+      root.addEventListener("click", (event) => {
+        const target = event.target.closest("[data-open]");
+        if (!target) return;
+        const id = Number(target.dataset.open);
+        if (!names[id]) return;
+        priorFocus = document.activeElement;
+        lightboxImage.src = src(id);
+        lightboxImage.alt = alts[id];
+        lightbox.hidden = false;
+        document.body.classList.add("oim-lightbox-open");
+        closeButton.focus();
+      });
+
+      closeButton.addEventListener("click", closeLightbox);
+      lightbox.addEventListener("click", (event) => {
+        if (event.target === lightbox) closeLightbox();
+      });
+      document.addEventListener("keydown", (event) => {
+        if (lightbox.hidden) return;
+        if (event.key === "Escape") closeLightbox();
+        if (event.key === "Tab") {
+          event.preventDefault();
+          closeButton.focus();
+        }
+      });
+
+      const reveal = root.querySelector("#revealBtn");
+      const panel = root.querySelector("#finalPanel");
+      const art = root.querySelector("#finalArt");
+      reveal.addEventListener("click", () => {
+        if (!panel.hidden) return;
+        const image = document.createElement("img");
+        const finalId = ids.length + 2;
+        image.src = src(finalId);
+        image.alt = "Martha holds a mirror near a staircase while one man lies on the stairs and another stands in the hallway";
+        image.decoding = "async";
+        art.append(image);
+        panel.hidden = false;
+        reveal.setAttribute("aria-expanded", "true");
+        reveal.textContent = "The final lesson revealed";
+        reveal.disabled = true;
+        window.requestAnimationFrame(() => {
+          window.requestAnimationFrame(() => panel.classList.add("is-revealed"));
+        });
+        panel.focus({ preventScroll: true });
+        panel.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "start" });
+      });
+
+      window.addEventListener("pagehide", () => {
+        clearTimer();
+        if (transitionTimer !== null) window.clearTimeout(transitionTimer);
+      }, { once: true });
+    })();
+  </script>
+
+  <style>
+    #oim-v4 {
+      --oim-paper: #fff;
+      --oim-tan: #fff;
+      --oim-ink: #302820;
+      --oim-muted: #6f655b;
+      --oim-accent: #7b4a28;
+      --oim-line: #e3d9cf;
+      color: var(--oim-ink);
+      background: #fff;
+      font-family: inherit;
+      font-size: 1rem;
+      line-height: 1.72;
+      overflow: clip;
+    }
+
+    #oim-v4 *, #oim-v4 *::before, #oim-v4 *::after { box-sizing: border-box; }
+    #oim-v4 h1, #oim-v4 h2, #oim-v4 h3 { margin: 0; font-family: inherit; font-weight: 500; line-height: 1.18; }
+    #oim-v4 p { margin: 0 0 1em; }
+    #oim-v4 button { font: inherit; }
+    #oim-v4 button:focus-visible, #oim-v4 [tabindex]:focus-visible { outline: 3px solid #a05f31; outline-offset: 4px; }
+    #oim-v4 .wrap { width: min(100%, 1180px); margin-inline: auto; padding-inline: clamp(1.25rem, 4vw, 2.5rem); }
+    #oim-v4 .oim-site-header { background: #fff; }
+
+    #oim-v4 .opening {
+      display: grid;
+      grid-template-columns: minmax(17rem, 28.75rem) minmax(19rem, 31rem);
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      padding-block: clamp(2.75rem, 7vw, 5rem);
+    }
+    #oim-v4 .opening-copy {
+      padding: clamp(1.5rem, 3.5vw, 2.25rem);
+      overflow: hidden;
+      border: 1px solid #ded6cd;
+      border-radius: 6px;
+      background: #fffdf9;
+      box-shadow: 0 8px 18px rgba(48, 34, 23, 0.12), 0 2px 4px rgba(48, 34, 23, 0.08);
+      text-align: center;
+    }
+    #oim-v4 .plaque-rule { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 0.7rem; width: min(100%, 16rem); margin: 0 auto 0.95rem; color: #9d7c62; }
+    #oim-v4 .plaque-rule:last-child { margin-top: 1.05rem; margin-bottom: 0; }
+    #oim-v4 .plaque-rule::before, #oim-v4 .plaque-rule::after { content: ""; height: 1px; background: currentColor; opacity: 0.55; }
+    #oim-v4 .plaque-rule span { display: block; width: 0.48rem; height: 0.48rem; border: 1px solid currentColor; transform: rotate(45deg); }
+    #oim-v4 .eyebrow { margin-bottom: 1.25rem; color: var(--oim-accent); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; }
+    #oim-v4 .opening h2 { margin-bottom: 1.7rem; font-size: clamp(2.7rem, 6vw, 4.5rem); }
+    #oim-v4 .poem { font-size: clamp(1rem, 2vw, 1.22rem); font-style: italic; line-height: 1.7; }
+    #oim-v4 .poem p { margin-bottom: 1rem; }
+    #oim-v4 .poem p:last-child { margin-bottom: 0; }
+    #oim-v4 .mat { width: min(100%, 31rem); margin: 0 0 0 auto; padding: clamp(1rem, 2.5vw, 1.8rem); background: #fff; box-shadow: 0 7px 16px rgba(0, 0, 0, 0.14); }
+    #oim-v4 .mat img { display: block; width: 100%; height: auto; }
+
+    #oim-v4 .tan { background: #fff; border-block: 1px solid var(--oim-line); }
+    #oim-v4 .article-head { width: min(100%, 51rem); padding-block: clamp(0.65rem, 1.6vw, 1rem); text-align: center; }
+    #oim-v4 .article-head h1 { margin-bottom: 0.3rem; font-size: clamp(1.8rem, 6vw, 4rem); letter-spacing: -0.035em; white-space: nowrap; opacity: 0.6; }
+    #oim-v4 .article-head .sub { margin: 0; color: #625548; font-style: italic; font-size: clamp(1rem, 2vw, 1.15rem); opacity: 0.6; }
+
+    #oim-v4 .prose { width: min(100%, 51rem); margin-inline: auto; padding: 3rem 1.5rem 2rem; }
+    #oim-v4 .prose h2 { margin: 2.2rem 0 1.2rem; font-size: clamp(1.9rem, 4vw, 2.6rem); }
+    #oim-v4 .prose .lead { font-size: clamp(1.15rem, 2.5vw, 1.35rem); line-height: 1.55; }
+    #oim-v4 .caveat { margin-top: 1.6rem; padding-top: 1rem; border-top: 1px solid var(--oim-line); color: var(--oim-muted); font-size: 0.86rem; line-height: 1.55; }
+
+    #oim-v4 .intro-showcase { display: grid; grid-template-columns: minmax(20rem, 33.5rem) minmax(0, 1fr); align-items: start; gap: clamp(2rem, 5vw, 4rem); width: min(100%, 72rem); margin-inline: auto; padding: 3.25rem clamp(1.25rem, 4vw, 2.5rem) 2.75rem; }
+    #oim-v4 .intro-showcase .prose { width: 100%; margin: 0; padding: 0; }
+    #oim-v4 .intro-showcase .introduction { line-height: 1.55; }
+    #oim-v4 .intro-showcase .introduction p { margin-bottom: 0.8em; }
+    #oim-v4 .intro-showcase .prose h2 { margin: 1.6rem 0 0.9rem; }
+    #oim-v4 .slideshow-section { width: min(100%, 63rem); margin-inline: auto; padding: 1.25rem 1.5rem 2.75rem; }
+    #oim-v4 .intro-showcase .slideshow-section { order: -1; width: 100%; padding: 0; }
+    #oim-v4 .slidebox { width: min(100%, 33.5rem); margin-inline: auto; padding: 1rem; border: 1px solid #ded4c8; border-radius: 6px; background: #eee8df; box-shadow: 0 8px 20px rgba(52, 38, 26, 0.11), 0 2px 5px rgba(52, 38, 26, 0.06); }
+    #oim-v4 .slide-stage { position: relative; display: grid; place-items: center; width: 100%; aspect-ratio: 3 / 4; overflow: hidden; background: #e1d9cf; cursor: pointer; touch-action: manipulation; }
+    #oim-v4 .slide-stage img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: contain; opacity: 0; }
+    #oim-v4 .slide-stage img.current { opacity: 1; }
+    #oim-v4 .slide-stage img.incoming { opacity: 1; transition: opacity 1.5s ease; }
+    #oim-v4 .hover-pause-indicator { position: absolute; z-index: 3; left: 0.75rem; bottom: 0.75rem; display: grid; place-items: center; width: 2rem; height: 2rem; border: 1px solid rgba(255, 255, 255, 0.48); border-radius: 50%; color: #fff; background: rgba(35, 29, 24, 0.58); box-shadow: 0 2px 7px rgba(0, 0, 0, 0.18); opacity: 0; transform: translateY(0.25rem); transition: opacity 150ms ease, transform 150ms ease; pointer-events: none; }
+    #oim-v4 .hover-pause-indicator svg { width: 1rem; height: 1rem; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; }
+    #oim-v4 .slide-stage.is-hover-paused .hover-pause-indicator { opacity: 1; transform: translateY(0); }
+    #oim-v4 .controls { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 0.85rem; padding-top: 0.85rem; font-size: 0.78rem; }
+    #oim-v4 .controls .slide-arrow { display: grid; place-items: center; width: 2.65rem; height: 2.65rem; padding: 0; border: 1px solid #b9aa99; border-radius: 50%; color: #594637; background: rgba(255, 255, 255, 0.82); box-shadow: 0 2px 6px rgba(52, 38, 26, 0.08); cursor: pointer; transition: color 160ms ease, background 160ms ease, border-color 160ms ease, transform 160ms ease; }
+    #oim-v4 .controls .slide-arrow svg { width: 1.35rem; height: 1.35rem; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    #oim-v4 .controls .slide-arrow:hover { color: #fff; background: #6c4b33; border-color: #6c4b33; transform: translateY(-1px); }
+    #oim-v4 #slideLabel { overflow: hidden; color: #3f3228; font-size: 1.15rem; font-weight: 700; letter-spacing: 0.02em; opacity: 0.6; text-align: center; text-overflow: ellipsis; white-space: nowrap; }
+    #oim-v4 .scenario-intro { padding-top: 0; }
+
+    #oim-v4 .story { position: relative; width: min(100%, 72rem); margin-inline: auto; padding: 3.5rem clamp(1.25rem, 4vw, 2.5rem) 3rem; }
+    #oim-v4 .story::before { content: ""; position: absolute; top: 0; right: clamp(1.25rem, 4vw, 2.5rem); left: clamp(1.25rem, 4vw, 2.5rem); height: 7px; border-top: 1px solid var(--oim-line); border-bottom: 1px solid var(--oim-line); }
+    #oim-v4 .story-text { width: min(100%, 51rem); margin: 0 auto 1.7rem; }
+    #oim-v4 .story-feature { display: grid; grid-template-columns: minmax(0, 1fr) minmax(20rem, 31rem); align-items: start; gap: clamp(2rem, 5vw, 4.25rem); }
+    #oim-v4 .story-feature .story-text { width: 100%; margin: 0; padding-top: 0.5rem; }
+    #oim-v4 .story h2 { margin-bottom: 1.15rem; font-size: clamp(1.9rem, 4vw, 2.7rem); }
+    #oim-v4 .quotation { font-size: clamp(1.05rem, 2.25vw, 1.35rem); font-style: italic; line-height: 1.65; }
+    #oim-v4 .hinge { color: #69472d; font-size: 1.12rem; font-style: italic; }
+    #oim-v4 .story-transition { width: min(100%, 29rem); margin: 2rem auto 0; color: #5d4b3e; font-size: 1.02rem; font-style: italic; line-height: 1.65; text-align: center; }
+    #oim-v4 .story-transition hr { width: 62%; height: 7px; margin: 0 auto 1.35rem; border: 0; border-top: 1px solid #d8ccc0; border-bottom: 1px solid #d8ccc0; }
+    #oim-v4 .story-transition p:last-child { margin-bottom: 0; }
+    #oim-v4 .story-art { width: min(100%, 31rem); margin: 0 0 0 auto; }
+    #oim-v4 .story-art-mat { display: block; width: 100%; padding: clamp(1rem, 2.5vw, 1.8rem); border: 0; background: #fff; box-shadow: 0 7px 16px rgba(0, 0, 0, 0.14); cursor: zoom-in; }
+    #oim-v4 .story-art-mat img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: contain; background: #eee9e2; opacity: 1; transition: opacity 380ms ease; }
+    #oim-v4 .story-art-mat img.is-swapping { opacity: 0; }
+    #oim-v4 .story-art figcaption { margin-top: 0.8rem; color: var(--oim-muted); font-size: 0.75rem; line-height: 1.45; text-align: center; }
+
+    #oim-v4 .evidence-strip { display: grid; grid-template-columns: repeat(4, minmax(7rem, 1fr)); gap: clamp(0.55rem, 1.6vw, 1rem); width: 100%; padding-top: 1.2rem; overflow-x: auto; border-top: 1px solid var(--oim-line); }
+    #oim-v4 .evidence-strip button { min-width: 0; padding: 0.45rem; border: 1px solid #e1d8ce; border-radius: 4px; color: var(--oim-muted); background: #faf8f5; cursor: pointer; transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease; }
+    #oim-v4 .evidence-strip button:hover, #oim-v4 .evidence-strip button:focus-visible, #oim-v4 .evidence-strip button[aria-current="true"] { border-color: #bca38d; box-shadow: 0 4px 12px rgba(52, 38, 26, 0.11); transform: translateY(-1px); }
+    #oim-v4 .evidence-strip img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: contain; background: #eee9e2; }
+    #oim-v4 .evidence-strip span { display: block; padding: 0.45rem 0.15rem 0.1rem; overflow: hidden; font-size: 0.72rem; font-weight: 600; line-height: 1.25; text-align: center; text-overflow: ellipsis; white-space: nowrap; }
+
+    #oim-v4 .conclusion { position: relative; margin-top: 1.25rem; padding-block: 1rem 2.25rem; border-top: 0; }
+    #oim-v4 .conclusion::before { content: ""; position: absolute; top: 0; left: 50%; width: min(calc(100% - 2.5rem), 67rem); height: 7px; border-top: 1px solid var(--oim-line); border-bottom: 1px solid var(--oim-line); transform: translateX(-50%); }
+    #oim-v4 .conclusion .prose { padding-bottom: 0; }
+    #oim-v4 .conclusion .prose h2 { font-size: clamp(0.8rem, 4.2vw, 2.35rem); white-space: nowrap; }
+    #oim-v4 .turn { margin-top: 1.5rem; color: #513b2a; font-size: clamp(1.2rem, 3vw, 1.65rem); font-style: italic; }
+
+    #oim-v4 .reveal-gate { padding: clamp(3.5rem, 8vw, 5.5rem) 1.25rem; text-align: center; }
+    #oim-v4 .reveal-gate > h2 { margin-bottom: 1.5rem; font-size: clamp(1.9rem, 4.5vw, 2.8rem); }
+    #oim-v4 .reveal-gate button.main { padding: 1rem 1.6rem; border: 0; border-radius: 3px; color: #fff; background: #6c4b33; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; }
+    #oim-v4 .reveal-gate button.main:hover { background: #563823; }
+    #oim-v4 .reveal-gate button.main:disabled { cursor: default; opacity: 0.78; }
+    #oim-v4 #finalPanel[hidden] { display: none; }
+    #oim-v4 #finalPanel { width: min(100%, 51rem); margin: 3rem auto 0; opacity: 0; transform: translateY(1.5rem); text-align: left; transition: opacity 700ms ease, transform 800ms cubic-bezier(0.16, 1, 0.3, 1); }
+    #oim-v4 #finalPanel.is-revealed { opacity: 1; transform: translateY(0); }
+    #oim-v4 #finalArt { width: min(100%, 31rem); margin: 0 auto 2.25rem; padding: clamp(1rem, 2.5vw, 1.8rem); background: #fff; box-shadow: 0 7px 16px rgba(0, 0, 0, 0.14); opacity: 0; transform: translateY(0.75rem); transition: opacity 650ms ease 120ms, transform 750ms cubic-bezier(0.16, 1, 0.3, 1) 120ms; }
+    #oim-v4 #finalPanel.is-revealed #finalArt { opacity: 1; transform: translateY(0); }
+    :global(#oim-v4 #finalArt img) { display: block; width: 100%; height: auto; }
+    #oim-v4 #finalPanel h2 { margin-bottom: 1.5rem; text-align: center; font-size: clamp(2rem, 4vw, 2.8rem); }
+    #oim-v4 .endline { margin-top: 2rem; font-size: clamp(0.58rem, 3vw, 2.05rem); letter-spacing: -0.02em; line-height: 1.3; text-align: center; white-space: nowrap; }
+    #oim-v4 .final-cta { margin-top: clamp(3.25rem, 7vw, 5rem); padding: clamp(2rem, 5vw, 3.25rem); border: 1px solid #ded4c8; border-radius: 6px; background: #faf8f5; box-shadow: 0 8px 20px rgba(52, 38, 26, 0.08); text-align: center; }
+    #oim-v4 .final-cta-eyebrow { margin-bottom: 0.8rem; color: #85644b; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; }
+    #oim-v4 .final-cta h3 { margin-bottom: 1rem; color: var(--oim-ink); font-size: clamp(1.55rem, 3.5vw, 2.2rem); }
+    #oim-v4 .final-cta > p:not(.final-cta-eyebrow) { width: min(100%, 37rem); margin: 0 auto; color: #5f544a; }
+    #oim-v4 .final-cta-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.8rem; margin-top: 1.6rem; }
+    #oim-v4 .final-cta-actions a { display: inline-flex; align-items: center; justify-content: center; min-height: 3rem; padding: 0.75rem 1.15rem; border: 1px solid #755238; border-radius: 3px; font-size: 0.82rem; font-weight: 700; line-height: 1.25; text-decoration: none; transition: color 160ms ease, background 160ms ease, box-shadow 160ms ease; }
+    #oim-v4 .final-cta-primary { color: #fff; background: #6c4b33; }
+    #oim-v4 .final-cta-primary:hover { background: #563823; box-shadow: 0 5px 12px rgba(52, 38, 26, 0.16); }
+    #oim-v4 .final-cta-secondary { color: #65462f; background: #fff; }
+    #oim-v4 .final-cta-secondary:hover { color: #fff; background: #755238; box-shadow: 0 5px 12px rgba(52, 38, 26, 0.14); }
+    #oim-v4 .copyright { margin: 0; padding: 1.25rem; color: var(--oim-muted); font-size: 0.75rem; text-align: center; }
+
+    #oim-v4 #lightbox[hidden] { display: none; }
+    #oim-v4 #lightbox { position: fixed; z-index: 10000; inset: 0; display: grid; place-items: center; padding: 4rem 1.25rem 1.5rem; background: rgba(21, 18, 15, 0.95); }
+    #oim-v4 #lightbox img { display: block; max-width: min(94vw, 56rem); max-height: 84vh; object-fit: contain; }
+    #oim-v4 #closeBox { position: absolute; top: 1rem; right: 1.25rem; width: 2.8rem; height: 2.8rem; border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 50%; color: #fff; background: transparent; font-size: 2rem; line-height: 1; cursor: pointer; }
+
+    :global(body.oim-lightbox-open) { overflow: hidden; }
+
+    @media (max-width: 760px) {
+      #oim-v4 { font-size: 0.96rem; }
+      #oim-v4 .opening { grid-template-columns: 1fr; gap: 1.75rem; padding-top: 2rem; }
+      #oim-v4 .opening-copy { text-align: center; }
+      #oim-v4 .opening h2 { margin-bottom: 1.1rem; }
+      #oim-v4 .mat { width: min(100%, 30rem); margin-inline: auto; }
+      #oim-v4 .intro-showcase { grid-template-columns: 1fr; }
+      #oim-v4 .intro-showcase .slideshow-section { order: 0; width: min(100%, 33.5rem); }
+      #oim-v4 .story-feature { grid-template-columns: 1fr; }
+      #oim-v4 .story-art { margin-inline: auto; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #oim-v4 *, #oim-v4 *::before, #oim-v4 *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
+    }
+
+    @media print {
+      #oim-v4 { overflow: visible; color: #000; background: #fff; font-size: 10.5pt; }
+      #oim-v4 .oim-site-header, #oim-v4 .controls, #oim-v4 .reveal-gate > button, #oim-v4 #lightbox, #oim-v4 footer { display: none !important; }
+      #oim-v4 .tan { background: #fff !important; }
+      #oim-v4 .opening, #oim-v4 .story, #oim-v4 .story-feature { break-inside: avoid; }
+      #oim-v4 .evidence-strip button { border: 1px solid #ccc; }
+    }
+  </style>
+</BaseLayout>

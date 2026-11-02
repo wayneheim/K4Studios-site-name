@@ -699,6 +699,13 @@ export const siteNav = [
       "type": "collection",
       "children": [
         {
+          "label": "Who's Playing Whom?",
+          "href": "/Other/Whos-Playing-Whom",
+          "code": "O-S5e-SsWpW",
+          "slug": "whos-playing-whom",
+          "type": "section"
+        },
+        {
           "label": "Getting Past",
           "href": "/Other/Getting-Past",
           "code": "O-S5e-Ss0",
