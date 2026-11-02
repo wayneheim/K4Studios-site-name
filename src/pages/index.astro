@@ -68,6 +68,17 @@ function getProxySrc(imageId: string, size: string = 'm'): string {
   return getSemanticImageUrl(imageId, {}, size);
 }
 
+// Featured Western collection image ("Last Hand").
+const featuredCowboyImage = {
+  id: "i-7Mzzbvp",
+  src: getProxySrc("i-7Mzzbvp", "xl"),
+  srcM: getProxySrc("i-7Mzzbvp", "m"),
+  srcS: getProxySrc("i-7Mzzbvp", "s"),
+  alt: "Painterly Western image of three cowboys on horseback racing forward, guns drawn, in a cloud of dust on the open prairie.",
+  width: 600,
+  height: 400
+};
+
 const pictureShowsUrl = "/Other/Shows";
 const pictureShowsTrackingId = "Picture_Shows_Widget_Home";
 const pictureShowsWidgetImage = {
@@ -238,8 +249,31 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://www.k4studios.com/";
       </div>
 
       <div class="sidebar-column hidden md:block">
-        <!-- Featured collection CTA -->
+        <!-- Western collection CTA -->
         <div class="reveal-on-scroll" style="margin-top: 1.5rem; margin-bottom: 6rem;">
+          <FeaturedCollection
+            image={featuredCowboyImage}
+            title="Western Cowboy Collection"
+            subtitle="Painterly portraits of the American West"
+            ctaText="Enter the Frontier"
+            ctaLink="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West"
+            collectionName="Wild West Collection"
+            trackingId="Cowboy_Jump_Home"
+            itemCount={250}
+          />
+        </div>
+
+        <div class="sample-fade reveal-on-scroll">
+          <LandingRightImages
+            client:load
+            heading="Explore Other Themes"
+            images={sanitizeForClient(featheredImages)}
+            displayCount={6}
+          />
+        </div>
+
+        <!-- Picture Shows CTA -->
+        <div class="reveal-on-scroll" style="margin-top: 6rem; margin-bottom: 1.5rem;">
           <FeaturedCollection
             image={pictureShowsWidgetImage}
             title="K4 Picture Shows"
@@ -251,15 +285,6 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://www.k4studios.com/";
             trackingEvent="picture_shows_jump"
             itemCount={pictureShowStories.length}
             appendArrow={false}
-          />
-        </div>
-        
-        <div class="sample-fade reveal-on-scroll">
-          <LandingRightImages
-            client:load
-            heading="Explore Other Themes"
-            images={sanitizeForClient(featheredImages)}
-            displayCount={6}
           />
         </div>
       </div>

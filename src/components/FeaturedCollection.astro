@@ -162,6 +162,8 @@ const structuredData = JSON.stringify({
 
 <aside 
   class:list={["featured-collection-widget", { "hide-mobile": hideOnMobile }]}
+  data-featured-collection={analyticsLabel}
+  data-featured-event={trackingEvent}
   aria-label={`Featured: ${collectionName}`}
 >
   {emitStructuredData && (
@@ -295,7 +297,10 @@ const structuredData = JSON.stringify({
 
   // Track clicks on the Featured Collection CTA
   document.addEventListener('DOMContentLoaded', () => {
-    const widget = document.querySelector('.featured-collection-widget');
+    const widget = Array.from(document.querySelectorAll('.featured-collection-widget')).find((candidate) =>
+      candidate.getAttribute('data-featured-collection') === analyticsLabel &&
+      candidate.getAttribute('data-featured-event') === trackingEvent
+    );
     const link = widget?.querySelector('.fc-link');
     const imageStack = widget?.querySelector('.fc-image-stack');
     let hoverTimer = null;
