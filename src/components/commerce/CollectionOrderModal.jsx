@@ -151,9 +151,10 @@ export default function CollectionOrderModal({
     setRecentlySaved({ productKey: product.productKey, action });
     if (addedTimerRef.current) clearTimeout(addedTimerRef.current);
     addedTimerRef.current = setTimeout(() => setRecentlySaved(null), 1600);
-    trackEvent?.(existingItem ? "native_collection_cart_update" : "native_collection_cart_add", {
+    trackEvent?.("native_cart_add", {
       imageId: image.id,
       productKey: product.productKey,
+      trigger: existingItem ? "collection_quantity_update" : "collection_modal",
       series: product.seriesKey,
       quantity: selectedQuantity,
       price: product.unitPrice,

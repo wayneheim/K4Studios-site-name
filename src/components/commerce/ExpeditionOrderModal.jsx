@@ -3,6 +3,7 @@ import { Minus, Plus, ShoppingBag, X } from "lucide-react";
 import { buildCartItem, getExpeditionProducts } from "../../data/commerce/catalog.js";
 import { addCartItem, formatCurrency, getCartCount, loadCart } from "../../lib/commerce/cart.js";
 import { getCommerceApiBase } from "../../lib/commerce/checkoutApi.js";
+import { trackEvent } from "../../utils/analytics.ts";
 
 export default function ExpeditionOrderModal({ expeditionSlug, expeditionTitle }) {
   const baseProducts = useMemo(() => getExpeditionProducts(expeditionSlug), [expeditionSlug]);
@@ -49,6 +50,11 @@ export default function ExpeditionOrderModal({ expeditionSlug, expeditionTitle }
   const addProduct = (product) => {
     addCartItem(loadCart(), buildCartItem(product, image, quantityFor(product.productKey)));
     setCartCount(getCartCount(loadCart()));
+    trackEvent("native_cart_add", {
+      imageId: image.id,
+      pageType: "other",
+      trigger: "expedition_modal",
+    });
   };
 
   return (

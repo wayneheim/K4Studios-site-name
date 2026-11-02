@@ -477,6 +477,14 @@ const recentTrackEventTs = new Map<string, number>();
 const recentActionPixelTs = new Map<string, number>();
 const TRACK_EVENT_DEDUPE_WINDOW_MS = 2500;
 const ACTION_PIXEL_DEDUPE_WINDOW_MS = 2500;
+const SESSION_FUNNEL_EVENTS = new Set([
+  'native_cart_add',
+  'native_cart_view',
+  'native_checkout_start',
+  'native_checkout_quote',
+  'native_payment_start',
+  'native_order_complete'
+]);
 const SKIP_NEXT_GALLERY_LANDING_KEY = 'k4_skip_next_gallery_landing';
 const SKIP_NEXT_GALLERY_LANDING_TTL_MS = 12000;
 const EVENT_SAMPLE_RATES: Record<string, number> = {
@@ -654,6 +662,13 @@ function sendTrackingPayload(payloadJson: string, debugLabel?: string): void {
 }
 
 function shouldSkipDuplicateEvent(event: string, context: TrackContext, pagePath: string): boolean {
+  if (SESSION_FUNNEL_EVENTS.has(event)) {
+    const key = `k4_dedupe_${event}`;
+    if (sessionStorage.getItem(key)) return true;
+    sessionStorage.setItem(key, String(Date.now()));
+    return false;
+  }
+
   // Only dedupe events where accidental double-firing is common.
   // chapter_view: dedupe for the ENTIRE session (same image = 1 view per session)
   // gallery_view: dedupe for the ENTIRE session (same gallery = 1 view per session)

@@ -10,6 +10,7 @@ import {
   updateCartQuantity,
 } from "../../lib/commerce/cart.js";
 import PayPalSandboxCheckout from "./PayPalSandboxCheckout.jsx";
+import { trackEvent } from "../../utils/analytics.ts";
 
 export default function NativeCartPage() {
   const [cart, setCart] = useState(() => loadCart());
@@ -17,6 +18,11 @@ export default function NativeCartPage() {
   const [checkoutQuote, setCheckoutQuote] = useState(null);
 
   useEffect(() => {
+    const initialCart = loadCart();
+    if (initialCart.items.length) {
+      trackEvent("native_cart_view", { pageType: "other", trigger: "cart_with_items" });
+    }
+
     if (document.referrer?.startsWith(window.location.origin)) {
       setReturnHref(document.referrer);
     }

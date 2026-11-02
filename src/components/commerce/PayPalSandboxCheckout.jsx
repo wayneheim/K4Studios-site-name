@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { BadgeDollarSign, LoaderCircle, LockKeyhole, TriangleAlert } from "lucide-react";
 import { commerceRequest } from "../../lib/commerce/checkoutApi.js";
 import { emptyCart, formatCurrency, saveCart } from "../../lib/commerce/cart.js";
+import { trackEvent } from "../../utils/analytics.ts";
 
 const STATES = [
   ["AL", "Alabama"], ["AK", "Alaska"], ["AZ", "Arizona"], ["AR", "Arkansas"], ["CA", "California"],
@@ -94,6 +95,7 @@ export default function PayPalSandboxCheckout({ cart, onQuote }) {
       setQuote(nextQuote);
       onQuote?.(nextQuote);
       setStatus("ready");
+      trackEvent("native_checkout_quote", { pageType: "other", trigger: "shipping_tax_calculated" });
     } catch (error) {
       setStatus("error");
       setMessage(error.message);
@@ -129,6 +131,7 @@ export default function PayPalSandboxCheckout({ cart, onQuote }) {
                 items: Array.isArray(result.confirmationItems) ? result.confirmationItems : [],
               }));
               saveCart(emptyCart());
+              trackEvent("native_order_complete", { pageType: "other", trigger: "paypal" });
               setCompleted(result);
               setStatus("complete");
               setMessage("");
@@ -155,6 +158,7 @@ export default function PayPalSandboxCheckout({ cart, onQuote }) {
         button.setAttribute("type", "pay");
         button.setAttribute("size", "responsive");
         const click = async () => {
+          trackEvent("native_payment_start", { pageType: "other", trigger: "paypal" });
           setStatus("creating");
           setMessage("Saving the order before opening PayPal…");
           try {
@@ -194,6 +198,7 @@ export default function PayPalSandboxCheckout({ cart, onQuote }) {
                   items: Array.isArray(result.confirmationItems) ? result.confirmationItems : [],
                 }));
                 saveCart(emptyCart());
+                trackEvent("native_order_complete", { pageType: "other", trigger: "card" });
                 setCompleted(result);
                 setStatus("complete");
                 setMessage("");
@@ -225,6 +230,7 @@ export default function PayPalSandboxCheckout({ cart, onQuote }) {
           const guestButton = document.createElement("paypal-basic-card-button");
           guestContainer.appendChild(guestButton);
           const guestClick = async () => {
+            trackEvent("native_payment_start", { pageType: "other", trigger: "card" });
             setStatus("creating");
             setMessage("Saving the order before opening card checkout…");
             try {
@@ -270,7 +276,7 @@ export default function PayPalSandboxCheckout({ cart, onQuote }) {
 
   if (!expanded) {
     return (
-      <button type="button" onClick={() => setExpanded(true)} className="mt-4 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-md bg-[#8a3d2b] px-4 text-sm font-semibold text-white shadow hover:bg-[#743120]">
+      <button type="button" onClick={() => { setExpanded(true); trackEvent("native_checkout_start", { pageType: "other", trigger: "secure_checkout" }); }} className="mt-4 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-md bg-[#8a3d2b] px-4 text-sm font-semibold text-white shadow hover:bg-[#743120]">
         <LockKeyhole className="h-4 w-4" /> Continue to Secure Checkout
       </button>
     );
