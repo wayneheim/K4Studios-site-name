@@ -58,6 +58,21 @@ try {
   if (engrainedText.includes("Contact Us to Order") || await engrainedModal.locator('a[href^="mailto:"]').count()) {
     throw new Error("Direct Engrained modal still exposes the legacy email-to-order flow.");
   }
+  if (engrainedText.includes("Also Available in the Engrained Series")) {
+    throw new Error("Dedicated Engrained page incorrectly labels its primary product as a cross-listing.");
+  }
+  if (!engrainedText.includes("Engrained Series")) {
+    throw new Error("Dedicated Engrained page is missing its primary series label.");
+  }
+  if (await engrainedModal.locator(`a[href="${engrainedUrl}"]`).count()) {
+    throw new Error("Dedicated Engrained modal links back to its current page.");
+  }
+  await engrainedModal.getByRole("heading", { name: "Also Available as Paper Editions" }).waitFor({ timeout: 15000 });
+  const increaseEngrained = engrainedModal.getByRole("button", { name: /Increase .* quantity/i });
+  if (await increaseEngrained.isDisabled()) {
+    throw new Error("Direct Engrained quantity control is still capped at one.");
+  }
+  await increaseEngrained.click();
   const engrainedButtons = engrainedModal.getByRole("button", { name: /Add to Cart/i });
   if (await engrainedButtons.count() !== 1) {
     throw new Error(`Expected one direct Engrained product; found ${await engrainedButtons.count()}.`);

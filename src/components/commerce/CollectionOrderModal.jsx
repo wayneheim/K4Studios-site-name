@@ -97,6 +97,9 @@ export default function CollectionOrderModal({
   infoCopy = {},
   oneImageMovie = false,
   engrainedLink = null,
+  engrainedPrimary = false,
+  paperAlternative = null,
+  paperAlternativeLoading = false,
 }) {
   const [cart, setCart] = useState(() => loadCart());
   const [view, setView] = useState("products");
@@ -348,6 +351,7 @@ export default function CollectionOrderModal({
                   const hasSelectedQuantity = Object.prototype.hasOwnProperty.call(productQuantities, engrainedProduct.productKey);
                   const quantity = hasSelectedQuantity ? productQuantities[engrainedProduct.productKey] : existingItem?.quantity || 1;
                   const minimumQuantity = existingItem ? 0 : 1;
+                  const maximumQuantity = Math.max(1, Math.min(10, Number(engrainedProduct.editionLimit) || 1));
                   const recentAction = recentlySaved?.productKey === engrainedProduct.productKey ? recentlySaved.action : null;
                   const isExpanded = expandedSeries === "engrained";
 
@@ -364,7 +368,9 @@ export default function CollectionOrderModal({
                           <div className="flex items-center gap-2">
                             <span className="text-xl" style={{ color: colors.accent }}>{SERIES_ICONS.engrained || "◈"}</span>
                             <div>
-                              <h4 className="font-semibold text-stone-900">Also Available in the Engrained Series</h4>
+                              <h4 className="font-semibold text-stone-900">
+                                {engrainedPrimary ? "Engrained Series" : "Also Available in the Engrained Series"}
+                              </h4>
                               <p className="text-[11px] uppercase tracking-[0.12em] text-stone-500">{engrainedProduct.edition}</p>
                             </div>
                           </div>
@@ -385,7 +391,7 @@ export default function CollectionOrderModal({
                         {isExpanded && (
                           <div className="mt-3 border-t border-stone-400/20 pt-3 text-sm leading-relaxed text-stone-600">
                             Each Engrained edition uses K4's five-layer UV process on a Baltic Birch panel. The selective interaction between pigment and natural grain makes every finished panel visually distinct. Editions are signed and numbered.
-                            {engrainedProduct.galleryUrl && (
+                            {!engrainedPrimary && engrainedProduct.galleryUrl && (
                               <a href={engrainedProduct.galleryUrl} className="mt-2 block text-xs font-semibold underline" style={{ color: colors.accent }}>
                                 View this work in the Engrained gallery →
                               </a>
@@ -409,7 +415,7 @@ export default function CollectionOrderModal({
                                 <button
                                   type="button"
                                   disabled={quantity <= minimumQuantity}
-                                  onClick={() => setProductQuantity(engrainedProduct.productKey, quantity - 1, 1, minimumQuantity)}
+                                  onClick={() => setProductQuantity(engrainedProduct.productKey, quantity - 1, maximumQuantity, minimumQuantity)}
                                   className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-stone-300 text-stone-600 hover:bg-stone-50 disabled:cursor-not-allowed disabled:opacity-35"
                                   aria-label={`Decrease ${engrainedProduct.size} quantity`}
                                 >
@@ -418,8 +424,8 @@ export default function CollectionOrderModal({
                                 <span className={`w-6 text-center text-sm font-semibold ${quantity === 0 ? "text-[#8a3d2b]" : "text-stone-800"}`}>{quantity}</span>
                                 <button
                                   type="button"
-                                  disabled={quantity >= 1}
-                                  onClick={() => setProductQuantity(engrainedProduct.productKey, quantity + 1, 1, minimumQuantity)}
+                                  disabled={quantity >= maximumQuantity}
+                                  onClick={() => setProductQuantity(engrainedProduct.productKey, quantity + 1, maximumQuantity, minimumQuantity)}
                                   className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-stone-300 text-stone-600 hover:bg-stone-50 disabled:cursor-not-allowed disabled:opacity-35"
                                   aria-label={`Increase ${engrainedProduct.size} quantity`}
                                 >
@@ -441,6 +447,61 @@ export default function CollectionOrderModal({
                     </article>
                   );
                 })()}
+                {engrainedPrimary && (paperAlternativeLoading || paperAlternative) && (
+                  <article className="rounded-lg border border-stone-300 bg-[#f7f5ef] p-4">
+                    <h4 className="font-semibold text-stone-900">Also Available as Paper Editions</h4>
+                    <p className="mt-1 text-sm leading-relaxed text-stone-600">
+                      This Engrained work is linked to its paper-gallery edition and available print series.
+                    </p>
+
+                    {paperAlternativeLoading && !paperAlternative && (
+                      <p className="mt-3 text-xs text-stone-500">Loading paper edition details…</p>
+                    )}
+
+                    {paperAlternative && (
+                      <div className="mt-3 space-y-3">
+                        <div className="flex items-center gap-3 rounded-md border border-stone-200 bg-white/80 p-2">
+                          {paperAlternative.previewSrc && (
+                            <img
+                              src={paperAlternative.previewSrc}
+                              alt={paperAlternative.title}
+                              className="h-14 w-14 object-cover shadow-sm"
+                            />
+                          )}
+                          <div>
+                            <div className="text-sm font-semibold text-stone-900">{paperAlternative.title}</div>
+                            <div className="text-xs text-stone-500">Paper collector formats</div>
+                          </div>
+                        </div>
+
+                        {paperAlternative.seriesOptions?.length > 0 && (
+                          <div className="space-y-2">
+                            {paperAlternative.seriesOptions.map(({ key, definition, pricingList }) => (
+                              <div key={key} className="rounded-md border border-stone-200 bg-white px-3 py-2">
+                                <div className="text-sm font-semibold text-stone-800">{definition.name || `${definition.label} Series`}</div>
+                                {pricingList?.length > 0 && (
+                                  <div className="mt-1 text-xs leading-relaxed text-stone-600">
+                                    {pricingList.map(({ size, price }) => `${size}: ${formatCurrency(price)}`).join(" · ")}
+                                  </div>
+                                )}
+                              </div>
+                            ))}
+                          </div>
+                        )}
+
+                        {paperAlternative.url && (
+                          <a
+                            href={paperAlternative.url}
+                            className="inline-flex w-full items-center justify-center rounded-md border border-stone-400 bg-white px-4 py-2.5 text-sm font-semibold text-stone-700 transition hover:bg-stone-100"
+                            onClick={() => trackEvent?.("paper_options_clicked", { imageId: image.id })}
+                          >
+                            View Paper Options
+                          </a>
+                        )}
+                      </div>
+                    )}
+                  </article>
+                )}
               </div>
             )}
 

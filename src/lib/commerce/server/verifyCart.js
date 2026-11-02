@@ -83,8 +83,11 @@ export function verifyCartItems(rawItems) {
     if (product.catalogScope === "expedition") {
       if (!expedition) throw new Error("This Expedition print is no longer available.");
     } else if (product.seriesKey === "engrained") {
-      if (!engrainedRecord || quantity !== 1) throw new Error("Engrained editions are limited to one panel per cart line.");
+      if (!engrainedRecord) throw new Error("This Engrained edition is no longer available.");
       remaining = Number(product.editionLimit) || null;
+      if (remaining !== null && quantity > remaining) {
+        throw new Error("The requested quantity exceeds the remaining Engrained edition availability.");
+      }
     } else {
       seriesMatch = getSeriesRecord(imageId);
       const seriesRecord = seriesMatch?.record;
