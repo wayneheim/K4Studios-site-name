@@ -67,7 +67,12 @@ try {
   if (await engrainedModal.locator(`a[href="${engrainedUrl}"]`).count()) {
     throw new Error("Dedicated Engrained modal links back to its current page.");
   }
-  await engrainedModal.getByRole("heading", { name: "Also Available as Paper Editions" }).waitFor({ timeout: 15000 });
+  await engrainedModal.getByText("Similar work is available as part of the", { exact: false }).waitFor({ timeout: 15000 });
+  const otherSeriesText = await engrainedModal.getByText("Similar work is available as part of the", { exact: false }).innerText();
+  for (const seriesName of ["Sketch", "Foundation", "Chronicle"]) {
+    if (!otherSeriesText.includes(seriesName)) throw new Error(`Engrained reverse cross-link omitted ${seriesName}.`);
+  }
+  await engrainedModal.getByRole("link", { name: "Explore Other Series" }).waitFor();
   const increaseEngrained = engrainedModal.getByRole("button", { name: /Increase .* quantity/i });
   if (await increaseEngrained.isDisabled()) {
     throw new Error("Direct Engrained quantity control is still capped at one.");

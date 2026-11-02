@@ -8,7 +8,6 @@ import {
   getSeriesPricingList,
   loadSeriesRegistry,
 } from "../data/seriesDefinitions.js";
-import { normalizeImageSrc } from "../utils/imageProxyCore.js";
 
 const ENGRAINED_GALLERY_PATH = "/Other/K4-Select-Series/Engrained/Engrained-Series";
 
@@ -36,43 +35,31 @@ function buildPaperGalleryUrl(galleryPath, imageId) {
   return basePath && imageId ? `${basePath}/${imageId}` : "";
 }
 
-async function fetchGalleryImage(datasetPath, imageId) {
-  const response = await fetch(
-    `/.netlify/functions/updateGalleryItem?datasetPath=${encodeURIComponent(datasetPath)}`,
-    { cache: "no-store" },
-  );
-  if (!response.ok) throw new Error(`Failed to load linked gallery (${response.status})`);
-  const data = await response.json();
-  return (data.items || []).find((item) => item.id === imageId) || null;
-}
-
 async function fetchPaperAlternative(image) {
   if (!image?.linkedImageId || !image?.linkedGalleryPath) return null;
 
   const fallback = {
     title: image.title,
     url: buildPaperGalleryUrl(image.linkedGalleryPath, image.linkedImageId),
-    previewSrc: "",
+    previewSrc: `/img/${image.linkedImageId}/s.jpg`,
     seriesOptions: [],
   };
 
   try {
-    const [masterImage, registry, pricingConfig] = await Promise.all([
-      fetchGalleryImage(image.linkedGalleryPath, image.linkedImageId),
+    const [registry, pricingConfig] = await Promise.all([
       loadSeriesRegistry(),
       fetchPricingConfig(),
     ]);
-    if (!masterImage) return fallback;
-
-    const excludeSizes = getExcludeSizesFromRegistry(masterImage.id, registry);
-    const displaySeries = getEffectiveSeries(masterImage, registry)
+    const linkedImage = { id: image.linkedImageId };
+    const excludeSizes = getExcludeSizesFromRegistry(linkedImage.id, registry);
+    const displaySeries = getEffectiveSeries(linkedImage, registry)
       .filter((seriesKey) => SERIES_DEFINITIONS[seriesKey] && seriesKey !== "engrained")
       .sort((a, b) => (SERIES_DEFINITIONS[a].sortOrder || 99) - (SERIES_DEFINITIONS[b].sortOrder || 99));
 
     return {
-      title: masterImage.title || image.title,
+      title: image.title,
       url: fallback.url,
-      previewSrc: normalizeImageSrc(masterImage.srcM || masterImage.srcS || masterImage.src || "", "m"),
+      previewSrc: fallback.previewSrc,
       seriesOptions: displaySeries.map((seriesKey) => ({
         key: seriesKey,
         definition: SERIES_DEFINITIONS[seriesKey],

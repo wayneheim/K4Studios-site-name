@@ -22,6 +22,16 @@ const SERIES_COLORS = {
   engrained: { surface: "#f5e6c8", border: "#c68a32", accent: "#783f17" },
 };
 
+function formatSeriesLabels(seriesOptions = []) {
+  const labels = seriesOptions
+    .map(({ definition }) => String(definition?.label || definition?.name || "").replace(/\s+Series$/i, "").trim())
+    .filter(Boolean);
+  if (labels.length === 0) return "";
+  if (labels.length === 1) return labels[0];
+  if (labels.length === 2) return `${labels[0]} and ${labels[1]}`;
+  return `${labels.slice(0, -1).join(", ")}, and ${labels.at(-1)}`;
+}
+
 function QuantityButton({ label, onClick, children }) {
   return (
     <button
@@ -449,53 +459,24 @@ export default function CollectionOrderModal({
                 })()}
                 {engrainedPrimary && (paperAlternativeLoading || paperAlternative) && (
                   <article className="rounded-lg border border-stone-300 bg-[#f7f5ef] p-4">
-                    <h4 className="font-semibold text-stone-900">Also Available as Paper Editions</h4>
-                    <p className="mt-1 text-sm leading-relaxed text-stone-600">
-                      This Engrained work is linked to its paper-gallery edition and available print series.
-                    </p>
-
                     {paperAlternativeLoading && !paperAlternative && (
-                      <p className="mt-3 text-xs text-stone-500">Loading paper edition details…</p>
+                      <p className="text-sm text-stone-500">Loading other available series…</p>
                     )}
 
                     {paperAlternative && (
-                      <div className="mt-3 space-y-3">
-                        <div className="flex items-center gap-3 rounded-md border border-stone-200 bg-white/80 p-2">
-                          {paperAlternative.previewSrc && (
-                            <img
-                              src={paperAlternative.previewSrc}
-                              alt={paperAlternative.title}
-                              className="h-14 w-14 object-cover shadow-sm"
-                            />
-                          )}
-                          <div>
-                            <div className="text-sm font-semibold text-stone-900">{paperAlternative.title}</div>
-                            <div className="text-xs text-stone-500">Paper collector formats</div>
-                          </div>
-                        </div>
-
-                        {paperAlternative.seriesOptions?.length > 0 && (
-                          <div className="space-y-2">
-                            {paperAlternative.seriesOptions.map(({ key, definition, pricingList }) => (
-                              <div key={key} className="rounded-md border border-stone-200 bg-white px-3 py-2">
-                                <div className="text-sm font-semibold text-stone-800">{definition.name || `${definition.label} Series`}</div>
-                                {pricingList?.length > 0 && (
-                                  <div className="mt-1 text-xs leading-relaxed text-stone-600">
-                                    {pricingList.map(({ size, price }) => `${size}: ${formatCurrency(price)}`).join(" · ")}
-                                  </div>
-                                )}
-                              </div>
-                            ))}
-                          </div>
-                        )}
-
+                      <div className="space-y-3">
+                        <p className="text-sm leading-relaxed text-stone-700">
+                          {formatSeriesLabels(paperAlternative.seriesOptions)
+                            ? <>Similar work is available as part of the <strong>{formatSeriesLabels(paperAlternative.seriesOptions)}</strong> non-wood series.</>
+                            : <>Similar work is available as part of K4 Studios' non-wood print series.</>}
+                        </p>
                         {paperAlternative.url && (
                           <a
                             href={paperAlternative.url}
                             className="inline-flex w-full items-center justify-center rounded-md border border-stone-400 bg-white px-4 py-2.5 text-sm font-semibold text-stone-700 transition hover:bg-stone-100"
                             onClick={() => trackEvent?.("paper_options_clicked", { imageId: image.id })}
                           >
-                            View Paper Options
+                            Explore Other Series
                           </a>
                         )}
                       </div>
