@@ -400,7 +400,7 @@ export default function CollectionOrderModal({
 
                         {isExpanded && (
                           <div className="mt-3 border-t border-stone-400/20 pt-3 text-sm leading-relaxed text-stone-600">
-                            Each Engrained edition uses K4's five-layer UV process on a Baltic Birch panel. The selective interaction between pigment and natural grain makes every finished panel visually distinct. Editions are signed and numbered.
+                            The Engrained Series is a highly limited special edition of only five works plus one artist proof for each image. Each Engrained creation marries the historic record of time uniquely encapsulated in the grain of Baltic Birch with K4's five-layer UV printing process, making every finished piece visually distinct. Each work is personally hand-signed and numbered by Wayne Heim.
                             {!engrainedPrimary && engrainedProduct.galleryUrl && (
                               <a href={engrainedProduct.galleryUrl} className="mt-2 block text-xs font-semibold underline" style={{ color: colors.accent }}>
                                 View this work in the Engrained gallery →
