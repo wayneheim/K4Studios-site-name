@@ -73,13 +73,16 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
   "/Other/Bio": {
     ogTitle: "About Wayne Heim – Fine Art Photographer",
     ogDescription:
-      "Discover the artist behind painterly western, historical, and landscape fine art photography. Explore Wayne Heim’s artistic journey and storytelling philosophy.",
+      "Wayne Heim is a Western fine art photographer and award-winning medical illustrator making contemporary Western art as camera-based painterly fine art — painterly photography, living-history subjects, and narrative image-making.",
+    descriptionMaxLength: 240,
+    preserveDescriptionExact: true,
+    preserveDescriptionDashes: true,
     ogImage: "/og/bio.jpg",
     ogType: "website",
     twitterCard: "summary_large_image",
     twitterTitle: "About Wayne Heim – Fine Art Photographer",
     twitterDescription:
-      "Explore Wayne Heim’s work in painterly western, historical, and landscape fine art photography.",
+      "Wayne Heim is a Western fine art photographer and award-winning medical illustrator making contemporary Western art as camera-based painterly fine art — painterly photography, living-history subjects, and narrative image-making.",
     twitterImage: "/og/bio.jpg",
   },
 
