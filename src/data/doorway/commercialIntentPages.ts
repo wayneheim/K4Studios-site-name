@@ -619,11 +619,16 @@ const buildSections = (keys: Array<keyof typeof sources>, options: GridSectionOp
     };
   });
 
-const faqFor = (label: string, subject: string, identityPhrase = "contemporary painterly fine art photography") => [
+const faqFor = (
+  label: string,
+  subject: string,
+  identityPhrase = "contemporary painterly fine art photography",
+  atmospherePhrase = "authored Western atmosphere",
+) => [
   {
     q: `What does ${label} mean on this page?`,
     a: [
-      `${label} here means Wayne Heim's ${identityPhrase} shaped around ${subject}, collector-grade print presentation, and authored Western atmosphere rather than generic decor.`,
+      `${label} here means Wayne Heim's ${identityPhrase} shaped around ${subject}, collector-grade print presentation, and ${atmospherePhrase} rather than generic decor.`,
     ],
   },
   {
@@ -923,6 +928,7 @@ function makePage({
   centerDock,
   faqItems,
   faqIdentityPhrase,
+  faqAtmospherePhrase,
   relatedCollectionsSlug,
 }: {
   pagePath: string;
@@ -995,6 +1001,7 @@ function makePage({
   centerDock?: any[];
   faqItems?: Array<{ q: string; a: string[] }>;
   faqIdentityPhrase?: string;
+  faqAtmospherePhrase?: string;
   relatedCollectionsSlug?: string;
 }) {
   const gridSections = buildSections(sections, { offsets, limits, timeZones, titles, descriptions, alternates });
@@ -1096,7 +1103,7 @@ function makePage({
       faqKicker: "Print & Collector Questions",
       faqTitle: faqTitle || `${label} FAQ`,
     },
-    faqItems: faqItems || faqFor(label, subject, faqIdentityPhrase),
+    faqItems: faqItems || faqFor(label, subject, faqIdentityPhrase, faqAtmospherePhrase),
     gridSections,
     gatewayVideoWidget: resolvedGatewayVideoWidget,
     layoutVariant,
@@ -2157,6 +2164,8 @@ The tradition that Russell and Remington established and that serious Western co
     label: "WWII Themed Fine Art Prints",
     title: "WWII Themed Fine Art Prints - Wayne Heim",
     subject: "World War II inspired war scenes, military machines, portraits, and historically themed fine art prints shaped around memory rather than spectacle",
+    faqIdentityPhrase: "camera-based painterly fine art",
+    faqAtmospherePhrase: "authored historical atmosphere",
     sections: ["wwiiWarColor", "wwiiWarBlackWhite", "wwiiMachines", "wwiiMachinesBlackWhite", "wwiiPortraits", "wwiiPortraitsBlackWhite"],
     hero: "i-dMQWS6q",
     heroPath: sources.wwiiWarColor.galleryPath,
@@ -2296,6 +2305,7 @@ The tradition that Russell and Remington established and that serious Western co
     label: "Western Frontier Art",
     title: "Western Frontier Art - Fine Art Prints by Wayne Heim",
     subject: "frontier narratives, cowboy portraits, Native American portrait work, and American West atmosphere",
+    faqIdentityPhrase: "camera-based painterly fine art",
     sections: frontierCore,
     hero: "i-B7ZSdfs",
     heroPath: sources.narrativeColor.galleryPath,
@@ -2704,6 +2714,7 @@ The tradition that Russell and Remington established and that serious Western co
     label: "Fine Art Photography of the American West",
     title: "Fine Art Photography of the American West - Wayne Heim",
     subject: "American West portraits, frontier narratives, Native American portrait work, and Western landscapes",
+    faqIdentityPhrase: "camera-based painterly fine art",
     sections: ["narrativeColor", "cowboyColor", "nativeColor", "landscapeWest", "mountains"],
     hero: "i-G6gftd8",
     heroPath: sources.landscapeWest.galleryPath,
@@ -3132,6 +3143,7 @@ The tradition that Russell and Remington established and that serious Western co
     label: "Cowboy Fine Art Photography",
     title: "Cowboy Fine Art Photography - Fine Art Prints by Wayne Heim",
     subject: "authored cowboy portraits, black and white cowboy studies, and frontier character work shaped for fine art print collectors",
+    faqIdentityPhrase: "camera-based painterly fine art",
     sections: cowboyCore,
     hero: "i-5FX3W9r",
     heroPath: sources.cowboyColor.galleryPath,
@@ -3259,6 +3271,7 @@ The tradition that Russell and Remington established and that serious Western co
     label: "Cowboy Painterly Fine Art Photography",
     title: "Cowboy Painterly Fine Art Photography - Fine Art Prints by Wayne Heim",
     subject: "painterly cowboy photography, Western portrait character, tonal atmosphere, and authored print presentation",
+    faqIdentityPhrase: "camera-based painterly fine art",
     sections: cowboyCore,
     hero: "i-k4b6c5b",
     heroPath: sources.cowboyColor.galleryPath,
@@ -3396,6 +3409,7 @@ The tradition that Russell and Remington established and that serious Western co
     label: "Painterly Western Photography",
     title: "Painterly Western Photography - Fine Art Prints by Wayne Heim",
     subject: "painterly Western portraits, frontier storytelling, Native American portrait work, and American West landscape atmosphere",
+    faqIdentityPhrase: "camera-based painterly fine art",
     sections: ["cowboyColor", "narrativeColor", "nativeColor", "landscapeWest"],
     hero: "i-QWcX7JT",
     heroPath: sources.cowboyColor.galleryPath,
@@ -3471,6 +3485,7 @@ The tradition that Russell and Remington established and that serious Western co
     label: "Western Fine Art Photography Collection",
     title: "Western Fine Art Photography Collection by Wayne Heim",
     subject: "a curated Western fine art photography collection for subject-first browsing, gallery wall planning, and collector comparison",
+    faqIdentityPhrase: "camera-based painterly fine art",
     sections: ["cowboyColor", "narrativeColor", "nativeColor", "landscapeWest", "cowboyBlackWhite", "narrativeBlackWhite"],
     hero: "i-G6gftd8",
     heroPath: sources.landscapeWest.galleryPath,
@@ -3794,6 +3809,7 @@ The tradition that Russell and Remington established and that serious Western co
     label: "Western Portrait Photography",
     title: "Western Portrait Photography - Fine Art Prints by Wayne Heim",
     subject: "Western portrait photography, cowboy portraits, Native American portrait work, and black and white character studies",
+    faqIdentityPhrase: "camera-based painterly fine art",
     sections: ["cowboyColor", "cowboyBlackWhite", "nativeColor", "nativeBlackWhite"],
     hero: "i-5FX3W9r",
     heroPath: sources.cowboyColor.galleryPath,

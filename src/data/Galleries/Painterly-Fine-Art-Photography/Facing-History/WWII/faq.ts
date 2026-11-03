@@ -3,7 +3,7 @@ export const westernFAQ = [
     q: "What makes Wayne Heim’s WWII portraits stand out from other historical photography?",
     a: [
       `Wayne’s painterly WWII photography captures raw emotion and battlefield atmosphere through a lens shaped by both historical reverence and fine art storytelling.`,
-      `His portraits are not static reenactments — they’re immersive, expressive works crafted from real moments at the largest WWII reenactment in the U.S.`,
+      `His portraits are not static reenactments — they’re immersive, expressive works built from real moments at the largest WWII reenactment in the U.S.`,
     ],
   },
   {

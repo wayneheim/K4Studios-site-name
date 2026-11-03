@@ -276,7 +276,7 @@ export const landingMetaDB: Record<string, LandingMetaEntry> = {
     ogTitle:
       "Facing History | Historically Themed Fine Art Photography by Wayne Heim",
     ogDescription:
-      "Historically themed fine art photography by Wayne Heim, interpreting the Western frontier, Civil War, WWII, and Roaring 20s through researched detail, real subjects, painterly craft, and story-driven visual narrative.",
+      "Historically themed fine art photography by Wayne Heim, interpreting the Western frontier, Civil War, WWII, and Roaring 20s through researched detail, real subjects, painterly process, and story-driven visual narrative.",
     seoDescription:
       "Historically themed fine art photography by Wayne Heim, spanning the Western frontier, Civil War, WWII, and Roaring 20s through painterly narrative.",
     ogImage: "/og/facing-history.jpg",

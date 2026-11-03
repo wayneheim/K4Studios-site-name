@@ -511,7 +511,7 @@ export const essays: Essay[] = [
           `Other images behave differently.`,
           `They stop before the explanation. They hold back the last sentence. They offer a figure, a room, a road, a gesture, a shadow, a distance between people — and then they leave enough unsaid that the viewer must enter.`,
           `That is the power of the unfinished frame.`,
-          `It does not mean the image is incomplete in craft. It means the story remains alive.`,
+          `It does not mean the image is incomplete in its making. It means the story remains alive.`,
           `A finished image can be admired.`,
           `An unfinished frame asks to be inhabited.`
         ]

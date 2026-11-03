@@ -4,7 +4,7 @@ export const facingFAQ = [
     q: "What is the Facing History collection?",
     a: [
       "Facing History is Wayne Heim’s signature painterly fine art photography collection exploring America’s past through character-driven portraits and historically themed narrative scenes — including the Civil War, World War II, and the Roaring 20s.",
-      "Many finished works are crafted as <strong>One-Image Movies™</strong> — K4 Studios narrative-art experiences where image, title, authored story, and viewer imagination work together. The photograph opens the scene. The words deepen the uncertainty. The viewer completes the final unwritten story. Each piece is researched, emotionally grounded, and created for collectors who value authentic <strong>historically themed fine art</strong>."
+      "Many finished works are built as <strong>One-Image Movies™</strong> — K4 Studios narrative-art experiences where image, title, authored story, and viewer imagination work together. The photograph opens the scene. The words deepen the uncertainty. The viewer completes the final unwritten story. Each piece is researched, emotionally grounded, and created for collectors who value authentic <strong>historically themed fine art</strong>."
     ],
   },
 
@@ -20,7 +20,7 @@ export const facingFAQ = [
     q: "How is this different from archival or traditional historical photography?",
     a: [
       "Facing History is not archival historical photography, documentary reenactment coverage, costume portraiture, or digitally aged imagery.",
-      "Each image is constructed using sculpted light, controlled texture, and painterly post-production rooted in classical portraiture and illustration. The result is historically themed fine art photography that feels timeless and narrative-driven rather than archival, instructional, or merely nostalgic."
+      "Each image is constructed using sculpted light, controlled texture, and painterly process rooted in classical portraiture and illustration. The result is historically themed fine art photography that feels timeless and narrative-driven rather than archival, instructional, or merely nostalgic."
     ],
   },
 
@@ -36,7 +36,7 @@ export const facingFAQ = [
     q: "What makes the Engrained Series unique for historical prints?",
     a: [
       "The Engrained Series uses a multi-layer UV printing process on Baltic Birch, allowing natural wood grain to subtly interact with the image.",
-      "This tactile presentation pairs especially well with historically themed artwork, reinforcing a sense of permanence, material presence, and handcrafted authenticity."
+      "This tactile presentation pairs especially well with historically themed artwork, reinforcing a sense of permanence, material presence, and hands-on authenticity."
     ],
   },
 

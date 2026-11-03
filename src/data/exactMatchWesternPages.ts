@@ -93,7 +93,7 @@ export const westernPainterlyFineArtPhotographyPage = {
   metaDescription:
     'Western painterly fine art photography by Wayne Heim, blending camera-based realism, painterly atmosphere, cinematic composition, and Western storytelling into collectible fine art prints.',
   intro:
-    'Western painterly fine art photography by Wayne Heim blends camera-based realism with painterly atmosphere, cinematic composition, and Western storytelling. These collectible fine art prints draw from cowboy life, frontier history, Western portraiture, landscapes, and the human structure beneath the myth.',
+    'Western painterly fine art photography by Wayne Heim blends a camera-based foundation with painterly atmosphere, cinematic composition, and Western storytelling. These collectible fine art prints draw from cowboy life, frontier history, Western portraiture, landscapes, and the human structure beneath the myth.',
   breadcrumbLabel: 'Western Painterly Fine Art Photography',
   schemaAbout: [
     'Western Painterly Fine Art Photography',
@@ -139,7 +139,7 @@ export const westernPainterlyFineArtPhotographyPage = {
       h2: 'Camera-Based Western Art with a Painter\'s Eye',
       paragraphs: [
         'Wayne Heim brings the trained eye of an illustrator to camera-based Western photography. Each finished image is shaped for structure and story, not pushed through a preset or decorative effect.',
-        'Cowboy portraits, frontier scenes, historical subjects, horses, and Western landscapes are handled as parts of one visual language: painterly fine art photography rooted in real subjects and deliberate craft.',
+        'Cowboy portraits, frontier scenes, historical subjects, horses, and Western landscapes are handled as parts of one visual language: painterly fine art photography rooted in real subjects and deliberate process.',
       ],
     },
     {

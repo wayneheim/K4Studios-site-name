@@ -11,7 +11,7 @@ export const facingHistoryStory = [
   {
     subhead: "A Short Definition",
     paragraphs: [
-      `<strong>Pictorialism</strong> is the belief that photography can be shaped into fine art through composition, atmosphere, craft, and emotional intent. In pictorialist photography, the artist does more than capture a subject; the artist interprets it.`,
+      `<strong>Pictorialism</strong> is the belief that photography can be shaped into fine art through composition, atmosphere, process, and emotional intent. In pictorialist photography, the artist does more than capture a subject; the artist interprets it.`,
       `That distinction matters. Documentary photography asks, "what was there?" Pictorialist photography asks, "what did it feel like, and what can the photograph become?"`
     ]
   },
@@ -21,7 +21,7 @@ export const facingHistoryStory = [
     paragraphs: [
       `Pictorialism took shape in the 1880s and 1890s as photographers in Europe and North America challenged the idea that photography was useful only for records, portraits, science, and news. Camera clubs, salons, journals, and exhibition societies gave the movement its public stage.`,
       `In the United States, Alfred Stieglitz used <em>Camera Notes</em>, <em>Camera Work</em>, and the Photo-Secession to argue that photography deserved serious artistic attention. Gertrude Kasebier brought psychological tenderness and intimacy to portraiture. Edward Steichen moved between painting and photography with atmospheric landscapes and portraits. Clarence H. White developed a quiet, luminous style rooted in domestic scenes, figure studies, and restrained composition.`,
-      `Historic pictorialists often used gum bichromate, platinum printing, bromoil transfer, hand manipulation, textured papers, and soft-focus lenses. These methods were not decorative tricks. They were ways of asserting authorship, slowing the viewer down, and making the photograph feel intentionally made.`
+      `Historic pictorialists often used gum bichromate, platinum printing, bromoil transfer, hand-working, textured papers, and soft-focus lenses. These methods were not decorative tricks. They were ways of asserting authorship, slowing the viewer down, and making the photograph feel intentionally made.`
     ]
   },
 
@@ -44,7 +44,7 @@ export const facingHistoryStory = [
       `<strong>Interpretation over record.</strong> The photograph reflects the artist's vision, not only the subject in front of the lens.`,
       `<strong>Painterly composition.</strong> Form, balance, rhythm, color, and tonal hierarchy are shaped with the same seriousness expected in painting or illustration.`,
       `<strong>Emotional suggestion.</strong> A pictorialist image often leaves room for mystery, memory, and story beyond the edge of the frame.`,
-      `<strong>Authorial craft.</strong> The final work is built through choices before, during, and after exposure, ending in a print or presentation that carries the artist's hand.`
+      `<strong>Authorial process.</strong> The final work is built through choices before, during, and after exposure, ending in a print or presentation that carries the artist's hand.`
     ]
   },
 
@@ -65,7 +65,7 @@ export const facingHistoryStory = [
   {
     subhead: "Historic Pictorialism vs Modern Pictorialism",
     paragraphs: [
-      `Historic pictorialists worked with darkroom manipulation, specialty lenses, chemical processes, hand-coated papers, and alternative printing methods. Their craft often produced prints that felt singular and object-like.`,
+      `Historic pictorialists worked with darkroom hand-work, specialty lenses, chemical processes, hand-coated papers, and alternative printing methods. Their methods often produced prints that felt singular and object-like.`,
       `Modern pictorialist photography uses different tools: digital capture, refined optics, layered processing, controlled color, archival printing, and contemporary presentation. The tools changed. The artistic standard did not.`,
       `The difference is not chemical versus digital. The difference is record versus interpretation. A modern pictorialist photograph should still show evidence of authorship, restraint, atmosphere, and emotional intent.`
     ]
@@ -74,7 +74,7 @@ export const facingHistoryStory = [
   {
     subhead: "What Is Modern Pictorialism Photography?",
     paragraphs: [
-      `Modern pictorialism photography is the contemporary continuation of the original pictorialist idea: a photograph can be crafted into art rather than accepted as a literal record. It is not nostalgia and it is not a filter. It is a disciplined way of building photographic meaning.`,
+      `Modern pictorialism photography is the contemporary continuation of the original pictorialist idea: a photograph can be shaped into art rather than accepted as a literal record. It is not nostalgia and it is not a filter. It is a disciplined way of building photographic meaning.`,
       `In Wayne Heim's painterly fine art photography, that philosophy becomes a bridge between historic pictorialism and contemporary Western storytelling. The work uses real subjects, staged or discovered moments, controlled light, texture, color, and narrative restraint to push photography beyond documentation and toward authored visual art.`
     ]
   },
@@ -82,7 +82,7 @@ export const facingHistoryStory = [
   {
     subhead: "Why It Feels Relevant Again",
     paragraphs: [
-      `Photography is again being pushed beyond documentation. Some artists are using digital craft, staged scenes, hybrid processes, cinematic lighting, and painterly finishing to ask what a photograph can be when it is no longer judged only by accuracy.`,
+      `Photography is again being pushed beyond documentation. Some artists are using digital process, staged scenes, hybrid processes, cinematic lighting, and painterly finishing to ask what a photograph can be when it is no longer judged only by accuracy.`,
       `That is the modern hook back into pictorialism. The movement was never only about soft focus or antique printing. It was about permission: permission for a photograph to carry the weight of art, to be subjective, to be shaped, and to make room for feeling.`,
       `Wayne Heim's work belongs in that conversation because it treats the photograph as a constructed artistic object. The image begins with reality, but it does not stop there. It moves through atmosphere, story, and print presence until the result reads as photographic art rather than documentation.`
     ]
@@ -116,7 +116,7 @@ export const facingHistoryStory = [
   {
     subhead: "What Lives in These Galleries",
     paragraphs: [
-      `Behind each tile below is a body of work rooted in this tradition: atmospheric landscapes where light becomes a character, historically themed portraits where forgotten lives seem to look back, and Western scenes staged with a storyteller's precision and a painter's eye.`,
+      `Behind each tile below is a body of work rooted in this tradition: atmospheric landscapes where light becomes a character, historically themed portraits where forgotten lives seem to look back, and Western scenes created with a storyteller's precision and a painter's eye.`,
       `These are not galleries built around record alone. They are rooms of interpretation. The pictorialists opened the door. Wayne Heim's modern painterly photography carries the argument forward.`
     ]
   },
@@ -126,7 +126,7 @@ export const facingHistoryStory = [
     list: [
       `<strong>Is pictorialist photography the same as pictorialism?</strong><br/>Pictorialism is the movement and philosophy. Pictorialist photography is the photographic work made under that philosophy.`,
       `<strong>Is pictorialist photography just soft focus?</strong><br/>No. Soft focus can be one trait, but pictorialism is defined by interpretation, atmosphere, composition, and artistic authorship.`,
-      `<strong>How is modern pictorialism different from filters or AI effects?</strong><br/>Modern pictorialism depends on intentional craft from concept to final print. A filter may change a surface; pictorialism changes the artistic purpose of the photograph.`,
+      `<strong>How is modern pictorialism different from filters or AI effects?</strong><br/>Modern pictorialism depends on intentional process from concept to final print. A filter may change a surface; pictorialism changes the artistic purpose of the photograph.`,
       `<strong>What is the connection between pictorialism and painterly photography?</strong><br/>Painterly photography carries forward pictorialism's belief that photographs can be shaped with the emotional structure and visual intention of art.`,
       `<strong>Why does this matter today?</strong><br/>Because image-making is faster and more automated than ever. Pictorialism reminds us that a photograph can still be authored, slowed down, interpreted, printed, and made to last.`
     ]
@@ -135,7 +135,7 @@ export const facingHistoryStory = [
   {
     subhead: "Step Inside",
     paragraphs: [
-      `The galleries below carry forward a tradition that began with artists who believed photography deserved to be taken seriously as art. Wayne Heim's painterly fine art photography is a present-tense continuation of that belief, where classic visual discipline and modern craft meet in images built to linger.`
+      `The galleries below carry forward a tradition that began with artists who believed photography deserved to be taken seriously as art. Wayne Heim's painterly fine art photography is a present-tense continuation of that belief, where classic visual discipline and modern process meet in images built to linger.`
     ]
   }
 ];

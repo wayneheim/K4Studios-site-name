@@ -4,7 +4,7 @@ export const facingFAQ = [
     q: "What is traditional fine art photography?",
     a: [
       "Traditional fine art photography captures the world as it is—but with emotional weight and compositional precision. Wayne Heim’s traditional images focus on natural light, real places, and timeless subjects, transforming quiet moments into visual stories that resonate long after the shutter closes.",
-      "This isn’t AI or digital manipulation—it’s honest photography with artistic depth."
+      "This isn’t AI-generated—it’s honest photography with artistic depth."
     ],
   },
 
@@ -41,7 +41,7 @@ export const facingFAQ = [
   {
     q: "What makes Wayne Heim’s traditional style unique?",
     a: [
-      "Wayne combines the precision of a medical illustrator with the emotional depth of a visual storyteller. His traditional images are crafted with patience, respect for light, and an eye for subtle storytelling—turning overlooked landscapes or fleeting expressions into lasting visual narratives.",
+      "Wayne combines the precision of a medical illustrator with the emotional depth of a visual storyteller. His traditional images are made with patience, respect for light, and an eye for subtle storytelling—turning overlooked landscapes or fleeting expressions into lasting visual narratives.",
       "Whether you're drawn to <a href='/Galleries/Fine-Art-Photography/Landscapes'>mountains and waterfalls</a> or <a href='/Galleries/Fine-Art-Photography/Transportation/Trains'>vintage locomotives</a>, you'll find images that speak softly—but powerfully."
     ],
   },

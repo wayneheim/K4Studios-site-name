@@ -11,7 +11,7 @@ export const facingFAQ = [
     q: "How does painterly landscape photography differ from traditional landscape photography?",
     a: [
       "Traditional landscape photography seeks to capture the world as it is, while painterly landscape photography aims to interpret and elevate the scene, using artistic techniques that bring out mood and memory.",
-      "Each image in Wayne’s gallery is thoughtfully crafted to create a sense of place and atmosphere, making every print a unique work of art."
+      "Each image in Wayne’s gallery is thoughtfully shaped to create a sense of place and atmosphere, making every print a unique work of art."
     ],
   },
   {
@@ -39,7 +39,7 @@ export const facingFAQ = [
     q: "Why should I choose painterly landscape photography for my home or office?",
     a: [
       "Painterly landscapes do more than decorate a space—they inspire conversation, create atmosphere, and invite you to connect with the beauty of nature.",
-      "Each piece is crafted to evoke emotion and provide a sense of calm, drama, or wonder wherever it’s displayed."
+      "Each piece is made to evoke emotion and provide a sense of calm, drama, or wonder wherever it’s displayed."
     ],
   },
   {

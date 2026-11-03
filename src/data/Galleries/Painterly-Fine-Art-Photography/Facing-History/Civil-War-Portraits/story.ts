@@ -19,7 +19,7 @@ export const westernStory = [
   /* 2: PRESERVING A LEGACY — STILLNESS AS STORY */
   {
     subhead: "Preserving History Through Painterly Storytelling",
-    tagline: "A Contemporary Voice Rooted in Historic Craft",
+    tagline: "A Contemporary Voice Rooted in Historic Practice",
     paragraphs: [
       `Early Civil War photography relied on stillness. Long exposures captured not action, but presence — the fatigue in a soldier’s eyes, the quiet aftershock of battle, the gravity of lives irrevocably changed.`,
       `Wayne embraces that visual language, weaving it into a painterly approach that intensifies emotion rather than freezing it. His portraits bridge documentary truth and fine art interpretation, creating historically grounded images that feel cinematic, intimate, and reflective.`,

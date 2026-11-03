@@ -13,7 +13,7 @@ export const painterlyStory = [
   {
     subhead: "The Traditional Collection: Beauty, Memory, and Presence",
     paragraphs: [
-      `This curated collection focuses on natural light, real places, and timeless subjects. These aren’t painterly manipulated prints or reenactment portraits—they are rooted in realism, yet composed with an illustrator’s eye for rhythm and emotion. From quiet Appalachian fog to towering Western ridges, every photo is an invitation to pause, look closer, and connect.`,
+      `This curated collection focuses on natural light, real places, and timeless subjects. These aren’t painterly prints or reenactment portraits—they are rooted in realism, yet composed with an illustrator’s eye for rhythm and emotion. From quiet Appalachian fog to towering Western ridges, every photo is an invitation to pause, look closer, and connect.`,
       `In an era of filters, AI, and distraction, Wayne’s traditional photography offers something simple and rare: the truth of a moment, seen with clarity and care.`
     ]
   },
@@ -55,7 +55,7 @@ export const painterlyStory = [
 
   /* ──────────────────────────────────────── 6 */
   {
-    subhead: "Crafted for Collectors and Story Seekers",
+    subhead: "Made for Collectors and Story Seekers",
     paragraphs: [
       `Wayne’s work is printed using only archival-quality materials and processes. Whether it’s a traditional matte print, a bold metallic, or a natural-grain wood panel from [The Engrained Series](/Galleries/Engrained), each piece is handled with care and intention from capture to wall.`,
       `This is museum-grade art designed to live with you—not just decorate, but resonate.`
@@ -76,7 +76,7 @@ export const painterlyStory = [
     subhead: "Embrace the Past. Live the Story.",
     paragraphs: [
       `Wayne Heim’s traditional fine art photography is more than a visual—it’s a visceral experience. From the untamed beauty of mountain ranges to the grit of the Western frontier and the elegance of overlooked Americana, every image invites you to slow down, step closer, and connect.`,
-      `These aren’t just photographs—they’re stories etched in light and time, crafted to stir memory, spark emotion, and bring the past vividly into the present.`
+      `These aren’t just photographs—they’re stories etched in light and time, made to stir memory, spark emotion, and bring the past vividly into the present.`
     ]
   }
 ];

@@ -6,7 +6,7 @@ export const facingHistoryStory = [
     subhead: "Facing History — Embrace the Past. Live the Story.",
     paragraphs: [
       "Every photograph is a marker — a record of a moment, a life, a choice that existed before us. Facing History is a collection of those markers. It spans the American frontier, the Civil War, World War II, and the Roaring Twenties — eras whose people, struggles, and consequences built the framework the modern world stands on. Each image here functions as a tombstone of sorts: not an ending, but a testament to a story that refuses to disappear.",
-      "These works are not casual recreations or costume-driven portraits. They are story-built studies shaped with painterly craft, researched authenticity, and the disciplined eye of a medical illustrator turned cinematic storyteller. The work begins with understanding — the real lives, the real stakes, the choices that built the framework legend was later draped over. Only from that foundation does interpretation follow.",
+      "These works are not casual recreations or costume-driven portraits. They are story-built studies shaped with painterly process, researched authenticity, and the disciplined eye of a medical illustrator turned cinematic storyteller. The work begins with understanding — the real lives, the real stakes, the choices that built the framework legend was later draped over. Only from that foundation does interpretation follow.",
       "Across the collection, history is treated not as static subject matter but as lived narrative, with each image opening outward into what came before the moment and what may follow after it.",
       "At its best, the work closes the distance between viewer and history until the past stops feeling observed and starts feeling present.",
       "For the category definition behind this work, see <a href=\"/Blog/what-is-historically-themed-photography\">What Is Historically Themed Photography?</a>.",
@@ -112,7 +112,7 @@ export const facingHistoryStory = [
   {
     subhead: "Bring History Home",
     paragraphs: [
-      "Facing History—Civil War resolve, Western myth, <a href=\"/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII\">WWII resilience</a>, Jazz-Age intrigue—offers more than themed photography. These are narrative artifacts crafted for collectors who want their walls to speak.",
+      "Facing History—Civil War resolve, Western myth, <a href=\"/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII\">WWII resilience</a>, Jazz-Age intrigue—offers more than themed photography. These are narrative artifacts made for collectors who want their walls to speak.",
       "If you value mood, psychology, restraint, and story, there is a moment here waiting to live in your space."
     ]
   },
@@ -122,7 +122,7 @@ export const facingHistoryStory = [
     subhead: "Where Storytelling Carries the Human Hand",
     paragraphs: [
       "Painterly photography stands apart because it carries intent. These images are built through research, real subjects, real light, and the discipline to let a moment keep its mystery.",
-      "AI can replicate appearance, but it cannot replicate empathy, research, lived presence, or the instinct to honor a moment. Wayne’s Facing History portraits are shaped from authenticity—real reenactors, real light, and decades of narrative craft.",
+      "AI can replicate appearance, but it cannot replicate empathy, research, lived presence, or the instinct to honor a moment. Wayne’s Facing History portraits are shaped from authenticity—real reenactors, real light, and decades of narrative discipline.",
       "For collectors who value story over novelty and meaning over convenience, Facing History offers fine art rooted in truth, imagination, and reverence."
     ]
   }

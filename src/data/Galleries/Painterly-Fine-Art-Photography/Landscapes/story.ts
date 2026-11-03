@@ -5,7 +5,7 @@ export const westernStory = [
     title: "Painterly Landscape Photography — Fine Art by Wayne Heim",
     paragraphs: [
       `Step inside the story of the American landscape. Painterly landscape photography is more than a beautiful view—it's an emotional translation of place. Award-winning fine art photographer Wayne Heim blends classic landscape composition with painterly depth, turning nature into expressive artwork that feels both timeless and intimately personal.`,
-      `Every scene is crafted as a One-Image Movie™: a single moment layered with story, atmosphere, and memory. From the Mountain West to mist-wrapped peaks and windbrushed prairies, these ethereal landscapes invite you to Embrace the Past… Live the Story — offering a fresh way to experience the beauty and spirit of the natural world.`,
+      `Every scene is built as a One-Image Movie™: a single moment layered with story, atmosphere, and memory. From the Mountain West to mist-wrapped peaks and windbrushed prairies, these ethereal landscapes invite you to Embrace the Past… Live the Story — offering a fresh way to experience the beauty and spirit of the natural world.`,
     ]
   },
 
@@ -58,7 +58,7 @@ export const westernStory = [
       `Wayne's Western landscape photography pays tribute to the American frontier — wide-open skies, rolling grasslands, and the timeless quiet of cowboy country. These painterly Western landscapes evoke nostalgia, adventure, and the rugged spirit of the West. Each image captures the grit & glory of frontier life.`,
     ],
     list: [
-      `Wyoming & Montana — Sweeping plains and historic vistas, crafted as painterly fine art prints.`,
+      `Wyoming & Montana — Sweeping plains and historic vistas, made as painterly fine art prints.`,
       `The American West — Big sky country where rustic charm meets wild west fine art.`,
     ]
   },
@@ -118,7 +118,7 @@ export const westernStory = [
   {
     subhead: "Explore More Painterly Fine Art",
     paragraphs: [
-`If these landscapes resonate with you, step inside the story of Wayne Heim's other painterly collections — each crafted with the same cinematic stills, narrative depth, and One-Image Movie™ storytelling.`,
+`If these landscapes resonate with you, step inside the story of Wayne Heim's other painterly collections — each built with the same cinematic stills, narrative depth, and One-Image Movie™ storytelling.`,
     ],
     list: [
       `<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits">Western Cowboy Portraits</a> — explore Western photography featuring painterly cowboy portraits and frontier life across the American West. Dust, leather, and long light — wild west fine art for collectors.`,

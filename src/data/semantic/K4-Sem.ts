@@ -855,7 +855,7 @@ painterlyWesternHub: {
 
 westernPainterlyFineArtPhotographyHub: {
   path: "/western-painterly-fine-art-photography",
-  def: "The exact-match collection route for Western painterly fine art photography by Wayne Heim, combining camera-based Western realism, painterly atmosphere, and collectible fine art print intent.",
+  def: "The exact-match collection route for Western painterly fine art photography by Wayne Heim, combining a camera-based foundation, painterly atmosphere, and collectible fine art print intent.",
   fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
   landingPhrases: [
     { phrase: "western painterly fine art photography", rating: 6, use: true, link: "/western-painterly-fine-art-photography" },
