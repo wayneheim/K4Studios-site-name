@@ -3,7 +3,7 @@ export const storyMeta = {
  "showTitle": "Western Living History",
  "prologueTitle": "Prologue: Western Living History",
  "openingParagraph": "Dust and sun mingle as the stories and legends of the Wild West come to life—keeping history alive through photographs and reenactment.\nEmbrace the Past. Live the Story.",
- "description": "A cinematic journey through the people and passion keeping the spirit of the American West alive. Photographer Wayne Heim captures modern reenactors and living historians who preserve the grit, determination, and humanity behind the legend of the frontier.",
+ "description": "A cinematic journey through the people and passion keeping the spirit of the American West alive. Western artist Wayne Heim captures modern reenactors and living historians who preserve the grit, determination, and humanity behind the legend of the frontier.",
  "keywords": "historical reenactment photography, western fine art, cowboy portraits, living history, frontier heritage, painterly photography, wild west, reenactors, American West, western art",
  "alt": "Western reenactors prepare for a frontier battle under open skies, sunlight cutting through smoke as history stirs to life.",
  "closingText": "Every image is another notch in the belt—supporting and keeping history alive. In telling these stories and making connections between past, present, and future generations, their legacy, actions, and determination live on with every image. \n\nClick the images below to view more info or to browse the entire collection.",

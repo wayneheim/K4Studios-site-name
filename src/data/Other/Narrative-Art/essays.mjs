@@ -192,7 +192,7 @@ export const essays = [
       {
         paragraphs: [
           `Some images are easy to move past.`,
-          `You understand them quickly. You take what they offer, nod to the beauty or the craft, and continue on.`,
+          `You understand them quickly. You take what they offer, nod to the beauty or the workmanship, and continue on.`,
           `Others do not let you go so cleanly.`,
           `They hold you. Not because they are louder. Not because they explain more.`,
           `Because they seem to require something from you that you were not planning to give.`,
