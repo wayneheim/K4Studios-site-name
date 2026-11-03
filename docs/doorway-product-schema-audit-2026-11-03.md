@@ -2,7 +2,7 @@
 
 ## Decision
 
-Do not remove doorway-level `Product` / `Offer` nodes yet. The artwork-page coverage requirement is satisfied, but the Search Console appearance-attribution requirement in D5 cannot be completed from the repository or build artifacts alone.
+D5 is cleared and implemented. Search Console shows that doorway pages earn no Product-snippet or Merchant-listing clicks, while individual artwork pages retain complete `Product` / `Offer` coverage. The 47 doorway routes now standardize on `CollectionPage` / `ItemList`; `/all` grids and individual artwork pages are unchanged.
 
 ## Scope and method
 
@@ -17,9 +17,9 @@ Do not remove doorway-level `Product` / `Offer` nodes yet. The artwork-page cove
 ### Doorway pages
 
 - 46 of 46 prerendered doorways contain one `CollectionPage` and one `ItemList`.
-- Each of those 46 pages currently contains 48 `Product` nodes and 48 `Offer` nodes.
-- `/Western-Wall-Art` is SSR and does not produce a standalone `dist/Western-Wall-Art/index.html`. Source inspection confirms that it uses the same shared 48-item schema construction.
-- No doorway schema was removed or reallocated during this audit.
+- After D5, all 46 prerendered doorways contain zero `Product` nodes and zero `Offer` nodes.
+- `/Western-Wall-Art` is SSR and does not produce a standalone `dist/Western-Wall-Art/index.html`; it uses the same doorway-only component and schema construction.
+- The doorway `ItemList` entries retain their artwork-page URLs and names without embedding product entities.
 
 ### Individual artwork pages
 
@@ -32,20 +32,25 @@ Do not remove doorway-level `Product` / `Offer` nodes yet. The artwork-page cove
 
 ## Search Console attribution
 
-The build and repository do not contain a queryable export that identifies which URLs currently earn Product-snippet or Merchant-listing appearances. That attribution must be supplied from the 2026-11-03 Search Console pulls (or a fresh export) with URL and search-appearance dimensions.
+Wayne supplied both page-level Search Console appearance views on 2026-11-03:
 
-Required before doorway-node removal:
+- **Product snippets:** 14 clicks and 959 impressions across 471 pages. Zero doorway pages appear. The top 10 pages earn 11 of the 14 clicks, and every one is an individual artwork page or a `/all` grid. The leading page is the Roaring 20s black-and-white `/all` grid with 2 clicks and 61 impressions.
+- **Merchant listings:** 3 clicks and 29 impressions across 23 pages, with an average position of 3.3. All three clicks belong to individual `/Galleries/` artwork pages. Zero doorway pages and zero `/all` pages appear.
 
-1. Export Product-snippet appearances by page.
-2. Export Merchant-listing appearances by page.
-3. Separate doorway URLs from individual artwork URLs.
-4. Record any doorway currently earning either appearance and compare it with its linked artwork pages.
+The evidence places Product-result performance on the artwork and grid layers, not on doorway pages.
+
+## Isolation verification
+
+- Exactly 47 routes render through the doorway-only component: 11 direct consumers and 36 wrapper consumers.
+- `/all` pages render through the separate `src/pages/[...gallery]/all.astro` implementation; D5 does not modify it.
+- A post-change production build confirmed a representative `/all` grid still emits 45 `Product` and 45 `Offer` nodes.
+- A representative Roaring 20s artwork page still emits exactly one `Product` and one `Offer`.
 
 ## D5 status
 
 - Piece-page `Product` / `Offer` coverage: **pass**.
 - Missing piece schema to add: **none**.
-- Search Console appearance earners: **pending external evidence**.
-- Doorway `Product` / `Offer` removal: **not performed**, as required by the audit-first sequence.
-
-Once the Search Console evidence is attached and reviewed, the implementation can safely reduce doorway graphs to `CollectionPage` / `ItemList` while retaining `Product` / `Offer` on the 471 verified artwork pages.
+- Product-snippet doorway earners: **zero**.
+- Merchant-listing doorway earners: **zero**.
+- Doorway `Product` / `Offer` removal: **implemented**.
+- `/all` and artwork-page schema preservation: **pass**.

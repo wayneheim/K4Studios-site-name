@@ -12,7 +12,7 @@ import {
   getFormattedLowestStandardPrintPrice,
   getStandardPrintSeries,
 } from "@/data/pricing/printSeries.js";
-import { getSketchOfferShippingDetails, resolveImageCommerce } from "@/data/commerceResolver.js";
+import { resolveImageCommerce } from "@/data/commerceResolver.js";
 
 type BreadcrumbItem = { name: string; href: string };
 type GridSection = {
@@ -125,9 +125,7 @@ const siteOrigin = "https://www.k4studios.com";
 const contentBasePath = configuredContentBasePath || basePath;
 const canonicalPath = configuredCanonicalPath || `${basePath}/all`;
 const canonicalUrl = `${siteOrigin}${canonicalPath}`;
-const galleryBaseUrl = `${siteOrigin}${contentBasePath}`;
 const collectionPageId = `${canonicalUrl}#collectionpage`;
-const imageGalleryId = `${galleryBaseUrl}#imagegallery`;
 const itemListId = `${canonicalUrl}#itemlist`;
 
 const definitionDoorwayPaths = new Set([
@@ -245,7 +243,6 @@ const hasSectionedCatalog = normalizedGridSections.length > 0;
 const catalogImageCount = hasSectionedCatalog
   ? normalizedGridSections.reduce((total, section) => total + section.items.length, 0)
   : imageCount;
-const schemaImageGalleryId = hasSectionedCatalog ? `${canonicalUrl}#imagegallery` : imageGalleryId;
 
 // ✅ Search-facing title and description (factual, not poetic)
 const gatewayBrandLabel = identity.gatewayBrandLabel || `${collectionName} Fine Art Prints - ${variantName} Collection`;
@@ -451,31 +448,6 @@ const truncateStoryExcerpt = (text: string, maxLen = 100) => {
   return `${wordSafe || cleaned.slice(0, maxLen).trimEnd()}...`;
 };
 
-const buildSketchProductDescription = (image: any, imageName: string) => {
-  const imageSummary = truncateExcerpt(image?.description || image?.alt || "", 130);
-  const base = `${imageName} is offered as a Sketch Series fine art print by Wayne Heim through K4 Studios.`;
-  return imageSummary ? `${base} ${imageSummary}` : base;
-};
-
-const buildSketchProductOffer = (image: any, imagePageUrl: string, galleryPath: string) => {
-  const commerce = resolveImageCommerce({
-    image,
-    galleryPath,
-    pageUrl: imagePageUrl,
-  });
-
-  return commerce?.merchantOffer || {
-    "@type": "Offer",
-    "url": imagePageUrl,
-    "price": 25,
-    "priceCurrency": "USD",
-    "availability": "https://schema.org/InStock",
-    "itemCondition": "https://schema.org/NewCondition",
-    "seller": { "@id": "https://www.k4studios.com/#organization" },
-    "shippingDetails": getSketchOfferShippingDetails(),
-  };
-};
-
 const truncateBookendExcerpt = (text: string, headLen = 100, tailLen = 300) => {
   const cleaned = cleanForDisplay(text);
   if (!cleaned) return "";
@@ -555,7 +527,7 @@ const fallbackSocialImage = "/images/show-2t.webp";
 const socialImage = gatewayHeroSrc || (filteredGalleryData[0] ? getProxySrc(filteredGalleryData[0].id, 'l') : "") || fallbackSocialImage;
 const socialImageUrl = toAbsoluteK4Url(socialImage);
 const socialImageAlt = `${collectionName} Fine Art Prints by Wayne Heim`;
-const MAX_PRODUCT_SCHEMA_ITEMS = 48;
+const MAX_ITEM_LIST_SCHEMA_ITEMS = 48;
 
 // ✅ Pre-build per-image JSON-LD to avoid streaming issues
 const imageJsonLdMap = new Map();
@@ -598,7 +570,7 @@ const schemaListItemCount = schemaListItems.filter((entry: any) => entry.image?.
 
 const itemListElement = schemaListItems
   .filter((entry: any) => entry.image?.id)
-  .slice(0, MAX_PRODUCT_SCHEMA_ITEMS)
+  .slice(0, MAX_ITEM_LIST_SCHEMA_ITEMS)
   .map((entry: any, index: number) => {
     const image = entry.image;
     const imageBaseUrl = `${siteOrigin}${entry.galleryPath || contentBasePath}`;
@@ -610,21 +582,7 @@ const itemListElement = schemaListItems
       "position": index + 1,
       "url": imagePageUrl,
       "name": imageName,
-      "item": {
-        "@type": "Product",
-        "@id": `${imagePageUrl}#product-sketch`,
-        "name": `${imageName} - Sketch Series Print`,
-        "url": imagePageUrl,
-        "image": toAbsoluteK4Url(getProxySrc(image.id, 'l')),
-        "description": buildSketchProductDescription(image, imageName),
-        "sku": `${image.id}-sketch`,
-        "brand": {
-          "@type": "Brand",
-          "@id": "https://www.k4studios.com/#organization",
-          "name": "K4 Studios"
-        },
-        "offers": buildSketchProductOffer(image, imagePageUrl, entry.galleryPath || contentBasePath),
-      },
+      "item": { "@id": imagePageUrl },
     };
   });
 const stripHtml = (value = "") =>
@@ -682,16 +640,6 @@ const structuredDataJson = JSON.stringify({
         "url": socialImageUrl,
         "caption": seoTitle
       },
-      "creator": { "@id": "https://www.k4studios.com/#person" },
-      "publisher": { "@id": "https://www.k4studios.com/#organization" },
-      "mainEntity": { "@id": schemaImageGalleryId }
-    },
-    {
-      "@type": "ImageGallery",
-      "@id": schemaImageGalleryId,
-      "url": hasSectionedCatalog ? canonicalUrl : galleryBaseUrl,
-      "name": hasSectionedCatalog ? `${collectionName} Collection` : `${galleryTitle} Collection`,
-      "description": seoDescription,
       "creator": { "@id": "https://www.k4studios.com/#person" },
       "publisher": { "@id": "https://www.k4studios.com/#organization" },
       "mainEntity": { "@id": itemListId }
