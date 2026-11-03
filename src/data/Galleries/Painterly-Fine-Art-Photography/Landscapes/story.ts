@@ -4,7 +4,7 @@ export const westernStory = [
   {
     title: "Painterly Landscape Photography — Fine Art by Wayne Heim",
     paragraphs: [
-      `Step inside the story of the American landscape. Painterly landscape photography is more than a beautiful view—it's an emotional translation of place. Award-winning fine art photographer Wayne Heim blends classic landscape composition with painterly depth, turning nature into expressive artwork that feels both timeless and intimately personal.`,
+      `Step inside the story of the American landscape. Painterly landscape photography is more than a beautiful view—it's an emotional translation of place. Award-winning fine art photographer Wayne Heim blends classic landscape composition with painterly depth, turning nature into expressive artwork that feels both timeless and intimately personal. The camera is the foundation, not the finish: each landscape is camera-based painterly fine art, made from a real photograph and carried by tone and atmosphere into the story the land was telling.`,
       `Every scene is built as a One-Image Movie™: a single moment layered with story, atmosphere, and memory. From the Mountain West to mist-wrapped peaks and windbrushed prairies, these ethereal landscapes invite you to Embrace the Past… Live the Story — offering a fresh way to experience the beauty and spirit of the natural world.`,
     ]
   },

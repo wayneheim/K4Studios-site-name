@@ -75,7 +75,7 @@ export const facingHistoryStory = [
     subhead: "What Is Modern Pictorialism Photography?",
     paragraphs: [
       `Modern pictorialism photography is the contemporary continuation of the original pictorialist idea: a photograph can be shaped into art rather than accepted as a literal record. It is not nostalgia and it is not a filter. It is a disciplined way of building photographic meaning.`,
-      `In Wayne Heim's painterly fine art photography, that philosophy becomes a bridge between historic pictorialism and contemporary Western storytelling. The work uses real subjects, staged or discovered moments, controlled light, texture, color, and narrative restraint to push photography beyond documentation and toward authored visual art.`
+      `In Wayne Heim's painterly fine art photography, that philosophy becomes a bridge between historic pictorialism and contemporary Western storytelling. The work uses real subjects, moments created with living historians or discovered as they happened, controlled light, texture, color, and narrative restraint to push photography beyond documentation and toward authored visual art.`
     ]
   },
 
@@ -108,7 +108,7 @@ export const facingHistoryStory = [
   {
     subhead: "An Inheritance, Not an Imitation",
     paragraphs: [
-      `Where the original pictorialists manipulated negatives and hand-coated prints, Wayne works through in-camera discipline, digital craft, period-aware staging, and narrative instinct developed through decades as a medical illustrator and visual storyteller.`,
+      `Where the original pictorialists manipulated negatives and hand-coated prints, Wayne works through in-camera discipline, the painterly process, period-aware work with living historians, and narrative instinct developed through decades as a medical illustrator and visual storyteller.`,
       `The tools are contemporary, but the purpose is familiar: mood over mere sharpness, atmosphere over quick consumption, story over spectacle, and fine art presence over disposable imagery.`
     ]
   },

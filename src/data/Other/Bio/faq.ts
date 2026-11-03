@@ -24,7 +24,7 @@ export const facingFAQ = [
     q: "Is Wayne classically trained in photography?",
     a: [
       "Yes — but he doesn’t stay in the box. Wayne trained in traditional photography, darkroom technique, and visual composition before transitioning to modern digital tools.",
-      "He uses the best of both worlds: classical structure and cutting-edge control. Whether sculpting light through digital layers or echoing pictorialist texture, his work nods to the past while breaking open the future."
+      "He uses the best of both worlds: classical structure and cutting-edge control. Whether sculpting light inside the image or echoing pictorialist texture, his work nods to the past while breaking open the future."
     ],
   },
   {

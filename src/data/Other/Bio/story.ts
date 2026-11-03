@@ -1,6 +1,6 @@
 export const painterlyStory = [
   {
-    title: "Fine Art Photographer — Storyteller",
+    title: "Fine Art Photographer — Contemporary Western Narrative Artist",
     subhead: "Painterly – Narrative – Historical – Western – Landscape – Portraiture",
     callout: "I don’t just shoot moments. I build meaning—not in perfect light, but in the tension between clarity and ambiguity.",
     paragraphs: [

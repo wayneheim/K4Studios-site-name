@@ -3,7 +3,7 @@ export const transportationFAQ = [
 {
     q: "What makes your transportation photography 'painterly'?",
     a: [
-      "Wayne Heim uses a refined post-processing technique inspired by classical painting and pictorialist photography. This painterly style enhances lighting, texture, and mood — transforming steam engines and vintage cars into One-Image Movies™: timeless works of fine art that invite you to step inside the story."
+      "Wayne Heim's painterly process grows out of classical painting and pictorialist photography — light, texture, and mood are shaped inside the image until steam engines and vintage cars become One-Image Movies™: timeless works of fine art that invite you to step inside the story."
     ]
   },
   {

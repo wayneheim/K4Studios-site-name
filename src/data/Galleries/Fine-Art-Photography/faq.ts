@@ -9,9 +9,9 @@ export const facingFAQ = [
   },
 
   {
-    q: "How does traditional photography differ from painterly or digital art styles?",
+    q: "How does traditional photography differ from the painterly style?",
     a: [
-      "Unlike painterly or AI-driven styles, traditional fine art photography emphasizes clarity, mood, and realism. These images are rooted in the physical world—fog rolling over hills, rusted train tracks, a solitary mountain trail—captured with intention and composed to evoke reflection, memory, and atmosphere."
+      "Unlike the painterly line — where each image is interpreted through the painterly process — traditional fine art photography emphasizes clarity, mood, and realism. Neither line is AI-generated. These images are rooted in the physical world—fog rolling over hills, rusted train tracks, a solitary mountain trail—captured with intention and composed to evoke reflection, memory, and atmosphere."
     ],
   },
 

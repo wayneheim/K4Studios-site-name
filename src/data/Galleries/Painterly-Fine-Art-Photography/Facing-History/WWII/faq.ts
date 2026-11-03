@@ -23,7 +23,7 @@ export const westernFAQ = [
   {
     q: "Are these images painterly or traditional in style?",
     a: [
-      `Both. The <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII">painterly WWII gallery</a> features textured, atmospheric edits that resemble oil paintings, while the <a href="/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments">traditional gallery</a> maintains sharper realism.`,
+      `Both. The <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII">painterly WWII gallery</a> carries textured, atmospheric work shaped through the painterly process, while the <a href="/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments">traditional gallery</a> maintains sharper realism.`,
       `Each style is carefully matched to the subject’s tone and story — from intense battlefield moments to quiet camaraderie between soldiers.`,
     ],
   },

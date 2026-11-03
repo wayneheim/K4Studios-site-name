@@ -3,7 +3,7 @@ export const facingFAQ = [
   {
     q: "What is painterly landscape photography?",
     a: [
-      "Painterly landscape photography blends the technical skill of photography with the expressive qualities of painting. Using creative lighting, color, and composition, each image becomes more than a snapshot—it’s fine art that evokes emotion and tells a story.",
+      "Painterly landscape photography is camera-based painterly fine art: the photograph is the foundation, and texture, tone, and color are chosen inside the image — the way a painter chooses a brush or a palette knife — until atmosphere carries the story. Using creative lighting, color, and composition, each image becomes more than a snapshot—it’s fine art that evokes emotion and tells a story.",
       "Wayne Heim’s painterly landscapes invite viewers to linger, reflect, and experience nature in a new way."
     ],
   },

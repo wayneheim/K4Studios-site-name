@@ -908,6 +908,7 @@ function makePage({
   collectingKicker,
   collectingTitle,
   collectingCopy,
+  authorityIntro,
   archiveContextKicker,
   archiveContextTitle,
   archiveContextCopy,
@@ -971,6 +972,7 @@ function makePage({
   collectingKicker?: string;
   collectingTitle?: string;
   collectingCopy?: string;
+  authorityIntro?: string;
   archiveContextKicker?: string;
   archiveContextTitle?: string;
   archiveContextCopy?: string;
@@ -1089,6 +1091,7 @@ function makePage({
       collectingKicker,
       collectingTitle,
       collectingCopy,
+      authorityIntro,
       archiveContextKicker,
       archiveContextTitle,
       gatewayHeroTitle: `${label} by Wayne Heim`,
@@ -1428,6 +1431,7 @@ export const commercialIntentPages = {
     gatewayIntroCopy: "Not movie art. The tradition that made the movies look the way they do.",
     gatewaySupportingCopy: `Search for "cinematic western art" and Google returns movie posters, film lists, and museum exhibitions about how Remington and Russell influenced Hollywood.\n\nThat is the right neighborhood. But it is looking backward.\n\nCinematic Western art is not a film genre and it is not a historical category. It is a living visual discipline — one that Remington and Russell established before Hollywood existed, that Hollywood borrowed wholesale, and that has been largely abandoned by the <a href="/Contemporary-Western-Art">contemporary Western art</a> world in favor of heroic spectacle and decorative frontier imagery.\n\nWayne Heim's work is a direct response to that abandonment. These are not photographs of Western subjects. They are authored narrative works built in the same tradition as Remington's A Misdeal — the painting so charged with unresolved story pressure that John Ford used it as a visual reference for decades of Western films. The withheld moment. The breath before the draw. The consequence still arriving.\n\nThat tradition didn't end with Remington. It just stopped being made.`,
     gatewaySupportingCopyHtml: true,
+    authorityIntro: "Wayne Heim's painterly Western photography is grounded in decades of visual storytelling as a fine art photographer and award-winning medical illustrator, with peer-reviewed exhibition and editorial recognition in Western art contexts. The foundation is the photograph. The work built on it is contemporary Western art — camera-based painterly fine art, made from real photographs, painterly expression, narrative intent.",
     archiveContextCopy: `Every work on this page is available as a fine art print — archival paper or wood — with the Sketch Series opening at ${sketchPrintPrice}. Click into any image to read the story, compare print options, sizes, and collector details. Questions about a specific piece? Reach Wayne directly at <a href='mailto:wayne@k4studios.com'>wayne@k4studios.com</a>.`,
     collectionIntro: "",
     conceptBlock1Title: "The Tradition",
