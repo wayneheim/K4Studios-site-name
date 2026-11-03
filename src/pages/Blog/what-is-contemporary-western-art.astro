@@ -1,0 +1,385 @@
+---
+export const prerender = true;
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getSemanticImageUrl } from "@/utils/imageProxy.js";
+import LandingHeader from "@/components/Landing-Header.jsx";
+import SiteFooter from "@/components/Footer.astro";
+import { getBreadcrumbList, getStructuredData } from "@/components/utils/getStructuredData.ts";
+import "@/styles/global.css";
+
+const sectionPath = "/Blog/what-is-contemporary-western-art";
+const canonicalUrl = `https://www.k4studios.com${sectionPath}`;
+
+const getProxySrc = (id: string, size: string = "l") => getSemanticImageUrl(id, {}, size);
+const getAbsoluteProxySrc = (id: string, size: string = "l") =>
+  getSemanticImageUrl(id, {}, size, { absolute: true });
+
+const headerImage = {
+  id: "i-LCspRF4",
+  src: getProxySrc("i-LCspRF4", "l"),
+  alt: "Contemporary Western art by Wayne Heim, shaped through atmosphere, history, and narrative intent",
+};
+
+const image1 = {
+  id: "i-B7ZSdfs",
+  src: getProxySrc("i-B7ZSdfs", "l"),
+  alt: "Camera-based contemporary Western art with painterly handling and an unresolved narrative moment",
+};
+
+const image2 = {
+  id: "i-qLzRgbS",
+  src: getProxySrc("i-qLzRgbS", "l"),
+  alt: "Native presence within Wayne Heim's contemporary Western art",
+};
+
+const pageTitle = "What Is Contemporary Western Art? Definition and Meaning";
+const pageDescription = "Contemporary Western art is present-day art that interprets the American West through current visual language, modern mediums, and contemporary authorship. Wayne Heim makes it as camera-based painterly fine art — real photographs, painterly handling, narrative intent.";
+
+const faqItems = [
+  {
+    question: "What is contemporary Western art?",
+    answer: "Contemporary Western art is present-day art that interprets the American West through current visual language, modern mediums, and contemporary authorship while remaining connected to Western subject matter, history, landscape, and myth.",
+  },
+  {
+    question: "Can photography be contemporary Western art?",
+    answer: "Yes. Photography becomes contemporary Western art when it is used with authorship, creative vision or expression that pushes the boundaries of what is expected of the medium — through composition, intent, and direction of the artist's vision, outside of simply documenting an experienced moment.",
+  },
+  {
+    question: "How does Wayne Heim make contemporary Western art?",
+    answer: "Wayne Heim makes contemporary Western art as camera-based painterly fine art — real photographs, painterly handling, narrative intent.",
+  },
+];
+
+const structuredData = getStructuredData({
+  type: "Article",
+  data: {
+    headline: "What Is Contemporary Western Art?",
+    title: pageTitle,
+    description: pageDescription,
+    url: canonicalUrl,
+    image: [
+      getAbsoluteProxySrc(headerImage.id, "l"),
+      getAbsoluteProxySrc(image1.id, "l"),
+      getAbsoluteProxySrc(image2.id, "l"),
+    ],
+    copyrightNotice: "Copyright Wayne Heim",
+    author: {
+      "@type": "Person",
+      name: "Wayne Heim",
+    },
+    datePublished: "2026-11-02",
+    dateModified: "2026-11-02",
+    articleSection: "Western Art",
+    definedTerm: {
+      name: "Contemporary Western Art",
+      description: pageDescription,
+    },
+    keywords: [
+      "contemporary Western art",
+      "contemporary Western art definition",
+      "modern Western art",
+      "Western fine art",
+      "Wayne Heim",
+      "painterly photography",
+    ],
+    faqItems,
+  },
+  defaults: {
+    copyrightNotice: "Copyright Wayne Heim",
+    license: "https://www.k4studios.com/copyright",
+    creditText: "Wayne Heim",
+    creatorName: "Wayne Heim",
+    creatorUrl: "https://www.k4studios.com/",
+  },
+});
+
+const breadcrumbStructuredData = getBreadcrumbList(
+  [
+    { name: "Home", item: "https://www.k4studios.com" },
+    { name: "Blog", item: "https://www.k4studios.com/Blog" },
+    { name: "What Is Contemporary Western Art?", item: canonicalUrl },
+  ],
+  `${canonicalUrl}#breadcrumb`,
+);
+
+const meta = {
+  seoDescription: pageDescription,
+  description: pageDescription,
+  keywords: "contemporary Western art, contemporary Western art definition, modern Western art, Western fine art, Wayne Heim, painterly photography",
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogType: "article",
+  ogUrl: canonicalUrl,
+  ogImage: getAbsoluteProxySrc(headerImage.id, "l"),
+  ogImageAlt: headerImage.alt,
+  twitterTitle: pageTitle,
+  twitterDescription: pageDescription,
+  twitterUrl: canonicalUrl,
+  twitterImage: getAbsoluteProxySrc(headerImage.id, "l"),
+  twitterCard: "summary_large_image",
+  descriptionMaxLength: 320,
+  preserveDescriptionDashes: true,
+};
+
+const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-decoration: none;' onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Blog</a> › What Is Contemporary Western Art?`;
+---
+
+<BaseLayout
+  title={pageTitle}
+  structuredDataJSON={structuredData}
+  breadcrumbsJSON={breadcrumbStructuredData}
+  meta={meta}
+>
+  <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
+    <div class="drawer-mode">
+      <LandingHeader client:load breadcrumb={blogBreadcrumb} />
+    </div>
+
+    <section class="hero" aria-label="Contemporary Western art">
+      <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${headerImage.id}`}>
+        <img src={headerImage.src} alt={headerImage.alt} />
+      </a>
+    </section>
+
+    <header class="article-header">
+      <p class="eyebrow">K4 Studios · Western Art Definitions</p>
+      <h1>What Is Contemporary Western Art?</h1>
+      <p class="subtitle">Definition and Meaning</p>
+    </header>
+
+    <section class="story-section">
+      <article class="story-block">
+        <p class="definition"><strong>Contemporary Western art</strong> is present-day art that interprets the American West through current visual language, modern mediums, and contemporary authorship while remaining connected to Western subject matter, history, landscape, and myth.</p>
+
+        <p class="identity">Wayne Heim makes contemporary Western art as camera-based painterly fine art — real photographs, painterly handling, narrative intent.</p>
+
+        <p>Or, in the Glossary's shorter form: contemporary Western art carries the subject, history, and emotional weight of the American West into present-day visual language. In photography, it extends the Western tradition through current painterly handling, psychological presence, and authorship rather than nostalgia alone.</p>
+
+        <p>Contemporary does not mean rootless. Contemporary Western art is strongest when it knows what it is continuing — Remington, Russell, Catlin, Curtis, the Taos painters, ranch photography, frontier illustration, and the old storytelling structures that shaped the Western imagination — and carries those concerns into a living medium.</p>
+
+        <div class="section-heading-with-line">
+          <h2>Can photography be contemporary Western art?</h2>
+        </div>
+
+        <div class="content-grid">
+          <div>
+            <p>Yes. Photography becomes contemporary Western art when it is used with authorship, creative vision or expression that pushes the boundaries of what is expected of the medium — through composition, intent, and direction of the artist's vision, outside of simply documenting an experienced moment.</p>
+
+            <p>Wayne Heim's route begins with photography, but photography is not used as mere documentation. It is the foundation: the real subject, the real light, the real physical evidence. From there, painterly handling, title, story, and restraint turn the image into contemporary Western art with history still inside it. The work begins with camera-based evidence, then moves through painterly handling, title, narrative writing, and deliberate incompleteness, so the image carries history, character, and story rather than simple documentation.</p>
+          </div>
+
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${image1.id}`}>
+              <img src={image1.src} alt={image1.alt} loading="lazy" />
+            </a>
+          </figure>
+        </div>
+
+        <div class="section-heading-with-line">
+          <h2>How this differs from surface re-imagining</h2>
+        </div>
+
+        <p class="reflection">Re-imagining through reflection.</p>
+
+        <p>Much of modern Western art is based on the myths or distilled legends — icons of the past mixed with modern interpretation. Icons sanded down and distilled into an idea, often left to be experienced out of context. Re-imagining the West, to me, means going back to the roots of what created the West and the Western spirit. The narrative foundation. The struggles and losses. Re-imagining means reviving and rekindling the fading armature that lies buried in the forgotten stories of those who built the West. The armature is what supports the legends. It's what gives them shape and context. Without the armature, they collapse under their own weight, or take on new forms and meaning.</p>
+
+        <p>Re-imagining and retelling in a medium and format that allows the image and the story to speak louder than the presentation format — giving history a chance to pay it forward to the next generation.</p>
+
+        <div class="content-grid reverse">
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color/${image2.id}`}>
+              <img src={image2.src} alt={image2.alt} loading="lazy" />
+            </a>
+          </figure>
+
+          <div>
+            <p>That is also why the field has to widen past cowboy shorthand: Native American presence is not an accessory to the Western story and not a historical prop. It is part of the ground beneath the entire genre — continuity, heritage, displacement, authority, and living presence.</p>
+
+            <p>I don't make these images to decorate a wall. The struggles and losses of the people who built the West have to still mean something — that is the giving back, making sure those stories and hardships have purpose. An image that asks only to be admired gives a viewer nothing to enter. I want the opposite: a moment a person can step inside, let go of their own present, and stand for a while in someone else's — to feel it, and to wonder what it might have been like. I have seen what the story does when it is still attached to the image. At a show in Montana, a woman stood in front of Cough and Covenant while I told her the man in it is dying of smallpox, caught from the sick man he treated — and she took the moment. Not the quick look. Not admiration. She stood inside it. That is the point.</p>
+          </div>
+        </div>
+
+        <div class="section-heading-with-line">
+          <h2>Frequently asked questions</h2>
+        </div>
+
+        <div class="faq-block">
+          {faqItems.map((item) => (
+            <details>
+              <summary>{item.question}</summary>
+              <p>{item.answer}</p>
+            </details>
+          ))}
+        </div>
+
+        <div class="section-heading-with-line">
+          <h2>Where to go next</h2>
+        </div>
+
+        <nav class="next-links" aria-label="Related contemporary Western art pages">
+          <p>The collection itself: <a href="https://www.k4studios.com/Contemporary-Western-Art">Contemporary Western Art</a></p>
+          <p>The narrative side: <a href="/western-storytelling-photography">Western Storytelling Photography</a>, <a href="/Narrative-Western-Art">Narrative Western Art</a>, <a href="/Other/One-Image-Movie">The One-Image Movie</a></p>
+          <p>The proven definition pattern this follows: the <a href="/Blog/what-is-painterly-photography">Painterly Photography</a> and <a href="/Blog/what-is-western-fine-art">Western Fine Art</a> definition posts</p>
+        </nav>
+      </article>
+    </section>
+
+    <SiteFooter />
+  </main>
+
+  <style>
+    .hero {
+      width: 100%;
+      height: clamp(230px, 34vw, 430px);
+      overflow: hidden;
+      background: #17130f;
+    }
+    .hero a,
+    .hero img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    .hero img {
+      object-fit: cover;
+      object-position: center 45%;
+    }
+    .article-header {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2.5rem 1rem 2rem;
+      text-align: center;
+    }
+    .article-header h1 {
+      margin: 0.35rem 0;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.15;
+    }
+    .eyebrow {
+      margin: 0;
+      color: #8b5a2b;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+    .subtitle {
+      margin: 0.5rem 0 0;
+      color: #666;
+      font-size: clamp(1.05rem, 2.2vw, 1.25rem);
+      font-style: italic;
+    }
+    .story-section {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 1rem 4rem;
+      line-height: 1.75;
+    }
+    .story-block p {
+      margin: 0 0 1.15rem;
+      font-size: clamp(1rem, 2.5vw, 1.125rem);
+    }
+    .definition {
+      padding: 1.4rem 1.5rem;
+      border-left: 4px solid #8b5a2b;
+      background: #f6f1ea;
+      font-size: clamp(1.08rem, 2.8vw, 1.25rem) !important;
+    }
+    .identity {
+      color: #4e3725;
+      font-weight: 600;
+    }
+    .reflection {
+      color: #8b5a2b;
+      font-size: clamp(1.15rem, 3vw, 1.4rem) !important;
+      font-style: italic;
+      font-weight: 700;
+    }
+    .section-heading-with-line {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin: 2.8rem 0 1.15rem;
+    }
+    .section-heading-with-line::after {
+      content: "";
+      flex: 1;
+      height: 3px;
+      background: #d0d0d0;
+    }
+    .section-heading-with-line h2 {
+      margin: 0;
+      color: #1a1a1a;
+      font-size: clamp(1.3rem, 3vw, 1.65rem);
+      font-weight: 600;
+      line-height: 1.3;
+    }
+    .content-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 300px;
+      gap: 2.25rem;
+      align-items: start;
+    }
+    .content-grid.reverse {
+      grid-template-columns: 300px minmax(0, 1fr);
+    }
+    figure {
+      margin: 0.35rem 0 1.5rem;
+      padding: 0.75rem;
+      border: 1px solid #e0d8cf;
+      border-radius: 10px;
+      background: #f8f6f3;
+    }
+    figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }
+    .faq-block details {
+      padding: 0.9rem 0;
+      border-top: 1px solid #ddd;
+    }
+    .faq-block details:last-child {
+      border-bottom: 1px solid #ddd;
+    }
+    .faq-block summary {
+      cursor: pointer;
+      font-size: clamp(1rem, 2.5vw, 1.125rem);
+      font-weight: 600;
+    }
+    .faq-block p {
+      margin: 0.75rem 0 0;
+    }
+    .next-links {
+      padding: 1.4rem 1.5rem 0.3rem;
+      border-radius: 10px;
+      background: #f8f6f3;
+    }
+    .next-links a {
+      color: #8b5a2b;
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    @media (max-width: 760px) {
+      .section-heading-with-line::after {
+        display: none;
+      }
+      .content-grid,
+      .content-grid.reverse {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+      }
+      .content-grid.reverse figure {
+        order: 2;
+      }
+      .definition,
+      .next-links {
+        padding: 1.1rem;
+      }
+    }
+  </style>
+</BaseLayout>
