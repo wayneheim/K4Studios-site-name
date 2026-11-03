@@ -215,21 +215,23 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://www.k4studios.com/";
         <div class="story-section">
           {painterlyStory.map((section, index) => (
             <>
-              <article class="story-block">
+              <article class:list={["story-block", { "story-block--frontier": section.subhead?.includes("Western Frontier") }]}>
                 {section.title && <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />}
                 {section.subhead && <h3 class="slide-in-left" set:html={autoLinkKeywordsInText(section.subhead, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />}
                 {section.tagline && <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInText(section.tagline, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />}
                 {section.paragraphs?.map((para, i) => (
                   <>
-                    <p class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
-                    {section.subhead?.includes("Western Frontier") && i === section.paragraphs.length - 1 && (
+                    {section.subhead?.includes("Western Frontier") && i === 1 && (
                       <VideoStoryWidget
-                        class="reveal-on-scroll"
+                        class="frontier-story-body__video reveal-on-scroll"
                         videoSlug="only-path-forward"
-                        kicker="Frontier stories come alive."
-                        label="60 seconds: Beyond the frame."
+                        kicker="Re-imagining Western Art"
+                        label="Stories that carry beyond the frame."
+                        withRules={false}
+                        ctaWidth="10rem"
                       />
                     )}
+                    <p class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
                   </>
                 ))}
                 {section.list && section.list.length > 0 && (

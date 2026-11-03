@@ -26,14 +26,15 @@ export const painterlyStory = [
 
   /* 2: The Western Frontier */
   {
-    subhead: "The Western Frontier — Cinematic. Painterly. Alive.",
+    subhead: "The Western Frontier — Re-imagining Western Art.",
     paragraphs: [
       "Cowboy art. Western fine art photography. Old-world grit with a mythic pulse.",
       "In the American West, story and identity are inseparable. A hat pulled low, a quiet pause before departure, a figure standing against distance—these are not just images, but fragments of something still unfolding.",
       "This is where narrative Western art speaks most clearly.",
       "Not nostalgia. Not decoration. But moments shaped by consequence, resilience, and the lives that built the frontier.",
       "Every cowboy portrait, every outlaw silhouette, every fading line of light becomes part of a larger unwritten story—rendered in a painterly language that feels carved from memory itself.",
-      "Welcome to the frontier as it lives in story. Explore the Western Cowboy Portraits collection."
+      "Welcome to the frontier as it lives in story. Explore the Western Cowboy Portraits collection.",
+      "<em>Real people. Real places. Real stories. Human art — told through the narrative fine art of Wayne Heim.</em>"
     ]
   },
 
