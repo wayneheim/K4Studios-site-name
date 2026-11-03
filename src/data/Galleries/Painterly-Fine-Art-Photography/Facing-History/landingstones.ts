@@ -4,7 +4,7 @@ export const landingWestern: any = {
   subtitle:
     "Western Frontier • Civil War • World War II • The Roaring Twenties",
   description:
-    "Historically themed fine art photography by Wayne Heim, interpreting the Western frontier, Civil War, WWII, and the Roaring 20s through researched detail, real subjects, painterly craft, and story-driven visual narrative.",
+    "Historically themed fine art photography by Wayne Heim, interpreting the Western frontier, Civil War, WWII, and the Roaring 20s through researched detail, real subjects, painterly process, and story-driven visual narrative.",
 
   // Keywords for structured data and semantic SEO (not meta keywords)
   keywords: [
