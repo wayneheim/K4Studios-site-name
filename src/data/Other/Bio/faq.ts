@@ -31,7 +31,7 @@ export const facingFAQ = [
     q: "Does Wayne use AI or preset filters in his work?",
     a: [
       "No. Every image is hand-tuned — layer by layer, choice by choice. Wayne doesn’t believe in automated shortcuts. Instead, he builds tone, texture, and meaning through a painter’s mindset.",
-      "His imagery is deeply rooted in **process, not code**. The results are timeless — not trend-driven."
+      "His imagery is deeply rooted in **craft, not code**. The results are timeless — not trend-driven."
     ],
   },
   {

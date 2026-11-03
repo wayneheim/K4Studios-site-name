@@ -2270,7 +2270,7 @@ painterly: {
 // --- TRADITIONAL FINE ART: MAIN LANDING ---
 fineart: {
   path: "/Galleries/Fine-Art-Photography",
-  def: "Traditional photographic craft—composition, print, and permanence.",
+  def: "Traditional photographic process—composition, print, and permanence.",
   landingPhrases: [
     { phrase: "Fine Art Photography", rating: 5, use: true },
     { phrase: "Traditional Fine Art Photography", rating: 5, use: true },
