@@ -371,7 +371,7 @@ export const semantic = {
 // --- PRINT OPTIONS & PRESENTATION ---
 printOptions: {
   path: "/Other/Print-Options",
-  def: "A guide to Wayne's museum-quality print options, paper types, mounting, and finishing—crafted for collectors and those who want their art to last.",
+  def: "A guide to Wayne's museum-quality print options, paper types, mounting, and finishing—built for collectors and those who want their art to last.",
 
   landingPhrases: [
     // Primary / High-Intent (WritingBrain core)
@@ -436,7 +436,7 @@ printOptions: {
 },
 facingHistory: {
   path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History",
-  def: "Facing History is Wayne Heim's historically themed fine art photography series, blending research, real subjects, living history, and painterly craft into character-driven visual narratives.",
+  def: "Facing History is Wayne Heim's historically themed fine art photography series, blending research, real subjects, living history, and painterly finishing into character-driven visual narratives.",
 
   landingPhrases: [
     // Primary, high-authority terms (WritingBrain core)
@@ -845,7 +845,7 @@ westernPhotographyArtHub: {
 
 painterlyWesternHub: {
   path: "/Painterly-Western-Photography",
-  def: "The craft-focused hub for Painterly Western Photography—discipline, light, and narrative philosophy behind the work.",
+  def: "The hub for Painterly Western Photography—discipline, light, and narrative philosophy behind the work.",
   fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
   landingPhrases: [
     { phrase: "Painterly Western Photography", rating: 5, use: true },
@@ -905,7 +905,7 @@ cowboyPainterlyFineArtPhotographyHub: {
 
 westernWallArtHub: {
   path: "/Western-Wall-Art",
-  def: "Museum-quality Western wall art for collectors of narrative fine art. Unlike decorative posters or mass-produced prints, fine art Western wall art emphasizes archival quality, narrative depth, and the craftsmanship of original photographic work.",
+  def: "Museum-quality Western wall art for collectors of narrative fine art. Unlike decorative posters or mass-produced prints, fine art Western wall art emphasizes archival quality, narrative depth, and the deliberate finishing of original photographic work.",
   fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
   landingPhrases: [
     // Primary commercial-intent phrases (rating 5)
@@ -1099,7 +1099,7 @@ glossaryWesternStylePhotography: {
 
 glossaryVintageWesternPhotography: {
   path: "/vintage-western-art",
-  def: "Vintage Western photography refers to imagery that evokes historical Western eras through tone, restraint, and narrative structure rather than literal age or archival origin. It captures the spirit of the frontier through deliberate craft, not nostalgic imitation. Explore <a href='/vintage-western-art'>Vintage Western Art</a> | <a href='/Western-Fine-Art-Photography'>Western Fine Art Photography</a>.",
+  def: "Vintage Western photography refers to imagery that evokes historical Western eras through tone, restraint, and narrative structure rather than literal age or archival origin. It captures the spirit of the frontier through deliberate process, not nostalgic imitation. Explore <a href='/vintage-western-art'>Vintage Western Art</a> | <a href='/Western-Fine-Art-Photography'>Western Fine Art Photography</a>.",
   landingPhrases: [
     { phrase: "vintage western photography", rating: 4, use: true, link: "/vintage-western-art" },
     { phrase: "vintage cowboy photography", rating: 4, use: true, link: "/vintage-western-art" },
@@ -1166,7 +1166,7 @@ glossaryBlackWhiteWesternArt: {
 
 glossaryContemporaryWesternArt: {
   path: "/Contemporary-Western-Art",
-  def: "Contemporary Western art carries the subject, history, and emotional weight of the American West into present-day visual language. In photography, it extends the Western tradition through current craft, psychological presence, and authorship rather than nostalgia alone. Explore <a href='/Contemporary-Western-Art'>Contemporary Western Art</a> | <a href='/Western-Fine-Art-Photography'>Western Fine Art Photography</a>.",
+  def: "Contemporary Western art carries the subject, history, and emotional weight of the American West into present-day visual language. In photography, it extends the Western tradition through present-day practice, psychological presence, and authorship rather than nostalgia alone. Explore <a href='/Contemporary-Western-Art'>Contemporary Western Art</a> | <a href='/Western-Fine-Art-Photography'>Western Fine Art Photography</a>. Wayne Heim makes <a href='/Contemporary-Western-Art'>contemporary Western art</a> as camera-based painterly fine art — real photographs, painterly finishing, narrative intent.",
   landingPhrases: [
     { phrase: "contemporary Western art", rating: 5, use: true, link: "/Contemporary-Western-Art" },
     { phrase: "modern Western art", rating: 4, use: true, link: "/Contemporary-Western-Art" },
@@ -2038,7 +2038,7 @@ sunsetsTraditional: {
 
 landscapeTraditional: {
   path: "/Galleries/Fine-Art-Photography/Landscapes",
-  def: "Traditional landscapes—composition, craft, and honest light.",
+  def: "Traditional landscapes—composition, discipline, and honest light.",
 
   landingPhrases: [
     // Core traditional authority (WritingBrain uses these)

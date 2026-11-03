@@ -619,11 +619,11 @@ const buildSections = (keys: Array<keyof typeof sources>, options: GridSectionOp
     };
   });
 
-const faqFor = (label: string, subject: string) => [
+const faqFor = (label: string, subject: string, identityPhrase = "contemporary painterly fine art photography") => [
   {
     q: `What does ${label} mean on this page?`,
     a: [
-      `${label} here means Wayne Heim's contemporary painterly fine art photography shaped around ${subject}, collector-grade print presentation, and authored Western atmosphere rather than generic decor.`,
+      `${label} here means Wayne Heim's ${identityPhrase} shaped around ${subject}, collector-grade print presentation, and authored Western atmosphere rather than generic decor.`,
     ],
   },
   {
@@ -886,6 +886,7 @@ function makePage({
   gridIntroCopy,
   gatewayIntroCopy,
   gatewaySupportingCopy,
+  gatewaySupportingCopyHtml = false,
   gatewayKicker,
   conceptBlock1Title,
   conceptBlock1Copy,
@@ -921,6 +922,7 @@ function makePage({
   dockCoreCount = 3,
   centerDock,
   faqItems,
+  faqIdentityPhrase,
   relatedCollectionsSlug,
 }: {
   pagePath: string;
@@ -946,6 +948,7 @@ function makePage({
   gridIntroCopy?: string;
   gatewayIntroCopy?: string;
   gatewaySupportingCopy?: string;
+  gatewaySupportingCopyHtml?: boolean;
   gatewayKicker?: string;
   conceptBlock1Title?: string;
   conceptBlock1Copy?: string;
@@ -991,6 +994,7 @@ function makePage({
   dockCoreCount?: number;
   centerDock?: any[];
   faqItems?: Array<{ q: string; a: string[] }>;
+  faqIdentityPhrase?: string;
   relatedCollectionsSlug?: string;
 }) {
   const gridSections = buildSections(sections, { offsets, limits, timeZones, titles, descriptions, alternates });
@@ -1060,6 +1064,7 @@ function makePage({
       gatewayCollectionName: label,
       gatewayIntroCopy: gatewayIntroCopy || `${label} by Wayne Heim - ${subject} for living rooms, offices, lodges, ranch interiors, hospitality spaces, and collector walls.`,
       gatewaySupportingCopy: gatewaySupportingCopy || `These works begin as photography, then are shaped through Heim's painterly process into fine art with atmosphere, human presence, and collector-grade wall presence. The collection opens with the Sketch Series, ${sketchPrintSizes} prints from ${sketchPrintPrice} - sized for shelves, desks, and introductory collecting. It scales through open-edition Foundation works, signed Chronicle editions with numbered certificates, and ultra-limited Legend pieces for collectors who want permanence on the wall.\n\nClick into any section to compare prints, read the image story, and view collector and sizing details.`,
+      gatewaySupportingCopyHtml,
       trustBarCopy: "Archival fine art prints produced to order by K4 Studios. Chronicle and Legend limited editions are individually signed and numbered, with certificate of authenticity included.",
       gatewayKicker: gatewayKicker || `K4 Studios - ${label} Catalog`,
       conceptBlock1Title,
@@ -1091,7 +1096,7 @@ function makePage({
       faqKicker: "Print & Collector Questions",
       faqTitle: faqTitle || `${label} FAQ`,
     },
-    faqItems: faqItems || faqFor(label, subject),
+    faqItems: faqItems || faqFor(label, subject, faqIdentityPhrase),
     gridSections,
     gatewayVideoWidget: resolvedGatewayVideoWidget,
     layoutVariant,
@@ -1139,7 +1144,7 @@ export const commercialIntentPages = {
     ].join("\n\n"),
     layoutVariant: "cinematic-concept-series-top",
     seoTitle: "American Western Art Prints - Cowboy, Frontier & Native Portraits",
-    seoDescription: `American Western art prints by Wayne Heim - cowboy portraits, frontier narratives, and Native American portrait work shaped through painterly photographic craft. Prints from ${getFormattedLowestStandardPrintPrice()} through signed limited editions.`,
+    seoDescription: `American Western art prints by Wayne Heim - cowboy portraits, frontier narratives, and Native American portrait work shaped through a camera-based painterly process. Prints from ${getFormattedLowestStandardPrintPrice()} through signed limited editions.`,
     commercialH1: "American Western Art Prints for Collectors",
     deck: "Six print routes, {catalogImageCount} works: cowboy portraits, Native American portrait work, and frontier narratives in color and black and white, organized for collectors around the human and historical weight of the American West.",
     gatewayIntroCopy:
@@ -1278,7 +1283,7 @@ export const commercialIntentPages = {
     archiveName: "Wild West",
     seoTitle: "Contemporary Western Art - Story-Driven Prints by Wayne Heim",
     seoDescription:
-      `Contemporary Western art by Wayne Heim. Camera-based painterly Western fine art, cowboy portraits, frontier narratives, Native American portrait work, and historical storytelling prints from ${sketchPrintPrice}.`,
+      `Contemporary Western art by Wayne Heim. Camera-based painterly fine art, cowboy portraits, frontier narratives, Native American portrait work, and historical storytelling prints from ${sketchPrintPrice}.`,
     commercialH1: "Contemporary Western Art With History Still Inside It",
     deck:
       "Six routes, {catalogImageCount} works: contemporary Western narratives, cowboy portraits, Native American portrait work, black and white story pieces, tonal cowboy studies, and Western landscapes shaped through painterly photography and historical storytelling.",
@@ -1302,7 +1307,7 @@ export const commercialIntentPages = {
       narrativeColor:
         "Start with color narrative work when contemporary Western art needs story, atmosphere, implication, and the unresolved frontier moment rather than icon-only nostalgia.",
       cowboyColor:
-        "Contemporary cowboy portraits bring the figure forward as a person first: face, posture, clothing, weather, and character shaped through camera-based painterly craft.",
+        "Contemporary cowboy portraits bring the figure forward as a person first: face, posture, clothing, weather, and character shaped through a camera-based painterly process.",
       nativeColor:
         "Native American portrait work gives the contemporary Western page deeper historical ground and living presence, widening the field beyond cowboy shorthand.",
       narrativeBlackWhite:
@@ -1344,7 +1349,7 @@ export const commercialIntentPages = {
       {
         q: "What makes Wayne Heim a contemporary Western artist?",
         a: [
-          "Wayne Heim uses photography as the foundational element in story-driven Western fine art. The work begins with camera-based evidence, then moves through painterly finishing, title, narrative writing, and deliberate incompleteness so the image carries history, character, and story rather than simple documentation.",
+          "Wayne Heim makes contemporary Western art as camera-based painterly fine art — real photographs, painterly finishing, narrative intent. Wayne Heim uses photography as the foundational element in story-driven Western fine art. The work begins with camera-based evidence, then moves through painterly finishing, title, narrative writing, and deliberate incompleteness so the image carries history, character, and story rather than simple documentation.",
         ],
       },
       {
@@ -1356,13 +1361,13 @@ export const commercialIntentPages = {
       {
         q: "Can photography be contemporary Western art?",
         a: [
-          "Yes. Photography becomes contemporary Western art when it is used with authorship, composition, narrative intent, and interpretive craft. At K4 Studios, the camera grounds the work in real presence, while the painterly process carries it into finished fine art.",
+          "Yes. Photography becomes contemporary Western art when it is used with authorship, composition, narrative intent, and interpretive process. At K4 Studios, the camera grounds the work in real presence, while the painterly process carries it into finished fine art.",
         ],
       },
       {
         q: "Why does this page connect contemporary art with the past?",
         a: [
-          "Because Western art loses depth when it becomes only icons and nostalgia. This page treats the past as the root system: Remington and Russell's storytelling discipline, old photographic memory, frontier labor, Native presence, and the land as pressure. The work is contemporary because those roots are reinterpreted through present-day photographic craft.",
+          "Because Western art loses depth when it becomes only icons and nostalgia. This page treats the past as the root system: Remington and Russell's storytelling discipline, old photographic memory, frontier labor, Native presence, and the land as pressure. The work is contemporary because those roots are reinterpreted through present-day photographic process.",
         ],
       },
       {
@@ -1414,13 +1419,14 @@ export const commercialIntentPages = {
     deck: "Color and black and white frontier narrative scenes where atmosphere, implication, and withheld story carry the cinematic pressure that Remington and Russell built into paint — and that Hollywood borrowed to build the Western film.",
     gatewayKicker: "K4 Studios — Cinematic Western Art",
     gatewayIntroCopy: "Not movie art. The tradition that made the movies look the way they do.",
-    gatewaySupportingCopy: `Search for "cinematic western art" and Google returns movie posters, film lists, and museum exhibitions about how Remington and Russell influenced Hollywood.\n\nThat is the right neighborhood. But it is looking backward.\n\nCinematic Western art is not a film genre and it is not a historical category. It is a living visual discipline — one that Remington and Russell established before Hollywood existed, that Hollywood borrowed wholesale, and that has been largely abandoned by the contemporary Western art world in favor of heroic spectacle and decorative frontier imagery.\n\nWayne Heim's work is a direct response to that abandonment. These are not photographs of Western subjects. They are authored narrative works built in the same tradition as Remington's A Misdeal — the painting so charged with unresolved story pressure that John Ford used it as a visual reference for decades of Western films. The withheld moment. The breath before the draw. The consequence still arriving.\n\nThat tradition didn't end with Remington. It just stopped being made.`,
+    gatewaySupportingCopy: `Search for "cinematic western art" and Google returns movie posters, film lists, and museum exhibitions about how Remington and Russell influenced Hollywood.\n\nThat is the right neighborhood. But it is looking backward.\n\nCinematic Western art is not a film genre and it is not a historical category. It is a living visual discipline — one that Remington and Russell established before Hollywood existed, that Hollywood borrowed wholesale, and that has been largely abandoned by the <a href="/Contemporary-Western-Art">contemporary Western art</a> world in favor of heroic spectacle and decorative frontier imagery.\n\nWayne Heim's work is a direct response to that abandonment. These are not photographs of Western subjects. They are authored narrative works built in the same tradition as Remington's A Misdeal — the painting so charged with unresolved story pressure that John Ford used it as a visual reference for decades of Western films. The withheld moment. The breath before the draw. The consequence still arriving.\n\nThat tradition didn't end with Remington. It just stopped being made.`,
+    gatewaySupportingCopyHtml: true,
     archiveContextCopy: `Every work on this page is available as a fine art print — archival paper or wood — with the Sketch Series opening at ${sketchPrintPrice}. Click into any image to read the story, compare print options, sizes, and collector details. Questions about a specific piece? Reach Wayne directly at <a href='mailto:wayne@k4studios.com'>wayne@k4studios.com</a>.`,
     collectionIntro: "",
     conceptBlock1Title: "The Tradition",
     conceptBlock1Copy: `Remington and Russell were not painters of the West. They were narrative architects who used the West as their subject. Their most powerful images are not the ones that show you what the frontier looked like. They are the ones that make you feel what it was like to be inside a moment that hasn't finished yet.\n\nA Misdeal. A card game gone wrong. The gunman already in motion. The consequence still in the air. The viewer arrives after the trigger point and before the resolution — held in the pressure of what comes next, which the image refuses to show.\n\nJohn Ford studied Remington's paintings as storyboards. He wanted his films to have "the burned-out, brown look of a Remington painting." Spielberg collected Rockwell — fifty works — because, in his words, "He was always on my mind because I had a great deal of respect for how he could tell stories in a single frozen image. Entire stories."\n\nHollywood didn't invent the cinematic Western. It recognized something that painters had already built and borrowed it for the screen. The discipline of the withheld moment — the narrative pressure of a story held open rather than closed — was already fully developed in paint before a single frame of film was shot.\n\nThe color frontier narrative works below operate in that tradition. Each image holds a moment that refuses to close. Click into any image to read the authored story — and notice that the story deepens the uncertainty rather than resolving it.`,
     conceptBlock2Title: "The Narrative Vacuum",
-    conceptBlock2Copy: `Walk through a major Western art auction today. Three hundred works. Paintings, bronzes, prints. Russell, Remington, the Taos painters — represented in the historical section, properly revered. Then the contemporary work. Landscapes of extraordinary technical skill. Portraits of dignity and presence. Cowboys rendered with photographic precision.\n\nBut the narrative is gone.\n\nContemporary Western art largely abandoned the discipline that made Russell and Remington matter — the unresolved moment, the story held in tension, the image that makes the viewer feel the weight of what isn't shown. What replaced it was heroic spectacle and decorative frontier imagery. Beautiful. Accomplished. And closed — images that deliver everything on first viewing and ask nothing in return.\n\nHemingway called his approach the iceberg theory. The dignity of movement comes from what is omitted. Seven-eighths of the story lives below the surface. What shows above the waterline is only what is needed to make the reader feel the full weight of what isn't shown. The key is that the writer knows the whole story — and chooses what single moment to show, trusting the submerged weight to press up through what is visible.\n\nRockwell understood the same principle in paint. His most powerful images are not the ones where everything is explained — they are the ones where a single interrupted gesture, a look caught mid-thought, or a pause before a decision reveals an entire interior world that the viewer constructs from their own experience.\n\nThe black and white narrative works below carry this principle in its most austere form. Without color warmth to lean on, the image must earn every response it produces through structure alone — shadow, silence, and the felt weight of what hasn't resolved.`,
+    conceptBlock2Copy: `Walk through a major Western art auction today. Three hundred works. Paintings, bronzes, prints. Russell, Remington, the Taos painters — represented in the historical section, properly revered. Then the contemporary work. Landscapes of extraordinary technical skill. Portraits of dignity and presence. Cowboys rendered with photographic precision.\n\nBut the narrative is gone.\n\n<a href="/Contemporary-Western-Art">Contemporary Western art</a> largely abandoned the discipline that made Russell and Remington matter — the unresolved moment, the story held in tension, the image that makes the viewer feel the weight of what isn't shown. What replaced it was heroic spectacle and decorative frontier imagery. Beautiful. Accomplished. And closed — images that deliver everything on first viewing and ask nothing in return.\n\nHemingway called his approach the iceberg theory. The dignity of movement comes from what is omitted. Seven-eighths of the story lives below the surface. What shows above the waterline is only what is needed to make the reader feel the full weight of what isn't shown. The key is that the writer knows the whole story — and chooses what single moment to show, trusting the submerged weight to press up through what is visible.\n\nRockwell understood the same principle in paint. His most powerful images are not the ones where everything is explained — they are the ones where a single interrupted gesture, a look caught mid-thought, or a pause before a decision reveals an entire interior world that the viewer constructs from their own experience.\n\nThe black and white narrative works below carry this principle in its most austere form. Without color warmth to lean on, the image must earn every response it produces through structure alone — shadow, silence, and the felt weight of what hasn't resolved.`,
     conceptBlock3Title: "The One-Image Movie — Continuation, Not Homage",
     conceptBlock3Copy: `Wayne Heim's One-Image Movie architecture is not an homage to Remington and Russell. It is a continuation of the same discipline through a different medium.\n\nEvery One-Image Movie is built to remain deliberately incomplete. The image opens the scene. The title turns the handle. The authored story lights the room — but does not close the door. The viewer steps through and completes the story with their own instinct, colored by their own life.\n\nThis is why no two people experience the same One-Image Movie in exactly the same way. The image reaches out. The viewer brings the rest. Memory, emotion, and lived history complete the circuit. The viewer is the final author of the story that lives beyond the frame's edge.\n\nCollectors who live with this work describe images as "scenes from a film I somehow remember" — moments that feel familiar before they can explain why. That is the signature of an image built to hold story pressure rather than deliver it.\n\nThese works are available as archival fine art prints — with the Sketch Series opening at ${getFormattedLowestStandardPrintPrice()}. The same narrative architecture lives in every edition, from the smallest shelf print to the ultra-limited Legend pieces built for permanent collector walls. The story doesn't scale with the size. It is fully present at every format.`,
     faqItems: [
@@ -1714,7 +1720,7 @@ Then look at the contemporary section. Landscapes of extraordinary technical acc
 
 Beautiful. Accomplished. And largely closed — images that deliver everything on first viewing and ask nothing in return.
 
-The narrative discipline that made Russell and Remington matter — the withheld moment, the story held in tension, the image that presses the viewer to feel the weight of what isn't shown — largely disappeared from contemporary Western art. What replaced it was heroic spectacle and decorative frontier imagery dressed in the language of fine art.
+The narrative discipline that made Russell and Remington matter — the withheld moment, the story held in tension, the image that presses the viewer to feel the weight of what isn't shown — largely disappeared from <a href="/Contemporary-Western-Art">contemporary Western art</a>. What replaced it was heroic spectacle and decorative frontier imagery dressed in the language of fine art.
 
 Spielberg collected fifty Rockwell paintings because, in his words, Rockwell had \"a great deal of respect for how he could tell stories in a single frozen image. Entire stories.\" That discipline — the Hemingway iceberg applied to paint and then to photography — is what Wayne Heim's cowboy portrait work attempts to carry forward.
 
@@ -3457,6 +3463,7 @@ The tradition that Russell and Remington established and that serious Western co
     conceptBlock4Copy: "Landscape is one of the strongest signals in Western fine art photography because the West has always been read through distance and scale. But a landscape print only holds when the land feels like a force, not a backdrop.\n\nThe Western landscape works below give the collection its open register: mountains, desert air, plains, fences, weather, and the kind of silence that makes the human figure elsewhere feel smaller and more real.",
     archiveContextTitle: "Continue Through Western Fine Art Photography",
     archiveContextCopy: "Use this page as the medium-level overview: start with the subject that carries the strongest pull, then move sideways into story, portrait, and landscape. Image pages include the story, available sizes, print options, and edition details. For help choosing scale or presentation, reach Wayne directly at wayne@k4studios.com.",
+    faqIdentityPhrase: "camera-based painterly fine art",
   }),
   westernFineArtPhotographyCollection: makePage({
     pagePath: "/western-fine-art-photography-collection",
@@ -3906,6 +3913,7 @@ The tradition that Russell and Remington established and that serious Western co
     archiveContextTitle: "Browse the Western Storytelling Photography Collection",
     archiveContextCopy:
       "Western storytelling photography at K4 Studios is organized by four ways a single frame can carry narrative pressure: color frontier scenes, black and white frontier scenes, color cowboy portraits, and black and white cowboy portraits.\n\nWhen an image creates the right unfinished question, open it for the authored story, available sizes, print format, and collector information. The goal is not just to choose a scene, but to choose the story you want living on the wall. Questions about a specific storytelling print? Contact wayne@k4studios.com.",
+    faqIdentityPhrase: "camera-based painterly fine art",
   }),
   westernWallArtForInteriorDesigners: makePage({
     pagePath: "/Western-Wall-Art-for-Interior-Designers",

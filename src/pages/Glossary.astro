@@ -579,6 +579,19 @@ const RAW_TERMS: Term[] = GLOSSARY_ENTRIES.map(entry => ({
     : null,
 }));
 
+function splitContemporaryWesternArtDefinition(definition: string) {
+  const needle = "Wayne Heim makes contemporary Western art";
+  const start = definition.indexOf(needle);
+  if (start < 0) return null;
+  const anchorStart = start + "Wayne Heim makes ".length;
+  const anchorEnd = anchorStart + "contemporary Western art".length;
+  return {
+    before: definition.slice(0, anchorStart),
+    anchor: definition.slice(anchorStart, anchorEnd),
+    after: definition.slice(anchorEnd),
+  };
+}
+
 const LETTERS = Array.from(new Set(RAW_TERMS.map(t => (t.label?.[0] || "#").toUpperCase()))).sort();
 
 const GLOSSARY_GROUPS: Array<{ title: string; kinds: GlossaryEntryKind[]; intro: string }> = [
@@ -904,6 +917,9 @@ const breadcrumbsJSON = getBreadcrumbList([
                       const blurb      = blurbPool.length
                         ? blurbPool[rotatingIndex(`${t.label}|cta`, blurbPool.length, 'day')]
                         : "Browse the collection";
+                      const linkedDefinition = t.label === "Contemporary Western Art"
+                        ? splitContemporaryWesternArtDefinition(t.definition || "")
+                        : null;
                       return (
                         <li class="rounded-2xl border border-gray-200 p-5 shadow-sm hover:shadow transition-shadow">
                           <div class="flex items-start gap-4">
@@ -929,7 +945,11 @@ const breadcrumbsJSON = getBreadcrumbList([
                                   {t.origin === "landing" ? "Concept" : "Example"}
                                 </span>
                               </div>
-                              {t.definition && (
+                              {linkedDefinition ? (
+                                <p class="mt-1 text-sm text-gray-700">
+                                  {linkedDefinition.before}<a href="/Contemporary-Western-Art" class="underline">{linkedDefinition.anchor}</a>{linkedDefinition.after}
+                                </p>
+                              ) : t.definition && (
                                 <p class="mt-1 text-sm text-gray-700">{t.definition}</p>
                               )}
                               <div class="mt-2 flex flex-wrap items-center gap-3 text-sm">

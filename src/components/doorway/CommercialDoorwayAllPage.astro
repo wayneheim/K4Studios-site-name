@@ -247,6 +247,7 @@ const gatewayCollectionName = formatCopy(copy.gatewayCollectionName || collectio
 const gatewayBrandClass = String(copy.gatewayBrandClass || "").trim();
 const gatewayIntroCopy = formatCopy(copy.gatewayIntroCopy || `${imageCount} painterly ${variantName.toLowerCase()} ${collectionName.toLowerCase()} fine art photographs by Wayne Heim, available as archival fine art prints from ${getFormattedLowestStandardPrintPrice()}. Four edition tiers - open-edition studies to ultra-limited signed collector works - on fine art paper and Baltic Birch wood panels.`);
 const gatewaySupportingCopy = formatCopy(copy.gatewaySupportingCopy || `Every image below is a complete story in a single frame. Click any work to read the narrative, explore collector notes, and view print details.`);
+const gatewaySupportingCopyHtml = Boolean(copy.gatewaySupportingCopyHtml);
 const gatewaySupportingParagraphs = gatewaySupportingCopy
   .split(/\n{2,}/)
   .map((paragraph) => paragraph.trim())
@@ -673,7 +674,9 @@ const faqRight = faqItems.slice(faqSplitIndex);
             : gatewayBrandLabelDisplay}
         </h1>
         <p class="gateway-copy-text">{gatewayIntroCopy}</p>
-        {gatewaySupportingParagraphs.map((paragraph) => (
+        {gatewaySupportingParagraphs.map((paragraph) => gatewaySupportingCopyHtml ? (
+          <p class="gateway-copy-text" set:html={paragraph} />
+        ) : (
           <p class="gateway-copy-text">{paragraph}</p>
         ))}
       </div>

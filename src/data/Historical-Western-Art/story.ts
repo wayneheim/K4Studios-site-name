@@ -16,7 +16,7 @@ export const historicalStory = [
     subhead: "From Remington to the Lens",
     paragraphs: [
       "The visual language of the American West was shaped by painters\u2014Frederic Remington, Charles M. Russell, Albert Bierstadt\u2014and by early photographers like Timothy O\u2019Sullivan and Edward S. Curtis. Together they established the aesthetic vocabulary of frontier art: drama held in landscape, character revealed through stillness, and narrative carried by a single decisive moment.",
-      "This work continues that lineage through a different medium. The photographs here are not studies of Western painting\u2014they are a modern continuation of the same storytelling impulse, applied through painterly photographic craft to the same historical ground."
+      "This work continues that lineage through a different medium. The photographs here are not studies of Western painting\u2014they are a modern continuation of the same storytelling impulse, applied through a camera-based painterly process to the same historical ground."
     ]
   },
 

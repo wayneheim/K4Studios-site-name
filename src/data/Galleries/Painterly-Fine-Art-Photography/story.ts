@@ -6,6 +6,7 @@ export const painterlyStory = [
     paragraphs: [
       "Wayne Heim's painterly photography begins with the camera, but it does not end with documentation. It is built from years of visual storytelling, fine art discipline, and a lifelong instinct for shaping an image until it feels less like something seen and more like something remembered.",
       "Wayne Heim's painterly fine art begins as camera-based photography. The camera records the moment; the artist shapes what remains. Drawing on the trained hand and eye of an award-winning medical illustrator, Wayne builds each final image through light, color, texture, atmosphere, focus, and restraint - not generated, not assembled by formula, but shaped through judgment and human imagination.",
+      "Wayne Heim makes contemporary Western art as camera-based painterly fine art — real photographs, painterly finishing, narrative intent.",
       "To Wayne, painterly photography is not a filter, preset, or digital shortcut. It is a way of building a photograph with the emotional gravity of painting - using light, atmosphere, composition, texture, and restraint to pull the viewer into a moment already in motion.",
       "His work carries the spirit of modern Pictorialism into <a href=\"/Western-Fine-Art-Photography\">Western fine art photography</a>, historical scenes, landscapes, portraits, and Americana subjects. Real people. Real light. Real places. But shaped with the eye of an illustrator and the patience of a storyteller.",
       "For a focused exact-match entry into the Western branch, see <a href=\"/western-painterly-fine-art-photography\">Western painterly fine art photography</a>; for the cowboy-specific branch, see <a href=\"/cowboy-painterly-fine-art-photography\">cowboy painterly fine art photography</a>.",
@@ -90,7 +91,7 @@ export const painterlyStory = [
     paragraphs: [
       "These images are made for rooms where atmosphere matters - studies, libraries, lodges, historic homes, creative spaces, and quiet corners where art is allowed to hold a little mystery.",
       "A painterly photograph by Wayne Heim is not meant to behave like ordinary wall decor. It is meant to gather attention over time. The longer you live with it, the more the story opens.",
-      "Available as archival fine art prints and select <a href=\"/Other/K4-Select-Series/Engrained\">Engrained wood pieces</a>, each image is crafted as a lasting object - part photograph, part story, part invitation."
+      "Available as archival fine art prints and select <a href=\"/Other/K4-Select-Series/Engrained\">Engrained wood pieces</a>, each image is finished as a lasting object - part photograph, part story, part invitation."
     ]
   },
 

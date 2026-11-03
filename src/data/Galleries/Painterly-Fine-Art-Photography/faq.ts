@@ -10,11 +10,11 @@ export const facingFAQ = [
   },
 
   {
-    q: "How is painterly photography rooted in real photographic craft?",
+    q: "How is painterly photography rooted in real photographic process?",
     a: [
       "Painterly photography is built from real light, real people, and real environments. Every image begins with intentional photography and is shaped through hands-on, fine art post-production.",
       // CHANGED: tightened phrasing, removed slight redundancy
-      "Wayne’s process is rooted in photographic craft and historical research — not algorithms or shortcuts — resulting in artwork with authenticity, depth, and narrative integrity.",
+      "Wayne’s process is rooted in photography itself and historical research — not algorithms or shortcuts — resulting in artwork with authenticity, depth, and narrative integrity.",
       `For a behind-the-scenes look at Wayne’s painterly process, see <a href="/Blog/what-is-painterly-photography">What Is Painterly Photography?</a>`
     ],
   },

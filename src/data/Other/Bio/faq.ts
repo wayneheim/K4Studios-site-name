@@ -10,7 +10,7 @@ export const facingFAQ = [
     q: "What makes Wayne Heim’s photography different from others in the genre?",
     a: [
       "Wayne’s work isn’t just about the subject — it’s about the **story** behind the subject. His painterly fine art photography fuses narrative, historical context, and emotional tone into each frame.",
-      "While many capture what is, Wayne crafts what could have been. He treats each image like a scene from a forgotten film or an unwritten novel, built with the intention of making the viewer wonder: *Who were they? What happened here?*"
+      "While many capture what is, Wayne imagines what could have been. He treats each image like a scene from a forgotten film or an unwritten novel, built with the intention of making the viewer wonder: *Who were they? What happened here?*"
     ],
   },
   {
@@ -31,7 +31,7 @@ export const facingFAQ = [
     q: "Does Wayne use AI or preset filters in his work?",
     a: [
       "No. Every image is hand-tuned — layer by layer, choice by choice. Wayne doesn’t believe in automated shortcuts. Instead, he builds tone, texture, and meaning through a painter’s mindset.",
-      "His imagery is deeply rooted in **craft, not code**. The results are timeless — not trend-driven."
+      "His imagery is deeply rooted in **process, not code**. The results are timeless — not trend-driven."
     ],
   },
   {

@@ -91,7 +91,7 @@ export const narrativeWesternArtStory = [
       "At K4 Studios, narrative Western art is pursued through painterly photography and shaped through what we call <a href=\"/Other/One-Image-Movie\">One-Image Movies</a>, images constructed as fragments of a larger narrative and designed to be completed in the viewer's imagination.",
       "Light is sculpted. Tone is restrained. Texture is layered until the image carries the atmosphere of remembered story while remaining unmistakably photographic.",
       "This story-first approach still belongs to the larger lineage of <a href=\"/American-Western-Art\">American Western Art</a>, and it often overlaps with <a href=\"/Western-Fine-Art-Photography\">Western Fine Art Photography</a> when photography is used to carry narrative rather than merely record subject.",
-      "This process is not about turning photographs into fake paintings. It is about using photographic craft to deepen story, mood, and emotional gravity.",
+      "This process is not about turning photographs into fake paintings. It is about using a camera-based painterly process to deepen story, mood, and emotional gravity.",
       "The result is Western art built not only to be seen, but to be read."
     ]
   },
