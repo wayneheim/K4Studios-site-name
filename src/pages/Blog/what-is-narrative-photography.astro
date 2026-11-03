@@ -6,7 +6,7 @@ import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
-import { getBreadcrumbList, getStructuredData } from "@/components/utils/getStructuredData.ts";
+import { getBreadcrumbList, getFAQPageStructuredData, getStructuredData } from "@/components/utils/getStructuredData.ts";
 
 import "@/styles/global.css";
 
@@ -38,8 +38,19 @@ const image3 = {
   alt: "Landscape functioning as emotional environment rather than scenery"
 };
 
-const pageTitle = "What Is Narrative Photography? - Wayne Heim";
+const pageTitle = "What Is Narrative Photography? Definition and Meaning";
 const pageDescription = "Narrative photography is photography that implies a larger story rather than simply recording a scene. This guide defines how narrative enters the frame through atmosphere, implication, and structure.";
+
+const narrativePhotographyFaq = [
+  { q: "What is narrative photography?", a: "Narrative photography is photography shaped to imply a larger story. It does not merely show what was in front of the camera. It opens the frame outward until the viewer begins to sense what happened before the moment, what may happen after it, and what emotional pressure lives inside it." },
+  { q: "How is narrative photography different from documentary photography?", a: "Documentary photography records what stood before the camera. Narrative photography is authored: the story is embedded in what is shown, what is withheld, and where the tension sits. Both may photograph real subjects and real places; only one asks the viewer to remain inside the frame and finish the story." },
+  { q: "Can a single photograph really tell a story?", a: "Yes — not by summarizing a plot, but by holding a moment between before and after. Posture, atmosphere, gesture, and consequence imply the rest. The viewer supplies the motion; the frame supplies the pressure." },
+  { q: "What makes a photograph narrative instead of just dramatic?", a: "Drama is volume; narrative is implication. A dramatic image shows intensity. A narrative image withholds resolution — restraint leaves the viewer room to enter, and the story keeps opening each time they return to it." },
+  { q: "How does narrative photography work in Western art?", a: "In Western subjects, narrative photography works close to the conditions that formed the figure — the history, hardship, and myth that live near one another in the West. At K4 Studios that form is called Narrative Western Art: story as the governing principle of the frame." },
+  { q: "What is a One-Image Movie?", a: "A One-Image Movie™ is Wayne Heim's approach to creating a cinematic narrative experience within a single work of visual art. The image offers an immediate, believable moment while deliberately leaving part of its story unresolved. The title and authored primer may then reveal another interpretation, rewarding the viewer with a changed understanding of what they first believed they saw." },
+];
+
+const faqStructuredData = getFAQPageStructuredData(narrativePhotographyFaq, canonicalUrl);
 
 const structuredImageUrls = [
   getAbsoluteProxySrc(headerImage.id, "l"),
@@ -110,7 +121,7 @@ const meta = {
 const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-decoration: none;' onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Blog</a> › What Is Narrative Photography?`;
 ---
 
-<BaseLayout title={pageTitle} structuredDataJSON={structuredData} breadcrumbsJSON={breadcrumbStructuredData} meta={meta}>
+<BaseLayout title={pageTitle} structuredDataJSON={structuredData} extraStructuredDataJSON={faqStructuredData} breadcrumbsJSON={breadcrumbStructuredData} meta={meta}>
   <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
     <div class="drawer-mode">
       <LandingHeader client:load breadcrumb={blogBreadcrumb} />
@@ -185,6 +196,14 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         <p>This is also why narrative photography often feels cinematic without needing motion. The frame is still, but the viewer’s mind is not.</p>
 
         <div class="section-heading-with-line">
+          <h2>Roots: From Record to Story</h2>
+        </div>
+
+        <p>Narrative photography did not begin with the camera. It began with the older Western tradition of the told moment — Russell and Remington building paintings that implied a before and an after, images a viewer could enter and finish. Early photography split two ways from that inheritance. One branch became the record: documentary evidence, the camera as witness. The other — the pictorialists first, then photographers who treated the frame as authored — kept the older ambition: a single image carrying more life than it explains.</p>
+
+        <p>The Western branch of that second line has a specific weight. The legends of the West are only the visible fraction; beneath them sits the narrative foundation — the armature beneath the legend: the struggles, losses, and forgotten stories of the people who built it. Narrative photography that ignores that foundation produces icons. Work that stays close to it produces stories a viewer can stand inside. That is the ground Narrative Western Art works from, and it is where the One-Image Movie™ takes its name: one frame, held open, asking the viewer to finish the story.</p>
+
+        <div class="section-heading-with-line">
           <h2>What This Looks Like in Practice</h2>
         </div>
 
@@ -193,27 +212,62 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
               <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${image1.id}`}>
               <img src={image1.src} alt={image1.alt} loading="lazy" />
             </a>
-            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
-              Portrait as threshold — story pressing through stillness
-            </figcaption>
           </figure>
           <figure>
               <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${image2.id}`}>
               <img src={image2.src} alt={image2.alt} loading="lazy" />
             </a>
-            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
-              Suspense and implication — the frame as hinge moment
-            </figcaption>
           </figure>
           <figure>
               <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${image3.id}`}>
               <img src={image3.src} alt={image3.alt} loading="lazy" />
             </a>
-            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
-              Landscape as emotional environment rather than scenery alone
-            </figcaption>
           </figure>
         </div>
+
+        <h3>Portrait as Threshold — Story Pressing Through Stillness</h3>
+
+        <p>A narrative portrait can be more than the record of a face.</p>
+
+        <p>An expression, a gesture, a moment of hesitation, or a glance beyond the frame may suggest a life the viewer cannot fully see. The subject stands at the threshold of a larger story, carrying something that remains unspoken.</p>
+
+        <p>In Heim's Western portraiture, the clothing and historical setting establish a world, but the human presence gives it consequence.</p>
+
+        <p>The question is not simply who this person is.</p>
+
+        <p>It is what they may be remembering, confronting, concealing, or preparing to do.</p>
+
+        <h3>Suspense and Implication — The Frame as a Hinge Moment</h3>
+
+        <p>Narrative art often draws its strength from what remains unresolved.</p>
+
+        <p>A single frame may present enough information for the viewer to form an immediate interpretation while withholding the details that would make the story certain.</p>
+
+        <p>Heim calls this deliberate space the Narrative Vacuum.</p>
+
+        <p>His artwork <em>Lessons</em> provides an example. A seemingly recognizable interaction invites the viewer to begin constructing a story. Yet the relationships, motivations, and meaning of the moment remain open to interpretation.</p>
+
+        <p>Its interactive companion, <em>Who's Playing Whom?</em>, explores how the same visual evidence can support different readings.</p>
+
+        <p>The exercise reveals something fundamental about narrative art: the viewer does not merely observe the story. The viewer participates in constructing it.</p>
+
+        <p>In Heim's One-Image Movie approach, the title and accompanying primer may introduce another layer — reframing the initial interpretation and inviting the viewer to return to the image with a different understanding.</p>
+
+        <p>The first viewing establishes belief. The second can change it.</p>
+
+        <h3>Landscape as Emotional Environment — The Land as Participant</h3>
+
+        <p>In narrative photography, the landscape need not serve merely as a setting.</p>
+
+        <p>Weather, light, distance, terrain, and atmosphere can carry emotional weight equal to the figures within the frame.</p>
+
+        <p>An approaching storm may introduce uncertainty. An immense stretch of empty country may suggest isolation, possibility, or the scale of a journey still ahead.</p>
+
+        <p>The land becomes an active participant in the story, shaping how the viewer experiences the moment.</p>
+
+        <p>For Heim, the Western landscape is not simply where the story takes place.</p>
+
+        <p>It is often one of the forces acting upon it.</p>
 
         <div class="section-heading-with-line">
           <h2>Why Narrative Photography Matters</h2>
@@ -222,6 +276,28 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         <p>Narrative photography slows the viewer down. It asks more than recognition. It asks participation.</p>
 
         <p>For collectors, that means the image can keep opening over time. For artists, it means the photograph can move beyond record and into authorship. For viewers, it means the frame does not remain outside them. It begins to feel lived.</p>
+
+        <div class="section-heading-with-line">
+          <h2>Frequently Asked Questions</h2>
+        </div>
+
+        <h3>What is narrative photography?</h3>
+        <p>Narrative photography is photography shaped to imply a larger story. It does not merely show what was in front of the camera. It opens the frame outward until the viewer begins to sense what happened before the moment, what may happen after it, and what emotional pressure lives inside it.</p>
+
+        <h3>How is narrative photography different from documentary photography?</h3>
+        <p>Documentary photography records what stood before the camera. Narrative photography is authored: the story is embedded in what is shown, what is withheld, and where the tension sits. Both may photograph real subjects and real places; only one asks the viewer to remain inside the frame and finish the story.</p>
+
+        <h3>Can a single photograph really tell a story?</h3>
+        <p>Yes — not by summarizing a plot, but by holding a moment between before and after. Posture, atmosphere, gesture, and consequence imply the rest. The viewer supplies the motion; the frame supplies the pressure.</p>
+
+        <h3>What makes a photograph narrative instead of just dramatic?</h3>
+        <p>Drama is volume; narrative is implication. A dramatic image shows intensity. A narrative image withholds resolution — restraint leaves the viewer room to enter, and the story keeps opening each time they return to it.</p>
+
+        <h3>How does narrative photography work in Western art?</h3>
+        <p>In Western subjects, narrative photography works close to the conditions that formed the figure — the history, hardship, and myth that live near one another in the West. At K4 Studios that form is called <a href="/Narrative-Western-Art" style="color:#8b5a2b; text-decoration:underline;">Narrative Western Art</a>: story as the governing principle of the frame.</p>
+
+        <h3>What is a One-Image Movie?</h3>
+        <p>A <a href="/Other/One-Image-Movie" style="color:#8b5a2b; text-decoration:underline;">One-Image Movie™</a> is Wayne Heim's approach to creating a cinematic narrative experience within a single work of visual art. The image offers an immediate, believable moment while deliberately leaving part of its story unresolved. The title and authored primer may then reveal another interpretation, rewarding the viewer with a changed understanding of what they first believed they saw.</p>
 
         <div class="section-heading-with-line">
           <h2>Explore Narrative Photography at K4 Studios</h2>

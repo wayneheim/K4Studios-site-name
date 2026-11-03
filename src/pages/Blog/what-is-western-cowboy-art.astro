@@ -18,7 +18,7 @@ import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
-import { getBreadcrumbList, getStructuredData } from "@/components/utils/getStructuredData.ts";
+import { getBreadcrumbList, getFAQPageStructuredData, getStructuredData } from "@/components/utils/getStructuredData.ts";
 
 import "@/styles/global.css";
 
@@ -72,6 +72,16 @@ const darkImage3 = {
 
 const pageTitle = "What Is Western Cowboy Art? Definition, History, and Meaning";
 const pageDescription = "What is Western cowboy art? Explore the history, myth, and enduring meaning of the American cowboy across painting, sculpture, and fine art photography.";
+
+const westernCowboyArtFaq = [
+  { q: "What is Western cowboy art?", a: "Western cowboy art depicts and interprets the people, work, landscapes, traditions, and mythology associated with cowboy life in the American West. It includes painting, sculpture, photography, and other artistic media. Some works celebrate familiar Western imagery, while others explore the personal experiences, historical realities, and human stories beneath those images." },
+  { q: "How did cowboy art develop?", a: "Cowboy art grew alongside the cultural memory of the American West. Artists and illustrators such as Charles M. Russell and Frederic Remington helped establish many of its enduring visual traditions, portraying frontier life, ranch work, conflict, movement, and the people who inhabited the West. Later generations continued to interpret those subjects through changing artistic styles and media." },
+  { q: "Is Western cowboy art still being created today?", a: "Yes. Contemporary artists continue to explore cowboy life and the American West through painting, sculpture, photography, and other forms. Some revisit historical subjects, while others portray the working West as it exists today. The tradition continues because its people, landscapes, conflicts, and questions remain meaningful subjects for artistic interpretation." },
+  { q: "Can photography be Western cowboy art?", a: "Absolutely. Artistic identity is not determined solely by medium. Photography can communicate the same narrative, emotional, and historical concerns explored in traditional Western painting and sculpture. In Wayne Heim's painterly Western fine art, camera-captured moments created with living historians are developed into authored compositions that place human story and artistic intention at the center of the finished work." },
+  { q: "How is Western cowboy fine art different from Western decor?", a: "Western decor often emphasizes the visual character, materials, and atmosphere associated with the American West. Western cowboy fine art may share that visual appeal while also expressing an artist's individual vision, narrative, or interpretation of Western life. The two purposes can coexist. A work of fine art can enrich an interior while continuing to reveal deeper meaning through the stories it carries." },
+];
+
+const faqStructuredData = getFAQPageStructuredData(westernCowboyArtFaq, canonicalUrl);
 
 const structuredImageUrls = [
   getAbsoluteProxySrc(headerImage.id, "l"),
@@ -152,6 +162,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 <BaseLayout
   title={pageTitle}
   structuredDataJSON={structuredData}
+  extraStructuredDataJSON={faqStructuredData}
   breadcrumbsJSON={breadcrumbStructuredData}
   meta={meta}
 >
@@ -397,6 +408,17 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         </ul>
 
         <p>In this way, modern cowboy photography becomes part of the same artistic lineage—extending Western cowboy art into new mediums while preserving its narrative core.</p>
+
+        <div class="section-heading-with-line">
+          <h2>Frequently Asked Questions</h2>
+        </div>
+
+        {westernCowboyArtFaq.map((item) => (
+          <>
+            <h3 style="font-size:1.1rem; font-weight:600; margin-top:1.5rem; margin-bottom:0.5rem;">{item.q}</h3>
+            <p>{item.a}</p>
+          </>
+        ))}
 
         <!-- SECTION 10: Explore CTAs -->
         <div class="section-heading-with-line">

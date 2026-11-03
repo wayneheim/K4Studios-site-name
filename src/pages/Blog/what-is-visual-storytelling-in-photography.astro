@@ -6,7 +6,7 @@ import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
-import { getBreadcrumbList, getStructuredData } from "@/components/utils/getStructuredData.ts";
+import { getBreadcrumbList, getFAQPageStructuredData, getStructuredData } from "@/components/utils/getStructuredData.ts";
 
 import "@/styles/global.css";
 
@@ -38,8 +38,18 @@ const image3 = {
   alt: "Landscape functioning as emotional environment rather than scenery"
 };
 
-const pageTitle = "What Is Visual Storytelling in Photography? - Wayne Heim";
+const pageTitle = "What Is Visual Storytelling in Photography? Definition and Meaning";
 const pageDescription = "Visual storytelling in photography is the shaping of a still image so it implies a larger story through atmosphere, tension, and restraint rather than simple description alone.";
+
+const visualStorytellingFaq = [
+  { q: "What is visual storytelling in photography?", a: "Visual storytelling in photography is the communication of narrative, emotion, or meaning through visual relationships. Subject, composition, light, gesture, atmosphere, and context work together to suggest something beyond the literal objects in the frame." },
+  { q: "How is visual storytelling different from narrative photography?", a: "The terms overlap and are often used interchangeably. Visual storytelling describes the broader process of communicating through imagery, whether in a single photograph or a sequence. Narrative photography emphasizes the story suggested or developed through photographic images. In Wayne Heim's fine art, that narrative is deliberately shaped to encourage interpretation beyond the visible moment." },
+  { q: "Can one photograph tell a story without a sequence?", a: "Yes. A sequence reveals events through multiple images. A single photograph can imply a sequence by presenting a meaningful moment between what may have happened before and what might happen next. The viewer contributes the missing movement through imagination." },
+  { q: "What makes a photograph story-driven?", a: "A story-driven photograph contains visual relationships that suggest something larger than the subject alone. Gesture, expression, setting, atmosphere, and composition may imply conflict, connection, anticipation, or consequence. Just as importantly, the artist may deliberately leave information unresolved, giving the viewer room to interpret the moment." },
+  { q: "How is visual storytelling used in fine art photography?", a: "Fine art photographers may use visual storytelling to communicate emotional, historical, or conceptual ideas beyond simple description. In Wayne Heim's work, camera-captured moments are deliberately shaped through light, color, atmosphere, composition, and selective omission. The finished artwork becomes an invitation to discover a story rather than merely observe a scene." },
+];
+
+const faqStructuredData = getFAQPageStructuredData(visualStorytellingFaq, canonicalUrl);
 
 const structuredImageUrls = [
   getAbsoluteProxySrc(headerImage.id, "l"),
@@ -111,7 +121,7 @@ const meta = {
 const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-decoration: none;' onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Blog</a> › <a href='/Blog#photography-guides' style='color: inherit; text-decoration: none;' onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Photography Guides</a> › What Is Visual Storytelling in Photography?`;
 ---
 
-<BaseLayout title={pageTitle} structuredDataJSON={structuredData} breadcrumbsJSON={breadcrumbStructuredData} meta={meta}>
+<BaseLayout title={pageTitle} structuredDataJSON={structuredData} extraStructuredDataJSON={faqStructuredData} breadcrumbsJSON={breadcrumbStructuredData} meta={meta}>
   <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
     <div class="drawer-mode">
       <LandingHeader client:load breadcrumb={blogBreadcrumb} />
@@ -237,6 +247,19 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         <p>Visual storytelling slows the viewer down. It asks more than recognition. It asks participation.</p>
 
         <p>For collectors, that means the image can keep opening over time. For artists, it means the photograph can move beyond record and into authorship. For viewers, it means the frame does not remain outside them. It begins to feel lived.</p>
+
+        <p>In Wayne Heim's work, visual storytelling becomes the foundation of <a href="/Narrative-Western-Art" style="color:#8b5a2b; text-decoration:underline;">Narrative Western Art</a> and <a href="/western-storytelling-photography" style="color:#8b5a2b; text-decoration:underline;">Western Storytelling Photography</a>. Working with camera-captured material created alongside living historians, he develops images in which the visible moment suggests a larger human experience. His One-Image Movie™ approach carries that ambition further, allowing an initial interpretation to open into another through the relationship between the artwork, its title, and the accompanying primer. The photograph becomes more than a view of what happened in front of the camera. It becomes a place where a story continues to unfold in the viewer's imagination.</p>
+
+        <div class="section-heading-with-line">
+          <h2>Frequently Asked Questions</h2>
+        </div>
+
+        {visualStorytellingFaq.map((item) => (
+          <>
+            <h3>{item.q}</h3>
+            <p>{item.a}</p>
+          </>
+        ))}
 
         <div class="section-heading-with-line">
           <h2>Explore Story-Driven Photography at K4 Studios</h2>

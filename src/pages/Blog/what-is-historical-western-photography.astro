@@ -20,7 +20,7 @@ import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
-import { getBreadcrumbList, getStructuredData } from "@/components/utils/getStructuredData.ts";
+import { getBreadcrumbList, getFAQPageStructuredData, getStructuredData } from "@/components/utils/getStructuredData.ts";
 
 import "@/styles/global.css";
 
@@ -85,6 +85,16 @@ const bodyImages = [
 
 const pageTitle = "What Is Historical Western Photography? Definition and Distinction";
 const pageDescription = "Historical Western photography does not mean antique photographs. It refers to contemporary fine art depicting historical Western life through narrative construction and painterly composition.";
+
+const historicalWesternPhotographyFaq = [
+  { q: "Is historical Western photography the same as antique Western photography?", a: "Not necessarily. Antique Western photographs were created during an earlier historical period and may provide direct visual evidence of the people, places, and circumstances of that time. Contemporary historical Western photography can revisit those subjects through reenactment, interpretation, or fine art. Its historical subject matter does not require the photograph itself to be old." },
+  { q: "Is historical Western photography documentary photography?", a: "The broader field includes documentary records and archival imagery. In the fine-art sense this page defines, no: documentary photography captures real moments without intervention, while historical Western fine art is constructed, directed, and authored. Wayne Heim begins with camera-captured material made with living historians, then develops it into narrative fine art rather than presenting it as a record of the event." },
+  { q: "How is historical Western photography different from modern ranch photography?", a: "Modern ranch photography generally depicts the people, animals, work, and landscapes of the contemporary West. Historical Western photography focuses on earlier periods or their interpretation, often through period clothing, tools, settings, and historically informed activities. Both can communicate authentic Western experiences, but they approach different moments in the region's continuing history." },
+  { q: "What role do living historians play in Wayne Heim's work?", a: "Living historians bring researched knowledge, practiced skills, period clothing, and an understanding of historical life to the scenes Wayne photographs. They are active collaborators whose participation helps establish a believable foundation. Heim then uses that captured material as the starting point for his own artistic interpretation, refining the finished composition around its intended story." },
+  { q: "Why does the distinction between historical photography and historical fine art matter?", a: "The distinction clarifies what the image is intended to accomplish. A documentary photograph may be evaluated for the information it preserves or communicates. A work of historical narrative fine art may draw upon authentic material while asking broader questions about human experience, memory, and meaning. Wayne Heim's finished work is intended to be understood as authored art — not merely as a record of the circumstances in which the original photograph was made." },
+];
+
+const faqStructuredData = getFAQPageStructuredData(historicalWesternPhotographyFaq, canonicalUrl);
 
 const structuredImageUrls = [
   getAbsoluteProxySrc(headerImage.id, "l"),
@@ -167,6 +177,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 <BaseLayout
   title={pageTitle}
   structuredDataJSON={structuredData}
+  extraStructuredDataJSON={faqStructuredData}
   breadcrumbsJSON={breadcrumbStructuredData}
   meta={meta}
 >
@@ -365,6 +376,17 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         <p><a href="/Historical-Western-Art" style="color:#8b5a2b; text-decoration:underline; font-weight:600;">Historical Western Art</a> is that category.</p>
 
         <p>And historical Western photography is its photographic expression.</p>
+
+        <div class="section-heading-with-line">
+          <h2>Frequently Asked Questions</h2>
+        </div>
+
+        {historicalWesternPhotographyFaq.map((item) => (
+          <>
+            <h3 style="font-size:1.1rem; font-weight:600; margin-top:1.5rem; margin-bottom:0.5rem;">{item.q}</h3>
+            <p>{item.a}</p>
+          </>
+        ))}
 
         <!-- CTA Section -->
         <div style="background:#f9f7f4; padding:2rem; border-radius:12px; margin-top:2.5rem; text-align:center;">
