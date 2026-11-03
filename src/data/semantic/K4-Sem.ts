@@ -436,7 +436,7 @@ printOptions: {
 },
 facingHistory: {
   path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History",
-  def: "Facing History is Wayne Heim's historically themed fine art photography series, blending research, real subjects, living history, and painterly finishing into character-driven visual narratives.",
+  def: "Facing History is Wayne Heim's historically themed fine art photography series, blending research, real subjects, living history, and painterly handling into character-driven visual narratives.",
 
   landingPhrases: [
     // Primary, high-authority terms (WritingBrain core)
@@ -905,7 +905,7 @@ cowboyPainterlyFineArtPhotographyHub: {
 
 westernWallArtHub: {
   path: "/Western-Wall-Art",
-  def: "Museum-quality Western wall art for collectors of narrative fine art. Unlike decorative posters or mass-produced prints, fine art Western wall art emphasizes archival quality, narrative depth, and the deliberate finishing of original photographic work.",
+  def: "Museum-quality Western wall art for collectors of narrative fine art. Unlike decorative posters or mass-produced prints, fine art Western wall art emphasizes archival quality, narrative depth, and the deliberate handling of original photographic work.",
   fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
   landingPhrases: [
     // Primary commercial-intent phrases (rating 5)
@@ -1166,7 +1166,7 @@ glossaryBlackWhiteWesternArt: {
 
 glossaryContemporaryWesternArt: {
   path: "/Contemporary-Western-Art",
-  def: "Contemporary Western art carries the subject, history, and emotional weight of the American West into present-day visual language. In photography, it extends the Western tradition through present-day practice, psychological presence, and authorship rather than nostalgia alone. Explore <a href='/Contemporary-Western-Art'>Contemporary Western Art</a> | <a href='/Western-Fine-Art-Photography'>Western Fine Art Photography</a>. Wayne Heim makes <a href='/Contemporary-Western-Art'>contemporary Western art</a> as camera-based painterly fine art — real photographs, painterly finishing, narrative intent.",
+  def: "Contemporary Western art carries the subject, history, and emotional weight of the American West into present-day visual language. In photography, it extends the Western tradition through present-day practice, psychological presence, and authorship rather than nostalgia alone. Explore <a href='/Contemporary-Western-Art'>Contemporary Western Art</a> | <a href='/Western-Fine-Art-Photography'>Western Fine Art Photography</a>. Wayne Heim makes <a href='/Contemporary-Western-Art'>contemporary Western art</a> as camera-based painterly fine art — real photographs, painterly handling, narrative intent.",
   landingPhrases: [
     { phrase: "contemporary Western art", rating: 5, use: true, link: "/Contemporary-Western-Art" },
     { phrase: "modern Western art", rating: 4, use: true, link: "/Contemporary-Western-Art" },

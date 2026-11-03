@@ -82,7 +82,7 @@ export const facingHistoryStory = [
   {
     subhead: "Why It Feels Relevant Again",
     paragraphs: [
-      `Photography is again being pushed beyond documentation. Some artists are using digital process, staged scenes, hybrid processes, cinematic lighting, and painterly finishing to ask what a photograph can be when it is no longer judged only by accuracy.`,
+      `Photography is again being pushed beyond documentation. Some artists are using digital process, staged scenes, hybrid processes, cinematic lighting, and painterly handling to ask what a photograph can be when it is no longer judged only by accuracy.`,
       `That is the modern hook back into pictorialism. The movement was never only about soft focus or antique printing. It was about permission: permission for a photograph to carry the weight of art, to be subjective, to be shaped, and to make room for feeling.`,
       `Wayne Heim's work belongs in that conversation because it treats the photograph as a constructed artistic object. The image begins with reality, but it does not stop there. It moves through atmosphere, story, and print presence until the result reads as photographic art rather than documentation.`
     ]
