@@ -25,7 +25,7 @@ try {
   const regularCount = await regularButtons.count();
   if (regularCount !== 3) throw new Error(`Expected three standard products on the test image; found ${regularCount}.`);
   const modalText = await page.getByRole("heading", { name: "Fine Art Print Options" }).locator("xpath=ancestor::section").innerText();
-  for (const forbidden of ["$10.00", "$40.00", "$45.00", "$70.00"]) {
+  for (const forbidden of ["$10", "$40", "$45", "$70"]) {
     if (modalText.includes(forbidden)) throw new Error(`Regular modal leaked Expedition price ${forbidden}.`);
   }
 
@@ -52,7 +52,7 @@ try {
   const engrainedModal = page.locator("[data-k4-native-collection-cart]");
   await engrainedModal.waitFor({ timeout: 15000 });
   const engrainedText = await engrainedModal.innerText();
-  if (!engrainedText.includes('16" x 24"') || !engrainedText.includes("$1,650.00")) {
+  if (!engrainedText.includes('16" x 24"') || !engrainedText.includes("$1,650")) {
     throw new Error("Direct Engrained modal did not preserve the artwork-specific size and price.");
   }
   if (engrainedText.includes("Contact Us to Order") || await engrainedModal.locator('a[href^="mailto:"]').count()) {
@@ -84,13 +84,34 @@ try {
   }
   await engrainedButtons.click();
 
+  const mobilePage = await browser.newPage({ viewport: { width: 390, height: 844 } });
+  await mobilePage.goto(regularUrl, { waitUntil: "networkidle", timeout: 60000 });
+  await mobilePage.getByRole("button", { name: "Order", exact: true }).click();
+  const mobileModal = mobilePage.locator("[data-k4-native-collection-cart]");
+  await mobileModal.waitFor({ timeout: 15000 });
+  const mobileRows = await mobileModal.locator("[data-k4-product-option]").evaluateAll((rows) => rows.map((row) => {
+    const size = row.querySelector("[data-k4-option-size]")?.getBoundingClientRect();
+    const price = row.querySelector("[data-k4-option-price]")?.getBoundingClientRect();
+    return {
+      rowWidth: row.getBoundingClientRect().width,
+      scrollWidth: row.scrollWidth,
+      sizeRight: size?.right || 0,
+      priceLeft: price?.left || 0,
+    };
+  }));
+  if (!mobileRows.length || mobileRows.some((row) => row.scrollWidth > row.rowWidth + 1 || row.sizeRight > row.priceLeft)) {
+    throw new Error(`Mobile product options overlap or overflow: ${JSON.stringify(mobileRows)}`);
+  }
+  await mobilePage.close();
+
   console.log(JSON.stringify({
     ok: true,
     expeditionProducts: 5,
     regularProducts: regularCount,
     engrainedProducts: 1,
     engrainedSize: '16" x 24"',
-    engrainedPrice: "$1,650.00",
+    engrainedPrice: "$1,650",
+    mobileRows,
     previewHealth,
   }, null, 2));
 } finally {

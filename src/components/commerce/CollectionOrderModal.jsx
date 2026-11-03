@@ -22,6 +22,8 @@ const SERIES_COLORS = {
   engrained: { surface: "#f5e6c8", border: "#c68a32", accent: "#783f17" },
 };
 
+const formatModalPrice = (amount) => formatCurrency(amount).replace(/\.00$/, "");
+
 function formatSeriesLabels(seriesOptions = []) {
   const labels = seriesOptions
     .map(({ definition }) => String(definition?.label || definition?.name || "").replace(/\s+Series$/i, "").trim())
@@ -303,34 +305,37 @@ export default function CollectionOrderModal({
                             const quantity = hasSelectedQuantity ? productQuantities[product.productKey] : existingItem?.quantity || 1;
                             const minimumQuantity = existingItem ? 0 : 1;
                             const recentAction = recentlySaved?.productKey === product.productKey ? recentlySaved.action : null;
+                            const fullActionLabel = unavailable ? "Unavailable" : recentAction === "removed" ? "Removed" : recentAction === "updated" ? "Updated" : recentAction === "added" ? "Added" : existingItem ? "Update Cart" : "Add to Cart";
+                            const mobileActionLabel = unavailable ? "N/A" : recentAction === "removed" ? "Removed" : recentAction === "updated" ? "Updated" : recentAction === "added" ? "Added" : existingItem ? "Update" : "Add";
                             return (
                               <div
                                 key={product.productKey}
-                                className={`flex items-center justify-between gap-3 rounded-md border border-stone-300 bg-white px-3 py-3 shadow-sm transition ${unavailable ? "opacity-50" : "hover:border-stone-400"}`}
+                                data-k4-product-option
+                                className={`flex items-center justify-between gap-1.5 rounded-md border border-stone-300 bg-white px-2 py-2.5 shadow-sm transition sm:gap-3 sm:px-3 sm:py-3 ${unavailable ? "opacity-50" : "hover:border-stone-400"}`}
                               >
-                                <div className="flex min-w-0 items-baseline gap-2 whitespace-nowrap">
-                                  <span className="text-sm font-semibold text-stone-800">{product.size}</span>
-                                  <span className="truncate text-[11px] text-stone-500">{product.finish}</span>
-                                  {quickShip && <span className="text-[10px] font-semibold uppercase tracking-wide text-emerald-700">Quick ship</span>}
+                                <div className="flex min-w-0 items-baseline gap-1 whitespace-nowrap sm:gap-2">
+                                  <span data-k4-option-size className="text-xs font-semibold text-stone-800 sm:text-sm">{product.size}</span>
+                                  <span className="hidden truncate text-[11px] text-stone-500 sm:inline">{product.finish}</span>
+                                  {quickShip && <span className="hidden text-[10px] font-semibold uppercase tracking-wide text-emerald-700 sm:inline">Quick ship</span>}
                                 </div>
-                                <div className="flex shrink-0 items-center justify-end gap-3">
-                                  <span className="min-w-[70px] text-right text-sm font-semibold" style={{ color: colors.accent }}>{formatCurrency(product.unitPrice)}</span>
-                                  <div className="flex items-center gap-1.5" aria-label={`Quantity for ${product.size}`}>
+                                <div className="flex shrink-0 items-center justify-end gap-1 sm:gap-3">
+                                  <span data-k4-option-price className="min-w-[46px] text-right text-xs font-semibold sm:min-w-[70px] sm:text-sm" style={{ color: colors.accent }}>{formatModalPrice(product.unitPrice)}</span>
+                                  <div className="flex items-center gap-0.5 sm:gap-1.5" aria-label={`Quantity for ${product.size}`}>
                                     <button
                                       type="button"
                                       disabled={unavailable || quantity <= minimumQuantity}
                                       onClick={() => setProductQuantity(product.productKey, quantity - 1, maximumQuantity, minimumQuantity)}
-                                      className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-stone-300 text-stone-600 hover:bg-stone-50 disabled:cursor-not-allowed disabled:opacity-35"
+                                      className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-stone-300 text-stone-600 hover:bg-stone-50 disabled:cursor-not-allowed disabled:opacity-35 sm:h-8 sm:w-8"
                                       aria-label={`Decrease ${product.size} quantity`}
                                     >
                                       <Minus className="h-3.5 w-3.5" />
                                     </button>
-                                    <span className={`w-6 text-center text-sm font-semibold ${quantity === 0 ? "text-[#8a3d2b]" : "text-stone-800"}`}>{quantity}</span>
+                                    <span className={`w-4 text-center text-xs font-semibold sm:w-6 sm:text-sm ${quantity === 0 ? "text-[#8a3d2b]" : "text-stone-800"}`}>{quantity}</span>
                                     <button
                                       type="button"
                                       disabled={unavailable || quantity >= maximumQuantity}
                                       onClick={() => setProductQuantity(product.productKey, quantity + 1, maximumQuantity, minimumQuantity)}
-                                      className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-stone-300 text-stone-600 hover:bg-stone-50 disabled:cursor-not-allowed disabled:opacity-35"
+                                      className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-stone-300 text-stone-600 hover:bg-stone-50 disabled:cursor-not-allowed disabled:opacity-35 sm:h-8 sm:w-8"
                                       aria-label={`Increase ${product.size} quantity`}
                                     >
                                       <Plus className="h-3.5 w-3.5" />
@@ -340,10 +345,11 @@ export default function CollectionOrderModal({
                                     type="button"
                                     disabled={unavailable}
                                     onClick={() => saveProduct(product)}
-                                    className={`inline-flex min-h-9 min-w-[112px] items-center justify-center gap-1.5 rounded-md px-3 py-2 text-xs font-semibold text-white shadow-sm transition disabled:cursor-not-allowed ${recentAction ? "bg-emerald-700" : existingItem ? "bg-[#8a3d2b] hover:bg-[#743322]" : "bg-stone-700 hover:bg-stone-800"}`}
+                                    className={`inline-flex min-h-8 min-w-[76px] items-center justify-center gap-1 rounded-md px-1.5 py-1.5 text-[10px] font-semibold text-white shadow-sm transition disabled:cursor-not-allowed sm:min-h-9 sm:min-w-[112px] sm:gap-1.5 sm:px-3 sm:py-2 sm:text-xs ${recentAction ? "bg-emerald-700" : existingItem ? "bg-[#8a3d2b] hover:bg-[#743322]" : "bg-stone-700 hover:bg-stone-800"}`}
                                   >
-                                    <ShoppingBag className="h-3.5 w-3.5" />
-                                    {unavailable ? "Unavailable" : recentAction === "removed" ? "Removed ✓" : recentAction === "updated" ? "Updated ✓" : recentAction === "added" ? "Added ✓" : existingItem ? "Update Cart" : "Add to Cart"}
+                                    <ShoppingBag className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
+                                    <span className="sm:hidden">{mobileActionLabel}</span>
+                                    <span className="hidden sm:inline">{fullActionLabel}</span>
                                   </button>
                                 </div>
                               </div>
@@ -363,6 +369,8 @@ export default function CollectionOrderModal({
                   const minimumQuantity = existingItem ? 0 : 1;
                   const maximumQuantity = Math.max(1, Math.min(10, Number(engrainedProduct.editionLimit) || 1));
                   const recentAction = recentlySaved?.productKey === engrainedProduct.productKey ? recentlySaved.action : null;
+                  const fullActionLabel = recentAction === "removed" ? "Removed" : recentAction === "updated" ? "Updated" : recentAction === "added" ? "Added" : existingItem ? "Update Cart" : "Add to Cart";
+                  const mobileActionLabel = recentAction === "removed" ? "Removed" : recentAction === "updated" ? "Updated" : recentAction === "added" ? "Added" : existingItem ? "Update" : "Add";
                   const isExpanded = expandedSeries === "engrained";
 
                   return (
@@ -411,32 +419,33 @@ export default function CollectionOrderModal({
 
                         <div className="mt-4">
                           <div
-                            className="flex items-center justify-between gap-3 rounded-md border bg-white/90 px-3 py-3 shadow-sm transition hover:bg-white"
+                            data-k4-product-option
+                            className="flex items-center justify-between gap-1.5 rounded-md border bg-white/90 px-2 py-2.5 shadow-sm transition hover:bg-white sm:gap-3 sm:px-3 sm:py-3"
                             style={{ borderColor: "#d8b77f" }}
                           >
-                            <div className="flex min-w-0 items-baseline gap-2 whitespace-nowrap">
-                              <span className="text-sm font-semibold text-stone-800">{engrainedProduct.size}</span>
-                              <span className="truncate text-[11px] text-stone-500">{engrainedProduct.finish}</span>
-                              {engrainedLink?.hasInventory && <span className="text-[10px] font-semibold uppercase tracking-wide text-emerald-700">Quick ship</span>}
+                            <div className="flex min-w-0 items-baseline gap-1 whitespace-nowrap sm:gap-2">
+                              <span data-k4-option-size className="text-xs font-semibold text-stone-800 sm:text-sm">{engrainedProduct.size}</span>
+                              <span className="hidden truncate text-[11px] text-stone-500 sm:inline">{engrainedProduct.finish}</span>
+                              {engrainedLink?.hasInventory && <span className="hidden text-[10px] font-semibold uppercase tracking-wide text-emerald-700 sm:inline">Quick ship</span>}
                             </div>
-                            <div className="flex shrink-0 items-center justify-end gap-3">
-                              <span className="min-w-[70px] text-right text-sm font-semibold" style={{ color: colors.accent }}>{formatCurrency(engrainedProduct.unitPrice)}</span>
-                              <div className="flex items-center gap-1.5" aria-label={`Quantity for ${engrainedProduct.size}`}>
+                            <div className="flex shrink-0 items-center justify-end gap-1 sm:gap-3">
+                              <span data-k4-option-price className="min-w-[46px] text-right text-xs font-semibold sm:min-w-[70px] sm:text-sm" style={{ color: colors.accent }}>{formatModalPrice(engrainedProduct.unitPrice)}</span>
+                              <div className="flex items-center gap-0.5 sm:gap-1.5" aria-label={`Quantity for ${engrainedProduct.size}`}>
                                 <button
                                   type="button"
                                   disabled={quantity <= minimumQuantity}
                                   onClick={() => setProductQuantity(engrainedProduct.productKey, quantity - 1, maximumQuantity, minimumQuantity)}
-                                  className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-stone-300 text-stone-600 hover:bg-stone-50 disabled:cursor-not-allowed disabled:opacity-35"
+                                  className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-stone-300 text-stone-600 hover:bg-stone-50 disabled:cursor-not-allowed disabled:opacity-35 sm:h-8 sm:w-8"
                                   aria-label={`Decrease ${engrainedProduct.size} quantity`}
                                 >
                                   <Minus className="h-3.5 w-3.5" />
                                 </button>
-                                <span className={`w-6 text-center text-sm font-semibold ${quantity === 0 ? "text-[#8a3d2b]" : "text-stone-800"}`}>{quantity}</span>
+                                <span className={`w-4 text-center text-xs font-semibold sm:w-6 sm:text-sm ${quantity === 0 ? "text-[#8a3d2b]" : "text-stone-800"}`}>{quantity}</span>
                                 <button
                                   type="button"
                                   disabled={quantity >= maximumQuantity}
                                   onClick={() => setProductQuantity(engrainedProduct.productKey, quantity + 1, maximumQuantity, minimumQuantity)}
-                                  className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-stone-300 text-stone-600 hover:bg-stone-50 disabled:cursor-not-allowed disabled:opacity-35"
+                                  className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-stone-300 text-stone-600 hover:bg-stone-50 disabled:cursor-not-allowed disabled:opacity-35 sm:h-8 sm:w-8"
                                   aria-label={`Increase ${engrainedProduct.size} quantity`}
                                 >
                                   <Plus className="h-3.5 w-3.5" />
@@ -445,10 +454,11 @@ export default function CollectionOrderModal({
                               <button
                                 type="button"
                                 onClick={() => saveProduct(engrainedProduct)}
-                                className={`inline-flex min-h-9 min-w-[112px] items-center justify-center gap-1.5 rounded-md px-3 py-2 text-xs font-semibold text-white shadow-sm transition ${recentAction ? "bg-emerald-700" : existingItem ? "bg-[#8a3d2b] hover:bg-[#743322]" : "bg-stone-700 hover:bg-stone-800"}`}
+                                className={`inline-flex min-h-8 min-w-[76px] items-center justify-center gap-1 rounded-md px-1.5 py-1.5 text-[10px] font-semibold text-white shadow-sm transition sm:min-h-9 sm:min-w-[112px] sm:gap-1.5 sm:px-3 sm:py-2 sm:text-xs ${recentAction ? "bg-emerald-700" : existingItem ? "bg-[#8a3d2b] hover:bg-[#743322]" : "bg-stone-700 hover:bg-stone-800"}`}
                               >
-                                <ShoppingBag className="h-3.5 w-3.5" />
-                                {recentAction === "removed" ? "Removed ✓" : recentAction === "updated" ? "Updated ✓" : recentAction === "added" ? "Added ✓" : existingItem ? "Update Cart" : "Add to Cart"}
+                                <ShoppingBag className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
+                                <span className="sm:hidden">{mobileActionLabel}</span>
+                                <span className="hidden sm:inline">{fullActionLabel}</span>
                               </button>
                             </div>
                           </div>
@@ -518,7 +528,7 @@ export default function CollectionOrderModal({
                             <span className="w-4 text-center text-xs font-semibold">{item.quantity}</span>
                             <QuantityButton label="Increase quantity" onClick={() => updateQuantity(item.lineId, item.quantity + 1)}><Plus className="h-3.5 w-3.5" /></QuantityButton>
                           </div>
-                          <span className="text-sm font-semibold text-stone-800">{formatCurrency(item.unitPrice * item.quantity)}</span>
+                          <span className="text-sm font-semibold text-stone-800">{formatModalPrice(item.unitPrice * item.quantity)}</span>
                         </div>
                       </div>
                     </article>
@@ -526,7 +536,7 @@ export default function CollectionOrderModal({
                 </div>
 
                 <div className="mt-5 border-t border-stone-200 pt-4">
-                  <div className="flex items-center justify-between text-sm text-stone-600"><span>Print subtotal</span><strong className="text-base text-stone-900">{formatCurrency(subtotal)}</strong></div>
+                  <div className="flex items-center justify-between text-sm text-stone-600"><span>Print subtotal</span><strong className="text-base text-stone-900">{formatModalPrice(subtotal)}</strong></div>
                   <p className="mt-1 text-[11px] text-stone-500">Shipping and applicable tax are calculated during checkout.</p>
                   <a href="/cart" onClick={() => trackEvent?.("native_collection_cart_review", { itemCount: cartCount, subtotal })} className="mt-4 inline-flex min-h-11 w-full items-center justify-center rounded-md border border-[#6f351f] bg-gradient-to-b from-[#9a5336] to-[#73361f] px-5 py-2.5 text-sm font-semibold text-white shadow-md transition hover:from-[#87472e] hover:to-[#612d1a]">Review Cart &amp; Checkout</a>
                   <button type="button" onClick={() => setView("products")} className="mt-3 w-full text-center text-xs font-semibold text-stone-500 hover:text-stone-800">Continue choosing print options</button>
