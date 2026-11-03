@@ -2080,6 +2080,8 @@ const DOORWAY_SERP_TITLE_TERMS = [
 const DOORWAY_SERP_TITLE_TERM_SET = new Set(
   DOORWAY_SERP_TITLE_TERMS.map((term) => term.toLowerCase())
 );
+const SERP_PRIORITY_ALTERNATIVE = 0;
+const SERP_PRIORITY_DEFAULT = 5;
 
 // Escape HTML to prevent XSS
 function escapeHtml(s='') {
@@ -2351,13 +2353,25 @@ async function handleSerpKeyword(request, env) {
   
   try {
     const body = await request.json();
-    const { action, keyword, priority } = body;
+    const { action, keyword, priority, group } = body;
     
     if (action === 'add' && keyword) {
       await env.DB.prepare(
         'INSERT OR REPLACE INTO serp_keywords (keyword, priority, enabled, track_google, track_bing) VALUES (?, ?, 1, 1, 0)'
-      ).bind(keyword.toLowerCase().trim(), priority || 5).run();
+      ).bind(keyword.toLowerCase().trim(), priority ?? SERP_PRIORITY_DEFAULT).run();
       return new Response(JSON.stringify({ success: true }), {
+        headers: { 'Content-Type': 'application/json' }
+      });
+    }
+
+    if (action === 'move' && keyword) {
+      const targetPriority = group === 'alternative'
+        ? SERP_PRIORITY_ALTERNATIVE
+        : SERP_PRIORITY_DEFAULT;
+      await env.DB.prepare(
+        'UPDATE serp_keywords SET priority = ? WHERE keyword = ?'
+      ).bind(targetPriority, keyword).run();
+      return new Response(JSON.stringify({ success: true, group: targetPriority === SERP_PRIORITY_ALTERNATIVE ? 'alternative' : 'regular' }), {
         headers: { 'Content-Type': 'application/json' }
       });
     }
@@ -2396,7 +2410,7 @@ async function handleSerpLaunch(request, env) {
   
   try {
     const keywords = await env.DB.prepare(
-      'SELECT keyword FROM serp_keywords WHERE enabled = 1 ORDER BY keyword ASC'
+      'SELECT keyword, priority FROM serp_keywords WHERE enabled = 1 ORDER BY CASE WHEN priority = 0 THEN 1 ELSE 0 END, keyword ASC'
     ).all();
     
     const kwList = keywords.results || [];
@@ -2415,45 +2429,51 @@ async function handleSerpLaunch(request, env) {
       todayMap[r.keyword][r.engine] = r.our_rank;
     }
     
-    const doorwayTitleList = kwList.filter((kw) =>
+    const regularKeywordList = kwList.filter((kw) => Number(kw.priority) !== SERP_PRIORITY_ALTERNATIVE);
+    const alternativeKeywordList = kwList.filter((kw) => Number(kw.priority) === SERP_PRIORITY_ALTERNATIVE);
+    const doorwayTitleList = regularKeywordList.filter((kw) =>
       DOORWAY_SERP_TITLE_TERM_SET.has(String(kw.keyword || '').toLowerCase())
     );
-    const primaryKeywordList = kwList.filter((kw) =>
+    const primaryKeywordList = regularKeywordList.filter((kw) =>
       !DOORWAY_SERP_TITLE_TERM_SET.has(String(kw.keyword || '').toLowerCase())
     );
 
-    const renderKeywordCard = (kw, idx) => {
-      const encoded = encodeURIComponent(kw.keyword);
+    const renderKeywordCard = (kw, idx, isAlternative = false) => {
       const safeKw = escapeHtml(kw.keyword);
       const todayData = todayMap[kw.keyword] || {};
-      const gVal = todayData.google || '';
-      const gaiVal = todayData.google_ai || '';
-      const bVal = todayData.bing || '';
-      const hasLogged = gVal || gaiVal || bVal;
+      const hasRank = (engine) => Object.prototype.hasOwnProperty.call(todayData, engine) && todayData[engine] !== null;
+      const displayRank = (engine) => hasRank(engine) ? todayData[engine] : '';
+      const gVal = displayRank('google');
+      const gaiVal = displayRank('google_ai');
+      const bVal = displayRank('bing');
+      const hasLogged = hasRank('google') || hasRank('google_ai') || hasRank('bing');
+      const targetGroup = isAlternative ? 'regular' : 'alternative';
+      const moveLabel = isAlternative ? 'Move Up' : 'Move Down';
       return `
         <div class="kw-card" data-keyword="${safeKw}">
           <div class="kw-header">
             <div class="kw-name">${safeKw}</div>
             <div class="kw-buttons">
-              <button onclick="openGoogle('${encoded}')" class="btn google">Google</button>
-              <button onclick="openBing('${encoded}')" class="btn bing">Bing</button>
+              <button onclick="openGoogle(encodeURIComponent(this.closest('.kw-card').dataset.keyword))" class="btn google">Google</button>
+              <button onclick="openBing(encodeURIComponent(this.closest('.kw-card').dataset.keyword))" class="btn bing">Bing</button>
+              <button onclick="moveKeyword(this, this.closest('.kw-card').dataset.keyword, '${targetGroup}')" class="btn move">${moveLabel}</button>
             </div>
           </div>
           <div class="kw-inputs">
             <div class="input-group">
               <label>Google</label>
-              <input type="number" id="g-${idx}" placeholder="#" min="1" max="100" value="${gVal}">
+              <input type="number" id="g-${idx}" placeholder="#" min="0" max="100" value="${gVal}">
             </div>
             <div class="input-group">
               <label>G-AI</label>
-              <input type="number" id="gai-${idx}" placeholder="#" min="1" max="100" value="${gaiVal}">
+              <input type="number" id="gai-${idx}" placeholder="#" min="0" max="100" value="${gaiVal}">
             </div>
             <div class="input-group">
               <label>Bing</label>
-              <input type="number" id="b-${idx}" placeholder="#" min="1" max="100" value="${bVal}">
+              <input type="number" id="b-${idx}" placeholder="#" min="0" max="100" value="${bVal}">
             </div>
             <div class="save-group">
-              <button onclick="logRank(this, ${idx}, '${safeKw}')" class="btn-log${hasLogged ? ' logged' : ''}">💾 Save</button>
+              <button onclick="logRank(this, ${idx}, this.closest('.kw-card').dataset.keyword)" class="btn-log${hasLogged ? ' logged' : ''}">💾 Save</button>
               ${hasLogged ? '<span class="saved-date">Saved today</span>' : ''}
             </div>
           </div>
@@ -2467,6 +2487,10 @@ async function handleSerpLaunch(request, env) {
     const doorwayTitleCards = doorwayTitleList
       .map((kw, idx) => renderKeywordCard(kw, primaryKeywordList.length + idx))
       .join('');
+    const alternativeStartIndex = primaryKeywordList.length + doorwayTitleList.length;
+    const alternativeKeywordCards = alternativeKeywordList
+      .map((kw, idx) => renderKeywordCard(kw, alternativeStartIndex + idx, true))
+      .join('');
     const keywordCards = [
       primaryKeywordCards,
       doorwayTitleCards ? `
@@ -2478,7 +2502,17 @@ async function handleSerpLaunch(request, env) {
           <span>${doorwayTitleList.length} titles</span>
         </div>
         ${doorwayTitleCards}
-      ` : ''
+      ` : '',
+      `
+        <div class="section-divider alternative-divider">
+          <div>
+            <span class="section-kicker">Organization</span>
+            <strong>Alternative</strong>
+          </div>
+          <span>${alternativeKeywordList.length} terms</span>
+        </div>
+        ${alternativeKeywordCards || '<div class="empty alternative-empty">No alternative terms.</div>'}
+      `
     ].filter(Boolean).join('');
 
     const html = `<!DOCTYPE html>
@@ -2617,6 +2651,22 @@ async function handleSerpLaunch(request, env) {
       background: linear-gradient(135deg, #00809d 0%, #0078d4 100%);
       color: #fff;
     }
+    .btn.move {
+      background: #3f3f46;
+      color: #e4e4e7;
+      border: 1px solid #52525b;
+    }
+    .btn.move:hover { background: #52525b; }
+    .alternative-divider {
+      border-color: #7c3aed;
+      background: #241a35;
+    }
+    .alternative-divider .section-kicker { color: #c4b5fd; }
+    .alternative-empty {
+      border: 1px dashed #4c3b63;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
     .btn-log {
       padding: 8px 16px;
       border-radius: 6px;
@@ -2673,12 +2723,50 @@ async function handleSerpLaunch(request, env) {
     
     const authHeaderLp = ${JSON.stringify(request.headers.get('Authorization') || '')};
 
+    function readRank(id, label) {
+      const raw = document.getElementById(id).value.trim();
+      if (raw === '') return null;
+      const rank = Number(raw);
+      if (!Number.isInteger(rank) || rank < 0 || rank > 100) {
+        throw new Error(label + ' must be a whole number from 0 to 100');
+      }
+      return rank;
+    }
+
+    async function moveKeyword(btn, keyword, group) {
+      const originalText = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = 'Moving…';
+      try {
+        const res = await fetch('/__k4serp?op=keyword', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Authorization': authHeaderLp },
+          body: JSON.stringify({ action: 'move', keyword, group })
+        });
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok || data?.error) throw new Error(data?.error || 'Move failed');
+        location.reload();
+      } catch (err) {
+        btn.disabled = false;
+        btn.textContent = originalText;
+        alert(err?.message || 'Move failed');
+      }
+    }
+
     async function logRank(btn, idx, keyword) {
-      const gRank = document.getElementById('g-' + idx).value || null;
-      const gaiRank = document.getElementById('gai-' + idx).value || null;
-      const bRank = document.getElementById('b-' + idx).value || null;
-      
-      if (!gRank && !gaiRank && !bRank) {
+      let gRank;
+      let gaiRank;
+      let bRank;
+      try {
+        gRank = readRank('g-' + idx, 'Google rank');
+        gaiRank = readRank('gai-' + idx, 'Google AI rank');
+        bRank = readRank('b-' + idx, 'Bing rank');
+      } catch (err) {
+        alert(err.message);
+        return;
+      }
+
+      if (gRank === null && gaiRank === null && bRank === null) {
         alert('Enter at least one rank');
         return;
       }
@@ -2692,9 +2780,9 @@ async function handleSerpLaunch(request, env) {
           headers: { 'Content-Type': 'application/json', 'Authorization': authHeaderLp },
           body: JSON.stringify({ 
             keyword, 
-            google: gRank ? parseInt(gRank) : null,
-            google_ai: gaiRank ? parseInt(gaiRank) : null,
-            bing: bRank ? parseInt(bRank) : null
+            google: gRank,
+            google_ai: gaiRank,
+            bing: bRank
           })
         });
 
@@ -2719,9 +2807,12 @@ async function handleSerpLaunch(request, env) {
           btn.disabled = false;
         }, 1200);
       } catch (e) {
-        btn.textContent = 'Error';
+        btn.textContent = 'Retry';
+        btn.title = e?.message || 'Save failed';
+        alert(e?.message || 'Save failed');
         setTimeout(() => {
           btn.textContent = '💾 Save';
+          btn.title = '';
           btn.disabled = false;
         }, 2000);
       }
@@ -2754,7 +2845,7 @@ async function handleSerpLog(request, env) {
   
   try {
     const body = await request.json();
-    const { keyword, google, google_ai, bing, bing_ai } = body;
+    const { keyword } = body;
     
     if (!keyword) {
       return new Response(JSON.stringify({ error: 'Keyword required' }), { 
@@ -2763,45 +2854,40 @@ async function handleSerpLog(request, env) {
       });
     }
     
+    const normalizeRank = (value, label) => {
+      if (value === null || value === undefined || value === '') return null;
+      const rank = Number(value);
+      if (!Number.isInteger(rank) || rank < 0 || rank > 100) {
+        throw new Error(`${label} must be a whole number from 0 to 100`);
+      }
+      return rank;
+    };
+    const rankEntries = [
+      ['google', normalizeRank(body.google, 'Google rank')],
+      ['google_ai', normalizeRank(body.google_ai, 'Google AI rank')],
+      ['bing', normalizeRank(body.bing, 'Bing rank')],
+      ['bing_ai', normalizeRank(body.bing_ai, 'Bing AI rank')]
+    ].filter(([, rank]) => rank !== null);
+
+    if (!rankEntries.length) {
+      return new Response(JSON.stringify({ error: 'Enter at least one rank' }), {
+        status: 400,
+        headers: { 'Content-Type': 'application/json' }
+      });
+    }
+
     const checkedAt = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
+    const statements = rankEntries.map(([engine, rank]) => env.DB.prepare(`
+      INSERT OR REPLACE INTO serp_results
+      (keyword, engine, checked_at, our_rank, our_url, all_rankings, top_3_urls, full_serp_json)
+      VALUES (?, ?, ?, ?, '', '[]', '[]', '{}')
+    `).bind(keyword, engine, checkedAt, rank));
+    await env.DB.batch(statements);
     
-    // Log Google rank if provided
-    if (google !== null) {
-      await env.DB.prepare(`
-        INSERT OR REPLACE INTO serp_results 
-        (keyword, engine, checked_at, our_rank, our_url, all_rankings, top_3_urls, full_serp_json)
-        VALUES (?, 'google', ?, ?, '', '[]', '[]', '{}')
-      `).bind(keyword, checkedAt, google).run();
-    }
-    
-    // Log Google AI rank if provided (store as google_ai engine)
-    if (google_ai !== null) {
-      await env.DB.prepare(`
-        INSERT OR REPLACE INTO serp_results 
-        (keyword, engine, checked_at, our_rank, our_url, all_rankings, top_3_urls, full_serp_json)
-        VALUES (?, 'google_ai', ?, ?, '', '[]', '[]', '{}')
-      `).bind(keyword, checkedAt, google_ai).run();
-    }
-    
-    // Log Bing rank if provided
-    if (bing !== null) {
-      await env.DB.prepare(`
-        INSERT OR REPLACE INTO serp_results 
-        (keyword, engine, checked_at, our_rank, our_url, all_rankings, top_3_urls, full_serp_json)
-        VALUES (?, 'bing', ?, ?, '', '[]', '[]', '{}')
-      `).bind(keyword, checkedAt, bing).run();
-    }
-    
-    // Log Bing AI rank if provided
-    if (bing_ai !== null) {
-      await env.DB.prepare(`
-        INSERT OR REPLACE INTO serp_results 
-        (keyword, engine, checked_at, our_rank, our_url, all_rankings, top_3_urls, full_serp_json)
-        VALUES (?, 'bing_ai', ?, ?, '', '[]', '[]', '{}')
-      `).bind(keyword, checkedAt, bing_ai).run();
-    }
-    
-    return new Response(JSON.stringify({ success: true }), {
+    return new Response(JSON.stringify({
+      success: true,
+      saved: rankEntries.map(([engine, rank]) => ({ engine, rank }))
+    }), {
       headers: { 'Content-Type': 'application/json' }
     });
     

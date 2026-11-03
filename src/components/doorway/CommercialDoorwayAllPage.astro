@@ -129,6 +129,84 @@ const galleryBaseUrl = `${siteOrigin}${contentBasePath}`;
 const collectionPageId = `${canonicalUrl}#collectionpage`;
 const imageGalleryId = `${galleryBaseUrl}#imagegallery`;
 const itemListId = `${canonicalUrl}#itemlist`;
+
+const definitionDoorwayPaths = new Set([
+  "/Art-of-the-West",
+  "/Contemporary-Western-Art",
+  "/cinematic-western-art",
+  "/western-storytelling-photography",
+  "/Painterly-Western-Photography",
+  "/Fine-Art-Photography-of-the-American-West",
+  "/Western-Black-and-White-Photography",
+]);
+const commercialDoorwayPaths = new Set([
+  "/cowboy-art-prints",
+  "/western-art-prints",
+  "/cowboy-artwork-prints",
+  "/cowboy-fine-art-prints",
+  "/Western-Photography-Prints",
+  "/WWII-Themed-Fine-Art-Prints",
+  "/Western-Wall-Art",
+  "/cowboy-wall-art",
+]);
+const heldDoorwayPaths = new Set([
+  "/Modern-Western-Interior-Design-Art",
+  "/Western-Interior-Design-Art",
+  "/Western-Wall-Art-for-Interior-Designers",
+  "/Rustic-Western-Interior-Design-Art",
+]);
+const approvedUnifiedDescriptionPaths = new Set([
+  "/cinematic-western-art",
+  "/Fine-Art-Photography-of-the-American-West",
+  "/Painterly-Western-Photography",
+  "/Western-Black-and-White-Photography",
+  "/Western-Photography-Art",
+  "/black-and-white-cowboy-art",
+  "/black-and-white-cowboy-photography",
+  "/Western-Photography-Prints",
+  "/American-Western-Art",
+  "/Art-of-the-West",
+  "/Western-Wall-Art",
+]);
+const engrainedAdditionPaths = new Set([
+  "/cinematic-western-art",
+  "/Contemporary-Western-Art",
+  "/cowboy-themed-photography",
+  "/western-cowboy-pictures",
+  "/Western-Cowboy-Photography",
+  "/western-cowboy-art",
+  "/cowboy-wall-art",
+]);
+const definitionClusterLinks: Record<string, Array<{ href: string; label: string }>> = {
+  "/cinematic-western-art": [{ href: "/Blog/what-is-cinematic-western-art", label: "What Is Cinematic Western Art?" }],
+  "/western-storytelling-photography": [{ href: "/Blog/what-is-visual-storytelling-in-photography", label: "What Is Visual Storytelling in Photography?" }],
+  "/Painterly-Western-Photography": [{ href: "/Blog/what-is-painterly-photography", label: "What Is Painterly Photography?" }],
+  "/Fine-Art-Photography-of-the-American-West": [{ href: "/Blog/what-is-western-fine-art-photography", label: "What Is Western Fine Art Photography?" }],
+  "/Contemporary-Western-Art": [{ href: "/Blog/what-is-contemporary-western-art", label: "What Is Contemporary Western Art?" }],
+  "/Western-Black-and-White-Photography": [
+    { href: "/black-and-white-cowboy-art", label: "Black and White Cowboy Art" },
+    { href: "/black-and-white-cowboy-photography", label: "Black and White Cowboy Photography" },
+    { href: "/black-and-white-cowboy-photos", label: "Black and White Cowboy Photos" },
+  ],
+  "/black-and-white-cowboy-art": [{ href: "/Western-Black-and-White-Photography", label: "Western Black and White Photography" }],
+  "/black-and-white-cowboy-photography": [{ href: "/Western-Black-and-White-Photography", label: "Western Black and White Photography" }],
+  "/black-and-white-cowboy-photos": [{ href: "/Western-Black-and-White-Photography", label: "Western Black and White Photography" }],
+};
+const isHeldDoorway = heldDoorwayPaths.has(canonicalPath);
+const isDefinitionDoorway = definitionDoorwayPaths.has(canonicalPath);
+const isCommercialDoorway = commercialDoorwayPaths.has(canonicalPath);
+const isHybridDoorway = !isHeldDoorway && !isDefinitionDoorway && !isCommercialDoorway;
+const isActiveDoorway = !isHeldDoorway;
+const clusterLinks = definitionClusterLinks[canonicalPath] || [];
+const stripVisiblePriceAnchors = (value = "") => {
+  if ((!isDefinitionDoorway && !isHybridDoorway) || !value) return value;
+  return String(value)
+    .split(/(?<=[.!?])\s+/)
+    .filter((sentence) => !/(?:\$\s*\d|Sketch Series[^.!?]*(?:begin|open|start|from)|prints?\s+from\s+\$)/i.test(sentence))
+    .join(" ")
+    .replace(/\s{2,}/g, " ")
+    .trim();
+};
 const breadcrumbId = `${canonicalUrl}#breadcrumb`;
 
 // ✅ Gallery metadata
@@ -191,12 +269,12 @@ const gridIntroTitle = formatCopy(copy.gridIntroTitle || "");
 const gridIntroCopy = formatCopy(copy.gridIntroCopy || "");
 const catalogEntranceTitle = formatCopy(copy.catalogEntranceTitle || `Story-Driven Fine Art Prints by Wayne Heim`);
 const catalogEntranceCopy = formatCopy(copy.catalogEntranceCopy || `Browse cinematic, painterly photography built as single-frame stories - artwork created for collectors who want more than decoration.`);
-const collectionIntro = formatCopy(copy.collectionIntro || `Browse the complete collection. Each artwork opens to its full story, collector notes, image metadata, and available print details.`);
+const collectionIntro = stripVisiblePriceAnchors(formatCopy(copy.collectionIntro || `Browse the complete collection. Each artwork opens to its full story, collector notes, image metadata, and available print details.`));
 const collectionIntroParagraphs = collectionIntro
   .split(/\n{2,}/)
   .map((paragraph) => paragraph.trim())
   .filter(Boolean);
-const trustBarCopy = formatCopy(copy.trustBarCopy || "");
+const trustBarCopy = (isCommercialDoorway || isHeldDoorway) ? formatCopy(copy.trustBarCopy || "") : "";
 const isCinematicConceptSeriesTopLayout = layoutVariant === "cinematic-concept-series-top";
 const isCinematicConceptLayout = layoutVariant === "cinematic-concept" || isCinematicConceptSeriesTopLayout;
 const showDockBeforeCatalog = !isCinematicConceptLayout || isCinematicConceptSeriesTopLayout;
@@ -205,7 +283,7 @@ const showSeriesBeforeCatalog = !isCinematicConceptLayout || isCinematicConceptS
 const showSeriesAfterCatalog = isCinematicConceptLayout && !isCinematicConceptSeriesTopLayout;
 const catalogSectionKickerTemplate = String(copy.catalogSectionKicker || "Selected Western Wall Art - {sectionCount} in Series");
 const splitConceptCopy = (value = "") =>
-  formatCopy(value)
+  stripVisiblePriceAnchors(formatCopy(value))
     .split(/\n{2,}/)
     .map((paragraph) => paragraph.trim())
     .filter(Boolean);
@@ -240,13 +318,14 @@ const collectingTitle = formatCopy(copy.collectingTitle || "");
 const collectingParagraphs = splitConceptCopy(copy.collectingCopy || "");
 const archiveContextKicker = formatCopy(copy.archiveContextKicker || "");
 const archiveContextTitle = formatCopy(copy.archiveContextTitle || "");
-const archiveContextParagraphs = splitConceptCopy(copy.archiveContextCopy || "");
+const archiveContextCopy = stripVisiblePriceAnchors(formatCopy(copy.archiveContextCopy || ""));
+const archiveContextParagraphs = splitConceptCopy(archiveContextCopy);
 const cornerstoneVariant = String(copy.cornerstoneVariant || "").trim();
 const gatewayKicker = formatCopy(copy.gatewayKicker || "K4 STUDIOS FINE ART PRINT CATALOG");
 const gatewayCollectionName = formatCopy(copy.gatewayCollectionName || collectionName);
 const gatewayBrandClass = String(copy.gatewayBrandClass || "").trim();
-const gatewayIntroCopy = formatCopy(copy.gatewayIntroCopy || `${imageCount} painterly ${variantName.toLowerCase()} ${collectionName.toLowerCase()} fine art photographs by Wayne Heim, available as archival fine art prints from ${getFormattedLowestStandardPrintPrice()}. Four edition tiers - open-edition studies to ultra-limited signed collector works - on fine art paper and Baltic Birch wood panels.`);
-const gatewaySupportingCopy = formatCopy(copy.gatewaySupportingCopy || `Every image below is a complete story in a single frame. Click any work to read the narrative, explore collector notes, and view print details.`);
+const gatewayIntroCopy = stripVisiblePriceAnchors(formatCopy(copy.gatewayIntroCopy || `${imageCount} painterly ${variantName.toLowerCase()} ${collectionName.toLowerCase()} fine art photographs by Wayne Heim, available as archival fine art prints from ${getFormattedLowestStandardPrintPrice()}. Four edition tiers - open-edition studies to ultra-limited signed collector works - on fine art paper and Baltic Birch wood panels.`));
+const gatewaySupportingCopy = stripVisiblePriceAnchors(formatCopy(copy.gatewaySupportingCopy || `Every image below is a complete story in a single frame. Click any work to read the narrative, explore collector notes, and view print details.`));
 const gatewaySupportingCopyHtml = Boolean(copy.gatewaySupportingCopyHtml);
 const gatewaySupportingParagraphs = gatewaySupportingCopy
   .split(/\n{2,}/)
@@ -298,6 +377,30 @@ const standardPrintSeries = getStandardPrintSeries() as Array<{
   learnMoreHref: string;
   sizes: Array<{ display: string }>;
 }>;
+const engrainedPrintSeries = {
+  name: "Engrained™ Series",
+  subtitle: "Ultra-limited Baltic Birch edition",
+  collectorSummary: "Ultra-limited Edition of five plus one artist proof, printed directly onto natural Baltic Birch so the wood's grain becomes part of the story.",
+  symbol: "▧",
+  learnMoreHref: "https://www.k4studios.com/Engrained",
+  sizes: [],
+};
+const visiblePrintSeries = canonicalPath === "/cowboy-wall-art"
+  ? [...standardPrintSeries, engrainedPrintSeries]
+  : standardPrintSeries;
+const showFullSeriesTreatment = isCommercialDoorway || isHeldDoorway;
+const engrainedAvailabilityClause = `Select works are offered in <a href="https://www.k4studios.com/Engrained">Engrained</a>™ — an Ultra-limited Edition of five plus one artist proof, printed directly onto natural Baltic Birch so the wood's grain and texture become part of the story being told.`;
+const availabilityCopy = isCommercialDoorway
+  ? canonicalPath === "/cowboy-wall-art"
+    ? `Archival paper prints range from 5 × 7 studies through larger wall formats, beginning at ${getFormattedLowestStandardPrintPrice()}. ${engrainedAvailabilityClause}`
+    : `Archival paper prints range from 5 × 7 studies through larger wall formats, beginning at ${getFormattedLowestStandardPrintPrice()}.`
+  : isDefinitionDoorway
+    ? engrainedAdditionPaths.has(canonicalPath)
+      ? `Browse the collection below; each artwork page carries its available formats, sizes, and collector details. ${engrainedAvailabilityClause}`
+      : "Browse the collection below; each artwork page carries its available formats, sizes, and collector details."
+    : engrainedAdditionPaths.has(canonicalPath)
+      ? `Works are available as archival fine art prints. ${engrainedAvailabilityClause} Format, size, and edition details are on each artwork page.`
+      : "Works are available as archival fine art prints, with format, size, and edition details on each artwork page.";
 
 // ✅ Text cleaner for JSON-LD (escapes quotes for JSON)
 const cleanForJson = (val = "") =>
@@ -320,7 +423,7 @@ const hasDanglingEnding = (text = "") =>
 const trimAtCleanWordBoundary = (text = "", maxLen = 150) => {
   let trimmed = text.slice(0, maxLen).replace(/\s+\S*$/, "").trim();
   trimmed = trimmed.replace(/\s+\b(?:a|an|and|as|at|between|by|for|from|in|into|of|on|or|the|through|to|under|with|without)$/i, "").trim();
-  return trimmed ? `${trimmed}�` : "";
+  return trimmed ? `${trimmed}…` : "";
 };
 
 const truncateExcerpt = (text: string, maxLen = 150) => {
@@ -529,7 +632,15 @@ const stripHtml = (value = "") =>
     .replace(/<[^>]+>/g, "")
     .replace(/\s+/g, " ")
     .trim();
-const faqSchemaEntity = faqItems
+const visibleFaqItems = faqItems
+  .map((item: any) => ({
+    ...item,
+    a: Array.isArray(item?.a)
+      ? item.a.map((paragraph: string) => stripVisiblePriceAnchors(paragraph)).filter(Boolean)
+      : [],
+  }))
+  .filter((item: any) => item?.q && item.a.length > 0);
+const faqSchemaEntity = visibleFaqItems
   .filter((item: any) => item?.q && Array.isArray(item.a) && item.a.length > 0)
   .map((item: any) => ({
     "@type": "Question",
@@ -609,7 +720,10 @@ const structuredDataJson = JSON.stringify({
 const pageMeta = {
   canonicalUrl,
   robots: "index, follow",
-  descriptionMaxLength: copy.descriptionMaxLength || 190,
+  descriptionMaxLength: approvedUnifiedDescriptionPaths.has(canonicalPath)
+    ? Math.max(seoDescription.length, 190)
+    : copy.descriptionMaxLength || 190,
+  preserveDescriptionDashes: approvedUnifiedDescriptionPaths.has(canonicalPath),
   ogTitle: seoTitle,
   ogDescription: seoDescription,
   ogImage: socialImage,
@@ -630,9 +744,9 @@ const compactBreadcrumbHtml = breadcrumbHtml
   .replace(/>By (Location|Theme)</g, ">$1<")
   .replace(/\|\s*(?:Collection|Series)\s*$/, "");
 
-const faqSplitIndex = Math.ceil(faqItems.length / 2);
-const faqLeft = faqItems.slice(0, faqSplitIndex);
-const faqRight = faqItems.slice(faqSplitIndex);
+const faqSplitIndex = Math.ceil(visibleFaqItems.length / 2);
+const faqLeft = visibleFaqItems.slice(0, faqSplitIndex);
+const faqRight = visibleFaqItems.slice(faqSplitIndex);
 ---
 
 <BaseLayout title={seoTitle} description={seoDescription} meta={pageMeta} structuredDataJSON={structuredDataJson} disableAutoBreadcrumbs={true}>
@@ -757,14 +871,36 @@ const faqRight = faqItems.slice(faqSplitIndex);
 
     <span id="collection-browser" class="collection-browser-anchor" aria-hidden="true"></span>
     <hr class="catalog-anchor-rule" />
-    {showSeriesBeforeCatalog && (
+    {clusterLinks.length > 0 && (
+      <nav class="definition-cluster-links" aria-label="Related definition and collection pages">
+        <strong>{canonicalPath === "/Western-Black-and-White-Photography" ? "Browse the black and white Western family" : "Read the paired definition"}</strong>
+        <span>
+          {clusterLinks.map((link, index) => (
+            <>
+              {index > 0 && <span aria-hidden="true"> · </span>}
+              <a href={link.href}>{link.label}</a>
+            </>
+          ))}
+        </span>
+      </nav>
+    )}
+    {isActiveDoorway && (
+      <aside class:list={["doorway-action-route", isCommercialDoorway && "doorway-action-route--commercial"]} aria-label="Artwork availability and inquiries">
+        <p set:html={availabilityCopy}></p>
+        <div class="doorway-action-route__links">
+          {isCommercialDoorway && <a href="#collection-grid">Open a piece for sizes and pricing</a>}
+          <a href="/Contact">Collector and designer inquiries</a>
+        </div>
+      </aside>
+    )}
+    {showSeriesBeforeCatalog && showFullSeriesTreatment && (
       <>
         <p class="print-options-heading">K4 Series and Limited Editions &middot; Fine Art Prints from {getFormattedLowestStandardPrintPrice()}</p>
 
         <!-- Available Print Series -->
         <section class="print-options" aria-labelledby="print-options-heading">
           <div class="series-widget" aria-label="Standard K4 paper print series">
-            {standardPrintSeries.map((series) => (
+            {visiblePrintSeries.map((series) => (
               <article class="series-tile" data-series-tile>
                 <button class="series-trigger" type="button" aria-label={`Show ${series.name} details`}>
                   <span class="series-symbol" aria-hidden="true">{series.symbol}</span>
@@ -1168,13 +1304,13 @@ const faqRight = faqItems.slice(faqSplitIndex);
       </section>
     )}
 
-    {showSeriesAfterCatalog && (
+    {showSeriesAfterCatalog && showFullSeriesTreatment && (
       <>
         <p class="print-options-heading">K4 Series and Limited Editions &middot; Fine Art Prints from {getFormattedLowestStandardPrintPrice()}</p>
 
         <section class="print-options" aria-labelledby="print-options-heading">
           <div class="series-widget" aria-label="Standard K4 paper print series">
-            {standardPrintSeries.map((series) => (
+            {visiblePrintSeries.map((series) => (
               <article class="series-tile" data-series-tile>
                 <button class="series-trigger" type="button" aria-label={`Show ${series.name} details`}>
                   <span class="series-symbol" aria-hidden="true">{series.symbol}</span>
@@ -1221,7 +1357,7 @@ const faqRight = faqItems.slice(faqSplitIndex);
       <ArchiveContext
         categoryUrl={archiveContext.categoryUrl || basePath}
         categoryName={archiveContext.categoryName || collectionName}
-        copyHtml={copy.archiveContextCopy || ""}
+        copyHtml={archiveContextCopy}
       />
     )}
 
@@ -1303,7 +1439,7 @@ const faqRight = faqItems.slice(faqSplitIndex);
       </section>
     )}
 
-    {faqItems.length > 0 && (
+    {visibleFaqItems.length > 0 && (
       <section class="faq-section pb-10" id="faq">
         <div class="faq-shell">
           <p class="faq-kicker">{copy.faqKicker || "Collector Questions"}</p>
@@ -2021,6 +2157,44 @@ const faqRight = faqItems.slice(faqSplitIndex);
       display:block;
       height:0;
       scroll-margin-top:92px;
+    }
+    .definition-cluster-links,
+    .doorway-action-route {
+      max-width:1180px;
+      margin:0 auto 1rem;
+      border:1px solid rgba(123,63,34,.22);
+      border-radius:12px;
+      background:#faf7f2;
+      padding:.9rem 1.1rem;
+      box-sizing:border-box;
+      color:#4a392c;
+    }
+    .definition-cluster-links {
+      display:flex;
+      flex-wrap:wrap;
+      align-items:baseline;
+      gap:.4rem .75rem;
+    }
+    .definition-cluster-links a,
+    .doorway-action-route a {
+      color:#7b3f22;
+      font-weight:700;
+      text-decoration:underline;
+      text-underline-offset:2px;
+    }
+    .doorway-action-route p {
+      margin:0;
+      line-height:1.65;
+    }
+    .doorway-action-route__links {
+      display:flex;
+      flex-wrap:wrap;
+      gap:.55rem 1.25rem;
+      margin-top:.55rem;
+    }
+    .doorway-action-route--commercial {
+      border-color:rgba(123,63,34,.3);
+      background:#f7f0e7;
     }
     .series-widget {
       position:relative;
