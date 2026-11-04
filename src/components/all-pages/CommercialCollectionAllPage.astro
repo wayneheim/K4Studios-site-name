@@ -157,7 +157,7 @@ const hasDanglingEnding = (text = "") =>
 const trimAtCleanWordBoundary = (text = "", maxLen = 150) => {
   let trimmed = text.slice(0, maxLen).replace(/\s+\S*$/, "").trim();
   trimmed = trimmed.replace(/\s+\b(?:a|an|and|as|at|between|by|for|from|in|into|of|on|or|the|through|to|under|with|without)$/i, "").trim();
-  return trimmed ? `${trimmed}…` : "";
+  return trimmed ? `${trimmed}â€¦` : "";
 };
 
 const truncateExcerpt = (text: string, maxLen = 150) => {
@@ -521,12 +521,13 @@ const compactBreadcrumbHtml = breadcrumbHtml
       <div class="series-widget" aria-label="Standard K4 paper print series">
         {standardPrintSeries.map((series) => (
           <article class="series-tile" data-series-tile>
-            <button class="series-trigger" type="button" aria-label={`Show ${series.name} details`}>
+            <button class="series-trigger" type="button" aria-label={`Show ${series.name} details`} aria-expanded="false">
               <span class="series-symbol" aria-hidden="true">{series.symbol}</span>
               <span>
                 <strong>{series.name}</strong>
                 <small>{series.subtitle}</small>
               </span>
+              <span class="series-info-indicator" aria-hidden="true">&#9432;</span>
             </button>
             <div class="series-detail">
               <p class="series-detail-copy">
@@ -647,16 +648,18 @@ const compactBreadcrumbHtml = breadcrumbHtml
                 data-gallery-id={contentBasePath}
                 data-artwork-number={idx + 1}
               >
-                <img 
-                  class="ssr-card-image"
-                  src={imageUrl} 
-                  srcset={srcsetParts || undefined}
-                  sizes="(max-width: 520px) calc(100vw - 32px), (max-width: 768px) calc((100vw - 48px) / 2), 250px"
-                  alt={altText} 
-                  loading="lazy" 
-                  decoding="async"
-                  fetchpriority="low"
-                />
+                <span class="ssr-card-media">
+                  <img
+                    class="ssr-card-image"
+                    src={imageUrl}
+                    srcset={srcsetParts || undefined}
+                    sizes="(max-width: 520px) calc(100vw - 32px), (max-width: 768px) calc((100vw - 48px) / 2), 250px"
+                    alt={altText}
+                    loading="lazy"
+                    decoding="async"
+                    fetchpriority="low"
+                  />
+                </span>
                 <div class="ssr-card-content">
                   <div class="card-meta-row">
                     <span class="card-number">Image {idx + 1} of {imageCount}</span>
@@ -1154,6 +1157,7 @@ const compactBreadcrumbHtml = breadcrumbHtml
       box-shadow:0 10px 22px rgba(48,34,23,.1);
     }
     .series-trigger {
+      position:relative;
       width:100%;
       border:0;
       background:transparent;
@@ -1179,6 +1183,17 @@ const compactBreadcrumbHtml = breadcrumbHtml
       margin-top:0;
       flex:0 0 auto;
     }
+    .series-info-indicator {
+      position:absolute;
+      top:3px;
+      right:4px;
+      color:#5d8fbc;
+      font-family:Arial,sans-serif;
+      font-size:.96rem;
+      font-weight:400;
+      line-height:1;
+      transition:color .18s ease;
+    }
     .series-tile strong {
       display:block;
       color:#2f241b;
@@ -1195,10 +1210,17 @@ const compactBreadcrumbHtml = breadcrumbHtml
     .series-tile:hover .series-symbol,
     .series-tile:focus-within .series-symbol,
     .series-tile.is-active .series-symbol,
+    .series-tile:hover .series-info-indicator,
+    .series-tile:focus-within .series-info-indicator,
+    .series-tile.is-active .series-info-indicator,
     .series-tile:hover strong,
     .series-tile:focus-within strong,
     .series-tile.is-active strong {
       color:#5d8fbc;
+    }
+    .series-tile.is-hover-ready .series-info-indicator,
+    .series-tile.is-active .series-info-indicator {
+      color:#376f9f;
     }
     .series-detail {
       position:absolute;
@@ -1526,7 +1548,7 @@ const compactBreadcrumbHtml = breadcrumbHtml
     }
 
     .ssr-card {
-      --card-overlap:82px;
+      --card-overlap:0px;
       position:relative;
       isolation:isolate;
       content-visibility:auto;
@@ -1574,11 +1596,19 @@ const compactBreadcrumbHtml = breadcrumbHtml
       cursor:pointer;
     }
 
+    .ssr-card-media {
+      position:relative;
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+      width:100%;
+      height:174px;
+      background:#fffdf9;
+    }
     .ssr-card-image {
       display:block;
       width:100%;
       height:auto;
-      background:#efe7dc;
       transition:filter .28s ease, opacity .28s ease;
     }
 
@@ -1595,7 +1625,6 @@ const compactBreadcrumbHtml = breadcrumbHtml
       height:252px;
       overflow:hidden;
       position:relative;
-      margin-top:calc(var(--card-overlap) * -1);
       z-index:1;
       background:#fffdf9;
       border-top:1px solid #e6d9ca;
@@ -2027,6 +2056,11 @@ const compactBreadcrumbHtml = breadcrumbHtml
         width:100%;
         height:auto;
       }
+      .ssr-card-media {
+        display:block;
+        height:auto;
+        overflow:hidden;
+      }
       .ssr-card-content {
         display:flex;
         flex-direction:column;
@@ -2291,67 +2325,50 @@ const compactBreadcrumbHtml = breadcrumbHtml
       const cards = Array.from(document.querySelectorAll('.ssr-card'));
       if (cards.length === 0) return;
 
-      const isDesktopHover = () =>
-        window.matchMedia('(min-width: 769px)').matches &&
-        window.matchMedia('(hover: hover)').matches &&
-        window.matchMedia('(pointer: fine)').matches;
+      const usesFixedPreview = () =>
+        window.matchMedia('(min-width: 769px)').matches;
 
-      const applyRowCropping = () => {
-        if (!isDesktopHover()) {
-          cards.forEach((card) => card.style.removeProperty('--card-overlap'));
+      const applyFixedPreview = () => {
+        if (!usesFixedPreview()) {
+          cards.forEach((card) => {
+            card.style.removeProperty('--card-overlap');
+            const media = card.querySelector('.ssr-card-media');
+            media?.style.removeProperty('height');
+          });
           return;
         }
 
-        const measured = cards
-          .map((card) => {
-            const image = card.querySelector('.ssr-card-image');
-            if (!image) return null;
-            const imageHeight = image.getBoundingClientRect().height;
-            if (imageHeight <= 0) return null;
-            const top = Math.round(card.getBoundingClientRect().top);
-            return { card, imageHeight, top };
-          })
-          .filter(Boolean)
-          .sort((a, b) => a.top - b.top);
+        cards.forEach((card) => {
+          const media = card.querySelector('.ssr-card-media');
+          const image = card.querySelector('.ssr-card-image');
+          if (!media || !image) return;
 
-        if (measured.length === 0) return;
+          const previewHeight = Math.round(media.getBoundingClientRect().width * 9 / 13);
+          media.style.height = `${previewHeight}px`;
 
-        const rows = [];
-        measured.forEach((item) => {
-          const row = rows[rows.length - 1];
-          if (!row || Math.abs(row.top - item.top) > 4) {
-            rows.push({ top: item.top, items: [item] });
-            return;
-          }
-          row.items.push(item);
-        });
+          const imageHeight = image.getBoundingClientRect().height;
+          if (previewHeight <= 0 || imageHeight <= 0) return;
 
-        rows.forEach((row) => {
-          const minImageHeight = Math.min(...row.items.map((item) => item.imageHeight));
-          row.items.forEach((item) => {
-            const overlap = Math.max(0, Math.round(item.imageHeight - minImageHeight));
-            item.card.style.setProperty('--card-overlap', `${overlap}px`);
-          });
+          const overlap = Math.max(0, Math.round(imageHeight - previewHeight));
+          card.style.setProperty('--card-overlap', `${overlap}px`);
         });
       };
 
       let frame = 0;
-      const scheduleCropping = () => {
+      const schedulePreview = () => {
         cancelAnimationFrame(frame);
-        frame = requestAnimationFrame(applyRowCropping);
+        frame = requestAnimationFrame(applyFixedPreview);
       };
 
-      if (isDesktopHover()) {
-        cards.forEach((card) => {
-          const image = card.querySelector('.ssr-card-image');
-          if (!image || image.complete) return;
-          image.addEventListener('load', scheduleCropping, { once: true });
-        });
-      }
+      cards.forEach((card) => {
+        const image = card.querySelector('.ssr-card-image');
+        if (!image || image.complete) return;
+        image.addEventListener('load', schedulePreview, { once: true });
+      });
 
-      window.addEventListener('resize', scheduleCropping);
-      window.addEventListener('load', scheduleCropping, { once: true });
-      scheduleCropping();
+      window.addEventListener('resize', schedulePreview);
+      window.addEventListener('load', schedulePreview, { once: true });
+      schedulePreview();
     })();
 
     (() => {
@@ -2404,11 +2421,18 @@ const compactBreadcrumbHtml = breadcrumbHtml
         }
       };
 
+      const syncExpanded = (tile) => {
+        const trigger = tile.querySelector('.series-trigger');
+        const isExpanded = tile.classList.contains('is-active') || tile.classList.contains('is-hover-ready');
+        trigger?.setAttribute('aria-expanded', String(isExpanded));
+      };
+
       const closeTiles = (except = null) => {
         tiles.forEach((tile) => {
           if (tile !== except) {
             clearHoverTimer(tile);
             tile.classList.remove('is-active', 'is-hover-ready');
+            syncExpanded(tile);
           }
         });
       };
@@ -2422,6 +2446,7 @@ const compactBreadcrumbHtml = breadcrumbHtml
           closeTiles(tile);
           tile.classList.remove('is-hover-ready');
           tile.classList.toggle('is-active', willOpen);
+          syncExpanded(tile);
         });
         tile.addEventListener('pointerenter', () => {
           if (!supportsDelayedHover) return;
@@ -2429,16 +2454,19 @@ const compactBreadcrumbHtml = breadcrumbHtml
           hoverTimers.set(tile, window.setTimeout(() => {
             closeTiles(tile);
             tile.classList.add('is-hover-ready');
+            syncExpanded(tile);
           }, hoverDelay));
         });
         tile.addEventListener('pointerleave', () => {
           clearHoverTimer(tile);
           tile.classList.remove('is-hover-ready');
+          syncExpanded(tile);
         });
         tile.addEventListener('focusout', (event) => {
           if (!tile.contains(event.relatedTarget)) {
             clearHoverTimer(tile);
             tile.classList.remove('is-active', 'is-hover-ready');
+            syncExpanded(tile);
           }
         });
       });

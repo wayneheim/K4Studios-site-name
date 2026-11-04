@@ -850,12 +850,13 @@ const faqRight = visibleFaqItems.slice(faqSplitIndex);
           <div class="series-widget" aria-label="Standard K4 paper print series">
             {visiblePrintSeries.map((series) => (
               <article class="series-tile" data-series-tile>
-                <button class="series-trigger" type="button" aria-label={`Show ${series.name} details`}>
+                <button class="series-trigger" type="button" aria-label={`Show ${series.name} details`} aria-expanded="false">
                   <span class="series-symbol" aria-hidden="true">{series.symbol}</span>
                   <span>
                     <strong>{series.name}</strong>
                     <small>{series.subtitle}</small>
                   </span>
+                  <span class="series-info-indicator" aria-hidden="true">&#9432;</span>
                 </button>
                 <div class="series-detail">
                   <p class="series-detail-copy">
@@ -1260,12 +1261,13 @@ const faqRight = visibleFaqItems.slice(faqSplitIndex);
           <div class="series-widget" aria-label="Standard K4 paper print series">
             {visiblePrintSeries.map((series) => (
               <article class="series-tile" data-series-tile>
-                <button class="series-trigger" type="button" aria-label={`Show ${series.name} details`}>
+                <button class="series-trigger" type="button" aria-label={`Show ${series.name} details`} aria-expanded="false">
                   <span class="series-symbol" aria-hidden="true">{series.symbol}</span>
                   <span>
                     <strong>{series.name}</strong>
                     <small>{series.subtitle}</small>
                   </span>
+                  <span class="series-info-indicator" aria-hidden="true">&#9432;</span>
                 </button>
                 <div class="series-detail">
                   <p class="series-detail-copy">
@@ -2167,6 +2169,7 @@ const faqRight = visibleFaqItems.slice(faqSplitIndex);
       box-shadow:0 10px 22px rgba(48,34,23,.1);
     }
     .series-trigger {
+      position:relative;
       width:100%;
       border:0;
       background:transparent;
@@ -2192,6 +2195,17 @@ const faqRight = visibleFaqItems.slice(faqSplitIndex);
       margin-top:0;
       flex:0 0 auto;
     }
+    .series-info-indicator {
+      position:absolute;
+      top:3px;
+      right:4px;
+      color:#5d8fbc;
+      font-family:Arial,sans-serif;
+      font-size:.96rem;
+      font-weight:400;
+      line-height:1;
+      transition:color .18s ease;
+    }
     .series-tile strong {
       display:block;
       color:#2f241b;
@@ -2208,10 +2222,17 @@ const faqRight = visibleFaqItems.slice(faqSplitIndex);
     .series-tile:hover .series-symbol,
     .series-tile:focus-within .series-symbol,
     .series-tile.is-active .series-symbol,
+    .series-tile:hover .series-info-indicator,
+    .series-tile:focus-within .series-info-indicator,
+    .series-tile.is-active .series-info-indicator,
     .series-tile:hover strong,
     .series-tile:focus-within strong,
     .series-tile.is-active strong {
       color:#5d8fbc;
+    }
+    .series-tile.is-hover-ready .series-info-indicator,
+    .series-tile.is-active .series-info-indicator {
+      color:#376f9f;
     }
     .series-detail {
       position:absolute;
@@ -4141,11 +4162,18 @@ const faqRight = visibleFaqItems.slice(faqSplitIndex);
         }
       };
 
+      const syncExpanded = (tile) => {
+        const trigger = tile.querySelector('.series-trigger');
+        const isExpanded = tile.classList.contains('is-active') || tile.classList.contains('is-hover-ready');
+        trigger?.setAttribute('aria-expanded', String(isExpanded));
+      };
+
       const closeTiles = (except = null) => {
         tiles.forEach((tile) => {
           if (tile !== except) {
             clearHoverTimer(tile);
             tile.classList.remove('is-active', 'is-hover-ready');
+            syncExpanded(tile);
           }
         });
       };
@@ -4159,6 +4187,7 @@ const faqRight = visibleFaqItems.slice(faqSplitIndex);
           closeTiles(tile);
           tile.classList.remove('is-hover-ready');
           tile.classList.toggle('is-active', willOpen);
+          syncExpanded(tile);
         });
         tile.addEventListener('pointerenter', () => {
           if (!supportsDelayedHover) return;
@@ -4166,16 +4195,19 @@ const faqRight = visibleFaqItems.slice(faqSplitIndex);
           hoverTimers.set(tile, window.setTimeout(() => {
             closeTiles(tile);
             tile.classList.add('is-hover-ready');
+            syncExpanded(tile);
           }, hoverDelay));
         });
         tile.addEventListener('pointerleave', () => {
           clearHoverTimer(tile);
           tile.classList.remove('is-hover-ready');
+          syncExpanded(tile);
         });
         tile.addEventListener('focusout', (event) => {
           if (!tile.contains(event.relatedTarget)) {
             clearHoverTimer(tile);
             tile.classList.remove('is-active', 'is-hover-ready');
+            syncExpanded(tile);
           }
         });
       });
