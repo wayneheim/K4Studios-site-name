@@ -650,18 +650,11 @@ export const siteNav = [
       ]
     },
     {
-      "label": "Picture Shows",
-      "href": "/Other/Shows",
-      "code": "O-S6",
-      "slug": "shows",
-      "type": "section"
-    },
-    {
-      "label": "Expeditions",
-      "href": "/Other/Expeditions",
-      "code": "O-S6p",
-      "slug": "expeditions",
-      "type": "section"
+      "label": "News & Awards",
+      "href": "/News-Awards",
+      "code": "O-S1",
+      "slug": "news--awards",
+      "type": "collection"
     },
     {
       "label": "Series & Editions",
@@ -671,24 +664,10 @@ export const siteNav = [
       "type": "collection"
     },
     {
-      "label": "News & Awards",
-      "href": "/News-Awards",
-      "code": "O-S1",
-      "slug": "news--awards",
-      "type": "collection"
-    },
-    {
-      "label": "Blog",
-      "href": "/Blog",
-      "code": "O-S5",
-      "slug": "blog",
-      "type": "section"
-    },
-    {
-      "label": "Videos",
-      "href": "/Videos",
-      "code": "O-S5v",
-      "slug": "videos",
+      "label": "What Is a One-Image Movie?",
+      "href": "/Other/One-Image-Movie",
+      "code": "O-S5a",
+      "slug": "one-image-movie",
       "type": "section"
     },
     {
@@ -750,18 +729,39 @@ export const siteNav = [
       ]
     },
     {
+      "label": "Blog",
+      "href": "/Blog",
+      "code": "O-S5",
+      "slug": "blog",
+      "type": "section"
+    },
+    {
+      "label": "Expeditions",
+      "href": "/Other/Expeditions",
+      "code": "O-S6p",
+      "slug": "expeditions",
+      "type": "section"
+    },
+    {
+      "label": "Picture Shows",
+      "href": "/Other/Shows",
+      "code": "O-S6",
+      "slug": "shows",
+      "type": "section"
+    },
+    {
+      "label": "Videos",
+      "href": "/Videos",
+      "code": "O-S5v",
+      "slug": "videos",
+      "type": "section"
+    },
+    {
       "label": "Historical Reenactment Photography",
       "href": "/Historical-Reenactment-Photography",
       "code": "O-S3",
       "slug": "historical-reenactment-photography",
       "type": "collection"
-    },
-    {
-      "label": "What Is a One-Image Movie?",
-      "href": "/Other/One-Image-Movie",
-      "code": "O-S5a",
-      "slug": "one-image-movie",
-      "type": "section"
     },
     {
       "label": "Collections",
