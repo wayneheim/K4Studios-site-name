@@ -248,6 +248,8 @@ ul li::marker { margin-top: 0.15em; font-size: 1.2em; color: gray; }
   display: flow-root;
 }
 .story-block .frontier-story-body__video {
+  position: relative;
+  z-index: 2;
   float: left;
   width: 10rem;
   margin: 0.15rem 1.25rem 0.75rem 0;
