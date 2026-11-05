@@ -68,8 +68,13 @@ function shouldRun(forceRun) {
   return true;
 }
 
-function updateLastWarmTime() {
-  fs.writeFileSync(LAST_WARM_PATH, JSON.stringify({ lastWarm: Date.now() }));
+function updateLastWarmTime({ successCount, failCount, totalCount }) {
+  fs.writeFileSync(LAST_WARM_PATH, JSON.stringify({
+    lastWarm: Date.now(),
+    successCount,
+    failCount,
+    totalCount
+  }));
 }
 
 // ============================================================================
@@ -116,6 +121,22 @@ async function loadCarouselPools() {
     console.warn('⚠️ Could not load carouselPools.json:', err.message);
     return { pools: {} };
   }
+}
+
+async function loadLiveManifestIds() {
+  const res = await fetch(MANIFEST_URL, {
+    headers: {
+      'User-Agent': 'K4-Cache-Warmer/1.0',
+      'Accept': 'application/json'
+    }
+  });
+
+  if (!res.ok) {
+    throw new Error(`Could not load live image manifest (${res.status})`);
+  }
+
+  const manifest = await res.json();
+  return new Set(Object.keys(manifest || {}));
 }
 
 async function loadLandingStones() {
@@ -320,6 +341,18 @@ async function main() {
   console.log('🔥 Starting image cache warm...\n');
   
   const urlsToWarm = new Set();
+  const skippedImageIds = new Set();
+  const liveManifestIds = await loadLiveManifestIds();
+
+  function addWarmUrl(imageId, size) {
+    if (!liveManifestIds.has(imageId)) {
+      skippedImageIds.add(imageId);
+      return;
+    }
+    urlsToWarm.add(buildWarmUrl(imageId, size));
+  }
+
+  console.log(`📋 Loaded ${liveManifestIds.size} public image IDs from the live manifest`);
   
   // 1. Carousel images (first 10 from each pool, at 'm' size for ImageBar)
   console.log('📸 Loading carousel pools...');
@@ -331,7 +364,7 @@ async function main() {
     for (const img of poolImages) {
       const id = img.id || extractImageId(img.src || img.srcM);
       if (id) {
-        urlsToWarm.add(buildWarmUrl(id, 'm'));  // Carousel uses 'm' size
+        addWarmUrl(id, 'm');  // Carousel uses 'm' size
         carouselCount++;
       }
     }
@@ -348,7 +381,7 @@ async function main() {
   const byArray = stones.filter(s => s.method === 'thumbs-array').length;
   
   for (const stone of stones) {
-    urlsToWarm.add(buildWarmUrl(stone.id, 's'));
+    addWarmUrl(stone.id, 's');
   }
   console.log(`   Added ${stones.length} tombstone images (${byImageId} via imageId, ${byRegex} via regex, ${byArray} via array)`);
   
@@ -361,12 +394,16 @@ async function main() {
   console.log('🖼️  Loading gallery preview images...');
   const previewImages = await loadGalleryPreviewImages();
   for (const img of previewImages) {
-    urlsToWarm.add(buildWarmUrl(img.id, 's'));  // All 12 in pool at thumbnail size
+    addWarmUrl(img.id, 's');  // All 12 in pool at thumbnail size
     if (img.isHero) {
-      urlsToWarm.add(buildWarmUrl(img.id, 'l'));  // Hero image also at viewer size
+      addWarmUrl(img.id, 'l');  // Hero image also at viewer size
     }
   }
   console.log(`   Added ${previewImages.length} preview pool images (${previewImages.filter(i => i.isHero).length} heroes at 'l')`);
+
+  if (skippedImageIds.size > 0) {
+    console.log(`   Skipped ${skippedImageIds.size} non-public image IDs not present in the live manifest`);
+  }
   
   // Convert to array and warm in batches
   const allUrls = [...urlsToWarm];
@@ -401,11 +438,16 @@ async function main() {
     }
   }
   
-  // Update last warm time
-  updateLastWarmTime();
-  
   console.log(`\n✅ Cache warm complete!`);
   console.log(`   Success: ${successCount} | Failed: ${failCount}`);
+
+  if (failCount > 0) {
+    console.error('   Warm was incomplete; the success throttle was not updated.');
+    process.exit(1);
+  }
+
+  // Only a fully successful run should suppress the next warm attempt.
+  updateLastWarmTime({ successCount, failCount, totalCount: allUrls.length });
   console.log(`   Next warm allowed in ${WARM_INTERVAL_HOURS} hours (or use --force)`);
   
   process.exit(0);

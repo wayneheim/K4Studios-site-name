@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "astro dev --host",
     "dev:netlify": "netlify dev",
-    "build": "npm run gen:master-data && npm run gen:chapter-doorway-links && npm run gen:image-filename-slugs && npm run gen:prefetch-map && npm run gen:image-id-map && npm run gen:image-sitemaps && npm run gen:merchant-products && npm run gen:sitemap && npm run gen:sitemap:matches && npm run gen:story-slider && npm run gen:image-manifest && npm run gen:commerce-fulfillment-links && npm run gen:commerce-collector-notes && npm run copy:pricing && npm run copy:series-data && npm run gen:engrained-data && npm run gen:artwork-search && npm run build:astro:fast && node scripts/warm-image-cache.mjs && npx cpx \"_redirects\" dist/ && npm run sanitize:public-output && npm run audit:canonical-host && npm run audit:public-smugmug-links",
+    "build": "npm run gen:master-data && npm run gen:chapter-doorway-links && npm run gen:image-filename-slugs && npm run gen:prefetch-map && npm run gen:image-id-map && npm run gen:image-sitemaps && npm run gen:merchant-products && npm run gen:sitemap && npm run gen:sitemap:matches && npm run gen:story-slider && npm run gen:image-manifest && npm run gen:commerce-fulfillment-links && npm run gen:commerce-collector-notes && npm run copy:pricing && npm run copy:series-data && npm run gen:engrained-data && npm run gen:artwork-search && npm run build:astro:fast && npx cpx \"_redirects\" dist/ && npm run sanitize:public-output && npm run audit:canonical-host && npm run audit:public-smugmug-links",
     "build:fast": "npm run gen:master-data && npm run gen:chapter-doorway-links && npm run gen:image-filename-slugs && npm run gen:prefetch-map && npm run gen:image-id-map && npm run gen:image-sitemaps && npm run gen:merchant-products && npm run gen:sitemap && npm run gen:sitemap:matches && npm run gen:story-slider && npm run gen:image-manifest && npm run gen:commerce-fulfillment-links && npm run gen:commerce-collector-notes && npm run copy:pricing && npm run copy:series-data && npm run gen:engrained-data && npm run gen:artwork-search && npm run build:astro:fast && npx cpx \"_redirects\" dist/ && npm run sanitize:public-output && npm run audit:canonical-host && npm run audit:public-smugmug-links",
     "build:local:fast": "node scripts/build-local-fast.mjs",
     "sanitize:public-output": "node scripts/sanitize-public-output.cjs",
@@ -16,7 +16,7 @@
     "audit:all-schema": "node scripts/audit-all-page-schema.mjs",
     "build:astro:fast": "node scripts/build-astro-fast.mjs",
     "deploy:prebuilt": "netlify deploy --prod --dir=dist --site=0849dde2-1b6e-4016-b0f4-1d609f1b8283",
-    "release:prebuilt": "npm run build && npm run deploy:prebuilt && npm run submit:indexnow",
+    "release:prebuilt": "npm run build && npm run deploy:prebuilt && npm run warm-cache:force && npm run submit:indexnow",
     "submit:indexnow": "node scripts/submit-indexnow.mjs",
     "warm-cache": "node scripts/warm-image-cache.mjs",
     "warm-cache:force": "node scripts/warm-image-cache.mjs --force",

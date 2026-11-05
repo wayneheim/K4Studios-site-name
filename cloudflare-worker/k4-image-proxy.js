@@ -830,20 +830,6 @@ function ensureNoAIHeaders(response, forceNoIndex = false) {
   }
 }
 
-function addCanonicalImageLinkHeader(response, imageIdMap, canonicalImageId) {
-  try {
-    if (!response || response.status !== 200 || !canonicalImageId) return response;
-    if (response.headers?.get?.('Link')) return response;
-    // Stage 1 semantic JPG rollout:
-    // The Worker can resolve by image ID, but it cannot reliably compute the
-    // approved title + gallery phrase filename from imageIdMap alone. Do not
-    // emit a weaker page-canonical Link header on binary image responses.
-    return response;
-  } catch {
-    return response;
-  }
-}
-
 function hasK4SessionCookies(request) {
   const cookieHeader = request.headers.get('Cookie') || '';
   return /(?:^|;)\s*k4_vid=/.test(cookieHeader) || /(?:^|;)\s*k4_sid=/.test(cookieHeader);
@@ -1307,15 +1293,6 @@ async function handleImageRequest(request, ctx, env) {
     if (cached) {
       let upgraded = ensureNoAIHeaders(cached, route.size === 'xl');
 
-      if (upgraded?.status === 200 && !upgraded.headers?.get?.('Link')) {
-        try {
-          const imageIdMap = await getImageIdMap(ctx);
-          upgraded = addCanonicalImageLinkHeader(upgraded, imageIdMap, route.canonicalImageId);
-        } catch (e) {
-          console.error('Cached canonical Link repair error:', e);
-        }
-      }
-
       // Refresh cache with upgraded headers so future hits are clean.
       try {
         if (upgraded && upgraded !== cached && upgraded.status === 200) {
@@ -1388,7 +1365,10 @@ async function handleImageRequest(request, ctx, env) {
   }
 
   try {
-    const [manifest, imageIdMap] = await Promise.all([getManifest(ctx), getImageIdMap(ctx)]);
+    // Image bytes only need the origin manifest. imageIdMap is used by HTML
+    // canonical/404 handling, not by binary image responses. Keeping it out of
+    // this hot path avoids an unnecessary fetch + JSON parse on cold isolates.
+    const manifest = await getManifest(ctx);
     const smugMugUrls = resolveImageUrls(manifest, route.canonicalImageId, route.size);
 
     if (smugMugUrls.length === 0) {
@@ -1485,13 +1465,6 @@ async function handleImageRequest(request, ctx, env) {
 
     if (response?.status === 200) {
       response = ensureNoAIHeaders(response, route.size === 'xl');
-    }
-
-    // Stage 1 semantic JPG rollout intentionally does not add a Link canonical
-    // header here; generated HTML, schema, and image sitemaps carry the preferred
-    // semantic image URL until the worker has title + phrase data available.
-    if (response?.status === 200) {
-      response = addCanonicalImageLinkHeader(response, imageIdMap, route.canonicalImageId);
     }
 
     // Cache successful responses under the canonical key.
@@ -2025,8 +1998,8 @@ async function handleGatewayRequest(request, env) {
 // SERP TRACKER SYSTEM
 // ====================
 // Track Google rankings via DataForSEO API
-// Manual trigger only - no cron, no Bing, no AI Overview
-// Cost: ~$0.12/day (15 keywords — x $0.008.008)
+// Manual trigger only - bounded to 10 missing Google terms per request
+// Cost: up to ~$0.08 per click (10 keywords x $0.008 each)
 
 const OUR_DOMAINS = ['k4studios.com', 'www.k4studios.com'];
 const MAX_RANK = 50; // Search depth for sparkline scaling
@@ -2082,6 +2055,32 @@ const DOORWAY_SERP_TITLE_TERM_SET = new Set(
 );
 const SERP_PRIORITY_ALTERNATIVE = 0;
 const SERP_PRIORITY_DEFAULT = 5;
+
+function groupSerpKeywords(keywords = []) {
+  const ordered = [...keywords].sort((a, b) =>
+    String(a.keyword || '').localeCompare(String(b.keyword || ''), undefined, { sensitivity: 'base' })
+  );
+  const regular = ordered.filter((kw) => Number(kw.priority) !== SERP_PRIORITY_ALTERNATIVE);
+  return {
+    primary: regular.filter((kw) =>
+      !DOORWAY_SERP_TITLE_TERM_SET.has(String(kw.keyword || '').toLowerCase())
+    ),
+    doorway: regular.filter((kw) =>
+      DOORWAY_SERP_TITLE_TERM_SET.has(String(kw.keyword || '').toLowerCase())
+    ),
+    alternative: ordered.filter((kw) => Number(kw.priority) === SERP_PRIORITY_ALTERNATIVE)
+  };
+}
+
+async function loadSerpKeywordList(env) {
+  const result = await env.DB.prepare(`
+    SELECT keyword, priority
+    FROM serp_keywords
+    WHERE enabled = 1
+    ORDER BY CASE WHEN priority = 0 THEN 1 ELSE 0 END, keyword COLLATE NOCASE ASC
+  `).all();
+  return result.results || [];
+}
 
 // Escape HTML to prevent XSS
 function escapeHtml(s='') {
@@ -2180,34 +2179,50 @@ function parseSerpResponse(data) {
 }
 
 /**
- * Run SERP check for all enabled keywords (Google only)
+ * Run a bounded SERP check batch for enabled keywords (Google only)
  */
-async function runSerpCheck(env) {
+async function runSerpCheck(env, requestedLimit = 10) {
   if (!env.DB) {
     throw new Error('Database not configured');
   }
-  
-  const keywords = await env.DB.prepare(
-    'SELECT keyword FROM serp_keywords WHERE enabled = 1 ORDER BY keyword ASC'
-  ).all();
-  
-  if (!keywords.results?.length) {
-    return { checked: 0, message: 'No keywords to check' };
-  }
-  
+
+  const limit = Math.max(1, Math.min(10, Number.parseInt(requestedLimit, 10) || 10));
   const checkedAt = new Date().toISOString().slice(0, 10);
+  const pendingRow = await env.DB.prepare(`
+    SELECT COUNT(*) AS count
+    FROM serp_keywords k
+    WHERE k.enabled = 1
+      AND NOT EXISTS (
+        SELECT 1 FROM serp_results r
+        WHERE r.keyword = k.keyword
+          AND r.engine = 'google'
+          AND r.checked_at = ?
+      )
+  `).bind(checkedAt).first();
+  const pendingBefore = Number(pendingRow?.count || 0);
+  const keywords = await env.DB.prepare(`
+    SELECT k.keyword
+    FROM serp_keywords k
+    WHERE k.enabled = 1
+      AND NOT EXISTS (
+        SELECT 1 FROM serp_results r
+        WHERE r.keyword = k.keyword
+          AND r.engine = 'google'
+          AND r.checked_at = ?
+      )
+    ORDER BY CASE WHEN k.priority = 0 THEN 1 ELSE 0 END, k.keyword ASC
+    LIMIT ?
+  `).bind(checkedAt, limit).all();
+
+  if (!keywords.results?.length) {
+    return { checked: 0, errors: [], checkedAt, requested: limit, pendingBefore, remaining: 0, message: 'All enabled terms already have a Google result today' };
+  }
+
   let checked = 0;
   const errors = [];
-  
+
   for (const kw of keywords.results) {
     try {
-      // Check if already fetched today
-      const existing = await env.DB.prepare(
-        'SELECT id FROM serp_results WHERE keyword = ? AND engine = ? AND checked_at = ?'
-      ).bind(kw.keyword, 'google', checkedAt).first();
-      
-      if (existing) continue;
-      
       const response = await fetchSerpFromDataForSEO(kw.keyword, env);
       const parsed = parseSerpResponse(response);
       
@@ -2234,8 +2249,15 @@ async function runSerpCheck(env) {
       console.error(`SERP check failed for ${kw.keyword}:`, err);
     }
   }
-  
-  return { checked, errors, checkedAt };
+
+  return {
+    checked,
+    errors,
+    checkedAt,
+    requested: limit,
+    pendingBefore,
+    remaining: Math.max(0, pendingBefore - checked)
+  };
 }
 
 /**
@@ -2250,16 +2272,13 @@ async function handleSerpDashboard(request, env) {
   }
   
   const url = new URL(request.url);
-  const days = parseInt(url.searchParams.get('days') || '30');
+  const requestedDays = url.searchParams.get('days') || 'all';
+  const days = requestedDays === 'all'
+    ? null
+    : Math.max(1, Math.min(3650, parseInt(requestedDays, 10) || 30));
   
   try {
-    const cutoff = new Date();
-    cutoff.setDate(cutoff.getDate() - days);
-    const cutoffStr = cutoff.toISOString().slice(0, 10);
-    
-    const keywords = await env.DB.prepare(
-      'SELECT * FROM serp_keywords WHERE enabled = 1 ORDER BY keyword ASC'
-    ).all();
+    const keywordList = await loadSerpKeywordList(env);
     
     const latestResults = await env.DB.prepare(`
       SELECT sr1.* FROM serp_results sr1
@@ -2272,29 +2291,37 @@ async function handleSerpDashboard(request, env) {
     `).all();
     
     const previousResults = await env.DB.prepare(`
-      SELECT keyword, our_rank
+      SELECT keyword, engine, our_rank
       FROM (
         SELECT
           keyword,
+          engine,
           our_rank,
-          ROW_NUMBER() OVER (PARTITION BY keyword ORDER BY checked_at DESC) AS row_num
+          ROW_NUMBER() OVER (PARTITION BY keyword, engine ORDER BY checked_at DESC) AS row_num
         FROM serp_results
-        WHERE engine = 'google'
+        WHERE engine IN ('google', 'google_ai', 'bing')
       ) ranked
       WHERE row_num = 2
     `).all();
     
     const prevMap = new Map();
     for (const r of (previousResults.results || [])) {
-      prevMap.set(r.keyword, r.our_rank);
+      prevMap.set(`${r.keyword}\u0000${r.engine}`, r.our_rank);
     }
     
-    const trendData = await env.DB.prepare(`
+    let trendQuery = env.DB.prepare(`
       SELECT keyword, engine, checked_at, our_rank
       FROM serp_results
-      WHERE engine IN ('google', 'google_ai', 'bing') AND checked_at >= ?
+      WHERE engine IN ('google', 'google_ai', 'bing')
+      ${days === null ? '' : 'AND checked_at >= ?'}
       ORDER BY keyword, checked_at
-    `).bind(cutoffStr).all();
+    `);
+    if (days !== null) {
+      const cutoff = new Date();
+      cutoff.setDate(cutoff.getDate() - days);
+      trendQuery = trendQuery.bind(cutoff.toISOString().slice(0, 10));
+    }
+    const trendData = await trendQuery.all();
     
     const trendByKeyword = {};
     for (const r of (trendData.results || [])) {
@@ -2309,14 +2336,19 @@ async function handleSerpDashboard(request, env) {
     const authHeader = request.headers.get('Authorization');
     const html = renderSerpDashboard({
       days,
-      keywords: keywords.results || [],
+      keywords: keywordList,
       latestResults: latestResults.results || [],
       previousMap: prevMap,
       trendByKeyword,
       authHeader
     });
     
-    return new Response(html, { headers: { 'Content-Type': 'text/html' } });
+    return new Response(html, {
+      headers: {
+        'Content-Type': 'text/html',
+        'Cache-Control': 'private, no-store, max-age=0'
+      }
+    });
     
   } catch (err) {
     console.error('SERP dashboard error:', err);
@@ -2332,7 +2364,8 @@ async function handleSerpFetch(request, env) {
   if (authResponse) return authResponse;
   
   try {
-    const result = await runSerpCheck(env);
+    const url = new URL(request.url);
+    const result = await runSerpCheck(env, url.searchParams.get('limit') || '10');
     return new Response(JSON.stringify(result), {
       headers: { 'Content-Type': 'application/json' }
     });
@@ -2409,11 +2442,7 @@ async function handleSerpLaunch(request, env) {
   }
   
   try {
-    const keywords = await env.DB.prepare(
-      'SELECT keyword, priority FROM serp_keywords WHERE enabled = 1 ORDER BY CASE WHEN priority = 0 THEN 1 ELSE 0 END, keyword ASC'
-    ).all();
-    
-    const kwList = keywords.results || [];
+    const kwList = await loadSerpKeywordList(env);
     
     // Fetch today's logged ranks
     const today = new Date().toISOString().slice(0, 10);
@@ -2429,14 +2458,11 @@ async function handleSerpLaunch(request, env) {
       todayMap[r.keyword][r.engine] = r.our_rank;
     }
     
-    const regularKeywordList = kwList.filter((kw) => Number(kw.priority) !== SERP_PRIORITY_ALTERNATIVE);
-    const alternativeKeywordList = kwList.filter((kw) => Number(kw.priority) === SERP_PRIORITY_ALTERNATIVE);
-    const doorwayTitleList = regularKeywordList.filter((kw) =>
-      DOORWAY_SERP_TITLE_TERM_SET.has(String(kw.keyword || '').toLowerCase())
-    );
-    const primaryKeywordList = regularKeywordList.filter((kw) =>
-      !DOORWAY_SERP_TITLE_TERM_SET.has(String(kw.keyword || '').toLowerCase())
-    );
+    const {
+      primary: primaryKeywordList,
+      doorway: doorwayTitleList,
+      alternative: alternativeKeywordList
+    } = groupSerpKeywords(kwList);
 
     const renderKeywordCard = (kw, idx, isAlternative = false) => {
       const safeKw = escapeHtml(kw.keyword);
@@ -2821,7 +2847,12 @@ async function handleSerpLaunch(request, env) {
 </body>
 </html>`;
 
-    return new Response(html, { headers: { 'Content-Type': 'text/html' } });
+    return new Response(html, {
+      headers: {
+        'Content-Type': 'text/html',
+        'Cache-Control': 'private, no-store, max-age=0'
+      }
+    });
     
   } catch (err) {
     console.error('SERP launch error:', err);
@@ -2947,8 +2978,9 @@ function renderSerpDashboard({ days, keywords, latestResults, previousMap, trend
   const rankedGoogleCount = googleRanks.length;
   const rankedGoogleAiCount = googleAiRanks.length;
   const rankedBingCount = bingRanks.length;
-  
-  const keywordRows = keywords.map(kw => {
+  const rangeLabel = days === null ? 'Full history' : `${days} days`;
+
+  const renderKeywordRow = (kw) => {
     const engines = byKeywordEngine[kw.keyword] || {};
     const googleResult = engines.google;
     const googleAiResult = engines.google_ai;
@@ -2958,28 +2990,28 @@ function renderSerpDashboard({ days, keywords, latestResults, previousMap, trend
     const gaiRank = googleAiResult?.our_rank;
     const bRank = bingResult?.our_rank;
     
-    const prevRank = previousMap.get(kw.keyword);
-    const gRankValid = getValidRank(gRank);
-    const prevRankValid = getValidRank(prevRank);
-    const change = gRankValid !== null && prevRankValid !== null ? prevRankValid - gRankValid : null;
-    
-    const changeIcon = change === null ? ''
-      : change > 0 ? `<span class="delta up" title="Google change vs previous check-in">▲${change}</span>`
-      : change < 0 ? `<span class="delta down" title="Google change vs previous check-in">▼${Math.abs(change)}</span>`
-      : '<span class="delta flat" title="No change vs previous check-in">—</span>';
+    const changeIcon = (engine, label, rank) => {
+      const current = getValidRank(rank);
+      const previous = getValidRank(previousMap.get(`${kw.keyword}\u0000${engine}`));
+      const change = current !== null && previous !== null ? previous - current : null;
+      if (change === null) return '';
+      if (change > 0) return `<span class="delta up" title="${label} change vs previous check-in">▲${change}</span>`;
+      if (change < 0) return `<span class="delta down" title="${label} change vs previous check-in">▼${Math.abs(change)}</span>`;
+      return `<span class="delta flat" title="No ${label} change vs previous check-in">—</span>`;
+    };
     
     const trendSet = trendByKeyword[kw.keyword] || { google: [], google_ai: [], bing: [] };
     const trend = trendSet.google || [];
-    const recentTrend = trend.slice(-14);
+    const recentTrend = trend;
     const sparkline = recentTrend.map(t => {
       const v = getValidRank(t.rank) ?? MAX_RANK;
       return Math.min(MAX_RANK, Math.max(1, v));
     });
 
     const validRecent = recentTrend.map(t => getValidRank(t.rank)).filter(Boolean);
-    const trendPoints = validRecent.length;
-    const trendStart = trendPoints ? validRecent[0] : null;
-    const trendEnd = trendPoints ? validRecent[validRecent.length - 1] : null;
+    const trendPoints = recentTrend.length;
+    const trendStart = validRecent.length ? validRecent[0] : null;
+    const trendEnd = validRecent.length ? validRecent[validRecent.length - 1] : null;
 
     let trendPct = null;
     if (trendStart && trendEnd && trendStart > 0 && trendStart !== trendEnd) {
@@ -2996,43 +3028,73 @@ function renderSerpDashboard({ days, keywords, latestResults, previousMap, trend
       return `<span style="color:${color}; font-weight:600">${arrow}${Math.abs(trendPct).toFixed(1)}% <span style="color:#666;font-weight:400">(n=${trendPoints})</span></span>`;
     })();
     
-    const rankCell = (rank) => {
-      if (!rank) return '<td class="rank-cell">-</td>';
-      const cls = rank <= 3 ? 'rank-top3' : rank <= 10 ? 'rank-top10' : '';
-      return `<td class="rank-cell ${cls}">${rank}</td>`;
+    const rankCell = (rank, engine, label) => {
+      if (rank === null || rank === undefined) return '<td class="rank-cell">-</td>';
+      const cls = rank > 0 && rank <= 3 ? 'rank-top3' : rank > 0 && rank <= 10 ? 'rank-top10' : '';
+      return `<td class="rank-cell ${cls}">${rank} ${changeIcon(engine, label, rank)}</td>`;
     };
+
+    const sparklinePoints = sparkline.map((v, i) => ({
+      x: sparkline.length > 1 ? i * (70 / (sparkline.length - 1)) : 35,
+      y: ((v - 1) / (MAX_RANK - 1)) * 20
+    }));
+    const sparklinePolyline = sparklinePoints.map((point) => `${point.x},${point.y}`).join(' ');
+    const lastSparkPoint = sparklinePoints[sparklinePoints.length - 1];
     
     return `
       <tr>
         <td style="font-weight:500">${escapeHtml(kw.keyword)}</td>
-        <td class="rank-cell ${gRank && gRank <= 3 ? 'rank-top3' : gRank && gRank <= 10 ? 'rank-top10' : ''}">
-          ${gRank || '-'} ${changeIcon}
-        </td>
-        ${rankCell(gaiRank)}
-        ${rankCell(bRank)}
+        ${rankCell(gRank, 'google', 'Google')}
+        ${rankCell(gaiRank, 'google_ai', 'Google AI')}
+        ${rankCell(bRank, 'bing', 'Bing')}
         <td>
-          <div class="trend-cell-row">
-            ${sparkline.length > 1 ? `
-              <svg class="sparkline" viewBox="0 0 70 20" preserveAspectRatio="none">
-                <polyline fill="none" stroke="#4a9eff" stroke-width="1.5" points="${
-                  sparkline.map((v, i) => `${i * (70 / Math.max(sparkline.length - 1, 1))},${((v - 1) / (MAX_RANK - 1)) * 20}`).join(' ')
-                }"/>
-              </svg>
-            ` : '<span style="color:#666">-</span>'}
+          <div class="trend-cell-row" data-keyword="${encodeURIComponent(kw.keyword)}" data-engine="google">
+            <div class="trend-mini">
+              ${sparkline.length ? `
+                <svg class="sparkline" viewBox="0 0 70 20" preserveAspectRatio="none">
+                  ${sparkline.length > 1 ? `<polyline fill="none" stroke="#4a9eff" stroke-width="1.5" points="${sparklinePolyline}"/>` : ''}
+                  <circle cx="${lastSparkPoint.x}" cy="${lastSparkPoint.y}" r="2.5" fill="#4a9eff"/>
+                </svg>
+              ` : '<span>-</span>'}
+            </div>
             <button class="trend-trigger" data-keyword="${encodeURIComponent(kw.keyword)}" title="Open Google, G-AI, and Bing trend charts">View</button>
-            ${trendBadge}
+            <span class="trend-summary">${trendBadge}</span>
           </div>
         </td>
         <td style="text-align:center">
           <button
-            onclick="deleteKeyword('${escapeHtml(kw.keyword)}')"
+            onclick="deleteKeyword(decodeURIComponent('${encodeURIComponent(kw.keyword)}'))"
             title="Remove keyword"
             style="background:none;border:1px solid #444;border-radius:6px;color:#ef4444;cursor:pointer;padding:2px 8px"
           >✕</button>
         </td>
       </tr>
     `;
-  }).join('');
+  };
+
+  const {
+    primary: primaryKeywords,
+    doorway: doorwayKeywords,
+    alternative: alternativeKeywords
+  } = groupSerpKeywords(keywords);
+  const sectionRow = (kicker, label, count, extraClass = '') => `
+    <tr class="keyword-section-row ${extraClass}">
+      <td colspan="6">
+        <span class="section-kicker">${kicker}</span>
+        <strong>${label}</strong>
+        <span class="section-count">${count} terms</span>
+      </td>
+    </tr>
+  `;
+  const keywordRows = [
+    primaryKeywords.map(renderKeywordRow).join(''),
+    doorwayKeywords.length ? sectionRow('Organization', 'Doorway Page Names', doorwayKeywords.length) : '',
+    doorwayKeywords.map(renderKeywordRow).join(''),
+    sectionRow('Organization', 'Alternative', alternativeKeywords.length, 'alternative-section-row'),
+    alternativeKeywords.length
+      ? alternativeKeywords.map(renderKeywordRow).join('')
+      : '<tr><td colspan="6" class="empty-section">No alternative terms.</td></tr>'
+  ].join('');
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -3060,7 +3122,32 @@ function renderSerpDashboard({ days, keywords, latestResults, previousMap, trend
     .rank-top3 { color: #10b981; }
     .rank-top10 { color: #fbbf24; }
     .sparkline { width: 70px; height: 20px; }
-    .trend-cell-row { display:flex; align-items:center; gap:10px; }
+    .trend-cell-row { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+    .trend-mini { width:70px; height:20px; display:flex; align-items:center; justify-content:center; color:#666; }
+    .trend-engine-switch { display:inline-flex; border:1px solid #374151; border-radius:6px; overflow:hidden; }
+    .trend-engine-btn {
+      min-width:24px;
+      padding:3px 6px;
+      border:0;
+      border-right:1px solid #374151;
+      background:#171f2d;
+      color:#94a3b8;
+      font-size:10px;
+      font-weight:700;
+      cursor:pointer;
+    }
+    .trend-engine-btn:last-child { border-right:0; }
+    .trend-engine-btn:hover { background:#273549; color:#e2e8f0; }
+    .trend-engine-btn.active { background:#2563eb; color:#fff; }
+    .trend-engine-btn[data-engine="google"] { color:#60a5fa; box-shadow:inset 0 -3px 0 #3b82f6; }
+    .trend-engine-btn[data-engine="google_ai"] { color:#34d399; box-shadow:inset 0 -3px 0 #10b981; }
+    .trend-engine-btn[data-engine="bing"] { color:#c084fc; box-shadow:inset 0 -3px 0 #a855f7; }
+    .trend-engine-btn[data-engine="google"].active { color:#93c5fd; background:#172554; }
+    .trend-engine-btn[data-engine="google_ai"].active { color:#6ee7b7; background:#052e2b; }
+    .trend-engine-btn[data-engine="bing"].active { color:#e9d5ff; background:#3b0764; }
+    .trend-heading { min-width:185px; }
+    .trend-heading .trend-engine-switch { margin-bottom:7px; }
+    .trend-heading-label { display:block; }
     .trend-trigger {
       background: #1f2937;
       color: #93c5fd;
@@ -3090,8 +3177,20 @@ function renderSerpDashboard({ days, keywords, latestResults, previousMap, trend
       border-radius: 6px; background: #333; border: none; cursor: pointer; font-size: 13px;
     }
     .controls a:hover, .controls button:hover { background: #444; }
+    .controls a.active { background:#1d4ed8; color:#fff; }
     .controls button.primary { background: #2563eb; color: #fff; }
     .controls button.primary:hover { background: #1d4ed8; }
+    .controls button:disabled { opacity:.65; cursor:wait; }
+    .fetch-status { color:#94a3b8; font-size:12px; }
+    .keyword-section-row td { background:#20242b; color:#d1d5db; padding:12px 15px; border-top:2px solid #3b4554; }
+    .keyword-section-row:hover td { background:#20242b; }
+    .keyword-section-row .section-kicker { display:block; color:#60a5fa; font-size:10px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; }
+    .keyword-section-row strong { font-size:14px; }
+    .keyword-section-row .section-count { float:right; color:#8b98aa; font-size:12px; }
+    .alternative-section-row td { background:#241a35; border-top-color:#7c3aed; }
+    .alternative-section-row:hover td { background:#241a35; }
+    .alternative-section-row .section-kicker { color:#c4b5fd; }
+    .empty-section { text-align:center; color:#777; background:#211c29; }
     .add-form { background: #252525; padding: 15px; border-radius: 8px; margin-bottom: 20px; display: flex; gap: 10px; align-items: center; }
     .add-form input { padding: 8px 12px; border-radius: 6px; border: 1px solid #444; background: #1a1a1a; color: #e0e0e0; }
     .add-form input[type="text"] { flex: 1; min-width: 200px; }
@@ -3165,10 +3264,11 @@ function renderSerpDashboard({ days, keywords, latestResults, previousMap, trend
   </h1>
   
   <div class="controls">
-    <button class="primary" onclick="fetchNow()">Fetch Now</button>
-    <a href="?days=7">7 Days</a>
-    <a href="?days=30">30 Days</a>
-    <a href="?days=90">90 Days</a>
+    <a href="?days=all" class="${days === null ? 'active' : ''}">Full History</a>
+    <a href="?days=7" class="${days === 7 ? 'active' : ''}">7 Days</a>
+    <a href="?days=30" class="${days === 30 ? 'active' : ''}">30 Days</a>
+    <a href="?days=90" class="${days === 90 ? 'active' : ''}">90 Days</a>
+    <span class="fetch-status" id="fetchStatus">Trends: ${rangeLabel}</span>
     <span class="last-check">Last: ${lastCheck || 'Never'}</span>
   </div>
 
@@ -3202,9 +3302,9 @@ function renderSerpDashboard({ days, keywords, latestResults, previousMap, trend
       <div><span class="chip chip-yellow">Yellow</span>Rank is 4-10 (page one, not Top 3).</div>
       <div><span class="chip chip-white">White</span>Rank is 11+ (outside top 10).</div>
       <div><span class="chip chip-red">Red</span>Rank/trend is moving worse.</div>
-      <div>Google <strong>▲/▼</strong> = change vs the previous Google check-in for that keyword.</div>
-      <div><strong>Trend</strong> column = Google rank sparkline plus % change across up to the last 14 checks.</div>
-      <div><strong>View</strong> button in Trend opens a popup with all 3 engines.</div>
+      <div><strong>▲/▼</strong> beside any engine rank = positions improved or lost vs that engine's previous check-in.</div>
+      <div><strong>Trend G/A/B</strong> switches the mini chart between Google, Google AI, and Bing for ${rangeLabel.toLowerCase()}.</div>
+      <div><strong>View</strong> opens full-size charts for all 3 engines.</div>
     </div>
   </div>
 
@@ -3214,10 +3314,17 @@ function renderSerpDashboard({ days, keywords, latestResults, previousMap, trend
     <thead>
       <tr>
         <th>Keyword</th>
-        <th>Google <span class="th-help">(vs prev check-in)</span></th>
-        <th>G-AI</th>
-        <th>Bing</th>
-        <th>Trend <span class="th-help">(Google rank, last up to 14 checks, lower is better)</span></th>
+          <th>Google <span class="th-help">(vs prev)</span></th>
+          <th>G-AI <span class="th-help">(vs prev)</span></th>
+          <th>Bing <span class="th-help">(vs prev)</span></th>
+        <th class="trend-heading">
+          <span class="trend-engine-switch" id="trendEngineSwitch" title="Switch every trend graph">
+            <button type="button" class="trend-engine-btn active" data-engine="google" title="Show Google trends">G</button>
+            <button type="button" class="trend-engine-btn" data-engine="google_ai" title="Show Google AI trends">A</button>
+            <button type="button" class="trend-engine-btn" data-engine="bing" title="Show Bing trends">B</button>
+          </span>
+          <span class="trend-heading-label">Trend <span class="th-help">(${rangeLabel}, lower is better)</span></span>
+        </th>
         <th></th>
       </tr>
     </thead>
@@ -3237,7 +3344,7 @@ function renderSerpDashboard({ days, keywords, latestResults, previousMap, trend
       <div class="trend-modal-header">
         <div>
           <div id="trendModalTitle" class="trend-modal-title">Trend Details</div>
-          <div class="trend-modal-subtitle">Lower rank is better. Showing last up to 14 checks per engine.</div>
+          <div class="trend-modal-subtitle">Lower rank is better. Showing ${rangeLabel.toLowerCase()} per engine.</div>
         </div>
         <button type="button" class="trend-modal-close" id="trendModalClose">Close</button>
       </div>
@@ -3249,30 +3356,6 @@ function renderSerpDashboard({ days, keywords, latestResults, previousMap, trend
     const _authHeader = ${JSON.stringify(authHeader || '')};
     const _trendByKeyword = ${JSON.stringify(trendByKeyword || {})};
     const _maxRank = ${JSON.stringify(MAX_RANK)};
-
-    async function fetchNow() {
-      const btn = document.querySelector('.controls button.primary');
-      if (!btn) return;
-      const prev = btn.textContent;
-      btn.disabled = true;
-      btn.textContent = 'Fetching…';
-      try {
-        const res = await fetch('/__k4serp?op=fetch', {
-          method: 'POST',
-          headers: { 'Authorization': _authHeader }
-        });
-        const data = await res.json().catch(() => ({}));
-        if (!res.ok || data?.error) {
-          throw new Error(data?.error || ('Fetch failed (' + res.status + ')'));
-        }
-        location.reload();
-      } catch (err) {
-        alert(err?.message || 'Fetch failed');
-      } finally {
-        btn.disabled = false;
-        btn.textContent = prev;
-      }
-    }
 
     async function addKeyword() {
       const keyword = document.getElementById('newKeyword').value.trim();
@@ -3300,14 +3383,55 @@ function renderSerpDashboard({ days, keywords, latestResults, previousMap, trend
     }
 
     function normalizeSeries(rawSeries) {
-      return (rawSeries || []).slice(-14).map((point) => {
+      return (rawSeries || []).map((point) => {
         const num = Number(point.rank);
         const rank = Number.isFinite(num) && num > 0 ? num : _maxRank;
         return {
           date: point.date || '',
           rank: Math.min(_maxRank, Math.max(1, rank)),
-          valid: Number.isFinite(num) && num > 0
+          valid: Number.isFinite(num) && num > 0,
+          rawRank: Number.isFinite(num) ? num : null
         };
+      });
+    }
+
+    function buildMiniTrendSvg(series, stroke) {
+      if (!series.length) return '<span>-</span>';
+      const width = 70;
+      const height = 20;
+      const step = series.length > 1 ? width / (series.length - 1) : 0;
+      const points = series.map((point, index) => ({
+        x: series.length > 1 ? index * step : width / 2,
+        y: ((point.rank - 1) / (_maxRank - 1)) * height
+      }));
+      const polyline = points.map((point) => point.x.toFixed(2) + ',' + point.y.toFixed(2)).join(' ');
+      const last = points[points.length - 1];
+      return '<svg class="sparkline" viewBox="0 0 70 20" preserveAspectRatio="none">'
+        + (points.length > 1 ? '<polyline fill="none" stroke="' + stroke + '" stroke-width="1.5" points="' + polyline + '"/>' : '')
+        + '<circle cx="' + last.x.toFixed(2) + '" cy="' + last.y.toFixed(2) + '" r="2.5" fill="' + stroke + '"/>'
+        + '</svg>';
+    }
+
+    function updateMiniTrend(row, engine) {
+      const keyword = decodeURIComponent(row.getAttribute('data-keyword') || '');
+      const trendSet = _trendByKeyword[keyword] || { google: [], google_ai: [], bing: [] };
+      const series = normalizeSeries(trendSet[engine] || []);
+      const colors = { google: '#4a9eff', google_ai: '#34d399', bing: '#c084fc' };
+      const mini = row.querySelector('.trend-mini');
+      const summary = row.querySelector('.trend-summary');
+      const latest = series.length ? series[series.length - 1] : null;
+      if (mini) mini.innerHTML = buildMiniTrendSvg(series, colors[engine] || '#4a9eff');
+      if (summary) {
+        const latestText = !latest ? 'latest -' : latest.rawRank === 0 ? 'latest 0' : latest.rawRank !== null ? ('latest #' + latest.rawRank) : 'latest -';
+        summary.textContent = latestText + ' (n=' + series.length + ')';
+      }
+      row.setAttribute('data-engine', engine);
+    }
+
+    function updateAllMiniTrends(engine) {
+      document.querySelectorAll('.trend-cell-row').forEach((row) => updateMiniTrend(row, engine));
+      document.querySelectorAll('#trendEngineSwitch .trend-engine-btn').forEach((button) => {
+        button.classList.toggle('active', button.getAttribute('data-engine') === engine);
       });
     }
 
@@ -3354,9 +3478,11 @@ function renderSerpDashboard({ days, keywords, latestResults, previousMap, trend
 
     function buildPanelHtml(label, series, stroke) {
       const valid = series.filter((p) => p.valid).map((p) => p.rank);
-      const latest = valid.length ? valid[valid.length - 1] : null;
+      const latestPoint = series.length ? series[series.length - 1] : null;
+      const latest = latestPoint?.rawRank ?? null;
       const earliest = valid.length ? valid[0] : null;
-      const delta = latest !== null && earliest !== null ? (earliest - latest) : null;
+      const latestValid = latestPoint?.valid ? latestPoint.rank : null;
+      const delta = latestValid !== null && earliest !== null ? (earliest - latestValid) : null;
       const deltaText = delta === null
         ? 'change: n/a'
         : (delta > 0 ? ('change: +' + delta + ' (better)') : delta < 0 ? ('change: -' + Math.abs(delta) + ' (worse)') : 'change: 0');
@@ -3366,9 +3492,9 @@ function renderSerpDashboard({ days, keywords, latestResults, previousMap, trend
 
       return ''
         + '<div class="trend-panel">'
-        + '<div class="trend-panel-title">' + label + (latest !== null ? (' <span style="color:#93c5fd;font-weight:600">Latest: #' + latest + '</span>') : ' <span style="color:#64748b;font-weight:500">Latest: n/a</span>') + '</div>'
+        + '<div class="trend-panel-title">' + label + (latest !== null ? (' <span style="color:#93c5fd;font-weight:600">Latest: ' + (latest === 0 ? '0' : '#' + latest) + '</span>') : ' <span style="color:#64748b;font-weight:500">Latest: n/a</span>') + '</div>'
         + buildTrendSvg(series, stroke)
-        + '<div class="trend-panel-meta">' + deltaText + ' | points: ' + valid.length + ' | ' + rangeText + ' | hover points for exact values</div>'
+        + '<div class="trend-panel-meta">' + deltaText + ' | points: ' + series.length + ' | ' + rangeText + ' | hover points for exact values</div>'
         + '</div>';
     }
 
@@ -3388,7 +3514,7 @@ function renderSerpDashboard({ days, keywords, latestResults, previousMap, trend
       charts.innerHTML = [
         buildPanelHtml('Google', googleSeries, '#60a5fa'),
         buildPanelHtml('G-AI', googleAiSeries, '#34d399'),
-        buildPanelHtml('Bing', bingSeries, '#38bdf8')
+        buildPanelHtml('Bing', bingSeries, '#c084fc')
       ].join('');
 
       modal.classList.add('open');
@@ -3405,6 +3531,11 @@ function renderSerpDashboard({ days, keywords, latestResults, previousMap, trend
     document.querySelectorAll('.trend-trigger').forEach((btn) => {
       btn.addEventListener('click', () => openTrendModal(btn.getAttribute('data-keyword')));
     });
+
+    document.querySelectorAll('#trendEngineSwitch .trend-engine-btn').forEach((button) => {
+      button.addEventListener('click', () => updateAllMiniTrends(button.getAttribute('data-engine') || 'google'));
+    });
+    updateAllMiniTrends('google');
 
     const trendModal = document.getElementById('trendModal');
     const trendModalClose = document.getElementById('trendModalClose');

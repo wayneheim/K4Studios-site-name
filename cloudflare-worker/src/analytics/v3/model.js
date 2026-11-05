@@ -8,6 +8,8 @@ export const V3_CORE_EVENT_TYPES = Object.freeze([
   'frontier_story_video_widget_click', 'guide_open', 'guide_close', 'guide_done',
   'guide_click_outside', 'order_clicked', 'order_submitted',
   'order_smugmug_clicked', 'order_email_clicked', 'xl_zoom',
+  'native_cart_add', 'native_cart_view', 'native_checkout_start',
+  'native_checkout_quote', 'native_payment_start', 'native_order_complete',
   'series_info', 'more_info_open', 'collector_notes_open', 'slideshow_start',
   'slideshow_nav_next', 'slideshow_nav_prev'
 ]);
@@ -66,13 +68,16 @@ export function getV3ActionLabel(type) {
     order_clicked: 'Pricing opened', order_submitted: 'Order choice clicked (legacy)',
     order_smugmug_clicked: 'Order clicked — SmugMug',
     order_email_clicked: 'Order clicked — email',
+    native_cart_add: 'Added to cart', native_cart_view: 'Viewed cart',
+    native_checkout_start: 'Started checkout', native_checkout_quote: 'Calculated final total',
+    native_payment_start: 'Started payment', native_order_complete: 'Order completed',
     grid_open: 'Grid opened', grid_image_click: 'Grid image clicked',
     gallery_preview_click: 'Gallery preview clicked', gallery_hero_click: 'Gallery hero clicked',
     browse_all_click: 'Browse all clicked', browse_all_image_click: 'Browse-all image clicked',
     gallery_explore_click: 'Gallery explored', theme_click: 'Theme clicked',
     nav_next: 'Next image', nav_prev: 'Previous image',
-    sister_image_click: 'Related image clicked', cowboy_jump: 'Picture-show jump',
-    picture_shows_jump: 'Picture-show jump', story_audio_toggle: 'Narration toggled',
+    sister_image_click: 'Related image clicked', cowboy_jump: 'Cowboy widget clicked',
+    picture_shows_jump: 'Picture Shows widget clicked', story_audio_toggle: 'Narration toggled',
     story_slider_click: 'Story slide clicked',
     frontier_story_video_widget_click: 'Story video clicked', xl_zoom: 'XL zoom opened',
     series_info: 'Series information opened', more_info_open: 'More information opened',
@@ -82,7 +87,9 @@ export function getV3ActionLabel(type) {
 }
 
 export function getV3ActionGroup(type) {
-  if (['order_clicked', 'order_submitted', 'order_smugmug_clicked', 'order_email_clicked'].includes(type)) return 'Commerce';
+  if (['order_clicked', 'order_submitted', 'order_smugmug_clicked', 'order_email_clicked',
+    'native_cart_add', 'native_cart_view', 'native_checkout_start', 'native_checkout_quote',
+    'native_payment_start', 'native_order_complete'].includes(type)) return 'Commerce';
   if (type.startsWith('grid_')) return 'Grid';
   if (type.startsWith('gallery_') || ['browse_all_click', 'browse_all_image_click', 'theme_click', 'all_list_click', 'exit_to_gallery'].includes(type)) return 'Gallery';
   if (['nav_next', 'nav_prev', 'slideshow_nav_next', 'slideshow_nav_prev', 'sister_image_click', 'cowboy_jump', 'picture_shows_jump', 'presentation_last_image_back_to_start'].includes(type)) return 'Image navigation';
@@ -320,8 +327,10 @@ export function summarizeV3Rollup(batch, label = 'Archive sample') {
       if (a.label === '/' && b.label !== '/') return -1;
       if (b.label === '/' && a.label !== '/') return 1;
       return (b.entries - a.entries) || a.label.localeCompare(b.label);
-    }).slice(0, 5);
+    }).slice(0, 10);
   })();
+  const cartFunnelLabels = ['Added to cart', 'Viewed cart', 'Started checkout', 'Calculated final total', 'Started payment', 'Order completed'];
+  const actionCounts = new Map(top('action', Number.MAX_SAFE_INTEGER).map((row) => [row.label, row.count]));
   return {
     window: { key: 'archive', label },
     state: { lastRawEventId: batch.lastRawEventId, lastEventTs: batch.lastEventTs },
@@ -331,7 +340,9 @@ export function summarizeV3Rollup(batch, label = 'Archive sample') {
       page_views: sum('pageViews') + fallbackPageCount, image_views: sum('imageViews'),
       engaged_sessions: new Set(batch.sessions.filter((row) => row.engaged).map((row) => row.sessionId)).size,
       pricing_opens: sum('pricingOpens'), order_submits: sum('orderSubmits'),
-      smugmug_clicks: sum('smugmugClicks'), email_clicks: sum('emailClicks')
+      smugmug_clicks: sum('smugmugClicks'), email_clicks: sum('emailClicks'),
+      cowboy_widget_clicks: actionCounts.get('Cowboy widget clicked') || 0,
+      picture_shows_widget_clicks: actionCounts.get('Picture Shows widget clicked') || 0
     },
     topPages: topPagesWithFallback,
     topImages: (() => {
@@ -373,7 +384,9 @@ export function summarizeV3Rollup(batch, label = 'Archive sample') {
         .map((row) => ({ ...row, imageViews: viewCounts.get(row.label) || 0 }));
     })(),
     expeditionActions: top('expedition_action', 30),
-    actionGroups: top('action_group', 10), actions: top('action', 20),
+    actionGroups: top('action_group', 10),
+    actions: top('action', 20).filter((row) => !['Order clicked — SmugMug', 'Order clicked — email'].includes(row.label)),
+    cartFunnel: cartFunnelLabels.map((label) => ({ label, count: actionCounts.get(label) || 0 })),
     population: { scanned: batch.scanned, accepted: batch.accepted }
   };
 }

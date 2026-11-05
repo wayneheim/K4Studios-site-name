@@ -47,6 +47,18 @@ const imageOnlyRow = {
   country: 'US'
 };
 rows.push(imageOnlyRow);
+rows.push(
+  { ...browserRow, id: nextId + 9, event_type: 'native_cart_add' },
+  { ...browserRow, id: nextId + 10, event_type: 'native_cart_view', page: '/cart' },
+  { ...browserRow, id: nextId + 11, event_type: 'native_checkout_start', page: '/cart' },
+  { ...browserRow, id: nextId + 12, event_type: 'native_checkout_quote', page: '/cart' },
+  { ...browserRow, id: nextId + 13, event_type: 'native_payment_start', page: '/cart' },
+  { ...browserRow, id: nextId + 14, event_type: 'native_order_complete', page: '/cart' }
+);
+rows.push(
+  { ...browserRow, id: nextId + 15, event_type: 'cowboy_jump', target_id: 'Cowboy_Jump_Home', page: '/' },
+  { ...browserRow, id: nextId + 16, event_type: 'picture_shows_jump', target_id: 'Picture_Shows_Widget_Home', page: '/' }
+);
 
 const rollup = buildV3RollupBatch(rows);
 const summary = summarizeV3Rollup(rollup, `${files.length}-day archived sample`);
@@ -118,9 +130,9 @@ assert.ok(html.includes('image-geo-us') && html.includes('Top area:'), 'US-domin
 assert.ok(html.includes('class="image-geo-bar"') && html.includes('Top viewer city:'), 'the wider geography bar should expose its dominant city on hover');
 assert.equal(summary.counts.smugmug_clicks, 2, 'SmugMug order clicks should roll up separately');
 assert.equal(summary.counts.email_clicks, 1, 'email order clicks should roll up separately');
-assert.ok(summary.actions.some((row) => row.label === 'Order clicked — SmugMug' && row.count === 2), 'SmugMug clicks should appear in Actions');
-assert.ok(summary.actions.some((row) => row.label === 'Order clicked — email' && row.count === 1), 'email clicks should appear in Actions');
-assert.ok(html.includes('SmugMug: 1') && html.includes('Email: 1'), 'image rows should show both order destinations');
+assert.ok(!summary.actions.some((row) => row.label === 'Order clicked — SmugMug'), 'retired SmugMug clicks should not appear in Actions');
+assert.ok(!summary.actions.some((row) => row.label === 'Order clicked — email'), 'retired email clicks should not appear in Actions');
+assert.ok(!html.includes('SmugMug: 1') && !html.includes('Email: 1'), 'image rows should hide retired order-destination badges');
 assert.ok(summary.actions.some((row) => row.label === 'Slideshow image advance' && row.count === 1), 'slideshow advances should appear in Actions');
 assert.ok(summary.expeditionActions.some((row) => row.label === 'Echoes of the West 2026 | Photograph opened' && row.count === 1), 'Expedition photo opens should be reported by gallery');
 assert.ok(summary.expeditionActions.some((row) => row.label === 'Echoes of the West 2026 | Order Prints clicked' && row.count === 1), 'Expedition order clicks should be reported by gallery');
@@ -129,10 +141,19 @@ assert.ok(html.includes('Expedition activity'), 'dashboard should render the Exp
 assert.ok(html.includes('Site visitor devices') && html.includes('Image viewer devices'), 'dashboard should render both device panels');
 assert.ok(html.includes('<th>Share</th>') && html.includes('device-icon'), 'device panels should show compact icons and percentages');
 assert.ok(html.indexOf('Site visitor devices') < html.indexOf('Top 25 entry pages'), 'device panels should render at the top of the report grid');
-assert.ok(html.includes('Top 5 Entry Navigation'), 'dashboard should render entry navigation progression');
-assert.ok(html.includes('entry-site-stack') && html.indexOf('Top 5 Entry Navigation') < html.indexOf('Top 10 site pages'), 'entry navigation should stack above site pages in the right column');
+assert.ok(html.includes('Top 10 Entry Navigation'), 'dashboard should render entry navigation progression');
+assert.ok(html.includes('Shopping cart funnel'), 'dashboard should render the native shopping cart funnel');
+assert.ok(!html.includes('SmugMug order clicks'), 'dashboard should not render the retired SmugMug order metric');
+assert.ok(!html.includes('Email order clicks'), 'dashboard should not render the retired email-order metric');
+assert.ok(html.includes('card pricing-opened'), 'pricing opens card should use the same green highlight as priced image rows');
+assert.ok(summary.counts.cowboy_widget_clicks >= 1, 'cowboy widget clicks should roll up independently');
+assert.ok(summary.counts.picture_shows_widget_clicks >= 1, 'Picture Shows widget clicks should roll up independently');
+assert.ok(html.includes('Homepage widget clicks') && html.includes('Cowboy widget clicks') && html.includes('Picture Show widget clicks'), 'dashboard should render both click counts in one homepage-widget panel');
+assert.ok(html.indexOf('Homepage widget clicks') < html.indexOf('Expedition activity'), 'homepage widget clicks should render above Expedition activity');
+assert.deepEqual(summary.cartFunnel.map((row) => row.count), [1, 1, 1, 1, 1, 1], 'native cart funnel steps should roll up in order');
+assert.ok(html.includes('entry-site-stack') && html.indexOf('Top 10 Entry Navigation') < html.indexOf('Top 10 site pages'), 'entry navigation should stack above site pages in the right column');
 assert.ok(html.includes('accent-entry') && html.includes('accent-site'), 'entry and site panels should use distinct header accents');
-assert.ok(summary.entryNavigation.length > 0 && summary.entryNavigation.length <= 5, 'entry navigation should contain at most five entry pages');
+assert.ok(summary.entryNavigation.length > 0 && summary.entryNavigation.length <= 10, 'entry navigation should contain at most ten entry pages');
 assert.ok(html.includes('continued-col') && html.includes('chapter-col'), 'entry navigation should reserve fixed space for percentage columns');
 assert.ok(html.includes('title="/Galleries/Painterly-Fine-Art-Photography/Facing-History/'), 'truncated entry navigation labels should retain their full path tooltip');
 assert.ok(html.includes('class="device-section"') && html.includes('device-windows') && html.includes('device-android'), 'device panels should be grouped and color coded');

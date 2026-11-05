@@ -114,7 +114,7 @@ export async function getV3CoreSummary(env, { windowKey = 'today', now = new Dat
       )
       SELECT label,entries,continued,chapters FROM progression
       ORDER BY CASE WHEN label='/' THEN 0 ELSE 1 END,entries DESC,label
-      LIMIT 5
+      LIMIT 10
     `).bind(...bounds),
     env.DB.prepare(`
       SELECT 'site_device' kind,site_device label,COUNT(DISTINCT visitor_id) count
@@ -165,6 +165,8 @@ export async function getV3CoreSummary(env, { windowKey = 'today', now = new Dat
     .sort((a, b) => (b.count - a.count) || a.label.localeCompare(b.label)).slice(0, limit);
   const imageViewGeoCounts = new Map(top('image_geo_views', Number.MAX_SAFE_INTEGER)
     .map((row) => [row.label, row.count]));
+  const cartFunnelLabels = ['Added to cart', 'Viewed cart', 'Started checkout', 'Calculated final total', 'Started payment', 'Order completed'];
+  const actionCounts = new Map(top('action', Number.MAX_SAFE_INTEGER).map((row) => [row.label, row.count]));
   return {
     window,
     state: rows(stateResult)[0] || null,
@@ -174,7 +176,9 @@ export async function getV3CoreSummary(env, { windowKey = 'today', now = new Dat
       engaged_sessions: Number(people.engaged_sessions || 0),
       page_views: Number(totals.page_views || 0), image_views: Number(totals.image_views || 0),
       pricing_opens: Number(totals.pricing_opens || 0), order_submits: Number(totals.order_submits || 0),
-      smugmug_clicks: Number(totals.smugmug_clicks || 0), email_clicks: Number(totals.email_clicks || 0)
+      smugmug_clicks: Number(totals.smugmug_clicks || 0), email_clicks: Number(totals.email_clicks || 0),
+      cowboy_widget_clicks: actionCounts.get('Cowboy widget clicked') || 0,
+      picture_shows_widget_clicks: actionCounts.get('Picture Shows widget clicked') || 0
     },
     topPages: top('page', 10),
     topImages: rows(imageResult).map((row) => ({
@@ -198,7 +202,9 @@ export async function getV3CoreSummary(env, { windowKey = 'today', now = new Dat
       ...row, imageViews: imageViewGeoCounts.get(row.label) || 0
     })),
     expeditionActions: top('expedition_action', 30),
-    actionGroups: top('action_group', 10), actions: top('action', 25)
+    actionGroups: top('action_group', 10),
+    actions: top('action', 25).filter((row) => !['Order clicked — SmugMug', 'Order clicked — email'].includes(row.label)),
+    cartFunnel: cartFunnelLabels.map((label) => ({ label, count: actionCounts.get(label) || 0 }))
   };
 }
 
