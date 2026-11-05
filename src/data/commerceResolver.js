@@ -2,7 +2,7 @@ import pricingConfig from "./pricingConfig.json";
 import seriesRegistry from "./seriesRegistry.json";
 import { galleryData as engrainedGalleryData } from "./Other/K4-Select-Series/Engrained/Engrained-Series.mjs";
 import { SERIES_DEFINITIONS } from "./seriesDefinitions.js";
-import { getEffectiveSeries } from "./seriesAvailability.js";
+import { resolveImageSeries } from "./seriesAvailability.js";
 
 const STANDARD_SERIES = ["sketch", "foundation", "chronicle", "legend"];
 const ENGRAINED_PATH = "/Other/K4-Select-Series/Engrained/Engrained-Series";
@@ -54,32 +54,6 @@ export function getSketchOfferShippingDetails() {
   };
 }
 
-function pathToDatasetPath(galleryPath = "") {
-  const clean = String(galleryPath || "").replace(/^\/+/, "").replace(/\/+$/, "");
-  if (!clean) return "";
-  return `/src/data/${clean}.mjs`;
-}
-
-function findSeriesId(imageId, galleryPath, registry = seriesRegistry) {
-  if (!imageId || !registry?.images) return null;
-
-  const candidates = [
-    `${imageId}:${pathToDatasetPath(galleryPath)}`,
-    `${imageId}:${galleryPath}`,
-    imageId,
-  ].filter(Boolean);
-
-  for (const key of candidates) {
-    if (registry.images[key]) return registry.images[key];
-  }
-
-  for (const [key, seriesId] of Object.entries(registry.images)) {
-    if (key.startsWith(`${imageId}:`)) return seriesId;
-  }
-
-  return null;
-}
-
 function getSeriesPricingList(seriesKey, excludeSizes = {}) {
   const pricing = pricingConfig?.pricing?.[seriesKey];
   if (!pricing || Object.keys(pricing).length === 0) return [];
@@ -110,10 +84,13 @@ function findEngrainedForPaperImage(imageId) {
 }
 
 function resolveStandardCommerce({ image, galleryPath, pageUrl }) {
-  const seriesId = findSeriesId(image?.id, galleryPath);
-  const series = seriesId ? seriesRegistry.series?.[seriesId] : null;
+  const { seriesId, seriesRecord: series, tiers: effectiveSeries } = resolveImageSeries({
+    image,
+    galleryPath,
+    registry: seriesRegistry,
+  });
   const oneImageMovie = Boolean(series?.oneImageMovie || image?.oneImageMovie);
-  const tierSet = new Set(getEffectiveSeries(image, series));
+  const tierSet = new Set(effectiveSeries);
 
   const tiers = STANDARD_SERIES
     .filter((seriesKey) => tierSet.has(seriesKey) && SERIES_DEFINITIONS[seriesKey])

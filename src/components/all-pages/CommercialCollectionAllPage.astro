@@ -553,23 +553,39 @@ const compactBreadcrumbHtml = breadcrumbHtml
 
     <!-- Catalog Tools -->
     <section class="catalog-tools" aria-labelledby="catalog-tools-heading">
-      <h2 id="catalog-tools-heading" class="catalog-tools-title">{gatewayCollectionName} Collection</h2>
-      <span class="catalog-tools-divider" aria-hidden="true">|</span>
-      <div class="series-sort" aria-label="Sort collection by print series">
-        <span class="series-sort-label">Sorting:</span>
-        <button class="series-sort-button is-active" type="button" data-series-sort="catalog" aria-pressed="true" title="Catalog order / all works">#/&#10045;</button>
-        <button class="series-sort-button" type="button" data-series-sort="foundation" aria-pressed="false" title="Foundation first">&#9733;</button>
-        <button class="series-sort-button" type="button" data-series-sort="chronicle" aria-pressed="false" title="Chronicle first">&#8984;</button>
-        <button class="series-sort-button" type="button" data-series-sort="legend" aria-pressed="false" title="Legend first">&#10070;</button>
+      <div class="catalog-tools-summary">
+        <h2 id="catalog-tools-heading" class="catalog-tools-title">{gatewayCollectionName} Collection</h2>
+        <p class="catalog-tools-count" data-catalog-count aria-live="polite">{imageCount} works</p>
       </div>
-      <span class="catalog-tools-divider" aria-hidden="true">|</span>
-      <form class="jump-form" data-jump-form>
-        <label for="artwork-number">Jump to image #</label>
-        <input id="artwork-number" name="artwork-number" type="number" min="1" max={imageCount} inputmode="numeric" />
-        <button type="submit">Go</button>
-      </form>
-      <span class="catalog-tools-divider" aria-hidden="true">|</span>
-      <p class="catalog-tools-count" data-catalog-count>{imageCount} works</p>
+      <div class="catalog-tools-controls">
+        <div class="series-sort" aria-label="Sort collection by print series">
+          <span class="series-sort-label">Sorting:</span>
+          <button class="series-sort-button is-active" type="button" data-series-sort="catalog" aria-pressed="true" title="Catalog order / all works">#/&#10045;</button>
+          <button class="series-sort-button" type="button" data-series-sort="foundation" aria-pressed="false" title="Foundation first">&#9733;</button>
+          <button class="series-sort-button" type="button" data-series-sort="chronicle" aria-pressed="false" title="Chronicle first">&#8984;</button>
+          <button class="series-sort-button" type="button" data-series-sort="legend" aria-pressed="false" title="Legend first">&#10070;</button>
+        </div>
+        <span class="catalog-tools-divider" aria-hidden="true">|</span>
+        <form class="title-search-form" data-title-search-form role="search" aria-label="Search artwork titles in this collection">
+          <label for="collection-title-search">Search:</label>
+          <input
+            id="collection-title-search"
+            name="q"
+            type="search"
+            placeholder="Artwork title"
+            autocomplete="off"
+            enterkeyhint="search"
+          />
+          <button type="submit">Search</button>
+          <button class="title-search-clear" type="button" data-title-search-clear hidden>Clear</button>
+        </form>
+        <span class="catalog-tools-divider" aria-hidden="true">|</span>
+        <form class="jump-form" data-jump-form>
+          <label for="artwork-number">Jump to image #</label>
+          <input id="artwork-number" name="artwork-number" type="number" min="1" max={imageCount} inputmode="numeric" />
+          <button type="submit">Go</button>
+        </form>
+      </div>
     </section>
 
     <!-- Image Grid -->
@@ -639,6 +655,7 @@ const compactBreadcrumbHtml = breadcrumbHtml
               data-artwork-number={idx + 1}
               data-original-index={idx}
               data-series={cardSeriesKeys}
+              data-title={title}
             >
               <a
                 href={linkUrl}
@@ -1312,13 +1329,27 @@ const compactBreadcrumbHtml = breadcrumbHtml
       padding:6px 22px;
       box-sizing:border-box;
       display:grid;
-      grid-template-columns:auto auto auto 1fr auto 1fr auto;
-      align-items:center;
-      column-gap:18px;
+      grid-template-columns:1fr;
       row-gap:6px;
       background:#f5f1ec;
       border:1px solid #cec9c4;
       overflow:hidden;
+    }
+    .catalog-tools-summary {
+      display:grid;
+      grid-template-columns:1fr auto 1fr;
+      align-items:center;
+      gap:18px;
+      min-width:0;
+      padding-bottom:6px;
+      border-bottom:1px solid #ded3c6;
+    }
+    .catalog-tools-controls {
+      display:grid;
+      grid-template-columns:minmax(190px,1fr) auto minmax(230px,1fr) auto minmax(220px,1fr);
+      align-items:center;
+      column-gap:12px;
+      min-width:0;
     }
     .catalog-tools-title {
       margin:0;
@@ -1326,7 +1357,8 @@ const compactBreadcrumbHtml = breadcrumbHtml
       font-size:.98rem;
       font-weight:700;
       white-space:nowrap;
-      justify-self:start;
+      grid-column:2;
+      justify-self:center;
       min-width:0;
     }
     .catalog-tools-count {
@@ -1334,6 +1366,7 @@ const compactBreadcrumbHtml = breadcrumbHtml
       color:#6b594b;
       font-size:.88rem;
       white-space:nowrap;
+      grid-column:3;
       justify-self:end;
       min-width:0;
     }
@@ -1357,6 +1390,7 @@ const compactBreadcrumbHtml = breadcrumbHtml
       gap:5px;
       min-width:0;
       white-space:nowrap;
+      justify-self:start;
     }
     .series-sort-label {
       color:#4b3a2d;
@@ -1402,9 +1436,9 @@ const compactBreadcrumbHtml = breadcrumbHtml
       flex-wrap:nowrap;
       gap:8px;
       margin:0;
-      justify-self:center;
       min-width:0;
       max-width:100%;
+      justify-self:end;
     }
     .jump-form label {
       color:#4b3a2d;
@@ -1434,6 +1468,56 @@ const compactBreadcrumbHtml = breadcrumbHtml
     .jump-form button:hover {
       background:#fffaf4;
     }
+    .title-search-form {
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:6px;
+      width:100%;
+      min-width:0;
+      margin:0;
+    }
+    .title-search-form label {
+      color:#4b3a2d;
+      font-size:.86rem;
+      white-space:nowrap;
+    }
+    .title-search-form input {
+      width:145px;
+      min-width:100px;
+      max-width:165px;
+      flex:1 1 145px;
+      padding:4px 8px;
+      border:1px solid #cdbba6;
+      background:#fffdf9;
+      color:#2f241b;
+      font-family:'Glegoo',serif;
+      font-size:.84rem;
+    }
+    .title-search-form button {
+      padding:4px 11px;
+      border:1px solid #b89b78;
+      background:#fffdf9;
+      color:#5a3e2b;
+      font-family:'Glegoo',serif;
+      font-size:.84rem;
+      cursor:pointer;
+    }
+    .title-search-form button:hover,
+    .title-search-form button:focus-visible {
+      border-color:#85644b;
+      background:#fffaf4;
+    }
+    .title-search-form .title-search-clear {
+      border-color:transparent;
+      background:transparent;
+      color:#85644b;
+      text-decoration:underline;
+      text-underline-offset:2px;
+    }
+    .title-search-form .title-search-clear[hidden] {
+      display:none;
+    }
 
     .ssr-grid {
       display:grid;
@@ -1462,6 +1546,27 @@ const compactBreadcrumbHtml = breadcrumbHtml
       color:#85644b;
       text-decoration:none;
       border-bottom:1px solid rgba(133,100,75,.45);
+    }
+    :global(.catalog-search-empty) {
+      grid-column:1 / -1;
+      display:grid;
+      justify-items:center;
+      gap:5px;
+      width:100%;
+      margin:18px 0 34px;
+      padding:28px 18px;
+      border:1px solid #dfd0bd;
+      background:#fffdf9;
+      color:#4b3a2d;
+      text-align:center;
+    }
+    :global(.catalog-search-empty strong) {
+      color:#2f241b;
+      font-size:1rem;
+    }
+    :global(.catalog-search-empty span) {
+      color:#6b594b;
+      font-size:.84rem;
     }
     :global(.catalog-range-marker) {
       grid-column:1 / -1;
@@ -1924,31 +2029,33 @@ const compactBreadcrumbHtml = breadcrumbHtml
         max-width:100%;
         margin:14px 0 18px;
         padding:8px 12px;
-        grid-template-columns:1fr;
-        column-gap:12px;
         row-gap:6px;
-        justify-items:center;
-        text-align:center;
+        justify-items:stretch;
+      }
+      .catalog-tools-summary {
+        width:100%;
+        gap:10px;
       }
       .catalog-tools-title,
       .catalog-tools-count {
-        white-space:normal;
         min-width:0;
         align-self:center;
       }
       .catalog-tools-title {
-        grid-column:1 / -1;
         font-size:.9rem;
         line-height:1.2;
-        justify-self:center;
-        white-space:nowrap;
+        white-space:normal;
+        text-align:center;
       }
       .catalog-tools-count {
-        grid-column:1;
-        grid-row:4;
         font-size:.8rem;
         white-space:nowrap;
-        justify-self:center;
+        text-align:right;
+      }
+      .catalog-tools-controls {
+        grid-template-columns:1fr;
+        row-gap:6px;
+        justify-items:center;
       }
       .catalog-tools-divider {
         display:none;
@@ -1966,7 +2073,19 @@ const compactBreadcrumbHtml = breadcrumbHtml
       }
       .series-sort {
         grid-column:1;
+        grid-row:1;
+        justify-self:center;
+      }
+      .title-search-form {
+        grid-column:1;
         grid-row:2;
+        flex-wrap:wrap;
+        width:auto;
+      }
+      .title-search-form input {
+        width:min(210px, 52vw);
+        min-width:150px;
+        max-width:210px;
       }
       .jump-form label,
       .jump-form input,
@@ -2184,8 +2303,11 @@ const compactBreadcrumbHtml = breadcrumbHtml
         const input = jumpForm.querySelector('input[name="artwork-number"]');
         const rawValue = Number(input?.value || 0);
         if (!Number.isFinite(rawValue) || rawValue < 1) return;
-        const target = document.querySelector(`[data-artwork-number="${Math.floor(rawValue)}"]`);
-        target?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        window.dispatchEvent(new Event('k4:catalog-reset'));
+        window.requestAnimationFrame(() => {
+          const target = document.querySelector(`[data-artwork-number="${Math.floor(rawValue)}"]`);
+          target?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
       });
     })();
 
@@ -2193,11 +2315,15 @@ const compactBreadcrumbHtml = breadcrumbHtml
       const grid = document.getElementById('collection-grid');
       const sortButtons = Array.from(document.querySelectorAll('[data-series-sort]'));
       const countNode = document.querySelector('[data-catalog-count]');
+      const searchForm = document.querySelector('[data-title-search-form]');
+      const searchInput = searchForm?.querySelector('input[name="q"]');
+      const clearSearchButton = searchForm?.querySelector('[data-title-search-clear]');
       if (!grid || sortButtons.length === 0) return;
 
       const originalNodes = Array.from(grid.children);
       const cards = originalNodes.filter((node) => node.classList?.contains('ssr-card'));
       const totalCount = cards.length;
+      let activeSearchQuery = '';
       const seriesMeta = {
         foundation: { label: 'Foundation', symbol: '\u2605' },
         chronicle: { label: 'Chronicle', symbol: '\u2318' },
@@ -2225,6 +2351,28 @@ const compactBreadcrumbHtml = breadcrumbHtml
 
       const clearSortState = () => {
         cards.forEach((card) => card.classList.remove('is-series-sort-match'));
+      };
+
+      const normalizeTitle = (value) =>
+        String(value || '')
+          .normalize('NFKD')
+          .replace(/[\u0300-\u036f]/g, '')
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, ' ')
+          .trim();
+
+      const updateSearchUrl = (query) => {
+        const url = new URL(window.location.href);
+        if (query) url.searchParams.set('q', query);
+        else url.searchParams.delete('q');
+        window.history.replaceState(window.history.state, '', `${url.pathname}${url.search}${url.hash}`);
+      };
+
+      const resetSearchState = (updateUrl = true) => {
+        activeSearchQuery = '';
+        if (searchInput) searchInput.value = '';
+        if (clearSearchButton) clearSearchButton.hidden = true;
+        if (updateUrl) updateSearchUrl('');
       };
 
       const setActiveButton = (activeKey) => {
@@ -2284,7 +2432,21 @@ const compactBreadcrumbHtml = breadcrumbHtml
         return nodes;
       };
 
-      const applySort = (seriesKey) => {
+      const makeSearchEmptyState = (query) => {
+        const emptyState = document.createElement('div');
+        emptyState.className = 'catalog-search-empty';
+        emptyState.setAttribute('role', 'status');
+
+        const title = document.createElement('strong');
+        title.textContent = `No title matches for "${query}"`;
+        const guidance = document.createElement('span');
+        guidance.textContent = 'Try fewer words or check the spelling.';
+        emptyState.append(title, guidance);
+        return emptyState;
+      };
+
+      const applySort = (seriesKey, { clearSearch = true } = {}) => {
+        if (clearSearch) resetSearchState();
         clearSortState();
         setActiveButton(seriesKey);
 
@@ -2313,12 +2475,73 @@ const compactBreadcrumbHtml = breadcrumbHtml
         window.dispatchEvent(new Event('resize'));
       };
 
+      const applyTitleSearch = (rawQuery, updateUrl = true) => {
+        const query = String(rawQuery || '').trim();
+        const normalizedQuery = normalizeTitle(query);
+
+        if (!normalizedQuery) {
+          resetSearchState(updateUrl);
+          applySort('catalog', { clearSearch: false });
+          return;
+        }
+
+        activeSearchQuery = query;
+        if (searchInput) searchInput.value = query;
+        if (clearSearchButton) clearSearchButton.hidden = false;
+        if (updateUrl) updateSearchUrl(query);
+
+        clearSortState();
+        setActiveButton('catalog');
+
+        const matchingCards = cards.filter((card) =>
+          normalizeTitle(card.dataset.title).includes(normalizedQuery)
+        );
+
+        if (matchingCards.length === 0) {
+          grid.replaceChildren(makeSearchEmptyState(query));
+        } else {
+          grid.replaceChildren(
+            ...withRangeMarkers(matchingCards, matchingCards.length, 'Title matches')
+          );
+        }
+
+        if (countNode) {
+          const matchLabel = matchingCards.length === 1 ? 'match' : 'matches';
+          countNode.textContent = `${matchingCards.length} ${matchLabel}`;
+        }
+        window.dispatchEvent(new Event('resize'));
+      };
+
       sortButtons.forEach((button) => {
         button.addEventListener('click', () => {
           if (button.disabled) return;
           applySort(button.getAttribute('data-series-sort') || 'catalog');
         });
       });
+
+      searchForm?.addEventListener('submit', (event) => {
+        event.preventDefault();
+        applyTitleSearch(searchInput?.value || '');
+      });
+
+      searchInput?.addEventListener('input', () => {
+        if (activeSearchQuery && !String(searchInput.value || '').trim()) {
+          applyTitleSearch('');
+        }
+      });
+
+      clearSearchButton?.addEventListener('click', () => {
+        applyTitleSearch('');
+        searchInput?.focus();
+      });
+
+      window.addEventListener('k4:catalog-reset', () => {
+        resetSearchState();
+        applySort('catalog', { clearSearch: false });
+      });
+
+      const initialQuery = new URL(window.location.href).searchParams.get('q') || '';
+      if (initialQuery) applyTitleSearch(initialQuery, false);
     })();
 
     (() => {

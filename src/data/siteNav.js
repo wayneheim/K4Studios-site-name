@@ -770,6 +770,13 @@ export const siteNav = [
       "slug": "collections",
       "type": "section"
     },
+    {
+      "label": "Artwork Search",
+      "href": "/Other/Artwork-Search",
+      "code": "O-S8",
+      "slug": "artwork-search",
+      "type": "section"
+    },
     
   ],
   "code": "O",

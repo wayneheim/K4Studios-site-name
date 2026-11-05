@@ -1,0 +1,96 @@
+---
+export const prerender = true;
+
+import ArtworkSearch from '@/components/ArtworkSearch.jsx';
+import LandingHeader from '@/components/Landing-Header.jsx';
+import SiteFooter from '@/components/Footer.astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+import '@/styles/global.css';
+
+const canonicalPath = '/Other/Artwork-Search';
+const canonicalUrl = `https://www.k4studios.com${canonicalPath}`;
+const title = 'Artwork Search | K4 Studios';
+const description = 'Search K4 Studios artwork by title, keyword, description, image ID, and broad gallery collection.';
+const breadcrumb = '<a href="/Other" style="color:inherit;text-decoration:none">Other</a> | Artwork Search';
+
+const meta = {
+  title,
+  seoTitle: title,
+  seoDescription: description,
+  ogTitle: 'Search the K4 Studios Galleries',
+  ogDescription: description,
+  ogImage: '/og/painterly.jpg',
+  ogType: 'website',
+  twitterCard: 'summary_large_image',
+  twitterTitle: 'Search the K4 Studios Galleries',
+  twitterDescription: description,
+  twitterImage: '/og/painterly.jpg',
+  canonicalUrl,
+  robots: 'noindex, follow',
+};
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': `${canonicalUrl}#webpage`,
+  url: canonicalUrl,
+  name: 'K4 Studios Artwork Search',
+  description,
+  isPartOf: {
+    '@type': 'WebSite',
+    '@id': 'https://www.k4studios.com/#website',
+    name: 'K4 Studios',
+    url: 'https://www.k4studios.com/',
+  },
+  author: {
+    '@type': 'Person',
+    name: 'Wayne Heim',
+    url: 'https://www.k4studios.com/Other/Bio',
+  },
+};
+---
+
+<BaseLayout title={title} description={description} meta={meta} structuredDataJSON={structuredData}>
+  <main class="artwork-search-page">
+    <div class="drawer-mode">
+      <LandingHeader client:load breadcrumb={breadcrumb} />
+    </div>
+
+    <div class="artwork-search-mobile-breadcrumb" set:html={breadcrumb}></div>
+
+    <ArtworkSearch client:load />
+
+    <SiteFooter
+      title="K4 Studios Artwork Search"
+      label="Explore the Galleries"
+      class="pt-8 pb-12"
+    />
+  </main>
+</BaseLayout>
+
+<style>
+  .artwork-search-page {
+    min-height:100vh;
+    overflow-x:hidden;
+    background:#fff;
+    color:#2c2c2c;
+  }
+  .artwork-search-mobile-breadcrumb {
+    display:none;
+    width:calc(100% - 24px);
+    margin:.75rem auto 0;
+    color:#6b594b;
+    font-family:'Glegoo',serif;
+    font-size:.76rem;
+    text-align:center;
+  }
+  .artwork-search-mobile-breadcrumb :global(a) {
+    color:inherit;
+  }
+  @media (max-width: 768px) {
+    .artwork-search-mobile-breadcrumb {
+      display:block;
+    }
+  }
+</style>
