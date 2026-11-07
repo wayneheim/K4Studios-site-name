@@ -246,14 +246,38 @@ const forceImageSize = (src = "", size = "s") => {
       if (!current) return;
       const track = current.closest<HTMLElement>(".dock-track");
       if (!track) return;
-      const targetLeft = current.offsetLeft - (track.clientWidth - current.clientWidth) / 2;
+
+      const trackRect = track.getBoundingClientRect();
+      const currentRect = current.getBoundingClientRect();
+      const targetLeft = track.scrollLeft
+        + (currentRect.left + currentRect.width / 2)
+        - (trackRect.left + track.clientWidth / 2);
       const maxLeft = Math.max(0, track.scrollWidth - track.clientWidth);
+
+      const previousBehavior = track.style.scrollBehavior;
+      const previousSnapType = track.style.scrollSnapType;
+      track.style.scrollBehavior = "auto";
+      track.style.scrollSnapType = "none";
       track.scrollLeft = Math.max(0, Math.min(targetLeft, maxLeft));
+
+      requestAnimationFrame(() => {
+        track.style.scrollBehavior = previousBehavior;
+        track.style.scrollSnapType = previousSnapType;
+      });
     };
 
     requestAnimationFrame(() => requestAnimationFrame(centerCurrentCard));
     window.addEventListener("load", centerCurrentCard, { once: true });
     window.addEventListener("resize", centerCurrentCard);
+
+    if ("IntersectionObserver" in window) {
+      const visibilityObserver = new IntersectionObserver((entries) => {
+        if (!entries.some((entry) => entry.isIntersecting)) return;
+        requestAnimationFrame(() => requestAnimationFrame(centerCurrentCard));
+        visibilityObserver.disconnect();
+      }, { threshold: 0.1 });
+      visibilityObserver.observe(dock);
+    }
 
     const identifyCard = (target: EventTarget | null) => {
       if (!(target instanceof Element)) return;
