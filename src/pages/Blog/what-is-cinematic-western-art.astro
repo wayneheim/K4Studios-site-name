@@ -6,6 +6,9 @@ import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import FAQAccordion from "@/components/FAQAccordion.jsx";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
+import CornerstoneCollectionNav from "@/components/blog/CornerstoneCollectionNav.astro";
+import CornerstoneVisualBridge from "@/components/blog/CornerstoneVisualBridge.astro";
+import CornerstoneGalleryDoor from "@/components/blog/CornerstoneGalleryDoor.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
 import { getBreadcrumbList, getFAQPageStructuredData, getStructuredData } from "@/components/utils/getStructuredData.ts";
 
@@ -182,6 +185,18 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
       </p>
     </section>
 
+    <CornerstoneVisualBridge
+      kicker="See the Story Take Shape"
+      title="Cinematic Western art holds a larger story inside a single frame."
+      items={[
+        { id:"i-xpv7z8j", galleryPath:"/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color", alt:"Pioneer camp held between firelight and an approaching Western storm", caption:"Light against uncertainty." },
+        { id:"i-cfW89QP", galleryPath:"/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color", alt:"Western rider signaling from a distant ridge", caption:"Distance carrying consequence." },
+        { id:"i-7VWX9vk", galleryPath:"/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color", alt:"Western figure caught inside an unresolved escape", caption:"The frame before the answer." },
+      ]}
+      ctaHref="/cinematic-western-art"
+      ctaLabel="Explore Cinematic Western Art"
+    />
+
     <section class="story-section max-w-[860px] mx-auto px-4">
       <article class="story-block space-y-4">
         <p><strong>Cinematic Western art</strong> is Western art built with the visual and emotional language of film: composition, light, atmosphere, gesture, silence, and the feeling that a larger story exists just outside the frame.</p>
@@ -235,6 +250,8 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         <p>Cinematic Western art draws from this same family of ideas.</p>
 
         <p>What is left unsaid can be as important as what is shown.</p>
+
+        <CornerstoneGalleryDoor href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all" label="Browse Cinematic Western Stories" />
 
         <div class="section-heading-with-line">
           <h2>The Single Frame as a Story Engine</h2>
@@ -335,6 +352,8 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
           </figure>
         </div>
 
+        <CornerstoneGalleryDoor href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all" label="Explore Western Narratives in Color" />
+
         <div class="section-heading-with-line">
           <h2>Cinematic Western Photography</h2>
         </div>
@@ -426,14 +445,6 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         <p>To finish the story.</p>
 
         <div class="section-heading-with-line">
-          <h2>Explore Cinematic Western Art</h2>
-        </div>
-
-        <p>See how this idea takes form in K4 Studios' <a href="/cinematic-western-art" style="color:#8b5a2b; font-weight:600; text-decoration:underline;">cinematic Western art collection</a> - story-driven Western fine art photography shaped through light, atmosphere, character, and the unresolved moment.</p>
-
-        <p>Explore the primary collection context through <a href="/Western-Fine-Art-Photography" style="color:#8b5a2b; text-decoration:underline;">Western Fine Art Photography</a> and the painterly process through <a href="/Painterly-Western-Photography" style="color:#8b5a2b; text-decoration:underline;">Painterly Western Photography</a>.</p>
-
-        <div class="section-heading-with-line">
           <h2>Related Reading</h2>
         </div>
 
@@ -460,11 +471,20 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         </div>
 
         <FAQAccordion items={cinematicWesternArtFaq} showHeading={false} />
+
+        <div class="section-heading-with-line">
+          <h2>Explore Cinematic Western Art</h2>
+        </div>
+
+        <p>See how this idea takes form in K4 Studios' <a href="/cinematic-western-art" style="color:#8b5a2b; font-weight:600; text-decoration:underline;">cinematic Western art collection</a> - story-driven Western fine art photography shaped through light, atmosphere, character, and the unresolved moment.</p>
+
+        <p>Explore the primary collection context through <a href="/Western-Fine-Art-Photography" style="color:#8b5a2b; text-decoration:underline;">Western Fine Art Photography</a> and the painterly process through <a href="/Painterly-Western-Photography" style="color:#8b5a2b; text-decoration:underline;">Painterly Western Photography</a>.</p>
       </article>
     </section>
 
     <WesternDefinitions variant="definition" currentPage={17} />
 
+    <CornerstoneCollectionNav />
     <SiteFooter />
   </main>
 

@@ -18,6 +18,9 @@ import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import FAQAccordion from "@/components/FAQAccordion.jsx";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
+import CornerstoneCollectionNav from "@/components/blog/CornerstoneCollectionNav.astro";
+import CornerstoneVisualBridge from "@/components/blog/CornerstoneVisualBridge.astro";
+import CornerstoneGalleryDoor from "@/components/blog/CornerstoneGalleryDoor.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
 import WesternGuideNav from '@/components/authority/WesternGuideNav.astro';
 import { getBreadcrumbList, getFAQPageStructuredData, getStructuredData } from "@/components/utils/getStructuredData.ts";
@@ -219,6 +222,17 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
       </p>
     </section>
 
+    <CornerstoneVisualBridge
+      title="Western art is a visual language of land, character, conflict, and myth."
+      items={[
+        { id:"i-T6bD4w7", galleryPath:"/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color", alt:"Weathered cowboy portrait within the Western art tradition", caption:"Character shaped by the land." },
+        { id:"i-b3vCXwR", galleryPath:"/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color", alt:"Western figure waiting for action", caption:"The pause inside the myth." },
+        { id:"i-NKdPDCg", galleryPath:"/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color", alt:"Quiet frontier labor interpreted as Western fine art", caption:"Daily life beneath the icon." },
+      ]}
+      ctaHref="/Western-Fine-Art-Photography"
+      ctaLabel="Explore Western Fine Art"
+    />
+
     <!-- Article Content -->
     <section class="story-section max-w-[860px] mx-auto px-4">
       <article class="story-block space-y-4">
@@ -294,6 +308,8 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         </div>
 
         <!-- SECTION 4: The Cowboy as Icon -->
+        <CornerstoneGalleryDoor href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Cowboy-Portraits/Color/all" label="Browse Western Cowboy Portraits" />
+
         <div class="section-heading-with-line">
           <h2>The Cowboy as Cultural Icon</h2>
         </div>
@@ -402,6 +418,8 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         </div>
 
         <!-- SECTION 8: Western Art Today -->
+        <CornerstoneGalleryDoor href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all" label="Explore Narrative Western Art" />
+
         <div class="section-heading-with-line">
           <h2>Western Art Today</h2>
         </div>
@@ -444,6 +462,12 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
           </aside>
         </div>
 
+        <div class="section-heading-with-line">
+          <h2>Western Art FAQ</h2>
+        </div>
+
+        <FAQAccordion items={westernArtFaq} showHeading={false} />
+
         <!-- SECTION 9: Explore Western Themes in Practice -->
         <div class="section-heading-with-line">
           <h2>Explore Western Themes in Practice</h2>
@@ -482,12 +506,6 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
           </li>
         </ul>
 
-        <div class="section-heading-with-line">
-          <h2>Western Art FAQ</h2>
-        </div>
-
-        <FAQAccordion items={westernArtFaq} showHeading={false} />
-
       </article>
     </section>
 
@@ -496,6 +514,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
     <WesternGuideNav currentPath={sectionPath} />
 
+    <CornerstoneCollectionNav focusKey="cowboy-portraits-0" />
     <SiteFooter />
   </main>
 </BaseLayout>

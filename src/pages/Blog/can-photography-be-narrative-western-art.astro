@@ -5,6 +5,9 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
+import CornerstoneCollectionNav from "@/components/blog/CornerstoneCollectionNav.astro";
+import CornerstoneVisualBridge from "@/components/blog/CornerstoneVisualBridge.astro";
+import CornerstoneGalleryDoor from "@/components/blog/CornerstoneGalleryDoor.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
 import { getBreadcrumbList, getStructuredData } from "@/components/utils/getStructuredData.ts";
 
@@ -132,6 +135,19 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
       </p>
     </section>
 
+    <CornerstoneVisualBridge
+      kicker="Photography as Narrative Art"
+      title="Three Photographs Built as Western Stories"
+      intro="The medium changes; the demand for story, atmosphere, and consequence does not."
+      items={[
+        { id: "i-bq4FKvX", galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color", alt: "Narrative Western fine art photograph", caption: "Story carried by the image itself" },
+        { id: "i-BxK562q", galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color", alt: "Painterly Western narrative photograph", caption: "Atmosphere shaped as narrative material" },
+        { id: "i-Vhv8w9H", galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color", alt: "Cinematic Western art photograph", caption: "A single frame carrying consequence" },
+      ]}
+      ctaHref="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all"
+      ctaLabel="Explore Narrative Western Art"
+    />
+
     <section class="story-section max-w-[860px] mx-auto px-4">
       <article class="story-block space-y-4">
         <p style="font-size:0.95rem; color:#666; margin-bottom:1.5rem; font-style:italic;">
@@ -153,6 +169,8 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         <p>That distinction once made practical sense. Early photography was often tied to survey work, documentation, portrait studios, and historical record, while painting carried more visible signs of interpretation and invention.</p>
 
         <p>But that division no longer holds. Photography has long since proven it can operate with authorship, mood, and structure equal to painting. The question now is not what tool was used. It is what kind of image was made.</p>
+
+        <CornerstoneGalleryDoor href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all" label="Browse Narrative Western Photographs" />
 
         <div class="section-heading-with-line">
           <h2>What Makes a Photograph Narrative Western Art</h2>
@@ -213,6 +231,8 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
           </figure>
         </div>
 
+        <CornerstoneGalleryDoor href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/all" label="Explore Black & White Western Stories" />
+
         <div class="section-heading-with-line">
           <h2>Why the Answer Matters</h2>
         </div>
@@ -243,6 +263,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
     <WesternDefinitions variant="definition" currentPage={14} />
 
+    <CornerstoneCollectionNav />
     <SiteFooter />
   </main>
 

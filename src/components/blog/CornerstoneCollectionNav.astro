@@ -1,0 +1,21 @@
+---
+import CollectionJumpGrid from "@/components/gallery/CollectionJumpGrid.astro";
+import { buildWildWestAllPageDock, type WildWestCurrentDockKey } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/dock/buildWildWestAllPageDock";
+
+const {
+  focusKey = "western-narrative-color",
+  title = "Browse Our Collections",
+} = Astro.props as {
+  focusKey?: WildWestCurrentDockKey;
+  title?: string;
+};
+
+const focusedDock = buildWildWestAllPageDock({ currentKey: focusKey });
+const items = focusedDock.sectionDockItems.map((item: any) => ({
+  ...item,
+  focused: item.current,
+  current: false,
+}));
+---
+
+<CollectionJumpGrid items={items} centerIndex={focusedDock.dockCenterIndex} currentTitle={title} />

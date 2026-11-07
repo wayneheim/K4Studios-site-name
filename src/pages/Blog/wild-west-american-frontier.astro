@@ -4,6 +4,9 @@ export const prerender = true;
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
+import CornerstoneCollectionNav from "@/components/blog/CornerstoneCollectionNav.astro";
+import CornerstoneVisualBridge from "@/components/blog/CornerstoneVisualBridge.astro";
+import CornerstoneGalleryDoor from "@/components/blog/CornerstoneGalleryDoor.astro";
 import { getBreadcrumbList, getStructuredData } from "@/components/utils/getStructuredData.ts";
 import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import "@/styles/global.css";
@@ -109,6 +112,17 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
       <p class="definition-post-subtitle">The moving line of settlement, what it felt like from inside, and why it never really closed</p>
     </header>
 
+    <CornerstoneVisualBridge
+      title="The frontier was a moving edge where distance turned every choice into consequence."
+      items={[
+        { id:"i-XmhTdjF", galleryPath:"/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color", alt:"Western figure standing watch at the edge of open country", caption:"Where protection thinned." },
+        { id:"i-44jcjTQ", galleryPath:"/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color", alt:"Frontier stand-off built around resolve and consequence", caption:"Where law became personal." },
+        { id:"i-8zFZ3jn", galleryPath:"/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color", alt:"Western figure held in isolated night light", caption:"Where distance shaped character." },
+      ]}
+      ctaHref="/Western-Frontier-Art"
+      ctaLabel="Explore American Frontier Art"
+    />
+
     <article class="definition-post-story">
       <p class="identity">Wayne Heim makes contemporary Western art as camera-based painterly fine art — real photographs, painterly handling, narrative intent.</p>
 
@@ -121,6 +135,8 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
       <div class="definition-post-heading"><h2>The line from the other side</h2></div>
       <p>The frontier also looked entirely different depending on which side of it you stood on. From the east, it was opportunity: land, a fresh start, a life remade. From the west — from the Native nations whose homelands the line kept crossing — it was an invasion arriving in stages: traders, then soldiers, then fences. The same mile of ground was one people's beginning and another people's catastrophe, often in the same decade. A definition of the frontier that only works from one side of the line is not a definition. It is a brochure.</p>
 
+      <CornerstoneGalleryDoor href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all" label="Browse American Frontier Stories" />
+
       <div class="definition-post-heading"><h2>1890, and what Turner said</h2></div>
       <p>In 1890, the Census Bureau announced that settlement had broken the frontier into isolated pockets — there was no longer a single line to draw. Three years later, at the Chicago World's Fair, Frederick Jackson Turner gave the idea its famous form: the frontier, he argued, was where American character had been made — practical, restless, self-reliant, democratic — because the edge of settlement kept forcing people to start over with their own hands.</p>
       <p>Historians have argued with Turner ever since, and much of what he left out — Native dispossession, women's labor, the Mexican and Spanish West — has had to be written back in. But his core observation survives every correction: the frontier was not just where Americans lived. It was a pressure that shaped how they understood themselves. When the line closed, the country had to find out who it was without one.</p>
@@ -129,19 +145,11 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
       <p>The frontier closed as geography and immediately reopened as imagination. Buffalo Bill's Wild West show was already touring the frontier as spectacle while the real one still existed; Remington and Russell raced to fix a vanishing world in paint before it disappeared entirely; film and television then carried the legend across the whole twentieth century. The legends outlived the line because they were load-bearing: they told Americans a story about where they came from.</p>
       <p>But a legend is only as strong as what holds it up. Underneath the showdown and the silhouette is the armature — the buried narrative foundation of roots, struggles, losses, and forgotten stories of the people who actually built the West, on both sides of the line. When that foundation is forgotten, the legend doesn't get freer; it gets thinner, collapsing into costume and cliché. The work of taking the frontier seriously now is excavation: returning to the foundation so the stories stand again.</p>
 
+      <CornerstoneGalleryDoor href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West" label="Enter the Wild West Collection" />
+
       <div class="definition-post-heading"><h2>Where my work stands on it</h2></div>
       <p>That excavation is where I work. I work with living historians and researched period detail to build single, interrupted moments from the frontier's human side — the breath before a decision, the silence after one — using painterly handling to shape real photographs into images a viewer steps inside and finishes. Each piece is a One-Image Movie™: the frame opens the moment, the title and writing deepen it, and what the frontier felt like from inside is completed by the person standing in front of it.</p>
       <p>You can see that approach across Facing History and in its Western branch, the Wild West gallery — a frontier presented not as a set of icons, but as people living at the edge of the map, carrying what the edge demanded.</p>
-
-      <div class="definition-post-heading"><h2>Where to go next</h2></div>
-      <nav class="definition-post-links" aria-label="Related American frontier pages">
-        <p>The Wild West gallery: <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West">Wild West</a></p>
-        <p>Facing History, the full collection: <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Facing History</a></p>
-        <p>The companion definition, "What Is the Wild West?": <a href="/Blog/what-is-the-wild-west">What Is the Wild West?</a></p>
-        <p>What a One-Image Movie™ is: <a href="/Other/One-Image-Movie">The One-Image Movie™</a></p>
-        <p>The companion definition: <a href="/Blog/what-is-contemporary-western-art">What Is Contemporary Western Art?</a></p>
-        <p>The K4 Studios Glossary: <a href="/Glossary">K4 Studios Glossary</a></p>
-      </nav>
 
       <div class="definition-post-heading"><h2>FAQ</h2></div>
       <div class="definition-post-faq">
@@ -152,8 +160,19 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
           </details>
         ))}
       </div>
+
+      <div class="definition-post-heading"><h2>Where to go next</h2></div>
+      <nav class="definition-post-links" aria-label="Related American frontier pages">
+        <p>The Wild West gallery: <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West">Wild West</a></p>
+        <p>Facing History, the full collection: <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Facing History</a></p>
+        <p>The companion definition, "What Is the Wild West?": <a href="/Blog/what-is-the-wild-west">What Is the Wild West?</a></p>
+        <p>What a One-Image Movie™ is: <a href="/Other/One-Image-Movie">The One-Image Movie™</a></p>
+        <p>The companion definition: <a href="/Blog/what-is-contemporary-western-art">What Is Contemporary Western Art?</a></p>
+        <p>The K4 Studios Glossary: <a href="/Glossary">K4 Studios Glossary</a></p>
+      </nav>
     </article>
 
+    <CornerstoneCollectionNav />
     <SiteFooter />
   </main>
 </BaseLayout>

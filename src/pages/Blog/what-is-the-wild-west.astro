@@ -4,6 +4,9 @@ export const prerender = true;
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
+import CornerstoneCollectionNav from "@/components/blog/CornerstoneCollectionNav.astro";
+import CornerstoneVisualBridge from "@/components/blog/CornerstoneVisualBridge.astro";
+import CornerstoneGalleryDoor from "@/components/blog/CornerstoneGalleryDoor.astro";
 import { getBreadcrumbList, getStructuredData } from "@/components/utils/getStructuredData.ts";
 import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import "@/styles/global.css";
@@ -109,6 +112,17 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
       <p class="definition-post-subtitle">The era, the geography, and the line between the lived West and the legend</p>
     </header>
 
+    <CornerstoneVisualBridge
+      title="The Wild West survives as both lived history and unfinished legend."
+      items={[
+        { id:"i-jRxNbgX", galleryPath:"/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color", alt:"Western figures gathered in a moment of reverence and intent", caption:"The lived West." },
+        { id:"i-c5K798H", galleryPath:"/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color", alt:"Frontier confrontation carrying the pressure of consequence", caption:"The unsettled West." },
+        { id:"i-89qzJ6S", galleryPath:"/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color", alt:"Cowboys crossing open country together", caption:"The remembered West." },
+      ]}
+      ctaHref="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West"
+      ctaLabel="Enter the Wild West Collections"
+    />
+
     <article class="definition-post-story">
       <p class="identity">Wayne Heim makes contemporary Western art as camera-based painterly fine art — real photographs, painterly handling, narrative intent.</p>
 
@@ -119,6 +133,8 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
       <div class="definition-post-heading"><h2>The geography</h2></div>
       <p>Geographically, the Wild West was the trans-Mississippi West: the Great Plains, the Rocky Mountains, the desert Southwest, and the Pacific slope — an enormous, varied country of grassland, canyon, and high desert. It was not empty. Native nations had lived in and governed this land for centuries, and Mexican and Spanish histories ran deep in the Southwest long before Anglo settlement arrived. Any honest definition has to hold that: the Wild West was a homeland being taken, as much as a wilderness being settled.</p>
+
+      <CornerstoneGalleryDoor href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all" label="Browse Wild West Narrative Stories" />
 
       <div class="definition-post-heading"><h2>Two Wild Wests</h2></div>
       <p>There are really two Wild Wests, and confusing them is where most treatments fail.</p>
@@ -132,18 +148,11 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
       <div class="definition-post-heading"><h2>Why the definition matters</h2></div>
       <p>Definitions decide what gets seen. If the Wild West is only the legend, then the people who actually built the West — the roots, the struggles, the losses, the forgotten stories — stay buried, and the legends they support eventually collapse into cliché. Getting the term right is not academic. It is the difference between a West that can still be entered, felt, and learned from, and a West that is only performed.</p>
 
+      <CornerstoneGalleryDoor href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West" label="Enter the Wild West Collection" />
+
       <div class="definition-post-heading"><h2>Answering it with a camera</h2></div>
       <p>My own work starts from the lived West and earns the legend from there. I work with living historians — people who know how a hat sits after a long day, how a soldier stands when fatigue has become normal — and with researched period detail, real subjects, and real light. The aim is not to document a reenactment or pose a costume. It is to build a single interrupted moment: a breath before a decision, the held second after one, and let the viewer step inside it and finish the story themselves. That is the One-Image Movie™ — the photograph opens the scene, the title and writing deepen it, and the viewer's own imagination completes what the frame leaves unwritten.</p>
       <p>The collection where that answer lives is Facing History, and its Western branch is the Wild West gallery: cowboys, settlers, and Native Americans approached as people under pressure first and icons second — if at all.</p>
-
-      <div class="definition-post-heading"><h2>Where to go next</h2></div>
-      <nav class="definition-post-links" aria-label="Related Wild West pages">
-        <p>The Wild West gallery: <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West">Wild West</a></p>
-        <p>Facing History, the full collection: <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Facing History</a></p>
-        <p>What a One-Image Movie™ is: <a href="/Other/One-Image-Movie">The One-Image Movie™</a></p>
-        <p>The companion definition: <a href="/Blog/what-is-contemporary-western-art">What Is Contemporary Western Art?</a></p>
-        <p>The K4 Studios Glossary: <a href="/Glossary">K4 Studios Glossary</a></p>
-      </nav>
 
       <div class="definition-post-heading"><h2>FAQ</h2></div>
       <div class="definition-post-faq">
@@ -154,8 +163,18 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
           </details>
         ))}
       </div>
+
+      <div class="definition-post-heading"><h2>Where to go next</h2></div>
+      <nav class="definition-post-links" aria-label="Related Wild West pages">
+        <p>The Wild West gallery: <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West">Wild West</a></p>
+        <p>Facing History, the full collection: <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Facing History</a></p>
+        <p>What a One-Image Movie™ is: <a href="/Other/One-Image-Movie">The One-Image Movie™</a></p>
+        <p>The companion definition: <a href="/Blog/what-is-contemporary-western-art">What Is Contemporary Western Art?</a></p>
+        <p>The K4 Studios Glossary: <a href="/Glossary">K4 Studios Glossary</a></p>
+      </nav>
     </article>
 
+    <CornerstoneCollectionNav />
     <SiteFooter />
   </main>
 </BaseLayout>

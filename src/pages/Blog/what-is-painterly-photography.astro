@@ -12,6 +12,9 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
+import CornerstoneCollectionNav from "@/components/blog/CornerstoneCollectionNav.astro";
+import CornerstoneVisualBridge from "@/components/blog/CornerstoneVisualBridge.astro";
+import CornerstoneGalleryDoor from "@/components/blog/CornerstoneGalleryDoor.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
 import { getBreadcrumbList, getStructuredData } from "@/components/utils/getStructuredData.ts";
 
@@ -194,6 +197,19 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
       </p>
     </section>
 
+    <CornerstoneVisualBridge
+      kicker="Painterly in Practice"
+      title="Atmosphere, Tone, and Story Shaped as Fine Art"
+      intro="These photographs use painterly control to guide the eye and deepen the emotional life of the frame."
+      items={[
+        { id: "i-fM9qmKW", galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color", alt: "Painterly Western fine art photograph", caption: "Light organized around story" },
+        { id: "i-m6WKrNG", galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color", alt: "Atmospheric Western photograph", caption: "Atmosphere carrying emotional weight" },
+        { id: "i-rfFBRQM", galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color", alt: "Narrative painterly photograph", caption: "Selective detail directing the eye" },
+      ]}
+      ctaHref="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all"
+      ctaLabel="Browse Painterly Western Stories"
+    />
+
     <!-- Article Content -->
     <section class="story-section max-w-[860px] mx-auto px-4">
       <article class="story-block space-y-4">
@@ -254,6 +270,8 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         </div>
 
         <!-- SECTION 3: Modern Misuse -->
+        <CornerstoneGalleryDoor href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all" label="Browse Painterly Western Stories" />
+
         <div class="section-heading-with-line">
           <h2>Painterly Photography vs. Painterly Editing</h2>
         </div>
@@ -366,6 +384,8 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         </div>
 
         <!-- SECTION 6: Practitioner's Perspective -->
+        <CornerstoneGalleryDoor href="/Galleries/Painterly-Fine-Art-Photography" label="Explore Painterly Fine Art Photography" />
+
         <div class="section-heading-with-line">
           <h2>A Practitioner's Perspective</h2>
         </div>
@@ -467,6 +487,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
     <!-- Western Art Series Navigation -->
     <WesternDefinitions variant="definition" currentPage={5} />
 
+    <CornerstoneCollectionNav />
     <SiteFooter />
   </main>
 

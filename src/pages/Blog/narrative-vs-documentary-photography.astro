@@ -5,6 +5,9 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
+import CornerstoneCollectionNav from "@/components/blog/CornerstoneCollectionNav.astro";
+import CornerstoneVisualBridge from "@/components/blog/CornerstoneVisualBridge.astro";
+import CornerstoneGalleryDoor from "@/components/blog/CornerstoneGalleryDoor.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
 import { getBreadcrumbList, getStructuredData } from "@/components/utils/getStructuredData.ts";
 
@@ -132,6 +135,19 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
       </p>
     </section>
 
+    <CornerstoneVisualBridge
+      kicker="The Distinction in Practice"
+      title="When Record Opens Into Implication"
+      intro="These frames remain grounded in history while using atmosphere and authorship to carry more than evidence alone."
+      items={[
+        { id: "i-HJ2ZRPj", galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War/Color", alt: "Authored historical photograph", caption: "History held as more than record" },
+        { id: "i-fgb75Ts", galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War/Color", alt: "Narrative Civil War photograph", caption: "Atmosphere extending the visible facts" },
+        { id: "i-qjLp9Lf", galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War/Color", alt: "Story-driven historical scene", caption: "Implication surviving beyond the moment" },
+      ]}
+      ctaHref="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all"
+      ctaLabel="Explore Narrative Photography"
+    />
+
     <section class="story-section max-w-[860px] mx-auto px-4">
       <article class="story-block space-y-4">
         <p style="font-size:0.95rem; color:#666; margin-bottom:1.5rem; font-style:italic;">
@@ -164,6 +180,8 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
         <p>This is one reason narrative photography often overlaps with images that feel more like moving stories than fixed records. At K4 Studios, that single-frame narrative pressure is gathered under the <a href="/Other/One-Image-Movie" style="color:#8b5a2b; text-decoration:underline;">One-Image Movie™</a> idea.</p>
 
+        <CornerstoneGalleryDoor href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all" label="See Narrative Photography in Practice" />
+
         <div class="section-heading-with-line">
           <h2>Where They Overlap</h2>
         </div>
@@ -178,6 +196,8 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
           <li style="margin-bottom:0.5rem;">Documentary protects the fact of the moment</li>
           <li style="margin-bottom:0.5rem;">Narrative builds the emotional architecture around the moment</li>
         </ul>
+
+        <CornerstoneGalleryDoor href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War/Color/all" label="Explore Authored Historical Stories" />
 
         <div class="section-heading-with-line">
           <h2>Why the Difference Matters in Western and Historical Work</h2>
@@ -242,6 +262,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
     <WesternDefinitions variant="definition" currentPage={15} />
 
+    <CornerstoneCollectionNav />
     <SiteFooter />
   </main>
 

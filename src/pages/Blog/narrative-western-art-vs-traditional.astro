@@ -5,22 +5,14 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
-import CollectionJumpGrid from "@/components/gallery/CollectionJumpGrid.astro";
+import CornerstoneCollectionNav from "@/components/blog/CornerstoneCollectionNav.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
 import { getBreadcrumbList, getStructuredData } from "@/components/utils/getStructuredData.ts";
-import { buildWildWestAllPageDock } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/dock/buildWildWestAllPageDock";
 
 import "@/styles/global.css";
 
 const sectionPath = "/Blog/narrative-western-art-vs-traditional";
 const canonicalUrl = `https://www.k4studios.com${sectionPath}`;
-const modelDock = buildWildWestAllPageDock({ currentKey: "western-narrative-color" });
-const sectionDockItems = modelDock.sectionDockItems.map((item: any) => ({
-  ...item,
-  focused: item.current,
-  current: false,
-}));
-const dockCenterIndex = modelDock.dockCenterIndex;
 
 const getProxySrc = (id: string, size: string = "l") => getSemanticImageUrl(id, {}, size);
 const getAbsoluteProxySrc = (id: string, size: string = "l") => getSemanticImageUrl(id, {}, size, { absolute: true });
@@ -301,11 +293,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
     <WesternDefinitions variant="definition" currentPage={11} />
 
-    <CollectionJumpGrid
-      items={sectionDockItems}
-      centerIndex={dockCenterIndex}
-      currentTitle="Browse Our Collections"
-    />
+    <CornerstoneCollectionNav />
 
     <SiteFooter />
   </main>

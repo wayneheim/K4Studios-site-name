@@ -1,0 +1,20 @@
+---
+const { href, label, eyebrow = "Continue Into the Work" } = Astro.props as {
+  href: string;
+  label: string;
+  eyebrow?: string;
+};
+---
+
+<aside class="cornerstone-door">
+  <span>{eyebrow}</span>
+  <a href={href}>{label} <span aria-hidden="true">→</span></a>
+</aside>
+
+<style>
+  .cornerstone-door { clear:both; display:flex; align-items:center; justify-content:space-between; gap:1rem; margin:2rem 0; padding:1rem 1.2rem; border-left:4px solid #9b7451; border-radius:0 12px 12px 0; background:#f7f2ec; }
+  .cornerstone-door > span { color:#7a6047; font-size:.72rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; }
+  .cornerstone-door a { color:#6d4225; font-size:.98rem; font-weight:700; text-align:right; text-decoration:none; }
+  .cornerstone-door a:hover { color:#8b1a1a; }
+  @media (max-width:620px) { .cornerstone-door { align-items:flex-start; flex-direction:column; } .cornerstone-door a { text-align:left; } }
+</style>

@@ -5,6 +5,9 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
+import CornerstoneCollectionNav from "@/components/blog/CornerstoneCollectionNav.astro";
+import CornerstoneVisualBridge from "@/components/blog/CornerstoneVisualBridge.astro";
+import CornerstoneGalleryDoor from "@/components/blog/CornerstoneGalleryDoor.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
 import { getBreadcrumbList, getFAQPageStructuredData, getStructuredData } from "@/components/utils/getStructuredData.ts";
 
@@ -143,6 +146,19 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
       </p>
     </section>
 
+    <CornerstoneVisualBridge
+      kicker="Story in the Frame"
+      title="Visual Storytelling Across a Single Moment"
+      intro="Gesture, setting, and unresolved consequence turn a photograph from description into story."
+      items={[
+        { id: "i-DJKJkMb", galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War/Color", alt: "Civil War narrative photograph", caption: "Gesture directing the story" },
+        { id: "i-QbSdKQS", galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War/Color", alt: "Historically themed visual story", caption: "Setting working as narrative" },
+        { id: "i-thK6pDc", galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War/Color", alt: "Painterly Civil War scene", caption: "Consequence held beyond the frame" },
+      ]}
+      ctaHref="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all"
+      ctaLabel="Browse Story-Driven Photography"
+    />
+
     <section class="story-section max-w-[860px] mx-auto px-4">
       <article class="story-block space-y-4">
         <p style="font-size:0.95rem; color:#666; margin-bottom:1.5rem; font-style:italic;">
@@ -170,6 +186,8 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         <p>But most of those definitions stop at communication. They explain how images carry information, symbolism, or narrative cues, but they say less about how an image can carry pressure.</p>
 
         <p>A story can be shown and still remain thin. What matters more is whether the frame continues beyond its own edges - whether it holds a before and after, whether atmosphere participates in the meaning, and whether the viewer feels something unresolved still moving inside it. That deeper pressure is what begins to push an image beyond description and into something more lasting.</p>
+
+        <CornerstoneGalleryDoor href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all" label="Browse Story-Driven Western Photography" />
 
         <div class="section-heading-with-line">
           <h2>What Makes an Image Story-Driven</h2>
@@ -240,6 +258,8 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
           </figure>
         </div>
 
+        <CornerstoneGalleryDoor href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War/Color/all" label="Explore Historical Visual Stories" />
+
         <div class="section-heading-with-line">
           <h2>Why Visual Storytelling Matters</h2>
         </div>
@@ -286,6 +306,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
     <WesternDefinitions variant="definition" currentPage={16} />
 
+    <CornerstoneCollectionNav />
     <SiteFooter />
   </main>
 

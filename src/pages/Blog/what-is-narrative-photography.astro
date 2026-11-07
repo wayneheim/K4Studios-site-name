@@ -5,6 +5,9 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
+import CornerstoneCollectionNav from "@/components/blog/CornerstoneCollectionNav.astro";
+import CornerstoneVisualBridge from "@/components/blog/CornerstoneVisualBridge.astro";
+import CornerstoneGalleryDoor from "@/components/blog/CornerstoneGalleryDoor.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
 import { getBreadcrumbList, getFAQPageStructuredData, getStructuredData } from "@/components/utils/getStructuredData.ts";
 
@@ -143,6 +146,19 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
       </p>
     </section>
 
+    <CornerstoneVisualBridge
+      kicker="Narrative in Practice"
+      title="Three Frames That Carry a Larger Story"
+      intro="Each image opens beyond the visible moment through character, atmosphere, and implication."
+      items={[
+        { id: "i-Mm3jXFH", galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Cowboy-Portraits/Color", alt: "Narrative Western portrait", caption: "Character as the beginning of a story" },
+        { id: "i-ZPmj5Wk", galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Cowboy-Portraits/Color", alt: "Atmospheric Western portrait", caption: "Atmosphere carrying what the frame withholds" },
+        { id: "i-Dw6Z8ff", galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Cowboy-Portraits/Color", alt: "Story-driven cowboy portrait", caption: "A still moment with a before and after" },
+      ]}
+      ctaHref="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all"
+      ctaLabel="Browse Narrative Western Stories"
+    />
+
     <section class="story-section max-w-[860px] mx-auto px-4">
       <article class="story-block space-y-4">
         <p style="font-size:0.95rem; color:#666; margin-bottom:1.5rem; font-style:italic;">
@@ -184,6 +200,8 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         <p>It is not simply “a photo with a story attached.” And it is not a cinematic color grade pasted over an otherwise empty frame.</p>
 
         <p>Narrative photography is authored. The story is embedded in the way the image is built: what is shown, what is withheld, where the tension sits, and how the viewer is asked to remain inside the frame.</p>
+
+        <CornerstoneGalleryDoor href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all" label="Enter the Narrative Western Collection" />
 
         <div class="section-heading-with-line">
           <h2>How It Feels Different</h2>
@@ -269,6 +287,8 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
         <p>It is often one of the forces acting upon it.</p>
 
+        <CornerstoneGalleryDoor href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/all" label="Browse Black & White Narrative Stories" />
+
         <div class="section-heading-with-line">
           <h2>Why Narrative Photography Matters</h2>
         </div>
@@ -326,6 +346,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
     <WesternDefinitions variant="definition" currentPage={12} />
 
+    <CornerstoneCollectionNav />
     <SiteFooter />
   </main>
 

@@ -4,6 +4,9 @@ export const prerender = true;
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
+import CornerstoneCollectionNav from "@/components/blog/CornerstoneCollectionNav.astro";
+import CornerstoneVisualBridge from "@/components/blog/CornerstoneVisualBridge.astro";
+import CornerstoneGalleryDoor from "@/components/blog/CornerstoneGalleryDoor.astro";
 import { getBreadcrumbList, getStructuredData } from "@/components/utils/getStructuredData.ts";
 import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import "@/styles/global.css";
@@ -86,6 +89,17 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
     <header class="definition-post-header"><h1>What Is Contemporary Western Art?</h1></header>
 
+    <CornerstoneVisualBridge
+      title="Contemporary Western art carries an inherited subject through a living visual language."
+      items={[
+        { id:"i-k4b6c5b", galleryPath:"/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color", alt:"Contemporary painterly cowboy portrait shaped by memory and restraint", caption:"Tradition without imitation." },
+        { id:"i-6xn5rMd", galleryPath:"/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color", alt:"Modern Western portrait carrying weathered character", caption:"A present-day authored West." },
+        { id:"i-MvZxkQh", galleryPath:"/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color", alt:"High-country Western figure interpreted through painterly photography", caption:"History in a current medium." },
+      ]}
+      ctaHref="/Contemporary-Western-Art"
+      ctaLabel="Explore Contemporary Western Art"
+    />
+
     <article class="definition-post-story">
       <p class="identity">Wayne Heim makes contemporary Western art as camera-based painterly fine art — real photographs, painterly handling, narrative intent.</p>
 
@@ -100,6 +114,8 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
       <p>Yes. Most of what is considered contemporary art involves the use of mediums, materials, and technology in new and interesting ways — ways the materials, or even the subjects, may not have been intended to be used for. Photography can become contemporary Western art when it is used with authorship, creative vision or expression that pushes the boundaries of what is expected of the medium — through composition, intent, technology, presentation, and the direction of the artist's vision, outside of simply documenting an experienced moment.</p>
 
       <p>Wayne Heim's route begins with photography, but photography is not used as mere documentation. It is the foundation: the real subject, the real light, the real physical evidence. From there, each story is constructed with painterly expression, then paired with a title and an unresolved narrative — turning the image into contemporary Western art with history still inside it. The work begins with camera-based evidence, then moves through painterly reshaping of the image with light, color and texture, title, narrative writing, and deliberate incompleteness, so the image carries history, character, and story rather than simple documentation.</p>
+
+      <CornerstoneGalleryDoor href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Cowboy-Portraits/Color/all" label="Browse Contemporary Cowboy Portraits" />
 
       <div class="definition-post-heading"><h2>How this differs from surface re-imagining</h2></div>
 
@@ -122,6 +138,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
       </nav>
     </article>
 
+    <CornerstoneCollectionNav focusKey="cowboy-portraits-0" />
     <SiteFooter />
   </main>
 </BaseLayout>
