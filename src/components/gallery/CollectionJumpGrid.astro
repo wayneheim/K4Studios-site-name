@@ -90,7 +90,11 @@ const forceImageSize = (src = "", size = "s") => {
 <style>
   .collection-dock {
     position: relative;
+    align-self: stretch;
+    width: 100%;
+    min-width: 0;
     max-width: 1320px;
+    box-sizing: border-box;
     margin: 14px auto 24px;
     padding: 14px 18px 18px;
     background: #fff;
@@ -124,10 +128,17 @@ const forceImageSize = (src = "", size = "s") => {
     display: flex;
     align-items: flex-start;
     justify-content: center;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
     margin-bottom: 10px;
     text-align: center;
   }
   .dock-heading h2 {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
     margin: 0;
     color: #2f241b;
     font-size: 1.38rem;
@@ -135,12 +146,22 @@ const forceImageSize = (src = "", size = "s") => {
     min-height: 1.9em;
   }
   [data-dock-active-title] { color: #6d4d34; }
-  .dock-shell { position: relative; }
+  .dock-shell {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
   .dock-track {
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
     gap: 6px;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
     min-height: 102px;
     padding: 4px 28px 10px;
     perspective: 900px;
@@ -208,6 +229,13 @@ const forceImageSize = (src = "", size = "s") => {
   @media (max-width: 980px) {
     .dock-heading { display: block; }
     .collection-dock { padding-left: 0; padding-right: 0; }
+    .dock-heading h2 {
+      padding: 0 14px;
+      box-sizing: border-box;
+      white-space: normal;
+      overflow-wrap: anywhere;
+      text-align: center;
+    }
     .dock-track { min-height: 0; padding: 8px 24px 18px; }
     .dock-card,
     .dock-card.is-near,
