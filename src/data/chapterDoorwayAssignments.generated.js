@@ -12556,11 +12556,6 @@ export const chapterDoorwayAssignments = {
     "href": "/Western-Fine-Art-Photography",
     "frameIndex": 2
   },
-  "i-WmfkrcW": {
-    "theme": "landscapes",
-    "href": "/western-landscape-art",
-    "frameIndex": 3
-  },
   "i-v27kDnS": {
     "theme": "landscapes",
     "href": "/Fine-Art-Photography-of-the-American-West",
@@ -13296,11 +13291,6 @@ export const chapterDoorwayAssignments = {
     "href": "/western-portrait-photography",
     "frameIndex": 4
   },
-  "i-T8CQBwG": {
-    "theme": "portraits",
-    "href": "/Fine-Art-Photography-of-the-American-West",
-    "frameIndex": 0
-  },
   "i-SN7LTzk": {
     "theme": "portraits",
     "href": "/western-portrait-photography",
@@ -13634,6 +13624,11 @@ export const chapterDoorwayAssignments = {
   "i-b7FN4Nx": {
     "theme": "portraits",
     "href": "/western-portrait-photography",
+    "frameIndex": 0
+  },
+  "i-T8CQBwG": {
+    "theme": "portraits",
+    "href": "/Fine-Art-Photography-of-the-American-West",
     "frameIndex": 0
   },
   "i-Z7ctKfL": {
@@ -15056,15 +15051,15 @@ export const chapterDoorwayCursors = {
 };
 
 export const chapterDoorwayAssignmentMeta = {
-  "generatedAt": "2026-11-05T02:22:09.602Z",
-  "assignedCount": 3008,
+  "generatedAt": "2026-11-07T19:41:56.216Z",
+  "assignedCount": 3007,
   "themeCounts": {
     "nativeAmerican": 32,
     "western": 773,
     "civilWar": 92,
     "wwii": 729,
     "roaring20s": 48,
-    "landscapes": 818,
+    "landscapes": 817,
     "transportation": 181,
     "portraits": 288,
     "engrained": 47

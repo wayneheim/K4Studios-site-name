@@ -32,11 +32,22 @@ export const galleryData = [
     "keywords": [
       "midwest landscape photography",
       "Midwest Painterly Landscapes",
-      "midwestern landscape art"
+      "midwestern landscape art",
+      "Clifton Mill",
+      "historic mill",
+      "waterwheel",
+      "waterfall",
+      "Ohio",
+      "Ohio landscape photography",
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "It doesn’t rush anymore.\n\nThe water keeps its pace, the structure keeps its stance, and time does what it has always done here — move forward without asking permission. What was once labor is now memory, but the work never really stopped. It just changed hands.\n\nNothing in this place performs. It simply continues.",
-    "notes": "This piece draws its strength from structural calm and temporal weight rather than visual drama. The composition favors grounded horizontals and measured flow, allowing the architecture and water to share equal presence. Its painterly restraint and emphasis on continuity place it within a lineage of American regional landscape work that values endurance, labor, and quiet permanence over romanticized nostalgia.",
+    "notes": "This piece draws its strength from structural calm and temporal weight rather than visual drama. The composition favors grounded horizontals and measured flow, allowing the architecture and water to share equal presence. Its painterly restraint and emphasis on continuity place it within a lineage of American regional landscape work that values endurance, labor, and quiet clarity — making it particularly suited for spaces that reward stillness and depth.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -65,9 +76,12 @@ export const galleryData = [
       "woodland trail",
       "trees",
       "green forest",
-      "painterly landscape",
       "Ohio landscape art",
-      "Hocking Hills"
+      "Hocking Hills",
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The light doesn’t announce itself. It slips in quietly, threading its way through the trees, finding the path only after everything else has already gone still.\n\nThis is not a destination so much as a passage — a moment when the woods briefly allow you to pass through, if you’re willing to slow down enough to notice.\n\nNothing here asks for urgency. The path exists whether you walk it or not.",
@@ -100,7 +114,11 @@ export const galleryData = [
       "water over rocks",
       "mossy stones",
       "autumn woodland",
-      "quiet landscapes"
+      "quiet landscapes",
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The water does not hurry. It does not argue with the fallen branches or the weight of stone. It simply continues—finding its way through what time has already rearranged.\n\nNothing here announces itself. The sound is low, the movement patient. This is how landscapes endure—not by force, but by staying.",
@@ -133,7 +151,11 @@ export const galleryData = [
       "flowing water",
       "rock formations",
       "forest stream",
-      "Ohio landscape"
+      "Ohio landscape",
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "They share the same stone, the same drop, the same destination—yet never move quite the same way. One presses forward. The other hesitates, reshaping itself mid-fall.\n\nWhat looks like symmetry at first glance reveals a quiet argument on closer inspection. The water keeps choosing, again and again, how to descend.",
@@ -162,12 +184,15 @@ export const galleryData = [
       "Midwest Painterly Landscapes",
       "midwestern landscape art",
       "Ohio landscape photography",
-      "fine art landscape",
       "stone bridge",
       "river",
       "waterfalls",
       "historic architecture",
-      "painterly landscape photography"
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "Stone rises, water passes, and the space between them keeps count.\n\nWhat was built to cross a moment now watches generations move through it. The river does not hurry. The arches do not bend. Everything here knows its role and keeps it quietly.",
@@ -196,12 +221,16 @@ export const galleryData = [
       "Midwest Painterly Landscapes",
       "midwestern landscape art",
       "Ohio fine art photography",
-      "landscape photography",
       "stone bridge",
       "river",
       "waterfalls",
       "Berea Bridge",
-      "Buckeye State"
+      "Buckeye State",
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The river keeps moving.\nStone does not.\n\nWater slides beneath the arches without urgency, tracing the same path it has for generations. The bridge stands above it, unmoved, not resisting time—simply letting it pass.\n\nNothing here is in a hurry. What remains was built to wait.",
@@ -229,13 +258,23 @@ export const galleryData = [
       "midwest landscape photography",
       "Midwest Painterly Landscapes",
       "midwestern landscape art",
-      "Ohio fine art photography",
       "lighthouse photography",
-      "Lake Erie",
+      "lighthouse",
       "breakwater",
       "waves",
-      "water",
-      "Great Lakes"
+      "storm sky",
+      "coastal landscape",
+      "Great Lakes",
+      "Lake Erie",
+      "Ohio",
+      "Midwest",
+      "water movement photography",
+      "painterly water photography",
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The lake comes in hard.\nThe structure answers by staying.\n\nWaves rise, break, and scatter themselves against stone built for no other purpose than this moment. The lighthouse does not command the water. It endures it—standing watch while the lake expends its force and moves on.\n\nWhat remains is not drama, but resolve.",
@@ -269,7 +308,22 @@ export const galleryData = [
       "waterfall",
       "water",
       "rustic architecture",
-      "rural landscape"
+      "rural landscape",
+      "painterly water photography",
+      "painterly landscape photography",
+      "fine art waterfall photography",
+      "fine art water photography",
+      "rustic mill photography",
+      "historic mill landscape",
+      "painterly river scenes",
+      "fine art landscape prints",
+      "vintage rural landscape photography",
+      "quiet landscape photography",
+      "atmospheric landscape art",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "It no longer works the way it once did.\nThat is the point.\n\nWater still finds the same edge. Wood still leans where it always has. The mill stands not as machinery, but as memory—holding the shape of labor long after the need has passed. What moves now is quieter, slower, unburdened by purpose.\n\nTime does not erase it.\nTime edits it.",
@@ -290,7 +344,7 @@ export const galleryData = [
     "id": "i-mCJv3RM",
     "title": "Holding the Last Light",
     "description": "Holding the Last Light is a painterly fine art landscape photograph capturing the quiet transition of an autumn evening in the Midwest. Rather than spectacle, the image is shaped by restraint — where fading light, flowing water, and grounded structure work together to slow the viewer’s eye.\n\nLight, tone, and composition emphasize atmosphere over destination, allowing the scene to unfold as an emotional geography rather than a documented place. Part of a broader Midwestern painterly landscape photography series, this work reflects a moment where stillness carries more weight than motion. © Wayne Heim",
-    "alt": "Holding the Last Light painterly landscape photography of an autumn waterfall and bridge at sunset in Ohio",
+    "alt": "stone arch bridge over a wide waterfall with autumn trees under a sunset-colored sky in Ohio, in a painterly fine art landscape photograph",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-mCJv3RM/A",
 
     "keywords": [
@@ -303,7 +357,9 @@ export const galleryData = [
       "autumn landscape art",
       "bridge and river photography",
       "atmospheric landscape",
-      "painterly fine art"
+      "painterly fine art photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The day has already decided to leave — it just hasn’t said goodbye yet.\n\nWater moves without urgency, carrying what remains of the light across stone and shadow. The bridge stands back, letting the moment pass on its own terms. Nothing here asks for attention. It simply waits.\n\nThis is the space between arrival and memory — when the land exhales, and time loosens its grip.",
@@ -331,7 +387,6 @@ export const galleryData = [
       "midwest landscape photography",
       "Midwest Painterly Landscapes",
       "midwestern landscape art",
-      "fine art photography",
       "painterly landscape photography",
       "waterfalls",
       "rivers",
@@ -339,7 +394,11 @@ export const galleryData = [
       "Elyria Ohio",
       "Black River",
       "stone bridge",
-      "long exposure water"
+      "long exposure water",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "It doesn’t rush.\n\nIt leans forward, gathers itself, and lets gravity decide the rest.  \nThe sound is constant, but the moment feels suspended — as if the river is thinking before it falls.\n\nStone bears the weight without protest. Water keeps moving anyway.",
@@ -371,9 +430,12 @@ export const galleryData = [
       "winter forest",
       "woodland path",
       "Ohio landscape",
-      "fine art photography",
+      "fine art landscape photography",
       "quiet landscapes",
-      "nature trail"
+      "nature trail",
+      "painterly fine art photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The trail doesn’t promise anything.\n\nIt curves away, half-frozen, half-forgotten, carrying the marks of boots that turned back and others that didn’t. Snow lingers where the sun hasn’t reached. Mud remembers where it has been pressed.\n\nWhatever waits ahead stays hidden — but the path keeps inviting you forward.",
@@ -405,7 +467,11 @@ export const galleryData = [
       "painterly forest photography",
       "woodland light",
       "atmospheric landscape",
-      "Ohio fine art photography"
+      "Ohio fine art photography",
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The light doesn’t arrive all at once. It filters, hesitates, then settles—caught between trunks like a thought you almost let go. Nothing moves quickly here. The forest holds the moment the way it holds breath, waiting to see if you will notice.\n\nYou stand just long enough for the noise to fall away. What remains isn’t silence, exactly—more a permission to stay.",
@@ -433,12 +499,26 @@ export const galleryData = [
       "midwest landscape photography",
       "Midwest Painterly Landscapes",
       "midwestern landscape art",
+      "Lake Erie photography",
+      "Lake Erie",
+      "Ohio lake landscape",
+      "Ohio",
+      "calm water",
+      "morning light",
+      "breakwalls",
+      "moody cloudscape photography",
+      "coastal atmosphere",
+      "water landscape photography",
       "Lake Erie fine art",
-      "painterly landscape photography",
       "atmospheric landscape",
       "Ohio fine art photography",
       "clouds over water",
-      "moody lake scene"
+      "moody lake scene",
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The lake does not resist.  \nClouds arrive without announcement, spreading their weight across the water until horizon and surface begin to mirror one another.  \n\nThere is no storm yet — only the quiet moment when weather decides it belongs here.",
@@ -464,15 +544,19 @@ export const galleryData = [
 
     "keywords": [
       "midwest landscape photography",
+      "Midwest Painterly Landscapes",
+      "midwestern landscape art",
       "painterly landscape photography",
       "red barn art",
       "storm clouds landscape",
       "fine art rural photography",
-      "midwestern landscape art",
       "atmospheric landscape photography",
       "rural american landscape",
       "painterly fine art photography",
-      "ohio fine art photography"
+      "ohio fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "It arrives without ceremony.\n\nThe land doesn’t resist it — only waits. The barn stands the way it always has, weathered into its place, knowing the sky will decide when to speak and when to pass. Nothing here is urgent. Nothing moves first.\n\nThis is the moment just before the air changes, when the weight of the coming storm presses quietly against memory and habit, and the land holds its breath.",
@@ -498,14 +582,18 @@ export const galleryData = [
 
     "keywords": [
       "midwest landscape photography",
+      "Midwest Painterly Landscapes",
+      "midwestern landscape art",
       "painterly landscape photography",
       "storm clouds art",
       "dramatic sky photography",
       "atmospheric landscape photography",
-      "midwestern landscape art",
       "fine art sky photography",
       "painterly fine art photography",
-      "ohio fine art photography"
+      "ohio fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "It doesn’t arrive all at once.\n\nLight breaks through the weight of the sky in fragments — not as revelation, but as permission. The clouds hold their shape, heavy and unresolved, while the glow behind them reminds the land that even storms are layered, never singular.\n\nThis is not a sky in motion. It is a sky deciding.",
@@ -534,13 +622,16 @@ export const galleryData = [
       "Midwest Painterly Landscapes",
       "midwestern landscape art",
       "Ohio landscape photography",
-      "fine art photography",
-      "painterly landscape",
       "storm clouds",
       "dramatic sky",
       "light through clouds",
       "atmospheric landscape",
-      "American Midwest"
+      "American Midwest",
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The storm does not break all at once.  \nIt hesitates.\n\nFor a moment, the weight of the clouds lifts just enough for light to slip through — not in triumph, not in spectacle, but as a quiet interruption. The land below does not react. It waits, as it always has, while the sky decides what comes next.\n\nThis is not a moment of arrival.  \nIt is a moment held.",
@@ -569,13 +660,16 @@ export const galleryData = [
       "Midwest Painterly Landscapes",
       "midwestern landscape art",
       "Ohio landscape photography",
-      "fine art photography",
-      "painterly landscape",
       "storm clouds",
       "dramatic sky",
       "light through clouds",
       "atmospheric landscape",
-      "American Midwest"
+      "American Midwest",
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The storm does not end.\nIt opens.\n\nClouds pull apart just long enough for light to pass through, not as a signal or a promise, but as a brief interruption. Nothing below reacts. The land holds steady, accustomed to waiting while weather makes up its mind.\n\nThis is not resolution.\nIt is a pause — and pauses are where meaning slips in.",
@@ -604,13 +698,16 @@ export const galleryData = [
       "Midwest Painterly Landscapes",
       "midwestern landscape art",
       "Ohio landscape photography",
-      "fine art photography",
-      "painterly landscape",
       "storm front",
       "dramatic sky",
       "approaching storm",
       "atmospheric landscape",
-      "American Midwest"
+      "American Midwest",
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The air changes before the rain arrives.\n\nLight thins. The horizon hardens. What was summer only moments ago pulls away without announcement, replaced by weight, pressure, and the promise of something colder moving in.\n\nNothing resists it.\nThe land simply waits.",
@@ -636,15 +733,19 @@ export const galleryData = [
 
     "keywords": [
       "midwest landscape photography",
+      "Midwest Painterly Landscapes",
       "midwestern landscape art",
       "painterly landscape photography",
-      "fine art landscape photograph",
+      "fine art landscape photography",
       "Great Plains clouds",
       "prairie sky",
       "plains light",
       "atmospheric landscape",
       "heartland photography",
-      "quiet landscape art"
+      "quiet landscape art",
+      "painterly fine art photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The land is quiet, but the sky is still speaking.\n\nClouds drift without urgency, layered and measured, as light moves slowly across the open plains. Nothing announces itself. Nothing needs to. This is weather without drama — the kind that settles into memory because it asks you to stay a little longer.\n\nOut here, the sky does most of the talking, and the land listens.",
@@ -678,7 +779,11 @@ export const galleryData = [
       "summer clouds",
       "atmospheric landscape",
       "heartland landscape photography",
-      "quiet sky art"
+      "quiet sky art",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The land rests while the sky drifts.\n\nClouds move without direction or urgency, breaking and reforming as light passes through them. Nothing arrives. Nothing leaves. The moment exists simply because it is allowed to.\n\nThis is the kind of day that doesn’t announce itself — it waits to be noticed.",
@@ -704,15 +809,21 @@ export const galleryData = [
 
     "keywords": [
       "midwest landscape photography",
-      "midwest painterly landscapes",
+      "Midwest Painterly Landscapes",
+      "midwestern landscape art",
       "painterly waterfall photography",
       "fine art landscape photography",
       "forest waterfall",
-      "ohio landscape photography",
+      "Ohio landscape photography",
+      "Cedar Cliff Falls",
       "woodland waterfall art",
       "nature wall art",
       "painterly nature photography",
-      "tranquil landscape art"
+      "tranquil landscape art",
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "It doesn’t announce itself.  \nThe water simply gives way, easing over stone as if it has done this long enough to forget why.\n\nThe forest closes in around it, not to hide the fall, but to keep it quiet — green folding inward, light thinning, sound softened before it ever reaches the surface below.\n\nNothing here asks to be witnessed.  \nIt continues whether someone is standing there or not.",

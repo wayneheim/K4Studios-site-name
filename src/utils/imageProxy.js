@@ -122,6 +122,9 @@ export function getLegacyImageUrl(imageId, size = 'm') {
 
 export function slugifyImageSegment(value, fallback = 'image') {
   const slug = String(value || '')
+    // NFKD does not decompose Icelandic eth. Transliterate it before the
+    // ASCII-only filename pass so Goðafoss becomes godafoss, not go-afoss.
+    .replace(/[Ðð]/g, 'd')
     .normalize('NFKD')
     .replace(/[\u0300-\u036f]/g, '')
     .toLowerCase()

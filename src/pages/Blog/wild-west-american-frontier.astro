@@ -1,0 +1,159 @@
+---
+export const prerender = true;
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import LandingHeader from "@/components/Landing-Header.jsx";
+import SiteFooter from "@/components/Footer.astro";
+import { getBreadcrumbList, getStructuredData } from "@/components/utils/getStructuredData.ts";
+import { getSemanticImageUrl } from "@/utils/imageProxy.js";
+import "@/styles/global.css";
+import "@/styles/definition-post.css";
+
+const sectionPath = "/Blog/wild-west-american-frontier";
+const canonicalUrl = `https://www.k4studios.com${sectionPath}`;
+const pageTitle = "Wild West American Frontier: Definition and Meaning";
+const pageDescription = "The Wild West American frontier was the moving western edge of settlement in the United States — the shifting zone where platted land, towns, rail lines, and federal law thinned out into open country and distance. It was never one place: for nearly three centuries the frontier was a line that kept relocating west, from the Appalachian foothills to the Pacific. In 1890 the U.S. Census Bureau declared that a continuous frontier line could no longer be drawn, and in 1893 historian Frederick Jackson Turner argued that the frontier experience — self-reliance under pressure, reinvention at the edge of the map — had forged the American character. The Wild West is the name the national imagination gave to that frontier's last and fastest decades.";
+const hero = {
+  id: "i-B7ZSdfs",
+  src: getSemanticImageUrl("i-B7ZSdfs", {}, "l"),
+  absoluteSrc: getSemanticImageUrl("i-B7ZSdfs", {}, "l", { absolute: true }),
+  alt: "The American frontier interpreted as an interrupted narrative moment in Wayne Heim's Western art",
+};
+
+const faqItems = [
+  {
+    question: "What was the American frontier?",
+    answer: "The moving western edge of settlement in the United States — the shifting zone where towns, surveyed land, and federal law thinned out into open country. It relocated steadily westward for nearly three centuries, which is why \"frontier\" describes a condition of distance and self-reliance, not a single place.",
+  },
+  {
+    question: "When did the American frontier close?",
+    answer: "In 1890 the U.S. Census Bureau declared that settlement had so broken up the western country that a continuous frontier line could no longer be drawn. The announcement is the conventional closing date, and it set up Frederick Jackson Turner's famous 1893 address on the frontier's significance.",
+  },
+  {
+    question: "What is the Turner thesis, in plain language?",
+    answer: "Historian Frederick Jackson Turner argued in 1893 that the frontier experience — repeated new beginnings at the edge of settlement — had forged the defining American traits: self-reliance, inventiveness, restlessness, and democracy. Later historians corrected his omissions, especially Native dispossession, but the idea that the frontier shaped the national character remains the starting point of the argument.",
+  },
+  {
+    question: "What does the frontier have to do with Wayne Heim's photography?",
+    answer: "The legends of the frontier stand on an armature — the buried stories of the people who built the West — and when that foundation is forgotten, the legend thins into cliché. Wayne Heim's narrative work returns to that foundation: working with living historians, he builds interrupted frontier moments — One-Image Movies™ — that viewers step inside and complete, restoring the human pressure the legends rest on.",
+  },
+];
+
+const structuredData = getStructuredData({
+  type: "Article",
+  data: {
+    headline: "Wild West American Frontier",
+    title: pageTitle,
+    description: pageDescription,
+    url: canonicalUrl,
+    image: [hero.absoluteSrc],
+    copyrightNotice: "Copyright Wayne Heim",
+    author: { "@type": "Person", name: "Wayne Heim" },
+    datePublished: "2026-11-05",
+    dateModified: "2026-11-05",
+    articleSection: "Western History",
+    definedTerm: { name: "Wild West American Frontier", description: pageDescription },
+    keywords: ["Wild West American frontier", "American frontier", "frontier definition", "Turner thesis", "Wild West"],
+    faqItems,
+  },
+  defaults: {
+    copyrightNotice: "Copyright Wayne Heim",
+    license: "https://www.k4studios.com/copyright",
+    creditText: "Wayne Heim",
+    creatorName: "Wayne Heim",
+    creatorUrl: "https://www.k4studios.com/",
+  },
+});
+
+const breadcrumbStructuredData = getBreadcrumbList([
+  { name: "Home", item: "https://www.k4studios.com" },
+  { name: "Blog", item: "https://www.k4studios.com/Blog" },
+  { name: "Wild West American Frontier", item: canonicalUrl },
+], `${canonicalUrl}#breadcrumb`);
+
+const meta = {
+  seoDescription: pageDescription,
+  description: pageDescription,
+  keywords: "Wild West American frontier, American frontier, frontier definition, Turner thesis, Wild West",
+  canonicalUrl,
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogType: "article",
+  ogUrl: canonicalUrl,
+  ogImage: hero.absoluteSrc,
+  ogImageAlt: hero.alt,
+  twitterTitle: pageTitle,
+  twitterDescription: pageDescription,
+  twitterUrl: canonicalUrl,
+  twitterImage: hero.absoluteSrc,
+  twitterCard: "summary_large_image",
+  descriptionMaxLength: 1000,
+  preserveDescriptionDashes: true,
+};
+
+const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-decoration: none;' onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Blog</a> › Wild West American Frontier`;
+---
+
+<BaseLayout title={pageTitle} structuredDataJSON={structuredData} breadcrumbsJSON={breadcrumbStructuredData} meta={meta}>
+  <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
+    <div class="drawer-mode"><LandingHeader client:load breadcrumb={blogBreadcrumb} /></div>
+
+    <section class="definition-post-hero" aria-label="Wild West American frontier">
+      <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${hero.id}`}>
+        <img src={hero.src} alt={hero.alt} />
+      </a>
+    </section>
+
+    <header class="definition-post-header">
+      <h1>Wild West American Frontier</h1>
+      <p class="definition-post-subtitle">The moving line of settlement, what it felt like from inside, and why it never really closed</p>
+    </header>
+
+    <article class="definition-post-story">
+      <p class="identity">Wayne Heim makes contemporary Western art as camera-based painterly fine art — real photographs, painterly handling, narrative intent.</p>
+
+      <p class="definition">The Wild West American frontier was the moving western edge of settlement in the United States — the shifting zone where platted land, towns, rail lines, and federal law thinned out into open country and distance. It was never one place: for nearly three centuries the frontier was a line that kept relocating west, from the Appalachian foothills to the Pacific. In 1890 the U.S. Census Bureau declared that a continuous frontier line could no longer be drawn, and in 1893 historian Frederick Jackson Turner argued that the frontier experience — self-reliance under pressure, reinvention at the edge of the map — had forged the American character. The Wild West is the name the national imagination gave to that frontier's last and fastest decades.</p>
+
+      <div class="definition-post-heading"><h2>A line, not a place</h2></div>
+      <p>Most places stay where they are. The frontier didn't. It was a boundary that moved — sometimes a surveyed line on a map, more often a lived gradient where the institutions of settled life ran out one by one: first the railroad, then the telegraph, then the marshal, then the doctor, then anyone who had heard of you. West of that gradient, a person's survival depended on skill, endurance, and whoever happened to be standing nearby.</p>
+      <p>That is why "frontier" names a condition as much as a location. To live on the frontier was to live where help was far, weather was near, and consequences arrived without appeal. Every generation of Americans from the 1600s onward had a frontier somewhere west of them — until, suddenly, there wasn't one.</p>
+
+      <div class="definition-post-heading"><h2>The line from the other side</h2></div>
+      <p>The frontier also looked entirely different depending on which side of it you stood on. From the east, it was opportunity: land, a fresh start, a life remade. From the west — from the Native nations whose homelands the line kept crossing — it was an invasion arriving in stages: traders, then soldiers, then fences. The same mile of ground was one people's beginning and another people's catastrophe, often in the same decade. A definition of the frontier that only works from one side of the line is not a definition. It is a brochure.</p>
+
+      <div class="definition-post-heading"><h2>1890, and what Turner said</h2></div>
+      <p>In 1890, the Census Bureau announced that settlement had broken the frontier into isolated pockets — there was no longer a single line to draw. Three years later, at the Chicago World's Fair, Frederick Jackson Turner gave the idea its famous form: the frontier, he argued, was where American character had been made — practical, restless, self-reliant, democratic — because the edge of settlement kept forcing people to start over with their own hands.</p>
+      <p>Historians have argued with Turner ever since, and much of what he left out — Native dispossession, women's labor, the Mexican and Spanish West — has had to be written back in. But his core observation survives every correction: the frontier was not just where Americans lived. It was a pressure that shaped how they understood themselves. When the line closed, the country had to find out who it was without one.</p>
+
+      <div class="definition-post-heading"><h2>The afterlife</h2></div>
+      <p>The frontier closed as geography and immediately reopened as imagination. Buffalo Bill's Wild West show was already touring the frontier as spectacle while the real one still existed; Remington and Russell raced to fix a vanishing world in paint before it disappeared entirely; film and television then carried the legend across the whole twentieth century. The legends outlived the line because they were load-bearing: they told Americans a story about where they came from.</p>
+      <p>But a legend is only as strong as what holds it up. Underneath the showdown and the silhouette is the armature — the buried narrative foundation of roots, struggles, losses, and forgotten stories of the people who actually built the West, on both sides of the line. When that foundation is forgotten, the legend doesn't get freer; it gets thinner, collapsing into costume and cliché. The work of taking the frontier seriously now is excavation: returning to the foundation so the stories stand again.</p>
+
+      <div class="definition-post-heading"><h2>Where my work stands on it</h2></div>
+      <p>That excavation is where I work. I work with living historians and researched period detail to build single, interrupted moments from the frontier's human side — the breath before a decision, the silence after one — using painterly handling to shape real photographs into images a viewer steps inside and finishes. Each piece is a One-Image Movie™: the frame opens the moment, the title and writing deepen it, and what the frontier felt like from inside is completed by the person standing in front of it.</p>
+      <p>You can see that approach across Facing History and in its Western branch, the Wild West gallery — a frontier presented not as a set of icons, but as people living at the edge of the map, carrying what the edge demanded.</p>
+
+      <div class="definition-post-heading"><h2>Where to go next</h2></div>
+      <nav class="definition-post-links" aria-label="Related American frontier pages">
+        <p>The Wild West gallery: <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West">Wild West</a></p>
+        <p>Facing History, the full collection: <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Facing History</a></p>
+        <p>The companion definition, "What Is the Wild West?": <a href="/Blog/what-is-the-wild-west">What Is the Wild West?</a></p>
+        <p>What a One-Image Movie™ is: <a href="/Other/One-Image-Movie">The One-Image Movie™</a></p>
+        <p>The companion definition: <a href="/Blog/what-is-contemporary-western-art">What Is Contemporary Western Art?</a></p>
+        <p>The K4 Studios Glossary: <a href="/Glossary">K4 Studios Glossary</a></p>
+      </nav>
+
+      <div class="definition-post-heading"><h2>FAQ</h2></div>
+      <div class="definition-post-faq">
+        {faqItems.map((item) => (
+          <details>
+            <summary>{item.question}</summary>
+            <p>{item.answer}</p>
+          </details>
+        ))}
+      </div>
+    </article>
+
+    <SiteFooter />
+  </main>
+</BaseLayout>

@@ -62,9 +62,13 @@ const k4Organization = {
   },
 };
 
+const repairGodafossSpelling = (value = '') =>
+  String(value || '').replace(/\bGo[\s-]+Afoss\b/gi, 'Goðafoss');
+
 const normalizeK4Host = (value) => {
   if (!value || typeof value !== 'string') return value;
-  return value.replace(/https?:\/\/(?:www\.)?k4studios\.com/gi, 'https://www.k4studios.com');
+  return repairGodafossSpelling(value)
+    .replace(/https?:\/\/(?:www\.)?k4studios\.com/gi, 'https://www.k4studios.com');
 };
 
 const ensureAbsoluteUrl = (value) => {
@@ -77,7 +81,7 @@ const ensureAbsoluteUrl = (value) => {
 };
 
 const normalizeMetaText = (value = '', options = {}) =>
-  String(value || '')
+  repairGodafossSpelling(value)
     .replace(/<[^>]*>/g, ' ')
     .replace(options.preserveDashes ? /$^/g : /[\u2013\u2014]/g, ' - ')
     .replace(/\u00a9/g, '(c)')

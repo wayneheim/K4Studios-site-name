@@ -126,7 +126,15 @@ function localSlide(imageId: string, src: string, fallback: any = {}) {
 const localEngrainedCarouselSlides = [
   localSlide('i-mrHbrNb', '/images/Untitled-1_0000_2-coffee.jpg.jpg'),
   localSlide('i-C58KMqF', '/images/Untitled-1_0001_3%20church.jpg.jpg'),
-  localSlide('i-5VmRqpZ', '/images/Untitled-1_0003_4%20fence.jpg.jpg'),
+  {
+    id: 'i-G6gftd8',
+    title: 'Open Country',
+    alt: 'Painterly western landscape photograph of an open field and rustic fence with mountains in the distance, emphasizing open country and quiet atmosphere.',
+    src: '/images/Untitled-1_0003_4%20fence.jpg.jpg',
+    description: 'A painterly fine art landscape photograph of the American West, capturing an open field framed by a weathered fence and distant mountains under shifting light.',
+    story: 'A painterly fine art landscape photograph of the American West, capturing an open field framed by a weathered fence and distant mountains under shifting light.',
+    href: 'https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-G6gftd8',
+  },
   localSlide('i-wV53528', '/images/Untitled-1_0008_4sign.jpg.jpg'),
   localSlide('i-4cdDwZt', '/images/Untitled-1_0009_5%20buffy.jpg.jpg'),
   localSlide('i-hVBkc7Q', '/images/Untitled-1_0013_9-barn.jpg.jpg'),

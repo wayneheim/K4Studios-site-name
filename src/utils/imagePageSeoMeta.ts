@@ -21,6 +21,7 @@ const COPYRIGHT_PATTERNS = [
 export function cleanSeoText(value = "") {
   return sanitizeRepeatedSeoCopy(
     String(value || "")
+    .replace(/\bGo[\s-]+Afoss\b/gi, "Goðafoss")
     .replace(/Ã‚Â©|Â©/g, "©")
     .replace(/Ã¢â‚¬Â¦/g, "...")
     .replace(/Ã¢â‚¬â„¢/g, "'")

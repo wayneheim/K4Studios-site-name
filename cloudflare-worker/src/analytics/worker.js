@@ -12,6 +12,7 @@ import {
   handleLegacyPatternPageRequest,
   handleLegacyPatternOverrideRequest
 } from "./v2/legacy-patterns.js";
+import { shouldPersistAnalyticsEvent } from "../shared/analytics-write-gate.js";
 
 var __defProp = Object.defineProperty;
 var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
@@ -9759,6 +9760,11 @@ async function handleTrackRequest(request, env, ctx) {
       );
       return new Response("Missing event", { status: 400, headers: headers2 });
     }
+    if (!shouldPersistAnalyticsEvent(request, event)) {
+      const headers2 = applyCors(new Headers(), request, "POST");
+      applyNoStore(headers2);
+      return new Response(null, { status: 204, headers: headers2 });
+    }
     const legacyPaths = [
       "/Photoshootsandevents/",
       "/Photography-Galleries/",
@@ -9994,6 +10000,10 @@ async function handleStatePixelRequest(request, env, ctx) {
     }
     const action = (url.searchParams.get("e") || "").trim();
     if (pixelType === "action" && !action) {
+      return new Response(ONE_BY_ONE_GIF_BYTES, { status: 200, headers });
+    }
+    const gateEventType = pixelType === "action" ? action : `${pixelType}_pixel`;
+    if (!shouldPersistAnalyticsEvent(request, gateEventType)) {
       return new Response(ONE_BY_ONE_GIF_BYTES, { status: 200, headers });
     }
     const imageId = (url.searchParams.get("id") || "").trim() || null;

@@ -40,6 +40,7 @@ import {
   detectDevice,
   isSyntheticTraffic
 } from './src/shared/index.js';
+import { shouldPersistAnalyticsEvent } from './src/shared/analytics-write-gate.js';
 
 // ═══════════════════════════════════════════════════════════════════════════
 // ANALYTICS (Phase 4 — single namespace entry point)
@@ -272,6 +273,7 @@ async function logImageProxyFetch(env, payload) {
 
 function queueImageProxyFetchLog(ctx, env, request, payload) {
   if (!env?.DB || !ctx?.waitUntil) return;
+  if (!shouldPersistAnalyticsEvent(request, 'image_proxy_fetch')) return;
 
   const requesterInfo = payload.requesterInfo || getImageProxyRequesterInfo(request, request?.headers?.get('User-Agent') || '');
   if (!shouldLogImageProxyFetch({
@@ -1229,7 +1231,7 @@ async function handleImageRequest(request, ctx, env) {
           uniquePerMinute === 20 ||
           uniquePerMinute === 30 ||
           uniquePerMinute === 40;
-        if (env?.DB && shouldLogFrictionEvent) {
+        if (env?.DB && shouldLogFrictionEvent && shouldPersistAnalyticsEvent(request, 'harvester_friction')) {
           ctx.waitUntil(
             logArtView(
               env,
@@ -1307,7 +1309,7 @@ async function handleImageRequest(request, ctx, env) {
         const ua = request.headers.get("User-Agent") || '';
         const uaLower = ua.toLowerCase();
         const isCacheWarmer = uaLower.includes('k4-cache-warmer');
-        if (request.method === 'GET' && !isCacheWarmer && route.size === 'l') {
+        if (request.method === 'GET' && !isCacheWarmer && route.size === 'l' && shouldPersistAnalyticsEvent(request, 'image_view')) {
           const cookieHeader = request.headers.get('Cookie') || '';
           const vidCookieMatch = cookieHeader.match(/k4_vid=([^;]+)/);
           const visitorId = vidCookieMatch ? vidCookieMatch[1] : null;
@@ -1342,7 +1344,7 @@ async function handleImageRequest(request, ctx, env) {
 
           // Only treat a request as a *verified* bot when Cloudflare says so.
           // UA matching is trivially spoofable and can poison bot intelligence.
-          if (cfVerifiedBot) {
+          if (cfVerifiedBot && shouldPersistAnalyticsEvent(request, 'verified_bot')) {
             ctx.waitUntil(logVerifiedBot(env, route.canonicalImageId, request));
           }
         }
@@ -1414,7 +1416,7 @@ async function handleImageRequest(request, ctx, env) {
         }
       }
 
-      if (request.method === 'GET' && !isCacheWarmer && route.size === 'l') {
+      if (request.method === 'GET' && !isCacheWarmer && route.size === 'l' && shouldPersistAnalyticsEvent(request, 'image_view')) {
         const referer = request.headers.get('Referer') || '';
         const { secFetchSite } = getFetchHints(request);
         const looksLikeSameSiteSubresource = secFetchSite === 'same-origin' || secFetchSite === 'same-site';
@@ -1455,7 +1457,7 @@ async function handleImageRequest(request, ctx, env) {
       
       // Only treat a request as a *verified* bot when Cloudflare says so.
       // UA matching is trivially spoofable and can poison bot intelligence.
-      if (cfVerifiedBot) {
+      if (cfVerifiedBot && shouldPersistAnalyticsEvent(request, 'verified_bot')) {
         ctx.waitUntil(logVerifiedBot(env, route.canonicalImageId, request));
       }
     }

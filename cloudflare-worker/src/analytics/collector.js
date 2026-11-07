@@ -19,6 +19,7 @@ import {
 } from './classifier.js';
 
 import { isSyntheticTraffic } from '../shared/index.js';
+import { shouldPersistAnalyticsEvent } from '../shared/analytics-write-gate.js';
 
 import {
   updateBotIntelligence as _updateBotIntelligence,
@@ -320,6 +321,11 @@ export async function handleTrackRequest(request, env, ctx) {
       const headers = applyNoStore(new Headers({ 'Content-Type': 'text/plain' }));
       return new Response("Missing event", { status: 400, headers });
     }
+    if (!shouldPersistAnalyticsEvent(request, event)) {
+      const headers = applyCors(new Headers(), request, 'POST');
+      applyNoStore(headers);
+      return new Response(null, { status: 204, headers });
+    }
 
     // Reject events from legacy SmugMug paths (photoshoots, not K4 galleries)
     // These paths return 410 Gone per _redirects but JS may still fire on cached pages
@@ -534,6 +540,9 @@ export async function handleTrackEvent(request, env, ctx) {
   try {
     const body = await request.json();
     const { type, imageId, session_id = null, sessionId = null } = body;
+    if (!shouldPersistAnalyticsEvent(request, type)) {
+      return new Response('ok', { status: 200 });
+    }
     const cookieHeader = request.headers.get("cookie") || "";
     const sidCookie = readCookieValue(cookieHeader, 'k4_sid');
     const bodySessionId = (typeof session_id === 'string' && session_id.trim())

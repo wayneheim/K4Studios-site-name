@@ -21,12 +21,25 @@ export const V3_ENGAGEMENT_EVENT_TYPES = new Set(V3_CORE_EVENT_TYPES.filter((typ
 export const V3_DATACENTER_ASNS = Object.freeze([
   6939, 13335, 209242, 14618, 16509, 15169, 396982, 8075, 395973,
   54113, 63949, 32934, 20940, 16625, 24940, 14061, 12876, 202306,
-  132203, 136907, 45102
+  132203, 136907, 45102,
+  // Confirmed hosting infrastructure observed in the same coordinated burst:
+  // M247, EGIHosting, FDC Servers, SYNLINQ, and Leaseweb.
+  9009, 18779, 30058, 44486, 396362,
+  // Confirmed distributed proxy networks behind the 2026-11-06 sitewide crawl.
+  214483, 62610,
+  // HostRoyale hosting/proxy pool. A November 2026 browser-automation burst
+  // rotated one identical mobile fingerprint through this ASN.
+  207990
 ]);
 
 // Known owner/test traffic is not useful in the human-facing totals. Keeping
 // this exclusion in the updater means dashboard reads never need raw IP data.
 const V3_INTERNAL_IPS = new Set(['184.56.48.57']);
+
+// Keep network exclusions narrow when the parent ASN also carries ordinary
+// consumer traffic. Palo Alto Networks uses this reassigned /24 for automated
+// scanning, while excluding all of AS3356 would hide legitimate visitors.
+const V3_EXCLUDED_IPV4_PREFIXES = Object.freeze(['205.169.39.']);
 
 const AUTOMATION_UA_PATTERN = /bot|spider|crawler|headless|python|curl|wget|scrapy|httpclient|axios|node-fetch|okhttp/i;
 const easternDayFormatter = new Intl.DateTimeFormat('en-CA', {
@@ -152,9 +165,11 @@ export function getV3ExpeditionActionLabel(pagePath, eventType) {
 }
 
 export function isV3CoreEvent(row) {
+  const sourceIp = String(row?.ip || row?.ip_hash || '').trim();
   return Boolean(row && row.source === 'js' && row.session_id && row.visitor_id
     && V3_CORE_EVENT_TYPES.includes(String(row.event_type || ''))
-    && !V3_INTERNAL_IPS.has(String(row.ip || row.ip_hash || '').trim())
+    && !V3_INTERNAL_IPS.has(sourceIp)
+    && !V3_EXCLUDED_IPV4_PREFIXES.some((prefix) => sourceIp.startsWith(prefix))
     && !V3_DATACENTER_ASNS.includes(Number(row.cf_asn))
     && String(row.country || '').toUpperCase() !== 'T1'
     && !AUTOMATION_UA_PATTERN.test(String(row.ua || '')));

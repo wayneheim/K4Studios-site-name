@@ -26,27 +26,28 @@ export const galleryData = [
     "id": "i-fgkX7Jn",
     "title": "A Soft Passage",
     "description": "This painterly landscape photograph from the Blue Ridge Mountains emphasizes atmosphere over spectacle, revealing the quiet emotional character of the southern forest. Created in Wayne Heim’s painterly landscape photography style, the image uses softened light, muted tones, and controlled composition to guide the viewer into a reflective, immersive space.\n\nRooted in southern landscape photography, the work treats the land as lived experience rather than geographic record. Moss-covered stones, flowing water, and layered greens create a sense of passage and stillness held in balance. Part of Wayne Heim’s Southern Painterly Landscapes series. © Wayne Heim",
-    "alt": "Painterly landscape photograph of a forest stream in the Blue Ridge Mountains with soft light, mossy rocks, and a tranquil southern woodland mood.",
+    "alt": "Painterly landscape photograph of a forest stream in West Virginia with soft light, mossy rocks, and a tranquil West Virginia woodland mood.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-fgkX7Jn/A",
 
     "keywords": [
-      "southern landscape photography",
       "Southern Painterly Landscapes",
-      "blue ridge painterly landscapes",
-      "southern landscape fine art",
-      "painterly landscape photography",
-      "fine art painterly photography",
-      "forest stream",
-      "woodland creek",
+      "forest stream photography",
+      "mossy rocks",
+      "woodland stream",
+      "forest brook",
       "babbling brook",
-      "painterly photography",
-      "southern forest landscape",
-      "blue ridge mountains photography"
+      "green forest",
+      "quiet stream",
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The water does not announce itself.  \nIt moves quietly through the forest, finding its way around stone and root as if guided by memory rather than force.\n\nLight arrives in fragments, filtered through leaves and mist, softening everything it touches. The stream becomes less a subject and more a gesture — a passing through, not a destination.\n\nThis is a place between moments. Nothing begins here. Nothing ends. The land simply allows the water to continue, and for a while, allows us to slow with it.",
     "notes": "This image aligns with a painterly tradition that values quiet tension and tonal restraint over dramatic narrative. Its strength lies in subtle movement — water slipping past stone, light dissolving into shadow — allowing the scene to unfold slowly rather than declare itself.\n\nEchoing the sensibilities of pictorialist landscape work and later tonal painters, the composition encourages sustained viewing. It functions less as a window and more as a threshold — a visual pause that deepens with time and presence rather than immediate impact.",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 0,
@@ -62,23 +63,23 @@ export const galleryData = [
     "id": "i-7LZhFkc",
     "title": "Built to Endure",
     "description": "This painterly fine art landscape photograph from the Blue Ridge Mountains explores the quiet endurance of human presence within the southern landscape. Rendered with layered textures, softened edges, and restrained tonality, the image reflects Wayne Heim’s painterly landscape photography approach — where place is shaped as much by memory as by terrain.\n\nRooted in southern landscape photography, the composition emphasizes stone, water, and age-worn surfaces as markers of labor and time rather than spectacle. The image invites slow viewing, allowing the landscape to speak through what remains. Part of Wayne Heim’s Southern Painterly Landscapes series. © Wayne Heim",
-    "alt": "Painterly landscape photograph of an old stone structure and forest stream in the Blue Ridge Mountains, rendered with aged texture and a quiet southern woodland mood.",
+    "alt": "Painterly landscape photograph of an old stone structure and forest stream in West Virginia, rendered with aged texture and a quiet West Virginia woodland mood.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-7LZhFkc/A",
 
     "keywords": [
-      "southern landscape photography",
       "Southern Painterly Landscapes",
-      "blue ridge painterly landscapes",
-      "southern landscape fine art",
+      "West Virginia",
+      "grist mill",
+      "mill stream",
+      "forest stream photography",
+      "rocky ledge",
+      "autumn foliage",
+      "sepia",
       "painterly landscape photography",
-      "fine art painterly photography",
-      "forest stream",
-      "stone structure",
-      "woodland creek",
-      "babbling brook",
-      "painterly photography",
-      "southern forest landscape",
-      "blue ridge mountains photography"
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "Stone was stacked here with intention. Not to impress, not to last forever — just to hold long enough to matter.\n\nWater has since learned every edge, easing past corners laid by hands that are no longer present. The work remains, not as monument, but as residue — proof that someone once needed this place to stay standing.\n\nTime does not erase it. Time settles into it. What endures is not the structure, but the patience it required to build.",
@@ -99,24 +100,25 @@ export const galleryData = [
     "id": "i-mSp9WgK",
     "title": "Autumn Keeps the Ledger",
     "description": "This painterly fine art landscape photograph from the Blue Ridge Mountains explores the intersection of season, labor, and endurance within the southern landscape. Rendered with softened light, restrained color, and atmospheric depth, the image reflects Wayne Heim’s painterly landscape photography approach — where place is shaped by time rather than activity.\n\nRooted in southern landscape photography, the composition allows autumn color, flowing water, and the weathered mill structure to function as markers of memory rather than spectacle. The scene invites slow viewing, emphasizing continuity over change. Part of Wayne Heim’s Southern Painterly Landscapes series. © Wayne Heim",
-    "alt": "Painterly landscape photograph of an old mill and waterfall surrounded by autumn foliage in the Blue Ridge Mountains, rendered with soft light and a quiet southern woodland mood.",
+    "alt": "Painterly landscape photograph of an old mill and waterfall surrounded by autumn foliage in West Virginia, rendered with soft light and a quiet West Virginia woodland mood.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-mSp9WgK/A",
 
     "keywords": [
-      "southern landscape photography",
       "Southern Painterly Landscapes",
-      "blue ridge painterly landscapes",
-      "southern landscape fine art",
-      "painterly landscape photography",
-      "fine art painterly photography",
-      "old mill",
+      "West Virginia",
+      "grist mill",
+      "historic mill",
+      "autumn mill",
+      "historic mill waterfall",
+      "mill pond",
       "waterfall",
-      "forest stream",
-      "woodland creek",
-      "babbling brook",
-      "painterly photography",
-      "southern forest landscape",
-      "blue ridge mountains photography"
+      "pond reflections",
+      "fall foliage",
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The mill no longer counts hours.  \nThe water no longer turns anything but itself. And still, the place holds a record.\n\nLeaves gather where work once passed through, marking time the way ledgers once did — quietly, without judgment. Stone, water, and season agree to keep what mattered and let the rest soften.\n\nNothing here is preserved. Everything is accounted for.",
@@ -137,22 +139,23 @@ export const galleryData = [
     "id": "i-p5ghtLz",
     "title": "The Way Through",
     "description": "This painterly fine art landscape photograph explores quiet movement within the southern forest, where light and terrain guide the eye without declaration. Rendered in Wayne Heim’s painterly landscape photography style, the image emphasizes atmosphere, texture, and restrained contrast to create a sense of inward passage rather than destination.\n\nRooted in southern landscape photography, the work treats the woodland path and stream as experiential space — shaped by light, shadow, and time. The composition invites slow viewing, allowing discovery to unfold naturally. Part of Wayne Heim’s Southern Painterly Landscapes series. © Wayne Heim",
-    "alt": "Painterly landscape photograph of a shaded forest path and stream with dappled light filtering through trees, creating a quiet southern woodland mood.",
+    "alt": "Painterly landscape photograph of a shaded forest path and stream with dappled light filtering through trees, creating a quiet West Virginia woodland mood.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-p5ghtLz/A",
 
     "keywords": [
-      "southern landscape photography",
       "Southern Painterly Landscapes",
-      "blue ridge painterly landscapes",
-      "southern landscape fine art",
-      "painterly landscape photography",
-      "fine art painterly photography",
-      "forest path",
-      "woodland stream",
+      "West Virginia",
+      "Blackwater Falls",
+      "Davis",
+      "forest stream",
+      "woodland path",
       "babbling brook",
-      "painterly photography",
-      "southern forest landscape",
-      "blue ridge mountains photography"
+      "mossy rocks",
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The forest does not open all at once.  \nIt offers itself in narrow allowances — a step of light, a turn of water, a path that exists only if you are willing to slow enough to notice it.\n\nNothing here asks to be followed. The way through is not marked, only revealed in fragments — shadow leaning into sun, stone easing into stream.\n\nYou do not arrive anywhere. You pass. And in passing, the place briefly agrees to let you belong.",
@@ -173,22 +176,23 @@ export const galleryData = [
     "id": "i-FpmhtnM",
     "title": "Set Down Gently",
     "description": "This painterly fine art landscape photograph from the Blue Ridge Mountains explores the quiet relationship between human intention and the southern forest. Rendered with softened light, layered greens, and restrained contrast, the image reflects a painterly landscape photography approach where structure yields gracefully to time.\n\nRooted in southern landscape photography, the composition treats the water channel not as intrusion but as collaboration — a subtle guide that has settled into place. Moss, stone, and flowing water form a quiet narrative of use, patience, and surrender. Part of the Southern Painterly Landscapes series. © Wayne Heim",
-    "alt": "Painterly landscape photograph of a narrow water channel set into a moss-covered forest stream in the Blue Ridge Mountains, surrounded by soft light and dense woodland.",
+    "alt": "Painterly landscape photograph of a narrow wooden walkway/bridge crossing a moss-covered forest stream in West Virginia, surrounded by soft light and dense woodland.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-FpmhtnM/A",
 
     "keywords": [
-      "southern landscape photography",
       "Southern Painterly Landscapes",
-      "blue ridge painterly landscapes",
-      "southern landscape fine art",
-      "painterly landscape photography",
-      "fine art painterly photography",
+      "West Virginia",
+      "Blackwater Falls",
+      "Davis",
       "forest stream",
-      "woodland creek",
-      "babbling brook",
-      "painterly photography",
-      "southern forest landscape",
-      "blue ridge mountains photography"
+      "wooden path",
+      "mossy forest",
+      "quiet nature photography",
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "It was placed with care, not force — a narrow line laid across stone and moss to guide water without asking it to hurry.\n\nYears passed. The forest adjusted. What was once deliberate softened, edges yielding to shade and moisture until intention and accident became indistinguishable.\n\nNothing was taken back. Nothing was erased. The work was simply set down, and the land agreed to carry it.",
@@ -209,22 +213,23 @@ export const galleryData = [
     "id": "i-Jstk9Gx",
     "title": "A Line Made of Time",
     "description": "This painterly fine art landscape photograph from the Blue Ridge Mountains explores the quiet geometry formed by roots, water, and light within the southern forest. Rendered with softened contrast, layered greens, and controlled luminosity, the image reflects a painterly landscape photography approach rooted in atmosphere rather than spectacle.\n\nGrounded in southern landscape photography, the composition treats the forest floor as a record of slow movement — where natural lines emerge through time instead of design. The work invites contemplative viewing, allowing structure and softness to coexist. Part of the Southern Painterly Landscapes series. © Wayne Heim",
-    "alt": "Painterly landscape photograph of tree roots and a forest stream illuminated by soft light in the Blue Ridge Mountains, creating a quiet southern woodland atmosphere.",
+    "alt": "Painterly landscape photograph of tree roots and a forest stream illuminated by soft light in West Virginia, creating a quiet West Virginia woodland atmosphere.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-Jstk9Gx/A",
 
     "keywords": [
-      "southern landscape photography",
       "Southern Painterly Landscapes",
-      "blue ridge painterly landscapes",
-      "southern landscape fine art",
-      "painterly landscape photography",
-      "fine art painterly photography",
+      "West Virginia",
+      "Blackwater Falls",
+      "Davis",
+      "moss covered roots",
       "forest stream",
-      "woodland creek",
-      "babbling brook",
-      "painterly photography",
-      "southern forest landscape",
-      "blue ridge mountains photography"
+      "green forest",
+      "fine art forest photography",
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "Nothing here was drawn all at once.  \nThe line reveals itself slowly — roots easing over stone, water threading between them, light arriving only where it is allowed.\n\nWhat looks intentional is the result of patience. Growth follows what was already there, and time completes what touch began.\n\nYou don’t follow this line. You notice it. And once noticed, it carries you through without asking.",
@@ -245,23 +250,25 @@ export const galleryData = [
     "id": "i-NkNwLM6",
     "title": "Kept from the Path",
     "description": "This painterly fine art landscape photograph from the southern Appalachians explores quiet discovery within the Blue Ridge region, where light, water, and forest collaborate in restraint. Rendered with softened luminosity and layered greens, the image reflects a painterly landscape photography approach rooted in atmosphere rather than spectacle.\n\nGrounded in southern landscape photography, the composition treats the waterfall as a withheld presence — revealed through patience rather than pursuit. The scene invites contemplative viewing, emphasizing stillness, permission, and the quiet intelligence of place. Part of the Southern Painterly Landscapes series. © Wayne Heim",
-    "alt": "Painterly landscape photograph of a secluded waterfall framed by forest shadows and soft beams of light in the Blue Ridge Mountains.",
+    "alt": "Painterly landscape photograph of a secluded waterfall framed by forest shadows and soft beams of light in West Virginia.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-NkNwLM6/A",
 
     "keywords": [
-      "southern landscape photography",
       "Southern Painterly Landscapes",
-      "blue ridge painterly landscapes",
-      "southern landscape fine art",
-      "painterly landscape photography",
-      "fine art painterly photography",
-      "waterfall",
+      "West Virginia",
+      "Blackwater Falls",
+      "Davis",
+      "hidden waterfall",
       "forest stream",
-      "woodland creek",
-      "babbling brook",
-      "painterly photography",
-      "southern forest landscape",
-      "blue ridge mountains photography"
+      "moss covered rocks",
+      "green forest",
+      "fine art waterfall photography",
+      "woodland waterfall art",
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The forest does not advertise what it holds.  \nIt turns the way gently aside, lets the light thin, and keeps its distance just long enough to test intention.\n\nWater moves without spectacle, folding itself into stone and shadow. Nothing here asks to be found. It waits — not hidden, but unoffered.\n\nThose who arrive do so by slowing, not by searching. The place reveals itself only when the path is no longer the point.",
@@ -282,23 +289,24 @@ export const galleryData = [
     "id": "i-nqpGhhX",
     "title": "Uninterrupted",
     "description": "This painterly fine art landscape photograph from the southern Appalachians explores continuity within the forested landscape, where water, stone, and time operate without interruption. Rendered with softened motion, layered greens, and restrained contrast, the image reflects a painterly landscape photography approach grounded in atmosphere rather than spectacle.\n\nRooted in southern landscape photography, the composition emphasizes persistence over event, allowing the cascading water to function as an ongoing presence rather than a singular focal moment. The scene invites sustained viewing, reinforcing a sense of duration and quiet balance. Part of the Southern Painterly Landscapes series. © Wayne Heim",
-    "alt": "Painterly landscape photograph of a layered forest waterfall flowing over moss-covered stone in a quiet southern woodland setting.",
+    "alt": "Painterly landscape photograph of a layered forest waterfall flowing over moss-covered stone in a quiet West Virginia woodland setting.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-nqpGhhX/A",
 
     "keywords": [
-      "southern landscape photography",
       "Southern Painterly Landscapes",
-      "blue ridge painterly landscapes",
-      "southern landscape fine art",
+      "West Virginia",
+      "Blackwater Falls",
+      "Davis",
+      "forest waterfall",
+      "hidden waterfall",
+      "moss and stone",
+      "quiet nature scene",
+      "the truth of a moment",
       "painterly landscape photography",
-      "fine art painterly photography",
-      "waterfall",
-      "forest stream",
-      "woodland creek",
-      "babbling brook",
-      "painterly photography",
-      "southern forest landscape",
-      "blue ridge mountains photography"
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The water does not pause to announce itself.  \nIt moves as it always has, gathering and releasing in a rhythm that never asks to be noticed.\n\nStone accepts the passage. Moss adjusts. Nothing interrupts the agreement. What changes here does so quietly, without breaking the flow.\n\nThis is not a moment captured. It is a continuation — already underway before arrival, and unbothered by departure.",
@@ -323,16 +331,16 @@ export const galleryData = [
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-cKsdqTs/A",
 
     "keywords": [
-      "southern landscape photography",
       "Southern Painterly Landscapes",
-      "blue ridge painterly landscapes",
-      "southern landscape fine art",
+      "fine art landscape photography",
       "painterly landscape photography",
-      "fine art painterly photography",
-      "open field",
-      "standing trees",
-      "painterly photography",
-      "blue ridge mountains photography"
+      "New England landscape art",
+      "Vermont countryside",
+      "minimalist landscape",
+      "autumn in New England",
+      "painterly fine art photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "Nothing here leans for attention.  \nThe trees stand as they have learned to — not resisting the wind, not yielding to it either, simply remaining.\n\nClouds pass. Light shifts. The field keeps its quiet measure. What stays upright is not stubbornness, but familiarity with weather.\n\nThere is no triumph in this stance. Only continuity — the kind that doesn’t need to be named to be understood.",
@@ -357,13 +365,22 @@ export const galleryData = [
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-RjSqqDt/A",
 
     "keywords": [
-      "southern landscape photography",
+      "Vermont fine art photography",
+      "painterly landscape photography",
+      "abstract waterfall art",
+      "New England landscape art",
+      "water and light",
+      "geometric composition",
+      "minimalist landscape photography",
       "Southern Painterly Landscapes",
-      "southern landscape fine art"
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "Nothing here is accidental.  \nWater chooses the edge, light chooses the angle, and gravity does the rest.  \nWhat remains is structure — quiet, deliberate, and briefly perfect.",
-    "notes": "This piece leans toward abstraction while remaining grounded in place. The strength of the work lies in its reduction — the way the scene is distilled into line, plane, and tonal contrast. The diagonal spillway acts as a compositional spine, guiding the eye while allowing the water to dissolve into softness. Influenced by modernist landscape studies and photographic minimalism, *Triangles* rewards prolonged viewing and pairs especially well with contemporary or architecturally clean spaces.",
+    "notes": "This piece leans toward abstraction while remaining grounded in place. The strength of the work lies in its reduction — the way the scene is distilled into line, plane, and tonal contrast. The diagonal spillway acts as a compositional spine, guiding the eye while allowing the water to dissolve into softness. Influenced by modernist landscape studies and photographic minimalism, Triangles rewards prolonged viewing and pairs especially well with contemporary or architecturally clean spaces.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -384,14 +401,25 @@ export const galleryData = [
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-qM9zBVL/A",
 
     "keywords": [
-      "southern landscape photography",
       "Southern Painterly Landscapes",
-      "southern landscape fine art"
+      "Vermont",
+      "abstract waterfall photography",
+      "painterly landscape photography",
+      "abstract landscape art",
+      "water spillway",
+      "long exposure waterfall",
+      "minimalist landscape photography",
+      "geometric composition",
+      "fine art nature photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The water does not hesitate.  \nIt chooses a side, then keeps going.\n\nA quiet moment where motion and stillness share the same edge.",
-    "notes": "This work emphasizes reduction and control — a compositional approach that favors structure over scenery. The dominant diagonal acts as both subject and boundary, guiding the eye through contrast rather than detail. The image rewards slow viewing, revealing subtle tonal transitions and surface textures that elevate the piece beyond documentation into abstraction.",
-    "rating": 0,
+    "notes": "This work emphasizes reduction and control — a compositional approach that favors structure over scenery. The vertical edge does the compositional work, carrying the eye down the line where moving water gives up to stillness along one clean edge. The image rewards slow viewing, revealing subtle tonal transitions and surface textures that elevate the piece beyond documentation into abstraction.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 10,
@@ -411,9 +439,20 @@ export const galleryData = [
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-5ZsWtSx/A",
 
     "keywords": [
-      "southern landscape photography",
       "Southern Painterly Landscapes",
-      "southern landscape fine art"
+      "New England waterfall",
+      "painterly landscape photography",
+      "fine art nature photography",
+      "forest waterfall",
+      "cascading water",
+      "long exposure waterfall",
+      "New England landscape art",
+      "painterly fine art photography",
+      "woodland stream",
+      "atmospheric landscape",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "It doesn’t rush.\nIt commits.\n\nOnce it starts down the hill, there’s no argument left—only gravity and time working out their agreement.",
@@ -438,9 +477,16 @@ export const galleryData = [
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-fGnNkBL/A",
 
     "keywords": [
-      "southern landscape photography",
       "Southern Painterly Landscapes",
-      "southern landscape fine art"
+      "autumn in new england",
+      "new england landscape art",
+      "painterly landscape photography",
+      "forest waterfall",
+      "Vermont landscape",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "Nothing here resists its own direction.  \nWater moves because it must, stone yields because it has learned to.  \nThe fall is not dramatic — only inevitable.",
@@ -465,9 +511,16 @@ export const galleryData = [
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-qrS5Ggc/A",
 
     "keywords": [
-      "southern landscape photography",
       "Southern Painterly Landscapes",
-      "southern landscape fine art"
+      "autumn in new england",
+      "new england landscape art",
+      "painterly landscape photography",
+      "forest waterfall",
+      "Vermont forest",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "Nothing here announces itself.  \nColor gathers quietly — green layered on shadow, water threading through stone.  \nThe forest speaks in tones, not statements.",
@@ -492,9 +545,16 @@ export const galleryData = [
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-bqnctgw/A",
 
     "keywords": [
-      "southern landscape photography",
       "Southern Painterly Landscapes",
-      "southern landscape fine art"
+      "autumn in new england",
+      "new england landscape art",
+      "painterly landscape photography",
+      "forest waterfall",
+      "Vermont forest",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "Everything above has already decided.  \nHere, the water commits — slipping from structure into motion, from form into release.  \nThe forest does not follow. It watches.",
@@ -519,9 +579,17 @@ export const galleryData = [
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-XzhTJPf/A",
 
     "keywords": [
-      "southern landscape photography",
       "Southern Painterly Landscapes",
-      "southern landscape fine art"
+      "New England painterly photography",
+      "historic log cabin",
+      "old cabin fine art",
+      "painterly landscape photography",
+      "early American homestead",
+      "rustic architecture art",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "It still stands, long after the voices have gone quiet.\n\nBoards darkened by years of wind and winter hold their position, as if leaving were never part of the plan. Whatever life once moved through these rooms did so slowly—measured by seasons, not clocks.\n\nThe house does not announce its history. It simply remains.",

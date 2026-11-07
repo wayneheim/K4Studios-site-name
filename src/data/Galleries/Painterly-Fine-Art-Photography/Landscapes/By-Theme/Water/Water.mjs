@@ -31,17 +31,20 @@ export const galleryData = [
 
     "keywords": [
       "Painterly Water Photography",
-      "the truth of a moment",
       "waterfall landscape photography",
       "waterfall photography",
       "fine art waterfall photography",
       "fine art waterfall prints",
       "painterly river scenes",
-      "painterly landscape photography",
+      "Iceland waterfall photography",
+      "Iceland",
+      "gorge waterfall",
       "water movement photography",
-      "western fine art photography",
+      "painterly landscape photography",
+      "painterly fine art photography",
       "fine art landscape photography",
-      "painterly photography"
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The water does not hesitate.\n\nIt doesn’t negotiate with the edge or ask permission from the stone. It arrives already committed, already falling, carrying the weight of distance and melt and time without pause or apology.\n\nThere is no spectacle here — only certainty. Rock holds. Water moves. The moment is brief, but the truth of it is not.",
@@ -68,16 +71,21 @@ export const galleryData = [
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-sm7MXM4/A",
 
     "keywords": [
-      "Painterly Water Photography",
-      "waterfall photography",
-      "waterfall landscape photography",
-      "fine art waterfall photography",
-      "painterly river scenes",
+      "lighthouse photography",
+      "lighthouse",
+      "breakwater",
+      "waves",
+      "storm sky",
+      "coastal landscape",
+      "Great Lakes",
+      "Midwest",
       "water movement photography",
+      "painterly water photography",
       "painterly landscape photography",
-      "western fine art photography",
+      "painterly fine art photography",
       "fine art landscape photography",
-      "painterly photography"
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The water does not slow down for it.\n\nWave after wave arrives with the same indifference, testing the structure without curiosity or anger. The lighthouse does not answer back. It does not resist so much as remain — steady, unchanged, letting the water expend itself.\n\nNothing here is dramatic. Nothing is resolved. Motion continues. Standing is the work.",
@@ -102,16 +110,26 @@ export const galleryData = [
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-WfrdxRR/A",
 
     "keywords": [
-      "Painterly Water Photography",
-      "the truth of a moment",
-      "waterfall landscape photography",
-      "waterfall photography",
-      "fine art waterfall photography",
-      "fine art waterfall prints",
-      "painterly river scenes"
+      "Teton Range",
+      "Grand Tetons",
+      "mountain reflection",
+      "calm water",
+      "water reflection",
+      "Schwabacher Landing",
+      "Jackson Hole",
+      "Wyoming",
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "mountain landscape photography",
+      "western landscape photography",
+      "western fine art photography",
+      "fine art photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
-    "story": "The mountains hold still long enough to be remembered.  \nNot in stone—but in water.\n\nFor a moment, the Tetons become quieter than themselves,  \nand the land listens.",
+    "story": "The mountains hold still long enough to be remembered.\nNot in stone—but in water.\n\nFor a moment, the Tetons become quieter than themselves,\nand the land listens.",
     "notes": "This work draws its strength from balance and restraint. The reflection is not treated as a visual trick, but as a second voice—softening the mountains while extending their presence.\n\nCollectors often respond to this piece for its sense of calm and equilibrium. It is an image that settles into a space quietly, offering continuity and stillness rather than spectacle, and revealing new subtleties the longer it is lived with.",
     "rating": 4,
     "galleries": [],
@@ -133,21 +151,21 @@ export const galleryData = [
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-QsskjT5/A",
 
     "keywords": [
-      "Painterly Water Photography",
-      "the truth of a moment",
-      "waterfall landscape photography",
-      "waterfall photography",
-      "fine art waterfall photography",
-      "fine art waterfall prints",
-      "painterly river scenes",
-      "painterly landscape photography",
-      "fine art landscape photography",
-      "water landscape photography",
       "Lake Erie photography",
+      "Lake Erie",
       "Ohio lake landscape",
+      "Ohio",
+      "calm water",
+      "morning light",
+      "breakwalls",
       "moody cloudscape photography",
       "coastal atmosphere",
-      "painterly photography"
+      "water landscape photography",
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The lake doesn’t arrive with sunrise — it’s already there, waiting, flat enough to make the clouds feel heavier than they are.\n\nFor a while, the light refuses to commit. It brushes the waterline, touches the breakwalls, then hesitates — as if the day is listening for permission before it speaks.\n\nNothing moves fast. Nothing announces itself. The whole scene feels like a held inhale, the kind you don’t notice until you finally let it go.",
@@ -172,13 +190,19 @@ export const galleryData = [
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-g6Trjng/A",
 
     "keywords": [
-      "Painterly Water Photography",
-      "the truth of a moment",
-      "waterfall landscape photography",
-      "waterfall photography",
-      "fine art waterfall photography",
-      "fine art waterfall prints",
-      "painterly river scenes"
+      "Horseshoe Bend",
+      "Colorado River",
+      "Arizona",
+      "canyon landscape",
+      "river",
+      "sunset",
+      "red rock canyon",
+      "painterly river scenes",
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The river does not rush here.\nIt slows, widens, and commits — bending the land not through force, but through patience.\n\nStone remembers every pass. Light only visits once.\nWhat remains is the shape of time, held open just long enough to be seen.",
@@ -210,9 +234,13 @@ export const galleryData = [
       "fine art waterfall prints",
       "painterly river scenes",
       "Iceland waterfall photography",
+      "Iceland",
       "basalt canyon waterfall",
       "painterly landscape photography",
-      "fine art landscape photography"
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The land does not give way easily here.\n\nWater presses forward anyway — not with speed, not with noise, but with certainty. It finds the fracture, the weakness written long before the fall, and commits to it fully. Stone resists. Water remembers.\n\nNothing here is dramatic. Nothing performs. This is not force on display — it is persistence made visible.",
@@ -242,7 +270,16 @@ export const galleryData = [
       "waterfall photography",
       "fine art waterfall photography",
       "fine art waterfall prints",
-      "painterly river scenes"
+      "painterly river scenes",
+      "Hengifoss",
+      "Iceland waterfall photography",
+      "Iceland",
+      "basalt cliffs",
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The land opens slowly here.\n\nWhat looks sudden has been prepared for a long time — layers laid down, pressure set, gravity waiting. Water does not arrive to change the place, only to reveal what was already willing to give way.\n\nNothing interrupts the fall. Nothing cushions it. The distance is the point.",
@@ -272,7 +309,15 @@ export const galleryData = [
       "waterfall photography",
       "fine art waterfall photography",
       "fine art waterfall prints",
-      "painterly river scenes"
+      "painterly river scenes",
+      "Iceland waterfall photography",
+      "Iceland",
+      "basalt canyon",
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The land does not open itself easily here.\nIt tightens, presses inward, asking passage rather than offering it.\n\nWater commits to the cut without ceremony — slipping through stone that has already decided where it will go. There is no pause, no widening. Only movement shaped by what remains.\n\nThis is not the fall itself, but the moment that leads to it — where direction matters more than speed.",
@@ -297,13 +342,18 @@ export const galleryData = [
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-TgVv6SZ/A",
 
     "keywords": [
-      "Painterly Water Photography",
-      "the truth of a moment",
-      "waterfall landscape photography",
-      "waterfall photography",
-      "fine art waterfall photography",
-      "fine art waterfall prints",
-      "painterly river scenes"
+      "Stuðlagil Canyon",
+      "Iceland",
+      "basalt columns",
+      "river canyon",
+      "aquamarine river",
+      "painterly river scenes",
+      "painterly water photography",
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The water moves, but the color stays.\n\nBasalt walls hold their memory openly here — reds, rusts, and cooled greens layered without urgency. The river does not argue with the stone. It follows what has already been decided.\n\nNothing is rushing toward an ending. The land keeps its record in full view, and the water passes through it, unchanged.",
@@ -335,9 +385,16 @@ export const galleryData = [
       "fine art waterfall prints",
       "painterly river scenes",
       "Iceland waterfall photography",
+      "Iceland",
       "Goðafoss fine art",
+      "Goðafoss",
+      "dusk",
       "painterly nature photography",
-      "atmospheric landscape photography"
+      "atmospheric landscape photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The land does not announce the end of day.\nIt simply exhales.\n\nWater loosens its grip on light.\nStone holds it a moment longer —\nlong enough to remember what passed through.",
@@ -362,20 +419,28 @@ export const galleryData = [
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-zk7zXP3/A",
 
     "keywords": [
-      "painterly water photography",
-      "the truth of a moment",
-      "painterly river scenes",
+      "golden hour",
+      "low light",
+      "fading light",
+      "Teton Mountains",
+      "Teton Range",
+      "golden grass",
+      "autumn landscape",
+      "calm water",
+      "Jackson Hole",
+      "Wyoming",
       "painterly landscape photography",
+      "painterly fine art photography",
       "fine art landscape photography",
+      "mountain landscape photography",
       "western landscape photography",
-      "Teton Mountains landscape",
-      "autumn mountain landscape",
-      "Wyoming fine art photography",
-      "painterly western landscapes",
-      "western wall art"
+      "western fine art photography",
+      "fine art photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
-    "story": "The cold hasn’t arrived yet — but it’s close.  \nThe light still holds, just barely, caught in the grass and the slow water as the Tetons stand unchanged behind it. Nothing is ending here. It’s simply pausing.\n\nThis is the moment before the valley exhales — when autumn lingers, knowing it will not be asked to stay.\n\n© Wayne Heim",
+    "story": "The cold hasn’t arrived yet — but it’s close.\nThe light still holds, just barely, caught in the grass and the slow water as the Tetons stand unchanged behind it. Nothing is ending here. It’s simply pausing.\n\nThis is the moment before the valley exhales — when autumn lingers, knowing it will not be asked to stay.\n\n© Wayne Heim",
     "notes": "This image belongs to a group of works that sit between seasons — not defined by peak color or weather, but by the subtle transition that follows. The warmth in the foreground grass becomes a counterweight to the permanence of the Tetons behind it, creating a quiet tension between change and endurance.\n\nPieces like this tend to live well in spaces meant for reflection rather than display — where the image doesn’t announce itself, but slowly becomes familiar.",
     "rating": 4,
     "galleries": [],
@@ -397,16 +462,23 @@ export const galleryData = [
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-N226DMX/A",
 
     "keywords": [
-      "painterly water photography",
-      "the truth of a moment",
-      "painterly river scenes",
+      "tall grass",
+      "reeds",
+      "mountain reflection",
+      "Schwabacher Landing",
+      "Teton Mountains",
+      "Teton Range",
+      "Jackson Hole",
+      "Wyoming",
       "painterly landscape photography",
+      "painterly fine art photography",
       "fine art landscape photography",
+      "mountain landscape photography",
       "western landscape photography",
-      "Teton Mountains landscape",
-      "Jackson Hole Wyoming photography",
-      "autumn western landscape",
-      "painterly western photography"
+      "western fine art photography",
+      "fine art photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The mountains are there, but they aren’t in a hurry to be seen.\n\nThey wait behind reeds and reflections, letting the foreground speak first — the tangle, the quiet obstruction, the sense that meaning isn’t found by stepping back, but by staying put.\n\nThis is where looking slows down.",
@@ -441,7 +513,11 @@ export const galleryData = [
       "fine art landscape prints",
       "vintage rural landscape photography",
       "quiet landscape photography",
-      "atmospheric landscape art"
+      "atmospheric landscape art",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The water still moves, long after the work has stopped.\n\nBoards weather. Stone settles. The mill stands where it was asked to stand — not as a monument, but as a habit of place, shaped by repetition and patience rather than ambition.\n\nWhat remains is not industry, but endurance — the quiet understanding that some things were built simply to keep going.",
@@ -479,10 +555,15 @@ export const galleryData = [
       "atmospheric landscape photography",
       "quiet landscape photography",
       "endurance in nature",
-      "slow landscape photography"
+      "slow landscape photography",
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
-    "story": "The water doesn’t rush.  \nIt yields, again and again, to the shape of stone.\n\nSeason after season, the river learns the land—cutting, wearing, remembering.  \nNothing here is sudden. Everything here is earned.",
+    "story": "The water doesn’t rush.\nIt yields, again and again, to the shape of stone.\n\nSeason after season, the river learns the land—cutting, wearing, remembering.\nNothing here is sudden. Everything here is earned.",
     "notes": "This image belongs to a lineage of Western landscape work that values restraint over drama—where the subject is not the fall itself, but the time it represents. The composition directs the eye downward and inward, mirroring the slow erosion that formed the canyon.\n\nCollectors drawn to this piece often respond to its sense of permanence and quiet authority. It is a work that does not demand attention, but holds it—revealing more the longer it is lived with.",
     "rating": 4,
     "galleries": [],
@@ -513,7 +594,11 @@ export const galleryData = [
       "painterly river scenes",
       "green forest wall art",
       "fine art water photography",
-      "atmospheric landscape photography"
+      "atmospheric landscape photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "Nothing here asks to be noticed.\nThe water moves because it must, not because it wants to be seen.\n\nLight filters slowly through leaves, breaking apart before it ever reaches the surface.\nWhat sound exists is softened, absorbed, allowed.\n\nThis is not a place of arrival.\nIt is a place of staying long enough to hear less.",
@@ -547,10 +632,15 @@ export const galleryData = [
       "painterly river scenes",
       "rustic landscape photography",
       "atmospheric nature art",
-      "fine art water landscape"
+      "fine art water landscape",
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
-    "story": "The mill has seen this before.\n\nWater slows as it reaches the ledge, leaves gather where the current forgets its urgency, and the structure waits — unchanged — while the season moves around it.\n\nNothing here is rushing toward an ending.  \nIt’s simply holding what remains, for as long as it’s allowed.",
+    "story": "The mill has seen this before.\n\nWater slows as it reaches the ledge, leaves gather where the current forgets its urgency, and the structure waits — unchanged — while the season moves around it.\n\nNothing here is rushing toward an ending.\nIt’s simply holding what remains, for as long as it’s allowed.",
     "notes": "This image belongs to a body of work that values atmosphere over event and restraint over spectacle. The mill functions not as a subject of nostalgia, but as a quiet anchor — allowing seasonal color and softened water to carry the emotional weight.\n\nSubtle tonal control and painterly treatment slow the viewer’s eye, rewarding patience and close observation. The result is a piece that feels lived-with rather than looked-at, well suited for collectors drawn to contemplative landscapes and enduring narratives of place.",
     "rating": 4,
     "galleries": [],
@@ -581,7 +671,12 @@ export const galleryData = [
       "atmospheric nature photography",
       "woodland landscape art",
       "secluded waterfall wall art",
-      "fine art nature landscape"
+      "fine art nature landscape",
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The forest doesn’t announce this place.\n\nWater slips over stone quietly, filtered through moss and shadow, as if it’s learned not to draw attention to itself. Light arrives in fragments, finding its way through leaves rather than sky.\n\nNothing here asks to be discovered.\nIt waits — and rewards only those who slow down enough to notice.",
@@ -620,7 +715,11 @@ export const galleryData = [
       "layered stone",
       "flowing water",
       "tranquil nature scene",
-      "contemplative landscape art"
+      "contemplative landscape art",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "Nothing asks for your attention here.\n\nWater moves because it always has. Stone yields because time insists. There is no climax, no instruction — only the quiet agreement between what passes and what remains.\n\nIf there is a truth in this place, it is not found in the fall itself, but in the way everything else waits.",
@@ -646,7 +745,6 @@ export const galleryData = [
 
     "keywords": [
       "painterly water photography",
-      "the truth of a moment",
       "waterfall landscape photography",
       "waterfall photography",
       "fine art waterfall photography",
@@ -659,7 +757,11 @@ export const galleryData = [
       "water and light",
       "controlled flow",
       "diagonal composition",
-      "fine art photography"
+      "fine art photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "Nothing here is accidental.  \nWater chooses the edge, light chooses the angle, and gravity does the rest.  \nWhat remains is structure — quiet, deliberate, and briefly perfect.",
@@ -685,7 +787,6 @@ export const galleryData = [
 
     "keywords": [
       "painterly water photography",
-      "the truth of a moment",
       "waterfall landscape photography",
       "waterfall photography",
       "fine art waterfall photography",
@@ -697,11 +798,15 @@ export const galleryData = [
       "geometric composition",
       "water and light",
       "long exposure waterfall",
-      "fine art photography"
+      "fine art photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The water does not hesitate.  \nIt chooses a side, then keeps going.\n\nA quiet moment where motion and stillness share the same edge.",
-    "notes": "This work emphasizes reduction and control — a compositional approach that favors structure over scenery. The dominant diagonal acts as both subject and boundary, guiding the eye through contrast rather than detail. The image rewards slow viewing, revealing subtle tonal transitions and surface textures that elevate the piece beyond documentation into abstraction.",
+    "notes": "This work emphasizes reduction and control — a compositional approach that favors structure over scenery. The vertical edge does the compositional work, carrying the eye down the line where moving water gives up to stillness along one clean edge. The image rewards slow viewing, revealing subtle tonal transitions and surface textures that elevate the piece beyond documentation into abstraction.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -723,7 +828,6 @@ export const galleryData = [
 
     "keywords": [
       "painterly water photography",
-      "the truth of a moment",
       "waterfall landscape photography",
       "waterfall photography",
       "fine art waterfall photography",
@@ -734,7 +838,12 @@ export const galleryData = [
       "cascading water",
       "long exposure waterfall",
       "fine art nature photography",
-      "contemplative landscape art"
+      "contemplative landscape art",
+      "New England",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "It doesn’t rush.\nIt commits.\n\nOnce it starts down the hill, there’s no argument left—only gravity and time working out their agreement.",
@@ -760,7 +869,6 @@ export const galleryData = [
 
     "keywords": [
       "painterly water photography",
-      "the truth of a moment",
       "waterfall landscape photography",
       "waterfall photography",
       "fine art waterfall photography",
@@ -771,7 +879,12 @@ export const galleryData = [
       "cascading water",
       "long exposure waterfall",
       "contemplative landscape art",
-      "fine art photography"
+      "fine art photography",
+      "New England",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "Nothing here resists its own direction.  \nWater moves because it must, stone yields because it has learned to.  \nThe fall is not dramatic — only inevitable.",
@@ -797,7 +910,6 @@ export const galleryData = [
 
     "keywords": [
       "painterly water photography",
-      "the truth of a moment",
       "waterfall landscape photography",
       "waterfall photography",
       "fine art waterfall photography",
@@ -808,7 +920,12 @@ export const galleryData = [
       "cascading water",
       "long exposure waterfall",
       "contemplative landscape art",
-      "fine art photography"
+      "fine art photography",
+      "New England",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "Nothing here announces itself.  \nColor gathers quietly — green layered on shadow, water threading through stone.  \nThe forest speaks in tones, not statements.",
@@ -834,7 +951,6 @@ export const galleryData = [
 
     "keywords": [
       "painterly water photography",
-      "the truth of a moment",
       "waterfall landscape photography",
       "waterfall photography",
       "fine art waterfall photography",
@@ -845,7 +961,12 @@ export const galleryData = [
       "cascading water",
       "long exposure waterfall",
       "contemplative landscape art",
-      "fine art photography"
+      "fine art photography",
+      "New England",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "Everything above has already decided.  \nHere, the water commits — slipping from structure into motion, from form into release.  \nThe forest does not follow. It watches.",

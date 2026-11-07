@@ -25,6 +25,7 @@ const PLACEHOLDER_TITLE_SLUGS = new Set([
 
 function slugify(value, fallback = 'image') {
   const slug = String(value || '')
+    .replace(/[Ðð]/g, 'd')
     .normalize('NFKD')
     .replace(/[\u0300-\u036f]/g, '')
     .toLowerCase()

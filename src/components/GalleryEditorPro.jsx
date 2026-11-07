@@ -1,5 +1,5 @@
 // src/components/GalleryEditorPro.jsx
-import { useEffect, useMemo, useRef, useState } from "react";
+import { Fragment, useEffect, useMemo, useRef, useState } from "react";
 import PricingEditorModal from "./PricingEditorModal.jsx";
 import EngrainedStatusPanel from "./EngrainedStatusPanel.jsx";
 import SectionKeywordSuggestions from "./SectionKeywordSuggestions.jsx";
@@ -86,6 +86,16 @@ function downloadText(text, filename) {
   a.click();
   a.remove();
   URL.revokeObjectURL(url);
+}
+
+async function saveBackupToLocalFolder(datasetPath, filename) {
+  const res = await fetch("/.netlify/functions/saveGalleryBackup", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ datasetPath, filename }),
+  });
+  if (!res.ok) throw new Error(await res.text());
+  return res.json();
 }
 
 function pickImage(d = {}) {
@@ -175,6 +185,31 @@ function prettyLabelFromPath(fullPath) {
     DATA_ROOTS.find((r) => normalizePath(fullPath).startsWith(normalizePath(r) + "/")) || "";
   const rootName = rootHint.split("/").pop();
   return `[${rootName}] ${segs.join(" / ")}`;
+}
+
+const GALLERY_OPTION_COLORS = {
+  fineArt: { backgroundColor: "#e8f2ff", color: "#174a7c" },
+  painterly: { backgroundColor: "#fff1d6", color: "#7a4712" },
+  engrained: { backgroundColor: "#e7f6ec", color: "#1f6a3a" },
+  other: { backgroundColor: "#f3e8ff", color: "#5b2778" },
+};
+
+function galleryOptionType(path = "") {
+  const normalized = normalizePath(path);
+  if (normalized.startsWith("/src/data/Galleries/Painterly-Fine-Art-Photography/")) return "painterly";
+  if (normalized.startsWith("/src/data/Galleries/Fine-Art-Photography/")) return "fineArt";
+  if (normalized.includes("/Other/K4-Select-Series/Engrained/")) return "engrained";
+  return "other";
+}
+
+function galleryOptionStyle(path) {
+  return GALLERY_OPTION_COLORS[galleryOptionType(path)];
+}
+
+function contentClassificationKey(imageId, galleryPath) {
+  const normalizedPath = normalizePath(galleryPath);
+  const pathWithSlash = normalizedPath.startsWith("/") ? normalizedPath : `/${normalizedPath}`;
+  return `${imageId}:${pathWithSlash}`;
 }
 
 async function loadGalleryDataFresh(selectedPath, fallbackLoader, label = "GalleryEditorPro") {
@@ -873,6 +908,50 @@ function StarRating({ value = 0, onChange }) {
   );
 }
 
+function ContentClassificationButtons({ classification, contentSource, onToggle, darkMode = false }) {
+  const isHuman = (contentSource || "human") === "human";
+  const base = "px-3 py-1 rounded-md border text-sm font-semibold transition-colors";
+
+  return (
+    <div className="flex flex-wrap items-center justify-center gap-2" aria-label="Content classification">
+      <span className={`text-sm ${darkMode ? "text-gray-400" : "text-gray-500"}`}>Review source:</span>
+      <button
+        type="button"
+        aria-pressed={classification === "oim"}
+        disabled={!isHuman}
+        onClick={() => onToggle("oim")}
+        className={`${base} ${
+          !isHuman
+            ? "cursor-not-allowed border-gray-600 bg-gray-700 text-gray-500 opacity-60"
+            : classification === "oim"
+            ? "border-amber-400 bg-amber-400 text-gray-950"
+            : darkMode
+            ? "border-amber-500 bg-gray-800 text-amber-300 hover:bg-gray-700"
+            : "border-amber-400 bg-white text-amber-700 hover:bg-amber-50"
+        }`}
+        title={isHuman ? "Toggle OIM review source" : "OIM is available only for Human content"}
+      >
+        OIM
+      </button>
+      <button
+        type="button"
+        aria-pressed={classification === "scout"}
+        onClick={() => onToggle("scout")}
+        className={`${base} ${
+          classification === "scout"
+            ? "border-emerald-400 bg-emerald-400 text-gray-950"
+            : darkMode
+            ? "border-emerald-400 bg-gray-700 text-white hover:bg-gray-600"
+            : "border-emerald-400 bg-white text-emerald-700 hover:bg-emerald-50"
+        }`}
+        title="Toggle Scout AI review source"
+      >
+        Scout
+      </button>
+    </div>
+  );
+}
+
 /* ---------- component ---------- */
 export default function GalleryEditorPro() {
   const modules = useMemo(() => {
@@ -885,12 +964,16 @@ export default function GalleryEditorPro() {
   }, []);
 
   const options = useMemo(() => {
+    const typeOrder = { fineArt: 0, painterly: 1, engrained: 2, other: 3 };
     const rootIdx = (p) => {
       const n = normalizePath(p);
       return DATA_ROOTS.findIndex((r) => n.startsWith(normalizePath(r) + "/"));
     };
     return Object.keys(modules)
       .sort((a, b) => {
+        const ta = typeOrder[galleryOptionType(a)] ?? 99;
+        const tb = typeOrder[galleryOptionType(b)] ?? 99;
+        if (ta !== tb) return ta - tb;
         const ra = rootIdx(a), rb = rootIdx(b);
         if (ra !== rb) return ra - rb; // group by root order
         return stripRoot(a).localeCompare(stripRoot(b));
@@ -976,6 +1059,23 @@ export default function GalleryEditorPro() {
 
   // Cache Purge state
   const [cachePurgeLoading, setCachePurgeLoading] = useState(false);
+
+  // OIM/Scout live outside gallery .mjs files so gallery rewrite tools cannot discard them.
+  const [contentClassifications, setContentClassifications] = useState({});
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch("/.netlify/functions/contentClassificationRegistry", { cache: "no-store" })
+      .then((res) => {
+        if (!res.ok) throw new Error(`Classification registry returned ${res.status}`);
+        return res.json();
+      })
+      .then((registry) => {
+        if (!cancelled) setContentClassifications(registry.images || {});
+      })
+      .catch((error) => console.warn("[GalleryEditorPro] Could not load content classifications:", error));
+    return () => { cancelled = true; };
+  }, []);
 
   useEffect(() => {
     if (!lastAction) return;
@@ -1209,8 +1309,66 @@ export default function GalleryEditorPro() {
   }, [filter]);
 
   const current = filtered[idx] || null;
+  const currentClassificationKey = current?.id
+    ? contentClassificationKey(current.id, selectedPath)
+    : "";
+  const currentClassification = currentClassificationKey
+    ? contentClassifications[currentClassificationKey]?.classification || null
+    : null;
 
-  function ensureBackup() {
+  async function writeContentClassification(imageId, classification, galleryPath = selectedPath) {
+    const key = contentClassificationKey(imageId, galleryPath);
+    const res = await fetch("/.netlify/functions/contentClassificationRegistry", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ imageId, galleryPath, classification }),
+    });
+    if (!res.ok) throw new Error(await res.text());
+
+    setContentClassifications((previous) => {
+      const next = { ...previous };
+      if (classification == null) delete next[key];
+      else next[key] = { classification, updatedAt: new Date().toISOString() };
+      return next;
+    });
+  }
+
+  async function toggleContentClassification(classification) {
+    if (!current || !backupMade) return;
+    const previousClassification = currentClassification;
+    const nextClassification = previousClassification === classification ? null : classification;
+    const contentSource = current.contentSource || "human";
+
+    if (classification === "oim" && contentSource !== "human") return;
+
+    try {
+      await writeContentClassification(current.id, nextClassification);
+
+      // Scout is an AI-guided source. Reuse the established .mjs provenance field.
+      if (nextClassification === "scout" && contentSource !== "ai") {
+        const res = await fetch("/.netlify/functions/updateGalleryItem", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            datasetPath: selectedPath.replace(/^\//, ""),
+            id: current.id,
+            patch: { contentSource: "ai" },
+          }),
+        });
+        if (!res.ok) throw new Error(await res.text());
+        setData((items) => items.map((item) => (
+          item.id === current.id ? { ...item, contentSource: "ai" } : item
+        )));
+      }
+    } catch (error) {
+      try {
+        await writeContentClassification(current.id, previousClassification);
+      } catch {}
+      alert(`Classification could not be updated.\n\n${error.message}`);
+    }
+  }
+
+  async function ensureBackup() {
     if (!backupData) return;
     const ts = new Date().toISOString().replace(/[:.]/g, "-");
     // Extract gallery name from path (e.g., "Color" from ".../Western-Cowboy-Portraits/Color.mjs")
@@ -1218,10 +1376,18 @@ export default function GalleryEditorPro() {
     const fileName = pathParts.pop()?.replace(".mjs", "") || "gallery";
     const parentFolder = pathParts.pop() || "";
     const galleryLabel = parentFolder ? `${parentFolder}-${fileName}`.substring(0, 40) : fileName.substring(0, 40);
-    downloadText(buildMjs(backupData, "galleryData"), `BACKUP-${galleryLabel}-${ts}.mjs`);
+    try {
+      await saveBackupToLocalFolder(
+        selectedPath,
+        `BACKUP-${galleryLabel}-${ts}.mjs`,
+      );
+    } catch (error) {
+      alert(`Backup could not be saved.\n\n${error.message}`);
+      return;
+    }
     setBackupMade(true);
     setRealBackupMade(true);
-    setLastAction(`Backup created — ${new Date().toLocaleTimeString()}`);
+    setLastAction(`Backup created in local-backups/gallery-editor — ${new Date().toLocaleTimeString()}`);
   }
   function skipBackupConfirm() {
     const ok = confirm(
@@ -1285,6 +1451,11 @@ export default function GalleryEditorPro() {
       return copy;
     });
     setDirty(true);
+    if (isTextContent && !turboMode && currentClassification === "scout") {
+      writeContentClassification(current.id, null).catch((error) => {
+        console.warn("[GalleryEditorPro] Could not clear Scout after Human edit:", error);
+      });
+    }
     // Track this image as having unsaved changes
     if (current?.id) {
       setDirtyImageIds(prev => new Set(prev).add(current.id));
@@ -1396,7 +1567,7 @@ ${collectorNotes}`;
     return result;
   }
 
-  function enterTurboMode() {
+  async function enterTurboMode() {
     if (!current) return;
     
     // If real backup hasn't been made yet, trigger one now
@@ -1411,10 +1582,18 @@ ${collectorNotes}`;
       const fileName = pathParts.pop()?.replace(".mjs", "") || "gallery";
       const parentFolder = pathParts.pop() || "";
       const galleryLabel = parentFolder ? `${parentFolder}-${fileName}`.substring(0, 40) : fileName.substring(0, 40);
-      downloadText(buildMjs(backupData, "galleryData"), `BACKUP-${galleryLabel}-${ts}.mjs`);
+      try {
+        await saveBackupToLocalFolder(
+          selectedPath,
+          `BACKUP-${galleryLabel}-${ts}.mjs`,
+        );
+      } catch (error) {
+        alert(`Backup could not be saved.\n\n${error.message}`);
+        return;
+      }
       setBackupMade(true);
       setRealBackupMade(true);
-      setLastAction(`Backup created for Turbo Mode — ${new Date().toLocaleTimeString()}`);
+      setLastAction(`Backup created for Turbo Mode in local-backups/gallery-editor — ${new Date().toLocaleTimeString()}`);
     }
     
     setTurboText(buildTurboText(current));
@@ -1459,6 +1638,9 @@ ${collectorNotes}`;
     
     // Save to database
     try {
+      if (currentClassification === "oim") {
+        await writeContentClassification(currentId, null);
+      }
       const payload = {
         datasetPath: selectedPath.replace(/^\//, ""),
         id: updatedItem.id,
@@ -2070,6 +2252,9 @@ ${collectorNotes}`;
     
     // Save to server
     try {
+      if (currentClassification) {
+        await writeContentClassification(currentId, null);
+      }
       const payload = {
         datasetPath: selectedPath.replace(/^\//, ""),
         id: currentId,
@@ -2138,6 +2323,9 @@ ${collectorNotes}`;
     
     // Save to server
     try {
+      if (currentClassification) {
+        await writeContentClassification(currentId, null);
+      }
       const payload = {
         datasetPath: selectedPath.replace(/^\//, ""),
         id: currentId,
@@ -2381,13 +2569,35 @@ ${collectorNotes}`;
         {/* Row 1: dataset select + status */}
         <div className="flex flex-wrap items-center gap-3 mb-2">
           <select
-            className="border rounded-md px-2 py-1 min-w-[22rem]"
+            className="border rounded-md px-2 py-1 min-w-[22rem] font-medium transition-colors"
             value={selectedPath}
             onChange={(e) => setSelectedPath(e.target.value)}
+            style={galleryOptionStyle(selectedPath)}
+            aria-label="Gallery dataset"
           >
-            {options.map((o) => (
-              <option key={o.path} value={o.path}>{o.label}</option>
-            ))}
+            {options.map((o, optionIndex) => {
+              const optionType = galleryOptionType(o.path);
+              const previousType = optionIndex > 0
+                ? galleryOptionType(options[optionIndex - 1].path)
+                : optionType;
+              return (
+                <Fragment key={o.path}>
+                  {optionIndex > 0 && optionType !== previousType ? (
+                    <option
+                      disabled
+                      aria-hidden="true"
+                      value={`__section-gap-${optionType}`}
+                      style={{ backgroundColor: "#ffffff", color: "transparent", fontSize: "5px" }}
+                    >
+                      {" "}
+                    </option>
+                  ) : null}
+                  <option value={o.path} style={galleryOptionStyle(o.path)}>
+                    {o.label}
+                  </option>
+                </Fragment>
+              );
+            })}
           </select>
 
           {backupMade ? (
@@ -2630,13 +2840,21 @@ ${collectorNotes}`;
                     {/* Content source indicator - always show */}
                     <span 
                       className={`absolute top-2 right-2 text-xs px-2 py-1 rounded ${
-                        contentSource === "ai" 
+                        currentClassification === "scout"
+                          ? "bg-emerald-100 border border-emerald-300 text-emerald-900"
+                          : currentClassification === "oim"
+                          ? "bg-amber-100 border border-amber-300 text-amber-900"
+                          : contentSource === "ai"
                           ? "bg-purple-100 border border-purple-300 text-purple-900" 
                           : "bg-blue-100 border border-blue-300 text-blue-900"
                       }`}
                       title={contentSource === "ai" ? "Content written by AI/Turbo Mode" : "Content written by human (or not yet processed)"}
                     >
-                      {contentSource === "ai" ? "🤖 AI" : "✍️ Human"}
+                      {currentClassification === "scout"
+                        ? "Scout · AI"
+                        : currentClassification === "oim"
+                        ? "OIM · Human"
+                        : contentSource === "ai" ? "🤖 AI" : "✍️ Human"}
                     </span>
                   </div>
                 ) : (
@@ -2665,6 +2883,13 @@ ${collectorNotes}`;
                   value={typeof current.rating === "number" ? current.rating : 0}
                   onChange={(n) => updateField("rating", n)}
                 />
+                <div className="mt-2 flex justify-start">
+                  <ContentClassificationButtons
+                    classification={currentClassification}
+                    contentSource={current.contentSource}
+                    onToggle={toggleContentClassification}
+                  />
+                </div>
               </div>
 
               <div>
@@ -2835,12 +3060,20 @@ ${collectorNotes}`;
                         {/* Content source indicator in turbo mode */}
                         <span 
                           className={`absolute top-2 right-2 text-xs px-2 py-1 rounded ${
-                            contentSource === "ai" 
+                            currentClassification === "scout"
+                              ? "bg-emerald-500 border border-emerald-400 text-gray-950"
+                              : currentClassification === "oim"
+                              ? "bg-amber-400 border border-amber-300 text-gray-950"
+                              : contentSource === "ai"
                               ? "bg-purple-500 border border-purple-400 text-white" 
                               : "bg-blue-500 border border-blue-400 text-white"
                           }`}
                         >
-                          {contentSource === "ai" ? "🤖 AI" : "✍️ Human"}
+                          {currentClassification === "scout"
+                            ? "Scout · AI"
+                            : currentClassification === "oim"
+                            ? "OIM · Human"
+                            : contentSource === "ai" ? "🤖 AI" : "✍️ Human"}
                         </span>
                       </div>
                     ) : (
@@ -2855,11 +3088,19 @@ ${collectorNotes}`;
                   </div>
                   
                   {/* Rating stars */}
-                  <div className="mt-3 flex items-center justify-center gap-2 p-2 bg-gray-800 rounded-lg">
-                    <span className="text-gray-400 text-sm">Rating:</span>
-                    <StarRating
-                      value={typeof current.rating === "number" ? current.rating : 0}
-                      onChange={(n) => updateField("rating", n)}
+                  <div className="mt-3 space-y-2 p-2 bg-gray-800 rounded-lg">
+                    <div className="flex items-center justify-center gap-2">
+                      <span className="text-gray-400 text-sm">Rating:</span>
+                      <StarRating
+                        value={typeof current.rating === "number" ? current.rating : 0}
+                        onChange={(n) => updateField("rating", n)}
+                      />
+                    </div>
+                    <ContentClassificationButtons
+                      classification={currentClassification}
+                      contentSource={current.contentSource}
+                      onToggle={toggleContentClassification}
+                      darkMode={true}
                     />
                   </div>
                   

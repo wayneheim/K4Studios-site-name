@@ -18,6 +18,34 @@ for (const file of files) {
 
 const browserRow = rows.find((row) => isV3CoreEvent(row));
 assert.ok(browserRow, 'archive must contain a confirmed browser row for order-action fixtures');
+const hostRoyaleAutomationRow = {
+  ...browserRow,
+  cf_asn: 207990,
+  ip: '119.12.207.126',
+  ip_hash: '119.12.207.126'
+};
+const paloAltoCrawlerRow = {
+  ...browserRow,
+  cf_asn: 3356,
+  ip: '205.169.39.57',
+  ip_hash: '205.169.39.57'
+};
+const ordinaryLevel3Row = {
+  ...browserRow,
+  cf_asn: 3356,
+  ip: '4.1.2.3',
+  ip_hash: '4.1.2.3'
+};
+assert.equal(isV3CoreEvent(hostRoyaleAutomationRow), false, 'HostRoyale AS207990 automation must stay out of core metrics');
+assert.equal(isV3CoreEvent(paloAltoCrawlerRow), false, 'Palo Alto 205.169.39.0/24 crawler traffic must stay out of core metrics');
+assert.equal(isV3CoreEvent(ordinaryLevel3Row), true, 'the rest of AS3356 must remain eligible for core metrics');
+for (const datacenterAsn of [9009, 18779, 30058, 44486, 396362]) {
+  assert.equal(
+    isV3CoreEvent({ ...browserRow, cf_asn: datacenterAsn }),
+    false,
+    `confirmed hosting ASN ${datacenterAsn} must stay out of core metrics`
+  );
+}
 const fixtureImageId = 'i-orderTrackingTest';
 const fixturePage = `/Galleries/Test/${fixtureImageId}`;
 const expeditionPage = '/Other/Expeditions/echoes-of-the-west-2026';

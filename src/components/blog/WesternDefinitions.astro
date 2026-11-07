@@ -13,7 +13,7 @@
 
 interface Props {
   variant?: "index" | "definition" | "post";
-  currentPage?: number; // 1-17, used to highlight current page in definition variant
+  currentPage?: number; // 1-20, used to highlight current page in definition variant
 }
 
 const { variant = "post", currentPage } = Astro.props;
@@ -137,6 +137,27 @@ const cornerstonePages = [
     title: "What Is Cinematic Western Art?",
     description: "Story-driven Western fine art built from atmosphere, tension, and implied story",
     group: "narrative"
+  },
+  {
+    number: 18,
+    href: "/Blog/what-is-contemporary-western-art",
+    title: "What Is Contemporary Western Art?",
+    description: "Present-day visual language connected to Western subject, history, landscape, and myth",
+    group: "frontier"
+  },
+  {
+    number: 19,
+    href: "/Blog/what-is-the-wild-west",
+    title: "What Is the Wild West?",
+    description: "The era, the geography, and the line between the lived West and the legend",
+    group: "frontier"
+  },
+  {
+    number: 20,
+    href: "/Blog/wild-west-american-frontier",
+    title: "Wild West American Frontier",
+    description: "The moving line of settlement, what it felt like from inside, and why it never really closed",
+    group: "frontier"
   }
 ];
 
@@ -271,6 +292,34 @@ const cornerstonePages = [
           <span class="num">17</span>
           <h3>What Is Cinematic Western Art?</h3>
           <p>Story-driven Western fine art built from atmosphere, tension, and implied story</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="cornerstone-group">
+      <div class="cornerstone-group-head">
+        <div class="cornerstone-group-title-row">
+          <h3>West &amp; Frontier</h3>
+          <span class="section-title-rule" aria-hidden="true"></span>
+        </div>
+        <p>Definitions separating the lived American West from the legends built on top of it.</p>
+      </div>
+
+      <div class="cornerstone-grid">
+        <a href="/Blog/what-is-contemporary-western-art" class="card">
+          <span class="num">18</span>
+          <h3>What Is Contemporary Western Art?</h3>
+          <p>Present-day visual language connected to Western subject, history, landscape, and myth</p>
+        </a>
+        <a href="/Blog/what-is-the-wild-west" class="card">
+          <span class="num">19</span>
+          <h3>What Is the Wild West?</h3>
+          <p>The era, the geography, and the line between the lived West and the legend</p>
+        </a>
+        <a href="/Blog/wild-west-american-frontier" class="card">
+          <span class="num">20</span>
+          <h3>Wild West American Frontier</h3>
+          <p>The moving line of settlement, what it felt like from inside, and why it never really closed</p>
         </a>
       </div>
     </section>

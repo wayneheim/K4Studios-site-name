@@ -26,18 +26,23 @@ export const galleryData = [
     "id": "i-fgkX7Jn",
     "title": "The Stream Remembers",
     "description": "A painterly fine art landscape photograph set within the forests of New England, where a narrow stream winds through moss-covered stone and shadowed trees. Rather than spectacle, the work emphasizes quiet continuity—light filtered through canopy, water softened into memory, and composition shaped by patience rather than drama.\n\nThis image reflects a restrained, atmospheric approach to landscape photography, treating place as emotional geography rather than destination. Light, tone, and movement converge to form a contemplative narrative rooted in stillness, time, and the enduring presence of the land. Part of the New England painterly landscape photography series. © Wayne Heim",
-    "alt": "Painterly forest stream flowing through mossy rocks and trees in New England, conveying quiet stillness and memory",
+    "alt": "Painterly forest stream flowing through mossy rocks and trees in West Virginia, conveying quiet stillness and memory",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-fgkX7Jn/A",
 
     "keywords": [
       "Northeast painterly landscapes",
-      "New England landscape art",
-      "autumn in New England",
       "forest stream photography",
+      "mossy rocks",
+      "woodland stream",
+      "forest brook",
+      "babbling brook",
+      "green forest",
+      "quiet stream",
+      "painterly landscape photography",
       "painterly fine art photography",
-      "see beauty in simplicity",
-      "The Northeast",
-      "painterly landscape photography"
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "It has passed this way longer than names have lasted.  \nOver stone, around roots, carrying the small weight of fallen leaves and the heavier weight of time.\n\nNothing here announces itself. The water does not hurry. The forest does not watch.  \nStill, something is kept—held in motion, not stillness—as if the stream remembers what the land once was, and what it will become again.",
@@ -56,20 +61,25 @@ export const galleryData = [
   },
   {
     "id": "i-7LZhFkc",
-    "title": "See Beauty In Simplicity",
+    "title": "Where the Water Thins",
     "description": "A painterly fine art landscape photograph set in the forests of New England, where a shallow stream flows over layered stone beneath autumn foliage. Rendered with deliberate restraint, the image favors texture, tonal harmony, and quiet balance over dramatic display.\n\nLight and composition guide the eye gently through the frame, allowing the scene to unfold slowly. Rather than documenting place, the work treats landscape as emotional geography—inviting reflection, patience, and stillness. Part of the New England painterly landscape photography series. © Wayne Heim",
-    "alt": "Painterly forest stream flowing over stone in autumn New England, emphasizing quiet simplicity and natural stillness",
+    "alt": "Painterly forest stream flowing over stone in autumn West Virginia, emphasizing quiet simplicity and natural stillness",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-7LZhFkc/A",
 
     "keywords": [
       "Northeast painterly landscapes",
-      "New England landscape art",
-      "autumn in New England",
+      "West Virginia",
+      "grist mill",
+      "mill stream",
       "forest stream photography",
-      "painterly fine art photography",
+      "rocky ledge",
+      "autumn foliage",
+      "sepia",
       "painterly landscape photography",
-      "see beauty in simplicity",
-      "The Northeast"
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "Nothing here insists on being noticed.  \nStone, water, and timber settle into one another without urgency, as they always have.\n\nThe stream moves quietly through the frame, not as a subject, but as a presence—uninterested in attention, content to continue.  \nWhat remains is not spectacle, but recognition: that meaning often lives in what is overlooked, steady, and unadorned.",
@@ -90,19 +100,25 @@ export const galleryData = [
     "id": "i-mSp9WgK",
     "title": "Autumn Holds Its Breath",
     "description": "A painterly fine art landscape photograph of a historic New England mill and waterfall during peak autumn, shaped by restraint rather than spectacle. Rather than documenting the scene, this work focuses on stillness — on the moment when water, stone, and fading color settle into quiet balance.\n\nLight, tone, and composition guide the viewer into a narrative rooted in memory and place, where time slows and atmosphere carries the weight of the image. Part of Wayne Heim’s New England landscape photography series. © Wayne Heim",
-    "alt": "Painterly fine art photograph of a historic New England mill and waterfall surrounded by autumn foliage, capturing stillness and seasonal transition.",
+    "alt": "Painterly fine art photograph of a historic West Virginia mill and waterfall surrounded by autumn foliage, capturing stillness and seasonal transition.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-mSp9WgK/A",
 
     "keywords": [
-      "New England landscape photography",
-      "painterly fine art photography",
+      "Northeast painterly landscapes",
+      "West Virginia",
+      "grist mill",
+      "historic mill",
       "autumn mill",
       "historic mill waterfall",
-      "fall foliage New England",
-      "fine art landscape",
+      "mill pond",
+      "waterfall",
+      "pond reflections",
+      "fall foliage",
       "painterly landscape photography",
-      "see beauty in simplicity",
-      "New England countryside art"
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The water slows here, not because it must — but because the season asks it to. Leaves hesitate in their fall. The mill waits, listening, as if the work once done might resume at any moment. Nothing moves quickly. Nothing needs to.\n\nThis is the pause between labor and rest — when autumn hasn’t yet decided what it will take with it.",
@@ -123,19 +139,23 @@ export const galleryData = [
     "id": "i-p5ghtLz",
     "title": "A Path Less Traveled",
     "description": "A painterly fine art landscape photograph set deep within a New England forest, where filtered light, stone, and a quiet stream shape a moment of discovery rather than spectacle. The composition emphasizes restraint — allowing shadow, texture, and subtle movement to guide the viewer inward.\n\nRather than documenting a location, the image explores atmosphere and passage — a place where the path forward is suggested, not declared. Light and tone work together to create a narrative rooted in stillness, reflection, and the quiet rhythm of the land. Part of Wayne Heim’s New England landscape photography series. © Wayne Heim",
-    "alt": "Painterly fine art photograph of a forest path and rocky stream in New England, with sunlight filtering through trees and creating a quiet sense of discovery.",
+    "alt": "Painterly fine art photograph of a forest path and rocky stream in West Virginia, with sunlight filtering through trees and creating a quiet sense of discovery.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-p5ghtLz/A",
 
     "keywords": [
-      "New England landscape photography",
-      "painterly fine art photography",
+      "Northeast painterly landscapes",
+      "West Virginia",
+      "Blackwater Falls",
+      "Davis",
       "forest stream",
       "woodland path",
-      "Vermont forest",
       "babbling brook",
+      "mossy rocks",
       "painterly landscape photography",
-      "see beauty in simplicity",
-      "Northeast landscape art"
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The forest doesn’t announce this place. It reveals it slowly.\n\nLight slips between trunks, catching stone and water only where it’s allowed. The stream doesn’t hurry. It bends, tests the ground, then moves on — leaving the sense that discovery here belongs only to those willing to slow down enough to notice it.\n\nThis is not a destination. It’s an invitation.",
@@ -156,20 +176,23 @@ export const galleryData = [
     "id": "i-FpmhtnM",
     "title": "A Narrow Permission",
     "description": "A painterly fine art landscape photograph from the Northeast, capturing a narrow wooden crossing over a forest stream, surrounded by moss, stone, and filtered woodland light. Rather than documenting scenery, this work treats place as emotional geography — shaped by restraint, balance, and quiet intention.\n\nLight, tone, and composition guide the eye gently through the frame, allowing the viewer to experience the land as a moment of permission rather than destination. The image reflects a philosophy of seeing — where simplicity, patience, and attention reveal meaning over time. Part of Wayne Heim’s Northeast painterly landscape photography series. © Wayne Heim",
-    "alt": "Painterly fine art landscape photograph of a narrow wooden path crossing a forest stream in the Northeast, surrounded by moss, trees, and soft filtered light.",
+    "alt": "Painterly fine art landscape photograph of a narrow wooden path crossing a forest stream in West Virginia, surrounded by moss, trees, and soft filtered light.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-FpmhtnM/A",
 
     "keywords": [
-      "Vermont",
-      "Northeast landscape photography",
+      "Northeast painterly landscapes",
+      "West Virginia",
+      "Blackwater Falls",
+      "Davis",
       "forest stream",
       "wooden path",
       "mossy forest",
-      "fine art painterly photography",
-      "painterly landscape photography",
-      "see beauty in simplicity",
       "quiet nature photography",
-      "New England landscape art"
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The path does not insist. It offers only enough space to continue.\n\nLight settles where it can, water moves where it must, and the forest neither invites nor refuses. You pass through because the land allows it — not because it asked you to.\n\nNothing here is grand. Nothing is wasted. The moment holds because it is small, deliberate, and complete.",
@@ -190,20 +213,23 @@ export const galleryData = [
     "id": "i-Jstk9Gx",
     "title": "Held by Moss",
     "description": "A painterly fine art landscape photograph from the forests of New England, shaped by stillness rather than spectacle. Moss-covered roots, filtered light, and flowing water create a quiet visual rhythm that emphasizes restraint, atmosphere, and presence over destination.\n\nRather than documenting scenery, this work explores the emotional geography of place — where light, texture, and composition guide the viewer into a slowed, contemplative experience. Part of Wayne Heim’s New England painterly landscape photography series, created to reward long viewing and subtle discovery. © Wayne Heim",
-    "alt": "Moss-covered forest floor with exposed roots and filtered sunlight in a quiet New England woodland, captured in painterly fine art landscape photography.",
+    "alt": "Moss-covered forest floor with exposed roots and filtered sunlight in a quiet West Virginia woodland, captured in painterly fine art landscape photography.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-Jstk9Gx/A",
 
     "keywords": [
-      "Vermont",
-      "New England landscape photography",
-      "painterly landscape photography",
-      "fine art forest photography",
+      "Northeast painterly landscapes",
+      "West Virginia",
+      "Blackwater Falls",
+      "Davis",
       "moss covered roots",
       "forest stream",
       "green forest",
-      "see beauty in simplicity",
-      "Northeast painterly landscapes",
-      "autumn in New England"
+      "fine art forest photography",
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The forest does not rush here.\n\nRoots spill across stone, water slips through shadow, and the light arrives only when invited. Nothing announces itself. The path is not marked — only suggested — and the ground seems to remember every footstep that chose patience over speed.\n\nThis is not a place you pass through. It is a place that holds you, quietly, until you move on.",
@@ -228,15 +254,21 @@ export const galleryData = [
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-NkNwLM6/A",
 
     "keywords": [
-      "painterly landscape photography",
-      "fine art waterfall photography",
+      "Northeast painterly landscapes",
+      "West Virginia",
+      "Blackwater Falls",
+      "Davis",
       "hidden waterfall",
       "forest stream",
       "moss covered rocks",
       "green forest",
-      "see beauty in simplicity",
-      "Northeast painterly landscapes",
-      "woodland waterfall art"
+      "fine art waterfall photography",
+      "woodland waterfall art",
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "You don’t arrive here by accident.\n\nThe forest closes in, the sound changes, and suddenly the water is there — not announced, not framed, simply continuing what it has always done. Light filters through leaves as if it found the place by chance, lingering just long enough to reveal it.\n\nSome places are not meant to be seen quickly. They reveal themselves only when you slow down enough to notice.",
@@ -262,15 +294,19 @@ export const galleryData = [
 
     "keywords": [
       "Northeast painterly landscapes",
-      "fine art landscape photography",
-      "painterly photography",
+      "West Virginia",
+      "Blackwater Falls",
+      "Davis",
       "forest waterfall",
       "hidden waterfall",
       "moss and stone",
       "quiet nature scene",
-      "see beauty in simplicity",
-      "The Northeast",
-      "painterly landscape art"
+      "the truth of a moment",
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "It isn’t concealed by accident.\n\nThe forest arranges itself—stone, moss, water, shadow—so the eye must slow before it can see. Nothing announces this place. You arrive only after the noise falls away, after intention replaces momentum.\n\nSome landscapes reveal themselves. Others require permission.",
@@ -289,7 +325,7 @@ export const galleryData = [
   },
   {
     "id": "i-cKsdqTs",
-    "title": "Beauty in Simplicity",
+    "title": "The Field Keeps One",
     "description": "A painterly fine art landscape photograph of the New England countryside, shaped by restraint rather than spectacle. Isolated trees rise from open ground beneath an expansive sky, allowing light, space, and proportion to define the scene.\n\nRather than documenting a location, this work treats landscape as emotional structure—where simplicity becomes strength and clarity replaces noise. Subtle tonal control and deliberate composition guide the viewer toward stillness, reflection, and presence. Part of the Northeast painterly landscape photography series. © Wayne Heim",
     "alt": "Minimal New England landscape with isolated trees and open sky in painterly style",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-cKsdqTs/A",
@@ -297,13 +333,14 @@ export const galleryData = [
     "keywords": [
       "Northeast painterly landscapes",
       "fine art landscape photography",
-      "painterly photography",
+      "painterly landscape photography",
       "New England landscape art",
       "Vermont countryside",
       "minimalist landscape",
-      "see beauty in simplicity",
       "autumn in New England",
-      "The Northeast"
+      "painterly fine art photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "Nothing competes for attention here.\n\nA single stand of trees, open ground, a sky allowed to breathe. The scene offers no demand—only an invitation to slow down and notice what remains when excess is stripped away.\n\nWhat endures is balance, light, and the quiet confidence of place.",
@@ -332,16 +369,18 @@ export const galleryData = [
       "painterly landscape photography",
       "abstract waterfall art",
       "New England landscape art",
-      "fine art painterly photography",
       "water and light",
       "geometric composition",
       "minimalist landscape photography",
-      "see beauty in simplicity",
-      "Northeast painterly landscapes"
+      "Northeast painterly landscapes",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "Nothing here is accidental.  \nWater chooses the edge, light chooses the angle, and gravity does the rest.  \nWhat remains is structure — quiet, deliberate, and briefly perfect.",
-    "notes": "This piece leans toward abstraction while remaining grounded in place. The strength of the work lies in its reduction — the way the scene is distilled into line, plane, and tonal contrast. The diagonal spillway acts as a compositional spine, guiding the eye while allowing the water to dissolve into softness. Influenced by modernist landscape studies and photographic minimalism, *Triangles* rewards prolonged viewing and pairs especially well with contemporary or architecturally clean spaces.",
+    "notes": "This piece leans toward abstraction while remaining grounded in place. The strength of the work lies in its reduction — the way the scene is distilled into line, plane, and tonal contrast. The diagonal spillway acts as a compositional spine, guiding the eye while allowing the water to dissolve into softness. Influenced by modernist landscape studies and photographic minimalism, Triangles rewards prolonged viewing and pairs especially well with contemporary or architecturally clean spaces.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -364,18 +403,21 @@ export const galleryData = [
     "keywords": [
       "Vermont",
       "abstract waterfall photography",
-      "fine art painterly photography",
       "painterly landscape photography",
       "abstract landscape art",
       "water spillway",
       "long exposure waterfall",
       "minimalist landscape photography",
       "geometric composition",
-      "fine art nature photography"
+      "fine art nature photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The water does not hesitate.  \nIt chooses a side, then keeps going.\n\nA quiet moment where motion and stillness share the same edge.",
-    "notes": "This work emphasizes reduction and control — a compositional approach that favors structure over scenery. The dominant diagonal acts as both subject and boundary, guiding the eye through contrast rather than detail. The image rewards slow viewing, revealing subtle tonal transitions and surface textures that elevate the piece beyond documentation into abstraction.",
+    "notes": "This work emphasizes reduction and control — a compositional approach that favors structure over scenery. The vertical edge does the compositional work, carrying the eye down the line where moving water gives up to stillness along one clean edge. The image rewards slow viewing, revealing subtle tonal transitions and surface textures that elevate the piece beyond documentation into abstraction.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -405,7 +447,10 @@ export const galleryData = [
       "New England landscape art",
       "painterly fine art photography",
       "woodland stream",
-      "atmospheric landscape"
+      "atmospheric landscape",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "It doesn’t rush.\nIt commits.\n\nOnce it starts down the hill, there’s no argument left—only gravity and time working out their agreement.",
@@ -430,15 +475,16 @@ export const galleryData = [
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-fGnNkBL/A",
 
     "keywords": [
-      "Northeast Painterly Landscapes",
-      "see beauty in simplicity",
-      "The Northeast",
+      "Northeast painterly landscapes",
       "autumn in new england",
       "new england landscape art",
-      "fine art painterly photography",
       "painterly landscape photography",
       "forest waterfall",
-      "Vermont landscape"
+      "Vermont landscape",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "Nothing here resists its own direction.  \nWater moves because it must, stone yields because it has learned to.  \nThe fall is not dramatic — only inevitable.",
@@ -463,15 +509,16 @@ export const galleryData = [
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-qrS5Ggc/A",
 
     "keywords": [
-      "Northeast Painterly Landscapes",
-      "see beauty in simplicity",
-      "The Northeast",
+      "Northeast painterly landscapes",
       "autumn in new england",
       "new england landscape art",
-      "fine art painterly photography",
       "painterly landscape photography",
       "forest waterfall",
-      "Vermont forest"
+      "Vermont forest",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "Nothing here announces itself.  \nColor gathers quietly — green layered on shadow, water threading through stone.  \nThe forest speaks in tones, not statements.",
@@ -496,15 +543,16 @@ export const galleryData = [
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-bqnctgw/A",
 
     "keywords": [
-      "Northeast Painterly Landscapes",
-      "see beauty in simplicity",
-      "The Northeast",
+      "Northeast painterly landscapes",
       "autumn in new england",
       "new england landscape art",
-      "fine art painterly photography",
       "painterly landscape photography",
       "forest waterfall",
-      "Vermont forest"
+      "Vermont forest",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "Everything above has already decided.  \nHere, the water commits — slipping from structure into motion, from form into release.  \nThe forest does not follow. It watches.",
@@ -529,15 +577,17 @@ export const galleryData = [
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-XzhTJPf/A",
 
     "keywords": [
+      "Northeast painterly landscapes",
       "New England painterly photography",
       "historic log cabin",
       "old cabin fine art",
       "painterly landscape photography",
       "early American homestead",
       "rustic architecture art",
-      "fine art photography New England",
-      "see beauty in simplicity",
-      "Northeast painterly landscapes"
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "It still stands, long after the voices have gone quiet.\n\nBoards darkened by years of wind and winter hold their position, as if leaving were never part of the plan. Whatever life once moved through these rooms did so slowly—measured by seasons, not clocks.\n\nThe house does not announce its history. It simply remains.",

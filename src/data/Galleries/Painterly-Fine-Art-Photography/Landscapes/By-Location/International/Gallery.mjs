@@ -46,7 +46,12 @@ export const galleryData = [
       "stormy landscape",
       "fantastic places",
       "atmospheric landscape photography",
-      "cinematic international landscapes"
+      "cinematic international landscapes",
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The land doesn’t announce itself here. It waits.\n\nWater moves through stone as if it has done so forever, unconcerned with being seen. The mountain stands apart — not dramatic, not distant — simply present, shaped by weather rather than time.\n\nNothing asks for attention. And yet, the longer you stay, the more it holds you there.",
@@ -85,7 +90,14 @@ export const galleryData = [
       "stormy landscape",
       "dramatic sky",
       "road through mountains",
-      "atmospheric landscape photography"
+      "atmospheric landscape photography",
+      "Faroe Islands photography",
+      "Faroe Islands",
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The road doesn’t lead anywhere in particular. It simply continues.\n\nClouds gather and separate without urgency, brushing the mountains as if deciding whether to stay. The land holds its posture — not dramatic, not inviting — patient in its own weather.\n\nYou pass through, but the place does not move with you. It remains, shaped by time, light, and waiting.",
@@ -122,11 +134,15 @@ export const galleryData = [
       "world landscapes fine art",
       "Iceland landscape photography",
       "waterfall",
-      "waterfalls",
       "rocks",
       "stormy landscape",
       "fantastic places",
-      "atmospheric landscape photography"
+      "atmospheric landscape photography",
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "Nothing here happens quickly.\n\nWater presses forward not with force, but with patience — finding the narrowest weakness and widening it over time. Stone resists, then yields, not dramatically, but inevitably.\n\nWhat remains is not motion, but the record of it.",
@@ -166,7 +182,12 @@ export const galleryData = [
       "fishing village",
       "coastal village",
       "stormy coastline",
-      "atmospheric landscape photography"
+      "atmospheric landscape photography",
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The houses lean into the weather as if they’ve learned its habits.\n\nNothing here is temporary — not the work, not the waiting, not the quiet agreements made with sea and sky. Water rises and recedes, and life adjusts without ceremony.\n\nWhat remains is not hardship, but endurance shaped into place.",
@@ -207,7 +228,12 @@ export const galleryData = [
       "fishing boat",
       "coastal landscape",
       "stormy shoreline",
-      "atmospheric landscape photography"
+      "atmospheric landscape photography",
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The work is finished for now.\n\nThe boat rests where the water left it, angled slightly away from the sea, as if listening for a call that does not come. Weather moves in its own time. Grass bends. The shore keeps what it’s been given.\n\nWhat remains is not abandonment, but pause — the quiet space between departures.",
@@ -247,7 +273,12 @@ export const galleryData = [
       "blue ice",
       "glacial ice",
       "ice formations",
-      "atmospheric landscape photography"
+      "atmospheric landscape photography",
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "Sound disappears first.\n\nLight slips through the ice in slow sheets, bending, cooling, losing its urgency. The world outside recedes until only color and pressure remain.\n\nHere, time does not move forward. It deepens.",
@@ -268,7 +299,7 @@ export const galleryData = [
     "id": "i-NH5PD4M",
     "title": "Stream to the Falls",
     "description": "Stream to the Falls is a painterly international landscape photograph focused on structure, direction, and the relationship between foreground movement and distant form. This fine art landscape image reflects Wayne Heim’s approach to international landscape photography — using natural elements to guide the viewer through space rather than relying on spectacle or scale.\n\nSubdued light and restrained color allow the composition itself to carry the narrative, emphasizing flow, distance, and continuity. Drawing from painterly European landscape traditions and contemporary fine art photography, the image presents landscape as a quiet system of movement and arrival. Part of Wayne Heim’s International – Across Borders series, this work invites slow viewing and sustained attention. © Wayne Heim",
-    "alt": "Painterly international landscape photograph of a glacial stream leading through a wide valley toward a distant waterfall under evening light, rendered in a cinematic European landscape art style.",
+    "alt": "Painterly international landscape photograph of a glacial stream leading through a wide valley toward a distant waterfall under evening light in Iceland, rendered in a cinematic European landscape art style.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery/i-NH5PD4M/A",
 
     "keywords": [
@@ -287,7 +318,14 @@ export const galleryData = [
       "valley landscape",
       "distant waterfall",
       "atmospheric landscape photography",
-      "fantastic places"
+      "fantastic places",
+      "Iceland landscape photography",
+      "Iceland",
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "Everything here is organized by movement.\n\nWater gathers quietly in the foreground, choosing a path and holding it. The land opens just enough to let it pass, guiding the eye forward without urgency. In the distance, the falls wait — not as destination, but as consequence.\n\nNothing rushes. The stream knows where it’s going.",
@@ -308,7 +346,7 @@ export const galleryData = [
     "id": "i-Rspf84k",
     "title": "Valley View",
     "description": "Valley View is a painterly international landscape photograph centered on structure, depth, and the quiet relationship between foreground movement and distant terrain. This fine art landscape image reflects Wayne Heim’s approach to international landscape photography — favoring clarity of composition and spatial flow over spectacle.\n\nLight and tone shape the scene into a measured progression from valley floor to glacier-capped ridge, allowing the land itself to guide the viewer. Drawing from painterly European landscape traditions, the image presents landscape as a system of form, distance, and continuity. Part of Wayne Heim’s International – Across Borders series. © Wayne Heim",
-    "alt": "Painterly international landscape photograph of a broad valley with a winding stream leading toward glacier-capped mountains and a distant waterfall under evening light.",
+    "alt": "Painterly international landscape photograph of a broad valley with a winding stream leading toward glacier-capped mountains and a distant waterfall under evening light in Iceland.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery/i-Rspf84k/A",
 
     "keywords": [
@@ -326,7 +364,14 @@ export const galleryData = [
       "glacial valley",
       "distant waterfall",
       "atmospheric landscape photography",
-      "fantastic places"
+      "fantastic places",
+      "Iceland landscape photography",
+      "Iceland",
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The valley opens without announcement.\n\nWater traces a narrow line through grass and stone, moving steadily toward what waits beyond sight. The ridges hold their distance, glacier and rock layered by time rather than drama.\n\nNothing competes. Everything settles into place.",
@@ -345,8 +390,8 @@ export const galleryData = [
   },
   {
     "id": "i-GGmGhkv",
-    "title": "Goðafoss – Iceland Waterfall Sunset",
-    "description": "Goðafoss – Iceland Waterfall Sunset is a painterly international landscape photograph captured as evening light passes across one of Iceland’s most enduring natural landmarks. This fine art landscape image reflects Wayne Heim’s approach to international landscape photography—treating iconic locations as atmospheric environments rather than spectacles.\n\nLight, tone, and composition shape a quiet narrative rooted in transition and presence, where sky, river, and falls exist in balance. Drawing from painterly European landscape traditions, the image emphasizes mood and structure over scale. Part of Wayne Heim’s International – Across Borders series. © Wayne Heim",
+    "title": "Goðafoss at Last Light",
+    "description": "Goðafoss at Last Light is a painterly international landscape photograph captured as evening light passes across one of Iceland’s most enduring natural landmarks. This fine art landscape image reflects Wayne Heim’s approach to international landscape photography—treating iconic locations as atmospheric environments rather than spectacles.\n\nLight, tone, and composition shape a quiet narrative rooted in transition and presence, where sky, river, and falls exist in balance. Drawing from painterly European landscape traditions, the image emphasizes mood and structure over scale. Part of Wayne Heim’s International – Across Borders series. © Wayne Heim",
     "alt": "Painterly international landscape photograph of Goðafoss waterfall at sunset, with wide cascading falls, reflective water, and dramatic evening clouds.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery/i-GGmGhkv/A",
 
@@ -365,11 +410,16 @@ export const galleryData = [
       "Iceland waterfall",
       "waterfall at sunset",
       "atmospheric landscape photography",
-      "fantastic places"
+      "fantastic places",
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The river widens, slows, and then commits.\n\nWater spreads across the rock as if weighing its options before letting go, catching the last light of the day in broken reflections. The falls do not dominate the land here—they complete it.\n\nEvening settles in layers: sky first, then water, then stone.",
-    "notes": "Goðafoss – Iceland Waterfall Sunset engages a long European tradition of depicting water as both structure and atmosphere, where light and flow define the emotional register more than sheer force. The wide composition allows the falls to read as part of a larger system—river, land, and sky held in equilibrium.\n\nRather than emphasizing drama, the image privileges timing and restraint. The sunset light becomes a unifying element, softening scale and inviting sustained viewing. This balance of recognition and quiet interpretation makes the work especially suited for collectors drawn to painterly international landscapes that honor place without overt dramatization.",
+    "notes": "Goðafoss at Last Light engages a long European tradition of depicting water as both structure and atmosphere, where light and flow define the emotional register more than sheer force. The wide composition allows the falls to read as part of a larger system—river, land, and sky held in equilibrium.\n\nRather than emphasizing drama, the image privileges timing and restraint. The sunset light becomes a unifying element, softening scale and inviting sustained viewing. This balance of recognition and quiet interpretation makes the work especially suited for collectors drawn to painterly international landscapes that honor place without overt dramatization.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -404,12 +454,19 @@ export const galleryData = [
       "night landscape photography",
       "atmospheric night scene",
       "eerie landscape",
-      "fantastic places"
+      "fantastic places",
+      "Newfoundland",
+      "Newfoundland landscape photography",
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The light feels borrowed.\n\nThe moon hangs low and too bright, flattening distance and pulling detail out of the dark where it might have preferred to stay hidden. Grass glows softly. Trees lose their edges. The land feels awake, but not welcoming.\n\nNothing moves — and yet it doesn’t feel still.",
     "notes": "Eerie Moon draws from European tonal and nocturne traditions, where night is used not to obscure form, but to reshape it. The moonlight becomes an active presence, flattening space and introducing psychological tension through illumination rather than shadow.\n\nThe image resists narrative resolution. Instead, it occupies a threshold — between calm and unease, familiarity and uncertainty. This subtle imbalance rewards prolonged viewing, making the work especially compelling for collectors drawn to painterly international landscapes that explore mood, perception, and the quiet disquiet of altered light.",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 9,
@@ -425,7 +482,7 @@ export const galleryData = [
     "id": "i-dXHvGd9",
     "title": "Cliffs into Open Water",
     "description": "Cliffs into Open Water is a painterly international landscape photograph focused on mass, edge, and the relationship between land and open sea. This fine art landscape image reflects Wayne Heim’s approach to international landscape photography—using structure and atmosphere to define place rather than spectacle or scale.\n\nMuted color, compressed distance, and restrained composition emphasize the transition from solid ground to open water, allowing weather and form to carry the narrative. Drawing from painterly European coastal traditions, the image presents the coastline as boundary and endurance rather than destination. Part of Wayne Heim’s International – Across Borders series. © Wayne Heim",
-    "alt": "Painterly international landscape photograph of sheer coastal cliffs extending into open ocean under heavy clouds, rendered in a cinematic European landscape art style.",
+    "alt": "Painterly international landscape photograph of sheer coastal cliffs extending into open ocean under heavy clouds in the Faroe Islands, rendered in a cinematic European landscape art style.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery/i-dXHvGd9/A",
 
     "keywords": [
@@ -444,12 +501,19 @@ export const galleryData = [
       "open ocean",
       "headlands",
       "atmospheric seascape",
-      "fantastic places"
+      "fantastic places",
+      "Faroe Islands photography",
+      "Faroe Islands",
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The land ends without apology.\n\nRock breaks cleanly into sea, holding its line while weather presses from above and water moves past without pause. Distance accumulates quickly here. What lies beyond the cliffs is not invitation, but continuation.\n\nThe coast does not gesture. It stands.",
     "notes": "Cliffs into Open Water reflects a European coastal landscape lineage where land is defined by its resistance to weather and time rather than by picturesque detail. The composition emphasizes vertical mass and lateral distance, allowing the cliffs to read as structural presence against the indifference of the sea.\n\nBy resisting dramatic emphasis, the image sustains a quiet tension between permanence and motion. The coast functions as boundary rather than viewpoint, rewarding prolonged viewing and making the work especially compelling for collectors drawn to painterly international landscapes grounded in structure, restraint, and endurance.",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 10,
@@ -465,7 +529,7 @@ export const galleryData = [
     "id": "i-WVGNqs6",
     "title": "Coastal Beacon",
     "description": "Coastal Beacon is a painterly international landscape photograph centered on function, elevation, and the relationship between human structure and exposed terrain. This fine art landscape image reflects Wayne Heim’s approach to international landscape photography—treating built forms as extensions of place rather than symbols or landmarks.\n\nRestrained color, upward perspective, and compressed sky emphasize the lighthouse’s role as a working presence shaped by environment and necessity. Drawing from painterly European coastal traditions, the image presents the beacon as infrastructure rather than icon. Part of Wayne Heim’s International – Across Borders series. © Wayne Heim",
-    "alt": "Painterly international landscape photograph of a lighthouse rising from a stone base on a coastal headland under heavy clouds, rendered in a cinematic European landscape art style.",
+    "alt": "Painterly international landscape photograph of a lighthouse rising from a stone base on a coastal headland under heavy clouds in the Faroe Islands, rendered in a cinematic European landscape art style.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery/i-WVGNqs6/A",
 
     "keywords": [
@@ -485,12 +549,19 @@ export const galleryData = [
       "headland",
       "North Atlantic coast",
       "atmospheric coastal landscape",
-      "fantastic places"
+      "fantastic places",
+      "Faroe Islands photography",
+      "Faroe Islands",
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The structure exists for one purpose.\n\nIt rises above stone and grass without ceremony, placed where weather gathers and visibility matters. The land falls away beneath it, while the sky presses close from all sides.\n\nThe light is not comfort. It is instruction.",
     "notes": "Coastal Beacon reflects a European coastal lineage in which human structures are defined by duty rather than symbolism. The composition emphasizes solidity and verticality, allowing the lighthouse to read as a functional response to weather, distance, and exposure.\n\nBy resisting romantic framing, the image maintains tension between permanence and vulnerability. The beacon stands not as monument, but as working architecture—an enduring presence shaped by repetition and necessity. This restraint makes the work especially compelling for collectors drawn to painterly international landscapes where purpose, environment, and form are inseparable.",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 11,
@@ -521,7 +592,12 @@ export const galleryData = [
       "alpine forest",
       "cinematic landscapes",
       "cinematic international landscapes",
-      "fantastic places"
+      "fantastic places",
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The water holds still long enough to reflect what it cannot contain.\n\nMountains rise without urgency, their weight settled into the horizon. Trees form a quiet boundary between land and distance, while light enters the scene without announcement.\n\nNothing here asks to be entered. It only allows standing.",
@@ -542,7 +618,7 @@ export const galleryData = [
     "id": "i-VPBt3XG",
     "title": "Snowbound Range",
     "description": "Snowbound Range is a painterly fine art landscape photograph focused on geological structure and permanence rather than spectacle. The composition emphasizes alignment, repetition, and restraint, allowing winter light and snow to simplify the scene into form and rhythm. Rather than presenting the mountains as an experience to be entered, the image treats them as a fixed presence—quiet, ordered, and indifferent to time. This work reflects a painterly international landscape approach rooted in observation, reduction, and long-view seeing. Part of an international painterly landscapes series. © Wayne Heim",
-    "alt": "Snow-covered mountain range with layered peaks and winter light in a painterly fine art landscape",
+    "alt": "Snow-covered mountain range with layered peaks and winter light in a painterly fine art landscape photograph of the Canadian Rockies.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery/i-VPBt3XG/A",
 
     "keywords": [
@@ -553,7 +629,21 @@ export const galleryData = [
       "cinematic landscapes",
       "world landscapes fine art",
       "european landscape art",
-      "International - Across Borders"
+      "International – Across Borders",
+      "Canadian Rockies",
+      "Canadian Rockies landscape",
+      "Banff",
+      "Jasper",
+      "snow-covered mountain range",
+      "layered peaks",
+      "winter light",
+      "mountain lake reflection",
+      "evergreen forest",
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The mountains hold their ground beneath winter, unchanged by season or scale. Snow sharpens the structure rather than softening it, revealing a disciplined order that exists without invitation or explanation. Nothing here performs. Everything endures.",
@@ -574,7 +664,7 @@ export const galleryData = [
     "id": "i-xfBNqVW",
     "title": "Winter Light",
     "description": "Winter Light is a painterly fine art landscape photograph centered on restraint, atmosphere, and the quiet interaction between light and form. Rather than presenting the scene as spectacle, the image allows winter light to filter naturally through the forest, shaping depth and mood through subtle contrast and tone. Snow and trees work together to soften scale while preserving structure, creating a composition rooted in observation rather than destination. This work reflects an international painterly landscapes approach that values reduction, patience, and long-view seeing over immediacy. Part of an international landscape photography series. © Wayne Heim",
-    "alt": "Winter sunlight filtering through snow-covered trees in a painterly fine art forest landscape",
+    "alt": "Winter sunlight filtering through snow-covered trees in a painterly fine art forest landscape photograph of the Canadian Rockies.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery/i-xfBNqVW/A",
 
     "keywords": [
@@ -585,7 +675,21 @@ export const galleryData = [
       "cinematic landscapes",
       "world landscapes fine art",
       "european landscape art",
-      "International - Across Borders"
+      "International – Across Borders",
+      "Canadian Rockies",
+      "Canadian Rockies landscape",
+      "Banff",
+      "Jasper",
+      "winter sunlight",
+      "snow-covered trees",
+      "snow-covered mountain range",
+      "winter forest",
+      "blue sky",
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "Light arrives quietly here, filtered through the trees rather than announced. Snow holds the ground in stillness while the forest breaks the sun into fragments—nothing dramatic, nothing staged. Just a moment where light passes through and moves on.",
@@ -606,7 +710,7 @@ export const galleryData = [
     "id": "i-gvz3xGb",
     "title": "River Cut",
     "description": "A painterly fine art landscape photograph capturing a powerful river cutting through layered stone in the Canadian Rockies. Shaped by permanence rather than spectacle, this work emphasizes erosion, pressure, and geological time over surface drama. Light, tone, and composition guide the viewer into the depth of the gorge, where water and rock collaborate in a quiet, enduring narrative. Part of an international painterly landscape photography series focused on places shaped slowly, relentlessly, and without witness. © Wayne Heim",
-    "alt": "River cutting through a deep rocky gorge beneath mountain light",
+    "alt": "River cutting through a deep rocky gorge beneath mountain light in a painterly fine art landscape photograph of the Canadian Rockies.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery/i-gvz3xGb/A",
 
     "keywords": [
@@ -615,8 +719,23 @@ export const galleryData = [
       "painterly international landscapes",
       "cinematic landscapes",
       "world landscapes fine art",
-      "International - Across Borders",
-      "fine art painterly photography"
+      "International – Across Borders",
+      "fine art painterly photography",
+      "Canadian Rockies",
+      "Canadian Rockies landscape",
+      "Banff",
+      "Jasper",
+      "river gorge",
+      "powerful river",
+      "layered stone",
+      "waterfalls",
+      "evergreen forest",
+      "snow-covered mountains",
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The river does not ask permission. It arrives already knowing where it will go, pressing itself into stone with a patience that feels endless.\n\nStanding at the edge, the sound rises first — not a roar, but a constant insistence. Water folding into itself, disappearing into shadow, reappearing farther down as if nothing in between mattered.\n\nThis is not a moment of spectacle. It is a reminder that time moves forward by subtraction, carving its meaning one inch at a time.",
@@ -637,7 +756,7 @@ export const galleryData = [
     "id": "i-WSVMnGx",
     "title": "At Rest",
     "description": "A painterly fine art landscape photograph capturing a quiet morning scene of boats resting on still water beneath drifting fog in the Canadian Rockies. Shaped by atmosphere rather than spectacle, this work emphasizes stillness, restraint, and the emotional geography of place. Light, tone, and composition guide the viewer into a moment suspended between night and day, where motion has not yet begun. Part of an international painterly landscape photography series focused on quiet presence and enduring calm. © Wayne Heim",
-    "alt": "Boats resting on calm water surrounded by fog and forest at dawn",
+    "alt": "Boats resting on calm water surrounded by fog and forest at dawn in a painterly fine art landscape photograph of the Canadian Rockies.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery/i-WSVMnGx/A",
 
     "keywords": [
@@ -646,8 +765,25 @@ export const galleryData = [
       "painterly international landscapes",
       "cinematic landscapes",
       "world landscapes fine art",
-      "International - Across Borders",
-      "fine art painterly photography"
+      "International – Across Borders",
+      "fine art painterly photography",
+      "Canadian Rockies",
+      "Canadian Rockies landscape",
+      "Banff",
+      "Jasper",
+      "red canoes",
+      "canoes",
+      "boats",
+      "calm water",
+      "fog",
+      "dawn",
+      "morning light",
+      "forested mountains",
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The boats are already here. The water has not decided to move yet.\n\nMorning arrives quietly, not as light but as presence — fog holding the surface in place, trees softened into suggestion. Nothing asks for attention. Nothing performs.\n\nThis is the hour before use, before intention, when the landscape exists only for itself.",
@@ -668,7 +804,7 @@ export const galleryData = [
     "id": "i-WKQS29t",
     "title": "Morning Shore",
     "description": "A painterly fine art landscape photograph capturing a calm shoreline scene in the Canadian Rockies, shaped by atmosphere rather than spectacle. Mist hangs low over still water as light settles gently across stone, forest, and reflection. The composition emphasizes restraint and quiet balance, allowing space, tone, and reflection to carry the narrative. Part of an international painterly landscape photography series focused on place as emotional geography rather than destination. © Wayne Heim",
-    "alt": "Foggy morning shoreline with still water, rocks, and mountain reflections",
+    "alt": "Foggy morning shoreline with still water, rocks, and mountain reflections in a painterly fine art landscape photograph of the Canadian Rockies.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery/i-WKQS29t/A",
 
     "keywords": [
@@ -680,8 +816,25 @@ export const galleryData = [
       "fine art painterly photography",
       "painterly european landscapes",
       "european landscape art",
-      "International - Across Borders",
-      "fantastic places"
+      "International – Across Borders",
+      "fantastic places",
+      "Canadian Rockies",
+      "Canadian Rockies landscape",
+      "Banff",
+      "Jasper",
+      "dawn",
+      "morning light",
+      "fog",
+      "mist",
+      "still water",
+      "mountain reflections",
+      "driftwood",
+      "rocky shore",
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "The lake is still, not because nothing has happened, but because the day has not yet decided to begin. Fog drifts low across the surface, softening distance and flattening sound. The mountains hold their shape quietly, reflected without urgency, as if the water itself is remembering them. This moment exists before movement, before footsteps, before the world resumes.",
@@ -702,7 +855,7 @@ export const galleryData = [
     "id": "i-ScxVg7H",
     "title": "The Lake Listens",
     "description": "A painterly fine art landscape photograph from the Canadian Rockies, shaped by atmosphere rather than spectacle. This work treats place as emotional geography — not destination, but presence. Light filters through mist and reflection, allowing stillness and restraint to guide the composition. Part of an international landscape photography body of work focused on quiet moments, painterly structure, and cinematic calm rather than overt drama. © Wayne Heim",
-    "alt": "Mist rising over a still mountain lake at dawn with reflections and soft morning light",
+    "alt": "Mist rising over a still mountain lake at dawn with reflections and soft morning light in a painterly fine art landscape photograph of the Canadian Rockies.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery/i-ScxVg7H/A",
 
     "keywords": [
@@ -710,7 +863,26 @@ export const galleryData = [
       "International Painterly Landscapes",
       "painterly international landscapes",
       "cinematic landscapes",
-      "world landscapes fine art"
+      "world landscapes fine art",
+      "International – Across Borders",
+      "fine art painterly photography",
+      "Canadian Rockies",
+      "Canadian Rockies landscape",
+      "Banff",
+      "Jasper",
+      "dawn",
+      "mist",
+      "still water",
+      "mountain reflections",
+      "morning light",
+      "evergreen trees",
+      "cabin",
+      "dock",
+      "painterly landscape photography",
+      "painterly fine art photography",
+      "fine art landscape photography",
+      "Wayne Heim",
+      "K4 Studios"
     ],
 
     "story": "Morning arrives without announcement.  \nNo footsteps, no voices — only breath rising off the water as the light begins to test the surface.\n\nThe lake does not respond.  \nIt listens.",
