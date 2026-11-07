@@ -14,7 +14,6 @@ import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
 import CornerstoneCollectionNav from "@/components/blog/CornerstoneCollectionNav.astro";
 import CornerstoneVisualBridge from "@/components/blog/CornerstoneVisualBridge.astro";
-import CornerstoneGalleryDoor from "@/components/blog/CornerstoneGalleryDoor.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
 import { getBreadcrumbList, getStructuredData } from "@/components/utils/getStructuredData.ts";
 
@@ -57,6 +56,16 @@ const sidePanelImage = {
   src: getProxySrc("i-NdQnj6P", "l"),
   alt: "Painterly Western portrait with atmospheric light, tonal layering, and narrative tension"
 };
+const historicalImage = {
+  id: "i-zHvS5jz",
+  src: getProxySrc("i-zHvS5jz", "l"),
+  alt: "Painterly Western photograph shaped through atmosphere and tonal control"
+};
+const practitionerImage = {
+  id: "i-MHGPvcs",
+  src: getProxySrc("i-MHGPvcs", "l"),
+  alt: "Three dollar whiskey rendered as painterly narrative photography"
+};
 
 const pageTitle = "What Is Painterly Photography? Definition and Meaning";
 const faqItems = [
@@ -88,6 +97,8 @@ const structuredImageUrls = [
   getAbsoluteProxySrc(image1.id, "l"),
   getAbsoluteProxySrc(image2.id, "l"),
   getAbsoluteProxySrc(image3.id, "l"),
+  getAbsoluteProxySrc(historicalImage.id, "l"),
+  getAbsoluteProxySrc(practitionerImage.id, "l"),
 ];
 
 const breadcrumbStructuredData = getBreadcrumbList(
@@ -270,8 +281,6 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         </div>
 
         <!-- SECTION 3: Modern Misuse -->
-        <CornerstoneGalleryDoor id="i-5j2Knmb" galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color" alt="Eye of the Hunt painterly Western photograph" caption="Eye of the Hunt — tone, atmosphere, and selective detail directing the eye." href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all" label="Browse Painterly Western Stories" align="left" />
-
         <div class="section-heading-with-line">
           <h2>Painterly Photography vs. Painterly Editing</h2>
         </div>
@@ -313,12 +322,12 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         </div>
 
         <!-- SECTION 4: Historical Meaning -->
-        <CornerstoneGalleryDoor id="i-zHvS5jz" galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color" alt="Painterly Western photograph shaped through atmosphere and tonal control" caption="The painterly image as authored fine art rather than an effect applied after capture." href="/Galleries/Painterly-Fine-Art-Photography" label="Explore Painterly Fine Art Photography" align="right" />
-
         <div class="section-heading-with-line">
           <h2>The Historical Meaning of Painterly Photography</h2>
         </div>
 
+        <div class="painterly-focus-grid">
+          <div class="painterly-focus-main">
         <p>The deeper meaning of painterly photography comes from <a href="/Pictorialist-Photography" style="color:#8b5a2b; text-decoration:underline;">pictorialist photography</a>, the late nineteenth- and early twentieth-century movement that argued photography could function as fine art rather than mechanical documentation.</p>
 
         <p>Pictorialist photographers believed the camera could function as an artistic medium rather than a recording device. Artists associated with the movement and its lineage, including Alfred Stieglitz, Gertrude Kasebier, Edward Steichen, Clarence H. White, F. Holland Day, and Julia Margaret Cameron, helped make the case that photographs could carry mood, authorship, and emotional interpretation. These pioneers:</p>
@@ -345,6 +354,19 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         </ul>
 
         <p>Painterly qualities are not added at the end. They are embedded from the beginning.</p>
+          </div>
+
+          <aside class="painterly-focus-side" aria-label="Painterly photography as authored fine art">
+            <figure>
+              <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${historicalImage.id}`}>
+                <img src={historicalImage.src} alt={historicalImage.alt} loading="lazy" />
+              </a>
+              <figcaption>
+                The painterly image as authored fine art rather than an effect applied after capture.
+              </figcaption>
+            </figure>
+          </aside>
+        </div>
 
         <!-- SECTION 2: Where It Fits -->
         <div class="section-heading-with-line">
@@ -386,12 +408,12 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         </div>
 
         <!-- SECTION 6: Practitioner's Perspective -->
-        <CornerstoneGalleryDoor id="i-MHGPvcs" galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color" alt="Three dollar whiskey rendered as painterly narrative photography" caption="$3 Whiskey — photographic reality reshaped through atmosphere and authorship." href="/Galleries/Painterly-Fine-Art-Photography" label="Explore Painterly Fine Art Photography" align="right" />
-
         <div class="section-heading-with-line">
           <h2>A Practitioner's Perspective</h2>
         </div>
 
+        <div class="painterly-focus-grid">
+          <div class="painterly-focus-main">
         <p>My work is grounded in this painterly tradition. As a fine art photographer and former medical illustrator, I approach photography as a constructed visual language rather than a passive recording process. Photography is the foundation; the finished work is art — camera-based painterly fine art: real photographs, painterly handling, narrative intent, made as contemporary Western art. The structural discipline once applied to anatomical rendering now guides my photographic work.</p>
 
         <p>Wayne Heim's approach to painterly photography begins with the camera. The camera records the moment; the artist shapes what remains. Drawing on the trained hand and eye of an award-winning illustrator, the final image is built through light, color, texture, atmosphere, focus, restraint, and human imagination.</p>
@@ -411,10 +433,21 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         <p>Each image is conceived as a story rather than a moment-a single frame drawn from a larger, unseen narrative.</p>
 
         <p>My primary subject is the American West: cowboy portraiture, frontier narrative, and Western landscapes. I also work with historically themed subjects, always with the same goal: To create photographs that function as fine art objects, not as documentation or stylistic effects.</p>
+          </div>
+
+          <aside class="painterly-focus-side" aria-label="Painterly photography in practice">
+            <figure>
+              <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${practitionerImage.id}`}>
+                <img src={practitionerImage.src} alt={practitionerImage.alt} loading="lazy" />
+              </a>
+              <figcaption>
+                $3 Whiskey — photographic reality reshaped through atmosphere and authorship.
+              </figcaption>
+            </figure>
+          </aside>
+        </div>
 
         <!-- SECTION 8: Why It Matters -->
-        <CornerstoneGalleryDoor id="i-VDLVwqr" galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color" alt="Painterly Western photograph shaped through tonal control" caption="Painterly handling used to deepen hierarchy, atmosphere, and emotional weight." href="/Galleries/Painterly-Fine-Art-Photography" label="Explore Painterly Fine Art Photography" align="left" />
-
         <div class="section-heading-with-line">
           <h2>Why the Painterly Approach Matters</h2>
         </div>
@@ -570,9 +603,6 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
     @media (max-width: 640px) {
       .story-section { padding-left: 1rem; padding-right: 1rem; }
       .story-block p, .story-block ul { line-height: 1.6; }
-      .painterly-focus-side {
-        order: -1;
-      }
     }
 
     @media (min-width: 980px) {
