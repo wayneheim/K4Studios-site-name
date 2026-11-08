@@ -1,9 +1,20 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import ImagePricingSummary from "./ImagePricingSummary.jsx";
 
 // ✅ Proxy URL helper - never expose SmugMug URLs to crawlers
 const getProxySrc = (id, size = "xl") => `/img/${id}/${size}.jpg`;
 
-export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor, isEngrained = false }) {
+export default function ZoomOverlay({
+  onClose,
+  onOrder,
+  imageData,
+  commerce,
+  collectionLabel,
+  matColor,
+  setMatColor,
+  isEngrained = false,
+  showLimitedPricing = true,
+}) {
   const [isMobile, setIsMobile] = useState(false);
   const [maxImageHeight, setMaxImageHeight] = useState(() =>
     Math.round(window.innerHeight * 0.8)
@@ -627,6 +638,16 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor,
               Contact Us
             </a>
           </div>
+          )}
+
+          {!isEngrained && (
+            <ImagePricingSummary
+              commerce={commerce}
+              collectionLabel={collectionLabel}
+              onOrder={onOrder}
+              compact
+              showLimited={showLimitedPricing}
+            />
           )}
         </div>
       </div>

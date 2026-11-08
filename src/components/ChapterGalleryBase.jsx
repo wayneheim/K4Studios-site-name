@@ -38,7 +38,15 @@ import "./ScrollFlipZoomStyles.css";
 import "../styles/global.css";
 import SwipeHint from "./SwipeHint";
 import LikeButton from "@/components/LikeButton.jsx";
-import { SERIES_DEFINITIONS, SERIES_ICONS, getEffectiveSeries, loadSeriesRegistry } from "../data/seriesDefinitions.js";
+import {
+  SERIES_DEFINITIONS,
+  SERIES_ICONS,
+  fetchPricingConfig,
+  getEffectiveSeries,
+  getExcludeSizesFromRegistry,
+  getSeriesPricingList,
+  loadSeriesRegistry,
+} from "../data/seriesDefinitions.js";
 import useHorizontalSwipeNav from "./hooks/useHorizontalSwipeNav.js";
 import { createPortal } from "react-dom";
 import useMetaSwap from "./hooks/useMetaSwap.js";
@@ -52,6 +60,7 @@ import { getImageDimensions } from "../utils/getImageDimensions.js";
 import { extractImageId, getSemanticImageUrl } from "../utils/imageProxy.js";
 import { sanitizeRepeatedSeoCopy } from "../utils/repetitiveSeoCopy";
 import { shouldUseNativeCollectionCart, shouldUseNativeMerchantCart } from "../config/commerce.js";
+import ImagePricingSummary from "./ImagePricingSummary.jsx";
 
 const ZoomOverlay = lazy(() => import("./ZoomOverlay.jsx"));
 const RebuiltScrollGrid = lazy(() => import("./RebuiltScrollGrid"));
@@ -459,12 +468,15 @@ export default function ChapterGalleryBase({
   // Load series registry immediately so series badges reflect assigned tiers on first page load.
   const hasDirectGalleryLoader = Boolean(directImagePayload?.currentImage && typeof loadFullGallery === "function");
   const [seriesRegistry, setSeriesRegistry] = useState(null);
+  const [summaryPricing, setSummaryPricing] = useState(null);
   const [nativeMerchantCartEnabled, setNativeMerchantCartEnabled] = useState(false);
   useEffect(() => {
     let cancelled = false;
 
-    loadSeriesRegistry().then((registry) => {
-      if (!cancelled) setSeriesRegistry(registry);
+    Promise.all([loadSeriesRegistry(), fetchPricingConfig()]).then(([registry, pricingConfig]) => {
+      if (cancelled) return;
+      setSeriesRegistry(registry);
+      setSummaryPricing(pricingConfig?.pricing || null);
     });
 
     return () => {
@@ -713,6 +725,17 @@ export default function ChapterGalleryBase({
   // Sister link logic - use state to avoid SSR/client mismatch
   const currentImageId = galleryData[currentIndex]?.id;
   const currentImageData = galleryData[currentIndex] || null;
+  const currentSeries = getEffectiveSeries(currentImageData, seriesRegistry);
+  const currentExcludeSizes = getExcludeSizesFromRegistry(currentImageData?.id, seriesRegistry);
+  const currentCommerce = isEngrainedSeries ? null : {
+    mode: "standard",
+    imageId: currentImageData?.id || "",
+    imageTitle: currentImageData?.title || "",
+    tiers: currentSeries.map((key) => ({
+      key,
+      pricing: getSeriesPricingList(key, summaryPricing, currentExcludeSizes) || [],
+    })),
+  };
   const chapterDoorwayLink = getChapterDoorwayLink(currentImageData, basePath);
   const currentImageDimensions = getImageDimensions(currentImageData) || getValidImageDimensions(currentImageData);
   const currentDisplayImageUrl = currentImageData
@@ -1387,10 +1410,22 @@ export default function ChapterGalleryBase({
           <Suspense fallback={null}>
             <ZoomOverlay
               imageData={galleryData[currentIndex]}
+              commerce={currentCommerce}
+              collectionLabel={sectionDisplayTitle}
               matColor={matColor}
               setMatColor={setMatColor}
               onClose={() => setIsZoomed(false)}
+              onOrder={() => {
+                setIsZoomed(false);
+                if (isEngrainedSeries) setShowPricingModal(true);
+                else setShowSeriesOrderModal(true);
+                track("order_clicked", {
+                  imageId: galleryData[currentIndex]?.id,
+                  trigger: "zoom_pricing_summary"
+                });
+              }}
               isEngrained={isEngrainedSeries}
+              showLimitedPricing={!isMerchantSketchVariant}
             />
           </Suspense>
         ) : (
@@ -2276,7 +2311,7 @@ export default function ChapterGalleryBase({
                     </section>
 
                     {/* More about this image - Tier 1 SEO pattern */}
-                    {(galleryData[currentIndex]?.description || galleryData[currentIndex]?.notes) && (
+                    {(galleryData[currentIndex]?.description || galleryData[currentIndex]?.notes || currentCommerce?.tiers?.length) && (
                       <>
                       <details 
                         className="more-about-image" 
@@ -2402,6 +2437,20 @@ export default function ChapterGalleryBase({
                           )}
 
                           {/* Featured in blog — links image → conversation post */}
+                          <ImagePricingSummary
+                            commerce={currentCommerce}
+                            collectionLabel={sectionDisplayTitle}
+                            showLimited={!isMerchantSketchVariant}
+                            onOrder={() => {
+                              if (isEngrainedSeries) setShowPricingModal(true);
+                              else setShowSeriesOrderModal(true);
+                              track("order_clicked", {
+                                imageId: galleryData[currentIndex]?.id,
+                                trigger: "more_info_pricing_summary"
+                              });
+                            }}
+                          />
+
                           {(() => {
                             if (isMerchantSketchVariant) return null;
                             const currentId = galleryData[currentIndex]?.id;
@@ -2434,7 +2483,7 @@ export default function ChapterGalleryBase({
                               data-k4-merchant-strip="related-navigation"
                               aria-label="Related image navigation"
                               style={{
-                                marginTop: '1rem',
+                                marginTop: '1.5rem',
                                 fontFamily: "'Glegoo', serif"
                               }}
                             >
@@ -2445,7 +2494,8 @@ export default function ChapterGalleryBase({
                                   letterSpacing: '0.11em',
                                   textTransform: 'uppercase',
                                   lineHeight: '1',
-                                  marginBottom: '0.45rem'
+                                  marginBottom: '0.6rem',
+                                  textAlign: 'center'
                                 }}
                               >
                                 Expand Your Journey
