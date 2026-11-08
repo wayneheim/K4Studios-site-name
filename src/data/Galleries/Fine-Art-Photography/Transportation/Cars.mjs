@@ -51,7 +51,7 @@ export const galleryData = [
       "transportation"
     ],
 
-    "story": "It is facing the camera. The green Hudson, chrome grille, round headlights, the hood ornament above, the Ohio historical vehicle plate below — and the whole car is centered, symmetrical, nose to the viewer, the grass and the cloudy sky behind it. The question is whether the Hudson is posing for a portrait or guarding the road, and whether the grille, chrome and smiling, is the car's face or only its front. The headlights are dark, and the plate says HISTORICAL VEHICLE, as if the car needed to prove it.",
+    "story": "It has been looked at all day — judges with clipboards, boys with opinions, one man who owned one in '51 and needed to say so. The Hudson takes it the way it takes weather. Head-on is its good side and it knows it; the plate underneath says historical, as if the car had ever agreed to be past tense.",
     "notes": "The grille is what makes this one. A green Hudson show car seen head-on — the chrome grille, the round headlights, the hood ornament above, the Ohio historical plate below, the grass and the cloudy sky behind it — and the chrome does the work: it catches the cloudy sky and turns the front of the car into a mirror. Collectors will point to the plate first — the Ohio historical plate is the print's clearest mark, the car wearing its history — and to the green, dark and polished, the color that makes the chrome shine. This is a print for someone who wants a classic American car looking back, and the grille is the reason it holds the wall.",
     "rating": 4,
     "galleries": [],
@@ -515,7 +515,7 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "The turquoise speaks first. Before the chrome registers, before the letters spell themselves out, the color is already doing the talking — a blue-green that has not faded a shade. The grille waits below, patient and bright, for the eyes to catch up with the paint.",
+    "story": "Somebody chose that color twice — once at the factory, and once decades later in a paint booth, when it would have been easier to choose anything else. That is the whole biography of this car: a color nobody would let fade, spelled out in chrome underneath it so you'd know whose idea it was.",
     "notes": "The color is the first thing a buyer will name. The turquoise hood — a blue-green that has not faded a shade — carries the name BUICK in individual chrome block letters, and the wide grille of horizontal slats with the round emblem at its center gives the chrome its structure. The two round headlights and the polished bumper frame the paint, and the tight close-up means the eye never leaves the front end. It is a piece that hangs like a color study and reads like the front of a car that never needed to move.",
     "rating": 4,
     "galleries": [],
@@ -684,7 +684,7 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "The globe at the center holds the whole sky in a curve of chrome. It is the one round thing in a frame of straight bars and raised wings, and it catches the light the way a planet would — while the name Terraplane waits just below it, spelled out for anyone who missed the point.",
+    "story": "The name promised the earth — Terraplane, a car for crossing it — and the globe on the grille is the promise kept small enough to polish. The hood stands open like the day is being aired out. Somewhere under the chrome there is still a machine that meant to go a long way on bad roads and mostly did.",
     "notes": "Closer is better, and this one proves it. The round chrome globe at the center of the Terraplane's grille catches the sky in a single curve, and the name Terraplane written just below it is the signature on the shine. The broad vertical-bar grille, the hood's raised panels standing like wings, and the black-and-white rendering keep the whole frame on chrome and line — no color, no distraction, only the car's best detail. It is a piece that hangs like an abstraction and reads like a car.",
     "rating": 4,
     "galleries": [],
@@ -1177,7 +1177,7 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "This one is a portrait, and it matters. The frame is tall, so the locomotive takes the top half and the car takes the bottom, and the stone bridge holds the two of them apart — the train's world above, the car's world below, and the bridge is the only thing they share. The engineer is in the cab, looking down. The car is on the road, looking ahead. They are not going to meet. They do not need to. The frame holds the moment when the two of them are stacked, one above the other, and the stone bridge is the only thing holding them together.",
+    "story": "Twice a day the train takes the bridge and the road takes the ditch underneath it, and the two old machines pass without ceremony — iron over stone, rubber under it. The engineer has seen this car before. The driver has heard this engine before. Neither one hurries. There is a whole century stacked in this frame, and it is in no rush at all.",
     "notes": "The tall frame is the whole point of this one. The portrait format stacks the locomotive above and the car below — the black East Broad Top No. 16 and its tender filling the top half, the stone bridge holding the middle, and the black vintage sedan on the road beneath it — and the vertical is what makes a buyer see the scale. The smoke from the stack gives it the sky, the engineer in the cab gives it a person, and the car's chrome grille and round headlights give it the road. It is two machines and a bridge, in black and white, and the height is the reason it holds a wall.",
     "rating": 4,
     "galleries": [],
@@ -1299,7 +1299,7 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "The gloves are the tell. She is leaning out of a teal convertible, smiling straight at the camera, and she is wearing white gloves — not driving gloves, not work gloves, but white gloves, the kind you wear when you are going somewhere that matters. The man beside her is driving, and he is not looking at the camera. She is. The red of her top, the white of her gloves, the teal of the car — the frame is all color, and she is the brightest thing in it.",
+    "story": "The gloves were for wherever they are going — a place with a door and a host and opinions. She is dressed for the arrival; he is dressed for the drive. Halfway there, with the top's world still rushing past, she leans out and gives the camera the version of her the evening was supposed to get first.",
     "notes": "The gloves are the first thing a buyer will name. The young woman leaning out of the teal convertible is wearing white gloves — not driving gloves, but white gloves, the kind you wear when you are going somewhere that matters — and the red of her top and the white of her jacket make her the brightest thing in the frame. The man in the tan shirt gives it the driver, the teal paint and the chrome trim give it the car, and the color gives it the whole mood. It is a passenger, photographed in the brightest color of the set, and the gloves are the reason it holds a wall.",
     "rating": 4,
     "galleries": [],
@@ -1498,7 +1498,7 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "The chrome is the part that did not give up. The hood is rust, the paint is faded, the whole car is weathered — but the grille is still chrome, and the bumper is still chrome, and the headlights are still round and clear. The second car behind it is the same story, in a different color, out of focus the way a memory is out of focus. The car in front is not going anywhere. The chrome is still there. That is the whole photograph.",
+    "story": "The paint gave up years ago and the chrome never got the news. Whatever this car was promised in 1964, the grille is still keeping its half of it — bright, straight, unembarrassed — while the hood tells the truer story in rust. Two cars deep, the same argument: what rusts first is the color. What lasts is the shine somebody bothered with.",
     "notes": "The chrome is what saves this one. The hood is rust and the paint is faded, but the chrome grille and the dual round headlights and the bumper are still there, catching the desert light, and they are the reason a buyer will stop. The second rusty red car behind it gives the frame its depth, the bright blue sky gives it the light, and the close crop gives it the scale. It is rust and chrome, in the same frame, and the chrome is the reason it holds a wall.",
     "rating": 4,
     "galleries": [],
@@ -1539,7 +1539,7 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "The purple is the whole frame. A 1955 Chevrolet, and it was purple — not red, not blue, but purple, a color you almost never see on a car — and now the purple is fading, and the rust is taking it, patch by patch. The grille is still chrome. The headlights are still round. The bowtie is still there. But the purple is going, and the frame holds it while it is still here.",
+    "story": "Purple was a decision. In 1955 somebody stood in a showroom full of safe colors and pointed at this one, and the car has been explaining itself ever since — at drive-ins, at weddings, and now here, to the rust, which is winning the argument one patch at a time. The bowtie is still on straight. The explanation continues.",
     "notes": "The purple is the first thing a buyer will name. A rusty 1955 Chevrolet Bel Air, and it was purple — a color you almost never see on a car — and the faded purple and rust on the hood make the frame unforgettable. The wide horizontal-bar grille and the bowtie give it the name, the dual round headlights and the chrome bumper give it the face, and the bright blue sky with its white clouds gives it the light. The other rusty cars behind it give the frame its depth, and the color gives it the whole mood. It is a purple car, fading to rust, and the purple is the reason it holds a wall.",
     "rating": 4,
     "galleries": [],
@@ -1925,7 +1925,7 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Up close, the DeSoto is not a car anymore. It is a wall of vertical chrome bars, and the headlights are two round windows, and the rust on the hood is a roof. The wrench on the bumper is the only thing in the frame that is small enough to pick up, and it is lying there as if someone put it down and walked away. The sky above is the darkest of the whole set, and the wagon wheel is still at the edge, and the dark blue car is still at the other edge. The grille fills the frame, and the frame is not big enough for the car.",
+    "story": "The wrench gives it away. Somebody was working on this car — recently, by the look of the rust it hasn't joined yet — and walked off mid-job, the way men walk off from DeSotos: confident they'll be back by supper. The grille waits at the size of a wall. Cars this size don't doubt you'll return. They can afford not to.",
     "notes": "A grille this close is a different photograph. The rusty DeSoto fills the frame head-on, its wide vertical-bar chrome grille and two large round headlights looming, its hood gone to rust and patina above, a chrome bumper and a rusty wrench below — the only thing in the frame small enough to pick up. The dark stormy sky gives the frame its mood, the wagon wheel at the right edge and the dark blue car at the left give it its company, and the gravel gives it its ground. It is the companion to the wider DeSoto view, and it holds a wall on its own: a grille so close it becomes a wall, and a storm coming on behind it.",
     "rating": 4,
     "galleries": [],

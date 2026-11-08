@@ -699,7 +699,7 @@ export const galleryData = [
       "transportation"
     ],
 
-    "story": "The propeller hangs straight down, still. Three blades, dark with yellow tips, and behind them the cowling — the round emblem, the letters U.S. AIR FORCE half-hidden behind a blade. The wing fills the right of the frame, grey and riveted, and below it a tarmac, a grassy field, an orange fence, a cloudy sky. The engine is off. The question is whether the Dandy is waiting to fly or has only just come home, and whether the name the propeller is covering is the whole story or only half of it.",
+    "story": "An engine at rest is just a list of everything it does when it isn't. The blade hangs over the letters like a hand over a mouth — U.S. AIR FORCE, half said. Crews read this cowling the way you read a face you have worked beside for years: every stencil earned, every panel a year. It will say the rest when it turns over.",
     "notes": "The yellow propeller tip is what people notice first. A silver engine cowling with its round emblem and U.S. AIR FORCE lettering half-hidden behind a propeller blade, the grey wing rising beside it, a tarmac and a grassy field below — and the color is muted, faded, the yellow tip the one bright mark in the frame. The propeller does the rest: three blades, one hanging straight down toward the ground, the engine off, the whole machine at rest. Collectors will point to the lettering first — the black letters on silver, half-covered by the blade, are the print's clearest mark — and to the way the portrait format makes the engine feel larger than the aircraft. This is a print for someone who wants a warbird at rest, and the engine is the whole story.",
     "rating": 4,
     "galleries": [],
@@ -753,7 +753,7 @@ export const galleryData = [
       "transportation"
     ],
 
-    "story": "The emblem is small — a circle on the nose, a mark no bigger than a dinner plate — and it is the only thing on the Dandy that belongs to a person. The rest is machine: the silver nose, the radial engine, the three propeller blades, the wing above, all in grey, all at rest, the sky cloudy behind it. The emblem says the aircraft had a name, and a crew, and a habit. The question is whether the mark is a decoration or a signature — a joke the crew put on the machine, or the machine's own face — and whether the grey makes the Dandy more of a relic or more of a truth.",
+    "story": "The emblem is the size of a dinner plate and it took a crew to put it there — a name, a joke, a claim staked in paint on a machine the Air Force owned. In black and white the Dandy stops being a showpiece and goes back to being what the emblem says it is: somebody's airplane, kept the way you keep a thing that brought your friends home.",
     "notes": "The nose art is what people find first. A silver nose and radial engine in black and white — the three-bladed propeller at rest, the small emblem on the nose, the wing above, a cloudy sky — and the grey does the work: it takes the color out of the Dandy and leaves only the machine, the form, the metal. Collectors will point to the propeller first — the three blades, sharp against the sky, are the print's clearest shape — and to the emblem on the nose, the one personal mark on a military aircraft. This is a print for someone who wants a warbird as a monument, and the grey is the whole reason it holds the wall.",
     "rating": 4,
     "galleries": [],
@@ -975,7 +975,7 @@ export const galleryData = [
       "transportation"
     ],
 
-    "story": "The engine is a circle. A ring of cylinders, the cowling weathered and riveted, the glass dome above it, and the propeller blades crossing the circle — dark, with yellow stencils, one pointing up, one hanging down. The frame is shot from below, looking up at the machine that flies, and the engine fills the whole portrait. The question is whether the circle is a sun or a wheel, a heart or only a machine, and whether the engine is about to turn or has only just stopped. The blades are still — and the stillness is the whole answer.",
+    "story": "From underneath, an engine is all heart — a ring of iron built to beat in circles, with a glass eye on top for the man who aimed it. Mechanics know this view the way sailors know a hull: from below, in the weather, on their backs. The stillness is temporary. Everything about the circle says so.",
     "notes": "The propeller blades are what make this one. A WWII bomber's radial engine seen from below — the ring of cylinders, the weathered cowling, the dark blades with their yellow stencils crossing the circle, the glass dome of the gun turret above — and the low angle makes the engine loom overhead, larger than the aircraft, the machine's heart filling the frame. Collectors will point to the cowling first — the weathered metal and rivets are the print's clearest texture — and to the blades, dark against the sky, still. This is a print for someone who wants the machine itself, and the engine is the whole story.",
     "rating": 4,
     "galleries": [],
@@ -1021,7 +1021,7 @@ export const galleryData = [
       "transportation"
     ],
 
-    "story": "The bomber is facing the camera. The glass nose, the cockpit above it, the chin turret below it, the two radial engines on either side with their propellers still — and the whole aircraft is centered, symmetrical, nose to the viewer, the tarmac and the trees behind it. The question is whether the bomber is posing or warning, and whether the glass nose is the aircraft's eye or only its window — and whether the machine that faces you head-on is the same machine that flies away.",
+    "story": "Head-on is how the crews knew her — coming down the taxiway at dawn with the glass lit and the props turning slow, four engines clearing their throats. Parked, she keeps the posture: nose up, eyes open, the whole front of her built for looking at weather and going anyway. The tarmac is just where she waits between weathers.",
     "notes": "The symmetry is what makes this one. A B-17 Flying Fortress seen head-on — the glass bombardier nose, the cockpit canopy above it, the chin turret below, the two radial engines with their still propellers on either side, the tarmac and the trees behind — and the symmetry is the print's whole setting: the bomber centered, mirrored, nose to the viewer, the aircraft and the frame in balance. Collectors will point to the glass nose first — the transparent bombardier nose is the print's clearest mark, the thing that says Fortress — and to the propellers, dark and still, framing the nose. This is a print for someone who wants a warbird looking back, and the facing is the reason it holds the wall.",
     "rating": 4,
     "galleries": [],

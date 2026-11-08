@@ -116,7 +116,7 @@ export const galleryData = [
       "museum ship"
     ],
 
-    "story": "The bow is the part that goes first. It is the front of the submarine — the part that enters the water first, the part that faces whatever is ahead, and the part that carries the torpedo tubes, the openings in a neat row along the hull that are the reason the boat is a warship and not a transport. The rest of the vessel is behind the bow, out of the frame, and the water is the only thing the bow is meeting. What the frame never settles is whether the bow is coming or going: it cuts the water the same way in either direction, and the storm clouds above it are too dark to say whether the boat is on its way out or on its way home. The bow leads, and the bow returns last.",
+    "story": "A bow is a promise about direction. This one's was made in wartime, in a hurry, with tubes in it — and the promise outlived the war, the crew, and the ocean it was pointed at. Now it rides at museum depth: awash, unhurried, still the first part of the boat to arrive anywhere, including history.",
     "notes": "The bow fills the frame, and that is the point. The close crop means there is no horizon, no sky to speak of — just steel and water — so the viewer is forced to look at the vessel the way a sailor would: up close, at the part that does the work. The black and white does the rest, stripping the color out so the hull's form and the texture of its steel are all that is left, and the row of circular openings along the bow gives the picture a rhythm that no wide shot could. It is the most sculptural print in the Military group, and the one that hangs like a piece of machinery in a gallery.",
     "rating": 4,
 

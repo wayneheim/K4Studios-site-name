@@ -19,6 +19,7 @@ import FAQAccordion from "@/components/FAQAccordion.jsx";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
 import CornerstoneCollectionNav from "@/components/blog/CornerstoneCollectionNav.astro";
+import KeywordLinkedArticle from "@/components/blog/KeywordLinkedArticle.astro";
 import CornerstoneVisualBridge from "@/components/blog/CornerstoneVisualBridge.astro";
 import CornerstoneGalleryDoor from "@/components/blog/CornerstoneGalleryDoor.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
@@ -235,6 +236,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
     <!-- Article Content -->
     <section class="story-section max-w-[860px] mx-auto px-4">
+      <KeywordLinkedArticle pagePath={sectionPath}>
       <article class="story-block space-y-4">
 
         <div class="disambiguation-note">
@@ -269,6 +271,21 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         </div>
 
         <div class="painterly-focus-grid">
+          <aside class="painterly-focus-side" aria-label="Ranch hand — the real West behind the legend">
+            <figure>
+              <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color">
+                <img
+                  src={image4.src}
+                  alt={image4.alt}
+                  loading="lazy"
+                />
+              </a>
+              <figcaption>
+                Before the cowboy became a cultural icon, frontier labor and endurance defined the figure Western art would later mythologize.
+              </figcaption>
+            </figure>
+          </aside>
+
           <div class="painterly-focus-main">
             <p>The transformation from laborer to legend came later.</p>
 
@@ -291,28 +308,14 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
             <p>These ideas still resonate today because they are not just historical—they are psychological. The West represents the possibility of starting over, of carving a life from uncertainty, of facing danger with resolve. That mythology remains deeply embedded in American identity.</p>
           </div>
 
-          <aside class="painterly-focus-side" aria-label="Ranch hand — the real West behind the legend">
-            <figure>
-              <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color">
-                <img
-                  src={image4.src}
-                  alt={image4.alt}
-                  loading="lazy"
-                />
-              </a>
-              <figcaption>
-                Before the cowboy became a cultural icon, frontier labor and endurance defined the figure Western art would later mythologize.
-              </figcaption>
-            </figure>
-          </aside>
         </div>
 
         <!-- SECTION 4: The Cowboy as Icon -->
-        <CornerstoneGalleryDoor id="i-Rx5gLJz" galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Cowboy-Portraits/Color" alt="Painterly portrait of a Western cowboy" caption="The cowboy treated as a person before an icon." href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Cowboy-Portraits/Color/all" label="Browse Western Cowboy Portraits" align="left" />
-
         <div class="section-heading-with-line">
           <h2>The Cowboy as Cultural Icon</h2>
         </div>
+
+        <CornerstoneGalleryDoor id="i-Rx5gLJz" galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Cowboy-Portraits/Color" alt="Painterly portrait of a Western cowboy" caption="The cowboy treated as a person before an icon." href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Cowboy-Portraits/Color/all" label="Browse Western Cowboy Portraits" align="left" />
 
         <p>The cowboy did not ride into the West as a legend. He became one.</p>
 
@@ -385,6 +388,21 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         </div>
 
         <div class="painterly-focus-grid">
+          <aside class="painterly-focus-side" aria-label="Western landscape as emotional environment">
+            <figure>
+              <a href="/Galleries/Painterly-Fine-Art-Photography/Landscapes">
+                <img
+                  src={image2.src}
+                  alt={image2.alt}
+                  loading="lazy"
+                />
+              </a>
+              <figcaption>
+                Contemporary Western art can use landscape as emotional setting, shifting attention from spectacle toward memory, mood, and lived experience.
+              </figcaption>
+            </figure>
+          </aside>
+
           <div class="painterly-focus-main">
             <p>The Western canon is still dominated by myth—the heroic cowboy, the dramatic charge, the romantic sunset. These icons remain the public face of the genre.</p>
 
@@ -401,20 +419,6 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
             <p>This evolution does not erase the myth. It adds to it—expanding the Western tradition beyond spectacle and into reflection, ambiguity, and human experience.</p>
           </div>
 
-          <aside class="painterly-focus-side" aria-label="Western landscape as emotional environment">
-            <figure>
-              <a href="/Galleries/Painterly-Fine-Art-Photography/Landscapes">
-                <img
-                  src={image2.src}
-                  alt={image2.alt}
-                  loading="lazy"
-                />
-              </a>
-              <figcaption>
-                Contemporary Western art can use landscape as emotional setting, shifting attention from spectacle toward memory, mood, and lived experience.
-              </figcaption>
-            </figure>
-          </aside>
         </div>
 
         <!-- SECTION 8: Western Art Today -->
@@ -423,6 +427,21 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         </div>
 
         <div class="painterly-focus-grid">
+          <aside class="painterly-focus-side" aria-label="Character portrait from the Western fine art tradition">
+            <figure>
+              <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color">
+                <img
+                  src={image3.src}
+                  alt={image3.alt}
+                  loading="lazy"
+                />
+              </a>
+              <figcaption>
+                A weathered cowboy portrait carries hardship, consequence, and endurance forward into contemporary Western fine art.
+              </figcaption>
+            </figure>
+          </aside>
+
           <div class="painterly-focus-main">
             <p>Contemporary Western art continues to evolve.</p>
 
@@ -444,20 +463,6 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
             <p>For visitors looking for the collector or room-facing side of that tradition, the related <a href="/Western-Wall-Art" style="color:#8b5a2b; text-decoration:underline;">Western wall art and Western art prints</a> page gathers the same visual language into a practical path for finished works.</p>
           </div>
 
-          <aside class="painterly-focus-side" aria-label="Character portrait from the Western fine art tradition">
-            <figure>
-              <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color">
-                <img
-                  src={image3.src}
-                  alt={image3.alt}
-                  loading="lazy"
-                />
-              </a>
-              <figcaption>
-                A weathered cowboy portrait carries hardship, consequence, and endurance forward into contemporary Western fine art.
-              </figcaption>
-            </figure>
-          </aside>
         </div>
 
         <div class="section-heading-with-line">
@@ -505,6 +510,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         </ul>
 
       </article>
+      </KeywordLinkedArticle>
     </section>
 
     <!-- Western Art Series Navigation -->
@@ -645,12 +651,14 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
     }
   }
 
-  /* Painterly two-column image panels */
+  /* Artwork panels use the cornerstone template's wrap-under flow. */
   .painterly-focus-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
+    display: flow-root;
     margin-top: 0.25rem;
+  }
+  .painterly-focus-side {
+    width: min(100%, 420px);
+    margin: 0.75rem auto 1.25rem;
   }
   .painterly-focus-main p,
   .painterly-focus-main li {
@@ -679,20 +687,14 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
     font-style: italic;
     line-height: 1.35;
   }
-  @media (min-width: 980px) {
-    .painterly-focus-grid {
-      grid-template-columns: minmax(0, 1fr) 322px;
-      gap: 2.4rem;
-      align-items: start;
-      margin-top: 0.8rem;
-    }
+  @media (min-width: 769px) {
     .painterly-focus-side {
-      position: sticky;
-      top: 4.25rem;
-      align-self: start;
+      float: right;
+      width: 322px;
+      margin: 1rem 0 1.5rem 2.4rem;
     }
     .painterly-focus-side figure {
-      margin-top: 1rem;
+      margin-top: 0;
     }
   }
 </style>

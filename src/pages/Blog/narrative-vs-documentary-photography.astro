@@ -6,6 +6,7 @@ import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
 import CornerstoneCollectionNav from "@/components/blog/CornerstoneCollectionNav.astro";
+import KeywordLinkedArticle from "@/components/blog/KeywordLinkedArticle.astro";
 import CornerstoneVisualBridge from "@/components/blog/CornerstoneVisualBridge.astro";
 import CornerstoneGalleryDoor from "@/components/blog/CornerstoneGalleryDoor.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
@@ -149,6 +150,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
     />
 
     <section class="story-section max-w-[860px] mx-auto px-4">
+      <KeywordLinkedArticle pagePath={sectionPath}>
       <article class="story-block space-y-4">
         <p style="font-size:0.95rem; color:#666; margin-bottom:1.5rem; font-style:italic;">
           Both can use the same subjects and the same camera. They diverge in what the image is built to do.
@@ -174,13 +176,13 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
           <h2>What Narrative Photography Does</h2>
         </div>
 
+        <CornerstoneGalleryDoor id="i-nWsP2r2" galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War/Color" alt="Civil War photograph shaped beyond documentary record" caption="Historical evidence held open through authored atmosphere." href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all" label="See Narrative Photography in Practice" align="left" />
+
         <p>Narrative photography begins where the image is built to carry more than evidence. It still may arise from real life, real subjects, or historical truth. But the frame is shaped so that atmosphere, implication, and emotional consequence keep working after the visible facts are understood.</p>
 
         <p>The narrative image says: remain here a little longer. There is more life pressing against this moment than the eye can settle in one pass.</p>
 
         <p>This is one reason narrative photography often overlaps with images that feel more like moving stories than fixed records. At K4 Studios, that single-frame narrative pressure is gathered under the <a href="/Other/One-Image-Movie" style="color:#8b5a2b; text-decoration:underline;">One-Image Movie™</a> idea.</p>
-
-        <CornerstoneGalleryDoor id="i-nWsP2r2" galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War/Color" alt="Civil War photograph shaped beyond documentary record" caption="Historical evidence held open through authored atmosphere." href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all" label="See Narrative Photography in Practice" align="left" />
 
         <div class="section-heading-with-line">
           <h2>Where They Overlap</h2>
@@ -197,11 +199,11 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
           <li style="margin-bottom:0.5rem;">Narrative builds the emotional architecture around the moment</li>
         </ul>
 
-        <CornerstoneGalleryDoor id="i-hM8SXCd" galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War/Color" alt="Authored historical photograph with narrative pressure" caption="The point where record begins carrying implication." href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War/Color/all" label="Explore Authored Historical Stories" align="right" />
-
         <div class="section-heading-with-line">
           <h2>Why the Difference Matters in Western and Historical Work</h2>
         </div>
+
+        <CornerstoneGalleryDoor id="i-hM8SXCd" galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War/Color" alt="Authored historical photograph with narrative pressure" caption="The point where record begins carrying implication." href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War/Color/all" label="Explore Authored Historical Stories" align="right" />
 
         <p>In Western and historical subjects, this distinction matters because the same costume, landscape, or reenacted scene can be treated in radically different ways.</p>
 
@@ -258,6 +260,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
           </li>
         </ul>
       </article>
+      </KeywordLinkedArticle>
     </section>
 
     <WesternDefinitions variant="definition" currentPage={15} />

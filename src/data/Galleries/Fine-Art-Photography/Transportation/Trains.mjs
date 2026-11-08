@@ -717,7 +717,7 @@ export const galleryData = [
       "atmospheric"
     ],
 
-    "story": "Read it top to bottom: smoke, then the train, then the bridge, then the car, then the road — a whole railway in one vertical column, and the car at the bottom is the only thing with headlights. The portrait frame makes the bridge a doorway the road has to pass through, and the locomotive crosses above on the same stones. What the frame never says is whether the car is on its way under the train or on its way out from beneath it — the smoke covers the top of the story, and the road covers the bottom, and the bridge is the only part that is certain.",
+    "story": "The road has passed under this bridge for a hundred years and the trains have passed over it, and the arrangement has outlived every vehicle in the frame except the arrangement itself. Smoke on top, headlights below, stone in the middle holding the two worlds apart at exactly the distance they prefer.",
     "notes": "The vertical format is the print's whole trick. It stacks the picture — smoke at the top, train in the middle, bridge, then the car at the bottom — so the eye drops through the whole railway in a single fall, and the car is the reward at the end of it. In black and white, the scene loses its date and its color at once, and what is left is the architecture: the stone bridge, the steel, the road. It is the most architectural print in the Trains group, and the one that reads like a blueprint of a moment.",
     "rating": 4,
     "galleries": [],

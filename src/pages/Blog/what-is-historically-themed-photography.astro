@@ -12,6 +12,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
 import CornerstoneCollectionNav from "@/components/blog/CornerstoneCollectionNav.astro";
+import KeywordLinkedArticle from "@/components/blog/KeywordLinkedArticle.astro";
 import CornerstoneVisualBridge from "@/components/blog/CornerstoneVisualBridge.astro";
 import CornerstoneGalleryDoor from "@/components/blog/CornerstoneGalleryDoor.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
@@ -235,6 +236,7 @@ const blogBreadcrumb = `Other &rsaquo; <a href='/Blog' style='color: inherit; te
     />
 
     <section class="story-section max-w-[860px] mx-auto px-4">
+      <KeywordLinkedArticle pagePath={sectionPath}>
       <article class="story-block space-y-4">
 
         <p><strong>Historically themed photography is contemporary fine art photography that interprets people, eras, and events from the past through research, real subjects, period detail, and visual storytelling. It is not archival historical photography, costume portraiture, or reenactment documentation alone. The historical element is the subject and story, not the age of the photograph.</strong></p>
@@ -253,11 +255,11 @@ const blogBreadcrumb = `Other &rsaquo; <a href='/Blog' style='color: inherit; te
           </p>
         </div>
 
-        <CornerstoneGalleryDoor id="i-hrmrhT3" galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War/Color" alt="Civil War narrative photograph bringing researched history into the present" caption="A contemporary photograph using history as its subject and story." href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War/Color/all" label="Browse Historically Themed Work" align="left" />
-
         <div class="section-heading-with-line">
           <h2>What Historically Themed Photography Is</h2>
         </div>
+
+        <CornerstoneGalleryDoor id="i-hrmrhT3" galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War/Color" alt="Civil War narrative photograph bringing researched history into the present" caption="A contemporary photograph using history as its subject and story." href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War/Color/all" label="Browse Historically Themed Work" align="left" />
 
         <p>Historically themed photography uses the visual language of the past without pretending to be a surviving artifact from that past. It can draw from living historians, reenactors, period settings, researched clothing, military equipment, frontier tools, Jazz Age period detail, or other historical references.</p>
 
@@ -273,11 +275,11 @@ const blogBreadcrumb = `Other &rsaquo; <a href='/Blog' style='color: inherit; te
           <li><strong>Human-centered</strong> - focused on people inside history rather than history as scenery</li>
         </ul>
 
-        <CornerstoneGalleryDoor id="i-TLDkd5q" galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War/Color" alt="Civil War fine art photograph grounded in historical research" caption="Historical detail supporting story rather than serving as costume display." href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War/Color/all" label="Explore Civil War Fine Art" align="right" />
-
         <div class="section-heading-with-line">
           <h2>What It Is Not</h2>
         </div>
+
+        <CornerstoneGalleryDoor id="i-TLDkd5q" galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War/Color" alt="Civil War fine art photograph grounded in historical research" caption="Historical detail supporting story rather than serving as costume display." href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War/Color/all" label="Explore Civil War Fine Art" align="right" />
 
         <p><strong>It is not archival historical photography.</strong><br />An archival photograph is historically valuable because it comes from the past or documents a real historical moment. Historically themed photography may be created now, using history as subject and source.</p>
 
@@ -318,11 +320,11 @@ const blogBreadcrumb = `Other &rsaquo; <a href='/Blog' style='color: inherit; te
 
         <p>The photograph then moves beyond record. Light is sculpted. Texture is controlled. The frame is built for narrative pressure. The result is history inspired photography that feels researched but not academic, cinematic but not theatrical, and emotionally present without becoming sentimental.</p>
 
-        <CornerstoneGalleryDoor id="i-kWVzc6g" galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War/Color" alt="Painterly Civil War photograph interpreting the past" caption="The past made present without becoming reenactment documentation." href="/Galleries/Painterly-Fine-Art-Photography/Facing-History" label="Explore the Facing History Collection" align="right" />
-
         <div class="section-heading-with-line">
           <h2>How It Differs From Historical Reenactment Photography</h2>
         </div>
+
+        <CornerstoneGalleryDoor id="i-kWVzc6g" galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War/Color" alt="Painterly Civil War photograph interpreting the past" caption="The past made present without becoming reenactment documentation." href="/Galleries/Painterly-Fine-Art-Photography/Facing-History" label="Explore the Facing History Collection" align="right" />
 
         <p><a href="/Historical-Reenactment-Photography" style="color:#8b5a2b; text-decoration:underline;">Historical reenactment photography</a> is the adjacent practice. It centers living history events, reenactors, encampments, demonstrations, and public interpretation.</p>
 
@@ -359,6 +361,7 @@ const blogBreadcrumb = `Other &rsaquo; <a href='/Blog' style='color: inherit; te
           Related reading: <a href="/Glossary" style="color:#8b5a2b; text-decoration:underline;">K4 Studios Glossary</a> and <a href="https://www.legendsofamerica.com/keeping-the-frontier-alive/" target="_blank" rel="noopener" style="color:#8b5a2b; text-decoration:underline;">Keeping the Frontier Alive: Living Historians and the Art of The American West</a>.
         </p>
       </article>
+      </KeywordLinkedArticle>
     </section>
 
     <WesternDefinitions variant="definition" currentPage={10} />

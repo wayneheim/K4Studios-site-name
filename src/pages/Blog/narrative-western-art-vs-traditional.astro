@@ -6,6 +6,7 @@ import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
 import CornerstoneCollectionNav from "@/components/blog/CornerstoneCollectionNav.astro";
+import KeywordLinkedArticle from "@/components/blog/KeywordLinkedArticle.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
 import { getBreadcrumbList, getStructuredData } from "@/components/utils/getStructuredData.ts";
 
@@ -189,6 +190,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
     </section>
 
     <section class="story-section max-w-[860px] mx-auto px-4">
+      <KeywordLinkedArticle pagePath={sectionPath}>
       <article class="story-block space-y-4">
         <p><strong>Narrative Western art</strong> and <strong>traditional Western art</strong> often share the same visible subjects: cowboys, riders, frontier towns, wide land, and the iconography of the American West. What separates them is not the hat, the horse, or the horizon. It is what the image asks the viewer to carry.</p>
 
@@ -289,6 +291,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
           </li>
         </ul>
       </article>
+      </KeywordLinkedArticle>
     </section>
 
     <WesternDefinitions variant="definition" currentPage={11} />

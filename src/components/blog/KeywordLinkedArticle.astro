@@ -1,0 +1,32 @@
+---
+import { autoLinkKeywordsInText } from "@/components/utils/autoLinkKeywordsInText.ts";
+import { semantic as k4Semantic } from "@/data/semantic/K4-Sem.ts";
+
+const { pagePath = Astro.url.pathname } = Astro.props as { pagePath?: string };
+const source = await Astro.slots.render("default");
+
+const protectedFragments: string[] = [];
+const protect = (html: string, pattern: RegExp) => html.replace(pattern, (fragment) => {
+  const index = protectedFragments.push(fragment) - 1;
+  return `\uE000${index}\uE001`;
+});
+
+let linkable = source;
+
+// Keep artwork UI, navigation, and existing editorial links exactly as authored.
+linkable = protect(linkable, /<(aside|figure|nav|script|style)\b[\s\S]*?<\/\1>/gi);
+linkable = protect(linkable, /<a\b[\s\S]*?<\/a>/gi);
+
+// Hide markup from the text matcher so it can only link visible article language.
+linkable = protect(linkable, /<[^>]+>/g);
+
+const linked = autoLinkKeywordsInText(linkable, [], [], [], k4Semantic, pagePath);
+const normalizedPagePath = String(pagePath || "").replace(/\/+$/, "").toLowerCase();
+const withoutSelfLinks = linked.replace(
+  /<a href="([^"]+)" class="kw-link">([\s\S]*?)<\/a>/gi,
+  (anchor, href, label) => String(href).replace(/\/+$/, "").toLowerCase() === normalizedPagePath ? label : anchor,
+);
+const restored = withoutSelfLinks.replace(/\uE000(\d+)\uE001/g, (_match, index) => protectedFragments[Number(index)] ?? "");
+---
+
+<Fragment set:html={restored} />

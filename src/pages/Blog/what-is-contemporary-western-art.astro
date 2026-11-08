@@ -5,6 +5,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
 import CornerstoneCollectionNav from "@/components/blog/CornerstoneCollectionNav.astro";
+import KeywordLinkedArticle from "@/components/blog/KeywordLinkedArticle.astro";
 import CornerstoneVisualBridge from "@/components/blog/CornerstoneVisualBridge.astro";
 import CornerstoneGalleryDoor from "@/components/blog/CornerstoneGalleryDoor.astro";
 import { getBreadcrumbList, getStructuredData } from "@/components/utils/getStructuredData.ts";
@@ -17,10 +18,10 @@ const canonicalUrl = `https://www.k4studios.com${sectionPath}`;
 const pageTitle = "What Is Contemporary Western Art? Definition and Meaning";
 const pageDescription = "Contemporary Western art is present-day art that interprets the American West through current visual language, modern mediums, and contemporary authorship while remaining connected to Western subject matter, history, landscape, and myth.";
 const hero = {
-  id: "i-LCspRF4",
-  src: getSemanticImageUrl("i-LCspRF4", {}, "l"),
-  absoluteSrc: getSemanticImageUrl("i-LCspRF4", {}, "l", { absolute: true }),
-  alt: "Contemporary Western art by Wayne Heim, shaped through atmosphere, history, and narrative intent",
+  id: "i-cfW89QP",
+  src: getSemanticImageUrl("i-cfW89QP", {}, "l"),
+  absoluteSrc: getSemanticImageUrl("i-cfW89QP", {}, "l", { absolute: true }),
+  alt: "Cowboy firing a rifle from a rocky ridge beside his saddled horse beneath a storm-filled Western sky",
 };
 
 const structuredData = getStructuredData({
@@ -100,6 +101,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
       ctaLabel="Explore Contemporary Western Art"
     />
 
+    <KeywordLinkedArticle pagePath={sectionPath}>
     <article class="definition-post-story">
       <p class="identity">Wayne Heim makes contemporary Western art as camera-based painterly fine art — real photographs, painterly handling, narrative intent.</p>
 
@@ -115,9 +117,9 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
       <p>Wayne Heim's route begins with photography, but photography is not used as mere documentation. It is the foundation: the real subject, the real light, the real physical evidence. From there, each story is constructed with painterly expression, then paired with a title and an unresolved narrative — turning the image into contemporary Western art with history still inside it. The work begins with camera-based evidence, then moves through painterly reshaping of the image with light, color and texture, title, narrative writing, and deliberate incompleteness, so the image carries history, character, and story rather than simple documentation.</p>
 
-      <CornerstoneGalleryDoor id="i-6Ffpw9t" galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Cowboy-Portraits/Color" alt="Contemporary painterly portrait of a Western character" caption="A living Western subject carried through a contemporary photographic language." href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Cowboy-Portraits/Color/all" label="Browse Contemporary Cowboy Portraits" align="right" />
-
       <div class="definition-post-heading"><h2>How this differs from surface re-imagining</h2></div>
+
+      <CornerstoneGalleryDoor id="i-6Ffpw9t" galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Cowboy-Portraits/Color" alt="Contemporary painterly portrait of a Western character" caption="A living Western subject carried through a contemporary photographic language." href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Cowboy-Portraits/Color/all" label="Browse Contemporary Cowboy Portraits" align="right" />
 
       <p class="reflection">Re-imagining through reflection.</p>
 
@@ -129,9 +131,9 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
       <p>I don't make these images to decorate a wall. The struggles and losses of the people who built the West have to still mean something — that is the giving back, making sure those stories and hardships have purpose. An image that asks only to be admired gives a viewer nothing to enter. I want the opposite: a moment a person can step inside, let go of their own present, and stand for a while in someone else's — to feel it, and to wonder what it might have been like. I have seen what the story does when it is still attached to the image. At a show in Montana, a woman stood in front of Cough and Covenant while I told her the man in it is dying of smallpox, caught from the sick man he treated — and she took the moment. Not the quick look. Not admiration. She stood inside it. That is the point.</p>
 
-      <CornerstoneGalleryDoor id="i-f4MSxpP" galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color" alt="Contemporary narrative interpretation of the American West" caption="The Western inheritance carried forward without becoming nostalgia." href="/Contemporary-Western-Art" label="Explore Contemporary Western Art" align="left" />
-
       <div class="definition-post-heading"><h2>Where to go next</h2></div>
+
+      <CornerstoneGalleryDoor id="i-f4MSxpP" galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color" alt="Contemporary narrative interpretation of the American West" caption="The Western inheritance carried forward without becoming nostalgia." href="/Contemporary-Western-Art" label="Explore Contemporary Western Art" align="left" />
 
       <nav class="definition-post-links" aria-label="Related contemporary Western art pages">
         <p>The collection itself: <a href="/Contemporary-Western-Art">Contemporary Western Art</a></p>
@@ -139,6 +141,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         <p>The proven definition pattern this follows: the <a href="/Blog/what-is-painterly-photography">Painterly Photography</a> and <a href="/Blog/what-is-western-fine-art">Western Fine Art</a> definition posts</p>
       </nav>
     </article>
+    </KeywordLinkedArticle>
 
     <CornerstoneCollectionNav focusKey="cowboy-portraits-0" />
     <SiteFooter />
