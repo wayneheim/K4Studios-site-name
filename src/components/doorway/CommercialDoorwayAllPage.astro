@@ -176,12 +176,23 @@ const engrainedAdditionPaths = new Set([
   "/cowboy-wall-art",
 ]);
 const definitionClusterLinks: Record<string, Array<{ href: string; label: string }>> = {
+  "/Western-Fine-Art-Photography": [
+    { href: "/Blog/what-is-western-fine-art", label: "What Is Western Fine Art?" },
+    { href: "/Blog/what-is-western-fine-art-photography", label: "What Is Western Fine Art Photography?" },
+    { href: "/Blog/what-is-artistic-western-photography", label: "What Is Artistic Western Photography?" },
+  ],
   "/cinematic-western-art": [{ href: "/Blog/what-is-cinematic-western-art", label: "What Is Cinematic Western Art?" }],
   "/western-storytelling-photography": [{ href: "/Blog/what-is-visual-storytelling-in-photography", label: "What Is Visual Storytelling in Photography?" }],
   "/Painterly-Western-Photography": [{ href: "/Blog/what-is-painterly-photography", label: "What Is Painterly Photography?" }],
   "/Fine-Art-Photography-of-the-American-West": [{ href: "/Blog/what-is-western-fine-art-photography", label: "What Is Western Fine Art Photography?" }],
   "/Contemporary-Western-Art": [{ href: "/Blog/what-is-contemporary-western-art", label: "What Is Contemporary Western Art?" }],
+  "/Cowboy-Fine-Art-Photography": [{ href: "/Blog/what-is-cowboy-fine-art-photography", label: "What Is Cowboy Fine Art Photography?" }],
+  "/Historical-Western-Art": [{ href: "/Blog/what-is-historical-western-photography", label: "What Is Historical Western Photography?" }],
+  "/Narrative-Western-Art": [{ href: "/Blog/what-is-narrative-photography", label: "What Is Narrative Photography?" }],
+  "/western-artwork": [{ href: "/Blog/what-is-western-art", label: "What Is Western Art?" }],
+  "/western-cowboy-art": [{ href: "/Blog/what-is-western-cowboy-art", label: "What Is Western Cowboy Art?" }],
   "/Western-Black-and-White-Photography": [
+    { href: "/Blog/what-is-western-black-and-white-photography", label: "What Is Western Black and White Photography?" },
     { href: "/black-and-white-cowboy-art", label: "Black and White Cowboy Art" },
     { href: "/black-and-white-cowboy-photography", label: "Black and White Cowboy Photography" },
     { href: "/black-and-white-cowboy-photos", label: "Black and White Cowboy Photos" },
@@ -821,7 +832,7 @@ const faqRight = visibleFaqItems.slice(faqSplitIndex);
     <hr class="catalog-anchor-rule" />
     {clusterLinks.length > 0 && (
       <nav class="definition-cluster-links" aria-label="Related definition and collection pages">
-        <strong>{canonicalPath === "/Western-Black-and-White-Photography" ? "Browse the black and white Western family" : "Read the paired definition"}</strong>
+        <strong>{canonicalPath === "/Western-Black-and-White-Photography" ? "Browse the black and white Western family" : clusterLinks.length > 1 ? "Read the paired definitions" : "Read the paired definition"}</strong>
         <span>
           {clusterLinks.map((link, index) => (
             <>

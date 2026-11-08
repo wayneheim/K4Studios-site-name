@@ -78,6 +78,34 @@ const featheredImages = getSideImages({
 });
 // Pass full pool to component for client-side rotation
 
+// Link the story body as one document so repeated terms obey page-level caps,
+// spacing, and landing-to-image alternation. Headings remain editorial text.
+const storyFieldDelimiter = '\uE100K4STORYFIELD\uE101';
+const storyFields: string[] = [];
+westernStory.forEach((section: any) => {
+  section.paragraphs?.forEach((paragraph: string) => storyFields.push(paragraph));
+  section.list?.forEach((item: string) => storyFields.push(item));
+});
+const linkedStoryFields = autoLinkKeywordsInText(
+  storyFields.join(storyFieldDelimiter),
+  galleryDatas,
+  featheredImages,
+  galleryPaths,
+  k4Semantic,
+  sectionPath,
+  {
+    maxLinksPerPhrase: 2,
+    minCharsBetweenSamePhrase: 900,
+    alternateDestinations: true,
+  },
+).split(storyFieldDelimiter);
+let linkedStoryFieldIndex = 0;
+const linkedWesternStory = westernStory.map((section: any) => ({
+  ...section,
+  paragraphs: section.paragraphs?.map(() => linkedStoryFields[linkedStoryFieldIndex++]),
+  list: section.list?.map(() => linkedStoryFields[linkedStoryFieldIndex++]),
+}));
+
 // ----------------------
 // Structured Data
 // ----------------------
@@ -184,18 +212,18 @@ const featuredCollectionImage = {
     <section class="story-layout">
       <div class="text-column">
         <section class="story-section">
-          {westernStory.map((section: any, index: number) => (
+          {linkedWesternStory.map((section: any, index: number) => (
             <article class="story-block">
-              {section.title && <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />}
-              {section.subhead && <h3 class="slide-in-left" set:html={autoLinkKeywordsInText(section.subhead, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />}
-              {section.tagline && <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInText(section.tagline, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />}
+              {section.title && <h2 class="slide-in-left" set:html={section.title} />}
+              {section.subhead && <h3 class="slide-in-left" set:html={section.subhead} />}
+              {section.tagline && <h4 class="tagline reveal-on-scroll" set:html={section.tagline} />}
               {section.paragraphs?.map((para: string) => (
-                <p class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
+                <p class="reveal-on-scroll" set:html={para} />
               ))}
               {section.list && section.list.length > 0 && (
                 <ul>
                   {section.list.map((item: string) => (
-                    <li class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
+                    <li class="reveal-on-scroll" set:html={item} />
                   ))}
                 </ul>
               )}

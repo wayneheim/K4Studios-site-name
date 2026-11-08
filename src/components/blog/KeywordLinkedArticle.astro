@@ -13,14 +13,19 @@ const protect = (html: string, pattern: RegExp) => html.replace(pattern, (fragme
 
 let linkable = source;
 
-// Keep artwork UI, navigation, and existing editorial links exactly as authored.
-linkable = protect(linkable, /<(aside|figure|nav|script|style)\b[\s\S]*?<\/\1>/gi);
+// Keep artwork UI, navigation, headings, FAQ controls, and existing editorial
+// links exactly as authored. Automatic links belong in the article body copy.
+linkable = protect(linkable, /<(aside|figure|nav|script|style|h[1-6]|summary)\b[\s\S]*?<\/\1>/gi);
 linkable = protect(linkable, /<a\b[\s\S]*?<\/a>/gi);
 
 // Hide markup from the text matcher so it can only link visible article language.
 linkable = protect(linkable, /<[^>]+>/g);
 
-const linked = autoLinkKeywordsInText(linkable, [], [], [], k4Semantic, pagePath);
+const linked = autoLinkKeywordsInText(linkable, [], [], [], k4Semantic, pagePath, {
+  maxLinksPerPhrase: 2,
+  minCharsBetweenSamePhrase: 900,
+  alternateDestinations: true,
+});
 const normalizedPagePath = String(pagePath || "").replace(/\/+$/, "").toLowerCase();
 const withoutSelfLinks = linked.replace(
   /<a href="([^"]+)" class="kw-link">([\s\S]*?)<\/a>/gi,

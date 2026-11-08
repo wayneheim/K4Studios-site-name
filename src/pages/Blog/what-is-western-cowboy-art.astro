@@ -18,6 +18,7 @@ import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
+import KeywordLinkedArticle from "@/components/blog/KeywordLinkedArticle.astro";
 import { getBreadcrumbList, getFAQPageStructuredData, getStructuredData } from "@/components/utils/getStructuredData.ts";
 
 import "@/styles/global.css";
@@ -196,6 +197,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
     <!-- Article Content -->
     <section class="story-section max-w-[860px] mx-auto px-4">
+      <KeywordLinkedArticle pagePath={sectionPath}>
       <article class="story-block space-y-4">
 
         <!-- SECTION 1: Introduction -->
@@ -447,6 +449,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         <p>The cowboy is not only a symbol of the past. He remains a question the present keeps returning to: what does a person carry, what does he endure, and what remains after the dust settles?</p>
 
       </article>
+      </KeywordLinkedArticle>
     </section>
 
     <!-- Western Art Series Navigation -->

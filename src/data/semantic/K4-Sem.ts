@@ -439,6 +439,7 @@ facingHistory: {
   def: "Facing History is Wayne Heim's historically themed fine art photography series, blending research, real subjects, living history, and painterly handling into character-driven visual narratives.",
 
   landingPhrases: [
+    { phrase: "historically themed photography", rating: 10, use: true, link: "/Galleries/Painterly-Fine-Art-Photography/Facing-History", selfLinkPath: "/Blog/what-is-historically-themed-photography" },
     // Primary, high-authority terms (WritingBrain core)
     { phrase: "Facing History", rating: 5, use: true },
     { phrase: "Facing History historically themed fine art photography collection", rating: 5, use: true },
@@ -484,10 +485,7 @@ westernArtDefinition: {
   def: "Western art is a visual language built around the landscapes, people, conflicts, and ideals of the American West—defined not by medium but by authorship, intent, and vision.",
   landingPhrases: [
     { phrase: "what is western art", rating: 5, use: true },
-    { phrase: "western art", rating: 5, use: true },
     { phrase: "western art definition", rating: 5, use: true },
-    { phrase: "western art history", rating: 4, use: true },
-    { phrase: "american western art", rating: 4, use: true },
     { phrase: "define western art", rating: 4, use: true },
   ],
   imagePhrases: []
@@ -511,6 +509,116 @@ artOfTheAmericanWestDefinition: {
 // Cornerstone definition page — requires high internal link authority.
 // ============================================================================
 
+artisticWesternPhotographyDefinition: {
+  path: "/Blog/what-is-artistic-western-photography",
+  def: "Artistic Western photography interprets the American West through authorship, atmosphere, and visual intent rather than simple documentation.",
+  landingPhrases: [
+    { phrase: "what is artistic western photography", rating: 9, use: true, link: "/Blog/what-is-artistic-western-photography" },
+    { phrase: "artistic western photography definition", rating: 9, use: true, link: "/Blog/what-is-artistic-western-photography" },
+  ],
+  imagePhrases: []
+},
+
+cinematicWesternArtDefinition: {
+  path: "/Blog/what-is-cinematic-western-art",
+  def: "Cinematic Western art uses composition, atmosphere, gesture, and unresolved consequence to make a still image carry the pressure of a larger Western story.",
+  landingPhrases: [
+    { phrase: "what is cinematic western art", rating: 9, use: true },
+    { phrase: "cinematic western art definition", rating: 9, use: true },
+  ],
+  imagePhrases: []
+},
+
+contemporaryWesternArtDefinition: {
+  path: "/Blog/what-is-contemporary-western-art",
+  def: "Contemporary Western art carries the people, land, history, and mythology of the American West into present-day artistic practice.",
+  landingPhrases: [
+    { phrase: "what is contemporary western art", rating: 9, use: true },
+    { phrase: "contemporary western art definition", rating: 9, use: true },
+  ],
+  imagePhrases: []
+},
+
+cowboyFineArtPhotographyDefinition: {
+  path: "/Blog/what-is-cowboy-fine-art-photography",
+  def: "Cowboy fine art photography treats the cowboy as an authored fine-art subject through character, atmosphere, composition, and narrative intent.",
+  landingPhrases: [
+    { phrase: "what is cowboy fine art photography", rating: 9, use: true },
+    { phrase: "cowboy fine art photography definition", rating: 9, use: true },
+  ],
+  imagePhrases: []
+},
+
+historicalWesternPhotographyDefinition: {
+  path: "/Blog/what-is-historical-western-photography",
+  def: "Historical Western photography interprets the people, settings, and pressures of the historic American West through contemporary authored photography.",
+  landingPhrases: [
+    { phrase: "what is historical western photography", rating: 9, use: true },
+    { phrase: "historical western photography definition", rating: 9, use: true },
+  ],
+  imagePhrases: []
+},
+
+narrativePhotographyDefinition: {
+  path: "/Blog/what-is-narrative-photography",
+  def: "Narrative photography uses a still image to imply events, relationships, and consequences beyond the visible frame.",
+  landingPhrases: [
+    { phrase: "what is narrative photography", rating: 9, use: true },
+    { phrase: "narrative photography definition", rating: 9, use: true },
+  ],
+  imagePhrases: []
+},
+
+wildWestDefinition: {
+  path: "/Blog/what-is-the-wild-west",
+  def: "The Wild West names the compressed frontier era, geography, lived experience, and later legend associated with the nineteenth-century American West.",
+  landingPhrases: [
+    { phrase: "what is the wild west", rating: 10, use: true, link: "/Blog/what-is-the-wild-west" },
+    { phrase: "wild west definition", rating: 9, use: true, link: "/Blog/what-is-the-wild-west" },
+  ],
+  imagePhrases: []
+},
+
+visualStorytellingPhotographyDefinition: {
+  path: "/Blog/what-is-visual-storytelling-in-photography",
+  def: "Visual storytelling in photography uses gesture, setting, atmosphere, and unresolved consequence to suggest a life larger than the visible frame.",
+  landingPhrases: [
+    { phrase: "what is visual storytelling in photography", rating: 9, use: true },
+    { phrase: "visual storytelling in photography definition", rating: 9, use: true },
+  ],
+  imagePhrases: []
+},
+
+westernBlackWhitePhotographyDefinition: {
+  path: "/Blog/what-is-western-black-and-white-photography",
+  def: "Western black and white photography interprets Western subjects through monochrome structure, tonal control, atmosphere, and narrative restraint.",
+  landingPhrases: [
+    { phrase: "what is western black and white photography", rating: 9, use: true },
+    { phrase: "western black and white photography definition", rating: 9, use: true },
+  ],
+  imagePhrases: []
+},
+
+westernCowboyArtDefinition: {
+  path: "/Blog/what-is-western-cowboy-art",
+  def: "Western cowboy art interprets cowboy life, frontier character, work, mythology, and the human reality behind the Western icon.",
+  landingPhrases: [
+    { phrase: "what is western cowboy art", rating: 9, use: true },
+    { phrase: "western cowboy art definition", rating: 9, use: true },
+  ],
+  imagePhrases: []
+},
+
+westernFineArtDefinition: {
+  path: "/Blog/what-is-western-fine-art",
+  def: "Western fine art is authored work about the American West created with lasting artistic intent rather than primarily to decorate, advertise, or document.",
+  landingPhrases: [
+    { phrase: "what is western fine art", rating: 9, use: true },
+    { phrase: "western fine art definition", rating: 9, use: true },
+  ],
+  imagePhrases: []
+},
+
 westernFineArtPhotographyDefinition: {
   path: "/Blog/what-is-western-fine-art-photography",
   def: "Western fine art photography is photography of the American West created as fine art through authorship, intent, and compositional control—not documentation, décor, or stock imagery.",
@@ -523,13 +631,52 @@ westernFineArtPhotographyDefinition: {
   imagePhrases: []
 },
 
+cinematicWesternArtBridge: {
+  path: "/cinematic-western-art",
+  fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color",
+  landingPhrases: [
+    { phrase: "cinematic Western art", rating: 10, use: true, link: "/cinematic-western-art", selfLinkPath: "/Blog/what-is-cinematic-western-art" },
+  ],
+  imagePhrases: []
+},
+
+historicalWesternPhotographyBridge: {
+  path: "/Historical-Western-Art",
+  fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color",
+  landingPhrases: [
+    { phrase: "historical Western photography", rating: 10, use: true, link: "/Historical-Western-Art", selfLinkPath: "/Blog/what-is-historical-western-photography" },
+    { phrase: "historically themed Western photography", rating: 10, use: true, link: "/Historical-Western-Art", selfLinkPath: "/Blog/what-is-historical-western-photography" },
+  ],
+  imagePhrases: []
+},
+
+narrativePhotographyBridge: {
+  path: "/Narrative-Western-Art",
+  fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color",
+  landingPhrases: [
+    { phrase: "narrative photography", rating: 10, use: true, link: "/Narrative-Western-Art", selfLinkPath: "/Blog/what-is-narrative-photography" },
+  ],
+  imagePhrases: []
+},
+
+visualStorytellingPhotographyBridge: {
+  path: "/western-storytelling-photography",
+  fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color",
+  landingPhrases: [
+    { phrase: "visual storytelling in photography", rating: 10, use: true, link: "/western-storytelling-photography", selfLinkPath: "/Blog/what-is-visual-storytelling-in-photography" },
+  ],
+  imagePhrases: []
+},
+
  westernHubLanding: {
   path: "/Western-Fine-Art-Photography",
+  selfLinkPath: "/Blog/what-is-artistic-western-photography",
   def: "The subject-focused hub for Western Fine Art Photography — exploring cowboys, Indigenous portraits, and the human experience of the American West.",
   fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
   landingPhrases: [
-    { phrase: "Western Fine Art Photography", rating: 5, use: true },
-    { phrase: "western fine art", rating: 5, use: true },
+    { phrase: "artistic Western photography", rating: 9, use: true, link: "/Western-Fine-Art-Photography", selfLinkPath: "/Blog/what-is-artistic-western-photography" },
+    { phrase: "Western Fine Art Photography", rating: 10, use: true, selfLinkPath: "/Blog/what-is-western-fine-art-photography" },
+    { phrase: "western fine art", rating: 10, use: true, selfLinkPath: "/Blog/what-is-western-fine-art" },
     { phrase: "American West photography", rating: 4, use: true },
     { phrase: "fine art western", rating: 4, use: true },
     { phrase: "western portrait photography", rating: 4, use: true },
@@ -544,7 +691,7 @@ westernArtworkCommercialHub: {
   def: "The commercial and collector-facing route for Western artwork by Wayne Heim, bridging painterly photography with the language buyers use for Western art, Western paintings, and frontier fine art prints.",
   fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
   landingPhrases: [
-    { phrase: "western art", rating: 6, use: true, link: "/western-artwork" },
+    { phrase: "western art", rating: 10, use: true, link: "/western-artwork", selfLinkPath: "/Blog/what-is-western-art" },
     { phrase: "western artwork", rating: 6, use: true, link: "/western-artwork" },
     { phrase: "western artwork for sale", rating: 5, use: true, link: "/western-artwork" },
     { phrase: "western art paintings", rating: 5, use: true, link: "/western-artwork" },
@@ -647,7 +794,7 @@ westernCowboyArtCommercialHub: {
   def: "Western cowboy art by Wayne Heim, centered on painterly cowboy portraiture, frontier character, Western story, and collector-focused fine art print paths.",
   fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
   landingPhrases: [
-    { phrase: "western cowboy art", rating: 7, use: true, link: "/western-cowboy-art" },
+    { phrase: "western cowboy art", rating: 10, use: true, link: "/western-cowboy-art", selfLinkPath: "/Blog/what-is-western-cowboy-art" },
     { phrase: "cowboy western art", rating: 6, use: true, link: "/western-cowboy-art" },
     { phrase: "cowboy art", rating: 6, use: true, link: "/western-cowboy-art" },
     { phrase: "cowboy artwork", rating: 6, use: true, link: "/western-cowboy-art" },
@@ -869,7 +1016,7 @@ westernBlackWhiteHub: {
   def: "Western fine art photography in black and white—emphasizing contrast, character, and the timeless human experience of the American West.",
   fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White",
   landingPhrases: [
-    { phrase: "Western Black and White Photography", rating: 5, use: true },
+    { phrase: "Western Black and White Photography", rating: 10, use: true, selfLinkPath: "/Blog/what-is-western-black-and-white-photography" },
     { phrase: "Black and White Western Photography", rating: 5, use: true },
     { phrase: "Black and White Cowboy Photography", rating: 5, use: true },
     { phrase: "black and white cowboy photos", rating: 5, use: true },
@@ -973,7 +1120,7 @@ cowboyFineArtHub: {
   fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
   landingPhrases: [
     // Primary targets — "cowboy" as root entity
-    { phrase: "cowboy fine art photography", rating: 5, use: true },
+    { phrase: "cowboy fine art photography", rating: 10, use: true, selfLinkPath: "/Blog/what-is-cowboy-fine-art-photography" },
     { phrase: "cowboy portraits", rating: 5, use: true },
     { phrase: "cowboy fine art", rating: 5, use: true },
     // Secondary — cowboy-centric variants
@@ -1040,19 +1187,27 @@ painterlyPhotographyDefinition: {
   path: "/Blog/what-is-painterly-photography",
   def: "Painterly photography is a photographic approach where light, tone, composition, atmosphere, and selective detail are shaped to create images with the emotional presence and visual structure associated with painting.",
   landingPhrases: [
-    { phrase: "painterly photography", rating: 9, use: true, link: "/Blog/what-is-painterly-photography" },
     { phrase: "what is painterly photography", rating: 9, use: true, link: "/Blog/what-is-painterly-photography" },
     { phrase: "painterly photography definition", rating: 9, use: true, link: "/Blog/what-is-painterly-photography" },
   ],
   imagePhrases: []
 },
 
-historicallyThemedPhotography: {
+historicallyThemedPhotographyDefinition: {
   path: "/Blog/what-is-historically-themed-photography",
+  def: "Historically themed photography is contemporary fine art photography that interprets people, events, and eras from the past through research, real subjects, period detail, and visual storytelling.",
+  landingPhrases: [
+    { phrase: "what is historically themed photography", rating: 9, use: true },
+    { phrase: "historically themed photography definition", rating: 9, use: true },
+  ],
+  imagePhrases: []
+},
+
+historicallyThemedPhotographyBridge: {
+  path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History",
+  fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War/Color",
   def: "Historically themed photography is contemporary fine art photography that interprets people, events, and eras from the past through research, real subjects, period detail, and visual storytelling. At K4 Studios, it is treated as lived narrative - not archival historical photography, costume spectacle, or AI-generated nostalgia.",
   landingPhrases: [
-    { phrase: "historically themed photography", rating: 9, use: true },
-    { phrase: "historically themed fine art photography", rating: 9, use: true },
     { phrase: "historically themed art", rating: 8, use: true },
     { phrase: "historically themed fine art", rating: 7, use: true },
     { phrase: "historically themed wall art", rating: 7, use: true },
@@ -1168,7 +1323,7 @@ glossaryContemporaryWesternArt: {
   path: "/Contemporary-Western-Art",
   def: "Contemporary Western art carries the subject, history, and emotional weight of the American West into present-day visual language. In photography, it extends the Western tradition through present-day practice, psychological presence, and authorship rather than nostalgia alone. Explore <a href='/Contemporary-Western-Art'>Contemporary Western Art</a> | <a href='/Western-Fine-Art-Photography'>Western Fine Art Photography</a>. Wayne Heim makes <a href='/Contemporary-Western-Art'>contemporary Western art</a> as camera-based painterly fine art — real photographs, painterly handling, narrative intent.",
   landingPhrases: [
-    { phrase: "contemporary Western art", rating: 5, use: true, link: "/Contemporary-Western-Art" },
+    { phrase: "contemporary Western art", rating: 10, use: true, link: "/Contemporary-Western-Art", selfLinkPath: "/Blog/what-is-contemporary-western-art" },
     { phrase: "modern Western art", rating: 4, use: true, link: "/Contemporary-Western-Art" },
     { phrase: "contemporary Western photography", rating: 4, use: true, link: "/Contemporary-Western-Art" },
     { phrase: "contemporary art of the American West", rating: 4, use: true, link: "/Contemporary-Western-Art" },
@@ -1239,7 +1394,7 @@ wildWest: {
   def: "Wild West photography centered on the larger frontier story: legend, labor, endurance, and the lives that lived beneath the myth.",
 
   landingPhrases: [
-    { phrase: "Wild West", rating: 5, use: true },
+    { phrase: "Wild West", rating: 10, use: true, selfLinkPath: "/Blog/what-is-the-wild-west" },
     { phrase: "Wild West photography", rating: 5, use: true },
     { phrase: "Wild West fine art photography", rating: 5, use: true },
     { phrase: "American frontier photography", rating: 5, use: true },
@@ -1685,6 +1840,7 @@ landscapeWestPainterly: {
     { phrase: "Mountain West", rating: 5, use: true },
     { phrase: "Mountain West landscapes", rating: 5, use: true },
     { phrase: "western landscape photography", rating: 5, use: true },
+    { phrase: "Western landscapes", rating: 5, use: true, link: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery" },
     { phrase: "western landscape art", rating: 3, use: true },
     { phrase: "mountain west fine art photography", rating: 4, use: true },
     { phrase: "painterly fine art landscape photography", rating: 4, use: true },
@@ -2255,9 +2411,11 @@ railwayPainterly: {
  // --- PAINTERLY: MAIN LANDING ---
 painterly: {
   path: "/Galleries/Painterly-Fine-Art-Photography",
+  selfLinkPath: "/Blog/what-is-painterly-photography",
   def: "A signature blend of photographic realism and painterly depth.",
   fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
   landingPhrases: [
+    { phrase: "painterly photography", rating: 9, use: true, link: "/Galleries/Painterly-Fine-Art-Photography" },
     { phrase: "Painterly Fine Art Photography", rating: 5, use: true },
     { phrase: "painterly storytelling", rating: 5, use: true },
     { phrase: "painterly compositions", rating: 4, use: true },
@@ -2276,6 +2434,7 @@ fineart: {
     { phrase: "Traditional Fine Art Photography", rating: 5, use: true },
     { phrase: "traditional photography", rating: 5, use: true },
     { phrase: "fine art photographer", rating: 4, use: true },
+    { phrase: "fine art practice", rating: 4, use: true },
     { phrase: "Traditional Fine Art collection", rating: 5, use: true },
     { phrase: "fine art gallery", rating: 4, use: true },
     { phrase: "classic fine art photos", rating: 4, use: true },

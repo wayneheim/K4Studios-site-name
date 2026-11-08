@@ -12,6 +12,7 @@ import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
+import KeywordLinkedArticle from "@/components/blog/KeywordLinkedArticle.astro";
 import { getBreadcrumbList, getStructuredData } from "@/components/utils/getStructuredData.ts";
 
 import "@/styles/global.css";
@@ -212,6 +213,7 @@ const blogBreadcrumb = `Other > <a href='/Blog' style='color: inherit; text-deco
     </section>
 
     <section class="story-section max-w-[860px] mx-auto px-4">
+      <KeywordLinkedArticle pagePath={sectionPath}>
       <article class="story-block space-y-4">
 
         <p><strong>Western black and white photography</strong> is monochrome photography of the American West - cowboy portraits, frontier scenes, Native American portraits, Western landscapes, and historical subjects - created through tone, shadow, light, posture, and composition rather than color.</p>
@@ -427,6 +429,7 @@ const blogBreadcrumb = `Other > <a href='/Blog' style='color: inherit; text-deco
         <p>It is the American frontier reduced to light, shadow, character, and consequence.</p>
 
       </article>
+      </KeywordLinkedArticle>
     </section>
 
     <WesternDefinitions variant="definition" currentPage={9} />

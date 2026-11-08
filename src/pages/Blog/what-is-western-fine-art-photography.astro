@@ -19,6 +19,7 @@ import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
+import KeywordLinkedArticle from "@/components/blog/KeywordLinkedArticle.astro";
 import { getBreadcrumbList, getStructuredData } from "@/components/utils/getStructuredData.ts";
 
 import "@/styles/global.css";
@@ -243,6 +244,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
     <!-- Article Content -->
     <section class="story-section max-w-[860px] mx-auto px-4">
+      <KeywordLinkedArticle pagePath={sectionPath}>
       <article class="story-block space-y-4">
 
         <!-- SECTION 1: Definition (THE ANCHOR) -->
@@ -431,6 +433,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         <p>Western fine art photography, at its best, invites the viewer past the familiar and into something specific—a person, a story, a moment that belongs to no one else.</p>
 
       </article>
+      </KeywordLinkedArticle>
     </section>
 
     <!-- Western Art Series Navigation -->

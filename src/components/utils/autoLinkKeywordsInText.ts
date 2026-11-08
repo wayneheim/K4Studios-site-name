@@ -18,13 +18,17 @@ const KWLINK_BUILD_SEED = String(
 
 const CANONICAL_LINK_MAP: Record<string, string> = {
   'authentic cowboy life': '/authentic-cowboy-life',
-  'artistic western photography': '/Blog/what-is-artistic-western-photography',
+  'artistic western photography': '/Western-Fine-Art-Photography',
+  'cinematic western art': '/cinematic-western-art',
+  'contemporary western art': '/Contemporary-Western-Art',
   'cowboy fine art photography': '/Cowboy-Fine-Art-Photography',
   'fine art photography': '/Galleries/Fine-Art-Photography',
-  'historical themed western photography': '/Blog/what-is-historical-western-photography',
+  'historical themed western photography': '/Historical-Western-Art',
   'historical cowboy life': '/authentic-cowboy-life',
   'historical western art': '/Historical-Western-Art',
-  'historical western photography': '/Blog/what-is-historical-western-photography',
+  'historical western photography': '/Historical-Western-Art',
+  'historically themed photography': '/Galleries/Painterly-Fine-Art-Photography/Facing-History',
+  'narrative photography': '/Narrative-Western-Art',
   'narrative western art': '/Narrative-Western-Art',
   'one image movie': '/Other/One-Image-Movie',
   'one image movies': '/Other/One-Image-Movie',
@@ -33,7 +37,7 @@ const CANONICAL_LINK_MAP: Record<string, string> = {
   'one-image movie™': '/Other/One-Image-Movie',
   'one-image movies™': '/Other/One-Image-Movie',
   'painterly fine art photography': '/Galleries/Painterly-Fine-Art-Photography',
-  'painterly photography': '/Blog/what-is-painterly-photography',
+  'painterly photography': '/Galleries/Painterly-Fine-Art-Photography',
   'reality behind the cowboy myth': '/authentic-cowboy-life',
   'black and white cowboy portrait': '/Western-Black-and-White-Photography',
   'black and white cowboy photos': '/Western-Black-and-White-Photography',
@@ -42,9 +46,9 @@ const CANONICAL_LINK_MAP: Record<string, string> = {
   'drama vs tension': '/Other/Seeing/the-difference-between-drama-and-tension',
   'narrative without resolution': '/Other/Seeing/narrative-without-resolution',
   'unresolved image story': '/Other/Seeing/narrative-without-resolution',
-  'western art': '/Blog/what-is-western-art',
-  'western art style': '/Blog/what-is-western-art',
-  'western style art': '/Blog/what-is-western-art',
+  'western art': '/western-artwork',
+  'western art style': '/western-artwork',
+  'western style art': '/western-artwork',
   'western artwork': '/western-artwork',
   'western art paintings': '/western-artwork',
   'western paintings': '/western-artwork',
@@ -98,7 +102,7 @@ const CANONICAL_LINK_MAP: Record<string, string> = {
   'wild west pictures': '/wild-west-art',
   'western frontier art': '/Western-Frontier-Art',
   'american wild west': '/american-wild-west',
-  'what is the wild west': '/american-wild-west',
+  'what is the wild west': '/Blog/what-is-the-wild-west',
   'wild west time period': '/american-wild-west',
   'era of the wild west': '/american-wild-west',
   'women of the wild west': '/women-of-the-wild-west',
@@ -119,6 +123,7 @@ const CANONICAL_LINK_MAP: Record<string, string> = {
   'indigenous portrait photography': '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans',
   'western art photography': '/Western-Photography-Art',
   'western photography art': '/Western-Photography-Art',
+  'visual storytelling in photography': '/western-storytelling-photography',
   'western black and white photography': '/Western-Black-and-White-Photography',
   'western cowboy art': '/western-cowboy-art',
   'cowboy western art': '/western-cowboy-art',
@@ -126,7 +131,8 @@ const CANONICAL_LINK_MAP: Record<string, string> = {
   'western cowboy photography': '/Western-Cowboy-Photography',
   'cowboy photography': '/Cowboy-Photography',
   'western cowboy portraits': '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits',
-  'western fine art': '/Blog/what-is-western-fine-art'
+  'western fine art': '/Western-Fine-Art-Photography',
+  'western fine art photography': '/Western-Fine-Art-Photography'
 };
 
 function escapeRegex(str: string): string {
@@ -220,6 +226,26 @@ function getSectionForKW(
     return { section: semantic.universal, type: 'universal' };
   }
   return null;
+}
+
+function getPhraseSelfLinkForKW(
+  kwLower: string,
+  semantic: typeof defaultSemantic
+): string | null {
+  const normKW = normalizeKW(kwLower);
+  let best: { path: string; rating: number } | null = null;
+
+  for (const key of Object.keys(semantic)) {
+    if (key === 'synonymMap' || key === 'universal') continue;
+    const sec = (semantic as any)[key];
+    for (const phrase of sec.landingPhrases || []) {
+      if (!phrase.use || !phrase.selfLinkPath || normalizeKW(phrase.phrase) !== normKW) continue;
+      const candidate = { path: String(phrase.selfLinkPath), rating: Number(phrase.rating || 0) };
+      if (!best || candidate.rating > best.rating) best = candidate;
+    }
+  }
+
+  return best?.path || null;
 }
 
 function resolveSynonym(
@@ -374,7 +400,12 @@ export function autoLinkKeywordsInText(
   featheredImages: { id: string }[],
   _galleryPaths: string[],
   semantic = defaultSemantic,
-  pagePath = ''
+  pagePath = '',
+  options: {
+    maxLinksPerPhrase?: number;
+    minCharsBetweenSamePhrase?: number;
+    alternateDestinations?: boolean;
+  } = {}
 ): string {
   if (!html) return html;
   
@@ -407,34 +438,52 @@ export function autoLinkKeywordsInText(
   const patterns = allKWsRaw.map(buildPhrasePattern);
   const kwRe = new RegExp(`\\b(${patterns.join('|')})\\b`, 'gi');
 
-  // 3) collect matches
-  const matches: { index: number; matchLen: number; matchText: string }[] = [];
+  // Helper: determine whether a match is already inside an authored link.
+  function isInsideAnchor(str: string, pos: number): boolean {
+    const lastOpenBefore = str.lastIndexOf('<a', pos);
+    if (lastOpenBefore === -1) return false;
+    const lastCloseBefore = str.lastIndexOf('</a>', pos);
+    return lastOpenBefore > lastCloseBefore;
+  }
+
+  // 3) collect spaced occurrences of each phrase. Replacements are still
+  // applied in reverse document order so source indexes remain stable.
+  const maxLinksPerPhrase = Math.max(1, Number(options.maxLinksPerPhrase || 1));
+  const minCharsBetweenSamePhrase = Math.max(0, Number(options.minCharsBetweenSamePhrase || 0));
+  const candidates = new Map<string, { index: number; matchLen: number; matchText: string }[]>();
   const searchText = normalizeDashesOnly(html);
   let m: RegExpExecArray | null;
   while ((m = kwRe.exec(searchText))) {
     const matchLen = m[0].length;
     const matchText = html.substr(m.index, matchLen);
-    matches.push({ index: m.index, matchLen, matchText });
+    const normalizedMatch = normalizeKW(matchText);
+    if (isInsideAnchor(html, m.index)) continue;
+    const phraseCandidates = candidates.get(normalizedMatch) || [];
+    phraseCandidates.push({ index: m.index, matchLen, matchText });
+    candidates.set(normalizedMatch, phraseCandidates);
   }
-  matches.reverse();
+
+  const matches: { index: number; matchLen: number; matchText: string; occurrence: number }[] = [];
+  for (const phraseCandidates of candidates.values()) {
+    const startIndex = phraseCandidates.length > 1 ? 1 : 0;
+    let lastSelectedIndex = -Infinity;
+    let occurrence = 0;
+    for (const candidate of phraseCandidates.slice(startIndex)) {
+      if (occurrence >= maxLinksPerPhrase) break;
+      if (candidate.index - lastSelectedIndex < minCharsBetweenSamePhrase) continue;
+      matches.push({ ...candidate, occurrence });
+      lastSelectedIndex = candidate.index;
+      occurrence += 1;
+    }
+  }
+  matches.sort((a, b) => b.index - a.index);
 
   let output = html;
-  const linked = new Set<string>();
 
-
-  // Helper to determine if a given index is currently inside an <a>...</a> range
-  function isInsideAnchor(str: string, pos: number): boolean {
-    const lastOpenBefore = str.lastIndexOf('<a', pos);
-    if (lastOpenBefore === -1) return false;
-    const lastCloseBefore = str.lastIndexOf('</a>', pos);
-    // If the most recent <a is after the most recent </a> before pos, we're inside a link
-    return lastOpenBefore > lastCloseBefore;
-  }
-
-  for (const { index, matchLen, matchText } of matches) {
+  for (const { index, matchLen, matchText, occurrence } of matches) {
     const lc = normalizeKW(matchText); // normalized lower for matching and uniqueness
     const displayText = output.substr(index, matchLen); // preserve original dashes/casing
-    if (linked.has(lc)) continue;
+    const preferImage = Boolean(options.alternateDestinations && occurrence > 0);
 
   // Skip if match position is inside an existing anchor
   if (isInsideAnchor(output, index)) continue;
@@ -444,12 +493,12 @@ export function autoLinkKeywordsInText(
     let skipLinking = false;  // Flag for same-page with no fallback
 
     // a) overrides
-    if (overrides[matchText] || overrides[lc]) {
+    if (!preferImage && (overrides[matchText] || overrides[lc])) {
       href = overrides[matchText] || overrides[lc];
     }
 
     // a.1) canonical SEO routing for priority phrases
-    if (!href && CANONICAL_LINK_MAP[lc]) {
+    if (!preferImage && !href && CANONICAL_LINK_MAP[lc]) {
       const canonicalTarget = CANONICAL_LINK_MAP[lc];
       if (normalizePath(canonicalTarget) !== currentPath) {
         href = canonicalTarget;
@@ -457,7 +506,7 @@ export function autoLinkKeywordsInText(
     }
 
     // a.2) explicit semantic phrase-level link override
-    if (!href) {
+    if (!preferImage && !href) {
       const phraseLink = getPhraseLinkForKW(lc, semantic);
       if (phraseLink && normalizePath(phraseLink) !== currentPath) {
         href = phraseLink;
@@ -472,13 +521,20 @@ export function autoLinkKeywordsInText(
         // Skip if no path defined (glossary-only entries)
         if (!targetPath) {
           skipLinking = true;
+        } else if (preferImage) {
+          fallbackImagePath = res.section.alternateImagePath || res.section.fallbackImagePath || targetPath;
         } else {
           // Normalize target path for comparison
           const normTarget = normalizePath(targetPath);
           
           // If linking to same page, use fallbackImagePath if defined
           if (normTarget === currentPath) {
-            if (res.section.fallbackImagePath) {
+            const phraseSelfLink = getPhraseSelfLinkForKW(lc, semantic);
+            if (phraseSelfLink && normalizePath(phraseSelfLink) !== currentPath) {
+              href = phraseSelfLink;
+            } else if (res.section.selfLinkPath && normalizePath(res.section.selfLinkPath) !== currentPath) {
+              href = res.section.selfLinkPath;
+            } else if (res.section.fallbackImagePath) {
               // Store the fallback path to use in step (c)
               fallbackImagePath = res.section.fallbackImagePath;
             } else {
@@ -557,7 +613,7 @@ export function autoLinkKeywordsInText(
         if (filtered.length) poolEntries = filtered;
 
         if (poolEntries.length) {
-          const pick = pickBuildRotating(poolEntries, `${currentPath}|${lc}|image`);
+          const pick = pickBuildRotating(poolEntries, `${currentPath}|${lc}|image|${occurrence}`);
           if (!pick) continue;
           const base = pick.galleryKey.startsWith('/')
             ? pick.galleryKey
@@ -588,7 +644,7 @@ export function autoLinkKeywordsInText(
       if (syn) {
         // try landing
         const res2 = getSectionForKW(syn, semantic);
-        if (res2 && res2.type === 'landing' && res2.section.path) {
+        if (!preferImage && res2 && res2.type === 'landing' && res2.section.path) {
           href = res2.section.path;
         }
 
@@ -641,7 +697,7 @@ export function autoLinkKeywordsInText(
             const filtered2 = poolEntries2.filter(e => !exclude.has(e.img.id));
             if (filtered2.length) poolEntries2 = filtered2;
             if (poolEntries2.length) {
-              const pick2 = pickBuildRotating(poolEntries2, `${currentPath}|${lc}|${syn}|syn`);
+              const pick2 = pickBuildRotating(poolEntries2, `${currentPath}|${lc}|${syn}|syn|${occurrence}`);
               if (!pick2) continue;
               const base2 = pick2.galleryKey.startsWith('/')
                 ? pick2.galleryKey
@@ -655,12 +711,18 @@ export function autoLinkKeywordsInText(
 
     if (!href) continue;
 
+    // Definition queries identify the destination, but "What is" is not part
+    // of the linked entity. Keep the question wording plain and anchor only
+    // the subject: "What is [Painterly photography]".
+    const definitionPrefix = displayText.match(/^what\s+is\s+(?:(?:the|a|an)\s+)?/i)?.[0] || '';
+    const anchorText = definitionPrefix ? displayText.slice(definitionPrefix.length) : displayText;
+
     output =
       output.slice(0, index) +
-      `<a href="${href}" class="kw-link">${displayText}</a>` +
+      definitionPrefix +
+      `<a href="${href}" class="kw-link">${anchorText}</a>` +
       output.slice(index + matchLen);
 
-    linked.add(lc);
   }
 
   return output;
