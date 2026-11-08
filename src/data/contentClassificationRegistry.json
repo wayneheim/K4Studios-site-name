@@ -1,7 +1,7 @@
 {
   "_meta": {
     "version": "1.0",
-    "lastUpdated": "2026-11-08T00:56:44.309Z"
+    "lastUpdated": "2026-11-08T00:57:22.895Z"
   },
   "images": {
     "i-FrDFN7V:/src/data/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White.mjs": {
@@ -8539,6 +8539,10 @@
     "i-LN2cNjt:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": {
       "classification": "scout",
       "updatedAt": "2026-11-08T00:56:44.309Z"
+    },
+    "i-zwkXbps:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-08T00:57:22.895Z"
     }
   }
 }

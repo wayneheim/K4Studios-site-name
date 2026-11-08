@@ -4044,20 +4044,28 @@ export const galleryData = [
   },
   {
     "id": "i-zwkXbps",
-    "title": "Wartime Portraits Portrait",
-    "description": "A painterly World War II photograph of a WWII soldier, defined by duty rather than spectacle. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "© Wayne Heim 2019",
+    "title": "The Weight of Command",
+    "description": "A painterly World War II portrait of an older German officer seated with his cap and gloves in his hands, his gray-green uniform neat and his gaze turned away toward the distance. He sits on a vehicle, his hands clasped over the cap — a portrait of the commander at rest, and the weight of the day in his hands. Part of Wayne Heim's *Facing History* fine art photography series. © Wayne Heim",
+    "alt": "Painterly World War II portrait of an older German officer in a gray-green uniform sitting with his cap and gloves in his hands.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-zwkXbps/A",
+
     "keywords": [
-      "DDay Conneaut 2021",
-      "wartime portraits",
-      "heroic portraits",
-      "moments of connection",
-      "greatest generation photos"
+      "painterly portrait photography",
+      "painterly fine art photography",
+      "fine art portrait photography",
+      "World War II",
+      "Facing History",
+      "Wayne Heim",
+      "K4 Studios",
+      "German officer",
+      "WWII officer",
+      "WWII soldier portrait",
+      "painterly WWII portrait"
     ],
-    "story": "Wartime Portraits Portrait. Wayne Heim's approach to K4 Studios fine art transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the",
-    "notes": "",
-    "rating": 0,
+
+    "story": "The cap is in his hands because a man who has worn it all day takes it off when he sits, and a man who has commanded all day holds it the way a man holds a letter he has read twice — because the weight of it is still there when the words have done their work, and the weight is what the day comes down to. The metal under him is warm from the sun, and the hands that hold the cap are the hands that have given the orders, and they look older to him than they did in the morning.\n\nYesterday the orders were given and the men went where they were told. Today he sits and the men are somewhere he cannot see, and the sitting is the hardest part of the day — a commander who has nothing to command is a man with a cap in his hands and nowhere to put it. He will put it back on when the waiting is done, and the day will go on being the day, and the cap will go back to being the cap, and the orders will come again, because orders always do.",
+    "notes": "The cap in his hands is what anchors this frame — a peaked cap and a pair of gloves, held the way a man holds the tools of his trade, and the portrait takes its gravity from that small, deliberate gesture. The gray-green uniform sits in a warm, painterly light, and the older face turned toward the distance gives the composition its weight. It is a dignified, characterful portrait of the officer at rest, and it holds a wall with the quiet authority of its subject.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 112,
@@ -4066,7 +4074,8 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-zwkXbps/1/NdPxMMqWsS6cMmwkWx3XZHnwmGQ3qG82njWtzTkF5/XL/_PEN0701-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-zwkXbps/1/MhHznBFMHLkdDQQTGF8W7rWQRjNr2RVcFDtWfGQXf/L/_PEN0701-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-zwkXbps/1/NGG2qkK7fhK3PCKjqCDmTz6T5MG2R8MSMv7sDSsHd/S/_PEN0701-Edit-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "ai"
   },
   {
     "id": "i-9fL2VZG",

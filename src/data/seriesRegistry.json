@@ -1,7 +1,7 @@
 {
   "_meta": {
     "version": "2.0",
-    "lastUpdated": "2026-11-08T00:56:49.940Z",
+    "lastUpdated": "2026-11-08T00:57:28.852Z",
     "editionDataMigrated": "2025-12-27T01:58:37.244Z",
     "lastSyncFrom": "Engrained-Series.mjs",
     "oneImageMovieMarkedAt": "2026-06-05T16:24:54.142Z"
@@ -3446,7 +3446,8 @@
     "i-r55b7nc:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-5zN7mUN",
     "i-jtPB9ts:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-9dF7G6N",
     "i-gDXQwBF:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-M6KjQAq",
-    "i-LN2cNjt:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-HRKh5zx"
+    "i-LN2cNjt:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-HRKh5zx",
+    "i-zwkXbps:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-AespQBN"
   },
   "series": {
     "s-BB65wHk": {
@@ -76086,6 +76087,27 @@
       "excludeSizes": {},
       "yearCreated": "",
       "createdAt": "2026-11-08T00:56:45.437Z"
+    },
+    "s-AespQBN": {
+      "primaryImageId": "i-zwkXbps",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "The Weight of Command",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-zwkXbps/1/NdPxMMqWsS6cMmwkWx3XZHnwmGQ3qG82njWtzTkF5/XL/_PEN0701-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-zwkXbps",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
+          "title": "The Weight of Command",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-zwkXbps/1/NdPxMMqWsS6cMmwkWx3XZHnwmGQ3qG82njWtzTkF5/XL/_PEN0701-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T00:57:24.214Z"
     }
   }
 }
