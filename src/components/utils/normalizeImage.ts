@@ -72,6 +72,10 @@ export function sanitizeCarouselForClient<T extends ImageVariants>(images: T[]):
     description: img.description,
     keywords: img.keywords,
     story: img.story,
+    audioSrc: img.audioSrc,
+    audioLabel: img.audioLabel,
+    audioNote: img.audioNote,
+    audioPending: img.audioPending,
     imageObjectPosition: img.imageObjectPosition,
     imageScale: img.imageScale,
     // Explicitly exclude: src, srcS, srcM, srcL, srcXL, srcOriginal, buyLink

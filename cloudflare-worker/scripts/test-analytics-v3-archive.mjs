@@ -88,6 +88,25 @@ rows.push(
   { ...browserRow, id: nextId + 16, event_type: 'picture_shows_jump', target_id: 'Picture_Shows_Widget_Home', page: '/' }
 );
 
+const oimDomainSession = 'session-oim-domain-funnel';
+rows.push(
+  {
+    ...browserRow, id: nextId + 17, event_type: 'page_view', page: '/One-Image-Movie',
+    session_id: oimDomainSession, visitor_id: 'visitor-oim-domain-funnel',
+    utm_source: 'one-image-movie.com', utm_medium: 'vanity_domain', utm_campaign: 'oim_doorway'
+  },
+  {
+    ...browserRow, id: nextId + 18, event_type: 'page_view', page: '/Galleries/Painterly-Fine-Art-Photography',
+    session_id: oimDomainSession, visitor_id: 'visitor-oim-domain-funnel',
+    utm_source: null, utm_medium: null, utm_campaign: null
+  },
+  {
+    ...browserRow, id: nextId + 19, event_type: 'chapter_view', page: '/Galleries/Test/i-oimDomainChapter',
+    target_id: 'i-oimDomainChapter', session_id: oimDomainSession, visitor_id: 'visitor-oim-domain-funnel',
+    utm_source: null, utm_medium: null, utm_campaign: null
+  }
+);
+
 const rollup = buildV3RollupBatch(rows);
 const summary = summarizeV3Rollup(rollup, `${files.length}-day archived sample`);
 const imageOnlySummary = summarizeV3Rollup(buildV3RollupBatch([imageOnlyRow]), 'Image-only fallback');
@@ -170,6 +189,14 @@ assert.ok(html.includes('Site visitor devices') && html.includes('Image viewer d
 assert.ok(html.includes('<th>Share</th>') && html.includes('device-icon'), 'device panels should show compact icons and percentages');
 assert.ok(html.indexOf('Site visitor devices') < html.indexOf('Top 25 entry pages'), 'device panels should render at the top of the report grid');
 assert.ok(html.includes('Top 10 Entry Navigation'), 'dashboard should render entry navigation progression');
+assert.deepEqual(summary.oimDomainFunnel, [{
+  label: 'one-image-movie.com', entries: 1, continued: 1, chapters: 1
+}], 'OIM vanity-domain sessions should retain their source and progression');
+assert.ok(html.includes('One-Image Movie Domain Journey') && html.includes('one-image-movie.com'), 'dashboard should render the OIM domain journey panel');
+assert.ok([
+  'one-image-movie.com', 'one-image-movies.com', 'one-imagemovie.com',
+  'one-imagemovies.com', 'oneimagemovie.com', 'oneimagemovies.com'
+].every((domain) => html.includes(domain)), 'OIM journey panel should always show all six forwarded domains');
 assert.ok(html.includes('Shopping cart funnel'), 'dashboard should render the native shopping cart funnel');
 assert.ok(!html.includes('SmugMug order clicks'), 'dashboard should not render the retired SmugMug order metric');
 assert.ok(!html.includes('Email order clicks'), 'dashboard should not render the retired email-order metric');

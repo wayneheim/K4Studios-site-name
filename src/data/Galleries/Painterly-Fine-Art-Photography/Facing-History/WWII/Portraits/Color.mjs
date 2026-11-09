@@ -2735,9 +2735,9 @@ export const galleryData = [
   },
   {
     "id": "i-r9F7JCH",
-    "title": "The Dappled Man",
-    "description": "A painterly World War II portrait of a German soldier in a dappled camouflage smock and a netted helmet, a rifle over his shoulder and a comrade behind him, looking directly at the camera in soft, sepia light. Grounded in WWII reenactment photography and historical authenticity, this World War II fine art photograph captures the quiet tension of the war in the pause before the advance, where concealment is carried in cloth rather than in words. This wartime portrait photography piece explores heroic portraits not through combat, but through the steady gravity of a man the camouflage could not quite hide. Part of Wayne Heim's *Facing History* fine art photography series. © Wayne Heim",
-    "alt": "German WWII soldier in dappled camouflage smock and netted helmet, painterly World War II portrait photography",
+    "title": "The Patient Sentry",
+    "description": "A painterly World War II portrait of a German soldier in a camouflage smock and a netted helmet, a rifle over his shoulder and a comrade behind him, looking directly at the camera in soft, sepia light. Grounded in WWII reenactment photography and historical authenticity, this World War II fine art photograph captures the quiet tension of the war in the pause before the advance, where concealment is carried in cloth rather than in words. This wartime portrait photography piece explores heroic portraits not through combat, but through the steady gravity of a man the camouflage could not quite hide. Part of Wayne Heim's *Facing History* fine art photography series. © Wayne Heim",
+    "alt": "German WWII soldier in camouflage smock and netted helmet, painterly World War II portrait photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-r9F7JCH/A",
 
     "keywords": [
@@ -2760,7 +2760,7 @@ export const galleryData = [
       "soldier"
     ],
 
-    "story": "The cloth on his shoulders was made to make him disappear, and it had almost worked. The spots and the shadows broke him into pieces, and the pieces belonged to the bushes and the ditches, and the man in the middle of them was the part the cloth could not hide.\nHe stood in the open because the open was where the work was, and the work was the rifle on his shoulder and the man behind him and the ground ahead, and none of it asked for his opinion.\nHe looked at the camera because the camera had found him before the cloth could hide him. Tomorrow the cloth would work better, or it would not — and the not-working was the thing he had learned not to think about.",
+    "story": "The cloth on his shoulders was made to make him disappear, and it had almost worked. The spots and the shadows broke him into pieces, and the pieces belonged to the bushes and the ditches, and the man in the middle of them was the part the cloth could not hide.\n\nHe stood in the open because the open was where the work was, and the work was the rifle on his shoulder and the man behind him and the ground ahead, and none of it asked for his opinion.\n\nHe looked at the camera because the camera had found him before the cloth could hide him. Tomorrow the cloth would work better, or it would not — and the not-working was the thing he had learned not to think about.",
     "notes": "The cloth is made to make him disappear, and it almost works. The spots and the shadows break him into pieces that belong to the bushes and the ditches, and the painterly light holds those pieces the way it holds the face in the middle of them — as a man, and as a thing the cloth could not hide. The rifle on his shoulder and the comrade behind him say where he is going, and the face says where he has been, and the standing in the open says what the cloth cannot: that a man is not a bush, and not a ditch, and not a piece of ground. A collector hangs this one for that standing — a portrait that proves camouflage, in these pictures, is a craft and not a trick, and the craft is what makes the print stay.",
     "rating": 4,
     "galleries": [],
@@ -2777,7 +2777,7 @@ export const galleryData = [
   {
     "id": "i-7cKv55q",
     "title": "The Long Exhale",
-    "description": "A painterly World War II portrait of a German soldier in a dappled camouflage smock, wiping his brow with a rifle over his shoulder and a comrade beside him, rendered in warm, sepia light. Grounded in WWII reenactment photography and historical authenticity, this World War II fine art photograph captures the quiet exhaustion of the war in the pause before the next mile, where weariness is carried in a hand rather than in words. This wartime portrait photography piece explores heroic portraits not through combat, but through the steady patience of a man who has learned to keep walking. Part of Wayne Heim's *Facing History* fine art photography series. © Wayne Heim",
+    "description": "A painterly World War II portrait of a German soldier in a camouflage smock, wiping his brow with a rifle over his shoulder and a comrade beside him, rendered in warm, sepia light. Grounded in WWII reenactment photography and historical authenticity, this World War II fine art photograph captures the quiet exhaustion of the war in the pause before the next mile, where weariness is carried in a hand rather than in words. This wartime portrait photography piece explores heroic portraits not through combat, but through the steady patience of a man who has learned to keep walking. Part of Wayne Heim's *Facing History* fine art photography series. © Wayne Heim",
     "alt": "German WWII soldier in camouflage smock wiping brow, painterly World War II portrait photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-7cKv55q/A",
 
@@ -2801,7 +2801,7 @@ export const galleryData = [
       "soldier"
     ],
 
-    "story": "He wiped his brow because the sweat had found its way into his eyes, and the eyes were not a thing he could spare. The scrim around his neck was wet through, and the rifle on his shoulder was heavier than it had been an hour ago, and the hour before that.\nHe did not sigh. The sighing would have said what he did not want said, and the saying of it would have made it true. So he wiped his brow instead, and the wiping said nothing, and the nothing was the point.\nSomewhere ahead, the ground would level, and the leveling would be the rest. He had learned to walk toward a level ground the way other men walk toward a door: slowly, and with everything he had.",
+    "story": "He wiped his brow because the sweat had found its way into his eyes, and the eyes were not a thing he could spare. The scrim around his neck was wet through, and the rifle on his shoulder was heavier than it had been an hour ago, and the hour before that.\n\nHe did not sigh. The sighing would have said what he did not want said, and the saying of it would have made it true. So he wiped his brow instead, and the wiping said nothing, and the nothing was the point.\n\nSomewhere ahead, the ground would level, and the leveling would be the rest. He had learned to walk toward a level ground the way other men walk toward a door: slowly, and with everything he had.",
     "notes": "It starts with the hand. It is on his brow, wiping away what the day has put there, and the painterly light holds it the way it holds the camouflage smock and the wet scrim — as a man, and as a thing the war has made tired. The rifle on his shoulder has not got lighter, and the comrade beside him is out of focus, and both of them are still walking — and the walking is what the camera came for. A collector buys this one for that walking — a portrait that does not hide the sweat but lets you see it, and the seeing is what makes the print feel true.",
     "rating": 4,
     "galleries": [],
@@ -3497,7 +3497,7 @@ export const galleryData = [
     "notes": "The ladle is the star of this one — mid-scoop, leveled and unhurried, it gives the frame its action and its honesty, with the cook's grin at the camera to soften it. The great steaming pot and the wooden crates set the scene without clutter, and the warm, muted tones keep the whole picture in the register of a remembered afternoon rather than a staged one. It is a warm, humane portrait of the army's unglamorous work, and the kind of frame that makes a wall feel like a place with a table in it.",
     "rating": 4,
     "galleries": [],
-    "visibility": "show",
+    "visibility": "hidden",
     "sortOrder": 97,
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-gkmPx9g/0/KNw2VPfcQPh92thxGZPfWdGLhjCkxsJ5Rj9dn46pL/XL/_PEN0048-Edit-2-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-gkmPx9g/0/KNw2VPfcQPh92thxGZPfWdGLhjCkxsJ5Rj9dn46pL/XL/_PEN0048-Edit-2-Edit-XL.jpg",
@@ -3879,7 +3879,7 @@ export const galleryData = [
     "notes": "The hold is what makes this frame — five women, arms around shoulders, knees braced in the sand, the heap of them held together by nothing but each other and the laughter. The composition is a tangle that works: no line, no parade order, just the warmth of five friends who have decided, for a minute, that the beach is theirs. It is a warm, joyful portrait of the women of the war at play, and it brings the sound of laughter to any wall it hangs on.",
     "rating": 4,
     "galleries": [],
-    "visibility": "show",
+    "visibility": "hidden",
     "sortOrder": 107,
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-r55b7nc/0/NMxDVwkGxf3k9PrsGmQSS6FHd8fF8x6vpGdbkWjZW/XL/_PEN0576-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-r55b7nc/0/NMxDVwkGxf3k9PrsGmQSS6FHd8fF8x6vpGdbkWjZW/XL/_PEN0576-Edit-XL.jpg",
@@ -4221,7 +4221,7 @@ export const galleryData = [
     "notes": "The rope is the detail that makes this frame — thick and salt-stiff in his hand, it gives the portrait its grip, and the life vest and the landing craft give it its place. The older face above them, the glasses and the steady gaze, turn a waiting portrait into a portrait of a man who has already decided, and the sea behind him in the gray light keeps the scene in the register of the morning before the landing. It is a tense, honest portrait of the naval man on the morning of the landing, and it holds a wall with the steady patience of the man it shows.",
     "rating": 4,
     "galleries": [],
-    "visibility": "show",
+    "visibility": "hidden",
     "sortOrder": 116,
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-327k6C2/0/LdZfVjHn9TCSBw8SXmCXXf2BkfKNpVvDwqHCWFnxN/XL/_PEN0783-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-327k6C2/0/LdZfVjHn9TCSBw8SXmCXXf2BkfKNpVvDwqHCWFnxN/XL/_PEN0783-Edit-2-XL.jpg",
@@ -5349,25 +5349,32 @@ export const galleryData = [
   },
   {
     "id": "i-sLWpzr4",
-    "title": "Portrait of Canadian Reenactor  Photography by Wayne Heim",
-    "description": "A Canadian reenactor poses for a portrait at D Day Conneaut.  © Wayne Heim",
-    "alt": "© Wayne Heim",
+    "title": "The Conneaut Canadian",
+    "description": "A painterly World War II portrait of an older Canadian reenactor in a Commonwealth battledress and a netted Brodie helmet with scrim, round glasses and a mustache, his stern gaze meeting the camera, a dark shoulder patch with a red insignia on his sleeve and a pack on his back, set against a pale cloudy painterly sky. Painterly portrait photography gives the frame its warm, aged depth, turning a reenactor's stand at D-Day Conneaut into a lasting image of living history. Part of Wayne Heim's *Facing History* fine art photography series. © Wayne Heim",
+    "alt": "An older Canadian reenactor in a Commonwealth battledress and a netted Brodie helmet with scrim, round glasses and a mustache, his stern gaze meeting the camera, a dark shoulder patch with a red insignia on his sleeve and a pack on his back, pale cloudy sky behind him, painterly World War II portrait photography, fine art portrait",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-sLWpzr4/A",
+
     "keywords": [
-      "wayne heim",
-      "wwii photography",
-      "wwii reenactment",
-      "woman",
-      "reenactment",
-      "reenactors",
-      "rockford wwii days",
-      "newspaper",
-      "war news",
-      "k4 studios"
+      "painterly portrait photography",
+      "painterly fine art photography",
+      "fine art portrait photography",
+      "World War II",
+      "Facing History",
+      "Wayne Heim",
+      "K4 Studios",
+      "Canadian reenactor",
+      "D-Day Conneaut",
+      "Brodie helmet",
+      "battledress",
+      "wartime portrait",
+      "WWII portrait",
+      "painterly WWII portrait",
+      "WWII reenactment"
     ],
-    "story": "A Canadian reenactor poses for a portrait at D Day Conneaut.  © Wayne Heim",
-    "notes": "",
-    "rating": 0,
+
+    "story": "The net on the helmet has been pulled and re-pulled a dozen times, and it still sits the way it sits — a little crooked, a little heavy, the scrim bunched at the top where his hand keeps fiddling with it. The glasses are fogging at the edges and he does not care, because the men he is standing in for did not care about comfort either, and that is the point. He is not young, and he does not have to be — the uniform is doing the young work for him, and all he has to do is stand in it, and look the way a man looks when the noise is about to start. The camera is the easy part. The standing still is the hard one.",
+    "notes": "The net is what a collector will study first: a Brodie helmet dressed in scrim and netting, sitting a little crooked on an older reenactor whose glasses and mustache give the frame a gruff, lived-in authority that no young face could carry. Wayne Heim's painterly treatment warms the khaki and the pale sky into a single aged register, and the dark shoulder patch with its red insignia gives the uniform the detail a collector's eye wants. It is a portrait of living history at its most honest — a man standing in for the men who were there — and it holds a wall with the quiet weight of a man who has taken the time to stand in their place.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 146,
@@ -5376,29 +5383,38 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-sLWpzr4/4/LC26Kggp47mLSfMJB8WwcWGV6QTVSmHmq4fj8Mtmm/L/P8180482-Edit-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-sLWpzr4/4/KHZ86Q4W4VxsmRMPGQnG7Jd4ZmPKVbC53xxhHb2Mg/M/P8180482-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-sLWpzr4/4/Lgmr9MX9x4mKXQbKgZqKnwSVDHF9n3tTTHfXfb79F/S/P8180482-Edit-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "ai"
   },
   {
     "id": "i-fK4qZB4",
-    "title": "Charging Soldier    Photography by Wayne Heim",
-    "description": "Portrait of soldier charging during reenactment battle.  © Wayne Heim",
-    "alt": "Portrait of Canadian Reenactor  Photography by Wayne Heim",
+    "title": "The Battle Cry",
+    "description": "A painterly World War II portrait of an American soldier mid-charge, a netted M1 steel helmet on his head and a rifle gripped across his body, his mouth open in a shout, leaning forward against a pale smoky painterly backdrop. Painterly portrait photography gives the frame its dynamic, hand-finished energy, turning a reenactment battle's charge into a lasting image of wartime momentum. Part of Wayne Heim's *Facing History* fine art photography series. © Wayne Heim",
+    "alt": "An American soldier mid-charge wearing a netted M1 steel helmet and field jacket, gripping a rifle across his body, his mouth open in a shout, leaning forward against a pale smoky backdrop, painterly World War II portrait photography, fine art portrait",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-fK4qZB4/A",
+
     "keywords": [
-      "wayne heim",
-      "wwii photography",
-      "wwii reenactment",
-      "woman",
-      "reenactment",
-      "reenactors",
-      "rockford wwii days",
-      "newspaper",
-      "war news",
-      "k4 studios"
+      "painterly portrait photography",
+      "painterly fine art photography",
+      "fine art portrait photography",
+      "World War II",
+      "Facing History",
+      "Wayne Heim",
+      "K4 Studios",
+      "American soldier",
+      "charging",
+      "battle cry",
+      "M1 Garand",
+      "netted helmet",
+      "WWII reenactment",
+      "wartime portrait",
+      "WWII portrait",
+      "painterly WWII portrait"
     ],
-    "story": "Portrait of soldier charging during reenactment battle.  © Wayne Heim",
-    "notes": "",
-    "rating": 0,
+
+    "story": "The shout is already out of him before he knows he has made it — it tears up out of his chest the way a man's voice does when the ground is moving under his boots and there is nowhere to go but forward. The rifle is across his body, the sling biting into his shoulder, the helmet's net bouncing with every step, and he is leaning into the charge the way you lean into a strong wind, because stopping is not an option now. The smoke is ahead of him, and the sound of the others is behind him, and the ground he has to cross is right there in front of him.",
+    "notes": "This is the dataset's closing frame, and it closes it the way a charge should: a soldier leaning forward into the smoke, his mouth open in a shout, a rifle gripped across his body, the netted helmet bouncing with the motion. Wayne Heim's painterly treatment gives the haze and the khaki a single smoky register, and the leather sling with its brass studs is the detail that rewards a close look. It is the most kinetic portrait in the set, and it hangs with a force that quieter frames cannot match — a portrait a collector reaches for when the collection needs a heartbeat.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 147,
@@ -5407,6 +5423,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-fK4qZB4/5/MWwWPdZwLn5NxFrBnpsj2c4fhN52wHhTb8PH4CRXL/L/P8191330-Edit-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-fK4qZB4/5/M6gnTzQpXRQcsrQC5qmHH9HtVSMVwNrc2pdf3XvCc/M/P8191330-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-fK4qZB4/5/MrS68vR4dhsDKsjXfsF3DpGZMsnL6pffnwb9MbcRR/S/P8191330-Edit-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "ai"
   }
 ];

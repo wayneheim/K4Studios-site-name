@@ -17,6 +17,7 @@
  */
 import { useState, useEffect, useRef, useCallback } from "react";
 import { getSemanticImageUrl } from "../../utils/imageProxy.js";
+import { trackEvent } from "../../utils/analytics.ts";
 
 const INTERVAL_MS = 8500;
 const FADE_MS = 1200;
@@ -29,13 +30,22 @@ export default function HybridBookCarousel({
   galleryBasePath = "",
   kicker = "",
   counterLabel = "",
+  ctaLabel = "Continue the Story →",
+  readingMode = false,
+  compact = false,
+  showFullStory = false,
+  showControls = true,
+  showCounter = true,
+  autoAdvanceMs = INTERVAL_MS,
 }) {
   const [active, setActive] = useState(0);
   const [fading, setFading] = useState(false);
   const [textPhase, setTextPhase] = useState("idle");
   const [paused, setPaused] = useState(false);
+  const [imageAspect, setImageAspect] = useState(1.5);
   const timerRef = useRef(null);
   const textTimerRef = useRef(null);
+  const audioRef = useRef(null);
   const total = slides.length;
 
   const goTo = useCallback(
@@ -64,10 +74,16 @@ export default function HybridBookCarousel({
 
   // Auto-advance
   useEffect(() => {
-    if (paused || total < 2) return;
-    timerRef.current = setInterval(goNext, INTERVAL_MS);
+    if (paused || total < 2 || !autoAdvanceMs) return;
+    timerRef.current = setInterval(goNext, autoAdvanceMs);
     return () => clearInterval(timerRef.current);
-  }, [paused, goNext, total]);
+  }, [paused, goNext, total, autoAdvanceMs]);
+
+  useEffect(() => {
+    if (!audioRef.current) return;
+    audioRef.current.pause();
+    audioRef.current.currentTime = 0;
+  }, [active]);
 
   useEffect(() => {
     return () => {
@@ -84,7 +100,7 @@ export default function HybridBookCarousel({
 
   return (
     <div
-      className="hybrid-book-carousel"
+      className={`hybrid-book-carousel${readingMode ? " hybrid-book-carousel--reading" : ""}${compact ? " hybrid-book-carousel--compact" : ""}${showFullStory ? " hybrid-book-carousel--full-story" : ""}`}
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       role="region"
@@ -93,7 +109,10 @@ export default function HybridBookCarousel({
     >
       <div className="hybrid-book-spread">
         {/* ── Image Panel ── */}
-        <div className={`hybrid-book-image${fading ? " is-fading" : ""}`}>
+        <div
+          className={`hybrid-book-image${fading ? " is-fading" : ""}`}
+          style={compact ? { "--hybrid-image-aspect": imageAspect } : undefined}
+        >
           <a href={chapterLink} aria-label={`View "${current.title}"`}>
             <img
               src={current.src || getSemanticImageUrl(current, { galleryPath: getGalleryPathFromImageHref(current.href) || galleryBasePath })}
@@ -103,6 +122,12 @@ export default function HybridBookCarousel({
               loading={active === 0 ? "eager" : "lazy"}
               fetchpriority={active === 0 ? "high" : undefined}
               decoding="async"
+              onLoad={(event) => {
+                const image = event.currentTarget;
+                if (image.naturalWidth && image.naturalHeight) {
+                  setImageAspect(image.naturalWidth / image.naturalHeight);
+                }
+              }}
               style={current.imageScale ? { transform: `scale(${current.imageScale})` } : undefined}
             />
           </a>
@@ -117,15 +142,36 @@ export default function HybridBookCarousel({
             {kicker ? <p className="hybrid-book-kicker">{kicker}</p> : null}
             <p className="hybrid-book-title">{current.title}</p>
             <p className="hybrid-book-story">{current.story}</p>
+            {current.audioSrc || current.audioPending ? (
+              <div className="hybrid-book-audio">
+                {current.audioSrc ? (
+                  <audio
+                    ref={audioRef}
+                    controls
+                    preload="none"
+                    src={current.audioSrc}
+                    aria-label={current.audioLabel || `Hear ${current.title} told`}
+                    onPlay={() => trackEvent("one_image_movie_audio_play", {
+                      imageId: current.id,
+                      pageType: "other",
+                      trigger: "featured_story_audio",
+                    })}
+                  />
+                ) : (
+                  <button type="button" disabled aria-disabled="true"><span aria-hidden="true">▶</span> {current.audioLabel || "Hear this one told"}</button>
+                )}
+                {current.audioNote ? <p>{current.audioNote}</p> : null}
+              </div>
+            ) : null}
             <a href={chapterLink} className="hybrid-book-cta">
-              Continue the Story →
+              {ctaLabel}
             </a>
           </div>
         </div>
       </div>
 
       {/* ── Navigation Arrows ── */}
-      {total > 1 && (
+      {total > 1 && showControls && (
         <>
           <button
             className="hybrid-book-arrow hybrid-book-arrow--prev"
@@ -145,7 +191,7 @@ export default function HybridBookCarousel({
       )}
 
       {/* ── Slide counter (subtle) ── */}
-      {total > 1 && (
+      {total > 1 && showCounter && (
         <div className="hybrid-book-counter" aria-hidden="true">
           {counterLabel ? `${counterLabel} ${active + 1} of ${total}` : `${active + 1} / ${total}`}
         </div>
@@ -284,6 +330,105 @@ export default function HybridBookCarousel({
           -webkit-box-orient: vertical;
         }
 
+        .hybrid-book-carousel--reading .hybrid-book-spread {
+          height: 720px;
+        }
+        .hybrid-book-carousel--compact {
+          padding: .55rem;
+          border: 1px solid #9d8774;
+          border-radius: 18px;
+          background: #2a211b;
+          box-shadow: 0 12px 30px rgba(45,32,23,.15), inset 0 0 0 2px rgba(255,255,255,.06);
+          overflow: hidden;
+        }
+        .hybrid-book-carousel--compact .hybrid-book-spread {
+          height: 440px;
+          gap: 0;
+          border: 1px solid rgba(255,255,255,.08);
+          border-radius: 12px;
+          background: #211a16;
+          box-shadow: none;
+        }
+        .hybrid-book-carousel--compact .hybrid-book-image {
+          flex: 0 0 min(69%, calc(440px * var(--hybrid-image-aspect, 1.5)));
+          max-width: 69%;
+          background: #17120f;
+        }
+        .hybrid-book-carousel--compact .hybrid-book-image a {
+          padding: .55rem;
+          background: #17120f;
+        }
+        .hybrid-book-carousel--compact .hybrid-book-text {
+          flex: 1 1 0;
+          max-width: none;
+          min-height: 440px;
+          padding: 1.6rem 1.45rem 1.6rem 2.75rem;
+          background: linear-gradient(145deg,#2a211b,#1d1713);
+          overflow: hidden;
+        }
+        .hybrid-book-carousel--compact .hybrid-book-title { color: #f4ede4; }
+        .hybrid-book-carousel--compact .hybrid-book-story { color: #cfc2b5; }
+        .hybrid-book-carousel--compact.hybrid-book-carousel--full-story .hybrid-book-story {
+          max-height: none;
+          overflow: visible;
+          display: block;
+          white-space: pre-line;
+          -webkit-line-clamp: unset;
+          font-size: .86rem;
+          line-height: 1.48;
+          margin-bottom: 1.1rem;
+        }
+        .hybrid-book-carousel--compact .hybrid-book-cta { color: #d8a978; }
+        .hybrid-book-carousel--compact .hybrid-book-cta:hover { color: #f0c89f; border-color: #d8a978; }
+        .hybrid-book-carousel--compact .hybrid-book-image img {
+          border-radius: 8px;
+        }
+        .hybrid-book-carousel--reading .hybrid-book-text {
+          justify-content: flex-start;
+          min-height: 720px;
+          padding-top: 3rem;
+          padding-bottom: 3rem;
+          overflow-y: auto;
+        }
+        .hybrid-book-carousel--reading .hybrid-book-story {
+          max-height: none;
+          overflow: visible;
+          display: block;
+          white-space: pre-line;
+          -webkit-line-clamp: unset;
+        }
+        .hybrid-book-carousel--reading .hybrid-book-image img,
+        .hybrid-book-carousel--reading:hover .hybrid-book-image img {
+          transform: none;
+          transition: none;
+        }
+        .hybrid-book-audio {
+          margin: 0 0 1.25rem;
+          padding-top: 1rem;
+          border-top: 1px solid rgba(121,98,78,.18);
+        }
+        .hybrid-book-audio audio { width: 100%; }
+        .hybrid-book-audio button {
+          display: inline-flex;
+          align-items: center;
+          gap: .55rem;
+          min-height: 2.5rem;
+          padding: .6rem .9rem;
+          border: 1px solid #8d735c;
+          border-radius: 999px;
+          background: #faf8f5;
+          color: #6d4225;
+          font: 600 .82rem/1.2 'Glegoo', serif;
+          opacity: .62;
+        }
+        .hybrid-book-audio p {
+          margin: .55rem 0 0;
+          color: #7a6a5c;
+          font-size: .75rem;
+          font-style: italic;
+          line-height: 1.45;
+        }
+
         .hybrid-book-cta {
           display: inline-block;
           font-size: 0.9rem;
@@ -366,6 +511,41 @@ export default function HybridBookCarousel({
             font-size: 0.9rem;
             -webkit-line-clamp: 2;
             max-height: 3.2em;
+          }
+          .hybrid-book-carousel--reading .hybrid-book-spread {
+            height: auto;
+            min-height: 780px;
+          }
+          .hybrid-book-carousel--reading .hybrid-book-image {
+            flex-basis: 300px;
+            height: 300px;
+          }
+          .hybrid-book-carousel--reading .hybrid-book-text {
+            min-height: 480px;
+            overflow: visible;
+          }
+          .hybrid-book-carousel--reading .hybrid-book-story {
+            max-height: none;
+            display: block;
+            -webkit-line-clamp: unset;
+          }
+          .hybrid-book-carousel--compact {
+            padding: .4rem;
+          }
+          .hybrid-book-carousel--compact .hybrid-book-spread {
+            height: 600px;
+            gap: 0;
+          }
+          .hybrid-book-carousel--compact .hybrid-book-image {
+            flex: 0 0 330px;
+            max-width: 100%;
+            height: 330px;
+          }
+          .hybrid-book-carousel--compact .hybrid-book-text {
+            flex: 1 1 0%;
+            max-width: 100%;
+            min-height: 0;
+            padding: 1.25rem 1.15rem;
           }
           .hybrid-book-arrow {
             width: 34px;

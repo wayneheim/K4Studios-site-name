@@ -2,6 +2,7 @@ import { V3_DATACENTER_ASNS } from './model.js';
 
 const EASTERN_TIME_ZONE = 'America/New_York';
 const diagnosticAsnList = V3_DATACENTER_ASNS.join(',');
+const V3_OWNER_IP = '184.56.48.57';
 const formatter = new Intl.DateTimeFormat('en-CA', {
   timeZone: EASTERN_TIME_ZONE, year: 'numeric', month: '2-digit', day: '2-digit'
 });
@@ -49,7 +50,7 @@ function rows(result) {
 export async function getV3CoreSummary(env, { windowKey = 'today', now = new Date() } = {}) {
   const window = getV3Window(windowKey, now);
   const bounds = [window.startDay, window.endDay];
-  const [metricResult, peopleResult, dimensionResult, sessionBreakdownResult, entryNavigationResult, deviceBreakdownResult, imageResult, stateResult] = await env.DB.batch([
+  const [metricResult, peopleResult, dimensionResult, sessionBreakdownResult, oimDomainResult, entryNavigationResult, deviceBreakdownResult, imageResult, stateResult] = await env.DB.batch([
     env.DB.prepare(`
       SELECT COALESCE(SUM(page_views),0) + (
           SELECT COUNT(*) FROM analytics_v3_daily_sessions
@@ -101,6 +102,16 @@ export async function getV3CoreSummary(env, { windowKey = 'today', now = new Dat
       UNION ALL
       SELECT 'image_geo',image_geo,COUNT(DISTINCT visitor_id) FROM scoped
         WHERE image_geo IS NOT NULL GROUP BY image_geo
+    `).bind(...bounds),
+    env.DB.prepare(`
+      SELECT oim_domain label,
+        COUNT(*) entries,
+        SUM(CASE WHEN page_view_count >= 2 THEN 1 ELSE 0 END) continued,
+        SUM(CASE WHEN image_device IS NOT NULL OR image_geo IS NOT NULL THEN 1 ELSE 0 END) chapters
+      FROM analytics_v3_daily_sessions
+      WHERE day BETWEEN ? AND ? AND oim_domain IS NOT NULL
+      GROUP BY oim_domain
+      ORDER BY oim_domain
     `).bind(...bounds),
     env.DB.prepare(`
       WITH progression AS (
@@ -195,6 +206,12 @@ export async function getV3CoreSummary(env, { windowKey = 'today', now = new Dat
       continued: Number(row.continued || 0),
       chapters: Number(row.chapters || 0)
     })),
+    oimDomainFunnel: rows(oimDomainResult).map((row) => ({
+      label: row.label,
+      entries: Number(row.entries || 0),
+      continued: Number(row.continued || 0),
+      chapters: Number(row.chapters || 0)
+    })),
     acquisition: topSession('entry_source', 10),
     visitorGeography: topSession('visitor_geo', 20),
     siteDevices: topSession('site_device', 5), imageDevices: topSession('image_device', 5),
@@ -214,10 +231,11 @@ export async function getV3Diagnostics(env, { windowKey = 'today', now = new Dat
   const end = easternDayStartSql(shiftDay(window.endDay, 1));
   const bounds = [start, end];
   const diagnosticPredicate = `(source<>'js' OR event_type IN ('direct_image','harvester_friction') OR cf_asn IN (${diagnosticAsnList}) OR country='T1' OR lower(COALESCE(ua,'')) LIKE '%bot%' OR lower(COALESCE(ua,'')) LIKE '%headless%')`;
+  const ownerPredicate = `AND COALESCE(ip,ip_hash,'')<>'${V3_OWNER_IP}'`;
   const [eventMix, asnMix, userAgents] = await env.DB.batch([
-    env.DB.prepare(`SELECT source || ' / ' || event_type AS label, COUNT(*) count FROM raw_events INDEXED BY idx_raw_events_ts WHERE ts>=? AND ts<? AND ${diagnosticPredicate} GROUP BY source,event_type ORDER BY count DESC LIMIT 30`).bind(...bounds),
-    env.DB.prepare(`SELECT 'ASN ' || COALESCE(CAST(cf_asn AS TEXT),'unknown') label, COUNT(*) count FROM raw_events INDEXED BY idx_raw_events_ts WHERE ts>=? AND ts<? AND ${diagnosticPredicate} GROUP BY cf_asn ORDER BY count DESC LIMIT 20`).bind(...bounds),
-    env.DB.prepare(`SELECT COALESCE(NULLIF(ua,''),'Unknown user agent') label, COUNT(*) count FROM raw_events INDEXED BY idx_raw_events_ts WHERE ts>=? AND ts<? AND ${diagnosticPredicate} GROUP BY ua ORDER BY count DESC LIMIT 15`).bind(...bounds)
+    env.DB.prepare(`SELECT source || ' / ' || event_type AS label, COUNT(*) count FROM raw_events INDEXED BY idx_raw_events_ts WHERE ts>=? AND ts<? ${ownerPredicate} AND ${diagnosticPredicate} GROUP BY source,event_type ORDER BY count DESC LIMIT 30`).bind(...bounds),
+    env.DB.prepare(`SELECT 'ASN ' || COALESCE(CAST(cf_asn AS TEXT),'unknown') label, COUNT(*) count FROM raw_events INDEXED BY idx_raw_events_ts WHERE ts>=? AND ts<? ${ownerPredicate} AND ${diagnosticPredicate} GROUP BY cf_asn ORDER BY count DESC LIMIT 20`).bind(...bounds),
+    env.DB.prepare(`SELECT COALESCE(NULLIF(ua,''),'Unknown user agent') label, COUNT(*) count FROM raw_events INDEXED BY idx_raw_events_ts WHERE ts>=? AND ts<? ${ownerPredicate} AND ${diagnosticPredicate} GROUP BY ua ORDER BY count DESC LIMIT 15`).bind(...bounds)
   ]);
   const map = (result) => rows(result).map((row) => ({ label: row.label, count: Number(row.count || 0) }));
   return { window, eventMix: map(eventMix), asnMix: map(asnMix), userAgents: map(userAgents) };

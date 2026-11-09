@@ -1,7 +1,7 @@
 {
   "_meta": {
     "version": "2.0",
-    "lastUpdated": "2026-11-08T01:26:01.884Z",
+    "lastUpdated": "2026-11-08T22:42:51.836Z",
     "editionDataMigrated": "2025-12-27T01:58:37.244Z",
     "lastSyncFrom": "Engrained-Series.mjs",
     "oneImageMovieMarkedAt": "2026-06-05T16:24:54.142Z"
@@ -3480,7 +3480,117 @@
     "i-4p3fBxJ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-ASQK5mX",
     "i-JdHWZBD:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-gapJ6La",
     "i-nrtRrhM:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-w5D3Uv4",
-    "i-J5P7HTB:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-qpDCutD"
+    "i-J5P7HTB:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-qpDCutD",
+    "i-sLWpzr4:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-34d7VFu",
+    "i-fK4qZB4:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-tjkrNga",
+    "i-jCkmncD:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White.mjs": "s-nGHJqrK",
+    "i-K7WCpBX:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-xfGWhZS",
+    "i-8rZ67C2:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-UnVWM9Y",
+    "i-tfMnxdj:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-UeBxf8L",
+    "i-64t3cFv:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-xaJWn9X",
+    "i-q9gwvwQ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-QBJB2N5",
+    "i-LD3zdft:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-8YFBfJg",
+    "i-TD5LPgq:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-abkQqMm",
+    "i-Wd8cVgw:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-HLrwx87",
+    "i-cC29XgQ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-vwdN8s8",
+    "i-vWJbD8P:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-FkST8jX",
+    "i-TFGwMrt:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-6BWx8fd",
+    "i-pzzqZGt:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-5kyLxHG",
+    "i-3Cd579Z:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-cmtGktM",
+    "i-NBppNcg:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-Bkq6dSg",
+    "i-ZCbRRsN:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-JTnRpy6",
+    "i-srT6jwR:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-VSeQkhR",
+    "i-H5XJjj2:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-PKKKNH4",
+    "i-dkfbg4H:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-Ze9cv7S",
+    "i-tQWBXvt:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-tTZu8U7",
+    "i-VNXbdGD:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-vfUPGvh",
+    "i-Gt24qgS:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-CtucT63",
+    "i-69rmhkz:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-HMZHqUq",
+    "i-TqwNVLm:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-UgwrmSF",
+    "i-hSXXXmd:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-vXAvnSd",
+    "i-M4Tzhkn:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-MqPJLQv",
+    "i-LSqMCph:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-E9vEg4L",
+    "i-RZn2tCT:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-ahCtCfv",
+    "i-XkPp2M9:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-baDCgzk",
+    "i-kFB5dxv:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-ZE6cvyE",
+    "i-752SgTm:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-S4VRehb",
+    "i-xwTrk8M:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-kcgnN47",
+    "i-wWwVmQG:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-BY97tBE",
+    "i-jgkD4tQ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-c89Fbkw",
+    "i-JHF4Jfp:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-Tw6udsp",
+    "i-pntwtPC:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-X2VNtUv",
+    "i-MphpdF8:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-F3umWeJ",
+    "i-S8Z9pr4:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-9VAdRVB",
+    "i-b2HzGZK:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-nch6mpF",
+    "i-74PzTjC:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-sUcRPxZ",
+    "i-k3k976G:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-tjcXjR6",
+    "i-8JM8jfL:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-q8qVPrk",
+    "i-nkQQ5zR:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-9YMthxL",
+    "i-gVFkfHb:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-ujfJRKr",
+    "i-5sGncG3:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-B9Hp8QZ",
+    "i-ts3TQ3c:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-ZQadDUj",
+    "i-648v5jr:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-NPrX4J8",
+    "i-rmzHh2j:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-88R2V57",
+    "i-tgmq9D9:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-XTFfzTw",
+    "i-z3k6ZDH:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-ugEcyZX",
+    "i-XZXJtMr:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-rHM7M5R",
+    "i-Ztdkx4R:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-2J6PdYM",
+    "i-4p3fBxJ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-ASQK5mX",
+    "i-XNN4GPQ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-vVQKbjL",
+    "i-7wSnzbn:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-xa3NPRV",
+    "i-xdJQsQQ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-jjVerBa",
+    "i-dMQWS6q:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-aAaWmz2",
+    "i-3X9JbcF:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-tWS7uud",
+    "i-3fWjF7C:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-eVsaFUq",
+    "i-N95cmmJ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-MkcNCUx",
+    "i-nrtRrhM:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-w5D3Uv4",
+    "i-NSgKSxg:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-qzvbVqK",
+    "i-wzB7S42:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-DZm6tYN",
+    "i-sLWpzr4:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-34d7VFu",
+    "i-4t3Dmz8:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-DAHwuEs",
+    "i-MPZNDSF:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-AWB5dVr",
+    "i-cn9672v:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-3w8TkFR",
+    "i-mDkpZWG:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-t4tANSX",
+    "i-KVCbxHD:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-6MxTU9M",
+    "i-Cb9Q27F:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-zgqYDgc",
+    "i-jqnwhPg:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-XW9Nxpd",
+    "i-2BMfpZf:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-Z6bQKNW",
+    "i-Xc9QF2n:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-WkuWTyK",
+    "i-fK4qZB4:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-tjkrNga",
+    "i-z3JjLSG:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-ZzsBp6J",
+    "i-tSkLZb9:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-X98N3vH",
+    "i-M2nR5tB:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-k6C4Sfd",
+    "i-k7jVD2j:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-KUfgfa9",
+    "i-8PsVxCC:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-KQNp2Cj",
+    "i-mHJNQXW:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-sbPgRp3",
+    "i-GcGX4Ln:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-54naVSR",
+    "i-SWPCd35:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-z5zb9j9",
+    "i-tNfpL4T:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-4EaJLQn",
+    "i-NFVPd6V:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-cL27FFY",
+    "i-HWWSkqG:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-twKdVhB",
+    "i-hHJjng7:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-TJwegwD",
+    "i-hKN7Rxx:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-EVUP7uX",
+    "i-R2mpKNb:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-VQZgbPA",
+    "i-jhgDbcf:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-SS3XxNq",
+    "i-zNSvQmB:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-JndtBEQ",
+    "i-cGcxvSL:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-nfdhKLN",
+    "i-LhZnWf7:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-bGZKvNU",
+    "i-KH4Mqv3:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-7XsQHGz",
+    "i-nhm5CRf:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-mHpmXRm",
+    "i-hHVDKC9:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-kGjWM49",
+    "i-tNQj34J:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-Ekstszv",
+    "i-V695Dp6:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-t689Puy",
+    "i-kJd5ZV5:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-u3DmMYt",
+    "i-PXRF9TX:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-ahsGDJr",
+    "i-TFnxp39:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-vfJyMSw",
+    "i-jmZQmcS:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-UVNMNbM",
+    "i-Vrmx6xQ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-3MFQGEM",
+    "i-7z6hDdR:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-NHmDunN",
+    "i-w8SFWQT:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-gzLT9pv",
+    "i-kFG6fSc:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-PsCzYMN",
+    "i-dLCkS26:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-CsL5drm",
+    "i-ZwPshf2:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-rm3rUB4",
+    "i-8MFcm9N:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-hxzLLJb"
   },
   "series": {
     "s-BB65wHk": {
@@ -38322,7 +38432,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "The Ramp",
+      "title": "At the Rail",
       "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-TD5LPgq/1/MK3wtpkJf4Bvsh2VjJjpXDDQmNTWQMWwS8MFdT985/XL/_ANA4478-Edit-2-XL.jpg",
       "occurrences": [
         {
@@ -38336,9 +38446,15 @@
           "galleryPath": "/src/data/Galleries/Fine-Art-Photography/Portraits/Reenactors.mjs",
           "title": "The Ramp",
           "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-TD5LPgq/1/MK3wtpkJf4Bvsh2VjJjpXDDQmNTWQMWwS8MFdT985/XL/_ANA4478-Edit-2-XL.jpg"
+        },
+        {
+          "imageId": "i-TD5LPgq",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "At the Rail",
+          "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-TD5LPgq/1/MK3wtpkJf4Bvsh2VjJjpXDDQmNTWQMWwS8MFdT985/XL/_ANA4478-Edit-2-XL.jpg"
         }
       ],
-      "linkedCount": 2,
+      "linkedCount": 3,
       "excludeSizes": {
         "foundation": [
           "11\" x 14\""
@@ -39906,9 +40022,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
           "title": "Looking for Trouble",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-7wSnzbn/2/KxfMBsmjK5ssdvXpqTB8Ccfg6QR2NzZm6xVcRzfRj/XL/_OLY8280-Edit-2-XL.jpg"
+        },
+        {
+          "imageId": "i-7wSnzbn",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "Looking for Trouble",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-7wSnzbn/2/KxfMBsmjK5ssdvXpqTB8Ccfg6QR2NzZm6xVcRzfRj/XL/_OLY8280-Edit-2-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {
         "foundation": [
           "11\" x 14\""
@@ -39922,7 +40044,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Port Arms",
+      "title": "Under the Flag",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-kFG6fSc/2/KSSjSrzQ7wtPKknPrbvxP9qBQtDjdHhNLkqrz2jcw/XL/_OLY9032-Edit-XL.jpg",
       "occurrences": [
         {
@@ -39930,9 +40052,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
           "title": "Port Arms",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-kFG6fSc/2/KSSjSrzQ7wtPKknPrbvxP9qBQtDjdHhNLkqrz2jcw/XL/_OLY9032-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-kFG6fSc",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "Under the Flag",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-kFG6fSc/2/KSSjSrzQ7wtPKknPrbvxP9qBQtDjdHhNLkqrz2jcw/XL/_OLY9032-Edit-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {},
       "createdAt": "2026-02-10T18:30:35.477Z"
     },
@@ -40291,13 +40419,13 @@
         "sketch",
         "foundation"
       ],
-      "title": "Capturing War Zone Photography",
+      "title": "Packed In",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-XpbzZrt/0/LcccHfxf4LSHb4CSzswvJnd3wHKKdZbPsvXGTvfMG/XL/_PEN0288-Edit-3-XL.jpg",
       "occurrences": [
         {
           "imageId": "i-XpbzZrt",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
-          "title": "Capturing War Zone Photography",
+          "title": "Packed In",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-XpbzZrt/0/LcccHfxf4LSHb4CSzswvJnd3wHKKdZbPsvXGTvfMG/XL/_PEN0288-Edit-3-XL.jpg"
         }
       ],
@@ -40315,13 +40443,13 @@
         "sketch",
         "foundation"
       ],
-      "title": "Battlefield Moments Moment",
+      "title": "Head Count",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-5MnLKFh/0/NVJ7hN99pHsZmtJrmSFZzk3qS95N6T4Gwx6pSHDnr/XL/_PEN0418-Edit-Edit-XL.jpg",
       "occurrences": [
         {
           "imageId": "i-5MnLKFh",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
-          "title": "Battlefield Moments Moment",
+          "title": "Head Count",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-5MnLKFh/0/NVJ7hN99pHsZmtJrmSFZzk3qS95N6T4Gwx6pSHDnr/XL/_PEN0418-Edit-Edit-XL.jpg"
         }
       ],
@@ -40339,13 +40467,13 @@
         "sketch",
         "foundation"
       ],
-      "title": "Wwii Artistic Documentary Study",
+      "title": "Get Up",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-Vh94vfV/0/LvGg7bTs8tHRXx6HwhP8SQb8hZcK57Q5Z6JJQrMsp/XL/_OL32320-Edit-XL.jpg",
       "occurrences": [
         {
           "imageId": "i-Vh94vfV",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
-          "title": "Wwii Artistic Documentary Study",
+          "title": "Get Up",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-Vh94vfV/0/LvGg7bTs8tHRXx6HwhP8SQb8hZcK57Q5Z6JJQrMsp/XL/_OL32320-Edit-XL.jpg"
         }
       ],
@@ -40363,13 +40491,13 @@
         "sketch",
         "foundation"
       ],
-      "title": "Exploring Second World War",
+      "title": "The Shout",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-GkpGWvT/0/KK8ts9B4jBG4wwvCRJhxgQwszzp8kJmxWb3pMqwkj/XL/_O2H3676-Enhanced-NR-Edit-Edit-XL.jpg",
       "occurrences": [
         {
           "imageId": "i-GkpGWvT",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
-          "title": "Exploring Second World War",
+          "title": "The Shout",
           "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-GkpGWvT/0/KK8ts9B4jBG4wwvCRJhxgQwszzp8kJmxWb3pMqwkj/XL/_O2H3676-Enhanced-NR-Edit-Edit-XL.jpg"
         }
       ],
@@ -40387,13 +40515,13 @@
         "sketch",
         "foundation"
       ],
-      "title": "War Zone Photography And Second World War",
+      "title": "Pointing Down",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-fTGjHKh/0/MRmwXHb9xSXd9RDRcbLPXT4pDRBmxBhq8Zd7BXQLr/XL/_O2H3717-2-XL.jpg",
       "occurrences": [
         {
           "imageId": "i-fTGjHKh",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
-          "title": "War Zone Photography And Second World War",
+          "title": "Pointing Down",
           "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-fTGjHKh/0/MRmwXHb9xSXd9RDRcbLPXT4pDRBmxBhq8Zd7BXQLr/XL/_O2H3717-2-XL.jpg"
         }
       ],
@@ -40411,13 +40539,13 @@
         "sketch",
         "foundation"
       ],
-      "title": "WWII Action Art Study",
+      "title": "Doubling Up",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-3t683PB/0/NJvqFkX63ZWVR9TknjSDT9hcdSPZsTkwxGF6Q5CqP/XL/_O2H4137-2-XL.jpg",
       "occurrences": [
         {
           "imageId": "i-3t683PB",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
-          "title": "WWII Action Art Study",
+          "title": "Doubling Up",
           "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-3t683PB/0/NJvqFkX63ZWVR9TknjSDT9hcdSPZsTkwxGF6Q5CqP/XL/_O2H4137-2-XL.jpg"
         }
       ],
@@ -40435,13 +40563,13 @@
         "sketch",
         "foundation"
       ],
-      "title": "Battlefield Moments - Wwii Artistic Documentary",
+      "title": "Between Two Men",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-LwmWNNd/1/KT5ZW2WW5MPj6HrMBKfRbZRLgbC87WkCMnbQSQ4Rb/XL/_HF22791-XL.jpg",
       "occurrences": [
         {
           "imageId": "i-LwmWNNd",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
-          "title": "Battlefield Moments - Wwii Artistic Documentary",
+          "title": "Between Two Men",
           "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-LwmWNNd/1/KT5ZW2WW5MPj6HrMBKfRbZRLgbC87WkCMnbQSQ4Rb/XL/_HF22791-XL.jpg"
         }
       ],
@@ -40459,13 +40587,13 @@
         "sketch",
         "foundation"
       ],
-      "title": "WWII Battlefield Moment",
+      "title": "Three for One",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-jVK5Lqc/0/NDspPrZnpvW4Q5gFw3NCDNQLgHmrkMsWzdLghQ7JS/XL/_O2H1221-Enhanced-NR-Edit-XL.jpg",
       "occurrences": [
         {
           "imageId": "i-jVK5Lqc",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
-          "title": "WWII Battlefield Moment",
+          "title": "Three for One",
           "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-jVK5Lqc/0/NDspPrZnpvW4Q5gFw3NCDNQLgHmrkMsWzdLghQ7JS/XL/_O2H1221-Enhanced-NR-Edit-XL.jpg"
         }
       ],
@@ -40479,13 +40607,13 @@
         "sketch",
         "foundation"
       ],
-      "title": "Artillery Piece  Black & White Photography by Wayne Heim",
+      "title": "The Gun Crew",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-PSjtQTf/2/Mftn3z2WXkFCS4Fvgk7cS3ZmWRGwm99zCMjmzjgDt/XL/_WHK0960-Edit-XL.jpg",
       "occurrences": [
         {
           "imageId": "i-PSjtQTf",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
-          "title": "Artillery Piece  Black & White Photography by Wayne Heim",
+          "title": "The Gun Crew",
           "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-PSjtQTf/2/Mftn3z2WXkFCS4Fvgk7cS3ZmWRGwm99zCMjmzjgDt/XL/_WHK0960-Edit-XL.jpg"
         }
       ],
@@ -40503,13 +40631,13 @@
         "sketch",
         "foundation"
       ],
-      "title": "Surrender    Black and White Photography by Wayne Heim",
+      "title": "The Surrender Scarf",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-tBTrxTg/2/MRpq8F9zgvfNjTJF79f83Ff5GMVPxj3dsStvzqJLZ/XL/_WHZ5134-Edit-XL.jpg",
       "occurrences": [
         {
           "imageId": "i-tBTrxTg",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
-          "title": "Surrender    Black and White Photography by Wayne Heim",
+          "title": "The Surrender Scarf",
           "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-tBTrxTg/2/MRpq8F9zgvfNjTJF79f83Ff5GMVPxj3dsStvzqJLZ/XL/_WHZ5134-Edit-XL.jpg"
         }
       ],
@@ -40527,13 +40655,13 @@
         "sketch",
         "foundation"
       ],
-      "title": "War Zone Photography In Fine Art",
+      "title": "Face to the Sky",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-dwCG8Mx/2/MhrwCBRqmLvSZGRJQFVmR4xx9CNKf8vjCJTwMNgBM/XL/_WHK6754-Edit-XL.jpg",
       "occurrences": [
         {
           "imageId": "i-dwCG8Mx",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
-          "title": "War Zone Photography In Fine Art",
+          "title": "Face to the Sky",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-dwCG8Mx/2/MhrwCBRqmLvSZGRJQFVmR4xx9CNKf8vjCJTwMNgBM/XL/_WHK6754-Edit-XL.jpg"
         }
       ],
@@ -40551,13 +40679,13 @@
         "sketch",
         "foundation"
       ],
-      "title": "Wwii Artistic Documentary Portrait",
+      "title": "The Trench Walk",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-sLVb5sJ/1/KXMVck6hHHZfXL2bmnn5GRfpqfjxSGPGS37hG6ScW/XL/_OL37500-Edit-XL.jpg",
       "occurrences": [
         {
           "imageId": "i-sLVb5sJ",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
-          "title": "Wwii Artistic Documentary Portrait",
+          "title": "The Trench Walk",
           "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-sLVb5sJ/1/KXMVck6hHHZfXL2bmnn5GRfpqfjxSGPGS37hG6ScW/XL/_OL37500-Edit-XL.jpg"
         }
       ],
@@ -40575,13 +40703,13 @@
         "sketch",
         "foundation"
       ],
-      "title": "Wwii Artistic Documentary Study",
+      "title": "The Laughing Carry",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-4c55gCM/1/NbZSnDvwcjrHFRVgJxpFG5HnGGnGnSRfGG7hzDsVK/XL/_OL32264-Edit-XL.jpg",
       "occurrences": [
         {
           "imageId": "i-4c55gCM",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
-          "title": "Wwii Artistic Documentary Study",
+          "title": "The Laughing Carry",
           "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-4c55gCM/1/NbZSnDvwcjrHFRVgJxpFG5HnGGnGnSRfGG7hzDsVK/XL/_OL32264-Edit-XL.jpg"
         }
       ],
@@ -40595,13 +40723,13 @@
         "sketch",
         "foundation"
       ],
-      "title": "The Essence Of Wwii Artistic Documentary",
+      "title": "The Photographer",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-tdzdbQH/1/LKP5ZRvjPWKKNdztXbdPmH5jpcx2hqhz9Wrb57hC4/XL/_OL30186-Edit-Edit-XL.jpg",
       "occurrences": [
         {
           "imageId": "i-tdzdbQH",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
-          "title": "The Essence Of Wwii Artistic Documentary",
+          "title": "The Photographer",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-tdzdbQH/1/LKP5ZRvjPWKKNdztXbdPmH5jpcx2hqhz9Wrb57hC4/XL/_OL30186-Edit-Edit-XL.jpg"
         }
       ],
@@ -40615,13 +40743,13 @@
         "sketch",
         "foundation"
       ],
-      "title": "Tank 114",
+      "title": "The Smoke Columns",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-wp7KTps/1/LVJ2kpTwTwDcp8h844rNBHcbhmNk2QDRTD8hZVLVs/XL/_WHZ6931-2-XL.jpg",
       "occurrences": [
         {
           "imageId": "i-wp7KTps",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
-          "title": "WWII Reenactment Photography: Smoke Signals by Wayne Heim",
+          "title": "The Smoke Columns",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-wp7KTps/1/LVJ2kpTwTwDcp8h844rNBHcbhmNk2QDRTD8hZVLVs/XL/_WHZ6931-2-XL.jpg"
         },
         {
@@ -40645,13 +40773,13 @@
         "sketch",
         "foundation"
       ],
-      "title": "Medic Rescue Mission - WWII Reenactment Photo",
+      "title": "The Medic's Hands",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-MLbJfVV/3/KGL9xWfhhkwpntKJXBh5CG4DQ4XSBjw2hQg3B8dQX/XL/_WHK7894-Edit-3-XL.jpg",
       "occurrences": [
         {
           "imageId": "i-MLbJfVV",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
-          "title": "Medic Rescue Mission - WWII Reenactment Photo",
+          "title": "The Medic's Hands",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-MLbJfVV/3/KGL9xWfhhkwpntKJXBh5CG4DQ4XSBjw2hQg3B8dQX/XL/_WHK7894-Edit-3-XL.jpg"
         }
       ],
@@ -40669,13 +40797,13 @@
         "sketch",
         "foundation"
       ],
-      "title": "Return to sender.",
+      "title": "Return to Sender",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-Bgz4NtW/4/KVqsWg2SXK89hkzzV5FxkwgSHKhjkSQ5QqnM65FS6/XL/_WHK2375-XL.jpg",
       "occurrences": [
         {
           "imageId": "i-Bgz4NtW",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
-          "title": "Return to sender.",
+          "title": "Return to Sender",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-Bgz4NtW/4/KVqsWg2SXK89hkzzV5FxkwgSHKhjkSQ5QqnM65FS6/XL/_WHK2375-XL.jpg"
         }
       ],
@@ -40693,13 +40821,13 @@
         "sketch",
         "foundation"
       ],
-      "title": "Heroic effort.",
+      "title": "Head-On",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-LwQQVjp/3/KNF3bQm7BRJmBLDQ5R4tVNHNQgGk2wKW6gvgDLSSp/XL/_OLY7921-Edit-XL.jpg",
       "occurrences": [
         {
           "imageId": "i-LwQQVjp",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
-          "title": "Heroic effort.",
+          "title": "Head-On",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-LwQQVjp/3/KNF3bQm7BRJmBLDQ5R4tVNHNQgGk2wKW6gvgDLSSp/XL/_OLY7921-Edit-XL.jpg"
         }
       ],
@@ -52528,13 +52656,13 @@
       "tiers": [
         "sketch"
       ],
-      "title": "The Flak Crew",
+      "title": "Thunder on the Ridge",
       "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-Q8VzmZb/1/L88fpTMXR9q4wCgnvnckbN7QwkX73sQVc4CKLJzBS/XL/_WHK0746-XL.jpg",
       "occurrences": [
         {
           "imageId": "i-Q8VzmZb",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
-          "title": "Holding the Ridge",
+          "title": "Thunder on the Ridge",
           "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-Q8VzmZb/1/L88fpTMXR9q4wCgnvnckbN7QwkX73sQVc4CKLJzBS/XL/_WHK0746-XL.jpg"
         },
         {
@@ -52654,7 +52782,7 @@
       "tiers": [
         "sketch"
       ],
-      "title": "Haze of Fire",
+      "title": "Step Into Battle",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-fnsQQdz/3/MsPnqVFQTCmg772LpD4BhcVR2Zt7Qmz8kRkjrLSKC/XL/P8191726-Edit-XL.jpg",
       "occurrences": [
         {
@@ -59006,7 +59134,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Headlines at Home",
+      "title": "The Paper by the Fire",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-nrtRrhM/4/MqCRWwTjrG7k2hmtZFLctQTkz28MtxSJczDRpMq8F/XL/P8180283-Edit-XL.jpg",
       "occurrences": [
         {
@@ -59020,9 +59148,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
           "title": "Headlines at Home",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-nrtRrhM/4/MqCRWwTjrG7k2hmtZFLctQTkz28MtxSJczDRpMq8F/XL/P8180283-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-nrtRrhM",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "The Paper by the Fire",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-nrtRrhM/4/MqCRWwTjrG7k2hmtZFLctQTkz28MtxSJczDRpMq8F/XL/P8180283-Edit-XL.jpg"
         }
       ],
-      "linkedCount": 2,
+      "linkedCount": 3,
       "excludeSizes": {},
       "yearCreated": "",
       "createdAt": "2026-11-06T05:57:55.028Z"
@@ -59654,7 +59788,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "The Advance",
+      "title": "Follow the Hand",
       "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-TFGwMrt/1/Kr729g2QJFcDggMjVrLJXkFK35zDqWRbbjm557mmG/XL/_OL31657-Edit-XL.jpg",
       "occurrences": [
         {
@@ -59662,9 +59796,15 @@
           "galleryPath": "/src/data/Galleries/Fine-Art-Photography/Portraits/Reenactors.mjs",
           "title": "The Advance",
           "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-TFGwMrt/1/Kr729g2QJFcDggMjVrLJXkFK35zDqWRbbjm557mmG/XL/_OL31657-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-TFGwMrt",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "Follow the Hand",
+          "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-TFGwMrt/1/Kr729g2QJFcDggMjVrLJXkFK35zDqWRbbjm557mmG/XL/_OL31657-Edit-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {},
       "yearCreated": "",
       "createdAt": "2026-11-06T06:39:43.659Z"
@@ -59801,7 +59941,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "The Beret",
+      "title": "The Goggles",
       "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-q9gwvwQ/1/LnGp3xXMwn78QkJn3v4jzdNWGpjnbgWw6k9Mdqdw7/XL/_OL38761-Edit-4-XL.jpg",
       "occurrences": [
         {
@@ -59809,9 +59949,15 @@
           "galleryPath": "/src/data/Galleries/Fine-Art-Photography/Portraits/Reenactors.mjs",
           "title": "The Beret",
           "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-q9gwvwQ/1/LnGp3xXMwn78QkJn3v4jzdNWGpjnbgWw6k9Mdqdw7/XL/_OL38761-Edit-4-XL.jpg"
+        },
+        {
+          "imageId": "i-q9gwvwQ",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "The Goggles",
+          "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-q9gwvwQ/1/LnGp3xXMwn78QkJn3v4jzdNWGpjnbgWw6k9Mdqdw7/XL/_OL38761-Edit-4-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {},
       "yearCreated": "",
       "createdAt": "2026-11-06T06:50:07.692Z"
@@ -59906,7 +60052,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Marching Away",
+      "title": "Down the Track",
       "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-Wd8cVgw/1/LrPwb9VcR4MW6vw8H9hBHxHXKCtsLjjT3nwmLM3st/XL/_ANA4940-Edit-2-XL.jpg",
       "occurrences": [
         {
@@ -59914,9 +60060,15 @@
           "galleryPath": "/src/data/Galleries/Fine-Art-Photography/Portraits/Reenactors.mjs",
           "title": "Marching Away",
           "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-Wd8cVgw/1/LrPwb9VcR4MW6vw8H9hBHxHXKCtsLjjT3nwmLM3st/XL/_ANA4940-Edit-2-XL.jpg"
+        },
+        {
+          "imageId": "i-Wd8cVgw",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "Down the Track",
+          "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-Wd8cVgw/1/LrPwb9VcR4MW6vw8H9hBHxHXKCtsLjjT3nwmLM3st/XL/_ANA4940-Edit-2-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {},
       "yearCreated": "",
       "createdAt": "2026-11-06T06:59:18.452Z"
@@ -60095,7 +60247,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Too far gone.",
+      "title": "Too Far Gone",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-HWWSkqG/2/Nd8MMS66ZJ4RKjCcgVR6Fz4nXsV56xbVjjcDpn6DG/XL/_OLY4622-Edit-3-Edit-XL.jpg",
       "occurrences": [
         {
@@ -60103,9 +60255,15 @@
           "galleryPath": "/src/data/Galleries/Fine-Art-Photography/Portraits/Reenactors.mjs",
           "title": "Too far gone.",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-HWWSkqG/2/Nd8MMS66ZJ4RKjCcgVR6Fz4nXsV56xbVjjcDpn6DG/XL/_OLY4622-Edit-3-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-HWWSkqG",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "Too Far Gone",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-HWWSkqG/2/Nd8MMS66ZJ4RKjCcgVR6Fz4nXsV56xbVjjcDpn6DG/XL/_OLY4622-Edit-3-Edit-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {},
       "yearCreated": "",
       "createdAt": "2026-11-06T07:12:27.532Z"
@@ -75611,13 +75769,13 @@
         "sketch",
         "foundation"
       ],
-      "title": "The Dappled Man",
+      "title": "The Patient Sentry",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-r9F7JCH/1/McmkknSrgGHbpkXXGVVdSn68k6KDsRRT5WRRg7NTS/XL/_OL35824-Edit-2-XL.jpg",
       "occurrences": [
         {
           "imageId": "i-r9F7JCH",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
-          "title": "The Dappled Man",
+          "title": "The Patient Sentry",
           "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-r9F7JCH/1/McmkknSrgGHbpkXXGVVdSn68k6KDsRRT5WRRg7NTS/XL/_OL35824-Edit-2-XL.jpg"
         }
       ],
@@ -75737,7 +75895,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "One Foot Forward",
+      "title": "The Long Carry",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-N95cmmJ/3/LXKtfCkhNWcFVNDwt6SxwXHZFFwfz5WrNhVjBmKfM/XL/_OLY0959-Edit-XL.jpg",
       "occurrences": [
         {
@@ -75745,9 +75903,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
           "title": "One Foot Forward",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-N95cmmJ/3/LXKtfCkhNWcFVNDwt6SxwXHZFFwfz5WrNhVjBmKfM/XL/_OLY0959-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-N95cmmJ",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "The Long Carry",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-N95cmmJ/3/LXKtfCkhNWcFVNDwt6SxwXHZFFwfz5WrNhVjBmKfM/XL/_OLY0959-Edit-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {},
       "yearCreated": "",
       "createdAt": "2026-11-08T00:39:32.889Z"
@@ -75758,7 +75922,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Rescue Mission",
+      "title": "The Reach",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-tNfpL4T/1/LDzh6gFrrLqJhMgF2N69W6GBPJbhNBxdpPqWS96Rd/XL/_OLY2237-Edit-3-2-XL.jpg",
       "occurrences": [
         {
@@ -75766,9 +75930,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
           "title": "Rescue Mission",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-tNfpL4T/1/LDzh6gFrrLqJhMgF2N69W6GBPJbhNBxdpPqWS96Rd/XL/_OLY2237-Edit-3-2-XL.jpg"
+        },
+        {
+          "imageId": "i-tNfpL4T",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "The Reach",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-tNfpL4T/1/LDzh6gFrrLqJhMgF2N69W6GBPJbhNBxdpPqWS96Rd/XL/_OLY2237-Edit-3-2-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {},
       "yearCreated": "",
       "createdAt": "2026-11-08T00:40:42.914Z"
@@ -75842,7 +76012,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Moment to reflect.",
+      "title": "Talk About Home",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-8PsVxCC/2/KwKFLDT8k4KLwsNSK5464P3G6htVBwhJbXbwB3GjZ/XL/_OLY7599-Edit-XL.jpg",
       "occurrences": [
         {
@@ -75850,9 +76020,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
           "title": "Moment to reflect.",
           "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-8PsVxCC/2/KwKFLDT8k4KLwsNSK5464P3G6htVBwhJbXbwB3GjZ/XL/_OLY7599-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-8PsVxCC",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "Talk About Home",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-8PsVxCC/2/KwKFLDT8k4KLwsNSK5464P3G6htVBwhJbXbwB3GjZ/XL/_OLY7599-Edit-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {},
       "yearCreated": "",
       "createdAt": "2026-11-08T00:42:48.221Z"
@@ -75863,7 +76039,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "The Watchful Advance",
+      "title": "The Automatic",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-PXRF9TX/2/MjzsDv75GncS6J5xWjkV4mgvjKkTWsnPdQHk2tC8m/XL/_OLY8776-Edit-XL.jpg",
       "occurrences": [
         {
@@ -75871,9 +76047,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
           "title": "The Watchful Advance",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-PXRF9TX/2/MjzsDv75GncS6J5xWjkV4mgvjKkTWsnPdQHk2tC8m/XL/_OLY8776-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-PXRF9TX",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "The Automatic",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-PXRF9TX/2/MjzsDv75GncS6J5xWjkV4mgvjKkTWsnPdQHk2tC8m/XL/_OLY8776-Edit-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {},
       "yearCreated": "",
       "createdAt": "2026-11-08T00:43:54.906Z"
@@ -76577,7 +76759,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "The Big Red One",
+      "title": "The Greatcoat",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-XNN4GPQ/3/KSqHWgKNKXKNDdC2NpcJgQvs9NcwVNjRp8f4PcLkP/XL/_WHZ8084-Edit-XL.jpg",
       "occurrences": [
         {
@@ -76585,9 +76767,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
           "title": "The Big Red One",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-XNN4GPQ/3/KSqHWgKNKXKNDdC2NpcJgQvs9NcwVNjRp8f4PcLkP/XL/_WHZ8084-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-XNN4GPQ",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "The Greatcoat",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-XNN4GPQ/3/KSqHWgKNKXKNDdC2NpcJgQvs9NcwVNjRp8f4PcLkP/XL/_WHZ8084-Edit-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {},
       "yearCreated": "",
       "createdAt": "2026-11-08T01:22:24.539Z"
@@ -76598,7 +76786,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "The March Begins",
+      "title": "Hood Up",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-4p3fBxJ/3/Kc4PgG4rxmphrhS6bpz8Qnh67QCdd7v8vFkV4qnZL/XL/_whz8497x2-edit-4-XL.jpg",
       "occurrences": [
         {
@@ -76606,9 +76794,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
           "title": "The March Begins",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-4p3fBxJ/3/Kc4PgG4rxmphrhS6bpz8Qnh67QCdd7v8vFkV4qnZL/XL/_whz8497x2-edit-4-XL.jpg"
+        },
+        {
+          "imageId": "i-4p3fBxJ",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "Hood Up",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-4p3fBxJ/3/Kc4PgG4rxmphrhS6bpz8Qnh67QCdd7v8vFkV4qnZL/XL/_whz8497x2-edit-4-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {},
       "yearCreated": "",
       "createdAt": "2026-11-08T01:23:19.850Z"
@@ -76654,6 +76848,1992 @@
       "excludeSizes": {},
       "yearCreated": "",
       "createdAt": "2026-11-08T01:25:51.545Z"
+    },
+    "s-34d7VFu": {
+      "primaryImageId": "i-sLWpzr4",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "The Stern Look",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-sLWpzr4/4/NNktkxgZd5F44thQK2J4295C9cGWwFJh6rfX6snsx/XL/P8180482-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-sLWpzr4",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
+          "title": "The Conneaut Canadian",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-sLWpzr4/4/NNktkxgZd5F44thQK2J4295C9cGWwFJh6rfX6snsx/XL/P8180482-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-sLWpzr4",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "The Stern Look",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-sLWpzr4/4/NNktkxgZd5F44thQK2J4295C9cGWwFJh6rfX6snsx/XL/P8180482-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 2,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T01:26:50.890Z"
+    },
+    "s-tjkrNga": {
+      "primaryImageId": "i-fK4qZB4",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Eyes Up",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-fK4qZB4/5/KwsPkqGkP2Jd6pQnC3mbc9tdbpvB35PpBR5PH9Xjs/XL/P8191330-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-fK4qZB4",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
+          "title": "The Battle Cry",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-fK4qZB4/5/KwsPkqGkP2Jd6pQnC3mbc9tdbpvB35PpBR5PH9Xjs/XL/P8191330-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-fK4qZB4",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "Eyes Up",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-fK4qZB4/5/KwsPkqGkP2Jd6pQnC3mbc9tdbpvB35PpBR5PH9Xjs/XL/P8191330-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 2,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T01:27:48.548Z"
+    },
+    "s-nGHJqrK": {
+      "primaryImageId": "i-jCkmncD",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Sitting It Out",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-jCkmncD/1/NjVw6RZgp7vfTNz5dSgCQfwQVnzm4hbnbgWk39RTh/XL/_OLY3619-Edit-2-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-jCkmncD",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White.mjs",
+          "title": "Sitting It Out",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-jCkmncD/1/NjVw6RZgp7vfTNz5dSgCQfwQVnzm4hbnbgWk39RTh/XL/_OLY3619-Edit-2-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T07:19:57.545Z"
+    },
+    "s-xfGWhZS": {
+      "primaryImageId": "i-K7WCpBX",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Up and Over",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-K7WCpBX/0/MtPKfgTZx3wdnTd7jphCtcXZRrHGjFqsjwprWdDPc/XL/_OL37565-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-K7WCpBX",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "Up and Over",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-K7WCpBX/0/MtPKfgTZx3wdnTd7jphCtcXZRrHGjFqsjwprWdDPc/XL/_OL37565-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T07:44:12.596Z"
+    },
+    "s-UnVWM9Y": {
+      "primaryImageId": "i-8rZ67C2",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "The Lone Climb",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-8rZ67C2/0/KTtBFTfMqMTP5GvqQ56w4gSSDNmwDrFhqMrkFnfjR/XL/_OL37604-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-8rZ67C2",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "The Lone Climb",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-8rZ67C2/0/KTtBFTfMqMTP5GvqQ56w4gSSDNmwDrFhqMrkFnfjR/XL/_OL37604-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T07:45:13.393Z"
+    },
+    "s-UeBxf8L": {
+      "primaryImageId": "i-tfMnxdj",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "The Grin",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-tfMnxdj/0/LFjBC8s5XKCmsQrGhpZwPrwBjMVmD94PL99Qvv2NF/XL/_OL37899-Edit-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-tfMnxdj",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "The Grin",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-tfMnxdj/0/LFjBC8s5XKCmsQrGhpZwPrwBjMVmD94PL99Qvv2NF/XL/_OL37899-Edit-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T07:46:13.654Z"
+    },
+    "s-xaJWn9X": {
+      "primaryImageId": "i-64t3cFv",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Flat on the Boards",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-64t3cFv/0/NFq2R3wBCqwGmqcPBjgBPTtzfGdWQFKftDTKc4Qgv/XL/_OL38491-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-64t3cFv",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "Flat on the Boards",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-64t3cFv/0/NFq2R3wBCqwGmqcPBjgBPTtzfGdWQFKftDTKc4Qgv/XL/_OL38491-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T07:47:12.765Z"
+    },
+    "s-8YFBfJg": {
+      "primaryImageId": "i-LD3zdft",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Five and a Spade",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-LD3zdft/0/KMHLNxFgTkff8bBfVhVVpdNLBvGtR4G39HpqNg7pZ/XL/_ANA4477-Edit-3-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-LD3zdft",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "Five and a Spade",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-LD3zdft/0/KMHLNxFgTkff8bBfVhVVpdNLBvGtR4G39HpqNg7pZ/XL/_ANA4477-Edit-3-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T07:49:57.998Z"
+    },
+    "s-vwdN8s8": {
+      "primaryImageId": "i-cC29XgQ",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Ready to Roll",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-cC29XgQ/0/MQ6Rd7Lx5qtW2W2ZPK6jfQH6LNJrXh5QKxvdcrXWz/XL/_OL30279-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-cC29XgQ",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "Ready to Roll",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-cC29XgQ/0/MQ6Rd7Lx5qtW2W2ZPK6jfQH6LNJrXh5QKxvdcrXWz/XL/_OL30279-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T07:54:44.239Z"
+    },
+    "s-FkST8jX": {
+      "primaryImageId": "i-vWJbD8P",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Hands on the Wheel",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-vWJbD8P/0/LG8FLMLwPbzMK5PDxn2CbD9Mm59JVH8CD22xcC8pb/XL/_OL30373-Edit-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-vWJbD8P",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "Hands on the Wheel",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-vWJbD8P/0/LG8FLMLwPbzMK5PDxn2CbD9Mm59JVH8CD22xcC8pb/XL/_OL30373-Edit-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T07:55:49.337Z"
+    },
+    "s-5kyLxHG": {
+      "primaryImageId": "i-pzzqZGt",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Smoke Break",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-pzzqZGt/0/LTW6P496Pf6mQ63NTjSRNxSGfF5Zc7SPQX9X83Bzn/XL/_OL31684-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-pzzqZGt",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "Smoke Break",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-pzzqZGt/0/LTW6P496Pf6mQ63NTjSRNxSGfF5Zc7SPQX9X83Bzn/XL/_OL31684-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T07:57:38.004Z"
+    },
+    "s-cmtGktM": {
+      "primaryImageId": "i-3Cd579Z",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Behind the Barrier",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-3Cd579Z/0/LWHW839jjmFSf5pMMcKBcVZkC4Sn6RdnxDd8QkkXq/XL/_OL32116-Enhanced-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-3Cd579Z",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "Behind the Barrier",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-3Cd579Z/0/LWHW839jjmFSf5pMMcKBcVZkC4Sn6RdnxDd8QkkXq/XL/_OL32116-Enhanced-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T07:58:38.038Z"
+    },
+    "s-Bkq6dSg": {
+      "primaryImageId": "i-NBppNcg",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "The Foxhole",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-NBppNcg/0/KGDQzfVH2ZKrNkhqzDZHBC4ZBNh3gRZfpHrNXSgsf/XL/_OL37673-Edit-2-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-NBppNcg",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "The Foxhole",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-NBppNcg/0/KGDQzfVH2ZKrNkhqzDZHBC4ZBNh3gRZfpHrNXSgsf/XL/_OL37673-Edit-2-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T08:00:41.057Z"
+    },
+    "s-JTnRpy6": {
+      "primaryImageId": "i-ZCbRRsN",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Point of Attack",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-ZCbRRsN/0/Ls7xDNq4DMq46XfPmmvhdx8r9ZS7XqKdkqMs43jwr/XL/_ANA6168-Enhanced-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-ZCbRRsN",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "Point of Attack",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-ZCbRRsN/0/Ls7xDNq4DMq46XfPmmvhdx8r9ZS7XqKdkqMs43jwr/XL/_ANA6168-Enhanced-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T08:01:41.186Z"
+    },
+    "s-VSeQkhR": {
+      "primaryImageId": "i-srT6jwR",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Crossing the Open",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-srT6jwR/0/Ks6P5gnsZJ3F3TtTRmGSv8Qb7LfJCwF59gKgSp78W/XL/_ANA6199-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-srT6jwR",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "Crossing the Open",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-srT6jwR/0/Ks6P5gnsZJ3F3TtTRmGSv8Qb7LfJCwF59gKgSp78W/XL/_ANA6199-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T08:03:36.298Z"
+    },
+    "s-PKKKNH4": {
+      "primaryImageId": "i-H5XJjj2",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "At Full Run",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-H5XJjj2/0/LPdVhGCzHjpqFZrL9fhsbZR93MS7PD72pQPLCGLmS/XL/_ANA6214-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-H5XJjj2",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "At Full Run",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-H5XJjj2/0/LPdVhGCzHjpqFZrL9fhsbZR93MS7PD72pQPLCGLmS/XL/_ANA6214-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T08:04:27.789Z"
+    },
+    "s-Ze9cv7S": {
+      "primaryImageId": "i-dkfbg4H",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Going In",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-dkfbg4H/0/Nfr2n3MHzXf8n6vnkkg5Jxzf3dPT9fxTrjmxqPvPz/XL/_ANA6222-Edit-2-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-dkfbg4H",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "Going In",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-dkfbg4H/0/Nfr2n3MHzXf8n6vnkkg5Jxzf3dPT9fxTrjmxqPvPz/XL/_ANA6222-Edit-2-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T08:05:22.765Z"
+    },
+    "s-tTZu8U7": {
+      "primaryImageId": "i-tQWBXvt",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Ready, Aim",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-tQWBXvt/0/Mzcz9TcrpsgncQSNCgxHzSVS8fMFSJPG3jbxPngZT/XL/_ANA6239-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-tQWBXvt",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "Ready, Aim",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-tQWBXvt/0/Mzcz9TcrpsgncQSNCgxHzSVS8fMFSJPG3jbxPngZT/XL/_ANA6239-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T08:06:11.905Z"
+    },
+    "s-vfUPGvh": {
+      "primaryImageId": "i-VNXbdGD",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "With the Tank",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-VNXbdGD/0/MmM9p9tfJ67p9GmMHWM5c8pnnPK2KvGjdLJJX6fvB/XL/_O1H1176-Edit-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-VNXbdGD",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "With the Tank",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-VNXbdGD/0/MmM9p9tfJ67p9GmMHWM5c8pnnPK2KvGjdLJJX6fvB/XL/_O1H1176-Edit-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T08:07:08.126Z"
+    },
+    "s-CtucT63": {
+      "primaryImageId": "i-Gt24qgS",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "The Carry",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-Gt24qgS/0/L4vjGThNDC3MVDjGXDbSS9zbCgxdPvQp233vfdLps/XL/_O1H1253-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-Gt24qgS",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "The Carry",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-Gt24qgS/0/L4vjGThNDC3MVDjGXDbSS9zbCgxdPvQp233vfdLps/XL/_O1H1253-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T08:07:53.624Z"
+    },
+    "s-HMZHqUq": {
+      "primaryImageId": "i-69rmhkz",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "At His Side",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-69rmhkz/0/LwS7qVqFRTJwKdDtvH3s9fzS92fQXmvxMxTdZWcQm/XL/_O1H1314-Enhanced-Edit-Edit-2-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-69rmhkz",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "At His Side",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-69rmhkz/0/LwS7qVqFRTJwKdDtvH3s9fzS92fQXmvxMxTdZWcQm/XL/_O1H1314-Enhanced-Edit-Edit-2-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T08:08:50.987Z"
+    },
+    "s-UgwrmSF": {
+      "primaryImageId": "i-TqwNVLm",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "The Strap",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-TqwNVLm/0/KvMG54X4fnNDgh8MC37CsRxJrjb5rg3MsD6QqQ5VQ/XL/_FWH5691-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-TqwNVLm",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "The Strap",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-TqwNVLm/0/KvMG54X4fnNDgh8MC37CsRxJrjb5rg3MsD6QqQ5VQ/XL/_FWH5691-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T08:09:42.268Z"
+    },
+    "s-vXAvnSd": {
+      "primaryImageId": "i-hSXXXmd",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Loaded Down",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-hSXXXmd/0/KcwWjPV8rFx59SxxFNW3kpvdnRFMVh2VnNfS6nrJQ/XL/_O1H1498-Edit-2-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-hSXXXmd",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "Loaded Down",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-hSXXXmd/0/KcwWjPV8rFx59SxxFNW3kpvdnRFMVh2VnNfS6nrJQ/XL/_O1H1498-Edit-2-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T08:10:28.695Z"
+    },
+    "s-MqPJLQv": {
+      "primaryImageId": "i-M4Tzhkn",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "The Raised Hand",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-M4Tzhkn/0/MKQJ78wdTvM2cGDCQdjjVpvQcB7Wbr33HBqzRdps2/XL/_PEN0935-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-M4Tzhkn",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "The Raised Hand",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-M4Tzhkn/0/MKQJ78wdTvM2cGDCQdjjVpvQcB7Wbr33HBqzRdps2/XL/_PEN0935-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T08:11:11.983Z"
+    },
+    "s-E9vEg4L": {
+      "primaryImageId": "i-LSqMCph",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "The White Bag",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-LSqMCph/0/KLfprVkj6QbqL5QWw8zLkg7QF5n7gm7PZN9dGrrv7/XL/_FWH6318-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-LSqMCph",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "The White Bag",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-LSqMCph/0/KLfprVkj6QbqL5QWw8zLkg7QF5n7gm7PZN9dGrrv7/XL/_FWH6318-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T08:12:05.356Z"
+    },
+    "s-ahCtCfv": {
+      "primaryImageId": "i-RZn2tCT",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Taking a Knee",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-RZn2tCT/0/KZzdSMxjX5w3H52zqFvFxnL67ZSVtZGjTgzCXhPXx/XL/_FWH6362-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-RZn2tCT",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "Taking a Knee",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-RZn2tCT/0/KZzdSMxjX5w3H52zqFvFxnL67ZSVtZGjTgzCXhPXx/XL/_FWH6362-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T08:12:52.132Z"
+    },
+    "s-baDCgzk": {
+      "primaryImageId": "i-XkPp2M9",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Rifle Across",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-XkPp2M9/0/NBfM8cb7LLtB9cWC4fRfVqJBRdTtM5gTTcFrPKfcW/XL/_FWH6367-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-XkPp2M9",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "Rifle Across",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-XkPp2M9/0/NBfM8cb7LLtB9cWC4fRfVqJBRdTtM5gTTcFrPKfcW/XL/_FWH6367-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T08:15:05.009Z"
+    },
+    "s-ZE6cvyE": {
+      "primaryImageId": "i-kFB5dxv",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Over the Hedgehog",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-kFB5dxv/0/NHgFKtzqZSKC4Br4F9tC4vVVzB5pPGTnNmjt74WVX/XL/_O2H8042-Edit-2-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-kFB5dxv",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "Over the Hedgehog",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-kFB5dxv/0/NHgFKtzqZSKC4Br4F9tC4vVVzB5pPGTnNmjt74WVX/XL/_O2H8042-Edit-2-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T08:15:48.608Z"
+    },
+    "s-S4VRehb": {
+      "primaryImageId": "i-752SgTm",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "The Ford",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-752SgTm/0/M89KKJwSLNtSRf6b7pvxLnnxkTPMT95TgZk242tSd/XL/_O2H8908-Edit-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-752SgTm",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "The Ford",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-752SgTm/0/M89KKJwSLNtSRf6b7pvxLnnxkTPMT95TgZk242tSd/XL/_O2H8908-Edit-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T08:16:37.290Z"
+    },
+    "s-kcgnN47": {
+      "primaryImageId": "i-xwTrk8M",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "The Barrels",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-xwTrk8M/0/Lx8FFXrzpbHc8LMSDMPn6JV4d9X4PwLvWpN4wVZ8j/XL/_O2H0812-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-xwTrk8M",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "The Barrels",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-xwTrk8M/0/Lx8FFXrzpbHc8LMSDMPn6JV4d9X4PwLvWpN4wVZ8j/XL/_O2H0812-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T08:17:26.655Z"
+    },
+    "s-BY97tBE": {
+      "primaryImageId": "i-wWwVmQG",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "The Braced Shot",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-wWwVmQG/0/MfqkfVV6gmR3LRMPMrgWrJL8mj7rmWbtNSkfvjhfQ/XL/_O2H4042-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-wWwVmQG",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "The Braced Shot",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-wWwVmQG/0/MfqkfVV6gmR3LRMPMrgWrJL8mj7rmWbtNSkfvjhfQ/XL/_O2H4042-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T08:19:46.336Z"
+    },
+    "s-c89Fbkw": {
+      "primaryImageId": "i-jgkD4tQ",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "The Long Rifle",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-jgkD4tQ/0/LWr5dRXKWG6g7NhQV7XJTWx7Z3LVFMZvzt2bMPqWM/XL/_O2H4145-2-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-jgkD4tQ",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "The Long Rifle",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-jgkD4tQ/0/LWr5dRXKWG6g7NhQV7XJTWx7Z3LVFMZvzt2bMPqWM/XL/_O2H4145-2-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T08:21:21.498Z"
+    },
+    "s-Tw6udsp": {
+      "primaryImageId": "i-JHF4Jfp",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "The Flag Patch",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-JHF4Jfp/0/Kph3psKKTFKmJQFzqrRqgfS3bmZDCZrzGDcZMhkSB/XL/_O2H4160-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-JHF4Jfp",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "The Flag Patch",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-JHF4Jfp/0/Kph3psKKTFKmJQFzqrRqgfS3bmZDCZrzGDcZMhkSB/XL/_O2H4160-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T08:22:17.091Z"
+    },
+    "s-X2VNtUv": {
+      "primaryImageId": "i-pntwtPC",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Steel on Sand",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-pntwtPC/0/MqpqtbqZrHPF4b6jVKzgVZg9wkLQpkPLCPwWzLbDX/XL/_O2H1820-Enhanced-NR-Edit-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-pntwtPC",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "Steel on Sand",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-pntwtPC/0/MqpqtbqZrHPF4b6jVKzgVZg9wkLQpkPLCPwWzLbDX/XL/_O2H1820-Enhanced-NR-Edit-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T08:24:49.540Z"
+    },
+    "s-F3umWeJ": {
+      "primaryImageId": "i-MphpdF8",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "The Drag",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-MphpdF8/0/LRpWH9G5ZFTLP2bpLjdF2zcqHXw5rHTQ3PzLn9rRG/XL/_O2H1683-Enhanced-NR-Edit-Edit-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-MphpdF8",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "The Drag",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-MphpdF8/0/LRpWH9G5ZFTLP2bpLjdF2zcqHXw5rHTQ3PzLn9rRG/XL/_O2H1683-Enhanced-NR-Edit-Edit-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T08:26:20.812Z"
+    },
+    "s-9VAdRVB": {
+      "primaryImageId": "i-S8Z9pr4",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "One Round Gone",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-S8Z9pr4/0/KSpppd9LLQDdKC7q3t7hBsW6CnvPCwsWjQN8hxm4c/XL/_O1H0379-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-S8Z9pr4",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "One Round Gone",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-S8Z9pr4/0/KSpppd9LLQDdKC7q3t7hBsW6CnvPCwsWjQN8hxm4c/XL/_O1H0379-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T08:27:06.710Z"
+    },
+    "s-nch6mpF": {
+      "primaryImageId": "i-b2HzGZK",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Low and Fast",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-b2HzGZK/0/LfNJzLhGj8xmfjQZpkzGVf62PqMvvK3bVJKX5723p/XL/_O2H2181-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-b2HzGZK",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "Low and Fast",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-b2HzGZK/0/LfNJzLhGj8xmfjQZpkzGVf62PqMvvK3bVJKX5723p/XL/_O2H2181-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T08:27:50.379Z"
+    },
+    "s-sUcRPxZ": {
+      "primaryImageId": "i-74PzTjC",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Behind the Wire",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-74PzTjC/0/K73qKqg7XbgCL2DXX8qtDg2fQDQLF9KCHPFbqNSrD/XL/_PEN0031-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-74PzTjC",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "Behind the Wire",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-74PzTjC/0/K73qKqg7XbgCL2DXX8qtDg2fQDQLF9KCHPFbqNSrD/XL/_PEN0031-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T08:28:30.166Z"
+    },
+    "s-tjcXjR6": {
+      "primaryImageId": "i-k3k976G",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "The Tank Behind",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-k3k976G/0/MHFcrxk7qmncxPJ5CLLzn3JWsCLKP5QpGzq9jKXTc/XL/_HF25974-Editb-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-k3k976G",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "The Tank Behind",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-k3k976G/0/MHFcrxk7qmncxPJ5CLLzn3JWsCLKP5QpGzq9jKXTc/XL/_HF25974-Editb-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T08:29:17.879Z"
+    },
+    "s-q8qVPrk": {
+      "primaryImageId": "i-8JM8jfL",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Kneeling in Straw",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-8JM8jfL/4/KpCRphWf58TrzdHK2D7283n4pfNH9pLb3gJBddDvt/XL/_W3H3524-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-8JM8jfL",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "Kneeling in Straw",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-8JM8jfL/4/KpCRphWf58TrzdHK2D7283n4pfNH9pLb3gJBddDvt/XL/_W3H3524-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T08:30:07.823Z"
+    },
+    "s-9YMthxL": {
+      "primaryImageId": "i-nkQQ5zR",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "The Crouching Man",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-nkQQ5zR/2/KqxtWJS2nQfPsHGS7HHTkBFjXdb4rhtq5SgwCvWcC/XL/_WHZ5134-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-nkQQ5zR",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "The Crouching Man",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-nkQQ5zR/2/KqxtWJS2nQfPsHGS7HHTkBFjXdb4rhtq5SgwCvWcC/XL/_WHZ5134-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T08:34:01.389Z"
+    },
+    "s-ujfJRKr": {
+      "primaryImageId": "i-gVFkfHb",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Together on the Tank",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-gVFkfHb/2/NCLStrHtxfCDWPssb5rXsCjmdF5fVHxCTVgvdZgNF/XL/_WHK1395-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-gVFkfHb",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "Together on the Tank",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-gVFkfHb/2/NCLStrHtxfCDWPssb5rXsCjmdF5fVHxCTVgvdZgNF/XL/_WHK1395-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T08:35:00.082Z"
+    },
+    "s-B9Hp8QZ": {
+      "primaryImageId": "i-5sGncG3",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Up From the Beach",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-5sGncG3/2/NMx8fkkJQkPSmpP6bH7zpNkPF8nZ9BJBCNCbjKmzX/XL/_WHK8903-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-5sGncG3",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "Up From the Beach",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-5sGncG3/2/NMx8fkkJQkPSmpP6bH7zpNkPF8nZ9BJBCNCbjKmzX/XL/_WHK8903-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T08:35:46.998Z"
+    },
+    "s-ZQadDUj": {
+      "primaryImageId": "i-ts3TQ3c",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "In Profile",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-ts3TQ3c/2/NS3NVvtWzkbGF2XPsL4vjQG7XKbQkKdQV6h3Gx5MJ/XL/_OWH0616-Edit-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-ts3TQ3c",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "In Profile",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-ts3TQ3c/2/NS3NVvtWzkbGF2XPsL4vjQG7XKbQkKdQV6h3Gx5MJ/XL/_OWH0616-Edit-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T08:36:42.603Z"
+    },
+    "s-NPrX4J8": {
+      "primaryImageId": "i-648v5jr",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Driving Through Smoke",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-648v5jr/1/MMG4bDR3nJnDkmmTSfgjrSvtWQcw6dnDVN2dkFtdG/XL/_OL30373-Edit-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-648v5jr",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "Driving Through Smoke",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-648v5jr/1/MMG4bDR3nJnDkmmTSfgjrSvtWQcw6dnDVN2dkFtdG/XL/_OL30373-Edit-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T08:38:28.573Z"
+    },
+    "s-88R2V57": {
+      "primaryImageId": "i-rmzHh2j",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "The Overhead Carry",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-rmzHh2j/1/M2Dhn59MLHXQ2sd9pGV8qZBn69PPPt6WbNzfkTBJM/XL/_OL37443-Edit-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-rmzHh2j",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "The Overhead Carry",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-rmzHh2j/1/M2Dhn59MLHXQ2sd9pGV8qZBn69PPPt6WbNzfkTBJM/XL/_OL37443-Edit-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T08:40:07.057Z"
+    },
+    "s-XTFfzTw": {
+      "primaryImageId": "i-tgmq9D9",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "The Front Man",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-tgmq9D9/1/KmF5BksV4ZVfdtpm9M2b465H4HH5zTFKZRKxkccS8/XL/_OL37508-Edit-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-tgmq9D9",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "The Front Man",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-tgmq9D9/1/KmF5BksV4ZVfdtpm9M2b465H4HH5zTFKZRKxkccS8/XL/_OL37508-Edit-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T08:40:53.936Z"
+    },
+    "s-ugEcyZX": {
+      "primaryImageId": "i-z3k6ZDH",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "The Hampshire Patch",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-z3k6ZDH/1/Lmnpw5R6PS7GnMH74F5x3HmwVCzpBCWNVVscVSGgv/XL/_OL38459-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-z3k6ZDH",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "The Hampshire Patch",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-z3k6ZDH/1/Lmnpw5R6PS7GnMH74F5x3HmwVCzpBCWNVVscVSGgv/XL/_OL38459-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T08:41:43.023Z"
+    },
+    "s-rHM7M5R": {
+      "primaryImageId": "i-XZXJtMr",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Standing in Camp",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-XZXJtMr/1/Kf7wTCqSKFVncMD9dMBHfp6vL4Z66SdBJPQdz8vQb/XL/_OL38425-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-XZXJtMr",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "Standing in Camp",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-XZXJtMr/1/Kf7wTCqSKFVncMD9dMBHfp6vL4Z66SdBJPQdz8vQb/XL/_OL38425-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T08:42:38.353Z"
+    },
+    "s-2J6PdYM": {
+      "primaryImageId": "i-Ztdkx4R",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "The Wall Watch",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-Ztdkx4R/1/MsrTZXh3RFWNC9HsSsk33vHftRFRXcFNQ9hcvBHG9/XL/_OL39917-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-Ztdkx4R",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs",
+          "title": "The Wall Watch",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-Ztdkx4R/1/MsrTZXh3RFWNC9HsSsk33vHftRFRXcFNQ9hcvBHG9/XL/_OL39917-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T08:44:23.447Z"
+    },
+    "s-jjVerBa": {
+      "primaryImageId": "i-xdJQsQQ",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Shouting Through the Snow",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-xdJQsQQ/2/MVGp6S77RdvxZdRFQG8knQrp8VR88BjK42vLWsjbQ/XL/DSCF0611-2-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-xdJQsQQ",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "Shouting Through the Snow",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-xdJQsQQ/2/MVGp6S77RdvxZdRFQG8knQrp8VR88BjK42vLWsjbQ/XL/DSCF0611-2-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T20:23:13.784Z"
+    },
+    "s-aAaWmz2": {
+      "primaryImageId": "i-dMQWS6q",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Across the Open Ground",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-dMQWS6q/3/M6MF2DBtfQKQQKpghvQDsSctTLTkXjCzHbcSzJDS4/XL/_OLY7916-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-dMQWS6q",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "Across the Open Ground",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-dMQWS6q/3/M6MF2DBtfQKQQKpghvQDsSctTLTkXjCzHbcSzJDS4/XL/_OLY7916-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T20:24:58.348Z"
+    },
+    "s-tWS7uud": {
+      "primaryImageId": "i-3X9JbcF",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Hand to His Helmet",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-3X9JbcF/3/KXNMFGbRcJ5CCNZfwCZrkJwhJkx4mCDNfpKdCTd68/XL/_OLY0947-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-3X9JbcF",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "Hand to His Helmet",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-3X9JbcF/3/KXNMFGbRcJ5CCNZfwCZrkJwhJkx4mCDNfpKdCTd68/XL/_OLY0947-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T20:25:39.203Z"
+    },
+    "s-eVsaFUq": {
+      "primaryImageId": "i-3fWjF7C",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Shading His Eyes",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-3fWjF7C/4/LJh9N4n2dr6QXSzMnnVbjWM8rP7JNZhLt8vZf2BCg/XL/_OLY3435-Edit-2-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-3fWjF7C",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "Shading His Eyes",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-3fWjF7C/4/LJh9N4n2dr6QXSzMnnVbjWM8rP7JNZhLt8vZf2BCg/XL/_OLY3435-Edit-2-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T20:26:10.649Z"
+    },
+    "s-qzvbVqK": {
+      "primaryImageId": "i-NSgKSxg",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "The Walk to the Lighthouse",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-NSgKSxg/4/LRkQ4HQ6z6xPbK5zn24q3BxJwc3WPmM69Hw4hKjsW/XL/_OLY0630-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-NSgKSxg",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "The Walk to the Lighthouse",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-NSgKSxg/4/LRkQ4HQ6z6xPbK5zn24q3BxJwc3WPmM69Hw4hKjsW/XL/_OLY0630-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T20:28:21.186Z"
+    },
+    "s-DZm6tYN": {
+      "primaryImageId": "i-wzB7S42",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Find cover!",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-wzB7S42/4/M3MJvDD8QpTgQ3dCzFvx5pChpQQmVtCxqNJbcgVjX/XL/_OLY0923-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-wzB7S42",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "Find cover!",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-wzB7S42/4/M3MJvDD8QpTgQ3dCzFvx5pChpQQmVtCxqNJbcgVjX/XL/_OLY0923-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T20:34:43.168Z"
+    },
+    "s-DAHwuEs": {
+      "primaryImageId": "i-4t3Dmz8",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Sneak Attack",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-4t3Dmz8/4/KmT4WqXnbgLwSv4WpHQC4WxPqGQCrBQnfzgc993H8/XL/P8180545-Edit-2-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-4t3Dmz8",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "Sneak Attack",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-4t3Dmz8/4/KmT4WqXnbgLwSv4WpHQC4WxPqGQCrBQnfzgc993H8/XL/P8180545-Edit-2-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T20:35:57.054Z"
+    },
+    "s-AWB5dVr": {
+      "primaryImageId": "i-MPZNDSF",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Take the hill!",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-MPZNDSF/5/MzWDQstnrvjRh8hQv9DZhCvTn6BDf493w2zctXJgf/XL/P8180665-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-MPZNDSF",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "Take the hill!",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-MPZNDSF/5/MzWDQstnrvjRh8hQv9DZhCvTn6BDf493w2zctXJgf/XL/P8180665-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T20:36:26.471Z"
+    },
+    "s-3w8TkFR": {
+      "primaryImageId": "i-cn9672v",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Look Out",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-cn9672v/3/McC9z8W4P9S9bWFJdK3wtMr89BQHx7FrfBddC78Lr/XL/_OLY2222-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-cn9672v",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "Look Out",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-cn9672v/3/McC9z8W4P9S9bWFJdK3wtMr89BQHx7FrfBddC78Lr/XL/_OLY2222-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T20:37:01.854Z"
+    },
+    "s-t4tANSX": {
+      "primaryImageId": "i-mDkpZWG",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Momentary Cover",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-mDkpZWG/4/M4HdxJg35QP3LXPS5Nrb84wRRXxKbxfTsg4BRNzST/XL/_OLY2970-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-mDkpZWG",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "Momentary Cover",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-mDkpZWG/4/M4HdxJg35QP3LXPS5Nrb84wRRXxKbxfTsg4BRNzST/XL/_OLY2970-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T20:37:37.581Z"
+    },
+    "s-6MxTU9M": {
+      "primaryImageId": "i-KVCbxHD",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Balloon Lost",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-KVCbxHD/4/KVgHPXbnqr69WWtmhRBKd4sVXPv6kGTF8V22Tk8Ns/XL/_OLY3097-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-KVCbxHD",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "Balloon Lost",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-KVCbxHD/4/KVgHPXbnqr69WWtmhRBKd4sVXPv6kGTF8V22Tk8Ns/XL/_OLY3097-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T20:38:08.977Z"
+    },
+    "s-zgqYDgc": {
+      "primaryImageId": "i-Cb9Q27F",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Sending Up Protection",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-Cb9Q27F/4/KQc2WTNNmVwGppGjdDh52w4GM6NstGvNKQntHNBmS/XL/_WHK2020-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-Cb9Q27F",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "Sending Up Protection",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-Cb9Q27F/4/KQc2WTNNmVwGppGjdDh52w4GM6NstGvNKQntHNBmS/XL/_WHK2020-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T20:38:37.772Z"
+    },
+    "s-XW9Nxpd": {
+      "primaryImageId": "i-jqnwhPg",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "What's our next move?",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-jqnwhPg/4/MmbcxH9fV8VX4HC3qkrszz7dnbf4rXHqVgNgnBvcR/XL/_OLY3282-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-jqnwhPg",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "What's our next move?",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-jqnwhPg/4/MmbcxH9fV8VX4HC3qkrszz7dnbf4rXHqVgNgnBvcR/XL/_OLY3282-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T20:44:09.146Z"
+    },
+    "s-Z6bQKNW": {
+      "primaryImageId": "i-2BMfpZf",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Run for It",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-2BMfpZf/5/MHms3fK6ZtpN6jsTR42wMgSfWd5FTL9HMw8sZzRMj/XL/_OLY3621-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-2BMfpZf",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "Run for It",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-2BMfpZf/5/MHms3fK6ZtpN6jsTR42wMgSfWd5FTL9HMw8sZzRMj/XL/_OLY3621-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T20:44:57.298Z"
+    },
+    "s-WkuWTyK": {
+      "primaryImageId": "i-Xc9QF2n",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "They Are Coming",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-Xc9QF2n/4/KbCR8F8H87K5KQHjk2r7j6XDqwqHDk2tf7DdLG5VZ/XL/P8191291-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-Xc9QF2n",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "They Are Coming",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-Xc9QF2n/4/KbCR8F8H87K5KQHjk2r7j6XDqwqHDk2tf7DdLG5VZ/XL/P8191291-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T20:45:35.186Z"
+    },
+    "s-ZzsBp6J": {
+      "primaryImageId": "i-z3JjLSG",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Have to Make My Move",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-z3JjLSG/4/MfTMBrjkjC2KV3cn72hk8S3THkDJxcmc7BdqXTgWX/XL/P8191440-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-z3JjLSG",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "Have to Make My Move",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-z3JjLSG/4/MfTMBrjkjC2KV3cn72hk8S3THkDJxcmc7BdqXTgWX/XL/P8191440-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T20:46:54.052Z"
+    },
+    "s-X98N3vH": {
+      "primaryImageId": "i-tSkLZb9",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Laughing Under Fire",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-tSkLZb9/4/LDxmWVgGhnCk75sdGDbPncNKF8vrvdRsG8bLPbQLG/XL/P8191674-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-tSkLZb9",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "Laughing Under Fire",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-tSkLZb9/4/LDxmWVgGhnCk75sdGDbPncNKF8vrvdRsG8bLPbQLG/XL/P8191674-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T20:47:31.555Z"
+    },
+    "s-k6C4Sfd": {
+      "primaryImageId": "i-M2nR5tB",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "The Walk After",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-M2nR5tB/4/NRM6vfnqmqCwLcx723sWFBNTXGB3wwDWLvwkr4fkr/XL/_OLY4041-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-M2nR5tB",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "The Walk After",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-M2nR5tB/4/NRM6vfnqmqCwLcx723sWFBNTXGB3wwDWLvwkr4fkr/XL/_OLY4041-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T20:48:42.427Z"
+    },
+    "s-KUfgfa9": {
+      "primaryImageId": "i-k7jVD2j",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Wave Him Off",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/WWII/i-k7jVD2j/2/L2G4X2jCPT4JRkfDm7FZKQQfQ6wqXtth4zwT9BB8p/XL/_OLY6505-Edit-2-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-k7jVD2j",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "Wave Him Off",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/WWII/i-k7jVD2j/2/L2G4X2jCPT4JRkfDm7FZKQQfQ6wqXtth4zwT9BB8p/XL/_OLY6505-Edit-2-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T20:49:16.047Z"
+    },
+    "s-sbPgRp3": {
+      "primaryImageId": "i-mHJNQXW",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "The Beach Run",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-mHJNQXW/2/MFGJkGf3SSTwzGnKDK97HTX9N2j8swGJfvSWpjS93/XL/_OLY0896-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-mHJNQXW",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "The Beach Run",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-mHJNQXW/2/MFGJkGf3SSTwzGnKDK97HTX9N2j8swGJfvSWpjS93/XL/_OLY0896-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T20:50:25.941Z"
+    },
+    "s-54naVSR": {
+      "primaryImageId": "i-GcGX4Ln",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "The Green Berets",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-GcGX4Ln/2/L4bGSP3NccLntx2wd8wpHHKXjDrB4PLjvnjMwhzq2/XL/_OLY1066-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-GcGX4Ln",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "The Green Berets",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-GcGX4Ln/2/L4bGSP3NccLntx2wd8wpHHKXjDrB4PLjvnjMwhzq2/XL/_OLY1066-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T20:51:02.720Z"
+    },
+    "s-z5zb9j9": {
+      "primaryImageId": "i-SWPCd35",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "You Can't Hide for Long",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-SWPCd35/3/M9KDTVJ6kNhrBpz6g8tzpW8hGGQdfKZMBRCT6f5D5/XL/_OLY1073-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-SWPCd35",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "You Can't Hide for Long",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-SWPCd35/3/M9KDTVJ6kNhrBpz6g8tzpW8hGGQdfKZMBRCT6f5D5/XL/_OLY1073-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T20:51:47.584Z"
+    },
+    "s-cL27FFY": {
+      "primaryImageId": "i-NFVPd6V",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "At His Side",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-NFVPd6V/2/MtDjZFfFfgqFSd9Qjbk8M6zjpJjbVtKJsqfSDVBsT/XL/_OLY4197-Edit-2-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-NFVPd6V",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "At His Side",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-NFVPd6V/2/MtDjZFfFfgqFSd9Qjbk8M6zjpJjbVtKJsqfSDVBsT/XL/_OLY4197-Edit-2-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T20:53:04.250Z"
+    },
+    "s-TJwegwD": {
+      "primaryImageId": "i-hHJjng7",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Sweat and Wire",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-hHJjng7/2/NFHc7xLjQZSMbfZFJSC6dgfK6dh3KZvfpB3gXJgcw/XL/_OLY7445-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-hHJjng7",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "Sweat and Wire",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-hHJjng7/2/NFHc7xLjQZSMbfZFJSC6dgfK6dh3KZvfpB3gXJgcw/XL/_OLY7445-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T20:54:17.264Z"
+    },
+    "s-EVUP7uX": {
+      "primaryImageId": "i-hKN7Rxx",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Returning Fire",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-hKN7Rxx/2/LxB2X4cXqvBxfZtwdknxL2csc4PJ8TdhTQ9VjK2MJ/XL/_OLY7458-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-hKN7Rxx",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "Returning Fire",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-hKN7Rxx/2/LxB2X4cXqvBxfZtwdknxL2csc4PJ8TdhTQ9VjK2MJ/XL/_OLY7458-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T20:54:55.259Z"
+    },
+    "s-VQZgbPA": {
+      "primaryImageId": "i-R2mpKNb",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "The Charge",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-R2mpKNb/2/KD78dsRr2m63sk5Dn93G9XrZGzw3sWSNKvmQzdCxw/XL/_OLY7914-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-R2mpKNb",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "The Charge",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-R2mpKNb/2/KD78dsRr2m63sk5Dn93G9XrZGzw3sWSNKvmQzdCxw/XL/_OLY7914-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T20:55:34.688Z"
+    },
+    "s-SS3XxNq": {
+      "primaryImageId": "i-jhgDbcf",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "The Laugh in the Snow",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-jhgDbcf/2/LRbZMhgBrb2jTMfSS6VcTq7JwnJncbgDw7xh7kfLP/XL/_WHZ8147-Edit2-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-jhgDbcf",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "The Laugh in the Snow",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-jhgDbcf/2/LRbZMhgBrb2jTMfSS6VcTq7JwnJncbgDw7xh7kfLP/XL/_WHZ8147-Edit2-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T20:56:15.271Z"
+    },
+    "s-JndtBEQ": {
+      "primaryImageId": "i-zNSvQmB",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "About to Make His Move",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-zNSvQmB/3/ND8FCCddS5wwnz9TpnRgDvn3jPVPWs6Z94pL6GhnD/XL/_OLY8014-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-zNSvQmB",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "About to Make His Move",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-zNSvQmB/3/ND8FCCddS5wwnz9TpnRgDvn3jPVPWs6Z94pL6GhnD/XL/_OLY8014-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T21:12:19.921Z"
+    },
+    "s-nfdhKLN": {
+      "primaryImageId": "i-cGcxvSL",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "In My Sights",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-cGcxvSL/2/MMSGK9S5hsnnD3sTxsL6CKQLKW5pvCnS4N3nkpSjz/XL/_OLY8221-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-cGcxvSL",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "In My Sights",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-cGcxvSL/2/MMSGK9S5hsnnD3sTxsL6CKQLKW5pvCnS4N3nkpSjz/XL/_OLY8221-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T21:12:51.470Z"
+    },
+    "s-bGZKvNU": {
+      "primaryImageId": "i-LhZnWf7",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Off the Ramp",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-LhZnWf7/2/LVFdSWMFrjMDfQt3cn2xpKb7qrfKrJBbmdJNqWnmL/XL/_OLY8529-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-LhZnWf7",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "Off the Ramp",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-LhZnWf7/2/LVFdSWMFrjMDfQt3cn2xpKb7qrfKrJBbmdJNqWnmL/XL/_OLY8529-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T21:13:27.119Z"
+    },
+    "s-7XsQHGz": {
+      "primaryImageId": "i-KH4Mqv3",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Behind the Hedgehog",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-KH4Mqv3/2/MNBCz7tsW3XHk4KFHShcxWShbWLbwQLKfx6jgjqXX/XL/_OLY8537-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-KH4Mqv3",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "Behind the Hedgehog",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-KH4Mqv3/2/MNBCz7tsW3XHk4KFHShcxWShbWLbwQLKfx6jgjqXX/XL/_OLY8537-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T21:14:09.731Z"
+    },
+    "s-mHpmXRm": {
+      "primaryImageId": "i-nhm5CRf",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Head on a Swivel",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-nhm5CRf/3/MCtVB56gtgBzX7SK4KsZXrck3HqRC5H8QkqPJvcKk/XL/_OLY8611-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-nhm5CRf",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "Head on a Swivel",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-nhm5CRf/3/MCtVB56gtgBzX7SK4KsZXrck3HqRC5H8QkqPJvcKk/XL/_OLY8611-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T21:14:42.035Z"
+    },
+    "s-kGjWM49": {
+      "primaryImageId": "i-hHVDKC9",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Run for Cover",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-hHVDKC9/3/KJfhCQWRfzsJSpbqjT7bDX8B7RR3DjCDHzR7qq3VW/XL/_OLY8702-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-hHVDKC9",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "Run for Cover",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-hHVDKC9/3/KJfhCQWRfzsJSpbqjT7bDX8B7RR3DjCDHzR7qq3VW/XL/_OLY8702-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T21:15:18.771Z"
+    },
+    "s-Ekstszv": {
+      "primaryImageId": "i-tNQj34J",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Guys We Got to Do Something",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-tNQj34J/3/Mx2rC7hV2SFTn5SstXXD7MhpbxQdhT8hQqNvmKPvh/XL/_OLY8721-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-tNQj34J",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "Guys We Got to Do Something",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-tNQj34J/3/Mx2rC7hV2SFTn5SstXXD7MhpbxQdhT8hQqNvmKPvh/XL/_OLY8721-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T21:15:55.490Z"
+    },
+    "s-t689Puy": {
+      "primaryImageId": "i-V695Dp6",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Incoming",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-V695Dp6/3/LhL5sbR9b9kbKcpmrjF2LvmH9jKgRgfVfCD4J4CQZ/XL/_OLY8725-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-V695Dp6",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "Incoming",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-V695Dp6/3/LhL5sbR9b9kbKcpmrjF2LvmH9jKgRgfVfCD4J4CQZ/XL/_OLY8725-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T21:16:36.961Z"
+    },
+    "s-u3DmMYt": {
+      "primaryImageId": "i-kJd5ZV5",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Leaning Into It",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-kJd5ZV5/2/K4jJ5rd4NS85DGXXK6J4qQqWLqfSz799mZdKV3C2T/XL/_OLY8775-Edit-2-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-kJd5ZV5",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "Leaning Into It",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-kJd5ZV5/2/K4jJ5rd4NS85DGXXK6J4qQqWLqfSz799mZdKV3C2T/XL/_OLY8775-Edit-2-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T21:17:18.266Z"
+    },
+    "s-vfJyMSw": {
+      "primaryImageId": "i-TFnxp39",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Keeping Low",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-TFnxp39/3/Nhh53PHGdwnPJw7n7S3C4Gcvt7cK2KjrmZtpX2WgD/XL/_OLY8791-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-TFnxp39",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "Keeping Low",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-TFnxp39/3/Nhh53PHGdwnPJw7n7S3C4Gcvt7cK2KjrmZtpX2WgD/XL/_OLY8791-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T21:18:30.288Z"
+    },
+    "s-UVNMNbM": {
+      "primaryImageId": "i-jmZQmcS",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Up the Beach",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-jmZQmcS/2/MVHdvGkswhCpkrQ6WVZtFkNHBWCGFDvKSLpTN7hWg/XL/_OLY8876-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-jmZQmcS",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "Up the Beach",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-jmZQmcS/2/MVHdvGkswhCpkrQ6WVZtFkNHBWCGFDvKSLpTN7hWg/XL/_OLY8876-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T21:19:08.793Z"
+    },
+    "s-3MFQGEM": {
+      "primaryImageId": "i-Vrmx6xQ",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Full Tilt",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-Vrmx6xQ/2/Ljp6jMcFzjJZ7Ds437T7PnhVQM4SRRRR3VRr2JzrC/XL/_OLY8888-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-Vrmx6xQ",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "Full Tilt",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-Vrmx6xQ/2/Ljp6jMcFzjJZ7Ds437T7PnhVQM4SRRRR3VRr2JzrC/XL/_OLY8888-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T21:19:44.467Z"
+    },
+    "s-NHmDunN": {
+      "primaryImageId": "i-7z6hDdR",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Finding Cover",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-7z6hDdR/2/M4TDp4rwXBqm7Dk4f927bpJ9X7MXzVT6xvm3rn5f5/XL/_OLY8896-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-7z6hDdR",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "Finding Cover",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-7z6hDdR/2/M4TDp4rwXBqm7Dk4f927bpJ9X7MXzVT6xvm3rn5f5/XL/_OLY8896-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T21:20:16.478Z"
+    },
+    "s-gzLT9pv": {
+      "primaryImageId": "i-w8SFWQT",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Brass Over the Beam",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-w8SFWQT/2/NgZDvnVRTzmcX8Rjf869tq9T9TZSHwPJtmFxQhh8q/XL/_OLY9007-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-w8SFWQT",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "Brass Over the Beam",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-w8SFWQT/2/NgZDvnVRTzmcX8Rjf869tq9T9TZSHwPJtmFxQhh8q/XL/_OLY9007-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T21:20:50.361Z"
+    },
+    "s-CsL5drm": {
+      "primaryImageId": "i-dLCkS26",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "On the March",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-dLCkS26/3/MRsG5twffpt7w7MZJ56JZZqxMH9Jp72cgjjJm9gT7/XL/_OLY9032-Edit-2-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-dLCkS26",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "On the March",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-dLCkS26/3/MRsG5twffpt7w7MZJ56JZZqxMH9Jp72cgjjJm9gT7/XL/_OLY9032-Edit-2-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T21:21:57.030Z"
+    },
+    "s-rm3rUB4": {
+      "primaryImageId": "i-ZwPshf2",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "The Firing Line",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-ZwPshf2/2/K93Kn642HhJKQN3S7Km5QB9XT6X9bRBXTKmwGfbhX/XL/_OLY9127-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-ZwPshf2",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "The Firing Line",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-ZwPshf2/2/K93Kn642HhJKQN3S7Km5QB9XT6X9bRBXTKmwGfbhX/XL/_OLY9127-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T21:22:31.095Z"
+    },
+    "s-hxzLLJb": {
+      "primaryImageId": "i-8MFcm9N",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Hold Him Back",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-8MFcm9N/2/NfZrBfVg595P299wZbBVxJVqF7NjLSDVKsLn8v5VP/XL/_OLY9696-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-8MFcm9N",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs",
+          "title": "Hold Him Back",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-8MFcm9N/2/NfZrBfVg595P299wZbBVxJVqF7NjLSDVKsLn8v5VP/XL/_OLY9696-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-08T21:23:09.716Z"
     }
   }
 }

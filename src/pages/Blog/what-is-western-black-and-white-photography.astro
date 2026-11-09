@@ -12,6 +12,8 @@ import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
+import CornerstoneCollectionNav from "@/components/blog/CornerstoneCollectionNav.astro";
+import CornerstoneGalleryDoor from "@/components/blog/CornerstoneGalleryDoor.astro";
 import KeywordLinkedArticle from "@/components/blog/KeywordLinkedArticle.astro";
 import { getBreadcrumbList, getStructuredData } from "@/components/utils/getStructuredData.ts";
 
@@ -228,6 +230,8 @@ const blogBreadcrumb = `Other > <a href='/Blog' style='color: inherit; text-deco
           <h2>Western Black and White Photography as Fine Art</h2>
         </div>
 
+        <CornerstoneGalleryDoor id="i-Txh4c8k" galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White" alt="Black and white Western labor scene structured through tone" caption="Without color, practiced labor and tonal architecture have to carry the frame." href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/all" label="Browse Black & White Western Narratives" align="right" />
+
         <p>Western black and white photography includes many subjects: black and white cowboy portraits, frontier narrative scenes, monochrome Native American portraits, ranch life, Western landscapes, and <a href="/Blog/what-is-historically-themed-photography" style="color:#8b5a2b; text-decoration:underline;">historically themed photography</a> inspired by the American frontier.</p>
 
         <p>But not all black and white Western photography is fine art.</p>
@@ -379,6 +383,8 @@ const blogBreadcrumb = `Other > <a href='/Blog' style='color: inherit; text-deco
           <h2>Black and White Western Wall Art for Collectors</h2>
         </div>
 
+        <CornerstoneGalleryDoor id="i-Cg4ZB72" galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White" alt="Monochrome Western study shaped through tonal restraint" caption="Monochrome earns its place through structure, atmosphere, and lasting print presence." href="/Western-Black-and-White-Photography" label="Explore Western Black & White Photography" align="left" />
+
         <p>Black and white Western wall art holds a room differently than color Western art.</p>
 
         <p>Color often warms a space. Monochrome anchors it.</p>
@@ -394,6 +400,8 @@ const blogBreadcrumb = `Other > <a href='/Blog' style='color: inherit; text-deco
         <div class="section-heading-with-line">
           <h2>Western Black and White Photography at K4 Studios</h2>
         </div>
+
+        <CornerstoneGalleryDoor id="i-qMQf7b6" galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White" alt="Black and white frontier figure shaped through tonal restraint" caption="The final image has to hold through light, shadow, character, and consequence alone." href="/Western-Black-and-White-Photography" label="Explore the Monochrome Western Collection" align="right" />
 
         <p>At K4 Studios, Western black and white photography is approached as authored fine art. Each image is shaped through tone, composition, historical atmosphere, and narrative pressure rather than treated as a simple monochrome conversion.</p>
 
@@ -433,6 +441,8 @@ const blogBreadcrumb = `Other > <a href='/Blog' style='color: inherit; text-deco
     </section>
 
     <WesternDefinitions variant="definition" currentPage={9} />
+
+    <CornerstoneCollectionNav focusKey="cowboy-portraits-1" />
 
     <SiteFooter />
   </main>

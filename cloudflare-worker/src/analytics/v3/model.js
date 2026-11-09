@@ -16,6 +16,15 @@ export const V3_CORE_EVENT_TYPES = Object.freeze([
 
 export const V3_ENGAGEMENT_EVENT_TYPES = new Set(V3_CORE_EVENT_TYPES.filter((type) => type !== 'page_view'));
 
+export const V3_OIM_DOMAINS = Object.freeze([
+  'one-image-movie.com',
+  'one-image-movies.com',
+  'one-imagemovie.com',
+  'one-imagemovies.com',
+  'oneimagemovie.com',
+  'oneimagemovies.com'
+]);
+
 // Narrowly exclude known datacenter/search infrastructure from human-facing
 // totals. Those rows remain available through manually loaded diagnostics.
 export const V3_DATACENTER_ASNS = Object.freeze([
@@ -74,6 +83,15 @@ export function getV3AcquisitionLabel(referer) {
   if (value.includes('facebook.') || value.includes('instagram.')) return 'Facebook / Instagram';
   if (value.includes('pinterest.')) return 'Pinterest';
   return 'Other external';
+}
+
+export function getV3OimDomain(row) {
+  const source = String(row?.utm_source || '').trim().toLowerCase();
+  const medium = String(row?.utm_medium || '').trim().toLowerCase();
+  const campaign = String(row?.utm_campaign || '').trim().toLowerCase();
+  return medium === 'vanity_domain' && campaign === 'oim_doorway' && V3_OIM_DOMAINS.includes(source)
+    ? source
+    : null;
 }
 
 export function getV3ActionLabel(type) {
@@ -215,7 +233,8 @@ export function buildV3RollupBatch(rows) {
     const session = sessions.get(sessionKey) || {
       day, sessionId: row.session_id, visitorId: row.visitor_id, engaged: 0,
       landingPage: null, entrySource: null, visitorGeo: null, imageGeo: null,
-      entryIsImageFallback: 0, pageViewCount: 0, siteDevice: null, imageDevice: null
+      entryIsImageFallback: 0, pageViewCount: 0, siteDevice: null, imageDevice: null,
+      oimDomain: null
     };
     session.engaged = Math.max(session.engaged, engaged);
     if (row.event_type === 'page_view') {
@@ -224,6 +243,7 @@ export function buildV3RollupBatch(rows) {
       if (!session.landingPage || session.entryIsImageFallback) {
         session.landingPage = normalizeV3Path(row.page) || 'Unknown page';
         session.entrySource = getV3AcquisitionLabel(row.entry_referrer || row.referer);
+        session.oimDomain = getV3OimDomain(row) || session.oimDomain;
         session.visitorGeo = getV3GeoLabel(row);
         session.entryIsImageFallback = 0;
       }
@@ -234,6 +254,7 @@ export function buildV3RollupBatch(rows) {
       if (!session.landingPage) {
         session.landingPage = normalizeV3Path(row.page) || 'Unknown page';
         session.entrySource = getV3AcquisitionLabel(row.entry_referrer || row.referer);
+        session.oimDomain = getV3OimDomain(row) || session.oimDomain;
         session.visitorGeo = getV3GeoLabel(row);
         session.entryIsImageFallback = 1;
       }
@@ -344,6 +365,18 @@ export function summarizeV3Rollup(batch, label = 'Archive sample') {
       return (b.entries - a.entries) || a.label.localeCompare(b.label);
     }).slice(0, 10);
   })();
+  const oimDomainFunnel = (() => {
+    const grouped = new Map();
+    batch.sessions.forEach((row) => {
+      if (!row.oimDomain) return;
+      const item = grouped.get(row.oimDomain) || { label: row.oimDomain, entries: 0, continued: 0, chapters: 0 };
+      item.entries += 1;
+      if (row.pageViewCount >= 2) item.continued += 1;
+      if (row.imageDevice || row.imageGeo) item.chapters += 1;
+      grouped.set(row.oimDomain, item);
+    });
+    return V3_OIM_DOMAINS.filter((domain) => grouped.has(domain)).map((domain) => grouped.get(domain));
+  })();
   const cartFunnelLabels = ['Added to cart', 'Viewed cart', 'Started checkout', 'Calculated final total', 'Started payment', 'Order completed'];
   const actionCounts = new Map(top('action', Number.MAX_SAFE_INTEGER).map((row) => [row.label, row.count]));
   return {
@@ -387,7 +420,7 @@ export function summarizeV3Rollup(batch, label = 'Archive sample') {
       }).sort((a, b) => (b.count - a.count)
         || (b.pricingOpens - a.pricingOpens) || a.imageId.localeCompare(b.imageId));
     })(),
-    entryPages: topSessionField('landingPage', 25), entryNavigation,
+    entryPages: topSessionField('landingPage', 25), entryNavigation, oimDomainFunnel,
     acquisition: topSessionField('entrySource', 10),
     visitorGeography: topDistinctVisitors((row) => row.visitorGeo || row.imageGeo, 20),
     siteDevices: topDistinctVisitors('siteDevice', 5, (row) => Boolean(row.siteDevice)),

@@ -7146,11 +7146,6 @@ export const chapterDoorwayAssignments = {
     "href": "/WWII-Themed-Fine-Art-Prints",
     "frameIndex": 3
   },
-  "i-gkmPx9g": {
-    "theme": "wwii",
-    "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 4
-  },
   "i-Nd7Vrz3": {
     "theme": "wwii",
     "href": "/Western-Photography-Art",
@@ -7196,11 +7191,6 @@ export const chapterDoorwayAssignments = {
     "href": "/historical-fine-art-photography-collection",
     "frameIndex": 0
   },
-  "i-r55b7nc": {
-    "theme": "wwii",
-    "href": "/Western-Photography-Art",
-    "frameIndex": 1
-  },
   "i-4cLQTsM": {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
@@ -7235,11 +7225,6 @@ export const chapterDoorwayAssignments = {
     "theme": "wwii",
     "href": "/WWII-Themed-Fine-Art-Prints",
     "frameIndex": 0
-  },
-  "i-327k6C2": {
-    "theme": "wwii",
-    "href": "/historical-fine-art-photography-collection",
-    "frameIndex": 1
   },
   "i-MLg7CFF": {
     "theme": "wwii",
@@ -15051,13 +15036,13 @@ export const chapterDoorwayCursors = {
 };
 
 export const chapterDoorwayAssignmentMeta = {
-  "generatedAt": "2026-11-07T19:41:56.216Z",
-  "assignedCount": 3007,
+  "generatedAt": "2026-11-09T01:40:19.338Z",
+  "assignedCount": 3004,
   "themeCounts": {
     "nativeAmerican": 32,
     "western": 773,
     "civilWar": 92,
-    "wwii": 729,
+    "wwii": 726,
     "roaring20s": 48,
     "landscapes": 817,
     "transportation": 181,
@@ -15065,7 +15050,7 @@ export const chapterDoorwayAssignmentMeta = {
     "engrained": 47
   },
   "skipped": {
-    "noTheme": 224,
+    "noTheme": 226,
     "noDoorways": 0
   }
 };

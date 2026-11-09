@@ -4,6 +4,7 @@ export const prerender = true;
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
+import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
 import CornerstoneCollectionNav from "@/components/blog/CornerstoneCollectionNav.astro";
 import KeywordLinkedArticle from "@/components/blog/KeywordLinkedArticle.astro";
 import CornerstoneVisualBridge from "@/components/blog/CornerstoneVisualBridge.astro";
@@ -155,6 +156,8 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
       <p>That excavation is where I work. I work with living historians and researched period detail to build single, interrupted moments from the frontier's human side — the breath before a decision, the silence after one — using painterly handling to shape real photographs into images a viewer steps inside and finishes. Each piece is a One-Image Movie™: the frame opens the moment, the title and writing deepen it, and what the frontier felt like from inside is completed by the person standing in front of it.</p>
       <p>You can see that approach across Facing History and in its Western branch, the Wild West gallery — a frontier presented not as a set of icons, but as people living at the edge of the map, carrying what the edge demanded.</p>
 
+      <CornerstoneGalleryDoor id="i-BGmFfF5" galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color" alt="Western narrative figure living inside the unfinished American frontier story" caption="The frontier persists as pressure, memory, and consequence rather than a line on a map." href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West" label="Enter the American Frontier Collection" align="right" />
+
       <div class="definition-post-heading"><h2>FAQ</h2></div>
       <div class="definition-post-faq">
         {faqItems.map((item) => (
@@ -165,7 +168,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         ))}
       </div>
 
-      <div class="definition-post-heading"><h2>Where to go next</h2></div>
+      <div class="definition-post-heading"><h2>Explore the American Frontier</h2></div>
       <nav class="definition-post-links" aria-label="Related American frontier pages">
         <p>The Wild West gallery: <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West">Wild West</a></p>
         <p>Facing History, the full collection: <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Facing History</a></p>
@@ -176,6 +179,8 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
       </nav>
     </article>
     </KeywordLinkedArticle>
+
+    <WesternDefinitions variant="definition" currentPage={20} />
 
     <CornerstoneCollectionNav />
     <SiteFooter />

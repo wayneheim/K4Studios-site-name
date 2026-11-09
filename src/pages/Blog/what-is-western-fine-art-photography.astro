@@ -19,6 +19,9 @@ import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
+import CornerstoneCollectionNav from "@/components/blog/CornerstoneCollectionNav.astro";
+import CornerstoneVisualBridge from "@/components/blog/CornerstoneVisualBridge.astro";
+import CornerstoneGalleryDoor from "@/components/blog/CornerstoneGalleryDoor.astro";
 import KeywordLinkedArticle from "@/components/blog/KeywordLinkedArticle.astro";
 import { getBreadcrumbList, getStructuredData } from "@/components/utils/getStructuredData.ts";
 
@@ -197,50 +200,18 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
       </p>
     </section>
 
-    <!-- Early Visual Bridge -->
-    <section class="early-examples-section">
-      <div class="early-examples-shell">
-        <p class="early-examples-kicker">See the Standard at Work</p>
-        <h2 class="early-examples-title">Western fine art photography begins where the camera stops merely recording.</h2>
-        <p class="early-examples-intro">
-          Character, labor, atmosphere, and historical presence become fine art when composition, restraint, and narrative intent shape what the viewer is asked to see.
-        </p>
-
-        <div class="early-examples-grid">
-          <figure>
-            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${image1.id}`}>
-              <img src={image1.src} alt={image1.alt} loading="eager" />
-            </a>
-            <figcaption>Character over cowboy shorthand.</figcaption>
-          </figure>
-
-          <figure>
-            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/${image2.id}`}>
-              <img src={image2.src} alt={image2.alt} loading="lazy" />
-            </a>
-            <figcaption>Labor, restraint, and photographic authorship.</figcaption>
-          </figure>
-
-          <figure>
-            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color/${image3.id}`}>
-              <img src={image3.src} alt={image3.alt} loading="lazy" />
-            </a>
-            <figcaption>Presence, dignity, and narrative stillness.</figcaption>
-          </figure>
-
-          <figure>
-            <a href={`/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/${headerImages[0].id}`}>
-              <img src={getProxySrc(headerImages[0].id, "l")} alt={headerImages[0].alt} loading="lazy" />
-            </a>
-            <figcaption>Landscape carries atmosphere, structure, and authorship.</figcaption>
-          </figure>
-        </div>
-
-        <a class="early-examples-cta" href="/Western-Fine-Art-Photography">
-          Explore Western Fine Art Photography
-        </a>
-      </div>
-    </section>
+    <CornerstoneVisualBridge
+      kicker="See the Standard at Work"
+      title="Western fine art photography begins where the camera stops merely recording."
+      intro="Character, labor, atmosphere, and historical presence become fine art when composition, restraint, and narrative intent shape what the viewer is asked to see."
+      items={[
+        { id: image1.id, galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color", alt: image1.alt, caption: "Character over cowboy shorthand." },
+        { id: image2.id, galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White", alt: image2.alt, caption: "Labor, restraint, and photographic authorship." },
+        { id: image3.id, galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color", alt: image3.alt, caption: "Presence, dignity, and narrative stillness." },
+      ]}
+      ctaHref="/Western-Fine-Art-Photography"
+      ctaLabel="Explore Western Fine Art Photography"
+    />
 
     <!-- Article Content -->
     <section class="story-section max-w-[860px] mx-auto px-4">
@@ -259,6 +230,8 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         <p>Fine art requires the photographer to make decisions about what the image will mean. The subject does not confer status. The authorship does.</p>
 
         <p>This article defines what Western fine art photography is, what it is not, and why the distinction matters for collectors, curators, and anyone seeking work that endures on a wall rather than in a folder.</p>
+
+        <CornerstoneGalleryDoor id="i-6Ffpw9t" galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color" alt="Frontier character study shaped through atmosphere and authored light" caption="The camera records the subject; composition decides what the subject becomes." href="/Western-Fine-Art-Photography" label="Explore Western Fine Art Photography" align="right" />
 
         <!-- EARLY FUNNEL -->
         <div class="early-funnel" style="background:#f8f6f3; border-left:4px solid #8b5a2b; padding:1.25rem 1.5rem; margin:2rem 0; border-radius:0 8px 8px 0;">
@@ -303,6 +276,8 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         <div class="section-heading-with-line">
           <h2>What Western Fine Art Photography Is Not</h2>
         </div>
+
+        <CornerstoneGalleryDoor id="i-4Hz6D7k" galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color" alt="Native American portrait composed with dignity and narrative stillness" caption="Authorship remains visible through restraint, presence, and what the frame refuses to turn into spectacle." href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color/all" label="Browse Authored Historical Portraits" align="left" />
 
         <p>The term "Western photography" has been stretched until it means almost nothing. Search for it and you will find stock silhouettes, mass-produced sunset prints, and decorative pieces designed to match leather furniture.</p>
 
@@ -438,6 +413,8 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
     <!-- Western Art Series Navigation -->
     <WesternDefinitions variant="definition" currentPage={3} />
+
+    <CornerstoneCollectionNav focusKey="cowboy-portraits-0" />
 
     <SiteFooter />
   </main>

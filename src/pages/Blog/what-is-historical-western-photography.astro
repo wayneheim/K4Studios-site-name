@@ -20,6 +20,10 @@ import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
+import CornerstoneCollectionNav from "@/components/blog/CornerstoneCollectionNav.astro";
+import CornerstoneVisualBridge from "@/components/blog/CornerstoneVisualBridge.astro";
+import CornerstoneGalleryDoor from "@/components/blog/CornerstoneGalleryDoor.astro";
+import FAQAccordion from "@/components/FAQAccordion.jsx";
 import KeywordLinkedArticle from "@/components/blog/KeywordLinkedArticle.astro";
 import { getBreadcrumbList, getFAQPageStructuredData, getStructuredData } from "@/components/utils/getStructuredData.ts";
 
@@ -210,50 +214,18 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
       </p>
     </section>
 
-    <!-- Early Visual Bridge -->
-    <section class="early-examples-section">
-      <div class="early-examples-shell">
-        <p class="early-examples-kicker">See the Historical West Reimagined</p>
-        <h2 class="early-examples-title">Historical Western photography is not old photography. It is contemporary art looking back with intent.</h2>
-        <p class="early-examples-intro">
-          These images use frontier figures, period atmosphere, and narrative construction to explore the historical West as lived experience rather than modern ranch record or antique documentation.
-        </p>
-
-        <div class="early-examples-grid">
-          <figure>
-            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${image1.id}`}>
-              <img src={image1.src} alt={image1.alt} loading="eager" />
-            </a>
-            <figcaption>Frontier psychology shaped through portrait and atmosphere.</figcaption>
-          </figure>
-
-          <figure>
-            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${image2.id}`}>
-              <img src={image2.src} alt={image2.alt} loading="lazy" />
-            </a>
-            <figcaption>Period detail used in service of narrative, not spectacle.</figcaption>
-          </figure>
-
-          <figure>
-            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${image3.id}`}>
-              <img src={image3.src} alt={image3.alt} loading="lazy" />
-            </a>
-            <figcaption>The frontier treated as lived experience, not costume.</figcaption>
-          </figure>
-
-          <figure>
-            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${image4.id}`}>
-              <img src={image4.src} alt={image4.alt} loading="lazy" />
-            </a>
-            <figcaption>Contemporary fine art carrying historical Western themes.</figcaption>
-          </figure>
-        </div>
-
-        <a class="early-examples-cta" href="/Historical-Western-Art">
-          Explore Historical Western Art
-        </a>
-      </div>
-    </section>
+    <CornerstoneVisualBridge
+      kicker="See the Historical West Reimagined"
+      title="Historical Western photography is not old photography. It is contemporary art looking back with intent."
+      intro="These images use frontier figures, period atmosphere, and narrative construction to explore the historical West as lived experience rather than modern ranch record or antique documentation."
+      items={[
+        { id: image1.id, galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color", alt: image1.alt, caption: "Frontier psychology shaped through portrait and atmosphere." },
+        { id: image2.id, galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color", alt: image2.alt, caption: "Period detail used in service of narrative, not spectacle." },
+        { id: image3.id, galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color", alt: image3.alt, caption: "The frontier treated as lived experience, not costume." },
+      ]}
+      ctaHref="/Historical-Western-Art"
+      ctaLabel="Explore Historical Western Art"
+    />
 
     <!-- Article Content -->
     <section class="story-section max-w-[860px] mx-auto px-4">
@@ -367,6 +339,8 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
           <h2>Why the Distinction Matters</h2>
         </div>
 
+        <CornerstoneGalleryDoor id="i-KVxkXrV" galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color" alt="Historical Western figure carried through contemporary fine art photography" caption="Historical subject matter becomes contemporary art through interpretation rather than imitation." href="/Historical-Western-Art" label="Explore Historical Western Art" align="left" />
+
         <p>The Western photography genre is broad. It includes landscape tourism, rodeo documentation, ranch lifestyle content, and commercial cowboy imagery.</p>
 
         <p>Historical Western photography occupies a specific position within this landscape: <strong>fine art that uses the camera to explore the American frontier as a historical and psychological subject</strong>.</p>
@@ -383,12 +357,11 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
           <h2>Frequently Asked Questions</h2>
         </div>
 
-        {historicalWesternPhotographyFaq.map((item) => (
-          <>
-            <h3 style="font-size:1.1rem; font-weight:600; margin-top:1.5rem; margin-bottom:0.5rem;">{item.q}</h3>
-            <p>{item.a}</p>
-          </>
-        ))}
+        <CornerstoneGalleryDoor id="i-r5Pb7zJ" galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color" alt="Frontier figure reading signs in open country" caption="Historical Western photography carries the pressures of lived frontier experience into a contemporary authored image." href="/Historical-Western-Art" label="Explore Historical Western Art" align="right" />
+
+        <FAQAccordion items={historicalWesternPhotographyFaq} showHeading={false} />
+
+        <CornerstoneGalleryDoor id="i-BGmFfF5" galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color" alt="Historical Western narrative carrying unresolved consequence" caption="The finished work returns history to lived pressure instead of leaving it as costume or record." href="/Historical-Western-Art" label="Explore Historical Western Art" align="left" />
 
         <!-- CTA Section -->
         <div style="background:#f9f7f4; padding:2rem; border-radius:12px; margin-top:2.5rem; text-align:center;">
@@ -410,6 +383,8 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
     <!-- Western Art Series Navigation -->
     <WesternDefinitions variant="definition" currentPage={7} />
+
+    <CornerstoneCollectionNav focusKey="western-narrative-color" />
 
     <!-- Footer -->
     <SiteFooter />

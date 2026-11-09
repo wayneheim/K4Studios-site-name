@@ -18,6 +18,10 @@ import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
+import CornerstoneCollectionNav from "@/components/blog/CornerstoneCollectionNav.astro";
+import CornerstoneVisualBridge from "@/components/blog/CornerstoneVisualBridge.astro";
+import CornerstoneGalleryDoor from "@/components/blog/CornerstoneGalleryDoor.astro";
+import FAQAccordion from "@/components/FAQAccordion.jsx";
 import KeywordLinkedArticle from "@/components/blog/KeywordLinkedArticle.astro";
 import { getBreadcrumbList, getFAQPageStructuredData, getStructuredData } from "@/components/utils/getStructuredData.ts";
 
@@ -195,6 +199,19 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
       </p>
     </section>
 
+    <CornerstoneVisualBridge
+      kicker="See the Cowboy Beyond the Symbol"
+      title="Western cowboy art begins with the person beneath the icon."
+      intro="Portrait, atmosphere, and narrative consequence move the cowboy beyond costume and into authored Western fine art."
+      items={[
+        { id: image1.id, galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color", alt: image1.alt, caption: "Character and vigilance beneath the familiar Western figure." },
+        { id: image2.id, galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color", alt: image2.alt, caption: "Painterly atmosphere carrying more than spectacle." },
+        { id: image3.id, galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color", alt: image3.alt, caption: "Quiet determination held as psychological portraiture." },
+      ]}
+      ctaHref="/western-cowboy-art"
+      ctaLabel="Explore Western Cowboy Art"
+    />
+
     <!-- Article Content -->
     <section class="story-section max-w-[860px] mx-auto px-4">
       <KeywordLinkedArticle pagePath={sectionPath}>
@@ -311,6 +328,8 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
           <h2>The Story Behind the Story</h2>
         </div>
 
+        <CornerstoneGalleryDoor id="i-5BtMrfM" galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color" alt="Western figure held inside a larger implied story" caption="The cowboy becomes more than icon when consequence continues beyond the frame." href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all" label="Browse Narrative Western Stories" align="left" />
+
         <p>The story of the West is not only about the West itself.</p>
 
         <p>The full story begins long before the trail dust, the cattle drives, or the open range. It begins with a decision—the moment someone chose to leave the certainty of towns, families, and familiar streets behind. It begins with wagons loaded in eastern yards, with goodbyes at rail depots, with maps that ended in blank space and promise.</p>
@@ -385,6 +404,8 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
           <h2>Cowboy Art in Contemporary Photography</h2>
         </div>
 
+        <CornerstoneGalleryDoor id="i-Wx5scCf" galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color" alt="Contemporary Western character carrying unresolved consequence" caption="Contemporary cowboy art remains alive when the person matters more than the pose." href="/Western-Cowboy-Photography" label="Explore Western Cowboy Photography" align="right" />
+
         <p>Today, Western cowboy art is not limited to painting or sculpture. Photography has become an increasingly important part of the <a href="/Blog/what-is-western-fine-art" style="color:#8b5a2b; text-decoration:underline;">Western fine art</a> conversation.</p>
 
         <aside class="inline-art-callout inline-art-callout--right">
@@ -415,12 +436,11 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
           <h2>Frequently Asked Questions</h2>
         </div>
 
-        {westernCowboyArtFaq.map((item) => (
-          <>
-            <h3 style="font-size:1.1rem; font-weight:600; margin-top:1.5rem; margin-bottom:0.5rem;">{item.q}</h3>
-            <p>{item.a}</p>
-          </>
-        ))}
+        <CornerstoneGalleryDoor id="i-cFhZXJc" galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color" alt="Atmospheric Western character held inside an unresolved narrative" caption="Psychological weight keeps the cowboy relevant after the familiar myth has been stripped away." href="/western-cowboy-art" label="Explore Western Cowboy Art" align="left" />
+
+        <FAQAccordion items={westernCowboyArtFaq} showHeading={false} />
+
+        <CornerstoneGalleryDoor id="i-BGmFfF5" galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color" alt="Western figure held inside an unfinished narrative" caption="Cowboy art remains alive when the closer returns the viewer to person, pressure, and story." href="/western-cowboy-art" label="Explore Western Cowboy Art" align="right" />
 
         <!-- SECTION 10: Explore CTAs -->
         <div class="section-heading-with-line">
@@ -454,6 +474,8 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
     <!-- Western Art Series Navigation -->
     <WesternDefinitions variant="definition" currentPage={6} />
+
+    <CornerstoneCollectionNav focusKey="cowboy-portraits-0" />
 
     <SiteFooter />
   </main>

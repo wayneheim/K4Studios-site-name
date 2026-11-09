@@ -4,10 +4,13 @@ import {
   shouldPersistAnalyticsEvent,
 } from '../src/shared/analytics-write-gate.js';
 
-const request = (country, continent, asn = 64512) => ({
+const request = (country, continent, asn = 64512, ip = '') => ({
   cf: { country, continent, asn },
+  headers: new Headers(ip ? { 'CF-Connecting-IP': ip } : {}),
 });
 
+assert.equal(shouldPersistAnalyticsEvent(request('US', 'NA', 64512, '184.56.48.57'), 'page_view'), false);
+assert.equal(shouldPersistAnalyticsEvent(request('US', 'NA', 64512, '184.56.48.57'), 'order_submitted'), false);
 assert.equal(shouldPersistAnalyticsEvent(request('US', 'NA', 214483), 'page_view'), false);
 assert.equal(shouldPersistAnalyticsEvent(request('US', 'NA', 62610), 'order_submitted'), false);
 assert.equal(shouldPersistAnalyticsEvent(request('US', 'NA'), 'page_view'), true);

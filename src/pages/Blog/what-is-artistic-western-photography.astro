@@ -18,6 +18,8 @@ import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
+import CornerstoneCollectionNav from "@/components/blog/CornerstoneCollectionNav.astro";
+import CornerstoneVisualBridge from "@/components/blog/CornerstoneVisualBridge.astro";
 import KeywordLinkedArticle from "@/components/blog/KeywordLinkedArticle.astro";
 import { getBreadcrumbList, getStructuredData } from "@/components/utils/getStructuredData.ts";
 
@@ -202,50 +204,18 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
       </p>
     </section>
 
-    <!-- Early Visual Bridge -->
-    <section class="early-examples-section">
-      <div class="early-examples-shell">
-        <p class="early-examples-kicker">See the Approach at Work</p>
-        <h2 class="early-examples-title">Artistic Western photography begins where record becomes interpretation.</h2>
-        <p class="early-examples-intro">
-          Landscape, frontier tension, black-and-white restraint, and cultural portraiture become more than Western subject matter when light, tone, composition, and mood are shaped with intent.
-        </p>
-
-        <div class="early-examples-grid">
-          <figure>
-            <a href={`/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/${image1.id}`}>
-              <img src={image1.src} alt={image1.alt} loading="eager" />
-            </a>
-            <figcaption>Atmosphere turns landscape into interpretation.</figcaption>
-          </figure>
-
-          <figure>
-            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${image2.id}`}>
-              <img src={image2.src} alt={image2.alt} loading="lazy" />
-            </a>
-            <figcaption>Narrative tension shaped beyond the visible event.</figcaption>
-          </figure>
-
-          <figure>
-            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/${image3.id}`}>
-              <img src={image3.src} alt={image3.alt} loading="lazy" />
-            </a>
-            <figcaption>Reduced tone and detail as artistic restraint.</figcaption>
-          </figure>
-
-          <figure>
-            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color/${image4.id}`}>
-              <img src={image4.src} alt={image4.alt} loading="lazy" />
-            </a>
-            <figcaption>Dignity and presence carried through composition.</figcaption>
-          </figure>
-        </div>
-
-        <a class="early-examples-cta" href="/Western-Fine-Art-Photography">
-          Explore Western Fine Art Photography
-        </a>
-      </div>
-    </section>
+    <CornerstoneVisualBridge
+      kicker="See the Approach at Work"
+      title="Artistic Western photography begins where record becomes interpretation."
+      intro="Landscape, frontier tension, black-and-white restraint, and cultural portraiture become more than Western subject matter when light, tone, composition, and mood are shaped with intent."
+      items={[
+        { id: image1.id, galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery", alt: image1.alt, caption: "Atmosphere turns landscape into interpretation." },
+        { id: image2.id, galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color", alt: image2.alt, caption: "Narrative tension shaped beyond the visible event." },
+        { id: image3.id, galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White", alt: image3.alt, caption: "Reduced tone and detail as artistic restraint." },
+      ]}
+      ctaHref="/Western-Fine-Art-Photography"
+      ctaLabel="Explore Western Fine Art Photography"
+    />
 
     <!-- Article Content -->
     <section class="story-section max-w-[860px] mx-auto px-4">
@@ -439,6 +409,8 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
     <!-- Western Art Series Navigation -->
     <WesternDefinitions variant="definition" currentPage={4} />
+
+    <CornerstoneCollectionNav focusKey="cowboy-portraits-0" />
 
     <SiteFooter />
   </main>

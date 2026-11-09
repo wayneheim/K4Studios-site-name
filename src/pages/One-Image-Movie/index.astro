@@ -2,332 +2,301 @@
 export const prerender = true;
 
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import LandingHeader from '@/components/Landing-Header.jsx';
 import SiteFooter from '@/components/Footer.astro';
-import WesternDefinitions from '@/components/blog/WesternDefinitions.astro';
+import HybridBookCarousel from '@/components/hybrid/HybridBookCarousel.jsx';
+import TombstoneNav from '@/components/TombstoneNav.jsx';
+import { sanitizeCarouselForClient } from '@/components/utils/normalizeImage.ts';
+import { getSemanticImageUrl } from '@/utils/imageProxy.js';
 import { getBreadcrumbList, getStructuredData } from '@/components/utils/getStructuredData.ts';
-
+import { galleryData as westernNarratives } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs';
 import '@/styles/global.css';
 
-const sectionPath = '/One-Image-Movie';
 const canonicalUrl = 'https://www.k4studios.com/One-Image-Movie';
-
-const getProxySrc = (id: string, size: string = "l") => getSemanticImageUrl(id, {}, size);
-const getAbsoluteProxySrc = (id: string, size: string = "l") => getSemanticImageUrl(id, {}, size, { absolute: true });
-
-const headerImages = [
-  { id: 'i-rRdrQBg', alt: 'Narrative Western frame carrying the pressure of a larger unseen story' },
-  { id: 'i-B7ZSdfs', alt: 'Frontier image suspended between decision and consequence' },
-  { id: 'i-jWDDpC4', alt: 'Landscape image showing that atmosphere itself can carry story' },
-  { id: 'i-vJSCrqC', alt: 'Portrait where silence and presence imply a larger life beyond the frame' },
-  { id: 'i-LCspRF4', alt: 'Painterly Western image functioning like a single unfinished film scene' },
-];
-
-const image1 = {
-  id: 'i-rRdrQBg',
-  src: getProxySrc('i-rRdrQBg', 'l'),
-  alt: 'One-Image Movie concept shown through a frontier scene carrying before and after inside one frame',
-};
-
-const image2 = {
-  id: 'i-vJSCrqC',
-  src: getProxySrc('i-vJSCrqC', 'l'),
-  alt: 'Portrait showing how stillness and implication create One-Image Movie pressure',
-};
-
-const image3 = {
-  id: 'i-jWDDpC4',
-  src: getProxySrc('i-jWDDpC4', 'l'),
-  alt: 'Landscape showing how atmosphere can behave like narrative in a One-Image Movie image',
-};
-
 const pageTitle = 'One-Image Movies™ by Wayne Heim | K4 Studios Narrative Art';
 const pageDescription = 'Wayne Heim’s One-Image Movies™ are a K4 Studios narrative-art format where photographic image, title, authored poetic writing, unresolved implication, and viewer participation work together. The final unwritten movie is assembled in the viewer’s mind.';
+const galleryBasePath = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color';
+const getAbsoluteProxySrc = (id: string, size = 'xl') => getSemanticImageUrl(id, {}, size, { absolute: true });
+const requireArtwork = (id: string) => {
+  const artwork = westernNarratives.find((item: any) => item.id === id);
+  if (!artwork) throw new Error(`One-Image Movie doorway artwork not found: ${id}`);
+  return artwork;
+};
 
-const structuredImageUrls = [
-  ...headerImages.map((image) => getAbsoluteProxySrc(image.id, 'l')),
-  getAbsoluteProxySrc(image1.id, 'l'),
-  getAbsoluteProxySrc(image2.id, 'l'),
-  getAbsoluteProxySrc(image3.id, 'l'),
+const sampleSpecs = [
+  { id: 'i-HBRmWg4' },
+  { id: 'i-JKnW497' },
+  { id: 'i-LL2Gp5r' },
+  { id: 'i-89qzJ6S' },
 ];
+const carouselSlides = sanitizeCarouselForClient(sampleSpecs.map((spec) => {
+  const artwork = requireArtwork(spec.id);
+  return {
+    ...artwork,
+    story: String(artwork.story || '').replace(/\s+/g, ' ').trim(),
+    href: `${galleryBasePath}/${spec.id}`,
+  };
+}));
 
-const breadcrumbStructuredData = getBreadcrumbList(
-  [
-    { name: 'Home', item: 'https://www.k4studios.com' },
-    { name: 'Narrative Western Art', item: 'https://www.k4studios.com/Narrative-Western-Art' },
-    { name: 'One-Image Movie', item: canonicalUrl },
-  ],
-  `${canonicalUrl}#breadcrumb`
-);
+// Every representative image currently comes from the Wild West source set too.
+const collectionDoors = [
+  { title: 'Western Narratives', id: 'i-trZrk2w', href: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives', subtitle: 'Stories held in a single Western frame.' },
+  { title: 'Facing History', id: 'i-fCG2nm8', href: '/Galleries/Painterly-Fine-Art-Photography/Facing-History', subtitle: 'History encountered through lived moments.' },
+  { title: 'Portraits', id: 'i-s79JnZ2', href: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits', subtitle: 'Character, consequence, and the people of the West.' },
+  { title: 'Landscapes', id: 'i-vJSCrqC', href: '/Galleries/Painterly-Fine-Art-Photography/Landscapes', subtitle: 'Open country with a story already underway.' },
+].map((door) => ({
+  ...door,
+  thumb: getSemanticImageUrl({ id: door.id }, { galleryPath: door.href }, 's'),
+  imageTitle: requireArtwork(door.id).title,
+  trackingId: `one_image_movie_${door.title.toLowerCase().replace(/\s+/g, '_')}`,
+}));
 
 const structuredData = getStructuredData({
   type: 'Article',
   data: {
-    headline: 'Wayne Heim’s One-Image Movies™ | K4 Studios Narrative Art',
-    description: pageDescription,
-    url: canonicalUrl,
-    image: structuredImageUrls,
-    copyrightNotice: '© Wayne Heim',
-    author: {
-      '@type': 'Person',
-      name: 'Wayne Heim',
-    },
-    datePublished: '2026-04-17',
-    articleSection: 'Visual Storytelling',
-    definedTerm: {
-      name: 'One-Image Movie',
-      description: pageDescription,
-    },
-    keywords: [
-      'one-image movie',
-      'one image movie',
-      'narrative photography',
-      'visual storytelling in photography',
-      'cinematic still image',
-      'narrative western art',
-    ],
+    headline: 'Wayne Heim’s One-Image Movies™ | K4 Studios Narrative Art', description: pageDescription,
+    url: canonicalUrl, image: sampleSpecs.map(({ id }) => getAbsoluteProxySrc(id)), copyrightNotice: '© Wayne Heim',
+    author: { '@type': 'Person', name: 'Wayne Heim' }, datePublished: '2026-04-17', articleSection: 'Visual Storytelling',
+    definedTerm: { name: 'One-Image Movie', description: pageDescription },
+    keywords: ['one-image movie', 'one image movie', 'narrative photography', 'visual storytelling in photography', 'cinematic still image', 'narrative western art'],
   },
-  defaults: {
-    copyrightNotice: '© Wayne Heim',
-    license: 'https://www.k4studios.com/copyright',
-    creditText: 'Wayne Heim',
-    creatorName: 'Wayne Heim',
-    creatorUrl: 'https://www.k4studios.com/',
-  },
+  defaults: { copyrightNotice: '© Wayne Heim', license: 'https://www.k4studios.com/copyright', creditText: 'Wayne Heim', creatorName: 'Wayne Heim', creatorUrl: 'https://www.k4studios.com/' },
 });
-
+const breadcrumbs = getBreadcrumbList([
+  { name: 'Home', item: 'https://www.k4studios.com' },
+  { name: 'Narrative Western Art', item: 'https://www.k4studios.com/Narrative-Western-Art' },
+  { name: 'One-Image Movie', item: canonicalUrl },
+], `${canonicalUrl}#breadcrumb`);
 const meta = {
   description: pageDescription,
+  descriptionMaxLength: pageDescription.length,
   keywords: 'one-image movie, one image movie, narrative photography, cinematic still image, visual storytelling photography, narrative western art',
-  ogTitle: pageTitle,
-  ogDescription: pageDescription,
-  ogType: 'article',
-  ogUrl: canonicalUrl,
-  ogImage: getAbsoluteProxySrc(headerImages[0].id, 'l'),
-  twitterTitle: pageTitle,
-  twitterDescription: pageDescription,
-  twitterUrl: canonicalUrl,
-  twitterImage: getAbsoluteProxySrc(headerImages[0].id, 'l'),
-  twitterCard: 'summary_large_image',
+  canonicalUrl, ogTitle: pageTitle, ogDescription: pageDescription, ogType: 'article', ogUrl: canonicalUrl,
+  ogImage: getAbsoluteProxySrc(sampleSpecs[0].id), twitterTitle: pageTitle, twitterDescription: pageDescription,
+  twitterUrl: canonicalUrl, twitterImage: getAbsoluteProxySrc(sampleSpecs[0].id), twitterCard: 'summary_large_image',
 };
-
 const pageBreadcrumb = `Home › <a href='/Narrative-Western-Art' style='color: inherit; text-decoration: none;' onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Narrative Western Art</a> › One-Image Movie`;
 ---
 
-<BaseLayout
-  title={pageTitle}
-  structuredDataJSON={structuredData}
-  breadcrumbsJSON={breadcrumbStructuredData}
-  meta={meta}
->
-  <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
-    <div class="drawer-mode">
-      <LandingHeader client:load breadcrumb={pageBreadcrumb} />
-    </div>
+<BaseLayout title={pageTitle} structuredDataJSON={structuredData} breadcrumbsJSON={breadcrumbs} meta={meta}>
+  <main class="oim-page">
+    <div class="drawer-mode"><LandingHeader client:load breadcrumb={pageBreadcrumb} /></div>
 
-    <section class="header-image-bar">
-      <div class="header-bar-container">
-        {headerImages.map((img, index) => (
-          <div class={`header-bar-image pos-${index}`}>
-            <img
-              src={getProxySrc(img.id, 'l')}
-              alt={img.alt}
-              loading="eager"
-            />
+    <section class="oim-preview oim-shell" aria-labelledby="oim-page-title">
+      <h1 id="oim-page-title">One-Image Movies™ by Wayne Heim<br />Collectible Narrative Fine Art</h1>
+      <HybridBookCarousel client:load slides={carouselSlides} galleryBasePath={galleryBasePath} ctaLabel="Explore →" compact={true} showFullStory={true} showControls={false} showCounter={false} />
+    </section>
+
+    <section class="oim-concept" aria-label="The One-Image Movie concept">
+      <div class="oim-shell">
+        <div class="oim-question-headline">
+          <p class="oim-question-stage" data-oim-question-sequence aria-hidden="true">What if an image didn't stop at the edge of the frame?</p>
+        </div>
+        <div class="oim-concept__grid">
+          <div class="oim-manifesto">
+            <p>This is the concept and world of Wayne Heim's contemporary artwork that marries his unique unresolved narrative artwork with short creative titles and writings. A combination and art form he calls One-Image Movies. Images that invite the viewer to step inside the moment. Art that allows the story to speak louder than the medium it is produced in. Art that asks more questions from its viewers than what room should this go in.</p>
+            <p>There was a time that art asked more from its viewers. It told difficult unresolved moments. The action movies of their times. Wayne's One-Image Movies bring that art of storytelling back into focus, blending modern photography and digital medium with painterly disciplines, and a story that requires each viewer to step inside and answer the question themselves. Filling in the gaps with their own experiences and imagination.</p>
+            <p>Not art that simply feels different. Art that asks more and gives more in return.</p>
           </div>
-        ))}
+          <div class="oim-question-builder">
+            <h2>One-Image Movies™</h2>
+            <ul class="oim-question-list" data-oim-question-list>
+              {[
+                "What if an image didn't stop at the edge of the frame?",
+                "What if there were more to art than matching your couch?",
+                "What if art could draw you in and make you feel the moment?",
+                "What if you had to finish the story?",
+                "What if one image could feel like a mini movie?",
+                "What if art asked more of you than just admiration—participation?",
+              ].map((question, index) => (
+                <li data-oim-question-index={index}>
+                  <svg class="oim-question-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" /></svg>
+                  <span class="oim-question-copy">{question}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section style="text-align:center; padding:2rem 1rem 2rem;">
-      <h1 style="font-size:2.25rem; font-weight:700; margin-bottom:0.5rem; line-height:1.2;">
-        Wayne Heim’s One-Image Movies™
-      </h1>
-      <p style="font-size:1.1rem; color:#666; font-style:italic; margin-top:0.5rem;">
-        A K4 Studios Narrative-Art Format
-      </p>
-      <p style="font-size:0.95rem; color:#888; margin-top:0.75rem; letter-spacing:0.02em;">
-        A One-Image Movie™ is not simply a still image that suggests a story. It is Wayne Heim’s finished narrative-art format: photographic image, title, authored poetic writing, unresolved implication, and viewer participation working together.
-      </p>
-      <p style="font-size:0.98rem; color:#666; margin-top:0.95rem; line-height:1.55; max-width:760px; margin-left:auto; margin-right:auto;">
-        The final “movie” is not a motion picture or fixed storyline. It is the unwritten story assembled in the viewer’s mind.
-      </p>
+    <section class="oim-collections" aria-labelledby="collection-heading">
+      <div class="oim-shell">
+        <div class="oim-section-heading">
+          <h2 id="collection-heading">Explore the work and discover art whose stories change.</h2>
+          <p>Step in and see where your journey takes you.</p>
+        </div>
+        <TombstoneNav client:load items={collectionDoors} dividerMaxWidth="760px" />
+      </div>
     </section>
 
-    <section class="story-section max-w-[860px] mx-auto px-4">
-      <article class="story-block space-y-4">
-        <p><strong>One-Image Movie™</strong> is Wayne Heim’s name for a completed K4 Studios narrative-art experience. The image begins the scene, the title turns the question, and the authored writing deepens the uncertainty. The viewer brings memory, instinct, emotion, and lived experience to complete the final story in the mind.</p>
-
-        <p>The image, title, and story provide the charged pieces. The viewer assembles the final movie.</p>
-
-        <div class="section-heading-with-line">
-          <h2>Not a Technique — A Finished Narrative Format</h2>
-        </div>
-
-        <p>A One-Image Movie™ is not created by applying a preset, imitating cinema, or converting an image into motion media. It emerges from the assembled relationship between photographic image, title, authored writing, atmosphere, implication, and viewer participation.</p>
-
-        <p>A narrative photograph can suggest a story. A Wayne Heim One-Image Movie™ asks the viewer to help complete one.</p>
-
-        <p>That is why the idea crosses subject matter. It can appear in frontier portraits, Wild West narratives, historical scenes, and even landscapes where weather and atmosphere do the work a human gesture might do somewhere else. The common thread is implication, not category.</p>
-
-        <div class="section-heading-with-line">
-          <h2>The Narrative Thesis Behind the Work</h2>
-        </div>
-
-        <p>The narrative-art thesis underneath this idea is simple: the strongest still images are not exhausted by first recognition. They hold back enough information that the viewer must continue the scene internally. That is the same story pressure explored in <a href="/Narrative-Western-Art" style="color:#8b5a2b; text-decoration:underline;">Narrative Western Art</a>, where the image becomes a fragment of a larger life rather than a closed illustration.</p>
-
-        <p>In practice that means the work leans toward pauses, aftermaths, thresholds, held breath, private resolve, and emotional weather. A frame can feel cinematic without imitating cinema because the final movie is not literal motion media. It is the unwritten story assembled in the viewer’s mind.</p>
-
-        <h3 style="font-size:1.1rem; font-weight:600; margin-top:2.5rem; margin-bottom:0.5rem; color:#555;">Three Ways the One-Image Movie Appears</h3>
-        <div class="example-images">
-          <figure>
-            <img src={image1.src} alt={image1.alt} loading="lazy" />
-            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
-              Narrative scene where the visible instant feels like the middle of something larger
-            </figcaption>
+    <section class="oim-interactive-wrap">
+      <div class="oim-shell">
+        <div class="oim-interactive" aria-labelledby="interactive-title">
+          <figure class="oim-interactive__figure">
+            <a class="oim-interactive__image" href="/Other/Whos-Playing-Whom" aria-label="Begin the One-Image Movie experience" data-oim-event="oim_experience_enter"><img src="/images/Lesson 1.jpg" alt="A woman kisses a gentleman seated at a piano" loading="lazy" /></a>
+            <figcaption>Who's Playing Whom?</figcaption>
           </figure>
-          <figure>
-            <img src={image2.src} alt={image2.alt} loading="lazy" />
-            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
-              Portrait where silence, posture, and age carry unseen history
-            </figcaption>
-          </figure>
-          <figure>
-            <img src={image3.src} alt={image3.alt} loading="lazy" />
-            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
-              Landscape where atmosphere itself becomes the moving story
-            </figcaption>
-          </figure>
+          <div class="oim-interactive-intro">
+            <h2>You Be the Judge.</h2>
+            <h3 id="interactive-title">Explore the One-Image Movie.</h3>
+            <p>See how four open narratives can change perspective, meaning, and the story itself—in an instant.</p>
+            <div class="oim-actions oim-interactive-intro__actions">
+              <a class="oim-button" href="/Other/Whos-Playing-Whom" data-oim-event="oim_experience_enter">Begin the Experience</a>
+              <span class="oim-action-divider" aria-hidden="true">|</span>
+              <a class="oim-button oim-button--secondary" href="/Videos/whos-playing-whom" data-oim-event="oim_film_watch">Watch Narrated Short</a>
+            </div>
+          </div>
         </div>
-
-        <div class="section-heading-with-line">
-          <h2>Why It Feels Different from Traditional Photography</h2>
-        </div>
-
-        <p>Traditional photography often resolves the moment by showing what is there clearly. A One-Image Movie keeps the moment open. It is still photographic, but it behaves more like visual literature. Meaning arrives gradually. The viewer supplies memory, tension, and completion. That is why these images often stay active after the first look instead of collapsing into simple recognition.</p>
-
-        <p>This is also why the idea overlaps naturally with painterly photography. Tone is sculpted. Edges are disciplined. Atmosphere is allowed to carry emotion instead of functioning as decoration. The goal is not to make the image look painted, but to give the frame enough authored control that story and feeling can stay alive inside it.</p>
-
-        <div class="section-heading-with-line">
-          <h2>From Single Frame to Picture Show</h2>
-        </div>
-
-        <p>A One-Image Movie stands on its own, but it also explains how larger K4 story systems grow. When several such works begin speaking to each other, the result can widen into a <a href="/Other/Shows" style="color:#8b5a2b; text-decoration:underline;">Picture Show</a>, a guided presentation of individual One-Image Movies™ rather than the primary form itself.</p>
-
-        <p>The Picture Show is not the One-Image Movie™ itself. It is a guided presentation of individual One-Image Movies™. Each still work remains the primary narrative-art unit; the presentation simply invites the viewer deeper into the image, title, story, and unresolved experience already present in the work.</p>
-
-        <p>Even so, the still work remains the sharpest test. If image, title, authored writing, unresolved implication, and viewer participation do not lock together at the individual-work level, the larger presentation has nothing solid to build on.</p>
-
-        <div class="section-heading-with-line">
-          <h2>What It Means at K4 Studios</h2>
-        </div>
-
-        <p>At K4 Studios, One-Image Movie names the storytelling logic underneath much of the work. It is present in Wild West scenes, cowboy portraits, historical work, and landscapes where silence behaves like plot. It explains why the images often feel less like closed pictures and more like interrupted chapters. It is not branding laid over the work after the fact. It is part of the work’s internal architecture.</p>
-
-        <p>That is why the phrase matters at K4 Studios. It names an authored way of building still images, titles, and written stories so the viewer becomes part of the final meaning.</p>
-
-        <div class="section-heading-with-line">
-          <h2>Where to Go Next</h2>
-        </div>
-
-        <p>If you want the broader thesis around story, continue into <a href="/Narrative-Western-Art" style="color:#8b5a2b; text-decoration:underline;">Narrative Western Art</a>. If you want the interpretive bridge explaining why a frame feels cinematic, open <a href="/western-storytelling-photography" style="color:#8b5a2b; text-decoration:underline;">Western Storytelling Photography</a>. If you want to see the idea working inside frontier material, move into the <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West" style="color:#8b5a2b; text-decoration:underline;">Wild West collection</a>. For the older long-form source page, the archive version still lives under <a href="/Other/One-Image-Movie" style="color:#8b5a2b; text-decoration:underline;">Other / One-Image-Movie</a>.</p>
-      </article>
+      </div>
     </section>
 
-    <section class="max-w-[860px] mx-auto px-4 pt-8 pb-4">
-      <WesternDefinitions variant="post" />
+    <section class="oim-closing" aria-labelledby="closing-title">
+      <div class="oim-shell oim-closing__inner">
+        <h2 id="closing-title">The Image Is Only the Beginning.</h2>
+        <p>Stories worth discovering. Moments worth keeping.</p>
+        <div class="oim-closing__actions">
+          <a class="oim-button" href="/Galleries/Painterly-Fine-Art-Photography" data-oim-event="oim_final_art_explore">Browse fine art</a>
+          <a class="oim-button oim-button--secondary" href="/Other/One-Image-Movie" data-oim-event="oim_definition_click">More info on One-Image Movies</a>
+        </div>
+      </div>
     </section>
-
     <SiteFooter class="pt-8 pb-12" />
   </main>
 
   <style>
-    .header-image-bar {
-      width: 100%;
-      overflow: hidden;
-      margin-bottom: 0;
+    :global(body) { margin: 0; background: #fff; }
+    .oim-page { min-height: 100vh; overflow-x: hidden; color: #2c2c2c; background: #fff; font-family: 'Glegoo', serif; }
+    .oim-shell { width: min(1200px, calc(100% - 2rem)); margin-inline: auto; }
+    .oim-preview { padding: clamp(1.5rem, 3.5vw, 2.6rem) 0 .9rem; }
+    .oim-preview > h1 { margin: 0 0 1rem; color: #2c2c2c; font-size: clamp(1.7rem, 3vw, 2.25rem); font-weight: 500; line-height: 1.2; text-align: center; }
+    .oim-concept { padding: clamp(1.15rem, 2.5vw, 1.9rem) 0 clamp(1.1rem, 2.2vw, 1.75rem); border-block: 1px solid #dfd3c6; background: #faf8f5; }
+    .oim-question-headline { display: grid; min-height: 5.25rem; margin-bottom: clamp(.75rem,1.5vw,1.15rem); place-items: center; overflow: hidden; }
+    .oim-concept__grid { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: clamp(2.5rem,6vw,5rem); align-items: start; }
+    .oim-manifesto { color: #55483d; font-size: clamp(.96rem,1.3vw,1.05rem); line-height: 1.58; }
+    .oim-manifesto p { margin: 0 0 1rem; }
+    .oim-manifesto p:first-child { color: #342b24; font-size: 1.08em; }
+    .oim-manifesto p:last-child { margin-bottom: 0; }
+    .oim-question-builder { box-sizing: border-box; height: 28rem; padding: clamp(1.4rem,3vw,2.25rem); overflow: hidden; border: 1px solid #cdbba8; border-radius: 16px; background: #fff; box-shadow: 0 10px 28px rgba(62,44,30,.08); }
+    .oim-question-builder h2 { margin: 0 0 1.4rem; padding-bottom: .85rem; border-bottom: 1px solid #dfd3c6; color: #2f241b; font-size: clamp(1.55rem,2.8vw,2.15rem); font-weight: 500; text-align: center; }
+    .oim-question-stage { width: 100%; max-width: none; margin: 0; color: #2f241b; font-size: clamp(1.4rem,2.5vw,2.05rem); font-weight: 700; line-height: 1.25; letter-spacing: -.035em; text-align: center; white-space: nowrap; clip-path: inset(0 0 0 0); transition: opacity .8s ease; }
+    .oim-question-stage[hidden] { display: none; }
+    .oim-question-stage.is-out { opacity: 0; }
+    .oim-question-stage.is-entering { animation: oim-question-enter 2.7s cubic-bezier(.22,1,.36,1) both; }
+    @keyframes oim-question-enter {
+      from { opacity: 0; transform: translateX(-3rem); filter: blur(2px); clip-path: inset(0 100% 0 0); }
+      to { opacity: 1; transform: translateX(0); filter: blur(0); clip-path: inset(0 0 0 0); }
     }
-
-    .header-bar-container {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 0;
-      width: 100%;
-      height: 340px;
+    .oim-question-list { margin: 0; padding: 0; color: #55483d; list-style: none; }
+    :global(.oim-question-list li) { display: flex; align-items: flex-start; gap: .7rem; margin: 0 0 1rem; font-size: .91rem; line-height: 1.48; opacity: .22; transition: opacity .75s ease, color .75s ease; }
+    :global(.oim-question-list li.is-visible) { opacity: 1; }
+    :global(.oim-question-list .oim-question-icon) { flex: 0 0 15px; width: 15px !important; height: 15px !important; max-width: 15px; margin-top: .22rem; color: #9b6748; stroke-width: 2.25; }
+    :global(.oim-question-list .oim-question-copy) { flex: 1 1 auto; min-width: 0; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+    .oim-collections { padding-block: clamp(1.6rem, 3.5vw, 2.6rem); border-block: 1px solid #e5ded6; background: #fff; }
+    .oim-section-heading { margin: 0 auto .4rem; text-align: center; }
+    .oim-section-heading h2 { margin: 0 0 .35rem; font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 500; }
+    .oim-section-heading p { margin: 0; color: #6d5b4a; font-size: .92rem; }
+    .oim-collections :global(.tombstone-nav) { padding: .75rem 1rem 1rem; }
+    .oim-collections :global(.tombstone-divider) { margin-bottom: 1rem; }
+    .oim-interactive-wrap { padding-block: clamp(1.75rem, 4vw, 3rem); background: #fff; }
+    .oim-interactive-intro { grid-column: 2; grid-row: 1; align-self: center; text-align: left; }
+    .oim-interactive-intro h2 { margin: 0 0 .5rem; color: #2f241b; font-size: clamp(1.55rem,3vw,2.25rem); font-weight: 500; line-height: 1.3; }
+    .oim-interactive-intro h3 { margin: 0 0 .75rem; color: #3f332a; font-size: clamp(1.15rem,2vw,1.45rem); font-weight: 500; line-height: 1.35; }
+    .oim-interactive-intro p { max-width: 620px; margin: 0; color: #5f5145; font-size: .98rem; line-height: 1.65; }
+    .oim-interactive { display: grid; grid-template-columns: minmax(16rem,.9fr) minmax(20rem,1.1fr); grid-template-rows: auto auto; column-gap: clamp(2rem,7vw,6rem); row-gap: 0; align-items: start; }
+    .oim-interactive__figure { display: contents; margin: 0; }
+    .oim-interactive__image { display: block; grid-column: 1; grid-row: 1; padding: .75rem; border: 1px solid #e3d5c9; border-radius: 12px; background: linear-gradient(135deg, #f5f0e8, #ebe4da); box-shadow: 0 4px 14px rgba(117,88,62,.12); }
+    .oim-interactive__image img { display: block; width: 100%; aspect-ratio: 4 / 3; border-radius: 6px; object-fit: cover; }
+    .oim-interactive__figure figcaption { display: block; grid-column: 1; grid-row: 2; width: 100%; margin: 1.15rem auto 0; color: #3f332a; font-size: 1rem; font-weight: 700; line-height: 1.4; text-align: center; }
+    .oim-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; margin-top: 1.5rem; }
+    .oim-interactive-intro__actions { justify-content: flex-start; }
+    .oim-action-divider { color: #9a8879; }
+    .oim-button { display: inline-flex; align-items: center; gap: .45rem; padding: .72rem 1rem; border: 1px solid rgba(139,0,0,.35); border-radius: 20px; background: rgba(139,0,0,.6); color: #fff; font-size: .85rem; font-weight: 600; text-decoration: none; }
+    .oim-button:hover, .oim-button:focus-visible { background: #7b1d1d; }
+    .oim-button--secondary { border-color: #bda58f; background: transparent; color: #6f4529; }
+    .oim-button--secondary:hover, .oim-button--secondary:focus-visible { background: #f4eee8; color: #56331f; }
+    .oim-text-link { color: #7b4a28; font-size: .9rem; font-weight: 700; text-decoration: none; border-bottom: 1px solid rgba(123,74,40,.35); }
+    .oim-text-link:hover, .oim-text-link:focus-visible { color: #5f381e; border-bottom-color: #5f381e; }
+    .oim-closing { padding-block: clamp(1.75rem,3.5vw,2.6rem); border-block: 1px solid #e5ded6; background: #faf8f5; }
+    .oim-closing__inner { max-width: 850px; text-align: center; }
+    .oim-closing h2 { margin: 0 0 .55rem; color: #2f241b; font-size: clamp(1.7rem,3.4vw,2.45rem); font-weight: 500; }
+    .oim-closing p { max-width: 720px; margin: 0 auto; color: #5f5145; font-size: 1rem; line-height: 1.7; }
+    .oim-closing__actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 1rem 1.25rem; margin-top: 1rem; }
+    @media (max-width: 680px) {
+      .oim-shell { width: min(100% - 1.2rem, 1200px); }
+      .oim-question-stage { white-space: normal; text-wrap: balance; }
+      .oim-concept__grid { grid-template-columns: 1fr; }
+      .oim-question-builder { height: auto; min-height: 28rem; overflow: visible; }
+      .oim-interactive { grid-template-columns: 1fr; }
+      .oim-interactive-intro { grid-column: 1; grid-row: 3; margin-top: 2rem; }
     }
-
-    .header-bar-image {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .header-bar-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-      display: block;
-    }
-
-    .section-heading-with-line {
-      margin-top: 2.5rem;
-      padding-top: 0.4rem;
-      border-top: 1px solid rgba(120, 104, 88, 0.35);
-    }
-
-    .section-heading-with-line h2 {
-      font-size: 1.45rem;
-      font-weight: 700;
-      line-height: 1.3;
-      margin-top: 0.8rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .example-images {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1rem;
-      margin-top: 1rem;
-      margin-bottom: 2rem;
-    }
-
-    .example-images figure {
-      margin: 0;
-    }
-
-    .example-images img {
-      width: 100%;
-      aspect-ratio: 4 / 5;
-      object-fit: cover;
-      display: block;
-    }
-
-    .story-section p {
-      font-size: 1.06rem;
-      line-height: 1.85;
-    }
-
-    @media (max-width: 900px) {
-      .header-bar-container {
-        grid-template-columns: repeat(3, 1fr);
-        height: 280px;
-      }
-
-      .header-bar-image.pos-3,
-      .header-bar-image.pos-4 {
-        display: none;
-      }
-
-      .example-images {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .header-bar-container {
-        height: 220px;
-      }
-    }
+    @media (prefers-reduced-motion: reduce) { .oim-question-stage { transition: none; } }
   </style>
+
+  <script>
+    const questions = [
+      "What if an image didn't stop at the edge of the frame?",
+      "What if there were more to art than matching your couch?",
+      "What if art could draw you in and make you feel the moment?",
+      "What if you had to finish the story?",
+      "What if one image could feel like a mini movie?",
+      "What if art asked more of you than just admiration—participation?",
+    ];
+
+    document.querySelectorAll<HTMLElement>('[data-oim-question-sequence]').forEach((stage) => {
+      const list = stage.closest('.oim-concept')?.querySelector<HTMLElement>('[data-oim-question-list]');
+      if (!list) return;
+
+      const bulletItems = Array.from(list.querySelectorAll<HTMLElement>('[data-oim-question-index]'));
+      const activateBullet = (index: number, immediate = false) => {
+        const item = bulletItems[index];
+        if (!item) return;
+        if (immediate) item.classList.add('is-visible');
+        else requestAnimationFrame(() => requestAnimationFrame(() => item.classList.add('is-visible')));
+      };
+
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        stage.textContent = questions[questions.length - 1];
+        questions.forEach((_, index) => activateBullet(index, true));
+        return;
+      }
+
+      let index = 0;
+      const playEntrance = () => {
+        stage.classList.remove('is-out', 'is-entering');
+        void stage.offsetWidth;
+        stage.classList.add('is-entering');
+        window.setTimeout(() => stage.classList.remove('is-entering'), 2750);
+      };
+      stage.textContent = questions[index];
+      playEntrance();
+      const advance = () => {
+        if (index >= questions.length - 1) return;
+        window.setTimeout(() => {
+          stage.classList.add('is-out');
+          window.setTimeout(() => {
+            activateBullet(index);
+            index += 1;
+            stage.textContent = questions[index];
+            if (index === questions.length - 1) activateBullet(index);
+            playEntrance();
+            advance();
+          }, 650);
+        }, 4550);
+      };
+      advance();
+    });
+
+    document.querySelectorAll<HTMLAnchorElement>('[data-oim-event]').forEach((link) => {
+      link.addEventListener('click', () => {
+        const eventName = link.dataset.oimEvent;
+        if (!eventName || typeof window.k4track !== 'function') return;
+        window.k4track(eventName, {
+          pageType: 'landing',
+          trigger: 'one_image_movie_doorway',
+        });
+      });
+    });
+  </script>
 </BaseLayout>

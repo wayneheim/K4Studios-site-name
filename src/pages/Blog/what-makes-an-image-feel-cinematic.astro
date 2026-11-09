@@ -5,10 +5,12 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
-import BlogGalleryPreviewStrip from "@/components/BlogGalleryPreviewStrip.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
+import CornerstoneCollectionNav from "@/components/blog/CornerstoneCollectionNav.astro";
+import CornerstoneVisualBridge from "@/components/blog/CornerstoneVisualBridge.astro";
+import CornerstoneGalleryDoor from "@/components/blog/CornerstoneGalleryDoor.astro";
+import KeywordLinkedArticle from "@/components/blog/KeywordLinkedArticle.astro";
 import { getBreadcrumbList, getStructuredData } from "@/components/utils/getStructuredData.ts";
-import { galleryData as westernNarrativesColorGallery } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs";
 
 import "@/styles/global.css";
 
@@ -39,15 +41,6 @@ const image3 = {
   src: getProxySrc("i-gxMVNh3", "l"),
   alt: "Landscape with cinematic atmosphere and emotional direction"
 };
-
-const cinematicPreviewIds = ["i-LL2Gp5r", "i-9BhX2Lj", "i-DczpNpH", "i-gxMVNh3", "i-3SxncXS", "i-LCspRF4"];
-const cinematicPreviewImages = cinematicPreviewIds
-  .map((id) => westernNarrativesColorGallery.find((img: any) => img.id === id))
-  .filter(Boolean)
-  .map((img: any) => ({
-    ...img,
-    galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color",
-  }));
 
 const pageTitle = "What Makes an Image Feel Cinematic? It's Not Color Grading - Wayne Heim";
 const pageDescription = "Cinematic feeling comes from tension, implication, and restrained framing — not color grading. Here's what actually creates it in a still image.";
@@ -144,7 +137,21 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
       </p>
     </section>
 
+    <CornerstoneVisualBridge
+      kicker="Story Under Pressure"
+      title="Cinematic feeling begins before color grading or spectacle."
+      intro="Tension, atmosphere, and unresolved consequence make a still image feel connected to a larger unseen sequence."
+      items={[
+        { id: image1.id, galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color", alt: image1.alt, caption: "Tension lingering beyond the visible moment." },
+        { id: image2.id, galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color", alt: image2.alt, caption: "Atmosphere carrying unresolved action." },
+        { id: image3.id, galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color", alt: image3.alt, caption: "Composition implying a larger before and after." },
+      ]}
+      ctaHref="/cinematic-western-art"
+      ctaLabel="Explore Cinematic Western Art"
+    />
+
     <section class="story-section max-w-[860px] mx-auto px-4">
+      <KeywordLinkedArticle pagePath={sectionPath}>
       <article class="story-block space-y-4">
         <p style="font-size:0.95rem; color:#666; margin-bottom:1.5rem; font-style:italic;">
           A still image feels cinematic when it carries implication, tension, and the sense of a larger life unfolding around it
@@ -155,12 +162,6 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         <p>That feeling does not come from orange-and-teal color grading, wide lenses, or borrowed movie style by themselves. Those may affect surface aesthetics. Cinematic presence comes from tension, implication, framing, atmosphere, and consequence.</p>
 
         <p>This is why cinematic photography so often overlaps with <a href="/Blog/what-is-narrative-photography" style="color:#8b5a2b; text-decoration:underline;">narrative photography</a>. Both depend on the viewer sensing a larger story pressing around the frame.</p>
-
-        <BlogGalleryPreviewStrip
-          images={cinematicPreviewImages}
-          limit={6}
-          label="Cinematic Western Art Preview"
-        />
 
         <div class="section-heading-with-line">
           <h2>The Core Conditions of Cinematic Presence</h2>
@@ -189,6 +190,8 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         <div class="section-heading-with-line">
           <h2>Why Motion Is Not Required</h2>
         </div>
+
+        <CornerstoneGalleryDoor id="i-7Mzzbvp" galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color" alt="Western figures held at the edge of an unresolved decision" caption="Cinematic pressure comes from the decision the frame refuses to finish." href="/cinematic-western-art" label="Explore Cinematic Western Art" align="right" />
 
         <p>Cinematic does not mean the image literally looks like a movie still. It means the viewer feels the momentum of unseen events around a still frame.</p>
 
@@ -283,9 +286,12 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
           </li>
         </ul>
       </article>
+      </KeywordLinkedArticle>
     </section>
 
     <WesternDefinitions variant="definition" currentPage={13} />
+
+    <CornerstoneCollectionNav />
 
     <SiteFooter />
   </main>

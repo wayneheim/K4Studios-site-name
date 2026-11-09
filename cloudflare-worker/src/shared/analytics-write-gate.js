@@ -8,6 +8,9 @@ export const ANALYTICS_DENIED_ASNS = Object.freeze([
 ]);
 
 const DENIED_ASNS = new Set(ANALYTICS_DENIED_ASNS);
+const DENIED_IPS = new Set([
+  '184.56.48.57', // Owner traffic
+]);
 const DIRECT_MARKET_COUNTRIES = new Set(['US', 'CA', 'GB', 'AU', 'NZ']);
 
 // These are analytics events only. The commerce service remains authoritative
@@ -31,6 +34,9 @@ export function isCommerceAnalyticsEvent(eventType) {
 }
 
 export function shouldPersistAnalyticsEvent(request, eventType = null) {
+  const sourceIp = String(request?.headers?.get?.('CF-Connecting-IP') || '').trim();
+  if (sourceIp && DENIED_IPS.has(sourceIp)) return false;
+
   const asn = Number(request?.cf?.asn || 0);
   if (asn && DENIED_ASNS.has(asn)) return false;
 

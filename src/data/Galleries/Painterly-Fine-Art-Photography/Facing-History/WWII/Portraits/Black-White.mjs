@@ -3197,9 +3197,9 @@ export const galleryData = [
   },
   {
     "id": "i-jCkmncD",
-    "title": "The Essence Of Heroic Portraits",
-    "description": "A monochrome World War II photograph of a WWII soldier, defined by duty rather than spectacle. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "© Wayne Heim 2019",
+    "title": "Sitting It Out",
+    "description": "A painterly black and white World War II portrait of two American soldiers at rest in the grass, the nearer man in a netted M1 helmet meeting the camera with a steady, unsmiling stare while his companion looks off toward the tree line. The soft monochrome tones and shallow focus give the frame a painterly, timeless quality, turning a quiet pause between movements into a portrait of young men carrying the weight of the war in their faces. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
+    "alt": "A black and white painterly World War II portrait photograph of two young American soldiers in helmets sitting in the grass, the nearer soldier with hands clasped looking directly at the camera, his companion behind him looking to the side, soft monochrome tones, fine art portrait photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-jCkmncD/1/NjVw6RZgp7vfTNz5dSgCQfwQVnzm4hbnbgWk39RTh/XL/_OLY3619-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-jCkmncD/1/NjVw6RZgp7vfTNz5dSgCQfwQVnzm4hbnbgWk39RTh/XL/_OLY3619-Edit-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-jCkmncD/1/NjVw6RZgp7vfTNz5dSgCQfwQVnzm4hbnbgWk39RTh/XL/_OLY3619-Edit-2-XL.jpg",
@@ -3207,23 +3207,31 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-jCkmncD/1/KfKkQmkXKSP7skFV6pMt7mqw3dLRPVDZQGjCSTWPs/S/_OLY3619-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-jCkmncD/A",
+
     "keywords": [
-      "USO_Dance_2015",
-      "wayne heim",
-      "wwii photography",
-      "wwii reenactment",
-      "veterans",
-      "black and white photography",
-      "d day conneaut",
-      "heroic portraits",
-      "wartime portraits"
+      "painterly portrait photography",
+      "painterly fine art photography",
+      "fine art portrait photography",
+      "World War II",
+      "Facing History",
+      "Wayne Heim",
+      "K4 Studios",
+      "WWII portrait",
+      "American soldier",
+      "infantryman",
+      "netted M1 helmet",
+      "D-Day Conneaut",
+      "black and white portrait",
+      "WWII reenactment"
     ],
-    "story": "The Essence Of Heroic Portraits. Wayne Heim's approach to fine art photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the",
-    "notes": "",
-    "rating": 0,
+
+    "story": "The grass has gone flat under him where he sits, and he has stopped checking the road for the sergeant. His mate behind him has not — the mate is watching the tree line, already living in the next order. He keeps his hands folded and his eyes down the lens, straight at whoever will look at this picture later. A man can only carry so much waiting before it starts to carry him. Behind the stare, there is a platform, a train pulling away, and a girl who promised to write every week. He is holding her to it.",
+    "notes": "Two faces, one frame, and the nearer gaze does not let go. This is the rare two-man portrait where the camera found a stare it could not look away from, the front soldier's direct eyes set against his mate's distracted watch of the tree line, and the soft black and white rendering keeps every crease of the field jackets and the netting on the helmets. It hangs like a photograph that knows something, and collectors who want a WWII portrait with a real human charge will keep coming back to the eyes.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 86
+    "sortOrder": 86,
+    contentSource: "ai"
   },
   {
     "id": "i-D23Vxtk",
@@ -4596,7 +4604,7 @@ export const galleryData = [
       "moments of connection"
     ],
 
-    "story": "The canvas behind her is the wall of a tent that has been her whole world for a season, and she sits against it the way a woman sits against a wall she has learned to trust. Her legs are crossed and her hands are folded around a small cup, and the cap on her head is at the angle she has worn it since the morning she put it on and decided it was hers. She is looking off to the side, at something the camera cannot see, and the smile on her face is the one a woman wears when the thing she is looking at is someone she is glad to see.",
+    "story": "The cup has gone from hot to warm, and she is in no hurry to finish it. Up the path between the tents she can hear boots — not marching, just walking, one pair, unhurried — and she knows the step the way you know a voice on the telephone before it says your name. The letter she wrote this morning is folded in her pocket, four pages, and everything in it is true except the part where she said she wasn't frightened. When he rounds the corner of the tent she will hand him the cup first. It is easier to start with the cup.",
     "notes": "This is the seated portrait that a buyer finds in a quiet corner and does not forget. A servicewoman in her uniform and cap, legs crossed against the canvas wall of a tent, hands folded around a small cup, a gentle smile on her face — the painterly black and white gives a private rest the weight of a small ceremony. Collectors value frames like this because they hold the war's quietest side: not the battle, but the shade, the cup, and the woman who sat down in it and was glad to be there.",
     "rating": 4,
     "galleries": [],
@@ -4683,7 +4691,7 @@ export const galleryData = [
       "moments of connection"
     ],
 
-    "story": "The smile starts in her eyes and only reaches her mouth a second later, because it is a real smile and not one the camera asked for. The work shirt on her back is the one she has worn all morning, and the pin on her chest is small and bright, and the hair under her band is curled the way a woman curls it when the day is going to be long and she wants it to last. She is sitting in the sun, and the sun is warm on her shoulders, and she is looking at the camera the way a woman looks at a friend she is glad to see.",
+    "story": "She curled her hair this morning on the edge of the cot, mirror propped on a crate, pins cold between her teeth, because the photograph was coming and a photograph goes home. It will cross the ocean in an envelope and be held up to a kitchen window, and her mother will look at it the way mothers look — for the tiredness first, and the thinness, and whether the smile is real. So she is making it real. The sun is doing its part. The rest is hers, and she has had all morning to practice being found well.",
     "notes": "This is the smile portrait that makes a buyer smile first and think second. A young servicewoman in her work shirt, hair curled in a 1940s style, a small pin bright on her chest, sitting in the sun with a broad smile the camera did not have to ask for — the painterly black and white gives a warm morning the weight of a small victory. Collectors value frames like this because they hold the war's lightest side: not the battle, but the sun, the smile, and the woman who met the day with both.",
     "rating": 4,
     "galleries": [],
@@ -4727,7 +4735,7 @@ export const galleryData = [
       "moments of connection"
     ],
 
-    "story": "The cap on her head is small and white, and it sits on her hair the way a thing sits when it has been there through a hundred mornings of work, and the strap across her chest is the one she has carried since the day she started. The striped dress is the one she wears for the work that needs doing, and the smile on her face is the one she wears for the people she is doing it for. She is looking off to the side, at something the camera cannot see, and the look in her eyes is the one a woman wears when the thing she is looking at is a person she is glad to see, and a morning she is glad to be in.",
+    "story": "She is halfway to somewhere and has been stopped by the camera the way a fence stops a walk — briefly, and only because she is polite. The bag on the strap is heavier than it looks: papers that have to be in another tent by noon, a list with half the names already crossed off, and at the bottom, wrapped in a handkerchief, two oranges she has been carrying all morning for somebody whose day needs them more than hers does. She will be late if she stands here. She is standing here anyway, because the boy with the camera asked nicely, and because a minute of being looked at like a person is not the worst trade the war has offered her.",
     "notes": "This is the striped-dress portrait that makes a buyer smile first and think second. A young woman in her striped work dress and small white cap, bag strap across her chest, standing beside a wooden post with a smile the camera did not have to ask for — the painterly black and white gives a warm morning the weight of a small victory. Collectors value frames like this because they hold the war's lightest side: not the battle, but the welcome, and the woman who carried it with her wherever she went.",
     "rating": 4,
     "galleries": [],
@@ -4772,7 +4780,7 @@ export const galleryData = [
       "moments of connection"
     ],
 
-    "story": "The cloth over her arm is patterned with flowers, and it is softer than anything else she is wearing, and she holds it the way a woman holds a thing she has carried since the morning — not heavy, and not light, but hers. The shirt is a work shirt, and the pin on its chest is a small bright thing she does not think about anymore, and her hair is curled in the way it was curled when she left the tent this morning. Behind her is a camp that is getting on with its day, and in front of her is a camera, and what she gives it is a smile that has not been asked for and does not need asking.",
+    "story": "The scarf came in a parcel three weeks ago, between a fruitcake nobody ate and a letter she has read a dozen times, and she has been saving it for a day that deserved it. Today is not that day. Today is a work shirt and a camp getting on with itself and dust in everything — which is exactly why she took it off the top of her footlocker and put it over her arm. Some things you save until they mean less. She would rather wear the meaning out of it. By evening it will smell of the camp. By evening it will be hers in a way it never was in the parcel.",
     "notes": "This is the scarf portrait that makes a buyer smile first and think second. A young servicewoman in her work uniform, a floral-patterned scarf draped over her arm, standing in the sun with a broad smile the camera did not have to ask for — the painterly black and white gives a warm morning the weight of a small victory. Collectors value frames like this because they hold the war's lightest side: not the battle, but the flowers on a scarf, the sun on a shirt, and the woman who carried both into her day.",
     "rating": 4,
     "galleries": [],
@@ -5180,7 +5188,7 @@ export const galleryData = [
       "moments of connection"
     ],
 
-    "story": "The arms crossed over his chest are not a wall. They are the way a man stands when he has been standing a long time and the ground under his feet is the only thing that has not moved. The cap on his head is at the angle he has worn it since the morning, and the men behind him are standing the way men stand when they are waiting for the word, and the word is coming. The tents behind them are canvas and poles, and the ground under their feet is the ground of a camp, and the men standing in it are the men who have already been through the hard part of the day and are still standing.",
+    "story": "He has heard the plan twice at the map table, and he is hearing it a third time now in his head, walking it road by road, looking for the place it breaks. The men behind him are watching his shoulders. A shrug would tell them one thing; a turn toward the trucks would tell them another; and he knows they are reading him, and he lets them wait, because an answer given too fast is worth what it cost. The dust is coming up off the road in the heat. When his arms come down, the waiting is over — his first, and then theirs.",
     "notes": "This is the standing portrait that a buyer reads in one look. Three soldiers in field gear with tents behind them, the front man in his overseas cap with his arms crossed, looking at the camera with a serious gaze — the painterly black and white gives a waiting moment the weight of a man's whole day. Collectors value frames like this because they hold the war's quietest side: not the battle, but the standing, the waiting, and the men who were still there when the hard part of the day was done.",
     "rating": 4,
     "galleries": [],
@@ -5594,7 +5602,7 @@ export const galleryData = [
       "moments of connection"
     ],
 
-    "story": "The rifle is longer than she is tall when she holds it upright, and she holds it upright because that is the way a person holds a rifle when the rifle is the thing that matters most. Her hands are both on it, and the strap across her chest is the one that keeps it from falling, and the beret on her head is at the angle she has worn it since the morning. She looks at the camera, and her eyes are steady, and what they are steady about is the ground in front of her, and the rifle in her hands, and the fact that she is here, and she is not going anywhere.",
+    "story": "The rifle is heavier at the end of a watch than at the start of it, and she has stopped shifting it from shoulder to shoulder, because the shifting is what the dark hears. Somewhere out past the wire a dog has been barking at nothing, and stopped, and the stopping is worse. Her relief is due at the next bell and will come up the path whistling, the way he always does, so the whole camp knows it is only him. Until then the perimeter is hers: the wire, the dark, and every sound it makes deciding what it is.",
     "notes": "This is the rifle portrait that makes a buyer stop and look twice. A young woman in her beret and checked dress, holding a rifle upright with both hands and a sling across her chest, long hair curling past her shoulders, eyes steady on the camera — the painterly black and white gives a civilian's defiance the weight of a whole cause. Collectors value frames like this because they hold the war's other side: not the uniform, but the woman who took up a rifle, stood her ground, and was not going anywhere.",
     "rating": 4,
     "galleries": [],
@@ -7760,7 +7768,7 @@ export const galleryData = [
       "greatest generation"
     ],
 
-    "story": "The cigarette is almost finished, and he is in no hurry to finish it. The sea is behind him and the boat is humming under his boots, and the smoke he breathes out is the only thing of his own making in the whole morning. He is young enough that the helmet still looks a size too big for him, and old enough to know that the quiet before a landing is the part you remember. He stares at nothing in particular because staring at something in particular would mean thinking about it. When the cigarette is gone, he will go ashore like the rest of them. Until then he has this, and the water, and the wait.",
+    "story": "The cigarette is almost finished, and he is in no hurry to finish it. The sea is behind him and the boat is humming under his boots, and the smoke he breathes out drifts away over the water. He is young enough that the helmet still looks a size too big for him, and old enough to know that the quiet before a landing is the part you remember. He stares at nothing in particular because staring at something in particular would mean thinking about it. When the cigarette is gone, he will go ashore like the rest of them. Until then he has this, and the water, and the wait.",
     "notes": "A portrait of waiting: the young soldier in his helmet, the cigarette in his mouth, the sea stretching behind him, the dark foreground shape of a fellow soldier close to the lens. The cigarette is the detail that makes the picture — a small, human pause before whatever the morning holds — and the painterly treatment holds the focus on the young man's steady, faraway gaze. The aged border gives the portrait its weight. A quiet, distinctive piece for any collection of World War II or Facing History photography.",
     "rating": 4,
     "galleries": [],

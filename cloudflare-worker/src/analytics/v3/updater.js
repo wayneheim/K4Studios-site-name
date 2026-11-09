@@ -3,9 +3,9 @@ import { buildV3RollupBatch } from './model.js';
 const RAW_BATCH_SIZE = 250;
 // Production D1 accepts fewer bound variables per statement than Miniflare.
 // Production D1 currently rejects statements above 100 bound variables. The
-// widest V3 insert has twelve columns, so eight rows (96 bindings) stays below
+// widest V3 insert has thirteen columns, so seven rows (91 bindings) stays below
 // that ceiling while still batching writes efficiently.
-const VALUE_CHUNK_SIZE = 8;
+const VALUE_CHUNK_SIZE = 7;
 
 function chunks(rows, size = VALUE_CHUNK_SIZE) {
   const output = [];
@@ -57,7 +57,8 @@ async function initializeRetentionCursor(env, token) {
 async function readRawBatch(env, afterId, limit) {
   const result = await env.DB.prepare(`
     SELECT id, ts, event_type, target_id, page, session_id, visitor_id, referer,
-           entry_referrer, source, country, region, city, cf_asn, ua, ip, ip_hash
+           entry_referrer, source, country, region, city, cf_asn, ua, ip, ip_hash,
+           utm_source, utm_medium, utm_campaign
     FROM raw_events
     WHERE id > ?
     ORDER BY id
@@ -96,8 +97,8 @@ function buildWriteStatements(env, rollup, previousCursor, updateToken) {
   for (const group of chunks(rollup.sessions)) {
     statements.push(env.DB.prepare(`
       INSERT INTO analytics_v3_daily_sessions
-        (day,session_id,visitor_id,engaged,landing_page,entry_source,visitor_geo,image_geo,entry_is_image_fallback,page_view_count,site_device,image_device)
-      VALUES ${valuesSql(group.length, 12)}
+        (day,session_id,visitor_id,engaged,landing_page,entry_source,visitor_geo,image_geo,entry_is_image_fallback,page_view_count,site_device,image_device,oim_domain)
+      VALUES ${valuesSql(group.length, 13)}
       ON CONFLICT(day,session_id) DO UPDATE SET
         visitor_id=COALESCE(analytics_v3_daily_sessions.visitor_id,excluded.visitor_id),
         engaged=MAX(analytics_v3_daily_sessions.engaged,excluded.engaged),
@@ -107,12 +108,13 @@ function buildWriteStatements(env, rollup, previousCursor, updateToken) {
         image_geo=COALESCE(analytics_v3_daily_sessions.image_geo,excluded.image_geo),
         site_device=COALESCE(analytics_v3_daily_sessions.site_device,excluded.site_device),
         image_device=COALESCE(analytics_v3_daily_sessions.image_device,excluded.image_device),
+        oim_domain=COALESCE(analytics_v3_daily_sessions.oim_domain,excluded.oim_domain),
         entry_is_image_fallback=CASE WHEN analytics_v3_daily_sessions.landing_page IS NULL OR (analytics_v3_daily_sessions.entry_is_image_fallback=1 AND excluded.entry_is_image_fallback=0) THEN excluded.entry_is_image_fallback ELSE analytics_v3_daily_sessions.entry_is_image_fallback END,
         page_view_count=analytics_v3_daily_sessions.page_view_count+excluded.page_view_count
     `).bind(...group.flatMap((row) => [
       row.day, row.sessionId, row.visitorId, row.engaged, row.landingPage,
       row.entrySource, row.visitorGeo, row.imageGeo, row.entryIsImageFallback, row.pageViewCount,
-      row.siteDevice, row.imageDevice
+      row.siteDevice, row.imageDevice, row.oimDomain
     ])));
   }
 

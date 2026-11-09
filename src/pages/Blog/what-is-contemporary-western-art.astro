@@ -4,6 +4,7 @@ export const prerender = true;
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
+import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
 import CornerstoneCollectionNav from "@/components/blog/CornerstoneCollectionNav.astro";
 import KeywordLinkedArticle from "@/components/blog/KeywordLinkedArticle.astro";
 import CornerstoneVisualBridge from "@/components/blog/CornerstoneVisualBridge.astro";
@@ -119,7 +120,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
       <div class="definition-post-heading"><h2>How this differs from surface re-imagining</h2></div>
 
-      <CornerstoneGalleryDoor id="i-6Ffpw9t" galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Cowboy-Portraits/Color" alt="Contemporary painterly portrait of a Western character" caption="A living Western subject carried through a contemporary photographic language." href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Cowboy-Portraits/Color/all" label="Browse Contemporary Cowboy Portraits" align="right" />
+      <CornerstoneGalleryDoor id="i-f4MSxpP" galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color" alt="Contemporary narrative interpretation of the American West" caption="The Western inheritance carried forward without becoming nostalgia." href="/Contemporary-Western-Art" label="Explore Contemporary Western Art" align="left" />
 
       <p class="reflection">Re-imagining through reflection.</p>
 
@@ -127,13 +128,15 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
       <p>Re-imagining and retelling in a medium and format that allows the image and the story to speak louder than the presentation format — giving history a chance to pay it forward to the next generation.</p>
 
+      <CornerstoneGalleryDoor id="i-6Ffpw9t" galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Cowboy-Portraits/Color" alt="Contemporary painterly portrait of a Western character" caption="A living Western subject carried through a contemporary photographic language." href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Cowboy-Portraits/Color/all" label="Browse Contemporary Cowboy Portraits" align="right" />
+
       <p>That is also why the field has to widen past cowboy shorthand: Native American presence is not an accessory to the Western story and not a historical prop. It is part of the ground beneath the entire genre — continuity, heritage, displacement, authority, and living presence.</p>
 
       <p>I don't make these images to decorate a wall. The struggles and losses of the people who built the West have to still mean something — that is the giving back, making sure those stories and hardships have purpose. An image that asks only to be admired gives a viewer nothing to enter. I want the opposite: a moment a person can step inside, let go of their own present, and stand for a while in someone else's — to feel it, and to wonder what it might have been like. I have seen what the story does when it is still attached to the image. At a show in Montana, a woman stood in front of Cough and Covenant while I told her the man in it is dying of smallpox, caught from the sick man he treated — and she took the moment. Not the quick look. Not admiration. She stood inside it. That is the point.</p>
 
-      <div class="definition-post-heading"><h2>Where to go next</h2></div>
+      <CornerstoneGalleryDoor id="i-89qzJ6S" galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color" alt="Contemporary Western character study shaped through authored light" caption="Contemporary Western art stays connected to tradition without becoming trapped inside nostalgia." href="/Contemporary-Western-Art" label="Explore Contemporary Western Art" align="right" />
 
-      <CornerstoneGalleryDoor id="i-f4MSxpP" galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color" alt="Contemporary narrative interpretation of the American West" caption="The Western inheritance carried forward without becoming nostalgia." href="/Contemporary-Western-Art" label="Explore Contemporary Western Art" align="left" />
+      <div class="definition-post-heading"><h2>Explore Contemporary Western Art</h2></div>
 
       <nav class="definition-post-links" aria-label="Related contemporary Western art pages">
         <p>The collection itself: <a href="/Contemporary-Western-Art">Contemporary Western Art</a></p>
@@ -142,6 +145,8 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
       </nav>
     </article>
     </KeywordLinkedArticle>
+
+    <WesternDefinitions variant="definition" currentPage={18} />
 
     <CornerstoneCollectionNav focusKey="cowboy-portraits-0" />
     <SiteFooter />

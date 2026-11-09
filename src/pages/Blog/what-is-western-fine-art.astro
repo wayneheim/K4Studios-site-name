@@ -20,6 +20,9 @@ import FAQAccordion from "@/components/FAQAccordion.jsx";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
+import CornerstoneCollectionNav from "@/components/blog/CornerstoneCollectionNav.astro";
+import CornerstoneVisualBridge from "@/components/blog/CornerstoneVisualBridge.astro";
+import CornerstoneGalleryDoor from "@/components/blog/CornerstoneGalleryDoor.astro";
 import KeywordLinkedArticle from "@/components/blog/KeywordLinkedArticle.astro";
 import { getBreadcrumbList, getFAQPageStructuredData, getStructuredData } from "@/components/utils/getStructuredData.ts";
 
@@ -228,50 +231,18 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
       </p>
     </section>
 
-    <!-- Early Visual Bridge -->
-    <section class="early-examples-section">
-      <div class="early-examples-shell">
-        <p class="early-examples-kicker">See the Standard at Work</p>
-        <h2 class="early-examples-title">Western fine art begins where subject matter stops being enough.</h2>
-        <p class="early-examples-intro">
-          Landscape, portraiture, black-and-white study, and historical presence can all enter the Western fine art tradition when authorship, restraint, and narrative intent shape the image.
-        </p>
-
-        <div class="early-examples-grid">
-          <figure>
-            <a href={`/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/${image1.id}`}>
-              <img src={image1.src} alt={image1.alt} loading="eager" />
-            </a>
-            <figcaption>Landscape shaped by atmosphere, structure, and authorship.</figcaption>
-          </figure>
-
-          <figure>
-            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${image2.id}`}>
-              <img src={image2.src} alt={image2.alt} loading="lazy" />
-            </a>
-            <figcaption>Western portraiture built from character, posture, and intent.</figcaption>
-          </figure>
-
-          <figure>
-            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/${image3.id}`}>
-              <img src={image3.src} alt={image3.alt} loading="lazy" />
-            </a>
-            <figcaption>Black-and-white restraint as artistic discipline.</figcaption>
-          </figure>
-
-          <figure>
-            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${image4.id}`}>
-              <img src={image4.src} alt={image4.alt} loading="lazy" />
-            </a>
-            <figcaption>Presence and dignity carried through composition.</figcaption>
-          </figure>
-        </div>
-
-        <a class="early-examples-cta" href="/Western-Fine-Art-Photography">
-          Explore Western Fine Art Photography
-        </a>
-      </div>
-    </section>
+    <CornerstoneVisualBridge
+      kicker="See the Standard at Work"
+      title="Western fine art begins where subject matter stops being enough."
+      intro="Landscape, portraiture, black-and-white study, and historical presence can all enter the Western fine art tradition when authorship, restraint, and narrative intent shape the image."
+      items={[
+        { id: image1.id, galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery", alt: image1.alt, caption: "Landscape shaped by atmosphere, structure, and authorship." },
+        { id: image2.id, galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color", alt: image2.alt, caption: "Western portraiture built from character, posture, and intent." },
+        { id: image3.id, galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White", alt: image3.alt, caption: "Black-and-white restraint as artistic discipline." },
+      ]}
+      ctaHref="/Western-Fine-Art-Photography"
+      ctaLabel="Explore Western Fine Art Photography"
+    />
 
     <!-- Article Content -->
     <section class="story-section max-w-[860px] mx-auto px-4">
@@ -293,6 +264,8 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
         <p>As the art world continues to dissolve arbitrary boundaries between photography and painting, the definition of what qualifies as fine art in the Western genre becomes both contested and essential to understand. Below we clarify those definitions and explain why the distinction matters.</p>
 
+        <CornerstoneGalleryDoor id="i-Q2NXpjG" galleryPath="/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery" alt="Western landscape treated as emotional structure rather than scenery" caption="The land becomes fine art when atmosphere, structure, and authorship replace simple description." href="/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/all" label="Browse Western Landscapes" align="right" />
+
         <!-- SECTION 2: What Is Western Fine Art? -->
         <div class="section-heading-with-line">
           <h2>What Is Western Fine Art?</h2>
@@ -313,6 +286,8 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         <p>Intent of the work does. Execution does. And most importantly, vision does.</p>
 
         <p>Where fine art diverges from commercial or documentary work is in its refusal to perform. It does not pander to expectation. It does not chase trend. It exists on its own terms, anchored in tradition but not imprisoned by it.</p>
+
+        <CornerstoneGalleryDoor id="i-7hD9CCh" galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color" alt="Native American figure at the water's edge rendered with dignity and restraint" caption="Presence and continuity held through authored composition." href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color/all" label="Browse Native American Portraits" align="left" />
 
         <aside class="inline-art-callout inline-art-callout--right">
           <a href={`/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/${landscapeDeepImage.id}`}>
@@ -422,6 +397,8 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
           <h2>Why the Distinction Matters</h2>
         </div>
 
+        <CornerstoneGalleryDoor id="i-6Ffpw9t" galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color" alt="Western character study shaped through painterly light" caption="Authorship turns a familiar Western subject into a specific artistic statement." href="/Western-Fine-Art-Photography" label="Explore Western Fine Art Photography" align="right" />
+
         <p>For collectors, the distinction determines long-term value—financially and culturally. Fine art appreciates, enters collections, and becomes part of institutional and private histories.</p>
 
         <p>For curators, it allows Western art to be presented as serious contemporary subject matter, rather than nostalgic decoration.</p>
@@ -429,6 +406,16 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         <p>And for artists, the distinction is existential. To be classified as fine art is to participate in a tradition rather than be dismissed by it.</p>
 
         <p>For a deeper look at what that tradition actually is, its history, the figures who built it, and where it stands today, see <a href="/Blog/what-is-western-art" style="color:#8b5a2b; text-decoration:underline;">What Is Western Art?</a>.</p>
+
+        <CornerstoneGalleryDoor id="i-MHGPvcs" galleryPath="/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery" alt="Western landscape shaped as finished painterly fine art" caption="The distinction matters because authored work has to remain convincing after the subject is recognized." href="/Western-Fine-Art-Photography" label="Explore Western Fine Art Photography" align="right" />
+
+        <div class="section-heading-with-line">
+          <h2>Frequently Asked Questions</h2>
+        </div>
+
+        <FAQAccordion items={westernFineArtFaq} showHeading={false} />
+
+        <CornerstoneGalleryDoor id="i-T7TFJX2" galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color" alt="Western figure rendered as authored fine art portraiture" caption="The closer begins with work built to endure beyond category shorthand." href="/Western-Fine-Art-Photography" label="Explore Western Fine Art Photography" align="left" />
 
         <!-- SECTION 8: Explore -->
         <div class="section-heading-with-line">
@@ -453,18 +440,14 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
         <p>Each collection treats the West not as backdrop, but as subject—worthy of the same artistic seriousness applied to any other genre of fine art.</p>
 
-        <div class="section-heading-with-line">
-          <h2>Frequently Asked Questions</h2>
-        </div>
-
-        <FAQAccordion items={westernFineArtFaq} showHeading={false} />
-
       </article>
       </KeywordLinkedArticle>
     </section>
 
     <!-- Western Art Series Navigation -->
     <WesternDefinitions variant="definition" currentPage={2} />
+
+    <CornerstoneCollectionNav focusKey="cowboy-portraits-0" />
 
     <SiteFooter />
   </main>

@@ -4,6 +4,7 @@ export const prerender = true;
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
+import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
 import CornerstoneCollectionNav from "@/components/blog/CornerstoneCollectionNav.astro";
 import KeywordLinkedArticle from "@/components/blog/KeywordLinkedArticle.astro";
 import CornerstoneVisualBridge from "@/components/blog/CornerstoneVisualBridge.astro";
@@ -159,6 +160,8 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
       <p>My own work starts from the lived West and earns the legend from there. I work with living historians — people who know how a hat sits after a long day, how a soldier stands when fatigue has become normal — and with researched period detail, real subjects, and real light. The aim is not to document a reenactment or pose a costume. It is to build a single interrupted moment: a breath before a decision, the held second after one, and let the viewer step inside it and finish the story themselves. That is the One-Image Movie™ — the photograph opens the scene, the title and writing deepen it, and the viewer's own imagination completes what the frame leaves unwritten.</p>
       <p>The collection where that answer lives is Facing History, and its Western branch is the Wild West gallery: cowboys, settlers, and Native Americans approached as people under pressure first and icons second — if at all.</p>
 
+      <CornerstoneGalleryDoor id="i-5BtMrfM" galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color" alt="Western figure held between lived frontier history and later legend" caption="The human story beneath the legend is where the Wild West remains most visible." href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West" label="Enter the Wild West Collection" align="left" />
+
       <div class="definition-post-heading"><h2>FAQ</h2></div>
       <div class="definition-post-faq">
         {faqItems.map((item) => (
@@ -169,7 +172,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         ))}
       </div>
 
-      <div class="definition-post-heading"><h2>Where to go next</h2></div>
+      <div class="definition-post-heading"><h2>Explore the Wild West</h2></div>
       <nav class="definition-post-links" aria-label="Related Wild West pages">
         <p>The Wild West gallery: <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West">Wild West</a></p>
         <p>Facing History, the full collection: <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Facing History</a></p>
@@ -179,6 +182,8 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
       </nav>
     </article>
     </KeywordLinkedArticle>
+
+    <WesternDefinitions variant="definition" currentPage={19} />
 
     <CornerstoneCollectionNav />
     <SiteFooter />
