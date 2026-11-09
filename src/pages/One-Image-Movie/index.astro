@@ -227,9 +227,15 @@ const pageBreadcrumb = `Home › <a href='/Narrative-Western-Art' style='color: 
       .oim-shell { width: min(100% - 1.2rem, 1200px); }
       .oim-question-stage { white-space: normal; text-wrap: balance; }
       .oim-concept__grid { grid-template-columns: 1fr; }
-      .oim-question-builder { height: auto; min-height: 28rem; overflow: visible; }
+      .oim-question-builder { height: auto; min-height: 0; padding-bottom: 1rem; overflow: visible; }
+      :global(.oim-question-list li:last-child) { margin-bottom: 0; }
+      .oim-collections :global(.tombstone-nav) { margin: 0; padding: .5rem .25rem .75rem !important; transform: none; }
+      .oim-collections :global(.tile-grid) { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 340px; min-height: 0; gap: 1rem .75rem; }
+      .oim-collections :global(.tile) { max-width: 140px; min-height: 0; }
       .oim-interactive { grid-template-columns: 1fr; }
-      .oim-interactive-intro { grid-column: 1; grid-row: 3; margin-top: 2rem; }
+      .oim-interactive-intro { grid-column: 1; grid-row: 3; margin-top: 2rem; text-align: center; }
+      .oim-interactive-intro p { margin-inline: auto; }
+      .oim-interactive-intro__actions { justify-content: center; }
     }
     @media (prefers-reduced-motion: reduce) { .oim-question-stage { transition: none; } }
   </style>
