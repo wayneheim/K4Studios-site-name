@@ -1,0 +1,81 @@
+{
+  "hero": {
+    "src": "/img/i-7GcQw6R/wagonlight-western-cowboy-art.jpg",
+    "alt": "Historical Western photography: contemporary fine art depicting frontier psychology",
+    "href": "/Historical-Western-Art"
+  },
+  "heading": "\nWhat Is Historical Western Photography?\n",
+  "subtitles": [
+    "\nContemporary fine art shaped around frontier lives, historical memory, and the psychology of the American West.\n"
+  ],
+  "bridge": {
+    "kicker": "See the Historical West Reimagined",
+    "title": "Historical Western photography is not old photography. It is contemporary art looking back with intent.",
+    "intro": "These images use frontier figures, period atmosphere, and narrative construction to explore the historical West as lived experience rather than modern ranch record or antique documentation.",
+    "items": [
+      {
+        "id": "i-5fm7Hhr",
+        "src": "/img/i-5fm7Hhr/making-a-run-for-it-western-cowboy-art.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-5fm7Hhr",
+        "alt": "Cowboy portrait exploring the psychological tension of frontier life",
+        "caption": "Frontier psychology shaped through portrait and atmosphere."
+      },
+      {
+        "id": "i-66qXms3",
+        "src": "/img/i-66qXms3/above-the-line-western-cowboy-art.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-66qXms3",
+        "alt": "Historical Western photography using painterly composition and period authenticity",
+        "caption": "Period detail used in service of narrative, not spectacle."
+      },
+      {
+        "id": "i-KBNSftv",
+        "src": "/img/i-KBNSftv/l.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-KBNSftv",
+        "alt": "Frontiersman aiming a revolver while standing over a fallen rival in a dusty Old West street scene",
+        "caption": "The frontier treated as lived experience, not costume."
+      }
+    ],
+    "ctaHref": "/Historical-Western-Art",
+    "ctaLabel": "Explore Historical Western Art"
+  },
+  "essaySamples": [],
+  "artworkLinks": {
+    "i-6Ffpw9t": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-6Ffpw9t",
+    "i-89qzJ6S": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-89qzJ6S",
+    "i-LCspRF4": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-LCspRF4",
+    "i-WfRwfpM": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-WfRwfpM",
+    "i-KVxkXrV": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-KVxkXrV"
+  },
+  "reservedImageIds": [
+    "i-7GcQw6R",
+    "i-5fm7Hhr",
+    "i-66qXms3",
+    "i-c5K798H"
+  ],
+  "imageOverrides": {
+    "i-LCspRF4": {
+      "id": "i-FNSvKZz",
+      "src": "/img/i-FNSvKZz/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-FNSvKZz",
+      "alt": "Under the shelter of a tree, a cowboy sits beside his horse on a rocky rise, both paused and alert in a quiet frontier landscape."
+    },
+    "i-6Ffpw9t": {
+      "id": "i-c98L2bs",
+      "src": "/img/i-c98L2bs/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-c98L2bs",
+      "alt": "A woman standing alone at a weathered fence, looking into a soft, muted landscape as if reflecting on fading memories."
+    },
+    "i-KVxkXrV": {
+      "id": "i-mn8RKLL",
+      "src": "/img/i-mn8RKLL/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-mn8RKLL",
+      "alt": "Mounted riders in pursuit across open terrain, dust rising behind them as they move with urgency and intent."
+    },
+    "i-89qzJ6S": {
+      "id": "i-kVr4LnG",
+      "src": "/img/i-kVr4LnG/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-kVr4LnG",
+      "alt": "Native American rider wearing a feathered headdress and traditional regalia while traveling on horseback through open country."
+    }
+  }
+}

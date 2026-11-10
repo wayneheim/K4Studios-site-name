@@ -1,0 +1,41 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import LandingHeader from '@/components/Landing-Header.jsx';
+import SiteFooter from '@/components/Footer.astro';
+import CornerstoneHero from './CornerstoneHero.astro';
+import CornerstoneVisualBridge from './CornerstoneVisualBridge.astro';
+import KeywordLinkedArticle from './KeywordLinkedArticle.astro';
+import WesternDefinitions from './WesternDefinitions.astro';
+import CornerstoneCollectionNav from './CornerstoneCollectionNav.astro';
+import '@/styles/global.css';
+const { data } = Astro.props;
+const { visual } = data;
+const reservedImageIds = [...(visual.reservedImageIds || []), visual.hero.src.match(/\/(i-[\w]+)\//)?.[1], ...visual.bridge.items.map(item => item.id)];
+---
+<BaseLayout {...data.layout}>
+  <main class="cornerstone-page bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden">
+    <div class="drawer-mode"><LandingHeader client:load breadcrumb={data.breadcrumb} /></div>
+    <CornerstoneHero image={visual.hero} />
+    <section class="cornerstone-title">
+      <h1 set:html={visual.heading} />
+      {visual.subtitles.map(subtitle => <p set:html={subtitle} />)}
+    </section>
+    <CornerstoneVisualBridge {...visual.bridge} />
+    <section class="story-section">
+      <KeywordLinkedArticle pagePath={data.pagePath} reservedImageIds={reservedImageIds} essaySamples={visual.essaySamples} artworkLinks={visual.artworkLinks} imageOverrides={visual.imageOverrides} galleryCrops={visual.galleryCrops}>
+        <article class="story-block"><slot /></article>
+      </KeywordLinkedArticle>
+    </section>
+    <WesternDefinitions variant="definition" currentPage={data.index} />
+    <CornerstoneCollectionNav focusKey={data.focusKey} />
+    <SiteFooter />
+  </main>
+</BaseLayout>
+<style>
+  main { font-family:'Glegoo',serif; }
+  .cornerstone-title { max-width:1000px; margin:auto; padding:2rem 1rem; text-align:center; }
+  h1 { margin:0 0 .75rem; font-size:clamp(1.75rem,3.5vw,2.5rem); line-height:1.25; font-weight:700; }
+  .cornerstone-title p { margin:.5rem 0 0; font-size:1.15rem; line-height:1.6; font-style:italic; color:#666; }
+  .cornerstone-title p + p { margin-top:.75rem; font-size:.95rem; font-style:normal; color:#755f4f; }
+  .story-section { width:100%; max-width:860px; margin:0 auto; padding:0 1rem; }
+</style>

@@ -1,0 +1,94 @@
+{
+  "hero": {
+    "src": "/img/i-H8VZWJM/a-moment-to-breathe-western-cowboy-portrait-art.jpg",
+    "alt": "Cowboy fine art photography — black and white portrait capturing character, presence, and psychological depth",
+    "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits",
+    "objectPosition": "center 10%"
+  },
+  "heading": "\nWhat Is Cowboy Fine Art Photography?\n",
+  "subtitles": [
+    "\nCharacter over costume. Presence over pose. The cowboy treated as fine art, not nostalgia.\n"
+  ],
+  "bridge": {
+    "kicker": "See the Portrait Standard",
+    "title": "Cowboy fine art photography begins when the figure becomes more than a symbol.",
+    "intro": "These images treat the cowboy through painterly light, narrative restraint, and psychological presence—where character matters more than costume and atmosphere carries more weight than spectacle.",
+    "items": [
+      {
+        "id": "i-mqDfN5z",
+        "src": "/img/i-mqDfN5z/color-of-conviction-archive.jpg",
+        "href": "/Other/Archive/i-mqDfN5z",
+        "alt": "Cowboy fine art photography — painterly light and narrative restraint",
+        "caption": "Painterly light and narrative restraint.",
+        "objectPosition": "66% top",
+        "cropScale": 1,
+        "cropOrigin": "right top"
+      },
+      {
+        "id": "i-fJ9WQSS",
+        "src": "/img/i-fJ9WQSS/draw-western-cowboy-art.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-fJ9WQSS",
+        "alt": "Cowboy fine art photography — character study with atmospheric depth",
+        "caption": "Character study with atmospheric depth."
+      },
+      {
+        "id": "i-r5Pb7zJ",
+        "src": "/img/i-r5Pb7zJ/signs-western-cowboy-art.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-r5Pb7zJ",
+        "alt": "Cowboy fine art photography — moment suspended in narrative tension",
+        "caption": "Narrative tension held in a single frame.",
+        "objectPosition": "33% top",
+        "cropScale": 1,
+        "cropOrigin": "left top"
+      }
+    ],
+    "ctaHref": "/Cowboy-Fine-Art-Photography",
+    "ctaLabel": "Explore Cowboy Fine Art Photography"
+  },
+  "essaySamples": [],
+  "artworkLinks": {
+    "i-Rx5gLJz": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-Rx5gLJz",
+    "i-LCspRF4": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-LCspRF4",
+    "i-mqQxwNn": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/i-mqQxwNn",
+    "i-ncFcHDM": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-ncFcHDM",
+    "i-T6bD4w7": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-T6bD4w7"
+  },
+  "reservedImageIds": [
+    "i-H8VZWJM",
+    "i-mqDfN5z",
+    "i-fJ9WQSS",
+    "i-r5Pb7zJ"
+  ],
+  "imageOverrides": {
+    "i-T6bD4w7": {
+      "id": "i-bFwNMZK",
+      "src": "/img/i-bFwNMZK/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-bFwNMZK",
+      "alt": "An older Western lawman wearing a dark coat and wide-brimmed hat stands in warm light against a textured background."
+    },
+    "i-LCspRF4": {
+      "id": "i-jqZzRpS",
+      "src": "/img/i-jqZzRpS/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-jqZzRpS",
+      "alt": "A seated man in frontier clothing rests beside a standing woman holding a long rifle, both positioned outside a rustic wooden building in warm painterly light."
+    },
+    "i-Rx5gLJz": {
+      "id": "i-LLdZzQW",
+      "src": "/img/i-LLdZzQW/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-LLdZzQW",
+      "alt": "Long-haired cowboy in a hat sitting by a window and gesturing with his finger while telling a story."
+    },
+    "i-ncFcHDM": {
+      "id": "i-JM7kNVv",
+      "src": "/img/i-JM7kNVv/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-JM7kNVv",
+      "alt": "Cowboy crossing a stream with a pack mule, painterly Western fine art photography capturing a quiet frontier journey through water and open landscape."
+    },
+    "i-mqQxwNn": {
+      "id": "i-sh8X4Vg",
+      "src": "/img/i-sh8X4Vg/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/i-sh8X4Vg",
+      "alt": "A cowboy stands between rock walls holding a rifle, partially lit in a black and white Western scene."
+    }
+  }
+}

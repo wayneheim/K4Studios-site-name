@@ -1,0 +1,84 @@
+{
+  "hero": {
+    "src": "/img/i-pd3hvNk/the-recoil-wwii-military-vehicle-art.jpg",
+    "alt": "World War II living history scene interpreted as history inspired photography",
+    "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History"
+  },
+  "heading": "\nWhat Is Historically Themed Photography?\n",
+  "subtitles": [
+    "\nHistory as subject, story, and fine art interpretation\n",
+    "\nA working definition for collectors, curators, living historians, and serious viewers\n"
+  ],
+  "bridge": {
+    "kicker": "History Reinterpreted",
+    "title": "Historically Themed Photography in Practice",
+    "intro": "Research, real subjects, and authored atmosphere bring the past into a contemporary fine art frame.",
+    "items": [
+      {
+        "id": "i-xhX479V",
+        "src": "/img/i-xhX479V/through-the-smoke-civil-war.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-xhX479V",
+        "alt": "Historically themed Civil War photograph",
+        "caption": "Period detail shaped into story"
+      },
+      {
+        "id": "i-9q7BrTt",
+        "src": "/img/i-9q7BrTt/little-drummer-boy-civil-war.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-9q7BrTt",
+        "alt": "Painterly historical fine art photograph",
+        "caption": "The past interpreted through atmosphere"
+      },
+      {
+        "id": "i-N2LmzLK",
+        "src": "/img/i-N2LmzLK/the-cost-of-colors-civil-war.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-N2LmzLK",
+        "alt": "Civil War narrative fine art",
+        "caption": "History made present through authorship"
+      }
+    ],
+    "ctaHref": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War/Color/all",
+    "ctaLabel": "Explore Civil War Stories"
+  },
+  "essaySamples": [
+    {
+      "heading": "Why the Term Matters",
+      "mode": "inline",
+      "items": [
+        {
+          "id": "i-4p3fBxJ",
+          "src": "/img/i-4p3fBxJ/l.jpg",
+          "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-4p3fBxJ",
+          "alt": "A World War II soldier in a steel helmet and hooded poncho walks toward the camera on a muddy road, a rifle held across his body in both hands, a tank and another soldier behind him, in a painterly color fine art photograph."
+        }
+      ]
+    }
+  ],
+  "artworkLinks": {
+    "i-hrmrhT3": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-hrmrhT3",
+    "i-TLDkd5q": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-TLDkd5q",
+    "i-8BbMZjs": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-8BbMZjs",
+    "i-C5ZGjMH": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-C5ZGjMH",
+    "i-tpvJWLm": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-tpvJWLm",
+    "i-kWVzc6g": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-kWVzc6g"
+  },
+  "reservedImageIds": [
+    "i-pd3hvNk",
+    "i-xhX479V",
+    "i-9q7BrTt",
+    "i-N2LmzLK"
+  ],
+  "imageOverrides": {
+    "i-8BbMZjs": {
+      "id": "i-vcX6WLC",
+      "src": "/img/i-vcX6WLC/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-vcX6WLC",
+      "alt": "Weathered lawman in a wide-brim hat holds a rifle across his chest, his expression steady against a softly textured background."
+    },
+    "i-kWVzc6g": {
+      "id": "i-H5Z44TF",
+      "src": "/img/i-H5Z44TF/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-H5Z44TF",
+      "alt": "Union Civil War firing line releasing a coordinated volley, muskets flashing in unison through smoke and tall grass - painterly Civil War art by Wayne Heim"
+    }
+  }
+}

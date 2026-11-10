@@ -1,0 +1,72 @@
+{
+  "hero": {
+    "src": "/img/i-DJMTZ8z/resting-easy-western-cowboy-art.jpg",
+    "alt": "Western black and white photography portrait with seated cowboy, tonal restraint, and frontier presence",
+    "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+  },
+  "heading": "\nWhat Is Western Black and White Photography?\n",
+  "subtitles": [
+    "\nNot a filter. Not a style. A structural decision that changes what the image has to earn.\n"
+  ],
+  "bridge": {
+    "kicker": "See the Monochrome Standard",
+    "title": "Western black and white photography begins when tone has to carry the whole image.",
+    "intro": "Cowboy portraits, Western narratives, and Native American portrait work all change when color is removed. Shadow, posture, expression, and restraint become the image's structure.",
+    "items": [
+      {
+        "id": "i-2GsTkqf",
+        "src": "/img/i-2GsTkqf/standing-his-ground-western-cowboy-portrait-art.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-2GsTkqf",
+        "alt": "Black and white cowboy portrait shaped by posture, shadow, and restrained Western atmosphere",
+        "caption": "Posture and character without color warmth."
+      },
+      {
+        "id": "i-mqQxwNn",
+        "src": "/img/i-mqQxwNn/standing-watch-western-cowboy-art.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/i-mqQxwNn",
+        "alt": "Black and white Western narrative photograph with cowboy at window, rifle, shadow, and frontier tension",
+        "caption": "Shadow and implication doing the work of color."
+      },
+      {
+        "id": "i-Z54nXZm",
+        "src": "/img/i-Z54nXZm/watching-the-wind-native-american-portrait-art.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White/i-Z54nXZm",
+        "alt": "Black and white Native American portrait with smoke, profile, tonal quiet, and human presence",
+        "caption": "Tonal quiet, heritage, and human presence."
+      }
+    ],
+    "ctaHref": "/Western-Black-and-White-Photography",
+    "ctaLabel": "Explore Western Black and White Photography"
+  },
+  "essaySamples": [],
+  "artworkLinks": {
+    "i-Txh4c8k": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/i-Txh4c8k",
+    "i-dLDF4Q6": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/i-dLDF4Q6",
+    "i-6z4gpF7": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-6z4gpF7",
+    "i-ffzG95X": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/i-ffzG95X",
+    "i-nZbDC9C": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/i-nZbDC9C",
+    "i-HfQ5NVR": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/i-HfQ5NVR",
+    "i-rqk5Kdk": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/i-rqk5Kdk",
+    "i-qMQf7b6": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/i-qMQf7b6"
+  },
+  "reservedImageIds": [
+    "i-DJMTZ8z",
+    "i-2GsTkqf",
+    "i-mqQxwNn",
+    "i-Z54nXZm"
+  ],
+  "imageOverrides": {
+    "i-Txh4c8k": {
+      "id": "i-pqcmRth",
+      "src": "/img/i-pqcmRth/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/i-pqcmRth",
+      "alt": "A seated woman on a porch with a standing figure behind her in a doorway, captured in a black and white Western scene."
+    },
+    "i-6z4gpF7": {
+      "id": "i-5fQjwcv",
+      "src": "/img/i-5fQjwcv/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-5fQjwcv",
+      "alt": "Man in a wide-brim hat seated on the ground beside coiled rope and saddle gear, leaning forward with hands clasped in a black and white Western portrait."
+    }
+  }
+}

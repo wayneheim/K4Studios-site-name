@@ -1,0 +1,71 @@
+{
+  "hero": {
+    "src": "/img/i-cfW89QP/signal-from-the-ridge-western-cowboy-art.jpg",
+    "alt": "Cowboy firing a rifle from a rocky ridge beside his saddled horse beneath a storm-filled Western sky",
+    "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-cfW89QP"
+  },
+  "heading": "What Is Contemporary Western Art?",
+  "subtitles": [],
+  "bridge": {
+    "kicker": "See the Work",
+    "title": "Contemporary Western art carries an inherited subject through a living visual language.",
+    "intro": "",
+    "items": [
+      {
+        "id": "i-dsqgfVj",
+        "src": "/img/i-dsqgfVj/l.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-dsqgfVj",
+        "alt": "Cowboy riding fast on a white horse through a dusty trail on the American frontier, dramatic moment in Western fine art photography.",
+        "caption": "Tradition without imitation."
+      },
+      {
+        "id": "i-6xn5rMd",
+        "src": "/img/i-6xn5rMd/carved-in-stone-western-cowboy-portrait-art.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-6xn5rMd",
+        "alt": "Modern Western portrait carrying weathered character",
+        "caption": "A present-day authored West."
+      },
+      {
+        "id": "i-MvZxkQh",
+        "src": "/img/i-MvZxkQh/keeper-of-the-high-country-western-cowboy-portrait-art.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-MvZxkQh",
+        "alt": "High-country Western figure interpreted through painterly photography",
+        "caption": "History in a current medium."
+      }
+    ],
+    "ctaHref": "/Contemporary-Western-Art",
+    "ctaLabel": "Explore Contemporary Western Art"
+  },
+  "essaySamples": [],
+  "artworkLinks": {
+    "i-89qzJ6S": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-89qzJ6S",
+    "i-f4MSxpP": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-f4MSxpP",
+    "i-6Ffpw9t": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-6Ffpw9t"
+  },
+  "reservedImageIds": [
+    "i-cfW89QP",
+    "i-k4b6c5b",
+    "i-6xn5rMd",
+    "i-MvZxkQh"
+  ],
+  "imageOverrides": {
+    "i-6Ffpw9t": {
+      "id": "i-dNgct6r",
+      "src": "/img/i-dNgct6r/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-dNgct6r",
+      "alt": "Western outlaw standing in the doorway of a wooden frontier building with a wanted poster on the wall."
+    },
+    "i-f4MSxpP": {
+      "id": "i-PxNFNhQ",
+      "src": "/img/i-PxNFNhQ/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-PxNFNhQ",
+      "alt": "At a shallow river crossing, a cowboy kneels beside his horse as it drinks, captured in a painterly Western fine art photography scene of frontier life."
+    },
+    "i-89qzJ6S": {
+      "id": "i-fCG2nm8",
+      "src": "/img/i-fCG2nm8/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-fCG2nm8",
+      "alt": "Color portrait of three older cowboys seated on a bench in a Western street, hats tilted, coats and boots catching warm light."
+    }
+  }
+}

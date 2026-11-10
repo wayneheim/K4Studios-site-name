@@ -1,0 +1,56 @@
+{
+  "hero": {
+    "src": "/img/i-xpv7z8j/land-of-promise-and-threat-western-cowboy-art.jpg",
+    "alt": "Pioneer travelers gathered beside a campfire between covered wagons on a darkening prairie beneath dramatic storm clouds.",
+    "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-xpv7z8j",
+    "objectPosition": "center center"
+  },
+  "heading": "\nWhat Is Western Fine Art Photography?\n",
+  "subtitles": [
+    " <strong data-astro-cid-c5cdylm5=\"\">Definition:</strong> Western fine art photography interprets the American West through authorship, atmosphere, and visual intent rather than simple documentation.\n",
+    "\nThe subject begins the conversation. Authorship decides whether the image endures.\n"
+  ],
+  "bridge": {
+    "kicker": "See the Standard at Work",
+    "title": "Western fine art photography begins where the camera stops merely recording.",
+    "intro": "Character, labor, atmosphere, and historical presence become fine art when composition, restraint, and narrative intent shape what the viewer is asked to see.",
+    "items": [
+      {
+        "id": "i-7Kwv8vc",
+        "src": "/img/i-7Kwv8vc/beacon-of-hope-western-cowboy-portrait-art.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-7Kwv8vc",
+        "alt": "Cowboy portrait in painterly light, treated as character rather than Western silhouette",
+        "caption": "Character over cowboy shorthand."
+      },
+      {
+        "id": "i-PfVhxQT",
+        "src": "/img/i-PfVhxQT/l.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/i-PfVhxQT",
+        "alt": "Cowboy standing by a campfire at a frontier camp drinking coffee at dawn in a black and white western scene.",
+        "caption": "Labor, restraint, and photographic authorship."
+      },
+      {
+        "id": "i-7hD9CCh",
+        "src": "/img/i-7hD9CCh/at-the-water-native-american-portrait-art.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-7hD9CCh",
+        "alt": "Native American woman at the water's edge portrayed with quiet presence and narrative stillness",
+        "caption": "Presence, dignity, and narrative stillness."
+      }
+    ],
+    "ctaHref": "/Western-Fine-Art-Photography",
+    "ctaLabel": "Explore Western Fine Art Photography"
+  },
+  "essaySamples": [],
+  "artworkLinks": {
+    "i-MHGPvcs": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-MHGPvcs",
+    "i-mLPgSpC": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-mLPgSpC",
+    "i-Cg4ZB72": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-Cg4ZB72"
+  },
+  "reservedImageIds": [
+    "i-c5K798H",
+    "i-7Kwv8vc",
+    "i-Txh4c8k",
+    "i-7hD9CCh"
+  ],
+  "imageOverrides": {}
+}

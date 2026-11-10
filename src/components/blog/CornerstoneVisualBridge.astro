@@ -3,7 +3,11 @@ import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 
 type BridgeItem = {
   id: string;
-  galleryPath: string;
+  galleryPath?: string;
+  src?: string;
+  objectPosition?: string;
+  cropScale?: number;
+  cropOrigin?: string;
   href?: string;
   alt: string;
   caption: string;
@@ -36,8 +40,9 @@ const {
         <figure>
           <a href={item.href || `${item.galleryPath}/${item.id}`}>
             <img
-              src={getSemanticImageUrl({ id: item.id }, { galleryPath: item.galleryPath }, "l")}
+              src={item.src || getSemanticImageUrl({ id: item.id }, { galleryPath: item.galleryPath }, "l")}
               alt={item.alt}
+              style={`object-position:${item.objectPosition || 'top center'};--bridge-scale:${item.cropScale || 1};transform-origin:${item.cropOrigin || 'center'}`}
               loading={index === 0 ? "eager" : "lazy"}
             />
           </a>
@@ -74,8 +79,8 @@ const {
   .cornerstone-bridge__grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.85rem; max-width:850px; margin:1.1rem auto 1rem; }
   .cornerstone-bridge figure { min-width:0; margin:0; }
   .cornerstone-bridge figure a { display:block; aspect-ratio:3/4; overflow:hidden; border:1px solid rgba(121,98,78,.14); border-radius:12px; background:#efe7dc; box-shadow:0 8px 18px rgba(41,30,21,.06); }
-  .cornerstone-bridge img { display:block; width:100%; height:100%; object-fit:cover; object-position:top center; transition:transform .45s ease; }
-  .cornerstone-bridge a:hover img { transform:scale(1.035); }
+  .cornerstone-bridge img { display:block; width:100%; height:100%; object-fit:cover; object-position:top center; transform:scale(var(--bridge-scale,1)); transition:transform .45s ease; }
+  .cornerstone-bridge a:hover img { transform:scale(calc(var(--bridge-scale,1) + .035)); }
   .cornerstone-bridge figcaption { margin-top:.5rem; color:#6a5a4c; font-size:.78rem; font-style:italic; line-height:1.35; }
   .cornerstone-bridge__cta { display:inline-block; margin-top:.3rem; padding-bottom:.1rem; border-bottom:1px solid rgba(123,74,40,.35); color:#7b4a28; font-size:.92rem; font-weight:700; text-decoration:none; }
   .cornerstone-bridge__cta:hover { color:#5f381e; border-bottom-color:rgba(95,56,30,.55); }

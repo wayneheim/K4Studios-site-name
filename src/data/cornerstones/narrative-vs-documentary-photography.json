@@ -1,0 +1,62 @@
+{
+  "hero": {
+    "src": "/img/i-4XLSsnC/lasso-in-motion-western-cowboy-art.jpg",
+    "alt": "Photograph shaped by authorship rather than neutral record alone",
+    "href": "/Western-Fine-Art-Photography"
+  },
+  "heading": "\nNarrative vs Documentary Photography\n",
+  "subtitles": [
+    "\nRecord and implication are not the same task, even when they share a camera\n",
+    "\nA distinction between photography that records what happened and photography that opens what it means\n"
+  ],
+  "bridge": {
+    "kicker": "The Distinction in Practice",
+    "title": "When Record Opens Into Implication",
+    "intro": "These frames remain grounded in history while using atmosphere and authorship to carry more than evidence alone.",
+    "items": [
+      {
+        "id": "i-HJ2ZRPj",
+        "src": "/img/i-HJ2ZRPj/between-drills-civil-war.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-HJ2ZRPj",
+        "alt": "Authored historical photograph",
+        "caption": "History held as more than record"
+      },
+      {
+        "id": "i-fgb75Ts",
+        "src": "/img/i-fgb75Ts/doing-his-part-civil-war.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-fgb75Ts",
+        "alt": "Narrative Civil War photograph",
+        "caption": "Atmosphere extending the visible facts"
+      },
+      {
+        "id": "i-qjLp9Lf",
+        "src": "/img/i-qjLp9Lf/night-watch-civil-war.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-qjLp9Lf",
+        "alt": "Story-driven historical scene",
+        "caption": "Implication surviving beyond the moment"
+      }
+    ],
+    "ctaHref": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all",
+    "ctaLabel": "Explore Narrative Photography"
+  },
+  "essaySamples": [],
+  "artworkLinks": {
+    "i-nWsP2r2": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-nWsP2r2",
+    "i-hM8SXCd": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-hM8SXCd",
+    "i-JkFT62C": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-JkFT62C",
+    "i-9wQL5tH": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-9wQL5tH",
+    "i-n5BfXBm": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-n5BfXBm"
+  },
+  "reservedImageIds": [
+    "i-4XLSsnC",
+    "i-HJ2ZRPj",
+    "i-fgb75Ts",
+    "i-qjLp9Lf"
+  ],
+  "imageOverrides": {},
+  "galleryCrops": {
+    "i-JkFT62C": "center",
+    "i-9wQL5tH": "center",
+    "i-n5BfXBm": "55% center"
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "hero": {
+    "src": "/img/i-JvkzcpM/l.jpg",
+    "alt": "A bearded cowboy in a wide-brimmed hat sits beside a fire at night, his face lit in orange glow while another figure remains softly blurred in the foreground.",
+    "href": "/Western-Fine-Art-Photography"
+  },
+  "heading": "\nWhat Is Cinematic Western Art?\n",
+  "subtitles": [
+    "\nStory-driven Western fine art built from light, silence, atmosphere, gesture, and unresolved consequence\n",
+    "\nCinematic Western art is not simply Western art that looks like a movie. It is story-driven Western fine art built from light, silence, atmosphere, gesture, and the unresolved human moment.\n"
+  ],
+  "bridge": {
+    "kicker": "See the Story Take Shape",
+    "title": "Cinematic Western art holds a larger story inside a single frame.",
+    "intro": "",
+    "items": [
+      {
+        "id": "i-8g6m7tf",
+        "src": "/img/i-8g6m7tf/l.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-8g6m7tf",
+        "alt": "A cowboy sits by a campfire near a wagon wheel, illuminated by warm firelight in a quiet evening setting.",
+        "caption": "Light against uncertainty.",
+        "objectPosition": "center"
+      },
+      {
+        "id": "i-cKFv3th",
+        "src": "/img/i-cKFv3th/held-by-lantern-light-western-cowboy-art.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-cKFv3th",
+        "alt": "Woman holding a lantern beside her horse at night outside a frontier cabin",
+        "caption": "Lantern light carrying the story."
+      },
+      {
+        "id": "i-7VWX9vk",
+        "src": "/img/i-7VWX9vk/one-way-out-western-cowboy-art.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-7VWX9vk",
+        "alt": "Western figure caught inside an unresolved escape",
+        "caption": "The frame before the answer."
+      }
+    ],
+    "ctaHref": "/cinematic-western-art",
+    "ctaLabel": "Explore Cinematic Western Art"
+  },
+  "essaySamples": [],
+  "artworkLinks": {
+    "i-CNrD7G7": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-CNrD7G7",
+    "i-bfKMXS9": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-bfKMXS9",
+    "i-7Mzzbvp": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-7Mzzbvp",
+    "i-DwVBJb3": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-DwVBJb3",
+    "i-5BtMrfM": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-5BtMrfM",
+    "i-DczpNpH": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-DczpNpH",
+    "i-3SxncXS": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-3SxncXS",
+    "i-gxMVNh3": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-gxMVNh3",
+    "i-4zxZQQ2": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-4zxZQQ2",
+    "i-cFhZXJc": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-cFhZXJc",
+    "i-qB47jJT": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-qB47jJT",
+    "i-r5Pb7zJ": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-r5Pb7zJ"
+  },
+  "reservedImageIds": [
+    "i-LL2Gp5r",
+    "i-xpv7z8j",
+    "i-cKFv3th",
+    "i-7VWX9vk"
+  ],
+  "imageOverrides": {
+    "i-7Mzzbvp": {
+      "id": "i-gQ7GZ5s",
+      "src": "/img/i-gQ7GZ5s/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-gQ7GZ5s",
+      "alt": "Frontier gunfighter kneeling with revolvers drawn in a dusty field, preparing for action."
+    },
+    "i-5BtMrfM": {
+      "id": "i-F7q2SDf",
+      "src": "/img/i-F7q2SDf/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-F7q2SDf",
+      "alt": "Along a rustic wooden storefront, two seated figures and one standing figure share a quiet pause in painterly Western photography beneath the shade of a frontier porch."
+    },
+    "i-r5Pb7zJ": {
+      "id": "i-rRdrQBg",
+      "src": "/img/i-rRdrQBg/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-rRdrQBg",
+      "alt": "Figure in feathered headdress seated on a horse along a ridge beneath a wide, clouded sky."
+    },
+    "i-4zxZQQ2": {
+      "id": "i-Z7vtvZg",
+      "src": "/img/i-Z7vtvZg/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-Z7vtvZg",
+      "alt": "A young woman rides ahead on horseback through open grassland while a second rider follows behind, framed by distant hills and soft atmospheric light."
+    },
+    "i-bfKMXS9": {
+      "id": "i-8JSdTGz",
+      "src": "/img/i-8JSdTGz/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-8JSdTGz",
+      "alt": "Frontier couple standing armed over a fallen man in a scene of fine art Western photography."
+    },
+    "i-DczpNpH": {
+      "id": "i-5TGTZ9P",
+      "src": "/img/i-5TGTZ9P/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-5TGTZ9P",
+      "alt": "Rifleman seated against a rocky hillside aiming a long gun while his horse stands behind him, dramatic moment in Western fine art photography."
+    },
+    "i-3SxncXS": {
+      "id": "i-dnxxDXH",
+      "src": "/img/i-dnxxDXH/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-dnxxDXH",
+      "alt": "Long-haired man in a hat holding a rifle indoors, looking off with a tense, unsettled expression."
+    },
+    "i-gxMVNh3": {
+      "id": "i-S9PzB6d",
+      "src": "/img/i-S9PzB6d/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-S9PzB6d",
+      "alt": "Four cowboys riding in formation across open terrain, moving together through a dusty Western landscape in painterly style."
+    }
+  }
+}

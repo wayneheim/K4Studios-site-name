@@ -1,0 +1,82 @@
+{
+  "hero": {
+    "src": "/img/i-7Mzzbvp/last-hand-western-cowboy-art.jpg",
+    "alt": "Cowboy figure composed with authorial intent rather than documentation",
+    "href": "/Western-Fine-Art-Photography"
+  },
+  "heading": "\nWhat Is Western Fine Art? Definition, Meaning, <br data-astro-cid-zmhyihyd=\"\">and Why the Term Matters\n",
+  "subtitles": [
+    "\nWestern subject matter is only the beginning. Authorship is what makes it fine art.\n"
+  ],
+  "bridge": {
+    "kicker": "See the Standard at Work",
+    "title": "Western fine art begins where subject matter stops being enough.",
+    "intro": "Landscape, portraiture, black-and-white study, and historical presence can all enter the Western fine art tradition when authorship, restraint, and narrative intent shape the image.",
+    "items": [
+      {
+        "id": "i-8JHmjF9",
+        "src": "/img/i-8JHmjF9/mountains-photography-painterly-photography-grand-buffalo-the-grand-tetons-and-b-western-landscape-photography.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-8JHmjF9",
+        "alt": "Western landscape shaped by atmosphere, light, and tonal control in fine art photography",
+        "caption": "Landscape shaped by atmosphere, structure, and authorship."
+      },
+      {
+        "id": "i-44jcjTQ",
+        "src": "/img/i-44jcjTQ/over-my-dead-body-frontier-stand-off-western-cowboy-art.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-44jcjTQ",
+        "alt": "Cowboy portrait built around character, posture, and narrative intent rather than stereotype",
+        "caption": "Western portraiture built from character, posture, and intent."
+      },
+      {
+        "id": "i-Txh4c8k",
+        "src": "/img/i-Txh4c8k/loose-ends-cowboy-roping-skills-western-cowboy-art.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/i-Txh4c8k",
+        "alt": "Black-and-white Western study showing craft, tonal design, and authorship beyond medium",
+        "caption": "Black-and-white restraint as artistic discipline."
+      }
+    ],
+    "ctaHref": "/Western-Fine-Art-Photography",
+    "ctaLabel": "Explore Western Fine Art Photography"
+  },
+  "essaySamples": [],
+  "artworkLinks": {
+    "i-Q2NXpjG": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Q2NXpjG",
+    "i-SNtZNVm": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-SNtZNVm",
+    "i-k4b6c5b": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-k4b6c5b",
+    "i-qMQf7b6": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/i-qMQf7b6",
+    "i-WfRwfpM": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-WfRwfpM",
+    "i-6Ffpw9t": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-6Ffpw9t"
+  },
+  "reservedImageIds": [
+    "i-7Mzzbvp",
+    "i-8JHmjF9",
+    "i-44jcjTQ",
+    "i-Txh4c8k"
+  ],
+  "imageOverrides": {
+    "i-k4b6c5b": {
+      "id": "i-67j96vq",
+      "src": "/img/i-67j96vq/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-67j96vq",
+      "alt": "Frontiersman holding a rifle beside an alert saddled horse on a rocky ridge at sunset."
+    },
+    "i-Q2NXpjG": {
+      "id": "i-NHPCPhP",
+      "src": "/img/i-NHPCPhP/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-NHPCPhP",
+      "alt": "Painterly landscape photograph of a Yellowstone waterfall carved into stone, emphasizing slow movement, endurance, and atmospheric light."
+    },
+    "i-qMQf7b6": {
+      "id": "i-FnZ68h3",
+      "src": "/img/i-FnZ68h3/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/i-FnZ68h3",
+      "alt": "Cowboy seated inside a frontier cabin reading a newspaper and looking toward the window."
+    },
+    "i-WfRwfpM": {
+      "id": "i-whbHxkn",
+      "src": "/img/i-whbHxkn/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-whbHxkn",
+      "alt": "Woman in traditional dress holding feathers beside water, a painterly Native American portrait rooted in heritage and tradition."
+    }
+  }
+}

@@ -176,7 +176,7 @@ const faqStructuredData = JSON.stringify({
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "@id": `https://www.k4studios.com${pagePath}#faq`,
-  mainEntity: historicalFAQ.slice(0, 10).map((item: any) => ({
+  mainEntity: historicalFAQ.map((item: any) => ({
     "@type": "Question",
     name: item.q,
     acceptedAnswer: {
@@ -234,12 +234,18 @@ function getProxySrc(imageId: string, size: string = 'm'): string {
 }
 
 const landingImg = featheredImages[0];
-const landingImgUrl = landingImg?.id ? makeAbsoluteUrl(getProxySrc(landingImg.id, 'l')) : '';
+// Pin the verified social lead so Article and OG cannot drift with sample rotation.
+const landingImgUrl = 'https://www.k4studios.com/img/i-Sbr5tSx/a-moment-of-thought-western-cowboy-portrait-art.jpg';
 
 // ✅ Meta should be keyed to the HUB PAGE
 const meta = getLandingMeta(pagePath, landingImgUrl);
 if (!meta.ogUrl) meta.ogUrl = `https://www.k4studios.com${pagePath}`;
 if (!meta.twitterUrl) meta.twitterUrl = `https://www.k4studios.com${pagePath}`;
+const metaDescription = "Historical Western art and historically themed photography by Wayne Heim — the 19th-century frontier explored through narrative, painterly composition.";
+meta.ogDescription = metaDescription;
+meta.twitterDescription = metaDescription;
+meta.story = metaDescription;
+meta.preserveDescriptionDashes = true;
 
 // ----------------------
 // TOMBSTONE THUMBNAILS (dynamic pools, frontier funnel preserved)
@@ -278,6 +284,7 @@ const tombstonesWithThumbs = landingHistorical.tombstones.map((stone: any) => {
 
 <BaseLayout
   title="Historical Western Art – Wayne Heim"
+  description={metaDescription}
   structuredDataJSON={structuredData}
   breadcrumbsJSON={breadcrumbData}
   meta={meta}
@@ -293,6 +300,7 @@ const tombstonesWithThumbs = landingHistorical.tombstones.map((stone: any) => {
     "@type": "Article",
     "headline": "Historical Western Art: Art Depicting the Frontier Era of the American West",
     "description": "Historical Western art is artwork that depicts the frontier era of the American West—cowboys, settlers, Indigenous life, and the people who shaped the landscape long before modern Western culture emerged.",
+    "image": "https://www.k4studios.com/img/i-Sbr5tSx/a-moment-of-thought-western-cowboy-portrait-art.jpg",
     "author": { "@type": "Person", "name": "Wayne Heim", "url": "https://www.k4studios.com/" },
     "publisher": { "@type": "Organization", "name": "K4 Studios", "url": "https://www.k4studios.com/" },
     "mainEntityOfPage": "https://www.k4studios.com/Historical-Western-Art",

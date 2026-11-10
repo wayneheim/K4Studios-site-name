@@ -1,0 +1,162 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import LandingHeader from "@/components/Landing-Header.jsx";
+import SiteFooter from "@/components/Footer.astro";
+import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
+import CornerstoneCollectionNav from "@/components/blog/CornerstoneCollectionNav.astro";
+import CornerstoneVisualBridge from "@/components/blog/CornerstoneVisualBridge.astro";
+import CornerstoneGalleryDoor from "@/components/blog/CornerstoneGalleryDoor.astro";
+import FAQAccordion from "@/components/FAQAccordion.jsx";
+import KeywordLinkedArticle from "@/components/blog/KeywordLinkedArticle.astro";
+import * as contentData from '../what-is-western-fine-art-photography';
+const { sectionPath, canonicalUrl, getProxySrc, getAbsoluteProxySrc, headerImages, image1, image2, image3, closerImage1, closerImage2, closerImage3, pageTitle, pageDescription, westernFineArtPhotographyFaq, faqStructuredData, structuredImageUrls, breadcrumbStructuredData, structuredData, meta, blogBreadcrumb } = contentData;
+---
+<!-- SECTION 1: Definition (THE ANCHOR) -->
+        <p><strong>Western fine art photography</strong> is the photographic expression of <a href="/Blog/what-is-western-fine-art" style="color:#8b5a2b; text-decoration:underline;">Western fine art</a>—authored work engaging the American West with intentional composition, narrative depth, and artistic restraint.</p>
+
+        <p>It is photography created as fine art, not as documentation, décor, or commercial stock imagery. It is defined by authorship: decisions about structure, light, atmosphere, and emotional meaning that elevate the work beyond record-keeping.</p>
+
+        <p>The distinction is not subtle.<br>
+        A photograph of a cowboy is not automatically Western fine art.<br>
+        A landscape of Monument Valley is not fine art simply because it is beautiful.</p>
+
+        <p>Fine art requires the photographer to make decisions about what the image will mean. The subject does not confer status. The authorship does.</p>
+
+        <p>This article defines what Western fine art photography is, what it is not, and why the distinction matters for collectors, curators, and anyone seeking work that endures on a wall rather than in a folder.</p>
+
+        <!-- EARLY FUNNEL -->
+        <div class="early-funnel" style="background:#f8f6f3; border-left:4px solid #8b5a2b; padding:1.25rem 1.5rem; margin:2rem 0; border-radius:0 8px 8px 0;">
+          <p style="margin:0; font-size:1.05rem;">
+            The definition matters because the work is meant to be seen, not just explained. Explore the primary
+            <a href="/Western-Fine-Art-Photography" style="color:#8b5a2b; font-weight:600; text-decoration:underline;">Western Fine Art Photography collection</a>
+            to see how authorship, atmosphere, and restraint carry through the images themselves.
+          </p>
+          <p style="margin:0.75rem 0 0; font-size:1.05rem;">
+            For the artist authority page behind that work, see
+            <a href="/wayne-heim-western-fine-art-photography" style="color:#8b5a2b; font-weight:600; text-decoration:underline;">Wayne Heim</a>.
+          </p>
+        </div>
+
+        <!-- SECTION 2: Where It Fits -->
+        <div class="section-heading-with-line">
+          <h2>Where Western Fine Art Photography Fits</h2>
+        </div>
+
+        <CornerstoneGalleryDoor id={closerImage1.id} galleryPath="/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery" alt={closerImage1.alt} caption="A fine art Western landscape builds atmosphere, structure, and authorship instead of relying on familiar scenery." href="/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/all" label="Browse Western Landscapes" align="right" />
+
+        <p>Western fine art photography is not a separate category from <a href="/Blog/what-is-western-fine-art" style="color:#8b5a2b; text-decoration:underline;">Western fine art</a>. It is one of its mediums.</p>
+
+        <p><a href="/Blog/what-is-western-art" style="color:#8b5a2b; text-decoration:underline;">Western art</a> as a whole includes illustration, film, décor imagery, and commercial photography. Western fine art represents the authored core of that tradition—work created with lasting artistic intent.</p>
+
+        <p>Western fine art photography sits inside that core.<br>
+        It applies the same authorship standards historically associated with painting to the photographic medium.</p>
+
+        <p>The criteria are the same:</p>
+
+        <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 1.5rem;">
+          <li style="margin-bottom:0.5rem;">Intentional composition</li>
+          <li style="margin-bottom:0.5rem;">Narrative structure</li>
+          <li style="margin-bottom:0.5rem;">Emotional depth</li>
+          <li style="margin-bottom:0.5rem;">Technical restraint</li>
+          <li style="margin-bottom:0.5rem;">Long-term artistic ambition</li>
+        </ul>
+
+        <p>If the work meets those standards, it belongs in the Western fine art conversation—regardless of whether it was painted or photographed.</p>
+
+        <p>For the medium-level hub that gathers those ideas into an actual body of work, move from this definition page into the main <a href="/Western-Fine-Art-Photography" style="color:#8b5a2b; text-decoration:underline;">Western Fine Art Photography</a> collection.</p>
+
+        <!-- SECTION 3: What It Is Not -->
+        <div class="section-heading-with-line">
+          <h2>What Western Fine Art Photography Is Not</h2>
+        </div>
+
+        <CornerstoneGalleryDoor id={closerImage2.id} galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color" alt={closerImage2.alt} caption="Character and posture matter more than stereotype when the work is authored as fine art." href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all" label="Browse Western Narratives" align="right" />
+
+        <p>The term "Western photography" has been stretched until it means almost nothing. Search for it and you will find stock silhouettes, mass-produced sunset prints, and decorative pieces designed to match leather furniture.</p>
+
+        <p>These serve legitimate purposes—but they are not fine art.</p>
+
+        <p><strong>Western décor photography</strong><br>
+        Designed for visual appeal without narrative weight. It prioritizes color coordination and familiar motifs over meaning.</p>
+
+        <p><strong>Stock Western imagery</strong><br>
+        Treats the West as interchangeable backdrop. The cowboy becomes a silhouette. The landscape becomes wallpaper.</p>
+
+        <p><strong>Event and rodeo photography</strong><br>
+        Documents action and performance. Valuable as journalism or record, but reactive rather than authored.</p>
+
+        <p>Western fine art photography operates differently.<br>
+        It is not reactive. It is built—light by light, frame by frame, decision by decision.</p>
+
+        <!-- SECTION 4: What Defines It -->
+        <div class="section-heading-with-line">
+          <h2>What Defines Western Fine Art Photography</h2>
+        </div>
+
+        <CornerstoneGalleryDoor id={closerImage3.id} galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color" alt={closerImage3.alt} caption="Light is controlled. Composition is deliberate. The image is built for the print, not the screen." href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all" label="Browse Western Narratives" align="right" />
+
+        <p>Fine art photography—Western or otherwise—is defined by authorship. The photographer shapes how the image functions, what it communicates, and how it rewards attention over time. The photograph is not found, it is made. In Western fine art photography, this authorship often appears as:</p>
+
+        <p><strong>Character over archetype</strong><br>
+        Cowboys, ranchers, and frontier figures appear as individuals rather than symbols.</p>
+
+        <p><strong>Narrative structure</strong><br>
+        Each image implies a story. Something has happened. Something is about to.</p>
+
+        <p><strong>Emotional landscape</strong><br>
+        The land shapes the human experience. Weather, sky, and distance function as narrative elements.</p>
+
+        <p><strong>Discipline and restraint</strong><br>
+        Light is controlled. Composition is deliberate. The image is built for the print, not the screen.</p>
+
+        <p>This is the difference between taking a picture and making one.</p>
+
+        <!-- SECTION 6: Why the Distinction Matters -->
+        <div class="section-heading-with-line">
+          <h2>Why the Distinction Matters</h2>
+        </div>
+
+        <p>For collectors, the distinction determines long-term value. Fine art is collected, written about, exhibited, and preserved. Commercial imagery is replaceable.</p>
+
+        <p>For curators, it allows Western photography to be discussed alongside painting and sculpture, rather than confined to documentary or decorative categories.</p>
+
+        <p>For artists, the distinction is structural. It determines whether the work participates in a fine art tradition or remains outside it.</p>
+
+        <p>Western fine art photography exists to be considered over time—not simply viewed once and replaced.</p>
+
+        <div class="section-heading-with-line">
+          <h2>Frequently Asked Questions</h2>
+        </div>
+        <FAQAccordion items={westernFineArtPhotographyFaq} showHeading={false} />
+
+        <!-- SECTION 7: Explore -->
+        <div class="section-heading-with-line">
+          <h2>Explore the Work</h2>
+        </div>
+
+        <p>This article defines Western fine art photography as a discipline. The following collections present the work itself:</p>
+
+        <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 2rem;">
+          <li style="margin-bottom:0.75rem;">
+            <a href="/Fine-Art-Photography-of-the-American-West" style="color:#8b5a2b; text-decoration:underline; font-weight:600;">Fine Art Photography of the American West</a> —
+            <span style="color:#666;">The paired collection doorway for this definition</span>
+          </li>
+          <li style="margin-bottom:0.75rem;">
+            <a href="/Western-Fine-Art-Photography" style="color:#8b5a2b; text-decoration:underline; font-weight:600;">Western Fine Art Photography</a> — 
+            <span style="color:#666;">The full collection</span>
+          </li>
+          <li style="margin-bottom:0.75rem;">
+            <a href="/Western-Wall-Art" style="color:#8b5a2b; text-decoration:underline;">Wayne Heim's print catalog</a> -
+            <span style="color:#666;">Collector-ready Western prints for walls and interiors</span>
+          </li>
+          <li style="margin-bottom:0.75rem;">
+            <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color" style="color:#8b5a2b; text-decoration:underline;">Western Cowboy Portraits</a> — 
+            <span style="color:#666;">Character studies in color and black & white</span>
+          </li>
+          <li style="margin-bottom:0.75rem;">
+            <a href="/Painterly-Western-Photography" style="color:#8b5a2b; text-decoration:underline;">Painterly Western Photography</a> — 
+            <span style="color:#666;">The visual language behind the work</span>
+          </li>
+        </ul>
+
+        <p>Western fine art photography, at its best, invites the viewer past the familiar and into something specific—a person, a story, a moment that belongs to no one else.</p>

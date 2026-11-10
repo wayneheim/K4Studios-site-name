@@ -1,0 +1,67 @@
+{
+  "hero": {
+    "src": "/img/i-CzWxpvV/l.jpg",
+    "alt": "Western rider on horseback overseeing cattle moving across open prairie grassland.",
+    "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-7Mzzbvp"
+  },
+  "heading": "What Is the Wild West?",
+  "subtitles": [
+    "The era, the geography, and the line between the lived West and the legend"
+  ],
+  "bridge": {
+    "kicker": "See the Work",
+    "title": "The Wild West survives as both lived history and unfinished legend.",
+    "intro": "",
+    "items": [
+      {
+        "id": "i-jRxNbgX",
+        "src": "/img/i-jRxNbgX/with-reverence-and-intent-western-cowboy-art.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-jRxNbgX",
+        "alt": "Western figures gathered in a moment of reverence and intent",
+        "caption": "The lived West."
+      },
+      {
+        "id": "i-VDLVwqr",
+        "src": "/img/i-VDLVwqr/l.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-VDLVwqr",
+        "alt": "A woman sits at the foot of a bed looking toward a window while a revolver and cartridge belt hang from the bedpost beside her.",
+        "caption": "The unsettled West."
+      },
+      {
+        "id": "i-89qzJ6S",
+        "src": "/img/i-89qzJ6S/open-country-brothers-western-cowboy-art.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-89qzJ6S",
+        "alt": "Cowboys crossing open country together",
+        "caption": "The remembered West."
+      }
+    ],
+    "ctaHref": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West",
+    "ctaLabel": "Enter the Wild West Collections"
+  },
+  "essaySamples": [],
+  "artworkLinks": {
+    "i-6VQKFs5": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-6VQKFs5",
+    "i-kQfftQ2": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-kQfftQ2",
+    "i-B7ZSdfs": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-B7ZSdfs"
+  },
+  "reservedImageIds": [
+    "i-7Mzzbvp",
+    "i-jRxNbgX",
+    "i-c5K798H",
+    "i-89qzJ6S"
+  ],
+  "imageOverrides": {
+    "i-B7ZSdfs": {
+      "id": "i-hrghzzx",
+      "src": "/img/i-hrghzzx/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-hrghzzx",
+      "alt": "Man and woman examining an object together outside a rustic cabin in a Western frontier setting."
+    },
+    "i-kQfftQ2": {
+      "id": "i-WMs24Db",
+      "src": "/img/i-WMs24Db/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-WMs24Db",
+      "alt": "Woman stands on a riverbank watching a rider on horseback move away through shallow water in a muted Western landscape."
+    }
+  }
+}

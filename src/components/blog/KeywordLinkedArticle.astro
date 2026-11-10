@@ -1,8 +1,11 @@
 ---
 import { autoLinkKeywordsInText } from "@/components/utils/autoLinkKeywordsInText.ts";
 import { semantic as k4Semantic } from "@/data/semantic/K4-Sem.ts";
+import { standardizeCornerstone } from './standardizeCornerstone.mjs';
+import '@/styles/cornerstone-standard.css';
+import { cornerstoneFaqs } from '@/data/cornerstoneFaqs.js';
 
-const { pagePath = Astro.url.pathname } = Astro.props as { pagePath?: string };
+const { pagePath = Astro.url.pathname, reservedImageIds = [], essaySamples = [], artworkLinks = {}, imageOverrides = {}, galleryCrops = {} } = Astro.props;
 const source = await Astro.slots.render("default");
 
 const protectedFragments: string[] = [];
@@ -32,6 +35,7 @@ const withoutSelfLinks = linked.replace(
   (anchor, href, label) => String(href).replace(/\/+$/, "").toLowerCase() === normalizedPagePath ? label : anchor,
 );
 const restored = withoutSelfLinks.replace(/\uE000(\d+)\uE001/g, (_match, index) => protectedFragments[Number(index)] ?? "");
+const formatted = standardizeCornerstone(restored, reservedImageIds, cornerstoneFaqs[pagePath], pagePath, essaySamples, artworkLinks, imageOverrides, galleryCrops);
 ---
 
-<Fragment set:html={restored} />
+<Fragment set:html={formatted} />

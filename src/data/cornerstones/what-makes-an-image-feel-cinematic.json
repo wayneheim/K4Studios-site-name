@@ -1,0 +1,81 @@
+{
+  "hero": {
+    "src": "/img/i-LL2Gp5r/special-delivery-western-cowboy-art.jpg",
+    "alt": "Special Delivery, a cinematic Western narrative artwork with figures gathered before a halted night train",
+    "href": "/Western-Fine-Art-Photography"
+  },
+  "heading": "\nWhat Makes an Image Feel Cinematic?\n",
+  "subtitles": [
+    "\nNot color grading. Not spectacle. Story under pressure.\n",
+    "\nA guide to the still-image qualities that create cinematic presence\n"
+  ],
+  "bridge": {
+    "kicker": "Story Under Pressure",
+    "title": "Cinematic feeling begins before color grading or spectacle.",
+    "intro": "Tension, atmosphere, and unresolved consequence make a still image feel connected to a larger unseen sequence.",
+    "items": [
+      {
+        "id": "i-DczpNpH",
+        "src": "/img/i-DczpNpH/if-you-want-a-job-done-right-western-cowboy-art.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-DczpNpH",
+        "alt": "Portrait where tension lingers beyond the visible moment",
+        "caption": "Tension lingering beyond the visible moment."
+      },
+      {
+        "id": "i-3SxncXS",
+        "src": "/img/i-3SxncXS/the-keeper-of-old-winds-western-cowboy-art.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-3SxncXS",
+        "alt": "Frame carrying suspense through atmosphere and unresolved action",
+        "caption": "Atmosphere carrying unresolved action."
+      },
+      {
+        "id": "i-gxMVNh3",
+        "src": "/img/i-gxMVNh3/tumbleweed-whispers-western-cowboy-art.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-gxMVNh3",
+        "alt": "Landscape with cinematic atmosphere and emotional direction",
+        "caption": "Composition implying a larger before and after."
+      }
+    ],
+    "ctaHref": "/cinematic-western-art",
+    "ctaLabel": "Explore Cinematic Western Art"
+  },
+  "essaySamples": [],
+  "artworkLinks": {
+    "i-7Mzzbvp": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-7Mzzbvp",
+    "i-5TtHV8g": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-5TtHV8g",
+    "i-5rq7gcD": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-5rq7gcD",
+    "i-SNtZNVm": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-SNtZNVm"
+  },
+  "reservedImageIds": [
+    "i-LL2Gp5r",
+    "i-DczpNpH",
+    "i-3SxncXS",
+    "i-gxMVNh3"
+  ],
+  "imageOverrides": {
+    "i-7Mzzbvp": {
+      "id": "i-3NNTv7n",
+      "src": "/img/i-3NNTv7n/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-3NNTv7n",
+      "alt": "Two cowboys on horseback aiming rifles from a rocky ridge toward an unseen target below."
+    },
+    "i-SNtZNVm": {
+      "id": "i-zncBGq4",
+      "src": "/img/i-zncBGq4/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-zncBGq4",
+      "alt": "Painterly landscape photograph of an overgrown forest road being reclaimed by nature, ethereal woodland scene with soft light and quiet atmosphere."
+    },
+    "i-5TtHV8g": {
+      "id": "i-d9znSwP",
+      "src": "/img/i-d9znSwP/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-d9znSwP",
+      "alt": "Bearded man in a hat standing beside a wooden building with a rifle at his side in a Western scene."
+    },
+    "i-5rq7gcD": {
+      "id": "i-BzFqL6f",
+      "src": "/img/i-BzFqL6f/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-BzFqL6f",
+      "alt": "A mustached cowboy in a brimmed hat aims a rifle while standing close to a rock wall, lit by warm directional light in a painterly Western scene."
+    }
+  }
+}

@@ -91,7 +91,7 @@ export const westernPainterlyFineArtPhotographyPage = {
   title: 'Western Painterly Fine Art Photography - Wayne Heim',
   h1: 'Western Painterly Fine Art Photography',
   metaDescription:
-    'Western painterly fine art photography by Wayne Heim, blending camera-based realism, painterly atmosphere, cinematic composition, and Western storytelling into collectible fine art prints.',
+    'Western painterly fine art photography by Wayne Heim, blending camera-based realism, painterly atmosphere, and cinematic composition into fine art prints.',
   intro:
     'Western painterly fine art photography by Wayne Heim blends a camera-based foundation with painterly atmosphere, cinematic composition, and Western storytelling. These collectible fine art prints draw from cowboy life, frontier history, Western portraiture, landscapes, and the human structure beneath the myth.',
   breadcrumbLabel: 'Western Painterly Fine Art Photography',

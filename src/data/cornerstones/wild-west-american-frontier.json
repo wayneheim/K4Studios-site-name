@@ -1,0 +1,76 @@
+{
+  "hero": {
+    "src": "/img/i-B7ZSdfs/till-death-do-us-part-western-cowboy-art.jpg",
+    "alt": "The American frontier interpreted as an interrupted narrative moment in Wayne Heim's Western art",
+    "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-B7ZSdfs",
+    "objectPosition": "center 40%"
+  },
+  "heading": "Wild West American Frontier",
+  "subtitles": [
+    "The moving line of settlement, what it felt like from inside, and why it never really closed"
+  ],
+  "bridge": {
+    "kicker": "See the Work",
+    "title": "The frontier was a moving edge where distance turned every choice into consequence.",
+    "intro": "",
+    "items": [
+      {
+        "id": "i-XmhTdjF",
+        "src": "/img/i-XmhTdjF/standing-watch-western-cowboy-art.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-XmhTdjF",
+        "alt": "Western figure standing watch at the edge of open country",
+        "caption": "Where protection thinned."
+      },
+      {
+        "id": "i-PM4d3g3",
+        "src": "/img/i-PM4d3g3/l.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-PM4d3g3",
+        "alt": "Older cowboy lit by firelight, raising one hand mid-pitch while holding a tin cup of whiskey in the other inside a rustic room.",
+        "caption": "Where law became personal."
+      },
+      {
+        "id": "i-8zFZ3jn",
+        "src": "/img/i-8zFZ3jn/night-light-western-cowboy-portrait-art.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-8zFZ3jn",
+        "alt": "Western figure held in isolated night light",
+        "caption": "Where distance shaped character."
+      }
+    ],
+    "ctaHref": "/Western-Frontier-Art",
+    "ctaLabel": "Explore American Frontier Art"
+  },
+  "essaySamples": [],
+  "artworkLinks": {
+    "i-xqZwcZh": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-xqZwcZh",
+    "i-r5Pb7zJ": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-r5Pb7zJ",
+    "i-Sc9hZGs": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-Sc9hZGs"
+  },
+  "reservedImageIds": [
+    "i-B7ZSdfs",
+    "i-XmhTdjF",
+    "i-44jcjTQ",
+    "i-8zFZ3jn"
+  ],
+  "imageOverrides": {
+    "i-r5Pb7zJ": {
+      "id": "i-4bn8bBz",
+      "src": "/img/i-4bn8bBz/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-4bn8bBz",
+      "alt": "A cowboy rides a brown horse across open prairie while swinging a lariat overhead, wind lifting his coat as dust trails behind the horse.",
+      "captionTitle": {
+        "from": "Signs",
+        "to": "Rider on the Open Plain"
+      }
+    },
+    "i-Sc9hZGs": {
+      "id": "i-8CfzGMc",
+      "src": "/img/i-8CfzGMc/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-8CfzGMc",
+      "alt": "Two mounted cowboys aiming revolvers during a tense standoff on horseback in a Western frontier scene.",
+      "captionTitle": {
+        "from": "Change of Plans",
+        "to": "Last Chance Riders"
+      }
+    }
+  }
+}

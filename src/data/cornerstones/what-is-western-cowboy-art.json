@@ -1,0 +1,83 @@
+{
+  "hero": {
+    "src": "/img/i-vP7bLLc/keeping-the-line-western-cowboy-art.jpg",
+    "alt": "Western cowboy art — cowboy portrait in warm directional light capturing character and frontier presence",
+    "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits"
+  },
+  "heading": "\nWhat Is Western Cowboy Art?\n",
+  "subtitles": [
+    "\nHistory, myth, and the enduring figure of the American cowboy\n"
+  ],
+  "bridge": {
+    "kicker": "See the Cowboy Beyond the Symbol",
+    "title": "Western cowboy art begins with the person beneath the icon.",
+    "intro": "Portrait, atmosphere, and narrative consequence move the cowboy beyond costume and into authored Western fine art.",
+    "items": [
+      {
+        "id": "i-KVxkXrV",
+        "src": "/img/i-KVxkXrV/rescue-mission-2-western-cowboy-portrait-art.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-KVxkXrV",
+        "alt": "Cowboy portrait in frontier light emphasizing character, vigilance, and the human weight behind the Western icon",
+        "caption": "Character and vigilance beneath the familiar Western figure."
+      },
+      {
+        "id": "i-Dw6Z8ff",
+        "src": "/img/i-Dw6Z8ff/there-western-cowboy-art.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-Dw6Z8ff",
+        "alt": "Cowboy figure in painterly atmosphere where narrative presence matters more than spectacle",
+        "caption": "Painterly atmosphere carrying more than spectacle."
+      },
+      {
+        "id": "i-8BbMZjs",
+        "src": "/img/i-8BbMZjs/minding-the-herd-western-cowboy-portrait-art.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-8BbMZjs",
+        "alt": "Western cowboy portrait expressing quiet determination and psychological depth beyond heroic pose",
+        "caption": "Quiet determination held as psychological portraiture."
+      }
+    ],
+    "ctaHref": "/western-cowboy-art",
+    "ctaLabel": "Explore Western Cowboy Art"
+  },
+  "essaySamples": [],
+  "artworkLinks": {
+    "i-B7ZSdfs": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-B7ZSdfs",
+    "i-Rx5gLJz": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-Rx5gLJz",
+    "i-f4MSxpP": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-f4MSxpP",
+    "i-6Ffpw9t": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-6Ffpw9t",
+    "i-5BtMrfM": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-5BtMrfM",
+    "i-rfFBRQM": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-rfFBRQM",
+    "i-HBRmWg4": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-HBRmWg4"
+  },
+  "reservedImageIds": [
+    "i-vP7bLLc",
+    "i-KVxkXrV",
+    "i-Dw6Z8ff",
+    "i-8BbMZjs"
+  ],
+  "imageOverrides": {
+    "i-B7ZSdfs": {
+      "id": "i-V5djX4B",
+      "src": "/img/i-V5djX4B/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-V5djX4B",
+      "alt": "A cowboy stands inside a cabin by a window at dawn, holding a rifle as light pours in across the wooden interior."
+    },
+    "i-Rx5gLJz": {
+      "id": "i-9BhX2Lj",
+      "src": "/img/i-9BhX2Lj/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-9BhX2Lj",
+      "alt": "Painterly Western image of a bearded gunslinger lowering his head in golden light, hand resting near his holstered revolver as smoke rises around him."
+    },
+    "i-6Ffpw9t": {
+      "id": "i-XR9PZT5",
+      "src": "/img/i-XR9PZT5/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-XR9PZT5",
+      "alt": "Woman in period dress standing by a table, looking toward window light in a softly lit Western interior portrait."
+    },
+    "i-rfFBRQM": {
+      "id": "i-qqVG3fw",
+      "src": "/img/i-qqVG3fw/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-qqVG3fw",
+      "alt": "Three frontier figures stand closely together, heads lowered and bodies still, conveying quiet tension in a muted outdoor scene."
+    }
+  }
+}

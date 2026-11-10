@@ -1,0 +1,107 @@
+{
+  "hero": {
+    "src": "/img/i-Sc9hZGs/change-of-plans-western-cowboy-art.jpg",
+    "alt": "Photograph carrying visual storytelling through atmosphere and implication",
+    "href": "/Western-Fine-Art-Photography",
+    "objectPosition": "center 34%"
+  },
+  "heading": "\nWhat Is Visual Storytelling in Photography?\n",
+  "subtitles": [
+    "\nPhotography that suggests a life larger than the visible frame\n",
+    "\nA definition of how still images move from record into implication, atmosphere, and story\n"
+  ],
+  "bridge": {
+    "kicker": "Story in the Frame",
+    "title": "Visual Storytelling Across a Single Moment",
+    "intro": "Gesture, setting, and unresolved consequence turn a photograph from description into story.",
+    "items": [
+      {
+        "id": "i-DJKJkMb",
+        "src": "/img/i-DJKJkMb/hold-fast-civil-war.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-DJKJkMb",
+        "alt": "Civil War narrative photograph",
+        "caption": "Gesture directing the story"
+      },
+      {
+        "id": "i-kWVzc6g",
+        "src": "/img/i-kWVzc6g/back-up-plan-civil-war-portrait-art.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-kWVzc6g",
+        "alt": "Civil War figure held inside an unfolding visual story",
+        "caption": "Setting working as narrative"
+      },
+      {
+        "id": "i-thK6pDc",
+        "src": "/img/i-thK6pDc/taking-aim-civil-war.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-thK6pDc",
+        "alt": "Painterly Civil War scene",
+        "caption": "Consequence held beyond the frame"
+      }
+    ],
+    "ctaHref": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all",
+    "ctaLabel": "Browse Story-Driven Photography"
+  },
+  "essaySamples": [
+    {
+      "heading": "How Visual Storytelling Is Usually Understood",
+      "mode": "inline",
+      "items": [
+        {
+          "id": "i-trZrk2w",
+          "src": "/img/i-trZrk2w/l.jpg",
+          "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-trZrk2w",
+          "alt": "Painterly western cowboys on horseback at night scanning the distance in a rocky canyon, cinematic frontier scene."
+        }
+      ]
+    },
+    {
+      "heading": "How It Feels Different",
+      "mode": "inline",
+      "items": [
+        {
+          "id": "i-5TtHV8g",
+          "src": "/img/i-5TtHV8g/l.jpg",
+          "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-5TtHV8g",
+          "alt": "Frontier cowboy standing beside a cabin window holding a rifle while watching the darkness outside in a narrative Western art scene."
+        }
+      ]
+    }
+  ],
+  "artworkLinks": {
+    "i-vT7SdKj": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-vT7SdKj",
+    "i-NxjDRLV": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-NxjDRLV",
+    "i-X4SH26N": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-X4SH26N",
+    "i-QWcX7JT": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-QWcX7JT",
+    "i-pvFgTr4": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-pvFgTr4"
+  },
+  "reservedImageIds": [
+    "i-Sc9hZGs",
+    "i-DJKJkMb",
+    "i-kWVzc6g",
+    "i-thK6pDc"
+  ],
+  "imageOverrides": {
+    "i-trZrk2w": {
+      "id": "i-GjZfMXj",
+      "src": "/img/i-GjZfMXj/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-GjZfMXj",
+      "alt": "Cowboy riding a horse through a snowstorm at night while holding a lantern."
+    },
+    "i-5TtHV8g": {
+      "id": "i-vP376vx",
+      "src": "/img/i-vP376vx/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-vP376vx",
+      "alt": "Cowboy standing near a campfire at night holding a rifle while watching into the darkness, firelight illuminating drifting smoke."
+    },
+    "i-NxjDRLV": {
+      "id": "i-WD9ZmGH",
+      "src": "/img/i-WD9ZmGH/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-WD9ZmGH",
+      "alt": "Older lawman holding a rifle across his body, wearing a badge and hat in a calm Western portrait."
+    }
+  },
+  "galleryCrops": {
+    "i-NxjDRLV": "center",
+    "i-X4SH26N": "center",
+    "i-QWcX7JT": "center"
+  }
+}

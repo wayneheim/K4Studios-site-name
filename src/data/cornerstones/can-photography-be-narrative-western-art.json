@@ -1,0 +1,75 @@
+{
+  "hero": {
+    "src": "/img/i-zqZBdJF/l.jpg",
+    "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color",
+    "alt": "Three cowboys stand on a rocky ridge holding rifles, spaced apart as they look out over the landscape beneath a cloudy sky.",
+    "objectPosition": "center 40%"
+  },
+  "heading": "\nCan Photography Be Narrative Western Art?\n",
+  "subtitles": [
+    "\nYes — if the story is carried by the image, not borrowed from the medium\n",
+    "\nA clarification of medium, authorship, and legitimacy inside the Western tradition\n"
+  ],
+  "bridge": {
+    "kicker": "Photography as Narrative Art",
+    "title": "Three Photographs Built as Western Stories",
+    "intro": "The medium changes; the demand for story, atmosphere, and consequence does not.",
+    "items": [
+      {
+        "id": "i-bq4FKvX",
+        "src": "/img/i-bq4FKvX/end-of-his-rope-western-cowboy-art.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-bq4FKvX",
+        "alt": "Narrative Western fine art photograph",
+        "caption": "Story carried by the image itself"
+      },
+      {
+        "id": "i-BxK562q",
+        "src": "/img/i-BxK562q/a-reach-of-faith-western-cowboy-art.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-BxK562q",
+        "alt": "Painterly Western narrative photograph",
+        "caption": "Atmosphere shaped as narrative material"
+      },
+      {
+        "id": "i-Vhv8w9H",
+        "src": "/img/i-Vhv8w9H/of-one-mind-and-body-western-cowboy-art.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-Vhv8w9H",
+        "alt": "Cinematic Western art photograph",
+        "caption": "A single frame carrying consequence"
+      }
+    ],
+    "ctaHref": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all",
+    "ctaLabel": "Explore Narrative Western Art"
+  },
+  "essaySamples": [],
+  "artworkLinks": {
+    "i-trZrk2w": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-trZrk2w",
+    "i-RsLmsLZ": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-RsLmsLZ",
+    "i-G7csptc": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-G7csptc",
+    "i-NDnxRkx": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-NDnxRkx",
+    "i-HBRmWg4": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-HBRmWg4"
+  },
+  "reservedImageIds": [
+    "i-kQfftQ2",
+    "i-bq4FKvX",
+    "i-BxK562q",
+    "i-Vhv8w9H"
+  ],
+  "imageOverrides": {
+    "i-trZrk2w": {
+      "id": "i-k6jGzSq",
+      "src": "/img/i-k6jGzSq/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-k6jGzSq",
+      "alt": "Cowboys gathered on a lantern-lit saloon porch at night in a scene of fine art Western photography.",
+      "captionTitle": {
+        "from": "Night Raid",
+        "to": "Western Politicking"
+      }
+    },
+    "i-HBRmWg4": {
+      "id": "i-3V4rCN8",
+      "src": "/img/i-3V4rCN8/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-3V4rCN8",
+      "alt": "A seated cowboy rests at a wooden table under warm lamplight inside a rustic cabin, with shadows surrounding him."
+    }
+  }
+}

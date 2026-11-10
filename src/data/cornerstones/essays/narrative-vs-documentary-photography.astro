@@ -1,0 +1,119 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import LandingHeader from "@/components/Landing-Header.jsx";
+import SiteFooter from "@/components/Footer.astro";
+import CornerstoneCollectionNav from "@/components/blog/CornerstoneCollectionNav.astro";
+import KeywordLinkedArticle from "@/components/blog/KeywordLinkedArticle.astro";
+import CornerstoneVisualBridge from "@/components/blog/CornerstoneVisualBridge.astro";
+import CornerstoneGalleryDoor from "@/components/blog/CornerstoneGalleryDoor.astro";
+import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
+import * as contentData from '../narrative-vs-documentary-photography';
+const { sectionPath, canonicalUrl, getProxySrc, getAbsoluteProxySrc, headerImage, image1, image2, image3, pageTitle, pageDescription, metaDescription, structuredImageUrls, breadcrumbStructuredData, structuredData, meta, blogBreadcrumb } = contentData;
+---
+<p style="font-size:0.95rem; color:#666; margin-bottom:1.5rem; font-style:italic;">
+          Both can use the same subjects and the same camera. They diverge in what the image is built to do.
+        </p>
+
+        <p><strong>Documentary photography</strong> records what happened. <strong>Narrative photography</strong> shapes what the moment feels like, implies what surrounds it, and opens the viewer toward what the image means rather than only what it shows.</p>
+
+        <p>This is not a hierarchy. Documentary work can be powerful, essential, and deeply human. Narrative work can also be grounded in real people, real places, and real history. The difference is not truth versus fiction. It is record versus implication.</p>
+
+        <p>If documentary photography asks, “What happened here?” narrative photography often asks, “What pressure is still living inside this moment?”</p>
+
+        <div class="section-heading-with-line">
+          <h2>What Documentary Photography Does</h2>
+        </div>
+
+        <p>Documentary photography is built around witness. It preserves events, people, places, and conditions with fidelity to what occurred.</p>
+
+        <p>Its strength lies in evidence, context, immediacy, and clarity. Even when shaped by the photographer’s eye, its core task remains tied to record.</p>
+
+        <p>The documentary image says: this happened, this was there, this was seen.</p>
+
+        <div class="section-heading-with-line">
+          <h2>What Narrative Photography Does</h2>
+        </div>
+
+        <CornerstoneGalleryDoor id="i-nWsP2r2" galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War/Color" alt="Civil War photograph shaped beyond documentary record" caption="Historical evidence held open through authored atmosphere." href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all" label="See Narrative Photography in Practice" align="left" />
+
+        <p>Narrative photography begins where the image is built to carry more than evidence. It still may arise from real life, real subjects, or historical truth. But the frame is shaped so that atmosphere, implication, and emotional consequence keep working after the visible facts are understood.</p>
+
+        <p>The narrative image says: remain here a little longer. There is more life pressing against this moment than the eye can settle in one pass.</p>
+
+        <p>This is one reason narrative photography often overlaps with images that feel more like moving stories than fixed records. At K4 Studios, that single-frame narrative pressure is gathered under the <a href="/Other/One-Image-Movie" style="color:#8b5a2b; text-decoration:underline;">One-Image Movie™</a> idea.</p>
+
+        <div class="section-heading-with-line">
+          <h2>Where They Overlap</h2>
+        </div>
+
+        <p>The line between documentary and narrative is not always absolute. A documentary photograph may contain narrative force. A narrative photograph may remain rooted in historical or observational truth.</p>
+
+        <p>The distinction becomes clearer when asking what the image is optimized to do:</p>
+
+        <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 1.5rem;">
+          <li style="margin-bottom:0.5rem;">Documentary prioritizes witness</li>
+          <li style="margin-bottom:0.5rem;">Narrative prioritizes implication</li>
+          <li style="margin-bottom:0.5rem;">Documentary protects the fact of the moment</li>
+          <li style="margin-bottom:0.5rem;">Narrative builds the emotional architecture around the moment</li>
+        </ul>
+
+        <div class="section-heading-with-line">
+          <h2>Why the Difference Matters in Western and Historical Work</h2>
+        </div>
+
+        <CornerstoneGalleryDoor id="i-hM8SXCd" galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War/Color" alt="Authored historical photograph with narrative pressure" caption="The point where record begins carrying implication." href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War/Color/all" label="Explore Authored Historical Stories" align="right" />
+
+        <p>In Western and historical subjects, this distinction matters because the same costume, landscape, or reenacted scene can be treated in radically different ways.</p>
+
+        <p>One image may document period detail accurately. Another may use that same detail to carry memory, tension, and unresolved consequence. Both can be legitimate. They are simply working toward different ends.</p>
+
+        <p>At K4 Studios, the stronger pull is toward narrative: toward images that feel entered rather than simply reviewed. That is why pages like <a href="/Narrative-Western-Art" style="color:#8b5a2b; text-decoration:underline;">Narrative Western Art</a> exist as a category explanation rather than just a style note.</p>
+
+        <div class="section-heading-with-line">
+          <h2>What This Looks Like in Practice</h2>
+        </div>
+
+        <div class="example-images">
+          <figure>
+              <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${image1.id}`}>
+              <img src={image1.src} alt={image1.alt} loading="lazy" />
+            </a>
+            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
+              A figure that could be recorded, or narratively charged by construction
+            </figcaption>
+          </figure>
+          <figure>
+              <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${image2.id}`}>
+              <img src={image2.src} alt={image2.alt} loading="lazy" />
+            </a>
+            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
+              Atmosphere and restraint carrying more than report alone
+            </figcaption>
+          </figure>
+          <figure>
+              <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/${image3.id}`}>
+              <img src={image3.src} alt={image3.alt} loading="lazy" />
+            </a>
+            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
+              Story pressure surviving beyond the visible fact of the portrait
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="section-heading-with-line">
+          <h2>Explore the Distinction in Practice</h2>
+        </div>
+
+        <p>The pages and galleries below clarify how narrative photography works when it is applied to Western and historical subject matter rather than left as an abstract idea.</p>
+
+        <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 2rem;">
+          <li style="margin-bottom:0.75rem;">
+            <a href="/Blog/what-is-narrative-photography" style="color:#8b5a2b; font-weight:600; text-decoration:underline;">What Is Narrative Photography?</a> — The broader definition
+          </li>
+          <li style="margin-bottom:0.75rem;">
+            <a href="/Narrative-Western-Art" style="color:#8b5a2b; text-decoration:underline;">Narrative Western Art</a> — Where the distinction becomes culturally specific
+          </li>
+          <li style="margin-bottom:0.75rem;">
+            <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History" style="color:#8b5a2b; text-decoration:underline;">Facing History</a> — Historically themed fine art photography in narrative practice
+          </li>
+        </ul>

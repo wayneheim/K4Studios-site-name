@@ -1,0 +1,523 @@
+{
+  "approvedCaptionChanges": [
+    {
+      "route": "/Blog/can-photography-be-narrative-western-art",
+      "from": "Night Raid",
+      "to": "Western Politicking"
+    },
+    {
+      "route": "/Blog/wild-west-american-frontier",
+      "from": "Signs",
+      "to": "Rider on the Open Plain"
+    },
+    {
+      "route": "/Blog/wild-west-american-frontier",
+      "from": "Change of Plans",
+      "to": "Last Chance Riders"
+    },
+    {
+      "route": "/Blog/what-is-narrative-photography",
+      "from": "Special Delivery",
+      "to": "Breath Before Thunder"
+    }
+  ],
+  "changes": [
+    {
+      "route": "/Blog/what-is-contemporary-western-art",
+      "role": "bridge",
+      "from": "i-k4b6c5b",
+      "to": "i-dsqgfVj",
+      "title": "Driven by Dust and Duty"
+    },
+    {
+      "route": "/Blog/what-is-western-fine-art",
+      "role": "essay",
+      "from": "i-k4b6c5b",
+      "to": "i-67j96vq",
+      "title": "What Is It, Boy?"
+    },
+    {
+      "route": "/Blog/what-is-artistic-western-photography",
+      "role": "essay",
+      "from": "i-k4b6c5b",
+      "to": "i-7mFGRtw",
+      "title": "The Bill Comes Due"
+    },
+    {
+      "route": "/Blog/what-is-cowboy-fine-art-photography",
+      "role": "essay",
+      "from": "i-T6bD4w7",
+      "to": "i-bFwNMZK",
+      "title": "Marshal"
+    },
+    {
+      "route": "/Blog/what-is-western-art",
+      "role": "essay",
+      "from": "i-B7ZSdfs",
+      "to": "i-SrcM3ZN",
+      "title": "Who Goes There?"
+    },
+    {
+      "route": "/Blog/what-is-western-cowboy-art",
+      "role": "essay",
+      "from": "i-B7ZSdfs",
+      "to": "i-V5djX4B",
+      "title": "First Light"
+    },
+    {
+      "route": "/Blog/what-is-the-wild-west",
+      "role": "essay",
+      "from": "i-B7ZSdfs",
+      "to": "i-hrghzzx",
+      "title": "We're Going to Be Rich"
+    },
+    {
+      "route": "/Blog/what-is-western-art",
+      "role": "essay",
+      "from": "i-jWDDpC4",
+      "to": "i-N226DMX",
+      "title": "In the Weeds"
+    },
+    {
+      "route": "/Blog/what-is-painterly-photography",
+      "role": "essay",
+      "from": "i-LCspRF4",
+      "to": "i-pNSX6cp",
+      "title": "Hired Gun - Ranger on the Rails"
+    },
+    {
+      "route": "/Blog/what-is-historical-western-photography",
+      "role": "essay",
+      "from": "i-LCspRF4",
+      "to": "i-FNSvKZz",
+      "title": "Waiting It Out"
+    },
+    {
+      "route": "/Blog/what-is-cowboy-fine-art-photography",
+      "role": "essay",
+      "from": "i-LCspRF4",
+      "to": "i-jqZzRpS",
+      "title": "Held in Common"
+    },
+    {
+      "route": "/Blog/what-is-western-art",
+      "role": "essay",
+      "from": "i-trZrk2w",
+      "to": "i-gj4hHmL",
+      "title": "Night Rescue"
+    },
+    {
+      "route": "/Blog/can-photography-be-narrative-western-art",
+      "role": "essay",
+      "from": "i-trZrk2w",
+      "to": "i-k6jGzSq",
+      "title": "Western Politicking"
+    },
+    {
+      "route": "/Blog/what-is-visual-storytelling-in-photography",
+      "role": "essay",
+      "from": "i-trZrk2w",
+      "to": "i-GjZfMXj",
+      "title": "Out in the Storm"
+    },
+    {
+      "route": "/Blog/what-is-western-cowboy-art",
+      "role": "essay",
+      "from": "i-Rx5gLJz",
+      "to": "i-9BhX2Lj",
+      "title": "Lenore"
+    },
+    {
+      "route": "/Blog/what-is-cowboy-fine-art-photography",
+      "role": "essay",
+      "from": "i-Rx5gLJz",
+      "to": "i-LLdZzQW",
+      "title": "Tall Tale Stories"
+    },
+    {
+      "route": "/Blog/what-is-western-fine-art",
+      "role": "essay",
+      "from": "i-Q2NXpjG",
+      "to": "i-NHPCPhP",
+      "title": "Carved Slowly"
+    },
+    {
+      "route": "/Blog/what-is-the-wild-west",
+      "role": "hero",
+      "from": "i-7Mzzbvp",
+      "to": "i-CzWxpvV",
+      "title": "Keeping Them Moving"
+    },
+    {
+      "route": "/Blog/what-makes-an-image-feel-cinematic",
+      "role": "essay",
+      "from": "i-7Mzzbvp",
+      "to": "i-3NNTv7n",
+      "title": "A Difference of Opinion"
+    },
+    {
+      "route": "/Blog/what-is-cinematic-western-art",
+      "role": "essay",
+      "from": "i-7Mzzbvp",
+      "to": "i-gQ7GZ5s",
+      "title": "No Second Guess"
+    },
+    {
+      "route": "/Blog/wild-west-american-frontier",
+      "role": "bridge",
+      "from": "i-44jcjTQ",
+      "to": "i-PM4d3g3",
+      "title": "Fire Side Chat"
+    },
+    {
+      "route": "/Blog/what-is-western-fine-art-photography",
+      "role": "bridge",
+      "from": "i-Txh4c8k",
+      "to": "i-PfVhxQT",
+      "title": "First Light, First Cup"
+    },
+    {
+      "route": "/Blog/what-is-western-black-and-white-photography",
+      "role": "essay",
+      "from": "i-Txh4c8k",
+      "to": "i-pqcmRth",
+      "title": "The Teacher's Visitor"
+    },
+    {
+      "route": "/Blog/what-is-artistic-western-photography",
+      "role": "essay",
+      "from": "i-SNtZNVm",
+      "to": "i-Xhgr9rF",
+      "title": "Held by the Cut"
+    },
+    {
+      "route": "/Blog/what-is-narrative-photography",
+      "role": "essay",
+      "from": "i-SNtZNVm",
+      "to": "i-b6dRFxv",
+      "title": "Aspens"
+    },
+    {
+      "route": "/Blog/what-makes-an-image-feel-cinematic",
+      "role": "essay",
+      "from": "i-SNtZNVm",
+      "to": "i-zncBGq4",
+      "title": "After We Left"
+    },
+    {
+      "route": "/Blog/what-is-western-fine-art",
+      "role": "essay",
+      "from": "i-qMQf7b6",
+      "to": "i-FnZ68h3",
+      "title": "Who is Here?"
+    },
+    {
+      "route": "/Blog/what-is-artistic-western-photography",
+      "role": "essay",
+      "from": "i-qMQf7b6",
+      "to": "i-hXKvJHC",
+      "title": "Ambush Alley"
+    },
+    {
+      "route": "/Blog/what-is-western-fine-art",
+      "role": "essay",
+      "from": "i-WfRwfpM",
+      "to": "i-whbHxkn",
+      "title": "Done the Right Way"
+    },
+    {
+      "route": "/Blog/what-is-artistic-western-photography",
+      "role": "essay",
+      "from": "i-WfRwfpM",
+      "to": "i-sDZFJ6t",
+      "title": "Weathered, Not Worn"
+    },
+    {
+      "route": "/Blog/what-is-western-cowboy-art",
+      "role": "essay",
+      "from": "i-6Ffpw9t",
+      "to": "i-XR9PZT5",
+      "title": "Late for Dinner"
+    },
+    {
+      "route": "/Blog/what-is-historical-western-photography",
+      "role": "essay",
+      "from": "i-6Ffpw9t",
+      "to": "i-c98L2bs",
+      "title": "Fading Memories"
+    },
+    {
+      "route": "/Blog/what-is-contemporary-western-art",
+      "role": "essay",
+      "from": "i-6Ffpw9t",
+      "to": "i-dNgct6r",
+      "title": "Three Thousand Reasons"
+    },
+    {
+      "route": "/Blog/what-is-historical-western-photography",
+      "role": "bridge",
+      "from": "i-c5K798H",
+      "to": "i-KBNSftv",
+      "title": "Told you to stay away from my sister!"
+    },
+    {
+      "route": "/Blog/what-is-the-wild-west",
+      "role": "bridge",
+      "from": "i-c5K798H",
+      "to": "i-VDLVwqr",
+      "title": "Strange Bedfellows"
+    },
+    {
+      "route": "/Blog/what-is-painterly-photography",
+      "role": "essay",
+      "from": "i-MHGPvcs",
+      "to": "i-tBPfdxS",
+      "title": "Reading the Room"
+    },
+    {
+      "route": "/Blog/what-is-narrative-photography",
+      "role": "essay",
+      "from": "i-Cg4ZB72",
+      "to": "i-cF2kLFP",
+      "title": "After Dark"
+    },
+    {
+      "route": "/Blog/what-is-western-black-and-white-photography",
+      "role": "essay",
+      "from": "i-6z4gpF7",
+      "to": "i-5fQjwcv",
+      "title": "Weighing His Next Move"
+    },
+    {
+      "route": "/Blog/what-is-western-cowboy-art",
+      "role": "essay",
+      "from": "i-rfFBRQM",
+      "to": "i-qqVG3fw",
+      "title": "No One Speaks"
+    },
+    {
+      "route": "/Blog/what-is-cowboy-fine-art-photography",
+      "role": "essay",
+      "from": "i-ncFcHDM",
+      "to": "i-JM7kNVv",
+      "title": "Crossing Quiet Water"
+    },
+    {
+      "route": "/Blog/what-is-historical-western-photography",
+      "role": "essay",
+      "from": "i-KVxkXrV",
+      "to": "i-mn8RKLL",
+      "title": "Running Them Down"
+    },
+    {
+      "route": "/Blog/what-is-narrative-photography",
+      "role": "bridge",
+      "from": "i-Dw6Z8ff",
+      "to": "i-FsLKLp3",
+      "title": "Weighing His Option"
+    },
+    {
+      "route": "/Blog/what-is-historically-themed-photography",
+      "role": "essay",
+      "from": "i-8BbMZjs",
+      "to": "i-vcX6WLC",
+      "title": "Getting the last word in a grudge held too long"
+    },
+    {
+      "route": "/Blog/what-is-contemporary-western-art",
+      "role": "essay",
+      "from": "i-f4MSxpP",
+      "to": "i-PxNFNhQ",
+      "title": "Taking Water"
+    },
+    {
+      "route": "/Blog/narrative-western-art-vs-traditional",
+      "role": "essay",
+      "from": "i-5BtMrfM",
+      "to": "i-dqdZcnX",
+      "title": "After All This Time"
+    },
+    {
+      "route": "/Blog/what-is-cinematic-western-art",
+      "role": "essay",
+      "from": "i-5BtMrfM",
+      "to": "i-F7q2SDf",
+      "title": "Passing the Time"
+    },
+    {
+      "route": "/Blog/can-photography-be-narrative-western-art",
+      "role": "essay",
+      "from": "i-HBRmWg4",
+      "to": "i-3V4rCN8",
+      "title": "Worn to the Bone"
+    },
+    {
+      "route": "/Blog/what-is-historical-western-photography",
+      "role": "essay",
+      "from": "i-89qzJ6S",
+      "to": "i-kVr4LnG",
+      "title": "Toward What Remains #2"
+    },
+    {
+      "route": "/Blog/what-is-contemporary-western-art",
+      "role": "essay",
+      "from": "i-89qzJ6S",
+      "to": "i-fCG2nm8",
+      "title": "Three Amigos: Western Cowboy Conference"
+    },
+    {
+      "route": "/Blog/what-is-cinematic-western-art",
+      "role": "essay",
+      "from": "i-r5Pb7zJ",
+      "to": "i-rRdrQBg",
+      "title": "Above the Divide"
+    },
+    {
+      "route": "/Blog/wild-west-american-frontier",
+      "role": "essay",
+      "from": "i-r5Pb7zJ",
+      "to": "i-4bn8bBz",
+      "title": "Rider on the Open Plain"
+    },
+    {
+      "route": "/Blog/what-is-cowboy-fine-art-photography",
+      "role": "essay",
+      "from": "i-mqQxwNn",
+      "to": "i-sh8X4Vg",
+      "title": "Inevitable"
+    },
+    {
+      "route": "/Blog/what-is-historically-themed-photography",
+      "role": "essay",
+      "from": "i-kWVzc6g",
+      "to": "i-H5Z44TF",
+      "title": "Firing Line"
+    },
+    {
+      "route": "/Blog/what-is-cinematic-western-art",
+      "role": "essay",
+      "from": "i-4zxZQQ2",
+      "to": "i-Z7vtvZg",
+      "title": "No Short Way Home"
+    },
+    {
+      "route": "/Blog/what-is-narrative-photography",
+      "role": "essay",
+      "from": "i-Wx5scCf",
+      "to": "i-CD6rgtF",
+      "title": "Justified - or Damned: The Hillside Funnel"
+    },
+    {
+      "route": "/Blog/what-is-cinematic-western-art",
+      "role": "essay",
+      "from": "i-bfKMXS9",
+      "to": "i-8JSdTGz",
+      "title": "Standing Together"
+    },
+    {
+      "route": "/Blog/what-is-narrative-photography",
+      "role": "essay",
+      "from": "i-Sc9hZGs",
+      "to": "i-MMmDhV2",
+      "title": "Morning Oath of the Trail"
+    },
+    {
+      "route": "/Blog/wild-west-american-frontier",
+      "role": "essay",
+      "from": "i-Sc9hZGs",
+      "to": "i-8CfzGMc",
+      "title": "Last Chance Riders"
+    },
+    {
+      "route": "/Blog/what-makes-an-image-feel-cinematic",
+      "role": "essay",
+      "from": "i-5TtHV8g",
+      "to": "i-d9znSwP",
+      "title": "Nothing Moves Past Him"
+    },
+    {
+      "route": "/Blog/what-is-visual-storytelling-in-photography",
+      "role": "essay",
+      "from": "i-5TtHV8g",
+      "to": "i-vP376vx",
+      "title": "Who Goes There?"
+    },
+    {
+      "route": "/Blog/what-makes-an-image-feel-cinematic",
+      "role": "essay",
+      "from": "i-5rq7gcD",
+      "to": "i-BzFqL6f",
+      "title": "Range Rider"
+    },
+    {
+      "route": "/Blog/what-is-cinematic-western-art",
+      "role": "hero",
+      "from": "i-LL2Gp5r",
+      "to": "i-JvkzcpM",
+      "title": "By Firelight"
+    },
+    {
+      "route": "/Blog/what-is-narrative-photography",
+      "role": "essay",
+      "from": "i-LL2Gp5r",
+      "to": "i-jWFcDHr",
+      "title": "Breath Before Thunder"
+    },
+    {
+      "route": "/Blog/what-is-cinematic-western-art",
+      "role": "essay",
+      "from": "i-DczpNpH",
+      "to": "i-5TGTZ9P",
+      "title": "One Clean Shot"
+    },
+    {
+      "route": "/Blog/what-is-cinematic-western-art",
+      "role": "essay",
+      "from": "i-3SxncXS",
+      "to": "i-dnxxDXH",
+      "title": "How Many Shots Was That?"
+    },
+    {
+      "route": "/Blog/what-is-cinematic-western-art",
+      "role": "essay",
+      "from": "i-gxMVNh3",
+      "to": "i-S9PzB6d",
+      "title": "Four Across the Flat"
+    },
+    {
+      "route": "/Blog/what-is-the-wild-west",
+      "role": "essay",
+      "from": "i-kQfftQ2",
+      "to": "i-WMs24Db",
+      "title": "Across Without Her"
+    },
+    {
+      "route": "/Blog/what-is-visual-storytelling-in-photography",
+      "role": "essay",
+      "from": "i-NxjDRLV",
+      "to": "i-WD9ZmGH",
+      "title": "Keeping the Peace"
+    },
+    {
+      "route": "/Blog/what-is-western-fine-art-photography",
+      "role": "hero",
+      "from": "i-c5K798H",
+      "to": "i-xpv7z8j",
+      "title": "Land of Promise and Threat"
+    },
+    {
+      "route": "/Blog/what-is-cinematic-western-art",
+      "role": "bridge",
+      "from": "i-xpv7z8j",
+      "to": "i-8g6m7tf",
+      "title": "After the Day's Work"
+    },
+    {
+      "route": "/Blog/can-photography-be-narrative-western-art",
+      "role": "hero",
+      "from": "i-kQfftQ2",
+      "to": "i-zqZBdJF",
+      "title": "Holding the High Ground"
+    }
+  ]
+}

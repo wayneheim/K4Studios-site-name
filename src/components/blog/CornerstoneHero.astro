@@ -1,0 +1,12 @@
+---
+const { image } = Astro.props;
+---
+<section class="hero-image-wrap">
+  <a href={image.href}><img class="hero-image" src={image.src} alt={image.alt} loading="eager" style={`object-position:${image.objectPosition || 'center 15%'}`} /></a>
+</section>
+<style>
+  .hero-image-wrap { width:80%; height:clamp(480px,48vw,640px); margin:1.5rem auto; overflow:hidden; border-radius:18px; background:#241c17; }
+  a { display:block; height:100%; }
+  .hero-image { display:block; width:100%; height:100%; object-fit:cover; }
+  @media(max-width:760px) { .hero-image-wrap { height:340px; margin:1.25rem auto; border-radius:14px; } }
+</style>

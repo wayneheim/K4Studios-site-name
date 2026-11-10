@@ -372,11 +372,18 @@ function getProxySrc(imageId: string, size: string = 'm'): string {
 }
 
 const landingImg = featheredImages[0];
-const landingImgUrl = landingImg?.id ? makeAbsoluteUrl(getProxySrc(landingImg.id, 'l')) : '';
+// Pin the verified social lead so Article and OG cannot drift with sample rotation.
+const landingImgUrl = 'https://www.k4studios.com/img/i-RLZFsxp/the-old-hand-western-cowboy-portrait-art.jpg';
 
 const meta = getLandingMeta(pagePath, landingImgUrl);
 if (!meta.ogUrl) meta.ogUrl = `https://www.k4studios.com${pagePath}`;
 if (!meta.twitterUrl) meta.twitterUrl = `https://www.k4studios.com${pagePath}`;
+const metaDescription = "Narrative Western art by Wayne Heim: story-led frontier fine art built around consequence, character, and historical atmosphere — not decoration.";
+meta.seoTitle = "Narrative Western Art | Story-Led Frontier Fine Art";
+meta.ogDescription = metaDescription;
+meta.twitterDescription = metaDescription;
+meta.story = metaDescription;
+meta.preserveDescriptionDashes = true;
 
 function getTombstoneThumbs(galleryData: any[]): string[] {
   const validImages = galleryData
@@ -411,7 +418,8 @@ const tombstonesWithThumbs = landingNarrativeWesternArt.tombstones.map((stone: a
 ---
 
 <BaseLayout
-  title="Narrative Western Art – Wayne Heim"
+  title="Narrative Western Art | Story-Led Frontier Fine Art"
+  description={metaDescription}
   structuredDataJSON={structuredData}
   breadcrumbsJSON={breadcrumbData}
   meta={meta}
@@ -437,6 +445,7 @@ const tombstonesWithThumbs = landingNarrativeWesternArt.tombstones.map((stone: a
       }
     },
     "description": "Narrative Western art is a form of Western art that tells stories of the American West through frontier life, historical experience, and visual storytelling rather than subject matter alone.",
+    "image": "https://www.k4studios.com/img/i-RLZFsxp/the-old-hand-western-cowboy-portrait-art.jpg",
     "mainEntityOfPage": "https://www.k4studios.com/Narrative-Western-Art"
   }
   </script>

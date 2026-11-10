@@ -1,0 +1,160 @@
+/* One inline artwork per section. The prose shares its formatting context,
+   wrapping beside the image and returning to full width below its bottom. */
+article.cornerstone-standard {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0;
+  color: #2c2c2c;
+  line-height: 1.65;
+}
+.cornerstone-standard a { color: #8b5a2b; text-decoration: underline; }
+.cornerstone-standard ul { list-style:disc; padding-left:1.5rem; margin:1rem 0; }
+.cornerstone-standard h3 { font-weight:700; margin:1.5rem 0 .5rem; }
+.cornerstone-standard .disambiguation-note,
+.cornerstone-standard .definition-post-answer { padding:1rem 1.25rem; border-left:3px solid #8b5a2b; background:#f5f1eb; margin:0 0 1.5rem; }
+.cornerstone-standard .cs-sample-gallery { display:grid; grid-template-columns:repeat(var(--sample-columns),minmax(0,1fr)); gap:1rem; margin:0 0 1.25rem; }
+.cornerstone-standard .cs-sample-gallery figure { margin:0; padding:.7rem; border:1px solid #e5ddd5; background:#faf7f3; border-radius:14px; }
+.cornerstone-standard .cs-sample-gallery img { width:100%; height:250px; object-fit:cover; object-position:top center; border-radius:10px; }
+.cornerstone-standard .cs-section {
+  display: flow-root;
+  clear: both;
+  margin: 0 0 1.75rem !important;
+  min-width: 0;
+}
+.cornerstone-standard .cs-heading {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 2.5rem 0 1.25rem;
+}
+.cornerstone-standard .cs-heading::after {
+  content: '';
+  flex: 1;
+  min-width: 2rem;
+  height: 3px;
+  background: #d0d0d0;
+}
+.cornerstone-standard .cs-heading :is(h2, h3) {
+  margin: 0 !important;
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem) !important;
+  line-height: 1.35;
+  font-weight: 700 !important;
+}
+.cornerstone-standard .cs-body {
+  display: flow-root;
+}
+.cornerstone-standard .cs-art {
+  float: right;
+  width: min(300px, 40%);
+  margin: .25rem 0 1.25rem 2rem;
+  padding: .7rem;
+  border: 1px solid rgba(121, 98, 78, .16);
+  border-radius: 14px;
+  background: #faf7f3;
+  box-shadow: 0 10px 24px rgba(52, 38, 26, .08);
+}
+.cornerstone-standard .cs-art > :is(aside, figure),
+.cornerstone-standard .cs-faq-section > :is(aside, figure) {
+  float: none !important;
+  clear: both !important;
+  width: 100% !important;
+  max-width: 320px !important;
+  margin: 0 !important;
+  box-sizing: border-box;
+}
+.cornerstone-standard .cs-art > :is(aside, figure),
+.cornerstone-standard .cs-art > aside > figure {
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+.cornerstone-standard .cs-faq-section > :is(aside, figure) {
+  margin: 1.5rem 0 1.5rem auto !important;
+}
+.cornerstone-standard :is(.cs-body, .cs-section) > p {
+  margin: 0 0 1rem;
+  font-size: clamp(1rem, 2.5vw, 1.125rem);
+}
+.cornerstone-standard .cs-body > ul {
+  columns: auto !important;
+  font-size: clamp(1rem, 2.5vw, 1.125rem);
+  list-style-position: inside;
+}
+.cornerstone-standard .cs-art :is(p, figcaption) {
+  font-size: .85rem !important;
+  line-height: 1.4 !important;
+  font-style: italic;
+  color: #6a5a4c;
+}
+.cornerstone-standard .cs-art img { width: 100%; height: auto; display: block; border-radius: 10px; }
+.cornerstone-standard .example-images,
+.cornerstone-standard .early-examples-grid {
+  clear: both;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+.cornerstone-standard :is(.example-images, .early-examples-grid):not(:has(img)) { display: none; }
+.cornerstone-standard .cs-portrait-gallery figure { margin:0; min-width:0; }
+.cornerstone-standard .cs-portrait-gallery figure > a { display:block; aspect-ratio:3/4; overflow:hidden; border-radius:10px; }
+.cornerstone-standard .cs-portrait-gallery img { display:block; width:100%; height:100%; object-fit:cover; }
+.cornerstone-standard .cs-portrait-gallery figcaption { margin:.6rem 0 0; font-size:.85rem; line-height:1.4; font-style:italic; color:#6a5a4c; }
+.cornerstone-standard :is(.faq, .definition-post-faq, .faq-block) {
+  display: flow-root !important;
+  clear: both;
+  width: 100%;
+  max-width: none;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+  position: static;
+}
+.cornerstone-standard details {
+  display: block;
+  clear: both;
+  margin: 0 !important;
+  padding: 1rem 0 !important;
+  border: 0;
+  border-top: 1px solid #ddd;
+  color: #2c2c2c;
+}
+.cornerstone-standard details:last-child { border-bottom: 1px solid #ddd; }
+.cornerstone-standard details summary {
+  display: list-item !important;
+  list-style: disclosure-closed !important;
+  margin: 0 !important;
+  padding: 0;
+  color: #3f3f3f !important;
+  font-weight: 600 !important;
+  font-size: clamp(1rem, 2.5vw, 1.125rem) !important;
+  line-height: 1.5;
+  cursor: pointer;
+}
+.cornerstone-standard details[open] summary { list-style: disclosure-open !important; }
+.cornerstone-standard details :is(.faq-content, .cs-answer) {
+  max-height: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+  overflow: visible;
+  margin: .75rem 0 0;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+.cornerstone-standard details p {
+  margin: .75rem 0 0 !important;
+  padding: 0 !important;
+  font-size: 1rem !important;
+}
+@media (max-width: 760px) {
+  .cornerstone-standard .cs-sample-gallery { grid-template-columns:1fr; }
+  .cornerstone-standard .cs-art { float: none; width: 100%; max-width: 360px; margin: 0 0 1.25rem; }
+  .cornerstone-standard .cs-heading::after { display: none; }
+  .cornerstone-standard .cs-heading h2 { white-space: normal !important; }
+  .cornerstone-standard .cs-art > :is(aside, figure) { max-width: 100% !important; }
+  .cornerstone-standard :is(.example-images, .early-examples-grid) { grid-template-columns: 1fr; }
+}

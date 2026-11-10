@@ -1,0 +1,130 @@
+{
+  "hero": {
+    "src": "/img/i-bfKMXS9/three-wise-men-western-cowboy-art.jpg",
+    "alt": "Narrative photograph carrying atmosphere and implied story",
+    "href": "/Western-Fine-Art-Photography"
+  },
+  "heading": "\nWhat Is Narrative Photography?\n",
+  "subtitles": [
+    "\nPhotography that carries a life larger than the visible moment\n",
+    "\nA definition of story-driven photography for collectors, artists, and serious viewers\n"
+  ],
+  "bridge": {
+    "kicker": "Narrative in Practice",
+    "title": "Three Frames That Carry a Larger Story",
+    "intro": "Each image opens beyond the visible moment through character, atmosphere, and implication.",
+    "items": [
+      {
+        "id": "i-Mm3jXFH",
+        "src": "/img/i-Mm3jXFH/waiting-on-news-western-cowboy-portraits.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-Mm3jXFH",
+        "alt": "Narrative Western portrait",
+        "caption": "Character as the beginning of a story"
+      },
+      {
+        "id": "i-ZPmj5Wk",
+        "src": "/img/i-ZPmj5Wk/frontier-huntress-western-cowboy-portraits.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-ZPmj5Wk",
+        "alt": "Atmospheric Western portrait",
+        "caption": "Atmosphere carrying what the frame withholds"
+      },
+      {
+        "id": "i-FsLKLp3",
+        "src": "/img/i-FsLKLp3/l.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-FsLKLp3",
+        "alt": "Cowboy leaning from a wooden doorway in a frontier town, watching the street while resting a hand near his gun belt.",
+        "caption": "A still moment with a before and after"
+      }
+    ],
+    "ctaHref": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/all",
+    "ctaLabel": "Browse Narrative Western Stories"
+  },
+  "essaySamples": [
+    {
+      "heading": "",
+      "mode": "inline",
+      "items": [
+        {
+          "id": "i-BGmFfF5",
+          "src": "/img/i-BGmFfF5/l.jpg",
+          "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-BGmFfF5",
+          "alt": "Man seated in a rustic room by a bright window, hands folded in quiet contemplation as sunlight streams across wooden floorboards."
+        }
+      ]
+    },
+    {
+      "heading": "What Makes Photography Narrative",
+      "mode": "inline",
+      "items": [
+        {
+          "id": "i-Cg4ZB72",
+          "src": "/img/i-Cg4ZB72/l.jpg",
+          "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-Cg4ZB72",
+          "alt": "Lantern light illuminating a cowboy and woman sharing a kiss at night, their faces softly lit against the surrounding darkness."
+        }
+      ]
+    },
+    {
+      "heading": "Roots: From Record to Story",
+      "mode": "inline",
+      "items": [
+        {
+          "id": "i-Sc9hZGs",
+          "src": "/img/i-Sc9hZGs/l.jpg",
+          "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-Sc9hZGs",
+          "alt": "Two western gunmen taking cover beside a log cabin during a frontier gunfight, painterly cinematic western scene."
+        }
+      ]
+    }
+  ],
+  "artworkLinks": {
+    "i-rhvQkwh": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-rhvQkwh",
+    "i-Wx5scCf": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-Wx5scCf",
+    "i-5TtHV8g": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-5TtHV8g",
+    "i-5rq7gcD": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-5rq7gcD",
+    "i-SNtZNVm": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-SNtZNVm",
+    "i-LL2Gp5r": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-LL2Gp5r"
+  },
+  "reservedImageIds": [
+    "i-bfKMXS9",
+    "i-Mm3jXFH",
+    "i-ZPmj5Wk",
+    "i-Dw6Z8ff"
+  ],
+  "imageOverrides": {
+    "i-SNtZNVm": {
+      "id": "i-b6dRFxv",
+      "src": "/img/i-b6dRFxv/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-b6dRFxv",
+      "alt": "Painterly fine art landscape photography of tall green aspen trees viewed from below, emphasizing vertical trunks, soft light, and ethereal Mountain West atmosphere."
+    },
+    "i-Cg4ZB72": {
+      "id": "i-cF2kLFP",
+      "src": "/img/i-cF2kLFP/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-cF2kLFP",
+      "alt": "Painterly Western photograph of a cowboy lighting a smoke by lantern light at night."
+    },
+    "i-Wx5scCf": {
+      "id": "i-CD6rgtF",
+      "src": "/img/i-CD6rgtF/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-CD6rgtF",
+      "alt": "Three men positioned across a rocky hillside in a tense frontier standoff, rendered in painterly Western photography."
+    },
+    "i-Sc9hZGs": {
+      "id": "i-MMmDhV2",
+      "src": "/img/i-MMmDhV2/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-MMmDhV2",
+      "alt": "Two cowboys beside a chuck wagon sharing coffee at dawn before beginning the day's ride on the frontier."
+    },
+    "i-LL2Gp5r": {
+      "id": "i-jWFcDHr",
+      "src": "/img/i-jWFcDHr/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-jWFcDHr",
+      "alt": "Native American man firing a rifle with visible muzzle flash and smoke, captured mid-action.",
+      "captionTitle": {
+        "from": "Special Delivery",
+        "to": "Breath Before Thunder"
+      }
+    }
+  }
+}

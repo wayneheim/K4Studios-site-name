@@ -1,0 +1,125 @@
+{
+  "hero": {
+    "src": "/img/i-k4b6c5b/what-remains-western-cowboy-art.jpg",
+    "alt": "Iconic moment in the visual language of the West",
+    "href": "/Western-Fine-Art-Photography"
+  },
+  "heading": "\nWhat Is Western Art?\n",
+  "subtitles": [
+    "\nHistory, Meaning, and the Evolution of the American West in Art\n",
+    "\nFrom frontier paintings to contemporary photography\n"
+  ],
+  "bridge": {
+    "kicker": "See the Work",
+    "title": "Western art is a visual language of land, character, conflict, and myth.",
+    "intro": "",
+    "items": [
+      {
+        "id": "i-T6bD4w7",
+        "src": "/img/i-T6bD4w7/weathered-western-cowboy-portrait-art.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-T6bD4w7",
+        "alt": "Weathered cowboy portrait within the Western art tradition",
+        "caption": "Character shaped by the land."
+      },
+      {
+        "id": "i-b3vCXwR",
+        "src": "/img/i-b3vCXwR/waiting-for-action-western-cowboy-portrait-art.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-b3vCXwR",
+        "alt": "Western figure waiting for action",
+        "caption": "The pause inside the myth."
+      },
+      {
+        "id": "i-NKdPDCg",
+        "src": "/img/i-NKdPDCg/darn-socks-western-cowboy-portrait-art.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-NKdPDCg",
+        "alt": "Quiet frontier labor interpreted as Western fine art",
+        "caption": "Daily life beneath the icon."
+      }
+    ],
+    "ctaHref": "/Western-Fine-Art-Photography",
+    "ctaLabel": "Explore Western Fine Art"
+  },
+  "essaySamples": [
+    {
+      "heading": "",
+      "mode": "inline",
+      "items": [
+        {
+          "id": "i-B7ZSdfs",
+          "src": "/img/i-B7ZSdfs/l.jpg",
+          "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-B7ZSdfs",
+          "alt": "Woman holding a dying frontiersman in a lantern-lit cabin interior, intimate painterly Western scene."
+        }
+      ]
+    },
+    {
+      "heading": "The Historical Roots of Western Art",
+      "mode": "gallery",
+      "items": [
+        {
+          "id": "i-jWDDpC4",
+          "src": "/img/i-jWDDpC4/l.jpg",
+          "href": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-jWDDpC4",
+          "alt": "Painterly western landscape photograph of a single pink cloud floating above open Wyoming terrain near Jackson Hole at dusk."
+        },
+        {
+          "id": "i-LCspRF4",
+          "src": "/img/i-LCspRF4/l.jpg",
+          "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-LCspRF4",
+          "alt": "Cowboy standing beside frontier wagon at sunset on open prairie, warm golden hour light in painterly Western photograph."
+        },
+        {
+          "id": "i-T7TFJX2",
+          "src": "/img/i-T7TFJX2/l.jpg",
+          "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-T7TFJX2",
+          "alt": "Older cowboy seated at a dimly lit table holding playing cards, warm lantern light casting deep shadows."
+        }
+      ]
+    },
+    {
+      "heading": "The Evolution of the Western Canon",
+      "mode": "inline",
+      "items": [
+        {
+          "id": "i-vJSCrqC",
+          "src": "/img/i-vJSCrqC/l.jpg",
+          "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-vJSCrqC",
+          "alt": "Three riders on horseback standing on a rocky cliff overlooking a vast landscape in Native American photography."
+        }
+      ]
+    }
+  ],
+  "artworkLinks": {
+    "i-8VPQmkW": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-8VPQmkW",
+    "i-trZrk2w": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-trZrk2w",
+    "i-Rx5gLJz": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-Rx5gLJz",
+    "i-Q2NXpjG": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Q2NXpjG",
+    "i-hMXZ8Xh": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-hMXZ8Xh"
+  },
+  "reservedImageIds": [
+    "i-k4b6c5b",
+    "i-T6bD4w7",
+    "i-b3vCXwR",
+    "i-NKdPDCg"
+  ],
+  "imageOverrides": {
+    "i-B7ZSdfs": {
+      "id": "i-SrcM3ZN",
+      "src": "/img/i-SrcM3ZN/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-SrcM3ZN",
+      "alt": "A woman holds a lantern and looks out from a wooden cabin doorway at night."
+    },
+    "i-jWDDpC4": {
+      "id": "i-N226DMX",
+      "src": "/img/i-N226DMX/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-N226DMX",
+      "alt": "Painterly Western landscape photograph of tall grasses and calm water reflecting the Teton Mountains in autumn near Jackson Hole, Wyoming."
+    },
+    "i-trZrk2w": {
+      "id": "i-gj4hHmL",
+      "src": "/img/i-gj4hHmL/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-gj4hHmL",
+      "alt": "Frontier rider holding a lantern while walking through heavy snow at night."
+    }
+  }
+}

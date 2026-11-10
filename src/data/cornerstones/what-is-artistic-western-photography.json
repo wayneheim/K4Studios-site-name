@@ -1,0 +1,81 @@
+{
+  "hero": {
+    "src": "/img/i-6PzCQW9/still-waiting-western-landscape-photography.jpg",
+    "alt": "Mormon Row barn beneath dramatic sky — landscape interpreted rather than recorded",
+    "href": "/Western-Fine-Art-Photography"
+  },
+  "heading": "\nWhat Is Artistic Western Photography?\n",
+  "subtitles": [
+    " <strong data-astro-cid-6w2t5go2=\"\">Definition:</strong> Artistic Western photography interprets the American West through authorship, atmosphere, and visual intent rather than simple documentation.\n",
+    "\nThe camera records the scene. The artist decides what the scene becomes.\n"
+  ],
+  "bridge": {
+    "kicker": "See the Approach at Work",
+    "title": "Artistic Western photography begins where record becomes interpretation.",
+    "intro": "Landscape, frontier tension, black-and-white restraint, and cultural portraiture become more than Western subject matter when light, tone, composition, and mood are shaped with intent.",
+    "items": [
+      {
+        "id": "i-jWDDpC4",
+        "src": "/img/i-jWDDpC4/cotton-candy-western-landscape-photography.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-jWDDpC4",
+        "alt": "Western landscape shaped by atmosphere and light to guide emotion rather than description",
+        "caption": "Atmosphere turns landscape into interpretation."
+      },
+      {
+        "id": "i-trZrk2w",
+        "src": "/img/i-trZrk2w/night-raid-western-cowboy-art.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-trZrk2w",
+        "alt": "Night-watch cowboy scene authored for tension, mood, and narrative implication",
+        "caption": "Narrative tension shaped beyond the visible event."
+      },
+      {
+        "id": "i-6z4gpF7",
+        "src": "/img/i-6z4gpF7/a-sheriff-western-cowboy-portrait-art.jpg",
+        "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-6z4gpF7",
+        "alt": "Black-and-white cowboy portrait reduced to form, tone, and emotional restraint",
+        "caption": "Reduced tone and detail as artistic restraint."
+      }
+    ],
+    "ctaHref": "/Western-Fine-Art-Photography",
+    "ctaLabel": "Explore Western Fine Art Photography"
+  },
+  "essaySamples": [],
+  "artworkLinks": {
+    "i-SNtZNVm": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-SNtZNVm",
+    "i-k4b6c5b": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-k4b6c5b",
+    "i-qMQf7b6": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/i-qMQf7b6",
+    "i-WfRwfpM": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-WfRwfpM"
+  },
+  "reservedImageIds": [
+    "i-6PzCQW9",
+    "i-jWDDpC4",
+    "i-trZrk2w",
+    "i-6z4gpF7"
+  ],
+  "imageOverrides": {
+    "i-k4b6c5b": {
+      "id": "i-7mFGRtw",
+      "src": "/img/i-7mFGRtw/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-7mFGRtw",
+      "alt": "Outlaw gambler seated at a dimly lit saloon table holding playing cards with coins and whiskey nearby, rendered as painterly Western photography."
+    },
+    "i-SNtZNVm": {
+      "id": "i-Xhgr9rF",
+      "src": "/img/i-Xhgr9rF/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Xhgr9rF",
+      "alt": "Painterly landscape photograph of the Colorado River curving through sandstone at Horseshoe Bend under a dramatic sunset sky."
+    },
+    "i-qMQf7b6": {
+      "id": "i-hXKvJHC",
+      "src": "/img/i-hXKvJHC/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White/i-hXKvJHC",
+      "alt": "Frontier gunman standing against wooden wall in narrow western alley with revolver ready, tense black and white western scene."
+    },
+    "i-WfRwfpM": {
+      "id": "i-sDZFJ6t",
+      "src": "/img/i-sDZFJ6t/l.jpg",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-sDZFJ6t",
+      "alt": "Close portrait of a young Native American woman wrapped in a striped blanket as wind blows across her face."
+    }
+  }
+}
