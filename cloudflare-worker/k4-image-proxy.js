@@ -1526,23 +1526,6 @@ function parseMerchantSketchRoute(pathname) {
   };
 }
 
-function decodeHtmlAttribute(value) {
-  return String(value || '')
-    .replace(/&amp;/g, '&')
-    .replace(/&quot;/g, '"')
-    .replace(/&#39;/g, "'")
-    .replace(/&#x([0-9a-f]+);/gi, (_, code) => String.fromCodePoint(parseInt(code, 16)))
-    .replace(/&#(\d+);/g, (_, code) => String.fromCodePoint(parseInt(code, 10)))
-    .replace(/&lt;/g, '<')
-    .replace(/&gt;/g, '>');
-}
-
-function getMarkedAttribute(html, attributeName) {
-  const escapedName = String(attributeName).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  const match = String(html || '').match(new RegExp(`${escapedName}="([^"]*)"`, 'i'));
-  return match ? decodeHtmlAttribute(match[1]) : '';
-}
-
 function getMarkedSchema(html, label) {
   const escapedLabel = String(label).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   const match = String(html || '').match(
@@ -1554,15 +1537,6 @@ function getMarkedSchema(html, label) {
     return JSON.parse(match[1]);
   } catch (_) {
     return null;
-  }
-}
-
-function isApprovedSketchCheckout(rawUrl) {
-  try {
-    const checkoutUrl = new URL(rawUrl);
-    return checkoutUrl.protocol === 'https:' && checkoutUrl.hostname === 'wayne-heim.smugmug.com';
-  } catch (_) {
-    return false;
   }
 }
 
@@ -1644,10 +1618,14 @@ async function handleMerchantSketchPage(request, env, ctx, route) {
   }
 
   const sourceHtml = await baseResponse.text();
-  const checkoutUrl = getMarkedAttribute(sourceHtml, 'data-k4-sketch-checkout');
   const productSchema = getMarkedSchema(sourceHtml, 'sketch-product');
 
-  if (!isApprovedSketchCheckout(checkoutUrl) || !productSchema) {
+  // The K4 cart now performs native, server-verified checkout. The former
+  // SmugMug URL marker was removed from image pages when that cutover went
+  // live, so it must not be used as an eligibility gate for Merchant variants.
+  // A purpose-built Sketch Product schema on a valid base image page is the
+  // authoritative signal that the physical-print variant may be served.
+  if (!productSchema) {
     return await createBranded404Response(request);
   }
 
