@@ -2,24 +2,26 @@ type ImageIdMap = Record<string, string[] | string>;
 
 const PUBLIC_SITE_ORIGIN = 'https://www.k4studios.com';
 
-function decodeHtmlAttribute(value: string): string {
-  return String(value || '')
-    .replace(/&amp;/g, '&')
-    .replace(/&quot;/g, '"')
-    .replace(/&#39;/g, "'")
-    .replace(/&#x([0-9a-f]+);/gi, (_match, code) => String.fromCodePoint(parseInt(code, 16)))
-    .replace(/&#(\d+);/g, (_match, code) => String.fromCodePoint(parseInt(code, 10)))
-    .replace(/&lt;/g, '<')
-    .replace(/&gt;/g, '>');
-}
-
 function hasApprovedSketchProduct(html: string): boolean {
-  const priceMatch = html.match(/data-k4-sketch-price="([^"]+)"/i);
-  const sizeMatch = html.match(/data-k4-sketch-size="([^"]+)"/i);
-  if (!priceMatch || !sizeMatch) return false;
+  const schemaMatch = html.match(
+    /<script[^>]*data-k4-schema="sketch-product"[^>]*>([\s\S]*?)<\/script>/i
+  );
+  if (!schemaMatch) return false;
 
-  const price = Number(decodeHtmlAttribute(priceMatch[1]));
-  return Number.isFinite(price) && price > 0 && Boolean(decodeHtmlAttribute(sizeMatch[1]).trim());
+  try {
+    const schema = JSON.parse(schemaMatch[1]);
+    const types = Array.isArray(schema?.['@type']) ? schema['@type'] : [schema?.['@type']];
+    const price = Number(schema?.offers?.price);
+    return (
+      types.includes('Product') &&
+      /-sketch$/i.test(String(schema?.sku || '')) &&
+      Number.isFinite(price) &&
+      price > 0 &&
+      String(schema?.offers?.availability || '').endsWith('/InStock')
+    );
+  } catch {
+    return false;
+  }
 }
 
 function rewriteSketchProductSchema(html: string, variantUrl: string): string {
