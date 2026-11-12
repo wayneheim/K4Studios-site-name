@@ -113,14 +113,19 @@ const faqStructuredData = JSON.stringify({
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "@id": `https://www.k4studios.com${pagePath}#faq`,
-  mainEntity: dedupeFaq(faqItems).map((item) => ({
+  mainEntity: dedupeFaq(faqItems)
+    .filter((item) => ![
+      "Who were important pictorialist photographers?",
+      "Why does pictorialism matter today?",
+    ].includes(item.question))
+    .map((item) => ({
     "@type": "Question",
     name: item.question,
     acceptedAnswer: {
       "@type": "Answer",
       text: item.answer,
     },
-  })),
+    })),
 });
 
 const articleStructuredData = JSON.stringify({

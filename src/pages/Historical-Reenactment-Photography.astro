@@ -123,7 +123,6 @@ const faqStructuredData = JSON.stringify({
     .filter((item, index, all) =>
       all.findIndex((candidate) => candidate.q.trim().toLowerCase() === item.q.trim().toLowerCase()) === index
     )
-    .slice(0, 8)
     .map((item) => ({
       "@type": "Question",
       name: plainText(item.q),

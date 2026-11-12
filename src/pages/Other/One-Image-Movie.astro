@@ -73,7 +73,7 @@ const structuredData = getStructuredData({
         question: "What is a Picture Show?",
         answer: "A Picture Show is not the One-Image Movie itself. It is a guided presentation of individual One-Image Movies™, inviting the viewer deeper into the image, title, story, and unresolved experience already present in each still work."
       }
-    ]
+    ].filter(({ question }) => question === "What is a One-Image Movie?")
   },
   defaults: {
     copyrightNotice: "© Wayne Heim",
