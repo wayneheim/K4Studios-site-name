@@ -39,13 +39,13 @@ export function getStaticPaths() {
           .replace(/\/all\.astro$/, '')
       )
   );
-  // Helper to extract all gallery-source entries from siteNav (must be inside getStaticPaths)
+  // Astro evaluates getStaticPaths in isolation, so this traversal must stay local.
   function extractGallerySources(items: any[], parentLabels: string[] = [], parentHrefs: string[] = []): any[] {
     const results: any[] = [];
     for (const item of items) {
       const currentLabels = [...parentLabels, item.label];
       const currentHrefs = [...parentHrefs, item.href];
-      
+
       if (item.type === "gallery-source") {
         results.push({
           href: item.href,
@@ -554,13 +554,15 @@ const getGalleryModuleData = (href: string) => {
   );
 };
 
-const relatedDockHrefs = [
-  ...collectionContext.siblingGallerySources.map((item: any) => resolveGallerySourceHref(item.href)),
-  ...collectionContext.siblingCollections.map((item: any) => resolveGallerySourceHref(item.href)),
-]
-  .filter(Boolean)
+const collectGallerySourceHrefs = (items: any[]): string[] => items.flatMap((item: any) => [
+  ...(item.type === 'gallery-source' ? [item.href] : []),
+  ...(item.children ? collectGallerySourceHrefs(item.children) : []),
+]);
+const fineArtDockHrefs = collectGallerySourceHrefs(siteNav)
+  .map((href: string) => resolveGallerySourceHref(href))
+  .filter((href: string) => href.startsWith('/Galleries/Fine-Art-Photography/'));
+const uniqueRelatedDockHrefs = Array.from(new Set(fineArtDockHrefs))
   .filter((href: string) => href !== basePath);
-const uniqueRelatedDockHrefs = Array.from(new Set(relatedDockHrefs));
 const dockInsertIndex = Math.floor((uniqueRelatedDockHrefs.length + 1) / 2);
 const orderedDockHrefs = [
   ...uniqueRelatedDockHrefs.slice(0, dockInsertIndex),

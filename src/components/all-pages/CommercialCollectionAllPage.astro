@@ -2226,7 +2226,10 @@ const compactBreadcrumbHtml = breadcrumbHtml
         if (!track) return;
         const targetLeft = current.offsetLeft - (track.clientWidth - current.clientWidth) / 2;
         const maxLeft = Math.max(0, track.scrollWidth - track.clientWidth);
-        track.scrollLeft = Math.max(0, Math.min(targetLeft, maxLeft));
+        track.scrollTo({
+          left: Math.max(0, Math.min(targetLeft, maxLeft)),
+          behavior: 'instant',
+        });
       };
       requestAnimationFrame(() => requestAnimationFrame(centerCurrentCard));
       window.addEventListener('load', centerCurrentCard, { once: true });
