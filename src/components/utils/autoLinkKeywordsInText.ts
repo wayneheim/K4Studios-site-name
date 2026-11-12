@@ -171,8 +171,15 @@ function isArchiveImage(img: { galleries?: string[] }): boolean {
   return (img.galleries || []).some(g => g.startsWith('Other/Archive') || g.startsWith('/Other/Archive'));
 }
 
+const NON_LINKABLE_PIECE_IDS = new Set([
+  'i-3HM43Zv',
+  'i-5XC2cj5',
+  'i-nbvxtrR',
+]);
+
 function isVisibleImage(img: { id?: string; visibility?: string } | null | undefined): boolean {
   if (!img?.id) return false;
+  if (NON_LINKABLE_PIECE_IDS.has(img.id)) return false;
   if (String(img.id).trim().toLowerCase() === 'i-k4studios') return false;
   const visibility = String(img.visibility || 'show').trim().toLowerCase();
   return !['hidden', 'non', 'none', ''].includes(visibility);
