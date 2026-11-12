@@ -173,9 +173,12 @@ function isArchiveImage(img: { galleries?: string[] }): boolean {
 
 const NON_LINKABLE_PIECE_IDS = new Set([
   'i-3HM43Zv',
+  'i-4pVqPVw',
   'i-5XC2cj5',
   'i-RrRPTZP',
+  'i-fszvgmq',
   'i-nbvxtrR',
+  'i-ps4qwgF',
 ]);
 
 function isVisibleImage(img: { id?: string; visibility?: string } | null | undefined): boolean {
