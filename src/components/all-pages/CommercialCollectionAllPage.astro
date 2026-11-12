@@ -6,11 +6,12 @@ import LandingHeader from "@/components/Landing-Header.jsx";
 import { getGalleryDoorwayLink } from "@/data/galleryDoorwayLinks.js";
 import { extractImageId, getSemanticImageUrl } from "@/utils/imageProxy.js";
 import { getArtworkAltForImageSource } from "@/utils/imageAltLookup";
+import { getCollectionImageGalleryGraph } from "@/components/utils/getStructuredData.ts";
 import {
   getFormattedLowestStandardPrintPrice,
   getStandardPrintSeries,
 } from "@/data/pricing/printSeries.js";
-import { getSketchOfferShippingDetails, resolveImageCommerce } from "@/data/commerceResolver.js";
+import { resolveImageCommerce } from "@/data/commerceResolver.js";
 
 type BreadcrumbItem = { name: string; href: string };
 
@@ -32,6 +33,7 @@ const {
   pageMetaOverride,
   preserveArtworkStrings = false,
   gatewayAdditionalParagraphs = [],
+  renderCollectionIntro = true,
 } = Astro.props as {
   rawGalleryData: any[];
   entranceData?: any;
@@ -58,6 +60,7 @@ const {
   pageMetaOverride?: Record<string, any>;
   preserveArtworkStrings?: boolean;
   gatewayAdditionalParagraphs?: string[];
+  renderCollectionIntro?: boolean;
 };
 
 // ✅ Filter out ghosts and hidden (archived) images
@@ -82,10 +85,7 @@ const siteOrigin = "https://www.k4studios.com";
 const contentBasePath = configuredContentBasePath || basePath;
 const canonicalPath = configuredCanonicalPath || `${basePath}/all`;
 const canonicalUrl = `${siteOrigin}${canonicalPath}`;
-const galleryBaseUrl = `${siteOrigin}${contentBasePath}`;
 const collectionPageId = `${canonicalUrl}#collectionpage`;
-const imageGalleryId = `${galleryBaseUrl}#imagegallery`;
-const itemListId = `${canonicalUrl}#itemlist`;
 const breadcrumbId = `${canonicalUrl}#breadcrumb`;
 
 // ✅ Gallery metadata
@@ -193,31 +193,6 @@ const truncateHardExcerpt = (text: string, maxLen = 100) => {
   return `${wordSafe || cleaned.slice(0, maxLen).trimEnd()}...`;
 };
 
-const buildSketchProductDescription = (image: any, imageName: string) => {
-  const imageSummary = truncateExcerpt(image?.description || image?.alt || "", 130);
-  const base = `${imageName} is offered as a Sketch Series fine art print by Wayne Heim through K4 Studios.`;
-  return imageSummary ? `${base} ${imageSummary}` : base;
-};
-
-const buildSketchProductOffer = (image: any, imagePageUrl: string) => {
-  const commerce = resolveImageCommerce({
-    image,
-    galleryPath: contentBasePath,
-    pageUrl: imagePageUrl,
-  });
-
-  return commerce?.merchantOffer || {
-    "@type": "Offer",
-    "url": imagePageUrl,
-    "price": 25,
-    "priceCurrency": "USD",
-    "availability": "https://schema.org/InStock",
-    "itemCondition": "https://schema.org/NewCondition",
-    "seller": { "@id": "https://www.k4studios.com/#organization" },
-    "shippingDetails": getSketchOfferShippingDetails(),
-  };
-};
-
 // ✅ Proxy URL helper - never expose SmugMug URLs to crawlers
 const getProxySrc = (id: string, size: string = 'l') => {
   const image = filteredGalleryData.find((item: any) => item.id === id)
@@ -284,8 +259,6 @@ const fallbackSocialImage = "/images/show-2t.webp";
 const socialImage = gatewayHeroSrc || (filteredGalleryData[0] ? getProxySrc(filteredGalleryData[0].id, 'l') : "") || fallbackSocialImage;
 const socialImageUrl = toAbsoluteK4Url(socialImage);
 const socialImageAlt = `${collectionName} Fine Art Prints by Wayne Heim`;
-const MAX_PRODUCT_SCHEMA_ITEMS = 48;
-
 // ✅ Pre-build per-image JSON-LD to avoid streaming issues
 const imageJsonLdMap = new Map();
 filteredGalleryData.forEach((item: any) => {
@@ -312,36 +285,6 @@ filteredGalleryData.forEach((item: any) => {
   }));
 });
 
-const itemListElement = filteredGalleryData
-  .filter((image: any) => image?.id)
-  .slice(0, MAX_PRODUCT_SCHEMA_ITEMS)
-  .map((image: any, index: number) => {
-    const imagePageUrl = `${galleryBaseUrl}/${image.id}`;
-    const imageName = cleanForDisplay(image.title || image.id);
-
-    return {
-      "@type": "ListItem",
-      "position": index + 1,
-      "url": imagePageUrl,
-      "name": imageName,
-      "item": {
-        "@type": "Product",
-        "@id": `${imagePageUrl}#product-sketch`,
-        "name": `${imageName} - Sketch Series Print`,
-        "url": imagePageUrl,
-        "image": toAbsoluteK4Url(getProxySrc(image.id, 'l')),
-        "description": buildSketchProductDescription(image, imageName),
-        "sku": `${image.id}-sketch`,
-        "brand": {
-          "@type": "Brand",
-          "@id": "https://www.k4studios.com/#organization",
-          "name": "K4 Studios"
-        },
-        "offers": buildSketchProductOffer(image, imagePageUrl),
-      },
-    };
-  });
-
 const breadcrumbJsonItems = [
   { "@type": "ListItem", "position": 1, "item": { "@id": `${siteOrigin}/`, "name": "Home" } },
   ...(breadcrumbStructuredItems || []).map((item, index) => ({
@@ -354,6 +297,14 @@ const breadcrumbJsonItems = [
   })),
   { "@type": "ListItem", "position": (breadcrumbStructuredItems || []).length + 2, "item": { "@id": canonicalUrl, "name": "Collection" } },
 ];
+const generatedCollectionGraph = getCollectionImageGalleryGraph({
+  pageUrl: canonicalUrl,
+  name: `${galleryTitle} Collection`,
+  description: seoDescription,
+  images: filteredGalleryData,
+  basePath: contentBasePath,
+  includeProductReferences: true,
+});
 
 const generatedStructuredDataJson = JSON.stringify({
   "@context": "https://schema.org",
@@ -375,26 +326,9 @@ const generatedStructuredDataJson = JSON.stringify({
       },
       "creator": { "@id": "https://www.k4studios.com/#person" },
       "publisher": { "@id": "https://www.k4studios.com/#organization" },
-      "mainEntity": { "@id": imageGalleryId }
+      "mainEntity": { "@id": `${canonicalUrl}#imagegallery` }
     },
-    {
-      "@type": "ImageGallery",
-      "@id": imageGalleryId,
-      "url": galleryBaseUrl,
-      "name": `${galleryTitle} Collection`,
-      "description": seoDescription,
-      "creator": { "@id": "https://www.k4studios.com/#person" },
-      "publisher": { "@id": "https://www.k4studios.com/#organization" },
-      "mainEntity": { "@id": itemListId }
-    },
-    {
-      "@type": "ItemList",
-      "@id": itemListId,
-      "name": `${galleryTitle} Image List`,
-      "numberOfItems": filteredGalleryData.filter((image: any) => image?.id).length,
-      "itemListOrder": "https://schema.org/ItemListOrderAscending",
-      "itemListElement": itemListElement
-    },
+    ...generatedCollectionGraph,
     {
       "@type": "BreadcrumbList",
       "@id": breadcrumbId,
@@ -513,14 +447,14 @@ const compactBreadcrumbHtml = breadcrumbHtml
     <header class="collection-hero">
       <h2>{commercialH1}</h2>
       <p class="hero-deck">{commercialDeck}</p>
-      <p class="hero-copy">
+      {renderCollectionIntro && <p class="hero-copy">
         {collectionIntroParagraphs.map((paragraph, index) => (
           <>
             {index > 0 && <><br /><br /></>}
             <span>{paragraph}</span>
           </>
         ))}
-      </p>
+      </p>}
     </header>
 
     <span id="collection-browser" class="collection-browser-anchor" aria-hidden="true"></span>

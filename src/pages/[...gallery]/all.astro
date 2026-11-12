@@ -610,6 +610,22 @@ const unifiedCopy = {
 const gatewayAdditionalParagraphs = collectionContext.parent?.href && collectionContext.parent?.label
   ? [`Return to the ${collectionContext.parent.label} overview for curated entry points and the broader series context.`]
   : [];
+const exactMetaDescriptionPaths = new Set([
+  '/Galleries/Fine-Art-Photography/Miscellaneous/Pets',
+  '/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife',
+  '/Galleries/Fine-Art-Photography/Transportation/Boats',
+  '/Galleries/Fine-Art-Photography/Transportation/Cars',
+  '/Galleries/Fine-Art-Photography/Transportation/Planes',
+  '/Galleries/Fine-Art-Photography/Transportation/Trains',
+]);
+const pageMetaOverride = {
+  canonicalUrl,
+  robots: 'index, follow',
+  ...(exactMetaDescriptionPaths.has(basePath) ? {
+    descriptionMaxLength: seoDescription.length,
+    preserveDescriptionDashes: true,
+  } : {}),
+};
 ---
 
 {useUnifiedCurrentTemplate ? (<CommercialCollectionAllPage
@@ -626,9 +642,10 @@ const gatewayAdditionalParagraphs = collectionContext.parent?.href && collection
   identity={unifiedIdentity}
   copy={unifiedCopy}
   structuredDataJsonOverride={structuredDataJson}
-  pageMetaOverride={{ canonicalUrl, robots: "index, follow" }}
+  pageMetaOverride={pageMetaOverride}
   preserveArtworkStrings={true}
   gatewayAdditionalParagraphs={gatewayAdditionalParagraphs}
+  renderCollectionIntro={false}
 />) : (<BaseLayout title={seoTitle} description={seoDescription} meta={{ canonicalUrl, robots: "index, follow" }}>
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json" set:html={structuredDataJson} />
