@@ -21,7 +21,10 @@ const AUTHORED_INTERLINK_RULES: Record<string, AuthoredInterlinkRule[]> = {
   // Essay -> doorway / annex gaps.
   '/blog/what-is-painterly-photography': [
     { href: '/western-painterly-fine-art-photography', phrases: ['Painterly fine art photography'] },
-    { href: '/Blog/what-is-cinematic-western-art', phrases: ['cinematic light'] },
+    { href: '/Blog/what-makes-an-image-feel-cinematic', phrases: ['cinematic light'] },
+  ],
+  '/blog/what-makes-an-image-feel-cinematic': [
+    { href: '/cinematic-western-art', phrases: ['cinematic photography'] },
   ],
   '/blog/what-is-contemporary-western-art': [
     { href: '/Contemporary-Western-Art', phrases: ['contemporary Western art'] },
@@ -89,7 +92,7 @@ const AUTHORED_INTERLINK_RULES: Record<string, AuthoredInterlinkRule[]> = {
     { href: '/Blog/what-is-historically-themed-photography', phrases: ['historically themed photography', 'Historical Western art'] },
   ],
   '/cinematic-western-art': [
-    { href: '/Blog/what-is-cinematic-western-art', phrases: ['cinematic Western art'] },
+    { href: '/Blog/what-makes-an-image-feel-cinematic', phrases: ['cinematic Western art', 'cinematic images'] },
   ],
   '/galleries/painterly-fine-art-photography': [
     { href: '/Blog/decor-art-vs-fine-art', phrases: ['wall decor', 'mass-produced decor'] },
