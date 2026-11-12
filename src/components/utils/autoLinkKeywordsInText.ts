@@ -174,6 +174,7 @@ function isArchiveImage(img: { galleries?: string[] }): boolean {
 const NON_LINKABLE_PIECE_IDS = new Set([
   'i-3HM43Zv',
   'i-5XC2cj5',
+  'i-RrRPTZP',
   'i-nbvxtrR',
 ]);
 
