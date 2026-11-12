@@ -35,6 +35,9 @@ const AUTHORED_INTERLINK_RULES: Record<string, AuthoredInterlinkRule[]> = {
     { href: '/Blog/what-is-contemporary-western-art', phrases: ['Contemporary Western art'] },
     { href: '/Blog/decor-art-vs-fine-art', phrases: ['decorative frontier imagery'] },
   ],
+  '/blog/what-is-western-fine-art': [
+    { href: '/western-artwork', phrases: ['Western fine art'] },
+  ],
   '/blog/what-is-the-wild-west': [
     { href: '/american-wild-west', phrases: ['American West'] },
     { href: '/Blog/wild-west-american-frontier', phrases: ['frontier line'] },
@@ -90,6 +93,7 @@ const AUTHORED_INTERLINK_RULES: Record<string, AuthoredInterlinkRule[]> = {
   ],
   '/historical-western-art': [
     { href: '/Blog/what-is-historically-themed-photography', phrases: ['historically themed photography', 'Historical Western art'] },
+    { href: '/Blog/what-is-historical-western-photography', phrases: ['Historical Western art'] },
   ],
   '/cinematic-western-art': [
     { href: '/Blog/what-makes-an-image-feel-cinematic', phrases: ['cinematic Western art', 'cinematic images'] },
