@@ -304,7 +304,11 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://www.k4studios.com
       <input type="checkbox" id="faq-toggle" class="more-toggle" />
       <div class="truncate-container">
         <div class="truncate-text">
-          <FAQAccordion items={westernFAQ} />
+          <FAQAccordion
+            items={westernFAQ.map((item, index) => index === 0
+              ? { ...item, q: item.q.replace('Wild West', 'Wild <span>West</span>') }
+              : item)}
+          />
         </div>
       </div>
       <label for="faq-toggle" class="more-toggle-label"></label>

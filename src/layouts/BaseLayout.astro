@@ -1,5 +1,6 @@
 ---
 import { normalizeImageSrc, extractImageId } from "@/utils/imageProxy.js";
+import { linkKeywordBodyHtml } from "@/components/utils/linkKeywordBodyHtml.ts";
 
 export const prerender = true;
 
@@ -24,7 +25,8 @@ const {
   meta = {},
   description,
   preloadImage,
-  disableAutoBreadcrumbs = false
+  disableAutoBreadcrumbs = false,
+  enableKeywordLinking = false,
 } = Astro.props;
 
 // ✅ Safe URL parsing (works server-side)
@@ -153,6 +155,35 @@ const cleanTitle = isImagePage
   : trimTitle(cleanTitleBase, 95, titleTextOptions);
 
 const pathname = Astro.url?.pathname || '';
+const normalizedKeywordPath = pathname.replace(/\/+$/, '') || '/';
+const isGalleryCollectionPage = /^\/Galleries\//i.test(normalizedKeywordPath)
+  && !/\/i-[a-z0-9_-]+$/i.test(normalizedKeywordPath)
+  && !/\/all$/i.test(normalizedKeywordPath);
+const existingKeywordLinkerPages = new Set([
+  '/',
+  '/Blog',
+  '/Galleries',
+  '/Historical-Reenactment-Photography',
+  '/Historical-Western-Art',
+  '/Narrative-Western-Art',
+  '/News-Awards',
+  '/Other/Bio',
+  '/Other/Historical-Reenactment-Photography',
+  '/Other/K4-Select-Series/Engrained',
+  '/Other/One-Image-Movie',
+  '/Other/Series',
+  '/Other/Show',
+  '/Other/Stories',
+]);
+const shouldLinkKeywordBody = Boolean(enableKeywordLinking)
+  || /^\/Blog\//i.test(normalizedKeywordPath)
+  || isGalleryCollectionPage
+  || existingKeywordLinkerPages.has(normalizedKeywordPath)
+  || /^\/Other\/Expeditions(?:\/|$)/i.test(normalizedKeywordPath)
+  || normalizedKeywordPath.toLowerCase() === '/western-painterly-fine-art-photography';
+const renderedKeywordBody = shouldLinkKeywordBody
+  ? linkKeywordBodyHtml(await Astro.slots.render('default'), normalizedKeywordPath)
+  : '';
 let finalTitle = cleanTitle;
 if (/^\/Other\/Show(?:\/|$)/i.test(pathname) && !/\|\s*Show$/i.test(finalTitle)) {
   finalTitle = `${finalTitle} | Show`;
@@ -912,7 +943,7 @@ const jsonLdScripts = [
       </div>
     </div>
     <div class="page-container">
-      <slot />
+      {shouldLinkKeywordBody ? <Fragment set:html={renderedKeywordBody} /> : <slot />}
     </div>
     <div id="overlay-root"></div>
 

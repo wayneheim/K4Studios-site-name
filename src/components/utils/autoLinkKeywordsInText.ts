@@ -135,6 +135,33 @@ const CANONICAL_LINK_MAP: Record<string, string> = {
   'western fine art photography': '/Western-Fine-Art-Photography'
 };
 
+const ROTATING_LINK_MAP: Record<string, {
+  definition: string;
+  landing: string;
+  artSection: string;
+}> = {
+  'painterly photography': {
+    definition: '/Blog/what-is-painterly-photography',
+    landing: '/Galleries/Painterly-Fine-Art-Photography',
+    artSection: '/Galleries/Painterly-Fine-Art-Photography',
+  },
+  'wild west': {
+    definition: '/Blog/what-is-the-wild-west',
+    landing: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West',
+    artSection: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives',
+  },
+  'narrative western art': {
+    definition: '/Narrative-Western-Art',
+    landing: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives',
+    artSection: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives',
+  },
+  'historically themed photography': {
+    definition: '/Blog/what-is-historically-themed-photography',
+    landing: '/Galleries/Painterly-Fine-Art-Photography/Facing-History',
+    artSection: '/Galleries/Painterly-Fine-Art-Photography/Facing-History',
+  },
+};
+
 function escapeRegex(str: string): string {
   return str.replace(/[.*+?^${}()|[\\]\\]/g, "\\$&");
 }
@@ -394,6 +421,46 @@ function pickBuildRotating<T>(items: T[], seed: string): T | undefined {
   return pickDeterministic(items, `${KWLINK_BUILD_SEED}|${seed}`);
 }
 
+function pickImageLinkForSection(
+  sectionPath: string,
+  exclude: Set<string>,
+  seed: string,
+): string | null {
+  const altPath = sectionPath.startsWith('/') ? sectionPath.slice(1) : `/${sectionPath}`;
+  const sectionKeys = [sectionPath, altPath];
+  const childKeys = sectionKeys.flatMap((key) => sectionGalleries[key] || []);
+  const galleryKeys = childKeys.length ? childKeys : sectionKeys;
+  let poolEntries: { img: any; galleryKey: string }[] = [];
+
+  for (const galleryKey of galleryKeys) {
+    const direct = galleryDataMap[galleryKey] || galleryDataMap[galleryKey.startsWith('/') ? galleryKey.slice(1) : `/${galleryKey}`] || [];
+    poolEntries.push(
+      ...direct
+        .filter((img: any) => isVisibleImage(img) && !isArchiveImage(img))
+        .map((img: any) => ({ img, galleryKey })),
+    );
+  }
+
+  if (!poolEntries.length) {
+    poolEntries = allImages
+      .filter((img: any) =>
+        isVisibleImage(img) &&
+        !isArchiveImage(img) &&
+        (img.galleries || []).some((gallery: string) =>
+          sectionKeys.some((key) => gallery === key || gallery.startsWith(`${key.replace(/\/$/, '')}/`)),
+        ),
+      )
+      .map((img: any) => ({ img, galleryKey: img.galleries?.[0] || sectionPath }));
+  }
+
+  const withoutExcluded = poolEntries.filter(({ img }) => !exclude.has(img.id));
+  if (withoutExcluded.length) poolEntries = withoutExcluded;
+  const pick = pickBuildRotating(poolEntries, seed);
+  if (!pick?.img?.id) return null;
+  const base = pick.galleryKey.startsWith('/') ? pick.galleryKey : `/${pick.galleryKey}`;
+  return `${base}/${pick.img.id}`;
+}
+
 export function autoLinkKeywordsInText(
   html: string,
   _galleryDatas: any[],
@@ -464,13 +531,15 @@ export function autoLinkKeywordsInText(
   }
 
   const matches: { index: number; matchLen: number; matchText: string; occurrence: number }[] = [];
-  for (const phraseCandidates of candidates.values()) {
-    const startIndex = phraseCandidates.length > 1 ? 1 : 0;
+  for (const [normalizedPhrase, phraseCandidates] of candidates.entries()) {
+    const isRotatingPhrase = Boolean(ROTATING_LINK_MAP[normalizedPhrase]);
+    const startIndex = isRotatingPhrase ? 0 : (phraseCandidates.length > 1 ? 1 : 0);
+    const phraseLimit = isRotatingPhrase ? 3 : maxLinksPerPhrase;
     let lastSelectedIndex = -Infinity;
     let occurrence = 0;
     for (const candidate of phraseCandidates.slice(startIndex)) {
-      if (occurrence >= maxLinksPerPhrase) break;
-      if (candidate.index - lastSelectedIndex < minCharsBetweenSamePhrase) continue;
+      if (occurrence >= phraseLimit) break;
+      if (!isRotatingPhrase && candidate.index - lastSelectedIndex < minCharsBetweenSamePhrase) continue;
       matches.push({ ...candidate, occurrence });
       lastSelectedIndex = candidate.index;
       occurrence += 1;
@@ -492,13 +561,28 @@ export function autoLinkKeywordsInText(
     let fallbackImagePath: string | undefined;
     let skipLinking = false;  // Flag for same-page with no fallback
 
+    const rotation = ROTATING_LINK_MAP[lc];
+    if (rotation) {
+      const slots = [
+        { type: 'page', href: rotation.definition },
+        { type: 'page', href: rotation.landing },
+        { type: 'art', href: rotation.artSection },
+      ].filter((slot) => slot.type === 'art' || normalizePath(slot.href) !== currentPath);
+      const slot = slots[occurrence];
+      if (!slot) continue;
+      href = slot.type === 'art'
+        ? pickImageLinkForSection(rotation.artSection, exclude, `${currentPath}|${lc}|rotation-art`)
+        : slot.href;
+      if (!href) continue;
+    }
+
     // a) overrides
-    if (!preferImage && (overrides[matchText] || overrides[lc])) {
+    if (!rotation && !preferImage && (overrides[matchText] || overrides[lc])) {
       href = overrides[matchText] || overrides[lc];
     }
 
     // a.1) canonical SEO routing for priority phrases
-    if (!preferImage && !href && CANONICAL_LINK_MAP[lc]) {
+    if (!rotation && !preferImage && !href && CANONICAL_LINK_MAP[lc]) {
       const canonicalTarget = CANONICAL_LINK_MAP[lc];
       if (normalizePath(canonicalTarget) !== currentPath) {
         href = canonicalTarget;
