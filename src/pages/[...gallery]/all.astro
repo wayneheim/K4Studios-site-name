@@ -118,6 +118,10 @@ const galleryData = rawGalleryData.filter((img: any) =>
 // ✅ Gallery metadata
 const imageCount = galleryData.length;
 const basePath = galleryHref;
+const useUnifiedCurrentTemplate = basePath.startsWith('/Galleries/Fine-Art-Photography/');
+const CommercialCollectionAllPage = useUnifiedCurrentTemplate
+  ? (await import('@/components/all-pages/CommercialCollectionAllPage.astro')).default
+  : null;
 const canonicalUrl = `https://www.k4studios.com${basePath}/all`;
 const parentUrl = `https://www.k4studios.com${basePath}`;
 const allPageDoorwayLink = getGalleryDoorwayLink(basePath);
@@ -535,9 +539,97 @@ const structuredDataJson = JSON.stringify({
 
 // ✅ Get first image for hero (if exists)
 const heroImage = galleryData[0];
+
+const getGalleryModuleData = (href: string) => {
+  const leaf = href.split('/').filter(Boolean).at(-1) || '';
+  const candidates = [
+    `/src/data${href}.mjs`,
+    `/src/data${href}/${leaf}.mjs`,
+  ];
+  const galleryModule = galleryModules[candidates.find((candidate) => galleryModules[candidate]) || ''] as any;
+  const items = galleryModule?.galleryData || galleryModule?.default || [];
+  return items.filter((item: any) =>
+    !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(item.visibility ?? 'show').trim().toLowerCase()) &&
+    item.id !== 'i-k4studios'
+  );
+};
+
+const relatedDockHrefs = [
+  ...collectionContext.siblingGallerySources.map((item: any) => resolveGallerySourceHref(item.href)),
+  ...collectionContext.siblingCollections.map((item: any) => resolveGallerySourceHref(item.href)),
+]
+  .filter(Boolean)
+  .filter((href: string) => href !== basePath);
+const uniqueRelatedDockHrefs = Array.from(new Set(relatedDockHrefs));
+const dockInsertIndex = Math.floor((uniqueRelatedDockHrefs.length + 1) / 2);
+const orderedDockHrefs = [
+  ...uniqueRelatedDockHrefs.slice(0, dockInsertIndex),
+  basePath,
+  ...uniqueRelatedDockHrefs.slice(dockInsertIndex),
+];
+const sectionDockItems = orderedDockHrefs.map((href: string) => {
+  const firstImage = getGalleryModuleData(href)[0];
+  return {
+    title: getGalleryCollectionLabel(href),
+    subtitle: '',
+    href: `${href}/all#collection-browser`,
+    thumb: firstImage ? getSemanticImageUrl(firstImage, { galleryPath: href }, 's') : '/images/show-2t.webp',
+    current: href === basePath,
+  };
+});
+const dockCenterIndex = sectionDockItems.findIndex((item: any) => item.current);
+const currentDockTitle = `${galleryTitle} Collection`;
+const breadcrumbStructuredItems = breadcrumbHrefs.map((href: string, index: number) => ({
+  name: breadcrumbLabels[index],
+  href,
+}));
+const breadcrumbHtml = breadcrumbStructuredItems
+  .map((item: any) => `<a href="${item.href}">${item.name}</a>`)
+  .join(' | ');
+const collectionName = breadcrumbLabels.at(-2) || galleryLabel;
+const variantName = breadcrumbLabels.at(-1) || 'Collection';
+const unifiedIdentity = {
+  collectionName,
+  variantName,
+  variantDescriptor: variantName.toLowerCase(),
+  gatewayBrandLabel: `${galleryTitle} Collection (${imageCount} Images)`,
+};
+const unifiedCopy = {
+  seoTitle,
+  seoDescription,
+  gatewaySubhead: collectionSubtitle,
+  gatewayIntroCopy: collectionLead,
+  gatewaySupportingCopy: collectionSupport,
+  gatewayHeroAlt: heroImage?.alt || '',
+  commercialH1: `${galleryTitle} Collection (${imageCount} Images)`,
+  commercialDeck: collectionSubtitle,
+  collectionIntro: `${collectionLead}\n\n${collectionSupport}`,
+  gatewayCollectionName: galleryTitle,
+  descriptionMaxLength: 160,
+};
+const gatewayAdditionalParagraphs = collectionContext.parent?.href && collectionContext.parent?.label
+  ? [`Return to the ${collectionContext.parent.label} overview for curated entry points and the broader series context.`]
+  : [];
 ---
 
-<BaseLayout title={seoTitle} description={seoDescription} meta={{ canonicalUrl, robots: "index, follow" }}>
+{useUnifiedCurrentTemplate ? (<CommercialCollectionAllPage
+  rawGalleryData={rawGalleryData}
+  entranceData={entranceRecord}
+  basePath={basePath}
+  canonicalPath={`${basePath}/all`}
+  breadcrumbHtml={breadcrumbHtml}
+  breadcrumbStructuredItems={breadcrumbStructuredItems}
+  sectionDockItems={sectionDockItems}
+  dockCenterIndex={dockCenterIndex}
+  currentDockTitle={currentDockTitle}
+  archiveContext={{ categoryUrl: basePath, categoryName: galleryLabel }}
+  identity={unifiedIdentity}
+  copy={unifiedCopy}
+  structuredDataJsonOverride={structuredDataJson}
+  pageMetaOverride={{ canonicalUrl, robots: "index, follow" }}
+  preserveArtworkStrings={true}
+  gatewayAdditionalParagraphs={gatewayAdditionalParagraphs}
+/>) : (<BaseLayout title={seoTitle} description={seoDescription} meta={{ canonicalUrl, robots: "index, follow" }}>
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json" set:html={structuredDataJson} />
 
@@ -985,4 +1077,4 @@ const heroImage = galleryData[0];
       window.addEventListener('resize', clearActiveRow);
     })();
   </script>
-</BaseLayout>
+</BaseLayout>)}

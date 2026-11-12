@@ -28,6 +28,10 @@ const {
   archiveContext = {},
   identity = {},
   copy = {},
+  structuredDataJsonOverride = "",
+  pageMetaOverride,
+  preserveArtworkStrings = false,
+  gatewayAdditionalParagraphs = [],
 } = Astro.props as {
   rawGalleryData: any[];
   entranceData?: any;
@@ -50,6 +54,10 @@ const {
     gatewayBrandLabel?: string;
   };
   copy?: Record<string, string>;
+  structuredDataJsonOverride?: string;
+  pageMetaOverride?: Record<string, any>;
+  preserveArtworkStrings?: boolean;
+  gatewayAdditionalParagraphs?: string[];
 };
 
 // ✅ Filter out ghosts and hidden (archived) images
@@ -347,7 +355,7 @@ const breadcrumbJsonItems = [
   { "@type": "ListItem", "position": (breadcrumbStructuredItems || []).length + 2, "item": { "@id": canonicalUrl, "name": "Collection" } },
 ];
 
-const structuredDataJson = JSON.stringify({
+const generatedStructuredDataJson = JSON.stringify({
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -394,8 +402,9 @@ const structuredDataJson = JSON.stringify({
     }
   ]
 }, null, 2);
+const structuredDataJson = structuredDataJsonOverride || generatedStructuredDataJson;
 
-const pageMeta = {
+const generatedPageMeta = {
   canonicalUrl,
   robots: "index, follow",
   descriptionMaxLength: copy.descriptionMaxLength || 190,
@@ -409,6 +418,7 @@ const pageMeta = {
   twitterImage: socialImage,
   twitterUrl: canonicalUrl,
 };
+const pageMeta = pageMetaOverride || generatedPageMeta;
 
 const compactBreadcrumbHtml = breadcrumbHtml
   .replace(/\s*\|\s*<a href="[^"]*\/K4-Select-Series">K4 Select Series<\/a>/g, "")
@@ -448,6 +458,7 @@ const compactBreadcrumbHtml = breadcrumbHtml
         {gatewaySubhead && <p class="gateway-subhead">{gatewaySubhead}</p>}
         <p class="gateway-copy-text">{gatewayIntroCopy}</p>
         <p class="gateway-copy-text">{gatewaySupportingCopy}</p>
+        {gatewayAdditionalParagraphs.map((paragraph) => <p class="gateway-copy-text">{paragraph}</p>)}
       </div>
     </section>
 
@@ -619,14 +630,16 @@ const compactBreadcrumbHtml = breadcrumbHtml
 
         const normalizedAltKey = altText.toLowerCase();
         const previousAltCount = seenCardAltCounts.get(normalizedAltKey) || 0;
-        if (previousAltCount > 0) {
+        if (!preserveArtworkStrings && previousAltCount > 0) {
           altText = `${altText.replace(/[.\s]*$/, "")} (${title} - artwork ${idx + 1}).`;
         }
         seenCardAltCounts.set(normalizedAltKey, previousAltCount + 1);
         
-        const storyExcerptLimit = idx < 50 ? 100 : 50;
+        const storyExcerptLimit = preserveArtworkStrings ? 150 : (idx < 50 ? 100 : 50);
         const collectorNoteLimit = idx < 50 ? 150 : 25;
-        const storyExcerpt = truncateHardExcerpt(item.story || "", storyExcerptLimit);
+        const storyExcerpt = preserveArtworkStrings
+          ? truncateExcerpt(item.story || "", storyExcerptLimit)
+          : truncateHardExcerpt(item.story || "", storyExcerptLimit);
         const collectorNoteRaw =
           item.notes ||
           item.collectorNotes ||
