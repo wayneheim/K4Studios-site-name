@@ -6,6 +6,12 @@ import SectionKeywordSuggestions from "./SectionKeywordSuggestions.jsx";
 import { generateSmartMetadata } from "../utils/autoTextGenerator.mjs";
 import { normalizeImageSrc } from "../utils/imageProxy.js";
 import {
+  buildTurboPatch,
+  buildTurboText,
+  getChangedTurboFields,
+  parseTurboText,
+} from "../utils/galleryEditorTurbo.mjs";
+import {
   getConfiguredSeries,
   getEffectiveSeries as resolveEffectiveSeries,
 } from "../data/seriesAvailability.js";
@@ -1040,8 +1046,9 @@ export default function GalleryEditorPro() {
   const [turboText, setTurboText] = useState("");
   const [turboApplied, setTurboApplied] = useState(false);
   const [realBackupMade, setRealBackupMade] = useState(() => resumeState?.realBackupMade ?? false);
-  const [lastTurboIdx, setLastTurboIdx] = useState(-1); // Track last idx for turbo text updates
   const turboTextareaRef = useRef(null); // Ref for turbo mode textarea
+  const turboBaselineRef = useRef({ recordKey: "", text: "" });
+  const dirtyFieldsByImageRef = useRef(new Map());
 
   // Pricing Modal state
   const [pricingModalOpen, setPricingModalOpen] = useState(false);
@@ -1196,6 +1203,7 @@ export default function GalleryEditorPro() {
 
       setData(hydratedArr);
       setBackupData(allArr);
+      dirtyFieldsByImageRef.current.clear();
       
       // Check if there's a jump-back position waiting (from bulk save)
       const jumpBackIdx = getJumpBackTo();
@@ -1424,10 +1432,6 @@ export default function GalleryEditorPro() {
       return;
     }
     
-    // Text content fields that indicate human authorship when edited
-    const textContentFields = ["title", "alt", "description", "story", "collectorNotes", "notes", "keywords"];
-    const isTextContent = textContentFields.includes(field);
-    
     setData((arr) => {
       const i = arr.findIndex((d) => d.id === current.id);
       if (i === -1) return arr;
@@ -1444,18 +1448,17 @@ export default function GalleryEditorPro() {
       } else {
         copy[i] = { ...copy[i], [field]: value };
       }
-      // Mark as human-authored if editing text content fields (not in turbo mode)
-      if (isTextContent && !turboMode) {
-        copy[i] = { ...copy[i], contentSource: "human" };
-      }
       return copy;
     });
     setDirty(true);
-    if (isTextContent && !turboMode && currentClassification === "scout") {
-      writeContentClassification(current.id, null).catch((error) => {
-        console.warn("[GalleryEditorPro] Could not clear Scout after Human edit:", error);
-      });
-    }
+    const canonicalField = field === "notes" || field === "collectorNotes"
+      ? "collectorNotes"
+      : field === "tags" || field === "keywords"
+      ? "keywords"
+      : field;
+    const dirtyFields = dirtyFieldsByImageRef.current.get(current.id) || new Set();
+    dirtyFields.add(canonicalField);
+    dirtyFieldsByImageRef.current.set(current.id, dirtyFields);
     // Track this image as having unsaved changes
     if (current?.id) {
       setDirtyImageIds(prev => new Set(prev).add(current.id));
@@ -1487,6 +1490,7 @@ export default function GalleryEditorPro() {
       next.delete(current.id);
       return next;
     });
+    dirtyFieldsByImageRef.current.delete(current.id);
     setDirty(true);
     setLastAction(`Reverted CURRENT (${current.id}) — ${new Date().toLocaleTimeString()}`);
   }
@@ -1495,6 +1499,7 @@ export default function GalleryEditorPro() {
     if (!backupData) return;
     if (!confirm("Revert ALL images to the backed-up data?")) return;
     setDirtyImageIds(new Set()); // Clear all pending changes
+    dirtyFieldsByImageRef.current.clear();
     setData(
       backupData.filter(isRealItem).map((orig) => {
         const {
@@ -1513,58 +1518,14 @@ export default function GalleryEditorPro() {
   }
 
   // ---- TURBO MODE functions ----
-  function buildTurboText(item) {
-    if (!item) return "";
-    const keywords = Array.isArray(item.tags)
-      ? item.tags.join(", ")
-      : Array.isArray(item.keywords)
-      ? item.keywords.join(", ")
-      : "";
-    const collectorNotes = item.collectorNotes ?? item.notes ?? "";
-    
-    return `<<TITLE>>
-${item.title || ""}
-
-<<STORY>>
-${item.story || ""}
-
-<<DESCRIPTION>>
-${item.description || ""}
-
-<<ALT>>
-${item.alt || ""}
-
-<<KEYWORDS>>
-${keywords}
-
-<<COLLECTOR_NOTES>>
-${collectorNotes}`;
-  }
-
-  function parseTurboText(text) {
-    const result = {};
-    const sections = {
-      TITLE: "title",
-      STORY: "story",
-      DESCRIPTION: "description",
-      ALT: "alt",
-      KEYWORDS: "keywords",
-      COLLECTOR_NOTES: "collectorNotes"
+  function syncTurboToRecord(item) {
+    const text = buildTurboText(item);
+    turboBaselineRef.current = {
+      recordKey: item ? `${selectedPath}:${item.id}` : "",
+      text,
     };
-    
-    // Accept formats: <<TAG>>, <TAG>, "1. <TAG>", "1.<TAG>" (with optional numbering)
-    // Lookahead also handles numbered next sections like "2. <STORY>"
-    const regex = /(?:\d+\.\s*)?<?<(\w+)>>?\s*([\s\S]*?)(?=(?:\d+\.\s*)?<?<\w+>>?|$)/g;
-    let match;
-    while ((match = regex.exec(text)) !== null) {
-      const tag = match[1].toUpperCase();
-      // Strip trailing numbered list markers like "\n\n2." or "\n3."
-      let content = match[2].trim().replace(/\n+\d+\.?\s*$/, "").trim();
-      if (sections[tag]) {
-        result[sections[tag]] = content;
-      }
-    }
-    return result;
+    setTurboText(text);
+    setTurboApplied(false);
   }
 
   async function enterTurboMode() {
@@ -1596,8 +1557,7 @@ ${collectorNotes}`;
       setLastAction(`Backup created for Turbo Mode in local-backups/gallery-editor — ${new Date().toLocaleTimeString()}`);
     }
     
-    setTurboText(buildTurboText(current));
-    setTurboApplied(false);
+    syncTurboToRecord(current);
     setTurboMode(true);
   }
 
@@ -1605,27 +1565,44 @@ ${collectorNotes}`;
     setTurboMode(false);
     setTurboText("");
     setTurboApplied(false);
+    turboBaselineRef.current = { recordKey: "", text: "" };
   }
 
   async function populateFromTurbo() {
     if (!current || !backupMade) return;
     const parsed = parseTurboText(turboText);
-    
-    // Build the updated item with contentSource: ai
-    const updatedItem = { ...current, contentSource: "ai" };
-    if (parsed.title !== undefined) updatedItem.title = parsed.title;
-    if (parsed.story !== undefined) updatedItem.story = parsed.story;
-    if (parsed.description !== undefined) updatedItem.description = parsed.description;
-    if (parsed.alt !== undefined) updatedItem.alt = parsed.alt;
-    if (parsed.collectorNotes !== undefined) updatedItem.collectorNotes = parsed.collectorNotes;
-    if (parsed.keywords !== undefined) {
+    const currentId = current.id;
+    const recordKey = `${selectedPath}:${currentId}`;
+    const baselineText = turboBaselineRef.current.recordKey === recordKey
+      ? turboBaselineRef.current.text
+      : buildTurboText(current);
+    const turboChangedFields = getChangedTurboFields(baselineText, turboText);
+    const pendingMainFields = dirtyFieldsByImageRef.current.get(currentId) || new Set();
+    const turboSaveFields = new Set([
+      "title", "story", "description", "alt", "collectorNotes", "keywords", "rating",
+    ]);
+    const fieldsToSave = new Set([
+      ...turboChangedFields,
+      ...[...pendingMainFields].filter((field) => turboSaveFields.has(field)),
+    ]);
+
+    const updatedItem = { ...current };
+    if (turboChangedFields.has("title")) updatedItem.title = parsed.title;
+    if (turboChangedFields.has("story")) updatedItem.story = parsed.story;
+    if (turboChangedFields.has("description")) updatedItem.description = parsed.description;
+    if (turboChangedFields.has("alt")) updatedItem.alt = parsed.alt;
+    if (turboChangedFields.has("collectorNotes")) updatedItem.collectorNotes = parsed.collectorNotes;
+    if (turboChangedFields.has("keywords")) {
       const tags = parsed.keywords.split(",").map((s) => s.trim()).filter(Boolean);
       updatedItem.tags = tags;
       updatedItem.keywords = tags;
     }
-    
-    // Capture the current id before async operations
-    const currentId = current.id;
+
+    if (fieldsToSave.size === 0) {
+      syncTurboToRecord(current);
+      setLastAction(`No field changes to save for ${currentId}`);
+      return true;
+    }
     
     // Update local state
     setData((arr) => {
@@ -1638,29 +1615,11 @@ ${collectorNotes}`;
     
     // Save to database
     try {
-      if (currentClassification === "oim") {
-        await writeContentClassification(currentId, null);
-      }
+      const patch = buildTurboPatch(updatedItem, fieldsToSave);
       const payload = {
         datasetPath: selectedPath.replace(/^\//, ""),
         id: updatedItem.id,
-        patch: {
-          title: updatedItem.title ?? "",
-          alt: updatedItem.alt ?? "",
-          description: updatedItem.description ?? "",
-          story: updatedItem.story ?? "",
-          notes: updatedItem.collectorNotes ?? updatedItem.notes ?? "",
-          keywords: Array.isArray(updatedItem.tags)
-            ? updatedItem.tags
-            : Array.isArray(updatedItem.keywords)
-            ? updatedItem.keywords
-            : String(updatedItem.tags || updatedItem.keywords || "")
-                .split(",")
-                .map((s) => s.trim())
-                .filter(Boolean),
-          rating: typeof updatedItem.rating === "number" ? updatedItem.rating : undefined,
-          contentSource: "ai",
-        },
+        patch,
       };
 
       // Save resume state before API call (in case HMR triggers)
@@ -1711,21 +1670,41 @@ ${collectorNotes}`;
         }
       }
       
-      setDirty(false);
+      const remainingDirtyFields = new Set(dirtyFieldsByImageRef.current.get(currentId) || []);
+      for (const field of fieldsToSave) remainingDirtyFields.delete(field);
+      if (remainingDirtyFields.size > 0) {
+        dirtyFieldsByImageRef.current.set(currentId, remainingDirtyFields);
+      } else {
+        dirtyFieldsByImageRef.current.delete(currentId);
+        setDirtyImageIds((previous) => {
+          const next = new Set(previous);
+          next.delete(currentId);
+          return next;
+        });
+      }
+      setDirty(dirtyFieldsByImageRef.current.size > 0);
+      const savedText = buildTurboText(updatedItem);
+      turboBaselineRef.current = { recordKey, text: savedText };
+      setTurboText(savedText);
       setTurboApplied(true);
-      setLastAction(`Saved ${currentId} — ${new Date().toLocaleTimeString()}`);
+      setLastAction(`Saved ${currentId}: ${[...fieldsToSave].join(", ")} — ${new Date().toLocaleTimeString()}`);
+      return true;
     } catch (err) {
       setDirty(true);
       setTurboApplied(true);
       setLastAction(`Populated but save failed: ${err.message}`);
       alert("Populate succeeded but save failed.\n\n" + err.message);
+      return false;
     }
   }
 
-  function turboMove(delta) {
+  async function turboMove(delta) {
     // Check if there are unsaved changes in turbo mode
     if (current) {
-      const originalText = buildTurboText(current);
+      const recordKey = `${selectedPath}:${current.id}`;
+      const originalText = turboBaselineRef.current.recordKey === recordKey
+        ? turboBaselineRef.current.text
+        : buildTurboText(current);
       if (turboText !== originalText && !turboApplied) {
         const shouldSave = confirm(
           "You have unpopulated changes in the text block.\n\n" +
@@ -1734,25 +1713,24 @@ ${collectorNotes}`;
         );
         if (!shouldSave) return; // User cancelled, go back to review
         // Save changes before moving
-        populateFromTurbo();
+        const saved = await populateFromTurbo();
+        if (!saved) return;
       }
     }
     
-    move(delta);
+    await move(delta);
     setTurboApplied(false);
     // Will update turboText via effect
   }
 
-  // Update turbo text when navigating to a different image in turbo mode
-  // Also rebuild if turboText is empty (e.g., after HMR when current wasn't ready)
+  // A record switch always gets a fresh block and baseline from that record.
   useEffect(() => {
-    if (turboMode && current && (idx !== lastTurboIdx || !turboText)) {
-      setTurboText(buildTurboText(current));
-      setTurboApplied(false);
-      setLastTurboIdx(idx);
+    const recordKey = current ? `${selectedPath}:${current.id}` : "";
+    if (turboMode && current && turboBaselineRef.current.recordKey !== recordKey) {
+      syncTurboToRecord(current);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [turboMode, idx, current]);
+  }, [turboMode, selectedPath, current?.id]);
 
   // Auto-save current image before navigating if enabled and dirty
   async function move(delta) {
@@ -1862,6 +1840,7 @@ ${collectorNotes}`;
         next.delete(imageId);
         return next;
       });
+      dirtyFieldsByImageRef.current.delete(imageId);
       return true;
     } catch (err) {
       console.error(`Failed to save image ${imageId}:`, err);
@@ -2078,6 +2057,7 @@ ${collectorNotes}`;
         next.delete(current.id);
         return next;
       });
+      dirtyFieldsByImageRef.current.delete(current.id);
     } catch (err) {
       alert("Save failed. Falling back to file download.\n\n" + err.message);
       const filename = selectedPath.split("/").pop() || "gallery.mjs";
@@ -2247,7 +2227,7 @@ ${collectorNotes}`;
     // If in turbo mode, update the turbo text to reflect new title
     if (turboMode) {
       setTurboText(buildTurboText(updatedItem));
-      setTurboApplied(true);
+      setTurboApplied(false);
     }
     
     // Save to server
@@ -2273,6 +2253,12 @@ ${collectorNotes}`;
         body: JSON.stringify(payload),
       });
       if (!res.ok) throw new Error(await res.text());
+      if (turboMode) {
+        const savedText = buildTurboText(updatedItem);
+        turboBaselineRef.current = { recordKey: `${selectedPath}:${currentId}`, text: savedText };
+        setTurboText(savedText);
+        setTurboApplied(true);
+      }
       setLastAction(`Generated title for ${currentId} — ${new Date().toLocaleTimeString()}`);
       setDirty(false);
     } catch (err) {
@@ -2318,7 +2304,7 @@ ${collectorNotes}`;
     // If in turbo mode, update the turbo text to reflect new generated data
     if (turboMode) {
       setTurboText(buildTurboText(updatedItem));
-      setTurboApplied(true); // Mark as applied since we're saving directly
+      setTurboApplied(false);
     }
     
     // Save to server
@@ -2352,6 +2338,12 @@ ${collectorNotes}`;
         body: JSON.stringify(payload),
       });
       if (!res.ok) throw new Error(await res.text());
+      if (turboMode) {
+        const savedText = buildTurboText(updatedItem);
+        turboBaselineRef.current = { recordKey: `${selectedPath}:${currentId}`, text: savedText };
+        setTurboText(savedText);
+        setTurboApplied(true);
+      }
       setLastAction(`Generated all data for ${currentId} — ${new Date().toLocaleTimeString()}`);
       setDirty(false);
     } catch (err) {
@@ -3205,7 +3197,7 @@ ${collectorNotes}`;
                     <button
                       onClick={populateFromTurbo}
                       className={`${btnBase} bg-amber-500 border-amber-600 text-black font-semibold ${btnHover}`}
-                      title="Parse the text block, populate all fields, and save to database"
+                      title="Save only fields changed in this Turbo session or pending in the main form"
                     >
                       📥 Populate & Save
                     </button>

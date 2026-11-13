@@ -47,7 +47,8 @@
     "preview": "npm run build && wrangler dev",
     "deploy": "npm run build && wrangler deploy",
     "cf-typegen": "wrangler types",
-    "test:commerce": "node --test cloudflare-commerce/test/quote.test.js"
+    "test:commerce": "node --test cloudflare-commerce/test/quote.test.js",
+    "test:gallery-editor-turbo": "node --test src/utils/galleryEditorTurbo.test.mjs"
   },
   "repository": {
     "type": "git",
