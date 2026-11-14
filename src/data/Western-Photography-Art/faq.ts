@@ -20,7 +20,7 @@ export const westernArtFAQ = [
   {
     q: "Is Western photography art considered fine art?",
     a: [
-      "Yes - when it meets the standard of authorship, intentionality, and craft. Wayne Heim's work is produced as collector-grade fine art: archival materials, named editions, signed certificates, and images built around story and visual philosophy rather than documentation or decoration.",
+      "Yes - when it meets the standard of authorship, intentionality, and painterly discipline. Wayne Heim's work is produced as collector-grade fine art: archival materials, named editions, signed certificates, and images built around story and visual philosophy rather than documentation or decoration.",
     ],
   },
   {

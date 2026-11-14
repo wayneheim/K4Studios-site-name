@@ -320,6 +320,7 @@ async function logRawEvent(env, eventType, targetId, request, extras = {}) {
       refererOverride = null,
       deltaMs = null,
       visitorId = null,
+      visitorStatus = null,
       sourceLayer = null,
       imgSize = null,
       refType = null,
@@ -392,6 +393,7 @@ async function logRawEvent(env, eventType, targetId, request, extras = {}) {
     // If the column doesn't exist in D1 yet, we detect and retry without it.
     const optional = [
       { name: 'source_layer', value: sourceLayer },
+      { name: 'visitor_status', value: visitorStatus },
       { name: 'page_key', value: pageKey },
       { name: 'img_size', value: imgSize },
       { name: 'ref_type', value: refType },

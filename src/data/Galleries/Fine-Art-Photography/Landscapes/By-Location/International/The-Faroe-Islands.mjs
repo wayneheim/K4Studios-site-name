@@ -45,8 +45,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Delving into fantastic places, this work by Wayne Heim highlights International – Across Borders through fantastic places and painterly european landscapes in The-Faroe-Islands. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
+    "story": "This is the Faroes' whole argument in one view: grass, water, and mountains that go straight into the sea, with a fence line for scale and nobody in it. About fifty thousand people live under these skies, scattered among villages that the roads only recently learned to reach. Stand here in any month and the light will change its mind four times before you've finished looking. The islands' constancy is the changing.\n\n© Wayne Heim",
+    "notes": "The establishing view of the Faroe set: a hilltop panorama across green, mountainous islands and a fjord under racing cloud. It's the picture that explains the archipelago — scale, isolation, and weather — and the natural opener for the whole collection.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -83,8 +83,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "Saksun counts its residents in the low dozens, and its houses wear grass for roofs because the wind here would take anything lighter. The waterfall comes down the hillside behind the village like it's been doing errands there forever; the tidal lagoon below empties and fills on the Atlantic's schedule, not the village's. The church, the turf houses, the falls, the road out — that's the complete inventory, and it has been enough for a thousand years.\n\n© Wayne Heim",
+    "notes": "Saksun in panorama: turf-roofed stone houses, a waterfall down the green hill, and the tidal inlet beside them — the Faroe village complete in one frame. It's the set's signature settlement picture, and the one buyers describe as the whole country in miniature.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -120,8 +120,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "In black and white the coast stops pretending to be gentle — cliffs, surf, and cloud in their working clothes. The Faroes sit where the Atlantic weather is manufactured; the shore takes delivery daily. Grass grows to the very edge and then votes with its feet, leaning away from the wind it has known since it was seed. The island on the horizon is doing the same thing, one range farther out.\n\n© Wayne Heim",
+    "notes": "A rugged Faroe coast in monochrome: grass cliff edge in the foreground, surf on the rocks below, an island on the horizon. The black and white strips the North Atlantic to its mechanics — the set's purest tone-and-structure coastal.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -157,8 +157,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The fjord water runs dark teal because there's nothing to lighten it — no sand, no shallows, just depth and the reflection of green walls. The foam along the shore is the sea signing its work after last night's blow. Villages here face the fjord the way other towns face a main street: everything arrives by that water, or used to, and the cliffs behind are why nobody built anywhere else.\n\n© Wayne Heim",
+    "notes": "Dark teal fjord water lapping a rocky shore beneath layered green cliffs — the Faroe palette at its deepest: teal, grass green, and storm gray. It's the set's essential fjord frame, quiet water under enormous land.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -194,8 +194,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The road runs along the shore because there's nowhere else to run it — the island is all edge. The sea stack offshore is a piece of cliff that the sea is still negotiating for; the road's engineers just routed around the conversation. Under storm light the whole coast goes the color of slate and grass, and the drive becomes the destination, which in the Faroes is no figure of speech.\n\n© Wayne Heim",
+    "notes": "A portrait of the Faroe coastal road: dark fjord water, a sharp sea stack, and the road curving along the grass under storm cloud. It captures the islands' essential travel — every journey here is a shoreline with weather.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -231,8 +231,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The same shore with the color gone, and the stack stands colder for it — a stone exclamation in gray water. Black and white is these islands' winter truth even in summer: the green is a brief rumor the light tells, and the bones underneath are this. The road still runs the edge, patient as ever. The storm is still deciding.\n\n© Wayne Heim",
+    "notes": "The B/W companion to the coastal-road view: sea stack, dark water, and storm cloud reduced to tonal weight. Hung as a pair, the two frames make the set's clearest case that the Faroes are a monochrome country wearing green for a season.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -269,8 +269,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The hut wears a living roof — turf cut from the same slope it stands on, growing over the timbers like the building is trying to become hill again. In a treeless country you build with what the island offers: stone, driftwood, grass. The fence marches down to the bay because the sheep must be kept from the shore grass, or from the neighbor's — the disputes are old and the fences older. Black and white suits it: this arrangement predates color in every way that matters.\n\n© Wayne Heim",
+    "notes": "A turf-roofed hut and its fence line above a bay, in black and white: the Faroe building tradition as pure form. Portrait format gives the slope its fall. It's the set's most timeless frame — nothing in it dates the arrangement to any particular century.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -306,8 +306,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "Color returns the bay to June: the grass violent green, the sheep out on the slope doing their slow editorial work on it. Sheep outnumber people in the Faroes — the islands' very name means 'sheep islands' — and a view like this is mostly theirs, administered from huts with turf roofs. The cliffs across the bay keep the Atlantic's worst in the family. Inside the bay it's almost gentle. Almost is the local unit of calm.\n\n© Wayne Heim",
+    "notes": "The color companion of the turf-roof bay: vivid grass, sheep on the slope, the stone wall and hut in full summer green. It's the pastoral Faroes at their most saturated — the version of the islands the weather permits for a few weeks a year.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -345,8 +345,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "A village huddled where the hill gives it shelter, turf roofs dark against the grass, windows lit by nothing but sky. The sea stack stands in the bay like a sentry the village never posted. From the water this cluster is a landmark; from the houses, the stack is the view, the weather gauge, and the clock — shadow on it means afternoon. Black and white flattens the centuries: saxon stone, norse grass, modern glass, one gray harmony.\n\n© Wayne Heim",
+    "notes": "Turf-roofed houses above a bay with its sea stack, panoramic and black and white — village, water, and cliff in one wide arrangement. The white window frames give the scale. It's the set's most complete monochrome settlement.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -383,8 +383,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "In color the village breathes: the roofs green as the hillside they're cut from, the walls stone-dark, the notched peak behind watching the whole arrangement. Houses like these were heated by peat and lit by oil within living memory; the turf roof is not nostalgia, it's insulation that regrows. The stack offshore holds the bay's mouth. The village holds everything else — church, harbor, graveyard, and the long opinion about weather.\n\n© Wayne Heim",
+    "notes": "The color version of the turf-house bay: green roofs on dark houses under a notched peak, the stack standing in blue water. It's the Faroe village in its summer truth — the frame buyers want when they want the islands inhabited, not just endured.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -420,8 +420,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The stream reaches the cliff edge and simply continues — the islands are so steep that half their rivers end this way, walking off the land into the sea. No plunge pool, no delta; the Atlantic takes delivery mid-air. In black and white the falling water is a white signature across the headland's dark page. Below, the surf edits out whatever the falls deliver. The account never balances, and never stops.\n\n© Wayne Heim",
+    "notes": "A headland waterfall pouring straight into a choppy sea, panoramic in black and white — the Faroe signature in monochrome: land ending, water falling, sea taking it. The break of light in the storm cloud is the composition's second subject.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -456,8 +456,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The headland reaches into the Atlantic like it's testing the water — geologists say the whole archipelago is one tilted lava pile drowning slowly, and promontories like this are the high fingers of it. The falls at its tip do the vertical part. In color the sea runs teal and the grass runs green and the geometry runs the show: two arms of land, one bay of weather, and the horizon keeping its distance.\n\n© Wayne Heim",
+    "notes": "The color companion headland: arms of green land reaching into a teal sea, the falls spilling at the point, a flat island on the horizon. It's the Faroe coast as geometry — the set's most map-like composition.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -493,8 +493,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The layers are lava flows, one eruption's floor becoming the next one's foundation, thirty million years of it before the ice came and carved the pile into islands. This cliff island wears the strata like growth rings, and a small falls spills off its rim for good measure. In black and white the banding reads like the islands' own bar code: scan it and you get basalt, time, and weather.\n\n© Wayne Heim",
+    "notes": "A massive flat-topped cliff island in black and white, its lava strata banding the whole face, waves at its base, a falls off its rim. It's the set's geology monument — the archipelago's construction made visible at sea.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -531,8 +531,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The same island in its summer clothes: grass on the crown, teal water at the foot, the strata reading rust and gray where the falls take their white line down. The green top is not decoration — it's pasture, reachable by boat and grazed by sheep that get rowed out to islands like this for the season. Even the cliffs here are farmed. The sea does the fencing.\n\n© Wayne Heim",
+    "notes": "The color companion: the layered cliff island green-crowned over a teal sea, its rim falls catching the light. Where the B/W frame is all structure, this one is all season — the North Atlantic in its brief, vivid summer.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -569,8 +569,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The village is the small print under the mountain — a shelf of houses between the plateau and the sea, and the falls do their commute past it, off the cliff and into the water below. Flat-topped, stepped, indifferent: the mountain has the size of a weather system. In black and white the whole arrangement goes monumental, the houses reduced to punctuation in a sentence about scale. People live in that punctuation. That's the Faroes.\n\n© Wayne Heim",
+    "notes": "Black-and-white portrait: tiny houses on a shelf beneath a flat-topped mountain, the falls pouring off the cliff below them. It's the set's scale manifesto — the human presence measured honestly against the land, and not found wanting, just small.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -607,8 +607,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "Color makes the basin generous: green bowl, white village, the falls in the foreground running bright off the cliff. This is the Faroes' most famous arrangement — a village with a waterfall for a front yard and a mountain for a back fence — and it earns the fame honestly. The storm overhead is not a flaw in the day. Up here it's the subscription the light comes with.\n\n© Wayne Heim",
+    "notes": "The color version of the village-under-the-mountain: green basin, white houses, the falls pouring into the sea in the foreground. It's the archipelago's postcard composition earned the hard way — weather, scale, and settlement in one portrait frame.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -645,8 +645,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "From along the coast the village shrinks further — a white fleck on the grass shelf — and the falls take the center: one clean drop from cliff to sea, no riverbed epilogue. This coast is a sequence of these: cliff, village, falls, repeat, all the way around the island. Black and white again insists on the structure. The Faroes in summer are green; in truth they're this: rock, water, weather, repeat.\n\n© Wayne Heim",
+    "notes": "The wider coastal angle on the falls village in black and white: the drop dead-center, the shelf village small above, the mountain looming behind. Panoramic and tonal, it's the group's establishing shot — the one that shows how the coast is built.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -683,8 +683,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "Here the arrangement turns generous: foreground slope in full green, the falls pouring off the cliff mid-frame, the village spread on its shelf under the stepped mountain. If the islands have a signature photograph, it's this geometry — grass, water, white houses, basalt — and the summer light that makes it briefly, almost, gentle. The storm at the top of the frame is the signature's flourish: it never fully clears. It just visits the sun.\n\n© Wayne Heim",
+    "notes": "The fullest color version of the falls village: lush foreground slope, the sea-fall, the village, and the flat-topped mountain in one layered composition. It's the Faroe set's most complete single frame — the one that carries grass, geology, water, and habitation together.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -720,8 +720,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "Closer to the drop, the coast loses its postcard manners: spray at the base, teal water churning against the rocks, the falls' white thread combing the green cliff. The shore at the right is the only place a boat could even pretend to land, and the pretense is thin. This is the islands' edge at working distance — the part the maps paint green and the sea paints white, daily.\n\n© Wayne Heim",
+    "notes": "The falls at close range: spray, churn, and layered green cliffs under the flat mountain — the most energetic of the village-falls group, with the rocky shore giving it a foreground the wide views don't have. The teal sea does the color work.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -756,8 +756,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "Nothing here but the drop itself — cliff, water, dark. The falls in the Faroes don't bother with setting at this range: the rock is near-black, the water is the only light in the frame, and the plunge is the whole grammar. You can hear this one through the photograph. Somewhere below, out of frame, the sea is waiting with the same patience it brings to everything. It has collected a lot of rivers this way.\n\n© Wayne Heim",
+    "notes": "A tall falls plunging down a black cliff, framed tight in portrait — the set's most abstract waterfall: white water on dark rock, no horizon, no shore. It's the falls as pure descent, and it hangs like a piece of calligraphy.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -793,8 +793,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The companion exposure gives the same drop its weather: mist standing around the falling water like the cliff is exhaling, and a single white bird crossing the spray — a fulmar, probably, one of the cliff's own, riding the updraft the plunge creates. Twice-photographed and worth it: the first frame is the falls, this one is the falls on a day when the air joined in.\n\n© Wayne Heim",
+    "notes": "The mistier twin of the falling-water frame: same plunge, softer air, a bird in the spray. Where its companion is calligraphy, this one is atmosphere — the pair together makes the set's diptych of a single drop.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -829,8 +829,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The wave hits the cliff and stands up — a white plume two stories tall before gravity files its objection. This coast manufactures these collisions hourly; the cliffs are basalt and the Atlantic is in no mood to negotiate. The rivulets running back down the wet rock are the previous wave, leaving. The next one is already darkening the water at the frame's edge. Portrait format because the event is vertical: sea, impact, sky.\n\n© Wayne Heim",
+    "notes": "A wave detonating up a sheer cliff face, portrait format, spray plume against dark rock — the most violent single moment in the Faroe set. Buyers hang it for the physics: you can feel the concussion this one arrived with.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -866,8 +866,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "Strip the teal away and the impact is all structure: white force against black resistance, the plume's lace against the cliff's grain. The Faroes' waves do not improve with color; they improve with contrast, and this coast has both in inventory. What the picture can't carry is the sound and the ground shaking slightly through your boots. The spray pattern is the signature of both.\n\n© Wayne Heim",
+    "notes": "The B/W companion to the wave explosion: spray and stone as pure tone. It's the set's starkest seascape — the Atlantic argument in black and white, and the frame that pairs with the color detonation as force, twice-told.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -903,8 +903,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "Closer and lower: the wave breaking on the outcrop in teal and white, no horizon to rest on, the sea filling the whole conversation. At this distance the water isn't scenery, it's weather at arm's length — each breaker a small local storm with its own white sky. The rock has heard it all before, roughly once every eight seconds, for some millions of years. It is not tired. It is basalt.\n\n© Wayne Heim",
+    "notes": "A close wave study in teal: white water exploding over a dark outcrop, the sea taking the whole frame. It's the most immersive of the wave group — no shore, no sky, just the Atlantic at working distance.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -940,8 +940,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "In black and white the spray becomes smoke — a plume billowing off the rocks like the coast is burning cold. The churning water at the bottom is the wave's argument continuing after the impact: white on black, unresolved. These collisions are the islands' true industry; everything else — sheep, fish, villages — happens in the pauses between them. The pauses are short. The work of the sea is not.\n\n© Wayne Heim",
+    "notes": "B/W close study of a spray plume boiling off a jagged cliff — the wave group rendered as smoke and stone. The most textural of the Faroe seascapes, all churn and billow, and the monochrome companion the wave collectors ask for.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -977,8 +977,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "Highland cattle in a treeless pasture, grazing with the unhurried confidence of animals who have never been hurried by anything except weather. The horns are architecture; the coats are climate policy. In black and white the pasture becomes texture — grass, hair, horn — and the cattle stand in it like the islands' oldest residents, which, give or take the sheep's claim, they nearly are. Nobody poses out here. The grass is the agenda.\n\n© Wayne Heim",
+    "notes": "Two shaggy long-horned cattle grazing head-down in a full-frame pasture, black and white — the Faroe set's pastoral portrait. All texture: grass, coat, and horn. It's the quiet counterweight to the set's cliffs and surf.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1014,8 +1014,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "Tindhólmur stands off the coast like a thought the archipelago had and kept — a steep green pyramid of an islet, uninhabited, grazed by a few sheep in summer and otherwise left to the birds and the weather. Legend says an eagle stole a child to its peak once; the island keeps that kind of reputation in local telling. The red speck on the near shore is a boat, for scale, and the scale is the story: the islet is a mountain that happens to be surrounded.\n\n© Wayne Heim",
+    "notes": "Tindhólmur in full: the steep green pyramid islet under storm cloud, the sea around it, a red boat speck for scale on the near shore. It's the archipelago's most iconic silhouette and the Faroe set's landmark frame.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1051,8 +1051,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The sheep own the foreground the way they own the islands — outright, and by numbers. Fifty thousand people, seventy thousand sheep: every pasture view here is a portrait of the majority. The stone wall in the middle distance is the constitution that governs them, loosely. Beyond it, sea and a flat-topped mountain, and over everything the storm deciding whether this is morning or merely light. The sheep do not look up for weather reports. They are wearing the weather.\n\n© Wayne Heim",
+    "notes": "Sheep grazing a green pasture under storm cloud, the sea and a flat-topped mountain beyond the stone wall — the pastoral Faroes in full color: grass, wool, and weather in their true proportions. The foreground sheep anchors the set's most populated landscape.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1089,8 +1089,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The same flock in black and white, and the moorland goes older — this could be any century since the Norse brought sheep to these hills, which is to say most of the centuries that matter here. The wall still runs, the mountain still stands offshore, the sheep still graze with their backs to the view. Monochrome makes citizens of them: gray wool, gray wall, gray weather, one nation.\n\n© Wayne Heim",
+    "notes": "The B/W companion pasture: sheep on moorland under a storm sky, mountain offshore. Where the color frame is summer, this one is endurance — the flock as the islands' permanent population, in the tones it wears most of the year.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1126,8 +1126,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The cliff drops in layers into a narrow inlet, and the islands beyond stand in the sea haze like drafts of this one — pointed, flat-topped, repeated to the horizon. This is the archipelago's basic sentence: land, then water, then land again, punctuated by weather. In black and white the layers read as a cross-section of the whole idea. Stand at an edge like this and the map stops being abstract: the next land is that visible, and that far.\n\n© Wayne Heim",
+    "notes": "Layered cliffs falling to a narrow inlet in black and white, island silhouettes stacked to the horizon — the archipelago diagrammed in one portrait frame: edge, water, edge. It's the Faroe set's most architectural seascape.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1163,8 +1163,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The bay holds its breath between two cliffs — the sea in here is the Atlantic on its best behavior, and even that is a negotiation renewed hourly. The islands on the horizon are this one's older siblings, same basalt, same argument with the weather. In black and white the sweep of it goes honest: land rearing, water waiting, cloud deciding which of them gets the light. Nobody built anything here. There was nothing to add.\n\n© Wayne Heim",
+    "notes": "A broad bay between two massive flat-topped cliffs in black and white, island silhouettes on the horizon — the Faroe coast at its most monumental and empty. Panoramic and tonal, it's the set's purest statement of scale: land, sea, and weather with nothing in the way.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1200,8 +1200,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "Color lets the same bay admit it's June: the cliffs grassed to their edges, the sea dark teal, patches of blue working through the cloud like relief arriving. The green here is not gentle — it's the color of grass that grows sideways in the wind and gets grazed by sheep who commute by boat. Under the summer light the whole hard coast briefly looks like pasture with a view. The Atlantic below is not fooled.\n\n© Wayne Heim",
+    "notes": "The color companion of the rugged sweep: same great bay, now in vivid summer green under a breaking sky. Hung together, the pair makes the set's clearest argument about season — the Faroes' two truths, structure and color, told by the same coast.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1236,8 +1236,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The peninsula goes out like a green pier the island built for itself — grass on top, cliff on the sides, and the dark sea already working on the refund. A small peak stands on the horizon like the next idea. Everything in the Faroes is a peninsula if you look at it right: the whole archipelago is land in the act of leaving, slowed to geological time. The storm light keeps the ceremony gray and green.\n\n© Wayne Heim",
+    "notes": "A steep green-topped peninsula jutting into a dark teal sea, an island peak small on the horizon — the Faroe coast reduced to a single gesture: land reaching into water. It's the set's most graphic coastal, all thrust and surface.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1274,8 +1274,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Large Format fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The ridge runs out to its point like a wall the island built against the sea and then thought better of finishing. Below it, the bay gathers what the tide brings in and the estuary sorts it. In black and white the long flat top reads as a road for giants — which, in the old telling, is roughly what such ridges were. The islands beyond keep the same profile at a greater distance, as if the land were practicing.\n\n© Wayne Heim",
+    "notes": "A long flat-topped cliff ridge running to a pointed headland, panoramic in black and white, the bay and estuary gathered below. It's the set's great horizontal — land drawn out to a line, with the whole grammar of the archipelago in its profile.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1311,8 +1311,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "Color returns the ridge to pasture: the top grazed green, the shore rocks dark, and a small waterfall slipping over the edge at the corner like the island is leaking. The teal sea below takes everything the land lets go — falls, scree, grass clippings of cliffs. This is the working coast, neither monument nor ruin: just the long transaction between basalt and Atlantic, conducted daily, in green and gray.\n\n© Wayne Heim",
+    "notes": "The ridge in color: green top, rocky shore, dark teal sea, and a small falls at the frame's edge. Where the B/W frame is all line, this one is all surface — the same land in its summer working clothes.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1348,8 +1348,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The cliff runs diagonally like a green wall tilted into the sea, and at its foot a small waterfall finishes the argument — fresh water arriving at the salt in a thin white rush. These foot-of-cliff falls are the islands' punctuation: every headland has one, marking where the land's drainage gives up and jumps. The teal water receives it the way the sea receives everything here, without comment and without pause.\n\n© Wayne Heim",
+    "notes": "A portrait of the diagonal green cliff with its small falls cascading to the rocky shore — the Faroe coast in cross-section: grass, basalt, fresh water, salt water, stacked in one frame. The diagonal is the composition's engine.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1385,8 +1385,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "Same coast, rougher temper: the cliff here is all broken edges, and the falls at its base look less like punctuation and more like a leak in a dam. Headlands stand off in the distance in descending order of clarity, which is how the Faroes measure distance — not in miles but in how much weather is between you and the next land. The sea keeps its teal counsel. The edge keeps crumbling, politely, into it.\n\n© Wayne Heim",
+    "notes": "The rugged twin of the waterfall cliff: broken green headlands, a falls at the shore, headlands dissolving into distance. It's the set's study in atmospheric depth — the islands measuring themselves in weather.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1422,8 +1422,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "No land at all — just the sea, the cloud bank, and the day leaving gold under the door. At this latitude the sunset is not an event, it's a long negotiation; in summer it can take the whole evening to agree on dark. What the frame holds is the moment the light got under the weather: a bright seam between gray water and grayer sky, and the whole North Atlantic polished quiet underneath it.\n\n© Wayne Heim",
+    "notes": "Golden light breaking under a dark cloud bank over a calm, landless sea — the Faroe set's one pure sky-and-water frame. It's the quietest picture in the collection and the one that hangs like a held breath.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1460,8 +1460,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "A rainbow in black and white is a rumor of color — you read it in the tones, the bright arc standing off the storm like the sky underlined something. The turf-roofed house sits under it at the valley's center, unimpressed; the track leads in, the moorland leads everywhere else. Weather here doesn't perform, it just passes through its repertoire. The arc is the repertoire's kindest item, and the valley has seen it enough to keep grazing.\n\n© Wayne Heim",
+    "notes": "A rainbow arcing over a stormy valley in black and white, a turf-roofed house at its center — the set's most conceptual frame: color's signature rendered in tone alone. It hangs as proof that the Faroes' drama survives translation into pure light and dark.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1498,8 +1498,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The rainbow ends at the little house, as the old map promised, and there is no pot of gold — there's a dirt road, a fence, and work waiting in the yard. Up here the gold is grass in a wet summer and a roof that holds. A second, fainter arc stands behind the first like the sky's rough draft. The storm is already moving on to the next valley. The house stays for all of it.\n\n© Wayne Heim",
+    "notes": "A rainbow descending to a small house in a green valley, a dirt road leading down, a faint second arc behind — the Faroe rainbow in full color and full honesty: the treasure at the end is a working farmstead. The excavator in the yard is the modern signature on an old arrangement.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1535,8 +1535,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The road is still wet when the rainbow stands up over the valley — that's the order of operations here: rain first, then the receipt. The house sits by the bay where the road gives out, and the arc spans the whole green bowl like the valley got a lintel for the day. In the Faroes you don't chase rainbows; they're weather, same as the rain was. You just note it out loud so the day gets credit.\n\n© Wayne Heim",
+    "notes": "A rainbow over a green valley, the wet road running down to a house beside the bay — the most inhabited of the rainbow frames, all arrival and aftermath: rain done, light delivered, road still shining. It's the set's gentlest storm picture.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1574,8 +1574,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The arc spans the whole harbor — village on one shore, fish pens turning slow circles in the water, the cliff standing guard at the right. Salmon farming is the modern industry written on this water, in rings; the rainbow predates it by some millennia and outshines it for free. Blue sky, green hills, working harbor: the Faroes on the one day in ten when all the elements agree to be photographed together.\n\n© Wayne Heim",
+    "notes": "A rainbow spanning a working bay: village, circular fish pens, green hills, and a sheer cliff under blue sky. It's the set's fullest harbor frame — weather, settlement, and the islands' modern livelihood in one composed arc.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1611,8 +1611,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The sun gets between the cloud layers and lays a path on the water, and the sea stack stands in the middle of it like it's collecting tolls. This is the North Atlantic's one soft hour — the light turning the whole cold sea to hammered gold for as long as the gap in the clouds lasts. The stack has stood in that path through a million such evenings. It is not in a hurry. Neither, finally, is the light.\n\n© Wayne Heim",
+    "notes": "A golden sun between dark clouds, its reflection path laid across calm water to a sea-stack silhouette — the Faroe set's classic sunset: one light, one landmark, one long reflection. It's the frame buyers describe as the islands at peace.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1649,8 +1649,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "A blue day — the rarest weather in the Faroes, worth documenting like wildlife. The peak stands brown-green over a bright fjord, the islands laid out behind in their Sunday spacing, the clouds white and on their best behavior. Locals have a saying's worth of suspicion for a sky like this, but they use it: laundry, repairs, hay if there is any. By evening the gray will be back on shift. The peak keeps both uniforms.\n\n© Wayne Heim",
+    "notes": "The set's one true blue-sky frame: a green peak above a bright blue fjord, islands and white clouds in full northern clarity. It earns its place by rarity — this is what the Faroe light looks like with the weather switched off.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1686,8 +1686,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The road goes down to the sea the way everything here eventually does — with guardrails, because the drop has opinions. Between rocky hills the pavement makes its one argument: that you can get there from here. In black and white the road is a gray ribbon of intent laid over a landscape that predates intent. The islands across the bay are the view at the bottom of the hill. The sea is the end of all the roads on all eighteen islands.\n\n© Wayne Heim",
+    "notes": "A guardrailed road curving down to the sea between rocky hills, black and white — the set's journey frame: infrastructure as a line of intent through ancient land. The distant islands across the bay give the descent its destination.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1724,8 +1724,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The road switchbacks down the broad valley like the land is being unstitched, one hairpin at a time. It took tunnels and causeways to stitch these islands together within living memory; before the roads, the sea was the road, and the valleys were just scenery you passed by boat. In black and white the switchbacks read as handwriting — the islands' modern signature written across their oldest page. The bay at the bottom is where the sentence ends.\n\n© Wayne Heim",
+    "notes": "Switchbacks unwinding through a broad rocky valley to a bay and island, in black and white — the set's grandest road frame. The road's calligraphy against the valley's bulk makes it the collection's clearest picture of how the Faroes got connected.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1762,8 +1762,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "Color greens the whole valley and the switchbacks become a garden path writ large — until you notice the light falling in shafts through the storm cloud, and the bay at the bottom still the color of slate. This is the Faroes' summer bargain: everything vivid, nothing warm, beauty and weather in the same frame at the same moment. The road threads it all together like it was the plan. It was. The plan just took a century.\n\n© Wayne Heim",
+    "notes": "The color companion: the switchback valley in full green under storm light, the bay slate-blue below. Hung with its B/W twin, it makes the set's diptych of connection — the same road, once as structure, once as season.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1799,8 +1799,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "From the cliff top the bay opens like the island exhaling — layered headlands on one side, the flat mountain standing over all of it, a small island keeping the horizon honest. In black and white the water goes silver-gray and the cliffs go to ink. This is the view the sheep get, the ones grazing the edge behind the camera. It explains a lot about the sheep's composure: with this on your lunch break, hurry is hard to justify.\n\n© Wayne Heim",
+    "notes": "A wide bay from a grassy cliff top in black and white: layered cliffs, a flat-topped mountain, an island on the horizon. It's the set's most spacious composition — the archipelago's whole geography lesson in one elevated frame.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1837,8 +1837,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The stream comes down the valley in a hurry it learned from the rain — over rocks, through grass, aimed at the sea it can already see. Every Faroe valley has this bright thread, and the sound of it is the islands' background music, so constant the locals hear it only when it stops. Under a blue sky the whole valley runs green and silver at once. The stream is not scenery here. It's plumbing, weather report, and clock.\n\n© Wayne Heim",
+    "notes": "A stream rushing diagonally through a green valley under a blue sky — the set's brightest water frame, all motion and direction. The diagonal fall of the water gives the collection one of its strongest natural compositions.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1874,8 +1874,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The same kind of stream in a steeper, stonier mood — the valley narrowed to a ravine and the water picking its way through boulders like it's late. Black and white makes it a study in hurry: white water, dark rock, the whole descent drawn in two tones. Somewhere below, out of frame, the gradient gives up and the stream becomes a river, briefly, before it becomes the sea. Streams here don't meander. They commute.\n\n© Wayne Heim",
+    "notes": "A cascading stream through a steep boulder valley in black and white — the set's most urgent water study, white water threading dark rock. It's the graphic counterpoint to the valley streams: descent as pure pattern.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1910,8 +1910,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The boulders arrived by ice — dropped across this hillside when the glaciers withdrew, and the moss has been upholstering them ever since. The big mass at the right is a small cliff that fell in pieces and stayed. Under storm cloud with one bright break, the whole slope looks like a garden designed by the ice age and maintained by the rain. In the Faroes even the rubble is scenic, because the light keeps art-directing it.\n\n© Wayne Heim",
+    "notes": "Moss-green hillside scattered with great gray boulders under a rocky peak — the ice age's leavings, softened by centuries of moss. It's the set's most textural land frame: stone, moss, and storm light in close negotiation.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1948,8 +1948,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "A gate beside a stream, in a valley that runs down to the sea — the whole human claim on this landscape in one wooden decision. The gate says: sheep on this side, or that side, depending on the season and the farmer's arithmetic. The plank walkway crosses the wet ground the way people have crossed it for centuries: dry-footed if the planks hold. Sun through the clouds, water through the grass — everything here is passing through, except the gate.\n\n© Wayne Heim",
+    "notes": "A stream through a mossy valley with a wooden gate, stone wall, and plank walkway, sunlight breaking through — the set's most human-scaled frame: the working landscape's threshold, where pasture management meets the wild valley. Buyers love it for the gate: civilization at its most modest.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1986,8 +1986,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "In black and white the gate becomes a diagram of itself: posts, rails, wall, water, hill. Strip the green away and the arrangement is medieval — which it nearly is; gates and walls like these follow property lines older than the roads. The plank bridge crosses the stream where it has always crossed. The sea waits at the valley's end, as it does at the end of every valley here, patient as a landlord.\n\n© Wayne Heim",
+    "notes": "The gate valley in black and white: wooden gate, stone walls, plank bridge, and mossy hills in pure tone. It's the set's most timeless rural frame — an arrangement that could be dated to almost any century of the islands' farming.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2024,8 +2024,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The stream threads a narrow valley between two steep mossy hills, and the clouds press down like the sky is listening. This is the islands' interior voice — no sea in frame, and yet the water is on its way there, and the hills are shaped by its going. In black and white the moss reads as dark velvet and the water as a bright seam. Every Faroe stream is a short story with the same ending. The pleasure is in the telling.\n\n© Wayne Heim",
+    "notes": "A stream winding through a steep mossy valley in black and white, the sea waiting out of frame at the valley's end — the set's most enclosed water frame: dark hills, bright water, heavy sky. It hangs like a held note.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2064,8 +2064,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "Here the stream negotiates a boulder field — moss-covered rocks, an old stone wall threading the middle distance, the sea visible at the top like the stream's own future. The wall says people managed this slope once; the moss says they're managing it less now. Under blue sky the whole valley is green on green, and the water runs white through it, the one bright line in a soft world. It has an appointment at the shore and it is keeping it.\n\n© Wayne Heim",
+    "notes": "A stream winding between mossy boulders with a stone wall in its middle distance, the sea beyond — the most layered of the stream frames: water, wall, valley, ocean in one ascending composition. It's the set's small masterpiece of Faroe plumbing.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2103,8 +2103,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The twin exposure, and the sun picks this one to break through — light standing at the top of the valley like the day cleared its throat. In black and white the stream's path is a bright signature across the dark moss, and the wall reads as a dotted line of human intent the hills are slowly absorbing. The sea at the top is a pale promise. Everything in the frame is on its way somewhere: water down, light in, grass over.\n\n© Wayne Heim",
+    "notes": "The B/W twin of the boulder-field stream, with the sun breaking through above the valley — where the color frame is all softness, this one is all drama: bright water, dark moss, and a shaft of northern light. The pair is the stream group's natural diptych.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2143,8 +2143,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "Another angle on the same bright water — the stream keeping its course through the moss and stone while the sun breaks at the valley's shoulder. These valleys repeat their themes the way the islands repeat their mountains: same elements, new light, different picture. In color the green is almost too much, which is the Faroes in a wet summer exactly — abundance laid over austerity, and the stream the bright thread stitching them together.\n\n© Wayne Heim",
+    "notes": "A near-twin angle on the boulder-field stream in color, sun breaking at the valley's edge — the stream group at its most abundant: green moss, white water, and storm light in full play. It stands with its companions as the set's variations on one bright theme.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2180,8 +2180,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The mountain wears its strata horizontally, band on band, like the pages of the islands' own ledger — each layer a lava flow, each flow a year the earth was busy here. At its foot the shore takes the sea's daily delivery of weather. In black and white the banding becomes the whole subject: time, made visible, standing in the water. Portraits are usually of faces. This one is of a duration.\n\n© Wayne Heim",
+    "notes": "A massive horizontally banded cliff mountain above a rugged shore, portrait format in black and white — the set's second geology monument, and its most architectural: the lava strata read as courses of masonry laid by the earth itself.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2218,8 +2218,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The stream in its ravine, boulders everywhere, the water threading the only route down. Ravens work valleys like this; so does the rain, and the rain has seniority. In black and white the ravine is a corridor of dark banks with a bright floor — the water lighting its own way to the sea. It is the least pastoral picture a stream can make, and the most honest about what these valleys are: drains the mountains dug, still in use.\n\n© Wayne Heim",
+    "notes": "A stream winding through a boulder-filled ravine in black and white — the wildest of the stream frames: dark banks, bright water, no pasture softness anywhere. It closes the stream group on its most elemental note.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2256,8 +2256,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "A stone house beside a dry stream bed, a track running past, the hills closing the valley like hands. Somebody's whole enterprise is in this frame — house, outbuildings, grazing, water when it runs — and the sun breaking through is doing the optimism for both of them. In black and white the farmstead reads as pure arrangement: shelter, route, watercourse, hill. It is the Faroes' domestic minimum, and it has been enough for a very long time.\n\n© Wayne Heim",
+    "notes": "A stone farmstead beside a rocky stream bed in a grassy valley, black and white, the sun breaking through storm cloud — the set's most complete settlement-in-land frame: house, track, watercourse, and hills as one system. Portrait format gives the valley its depth.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2292,8 +2292,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The falls come down in steps, the way water negotiates a mountainside that won't give it a straight drop — terrace, pause, terrace again, each landing a small white room of churn before the next descent. The stream in the foreground is the same water, calmer, having gotten the falling out of its system. Under storm cloud the whole valley is green and white and gray, which up here counts as a full palette.\n\n© Wayne Heim",
+    "notes": "A wide multi-tiered waterfall cascading through a green valley in portrait — the set's most complete falling-water composition: every stage of the descent in one frame, from cliff tiers to the calm stream at its feet.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2330,8 +2330,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The dead get the mountain and the waterfall for company, and a field of grass that the living keep mowed around the stones. Villages here bury their own within sight of the houses — the geography of grief is local, measured in walking distance. The stones lean a little with the centuries and the wind, the way everything in the Faroes leans a little. In black and white the arrangement goes timeless: grass, stone, mountain, water, and the long roster of names the weather is slowly reading off.\n\n© Wayne Heim",
+    "notes": "A village cemetery in a grassy field beneath a steep mountain with its own waterfall, in black and white — the set's most human Faroe frame: memory kept in the middle of the working landscape, mowed grass and weathered stone against the enormous backdrop.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2369,8 +2369,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "Several falls lace the mountainside at once, thin white threads over green rock, and at the bottom a stone hut with a turf roof keeps the arrangement honest — somebody works this land, and the water works it too. Blue sky, for once, and the falls run bright under it. The hut has stood through enough winters to be part of the geology. The falls have run through enough millennia to be part of the weather. They get along.\n\n© Wayne Heim",
+    "notes": "Falls cascading across a green mountainside above a stone turf-roofed hut, under a blue sky — the pastoral and the wild in one portrait: habitation at the foot of falling water. It's the set's most balanced composition of house, hill, and stream.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2407,8 +2407,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "A white house on a lake shore, the valley walls going up dark on both sides, the sun breaking through at the top like the day knocked before entering. Lakes are rare furniture in the Faroes — the islands mostly drain straight to the sea — so a still lake with a house on it reads as luxury: flat water you don't have to fear. In black and white it's all enclosure and light: the valley holds the house the way a hand holds a match.\n\n© Wayne Heim",
+    "notes": "A small white house on a lake shore between steep dark valley walls, the sun breaking through above, in black and white — the set's most enclosed and luminous frame: shelter measured against the valley's full height.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2444,8 +2444,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The Faroe pony is its own breed — small, shaggy, and older than the nation, kept pure by the same isolation that kept everything here distinct. This one stands in profile with the patience of an animal that has never once been in a hurry and sees no reason to start for a camera. The mane does what all Faroe hair does in the wind: whatever it wants. Behind it, the hillside. Around it, grass. That's the whole kingdom, and the pony is its calm monarch.\n\n© Wayne Heim",
+    "notes": "A shaggy long-maned Faroe pony standing in a grassy field, black and white — the set's living portrait: an ancient island breed rendered in pure texture, mane, coat, and grass. It gives the Faroe collection its heartbeat.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2481,8 +2481,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The road threads the wide valley toward one small house, and the mountains on both sides make the journey look like a rumor the land is telling itself. Before the tunnels, a house at a valley's end was a day's commitment by boat or boot; the road turned it into an errand. In black and white the valley's scale does the talking: the house is a punctuation mark, the road a long sentence, and the storm the paragraph it all sits in.\n\n© Wayne Heim",
+    "notes": "A winding road through a wide mountain valley to a single small house, in black and white — the set's loneliest composition: habitation at the far end of distance, with the storm light banding the mountains behind.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2520,8 +2520,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "Color widens the same valley into summer: the road gravel-bright, the lake waiting at the end of it, a waterfall coming down the right-hand mountain because in this country no slope is complete without one. The little house stands at the left like it called dibs on the whole arrangement generations ago. Fences line the road, sheep administer the grass, and the bright break in the storm suggests the day is negotiating. It usually settles out of court.\n\n© Wayne Heim",
+    "notes": "The color companion of the valley road: lake, waterfall, house, and green mountains in one panoramic sweep. It's the set's fullest inhabited valley — every Faroe element present, and the road tying them into a single journey.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2557,8 +2557,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "This one doesn't bother with tiers — it jumps. A tall white plunge off the cliff into its rocky stream, mossy slopes standing close on both sides like the valley leaned in to watch. The pool at the bottom is too churned for reflections; the water arrives white and leaves in a hurry. Falls like this are the islands' plumbing made theatrical: all that rain has to get down somehow, and it prefers an audience.\n\n© Wayne Heim",
+    "notes": "A tall waterfall plunging from a rocky cliff between mossy slopes — the set's most vertical single drop, all plunge and impact. The enclosing green slopes make it the most intimate of the great falls.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2594,8 +2594,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The same leap in black and white, and the drama doubles: dark rock, white water, the slopes gone to charcoal. Monochrome is honest about waterfalls — they're not scenery, they're events, and this one's event is a cliff giving its water back to gravity in one gesture. The stream at the base carries the story off. The storm overhead is already reloading the top of the falls for the next performance, which is continuous.\n\n© Wayne Heim",
+    "notes": "The B/W twin of the tall plunge: the falls as pure event, white water against dark rock. Hung together, the two frames make the set's clearest before-and-after of what color adds to the Faroes — and what it hides.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2633,8 +2633,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The waves work the rocky shore in rows, the green cliffs supervise from the left, and a mountain across the water minds its own weather. This is the everyday coast — not the explosion, just the shift work: the Atlantic clocking in, the shore clocking back, the distant island keeping its silhouette through all of it. Storm clouds run the light in patches. The coast has seen every shift there is and shows up for the next one unchanged, which is to say, slightly smaller.\n\n© Wayne Heim",
+    "notes": "Waves breaking on a rocky shore beneath green cliffs, a distant island centered on the horizon — the set's most complete working coastline in panorama: surf, shore, cliff, and the next land, all in their places.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2671,8 +2671,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The barren valley — the Faroes with the green scraped down to the geology: rock, fence, road, and mountains that look like they're still deciding whether to be scenery. Some valleys here never got the grass memo; they're the islands' skeleton showing through. In black and white the barrenness goes noble — a road through a stone country under a working sky, with the fence insisting that somebody, somewhere, considers this pasture. Somebody's sheep agree.\n\n© Wayne Heim",
+    "notes": "A road through a wide barren rocky valley in black and white — the set's starkest land frame: the archipelago's skeleton, with a fence line for the only human claim. It's the collection's study in how little a landscape needs.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2710,8 +2710,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The road curves toward the layered mountain and the sun throws rays through the storm like it found the receipt for the day. Barren ground, bright promise — the Faroes' two moods in one frame. The fence follows the road the way it follows every road here, out of habit older than asphalt. If the valley has a destination, it's the mountain's foot; if it has a message, it's the light's: keep going, it's better up ahead. It usually is. It just isn't warmer.\n\n© Wayne Heim",
+    "notes": "The barren valley road in black and white, sun rays breaking through storm cloud over a layered mountain — the set's most dramatic interior composition: road, rays, and rock arranged like an altar piece for travelers.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2789,8 +2789,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The mountain takes the whole frame in layers — green slopes, rocky bands, snow hanging on the ridges like the winter left luggage. A zigzag fence climbs the foreground grass, which is the human handwriting on a page this size: small, determined, slightly crooked. Golden light breaks at both top corners as if the storm is applauding. Mountains like this are why the villages sit where they sit: in the lee, in the light's path, in awe as a daily condition.\n\n© Wayne Heim",
+    "notes": "A massive layered mountain with snow-patched ridges and golden storm breaks, a zigzag fence in its foreground — the set's grandest land portrait: geology in full strata, with the fence giving it the human scale it needs.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2825,8 +2825,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The wave arrives like a building coming down in reverse — up. White water detonates against the dark cliff, turquoise churn below, and along the grassy shore at the bottom a row of fence posts stands watching, which is the Faroes' whole relationship to the Atlantic in one detail: fence it, watch it, respect it, repeat. The spray hasn't finished rising. The next wave is already standing up offshore. Showtimes are continuous and the theater is free.\n\n© Wayne Heim",
+    "notes": "A massive wave exploding against a dark sea cliff, turquoise sea below, fence posts along the shore — the set's biggest color impact: the Atlantic at full force with the pasture fence in the front row.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2861,8 +2861,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "A second earlier or later on the same argument: the wave bursting at a slightly different angle of cliff, the spray pattern rewritten, the stratified rock showing its layers where the water tears past. No two of these collisions are the same twice — the cliff keeps its shape for centuries by giving the sea a slightly different answer every eight seconds. The distant silhouette on the horizon is another island, watching its own version of this show.\n\n© Wayne Heim",
+    "notes": "The companion detonation: a huge turquoise wave bursting against stratified rock, an island silhouette behind. With its twin it makes the set's study in repetition-with-difference — the sea's favorite composition, never performed the same way twice.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2897,8 +2897,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "This one stands straight up — a plume like a white tree, grown in a second, already falling. The cliff behind it is black enough to make the spray read as light. Down at the shore the grass and fence posts keep their composure; they've seen thousands of these, and the correct response, locally, is to keep grazing. The Atlantic's temper is not personal. It's just the weather having a wave for a mouth.\n\n© Wayne Heim",
+    "notes": "A wave exploding into a tall vertical plume against a black cliff — the most sculptural of the wave frames: spray as a white tree against dark rock, with the calm fence line below for contrast.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2934,8 +2934,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "Black and white takes the turquoise away and leaves the violence more elegant: a billowing plume, lace-edged, against the cliff's dark grain. This is the wave as the nineteenth century would have engraved it — all force and pattern, no color to soften the report. The fence posts along the shore are the scale: that plume is three houses tall and made of water that was ocean a second ago and will be rain's raw material by morning.\n\n© Wayne Heim",
+    "notes": "The great plume in black and white: billowing spray against dark rock, fence posts for scale — the set's most engraved-looking seascape, force rendered as pattern. It's the monochrome anchor of the wave group.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2971,8 +2971,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The towering version: spray climbing past the cliff's shoulder like the sea is trying to see over it. What goes up comes down as white chaos at the base, and the water there hasn't decided whether it's sea or weather. These are the days the cliff paths stay empty and the boats stay in — the islands' population indoors, watching the Atlantic do its impression of the end of the world, again, for free.\n\n© Wayne Heim",
+    "notes": "A towering plume of spray overtopping a dark cliff in black and white — the tallest detonation in the set, and its most apocalyptic: the sea standing higher than the land, briefly, on sheer momentum.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -3007,8 +3007,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The barrel: a green curl of water folding over itself before it breaks, the Atlantic showing its one graceful move before the violence. Inside the curl the light goes emerald for a second — the sea's stained-glass moment. Then the fold collapses into spray against the black cliff and the glass shatters back into weather. Surfers dream of this shape. Here it's just Tuesday, performed for the fence posts and the gulls.\n\n© Wayne Heim",
+    "notes": "A huge wave curling in a green barrel against a dark cliff — the most graceful of the wave frames: the Atlantic's power caught a second before impact, in its one elegant shape.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -3044,8 +3044,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "From the clifftop the wave performs below like weather in a pit — a great curl breaking, spray standing, the grass and fence posts in the foreground keeping a polite distance from the edge. This is the spectator's view, the one the islanders themselves get: power at arm's length and one fence's remove. The cliff wall behind the show is dark and patient. It has outlasted every wave so far, which the waves seem to take as a challenge.\n\n© Wayne Heim",
+    "notes": "A great wave breaking below a grassy clifftop, fence posts in the foreground — the set's spectator frame: the Atlantic's force viewed from the pasture's edge, power and pasture in one composition.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -3084,8 +3084,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape sunset photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The town clusters on the hillside the way towns here do — dark roofs, close walls, everything within walking distance of the harbor and the church — and the sun bursts through the storm over the bay like the day is making an announcement. In black and white the sunburst is the town's second steeple: light organized into rays over a community organized against weather. The mountain at the right keeps its counsel. The bay keeps the boats. The town keeps going.\n\n© Wayne Heim",
+    "notes": "A coastal town on a hillside beneath a sunburst breaking over the bay, in black and white — the set's most complete settlement portrait: houses, harbor water, mountain, and dramatic light in one arrangement.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -3123,8 +3123,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape sunset photograph of the Faroe Islands.",
-    "notes": "",
+    "story": "The rays come down through the cloud in visible shafts and pick out the village — houses, the white church with its dark spire, the green hill — like the light has a list. Sunset at this latitude is a long ceremony, and a village under it looks briefly chosen. The mountain wall at the right stays in shadow, holding the contrast. By the time the light finishes its rounds, the lamps will be on in the windows, answering in kind.\n\n© Wayne Heim",
+    "notes": "Golden sunset rays falling on a village and its white church above a bay — the set's most luminous settlement frame: crepuscular light doing the composition's work, settlement and sea under one dramatic sky.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -3160,8 +3160,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The wave curls and crashes and in the lower corner a sea mark stands in the churn with its cross-shaped top — the harbor's punctuation, planted in the surf to tell boats where the water turns dangerous, as if the cliff and the spray hadn't mentioned it. In black and white the whole scene is a warning written in water. The mark's job is to still be there after each wave. So far, so good.\n\n© Wayne Heim",
+    "notes": "A huge curling wave crashing against a dark cliff in black and white, a cross-topped sea mark standing in the surf — the set's most storied wave frame: navigation's small defiance in the corner of the Atlantic's large argument.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -3198,8 +3198,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The wave makes its barrel — turquoise, gold-lit, big as a house — and at the water's edge, bottom corner, stands the entire counterargument: one little steeple. The church it belongs to has been at this shore through every storm the Atlantic has filed; the wave is this minute's weather, the steeple is five hundred years of it. The composition is the sermon: force is loud and brief, and the small dark spire is still standing in the corner of the frame when the spray clears.\n\n© Wayne Heim",
+    "notes": "A huge gold-lit turquoise barrel wave crashing beside a tiny church steeple at the water's edge — the set's most famous juxtaposition: the Atlantic's largest gesture and the village's smallest landmark in one frame. It's the Faroe picture people describe to friends.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -3238,8 +3238,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "Red roofs, green roofs — turf and paint — the village wearing both its centuries at once as the sun goes down behind the mountains across the bay. Orange light on the horizon, cloud doing drama overhead, the water going quiet in the harbor below. This is the hour the villages were built to face: west, into the last light, with the day's work done and the boats in. The Faroes don't do many postcards. This one snuck through.\n\n© Wayne Heim",
+    "notes": "A coastal village of red and turf-roofed houses above a bay at sunset, the sun setting behind mountains over the sea — the set's warmest settlement frame: habitation, harbor, and last light in full color.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -3277,8 +3277,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "From behind the cliff's dark shoulder, the view is all distance: calm sea, layered islands, a horizon that in this direction doesn't stop until it reaches somewhere with another name entirely. This is the Faroes' national posture — looking outward, because everything that ever arrived here, good and bad, came over that water. In black and white the lookout goes quiet and total. The islands on the horizon are near. The quiet is what's far.\n\n© Wayne Heim",
+    "notes": "Looking out to sea from behind a dark silhouetted cliff toward distant islands, in black and white — the set's most contemplative frame: the archipelago's outward gaze, composed as pure foreground shadow and luminous distance.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -3316,8 +3316,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The peak rises straight out of the sea like the island skipped the shoreline step — layered rock, grass on the ledges, and at its foot a small white lighthouse doing the most disproportionate job in the North Atlantic: warning ships off a mountain. In black and white the peak is all architecture, a natural fortress with weather for a garrison. The distant islands keep their distance. Storms practice on this rock. It remains undefeated and unimpressed.\n\n© Wayne Heim",
+    "notes": "A massive steep peak rising from the sea with a small white lighthouse at its base, in black and white — the set's mightiest landform portrait: the lighthouse gives the mountain its scale and the composition its wit.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -3354,8 +3354,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "Color gives the peak its green slopes back and the lighthouse its white paint, and the whole mountain stands in storm light like it's posing for the islands' coat of arms. The sea at the right is almost calm, which reads as respect. Peaks like this are landmarks in the oldest sense — sailors steered by them before there were charts, and the lighthouse at the foot is just the formal recognition of a job the mountain was already doing.\n\n© Wayne Heim",
+    "notes": "The great peak in color: green slopes, dark cliff face, the white lighthouse at its base — the full-color companion to the monochrome portrait, and the set's definitive landmark frame.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -3392,8 +3392,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The cliff goes up in strata and the light comes down in shafts, the two of them meeting on the rock face like an exchange of credentials. Distant islands hold the horizon, small and blue-gray in the storm's thinning edge. In black and white this coast is all weight — a portrait of the islands' basic unit, the sea cliff, at full height and full seriousness. Everything else in the Faroes is commentary on this.\n\n© Wayne Heim",
+    "notes": "A massive steep cliff rising from the sea in black and white, portrait format, light shafting through storm cloud — the set's definitive sea-cliff portrait: strata, scale, and drama in one vertical composition.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -3430,8 +3430,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The same wall in color and the green comes back like a flag: grass on every ledge the basalt allows, the shore rocks dark at the waterline, an island floating on the horizon in the storm's gray light. This is the coast as the sheep see it from above and the boats see it from below — a green cliff with the sea at its feet and the weather at its head, negotiating terms forever.\n\n© Wayne Heim",
+    "notes": "The great cliff in color, portrait format: green slopes over dark strata, a rocky shore, an island on the horizon — the color companion that completes the set's pair of definitive cliff portraits.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -3468,8 +3468,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The cliff leans over its own surf like it's reading the water's mail — layered rock, choppy sea, and a bright break in the storm doing the punctuation at the horizon. Islands lie low in the distance, in no hurry to be reached. In black and white this is the Faroe coast reduced to its working parts: height, weight, water, weather. The surf at the base writes the same sentence it has written every day since the ice left, in white, on dark.\n\n© Wayne Heim",
+    "notes": "A massive layered cliff above a choppy sea in black and white, portrait format, a bright break in the storm at the horizon — the set's elemental cliff study: height and surf with everything else stripped away.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -3506,8 +3506,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The same wall wearing its grass: a green slope falling diagonally to the surf, the rock face showing through at the top like the hill's memory of being a cliff. Color makes the coast briefly pastoral — until you notice the slope's angle, which no sheep negotiates without commitment, and the surf below keeping its accounts. The distant islands sit in the storm light like they're waiting for this one's weather to arrive. It will. It always travels.\n\n© Wayne Heim",
+    "notes": "The color companion cliff: a steep green slope falling diagonally to breaking surf, distant islands under storm cloud. Where the B/W frame is weight, this one is surface — grass, rock, and sea in one long diagonal.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -3544,8 +3544,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The flat-topped mountain rises out of the sea with its strata showing like the rings of a cut tree, and in the foreground — the detail that makes the scale real — a stone building sits by a small lagoon on a grassy knoll, somebody's outbuilding at the foot of all that geology. In black and white the mountain is a monument and the building is a footnote, and the footnote is the more interesting text: people store boats in the shadow of mountains here.\n\n© Wayne Heim",
+    "notes": "A massive layered flat-topped mountain rising from the sea in black and white, a stone building on its foreground lagoon — the set's scale dialogue between geology and use: the mountain performs, the outbuilding works.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -3582,8 +3582,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "Two stacks stand off the cliff like pieces the mountain lost and the sea kept — one tall and pointed, one blocky, both being unmade at the pace of centuries. They were headland once; the cliff behind them is headland still, with its grass top sloping down to the same appointment. In black and white the family resemblance is all strata and shadow. The sea between them keeps the minutes of the long divorce proceedings.\n\n© Wayne Heim",
+    "notes": "A layered cliff with two sea stacks standing off it in black and white, portrait format — the set's erosion narrative in one frame: cliff, stacks, and the sea still working on both.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -3621,8 +3621,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "A waterfall takes the headland's face in one white seam, and across the water the flat-topped cliffs repeat the local architecture at a distance, stacks standing in the strait between. Everything in this view is the same rock at different stages of its long negotiation with the sea. In black and white the negotiation reads clearly: strata, surf, falling water, and the storm keeping minutes. The land is losing, beautifully, over millions of years.\n\n© Wayne Heim",
+    "notes": "A flat-topped headland with a waterfall down its face, distant cliff formations and sea stacks across the water, panoramic in black and white — the set's fullest erosion composition: every stage of the coast's unmaking in one view.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -3659,8 +3659,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "Color calms the same strait: the falls white against green, the sea gone quiet in the foreground, the far cliffs standing in their layered patience. This is the headland on a day when the Atlantic is between moods — the water flat enough to show the sky's gray, the grass bright enough to argue with it. The stacks keep their posts. The falls keep their seam. The islands keep being the Faroes, in color, at rest, briefly.\n\n© Wayne Heim",
+    "notes": "The color version of the waterfall headland: calm sea, green cliff, distant formations — the strait at rest. Hung with its B/W twin, it shows the same coast in its two tempers: event and interval.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -3698,8 +3698,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The green cliff rises flat-topped from the sea, stacks standing off it in their sizes, and on the foreground slope — small as punctuation — two stone huts keep their turf roofs against the wind. Somebody stores gear in those, or stores sheep out of the weather, in the lee of the biggest scenery on earth. That's the Faroe proportion in one frame: the sublime doing the backdrop, the practical doing the foreground, neither one impressed by the other.\n\n© Wayne Heim",
+    "notes": "A massive green flat-topped cliff with sea stacks, two small stone huts on its foreground slope — the set's proportion joke told straight: monumental coast, miniature shelter, one composition. It's the frame that explains how people actually live inside this scenery.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -3737,8 +3737,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "Mist moves into the strait and the stacks become a rumor of themselves — layered formations fading back into the gray, one tall thin stack keeping its outline longest, a little waterfall spilling off the green cliff in the foreground like the land clearing its throat. This is the coast in its softest register: no edges you could set a watch by, the sea calm, the islands half-invented by weather. The Faroes keep this version for days when the drama needs a rest.\n\n© Wayne Heim",
+    "notes": "Misty layered cliffs and sea stacks rising from a calm sea, a small falls on the green foreground cliff, portrait format — the set's atmospheric frame: the coast dissolving into weather, all edges forgiven.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -3776,8 +3776,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The stacks come in three sizes, like a product line the sea is phasing out at different rates — the tall one, the small one, the blocky one — and in the foreground two sheep graze the pasture above them with deep professional indifference. It's the whole Faroe arrangement caught being itself: geology performing, livestock unimpressed. The cliff behind them all is green and enormous and going the same way as the stacks, just slower. The sheep will not be hurried either.\n\n© Wayne Heim",
+    "notes": "Three sea stacks in descending sizes off a massive green cliff, sheep grazing in the foreground pasture — Wayne's own title carries the set's one moment of quiet humor: scale, erosion, and livestock composed in a single portrait.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -3814,8 +3814,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The boat houses line the shore with their pitched roofs and weathered boards, each one a garage for the sea — boats stored above the tide the way they've been stored since the islands were rowed to. No road needed them; the water was the road, and these sheds are its oldest infrastructure. In black and white they read as pure function, gray on gray above a dark wet shore, with the mountain behind supplying the drama they decline to.\n\n© Wayne Heim",
+    "notes": "A row of weathered wooden boat houses on a rocky shore beneath a grassy mountain, in black and white — the set's working-waterfront portrait: the sea's oldest infrastructure, rendered in pure tone and use.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -3851,8 +3851,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "Color gives the sheds back their paint — red, green, black — because in a gray country a boat house is a chance to say something bright at the shore. The boats inside them are the islands' original vehicles, older than the tunnels by a millennium, and the sheds' bright boards against the green mountain make the harbor's whole argument: this is a place that works on the water and dresses for it. The storm overhead is just the office ceiling.\n\n© Wayne Heim",
+    "notes": "The boat houses in color: red, green, and black sheds on a wet rocky shore under a green mountain — the set's brightest working frame, maritime utility wearing its paint with pride.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -3889,8 +3889,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The country church wears turf like everything else old here — a long wooden building grown over with the hillside it stands on, its little white steeple the only vertical ambition in the valley. The stone wall in the foreground marks the churchyard, where the valley's generations are filed under grass. In black and white the church is all endurance: it has buried the parish, married it, and christened it for centuries, under weather that never once consulted it.\n\n© Wayne Heim",
+    "notes": "A turf-roofed country church with a small white steeple on a grassy hillside, stone wall in the foreground, in black and white — the set's portrait of faith at island scale: modest, grass-roofed, and immovable.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -3928,8 +3928,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "This church stands by the shore where the stream comes through the grass — sea behind it, mountains beyond, the parish scattered along the coast it serves. The turf roof sheds the weather, the stone wall keeps the churchyard, and the spire, small as it is, is the tallest argument in the landscape for staying. In black and white the whole arrangement could be any of the last five centuries, which is rather the point of it.\n\n© Wayne Heim",
+    "notes": "A turf-roofed church beside a stone wall on a grassy shore, the sea and flat-topped mountains beyond, in black and white — the set's most complete church-in-landscape: shore, stream, sanctuary, and the mountains keeping their distance.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -3967,8 +3967,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The village spreads along its inlet — stone houses, boat houses, one red door doing the color work for the whole shore — and at the water's edge two tiny figures stand in the scale of things, which is to say, correctly. The mountains behind are steep and green and disappear into mist at the tops, as if the village's backdrop were still being decided. The harbor water is calm. The pebble beach is wet. The day's fishing is either done or not started, and the village keeps both possibilities.\n\n© Wayne Heim",
+    "notes": "A fishing village along a rocky harbor inlet beneath steep misty green mountains — the set's fullest working settlement: boat houses, stone houses, calm water, and two small figures giving the mountains their true scale.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -4005,8 +4005,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The lighthouse stands at the headland's business end with its red banding gone to gray, a stone path climbing to it between stone walls — the walk the keeper's boots wore smooth over a century of nights. It wasn't built for beauty; it was built so that ships would stop arriving in pieces. In black and white it reads as pure duty: a white tower, a worn path, a dark sky, and the sea it argues with out of frame at its back.\n\n© Wayne Heim",
+    "notes": "A lighthouse on a rocky headland with its stone path and walls in the foreground, in black and white — the set's frontal lighthouse portrait: duty rendered in tone, the worn approach giving the tower its human history.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -4044,8 +4044,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "In color the light is red and white and almost cheerful against the storm — a painted exclamation on a green headland, the stone path crossing the grass like a sentence leading to it. The grass here is the lush summer kind, the clouds the usual working gray. Together they make the lighthouse the brightest thing for miles, which, given its job description, is exactly correct. Ships at night get the beam; walkers by day get the paint.\n\n© Wayne Heim",
+    "notes": "The red and white lighthouse on its green headland, the stone path crossing in the foreground — the set's postcard-true lighthouse frame: the landmark in full color and full summer grass.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -4083,8 +4083,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "From down the wall, the lighthouse shrinks to its errand: a tower at the top of a long stone argument that runs diagonally through the grass — wall, path, slope, sea. The wall was built stone by stone out of the same headland it crosses; the path is the parish's footpath and the keeper's commute in one. In black and white the diagonal does everything: it takes your eye uphill to the one white vertical the coast allows itself.\n\n© Wayne Heim",
+    "notes": "The lighthouse from a low angle along its long stone wall, in black and white portrait — the set's leading-line composition: wall, path, and slope delivering the eye to the tower. The most graphic of the lighthouse frames.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -4122,8 +4122,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "Color walks the same wall uphill: moss on the stones, the grass gone lush, the tower red and white at the top of the green like a buoy that learned to stand still. The bright break in the clouds times itself for the summit. This is the keeper's view reversed — the light seen from the land it serves, up the path the supplies came. Everything about the approach says the point of the walk is the arrival.\n\n© Wayne Heim",
+    "notes": "The wall-approach in color: mossy stone, green grass, the red and white tower above — the companion that gives the lighthouse group its summer version, all approach and arrival.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -4161,8 +4161,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "Close underneath, the lighthouse stands on its stone-walled mound like a chess piece on its square — guy-wires, mast, banded tower, the whole apparatus of staying lit and staying standing. The wall fills the foreground diagonally, huge at this range, because the mound is the message: first the islanders built a hill's worth of stone, then they put the light on it. In black and white the engineering reads as sculpture. The storm approves, and tests it nightly.\n\n© Wayne Heim",
+    "notes": "An extreme low-angle view of the lighthouse atop its stone-walled grassy mound, in black and white — the set's most sculptural lighthouse frame: the mound's stonework as foreground monument, the tower as its crown.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -4200,8 +4200,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The mound in color: green grass over the great stone wall, the tower red and white against the storm, wires guyed against the wind that defines this postcode. From this close, the lighthouse stops being a symbol and becomes a machine that people maintain — paint, wire, stone, upkeep — on a headland that would prefer it gone. It is not gone. The light's whole biography is in that sentence, renewed every night.\n\n© Wayne Heim",
+    "notes": "The mound close-up in color: the red and white tower on its grass-covered stone mound under storm cloud — the companion that closes the lighthouse group on its most human note: a maintained machine on an unmaintained coast.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -4238,8 +4238,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The rowboats ride at the pier in their wooden patience — the Faroes' original transport, clinker-built descendants of the boats that settled these islands, still working. Houses line the harbor behind them; the cliff stands at the harbor's shoulder. In black and white the boats are all form: hulls, oars, gunwales, the waterline's dark signature. They have nowhere to be until the tide and the fishing say so, and they wait the way only wooden things can, without anxiety.\n\n© Wayne Heim",
+    "notes": "Wooden rowboats moored along a plank pier, waterfront houses and a cliff behind, in black and white portrait — the set's harbor portrait: the islands' oldest transport in its working rest.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -4277,8 +4277,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "Color paints the fleet — red, blue, white hulls along the pier, houses up the harbor's edge, the cliff at the right, and a blue sky making one of its rare full appearances over the whole arrangement. These boats are small because the harbor is small and the sea is not; the proportion is the Faroes' honesty. A hull fills the foreground like a promise. The village behind it has kept that promise, in wood, for a thousand years.\n\n© Wayne Heim",
+    "notes": "The pier fleet in color under a blue sky: red, blue, and white boats, waterfront houses, and the harbor cliff — the set's brightest harbor frame, the working coast in full paint.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -4315,8 +4315,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The harbor at full social density: boats moored in colors like a small festival, houses up the hillside painted to match the mood — red, white, blue, green — and a great orange-brown hull taking the foreground like it owns the pier, which seniority-wise it may. This is the Faroes with its guard down: a working marina in summer, everything floating, everything painted, the storm holding off at the frame's edges out of politeness.\n\n© Wayne Heim",
+    "notes": "A busy harbor full of colorful boats and painted waterfront houses under a blue sky — the set's most festive maritime frame: the working harbor as a color composition, village and fleet together.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -4352,8 +4352,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The same harbor with the festival drained out — hulls and houses in gray scale, the water dark, the clouds doing the drama the paint was doing before. Black and white reminds you what a harbor is: a machine for keeping boats alive in a place that eats them, beautiful because it works. The rowboats at the pier wait in their ranks. The hillside houses watch. The machine runs on, in tone.\n\n© Wayne Heim",
+    "notes": "The busy harbor in black and white portrait: rowboats, piers, and hillside houses in pure tone — the companion that strips the marina to its working structure, harbor as machine and portrait at once.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -4391,8 +4391,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "An old stone hut with a turf roof sits on the shore above its little boat, the cove walled in stone, a second hut further back, and across the water an island keeping the horizon company. This is the outpost economy in one frame: shelter, boat, shore, and the sea providing or withholding. The hut has no road, no wires, no neighbors in view — just the tide's schedule and the weather's. It looks sufficient. For a long time, it was the whole design.\n\n© Wayne Heim",
+    "notes": "A turf-roofed stone hut with its boat in a stone-walled cove, an island across the water — the set's outpost frame: the Faroe minimum of shelter and sea-access, composed with a painter's economy.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -4429,8 +4429,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The shelters scatter across the hillside like the land grew small stone houses where the sheep needed them — turf roofs, low walls, each one a bad-weather argument won by somebody's grandfather. A boulder field fills the foreground, because even the pasture here is half geology. The sea and a distant island close the view. In color the shelters' roofs are the same green as the hill, which is the point: buildings that intend to stay disguise themselves as landscape.\n\n© Wayne Heim",
+    "notes": "Stone shelters with turf roofs scattered across a grassy hillside above the sea — the set's pastoral architecture study: buildings disguised as landscape, with a boulder field for a foreground.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -4468,8 +4468,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "In black and white the shelters lose their camouflage and become what they are: small stone decisions on a large hill, keeping their distances from each other like neighbors who get along best that way. The sea and the flat-topped mountain hold the right of the frame. The turf roofs read as dark caps. Generations of sheep have sheltered in these through lambing and storm; the stones hold the memory in the only archive the hillside keeps.\n\n© Wayne Heim",
+    "notes": "The hillside shelters in black and white: small turf-roofed structures scattered across grass and rock, the sea and a flat mountain beyond — the set's most dispersed composition, shelter as a pattern across a working hill.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -4507,8 +4507,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "Color returns to the same scattered parish of huts: the big shelter green-roofed in the foreground grass, a smaller one back at the right, a rocky stream bed threading between them like the hill's plumbing diagram. Across the sea the mountain stands in the storm's gray light. These buildings were never a village — they're a system, placed where the work is, and the work is wherever the sheep and the weather agree to have it.\n\n© Wayne Heim",
+    "notes": "The shelter hillside in color: turf roofs, a rocky stream bed, the sea and mountain beyond — the companion that gives the shelter system its summer truth, buildings and drainage in one working landscape.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -4545,8 +4545,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The stream takes the foreground and runs the show — mossy boulders, bright water — and the shelter sits up the hill at the top-left like it's supervising its own drainage. Which it is: you build above the water's ambitions, with a roof the hill itself provided. The mountain behind stands under the darkest clouds in the set, and the little stone building keeps its turf hat on and its opinion to itself. Portrait of a working arrangement, vertical division: water below, shelter above, weather over all.\n\n© Wayne Heim",
+    "notes": "A stone shelter above a rocky stream in full mossy foreground, portrait format — the most vertically composed of the shelter frames: stream, shelter, and mountain stacked in one working system.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -4584,8 +4584,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "A stone wall runs down the slope from the big shelter like the building is holding the hillside's hand — shelter, wall, smaller shelter, mossy boulders, sea. It's a diagram of the whole outfield system: buildings for the sheep, walls for the boundaries, and the Atlantic for the fence that never needs mending. The distant mountain across the water is somebody else's version of the same diagram. The storm light treats both shores impartially.\n\n© Wayne Heim",
+    "notes": "Shelters and a long stone wall on a grassy slope above the sea, a mountain across the water — the set's most complete outfield composition: the whole shelter-and-wall system in one frame.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -4622,8 +4622,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "Down at the water the shelters change jobs: huts on a rocky shore with a wooden jetty reaching into the water, a smaller hut across the cove — this is the boat end of the shelter system, where the buildings serve the sea instead of the sheep. Dark clouds, dark water, turf roofs at the tide line. In color the scene is all deep greens and grays, the Faroes' two house colors, with the jetty's pale wood for punctuation.\n\n© Wayne Heim",
+    "notes": "Turf-roofed huts on a rocky shore with a wooden jetty, portrait format — the shelter system at the water's edge: the boat-end buildings, composed vertically against dark storm water.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -4660,8 +4660,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The wider view of the same shore: jetty, huts, the water filling half the frame, the grassy hillside holding the left. From here the arrangement reads as a small port that never grew — and never needed to: a landing, a shelter, a roof for gear, the tide for a timetable. The mountains beyond the water are the next parish's backdrop. Everything in the frame has exactly one job and does it in stone, turf, and timber.\n\n© Wayne Heim",
+    "notes": "The jetty shore in wide view: shelters, wooden jetty, and open water under dark cloud — the set's broadest shelter composition, a one-landing port in its entirety.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -4698,8 +4698,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of the Faroe Islands.",
-    "notes": "",
+    "story": "The set ends where the islands always end: at the edge, looking out. A grassy clifftop, one small turf-roofed hut keeping the watch, and beyond it the sea stacks standing in the water like the last chess pieces, islands beyond them, and then the long gray sentence of the horizon that every Faroe view finishes with. The clouds are dark; the grass is bright; the hut is in no hurry. Neither is the view. It's been looking out for a thousand years.\n\n© Wayne Heim",
+    "notes": "A grassy clifftop with a small stone hut, sea stacks and distant islands beyond, in color — the Faroe set's closing frame: the outward gaze over the whole archipelago's geography, hut, stacks, islands, and horizon in one farewell composition.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",

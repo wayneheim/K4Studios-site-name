@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 
 const repoRoot = process.cwd();
-const roots = ["dist", "public"].map((dir) => path.join(repoRoot, dir));
+const roots = [process.argv[2] || "dist", "public"].map((dir) => path.join(repoRoot, dir));
 const extensions = new Set([".html", ".xml", ".json"]);
 const bareHostPattern = /https?:\/\/k4studios\.com\b|https:\\\/\\\/k4studios\.com\b/gi;
 const allowedFiles = new Set([

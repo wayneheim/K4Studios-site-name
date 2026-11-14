@@ -338,10 +338,19 @@ const generatedStructuredDataJson = JSON.stringify({
 }, null, 2);
 const structuredDataJson = structuredDataJsonOverride || generatedStructuredDataJson;
 
+// Sunsets must carry its approved 2026-11-11 description verbatim in every
+// head layer. Keep this route-specific so no other collection's established
+// truncation or dash-normalization behavior changes.
+const preserveFullSunsetsDescription =
+  canonicalPath === "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets/all";
+
 const generatedPageMeta = {
   canonicalUrl,
   robots: "index, follow",
-  descriptionMaxLength: copy.descriptionMaxLength || 190,
+  descriptionMaxLength: preserveFullSunsetsDescription
+    ? seoDescription.length
+    : Number(copy.descriptionMaxLength) || 190,
+  preserveDescriptionDashes: preserveFullSunsetsDescription || copy.preserveDescriptionDashes === "true",
   ogTitle: seoTitle,
   ogDescription: seoDescription,
   ogImage: socialImage,
@@ -352,7 +361,13 @@ const generatedPageMeta = {
   twitterImage: socialImage,
   twitterUrl: canonicalUrl,
 };
-const pageMeta = pageMetaOverride || generatedPageMeta;
+// Route-level overrides are intentionally partial (usually canonical/robots).
+// Preserve the generated description and social controls unless a route
+// explicitly replaces those individual fields.
+const pageMeta = {
+  ...generatedPageMeta,
+  ...(pageMetaOverride || {}),
+};
 
 const compactBreadcrumbHtml = breadcrumbHtml
   .replace(/\s*\|\s*<a href="[^"]*\/K4-Select-Series">K4 Select Series<\/a>/g, "")

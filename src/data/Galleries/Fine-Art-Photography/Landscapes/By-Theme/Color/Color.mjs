@@ -45,8 +45,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Enjoy a new image from Wayne Heim's Landscape Photography collection. Full story on image to follow.",
-  "notes": "",
+  "story": "Open country wears black at Vestrahorn — rippled black sand running in dunes toward the mountain, grass tufts holding on in the hollows like the beach is trying to grow something and the wind keeps editing. Iceland's south coast makes its beaches out of ground-up lava, and the result reads like a desert that got rained on for a thousand years and stayed black anyway. The ripples are the wind's handwriting, rewritten nightly. Walk out on it and your footprints are the only news. By morning the sand will have revised them, the grass will still be holding its few green opinions, and the mountain will be standing where it always stands, at the end of the black.\n\n© Wayne Heim",
+  "notes": "Black sand dunes with grass tufts and rippled sand near Vestrahorn, Iceland, mountains beyond under a blue sky — this set's handwriting frame: the wind's script, revised nightly, in ground-up lava.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -81,8 +81,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Collection of the Best Iceland fine art landscape photography.",
-  "notes": "",
+  "story": "From above, lava stops being a hazard and becomes a hand — orange fingers branching across black volcanic ground, each one a road the earth is building at walking pace, glowing where it's newest, cooling to crust where it's already been. Iceland erupts the way other places rain: regularly, locally, and with total indifference to the audience. The fingers are the flow deciding — around this rise, down that hollow — a liquid making choices in real time. Photographed from the air, the scale hides: those fingers are rivers. The black around them is yesterday's version of the same fire, which is the island's whole biography — fire, cooled, then fire again on top of it.\n\n© Wayne Heim",
+  "notes": "Glowing orange lava fingers branching across black volcanic ground in Iceland, seen from above — this set's biography frame: fire, cooled, then fire again on top of it.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -118,8 +118,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Fine art landscape photography of Iceland in the Summer.",
-  "notes": "",
+  "story": "Spring in Iceland announces itself in purple — lupine fields running to the foot of snow-capped mountains, a flower so successful here that the country argues about it: imported to hold the soil, now holding whole hillsides in bloom. The lupine doesn't do modesty. It carpets eroded land in color for a few weeks while the snow is still deciding whether to leave the peaks, and the contrast is the whole show — violet fields, white summits, a sky with weather in it. Stand in it and the bloom is waist-high and humming. The mountains keep their snow. The field keeps its opinion. Both are right, and the photograph is the argument settled for one frame.\n\n© Wayne Heim",
+  "notes": "A field of purple spring lupine in bloom with snow-capped mountains under a dramatic sky, Iceland — this set's argument frame: violet fields against white summits, settled for one frame.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -154,8 +154,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Enjoy a new image from Wayne Heim's Landscape Photography collection. Full story on image to follow.",
-  "notes": "",
+  "story": "Morning light in a Hocking Hills gorge has to earn its way in — down through the canopy, off the moss, into the seam where a stream runs at the base of a rock outcrop that's been green since before Ohio had a name for it. The moss is the gorge's memory of water: every wet century written in velvet on the stone. Early is the only time this works. By noon the light stands overhead and flattens everything; at dawn it rakes sideways and the whole outcrop turns into relief — every ledge and drip line drawn. The stream doesn't care about any of it. It was running before the light arrived and it'll run after it leaves, which is the gorge's whole philosophy.\n\n© Wayne Heim",
+  "notes": "A moss-covered rock outcrop in a forest gorge with a stream at its base, Hocking Hills, Ohio, in soft morning light — this set's relief frame: dawn raking sideways, the gorge's philosophy running under it.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -190,8 +190,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
-  "notes": "",
+  "story": "A gorge stream is a river in its childhood — this one threading a mossy Hocking Hills gorge between layered rock cliffs, running over stone it helped carve, in no hurry at all because the carving is finished for this generation. The cliffs keep the receipts: layer on layer of sandstone, each stratum a sea that left. The stream just reads them on its way through. In the gorge the sound arrives before the water does — a low working noise, older than the trail, older than the park. Everything down here is damp and patient. The stream taught the gorge its shape one grain at a time, and it is still, grain by grain, teaching.\n\n© Wayne Heim",
+  "notes": "A stream flowing through a mossy forest gorge with layered rock cliffs, Hocking Hills, Ohio — this set's childhood frame: a young river reading the strata it carved.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -226,8 +226,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "A powerful statement in photography. © Wayne Heim",
-  "notes": "",
+  "story": "The field work here is done by water and time — a mossy rock overhang leaning over a still forest pool in Hocking Hills, the pool holding the trees' reflections like it's memorizing them. An overhang is a roof the cliff built for whoever needs one; shelters like this have been dry addresses in these gorges for thousands of years. The pool is the gorge at rest: no riffle, no hurry, just the slow exchange between stone and sky conducted in a mirror. Sit here long enough and the work reveals itself — drips measuring the hour, moss advancing a fraction, the reflection reassembling after every leaf that lands. Nothing is idle. It's just all on geology's schedule.\n\n© Wayne Heim",
+  "notes": "A mossy rock overhang above a still forest pool with tall trees, Hocking Hills, Ohio — this set's mirror frame: the gorge at rest, everything working on geology's schedule.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -266,8 +266,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Delving into this work by Wayne Heim A powerful statement in photography. © Wayne Heim",
-  "notes": "",
+  "story": "An evening study in winter is a study in hanging on — icicles strung from mossy ledges above a Hocking Hills stream, each one a stalactite the cold built overnight and the next thaw will unbuild without ceremony. Ice in a gorge is temporary architecture with excellent lighting: the ledges hold their layered lines, the icicles hold the last light, and the stream below keeps running under its own roof of cold. Winter down here is not the absence of the green season; it's the gorge in its other handwriting — white script on dark stone, legible for a few weeks. Read it while it lasts. The melt is already editing.\n\n© Wayne Heim",
+  "notes": "Icicles hanging from mossy layered rock ledges above a stream in a forest gorge, Hocking Hills, Ohio — this set's other-handwriting frame: winter's white script on dark stone, read before the melt.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -305,8 +305,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
-  "notes": "",
+  "story": "A thin fall is a waterfall being honest about the season — a trickle down a mossy layered cliff in Hocking Hills, a tall slender tree standing attendance, icicles testifying that it's cold enough to slow everything including the water. Big falls get the postcards, but a thin fall is the same geology at a whisper: the cliff's whole layered history with one wet thread drawn down it. The thread is the point. It says the spring above is still seeping, the stone is still drinking, and the gorge's plumbing works even in the year's leanest week. Come back after rain and it'll be a performance. Today it's a confidence, shared quietly, in ice and moss.\n\n© Wayne Heim",
+  "notes": "A thin waterfall trickling down a mossy layered rock cliff with a tall slender tree, Hocking Hills, Ohio — this set's whisper frame: the same geology at low volume, the thread that proves the plumbing.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -341,8 +341,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
-  "notes": "",
+  "story": "Moss is what boulders wear when they've been somewhere a long time — this Hocking Hills stream running over moss-covered stones in a forest gorge, autumn leaves caught in the seams, every rock upholstered in green like furniture the creek arranged and never moved again. A boulder in a stream is a decision the water makes daily: around, over, or under — and the moss records the verdict in velvet, thickest where the current is kindest. The autumn leaves are visitors; the moss is staff. Walk this gorge in any season and the boulders will be in their places, greener than last year, the stream still negotiating its way through the furniture.\n\n© Wayne Heim",
+  "notes": "A stream flowing over moss-covered boulders in a forest gorge with autumn leaves, Hocking Hills, Ohio — this set's furniture frame: the moss as staff, the leaves as visitors.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -377,8 +377,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Enjoy a new image from Wayne Heim's Landscape Photography collection. Full story on image to follow.",
-  "notes": "",
+  "story": "A quiet moment on a farm is a working thing photographed between jobs — a white barn standing in an open tilled field under a dramatic Ohio sky, the field combed into rows and waiting, the barn holding feed, tools, and the year's whole argument. Tilled ground is a promise written in furrows: something will be planted, something will be risked. The barn has heard the promise every spring of its life and keeps its own counsel, painted white against weather that has opinions. Under a sky like this the quiet isn't empty — it's loaded. The field is resting the way a held breath rests. Planting is coming. The barn knows. It has the seed catalog's number memorized.\n\n© Wayne Heim",
+  "notes": "A white barn in an open tilled field under a dramatic cloudy sky, Ohio — this set's held-breath frame: furrows as promises, the barn keeping its counsel.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -414,8 +414,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Fine art painterly photography of light shining through the trees.",
-  "notes": "",
+  "story": "Light through trees is the forest's one daily miracle, scheduled and unsentimental — sun streaming between tall Hocking Hills trunks onto a leaf-covered floor, the beams made visible by the gorge's own damp air. The trees don't arrange this; they just stand in the way at the right angle, and the light does the rest, turning a woodland floor into a room with windows. It lasts minutes. The angle shifts, the beams dissolve, and the forest goes back to being a forest instead of a cathedral. But the floor keeps the evidence — every leaf lit in turn like the light was reading the ground, line by line, before moving on to the rest of its day.\n\n© Wayne Heim",
+  "notes": "Sunlight streaming through tall trees onto a leaf-covered forest floor, Hocking Hills, Ohio — this set's cathedral frame: a room with windows that lasts minutes.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -451,8 +451,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
-  "notes": "",
+  "story": "Every gorge keeps one tree that seems to hold the place together — this tall trunk rising in a Hocking Hills gorge, stream below, mossy cliff behind, sunbeams arriving like they were aimed at it. A tree in a gorge lives a negotiated life: roots in rock seams, crown reaching past the rim for light the floor never sees, trunk straight because crooked was never an option. It is the gorge's mast and its measuring stick — floods marked on the bark, droughts in the rings. Stand at its base and the whole architecture explains itself: cliff, water, and this one vertical citizen connecting them, holding the address together.\n\n© Wayne Heim",
+  "notes": "A tall tree trunk in a forest gorge with a stream and mossy rock cliff, Hocking Hills, Ohio — this set's mast frame: one vertical citizen holding the gorge's address together.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -487,8 +487,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
-  "notes": "",
+  "story": "Winter is the season the trees show their bones — look straight up in an Ohio woods and the bare branches write themselves black against a bright sky, snow dusting the limbs like the calligraphy was done in two inks. A canopy in winter is not empty; it's revealed. All summer this was a ceiling of green with the structure hidden; now the whole engineering stands exposed — every fork a decision, every twig a negotiation with gravity and light. The snow is honest about it, settling where the wind allows. Stand under this and you're standing inside the trees' own drawing of themselves, drawn fresh every winter, erased every spring.\n\n© Wayne Heim",
+  "notes": "Looking straight up through bare winter tree branches toward a bright sky, snow-dusted branches, Ohio — this set's two-inks frame: the trees' own drawing of themselves, erased every spring.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -526,8 +526,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-  "notes": "",
+  "story": "A sapling rooted in rock is optimism with a grip — this young pine growing out of a mossy stone at the edge of a misty Canadian Rockies lake, no soil to speak of, lake weather for a landlord, and a whole forest's worth of confidence anyway. Trees like this start in a crack with a spoonful of dust and proceed like the address was prime. The mist keeps the lake's far shore a rumor, which suits a beginning: nothing to measure up to yet, just water, stone, and time. Give it fifty undisturbed years and this is the tree on the point that every photograph of the lake will include. Roots first. Everything else is sequels.\n\n© Wayne Heim",
+  "notes": "A small pine sapling growing from a mossy rock at the edge of a misty mountain lake, Canadian Rockies — this set's optimism frame: roots first, everything else sequels.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -563,8 +563,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Colorful row of boat houses in the Faroe Islands. ©Wayne Heim",
-  "notes": "",
+  "story": "A row of boat houses is a village's priorities painted in bright colors — these Faroese boathouses standing along the road under a grassy hillside, each one a boat's garage, a net loft, and a family's foothold on the sea, lined up like the harbor's bookshelf. In the Faroes the boat came before the car by a few thousand years, and the architecture remembers: doors sized for hulls, roofs against weather that tests them weekly. The colors are not decoration; they're identification — your house recognizable from the water in bad light. Under a dramatic sky the row reads as what it is: the shoreline's front line, painted brave.\n\n© Wayne Heim",
+  "notes": "A row of colorful boat houses along a road beneath a grassy hillside under a dramatic cloudy sky, Faroe Islands — this set's bookshelf frame: the shoreline's front line, painted brave.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -602,8 +602,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Sheep graze peacefully in a field of Iceland.\n©Wayne Heim",
-  "notes": "",
+  "story": "Sheep at dusk are unbothered by drama — this Icelandic flock grazing a green pasture while storm clouds stack overhead and sun rays break through like the weather is apologizing in advance. Icelandic sheep have Viking ancestry and Viking attitudes: double-coated, self-reliant, and free-ranging over the highlands all summer before the autumn roundup sorts them by their ear marks. A ewe's whole philosophy is grass and ground she's standing on; the sky can do what it likes. The light, meanwhile, is doing everything — shafts through the storm, color on the pasture — and the flock grazes through the performance like locals who've seen the show a thousand times. They have.\n\n© Wayne Heim",
+  "notes": "Sheep grazing in a green pasture under dramatic storm clouds with sun rays breaking through, Iceland — this set's unbothered frame: Viking sheep grazing through the sky's performance.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -639,8 +639,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Shelters for livestock dot the hillside. ©Wayne Heim",
-  "notes": "",
+  "story": "A hillside shelter is a barn reduced to its essence — these small stone livestock shelters with turf roofs dotted across an Icelandic hillside, built from the two materials the country has in surplus: rock and grass. Turf is Iceland's oldest roofing — insulating, repairable, and free — and a shelter like this has kept sheep alive through winters that kill the unprepared since the settlement centuries. They sit low and scattered the way the flocks use them: a roof wherever the weather catches you. Under a dramatic sky the hillside reads as a township in miniature — stone houses for the animals who made the human ones possible.\n\n© Wayne Heim",
+  "notes": "Small stone livestock shelters with turf roofs dotting a green rocky hillside under a dramatic cloudy sky, Iceland — this set's essence frame: a township in miniature for the animals who made the farms possible.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -676,8 +676,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Lighthouse is located in the Faroe Islands.\n©Wayne Heim",
-  "notes": "",
+  "story": "A lighthouse with a red band is a landmark that signs its name — this one standing on a stone rampart above a grassy Faroese hillside, the walkway climbing to it, the whole arrangement built to be seen from water in the worst light of the year. The Faroes scatter lighthouses the way other countries scatter churches: one on every point where the sea needs arguing with. The red band is the argument's punctuation — day-mark for sailors, unmistakable against grass and gray. Under a dramatic sky it does the photograph's work for it: white tower, red stripe, green hill, weather. The light itself is for the night. The band is for everyone, always.\n\n© Wayne Heim",
+  "notes": "A lighthouse with a red band standing on a stone rampart above a grassy hillside under a dramatic cloudy sky, Faroe Islands — this set's punctuation frame: the day-mark that argues with the sea.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -715,8 +715,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "View of sea from walkway blocked by gate. ©Wayne Heim",
-  "notes": "",
+  "story": "Every good walk in the Faroes ends at a gate — this wooden walkway running to a rustic gate in a stone wall, a stream alongside, mossy cliffs beyond and the sea past everything, the gate doing the oldest job in farming: keeping the sheep where the sheep belong. A gate in a stone wall is a sentence with one hinge: through here, and only here. The walkway says people come this way on purpose; the stream says the water ignores the arrangement entirely. Beyond the gate the land falls toward the sea the way all Faroe land does — grass, cliff, ocean, in that order, forever. Open it, close it behind you. That's the whole covenant.\n\n© Wayne Heim",
+  "notes": "A wooden walkway leading to a rustic gate in a stone wall, a stream alongside, mossy green cliffs and the sea beyond, Faroe Islands — this set's covenant frame: through here, and only here.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -752,8 +752,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Huge rocks litter the hillside in the Faroe Islands.\n©Wayne Heim",
-  "notes": "",
+  "story": "Big rocks littering a hillside are a glacier's dropped luggage — these grey boulders scattered across a mossy Faroese hillside under a stormy sky, left where the ice set them down and walked away ten thousand years ago. Farmers here have farmed around them ever since: the stone wall and gate in the frame are the negotiation made permanent — this rock stays, this grass grazes, this stream runs where it wants. The boulders are unimpressed by all of it. They've been rained on by ten millennia of Atlantic weather and hold their grey opinions. A hillside like this teaches the local arithmetic: land is what the rocks allow.\n\n© Wayne Heim",
+  "notes": "Huge grey boulders scattered across a mossy green hillside under a dramatic stormy sky, Faroe Islands — this set's luggage frame: land is what the rocks allow.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -791,8 +791,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Rainbow in Iceland seem to end at the little house",
-  "notes": "",
+  "story": "The end of the rainbow turns out to be a little house in Iceland — a double arc coming down beside a wet road, green fields running to a fjord, the house standing at the touchdown point like it ordered the whole arrangement. Rainbows here are not rare events; they're weather's punctuation, appearing whenever sun and shower share the sky, which in Iceland is most days. The road is wet, the fields are greener for it, and the fjord keeps its gray counsel. Folklore says there's gold at the end. The photograph suggests the truth is better: a house, a road, and a country where the sky performs for whoever's driving through.\n\n© Wayne Heim",
+  "notes": "A rainbow arcing down to a small house beside a wet road, green fields and a fjord under a dramatic cloudy sky, Iceland — this set's touchdown frame: the gold turns out to be a house and a road.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -828,8 +828,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Some of the sight you see when hiking the glaciers in Iceland. ©Wayne Heim",
-  "notes": "",
+  "story": "A glacier face is a cliff that moves — this towering wall of blue-white ice in Iceland, seracs stacked like the architecture of a frozen city, crevasses writing their stress in lines, a meltwater pool at the base collecting the glacier's daily losses. From a safe distance it looks permanent. Up close it ticks, cracks, and calves — a landscape with a pulse. The blue in the ice is age made visible: snow compressed for centuries until the light itself turns. Stand here and you're looking at a river standing up. It will lie back down, a piece at a time, all summer, into the pool at its feet.\n\n© Wayne Heim",
+  "notes": "A towering glacier face with blue-white ice seracs, crevasses and a meltwater pool, Iceland — this set's moving-cliff frame: a river standing up, lying back down by pieces.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -864,8 +864,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "You are in an ice cave looking up through a whole in the top of the glacier. ©Wayne Heim",
-  "notes": "",
+  "story": "Through the ice, the sky is a hole the light falls down — this view from inside an Icelandic ice cave, looking up through an opening in the glacier's roof, the blue walls holding the cave's own twilight. Ice caves are rooms the glacier builds in winter and demolishes in spring; standing in one is borrowing architecture from a landlord who's already scheduled the teardown. The blue is the glacier's true color, centuries of compressed snow filtering the sun down to its coldest note. Look up and the opening frames the ordinary sky like it's the exhibit. It is. Down here, the sky is the exotic thing.\n\n© Wayne Heim",
+  "notes": "Looking up through an ice cave toward a bright opening in the glacier, blue ice and overhead light, Iceland — this set's exhibit frame: inside the glacier, the sky is the exotic thing.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -900,8 +900,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "This dramatic shot is of the inside of a glacier cave in Iceland. ©Wayne Heim",
-  "notes": "",
+  "story": "Cold inside a glacier has a color — this ice cave interior in Iceland, sculptural walls in dim green-blue light, the ice shaped by meltwater into forms that look carved by an artist with a century to spare. A cave like this is the glacier's confession: all that pressure and patience, hollowed by its own melt into a room. The light doesn't enter so much as seep, filtered through meters of ice until it arrives as glow. Sound goes strange in here — drips, ticks, the ice settling its accounts. Every cave is temporary and every visit is the last one to that exact room. The glacier keeps building new ones. It just never repeats itself.\n\n© Wayne Heim",
+  "notes": "The inside of a glacier ice cave with sculptural ice walls and blue light, Iceland — this set's confession frame: a room the glacier builds once and never repeats.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -977,8 +977,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "What is around the bend in the road in Wyoming. ©Wayne Heim",
-  "notes": "",
+  "story": "Around the bend is the West's whole sales pitch — a paved road curving wet through golden Wyoming hills under a stormy sky, the bend withholding whatever's next the way this country withholds everything until you're in it. Roads out here don't cross the landscape; they negotiate with it, one curve at a time, and every curve is a small argument between the driver's curiosity and the hills. The grass is gold, the sky is loaded, the pavement shines with just-passed rain. What is around the bend? More of this, most likely — which is exactly why you go. Wyoming's secret is that the bend never disappoints, because the country's sameness is its spectacle.\n\n© Wayne Heim",
+  "notes": "A paved road curving through golden grassy hills under a dramatic stormy sky in Wyoming — this set's sales-pitch frame: the bend withholding the next mile, the sameness as spectacle.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -1017,8 +1017,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "A peaceful river flows through the quiet Wyoming countryside. ©Wayne Heim",
-  "notes": "",
+  "story": "A peaceful river at low sun is a valley keeping its voice down — this calm Wyoming water winding through golden grassland, tall pines standing along it, distant hills holding the horizon, the whole scene running at the speed of drift. Rivers in cattle country are infrastructure and mercy at once: water for the herds, cottonwood shade in August, a road for everything that swims or flies. At this hour the river is a mirror doing a second job — carrying the sky's colors downstream like it's delivering them to the next valley. The pines approve in silhouette. Nothing here is hurrying, and the photograph's calm is not an effect. It's a report.\n\n© Wayne Heim",
+  "notes": "A calm river winding through golden grassland at low sun with tall pine trees and distant hills, Wyoming — this set's delivery frame: the river carrying the sky's colors to the next valley.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -1055,8 +1055,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Grove of aspen trees in the fall outside of Jackson Hole Wyoming. ©Wayne Heim",
-  "notes": "",
+  "story": "Aspen fall outside Jackson Hole is a grove changing its mind in gold — white trunks standing close as a crowd, dry golden grasses at their bases, the color muted like the season is speaking in a lower register this year. An aspen grove is one organism wearing a hundred trunks; when fall comes it changes as a single citizen, root to crown, which is why the color arrives all at once. The white bark keeps the grove's signature in every season — winter's architecture, fall's exclamation. Stand inside one in October and the light itself turns the color of the leaves. The grove doesn't do subtle. It does unanimous.\n\n© Wayne Heim",
+  "notes": "A dense grove of white-trunked aspen trees with dry golden grasses at their base in fall, Jackson Hole, Wyoming — this set's unanimous frame: one organism, a hundred trunks, changing as a single citizen.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -1094,8 +1094,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-  "notes": "",
+  "story": "Stairs to a lighthouse are a pilgrimage with railings — this long wooden staircase climbing a grassy, rocky Newfoundland hillside to a white lighthouse under a dramatic sky, every step a small argument that the view and the light are worth the climb. Lighthouse stairs exist because the light has to be high and the keepers had to be fit; generations climbed these with oil, then wire, then just inspection clipboards. The hillside is the Atlantic's front yard — grass, rock, weather off the water. At the top: the light, the whole coast, and the reason for the stairs. At the bottom: your knees' opinion of the arrangement. Both are part of the exhibit.\n\n© Wayne Heim",
+  "notes": "A long wooden staircase with railings climbing a grassy rocky hillside toward a white lighthouse under a dramatic cloudy sky, Newfoundland — this set's pilgrimage frame: the climb as part of the exhibit.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -1133,8 +1133,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "18 x 24 In StockErosion 2 - the eroded landscape of Utah ©Wayne Heim",
-  "notes": "",
+  "story": "Carved by time is the only honest caption for Utah's badlands — layered rock formations and eroded slopes under a dramatic sky, every stratum a different age of the earth wearing a different color, the whole hillside a book rain keeps reading aloud. Erosion here is not destruction; it's editing. Wind and water cut the soft lines, keep the hard ones, and publish the revision daily. The layers tilt and band like the country is showing its rings. Nothing grows to hide the evidence, which is the badlands' gift: geology without a curtain. Walk these slopes and you're walking on pages — red ones, white ones, gray ones — each a sea or a desert that used to be.\n\n© Wayne Heim",
+  "notes": "Layered eroded rock formations and badlands slopes under a dramatic cloudy sky, Utah — this set's pages frame: geology without a curtain, the country showing its rings.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -1172,8 +1172,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Sunset at Canyon Lands National Park in Utah. ©Wayne Heim",
-  "notes": "",
+  "story": "Sunset over Canyonlands is the day's light being spent wall by wall — a panoramic canyon at sundown, red cliffs and mesas under a dramatic sky, the light draining out of the canyon in levels like the country is closing floors of a great house. From the rim, the scale defeats every instinct: those mesas are mountains, that silence is a mile deep. The red rock holds the sun longest on its highest faces, so the canyon says goodnight in sequence — rims first, then walls, then the river's rumor at the bottom. Stand here and you're the audience of a closure performed nightly for no one. The country doesn't need witnesses. It keeps performing.\n\n© Wayne Heim",
+  "notes": "A panoramic canyon landscape at sunset with red rock cliffs and mesas under a dramatic cloudy sky, Canyonlands National Park, Utah — this set's closing-floors frame: the country saying goodnight in sequence.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -1211,8 +1211,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Double Arches- view of two of the arches in Arches National Park in Utah. ©Wayne Heim",
-  "notes": "",
+  "story": "Two arches keep house together in Arches National Park — a massive span arching above a smaller one under a bright blue sky, the pair of them carved from one fin of red sandstone by nothing but water, wind, and time's refusal to hurry. A double arch is erosion showing off: the big span gets the postcards, the small one gets the shade, and together they frame more sky than either could alone. The stone above them is still deciding its future — every arch is a collapse in progress, photographed during its long, graceful middle. Stand underneath and the science turns simple: rock, holding; light, passing through; people, quiet.\n\n© Wayne Heim",
+  "notes": "Two massive red rock arches in Arches National Park, Utah, a large arch spanning above a smaller arch under a bright blue sky — this set's long-middle frame: rock holding, light passing through.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -1249,8 +1249,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "One of the many plateaus in Bryce Nation Park ©Wayne Heim",
-  "notes": "",
+  "story": "A plateau in the sky is Bryce keeping its head in the weather — this flat-topped wall of layered red-orange cliffs standing under a cloudy sky, the plateau's rim at an altitude where the clouds are neighbors instead of ceiling. Bryce is not a canyon but an amphitheater of erosion, and its plateaus are the stage's back wall: banded, sheer, and indifferent. The layers read like a tide chart of ancient seas, each color a different shoreline. Up here the air is thin and the light is honest. The plateau has stood through every storm the sky could send, wearing them one at a time, and it will stand through the next one the same way — by being stone, at height, on purpose.\n\n© Wayne Heim",
+  "notes": "A dramatic plateau with layered red-orange rock cliffs and a flat top under a cloudy sky, Bryce National Park, Utah — this set's back-wall frame: stone at height, wearing weather one storm at a time.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -1287,8 +1287,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Looking up from the floor of the Narrows in Zion National Park. ©Wayne Heim",
-  "notes": "",
+  "story": "The Narrows from below is a river's-eye view of the sky — looking up from the floor of Zion's slot canyon, a strip of blue held between smooth orange walls the Virgin River sculpted one flood at a time. Down here the sky is not a dome; it's a ribbon, and its width tells you the canyon's width better than any map. The walls curve like the water that made them — every swirl in the stone a current's signature, polished by centuries of sandy floods. Hikers wade the river to stand in this frame, and the frame explains why: it's the world reduced to three elements — rock, water, sky — arranged by an expert.\n\n© Wayne Heim",
+  "notes": "Looking up from the floor of a slot canyon toward a strip of blue sky between smooth sculpted orange canyon walls, the Narrows, Zion National Park — this set's ribbon frame: the world reduced to rock, water, sky.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -1325,8 +1325,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "18 x 24 In StockSunset in Arches. Sun is setting behind rock formations in Arches National Park, Utah ©Wayne Heim",
-  "notes": "",
+  "story": "Sunset in Arches is a performance the rocks attend nightly — tall red formations and spires standing in a row against an orange and pink sky, silhouetted like an audience that took its seats a million years early and has never once left before the end. The sun goes down between the stones as if aimed. For a few minutes the sandstone holds fire on its faces; then the color leaves in order — pink, ember, gray — and the spires become shapes the stars will have to finish describing. Arches has run this show through every era of the planet's weather. The house is always full. The house is the show.\n\n© Wayne Heim",
+  "notes": "Sunset behind tall red rock formations and spires in Arches National Park, Utah, under a dramatic orange and pink sky — this set's full-house frame: the rocks attending a performance they are also giving.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -1363,8 +1363,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Painterly photography. Forest Path , quiet path through the woods of Hocking Hills in Ohio ©Wayne Heim",
-  "notes": "",
+  "story": "A forest path is a rumor the trees keep confirming — this quiet way through a dense green Hocking Hills woods, sunlit patches on the floor where the canopy lets the day in, the path worn by everyone who ever needed to get through here and agreed on the route. Paths are the forest's oldest technology: the line of least resistance, memorized by feet. This one runs green in every direction — trunks, shade, the bright pools where the light lands. Walk it and the woods perform their one trick, which is making a person feel expected and irrelevant at once. The path doesn't care which you choose. It was here before the park, and it'll be here after the sign.\n\n© Wayne Heim",
+  "notes": "A dense green forest with tall trees and sunlit patches on the forest floor, a quiet woodland path in Hocking Hills, Ohio — this set's rumor frame: the line of least resistance, memorized by feet.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -1401,8 +1401,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "The Rock Bridge near Old Man's Cave in Hocking Hills Park.©Wayne Heim",
-  "notes": "",
+  "story": "The Rock Bridge near Old Man's Cave is geology performing its one magic trick — a natural stone arch spanning a forest floor deep in autumn leaves, tall trees standing beyond it like the audience that never leaves. Rock bridges form when water finds the weak seam and takes it, leaving the strong stone standing as a span; this one has carried its own weight over the Hocking Hills floor for longer than the forest has been a forest. The leaves underneath are this year's audience: red, gold, already becoming soil. Cross the frame in any season and the bridge is the constant — stone, arched, patient — while everything under it changes on schedule.\n\n© Wayne Heim",
+  "notes": "A natural rock bridge arching over a forest floor covered in fallen autumn leaves, tall trees and autumn foliage beyond, Hocking Hills, Ohio — this set's one-trick frame: the span constant, everything under it changing on schedule.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -1439,8 +1439,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Fine art landscape photography of Letchworth State Park in New York.",
-  "notes": "",
+  "story": "They call Letchworth the Grand Canyon of the East, and autumn is when it argues its case — a deep Genesee River gorge with steep rock walls, the river winding below, forested slopes running red and gold to the rim. The Genesee carved this the slow way, through shale and sandstone, and the fall color now does the decorating the rock never asked for. In black and white this gorge is all structure; in color it's all season — the same carving wearing October. Stand at the rim and the river looks like a rumor of water at the bottom of a painted wall. It's not a rumor. It's the author, still writing.\n\n© Wayne Heim",
+  "notes": "A deep river gorge with steep rock walls and a winding river below, forested slopes in autumn colors, Letchworth State Park, New York — this set's case-argued frame: the same carving, wearing October.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -1478,8 +1478,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Angry Sunset - dark gray clouds at sunset seem to warn of storm .©Wayne Heim",
-  "notes": "",
+  "story": "An angry sunset over Jackson Hole is the weather sending a telegram — dark storm clouds stacked at evening with orange light breaking through above a silhouetted ridge, the whole sky reading like news that hasn't arrived yet. Sunsets like this are the Tetons' evening honesty: the day doesn't fade, it gets overruled. The orange seam between cloud and ridge is the sun's last argument, and it loses beautifully. Ranchers read skies like this the way bankers read tickers — for what's coming: wind, change, a front with intentions. The ridge holds its black line through all of it. Below the light, the valley is already in the next day's shadow.\n\n© Wayne Heim",
+  "notes": "Dark gray storm clouds at sunset with orange light breaking through above a silhouetted ridge, Jackson Hole, Wyoming — this set's telegram frame: the day overruled, the ridge holding its line.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -1517,8 +1517,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Sunset at the Farm - sunsetting behind a rural farm outlining the buildings.©Wayne Heim",
-  "notes": "",
+  "story": "A farm at sunset signs the day in silhouette — buildings and silos standing black against a purple and orange sky, the whole operation reduced to its outline: barn, silo, roofline, the shapes a farm makes when the work is done and the light is leaving. Purple is the countryside's evening color, the one the sky keeps between day and dark, and farmsteads wear it like a uniform. The silos hold the year's feed; the barn holds the year's tools; the sky holds the year's weather, retiring for the night. Tomorrow the shapes will be buildings again. Tonight they're the signature at the bottom of the day's page.\n\n© Wayne Heim",
+  "notes": "Farm buildings and silos silhouetted against a dramatic purple and orange sunset sky — this set's signature frame: the operation reduced to its outline at the bottom of the day.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -1561,8 +1561,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Road sign indicate go left as road foes along a gorge. ©Wayne Heim",
-  "notes": "",
+  "story": "Go left, says the sign, and the desert agrees — a yellow left-turn arrow standing beside a desert road under a wide blue sky, sagebrush and juniper rolling away across arid hills, the sign the only instruction for miles. Road signs in empty country carry unusual authority: no committee, no traffic, just one black arrow making the decision the road was going to make anyway. The hills don't argue. Out here directions are simple because the options are few — the road bends, you bend with it. The sign's confidence is total and entirely earned: in all the years it's stood there, no one has ever needed it to say anything else.\n\n© Wayne Heim",
+  "notes": "A yellow road sign with a black left-turn arrow beside a desert road under a wide blue sky with scattered clouds, dry sagebrush and juniper across rolling arid hills — this set's one-instruction frame: total confidence, entirely earned.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -1602,8 +1602,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Enjoy a new image from Wayne Heim's Landscape Photography collection. Full story on image to follow.",
-  "notes": "",
+  "story": "A distant view of a red barn under a storm sky is a working farm's whole portrait — the weathered barn standing in a lush green field, dark clouds stacking above it, a small red outbuilding far off keeping it company. Red barns are the countryside's punctuation: visible for a mile, repainted on schedule, outlasting the farms' business plans one generation at a time. This one has the storm coming and shows no concern — barns are built by people who read skies professionally. The field is June-green and unbothered. By evening the storm will have passed over everything in the frame and the barn will still be red, still standing, still the view.\n\n© Wayne Heim",
+  "notes": "A weathered red barn in a lush green field under a dramatic dark stormy sky, green trees and a small red outbuilding in the distance — this set's punctuation frame: still red, still standing, still the view.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -1644,8 +1644,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Enjoy a new image from Wayne Heim's Landscape Photography collection. Full story on image to follow.",
-  "notes": "",
+  "story": "Light through a storm is the sky changing its mind in public — sunbeams breaking through dark clouds over a green field, a fence line running below, the rays arriving in shafts like the storm has been voted down. Farmers call this kind of light a clearing promise, and it usually keeps its word: the beams are the sun finding the holes, the field already steaming in answer. A fence line under god rays becomes the most dramatic property boundary in the county for about four minutes. Then the clouds close ranks or open entirely, and the field goes back to being a field — with a story it will tell every photograph taken of it afterward.\n\n© Wayne Heim",
+  "notes": "Sunbeams breaking through dark storm clouds over a green field with a fence line and distant trees — this set's voted-down frame: the storm overruled in shafts of light.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -1686,8 +1686,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Enjoy a new image from Wayne Heim's Landscape Photography collection. Full story on image to follow.",
-  "notes": "",
+  "story": "A storm over a field is mostly sky — a vast green field under a huge dark storm, light breaking through the clouds at the edges, a thin tree line holding the horizon like a signature on a very large painting. Out in open country the sky is not above the landscape; it IS the landscape, and a field is just the floor it performs over. This storm takes up nine-tenths of the world and the field takes it the way fields do — lying flat, growing anyway. The light at the break is the forecast arguing with itself. The trees at the horizon have seen every version of this argument. They keep their line and wait for the result.\n\n© Wayne Heim",
+  "notes": "A vast green field under a huge dark stormy sky with light breaking through the clouds, a thin tree line at the horizon — this set's nine-tenths frame: the sky as the landscape, the field as its floor.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -1728,8 +1728,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
-  "notes": "",
+  "story": "Corn under clouds is a crop in negotiation with the sky — a tall green Vermont cornfield standing under dark storm clouds patched with blue, rolling green hills beyond, the corn at the height where it stops being a crop and starts being a crowd. A cornfield in a storm's shadow is agriculture's oldest drama: everything the farmer owns, standing outside, waiting on weather he can't bill. The clouds hold the dramatic roles; the hills hold the calm ones; the corn holds its breath in rows. Rain or no rain, the field will be a different height next week. That's the deal corn makes with summer, and it has never once renegotiated.\n\n© Wayne Heim",
+  "notes": "A tall green cornfield under a dramatic sky of dark storm clouds and blue patches, rolling green hills in the distance — this set's negotiation frame: everything the farmer owns, standing outside, waiting.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -1771,8 +1771,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
-  "notes": "",
+  "story": "A meadow keeps one tree the way a clock keeps one hand — this tall slender tree in yellow autumn leaves standing in a grassy meadow, forest and hills behind it under a bright blue sky, the tree the meadow's instrument for telling the season. Meadows are clearings the forest hasn't reclaimed; a lone tree in one is either the advance scout of the returning woods or the survivor the clearing was made around. In autumn it stops being green infrastructure and becomes the meadow's flag — yellow, singular, impossible to miss. The forest behind it will get the meadow back eventually, a tree at a time. This one is already there, holding the future's first position.\n\n© Wayne Heim",
+  "notes": "A tall slender tree with yellow autumn leaves standing in a grassy meadow, forest and hills behind under a bright blue sky with white clouds — this set's clock-hand frame: the meadow's instrument for telling the season.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -1813,8 +1813,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Enjoy a new image from Wayne Heim's Landscape Photography collection. Full story on image to follow.",
-  "notes": "",
+  "story": "Still water is autumn's second showing — a dense forest of evergreens and red, orange, and yellow hardwoods reflected in dark motionless water, the woods doubled, the colors given back upside down with interest. A reflection this complete requires a conspiracy: no wind, no current, light at the hour when the trees are lit and the water is not. The forest performs; the water reviews it, favorably. Every leaf color appears twice in the frame and the eye can't decide which showing it prefers — the original, with the sky behind it, or the copy, with the depths. The trees, reflected, look like they're growing downward into a second autumn. Maybe they are.\n\n© Wayne Heim",
+  "notes": "A dense forest of evergreen trees with red, orange, and yellow autumn foliage reflected in still dark water — this set's second-showing frame: the woods doubled, the copy arguing with the original.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",

@@ -829,7 +829,7 @@ export const galleryData = [
   },
   {
     "id": "i-VzhZFL7",
-    "title": "This too Shall Pass",
+    "title": "This Too Shall Pass",
     "description": "A black steam engine crosses a stone overpass against blue sky, turning rail structure and silhouette into traditional train photography. This fine art transportation image creates steam engine wall art rooted in historic railroad architecture, clean sky, and the passing force of old machinery.\n\n© Wayne Heim",
     "alt": "Color photograph of a black steam locomotive pulling a red freight car across a stone overpass against a blue sky, a large plume of dark smoke billowing above, with a stone abutment and vegetation in the foreground",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-VzhZFL7/0/Kw8NGXgZb66nqCHZ2mMGg24vtJmmCFCq5Q7FVgWxr/XL/_HF26382-Edit-XL.jpg",

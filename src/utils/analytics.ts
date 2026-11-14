@@ -16,6 +16,7 @@ const SESSION_LAST_ACTIVITY_KEY = 'k4_session_last_activity';
 const ENTRY_REFERRER_KEY = 'k4_entry_referrer';
 const CAMPAIGN_ATTRIBUTION_KEY = 'k4_campaign_attribution';
 const PREVIOUS_PAGE_KEY = 'k4_previous_page';
+const VISITOR_STATUS_KEY = 'k4_visitor_status';
 const PAGE_INSTANCE_ID = safeRandomId();
 
 let inMemorySessionId: string | null = null;
@@ -65,15 +66,23 @@ function clearSessionAttribution(): void {
 
 function persistSessionId(sessionId: string, now: number, rotated = false): string {
   inMemorySessionId = sessionId;
+  let visitorStatus: string | null = rotated ? 'returning' : getCookie(VISITOR_STATUS_KEY);
   try {
     sessionStorage.setItem(SESSION_ID_KEY, sessionId);
     sessionStorage.setItem(SESSION_LAST_ACTIVITY_KEY, String(now));
+    visitorStatus ||= sessionStorage.getItem(VISITOR_STATUS_KEY);
+    if (visitorStatus === 'new' || visitorStatus === 'returning') {
+      sessionStorage.setItem(VISITOR_STATUS_KEY, visitorStatus);
+    }
   } catch {
     // ignore
   }
   if (rotated) clearSessionAttribution();
   setK4Cookie('k4_sid', sessionId, SESSION_TIMEOUT_SECONDS);
   setK4Cookie('k4_session_last_activity', String(now), SESSION_TIMEOUT_SECONDS);
+  if (visitorStatus === 'new' || visitorStatus === 'returning') {
+    setK4Cookie(VISITOR_STATUS_KEY, visitorStatus, SESSION_TIMEOUT_SECONDS);
+  }
   return sessionId;
 }
 
@@ -260,6 +269,18 @@ function getVisitorId(): string {
   }
 
   return inMemoryVisitorId;
+}
+
+function getVisitorStatus(): 'new' | 'returning' | null {
+  let value = getCookie(VISITOR_STATUS_KEY);
+  if (!value) {
+    try {
+      value = sessionStorage.getItem(VISITOR_STATUS_KEY);
+    } catch {
+      // ignore
+    }
+  }
+  return value === 'new' || value === 'returning' ? value : null;
 }
 
 type ClarityFn = (...args: any[]) => void;
@@ -764,6 +785,7 @@ export function trackEvent(event: string, context: TrackContext = {}): void {
   const payload = JSON.stringify({
     session_id: sessionId,
     visitor_id: getVisitorId() || null,
+    visitor_status: getVisitorStatus(),
     event,
     gallery_id: inferredGalleryId || null,
     image_id: inferredImageId || null,

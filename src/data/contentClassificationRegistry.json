@@ -1,7 +1,7 @@
 {
   "_meta": {
     "version": "1.0",
-    "lastUpdated": "2026-11-08T22:36:01.285Z"
+    "lastUpdated": "2026-11-13T02:38:31.136Z"
   },
   "images": {
     "i-FrDFN7V:/src/data/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White.mjs": {
@@ -6496,10 +6496,6 @@
       "classification": "scout",
       "updatedAt": "2026-11-07T01:25:35.698Z"
     },
-    "i-VzhZFL7:/src/data/Galleries/Fine-Art-Photography/Transportation/Trains.mjs": {
-      "classification": "scout",
-      "updatedAt": "2026-11-07T01:26:19.617Z"
-    },
     "i-8hMzqz2:/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs": {
       "classification": "scout",
       "updatedAt": "2026-11-07T01:29:02.760Z"
@@ -9199,6 +9195,958 @@
     "i-8MFcm9N:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
       "classification": "scout",
       "updatedAt": "2026-11-08T21:23:07.991Z"
+    },
+    "i-gL2CxV7:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T04:32:27.880Z"
+    },
+    "i-Tfg5j96:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T04:33:17.589Z"
+    },
+    "i-n3N8NRr:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T04:33:39.146Z"
+    },
+    "i-N9sBgRs:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T04:34:01.285Z"
+    },
+    "i-59zQzXC:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T04:34:24.994Z"
+    },
+    "i-Dd5XSHd:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T04:34:46.814Z"
+    },
+    "i-vZNLBNp:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T04:35:13.151Z"
+    },
+    "i-2XSdvtV:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T04:35:35.674Z"
+    },
+    "i-rTVRQJQ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T04:35:56.204Z"
+    },
+    "i-hwZmvKw:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T04:36:17.205Z"
+    },
+    "i-cnKRrrH:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T04:36:39.846Z"
+    },
+    "i-NBvV5CH:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T04:36:59.001Z"
+    },
+    "i-gbcTnJp:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T04:37:21.175Z"
+    },
+    "i-4CDbNZW:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T04:37:41.466Z"
+    },
+    "i-nNR9s8N:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T04:38:05.264Z"
+    },
+    "i-CFM4PGm:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T04:38:26.427Z"
+    },
+    "i-zgFkMj7:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T04:38:46.924Z"
+    },
+    "i-cFcMB2h:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T04:39:07.845Z"
+    },
+    "i-NPkLTtP:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T04:39:27.876Z"
+    },
+    "i-3gH2xgz:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T04:39:49.832Z"
+    },
+    "i-dBLHKzn:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T04:42:19.900Z"
+    },
+    "i-m7Pp5fs:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T04:42:44.162Z"
+    },
+    "i-t8sGcrF:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T04:43:08.420Z"
+    },
+    "i-fDfPWtf:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T04:43:30.532Z"
+    },
+    "i-VKd9tKt:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T04:43:51.534Z"
+    },
+    "i-qtpJ9Rc:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T04:44:13.420Z"
+    },
+    "i-7GhbvWS:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T04:44:35.862Z"
+    },
+    "i-nDF3Jmx:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T04:45:01.781Z"
+    },
+    "i-XPk7zrk:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T04:45:27.750Z"
+    },
+    "i-sw7GKqP:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T04:46:02.404Z"
+    },
+    "i-hX6B3rV:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T04:46:25.633Z"
+    },
+    "i-mx6vDgR:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T04:46:47.733Z"
+    },
+    "i-2nrKDf9:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T04:47:12.571Z"
+    },
+    "i-pvpwdBx:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T04:47:34.656Z"
+    },
+    "i-xJ2ncLF:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T04:48:01.546Z"
+    },
+    "i-rh4WHJh:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T04:48:24.418Z"
+    },
+    "i-x3ZPvH9:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T04:48:49.891Z"
+    },
+    "i-Bfbggnq:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T04:49:22.296Z"
+    },
+    "i-Rb3fQ5d:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T04:49:45.549Z"
+    },
+    "i-jDntD39:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T04:50:08.833Z"
+    },
+    "i-9DrbLRG:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T04:59:31.463Z"
+    },
+    "i-NzVgz27:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T04:59:59.524Z"
+    },
+    "i-QdTk3tx:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:00:27.778Z"
+    },
+    "i-qrfsSnK:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:00:52.644Z"
+    },
+    "i-6GXtnFS:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:01:18.149Z"
+    },
+    "i-zQCt9xG:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:01:49.589Z"
+    },
+    "i-sZ9Bfsh:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:02:48.891Z"
+    },
+    "i-SQhmH23:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:03:13.356Z"
+    },
+    "i-gDqZPrV:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:03:38.532Z"
+    },
+    "i-mZhwrsq:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:04:06.355Z"
+    },
+    "i-X6K2nTX:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:04:33.073Z"
+    },
+    "i-x66BqR2:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:05:02.022Z"
+    },
+    "i-pcgbbVD:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:05:29.419Z"
+    },
+    "i-LqvLkRk:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:05:57.649Z"
+    },
+    "i-fT66LMh:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:06:25.228Z"
+    },
+    "i-FDHCvzp:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:06:54.742Z"
+    },
+    "i-j8MSWCQ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:07:23.315Z"
+    },
+    "i-LPGK6GQ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:07:52.406Z"
+    },
+    "i-DBhHNsx:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:08:20.304Z"
+    },
+    "i-xfVsJSw:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:08:46.587Z"
+    },
+    "i-ZsvXGsZ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:23:56.700Z"
+    },
+    "i-n7KMpt6:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:24:38.053Z"
+    },
+    "i-7nSpMCH:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:25:15.819Z"
+    },
+    "i-6C3HdJL:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:26:06.857Z"
+    },
+    "i-qv2v6Hd:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:26:42.418Z"
+    },
+    "i-cn52Pv8:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:27:20.939Z"
+    },
+    "i-qD8wNrk:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:28:00.370Z"
+    },
+    "i-8fG4Cw6:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:28:37.763Z"
+    },
+    "i-n3DfmhH:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:29:23.308Z"
+    },
+    "i-4dJHTwW:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:30:00.091Z"
+    },
+    "i-qXXc38X:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:30:43.472Z"
+    },
+    "i-VvNJkLt:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:31:22.548Z"
+    },
+    "i-LbjX2Cp:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:32:01.480Z"
+    },
+    "i-mgtzMfv:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:33:37.559Z"
+    },
+    "i-HpjgX48:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:34:40.554Z"
+    },
+    "i-DtGgkq6:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:35:25.613Z"
+    },
+    "i-PJjLRDx:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:36:05.545Z"
+    },
+    "i-P8fzNch:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:36:45.390Z"
+    },
+    "i-w3XjwMB:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:37:27.204Z"
+    },
+    "i-DBBbvKP:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:38:05.711Z"
+    },
+    "i-22hf958:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:41:32.742Z"
+    },
+    "i-RFpMwFx:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:42:42.510Z"
+    },
+    "i-N2gT9Qw:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:43:27.411Z"
+    },
+    "i-jkN6Q3B:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:44:32.528Z"
+    },
+    "i-WM8czGM:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:45:48.816Z"
+    },
+    "i-2LZq7Wn:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:46:25.313Z"
+    },
+    "i-wzkNsnZ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:47:00.733Z"
+    },
+    "i-LN9Tdvr:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:48:17.018Z"
+    },
+    "i-zkZ4vmZ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:49:46.973Z"
+    },
+    "i-jBD68qM:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:50:24.896Z"
+    },
+    "i-qjLpZPg:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:51:40.595Z"
+    },
+    "i-ggLrXkW:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:52:19.674Z"
+    },
+    "i-qpX8Gxp:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:53:09.865Z"
+    },
+    "i-VgGXHr3:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T05:59:47.156Z"
+    },
+    "i-NPK4j4w:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T06:00:39.737Z"
+    },
+    "i-KNQnJpx:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T06:01:33.617Z"
+    },
+    "i-2PNTFjQ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T06:02:28.864Z"
+    },
+    "i-ZrS6Hpm:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T06:03:25.775Z"
+    },
+    "i-8QK8f9C:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T06:04:16.247Z"
+    },
+    "i-n9FrVQG:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T06:05:18.159Z"
+    },
+    "i-BHDwMmG:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T06:06:08.077Z"
+    },
+    "i-5Bt3Kxx:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T06:07:01.133Z"
+    },
+    "i-tL9CW7Q:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T06:07:58.048Z"
+    },
+    "i-tRkQxSw:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T06:08:53.937Z"
+    },
+    "i-5bvTQ93:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T06:09:45.256Z"
+    },
+    "i-hPDVVf4:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T06:10:36.239Z"
+    },
+    "i-mRcjcQx:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T06:11:27.324Z"
+    },
+    "i-29bkHrX:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T06:12:18.869Z"
+    },
+    "i-XXnPLmQ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T06:13:18.340Z"
+    },
+    "i-KQ2M2Qj:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T06:14:09.453Z"
+    },
+    "i-v8GHpWG:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T06:14:49.014Z"
+    },
+    "i-D33PVtv:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T06:15:42.468Z"
+    },
+    "i-W3z4Wch:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T06:18:28.768Z"
+    },
+    "i-H73gQ4P:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T06:19:21.635Z"
+    },
+    "i-GdMFBGc:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T06:19:59.440Z"
+    },
+    "i-gRqMNCH:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T06:20:43.333Z"
+    },
+    "i-Cw72C3b:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T06:21:28.678Z"
+    },
+    "i-wpZr6sV:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T06:22:09.882Z"
+    },
+    "i-G95TtRW:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T06:22:53.522Z"
+    },
+    "i-cvxNjbV:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T06:30:49.093Z"
+    },
+    "i-ST6R4S3:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T06:36:38.610Z"
+    },
+    "i-GtX9w4B:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T06:41:00.825Z"
+    },
+    "i-fLNLCcT:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T07:48:48.205Z"
+    },
+    "i-qrSVhmS:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T07:58:28.253Z"
+    },
+    "i-8fbHpXN:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T08:01:03.958Z"
+    },
+    "i-89dTvpV:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T08:03:27.825Z"
+    },
+    "i-Sns3Ksn:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T08:05:01.703Z"
+    },
+    "i-F2WkVxc:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T08:06:23.457Z"
+    },
+    "i-xjxgdxN:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T08:09:18.072Z"
+    },
+    "i-f8W25wQ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T08:10:26.972Z"
+    },
+    "i-VDFRKvN:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T08:12:31.479Z"
+    },
+    "i-597XdNX:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T08:14:02.210Z"
+    },
+    "i-whNr3dr:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T08:14:55.552Z"
+    },
+    "i-Bwd2kfT:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T08:18:06.350Z"
+    },
+    "i-vVTBSzp:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T08:19:50.355Z"
+    },
+    "i-35JcTVg:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T08:21:15.669Z"
+    },
+    "i-5fCfkhm:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T08:22:46.983Z"
+    },
+    "i-D9rGNBw:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T08:24:02.952Z"
+    },
+    "i-4BfzV3h:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T08:25:47.121Z"
+    },
+    "i-WbRFtsn:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T08:27:00.383Z"
+    },
+    "i-7MTPDt4:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T08:28:36.216Z"
+    },
+    "i-R69W3Cs:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T08:29:50.175Z"
+    },
+    "i-K2qMML6:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T08:33:20.263Z"
+    },
+    "i-zwwvP7j:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T08:36:20.733Z"
+    },
+    "i-kr2stsR:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T08:37:28.381Z"
+    },
+    "i-qTPmXLJ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T08:39:04.666Z"
+    },
+    "i-zN5fnqH:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T08:41:01.490Z"
+    },
+    "i-z7QmfM5:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T08:41:54.844Z"
+    },
+    "i-m3CWsjq:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T08:44:51.290Z"
+    },
+    "i-jsJGz2c:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T08:45:49.710Z"
+    },
+    "i-fLNLCcT:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T08:46:43.692Z"
+    },
+    "i-TD5LPgq:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T08:47:30.707Z"
+    },
+    "i-dhFcdtJ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T08:48:23.354Z"
+    },
+    "i-L7zCNR2:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T08:49:31.179Z"
+    },
+    "i-h3gzd8X:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T08:50:33.061Z"
+    },
+    "i-VGxz5Bb:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T08:51:30.194Z"
+    },
+    "i-4c8N2wS:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T08:52:25.103Z"
+    },
+    "i-wMgfbn6:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T08:54:40.988Z"
+    },
+    "i-P4pmxKM:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T08:56:51.490Z"
+    },
+    "i-s3QvQMQ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T08:58:43.491Z"
+    },
+    "i-ctQFzW3:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T09:00:17.354Z"
+    },
+    "i-6zntx9R:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T09:02:34.111Z"
+    },
+    "i-9Cf3prX:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T09:04:20.674Z"
+    },
+    "i-nJm6QjG:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T09:05:39.224Z"
+    },
+    "i-wkXNbZh:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T09:07:17.488Z"
+    },
+    "i-mc37dxv:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T09:08:46.173Z"
+    },
+    "i-fqbP6GL:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T09:11:04.007Z"
+    },
+    "i-f5TPN83:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T09:12:46.083Z"
+    },
+    "i-LMvspP9:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T09:17:30.283Z"
+    },
+    "i-dgwZgpw:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T09:19:56.212Z"
+    },
+    "i-RRNrLTb:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T09:21:44.220Z"
+    },
+    "i-Tfg5j96:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T09:24:35.124Z"
+    },
+    "i-N9sBgRs:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T09:25:57.071Z"
+    },
+    "i-h6zMQW8:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T09:30:37.939Z"
+    },
+    "i-vsx5t6W:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T09:32:00.748Z"
+    },
+    "i-snvP87s:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T09:34:02.383Z"
+    },
+    "i-Cwv4Sf2:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T09:35:39.519Z"
+    },
+    "i-GXrCDJh:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T09:38:09.053Z"
+    },
+    "i-Z6f9LZn:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T09:40:28.228Z"
+    },
+    "i-CzvL3Mk:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T09:41:51.567Z"
+    },
+    "i-TVmp5NX:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T09:43:00.480Z"
+    },
+    "i-sr9WMcn:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T09:44:35.478Z"
+    },
+    "i-kX8Wksp:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T09:47:46.147Z"
+    },
+    "i-pd3hvNk:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T09:49:04.045Z"
+    },
+    "i-ttDPKwH:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T09:50:26.042Z"
+    },
+    "i-TGwqTRB:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T09:51:46.840Z"
+    },
+    "i-S4sbv3n:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T09:53:04.295Z"
+    },
+    "i-65Xkcpk:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T09:56:16.439Z"
+    },
+    "i-LbnS49s:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T09:57:24.423Z"
+    },
+    "i-BNVxGWx:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T09:58:39.862Z"
+    },
+    "i-HwgrDkM:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T09:59:53.882Z"
+    },
+    "i-NdnMjDd:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T10:03:03.243Z"
+    },
+    "i-S3XQ9VZ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T10:04:27.910Z"
+    },
+    "i-X6D266B:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T10:05:50.323Z"
+    },
+    "i-jwJCCdg:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T10:07:08.809Z"
+    },
+    "i-8Sgjrk6:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T10:08:24.855Z"
+    },
+    "i-NzVgz27:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T10:09:56.020Z"
+    },
+    "i-kg2nPNc:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T10:11:26.041Z"
+    },
+    "i-8RsnRLj:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T10:12:50.897Z"
+    },
+    "i-B6rBNj5:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T10:15:42.537Z"
+    },
+    "i-jGXWq3f:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T10:18:01.599Z"
+    },
+    "i-FMDBqqF:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T10:20:24.449Z"
+    },
+    "i-rZX5GhQ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T10:22:10.575Z"
+    },
+    "i-F9HpvdL:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T10:24:44.211Z"
+    },
+    "i-8KVCjVK:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T10:30:20.957Z"
+    },
+    "i-M7RwTB4:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T10:32:21.206Z"
+    },
+    "i-FDHCvzp:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T10:33:52.033Z"
+    },
+    "i-n3N8NRr:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T10:35:50.831Z"
+    },
+    "i-59zQzXC:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T10:37:18.545Z"
+    },
+    "i-Dd5XSHd:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T10:38:38.625Z"
+    },
+    "i-vZNLBNp:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T10:39:58.742Z"
+    },
+    "i-rhM88g4:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T10:41:30.951Z"
+    },
+    "i-GwTMZZK:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-09T10:45:05.109Z"
+    },
+    "i-8VzRGRk:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-13T00:43:04.937Z"
+    },
+    "i-dSCsqSC:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-13T00:44:46.733Z"
+    },
+    "i-9FsxDzV:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-13T00:45:50.058Z"
+    },
+    "i-rhRQtTn:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-13T00:46:34.677Z"
+    },
+    "i-hn3SFCW:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-13T00:47:27.087Z"
+    },
+    "i-5vzkHgL:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-13T00:48:58.151Z"
+    },
+    "i-jR2v25J:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-13T00:49:46.804Z"
+    },
+    "i-XSB5fVp:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-13T00:50:41.396Z"
+    },
+    "i-J7nsQtj:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-13T00:51:37.532Z"
+    },
+    "i-32xbMtQ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-13T00:52:28.889Z"
+    },
+    "i-7bVL94b:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-13T00:52:53.840Z"
+    },
+    "i-rBtrrtx:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-13T01:46:09.237Z"
+    },
+    "i-fmd9mTF:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-13T02:00:28.170Z"
+    },
+    "i-Rb3fQ5d:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-13T02:04:19.119Z"
+    },
+    "i-wRxHNc4:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-13T02:08:58.562Z"
+    },
+    "i-7r4cQqR:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-13T02:11:27.255Z"
+    },
+    "i-FTgjc8C:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-13T02:12:16.118Z"
+    },
+    "i-x3ZPvH9:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-13T02:14:59.741Z"
+    },
+    "i-wdnJQwf:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-13T02:25:50.963Z"
+    },
+    "i-t6xx8Cq:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-13T02:27:07.207Z"
+    },
+    "i-2MP7Gvv:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-13T02:28:52.848Z"
+    },
+    "i-JgPqTqV:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-13T02:31:08.377Z"
+    },
+    "i-wRbqxRm:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-13T02:31:39.819Z"
+    },
+    "i-QpWNnWp:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-13T02:32:13.909Z"
+    },
+    "i-pNv5vGW:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-13T02:38:31.136Z"
     }
   }
 }

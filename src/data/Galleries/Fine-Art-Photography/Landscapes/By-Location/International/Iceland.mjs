@@ -44,8 +44,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Wayne Heim's exploration of international landscape photography comes alive in this piece, showcasing painterly european landscapes and International – Across Borders from Iceland. A testament to fantastic places in fine art. © Wayne Heim",
-    "notes": "",
+    "story": "The water goes out twice a day and takes the noise with it. What's left is the working shore — weed on the rocks, the pier standing in mud instead of sea, and the far mountains doing their slow change of color as the cloud cover thins and thickens. By evening the bay fills again and the whole scene resets, as if nobody had seen it empty.\n\n© Wayne Heim",
+    "notes": "A quiet, horizontal picture — the bay at rest, the pier reaching into still water, and a bright seam of light working along the horizon under all that cloud. It's the Iceland of the working coast rather than the postcard falls, and hung it has the calm of a held breath: greens, grays, and one long look across the water.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -82,7 +82,7 @@ export const galleryData = [
     ],
 
     "story": "Country church in Iceland seems to be in the middle of nowhere. ©Wayne Heim",
-    "notes": "",
+    "notes": "The path does the composing — one winding line of dirt leading the eye across an enormous green valley to a church small enough to miss. It's a picture about scale and solitude that buyers hang where they want a room to slow down; the drama is all in how much country the building is outnumbered by.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -118,8 +118,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Volcanic rock off the coat of Iceland gets pounded by the sea.  ©Wayne Heim",
-    "notes": "",
+    "story": "Volcanic rock off the coast of Iceland gets pounded by the sea. ©Wayne Heim",
+    "notes": "Black basalt, green moss, and water the color of bottle glass — the arch gives the frame a natural doorway, and the surf below it keeps the picture from ever feeling still. Coastal Iceland at its most theatrical, with a color palette no other coastline in the set quite repeats.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -155,7 +155,7 @@ export const galleryData = [
     ],
 
     "story": "Icelandic waterfall flow from the rocks of Iceland. ©Wayne Heim",
-    "notes": "",
+    "notes": "The most composed waterfall portrait in the Iceland set: the falls in tiers in the foreground, the mountain's layered flank rising behind, all of it stripped to black, white, and weather. In monochrome the place becomes pure structure — which is why this is the frame collectors name first when they talk about the Iceland work.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -190,8 +190,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "One of the many waterfalls in Iceland.\n©Wayne Heim",
-    "notes": "",
+    "story": "It has been falling since long before there was a name for it, and it does not pause for weather. The cliff drinks what it can and sheds the rest; the moss keeps the rock green even in the dry weeks, fed by spray that never fully stops. Stand here long enough and the sound gets into your chest — the falls are loudest in the places you can't see.\n\n© Wayne Heim",
+    "notes": "A single bright ribbon of water drawn down a wall of green — the cliff is so saturated with moss that the falls read as light poured over velvet. Portrait format makes it a column of a picture, made for narrow walls and tall spaces, and the color is the greenest note in the whole Iceland set.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -229,7 +229,7 @@ export const galleryData = [
     ],
 
     "story": "View of the Gullfoss waterfall canyon. \n©Wayne Heim",
-    "notes": "",
+    "notes": "Gullfoss in black and white is all power and architecture: the canyon's layered walls, the river disappearing over its double drop, and the mist standing where the water lands. Removing the color removes the postcard — what remains is the reason this falls became the symbol of Icelandic preservation, drawn in gray.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -267,7 +267,7 @@ export const galleryData = [
     ],
 
     "story": "View of Gullfoss waterfall in Iceland.\n©Wayne Heim",
-    "notes": "",
+    "notes": "The closer, lower Gullfoss — the mist takes the center of the frame and the falls become something felt as much as seen, the canyon walls closing in on both sides. Portrait format, near-abstract in its center, and the more atmospheric of the two monochrome Gullfoss frames; the pair hang as weather and structure.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -303,7 +303,7 @@ export const galleryData = [
     ],
 
     "story": "View looking down river of the Gullfoss waterfall  and gorge in Iceland. ©Wayne Heim",
-    "notes": "",
+    "notes": "The color Gullfoss, and the only one of the three taken in summer light: green gorge walls, white water, and a blue sky doing nothing to soften it. From downriver the falls sit inside their canyon like a held secret — the view the water itself gets, leaving.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -339,7 +339,7 @@ export const galleryData = [
     ],
 
     "story": "Old Icelandic barn and silo stand out against the midnight sun. ©Wayne Heim",
-    "notes": "",
+    "notes": "An old barn and silo under a sky that refuses to go dark — the midnight sun turns the whole horizon ember-orange while the field stays June green. It's rural Iceland's answer to the sunset picture, and the pairing of farm geometry against that sky is what makes it more than a pretty evening.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -374,8 +374,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "This image embodies painterly european landscapes and international landscape photography, captured by Wayne Heim in his signature style in Iceland. It reflects fantastic places. © Wayne Heim",
-    "notes": "",
+    "story": "The plain holds water after rain and gives the mountains back to themselves, doubled. Most days the peaks are in cloud by mid-morning; the clear view is an early hour's luck, gone before the road traffic starts. In black and white the range reads the way it feels at the roadside — older than the weather moving through it.\n\n© Wayne Heim",
+    "notes": "Jagged black peaks doubled in a flooded plain, wrapped in their own weather — the most purely tonal picture in the Iceland set. In black and white it hangs like an ink drawing, all edge and reflection, and it's the frame landscape collectors reach for when they want Iceland without a single postcard color in it.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -412,8 +412,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Artistic photography of Iceland's summer sunset landscapes.",
-    "notes": "",
+    "story": "In June the sun doesn't set so much as give up for an hour. It drops to the horizon, sets the whole sky alight, and climbs again before the dark can settle — the barn and silo get their longest shadows of the year at midnight. The farmers work through it. Sleep is a winter habit here.\n\n© Wayne Heim",
+    "notes": "The companion to the barn at midnight, taken as the sky goes fully alight: the buildings reduced to silhouette and the field to a dark floor under the largest painted sky in the set. If the other is the place, this one is the hour — a sunset that lasts half the night.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -448,8 +448,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "One of the many Waterfalls of Iceland.\n©Wayne Heim",
-    "notes": "",
+    "story": "The path goes behind this one, and on a windy day the falls decide who gets through dry. From the front it's all curtain and noise; the mist at the base has soaked every visitor who ever stood where the camera is. The river runs on south to the sea from here, flat and fast, the way all the falls' rivers do once the cliff is behind them.\n\n© Wayne Heim",
+    "notes": "The famous falls photographed straight on and in black and white — a broad white curtain against a black cliff, mist boiling at its foot, the whole image reduced to light and its opposite. The soft vignette at the corners gives the print an older, almost archival character among the Iceland frames.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -486,8 +486,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "A side view of the Seljalandfoss waterfall in Iceland. ©Wayne Heim",
-    "notes": "",
+    "story": "A side view of the Seljalandsfoss waterfall in Iceland. ©Wayne Heim",
+    "notes": "From the side, the falls become a curtain in profile — you read its thickness, the cliff's dark mass behind it, and the mist drifting off its base sideways. Hung with the head-on view it makes a study in how much a few steps change a landmark; on its own it's the more sculptural of the two.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -521,8 +521,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Wayne Heim's exploration of international landscape photography comes alive in this piece, showcasing painterly european landscapes and international landscape photography from Iceland. A testament to fantastic places in fine art. © Wayne Heim",
-    "notes": "",
+    "story": "The green here isn't grass — it's moss deep enough to swallow a boot, grown over lava that was new when the sagas were being written. The crag sheds its weather into the stream below, and the valley stays this color from the first thaw to the first snow. Sheep find the sheltered side of it in a storm without being told.\n\n© Wayne Heim",
+    "notes": "A moss-covered crag standing over a summer valley — the deepest, most saturated greens in the Iceland work, with the stream stitching the valley floor. It's the set's high-summer picture, the one that explains to a buyer what 'the green season' means in a subarctic country.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -558,8 +558,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Looking up a wall at the Beach at Vik Iceland.\n©Wayne Heim",
-    "notes": "",
+    "story": "These columns cooled the way they stand — the lava shrank as it hardened and cracked itself into geometry. From the beach the wall leans over you, and the surf at Vik has a reputation that keeps sensible people well back from the waterline. The gulls own the ledges. Everything at eye level belongs to the sea.\n\n© Wayne Heim",
+    "notes": "Pure geometry, shot from the base: hexagonal columns rising and converging until the cliff becomes architecture — nature's own cathedral wall, in black and white so the pattern does all the talking. It's the most abstract print in the Iceland set and the one designers reach for.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -594,8 +594,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Icelandic landscape of lava rocks, hills, and vegetation. ©Wayne Heim",
-    "notes": "",
+    "story": "The field and the glacier are the same story told twice — what came out of the ground molten, and what came down from the sky frozen, meeting in one view. The moss takes a century to carpet lava like this. On a clear day the ice sits on the horizon like a second sky, and the wind comes off it smelling of stone.\n\n© Wayne Heim",
+    "notes": "Lava field in the foreground, glacier on the horizon — the two forces that built the island in a single frame, separated by a band of improbable green. It's the Iceland set's explanatory picture, the one that gives a room the whole geology at a glance, under a big working sky.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -630,8 +630,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Cliff rises above the coast of Iceland.\n©Wayne Heim",
-    "notes": "",
+    "story": "The light was built for ships, and it keeps its hours whether the sea sends any or not. Below it the stacks stand in the surf where the coast used to reach — the sea took the land and left the hardest parts standing. On a still evening you can hear the water working at the cliff foot from all the way up here.\n\n© Wayne Heim",
+    "notes": "A white lighthouse on a grass-topped headland, the sea stacks standing offshore in blue water — the classic south-coast composition, balanced between the green plain below and the working sky above. It's the most serene of the Iceland coastal frames, and the one that reads best from across a room.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -667,8 +667,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Hiking path in Snaefellsjoekull National Park.\n©Wayne Heim",
-    "notes": "",
+    "story": "The path is older than the park — sheep and postmen wore it before hikers gave it a name. It climbs the way all Icelandic paths climb, straight at the hill, saving nothing for the descent. From the top, on the days the glacier shows itself, you can see the sea on two sides. Most days you see weather coming instead, which is its own information.\n\n© Wayne Heim",
+    "notes": "A single drawn line of path climbing a grass hill in black and white — the simplest composition in the Iceland set, and one of the strongest. Everything is reduced to the curve, the slope, and the sky's weather; it hangs with the quiet of a walk remembered rather than a view described.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -703,8 +703,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "View looking out of a glacier cave in Iceland.\n©Wayne Heim",
-    "notes": "",
+    "story": "The cave won't be here next year. The glacier carves a new one each winter and takes it back each summer, and the blue in the walls is light that fell as snow before there were roads on this coast. Inside, the loudest sound is dripping. You come out blinking, with the strange feeling of having been inside the weather itself.\n\n© Wayne Heim",
+    "notes": "Photographed from inside the glacier: sculpted blue-black ice walls and one glowing arch of daylight where the cave lets out. The color lives in the ice itself — blues that read almost lit from within — and as a print it's the most otherworldly object in the Iceland set, a room inside a river of ice.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -740,8 +740,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Wayne Heim's exploration of international landscape photography comes alive in this piece, showcasing fantastic places and painterly european landscapes from Iceland. A testament to fantastic places in fine art. © Wayne Heim",
-    "notes": "",
+    "story": "From inside, the valley looks lit for somebody else. The arch frames the river and the hills the way a doorway frames a room you haven't entered — and the cave behind you ticks and drips in the dark, rearranging itself a fraction at a time. The river below goes on about its older business, bright and indifferent. You stand in the dark a while before stepping out into it.\n\n© Wayne Heim",
+    "notes": "The cave mouth as a picture frame: dark rock on every side and a pale glacier valley, river and hills, lit beyond it. In black and white the contrast is total — the valley exists as brightness held inside blackness — and it's the natural pair to the color cave frame, the same world rendered as pure tone.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -776,8 +776,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Glacier wall in Iceland looks like solid rock.\n©Wayne Heim",
-    "notes": "",
+    "story": "There is no top and no bottom to it — the glacier keeps its scale to itself. What looks like carved rock is water standing still at a few miles a century, folding under its own weight until the folds read as strata. Touch it and it's colder than stone ever gets; the rock resemblance is a disguise the ice wears in black and white.\n\n© Wayne Heim",
+    "notes": "An ice wall with no horizon and no scale — just the glacier's own carving, ridged and scalloped in black and white until it reads as striated stone. It's the most abstract of the Iceland glacier frames, a texture study that hangs like a piece of geology enlarged to the size of weather.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -814,8 +814,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "The black glacier Skaftafell looks more like rock than ice.  ©Wayne Heim",
-    "notes": "",
+    "story": "The ice comes down black because it has eaten the mountain on its way — every eruption and rockslide for a thousand years ground into the flow and carried along. Below it the meltwater braids itself across the plain, bright against the gravel, changing its channels by the week. Skaftafell's glaciers have been retreating up this valley within living memory; the plain is what they left behind.\n\n© Wayne Heim",
+    "notes": "Skaftafell's black glacier face, tiered like a rock wall above its braided river plain — in monochrome the ice and the mountain become one material, and the scale only lands when you find the green sliver of hillside at the edge. A brooding, architectural print; the glacier as fortress.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -852,8 +852,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape shots of Iceland in summer.",
-    "notes": "",
+    "story": "This is the glacier's other product: not ice but flour — rock ground so fine the rivers carry it away in braided threads and spread it for miles. The plain floods when the weather turns and rearranges itself without asking. The mountains behind catch the sun like they've been excused from the storm; the sandflats get whatever the sky is doing.\n\n© Wayne Heim",
+    "notes": "A whole glacial outwash plain under storm light: black sand, bright braided streams, and one sunlit ridge standing clear of the weather. The picture's drama is the contrast — the mountains excused from the storm, the plain taking all of it. It hangs as the Iceland set's big-sky, big-ground statement.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -889,8 +889,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Outside of glaciers look like mountains with all the dirt which is trapped in the ice.\n©Wayne Heim",
-    "notes": "",
+    "story": "Every band in this wall is a season — a summer's dust, an eruption's ash, a winter's snow pressed into the record. The glacier is a ledger that reads itself downhill, and the dirt that makes it look like carved stone is the mountain coming through on its way to the sea. At the bottom, the meltwater starts the whole account over.\n\n© Wayne Heim",
+    "notes": "The glacier photographed like a cliff of carved stone — band upon band of dirt-streaked ice descending to its meltwater stream, in a tall portrait format that lets the strata do the talking. For collectors it's the set's geology lesson and its most sculptural ice frame at once.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -925,8 +925,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art photography capturing Iceland's summer landscapes.",
-    "notes": "",
+    "story": "From inside, the glacier stops being scenery and becomes a room — cold breathing down the walls, the light coming through the ice the green of deep water. These chambers exist because meltwater found a way through in summer; by winter the mountain of ice sits down and seals them. You stand in a space the glacier will unmake without noticing.\n\n© Wayne Heim",
+    "notes": "Inside the glacier, looking out: green-blue walls breathing cold around a single bright opening of sunlit ice. The title says it — the photograph puts the viewer in the whale's belly of the ice age. As a print it's immersive in a way the exterior glacier frames deliberately aren't.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -961,8 +961,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Ice cave combines both lack and blue ice for an interesting effect.  ©Wayne Heim",
-    "notes": "",
+    "story": "The blue band is the glacier's vein — ice so compressed the air has been squeezed out of it, and only the blue end of the light gets through. The black around it is the same ice wearing ash. Both colors are the glacier telling the truth about itself in the dark of the cave, where no sun reaches to bleach the evidence.\n\n© Wayne Heim",
+    "notes": "A vein of impossible blue running through black ice — the cave's darkness makes the color read as light rather than pigment. It's the Iceland ice-caves' most graphic frame, nearly abstract, and the color is entirely the glacier's own chemistry: compressed ice and ash, nothing added.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -998,8 +998,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Lava field around Krafla.  ©Wayne Heim",
-    "notes": "",
+    "story": "Krafla last fired within living memory, and the field still looks unconvinced it's over — black ground, threads of meltwater, and the mountains wearing the green that comes back first. The moss is the pioneer; given a century it will soften all of this. For now the place is a truce between fire and weather, and the weather is winning an inch at a time.\n\n© Wayne Heim",
+    "notes": "Krafla's lava field under a storm sky — black ground, pale braided streams, and mountains gone green with the first thing that grows back. It documents the island mid-argument between fire and moss, and it's the frame that gives the Iceland set its volcanic north.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1034,8 +1034,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Sides of the glacier that are criss crossed with volcanic sand.  ©Wayne Heim",
-    "notes": "",
+    "story": "The dark bands are old eruptions, snowed over and folded into the ice until they stripe the face like grain in wood. Where the surface melts back, the ash concentrates and the blue underneath shows through in the crevasses — the glacier keeping its diary in two colors. This face calves into the lagoon below; some of these pinnacles are already icebergs that haven't left yet.\n\n© Wayne Heim",
+    "notes": "Breidamerkurjokull's face in portrait: pale pinnacles cut by crevasses, the ash of old eruptions banding the ice like grain in wood. The blue lives in the depths of the cracks. It's the most vertical, most carved of the glacier portraits — ice as cathedral architecture.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1071,7 +1071,7 @@ export const galleryData = [
     ],
 
     "story": "Iceberg looks like it has a fish between its layers.  ©Wayne Heim",
-    "notes": "",
+    "notes": "The iceberg that carries a fish in its layers — a castled berg in a still lagoon, banded white, blue, and ash-dark, the water around it barely rippled. Pareidolia aside, it's a portrait of a temporary mountain: this exact architecture existed for one season and calved away. Collectors love the story as much as the form.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1108,7 +1108,7 @@ export const galleryData = [
     ],
 
     "story": "The angry sea batters the chunks of ice in the waters off Iceland.   ©Wayne Heim",
-    "notes": "",
+    "notes": "Glacier ice in the surf — translucent blue chunks tumbling in white water on a black beach, one shard caught mid-eruption from a crest. It's the most violent frame in the Iceland set and its most jewel-like: cut glass in a storm. The color contrast — blue, white, black — is the whole design.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1143,8 +1143,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Delving into fantastic places, this work by Wayne Heim highlights painterly european landscapes through International – Across Borders and fantastic places in Iceland. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
+    "story": "The storm spent the day on this moor and the evening is the receipt — the clouds tearing open in pink and orange where the sun gets under them. The road crosses toward the ridge and keeps going after the light gives out; in Iceland the distances don't shorten for weather. By full dark the colors will be gone and the moor will go back to its ordinary brown patience.\n\n© Wayne Heim",
+    "notes": "A storm sky breaking open in pink and orange over an empty moor — the picture is ninety percent sky, and the land knows it. For a buyer it's the set's purest weather piece, the moment a bad day turns; it hangs where a room needs a horizon.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1179,8 +1179,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Wayne Heim's exploration of international landscape photography comes alive in this piece, showcasing International – Across Borders and fantastic places from Iceland. A testament to fantastic places in fine art. © Wayne Heim",
-    "notes": "",
+    "story": "Autumn here is a ground event, not a tree event — the shrubs and grasses take the color, rust and crimson spread across the lava, and for a few weeks the moor burns at ankle height under a sky doing the same thing higher up. The outcrop of lava rock has stood through every fall anyone remembers. The stream keeps the last of the light after the hillside loses it.\n\n© Wayne Heim",
+    "notes": "Autumn fire above and below: a blazing sunset band over a moor gone rust-red with the season, a lava outcrop standing in the middle distance like a monument. It's the richest color statement in the Iceland set — the fall palette of a country with almost no trees, carried entirely by ground cover and sky.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1215,8 +1215,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Wayne Heim's exploration of International – Across Borders comes alive in this piece, showcasing painterly european landscapes from Iceland. A testament to painterly european landscapes in fine art. © Wayne Heim",
-    "notes": "",
+    "story": "The road is the fjord's second shoreline — cut into the hill above the water, it serves farms that the sea used to serve, back when boats were the only road there was. When the sun breaks through like this it picks out one reach of water at a time, and the far shore goes in and out of the light like something being remembered. The hill under your boots is older than both.\n\n© Wayne Heim",
+    "notes": "Taken from the hill the road climbs: mossy rock in the foreground, the fjord's calm water below, and sunbeams striking the far shore through storm cloud. It's the Iceland set's great layered view — foreground, water, mountain, weather — the composition a landscape painter would have built.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1250,8 +1250,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "This image embodies International – Across Borders and international landscape photography, captured by Wayne Heim in his signature style in Iceland. It reflects International – Across Borders with a touch of international landscape photography. © Wayne Heim",
-    "notes": "",
+    "story": "This valley is the island pulling itself apart — the rift where the edges of two plates separate a few centimeters a year, written here as ridges and a river finding the low way through. The first snow doesn't stay; it just outlines the structure for a day, so the ground's argument shows. Then the wind takes it and the valley goes back to dark rock and patience.\n\n© Wayne Heim",
+    "notes": "The rift valley under its first snow: dark ridges penciled white, a river winding pale through the middle, and low sun breaking under a storm ceiling. The snow is doing survey work — every structure in the ground shows. A wide, quiet, architectural landscape.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1288,8 +1288,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "This image embodies painterly european landscapes, captured by Wayne Heim in his signature style in Iceland. It reflects international landscape photography with a touch of International – Across Borders. © Wayne Heim",
-    "notes": "",
+    "story": "The lake's color is glacial — rock flour suspended in the water turns it that milky turquoise, brightest when the sun breaks through. Around it the hills have gone gold and brown for the short fall, and the road switchbacks down to a shore with nobody on it. In a month this view will be white and locked; the color is a brief annual rumor.\n\n© Wayne Heim",
+    "notes": "A turquoise lake seen from the road above, its milky glacial color set against hillsides gone gold with autumn and a flat-topped mountain standing guard across the water. The aerial viewpoint makes it the set's map-like frame — geography as pattern, in the year's briefest color.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1324,8 +1324,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "This image embodies International – Across Borders and fantastic places, captured by Wayne Heim in his signature style in Iceland. It reflects international landscape photography with a touch of painterly european landscapes. © Wayne Heim",
-    "notes": "",
+    "story": "The peak is a layer cake of eruptions, and autumn draws its strata in moss — gold, green, and rust bands following the old lava flows down its flanks. Around its foot the younger lava lies barren, still waiting its turn for soil. Low sun rakes the whole thing into relief; by noon the mountain would look half as tall.\n\n© Wayne Heim",
+    "notes": "A single mossy peak in its autumn bands — gold, green, and rust following the old flows down its flanks, barren younger lava spread around its foot. Raking light models every ridge. It's the Iceland set's portrait of a mountain as a living surface rather than a silhouette.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1360,8 +1360,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "This image embodies international landscape photography and fantastic places, captured by Wayne Heim in his signature style in Iceland. It reflects painterly european landscapes with a touch of fantastic places. © Wayne Heim",
-    "notes": "",
+    "story": "From behind the water, the falls stop being a view and become a sound you stand inside. The overhang drips constantly, the mist comes through in veils whenever the wind shifts, and the green world across the pool looks like it's being rained on by light. You come out the other side wet, whether you planned to or not.\n\n© Wayne Heim",
+    "notes": "The falls from inside their own weather: a silver curtain falling past a moss-green overhang into a dark pool, the sunlit plain shining beyond. It reverses the usual waterfall picture — the viewer stands behind the water — and the depth from dark overhang to bright horizon is the frame's whole architecture.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1397,8 +1397,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "This image embodies fantastic places and international landscape photography, captured by Wayne Heim in his signature style in Iceland. It reflects International – Across Borders with a touch of International – Across Borders. © Wayne Heim",
-    "notes": "",
+    "story": "In black and white the falls become a study in what water does to rock given enough centuries — the cliff is dark because it's always wet, and the white column has been standing in the same place, unstanding, since before there were names here. The mist at its base is the falls' weather system, permanent and local. Everything else in the valley is dry by comparison, and quieter.\n\n© Wayne Heim",
+    "notes": "A tall falls in black and white, the white column standing against a cliff kept dark by its own spray — mist, basalt, and falling water reduced to tone and texture. The most classic of the Iceland waterfall frames in form, and the one that prints with the deepest blacks.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1433,8 +1433,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Iceland's fall landscapes through the lens of fine art.",
-    "notes": "",
+    "story": "Its name means the one who lives in the canyon, and most travelers walk past the crack in the cliff without knowing there's a falls inside it. You wade the stream to enter, and the light comes down the slot like it's been poured — the falling water catching fire at the top of its drop. Inside, the sound is total and the walls weep green.\n\n© Wayne Heim",
+    "notes": "Gljufrabui, the hidden falls: a sunlit arc of water falling inside a moss-walled canyon, the sky a slot of blue overhead. It's the Iceland set's secret room — a waterfall you enter rather than view — and the green of the canyon walls is as much the subject as the water.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1469,8 +1469,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Wayne Heim's exploration of painterly european landscapes comes alive in this piece, showcasing painterly european landscapes and international landscape photography from Iceland. A testament to painterly european landscapes in fine art. © Wayne Heim",
-    "notes": "",
+    "story": "Every Icelandic road tells you how far it is by how the mountain grows. This one crosses the home field of a farm that's sat at the mountain's foot through every kind of weather the sky keeps in stock — the red roofs are the full stop at the end of the sentence. In autumn the grasses go the color of the light, and the puddles in the ruts hold the sky for whoever's driving home.\n\n© Wayne Heim",
+    "notes": "A dirt road crossing autumn grass toward a sunlit layered mountain, red farm roofs waiting at its foot — the essential Icelandic travel picture, built on one long perspective. The road gives the frame its narrative: somebody's way home, under the biggest sky in the set.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1504,8 +1504,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "This image embodies International – Across Borders and fantastic places, captured by Wayne Heim in his signature style in Iceland. It reflects fantastic places with a touch of painterly european landscapes. © Wayne Heim",
-    "notes": "",
+    "story": "A whole valley in its fall colors, and the falls are almost an excuse — a thin white thread dropping at the valley's head while the light does the real work on the grass. The farm at the cliff base has this view for its kitchen window and hay meadows for its floor; the fence lines say the valley is worked, not wilderness. By October the gold goes to rust and the thread of water runs fuller.\n\n© Wayne Heim",
+    "notes": "A golden valley with its own private waterfall — the thin falls at the head, a lone farmhouse at the cliff's foot, and sunbeams working the grass in between. It's the Iceland set's most complete valley composition: water, pasture, high ground, and weather, in the year's warmest light.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1539,8 +1539,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Wayne Heim's exploration of International – Across Borders comes alive in this piece, showcasing fantastic places from Iceland. A testament to fantastic places in fine art. © Wayne Heim",
-    "notes": "",
+    "story": "The sea goes calm before the sky does. All day the wind worked this water; by evening the surface has settled to glass while the storm is still up there arguing with the sunset about which of them owns the horizon. The light gets the last word most evenings — a band of gold laid on the water like the day's signature.\n\n© Wayne Heim",
+    "notes": "Sea and storm sky in equal halves, the water calm and holding a path of light while the clouds break open in gold above it. It's the Iceland set's great evening seascape: nothing in it but weather, water, and the truce between them at day's end.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1576,8 +1576,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Delving into painterly european landscapes, this work by Wayne Heim highlights international landscape photography in Iceland. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
+    "story": "Width is this one's argument — not the tallest falls in the set, but the broadest, taking the whole cliff's edge to come down. The riverbed below is a jumble the water has been sorting for centuries, moving the rocks it can and going around the rest. In black and white the falls read as a bright tear in the dark rock, fringed with its own mist.\n\n© Wayne Heim",
+    "notes": "The broad falls in monochrome: a full sheet of water between two dark cliffs, mist boiling off the plunge pool, and a riverbed of tumbled rock in the foreground. Landscape format gives it the set's widest waterfall composition, and the black and white keeps it all structure.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1612,8 +1612,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art exploration of Iceland's fall landscapes.",
-    "notes": "",
+    "story": "Skógafoss doesn't do seasons the way the valley does — the cliffs stay green, the water stays white, and only the light goes autumnal, thinner and lower. The mist at the base is permanent weather; on sunny days it builds rainbows in its own spray and erases them. The river below runs flat and fast to the sea, a few miles of pasture away.\n\n© Wayne Heim",
+    "notes": "Skogafoss in color and in its green season: the great curtain between moss-dark cliffs, mist rising off the riverbed, the falls taking the full height of the frame. It's the set's definitive portrait of Iceland's most democratic waterfall — the one that meets you at ground level.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1648,8 +1648,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Iceland fine art landscape photography including waterfalls and scenes from around Iceland.",
-    "notes": "",
+    "story": "The same falls with the color taken away, and what's left is force: sixty meters of river arriving at the ground in one unbroken decision. The portrait format stacks cliff, water, and riverbed into a single column of descent. Stand at the base on a windy day and the falls visit you — the mist reaches the path long before you reach the falls.\n\n© Wayne Heim",
+    "notes": "Skogafoss rendered as pure descent — a tall portrait frame filled with cliff, curtain, and mist, the monochrome stripping the landmark to its mechanics. Hung beside the color view it's the set's clearest lesson in what black and white is for.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1684,8 +1684,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape shots of Iceland in summer.",
-    "notes": "",
+    "story": "He's ashore for the summer, like everyone in Iceland with sense. The puffins come back to the same cliffs every year, dig in the same turf, and raise one chick in the dark of a burrow while looking like they've dressed for an occasion the cliffs never announced. By August he'll be gone to the open ocean, and the grass will close over the burrow mouths until next spring.\n\n© Wayne Heim",
+    "notes": "The Iceland set's one true portrait: a puffin standing in cliff-top grass, beak in its full breeding colors, the background gone soft and green. Buyers take it for the character — the whole North Atlantic summer in one small, formally dressed bird.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1720,8 +1720,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Artistic photography of Iceland's summer terrains.",
-    "notes": "",
+    "story": "This is the island still being made. The fountain rises because gas is leaving the melt all at once, and where the droplets land they weld into new ground that didn't exist this morning. Nothing here is scenery yet — it will take the moss a human lifetime to make this a landscape. For now it's the factory floor, lit from below by the product.\n\n© Wayne Heim",
+    "notes": "An eruption caught at full fountain: molten rock bursting from the vent over its own black, cooling field. It's the Iceland set's only active-volcano frame and its most elemental — the one picture in the set where the landscape is visibly younger than the photograph of it.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1758,8 +1758,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "This sculpture can be seen on the shore walk in Iceland.  ©Wayne Heim",
-    "notes": "",
+    "story": "The Sun Voyager points out to sea and dreams of the ships that left from this shore — a skeleton of a boat, all ribs and intention, built for a city that was founded by men who arrived in ones like it. Across the bay the mountain keeps the same watch it kept for them. On calm evenings the steel takes the light like water does.\n\n© Wayne Heim",
+    "notes": "Reykjavik's Sun Voyager in black and white: a steel ship-skeleton on the cobbled shore walk, the bay and the mountain standing behind it. It's the set's only work of human art and its only city frame — a monument to departure, photographed in the tones of an older crossing.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1794,8 +1794,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Premier collection of fine art photography from Iceland's landscapes.",
-    "notes": "",
+    "story": "From up here the valley explains itself — where the water went, where the road had to go, which fields the snow leaves last. The road winds the way roads wind when the land makes the decisions. By midsummer the snow patches will be gone from everything but the highest ground, and the valley will wear one green from end to end; for now it's still arguing with winter.\n\n© Wayne Heim",
+    "notes": "The high view: a dark crag in the foreground, and below it a whole valley laid out with its road, its snow patches, and its weather coming. It's the Iceland set's surveyor's frame — the picture that shows how the valleys are built, and the one that reads best very large.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1830,8 +1830,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape shots of Iceland in summer.",
-    "notes": "",
+    "story": "The lupines got here first in June and hold the foreground like they own it — an import that escaped and painted the south coast purple, loved and argued about in equal measure. Below them the black beach takes the dusk quietly, the stacks standing out in the sea where the cliff used to continue. The light goes pink, then blue, then stays a long time between the two.\n\n© Wayne Heim",
+    "notes": "Dusk on a black-sand beach, shot through a foreground of purple lupine: green cliff, dark stacks offshore, and a sky going pink over the water. Portrait format makes it a layered column of the whole coast — flowers, cliff, sand, sea, sky — in one frame.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1865,8 +1865,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape shots of Iceland in summer.",
-    "notes": "",
+    "story": "The canyon is younger than the ice age that made it — the river sawed down through soft rock in the few thousand years since the glacier left, and it's still sawing. From the rim the water looks gentle, bright between green walls; the walls themselves say otherwise, undercut and crumbling at the edges. It stayed nearly unknown until this century, which the moss seems to prefer.\n\n© Wayne Heim",
+    "notes": "Fjadrargljufur from above: a green slot canyon with its river winding bright between moss-covered walls, shot in portrait so the depth does the composing. It's the Iceland set's most intimate grand landscape — a canyon that feels discovered rather than visited.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1902,8 +1902,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Summer landscapes of Iceland in fine art photography.",
-    "notes": "",
+    "story": "From inside, the canyon stops being a view and becomes a passage — the walls close, the river takes the floor, and the light comes in slices from a sky you can't see whole. In black and white the green goes and the structure stays: every crack and undercut the water ever argued for. People lower their voices in here without being asked.\n\n© Wayne Heim",
+    "notes": "The companion frame from inside the canyon: jagged walls in deep tonal contrast, the river threading the floor between them. Where the color version is all moss and light, this one is architecture — the canyon as a corridor built by water.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1937,8 +1937,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Iceland's summer landscapes through the lens of fine art.",
-    "notes": "",
+    "story": "Not every Icelandic falls announces itself with a canyon and a car park. This one drops between green walls in a wet corner of the country where the trees — such as Iceland has — crowd close, and the stream below picks its way over the rocks toward lower ground. The greenery does what it wants here; the falls just supply the water.\n\n© Wayne Heim",
+    "notes": "A tall falls in a green gorge, the cliffs upholstered in summer growth on both sides — the lushest of the Iceland waterfall frames, more woodland glen than volcanic monument. It gives the set its soft register: water as one element in a green room.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1973,8 +1973,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Capturing Iceland's summer beauty through fine art photography.",
-    "notes": "",
+    "story": "The title is the shed's biography: the pole still stands behind it, but the wires' errand ended years ago, and the turf roof goes on growing its own grass over a room nobody heats. These outbuildings were the support system of a working farm — store, stable, shelter — and they outlast the farms more often than the farmhouses do. The stream keeps flowing past, unimpressed, on its way to do newer work.\n\n© Wayne Heim",
+    "notes": "An abandoned turf-roofed shed in a green gorge, its dead utility pole standing behind it like a flag of the century that left. It's the Iceland set's most narrative landscape — rural change written in one small building — and the title does the elegy.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2009,8 +2009,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art images of Iceland during the summer season.",
-    "notes": "",
+    "story": "For about a month the lupine owns the lowlands — whole hillsides gone purple under mountains still carrying their snow. It isn't native; it was brought in to hold the eroding soil, and it held, and kept going. Icelanders argue about it the way you argue about a relative: it changed the look of the country inside a generation, and the summer view is now unimaginable without it.\n\n© Wayne Heim",
+    "notes": "A full field of purple lupine under snow-capped mountains — the Iceland summer's most complete color chord: violet, green, white, and storm gray. It's the set's great floral landscape, and the one that explains the season to anyone who only knows the island in winter pictures.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2046,8 +2046,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Artistic photography of Iceland's summer terrains.",
-    "notes": "",
+    "story": "Take the purple away and the lupine field becomes weather and texture — the flower spikes reading as white surf, the mountains keeping their snow in both versions. It's the same month, rendered the way the island looks in memory: the color was real, but this is how it settles. The mountains don't notice the difference. They were gray in both.\n\n© Wayne Heim",
+    "notes": "The lupine field in monochrome: the flowers translated to light, the spikes foaming across the lower frame under the same snow-capped ridge as the color version. Hung as a pair they're the set's cleanest argument for black and white — nothing lost but the purple, and something gained in exchange.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2082,8 +2082,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art images of Iceland during the summer season.",
-    "notes": "",
+    "story": "The stream is the day's last mirror — the sun clears the ridge, throws its starburst, and the water picks the light up and carries it downstream in pieces. By the calendar this is evening; by the light it's barely afternoon's end, and the grass on the banks keeps growing through the night that never quite arrives. In June the same light does the same work on the same water, later still.\n\n© Wayne Heim",
+    "notes": "A sunburst over the ridge and its reflection running down a rocky stream — the set's most joyful piece of pure light. The flare is left in, gladly: it's a photograph about the sun doing tricks, in the season when it never fully leaves.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2117,8 +2117,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Artistic photography of Iceland's summer terrains.",
-    "notes": "",
+    "story": "The land gives up first — the field goes black while the sky is still working, and the low sun burns its hole in the cloud like a struck match. This is the north's real evening: not darkness falling, but the ground going out from under the light one field at a time. Within the hour the sun will think better of setting and start its climb again.\n\n© Wayne Heim",
+    "notes": "The boldest tonal frame in the Iceland set: a starburst sun over layered ridge silhouettes and a foreground field gone nearly to black. Half the print is darkness by design. It's the evening companion to the midnight barn — the same long light, with the land switched off.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2153,8 +2153,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Artistic summer scenes from Iceland's landscapes.",
-    "notes": "",
+    "story": "These bergs are the glacier's calves, out on their first and only voyage — a few seasons of drifting, grounding, and melting in water that was ice itself not long ago. The big tilted one shows its layers like a cut cake: white where the snow fell, blue where the pressure was. By the time this water reaches the sea it will have been ice for a thousand years and a river for a day.\n\n© Wayne Heim",
+    "notes": "Blue icebergs in a dark lagoon, the big tilted berg showing its strata — white snow-ice over dense blue. It's the set's quietest ice picture: no scale, no shore, just the forms themselves, rounded by the water that is slowly unmaking them.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2189,8 +2189,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape shots of Iceland in summer.",
-    "notes": "",
+    "story": "The glacier makes them inland, the lagoon lets them out, and the sea does the finishing — tumbling the ice clear as glass and setting it back on the black sand at low tide like jewelry on velvet, which is how the beach got its name. Each piece is there for a tide or two. The bubbles inside are breath from snow that fell a thousand years ago, let out a grain at a time.\n\n© Wayne Heim",
+    "notes": "A single glass-clear ice chunk on wet black sand, bubbles suspended in it like a held breath — the Diamond Beach signature, shot tight in portrait so the ice becomes the whole subject. It's the Iceland set's jewel and its smallest landscape: a mountain's worth of history in a stone's worth of ice.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2226,8 +2226,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Summer vistas of Iceland in exquisite fine art.",
-    "notes": "",
+    "story": "They call it the Batman mountain for the ears on its skyline, but from the dunes it reads older than nicknames — a wall of broken peaks standing behind a foreground so smooth it looks poured. The dune is the sea's old work, sifted and spread; the mountain is the island's skeleton showing through. Between them, nothing moves but cloud shadow and wind.\n\n© Wayne Heim",
+    "notes": "Vestrahorn in black and white: jagged peaks behind a single smooth sweep of black dune, the mountain half-wreathed in cloud. The composition is two gestures — dark architecture above, bare sand below — and the monochrome makes them one material. The set's definitive Vestrahorn statement.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2262,7 +2262,7 @@ export const galleryData = [
     ],
 
     "story": "Visual symmetry. Blue sky, dark clouds, black sand beach. Horizontal striping is broken up with random green tufts of grass, dotting the landscape like dabs of paint.",
-    "notes": "",
+    "notes": "Bright grass tufts polka-dotting a black dune field under a storm sky — the most playful frame in the Iceland set, and its most graphic: horizontal bands of sky, cloud, sand, and green. Buyers read it instantly and then keep finding the joke: the island painting itself in dabs.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2298,8 +2298,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art exploration of Iceland's summer landscapes.",
-    "notes": "",
+    "story": "The wind writes on this sand daily and erases nightly — the ripples are yesterday's weather made visible, combed into waves that mimic the sea just visible at the horizon. The grass tufts are the only things holding still, and they're holding the dunes together while they do it. Walk it at noon and it looks empty; the pattern says the place has been busy all night.\n\n© Wayne Heim",
+    "notes": "Wind-rippled black dunes with green tufts and a sliver of sea — a texture landscape, nearly abstract, where the subject is the wind's handwriting. It's the Iceland set's quietest pattern piece and hangs beautifully in modern rooms.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2334,8 +2334,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Iceland's summer landscapes through the lens of fine art.",
-    "notes": "",
+    "story": "At low tide the beach becomes the mountain's mirror — the wet sand holds the sky and doubles the peaks, and for an hour the whole headland exists twice. Then the water comes back and edits the picture down to one mountain again. The cloud sitting at the peak's base does the same thing in the other direction: the mountain, briefly, reflected in weather.\n\n© Wayne Heim",
+    "notes": "Vestrahorn in warm color over its mirror beach: craggy peaks wreathed in low cloud, wet black sand reflecting the sky. It's the postcard angle done honestly, with the light doing the flattering — the color Vestrahorn for buyers who want the mountain in daylight.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2371,8 +2371,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape shots of Iceland in summer.",
-    "notes": "",
+    "story": "The plain at the mountain's foot is a moraine's leavings — boulders the ice dropped and walked away from, grass growing up between them in the centuries since. The small dark structure at the base is the only signature of people: somebody works this ground, keeps sheep or hay on it, and goes home at night to a view that tourists cross oceans for. To the farm it's just the weather side of the mountain.\n\n© Wayne Heim",
+    "notes": "The mountain from its own front yard: a boulder-strewn grass plain in the foreground and the peaks rising straight out of it, in high-contrast black and white. The scattered boulders give the scale that reflection shots hide. It's the working-land Vestrahorn, and the most grounded of the group.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2407,8 +2407,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art images of Iceland during the summer season.",
-    "notes": "",
+    "story": "Somebody carved these faces into the planks and left them to weather — a Viking-age village rebuilt near the mountain for a film that never happened, kept by the farmer whose land it stands on. The wood has gone silver and cracked in the sea wind; the carved beasts keep their expressions. In black and white the carvings could be a thousand years old. The wind is doing its best to make that true.\n\n© Wayne Heim",
+    "notes": "A detail from the Viking village at Vestrahorn: carved faces and beasts in weathered plank wood, shot tight in black and white so the grain and the carving share the frame. It's the set's only human-craft texture — the saga age rendered in silvered timber.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2444,8 +2444,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art exploration of Iceland's summer landscapes.",
-    "notes": "",
+    "story": "The wind combs the beach into trails — every pebble and shell drags a comet's tail of lighter sand behind it, all pointing the way the weather came from. From above it's a chart of last night's wind drawn at full scale. The mountain sits at the end of the beach like the period at the end of the sentence the sand has been writing.\n\n© Wayne Heim",
+    "notes": "Black-and-white sand trails sweeping across the beach toward Vestrahorn — the wind's calligraphy at full scale, bright cloud breaking above the peaks. A graphic, directional composition; the eye rides the trails to the mountain whether it wants to or not.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2481,8 +2481,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Artistic photography of Iceland's summer terrains.",
-    "notes": "",
+    "story": "Each stone on this beach flies a small flag of sand — the wind sorting grains by weight, the light ones streaming away in tails that show exactly where last night's gale came from and how hard it blew. Read across the beach, the tails are a wind map no instrument made. By tomorrow they'll point somewhere else, and the stones will pretend they never moved.\n\n© Wayne Heim",
+    "notes": "Wind-combed sand tails streaming from scattered stones, the pale flank of Vestrahorn rising behind — a beach read as a weather instrument. It's the color companion to the black-and-white trail studies, with the mountain keeping watch in daylight tones.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2517,8 +2517,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art exploration of Iceland's summer landscapes.",
-    "notes": "",
+    "story": "The nickname is earned — the twin peaks stick up like ears, and once you've seen it you can't unsee it. But the mountain was old when the sagas were new: a body of hard rock the glaciers shaved into battlements while the softer country around it wore away. The beach at its feet is the grinding floor where the work got done.\n\n© Wayne Heim",
+    "notes": "Vestrahorn in full color from the wet beach — the 'Batman' skyline, grass at its base, the sea a line of light at the frame's edge. It's the most characterful of the mountain portraits: the peaks have a personality, and the photograph lets them keep it.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2553,8 +2553,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape shots of Iceland in summer.",
-    "notes": "",
+    "story": "Close in, the beach stops being a place and becomes a process — the ripples running like water over water, gold where the light grazes, blue-gray where it doesn't. This is the tide and wind printing the same page over and over, never twice alike. Stand back and it's a beach. Kneel down and it's the whole Icelandic coast in miniature: black ground, bright water, restless weather.\n\n© Wayne Heim",
+    "notes": "An abstract of wind-rippled black sand in gold and slate — the shoreline reduced to flow and light, shot in portrait so the pattern runs like a current. It's the Iceland set's pure pattern piece, the one designers reach for when the room wants movement without a subject.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2591,8 +2591,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape shots of Iceland in summer.",
-    "notes": "",
+    "story": "Every rock keeps its wind shadow — a dark tail of sheltered sand trailing behind it, the lee where the gale couldn't reach. It's the same physics as a comet, at the scale of a beach: an object, a force, and the mark the force leaves. In black and white the tails read like brushstrokes, each one signed by the stone that made it necessary.\n\n© Wayne Heim",
+    "notes": "Black-and-white, close and vertical: pale rocks on black sand, each trailing its long wind-shadow. The most calligraphic of the sand studies — a frame of small causes and long effects, and the set's most quietly witty composition.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2627,8 +2627,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Iceland's summer landscapes through the lens of fine art.",
-    "notes": "",
+    "story": "Hengifoss falls through geology you can read like a bar code — the red bands are clay layers baked between lava flows, each one a pause in the eruptions long enough for soil to form and rust. The falls have cut down through the stack and put the whole archive on display. The mist at the base is the present tense; everything above it is millions of years of weather.\n\n© Wayne Heim",
+    "notes": "Hengifoss in portrait: a white column falling past cliff strata banded red and orange — the falls that lets you see Iceland's layers. The color is the cliff's, not the water's. It's the east Iceland falls, and the most geological picture in the set.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2663,8 +2663,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Delving into painterly european landscapes, this work by Wayne Heim highlights International – Across Borders through International – Across Borders and International – Across Borders in Iceland. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
+    "story": "The bridge is the polite way across — a few planks over a gorge where the water drops in white stairs through black rock. Without it you'd walk miles to cross a gap you can spit across. The falls do their work below, indifferent to the shortcut: the gorge is why the bridge exists, and the bridge is how you know the gorge matters to someone besides the river.\n\n© Wayne Heim",
+    "notes": "A wooden footbridge crossing a mossy gorge directly above tiered falls — the Iceland set's most constructed composition, a human line drawn across falling water. The turquoise pools between the drops give it the color accent buyers hang it for.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2698,8 +2698,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "This image embodies painterly european landscapes and international landscape photography, captured by Wayne Heim in his signature style in Iceland. It reflects fantastic places with a touch of international landscape photography. © Wayne Heim",
-    "notes": "",
+    "story": "The people at the base are the scale bar — without them the cliff is any height you imagine; with them, the falls become what they are: a full river leaving a plateau in one step. This is the same red-banded strata as Hengifoss country, and the stream below runs between scree and moss toward the canyon. The hikers took an hour on the path the water covers in a breath.\n\n© Wayne Heim",
+    "notes": "A tall falls pouring off a red-banded cliff near Studlagil, with hikers at the base giving the true scale — a hundred feet of water made honest by two small figures. It's the falls picture in the set that best explains how big Iceland's east actually is.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2733,8 +2733,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Summer landscapes of Iceland in fine art photography. Painterly landscape photography of water and waterfalls.",
-    "notes": "",
+    "story": "Litlanesfoss is the gatekeeper on the Hengifoss trail — half the height, twice the architecture. The gorge walls are basalt columns stood on end, the leftovers of a lava flow that cooled into organ pipes, and the falls drop through them like water through a cathedral's ruins. Most walkers stop here and catch their breath. The bigger falls upstream is just a rumor from here.\n\n© Wayne Heim",
+    "notes": "Litlanesfoss framed by its basalt columns — hexagonal pillars of cooled lava standing like a ruined colonnade around the falling water. It's the Iceland set's most architectural waterfall, geology doing classicism, on the trail below Hengifoss.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2769,8 +2769,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Wayne Heim's exploration of fantastic places comes alive in this piece, showcasing painterly european landscapes and fantastic places from Iceland. A testament to painterly european landscapes in fine art. © Wayne Heim",
-    "notes": "",
+    "story": "One river, arriving at the cliff as a committee — a dozen streams splitting around the rock's high points and rejoining in the gorge below. After rain there are more of them; in a dry week, fewer, and the rock shows its hand. The green on the slopes is what the spray feeds: the falls irrigate their own garden, and the moss keeps the minutes.\n\n© Wayne Heim",
+    "notes": "A wide cliff of separate streams falling together — the set's most musical waterfall, read in portrait so the eye climbs from the rushing gorge to the green clifftop. Buyers hang it for rhythm: water arriving in phrases instead of one chord.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2805,8 +2805,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Summer landscapes of Iceland in fine art photography. Painterly landscape photography of water and waterfalls.",
-    "notes": "",
+    "story": "The river runs milky turquoise because it's glacier water carrying rock flour — the mountains ground to powder and delivered downstream. Stuðlagil lay hidden under high water until a dam upstream dropped the river's level a few years before these photographs, and the canyon stood revealed: columns, rust bands, and water the color of tropical seas in the middle of the Icelandic interior. It may be the youngest famous landscape in the country.\n\n© Wayne Heim",
+    "notes": "Studlagil from the rim: a turquoise river winding between basalt column walls rust-banded at their bases, green hills above. It's the Iceland set's most unlikely color — a Caribbean river in a northern canyon — and the picture that stops people in the gallery.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2842,8 +2842,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art exploration of Iceland's summer landscapes.",
-    "notes": "",
+    "story": "The rays are the day's announcement that the cloud deck has a hole in it — sunbeams fanning over the valley while the river below goes about its green business. From the rim you can see the canyon deciding to become one: the valley narrowing, the walls steepening, a white thread of falls marking where the floor drops away. Light first, then geography, then water: the valley in that order.\n\n© Wayne Heim",
+    "notes": "The Studlagil valley under breaking light: crepuscular rays over green hillsides, the river winding toward its canyon, a distant falls threading the distance. It's the widest view of the Studlagil group — the establishing shot the close canyon frames hang beside.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2879,8 +2879,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art exploration of Iceland's summer landscapes.",
-    "notes": "",
+    "story": "The pinnacle standing in the river is a column the water hasn't finished with — everything around it has been carried away grain by grain, and it remains because its rock is slightly harder or its luck slightly better. The river works on the distinction nightly. From above, the canyon reads as a diagram of patience: water at the bottom, time on the walls, grass holding the rim against both.\n\n© Wayne Heim",
+    "notes": "Studlagil seen from directly above the rim: the turquoise river bending through column walls around a lone rock pinnacle mid-stream. The aerial angle makes it the group's map and its abstract at once — rust, teal, and black arranged by water.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2916,8 +2916,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Summer landscapes of Iceland in fine art photography. Painterly landscape photography of water and waterfalls.",
-    "notes": "",
+    "story": "Goðafoss is where Iceland's conversion arrived in the year 1000 — the law-speaker, so the saga says, threw his old gods into these falls and rode home. The water has been falling through that story ever since. At sunset the horseshoe fills with gold from one side, the lava field in the foreground goes black, and the falls do what they've done for a thousand years of evenings: continue.\n\n© Wayne Heim",
+    "notes": "Godafoss at sunset: the great horseshoe under a storm sky breaking gold, black lava in the foreground. It's the set's most storied waterfall photographed in its best light — the picture carries the saga name, the shape, and the weather all at once.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2953,8 +2953,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "This image embodies fantastic places and International – Across Borders, captured by Wayne Heim in his signature style in Iceland. It reflects painterly european landscapes. © Wayne Heim",
-    "notes": "",
+    "story": "From above, Goðafoss is only part of the river's evening — the water pools and braids through the lava field, drops twice, and keeps going toward a sea it will reach by morning. The light comes in under the storm at the last moment and gilds the whole drainage at once. The falls get the name and the postcards; the river gets the credit.\n\n© Wayne Heim",
+    "notes": "The wide Godafoss view: both falls, the river winding away through dark lava, and sunset breaking under storm cloud across the whole frame. It's the landscape version of the falls — the version that shows where the water was going — and the sunset does the rest.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2990,8 +2990,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of Iceland sunset in the Summer.",
-    "notes": "",
+    "story": "From the shore the falls step back and the lava takes the foreground — the rough black field the river cut through to make them. The pools in the rock hold the sky between them and the sunset like small change. It's the honest distance: this is what the place looks like when you're standing in it, boots wet, instead of framed above it.\n\n© Wayne Heim",
+    "notes": "Godafoss from its own shore at sunset, the black lava foreground leading to the falls in the middle distance — the ground-level member of the Godafoss group. Portrait format stacks shore, river, falls, and sky into one climb. It pairs with the wide river view as the before-and-after of standing there.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -3027,8 +3027,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Artistic summer scenes from Iceland's landscapes.",
-    "notes": "",
+    "story": "The grass tells you everything the title promises — flattened in one direction, streaming like water over the plain. Wind is Iceland's default setting; calm is the exception that gets photographed, which makes this the honest portrait of the place. The river braids toward the mountains untroubled. It's had ten thousand years of this weather to get used to it.\n\n© Wayne Heim",
+    "notes": "A black-and-white plain in a gale: grass streaming sideways, a braided river, and a long mountain wall under racing cloud. It's the Iceland set's weather portrait — no landmark, no falls, just the element the island actually runs on — and the most kinetic of the monochrome frames.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -3064,8 +3064,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Artistic summer scenes from Iceland's landscapes.",
-    "notes": "",
+    "story": "A river with no banks but its own crust — the lava builds its channel as it goes, cooling at the edges, breaking open in bright seams where the pressure finds a weak place. Fagradalsfjall woke in 2021 after eight centuries and drew crowds like a theater; the flow fields are still warm under their black skin. This is the youngest ground on Earth, photographed at portrait height.\n\n© Wayne Heim",
+    "notes": "A molten river crossing black ground in portrait: crusted, cracked, and lit from within, the lava fills the frame like a vein of fire. It's the most dramatic of the eruption frames — the flow itself as the entire landscape, nothing else surviving in view.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -3103,8 +3103,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Curated fine art landscapes from Iceland.",
-    "notes": "",
+    "story": "At the flow's edge the lava slows and splits, feeling its way downhill in fingers — each lobe crusting, stalling, then breaking out again at the tip. From above at night it reads as a tree, a delta, a hand: the planet doing calligraphy in fire on black paper. By morning this exact pattern will be rock, and the map will have redrawn itself.\n\n© Wayne Heim",
+    "notes": "Lava fingers branching across black ground at night — a delta of fire photographed from above, pure pattern in orange and black. It's the eruption group's abstract, and the frame that needs no horizon, no scale, and no explanation.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -3142,8 +3142,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape shots of Iceland in summer.",
-    "notes": "",
+    "story": "Night is when the eruption owns the island — the crater burning at the valley's head, the river of lava running lit through the dark like a road in a country with one road. The smoke takes the crater's color and loses it upward. People watched this from the hillside in 2021 the way people watch weather: together, quietly, for hours.\n\n© Wayne Heim",
+    "notes": "Fagradalsfjall at night, wide: the glowing crater and its river of lava crossing a black hillside. It's the definitive eruption landscape in the set — the whole scene in one frame, vent to valley floor — and at size it lights a room the way it lit the hillside.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -3180,8 +3180,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art exploration of Iceland's summer landscapes.",
-    "notes": "",
+    "story": "At dusk the eruption gets its second element: the sky joins in, smoke turning the whole ceiling orange over the dark valley. Fire below, fire above, and between them a black country being made. The title is the country's nickname, but this is the one frame where it stops being a slogan — the island's two reputations sharing a single picture.\n\n© Wayne Heim",
+    "notes": "The eruption at dusk under a smoke-orange sky, the lava river winding through a dark valley — the widest and most atmospheric of the Fagradalsfjall frames. It's the set's title picture in spirit: fire and ice as an actual evening, not a brochure.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -3219,8 +3219,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Capturing Iceland's summer beauty through fine art photography.",
-    "notes": "",
+    "story": "The widest frame of the eruption: the crater small on the horizon, the lava a single bright ribbon unspooling across the dark. It makes the event look almost manageable, which the ground under it — new, hot, and moving — would dispute. The clouds over the vent glow from below, lit by the only fire for miles: the earth, briefly open.\n\n© Wayne Heim",
+    "notes": "The eruption at its widest and darkest: a small burning crater on the horizon and one ribbon of lava crossing the night. The most spacious of the Fagradalsfjall frames — a study in how much darkness a little fire can organize.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -3257,8 +3257,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art exploration of Iceland's summer landscapes.",
-    "notes": "",
+    "story": "Leif stands in front of the church that Reykjavík built as its own mountain — Hallgrímskirkja's tower modeled on the basalt columns of the waterfalls, concrete doing geology. The statue came first, a gift from America in 1930, back when the hill was mostly empty; the church rose behind him over forty years of building. Explorer and cathedral, both facing the sea, both built to be seen from it.\n\n© Wayne Heim",
+    "notes": "Leif Erikson before Hallgrimskirkja: bronze explorer and concrete tower in one vertical composition, the church's stepped profile quoting the basalt columns of the falls. It's the Iceland set's closing frame — the country summarized in its capital: voyage, faith, and stone.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",

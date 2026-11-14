@@ -50,7 +50,7 @@ function rows(result) {
 export async function getV3CoreSummary(env, { windowKey = 'today', now = new Date() } = {}) {
   const window = getV3Window(windowKey, now);
   const bounds = [window.startDay, window.endDay];
-  const [metricResult, peopleResult, dimensionResult, sessionBreakdownResult, oimDomainResult, deviceBreakdownResult, imageResult, stateResult] = await env.DB.batch([
+  const [metricResult, peopleResult, dimensionResult, sessionBreakdownResult, oimDomainResult, deviceBreakdownResult, imageResult, visitorMixResult, stateResult] = await env.DB.batch([
     env.DB.prepare(`
       SELECT COALESCE(SUM(page_views),0) + (
           SELECT COUNT(*) FROM analytics_v3_daily_sessions
@@ -73,7 +73,11 @@ export async function getV3CoreSummary(env, { windowKey = 'today', now = new Dat
       WITH compact AS (
         SELECT dimension,label,SUM(count) count
         FROM analytics_v3_daily_dimensions
-        WHERE day BETWEEN ? AND ? AND dimension IN ('page','action','action_group','image_geo_views','expedition_action')
+        WHERE day BETWEEN ? AND ? AND dimension IN (
+          'page','action','action_group','image_geo_views','expedition_action',
+          'merchant_inspection_session','merchant_inspection_action',
+          'merchant_inspection_product','merchant_inspection_location'
+        )
         GROUP BY dimension,label
       ), fallback_pages AS (
         SELECT 'page' dimension,landing_page label,COUNT(*) count
@@ -151,6 +155,33 @@ export async function getV3CoreSummary(env, { windowKey = 'today', now = new Dat
       WHERE g.pricing_opens>0 OR g.smugmug_clicks>0 OR g.email_clicks>0 OR g.image_id IN (SELECT image_id FROM top_viewed)
       ORDER BY g.count DESC,g.pricing_opens DESC,(g.smugmug_clicks+g.email_clicks) DESC,g.image_id
     `).bind(...bounds, ...bounds),
+    env.DB.prepare(`
+      WITH per_day AS MATERIALIZED (
+        SELECT day,visitor_id,
+          MAX(CASE WHEN visitor_status='new' THEN 1 ELSE 0 END) saw_new,
+          MAX(CASE WHEN visitor_status='returning' THEN 1 ELSE 0 END) saw_returning
+        FROM analytics_v3_daily_sessions
+        WHERE day BETWEEN ? AND ? AND visitor_id IS NOT NULL AND visitor_id<>''
+        GROUP BY day,visitor_id
+      ), period AS MATERIALIZED (
+        SELECT visitor_id,MAX(saw_new) saw_new,MAX(saw_returning) saw_returning
+        FROM per_day GROUP BY visitor_id
+      ), combined AS (
+        SELECT 'overall' scope,NULL day,
+          SUM(CASE WHEN saw_new=1 THEN 1 ELSE 0 END) new_visitors,
+          SUM(CASE WHEN saw_new=0 AND saw_returning=1 THEN 1 ELSE 0 END) returning_visitors,
+          SUM(CASE WHEN saw_new=0 AND saw_returning=0 THEN 1 ELSE 0 END) unknown_visitors
+        FROM period
+        UNION ALL
+        SELECT 'daily',day,
+          SUM(CASE WHEN saw_new=1 THEN 1 ELSE 0 END),
+          SUM(CASE WHEN saw_new=0 AND saw_returning=1 THEN 1 ELSE 0 END),
+          SUM(CASE WHEN saw_new=0 AND saw_returning=0 THEN 1 ELSE 0 END)
+        FROM per_day GROUP BY day
+      )
+      SELECT scope,day,new_visitors,returning_visitors,unknown_visitors
+      FROM combined ORDER BY scope DESC,day DESC
+    `).bind(...bounds),
     env.DB.prepare('SELECT last_raw_event_id, last_event_ts, updated_at FROM analytics_v3_state WHERE singleton=1')
   ]);
 
@@ -167,6 +198,13 @@ export async function getV3CoreSummary(env, { windowKey = 'today', now = new Dat
     .map((row) => [row.label, row.count]));
   const cartFunnelLabels = ['Added to cart', 'Viewed cart', 'Started checkout', 'Calculated final total', 'Started payment', 'Order completed'];
   const actionCounts = new Map(top('action', Number.MAX_SAFE_INTEGER).map((row) => [row.label, row.count]));
+  const visitorMixRows = rows(visitorMixResult);
+  const normalizeMix = (row = {}) => ({
+    newVisitors: Number(row.new_visitors || 0),
+    returningVisitors: Number(row.returning_visitors || 0),
+    unknownVisitors: Number(row.unknown_visitors || 0)
+  });
+  const overallVisitorMix = normalizeMix(visitorMixRows.find((row) => row.scope === 'overall'));
   const entryNavigation = sessionRows.filter((row) => row.kind === 'entry_page')
     .map((row) => ({
       label: row.label,
@@ -214,7 +252,21 @@ export async function getV3CoreSummary(env, { windowKey = 'today', now = new Dat
     expeditionActions: top('expedition_action', 30),
     actionGroups: top('action_group', 10),
     actions: top('action', 25).filter((row) => !['Order clicked — SmugMug', 'Order clicked — email'].includes(row.label)),
-    cartFunnel: cartFunnelLabels.map((label) => ({ label, count: actionCounts.get(label) || 0 }))
+    cartFunnel: cartFunnelLabels.map((label) => ({ label, count: actionCounts.get(label) || 0 })),
+    visitorMix: {
+      ...overallVisitorMix,
+      daily: visitorMixRows.filter((row) => row.scope === 'daily').map((row) => ({
+        day: row.day,
+        ...normalizeMix(row)
+      }))
+    },
+    merchantInspections: {
+      sessions: top('merchant_inspection_session', Number.MAX_SAFE_INTEGER)
+        .reduce((sum, row) => sum + row.count, 0),
+      actions: top('merchant_inspection_action', 10),
+      products: top('merchant_inspection_product', 20),
+      locations: top('merchant_inspection_location', 10)
+    }
   };
 }
 

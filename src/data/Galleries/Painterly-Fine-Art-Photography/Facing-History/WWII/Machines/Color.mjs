@@ -48,7 +48,7 @@ export const galleryData = [
     ],
 
     "story": "The tank moves because it must. Steel does not argue with the ground. Its tracks carve into mud already disturbed by too many passing decisions, grinding earth into something that will not smooth over easily.\n\nInside, the world is vibration and command — short words, practiced hands, the steady discipline of men and machines working as one. Outside, the sky offers no judgment. Only distance.\n\nWhen the engine finally quiets, the tracks remain — pressed deep, deliberate. Long after the sound fades, the ground keeps the shape of what passed through.",
-    "notes": "The composition emphasizes mass and forward momentum, allowing the tank to function as a moving landscape rather than an action subject. The low vantage point grants the machine a monumental presence, while restrained color and atmospheric handling soften documentary realism into painterly interpretation.\n\nThis approach aligns with traditions that treat industrial subjects as studies of weight and consequence, where form, texture, and environment carry emotional meaning. The image invites slow viewing, encouraging attention to surface, scale, and the quiet tension between mechanical power and human vulnerability contained within it.",
+    "notes": "The tank sits low in the frame and most of the frame is ground and sky, so the Sherman reads as weight in passage — a moving landscape, not an action subject. The low vantage point grants the machine a monumental presence, while restrained color and atmospheric handling soften documentary realism into painterly interpretation.\n\nThis approach aligns with traditions that treat industrial subjects as studies of weight and consequence, where form, texture, and environment carry emotional meaning. The image invites slow viewing, encouraging attention to surface, scale, and the quiet tension between mechanical power and human vulnerability contained within it.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -63,7 +63,7 @@ export const galleryData = [
   {
     "id": "i-wRxHNc4",
     "title": "Out of the Dust",
-    "description": "A painterly World War II photograph capturing a Sherman tank advancing through drifting dust and filtered light. Rather than emphasizing combat, the image focuses on presence and emergence — the quiet inevitability of battle-ready machines moving forward through uncertain terrain. Atmosphere and restrained color transform WWII military equipment into a cinematic study of motion, weight, and anticipation.\n\nThe image reflects the union of men and machines within mechanized warfare, where movement itself carried consequence and history advanced one measured track at a time. © Wayne Heim",
+    "description": "A painterly World War II photograph capturing a Sherman tank advancing through drifting dust and filtered light. Combat stays offstage; what the image keeps is presence and emergence — the quiet inevitability of battle-ready machines moving forward through uncertain terrain. Atmosphere and restrained color transform WWII military equipment into a cinematic study of motion, weight, and anticipation.\n\nThe image reflects the union of men and machines within mechanized warfare, where movement itself carried consequence and history advanced one measured track at a time. © Wayne Heim",
     "alt": "World War II Sherman tank driving forward through dust on a dirt road with a soldier visible atop the turret, surrounded by trees and diffused sunlight.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-wRxHNc4/4/LksZHWfN5CFgBwTRZQW93cLqB8CSkKr3jsGtTwJxb/XL/_OLY0401_tonemapped-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-wRxHNc4/4/LksZHWfN5CFgBwTRZQW93cLqB8CSkKr3jsGtTwJxb/XL/_OLY0401_tonemapped-Edit-XL.jpg",
@@ -86,7 +86,7 @@ export const galleryData = [
     ],
 
     "story": "The tank emerges slowly, pushing through dust that refuses to settle. Its movement feels inevitable, as though the road had been waiting for it long before the engine turned over. Steel and earth meet without ceremony, each accepting the other’s weight.\n\nThe crew rides high above the noise, eyes forward, watching a world blurred by motion and uncertainty. Orders have already been given. What lies ahead is unknown, but hesitation has no place here — only momentum.\n\nWhen the dust falls back to the ground, the machine will be gone. Only the disturbed air and fading tracks will suggest that something heavy, and human, passed through.",
-    "notes": "The composition emphasizes emergence rather than confrontation, allowing atmosphere and motion to shape the emotional reading of the image. Dust becomes an active compositional element, softening mechanical hardness and aligning the work with painterly traditions where environment carries narrative weight as strongly as subject.\n\nThe elevated viewpoint of the crew contrasts with the grounded mass of the vehicle, creating a tension between human vulnerability and industrial power. This balance transforms the tank from a symbol of aggression into a study of passage — a moment suspended between departure and arrival, where movement itself becomes the story.",
+    "notes": "The dust does half the painting here — the Sherman comes out of it the way a ship comes out of fog, crew up top, edges gone soft. Dust becomes an active compositional element, softening mechanical hardness and aligning the work with painterly traditions where environment carries narrative weight as strongly as subject.\n\nThe elevated viewpoint of the crew contrasts with the grounded mass of the vehicle, creating a tension between human vulnerability and industrial power. This balance transforms the tank from a symbol of aggression into a study of passage — a moment suspended between departure and arrival, where movement itself becomes the story.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -101,8 +101,8 @@ export const galleryData = [
   {
     "id": "i-LMvspP9",
     "title": "Steel in Motion",
-    "description": "A painterly World War II photograph capturing a Sherman tank advancing through churned sand and drifting light. Rather than dramatizing combat, the image centers on movement itself — the raw inevitability of battle-ready machines pushing forward through uncertain terrain. Atmosphere and restrained color elevate WWII military equipment into a cinematic study of force, velocity, and consequence.\n\nThis work reflects the union of men and machines within mechanized warfare, where motion carried both survival and history forward. © Wayne Heim",
-    "alt": "World War II Sherman tank driving forcefully through sandy terrain with dust rising around it, soldiers visible atop the turret, surrounded by trees and filtered light.",
+    "description": "A painterly World War II photograph capturing a 704 TD tank destroyer advancing through churned sand and drifting light. The drama here is movement itself — the raw inevitability of battle-ready machines pushing forward through uncertain terrain. Atmosphere and restrained color elevate WWII military equipment into a cinematic study of force, velocity, and consequence.\n\nThis work reflects the union of men and machines within mechanized warfare, where motion carried both survival and history forward. © Wayne Heim",
+    "alt": "World War II 704 TD tank destroyer driving forcefully through sandy terrain with dust rising around it, soldiers visible atop the turret, surrounded by trees and filtered light.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-LMvspP9/4/Mbmg8h4XLjDRdp3PVX3QpPRSpFSHSfGRpXrkQmF59/XL/_OLY0452-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-LMvspP9/4/Mbmg8h4XLjDRdp3PVX3QpPRSpFSHSfGRpXrkQmF59/XL/_OLY0452-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-LMvspP9/4/Mbmg8h4XLjDRdp3PVX3QpPRSpFSHSfGRpXrkQmF59/XL/_OLY0452-XL.jpg",
@@ -123,8 +123,8 @@ export const galleryData = [
       "armored vehicle photography"
     ],
 
-    "story": "The tank surges forward, steel cutting through sand and light. Dust lifts around it, briefly swallowing shape and sound before falling back into place.\n\nAbove the armor, eyes scan ahead — not for glory, only for what waits. Momentum is the only certainty.\n\nWhen the dust clears, the machine will be farther on. The ground will remember the weight.",
-    "notes": "The composition emphasizes thrust and mass, allowing motion to define the emotional register of the image. Sand and atmosphere act as painterly elements, softening mechanical hardness while reinforcing momentum and scale.\n\nThe low, forward-leaning posture of the vehicle creates a visual tension between human presence and industrial force — transforming the tank from pure machinery into a study of directed power. The result is not spectacle, but inevitability.",
+    "story": "The tank surges forward, steel cutting through sand and light. Dust lifts around it, briefly swallowing shape and sound before falling back into place.\n\nThe engine's note fills the open turret, and the men have stopped trying to talk over it. The dust is in their teeth, and the gun is pointed at a sky that is empty for now.\n\nThe vehicle goes on, and the dust falls behind it, and the trees take the sound.",
+    "notes": "Churned sand, drifting light, and a tank destroyer leaning into its own momentum — the motion is the subject, and the machine is what carries it. Sand and atmosphere act as painterly elements, softening mechanical hardness while reinforcing momentum and scale.\n\nThe low, forward-leaning posture of the vehicle creates a visual tension between human presence and industrial force — transforming the tank from pure machinery into a study of directed power. The result is not spectacle, but inevitability.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -139,7 +139,7 @@ export const galleryData = [
   {
     "id": "i-fmd9mTF",
     "title": "Silent Patrol",
-    "description": "A painterly World War II photograph capturing the USS Cod moving through open water under a brooding sky. Rather than dramatizing combat, the image centers on restraint and endurance — the quiet authority of battle-ready machines navigating uncertain seas. Tonal control and atmosphere elevate WWII military equipment into a cinematic meditation on vigilance and resolve.\n\nThis work reflects the unseen dimension of mechanized war at sea, where silence carried as much consequence as firepower. © Wayne Heim",
+    "description": "A painterly World War II photograph capturing the USS Cod moving through open water under a brooding sky. Restraint and endurance are the center of it — the quiet authority of battle-ready machines navigating uncertain seas. Tonal control and atmosphere elevate WWII military equipment into a cinematic meditation on vigilance and resolve.\n\nThis work reflects the unseen dimension of mechanized war at sea, where silence carried as much consequence as firepower. © Wayne Heim",
     "alt": "World War II submarine USS Cod moving through dark ocean water beneath a dramatic, overcast sky, viewed from a low angle showing the bow and hull.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-fmd9mTF/2/NZLJLcw4ZpJFSkGRLk3LBn6cc5X6vfV6Z3mwpG95x/XL/_ANA3303-Edit-Edit-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-fmd9mTF/2/NZLJLcw4ZpJFSkGRLk3LBn6cc5X6vfV6Z3mwpG95x/XL/_ANA3303-Edit-Edit-Edit-Edit-XL.jpg",
@@ -161,7 +161,7 @@ export const galleryData = [
     ],
 
     "story": "The bow cuts clean through dark water, steady and unhurried. Above, the sky gathers weight, but the vessel does not answer it. It simply moves.\n\nNo flags wave. No cheers follow. Beneath the surface lies distance measured in pressure and patience.\n\nWhen it slips past the horizon, the sea will close behind it — as if it had never been there.",
-    "notes": "The composition emphasizes mass and forward glide, allowing the submarine to function as a study in contained power rather than spectacle. The low vantage point and compressed horizon grant the hull a monumental stillness, echoing maritime painting traditions where atmosphere and scale convey emotional gravity.\n\nMuted tonality and restrained contrast align the work with painterly realism, transforming industrial form into psychological presence. The image invites prolonged viewing, where sea and steel share equal weight — and silence becomes the dominant force.",
+    "notes": "USS Cod rides low and long on open water under a brooding sky, in no hurry at all — a warship rendered as contained power, most of it below the surface and out of sight. The low vantage point and compressed horizon grant the hull a monumental stillness, echoing maritime painting traditions where atmosphere and scale convey emotional gravity.\n\nMuted tonality and restrained contrast align the work with painterly realism, transforming industrial form into psychological presence. The image invites prolonged viewing, where sea and steel share equal weight — and silence becomes the dominant force.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -170,9 +170,9 @@ export const galleryData = [
   },
   {
     "id": "i-dgwZgpw",
-    "title": "Silent Patrol",
-    "description": "A painterly World War II photograph capturing the USS Cod moving through open water under a brooding sky. Rather than dramatizing combat, the image centers on restraint and endurance — the quiet authority of battle-ready machines navigating uncertain seas. Tonal control and atmosphere elevate WWII military equipment into a cinematic meditation on vigilance and resolve.\n\nThis work reflects the unseen dimension of mechanized war at sea, where silence carried as much consequence as firepower. © Wayne Heim",
-    "alt": "World War II submarine USS Cod moving through dark ocean water beneath a dramatic, overcast sky, viewed from a low angle showing the bow and hull.",
+    "title": "Running Dark",
+    "description": "A painterly World War II photograph of the submarine USS Cod, the long hull low in dark water under a sky gone nearly black. The row of round portholes and the conning tower give the vessel a human scale against a sea and sky that have both gone dark. Wayne Heim's Facing History frame keeps the boat and the weather in one held image — a study of a machine built to disappear, and the men inside it. © Wayne Heim",
+    "alt": "World War II submarine USS Cod in dark ocean water under a nearly black sky, the hull's portholes and conning tower visible above the waves",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-dgwZgpw/1/KQC8Dp42RMzVPKTvMHbqpwkqZttNFL7rq8GNBJgW2/XL/_ANA3303-Edit-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-dgwZgpw/1/KQC8Dp42RMzVPKTvMHbqpwkqZttNFL7rq8GNBJgW2/XL/_ANA3303-Edit-Edit-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-dgwZgpw/1/KQC8Dp42RMzVPKTvMHbqpwkqZttNFL7rq8GNBJgW2/XL/_ANA3303-Edit-Edit-Edit-XL.jpg",
@@ -192,8 +192,8 @@ export const galleryData = [
       "naval war photography"
     ],
 
-    "story": "The bow cuts clean through dark water, steady and unhurried. Above, the sky gathers weight, but the vessel does not answer it. It simply moves.\n\nNo flags wave. No cheers follow. Beneath the surface lies distance measured in pressure and patience.\n\nWhen it slips past the horizon, the sea will close behind it — as if it had never been there.",
-    "notes": "The composition emphasizes mass and forward glide, allowing the submarine to function as a study in contained power rather than spectacle. The low vantage point and compressed horizon grant the hull a monumental stillness, echoing maritime painting traditions where atmosphere and scale convey emotional gravity.\n\nMuted tonality and restrained contrast align the work with painterly realism, transforming industrial form into psychological presence. The image invites prolonged viewing, where sea and steel share equal weight — and silence becomes the dominant force.",
+    "story": "The hull carries a row of round windows. Behind each one, a man is doing a job that has no horizon in it, in air that has been breathed before.\n\nAbove them the sky has gone dark, and below them the water is dark too, and the boat runs between the two. The men inside run on the light the portholes let through, and the light is thin.\n\nThe portholes will go dark one by one when the boat dives, and the men will work by the lamps inside. The boat takes its light down with it, and the dark above stays where it was.",
+    "notes": "A collector buys the darkness here as much as the boat. The black sky and the dark water press the hull into a single band of steel, and the round portholes and the conning tower keep it human — small round windows in a machine built to vanish. Of all the machines in the series, this one hides, and a collector who owns the louder frames will want this one for the quiet it keeps.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -203,7 +203,7 @@ export const galleryData = [
   {
     "id": "i-RRNrLTb",
     "title": "The Long Horizon",
-    "description": "A painterly World War II photograph capturing the USS Cod extended across open water beneath a brooding sky. Rather than focusing on action, the image emphasizes scale and isolation — the quiet authority of battle-ready machines navigating immense distance. Controlled tonality and atmospheric restraint elevate WWII military equipment into a cinematic meditation on vigilance and endurance.\n\nThis work reflects the psychological dimension of naval warfare, where silence, distance, and patience carried as much weight as visible conflict. © Wayne Heim",
+    "description": "A World War II photograph in painterly color, the submarine USS Cod in full profile, small against a wide sea and a sky full of storm clouds. The boat runs a thin dark line across the frame, with the horizon stretching behind it and the weather gathering above. Wayne Heim holds the vessel at a distance in this Facing History image — a study of a machine made small by the ocean it crosses, and the sky it crosses under. © Wayne Heim",
     "alt": "World War II submarine USS Cod traveling across open ocean under dark, dramatic storm clouds, viewed in wide profile with the horizon stretching behind it.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-RRNrLTb/1/K9JS2jrTk2GgNsKPmcQdx4wC67HMGCTnn8VL86ZHs/XL/_ANA3291-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-RRNrLTb/1/K9JS2jrTk2GgNsKPmcQdx4wC67HMGCTnn8VL86ZHs/XL/_ANA3291-Edit-Edit-XL.jpg",
@@ -224,8 +224,8 @@ export const galleryData = [
       "naval war photography"
     ],
 
-    "story": "The submarine stretches across the water like a line drawn with intention. Sea and sky press in from every side, but it keeps its course — steady, unhurried.\n\nAbove, weather gathers without promise. Below, depth waits without light.\n\nWhen it reaches the horizon, nothing will mark the crossing. Only the sea will know it was there.",
-    "notes": "The elongated horizontal composition reinforces the vastness of sea and sky, positioning the submarine as both dominant and vulnerable within its environment. The compressed tonal range and dramatic cloud structure echo maritime painting traditions where atmosphere conveys psychological weight as much as physical scale.\n\nBy minimizing spectacle and emphasizing distance, the image transforms industrial form into a study of endurance — a restrained examination of presence against immensity.",
+    "story": "From this far, the boat barely marks the water. The sky above it has room for weather the boat will never meet, and the sea below it has room for a depth the boat will never sound.\n\nThe men on the bridge keep their eyes on the horizon. The horizon gives them nothing back, and they keep their eyes on it anyway.\n\nThe boat will cross the horizon, and the sea will not notice. The men will notice. They have been watching that line all day.",
+    "notes": "For a collector, this is the wide frame — the one that pulls back far enough to let the ocean and the storm cloud do the talking. The boat holds a thin dark line across the middle, and the scale makes the machine feel both stubborn and small, a piece of steel holding its course under weather that does not care whether it holds it. A collector who owns the closer submarine frames will want this one for the room it leaves around the boat, and for the horizon that runs the whole width of the wall.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -235,7 +235,7 @@ export const galleryData = [
   {
     "id": "i-7r4cQqR",
     "title": "Straight Ahead",
-    "description": "A painterly World War II photograph capturing a Sherman tank advancing directly toward the viewer across open terrain. Rather than emphasizing combat, the image centers on resolve and inevitability — the quiet authority of battle-ready machines moving forward with purpose. Controlled light and restrained tonality transform WWII military equipment into a cinematic study of momentum and presence.\n\nThe work reflects the union of men and machines within mechanized warfare, where direction itself carried consequence and history advanced one deliberate movement at a time. © Wayne Heim",
+    "description": "A painterly World War II photograph capturing a Sherman tank advancing directly toward the viewer across open terrain. Resolve and inevitability, not combat, are what the image is built on — the quiet authority of battle-ready machines moving forward with purpose. Controlled light and restrained tonality transform WWII military equipment into a cinematic study of momentum and presence.\n\nThe work reflects the union of men and machines within mechanized warfare, where direction itself carried consequence and history advanced one deliberate movement at a time. © Wayne Heim",
     "alt": "World War II Sherman tank driving forward across dusty terrain toward the viewer, soldiers visible in the turret under a muted sky.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-7r4cQqR/1/NHmdTBTFFcHTFNv2DMkf4HjVjFXXQdhkBNM4qZVcs/XL/_PEN0128-Enhanced-Edit-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-7r4cQqR/1/NHmdTBTFFcHTFNv2DMkf4HjVjFXXQdhkBNM4qZVcs/XL/_PEN0128-Enhanced-Edit-Edit-2-XL.jpg",
@@ -273,7 +273,7 @@ export const galleryData = [
   {
     "id": "i-FTgjc8C",
     "title": "Heading Home",
-    "description": "A painterly World War II photograph capturing the USS Cod moving across open sea beneath a dramatic sky, evoking the quiet transition from conflict toward return. Rather than depicting battle, the image centers on endurance and passage — the restrained authority of a battle-ready machine carrying its crew homeward through vast and uncertain waters. Atmospheric light and controlled tonality transform WWII military equipment into a cinematic meditation on distance, survival, and reunion.\n\nThe work reflects the emotional aftermath of naval warfare, where the journey home carried its own weight of memory and consequence. © Wayne Heim",
+    "description": "A painterly World War II photograph capturing the USS Cod moving across open sea beneath a dramatic sky, evoking the quiet transition from conflict toward return. The picture's subject is endurance and passage — the restrained authority of a battle-ready machine carrying its crew homeward through vast and uncertain waters. Atmospheric light and controlled tonality transform WWII military equipment into a cinematic meditation on distance, survival, and reunion.\n\nThe work reflects the emotional aftermath of naval warfare, where the journey home carried its own weight of memory and consequence. © Wayne Heim",
     "alt": "World War II submarine USS Cod traveling across open ocean toward the viewer under dramatic storm clouds, leaving a visible wake behind it.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-FTgjc8C/1/NQ5HjnMZJP357NgP3DnfMdZHrX2zkH22N9FGTsqHT/XL/_ANA3350-Enhanced-Edit-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-FTgjc8C/1/NQ5HjnMZJP357NgP3DnfMdZHrX2zkH22N9FGTsqHT/XL/_ANA3350-Enhanced-Edit-Edit-2-XL.jpg",
@@ -304,9 +304,9 @@ export const galleryData = [
   },
   {
     "id": "i-Tfg5j96",
-    "title": "Waiting on Orders",
-    "description": "A painterly World War II photograph capturing a naval serviceman in a quiet moment aboard ship. Rather than dramatizing combat, the image centers on presence and restraint — the human dimension within battle-ready machines. Subdued color and controlled light elevate WWII military equipment into a cinematic study of pause, duty, and anticipation.\n\nThis work reflects the lived experience behind mechanical war art, where history’s greatest conflicts were carried not only by steel, but by the men who stood beside it. © Wayne Heim",
-    "alt": "World War II naval serviceman wearing a helmet and life vest leaning against a ship structure, with ocean visible behind him under a muted sky.",
+    "title": "Glasses and Steel",
+    "description": "A painterly World War II photograph capturing a naval serviceman in a quiet moment beside a landing craft. Presence and restraint carry the image — the human dimension within battle-ready machines, with combat nowhere in it. Subdued color and controlled light elevate WWII military equipment into a portrait of a man and the steel he leans on.\n\nThis work reflects the lived experience behind mechanical war art, where history's greatest conflicts were carried not only by steel, but by the men who stood beside it. © Wayne Heim",
+    "alt": "World War II naval serviceman wearing glasses, a helmet and a life vest, leaning against a landing craft, two younger soldiers behind him, the ocean behind them under a muted sky",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-Tfg5j96/3/MRLHxKXknjnrcSPBgNrS8m7drgc6B7FRc453NF9dX/XL/_PEN0783-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-Tfg5j96/3/MRLHxKXknjnrcSPBgNrS8m7drgc6B7FRc453NF9dX/XL/_PEN0783-Edit-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-Tfg5j96/3/MRLHxKXknjnrcSPBgNrS8m7drgc6B7FRc453NF9dX/XL/_PEN0783-Edit-2-XL.jpg",
@@ -326,7 +326,7 @@ export const galleryData = [
       "naval war photography"
     ],
 
-    "story": "He leans against cold steel, one hand resting where the paint has worn thin. The sea moves behind him, steady and indifferent.\n\nThere is always a pause before motion — a breath between instruction and action. In that space, a man measures what he knows and what he doesn’t.\n\nSoon enough, someone will speak. For now, he waits.",
+    "story": "A stranger notices the glasses first, but the man himself has forgotten he is wearing them. They have been on his face longer than the vest has been on his chest, and they have seen more water than the vest ever will. The sea behind him asks for nothing, and the two younger men behind him are still learning that.",
     "notes": "The composition adopts a portrait sensibility, placing the figure in quiet dialogue with the surrounding machinery. By softening industrial detail through painterly tonality, the image balances mechanical mass with human vulnerability.\n\nThe restrained posture and off-axis gaze introduce psychological tension without overt drama. In this work, machinery becomes context rather than spectacle, reinforcing the theme that history’s greatest conflicts were experienced in moments of stillness as much as in action.",
     "rating": 4,
     "galleries": [],
@@ -337,8 +337,8 @@ export const galleryData = [
   {
     "id": "i-N9sBgRs",
     "title": "On My Mark",
-    "description": "A painterly World War II photograph capturing a naval officer mid-gesture, signaling movement amid battle-ready machines and waiting men. Rather than dramatizing chaos, the image centers on command and suspended tension — the split second before motion becomes irreversible. Controlled light and restrained tonality elevate WWII military equipment and uniformed figures into a cinematic study of authority and anticipation.\n\nThis work reflects the human force behind mechanical war art, where history’s greatest conflicts turned on gestures as much as firepower. © Wayne Heim",
-    "alt": "World War II naval officer wearing a USN helmet raising his arm to signal, with uniformed servicemen standing behind him on a ship deck under a muted sky.",
+    "description": "A painterly World War II photograph capturing a U.S. Navy sailor mid-gesture, signaling movement amid battle-ready machines and waiting men. Command and suspended tension sit at the center — the split second before motion becomes irreversible. Controlled light and restrained tonality elevate WWII military equipment and uniformed figures into a cinematic study of authority and anticipation.\n\nThis work reflects the human force behind mechanical war art, where history's greatest conflicts turned on gestures as much as firepower. © Wayne Heim",
+    "alt": "World War II U.S. Navy sailor wearing a USN helmet raising his arm to signal, with uniformed servicemen standing behind him in a landing craft under a muted sky.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-N9sBgRs/3/K5c2gxv7gHXv5r3QBD4XCshmjKVxfXpXK6ZPWdgnW/XL/_PEN0798-Edit-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-N9sBgRs/3/K5c2gxv7gHXv5r3QBD4XCshmjKVxfXpXK6ZPWdgnW/XL/_PEN0798-Edit-Edit-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-N9sBgRs/3/NTMb3nkxwrJ3dG8G3DHQKxnMTjVzPcmpNBfXknTjp/L/_PEN0798-Edit-Edit-2-L.jpg",
@@ -354,7 +354,7 @@ export const galleryData = [
       "battle-ready machines",
       "mechanical war art",
       "military machinery prints",
-      "world war ii naval officer",
+      "world war ii naval sailor",
       "vivid WWII mechanized might"
     ],
 
@@ -369,7 +369,7 @@ export const galleryData = [
   {
     "id": "i-x3ZPvH9",
     "title": "Between Sea and Shore",
-    "description": "A painterly World War II photograph capturing soldiers poised aboard a landing craft moments before disembarkation. Rather than depicting combat, the image centers on anticipation and resolve — the quiet tension carried by men and machines at the threshold of action. Controlled light and restrained tonality elevate WWII military equipment into a cinematic study of transition, duty, and uncertainty.\n\nThe work reflects the human dimension within history’s greatest conflicts, where decisive moments often began in silence before the first step forward. © Wayne Heim",
+    "description": "A painterly World War II photograph capturing soldiers poised aboard a landing craft moments before disembarkation. Anticipation and resolve are the cargo here — the quiet tension carried by men and machines at the threshold of action, with combat not yet begun. Controlled light and restrained tonality elevate WWII military equipment into a cinematic study of transition, duty, and uncertainty.\n\nThe work reflects the human dimension within history's greatest conflicts, where decisive moments often began in silence before the first step forward. © Wayne Heim",
     "alt": "World War II soldiers standing aboard a landing craft facing forward toward open water and shoreline, wearing helmets and full gear under soft daylight.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-x3ZPvH9/2/LWqpJVWj7Xsx6DVxkftTdNcBJN6RvfSK7m8P2pLPg/XL/_PEN0264-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-x3ZPvH9/2/LWqpJVWj7Xsx6DVxkftTdNcBJN6RvfSK7m8P2pLPg/XL/_PEN0264-Edit-XL.jpg",
@@ -401,7 +401,7 @@ export const galleryData = [
   {
     "id": "i-Rb3fQ5d",
     "title": "Shoulder to Shoulder",
-    "description": "A painterly World War II photograph capturing soldiers gathered along the edge of a landing craft as they approach shore. Rather than depicting combat, the image centers on shared resolve and quiet anticipation — the human presence within battle-ready machines. Controlled light and restrained tonality elevate WWII military equipment into a cinematic study of unity, tension, and the moments before action begins.\n\nThe work reflects the collective experience within history’s greatest conflicts, where courage was often found not alone, but standing beside others facing the same uncertain horizon. © Wayne Heim",
+    "description": "A painterly World War II photograph capturing soldiers gathered along the edge of a landing craft as they approach shore. Shared resolve and quiet anticipation are the center — the human presence within battle-ready machines. Controlled light and restrained tonality elevate WWII military equipment into a cinematic study of unity, tension, and the moments before action begins.\n\nThe work reflects the collective experience within history's greatest conflicts, where courage was often found not alone, but standing beside others facing the same uncertain horizon. © Wayne Heim",
     "alt": "World War II soldiers standing closely together along the side of a landing craft looking toward the horizon under a dramatic sky.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-Rb3fQ5d/2/MpVXBhbpXTgdp8QZVGdLMGMRgg23kkJ24hLPkhWkV/XL/_ANA4472-Edit2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-Rb3fQ5d/2/MpVXBhbpXTgdp8QZVGdLMGMRgg23kkJ24hLPkhWkV/XL/_ANA4472-Edit2-XL.jpg",
@@ -423,7 +423,7 @@ export const galleryData = [
     ],
 
     "story": "They stand pressed close along the rail, hands steady against the motion of the sea. No one looks back. The horizon ahead holds every unanswered question.\n\nGear shifts softly, metal taps against metal, and the wind carries only the sound of water moving past the hull.\n\nTogether, they wait — shoulder to shoulder — until waiting is no longer possible.",
-    "notes": "The composition emphasizes repetition and rhythm through aligned figures, creating a visual cadence that reinforces collective identity over individual portraiture. The viewer’s perspective places them within the formation, transforming observation into participation.\n\nMuted color and atmospheric restraint soften documentary detail into painterly unity, allowing posture and proximity to carry emotional meaning. The image becomes a study of solidarity — a shared moment suspended between anticipation and action.",
+    "notes": "Soldiers shoulder to shoulder along the landing craft's edge — helmets and shoulders repeating down the frame are the picture's rhythm, and no single face is asked to carry it. The viewer's perspective places them within the formation, transforming observation into participation.\n\nMuted color and atmospheric restraint soften documentary detail into painterly unity, allowing posture and proximity to carry emotional meaning. The image becomes a study of solidarity — a shared moment suspended between anticipation and action.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -433,8 +433,8 @@ export const galleryData = [
   {
     "id": "i-h6zMQW8",
     "title": "Landfall",
-    "description": "A painterly World War II photograph capturing soldiers disembarking from a landing craft and moving toward shore. Rather than depicting combat itself, the image centers on commitment — the moment when battle-ready machines give way to human resolve. Atmospheric light and restrained tonality transform WWII military equipment into a cinematic study of transition, courage, and irreversible action.\n\nThe work reflects the defining threshold within history’s greatest conflicts, where ordinary steps carried extraordinary consequence. © Wayne Heim",
-    "alt": "World War II soldiers wading through shallow water after exiting a landing craft, moving toward shore with gear and rifles under muted daylight.",
+    "description": "A painterly World War II photograph capturing soldiers disembarking from a landing craft and moving toward shore. Commitment is the center — the moment when battle-ready machines give way to human resolve. Atmospheric light and restrained tonality transform WWII military equipment into a cinematic study of transition, courage, and irreversible action.\n\nThe work reflects the defining threshold within history's greatest conflicts, where ordinary steps carried extraordinary consequence. © Wayne Heim",
+    "alt": "World War II soldiers wading through shallow water after exiting a landing craft, moving toward shore with gear and rifles, a man in a life vest watching from the craft behind them, under muted daylight.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-h6zMQW8/0/NFTXzfPF9KbWSBfpM5R32Ddj7D445hWcB6nZsV8MD/XL/_PEN1121-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-h6zMQW8/0/NFTXzfPF9KbWSBfpM5R32Ddj7D445hWcB6nZsV8MD/XL/_PEN1121-Edit-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-h6zMQW8/0/M7t4ZdwL2XPMbktjzszW8pfqwx9PgchvcKXRJ5tMj/L/_PEN1121-Edit-Edit-L.jpg",
@@ -454,8 +454,8 @@ export const galleryData = [
       "landing craft photography"
     ],
 
-    "story": "Boots meet water without hesitation, the sea breaking around them as they move forward. Behind them, the craft waits only long enough to release the next wave.\n\nNo one pauses. The shoreline ahead holds everything unknown, every outcome already set in motion.\n\nWith each step, the distance between past and future disappears beneath the tide.",
-    "notes": "The composition emphasizes forward movement through layered depth, guiding the viewer’s eye from the landing craft toward the advancing figures. Repetition of posture and equipment creates rhythm, reinforcing collective action over individual identity.\n\nMuted palette and painterly restraint soften documentary immediacy, allowing atmosphere and gesture to carry emotional weight. The image becomes a study of transition — the precise moment when arrival transforms into history.",
+    "story": "The cold gets in through the boots first. It climbs past the ankles, and the packs grow heavier as the water soaks into them, and the rifles ride high, out of the wet — a rifle that has been in the sea will not fire when it matters.\n\nThe man on the craft watches them go, and stays with the boat. The water takes them from him a step at a time, and the sand they are walking toward does not look any closer for it.\n\nBy the time the water thins to their knees, the cold has stopped being a surprise. The shore is still a long way off, and the water gives up each step only after a fight.",
+    "notes": "The ramp is down and the men come off the craft in layers — the eye travels from the steel behind them to the figures in front, and the depth does the storytelling. Repetition of posture and equipment creates rhythm, reinforcing collective action over individual identity.\n\nMuted palette and painterly restraint soften documentary immediacy, allowing atmosphere and gesture to carry emotional weight. The image becomes a study of transition — the precise moment when arrival transforms into history.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -465,8 +465,8 @@ export const galleryData = [
   {
     "id": "i-vsx5t6W",
     "title": "Committed",
-    "description": "A painterly World War II photograph capturing a soldier stepping from landing craft into open water, defined by resolve rather than spectacle. This Men & Machines Color work emphasizes the human presence within WWII military equipment color imagery, focusing on battle-ready machines and the individuals who carried history forward.\n\nLight, restraint, and atmosphere transform mechanical war art into a study of commitment — where the act of stepping forward marked the beginning of consequence. © Wayne Heim",
-    "alt": "World War II soldier stepping into surf from a landing craft during amphibious assault, wearing full gear under natural light.",
+    "description": "A painterly World War II photograph capturing a soldier stepping from landing craft into open water, defined by resolve rather than spectacle. The craft's steel is at his back, the surf is at his boots, and between them a single step — the man leaving the machine for the water.\n\nLight, restraint, and atmosphere transform mechanical war art into a study of commitment — where the act of stepping forward marked the beginning of consequence. © Wayne Heim",
+    "alt": "World War II soldier in full gear stepping into surf from a landing craft, a man leaning on the craft's rail above him, under natural light.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-vsx5t6W/0/Md6gsKpgK53sSjZPVNbBVvkzMcNJ3PhxfrLpb95Vr/XL/_PEN1134-Edit-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-vsx5t6W/0/Md6gsKpgK53sSjZPVNbBVvkzMcNJ3PhxfrLpb95Vr/XL/_PEN1134-Edit-Edit-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-vsx5t6W/0/Md6gsKpgK53sSjZPVNbBVvkzMcNJ3PhxfrLpb95Vr/XL/_PEN1134-Edit-Edit-2-XL.jpg",
@@ -497,8 +497,8 @@ export const galleryData = [
   {
     "id": "i-snvP87s",
     "title": "Standing Ready",
-    "description": "A painterly World War II photograph centered on armored presence rather than action, portraying a tank as both machine and witness. This Men & Machines Color image explores WWII military equipment color through atmosphere and restraint, emphasizing battle-ready machines poised between stillness and motion.\n\nLight and texture elevate mechanical war art beyond documentation, revealing the quiet tension held within wwii tanks and trucks before history moves forward. © Wayne Heim",
-    "alt": "World War II tank resting in field under muted sky, captured in painterly fine art style emphasizing armored presence and atmosphere.",
+    "description": "A painterly World War II photograph centered on armored presence rather than action, portraying a tank as both machine and witness. The light tank sits low in a grass field under a muted sky, its turret marked with a white star and the number 22, its gun barrel covered with cloth and a small flag flying above it.\n\nThe frame keeps its attention on the machine at rest — the steel, the cloth over the barrel, the grass under the tracks — and lets the quiet speak for it. © Wayne Heim",
+    "alt": "World War II light tank with the number 22 and a white star on its turret, its gun barrel covered with cloth, small flags flying above it, parked in a grass field with trees behind under a muted sky.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-snvP87s/0/NBtpFh38XffLBNxXGMBVrVX3HVnVZd5MrvqXdpTCH/XL/_O1H0252-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-snvP87s/0/NBtpFh38XffLBNxXGMBVrVX3HVnVZd5MrvqXdpTCH/XL/_O1H0252-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-snvP87s/0/NBtpFh38XffLBNxXGMBVrVX3HVnVZd5MrvqXdpTCH/XL/_O1H0252-Edit-XL.jpg",
@@ -518,8 +518,8 @@ export const galleryData = [
       "historical military imagery"
     ],
 
-    "story": "The engine is silent, but nothing about it is at rest.\n\nSteel waits the way soldiers wait — prepared, patient, knowing movement will come soon enough. For now, it holds its ground, carrying the weight of what it was built to do.",
-    "notes": "Rather than depicting combat, the composition focuses on latent force — the mass, geometry, and presence of armored machinery held in suspension. The softened painterly treatment allows the vehicle to read simultaneously as artifact and character, aligning the work with traditions that treat military subjects as psychological landscape as much as historical record.\n\nThe machine waits, and in that waiting, the narrative forms.",
+    "story": "A cloth covers the muzzle, and the gun goes quiet. The men who tied it on are not in the frame, and the knot they left will hold through rain.\n\nA flag moves in the wind above the turret while the tank rests in the grass, and the flag keeps going anyway — the wind has somewhere to be, and the tank does not.\n\nThe number on the turret belongs to men who are not here. When they come back, they will find the flag up and the cloth on the muzzle, and the machine exactly where they left it.",
+    "notes": "Rather than depicting combat, the composition focuses on latent force — the mass, geometry, and presence of armored machinery held in suspension. The softened painterly treatment allows the vehicle to read simultaneously as artifact and character, aligning the work with traditions that treat military subjects as psychological landscape as much as historical record.\n\nOn a wall, this one earns its place by doing nothing at all — a machine at rest, and a field that asks nothing of it.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -534,8 +534,8 @@ export const galleryData = [
   {
     "id": "i-Cwv4Sf2",
     "title": "Thunder of the Line",
-    "description": "A painterly World War II photograph capturing synchronized artillery discharge at the exact moment of ignition. This Men & Machines Color image embodies Color WWII Machines and WWII Military Equipment Color through disciplined composition and atmospheric control.\n\nRather than chaos, the scene presents battle-ready machines operating in unison — a study in mechanical war art and Vivid WWII Mechanized Might. Within wwii tanks and trucks, force becomes geometry, flame becomes structure, and power becomes narrative. © Wayne Heim",
-    "alt": "World War II artillery and tanks firing in coordinated line at dusk, flames erupting from barrels in dramatic painterly fine art style.",
+    "description": "A painterly World War II photograph capturing a Sherman tank firing at dusk, its muzzle flash blooming into a fireball against a darkening sky. A field gun stands at the line's left, and a row of Shermans stands behind it, the lead tank marked FRED, the whole line in one frame as the shot goes off.\n\nThe flash lights the tanks' hulls, the dusk closes over the line, and fire and steel share a single image. © Wayne Heim",
+    "alt": "World War II Sherman tank firing at dusk, a muzzle flash blooming into a fireball, a field gun and a line of Sherman tanks beside it in a dirt field under a darkening sky.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-Cwv4Sf2/2/MPTk32D9bx2n6nWwmJHHf4QfXsKd23TKzrMjHbTQ7/XL/_O1H0573-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-Cwv4Sf2/2/MPTk32D9bx2n6nWwmJHHf4QfXsKd23TKzrMjHbTQ7/XL/_O1H0573-Edit-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-Cwv4Sf2/2/KpGzJkFDNc6drFzLbMkWRNhLwZ8ctPLDDQRPpcNDb/L/_O1H0573-Edit-Edit-L.jpg",
@@ -556,8 +556,8 @@ export const galleryData = [
       "historical artillery imagery"
     ],
 
-    "story": "The command passes. The barrels answer.\n\nFlame blooms against the darkening sky, and the ground absorbs the recoil. For a breath, the world narrows to fire and force — then the smoke begins to drift.",
-    "notes": "The composition emphasizes simultaneity — aligned barrels, synchronized ignition, repeated form. The painterly restraint prevents the fire from becoming spectacle alone, allowing structure and rhythm to dominate.\n\nHere, machinery is not background to history. It is the voice of it.",
+    "story": "The command passes. The barrel answers.\n\nFlame blooms against the darkening sky, and the ground absorbs the recoil. For a breath, the world narrows to fire and force — then the smoke begins to drift.",
+    "notes": "The lead Sherman fires with a field gun at its left and hulls in a row behind — the line itself is the subject, one shot heard in several places at once. The painterly restraint prevents the fire from becoming spectacle alone, allowing structure and rhythm to dominate.\n\nOn a wall, the fire pulls the eye first, then the line of steel keeps it — one shot, a row of tanks, and a darkening sky over both.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -572,8 +572,8 @@ export const galleryData = [
   {
     "id": "i-GXrCDJh",
     "title": "Line of Fire",
-    "description": "A painterly World War II photograph capturing artillery discharge at the exact instant of ignition. This Men & Machines Color work explores Color WWII Machines and WWII Military Equipment Color through disciplined composition and controlled atmosphere.\n\nRather than chaos, the scene reveals battle-ready machines operating with precision — an expression of mechanical war art and Vivid WWII Mechanized Might. Within wwii tanks and trucks, geometry and flame converge, transforming force into structure and history into visual rhythm. © Wayne Heim",
-    "alt": "World War II artillery and tanks firing in coordinated line at dusk, flames erupting from barrels in painterly fine art style.",
+    "description": "A painterly World War II photograph capturing a field gun firing in daylight, its muzzle flash and orange smoke filling the blue sky above a dirt field. Tanks stand beside the gun in a row, their barrels raised, the shot's smoke still rising over the field.\n\nThe orange smoke hangs over the field against the blue, and the shot is already done — the gun, the tanks, and the sky, in one image. © Wayne Heim",
+    "alt": "World War II field gun firing in daylight, a large muzzle flash and orange smoke, tanks beside it in a dirt field under a blue sky.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-GXrCDJh/1/Nf9Jcdc9TWXT2m2sTPB44zzRbBQsRxrKG9gBPVSKz/XL/_O1H0615-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-GXrCDJh/1/Nf9Jcdc9TWXT2m2sTPB44zzRbBQsRxrKG9gBPVSKz/XL/_O1H0615-Edit-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-GXrCDJh/1/KHZ3gjQ9WPmc2CvrWgDSmNBsbzzWBHrKJmhpQmNzq/L/_O1H0615-Edit-2-L.jpg",
@@ -594,8 +594,8 @@ export const galleryData = [
       "historical artillery imagery"
     ],
 
-    "story": "The barrels align. The order holds for half a breath.\n\nThen the horizon fractures.\n\nFlame cuts the dusk, recoil drives steel backward, and the sound arrives a heartbeat later.",
-    "notes": "The composition emphasizes trajectory and repetition — extended barrels, aligned chassis, synchronized ignition. The painterly restraint prevents the fire from overwhelming the structure, allowing rhythm and directional force to dominate.\n\nHere, machinery becomes horizon-maker — not background to history, but the line that reshaped it.",
+    "story": "The smoke goes up the color of rust, and the blue sky does not push it back. The field underneath does not change.\n\nThe shot's heat lingers in the barrel for a little while, and the long tube points at a sky that has already taken the sound and given nothing back. The tanks beside it have not fired, and will not — their turn is not this one.\n\nBy the time the smoke thins, the men will be loading again.",
+    "notes": "One gun, one ignition, and orange smoke filling a blue sky — the barrel's extended line and the chassis ranked behind it give a single shot the weight of a volley. The painterly restraint prevents the fire from overwhelming the structure, allowing rhythm and directional force to dominate.\n\nOn a wall, the orange smoke does the work — a daylight shot, a blue sky, and a gun that fills the frame with fire.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -610,8 +610,8 @@ export const galleryData = [
   {
     "id": "i-Z6f9LZn",
     "title": "Engines Under Fire",
-    "description": "A painterly World War II photograph capturing armored vehicles advancing through active discharge and drifting smoke. This Men & Machines Color work explores Color WWII Machines and WWII Military Equipment Color with emphasis on battle-ready machines operating under sustained force.\n\nRather than isolated spectacle, the image presents mechanical war art as coordinated momentum — a display of Vivid WWII Mechanized Might within wwii tanks and trucks where steel, fire, and motion converge. © Wayne Heim",
-    "alt": "World War II tanks firing while advancing through smoke at dusk, captured in painterly fine art style with dramatic flame and armored detail.",
+    "description": "A painterly World War II photograph of a tank column under a sunset sky, the center Sherman's gun throwing a line of orange flame across the sky while the line stands its ground. The lead Sherman marked FRED is at the line's left, an M8 Greyhound armored car marked USA 6037 at its right, and soldiers in the turrets watch the shot go off over a dirt field.\n\nThe sunset deepens behind the column, the shot's light is already fading, and the last of the day is in the sky, not the guns. © Wayne Heim",
+    "alt": "World War II tank column at dusk, the center Sherman firing with a line of orange flame, an M8 Greyhound armored car at the right, soldiers in the turrets, under a sunset sky.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-Z6f9LZn/1/LgHP5VZjCkCKtTrzChHDLsLLLqGp5hxvXLJP6dhzK/XL/_O1H0726-Edit-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-Z6f9LZn/1/LgHP5VZjCkCKtTrzChHDLsLLLqGp5hxvXLJP6dhzK/XL/_O1H0726-Edit-Edit-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-Z6f9LZn/1/MMrR2VtkTp4W59ZWsBxdBpRqSkKcR6WL4VXVdcHTq/L/_O1H0726-Edit-Edit-2-L.jpg",
@@ -632,8 +632,8 @@ export const galleryData = [
       "historical armored vehicle imagery"
     ],
 
-    "story": "Smoke thickens. Steel does not slow.\n\nFlame tears forward from the barrel, and the line keeps moving through it — engines driving beneath the roar.",
-    "notes": "The composition layers flame, smoke, and armor into a compressed visual field, emphasizing forward pressure rather than isolated ignition. Silhouetted figures atop the vehicles anchor scale and reinforce the human presence within mechanized force.\n\nHere, machinery does not dominate the landscape — it reshapes it while moving through it.",
+    "story": "The sky burns first, and the gun only answers it. The sunset has been burning since the afternoon. It will go on burning after the shot is done. The men in the turrets know which fire is theirs to answer for.\n\nThe flash from the barrel does not last. It opens a hole in the dusk and is gone before the smoke has decided where to go. Its own fire keeps going, and does not notice the one from the barrel.\n\nBefore the smoke is gone, the color above them will have changed twice, and the men will still be up in the turrets.",
+    "notes": "The composition layers flame, smoke, and armor into a compressed visual field, the line at rest rather than pressing forward. Silhouetted figures atop the vehicles anchor scale and reinforce the human presence within mechanized force.\n\nThe sunset outshines the shot — a line of steel at rest, one gun firing, and a sky on fire.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -648,8 +648,8 @@ export const galleryData = [
   {
     "id": "i-CzvL3Mk",
     "title": "The Firing Line",
-    "description": "A painterly World War II photograph capturing a full armored firing line at the moment of synchronized discharge. This Men & Machines Color image explores Color WWII Machines and WWII Military Equipment Color through disciplined composition and panoramic scale.\n\nThe scene presents battle-ready machines in coordinated force — an expression of mechanical war art and Vivid WWII Mechanized Might within wwii tanks and trucks. Flame, geometry, and repetition converge, transforming raw power into structured history. © Wayne Heim",
-    "alt": "World War II tanks and artillery firing in coordinated line at dusk, flames erupting across the horizon in painterly fine art style.",
+    "description": "A painterly World War II photograph of a full armored firing line at dusk, a field gun and a Sherman firing together, their flames meeting across the horizon. Shermans stand in a row between the gun and a Greyhound armored car closing the line at the right, the row running wide across a dirt field under a dramatic sky.\n\nThe line runs the width of the frame, the flames mark both ends of it, and the sky takes the whole of it in. © Wayne Heim",
+    "alt": "World War II field gun and a Sherman tank firing together at dusk, flames erupting from two muzzles, an M8 Greyhound armored car at the right, under a dramatic sky.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-CzvL3Mk/1/MT35qsBXmcL6GxDqj5FNrM73KhKsfw3ckTVmMw6rp/XL/20220817_201343-6-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-CzvL3Mk/1/MT35qsBXmcL6GxDqj5FNrM73KhKsfw3ckTVmMw6rp/XL/20220817_201343-6-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-CzvL3Mk/1/L7vdrt3HsSF8nJSSfdd4JF5ShRd99ZSFQhwQb3vJ9/L/20220817_201343-6-Edit-L.jpg",
@@ -671,7 +671,7 @@ export const galleryData = [
     ],
 
     "story": "They do not fire alone.\n\nSteel aligns against the darkening sky, barrels leveled in quiet agreement. Then the command moves through them — and the horizon erupts.",
-    "notes": "The composition emphasizes alignment and collective force — repeated forms, synchronized ignition, and a horizontal rhythm that stretches across the frame. The painterly restraint prevents spectacle from overwhelming structure, allowing pattern and scale to carry the visual authority.\n\nHere, machinery becomes chorus rather than solo — history written in coordinated flame.",
+    "notes": "A field gun and a Sherman firing together at dusk, their flames meeting across the horizon — the widest frame in the set, and the one where the machines read as a chorus. The painterly restraint prevents spectacle from overwhelming structure, allowing pattern and scale to carry the visual authority.\n\nHere, machinery becomes chorus rather than solo — history written in coordinated flame.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -686,8 +686,8 @@ export const galleryData = [
   {
     "id": "i-TVmp5NX",
     "title": "Wings Through Cloud",
-    "description": "A painterly World War II photograph capturing a frontal aircraft approach suspended within cloud and open sky. This Men & Machines Color work explores Color WWII Machines and WWII Military Equipment Color through symmetry, restraint, and controlled atmosphere.\n\nThe aircraft becomes both machine and presence — a study in battle-ready machines rendered as mechanical war art and Vivid WWII Mechanized Might. Rather than spectacle, the composition emphasizes alignment, velocity, and inevitability. © Wayne Heim",
-    "alt": "World War II military aircraft flying head-on through cloud cover, centered composition in painterly fine art style.",
+    "description": "A painterly World War II photograph of a Grumman TBF Avenger torpedo bomber flying head-on through cloud cover, its propeller a blurred disc, its wings spread across a sky of white cloud. The aircraft comes straight at the viewer, centered in the frame, the U.S. star on its wings the only marking the clouds have left clear.\n\nThe propeller's blur and the wings' straight line give the frame its symmetry, and the clouds behind them open its depth — a machine coming straight on, out of weather that does not care whether it arrives. © Wayne Heim",
+    "alt": "World War II Grumman TBF Avenger torpedo bomber flying head-on through white cloud cover, propeller spinning, U.S. star on its wings, centered in a cloudy sky.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-TVmp5NX/3/KvvhSTmX7mFzccBW5mM2GVtbHmtPmJK7zTNJhVNkm/XL/_OLY1828-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-TVmp5NX/3/KvvhSTmX7mFzccBW5mM2GVtbHmtPmJK7zTNJhVNkm/XL/_OLY1828-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-TVmp5NX/3/LJTMK2Wn5mVP7GP6ZcLTszbSsgGDvFBKJhF4zQVJC/L/_OLY1828-L.jpg",
@@ -718,8 +718,8 @@ export const galleryData = [
   {
     "id": "i-sr9WMcn",
     "title": "Emerging from Cloud",
-    "description": "A painterly World War II photograph capturing a military aircraft rising through vertical light and cloud. This Men & Machines Color image explores Color WWII Machines and WWII Military Equipment Color through symmetry, atmosphere, and controlled restraint.\n\nThe aircraft reads as battle-ready machine rendered as mechanical war art and Vivid WWII Mechanized Might — not in combat, but in emergence. Light becomes structure, cloud becomes threshold, and steel becomes silhouette. © Wayne Heim",
-    "alt": "World War II military aircraft flying upward through bright cloud break, centered composition in painterly fine art style.",
+    "description": "A painterly World War II photograph of a torpedo bomber climbing through a bright break in the cloud, seen from below in a vertical frame. The aircraft’s propeller spins above a shaft of white light, its wings level against gray cloud, its star the clearest mark in a sky full of weather.\n\nThe vertical frame gives the climb its height, and the light shaft sets its direction — a machine going up through the weather, out of the cloud and into the clear. © Wayne Heim",
+    "alt": "World War II Grumman TBF Avenger torpedo bomber climbing upward through a bright break in the clouds, propeller spinning, seen from below in a vertical frame.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-sr9WMcn/3/NDV3pS5rxXTqMQcjzvKRq6hq33XQprjszrftP4QSJ/XL/_OLY1830-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-sr9WMcn/3/NDV3pS5rxXTqMQcjzvKRq6hq33XQprjszrftP4QSJ/XL/_OLY1830-Edit-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-sr9WMcn/3/NDV3pS5rxXTqMQcjzvKRq6hq33XQprjszrftP4QSJ/XL/_OLY1830-Edit-Edit-XL.jpg",
@@ -739,8 +739,8 @@ export const galleryData = [
       "historical military aircraft imagery"
     ],
 
-    "story": "The sky parts just enough.\n\nPropeller blur cuts the light, wings steady against the break in vapor. For a moment, the machine is neither hidden nor fully revealed.\n\nThen the clouds begin to gather again.",
-    "notes": "The vertical composition emphasizes ascent and revelation rather than engagement. Diffused light softens mechanical edges while preserving geometric symmetry, allowing the aircraft to read as emblematic form suspended between concealment and presence.\n\nHere, machinery does not conquer the sky — it passes through it.",
+    "story": "A shaft of light drops through the cloud, and the machine climbs it. The drone rises with it, and the cloud on either side falls away behind it.\n\nBelow, the weather is still closed. Above, there is nothing but sky, and the aircraft is going up to meet it, and the light does not come down to meet it halfway.\n\nOnce it clears the break, the clouds shut behind it, and the climb goes on into clear air.",
+    "notes": "The vertical frame puts the climb first — a small machine centered in a tall sky, a shaft of light for its direction, cloud on either side for its scale. The light shaft runs the length of the frame: it gives the aircraft somewhere to go, and the eye somewhere to follow.\n\nThe frame sends the eye up — an aircraft going through a break in the cloud, and a sky with room for the going.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -750,8 +750,8 @@ export const galleryData = [
   {
     "id": "i-kX8Wksp",
     "title": "Command Position",
-    "description": "A painterly World War II photograph capturing a tank commander elevated above armored steel at the moment of engagement. This Men & Machines Color image explores WWII Military Equipment Color through proximity and presence, balancing battle-ready machines with the human figure who guides them.\n\nRather than spectacle alone, the composition renders mechanical war art as shared responsibility — an expression of Vivid WWII Mechanized Might within wwii tanks and trucks where authority and vulnerability occupy the same position. © Wayne Heim",
-    "alt": "World War II tank commander standing in turret during engagement, viewed from low angle in painterly fine art style.",
+    "description": "A painterly World War II photograph of a tank commander manning a machine gun from the open turret of a Sherman, seen from below against a pale sky. His goggles are pushed up on his forehead, and he grins as he works the gun, the spent casings flying past him.\n\nFrom below, the man stands above the steel, the canvas tarp and the long barrel below him — a commander at his post, high in the open hatch, the sky all around him. © Wayne Heim",
+    "alt": "World War II tank commander with goggles pushed up on his forehead, grinning as he manns a machine gun from the open turret of a Sherman tank, spent shell casings flying, seen from a low angle against a pale sky.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-kX8Wksp/3/MK9cS3XLqdxgp66SX88CsVSphRJjGQLcpbws5wBwQ/XL/_OLY2745-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-kX8Wksp/3/MK9cS3XLqdxgp66SX88CsVSphRJjGQLcpbws5wBwQ/XL/_OLY2745-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-kX8Wksp/3/MK7jDWSD5HgWZfSH7WhKtkjmPrrLJ8V5ftSndSbBm/L/_OLY2745-L.jpg",
@@ -771,8 +771,8 @@ export const galleryData = [
       "historical armored vehicle imagery"
     ],
 
-    "story": "He rises above the armor, exposed to sky and consequence.\n\nBelow him, steel answers to his direction. Around him, the horizon waits to respond.",
-    "notes": "The low vantage point emphasizes elevation and exposure — the commander visually separated from the mass of armor beneath him. The painterly restraint softens mechanical detail while preserving structural geometry, allowing the human figure to function as both focal point and axis of force.\n\nHere, machinery amplifies authority — but does not replace it.",
+    "story": "The bursts come short, and each one cracks through the quiet below the turret, a quiet he has learned not to trust.\n\nHe grins, and the grin is not for the camera. His hands have stopped asking the gun to work and started letting it work — the brass stops being a count, and starts being a sound, and the grin comes with that.\n\nThe belt will run dry, and the grin will go down with it. His hands will have to find something else to do, and the silence underneath will close back over him.",
+    "notes": "The low angle sets the commander above the armor — a man at his gun, grinning, the canvas tarp and the long barrel below him. The gun and the man share the top of the frame, and the tarp and the barrel hold the bottom — the composition gives the man the height and the machine the ground.\n\nThe grin carries the frame — a commander who looks like he is enjoying the work, with the sky all around him and the steel under his hands.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -787,8 +787,8 @@ export const galleryData = [
   {
     "id": "i-pd3hvNk",
     "title": "The Recoil",
-    "description": "A painterly World War II photograph capturing the precise moment after artillery discharge, when motion reverses and force settles. This Men & Machines Color image explores WWII Military Equipment Color through atmosphere and structural clarity, centering wwii tanks and trucks within open terrain and sky.\n\nRather than spectacle, the composition studies battle-ready machines as mechanical war art and Vivid WWII Mechanized Might — emphasizing recoil, consequence, and the quiet reset between commands. © Wayne Heim",
-    "alt": "World War II tank firing with visible smoke plume and recoil, captured in painterly fine art style against open sky.",
+    "description": "A painterly World War II photograph of a Sherman tank named GOLDEN firing its main gun, a great white cloud of smoke billowing from the muzzle against a pale sky. A soldier mans the machine gun from the open turret, and two men crouch at the frame’s right edge, watching the shot go.\n\nThe smoke takes the top of the frame, and the tank holds the ground below it — a single shot, a rising cloud, and a crew already past it. © Wayne Heim",
+    "alt": "World War II Sherman tank firing its main gun, a large white smoke plume rising from the muzzle, a soldier in the open turret and two men at the right edge, against a pale sky.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-pd3hvNk/3/LwvMTsr3H6qRJbsxfNMCw5fjf7BkhsXSv37mM8tXL/XL/_OLY2790-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-pd3hvNk/3/LwvMTsr3H6qRJbsxfNMCw5fjf7BkhsXSv37mM8tXL/XL/_OLY2790-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-pd3hvNk/3/Mzfnt6bWnFNFBTFpzGPwqkQHkDQ9jwr3wS94XKXjr/L/_OLY2790-L.jpg",
@@ -808,8 +808,8 @@ export const galleryData = [
       "historical armored vehicle imagery"
     ],
 
-    "story": "The shot leaves the barrel.\n\nSteel shifts backward, smoke blooms outward, and the ground absorbs what the sky has already heard.\n\nThen everything steadies again.",
-    "notes": "The visual tension lies not in the ignition but in the return — the slight backward shift of steel, the rounded smoke form expanding into open air, the grounded stability of the chassis beneath it. The painterly restraint allows negative space and sky to carry weight equal to the machine itself.\n\nHere, power is measured not only in force delivered, but in what remains afterward.",
+    "story": "GOLDEN is painted on the hull in white. None of them remembers who chose the word, and none of them will ask — the name was there before the shot, and it will be there after it.\n\nThe shot is gone, and the sound is still in the crew’s chests, and the man in the turret does not look at the smoke. He is already counting to the next round.\n\nThe smoke will thin, and the two men at the edge will be there when it does, and the name on the hull will outlast the smoke.",
+    "notes": "The smoke cloud takes as much of the frame as the tank — a white round mass rising over a low olive hull, with the soldier in the turret and the two men at the edge giving it a scale. GOLDEN, painted on the hull, marks the tank as a crew’s tank — the one word in the picture, and the one the crew chose.\n\nA buyer carries the smoke out of the room — the biggest white shape in the series, and the one that rises.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -824,8 +824,8 @@ export const galleryData = [
   {
     "id": "i-ttDPKwH",
     "title": "Armor in the Haze",
-    "description": "A painterly World War II fine art photograph depicting armored forces emerging through drifting dust and atmosphere. Emphasizing restraint over spectacle, the image explores the relationship between man and machine—where battle-ready machines carried not only firepower but the weight of responsibility. Light, texture, and composition evoke the visual language of historical wartime imagery while transforming documentation into narrative fine art. Part of Wayne Heim’s Facing History fine art photography series. © Wayne Heim",
-    "alt": "WWII tank crew advancing through dust haze — painterly military fine art photography",
+    "description": "A painterly World War II photograph of a 704 TD tank destroyer in dust haze, its open-top turret carrying two crewmen above the armor. The long gun points into a pale, dusty sky, and the hull’s white star and B-12 marking stand out against the haze.\n\nThe dust blurs the tank’s edges and leaves the crew exposed — a tank destroyer without a roof, and two men riding it through weather they cannot see past. © Wayne Heim",
+    "alt": "World War II 704 TD tank destroyer with an open-top turret, two crewmen above the armor, a long gun, a white star and B-12 marking on the hull, in dust haze under a pale sky.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-ttDPKwH/4/NHBGzGhQvT3PLkxf2rNRB7vwP65rskh37x2ZnJNcW/XL/_OLY2994-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-ttDPKwH/4/NHBGzGhQvT3PLkxf2rNRB7vwP65rskh37x2ZnJNcW/XL/_OLY2994-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-ttDPKwH/4/NT82LcBJGGkFr7RfF3sdctcKzLZrnzLsv8KjLdHXp/L/_OLY2994-Edit-L.jpg",
@@ -843,8 +843,8 @@ export const galleryData = [
       "vivid WWII mechanized might"
     ],
 
-    "story": "The tank moves forward through dust and memory, its presence felt before its sound. Faces rise above the armor, scanning a horizon that offers no certainty—only duty. In this suspended moment between movement and consequence, steel and human resolve advance together into the unknown.",
-    "notes": "This image draws on the visual tradition of mid-century wartime photography, where atmosphere often softened the boundary between documentation and memory. The dust veil becomes both environmental reality and metaphor—obscuring certainty while emphasizing forward motion. The restrained palette and compositional balance echo classical military imagery while positioning the work within contemporary narrative fine art photography, emphasizing endurance and human presence within mechanized warfare.",
+    "story": "The turret has no roof, and the dust comes in over the top, and the two men up there have learned to keep their mouths shut when the wind turns.\n\nThe gun points at a haze that has no edge to it, and the haze gives them nothing to aim at, and nowhere to hide. The driver below them keeps the tank slow, and the dust does the rest, and the two men up top ride it out.\n\nThe haze will thin, and the dust will be in their teeth, and their clothes, and the gun’s breech — and the tank will go on.",
+    "notes": "The open top sets this frame apart — no roof over the turret, the two crewmen riding above the armor in the dust, the long gun out in front of them. The haze takes the background out of the picture, and the tank and the men fill what is left.\n\nThe openness earns the wall — a crew riding with no roof over them, and the dust, and the sky, all in the same picture.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -859,8 +859,8 @@ export const galleryData = [
   {
     "id": "i-TGwqTRB",
     "title": "Shock Through Silence",
-    "description": "A painterly World War II fine art photograph capturing a tank crew advancing under fire, rendered with restrained tonal control and atmospheric depth. The explosion blooms into dust rather than spectacle, emphasizing presence and endurance over chaos. Part of Wayne Heim’s Facing History series, this work explores the relationship between men and machines—where battle-ready machines carried consequence as much as force. The softened palette and textured finish echo archival wartime imagery while transforming mechanical war art into narrative fine art. © Wayne Heim",
-    "alt": "WWII tank advancing through explosion and dust — painterly mechanical war art",
+    "description": "A painterly World War II photograph of a 704 TD tank destroyer on a sandy road, a huge explosion cloud billowing behind and above it. The tank’s long gun points down the road, and a soldier crouches at the frame’s right edge, rifle up, while the smoke rises over the trees and a barn.\n\nThe blast belongs to the background, not the tank — the machine rolls on under a cloud it did not make, and the man at the edge watches it go. © Wayne Heim",
+    "alt": "World War II 704 TD tank destroyer on a sandy road, a large explosion smoke cloud billowing behind and above it, a white star on the hull, a soldier crouching at the right edge, trees and a barn behind.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-TGwqTRB/5/LQD9PznV6PfJTkmzTZhppBphSfXtcC98pd9s9Vr8q/XL/_OLY3066-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-TGwqTRB/5/LQD9PznV6PfJTkmzTZhppBphSfXtcC98pd9s9Vr8q/XL/_OLY3066-Edit-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-TGwqTRB/5/LvMwhTZdnNX7zZjGXW5Df4QNL6ZS7WTbx5MSLmMdV/L/_OLY3066-Edit-Edit-L.jpg",
@@ -878,8 +878,8 @@ export const galleryData = [
       "vivid WWII mechanized might"
     ],
 
-    "story": "The blast erupts, but the world does not shatter.  \nDust swallows the violence almost as quickly as it forms, turning thunder into breath. Steel answers, men brace, and forward motion resumes as if interruption were simply part of the rhythm.",
-    "notes": "This image balances kinetic force with painterly restraint. The explosion functions compositionally as a tonal counterweight rather than a dramatic centerpiece, allowing the eye to move through the frame instead of stopping at impact. By diffusing the blast within atmospheric haze, the work aligns more closely with mid-century documentary war photography and classical compositional discipline than modern spectacle-driven imagery. The emphasis remains on endurance and forward motion—the psychological weight of mechanized warfare rather than its theatrics.",
+    "story": "The blast goes off behind the tank, not from it. The tank does not stop, and does not turn, and the smoke rises over it and keeps rising.\n\nThe man at the edge is down on one knee, and his rifle is up, and he is not looking at the smoke. He is looking at the tank, because the tank is still moving, and the smoke has already done what it came to do.\n\nThe sound of the blast will reach the tank’s crew after the smoke has already risen, and by then the tank will be past the road, and the man at the edge will not have moved.",
+    "notes": "The explosion fills the top half of the picture — a huge white cloud, with the tank rolling under it and the soldier crouched at the edge giving it a scale. The blast belongs to the background, and the tank is only passing through it — the machine did not make the fire, and it does not stop for it.\n\nThe eye keeps coming back to the cloud — the biggest blast in the series, over a tank that keeps rolling and a man who stays down.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -894,8 +894,8 @@ export const galleryData = [
   {
     "id": "i-S4sbv3n",
     "title": "Ghosts in the Smoke",
-    "description": "A painterly World War II fine art photograph emerging from smoke and drifting powder, where men and machines appear as layered silhouettes rather than spectacle. The atmosphere softens the machinery, transforming battle-ready machines into shapes of memory and endurance. Part of Wayne Heim’s Facing History series, this work explores mechanical war art through restraint—allowing WWII tanks and trucks to dissolve into tone, texture, and consequence rather than action. The archival palette and aged finish echo historical wartime imagery while elevating the scene into narrative fine art photography. © Wayne Heim",
-    "alt": "WWII tank and crew emerging through heavy smoke — painterly mechanical war art",
+    "description": "A painterly World War II photograph of a 704 TD tank destroyer coming through heavy smoke, its white star in a circle the clearest mark in the frame. Two crewmen stand in the open turret, half-seen through the smoke, and the tank’s hull and gear show through the haze below them.\n\nThe portrait frame crowds the smoke in, and the star sets the bottom — a tank destroyer and its crew coming clear of a cloud that has not yet lifted. © Wayne Heim",
+    "alt": "World War II 704 TD tank destroyer emerging through heavy smoke, two crewmen in the open turret, a white star in a circle on the hull, in a vertical frame.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-S4sbv3n/3/Lrw95Qwmx9cZks6rNTXbx8W2NHdX4LhhXnLF7Cfzz/XL/_OLY3071-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-S4sbv3n/3/Lrw95Qwmx9cZks6rNTXbx8W2NHdX4LhhXnLF7Cfzz/XL/_OLY3071-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-S4sbv3n/3/Lrw95Qwmx9cZks6rNTXbx8W2NHdX4LhhXnLF7Cfzz/XL/_OLY3071-XL.jpg",
@@ -913,8 +913,8 @@ export const galleryData = [
       "vivid WWII mechanized might"
     ],
 
-    "story": "The blast has already passed.  \nWhat remains is movement without certainty—figures half-seen through powder and heat. Steel looms, but it is the human silhouette that lingers, suspended between presence and disappearance.",
-    "notes": "This composition leans into atmospheric abstraction, allowing smoke to function as both physical element and narrative veil. The machinery becomes secondary to tonal mass and silhouette, echoing mid-century war photography where clarity was often sacrificed to environment. By muting detail and emphasizing presence, the image shifts focus from combat spectacle to psychological residue—the way memory retains form but loses sharp edges. It stands as one of the quieter yet more interpretive works within the mechanized series.",
+    "story": "The star holds in the smoke when nothing else does. It is painted on the hull in white, and the white holds, and the rest of the tank — the turret, the men, the hull — goes soft behind it.\n\nThe men breathe the smoke in, and the smoke is in their eyes, and they do not rub at them. The tank keeps going, and the star holds, and the smoke does not lift.\n\nThe smoke will lift, and the star will be there, and the two men will come clear of it.",
+    "notes": "The smoke hides the tank, and the star shows it — a white star in a circle at the bottom, sharp against a frame full of haze, with two crewmen above it half-lost in the cloud. The portrait format keeps the smoke tall, and the star gives the eye a place to land.\n\nThe star anchors the frame — the one sharp mark in a field of smoke, and the reason the tank is still in the picture.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -929,8 +929,8 @@ export const galleryData = [
   {
     "id": "i-65Xkcpk",
     "title": "Forward Under Fire",
-    "description": "A painterly World War II fine art photograph capturing an armored advance amid smoke and recoil, where battle-ready machines push forward through dust and uncertainty. Emphasizing motion and resolve rather than spectacle, this image reflects the disciplined power of WWII tanks and trucks and the human decisions carried within them. Part of Wayne Heim’s Facing History series, the work explores mechanical war art through atmosphere, light, and historical restraint, transforming military machinery into narrative-driven fine art photography rooted in service, consequence, and endurance. © Wayne Heim",
-    "alt": "WWII tank advancing through smoke and dust under fire — mechanical war art photograph",
+    "description": "A painterly World War II photograph of a Sherman in the instant its muzzle flash bursts into flame, the orange fire lighting the smoke around the tank. The tank’s long gun points across the frame, and a soldier works the machine gun on the turret while the smoke billows behind.\n\nThe fireball burns at the frame’s center, and the smoke fills the rest of it — the flash still on the gun, and the dust already rising. © Wayne Heim",
+    "alt": "World War II Sherman tank firing, a bright orange muzzle flash bursting from the gun, a soldier working a machine gun on the turret, smoke billowing around the tank.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-65Xkcpk/4/LG6qNKttJxpWCVm5jH8nrmxdjGLh8cL8FNp3kNdvR/XL/_WHK2138-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-65Xkcpk/4/LG6qNKttJxpWCVm5jH8nrmxdjGLh8cL8FNp3kNdvR/XL/_WHK2138-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-65Xkcpk/4/KFtvg6Cw9CFmq7gJT8SJQ3qjTwpVwcsRZ2fvsqkgt/L/_WHK2138-Edit-L.jpg",
@@ -948,8 +948,8 @@ export const galleryData = [
       "vivid WWII mechanized might"
     ],
 
-    "story": "Dust rises before the sound fully fades.  \nSteel moves forward without hesitation—crews committed to motion, knowing that stopping was often the greater danger. In war, momentum was survival.",
-    "notes": "This image emphasizes forward motion as compositional structure. The tank’s advance anchors the frame while smoke and dust soften the environment, creating a tension between mechanical certainty and atmospheric instability. The restrained palette and painterly tonality reference mid-century wartime imagery while shifting the scene from documentation toward interpretation, positioning the machine not as spectacle but as an instrument of duty moving through uncertainty.",
+    "story": "The fireball lights the whole frame for a fraction of a second, and the smoke takes the color and keeps it. The tank is inside the light, and the light does not stay.\n\nThe gunner is working the breech, and his hands do not wait for the smoke to thin. The loader has his hand on a shell, and the shell is cold, and the road ahead is dust.\n\nThe tank will be down the road before the smoke has finished rising, and the dust will keep the color a little longer.",
+    "notes": "The fireball leads the frame — a burst of orange at the gun’s mouth, with the smoke already wrapping the tank and the soldier on the machine gun still at his post. The Sherman fills the lower half of the picture, and the fireball fills the top, and the two halves meet at the barrel.\n\nPut it next to the smoke-cloud Sherman and the pair tells the whole shot — the flash, then the cloud, and a crew that does not wait for either.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -964,8 +964,8 @@ export const galleryData = [
   {
     "id": "i-LbnS49s",
     "title": "The Crossing",
-    "description": "A painterly World War II fine art photograph capturing soldiers at the threshold of landing—suspended between water and war. Emphasizing human resolve over spectacle, the composition focuses on posture, atmosphere, and the psychological weight of advance. While part of Wayne Heim’s broader exploration of mechanical war art and WWII military history, this image centers on men before machines—where battle-ready forces carried duty long before engagement began. Light, restraint, and compositional discipline transform the moment into narrative fine art rooted in service, consequence, and memory. © Wayne Heim",
-    "alt": "WWII soldiers stepping off landing craft ramp — painterly war photography",
+    "description": "A painterly World War II photograph of soldiers waiting in a landing craft with its ramp down, two U.S. Navy sailors at the craft’s sides — one holding the line, one with his arm raised to signal — and the sea and a cloudy sky around them.\n\nThe ramp is down and the men are still aboard, the sailors holding the craft steady between the ship and the shore — a landing not yet begun, and a crew that knows the step is coming. © Wayne Heim",
+    "alt": "World War II soldiers waiting in a landing craft with the ramp down, two U.S. Navy sailors at the sides, one with his arm raised to signal, the sea and a cloudy sky around them.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-LbnS49s/1/LxsCQ5xFDwcXSwwSQqRGbLgw8JFFg6D5hGbKr7W6W/XL/_PEN0791-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-LbnS49s/1/LxsCQ5xFDwcXSwwSQqRGbLgw8JFFg6D5hGbKr7W6W/XL/_PEN0791-Edit-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-LbnS49s/1/KS5jwftt8F6FJhd7zkgZsBhf2rhFvQjXrq6tzSfQq/L/_PEN0791-Edit-2-L.jpg",
@@ -979,11 +979,11 @@ export const galleryData = [
       "men and machines color",
       "mechanical war art",
       "battle-ready machines",
-      "history's greatest conflicts"
+      "history’s greatest conflicts"
     ],
 
-    "story": "The ramp lowers and hesitation has no place to stand.  \nBetween sea and shore, between training and consequence, men move forward because the order has already been given. In this narrow threshold, history waits only a step away.",
-    "notes": "This image draws upon the visual structure of classic wartime reportage, where transitional moments carried more emotional weight than combat itself. The lowered ramp creates a literal and compositional threshold, dividing safety from inevitability. By emphasizing stance, gesture, and directional movement rather than chaos, the work aligns with historical military photography while shifting toward interpretive fine art. It stands as a human anchor within the mechanized WWII series—placing resolve before machinery and consequence before spectacle.",
+    "story": "The man on the left holds the line, and the line runs back to the ship, and the ship is already turning away.\n\nThe man on the right has his arm up, and the soldiers are watching the arm, and the arm has not come down yet.\n\nThe arm will come down, and the first man will step off, and the line will let go of the ship, and the sea will take the sound of the ramp with it.",
+    "notes": "Two sailors run the frame — one with the line, one with the arm up — and the soldiers stand between them, waiting on both. The ramp is down, the sea is at the craft’s side, and the sky is dark enough to make the wait feel longer than it is.\n\nA visitor reads the two sailors first, then the row of men behind them — and the picture does not let go until the arm comes down.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -993,8 +993,8 @@ export const galleryData = [
   {
     "id": "i-BNVxGWx",
     "title": "Orders Over Water",
-    "description": "A painterly World War II fine art photograph capturing soldiers in transit across open water, suspended between preparation and engagement. Emphasizing human presence over machinery, the composition focuses on posture, compression, and directional movement. Though part of Wayne Heim’s broader exploration of mechanical war art and WWII military history, this image centers on men before machines—where battle-ready forces carried instruction, responsibility, and resolve long before contact. The restrained palette and atmospheric treatment echo historical wartime imagery while elevating the moment into narrative fine art photography grounded in service and consequence. © Wayne Heim",
-    "alt": "WWII soldiers riding landing craft across open water — painterly war photography",
+    "description": "A painterly World War II photograph of a landing craft crossing open water, its soldiers leaning on the rail and looking forward, a U.S. Navy sailor standing at the stern with his arm out toward the horizon. A machine gun is mounted on the craft, and thick ropes coil on the bow, and the gray sea runs to the horizon under a cloudy sky.\n\nThe men are low in the craft and the sailor is high, and the water is all around them — a crossing still in the open, with the shore not yet in sight. © Wayne Heim",
+    "alt": "World War II soldiers in a landing craft crossing open water, leaning on the rail and looking forward, a U.S. Navy sailor standing at the stern with his arm out, a machine gun mounted on the craft.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-BNVxGWx/1/Lh7sQDMPcnB66L28sHHPgfmzgQBBDPTppHrRzRCfD/XL/_PEN0871-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-BNVxGWx/1/Lh7sQDMPcnB66L28sHHPgfmzgQBBDPTppHrRzRCfD/XL/_PEN0871-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-BNVxGWx/1/KFGkpLbq6MS6fJNxhsTVStMjwrjrCFb2mvLCqNXkd/L/_PEN0871-Edit-L.jpg",
@@ -1011,8 +1011,8 @@ export const galleryData = [
       "mechanical war art"
     ],
 
-    "story": "The shoreline is not yet visible, but the order has already been given.  \nMen sit shoulder to shoulder with salt spray and silence, carried forward by command rather than certainty. The sea offers no reassurance—only distance closing.",
-    "notes": "This work draws from the compositional tradition of wartime transport imagery, where tension resides not in action but in anticipation. The open water functions as negative space—an expanse that heightens psychological compression within the vessel. By prioritizing faces, stance, and directional momentum, the image shifts focus from spectacle to inevitability. It strengthens the series’ narrative arc by portraying the moments of obedience and forward motion that preceded mechanized engagement.",
+    "story": "The sailor stands while the soldiers lean on the rail, and his arm is out toward the horizon, and the soldiers are not looking at the arm.\n\nThe men on the rail have their hands on the steel, and the steel is cold, and the sea is under them, and the shore is not there yet.\n\nThe sailor will keep his arm out until the shore shows, and the men on the rail will stand, and the craft will find the sand, and the sea will be behind them.",
+    "notes": "The standing sailor holds the frame up — high at the stern with his arm out, while the men stay low on the rail and the machine gun and the coiled ropes hold the craft’s edges. The open water takes the whole background, and the craft rides it, low and gray, with the shore nowhere in sight.\n\nIs the shore closer than it looks, or is the sailor pointing at a horizon the men cannot see yet?",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1022,8 +1022,8 @@ export const galleryData = [
   {
     "id": "i-HwgrDkM",
     "title": "Between Shores",
-    "description": "A painterly World War II fine art photograph capturing soldiers aboard a landing craft crossing open water toward an uncertain shore. Emphasizing atmosphere, posture, and collective resolve over spectacle, the composition centers on the human threshold before engagement. Muted tonal transitions and restrained color echo historical wartime imagery while elevating the scene into narrative fine art. © Wayne Heim",
-    "alt": "WWII soldiers standing aboard landing craft crossing open water toward shore — painterly war photography",
+    "description": "A painterly World War II photograph of a landing craft marked PA28-16, seen from a distance as it crosses open water, a line of soldiers along its rail and a sailor standing at the stern. The gray hull carries a diamond insignia and a U.S. flag, and the sea and a cloudy sky take up most of the frame around the small craft.\n\nThe craft is small against the water, and the water is all around it — a single boat on a wide sea, and no land in the picture. © Wayne Heim",
+    "alt": "World War II landing craft marked PA28-16 crossing open water, soldiers along the rail and a sailor standing at the stern, a diamond insignia and a U.S. flag on the hull, the sea and a cloudy sky around the small craft.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-HwgrDkM/1/M9z4njr5FmvsJmS7kwKxxMzG46sNjCn7kF5dWKddz/XL/_PEN0875-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-HwgrDkM/1/M9z4njr5FmvsJmS7kwKxxMzG46sNjCn7kF5dWKddz/XL/_PEN0875-Edit-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-HwgrDkM/1/M4SGdD68ZnCrQGRNfcK4zRpd8qKZkBQdm5n7g68rc/L/_PEN0875-Edit-Edit-L.jpg",
@@ -1040,8 +1040,8 @@ export const galleryData = [
       "history's greatest conflicts"
     ],
 
-    "story": "The shoreline lies somewhere ahead, unseen but inevitable.  \nMen stand shoulder to shoulder, suspended between departure and arrival, between memory and mandate.\n\nThe sea offers no promise—only distance closing.",
-    "notes": "This image focuses on transition rather than combat. The open water functions as negative space, amplifying the compression of figures within the vessel. By emphasizing stillness and directional movement, the work aligns with historical wartime photography while shifting toward interpretive fine art. It serves as a narrative bridge within the series—placing the viewer in the psychological space between safety and inevitability.",
+    "story": "From this far away, PA28-16 reads larger than the men — white numbers on gray steel, the most legible thing on the water. The men are smaller than the number, and the craft is smaller than the sea, and the sea runs to the horizon without stopping.\n\nThe men look forward, and the looking takes all their attention. The sailor at the stern stands, and the water keeps coming at the hull whether anyone is working or not.\n\nThe shore is ahead, and the craft is going to it, and the number on the hull will be PA28-16 when it gets there.",
+    "notes": "The distance sells this one — a small gray craft in a wide sea and a wide sky, the number PA28-16 the clearest thing on it, and a line of soldiers along the rail, and the sea runs straight to the horizon behind them. The diamond and the flag give the craft its color, and the color is small against the gray.\n\nThe frame gives the sea the room, and the craft the number, and the men the rail — and nothing else.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1051,8 +1051,8 @@ export const galleryData = [
   {
     "id": "i-NdnMjDd",
     "title": "Holding the Line at Sea",
-    "description": "A painterly World War II fine art photograph capturing a soldier standing watch aboard a landing craft as it moves across open water. Emphasizing vigilance over spectacle, the composition centers on posture, restraint, and the quiet tension before engagement. Part of Wayne Heim’s exploration of mechanical war art and WWII military equipment color, the image reflects the relationship between men and machines—where battle-ready forces carried discipline long before contact. Rendered with cinematic atmosphere and historical sensitivity, the work transforms wartime transit into narrative fine art grounded in service and consequence. © Wayne Heim",
-    "alt": "WWII soldier standing watch on landing craft at sea — painterly mechanical war art photography",
+    "description": "A painterly World War II photograph taken from behind a soldier manning a machine gun on a landing craft at sea — a steel gun shield at the gun's side, a U.S. flag flying above him, and the gray sea running to the horizon under a cloudy sky. Another craft is a small shape on the water far behind him.\n\nThe gun points out over the water, and the man has his back to the camera — a watcher with a weapon, and a flag and a distant craft for company. © Wayne Heim",
+    "alt": "World War II soldier seen from behind, manning a machine gun on a landing craft at sea, a steel gun shield beside the gun, a U.S. flag flying above him, and another craft far off on the gray sea under a cloudy sky.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-NdnMjDd/1/Kx6HwP4dhvv7dx4j3K4xqwRwtC3Sjnpf3LGQ6K2xK/XL/_PEN0163-Edit-Edit-3-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-NdnMjDd/1/Kx6HwP4dhvv7dx4j3K4xqwRwtC3Sjnpf3LGQ6K2xK/XL/_PEN0163-Edit-Edit-3-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-NdnMjDd/1/KMkQM4qtwHprvWhBDLmbmVJxJjWSSqmbDdx36Ljss/L/_PEN0163-Edit-Edit-3-L.jpg",
@@ -1069,8 +1069,8 @@ export const galleryData = [
       "vivid WWII mechanized might"
     ],
 
-    "story": "The horizon offers nothing but distance.  \nMen steady themselves against salt and steel, eyes forward, orders unchanged. Between open water and unseen shore, the line holds.",
-    "notes": "This image emphasizes psychological vigilance rather than combat action. The soldier’s stance anchors the composition while open water functions as expansive negative space, reinforcing isolation and responsibility. The restrained tonal palette references mid-century wartime imagery while shifting toward interpretive fine art. Within the Facing History series, it serves as a study in discipline—where tension resides not in gunfire, but in readiness.",
+    "story": "His back is to us, and the gun is in front of him, and the shield stands between the two — a wall of steel that lets the barrel through and nothing else. The flag snaps above him, and the sea is under him, and the gun has not fired yet, and no one on the craft is in a hurry for it to.\n\nHe is watching the water, and the water is watching back, and neither one of them has anything to say. The other craft on the horizon is small enough to cover with a thumb, and it is coming, and it is not coming fast.\n\nWhen the land comes up, the gun will be pointing at the water, and his back will be to us, and the flag will be snapping in the wind above him.",
+    "notes": "The back makes the picture — a soldier seen from behind at a machine gun, the barrel out over the water, the steel shield at his side, and the flag above him doing the color work for the whole frame. The sea is gray and the sky is gray, and the flag is red and white and blue against both.\n\nRed and white and blue over a gray sea, with a man at a gun under it and another craft on the horizon.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1080,8 +1080,8 @@ export const galleryData = [
   {
     "id": "i-S3XQ9VZ",
     "title": "The Narrow Passage",
-    "description": "A painterly World War II fine art photograph depicting soldiers packed tightly within a landing craft advancing toward shore. Rendered with cinematic restraint and subdued tonal control, the image emphasizes collective presence and psychological tension rather than spectacle. The compressed composition heightens anticipation, capturing the human dimension of war in the moments before action unfolds. Part of Wayne Heim’s Facing History series. © Wayne Heim",
-    "alt": "Painterly World War II photograph of soldiers standing closely together inside a landing craft moving toward shore, captured with cinematic light and restrained historical atmosphere.",
+    "description": "Looking down into a landing craft packed tight with soldiers, a painterly World War II photograph — steel helmets filling the frame, some marked with a red diamond five or a white twenty-one, rifles held upright between the men, backpacks on their shoulders, the craft's rail across the top and a strip of gray sea beyond it.\n\nHelmets and rifles fill the frame, and the men are pressed too close to turn — a crowd in a steel box, with the water at the top of the picture and the shore still out of sight. © Wayne Heim",
+    "alt": "World War II soldiers packed tight in a landing craft, seen from above, steel helmets with red diamond and twenty-one markings, rifles held upright, backpacks on their shoulders, the craft's rail and a strip of sea at the top.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-S3XQ9VZ/1/LVGbfzbrHsNxQJPXhVWXpB2B5zjfCc94JgGtfzb33/XL/_PEN0288-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-S3XQ9VZ/1/LVGbfzbrHsNxQJPXhVWXpB2B5zjfCc94JgGtfzb33/XL/_PEN0288-Edit-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-S3XQ9VZ/1/NNJ5phRrJmFcmMHFXGRnjJcfr534QLknNqJfdtkN9/L/_PEN0288-Edit-2-L.jpg",
@@ -1102,8 +1102,8 @@ export const galleryData = [
       "cinematic historical photography"
     ],
 
-    "story": "There is no room to turn back here. Shoulder presses against shoulder as the craft moves forward, carrying each man toward a future already decided but not yet seen. No speeches, no heroics — only breath, weight, and waiting. In this confined space, courage is quiet, shared in silence as the distance to shore slowly disappears.",
-    "notes": "This work uses compression as narrative, a compositional approach rooted in historical battle painting where proximity intensifies emotional presence. The tight framing removes spectacle and places the viewer within the shared space of the soldiers, emphasizing collective fate over individual heroism. Restrained color and controlled light reinforce the transitional moment — a passage defined not by action, but by the certainty that action is imminent.",
+    "story": "From above, you count helmets, not men — a field of steel pots, and the numbers painted on them tell one from the next, when you can read them. A five on one, a twenty-one on another, and the rest too close together to read.\n\nThe rifles stand upright between them, and the barrels keep their line while every man is bent a little under his pack, and the packs have nowhere to go but down on a man's shoulders.\n\nThe ramp is still up. The sea shows as a strip at the top of the frame. Once the ramp is down, the helmets will scatter, and the numbers will go with them.",
+    "notes": "The overhead view sets this one apart — a crowd seen from above, with the helmets standing in for faces. The numbers on them do the naming, a five here and a twenty-one there, and the rifles stand upright between the men, and the barrels hold a line the men cannot.\n\nThe men are packed too close to turn, and the water is still between them and the shore.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1113,8 +1113,8 @@ export const galleryData = [
   {
     "id": "i-X6D266B",
     "title": "Eyes on the Horizon",
-    "description": "A painterly World War II fine art photograph capturing soldiers aboard a landing craft as they approach shore. Rendered with cinematic restraint and subdued tonal control, the image emphasizes expression, posture, and quiet anticipation rather than spectacle. The composition centers on gaze and direction, highlighting the psychological moment before arrival. Part of Wayne Heim’s Facing History series. © Wayne Heim",
-    "alt": "Painterly World War II photograph of soldiers aboard a landing craft looking toward the horizon, captured in cinematic light with restrained historical atmosphere.",
+    "description": "A painterly World War II photograph, close in on soldiers aboard a landing craft — a young man in profile at the left, helmet and rifle and a mustache, his eyes fixed past the frame, and a second soldier at the right with his back to the camera, a red diamond five on his helmet and a pack on his back. A third man between them has his head bowed. The sky behind them is pale and empty.\n\nThe profile leads, and the back of the helmet answers it — two men facing opposite ways, and a bowed head between them, under a sky with nothing in it. © Wayne Heim",
+    "alt": "World War II soldiers aboard a landing craft, a young man in profile at the left and a soldier with a red diamond five on his helmet at the right with his back to the camera, a third man with his head bowed between them, a pale sky behind them.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-X6D266B/1/MdSt3HwDDqD9B85PSdLW3r4LDbvC6KM9Fn8pqVGB9/XL/_ANA4477-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-X6D266B/1/MdSt3HwDDqD9B85PSdLW3r4LDbvC6KM9Fn8pqVGB9/XL/_ANA4477-Edit-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-X6D266B/1/L8gg2Wd7RN6Mn8jfdS6f4tDWVDD7sVPWnsKqrtX43/L/_ANA4477-Edit-2-L.jpg",
@@ -1134,8 +1134,8 @@ export const galleryData = [
       "painterly war photography"
     ],
 
-    "story": "He studies the distance as if it might answer something. The shoreline remains unseen, but its presence is felt in every tightened grip and steady breath. In this narrowing stretch of water, anticipation replaces noise. What waits ahead is certain — only its shape is unknown.",
-    "notes": "This piece focuses on perception as narrative. By isolating gaze and forward motion, the image transforms anticipation into its central subject. The restrained palette and directional composition reinforce the recurring Facing History theme of transition — the quiet threshold before history asserts itself.",
+    "story": "The man in profile gives us his face, and he is not looking at us — his eyes are fixed past the edge of the frame, where the horizon ought to be.\n\nBehind him, a man with a red diamond five on his helmet turns his back to the camera, and the pack on his back takes up half the frame. Between them, a third man has his head bowed, and he is not looking at anything at all.\n\nThe horizon will come, and the profile will turn to face it, and the bowed head will come up. Until then the looking fills the time, and the three of them stay in it.",
+    "notes": "Two men, facing opposite ways, and a bowed head between them — a young man in profile at the left, sharp against a pale sky, his mustache and his helmet and his rifle all in one clean line, and his eyes past the frame. Behind him, the man with the red diamond five has his back to us, and the pack on his back is big enough to be a portrait of its own.\n\nThe pale sky leaves nothing behind them to distract from the faces.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1145,8 +1145,8 @@ export const galleryData = [
   {
     "id": "i-jwJCCdg",
     "title": "Held Before the Storm",
-    "description": "A painterly World War II fine art photograph capturing soldiers tightly positioned inside a landing craft moments before arrival. Rendered with cinematic restraint and controlled light, the image emphasizes touch, proximity, and psychological tension rather than spectacle. The close composition transforms gesture into narrative, highlighting the human weight carried beneath battle-ready machines. Part of Wayne Heim’s Facing History series. © Wayne Heim",
-    "alt": "Painterly World War II photograph of a soldier gripping his helmet inside a landing craft, surrounded by fellow troops in tight formation.",
+    "description": "A hand rests on a steel helmet inside a landing craft, a painterly World War II photograph — fingers spread across the crown, thumb at the rim, a red diamond five on the helmet's side, the chin strap hanging loose and the liner showing at the edge. Behind the helmet, a soldier's back and pack crowd in, and the light is low and the frame is dark.\n\nThe hand leads, and the helmet is under it — a touch in the dark, and a crowd pressed close on every side. © Wayne Heim",
+    "alt": "World War II soldier's hand resting on a steel helmet with a red diamond five marking inside a landing craft, the chin strap hanging loose, a soldier's back and pack crowding in behind, dim light.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-jwJCCdg/1/MWSpzgTN2Fw9C5wKD3pTKF9jzfpsXvJWfgr624Gt9/XL/_PEN0411-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-jwJCCdg/1/MWSpzgTN2Fw9C5wKD3pTKF9jzfpsXvJWfgr624Gt9/XL/_PEN0411-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-jwJCCdg/1/MKxfk3WqbXBXbFzhpbgMR8QQrmBPhPVSrNs3HB9JC/L/_PEN0411-Edit-L.jpg",
@@ -1166,8 +1166,8 @@ export const galleryData = [
       "historical reenactment photography"
     ],
 
-    "story": "His hand rests against the curve of steel as if steadying more than the helmet itself. Around him, bodies press close, movement limited, breath shared. The moment hangs suspended — not yet impact, not yet chaos — only the quiet brace before everything changes.",
-    "notes": "This work centers on gesture as narrative. The hand against the helmet becomes a compositional anchor — a subtle human counterpoint to the machinery and steel that surround it. By compressing space and isolating touch, the image draws viewers into the intimate threshold before action, reinforcing the Facing History theme of transition and quiet resolve.",
+    "story": "The hand does not belong to the helmet. It comes from behind, from the man packed in behind, and it settles on the steel — fingers spread, thumb at the rim, and the weight of it saying nothing at all.\n\nThe helmet under it has a red diamond five, and the diamond catches what little light there is, and the rest of the frame is dark. The chin strap hangs loose, and the liner shows at the edge, and the hand does not move to fix either one.\n\nThe hand will lift when the ramp comes down, and the helmet will go with the man who wears it, and the diamond will go too. For now the hand stays where it is, and the steel stays under it.",
+    "notes": "A hand on a helmet, fingers spread, thumb at the rim — and the red diamond five a spot of red in a frame gone dark. The chin strap hangs loose, the liner shows, and the pack behind crowds in so close the frame has no room for a second thought.\n\nThe hand has not let go, and the helmet is still on a man's head, and the crowd is too close to turn.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1177,8 +1177,8 @@ export const galleryData = [
   {
     "id": "i-8Sgjrk6",
     "title": "Field of Steel",
-    "description": "A painterly World War II fine art photograph capturing soldiers tightly grouped within a landing craft, their helmets forming a rhythmic field of form and repetition. Cinematic light and restrained color emphasize unity, tension, and collective movement rather than individual action. Part of Wayne Heim’s *Facing History* series exploring the human experience within moments of historical transition. © Wayne Heim",
-    "alt": "Painterly World War II photograph of soldiers packed closely together in a landing craft, helmets forming a repeating pattern under cinematic light.",
+    "description": "A painterly World War II photograph from inside a landing craft, looking forward over a crowd of soldiers — the helmets a field of steel, the nearest one large at the bottom with a red diamond five on it, rifles upright between them, packs on their backs, and a gray wall at the front with a dark gap where the ramp will drop. One man's arm reaches up toward the rail.\n\nThe helmets make a field, and the field runs to the wall — a crowd facing forward, with nowhere to go but through the gap. © Wayne Heim",
+    "alt": "World War II soldiers packed in a landing craft, seen from behind looking forward, steel helmets with red diamond five markings, the nearest helmet large at the bottom, rifles upright, one man's arm raised toward the rail, a gray wall at the front with a dark gap.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-8Sgjrk6/1/KDSwd6Zk9nL5dbhNMwpp8H6p6Bs23XgGg2zQHvMVJ/XL/_PEN0418-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-8Sgjrk6/1/KDSwd6Zk9nL5dbhNMwpp8H6p6Bs23XgGg2zQHvMVJ/XL/_PEN0418-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-8Sgjrk6/1/NQ5bs6HVwDsS857bvKgLFXBRSQLJLxDVH5vsStQvm/L/_PEN0418-Edit-L.jpg",
@@ -1200,8 +1200,8 @@ export const galleryData = [
       "narrative war imagery"
     ],
 
-    "story": "Helmets gather like a single surface, individual lives momentarily erased by shared purpose. Packed shoulder to shoulder, they move forward together — not as heroes or names, but as momentum itself. In this brief passage, war becomes collective weight, carried in silence.",
-    "notes": "This image emphasizes mass over individuality — a compositional approach rooted in history painting, where repetition and pattern communicate psychological scale. The helmets create a visual field that transforms soldiers into collective presence, reinforcing themes of shared fate and unified motion. By minimizing spectacle and focusing on structure and rhythm, the work invites prolonged viewing and reflection on the human dimension within large historical events.",
+    "story": "The helmet nearest us fills the bottom of the frame — the back of a man's head, a red diamond five on it, and nothing else. The rest of the helmets step back from it in rows, and the rows run to the ramp, a gray wall with a dark gap in it.\n\nOne man's arm is up, reaching for the rail, and the arm has room the rest of him does not. Between the helmets the rifles stand upright, and the barrels have room the men do not.\n\nWhen the ramp drops, the rows will break, and the helmets will go their separate ways. The rows hold together for now, and the diamond fives hold their place in them.",
+    "notes": "Start with the nearest helmet — big at the bottom of the frame, a red diamond five on it, and the rest of the helmets stepping back from it in rows to a gray wall. One man's arm is up, reaching for the rail, and the rifles stand upright between the helmets, the straightest lines in a crowd that has no room to stand straight.\n\nThe crowd faces a gray wall with a gap in it, and the helmets fill everything between the wall and us.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1211,8 +1211,8 @@ export const galleryData = [
   {
     "id": "i-NzVgz27",
     "title": "Signal to the Sky",
-    "description": "A painterly World War II fine art photograph capturing soldiers on the shoreline raising their helmets skyward in a moment of shared relief and reflection. Rendered with cinematic restraint and muted tonal control, the image emphasizes collective gesture and emotional aftermath rather than combat spectacle. Light, posture, and atmosphere shape a narrative rooted in survival, memory, and the quiet human moments that follow conflict. Part of Wayne Heim’s *Facing History* fine art photography series. © Wayne Heim",
-    "alt": "Painterly World War II photograph of soldiers on a beach raising helmets into the air in a moment of relief, rendered with cinematic light and restrained historical atmosphere.",
+    "description": "On a sandy beach, soldiers raise their helmets into the air — a young man in the middle with his arm up high and a laugh on his face, a net-covered helmet in his hand, and the men around him looking up at it, net-covered helmets in their hands too. Wooden hedgehog obstacles stand on the sand behind them, a concrete wall runs along the back of the beach, and a lone soldier walks in the distance. Tall grass grows at the frame's right edge.\n\nThe raised helmet leads, and the beach fills the rest — sand and obstacles and a wall, and men who have just come through them. © Wayne Heim",
+    "alt": "World War II soldiers on a sandy beach raising their net-covered helmets into the air, a young man in the middle with his arm up high, wooden hedgehog obstacles and a concrete wall behind them, a lone soldier walking in the distance, tall grass at the right edge.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-NzVgz27/2/L5PPgtfHwSNbzxdqtW4sLtbRgP93G59gcx5ssGjbF/XL/_ANA4673-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-NzVgz27/2/L5PPgtfHwSNbzxdqtW4sLtbRgP93G59gcx5ssGjbF/XL/_ANA4673-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-NzVgz27/2/L9Nw956vWV4pJfBrFj3qGdTKH5Mv3NRZqnCJNwH66/L/_ANA4673-Edit-L.jpg",
@@ -1234,8 +1234,8 @@ export const galleryData = [
       "historical reenactment photography"
     ],
 
-    "story": "Helmets rise into the air — a brief release between survival and memory. For a moment, the weight lifts, carried upward in a gesture that belongs as much to relief as to remembrance. Around them, the shore is quiet again, holding the echo of what has just passed.\n\nNo victory is shouted here. Only acknowledgment — that they endured, that they arrived, and that some moments are too large for words.",
-    "notes": "This image centers on gesture as narrative — a device frequently used in historical painting to convey meaning without explicit action. The raised helmets transform the scene from documentation into interpretation, shifting focus from conflict itself to the emotional space immediately afterward.\n\nThe open composition contrasts earlier moments of compression within the series, allowing breath and horizon to enter the frame. This transition from confinement to openness reinforces the psychological passage from danger toward survival, a defining theme within the *Facing History* body of work.",
+    "story": "The helmet goes up first, and it goes up on an arm that is still shaking — the young one in the middle, his face turned to the sky, laughing, and the laugh carries farther than the shouting did.\n\nBehind him the beach is full of hedgehogs, and the hedgehogs are empty, and a lone man walks between them in the distance, in no hurry, because the hurry is over. The grass at the edge of the frame is green, and none of them has seen green in a day.\n\nThe helmets will come down, and the men will put them back on, and the beach will go back to being a beach. The one in the air right now is still up, and it will be the last one down.",
+    "notes": "A young man in the middle holds his helmet up high, laughing, and the men around him look up at it — the helmet held up high, and the beach behind them full of hedgehogs and a wall, and a lone man walking between the obstacles in the distance, and the grass at the edge green against the sand.\n\nThe beach has just been crossed, and the wall has just been passed, and the helmet is still in the air.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1245,8 +1245,8 @@ export const galleryData = [
   {
     "id": "i-kg2nPNc",
     "title": "Carrying On",
-    "description": "A painterly World War II fine art photograph capturing soldiers advancing inland after a beach landing. Rendered with restrained cinematic light and subdued tonal control, the image emphasizes endurance, collective movement, and the quiet psychological aftermath of arrival rather than spectacle. Part of Wayne Heim’s Facing History series exploring the human dimension of history carried forward step by step. © Wayne Heim",
-    "alt": "Painterly World War II photograph of soldiers walking inland across sand after landing, captured with cinematic light and restrained historical atmosphere.",
+    "description": "A painterly World War II photograph of soldiers walking away from the camera across a sandy dune, moving inland — their backs to us, rifles slung over their shoulders, packs on their backs, and boots sandy from the beach. A twenty is stenciled on one pack, a twenty-one on a helmet, a red diamond five on another. Grass and trees rise at the top of the dune ahead of them.\n\nBack and pack and rifle, and the trees green against the sand — a column walking away from the water, and into the land. © Wayne Heim",
+    "alt": "World War II soldiers walking away from the camera across a sandy dune, their backs to us, rifles slung over their shoulders, packs on their backs, numbers stenciled on a pack and a helmet, grass and trees ahead.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-kg2nPNc/1/NQpX4hVxV3JNfmjQ83p2xLCjp6nRDwDKMPSN7nj7N/XL/_ANA4940-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-kg2nPNc/1/NQpX4hVxV3JNfmjQ83p2xLCjp6nRDwDKMPSN7nj7N/XL/_ANA4940-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-kg2nPNc/1/NQpX4hVxV3JNfmjQ83p2xLCjp6nRDwDKMPSN7nj7N/XL/_ANA4940-Edit-XL.jpg",
@@ -1266,8 +1266,8 @@ export const galleryData = [
       "facing history series"
     ],
 
-    "story": "The noise has passed, but the weight remains. Boots press forward through sand and heat, each step less about triumph than continuation. No one looks back. Whatever was left at the waterline belongs to another shore.\n\nThey move because moving forward is the only answer left.",
-    "notes": "This work centers on continuation rather than climax. By showing the soldiers from behind, the composition removes individual identity and elevates posture and direction as narrative devices. The image reflects a key Facing History theme: history is not only shaped in moments of impact, but in the quiet resolve to keep walking afterward.",
+    "story": "The numbers are stenciled on the packs and the helmets — a twenty, a twenty-one, a red diamond five. From behind, you read the numbers, and the numbers read back.\n\nTheir boots are still full of sand, and the sand comes up with every step, and the beach is still on them, following them inland. The rifles ride across their backs, and the packs ride high, and the trees at the top of the dune are green against the sand.\n\nThe trees will take them in, and the sand will fall off their boots, and the numbers will be on the packs when they come out the other side.",
+    "notes": "Five men walking away, and not one face among them — packs and rifles and boots, and a twenty on a pack, a twenty-one on a helmet, a red diamond five on another, and the boots sandy from the beach, and the trees green at the top of the dune.\n\nThe trees ahead pull them forward, and the sand behind holds their footprints, and the camera follows their backs.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1277,8 +1277,8 @@ export const galleryData = [
   {
     "id": "i-8RsnRLj",
     "title": "No Time for Hesitation",
-    "description": "A painterly World War II photograph capturing an American soldier advancing under pressure, defined by urgency rather than spectacle. Rendered with cinematic restraint and historical sensitivity, the image emphasizes motion, vulnerability, and human resolve in moments where action precedes certainty. Light and posture place the viewer inside the immediacy of wartime experience, where survival depends on forward motion alone. Part of the Facing History fine art photography series. © Wayne Heim",
-    "alt": "WWII soldier advancing across open terrain with rifle in hand, captured in cinematic painterly lighting and historical military uniform",
+    "description": "Across open ground, a soldier advances, caught mid-stride — a mustache and a steel helmet, his eyes on the camera, a rifle level in his hand at waist height, his field jacket open over a web belt and pouches, a red 1 on his sleeve. At his left, another soldier's back and pack, and at his right, a third man with his arm out. The field behind them is open and pale, and a tree line runs along the far edge.\n\nThe man in the middle leads, and the open ground runs with him — no cover, no wall, and a long way to the trees. © Wayne Heim",
+    "alt": "World War II soldier advancing across open ground, caught mid-stride, a mustache and a steel helmet, his eyes on the camera, a rifle level in his hand, a red 1 on his sleeve, another soldier's back and pack at his left and a third man at his right, an open pale field and a tree line behind them.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-8RsnRLj/1/MrrqszbHhvtFzsdw6Hw2FCPx7z3mwMWsWcGJPfmT3/XL/_PEN0995-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-8RsnRLj/1/MrrqszbHhvtFzsdw6Hw2FCPx7z3mwMWsWcGJPfmT3/XL/_PEN0995-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-8RsnRLj/1/LMLRPfGkvdFdL3VZrSv3N8cwMnjMsFg4449wpcr99/L/_PEN0995-Edit-L.jpg",
@@ -1299,8 +1299,8 @@ export const galleryData = [
       "psychological war portrait"
     ],
 
-    "story": "The order comes, but he is already moving.\n\nThere is no clean beginning to a moment like this. Sand shifts, straps pull tight against his shoulders, breath cuts short as open ground replaces cover. The body commits before the mind can measure the distance.\n\nSomewhere behind him is safety. Somewhere ahead is consequence. Hesitation belongs to another life — one that ended the instant his boot left the earth.",
-    "notes": "The composition isolates forward momentum as the central narrative device. A compressed frame and low horizon create immediacy, placing the viewer within the unstable interval between order and outcome. Rather than dramatizing battle, the image captures commitment itself — the irreversible act of stepping into exposure.",
+    "story": "He is caught mid-stride, one boot off the earth and the other still on it, and the rifle is level in his hand, and his eyes are on the camera.\n\nThe field behind him is open — no wall, no ditch, no tree close enough to hide behind. The man at his left faces the other way, and the pack on his back takes the place of a wall.\n\nThe trees are a long way off, and he will cross the ground between them one boot at a time, and the rifle will stay level, and his eyes will stay on the camera until the trees close over him.",
+    "notes": "A mustache and a steel helmet, eyes on the camera, and the rifle level in his hand at waist height — and the field behind him open and pale, with a tree line a long way off. At his left, a back and a pack, and at his right, a third man with his arm out, and the three of them moving the same way, and the ground under them all sand.\n\nThe open ground is all around him, and the trees are a long way off, and the rifle is still level, and the face is still on the camera.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1310,8 +1310,8 @@ export const galleryData = [
   {
     "id": "i-B6rBNj5",
     "title": "Beneath the Wings of War",
-    "description": "A painterly World War II aviation photograph capturing military machinery in flight, emphasizing scale, tension, and mechanical presence over spectacle. Rendered with cinematic restraint and historical sensitivity, the image explores the psychological space between mission and uncertainty, where machine and human resolve merge against an unforgiving sky. Part of the Facing History fine art photography series. © Wayne Heim",
-    "alt": "WWII military aircraft flying overhead viewed from below in cinematic painterly lighting with historical aviation detail",
+    "description": "A painterly World War II photograph of a twin-engine transport aircraft flying overhead, seen from below — the gray fuselage and the wings running diagonally across a blue sky, black and white invasion stripes banding both wings, twin propellers turning with red hubs, and a white code letter on the fuselage. The landing gear is up, and the clouds are white under the wings.\n\nThe stripes mark it, and the belly fills the frame — a transport seen from the ground, and the sky all around it. © Wayne Heim",
+    "alt": "World War II twin-engine transport aircraft flying overhead, seen from below, black and white invasion stripes on the wings, twin propellers with red hubs, a white code letter on the gray fuselage, blue sky and white clouds around it.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-B6rBNj5/2/LDmh8NWFDP8Jr83FVHm75pBxcGSMXvKLGJ8cP6HF3/XL/_PEN0383-Edit-c-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-B6rBNj5/2/LDmh8NWFDP8Jr83FVHm75pBxcGSMXvKLGJ8cP6HF3/XL/_PEN0383-Edit-c-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-B6rBNj5/2/K77bp75WS8mLwfRVrFpfqf7GFH6N9NKZTsVR5Vn68/L/_PEN0383-Edit-c-L.jpg",
@@ -1330,8 +1330,8 @@ export const galleryData = [
       "Vivid WWII Mechanized Might"
     ],
 
-    "story": "The ground disappears long before fear arrives.\n\nEngines hold a steady rhythm, drowning thought beneath vibration and wind. Below, the world shrinks into fields and water, distant enough to feel unreal, close enough to remember what waits when the mission ends. Each man aboard carries his own silence, measured not in miles but in what may not return with them.\n\nFrom the earth, the aircraft looks unstoppable. Inside, they understand how fragile momentum truly is.",
-    "notes": "The composition shifts perspective to the observer below, transforming the aircraft into both protector and instrument of consequence. Strong diagonal structure and compressed framing emphasize mass and motion while maintaining pictorial restraint. The image aligns with wartime visual traditions that elevate machinery into symbolic presence, allowing scale and atmosphere to carry narrative weight rather than action itself.",
+    "story": "The stripes were painted on the night before, in a hurry, with brushes that left the edges rough — black and white bands on the wings, so the gunners below would know the noise above them was theirs. The paint was still tacky when the engines started, and the men inside could smell it through the fuselage.\n\nFrom below, you get the belly and the wings — the part the men inside never see, and the part the gunners below saw first. The propellers turn, and the red hubs catch the light, and the engines hold their note, and the men inside hold their breath, and the two sounds do not mix.\n\nThe stripes will be there when the aircraft comes back, and the men who painted them will be on the ground, and the men inside will be on the ground too, in a field they have never seen.",
+    "notes": "The stripes tell the story — black and white bands painted on the wings for a single night, so the gunners below would know the noise above them was theirs. The aircraft fills the frame from below, belly and wings and twin propellers with red hubs, and the blue sky runs past the edges of it.\n\nFrom the ground, you see the belly, the stripes, and the sky, and nothing else in the picture to distract from any of them.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1341,8 +1341,8 @@ export const galleryData = [
   {
     "id": "i-jGXWq3f",
     "title": "Steel Leads the Way",
-    "description": "A painterly World War II photograph capturing armored military machinery advancing with deliberate force. Rendered with cinematic restraint and historical sensitivity, the image emphasizes mechanical presence and human dependence on war machines rather than spectacle. Dust, texture, and posture merge to portray the psychological and physical momentum of battlefield advance. Part of the Facing History fine art photography series. © Wayne Heim",
-    "alt": "WWII tank advancing with soldiers riding and operating mounted machine gun in painterly cinematic wartime scene",
+    "description": "A painterly World War II photograph of a Sherman tank in close-up — the round turret and the long main gun pointing left, a red triangle painted on the turret side, the code E 6130 stenciled on the turret, and two crewmen aboard: one in a black beret and headphones leaning out of the open hatch, the other standing at the rear with his hands on the .50-caliber machine gun. Dust softens the pale sky behind them.\n\nThe triangle marks the tank, and the beret marks the man — a tank and its crew, and the ground they are crossing. © Wayne Heim",
+    "alt": "World War II Sherman tank in close-up, red triangle painted on the turret side and code E 6130 stenciled on the turret, a crewman in a black beret and headphones leaning out of the open turret hatch and another in a steel helmet standing at the mounted .50-caliber machine gun, pale dusty sky behind.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-jGXWq3f/1/KdSDMMp6VmJ6kD2KtJxrRv25kDqkhrDjpBrPN7SD6/XL/_OL36216-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-jGXWq3f/1/KdSDMMp6VmJ6kD2KtJxrRv25kDqkhrDjpBrPN7SD6/XL/_OL36216-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-jGXWq3f/1/LrzBq9cn79GMkd5sFPC9ddQ8c6bLX4w2n9wbkkwS3/L/_OL36216-Edit-L.jpg",
@@ -1361,8 +1361,8 @@ export const galleryData = [
       "Vivid WWII Mechanized Might"
     ],
 
-    "story": "The machine moves first.\n\nTracks grind forward through dust and noise, carrying men who understand that armor is both shield and promise. Inside the steel shell, every vibration travels through bone and breath, a constant reminder that survival depends as much on momentum as protection.\n\nInfantry will follow. Ground will be taken. But in this moment, it is the weight of steel that breaks hesitation and turns intention into advance.",
-    "notes": "The composition balances human vulnerability against industrial mass, placing the armored vehicle as both subject and environment. Forward orientation and low visual weight emphasize inevitability rather than aggression, aligning the image with interpretive wartime traditions where machinery becomes symbolic of collective momentum. The narrative emerges from tension between protection and exposure, allowing motion and scale to carry meaning without overt dramatization.",
+    "story": "The red triangle on the turret names the tank, in a language only the crew reads — a shape painted on the side so the crew knows which steel is theirs, and so the men behind know which steel to follow. The beret leans out of the hatch, headphones on, and the man under it reads the triangle and knows it for his own.\n\nThe gunner stands at the rear, hands on the .50-cal, and the gun points at the sky while the beret looks at the ground. The beret looks down, the gunner looks out, and the tank looks forward, and the three directions do not meet.\n\nThe code on the turret, E 6130, is not a range or a count — it belongs to the tank, and the crew will paint it again when the dust takes it, and the dust will take it again.",
+    "notes": "Close in, the tank stops being a machine and starts being a crew — the beret leaning out of the open hatch, the gunner standing at the .50-cal, and the red triangle on the turret side telling anyone who reads it which steel this is. The code E 6130 is stenciled on the turret, and the dust has not taken it yet.\n\nIn close-up, the tank gives you its crew — two faces and a triangle, and no room for anything else.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1377,8 +1377,8 @@ export const galleryData = [
   {
     "id": "i-FMDBqqF",
     "title": "Guardians of the Gun",
-    "description": "A painterly World War II photograph portraying an armored crew positioned atop their vehicle in a moment of guarded stillness. Rendered with cinematic restraint and historical sensitivity, the image emphasizes the relationship between soldier and machine, where protection, responsibility, and endurance merge within the aftermath of advance. Texture, posture, and atmosphere shape a narrative rooted in vigilance rather than spectacle. Part of the Facing History fine art photography series. © Wayne Heim",
-    "alt": "WWII tank crew positioned atop armored vehicle in painterly cinematic wartime scene showing soldiers maintaining watch",
+    "description": "A painterly World War II photograph of a Sherman tank at rest in dust, seen from the front — the main gun pointing right, the code E 61206 stenciled on the hull, and four crewmen aboard in four postures: one standing with binoculars, one sitting at the turret machine gun in sunglasses, one lying flat on the hull front, and a fourth half-hidden behind the standing man. Black berets, khaki uniforms, a net-covered helmet on the turret, and a pale dusty sky.\n\nThe tank is stopped, and the crew is on it — a portrait of a crew at rest, and the dust all around them. © Wayne Heim",
+    "alt": "World War II Sherman tank at rest in dust, seen from the front, code E 61206 on the hull, four crewmen in black berets aboard — one standing with binoculars, one sitting at the turret machine gun in sunglasses, one lying flat on the hull front, and a fourth half-hidden behind the standing man, a net-covered helmet on the turret, pale dusty sky behind.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-FMDBqqF/0/MG73r6bKsKxfmQRttgVP2c7LxPfHnkSS5dhw7fMTk/XL/_O2H8754-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-FMDBqqF/0/MG73r6bKsKxfmQRttgVP2c7LxPfHnkSS5dhw7fMTk/XL/_O2H8754-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-FMDBqqF/0/LCcmWCcLxv8txGdN8QsZPtPfMPvVcjX8nTDpfn8Zz/L/_O2H8754-Edit-L.jpg",
@@ -1397,8 +1397,8 @@ export const galleryData = [
       "Vivid WWII Mechanized Might"
     ],
 
-    "story": "The engine rests, but vigilance does not.\n\nDust settles slowly across steel and canvas as the crew scans a horizon that refuses certainty. The machine beneath them carries scars of distance and weight, yet it is the men who remain alert — listening for movement, watching for the moment quiet turns again into command.\n\nVictory is never announced. It is only guarded, one watchful breath at a time.",
-    "notes": "The composition emphasizes vertical authority and quiet control, positioning the crew as custodians of both machine and moment. By removing visible combat, the image shifts attention toward sustained vigilance — a theme common in interpretive wartime imagery where endurance replaces action as the defining narrative. Steel becomes environment as much as subject, reinforcing the interdependence between human presence and mechanized power.",
+    "story": "Four men on one tank, and no two of them in the same posture — the man with the binoculars standing, the gunner sitting, the third lying flat on the hull front, and the fourth half-hidden behind the standing man, as if the tank had run out of places to put him.\n\nE 61206 is stenciled on the hull front, and the men know it without thinking about it, and never forget it. The binoculars are down, the machine gun is still, and the dust drifts where it wants.\n\nThe engine is off, and the tank does not move, and the four of them do not move either — each in his own spot, and none of them asking for another. The dust will settle on all of them by evening, and the tank will be there in the morning, and the men will be on it.",
+    "notes": "A crew at rest, and each man in his own posture — the binoculars standing, the gunner sitting in sunglasses, the third lying flat on the hull front, and the fourth half-hidden behind the standing man. The code E 61206 is stenciled on the hull front, and the dust has settled on everything but the black berets.\n\nFour men, and the dust, and a tank that is not going anywhere — the picture needs nothing else.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1413,8 +1413,8 @@ export const galleryData = [
   {
     "id": "i-rZX5GhQ",
     "title": "Seen Through the Glass",
-    "description": "A painterly World War II photograph viewed from inside a military vehicle, framing soldiers at rest beyond the windshield. Rendered with cinematic restraint and historical sensitivity, the image emphasizes perspective, distance, and quiet vigilance rather than spectacle. The composition explores the psychological boundary between observer and participant, where calm exists only as a temporary interval. Part of the Facing History fine art photography series. © Wayne Heim",
-    "alt": "WWII soldiers seated outside canvas tent viewed through vehicle windshield in painterly cinematic wartime scene",
+    "description": "A painterly World War II photograph seen from inside a jeep — the steering wheel at the bottom of the frame and the windshield framing four soldiers sitting in a loose line outside a large canvas tent, mugs in their hands, rifles leaning on a rack at the left, a steel helmet on a small table at the right. Grass under their boots, and a pale sky above the tent.\n\nThe glass frames the men, and the men fill the glass — a camp at rest, and the vehicle that brought the viewer to it. © Wayne Heim",
+    "alt": "World War II soldiers sitting in a line outside a large canvas tent, seen through a jeep windshield with the steering wheel at the bottom of the frame, mugs in hand, rifles leaning on a rack at the left, a steel helmet on a table at the right, grass underfoot.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-rZX5GhQ/5/MvHSQ75hktGHkGHXNtxQQSsZF5ZvbkBhdN3pjhHbf/XL/_W3H3947-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-rZX5GhQ/5/MvHSQ75hktGHkGHXNtxQQSsZF5ZvbkBhdN3pjhHbf/XL/_W3H3947-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-rZX5GhQ/5/LP2tts9bJtgbmMrbMf84ZWX99ngRGbgs48TkhMFmL/L/_W3H3947-Edit-L.jpg",
@@ -1433,8 +1433,8 @@ export const galleryData = [
       "Vivid WWII Mechanized Might"
     ],
 
-    "story": "The engine is off, but no one relaxes.\n\nThrough the windshield, the men sit in a loose line before the tent, boots planted, rifles within reach. Conversation drifts, pauses, resumes — not about what’s coming, but about small things that keep the air steady. The frame of the vehicle turns the moment into something observed rather than entered.\n\nFrom this side of the glass, war feels distant. On the other side, they know how quickly distance disappears.",
-    "notes": "The framing device of the windshield creates a layered composition, establishing separation while reinforcing proximity. Machine becomes vantage point rather than weapon, shifting emphasis toward observation and anticipation. The work aligns with interpretive wartime imagery that privileges atmosphere and psychological space, allowing stillness to carry narrative tension without visible action.",
+    "story": "The glass sits between us and them, and the glass does not keep the coffee warm. The coffee is going cold in the mugs, and the men do not notice, and the morning is going cold around them.\n\nThe steering wheel is at the bottom of the frame, and we are in the driver's seat. Somebody drove here, and somebody is going to drive away, and in between there is a tent, and four men, and a pot of coffee that is already cold.\n\nThe glass makes the men look further away than they are. They are close enough to hear, and the glass makes them look like a picture — the men, and the tent, and the coffee, and the grass, and nothing else in the frame but the wheel.",
+    "notes": "The windshield frames the men, and the steering wheel puts the viewer in the driver's seat — four men outside the tent, mugs in hand, rifles on the rack, and the tent behind them. The tent is large, the grass is green, and the coffee is going cold.\n\nThrough the windshield, the viewer has just driven into the camp, and the men have not noticed the glass — the mugs, the tent, and the grass, and the wheel at the bottom of the frame.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1444,8 +1444,8 @@ export const galleryData = [
   {
     "id": "i-F9HpvdL",
     "title": "Silhouettes of Duty",
-    "description": "A painterly World War II photograph capturing artillery crew and field gun silhouetted against a fading sky. Rendered with cinematic restraint and historical sensitivity, the image emphasizes form, atmosphere, and quiet vigilance over spectacle. Light reduces detail to shape, transforming machinery and men into enduring symbols of presence and responsibility. Part of the Facing History fine art photography series. © Wayne Heim",
-    "alt": "WWII artillery crew and field gun silhouetted at sunset in painterly cinematic wartime scene",
+    "description": "A painterly World War II photograph of an anti-aircraft gun and its crew in silhouette at sunset — the barrel raised high against a sky that runs from deep blue at the top to orange at the horizon, five men in dark shape around the gun, a peaked cap and helmets among them, a canvas shelter at the left, and a line of tiny figures walking on the horizon.\n\nThe light takes the faces and leaves the shapes — a gun, and its crew, and the sky. © Wayne Heim",
+    "alt": "World War II anti-aircraft gun and five crewmen in silhouette at sunset, the gun barrel raised high against a sky grading from deep blue to orange at the horizon, a canvas shelter at the left, a line of small figures walking on the horizon.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-F9HpvdL/3/LVtqcFwJMPPj6Xz8zrZchW38WTFRLvrQrTVmGnz9G/XL/_WHZ2646-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-F9HpvdL/3/LVtqcFwJMPPj6Xz8zrZchW38WTFRLvrQrTVmGnz9G/XL/_WHZ2646-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-F9HpvdL/3/KWP9X8bJBZLSQqr9TJCnbhTdcnCSKs6jR5rrRncgk/L/_WHZ2646-L.jpg",
@@ -1464,8 +1464,8 @@ export const galleryData = [
       "Vivid WWII Mechanized Might"
     ],
 
-    "story": "The sun lowers without ceremony.\n\nAgainst the fading light, the gun stands ready, its outline sharp and unyielding while the men beside it remain indistinct — figures defined more by posture than by face. Conversation is minimal. Movements are measured. Even in stillness, the shape of the weapon reminds them what the night may ask.\n\nWhen daylight leaves, duty does not.",
-    "notes": "By reducing figures and machinery to silhouette, the composition removes individual identity in favor of archetype. The artillery piece becomes both instrument and monument, its angular form cutting into the sky with quiet authority. The restrained palette and strong horizon line align the work with interpretive wartime imagery where light and mass carry narrative weight, allowing atmosphere to convey endurance rather than action.",
+    "story": "When the light goes, the faces go first. The men become shapes — a peaked cap, a helmet, a shoulder, a back — and the gun becomes a shape too, a barrel against the sky, and the shapes outlast the faces.\n\nThe barrel is raised high, and the sky is empty above it. The men watch the sky, and the sky gives them nothing back, and the barrel answers the sky for them.\n\nOn the horizon, a line of figures walks — small, dark, and far away, and the men do not look at them. The figures walk the day out, and the gun waits the night in, and the sky takes both.",
+    "notes": "The sun sets the terms here — a sky that runs from deep blue to orange, and five men and a gun in black shape against it, and the barrel raised high enough to argue with the sky. No faces, no details, and no need for either.\n\nFive men and a gun, and a line of figures on the horizon, and a sky that runs from blue to orange — the picture keeps all of it, and asks for nothing more.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1475,8 +1475,8 @@ export const galleryData = [
   {
     "id": "i-8KVCjVK",
     "title": "Into the Blinding Sky",
-    "description": "A painterly World War II aviation photograph capturing a military aircraft climbing into intense sunlight and open sky. Rendered with cinematic restraint and historical sensitivity, the image emphasizes scale, elevation, and mechanical resolve rather than spectacle. Light and atmosphere transform machinery into silhouette and symbol, exploring the fragile distance between mission and consequence. Part of the Facing History fine art photography series. © Wayne Heim",
-    "alt": "WWII military aircraft viewed from below flying into bright sun and dramatic sky in painterly cinematic style",
+    "description": "A painterly World War II photograph of a twin-engine transport aircraft flying into the sun, seen from below — the fuselage and the wings running across a bright sky, black and white invasion stripes banding both wings, a white star on the left wing, twin propellers turning, and the sun blazing at the top-right with a halo of light around it. The landing gear is up, and the clouds are white under the wings.\n\nThe sun fills the frame, and the aircraft flies into it — a transport, and the light, and nothing else. © Wayne Heim",
+    "alt": "World War II twin-engine transport aircraft flying into the sun, seen from below, black and white invasion stripes on the wings and a white star on the left wing, twin propellers turning, the sun blazing at the top-right with a halo of light, blue sky and white clouds.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-8KVCjVK/1/Ngz9RFKXMZPhnjpWWHtTZX3mXWwVD5G9vGF4JvJKv/XL/_ANA5110-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-8KVCjVK/1/Ngz9RFKXMZPhnjpWWHtTZX3mXWwVD5G9vGF4JvJKv/XL/_ANA5110-Edit-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-8KVCjVK/1/NjFmvxSSHfJMFR3qm8MGdkB84hF49RHc2JT4fnmLF/L/_ANA5110-Edit-Edit-L.jpg",
@@ -1495,8 +1495,8 @@ export const galleryData = [
       "Vivid WWII Mechanized Might"
     ],
 
-    "story": "The light offers no cover.\n\nWings cut through glare and cloud as engines pull the aircraft higher, away from fields and shoreline now lost beneath haze. From below, it looks like ascent — clean, almost triumphant. Inside, each man feels the vibration that reminds him how thin metal can be.\n\nThe sky does not choose sides. It only receives what rises into it.",
-    "notes": "The upward perspective and strong radial light shift the aircraft from object to icon, elevating form into near-archetype. By compressing detail beneath intense illumination, the composition emphasizes contrast between industrial mass and atmospheric vastness. The work aligns with interpretive wartime imagery that balances mechanical power with existential exposure, allowing light itself to carry narrative tension.",
+    "story": "The sun is ahead, and the sun does not move out of the way. The pilot flies into it, and the glare takes the sky, and the men aboard fly blind, and the aircraft does not slow down.\n\nBelow, the ground is gone — not hidden, but gone, taken by the light and the cloud. The men aboard fly on the metal under their feet, and the wings cut the glare and let a little of the sky through.\n\nThe sun will be there when the aircraft comes down, and the men aboard will be blind, and the ground will come back all at once, and too fast.",
+    "notes": "Into the sun — a transport flying straight into it, and the glare taking the sky, and the invasion stripes on the wings holding their black and white against the light. The white star on the left wing, and the twin propellers turning, and the sun blazing at the top-right with a halo around it.\n\nThe blue-sky transport has a companion now — the same aircraft, the same stripes, and a sun that does not let the viewer look away.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1506,8 +1506,8 @@ export const galleryData = [
   {
     "id": "i-M7RwTB4",
     "title": "Calibrating the Moment",
-    "description": "A painterly World War II photograph capturing a gun crew in a moment of focused preparation. Rendered with cinematic restraint and historical sensitivity, the image emphasizes human concentration and mechanical precision rather than spectacle. Texture, posture, and light draw attention to the intimate relationship between soldier and instrument, where calculation becomes a form of endurance. Part of the Facing History fine art photography series. © Wayne Heim",
-    "alt": "WWII soldiers operating and adjusting field gun equipment in painterly cinematic wartime scene",
+    "description": "A painterly World War II photograph of two soldiers adjusting a .50-caliber machine gun on an anti-aircraft pedestal mount — a young soldier in a steel helmet and glasses, tan gloves on, his hands on the vertical spindle, and a second soldier in a black beret leaning in at the left. A .50-caliber ammunition box stenciled “105 CAL 50” sits on the gun, and the mount’s threaded elevation column and circular base fill the foreground.\n\nThe gun is being set, not fired — a moment of calibration, and the hands on the spindle. © Wayne Heim",
+    "alt": "World War II soldiers adjusting a .50-caliber machine gun on an anti-aircraft pedestal mount, a young soldier in a steel helmet and glasses with tan gloves gripping the vertical spindle, a second soldier in a black beret leaning in at the left, a .50-caliber ammunition box stenciled 105 CAL 50 on the gun, pale hazy sky behind.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-M7RwTB4/2/LTkjZBGCJrHsCxnB3TSbLQ4JVGTCcdRrH3JBQSBjs/XL/_OL33272-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-M7RwTB4/2/LTkjZBGCJrHsCxnB3TSbLQ4JVGTCcdRrH3JBQSBjs/XL/_OL33272-Edit-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-M7RwTB4/2/KTLqbHf5JSXFhxFjx8npsNW2L8FL4dDWhfHXXrsx8/L/_OL33272-Edit-Edit-L.jpg",
@@ -1526,8 +1526,8 @@ export const galleryData = [
       "Vivid WWII Mechanized Might"
     ],
 
-    "story": "He adjusts the dial as if precision alone can steady what comes next.\n\nMetal answers to measured hands, not emotion. The sight is aligned, the angle confirmed, the weight understood through repetition. Beside him, another watches, knowing that calculation is the only form of control they are allowed.\n\nWar may be chaos at a distance. Here, it is reduced to degrees, tension, and timing.",
-    "notes": "The composition narrows the battlefield into a study of hands, angles, and intent. By focusing on adjustment rather than discharge, the image transforms artillery from spectacle into process. The restrained palette and textured surface echo interpretive wartime traditions where machinery becomes extension of disciplined human will, allowing precision to carry the narrative weight.",
+    "story": "The dial reads in degrees — a number for the sky, and a number for the ground — and the glasses on his face make the numbers small and sharp at the same time.\n\nThe metal is cold through the leather, and the leather takes the cold first, and the beret at his left has stopped talking, and the numbers do not care who watches them.\n\nInside the box, the linked ammunition waits for the numbers to be right — when they are, the gun will speak, and the sky will have to answer, and the glasses will not help him see it.",
+    "notes": "The glasses make the picture — a young soldier in a steel helmet, glasses on, tan gloves on the spindle, and a second man in a black beret leaning in at the left. The ammunition box on the gun reads 105 CAL 50, and the mount’s threaded column and circular base fill the foreground.\n\nThe gun is not firing, and the picture does not need it to — the calibration, the gloves, and the glasses hold it, and the box of linked ammunition waits for the numbers to be right.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1541,9 +1541,9 @@ export const galleryData = [
   },
   {
     "id": "i-FDHCvzp",
-    "title": "Eyes on the Horizon",
-    "description": "A painterly World War II photograph capturing an armored crew positioned atop their vehicle, framed in a moment of poised vigilance. Rendered with cinematic restraint and historical sensitivity, the image emphasizes leadership, anticipation, and the psychological tension between readiness and action. Atmosphere and posture define the narrative, where machinery becomes both platform and responsibility. Part of the Facing History fine art photography series. © Wayne Heim",
-    "alt": "WWII tank crew standing atop armored vehicle scanning horizon in painterly cinematic wartime scene",
+    "title": "The Commander's Lean",
+    "description": "A painterly World War II photograph of three Sherman tank crewmen on their tank — an older man in a black beret and headphones leaning on the turret in the foreground, a younger man in a black beret behind him manning the turret .50-caliber machine gun, and a third man in a steel helmet at the right edge holding a vertical rod. The .50-caliber ammunition box stenciled “105 CAL 50” sits on the gun, and a round hatch lid leans against the turret at the left.\n\nThe crew is on the tank, and the gun is over them — a commander’s lean, and two men, and the steel. © Wayne Heim",
+    "alt": "World War II Sherman tank crew on their tank, an older man in a black beret and headphones leaning on the turret, a younger man in a black beret behind him manning the turret .50-caliber machine gun, a third man in a steel helmet at the right edge holding a vertical rod, a .50-caliber ammunition box stenciled 105 CAL 50 on the gun, pale hazy sky behind.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-FDHCvzp/3/KMgWPZJrxr6dpWKqHPRMdWsMhBLGd4hJWrgvf3gNG/XL/_OL33286-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-FDHCvzp/3/KMgWPZJrxr6dpWKqHPRMdWsMhBLGd4hJWrgvf3gNG/XL/_OL33286-Edit-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-FDHCvzp/3/LJxgWGNjLzkP9RF2NBwcfFtStvSf2Mxw5BpPdBsTr/L/_OL33286-Edit-Edit-L.jpg",
@@ -1562,8 +1562,8 @@ export const galleryData = [
       "Vivid WWII Mechanized Might"
     ],
 
-    "story": "He scans the distance as if the answer might appear before the question is spoken.\n\nThe tank beneath him hums with contained force, steel steady, engine patient. Around him, the crew waits without appearing to wait — hands resting, posture alert, each man reading the land for movement that has not yet shown itself.\n\nThe horizon rarely warns. It simply changes.",
-    "notes": "The elevated stance and outward gaze establish authority without overt dramatization. By removing visible conflict, the composition shifts focus to anticipation — a theme consistent with interpretive wartime imagery where restraint heightens tension. Steel functions as both structure and stage, reinforcing the interdependence between human judgment and mechanized power.",
+    "story": "He leans on the turret, and the turret takes his weight, and the men around him read the lean, and the lean tells them more than any order.\n\nThe young man behind him has the gun, and the gun has the sky, and neither of them is in a hurry — the same black beret as the commander's, the same headphones, and the lean between them.\n\nThe third man, in the steel helmet at the right edge, has nothing to say to the rod, and the rod has nothing to say back — the tank, the gun, the men, and the sky all lean a little, and the rod does not.",
+    "notes": "An older man in a black beret and headphones leans on the turret, both hands on the steel, and a younger man behind him mans the .50-cal, and a third man in a steel helmet at the right edge holds a rod. The ammunition box on the gun reads 105 CAL 50, and a round hatch lid leans against the turret at the left.\n\nThe lean in front, the .50-cal behind, and a hatch lid leaning where a fourth man would stand — the tank holds the three of them, and the gun holds the sky.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1578,8 +1578,8 @@ export const galleryData = [
   {
     "id": "i-n3N8NRr",
     "title": "First Steps Into History",
-    "description": "A painterly World War II photograph capturing soldiers at the moment a landing craft ramp opens to the sea. Rendered with cinematic restraint and historical sensitivity, the image emphasizes transition, exposure, and collective resolve rather than spectacle. Composition and atmosphere place the viewer at the threshold between protection and vulnerability, where action becomes irreversible. Part of the Facing History fine art photography series. © Wayne Heim",
-    "alt": "WWII soldiers stepping forward from landing craft ramp into open water in painterly cinematic wartime scene",
+    "description": "A painterly World War II photograph of a landing craft with its ramp down, seen head-on from the sea — two U.S. Navy sailors at the front, one in a life vest and a USN-marked steel helmet holding a coiled line, the other in a USN-marked steel helmet with his arm raised signaling, and a crowd of soldiers in steel helmets waiting aboard behind them, rifles and packs on their backs. The sea stands on both sides of the craft, and the sky is gray and overcast above it.\n\nThe ramp is down, and no one has stepped off — the first step is still to come. © Wayne Heim",
+    "alt": "World War II landing craft with its ramp down seen head-on from the sea, two U.S. Navy sailors at the front in USN-marked steel helmets, one in a life vest holding a coiled line and the other with his arm raised signaling, a crowd of soldiers in steel helmets waiting aboard behind them, sea on both sides and a gray overcast sky above.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-n3N8NRr/2/LvqbcX6w6PLjSpgXmM5rtN6wwhs9Fgm35pv8z2Vnp/XL/_PEN0791-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-n3N8NRr/2/LvqbcX6w6PLjSpgXmM5rtN6wwhs9Fgm35pv8z2Vnp/XL/_PEN0791-Edit-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-n3N8NRr/2/M696LhZTGCjdwRc8KTtRMVZbd64PWTJMVJvKMcHBv/L/_PEN0791-Edit-2-L.jpg",
@@ -1598,8 +1598,8 @@ export const galleryData = [
       "Vivid WWII Mechanized Might"
     ],
 
-    "story": "The ramp lowers, and hesitation disappears with it.\n\nWind and salt rush in as boots meet steel, then water, then whatever waits beyond the edge of sight. The men do not look at one another; they look forward, into distance that offers no promise and no mercy.\n\nHistory is rarely written in comfort. It is written in steps taken when there is no safe direction left.",
-    "notes": "The composition centers on threshold — the physical and psychological shift from enclosure to exposure. By framing the open ramp as both doorway and risk, the image transforms machinery into passage rather than weapon. The restrained palette and forward movement align with interpretive wartime imagery where commitment, not combat, defines the narrative weight.",
+    "story": "The sea is on both sides, and the sea does not care who is aboard — it slaps the steel, and the men inside hear it through their boots, and the boots are still on the deck.\n\nThe ramp stands open like a doorway, and the men inside look at it because there is nothing else to look at — the sea, the sky, and the ramp, and the ramp will let them through when the arm comes down.\n\nWhen the arm comes down, the boots will leave the deck, and the deck will be empty behind them, and the shore will stop being a word and start being a place — but the arm is still up, and the boots are still on the deck, and the shore is still a word.",
+    "notes": "The moment before the first step, held still — a landing craft with its ramp down, two sailors at the front, and a craft full of soldiers behind them, and not one boot in the water yet. One sailor in a life vest and a USN-marked helmet holds a coiled line, the other has his arm raised, signaling, and the soldiers in their steel helmets wait aboard, rifles and packs on their backs. The sea stands on both sides of the craft, and the sky is gray over it.\n\nThe ramp is down, and the first step has not been taken, and the two sailors at the front hold the waiting in their hands — the line, and the signal, and the craft full of men behind them.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1609,8 +1609,8 @@ export const galleryData = [
   {
     "id": "i-59zQzXC",
     "title": "Signal to Advance",
-    "description": "A painterly World War II photograph capturing a landing craft commander signaling soldiers forward at the threshold of deployment. Rendered with cinematic restraint and historical sensitivity, the image emphasizes leadership, collective resolve, and the human moment that transforms preparation into action. Composition and atmosphere focus on command and response rather than spectacle, placing the viewer within the irreversible instant before advance. Part of the Facing History fine art photography series. © Wayne Heim",
-    "alt": "WWII landing craft commander signaling soldiers forward in painterly cinematic wartime scene",
+    "description": "A painterly World War II photograph of a U.S. Navy sailor signaling from a landing craft, in close-up — a steel helmet stenciled USN, a green field jacket, his right hand in a tan glove raised high in a hand signal, his left arm outstretched, leaning over the craft’s metal edge. Behind him, a group of soldiers in steel helmets stands packed in the craft, one of them in glasses, and the sea and a gray overcast sky lie beyond.\n\nThe hand is up, and the men are behind it — the signal, and the soldiers, and nothing else. © Wayne Heim",
+    "alt": "World War II U.S. Navy sailor signaling from a landing craft in close-up, a steel helmet stenciled USN, a green field jacket, his right hand in a tan glove raised high and his left arm outstretched, leaning over the craft’s metal edge, a group of soldiers in steel helmets packed behind him, one in glasses, sea and gray overcast sky beyond.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-59zQzXC/2/L6xknpDKXJMhfpb4StcjMSJVC6FsTzvJmHxQbtBwm/XL/_PEN0808-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-59zQzXC/2/L6xknpDKXJMhfpb4StcjMSJVC6FsTzvJmHxQbtBwm/XL/_PEN0808-Edit-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-59zQzXC/2/K85C4sj4WNVpJSZVHXDcPWz5HdkK25NbmNzPrJCqb/L/_PEN0808-Edit-Edit-L.jpg",
@@ -1629,8 +1629,8 @@ export const galleryData = [
       "Vivid WWII Mechanized Might"
     ],
 
-    "story": "The gesture is small, but everyone understands it.\n\nAn arm rises above the steel edge of the craft, cutting through wind and noise with unmistakable clarity. Conversation ends without words. Boots shift forward. Each man moves not because fear has vanished, but because hesitation is no longer permitted.\n\nSome moments decide themselves. Others are decided by the signal to move.",
-    "notes": "The composition centers authority through gesture rather than rank or insignia. By isolating the raised arm against open space, the image transforms command into a universal visual language understood without dialogue. The restrained palette and compressed framing align with interpretive wartime imagery where decision — not combat — carries the narrative weight, emphasizing the human catalyst behind collective motion.",
+    "story": "The glove does the talking — a leather hand raised over the steel edge, and the fingers in it saying what no voice could say over the wind, and the men behind it reading the fingers like a map.\n\nThe letters on his helmet say who he belongs to, and the belonging outranks the orders — the jacket is soaked through, and the glove is creased from holding the signal, and the letters have not been touched by the sea.\n\nBehind him, the glasses watch the glove, and the glasses do not blink — the sea is waiting, and the men are waiting, and the glove knows what comes next, and the glove is not telling.",
+    "notes": "Close in on the signal — a tan glove raised high over the craft’s edge, a steel helmet stenciled USN under it, a green jacket, and a group of soldiers packed behind him, one of them in glasses. The sea and a gray sky lie beyond.\n\nThe sea waits beyond them all for the hand to come down, and the soldiers wait behind the hand, and the hand does not come down yet.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1639,9 +1639,9 @@ export const galleryData = [
   },
   {
     "id": "i-Dd5XSHd",
-    "title": "Marked for Advance",
-    "description": "A painterly World War II photograph capturing a landing craft commander signaling advance, framed in a restrained and minimal composition. Rendered with cinematic sensitivity and historical respect, the image emphasizes gesture, authority, and the human catalyst behind collective motion. The steel foreground and open sky create a visual threshold between preparation and action. Part of the Facing History fine art photography series. © Wayne Heim",
-    "alt": "WWII landing craft commander raising hand to signal advance in painterly cinematic wartime scene",
+    "title": "One Finger Up",
+    "description": "A painterly World War II photograph of a landing craft’s rust-stained metal edge filling the frame below, and above it, against a gray sky, a single gloved finger pointing up, the top of a net-covered helmet, and a steel helmet stenciled USN. The men are hidden below the edge — only the finger and the helmet tops show — and the gray sky hangs over them, empty of anything but the finger.\n\nOne finger, a helmet, and a steel edge — the signal at its smallest, and the sky over them all. © Wayne Heim",
+    "alt": "World War II landing craft’s rust-stained metal edge filling the lower frame, above it a single gloved finger pointing up, the top of a net-covered helmet, and a steel helmet stenciled USN, the men hidden below the edge, gray overcast sky above.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-Dd5XSHd/3/Lx5M9KCSsXKdsrTzvbFRNfRfjF7BZM4XKKmSSgkF9/XL/_PEN0830-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-Dd5XSHd/3/Lx5M9KCSsXKdsrTzvbFRNfRfjF7BZM4XKKmSSgkF9/XL/_PEN0830-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-Dd5XSHd/3/KvXsqhm5Zht9KDfBZvK7hmz4RjgRSLrnbWQv3KxNM/L/_PEN0830-Edit-L.jpg",
@@ -1660,8 +1660,8 @@ export const galleryData = [
       "Vivid WWII Mechanized Might"
     ],
 
-    "story": "The gesture is deliberate, held just long enough to be understood.\n\nAbove the steel lip of the craft, a single hand rises against the muted sky. Faces remain partially hidden, but the meaning is clear — direction has been chosen, and waiting is no longer an option. The sea offers no reassurance, only distance.\n\nSome moments are not shouted. They are marked, and then carried out.",
-    "notes": "The composition isolates gesture as narrative center, stripping away extraneous detail to elevate command into symbol. By compressing the frame and allowing steel to dominate the foreground, the image emphasizes transition and inevitability. The restrained palette and minimalism align with interpretive wartime imagery where a single action carries the weight of collective consequence.",
+    "story": "One finger up — not a hand, not an arm, but a single finger against the sky, and the sky gives nothing back, and the finger does not come down.\n\nBelow the edge, the men are still there, and the edge hides them — the helmets show, and the helmets do not move, and the edge is rusted through with waiting, and the waiting has a smell — salt, and steel, and the men's breath, and none of them in a hurry to leave.\n\nThe finger points up, and the sky gives nothing back, and the men below the edge do not move — the morning has not decided yet, and the finger has.",
+    "notes": "The signal has been stripped to a single finger — one gloved finger pointing up over a rust-stained steel edge, the top of a net-covered helmet under it, a steel helmet stenciled USN at the right, and the men hidden below the edge, and a gray sky over them all.\n\nA collector does not need the men to see them — the finger, the helmets, and the edge say everything, and the gray sky says the rest by saying nothing.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1671,8 +1671,8 @@ export const galleryData = [
   {
     "id": "i-vZNLBNp",
     "title": "Waiting for the Shore",
-    "description": "A painterly World War II photograph capturing soldiers aboard a landing craft in the quiet moments before arrival. Defined by restraint rather than spectacle, the image emphasizes anticipation, service, and the psychological weight carried by those crossing toward uncertainty. Light, posture, and composition create a narrative rooted in memory and consequence—where the story exists in the waiting as much as in what follows. Part of Wayne Heim’s Facing History fine art photography series. © Wayne Heim",
-    "alt": "WWII soldiers aboard landing craft waiting for shore in painterly World War II fine art photograph",
+    "description": "A painterly World War II photograph of soldiers leaning on the rail of a landing craft, seen from the side — a man in glasses and a man in a net-covered helmet with their arms folded on the rail, a tall soldier standing above them in a hooded jacket, and more men behind, one in a green beret. A thick rope is coiled and draped over the craft’s side, a small U.S. flag stands at the left, and a straw broom rises at the right, and the sky is pale and overcast over them.\n\nThey lean, and the craft carries them — the rail, the rope, and the shore ahead. © Wayne Heim",
+    "alt": "World War II soldiers leaning on the rail of a landing craft seen from the side, a man in glasses and a man in a net-covered helmet with their arms folded on the rail, a tall soldier standing above them in a hooded jacket, more men behind, one in a green beret, a thick rope coiled and draped over the craft’s side, a small U.S. flag at the left and a straw broom at the right, pale overcast sky above.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-vZNLBNp/3/MFGbXwmBND3R2Hcj5gwwbShtHwFvgM53m2znHN2MC/XL/_PEN0836-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-vZNLBNp/3/MFGbXwmBND3R2Hcj5gwwbShtHwFvgM53m2znHN2MC/XL/_PEN0836-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-vZNLBNp/3/NCHm6k5Ft42vZ2dNRHJ9B8X6rjMLrXMJtN7sXvghJ/L/_PEN0836-Edit-L.jpg",
@@ -1689,8 +1689,8 @@ export const galleryData = [
       "mechanical war art"
     ],
 
-    "story": "The boat moves forward, but no one speaks of where it will end. Hands grip cold steel, eyes fixed somewhere beyond the horizon, each man measuring the distance in silence rather than miles. The sea carries them whether they are ready or not.\n\nThere is no battle yet—only waiting. Helmets low, shoulders tight, they exist in the narrow space between safety and history, suspended in a moment where anticipation weighs heavier than fear.\n\nSoon the ramp will fall. Until then, they watch, breathe, and hold fast to the thin certainty that forward is the only direction left.",
-    "notes": "This image draws its strength from restraint rather than action, echoing the compositional traditions of wartime illustration and mid-century narrative painting where anticipation becomes the central subject. The framing along the steel rail compresses space, placing viewers inside the craft rather than as observers, transforming the scene into a shared psychological moment. Like the strongest works of pictorial war art, the tension lies not in combat but in imminence—the fragile pause before history moves forward.",
+    "story": "The rope is coiled over the side, and the coil has been somewhere — the rope has tied, and hauled, and held, and the men leaning on the rail have not, and the rope knows it, and the men do not.\n\nThe rail is cold under their arms, and the cold goes through the sleeves, and the man in glasses leans on it, and the man with the netted helmet leans on it, and the tall man standing above them does not lean on it at all — he stands, and the standing says what the leaning does not.\n\nThe flag at the left says where they are from, and the broom at the right says what they clean up after, and the rail says nothing, and the men are silent, and the shore has not spoken yet.",
+    "notes": "The men lean on the rail, and the rail holds them — a man in glasses, a man in a netted helmet, a tall soldier standing above them in a hooded jacket, and more men behind, one in a green beret. A thick rope is coiled over the side, a small U.S. flag stands at the left, and a straw broom rises at the right.\n\nThe rail, the rope, the flag, and the broom — the craft gives the collector four things to hold onto, and the men leaning on the rail give him the fifth, which is the waiting.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1700,8 +1700,8 @@ export const galleryData = [
   {
     "id": "i-rhM88g4",
     "title": "Crossing Under Gray Skies",
-    "description": "A painterly World War II photograph depicting soldiers crossing open water aboard a landing craft under heavy skies. Defined by atmosphere and restraint rather than spectacle, the image emphasizes anticipation, endurance, and the shared uncertainty of those carried toward conflict. Composition and muted light transform the crossing into a psychological landscape, reflecting service, consequence, and memory. Part of Wayne Heim’s Facing History fine art photography series. © Wayne Heim",
-    "alt": "WWII landing craft crossing open water under gray skies in painterly World War II fine art photograph",
+    "description": "A painterly World War II photograph of a landing craft crossing open water, seen from a distance — the hull stenciled PA28-16, a diamond insignia on its side, a U.S. flag at the stern, and a .50-caliber machine gun mounted at the stern with a man behind it, and a crowd of soldiers in steel helmets packed aboard. The craft cuts a white wake through gray-green water, and the sky is heavy and overcast above it.\n\nSmall on a big water, and moving — the craft, the flag, the gun, and the men. © Wayne Heim",
+    "alt": "World War II landing craft crossing open water seen from a distance, hull stenciled PA28-16 with a diamond insignia, a U.S. flag at the stern and a .50-caliber machine gun mounted there, a crowd of soldiers in steel helmets packed aboard, white wake through gray-green water, heavy overcast sky above.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-rhM88g4/2/LkvmXx3zvwCX8RNDPD8NWLKcQQfpZVzG3PKs7JnDh/XL/_OL37022-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-rhM88g4/2/LkvmXx3zvwCX8RNDPD8NWLKcQQfpZVzG3PKs7JnDh/XL/_OL37022-Edit-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-rhM88g4/2/Lt2g9PPP5CSKtnkCZCGzvsML4XgmbT6MM38HwffX9/L/_OL37022-Edit-Edit-L.jpg",
@@ -1718,8 +1718,8 @@ export const galleryData = [
       "mechanical war art"
     ],
 
-    "story": "The shoreline is still unseen, hidden somewhere beyond the dull line where sea meets sky. Engines hum beneath their feet as the craft cuts forward, carrying men who understand that the journey itself has already changed them.\n\nNo one speaks above the wind. Each man watches the horizon in his own way—some searching, some remembering, some simply waiting for the moment when distance disappears and decisions can no longer be postponed.\n\nThe water rolls endlessly beneath them, indifferent to courage or fear. Under gray skies, they move together toward history, held between the safety behind them and the unknown waiting ahead.",
-    "notes": "This composition leans into scale and atmosphere, echoing maritime wartime imagery where environment becomes an equal subject to the figures themselves. The wide framing diminishes individual identity in favor of collective experience, allowing the sea and sky to carry emotional weight. Like classic narrative war painting, tension emerges through distance and inevitability—the long approach before history fully reveals itself.",
+    "story": "The wake is white water, and the white water does not last — the craft leaves it behind, and the sea takes it back, and the men aboard keep their eyes on the bow, and the bow points at the shore that is not there yet.\n\nThe flag at the stern and the gun over it do not agree — the flag points home, and the gun points at the shore, and the men between them are silent, and the sea and the sky are silent too.\n\nThe big water does not count the men aboard, and the gray sky does not count them either, and the men aboard do not count the sky — the shore has not shown itself yet, and the craft is still moving, and that is all there is to say about the morning.",
+    "notes": "Far away, and moving — the hull stenciled PA28-16, a diamond insignia on its side, a U.S. flag at the stern, a .50-caliber machine gun mounted at the stern, and a crowd of soldiers in steel helmets packed aboard. The craft cuts a white wake through gray-green water, and the sky is heavy and overcast above it.\n\nThe wake fades behind the craft, and the hull, the flag, the gun, and the men stay — and the gray sky over them does not move.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1729,8 +1729,8 @@ export const galleryData = [
   {
     "id": "i-GwTMZZK",
     "title": "The Long Crossing",
-    "description": "A painterly World War II photograph capturing soldiers crossing open water toward an uncertain shore. Emphasizing atmosphere, scale, and emotional restraint, the image reflects the psychological weight carried before battle rather than its spectacle. Light, distance, and composition transform military movement into a contemplative narrative rooted in service, consequence, and memory. Part of Wayne Heim’s Facing History fine art photography series. © Wayne Heim",
-    "alt": "World War II soldiers crossing open water under dark skies during wartime transport",
+    "description": "A painterly World War II photograph of a landing craft crossing open water under a dark storm sky, seen from a distance — the hull stenciled PA28-16, a diamond insignia on its side, a U.S. flag at the stern, and a crowd of soldiers in steel helmets packed aboard. The clouds break at the left, letting a little light through, and the craft moves left through dark gray-green water, and the sky is heavy and dark over it.\n\nThe sky is dark, and the water is dark, and the craft moves left through them both — and the flag at the stern is red and white and blue against them. Part of Wayne Heim’s Facing History fine art photography series. © Wayne Heim",
+    "alt": "World War II landing craft crossing open water under a dark storm sky in a painterly fine art photograph, seen from a distance, hull stenciled PA28-16 with a diamond insignia, a U.S. flag at the stern, a crowd of soldiers in steel helmets packed aboard, dark gray-green water, clouds breaking at the left with a little light coming through.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-GwTMZZK/2/MkvGT6Hmtbn9DqcfXGxwqj8pxJrGjtTds4fDMrjLB/XL/_PEN0366-Edit2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-GwTMZZK/2/MkvGT6Hmtbn9DqcfXGxwqj8pxJrGjtTds4fDMrjLB/XL/_PEN0366-Edit2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-GwTMZZK/2/MPH34CbMqJGZzZwWC7tm99Fc63qdGtb6s8CgKRkHK/L/_PEN0366-Edit2-L.jpg",
@@ -1747,8 +1747,8 @@ export const galleryData = [
       "history's greatest conflicts"
     ],
 
-    "story": "The water offered no comfort, only distance. Engines droned beneath steel decks as the shoreline disappeared behind them, replaced by the slow certainty of open sea. No one spoke much. Each man carried his own thoughts, measuring the space between who he had been and who he would become once land returned to view.\n\nGray skies pressed low, flattening the horizon until sea and sky became indistinguishable. Orders would come soon enough, but for now there was only motion — forward, inevitable, shared. The crossing itself was a quiet threshold, a moment suspended between safety and history.\n\nSomewhere ahead waited noise, chaos, and consequence. Here, there was only wind, salt, and the understanding that turning back was no longer part of the story.",
-    "notes": "This image shifts focus from combat to anticipation — the rarely depicted psychological space before history unfolds. The distant composition intentionally reduces individual identity, echoing historical photography and maritime painting traditions where scale conveys vulnerability and inevitability. The restrained palette and expansive negative space invite prolonged viewing, allowing collectors to experience the emotional tension of transition rather than action.",
+    "story": "The clouds break at the left. A little light comes through the break, falls on the water, and the water gives it back. The craft moves through the light. The light does not stay.\n\nAt the stern, the flag holds the color. The color is small against the dark sky, and the rest of the craft is gray. The gray does not matter to the flag. The craft moves left, and the flag moves left with it. The dark sky does not move at all.\n\nThe shore is ahead, and it is not there yet. The men aboard know it. The craft moves, and the water moves. The sky does not. The men do not. The morning holds them all still.",
+    "notes": "A dark sky over a dark water, and a craft moving left between them — the clouds breaking at the left to let a little light through, and below it a landing craft, the hull stenciled PA28-16, a diamond insignia on its side, a U.S. flag at the stern, and a crowd of soldiers in steel helmets packed aboard.\n\nThe light breaks at the left, and the craft moves left through it. The dark sky does not move. The number on the hull does not change. The flag at the stern does not come down. The men aboard do not move.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",

@@ -45,8 +45,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "This image embodies international landscape photography, captured by Wayne Heim in his signature style in Newfoundland. It reflects painterly european landscapes with a touch of international landscape photography. © Wayne Heim",
-    "notes": "",
+    "story": "The boardwalk crosses water that doesn't care about your schedule — at high tide it's a bridge, at low tide a pier to nowhere in particular, and in a storm just a suggestion. The lantern at the entrance is for the walk home: outports measured distance in weather, not miles. Across the water the far shore is all trees and no promises, which is most of Newfoundland's interior in one view.\n\n© Wayne Heim",
+    "notes": "A boardwalk running straight at a forested shore in black and white — lantern, railings, water on both sides, and a storm stacked overhead. It's the Newfoundland set's strongest graphic composition: one long perspective with weather at the end of it.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -82,8 +82,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "notes": "",
+    "story": "She's up on the shore because the season said so — hauled out, blocked up, and left to watch the water she works in. A beached boat in Newfoundland isn't idle; it's between weathers, waiting out the sky that's building over the headland. Come spring she'll be scraped, painted, and put back to the only job she knows.\n\n© Wayne Heim",
+    "notes": "A white boat hauled out under a Newfoundland stage, grass at her keel and a storm worrying the headland. The portrait format makes her a character rather than a prop — the working boat in her off-season, in the colors of a gray coast.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -120,8 +120,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "notes": "",
+    "story": "The stages are red because the paint was red — ochre for the stages, and the boats ride white against it. Everything in this harbor works in sequence: the boat comes in, the stage takes the fish, the flakes take the sun. On a calm morning the water holds still long enough to double the whole arrangement, like it's considering joining.\n\n© Wayne Heim",
+    "notes": "Red stages on stilts, doubled in calm water — the essential Newfoundland harbor picture, shot on one of the bright mornings the coast allows. Buyers hang it for the color: that ochre red against blue water is the outport signature.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -160,8 +160,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "notes": "",
+    "story": "At anchor she's between errands — riding easy on calm water, pointed into whatever breeze the harbor lets in. The cottage above watches the same water for different reasons: weather coming, boats coming, the mail boat, the season turning. In black and white the harbor goes quiet in a way color never lets it. Nothing here is hurrying, and nothing here is lost.\n\n© Wayne Heim",
+    "notes": "A fishing boat at anchor under a white cottage, in black and white — the harbor reduced to boat, water, hill, and cloud. Portrait format stacks them like a totem of how life arranges itself on this coast.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -198,8 +198,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "notes": "",
+    "story": "The boardwalk climbs because the lighthouse had to be where the ships could see it, and the ships didn't care about the hill. Every step up is a keeper's old commute — oil, then lamps, then lenses carried up this slope in all weathers. The storm building behind it is the reason for the whole arrangement: light first, comfort later.\n\n© Wayne Heim",
+    "notes": "A boardwalk staircase climbing a headland to a white lighthouse, the storm breaking bright behind the tower. It's the set's great ascent composition — the eye climbs with the steps — and the lighthouse painter's classic, done photographically.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -235,8 +235,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "notes": "",
+    "story": "Same hill, straighter look: the stairs are the argument between the sea and the land made climbable. Keepers' families lived at the top of these steps and measured their lives in trips down for supplies and up before dark. The fence along the summit is for visitors now. The wind up there doesn't know the difference.\n\n© Wayne Heim",
+    "notes": "The companion ascent: wooden stairs straight up the hill to the lighthouse, picket fence waiting at the summit. Where the boardwalk view angles, this one insists — a central climb, green and brown hillside, storm light at the top.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -274,8 +274,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "notes": "",
+    "story": "The house sits where the cape narrows — one wall of weather between the family and the Atlantic. The boardwalk leads down to the water because everything here leads down to the water; the ocean is road, pantry, and employer. With that sky coming in, the smart money is on the kettle and the window. The cape takes the storm first so the harbor doesn't have to.\n\n© Wayne Heim",
+    "notes": "A white house with a red roof holding a grassy cape against a coming storm, its boardwalk stepping down toward the sea. It's the set's domestic epic: one household at the edge of the Atlantic, composed like the coast itself made the decision.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -312,8 +312,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "notes": "",
+    "story": "The red chairs are an invitation Canada leaves at its best edges — sit here, this is the view that matters. Cape Spear is the continent's first landfall: the easternmost point, where the sun touches North America first. The chairs face the lighthouse and the sea beyond it, and on a clear morning the day literally starts here.\n\n© Wayne Heim",
+    "notes": "Cape Spear's lighthouse with Parks Canada's red chairs in the foreground — the easternmost view in North America with an invitation to sit in it. Portrait format: chairs, house, tower, storm. It's the Newfoundland picture visitors describe to people back home.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -351,8 +351,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "notes": "",
+    "story": "The breakwater is losing politely — stakes and logs against an ocean that has never once been negotiated with. The rocks do the real holding: a row of black teeth taking the waves' first argument. What's behind this line is a harbor, a beach, somebody's boats. What's in front of it is the whole Atlantic, patient as geology.\n\n© Wayne Heim",
+    "notes": "Jagged shore rocks and a failing wooden breakwater in black and white — teeth and stakes against the Atlantic. The portrait frame fills with the argument: bright breaks of light on the water behind a foreground built to resist it.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -391,8 +391,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "notes": "",
+    "story": "They dug copper here until the market or the seam gave out — Sleepy Cove's mine worked within living memory of the grandfathers, and the headframe still stands over the shaft like the job might resume. This coast is full of these skeletons: iron, copper, slate, each with its own brief boom. The ocean took back the wharves. The hill keeps the frame.\n\n© Wayne Heim",
+    "notes": "The Sleepy Cove mine headframe standing alone on a grassy headland, in black and white — Newfoundland's industrial past as a single wooden skeleton over the sea. Scarce subject, honest tones: collectors of outport history take this one.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -431,8 +431,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "notes": "",
+    "story": "A beach with no sand in it — just the mountain, ground down to pebbles by ten thousand winters of surf. The shore here is a sorting floor: every tide rearranges the inventory and takes the fines out to sea. Between the two headlands the water gets in and out the only way it can, and the stones click like abacuses under the backwash.\n\n© Wayne Heim",
+    "notes": "A pebble beach between two black headlands, surf at both edges, the sea bright beyond — monochrome texture from foreground stones to torn cloud. It's the shore as a sorting floor, and the most tactile of the black-and-white coastals.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -468,8 +468,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "notes": "",
+    "story": "The fence runs crooked because the hill runs crooked, and the house sits square because the builder insisted. From down here the place looks like a flag planted on the point: white walls, red roof, weather on all sides. Houses like this were built to be seen from the water — a landmark for boats coming home, and a statement that somebody stayed.\n\n© Wayne Heim",
+    "notes": "A white house with a red roof seen from below its own crooked fence — the outport homestead as a flag on a hill. Saturated greens, a dramatic sky, and the composition of arrival: this is what coming home looked like from the water.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -506,8 +506,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "notes": "",
+    "story": "The berg has been traveling for a thousand years to get reviewed by the Atlantic — calved off Greenland, ridden down Iceberg Alley, and sculpted by melt and wave into this: a cat sitting up, studying the sky. In black and white the ice reads as rock, which is nearly right; a berg is a mountain on its one voyage. By August the cat will have melted into the sea it came from, dignity intact.\n\n© Wayne Heim",
+    "notes": "Two sculpted bergs in black and white, the tall one rearing up like a cat studying the sky — Iceberg Alley rendered as portraiture. The title carries the joke; the forms carry the print. Among the set's most collectible: bergs this characterful exist for one season.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -545,8 +545,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "notes": "",
+    "story": "One berg, standing alone like it bought the ocean. The cone is melt's sculpture: sun and water worrying the ice into the shape of every child's summer order. Below the waterline there's seven times more of it, blue and ancient, steering by currents nobody sees. What's above is just the part the berg shows the world while it decides where to ground.\n\n© Wayne Heim",
+    "notes": "A single cone-shaped berg in portrait, glossy and monumental against layered cloud — the iceberg as minimalist sculpture. Black and white strips it to form and shine; the waterline sliver at the bottom is all the sea it needs.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -582,8 +582,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "notes": "",
+    "story": "From the water the scale stops being abstract — these are buildings that drift. The pale blue is old ice, squeezed free of its air over centuries in a Greenland glacier, and the fold in the big one's face is a crevasse that healed and traveled. The sea between the boat and the berg does the negotiating. You don't get closer than the berg allows.\n\n© Wayne Heim",
+    "notes": "Pale-blue bergs at boat distance, their folded faces like poured glass — the only iceberg frame in the set taken from the water, and the closest. The blue is centuries of pressure; the picture is as near as prudence allows.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -620,8 +620,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "notes": "",
+    "story": "The moon is up before the mist gives up — hanging over a valley full of fog and spruce like it came to supervise the dark and found the day still green. Summer nights up here barely qualify as nights; the light just thins and changes shifts. The moon's eeriness is timing: it arrived while the valley was still dressed for afternoon.\n\n© Wayne Heim",
+    "notes": "A hazy moon over a mist-filled green valley — the summer evening that never quite commits to night. Dreamy, soft, and unlike anything else in the set: the Newfoundland interior in its brief green abundance.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -659,8 +659,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "notes": "",
+    "story": "Night proper: the moon big over a valley that has filled with its own weather. The mist is the day's breath coming back — warm fields cooling, the fog pooling in the low ground between the hills until the spruce stand in it like trees in a slow river. The moon doesn't light the valley so much as outline it, one ridge at a time.\n\n© Wayne Heim",
+    "notes": "The night version: a large glowing moon over the same misted valley, portrait format, the hills standing in fog like islands. Hung with its companion it's the set's diptych — one valley, two shifts of light.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -698,8 +698,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "notes": "",
+    "story": "The ridge is the last of the land — lichen-covered rock climbing toward the lighthouse, the ocean on the left the whole way out. The figure near the top is for scale, and the scale is the point: out there, people are punctuation. Cape Spear has been first landfall for five centuries of crossing. The ridge still makes you earn it.\n\n© Wayne Heim",
+    "notes": "A lichen-covered ridge climbing to the Cape Spear lighthouse, one small figure for scale — the walk out to the continent's edge as a single diagonal. Buyers take it for the journey in it: rock, effort, and the light waiting at the top.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -737,8 +737,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "notes": "",
+    "story": "Bonavista is where Cabot made landfall in 1497 and called it a fine place for fish — the lighthouse came three and a half centuries later to keep the fish boats off the rocks that fringe it. The picket fence walks the ridge the way keepers walked it, checking weather. The house and tower stand white against every sky the Atlantic sends, which is most of them.\n\n© Wayne Heim",
+    "notes": "Bonavista's lighthouse and keeper's house along a fenced ridge — the Cabot landfall coast, white paint against Atlantic sky. It's the most historically loaded frame in the set: the harbor where the cod trade, and a continent's maps, began redrawing themselves.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -777,8 +777,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "notes": "",
+    "story": "Cape Spear is St. John's backyard wilderness — twenty minutes from the harbor's jellybean rows, and the continent simply ends: cliffs, a lighthouse, and three thousand miles of weather coming in off the Atlantic. The evening light warms the keeper's house like the lamps are lit. The fence along the cliff is the city's edge and the world's, both at once.\n\n© Wayne Heim",
+    "notes": "Cape Spear in warm evening light, wide: keeper's house, picket fence, and the cliff falling to a dark Atlantic. The broadest of the lighthouse views and the one that shows the settlement on its rock — St. John's wild backyard, twenty minutes from downtown.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -815,8 +815,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "notes": "",
+    "story": "The pool is the harbor's quiet room — a sheet of still water left by the tide, holding the lighthouse upside down until the sea comes back for it. Twice a day this reflection is assembled and twice a day it's repossessed. The light itself is for ships. The reflection is for whoever walks the shore at the still hour, which is its own kind of navigation.\n\n© Wayne Heim",
+    "notes": "A lighthouse and its reflection held in a tidal pool — the headland doubled in still water under a dramatic sky. The mirror is the composition: sky, tower, and house rendered twice, the set's calmest and most symmetrical frame.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -852,8 +852,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "notes": "",
+    "story": "Bow-on, she looks ready — which is the trick of a boat on the hard. From this angle you can read her lines the way her builder drew them, and the cliff behind her is the reason she exists: fish live under that water, weather lives over it, and she mediates. High and dry is a season, not a retirement. The grass around her keel is just visiting.\n\n© Wayne Heim",
+    "notes": "The beached boat bow-on, tighter and more confrontational than her wide portrait — same stage, same cliff, a different temperament. Hung together the pair reads as one boat at two distances; alone, this is the character study.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -890,8 +890,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "notes": "",
+    "story": "The rock went in for a swim a few thousand years ago and hasn't come out — the tide goes around it twice a day and the cove keeps its secret: the thing was probably dropped by a glacier, not courage. The title catches the humor the place insists on. Newfoundland rocks sit in the sea like they have errands there.\n\n© Wayne Heim",
+    "notes": "A lone rock standing in turquoise water in a forested cove — the title's joke carried by a perfectly straight face of a photograph. Bright, odd, and memorable: the Newfoundland sense of humor in landscape form.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -929,8 +929,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "notes": "",
+    "story": "The breakers arrive in order, like they've been traveling in formation across three thousand miles of fetch to hit this exact rock. The pool in the foreground sits out the argument, black and still. Gulls ride the updraft over the impact zone, professionals at a factory they've never worked in. The sound of this place arrives half a second after the sight, and stays longer.\n\n© Wayne Heim",
+    "notes": "Breakers bursting on black rocks, a still tidal pool in the foreground and gulls over the spray — the Atlantic's power with its quiet margin included. The orange lichen on the rocks is the color note the whole composition leans on.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -968,8 +968,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "notes": "",
+    "story": "The tide leaves the shore polished — every rock wet, glistening, showing colors it keeps to itself when dry. The figure in red at the far headland is the only warm thing moving; the rest is the coast doing its slow jewel-work, wave by wave. Some pictures are about scale. This one is about what the water leaves shining behind it.\n\n© Wayne Heim",
+    "notes": "Wet rocks glistening like the title says, waves washing through them, and one small figure in red on the far headland — the most intimate seascape in the set, a shoreline studied at arm's length with a human exclamation point.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1006,8 +1006,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "notes": "",
+    "story": "The wave hits the cliff and comes straight back up — turquoise water turned to white violence in the time it takes to blink. The cliff has been taking these hits since before there were people to name them, and the wave doesn't care; the next one is already standing up behind it. The Atlantic at this coast doesn't do calm. It does intervals.\n\n© Wayne Heim",
+    "notes": "A turquoise wave in the act of exploding against a dark cliff — the single most violent frame in the Newfoundland set, and its most spectacular. The color is the Atlantic's own: that green-blue lives about a second at a time.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1045,8 +1045,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "notes": "",
+    "story": "The Serge-Guy D. rides at anchor with the whole hillside for an audience — St. John's stacked in its jellybean colors up the rock, every house a different decision. The harbor water holds both the boat and the town doubled in reflection at the still hour. Fishing boats here work under a city that watches, and the city exists because of the boats. Each is the other's reason.\n\n© Wayne Heim",
+    "notes": "The Serge-Guy D. at anchor under St. John's jellybean hillside — boat, reflection, and the whole painted town stacked up the rock behind. It's the harbor portrait where the city and the fishery explain each other.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1085,8 +1085,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "notes": "",
+    "story": "The mist sorts the harbor by importance: the little boat sharp in front, the town soft behind, and the red coast guard ship standing in the back like a sentence in the other official language — Garde côtière, painted right on her side. The fishing boat is everybody's foreground in St. John's; the big red ship is the government's. Both float on the same gray calm, democratic as weather.\n\n© Wayne Heim",
+    "notes": "St. John's harbor in mist: the fishing boat in front, the coast guard's red ship behind, the town softened to colors above. The most complete harbor composition in the set — working boat, state vessel, and city in one gray calm.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1123,8 +1123,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "notes": "",
+    "story": "A cove is the coast keeping one small promise of shelter — cliffs on both sides taking the Atlantic's force so this pocket of water can run turquoise and almost gentle. The fence on the clifftop says the field above is somebody's pasture; the cove below belongs to the tide. Between the two arrangements, the rocks get washed twice daily and the grass never has to swim.\n\n© Wayne Heim",
+    "notes": "A sheltered turquoise cove under its pasture fence — the coast's gentle register, cliffs standing guard over water that runs almost Caribbean in the sun. It's the Newfoundland frame that surprises buyers who expect only gray.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1162,8 +1162,8 @@ export const galleryData = [
       "k4 studios"
     ],
 
-    "story": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "notes": "",
+    "story": "Signal Hill is where North America first heard Europe by radio — Marconi caught the letter S here in 1901, sent across the ocean with no wire under it. Cabot Tower went up for the 400th anniversary of the landfall it's named for, stone on stone above the harbor mouth. Under a storm sky it looks less like a monument than a keep, which is what the hill has always been: the place St. John's watches from.\n\n© Wayne Heim",
+    "notes": "Cabot Tower under a storm sky: stone turret, flagpole, and wildflower slope on Signal Hill above St. John's. The set's closing landmark — the hill where transatlantic radio began, photographed like the keep it resembles.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",

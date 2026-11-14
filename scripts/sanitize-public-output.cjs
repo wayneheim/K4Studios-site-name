@@ -3,7 +3,7 @@ const path = require('path');
 const { spawnSync } = require('child_process');
 
 const ROOT = path.join(__dirname, '..');
-const TARGET_DIRS = ['dist'];
+const TARGET_DIRS = [process.argv[2] || 'dist'];
 
 const REPLACEMENTS = [
   // Public pages and client bundles must never send a shopper or crawler to the

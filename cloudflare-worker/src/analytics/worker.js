@@ -9736,6 +9736,7 @@ async function handleTrackRequest(request, env, ctx) {
       page_instance_id = null,
       engaged_ms = null,
       page_path = null,
+      trigger = null,
       event_ts_ms = null,
       // Client timestamp for timing analysis
       event_order = null
@@ -9760,7 +9761,14 @@ async function handleTrackRequest(request, env, ctx) {
       );
       return new Response("Missing event", { status: 400, headers: headers2 });
     }
-    if (!shouldPersistAnalyticsEvent(request, event)) {
+    if (!shouldPersistAnalyticsEvent(request, event, {
+      pagePath: normalizedPagePath,
+      entryReferrer: normalizedEntryReferrer,
+      referrer: normalizedDocumentReferrer,
+      utmSource: normalizedUtmSource,
+      utmMedium: normalizedUtmMedium,
+      utmCampaign: normalizedUtmCampaign
+    })) {
       const headers2 = applyCors(new Headers(), request, "POST");
       applyNoStore(headers2);
       return new Response(null, { status: 204, headers: headers2 });
@@ -9808,6 +9816,17 @@ async function handleTrackRequest(request, env, ctx) {
       return path.match(/\/(i-[a-zA-Z0-9_-]+)\/?$/)?.[1] || null;
     }, "inferImageIdFromPath");
     const storedEventType = event === "zoom_open" || event === "zoom" ? "xl_zoom" : event;
+    const normalizedTrigger = normalizeOptionalText(trigger, 128);
+    let resolvedSourceLayer = typeof source_layer === "string" && source_layer ? source_layer : null;
+    if (storedEventType === "order_clicked") {
+      resolvedSourceLayer = ({
+        zoom_pricing_summary: "pricing_zoom_summary_v1",
+        more_info_pricing_summary: "pricing_more_info_summary_v1",
+        static_pricing_button: "pricing_main_button_v1"
+      })[normalizedTrigger] || (normalizedTrigger === "pricing_menu"
+        ? (page_type === "story" ? "pricing_story_button_v1" : "pricing_main_button_v1")
+        : resolvedSourceLayer);
+    }
     let targetId = null;
     if (storedEventType === "page_view") {
       targetId = normalizedPagePath;
@@ -9838,7 +9857,7 @@ async function handleTrackRequest(request, env, ctx) {
         sessionId: bestSessionId,
         source: "js",
         visitorId,
-        sourceLayer: typeof source_layer === "string" && source_layer ? source_layer : null,
+        sourceLayer: resolvedSourceLayer,
         pageKey: normalizedPageKey,
         // Use the client-reported page_path for easier SQL grouping.
         page: normalizedPagePath || null,

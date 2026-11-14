@@ -45,8 +45,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "Grand Sunset. Jackson Hole Wyoming, sunset lights the sky behind snow covered Grand Teton mountains.",
-    "notes": "",
+    "story": "Jackson Hole keeps its clock on the mountain — when the Grand goes pink, the day is officially over, and no argument from the valley floor has ever extended it. The color is a winter specialty: cold air, low sun, snowfields to catch the light and hold it up where everyone can see the time. Ranchers have read this clock for a century without once winding it. It runs on the earth's own mechanism, keeps perfect time, and charges nothing but attention.\n\n© Wayne Heim",
+    "notes": "Snow-covered Grand Teton mountains under a pink sunset sky near Jackson Hole — this set's clock frame: the range telling the valley the time, a century of evenings read off the snowfields.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -82,8 +82,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "Wayne Heim's exploration of sunset landscape photography comes alive in this piece, showcasing sunset landscape photography. A testament to painterly sunset scenes in fine art.",
-    "notes": "",
+    "story": "A falls under a stone arch is a river with architecture — Berea's water running beneath the bridge the town built over it, the sunset coming through the autumn trees to warm both the stone and the current. The arch frames the falls the way the town framed its whole history: practically, in stone, expecting the water to keep its side of the bargain. Evening light is the falls' best hour. The rocks go amber, the foam goes gold, and the river passes under the town's signature like it's signing back.\n\n© Wayne Heim",
+    "notes": "Berea Falls flowing beneath a stone arch bridge at sunset, autumn trees in warm evening light — this set's signature frame: the river passing under the town's stonework, signing back in foam and gold.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -118,8 +118,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "Sunset in Arches. Sun is setting behind rock formations in Arches National Park, Utah.",
-    "notes": "",
+    "story": "Arches keeps a skyline — towers of Entrada sandstone standing over the desert like a city the geology built and the erosion keeps renovating. At sunset the light comes through broken cloud and picks its favorites, one fin lit gold while the next stands in shadow, the whole skyline arguing about which of them the evening belongs to. Cities crumble in centuries. This one crumbles in millennia and improves as it goes. Dusk is its rush hour: everything glowing, nothing moving.\n\n© Wayne Heim",
+    "notes": "Red rock towers in Arches National Park under a golden sunset sky — this set's skyline frame: a city geology built and erosion renovates, dusk as its rush hour.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -155,8 +155,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "Delving into painterly sunset scenes, this work by Wayne Heim highlights painterly sunset scenes through painterly sunset scenes and sunset landscape photography. A powerful statement in photography.",
-    "notes": "",
+    "story": "Last light at Berea Falls is a negotiation between water and stone conducted in amber — the creek spreading over the ledges in sheets, the old arch bridge standing in the distance like a witness who has seen ten thousand of these evenings and still shows up. The ledges make the water patient: no single drop, just a wide, lit descent, step by geological step. Autumn holds the banks. The sky holds its breath. The falls hold the floor, as they have since before the bridge, before the town, before the light had a name for what it was doing.\n\n© Wayne Heim",
+    "notes": "Berea Falls rushing over rocky ledges at sunset, autumn trees and the stone arch bridge in the distance — this set's negotiation frame: water made patient by stone, last light conducted in amber.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -192,8 +192,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "Delving into painterly sunset scenes, this work by Wayne Heim highlights painterly sunset scenes through painterly sunset scenes and sunset landscape photography. A powerful statement in photography.",
-    "notes": "",
+    "story": "Horseshoe Bend at dusk is the Colorado caught mid-sentence — the river curving a thousand feet below the rim in its famous green detour, the sun's last glow sitting on the horizon like the period it hasn't reached yet. The canyon walls hold the day's heat and give it back as color while the water below goes dark and deliberate. Stand at the edge and the scale stops being a number. The river wrote this bend over millions of years of evenings exactly like this one, and it's still writing.\n\n© Wayne Heim",
+    "notes": "Horseshoe Bend on the Colorado River in Arizona at dusk, the river curving through red-rock canyon under a dramatic sky — this set's mid-sentence frame: millions of years of evenings, still writing.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -231,8 +231,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "This image embodies classic sunset scenery, captured by Wayne Heim in his signature style. It reflects classic sunset scenery.",
-    "notes": "",
+    "story": "Dusk was closing time on Mormon Row — chores done, stock settled, the barn standing in its golden field with the day's accounts balanced and the Tetons turning their snowfields over to the evening behind it. A puddle in the foreground keeps the barn's portrait a second time, free of charge, the way water out here always doubles whatever beauty it's given. The homesteaders are gone and the schedule outlived them. The barn still closes at dusk, punctually, in full color.\n\n© Wayne Heim",
+    "notes": "The Moulton Barn on Mormon Row at sunset, snow-covered peaks behind a golden field, the barn reflected in a foreground puddle — this set's closing-time frame: the homestead's accounts balanced at dusk, the portrait kept twice.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -270,8 +270,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "Delving into sunset landscape photography, this work by Wayne Heim highlights painterly sunset scenes through sunset landscape photography and painterly sunset scenes. A powerful statement in photography.",
-    "notes": "",
+    "story": "Two chairs on a riverbank are the whole philosophy of a Vermont evening — no agenda, no screen, just the river curving past and the sky putting on the color it saves for people patient enough to sit down. The chairs face the water and the sunset together, a seating arrangement that assumes the best entertainment in the county is the day ending. Somebody mowed this grass, set these chairs, and trusted the evening to deliver. The orange going to red over the river says the trust was well placed.\n\n© Wayne Heim",
+    "notes": "Two white Adirondack chairs on a grassy Vermont riverbank at sunset under a dramatic orange sky — this set's philosophy frame: the day ending as the county's best entertainment, seating arranged accordingly.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -306,8 +306,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "Sunset over a lonely western road.",
-    "notes": "",
+    "story": "A lonely road at sunset is the West's simplest promise: the bend ahead, the light going down behind you, and nothing between here and the horizon with an opinion. Rangeland this open makes its own weather of the evening — the clouds taking the color, the grass taking the shadow, the road taking you at whatever pace you brought. Everybody who ever drove west on a road like this was heading for the same thing, whether they knew it or not. The bend keeps it. Drive on.\n\n© Wayne Heim",
+    "notes": "A lonely road winding through open Wyoming rangeland at sunset under dramatic clouds — this set's promise frame: the bend keeping what everybody drove west to find.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -343,8 +343,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "Sunset at the Farm -  sunsetting behind a rural farm outlining the buildings.",
-    "notes": "",
+    "story": "A farm at sunset is a silhouette with a résumé — barn and silos standing black against a purple-orange sky, the whole operation readable in outline: the work stored, the animals in, the day filed. Silos are a farm's punctuation, the tall exclamation that says somebody here plans to feed things through a Wyoming winter. The sky spends its best color on farms like this without being asked. The foreground goes dark. The buildings hold their shape. Night comes up the fields like it's paying a visit it's paid ten thousand times.\n\n© Wayne Heim",
+    "notes": "A rural Wyoming farm with barn and silos silhouetted against a purple and orange sunset sky — this set's résumé frame: the whole operation readable in outline, the day filed.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -380,8 +380,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "Angry Sunset - dark gray clouds at sunset seem to warn of storm .",
-    "notes": "",
+    "story": "An angry sunset is the sky arguing with itself — storm clouds stacked dark over Jackson Hole while the horizon burns orange underneath like the day is refusing to leave without a statement. Weather like this is a negotiation the valley watches from porches: the storm has the altitude, the sunset has the timing, and the ridge between them holds its silhouette and stays out of it. By full dark one of them will have won. The smart money in this valley never bets against the storm, and never misses the argument.\n\n© Wayne Heim",
+    "notes": "Dark storm clouds at sunset over Jackson Hole, orange light breaking at the horizon — this set's argument frame: storm versus sunset over a silhouetted ridge, the valley watching from porches.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -420,8 +420,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "18 x 24 In StockTiny Bubbles - waves producing frothy bubbles come in on shore of Lake Erie as sunset in the west.©Wayne Heim",
-    "notes": "",
+    "story": "Lake Erie at sunset does its delicate work at the waterline — waves arriving in foam and lace, the bubbles catching the last pink and orange of the sky like the lake is bottling the evening. A Great Lake at dusk stops being weather and becomes shoreline: sand, foam, the treed point going dark, the whole inland sea behaving like a tide pool for anyone standing in it. The bubbles last seconds. The lake makes more. It's been practicing this small generosity for ten thousand summers.\n\n© Wayne Heim",
+    "notes": "Frothy waves washing onto the Lake Erie shore at sunset under orange and pink clouds — this set's waterline frame: the inland sea bottling the evening in foam, seconds at a time.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -458,8 +458,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "Heading Out -- flock of geese wing their way out over the water at the harbor entrance in Fairport Harbor, Ohio",
-    "notes": "",
+    "story": "Heading out is the geese's whole profession — a formation lifting over Fairport Harbor at sunset, the breakwater and its little lighthouse marking the door they use, the calm water below holding the sky they're climbing into. Geese commute with more discipline than any airline: formation kept, calls answered, the route inherited. The harbor settles behind them — boats in, light going, the day's water gone still. The birds take the evening with them in good order, heading for a lake none of us can see from here.\n\n© Wayne Heim",
+    "notes": "A flock of geese flying in formation over calm harbor water at sunset in Fairport Harbor, Ohio — this set's profession frame: the evening's commute in good order, the breakwater marking the door.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -493,8 +493,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "Out of the Rocks - tree appears to be growing out of the rocks on lake shore at unset.",
-    "notes": "",
+    "story": "A tree growing out of layered rock is an argument roots win slowly — no soil worth the name, just cracks, lake weather, and a seed that declined to be reasonable. At sunset the bare branches stand against the low sun like the tree is displaying its evidence: every limb a season it wasn't supposed to have. The lake laps the rocks below, unimpressed; it has watched this negotiation for years. The tree isn't thriving the easy way. It's thriving the documented way, one crack at a time, in full view of the water.\n\n© Wayne Heim",
+    "notes": "A bare tree growing from layered rocks on a lakeshore at sunset, the sun low behind its branches — this set's evidence frame: roots winning slowly, thriving the documented way.",
     "rating": 3,
     "galleries": [],
     "visibility": "show",
@@ -532,8 +532,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Sunset of Lone Guard tree overlooking Yellowstone River at Artist Point in Yellowstone National Park.",
-    "notes": "",
+    "story": "The lone guard at Artist Point has the best post in Yellowstone and the worst company — one pine, posted over the canyon where the river runs green-gold below the falls' mist, keeping watch through sunsets that stack pink and purple over the gorge like the sky is showing off for an audience of one. Trees that grow at canyon rims learn the wind's whole vocabulary. This one stands in it nightly, unrelieved, while the tourists come and go with the light. The post is permanent. So, apparently, is the guard.\n\n© Wayne Heim",
+    "notes": "A lone pine overlooking the Yellowstone River canyon at Artist Point at sunset under pink, purple, and orange clouds — this set's best-post frame: one guard, permanent watch, the sky showing off for an audience of one.",
     "rating": 3,
     "galleries": [],
     "visibility": "show",
@@ -572,8 +572,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Fine art landscape photography of Iceland Sunset in the Summer.",
-    "notes": "",
+    "story": "The midnight sun doesn't set in Iceland so much as it changes its mind — the sky going fiery over a barn and silo at an hour when the rest of the world is dark, the green field lit like noon's younger brother. Summer this far north runs on a different contract: the light never fully leaves, the farmers never fully stop, and sunset becomes a color event instead of an ending. The barn stands in it the way it stands in everything here — practically, facing the weather, unimpressed by a sky that refuses to close.\n\n© Wayne Heim",
+    "notes": "A barn and silo on a green Icelandic field under a fiery midnight-sun sky — this set's changed-mind frame: sunset as a color event instead of an ending, the light refusing to close.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -609,8 +609,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "This image embodies painterly sunset scenes, captured by Wayne Heim in his signature style. It reflects painterly sunset scenes with a touch of sunset landscape photography.",
-    "notes": "",
+    "story": "Moorland at dusk is Iceland with its guard down — rolling hills in fall color under a sky gone pink and purple, no waterfall, no glacier, just the country's quiet majority doing its evening. Most of Iceland is this: open moor, grazing land, weather crossing unopposed, the light doing something spectacular over land that asks for nothing. The hills hold the color a few minutes and hand it back. The moor has no use for an audience. It gets the sky's best work anyway, nightly, all autumn.\n\n© Wayne Heim",
+    "notes": "An Iceland moorland at sunset in fall color, rolling hills under a pink and purple sky — this set's quiet-majority frame: the country's unglamorous heartland getting the sky's best work anyway.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -648,8 +648,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Fine art landscape photography of Iceland sunset in the Summer.",
-    "notes": "",
+    "story": "Goðafoss earned its name in a single decision — the falls of the gods, where a lawspeaker is said to have thrown his idols into the water a thousand years ago and changed a country's religion by lunchtime. At dusk the falls run their white arc over dark rock under a working sky, and the old story feels less like legend than local reporting. Water this decisive doesn't care about the hour. It falls at full conviction through the evening light, the mist rising, the river continuing its argument downstream.\n\n© Wayne Heim",
+    "notes": "Goðafoss waterfall in Iceland at sunset, water falling over dark rock beneath dramatic evening clouds — this set's decision frame: a thousand years of conviction, the river's argument continuing downstream.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -688,8 +688,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Fine art landscape sunset photograph of the Faroe Islands.",
-    "notes": "",
+    "story": "When the sun breaks over a Faroe village it comes in rays, like the light has to be rationed through the cloud — shafts landing on colorful houses and grass roofs above the sea, the cliffs taking their share in green. Villages here were built where the light and the harbor allowed, and a sunset like this explains both decisions at once. The North Atlantic keeps its gray majority below. For a few minutes the village gets the treasury version: light in beams, color in houses, everything briefly, improbably golden.\n\n© Wayne Heim",
+    "notes": "Sunset rays breaking through clouds over a Faroe Islands coastal village, colorful houses and green cliffs above the sea — this set's treasury frame: light rationed in beams, the village briefly golden.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -728,8 +728,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Fine art, black & white, landscape sunset photography of the Faroe Islands.",
-    "notes": "",
+    "story": "In black and white a Faroe town becomes its own history photograph — sun rays breaking over the sea in shafts of pure tone, the houses and church gathered at the mountain's base the way they've gathered for centuries of exactly this weather. Color would make it pretty. Monochrome makes it true: the North Atlantic was gray before it was anything else, and these towns were built by people who planned around that fact. The rays do the decorating. The town does the enduring. Both are on schedule.\n\n© Wayne Heim",
+    "notes": "A Faroe Islands coastal town in black and white beneath sun rays breaking over the sea — this set's history frame: the rays decorating, the town enduring, both on schedule.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -768,8 +768,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Multi-color spectacular sunrise in Davis West Virginia showcasing natures pallet of painterly color.",
-    "notes": "",
+    "story": "A Davis sunrise doesn't ease in — it arrives in full color over the Alleghenies, pink and orange and purple stacked over forested ridges while the valley below keeps its mist like it's not ready to be seen yet. This is Blackwater country, where the mountains fold away in every direction and the morning light has to work through all of them. The colors are brief and total: a few minutes of the sky spending everything it saved overnight. The mist takes the note and starts its slow exit. The ridges just receive, the way they've received ten thousand of these.\n\n© Wayne Heim",
+    "notes": "A multi-color sunrise over forested mountains in Davis, West Virginia, orange and pink light through dark clouds above a misty valley — this set's full-color arrival frame: the sky spending everything it saved overnight.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -808,8 +808,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Delving into painterly sunset scenes, this work by Wayne Heim highlights painterly sunset scenes through painterly sunset scenes and sunset landscape photography. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
+    "story": "First light in the Alleghenies comes in layers — ridge behind ridge stepping down in blue while the sky stacks orange and pink above them, the mist sitting in the valleys like the night hasn't finished moving out. A panorama is the only honest width for it: the sunrise here isn't an event at a point, it's a tide arriving across a whole folded country at once. Each ridge gets its light in turn, near to far or far to near depending on the clouds' mood. The valleys get theirs last, and complain about nothing.\n\n© Wayne Heim",
+    "notes": "A panoramic sunrise over layered mountain ridges in Davis, West Virginia, orange and pink light above misty valleys — this set's tide frame: morning arriving across a whole folded country, each ridge lit in turn.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -848,8 +848,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Multi-color purple and pink and orange sunrise over the sleepy mountain top in Davis West Virginia.",
-    "notes": "",
+    "story": "The title is the sky's own claim — purple, pink, and orange laid over a sleeping mountaintop in proportions no painter would dare without being accused of exaggeration. Davis sits high in the Alleghenies, and its dawns come with the whole spectrum pre-mixed: the forest below still black with night, the clouds doing every color at once like they're showing the day its options. By the time the sun itself arrives the performance is mostly over. The palette was the show. The mountaintop just held the easel.\n\n© Wayne Heim",
+    "notes": "A purple, pink, and orange sunrise over a forested mountaintop near Davis, West Virginia — this set's easel frame: the spectrum pre-mixed, the palette as the whole show.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -889,8 +889,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Delving into sunset photography, this work by Wayne Heim highlights classic sunset scenery. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
+    "story": "Dawn at panorama width is the Alleghenies' full confession — every ridge the country has been hiding in the dark, laid out in orange and pink over valleys still holding their mist like a secret they're about to give up. Near Davis the mountains don't peak so much as fold, endlessly, and morning light is the only hour that itemizes them all at once. Stand here at first light and the day feels less started than revealed. The sun hasn't even cleared the ridge. The revealing is ahead of it, as usual.\n\n© Wayne Heim",
+    "notes": "A broad sunrise panorama over forested mountain ridges near Davis, West Virginia, orange and pink morning light over misty valleys — this set's confession frame: the day revealed before it's started.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -930,8 +930,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Colorful display of natures colors in the sunset as it reflects off of the meandering stream.",
-    "notes": "",
+    "story": "A meandering stream at sunset is a valley keeping its own portrait — the water taking the pink and orange down off the sky and holding it at ground level where the forest can see itself. Vermont evenings run quiet: the stream does the color work, the trees stand in their ranks, and the whole valley behaves like it knows it's being looked at by exactly nobody and performs anyway. The reflection lasts as long as the light does. The stream, patient as Vermont itself, will hold tomorrow's too.\n\n© Wayne Heim",
+    "notes": "A colorful sunset over a meandering stream in a forested Vermont valley, pink and orange light reflected in the water — this set's self-portrait frame: the sky's color held at ground level for the forest.",
     "rating": 3,
     "galleries": [],
     "visibility": "show",
@@ -969,8 +969,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Setting sun colors over the iconic Horse Shoe Bend formation in Arizona.",
-    "notes": "",
+    "story": "From the rim, Horseshoe Bend at sunset is geometry with a river in it — the Colorado completing its perfect green curve through red rock, the golden light raking the canyon walls like it's inspecting the workmanship. A thousand feet of air between the viewer and the water rearranges a person's sense of scale politely and permanently. The bend took the river millions of years to draw. The sunset takes a few minutes to sign it. Both signatures hold.\n\n© Wayne Heim",
+    "notes": "Horseshoe Bend on the Colorado River in Arizona at sunset, viewed from high on the rim in golden evening light — this set's geometry frame: millions of years to draw the curve, minutes for the sunset to sign it.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1009,8 +1009,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Capturing the remaining vibrant blue sky of the end of the day as it mixes with the natural red rock colors and orange, yellow and pink of the setting sun at Horse Shoe Bend Park.",
-    "notes": "",
+    "story": "The last blue of the day holds out longest over the canyon — a band of true sky standing above the red rock while the sunset assembles its oranges and pinks along the horizon like a second, warmer weather system moving in. Horseshoe Bend below takes both lights at once: the blue from above, the ember from the west, the river running green between them. It's the day's most honest minute, when neither light has won. The canyon, which has hosted this negotiation every evening of its existence, keeps its opinion in the stone.\n\n© Wayne Heim",
+    "notes": "Horseshoe Bend in Arizona at sunset, remaining blue sky above red rock canyon walls with orange and pink light at the horizon — this set's negotiation frame: two lights at once, neither having won.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1049,8 +1049,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Delving into sunset photography, this work by Wayne Heim highlights sunset photography through classic sunset scenery. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
+    "story": "Last light on a Tennessee pasture is the South's softest hour — mist coming up off the green field, autumn trees standing at the edges, the sky stacking purple and pink over the wooded hill like it's in no hurry to be anywhere else. Pasture land at dusk has a completed feeling: the cattle in, the grass resting, the whole farm exhaling at the speed of the light leaving. The mist will own this field by full dark. The sunset just signs the transfer, beautifully, and goes.\n\n© Wayne Heim",
+    "notes": "A sunset over a green Tennessee pasture, autumn trees and a dramatic purple and pink sky — this set's transfer frame: the mist taking ownership at dark, the sunset signing beautifully.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1090,8 +1090,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Mount Hood at Sunset. Mt Hood in Oregon as the sun is going down. Trillium lake is in the foreground and you can see snow cats grooming the slopes of the mountain  ©Wayne Heim",
-    "notes": "",
+    "story": "By the time the sun goes down over Trillium Lake, Mount Hood has finished its working day — the slopes emptied, the lifts stilled, the whole volcano standing in its own reflection like it's reviewing the day and finding it acceptable. The lake does the mountain the courtesy of stillness, which at this altitude is never guaranteed. Pink goes to ember on the snowfield. The reflection dims from the bottom up, the way the day actually leaves: water first, then forest, then the peak, alone with the last of it.\n\n© Wayne Heim",
+    "notes": "Mount Hood glowing at sunset above Trillium Lake, its peak reflected in still water, portrait — this set's review frame: the mountain off duty, the day leaving water first and the peak last.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1127,8 +1127,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "Shadow Reflection -  tree reflection in water at sunset.©Wayne Heim",
-    "notes": "",
+    "story": "A lone tree at sunset gets counted twice — once in silhouette against the deep blue, once in the still water below, where its reflection stands in the pink the sky is spending along the horizon. Trees at the water's edge live this double life every calm evening: rooted in the shore, resident in the lake. The reflection is the more fragile citizenship; a breath of wind revokes it. Tonight there's no wind. The tree holds both its positions until the dark takes them in order — water first, then sky, then the tree itself, last as always.\n\n© Wayne Heim",
+    "notes": "A lone tree reflected in still water at sunset under a blue and pink evening sky, portrait — this set's double-life frame: rooted in the shore, resident in the lake, both positions held until dark.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",

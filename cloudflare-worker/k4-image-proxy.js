@@ -40,7 +40,10 @@ import {
   detectDevice,
   isSyntheticTraffic
 } from './src/shared/index.js';
-import { shouldPersistAnalyticsEvent } from './src/shared/analytics-write-gate.js';
+import {
+  isCoordinatedProxyCrawlRequest,
+  shouldPersistAnalyticsEvent
+} from './src/shared/analytics-write-gate.js';
 
 // ═══════════════════════════════════════════════════════════════════════════
 // ANALYTICS (Phase 4 — single namespace entry point)
@@ -1915,6 +1918,81 @@ async function handleImagePagePolicy(request, pathname, ctx, env) {
 // --------------------
 // GATEWAY REQUEST HANDLER (FIREWALL)
 // --------------------
+const COORDINATED_CRAWL_PROOF_COOKIE = 'k4_activity_ok';
+const COORDINATED_CRAWL_PENDING_COOKIE = 'k4_activity_pending';
+const COORDINATED_CRAWL_VERIFY_PARAM = '__k4_verify';
+
+function hasCookieValue(request, name, expectedValue = '1') {
+  const cookieHeader = request.headers.get('Cookie') || '';
+  return cookieHeader
+    .split(';')
+    .map((part) => part.trim())
+    .some((part) => part === `${name}=${expectedValue}`);
+}
+
+function escapeHtmlAttribute(value) {
+  return String(value || '')
+    .replace(/&/g, '&amp;')
+    .replace(/"/g, '&quot;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+
+function coordinatedCrawlChallengeResponse(url) {
+  const continueUrl = new URL(url.toString());
+  continueUrl.searchParams.set(COORDINATED_CRAWL_VERIFY_PARAM, '1');
+  const continueHref = `${continueUrl.pathname}${continueUrl.search}`;
+  const html = `<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Verify your visit | K4 Studios</title>
+<style>body{margin:0;background:#151515;color:#eee;font:16px/1.5 system-ui,sans-serif;display:grid;min-height:100vh;place-items:center}.card{max-width:34rem;margin:2rem;padding:2rem;border:1px solid #444;background:#202020;text-align:center}.button{display:inline-block;margin-top:1rem;padding:.75rem 1.2rem;background:#d28a35;color:#111;text-decoration:none;font-weight:700;border-radius:.25rem}</style>
+</head><body><main class="card"><h1>One quick check</h1><p>Please confirm you are a person before continuing to the gallery.</p><a class="button" rel="nofollow" href="${escapeHtmlAttribute(continueHref)}">Continue to K4 Studios</a></main></body></html>`;
+  return new Response(html, {
+    status: 403,
+    headers: {
+      'Content-Type': 'text/html; charset=utf-8',
+      'Cache-Control': 'private, no-store, max-age=0',
+      'Set-Cookie': `${COORDINATED_CRAWL_PENDING_COOKIE}=1; Max-Age=300; Path=/; Secure; HttpOnly; SameSite=Lax`,
+      'X-K4-Friction': 'coordinated-proxy-crawl',
+      'X-Robots-Tag': 'noindex, nofollow'
+    }
+  });
+}
+
+function coordinatedCrawlVerifiedResponse(url) {
+  const destination = new URL(url.toString());
+  destination.searchParams.delete(COORDINATED_CRAWL_VERIFY_PARAM);
+  const location = `${destination.pathname}${destination.search}`;
+  const headers = new Headers({
+    'Location': location,
+    'Cache-Control': 'private, no-store, max-age=0',
+    'X-K4-Friction': 'coordinated-proxy-crawl-passed'
+  });
+  headers.append('Set-Cookie', `${COORDINATED_CRAWL_PROOF_COOKIE}=1; Max-Age=86400; Path=/; Secure; HttpOnly; SameSite=Lax`);
+  headers.append('Set-Cookie', `${COORDINATED_CRAWL_PENDING_COOKIE}=; Max-Age=0; Path=/; Secure; HttpOnly; SameSite=Lax`);
+  return new Response(null, { status: 303, headers });
+}
+
+async function maybeHandleCoordinatedCrawlFriction(request, env) {
+  if (request.method !== 'GET') return null;
+  if (!(request.headers.get('Accept') || '').includes('text/html')) return null;
+  if (request.cf?.botManagement?.verifiedBot) return null;
+
+  const url = new URL(request.url);
+  const completingCheck =
+    url.searchParams.get(COORDINATED_CRAWL_VERIFY_PARAM) === '1'
+    && hasCookieValue(request, COORDINATED_CRAWL_PENDING_COOKIE);
+  const coordinatedCrawl = isCoordinatedProxyCrawlRequest(request, {
+    pagePath: url.pathname,
+    entryReferrer: completingCheck
+      ? 'https://www.k4studios.com/'
+      : (request.headers.get('Referer') || '')
+  });
+  if (!coordinatedCrawl || !(await getBotFrictionEnabled(env))) return null;
+  if (completingCheck) return coordinatedCrawlVerifiedResponse(url);
+  return coordinatedCrawlChallengeResponse(url);
+}
+
 async function handleGatewayRequest(request, env) {
   const url = new URL(request.url);
   const ua = request.headers.get("user-agent") || "";
@@ -3743,6 +3821,12 @@ export default {
       // Default: dashboard
       return handleSerpDashboard(request, env);
     }
+
+    // Apply selective activity-level friction before gallery and image-detail
+    // routing, since those routes intentionally bypass the general gateway.
+    // This never applies to analytics/admin/SERP/image-binary endpoints above.
+    const coordinatedCrawlFriction = await maybeHandleCoordinatedCrawlFriction(request, env);
+    if (coordinatedCrawlFriction) return coordinatedCrawlFriction;
 
     // 1) Image detail pages: apply policy first, then log art view
     if (isImagePageRoute(url.pathname)) {

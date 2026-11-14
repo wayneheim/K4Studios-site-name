@@ -45,8 +45,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "This image embodies painterly european landscapes and international landscape photography, captured by Wayne Heim in his signature style in Canada-Western. It reflects International – Across Borders with a touch of international landscape photography. © Wayne Heim",
-    "notes": "",
+    "story": "A panorama is the only honest format for this range — the Canadian Rockies don't present a subject, they present a succession, peak handing the eye to peak until the succession itself becomes the picture. These mountains run colder and taller than their American cousins and keep their snow like a policy. Somewhere below the treeline the forests are doing the quiet work, and below them the lakes are waiting to double everything. The range doesn't ask to be admired in pieces. It insists on the whole argument at once.\n\n© Wayne Heim",
+    "notes": "A sweeping panorama of layered, snow-capped Canadian Rockies peaks — the set's opening argument: the range presented whole, succession as composition, the northern mountains at full scale.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -84,8 +84,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Capturing the beauty of the Canadian Rockies: Banff, Jasper, and Emerald Lake in fine art.",
-    "notes": "",
+    "story": "Early winter in the Rockies is a negotiation conducted in white — the snow arriving first where it's coldest, testing the high country while the forest below keeps its green a few weeks longer out of seniority. The peaks have already signed. The valleys are still reading the terms. Everything about this season is a rehearsal: the first storms small, the cold polite, the light going early as if practicing for December. The mountains have run this transition a thousand times. They take it at the pace it deserves — one cold front at a time.\n\n© Wayne Heim",
+    "notes": "Snow-covered Rockies peaks above an evergreen forest in early winter — the set's transition frame: the season arriving from the top down, the high country already signed, the forest still reading the terms.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -123,8 +123,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Breathtaking fine art photography of the Canadian Rockies, encompassing Banff, Jasper, and Emerald Lake.",
-    "notes": "",
+    "story": "Up close, a Rockies peak stops being a view and becomes a surface — craggy, wind-worked, the snow held only where the rock allows it. In black and white the sculpture stands alone: no blue sky to flatter it, just the argument between stone and winter conducted in tone. This is the altitude where weather is a physical trade — frost splits, wind carves, gravity collects the fees. The peak's shape is the minutes of that meeting, kept for ten million years.\n\n© Wayne Heim",
+    "notes": "A craggy snow-covered Canadian Rockies peak in close black-and-white view — the set's sculpture study: the mountain as surface, stone and winter arguing in pure tone.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -162,8 +162,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Captivating images of the Canadian Rockies through fine art, featuring Banff, Jasper, and Emerald Lake.",
-    "notes": "",
+    "story": "A bright winter day in the high country is a kind of wealth — the lake frozen and silent under its white cover, the ridge lit like the day has nowhere better to be, the cold rendered ornamental by sunshine. Days like this are the mountains' recruiting posters, and they're honest as far as they go; they just omit the other two hundred days, when the same scene runs on endurance instead of light. The evergreens keep both versions in their rings. Today, the trees agree, is the version worth framing.\n\n© Wayne Heim",
+    "notes": "A snow-covered Rockies ridge above a frozen lake under a bright winter sun — the set's fair-weather frame: the high country in its ornamental mood, cold made beautiful by light.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -201,8 +201,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Fine art images of the Canadian Rockies with highlights from Banff, Jasper, and Emerald Lake.",
-    "notes": "",
+    "story": "A lake this still is the mountains' vanity and their confession — every peak doubled, every detail audited by the water, which reports back exactly what it sees. Reflections in the Rockies are earned: the wind spends most days shredding them, so a mirror morning is a negotiated settlement between the range and the weather. Under the surface the water is near freezing and clearer than the air. The peaks lean over it like they're checking their appearance before the day starts. They are. It holds.\n\n© Wayne Heim",
+    "notes": "Snow-covered Canadian Rockies peaks mirrored in a crystal-clear lake — the set's reflection study: the range doubled on a negotiated morning, the water's audit exact.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -241,8 +241,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Exploring the Canadian Rockies through fine art: Banff, Jasper, and Emerald Lake.",
-    "notes": "",
+    "story": "The pines along this shore are the lake's oldest residents — rooted in the rock flour the glaciers left, drinking the coldest water in the valley, standing in the front row of a view they cannot see. A shoreline is a truce line between forest and water, redrawn by every high spring and low August, and the trees hold their side of it with roots. The peaks across the lake get the attention. The pines get the tenure. Between them, the reflection does the diplomatic work, visiting both.\n\n© Wayne Heim",
+    "notes": "Pine trees lining the shore of a calm Rockies lake, peaks reflected beyond — the set's tenure frame: the forest's front row, rooted on the truce line between water and mountain.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -280,8 +280,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "The majesty of the Canadian Rockies in fine art, including Banff, Jasper, and Emerald Lake.",
-    "notes": "",
+    "story": "'Weathered' is the polite word — this peak is a survivor of the longest argument in geology, ice against stone, conducted at pressures and patience no human institution can imitate. In black and white the weathering reads as biography: every stratum a chapter, every snow patch a footnote the winter keeps re-adding. The forests below are recent tenants. The peak was old when the glaciers that carved it were young, and it wears its age the way the Rockies wear everything — without apology and at full scale.\n\n© Wayne Heim",
+    "notes": "A weathered snow-covered Rockies peak in black and white, layered rock above forested slopes — the set's biography frame: the mountain's age legible in strata, tone doing the telling.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -319,8 +319,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Artistic representations of the Canadian Rockies, highlighting Banff, Jasper, and Emerald Lake.",
-    "notes": "",
+    "story": "Most peaks come to a point; this one filed its top flat, a summit like a table set for weather. Flat tops are geology's editing — a hard layer that refused the erosion that lowered everything around it, left standing as the level the whole range once kept. From its table the view runs in every direction at once. The snow up there takes the wind's full opinion without shelter, and the forests below the shoulders live in the lee of its stubbornness. A mountain that declined to be pointed has its own authority.\n\n© Wayne Heim",
+    "notes": "A flat-topped snow-covered Rockies peak above forested slopes — the set's table-mountain study: the summit that refused to be pointed, a hard layer's old level held against the sky.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -358,8 +358,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Artistic views of the Canadian Rockies showcasing Banff, Jasper, and Emerald Lake.",
-    "notes": "",
+    "story": "Ranges repeat themselves — ridge behind ridge in parallel, the same stone sentence spoken at different distances until the repetition becomes the rhythm of the whole country. The stream bed in front is the punctuation: the water that runs between the ridges, filing the commas. Stand here long enough and the geography becomes musical, theme and echo, the near ridge stating what the far ones answer. The Rockies composed this way don't need a single famous peak. The pattern is the monument.\n\n© Wayne Heim",
+    "notes": "Parallel snow-covered Rockies ridges above a rocky stream bed — the set's rhythm composition: ridge answering ridge in theme and echo, the pattern itself as the monument.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -397,8 +397,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Landscape photography of the stunning Canadian Rockies, including Banff, Jasper, and Emerald Lake.",
-    "notes": "",
+    "story": "Winter light through snow-loaded evergreens is the forest's stained glass — the sun broken into shafts and sparkles by a thousand white branches, the peaks beyond reduced to a bright rumor. This is the quietest hour the high country keeps: no wind, the snow holding its breath on every limb, the light doing all the moving. A branch will drop its load eventually and reset the composition in a small white explosion. Until then the forest holds its pose like it knows it's being looked at. It has held it all winter.\n\n© Wayne Heim",
+    "notes": "Sunlight filtering through snow-covered evergreens, Rockies peaks beyond, portrait — the set's stained-glass frame: the winter forest lit from inside, the range reduced to a bright rumor behind it.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -436,8 +436,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Exploring the Canadian Rockies through fine art: Banff, Jasper, and Emerald Lake.",
-    "notes": "",
+    "story": "Light arriving on snow peaks is a border crossing — the sun taking the high country first, ridge by ridge, while the valleys below still hold the night's blue. In black and white the arrival reads as pure sequence: bright where the day has landed, dark where it's still in transit, cloud doing the customs work in between. The peaks don't celebrate. They've received this delivery ten thousand times and will be receiving it when the valleys below are forest again. Some mail is eternal.\n\n© Wayne Heim",
+    "notes": "Sunlight breaking over snow-covered Rockies peaks in black and white — the set's arrival frame: the day landing ridge by ridge, the valleys still holding the night below.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -475,8 +475,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Artistic representations of the Canadian Rockies, highlighting Banff, Jasper, and Emerald Lake.",
-    "notes": "",
+    "story": "A glacier is a river that decided to take centuries — ice flowing at the speed of patience, carrying mountains ground to flour down to feed the turquoise lakes. The shadows crossing it are the peaks' long signatures, written on the ice each day and erased each night, a correspondence between the summits and their own frozen runoff. Stand on a ridge here and time stops being a metaphor: the ice under those shadows left the summit before there were nations on this continent, and it is still, measurably, on its way.\n\n© Wayne Heim",
+    "notes": "Snow-covered Rockies peaks and glaciers under a pale sky, mountain shadows on the ice — the set's deep-time frame: the summits signing their names daily on ice that left before nations existed.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -514,8 +514,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Immersive landscape photography of the Canadian Rockies: Banff, Jasper, and Emerald Lake.",
-    "notes": "",
+    "story": "At night Sunwapta Falls keeps its own counsel — the tourists gone, the roar reduced to what the canyon can hold in the dark, the water still running its white course over the snow-covered rocks by starlight and habit. A falls doesn't know it's scenery. Below freezing, under a sky full of unpaid stars, it does the same work it does at noon for bus tours: it falls, beautifully, unwatched. The constancy is the point. Jasper's nights are long, and the river keeps every one of them.\n\n© Wayne Heim",
+    "notes": "Sunwapta Falls at night — water over snow-covered rocks under a starry Jasper sky, portrait — the set's unwatched frame: the falls doing its midnight shift, constancy as the subject.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -553,8 +553,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Stunning fine art photography showcasing the Canadian Rockies, including Banff, Jasper, and Emerald Lake.",
-    "notes": "",
+    "story": "The pines beside the falls have the best and worst address in Jasper — front-row to the gorge's permanent performance, spray in their branches, their roots in rock the river has been arguing with for ten thousand years. Light finds them anyway. On a bright day the gorge becomes a theatre with the falls for a stage and the illuminated pines for the audience that never leaves, applauding in needles. The autumn color at the edge is the season's one warm note in a composition of turquoise and white.\n\n© Wayne Heim",
+    "notes": "Illuminated pines beside Sunwapta Falls' turquoise water in its snowy gorge — the set's theatre frame: the forest as the audience that never leaves, one warm note of autumn at the edge.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -593,8 +593,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "The essence of the Canadian Rockies in fine art: Banff, Jasper, and Emerald Lake.",
-    "notes": "",
+    "story": "Two rivers meet in this frame — the Sunwapta below, running white over the rocks, and the Milky Way above, running its slower water across the whole sky. Both are in permanent motion and both were here before the canyon had a name. A long exposure is the only way to see them together: the eye gets the stars or the falls, never both at full strength, so the photograph holds what a visit can't. Jasper at night is the park with its guard down. This is what it's been doing all along.\n\n© Wayne Heim",
+    "notes": "The Milky Way arcing over Sunwapta Falls at night, portrait — the set's two-rivers frame: water below and starlight above, a long exposure holding what no single visit can see.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -632,8 +632,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Fine art images of the Canadian Rockies with highlights from Banff, Jasper, and Emerald Lake.",
-    "notes": "",
+    "story": "A rocky shore is a river's filing system — every stone sorted by size, rounded by travel, deposited by a specific flood and waiting for the next one to re-file it. The calm water above them is doing the mountains' portrait work today, but the stones remember when this same river ran high and loud and rearranged the whole cabinet. Stand here and the reflection says peace. The shore says: peace, currently. Both are true, which is the most a riverbank ever promises.\n\n© Wayne Heim",
+    "notes": "A rocky river shore with smooth stones, calm water reflecting snow-covered peaks — the set's filing-system frame: the flood's archive in the foreground, the mountains' portrait in the water, both true at once.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -672,8 +672,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Stunning fine art photography showcasing the Canadian Rockies, including Banff, Jasper, and Emerald Lake.",
-    "notes": "",
+    "story": "Every great range has a road like this — the one that stops being transportation and becomes approach, the valley narrowing, the forest darkening, the peaks growing at the windscreen's pace until arrival feels like admission. In black and white the road reads as it felt in the decades before the parks had gift shops: a gravel promise into big country, solitude included in the fare. The mountains at the end have received a century of these arrivals. The road still delivers each one like it's the first.\n\n© Wayne Heim",
+    "notes": "A road cutting through a forested valley toward snow-covered Rockies peaks, black and white, portrait — the set's approach composition: transportation becoming admission, the valley narrowing toward the range.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -710,8 +710,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Fine art exploration of the Canadian Rockies, from Banff to Jasper and Emerald Lake.",
-    "notes": "",
+    "story": "Emerald Lake's color is the mountains' own dust — rock flour ground by glaciers and suspended in the water, turning the lake the improbable turquoise that makes every reflection look like a rumor about itself. The peak above it stands doubled: once in stone, once in flour and light, and the doubled version is the one travelers remember. Yoho's name comes from a Cree word for awe and wonder. Stand on this shore doing the arithmetic of the color and the reflection, and the naming feels less like poetry than reporting.\n\n© Wayne Heim",
+    "notes": "A peak reflected in Emerald Lake's turquoise water in Yoho, evergreens framing the shore, portrait — the set's doubled composition: the mountain in stone and in rock-flour light, awe as the local place-name.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -749,8 +749,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "The majesty of the Canadian Rockies in fine art, including Banff, Jasper, and Emerald Lake.",
-    "notes": "",
+    "story": "The lodge at Emerald Lake has kept the same evening hours for over a century — windows lighting as the light leaves the water, the peak's reflection holding on in the still lake like a guest who won't go. Dusk is the lake's formal hour: the day-trippers gone, the color deepening from turquoise toward ink, the lodge's warm squares of light the only human signature on the whole composition. The mountain doesn't acknowledge any of it. It just keeps reflecting, which, from the lodge's veranda, looks remarkably like company.\n\n© Wayne Heim",
+    "notes": "Emerald Lake at dusk — the lodge's lit windows on the shore, a snow-covered peak reflected in still water — the set's formal hour: hospitality's warm squares against the mountain's indifference.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -789,8 +789,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Capturing the beauty of the Canadian Rockies: Banff, Jasper, and Emerald Lake in fine art.",
-    "notes": "",
+    "story": "The scars on these peaks are landslide tracks — whole faces that let go in some unrecorded hour and ran down to the treeline, and the lake below holds the mountains' portrait anyway, scars and all, in perfect still water. That's the Rockies' honesty policy: nothing is only beautiful, everything is beautiful and evidence. The forest along the shore is the recovery, decades into re-greening what the mountain shed. The reflection doesn't edit. Neither, on a still morning, does the lake keep any other version.\n\n© Wayne Heim",
+    "notes": "Snow-covered peaks with landslide scars reflected in Emerald Lake's still water — the set's evidence frame: beauty and geology in one portrait, the forest below a recovery in progress.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -830,8 +830,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Fine art images of the Canadian Rockies with highlights from Banff, Jasper, and Emerald Lake.",
-    "notes": "",
+    "story": "Moonlight is the lake's second shift — the reflection rebuilt in silver, the lodge's lights warm among the evergreens, the whole composition run at a fraction of the day's brightness and twice its quiet. Night at Emerald Lake belongs to the animals again: the shore patrols resume, the water keeps its mirror under new management. Guests watching from the lodge see the mountain holding still in the lake and the lights holding still in the trees, and for once nobody in the frame is in a hurry, including the moon.\n\n© Wayne Heim",
+    "notes": "Emerald Lake under moonlight — a snow-covered mountain reflected in still water, the lodge's lights glowing among the evergreens — the set's second-shift frame: the lake's mirror under night management.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -872,8 +872,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Stunning fine art photography showcasing the Canadian Rockies, including Banff, Jasper, and Emerald Lake.",
-    "notes": "",
+    "story": "Fog at dawn is the lake keeping a secret for one more hour — the peak in the mist reduced to a suggestion, the forest shore standing in its own reflection and its own weather at once. In black and white the scene is all negotiation: tone against tone, the mountain deciding how much of itself to disclose. Fishermen and photographers both learn the same patience here. The fog will lift on its own schedule and not a minute for anybody's itinerary, and what it reveals will be exactly what was there all along, which is the fog's whole philosophy.\n\n© Wayne Heim",
+    "notes": "Fog drifting over a still mountain lake at dawn, black and white, portrait — the set's disclosure study: the peak reduced to a suggestion, tone negotiating with mist until the fog's schedule allows.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -914,8 +914,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Immersive landscape photography of the Canadian Rockies: Banff, Jasper, and Emerald Lake.",
-    "notes": "",
+    "story": "Morning fog at Emerald Lake burns off in stages — first the sun finds the peak, then the mist thins to gauze over the water, then the whole lake comes back like a stage set relit. The forest stands on both shores in the middle of the production, patient as scenery that knows the show is about it. Every clear morning re-runs the sequence and no two performances match: the fog improvises, the light directs, the lake holds still for its close-up. Arrive early enough and you get the whole rehearsal.\n\n© Wayne Heim",
+    "notes": "Morning fog drifting over Emerald Lake, sunlight breaking through the mist — the set's burn-off frame: the lake's daily premiere in stages, fog improvising and light directing.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -955,8 +955,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Captivating images of the Canadian Rockies through fine art, featuring Banff, Jasper, and Emerald Lake.",
-    "notes": "",
+    "story": "The pines on this shore have been reflecting in Emerald Lake since before it had the name — generations of them, the current stand holding the same posts their predecessors held, the water returning their portraits with interest. A reflection this complete is a kind of tenure: the trees own their images here. Mist keeps the peaks in the background where they belong for once, and the composition reverses the usual Rockies order — forest first, mountains as the rumor behind it. The lake, as always, sides with whoever stands still longest.\n\n© Wayne Heim",
+    "notes": "Tall pines on a forested Emerald Lake shore reflected in still, clear water, misty peaks beyond, portrait — the set's reversal composition: forest first for once, the mountains as the rumor behind it, tenure by reflection.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -998,8 +998,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Landscape photography of the stunning Canadian Rockies, including Banff, Jasper, and Emerald Lake.",
-    "notes": "",
+    "story": "The red canoes are the lake's punctuation — stacked on the pier in the fog, done for the day or not yet started, the one deliberate color in a composition of mist and gray water. Fog democratizes a famous view: the peaks withdrawn, the lodge a rumor, and the working objects on the pier become the whole picture. Canoes wait the way boats have always waited, without opinion about the weather. When the fog lifts they'll be rented, paddled, photographed, and returned. In the mist they're simply red, which is enough.\n\n© Wayne Heim",
+    "notes": "Red canoes stacked on a wooden pier in the fog at Emerald Lake — the set's punctuation frame: the famous view withdrawn into mist, the working boats carrying the picture in one deliberate color.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1043,8 +1043,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Fog drifts over the pier at Emerald Lake in this black and white fine art photograph from the Canadian Rockies.",
-    "notes": "",
+    "story": "The same pier, the same fog, the color gone — and in black and white the scene stops being a postcard and becomes a memory the lake is having about itself. Fog is monochrome's native weather: it had already taken the color out of the morning before the photograph agreed. The canoes wait in their stack, the lodge holds its reflection like a rumor, and the mountain beyond declines to appear at all. Some views are famous. This is the famous view with its guard down, in gray, keeping its own hours.\n\n© Wayne Heim",
+    "notes": "Canoes stacked on the Emerald Lake pier in fog, black and white — the set's monochrome pier: the famous view with its guard down, fog and tone doing what color does in its color companion.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1088,8 +1088,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Landscape photography of the stunning Canadian Rockies, including Banff, Jasper, and Emerald Lake.",
-    "notes": "",
+    "story": "Fog doesn't lift in the mountains; it loses — the sun working on it from above, the lake still cold underneath, the whole morning a slow negotiation with light as the mediator. The moment it breaks is the one the pier was built for: the canoes lit, the lodge found at the far end of the dock, the forest reappearing tree by tree like a crowd remembering where it stood. Everything in this valley is patient except the light, and the light, arriving, forgives the fog everything.\n\n© Wayne Heim",
+    "notes": "The sun breaking through fog over the Emerald Lake pier, red canoes lit and the lodge at the dock's far end — the set's breakthrough frame: the negotiation between fog and light, settled live.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1132,8 +1132,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Landscape photography of the stunning Canadian Rockies, including Banff, Jasper, and Emerald Lake.",
-    "notes": "",
+    "story": "Morning fog at a mountain lake doesn't sit still for its portrait — it sweeps, river-like, over the water and the pier, erasing and restoring the view in bands. The canoes ride out the weather indoors-fashion, stacked and patient. The mountain beyond is a rumor the fog keeps starting over. This is Emerald Lake in its working clothes, before the day's famous color reports for duty: gray water, white weather, and the red of the boats holding the composition's one warm vote.\n\n© Wayne Heim",
+    "notes": "Morning fog sweeping across Emerald Lake over the pier and its red canoes — the set's moving-weather frame: the view erased and restored in bands, the boats' red the one warm vote.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1178,8 +1178,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Landscape photography of the stunning Canadian Rockies, including Banff, Jasper, and Emerald Lake.",
-    "notes": "",
+    "story": "Sunrise at the lodge end of Emerald Lake is a small ceremony — the canoes red and ready on the dock, the forest doubled in water that hasn't been disturbed since the loons called it a night, the mist still deciding how much mountain to allow. Lodges in these parks were built for exactly this hour and this view; the railroad hotels sold the Rockies one sunrise at a time, and the sunrise has never once missed its cue. The mist is the only performer allowed to improvise.\n\n© Wayne Heim",
+    "notes": "Sunrise at Emerald Lake Lodge — red canoes on the dock, the lodge across still water, forest reflected, portrait — the set's ceremony frame: the Rockies sold one sunrise at a time, cue never missed.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1222,8 +1222,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Fine art exploration of the Canadian Rockies, from Banff to Jasper and Emerald Lake.",
-    "notes": "",
+    "story": "One canoe, out early or left late, resting on water so still the lake seems to be holding it up out of politeness. A single boat on a famous lake at dawn is the loneliest and luckiest object in the valley: all that reflected grandeur, and the only witness is a hull. The paddler is somewhere warm, unaware their canoe is posing for the portrait of solitude in Yoho. The mist keeps the mountains at a rumor's distance. The canoe keeps the center, effortlessly, by being the only thing awake.\n\n© Wayne Heim",
+    "notes": "A single canoe resting on Emerald Lake's still, misty water at dawn, portrait — the set's solitude frame: one hull as the only witness to the reflected grandeur, the center held effortlessly.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1265,8 +1265,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Capturing the beauty of the Canadian Rockies: Banff, Jasper, and Emerald Lake in fine art.",
-    "notes": "",
+    "story": "From its marshy edge the lake gives the whole arrangement at once — peaks and a glacier doubled in broad still water, driftwood and reeds keeping the near shore untidy the way real shores are. The low clouds around the ridge are the mountains' morning paperwork, being filed slowly. Emerald Lake is usually photographed tight, for its color. Wide, it becomes what it actually is: a glacial basin still doing the work of the ice that dug it, ringed by the evidence, holding the evidence's reflection.\n\n© Wayne Heim",
+    "notes": "Snow-covered peaks and a glacier reflected in Emerald Lake's broad still water, driftwood and reeds on the marshy shore — the set's wide-basin frame: the lake as glacial evidence, holding its own reflection.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1308,8 +1308,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Exploring the Canadian Rockies through fine art: Banff, Jasper, and Emerald Lake.",
-    "notes": "",
+    "story": "The edge of a lake is where its biography washes up — a fallen log, reeds, the whole archive of what the forest and the floods delivered, with the peaks' reflection performing beyond it like nothing ever happens. The log came down off some slope in a storm nobody recorded and traveled here at the pace of water. Now it points at the mountains from the shore, a one-tree pier. The lake keeps every arrival like this. The shore is its ledger, and the entries are all wood and stone.\n\n© Wayne Heim",
+    "notes": "A fallen log and reeds on Emerald Lake's shore, snow-covered peaks reflected in calm water — the set's ledger frame: the shore as the lake's archive, arrivals kept in wood and stone.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1352,8 +1352,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Fine art images of the Canadian Rockies with highlights from Banff, Jasper, and Emerald Lake.",
-    "notes": "",
+    "story": "Driftwood on this shore has credentials — it grew on a slope above the lake, fell in some winter argument, rode the spring water down, and came to rest in the one spot where the peaks reflect behind it like a backdrop hired for the occasion. A fallen log reaching into still water is the forest extending a hand into the lake's business, and the lake, courteous as always, reflects the gesture along with the mountains. Everything at Emerald Lake ends up doubled. Even the dead trees get portraits.\n\n© Wayne Heim",
+    "notes": "Driftwood and a fallen log reaching into Emerald Lake's still water, peaks reflected beyond the forest, portrait — the set's extension frame: the forest's hand in the lake's business, even the dead trees doubled.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1395,8 +1395,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Artistic views of the Canadian Rockies showcasing Banff, Jasper, and Emerald Lake.",
-    "notes": "",
+    "story": "When the clouds reflect too, the lake stops being a mirror and becomes a second sky with mountains in it — peaks and weather doubled together, the forest standing between the two versions like a witness confirming both. Low clouds around the ridge mean the upper world is having weather the valley can't see directly, so the lake reports it. This is Emerald Lake's fullest service: not just the mountains' portrait, but the whole sky's, delivered to anyone standing on the shore, at eye level, free of charge.\n\n© Wayne Heim",
+    "notes": "Snow-covered peaks and clouds reflected together in Emerald Lake's still water, forest along the shore — the set's second-sky frame: the lake reporting weather the valley can't see, the whole sky at eye level.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1438,8 +1438,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Capturing the beauty of the Canadian Rockies: Banff, Jasper, and Emerald Lake in fine art.",
-    "notes": "",
+    "story": "Framed by the evergreens, the mountain shows its wounds — landslide scars striping the face where whole slopes let go, the tracks still pale against the rock years later. Under a dramatic sky the reflection in the lake below stays serene, which is the valley's oldest arrangement: violence above, composure below, the forest standing between them as counsel for both sides. The scars will re-green on a schedule of decades. The lake will keep reflecting whatever's there, scars included, without a word of commentary.\n\n© Wayne Heim",
+    "notes": "A rugged snow-covered mountain with landslide scars, framed by tall evergreens and reflected under a dramatic sky — the set's counsel frame: violence above, composure below, the forest standing between.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1481,8 +1481,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Fine art captures of the Canadian Rockies featuring Banff, Jasper, and Emerald Lake.",
-    "notes": "",
+    "story": "The railroad built these parks before the highway did — the trains were hauling tourists through this valley while the roads were still rumors, and the freight never stopped: containers now, red and stacked, curving along the river under peaks that have watched the whole history of horsepower go by. A cargo train in the Rockies is a working portrait of the arrangement: commerce on the valley floor, wilderness standing over it, the river refereeing. The train will be in the next province by nightfall. The mountains won't have noticed. That's the deal.\n\n© Wayne Heim",
+    "notes": "A freight train with red intermodal containers curving along a river's edge beneath snow-capped Rockies peaks — the set's working-valley frame: the railroad that built the parks, still hauling, the mountains declining to notice.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1522,8 +1522,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Fine art photography of the Canadian Rockies, featuring Banff, Jasper, and Emerald Lake.",
-    "notes": "",
+    "story": "Moraine Lake in early winter is a famous view with its water turned to floor — the turquoise gone under ice, the peaks standing over a white plain where the canoes used to be, and tiny figures out on the frozen surface taking the lake's new terms for a walk. Ice changes a lake's society: the shore comes to the middle now. The stillness underneath is total and temporary — by late spring the ice will be a rumor and the color will be back on duty. For now the lake keeps its winter name: silence, walkable.\n\n© Wayne Heim",
+    "notes": "The frozen surface of Moraine Lake in Banff National Park, peaks and evergreen forest rising beyond the ice — the set's walkable-silence frame: the famous color under winter's white cover, tiny figures testing the new floor.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1565,8 +1565,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Exploring the Canadian Rockies through fine art: Banff, Jasper, and Emerald Lake.",
-    "notes": "",
+    "story": "The first hush is what the old-timers called it — the early snow that dusts the meadow grass and quiets the whole valley a register, the season announcing itself at low volume before it starts to shout. The low sun breaking through the clouds is autumn's last argument, made beautifully and briefly. After this, the snow stops dusting and starts deciding. The grass will spend the winter under it, the peaks are already committed, and the meadow keeps this one golden-hour portrait of the moment the terms were delivered.\n\n© Wayne Heim",
+    "notes": "Early winter snow dusting wild grass in a Rockies meadow, low sun breaking through dramatic clouds, portrait — the set's first-hush frame: the season announcing itself at low volume, autumn's last argument made in gold.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",

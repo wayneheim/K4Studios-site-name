@@ -1365,6 +1365,7 @@ const isSpeechActive = () => {
                       type="button"
                       onClick={() => {
                         trackStoryAction("order_clicked", currentImage?.id || null, {
+                          sourceLayer: "pricing_story_button_v1",
                           trigger: "pricing_menu"
                         });
                         if (currentImageUsesEngrainedOrderModal) {

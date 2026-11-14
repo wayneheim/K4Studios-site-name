@@ -1,6 +1,10 @@
 {
   "files.watcherExclude": {
     "**/_archive/**": true,
+    "**/tmp/**": true,
+    "**/tmp_old_build/**": true,
+    "**/local-backups/**": true,
+    "**/bks/**": true,
     "**/*.zip": true,
     "**/Public - Copy/**": true,
     "**/dist/**": true,
@@ -9,6 +13,10 @@
   },
   "search.exclude": {
     "**/_archive/**": true,
+    "**/tmp/**": true,
+    "**/tmp_old_build/**": true,
+    "**/local-backups/**": true,
+    "**/bks/**": true,
     "**/*.zip": true,
     "**/Public - Copy/**": true
   }

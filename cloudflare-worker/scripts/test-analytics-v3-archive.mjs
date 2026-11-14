@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { readdir, readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { buildV3RollupBatch, getV3DeviceLabel, isV3CoreEvent, summarizeV3Rollup } from '../src/analytics/v3/model.js';
+import { buildV3RollupBatch, getV3ActionLabel, getV3DeviceLabel, isV3CoreEvent, isV3GoogleScreenshotAutomation, summarizeV3Rollup } from '../src/analytics/v3/model.js';
 import { renderDashboardV3 } from '../src/analytics/v3/renderer.js';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
@@ -160,6 +160,20 @@ assert.equal(getV3DeviceLabel('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15) App
 assert.equal(getV3DeviceLabel('Mozilla/5.0 (Linux; Android 14)'), 'Android');
 assert.equal(getV3DeviceLabel('Mozilla/5.0 (Windows NT 10.0; Win64; x64)'), 'Windows');
 assert.equal(getV3DeviceLabel('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)'), 'Mac');
+assert.equal(getV3ActionLabel('order_clicked', 'pricing_main_button_v1'), 'Pricing opened - main button');
+assert.equal(getV3ActionLabel('order_clicked', 'pricing_zoom_summary_v1'), 'Pricing opened - zoom summary');
+assert.equal(getV3ActionLabel('order_clicked', 'pricing_more_info_summary_v1'), 'Pricing opened - More Info summary');
+assert.equal(getV3ActionLabel('order_clicked'), 'Pricing opened - legacy/unknown source');
+const screenshotRow = { ...browserRow, entry_referrer: 'https://screenshot.corp.google.com/' };
+assert.equal(isV3GoogleScreenshotAutomation(screenshotRow), true);
+assert.equal(isV3CoreEvent(screenshotRow), false, 'Google screenshot automation must stay out of core metrics');
+const screenshotCohort = buildV3RollupBatch([
+  { ...browserRow, id: nextId + 100, session_id: 'screenshot-session', visitor_id: 'screenshot-visitor', event_type: 'order_clicked' },
+  { ...screenshotRow, id: nextId + 101, session_id: 'screenshot-session', visitor_id: 'screenshot-visitor', event_type: 'native_cart_add' }
+]);
+assert.equal(screenshotCohort.accepted, 0, 'the complete screenshot session must stay out of core metrics');
+assert.ok(screenshotCohort.dimensions.some((row) => row.dimension === 'merchant_inspection_session' && row.count === 1));
+assert.ok(screenshotCohort.dimensions.some((row) => row.dimension === 'merchant_inspection_action' && row.label === 'Pricing opened'));
 assert.ok(imageOnlySummary.visitorGeography.some((row) => row.label === 'Kent, Ohio, US'), 'image-only sessions should fall back into visitor geography');
 assert.ok(imageOnlySummary.entryPages.some((row) => row.label === '/Galleries/Test/i-imageOnlyGeoTest'), 'image-only sessions should fall back into entry pages');
 assert.ok(imageOnlySummary.acquisition.some((row) => row.label === 'Direct / internal'), 'image-only sessions should retain fallback acquisition');
@@ -212,6 +226,7 @@ assert.ok(html.includes('accent-entry') && html.includes('accent-site'), 'entry 
 assert.ok(summary.entryNavigation.length > 0 && summary.entryNavigation.length <= 25, 'entry navigation should contain at most 25 entry pages');
 assert.deepEqual(summary.entryNavigation.map((row) => row.label), summary.entryPages.map((row) => row.label), 'entry navigation should cover the same top 25 pages as entry ranking');
 assert.ok(html.includes('continued-col') && html.includes('chapter-col'), 'entry navigation should reserve fixed space for percentage columns');
+assert.ok(html.includes('entry-navigation-zero'), 'entry navigation rows with zero continued and chapter sessions should use the dark-pink text treatment');
 assert.ok(html.includes('title="/Galleries/Painterly-Fine-Art-Photography/Facing-History/'), 'truncated entry navigation labels should retain their full path tooltip');
 assert.ok(html.includes('class="device-section"') && html.includes('device-windows') && html.includes('device-android'), 'device panels should be grouped and color coded');
 assert.ok(html.includes('">/Facing-History/'), 'Facing History page labels should omit the common gallery prefix');

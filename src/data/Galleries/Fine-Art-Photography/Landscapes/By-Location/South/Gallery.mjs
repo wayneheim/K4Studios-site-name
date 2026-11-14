@@ -45,8 +45,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "Delving into traditional southern landscape photography, this work by Wayne Heim highlights southern landscape prints through South – Light and Legacy and southern landscape prints. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
+    "story": "The stream goes quiet where the bank widens — the current gives up its hurry and the pool turns to dark glass, holding the green shade twice: once overhead, once in the reflection. Nothing about this water is in a rush to become a river. In high summer the whole hollow runs at this temperature: cool, green, and unbothered, with the moss keeping the rocks' secrets.\n\n© Wayne Heim",
+    "notes": "A summer stream pooling into dark mirror water under full green shade — the quietest frame in the South set, and its most restful: mossy rock, still reflection, dappled light. Buyers hang it where a room needs to lower its voice.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -86,8 +86,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Wayne Heim's exploration of South – Light and Legacy comes alive in this piece, showcasing traditional southern landscape photography. A testament to southern landscape prints in fine art. © Wayne Heim",
-    "notes": "",
+    "story": "The gorge spends most of its day in shade, and then the sun finds the slot — one beam at a time, falling on the water like it was aimed. For a few minutes the stream runs bright through the middle of the dark woods, and everything with wings works the lit stretch. Then the angle changes, the beam climbs the far bank, and the gorge goes back to its green dusk until tomorrow.\n\n© Wayne Heim",
+    "notes": "A single shaft of sun striking a gorge stream between dark wooded slopes — the South set's study in timing, and its most dramatic piece of light. The fallen logs in the foreground set the scale: this is a small, hidden room of a place.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -125,8 +125,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "This image embodies southern landscape prints and traditional southern landscape photography, captured by Wayne Heim in his signature style. It reflects South – Light and Legacy with a touch of southern landscape prints. © Wayne Heim",
-    "notes": "",
+    "story": "The mill is small in the picture because the season is bigger — autumn has the whole hollow lit red and gold while the mill sits dark on the far bank, retired from grinding and promoted to landmark. The falls below it run on the same water the wheel once used; the wheel's work is done, the water's isn't. Storm coming over the ridge, sun still on the right bank: the two weathers this country keeps in stock.\n\n© Wayne Heim",
+    "notes": "The mill in full autumn: falls over the ledges, red and gold banks, the little mill building dark among the trees under a storm sky. It's the South set's emblem — the piece that explains the whole collection to a buyer in one look.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -165,8 +165,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "Wayne Heim's exploration of southern landscape prints comes alive in this piece, showcasing southern landscape prints and traditional southern landscape photography. A testament to southern landscape prints in fine art. © Wayne Heim",
-    "notes": "",
+    "story": "From the pool's edge you get the whole arrangement the miller chose: the falls for power, the ledge for the wheel, the stream for a road out. The wheel is still now — autumn leaves collect where the current used to commit — but the falls haven't retired, and the pool at the bottom holds the sky and the color like it's keeping them for somebody. It is. It's keeping them for whoever walks down here.\n\n© Wayne Heim",
+    "notes": "Portrait view up the stream to the falls and the mill, waterwheel and all, under a blue autumn sky — the companion to the wide mill frame, closer and more architectural. The reflection pool in the foreground does the framing: color above, color doubled below.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",

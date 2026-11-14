@@ -50,8 +50,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "This image embodies The Northeast and autumn in new england, captured by Wayne Heim in his signature style. It reflects see beauty in simplicity with a touch of The Northeast. © Wayne Heim",
-    "notes": "",
+    "story": "The Genesee runs its long bend through the Letchworth gorge, high rock walls on both sides, the river taking the canyon's curve like it drew it. In black and white the gorge loses its season and keeps its structure — strata, tree line, water — the canyon's skeleton with the river still running through it. This is the deep view, the one that explains the park: a river that spent ten thousand years cutting this, still at work, still in no hurry at all.\n\n© Wayne Heim",
+    "notes": "A long view of the Letchworth gorge with the Genesee River winding between high rock walls, in black and white — the set's establishing canyon frame: strata, tree line, and river in one deep composition.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -96,8 +96,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Fine art landscape photography of Letchworth State Park in New York.",
-    "notes": "",
+    "story": "The river bends around the high cliff and disappears, which is a river's favorite trick — the water you can see is never the whole story. The canyon rim carries its trees in a dark line above the rock. In black and white the bend is all geometry: cliff, curve, the bright water making its turn. Whatever's around it — more gorge, more river, the falls somewhere in the system — the frame leaves to the current, which knows, and isn't saying.\n\n© Wayne Heim",
+    "notes": "The Genesee River bending around a high rock cliff in Letchworth State Park, in black and white — the set's curve composition: cliff, canyon rim, and the river's bright turn, all in tone.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -139,8 +139,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Fine art landscape photography of Letchworth State Park in New York.",
-    "notes": "",
+    "story": "The water comes down the layered ledges into the river in a white hurry, autumn trees standing over the drop. Falls in a canyon hit different — the sound stays in the gorge, the mist stays in the light, and the river below takes the delivery and moves it downstream like it's all one motion, which it is. The ledges step the water down in stages, each one a small decision the river makes at speed. From the rim it's scenery. Down here it's weather.\n\n© Wayne Heim",
+    "notes": "A waterfall cascading over layered ledges into the river at Letchworth, autumn trees above — the set's in-canyon falls: falling water inside the gorge's own walls, with the season's color overhead.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -180,8 +180,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Fine art landscape photography of Letchworth State Park in New York.",
-    "notes": "",
+    "story": "A fallen log lies in the rushing water above the falls — the river's own timber, delivered here and held at the lip like the current is deciding. Everything above a waterfall is a negotiation between floating and falling, and the log is the current exhibit. In black and white the water goes bright around the dark wood, and the plunge waits just out of frame, doing its sound. The log will go over someday, in a high spring. Until then it rides the top of the drop like a held breath.\n\n© Wayne Heim",
+    "notes": "A fallen log resting in rushing water at the lip of a Letchworth waterfall, in black and white — the set's threshold frame: bright water, dark timber, and the plunge waiting just out of view.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -223,8 +223,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Fine art landscape photography of Watkins Glen, New York.",
-    "notes": "",
+    "story": "The falls come down the narrow gorge at Watkins Glen between walls the water itself carved into layers — the stream here has been interior decorating for ten thousand years, one flood at a time. Green stands at the top where the light gets in; down in the slot it's all wet stone and falling water. The Glen is a staircase the creek built and the park later railed. This frame is one step of it, with the water still taking it, endlessly, at speed.\n\n© Wayne Heim",
+    "notes": "A waterfall cascading through the narrow layered gorge at Watkins Glen — the set's slot-canyon frame: water falling between walls it carved itself, green light waiting at the top.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -268,8 +268,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Fine art landscape photography of Watkins Glen, New York.",
-    "notes": "",
+    "story": "The falls pour through the mossy gorge and above them a stone walkway crosses — the park's masonry threaded through the ravine so walkers can stand inside the water's architecture. Those walkways were built by hand, stone on stone, in the gorge's own material; a century later they're part of the scenery the water performs around. The moss takes the walls the walkway doesn't. Everything in the Glen is either falling, flowing, or holding still beautifully.\n\n© Wayne Heim",
+    "notes": "Waterfalls through a mossy gorge at Watkins Glen with a stone walkway above — the set's built-and-carved composition: park masonry and water-work sharing one ravine, each enhancing the other.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -310,8 +310,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Fine art landscape photography of Watkins Glen, New York.",
-    "notes": "",
+    "story": "Down in the gorge the stream runs quieter — layered walls, mossy stone, a still pool where the water collects itself between descents. The Glen alternates like this, falls and pools, noise and hush, and the quiet stretches are where you hear the walls dripping, which is the gorge's background music. The light arrives in rations. The stone keeps the centuries in its layers. The pool keeps the sky's small change. It's the calmest room in the whole canyon house.\n\n© Wayne Heim",
+    "notes": "A narrow gorge with layered rock walls, a small stream, and a quiet pool at Watkins Glen — the set's hush frame: the canyon between falls, all dripping stone and collected water.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -348,8 +348,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Wayne Heim's exploration of autumn in new england comes alive in this piece, showcasing The Northeast and autumn in new england. A testament to see beauty in simplicity in fine art. © Wayne Heim",
-    "notes": "",
+    "story": "A bison grazes the golden field with the Tetons standing snow-capped behind it, taking the sunset — Wyoming doing its full arrangement: animal, grass, and the most abrupt mountain front in America. The bison is unimpressed, which is the correct review; it has grazed this view into ancestry. The peaks hold the light last, the field holds it warm, and between them the whole Greater Yellowstone ecosystem stands in one frame, doing what it has done since before there were cameras to be humbled by it.\n\n© Wayne Heim",
+    "notes": "A bison grazing in a golden field beneath the snow-capped Grand Tetons at sunset, Wyoming — a Western icon standing inside this Northeast set: animal, grassland, and mountain front in a single composition. (Filed here in error; the frame is pure Wyoming.)",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -387,8 +387,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "In Stock 18 x 24Geyser pools  at Yellowstone National Park in Wyoming. ©Wayne Heim",
-    "notes": "",
+    "story": "The pool is a blue no paint company would approve — geothermal water gone sapphire over its mineral floor, yellow deposits ringing it, steam standing among the dead white trees the hot ground keeps killing and keeping. Yellowstone's hotspots are the planet with its crust pulled thin: beauty and hazard in the same palette. The boardwalks exist because the ground here is a rumor. The color is not. It is, if anything, understated by photographs.\n\n© Wayne Heim",
+    "notes": "A bright blue geothermal pool with yellow mineral deposits and steam among dead trees in Yellowstone — the set's alien frame: the planet's thin crust rendered in sapphire and sulfur. (A Yellowstone record filed in the Northeast set.)",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -426,8 +426,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "This image embodies autumn in new england and The Northeast, captured by Wayne Heim in his signature style. It reflects The Northeast with a touch of see beauty in simplicity. © Wayne Heim",
-    "notes": "",
+    "story": "Blackwater Falls pours its wide sheet over the ledge into the brown river — the water amber-dark from the tannins of the hemlock and spruce country above, which is how the falls got their name and their color. This is West Virginia's postcard drop, in the gorge country near Davis, and in summer the green closes in around it like an audience. The river below runs the color of strong tea toward the canyon. The falls just keep issuing it, white over dark, all season.\n\n© Wayne Heim",
+    "notes": "Blackwater Falls pouring over its ledge into the amber-brown river, green forest around, West Virginia — the set's signature WV waterfall: white water over dark tannin-stained current, the falls that named a state park.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -468,8 +468,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "This image embodies autumn in new england, captured by Wayne Heim in his signature style. It reflects The Northeast with a touch of see beauty in simplicity. © Wayne Heim",
-    "notes": "",
+    "story": "The stream runs sunlit over its rocks between tall trees in the West Virginia woods, moss on the trunks, the light arriving in dapples like it's being sifted. Woodland streams are the forest's plumbing and its music both — this one is at the pleasant volume, over stones, around roots, in no hurry it doesn't choose. The tall trees meter the sun. The moss keeps the banks' accounts in green. Walk a mile of this and your blood pressure files a thank-you note.\n\n© Wayne Heim",
+    "notes": "A sunlit stream flowing over rocks between tall trees in a West Virginia forest, mossy trunks and dappled light — the set's woodland interior: water, shade, and sifted sun in their classic Appalachian arrangement.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -510,8 +510,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Light creating playful shadows through the forest trees and stream. Greens and browns of nature paint the picture of texture and discovery.",
-    "notes": "",
+    "story": "The light makes its playful shadows through the trees and across the stream — greens and browns doing the painting, texture everywhere you stand still long enough to see it. A woodland like this rewards the unhurried: the stream keeps its small discoveries at walking pace, pool by pool, root by root. The path here is the one your feet make along the water, and it's less traveled because it asks for time instead of promising a destination. The forest keeps the difference.\n\n© Wayne Heim",
+    "notes": "A sunlit forest stream over mossy rocks between tall trees in West Virginia, dappled light throughout — the set's discovery frame: texture and light at walking pace, for viewers who take the slow way along the water.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -552,8 +552,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "This image embodies The Northeast, captured by Wayne Heim in his signature style. It reflects The Northeast with a touch of autumn in new england. © Wayne Heim",
-    "notes": "",
+    "story": "The falls come over the ledge into their pool and the wooden walkway stands above them — the overlook built so you can watch the water do its drop from the civilized side of the railing. West Virginia's falls country is threaded with these: a trail, a platform, a view composed by the park and finished by the river. The green closes around the whole arrangement. The pool takes the landing. The platform takes the visitors, who take the picture, which never takes the sound. The sound stays here, free.\n\n© Wayne Heim",
+    "notes": "A waterfall dropping into a pool below a wooden viewing walkway in a West Virginia forest — the set's overlook composition: falls, pool, and the platform the park built for watching them, green on every side.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -594,8 +594,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "This image embodies autumn in new england and The Northeast, captured by Wayne Heim in his signature style. It reflects see beauty in simplicity with a touch of The Northeast. © Wayne Heim",
-    "notes": "",
+    "story": "The cascade takes the whole width it's offered — water sheeting over mossy ledges into the pool, the wooden walkway standing over it, summer green banked on both sides. A wide falls is a generous one: no single drop to applaud, just the river spreading itself across the rock like it's showing its work. The ledges step it, the moss softens it, the pool concludes it. In a wet year this whole wall runs white. In a dry one it threads. Today it's the full sheet, and the walkway crowd knows it got the good showing.\n\n© Wayne Heim",
+    "notes": "A wide waterfall cascading over mossy ledges into a pool beneath a wooden walkway, West Virginia — the set's broadest falls: the river spread across its whole rock wall, summer green completing the frame.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -635,8 +635,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Delving into autumn in new england, this work by Wayne Heim highlights see beauty in simplicity. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
+    "story": "The falls come down the mossy face in a textured sheet — the rock so green it's less a cliff than a hillside that learned to pour. Moss this complete takes years of reliable water, and the falls oblige daily. The pool at the bottom is rocky, the walkway above is wooden, and between them the water makes its green descent like a garden that flows. West Virginia's wettest architecture: nothing built, everything grown, and the plumbing older than the state.\n\n© Wayne Heim",
+    "notes": "A waterfall cascading down a completely moss-covered rock face into a rocky pool, West Virginia — the set's greenest falls: water descending a living wall, with the walkway above for scale.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -675,8 +675,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Another hidden waterfall in the forest of West Virginia.",
-    "notes": "",
+    "story": "Another hidden waterfall in the West Virginia forest — they accumulate out here, around bends, down hollows, wherever a stream finds a ledge and an audience of mossy rocks. Hidden is the local specialty: no sign, no platform, just the sound arriving through the trees first and the falls themselves when you round the right corner. The pool is rocky, the rocks are green, and the green is total. Somebody's grandfather knew this one. Now the directions are: listen.\n\n© Wayne Heim",
+    "notes": "A waterfall over mossy green rocks into a rocky pool, deep in a West Virginia forest — the set's hidden-treasure frame: the unmarked falls, found by ear, that the state's woods keep in steady supply.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -716,8 +716,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "This image embodies The Northeast and autumn in new england, captured by Wayne Heim in his signature style. It reflects The Northeast with a touch of autumn in new england. © Wayne Heim",
-    "notes": "",
+    "story": "The falls take the ledges in tiers — drop, shelf, drop again — down to the rocky stream, the whole staircase green with moss and loud with landing water. Tiered falls are the patient kind: instead of one plunge they negotiate, and the negotiation is prettier. Each shelf is a small pool with ambitions. The stream at the bottom collects the total and carries it off through the lush forest like it's been paid. West Virginia's streams do this choreography everywhere the sandstone steps.\n\n© Wayne Heim",
+    "notes": "A multi-tiered waterfall cascading over mossy ledges into a rocky stream in a West Virginia forest — the set's staircase composition: the descent taken in stages, every shelf green, the whole run composed.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -756,8 +756,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Multi-color spectacular sunrise in Davis West Virginia showcasing natures pallet of painterly color.",
-    "notes": "",
+    "story": "Sunrise over Davis arrives like it mixed too many colors and used them all — orange and pink breaking through the dark clouds over the forested ridge, the high country waking in full spectrum. Davis sits up in West Virginia's roof country, where the mornings start above half the state's weather. A dawn like this is the altitude showing off. The ridge holds its dark line, the clouds do the color work, and the day gets announced over the mountains like the sky signed it in neon, briefly, before the gray takes the pen back.\n\n© Wayne Heim",
+    "notes": "A multicolor sunrise over a forested ridge in Davis, West Virginia, orange and pink light breaking through dark clouds — the set's high-country dawn: the roof of West Virginia under the sky's full palette.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -797,8 +797,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Wayne Heim's exploration of The Northeast comes alive in this piece, showcasing see beauty in simplicity and The Northeast. A testament to The Northeast in fine art. © Wayne Heim",
-    "notes": "",
+    "story": "The panorama of a West Virginia sunrise: ridge behind ridge going back into mist, the sky running purple to pink to orange over the whole layered country. Mountain dawns here are depth studies — each ridge a shade lighter than the one before, the valleys holding the night a little longer in the folds. The light arrives at the top first and negotiates downward. From a high shoulder you can watch the day get distributed, ridge by ridge, until the mist gives up and the whole map is lit.\n\n© Wayne Heim",
+    "notes": "A panoramic multicolor sunrise over layered West Virginia mountain ridges above a misty valley — the set's depth composition: ridge behind ridge in graded light, the day arriving from the top down.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -838,8 +838,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Multi-color purple and pink and orange sunrise over the sleepy mountain top in Davis West Virginia.",
-    "notes": "",
+    "story": "The sunrise over the mountaintop near Davis lays out its pigments in order — purple, pink, orange — above a dark ridge with the valley mist still sleeping below. Skies like this are why painters invented exaggeration and then found out nature had filed the patent first. The ridge keeps its silhouette simple, the better to hold the color; the mist keeps its counsel in the low places. It lasts minutes. The mountain has seen it thousands of times and shows up dark and ready every morning anyway.\n\n© Wayne Heim",
+    "notes": "A sunrise sky of purple, pink, and orange over a dark forested ridge near Davis, West Virginia, mist in the valley — the set's color-study frame: the dawn's pigments laid out in bands over a sleeping mountain.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -879,8 +879,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "This image embodies The Northeast and see beauty in simplicity, captured by Wayne Heim in his signature style. It reflects autumn in new england with a touch of see beauty in simplicity. © Wayne Heim",
-    "notes": "",
+    "story": "Two white Adirondack chairs on the grassy riverbank, facing the sunset over the winding stream — Vermont's whole philosophy placed in furniture: sit, face the water, let the day finish. Nobody's in them, which is the invitation. The orange sky does its work over the dark clouds, the stream takes the path it's taking, and the chairs hold their position like they've reserved the evening. Somebody chose this spot with great care and no hurry. The chairs suggest they chose right.\n\n© Wayne Heim",
+    "notes": "Two white Adirondack chairs on a grassy riverbank at autumn sunset in Vermont, an orange sky over a winding stream — the set's most inviting composition: the landscape with a place to sit in it, held open.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -920,8 +920,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Wayne Heim's exploration of see beauty in simplicity comes alive in this piece, showcasing The Northeast. A testament to autumn in new england in fine art. © Wayne Heim",
-    "notes": "",
+    "story": "The falls come down the forested gorge in Vermont through green so complete the water falls through color as much as air — trees banked on both sides, the first autumn touches showing at the edges like the season clearing its throat. A falls in a green gorge is a white line drawn through a green page. The gorge keeps the sound close. The leaves keep the light filtered. By October this frame will be famous with itself. In the green season it's the quieter glory, and it knows it.\n\n© Wayne Heim",
+    "notes": "A waterfall cascading through a forested Vermont gorge, green trees with the first autumn touches — the set's green-season falls: white water drawn through a fully leafed gorge, the season's turn just beginning at the edges.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -961,8 +961,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "This image embodies see beauty in simplicity, captured by Wayne Heim in his signature style. It reflects autumn in new england with a touch of see beauty in simplicity. © Wayne Heim",
-    "notes": "",
+    "story": "The tall falls veil down the mossy rock face — water spread thin and white over the stone, autumn-touched leaves standing at the edges of the frame like witnesses. A veil falls is a modest performer: no plunge, no roar, just the sheet of water keeping its appointment with the pool in a thousand threads. Vermont's woods are full of these in the wet seasons. The moss keeps the face green, the leaves keep the calendar, and the water keeps falling, thin as lace and twice as patient.\n\n© Wayne Heim",
+    "notes": "A tall waterfall veiling down a mossy rock face in a Vermont forest, autumn-touched leaves at the edges — the set's most delicate falls: water as lace over stone, the season turning quietly around it.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1003,8 +1003,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Wayne Heim's exploration of see beauty in simplicity comes alive in this piece, showcasing see beauty in simplicity and The Northeast. A testament to The Northeast in fine art. © Wayne Heim",
-    "notes": "",
+    "story": "The cornfield stands under a dramatic sky in black and white — Vermont farmland in panorama, the clouds doing in gray what they do in every color: assemble, darken, threaten beautifully. Corn under a storm sky is agriculture's oldest portrait, the crop at the mercy of the ceiling. The field runs flat to the tree line, the sky runs wild above it, and between them the whole farming arrangement holds its breath. Monochrome makes it honest: this was always a negotiation with weather, conducted in tones.\n\n© Wayne Heim",
+    "notes": "A cornfield beneath a dramatic cloudy sky in Vermont, panoramic in black and white — the set's pastoral storm: crop and ceiling in pure tone, farming's negotiation with weather at full width.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1044,8 +1044,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Wayne Heim's exploration of autumn in new england comes alive in this piece, showcasing see beauty in simplicity. A testament to see beauty in simplicity in fine art. © Wayne Heim",
-    "notes": "",
+    "story": "Green corn under a dramatic sky, the tree line and rolling hills closing the Vermont distance — summer in the field, weather in the sky, and the crop standing in the middle taking both. Corn in full leaf is a field with its hand raised: it has committed to the season and the sky gets its say daily. Today the say is dramatic. The hills roll off green beyond the field like the land is practicing. Everything here is growing except the clouds, which are merely gathering — with intent.\n\n© Wayne Heim",
+    "notes": "A green cornfield beneath a dramatic cloudy sky in Vermont, tree line and rolling hills beyond — the set's summer-field portrait: the crop in full leaf under weather with intent, the whole valley arranged around it.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1087,8 +1087,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Wayne Heim's exploration of autumn in new england comes alive in this piece, showcasing autumn in new england. A testament to The Northeast in fine art. © Wayne Heim",
-    "notes": "",
+    "story": "The gambrel barn stands in its yard under a sky with weather in it — cupola on top, boards gone silver-gray, the whole building worn to the color of the clouds. A weathered barn in black and white is a portrait of endurance with the paint long gone: what remains is proportion, joinery, and the decision to keep standing. Vermont loses barns every year to weather and economics. This one, in its gray dignity, is still winning on points.\n\n© Wayne Heim",
+    "notes": "A weathered gambrel-roofed barn with a cupola under dramatic clouds in Vermont, black and white — the set's barn portrait: New England farm architecture worn to silver, composed like a sitter who has earned the chair.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1130,8 +1130,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Delving into see beauty in simplicity, this work by Wayne Heim highlights autumn in new england. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
+    "story": "The barn's twin in spirit stands under the darker reading of the sky — storm clouds stacked over the gambrel roof, the green tree at its side the only bright witness. Barns and storms have a standing appointment in farm country; the building's whole design is an answer to weather, and the sky keeps asking the question. The cupola rides the roof like a small lighthouse for the fields. Whatever the clouds are planning, the barn has been planned for longer.\n\n© Wayne Heim",
+    "notes": "A weathered gambrel barn with a cupola beneath dark storm clouds in Vermont — the set's confrontation frame: farm architecture and New England weather in their standing negotiation, green tree for a witness.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1172,8 +1172,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Delving into The Northeast, this work by Wayne Heim highlights autumn in new england through The Northeast. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
+    "story": "One tall tree in full autumn stands in the green meadow with a smaller one behind it and the ridge beyond — the meadow's whole population, arranged by height. A lone tree in a field is never an accident; it's the one the clearing spared, for shade, for a landmark, for the look of the thing. In autumn it becomes the field's flag. The grass is still summer's green, the sky is October blue, and the tree stands between the seasons holding the bright end of the argument.\n\n© Wayne Heim",
+    "notes": "A tall tree in full autumn color standing in a green Vermont meadow, a smaller tree and distant ridge behind — the set's pastoral portrait: the spared tree as the field's flag, between summer's grass and October's sky.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1212,8 +1212,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Wayne Heim's exploration of autumn in new england comes alive in this piece, showcasing autumn in new england and The Northeast. A testament to autumn in new england in fine art. © Wayne Heim",
-    "notes": "",
+    "story": "The little falls come down the mossy rock face in silk, boulders standing mossed on both sides like the audience leaned in. Small falls are the forest's interior music — you hear them before the trail admits they exist. This one performs at room volume: a white thread over a green wall, leaves bright at the edge. Vermont's woods are tuned with these, one per hollow, all playing at once after rain, none of them famous. Fame was never the arrangement. Water was.\n\n© Wayne Heim",
+    "notes": "A small waterfall in silky flow over a mossy rock face between mossy boulders in a Vermont forest, portrait — the set's intimate falls: the woodland interior at room volume, moss on every surface.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1252,8 +1252,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "This image embodies autumn in new england, captured by Wayne Heim in his signature style. It reflects The Northeast with a touch of see beauty in simplicity. © Wayne Heim",
-    "notes": "",
+    "story": "The stream cascades over the dark rocks in a white hurry, fallen leaves gathering where the current allows — the woodland cascade, less a waterfall than a stream in a steep mood. Dark rock, white water, green standing over it all: the Vermont forest's standard chord, played here in a narrow channel worn smooth by ten thousand spring runs. The leaves on the stones are the season's first mail. The stream delivers them downstream, eventually, at its own pace, which is faster than it looks.\n\n© Wayne Heim",
+    "notes": "A forest stream cascading over dark rocks in a Vermont woodland, fallen leaves on the stones — the set's channel composition: white water in a narrow worn course, the season's first leaves catching on the rocks.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1292,8 +1292,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Wayne Heim's exploration of see beauty in simplicity comes alive in this piece, showcasing autumn in new england. A testament to see beauty in simplicity in fine art. © Wayne Heim",
-    "notes": "",
+    "story": "The stream rushes over the moss-covered rocks toward the sunlit clearing — water running from the forest's shade toward its one bright room. Streams divide woods into the dim and the lit, and they always commute between them. Here the commute is visible: dark water over green stone, bright grass waiting at the end of the run. Stand in the clearing and the sound arrives before the water does. Stand in the shade and you're in the stream's own climate, five degrees cooler than the day.\n\n© Wayne Heim",
+    "notes": "A forest stream rushing over moss-covered rocks toward a sunlit clearing in Vermont — the set's journey frame: water commuting from shade to light, the clearing's brightness as the composition's destination.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1334,8 +1334,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Delving into see beauty in simplicity, this work by Wayne Heim highlights autumn in new england. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
+    "story": "The stream comes over the mossy rocks between green trees just catching autumn at their edges — the season arriving at the water first, the way it does, one touched leaf at a time. White water in small cascades, green still winning everywhere except the margins. This is Vermont in the hinge weeks, when the woods are deciding. The stream doesn't decide anything; it runs in all seasons at the same white hurry. The trees will catch up to the calendar. The water was never behind.\n\n© Wayne Heim",
+    "notes": "A forest stream flowing over moss-covered rocks between green trees with the first autumn touches, Vermont — the set's hinge-season frame: summer's green and fall's first color sharing the banks of one running stream.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1376,8 +1376,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "This image embodies autumn in new england and The Northeast, captured by Wayne Heim in his signature style. It reflects The Northeast. © Wayne Heim",
-    "notes": "",
+    "story": "The fallen leaves ride the stones where the stream slows — autumn's confetti caught in the current's eddies, each leaf a small decision the trees made overnight. The water keeps moving them in inches, pooling them against the mossy rocks like it's sorting the season. Streams in October are delivery systems for color: everything the canopy lets go, the water redistributes. This frame is the sorting mid-process, leaves bright on dark wet stone, the whole forest's mail mid-route.\n\n© Wayne Heim",
+    "notes": "A forest stream over moss-covered rocks with fallen autumn leaves caught on the stones, Vermont — the set's sorting frame: the season's color mid-delivery, bright leaves held against dark wet rock.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1415,8 +1415,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Delving into see beauty in simplicity, this work by Wayne Heim highlights see beauty in simplicity through autumn in new england and The Northeast. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
+    "story": "The spillway pours its long sheet into the river and a cable cuts the frame diagonally — water engineering in black and white, all function and falling. A spillway is a waterfall with a job: the dam's pressure valve, dressed in concrete. The water goes over in a continuous white argument. The cable does the composition's punctuation. Beyond it, trees and clouds carry on being a landscape around this piece of infrastructure that learned to be scenery by falling beautifully on schedule.\n\n© Wayne Heim",
+    "notes": "Water pouring over a long spillway into a river, a cable crossing the frame diagonally, in black and white — the set's industrial falls: the dam's working waterfall, rendered as pure function and tone.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1454,8 +1454,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Delving into The Northeast, this work by Wayne Heim highlights see beauty in simplicity through see beauty in simplicity and The Northeast. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
+    "story": "Close on the spillway's face, the water sheets down the concrete in one unbroken pour — the edge where a reservoir becomes a river again, drawn in white. Concrete waterfalls have their own honesty: no rocks to pretend it's nature, just gravity and a gate and the mathematics of release. In black and white the sheet is a bright curtain against the dark below. The cable crosses like a signature. The water signs under it, continuously, in foam.\n\n© Wayne Heim",
+    "notes": "A close view of water sheeting down a spillway's concrete face, in black and white — the set's abstract pour: reservoir becoming river in one bright curtain, the diagonal cable for a signature.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1492,8 +1492,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Wayne Heim's exploration of see beauty in simplicity comes alive in this piece, showcasing The Northeast and see beauty in simplicity. A testament to see beauty in simplicity in fine art. © Wayne Heim",
-    "notes": "",
+    "story": "The spillway in golden light — the water going over the concrete edge lit amber at the top, blue-gray in its fall, a branch caught on the cable like the river tried to send something over and thought better of it. Evening does for infrastructure what it does for cathedrals: it makes the functional luminous. This is a dam pretending, in the last light, to be a falls in a painting — and succeeding, in the specific way that only working water can, by actually falling.\n\n© Wayne Heim",
+    "notes": "Water pouring over a spillway in golden evening light, a branch caught on the crossing cable — the set's luminous infrastructure: the dam's waterfall gilded, amber above and blue-gray in the fall.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1530,8 +1530,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "This image embodies autumn in new england and see beauty in simplicity, captured by Wayne Heim in his signature style. It reflects The Northeast. © Wayne Heim",
-    "notes": "",
+    "story": "Down the length of the spillway the water pours in silky sheets, calm water standing beside the dam — the two tempers of a reservoir in one frame: the still and the spilling. A branch rides the cable, caught mid-journey, the traveller the current almost sent. The long view gives the spillway its scale: this is a wide river being allowed through a concrete decision, sheet by sheet. The calm side waits its turn with a reservoir's patience, which is measured in seasons.\n\n© Wayne Heim",
+    "notes": "A long view down a spillway's silky sheets with calm reservoir water beside the dam, a branch caught on the cable — the set's two-tempers composition: still water and spilling water sharing one structure.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1571,8 +1571,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "This image embodies autumn in new england and The Northeast, captured by Wayne Heim in his signature style. It reflects autumn in new england. © Wayne Heim",
-    "notes": "",
+    "story": "The red covered bridge spans the rocky gorge with white water running below it and autumn standing in the trees on both banks — Vermont's signature arrangement, earned over two centuries of keeping rivers crossed and roofs over the crossing. Covered bridges were built to last: a roof for the timbers, red for the finding. The gorge provides the drama, the river provides the sound, and the bridge provides the sentence's red verb. It has been posing like this since before photography. Photography just finally showed up.\n\n© Wayne Heim",
+    "notes": "A red covered bridge spanning a rocky river gorge in Vermont, white water below and autumn foliage around — the set's signature frame: New England's most durable arrangement, bridge, gorge, and season in their classic positions.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1611,8 +1611,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "This image embodies The Northeast and see beauty in simplicity, captured by Wayne Heim in his signature style. It reflects autumn in new england. © Wayne Heim",
-    "notes": "",
+    "story": "The falls come over the dark boulders in silky sheets and black and white takes them down to their elements: white water, black rock, the moss gone to gray between them. A dark falls earns its name — the water bright because the stone refuses to be. Silked by the long exposure, the sheets wrap the boulders like the river is tucking them in. Monochrome is this composition's native language; color would only translate what tone already said perfectly.\n\n© Wayne Heim",
+    "notes": "A waterfall over dark boulders in silky sheets, in black and white — the set's tonal falls: white water against black rock with nothing in between but moss-gray, the composition in its native language.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1649,8 +1649,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Wayne Heim's exploration of autumn in new england comes alive in this piece, showcasing The Northeast and autumn in new england. A testament to The Northeast in fine art. © Wayne Heim",
-    "notes": "",
+    "story": "The same falls in color, and the name inverts: now it's the white water that names the piece, sheets of it over the dark gray rocks, green moss signing the wet places. Color returns the falls to the living forest — this is a summer working waterfall in a Vermont wood, not an abstraction. The boulders arrange the water; the water obeys in silk. Hung with its monochrome twin, the pair argues the set's quiet thesis: the falls are the same, the seeing is the art.\n\n© Wayne Heim",
+    "notes": "The falls in color: white silky water over dark rocks with green moss in a Vermont forest — the living companion to the monochrome frame, the pair together making the set's argument about tone versus color.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1691,8 +1691,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "This image embodies The Northeast and autumn in new england, captured by Wayne Heim in his signature style. It reflects The Northeast. © Wayne Heim",
-    "notes": "",
+    "story": "The town falls pour over their curved dam wall into the rocky riverbed, boardwalk curving along the bank, sunset going orange over the whole civic arrangement. This is Vermont at its most characteristic: a waterfall with a mailing address. The dam made the falls; the town grew around the power; the boardwalk came later, when the falls retired into scenery. At sunset the retirement looks golden. The river below keeps working the rocks like it never got the memo about being picturesque.\n\n© Wayne Heim",
+    "notes": "A broad waterfall pouring over a curved dam wall in a Vermont town at sunset, a boardwalk along the bank — the set's civic falls: water power retired into scenery, gilded by the evening.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1732,8 +1732,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Delving into autumn in new england, this work by Wayne Heim highlights The Northeast through see beauty in simplicity and The Northeast. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
+    "story": "A veil is a decision about width — the river refusing every narrow offer the rock makes and taking the whole face instead. Water spread this wide keeps its own weather at the base: the air never fully dries, the sound never fully stops, and the moss has been compounding that arrangement for longer than the trees have stood over it. Everything upstream arranged this — every rain, every spring melt — and the face just keeps accepting delivery, one white sheet at a time, in all seasons, at the same unhurried pace.\n\n© Wayne Heim",
+    "notes": "The Northeast set's study in width: one unbroken veil of water across a whole moss-dark rock face, held in a portrait frame — the breadth of a panorama composed vertically. Hung near the set's Narrow Fall, the pair makes the argument on any wall: same Vermont water, opposite decisions — a thread and a veil.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1772,8 +1772,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "This image embodies autumn in new england and see beauty in simplicity, captured by Wayne Heim in his signature style. It reflects The Northeast with a touch of autumn in new england. © Wayne Heim",
-    "notes": "",
+    "story": "The tall falls thread down the mossy cliff in one narrow white line, ferns standing at the edges in their green ranks, autumn trees waiting above. A narrow fall is a private performance — the water given one channel and all the height it wants. The ferns keep the cliff's moisture map; where they grow, the spray reaches. The thread of water has worn this groove for centuries and the groove fits it like a signature. From below, the sound is out of all proportion to the width, which is the gorge's acoustics doing favors.\n\n© Wayne Heim",
+    "notes": "A tall narrow waterfall threading down a moss-covered rock face, ferns at its edges, Vermont — the set's vertical thread: one channel of water, the whole cliff for its stage, green ranks attending.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1814,8 +1814,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "This image embodies see beauty in simplicity, captured by Wayne Heim in his signature style. It reflects autumn in new england with a touch of see beauty in simplicity. © Wayne Heim",
-    "notes": "",
+    "story": "The falls take the wide rock face in steps — stream splitting into streams, white water braiding over the dark mossy stairs. A stepped fall is a committee decision: the water arrives as one river and leaves as a dozen small arguments, all resolved by the pool. Ferns hold the banks, trees hold the top, and the rock holds the whole negotiation in its worn steps. In a wet season this face runs as one sheet. Today it's the braid, which shows the architecture better.\n\n© Wayne Heim",
+    "notes": "A broad waterfall braiding down a wide stepped rock face in many streams, ferns above, Vermont — the set's braided composition: one river becoming many, the rock's architecture visible in the parting water.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1856,8 +1856,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "This image embodies The Northeast, captured by Wayne Heim in his signature style. It reflects autumn in new england with a touch of see beauty in simplicity. © Wayne Heim",
-    "notes": "",
+    "story": "The falls come tumbling down the steep mossy slope — no single drop, just a long white hurry over dark rock, moss and ferns banking the run. Tumbling water is the energetic kind: it never leaves the stone, so the whole slope sounds like one continuous landing. The slope is steep enough to make the water hurry and rough enough to make it sparkle. This is a falls in the key of a mountain stream with somewhere to be, performed on a staircase of wet rock.\n\n© Wayne Heim",
+    "notes": "A waterfall tumbling down a steep mossy rock slope in many small streams, Vermont — the set's energy frame: water in continuous contact with stone, the whole slope sounding like one landing.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1897,8 +1897,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "This image embodies autumn in new england and The Northeast, captured by Wayne Heim in his signature style. It reflects autumn in new england. © Wayne Heim",
-    "notes": "",
+    "story": "The slope cascade again in its portrait: white streams threading over dark wet rock, green moss and ferns holding every bank, the trees standing above like the fall's green ceiling. Some waterfalls are events; this one is a climate — permanently damp, permanently moving, the moss thriving on the arrangement for centuries. The streams divide and rejoin down the face like a conversation the water is having with the rock, in a language of white on dark on green.\n\n© Wayne Heim",
+    "notes": "A waterfall cascading down a mossy rock slope in many streams, ferns and trees above, portrait, Vermont — the set's climate frame: not an event but a permanent condition, water and moss in long partnership.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1938,8 +1938,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "This image embodies autumn in new england and see beauty in simplicity, captured by Wayne Heim in his signature style. It reflects see beauty in simplicity with a touch of autumn in new england. © Wayne Heim",
-    "notes": "",
+    "story": "The widest of the slope falls, and the greenest — bright moss covering the whole rock face the water threads down, tall trees standing over it. When moss wins this completely, the falls stop looking like water over rock and start looking like a green hill that flows. The streams pick their white paths through the green like veins. It's the set's most complete merger: stone, moss, water, and forest no longer separable into subjects. The Vermont woods in one wet portrait, flowing.\n\n© Wayne Heim",
+    "notes": "A wide waterfall cascading down a completely moss-covered slope, tall trees above, Vermont — the set's merger frame: rock, moss, water, and forest composed into a single flowing surface, the greenest picture in the Northeast set.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1979,8 +1979,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Wayne Heim's exploration of see beauty in simplicity comes alive in this piece, showcasing see beauty in simplicity. A testament to autumn in new england in fine art. © Wayne Heim",
-    "notes": "",
+    "story": "The autumn forest stands in green and gold and the still dark water gives it back — trees doubled, the lake holding the woods' portrait with a stillness that takes a windless morning to arrange. Reflections this complete are the landscape's vanity and its honesty: the forest exactly as it is, upside down, in dark glass. One ripple and the whole thing becomes impressionism. For now it holds: two forests, one real, one borrowed, and the shore between them keeping the secret of which is which.\n\n© Wayne Heim",
+    "notes": "A dense autumn forest of green and gold reflected in still dark water in Vermont — the set's mirror composition: the woods doubled in a windless lake, two forests separated by one shoreline.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2021,8 +2021,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "This image embodies see beauty in simplicity and autumn in new england, captured by Wayne Heim in his signature style. It reflects The Northeast with a touch of autumn in new england. © Wayne Heim",
-    "notes": "",
+    "story": "The stone arch bridge spans the rocky gorge and beneath it a stepped waterfall comes down the rock face into the river — two kinds of engineering sharing one frame, the arch built by masons, the falls built by the river's longer apprenticeship. The arch has stood over this water through a century of floods that took lesser crossings. The falls have run under it the whole time, unimpressed, doing the older work. Green banks, dramatic sky, and between them the arrangement that built Vermont's towns: a way across, and power below.\n\n© Wayne Heim",
+    "notes": "A stone arch bridge spanning a rocky gorge with a stepped waterfall beneath it, Vermont — the set's double-engineering composition: masonry above, water-work below, the arrangement that built the region's towns.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2063,8 +2063,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Wayne Heim's exploration of see beauty in simplicity comes alive in this piece, showcasing The Northeast. A testament to The Northeast in fine art. © Wayne Heim",
-    "notes": "",
+    "story": "The dam and its stone arch bridge in full color: water cascading down the stepped face into the river, autumn on the hillside, the sky dramatic above the whole works. A stone dam like this is a town's founding document written in masonry — power first, then mills, then streets. The curve of the wall is the engineer's signature, holding back a reservoir with geometry. The falls down its face are the overflow, working. Everything in the frame was decided by somebody, including the view.\n\n© Wayne Heim",
+    "notes": "A stone arch bridge and curved stone dam with water cascading down its stepped face, autumn hillside above, Vermont — the set's founding-document frame: water power as architecture, in full color and full scale.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2105,8 +2105,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "This image embodies The Northeast, captured by Wayne Heim in his signature style. It reflects autumn in new england. © Wayne Heim",
-    "notes": "",
+    "story": "The dam in black and white goes back to its blueprint: arch, curve, stepped face, the water white against the stone's gray grades. Monochrome suits masonry — this is how the dam looked in the newspapers when it was new and news. The river below runs rocky, the trees stand in tones, and the whole structure reads as pure intention: somebody decided a river would stop here, and built the argument in stone. A century later the argument is holding, in every sense.\n\n© Wayne Heim",
+    "notes": "The stone arch bridge and curved dam in black and white, water pouring down the stepped face — the set's archival rendering: the structure as its builders' generation saw it, intention in gray stone.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2148,8 +2148,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "This image embodies The Northeast, captured by Wayne Heim in his signature style. It reflects autumn in new england with a touch of The Northeast. © Wayne Heim",
-    "notes": "",
+    "story": "From low in the gorge the dam becomes a wall across the world — water pouring down its stepped face into the rocky river, the arch and bridge riding the top like a crown. This is the river's view, and it's less picturesque than structural: height, weight, and controlled falling. The gorge frames it in rock and trees. In black and white the power of the thing is the tone of it — a gray cliff that men built, holding back a lake, letting a river through in measured white.\n\n© Wayne Heim",
+    "notes": "A low gorge view of the stone dam and arch bridge with water pouring down its stepped face, in black and white — the set's power portrait: the structure from the river's level, height and weight in pure tone.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2190,8 +2190,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Delving into The Northeast, this work by Wayne Heim highlights autumn in new england through autumn in new england and see beauty in simplicity. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
+    "story": "From the dam's crest at sunset the view opens over the gorge — curved wall and railing in the foreground, the river and forest falling away below, the sky running orange and pink at the horizon. Standing on a dam at dusk is standing on the town's whole history with the view it bought: reservoir behind, river below, power and scenery in both directions. The railing is for the vertigo. The sunset is for whoever stayed. Most evenings, the crest keeps both to itself.\n\n© Wayne Heim",
+    "notes": "A wide view from a stone dam's crest over a river gorge at sunset, curved wall and railing in the foreground, Vermont — the set's vantage frame: the whole valley system from the structure that organizes it, at the day's best hour.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2231,8 +2231,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Wayne Heim's exploration of The Northeast comes alive in this piece, showcasing autumn in new england and see beauty in simplicity. A testament to The Northeast in fine art. © Wayne Heim",
-    "notes": "",
+    "story": "The long stepped wall recedes beside the calm reservoir into the dusky distance — stone geometry in perspective, the gorge waiting on the far side. A dam wall this long is a road between two waters: the still lake it keeps, and the low country it protects. At dusk the steps read like a staircase for giants going down to the shore. The reservoir holds the sky's last gray. Everything is quiet in the specific way of enormous held things.\n\n© Wayne Heim",
+    "notes": "A long stepped stone dam wall receding beside a calm reservoir at dusk, Vermont, portrait — the set's perspective study: masonry geometry between two waters, drawn to a dusky vanishing point.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2272,8 +2272,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Delving into autumn in new england, this work by Wayne Heim highlights autumn in new england through The Northeast and autumn in new england. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
+    "story": "The stepped wall curves beside the reservoir with the forested hills standing beyond the still water — the dam as the shoreline's leading line, drawing the eye around the lake it made. Before the wall, this was a river valley; the wall promoted it to a lake with hills for a frame. The dusky sky doubles in the still water the wall keeps. Walk the crest and the whole composition escorts you: stone at your side, the lake below it, the hills holding the far shore like a held note.\n\n© Wayne Heim",
+    "notes": "A long stepped dam wall curving beside a calm reservoir, forested hills beyond, at dusk in Vermont — the set's leading-line landscape: the wall as the lake's own drawn border, hills completing the frame.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2313,8 +2313,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Delving into see beauty in simplicity, this work by Wayne Heim highlights autumn in new england through The Northeast and see beauty in simplicity. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
+    "story": "The curved wall at dusk, the still reservoir reflecting the dusky sky, the forested hills dark on the far shore — the dam in its evening identity, less a structure than a shoreline with intentions. Curves hold water with elegance; this one has held it through a century of dusks exactly like this one, the lake going mirror-still, the wall's arc drawing its dark line between water and sky. The hills sign the horizon. The reflection signs the rest.\n\n© Wayne Heim",
+    "notes": "A curved stone dam wall beside a still reservoir at dusk, the water reflecting the sky, forested hills beyond, Vermont — the set's evening arc: structure become shoreline, reflection completing the geometry.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2354,8 +2354,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Wayne Heim's exploration of autumn in new england comes alive in this piece, showcasing autumn in new england and see beauty in simplicity. A testament to see beauty in simplicity in fine art. © Wayne Heim",
-    "notes": "",
+    "story": "Closer on the curved wall, the reservoir at its stillest — the dusky sky mirrored whole, the dark hills doubled, the wall's arc the only drawn line in a composition of reflections. Still water at dusk is the landscape's most borrowed beauty: everything in the frame exists twice, once in fact and once in the lake's opinion. The dam makes the stillness possible; the evening makes it golden-gray and brief. A breath of wind would spend it. There is no wind. The lake is holding the picture for us.\n\n© Wayne Heim",
+    "notes": "A curved dam wall beside a mirror-still reservoir at dusk, sky and dark hills reflected whole, Vermont — the set's reflection in full: the lake's doubled world, with the wall's arc for its one drawn line.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2396,8 +2396,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Wayne Heim's exploration of autumn in new england comes alive in this piece, showcasing see beauty in simplicity and autumn in new england. A testament to The Northeast in fine art. © Wayne Heim",
-    "notes": "",
+    "story": "The set closes on the reservoir in black and white — curved wall, still water reflecting a cloudy sky, forested hills on the far shore, everything the Northeast set has been about, rendered in gray: stone, water, woods, and weather, held in one calm composition by a wall of fitted stone. Monochrome takes the dusk's color and leaves its peace. The lake the dam made lies still behind its wall, the hills keep their distance, and the water keeps the sky — as it has every quiet evening since the gates first closed.\n\n© Wayne Heim",
+    "notes": "A curved stone dam wall beside a still reservoir reflecting a cloudy sky, forested hills beyond, in black and white — the set's closing frame: the whole Northeast argument in gray, stone and water and woods at rest.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",

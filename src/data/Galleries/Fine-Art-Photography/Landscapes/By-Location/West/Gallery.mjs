@@ -52,8 +52,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Stream with the Teton Mountains in the background. ©Wayne Heim",
-    "notes": "",
+    "story": "Every approach to those peaks starts lower than you think — down in the timber, following water that fell as snow on the summits and is still reporting for duty on its way down. The stream is the valley's own directions: follow it up and the trees thin, the air changes its mind about temperature, and the mountains stop being a view and start being the destination. Generations walked in this way, on foot and on horseback, reading the current like a sign. The water is still giving the same directions.\n\n© Wayne Heim",
+    "notes": "A black-and-white Wyoming composition with a long memory: a bouldered stream in the foreground leading the eye through evergreen forest to the snow-capped Tetons — the classic approach shot, water as the road and the range as the destination.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -92,8 +92,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "Delving into western scenery wall art, this work by Wayne Heim highlights traditional western landscape photography through Western skies and American West – Vast Horizons. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
+    "story": "The peaks get the postcards, but the sky does the governing out here — it decides by noon whether the day will be kind, and the lake keeps the minutes. Weather crosses this range the way news crossed a frontier town: visibly, from a long way off, with time to prepare and no way to stop it. Stand on this shore long enough and you watch three seasons rehearse in one afternoon. The mountains have seen all of it before. That's the calm in them.\n\n© Wayne Heim",
+    "notes": "A color Teton lakeshore built on proportion: boulders and clear shallows in front, conifers mid-frame, snow-dusted peaks under a dramatic sky — the range photographed the way it actually governs a room, by scale and weather rather than detail.",
     "rating": 2,
     "galleries": [],
     "visibility": "show",
@@ -131,8 +131,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Isolated old ranch house in Wyoming with Grand Tetons in background.  ©Wayne Heim",
-    "notes": "",
+    "story": "Somebody chose this ground on purpose — close enough to see the peaks every morning of their life, far enough from everything else to make every supply trip a planning exercise. A house like this measured wealth in winters survived. The windows faced the weather for decades of other people's breakfasts, arguments, and long silences, and the mountains attended all of it without comment. The builders are gone. The arrangement they made with distance is still standing.\n\n© Wayne Heim",
+    "notes": "Black-and-white homestead portraiture at landscape scale: a weathered two-story ranch house and outbuilding alone in dry grass, the Tetons standing behind — the settlement story of the West told by one address, endurance composed as architecture.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -171,8 +171,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "Delving into American West – Vast Horizons, this work by Wayne Heim highlights Western skies through traditional western landscape photography and Western skies. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
+    "story": "Reflections are the mountains' second shift — the peak reporting again in the water, doubled, while the air holds its breath to let it happen. It takes a windless hour, and those are rationed in this country; most days the lake is all business. Autumn slows everything down to the speed of this: cold coming, color going, the summit practicing its winter face in the mirror before committing to it. By freeze-up the reflection will be under ice, and the peak will work alone until spring.\n\n© Wayne Heim",
+    "notes": "A muted-color Teton reflection — summit mirrored in calm water, autumn trees along the far shore — the set's stillness study: the range doubled at the exact hour the wind gives up, scale rendered as quiet.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -212,8 +212,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Small river meanders through the pines in Wyoming.  ©Wayne Heim",
-    "notes": "",
+    "story": "Before there were trails there was this — the river's own road through the timber, and everything with sense still travels by it: deer at first light, fishermen by noon, storms of leaves in October. A meandering river is in no hurry and gets everywhere anyway, which is more than the straight-line world can say. In black and white the bends read like handwriting — the water signing its name through the pines, over and over, in a hand that hasn't changed in ten thousand years.\n\n© Wayne Heim",
+    "notes": "A portrait-format black-and-white river study: the current bending through pine forest and grassy banks under a worked sky — vertical composition that lets the meander carry the whole frame, the forest's road drawn in water.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -250,8 +250,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "Geyser pools  at Yellowstone National Park in Wyoming. ©Wayne Heim",
-    "notes": "",
+    "story": "Most landscapes are finished. This one is still under construction — the ground here is a rumor over a furnace, and the pools are where the rumor comes true in color. The trees that trusted the soil too close learned otherwise; they stand in the steam as the park's pale witnesses. Everything about this ground is temporary at a scale too slow to watch and too fast to trust: pools migrate, crusts thicken and fail, and the map redraws itself while nobody is looking. It is the oldest park in the world, protecting the youngest ground in it.\n\n© Wayne Heim",
+    "notes": "Yellowstone's geothermal palette in full color — milky blue pools, mineral-yellow ground, white snags standing in steam — the West set's geology chapter: landscape as process, photographed where the earth is still visibly working.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
@@ -286,8 +286,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "After the Fire. Trees in Wyoming.",
-    "notes": "",
+    "story": "A burned forest is the loudest quiet in the West — no birdsong worth the name, no canopy negotiating with the wind, just the standing black punctuation of what the fire decided. But a fire is a sentence, not the whole book. Under this ash the soil is already spending the insurance: nutrients down, light let in, the next forest queuing in the seed bank with a patience of decades. These snags will host woodpeckers, then fall, then feed the ground they shaded. The photograph catches the one chapter that looks like an ending.\n\n© Wayne Heim",
+    "notes": "Black-and-white fire ecology, unsoftened: a dense stand of bare burned trunks over charred ground — the set's starkest frame, and its most honest about how western forests actually renew: by loss first, on a decades-long schedule.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -327,8 +327,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "Delving into traditional western landscape photography, this work by Wayne Heim highlights Western skies through Western skies and western scenery wall art. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
+    "story": "Autumn arrives at a pond like this from the edges in — the grasses turning first, going gold while the water keeps summer's blue a few weeks longer out of loyalty. The pond itself is the valley's pause: everything moving in this country eventually slows at a shore and considers. Ducks will stage here on their way south. Frost is already rehearsing at night at this altitude. The gold is the land's last generous offer before the long white negotiation begins.\n\n© Wayne Heim",
+    "notes": "A color study in seasonal contrast: autumn-gold grasses at the edge of a still Teton pond, blue sky and peaks beyond — the West set's gentlest frame, all warmth in the foreground and permanence behind it.",
     "rating": 3,
     "galleries": [],
     "visibility": "show",
@@ -371,8 +371,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "Delving into western scenery wall art, this work by Wayne Heim highlights western scenery wall art through western scenery wall art and American West – Vast Horizons. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
+    "story": "At low water a river shows its workings — the boulders it moves in flood years sitting exposed like tools left out after a job. The bare trees say the season has turned its pockets out: leaves down, accounts settled, everything waiting on snow to start the next one. This reach of the river has run flood and drought through the same stones for centuries and kept both appointments. In spring it will be unrecognizable and entirely itself, which is a river's whole philosophy.\n\n© Wayne Heim",
+    "notes": "Black-and-white river architecture: a rocky streambed driving toward the Tetons, bare trees on the banks — the range approached through the river's own evidence, boulders and current composing the foreground.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -411,8 +411,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "Delving into traditional western landscape photography, this work by Wayne Heim highlights western scenery wall art through American West – Vast Horizons and Western skies. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
+    "story": "The range saves its argument for last light. All day the peaks are geology; at sunset they become theatre — the snow taking the color first, holding it longest, handing it down the rock faces like a rumor until the valley is dark and only the summits are still in the day. People who live here plan around this hour without ever saying so. Dishes wait. Conversations move to porches. The mountains have been running this show every clear evening for ten thousand years, and the audience still hasn't learned to be casual about it.\n\n© Wayne Heim",
+    "notes": "The Teton range at full sunset — snowfields carrying pink and orange light above a darkening valley — the set's color climax: the peaks photographed at the one hour when scale turns into ceremony.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -447,8 +447,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "Famous Moulton Barn seen through two trees. Grand Tetons rise up behind this in Wyoming. ©Wayne Heim Fine art painterly mountain photography.",
-    "notes": "",
+    "story": "On Mormon Row the barns outlasted the families who raised them, which was not the plan but is the history. This one has stood through a century of Teton weather with nothing but joinery and stubbornness for a maintenance plan, while the valley around it changed religions — from homestead to park to postcard. The trees frame it the way the valley frames everything here: incidentally, and better than any designer could. What the barn knows about endurance it learned the slow way, one winter at a time, same as the people who built it.\n\n© Wayne Heim",
+    "notes": "Jackson Hole's most storied barn, composed between two trees with the Tetons rising behind — homestead history and mountain scale in one frame: the West set's signature marriage of the built and the given.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -489,8 +489,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Sliver of a cloud forms a white tail as it appears to be caught on a tree at the foot of the Teton Mountains. Photo taken at sunrise just outside of Jackson Hole Wyoming.",
-    "notes": "",
+    "story": "Sunrise at this altitude is a working hour, not a spectacle — ranchers are already moving, and the light comes up like it's reporting for the same shift. The mountains make their own weather in miniature up there, spinning off wisps and banners that snag on whatever stands still long enough. For a few minutes this morning the sky's smallest cloud got caught and held, and the whole enormous range had a footnote. Then the sun cleared the ridge, the footnote dissolved, and the day got down to business.\n\n© Wayne Heim",
+    "notes": "A sunrise Teton composition with a storyteller's detail: a thin cloud wisp snagged at the peaks' base above a lone tree and golden field — the set's light-touch frame, grandeur with a footnote.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -530,8 +530,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "The Grand  main summit of the Grand Teton Mountains. ©Wayne Heim",
-    "notes": "",
+    "story": "Every valley out here keeps one fixed point — the summit that tells you where you are and what the weather intends. The Grand has been that point for everyone: the tribes who named it long before it was the Grand, the climbers who measure their summers against it, the clouds that spend half the year trying to hide it and failing at exactly the moments that matter. It doesn't perform. It presides. The mist comes and goes like staff; the mountain keeps the office.\n\n© Wayne Heim",
+    "notes": "The Grand Teton in black and white, summit rising through cloud — the set's portrait of the presiding peak: scale stripped to rock, snow, and vapor, the valley's fixed point rendered in pure tone.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
@@ -569,8 +569,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "Delving into mountain landscape photography, this work by Wayne Heim highlights painterly mountain art through mountain landscape photography and painterly mountain art. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
+    "story": "A summit keeps two climates: the one the valley is having, and its own, which it shares with nobody. The cloud wrapped around this peak isn't passing through — it's the mountain's household weather, generated on site, while blue sky does the public relations below. Climbers learn this the humbling way: sunshine at the trailhead is a rumor the summit never confirmed. The rock has stood in both weathers for ten million years and shows no preference, which is the most mountain thing about it.\n\n© Wayne Heim",
+    "notes": "A color summit study — snow-patched Teton rock with cloud wrapped around the peak under blue sky — the set's two-climates frame: the mountain's private weather photographed against the valley's public one.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
@@ -611,8 +611,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "A herd of buffalo graze on the plains in Wyoming.",
-    "notes": "",
+    "story": "The herd is the plains' oldest sentence, and it was nearly edited out — down to a few hundred animals in a country that once held millions, saved by a handful of people who decided the sentence should finish. Now the rhythm is back: graze, move, graze, the herd editing the grassland as it goes, wallows and hooves doing engineering work the prairie evolved to expect. They are not scenery and they are not symbols. They are a working majority, restored to the country that was built by their presence.\n\n© Wayne Heim",
+    "notes": "A large bison herd grazing golden Wyoming prairie under a big sky — the West set's restoration chapter: the plains' original inhabitants photographed at working scale, as landscape and as comeback.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -651,8 +651,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "A peaceful river flows through the quiet Wyoming countryside.",
-    "notes": "",
+    "story": "By evening a river out here has finished its day's work — the melt pulse spent, the current down to its unhurried self, taking the light apart into gold and giving it back slowly. This is the hour the country exhales: insects up, trout considering, the banks trading their heat back to the air. A peaceful river isn't an empty one. It's a full day, settling. Tomorrow the sun will wind it up again; tonight it runs at the speed of the light leaving, which is exactly fast enough.\n\n© Wayne Heim",
+    "notes": "A sunset river winding through golden grasses and pines in Wyoming — the set's evening register: water, light, and grassland composed at the calm end of the day, warmth carried in the current.",
     "rating": 3,
     "galleries": [],
     "visibility": "show",
@@ -692,8 +692,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "Delving into ethereal landscapes, this work by Wayne Heim highlights ethereal landscapes through ethereal landscapes and western landscape photography. A powerful statement in photography.",
-    "notes": "",
+    "story": "From this shore the range is all distance — close enough to fill the sky, far enough that the water between you and it becomes part of the portrait. Frontier lakes were the West's waiting rooms: crossings decided here, weather watched from here, journeys begun at first light when the surface went calm. The peaks don't move and the lake never repeats itself, so the view is a permanent exhibition with a new hanging every hour. This was the calm installment.\n\n© Wayne Heim",
+    "notes": "A wide Teton lake composition — the snow-dusted range held across still water under a dramatic sky — the set's distance study: mountains measured by the water in front of them.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -735,8 +735,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "Wayne Heim's exploration of ethereal landscapes comes alive in this piece, showcasing feel every layer of it. A testament to feel every layer of it in fine art.",
-    "notes": "",
+    "story": "Every lakeshore keeps an archive, and this is it: the wood the rivers carried down out of the high country, delivered at flood stage, filed by the waves along the pebble line. This piece started as a tree on a slope that slid, or a bank that failed, in a winter nobody recorded — and the lake kept the paperwork. Driftwood is the mountains' handwriting washed up at their feet: storms, thaws, and high water, all legible if you walk the shore slowly enough.\n\n© Wayne Heim",
+    "notes": "Weathered driftwood on a pebble Teton lakeshore, the range across the water — the set's found composition: the shore's own archive in the foreground, permanence behind it, a landscape that arranged itself.",
     "rating": 3,
     "galleries": [],
     "visibility": "show",
@@ -775,8 +775,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "Footbridge through the canyon.",
-    "notes": "",
+    "story": "A canyon allows crossings on its own terms, and this is the current treaty: one small bridge, exactly where the walls permit, with the stream auditing everyone who passes. Footbridges humble a landscape to human scale for exactly eleven steps — long enough to hear the water properly, short enough to be grateful. Whoever built it hauled every board in. Whoever maintains it hauls them back out, one rot at a time. The canyon signs the agreement every spring flood, provisionally.\n\n© Wayne Heim",
+    "notes": "A black-and-white canyon composition: a small wooden footbridge crossing a rocky stream between steep walls — human scale set inside geological scale, the West set's quietest structure.",
     "rating": 3,
     "galleries": [],
     "visibility": "show",
@@ -814,8 +814,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "Devils Tower in Wyoming.",
-    "notes": "",
+    "story": "Long before it was a monument it was a prayer place — Bear Lodge to the peoples who were here first, a stone that rises out of the pines like the country is pointing at something. Geologists read it as an intrusion that outlasted the land around it; the tribes' stories read it as rescue and claw marks. Both readings agree on the essential fact: it does not belong to the landscape so much as preside over it. In 1906 it became the first national monument in America. It had already been one for a thousand years.\n\n© Wayne Heim",
+    "notes": "Devils Tower in black and white, rising through pines on a rocky slope — the set's monument portrait: geology and sacred geography in one column of stone, tone doing the reverence.",
     "rating": 3,
     "galleries": [],
     "visibility": "show",
@@ -852,8 +852,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Devil's Tower landmark in Wyoming. ©Wayne Heim",
-    "notes": "",
+    "story": "The walk in is part of the portrait — the Tower deals itself out gradually through the pines, a gray rumor between trunks that keeps being true at larger and larger sizes. Forest approaches are how the West teaches scale: not all at once, the way a summit shows from a highway, but in installments, until you stop under it and the installment plan comes due. The pines at its base are a century old and look like seedlings. That recalibration is the whole lesson, and it can't be learned from the parking lot.\n\n© Wayne Heim",
+    "notes": "The companion Tower view in color — the formation rising over tall pines from low in the forest — the set's approach composition: scale revealed in installments, the forest as the measuring stick.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -892,8 +892,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "What is around the bend in the Wyoming landscape?   ©Wayne Heim",
-    "notes": "",
+    "story": "A wet road under a storm sky is a question the country asks at exactly the speed of travel: what's over the rise, whose ranch, which valley. The rain has just finished its side of the argument and the grass is answering in gold. Out here a dirt road isn't a shortcut to anywhere — it is the place, strung between horizons, and everybody on it is between two weathers, two errands, two chapters. The bend keeps the ending honest. You don't get to see it early.\n\n© Wayne Heim",
+    "notes": "A wet dirt road curving through golden Wyoming hills under a storm sky — the set's journey composition: the road as narrative, weather just finished, the bend withholding the ending.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -929,8 +929,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "This image embodies feel every layer of it, captured by Wayne Heim in his signature style. It reflects feel every layer of it with a touch of ethereal landscapes.",
-    "notes": "",
+    "story": "The prairie does its layering horizontally — hill behind hill in diminishing gold, each ridge a slightly older decision the land made about where the water goes. From a distance it reads as calm. Up close it's a working surface: grass over gravel over the bones of an inland sea, storm light raking across all of it and itemizing every fold. This is the West without a single mountain in it, and it doesn't miss them. It has its own vertical, measured in sky.\n\n© Wayne Heim",
+    "notes": "Layered golden grass hills under a dramatic Wyoming sky — the set's mountainless West: depth built from ridge, light, and storm alone, proof the prairie composes in strata.",
     "rating": 3,
     "galleries": [],
     "visibility": "show",
@@ -968,8 +968,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "notes": "",
+    "story": "The Rockies don't recognize the border — the same uplift that raises the Tetons runs north into this colder, wetter register, where the lakes take their color from rock flour and the peaks keep snow like they mean it. Banff and Jasper country is the West's northern argument: same stone, longer winters, water gone emerald with the mountains' own dust. A range is one sentence spoken in two accents. This frame is the northern pronunciation, mirrored in still water at the hour the surface goes quiet.\n\n© Wayne Heim",
+    "notes": "Snow-capped Canadian Rockies peaks and pines reflected in an emerald alpine lake — the set's northern frame: the range's other accent, Banff–Jasper country composed as a mirror.",
     "rating": 3,
     "galleries": [],
     "visibility": "show",
@@ -1005,8 +1005,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "This image embodies ethereal landscapes and feel every layer of it, captured by Wayne Heim in his signature style. It reflects western landscape photography with a touch of ethereal landscapes.",
-    "notes": "",
+    "story": "A spire is what's left when the country around it gives up — the hard layer that refused the erosion that took everything at its level, standing now as a survey marker for a landscape that used to be higher. Storm light suits it. This is desert bookkeeping: wind and water auditing the stone over millions of years, and this one column still on the books. Everything flat around it was once as tall. The spire isn't rising. It's remaining.\n\n© Wayne Heim",
+    "notes": "A lone sandstone spire rising from dry desert grassland under storm clouds — the set's erosion portrait: the remnant as monument, one column of stone outlasting its own landscape.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
@@ -1041,8 +1041,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "Wayne Heim's exploration of ethereal landscapes comes alive in this piece, showcasing ethereal landscapes. A testament to western landscape photography in fine art.",
-    "notes": "",
+    "story": "From the rim, the river keeps its secrets — you can see it down there doing the work, green and deliberate, but the sound of it never reaches you, and neither does the scale until you notice a whole tree is a speck. This canyon is the river's memoir, written one flood at a time in a hand of red rock, and the water is still on the first draft of forever. Golden hour is when the canyon tells it best: every stratum lit like a chapter heading, the river below still turning pages.\n\n© Wayne Heim",
+    "notes": "A river winding far below through a deep red-rock canyon in golden light — the set's depth composition: the water small, the walls enormous, the whole history of erosion legible in one downward look.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
@@ -1077,8 +1077,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "Delving into ethereal landscapes, this work by Wayne Heim highlights feel every layer of it through western landscape photography and ethereal landscapes. A powerful statement in photography.",
-    "notes": "",
+    "story": "The river down there is in no hurry, which is how it got this done — a thousand feet of red rock persuaded grain by grain, the bend tightening over millions of years into the most patient U-turn in America. At sunset the canyon does its one theatrical thing: the walls take fire in sequence and the river goes dark green and keeps its own counsel. Everybody on the rim is quiet at the same moment, strangers synchronized by geology. Then the light leaves, and the river continues, unbothered, at the speed of stone.\n\n© Wayne Heim",
+    "notes": "Horseshoe Bend at sunset — the Colorado River's great incised curve through red rock, caught at the hour the walls light in sequence — the Arizona canyon country's signature composition, vertigo included.",
     "rating": 3,
     "galleries": [],
     "visibility": "show",
@@ -1114,8 +1114,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "Wayne Heim's exploration of feel every layer of it comes alive in this piece, showcasing feel every layer of it and ethereal landscapes. A testament to feel every layer of it in fine art.",
-    "notes": "",
+    "story": "Widen the frame and the bend becomes a place instead of a postcard — the whole amphitheater of walls, the river entering and leaving like it has somewhere better to be, the sky doing the evening's paperwork above it all. A panorama is the honest format here: this much geology doesn't fit in a glance, and the eye has to travel the way the water does, in a long curve, arriving changed. Sunset is the canyon's closing argument. The river rests its case all night, every night, and wins.\n\n© Wayne Heim",
+    "notes": "The panoramic Horseshoe Bend — the full arc of river and red-rock walls under a sunset sky — the set's wide telling of the same bend: place instead of postcard, the eye traveling the curve the water travels.",
     "rating": 3,
     "galleries": [],
     "visibility": "show",
@@ -1153,8 +1153,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Wayne Heim's exploration of western landscape photography comes alive in this piece, showcasing ethereal landscapes and feel every layer of it. A testament to western landscape photography in fine art. © Wayne Heim",
-    "notes": "",
+    "story": "Route 66 at dusk ran on neon and trust — the sign lit, the teepees waiting, every room a small concrete monument to the proposition that a family driving west deserved somewhere wonderful to stop. The cars out front have changed their century but not their job: they still say somebody's journey paused here, on purpose, delightedly. The motel has outlived the highway that fed it, the chain age that replaced it, and every prediction of its quaint little death. It just keeps the sign warm.\n\n© Wayne Heim",
+    "notes": "The Wigwam Motel on Route 66 at dusk — neon sign, vintage cars, concrete teepees — the West set's roadside chapter: the journey's architecture, Americana photographed at the hour the sign comes on.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
@@ -1191,8 +1191,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "Delving into western landscape photography, this work by Wayne Heim highlights ethereal landscapes through western landscape photography and ethereal landscapes. A powerful statement in photography.",
-    "notes": "",
+    "story": "A marsh is a landscape at half speed — water deciding slowly whether to be a pond or a meadow, reeds and sagebrush negotiating the border an inch a year. At sunset the negotiation pauses for the light show: the still water takes the whole sky as a tenant and the mesa beyond holds the last sun like it's being paid to. Everything that lives here runs on patience — herons, muskrats, the water itself. The marsh is in no danger of becoming scenery. It has older employment.\n\n© Wayne Heim",
+    "notes": "A marshy pond mirroring a sunset sky, sagebrush in front and a sunlit mesa beyond — the set's half-speed landscape: water, wetland, and mesa composed at the pace the place itself keeps.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
@@ -1228,8 +1228,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "View from broken window in one of the old building on Mormon row in Jackson Hole Wyoming. Dark black inside creates the perfect frame inside the frame of the picture of the mountains. Black isolation is perfect balance to the rustic isolation of the Old West.",
-    "notes": "",
+    "story": "The homesteaders who raised this wall looked at that range through this window every day of their working lives — weather report, calendar, and cathedral in one view, with chores in front of it. The house is empty now and the window is broken, and the view hasn't noticed either fact. That's the arrangement the Old West made with everybody: the people were temporary, the looking was permanent. Standing in the dark of the ruin, you take your turn at the window. The mountains keep the same hours they always did.\n\n© Wayne Heim",
+    "notes": "The Tetons seen through a broken window in a dark Mormon Row ruin — the set's frame-within-frame: the range photographed the way the homesteaders actually saw it, daily, through work and weather.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
@@ -1269,8 +1269,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "Muted rustic colored photograph of T.A. Moulton Barn with a single cowboy looking over the structure. This is one of the barns on Mormon Row near Jackson Hole Wyoming. Rustic textures of the old weathered barn are married with a muted pallet and presentation of the sunset adding the the \"historic\" feeling of the moment.",
-    "notes": "",
+    "story": "End of day on Mormon Row used to mean stock settled, tools hung, and one last look at the barn to confirm it would still be there in the morning — a working man's audit, done from the fence line. The barn passed that audit ten thousand evenings in a row. The men who built it are the reflection now: their judgment stands in the timber, their fences still argue with gravity, and the sunset does the eulogy nightly without being asked. A good barn outlives its builder and keeps his standards.\n\n© Wayne Heim",
+    "notes": "The T.A. Moulton Barn at sunset with its split-rail fence and the Tetons behind — Mormon Row's working heart photographed at the audit hour: the day's last light on a century of kept standards.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
@@ -1308,8 +1308,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "Majestic Ridge. Etna Wyoming. snow covered mountain side",
-    "notes": "",
+    "story": "After a storm, a ridge like this keeps the evidence longest — snow plastered where the wind drove it, the pines standing in their dark ranks doing the slow arithmetic of how much winter is left. Storms up here aren't weather events so much as editorial passes: they rearrange the snow, prune the weak timber, and leave the mountain's sentences sharper. The clouds going dark at the edges are the next draft arriving. The ridge has been edited this way ten thousand times and holds every revision at once.\n\n© Wayne Heim",
+    "notes": "A snow-covered Wyoming ridge with scattered pines under dark post-storm clouds — the set's winter authority frame: the mountain fresh from the weather's editorial pass, every revision showing.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1346,8 +1346,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Clouds drifting aimlessly over golden plains.",
-    "notes": "",
+    "story": "High plains measure wealth in distance — the eye runs out of errands out here, and the clouds, drifting at their own unhurried altitude, are the only traffic. A sky this big makes its own argument: that most of the world is weather and openness, and the solid parts are the exception. The plains don't perform for anybody. Grass, light, cloud shadow, repeat — the oldest show on the continent, running continuously since before there was an audience, unbothered by reviews.\n\n© Wayne Heim",
+    "notes": "White clouds drifting over golden Utah high plains under a blue sky — the set's openness study: distance as the subject, the sky doing most of the composing.",
     "rating": 3,
     "galleries": [],
     "visibility": "show",
@@ -1385,8 +1385,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "The Big Question mark is what a stream makes through the trees in this winter scene.",
-    "notes": "",
+    "story": "Winter simplifies a forest to its essentials — white ground, dark timber, and the one dark line where the water refuses to freeze quietly. From above, the stream's whole personality shows: it wanders, doubles back on its intentions, and arrives at the shape of a question, which is the most honest punctuation a river owns. In summer this same water hides its reasoning under green. Snow is the season of explanations. The stream asked its question all winter, in writing, and spring will answer it in meltwater.\n\n© Wayne Heim",
+    "notes": "An aerial winter composition: a stream curving in a question-mark through snow-covered evergreens near Jackson Hole — the set's calligraphy frame, the river's reasoning visible only in snow season.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1423,8 +1423,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "Wayne Heim's exploration of ethereal landscapes comes alive in this piece, showcasing western landscape photography. A testament to feel every layer of it in fine art.",
-    "notes": "",
+    "story": "A winter stream runs an obstacle course of its own boulders, and the snow has upholstered every one of them — the river's furniture under white covers, the water threading the gaps in a dark, deliberate line. The cold here is a preserving kind: sound muffled, light hoarded, the whole drainage holding its breath between storms. What the boulders know about this river would fill a geology. What they say about it is this arrangement, renewed every snowfall, erased every thaw.\n\n© Wayne Heim",
+    "notes": "A winter stream threading past snow-covered boulders in Wyoming — the set's upholstered landscape: water, stone, and snow in their cold-season arrangement, quiet composed in three materials.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1461,8 +1461,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "\"Snowcaps.\" B/w nature photo of snow covered rocks in stream in Wyoming.",
-    "notes": "",
+    "story": "Black and white is winter's native language — it strips the season to its actual vocabulary of dark water, white stone, and the gray negotiations between. Each boulder wears its snow like a decision the cold made and the current approved: thick where the flow is gentle, refused where the water is in a hurry. The stream keeps its dark channel open all winter, a sentence the cold can't finish. Come spring, every cap melts into the argument that placed it there.\n\n© Wayne Heim",
+    "notes": "Snow-covered rocks in a dark Wyoming winter stream, in black and white — the set's tonal minimalism: the season reduced to water, stone, and the white each one is allowed to keep.",
     "rating": 3,
     "galleries": [],
     "visibility": "show",
@@ -1501,8 +1501,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Fine art landscape photography of Glacier National Park and Montana.",
-    "notes": "",
+    "story": "Glacier's lakes keep evening hours — the day-trippers gone, the peaks handing their light down slope by slope until only the reflections are still working. Twilight here is a changing of the guard: the mountains go from being seen to being remembered by the water, which holds their shapes a while longer out of professional courtesy. The shore grass is already in tomorrow's frost. The lake doesn't hurry its closing. It has closed over these peaks every clear night since the ice left, and it has the routine down.\n\n© Wayne Heim",
+    "notes": "A Glacier National Park alpine lake at twilight, peaks mirrored in calm water — the Montana register of the set: the mountains' second shift, reflection as the evening's closing routine.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1541,8 +1541,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "Crystal: Lone tree with Ice crystals on snow. Idaho.",
-    "notes": "",
+    "story": "A lone tree in a snowfield is a study in what one life can hold: every winter at this altitude arrives like an audit, and the pine keeps passing it alone, without witnesses, in the open. The crystals in the snow are the field's fine print — a million small mirrors the cold writes overnight and the sun spends the morning reading aloud as glitter. The tree's shadow is the only company it keeps, and even that leaves by noon. Endurance, it turns out, photographs quietly.\n\n© Wayne Heim",
+    "notes": "A lone pine standing in a black-and-white snowfield, ice crystals sparkling around it — the set's solitude study: one tree, one shadow, and the cold's fine print written in crystal.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
@@ -1579,8 +1579,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "Approaching Zion- view of two areas approaching Zion National Park, Utah.",
-    "notes": "",
+    "story": "The approach is the park's first exhibit — miles of layered stone rehearsing the main event, the cliffs stacking their colors like a preview of the canyon's own palette. Storm light is the honest light out here: it takes the postcard red and gives it back its shadows, its strata, its actual mass. Travelers have been slowing down on this approach for a century without knowing why. The stone is why. It teaches the eye the local scale before the canyon administers the exam.\n\n© Wayne Heim",
+    "notes": "Layered red-rock sandstone under a storm sky on the approach to Zion — the set's preview composition: the desert's strata photographed in honest light, portrait format giving the cliffs their height.",
     "rating": 3,
     "galleries": [],
     "visibility": "show",
@@ -1615,8 +1615,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "Last De-FENCE.  Wyoming - only tops of fence  posts show in this winter scene.",
-    "notes": "",
+    "story": "Deep snow is the fence's annual defeat — the whole line buried to its eyebrows, still technically on duty, a boundary that only the posts' tips can testify to. Somewhere under there is a summer hillside with grass doing its own growing, and cattle respecting this same fence at full height, which tells you what the fence is really made of: agreement. The snow will lose. The fence will resume. Wyoming calls this arrangement winter, and files it under normal.\n\n© Wayne Heim",
+    "notes": "A line of fence posts rising from deep snow on a Wyoming hillside — the set's driest joke and its truest boundary study: a fence at eyebrow depth, holding its line on agreement alone.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1655,8 +1655,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "Black and white photograph of snow and clouds near Bondurant Wyoming.",
-    "notes": "",
+    "story": "Wind writes on snow in dunes — smooth sentences, reread and revised by every storm, until the hillside is a draft of itself. Before the wind, this was a plain field under a plain sky. After, it's this: sculpted drifts ranked like a frozen sea, and the next storm already darkening the horizon with edits. Black and white keeps the transaction honest — no color to hide behind, just light, shadow, and the evidence of how thoroughly moving air can redecorate standing still.\n\n© Wayne Heim",
+    "notes": "Dramatic storm clouds over wind-sculpted snow dunes near Bondurant, Wyoming, in black and white — the set's before-and-after frame: the field as the wind's draft, one storm from its next revision.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1695,8 +1695,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "White Paint - grove of aspen trees in the snow with one lone pine tree in background.",
-    "notes": "",
+    "story": "An aspen grove in winter is white on white with opinions — bark the color of the snow it stands in, the whole stand drawn in the palest possible ink, and one dark pine in the back keeping the composition honest. Aspens are a single organism wearing a hundred trunks, so this grove is really one tree with a crowd of alibis, sharing roots, sharing weather, sharing the winter's verdict. The pine is the only individualist present. The grove doesn't hold it against him. Clones can afford generosity.\n\n© Wayne Heim",
+    "notes": "A black-and-white aspen grove standing white in the snow, one lone pine behind — the set's pale-on-pale study: a whole grove that is secretly one tree, with a single dark witness.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1733,8 +1733,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "Grand Sunset. Jackson Hole Wyoming, sunset lights the sky behind snow covered Grand Teton mountains.",
-    "notes": "",
+    "story": "The Grand in winter sunset doesn't set — it smolders. The snow takes the day's last color and holds it above the valley like a lamp being carried out of a room, pink deepening to ember while everything below goes blue and settles. Winter sunsets at this altitude are brief and total: no lingering, no encore, the mountain spending its light all at once. The cold comes up the valley the moment the color leaves, punctual as staff. The peak has run this closing ceremony through ten thousand winters.\n\n© Wayne Heim",
+    "notes": "The snow-covered Grand Teton glowing pink in winter sunset light near Jackson Hole — the set's smolder frame: the valley's fixed point at closing, color spent all at once against the coming cold.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1774,8 +1774,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Fine art landscape photography of Glacier National Park and Montana.",
-    "notes": "",
+    "story": "A dead tree in a meadow has retired from growing and taken up standing — and standing, done this well, for this long, becomes its own profession. Snags like this are the forest's civil servants: woodpecker housing, owl lookout, nutrient trust fund, all administered from one bare post. The living forest behind it will each take their turn at the job. Glacier doesn't waste its dead; it promotes them. The ridge has watched a hundred guards serve and knows the current one is holding the post properly.\n\n© Wayne Heim",
+    "notes": "A bare dead tree standing guard in a Glacier National Park meadow, conifer forest and ridge behind, in black and white — the set's sentinel portrait: the forest's dead promoted to its most useful citizens.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1814,8 +1814,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Fine art landscape photography of Glacier National Park and Montana.",
-    "notes": "",
+    "story": "Two old giants, dead past remembering, still taking up their full height against the sky — trees that were already ancient when the park was an idea, now past leafing, past falling, into the long third act of being landmarks. A standing dead giant is a century with the bark off: every drought, fire year, and beetle winter recorded in a body that declined to lie down about any of it. The clouds do the mourning on schedule. The giants do the standing. It's a fair arrangement and it's held for decades.\n\n© Wayne Heim",
+    "notes": "Two giant bare dead trees against a cloudy Glacier sky, portrait, black and white — the set's monumental pair: standing snags at full height, a century each with the bark off, tone carrying the reverence.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1855,8 +1855,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Fine art landscape photography of Glacier National Park and Montana.",
-    "notes": "",
+    "story": "An escarpment is a mountain range's cross-section — the whole layered argument of the northern Rockies exposed in one wall: seas that became stone, stone that became mountains, mountains now becoming gravel at a pace only glaciers can hurry. The snow patches mark the ledgers where winter lasts longest. In black and white the wall reads like an engraving of itself, every stratum a ruled line. Stand under it and you are very briefly the newest thing in a very old document.\n\n© Wayne Heim",
+    "notes": "A massive layered escarpment in Glacier National Park, black and white — the set's cross-section: the northern Rockies' whole geological argument exposed in one wall, strata ruled like lines in an old document.",
     "rating": 3,
     "galleries": [],
     "visibility": "show",
@@ -1891,8 +1891,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "Deserted Barn with falling down fence.",
-    "notes": "",
+    "story": "Desertion has a sound out here — a loose roof panel ticking in the wind, a fence giving up one rail per winter, the whole structure negotiating its return to the landscape on the installment plan. But a barn this built deserves its due: it sheltered decades of other people's livelihoods before it became scenery, and the storm light treats it with the respect due a retired professional. The field doesn't care. The field is already reclaiming the yard, one green season at a time, patient as paperwork.\n\n© Wayne Heim",
+    "notes": "A deserted weathered log barn with a rusted roof and falling fence in a green field under storm clouds — the set's retirement portrait: a working structure negotiating its return to the land, storm light paying the respects.",
     "rating": 3,
     "galleries": [],
     "visibility": "show",
@@ -1933,8 +1933,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "\"Meandering Stream\". Black and white landscape photography of mountain stream, clouds and trees along \"Mormon Row\", just north of Jackson Hole Wyoming.",
-    "notes": "",
+    "story": "A meadow stream along Mormon Row runs the homesteaders' old commute — past the fields they fenced, under the sky they farmed by, still clocking in every morning of the year. Water through a meadow is in no hurry and misses nothing: it files the banks, feeds the grass, keeps the whole valley's green accounts. In black and white the meander reads like cursive, the stream writing its slow signature across the flat. The barns got the history books. The stream did the actual irrigation of the story.\n\n© Wayne Heim",
+    "notes": "A black-and-white mountain stream meandering through a Mormon Row meadow — the set's cursive composition: the homestead valley's working water, written across the flat in one slow signature.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1973,8 +1973,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "Alone on Prairie - lone cabin on the plains in Wyoming.",
-    "notes": "",
+    "story": "One cabin on an open prairie is the West's smallest complete sentence: shelter, subject; storm, everything else. Whoever built it chose the loneliest grammar available — no neighbors in the frame, no trees for punctuation, just logs against weather under a sky that outnumbers them. Cabins like this were claims made physical: stay the winters, prove the land, become an address. The storm clouds are the same ones that graded every claim out here. The cabin is still standing at its desk.\n\n© Wayne Heim",
+    "notes": "A lone log cabin on the Wyoming prairie under dramatic storm clouds, black and white — the set's smallest complete sentence: one shelter against the whole sky, a homestead claim still standing at its desk.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2009,8 +2009,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "Small  line cabin where men could stay while watching cattle.",
-    "notes": "",
+    "story": "A line cabin was the cow business's outpost system — a one-room headquarters at the far end of a ranch's responsibilities, where a rider stayed while watching cattle through country too big for commuting. Its comforts were a stove, a bunk, and the knowledge that the storm building over the mountains would arrive as weather, not surprise. The golden field says the season is good. The clouds say don't bank on it. Between those two reports, the line rider made his living, one winter at a time.\n\n© Wayne Heim",
+    "notes": "A small log line cabin with a green roof in a golden field, mountains and storm clouds behind — the set's outpost frame: the cow business's far headquarters, one room holding a ranch's whole frontier.",
     "rating": 3,
     "galleries": [],
     "visibility": "show",
@@ -2050,8 +2050,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "\"Better Days\". Black and white nature photo of old barn on \"Mormon Row\", North of Jackson Hole Wyoming.",
-    "notes": "",
+    "story": "Up close, a barn wall is a diary — every log a winter, every repair a decision somebody made with cold hands and limited lumber, the open doorway still shaped like the work that went through it. This wall faced the Tetons through the whole homestead century and kept the minutes in weathered gray. 'Better days' is the easy reading and the wrong one: the days this barn was built for were brutal, brief, and entirely real, and the wall's opinion, if it has one, is that it's still on shift.\n\n© Wayne Heim",
+    "notes": "A close black-and-white study of a weathered Mormon Row barn wall and its open doorway — the set's diary frame: the homestead century kept in logs, grain, and gray, read up close.",
     "rating": 3,
     "galleries": [],
     "visibility": "show",
@@ -2090,8 +2090,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "Old Fence - old weathered fence that had fallen down in Wyoming.",
-    "notes": "",
+    "story": "A fallen fence is a boundary that has stopped arguing — rails down in the grass, the line it defended now purely notional, the Tetons watching from the distance the fence once measured itself against. Fences out here were never really about stopping anything determined; they were declarations, and this one declared for decades before lying down. The grass is unbothered. The mountains are unbothered. Somewhere the paperwork of ownership still shows this line standing, which is how most boundaries end: outlived by their own maps.\n\n© Wayne Heim",
+    "notes": "An old weathered fence fallen flat in Jackson Hole, the Teton range in the distance, black and white — the set's closing boundary study: a declaration lying down at last, outlived by its own map.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2130,8 +2130,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "Hayloft - shows opening to the hayloft in an old barn.",
-    "notes": "",
+    "story": "A hayloft opening is a barn's lung and loading dock in one — hay went up through it by fork and pulley all summer, and the loft breathed through it all winter, exhaling the warm smell of stored grass over the stalls below. The slats have kept that rhythm for a century of seasons: forage in, weather out, swallows negotiating the lease every spring. A wall like this is a working surface, not a facade. Every log in it has been rained on, frozen, baked, and re-chinked by hands that are done now, and the wall keeps their hours anyway.\n\n© Wayne Heim",
+    "notes": "A black-and-white close study of a weathered log barn wall — hayloft opening, small window, dark doorway — the set's texture chapter: a working surface photographed at the distance where a century of seasons stays legible.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2172,8 +2172,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "B/W high key photo from inside an old log barn at the foot of the Teton on \"Mormon Row\" just outside of Jackson Hole Wyoming. Voyeuristic view from inside the dark building peers out into the daylight.",
-    "notes": "",
+    "story": "From inside, a barn is mostly darkness with a job — the smell of old hay and older leather, dust in the light shafts, the day's work silhouetted in the doorway. Everybody who ever worked this barn stood in this exact dark and looked out at that exact view, usually with something heavy in their hands and the Tetons declining to help. The doorway is the barn's opinion about the world: out there is where it happens; in here is where it's kept. A century of mornings walked through that light.\n\n© Wayne Heim",
+    "notes": "Black-and-white from inside a dark Mormon Row barn, looking out the doorway to a sunlit field and the Tetons — the set's threshold composition: shelter behind, the whole working world in front.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2214,8 +2214,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "Old famous barn on Mormon row has weathered the years as seen in black & white.",
-    "notes": "",
+    "story": "The fence has given up and the barn hasn't, and that difference is the whole biography of Mormon Row — what was built to be maintained got maintained, and what was built to be replaced got replaced by weather. A gambrel roof is an argument about snow load made by men who had done the math in winters, and this one has been right for a hundred years. The Tetons are the only neighbors who never moved away. The barn keeps their company and its own counsel, standing in the tense the valley named it for: still.\n\n© Wayne Heim",
+    "notes": "The gambrel-roofed Mormon Row barn in black and white, collapsed fence in front and the Tetons behind — the set's endurance portrait: the structure that got maintained, photographed at the distance where history reads as posture.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
@@ -2256,8 +2256,8 @@ export const galleryData = [
       "Wayne Heim",
       "K4 Studios"
     ],
-    "story": "Tetons Peek -- peeking out the barn door at the Grand Tetons in Jackson Hole, Wyoming.",
-    "notes": "",
+    "story": "Walk into a dark barn out here and the doorway does something no architect intended: it hangs the Tetons like a picture, framed in rough timber, lit like a gallery. The homesteaders couldn't have missed it — every trip in from the field ended with the range composed and waiting in the door. It must have recalibrated a bad day more than once. The barn is a ruin now and the framing still works, which makes this the longest-running exhibition on Mormon Row: one picture, changed hourly, admission a walk through the dark.\n\n© Wayne Heim",
+    "notes": "The Grand Tetons framed in a dark barn doorway on Mormon Row, black and white — the set's gallery composition: the range hung like a picture by the building itself, gravel floor for the gallery's boards.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
@@ -2295,8 +2295,8 @@ export const galleryData = [
       "traditional fine art photography",
       "fine art landscape photography"
     ],
-    "story": "Teton Mountain view looking out of the open barn door.. Looking out an old barn door at the Tetons. Dark isolation of inside of barn is shattered by the light streaming inside breaking the silence, while lurking in the distance is a view of the Grand and the Teton mountain range.",
-    "notes": "",
+    "story": "The inside of an old barn keeps its own time — cool, dim, and a generation behind the weather. The outside keeps the Tetons. From the gravel floor the arrangement looks unfair until you remember what the barn was for: it was never the view; it was the shelter that made staying in view of the mountains survivable. Men crossed this threshold ten thousand times carrying the outside in and the inside out. The light still makes the trip. The door is still the busiest place in the building, even empty.\n\n© Wayne Heim",
+    "notes": "A black-and-white barn interior opening at right onto meadow and the Teton range — the set's exchange composition: the threshold where a working building traded darkness for the whole valley, daily, for a century.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
@@ -2333,8 +2333,8 @@ export const galleryData = [
       "traditional fine art photography",
       "fine art landscape photography"
     ],
-    "story": "Old barn stands in front of Tetons.",
-    "notes": "",
+    "story": "Autumn is the valley's audit season — hay in, stock counted, the barn standing in a field gone gold like a balance sheet that came out even. The cottonwoods turn first and loudest, spending their color all at once around the old structures, and for a few weeks the whole homestead looks gilded by its own ending. The Tetons keep their distance and their snow. Winter is already practicing up there. Down here the barn does what it has done every fall for a century: it stands in the gold and waits to be needed.\n\n© Wayne Heim",
+    "notes": "An old log barn in a golden autumn field, yellow cottonwoods around it and the Tetons behind — the set's gilded frame: Mormon Row at audit season, the homestead composed in fall color and permanence.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
@@ -2371,8 +2371,8 @@ export const galleryData = [
       "fine art landscape photography"
     ],
 
-    "story": "Buttermilk Falls. Idaho",
-    "notes": "",
+    "story": "A falls in winter is a negotiation — the water still falling, the ice taking its percentage at the edges, the whole cliff wearing white in the places the current can't defend. The name says kitchen; the reality is geology with the temperature dropped: snowfields above metering the flow, bare trees standing witness in their winter uniform. By deep winter the falls will be half architecture. By spring it will be all argument again. The cliff keeps the minutes in stone either way.\n\n© Wayne Heim",
+    "notes": "Buttermilk Falls cascading down a rocky cliff with snow at its edges and bare winter trees above — the set's winter-water composition: the falls and the ice photographed mid-negotiation.",
     "rating": 3,
     "galleries": [],
     "visibility": "show",
@@ -2409,8 +2409,8 @@ export const galleryData = [
       "traditional fine art photography",
       "fine art landscape photography"
     ],
-    "story": "Between Trees - T.A. Moulton Barn, a famous old barn, is viewed between or guarded by two cottonwood trees. The great golden protectors perfectly frame the scene and focus the attention on the barn and the Tetons in the background.",
-    "notes": "",
+    "story": "Two cottonwoods took up positions beside this barn a lifetime ago and never stood down — through every winter the Tetons sent down, they grew into the frame the whole valley now recognizes. Trees guard barns in practical ways: windbreak, shade, a reason for lightning to go elsewhere. But mostly they guard it the way old friends guard anything, by being visibly, stubbornly present on both sides. In autumn they do it in gold, which is showing off, and the barn — a century into the arrangement — appears to allow it.\n\n© Wayne Heim",
+    "notes": "The T.A. Moulton Barn between two golden cottonwoods in an autumn field, the Tetons behind — the set's guardians composition: the famous barn flanked by its protectors in fall color, natural framing grown, not built.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
@@ -2448,8 +2448,8 @@ export const galleryData = [
       "traditional fine art photography",
       "fine art landscape photography"
     ],
-    "story": "Wyoming Road - lonely road across Wyoming with the Grand Tetons in background.",
-    "notes": "",
+    "story": "A dirt road toward the Tetons is a sentence the valley keeps writing — sagebrush for margins, the range for the period at the end. In black and white the road reads as pure intention: somebody decided this track goes there, and generations of wheels have seconded the motion. Roads out here don't conquer distance; they negotiate with it daily, washboard by washboard. The mountains at the end of this one have watched every vehicle America invented come up this track, and the track is still dirt, which tells you who's winning.\n\n© Wayne Heim",
+    "notes": "A black-and-white dirt road running through sagebrush grassland toward the Teton range — the set's intention composition: the track as a written line, the mountains as its punctuation.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2484,8 +2484,8 @@ export const galleryData = [
       "traditional fine art photography",
       "fine art landscape photography"
     ],
-    "story": "Wyoming road with mountains in background",
-    "notes": "",
+    "story": "The color version of the same old story: a gravel road, golden grass, and the range standing at the end of the drive like it's expecting you. Country roads in this valley were laid out by need, not survey — they wander where the ground allows and arrive where the work is, and their beauty is a side effect nobody budgeted for. Drive it slow and the Tetons grow at the rate mountains prefer: almost imperceptibly, then all at once. The road has been making that introduction for a century of arrivals.\n\n© Wayne Heim",
+    "notes": "A gravel country road through golden grass plains toward the Tetons, in color — the set's arrival composition: the range growing at driving speed, the introduction the road has made for a hundred years.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2519,8 +2519,8 @@ export const galleryData = [
       "fine art landscape photography"
     ],
 
-    "story": "Western sky candy/ clouds over golden prairie.",
-    "notes": "",
+    "story": "Some afternoons the prairie is just the auditorium — the show is overhead, cumulus building their white architecture over the gold grass, each cloud a slow demolition and construction project at once. This is the sky that taught the West its sense of proportion: enormous, temporary, and completely unconcerned with witnesses. The grass keeps its head down and its color up. Between the gold below and the white above, the horizon's thin line of trees does the only standing still in the whole arrangement.\n\n© Wayne Heim",
+    "notes": "Dramatic white clouds building over a golden Utah prairie — the set's sky-first composition: the grass as auditorium, the cumulus as the show, proportion taught by weather.",
     "rating": 3,
     "galleries": [],
     "visibility": "show",
@@ -2560,8 +2560,8 @@ export const galleryData = [
       "fine art landscape photography"
     ],
 
-    "story": "Black and white textures of Bryce Canyon.",
-    "notes": "",
+    "story": "Bryce isn't a canyon so much as a crowd — thousands of hoodoos standing in their amphitheaters like a petrified audience waiting for a performance that ended sixty million years ago. In black and white the famous color steps aside and the sculpture takes over: every spire a study in what frost does to stone given enough winters, which at this altitude is all of them. The clouds above wear the same textures as the cliffs below, sky and stone quoting each other. Erosion is the sculptor here, and it works exclusively in subtraction.\n\n© Wayne Heim",
+    "notes": "Bryce Canyon's hoodoos and layered cliffs in black and white under a textured sky — the set's sculpture study: color dismissed so the carving shows, frost's subtraction work at full scale.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2598,8 +2598,8 @@ export const galleryData = [
       "fine art landscape photography"
     ],
 
-    "story": "Wyoming highway life.",
-    "notes": "",
+    "story": "A highway at dusk is the West's honest self-portrait — two lanes of intention drawn across a country that was old when roads were rumors, the sky spending its gold on travelers and sagebrush alike. Everybody on this road is between: between towns, between weathers, between the life behind and the one the odometer is arguing for. The desert doesn't care and the mountains don't hurry it. The road just keeps its one promise, which is continuation, delivered mile by mile under a sky doing the day's last paperwork.\n\n© Wayne Heim",
+    "notes": "A desert highway running to the horizon under a vast dusk sky of golden-lit clouds — the set's continuation composition: two lanes of intention across old country, the road's one promise kept in light.",
     "rating": 3,
     "galleries": [],
     "visibility": "show",
@@ -2635,8 +2635,8 @@ export const galleryData = [
       "traditional fine art photography",
       "fine art landscape photography"
     ],
-    "story": "\"Perseverance\" Old gnarled tree survives in Wyoming landscape.",
-    "notes": "",
+    "story": "A juniper's biography is written in its posture — every drought year a tighter twist, every good year refused as a rumor, the whole trunk a record of negotiations with a desert that offered almost nothing and kept its word. It leans because leaning worked. It's gnarled because straight was tried by others, briefly. In black and white the tree reads as pure argument: life, insisting, in a place that keeps filing objections. The rock around it is older and the sky is busier, but neither of them is the subject. Perseverance is.\n\n© Wayne Heim",
+    "notes": "An old gnarled juniper leaning on rocky desert ground under a dramatic sky, black and white — the set's argument portrait: one tree's whole negotiation with almost-nothing, posture as biography.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2670,8 +2670,8 @@ export const galleryData = [
       "traditional fine art photography",
       "fine art landscape photography"
     ],
-    "story": "Over the Hill - shot of a road going over a hill in western states.",
-    "notes": "",
+    "story": "Every road out here keeps one hill like this — the rise that hides the answer, the crest where the whole next valley is either promise or more of the same. In black and white it's the oldest question in travel photography and in travel: what's over it. The road doesn't tease; it simply declines to say, which is the desert's way generally. Engines downshift, passengers look up from whatever year they were in, and for three seconds the future is genuinely unwritten. Then the crest, the answer, and the next hill already loading.\n\n© Wayne Heim",
+    "notes": "A paved road curving up over a rocky desert hill in black and white, sparse trees at the crest — the set's question composition: the rise that hides the answer, anticipation engineered in asphalt and stone.",
     "rating": 3,
     "galleries": [],
     "visibility": "show",
@@ -2705,8 +2705,8 @@ export const galleryData = [
       "traditional fine art photography",
       "fine art landscape photography"
     ],
-    "story": "Erosion 2 - the eroded landscape of Utah",
-    "notes": "",
+    "story": "Badlands are the landscape with its guard down — no soil worth the name, no vegetation to soften the testimony, just the strata stacked in their colors and the rain taking them apart grain by grain in public. Every layer in these mesas was once a seafloor, a floodplain, a world's whole era, now filed in stone and being re-read by weather at the rate of an inch a century. The clouds look dramatic and are, comparatively, nothing: they change hourly. The mesas change at the speed of honesty.\n\n© Wayne Heim",
+    "notes": "Eroded layered mesas in Utah's desert badlands under a dramatic sky, in color — the set's exposed-strata composition: whole eras filed in stone, weather re-reading them an inch a century.",
     "rating": 3,
     "galleries": [],
     "visibility": "show",
@@ -2741,8 +2741,8 @@ export const galleryData = [
       "traditional fine art photography",
       "fine art landscape photography"
     ],
-    "story": "Looking Up, black and white photo of mountain face looking towards the top.",
-    "notes": "",
+    "story": "From the base, a rock face stops being scenery and becomes a verdict — smooth, grooved, and entirely indifferent to the vertebrate standing under it with an opinion about scale. The groove down its center is water's signature, the one autograph this wall gives, written a storm at a time over uncounted centuries. Looking up is the correct posture and the humbling one: the neck learns what the eye keeps forgetting, that most of the world is not arranged at human height. The sky at the top is the face's only frame.\n\n© Wayne Heim",
+    "notes": "Looking up a massive smooth rock face with a single vertical groove, black and white, sky above — the set's verdict composition: scale administered at neck angle, water's one signature down the stone.",
     "rating": 2,
     "galleries": [],
     "visibility": "show",
@@ -2779,8 +2779,8 @@ export const galleryData = [
       "traditional fine art photography",
       "fine art landscape photography"
     ],
-    "story": "Three Peaks poke head up in desolate landscape, black and white photograph",
-    "notes": "",
+    "story": "Three peaks in an empty desert read less like geology than like a meeting — the country's elders in session above the sagebrush, deciding nothing in particular at the speed of stone. Desolation is the curating principle here: with everything extraneous eroded away, what's left is form, spacing, and the long shadows of seniority. The clouds have been attending these sessions for millions of years and still take the minutes. The sagebrush in front is the public gallery: gray, patient, and not expecting a decision.\n\n© Wayne Heim",
+    "notes": "Three tall rock peaks rising from a desolate Utah desert, sagebrush in front and dramatic clouds above, in black and white — the set's council composition: form and spacing with everything extraneous eroded away.",
     "rating": 3,
     "galleries": [],
     "visibility": "show",
@@ -2815,8 +2815,8 @@ export const galleryData = [
       "traditional fine art photography",
       "fine art landscape photography"
     ],
-    "story": "Test of Time --old roots of a tree are all that is left.",
-    "notes": "",
+    "story": "Roots are the part of a tree built to be believed without being seen — and here they are, exposed, the hidden half of a life now doing the standing for the whole. The tree is gone to weather and wind; the roots remain, gnarled into a knot so dense it reads as sculpture, holding the exact shape of their old arguments with rock and drought. A test of time isn't passed by surviving unchanged. It's passed by still being legible. By that standard this root mass is fluent.\n\n© Wayne Heim",
+    "notes": "Old weathered tree roots on rocky desert ground, rock formations behind, in black and white — the set's legibility study: the hidden half of a tree outlasting the tree, still fluent in drought and stone.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
@@ -2850,8 +2850,8 @@ export const galleryData = [
       "traditional fine art photography",
       "fine art landscape photography"
     ],
-    "story": "Double Arches- view of two of the arches in Arches National Park in Utah.",
-    "notes": "",
+    "story": "Double Arch is erosion's masterpiece of timing — two spans carved from one fin of sandstone, sharing a wall, both still holding, the desert's equivalent of a chord. Standing under it, the scale stops being a number: the openings frame whole skies, and the stone overhead weighs more than most buildings while behaving, so far, like it intends to stay. Every arch is a collapse in progress at a pace geology finds reasonable. This one is in its long prime, twin windows open on the blue, the fin still thick enough to argue with gravity and win.\n\n© Wayne Heim",
+    "notes": "Double Arch in Arches National Park — two massive red sandstone spans sharing one wall, framing blue sky — the set's chord composition: erosion's timing at its most generous, twin windows in the stone.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2885,8 +2885,8 @@ export const galleryData = [
       "traditional fine art photography",
       "fine art landscape photography"
     ],
-    "story": "Sun is setting over the vast landscape of Utah.",
-    "notes": "",
+    "story": "Sunset in the desert is a redistribution — the day's heat handed back to the sky in orange and gold, the red rock doubling its color as if the light were a matching grant. The dark clouds aren't a threat here; they're the contrast the evening ordered, the frame's way of making the light legible. Formations that stood in flat noon glare become, at this hour, a skyline with intentions. Then the grant expires, the rock goes back to being merely enormous, and the desert starts its night shift in the cold.\n\n© Wayne Heim",
+    "notes": "The sun setting over Arches' red rock formations, orange and gold breaking through dark clouds — the set's redistribution frame: the day's heat handed back to the sky, the stone doubling its color while the grant lasts.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2921,8 +2921,8 @@ export const galleryData = [
       "traditional fine art photography",
       "fine art landscape photography"
     ],
-    "story": "Sunset in Arches. Sun is setting behind rock formations in Arches National Park, Utah.",
-    "notes": "",
+    "story": "Backlit, the spires stop being rock and become punctuation — tall exclamations the desert sets against the evening sky, each one a fin of sandstone that erosion hasn't finished arguing with. The sun going down behind them is the oldest stage lighting in the world, and it still works: edges lit, faces dark, the whole formation reduced to silhouette and intention. In an hour they'll be stars'-worth of black against black. For now they hold the horizon the way a fence holds a line — visibly, and on behalf of everything behind them.\n\n© Wayne Heim",
+    "notes": "Tall red rock spires backlit by sunset in Arches National Park, orange sky and dark clouds above — the set's punctuation frame: the formations reduced to silhouette and intention at the day's last lighting.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2959,8 +2959,8 @@ export const galleryData = [
       "fine art landscape photography"
     ],
 
-    "story": "Canyon lands. Utah.",
-    "notes": "",
+    "story": "Canyonlands is where the West stops posing and just extends — layer behind layer of carved country, mesas standing in their own distance, the whole composition repeating at scales the eye has to keep re-learning. 'Texture' is the modest word for it: every surface here is a record — of seas, of rivers, of the patient vandalism of weather — and there is no edge to the record in any direction. Stand at the rim and the land doesn't offer a subject. It offers a census. The count takes the rest of the day.\n\n© Wayne Heim",
+    "notes": "Vast layered Canyonlands — red rock mesas and canyons repeating to distant mountains — the set's census composition: texture at continental scale, every surface a record, no edge to it in any direction.",
     "rating": 2,
     "galleries": [],
     "visibility": "show",
@@ -2993,8 +2993,8 @@ export const galleryData = [
       "traditional fine art photography",
       "fine art landscape photography"
     ],
-    "story": "Sunset at Canyon Lands National Park in Utah.",
-    "notes": "",
+    "story": "A canyon at sunset is two landscapes negotiating the handover — the day shift of red cliffs and hard shadow clocking out, the evening's gold coming through the clouds in installments. From the rim, the scale plays its last trick of the day: a country big enough to hold its own weather systems reduced, by distance and light, to a single held breath. The scrub in front will be frost by morning. The cliffs will be whatever they've been for a hundred million years. The light, as always, is the only temporary thing present.\n\n© Wayne Heim",
+    "notes": "Sunset over Canyonlands — golden light breaking through dramatic clouds above red cliffs — the set's handover frame: two landscapes negotiating, the light the only temporary thing present.",
     "rating": 3,
     "galleries": [],
     "visibility": "show",
@@ -3032,8 +3032,8 @@ export const galleryData = [
       "traditional fine art photography",
       "fine art landscape photography"
     ],
-    "story": "Rutted road leads to the mountains in the background in Wyoming.",
-    "notes": "",
+    "story": "A rutted back road is a promise with conditions — it leads to the mountains, yes, but at the road's own pace, through meadow and sagebrush, with the tracks of everybody who trusted it before you pressed into the dirt as references. Roads like this are how the West is actually entered: not through the postcard gate, but up a working track where the forest thickens, the air changes, and the peaks stop being scenery and start being weather. The ruts say the trip is survivable. They make no other representations.\n\n© Wayne Heim",
+    "notes": "A rutted dirt road leading through a Wyoming meadow toward evergreen forest and snow-dusted mountains — the set's working-entrance composition: the West entered up a track, the peaks ahead graduating from scenery to weather.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",

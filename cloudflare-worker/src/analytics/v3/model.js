@@ -51,6 +51,7 @@ const V3_INTERNAL_IPS = new Set(['184.56.48.57']);
 const V3_EXCLUDED_IPV4_PREFIXES = Object.freeze(['205.169.39.']);
 
 const AUTOMATION_UA_PATTERN = /bot|spider|crawler|headless|python|curl|wget|scrapy|httpclient|axios|node-fetch|okhttp/i;
+const GOOGLE_SCREENSHOT_REFERRER_PATTERN = /(?:^|\.)screenshot\.corp\.google\.com$/i;
 const easternDayFormatter = new Intl.DateTimeFormat('en-CA', {
   timeZone: 'America/New_York', year: 'numeric', month: '2-digit', day: '2-digit'
 });
@@ -94,9 +95,17 @@ export function getV3OimDomain(row) {
     : null;
 }
 
-export function getV3ActionLabel(type) {
+export function getV3ActionLabel(type, sourceLayer = null) {
+  if (type === 'order_clicked') {
+    return ({
+      pricing_main_button_v1: 'Pricing opened - main button',
+      pricing_zoom_summary_v1: 'Pricing opened - zoom summary',
+      pricing_more_info_summary_v1: 'Pricing opened - More Info summary',
+      pricing_story_button_v1: 'Pricing opened - Picture Show'
+    })[String(sourceLayer || '')] || 'Pricing opened - legacy/unknown source';
+  }
   return ({
-    order_clicked: 'Pricing opened', order_submitted: 'Order choice clicked (legacy)',
+    order_submitted: 'Order choice clicked (legacy)',
     order_smugmug_clicked: 'Order clicked — SmugMug',
     order_email_clicked: 'Order clicked — email',
     native_cart_add: 'Added to cart', native_cart_view: 'Viewed cart',
@@ -151,6 +160,17 @@ export function getV3DeviceLabel(userAgent) {
   return 'Other';
 }
 
+export function isV3GoogleScreenshotAutomation(row) {
+  return [row?.entry_referrer, row?.document_referrer, row?.referer].some((value) => {
+    if (!value) return false;
+    try {
+      return GOOGLE_SCREENSHOT_REFERRER_PATTERN.test(new URL(String(value)).hostname);
+    } catch {
+      return /screenshot\.corp\.google\.com/i.test(String(value));
+    }
+  });
+}
+
 export function getV3ExpeditionActionLabel(pagePath, eventType) {
   const path = normalizeV3Path(pagePath);
   const prefix = '/Other/Expeditions/';
@@ -190,6 +210,7 @@ export function isV3CoreEvent(row) {
     && !V3_EXCLUDED_IPV4_PREFIXES.some((prefix) => sourceIp.startsWith(prefix))
     && !V3_DATACENTER_ASNS.includes(Number(row.cf_asn))
     && String(row.country || '').toUpperCase() !== 'T1'
+    && !isV3GoogleScreenshotAutomation(row)
     && !AUTOMATION_UA_PATTERN.test(String(row.ua || '')));
 }
 
@@ -207,6 +228,31 @@ export function buildV3RollupBatch(rows) {
   let accepted = 0;
   let lastRawEventId = 0;
   let lastEventTs = null;
+  const screenshotSessionIds = new Set();
+  const screenshotVisitorIds = new Set();
+  const recordedMerchantSessionDays = new Set();
+  const merchantActionLabels = {
+    order_clicked: 'Pricing opened',
+    native_cart_add: 'Added to cart',
+    native_cart_view: 'Viewed cart',
+    native_checkout_start: 'Started checkout',
+    native_checkout_quote: 'Calculated final total',
+    native_payment_start: 'Started payment',
+    native_order_complete: 'Order completed'
+  };
+  const incrementDimension = (day, dimension, label) => {
+    if (day && label) addCount(dimensions, `${day}\u0000${dimension}\u0000${label}`);
+  };
+
+  // Google screenshot/commerce inspection can navigate through several pages
+  // with a normal Chrome UA. Exclude the whole batch-local cohort when any row
+  // exposes its definitive screenshot.corp.google.com referrer, including the
+  // internal-navigation rows that preceded the marked page.
+  for (const row of rows) {
+    if (!isV3GoogleScreenshotAutomation(row)) continue;
+    if (row?.session_id) screenshotSessionIds.add(row.session_id);
+    if (row?.visitor_id) screenshotVisitorIds.add(row.visitor_id);
+  }
 
   for (const row of rows) {
     const rawId = Number(row?.id || 0);
@@ -214,9 +260,24 @@ export function buildV3RollupBatch(rows) {
       lastRawEventId = rawId;
       lastEventTs = row?.ts || lastEventTs;
     }
-    if (!isV3CoreEvent(row)) continue;
     const day = easternDay(row.ts);
     if (!day) continue;
+    const isMerchantInspection = screenshotSessionIds.has(row?.session_id)
+      || screenshotVisitorIds.has(row?.visitor_id);
+    if (isMerchantInspection) {
+      const sessionDayKey = `${day}\u0000${row.session_id || row.visitor_id}`;
+      if (!recordedMerchantSessionDays.has(sessionDayKey)) {
+        recordedMerchantSessionDays.add(sessionDayKey);
+        incrementDimension(day, 'merchant_inspection_session', 'Google Merchant review / validation');
+        incrementDimension(day, 'merchant_inspection_location', getV3GeoLabel(row) || 'Unknown location');
+      }
+      incrementDimension(day, 'merchant_inspection_action', merchantActionLabels[row.event_type]);
+      if (row.event_type === 'order_clicked') {
+        incrementDimension(day, 'merchant_inspection_product', normalizeV3Path(row.page) || row.target_id || 'Unknown product');
+      }
+      continue;
+    }
+    if (!isV3CoreEvent(row)) continue;
     accepted += 1;
     const metric = daily.get(day) || { day, pageViews: 0, imageViews: 0, pricingOpens: 0, orderSubmits: 0, smugmugClicks: 0, emailClicks: 0, coreEvents: 0 };
     metric.coreEvents += 1;
@@ -231,11 +292,14 @@ export function buildV3RollupBatch(rows) {
     const engaged = V3_ENGAGEMENT_EVENT_TYPES.has(row.event_type) ? 1 : 0;
     const sessionKey = `${day}\u0000${row.session_id}`;
     const session = sessions.get(sessionKey) || {
-      day, sessionId: row.session_id, visitorId: row.visitor_id, engaged: 0,
+      day, sessionId: row.session_id, visitorId: row.visitor_id, visitorStatus: null, engaged: 0,
       landingPage: null, entrySource: null, visitorGeo: null, imageGeo: null,
       entryIsImageFallback: 0, pageViewCount: 0, siteDevice: null, imageDevice: null,
       oimDomain: null
     };
+    if (!session.visitorStatus && ['new', 'returning'].includes(row.visitor_status)) {
+      session.visitorStatus = row.visitor_status;
+    }
     session.engaged = Math.max(session.engaged, engaged);
     if (row.event_type === 'page_view') {
       session.pageViewCount += 1;
@@ -262,9 +326,8 @@ export function buildV3RollupBatch(rows) {
     sessions.set(sessionKey, session);
     visitors.add(`${day}\u0000${row.visitor_id}`);
 
-    const incrementDimension = (dimension, label) => addCount(dimensions, `${day}\u0000${dimension}\u0000${label}`);
     if (row.event_type === 'page_view') {
-      incrementDimension('page', normalizeV3Path(row.page) || 'Unknown page');
+      incrementDimension(day, 'page', normalizeV3Path(row.page) || 'Unknown page');
     }
     if (['chapter_view', 'order_clicked', 'order_smugmug_clicked', 'order_email_clicked'].includes(row.event_type)) {
       const imageId = row.target_id || 'Unknown image';
@@ -278,19 +341,19 @@ export function buildV3RollupBatch(rows) {
       images.set(imageKey, image);
     }
     if (row.event_type === 'chapter_view') {
-      incrementDimension('image_geo_views', getV3GeoLabel(row) || 'Unknown location');
+      incrementDimension(day, 'image_geo_views', getV3GeoLabel(row) || 'Unknown location');
       const imageId = row.target_id || 'Unknown image';
       const country = String(row.country || '').trim().toUpperCase();
       const region = String(row.region || '').trim();
       const city = String(row.city || '').trim();
       addCount(imageGeography, `${day}\u0000${imageId}\u0000${country}\u0000${region}\u0000${city}`);
     }
-    const action = getV3ActionLabel(row.event_type);
-    if (action) incrementDimension('action', action);
+    const action = getV3ActionLabel(row.event_type, row.source_layer);
+    if (action) incrementDimension(day, 'action', action);
     const expeditionAction = getV3ExpeditionActionLabel(row.page, row.event_type);
-    if (expeditionAction) incrementDimension('expedition_action', expeditionAction);
+    if (expeditionAction) incrementDimension(day, 'expedition_action', expeditionAction);
     const actionGroup = getV3ActionGroup(row.event_type);
-    if (actionGroup) incrementDimension('action_group', actionGroup);
+    if (actionGroup) incrementDimension(day, 'action_group', actionGroup);
   }
 
   const split = (key) => key.split('\u0000');
@@ -377,6 +440,31 @@ export function summarizeV3Rollup(batch, label = 'Archive sample') {
   })();
   const cartFunnelLabels = ['Added to cart', 'Viewed cart', 'Started checkout', 'Calculated final total', 'Started payment', 'Order completed'];
   const actionCounts = new Map(top('action', Number.MAX_SAFE_INTEGER).map((row) => [row.label, row.count]));
+  const visitorMixByDay = new Map();
+  batch.sessions.forEach((row) => {
+    const dayVisitors = visitorMixByDay.get(row.day) || new Map();
+    const visitor = dayVisitors.get(row.visitorId) || { sawNew: false, sawReturning: false };
+    visitor.sawNew ||= row.visitorStatus === 'new';
+    visitor.sawReturning ||= row.visitorStatus === 'returning';
+    dayVisitors.set(row.visitorId, visitor);
+    visitorMixByDay.set(row.day, dayVisitors);
+  });
+  const classifyVisitorMix = (visitors) => {
+    const result = { newVisitors: 0, returningVisitors: 0, unknownVisitors: 0 };
+    visitors.forEach((visitor) => {
+      if (visitor.sawNew) result.newVisitors += 1;
+      else if (visitor.sawReturning) result.returningVisitors += 1;
+      else result.unknownVisitors += 1;
+    });
+    return result;
+  };
+  const periodVisitors = new Map();
+  visitorMixByDay.forEach((dayVisitors) => dayVisitors.forEach((visitor, visitorId) => {
+    const periodVisitor = periodVisitors.get(visitorId) || { sawNew: false, sawReturning: false };
+    periodVisitor.sawNew ||= visitor.sawNew;
+    periodVisitor.sawReturning ||= visitor.sawReturning;
+    periodVisitors.set(visitorId, periodVisitor);
+  }));
   return {
     window: { key: 'archive', label },
     state: { lastRawEventId: batch.lastRawEventId, lastEventTs: batch.lastEventTs },
@@ -419,6 +507,11 @@ export function summarizeV3Rollup(batch, label = 'Archive sample') {
         || (b.pricingOpens - a.pricingOpens) || a.imageId.localeCompare(b.imageId));
     })(),
     entryPages: topSessionField('landingPage', 25), entryNavigation, oimDomainFunnel,
+    visitorMix: {
+      ...classifyVisitorMix(periodVisitors),
+      daily: [...visitorMixByDay].sort((a, b) => b[0].localeCompare(a[0]))
+        .map(([day, visitors]) => ({ day, ...classifyVisitorMix(visitors) }))
+    },
     acquisition: topSessionField('entrySource', 10),
     visitorGeography: topDistinctVisitors((row) => row.visitorGeo || row.imageGeo, 20),
     siteDevices: topDistinctVisitors('siteDevice', 5, (row) => Boolean(row.siteDevice)),

@@ -880,9 +880,22 @@ const jsonLdScripts = [
               vid = '';
             }
           }
+          var hadVisitorId = !!vid;
           if (!vid) {
             vid = randomId();
           }
+
+          var visitorStatus = readCookie('k4_visitor_status');
+          if (!visitorStatus && !rotatedSession) {
+            visitorStatus = sessionStorage.getItem('k4_visitor_status');
+          }
+          if (visitorStatus !== 'new' && visitorStatus !== 'returning') {
+            visitorStatus = hadVisitorId ? 'returning' : 'new';
+          }
+          if (rotatedSession && sessionExpired) {
+            visitorStatus = 'returning';
+          }
+          sessionStorage.setItem('k4_visitor_status', visitorStatus);
 
           if (vid) {
             try {
@@ -893,6 +906,7 @@ const jsonLdScripts = [
           if (sid) {
             document.cookie = 'k4_sid=' + encodeURIComponent(sid) + '; Path=/; Max-Age=' + sessionTimeoutSeconds + '; SameSite=Lax; Secure' + domainAttr;
             document.cookie = 'k4_session_last_activity=' + encodeURIComponent(String(now)) + '; Path=/; Max-Age=' + sessionTimeoutSeconds + '; SameSite=Lax; Secure' + domainAttr;
+            document.cookie = 'k4_visitor_status=' + encodeURIComponent(visitorStatus) + '; Path=/; Max-Age=' + sessionTimeoutSeconds + '; SameSite=Lax; Secure' + domainAttr;
           }
           if (vid) {
             document.cookie = 'k4_vid=' + encodeURIComponent(vid) + '; Path=/; Max-Age=31536000; SameSite=Lax; Secure' + domainAttr;

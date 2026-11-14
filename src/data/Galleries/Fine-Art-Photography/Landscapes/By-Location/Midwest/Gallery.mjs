@@ -51,8 +51,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography in fine art. A testament to midwest landscape photography in fine art. © Wayne Heim",
-    "notes": "",
+    "story": "Winter, seen from underneath: the branches go up bare and snow-dusted and cross each other against the sky like the year's scaffolding left standing. A few dead leaves refuse to leave, brown flags on the rigging. This is the Midwest winter's honest portrait — no color worth naming, structure everywhere, and a bright sky that promises nothing about warmth. Lie back in the snow long enough and the pattern stops being trees and starts being the shape of the season itself.\n\n© Wayne Heim",
+    "notes": "Looking straight up through snow-dusted bare branches toward a bright winter sky — the set's most graphic frame: the canopy as pure structure, with a few stubborn dead leaves for color. It's the Midwest winter reduced to its architecture.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -91,8 +91,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Snowy Bend, Road along the Chagrin River in Gates Mills, Ohio Heavy snow is falling  ©Wayne Heim",
-    "notes": "",
+    "story": "The road bends along the Chagrin River through Gates Mills while the snow comes down hard enough to erase the distance — guardrail, river, trees all going soft at the edges. Driving it on a day like this is a local sacrament: slow, quiet, the wipers keeping time. In black and white the bend is all rhythm — curve answering curve, the river's and the road's, both heading somewhere neither will show you yet.\n\n© Wayne Heim",
+    "notes": "A snow-covered road curving along the Chagrin River in Gates Mills, Ohio, in heavy falling snow, black and white — the set's winter-road portrait: two curves, river and road, dissolving into the same weather.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -131,8 +131,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "\"Middle Falls'. Black and White photo of the Middle Waterfalls at Letchworth State Park. ©Wayne Heim",
-    "notes": "",
+    "story": "The Genesee comes over the curved cliff at Letchworth in one wide white pour and throws its mist up like the river is breathing out. The gorge here is the East's own canyon, and the Middle Falls are its middle act — not the tallest drop in the park, just the most complete: cliff, water, mist, forest, all in their places. In black and white the falls go timeless. The river was carving this before the park had a name and will be at it long after.\n\n© Wayne Heim",
+    "notes": "The Middle Falls at Letchworth State Park pouring over a curved cliff into rising mist, in black and white — the set's grandest waterfall portrait: the Genesee River's power rendered as pure tone and volume.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -173,8 +173,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Fine art landscape photography of Lanterman's Mill in the Mill Creek Metroparks of Youngstown, Ohio.",
-    "notes": "",
+    "story": "The boardwalk goes down through the trees the way boardwalks in Mill Creek Park always have — built so that a Sunday walk could feel like an expedition. Below it waits Lanterman's Mill, and the whole descent is the approach: railings, shade, the sound of the creek arriving before the building does. In black and white the walkway is a piece of joinery in a green world gone gray — carpentry as hospitality, a century and a half of it.\n\n© Wayne Heim",
+    "notes": "A wooden boardwalk descending through dense trees toward Lanterman's Mill in Youngstown's Mill Creek Metroparks, in black and white — the set's approach shot: the built path as an invitation, texture and shade in every board.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -214,8 +214,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Fine art landscape photography of Lanterman's Mill in the Mill Creek Metroparks of Youngstown, Ohio.",
-    "notes": "",
+    "story": "The mill stands at the creek with its own small falls at its feet — stone and timber, built in the 1840s to grind the valley's grain and still standing in the valley's green like it never retired. Mills outlast their work; they become the place's memory with a roof on. In black and white this one is all weight and texture: stone courses, wooden siding, ferns in the shade, and the water still reporting for duty at the base, as it has since before the Civil War.\n\n© Wayne Heim",
+    "notes": "Lanterman's Mill itself: a tall stone-and-wood mill building with a waterfall at its base, in black and white — the set's architectural anchor, 1840s industry composed like a portrait, stone and water in equal measure.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -256,8 +256,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Shadow Reflection -  tree reflection in water at sunset.©Wayne Heim",
-    "notes": "",
+    "story": "The tree stands bare against the last of the sunset — deep blue going down to a pink-orange seam — and the still water below it keeps the second copy. Reflections are the landscape's memory, held for as long as the wind stays off. This one holds: trunk, branches, and the day's final color, twice. The tree doesn't know it's being doubled. It just stands at the water's edge being a tree at the exact hour the sky signs off.\n\n© Wayne Heim",
+    "notes": "A bare tree silhouetted against a twilight sky and reflected in still water — the set's quietest composition: one tree, one reflection, and the sunset's last color band held in both.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -296,8 +296,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Two waterfalls in the Chagrin River seem to meet as the flow over the rocks. ©Wayne Heim",
-    "notes": "",
+    "story": "Two falls come down the Chagrin's ledges and arrive at the same water like tributaries of an argument — each with its own ledge, its own white churn, joining below without ceremony. Rivers do this everywhere and it still reads as an event: separate waters, one stream. The brown rock between them is the mediator. Stand here in spring and the meeting is a roar; in a dry month it's a negotiation. Either way, below this point there's only one river, and it has both their names in it.\n\n© Wayne Heim",
+    "notes": "Two waterfalls converging in the Chagrin River over brown rocky ledges — the set's only twin-falls composition: separate descents, one stream, the rock between them doing the composing.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -337,8 +337,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Rushing Rapids-  Berea Falls churning water of rapids  in black & White ©Wayne Heim",
-    "notes": "",
+    "story": "Berea Falls in full churn — the river comes over the wide ledge and lands already running, foam on foam, the pool below beaten white. This is the falls as engine rather than ornament: water doing work, loudly, in the middle of town. In black and white the churn is all contrast, the rapids' energy drawn in foam against dark rock. Bare trees and cliff stand over it like they've heard it all before. They have. It never repeats itself anyway.\n\n© Wayne Heim",
+    "notes": "Berea Falls churning over its wide ledge into a foaming pool, in black and white — the set's most energetic water: the falls as pure engine, foam and dark rock in maximum contrast.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -379,8 +379,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Out of the Rocks - tree appears to be growing out of the rocks on lake shore at unset.©Wayne Heim",
-    "notes": "",
+    "story": "The tree grows straight out of the lakeshore rocks, which is less a location than a decision — no soil worth mentioning, just root finding the cracks and the lake for weather. At sunset it stands in the orange glow like it's posing for its own perseverance lecture. Trees like this are the shore's punctuation: everything else here is water and stone, and this one vertical insists on the third element. The lake does what it wants around the roots. The tree does what it wants above them.\n\n© Wayne Heim",
+    "notes": "A tall bare tree growing directly out of lakeshore rocks at sunset, orange glow behind it — the set's emblem of persistence: one vertical of life in a composition of water and stone.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -420,8 +420,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
+    "story": "Autumn, dusk, and the falls under their stone arch bridge — the park at its most composed: water over rock, the bridge spanning it like the scene was designed rather than accumulated, the sky doing sunset colors over all of it. The bridge is a park-era promise, that scenery should have a frame and a way across. Below it the falls keep their older schedule. This is Berea at the hour when the day's last light and the river's white water split the composition between them.\n\n© Wayne Heim",
+    "notes": "Berea Falls flowing beneath a stone arch bridge in autumn at dusk, sunset sky above — the set's most composed waterfall: water, rock, and park-era stonework in one arrangement, with the day's last light for a finish.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -463,8 +463,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
+    "story": "The Black River comes over the West Falls ledges in Elyria in a wide white rush, the stone arch bridge standing over it, autumn trees closing the banks. Two falls anchor this town's Cascade Park, and the west one is the extrovert — broad, loud, framed by its bridge like a stage with the river for a performer. The sunset light does the theater lighting. The river does the rest, in volume, nightly, whether or not anyone's watching from the bridge.\n\n© Wayne Heim",
+    "notes": "The Black River's West Falls rushing beneath a stone arch bridge in autumn at sunset — the set's broadest falls-and-bridge composition: a working river-town waterfall with its stage built over it.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -502,8 +502,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "This image embodies midwest landscape photography, captured by Wayne Heim in his signature style. It reflects midwest landscape photography. © Wayne Heim",
-    "notes": "",
+    "story": "Same bridge, same ledges, winter's edit: snow on the rocks, the falls running dark and white between bare trees, the river keeping its route under a season that slows everything except water. Winter falls have a different sound — muffled banks, the churn somehow louder against the quiet. The arch stands over it all unchanged, the way park stonework does: built for summers, kept by every season. The moss holds its green under the snow like a rumor of April.\n\n© Wayne Heim",
+    "notes": "A winter waterfall beneath a stone arch bridge, snow dusting the mossy rocks — the set's seasonal twin to the autumn falls: the same composition rewritten by winter, water running through the quiet.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -541,8 +541,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
+    "story": "The path in winter is mud and snow negotiating — fallen leaves plastered down, patches of white hanging on in the shade, a big trunk standing in the middle like the walk's toll keeper. Nobody's on it. That's its season: the path as a promise the woods keep to spring, maintained by nobody, used by deer. Walk it now and your boots will file the report. The bare trees hold the sky up in pieces. The quiet does the rest of the work.\n\n© Wayne Heim",
+    "notes": "A muddy winter path winding through bare trees with patches of snow, a great trunk at its center — the set's most intimate woodland frame: the trail as a kept promise, in the season when nobody's using it.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -581,8 +581,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
+    "story": "The falls come over the mossy ledges into their pool in the Hocking Hills, the stone bridge standing above like the gorge's own balcony. This country is Ohio's old soul — sandstone worn into amphitheaters by water that started the work when the glaciers left. The pool takes the falls' landing and stills it. Ferns and moss take the ledges. The bridge takes the walkers. Everybody gets a level, and the water, as always, gets the final word as it leaves.\n\n© Wayne Heim",
+    "notes": "A waterfall cascading into a pool beneath a stone arch bridge in the Hocking Hills — the set's signature gorge composition: sandstone, moss, falling water, and the bridge that lets you stand inside the scene.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -621,8 +621,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
+    "story": "Winter decorates the grotto falls with a fringe of icicles — every ledge wearing them, the water still threading through its own ice at the base. A grotto like this is a room the sandstone built and the season furnishes: in summer it's shade and moss, in winter it's this, a chandelier of frozen drips with the stream whispering underneath. The bridge above is a rumor at the top of the frame. Down here the cold keeps the acoustics to itself.\n\n© Wayne Heim",
+    "notes": "An icicle-fringed waterfall cascading over layered ledges in a sandstone grotto — the set's most furnished winter frame: falling water wearing its own ice, in a rock room built by erosion.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -661,8 +661,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
+    "story": "The cliff face hangs its icicles in rows over the little stream — the freeze caught mid-drip, each icicle a moment the water was asked to hold. Layered rock, moss in the seams, the stream going about its business below the suspended animation. Icicles are the falls' winter handwriting: same water, slower pen. Give it a thaw and the whole page rewrites in an afternoon. Until then the cliff keeps its white fringe and the stream keeps the last word, liquid division.\n\n© Wayne Heim",
+    "notes": "A layered rock cliff hung with icicles above a small stream — the set's study in suspended water: the freeze as calligraphy over moss and sandstone, with the living stream below for contrast.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -702,8 +702,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "This image embodies midwest landscape photography, captured by Wayne Heim in his signature style. It reflects midwest landscape photography. © Wayne Heim",
-    "notes": "",
+    "story": "The sandstone wall stands over its pool and the pool gives it back — icicles, strata, the whole tall face doubled in water still enough to keep the reflection honest. Pools like this are the gorge's pause: everything upstream was falling and churning; here the water collects itself and does its one piece of calligraphy. The path at the side is where you stand to see it. The trees keep the light metered. Nothing in the frame is in a hurry, possibly for the first time in the whole set.\n\n© Wayne Heim",
+    "notes": "A tall icicled sandstone wall reflected in a perfectly still pool — the set's mirror composition: cliff and reflection sharing the frame equally, the gorge at its moment of complete calm.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -743,8 +743,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "This image embodies midwest landscape photography, captured by Wayne Heim in his signature style. It reflects midwest landscape photography. © Wayne Heim",
-    "notes": "",
+    "story": "The little stream comes down the gorge over moss-covered ledges, stepping from pool to pool, fallen logs lying across it like the woods' own bridges. Moss is the gorge's upholstery — it takes the hard sandstone and makes it soft enough to sit a season on. Everything here is damp and green and going slowly: water finding the low way, logs going back to soil, light arriving in the small change the canopy allows. The gorge keeps its own climate, cooler than the day outside it.\n\n© Wayne Heim",
+    "notes": "A small stream cascading over moss-covered ledges in a wooded gorge, fallen logs across the water — the set's greenest frame: the gorge as a furnished room, moss and water in every corner.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -784,8 +784,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "This image embodies midwest landscape photography, captured by Wayne Heim in his signature style. It reflects midwest landscape photography. © Wayne Heim",
-    "notes": "",
+    "story": "The stream threads between moss-covered boulders big as furniture, a little cascade doing the talking at the left. Boulders in a gorge are the cliff's children, down from the walls over the centuries and now administering the stream's route — the water goes where they allow, pool by pool. The logs across the top are the trees' contribution. Everything in this frame arrived by falling and stayed by being too heavy to leave, which, for a gorge, is the standard biography.\n\n© Wayne Heim",
+    "notes": "A stream running between moss-covered boulders in a gorge, a small cascade at its edge — the set's most tactile composition: water negotiating a room full of fallen rock, every surface green and wet.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -825,8 +825,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "This image embodies midwest landscape photography, captured by Wayne Heim in his signature style. It reflects midwest landscape photography. © Wayne Heim",
-    "notes": "",
+    "story": "The light comes through the tall trees in pieces and spends itself on the moss — boulders and rock formations upholstered green, the stream quiet among them. This is the gorge at its cathedral hour: verticals of trunk, filtered light, and everything below arranged like it was placed. Moss makes no sound and asks for none. The light does the moving, a slow pan across the green as the sun works its way over the canopy. Stand still long enough and the frame rearranges itself without you.\n\n© Wayne Heim",
+    "notes": "Moss-covered boulders in a stream beneath tall trees, light filtering through the canopy — the set's cathedral frame: filtered light and green stone composed like an interior, the quietest picture in the Midwest set.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -866,8 +866,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "This image embodies midwest landscape photography, captured by Wayne Heim in his signature style. It reflects midwest landscape photography. © Wayne Heim",
-    "notes": "",
+    "story": "The wide view of the Hocking country: a great moss-covered outcrop standing in the forest like the gorge's outer wall, the stream below it with its sandy bank, the trees filling every remaining inch. From here the Hills stop being rooms and become a country — rock, water, and woods at full scale, the sandstone cropping out wherever the land gets serious. The sandy bank is the stream's beach, and the outcrop is its castle. Ohio keeps this in its southeast like a held breath.\n\n© Wayne Heim",
+    "notes": "A wide view of a moss-covered rocky outcrop and forest with a stream and sandy bank below, in the Hocking Hills — the set's establishing shot: the gorge country at full breadth, rock and woods in their true proportions.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -907,8 +907,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography in fine art. A testament to midwest landscape photography in fine art. © Wayne Heim",
-    "notes": "",
+    "story": "The tall falls come down the mossy face in the dark of the grotto, icicles fringing the ledges it falls past — water falling beside its own frozen self. A grotto tall enough for this is a room with a waterfall for a wall: sound everywhere, light rationed, the stream at the base collecting the performance and carrying it off through the dark. The icicles applaud in silence, being ice. The falls don't need the applause. They've had the room for ten thousand years.\n\n© Wayne Heim",
+    "notes": "A tall waterfall cascading down a mossy rock face in a dark grotto, icicles on its ledges — the set's most dramatic vertical: falling water and frozen water sharing one cliff, in a rock chamber of real depth.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -947,8 +947,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Fine art painterly photography of light shining through the trees.",
-    "notes": "",
+    "story": "The sun comes through the tall trees in visible shafts and lays itself on the leaf-covered floor — the forest's one daily theatrical effect, free, unannounced, and over in an hour. The trunks stand in the light like columns holding the bright roof up. Leaf litter takes the illumination and gives back gold. Woods do this whenever canopy, season, and hour align, and it never once becomes ordinary. You just have to be standing in it, which is the whole ticket price.\n\n© Wayne Heim",
+    "notes": "Sunlight shafting through tall trees onto a leaf-covered forest floor — the set's most luminous woodland frame: light as the subject, trunks and leaf litter as its stage.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -987,8 +987,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
+    "story": "The tall fall makes its one long descent off the cliff into the still pool, ferns and moss softening the rocks it falls past. Height changes a waterfall's character: this one arrives with authority, having had time to become a column rather than a spill. The pool takes it standing, the way deep pools do, and sends it on as a quiet stream. The ferns lean in the spray's weather. Everything green here is green because this fall never stops providing.\n\n© Wayne Heim",
+    "notes": "A tall waterfall descending a rocky cliff into a still pool, ferns and moss at its sides — the set's purest single fall: one long drop, one quiet pool, and the green that permanent water buys.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1028,8 +1028,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
+    "story": "The falls come down the layered ledges in the grotto's dark, landing in their pool, with the trail crossing over the rock above — the walker gets the top of the scene, the water gets the bottom, and the grotto keeps both in one room. Layered sandstone, moss on every shelf, the light arriving like it's rationed by the rock. This is the gorge interior complete: architecture, plumbing, and a path for the audience. The audience is advised to stay for the whole performance. It's continuous.\n\n© Wayne Heim",
+    "notes": "A waterfall cascading over mossy layered ledges in a dark grotto into a still pool, a trail crossing above — the set's complete interior: falls, pool, rock architecture, and the walker's path in a single composition.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1071,8 +1071,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
+    "story": "The falls come down the layered ledges into their pool with icicles fringing every shelf — winter's version of the Hocking grotto, the water and its own ice sharing the descent. In black and white the cascade is all architecture: ledge, curtain, pool, fringe. The gorge holds the cold the way it holds everything, privately. Stand here and the loudest thing in Ohio is falling water arguing with its frozen self, politely, at volume.\n\n© Wayne Heim",
+    "notes": "A waterfall cascading over icicle-fringed ledges into a pool in the Hocking Hills, in black and white — the set's winter cascade in pure tone: ledge, curtain, and fringe composed without color's help.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1113,8 +1113,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
+    "story": "Two tiers of water, slowed by the long exposure to silk — the falls pouring over dark layered stone in the grotto's shade, arriving in the pool like something poured rather than dropped. Time does this to water in a photograph: the violence becomes a texture. The rock stays exactly as rough as it is, which is the composition's honesty — silk against sandstone, the brief against the permanent. The grotto keeps them both on display, in the dark, for whoever walks in.\n\n© Wayne Heim",
+    "notes": "A two-tier waterfall in silky long exposure over dark layered stone in a Hocking Hills grotto — the set's texture study: falling water rendered as silk against the gorge's roughest rock.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1156,8 +1156,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "This image embodies midwest landscape photography, captured by Wayne Heim in his signature style. It reflects midwest landscape photography. © Wayne Heim",
-    "notes": "",
+    "story": "The gorge narrows and the falls take the hint — one tall thread of water down the mossy face, silky in the long exposure, icicles gathered at the base where winter keeps its foothold into spring. A narrow fall has no width to hide in; it's all descent, a single white sentence down the rock's dark page. The gorge walls lean close enough to read it. The pool at the bottom underlines it and sends it on.\n\n© Wayne Heim",
+    "notes": "A tall waterfall in a narrow mossy gorge, silky water with icicles at its base — the set's most vertical Hocking frame: one thread of water, the whole height of the gorge to fall through.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1194,8 +1194,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography in fine art. A testament to midwest landscape photography in fine art. © Wayne Heim",
-    "notes": "",
+    "story": "The white barn stands alone in the wide field under a sky doing weather — bare trees along the horizon, nothing else claiming the land. A lone barn is a farm's punctuation: the sentence of the fields stops there, at the building that holds the tools, the hay, the whole operation's memory. White paint against a dramatic sky is the Midwest's oldest composition and it still works, because the sky never performs it the same way twice. The barn doesn't perform at all. It stands.\n\n© Wayne Heim",
+    "notes": "A white barn alone in a wide open field under a dramatic cloudy sky — the set's pastoral emblem: one building, one field, and a sky with enough weather in it for the whole composition.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1233,8 +1233,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Old red barn with storm approaching from behind. Painterly landscape photography.",
-    "notes": "",
+    "story": "The old red barn sits at the field's edge and the storm builds behind it — the classic arrangement, and the dangerous one: barns are what storms in this country aim at first, out of seniority. The green field is calm in the foreground light; the clouds are not calm at all. Every farmer reads this sky the same way, in one glance, and decides about the hay. The barn has survived every previous reading. Its red paint is faded by all of them.\n\n© Wayne Heim",
+    "notes": "An old red barn in a green field beneath building storm clouds — the set's weather drama: calm pasture in front, the storm arriving behind, and the barn standing in its long tradition of outlasting both.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1271,8 +1271,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "This image embodies midwest landscape photography, captured by Wayne Heim in his signature style. It reflects midwest landscape photography. © Wayne Heim",
-    "notes": "",
+    "story": "The storm clouds split and the light comes through the break in one bright seam — and down at the bottom of all that sky, a tiny windmill stands in silhouette, doing the frame's scale work. Skies this size are the Midwest's ocean view: weather arriving from a horizon flat enough to watch it come for an hour. The break in the clouds is the forecast changing its mind in public. The windmill, which has seen thousands of these, keeps its counsel and its bearings.\n\n© Wayne Heim",
+    "notes": "Dark storm clouds with a bright break of light, a tiny windmill silhouetted below — the set's sky composition: weather at full scale, with the smallest possible farm machinery for a signature.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1309,8 +1309,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "This image embodies midwest landscape photography, captured by Wayne Heim in his signature style. It reflects midwest landscape photography. © Wayne Heim",
-    "notes": "",
+    "story": "The rays come down through the storm cloud over the rolling fields and the cornfield in visible shafts — Vermont wearing its one dramatic effect, light with architecture. Farm country under crepuscular rays looks briefly like it's been chosen for something. The corn stands in rows under the performance, unimpressed, growing. The fields roll off green in every direction the frame allows. This is weather as theater with agriculture for an audience, and the audience's review is always the same: keep raining, but later.\n\n© Wayne Heim",
+    "notes": "Sun rays breaking through dark storm clouds over rolling farmland and a cornfield in Vermont — the set's most theatrical sky: crepuscular light over working fields, drama and agriculture in one frame.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1346,8 +1346,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography in fine art. A testament to midwest landscape photography in fine art. © Wayne Heim",
-    "notes": "",
+    "story": "The storm fills the sky with its dark and its one bright break, and in all of it, small as a punctuation mark, a bird crosses. Scale is the whole picture: the weather is enormous, the bird is a speck with wings, and the bird is the one doing the traveling on purpose. Birds cross storms the way they've crossed everything since there were birds — directly, at altitude, without commentary. The clouds will be weather somewhere else by evening. The bird will be wherever it was going.\n\n© Wayne Heim",
+    "notes": "Dark storm clouds with a bright break of light and one small bird in flight — the set's minimal composition: maximum sky, minimum subject, and the speck of life that makes the scale legible.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1382,8 +1382,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography in fine art. A testament to midwest landscape photography in fine art. © Wayne Heim",
-    "notes": "",
+    "story": "The clouds come over the green field in a gathering dark — the sky taking up most of the frame and most of the mood, the field reduced to a bright strip of not-yet. This is the hour before a storm in farm country, when the light goes strange and the birds go quiet and the green gets greener against the gray, as if the land were showing its best color before the rain edits it. Everything waits. The field is very good at waiting. The sky is not.\n\n© Wayne Heim",
+    "notes": "Dark storm clouds gathering over a green field, the sky dominating the frame — the set's anticipation piece: the hour before the storm, when the land's green brightens against the coming gray.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1420,8 +1420,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
+    "story": "Take the color out of a storm over an open field and what's left is pure intent: clouds in grays stacked like weather has weight, the field a pale strip underneath, the horizon the only straight line in the picture. Monochrome storms are honest — there's no sunset gold to romanticize them, just the machinery of rain being assembled overhead. The field waits in its light tone like a held breath. This is the Midwest sky in its working clothes.\n\n© Wayne Heim",
+    "notes": "Dark storm clouds over an open field in black and white — the set's tonal storm: weather as pure value, clouds stacked in grays over a pale field, no color to soften the forecast.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1459,8 +1459,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography in fine art. A testament to midwest landscape photography in fine art. © Wayne Heim",
-    "notes": "",
+    "story": "The clouds come in heavy over the wide green field, dark enough to change the afternoon's plans, the tree line holding the horizon like a fence against the sky. Heavy weather in the Midwest is a full-sky event — no mountains to break it, nowhere for it to hide, it arrives at the scale of the whole visible world. The field takes it the way fields take everything: flatly, entirely, and then green again after. The tree line will lose leaves to this one. It has more.\n\n© Wayne Heim",
+    "notes": "Dark storm clouds over a wide green field with a tree line — the set's full-width weather front: the storm arriving at the scale of the whole horizon, field and tree line braced beneath it.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1497,8 +1497,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography in fine art. A testament to midwest landscape photography in fine art. © Wayne Heim",
-    "notes": "",
+    "story": "Route 66 keeps its giants: a spaceman in a cowboy hat, holding his rocket, standing by the roadside like the future as imagined by a diner in 1965. The muffler men were built to stop cars, and this one still does — a fiberglass astronaut in western dress, which on Route 66 counts as a local. In black and white he goes oddly dignified: a monument to the road's great century, when the highway was the space program most Americans could drive to. He holds the rocket. The rocket holds still. Traffic holds its breath, then stops for pie.\n\n© Wayne Heim",
+    "notes": "A giant Route 66 spaceman statue in a cowboy hat holding a rocket, in black and white — the set's roadside-Americana portrait: the highway's fiberglass West meeting the space age, rendered with monument gravity.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1534,8 +1534,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography in fine art. A testament to midwest landscape photography in fine art. © Wayne Heim",
-    "notes": "",
+    "story": "Color gives the giant his uniform back — red vest, blue trousers, silver rocket, the cowboy hat in its proper improbable place. Against a blue sky he is pure roadside joy: somebody's business depended on this statue being impossible to drive past, and it still is. The color version is the postcard he was built for. Stand next to him and you're a child again by scale. The road provides the nostalgia; the giant provides the landmark. Both are still in business.\n\n© Wayne Heim",
+    "notes": "The Route 66 spaceman in full color — red vest, blue trousers, silver rocket, cowboy hat — the postcard companion to the monochrome portrait: roadside Americana in its intended paint.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1572,8 +1572,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography in fine art. A testament to midwest landscape photography in fine art. © Wayne Heim",
-    "notes": "",
+    "story": "The Arch takes the sunset the way it takes everything — as a silhouette with perfect posture. Six hundred thirty feet of stainless steel catenary, and at dusk it stops being engineering and becomes a drawing: one line against the gold, the skyline standing attendance below. St. Louis built it as a door to the West, and at this hour it looks like one — the day leaving through it. The river is a block away doing the same color. The city slows down to match.\n\n© Wayne Heim",
+    "notes": "The St. Louis Gateway Arch silhouetted against a golden sunset over the skyline — the set's icon portrait: engineering become calligraphy, the West's door at the day's exit hour.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1611,8 +1611,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "This image embodies midwest landscape photography, captured by Wayne Heim in his signature style. It reflects midwest landscape photography. © Wayne Heim",
-    "notes": "",
+    "story": "The walkway leads toward the Arch at sunset like the city laid a red carpet of steel and concrete — the bridge's own lines doing the pointing, the skyline and the great curve waiting at the end of them. A good approach is half of any monument: this one makes you arrive on foot, at walking pace, with the Arch growing on schedule. The sunset does the gilding. The walkway does the honors. All you have to do is keep walking toward the biggest curve in America.\n\n© Wayne Heim",
+    "notes": "A pedestrian bridge walkway at sunset leading toward the Gateway Arch and skyline — the set's approach composition: leading lines with a monument for a destination, the arrival engineered into the frame.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1652,8 +1652,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography in fine art. A testament to midwest landscape photography in fine art. © Wayne Heim",
-    "notes": "",
+    "story": "The same walk in black and white: the bridge's geometry goes pure, the sunset becomes a gradient, and the Arch at the end of it reads as what it also is — a mathematical curve wearing a city. Monochrome loves a monument; it strips the postcard off and leaves the drawing. The walkway leads, the skyline attends, the curve completes itself overhead. St. Louis's thesis statement, in grayscale: the West began here, and it began with a line drawn against the sky.\n\n© Wayne Heim",
+    "notes": "The bridge walkway to the Arch in black and white — the set's geometric rendering: walkway, skyline, and catenary curve as pure line and gradient, the monument as a drawing.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1691,8 +1691,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography in fine art. A testament to midwest landscape photography in fine art. © Wayne Heim",
-    "notes": "",
+    "story": "Straight down the walkway the sun and the Arch share the end of the bridge — the monument and the sunset in one sightline, the city arranged on both sides like a receiving line. Walking it, the Arch does the thing its designers promised: it grows from landmark to environment, until you're not looking at it, you're in it. The sun times its descent for the arrival. Cities rarely choreograph this well. St. Louis, on this bridge, at this hour, does.\n\n© Wayne Heim",
+    "notes": "A bridge walkway leading straight toward the sun and the Gateway Arch over the skyline — the set's most direct approach: monument and sunset sharing one vanishing point, the city in attendance.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1731,8 +1731,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography in fine art. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
+    "story": "Black and white takes the sun down to a white point and the Arch to a gray curve, and the walkway between them becomes a study in converging lines — the kind of frame that reminds you the Arch is a formula before it's a symbol. Eero Saarinen's curve, drawn in steel, drawn again in light on this bridge every clear evening. The skyline stands in tones. The sun performs without color. Nothing here needs the gold. The geometry was the gold all along.\n\n© Wayne Heim",
+    "notes": "The walkway, sun, and Arch in black and white — the set's formula portrait: converging lines and one perfect curve, the monument reduced to its mathematics and losing nothing.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1770,8 +1770,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "This image embodies midwest landscape photography, captured by Wayne Heim in his signature style. It reflects midwest landscape photography. © Wayne Heim",
-    "notes": "",
+    "story": "The sun sets directly behind the Arch at the end of the walkway, the skyline standing on both sides — the postcard alignment, the one the bridge was aimed at before the bridge knew it. When the sun threads the monument like this, the whole city becomes a sundial for about four minutes. People stop on the walkway. Traffic forgives. The Arch, which has been a door all day, becomes a frame with the day itself inside it, going.\n\n© Wayne Heim",
+    "notes": "The Gateway Arch silhouetted against the setting sun at the end of a bridge walkway, skyline on both sides — the set's alignment frame: sun, walkway, and monument in one axis for the day's last minutes.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1809,8 +1809,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography in fine art. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
+    "story": "Dusk gets the walkway to itself — the sun gone behind the Arch, the bridge gone dark, the city lights not yet fully sworn in. This is the approach at its moodiest: you're walking toward a silhouette now, the curve barely brighter than the sky behind it. The day-trippers have gone to dinner. The monument keeps its hours. Walking toward it in the near-dark, the Arch stops being a sight and becomes a direction — the way west feels at the end of the light.\n\n© Wayne Heim",
+    "notes": "A dark bridge walkway at dusk leading toward the Arch with the sun setting behind it — the set's moodiest approach: the monument as direction rather than sight, the city at the edge of its lights.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1849,8 +1849,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography in fine art. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
+    "story": "From across the river the whole thesis fits in one panorama: the Arch over the skyline, both silhouetted in the sunset, the Mississippi in the foreground doing its ancient commute. This is the view the river traffic gets — the gateway seen from the road that made the city necessary. A transmission tower stands at the left like the present tense signing the frame. The river brought everything here, including the reason for the Arch. It still flows through the composition, first, underneath.\n\n© Wayne Heim",
+    "notes": "The Gateway Arch and skyline silhouetted across the river at sunset, wide panorama — the set's establishing shot of St. Louis: monument, city, and the Mississippi in one composition, in that order of age.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1889,8 +1889,8 @@ export const galleryData = [
       "K4 Studios"
     ],
 
-    "story": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography in fine art. A testament to midwest landscape photography in fine art. © Wayne Heim",
-    "notes": "",
+    "story": "The sun burns gold behind the towers and the Arch takes the light like it was polished for the occasion — which, being stainless steel, it permanently is. Wide across the skyline, this is St. Louis at its most convinced: the curve, the towers, the river city's whole profile in one sunset chord. The set ends here, at the gateway, with the day going down in gold on the edge of the West — which is where the Midwest has always kept its door.\n\n© Wayne Heim",
+    "notes": "The Gateway Arch over the St. Louis skyline at sunset, the sun burning gold behind the towers — the set's closing panorama: the gateway in full gold, the Midwest's door at the end of the light.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",

@@ -19,7 +19,11 @@
     "node_modules",
     "dist",
     ".astro",
-    "_archive",
+    "**/_archive/**",
+    "tmp",
+    "tmp_old_build",
+    "local-backups",
+    "bks",
     "Public - Copy",
     "**/*.zip",
     "**/*.html"

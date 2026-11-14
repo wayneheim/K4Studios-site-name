@@ -389,7 +389,10 @@ const arrowRightSvg = `<svg aria-hidden="true" viewBox="0 0 24 24" class="w-4 h-
 
     document.querySelectorAll("[data-cart-btn][href]").forEach((link) => {
       link.addEventListener("click", () => {
-        trackAction("order_clicked", { trigger: "static_pricing_button" });
+        trackAction("order_clicked", {
+          trigger: "static_pricing_button",
+          sourceLayer: "pricing_main_button_v1",
+        });
       }, { capture: true });
     });
 

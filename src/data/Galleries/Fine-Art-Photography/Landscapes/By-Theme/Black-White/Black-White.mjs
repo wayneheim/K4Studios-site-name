@@ -48,8 +48,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
-  "notes": "",
+  "story": "The wreath stays — that's the whole story of a Gates Mills winter. Somebody hung it on the barn door for Christmas and the season since has argued, snow by snow, that it belongs there: green gone to gray in the monochrome, the white barn standing in white weather, the driveway a rumor under the drifts. A wreath left up past its holiday stops being decoration and becomes a position — this place is inhabited, this door is tended, whatever the thermometer says. The barn holds the position quietly, the way Ohio barns do, until spring comes to relieve it.\n\n© Wayne Heim",
+  "notes": "A white barn with a Christmas wreath on its door in snowy Gates Mills, Ohio, black and white — this set's position frame: the wreath past its holiday, the door tended, winter argued with quietly.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -87,8 +87,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Enjoy a new image from Wayne Heim's Landscape Photography collection. Full story on image to follow.",
-  "notes": "",
+  "story": "Morning light over a Vermont cornfield arrives like news the field has been waiting on all night — the storm clouds still stacked dark overhead, the break coming through in one bright seam, the corn standing in its rows at full attention. In black and white the crop stops being green and becomes structure: a thousand stalks, one field, the hills holding the horizon at a distance. Corn this tall is a crop with confidence. Under a sky like this it's also a wager — every ear in the field bet on weather exactly like the weather that's coming.\n\n© Wayne Heim",
+  "notes": "A tall Vermont cornfield under dramatic storm clouds with morning light breaking through, black and white — this set's wager frame: a thousand stalks at attention, the crop bet on the coming weather.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -128,8 +128,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "White Paint - grove of aspen trees in the snow with one lone pine tree in background. ©Wayne Heim",
-  "notes": "",
+  "story": "Every grove keeps one dissenter — here it's the lone pine standing dark at the back of an aspen stand, the only tree in the frame that declined to match the snow. The aspens do the grove's public work: white bark, white drifts, a whole stand painted in the winter's own color, pattern on pattern until the eye sorts trunks from drifts by shadow alone. The pine does the other work. It proves the grove is a place and not a pattern, and gives the whiteness something to be white against. Jackson Hole winters run long. The aspens can afford the uniformity; the pine keeps the record honest.\n\n© Wayne Heim",
+  "notes": "An aspen grove standing in snow in Jackson Hole, Wyoming, one dark pine behind, black and white — this set's dissenter frame: a whole stand painted in winter's color, one tree keeping the record honest.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -171,8 +171,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-  "notes": "",
+  "story": "The mist does most of the talking at this lake — the forested slope behind dissolving into it, the water's edge a suggestion, and one small pine standing clear in the foreground because it grows where the mist can't reach: out of a mossy rock at the shore. Rooted in rock is the Canadian Rockies' whole curriculum. The pine is enrolled for life — thin soil, cold water, weather off the lake — and its posture says it's passing. Everything soft in this frame is temporary. The tree and the rock are the permanent arrangement, and they both know it.\n\n© Wayne Heim",
+  "notes": "A small pine growing from a mossy rock at the edge of a misty mountain lake in the Canadian Rockies, black and white — this set's curriculum frame: everything soft temporary, the tree and the rock permanent.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -211,8 +211,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Enjoy a new image from Wayne Heim's Landscape Photography collection. Full story on image to follow.",
-  "notes": "",
+  "story": "Look straight up in an Ohio winter woods and the canopy becomes a ceiling built by committee — bare trunks converging, branches dividing the bright sky into smaller and smaller decisions. This is the forest's quietest moment: no leaves to argue with the wind, no green to spend, just structure holding the light in a pattern that changes by the hour and repeats by the century. Snow country knows this view from the ground — from a sled, from a fall, from lying back on purpose. The trees aren't reaching for anything. They reached, long ago, and this is the shape of having decided.\n\n© Wayne Heim",
+  "notes": "Looking straight up through bare winter tree branches toward a bright sky in Ohio, black and white — this set's ceiling frame: the canopy as a structure that already decided, the light divided by committee.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -250,8 +250,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Crystal: Lone tree with Ice crystals on snow. Idaho.©Wayne Heim",
-  "notes": "",
+  "story": "A lone tree in a snowfield keeps two pieces of company: its shadow, laid out long beside it like a second, darker tree that only winter provides, and the ice crystals — hoarfrost glittering across the snow until the whole field is doing quiet fireworks at ground level. High cold country specializes in this kind of wealth: nothing growing, nothing moving, and the ground itself sparkling like it has somewhere to be. The tree stands in the middle of the display without competing. At this altitude, understatement is the local style, and the shadow does the posing for both of them.\n\n© Wayne Heim",
+  "notes": "A lone evergreen standing in snow with sparkling ice crystals and its long shadow, black and white — this set's company frame: the shadow posing for both of them, the field doing quiet fireworks.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -291,8 +291,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Black and white photograph of snow and clouds near Bondurant Wyoming. ©Wayne Heim",
-  "notes": "",
+  "story": "Before the weather arrives, the snow plain near Bondurant holds its breath — dunes of snow smoothed by the last wind, a fence line crossing at the horizon like the plain's only punctuation, and the storm stacked up dark above it with its intentions announced. This is the held minute every Wyoming ranch knows: stock checked, wood in, the sky giving fair warning. The fence will still be there after; fences out here are built for the after. The plain keeps its white composure a little longer, and the clouds keep coming, and both sides understand the arrangement perfectly.\n\n© Wayne Heim",
+  "notes": "A vast snowy plain under dark storm clouds near Bondurant, Wyoming, a fence line at the horizon, black and white — this set's held-minute frame: fair warning given, the plain keeping its composure.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -330,8 +330,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Fine art landscape photography of Glacier National Park and Montana.",
-  "notes": "",
+  "story": "They rise out of the frame the way they rose out of the Glacier backcountry — two dead giants, bare to the sky, their branches a century of decisions made visible now that the leaves and the living are done with them. Snags this size aren't remains; they're tenure. Eagles have nested in these, woodpeckers have mined them, storms have audited every limb and left the strong ones standing. In black and white the pair reads as pure architecture: twin towers the park built out of its own trees and declined, ever, to demolish. The living forest below can take the hint. Rising is a long game.\n\n© Wayne Heim",
+  "notes": "Two tall gnarled dead trees rising against a pale sky in Glacier National Park, Montana, portrait, black and white — this set's tenure frame: twin towers the park built from its own trees and never demolished.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -368,8 +368,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Fine art landscape photography of Glacier National Park and Montana.",
-  "notes": "",
+  "story": "Fill the frame with leaves and the leaves stop being foliage — they become terrain: ribs like ridgelines, veins like the drainages between them, a whole Glacier National Park topography at the scale of a hand. Black and white is the honest medium for it. Color would report the green and miss the structure; monochrome reports the structure and lets the green go. These are understory leaves, the park's ground floor, doing the unglamorous work of turning mountain light into more mountain. Looked at this closely, there's no such thing as a simple leaf. There's weather, engineering, and appetite, arranged in ribs.\n\n© Wayne Heim",
+  "notes": "Broad ribbed leaves filling the frame in Glacier National Park, Montana, black and white — this set's terrain frame: the understory as topography, ribs for ridgelines at the scale of a hand.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -405,8 +405,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Close up view of the lighthouse on Faroe Islands.   ©Wayne Heim",
-  "notes": "",
+  "story": "A lighthouse photographed close is a lighthouse off duty — no sea in frame, no ships, just the tower on its stone rampart under a working sky, the black band around its middle like the one formal note in a plain-spoken country. The Faroes build these the way they build everything: to be audited by weather and found sufficient. From this distance the tower's job looks simple. The North Atlantic below has tested that simplicity every night for a century and filed its report in the stone. The light keeps its hours. The tower keeps its posture. Both are forms of the same promise.\n\n© Wayne Heim",
+  "notes": "A lighthouse with a black band standing on a stone rampart in the Faroe Islands under a dramatic sky, black and white — this set's promise frame: the light keeping its hours, the tower its posture.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -445,8 +445,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Snowy Bend, Road along the Chagrin River in Gates Mills, Ohio Heavy snow is falling  ©Wayne Heim",
-  "notes": "",
+  "story": "Road and river take the same bend in Gates Mills, and in heavy snow they take it together — the Chagrin sliding dark beside the plowed lane, the guardrail curving with both like a chaperone, the whole valley softened into tonal quiet by weather still actively falling. Snow this committed changes the terms of travel: the road is a suggestion the river keeps seconding. Drivers slow down. The river doesn't; it has never once slowed down for weather, being the weather's oldest local expression. The bend holds them both, politely, the way it has since the road was gravel and the valley was quieter.\n\n© Wayne Heim",
+  "notes": "A snowy road bending along the Chagrin River in Gates Mills, Ohio, heavy snow falling, black and white — this set's chaperone frame: road and river taking the same bend together, the guardrail curving with both.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -484,8 +484,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Alone on Prairie - lone cabin on the plains in Wyoming ©Wayne Heim",
-  "notes": "",
+  "story": "Scale is the subject here — one log cabin set down on the Wyoming prairie with a storm sky taking up most of the world above it, distant mountains keeping the horizon honest. The cabin doesn't fight the proportions. A shelter this size isn't a claim on the land; it's an arrangement with it: a roof, a stove's worth of heat, and an understanding that the prairie's weather will do most of the talking. Whoever built it measured the sky first and built accordingly. The clouds are still measuring back, a century later, and so far the arrangement holds.\n\n© Wayne Heim",
+  "notes": "A lone log cabin on the open Wyoming prairie under a dramatic storm sky, black and white — this set's arrangement frame: the cabin measured against the sky, the sky still measuring back.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -524,8 +524,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "\"Better Days\". Black and white nature photo of old barn on \"Mormon Row\", North of Jackson Hole Wyoming. ©Wayne Heim",
-  "notes": "",
+  "story": "A barn wall photographed close becomes a portrait — the weathered logs of this Mormon Row barn wearing their century openly, the doorway hanging open beside them like the building is mid-sentence about the Tetons, the hay, the winters. Better days is what visitors say. The wall itself makes no such claim; it just shows its repairs, its silvered wood, the grain of every decision that kept it standing. Black and white suits it. The barn was never colorful about its work, and the portrait doesn't ask it to start.\n\n© Wayne Heim",
+  "notes": "A weathered old log barn wall with an open doorway on Mormon Row, Wyoming, close view, black and white — this set's portrait frame: a century worn openly, the building mid-sentence.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -563,8 +563,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "B/W high key photo from inside an old log barn at the foot of the Teton on \"Mormon Row\" just outside of Jackson Hole Wyoming. Voyeuristic view from inside the dark building pears out into the daylight. ©Wayne Heim",
-  "notes": "",
+  "story": "Every working barn had this commute: out of the dark, hay-smelling interior, through the one doorway, into a field so bright it takes the eyes a moment to sign for it — another barn, the trees, the Tetons standing at the end of the grass like the final item on the day's agenda. The homesteaders on Mormon Row made this trip at dawn in every weather, and the doorway framed the terms each time: the work behind you in the dark, the world ahead in the light. The view hasn't changed its offer in a century. Step out. It's all still there.\n\n© Wayne Heim",
+  "notes": "View from inside a dark log barn looking out the doorway to a sunlit field, another barn, and the Tetons, black and white — this set's commute frame: the work in the dark behind, the world in the light ahead.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -603,8 +603,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Black and white photograph of cowboy overseeing the Mormon Row Barn. ©Wayne Heim",
-  "notes": "",
+  "story": "The Moulton Barn gets the wide shot it deserves — the whole Mormon Row spread laid out under a dramatic sky, the Tetons beyond keeping their counsel, the field in front doing nothing more demanding than being the valley floor. This is the barn as the valley knows it: not a relic but a landmark, the fixed point other distances are measured from. Black and white strips the postcard out of it and leaves the structure — logs, gables, weather, and the mountain backdrop that has upstaged it politely for a hundred years. It holds its ground anyway. That's the barn's whole career: holding ground, photogenically.\n\n© Wayne Heim",
+  "notes": "The Moulton Barn on Mormon Row under a dramatic cloudy sky with the Tetons beyond, wide view, black and white — this set's landmark frame: the fixed point other distances are measured from.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -643,8 +643,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Tetons Peek -- peeking out the barn door at the Grand Tetons in Jackson Hole, Wyoming. ©Wayne Heim",
-  "notes": "",
+  "story": "The barn keeps a secret and the doorway tells it — from the gravel-floored dark of this Mormon Row interior, the Grand Tetons stand framed in the open door like the one picture the building owns. Peek is the right word. The view isn't offered to the field or the road; it's reserved for whoever works inside, a reminder hung at eye level that the commute here ends at the most famous skyline in Wyoming. The barn has held this view through a century of mornings without charging admission. Step in from the bright field, let your eyes adjust, and there it is — the mountains, keeping their appointment with the doorway.\n\n© Wayne Heim",
+  "notes": "The Grand Tetons framed through an open barn doorway from a dark interior on Mormon Row, black and white — this set's secret frame: the one picture the building owns, held at eye level for whoever works inside.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -683,8 +683,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Homestead - shows an old homestead in Wyoming. ©Wayne Heim",
-  "notes": "",
+  "story": "A homestead is a house that outlived its instructions — this old log place behind its split-rail fence, the tall grass reclaiming the yard at the speed of summers, the dramatic sky doing what it has always done over this roof. The fence is the signature: rails split and stacked by the same hands that raised the walls, a boundary drawn in wood against a country that mostly ignored boundaries. The house keeps its posture anyway. Weathering, out here, isn't decay — it's the building slowly becoming the same color as its own history, and the fence standing witness, rail by rail.\n\n© Wayne Heim",
+  "notes": "An old weathered log homestead behind a split-rail fence in a tall grass field under a dramatic sky, Wyoming, black and white — this set's signature frame: the fence standing witness, rail by rail.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -722,8 +722,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Wyoming Road - lonely road across Wyoming with the Grand Tetons in background. ©Wayne Heim",
-  "notes": "",
+  "story": "The road does the driving in this frame — a dirt track crossing the grass plain in a long, confident line, the Grand Tetons standing at the end of it like the destination the whole valley agreed on. In black and white the distance turns honest: no color to soften the miles, just tone stepping down from grass to foothill to snowfield, the road narrowing as the country enlarges. Roads like this were the valley's first infrastructure and remain its best argument — everything out here is far, and the road is how far becomes doable. The Tetons wait at the end of it the way they wait at the end of everything in Jackson Hole: visibly, and without impatience.\n\n© Wayne Heim",
+  "notes": "A dirt road crossing a grassy plain toward the Grand Tetons under a dramatic sky, Wyoming, black and white — this set's argument frame: the road making far doable, tone stepping down to the snowfields.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -761,8 +761,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Fine art landscape photography of Letchworth State Park in New York.",
-  "notes": "",
+  "story": "Monochrome is Letchworth's native language — the Genesee's gorge is a carving first and a color photograph second, rock walls stepping down to the winding river in tones the water spent millennia engraving. Take the color away and the canyon's argument stands bare: this river cut all of this, grain by grain, and is not finished. The forested slopes soften nothing; they just mark where the cutting paused. New York keeps this gorge the way the West keeps its canyons — as proof that water, given time, out-argues stone. The view from the rim is the current draft of that argument, still being revised below.\n\n© Wayne Heim",
+  "notes": "A deep river gorge with steep rock walls and a winding river below at Letchworth State Park, New York, black and white — this set's argument frame: water out-arguing stone, the current draft still being revised.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -799,8 +799,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Fine art architectural photography of Las Vegas, Nevada.",
-  "notes": "",
+  "story": "Nevada grows two kinds of vertical now — the mountains it was issued, standing on the horizon where they've always stood, and these: glass towers rising out of Las Vegas at angles the desert never attempted, geometry stacked on geometry under a sky dramatic enough to compete. In black and white the city becomes landscape by the same rules as the canyon country — form, contrast, scale, weather. Urban growth is the honest title. The desert floor that grew sagebrush for ten thousand years is growing skylines now, and the towers have the same relationship with the clouds as the peaks do: they're measured against them, and found temporary, and built anyway.\n\n© Wayne Heim",
+  "notes": "Modern Las Vegas skyscrapers and glass towers from a low angle under a dramatic sky, distant mountains on the horizon, black and white — this set's second-vertical frame: the desert growing skylines, measured against the same clouds as the peaks.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -835,8 +835,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "\"Erosion\" B/W landscape photo of Bryce Canyon formations and clouds in Bryce Canyon National Park, Utah. ©Wayne Heim",
-  "notes": "",
+  "story": "Bryce Canyon without its color is Bryce Canyon telling the truth slower — the famous oranges gone, the hoodoos reduced to what they actually are: layered stone being unbuilt by water and frost at a pace only geology finds brisk. Black and white turns the amphitheater into sculpture study — fin, window, spire, each form lit for its edges. Erosion is a demolition with an aesthetic department; it takes the cliff apart in shapes more interesting than the cliff. The sparse trees on the ridge watch the work the way trees do: rooted in the very material being removed, unbothered, for now.\n\n© Wayne Heim",
+  "notes": "Layered Bryce Canyon formations under a dramatic cloudy sky, Utah, black and white — this set's sculpture frame: erosion's aesthetic department, the cliff improved by its own demolition.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -871,8 +871,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Night Highway - night travel through Utah. ©Wayne Heim",
-  "notes": "",
+  "story": "Night driving through Utah runs on a simple contract: the road gives you a line, the darkness keeps everything else, and the light at the horizon — last of the day or first of a town — gives you a reason to keep the contract. In black and white the highway becomes pure direction, a pale seam stitched toward dark mountains under a sky still arguing with itself in cloud. Everybody who's crossed this country after dark knows this exact frame from the driver's seat: the headlights' small claim, the desert's large one, and the miles negotiating between them at seventy-five per hour.\n\n© Wayne Heim",
+  "notes": "A dark highway receding toward dark mountains under a cloudy night sky, light breaking at the horizon, Utah, black and white — this set's contract frame: the headlights' small claim, the desert's large one.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -905,8 +905,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Over the Hill - shot of a road going over a hill in western states. ©Wayne Heim",
-  "notes": "",
+  "story": "The road goes over the hill politely — curving up the rocky slope, passing the sparse trees at the crest like they're the hill's small welcoming committee, and disappearing over the top without telling you anything about the other side. Portrait framing suits it: this isn't a panorama's worth of landscape, it's a single question stood upright. Roads in the western states specialize in this question. The crest is always planted with exactly enough trees to make the not-knowing scenic, and the pavement always comes back down somewhere — the road's one promise, kept out of sight until you earn it by driving.\n\n© Wayne Heim",
+  "notes": "A paved road curving up over a rocky hill with sparse trees at the crest, portrait, black and white — this set's question frame: one question stood upright, the answer kept until it's earned by driving.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -941,8 +941,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Canyon Clouds - shows threatening clouds over Bryce Canyon in Utah. ©Wayne Heim",
-  "notes": "",
+  "story": "The clouds over Bryce are doing architecture — dark storm masses stacked and buttressed above the canyon ridge until the sky has a skyline of its own, heavier than the rock below it. A panorama is the only frame that holds both buildings: the stone one, carved down over millennia, and the weather one, carved up in an afternoon and scheduled for demolition by evening. Threatening is the word the old Story used, and it's accurate — but the threat is also the show. Bryce under a polite sky is a postcard. Bryce under this sky is a negotiation between the land and the only thing bigger than it.\n\n© Wayne Heim",
+  "notes": "Dramatic dark storm clouds over a rocky Bryce Canyon ridge, panorama, black and white — this set's two-buildings frame: the stone skyline carved down, the weather skyline carved up.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -975,8 +975,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Looking Up, black and white photo of mountain face looking towards the top. ©Wayne Heim",
-  "notes": "",
+  "story": "A rock face has one groove in this frame — a single vertical seam running up the smooth stone like the mountain's zipper, or its drainpipe, or the line where two of its moods were joined. Looking up is the climber's view and the child's view at once: the stone too big for context, the sky reduced to whatever's left at the top of the frame. Utah's rock specializes in this scale of understatement — whole epics of geology filed under one groove. The face isn't hiding anything. It just keeps its story in a format you have to stand very close, and look very up, to read.\n\n© Wayne Heim",
+  "notes": "Looking straight up a massive smooth rock face with a vertical groove, portrait, black and white — this set's zipper frame: the mountain's whole epic filed under one groove.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -1012,8 +1012,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Three Peaks poke head up in desolate landscape, black and white photograph  ©Wayne Heim",
-  "notes": "",
+  "story": "Three is the desert's favorite number out here — three peaks standing up out of an empty Utah landscape with nothing around them but brush, distance, and their own shadows to argue with. In black and white they stop being scenery and become pure form: height, spacing, silhouette, the geometry a horizon makes when it's given nothing else to work with. Country this desolate doesn't waste a landmark. Travelers have steered by these three for as long as there have been travelers, and the peaks have never once moved to make the steering easier.\n\n© Wayne Heim",
+  "notes": "Three rocky desert peaks rising from a desolate Utah landscape with desert brush in the foreground, black and white — this set's steering frame: pure form, the landmarks that never moved to help.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -1050,8 +1050,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Arch View - sunset as see through a rock arch in Zion National Park. ©Wayne Heim",
-  "notes": "",
+  "story": "Zion keeps a window in its rock — an arch you stand inside of, looking out at a sunset the canyon has framed in stone. Black and white takes the famous color out of the arrangement and leaves the honest part: dark rock, bright sky, the desert spread between them in tones. A sunset through an arch is a sunset with an editor — the stone decides how much sky you get, and the rationing improves it. The canyon beyond doesn't know it's being viewed through architecture. It performs the same either way, which is the most canyon thing about it.\n\n© Wayne Heim",
+  "notes": "A sunset seen through a rock arch in Zion National Park, the desert canyon beyond, black and white — this set's window frame: the stone rationing the sky, and improving it.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -1087,8 +1087,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Aspen Blockade - thick stand of Aspen trees seem to form a blockade. ©Wayne Heim",
-  "notes": "",
+  "story": "A blockade is just a crowd that agrees with itself — this Utah aspen stand, trunk after white trunk with the dark foliage packed between them, a whole grove presenting the same face in the same direction until the forest becomes a wall with a pattern. One aspen is a tree. A thousand in step is a position. In black and white the stand's argument is graphic: verticals, repeated, no gaps offered. Whatever the grove is keeping out — wind, weather, the century — it has been keeping it out in formation for longer than the road's been there to notice.\n\n© Wayne Heim",
+  "notes": "A dense stand of aspen trees with white trunks and dark foliage, Utah, black and white — this set's position frame: a thousand trunks in step, the grove as a wall with a pattern.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -1126,8 +1126,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Fine art landscape photography of Lanterman's Mill in the Mill Creek Metroparks of Youngstown, Ohio.",
-  "notes": "",
+  "story": "The walkway descends like it has somewhere unhurried to be — a wooden boardwalk stepping down through the trees near Lanterman's Mill, railings on both sides, the forest of Mill Creek closing in green-dark on either hand. A boardwalk is a trail with manners: it keeps your feet dry, your pace even, and your attention free for the gorge below. Generations of Youngstown have taken this descent to the mill the way you take a familiar hallway — without thinking, in all weathers. In black and white the steps become rhythm: tread, rail, shadow, repeat, all the way down to the water's level.\n\n© Wayne Heim",
+  "notes": "A wooden boardwalk with railings descending through dense trees near Lanterman's Mill in Mill Creek MetroParks, Youngstown, Ohio, black and white — this set's rhythm frame: tread, rail, shadow, all the way down.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -1164,8 +1164,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Rock Perspective - looking up the sheer rock wall in one area of the Akron Metro Parks. ©Wayne Heim",
-  "notes": "",
+  "story": "Perspective is the park's quiet lesson — stand at the base of this Akron ledge and look up, and the rock wall stops being geology and becomes architecture: a sheer textured face with the trees standing along its roofline like they've paid for the view. Ohio's sandstone country is full of these walls, carved by water that left long ago and sanded by every winter since. The portrait frame tells the truth about the relationship: the rock is tall, you are not, and the looking up is the entire recreational activity. The wall has never once looked down. It doesn't have to.\n\n© Wayne Heim",
+  "notes": "Looking up a sheer textured rock wall with trees above, Akron Metro Parks, Ohio, portrait, black and white — this set's roofline frame: the rock tall, the viewer not, the looking up as the whole activity.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -1203,8 +1203,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Best Walkway -  trail around the Walter C Best Wildlife Preserve in Chardon, Ohio. ©Wayne Heim",
-  "notes": "",
+  "story": "A boardwalk over a marsh is a line drawn across water that hasn't decided to be a lake — this one running straight and wooden through the Walter C. Best preserve in Chardon, the marsh grass standing in its shallows on both sides, the far shore a bright rumor. Marshes resist paths; they're wet in every direction and honest about it. The boardwalk is the preserve's diplomatic solution: cross without conquering, look without sinking. In black and white the walkway becomes pure direction — a pale seam stitched toward the trees, the marsh keeping its counsel at ankle depth.\n\n© Wayne Heim",
+  "notes": "A long wooden boardwalk stretching through marshland at Walter C. Best Wildlife Preserve, Chardon, Ohio, black and white — this set's diplomatic frame: crossing without conquering, the marsh at ankle depth.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -1241,8 +1241,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "After the Fire. Trees in Wyoming. ©Wayne Heim",
-  "notes": "",
+  "story": "The fire drew this forest in charcoal and monochrome just agrees — a dense stand of burned Yellowstone timber, bare trunks packed like the crowd at a reckoning, every tree a black line the flames wrote and the weather hasn't erased. Stands like this are the park's long memory: the great burns are decades back, and the snags still outnumber the apologies. What the frame doesn't show is the floor — lodgepole seedlings in their thousands, the next forest already ankle-high in the ash. The dead stand guard over the living here. It's the Yellowstone arrangement, and it has renewed itself this way for centuries.\n\n© Wayne Heim",
+  "notes": "A dense stand of burned bare trees in Yellowstone, Wyoming, black and white — this set's charcoal frame: the dead standing guard over a forest already renewing itself below.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -1279,8 +1279,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Wide expanse of grassland in Wyoming.\n©Wayne Heim",
-  "notes": "",
+  "story": "Wide is the whole assignment — Wyoming grassland rolling out under a dramatic sky, hills at their unhurried distances, scattered trees posted like the prairie's few full stops. Emptiness this size isn't absence; it's the main product. The grass does the talking in texture, the sky does it in weather, and the land between them declines to interrupt. People raised in enclosed country feel this openness in their shoulders first. The prairie has that effect on everyone eventually: it teaches the eye to measure in miles and the mind to quiet down to match.\n\n© Wayne Heim",
+  "notes": "A wide grassland prairie with rolling hills and scattered trees under a dramatic sky, Wyoming, black and white — this set's main-product frame: emptiness as content, the eye taught to measure in miles.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -1317,8 +1317,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Church stand apart on the prairie with a few outbuildings. ©Wayne Heim",
-  "notes": "",
+  "story": "A prairie church stands apart the way lighthouses do — a small white building with a steeple on a hill, a few outbuildings for company, and all that grassland for a congregation's parking. These churches were the plains' first public buildings and often their last standing: school, meeting hall, and anchor for a township of farms spread a day apart. The white paint is maintenance and testimony at once — somebody still climbs up there with a brush, believing the building should look believed-in. Under a dramatic sky it holds its hill like a period at the end of the prairie's long sentence.\n\n© Wayne Heim",
+  "notes": "A small white church with a steeple on a prairie hill with outbuildings under a dramatic sky, black and white — this set's anchor frame: the building that still looks believed-in, a period at the prairie's end.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -1356,8 +1356,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "In Stock 9 x 12 AluminiumChurch stands alone on the western Iceland landscape. ©Wayne Heim",
-  "notes": "",
+  "story": "Iceland plants its churches like flags — one dark wooden church standing alone in a grassy field in the west of the country, mountains behind it, the nearest company a farm somewhere over the hill. These lone churches served farms, not villages: a dozen families riding in over rough ground to a building smaller than their barns, because the gathering mattered more than the size. Black and white suits it perfectly. The church was painted dark against a pale land on purpose — a landmark you could steer by in bad weather, and a steeple doing the work of a lighthouse for people on horseback.\n\n© Wayne Heim",
+  "notes": "A lone dark wooden church with a steeple in a grassy field with mountains behind, western Iceland, black and white — this set's flag frame: a landmark to steer by, the steeple working as a lighthouse for riders.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -1395,8 +1395,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Lone Church silhouetted against the hills in the background.  ©Wayne Heim",
-  "notes": "",
+  "story": "Distance is the subject — a church gone tiny at the end of a dirt path across an Icelandic plain, hills standing behind it in layers, the sky doing most of the talking. The path is the picture's promise: this far, it says, is how far people walked to gather — across the whole frame's worth of grass, in whatever weather Iceland was having, which was usually some. Churches out here were measured in walking, not miles. Stand at the path's start and the building looks less like architecture than intent: a small white decision at the far end of a long green effort, still standing by it.\n\n© Wayne Heim",
+  "notes": "A distant church at the end of a dirt path across a grassy plain with hills behind, Iceland, black and white — this set's walking frame: a small decision at the far end of a long effort.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -1433,8 +1433,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Vik wall on the black sand beaches of Iceland where the Game of  Thrones was filmed.\n©Wayne Heim",
-  "notes": "",
+  "story": "The wall at Vík is the beach's architecture — basalt columns stacked like organ pipes at the edge of Iceland's black sand, rising in a portrait frame that makes you look up the way the first sailors must have. Volcanoes built this by cooling slowly and cracking honestly; the columns are what lava does when it's allowed to take its time. Black and white strips the scene to its structure: black sand, gray columns, white surf somewhere below the frame. The wall has stood through every North Atlantic winter since before there were people here to name it. The naming is recent. The wall is not impressed.\n\n© Wayne Heim",
+  "notes": "Towering basalt columns of the Vík wall rising from Iceland's black sand beach, portrait, black and white — this set's organ-pipe frame: lava that took its time, unimpressed by being named.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -1471,8 +1471,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Whole in the wall of the glacier is actually the entrance to a cave.©Wayne Heim",
-  "notes": "",
+  "story": "From inside a glacier, the world comes through one arch — this cave in the ice framing distant mountains in a bright opening, the cave walls dark around it like the inside of a held breath. Ice caves are temporary architecture: the glacier builds them in a season and takes them back without notice, which makes standing in one a specific kind of privilege. In black and white the ice reads as stone's pale cousin — shadow, texture, and that one lit doorway. The mountains beyond are in no hurry. The cave is in nothing but. Photograph accordingly: this room will not exist next year.\n\n© Wayne Heim",
+  "notes": "From inside a glacier ice cave, an arched opening framing distant mountains, Iceland, portrait, black and white — this set's held-breath frame: a room the glacier takes back without notice.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -1508,8 +1508,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "This is a view looking out of a glacial cave entrance in Iceland. ©Wayne Heim",
-  "notes": "",
+  "story": "A cave entrance is a threshold with the texture turned up — glacial ice walls ribbed and scalloped by meltwater, framing the bright arch where the outside starts. Stand here and you stand in the glacier's one doorway: behind you, centuries of compressed snow turned to blue-dark ice; ahead, weather, mountains, the whole lit world the ice has been facing for ages. In black and white the entrance reads as pure form — arch, shadow, glare — the oldest architecture there is, built by water leaving. The glacier will close this door in its own time. It opens another somewhere else. That's the whole management plan.\n\n© Wayne Heim",
+  "notes": "Looking out from inside a glacial cave entrance in Iceland, textured ice walls framing a bright arched opening toward distant mountains, portrait, black and white — this set's threshold frame: the glacier's one doorway, water's oldest architecture.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -1546,8 +1546,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "An Icelandic river runs though a glacial field.\n©Wayne Heim",
-  "notes": "",
+  "story": "A river through a glacial field is the only thing moving for miles — this one winding dark between ice and rocky banks, mountains standing witness behind, the water running its meltwater errand through a landscape that otherwise holds still for centuries. Rivers out of glaciers are young by definition: the ice decides their course, the season decides their temper, and they spend both arguing. In black and white the river becomes the frame's one sentence — a dark line of intent through pale, frozen paragraphs. Everything else in this country is a noun. The river is the verb, and it conjugates all summer.\n\n© Wayne Heim",
+  "notes": "An Icelandic river winding through a glacial field with dark rocky banks, ice, and mountains beyond, black and white — this set's verb frame: the one moving sentence in a frozen paragraph.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -1584,8 +1584,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Enjoy a new image from Wayne Heim's Landscape Photography collection. Full story on image to follow.",
-  "notes": "",
+  "story": "The title says open; the frame says shelter — a rock shelter in a Hocking Hills gorge, its overhanging cliff leaning over tall trees like a roof the geology built before roofs. These shelters were Ohio's first architecture: dry under the ledge, shaded in summer, used by everyone who ever passed through this gorge country. In black and white the enclosure reads honestly — cliff, boulders, the forest standing in its own shade. The country outside the gorge is open enough. In here is where people actually lived with the land, and the ledge keeps the record of every fire ever lit under it, written in soot.\n\n© Wayne Heim",
+  "notes": "A rock shelter with an overhanging cliff and tall trees in a forest gorge, Hocking Hills, Ohio, portrait, black and white — this set's first-architecture frame: the ledge keeping the record in soot.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -1622,8 +1622,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
-  "notes": "",
+  "story": "The work here is the forest's own — tall trees leaning over a floor of roots and rock in a Hocking Hills hollow, every trunk negotiating for light, every root gripping the thin soil over sandstone like the slope could change its mind. This is what Ohio's woods do when nobody's managing them: lean, reach, drop, rot, repeat, in a portrait frame's worth of vertical argument. In black and white the forest floor reads as texture all the way down — root over rock over leaf mold, the whole economy visible at ankle level. No field, no fence, no hand of man in frame. The work is older than all three.\n\n© Wayne Heim",
+  "notes": "A dense forest of tall leaning trees over a rocky, root-covered floor, Hocking Hills, Ohio, portrait, black and white — this set's economy frame: root over rock over leaf mold, the work older than the field.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -1660,8 +1660,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Enjoy a new image from Wayne Heim's Landscape Photography collection. Full story on image to follow.",
-  "notes": "",
+  "story": "An Ohio barn under a dramatic sky is a building outnumbered — one barn, a field of open ground, bare trees standing in their winter ranks, and clouds taking up the whole upper world like they own the county. Barns in this country were built to be the biggest thing in their field, and the sky has never once respected the claim. In black and white the contest turns fair: tone against tone, the barn's dark gables holding their own against the clouds' bright artillery. The bare trees referee. By evening the clouds will move on and the barn will still be standing in its field, claiming the title again, undefeated by default.\n\n© Wayne Heim",
+  "notes": "A barn in an open field with bare trees under a dramatic cloudy sky, Ohio, black and white — this set's outnumbered frame: the barn holding its title against the sky, undefeated by default.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -1699,8 +1699,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "Old Fence - old weathered fence that had fallen down in Wyoming. ©Wayne Heim",
-  "notes": "",
+  "story": "Retirement, for a fence, looks like this — the old line lying flat in a Wyoming field, rails down in the grass, its posts done standing, while the Tetons behind it carry on upright as if to demonstrate the difference. A fallen fence isn't a failed one. It fenced for decades — snow load, cattle pressure, wind off the range — and lying down is what the survivors of that career do. In black and white the rails read as handwriting gone horizontal: the sentence still legible, the argument settled, the boundary now purely historical. The grass is already growing through the punctuation.\n\n© Wayne Heim",
+  "notes": "An old weathered fence fallen flat in a Wyoming field with the Teton range behind, portrait, black and white — this set's retirement frame: handwriting gone horizontal, the boundary purely historical.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",
@@ -1736,8 +1736,8 @@ export const galleryData = [
    "K4 Studios"
   ],
 
-  "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
-  "notes": "",
+  "story": "Lower Falls in black and white is Yellowstone with the postcard removed — white water plunging down the canyon in a portrait frame, the gorge walls forested and sheer, the river below carrying the falls' argument downstream in green-turned-gray. The canyon's famous yellows are gone, and what remains is the part that matters: height, force, and a river that has been falling here, at volume, since before the park had a name. Stand at the brink's overlook and the sound arrives before the understanding does. Monochrome can't record the sound. It records the posture of the water perfectly: committed, vertical, and entirely uninterested in witnesses.\n\n© Wayne Heim",
+  "notes": "A tall waterfall plunging down a steep rocky canyon gorge with forested cliffs, Lower Falls, Yellowstone, portrait, black and white — this set's commitment frame: the postcard removed, height and force remaining.",
   "rating": 4,
   "galleries": [],
   "visibility": "show",

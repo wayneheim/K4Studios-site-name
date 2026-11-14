@@ -1421,6 +1421,7 @@ export default function ChapterGalleryBase({
                 else setShowSeriesOrderModal(true);
                 track("order_clicked", {
                   imageId: galleryData[currentIndex]?.id,
+                  sourceLayer: "pricing_zoom_summary_v1",
                   trigger: "zoom_pricing_summary"
                 });
               }}
@@ -1968,6 +1969,7 @@ export default function ChapterGalleryBase({
                           }
                           track("order_clicked", {
                             imageId: galleryData[currentIndex]?.id,
+                            sourceLayer: "pricing_main_button_v1",
                             trigger: "pricing_menu"
                           });
                         }}
@@ -2446,6 +2448,7 @@ export default function ChapterGalleryBase({
                               else setShowSeriesOrderModal(true);
                               track("order_clicked", {
                                 imageId: galleryData[currentIndex]?.id,
+                                sourceLayer: "pricing_more_info_summary_v1",
                                 trigger: "more_info_pricing_summary"
                               });
                             }}

@@ -276,6 +276,7 @@ export async function handleTrackRequest(request, env, ctx) {
     const {
       session_id = null,
       visitor_id = null,
+      visitor_status = null,
       event = null,
       gallery_id = null,
       image_id = null,
@@ -315,13 +316,23 @@ export async function handleTrackRequest(request, env, ctx) {
     const normalizedNavigationType = normalizeOptionalText(navigation_type, 32);
     const normalizedPageInstanceId = normalizeOptionalText(page_instance_id, 128);
     const normalizedEngagedMs = normalizeEngagedMs(engaged_ms);
+    const normalizedVisitorStatus = visitor_status === 'new' || visitor_status === 'returning'
+      ? visitor_status
+      : null;
 
     // Event is required
     if (!event) {
       const headers = applyNoStore(new Headers({ 'Content-Type': 'text/plain' }));
       return new Response("Missing event", { status: 400, headers });
     }
-    if (!shouldPersistAnalyticsEvent(request, event)) {
+    if (!shouldPersistAnalyticsEvent(request, event, {
+      pagePath: normalizedPagePath,
+      entryReferrer: normalizedEntryReferrer,
+      referrer: normalizedDocumentReferrer,
+      utmSource: normalizedUtmSource,
+      utmMedium: normalizedUtmMedium,
+      utmCampaign: normalizedUtmCampaign
+    })) {
       const headers = applyCors(new Headers(), request, 'POST');
       applyNoStore(headers);
       return new Response(null, { status: 204, headers });
@@ -418,6 +429,7 @@ export async function handleTrackRequest(request, env, ctx) {
       sessionId: bestSessionId,
       source: 'js',
       visitorId,
+      visitorStatus: normalizedVisitorStatus,
       sourceLayer: (typeof source_layer === 'string' && source_layer) ? source_layer : null,
       pageKey: normalizedPageKey,
       // Use the client-reported page_path for easier SQL grouping.
