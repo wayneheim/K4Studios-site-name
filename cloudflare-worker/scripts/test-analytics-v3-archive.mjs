@@ -187,8 +187,9 @@ assert.ok(summary.expeditionActions.some((row) => row.label === 'Echoes of the W
 assert.ok(html.includes('Expedition activity'), 'dashboard should render the Expedition activity panel');
 assert.ok(html.includes('Site visitor devices') && html.includes('Image viewer devices'), 'dashboard should render both device panels');
 assert.ok(html.includes('<th>Share</th>') && html.includes('device-icon'), 'device panels should show compact icons and percentages');
-assert.ok(html.indexOf('Site visitor devices') < html.indexOf('Top 25 entry pages'), 'device panels should render at the top of the report grid');
-assert.ok(html.includes('Top 10 Entry Navigation'), 'dashboard should render entry navigation progression');
+assert.ok(html.indexOf('Site visitor devices') < html.indexOf('Top 25 Entry Navigation'), 'device panels should render at the top of the report grid');
+assert.ok(html.includes('Top 25 Entry Navigation'), 'dashboard should combine entry counts and navigation progression');
+assert.ok(!html.includes('Top 25 entry pages'), 'dashboard should not render the redundant entry-pages panel');
 assert.deepEqual(summary.oimDomainFunnel, [{
   label: 'one-image-movie.com', entries: 1, continued: 1, chapters: 1
 }], 'OIM vanity-domain sessions should retain their source and progression');
@@ -206,9 +207,10 @@ assert.ok(summary.counts.picture_shows_widget_clicks >= 1, 'Picture Shows widget
 assert.ok(html.includes('Homepage widget clicks') && html.includes('Cowboy widget clicks') && html.includes('Picture Show widget clicks'), 'dashboard should render both click counts in one homepage-widget panel');
 assert.ok(html.indexOf('Homepage widget clicks') < html.indexOf('Expedition activity'), 'homepage widget clicks should render above Expedition activity');
 assert.deepEqual(summary.cartFunnel.map((row) => row.count), [1, 1, 1, 1, 1, 1], 'native cart funnel steps should roll up in order');
-assert.ok(html.includes('entry-site-stack') && html.indexOf('Top 10 Entry Navigation') < html.indexOf('Top 10 site pages'), 'entry navigation should stack above site pages in the right column');
+assert.ok(html.indexOf('Top 25 Entry Navigation') < html.indexOf('Top 10 site pages'), 'entry navigation should render before site pages');
 assert.ok(html.includes('accent-entry') && html.includes('accent-site'), 'entry and site panels should use distinct header accents');
-assert.ok(summary.entryNavigation.length > 0 && summary.entryNavigation.length <= 10, 'entry navigation should contain at most ten entry pages');
+assert.ok(summary.entryNavigation.length > 0 && summary.entryNavigation.length <= 25, 'entry navigation should contain at most 25 entry pages');
+assert.deepEqual(summary.entryNavigation.map((row) => row.label), summary.entryPages.map((row) => row.label), 'entry navigation should cover the same top 25 pages as entry ranking');
 assert.ok(html.includes('continued-col') && html.includes('chapter-col'), 'entry navigation should reserve fixed space for percentage columns');
 assert.ok(html.includes('title="/Galleries/Painterly-Fine-Art-Photography/Facing-History/'), 'truncated entry navigation labels should retain their full path tooltip');
 assert.ok(html.includes('class="device-section"') && html.includes('device-windows') && html.includes('device-android'), 'device panels should be grouped and color coded');

@@ -359,11 +359,9 @@ export function summarizeV3Rollup(batch, label = 'Archive sample') {
       if (row.imageDevice || row.imageGeo) item.chapters += 1;
       grouped.set(row.landingPage, item);
     });
-    return [...grouped.values()].sort((a, b) => {
-      if (a.label === '/' && b.label !== '/') return -1;
-      if (b.label === '/' && a.label !== '/') return 1;
-      return (b.entries - a.entries) || a.label.localeCompare(b.label);
-    }).slice(0, 10);
+    return [...grouped.values()]
+      .sort((a, b) => (b.entries - a.entries) || a.label.localeCompare(b.label))
+      .slice(0, 25);
   })();
   const oimDomainFunnel = (() => {
     const grouped = new Map();

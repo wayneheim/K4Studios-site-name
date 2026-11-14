@@ -50,7 +50,7 @@ function rows(result) {
 export async function getV3CoreSummary(env, { windowKey = 'today', now = new Date() } = {}) {
   const window = getV3Window(windowKey, now);
   const bounds = [window.startDay, window.endDay];
-  const [metricResult, peopleResult, dimensionResult, sessionBreakdownResult, oimDomainResult, entryNavigationResult, deviceBreakdownResult, imageResult, stateResult] = await env.DB.batch([
+  const [metricResult, peopleResult, dimensionResult, sessionBreakdownResult, oimDomainResult, deviceBreakdownResult, imageResult, stateResult] = await env.DB.batch([
     env.DB.prepare(`
       SELECT COALESCE(SUM(page_views),0) + (
           SELECT COUNT(*) FROM analytics_v3_daily_sessions
@@ -88,19 +88,22 @@ export async function getV3CoreSummary(env, { windowKey = 'today', now = new Dat
     `).bind(...bounds, ...bounds),
     env.DB.prepare(`
       WITH scoped AS MATERIALIZED (
-        SELECT landing_page,entry_source,visitor_id,visitor_geo,image_geo,site_device,image_device
+        SELECT landing_page,entry_source,visitor_id,visitor_geo,image_geo,site_device,image_device,page_view_count
         FROM analytics_v3_daily_sessions WHERE day BETWEEN ? AND ?
       )
-      SELECT 'entry_page' kind,landing_page label,COUNT(*) count FROM scoped
+      SELECT 'entry_page' kind,landing_page label,COUNT(*) count,
+        SUM(CASE WHEN page_view_count >= 2 THEN 1 ELSE 0 END) continued,
+        SUM(CASE WHEN image_device IS NOT NULL OR image_geo IS NOT NULL THEN 1 ELSE 0 END) chapters
+        FROM scoped
         WHERE landing_page IS NOT NULL GROUP BY landing_page
       UNION ALL
-      SELECT 'entry_source',entry_source,COUNT(*) FROM scoped
+      SELECT 'entry_source',entry_source,COUNT(*),NULL,NULL FROM scoped
         WHERE entry_source IS NOT NULL GROUP BY entry_source
       UNION ALL
-      SELECT 'visitor_geo',COALESCE(visitor_geo,image_geo),COUNT(DISTINCT visitor_id) FROM scoped
+      SELECT 'visitor_geo',COALESCE(visitor_geo,image_geo),COUNT(DISTINCT visitor_id),NULL,NULL FROM scoped
         WHERE COALESCE(visitor_geo,image_geo) IS NOT NULL GROUP BY COALESCE(visitor_geo,image_geo)
       UNION ALL
-      SELECT 'image_geo',image_geo,COUNT(DISTINCT visitor_id) FROM scoped
+      SELECT 'image_geo',image_geo,COUNT(DISTINCT visitor_id),NULL,NULL FROM scoped
         WHERE image_geo IS NOT NULL GROUP BY image_geo
     `).bind(...bounds),
     env.DB.prepare(`
@@ -112,20 +115,6 @@ export async function getV3CoreSummary(env, { windowKey = 'today', now = new Dat
       WHERE day BETWEEN ? AND ? AND oim_domain IS NOT NULL
       GROUP BY oim_domain
       ORDER BY oim_domain
-    `).bind(...bounds),
-    env.DB.prepare(`
-      WITH progression AS (
-        SELECT landing_page label,
-          COUNT(*) entries,
-          SUM(CASE WHEN page_view_count >= 2 THEN 1 ELSE 0 END) continued,
-          SUM(CASE WHEN image_device IS NOT NULL OR image_geo IS NOT NULL THEN 1 ELSE 0 END) chapters
-        FROM analytics_v3_daily_sessions
-        WHERE day BETWEEN ? AND ? AND landing_page IS NOT NULL
-        GROUP BY landing_page
-      )
-      SELECT label,entries,continued,chapters FROM progression
-      ORDER BY CASE WHEN label='/' THEN 0 ELSE 1 END,entries DESC,label
-      LIMIT 10
     `).bind(...bounds),
     env.DB.prepare(`
       SELECT 'site_device' kind,site_device label,COUNT(DISTINCT visitor_id) count
@@ -178,6 +167,15 @@ export async function getV3CoreSummary(env, { windowKey = 'today', now = new Dat
     .map((row) => [row.label, row.count]));
   const cartFunnelLabels = ['Added to cart', 'Viewed cart', 'Started checkout', 'Calculated final total', 'Started payment', 'Order completed'];
   const actionCounts = new Map(top('action', Number.MAX_SAFE_INTEGER).map((row) => [row.label, row.count]));
+  const entryNavigation = sessionRows.filter((row) => row.kind === 'entry_page')
+    .map((row) => ({
+      label: row.label,
+      entries: Number(row.count || 0),
+      continued: Number(row.continued || 0),
+      chapters: Number(row.chapters || 0)
+    }))
+    .sort((a, b) => (b.entries - a.entries) || a.label.localeCompare(b.label))
+    .slice(0, 25);
   return {
     window,
     state: rows(stateResult)[0] || null,
@@ -200,12 +198,7 @@ export async function getV3CoreSummary(env, { windowKey = 'today', now = new Dat
       dominantGeoViews: Number(row.geo_views || 0)
     })),
     entryPages: topSession('entry_page', 25),
-    entryNavigation: rows(entryNavigationResult).map((row) => ({
-      label: row.label,
-      entries: Number(row.entries || 0),
-      continued: Number(row.continued || 0),
-      chapters: Number(row.chapters || 0)
-    })),
+    entryNavigation,
     oimDomainFunnel: rows(oimDomainResult).map((row) => ({
       label: row.label,
       entries: Number(row.entries || 0),
