@@ -90,7 +90,7 @@ export const galleryData = [
       "pictorialist tradition",
       "western painterly photography"
     ],
-    "story": "He doesn't move when the noise shifts.\n\nArms crossed, back against weathered timber, he lets the moment come to him instead of chasing it. Whatever's next will announce itself soon enough.\n\nSome men rush toward trouble. Others know it always finds you.",
+    "story": "He doesn't move when the noise shifts.\nArms crossed, back against weathered timber, he lets the moment come to him instead of chasing it. Whatever's next will announce itself soon enough. Some men rush toward trouble. Others know it always finds you.",
     "notes": "This piece draws from the Pictorialist tradition, prioritizing mood, restraint, and tonal depth over literal storytelling. The composition echoes the quiet authority found in works by Frederic Remington and early Western illustrators, where posture and negative space carry as much narrative weight as action. The softened edges and controlled contrast reinforce the sense of time, patience, and earned confidence-hallmarks of enduring Western imagery designed to live comfortably alongside both historic and contemporary fine art collections.",
     "rating": 4,
     "galleries": [
@@ -2250,7 +2250,7 @@ export const galleryData = [
   {
     "id": "i-45kXhng",
     "title": "Look Out",
-    "description": "A young woman leans out of a loft window, resting her arms on the wooden frame while looking into the distance. She wears a wide-brimmed hat, with soft light illuminating her face and hands against a darker interior.\n\n© Wayne Heim",
+    "description": "A young man leans out of a loft window, resting her arms on the wooden frame while looking into the distance. He wears a wide-brimmed hat, with soft light illuminating his face and hands against a darker interior.\n\n© Wayne Heim",
     "alt": "Figure leaning out of a loft window with hat, arms resting on the frame, looking outward in a black and white Western scene.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-45kXhng/1/MXNM5jPjKb5nWK7zZp4nqT2bBxm3BGvfZpKHMp52s/XL/_O2H2806-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-45kXhng/1/MXNM5jPjKb5nWK7zZp4nqT2bBxm3BGvfZpKHMp52s/XL/_O2H2806-Edit-XL.jpg",
@@ -2270,7 +2270,7 @@ export const galleryData = [
       "Western Cowboy Portraits",
       "Western cowboys"
     ],
-    "story": "She crouches at the edge of the loft, eyes scanning the horizon, hands resting lightly on the rail. Every shadow, every stir of dust, tells a story-she's learned to read the world this way.\n\n'Comin' from the north,' she mutters, voice low but steady, mostly to herself. 'And the south... quieter than I'd like.' Her heart isn't racing; it's steady, practiced, attuned. Out here, the ones who survive are the ones who see first and speak last.\n\nThe rifle isn't just a tool-it's a promise. A promise that if trouble comes, she'll be ready. The misfits depend on her, and she won't let them down. Every gust of wind, every distant sound, becomes a measure of time and caution.",
+    "story": "He crouches at the edge of the loft, eyes scanning the horizon, hands resting lightly on the rail. Every shadow, every stir of dust, tells a story-she's learned to read the world this way.\n\n'Comin' from the north,' she mutters, voice low but steady, mostly to herself. 'And the south... quieter than I'd like.' Her heart isn't racing; it's steady, practiced, attuned. Out here, the ones who survive are the ones who see first and speak last.\n\nThe rifle isn't just a tool-it's a promise. A promise that if trouble comes, she'll be ready. The misfits depend on her, and she won't let them down. Every gust of wind, every distant sound, becomes a measure of time and caution.",
     "notes": "This piece embodies the watchful eye of frontier youth, balancing innocence with responsibility. The composition-crouched stance, rail in hands, hat angled to shield from sun-evokes the narrative portraiture of Frederic Remington and early Western photographers.\n\nPainterly light and shadow highlight both focus and tension: every line and silhouette enhances silent anticipation. This photograph honors those who learned early that survival on the American frontier required attention, patience, and measured response. Every glance and gesture tells a story of duty, courage, and early wisdom.\n\nFor collectors, it represents narrative Western art at its finest, where painterly technique and frontier authenticity converge to create cinematic, story-rich imagery.",
     "rating": 4,
     "galleries": [

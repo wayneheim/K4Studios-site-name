@@ -1,7 +1,7 @@
 {
   "_meta": {
     "version": "1.0",
-    "lastUpdated": "2026-11-13T02:38:31.136Z"
+    "lastUpdated": "2026-11-15T16:13:38.211Z"
   },
   "images": {
     "i-FrDFN7V:/src/data/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White.mjs": {
@@ -10147,6 +10147,578 @@
     "i-pNv5vGW:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs": {
       "classification": "scout",
       "updatedAt": "2026-11-13T02:38:31.136Z"
+    },
+    "i-kWVzc6g:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T09:06:43.658Z"
+    },
+    "i-qjLp9Lf:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T09:07:26.009Z"
+    },
+    "i-hM8SXCd:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T09:08:07.214Z"
+    },
+    "i-6rWdVVk:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T09:08:48.820Z"
+    },
+    "i-xxr9Tnb:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T09:09:25.287Z"
+    },
+    "i-ssCjgX8:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T09:10:02.798Z"
+    },
+    "i-vqdKfnX:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T09:10:44.692Z"
+    },
+    "i-R53CkVb:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T09:11:24.197Z"
+    },
+    "i-xhX479V:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T09:15:10.558Z"
+    },
+    "i-C5ZGjMH:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T09:15:57.841Z"
+    },
+    "i-N2LmzLK:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T09:21:15.187Z"
+    },
+    "i-pvFgTr4:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T09:21:51.889Z"
+    },
+    "i-vT7SdKj:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T09:22:49.805Z"
+    },
+    "i-DJKJkMb:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T09:23:47.703Z"
+    },
+    "i-QbSdKQS:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T09:24:44.179Z"
+    },
+    "i-thK6pDc:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T09:25:25.821Z"
+    },
+    "i-fgb75Ts:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T09:27:36.759Z"
+    },
+    "i-Ng98bJK:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T09:30:28.422Z"
+    },
+    "i-VgGGG68:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T09:32:38.712Z"
+    },
+    "i-f2DpvdK:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T09:35:05.442Z"
+    },
+    "i-CGRD3jF:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T09:36:18.718Z"
+    },
+    "i-kbpkRxp:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T09:37:48.427Z"
+    },
+    "i-nDPs3J2:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T09:38:37.442Z"
+    },
+    "i-hD6jQZZ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T09:39:43.644Z"
+    },
+    "i-8pvnqf5:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T09:40:57.491Z"
+    },
+    "i-s785L8d:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T09:41:48.110Z"
+    },
+    "i-WRw5xs7:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T09:42:24.400Z"
+    },
+    "i-tvs5pD9:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T09:43:14.434Z"
+    },
+    "i-RpVqXBB:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T09:44:04.870Z"
+    },
+    "i-zmbvK99:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T09:44:57.337Z"
+    },
+    "i-mvXJpHF:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T09:46:51.276Z"
+    },
+    "i-767CNKX:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T09:47:49.373Z"
+    },
+    "i-LnvhzJ4:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T09:48:52.691Z"
+    },
+    "i-H5Z44TF:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T09:49:56.778Z"
+    },
+    "i-R5L4KXL:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T09:50:56.329Z"
+    },
+    "i-Lkzzxqv:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T09:51:32.293Z"
+    },
+    "i-3M3Jd8c:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T09:52:10.051Z"
+    },
+    "i-6FVGsWM:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T09:52:51.545Z"
+    },
+    "i-VZL9dTs:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T09:54:02.514Z"
+    },
+    "i-nHw5ZMt:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T09:54:59.317Z"
+    },
+    "i-4vsb9Qp:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T09:55:37.078Z"
+    },
+    "i-2pHXbPq:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T09:56:15.915Z"
+    },
+    "i-ZMt9t8J:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T09:56:53.804Z"
+    },
+    "i-96shbfB:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T09:57:28.963Z"
+    },
+    "i-9wj2BCw:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T09:58:06.774Z"
+    },
+    "i-8bDSdDK:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T09:59:53.598Z"
+    },
+    "i-L6QfRFP:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T10:00:59.946Z"
+    },
+    "i-gd64pg2:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T10:01:37.684Z"
+    },
+    "i-SbcnJ6G:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T10:02:19.404Z"
+    },
+    "i-WCW5QvM:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T10:02:56.912Z"
+    },
+    "i-QsnR9mf:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T10:03:35.841Z"
+    },
+    "i-pBz9L9p:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T10:04:16.600Z"
+    },
+    "i-VK8Vmjh:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T10:04:57.588Z"
+    },
+    "i-46zfcQx:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T10:05:36.922Z"
+    },
+    "i-xKkVXbj:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T10:06:18.618Z"
+    },
+    "i-RJprr78:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T10:06:58.629Z"
+    },
+    "i-Pw9Tzzf:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T10:07:40.285Z"
+    },
+    "i-hpRQLLm:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T10:08:46.376Z"
+    },
+    "i-834cDZ8:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T10:13:26.187Z"
+    },
+    "i-GqDJLmF:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T10:14:32.730Z"
+    },
+    "i-vQXXDRJ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T10:15:31.500Z"
+    },
+    "i-TkBf43K:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T10:16:11.241Z"
+    },
+    "i-ShbbBcz:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T10:16:52.340Z"
+    },
+    "i-mDZn7Xx:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T10:17:37.846Z"
+    },
+    "i-dWHn77W:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T10:18:38.426Z"
+    },
+    "i-5jfqH53:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T10:19:41.450Z"
+    },
+    "i-qSgZ7zD:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T10:20:56.133Z"
+    },
+    "i-qkhr8Nv:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T10:21:28.383Z"
+    },
+    "i-tHwDWLC:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T10:22:00.889Z"
+    },
+    "i-2rXwHbt:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T10:22:32.564Z"
+    },
+    "i-jHxmb55:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T10:23:05.582Z"
+    },
+    "i-7PMTVGg:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T10:23:57.352Z"
+    },
+    "i-4xLxQpk:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T10:24:30.724Z"
+    },
+    "i-gF8ZqQS:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T10:25:03.720Z"
+    },
+    "i-bcHKgfx:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T10:25:37.564Z"
+    },
+    "i-bCzTRRB:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T10:26:27.801Z"
+    },
+    "i-QW5C48m:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T10:27:01.049Z"
+    },
+    "i-xKnSff2:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T10:27:34.049Z"
+    },
+    "i-vztmrNx:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T10:28:07.180Z"
+    },
+    "i-vRTfLrV:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T10:28:40.547Z"
+    },
+    "i-q5tM4bH:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T10:29:32.711Z"
+    },
+    "i-WDPZRGD:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T10:30:06.318Z"
+    },
+    "i-ScfTV48:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T10:30:40.247Z"
+    },
+    "i-CvnVxzQ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T10:31:14.340Z"
+    },
+    "i-m5CqBfM:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T10:32:05.788Z"
+    },
+    "i-JdswJLd:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T10:32:42.544Z"
+    },
+    "i-N3945FQ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T10:33:21.942Z"
+    },
+    "i-gd64pg2:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-14T10:33:56.829Z"
+    },
+    "i-KL9t3Xg:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-14T17:41:43.882Z"
+    },
+    "i-PSkctsq:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-14T17:46:29.957Z"
+    },
+    "i-m8pgc8k:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-14T17:48:33.905Z"
+    },
+    "i-SwhsL2h:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-14T17:48:49.700Z"
+    },
+    "i-dTxwFN4:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-14T17:50:08.136Z"
+    },
+    "i-KgKZZxg:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-14T17:51:04.124Z"
+    },
+    "i-FXNxqTK:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-14T17:57:37.923Z"
+    },
+    "i-8zkKqtg:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-15T08:25:41.396Z"
+    },
+    "i-WSh3Nqv:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-15T08:27:08.085Z"
+    },
+    "i-KMhKvRb:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-15T08:28:13.915Z"
+    },
+    "i-k9qB2jV:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-15T08:29:21.868Z"
+    },
+    "i-VqxgW5k:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-15T08:30:36.679Z"
+    },
+    "i-NVz5zk2:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-15T08:32:36.164Z"
+    },
+    "i-9cZHdvB:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-15T08:33:39.377Z"
+    },
+    "i-zrVCpMP:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-15T08:34:34.335Z"
+    },
+    "i-rxnpqCQ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-15T08:35:40.661Z"
+    },
+    "i-qgJkNtv:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-15T08:37:14.614Z"
+    },
+    "i-6NPsMpH:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-15T08:39:23.134Z"
+    },
+    "i-5CcF5N4:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-15T11:54:05.788Z"
+    },
+    "i-mMXRvh4:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-15T11:55:06.091Z"
+    },
+    "i-k2W3gQV:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-15T11:56:21.133Z"
+    },
+    "i-m7STjq2:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-15T11:57:03.437Z"
+    },
+    "i-K6mDKMn:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-15T11:59:18.160Z"
+    },
+    "i-QBKhZS2:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-15T12:00:42.389Z"
+    },
+    "i-pqpdH2v:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-15T12:01:36.692Z"
+    },
+    "i-5bqK2s3:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-15T12:02:16.301Z"
+    },
+    "i-9mDvxMc:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-15T12:02:56.696Z"
+    },
+    "i-PXj364M:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-15T12:03:36.284Z"
+    },
+    "i-MhMbDtL:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-15T12:05:49.369Z"
+    },
+    "i-7rWrmHq:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-15T12:06:38.317Z"
+    },
+    "i-jRPgZj3:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-15T12:07:32.608Z"
+    },
+    "i-Dc7Xpdw:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-15T12:08:25.428Z"
+    },
+    "i-trPHqZK:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-15T12:09:18.425Z"
+    },
+    "i-DfS7sz2:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-15T12:09:55.366Z"
+    },
+    "i-zKXCVqN:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-15T12:11:59.551Z"
+    },
+    "i-W7rj9DJ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-15T12:12:36.189Z"
+    },
+    "i-tpvJWLm:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-15T12:13:22.744Z"
+    },
+    "i-Pt7whDS:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-15T12:14:24.171Z"
+    },
+    "i-nDfspwn:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-15T12:15:11.374Z"
+    },
+    "i-rWLJL2v:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-15T12:16:07.731Z"
+    },
+    "i-QmjZvHF:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-15T12:18:19.994Z"
+    },
+    "i-mgVpfhT:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-15T12:19:06.362Z"
+    },
+    "i-5WZKmbB:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-15T12:19:44.596Z"
+    },
+    "i-JMqBWxb:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-15T12:20:28.464Z"
+    },
+    "i-7dksHnz:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-15T12:21:13.453Z"
+    },
+    "i-cpRfZ8j:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-15T12:21:59.620Z"
+    },
+    "i-KdGdjFZ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-15T16:07:10.731Z"
+    },
+    "i-fNTTW43:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-15T16:07:56.909Z"
+    },
+    "i-T2XDQPG:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-15T16:08:37.469Z"
+    },
+    "i-jm2ddJx:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-15T16:09:12.638Z"
+    },
+    "i-xfjX34L:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-15T16:09:54.804Z"
+    },
+    "i-Gzdmm73:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-15T16:10:33.854Z"
+    },
+    "i-jQCkBDs:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-15T16:12:21.970Z"
+    },
+    "i-sjtz7Fj:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-15T16:13:00.043Z"
+    },
+    "i-zgNxHdz:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-15T16:13:38.211Z"
     }
   }
 }
