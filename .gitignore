@@ -159,3 +159,9 @@ cloudflare-worker/.dev.vars
 !.dev.vars.example
 !.env.example
 cloudflare-commerce/wrangler.live.toml
+
+# Local generated state and review/build artifacts
+/.astro/
+/tmp/
+/cloudflare-worker/tmp/
+/cloudflare-worker/cloudflare-worker/tmp/

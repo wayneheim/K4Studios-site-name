@@ -46,6 +46,9 @@ export default defineConfig({
   // Netlify adapter requires server output for SSR routes and dynamic admin/tools pages.
   output: 'server',
   adapter: netlify(),
+  server: {
+    allowedHosts: ['.trycloudflare.com', 'editorpro-dev.k4studios.com', 'localhost', '127.0.0.1'],
+  },
   integrations: [
     react(),
     tailwind(),  // <-- Tailwind goes here!
@@ -59,7 +62,22 @@ export default defineConfig({
   }),
   vite: {
     plugins: [sanitizeSmugMugAssetUrls()],
+    optimizeDeps: {
+      entries: ['src/pages/admin/**/*.astro', 'src/components/GalleryEditorPro.jsx'],
+      include: [
+        'react',
+        'react-dom',
+        'react-dom/client',
+        'react/jsx-runtime',
+        'react/jsx-dev-runtime',
+        '@astrojs/react/client.js',
+        'framer-motion',
+        'lucide-react',
+        'react-router-dom',
+      ],
+    },
     resolve: {
+      ...(!isProduction && { dedupe: ['react', 'react-dom'] }),
       alias: {
         '@': path.resolve('./src'),
         '@components': path.resolve('./src/components'),
@@ -75,12 +93,8 @@ export default defineConfig({
       port: 4321,
       strictPort: true,
       origin: 'http://localhost:4321',
-      hmr: {
-        protocol: 'ws',
-        host: 'localhost',
-        port: 4321
-      },
-      allowedHosts: ['.trycloudflare.com', 'localhost', '127.0.0.1']
+      // Infer HMR's host, port and ws/wss from the requesting browser URL.
+      allowedHosts: ['.trycloudflare.com', 'editorpro-dev.k4studios.com', 'localhost', '127.0.0.1']
     }
     // No need for plugins: [tailwindcss()]!
   }
