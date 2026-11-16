@@ -9065,6 +9065,7 @@ async function logRawEvent(env, eventType, targetId, request, extras = {}) {
       refererOverride = null,
       deltaMs = null,
       visitorId = null,
+      visitorStatus = null,
       sourceLayer = null,
       imgSize = null,
       refType = null,
@@ -9126,6 +9127,7 @@ async function logRawEvent(env, eventType, targetId, request, extras = {}) {
     ];
     const optional = [
       { name: "source_layer", value: sourceLayer },
+      { name: "visitor_status", value: visitorStatus },
       { name: "page_key", value: pageKey },
       { name: "img_size", value: imgSize },
       { name: "ref_type", value: refType },
@@ -9716,6 +9718,7 @@ async function handleTrackRequest(request, env, ctx) {
     const {
       session_id = null,
       visitor_id = null,
+      visitor_status = null,
       event = null,
       gallery_id = null,
       image_id = null,
@@ -9755,6 +9758,9 @@ async function handleTrackRequest(request, env, ctx) {
     const normalizedNavigationType = normalizeOptionalText(navigation_type, 32);
     const normalizedPageInstanceId = normalizeOptionalText(page_instance_id, 128);
     const normalizedEngagedMs = normalizeEngagedMs(engaged_ms);
+    const normalizedVisitorStatus = visitor_status === "new" || visitor_status === "returning"
+      ? visitor_status
+      : null;
     if (!event) {
       const headers2 = applyNoStore(
         new Headers({ "Content-Type": "text/plain" })
@@ -9857,6 +9863,7 @@ async function handleTrackRequest(request, env, ctx) {
         sessionId: bestSessionId,
         source: "js",
         visitorId,
+        visitorStatus: normalizedVisitorStatus,
         sourceLayer: resolvedSourceLayer,
         pageKey: normalizedPageKey,
         // Use the client-reported page_path for easier SQL grouping.

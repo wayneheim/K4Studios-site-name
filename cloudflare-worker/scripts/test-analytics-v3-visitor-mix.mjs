@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { buildV3RollupBatch, summarizeV3Rollup } from '../src/analytics/v3/model.js';
 import { renderDashboardV3 } from '../src/analytics/v3/renderer.js';
+import analyticsWorker from '../src/analytics/worker.js';
 
 const base = {
   source: 'js', event_type: 'page_view', target_id: '/', page: '/',
@@ -48,5 +49,47 @@ assert.ok(periodHtml.includes('New vs. returning visitors'));
 assert.ok(periodHtml.includes('visitor-mix-totals'));
 assert.ok(periodHtml.includes('visitor is not classified'));
 assert.ok(!periodHtml.includes('visitor-mix-new"><span>New</span><strong>'));
+
+// Exercise the deployed entry point: the standalone collector is not used by
+// wrangler.analytics.toml, so model/renderer tests alone cannot catch dropped status.
+for (const status of ['new', 'returning', null, 'invalid']) {
+  const writes = [];
+  const pending = [];
+  const env = { DB: { prepare(sql) {
+    return { bind(...values) {
+      return { async run() {
+        writes.push({ sql, values });
+        return { success: true };
+      } };
+    } };
+  } } };
+  const request = new Request('https://edge.k4studios.com/__k4e', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'User-Agent': base.ua,
+      'CF-Connecting-IP': base.ip,
+      'Accept-Language': 'en-US',
+      Origin: 'https://www.k4studios.com'
+    },
+    body: JSON.stringify({
+      event: 'page_view', page_path: '/', session_id: 'collector-session',
+      visitor_id: 'collector-visitor', visitor_status: status
+    })
+  });
+  Object.defineProperty(request, 'cf', { value: { country: 'US', asn: 10796 } });
+  const response = await analyticsWorker.fetch(request, env, {
+    waitUntil(promise) { pending.push(promise); }
+  });
+  await Promise.all(pending);
+  assert.equal(response.status, 204);
+  const rawWrites = writes.filter(({ sql }) => /INSERT INTO raw_events/.test(sql));
+  assert.equal(rawWrites.length, 1, 'Visitor classification must reuse the event write');
+  const columns = rawWrites[0].sql.match(/raw_events \(([^)]+)\)/)[1].split(',').map((s) => s.trim());
+  const saved = Object.fromEntries(columns.map((column, i) => [column, rawWrites[0].values[i]]));
+  assert.equal(saved.visitor_id, 'collector-visitor');
+  assert.equal(saved.session_id, 'collector-session');
+  assert.equal(saved.visitor_status ?? null, ['new', 'returning'].includes(status) ? status : null);
+}
 
 console.log('Analytics V3 visitor-mix tests passed.');
