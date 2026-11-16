@@ -11,9 +11,10 @@ interface Props {
   path: string; // exact gallery URL (preferred)
   limit?: number;
   label?: string;
+  landingSchema?: { pageUrl: string; name: string; description: string; hero?: any };
 }
 
-const { images, path, limit = 6, label = "Gallery Preview" } = Astro.props;
+const { images, path, limit = 6, label = "Gallery Preview", landingSchema } = Astro.props;
 
 // CHANGED: take the exact gallery URL if given; otherwise use the current page path as-is
 const rawBaseUrl = (typeof path === "string" && path.length) ? path : Astro.url.pathname;
@@ -21,6 +22,7 @@ const rawBaseUrl = (typeof path === "string" && path.length) ? path : Astro.url.
 // Dynamic resolution using siteNav: if provided base is a parent (collection) node, find first descendant gallery-source
 import { siteNav } from '@/data/siteNav';
 import { getSemanticImageUrl } from '@/utils/imageProxy.js';
+import { getCollectionImageGalleryGraph } from '@/components/utils/getStructuredData.ts';
 
 type NavNode = { href: string; type?: string; children?: NavNode[] };
 
@@ -104,11 +106,36 @@ function clientShuffle<T>(arr: T[]): T[] {
 
 const visibleImages = clientShuffle(candidatePool).slice(0, limit);
 
+// Use this render's thumbnail selection, after the hero, in visible page order.
+// A work shown as both hero and thumbnail is one work in the enumeration.
+const landingWorks = landingSchema
+  ? [landingSchema.hero, ...visibleImages].filter((image, index, list) =>
+      image?.id && list.findIndex(other => other?.id === image.id) === index)
+  : [];
+const landingGraph = landingSchema ? getCollectionImageGalleryGraph({
+  pageUrl: landingSchema.pageUrl,
+  name: landingSchema.name,
+  description: landingSchema.description,
+  images: landingWorks,
+  basePath: resolvedBaseUrl,
+}) : [];
+if (landingSchema) {
+  const list = landingGraph.find(node => node['@type'] === 'ItemList');
+  list.itemListElement.forEach((entry, index) => {
+    entry.item.contentUrl = getSemanticImageUrl(landingWorks[index], { galleryPath: resolvedBaseUrl }, 'l', { absolute: true });
+  });
+}
+const landingJSON = landingSchema
+  ? JSON.stringify({ '@context': 'https://schema.org', '@graph': landingGraph }).replace(/</g, '\\u003c')
+  : null;
+
 const middleIndex = Math.floor(visibleImages.length / 2);
 
 // Export the hero image ID (first of seeded pool) for warming
 const heroImageId = candidatePool[0]?.id || null;
 ---
+
+{landingJSON && <script type="application/ld+json" data-k4-schema="landing-works" set:html={landingJSON} />}
 
 <section class="gallery-preview-strip" aria-label="Gallery preview strip">
   <div class="gallery-label-frame">

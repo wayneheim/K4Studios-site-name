@@ -14,7 +14,8 @@ const {
   label,
   // ✅ New props for browse-all UI
   allImages = [],
-  galleryTitle = ""
+  galleryTitle = "",
+  landingSchema
 } = Astro.props;
 
 const siteOrigin = 'https://www.k4studios.com';
@@ -104,6 +105,7 @@ const shareImage = toShareUrl(rawShareImage) || (previewImages?.[0]?.id ? getSem
         />
       ) : (
         <GalleryPreviewStrip
+          landingSchema={landingSchema}
           images={previewImages}
           path={previewPath}
           limit={6}

@@ -1,6 +1,10 @@
 // src/middleware.ts
 import type { MiddlewareHandler } from "astro";
 import imageIdMap from "@/data/imageIdMap.json";
+import schemaDescriptionSyncPages from "@/data/seo/schemaDescriptionSyncPages.json";
+import { syncPageSchemaDescriptions } from "@/utils/syncPageSchemaDescriptions.mjs";
+import doorwayDescriptionSyncPages from "@/data/seo/doorwayDescriptionSyncPages.json";
+import { syncDoorwayDescriptionLayers } from "@/utils/syncDoorwayDescriptionLayers.mjs";
 
 const staticPageModules = import.meta.glob("/src/pages/**/*.astro");
 
@@ -614,7 +618,12 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
       });
     }
 
-    const { cleaned, changed } = stripNestedTags(body);
+    const schemaSyncedBody = Object.hasOwn(doorwayDescriptionSyncPages, normalizePath(pathname) || '/')
+      ? syncDoorwayDescriptionLayers(body, normalizePath(pathname) || '/')
+      : Object.hasOwn(schemaDescriptionSyncPages, normalizePath(pathname) || '/')
+      ? syncPageSchemaDescriptions(body, normalizePath(pathname) || '/')
+      : body;
+    const { cleaned, changed } = stripNestedTags(schemaSyncedBody);
 
     if (changed) console.log(`🧹 Cleaned HTML on ${context.url.pathname}`);
 

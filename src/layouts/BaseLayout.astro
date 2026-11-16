@@ -213,7 +213,11 @@ const seoDescriptionMaxLength =
     ? Number(meta.descriptionMaxLength)
     : 160;
 let finalSeoDescription =
-  seoDescriptionMaxLength === 160
+  typeof meta.completeDescription === 'string'
+    ? meta.completeDescription
+    : pathname.replace(/\/+$/, '') === '/Other/K4-Select-Series/Engrained/Engrained-Series'
+    ? seoDescriptionRaw
+    : seoDescriptionMaxLength === 160
     ? seoDescription
     : normalizeDescription(seoDescriptionRaw, defaultDescription, 80, seoDescriptionMaxLength, seoDescriptionOptions);
 
@@ -228,7 +232,9 @@ if (!isImagePage && /^\/Other\/(?:Show|Stories)(?:\/|$)/i.test(pathname)) {
 }
 
 const socialDescription =
-  (isImagePage && preloadImage?.story)
+  typeof meta.completeDescription === 'string'
+    ? meta.completeDescription
+    : (isImagePage && preloadImage?.story)
     ? preloadImage.story
     : (meta.story || seoDescriptionRaw);
 

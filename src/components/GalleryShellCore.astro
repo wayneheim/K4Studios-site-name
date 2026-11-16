@@ -151,6 +151,10 @@ const canonicalUrl = hasActiveQueryFilter
   ? baseGalleryUrl
   : `${siteBase}${canonicalPath.replace(/\/$/, "")}`;
 const galleryAbsUrl = `${siteBase}${previewPath}`;
+const isGalleryLanding = !isImagePage
+  && (pathOnly.replace(/\/$/, '') === previewPath.replace(/\/$/, '')
+    || pathOnly.replace(/\/$/, '') === '/Galleries/Fine-Art-Photography/Transportation/Trains-Black-White')
+  && previewPath.startsWith('/Galleries/');
 const collectionContextEntry = getCollectionContextEntry(previewPath);
 const collectionContextUrl = collectionContextEntry?.collectionUrl
   ? `${siteBase}${collectionContextEntry.collectionUrl}`
@@ -211,6 +215,25 @@ const imageStructuredData = currentImage
       },
       images: previewImages,
     });
+
+// Keep the existing CollectionPage description verbatim in every head layer.
+// The footer strip emits the ImageGallery/ItemList from its actual rendered selection.
+const landingCollection = isGalleryLanding ? JSON.parse(imageStructuredData) : null;
+const completeDescription = landingCollection?.description;
+if (landingCollection) {
+  landingCollection.mainEntity = { '@id': `${galleryAbsUrl}#imagegallery` };
+}
+const landingHero = isGalleryLanding
+  ? [...allImages]
+      .filter(img => isNavigableImage(img) && img.id !== 'i-k4studios' && (img.sortOrder ?? 0) !== -1)
+      .sort((a, b) => (a.sortOrder ?? Infinity) - (b.sortOrder ?? Infinity))[0]
+  : null;
+const landingSchema = landingCollection ? {
+  pageUrl: galleryAbsUrl,
+  name: landingCollection.name,
+  description: completeDescription,
+  hero: landingHero,
+} : undefined;
 
 function splitImageSchema(json: string | undefined) {
   if (!json) return [];
@@ -347,6 +370,7 @@ const preferredImageUrl = selectedImage?.id
 
 const meta = {
   canonicalUrl,
+  ...(isGalleryLanding && !previewPath.endsWith('/Western-Cowboy-Portraits/Color') ? { completeDescription } : {}),
   description: pageDescription,
   robots: hasActiveThemeFilter ? "noindex, follow" : "index, follow",
   ogTitle: pageTitle,
@@ -368,7 +392,7 @@ const meta = {
 <BaseLayout
   title={pageTitle}
   meta={meta}
-  structuredDataJSON={currentImage ? undefined : imageStructuredData}
+  structuredDataJSON={currentImage ? undefined : landingCollection ? JSON.stringify(landingCollection).replace(/</g, '\\u003c') : imageStructuredData}
   structuredDataEntries={imageStructuredDataEntries}
   breadcrumbsJSON={breadcrumbsJSON}
   extraStructuredDataJSON={webPageStructuredData}
@@ -429,6 +453,7 @@ const meta = {
   {/* ImageDetailsWidget removed - "More about this image" now in ChapterGalleryBase */}
 
   <Footer
+    landingSchema={landingSchema}
     previewImages={previewImages}
     previewPath={previewPath}
     currentImageUrl={preferredImageUrl}
