@@ -1,7 +1,7 @@
 {
   "_meta": {
     "version": "1.0",
-    "lastUpdated": "2026-11-18T22:34:32.270Z"
+    "lastUpdated": "2026-11-18T22:37:39.719Z"
   },
   "images": {
     "i-FrDFN7V:/src/data/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White.mjs": {
@@ -11814,6 +11814,10 @@
     "i-QJR63LW:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": {
       "classification": "scout",
       "updatedAt": "2026-11-18T22:34:32.270Z"
+    },
+    "i-hS4nH7p:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T22:37:39.719Z"
     }
   }
 }

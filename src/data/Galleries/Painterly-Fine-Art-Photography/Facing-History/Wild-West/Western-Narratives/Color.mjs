@@ -16484,7 +16484,7 @@ export const galleryData = [
   },
   {
     "id": "i-hS4nH7p",
-    "title": "Riding Into the Reckoning #2",
+    "title": "Riding Into the Reckoning",
     "description": "Presented in Wayne Heim's K4 Historical Works poster treatment, a lone frontiersman rides forward with a rifle resting across his saddle. His steady gaze, measured pace, and the historic-style branding give the portrait the feel of a vintage Western adventure poster.\n\nWayne Heim's painterly Western photograph captures a man moving toward an unseen consequence with the quiet certainty of someone who has already made his decision.",
     "alt": "a lone frontier rider carrying a rifle across his saddle as he moves through open country.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-hS4nH7p/1/XL/_WHO4681-1583-1585-XL.jpg",
@@ -16494,6 +16494,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-hS4nH7p/1/S/_WHO4681-1583-1585-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-hS4nH7p/A",
+
     "keywords": [
       "WH04681",
       "1583",
@@ -16515,14 +16516,18 @@ export const galleryData = [
       "unresolved image story",
       "Western storytelling photography"
     ],
+
     "story": "He rides without hurry, but not without purpose.\n\nThe rifle rests across the saddle. The reins remain loose in his hand. Whatever waits ahead has already been considered, weighed, and accepted.\n\nSome men ride toward trouble because they have no choice. Others because leaving it unanswered would cost more.",
     "notes": "The rider's calm posture gives the image its tension. Nothing suggests panic, yet the rifle and forward movement imply that his destination matters. The K4 Historical Works treatment enlarges the moment into a Western archetype while preserving the unanswered question: what has he chosen to face?",
     "rating": 0,
+
     "galleries": [
       "Other/Photo-Shoots/South-Dakota"
     ],
+
     "visibility": "show",
-    "sortOrder": 370
+    "sortOrder": 370,
+    contentSource: "human"
   },
   {
     "id": "i-3nZvZTj",
