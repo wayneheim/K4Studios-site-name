@@ -1,3 +1,5 @@
+import { getManualCopyPatch } from "./contentReview.mjs";
+
 export const TURBO_FIELD_NAMES = Object.freeze([
   "title",
   "story",
@@ -74,7 +76,7 @@ export function getChangedTurboFields(baselineText, currentText) {
 }
 
 export function buildTurboPatch(item, fieldsToSave) {
-  const patch = {};
+  const patch = getManualCopyPatch(fieldsToSave);
   if (fieldsToSave.has("title")) patch.title = item.title ?? "";
   if (fieldsToSave.has("alt")) patch.alt = item.alt ?? "";
   if (fieldsToSave.has("description")) patch.description = item.description ?? "";

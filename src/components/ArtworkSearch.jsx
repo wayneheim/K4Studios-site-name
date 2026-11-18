@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Search, X } from 'lucide-react';
+import PrintSeriesIcon from './PrintSeriesIcon.jsx';
 
 import '@/styles/artwork-search.css';
 
@@ -428,7 +429,7 @@ export default function ArtworkSearch() {
                                       title={`${series.label} Series Member`}
                                       aria-label={`${series.label} Series Member`}
                                     >
-                                      {series.icon}
+                                      <PrintSeriesIcon seriesKey={seriesKey} />
                                     </span>
                                     {seriesIndex < location.series.length - 1 && (
                                       <span className="card-series-separator" aria-hidden="true">|</span>

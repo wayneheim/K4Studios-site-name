@@ -1,5 +1,7 @@
 ---
 import Footer from "@/components/Footer.astro";
+import PrintSeriesIcon from "@/components/PrintSeriesIcon.jsx";
+import GridInfoIcon from "@/components/GridInfoIcon.jsx";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import ArchiveContext from "@/components/ArchiveContext.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
@@ -862,17 +864,17 @@ const faqRight = visibleFaqItems.slice(faqSplitIndex);
             {visiblePrintSeries.map((series) => (
               <article class="series-tile" data-series-tile>
                 <button class="series-trigger" type="button" aria-label={`Show ${series.name} details`} aria-expanded="false">
-                  <span class="series-symbol" aria-hidden="true">{series.symbol}</span>
+                  <span class="series-symbol" aria-hidden="true"><PrintSeriesIcon seriesKey={series.key || "engrained"} /></span>
                   <span>
                     <strong>{series.name}</strong>
                     <small>{series.subtitle}</small>
                   </span>
-                  <span class="series-info-indicator" aria-hidden="true">&#9432;</span>
+                  <span class="series-info-indicator" aria-hidden="true"><GridInfoIcon /></span>
                 </button>
                 <div class="series-detail">
                   <p class="series-detail-copy">
                     <span class="series-detail-title">
-                      <span class="series-detail-symbol" aria-hidden="true">{series.symbol}</span>
+                      <span class="series-detail-symbol" aria-hidden="true"><PrintSeriesIcon seriesKey={series.key || "engrained"} /></span>
                       <strong>{series.name}:</strong>
                     </span>
                     <span>{series.collectorSummary}</span>
@@ -1010,7 +1012,7 @@ const faqRight = visibleFaqItems.slice(faqSplitIndex);
                               title={`${series.label} Series Member`}
                               aria-label={`${series.label} Series Member`}
                             >
-                              {series.icon}
+                              <PrintSeriesIcon seriesKey={series.key} />
                             </span>
                             {seriesIdx < cardSeries.length - 1 && <span class="card-series-separator" aria-hidden="true">|</span>}
                           </>
@@ -1161,7 +1163,7 @@ const faqRight = visibleFaqItems.slice(faqSplitIndex);
                                       title={`${series.label} Series Member`}
                                       aria-label={`${series.label} Series Member`}
                                     >
-                                      {series.icon}
+                                      <PrintSeriesIcon seriesKey={series.key} />
                                     </span>
                                     {seriesIdx < cardSeries.length - 1 && <span class="card-series-separator" aria-hidden="true">|</span>}
                                   </>
@@ -1185,15 +1187,15 @@ const faqRight = visibleFaqItems.slice(faqSplitIndex);
                         aria-label="View image description preview"
                       >
                         <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-                          <path d="M7 18v-6a5 5 0 0 1 10 0v6" />
-                          <path d="M5 21v-1a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v1" />
-                          <path d="M12 14v4" />
-                          <path d="M12 2v2" />
-                          <path d="M4.93 4.93 6.34 6.34" />
-                          <path d="M19.07 4.93 17.66 6.34" />
-                          <path d="M2 12h2" />
-                          <path d="M20 12h2" />
-                        </svg>
+                  <path d="M7 18v-6a5 5 0 0 1 10 0v6" />
+                  <path d="M5 21v-1a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v1" />
+                  <path d="M12 14v4" />
+                  <path d="M12 2v2" />
+                  <path d="M4.93 4.93 6.34 6.34" />
+                  <path d="M19.07 4.93 17.66 6.34" />
+                  <path d="M2 12h2" />
+                  <path d="M20 12h2" />
+                </svg>
                       </button>
                       <div class="collector-note-overlay" data-notes-overlay>
                         <p class="collector-note-kicker">Image Description</p>
@@ -1273,17 +1275,17 @@ const faqRight = visibleFaqItems.slice(faqSplitIndex);
             {visiblePrintSeries.map((series) => (
               <article class="series-tile" data-series-tile>
                 <button class="series-trigger" type="button" aria-label={`Show ${series.name} details`} aria-expanded="false">
-                  <span class="series-symbol" aria-hidden="true">{series.symbol}</span>
+                  <span class="series-symbol" aria-hidden="true"><PrintSeriesIcon seriesKey={series.key || "engrained"} /></span>
                   <span>
                     <strong>{series.name}</strong>
                     <small>{series.subtitle}</small>
                   </span>
-                  <span class="series-info-indicator" aria-hidden="true">&#9432;</span>
+                  <span class="series-info-indicator" aria-hidden="true"><GridInfoIcon /></span>
                 </button>
                 <div class="series-detail">
                   <p class="series-detail-copy">
                     <span class="series-detail-title">
-                      <span class="series-detail-symbol" aria-hidden="true">{series.symbol}</span>
+                      <span class="series-detail-symbol" aria-hidden="true"><PrintSeriesIcon seriesKey={series.key || "engrained"} /></span>
                       <strong>{series.name}:</strong>
                     </span>
                     <span>{series.collectorSummary}</span>
@@ -3111,7 +3113,7 @@ const faqRight = visibleFaqItems.slice(faqSplitIndex);
       transition:background .18s ease, border-color .18s ease;
       pointer-events:none;
     }
-    .collector-notes-trigger svg {
+    .collector-notes-trigger :global(svg) {
       position:relative;
       z-index:1;
       width:22px;
@@ -3580,7 +3582,7 @@ const faqRight = visibleFaqItems.slice(faqSplitIndex);
         right:8px;
         opacity:.92;
       }
-      .collector-notes-trigger svg {
+      .collector-notes-trigger :global(svg) {
         width:20px;
         height:20px;
       }

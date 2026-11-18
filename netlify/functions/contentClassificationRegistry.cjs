@@ -49,12 +49,15 @@ exports.handler = async (event) => {
   }
 
   try {
-    const { imageId, galleryPath, classification } = JSON.parse(event.body || "{}");
+    const { imageId, galleryPath, classification, scout = false } = JSON.parse(event.body || "{}");
     if (!imageId || !galleryPath) {
       return { statusCode: 400, headers, body: JSON.stringify({ error: "Missing imageId or galleryPath" }) };
     }
     if (classification != null && !VALID_CLASSIFICATIONS.has(classification)) {
       return { statusCode: 400, headers, body: JSON.stringify({ error: "Invalid classification" }) };
+    }
+    if (typeof scout !== "boolean") {
+      return { statusCode: 400, headers, body: JSON.stringify({ error: "Invalid Scout flag" }) };
     }
 
     const registry = await readRegistry();
@@ -66,6 +69,7 @@ exports.handler = async (event) => {
     } else {
       registry.images[key] = {
         classification,
+        ...(classification === "oim" && scout ? { scout: true } : {}),
         updatedAt: new Date().toISOString(),
       };
     }

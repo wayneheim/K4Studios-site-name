@@ -6,7 +6,8 @@
 import {
   handleDashboardV3Request,
   handleDashboardV3UpdateRequest,
-  handleDashboardV3DiagnosticsRequest
+  handleDashboardV3DiagnosticsRequest,
+  handleDashboardV3EntryVisitsRequest
 } from "./v3/route.js";
 import {
   handleLegacyPatternPageRequest,
@@ -9083,7 +9084,8 @@ async function logRawEvent(env, eventType, targetId, request, extras = {}) {
       utmTerm = null,
       navigationType = null,
       pageInstanceId = null,
-      engagedMs = null
+      engagedMs = null,
+      engagementMeta = null
     } = extras;
     let ogPlatform = ogPlatformFromExtras;
     if ((ogPlatform === null || ogPlatform === void 0) && assetSource === "og") {
@@ -9145,7 +9147,8 @@ async function logRawEvent(env, eventType, targetId, request, extras = {}) {
       { name: "utm_term", value: utmTerm },
       { name: "navigation_type", value: navigationType },
       { name: "page_instance_id", value: pageInstanceId },
-      { name: "engaged_ms", value: engagedMs }
+      { name: "engaged_ms", value: engagedMs },
+      { name: "engagement_meta", value: engagementMeta }
     ].filter((o) => o.value !== null && o.value !== void 0);
     const missingColumnRegex = /no such column:\s*([a-zA-Z0-9_]+)/i;
     const maxAttempts = optional.length + 2;
@@ -9738,6 +9741,7 @@ async function handleTrackRequest(request, env, ctx) {
       navigation_type = null,
       page_instance_id = null,
       engaged_ms = null,
+      engagement_meta = null,
       page_path = null,
       trigger = null,
       event_ts_ms = null,
@@ -9758,6 +9762,16 @@ async function handleTrackRequest(request, env, ctx) {
     const normalizedNavigationType = normalizeOptionalText(navigation_type, 32);
     const normalizedPageInstanceId = normalizeOptionalText(page_instance_id, 128);
     const normalizedEngagedMs = normalizeEngagedMs(engaged_ms);
+    const normalizedEngagementMeta = engagement_meta?.version === 1
+      && ['page_engagement', 'session_exit'].includes(event)
+      ? JSON.stringify({
+        version: 1,
+        startedAt: typeof engagement_meta.startedAt === 'string' && Number.isFinite(Date.parse(engagement_meta.startedAt))
+          ? new Date(engagement_meta.startedAt).toISOString() : null,
+        scrollDepth: Number.isFinite(engagement_meta.scrollDepth)
+          ? Math.round(Math.max(0, Math.min(100, engagement_meta.scrollDepth))) : null,
+        interactionMask: Number(engagement_meta.interactionMask || 0) & 3
+      }) : null;
     const normalizedVisitorStatus = visitor_status === "new" || visitor_status === "returning"
       ? visitor_status
       : null;
@@ -9880,7 +9894,8 @@ async function handleTrackRequest(request, env, ctx) {
         utmTerm: normalizedUtmTerm,
         navigationType: normalizedNavigationType,
         pageInstanceId: normalizedPageInstanceId,
-        engagedMs: normalizedEngagedMs
+        engagedMs: normalizedEngagedMs,
+        engagementMeta: normalizedEngagementMeta
       })
     );
     const sidSetCookie = makeSidSetCookieHeader(request.url, bestSessionId);
@@ -10737,6 +10752,9 @@ var worker_default = {
     }
     if (url.pathname === "/__k4stats-v3/diagnostics") {
       return handleDashboardV3DiagnosticsRequest(request, env, ctx);
+    }
+    if (url.pathname === "/__k4stats-v3/entry-visits" && request.method === "GET") {
+      return handleDashboardV3EntryVisitsRequest(request, env, ctx);
     }
     if (url.pathname === "/__k4stats") {
       if (url.searchParams.get("legacy") !== "1") {

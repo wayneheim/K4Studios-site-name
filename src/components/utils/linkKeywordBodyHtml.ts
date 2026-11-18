@@ -1,4 +1,5 @@
 import { autoLinkKeywordsInText } from './autoLinkKeywordsInText.ts';
+import { restoreProtectedFragments } from './restoreProtectedFragments.ts';
 import { semantic as k4Semantic } from '@/data/semantic/K4-Sem.ts';
 
 const ROTATING_TERMS = new Set([
@@ -144,7 +145,7 @@ function applyAuthoredInterlinks(html: string, pagePath: string): string {
       break;
     }
 
-    output = linkable.replace(/\uE200(\d+)\uE201/g, (_match, index) => protectedFragments[Number(index)] ?? '');
+    output = restoreProtectedFragments(linkable, protectedFragments, /\uE200(\d+)\uE201/g);
     if (!linked) console.warn(`[authored-interlink] No natural anchor found on ${pagePath} for ${rule.href}`);
   }
   return output;
@@ -195,5 +196,5 @@ export function linkKeywordBodyHtml(html: string, pagePath: string): string {
     alternateDestinations: false,
   });
 
-  return linked.replace(/\uE100(\d+)\uE101/g, (_match, index) => protectedFragments[Number(index)] ?? '');
+  return restoreProtectedFragments(linked, protectedFragments, /\uE100(\d+)\uE101/g);
 }

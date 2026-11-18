@@ -17,7 +17,7 @@ const ENTRY_REFERRER_KEY = 'k4_entry_referrer';
 const CAMPAIGN_ATTRIBUTION_KEY = 'k4_campaign_attribution';
 const PREVIOUS_PAGE_KEY = 'k4_previous_page';
 const VISITOR_STATUS_KEY = 'k4_visitor_status';
-const PAGE_INSTANCE_ID = safeRandomId();
+let PAGE_INSTANCE_ID = safeRandomId();
 
 let inMemorySessionId: string | null = null;
 let inMemoryVisitorId: string | null = null;
@@ -1102,12 +1102,13 @@ function installNavigationTracking(): void {
   const onNav = (trigger: TrackContext['trigger']) => {
     // CRITICAL GUARDRAIL: do not re-track if path did not change
     if (lastTrackedPath === location.pathname) return;
+    // Flush the previous page before assigning a fresh page instance and timer.
+    updatePageContext();
     // Treat SPA navigation like a page view for context + view beacons.
     trackEvent('page_view', { trigger });
     trackDerivedViewsFromLocation();
     emitPagePixel(trigger || 'nav');
     emitSiteContentPagePixel(trigger || 'nav');
-    updatePageContext();
     initScrollDepthTracking();
   };
 
@@ -1278,10 +1279,15 @@ let currentPageContext: {
   galleryId: string | null;
   imageId: string | null;
   pagePath: string;
+  sessionId: string;
+  visitorId: string | null;
+  startedAt: string;
 } | null = null;
 
 let sessionExitFired = false;
 let engagedMs = 0;
+let maxScrollDepth: number | null = null;
+let pageInteractionMask = 0;
 let visibleSinceMs: number | null = (typeof document !== 'undefined' && document.visibilityState !== 'hidden')
   ? Date.now()
   : null;
@@ -1298,14 +1304,20 @@ function captureEngagedMs(): number {
 function buildPageLifecyclePayload(event: 'page_engagement' | 'session_exit'): string | null {
   if (!currentPageContext) return null;
   return JSON.stringify({
-    session_id: getSessionId(),
-    visitor_id: getVisitorId() || null,
+    session_id: currentPageContext.sessionId,
+    visitor_id: currentPageContext.visitorId,
     event,
     gallery_id: currentPageContext.galleryId,
     image_id: currentPageContext.imageId,
     page_type: currentPageContext.pageType,
     page_path: currentPageContext.pagePath,
     engaged_ms: captureEngagedMs(),
+    engagement_meta: {
+      version: 1,
+      startedAt: currentPageContext.startedAt,
+      scrollDepth: maxScrollDepth,
+      interactionMask: pageInteractionMask
+    },
     ...getAttributionPayload(),
     event_ts_ms: Date.now(),
     event_order: getNextEventOrder()
@@ -1319,6 +1331,16 @@ export function updatePageContext(): void {
   if (typeof window === 'undefined') return;
   
   const path = window.location.pathname;
+  if (currentPageContext?.pagePath === path) return;
+  if (currentPageContext) {
+    reportPageEngagement();
+    PAGE_INSTANCE_ID = safeRandomId();
+  }
+  engagedMs = 0;
+  maxScrollDepth = null;
+  pageInteractionMask = 0;
+  sessionExitFired = false;
+  visibleSinceMs = document.visibilityState !== 'hidden' ? Date.now() : null;
   const imageId = getImageIdFromPath(path);
   const galleryId = getGalleryIdFromPath(path);
   
@@ -1335,7 +1357,10 @@ export function updatePageContext(): void {
     pageType,
     galleryId,
     imageId,
-    pagePath: path
+    pagePath: path,
+    sessionId: getSessionId(),
+    visitorId: getVisitorId() || null,
+    startedAt: new Date().toISOString()
   };
 }
 
@@ -1372,13 +1397,23 @@ if (typeof window !== 'undefined') {
   
   // Fallback for older browsers
   window.addEventListener('pagehide', fireSessionExit);
+  window.addEventListener('pageshow', () => {
+    sessionExitFired = false;
+    if (document.visibilityState !== 'hidden' && visibleSinceMs === null) visibleSinceMs = Date.now();
+  });
+  // Keep only flags in memory, with no per-click or per-key analytics writes.
+  document.addEventListener('pointerdown', (event) => {
+    if (event.isTrusted) pageInteractionMask |= 1;
+  }, { passive: true, capture: true });
+  document.addEventListener('keydown', (event) => {
+    if (event.isTrusted) pageInteractionMask |= 2;
+  }, { passive: true, capture: true });
 }
 
 // ==========================================
 // SCROLL DEPTH TRACKING (MAIN PAGES ONLY)
 // ==========================================
 
-const scrollThresholdsFired = new Set<number>();
 let activeScrollListener: (() => void) | null = null;
 
 /**
@@ -1404,30 +1439,14 @@ export function initScrollDepthTracking(): void {
   const galleryId = getGalleryIdFromPath(path);
   if (galleryId) return;
 
-  const pageType: TrackContext['pageType'] = (path === '/' || path === '') ? 'landing' : 'other';
-  const thresholds = [25, 50, 75, 100];
-  
-  // Reset for new page
-  scrollThresholdsFired.clear();
-  
   const checkScroll = () => {
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
     const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     
     if (docHeight <= 0) return;
     
-    const scrollPercent = Math.round((scrollTop / docHeight) * 100);
-    
-    for (const threshold of thresholds) {
-      if (scrollPercent >= threshold && !scrollThresholdsFired.has(threshold)) {
-        scrollThresholdsFired.add(threshold);
-        emitActionPixel(`scroll_${threshold}`, null, {
-          pageType,
-          sourceLayer: `scroll_${threshold}_pixel_v1`,
-          trigger: 'scroll_depth'
-        });
-      }
-    }
+    const scrollPercent = Math.round(Math.max(0, Math.min(100, (scrollTop / docHeight) * 100)));
+    maxScrollDepth = Math.max(maxScrollDepth ?? 0, scrollPercent);
   };
   
   // Use passive listener for performance

@@ -58,7 +58,7 @@ export const galleryData = [
     "id": "i-67Qt8WM",
     "title": "Held Close",
     "description": "Hands held together, the figure stands in quiet reflection as soft atmosphere dissolves the edges of the scene. This painterly Native American portrait creates fine art wall decor rooted in restraint, heritage, and the quiet emotional gravity carried through posture rather than performance.\n\n© Wayne Heim",
-    "alt": "Side profile of a man with clasped hands emerging through soft haze, a muted and atmospheric portrait.",
+    "alt": "Native American man with long hair and a single feather behind his ear, wearing a fringed buckskin shirt, hands clasped around a slender stem at his chest, emerging through soft haze in a painterly black and white portrait.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-67Qt8WM/0/NNc9RjZRPfShrwTz2R93KK8q7XzP3f7cvTj8rQML4/XL/_WHO1255-897-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-67Qt8WM/0/NNc9RjZRPfShrwTz2R93KK8q7XzP3f7cvTj8rQML4/XL/_WHO1255-897-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-67Qt8WM/1/KHdNQWSKDD2j4RHvxnLvtrZGWpKvB73tV2TjbJBV8/XL/_WHO0574-904-905-XL.jpg",
@@ -66,6 +66,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-67Qt8WM/1/M2hPXR8Vrcz45gQtKT69wNR2bjBdHbXpTKqq8tmZ5/S/_WHO0574-904-905-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-67Qt8WM/A",
+
     "keywords": [
       "Native American art prints",
       "Native American fine art photography",
@@ -78,12 +79,14 @@ export const galleryData = [
       "spirit of the West",
       "Native American wall art"
     ],
+
     "story": "He keeps it near, not for protection,\nbut because some things lose their meaning\nonce they're set down.\n\nThe wind moves past him.\nTime does too.\nWhat he carries stays.\n\nNothing needs saying.\nWhat matters is already held.",
     "notes": "This work reflects a lineage of restraint found in classic American figurative painting, where meaning is carried through posture, gesture, and silence rather than overt narrative. The softened tonal palette and controlled light recall pictorialist traditions while maintaining a contemporary psychological depth. It is an image that rewards prolonged viewing, offering collectors a piece rooted in cultural continuity, inner resolve, and timeless presence.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 1
+    "sortOrder": 1,
+    contentSource: "ai"
   },
   {
     "id": "i-nZbDC9C",
@@ -120,7 +123,7 @@ export const galleryData = [
     "id": "i-zDcr5T3",
     "title": "Standing at Ease",
     "description": "A figure stands grounded with rifle lowered and tension absent, strength carried through balance rather than display. This painterly Native American portrait creates fine art wall art rooted in composure, tradition, restraint, and the quiet authority of presence held over time.\n\n© Wayne Heim",
-    "alt": "Man standing with rifle in a calm, composed stance, captured in Native American fine art photography.",
+    "alt": "Native American man wearing an antler headdress with fur and ermine drops, holding a long rifle angled low across his body, looking upward in a painterly black and white portrait.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zDcr5T3/0/KHwcQBfWJ2Hv55Qg43gzrJ56gjbWCvvVr6PhzpRJm/XL/_HF24217-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zDcr5T3/0/KHwcQBfWJ2Hv55Qg43gzrJ56gjbWCvvVr6PhzpRJm/XL/_HF24217-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zDcr5T3/0/MLSXtwkDffDFHrgrzvHjL3HXvFcTZwqcFPR2cxspN/XL/_HF24217-Edit-2-XL.jpg",
@@ -128,6 +131,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zDcr5T3/0/K2c9cpst3Hd8sbMnNKrKW4zpHRpgmZf7QHzpLP32D/S/_HF24217-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-zDcr5T3/A",
+
     "keywords": [
       "Native American fine art photography",
       "Native American photography",
@@ -143,12 +147,14 @@ export const galleryData = [
       "Western Native American gallery",
       "heritage and tradition in art"
     ],
+
     "story": "Nothing presses him forward.\n\nThe rifle rests where it belongs.\nBreath finds its own pace.\n\nStrength doesn't announce itself.\nIt settles.",
     "notes": "This image aligns with pictorial traditions that privilege composure over action and authority over gesture. The relaxed stance and lowered tension place the viewer in a moment where readiness exists without urgency.\n\nSoft tonal compression and muted detail prevent heroic emphasis, allowing presence to remain grounded and credible. The work rewards prolonged viewing, where meaning accumulates through posture, stillness, and the quiet confidence of a figure fully at rest within himself.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 3
+    "sortOrder": 3,
+    contentSource: "ai"
   },
   {
     "id": "i-xfVhZw7",
@@ -183,9 +189,9 @@ export const galleryData = [
   },
   {
     "id": "i-BJWt4zd",
-    "title": "Cowboy Portrait Photography Portrait",
-    "description": "Discover the cowboy portrait photography in this powerful painterly Western photograph by Wayne Heim. A compelling work that embodies frontier cowboy, American frontier portraits, and western portrait wall art. Featuring historic western prints, perfect for art lovers seeking cowboy portrait photography to enhance their collection. © Wayne Heim",
-    "alt": "Wayne Heim's cowboy portrait photography artwork",
+    "title": "What the Grass Hides",
+    "description": "A Native American man kneels in tall grass with a flintlock rifle held low, reading the field the way he was taught — by what moves, and by what should not. Wayne Heim's painterly handling keeps the black and white portrait suspended in that reading: Native American fine art photography about vigilance and heritage, and the long second before a moment declares itself, offered as fine art wall art with the old West still breathing in it.\n\n© Wayne Heim",
+    "alt": "Native American man with long hair and a feather behind his ear, kneeling in tall grass in a fringed buckskin shirt, holding a flintlock rifle low across his body in a painterly black and white portrait.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-BJWt4zd/0/NJSmXVrmJtPJqH3xdwzJjCb6TJJ6h23nGVfV7PC9F/XL/_WHO0996-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-BJWt4zd/0/NJSmXVrmJtPJqH3xdwzJjCb6TJJ6h23nGVfV7PC9F/XL/_WHO0996-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-BJWt4zd/0/MZV99wzJ2qPrxfVrqpGMwg28k5NFHthcXwkd6FzHh/L/_WHO0996-Edit-L.jpg",
@@ -193,36 +199,28 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-BJWt4zd/0/LzS5M7pr8rd8PMSpmhGhm8wMbGzZMQ2g7N8phMJtT/S/_WHO0996-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-BJWt4zd/A",
+
     "keywords": [
-      "south",
-      "dakota",
-      "fine art",
-      "photography",
-      "painterly photography",
-      "cowboy portrait photography",
-      "painterly Western photograph",
-      "frontier cowboy",
-      "American frontier portraits",
-      "western portrait wall art",
-      "historic western prints",
-      "Western cowboys",
-      "western canon",
-      "powerful works of art"
+      "Native American art prints; Native American fine art photography; Native American photography; Native American portraits; painterly Native American portraits; Native American heritage art; Native American tradition; spirit of the West; Native American wall art; Native American hunter portrait"
     ],
-    "story": "Wayne Heim's exploration of western portrait wall art comes alive in this piece, showcasing Western cowboys and western canon. A testament to powerful works of art in fine art.",
-    "notes": "",
-    "rating": 0,
+
+    "story": "The grass tells him first.\nIt always does — a bend where no wind is.\n\nHe does not lift the rifle.\nNot yet.\n\nWhatever is coming can still choose to be nothing.",
+    "notes": "The composition works on a single strong diagonal: the rifle's barrel runs low across the frame and points the eye back into the sitter's face, so the weapon reads as punctuation rather than subject. Wayne Heim breaks the standing-portrait convention of the genre by dropping to grass level — the camera kneels with the sitter, and the tall grass closes over the lower frame until figure and field share one texture. Tonal control does the rest: the fringed buckskin holds the mid-tones while the face carries the frame's deepest contrast, a hierarchy that keeps the vigilance in the expression, not the equipment.",
+    "rating": 4,
+
     "galleries": [
       "Other/Photo-Shoots/South-Dakota"
     ],
+
     "visibility": "show",
-    "sortOrder": 5
+    "sortOrder": 5,
+    contentSource: "ai"
   },
   {
     "id": "i-8NsWqJQ",
-    "title": "Outlaw Portraits Moment",
-    "description": "Discover the outlaw portraits in this powerful cowboy portrait photography by Wayne Heim. A compelling work that embodies powerful works of art, frontier portraits, and cowboy art. Featuring Baltic Birch, perfect for art lovers seeking outlaw portraits to enhance their collection. © Wayne Heim",
-    "alt": "Fine art photography of outlaw portraits by Wayne Heim",
+    "title": "At Full Draw",
+    "description": "A Native American warrior at full draw fills the frame — buffalo-horn headdress, painted face, the longbow stretched across the picture like a held note. Wayne Heim's painterly black and white treatment strips the scene to muscle, horn, and intent: Native American fine art photography that confronts rather than poses, a warrior portrait made as fine art wall art for collectors who want the West at its most direct.\n\n© Wayne Heim",
+    "alt": "Native American warrior wearing a buffalo-horn headdress and striped face paint, drawing a longbow at full stretch with a shield on his back, a tipi edge behind him, in a painterly black and white portrait.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-8NsWqJQ/0/K7XTDHVRfmJ6r9fQptQSLP6tnmjD5ms88Wv6nKzrF/XL/_HF27362-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-8NsWqJQ/0/K7XTDHVRfmJ6r9fQptQSLP6tnmjD5ms88Wv6nKzrF/XL/_HF27362-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-8NsWqJQ/0/MrM9fVNbDDvqVgtw3J9JVV4DMTNxwC7W3v967DxJ4/L/_HF27362-Edit-L.jpg",
@@ -230,35 +228,28 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-8NsWqJQ/0/M4GzLswrsPjXmSmBZhfrtSMdpXdDwZm9jcLp66fgd/S/_HF27362-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-8NsWqJQ/A",
+
     "keywords": [
-      "south",
-      "dakota",
-      "fine art",
-      "photography",
-      "painterly photography",
-      "outlaw portraits",
-      "cowboy portrait photography",
-      "powerful works of art",
-      "frontier portraits",
-      "cowboy art",
-      "Baltic Birch",
-      "Western cowboys",
-      "historic western prints"
+      "Native American art prints; Native American fine art photography; Native American photography; Native American portraits; painterly Native American portraits; Native American heritage art; Native American tradition; spirit of the West; Native American wall art; Native American warrior portrait"
     ],
-    "story": "Delving into Western cowboys, this work by Wayne Heim highlights cowboy art through historic western prints and frontier portraits. A powerful statement in photography.",
-    "notes": "",
-    "rating": 0,
+
+    "story": "The string knows the rest.\n\nHis arm does not shake. It has forgotten how.\n\nWhatever stands in front of that arrow has already decided.\nIt just hasn't said so out loud.",
+    "notes": "The longbow is the composition's engine — a single diagonal that enters one edge of the frame and leaves the other, with the sitter's extended arm doubling it, so the whole picture leans into the draw. Against the genre's habit of profile views and averted gazes, this portrait is frontal and confrontational: the painted face meets the viewer at the exact moment of greatest tension. The high-key, washed background works like a studio backdrop dragged outdoors, isolating horn, feather, and muscle in hard tonal contrast while the shield's curve behind the shoulder quietly echoes the bow's arc.",
+    "rating": 5,
+
     "galleries": [
       "Other/Photo-Shoots/South-Dakota"
     ],
+
     "visibility": "show",
-    "sortOrder": 6
+    "sortOrder": 6,
+    contentSource: "ai"
   },
   {
     "id": "i-99sTMBF",
-    "title": "Upscaled with Gigapixel v8.4.4. 3110x2253 =&gt; 10500x7607 (3.37621x) @ 300 ppi Model: RecoveryXL, denoise: 1, decompression: 0, sharpen: , sharpen: 0, sharpen: 1 Face recovery version: 2, strength: 0.57, creativity: 0 (Realistic), selectedFaces: 1",
-    "description": "Upscaled with Gigapixel v8.4.4. 3110x2253 => 10500x7607 (3.37621x) @ 300 ppi Model: RecoveryXL, denoise: 1, decompression: 0, sharpen: , sharpen: 0, sharpen: 1 Face recovery version: 2, strength: 0.57, creativity: 0 (Realistic), selectedFaces: 1",
-    "alt": "Upscaled with Gigapixel v8.4.4. 3110x2253 =&gt; 10500x7607 (3.37621x) @ 300 ppi Model: RecoveryXL, denoise: 1, decompression: 0, sharpen: , sharpen: 0, sharpen: 1 Face recovery version: 2, strength: 0.57, creativity: 0 (Realistic), selectedFaces: 1",
+    "title": "Covering the Crossing",
+    "description": "Two Native American men cross a reed-lined river in a birchbark canoe, one paddling in silence while the other holds a drawn bow across the water. Wayne Heim's painterly black and white handling turns the crossing into Native American fine art photography about teamwork and trust — the paddle and the bow working as one instrument — offered as fine art wall art with a story already in motion.\n\n© Wayne Heim",
+    "alt": "Two Native American men in a birchbark canoe on a reed-lined river, the man in front drawing a bow across the water while the man behind him paddles, both in fringed buckskin, in a painterly black and white photograph.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-99sTMBF/0/XL/_WHO6352-1722-1723-1726-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-99sTMBF/0/XL/_WHO6352-1722-1723-1726-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-99sTMBF/0/L/_WHO6352-1722-1723-1726-2-L.jpg",
@@ -266,19 +257,21 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-99sTMBF/0/S/_WHO6352-1722-1723-1726-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-99sTMBF/A",
+
     "keywords": [
-      "WHO6352",
-      "1722",
-      "1723",
-      "1726"
+      "Native American art prints; Native American fine art photography; Native American photography; Native American portraits; painterly Native American portraits; Native American heritage art; Native American tradition; spirit of the West; Native American wall art; Native American canoe photograph"
     ],
-    "story": "",
-    "notes": "",
-    "rating": 0,
+
+    "story": "The paddle makes no sound worth hearing.\n\nIt took them all morning to earn this quiet — the reeds, the current, the held breath of the man behind him.\n\nThe far bank doesn't know yet.",
+    "notes": "Depth is the subject here: the drawn bow and the sitter's forearm stack across the foreground while the second man's face emerges over his shoulder, so two portraits occupy one vertical axis without crowding. The canoe's curved bow rises into the lower frame and answers the bow's arc above it — the same gesture at two scales. Horizontal bands of reed and riffled water hold the tonal middle, and the painterly handling dissolves the far bank into haze, keeping every hard edge where the story lives: hands, string, and paddle.",
+    "rating": 4,
+
     "galleries": [
       "Other/Photo-Shoots/South-Dakota"
     ],
+
     "visibility": "normal",
-    "sortOrder": 7
+    "sortOrder": 7,
+    contentSource: "ai"
   }
 ];

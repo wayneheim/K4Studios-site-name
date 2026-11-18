@@ -1,3 +1,5 @@
+import { isRotatingProxyCrawlRequest } from './rotating-proxy-crawl.js';
+
 // Keep routine analytics useful without letting low-value or automated traffic
 // consume the D1 write allowance. This gate must run before every analytics
 // write; it does not block the underlying site or image response.
@@ -103,6 +105,7 @@ export function isCoordinatedProxyCrawlRequest(request, context = {}) {
 }
 
 export function shouldPersistAnalyticsEvent(request, eventType = null, context = {}) {
+  if (isRotatingProxyCrawlRequest(request)) return false;
   const sourceIp = String(request?.headers?.get?.('CF-Connecting-IP') || '').trim();
   if (sourceIp && DENIED_IPS.has(sourceIp)) return false;
 

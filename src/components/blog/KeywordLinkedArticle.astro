@@ -1,5 +1,6 @@
 ---
 import { autoLinkKeywordsInText } from "@/components/utils/autoLinkKeywordsInText.ts";
+import { restoreProtectedFragments } from "@/components/utils/restoreProtectedFragments.ts";
 import { semantic as k4Semantic } from "@/data/semantic/K4-Sem.ts";
 import { standardizeCornerstone } from './standardizeCornerstone.mjs';
 import '@/styles/cornerstone-standard.css';
@@ -34,7 +35,7 @@ const withoutSelfLinks = linked.replace(
   /<a href="([^"]+)" class="kw-link">([\s\S]*?)<\/a>/gi,
   (anchor, href, label) => String(href).replace(/\/+$/, "").toLowerCase() === normalizedPagePath ? label : anchor,
 );
-const restored = withoutSelfLinks.replace(/\uE000(\d+)\uE001/g, (_match, index) => protectedFragments[Number(index)] ?? "");
+const restored = restoreProtectedFragments(withoutSelfLinks, protectedFragments, /\uE000(\d+)\uE001/g);
 const formatted = standardizeCornerstone(restored, reservedImageIds, cornerstoneFaqs[pagePath], pagePath, essaySamples, artworkLinks, imageOverrides, galleryCrops);
 ---
 

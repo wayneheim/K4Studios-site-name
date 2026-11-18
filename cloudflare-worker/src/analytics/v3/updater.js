@@ -1,11 +1,11 @@
-import { buildV3RollupBatch } from './model.js';
+import { buildV3RollupBatch, getV3EvidenceSessionKeys } from './model.js';
 
 const RAW_BATCH_SIZE = 250;
 // Production D1 accepts fewer bound variables per statement than Miniflare.
 // Production D1 currently rejects statements above 100 bound variables. The
-// widest V3 insert has fourteen columns, so seven rows (98 bindings) stays below
+// widest V3 insert has fifteen columns, so six rows (90 bindings) stays below
 // that ceiling while still batching writes efficiently.
-const VALUE_CHUNK_SIZE = 7;
+const VALUE_CHUNK_SIZE = 6;
 
 function chunks(rows, size = VALUE_CHUNK_SIZE) {
   const output = [];
@@ -58,13 +58,28 @@ async function readRawBatch(env, afterId, limit) {
   const result = await env.DB.prepare(`
     SELECT id, ts, event_type, target_id, page, session_id, visitor_id, referer,
            entry_referrer, document_referrer, source, source_layer, visitor_status, country, region, city, cf_asn, ua, ip, ip_hash,
-           utm_source, utm_medium, utm_campaign
+           utm_source, utm_medium, utm_campaign, page_instance_id, engaged_ms, engagement_meta
     FROM raw_events
     WHERE id > ?
     ORDER BY id
     LIMIT ?
   `).bind(afterId, limit).all();
   return Array.isArray(result?.results) ? result.results : [];
+}
+
+async function readEntryEvidence(env, rows) {
+  const previous = [];
+  // Primary-key lookups only; lifecycle-only batches must still find the entry
+  // established by an earlier cursor batch. Never rescan the raw history.
+  for (const group of chunks(getV3EvidenceSessionKeys(rows), 40)) {
+    const result = await env.DB.prepare(`
+      SELECT day,session_id,landing_page,entry_source,visitor_geo,entry_is_image_fallback,entry_evidence
+      FROM analytics_v3_daily_sessions
+      WHERE ${group.map(() => '(day=? AND session_id=?)').join(' OR ')}
+    `).bind(...group.flatMap((row) => [row.day, row.sessionId])).all();
+    previous.push(...(result.results || []));
+  }
+  return previous;
 }
 
 function buildWriteStatements(env, rollup, previousCursor, updateToken) {
@@ -97,8 +112,8 @@ function buildWriteStatements(env, rollup, previousCursor, updateToken) {
   for (const group of chunks(rollup.sessions)) {
     statements.push(env.DB.prepare(`
       INSERT INTO analytics_v3_daily_sessions
-        (day,session_id,visitor_id,visitor_status,engaged,landing_page,entry_source,visitor_geo,image_geo,entry_is_image_fallback,page_view_count,site_device,image_device,oim_domain)
-      VALUES ${valuesSql(group.length, 14)}
+        (day,session_id,visitor_id,visitor_status,engaged,landing_page,entry_source,visitor_geo,image_geo,entry_is_image_fallback,page_view_count,site_device,image_device,oim_domain,entry_evidence)
+      VALUES ${valuesSql(group.length, 15)}
       ON CONFLICT(day,session_id) DO UPDATE SET
         visitor_id=COALESCE(analytics_v3_daily_sessions.visitor_id,excluded.visitor_id),
         visitor_status=COALESCE(analytics_v3_daily_sessions.visitor_status,excluded.visitor_status),
@@ -111,11 +126,12 @@ function buildWriteStatements(env, rollup, previousCursor, updateToken) {
         image_device=COALESCE(analytics_v3_daily_sessions.image_device,excluded.image_device),
         oim_domain=COALESCE(analytics_v3_daily_sessions.oim_domain,excluded.oim_domain),
         entry_is_image_fallback=CASE WHEN analytics_v3_daily_sessions.landing_page IS NULL OR (analytics_v3_daily_sessions.entry_is_image_fallback=1 AND excluded.entry_is_image_fallback=0) THEN excluded.entry_is_image_fallback ELSE analytics_v3_daily_sessions.entry_is_image_fallback END,
-        page_view_count=analytics_v3_daily_sessions.page_view_count+excluded.page_view_count
+        page_view_count=analytics_v3_daily_sessions.page_view_count+excluded.page_view_count,
+        entry_evidence=excluded.entry_evidence
     `).bind(...group.flatMap((row) => [
       row.day, row.sessionId, row.visitorId, row.visitorStatus, row.engaged, row.landingPage,
       row.entrySource, row.visitorGeo, row.imageGeo, row.entryIsImageFallback, row.pageViewCount,
-      row.siteDevice, row.imageDevice, row.oimDomain
+      row.siteDevice, row.imageDevice, row.oimDomain, row.entryEvidence ? JSON.stringify(row.entryEvidence) : null
     ])));
   }
 
@@ -177,7 +193,8 @@ export async function updateV3Rollups(env, { maxRows = 2500 } = {}) {
     while (scanned < cappedRows) {
       const rows = await readRawBatch(env, cursor, Math.min(RAW_BATCH_SIZE, cappedRows - scanned));
       if (!rows.length) break;
-      const rollup = buildV3RollupBatch(rows);
+      const previousSessions = await readEntryEvidence(env, rows);
+      const rollup = buildV3RollupBatch(rows, previousSessions);
       if (!rollup.lastRawEventId || rollup.lastRawEventId <= cursor) break;
       await env.DB.batch(buildWriteStatements(env, rollup, cursor, updateToken));
       cursor = rollup.lastRawEventId;

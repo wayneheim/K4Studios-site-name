@@ -86,8 +86,8 @@ export const nativeAmericanDeepImage = {
 };
 
 export const pageTitle = "What Is Western Fine Art? Definition, Meaning, and Why It Matters";
-export const titleTag = "What Is Western Fine Art? Definition and Meaning";
-export const pageDescription = "What is Western fine art? Learn how authorship, intent, and compositional restraint distinguish it across painting, photography, sculpture, and other media.";
+export const titleTag = "What Is Western Fine Art? | K4 Studios Gallery";
+export const pageDescription = "K4 Studios — Gallery of Western Fine Art. What is Western fine art? Learn how authorship, intent, and compositional restraint distinguish it across painting, photography, sculpture, and other media.";
 
 export const westernFineArtFaq = [
   {
@@ -178,6 +178,8 @@ export const structuredData = getStructuredData({
 // OG/Twitter capped at L
 export const meta = {
   description: pageDescription,
+  completeDescription: pageDescription,
+  preserveDescriptionDashes: true,
   keywords: "western fine art, western fine art photography, western fine art paintings, contemporary western fine art, fine art western photography",
   ogTitle: pageTitle,
   ogDescription: pageDescription,

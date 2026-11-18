@@ -3,6 +3,15 @@ export const prerender = true;
 
 import CommercialIntentDoorway from "@/components/doorway/CommercialIntentDoorway.astro";
 import { commercialIntentPages } from "@/data/doorway/commercialIntentPages.ts";
+
+const config = commercialIntentPages.westernFineArtPhotography;
+const pageConfig = {
+  ...config,
+  copy: {
+    ...config.copy,
+    archiveContextCopy: `${config.copy.archiveContextCopy}\n\n<a href="/Western-Fine-Art">Browse the broader Western Fine Art collection</a>.`,
+  },
+};
 ---
 
-<CommercialIntentDoorway config={commercialIntentPages.westernFineArtPhotography} />
+<CommercialIntentDoorway config={pageConfig} />

@@ -1,7 +1,7 @@
 {
   "_meta": {
     "version": "1.0",
-    "lastUpdated": "2026-11-15T16:13:38.211Z"
+    "lastUpdated": "2026-11-18T22:34:32.270Z"
   },
   "images": {
     "i-FrDFN7V:/src/data/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White.mjs": {
@@ -10506,7 +10506,8 @@
     },
     "i-PSkctsq:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": {
       "classification": "oim",
-      "updatedAt": "2026-11-14T17:46:29.957Z"
+      "scout": true,
+      "updatedAt": "2026-11-18T15:12:18.839Z"
     },
     "i-m8pgc8k:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": {
       "classification": "oim",
@@ -10719,6 +10720,1100 @@
     "i-zgNxHdz:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White.mjs": {
       "classification": "scout",
       "updatedAt": "2026-11-15T16:13:38.211Z"
+    },
+    "i-ncFcHDM:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T20:14:51.591Z"
+    },
+    "i-k4b6c5b:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T20:15:12.569Z"
+    },
+    "i-3SxncXS:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T20:15:45.660Z"
+    },
+    "i-QWcX7JT:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T20:16:09.081Z"
+    },
+    "i-6xn5rMd:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T20:16:20.326Z"
+    },
+    "i-MvZxkQh:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T20:16:27.029Z"
+    },
+    "i-6Ffpw9t:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T20:16:30.731Z"
+    },
+    "i-jcLJT4J:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T20:16:35.478Z"
+    },
+    "i-Dw6Z8ff:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T20:16:40.183Z"
+    },
+    "i-8BbMZjs:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T20:16:44.895Z"
+    },
+    "i-T6bD4w7:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T20:16:49.495Z"
+    },
+    "i-b3vCXwR:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T20:16:53.899Z"
+    },
+    "i-NKdPDCg:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "oim",
+      "scout": true,
+      "updatedAt": "2026-11-18T15:14:29.890Z"
+    },
+    "i-Mm3jXFH:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T20:17:11.034Z"
+    },
+    "i-ZPmj5Wk:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T20:17:16.371Z"
+    },
+    "i-8zFZ3jn:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T20:17:21.104Z"
+    },
+    "i-vGkvhmq:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T20:17:25.193Z"
+    },
+    "i-Dthbn8K:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T20:17:29.782Z"
+    },
+    "i-8cXqSjj:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T20:17:33.539Z"
+    },
+    "i-D3HdMmb:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T20:17:37.194Z"
+    },
+    "i-dwk4K8v:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T20:17:41.501Z"
+    },
+    "i-J8Tr628:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T20:17:45.513Z"
+    },
+    "i-dqdZcnX:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T20:17:49.546Z"
+    },
+    "i-HHxxcsM:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T20:17:54.800Z"
+    },
+    "i-CgCxXGG:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T20:23:50.606Z"
+    },
+    "i-TtXPkVK:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T20:24:46.410Z"
+    },
+    "i-3ppJNtd:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T20:25:18.059Z"
+    },
+    "i-XR9PZT5:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T20:25:23.066Z"
+    },
+    "i-bFwNMZK:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T20:25:34.902Z"
+    },
+    "i-5BtMrfM:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T20:25:38.353Z"
+    },
+    "i-8VPQmkW:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T20:25:45.482Z"
+    },
+    "i-Cz82g6x:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T20:25:50.257Z"
+    },
+    "i-8W7jxkN:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T20:28:27.076Z"
+    },
+    "i-7RWxjz3:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T20:30:23.364Z"
+    },
+    "i-grM2LkC:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T20:31:13.023Z"
+    },
+    "i-5T9mQqT:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T20:31:48.934Z"
+    },
+    "i-CFT7PJM:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T20:33:29.195Z"
+    },
+    "i-N8PLGR4:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T20:35:54.099Z"
+    },
+    "i-6wMDxdF:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T20:39:48.863Z"
+    },
+    "i-6pCLC4L:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T20:41:25.515Z"
+    },
+    "i-W73hxx4:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T20:43:37.975Z"
+    },
+    "i-CdpCkV4:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T20:45:19.797Z"
+    },
+    "i-TpqkCVk:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": {
+      "classification": "oim",
+      "scout": true,
+      "updatedAt": "2026-11-18T15:12:44.732Z"
+    },
+    "i-bLHTNNg:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T20:49:36.761Z"
+    },
+    "i-xMjhQVd:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T20:49:53.976Z"
+    },
+    "i-LrfWmg7:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T20:52:48.934Z"
+    },
+    "i-C9Q7sKR:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": {
+      "classification": "oim",
+      "scout": true,
+      "updatedAt": "2026-11-18T22:28:18.297Z"
+    },
+    "i-rRdrQBg:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T20:57:44.340Z"
+    },
+    "i-xpv7z8j:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:02:09.446Z"
+    },
+    "i-LCspRF4:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:02:25.299Z"
+    },
+    "i-ncFcHDM:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:02:50.159Z"
+    },
+    "i-c5K798H:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:03:05.252Z"
+    },
+    "i-7Mzzbvp:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:03:10.557Z"
+    },
+    "i-gxMVNh3:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:03:54.867Z"
+    },
+    "i-bfKMXS9:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:04:00.118Z"
+    },
+    "i-4zxZQQ2:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:04:09.655Z"
+    },
+    "i-89qzJ6S:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:04:17.509Z"
+    },
+    "i-7VWX9vk:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:04:22.219Z"
+    },
+    "i-44jcjTQ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:04:55.072Z"
+    },
+    "i-kQfftQ2:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:05:00.408Z"
+    },
+    "i-B7ZSdfs:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:05:05.472Z"
+    },
+    "i-bq4FKvX:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:05:09.734Z"
+    },
+    "i-fM9qmKW:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:05:13.838Z"
+    },
+    "i-NdQnj6P:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:05:18.537Z"
+    },
+    "i-G7csptc:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:05:23.645Z"
+    },
+    "i-r5Pb7zJ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:05:28.181Z"
+    },
+    "i-RsLmsLZ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:17:58.174Z"
+    },
+    "i-Vhv8w9H:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:18:39.440Z"
+    },
+    "i-Wx5scCf:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:18:52.170Z"
+    },
+    "i-m6WKrNG:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:19:23.628Z"
+    },
+    "i-rfFBRQM:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:19:30.753Z"
+    },
+    "i-Sc9hZGs:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:19:41.228Z"
+    },
+    "i-LL2Gp5r:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:19:45.272Z"
+    },
+    "i-trZrk2w:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:19:48.560Z"
+    },
+    "i-HBRmWg4:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:21:30.936Z"
+    },
+    "i-5j2Knmb:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:21:44.097Z"
+    },
+    "i-MHGPvcs:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:22:06.445Z"
+    },
+    "i-hMXZ8Xh:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:22:20.352Z"
+    },
+    "i-7mFGRtw:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:22:42.074Z"
+    },
+    "i-tBPfdxS:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:22:58.183Z"
+    },
+    "i-5TtHV8g:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:23:05.316Z"
+    },
+    "i-9BhX2Lj:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:23:11.332Z"
+    },
+    "i-46kWCqc:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:24:01.773Z"
+    },
+    "i-Vr8vzjt:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:24:49.603Z"
+    },
+    "i-NxjDRLV:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:24:57.292Z"
+    },
+    "i-cV5gwWZ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:25:16.970Z"
+    },
+    "i-Nn7scqm:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:25:42.661Z"
+    },
+    "i-c3vWMgt:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:25:54.716Z"
+    },
+    "i-n5BfXBm:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:26:00.058Z"
+    },
+    "i-fCG2nm8:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:26:22.791Z"
+    },
+    "i-5Md3dQ3:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:27:03.988Z"
+    },
+    "i-3SxncXS:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:27:16.464Z"
+    },
+    "i-k4b6c5b:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:27:24.266Z"
+    },
+    "i-jcLJT4J:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:27:35.427Z"
+    },
+    "i-QWcX7JT:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:27:58.835Z"
+    },
+    "i-6Ffpw9t:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:28:17.445Z"
+    },
+    "i-5FX3W9r:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:28:32.714Z"
+    },
+    "i-WxQjxQS:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:29:21.510Z"
+    },
+    "i-X4SH26N:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:29:42.251Z"
+    },
+    "i-cFhZXJc:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "scout": true,
+      "updatedAt": "2026-11-18T15:16:48.895Z"
+    },
+    "i-mLPgSpC:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:30:11.151Z"
+    },
+    "i-DwVBJb3:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:30:17.868Z"
+    },
+    "i-5rq7gcD:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:30:25.854Z"
+    },
+    "i-hrmrhT3:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:31:08.351Z"
+    },
+    "i-QB4jLsH:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:31:34.313Z"
+    },
+    "i-5TGTZ9P:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:32:00.221Z"
+    },
+    "i-DczpNpH:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:32:04.967Z"
+    },
+    "i-pNSX6cp:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:32:18.152Z"
+    },
+    "i-ShhCNkX:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:33:06.233Z"
+    },
+    "i-xqZwcZh:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:33:43.606Z"
+    },
+    "i-rhvQkwh:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:34:38.358Z"
+    },
+    "i-TLDkd5q:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:34:51.550Z"
+    },
+    "i-VDLVwqr:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:35:12.072Z"
+    },
+    "i-NKdPDCg:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "scout": true,
+      "updatedAt": "2026-11-18T15:15:36.304Z"
+    },
+    "i-Rx5gLJz:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:35:31.923Z"
+    },
+    "i-b3vCXwR:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:35:39.141Z"
+    },
+    "i-Dw6Z8ff:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:35:52.101Z"
+    },
+    "i-qVZ9m7j:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:35:55.918Z"
+    },
+    "i-KBNSftv:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:36:07.222Z"
+    },
+    "i-5HpSkgR:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:36:13.707Z"
+    },
+    "i-wfqSGcV:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:36:27.123Z"
+    },
+    "i-JKnW497:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:36:30.859Z"
+    },
+    "i-9wQL5tH:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:36:53.627Z"
+    },
+    "i-8rsG6P9:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:37:05.547Z"
+    },
+    "i-mpfG8XF:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:37:18.835Z"
+    },
+    "i-PM4d3g3:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:37:25.856Z"
+    },
+    "i-T7TFJX2:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:37:39.665Z"
+    },
+    "i-v4vRSb8:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:38:01.643Z"
+    },
+    "i-sTnckb6:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:38:08.042Z"
+    },
+    "i-KVxkXrV:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:38:12.302Z"
+    },
+    "i-ZRFr8hd:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:39:30.244Z"
+    },
+    "i-8Ddjt5W:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:39:36.638Z"
+    },
+    "i-8BbMZjs:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:41:00.420Z"
+    },
+    "i-MF3xPCZ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:41:31.333Z"
+    },
+    "i-LLdZzQW:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:42:36.645Z"
+    },
+    "i-vFrxmXD:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:42:42.379Z"
+    },
+    "i-LBSWzcj:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:43:36.689Z"
+    },
+    "i-gF8j3Jz:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:43:59.581Z"
+    },
+    "i-ML9dbMj:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:44:15.412Z"
+    },
+    "i-FVHm8VJ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:54:09.223Z"
+    },
+    "i-7Jzf69b:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-17T21:54:23.521Z"
+    },
+    "i-qB47jJT:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-18T01:27:09.272Z"
+    },
+    "i-v4TzPgF:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-18T01:29:34.021Z"
+    },
+    "i-ZPmj5Wk:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-18T01:30:53.311Z"
+    },
+    "i-dNgct6r:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-18T01:31:11.153Z"
+    },
+    "i-8CfzGMc:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-18T01:31:31.508Z"
+    },
+    "i-k6jGzSq:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-18T01:32:04.600Z"
+    },
+    "i-GG7mgqM:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-18T01:32:35.277Z"
+    },
+    "i-JM7kNVv:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-18T01:39:15.012Z"
+    },
+    "i-8Ld2ZHQ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-18T01:39:51.683Z"
+    },
+    "i-mHpH7rZ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-18T01:40:16.256Z"
+    },
+    "i-V5WcTqg:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-18T01:48:13.352Z"
+    },
+    "i-Cg4ZB72:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-18T01:48:55.451Z"
+    },
+    "i-9bgtdzf:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-18T01:49:05.146Z"
+    },
+    "i-rhqqrfz:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-18T01:49:32.118Z"
+    },
+    "i-mJQCXmh:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-18T01:50:00.981Z"
+    },
+    "i-FpH3LXf:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-18T01:51:35.605Z"
+    },
+    "i-xXQ3gDM:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-18T01:51:49.990Z"
+    },
+    "i-NBsQ59h:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-18T01:52:51.300Z"
+    },
+    "i-3ppJNtd:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-18T01:54:04.411Z"
+    },
+    "i-8VPQmkW:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-18T01:56:13.514Z"
+    },
+    "i-kBNpRtm:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-18T01:57:21.052Z"
+    },
+    "i-gQ7GZ5s:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-18T01:58:19.977Z"
+    },
+    "i-52tTd9G:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-18T01:58:44.835Z"
+    },
+    "i-6dHrd9m:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-18T02:01:56.256Z"
+    },
+    "i-xZkmnnx:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-18T02:03:30.803Z"
+    },
+    "i-RdTR7GD:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-18T02:07:26.102Z"
+    },
+    "i-5fm7Hhr:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-18T02:12:29.131Z"
+    },
+    "i-qqVG3fw:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-18T02:24:57.759Z"
+    },
+    "i-sDZFJ6t:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "scout": true,
+      "updatedAt": "2026-11-18T21:17:47.622Z"
+    },
+    "i-LJk7wFZ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-18T02:31:30.508Z"
+    },
+    "i-nqxJWx3:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-18T02:32:54.214Z"
+    },
+    "i-gL3Nnth:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-18T02:44:22.153Z"
+    },
+    "i-CD6rgtF:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "scout": true,
+      "updatedAt": "2026-11-18T21:50:34.443Z"
+    },
+    "i-wdF6Hw3:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-18T02:55:38.612Z"
+    },
+    "i-mqDfN5z:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "scout": true,
+      "updatedAt": "2026-11-18T15:18:07.691Z"
+    },
+    "i-g9mC35L:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "scout": true,
+      "updatedAt": "2026-11-18T15:19:52.896Z"
+    },
+    "i-VVwZ7gM:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-18T02:57:12.919Z"
+    },
+    "i-C5Zh8Ld:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-18T02:57:47.178Z"
+    },
+    "i-hKcrxwf:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-18T02:57:56.869Z"
+    },
+    "i-67Qt8WM:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T04:57:26.414Z"
+    },
+    "i-zDcr5T3:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T05:01:02.123Z"
+    },
+    "i-BJWt4zd:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T05:04:10.417Z"
+    },
+    "i-8NsWqJQ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T05:06:34.951Z"
+    },
+    "i-99sTMBF:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T05:07:54.374Z"
+    },
+    "i-VNxbb8k:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T05:11:57.300Z"
+    },
+    "i-7d3jWrb:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T05:13:37.929Z"
+    },
+    "i-fhnpqP8:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T05:15:16.210Z"
+    },
+    "i-99sTMBF:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T05:16:40.419Z"
+    },
+    "i-8Gs57P9:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T05:17:54.351Z"
+    },
+    "i-vmMfszQ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T05:19:11.675Z"
+    },
+    "i-P5PB5p3:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T05:25:10.166Z"
+    },
+    "i-MSnkjq2:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T05:26:07.339Z"
+    },
+    "i-45kXhng:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T05:27:00.427Z"
+    },
+    "i-Zfp4KwJ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T05:28:03.015Z"
+    },
+    "i-727jVkX:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": {
+      "classification": "oim",
+      "scout": true,
+      "updatedAt": "2026-11-18T15:11:43.135Z"
+    },
+    "i-NZLcBqN:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T05:34:31.895Z"
+    },
+    "i-x2xNvsM:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T05:36:42.983Z"
+    },
+    "i-RLZFsxp:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T05:37:54.801Z"
+    },
+    "i-7d3jWrb:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T05:38:49.009Z"
+    },
+    "i-SrPqX7H:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T05:40:17.718Z"
+    },
+    "i-gKXZc84:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T05:41:12.718Z"
+    },
+    "i-TM27hkq:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T05:42:06.376Z"
+    },
+    "i-LZNLWf9:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T05:43:11.755Z"
+    },
+    "i-grR3fmV:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T05:44:08.779Z"
+    },
+    "i-M95HTNH:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T05:47:34.534Z"
+    },
+    "i-HjTFKJ7:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T05:51:27.937Z"
+    },
+    "i-w3rxmgg:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T05:52:28.346Z"
+    },
+    "i-wdDHfpn:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T05:53:30.921Z"
+    },
+    "i-R4vHvjb:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T05:55:13.546Z"
+    },
+    "i-8DfVtth:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T05:58:54.438Z"
+    },
+    "i-xZdZmQs:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T06:00:12.920Z"
+    },
+    "i-rXJDPtr:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T06:06:39.991Z"
+    },
+    "i-khNrbjG:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T06:07:56.103Z"
+    },
+    "i-vRBRpfk:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T06:10:41.255Z"
+    },
+    "i-TWsj2NX:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T06:12:07.127Z"
+    },
+    "i-QkvssHD:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T06:13:26.143Z"
+    },
+    "i-c2JW8XZ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T06:14:42.543Z"
+    },
+    "i-Z8pZLnt:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T06:17:06.972Z"
+    },
+    "i-B3mmMvb:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T06:18:32.552Z"
+    },
+    "i-pcP7hcf:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T06:20:34.945Z"
+    },
+    "i-sBDTm7k:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T06:21:30.593Z"
+    },
+    "i-DwVBJb3:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T06:22:21.425Z"
+    },
+    "i-NgkC4Zt:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T06:25:26.665Z"
+    },
+    "i-qCNGgfg:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T06:26:51.963Z"
+    },
+    "i-fkMpXJf:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T06:28:31.050Z"
+    },
+    "i-zt2btJ7:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T06:30:00.743Z"
+    },
+    "i-4Wsxmqv:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T06:31:33.468Z"
+    },
+    "i-T6bD4w7:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T06:33:13.927Z"
+    },
+    "i-fCSxt3j:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T06:36:08.365Z"
+    },
+    "i-3nZvZTj:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T06:37:46.078Z"
+    },
+    "i-vP6ZvBw:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T06:40:29.965Z"
+    },
+    "i-rRdrQBg:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T06:41:54.535Z"
+    },
+    "i-Jn5Jd8S:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T06:44:31.601Z"
+    },
+    "i-FzCLS97:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T06:45:51.181Z"
+    },
+    "i-r3Kq9B4:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T06:47:08.761Z"
+    },
+    "i-HKGtS4N:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T06:48:26.308Z"
+    },
+    "i-f6rgrSr:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T06:49:42.140Z"
+    },
+    "i-vpt6C9V:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T06:51:06.350Z"
+    },
+    "i-jRxNbgX:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T06:53:15.628Z"
+    },
+    "i-9LC3ZrM:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T06:55:10.016Z"
+    },
+    "i-4XLSsnC:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T06:58:47.704Z"
+    },
+    "i-f4MSxpP:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T07:00:22.903Z"
+    },
+    "i-dsqgfVj:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T07:02:07.281Z"
+    },
+    "i-BGmFfF5:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T07:03:02.915Z"
+    },
+    "i-mdz2QGr:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T07:04:21.517Z"
+    },
+    "i-btSc5RS:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T07:05:25.647Z"
+    },
+    "i-6G4PBd8:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T07:06:24.549Z"
+    },
+    "i-6NQ6hQZ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T07:08:12.611Z"
+    },
+    "i-c98L2bs:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T07:09:01.237Z"
+    },
+    "i-2Xw7qGL:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T07:10:48.416Z"
+    },
+    "i-2D49wp7:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T07:11:56.849Z"
+    },
+    "i-Z8pZLnt:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T07:58:06.557Z"
+    },
+    "i-vP6ZvBw:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T07:59:08.820Z"
+    },
+    "i-q3f95K3:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T08:00:30.697Z"
+    },
+    "i-8NsWqJQ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T08:02:52.382Z"
+    },
+    "i-BJWt4zd:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T08:04:13.191Z"
+    },
+    "i-fhnpqP8:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T08:05:59.272Z"
+    },
+    "i-rGpCKkW:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "oim",
+      "updatedAt": "2026-11-18T14:59:02.383Z"
+    },
+    "i-KXLmcXW:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T21:12:54.389Z"
+    },
+    "i-WzTZ6Jv:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T21:18:28.425Z"
+    },
+    "i-JbWnV3V:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T21:20:50.079Z"
+    },
+    "i-kVr4LnG:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T21:25:31.368Z"
+    },
+    "i-kVr4LnG:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T21:27:14.413Z"
+    },
+    "i-WzTZ6Jv:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T21:30:10.635Z"
+    },
+    "i-StJWnTh:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T21:43:49.087Z"
+    },
+    "i-vc6XQPf:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T21:45:56.556Z"
+    },
+    "i-vc6XQPf:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T21:47:15.646Z"
+    },
+    "i-vc6XQPf:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T21:48:59.164Z"
+    },
+    "i-p6nks3C:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T22:30:20.745Z"
+    },
+    "i-QJR63LW:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": {
+      "classification": "scout",
+      "updatedAt": "2026-11-18T22:34:32.270Z"
     }
   }
 }

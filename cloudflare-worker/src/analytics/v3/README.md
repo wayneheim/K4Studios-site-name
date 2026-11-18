@@ -19,7 +19,7 @@ again until the displayed timestamp is current.
 ## Core reports
 
 The initial page contains page loads, sessions, visitors, engaged sessions,
-image views, the top 25 entry pages, top 10 site pages, accessed images with
+image views, the top 25 entry pages, top 25 site pages, accessed images with
 clickable thumbnails (highlighted green when pricing was opened), visitor geography, image-viewer geography, site visitor devices, image-viewer devices, entry
 sources, and core actions grouped by purpose. These all read the compact V3
 tables; opening the report never scans the raw event table.
@@ -34,6 +34,15 @@ Core reporting accepts selected meaningful events with both visitor and session
 IDs from the JavaScript collector. Known automation user agents, anonymous
 proxy traffic, and narrowly identified datacenter ASNs are kept out of core
 metrics and remain available in diagnostics.
+
+The confirmed November 6/17 rotating IPv6 crawl is excluded by the shared
+`rotating-proxy-crawl.js` matcher, including lifecycle evidence. It requires
+both an observed address pool and an observed frozen browser version. The
+ingestion gate refuses its writes, the image gateway returns an uncached 403,
+and the zone's existing bot firewall rule applies the same condition to public
+site and analytics hosts. Verified bots remain exempt from the request block.
+Run `node cloudflare-worker/scripts/test-rotating-proxy-crawl.mjs` to check
+access denial, ingestion, rollups, and the allowed-visitor boundaries.
 
 ## Activation sequence
 
@@ -51,6 +60,72 @@ metrics and remain available in diagnostics.
 9. Open `/__k4stats-v3` and incrementally catch up the 30-day window.
 10. After validation, retire the V2 rebuild route and remove redundant raw-event
    indexes in a separate, reversible migration.
+
+## Geography visitor mix
+
+Geography rows also show up to five distinct-visitor stars: cyan for new, green
+for returning, gray for unknown. Counts above five have a + popover containing
+the complete star list grouped by status. Hover, keyboard focus, and tap open
+it. Lists are generated locally from the counts only when opened. Classification
+matches the visitor-mix cards for the selected period: a visitor with any new
+session in that window counts as new, otherwise returning when known. A visitor
+is counted once per location even across multiple sessions. Both geography
+panels use the existing session-summary query; no event writes or raw reads are
+added. Run `node cloudflare-worker/scripts/test-analytics-v3-geo-mix.mjs` to
+verify deduplication, window semantics, and the five-star display limit.
+
+## Entry engagement
+
+Apply `migrations/2026-11-16-add-entry-engagement.sql` before deploying the
+updated analytics Worker. The site collector in `src/utils/analytics.ts` also
+needs the normal site deployment for visible time, scroll, and input flags.
+New measurements appear after **Update with new rows**; existing visits without
+reliable measurements remain unknown. No raw-history rebuild is required.
+
+Entry rows show the mean of known visit grades (1 limited, 2 browsing, 3 strong).
+Unknown visits are excluded from the mean and counted in the badge tooltip.
+These grades describe observed engagement, not human/bot probability:
+
+- 1: measured visible time or scroll, without stronger evidence. Time alone
+  stays at this level even if the tab was visible for a long time.
+- 2: an input/navigation/gallery/story action, or 10 seconds visible and 25%
+  scroll.
+- 3: zoom/information/pricing/cart activity, or 30 seconds visible together with
+  50% scroll or an action.
+
+Scroll and input flags stay in browser memory and ride on existing lifecycle
+messages. The timer and page instance reset on SPA navigation. The updater
+merges cumulative maxima into the existing session row, using primary-key
+lookups across cursor batches. Lifecycle observations do not increment page,
+visitor, or engaged-session totals. Only the initial entry page instance is
+graded; revisits and downstream pages cannot inflate it.
+
+The + control reads compact session summaries on demand, 100 visits per page,
+and caches them until the report reloads. It never scans raw events. The OIM
+journey panel defaults to collapsed only when the selected window has no data.
+
+Run `node cloudflare-worker/scripts/test-analytics-v3-entry-engagement.mjs` for
+collector, lifecycle, SQLite rollup/query, pagination, and rendering checks.
+
+### One-time historical engagement recovery
+
+`scripts/backfill-entry-engagement.mjs --start=YYYY-MM-DD --end=YYYY-MM-DD`
+audits missing evidence in existing summaries using the visitor index. It
+caches the snapshot, raw batches, proposed updates, and usage under ignored
+`cloudflare-worker/tmp/entry-engagement-backfill-<start>-<end>/`. Reads are capped
+at 100,000 rows per audit. Add `--apply` only after reviewing `plan.json`.
+
+Only verified first-page-instance actions and plausible visible-time records
+are recovered. Legacy timing is rejected when the same document instance
+visited another URL, is displayed as **Visible time (legacy)**, and cannot
+promote a visit to a higher grade without independent action evidence. Scroll
+remains unknown unless versioned collector metadata actually recorded it.
+
+The update changes only `entry_evidence`, only while it is still null. It does
+not reset the cursor, rebuild rollups, or modify traffic/navigation totals.
+Reruns skip already populated evidence. The snapshot preserves the original
+rows, and `applied.json` records the affected count and measured D1 usage.
+Validate with `node cloudflare-worker/scripts/test-entry-engagement-backfill.mjs`.
 
 ## Offline validation
 

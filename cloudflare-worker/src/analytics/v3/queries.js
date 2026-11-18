@@ -1,4 +1,5 @@
 import { V3_DATACENTER_ASNS } from './model.js';
+import { entryVisit } from './entry-engagement.js';
 
 const EASTERN_TIME_ZONE = 'America/New_York';
 const diagnosticAsnList = V3_DATACENTER_ASNS.join(',');
@@ -92,23 +93,38 @@ export async function getV3CoreSummary(env, { windowKey = 'today', now = new Dat
     `).bind(...bounds, ...bounds),
     env.DB.prepare(`
       WITH scoped AS MATERIALIZED (
-        SELECT landing_page,entry_source,visitor_id,visitor_geo,image_geo,site_device,image_device,page_view_count
+        SELECT landing_page,entry_source,visitor_id,visitor_status,visitor_geo,image_geo,site_device,image_device,page_view_count,entry_evidence
         FROM analytics_v3_daily_sessions WHERE day BETWEEN ? AND ?
+      ), visitor_statuses AS MATERIALIZED (
+        SELECT visitor_id,MAX(CASE WHEN visitor_status='new' THEN 1 ELSE 0 END) saw_new,
+          MAX(CASE WHEN visitor_status='returning' THEN 1 ELSE 0 END) saw_returning
+        FROM scoped WHERE visitor_id IS NOT NULL AND visitor_id<>'' GROUP BY visitor_id
+      ), geo_members AS (
+        SELECT 'visitor_geo' kind,COALESCE(visitor_geo,image_geo) label,visitor_id
+        FROM scoped WHERE COALESCE(visitor_geo,image_geo) IS NOT NULL AND visitor_id IS NOT NULL AND visitor_id<>''
+        UNION
+        SELECT 'image_geo',image_geo,visitor_id FROM scoped
+        WHERE image_geo IS NOT NULL AND visitor_id IS NOT NULL AND visitor_id<>''
+      ), geo_mix AS (
+        SELECT g.kind,g.label,COUNT(*) count,json_object(
+          'newVisitors',SUM(v.saw_new),
+          'returningVisitors',SUM(CASE WHEN v.saw_new=0 AND v.saw_returning=1 THEN 1 ELSE 0 END),
+          'unknownVisitors',SUM(CASE WHEN v.saw_new=0 AND v.saw_returning=0 THEN 1 ELSE 0 END)
+        ) visitor_mix FROM geo_members g JOIN visitor_statuses v USING(visitor_id)
+        GROUP BY g.kind,g.label
       )
       SELECT 'entry_page' kind,landing_page label,COUNT(*) count,
         SUM(CASE WHEN page_view_count >= 2 THEN 1 ELSE 0 END) continued,
-        SUM(CASE WHEN image_device IS NOT NULL OR image_geo IS NOT NULL THEN 1 ELSE 0 END) chapters
+        SUM(CASE WHEN image_device IS NOT NULL OR image_geo IS NOT NULL THEN 1 ELSE 0 END) chapters,
+        COUNT(json_extract(entry_evidence,'$.grade')) graded,
+        COALESCE(SUM(json_extract(entry_evidence,'$.grade')),0) grade_total,NULL visitor_mix
         FROM scoped
         WHERE landing_page IS NOT NULL GROUP BY landing_page
       UNION ALL
-      SELECT 'entry_source',entry_source,COUNT(*),NULL,NULL FROM scoped
+      SELECT 'entry_source',entry_source,COUNT(*),NULL,NULL,NULL,NULL,NULL FROM scoped
         WHERE entry_source IS NOT NULL GROUP BY entry_source
       UNION ALL
-      SELECT 'visitor_geo',COALESCE(visitor_geo,image_geo),COUNT(DISTINCT visitor_id),NULL,NULL FROM scoped
-        WHERE COALESCE(visitor_geo,image_geo) IS NOT NULL GROUP BY COALESCE(visitor_geo,image_geo)
-      UNION ALL
-      SELECT 'image_geo',image_geo,COUNT(DISTINCT visitor_id),NULL,NULL FROM scoped
-        WHERE image_geo IS NOT NULL GROUP BY image_geo
+      SELECT kind,label,count,NULL,NULL,NULL,NULL,visitor_mix FROM geo_mix
     `).bind(...bounds),
     env.DB.prepare(`
       SELECT oim_domain label,
@@ -192,7 +208,8 @@ export async function getV3CoreSummary(env, { windowKey = 'today', now = new Dat
   const top = (dimension, limit) => dimensionRows.filter((row) => row.dimension === dimension)
     .slice(0, limit).map((row) => ({ label: row.label, count: Number(row.count || 0) }));
   const topSession = (kind, limit) => sessionRows.filter((row) => row.kind === kind)
-    .map((row) => ({ label: row.label, count: Number(row.count || 0) }))
+    .map((row) => ({ label: row.label, count: Number(row.count || 0),
+      ...(row.visitor_mix ? { visitorMix: JSON.parse(row.visitor_mix) } : {}) }))
     .sort((a, b) => (b.count - a.count) || a.label.localeCompare(b.label)).slice(0, limit);
   const imageViewGeoCounts = new Map(top('image_geo_views', Number.MAX_SAFE_INTEGER)
     .map((row) => [row.label, row.count]));
@@ -210,7 +227,9 @@ export async function getV3CoreSummary(env, { windowKey = 'today', now = new Dat
       label: row.label,
       entries: Number(row.count || 0),
       continued: Number(row.continued || 0),
-      chapters: Number(row.chapters || 0)
+      chapters: Number(row.chapters || 0),
+      graded: Number(row.graded || 0),
+      gradeTotal: Number(row.grade_total || 0)
     }))
     .sort((a, b) => (b.entries - a.entries) || a.label.localeCompare(b.label))
     .slice(0, 25);
@@ -227,7 +246,7 @@ export async function getV3CoreSummary(env, { windowKey = 'today', now = new Dat
       cowboy_widget_clicks: actionCounts.get('Cowboy widget clicked') || 0,
       picture_shows_widget_clicks: actionCounts.get('Picture Shows widget clicked') || 0
     },
-    topPages: top('page', 10),
+    topPages: top('page', 25),
     topImages: rows(imageResult).map((row) => ({
       label: row.image_id, imageId: row.image_id, pagePath: row.page_path || null,
       count: Number(row.count || 0), pricingOpens: Number(row.pricing_opens || 0),
@@ -268,6 +287,24 @@ export async function getV3CoreSummary(env, { windowKey = 'today', now = new Dat
       locations: top('merchant_inspection_location', 10)
     }
   };
+}
+
+export async function getV3EntryVisits(env, { windowKey = 'today', now = new Date(), path, cursor = null } = {}) {
+  const window = getV3Window(windowKey, now);
+  const values = [window.startDay, window.endDay, path];
+  if (cursor) values.push(cursor.day, cursor.sessionId);
+  const result = await env.DB.prepare(`
+    SELECT day,session_id,entry_evidence,entry_source,site_device,image_device,image_geo,page_view_count
+    FROM analytics_v3_daily_sessions
+    WHERE day BETWEEN ? AND ? AND landing_page=?
+      ${cursor ? 'AND (day,session_id) < (?,?)' : ''}
+    ORDER BY day DESC,session_id DESC LIMIT 101
+  `).bind(...values).all();
+  const found = rows(result);
+  const page = found.slice(0, 100);
+  const last = page.at(-1);
+  return { visits: page.map(entryVisit), nextCursor: found.length > 100
+    ? JSON.stringify({ day: last.day, sessionId: last.session_id }) : null };
 }
 
 export async function getV3Diagnostics(env, { windowKey = 'today', now = new Date() } = {}) {

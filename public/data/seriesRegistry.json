@@ -1,7 +1,7 @@
 {
   "_meta": {
     "version": "2.0",
-    "lastUpdated": "2026-11-14T05:36:20.134Z",
+    "lastUpdated": "2026-11-15T16:13:52.864Z",
     "editionDataMigrated": "2025-12-27T01:58:37.244Z",
     "lastSyncFrom": "Engrained-Series.mjs",
     "oneImageMovieMarkedAt": "2026-06-05T16:24:54.142Z"
@@ -3702,7 +3702,14 @@
     "i-ST6R4S3:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-XSMpjUv",
     "i-32xbMtQ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-h6c4Q63",
     "i-GtX9w4B:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-tY22pWa",
-    "i-7bVL94b:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-9GLZDDK"
+    "i-7bVL94b:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs": "s-9GLZDDK",
+    "i-kWVzc6g:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": "s-nYzjn4U",
+    "i-qjLp9Lf:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": "s-Lh9PGjv",
+    "i-hM8SXCd:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": "s-5nQ7j8E",
+    "i-6rWdVVk:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": "s-6A6TdwG",
+    "i-xxr9Tnb:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": "s-McTGVC7",
+    "i-ssCjgX8:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs": "s-K28EFGk",
+    "i-RRw2Tfr:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": "s-VGw2Jsc"
   },
   "series": {
     "s-BB65wHk": {
@@ -10163,15 +10170,16 @@
     "s-pZdnuYw": {
       "primaryImageId": "i-M95HTNH",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
-      "title": "Standing My Ground: Cowgirl’s Defiance in the Old West",
+      "title": "Standing My Ground: Cowgirl's Defiance in the Old West",
       "src": "/img/i-M95HTNH/l.jpg",
       "occurrences": [
         {
           "imageId": "i-M95HTNH",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
-          "title": "Standing My Ground: Cowgirl’s Defiance in the Old West",
+          "title": "Standing My Ground: Cowgirl's Defiance in the Old West",
           "src": "/img/i-M95HTNH/l.jpg"
         }
       ],
@@ -10180,6 +10188,9 @@
       "excludeSizes": {
         "chronicle": [
           "20\" x 24\""
+        ],
+        "foundation": [
+          "11\" x 14\""
         ]
       },
       "editionData": {
@@ -10284,7 +10295,8 @@
     "s-4SaDhy2": {
       "primaryImageId": "i-HjTFKJ7",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Black & White Cowboy Art: Bon Voyage",
       "src": "/img/i-HjTFKJ7/l.jpg",
@@ -10301,6 +10313,9 @@
       "excludeSizes": {
         "chronicle": [
           "20\" x 24\""
+        ],
+        "foundation": [
+          "11\" x 14\""
         ]
       },
       "editionData": {
@@ -10386,7 +10401,8 @@
     "s-jTBWJ7n": {
       "primaryImageId": "i-KgKZZxg",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "The Line Between Quiet and Chaos",
       "src": "/img/i-KgKZZxg/l.jpg",
@@ -10454,7 +10470,8 @@
     "s-52avmGF": {
       "primaryImageId": "i-MTX8mmk",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "On His Own Ground",
       "src": "/img/i-MTX8mmk/l.jpg",
@@ -10468,7 +10485,12 @@
       ],
       "linkedCount": 1,
       "createdAt": "2025-12-22T19:13:28.826Z",
-      "oneImageMovie": true
+      "oneImageMovie": true,
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      }
     },
     "s-pfp2TYT": {
       "primaryImageId": "i-wS6x5S5",
@@ -10507,7 +10529,8 @@
     "s-ZxfWSHt": {
       "primaryImageId": "i-DJMTZ8z",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Resting Easy",
       "src": "/img/i-DJMTZ8z/l.jpg",
@@ -10541,7 +10564,8 @@
     "s-fPWzFx7": {
       "primaryImageId": "i-DQHK8FK",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "The Last Word",
       "src": "/img/i-DQHK8FK/l.jpg",
@@ -10558,7 +10582,8 @@
       "excludeSizes": {
         "chronicle": [
           "20\" x 24\""
-        ]
+        ],
+        "foundation": []
       },
       "editionData": {
         "chronicle": {
@@ -10631,7 +10656,8 @@
     "s-K7TbXHX": {
       "primaryImageId": "i-LrfWmg7",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Dead to Rights",
       "src": "/img/i-LrfWmg7/l.jpg",
@@ -10655,7 +10681,12 @@
           "firstReleaseDate": "2025-12-20T07:15:13.753Z"
         }
       },
-      "oneImageMovie": true
+      "oneImageMovie": true,
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      }
     },
     "s-cMcy2Wj": {
       "primaryImageId": "i-xfqTp8K",
@@ -10694,7 +10725,8 @@
     "s-aNAL5ma": {
       "primaryImageId": "i-MnBn4kW",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Waiting on Supper",
       "src": "/img/i-MnBn4kW/l.jpg",
@@ -10708,12 +10740,14 @@
       ],
       "linkedCount": 1,
       "createdAt": "2025-12-22T19:13:28.827Z",
-      "oneImageMovie": true
+      "oneImageMovie": true,
+      "excludeSizes": {}
     },
     "s-HvvpW7f": {
       "primaryImageId": "i-bLHTNNg",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "This One-Horse Town",
       "src": "/img/i-bLHTNNg/l.jpg",
@@ -10730,6 +10764,9 @@
       "excludeSizes": {
         "chronicle": [
           "20\" x 24\""
+        ],
+        "foundation": [
+          "11\" x 14\""
         ]
       },
       "editionData": {
@@ -10747,26 +10784,33 @@
     "s-Q2Skda2": {
       "primaryImageId": "i-s5XTxBL",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
-      "title": "Difficult Choices: A Cowboy’s Journey on the Rails",
+      "title": "Difficult Choices: A Cowboy's Journey on the Rails",
       "src": "/img/i-s5XTxBL/l.jpg",
       "occurrences": [
         {
           "imageId": "i-s5XTxBL",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
-          "title": "Difficult Choices: A Cowboy’s Journey on the Rails",
+          "title": "Difficult Choices: A Cowboy's Journey on the Rails",
           "src": "/img/i-s5XTxBL/l.jpg"
         }
       ],
       "linkedCount": 1,
       "createdAt": "2025-12-22T19:13:28.827Z",
-      "oneImageMovie": true
+      "oneImageMovie": true,
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      }
     },
     "s-mebqZq5": {
       "primaryImageId": "i-R7VTGwJ",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Step Right Up",
       "src": "/img/i-R7VTGwJ/l.jpg",
@@ -10844,7 +10888,8 @@
       "createdAt": "2025-12-22T19:13:28.827Z",
       "excludeSizes": {
         "chronicle": [
-          "20\" x 24\""
+          "20\" x 24\"",
+          "16\" x 20\""
         ]
       },
       "editionData": {
@@ -11220,7 +11265,12 @@
       ],
       "linkedCount": 1,
       "createdAt": "2025-12-22T19:13:28.828Z",
-      "oneImageMovie": true
+      "oneImageMovie": true,
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      }
     },
     "s-2t8sw6H": {
       "primaryImageId": "i-NZLcBqN",
@@ -12251,7 +12301,8 @@
     "s-jp47ZFf": {
       "primaryImageId": "i-8KsLSkd",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Having a Good Laugh",
       "src": "/img/i-8KsLSkd/l.jpg",
@@ -12265,7 +12316,12 @@
       ],
       "linkedCount": 1,
       "createdAt": "2025-12-22T19:18:50.713Z",
-      "oneImageMovie": true
+      "oneImageMovie": true,
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      }
     },
     "s-YuQaXR7": {
       "primaryImageId": "i-sz7RwkR",
@@ -12407,7 +12463,9 @@
       "linkedCount": 1,
       "createdAt": "2025-12-22T19:18:50.715Z",
       "excludeSizes": {
-        "foundation": []
+        "foundation": [
+          "11\" x 14\""
+        ]
       },
       "oneImageMovie": true
     },
@@ -12528,7 +12586,12 @@
           "firstReleaseDate": "2025-12-20T07:19:20.081Z"
         }
       },
-      "oneImageMovie": true
+      "oneImageMovie": true,
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      }
     },
     "s-u8WCENT": {
       "primaryImageId": "i-CdpCkV4",
@@ -12694,7 +12757,12 @@
       ],
       "linkedCount": 1,
       "createdAt": "2025-12-22T19:18:50.716Z",
-      "oneImageMovie": true
+      "oneImageMovie": true,
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      }
     },
     "s-rRYdJjQ": {
       "primaryImageId": "i-8DfVtth",
@@ -12831,7 +12899,12 @@
           "firstReleaseDate": "2025-12-20T07:20:05.996Z"
         }
       },
-      "oneImageMovie": true
+      "oneImageMovie": true,
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      }
     },
     "s-rwHE9KH": {
       "primaryImageId": "i-pdW6WgR",
@@ -12997,8 +13070,7 @@
       "primaryImageId": "i-xMjhQVd",
       "tiers": [
         "sketch",
-        "foundation",
-        "chronicle"
+        "foundation"
       ],
       "title": "Waiting for News",
       "src": "/img/i-xMjhQVd/l.jpg",
@@ -13014,7 +13086,8 @@
       "createdAt": "2025-12-22T19:18:50.717Z",
       "excludeSizes": {
         "chronicle": [
-          "20\" x 24\""
+          "20\" x 24\"",
+          "16\" x 20\""
         ]
       },
       "editionData": {
@@ -13092,7 +13165,12 @@
       ],
       "linkedCount": 1,
       "createdAt": "2025-12-22T19:18:50.717Z",
-      "oneImageMovie": true
+      "oneImageMovie": true,
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      }
     },
     "s-55db5Qz": {
       "primaryImageId": "i-45kXhng",
@@ -13194,7 +13272,8 @@
     "s-mQb6rMz": {
       "primaryImageId": "i-Zfp4KwJ",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Happy Sights",
       "src": "/img/i-Zfp4KwJ/l.jpg",
@@ -13208,7 +13287,12 @@
       ],
       "linkedCount": 1,
       "createdAt": "2025-12-22T19:18:50.717Z",
-      "oneImageMovie": true
+      "oneImageMovie": true,
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      }
     },
     "s-8bGMwpP": {
       "primaryImageId": "i-K2f4VC2",
@@ -13333,10 +13417,9 @@
     "s-8yz9t9k": {
       "primaryImageId": "i-B2H9fFs",
       "tiers": [
-        "sketch",
-        "foundation"
+        "sketch"
       ],
-      "title": "Star and Smile",
+      "title": "Hat in the Wind",
       "src": "/img/i-B2H9fFs/l.jpg",
       "occurrences": [
         {
@@ -13861,8 +13944,7 @@
     "s-4GCsME3": {
       "primaryImageId": "i-xH6DsjR",
       "tiers": [
-        "sketch",
-        "foundation"
+        "sketch"
       ],
       "title": "Looking at the Skies",
       "src": "/img/i-xH6DsjR/l.jpg",
@@ -13952,7 +14034,8 @@
       },
       "excludeSizes": {
         "chronicle": [
-          "20\" x 24\""
+          "20\" x 24\"",
+          "16\" x 20\""
         ]
       },
       "oneImageMovie": true
@@ -13960,8 +14043,7 @@
     "s-d36MUz6": {
       "primaryImageId": "i-qVVVQPH",
       "tiers": [
-        "sketch",
-        "foundation"
+        "sketch"
       ],
       "title": "Waiting on the Porch",
       "src": "/img/i-qVVVQPH/l.jpg",
@@ -14004,8 +14086,7 @@
     "s-fSWJpmW": {
       "primaryImageId": "i-X8DBDJS",
       "tiers": [
-        "sketch",
-        "foundation"
+        "sketch"
       ],
       "title": "A Matter of Duty",
       "src": "/img/i-X8DBDJS/l.jpg",
@@ -14415,13 +14496,13 @@
         "sketch",
         "foundation"
       ],
-      "title": "What He Knows",
+      "title": "Cowboy's Pause",
       "src": "/img/i-vc6XQPf/l.jpg",
       "occurrences": [
         {
           "imageId": "i-vc6XQPf",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
-          "title": "Cowboy’s Pause",
+          "title": "Cowboy's Pause",
           "src": "/img/i-vc6XQPf/l.jpg"
         },
         {
@@ -37026,7 +37107,7 @@
         "chronicle",
         "foundation"
       ],
-      "title": "Roaring 20s Photography",
+      "title": "Earned in Small Change",
       "src": "/img/i-8zkKqtg/l.jpg",
       "occurrences": [
         {
@@ -37074,7 +37155,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "1920s Portraits - Roaring 20s Photography",
+      "title": "Signal Received",
       "src": "/img/i-KMhKvRb/l.jpg",
       "occurrences": [
         {
@@ -37098,13 +37179,13 @@
         "sketch",
         "foundation"
       ],
-      "title": "Exploring Roaring Twenties Portraits",
+      "title": "The Cane at Rest",
       "src": "/img/i-zrVCpMP/l.jpg",
       "occurrences": [
         {
           "imageId": "i-zrVCpMP",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color.mjs",
-          "title": "Terms of Power",
+          "title": "The Cane at Rest",
           "src": "/img/i-zrVCpMP/l.jpg"
         }
       ],
@@ -37122,7 +37203,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "The Essence Of Roaring 20s Photography",
+      "title": "Unspoken Rank",
       "src": "/img/i-rxnpqCQ/l.jpg",
       "occurrences": [
         {
@@ -37146,13 +37227,13 @@
         "sketch",
         "foundation"
       ],
-      "title": "1920's  at Old Bedford Village",
+      "title": "An Arrangement on the Porch",
       "src": "/img/i-mMXRvh4/l.jpg",
       "occurrences": [
         {
           "imageId": "i-mMXRvh4",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color.mjs",
-          "title": "Terms of Agreement",
+          "title": "An Arrangement on the Porch",
           "src": "/img/i-mMXRvh4/l.jpg"
         }
       ],
@@ -37170,7 +37251,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Roaring 20s Photography",
+      "title": "Operator",
       "src": "/img/i-m7STjq2/l.jpg",
       "occurrences": [
         {
@@ -37194,7 +37275,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Capturing Roaring 20s Photography",
+      "title": "A Matter of Business",
       "src": "/img/i-QBKhZS2/l.jpg",
       "occurrences": [
         {
@@ -37214,7 +37295,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "1920's  at Old Bedford Village",
+      "title": "Holding the Threshold",
       "src": "/img/i-pqpdH2v/l.jpg",
       "occurrences": [
         {
@@ -37238,7 +37319,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Exploring 1920s Portraits",
+      "title": "A Gentleman of His Time",
       "src": "/img/i-7rWrmHq/l.jpg",
       "occurrences": [
         {
@@ -37262,7 +37343,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "1920's  at Old Bedford Village",
+      "title": "Following His Lead",
       "src": "/img/i-jRPgZj3/l.jpg",
       "occurrences": [
         {
@@ -37286,7 +37367,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "The Essence Of Roaring 20s Photography",
+      "title": "Front Porch Accord",
       "src": "/img/i-trPHqZK/l.jpg",
       "occurrences": [
         {
@@ -37306,7 +37387,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Fine Art Roaring Twenties Portraits",
+      "title": "The Long Regard",
       "src": "/img/i-DfS7sz2/l.jpg",
       "occurrences": [
         {
@@ -37330,7 +37411,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Cowboy Roaring 20s Art",
+      "title": "Holding Court",
       "src": "/img/i-zKXCVqN/l.jpg",
       "occurrences": [
         {
@@ -37354,13 +37435,13 @@
         "sketch",
         "foundation"
       ],
-      "title": "Havana Post Cigars",
+      "title": "Arrival Beside Havana Post",
       "src": "/img/i-tpvJWLm/l.jpg",
       "occurrences": [
         {
           "imageId": "i-tpvJWLm",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White.mjs",
-          "title": "Havana Post Cigars",
+          "title": "Arrival Beside Havana Post",
           "src": "/img/i-tpvJWLm/l.jpg"
         }
       ],
@@ -37378,7 +37459,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Roaring 20s Art In Fine Art",
+      "title": "The Line Is Live",
       "src": "/img/i-mgVpfhT/l.jpg",
       "occurrences": [
         {
@@ -37402,13 +37483,13 @@
         "sketch",
         "foundation"
       ],
-      "title": "Mr. & Mrs. Trouble",
+      "title": "A Partnership in Shadow",
       "src": "/img/i-jm2ddJx/l.jpg",
       "occurrences": [
         {
           "imageId": "i-jm2ddJx",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White.mjs",
-          "title": "Mr. & Mrs. Trouble",
+          "title": "A Partnership in Shadow",
           "src": "/img/i-jm2ddJx/l.jpg"
         }
       ],
@@ -37422,7 +37503,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Roaring 20s Art Portrait",
+      "title": "Make It Known",
       "src": "/img/i-Gzdmm73/l.jpg",
       "occurrences": [
         {
@@ -37442,7 +37523,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Civil War Art Portrait",
+      "title": "After the Smoke",
       "src": "/img/i-834cDZ8/l.jpg",
       "occurrences": [
         {
@@ -37466,7 +37547,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Painterly Civil War Portrait: Passing time.",
+      "title": "Passing Time",
       "src": "/img/i-vQXXDRJ/l.jpg",
       "occurrences": [
         {
@@ -37490,7 +37571,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Painterly Civil War Portrait Photo: Drummer boy.",
+      "title": "Counting Time",
       "src": "/img/i-TkBf43K/l.jpg",
       "occurrences": [
         {
@@ -37502,9 +37583,7 @@
       ],
       "linkedCount": 1,
       "excludeSizes": {
-        "foundation": [
-          "11\" x 14\""
-        ]
+        "foundation": []
       },
       "createdAt": "2026-02-10T17:54:26.015Z"
     },
@@ -37514,7 +37593,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Fine Art Civil War Art",
+      "title": "In His Sights",
       "src": "/img/i-5jfqH53/l.jpg",
       "occurrences": [
         {
@@ -37535,10 +37614,9 @@
     "s-VgcEbNL": {
       "primaryImageId": "i-qSgZ7zD",
       "tiers": [
-        "sketch",
-        "foundation"
+        "sketch"
       ],
-      "title": "Civil War Art Prints Study",
+      "title": "Lines of Work",
       "src": "/img/i-qSgZ7zD/l.jpg",
       "occurrences": [
         {
@@ -37562,7 +37640,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Exploring Civil War Reenactment Photography",
+      "title": "In Formation",
       "src": "/img/i-2rXwHbt/l.jpg",
       "occurrences": [
         {
@@ -37582,7 +37660,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Exploring Civil War Paintings",
+      "title": "Waiting for the Call",
       "src": "/img/i-jHxmb55/l.jpg",
       "occurrences": [
         {
@@ -37602,7 +37680,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Fine Art Civil War Paintings",
+      "title": "Veterans of the Line",
       "src": "/img/i-7PMTVGg/l.jpg",
       "occurrences": [
         {
@@ -37622,7 +37700,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Legacy Portraits For Collectors Portrait",
+      "title": "Under the Colors",
       "src": "/img/i-4xLxQpk/l.jpg",
       "occurrences": [
         {
@@ -37642,7 +37720,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Fine Art Legacy Portraits For Collectors",
+      "title": "Sound the Assembly",
       "src": "/img/i-gF8ZqQS/l.jpg",
       "occurrences": [
         {
@@ -37653,7 +37731,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-02-10T17:55:48.371Z"
     },
     "s-wuKM46r": {
@@ -37662,7 +37744,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Civil War Art Portrait",
+      "title": "Hands to the Wheel",
       "src": "/img/i-xKnSff2/l.jpg",
       "occurrences": [
         {
@@ -37674,9 +37756,7 @@
       ],
       "linkedCount": 1,
       "excludeSizes": {
-        "foundation": [
-          "11\" x 14\""
-        ]
+        "foundation": []
       },
       "createdAt": "2026-02-10T17:57:17.594Z"
     },
@@ -37686,7 +37766,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Legacy Portraits For Collectors In Fine Art",
+      "title": "Whispered Promises",
       "src": "/img/i-ScfTV48/l.jpg",
       "occurrences": [
         {
@@ -37710,7 +37790,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Civil War Photography ",
+      "title": "Smoke Over Hale Farm",
       "src": "/img/i-m5CqBfM/l.jpg",
       "occurrences": [
         {
@@ -37727,9 +37807,11 @@
     "s-TD9gCbt": {
       "primaryImageId": "i-R53CkVb",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation",
+        "chronicle"
       ],
-      "title": "Civil War Art: Ready to ride.",
+      "title": "Hold Fast",
       "src": "/img/i-R53CkVb/l.jpg",
       "occurrences": [
         {
@@ -37740,16 +37822,21 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "chronicle": [
+          "20\" x 24\""
+        ]
+      },
       "createdAt": "2026-02-10T17:59:41.246Z"
     },
     "s-BNt9pfx": {
       "primaryImageId": "i-xhX479V",
       "tiers": [
         "sketch",
-        "foundation"
+        "foundation",
+        "chronicle"
       ],
-      "title": "Hero’s Ride – Civil War Soldier In Battle",
+      "title": "Through the Smoke",
       "src": "/img/i-xhX479V/l.jpg",
       "occurrences": [
         {
@@ -37760,7 +37847,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "chronicle": [
+          "20\" x 24\""
+        ]
+      },
       "createdAt": "2026-02-10T18:00:10.069Z"
     },
     "s-fXJKxya": {
@@ -37769,7 +37860,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Civil War Art:  Little Drummer Boy.",
+      "title": "Little Drummer Boy",
       "src": "/img/i-9q7BrTt/l.jpg",
       "occurrences": [
         {
@@ -37781,9 +37872,7 @@
       ],
       "linkedCount": 1,
       "excludeSizes": {
-        "foundation": [
-          "11\" x 14\""
-        ]
+        "foundation": []
       },
       "createdAt": "2026-02-10T18:00:19.740Z"
     },
@@ -37793,7 +37882,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Old Glory Civil War Run",
+      "title": "The Cost of Colors",
       "src": "/img/i-N2LmzLK/l.jpg",
       "occurrences": [
         {
@@ -37813,7 +37902,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Civil War Art: Fog of War",
+      "title": "Fog of War",
       "src": "/img/i-pvFgTr4/l.jpg",
       "occurrences": [
         {
@@ -37825,9 +37914,7 @@
       ],
       "linkedCount": 1,
       "excludeSizes": {
-        "foundation": [
-          "11\" x 14\""
-        ]
+        "foundation": []
       },
       "createdAt": "2026-02-10T18:00:29.249Z"
     },
@@ -37837,7 +37924,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Civil War Art: Pep talk for the boys.",
+      "title": "Under One Banner",
       "src": "/img/i-QbSdKQS/l.jpg",
       "occurrences": [
         {
@@ -37861,7 +37948,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Returning Fire! - Civil War Art by Wayne Heim",
+      "title": "Returning Fire",
       "src": "/img/i-LnvhzJ4/l.jpg",
       "occurrences": [
         {
@@ -37881,7 +37968,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Civil War Art:  Firing Line",
+      "title": "Firing Line",
       "src": "/img/i-H5Z44TF/l.jpg",
       "occurrences": [
         {
@@ -37901,7 +37988,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Civil War Art: Glory on the Move",
+      "title": "Glory on the Move",
       "src": "/img/i-R5L4KXL/l.jpg",
       "occurrences": [
         {
@@ -37921,7 +38008,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Civil War Art:  Charge the Line!",
+      "title": "Charge the Line",
       "src": "/img/i-Lkzzxqv/l.jpg",
       "occurrences": [
         {
@@ -37945,7 +38032,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Civil War Art: Onward to the Next Battle",
+      "title": "Under the Standard",
       "src": "/img/i-3M3Jd8c/l.jpg",
       "occurrences": [
         {
@@ -37969,7 +38056,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Civil War Art: Documenting the War",
+      "title": "Documenting the War",
       "src": "/img/i-f2DpvdK/l.jpg",
       "occurrences": [
         {
@@ -37993,7 +38080,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Civil War Art: Fall in boys!",
+      "title": "Sound the Assembly",
       "src": "/img/i-2pHXbPq/l.jpg",
       "occurrences": [
         {
@@ -38017,7 +38104,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Civil War Art: This great union...",
+      "title": "Bound by Stars",
       "src": "/img/i-8bDSdDK/l.jpg",
       "occurrences": [
         {
@@ -38041,7 +38128,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Civil War Art:  Four score...",
+      "title": "Four Score",
       "src": "/img/i-nHw5ZMt/l.jpg",
       "occurrences": [
         {
@@ -38053,9 +38140,7 @@
       ],
       "linkedCount": 1,
       "excludeSizes": {
-        "foundation": [
-          "11\" x 14\""
-        ]
+        "foundation": []
       },
       "createdAt": "2026-02-10T18:02:51.750Z"
     },
@@ -38065,7 +38150,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Civil War Art: Doing his part",
+      "title": "Doing His Part",
       "src": "/img/i-fgb75Ts/l.jpg",
       "occurrences": [
         {
@@ -38089,7 +38174,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Civil War Art: Abe",
+      "title": "Abe",
       "src": "/img/i-46zfcQx/l.jpg",
       "occurrences": [
         {
@@ -48034,7 +48119,8 @@
     "s-R3zmd9K": {
       "primaryImageId": "i-GqDJLmF",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Between Orders",
       "src": "/img/i-GqDJLmF/l.jpg",
@@ -48047,13 +48133,18 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-02-17T16:03:30.877Z"
     },
     "s-tXEsFkQ": {
       "primaryImageId": "i-ShbbBcz",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Holding Ground",
       "src": "/img/i-ShbbBcz/l.jpg",
@@ -48066,13 +48157,18 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-02-17T16:18:21.749Z"
     },
     "s-n5ZCZu4": {
       "primaryImageId": "i-mDZn7Xx",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "The Steady Gaze",
       "src": "/img/i-mDZn7Xx/l.jpg",
@@ -48085,13 +48181,18 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-02-17T16:22:48.405Z"
     },
     "s-xrWgQjW": {
       "primaryImageId": "i-dWHn77W",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "On Official Business",
       "src": "/img/i-dWHn77W/l.jpg",
@@ -48104,7 +48205,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-02-17T16:24:31.463Z"
     },
     "s-6aDy39w": {
@@ -48129,7 +48234,8 @@
     "s-XZmBWtW": {
       "primaryImageId": "i-tHwDWLC",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Counsel in the Field",
       "src": "/img/i-tHwDWLC/l.jpg",
@@ -48142,13 +48248,18 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-02-17T16:34:09.936Z"
     },
     "s-65KfaJE": {
       "primaryImageId": "i-bcHKgfx",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Not The Same Man",
       "src": "/img/i-bcHKgfx/l.jpg",
@@ -48161,13 +48272,18 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-02-17T16:56:44.628Z"
     },
     "s-Pju4LhG": {
       "primaryImageId": "i-bCzTRRB",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Remnant of the Line",
       "src": "/img/i-bCzTRRB/l.jpg",
@@ -48186,7 +48302,8 @@
     "s-GDvAepd": {
       "primaryImageId": "i-QW5C48m",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Echo of the Line",
       "src": "/img/i-QW5C48m/l.jpg",
@@ -48199,32 +48316,42 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-02-17T17:00:16.922Z"
     },
     "s-gT2seXU": {
       "primaryImageId": "i-vztmrNx",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
-      "title": "A Quiet Commission",
+      "title": "A Quiet Command",
       "src": "/img/i-vztmrNx/l.jpg",
       "occurrences": [
         {
           "imageId": "i-vztmrNx",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs",
-          "title": "A Quiet Commission",
+          "title": "A Quiet Command",
           "src": "/img/i-vztmrNx/l.jpg"
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-02-17T17:04:10.929Z"
     },
     "s-4JZ7T67": {
       "primaryImageId": "i-vRTfLrV",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Holding the Homefront",
       "src": "/img/i-vRTfLrV/l.jpg",
@@ -48237,13 +48364,18 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-02-17T17:06:18.359Z"
     },
     "s-q74N4Zd": {
       "primaryImageId": "i-q5tM4bH",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Between Drills",
       "src": "/img/i-q5tM4bH/l.jpg",
@@ -48256,13 +48388,18 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-02-17T17:08:15.340Z"
     },
     "s-DQWjh3f": {
       "primaryImageId": "i-WDPZRGD",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Rear Guard",
       "src": "/img/i-WDPZRGD/l.jpg",
@@ -48275,13 +48412,18 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-02-17T17:10:20.224Z"
     },
     "s-euX9MG7": {
       "primaryImageId": "i-CvnVxzQ",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Gunners at the Ready",
       "src": "/img/i-CvnVxzQ/l.jpg",
@@ -48294,13 +48436,18 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-02-17T17:17:19.381Z"
     },
     "s-yZRbEh7": {
       "primaryImageId": "i-JdswJLd",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Worn by Duty",
       "src": "/img/i-JdswJLd/l.jpg",
@@ -48319,7 +48466,8 @@
     "s-WNmYETt": {
       "primaryImageId": "i-N3945FQ",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "A Veteran’s Silence",
       "src": "/img/i-N3945FQ/l.jpg",
@@ -48363,7 +48511,8 @@
     "s-yeM5q5e": {
       "primaryImageId": "i-C5ZGjMH",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "The Burden of Rank",
       "src": "/img/i-C5ZGjMH/l.jpg",
@@ -48382,7 +48531,8 @@
     "s-vD4Htd3": {
       "primaryImageId": "i-DJKJkMb",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Hold Fast",
       "src": "/img/i-DJKJkMb/l.jpg",
@@ -48401,7 +48551,8 @@
     "s-MfAZM3e": {
       "primaryImageId": "i-nWsP2r2",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Catching Up",
       "src": "/img/i-nWsP2r2/l.jpg",
@@ -48420,7 +48571,8 @@
     "s-reecJZe": {
       "primaryImageId": "i-fdtLTbW",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Interesting Proposition",
       "src": "/img/i-fdtLTbW/l.jpg",
@@ -48433,13 +48585,18 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-02-17T17:55:20.640Z"
     },
     "s-Fcb48Fv": {
       "primaryImageId": "i-CGRD3jF",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Tending to the Boys",
       "src": "/img/i-CGRD3jF/l.jpg",
@@ -48452,13 +48609,18 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-02-17T17:56:16.775Z"
     },
     "s-5pBtwyg": {
       "primaryImageId": "i-hD6jQZZ",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Soldier Taking 5",
       "src": "/img/i-hD6jQZZ/l.jpg",
@@ -48471,7 +48633,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-02-17T17:57:20.900Z"
     },
     "s-9NGaE6z": {
@@ -48490,7 +48656,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-02-17T17:59:25.419Z"
     },
     "s-gHvu5mV": {
@@ -48498,13 +48668,13 @@
       "tiers": [
         "sketch"
       ],
-      "title": "Ain’t Seen That Before",
+      "title": "Ain't Seen That Before",
       "src": "/img/i-s785L8d/l.jpg",
       "occurrences": [
         {
           "imageId": "i-s785L8d",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs",
-          "title": "Ain’t Seen That Before",
+          "title": "Ain't Seen That Before",
           "src": "/img/i-s785L8d/l.jpg"
         }
       ],
@@ -48534,7 +48704,8 @@
     "s-XMty77D": {
       "primaryImageId": "i-WRw5xs7",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Regret and Disbelief",
       "src": "/img/i-WRw5xs7/l.jpg",
@@ -48547,13 +48718,18 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-02-17T18:04:08.220Z"
     },
     "s-sDQuQyF": {
       "primaryImageId": "i-tvs5pD9",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Where Do We Go From Here?",
       "src": "/img/i-tvs5pD9/l.jpg",
@@ -48572,7 +48748,8 @@
     "s-LhELx8b": {
       "primaryImageId": "i-kvCJ39n",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Traveling Man",
       "src": "/img/i-kvCJ39n/l.jpg",
@@ -48591,7 +48768,8 @@
     "s-UnXehsn": {
       "primaryImageId": "i-VgGGG68",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "All Business",
       "src": "/img/i-VgGGG68/l.jpg",
@@ -48604,13 +48782,18 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-02-17T18:07:12.480Z"
     },
     "s-5mmZjxD": {
       "primaryImageId": "i-nDPs3J2",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Bugler",
       "src": "/img/i-nDPs3J2/l.jpg",
@@ -48623,13 +48806,18 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-02-17T18:08:04.947Z"
     },
     "s-CuPe8Gz": {
       "primaryImageId": "i-RpVqXBB",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Face of Defeat",
       "src": "/img/i-RpVqXBB/l.jpg",
@@ -48642,13 +48830,18 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-02-17T18:11:39.522Z"
     },
     "s-ndg2PeN": {
       "primaryImageId": "i-zmbvK99",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Lesson at Hand",
       "src": "/img/i-zmbvK99/l.jpg",
@@ -48686,7 +48879,8 @@
     "s-3tXg66P": {
       "primaryImageId": "i-VZL9dTs",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Steady Hands",
       "src": "/img/i-VZL9dTs/l.jpg",
@@ -48699,13 +48893,18 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-02-17T18:26:09.912Z"
     },
     "s-km8wERe": {
       "primaryImageId": "i-Ng98bJK",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Aging the Uniform",
       "src": "/img/i-Ng98bJK/l.jpg",
@@ -48718,13 +48917,18 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-02-17T18:59:06.933Z"
     },
     "s-KnRGQjH": {
       "primaryImageId": "i-4vsb9Qp",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Be Ready Boys",
       "src": "/img/i-4vsb9Qp/l.jpg",
@@ -48737,13 +48941,18 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-02-17T19:00:52.345Z"
     },
     "s-xNyAHhT": {
       "primaryImageId": "i-mvXJpHF",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Quiet Reflection",
       "src": "/img/i-mvXJpHF/l.jpg",
@@ -48756,13 +48965,18 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-02-17T19:10:00.275Z"
     },
     "s-w94PFTc": {
       "primaryImageId": "i-ZMt9t8J",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Civil War Art: The Weight of It",
       "src": "/img/i-ZMt9t8J/l.jpg",
@@ -48775,13 +48989,18 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-02-17T19:11:59.820Z"
     },
     "s-gGk5zJJ": {
       "primaryImageId": "i-96shbfB",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Civil War Art: Weight of the World",
       "src": "/img/i-96shbfB/l.jpg",
@@ -48794,13 +49013,18 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-02-17T19:13:28.423Z"
     },
     "s-2Usy6dk": {
       "primaryImageId": "i-vT7SdKj",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Classic Couple",
       "src": "/img/i-vT7SdKj/l.jpg",
@@ -48813,32 +49037,42 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-02-17T19:16:21.533Z"
     },
     "s-9dDXHjs": {
       "primaryImageId": "i-kbpkRxp",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
-      "title": "Where’ve you been?",
+      "title": "Where've you been?",
       "src": "/img/i-kbpkRxp/l.jpg",
       "occurrences": [
         {
           "imageId": "i-kbpkRxp",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs",
-          "title": "Where’ve you been?",
+          "title": "Where've you been?",
           "src": "/img/i-kbpkRxp/l.jpg"
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-02-17T19:17:29.197Z"
     },
     "s-JkGgxEW": {
       "primaryImageId": "i-HJ2ZRPj",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Between Drills",
       "src": "/img/i-HJ2ZRPj/l.jpg",
@@ -48851,13 +49085,18 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-02-17T19:19:37.433Z"
     },
     "s-gfkqwQM": {
       "primaryImageId": "i-L6QfRFP",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "No Other Choice",
       "src": "/img/i-L6QfRFP/l.jpg",
@@ -48870,13 +49109,18 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-02-17T19:26:40.626Z"
     },
     "s-wjrEB7j": {
       "primaryImageId": "i-WCW5QvM",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Just Thinking of You",
       "src": "/img/i-WCW5QvM/l.jpg",
@@ -48889,7 +49133,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-02-17T19:32:08.234Z"
     },
     "s-CbRsREb": {
@@ -48914,7 +49162,8 @@
     "s-s4uZmCr": {
       "primaryImageId": "i-hpRQLLm",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "I Hear Them",
       "src": "/img/i-hpRQLLm/l.jpg",
@@ -48927,7 +49176,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-02-17T21:23:58.088Z"
     },
     "s-tAJkG9u": {
@@ -48971,26 +49224,32 @@
     "s-HuhYTHs": {
       "primaryImageId": "i-Pw9Tzzf",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
-      "title": "I Don’t See Him",
+      "title": "I Don't See Him",
       "src": "/img/i-Pw9Tzzf/l.jpg",
       "occurrences": [
         {
           "imageId": "i-Pw9Tzzf",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs",
-          "title": "I Don’t See Him",
+          "title": "I Don't See Him",
           "src": "/img/i-Pw9Tzzf/l.jpg"
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-02-17T22:57:00.645Z"
     },
     "s-BR3Kj7A": {
       "primaryImageId": "i-767CNKX",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Moment of Peace",
       "src": "/img/i-767CNKX/l.jpg",
@@ -49003,7 +49262,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-02-17T22:57:55.250Z"
     },
     "s-AZj4J75": {
@@ -49028,7 +49291,8 @@
     "s-4QEcmkx": {
       "primaryImageId": "i-VK8Vmjh",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Everything Has a Price",
       "src": "/img/i-VK8Vmjh/l.jpg",
@@ -49041,13 +49305,18 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-02-17T23:02:40.597Z"
     },
     "s-BD6ypAQ": {
       "primaryImageId": "i-thK6pDc",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Taking Aim",
       "src": "/img/i-thK6pDc/l.jpg",
@@ -49060,13 +49329,19 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-02-17T23:05:24.670Z"
     },
     "s-TXdf2VX": {
       "primaryImageId": "i-vqdKfnX",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation",
+        "chronicle"
       ],
       "title": "The Burden of Rank",
       "src": "/img/i-vqdKfnX/l.jpg",
@@ -49079,7 +49354,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "chronicle": [
+          "20\" x 24\""
+        ]
+      },
       "createdAt": "2026-02-17T23:06:29.263Z"
     },
     "s-bmAyKVu": {
@@ -49106,13 +49385,13 @@
       "tiers": [
         "sketch"
       ],
-      "title": "Quiet Modern",
+      "title": "Composed in a Cloche Hat",
       "src": "/img/i-MhMbDtL/l.jpg",
       "occurrences": [
         {
           "imageId": "i-MhMbDtL",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White.mjs",
-          "title": "Quiet Modern",
+          "title": "Composed in a Cloche Hat",
           "src": "/img/i-MhMbDtL/l.jpg"
         }
       ],
@@ -49182,7 +49461,7 @@
       "tiers": [
         "sketch"
       ],
-      "title": "The Watchman",
+      "title": "In His Own Time",
       "src": "/img/i-nDfspwn/l.jpg",
       "occurrences": [
         {
@@ -49296,13 +49575,13 @@
       "tiers": [
         "sketch"
       ],
-      "title": "What She Won’t Say",
+      "title": "A Thought Kept Back",
       "src": "/img/i-cpRfZ8j/l.jpg",
       "occurrences": [
         {
           "imageId": "i-cpRfZ8j",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White.mjs",
-          "title": "What She Won’t Say",
+          "title": "A Thought Kept Back",
           "src": "/img/i-cpRfZ8j/l.jpg"
         }
       ],
@@ -49315,13 +49594,13 @@
       "tiers": [
         "sketch"
       ],
-      "title": "He’s Seen This Before",
+      "title": "Experience at the Window",
       "src": "/img/i-KdGdjFZ/l.jpg",
       "occurrences": [
         {
           "imageId": "i-KdGdjFZ",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White.mjs",
-          "title": "He’s Seen This Before",
+          "title": "Experience at the Window",
           "src": "/img/i-KdGdjFZ/l.jpg"
         }
       ],
@@ -49334,13 +49613,13 @@
       "tiers": [
         "sketch"
       ],
-      "title": "He’s Seen This Before",
+      "title": "Profile in Window Light",
       "src": "/img/i-fNTTW43/l.jpg",
       "occurrences": [
         {
           "imageId": "i-fNTTW43",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White.mjs",
-          "title": "He’s Seen This Before",
+          "title": "Profile in Window Light",
           "src": "/img/i-fNTTW43/l.jpg"
         }
       ],
@@ -49353,13 +49632,13 @@
       "tiers": [
         "sketch"
       ],
-      "title": "He Doesn’t Flinch",
+      "title": "Unyielding in Window Light",
       "src": "/img/i-T2XDQPG/l.jpg",
       "occurrences": [
         {
           "imageId": "i-T2XDQPG",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White.mjs",
-          "title": "He Doesn’t Flinch",
+          "title": "Unyielding in Window Light",
           "src": "/img/i-T2XDQPG/l.jpg"
         }
       ],
@@ -49410,13 +49689,13 @@
       "tiers": [
         "sketch"
       ],
-      "title": "He’ll Handle It",
+      "title": "Resolve on the Porch",
       "src": "/img/i-sjtz7Fj/l.jpg",
       "occurrences": [
         {
           "imageId": "i-sjtz7Fj",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White.mjs",
-          "title": "He’ll Handle It",
+          "title": "Resolve on the Porch",
           "src": "/img/i-sjtz7Fj/l.jpg"
         }
       ],
@@ -49448,13 +49727,13 @@
       "tiers": [
         "sketch"
       ],
-      "title": "Terms of Respect",
+      "title": "Authority in Window Light",
       "src": "/img/i-k9qB2jV/l.jpg",
       "occurrences": [
         {
           "imageId": "i-k9qB2jV",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color.mjs",
-          "title": "Terms of Respect",
+          "title": "Authority in Window Light",
           "src": "/img/i-k9qB2jV/l.jpg"
         }
       ],
@@ -49486,13 +49765,13 @@
       "tiers": [
         "sketch"
       ],
-      "title": "Terms of Consideration",
+      "title": "A Decision in Stillness",
       "src": "/img/i-NVz5zk2/l.jpg",
       "occurrences": [
         {
           "imageId": "i-NVz5zk2",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color.mjs",
-          "title": "Terms of Consideration",
+          "title": "A Decision in Stillness",
           "src": "/img/i-NVz5zk2/l.jpg"
         }
       ],
@@ -49505,13 +49784,13 @@
       "tiers": [
         "sketch"
       ],
-      "title": "Terms of Order",
+      "title": "At the Porch Rail",
       "src": "/img/i-9cZHdvB/l.jpg",
       "occurrences": [
         {
           "imageId": "i-9cZHdvB",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color.mjs",
-          "title": "Terms of Order",
+          "title": "At the Porch Rail",
           "src": "/img/i-9cZHdvB/l.jpg"
         }
       ],
@@ -49657,13 +49936,13 @@
       "tiers": [
         "sketch"
       ],
-      "title": "Terms of the Evening",
+      "title": "Held in the Doorway",
       "src": "/img/i-PXj364M/l.jpg",
       "occurrences": [
         {
           "imageId": "i-PXj364M",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color.mjs",
-          "title": "Terms of the Evening",
+          "title": "Held in the Doorway",
           "src": "/img/i-PXj364M/l.jpg"
         }
       ],
@@ -81058,6 +81337,169 @@
       "excludeSizes": {},
       "yearCreated": "",
       "createdAt": "2026-11-09T06:44:00.711Z"
+    },
+    "s-nYzjn4U": {
+      "primaryImageId": "i-kWVzc6g",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Back up Plan",
+      "src": "/img/i-kWVzc6g/l.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-kWVzc6g",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs",
+          "title": "Back up Plan",
+          "src": "/img/i-kWVzc6g/l.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-14T09:06:51.969Z"
+    },
+    "s-Lh9PGjv": {
+      "primaryImageId": "i-qjLp9Lf",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Night Watch",
+      "src": "/img/i-qjLp9Lf/l.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-qjLp9Lf",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs",
+          "title": "Night Watch",
+          "src": "/img/i-qjLp9Lf/l.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
+      "yearCreated": "",
+      "createdAt": "2026-11-14T09:07:33.456Z"
+    },
+    "s-5nQ7j8E": {
+      "primaryImageId": "i-hM8SXCd",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "The Old Campaigner",
+      "src": "/img/i-hM8SXCd/l.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-hM8SXCd",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs",
+          "title": "The Old Campaigner",
+          "src": "/img/i-hM8SXCd/l.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
+      "yearCreated": "",
+      "createdAt": "2026-11-14T09:08:14.707Z"
+    },
+    "s-6A6TdwG": {
+      "primaryImageId": "i-6rWdVVk",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Second Guessing",
+      "src": "/img/i-6rWdVVk/l.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-6rWdVVk",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs",
+          "title": "Second Guessing",
+          "src": "/img/i-6rWdVVk/l.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
+      "yearCreated": "",
+      "createdAt": "2026-11-14T09:08:55.971Z"
+    },
+    "s-McTGVC7": {
+      "primaryImageId": "i-xxr9Tnb",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Breakfast Can Wait",
+      "src": "/img/i-xxr9Tnb/l.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-xxr9Tnb",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs",
+          "title": "Breakfast Can Wait",
+          "src": "/img/i-xxr9Tnb/l.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-14T09:09:32.391Z"
+    },
+    "s-K28EFGk": {
+      "primaryImageId": "i-ssCjgX8",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Before the Muster",
+      "src": "/img/i-ssCjgX8/l.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-ssCjgX8",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs",
+          "title": "Before the Muster",
+          "src": "/img/i-ssCjgX8/l.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
+      "yearCreated": "",
+      "createdAt": "2026-11-14T09:10:11.773Z"
+    },
+    "s-VGw2Jsc": {
+      "primaryImageId": "i-RRw2Tfr",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Frontier Life Cowboy",
+      "src": "/img/i-RRw2Tfr/l.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-RRw2Tfr",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
+          "title": "Frontier Life Cowboy",
+          "src": "/img/i-RRw2Tfr/l.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-14T17:58:41.697Z"
     }
   }
 }

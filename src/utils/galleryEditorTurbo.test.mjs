@@ -30,6 +30,7 @@ test("only the field edited in the Turbo block is marked changed", () => {
 test("a Story-only save payload cannot overwrite untouched fields", () => {
   const edited = { ...record, story: "A main-form Story edit" };
   assert.deepEqual(buildTurboPatch(edited, new Set(["story"])), {
+    contentSource: "human",
     story: "A main-form Story edit",
   });
 });
@@ -46,4 +47,18 @@ test("a rebuilt block reflects the supplied record rather than earlier text", ()
   const parsed = parseTurboText(buildTurboText(recordB));
   assert.equal(parsed.alt, "Record B alt");
   assert.equal(parsed.story, "Record B story");
+});
+
+test("saving a manual Turbo copy edit replaces AI provenance with Human", () => {
+  const aiRecord = { ...record, contentSource: "ai", alt: "A corrected alt text" };
+  assert.deepEqual(buildTurboPatch(aiRecord, new Set(["alt"])), {
+    contentSource: "human",
+    alt: "A corrected alt text",
+  });
+});
+
+test("saving only a rating or an unchanged block does not change AI provenance", () => {
+  const aiRecord = { ...record, contentSource: "ai", rating: 4 };
+  assert.deepEqual(buildTurboPatch(aiRecord, new Set(["rating"])), { rating: 4 });
+  assert.deepEqual(buildTurboPatch(aiRecord, new Set()), {});
 });

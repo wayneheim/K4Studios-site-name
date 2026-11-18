@@ -5,6 +5,7 @@ import EngrainedStatusPanel from "./EngrainedStatusPanel.jsx";
 import SectionKeywordSuggestions from "./SectionKeywordSuggestions.jsx";
 import { generateSmartMetadata } from "../utils/autoTextGenerator.mjs";
 import { normalizeImageSrc } from "../utils/imageProxy.js";
+import { getContentReviewState, getManualCopyPatch, toggleContentReview } from "../utils/contentReview.mjs";
 import {
   buildTurboPatch,
   buildTurboText,
@@ -914,8 +915,11 @@ function StarRating({ value = 0, onChange }) {
   );
 }
 
-function ContentClassificationButtons({ classification, contentSource, onToggle, darkMode = false }) {
+function ContentClassificationButtons({ classification, scout = false, contentSource, onToggle, darkMode = false }) {
   const isHuman = (contentSource || "human") === "human";
+  const { isOim, isScout } = getContentReviewState({ classification, scout });
+  const canToggleOim = isHuman || isScout || isOim;
+  const scoutColor = isOim ? "#15803d" : "#059669";
   const base = "px-3 py-1 rounded-md border text-sm font-semibold transition-colors";
 
   return (
@@ -923,37 +927,51 @@ function ContentClassificationButtons({ classification, contentSource, onToggle,
       <span className={`text-sm ${darkMode ? "text-gray-400" : "text-gray-500"}`}>Review source:</span>
       <button
         type="button"
-        aria-pressed={classification === "oim"}
-        disabled={!isHuman}
+        aria-pressed={isOim}
+        disabled={!canToggleOim}
         onClick={() => onToggle("oim")}
         className={`${base} ${
-          !isHuman
+          !canToggleOim
             ? "cursor-not-allowed border-gray-600 bg-gray-700 text-gray-500 opacity-60"
-            : classification === "oim"
+            : isOim
             ? "border-amber-400 bg-amber-400 text-gray-950"
             : darkMode
             ? "border-amber-500 bg-gray-800 text-amber-300 hover:bg-gray-700"
             : "border-amber-400 bg-white text-amber-700 hover:bg-amber-50"
         }`}
-        title={isHuman ? "Toggle OIM review source" : "OIM is available only for Human content"}
+        title={canToggleOim ? "Toggle OIM review source" : "OIM is available for Human or Scout-reviewed content"}
       >
         OIM
       </button>
       <button
         type="button"
-        aria-pressed={classification === "scout"}
+        aria-pressed={isScout}
         onClick={() => onToggle("scout")}
+        style={isScout ? { backgroundColor: scoutColor, borderColor: scoutColor, color: "#ffffff" } : undefined}
         className={`${base} ${
-          classification === "scout"
-            ? "border-emerald-400 bg-emerald-400 text-gray-950"
+          isOim && isScout
+            ? "border-green-500 bg-green-700 text-white hover:bg-green-600"
+            : isScout
+            ? "border-emerald-600 bg-emerald-600 text-white"
             : darkMode
             ? "border-emerald-400 bg-gray-700 text-white hover:bg-gray-600"
             : "border-emerald-400 bg-white text-emerald-700 hover:bg-emerald-50"
         }`}
-        title="Toggle Scout AI review source"
+        title="Toggle Scout review source"
       >
         Scout
       </button>
+      {isOim && isScout && (
+        <span
+          title="Scout assisted meta writing"
+          aria-label="Scout assisted meta writing"
+          tabIndex={0}
+          className="cursor-help text-sm"
+          style={{ color: scoutColor }}
+        >
+          ★
+        </span>
+      )}
     </div>
   );
 }
@@ -1320,57 +1338,60 @@ export default function GalleryEditorPro() {
   const currentClassificationKey = current?.id
     ? contentClassificationKey(current.id, selectedPath)
     : "";
-  const currentClassification = currentClassificationKey
-    ? contentClassifications[currentClassificationKey]?.classification || null
+  const currentReview = currentClassificationKey
+    ? contentClassifications[currentClassificationKey] || null
     : null;
+  const currentClassification = currentReview?.classification || null;
+  const { isOim: currentIsOim, isScout: currentIsScout } = getContentReviewState(currentReview);
+  const currentHasMetaAdjustments = currentIsOim && currentIsScout;
 
-  async function writeContentClassification(imageId, classification, galleryPath = selectedPath) {
+  async function writeContentClassification(imageId, classification, galleryPath = selectedPath, scout = false) {
     const key = contentClassificationKey(imageId, galleryPath);
     const res = await fetch("/.netlify/functions/contentClassificationRegistry", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ imageId, galleryPath, classification }),
+      body: JSON.stringify({ imageId, galleryPath, classification, scout }),
     });
     if (!res.ok) throw new Error(await res.text());
 
     setContentClassifications((previous) => {
       const next = { ...previous };
       if (classification == null) delete next[key];
-      else next[key] = { classification, updatedAt: new Date().toISOString() };
+      else next[key] = { classification, ...(classification === "oim" && scout ? { scout: true } : {}), updatedAt: new Date().toISOString() };
       return next;
     });
   }
 
   async function toggleContentClassification(classification) {
     if (!current || !backupMade) return;
-    const previousClassification = currentClassification;
-    const nextClassification = previousClassification === classification ? null : classification;
+    const previousReview = currentReview;
+    const nextReview = toggleContentReview(currentReview, classification);
     const contentSource = current.contentSource || "human";
 
-    if (classification === "oim" && contentSource !== "human") return;
+    if (classification === "oim" && contentSource !== "human" && !currentIsScout && !currentIsOim) return;
 
     try {
-      await writeContentClassification(current.id, nextClassification);
+      await writeContentClassification(current.id, nextReview.classification, selectedPath, nextReview.scout === true);
 
-      // Scout is an AI-guided source. Reuse the established .mjs provenance field.
-      if (nextClassification === "scout" && contentSource !== "ai") {
+      // Scout assistance has its own review flag; only auto-generation sets AI-only provenance.
+      if ((currentIsScout || getContentReviewState(nextReview).isScout) && contentSource !== "human") {
         const res = await fetch("/.netlify/functions/updateGalleryItem", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             datasetPath: selectedPath.replace(/^\//, ""),
             id: current.id,
-            patch: { contentSource: "ai" },
+            patch: { contentSource: "human" },
           }),
         });
         if (!res.ok) throw new Error(await res.text());
         setData((items) => items.map((item) => (
-          item.id === current.id ? { ...item, contentSource: "ai" } : item
+          item.id === current.id ? { ...item, contentSource: "human" } : item
         )));
       }
     } catch (error) {
       try {
-        await writeContentClassification(current.id, previousClassification);
+        await writeContentClassification(current.id, previousReview?.classification || null, selectedPath, previousReview?.scout === true);
       } catch {}
       alert(`Classification could not be updated.\n\n${error.message}`);
     }
@@ -1448,6 +1469,7 @@ export default function GalleryEditorPro() {
       } else {
         copy[i] = { ...copy[i], [field]: value };
       }
+      copy[i] = { ...copy[i], ...getManualCopyPatch([field]) };
       return copy;
     });
     setDirty(true);
@@ -1603,6 +1625,7 @@ export default function GalleryEditorPro() {
       setLastAction(`No field changes to save for ${currentId}`);
       return true;
     }
+    Object.assign(updatedItem, getManualCopyPatch(fieldsToSave));
     
     // Update local state
     setData((arr) => {
@@ -2840,12 +2863,14 @@ export default function GalleryEditorPro() {
                           ? "bg-purple-100 border border-purple-300 text-purple-900" 
                           : "bg-blue-100 border border-blue-300 text-blue-900"
                       }`}
-                      title={contentSource === "ai" ? "Content written by AI/Turbo Mode" : "Content written by human (or not yet processed)"}
+                      title={currentIsScout ? "Scout assisted meta writing" : contentSource === "ai" ? "Auto-generated copy" : "Content written by human (or not yet processed)"}
                     >
-                      {currentClassification === "scout"
-                        ? "Scout · AI"
+                      {currentHasMetaAdjustments
+                        ? "OIM · Scout ★"
+                        : currentClassification === "scout"
+                        ? "Scout"
                         : currentClassification === "oim"
-                        ? "OIM · Human"
+                        ? `OIM · ${contentSource === "ai" ? "AI" : "Human"}`
                         : contentSource === "ai" ? "🤖 AI" : "✍️ Human"}
                     </span>
                   </div>
@@ -2878,6 +2903,7 @@ export default function GalleryEditorPro() {
                 <div className="mt-2 flex justify-start">
                   <ContentClassificationButtons
                     classification={currentClassification}
+                    scout={currentIsScout}
                     contentSource={current.contentSource}
                     onToggle={toggleContentClassification}
                   />
@@ -3060,11 +3086,14 @@ export default function GalleryEditorPro() {
                               ? "bg-purple-500 border border-purple-400 text-white" 
                               : "bg-blue-500 border border-blue-400 text-white"
                           }`}
+                          title={currentIsScout ? "Scout assisted meta writing" : contentSource === "ai" ? "Auto-generated copy" : undefined}
                         >
-                          {currentClassification === "scout"
-                            ? "Scout · AI"
+                          {currentHasMetaAdjustments
+                            ? "OIM · Scout ★"
+                            : currentClassification === "scout"
+                            ? "Scout"
                             : currentClassification === "oim"
-                            ? "OIM · Human"
+                            ? `OIM · ${contentSource === "ai" ? "AI" : "Human"}`
                             : contentSource === "ai" ? "🤖 AI" : "✍️ Human"}
                         </span>
                       </div>
@@ -3090,6 +3119,7 @@ export default function GalleryEditorPro() {
                     </div>
                     <ContentClassificationButtons
                       classification={currentClassification}
+                      scout={currentIsScout}
                       contentSource={current.contentSource}
                       onToggle={toggleContentClassification}
                       darkMode={true}

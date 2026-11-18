@@ -1,5 +1,6 @@
 ---
 import Footer from "@/components/Footer.astro";
+import PrintSeriesIcon from "@/components/PrintSeriesIcon.jsx";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import fullDescriptionAllPages from "@/data/seo/fullDescriptionAllPages.json";
 import ArchiveContext from "@/components/ArchiveContext.astro";
@@ -653,7 +654,7 @@ const compactBreadcrumbHtml = breadcrumbHtml
                               title={`${series.label} Series Member`}
                               aria-label={`${series.label} Series Member`}
                             >
-                              {series.icon}
+                              <PrintSeriesIcon seriesKey={series.key} />
                             </span>
                             {seriesIdx < cardSeries.length - 1 && <span class="card-series-separator" aria-hidden="true">|</span>}
                           </>

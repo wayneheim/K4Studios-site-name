@@ -3,6 +3,15 @@ export const prerender = true;
 
 import CommercialIntentDoorway from "@/components/doorway/CommercialIntentDoorway.astro";
 import { commercialIntentPages } from "@/data/doorway/commercialIntentPages.ts";
+
+const config = commercialIntentPages.contemporaryWesternArt;
+const pageConfig = {
+  ...config,
+  copy: {
+    ...config.copy,
+    conceptBlock1Copy: `${config.copy.conceptBlock1Copy}\n\nThis contemporary work belongs to the broader <a href="/Western-Fine-Art">Western fine art collection</a> at K4 Studios.`,
+  },
+};
 ---
 
-<CommercialIntentDoorway config={commercialIntentPages.contemporaryWesternArt} />
+<CommercialIntentDoorway config={pageConfig} />

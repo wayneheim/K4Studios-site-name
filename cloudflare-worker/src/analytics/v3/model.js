@@ -1,3 +1,6 @@
+import { mergeEntryEvidence, parseEntryEvidence } from './entry-engagement.js';
+import { isRotatingProxyCrawler } from '../../shared/rotating-proxy-crawl.js';
+
 export const V3_CORE_EVENT_TYPES = Object.freeze([
   'page_view', 'chapter_view', 'nav_next', 'nav_prev', 'sister_image_click',
   'cowboy_jump', 'picture_shows_jump', 'presentation_last_image_back_to_start',
@@ -202,10 +205,10 @@ export function getV3ExpeditionActionLabel(pagePath, eventType) {
   return action ? `${expeditionName} | ${action}` : null;
 }
 
-export function isV3CoreEvent(row) {
+function isV3BrowserEvent(row) {
   const sourceIp = String(row?.ip || row?.ip_hash || '').trim();
   return Boolean(row && row.source === 'js' && row.session_id && row.visitor_id
-    && V3_CORE_EVENT_TYPES.includes(String(row.event_type || ''))
+    && !isRotatingProxyCrawler(row)
     && !V3_INTERNAL_IPS.has(sourceIp)
     && !V3_EXCLUDED_IPV4_PREFIXES.some((prefix) => sourceIp.startsWith(prefix))
     && !V3_DATACENTER_ASNS.includes(Number(row.cf_asn))
@@ -214,17 +217,40 @@ export function isV3CoreEvent(row) {
     && !AUTOMATION_UA_PATTERN.test(String(row.ua || '')));
 }
 
+export function isV3CoreEvent(row) {
+  return isV3BrowserEvent(row) && V3_CORE_EVENT_TYPES.includes(String(row.event_type || ''));
+}
+
 function addCount(map, key, amount = 1) {
   if (key) map.set(key, (map.get(key) || 0) + amount);
 }
 
-export function buildV3RollupBatch(rows) {
+function eventDay(row) {
+  const lifecycle = ['page_engagement', 'session_exit'].includes(row.event_type);
+  const startedAt = lifecycle && parseEntryEvidence(row.engagement_meta)?.startedAt;
+  return easternDay(startedAt || row.ts);
+}
+
+export function getV3EvidenceSessionKeys(rows) {
+  const keys = new Map();
+  for (const row of rows) {
+    if (!isV3BrowserEvent(row) || !(V3_CORE_EVENT_TYPES.includes(row.event_type)
+      || ['page_engagement', 'session_exit'].includes(row.event_type))) continue;
+    const day = eventDay(row);
+    if (day) keys.set(`${day}\u0000${row.session_id}`, { day, sessionId: row.session_id });
+  }
+  return [...keys.values()];
+}
+
+export function buildV3RollupBatch(rows, previousSessions = []) {
   const daily = new Map();
   const dimensions = new Map();
   const sessions = new Map();
   const visitors = new Set();
   const images = new Map();
   const imageGeography = new Map();
+  const previous = new Map(previousSessions.map((row) => [`${row.day}\u0000${row.session_id}`, row]));
+  const evidenceRows = new Map();
   let accepted = 0;
   let lastRawEventId = 0;
   let lastEventTs = null;
@@ -260,7 +286,7 @@ export function buildV3RollupBatch(rows) {
       lastRawEventId = rawId;
       lastEventTs = row?.ts || lastEventTs;
     }
-    const day = easternDay(row.ts);
+    const day = eventDay(row);
     if (!day) continue;
     const isMerchantInspection = screenshotSessionIds.has(row?.session_id)
       || screenshotVisitorIds.has(row?.visitor_id);
@@ -277,7 +303,26 @@ export function buildV3RollupBatch(rows) {
       }
       continue;
     }
-    if (!isV3CoreEvent(row)) continue;
+    if (!isV3BrowserEvent(row)) continue;
+    const sessionKey = `${day}\u0000${row.session_id}`;
+    const core = V3_CORE_EVENT_TYPES.includes(String(row.event_type || ''));
+    const lifecycle = ['page_engagement', 'session_exit'].includes(row.event_type);
+    if (!core && !lifecycle) continue;
+    const prior = previous.get(sessionKey);
+    if (!evidenceRows.has(sessionKey)) evidenceRows.set(sessionKey, []);
+    evidenceRows.get(sessionKey).push({ ...row, page: normalizeV3Path(row.page) });
+    if (!sessions.has(sessionKey)) {
+      sessions.set(sessionKey, {
+        day, sessionId: row.session_id, visitorId: row.visitor_id, visitorStatus: null, engaged: 0,
+        landingPage: prior?.landing_page || null, entrySource: prior?.entry_source || null,
+        visitorGeo: prior?.visitor_geo || null, imageGeo: null,
+        entryIsImageFallback: Number(prior?.entry_is_image_fallback || 0), pageViewCount: 0,
+        siteDevice: null, imageDevice: null, oimDomain: null, entryEvidence: prior?.entry_evidence || null
+      });
+    }
+    // Lifecycle facts enrich an existing visit but never count as page loads,
+    // engagement actions, new visitors, or newly discovered entry sessions.
+    if (!core) continue;
     accepted += 1;
     const metric = daily.get(day) || { day, pageViews: 0, imageViews: 0, pricingOpens: 0, orderSubmits: 0, smugmugClicks: 0, emailClicks: 0, coreEvents: 0 };
     metric.coreEvents += 1;
@@ -290,13 +335,7 @@ export function buildV3RollupBatch(rows) {
     daily.set(day, metric);
 
     const engaged = V3_ENGAGEMENT_EVENT_TYPES.has(row.event_type) ? 1 : 0;
-    const sessionKey = `${day}\u0000${row.session_id}`;
-    const session = sessions.get(sessionKey) || {
-      day, sessionId: row.session_id, visitorId: row.visitor_id, visitorStatus: null, engaged: 0,
-      landingPage: null, entrySource: null, visitorGeo: null, imageGeo: null,
-      entryIsImageFallback: 0, pageViewCount: 0, siteDevice: null, imageDevice: null,
-      oimDomain: null
-    };
+    const session = sessions.get(sessionKey);
     if (!session.visitorStatus && ['new', 'returning'].includes(row.visitor_status)) {
       session.visitorStatus = row.visitor_status;
     }
@@ -356,6 +395,11 @@ export function buildV3RollupBatch(rows) {
     if (actionGroup) incrementDimension(day, 'action_group', actionGroup);
   }
 
+  for (const [key, session] of sessions) {
+    session.entryEvidence = mergeEntryEvidence(session.entryEvidence, evidenceRows.get(key), session.landingPage);
+    // A lifecycle event without a core session is not an entry visit.
+    if (!session.landingPage && !previous.has(key) && !session.engaged && !session.pageViewCount) sessions.delete(key);
+  }
   const split = (key) => key.split('\u0000');
   return {
     scanned: rows.length,
@@ -393,7 +437,7 @@ export function summarizeV3Rollup(batch, label = 'Archive sample') {
     return [...merged].map(([itemLabel, count]) => ({ label: itemLabel, count }))
       .sort((a, b) => (b.count - a.count) || a.label.localeCompare(b.label)).slice(0, limit);
   };
-  const topDistinctVisitors = (field, limit, predicate = () => true) => {
+  const topDistinctVisitors = (field, limit, predicate = () => true, includeMix = false) => {
     const merged = new Map();
     batch.sessions.filter(predicate).forEach((row) => {
       const value = typeof field === 'function' ? field(row) : row[field];
@@ -401,7 +445,8 @@ export function summarizeV3Rollup(batch, label = 'Archive sample') {
       if (!merged.has(value)) merged.set(value, new Set());
       merged.get(value).add(row.visitorId || row.sessionId);
     });
-    return [...merged].map(([itemLabel, visitors]) => ({ label: itemLabel, count: visitors.size }))
+    return [...merged].map(([itemLabel, visitors]) => ({ label: itemLabel, count: visitors.size,
+      ...(includeMix ? { visitorMix: classifyVisitorMix([...visitors].map((id) => periodVisitors.get(id) || {})) } : {}) }))
       .sort((a, b) => (b.count - a.count) || a.label.localeCompare(b.label)).slice(0, limit);
   };
   const fallbackPageCount = batch.sessions.filter((row) => row.entryIsImageFallback && !row.pageViewCount).length;
@@ -410,16 +455,17 @@ export function summarizeV3Rollup(batch, label = 'Archive sample') {
     batch.sessions.filter((row) => row.entryIsImageFallback && !row.pageViewCount)
       .forEach((row) => addCount(merged, row.landingPage));
     return [...merged].map(([itemLabel, count]) => ({ label: itemLabel, count }))
-      .sort((a, b) => (b.count - a.count) || a.label.localeCompare(b.label)).slice(0, 10);
+      .sort((a, b) => (b.count - a.count) || a.label.localeCompare(b.label)).slice(0, 25);
   })();
   const entryNavigation = (() => {
     const grouped = new Map();
     batch.sessions.forEach((row) => {
       if (!row.landingPage) return;
-      const item = grouped.get(row.landingPage) || { label: row.landingPage, entries: 0, continued: 0, chapters: 0 };
+      const item = grouped.get(row.landingPage) || { label: row.landingPage, entries: 0, continued: 0, chapters: 0, graded: 0, gradeTotal: 0 };
       item.entries += 1;
       if (row.pageViewCount >= 2) item.continued += 1;
       if (row.imageDevice || row.imageGeo) item.chapters += 1;
+      if (row.entryEvidence?.grade != null) { item.graded += 1; item.gradeTotal += row.entryEvidence.grade; }
       grouped.set(row.landingPage, item);
     });
     return [...grouped.values()]
@@ -513,13 +559,13 @@ export function summarizeV3Rollup(batch, label = 'Archive sample') {
         .map(([day, visitors]) => ({ day, ...classifyVisitorMix(visitors) }))
     },
     acquisition: topSessionField('entrySource', 10),
-    visitorGeography: topDistinctVisitors((row) => row.visitorGeo || row.imageGeo, 20),
+    visitorGeography: topDistinctVisitors((row) => row.visitorGeo || row.imageGeo, 20, () => true, true),
     siteDevices: topDistinctVisitors('siteDevice', 5, (row) => Boolean(row.siteDevice)),
     imageDevices: topDistinctVisitors('imageDevice', 5, (row) => Boolean(row.imageDevice)),
     imageGeography: (() => {
       const viewCounts = new Map(top('image_geo_views', Number.MAX_SAFE_INTEGER)
         .map((row) => [row.label, row.count]));
-      return topDistinctVisitors('imageGeo', 20, (row) => Boolean(row.imageGeo))
+      return topDistinctVisitors('imageGeo', 20, (row) => Boolean(row.imageGeo), true)
         .map((row) => ({ ...row, imageViews: viewCounts.get(row.label) || 0 }));
     })(),
     expeditionActions: top('expedition_action', 30),

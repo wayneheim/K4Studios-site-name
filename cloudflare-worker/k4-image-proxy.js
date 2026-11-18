@@ -44,6 +44,7 @@ import {
   isCoordinatedProxyCrawlRequest,
   shouldPersistAnalyticsEvent
 } from './src/shared/analytics-write-gate.js';
+import { isRotatingProxyCrawlRequest } from './src/shared/rotating-proxy-crawl.js';
 
 // ═══════════════════════════════════════════════════════════════════════════
 // ANALYTICS (Phase 4 — single namespace entry point)
@@ -3618,6 +3619,18 @@ function renderSerpDashboard({ days, keywords, latestResults, previousMap, trend
 // --------------------
 export default {
   async fetch(request, env, ctx) {
+    // Reject the confirmed rotating crawl before origin fetches, image work,
+    // analytics delegation, or database access. Never cache this response.
+    if (isRotatingProxyCrawlRequest(request)) {
+      return new Response('Blocked', {
+        status: 403,
+        headers: {
+          'Content-Type': 'text/plain; charset=utf-8',
+          'Cache-Control': 'private, no-store',
+          'X-K4-Block': 'rotating-proxy-crawl',
+        },
+      });
+    }
     const url = new URL(request.url);
 
     // -----------------------------------------------------
