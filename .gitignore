@@ -165,3 +165,6 @@ cloudflare-commerce/wrangler.live.toml
 /tmp/
 /cloudflare-worker/tmp/
 /cloudflare-worker/cloudflare-worker/tmp/
+
+# Local semantic-editor archive; active source is K4-Sem.ts
+/src/data/semantic/K4-Sem.zip
