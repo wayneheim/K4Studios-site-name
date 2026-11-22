@@ -1,0 +1,17 @@
+# Local Stats + sandbox commerce. Do not deploy this configuration.
+name = "k4-analytics-local"
+main = "src/analytics/worker.js"
+compatibility_date = "2024-01-01"
+workers_dev = false
+
+[[services]]
+binding = "K4_COMMERCE"
+service = "k4-commerce-sandbox"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "k4-analytics"
+database_id = "f2c159b0-b0f1-4056-934c-90e9b8a92e14"
+
+[dev]
+port = 8788

@@ -63,6 +63,37 @@ access denial, ingestion, rollups, and the allowed-visitor boundaries.
 
 ## Geography visitor mix
 
+Apply `migrations/2026-11-20-add-analytics-v3-shopping-geography.sql` before
+deploying shopping geography. The existing session row stores small JSON stage
+counters. Incremental updates merge counters into that same row; there are no
+extra per-event summary rows. Geography uses the existing scoped summary query
+to count distinct shoppers and sum stage events. Its single `$` shows the
+furthest stage (blue cart, yellow checkout, orange payment, green completion).
+Hover, focus, or tap opens a popup with one colored `$` per recorded event.
+Checkout errors are red, cancellations gray; completion takes color priority.
+These are event records, not the authoritative payment ledger.
+
+The browser checkout reports fixed error-stage codes and cancellations through
+the normal collector, without error text or payment/customer details. This part
+requires the site's Netlify deployment. The analytics Worker can be deployed
+separately; a Checkout issues panel appears only when such events exist.
+
+Apply `2026-11-20-add-analytics-v3-image-shopping.sql` for image shopping markers.
+They appear outside the image link, to the left of its thumbnail, using the same
+stage colors and popup as geography. Explicit image add-to-cart events can be
+recovered from retained history. Old `/cart` events cannot establish cart
+contents and must not be attributed to a recently viewed image. New browser
+events put a bounded, deduplicated `cart:i-id1,i-id2` list in the existing image
+target field; one funnel event still counts once, and per-image stage counters
+do not increment image-view totals. This browser change requires Netlify deploy.
+
+Every image row reserves a 22px marker column so thumbnails stay aligned.
+Image shopping counters retain a deduplicated `_sessions` list. The image query
+uses those day/session primary keys to read the shopper's furthest progress
+from compact session summaries. This controls marker color; the popup retains
+the exact image events and explains that other shopping steps may involve
+other cart items. No raw-event scan is added to dashboard reads.
+
 Geography rows also show up to five distinct-visitor stars: cyan for new, green
 for returning, gray for unknown. Counts above five have a + popover containing
 the complete star list grouped by status. Hover, keyboard focus, and tap open

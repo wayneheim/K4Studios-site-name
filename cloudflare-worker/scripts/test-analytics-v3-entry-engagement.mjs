@@ -226,3 +226,56 @@ assert.notEqual(sent.at(-1).page_instance_id, sent[0].page_instance_id);
 await mkdir(new URL('../tmp/', import.meta.url), { recursive: true });
 await writeFile(new URL('../tmp/entry-engagement-preview.html', import.meta.url), html);
 console.log('Entry engagement passed: collector, browser lifecycle, SQL rollups, averages, unknowns, lazy details, auth, OIM collapse.');
+
+// A downstream shopping event persists on the existing summary across cursor batches.
+const nextShoppingId = Number(db.prepare('SELECT MAX(id) id FROM raw_events').get().id) + 1;
+insert({ ...base, id: nextShoppingId, event_type: 'native_cart_view', page: '/cart' });
+await updateV3Rollups(env, { maxRows: 1 });
+assert.equal(db.prepare("SELECT shopping_activity FROM analytics_v3_daily_sessions WHERE session_id='session-1'").get().shopping_activity && JSON.parse(db.prepare("SELECT shopping_activity FROM analytics_v3_daily_sessions WHERE session_id='session-1'").get().shopping_activity).native_cart_view, 1);
+insert({ ...base, id: nextShoppingId + 1 });
+await updateV3Rollups(env, { maxRows: 1 });
+assert.equal(db.prepare("SELECT shopping_activity FROM analytics_v3_daily_sessions WHERE session_id='session-1'").get().shopping_activity && JSON.parse(db.prepare("SELECT shopping_activity FROM analytics_v3_daily_sessions WHERE session_id='session-1'").get().shopping_activity).native_cart_view, 1, 'Later ordinary events must retain the shopping flag');
+assert.deepEqual(buildV3RollupBatch([{ ...base, event_type: 'order_clicked' }]).sessions[0].shoppingActivity, {}, 'Pricing alone is not cart access');
+assert.equal(buildV3RollupBatch([{ ...base, event_type: 'native_cart_add', cf_asn: 207990 }]).sessions.length, 0, 'Crawler filtering also applies to shopping badges');
+console.log('Shopping session updates passed: cross-batch persistence, pricing boundary, automation exclusion.');
+
+// Explicit multi-image carts enrich each item once and never inflate page/image views.
+const cartImageEventId = Number(db.prepare('SELECT MAX(id) id FROM raw_events').get().id) + 1;
+const metricsBeforeImages = db.prepare('SELECT SUM(page_views) pages,SUM(image_views) images FROM analytics_v3_daily_metrics').get();
+insert({ ...base, id: cartImageEventId, event_type: 'native_checkout_quote', page: '/cart', target_id: 'cart:i-itemA,i-itemB,i-itemA' });
+await updateV3Rollups(env, { maxRows: 1 });
+const imageSummary = await getV3CoreSummary(env, { now });
+for (const image of ['i-itemA','i-itemB']) {
+  const item = imageSummary.topImages.find(row => row.imageId === image);
+  assert.ok(item, 'A shopped image must appear even without a view in this window');
+  assert.equal(item.count, 0);
+  assert.equal(item.pagePath, null, 'The cart URL must not become the image link');
+  assert.equal(item.shoppingEvents.native_checkout_quote, 1);
+}
+assert.deepEqual(db.prepare('SELECT SUM(page_views) pages,SUM(image_views) images FROM analytics_v3_daily_metrics').get(), metricsBeforeImages);
+const imageHtml = renderDashboardV3({ summary: imageSummary });
+assert.ok(imageHtml.includes('class="image-shopping-row"'));
+assert.ok(!/<a[^>]*class="image-row[^>]*>[\s\S]*?<details/.test(imageHtml.split('class="image-shopping-row"')[1]?.split('</div>')[0] || ''));
+assert.equal(buildV3RollupBatch([{ ...base, event_type:'native_checkout_quote', target_id:'/cart' }]).images.length, 0, 'Legacy events must not guess the last viewed image');
+console.log('Per-image shopping passed: explicit multi-item attribution, deduplication, zero view inflation, safe links, no legacy guessing.');
+
+// The image dollar follows its shopper's progress, while image-event counts remain exact.
+const optionId = Number(db.prepare('SELECT MAX(id) id FROM raw_events').get().id) + 1;
+insert({ ...base, id: optionId, event_type:'order_native_cart_opened', target_id:'i-options', page:'/gallery' });
+await updateV3Rollups(env, { maxRows:1 });
+let linked = (await getV3CoreSummary(env, { now })).topImages.find(r=>r.imageId==='i-options');
+assert.equal(linked.shoppingEvents.order_native_cart_opened,1);
+assert.equal(linked.shoppingEvents.native_checkout_quote,0);
+assert.equal(linked.shoppingProgress.native_checkout_quote,1);
+let linkedHtml = renderDashboardV3({summary:{topImages:[linked]}});
+assert.ok(linkedHtml.includes('<summary style="color:#f0cf63;'), 'The image and shopper now agree on quote-stage yellow');
+assert.ok(linkedHtml.includes('other shopping steps are not necessarily for this image'));
+insert({ ...base, id:optionId+1, event_type:'native_payment_start', target_id:'/cart', page:'/cart' });
+await updateV3Rollups(env, { maxRows:1 });
+linked = (await getV3CoreSummary(env, { now })).topImages.find(r=>r.imageId==='i-options');
+assert.equal(linked.shoppingProgress.native_payment_start,1, 'Later progress must update the image color without a new image event');
+assert.equal(linked.shoppingEvents.native_payment_start,0, 'Do not manufacture image-specific payment events');
+assert.ok(renderDashboardV3({summary:{topImages:[linked]}}).includes('<summary style="color:#f2ac55;'));
+const refs = JSON.parse(db.prepare("SELECT shopping_activity FROM analytics_v3_daily_images WHERE image_id='i-options'").get().shopping_activity)._sessions;
+assert.deepEqual(refs,['session-1']);
+console.log('Shopper progress colors passed: quote yellow, later payment orange, exact image events retained, session linkage preserved.');

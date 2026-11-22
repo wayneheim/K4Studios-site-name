@@ -4,6 +4,7 @@ import { existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 import dotenv from 'dotenv';
 import { createEditorGateway } from './editorpro-auth-proxy.mjs';
+import { loadCommerceCredential } from './editorpro-commerce-credential.mjs';
 
 dotenv.config({ path: '.env.local', quiet: true });
 const port = Number(process.env.EDITORPRO_AUTH_PORT || 8890);
@@ -12,7 +13,7 @@ const config = resolve('.netlify/editorpro-tunnel.yml');
 if (!existsSync(config)) throw new Error('Missing local named-tunnel config: .netlify/editorpro-tunnel.yml');
 const windowsCloudflared = process.env.APPDATA && resolve(process.env.APPDATA, 'npm/node_modules/cloudflared/bin/cloudflared.exe');
 const executable = process.env.CLOUDFLARED_PATH || (process.platform === 'win32' && existsSync(windowsCloudflared) ? windowsCloudflared : 'cloudflared');
-const gateway = createEditorGateway({ password: process.env.EDITORPRO_PASSWORD, hostname });
+const gateway = createEditorGateway({ password: process.env.EDITORPRO_PASSWORD, hostname, commerceToken: loadCommerceCredential() });
 let connector;
 let stopping = false;
 function stop(code = 0) {
@@ -30,6 +31,7 @@ gateway.listen(port, '127.0.0.1', () => {
   connector.on('error', (error) => { console.error(error.message); stop(1); });
   connector.on('exit', (code) => stop(code || 0));
   console.log(`EditorPro: https://${hostname}/admin/GalleryEditor (password protected)`);
+  console.log(`Commerce Admin: https://${hostname}/admin/commerce (same EditorPro sign-in)`);
   console.log(`Local gateway: 127.0.0.1:${port}; Netlify Dev must be running on port 8888.`);
 });
 process.on('SIGINT', () => stop());

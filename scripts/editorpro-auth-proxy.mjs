@@ -4,6 +4,7 @@ import { createHash, randomBytes, timingSafeEqual } from 'node:crypto';
 import { resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import dotenv from 'dotenv';
+import { COMMERCE_ORIGIN, loadCommerceCredential } from './editorpro-commerce-credential.mjs';
 
 const COOKIE = 'k4_editor_session';
 const SESSION_MS = 8 * 60 * 60 * 1000;
@@ -11,11 +12,13 @@ const digest = (text) => createHash('sha256').update(text).digest();
 const escapeHtml = (text) => text.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 const safeReturn = (value) => value?.startsWith('/') && !value.startsWith('//') && !/[\\\x00-\x20\x7f]/.test(value) ? value : '/admin/GalleryEditor';
 
-export function createEditorGateway({ password, hostname, upstream = 'http://127.0.0.1:8888' }) {
+export function createEditorGateway({ password, hostname, upstream = 'http://127.0.0.1:8888', commerceToken = null, commerceOrigin = COMMERCE_ORIGIN }) {
   if (!password || password.length < 20) throw new Error('EDITORPRO_PASSWORD must contain at least 20 characters');
   if (!hostname || !/^[a-z0-9.-]+$/.test(hostname)) throw new Error('Invalid EditorPro hostname');
   const target = new URL(upstream);
   if (target.protocol !== 'http:' || !['127.0.0.1', 'localhost'].includes(target.hostname)) throw new Error('EditorPro upstream must be local HTTP');
+  const commerce = new URL(commerceOrigin);
+  if (commerce.origin !== COMMERCE_ORIGIN && !(commerce.protocol === 'http:' && ['localhost','127.0.0.1'].includes(commerce.hostname))) throw new Error('Invalid commerce service origin');
   const passwordDigest = digest(password);
   const sessions = new Map();
   const failures = new Map();
@@ -81,10 +84,41 @@ export function createEditorGateway({ password, hostname, upstream = 'http://127
       return reply(res, 303, '', { Location: safeReturn(form.get('next')), 'Set-Cookie': `${COOKIE}=${id}; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=${SESSION_MS / 1000}` });
     }
     if (!authenticated(req)) {
+      if (url.pathname.startsWith('/_editorpro/')) return reply(res, 401, JSON.stringify({error:'Your EditorPro session has expired. Sign in to EditorPro and retry.'}), {'Content-Type':'application/json'});
       if (!['GET', 'HEAD'].includes(req.method) || url.pathname.startsWith('/.netlify/')) return reply(res, 401, 'Authentication required');
       return reply(res, 302, '', { Location: `/_editorpro/login?next=${encodeURIComponent(req.url)}` });
     }
     if (!['GET', 'HEAD', 'OPTIONS'].includes(req.method) && !validOrigin(req)) return reply(res, 403, 'Invalid origin');
+    if (url.pathname === '/_editorpro/session' && req.method === 'GET') {
+      return reply(res, 200, JSON.stringify({authenticated:true,commerce:!!commerceToken,mode:'live'}), {'Content-Type':'application/json'});
+    }
+    if (url.pathname.startsWith('/_editorpro/commerce/')) {
+      if (!validOrigin(req) || req.headers['sec-fetch-site'] === 'cross-site') return reply(res,403,JSON.stringify({error:'Invalid origin'}),{'Content-Type':'application/json'});
+      const path = url.pathname.slice('/_editorpro/commerce'.length);
+      const reads = /^\/admin\/(report|orders|promotions|order-summary|order-tracker)$/;
+      const writes = /^\/admin\/(promotions|ohio-tax-rate|shipping-rates|expedition-prices|nexus-adjustments|nexus-rules\/[A-Z]{2}|orders\/[A-Za-z0-9-]+\/(fulfillment|cancel|delete|processed|shipped))$/;
+      const deletes = /^\/admin\/orders\/[A-Za-z0-9-]+$/;
+      if (!(req.method === 'GET' && reads.test(path)) && !(req.method === 'POST' && writes.test(path)) && !(req.method === 'DELETE' && deletes.test(path))) return reply(res,404,JSON.stringify({error:'Unknown commerce action'}),{'Content-Type':'application/json'});
+      if (!commerceToken) return reply(res,503,JSON.stringify({error:'Commerce access is not configured on the EditorPro gateway.'}),{'Content-Type':'application/json'});
+      try {
+        let body='';
+        if (req.method !== 'GET') {
+          for await (const chunk of req) {
+            body+=chunk.toString();
+            if (Buffer.byteLength(body)>1024*1024) return reply(res,413,JSON.stringify({error:'Request too large'}),{'Content-Type':'application/json'});
+          }
+          if (body) JSON.parse(body);
+        }
+        const response=await fetch(new URL(path+url.search,commerce.origin),{
+          method:req.method,redirect:'manual',signal:AbortSignal.timeout(20000),
+          headers:{authorization:`Bearer ${commerceToken}`,'content-type':'application/json'},
+          ...(req.method !== 'GET' && body ? {body}:{}),
+        });
+        return reply(res,response.status,await response.text(),{'Content-Type':'application/json; charset=utf-8'});
+      } catch(error) {
+        return reply(res,error instanceof SyntaxError?400:502,JSON.stringify({error:error instanceof SyntaxError?'Invalid JSON request.':'The live commerce service is unavailable. Please retry.'}),{'Content-Type':'application/json'});
+      }
+    }
     const proxy = http.request({ hostname: target.hostname, port: target.port, path: req.url, method: req.method, headers: headersFor(req) }, (response) => {
       res.writeHead(response.statusCode, { ...response.headers, 'cache-control': 'no-store' });
       response.pipe(res);
@@ -118,6 +152,6 @@ if (process.argv[1] && pathToFileURL(resolve(process.argv[1])).href === import.m
   dotenv.config({ path: '.env.local', quiet: true });
   const port = Number(process.env.EDITORPRO_AUTH_PORT || 8890);
   const hostname = process.env.EDITORPRO_PUBLIC_HOST || 'editorpro-dev.k4studios.com';
-  const server = createEditorGateway({ password: process.env.EDITORPRO_PASSWORD, hostname });
+  const server = createEditorGateway({ password: process.env.EDITORPRO_PASSWORD, hostname, commerceToken: loadCommerceCredential() });
   server.listen(port, '127.0.0.1', () => console.log(`EditorPro password gateway: 127.0.0.1:${port} -> 127.0.0.1:8888 (${hostname})`));
 }

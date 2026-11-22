@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import vm from 'node:vm';
 import { DatabaseSync } from 'node:sqlite';
 import { readFile, readdir, mkdir, writeFile } from 'node:fs/promises';
 import { parse } from 'parse5';
@@ -81,3 +82,38 @@ assert.ok(html.includes('var(--new-accent)') && html.includes('var(--returning-a
 await mkdir(new URL('../tmp/', import.meta.url), { recursive: true });
 await writeFile(new URL('../tmp/geo-mix-preview.html', import.meta.url), html);
 console.log('Geography visitor mix passed: distinct visitors, period precedence, image fallback, unknowns, five-star limit, full-list counts, summary-only SQL.');
+
+// Shopping badges deduplicate repeated sessions and honor geography/window bounds.
+db.prepare("UPDATE analytics_v3_daily_sessions SET shopping_activity=? WHERE session_id IN ('b-1','b-2','a-new')").run(JSON.stringify({native_cart_view:1,native_checkout_quote:1}));
+const shopping = await getV3CoreSummary(env, { now, windowKey: '7d' });
+assert.equal(shopping.visitorGeography[0].shoppingVisitors, 2);
+assert.equal(shopping.imageGeography.find(r => r.label === city).shoppingVisitors, 1);
+assert.equal(shopping.imageGeography.find(r => r.label === otherCity).shoppingVisitors, undefined);
+const shoppingToday = await getV3CoreSummary(env, { now });
+assert.equal(shoppingToday.visitorGeography[0].shoppingVisitors, 1);
+assert.equal(shoppingToday.visitorGeography[0].count, today.visitorGeography[0].count);
+const shoppingHtml = renderDashboardV3({ summary: shopping });
+assert.equal((shoppingHtml.match(/class="geo-overflow geo-shopping"/g) || []).length, 2);
+assert.ok(shoppingHtml.includes('Cart activity alone is not a completed order.'));
+assert.ok(queries.every(sql => !/raw_events|\bINSERT\b|\bUPDATE\b/i.test(sql)));
+console.log('Shopping geography passed: distinct shoppers, repeated sessions, window bounds, both badges, unchanged visitor counts, summary-only reads.');
+
+const fiveEvents = { native_cart_view: 2, native_checkout_start: 1, native_checkout_quote: 1, native_order_complete: 1 };
+const paidHtml = renderDashboardV3({ summary: { visitorGeography: [{ label: city, count: 2, shoppingVisitors: 2, shoppingEvents: fiveEvents }] } });
+assert.equal((paidHtml.match(/class="geo-overflow geo-shopping"/g) || []).length, 1, 'Only one dollar marker per city');
+assert.ok(paidHtml.includes('<summary style="color:#66dc82;'), 'Completed order makes the marker green');
+assert.ok(paidHtml.includes('5 recorded funnel events'));
+const quotedHtml = renderDashboardV3({ summary: { visitorGeography: [{ label: city, count: 1, shoppingVisitors: 1, shoppingEvents: {native_checkout_quote: 1} }] } });
+assert.ok(quotedHtml.includes('<summary style="color:#f0cf63;'), 'A quote is yellow, not a successful order');
+const errorHtml = renderDashboardV3({ summary: { visitorGeography: [{ label: city, count: 1, shoppingVisitors: 1, shoppingEvents: {native_checkout_error: 1} }] } });
+assert.ok(errorHtml.includes('<summary style="color:#f08080;'), 'Checkout failures are red');
+const script = paidHtml.match(/<script>([\s\S]*?)<\/script>/)[1];
+new vm.Script(script);
+const setupLine = script.split('\n').find(line => line.includes("document.querySelectorAll('.geo-overflow').forEach"));
+const groups = [2,1,1,1].map(count => ({dataset:{dollarCount:String(count)},hasAttribute:name=>name==='data-dollar-count'}));
+const handlers={};const detail={querySelectorAll:()=>groups,addEventListener:(name,handler)=>handlers[name]=handler};
+vm.runInNewContext(setupLine,{document:{querySelectorAll:()=>[detail]},positionGeoPopover:()=>{}});
+handlers.pointerenter({pointerType:'mouse'});
+assert.deepEqual(groups.map(group=>group.textContent), ['$$','$','$','$']);
+assert.equal(detail.open,true);
+console.log('Shopping colors and popup passed: one marker, five lazily rendered dollars, quote yellow, completion green, failure red, valid interactive script.');

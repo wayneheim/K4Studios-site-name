@@ -8,6 +8,8 @@
     "dev": "astro dev --host",
     "dev:netlify": "netlify dev",
     "dev:editorpro-tunnel": "node scripts/editorpro-tunnel.mjs",
+    "setup:editorpro-commerce": "node scripts/setup-editorpro-commerce.mjs",
+    "test:editorpro": "node --test scripts/editorpro-auth-proxy.test.mjs",
     "build": "npm run gen:master-data && npm run gen:chapter-doorway-links && npm run gen:image-filename-slugs && npm run gen:prefetch-map && npm run gen:image-id-map && npm run gen:image-sitemaps && npm run gen:merchant-products && npm run gen:sitemap && npm run gen:sitemap:matches && npm run gen:story-slider && npm run gen:image-manifest && npm run gen:commerce-fulfillment-links && npm run gen:commerce-collector-notes && npm run copy:pricing && npm run copy:series-data && npm run gen:engrained-data && npm run gen:artwork-search && npm run build:astro:fast && npx cpx \"_redirects\" dist/ && npm run sanitize:public-output && npm run audit:canonical-host && npm run audit:public-smugmug-links",
     "build:fast": "npm run gen:master-data && npm run gen:chapter-doorway-links && npm run gen:image-filename-slugs && npm run gen:prefetch-map && npm run gen:image-id-map && npm run gen:image-sitemaps && npm run gen:merchant-products && npm run gen:sitemap && npm run gen:sitemap:matches && npm run gen:story-slider && npm run gen:image-manifest && npm run gen:commerce-fulfillment-links && npm run gen:commerce-collector-notes && npm run copy:pricing && npm run copy:series-data && npm run gen:engrained-data && npm run gen:artwork-search && npm run build:astro:fast && npx cpx \"_redirects\" dist/ && npm run sanitize:public-output && npm run audit:canonical-host && npm run audit:public-smugmug-links",
     "build:local:fast": "node scripts/build-local-fast.mjs",
@@ -50,7 +52,10 @@
     "preview": "npm run build && wrangler dev",
     "deploy": "npm run build && wrangler deploy",
     "cf-typegen": "wrangler types",
-    "test:commerce": "node --test cloudflare-commerce/test/quote.test.js",
+    "test:commerce": "node --test cloudflare-commerce/test/quote.test.js cloudflare-commerce/test/order-email.test.mjs cloudflare-commerce/test/order-processing.test.mjs cloudflare-commerce/test/promotions.test.mjs",
+    "test:order-tracker": "node --test cloudflare-worker/test/order-tracker.test.mjs",
+    "test:promotions:browser": "node --test cloudflare-commerce/test/promotions-ui.test.mjs",
+    "test:admin-session:browser": "node --test cloudflare-commerce/test/admin-session-ui.test.mjs",
     "test:gallery-editor-turbo": "node --test src/utils/galleryEditorTurbo.test.mjs"
   },
   "repository": {

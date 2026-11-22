@@ -54,6 +54,133 @@ customer-level order data.
 10. Only after final approval, set `CHECKOUT_ENABLED=true` and point the public
     site's `PUBLIC_K4_COMMERCE_API_BASE` at the Live Worker.
 
+## EditorPro sign-in for Commerce Admin
+
+Open `https://editorpro-dev.k4studios.com/admin/commerce` while the EditorPro
+tunnel and Netlify Dev are running. The existing EditorPro login covers the
+page and its commerce requests. Commerce Admin opens the live report automatically
+and has no second password field. The public site's admin page links to this
+tunnel address and does not load private commerce records itself.
+
+The local gateway verifies its HttpOnly session cookie on every request, checks
+the request origin, and proxies only known commerce-admin routes to the fixed
+live service. Its independent server credential never reaches browser code,
+cookies, or the local editor upstream. The public commerce API still requires
+valid backend authorization; checkout remains available when the tunnel is off.
+
+Provision from this checkout using `npm.cmd run setup:editorpro-commerce`, then
+deploy commerce. The helper reuses the saved Wrangler OAuth login with the
+inherited API token cleared in its child process. It stores the new credential
+in the commerce Worker secret `EDITORPRO_COMMERCE_TOKEN` and locally as Windows
+DPAPI-protected data in the ignored `.netlify/editorpro-commerce.json`. It does
+not change EditorPro's password, any existing credential, or `.env` files.
+Existing local credentials are reused, not rotated, on subsequent setup runs.
+
+Restart the EditorPro tunnel after updating the gateway. Netlify Dev can stay
+running. The gateway's in-memory login session is renewed through the usual
+EditorPro login. Validation: `npm.cmd run test:editorpro` and
+`npm.cmd run test:admin-session:browser`.
+
+## Coupons and shipping offers
+
+Commerce Admin (`https://editorpro-dev.k4studios.com/admin/commerce`) has **Coupons &
+shipping offers** immediately below shipping rates. Create a code-based coupon
+or leave the code blank for an automatic offer. Supported benefits are free
+shipping, percentage discounts on prints (up to 99%), and fixed dollar discounts.
+New drafts are disabled until explicitly enabled; the migration creates no offers.
+
+Each offer can restrict catalog, print series, or individual catalog products;
+catalog choices include all catalogs, limited editions (Chronicle and Legend),
+Engrained only, Expeditions only, and all except Engrained. Limited editions
+exclude Sketch, Foundation, Engrained, and Expedition products. Additional series
+or product selections narrow the selected catalog; they never broaden it.
+Existing main-collection offers remain editable with their original scope.
+Offers can also
+set a minimum qualifying merchandise subtotal; specify start and expiration
+dates; and limit total paid orders and/or uses per customer email. Dates include
+the entire selected day in America/New_York. The 10-day preset includes its start
+date. For example, select free shipping, minimum $50, and an expiration date;
+or enter a coupon code, a 10-day window, and total uses 1. These are examples,
+not automatically activated promotions.
+
+Only qualifying merchandise counts toward the minimum, before tax/shipping or
+discounts. In a mixed cart, free shipping is calculated by retaining normal
+shipping for all excluded items. One offer applies: the best automatic offer,
+or the entered coupon instead. Offers do not stack. Discounts appear in the cart,
+PayPal amount breakdown, stored quote, receipts, and order tracker. Merchant-funded
+print discounts reduce the merchandise amount passed to the existing tax rules.
+
+Quotes and abandoned order creation consume no uses. Just before capture, a
+transactional SQLite trigger reserves a use against both limits. Completed
+payments redeem it; confirmed denied/reversed approvals release reservations.
+Uncertain or pending captures hold their use until the payment outcome is known,
+and Admin shows the number in payment. Repeated captures/webhooks are idempotent.
+Refunds and cancellation of already paid orders do not restore redeemed coupons.
+Limits cannot be reduced below current redeemed/reserved usage. Per-customer
+limits identify the normalized checkout email, not a verified customer account.
+
+Apply `0010_promotions.sql` before deploying commerce. Then publish the Netlify
+admin/cart/receipt updates and the analytics tracker update. Existing orders
+without promotion data keep their original totals. Validation:
+`npm.cmd run test:commerce`, `npm.cmd run test:order-tracker`, and
+`npm.cmd run test:promotions:browser`; payment/browser fixtures use mocked services.
+
+## Order processing tracker
+
+K4 Stats V3 has an **Open Orders** button. It opens the separately loaded,
+authenticated tracker at `/__k4stats/orders` on the Stats host. Stats fetches
+only the pending count, on page load, once per minute while visible, and when
+returning to the tab. The button is gray at zero, red when orders await
+processing, and shows `(?)` if the count cannot be checked.
+
+The tracker lists paid orders awaiting processing and paginated history. Expand
+an order to see customer/shipping details, exact image IDs, print options, and
+validated SmugMug `/buy` links. **Mark processed** means the order has been
+reviewed and production placed; it does not place an order with SmugMug.
+It changes fulfillment to `processing`, records `processed_at` and an audit
+event, and queues a `customer_processed` production thank-you in one transaction.
+Retries do not add another production email. Unpaid, held, refunded, disputed,
+and canceled orders cannot enter this workflow. Tracking/shipment updates remain
+available in Commerce Admin. The existing receipt email still goes out after
+payment, and the shipping email remains separate.
+
+For optional shipping updates, processed orders in the tracker have carrier and
+tracking-number fields below the processing controls. **Email tracking number**
+saves the shipment and queues the existing customer shipped email together.
+The fields remain available in expanded processed history. Leaving them blank
+sends nothing. After the email is queued or sent, the form shows its status and
+disables another send. No new database migration or Netlify template update is
+needed for these controls; deploy commerce, then analytics.
+
+The tracker proxies through the `K4_COMMERCE` service binding using a matching
+`STATS_ORDERS_TOKEN` secret on analytics and commerce. This credential authorizes
+only tracker routes, not general commerce administration. It stays server-side.
+Local setups without this secret can forward the existing Stats Basic login
+instead, using commerce's existing admin verification. The tracker embeds no
+customer data or credentials in Stats HTML or analytics tables.
+
+Local checks: `npm.cmd run test:commerce` and `npm.cmd run test:order-tracker`.
+For local interactive testing, apply commerce migrations with
+`node_modules\.bin\wrangler.cmd d1 migrations apply k4-commerce-sandbox --local --config cloudflare-commerce/wrangler.toml`.
+Run sandbox commerce with its usual configuration, and Stats with
+`node_modules\.bin\wrangler.cmd dev --config cloudflare-worker/wrangler.analytics.local.toml`.
+The tracker is then at `http://localhost:8788/__k4stats/orders`.
+Use matching local `ANALYTICS_PASSWORD` (Stats) and `COMMERCE_ADMIN_PASSWORD`
+(commerce) through the existing local environment mechanism. The local Stats
+configuration connects only to the sandbox commerce service.
+
+Production rollout order, when authorized:
+
+1. Deploy the Netlify `order-email` update supporting `customer_processed`.
+2. Apply commerce migration `0009_order_processing.sql` and deploy commerce.
+3. Configure the same random `STATS_ORDERS_TOKEN` secret on both workers.
+4. Deploy analytics with `wrangler.analytics.toml`, which binds `K4_COMMERCE`
+   to `k4-commerce-live`. Follow the repository's OAuth deployment instructions.
+
+The migration recognizes orders already in production or shipped without
+queuing retrospective customer emails. Local checks never process a live order
+or send customer mail.
+
 ## PayPal webhook
 
 Create a Sandbox webhook pointing to `/webhooks/paypal`. Subscribe to:
