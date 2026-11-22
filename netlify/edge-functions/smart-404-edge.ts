@@ -98,7 +98,15 @@ async function renderMerchantSketchVariant(request: Request, pathname: string): 
     return Response.redirect(`${requestUrl.origin}${canonicalSketchPath}${requestUrl.search}`, 301);
   }
 
-  const sourceHtml = await baseResponse.text();
+  // Ordinary artwork pages are prerendered; headers cannot change their offers.
+  // Render the Merchant variant through a dedicated, non-cached SSR route.
+  const sourceHeaders = new Headers(request.headers);
+  sourceHeaders.set('X-K4-Merchant-Sketch', '1');
+  const merchantResponse = await fetch(`${sourceOrigin}/internal/merchant-sketch${basePath}`, {
+    headers: sourceHeaders,
+  });
+  if (!merchantResponse.ok) return new Response('Not Found', { status: 404, headers: { 'X-Robots-Tag': 'noindex' } });
+  const sourceHtml = await merchantResponse.text();
   if (!hasApprovedSketchProduct(sourceHtml)) {
     return new Response('Not Found', { status: 404, headers: { 'X-Robots-Tag': 'noindex' } });
   }
