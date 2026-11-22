@@ -3,6 +3,7 @@ export const prerender = true;
 import BaseLayout         from '@layouts/BaseLayout.astro';
 import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import LandingHeader      from '@components/Landing-Header.jsx';
+import ZoneH1Text from '@/components/ZoneH1Text.astro';
 import ImageBar2          from '@components/ImageBar2.jsx';
 import TombstoneNav       from '@components/TombstoneNav.jsx';
 import LandingRightImages from '@components/LandingRightImages.jsx';
@@ -166,7 +167,7 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://www.k4studios.com
 
     <section class="section-heading-wrap">
       <div class="section-heading">
-        <h1 class="page-title fade-in reveal-on-scroll">{landingWestern.title}</h1>
+        <h1 class="page-title fade-in reveal-on-scroll"><ZoneH1Text title={landingWestern.title} /></h1>
         <h2 class="page-subtitle fade-in reveal-on-scroll">{landingWestern.subtitle}</h2>
         <p class="page-summary fade-in reveal-on-scroll">This body of WWII work moves through battle, portraiture, and machinery, but keeps returning to the human weight beneath them: sacrifice, endurance, brotherhood, and memory.</p>
       </div>

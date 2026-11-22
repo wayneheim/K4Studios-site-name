@@ -3,6 +3,7 @@ export const prerender = true;
 import BaseLayout         from '@/layouts/BaseLayout.astro';
 import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import LandingHeader      from '@/components/Landing-Header.jsx';
+import ZoneH1Text from '@/components/ZoneH1Text.astro';
 import ImageBar2          from '@/components/ImageBar2.jsx';
 import TombstoneNav       from '@/components/TombstoneNav.jsx';
 import LandingRightImages from '@/components/LandingRightImages.jsx';
@@ -157,7 +158,7 @@ const faqStructuredData = getFAQPageStructuredData(westernFAQ, `https://www.k4st
 
     <section class="section-heading-wrap">
       <div class="section-heading">
-        <h1 class="page-title fade-in reveal-on-scroll">{landingWestern.title}</h1>
+        <h1 class="page-title fade-in reveal-on-scroll"><ZoneH1Text title={landingWestern.title} /></h1>
         <h2 class="page-subtitle fade-in reveal-on-scroll">{landingWestern.subtitle}</h2>
         <p class="page-summary fade-in reveal-on-scroll max-w-[760px] mx-auto mt-3 leading-7 text-[1rem] text-[#4f4136] px-4">
           These battlefield images lean into tension, atmosphere, and the suspended breath before consequence, where the front feels immediate and history turns human.
